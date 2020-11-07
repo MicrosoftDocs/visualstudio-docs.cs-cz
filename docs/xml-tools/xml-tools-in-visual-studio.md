@@ -1,5 +1,7 @@
 ---
 title: Editor XML a Návrhář schémat
+description: Seznamte se s nástroji v aplikaci Visual Studio pro práci s XML, XSLT a schématy XML, včetně editoru XML, návrháře schémat XML a ladicího programu XSLT.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 f1_keywords:
@@ -32,12 +34,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e763fa3475f26b9742ea5fb7061978e711eb22ea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc8cac3e16e06c23d0d51ee4483bcf5fb8abfb05
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816420"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351281"
 ---
 # <a name="overview-of-xml-tools-in-visual-studio"></a>Přehled nástrojů XML v aplikaci Visual Studio
 

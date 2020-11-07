@@ -1,5 +1,7 @@
 ---
 title: Pracovní prostor Návrháře schémat XML
+description: Seznamte se s zobrazeními modelu spuštění, grafu a obsahu v pracovním prostoru Návrhář schémat XML (XSD Designer) v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 588fa495-fe7f-4b16-8a9f-6b6b8d2d502a
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cf86dd39e010424b25916deec8cdebd23ee1c1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06e7c1774666d2079bea56586f28c6c4e3f5aeec
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592370"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351307"
 ---
 # <a name="xml-schema-designer-workspace-views"></a>Zobrazení pracovního prostoru návrháře schématu XML
 

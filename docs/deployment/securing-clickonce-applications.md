@@ -1,5 +1,7 @@
 ---
 title: Zabezpečení aplikací ClickOnce | Microsoft Docs
+description: Přečtěte si o důsledcích omezení zabezpečení přístupu kódu v .NET Framework, které mohou omezit přístup k kódu pro aplikace ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 02/17/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d99cbf4aaa30e1afb95a98743c223edee94d98fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cb992355378e6e124cadef3383633a52a9111c2
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286294"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350542"
 ---
 # <a name="secure-clickonce-applications"></a>Zabezpečení aplikací ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace podléhají omezením zabezpečení přístupu kódu v .NET Framework pro omezení přístupu kódu k chráněným prostředkům a operacím. Z tohoto důvodu je důležité pochopit důsledky zabezpečení přístupu kódu k [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] odpovídajícímu zápisu aplikací. K omezení přístupu mohou vaše aplikace používat plnou důvěryhodnost nebo částečné zóny, jako jsou zóny pro Internet a Intranet.

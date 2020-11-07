@@ -1,5 +1,7 @@
 ---
 title: Ladit šablony stylů XSLT
+description: Naučte se používat ladicí program XSLT v aplikaci Visual Studio k ladění šablony stylů XSLT pomocí kroků v tomto návodu.
+ms.custom: SEO-VS-2020
 ms.date: 03/05/2019
 ms.topic: how-to
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
@@ -8,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c75d3cae07101363f6c986a1defb375f602f466
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c69f93aca88cb8e83417a370de7113640d3ae38c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815120"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351333"
 ---
-# <a name="walkthrough-debug-an-xslt-style-sheet"></a>Návod: ladění šablony stylů XSLT
+# <a name="walkthrough-debug-an-xslt-style-sheet"></a>Návod: Ladění šablony stylů XSLT
 
 Kroky v tomto návodu ukazují, jak používat ladicí program XSLT. Postup zahrnuje proměnné pro zobrazení, nastavení zarážek a krokování kódu. Ladicí program umožňuje spustit kód po jednotlivých řádcích.
 
@@ -32,7 +34,7 @@ Pro přípravu k tomuto návodu nejdřív zkopírujte dva [ukázkové soubory](#
 
    Šablona stylů se otevře v editoru XML.
 
-3. Klikněte na tlačítko pro procházení (**...**) v poli **input** okna vlastností dokumentu. (Pokud se okno **vlastnosti** nezobrazí, klikněte pravým tlačítkem myši kamkoli na otevřený soubor v editoru a pak zvolte **vlastnosti**.)
+3. Klikněte na tlačítko pro procházení ( **...** ) v poli **input** okna vlastností dokumentu. (Pokud se okno **vlastnosti** nezobrazí, klikněte pravým tlačítkem myši kamkoli na otevřený soubor v editoru a pak zvolte **vlastnosti**.)
 
 4. Vyhledejte soubor *books.xml* a pak zvolte možnost **otevřít**.
 
@@ -48,13 +50,13 @@ Pro přípravu k tomuto návodu nejdřív zkopírujte dva [ukázkové soubory](#
 
       ![Vložit zarážku v souboru XSL v aplikaci Visual Studio](media/insert-breakpoint.PNG)
 
-6. Na panelu nabídek vyberte **XML**  >  **Spustit ladění XSLT** (nebo stiskněte klávesu **ALT** + **F5**).
+6. Na panelu nabídek vyberte **XML**  >  **Spustit ladění XSLT** (nebo stiskněte klávesu **ALT** + **F5** ).
 
    Spustí se proces ladění.
 
    V editoru je ladicí program umístěn na `xsl:if` prvku v šabloně stylů. V editoru se otevře jiný soubor s názvem *below-average.xml* . Toto je výstupní soubor, který se naplní jako každý uzel ve vstupním souboru, *books.xml* se zpracovává.
 
-   Okna **Automatické**hodnoty, **místní**hodnoty a **kukátko 1** se zobrazí v dolní části okna sady Visual Studio. V okně **místní** hodnoty se zobrazí všechny místní proměnné a jejich aktuální hodnoty. To zahrnuje proměnné definované v šabloně stylů a také proměnné, které ladicí program používá ke sledování uzlů, které jsou aktuálně v kontextu.
+   Okna **Automatické** hodnoty, **místní** hodnoty a **kukátko 1** se zobrazí v dolní části okna sady Visual Studio. V okně **místní** hodnoty se zobrazí všechny místní proměnné a jejich aktuální hodnoty. To zahrnuje proměnné definované v šabloně stylů a také proměnné, které ladicí program používá ke sledování uzlů, které jsou aktuálně v kontextu.
 
 ## <a name="watch-window"></a>Kukátko – okno
 

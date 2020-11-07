@@ -1,5 +1,7 @@
 ---
 title: Referenční dokumentace schématu produktu a balíčku | Microsoft Docs
+description: Seznamte se s produktem, manifest XML, který popisuje externí závislosti vyžadované aplikací ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -25,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1570aa3d4ea72dc1d133ce3096e1726fa1ffb782
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac5810fa3bdd6d479c1df4c484960fd923b0ed59
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66745617"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350709"
 ---
 # <a name="product-and-package-schema-reference"></a>Odkaz na schéma produktu a balíčku
 *Soubor produktu* je manifest XML, který popisuje všechny externí závislosti požadované [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací. Mezi externí závislosti patří .NET Framework a součásti MDAC (Microsoft Data Access Components). Soubor balíčku je podobný souboru produktu, ale používá se k instalaci komponent závislých na jazykové verzi závislosti, jako jsou lokalizovaná sestavení, licenční smlouvy a dokumentace.
@@ -48,7 +50,7 @@ ms.locfileid: "66745617"
 |[\<Strings> Objekt](../deployment/strings-element-bootstrapper.md)|Požadovaný element. Ukládá lokalizované verze názvu produktu a chybové řetězce.|Žádné|
 
 ## <a name="remarks"></a>Poznámky
- Schéma balíčku je spotřebováno *Setup.exe*, což je program, který vygenerovala úloha zaváděcího nástroje MS Build, která obsahuje málo pevně zakódované logiky. Schéma řídí všechny aspekty procesu instalace.
+ Schéma balíčku je spotřebováno *Setup.exe* , což je program, který vygenerovala úloha zaváděcího nástroje MS Build, která obsahuje málo pevně zakódované logiky. Schéma řídí všechny aspekty procesu instalace.
 
  `InstallChecks` testy, které by setup.exe měly provádět pro existenci daného balíčku. `PackageFiles` Zobrazí seznam všech balíčků, které může instalační proces instalace provést, pokud daný test selže. Každý příkaz v příkazu v příkazech provede jeden z testů popsaných v `InstallChecks` a určí, který `PackageFile` má být spuštěn, pokud test selže. Pomocí `Strings` elementu můžete lokalizovat názvy produktů a chybové zprávy, abyste mohli nainstalovat aplikaci pro libovolný počet jazyků pomocí jediného binárního souboru instalace.
 

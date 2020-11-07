@@ -1,5 +1,7 @@
 ---
 title: Vytvořit manifest produktu | Microsoft Docs
+description: Naučte se nasazovat požadavky na aplikaci ClickOnce s balíčkem, který obsahuje jeden manifest produktu a manifest balíčku pro každé národní prostředí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97ec49438ce2382336b1b8a6f8355bd092486c2d
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ab7156635914d46dfc1849717d29ac0416e2d9fa
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852215"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351216"
 ---
 # <a name="how-to-create-a-product-manifest"></a>Postupy: Vytvoření manifestu produktu
 K nasazení požadavků pro aplikaci můžete vytvořit balíček zaváděcího nástroje. Balíček zaváděcího nástroje obsahuje jeden soubor manifestu produktu, ale manifest balíčku pro každé národní prostředí. Manifest balíčku obsahuje aspekty balíčku specifické pro lokalizaci. Patří sem řetězce, licenční smlouvy s koncovým uživatelem a jazykové sady.
@@ -36,7 +38,7 @@ K nasazení požadavků pro aplikaci můžete vytvořit balíček zaváděcího 
 
 1. Vytvořte adresář pro balíček zaváděcího nástroje. Tento příklad používá C:\package.
 
-2. V aplikaci Visual Studio vytvořte nový soubor XML s názvem *product.xml*a uložte ho do složky *C:\package* .
+2. V aplikaci Visual Studio vytvořte nový soubor XML s názvem *product.xml* a uložte ho do složky *C:\package* .
 
 3. Přidejte následující kód XML pro popis oboru názvů XML a kódu produktu pro balíček. Nahraďte kód produktu jedinečným identifikátorem balíčku.
 
@@ -64,7 +66,7 @@ K nasazení požadavků pro aplikaci můžete vytvořit balíček zaváděcího 
 
 6. Zkopírujte nebo přesuňte soubor *CorePackage.msi* do složky *C:\package* .
 
-7. Přidejte XML pro instalaci balíčku pomocí příkazů zaváděcího nástroje. Zaváděcí nástroj automaticky přidá příznak **/qn** do souboru *. msi* , který se nainstaluje tiše. Pokud je soubor *. exe*, zaváděcí nástroj spustí soubor *. exe* pomocí prostředí. Následující kód XML ukazuje žádné argumenty pro *CorePackage.msi*, ale do atributu lze vložit argument příkazového řádku `Arguments` .
+7. Přidejte XML pro instalaci balíčku pomocí příkazů zaváděcího nástroje. Zaváděcí nástroj automaticky přidá příznak **/qn** do souboru *. msi* , který se nainstaluje tiše. Pokud je soubor *. exe* , zaváděcí nástroj spustí soubor *. exe* pomocí prostředí. Následující kód XML ukazuje žádné argumenty pro *CorePackage.msi* , ale do atributu lze vložit argument příkazového řádku `Arguments` .
 
     ```xml
     <Commands>

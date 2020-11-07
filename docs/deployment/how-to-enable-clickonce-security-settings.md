@@ -1,5 +1,7 @@
 ---
 title: Povolit nastavení zabezpečení ClickOnce | Microsoft Docs
+description: Přečtěte si, jak Průvodce publikováním automaticky povoluje zabezpečení přístupu kódu pro aplikace ClickOnce pro publikování aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f407ac42dc9997215bfe6682bb8b974b78c7847
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: db31d0182c598b32933cf2d4260706a2252a9b6f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90850927"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351164"
 ---
 # <a name="how-to-enable-clickonce-security-settings"></a>Postupy: povolení nastavení zabezpečení ClickOnce
 Aby bylo možné aplikaci publikovat, je nutné povolit zabezpečení přístupu ke kódu pro aplikace ClickOnce. To se provádí automaticky při publikování aplikace pomocí Průvodce publikováním.
@@ -32,7 +34,7 @@ Aby bylo možné aplikaci publikovat, je nutné povolit zabezpečení přístupu
 
 ### <a name="to-enable-clickonce-security-settings"></a>Povolení nastavení zabezpečení ClickOnce
 
-1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
+1. S projektem vybraným v **Průzkumník řešení** v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Klikněte na kartu **Zabezpečení**.
 
@@ -45,7 +47,7 @@ Aby bylo možné aplikaci publikovat, je nutné povolit zabezpečení přístupu
 
 ### <a name="to-disable-clickonce-security-settings"></a>Zakázání nastavení zabezpečení ClickOnce
 
-1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
+1. S projektem vybraným v **Průzkumník řešení** v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Klikněte na kartu **Zabezpečení**.
 

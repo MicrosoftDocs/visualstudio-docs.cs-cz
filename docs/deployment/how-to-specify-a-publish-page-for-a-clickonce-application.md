@@ -1,5 +1,6 @@
 ---
 title: Určení stránky publikování (aplikace ClickOnce)
+description: Naučte se, jak nastavit vlastnost stránky pro publikování pro váš projekt, který umožňuje zadat webovou stránku pro aplikaci ClickOnce.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70f9853f6e15cb6d960e02491539f031bc1c44a1
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ecf70f5ffdd81688943892c06fdf98aae73d6c57
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808773"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350956"
 ---
 # <a name="how-to-specify-a-publish-page-for-a-clickonce-application"></a>Postupy: určení stránky publikování pro aplikaci ClickOnce
 Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace je vygenerována a publikována výchozí webová stránka (publish.htm) spolu s aplikací. Tato stránka obsahuje název aplikace, odkaz pro instalaci aplikace a/nebo všechny požadované součásti a odkaz na téma nápovědy popisující [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Vlastnost **Page Publish** pro váš projekt umožňuje zadat název webové stránky pro vaši [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci.
@@ -34,7 +35,7 @@ Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.
 
 ### <a name="to-specify-a-custom-web-page-for-a-clickonce-application"></a>Určení vlastní webové stránky pro aplikaci ClickOnce
 
-1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.
+1. Když je vybrán projekt v **Průzkumník řešení** , v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Vyberte podokno **publikování** .
 
@@ -48,7 +49,7 @@ Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.
 
 ### <a name="to-prevent-the-publish-page-from-launching-each-time-you-publish"></a>Zabránění spuštění stránky publikovat při každém publikování
 
-1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.
+1. Když je vybrán projekt v **Průzkumník řešení** , v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Vyberte podokno **publikování** .
 

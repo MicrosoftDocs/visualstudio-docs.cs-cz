@@ -1,5 +1,7 @@
 ---
 title: Správa podepsání sestavení a manifestu
+description: Seznamte se s výhodami podepisování silného názvu, který poskytuje komponentě softwaru globálně jedinečnou identitu.
+ms.custom: SEO-VS-2020
 ms.date: 02/17/2017
 ms.technology: vs-ide-deployment
 ms.topic: conceptual
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a17ce633515979ca7a3fd3ac5a7e1d8802996944
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdd2570f94b0f5577c7c09a696906338245f77a4
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770408"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351385"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>Správa podepsání sestavení a manifestu
 
@@ -38,13 +40,13 @@ Informace o podepisování sestavení v projektech C++ naleznete v tématu [sest
 
 Můžete podepsat sestavení .NET a manifesty aplikace:
 
-- Spustitelné soubory (*. exe*)
+- Spustitelné soubory ( *. exe* )
 
-- Manifesty aplikace (*. exe. manifest*)
+- Manifesty aplikace ( *. exe. manifest* )
 
-- Manifesty nasazení (*. Application*)
+- Manifesty nasazení ( *. Application* )
 
-- Sdílená sestavení komponent (*. dll*)
+- Sdílená sestavení komponent ( *. dll* )
 
 Podepište následující typy assetu:
 
@@ -58,7 +60,7 @@ Obecně platí, že byste neměli podepisovat spustitelné soubory. Silně pojme
 
 ## <a name="how-to-sign-an-assembly-in-visual-studio"></a>Jak podepsat sestavení v aplikaci Visual Studio
 
-Aplikaci nebo komponentu podepisujete pomocí karty **podepisování** v okně Vlastnosti projektu (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**). Vyberte kartu **podepisování** a potom zaškrtněte políčko **podepsat sestavení**  .
+Aplikaci nebo komponentu podepisujete pomocí karty **podepisování** v okně Vlastnosti projektu (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti** ). Vyberte kartu **podepisování** a potom zaškrtněte políčko **podepsat sestavení**  .
 
 Zadejte soubor klíče. Pokud se rozhodnete vytvořit nový soubor klíče, budou nové soubory klíčů vždy vytvořeny ve formátu *. pfx* . Pro nový soubor budete potřebovat jméno a heslo.
 

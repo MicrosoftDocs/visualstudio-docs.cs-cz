@@ -1,5 +1,6 @@
 ---
 title: Vytvoření vlastního bootstrapperu s dotazem souvisejícím se soukromím
+description: Naučte se konfigurovat aplikace ClickOnce tak, aby se automaticky aktualizovaly, když jsou dostupná sestavení s novějšími verzemi souborů a verzemi sestavení.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a8fbb05fcfdb1a639855ca31e9574d3037559610
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 06effb313dc2b8a247eeeab99290a289717bc960
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809273"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350462"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>Návod: Vytvoření vlastního bootstrapperu s dotazem souvisejícím se soukromím
 Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly, když budou k dispozici sestavení s novějšími verzemi souborů a verzemi sestavení. K tomu, abyste se ujistili, že vaši zákazníci souhlasí s tímto chováním, můžete pro ně zobrazit výzvu k zadání ochrany osobních údajů. Pak mohou zvolit, zda má být aplikaci uděleno oprávnění k automatické aktualizaci. Pokud se aplikaci nepovoluje aktualizovat automaticky, nenainstaluje se.
@@ -42,17 +43,17 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
 #### <a name="to-create-a-consent-dialog-box"></a>Dialogové okno pro vytvoření souhlasu
 
-1. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
+1. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na **projekt**.
 
-2. V dialogovém okně **Nový projekt** klikněte na **Windows**a pak klikněte na **WindowsFormsApplication**.
+2. V dialogovém okně **Nový projekt** klikněte na **Windows** a pak klikněte na **WindowsFormsApplication**.
 
-3. Jako **název**zadejte **ConsentDialog**a pak klikněte na **OK**.
+3. Jako **název** zadejte **ConsentDialog** a pak klikněte na **OK**.
 
 4. V návrháři klikněte na formulář.
 
 5. V okně **vlastnosti** změňte vlastnost **text** na **dialog aktualizovat souhlas**.
 
-6. V **sadě nástrojů**rozbalte položku **Všechny model Windows Forms**a přetáhněte ovládací prvek **popisek** na formulář.
+6. V **sadě nástrojů** rozbalte položku **Všechny model Windows Forms** a přetáhněte ovládací prvek **popisek** na formulář.
 
 7. V návrháři klikněte na ovládací prvek popisek.
 
@@ -60,17 +61,17 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
     Aplikace, kterou se chystáte nainstalovat, zkontroluje nejnovější aktualizace na webu. Kliknutím na Souhlasím schválíte aplikaci, aby kontrolovala a instalovala aktualizace automaticky z Internetu.
 
-9. V **sadě nástrojů**přetáhněte ovládací prvek **CheckBox** na střed formuláře.
+9. V **sadě nástrojů** přetáhněte ovládací prvek **CheckBox** na střed formuláře.
 
 10. V okně **vlastnosti** změňte vlastnost **text** v části **rozložení** na **Souhlasím**.
 
-11. V **panelu nástrojů**přetáhněte ovládací prvek **tlačítko** na spodní levou stranu formuláře.
+11. V **panelu nástrojů** přetáhněte ovládací prvek **tlačítko** na spodní levou stranu formuláře.
 
 12. V okně **vlastnosti** změňte vlastnost **text** v části **rozložení** , aby **bylo možné pokračovat**.
 
 13. V okně **vlastnosti** změňte vlastnost **(název)** v části **Návrh** na **ProceedButton**.
 
-14. V **panelu nástrojů**přetáhněte ovládací prvek **tlačítko** na spodní stranu formuláře.
+14. V **panelu nástrojů** přetáhněte ovládací prvek **tlačítko** na spodní stranu formuláře.
 
 15. V okně **vlastnosti** změňte vlastnost **text** v části **rozložení** na **Zrušit**.
 
@@ -111,15 +112,15 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
      Jenom pro vývojáře Visual Basic:
 
-    1. V **Průzkumník řešení**klikněte na **ConsentDialog**.
+    1. V **Průzkumník řešení** klikněte na **ConsentDialog**.
 
-    2. V nabídce **projekt** klikněte na **Přidat modul**a pak klikněte na **Přidat**.
+    2. V nabídce **projekt** klikněte na **Přidat modul** a pak klikněte na **Přidat**.
 
     3. Do souboru kódu *Module1. vb* přidejte následující kód.
 
         [!code-vb[ConsentDialog#7](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_6.vb)]
 
-    4. V nabídce **projekt** klikněte na **vlastnosti ConsentDialog**a pak klikněte na kartu **aplikace** .
+    4. V nabídce **projekt** klikněte na **vlastnosti ConsentDialog** a pak klikněte na kartu **aplikace** .
 
     5. Zrušte kontrolu **Povolení aplikační architektury**.
 
@@ -149,7 +150,7 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
 #### <a name="step-1-to-create-the-bootstrapper-directory"></a>Krok 1: Vytvoření adresáře zaváděcího nástroje
 
-1. V *%ProgramFiles%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages*vytvořte adresář s názvem **UpdateConsentDialog** .
+1. V *%ProgramFiles%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages* vytvořte adresář s názvem **UpdateConsentDialog** .
 
     > [!NOTE]
     > K vytvoření této složky možná budete potřebovat oprávnění správce.
@@ -233,7 +234,7 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
 #### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>Nastavení aplikace pro vyjádření souhlasu s aktualizacemi jako předpokladu
 
-1. V **Průzkumník řešení**klikněte na název aplikace, kterou chcete nasadit.
+1. V **Průzkumník řešení** klikněte na název aplikace, kterou chcete nasadit.
 
 2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.
 
@@ -251,7 +252,7 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
 #### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>Vytvoření a otestování instalačního programu kliknutím na Souhlasím
 
-1. V **Průzkumník řešení**klikněte na název aplikace, kterou chcete nasadit.
+1. V **Průzkumník řešení** klikněte na název aplikace, kterou chcete nasadit.
 
 2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.
 
@@ -269,7 +270,7 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
 7. Ukončete aplikaci nebo klikněte na tlačítko Storno.
 
-     Aplikace zobrazuje chybu: při instalaci součástí systému pro aplikaci *ApplicationName*došlo k chybě. Instalační program nemůže pokračovat, dokud nebudou všechny součásti systému úspěšně nainstalovány.
+     Aplikace zobrazuje chybu: při instalaci součástí systému pro aplikaci *ApplicationName* došlo k chybě. Instalační program nemůže pokračovat, dokud nebudou všechny součásti systému úspěšně nainstalovány.
 
 8. Kliknutím na Podrobnosti zobrazíte následující chybovou zprávu: dialogové okno souhlasu aktualizace součásti se nepodařilo nainstalovat pomocí následující chybové zprávy: "smlouva automatické aktualizace nebyla přijata." Instalace následujících součástí se nezdařila: – dialog aktualizace souhlasu
 
@@ -277,7 +278,7 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
 #### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>Vytvoření a otestování instalačního programu kliknutím na Souhlasím
 
-1. V **Průzkumník řešení**klikněte na název aplikace, kterou chcete nasadit.
+1. V **Průzkumník řešení** klikněte na název aplikace, kterou chcete nasadit.
 
 2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.
 
@@ -293,7 +294,7 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
      Zobrazí se dialogová okna souhlasu s aktualizací a zobrazí následující text: aplikace, kterou se chystáte nainstalovat, kontroluje nejnovější aktualizace na webu. Kliknutím na Souhlasím schválíte aplikaci, aby kontrolovala aktualizace automaticky na internetu.
 
-7. Klikněte **na Souhlasím a**potom klikněte na **pokračovat**.
+7. Klikněte **na Souhlasím a** potom klikněte na **pokračovat**.
 
      Aplikace se začne instalovat.
 

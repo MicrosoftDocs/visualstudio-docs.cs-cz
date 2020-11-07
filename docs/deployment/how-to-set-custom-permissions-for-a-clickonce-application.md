@@ -1,5 +1,6 @@
 ---
 title: Nastavit vlastní oprávnění (aplikace ClickOnce)
+description: Naučte se, jak nasadit aplikaci ClickOnce, která používá výchozí oprávnění, nebo vytvořte vlastní zónu pro konkrétní oprávnění, která aplikace potřebuje.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,19 +17,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c9952573be69299e14dc87f345febb14cdef0ec
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d5d0348b882a3327c02fca6db0628822c0deffeb
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809713"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350995"
 ---
 # <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>Postupy: nastavení vlastních oprávnění pro aplikaci ClickOnce
 Můžete nasadit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci, která používá výchozí oprávnění pro zóny Internet nebo místní intranet. Alternativně můžete vytvořit vlastní zónu pro konkrétní oprávnění, která aplikace potřebuje. To lze provést přizpůsobením oprávnění zabezpečení na stránce **zabezpečení** **Návrháře projektu**.
 
 ### <a name="to-customize-a-permission"></a>Přizpůsobení oprávnění
 
-1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
+1. S projektem vybraným v **Průzkumník řešení** v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Klikněte na kartu **Zabezpečení**.
 

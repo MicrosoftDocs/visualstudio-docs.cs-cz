@@ -1,5 +1,7 @@
 ---
 title: Automatické aktualizace aplikací pomocí rozhraní API nasazení ClickOnce
+description: Naučte se psát kód v ClickOnce, který používá třídu ApplicationDeployment ke kontrole aktualizací na základě události, jako je například požadavek uživatele.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6aee738d972b7c6e8c857ae87bb25758d871fe28
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f00bd8aaa5db8ab72e6b6286763fd89fc900599f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382572"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351255"
 ---
 # <a name="how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api"></a>Postupy: vyhledání aktualizací aplikace programově pomocí rozhraní API nasazení ClickOnce
 ClickOnce poskytuje dva způsoby, jak aplikaci aktualizovat po nasazení. V první metodě můžete nakonfigurovat nasazení ClickOnce tak, aby v určitých intervalech automaticky kontrolovala aktualizace. Ve druhé metodě můžete napsat kód, který používá <xref:System.Deployment.Application.ApplicationDeployment> třídu ke kontrole aktualizací na základě události, jako je například požadavek uživatele.

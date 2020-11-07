@@ -1,5 +1,7 @@
 ---
 title: Lokalizace aplikací ClickOnce | Microsoft Docs
+description: Přečtěte si o třech způsobech lokalizace aplikace ClickOnce na verzi, která je vhodná pro konkrétní jazykovou verzi.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81ee263b3bb908daace4bf27f86cff710ae90684
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 97c4fe8d72cc8e2216ee8f5057d032c071974bf3
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64800367"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350814"
 ---
 # <a name="localize-clickonce-applications"></a>Lokalizace aplikací ClickOnce
 Lokalizace je proces zajištění vhodné aplikace pro konkrétní jazykovou verzi. Tento proces zahrnuje převod textu uživatelského rozhraní (UI) do jazyka specifického pro oblast, pomocí správného formátování data a měny, přizpůsobení velikosti ovládacích prvků ve formuláři a v případě potřeby zrcadlení ovládacích prvků v pravém rohu.
@@ -46,7 +48,7 @@ Lokalizace je proces zajištění vhodné aplikace pro konkrétní jazykovou ver
 
  Tato metoda je výchozím nastavením v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Chcete-li použít tuto metodu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , není nutné provádět žádnou další práci.
 
- Chcete-li použít tuto metodu s *MageUI.exe*, je nutné nastavit jazykovou verzi vaší aplikace jako **neutrální** v *MageUI.exe*. Dále musíte do svého nasazení ručně zahrnout všechna satelitní sestavení. V *MageUI.exe*můžete přidat satelitní sestavení pomocí tlačítka **naplnit** na kartě **soubory** manifestu aplikace.
+ Chcete-li použít tuto metodu s *MageUI.exe* , je nutné nastavit jazykovou verzi vaší aplikace jako **neutrální** v *MageUI.exe*. Dále musíte do svého nasazení ručně zahrnout všechna satelitní sestavení. V *MageUI.exe* můžete přidat satelitní sestavení pomocí tlačítka **naplnit** na kartě **soubory** manifestu aplikace.
 
  Výhodou tohoto přístupu je, že vytvoří jediné nasazení a zjednodušuje lokalizovaný scénář nasazení. V době běhu se použije příslušné satelitní sestavení v závislosti na výchozí jazykové verzi operačního systému Windows daného uživatele. Nevýhodou tohoto přístupu je, že stáhne všechna satelitní sestavení pokaždé, když je aplikace nainstalována nebo aktualizována v klientském počítači. Pokud má vaše aplikace velký počet řetězců nebo pokud vaši zákazníci mají pomalé připojení k síti, může tento proces ovlivnit výkon při aktualizaci aplikace.
 

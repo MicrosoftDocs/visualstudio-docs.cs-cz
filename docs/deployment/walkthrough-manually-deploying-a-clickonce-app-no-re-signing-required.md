@@ -1,5 +1,6 @@
 ---
 title: Ruční nasazení aplikace ClickOnce & zachování brandingu
+description: Naučte se vytvářet aplikace ClickOnce, které budou zákazníci nasazovat, aniž byste vygenerovali nový manifest nasazení a mohli používat značky zákazníka.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e3f21f9e377b7d3e2d71d499eed25079c7769c7
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 29bdd080e87e8fad44c7b8943d0d017749b8c30b
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809221"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350306"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>Návod: Ruční nasazení aplikace ClickOnce, která nevyžaduje Opětovné podepsání a které zachovává informace o značkách
 Když vytvoříte [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci a potom ji přidáte zákazníkovi k publikování a nasazení, zákazník tradičně musel aktualizovat manifest nasazení a znovu ho podepsat. I když je ve většině případů stále upřednostňovanou metodou, .NET Framework 3,5 vám umožní vytvářet [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení, která můžou zákazníci nasadit, aniž by museli znovu vygenerovat nový manifest nasazení. Další informace najdete v tématu [nasazení aplikací ClickOnce pro testovací a produkční servery bez opětovného podepsání](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md).
@@ -112,9 +113,9 @@ Když vytvoříte [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.m
    MageUI.exe
    ```
 
-6. Vytvořte nový manifest aplikace výběrem položky **soubor**, **Nový**a **manifest aplikace** z nabídky.
+6. Vytvořte nový manifest aplikace výběrem položky **soubor** , **Nový** a **manifest aplikace** z nabídky.
 
-7. Na kartě výchozí **název** zadejte název a číslo verze tohoto nasazení. Také zadejte hodnotu pro **vydavatele**, která bude použita jako název složky pro odkaz na zástupce aplikace v nabídce Start při nasazení.
+7. Na kartě výchozí **název** zadejte název a číslo verze tohoto nasazení. Také zadejte hodnotu pro **vydavatele** , která bude použita jako název složky pro odkaz na zástupce aplikace v nabídce Start při nasazení.
 
 8. Vyberte kartu **Možnosti aplikace** a klikněte na **použít manifest aplikace pro informace o důvěryhodnosti**. Tím se povolí branding pro tuto aplikaci třetí strany [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
@@ -124,17 +125,17 @@ Když vytvoříte [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.m
 
 11. Kliknutím na tlačítko **naplnit** přidáte všechny soubory aplikace do seznamu souborů. Pokud vaše aplikace obsahuje více než jeden spustitelný soubor, označte hlavní spustitelný soubor pro toto nasazení jako spouštěcí aplikaci tak, že vyberete **vstupní bod** v rozevíracím seznamu **typ souboru** . (Pokud vaše aplikace obsahuje jenom jeden spustitelný soubor, *MageUI.exe* bude označovat za vás.)
 
-12. Vyberte kartu **požadovaná oprávnění** a vyberte úroveň důvěryhodnosti, kterou budete potřebovat k vyhodnocení vaší aplikace. Výchozí hodnota je **plná důvěryhodnost**, která bude vhodná pro většinu aplikací.
+12. Vyberte kartu **požadovaná oprávnění** a vyberte úroveň důvěryhodnosti, kterou budete potřebovat k vyhodnocení vaší aplikace. Výchozí hodnota je **plná důvěryhodnost** , která bude vhodná pro většinu aplikací.
 
-13. V nabídce vyberte **soubor**, **Uložit** a uložte manifest aplikace. Při ukládání se zobrazí výzva k podepsání manifestu aplikace.
+13. V nabídce vyberte **soubor** , **Uložit** a uložte manifest aplikace. Při ukládání se zobrazí výzva k podepsání manifestu aplikace.
 
-14. Pokud máte certifikát uložený jako soubor v systému souborů, použijte možnost **podepsat soubor certifikátu** a vyberte certifikát ze systému souborů pomocí tlačítka se třemi tečkami (**...**).
+14. Pokud máte certifikát uložený jako soubor v systému souborů, použijte možnost **podepsat soubor certifikátu** a vyberte certifikát ze systému souborů pomocí tlačítka se třemi tečkami ( **...** ).
 
      -nebo-
 
-     Pokud je certifikát uložený v úložišti certifikátů, ke kterému se dá dostat z počítače, vyberte **možnost podepsat s uloženým certifikátem**a vyberte certifikát ze zadaného seznamu.
+     Pokud je certifikát uložený v úložišti certifikátů, ke kterému se dá dostat z počítače, vyberte **možnost podepsat s uloženým certifikátem** a vyberte certifikát ze zadaného seznamu.
 
-15. V nabídce vyberte **soubor**, **Nový**, **manifest nasazení** a pak na kartě **název** zadejte název a číslo verze (**1.0.0.0** v tomto příkladu).
+15. V nabídce vyberte **soubor** , **Nový** , **manifest nasazení** a pak na kartě **název** zadejte název a číslo verze ( **1.0.0.0** v tomto příkladu).
 
 16. Přepněte na kartu **aktualizace** a určete, jak často chcete, aby se tato aplikace aktualizovala. Pokud vaše aplikace používá [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] rozhraní API pro nasazení pro kontrolu samotných aktualizací, zrušte zaškrtnutí políčka s označením, že **by tato aplikace měla vyhledat aktualizace**.
 
@@ -151,7 +152,7 @@ Když vytvoříte [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.m
     pvk2pfx.exe -pvk MyCert.pvk -spc MyCert.cer -pfx MyCert.pfx
     ```
 
-21. Pomocí vygenerovaného certifikátu teď zákazník podepíše manifest nasazení otevřením manifestu nasazení v *MageUI.exe*a pak ho uloží. Když se zobrazí dialogové okno podepisování, zákazník vybere možnost **podepsat jako soubor certifikátu** a vybere soubor PFX, který byl uložen na disku.
+21. Pomocí vygenerovaného certifikátu teď zákazník podepíše manifest nasazení otevřením manifestu nasazení v *MageUI.exe* a pak ho uloží. Když se zobrazí dialogové okno podepisování, zákazník vybere možnost **podepsat jako soubor certifikátu** a vybere soubor PFX, který byl uložen na disku.
 
 22. Zákazník nasadí aplikaci pro své uživatele.
 

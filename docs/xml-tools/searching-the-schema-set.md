@@ -1,5 +1,7 @@
 ---
 title: Průzkumník schémat XML – prohledání sady schémat
+description: Naučte se, jak provést hledání klíčových slov a hledání podle schématu v sadě schémat XML v Průzkumníkovi schémat.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ec1395e0-d03c-4130-810d-f2db656937bd
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8378ebaccefaedfcc3d83f23bcab56f7417264dd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c73af4f40abddaaba15e3b2cc785ab412e8884e4
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592500"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351515"
 ---
 # <a name="search-the-schema-set"></a>Hledání v sadě schémat
 
@@ -43,7 +45,7 @@ Hledání klíčových slov provedete tak, že do textového pole **Hledat schem
 
 ## <a name="display-and-navigate-search-results"></a>Zobrazení a navigace ve výsledcích hledání
 
-Po dokončení hledání se podokno souhrnné výsledky přidá na panel nástrojů s výsledky hledání. Výsledky hledání jsou také zvýrazněny v **Průzkumníku schémat XML** a označeny značkami na svislém posuvníku. Výsledky hledání můžete procházet pomocí možnosti **Přejít na další výsledek hledání** a **Přejít na předchozí** tlačítka výsledků hledání v podokně souhrnné výsledky hledání na panelu nástrojů **Průzkumníka schémat XML** . pomocí kláves klávesnice **F3** a **SHIFT** + **F3**nebo kliknutím na značky na posuvníku.
+Po dokončení hledání se podokno souhrnné výsledky přidá na panel nástrojů s výsledky hledání. Výsledky hledání jsou také zvýrazněny v **Průzkumníku schémat XML** a označeny značkami na svislém posuvníku. Výsledky hledání můžete procházet pomocí možnosti **Přejít na další výsledek hledání** a **Přejít na předchozí** tlačítka výsledků hledání v podokně souhrnné výsledky hledání na panelu nástrojů **Průzkumníka schémat XML** . pomocí kláves klávesnice **F3** a **SHIFT** + **F3** nebo kliknutím na značky na posuvníku.
 
 Výsledky hledání můžete přidat do pracovního prostoru kliknutím na tlačítko **Přidat zvýrazněné uzly do pracovního prostoru** v podokně souhrnné výsledky.
 

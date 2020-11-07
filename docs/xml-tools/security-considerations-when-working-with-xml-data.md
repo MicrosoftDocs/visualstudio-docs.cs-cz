@@ -1,5 +1,7 @@
 ---
 title: Aspekty zabezpečení při práci s daty XML
+description: Přečtěte si o otázkách zabezpečení při práci s daty XML v editoru XML nebo ladicím programu XSLT.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fce2b708-1aef-454f-be59-52b76f359351
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e18d2c2e47c3cc1f7e1b3be0112e49e2710e45c8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8d9e98e18e3e01f53afa6b0a9ea3bdec94f2186f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815835"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351346"
 ---
 # <a name="security-considerations-when-working-with-xml-data"></a>Otázky zabezpečení při práci s daty XML
 

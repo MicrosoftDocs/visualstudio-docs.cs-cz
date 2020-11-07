@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Upřesnit nastavení zabezpečení
+description: Dialogové okno Upřesnit nastavení zabezpečení umožňuje zadat nastavení zabezpečení související s laděním v zóně.
+ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.technology: vs-ide-deployment
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d34d1b16f36c90f4200a091050d1646fc563d33
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffbf2bb5a8a73ba577489af825969c3bdc23f15e
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419078"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351502"
 ---
 # <a name="advanced-security-settings-dialog-box"></a>dialogové okno Upřesnit nastavení zabezpečení
 
@@ -26,7 +28,7 @@ Toto dialogové okno umožňuje zadat nastavení zabezpečení související s l
 
 ![Dialogové okno Upřesnit nastavení zabezpečení v aplikaci Visual Studio](../media/advanced-security-settings.png)
 
-Chcete-li získat přístup k tomuto dialogovému oknu, vyberte uzel projektu v **Průzkumník řešení**a potom v nabídce **projekt** klikněte na příkaz **vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **zabezpečení** . Na stránce **zabezpečení** vyberte **Povolit nastavení zabezpečení ClickOnce**, klikněte na **Toto je aplikace s částečným vztahem důvěryhodnosti**a pak klikněte na **Upřesnit**.
+Chcete-li získat přístup k tomuto dialogovému oknu, vyberte uzel projektu v **Průzkumník řešení** a potom v nabídce **projekt** klikněte na příkaz **vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **zabezpečení** . Na stránce **zabezpečení** vyberte **Povolit nastavení zabezpečení ClickOnce** , klikněte na **Toto je aplikace s částečným vztahem důvěryhodnosti** a pak klikněte na **Upřesnit**.
 
 ## <a name="uielement-list"></a>UIElement – seznam
 

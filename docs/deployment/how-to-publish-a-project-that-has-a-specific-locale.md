@@ -1,5 +1,7 @@
 ---
 title: Publikování projektu s konkrétním národním prostředím
+description: Naučte se používat makro k publikování prvního projektu v řešení, které obsahuje projekty pro několik různých národních prostředí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,26 +22,26 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 38be27ca9873d662fd4839590f50c9788b5ae7ea
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 3cb63d217249cd24d6777fb4d87ae4fe4d00c755
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851694"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351138"
 ---
 # <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>Postupy: publikování projektu s konkrétním národním prostředím
 Není neobvyklé, že aplikace obsahuje komponenty, které mají různá národní prostředí. V tomto scénáři vytvoříte řešení, které má několik projektů, a pak publikujete samostatné projekty pro každé národní prostředí. Tento postup ukazuje, jak použít makro k publikování prvního projektu v řešení pomocí národního prostředí "en". Pokud chcete vyzkoušet tento postup s jiným národním prostředím než ' en ', nezapomeňte nastavit `localeString` v makru tak, aby odpovídalo národnímu prostředí, které používáte (například ' de ' nebo ' de-de ').
 
 > [!NOTE]
-> Když použijete toto makro, umístění publikování by mělo být platná adresa URL nebo sdílená složka UNC (Universal Naming Convention). V počítači musí být nainstalován také Internetová informační služba (IIS). Chcete-li nainstalovat službu IIS, v nabídce **Start** klikněte na položku **Ovládací panely**. Dvakrát klikněte na **Přidat nebo odebrat programy**. V panelu **Přidat nebo odebrat programy**klikněte na tlačítko **Přidat nebo odebrat součásti systému Windows**. V **Průvodci součástmi systému Windows**zaškrtněte políčko **Internetová informační služba (IIS)** v seznamu **součásti** . Potom kliknutím na tlačítko **Dokončit** zavřete průvodce.
+> Když použijete toto makro, umístění publikování by mělo být platná adresa URL nebo sdílená složka UNC (Universal Naming Convention). V počítači musí být nainstalován také Internetová informační služba (IIS). Chcete-li nainstalovat službu IIS, v nabídce **Start** klikněte na položku **Ovládací panely**. Dvakrát klikněte na **Přidat nebo odebrat programy**. V panelu **Přidat nebo odebrat programy** klikněte na tlačítko **Přidat nebo odebrat součásti systému Windows**. V **Průvodci součástmi systému Windows** zaškrtněte políčko **Internetová informační služba (IIS)** v seznamu **součásti** . Potom kliknutím na tlačítko **Dokončit** zavřete průvodce.
 
 ### <a name="to-create-the-publishing-macro"></a>Vytvoření makra publikování
 
-1. Chcete-li otevřít Průzkumníka maker, v nabídce **nástroje** , přejděte na položku **makra**a pak klikněte na možnost **Průzkumník maker**.
+1. Chcete-li otevřít Průzkumníka maker, v nabídce **nástroje** , přejděte na položku **makra** a pak klikněte na možnost **Průzkumník maker**.
 
-2. Vytvoří nový modul maker. V Průzkumníku maker vyberte **MyMacros**. V nabídce **nástroje** přejděte na příkaz **makra**a pak klikněte na **Nový modul maker**. Pojmenujte modul **PublishSpecificCulture**.
+2. Vytvoří nový modul maker. V Průzkumníku maker vyberte **MyMacros**. V nabídce **nástroje** přejděte na příkaz **makra** a pak klikněte na **Nový modul maker**. Pojmenujte modul **PublishSpecificCulture**.
 
-3. V Průzkumníku maker rozbalte uzel **MyMacros** a pak otevřete modul **PublishAllProjects** tak, že na něj dvakrát kliknete (nebo v nabídce **nástroje** přejděte na **makra**a pak klikněte na **makra IDE**).
+3. V Průzkumníku maker rozbalte uzel **MyMacros** a pak otevřete modul **PublishAllProjects** tak, že na něj dvakrát kliknete (nebo v nabídce **nástroje** přejděte na **makra** a pak klikněte na **makra IDE** ).
 
 4. V rozhraní IDE maker přidejte následující kód do modulu za `Import` příkazy:
 
@@ -139,27 +141,27 @@ Není neobvyklé, že aplikace obsahuje komponenty, které mají různá národn
 
 ### <a name="to-publish-a-project-for-a-specific-locale"></a>Publikování projektu pro konkrétní národní prostředí
 
-1. Chcete-li vytvořit projekt Visual Basic aplikace systému Windows, v nabídce **soubor** přejděte na příkaz **Nový**a poté klikněte na možnost **projekt**.
+1. Chcete-li vytvořit projekt Visual Basic aplikace systému Windows, v nabídce **soubor** přejděte na příkaz **Nový** a poté klikněte na možnost **projekt**.
 
 2. V dialogovém okně **Nový projekt** vyberte možnost **aplikace systému Windows** z uzlu **Visual Basic** . Pojmenujte projekt *PublishLocales*.
 
-3. Klikněte na Form1. V okně **vlastnosti** v části **Návrh**změňte vlastnost **Language** z **(výchozí)** na **angličtinu**. Změňte vlastnost **text** formuláře na **MyForm**.
+3. Klikněte na Form1. V okně **vlastnosti** v části **Návrh** změňte vlastnost **Language** z **(výchozí)** na **angličtinu**. Změňte vlastnost **text** formuláře na **MyForm**.
 
      Všimněte si, že lokalizované knihovny DLL prostředků se nevytvoří, dokud je nebudete potřebovat. Například jsou vytvořeny při změně textu formuláře nebo jednoho z jeho ovládacích prvků po určení nového národního prostředí.
 
 4. Publikování *PublishLocales* pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio.
 
-     V **Průzkumník řešení**vyberte *PublishLocales*. V nabídce **projekt** vyberte možnost **vlastnosti**. V Návrháři projektu na stránce **publikovat** zadejte umístění pro publikování **http://localhost/PublishLocales** a pak klikněte na **Publikovat nyní**.
+     V **Průzkumník řešení** vyberte *PublishLocales*. V nabídce **projekt** vyberte možnost **vlastnosti**. V Návrháři projektu na stránce **publikovat** zadejte umístění pro publikování **http://localhost/PublishLocales** a pak klikněte na **Publikovat nyní**.
 
      Jakmile se zobrazí webová stránka publikovat, zavřete ji. (Pro tento krok stačí projekt publikovat. nemusíte ho instalovat.)
 
-5. Znovu publikujte *PublishLocales* vyvoláním makra v okně příkazového řádku sady Visual Studio. Chcete-li zobrazit okno příkazového řádku, v nabídce **zobrazení** přejděte na položku **ostatní okna** a klikněte na **příkazová okna**nebo stiskněte klávesu **CTRL** + **ALT** + **A**. V okně příkazového řádku zadejte `macros` ; Automatické dokončování poskytne seznam dostupných maker. Vyberte následující makro a stiskněte klávesu ENTER:
+5. Znovu publikujte *PublishLocales* vyvoláním makra v okně příkazového řádku sady Visual Studio. Chcete-li zobrazit okno příkazového řádku, v nabídce **zobrazení** přejděte na položku **ostatní okna** a klikněte na **příkazová okna** nebo stiskněte klávesu **CTRL** + **ALT** + **A**. V okně příkazového řádku zadejte `macros` ; Automatické dokončování poskytne seznam dostupných maker. Vyberte následující makro a stiskněte klávesu ENTER:
 
      `Macros.MyMacros.PublishSpecificCulture.PublishProjectFirstProjectWithEnLocale`
 
 6. Po úspěšném publikování se vygeneruje zpráva oznamující, že publikování proběhlo úspěšně pro *PublishLocales\PublishLocales.vbproj*. Jazyk publikování byl "en". " V okně se zprávou klikněte na **OK** . Jakmile se zobrazí webová stránka publikovat, klikněte na tlačítko **nainstalovat**.
 
-7. Podívejte se na *C:\Inetpub\wwwroot\PublishLocales\en*. Měli byste vidět nainstalované soubory, jako jsou například manifesty, *setup.exe*a soubor webové stránky publikování, kromě lokalizované knihovny DLL prostředků. (Ve výchozím nastavení ClickOnce připojí rozšíření *. deploy* v exe a DLL, toto rozšíření můžete po nasazení odebrat.)
+7. Podívejte se na *C:\Inetpub\wwwroot\PublishLocales\en*. Měli byste vidět nainstalované soubory, jako jsou například manifesty, *setup.exe* a soubor webové stránky publikování, kromě lokalizované knihovny DLL prostředků. (Ve výchozím nastavení ClickOnce připojí rozšíření *. deploy* v exe a DLL, toto rozšíření můžete po nasazení odebrat.)
 
 ## <a name="see-also"></a>Viz také
 - [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)

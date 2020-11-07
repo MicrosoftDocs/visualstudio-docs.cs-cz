@@ -1,5 +1,6 @@
 ---
 title: Zakázat aktivaci adresy URL aplikací ClickOnce
+description: Zjistěte, jak zakázat automatické spouštění při instalaci pro aplikaci ClickOnce, pokud chcete, aby uživatelé spustili aplikaci z nabídky Start.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f13921044e188d659ba8cd5b776a006f7af5b1a6
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 46e46278f5465de029aa9536744f51843397d743
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809754"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351229"
 ---
 # <a name="how-to-disable-url-activation-of-clickonce-applications"></a>Postupy: zákaz aktivace adresy URL aplikací ClickOnce
 

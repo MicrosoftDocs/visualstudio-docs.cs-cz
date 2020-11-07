@@ -1,5 +1,7 @@
 ---
 title: 'Návod: použití funkcí editoru XML'
+description: Naučte se vytvořit nový dokument XML pomocí kroků v tomto návodu, který ukazuje funkce editoru XML.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: ea8dc357-2e66-455a-aec2-7ccaccfc9adf
@@ -8,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cebf6f7621fb5fada37b8e4592efd429bdc85e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8aa7daef6e427b7355eb7676db0728a4af4ca42
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817395"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351476"
 ---
-# <a name="walkthrough-use-xml-editor-features"></a>Návod: použití funkcí editoru XML
+# <a name="walkthrough-use-xml-editor-features"></a>Návod: Použití funkcí editoru XML
 
 Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také používá některé z funkcí editoru XML, které usnadňují tvorbu XML.
 
@@ -24,13 +26,13 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
 ## <a name="to-create-a-new-xml-file-and-associate-it-with-an-xml-schema"></a>Vytvoření nového souboru XML a jeho přidružení ke schématu XML
 
-1. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na možnost **soubor**.
+1. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na možnost **soubor**.
 
 2. V podokně **šablony** vyberte **soubor XML** a klikněte na **otevřít**.
 
      V editoru se otevře nový soubor. Soubor obsahuje výchozí deklaraci XML, `<?xml version="1.0" encoding="utf-8">` .
 
-3. V okně Vlastnosti dokumentu klikněte na tlačítko pro procházení (**...**) v poli **schémata** .
+3. V okně Vlastnosti dokumentu klikněte na tlačítko pro procházení ( **...** ) v poli **schémata** .
 
      Zobrazí se dialogové okno **schémata XSD** .
 
@@ -58,7 +60,7 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
     - **Zaměstnanec** pro přidání kořenového prvku.
 
-2. Výběrem ** &lt; !--** přidáte uzel komentáře a stisknete klávesu **ENTER**.
+2. Výběrem **&lt; !--** přidáte uzel komentáře a stisknete klávesu **ENTER**.
 
      Editor vloží koncovou značku komentáře a umístí kurzor mezi značky začátek a konec komentáře.
 
@@ -96,7 +98,7 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
 ## <a name="to-format-the-xml-document"></a>Formátování dokumentu XML
 
-- Na panelu nástrojů editoru XML vyberte tlačítko **formátovat dokument** nebo stiskněte klávesy **CTRL** + **E**,**D**.
+- Na panelu nástrojů editoru XML vyberte tlačítko **formátovat dokument** nebo stiskněte klávesy **CTRL** + **E** , **D**.
 
    ![Tlačítko formátování dokumentu XML v aplikaci Visual Studio](media/format-xml-document.png)
 

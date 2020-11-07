@@ -1,5 +1,6 @@
 ---
 title: Zadat offline nebo online režim instalace (ClickOnce)
+description: Naučte se, jak určit režim instalace pro aplikaci ClickOnce, která určuje, jestli je aplikace k dispozici offline nebo online.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,15 +20,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 896d2218237b884d9483496e0adac157a6e26fd3
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 5236d73bb965d4f25634ad9e61a52608c9030146
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808734"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350930"
 ---
 # <a name="how-to-specify-the-clickonce-offline-or-online-install-mode"></a>Postupy: určení offline nebo online režimu instalace ClickOnce
-Aplikace `Install Mode` pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci určuje, zda bude aplikace k dispozici offline nebo online. Pokud zvolíte, **že je aplikace dostupná jenom online**, musí mít uživatel přístup k [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] umístění publikování (buď webové stránce, nebo sdílené složce), aby bylo možné aplikaci spustit. Když vyberete aplikaci, která **je k dispozici v režimu offline**, aplikace přidá položky do nabídky **Start** a do dialogového okna **Přidat nebo odebrat programy** . uživatel může aplikaci spustit, když nejsou připojeni.
+Aplikace `Install Mode` pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci určuje, zda bude aplikace k dispozici offline nebo online. Pokud zvolíte, **že je aplikace dostupná jenom online** , musí mít uživatel přístup k [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] umístění publikování (buď webové stránce, nebo sdílené složce), aby bylo možné aplikaci spustit. Když vyberete aplikaci, která **je k dispozici v režimu offline** , aplikace přidá položky do nabídky **Start** a do dialogového okna **Přidat nebo odebrat programy** . uživatel může aplikaci spustit, když nejsou připojeni.
 
 `Install Mode`Lze nastavit na stránce **publikovat** v **Návrháři projektu**.
 
@@ -36,7 +37,7 @@ Aplikace `Install Mode` pro [!INCLUDE[ndptecclick](../deployment/includes/ndptec
 
 ### <a name="to-make-a-clickonce-application-available-online-only"></a>Zpřístupnění aplikace ClickOnce pouze online
 
-1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
+1. S projektem vybraným v **Průzkumník řešení** v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Klikněte na kartu **publikovat** .
 
@@ -44,7 +45,7 @@ Aplikace `Install Mode` pro [!INCLUDE[ndptecclick](../deployment/includes/ndptec
 
 ### <a name="to-make-a-clickonce-application-available-online-or-offline"></a>Zpřístupnění aplikace ClickOnce online nebo offline
 
-1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
+1. S projektem vybraným v **Průzkumník řešení** v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Klikněte na kartu **publikovat** .
 

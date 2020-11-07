@@ -1,5 +1,7 @@
 ---
 title: '&lt;Package – &gt; element (zaváděcí nástroj) | Microsoft Docs'
+description: Prvek balíčku je prvek XML nejvyšší úrovně uvnitř souboru balíčku. Element Package je povinný.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab3478f701cade458ffdb97caf4541a88f52230e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7645731cf5b955601541a122f2fdb3fa3d794cc3
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66745765"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350735"
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;Package – &gt; element (zaváděcí nástroj)
 `Package`Prvek je prvek XML nejvyšší úrovně uvnitř souboru balíčku.
@@ -147,7 +149,7 @@ ms.locfileid: "66745765"
 |--------------------| - |
 | `Culture` | Povinná hodnota. Definuje jazykovou verzi tohoto balíčku, která určuje jazyk, který se má použít. Tento atribut je klíč k `Strings` elementu, který uvádí řetězce pro názvy produktů a chybové zprávy, které jsou specifické pro jazykovou verzi, během instalace. |
 | `Name` | Povinná hodnota. Název balíčku zobrazený pro vývojáře v rámci nástroje, jako je například [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Tento atribut je klíč do `Strings` prvku, který by měl obsahovat `String` element s `Name` `Culture` vlastnostmi a nastavenými tak, aby odpovídaly `Name` `Culture` vlastnostem a `Package` . |
-| `LicenseAgreement` | Nepovinný parametr. Určuje název souboru v distribučním balíčku, který obsahuje licenční smlouvu s koncovým uživatelem (EULA).  Tento soubor může být ve formátu prostého textu (*. txt*) nebo formátovaného textu. (*. RTF*) |
+| `LicenseAgreement` | Nepovinný parametr. Určuje název souboru v distribučním balíčku, který obsahuje licenční smlouvu End-User (EULA).  Tento soubor může být ve formátu prostého textu ( *. txt* ) nebo formátovaného textu. ( *. RTF* ) |
 
 ## <a name="example"></a>Příklad
  Následující příklad kódu ukazuje kompletní soubor balíčku pro redistribuci .NET Framework 2,0.

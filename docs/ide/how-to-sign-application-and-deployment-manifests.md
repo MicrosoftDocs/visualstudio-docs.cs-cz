@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: podepsání manifestů aplikace a nasazení'
+description: Přečtěte si o požadavcích na podepisování publikování aplikace ClickOnce a manifestů nasazení. Pro aplikace založené na souboru. exe je podepisování volitelné.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e04827dd8d8d393af8bc3448df75a7503c8eec3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a267a64a6b6d59b64ffb70596154d1e54f368410
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769789"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351268"
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>Postupy: podepsání manifestů aplikace a nasazení
 
@@ -40,14 +42,14 @@ Informace o vytváření souborů klíčů naleznete v tématu [How to: Create a
 
 ## <a name="sign-using-a-certificate"></a>Podepsat pomocí certifikátu
 
-1. Přejděte do okna Vlastnosti projektu (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**). Na kartě **podepisování** zaškrtněte políčko **podepsat manifesty ClickOnce** .
+1. Přejděte do okna Vlastnosti projektu (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti** ). Na kartě **podepisování** zaškrtněte políčko **podepsat manifesty ClickOnce** .
 
 2. Klikněte na tlačítko **vybrat z úložiště** .
 
      Zobrazí se dialogové okno **Vybrat certifikát** , ve kterém se zobrazí obsah úložiště certifikátů Windows.
 
     > [!TIP]
-    > Pokud kliknete na **možnost kliknutím sem zobrazíte vlastnosti certifikátu**, zobrazí se dialogové okno **Podrobnosti o certifikátu** . Toto dialogové okno obsahuje podrobné informace o certifikátu a dalších možnostech. Kliknutím na **certifikáty** zobrazíte další informace o nápovědě.
+    > Pokud kliknete na **možnost kliknutím sem zobrazíte vlastnosti certifikátu** , zobrazí se dialogové okno **Podrobnosti o certifikátu** . Toto dialogové okno obsahuje podrobné informace o certifikátu a dalších možnostech. Kliknutím na **certifikáty** zobrazíte další informace o nápovědě.
 
 3. Vyberte certifikát, který chcete použít k podepsání manifestů.
 
@@ -61,7 +63,7 @@ Informace o vytváření souborů klíčů naleznete v tématu [How to: Create a
 
      Zobrazí se dialogové okno **Vybrat soubor** .
 
-3. V dialogovém okně **Vybrat soubor** přejděte do umístění souboru klíče (*. pfx*), který chcete použít, a potom klikněte na tlačítko **otevřít**.
+3. V dialogovém okně **Vybrat soubor** přejděte do umístění souboru klíče ( *. pfx* ), který chcete použít, a potom klikněte na tlačítko **otevřít**.
 
     > [!NOTE]
     > Tato možnost podporuje pouze soubory, které mají příponu *. pfx* . Pokud máte soubor klíče nebo certifikát v jiném formátu, uložte ho do úložiště certifikátů Windows a vyberte certifikát, který je popsaný v předchozím postupu. Vybraný účel certifikátu by měl zahrnovat podepisování kódu.

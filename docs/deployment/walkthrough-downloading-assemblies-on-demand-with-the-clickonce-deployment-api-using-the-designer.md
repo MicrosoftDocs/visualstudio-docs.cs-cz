@@ -1,5 +1,6 @@
 ---
 title: Stažení sestavení na vyžádání pomocí návrháře (ClickOnce API)
+description: Naučte se, jak označit určitá sestavení v aplikaci ClickOnce jako volitelná pomocí návrháře a stáhnout je, když je potřebují modul CLR (Common Language Runtime).
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4451f5f4075d512c76119faceb02d2a92fff120c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 597f633c1f92b09add06909b8cb626262de1156f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809260"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350345"
 ---
 # <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>Návod: stažení sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce pomocí návrháře
 Ve výchozím nastavení jsou všechna sestavení zahrnutá v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci stažena při prvním spuštění aplikace. Mohou však existovat části aplikace, které jsou používány malou sadou uživatelů. V tomto případě chcete stáhnout sestavení pouze při vytvoření některého z jeho typů. Následující návod ukazuje, jak označit určitá sestavení v aplikaci jako "volitelné" a jak je stáhnout pomocí tříd v <xref:System.Deployment.Application> oboru názvů, pokud je aplikace Common Language Runtime vyžaduje.
@@ -38,7 +39,7 @@ Ve výchozím nastavení jsou všechna sestavení zahrnutá v [!INCLUDE[ndpteccl
 
 ### <a name="to-create-a-project-that-uses-an-on-demand-assembly-with-visual-studio"></a>Vytvoření projektu, který používá sestavení na vyžádání se sadou Visual Studio
 
-1. Vytvořte nový projekt model Windows Forms v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . V nabídce **soubor** přejděte na příkaz **Přidat**a poté klikněte na možnost **Nový projekt**. V dialogovém okně vyberte projekt **knihovny tříd** a pojmenujte jej `ClickOnceLibrary` .
+1. Vytvořte nový projekt model Windows Forms v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . V nabídce **soubor** přejděte na příkaz **Přidat** a poté klikněte na možnost **Nový projekt**. V dialogovém okně vyberte projekt **knihovny tříd** a pojmenujte jej `ClickOnceLibrary` .
 
    > [!NOTE]
    > V Visual Basic doporučujeme změnit vlastnosti projektu a změnit tak kořenový obor názvů pro tento projekt na `Microsoft.Samples.ClickOnceOnDemand` nebo na obor názvů podle vašeho výběru. Pro jednoduchost jsou tyto dva projekty v tomto návodu ve stejném oboru názvů.

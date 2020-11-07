@@ -1,5 +1,7 @@
 ---
 title: Adresa URL podpory pro předpoklady v nasazení ClickOnce
+description: Přečtěte si, jak se testy nasazení ClickOnce pro předpoklady pro aplikaci ClickOnce spouštějí a jak nasazení funguje s chybějícími požadavky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,19 +17,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bf474e4926403a9475860bfdc620ee4a6860f8aa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af912503ddc1e87f14756a1041e9fa4d8aac505b
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381727"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350943"
 ---
 # <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>Postupy: určení adresy URL pro podporu pro jednotlivé předpoklady v nasazení ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Nasazení může otestovat určitý počet požadavků, které musí být v klientském počítači k dispozici, aby bylo možné [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci spustit. Tyto závislosti zahrnují požadovanou minimální verzi .NET Framework, verzi operačního systému a všechna sestavení, která musí být předinstalována v globální mezipaměti sestavení (GAC). [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ale nemůže nainstalovat žádné z těchto nezbytných součástí. Pokud se požadovaná součást nenajde, jednoduše zastaví instalaci a zobrazí dialogové okno s vysvětlením, proč se instalace nezdařila.
 
  Existují dvě metody pro instalaci požadovaných součástí. Můžete je nainstalovat pomocí aplikace zaváděcího nástroje. Případně můžete zadat adresu URL podpory pro jednotlivé požadavky, které se uživatelům zobrazí v dialogovém okně v případě, že požadovaná součást nebyla nalezena. Stránka odkazovaná adresou URL může obsahovat odkazy na pokyny pro instalaci požadované součásti. Pokud aplikace neurčí adresu URL podpory pro jednotlivou součást, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] zobrazí adresu URL podpory určenou v manifestu nasazení aplikace jako celek, pokud je definována.
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]K vygenerování nasazení se ale dají použít *Mage.exe*a *MageUI.exe* [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , žádný z těchto nástrojů přímo nepodporuje zadání adresy URL podpory pro jednotlivé požadavky. Tento dokument popisuje, jak upravit manifest aplikace nasazení a manifest nasazení tak, aby zahrnovaly tyto adresy URL podpory.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]K vygenerování nasazení se ale dají použít *Mage.exe* a *MageUI.exe* [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , žádný z těchto nástrojů přímo nepodporuje zadání adresy URL podpory pro jednotlivé požadavky. Tento dokument popisuje, jak upravit manifest aplikace nasazení a manifest nasazení tak, aby zahrnovaly tyto adresy URL podpory.
 
 ### <a name="specify-a-support-url-for-an-individual-prerequisite"></a>Zadejte adresu URL podpory pro individuální požadavek.
 

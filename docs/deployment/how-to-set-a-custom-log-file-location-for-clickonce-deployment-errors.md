@@ -1,5 +1,6 @@
 ---
 title: Nastavení vlastního umístění souboru protokolu (chyby nasazení ClickOnce)
+description: Seznamte se se soubory aktivačních protokolů, které ClickOnce udržuje pro všechna nasazení, které dokumentují chyby pro instalaci a inicializaci nasazení ClickOnce.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,17 +18,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d5b5cf73a685eb68e389e6531022200acbefbfd2
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 3d9c8ce481ab9ca99b7d456f53418641654369ad
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809739"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351034"
 ---
 # <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>Postupy: nastavení vlastního umístění souboru protokolu pro chyby nasazení ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] udržuje soubory protokolu aktivace pro všechna nasazení. Tyto protokoly dokumentují všechny chyby, které se týkají instalace a inicializace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení. Ve výchozím nastavení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] vytvoří jeden soubor protokolu pro každou aktivaci nasazení. Tyto soubory protokolu se uloží do složky dočasných internetových souborů. Soubor protokolu pro nasazení se uživateli zobrazí, když dojde k selhání aktivace a uživatel klikne na **Podrobnosti** v dialogovém okně výsledné chyby.
 
- Toto chování můžete změnit pro konkrétního klienta pomocí Editoru registru (**regedit.exe**) a nastavit tak vlastní cestu k souboru protokolu. V takovém případě [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] protokoluje úspěšné a neúspěšné aktivace pro všechna nasazení v jednom souboru.
+ Toto chování můžete změnit pro konkrétního klienta pomocí Editoru registru ( **regedit.exe** ) a nastavit tak vlastní cestu k souboru protokolu. V takovém případě [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] protokoluje úspěšné a neúspěšné aktivace pro všechna nasazení v jednom souboru.
 
 > [!CAUTION]
 > Pokud používáte Editor registru nesprávně, může dojít k vážným problémům, které mohou vyžadovat přeinstalaci operačního systému. Editor registru použijte na vlastní riziko.

@@ -1,5 +1,7 @@
 ---
 title: Ověřování dokumentu XML v editoru XML
+description: Přečtěte si o ověřování dokumentů XML v editoru XML a o tom, jak kontroluje syntaxi XML 1,0 a provádí ověřování dat při psaní.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: abb353bd-6c4a-4978-b03b-a8c245bbfb55
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 389328e97f29d97962353e86f73c39c7c5459bfc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec38cb416f764990252b1e58c2322bea8be94d15
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592409"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351450"
 ---
 # <a name="xml-document-validation"></a>Ověření dokumentu XML
 

@@ -1,5 +1,7 @@
 ---
 title: Publikovat stránku, návrhář projektu
+description: Stránka publikovat v Návrháři projektu se používá ke konfiguraci vlastností pro nasazení ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
 ms.topic: reference
@@ -13,31 +15,31 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bbb43408dc12c55b72eb0ca0909d8b261198a5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13edc1b2e2e235eaf5a475764a98067aa4b0150d
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68926174"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350280"
 ---
 # <a name="publish-page-project-designer"></a>Publikovat stránku, návrhář projektu
 
 Stránka **publikovat** v **Návrháři projektu** se používá ke konfiguraci vlastností pro nasazení ClickOnce.
 
-Pro přístup ke stránce **publikovat** vyberte uzel projektu v **Průzkumník řešení**a potom v nabídce **projekt** klikněte na **vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **publikovat** .
+Pro přístup ke stránce **publikovat** vyberte uzel projektu v **Průzkumník řešení** a potom v nabídce **projekt** klikněte na **vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **publikovat** .
 
 > [!NOTE]
-> Některé vlastnosti ClickOnce popsané tady lze také nastavit v **PublishWizard**, k dispozici v nabídce **sestavení** nebo kliknutím na tlačítko **PublishWizard** na této stránce.
+> Některé vlastnosti ClickOnce popsané tady lze také nastavit v **PublishWizard** , k dispozici v nabídce **sestavení** nebo kliknutím na tlačítko **PublishWizard** na této stránce.
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
  **Umístění složky pro publikování**
 
-Určuje umístění, kde je aplikace publikována. Může se jednat o cestu k jednotce ( `C:\deploy\myapplication` ), sdílenou složku ( `\\server\myapplication` ) nebo server FTP ( `ftp://ftp.microsoft.com/myapplication` ). Všimněte si, že text musí být přítomen v poli **umístění pro publikování** , aby tlačítko Procházet (**...**) fungovalo.
+Určuje umístění, kde je aplikace publikována. Může se jednat o cestu k jednotce ( `C:\deploy\myapplication` ), sdílenou složku ( `\\server\myapplication` ) nebo server FTP ( `ftp://ftp.microsoft.com/myapplication` ). Všimněte si, že text musí být přítomen v poli **umístění pro publikování** , aby tlačítko Procházet ( **...** ) fungovalo.
 
  **Adresa URL instalační složky**
 
-Nepovinný parametr. Určuje web, na který uživatelé přejdou instalovat aplikaci. To je nezbytné jenom v případě, že se liší od **umístění pro publikování**, například při publikování aplikace na přípravném serveru.
+Nepovinný parametr. Určuje web, na který uživatelé přejdou instalovat aplikaci. To je nezbytné jenom v případě, že se liší od **umístění pro publikování** , například při publikování aplikace na přípravném serveru.
 
  **Režim instalace a nastavení**
 
@@ -63,7 +65,7 @@ Otevře dialogové okno Možnosti publikování, které slouží k určení dal�
 
  **Verze publikování**
 
-Nastaví číslo verze publikování pro aplikaci. Když se změní číslo verze, aplikace se publikuje jako aktualizace. Každá část verze publikování (**Hlavní**, **podverze**, **sestavení**, **Revize**) může mít maximální hodnotu 65355 ( <xref:System.UInt16.MaxValue> ), což je maximální povolený <xref:System.Version> .
+Nastaví číslo verze publikování pro aplikaci. Když se změní číslo verze, aplikace se publikuje jako aktualizace. Každá část verze publikování ( **Hlavní** , **podverze** , **sestavení** , **Revize** ) může mít maximální hodnotu 65355 ( <xref:System.UInt16.MaxValue> ), což je maximální povolený <xref:System.Version> .
 
 Při instalaci více než jedné verze aplikace pomocí technologie ClickOnce instalační program přesune předchozí verze aplikace do složky s názvem Archive v umístění pro publikování, které zadáte. Archivace předchozích verzí tímto způsobem udržuje instalační adresář v nejasnosti od předchozí verze.
 

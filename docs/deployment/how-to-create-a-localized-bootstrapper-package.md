@@ -1,5 +1,7 @@
 ---
 title: Vytvoření lokalizovaného balíčku zaváděcího nástroje | Microsoft Docs
+description: Naučte se vytvářet lokalizované verze balíčku zaváděcího nástroje v ClickOnce vytvořením dalších dalších souborů pro každé národní prostředí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,23 +14,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c673c6488b93802877ef088d9d9a1a4793cf50b
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 4858a9efdad747293a94563196108d895c40880b
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852482"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351242"
 ---
 # <a name="how-to-create-a-localized-bootstrapper-package"></a>Postupy: Vytvoření lokalizovaného balíčku bootstrapperu
-Po vytvoření balíčku zaváděcího nástroje můžete vytvořit lokalizované verze balíčku zaváděcího nástroje, a to vytvořením dalších dalších souborů pro každé národní prostředí: souboru licenčních podmínek softwaru (například *EULA. RTF*) a manifestu balíčku (*package.xml*).
+Po vytvoření balíčku zaváděcího nástroje můžete vytvořit lokalizované verze balíčku zaváděcího nástroje, a to vytvořením dalších dalších souborů pro každé národní prostředí: souboru licenčních podmínek softwaru (například *EULA. RTF* ) a manifestu balíčku ( *package.xml* ).
 
  Ve výchozím nastavení Visual Studio 2010 obsahuje lokalizované balíčky zaváděcího nástroje jenom pro .NET Framework 4, .NET Framework 4 Client Profiles, F # runtime 2,0 a F # runtime 4,0. Pomocí tří kroků můžete vytvořit lokalizované balíčky pro další zaváděcí nástroje.
 
-1. Vytvořte složku s názvem za názvem národního prostředí v *adresáři \Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages \\ \<BootstrapperPackageName> *.
+1. Vytvořte složku s názvem za názvem národního prostředí v *adresáři \Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages \\ \<BootstrapperPackageName>*.
 
 2. Vytvořte soubor, který obsahuje licenční smlouvy k softwaru pro balíček zaváděcího nástroje, a vložte ho do nové složky.
 
-3. Vytvořte manifest balíčku s názvem *package.xml*, aktualizujte řetězce a jazykovou verzi a vložte soubor do nové složky. Pokud jste již vytvořili zaváděcí nástroj sady Visual Studio v cílovém jazyce, můžete zkopírovat soubor *package.xml* sady Visual Studio a upravit ho v tomto kroku.
+3. Vytvořte manifest balíčku s názvem *package.xml* , aktualizujte řetězce a jazykovou verzi a vložte soubor do nové složky. Pokud jste již vytvořili zaváděcí nástroj sady Visual Studio v cílovém jazyce, můžete zkopírovat soubor *package.xml* sady Visual Studio a upravit ho v tomto kroku.
 
 > [!NOTE]
 > Pokud k nasazení aplikací používáte projekt instalace, můžete aplikaci lokalizovat změnou vlastnosti **Localization** .
@@ -39,7 +41,7 @@ Po vytvoření balíčku zaváděcího nástroje můžete vytvořit lokalizovan�
 
 1. Vytvořte složku s názvem za názvem národního prostředí.
 
-     Na 32 počítačů Vytvořte složku ve složce *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages \\ \<BootstrapperPackageName> \\ * .
+     Na 32 počítačů Vytvořte složku ve složce *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages \\ \<BootstrapperPackageName> \\* .
 
      Na 64 počítačů Vytvořte složku ve složce *\Program Files (86 \\ \<BootstrapperPackageName> \\ ) \Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages* .
 
@@ -76,9 +78,9 @@ Po vytvoření balíčku zaváděcího nástroje můžete vytvořit lokalizovan�
 
 1. Vytvořte složku s názvem *fr*. Název složky se musí shodovat s názvem národního prostředí.
 
-     Na 32 počítačů Vytvořte složku ve složce *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX35SP1 \\ * .
+     Na 32 počítačů Vytvořte složku ve složce *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX35SP1 \\* .
 
-     Na 64 počítačů Vytvořte složku ve složce *\Program Files (86) \Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX35SP1 \\ * .
+     Na 64 počítačů Vytvořte složku ve složce *\Program Files (86) \Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX35SP1 \\* .
 
 2. Do složky *fr* umístěte lokalizovanou verzi licenčních podmínek pro software.
 

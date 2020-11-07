@@ -1,5 +1,7 @@
 ---
 title: Stažení satelitního sestavení na vyžádání pomocí ClickOnce designeru
+description: Naučte se, jak označit satelitní sestavení jako volitelné pomocí návrháře a stáhnout pouze sestavení, které klientský počítač potřebuje pro aktuální nastavení jazykové verze.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f510ef4ad81188997e1d572e7aa3b52b65883269
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b6b57faf01878dc5aff708f0aca47707bf6e48c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66263406"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350332"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>Návod: Stahování satelitních sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce pomocí návrháře
 Model Windows Forms aplikace lze nakonfigurovat pro více jazykových verzí prostřednictvím použití satelitních sestavení. *Satelitní sestavení* je sestavení, které obsahuje prostředky aplikace pro jinou jazykovou verzi, než je výchozí jazyková verze aplikace.
@@ -47,7 +49,7 @@ Model Windows Forms aplikace lze nakonfigurovat pro více jazykových verzí pro
 
 4. Zaškrtněte políčko **Zobrazit všechny soubory** , chcete-li zobrazit satelitní sestavení. Ve výchozím nastavení budou všechna satelitní sestavení obsažena v nasazení a budou viditelná v tomto dialogovém okně.
 
-     Satelitní sestavení bude mít název ve tvaru * \<isoCode>\ApplicationName.resources.dll*, kde \<isoCode> je identifikátor jazyka ve formátu RFC 1766.
+     Satelitní sestavení bude mít název ve tvaru *\<isoCode>\ApplicationName.resources.dll* , kde \<isoCode> je identifikátor jazyka ve formátu RFC 1766.
 
 5. V seznamu skupin pro **stažení** jednotlivých identifikátorů jazyka klikněte na **Nový** . Po zobrazení výzvy k zadání názvu skupiny pro stahování zadejte identifikátor jazyka. Například pro japonské satelitní sestavení byste měli zadat název skupiny pro stahování `ja-JP` .
 
@@ -71,7 +73,7 @@ Model Windows Forms aplikace lze nakonfigurovat pro více jazykových verzí pro
 
      [!code-vb[ClickOnce.SatelliteAssembliesVB#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_2.vb)]
 
-4. Do třídy přidejte následující kód `MyApplication` .
+4. Do třídy `MyApplication` přidejte následující kód.
 
      [!code-vb[ClickOnce.SatelliteAssembliesVB#2](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_3.vb)]
 

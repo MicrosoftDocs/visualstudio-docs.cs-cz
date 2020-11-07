@@ -1,5 +1,7 @@
 ---
 title: '&lt;InstallChecks – &gt; element (zaváděcí nástroj) | Microsoft Docs'
+description: Prvek InstallChecks podporuje spuštění nejrůznějších testů v místním počítači, aby se zajistilo, že všechny požadavky na aplikaci byly nainstalovány.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7ba4da072a586bdc09993b77200a769be3940ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 660fc893eb22d0c40805a8bf7b2efc86fd83c3b1
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536302"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350865"
 ---
 # <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;InstallChecks – &gt; element (zaváděcí nástroj)
 `InstallChecks`Prvek podporuje spuštění různých testů pro místní počítač, aby bylo zajištěno, že byly nainstalovány všechny odpovídající požadavky na aplikaci.

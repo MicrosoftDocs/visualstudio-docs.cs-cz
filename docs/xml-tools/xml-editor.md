@@ -1,5 +1,7 @@
 ---
 title: Editor XML
+description: Seznamte se s editorem XML v aplikaci Visual Studio, který je založen na textovém editoru a obsahuje další podporu pro jazyky XML.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 550dcb0cc3299a4a1b884d3141761c39977ce088
-ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
+ms.openlocfilehash: 1bd1cac1c688bf2efc0a4c08797d72eabf0133e2
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90713539"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351437"
 ---
 # <a name="xml-editor"></a>Editor XML
 
@@ -32,7 +34,7 @@ Editor XML obsahuje následující funkce:
 
 - Vytvoření schématu XML z dokumentu instance XML.
 
-- Převádění schématu DTD nebo XML-data redukovaného (XDR) na schéma XML.
+- Převod schématu DTD nebo XML-Data s omezením (XDR) na schéma XML.
 
 - Kontrola syntaxe XSLT.
 
@@ -40,7 +42,7 @@ Editor XML obsahuje následující funkce:
 
 - Integrace s [průzkumníkem schémat XML](../xml-tools/xml-schema-explorer.md). To poskytuje hierarchická zobrazení schémat XML.
 
-Je vyvolán editor XML pro dobře známé přípony souborů, například *. XML*, *. xsd*, *. xsl*a *. config*. Je také vyvolána na jakékoli neznámé příponě souboru, pokud soubor obsahuje XML.
+Je vyvolán editor XML pro dobře známé přípony souborů, například *. XML* , *. xsd* , *. xsl* a *. config*. Je také vyvolána na jakékoli neznámé příponě souboru, pokud soubor obsahuje XML.
 
 ## <a name="xslt-intellisense"></a>IntelliSense pro XSLT
 

@@ -1,5 +1,7 @@
 ---
 title: Mezipaměť schématu editoru XML
+description: Seznamte se s mezipamětí schématu poskytovanou editorem XML, která obsahuje standardní schémata XML používané pro technologii IntelliSense a ověřování dokumentů XML.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 35a7fcad-f3bf-4a96-9008-4306e7276223
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 40781a5249d9b69df5f41f863f3d36ac6a119645
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d3eaab4379d744bae0032e51995e5bc1b8e76423
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592487"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351372"
 ---
 # <a name="schema-cache"></a>Mezipaměť schémat
 
@@ -112,7 +114,7 @@ Umístění mezipaměti schématu můžete přizpůsobit pomocí stránky **růz
 
 1. V nabídce **nástroje** vyberte možnost **Možnosti**.
 
-2. Rozbalte položku **textový editor**, rozbalte položku **XML**a potom klikněte na možnost **různé**.
+2. Rozbalte položku **textový editor** , rozbalte položku **XML** a potom klikněte na možnost **různé**.
 
 3. Klikněte na tlačítko **Procházet** v poli **schémata** .
 

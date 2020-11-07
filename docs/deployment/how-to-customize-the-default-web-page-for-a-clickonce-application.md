@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení výchozí webové stránky pro aplikaci ClickOnce
+description: Přečtěte si o webové stránce vygenerované při publikování aplikace ClickOnce na webu, která obsahuje název aplikace a další informace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ee4c1211840f17afe371961dea644372cd63efb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fbda4558622c2e244071a218d3d5e42196460113
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382468"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94351203"
 ---
 # <a name="how-to-customize-the-default-web-page-for-a-clickonce-application"></a>Postupy: přizpůsobení výchozí webové stránky pro aplikaci ClickOnce
 Při publikování aplikace ClickOnce na web je automaticky generována a publikována webová stránka společně s aplikací. Výchozí stránka obsahuje název aplikace a odkazy na instalaci aplikace, instalaci požadovaných součástí nebo přístup k nápovědě na webu MSDN.
@@ -30,7 +32,7 @@ Při publikování aplikace ClickOnce na web je automaticky generována a publik
 > [!NOTE]
 > Skutečné odkazy zobrazené na stránce závisí na počítači, na kterém je stránka zobrazována, a na požadavcích, které máte, včetně.
 
- Výchozí název webové stránky je *Publish.htm*; název můžete změnit v **Návrháři projektu**. Další informace naleznete v tématu [How to: určení stránky publikování pro aplikaci ClickOnce](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md).
+ Výchozí název webové stránky je *Publish.htm* ; název můžete změnit v **Návrháři projektu**. Další informace naleznete v tématu [How to: určení stránky publikování pro aplikaci ClickOnce](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md).
 
  Webová stránka *Publish.htm* je publikována pouze v případě, že je zjištěna novější verze.
 
