@@ -414,12 +414,16 @@
                   href: ide/reference/datetime-timespan-completion.md
                 - name: Zapouzdření pole
                   href: ide/reference/encapsulate-field.md
+                - name: Extrakce základní třídy
+                  href: ide/reference/extract-base-class.md
                 - name: Extrahování rozhraní
                   href: ide/reference/extract-interface.md
                 - name: Extrahování metody
                   href: ide/reference/extract-method.md
                 - name: Extrahování lokálních funkcí
                   href: ide/reference/extract-local-function.md
+                - name: Vložená metoda
+                  href: ide/reference/inline-method.md
                 - name: Vložená dočasná proměnná
                   href: ide/reference/inline-temporary-variable.md
                 - name: Dokončování IntelliSense pro neimportované typy a rozšiřující metody
@@ -428,8 +432,8 @@
                   href: ide/reference/invert-conditional-logical.md
                 - name: Invertování příkazů if
                   href: ide/reference/invert-if-statement.md
-                - name: Možnosti refaktoringu statických lokálních funkcí
-                  href: ide/reference/static-local-function-refactor-options.md
+                - name: Nastavení třídy jako abstraktní
+                  href: ide/reference/make-class-abstract.md
                 - name: Označení členů jako statických
                   href: ide/reference/make-member-static.md
                 - name: Přesunutí deklarace do blízkosti odkazu
@@ -456,6 +460,8 @@
                   href: ide/reference/sort-usings.md
                 - name: Dělení a slučování příkazů if
                   href: ide/reference/split-or-merge-if-statement.md
+                - name: Možnosti refaktoringu statických lokálních funkcí
+                  href: ide/reference/static-local-function-refactor-options.md
                 - name: Synchronizovat obor názvů a název složky
                   href: ide/reference/sync-namespace-and-folder-name.md
                 - name: Synchronizace typu a názvu souboru
@@ -464,6 +470,10 @@
                   href: ide/reference/convert-var-to-explicit-type.md
                 - name: Použití výrazu lambda nebo textu bloku
                   href: ide/reference/use-block-body-lambda.md
+                - name: Použití výrazu new()
+                  href: ide/reference/use-new.md
+                - name: Použití porovnávání vzorů
+                  href: ide/reference/use-pattern-matching.md
                 - name: 'Přiřazení nepoužitých hodnot, proměnné a parametry'
                   href: ide/reference/unused-values-parameters.md
                 - name: 'Zabalení, odsazení a zarovnání refaktoringu'
@@ -966,7 +976,7 @@
       href: ide/reference/accessibility-tips-and-tricks.md
     - name: Produkty a služby pro usnadnění přístupu od Microsoftu
       href: ide/reference/accessibility-products-and-services-from-microsoft.md
-- name: Odkaz
+- name: Referenční informace
   items:
     - name: Klávesové zkratky
       items:
