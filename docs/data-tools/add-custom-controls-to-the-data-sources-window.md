@@ -1,5 +1,6 @@
 ---
 title: Přidání vlastních ovládacích prvků do okna zdrojů dat
+description: Přidejte vlastní ovládací prvky do okna zdroje dat v aplikaci Visual Studio. Přizpůsobení seznamu ovládacích prvků s možností vazby. Přidejte přidružené ovládací prvky.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +16,12 @@ ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
 author: ghogen
 ms.author: ghogen
 manager: jillfra
-ms.openlocfilehash: 39ff272581793be9b456bbc404119a488850b3c4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 004004a420374f3b0ce9504098ac5836cb307f1d
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283070"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382062"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>Přidání vlastních ovládacích prvků do okna zdrojů dat
 
@@ -39,7 +40,7 @@ Chcete-li přidat nebo odebrat ovládací prvky ze seznamu dostupných ovládac�
 2. V okně **zdroje dat** klikněte na položku, která je součástí zdroje dat, který jste přidali do okna, a poté klikněte na rozevírací nabídku položky.
 
    > [!TIP]
-   > Pokud není okno zdroje dat otevřené, otevřete ho výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
+   > Pokud není okno zdroje dat otevřené, otevřete ho výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat** Windows.
 
 3. V rozevírací nabídce klikněte na **přizpůsobit**. Otevře se jedna z následujících dialogových oken:
 

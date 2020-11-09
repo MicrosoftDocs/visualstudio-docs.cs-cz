@@ -1,5 +1,7 @@
 ---
 title: ClickOnce a Authenticode | Microsoft Docs
+description: Přečtěte si informace o certifikátech, které používá technologie Authenticode k ověření pravosti aplikací. Přečtěte si, jak se ověřují a ukládají certifikáty.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed7945dac94527df51dcdd601113f8874cd36142
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 07b40cb9c4e1d79390bb4a0541e1cb5bd8862d3a
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641633"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383141"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce a kód Authenticode
 *Authenticode* je technologie Microsoftu, která používá standardní kryptografii pro podepsání kódu aplikace digitálními certifikáty, které ověřují pravost vydavatele aplikace. Pomocí technologie Authenticode pro nasazení aplikace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] snižuje riziko trojského koně. Trojský kůň je Vir nebo jiný škodlivý program, který škodlivá třetí strana nepředstavuje legitimní program pocházející z vytvořeného důvěryhodného zdroje. Podepisování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení pomocí digitálního certifikátu je volitelný krok k ověření, že sestavení a soubory nejsou úmyslně poškozeny.
@@ -41,10 +43,10 @@ ms.locfileid: "89641633"
 
 - Od skupiny ve vaší organizaci, která je odpovědná za vytváření digitálních certifikátů, můžete získat jednu ze skupiny.
 
-- Vygenerujte vlastní certifikát pomocí rutiny New-SelfSignedCertificate prostředí PowerShell nebo pomocí *MakeCert.exe*, který je součástí [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] .
+- Vygenerujte vlastní certifikát pomocí rutiny New-SelfSignedCertificate PowerShellu nebo pomocí *MakeCert.exe* , který je součástí [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] .
 
 ### <a name="how-using-certificate-authorities-helps-users"></a>Jak používání certifikačních autorit pomáhá uživatelům
- Certifikát generovaný pomocí New-SelfSignedCertificate nebo nástroj pro *MakeCert.exe* se často označuje jako certifikát s certifikátem *držitele* nebo *testu*. Tento druh certifikátu funguje podobně jako soubor *. snk* v .NET Framework. Skládá se výhradně z páru veřejného a soukromého kryptografického klíče a neobsahuje žádné ověřitelné informace o vydavateli. Certifikáty můžete použít k nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací s vysokou důvěryhodností na intranetu. Pokud jsou však tyto aplikace spuštěny v klientském počítači, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] budou je identifikovat jako pocházející od neznámého vydavatele. Ve výchozím nastavení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nemohou aplikace podepsané certifikáty a nasazenými prostřednictvím internetu využívat nasazení důvěryhodných aplikací.
+ Certifikát generovaný pomocí New-SelfSignedCertificate nebo nástroj *MakeCert.exe* se často nazývá *certifikát s certifikátem nebo* *testem*. Tento druh certifikátu funguje podobně jako soubor *. snk* v .NET Framework. Skládá se výhradně z páru veřejného a soukromého kryptografického klíče a neobsahuje žádné ověřitelné informace o vydavateli. Certifikáty můžete použít k nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací s vysokou důvěryhodností na intranetu. Pokud jsou však tyto aplikace spuštěny v klientském počítači, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] budou je identifikovat jako pocházející od neznámého vydavatele. Ve výchozím nastavení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nemohou aplikace podepsané certifikáty a nasazenými prostřednictvím internetu využívat nasazení důvěryhodných aplikací.
 
  Naopak pokud obdržíte certifikát od certifikační autority, jako je například dodavatel certifikátu nebo oddělení v rámci podniku, certifikát nabízí větší zabezpečení pro vaše uživatele. Neidentifikuje pouze vydavatele podepsaného softwaru, ale ověřuje tuto identitu tím, že zkontroluje certifikační autoritu, která ho podepsala. Pokud certifikační autorita není kořenovou autoritou, technologie Authenticode se také "řetězit" zpět k kořenové autoritě a ověří, zda je certifikační autorita autorizována k vydávání certifikátů. Pro zajištění vyššího zabezpečení byste měli použít certifikát vydaný certifikační autoritou, kdykoli to bude možné.
 

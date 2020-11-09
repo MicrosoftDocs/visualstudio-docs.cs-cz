@@ -1,5 +1,7 @@
 ---
 title: Ukázky a návody k nasazení ClickOnce | Microsoft Docs
+description: Použijte tyto ukázkové aplikace, ukázkový kód a návod, abyste pochopili techniky používané pro nasazení model Windows Forms, WPF a konzolových aplikací.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8083ed11537975bfd05f546843264881fe7a7aa0
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 419fa9f917358ae19a073b5f864ee76d92c33e75
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641465"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383037"
 ---
 # <a name="clickonce-deployment-samples-and-walkthroughs"></a>Ukázky nasazení ClickOnce a podrobné návody
 Tato část obsahuje ukázkové aplikace, ukázkový kód a podrobné návody, které ilustrují syntaxi, strukturu a techniky, které slouží k nasazení model Windows Forms, WPF a konzolových aplikací.

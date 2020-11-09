@@ -1,5 +1,7 @@
 ---
 title: '&lt;Dependency – &gt; element (nasazení ClickOnce) | Microsoft Docs'
+description: Element Dependency identifikuje verzi aplikace, která se má nainstalovat, a umístění manifestu aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -25,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84e26a2d7dae70e0029817d4e6bb6e70dd53bce4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e77f115eb4014f16107ae167576ed0d923bffe8
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62928955"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382959"
 ---
 # <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;Dependency – &gt; element (nasazení ClickOnce)
 Určuje verzi aplikace, která se má nainstalovat, a umístění manifestu aplikace.

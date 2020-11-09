@@ -1,5 +1,7 @@
 ---
 title: '&lt;customErrorReporting – &gt; element (nasazení ClickOnce) | Microsoft Docs'
+description: Element customErrorReporting Určuje identifikátor URI, který se má zobrazit, když dojde k chybě namísto dialogového okna chyby, ve kterém se zobrazuje zásobník výjimky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d42bd1f7304d9f50b6334d9ac8ddd4f626605d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5576912fb428e15a6f8164e52d558e255e184fe3
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900368"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382517"
 ---
 # <a name="ltcustomerrorreportinggt-element-clickonce-deployment"></a>&lt;customErrorReporting – &gt; element (nasazení ClickOnce)
 Určuje identifikátor URI, který se má zobrazit, když dojde k chybě.

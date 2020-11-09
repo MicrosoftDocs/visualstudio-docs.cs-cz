@@ -1,5 +1,6 @@
 ---
 title: Vytvoření vazby ovládacích prvků WPF k datové sadě
+description: Vytvořte aplikaci WPF v sadě Visual Studio, která obsahuje ovládací prvky vázané na data, které jsou vázány na záznamy produktů, které jsou zapouzdřeny v datové sadě.
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a2344c9331b8fe253077b6bbc8c3cdba01ea9731
-ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
+ms.openlocfilehash: 1922df10e331627b0695fb6ea03f4a5101ea0fd1
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90713487"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382036"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Vytvoření vazby ovládacích prvků WPF k datové sadě
 
@@ -94,19 +95,19 @@ Předtím, než můžete vytvořit ovládací prvky vázané na data, je nutné 
 
    Otevře se průvodce **konfigurací zdroje dat** .
 
-3. Na stránce **Zvolte typ zdroje dat** vyberte možnost **databáze**a poté klikněte na tlačítko **Další**.
+3. Na stránce **Zvolte typ zdroje dat** vyberte možnost **databáze** a poté klikněte na tlačítko **Další**.
 
-4. Na stránce **Vyberte databázový model** vyberte **datová sada**a potom klikněte na **Další**.
+4. Na stránce **Vyberte databázový model** vyberte **datová sada** a potom klikněte na **Další**.
 
 5. Na stránce **Vyberte datové připojení** vyberte jednu z následujících možností:
 
    - Pokud je v rozevíracím seznamu k dispozici datové připojení k ukázkové databázi AdventureWorksLT, vyberte je a klikněte na tlačítko **Další**.
 
-   - Klikněte na **nové připojení**a vytvořte připojení k databázi AdventureWorksLT.
+   - Klikněte na **nové připojení** a vytvořte připojení k databázi AdventureWorksLT.
 
 6. Na stránce **Uložit připojovací řetězec do souboru konfigurace aplikace** zaškrtněte políčko **Ano, uložit připojení jako** zaškrtávací políčko a potom klikněte na tlačítko **Další**.
 
-7. Na stránce **Zvolte vaše databázové objekty** rozbalte **tabulky**a pak vyberte tabulku **Product (tabulky SalesLT)** .
+7. Na stránce **Zvolte vaše databázové objekty** rozbalte **tabulky** a pak vyberte tabulku **Product (tabulky SalesLT)** .
 
 8. Klikněte na **Finish** (Dokončit).
 
@@ -118,11 +119,11 @@ Předtím, než můžete vytvořit ovládací prvky vázané na data, je nutné 
 
 Chcete-li datovou sadu vyplnit daty, použijte `Fill` metodu `ProductTableAdapter` . Ve výchozím nastavení `Fill` Metoda vyplní do `ProductDataTable` `AdventureWorksLTDataSet` všechny řádky dat z tabulky Product. Tuto metodu lze upravit tak, aby vracela pouze podmnožinu řádků. Pro tento návod upravte `Fill` metodu tak, aby vracela pouze řádky pro produkty, které mají fotografie.
 
-1. V **Průzkumník řešení**dvakrát klikněte na soubor *AdventureWorksLTDataSet. xsd* .
+1. V **Průzkumník řešení** dvakrát klikněte na soubor *AdventureWorksLTDataSet. xsd* .
 
      Otevře se Návrhář DataSet.
 
-2. V návrháři klikněte pravým tlačítkem myši na příkaz **Fill**, **GetData ()** a vyberte možnost **Konfigurovat**.
+2. V návrháři klikněte pravým tlačítkem myši na příkaz **Fill** , **GetData ()** a vyberte možnost **Konfigurovat**.
 
      Otevře se průvodce **konfigurací TableAdapter** .
 
@@ -138,7 +139,7 @@ Chcete-li datovou sadu vyplnit daty, použijte `Fill` metodu `ProductTableAdapte
 
 Do okna přidejte několik tlačítek úpravou XAML v Návrháři WPF. Později v tomto návodu přidáte kód, který umožňuje uživatelům procházet a ukládat změny záznamů produktů pomocí těchto tlačítek.
 
-1. V **Průzkumník řešení**dvakrát klikněte na *MainWindow. XAML*.
+1. V **Průzkumník řešení** dvakrát klikněte na *MainWindow. XAML*.
 
     Okno se otevře v **Návrháři WPF**.
 
@@ -164,7 +165,7 @@ Vytvořte ovládací prvky, které zobrazují záznamy o zákaznících, přeta�
 
 2. Rozbalte uzel **produkt** .
 
-3. V tomto příkladu se některá pole nezobrazují, takže klikněte na rozevírací nabídku vedle následujících uzlů a vyberte **žádná**:
+3. V tomto příkladu se některá pole nezobrazují, takže klikněte na rozevírací nabídku vedle následujících uzlů a vyberte **žádná** :
 
     - ProductCategoryID
 

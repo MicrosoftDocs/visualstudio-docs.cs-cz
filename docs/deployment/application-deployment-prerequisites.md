@@ -1,5 +1,7 @@
 ---
 title: Požadavky na nasazení aplikací | Microsoft Docs
+description: Seznamte se s požadavky na nasazení pro vaše aplikace, včetně použití dialogového okna předpoklady a balíčků zaváděcího nástroje.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,20 +21,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8206e199acc3ccb76cf89603d48bed0173129218
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c87b0f6ded2960054cb553dbeb85681aa447668b
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66746064"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383245"
 ---
 # <a name="application-deployment-prerequisites"></a>Nezbytné součásti nasazení aplikace
 
 Chcete-li aplikaci nainstalovat a spustit úspěšně, nejprve nainstalujte všechny součásti, na kterých je vaše aplikace závislá, na cílový počítač. Například většina aplikací [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , které byly vytvořeny pomocí, má závislost na .NET Framework. V takovém případě musí být v cílovém počítači před instalací aplikace přítomna správná verze modulu CLR (Common Language Runtime).
 
- Tyto požadavky můžete vybrat v **dialogovém okně předpoklady** a nainstalovat .NET Framework a další distribuovatelné součásti jako součást instalace. Tento postup se označuje jako *spouštěcí*. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vygeneruje spustitelný program systému Windows s názvem *Setup.exe*, označovaný také jako *zaváděcí nástroj*. Zaváděcí nástroj zodpovídá za instalaci těchto požadavků ještě před spuštěním vaší aplikace. Další informace o výběru těchto požadavků najdete v [dialogovém okně předpoklady](../ide/reference/prerequisites-dialog-box.md).
+ Tyto požadavky můžete vybrat v **dialogovém okně předpoklady** a nainstalovat .NET Framework a další distribuovatelné součásti jako součást instalace. Tento postup se označuje jako *spouštěcí*. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vygeneruje spustitelný program systému Windows s názvem *Setup.exe* , označovaný také jako *zaváděcí nástroj*. Zaváděcí nástroj zodpovídá za instalaci těchto požadavků ještě před spuštěním vaší aplikace. Další informace o výběru těchto požadavků najdete v [dialogovém okně předpoklady](../ide/reference/prerequisites-dialog-box.md).
 
- Každá požadovaná součást je balíček zaváděcího nástroje. Balíček zaváděcího nástroje je skupina adresářů a souborů, které obsahují soubory manifestu, které popisují, jak jsou požadavky nainstalovány. Pokud požadavky vaší aplikace nejsou uvedeny v **dialogovém okně požadovaná součást**, můžete vytvořit vlastní balíčky zaváděcího nástroje a přidat je do sady Visual Studio. Pak můžete vybrat požadované součásti v **dialogovém okně předpoklady**. Další informace najdete v tématu [Vytvoření balíčků zaváděcího nástroje](../deployment/creating-bootstrapper-packages.md).
+ Každá požadovaná součást je balíček zaváděcího nástroje. Balíček zaváděcího nástroje je skupina adresářů a souborů, které obsahují soubory manifestu, které popisují, jak jsou požadavky nainstalovány. Pokud požadavky vaší aplikace nejsou uvedeny v **dialogovém okně požadovaná součást** , můžete vytvořit vlastní balíčky zaváděcího nástroje a přidat je do sady Visual Studio. Pak můžete vybrat požadované součásti v **dialogovém okně předpoklady**. Další informace najdete v tématu [Vytvoření balíčků zaváděcího nástroje](../deployment/creating-bootstrapper-packages.md).
 
  Ve výchozím nastavení je pro nasazení ClickOnce povolený zaváděcí nástroj. Zaváděcí nástroj generovaný pro nasazení ClickOnce je podepsaný. Můžete zakázat spouštění pro součást, ale pouze v případě, že jste si jisti, že je na všech cílových počítačích již nainstalována správná verze součásti.
 
@@ -48,7 +50,7 @@ Chcete-li aplikaci nainstalovat a spustit úspěšně, nejprve nainstalujte vše
   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dokáže detekovat chybějící požadované součásti a pomocí zaváděcího nástroje můžete nainstalovat požadované součásti. Další informace naleznete v tématu [How to: Install – požadavky s aplikací ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md).
 
 > [!NOTE]
-> Chcete-li změnit hodnoty v manifestech generovaných nástroji, jako jsou [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a *MageUI.exe*, je nutné upravit manifest aplikace v textovém editoru a poté znovu podepsat manifesty aplikace a nasazení. Další informace najdete v tématu [Postup: Opětovné podepsání manifestů aplikace a nasazení](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
+> Chcete-li změnit hodnoty v manifestech generovaných nástroji, jako jsou [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a *MageUI.exe* , je nutné upravit manifest aplikace v textovém editoru a poté znovu podepsat manifesty aplikace a nasazení. Další informace najdete v tématu [Postup: Opětovné podepsání manifestů aplikace a nasazení](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
 
  Použijete-li aplikaci Visual Studio a ClickOnce k nasazení aplikace, jsou balíčky zaváděcího nástroje, které jsou vybrány ve výchozím nastavení, závislé na verzi .NET Framework v řešení. Pokud však změníte cílovou verzi .NET Framework, musíte ručně aktualizovat možnosti v **dialogovém okně předpoklady** .
 

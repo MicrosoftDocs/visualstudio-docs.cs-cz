@@ -1,5 +1,7 @@
 ---
 title: '&lt;Command – &gt; element (zaváděcí nástroj) | Microsoft Docs'
+description: Element Commands implementuje testy v prvcích pod InstallChecks a deklaruje balíček, který se má nainstalovat, pokud test zaváděcího nástroje ClickOnce neproběhne úspěšně.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f52c862adcdaf7a95de6a90c2c330c39edcea13
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65c63d52290962d8c9878edf025bbc05487103da
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900341"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383050"
 ---
 # <a name="ltcommandsgt-element-bootstrapper"></a>&lt;Commands – &gt; element (zaváděcí nástroj)
 `Commands`Element implementuje testy popsané prvky pod `InstallChecks` prvkem a deklaruje, který balíček [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] by měl zaváděcí nástroj nainstalovat, pokud se test nezdařil.

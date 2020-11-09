@@ -1,5 +1,7 @@
 ---
 title: '&lt;File – &gt; element (aplikace ClickOnce) | Microsoft Docs'
+description: Element File identifikuje všechny neassembly soubory stažené a používané aplikací. Element File je nepovinný.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9345f3f094e1c48204892cd40cca71a7e28eba7c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a4d09d4a0e141359b066f2af31c158f36c96522
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900269"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382738"
 ---
 # <a name="ltfilegt-element-clickonce-application"></a>&lt;File – &gt; element (aplikace ClickOnce)
 Identifikuje všechny neassembly soubory stažené a používané aplikací.

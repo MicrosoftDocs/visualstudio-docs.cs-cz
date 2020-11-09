@@ -1,5 +1,7 @@
 ---
 title: Vytváření balíčků bootstrapperu
+description: Přečtěte si o instalačním programu a o tom, jak používat manifesty XML, které určují metadata pro správu instalace komponent ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2018
 ms.topic: conceptual
 dev_langs:
@@ -20,15 +22,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 17ac6fdb6b2eaf80d927407e717954842f6e6b1b
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 4ffa19de6abff0bb73c91c4a8e79d707d0941e00
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641660"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383011"
 ---
 # <a name="create-bootstrapper-packages"></a>Vytváření balíčků bootstrapperu
-Instalační program je obecný instalační program, který se dá nakonfigurovat tak, aby zjišťoval a instaloval distribuovatelné součásti, jako jsou soubory Instalační služba systému Windows (*. msi*) a spustitelné programy. Instalační program je také označován jako zaváděcí nástroj. Je naprogramován sadou manifestů XML, které určují metadata pro správu instalace součásti.  Každá Redistribuovatelná součást, která se zobrazí v dialogovém okně **předpoklady** pro ClickOnce, je balíček zaváděcího nástroje. Balíček zaváděcího nástroje je skupina adresářů a souborů, které obsahují soubory manifestu, které popisují, jak by měla být požadovaná součást nainstalována.
+Instalační program je obecný instalační program, který se dá nakonfigurovat tak, aby zjišťoval a instaloval distribuovatelné součásti, jako jsou soubory Instalační služba systému Windows ( *. msi* ) a spustitelné programy. Instalační program je také označován jako zaváděcí nástroj. Je naprogramován sadou manifestů XML, které určují metadata pro správu instalace součásti.  Každá Redistribuovatelná součást, která se zobrazí v dialogovém okně **předpoklady** pro ClickOnce, je balíček zaváděcího nástroje. Balíček zaváděcího nástroje je skupina adresářů a souborů, které obsahují soubory manifestu, které popisují, jak by měla být požadovaná součást nainstalována.
 
 Zaváděcí nástroj nejprve zjistí, zda některé z požadovaných součástí jsou již nainstalovány. Pokud požadavky nejsou nainstalovány, nejprve si zaváděcí nástroj zobrazí licenční smlouvy. Za druhé se po přijetí licenčních smluv koncovým uživatelem spustí instalace požadovaných součástí. V opačném případě, pokud jsou zjištěny všechny požadavky, zaváděcí nástroj pouze spustí instalační program aplikace.
 
@@ -37,9 +39,9 @@ Manifesty zaváděcího nástroje můžete vygenerovat pomocí editoru XML v apl
 
 Chcete-li vytvořit balíček zaváděcího nástroje, je nutné vytvořit manifest produktu a pro každou lokalizovanou verzi komponenty také manifest balíčku.
 
-* Manifest produktu *product.xml*obsahuje všechna jazyková a neutrální metadata pro balíček. Obsahuje metadata společná pro všechny lokalizované verze distribuovatelné součásti.  Chcete-li vytvořit tento soubor, přečtěte si téma [How to: Create a manifest produktu](../deployment/how-to-create-a-product-manifest.md).
+* Manifest produktu *product.xml* obsahuje všechna jazyková a neutrální metadata pro balíček. Obsahuje metadata společná pro všechny lokalizované verze distribuovatelné součásti.  Chcete-li vytvořit tento soubor, přečtěte si téma [How to: Create a manifest produktu](../deployment/how-to-create-a-product-manifest.md).
 
-* Manifest balíčku, *package.xml*, obsahuje metadata specifická pro jazyk; obvykle obsahuje lokalizované chybové zprávy. Komponenta musí mít alespoň jeden manifest balíčku pro každou lokalizovanou verzi této součásti. Chcete-li vytvořit tento soubor, přečtěte si téma [Postupy: Vytvoření manifestu balíčku](../deployment/how-to-create-a-package-manifest.md).
+* Manifest balíčku, *package.xml* , obsahuje metadata specifická pro jazyk; obvykle obsahuje lokalizované chybové zprávy. Komponenta musí mít alespoň jeden manifest balíčku pro každou lokalizovanou verzi této součásti. Chcete-li vytvořit tento soubor, přečtěte si téma [Postupy: Vytvoření manifestu balíčku](../deployment/how-to-create-a-package-manifest.md).
 
 Po vytvoření těchto souborů vložte soubor manifestu produktu do složky s názvem pro vlastní zaváděcí nástroj. Soubor manifestu balíčku přejde do složky s názvem pro národní prostředí. Například pokud je soubor manifestu balíčku pro anglickou distribuci, uložte soubor do složky s názvem en. Tento postup opakujte pro každé národní prostředí, například ja pro japonštinu a de pro němčinu. Konečný balíček vlastního zaváděcího nástroje může mít následující strukturu složek.
 
@@ -109,7 +111,7 @@ Můžete zabránit nasazení vašich redistribuovatelných souborů v projektech
 
 `%ProgramFiles%\Microsoft.NET\RedistList`
 
-Distribuovatelný seznam je soubor XML, který byste měli pojmenovat v následujícím formátu: * \<Company Name> . \<Component Name>.RedistList.xml*. Takže pokud se například komponenta nazývá DataWidgets vytvořená Acme, použijte *Acme.DataWidgets.RedistList.xml*. Příklad redistribuovatelného seznamu obsahu může vypadat takto:
+Distribuovatelný seznam je soubor XML, který byste měli pojmenovat v následujícím formátu: *\<Company Name> . \<Component Name>.RedistList.xml*. Takže pokud se například komponenta nazývá DataWidgets vytvořená Acme, použijte *Acme.DataWidgets.RedistList.xml*. Příklad redistribuovatelného seznamu obsahu může vypadat takto:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

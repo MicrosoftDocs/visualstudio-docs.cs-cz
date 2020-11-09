@@ -1,5 +1,6 @@
 ---
 title: Dialogové okno Nastavit odkaz na službu
+description: Pomocí dialogového okna Konfigurovat odkaz na službu v aplikaci Visual Studio můžete konfigurovat chování služby Windows Communication Foundation (WCF).
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f5bae3acb6f687c8c787e2d4121999d1133b0f1f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 70faee4277625621074b1bd1bfdf667c818e1f46
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586923"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382348"
 ---
 # <a name="configure-service-reference-dialog-box"></a>Nastavit odkaz na službu – dialogové okno
 
@@ -39,7 +40,7 @@ Chcete-li získat přístup k dialogovému oknu **Konfigurovat odkaz** na služb
 
 - Chcete-li určit typy kolekce seznamu nebo slovníku pro klienta WCF, vyberte typy ze seznamu **typ kolekce** a **typ kolekce slovníku** .
 
-- Chcete-li zakázat sdílení typů, zrušte zaškrtnutí políčka **znovu použít typy v odkazovaných sestaveních** . Pokud chcete povolit sdílení typů pro podmnožinu odkazovaných sestavení, zaškrtněte políčko **znovu použít typy v odkazovaných sestaveních** , vyberte možnost **znovu použít typy v zadaných odkazovaných sestaveních**a vyberte požadované odkazy v **seznamu odkazovaných sestavení**.
+- Chcete-li zakázat sdílení typů, zrušte zaškrtnutí políčka **znovu použít typy v odkazovaných sestaveních** . Pokud chcete povolit sdílení typů pro podmnožinu odkazovaných sestavení, zaškrtněte políčko **znovu použít typy v odkazovaných sestaveních** , vyberte možnost **znovu použít typy v zadaných odkazovaných sestaveních** a vyberte požadované odkazy v **seznamu odkazovaných sestavení**.
 
 ## <a name="uielement-list"></a>UIElement – seznam
 
@@ -48,7 +49,7 @@ Chcete-li získat přístup k dialogovému oknu **Konfigurovat odkaz** na služb
 Aktualizuje webovou adresu, kde odkaz na službu vyhledává službu. Například během vývoje může být služba hostována na vývojovém serveru a později přesunuta na provozní server, což vyžaduje změnu adresy.
 
 > [!NOTE]
-> Element Address není k dispozici, když se v dialogovém okně **Přidat odkaz na službu**zobrazuje dialogové okno **Konfigurovat odkaz na službu** .
+> Element Address není k dispozici, když se v dialogovém okně **Přidat odkaz na službu** zobrazuje dialogové okno **Konfigurovat odkaz na službu** .
 
 **Úroveň přístupu pro vygenerované třídy**
 
@@ -91,7 +92,7 @@ Když je toto políčko zaškrtnuté, znovu se použijí jenom vybrané typy v *
 
 **Seznam odkazovaných sestavení**
 
-Obsahuje seznam odkazovaných sestavení pro projekt nebo Web. Když vyberete možnost **znovu použít typy v zadaných odkazovaných sestaveních**, můžete vybrat nebo vymazat jednotlivá sestavení.
+Obsahuje seznam odkazovaných sestavení pro projekt nebo Web. Když vyberete možnost **znovu použít typy v zadaných odkazovaných sestaveních** , můžete vybrat nebo vymazat jednotlivá sestavení.
 
 **Přidat webový odkaz**
 
@@ -101,7 +102,7 @@ Zobrazí dialogové okno **Přidat webový odkaz** .
 > Tato možnost by měla být použita pouze pro projekty, které cílí na verzi 2,0 .NET Framework.
 >
 > [!NOTE]
-> Tlačítko **Přidat webový odkaz** je dostupné jenom v případě, že se v **dialogovém okně Přidat odkaz na službu**zobrazuje dialogové okno **Konfigurovat odkaz na službu** .
+> Tlačítko **Přidat webový odkaz** je dostupné jenom v případě, že se v **dialogovém okně Přidat odkaz na službu** zobrazuje dialogové okno **Konfigurovat odkaz na službu** .
 
 ## <a name="see-also"></a>Viz také
 

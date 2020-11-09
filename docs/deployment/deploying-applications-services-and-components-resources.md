@@ -1,8 +1,10 @@
 ---
 title: Nasazení aplikace sady Visual Studio do složky, služby IIS, Azure nebo jiného cíle
 titleSuffix: ''
-description: Další informace o možnostech publikování aplikace pomocí Průvodce publikováním
-ms.custom: contperfq1
+description: Přečtěte si další informace o možnostech publikování aplikace pomocí nástroje Publikovat.
+ms.custom:
+- SEO-VS-2020
+- contperfq1
 ms.date: 08/21/2020
 ms.topic: troubleshooting
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bc551a6e9bf4e05db61ddeb2480e218ebb3c925
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: f8c4a1effcf61348d2f2267fb38164fd166f7d48
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928525"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382968"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Nasazení aplikace do složky, služby IIS, Azure nebo jiného cíle
 
@@ -209,7 +211,7 @@ Pomoc při řešení potíží ASP.NET Core ve službě IIS najdete v tématu v�
 
 ## <a name="import-profile"></a>Importovat profil
 
-Profil můžete importovat při publikování do služby IIS nebo Azure App Service. Nasazení můžete nakonfigurovat pomocí *souboru nastavení publikování* (* \* . publishsettings*). Soubor nastavení publikování se vytvoří prostřednictvím služby IIS nebo Azure App Service, nebo se dá vytvořit ručně a pak ho můžete importovat do sady Visual Studio.
+Profil můžete importovat při publikování do služby IIS nebo Azure App Service. Nasazení můžete nakonfigurovat pomocí *souboru nastavení publikování* ( *\* . publishsettings* ). Soubor nastavení publikování se vytvoří prostřednictvím služby IIS nebo Azure App Service, nebo se dá vytvořit ručně a pak ho můžete importovat do sady Visual Studio.
 
 Použití souboru nastavení publikování může zjednodušit konfiguraci nasazení a funguje lépe v týmovém prostředí, a to v případě ruční konfigurace jednotlivých profilů nasazení.
 

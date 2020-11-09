@@ -1,5 +1,6 @@
 ---
 title: Přidávání kódu do datových sad ve vícevrstvých aplikacích
+description: Přidejte kód do datových sad v n-vrstvých aplikacích v sadě Visual Studio. Vytvořte soubor částečné třídy pro datovou sadu a přidejte do něj kód (místo do sady DataSet. DataSet. Designer).
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a57a05ddb8317ea31b852ded369ad7ef69d40bd0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdbd6e728ebd4adea1a18d842651e9941098249c
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283083"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382192"
 ---
 # <a name="add-code-to-datasets-in-n-tier-applications"></a>Přidávání kódu do datových sad ve vícevrstvých aplikacích
 
@@ -26,7 +27,7 @@ Můžete roztáhnout funkce datové sady tím, že vytvoříte soubor částečn
 
 Kód, který definuje datovou sadu, je vygenerován pokaždé, když se změní definice datové sady (v typované datové sadě). Tento kód je také generován, pokud provedete změny během spuštění libovolného průvodce, který upravuje konfiguraci datové sady. Chcete-li zabránit odstranění kódu během obnovování datové sady, přidejte kód do souboru částečné třídy datové sady.
 
-Ve výchozím nastavení platí, že po oddělení datové sady a kódu TableAdapter je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem *DataSet. Designer. vb* (nebo *DatasetName.Designer.cs*), který obsahuje kód TableAdapter. Projekt, který je určen vlastností **projektu DataSet** , má soubor s názvem *DataSet. DataSet. Designer. vb* (nebo *DatasetName.DataSet.Designer.cs*). Tento soubor obsahuje kód datové sady.
+Ve výchozím nastavení platí, že po oddělení datové sady a kódu TableAdapter je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem *DataSet. Designer. vb* (nebo *DatasetName.Designer.cs* ), který obsahuje kód TableAdapter. Projekt, který je určen vlastností **projektu DataSet** , má soubor s názvem *DataSet. DataSet. Designer. vb* (nebo *DatasetName.DataSet.Designer.cs* ). Tento soubor obsahuje kód datové sady.
 
 > [!NOTE]
 > Při oddělení datových sad a objekty TableAdapter (nastavením vlastnosti **projektu DataSet** ) existující částečné třídy datové sady v projektu nebudou automaticky přesunuty. Existující částečné třídy datové sady je nutné přesunout ručně do projektu datové sady.

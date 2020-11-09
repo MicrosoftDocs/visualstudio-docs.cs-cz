@@ -1,5 +1,6 @@
 ---
 title: Přidání nových zdrojů dat
+description: Přidejte nové zdroje dat do sady Visual Studio. Zdroj dat je objekt rozhraní .NET, který se připojuje k úložišti dat a zpřístupňuje data pro aplikaci .NET.
 ms.date: 11/21/2018
 ms.topic: how-to
 f1_keywords:
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2e8ad5bf65ad25d197785c3e720ec01c7bdc6f9d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51d7d2bb7a7037d3fbcf307c620e9aca702ac370
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283044"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382114"
 ---
 # <a name="add-new-data-sources"></a>Přidání nových zdrojů dat
 
@@ -51,7 +52,7 @@ Zdroje dat můžete vytvářet a upravovat pomocí **Průvodce konfigurací zdro
 Po vytvoření zdroje dat se zobrazí v okně nástroje **zdroje dat** .
 
 > [!TIP]
-> Chcete-li otevřít okno **zdroje dat** , ověřte, zda je projekt otevřen, a poté stiskněte klávesu **SHIFT** + **ALT** + **D** nebo zvolte možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**systému Windows.
+> Chcete-li otevřít okno **zdroje dat** , ověřte, zda je projekt otevřen, a poté stiskněte klávesu **SHIFT** + **ALT** + **D** nebo zvolte možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat** systému Windows.
 
 Zdroj dat můžete přetáhnout z okna **zdroje dat** na návrhovou plochu formuláře nebo ovládací prvek. To způsobí vygenerování často používaného kódu, který zobrazí data z úložiště dat.
 

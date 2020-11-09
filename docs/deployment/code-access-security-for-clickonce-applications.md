@@ -1,5 +1,7 @@
 ---
 title: Zabezpečení přístupu ke kódu pro aplikace ClickOnce | Microsoft Docs
+description: Přečtěte si o zabezpečení přístupu ke kódu pro aplikace ClickOnce a o tom, jak nakonfigurovat oprávnění zabezpečení přístupu kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fd2d9b6792cae002967c9000474a825bd3a0651
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 256a41138a3918dd61d8fd496465bb0230fb9362
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649282"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382569"
 ---
 # <a name="code-access-security-for-clickonce-applications"></a>Zabezpečení přístupu ke kódu pro aplikace ClickOnce
 Aplikace ClickOnce jsou založené na .NET Framework a podléhají omezením zabezpečení přístupu kódu. Z tohoto důvodu je důležité pochopit důsledky zabezpečení přístupu kódu a zapsat aplikace ClickOnce odpovídajícím způsobem.

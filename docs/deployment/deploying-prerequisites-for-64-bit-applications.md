@@ -1,5 +1,7 @@
 ---
 title: Nasazování požadavků pro 64 – bitové aplikace | Microsoft Docs
+description: Přečtěte si o prodaných distribuovatelných, které můžete použít jako předpoklady pro nasazení aplikace ClickOnce na 64 bitů platformy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,17 +20,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c70b58577f8aa6e391215658afb7f8fa43c9bb5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c051e57bb6af707e7bd5c096e230966e98498bd2
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62928883"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382907"
 ---
 # <a name="deploy-prerequisites-for-64-bit-applications"></a>Nasazení nezbytných součástí pro 64bitové aplikace
 Nasazení ClickOnce podporuje instalaci aplikací na 64 platforem. Cílové platformy jsou **x86** pro 32 platforem, **x64** pro počítače, které podporují INSTRUKČNÍ sady AMD64 a EM64T a **Itanium** pro procesor s procesorem Itanium pro 64.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  V následující tabulce jsou uvedeny distribuovatelné součásti, které můžete použít jako předpoklady pro instalaci vaší 64 bitové aplikace.
 
  Pokud vyberete požadovanou součást, která nemá 64 bitové součásti, může se zobrazit upozornění, že vybrané balíčky nejsou k dispozici pro 64 platformu.

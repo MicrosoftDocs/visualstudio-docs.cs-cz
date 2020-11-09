@@ -1,5 +1,7 @@
 ---
 title: Nasazení ClickOnce v systému Windows Vista | Microsoft Docs
+description: Přečtěte si, jak Visual Studio generuje externí manifest řízení uživatelských účtů pro ClickOnce a Registration-Free aplikace COM, které vyžadují externí manifest.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,16 +19,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b76804eb8c06acbcdeac017108773056ee38338
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: c2e09225339a87c55c31d27d26b129e199385e99
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641495"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383076"
 ---
 # <a name="clickonce-deployment-on-windows-vista"></a>Nasazení ClickOnce v systému Windows Vista
 
-Sestavování aplikací v aplikaci Visual Studio pro řízení uživatelských účtů (UAC) v systému Windows Vista obvykle generuje vložený manifest kódovaný jako binární data XML ve spustitelném souboru aplikace.  ClickOnce a aplikace COM bez registrace vyžadují externí manifest, takže Visual Studio vygeneruje soubor pro tyto projekty obsahující data UAC místo vloženého manifestu. Pro nasazení modelu COM pro ClickOnce a bezplatné registrace používá Visual Studio informace ze souboru s názvem *App. manifest* pro generování externích informací o manifestu nástroje řízení uživatelských účtů. Ve všech ostatních případech Visual Studio vloží data nástroje řízení uživatelských účtů do spustitelného souboru aplikace.
+Sestavování aplikací v aplikaci Visual Studio pro řízení uživatelských účtů (UAC) v systému Windows Vista obvykle generuje vložený manifest kódovaný jako binární data XML ve spustitelném souboru aplikace.  ClickOnce a Registration-Free aplikace modelu COM vyžadují externí manifest, takže Visual Studio vygeneruje soubor pro tyto projekty obsahující data nástroje řízení uživatelských účtů namísto vloženého manifestu. Pro ClickOnce a Registration-Free nasazení modelu COM používá Visual Studio informace ze souboru s názvem *App. manifest* pro generování externích informací o manifestu nástroje řízení uživatelských účtů. Ve všech ostatních případech Visual Studio vloží data nástroje řízení uživatelských účtů do spustitelného souboru aplikace.
 
 Visual Studio poskytuje následující možnosti pro generování manifestu:
 
@@ -36,7 +38,7 @@ Visual Studio poskytuje následující možnosti pro generování manifestu:
 
 - Použijte externí manifest. Vygenerujte externí manifest pomocí *App. manifest*.
 
-   Tím se vytvoří pouze externí manifest s použitím informací v *App. manifest*. Když publikujete aplikaci pomocí technologie ClickOnce nebo bez registrace modelu COM, Visual Studio přidá *aplikaci App. manifest* do projektu a pak přidá tuto možnost.
+   Tím se vytvoří pouze externí manifest s použitím informací v *App. manifest*. Když publikujete aplikaci pomocí technologie ClickOnce nebo Registration-Free COM, Visual Studio přidá do projektu *aplikaci App. manifest* a pak přidá tuto možnost.
 
 - Nepoužívejte žádný manifest. Vytvoření aplikace bez manifestu.
 

@@ -1,5 +1,6 @@
 ---
 title: Přidat důvěryhodného vydavatele do klientského pole (ClickOnce)
+description: Naučte se, jak přidat certifikát do klientského počítače tak, aby vaše aplikace ClickOnce běžely na vyšší úrovni důvěryhodnosti bez zobrazení výzvy uživateli.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4146efe0790e2bfd4abfa9e30897811aba182916
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: cef5eb1df80c7fffcc4a938504e82cac2aa3ae46
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809804"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382699"
 ---
 # <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Postupy: Přidání důvěryhodného vydavatele do klientského počítače pro aplikace ClickOnce
 Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské počítače tak, aby [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace běžely s vyšší úrovní důvěryhodnosti bez zobrazení výzvy uživateli. Následující postupy ukazují, jak pomocí nástroje příkazového řádku CertMgr.exe přidat certifikát vydavatele do úložiště důvěryhodných vydavatelů v klientském počítači.
@@ -39,7 +40,7 @@ Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské po�
 
 1. Získejte digitální certifikát od certifikační autority.
 
-2. Exportujte certifikát do formátu Base64 X. 509 (*. cer*). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Exportujte certifikát do formátu Base64 X. 509 ( *. cer* ). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
 
 3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:
 
@@ -49,7 +50,7 @@ Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské po�
 
 1. Získejte digitální certifikát od certifikační autority.
 
-2. Exportujte certifikát do formátu Base64 X. 509 (*. cer*). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Exportujte certifikát do formátu Base64 X. 509 ( *. cer* ). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
 
 3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:
 

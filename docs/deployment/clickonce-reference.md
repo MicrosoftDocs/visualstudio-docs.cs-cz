@@ -1,5 +1,7 @@
 ---
 title: Reference k ClickOnce | Microsoft Docs
+description: Pomocí těchto referenčních článků můžete pochopit strukturu souborů XML používaných k reprezentování aplikací ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f3b22dacdb0192df70f9fcb13b8a228188f129d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f852182baec22915f412a3753755b129053e0ad
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900323"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383024"
 ---
 # <a name="clickonce-reference"></a>Odkaz na ClickOnce
 Následující stránky popisují strukturu souborů XML, které slouží k reprezentaci aplikací ClickOnce.

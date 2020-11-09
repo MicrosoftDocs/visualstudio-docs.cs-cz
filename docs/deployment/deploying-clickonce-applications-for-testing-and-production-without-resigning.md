@@ -1,5 +1,7 @@
 ---
 title: Nasazení aplikací ClickOnce bez opětovného podepisování
+description: Přečtěte si informace o nasazování aplikací ClickOnce z více síťových umístění bez opětovného podepsání nebo změny manifestů ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89e1d7970b26d5ba9bd49090362a6a4e8c09f78d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5644a890a8705c68852cb5f67e4d998e12338dc
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80395322"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382933"
 ---
 # <a name="deploy-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>Nasazení aplikací ClickOnce pro testovací a produkční servery bez opětovného podepsání
 Tento článek popisuje funkci ClickOnce představenou ve verzi .NET Framework 3,5, která umožňuje nasazení aplikací ClickOnce z více síťových umístění bez opětovného podepsání nebo změny manifestů ClickOnce.

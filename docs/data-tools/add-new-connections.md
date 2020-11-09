@@ -1,5 +1,6 @@
 ---
 title: Přidání nových připojení
+description: Přidejte připojení do sady Visual Studio do databáze nebo služby a prozkoumejte obsah a schémata databáze pomocí Průzkumník serveru, Průzkumníka cloudu nebo Průzkumník objektů systému SQL Server.
 ms.date: 11/04/2016
 ms.topic: how-to
 author: ghogen
@@ -7,16 +8,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5f6f34c28a6bbba236a4d90e2f936fad0b2a3f60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 34f3ef6823ddfae806de11b85cc5bfe6b14c9b19
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283057"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382413"
 ---
 # <a name="add-new-connections"></a>Přidání nových připojení
 
-Můžete testovat připojení k databázi nebo službě a prozkoumat obsah databáze a schémata pomocí **Průzkumník serveru**, **Průzkumníka cloudu**nebo **Průzkumník objektů systému SQL Server**. Funkčnost těchto oken se překrývá do určitého rozsahu. Základní rozdíly:
+Můžete testovat připojení k databázi nebo službě a prozkoumat obsah databáze a schémata pomocí **Průzkumník serveru** , **Průzkumníka cloudu** nebo **Průzkumník objektů systému SQL Server**. Funkčnost těchto oken se překrývá do určitého rozsahu. Základní rozdíly:
 
 - Průzkumník serveru
 
@@ -32,7 +33,7 @@ Můžete testovat připojení k databázi nebo službě a prozkoumat obsah datab
 
 ## <a name="add-a-connection-in-server-explorer"></a>Přidání připojení v Průzkumník serveru
 
-Chcete-li vytvořit připojení k databázi, klikněte na ikonu **Přidat připojení** v **Průzkumník serveru**nebo klikněte pravým tlačítkem myši v **Průzkumník serveru** v uzlu **datová připojení** a vyberte možnost **Přidat připojení**. Odtud se můžete připojit také k databázi na jiném serveru, službě SharePoint nebo službě Azure.
+Chcete-li vytvořit připojení k databázi, klikněte na ikonu **Přidat připojení** v **Průzkumník serveru** nebo klikněte pravým tlačítkem myši v **Průzkumník serveru** v uzlu **datová připojení** a vyberte možnost **Přidat připojení**. Odtud se můžete připojit také k databázi na jiném serveru, službě SharePoint nebo službě Azure.
 
 ![Ikona Průzkumník serveru nového připojení](../data-tools/media/raddata-server-explorer-new-connection-icon.png)
 
@@ -52,7 +53,7 @@ Po výběru zdroje dat klikněte na tlačítko **Test připojení**. Pokud to ne
 
 ![Testovat připojení](../data-tools/media/raddata-test-connection.png)
 
-Pokud je test úspěšný, jste připraveni vytvořit *zdroj dat*, což je Visual Studio Term, který se skutečně označuje jako *datový model* založený na podkladové databázi nebo službě.
+Pokud je test úspěšný, jste připraveni vytvořit *zdroj dat* , což je Visual Studio Term, který se skutečně označuje jako *datový model* založený na podkladové databázi nebo službě.
 
 ## <a name="see-also"></a>Viz také
 

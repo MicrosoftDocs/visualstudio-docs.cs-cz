@@ -1,5 +1,7 @@
 ---
 title: Výběr strategie nasazení ClickOnce | Microsoft Docs
+description: Přečtěte si o strategiích pro nasazení aplikace ClickOnce a o tom, jak zvolit strategii v závislosti na typu aplikace, kterou nasazujete.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b4ed387d00c96c1d66fdac0bb92a0bfbae7c530
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d623c47960a3c1a44c184df52488682659d5238d
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64782481"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383167"
 ---
 # <a name="choose-a-clickonce-deployment-strategy"></a>Výběr strategie nasazení ClickOnce
 Existují tři různé strategie pro nasazení aplikace. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] strategie, kterou zvolíte, závisí hlavně na typu aplikace, kterou nasazujete. Toto jsou zmíněné tři strategie nasazení:
@@ -55,7 +57,7 @@ Existují tři různé strategie pro nasazení aplikace. [!INCLUDE[ndptecclick](
 
  Chcete-li povolit tuto strategii nasazení v nástroji [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , klikněte na možnost **neinstalovat aplikaci** na stránce **instalovat nebo spustit z webové** stránky průvodce publikováním.
 
- Chcete-li tuto strategii nasazení povolit ručně, změňte značku **instalace** v manifestu nasazení. (Jeho hodnota může být **true** nebo **false**. V *Mage.exe*použijte možnost **pouze online** v seznamu **Typ aplikace** .)
+ Chcete-li tuto strategii nasazení povolit ručně, změňte značku **instalace** v manifestu nasazení. (Jeho hodnota může být **true** nebo **false**. V *Mage.exe* použijte možnost **pouze online** v seznamu **Typ aplikace** .)
 
 ## <a name="install-from-a-cd"></a>Instalace z disku CD
  Použijete-li tuto strategii, vaše aplikace bude nasazena na vyměnitelné médium, jako je například disk CD-ROM nebo DVD. Stejně jako u předchozí možnosti platí, že když uživatel zvolí instalaci aplikace, nainstaluje a spustí a položky se přidají do nabídky **Start** a **Přidat nebo odebrat programy** v **Ovládacích panelech**.

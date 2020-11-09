@@ -1,5 +1,6 @@
 ---
 title: Vytvoření vazby ovládacích prvků modelu Windows Forms k datům
+description: Navažte model Windows Forms ovládací prvky na data v aplikaci Visual Studio, abyste mohli zobrazit data uživatelům vaší aplikace.
 ms.date: 11/03/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9af6c503b34d00ea88e74b8af40cd9e7ded643ff
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 48697fb5a031496b5e69c4dd8d6821ad243d3874
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508545"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382374"
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio
 
@@ -31,7 +32,7 @@ Data můžete uživatelům vaší aplikace zobrazit tak, že data svážete s mo
 ![Operace přetažení zdroje dat](../data-tools/media/raddata-data-source-drag-operation.png)
 
 > [!TIP]
-> Pokud není okno **zdroje dat** viditelné, můžete ho otevřít výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat**systému Windows nebo stisknutím klávesy **SHIFT** + **ALT** + **D**. Chcete-li zobrazit okno **zdroje dat** , musíte mít otevřený projekt v aplikaci Visual Studio.
+> Pokud není okno **zdroje dat** viditelné, můžete ho otevřít výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat** systému Windows nebo stisknutím klávesy **SHIFT** + **ALT** + **D**. Chcete-li zobrazit okno **zdroje dat** , musíte mít otevřený projekt v aplikaci Visual Studio.
 
 Před přetažením položek můžete nastavit typ ovládacího prvku, na který chcete vytvořit vazby. Různé hodnoty se zobrazí v závislosti na tom, zda jste zvolili tabulku nebo jednotlivý sloupec.  Můžete také nastavit vlastní hodnoty. V případě tabulky **Podrobnosti** znamená, že každý sloupec je svázán s samostatným ovládacím prvkem.
 
@@ -67,7 +68,7 @@ Můžete také přetáhnout položky z okna **zdroje dat** do ovládacích prvk�
 
 ## <a name="bind-to-data-in-individual-controls"></a>Vazba na data v jednotlivých ovládacích prvcích
 
-Když svážete zdroj dat s **podrobnostmi**, je každý sloupec v datové sadě svázán s samostatným ovládacím prvkem.
+Když svážete zdroj dat s **podrobnostmi** , je každý sloupec v datové sadě svázán s samostatným ovládacím prvkem.
 
 ![Vazba zdroje dat k podrobnostem](../data-tools/media/raddata-bind-data-source-to-details.png)
 

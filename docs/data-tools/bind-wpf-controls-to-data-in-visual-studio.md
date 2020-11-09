@@ -1,5 +1,6 @@
 ---
 title: Svázání ovládacích prvků WPF s daty – část 1
+description: Navažte ovládací prvky WPF na data. Chcete-li vytvořit tyto ovládací prvky vázané na data, přetáhněte položky z okna zdroje dat do návrháře WPF v aplikaci Visual Studio.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 27d0c14bcf09a3b0d30cd23dea0f8348c45fcab7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 697b5efb172a09f2dcd5512a6301febd7429411f
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282878"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381919"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků WPF k datům v sadě Visual Studio
 
@@ -35,7 +36,7 @@ V následující tabulce jsou uvedeny úlohy, které lze provést přetažením 
 
 |Úkol|Další informace|
 |----------| - |
-|Vytvořte nové ovládací prvky vázané na data.<br /><br /> Navažte existující ovládací prvky na data.|[Svázání ovládacích prvků WPF s datovou sadou](../data-tools/bind-wpf-controls-to-a-dataset.md)|
+|Vytvořte nové ovládací prvky vázané na data.<br /><br /> Navažte existující ovládací prvky na data.|[Vytvoření vazby ovládacích prvků WPF k datové sadě](../data-tools/bind-wpf-controls-to-a-dataset.md)|
 |Vytvořte ovládací prvky zobrazující související data ve vztahu nadřazený-podřízený, když uživatel vybere nadřazený záznam dat v jednom ovládacím prvku, jiný ovládací prvek pro tento vybraný záznam zobrazí související podřízená data.|[Zobrazení souvisejících dat v aplikacích WPF](../data-tools/display-related-data-in-wpf-applications.md)|
 |Vytvoří *vyhledávací tabulku* , která zobrazí informace z jedné tabulky na základě hodnoty pole cizího klíče v jiné tabulce.|[Vytváření vyhledávacích tabulek v aplikacích WPF](../data-tools/create-lookup-tables-in-wpf-applications.md)|
 |Navažte ovládací prvek na obrázek v databázi.|[Vytvoření vazby ovládacích prvků k obrázkům z databáze](../data-tools/bind-controls-to-pictures-from-a-database.md)|

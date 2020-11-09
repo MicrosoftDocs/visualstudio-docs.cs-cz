@@ -1,5 +1,6 @@
 ---
 title: Přidávání ověřování do vícevrstvé datové sady
+description: Přidání ověřování do n-vrstvé datové sady v sadě Visual Studio. Ověřte změny v jednotlivých sloupcích nebo celých řádcích.
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 91dbe04c85491a38a221edfb064702085136780f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ecd57066f310886f2941700173d138756f682a0e
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283018"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382127"
 ---
 # <a name="add-validation-to-an-n-tier-dataset"></a>Přidávání ověřování do vícevrstvé datové sady
 Přidání ověřování do datové sady, která je rozdělena do n-vrstvého řešení, je v podstatě totéž jako přidání ověřování do datové sady s jedním souborem (datová sada v jednom projektu). Navrhované umístění pro ověřování dat je v <xref:System.Data.DataTable.ColumnChanging> událostech a/nebo v <xref:System.Data.DataTable.RowChanging> tabulce dat.
@@ -170,4 +171,4 @@ Vytvořte obslužnou rutinu události pro <xref:System.Data.DataTable.RowChangin
 
 - [Přehled N-vrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md)
 - [Návod: vytvoření N-vrstvých datových aplikací](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
-- [Ověřování dat v datových sadách](../data-tools/validate-data-in-datasets.md)
+- [Ověřit data v datových sadách](../data-tools/validate-data-in-datasets.md)

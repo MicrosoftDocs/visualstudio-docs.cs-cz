@@ -1,5 +1,7 @@
 ---
 title: Manifest aplikace ClickOnce | Microsoft Docs
+description: Seznamte se s manifestem aplikace ClickOnce, což je soubor XML, který popisuje aplikaci nasazenou pomocí technologie ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be9bfe19b92740d6be6c91802d193bf2fc401847
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13b84a256bfc9d13f8c17b92385df2106dc0a47d
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62928962"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383115"
 ---
 # <a name="clickonce-application-manifest"></a>Manifest aplikace ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Manifest aplikace je soubor XML, který popisuje aplikaci, která je nasazena pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .

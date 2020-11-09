@@ -1,5 +1,6 @@
 ---
 title: Svázání ovládacích prvků s daty
+description: Vázání ovládacích prvků k datům v aplikaci Visual Studio. Vytvořte ovládací prvky vázané na data přetažením položek z okna zdroje dat.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3d812316de46caf7480146003f7ba1950ae3b9e2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f92382721558d76cf9e84fa587b322d56af72247
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283031"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382166"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio
 
@@ -45,7 +46,7 @@ V souvislosti s datovou vazbou představuje zdroj dat data v paměti, která lze
 
 ## <a name="data-sources-window"></a>okno Zdroje dat
 
-Zdroje dat jsou k dispozici pro váš projekt jako položky v okně **zdroje dat** . Toto okno se zobrazí, když je návrhová plocha formuláře aktivním oknem projektu, nebo ji můžete otevřít (když je projekt otevřen) výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat**systému Windows. Můžete přetáhnout položky z tohoto okna a vytvořit tak ovládací prvky, které jsou vázány na podkladová data, a můžete také nakonfigurovat zdroje dat kliknutím pravým tlačítkem myši na.
+Zdroje dat jsou k dispozici pro váš projekt jako položky v okně **zdroje dat** . Toto okno se zobrazí, když je návrhová plocha formuláře aktivním oknem projektu, nebo ji můžete otevřít (když je projekt otevřen) výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat** systému Windows. Můžete přetáhnout položky z tohoto okna a vytvořit tak ovládací prvky, které jsou vázány na podkladová data, a můžete také nakonfigurovat zdroje dat kliknutím pravým tlačítkem myši na.
 
 ![okno Zdroje dat](../data-tools/media/raddata-data-sources-window.png)
 

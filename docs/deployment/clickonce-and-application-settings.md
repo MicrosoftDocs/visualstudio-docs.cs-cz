@@ -1,5 +1,7 @@
 ---
 title: Nastavení ClickOnce a aplikace | Microsoft Docs
+description: Přečtěte si, jak fungují soubory nastavení aplikace v aplikaci ClickOnce a jak ClickOnce migruje nastavení, když se uživatel upgraduje na další verzi.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a72b5bc3f3645d9af1008f2c178ab285e8b45449
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e51b850fa10ac660fbc3bd3a06428ddb92a060c4
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184130"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383128"
 ---
 # <a name="clickonce-and-application-settings"></a>ClickOnce a nastavení aplikace
 Nastavení aplikace pro model Windows Forms usnadňuje vytváření, ukládání a údržbu uživatelských předvoleb aplikace a uživatele na klientovi. Následující dokument popisuje, jak soubory nastavení aplikace fungují v aplikaci ClickOnce a jak ClickOnce migruje nastavení, když uživatel upgraduje na další verzi.
@@ -27,11 +29,11 @@ Nastavení aplikace pro model Windows Forms usnadňuje vytváření, ukládání
  Níže uvedené informace platí pouze pro výchozího zprostředkovatele nastavení aplikace, <xref:System.Configuration.LocalFileSettingsProvider> třídy. Pokud zadáte vlastního poskytovatele, určí tento poskytovatel způsob, jakým ukládá svá data a jak upgradovat její nastavení mezi verzemi. Další informace o poskytovatelích nastavení aplikace najdete v tématu [Architektura nastavení aplikace](/dotnet/framework/winforms/advanced/application-settings-architecture).
 
 ## <a name="application-settings-files"></a>Soubory nastavení aplikace
- Nastavení aplikace používá dva soubory: * \<app>.exe.config* a *user.config*, kde *aplikace* je název vaší model Windows Forms aplikace. V klientovi se vytvoří *user.config* , když aplikace poprvé ukládá nastavení s rozsahem uživatele. * \<app>.exe.config*naproti tomu bude před nasazením existovat, pokud definujete výchozí hodnoty pro nastavení. Visual Studio bude tento soubor automaticky zahrnovat při použití příkazu **publikovat** . Pokud vytvoříte aplikaci ClickOnce pomocí *Mage.exe* nebo *MageUI.exe*, je nutné zajistit, aby byl tento soubor součástí dalších souborů aplikace při naplnění manifestu aplikace.
+ Nastavení aplikace používá dva soubory: *\<app>.exe.config* a *user.config* , kde *aplikace* je název vaší model Windows Forms aplikace. V klientovi se vytvoří *user.config* , když aplikace poprvé ukládá nastavení s rozsahem uživatele. *\<app>.exe.config* naproti tomu bude před nasazením existovat, pokud definujete výchozí hodnoty pro nastavení. Visual Studio bude tento soubor automaticky zahrnovat při použití příkazu **publikovat** . Pokud vytvoříte aplikaci ClickOnce pomocí *Mage.exe* nebo *MageUI.exe* , je nutné zajistit, aby byl tento soubor součástí dalších souborů aplikace při naplnění manifestu aplikace.
 
- V model Windows Forms aplikaci, která není nasazena pomocí technologie ClickOnce, je soubor * \<app>.exe.config* aplikace uložen v adresáři aplikace, zatímco *user.config* soubor je uložen ve složce **Documents and Settings** uživatele. V aplikaci ClickOnce * \<app>.exe.config* žije v adresáři aplikace v mezipaměti aplikace ClickOnce a *user.config* žije v adresáři dat ClickOnce pro danou aplikaci.
+ V model Windows Forms aplikaci, která není nasazena pomocí technologie ClickOnce, je soubor *\<app>.exe.config* aplikace uložen v adresáři aplikace, zatímco *user.config* soubor je uložen ve složce **Documents and Settings** uživatele. V aplikaci ClickOnce *\<app>.exe.config* žije v adresáři aplikace v mezipaměti aplikace ClickOnce a *user.config* žije v adresáři dat ClickOnce pro danou aplikaci.
 
- Bez ohledu na to, jak aplikaci nasazujete, nastavení aplikace zajišťuje bezpečný přístup pro čtení * \<app>.exe.config*a bezpečný přístup pro čtení a zápis do *user.config*.
+ Bez ohledu na to, jak aplikaci nasazujete, nastavení aplikace zajišťuje bezpečný přístup pro čtení *\<app>.exe.config* a bezpečný přístup pro čtení a zápis do *user.config*.
 
  V aplikaci ClickOnce je velikost konfiguračních souborů používaných nastavením aplikace omezená na velikost mezipaměti ClickOnce. Další informace najdete v tématu [Přehled mezipaměti ClickOnce](../deployment/clickonce-cache-overview.md).
 
@@ -42,8 +44,8 @@ Nastavení aplikace pro model Windows Forms usnadňuje vytváření, ukládání
 
 |Typ změny|Akce upgradu|
 |--------------------|--------------------|
-|Nastavení přidáno do * \<app>.exe.config*|Nové nastavení se sloučí do * \<app>.exe.config* aktuální verze.|
-|Nastavení odebrané z * \<app>.exe.config*|Staré nastavení se odebere z * \<app>.exe.config* aktuální verze.|
+|Nastavení přidáno do *\<app>.exe.config*|Nové nastavení se sloučí do *\<app>.exe.config* aktuální verze.|
+|Nastavení odebrané z *\<app>.exe.config*|Staré nastavení se odebere z *\<app>.exe.config* aktuální verze.|
 |Nastavení se změnilo jako výchozí. místní nastavení je pořád nastavené na původní výchozí hodnotu v *user.config*|Toto nastavení se sloučí do *user.config* aktuální verze s novou výchozí hodnotou jako hodnota.|
 |Nastavení se změnilo jako výchozí. nastavení nastavené na jiný než výchozí v *user.config*|Toto nastavení se sloučí do *user.config* aktuální verze, přičemž zůstane zachovaná jiná než výchozí hodnota.|
 

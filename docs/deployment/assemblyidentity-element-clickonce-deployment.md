@@ -1,5 +1,7 @@
 ---
 title: '&lt;assemblyIdentity – &gt; element (nasazení ClickOnce) | Microsoft Docs'
+description: V nasazení ClickOnce je vyžadován element assemblyIdentity. Neobsahuje žádné podřízené elementy a má atributy popsané v tomto článku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56525cc0c0c754a7fa3a1f4c2c5b6cf2e941e9b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a692d37771070f1835fc791515d5dbc24ce6b1b
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929059"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383180"
 ---
 # <a name="ltassemblyidentitygt-element-clickonce-deployment"></a>&lt;assemblyIdentity – &gt; element (nasazení ClickOnce)
 Identifikuje primární sestavení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace.
@@ -30,8 +32,8 @@ Identifikuje primární sestavení [!INCLUDE[ndptecclick](../deployment/includes
 
 ```xml
 
-      <assemblyIdentity  
-   name 
+      <assemblyIdentity  
+   name 
    version
    publicKeyToken
    processorArchitecture

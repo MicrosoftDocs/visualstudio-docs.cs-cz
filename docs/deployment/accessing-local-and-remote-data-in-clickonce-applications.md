@@ -1,5 +1,6 @@
 ---
 title: Přístup k místním & vzdáleným datům (ClickOnce Apps)
+description: Seznamte se s různými možnostmi, které ClickOnce poskytuje pro čtení a zápis dat, a to jak místně, tak i vzdáleně.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e93c8479e917e74d31c3eedbb00d9d5911442b92
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: da8eaa4405a83ff349fd3d7486909a9281962126
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810468"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383258"
 ---
 # <a name="access-local-and-remote-data-in-clickonce-applications"></a>Přístup k místním a vzdáleným datům v aplikacích ClickOnce
 Většina aplikací spotřebovává nebo vytváří data. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nabízí celou řadu možností pro čtení a zápis dat, a to jak místně, tak i vzdáleně.
@@ -38,7 +39,7 @@ Většina aplikací spotřebovává nebo vytváří data. [!INCLUDE[ndptecclick]
 ### <a name="clickonce-data-directory"></a>Datový adresář ClickOnce
  Každá [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace nainstalovaná v místním počítači má datový adresář uložený ve složce Documents and Settings uživatele. Všechny soubory zahrnuté v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci a označené jako "datový" se zkopírují do tohoto adresáře, když je aplikace nainstalovaná. Datové soubory můžou být libovolného typu souboru, nejčastěji používaný text, XML a databázové soubory, jako jsou soubory Microsoft Access. mdb.
 
- Datový adresář je určený pro data spravovaná aplikací, což jsou data, která aplikace explicitně ukládá a udržuje. Všechny statické, nezávislé soubory, které nejsou označeny jako "data" v manifestu aplikace, se místo toho nacházejí v adresáři aplikace. Do tohoto adresáře se nacházejí spustitelné soubory aplikace (*. exe*) a sestavení.
+ Datový adresář je určený pro data spravovaná aplikací, což jsou data, která aplikace explicitně ukládá a udržuje. Všechny statické, nezávislé soubory, které nejsou označeny jako "data" v manifestu aplikace, se místo toho nacházejí v adresáři aplikace. Do tohoto adresáře se nacházejí spustitelné soubory aplikace ( *. exe* ) a sestavení.
 
 > [!NOTE]
 > Při [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] odinstalaci aplikace je také odebrána její datový adresář. Nikdy nepoužívejte datový adresář k ukládání dat spravovaných koncovými uživateli, například dokumentů.
@@ -61,7 +62,7 @@ Většina aplikací spotřebovává nebo vytváří data. [!INCLUDE[ndptecclick]
 
  Můžete také získat cestu k datovému adresáři pomocí příslušných proměnných třídy, jako je například <xref:System.Windows.Forms.Application> <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A> .
 
- Manipulace s dalšími typy souborů může vyžadovat další oprávnění. Například pokud chcete použít soubor databáze aplikace Access (*. mdb*), aplikace musí uplatnit úplný vztah důvěryhodnosti, aby bylo možné použít příslušné \<xref:System.Data> třídy.
+ Manipulace s dalšími typy souborů může vyžadovat další oprávnění. Například pokud chcete použít soubor databáze aplikace Access ( *. mdb* ), aplikace musí uplatnit úplný vztah důvěryhodnosti, aby bylo možné použít příslušné \<xref:System.Data> třídy.
 
 #### <a name="data-directory-and-application-versions"></a>Datové adresáře a verze aplikací
  Každá verze aplikace má svůj vlastní adresář dat, který je izolovaný od ostatních verzí. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Vytvoří tento adresář bez ohledu na to, jestli jsou nějaké datové soubory zahrnuté do nasazení, aby aplikace měla místo pro vytváření nových datových souborů za běhu. Pokud je nainstalována nová verze aplikace, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Nástroj zkopíruje všechny existující datové soubory z datového adresáře předchozí verze do datového adresáře nové verze – bez ohledu na to, zda byly zahrnuty do původního nasazení nebo vytvořeného aplikací.

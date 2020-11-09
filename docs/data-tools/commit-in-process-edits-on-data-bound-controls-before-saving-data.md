@@ -1,6 +1,6 @@
 ---
 title: Nepotvrzené úpravy
-description: Potvrzení úprav v procesu v ovládacích prvcích vázaných na data před uložením
+description: Před uložením dat potvrďte změny v procesu model Windows Forms ovládacích prvků vázaných na data. Pro všechny komponenty BindingSource na formuláři volejte metodu EndEdit volat.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4e2188e20b2ba36a6ef3805faab9f80c4379f1f7
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: cd50ad6c0e81f337ad922f6fa994f0d900edb8b6
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038371"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94382387"
 ---
 # <a name="commit-in-process-edits-on-data-bound-controls-before-saving-data"></a>Potvrzení úprav v procesu v ovládacích prvcích vázaných na data před uložením dat
 

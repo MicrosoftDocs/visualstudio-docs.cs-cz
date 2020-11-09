@@ -1,5 +1,7 @@
 ---
 title: Vytváření aplikací ClickOnce z příkazového řádku | Microsoft Docs
+description: Naučte se sestavovat projekty sady Visual Studio z příkazového řádku, který umožňuje reprodukování sestavení pomocí automatizovaného procesu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 065eea058ffa78c84428e031832e24837eb81d08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8423c2820aaf7daf479df6c14dd2e8de9e0e6e5a
+ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74797197"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94383193"
 ---
 # <a name="build-clickonce-applications-from-the-command-line"></a>Vytváření aplikací ClickOnce z příkazového řádku
 V nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] můžete sestavit projekty z příkazového řádku, i když jsou vytvořeny v integrovaném vývojovém prostředí (IDE). Ve skutečnosti můžete znovu sestavit projekt vytvořený pomocí nástroje [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] v jiném počítači, který má nainstalován pouze .NET Framework. To umožňuje reprodukování sestavení pomocí automatizovaného procesu, například v centrálním vývojovém prostředí, nebo pomocí pokročilých skriptovacích technik nad rámec sestavování samotného projektu.
@@ -29,7 +31,7 @@ V nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_shor
 ## <a name="use-msbuild-to-reproduce-clickonce-application-deployments"></a>Použití nástroje MSBuild k reprodukování nasazení aplikace ClickOnce
  Když vyvoláte MSBuild/target: Publish na příkazovém řádku, sdělí systému MSBuild, aby projekt sestavil a vytvořil [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci ve složce pro publikování. Jedná se o ekvivalent výběru příkazu **publikovat** v integrovaném vývojovém prostředí (IDE).
 
- Tento příkaz provede *msbuild.exe*, který je v cestě v prostředí příkazového řádku sady Visual Studio.
+ Tento příkaz provede *msbuild.exe* , který je v cestě v prostředí příkazového řádku sady Visual Studio.
 
  "Target" je indikátorem pro MSBuild, jak zpracovat příkaz. Klíčové cíle jsou cíle "Build" a cíl "publikovat". Cíl sestavení je ekvivalentem výběru příkazu Build (nebo stisknutím klávesy F5) v integrovaném vývojovém prostředí (IDE). Pokud chcete projekt sestavit pouze, můžete to dosáhnout zadáním `msbuild` . Tento příkaz funguje, protože cíl sestavení je výchozí cíl pro všechny projekty generované [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] . To znamená, že nemusíte explicitně zadat cíl sestavení. Proto je psaní `msbuild` stejná operace jako při psaní `msbuild /target:build` .
 
@@ -63,17 +65,17 @@ V nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_shor
 
 1. Ukončete [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] .
 
-2. V nabídce **Start** systému Windows klikněte na **všechny programy**a pak **Microsoft Visual Studio**a pak **Visual Studio Tools**a příkazový **řádek Visual Studio**. To by mělo otevřít příkazový řádek v kořenové složce aktuálního uživatele.
+2. V nabídce **Start** systému Windows klikněte na **všechny programy** a pak **Microsoft Visual Studio** a pak **Visual Studio Tools** a příkazový **řádek Visual Studio**. To by mělo otevřít příkazový řádek v kořenové složce aktuálního uživatele.
 
-3. V **příkazovém řádku sady Visual Studio**změňte aktuální adresář na umístění projektu, který jste právě vytvořili. Zadejte například název `chdir My Documents\Visual Studio\Projects\CmdLineDemo`.
+3. V **příkazovém řádku sady Visual Studio** změňte aktuální adresář na umístění projektu, který jste právě vytvořili. Zadejte například název `chdir My Documents\Visual Studio\Projects\CmdLineDemo`.
 
 4. Chcete-li odebrat existující soubory vytvořené v "pro vytvoření a publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] projektu", "type `rmdir /s publish` .
 
     Tento krok je nepovinný, ale zajišťuje, že se nové soubory vytvořily v sestavení příkazového řádku.
 
-5. Zadejte příkaz `msbuild /target:publish`.
+5. Zadejte `msbuild /target:publish`.
 
-   Výše uvedené kroky vytvoří úplné [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace v podsložce projektu s názvem **Publish**. *CmdLineDemo. Application* je [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest nasazení. Složka *CmdLineDemo_1.0.0.0* obsahuje soubory *CmdLineDemo.exe* a *CmdLineDemo.exe. manifest*, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace. *Setup.exe* je zaváděcí nástroj, který je ve výchozím nastavení nakonfigurován pro instalaci .NET Framework. Složka DotNetFX obsahuje distribuovatelné součásti pro .NET Framework. Toto je celá sada souborů, kterou potřebujete k nasazení aplikace přes web nebo přes UNC nebo CD/DVD.
+   Výše uvedené kroky vytvoří úplné [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace v podsložce projektu s názvem **Publish**. *CmdLineDemo. Application* je [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest nasazení. Složka *CmdLineDemo_1.0.0.0* obsahuje soubory *CmdLineDemo.exe* a *CmdLineDemo.exe. manifest* , [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace. *Setup.exe* je zaváděcí nástroj, který je ve výchozím nastavení nakonfigurován pro instalaci .NET Framework. Složka DotNetFX obsahuje distribuovatelné součásti pro .NET Framework. Toto je celá sada souborů, kterou potřebujete k nasazení aplikace přes web nebo přes UNC nebo CD/DVD.
    
 > [!NOTE]
 > Systém MSBuild používá možnost **PublishDir** k určení umístění pro výstup, například `msbuild /t:publish /p:PublishDir="<specific location>"` .
@@ -81,7 +83,7 @@ V nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_shor
 ## <a name="publish-properties"></a>Vlastnosti publikování
  Při publikování aplikace ve výše uvedených postupech jsou následující vlastnosti vloženy do souboru projektu pomocí Průvodce publikováním. Tyto vlastnosti mají přímo vliv na to, jak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je aplikace vytvořená.
 
- V *CmdLineDemo. vbproj*  /  *CmdLineDemo. csproj*:
+ V *CmdLineDemo. vbproj*  /  *CmdLineDemo. csproj* :
 
 ```xml
 <AssemblyOriginatorKeyFile>WindowsApplication3.snk</AssemblyOriginatorKeyFile>
@@ -109,7 +111,7 @@ V nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_shor
 msbuild /target:publish /property:BootstrapperEnabled=false
 ```
 
- Vlastnosti publikování jsou ovládány [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] na stránkách **vlastností publikování**, **zabezpečení**a **podepisování** v **Návrháři projektu**. Níže je uveden popis vlastností publikování spolu s uvedením toho, jak jsou jednotlivé vlastnosti nastaveny na různých stránkách vlastností návrháře aplikace:
+ Vlastnosti publikování jsou ovládány [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] na stránkách **vlastností publikování** , **zabezpečení** a **podepisování** v **Návrháři projektu**. Níže je uveden popis vlastností publikování spolu s uvedením toho, jak jsou jednotlivé vlastnosti nastaveny na různých stránkách vlastností návrháře aplikace:
 
 - `AssemblyOriginatorKeyFile` Určuje soubor klíče, který se používá k podepsání [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestů aplikace. Stejný klíč lze také použít k přiřazení silného názvu sestavením. Tato vlastnost je nastavena na stránce **podepisování** v **Návrháři projektu**.
 
