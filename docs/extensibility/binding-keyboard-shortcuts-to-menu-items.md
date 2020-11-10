@@ -14,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94feafbc614be61aaa4eef9e26669c0fbe901ed5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8df973ef6a75a9134b4ee6e945a5702708ece712
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740020"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407715"
 ---
 # <a name="bind-keyboard-shortcuts-to-menu-items"></a>Vázání klávesových zkratek k položkám nabídky
 Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, stačí přidat položku do souboru *. vsct* pro balíček. Toto téma vysvětluje, jak namapovat klávesovou zkratku na vlastní tlačítko, položku nabídky nebo příkaz panelu nástrojů a jak použít mapování klávesnice ve výchozím editoru nebo omezit na vlastní editor.
@@ -31,7 +31,7 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
 
 ### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>Ověření dostupnosti klávesové zkratky
 
-1. V okně **Tools**  >  **Možnosti**nástrojů  >  **Environment** zvolte možnost **klávesnice**.
+1. V okně **Tools**  >  **Možnosti** nástrojů  >  **Environment** zvolte možnost **klávesnice**.
 
 2. Ujistěte se, že je **Nový zástupce v** sadě nastavený na **globální**.
 
@@ -42,7 +42,7 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
 4. Vyzkoušejte různé kombinace klíčů, dokud nezjistíte, která z nich není namapovaná.
 
    > [!NOTE]
-   > Klávesové zkratky, které používají **ALT** , můžou otevřít nabídku a ne přímo spustit příkaz. Proto může být **zástupce aktuálně používaný v** boxu při psaní zástupce, který obsahuje **ALT**, prázdný. Můžete ověřit, že zástupce neotevře nabídku zavřením dialogového okna **Možnosti** a následným stisknutím kláves.
+   > Klávesové zkratky, které používají **ALT** , můžou otevřít nabídku a ne přímo spustit příkaz. Proto může být **zástupce aktuálně používaný v** boxu při psaní zástupce, který obsahuje **ALT** , prázdný. Můžete ověřit, že zástupce neotevře nabídku zavřením dialogového okna **Možnosti** a následným stisknutím kláves.
 
    Následující postup předpokládá, že máte existující VSPackage s příkazem nabídky. Pokud k tomu potřebujete pomoc, podívejte se na [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
 
@@ -59,7 +59,7 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
 
     Nastavte `guid`  atributy a  `id` pro příkazy, které chcete vyvolat.
 
-    Nastavte `mod1` atribut na **Control**, **ALT**nebo **SHIFT**.
+    Nastavte `mod1` atribut na **Control** , **ALT** nebo **SHIFT**.
 
     Oddíl vazeb klíčů by měl vypadat přibližně takto:
 
@@ -81,7 +81,7 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
 
    Chcete-li, aby byl příkaz dostupný pouze ve vlastním editoru, nastavte `editor` atribut na název vlastního editoru vygenerovaného [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] šablonou balíčku při vytvoření VSPackage, který obsahuje vlastní editor. Chcete-li zjistit hodnotu názvu, podívejte se do `<Symbols>` části `<GuidSymbol>` uzlu, jehož `name` atribut končí znakem " `editorfactory` .". Toto je název vlastního editoru.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
  Tento příklad váže klávesovou zkratku **CTRL** + **ALT** + **C** k příkazu pojmenovanému `cmdidMyCommand` v balíčku s názvem `MyPackage` .
 
 ```
@@ -98,7 +98,7 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
 </CommandTable>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
  Tento příklad váže klávesovou zkratku **CTRL** + **B** k příkazu pojmenovanému `cmdidBold` v projektu s názvem `TestEditor` . Příkaz je k dispozici pouze ve vlastním editoru, nikoli v jiných editorech.
 
 ```xml

@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05ac1f393632934f193f5f4efaaf9e5459ffbb14
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7267060f2207b0842885dc3001c3926874be30a9
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705873"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407728"
 ---
 # <a name="registering-a-project-type"></a>Registrace typu projektu
 Při vytváření nového typu projektu je nutné vytvořit položky registru, které umožňují [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozpoznat a pracovat s typem projektu. Tyto položky registru obvykle vytváříte pomocí souboru skriptu registru (. rgs).
@@ -29,7 +29,7 @@ Při vytváření nového typu projektu je nutné vytvořit položky registru, k
 
  Následující příklady jsou z HKEY_CLASSES_ROOT.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
 ```
 \.figp
@@ -56,14 +56,14 @@ Při vytváření nového typu projektu je nutné vytvořit položky registru, k
 |`@`|REG_SZ|`&Open in Visual Studio`|Výchozí aplikace, ve které bude tento typ projektu otevřen.|
 |`@`|REG_SZ|`devenv.exe "%1"`|Výchozí příkaz, který se spustí, když se otevře projekt tohoto typu.|
 
- Následující příklady jsou z HKEY_LOCAL_MACHINE a jsou umístěny v registru pod klíčem [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages].
+ Následující příklady jsou z HKEY_LOCAL_MACHINE a jsou umístěny v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages].
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
 ```
 \{ACEF4EB2-57CF-11D2-96F4-000000000000} (The CLSID for the VSPackage)
    @="FigPrj Project Package"
-   "InprocServer32"="9.0<Visual Studio SDK installation path>\\VSIntegration\\Archive\\FigPkgs\\FigPrj\\                      Debug\\FigPrj.dll"
+   "InprocServer32"="9.0<Visual Studio SDK installation path>\\VSIntegration\\Archive\\FigPkgs\\FigPrj\\                      Debug\\FigPrj.dll"
    "CompanyName"="Microsoft"
    "ProductName"="Figure Project Sample"
    "ProductVersion"="9.0"
@@ -93,21 +93,21 @@ Při vytváření nového typu projektu je nutné vytvořit položky registru, k
 |`FigProjectsEvents`|REG_SZ|Viz příkaz pro hodnotu.|Určuje textový řetězec vrácený pro tuto událost automatizace.|
 |`FigProjectItemsEvents`|REG_SZ|Viz příkaz pro hodnotu.|Určuje textový řetězec vrácený pro tuto událost automatizace.|
 
- Všechny následující příklady jsou umístěné v registru pod klíčem [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
+ Všechny následující příklady jsou umístěné v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
 
-## <a name="example"></a>Příklad
+## <a name="example-3"></a>Příklad 3
 
 ```
 \{C061DB26-5833-11D2-96F5-000000000000} (The CLSID for projects of this type)
    @="FigPrj Project"
    "DisplayName"="#2"
    "Package"="{ACEF4EB2-57CF-11D2-96F4-000000000000}"
-   "ProjectTemplatesDir"="C:\\Program Files\\VSIP 9.0\\EnvSDK\\FigPkgs\\                           FigPrj\\FigPrjProjects"
-   "ItemTemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                           FigPrjProjectItems"
+   "ProjectTemplatesDir"="C:\\Program Files\\VSIP 9.0\\EnvSDK\\FigPkgs\\                           FigPrj\\FigPrjProjects"
+   "ItemTemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                           FigPrjProjectItems"
    "DisplayProjectFileExtensions"="#3"
    "PossibleProjectExtensions"="figp"
    "DefaultProjectExtension"=".figp"
-\{C061DB26-5833-11D2-96F5-000000000000}\Filters\1       (Folder 1 contains settings for Open Files filters.)
+\{C061DB26-5833-11D2-96F5-000000000000}\Filters\1       (Folder 1 contains settings for Open Files filters.)
    @="#4"
    "CommonOpenFilesFilter"=dword:00000000
    "CommonFindFilesFilter"=dword:00000000
@@ -126,7 +126,7 @@ Při vytváření nového typu projektu je nutné vytvořit položky registru, k
    "SortPriority"=dword:000003e8
 \{C061DB26-5833-11D2-96F5-000000000000}\AddItemTemplates\TemplateDirs\ {ACEF4EB2-57CF-11D2-96F4-000000000000}\1 (Second GUID indicates the registered project type for the Add Items templates.)
    @="#6"
-   "TemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                    FigPrjProjectItems"
+   "TemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                    FigPrjProjectItems"
    "SortPriority"=dword:00000064
 ```
 
@@ -157,9 +157,9 @@ Při vytváření nového typu projektu je nutné vytvořit položky registru, k
 
  Ve výchozím nastavení platí, že pokud filtr nemá jednu nebo více těchto příznaků nastaven, použije se filtr v dialogovém okně **Přidat existující položku** a otevře se dialogové okno **otevřít soubor** po uvedení běžných filtrů na seznam. Filtr se nepoužívá v dialogovém okně **najít v souborech** .
 
- Všechny následující příklady jsou umístěné v registru pod klíčem [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
+ Všechny následující příklady jsou umístěné v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
 
-## <a name="example"></a>Příklad
+## <a name="example-4"></a>Příklad 4
 
 ```
 {FE3BBBB6-72D5-11d2-9ACE-00C04F79A2A4} (The CLSID for Enterprise Projects)
@@ -177,9 +177,9 @@ Při vytváření nového typu projektu je nutné vytvořit položky registru, k
 |`SortPriority`|REG_DWORD|`41 (x29)`|Nastaví pořadí řazení projektů zobrazených v dialogovém okně Průvodce vytvořením projektu.|
 |`NewProjectDialogOnly`|REG_DWORD|`0`|0 označuje, že se projekty tohoto typu zobrazují pouze v dialogovém okně Nový projekt.|
 
- Všechny následující příklady jsou umístěné v registru pod klíčem [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
+ Všechny následující příklady jsou umístěné v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects].
 
-## <a name="example"></a>Příklad
+## <a name="example-5"></a>Příklad 5
 
 ```
 \{A2FE74E1-B743-11d0-AE1A-00A0C90FFFC3} (CLSID for Miscellaneous Files projects)
@@ -187,7 +187,7 @@ Při vytváření nového typu projektu je nutné vytvořit položky registru, k
 \AddItemTemplates\TemplateDirs\{ACEF4EB2-57CF-11D2-96F4-000000000000}\1
                                  (CLSID for Figures Project projects)
    @="#6"
-   "TemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                    FigPrjProjectItems"
+   "TemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                    FigPrjProjectItems"
    "SortPriority"=dword:00000064
 ```
 
@@ -198,9 +198,9 @@ Při vytváření nového typu projektu je nutné vytvořit položky registru, k
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|Výchozí cesta k položkám, které se zobrazí v dialogovém okně **Přidat novou položku** .|
 |`SortPriority`|REG_DWORD|`100 (vcprx64)`|Vytvoří pořadí řazení pro zobrazení v uzlu strom dialogového okna **Přidat novou položku** .|
 
- Následující příklad je umístěný v registru pod klíčem [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus].
+ Následující příklad je umístěný v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus].
 
-## <a name="example"></a>Příklad
+## <a name="example-6"></a>Příklad 6
 
 ```
 "{ACEF4EB2-57CF-11D2-96F4-000000000000}"=",1000,1"
@@ -224,10 +224,10 @@ Při vytváření nového typu projektu je nutné vytvořit položky registru, k
 |----------|----------|----------|-----------------|
 |% CLSID_Package%|REG_SZ|`,1000,1`|Prostředek, ze kterého mají být načteny informace nabídky.|
 
- Všechny následující příklady jsou umístěné v registru pod klíčem [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates].
+ Všechny následující příklady jsou umístěné v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates].
 
 ```
-\TemplateDirs\{ACEF4EB2-57CF-11D2-96F4-000000000000}\1                (CLSID for Figures Project projects)
+\TemplateDirs\{ACEF4EB2-57CF-11D2-96F4-000000000000}\1                (CLSID for Figures Project projects)
    @="#7"
    "TemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\FigPrjProjects"
    "SortPriority"=dword:00000029
@@ -241,7 +241,7 @@ Při vytváření nového typu projektu je nutné vytvořit položky registru, k
 |`SortPriority`|REG_DWORD|`41 (x29)`|Určuje pořadí, ve kterém se budou projekty zobrazovat v uzlu strom v dialogovém okně **Nový projekt** .|
 |`NewProjectDialogOnly`|REG_DWORD|`0`|0 označuje, že se projekty tohoto typu zobrazují pouze v dialogovém okně **Nový projekt** .|
 
- Následující příklad je umístěný v registru pod klíčem [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0Exp\InstalledProducts].
+ Následující příklad je umístěný v registru pod klíčem [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\InstalledProducts].
 
 ```
 \FiguresProductSample
@@ -256,11 +256,11 @@ Při vytváření nového typu projektu je nutné vytvořit položky registru, k
 
  Soubory. vsz, které řídí nové typy projektů, často obsahují položku RELATIVE_PATH. Tato cesta je relativní ke cestě zadané v položce \ProductDir typu projektu v následujícím instalačním klíči:
 
- HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup
+ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup
 
  Například šablony projektů podnikových architektur přidávají následující položky registru:
 
- HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir = C:\Program Files\Microsoft Visual Studio\EnterpriseFrameworks\
+ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir = C:\Program Files\Microsoft Visual Studio\EnterpriseFrameworks\
 
  To znamená, že pokud zahrnete do souboru. vsz položku PROJECT_TYPE = EF, prostředí nalezne vaše soubory. vsz v adresáři ProductDir, který jste zadali dříve.
 

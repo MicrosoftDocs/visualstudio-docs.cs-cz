@@ -27,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e77f115eb4014f16107ae167576ed0d923bffe8
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 09e5973b39bae2fbf923cf97ac1bd9cf15e10874
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382959"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407676"
 ---
 # <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;Dependency – &gt; element (nasazení ClickOnce)
 Určuje verzi aplikace, která se má nainstalovat, a umístění manifestu aplikace.
@@ -128,7 +128,7 @@ Určuje verzi aplikace, která se má nainstalovat, a umístění manifestu apli
 ## <a name="remarks"></a>Poznámky
  Manifesty nasazení obvykle mají jediný `assemblyIdentity` element, který identifikuje název a verzi manifestu aplikace.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
  Následující příklad kódu ukazuje `dependency` prvek v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestu nasazení.
 
 ```xml
@@ -147,7 +147,7 @@ Určuje verzi aplikace, která se má nainstalovat, a umístění manifestu apli
 </dependency>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
  Následující příklad kódu určuje závislost na sestavení, které je již nainstalováno v globální mezipaměti sestavení (GAC).
 
 ```xml
@@ -158,7 +158,7 @@ Určuje verzi aplikace, která se má nainstalovat, a umístění manifestu apli
 </dependency>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-3"></a>Příklad 3
  Následující příklad kódu určuje závislost na konkrétní verzi modulu CLR (Common Language Runtime).
 
 ```xml
@@ -169,7 +169,7 @@ Určuje verzi aplikace, která se má nainstalovat, a umístění manifestu apli
 </dependency>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-4"></a>Příklad 4
  Následující příklad kódu určuje závislost operačního systému.
 
 ```xml

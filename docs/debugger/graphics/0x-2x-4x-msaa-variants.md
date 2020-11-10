@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 707d63d3ae5fb487f6232321a1d9d3128d379e06
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e77c0d7b5cbba2faf73fcca85ffcd0db063d618e
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64816531"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407546"
 ---
 # <a name="0x2x4x-msaa-variants"></a>Varianty 0x/2x/4x MSAA
 Přepíše nastavení rozhraní MSAA (multi-Sample anti-aliasing) na všech cílech vykreslování a prohozených řetězcích.
@@ -54,7 +54,7 @@ Přepíše nastavení rozhraní MSAA (multi-Sample anti-aliasing) na všech cíl
 
  Když přehrávání detekuje tyto druhy konfliktů, je vhodné replikovat zamýšlené chování, ale nemusí být možné přesně porovnat jeho výsledky. I když je to Neběžné, aby to ovlivnilo výkon těchto variant způsobem, který nepředstavuje jejich dopad, je možné – například když je řízení toku v pixel shaderu určeno přesným obsahem textury, protože replikovaná textura nemusí mít stejný obsah.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
  Tyto varianty je možné reprodukovat pro cíle vykreslování vytvořené pomocí pomocí `ID3D11Device::CreateTexture2D` kódu, který by vypadal takto:
 
 ```cpp
@@ -65,7 +65,7 @@ target_description.SampleDesc.Quality = 0;
 d3d_device->CreateTexture2D(&target_description, nullptr, &render_target);
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
  Nebo pro swapové řetězy vytvořené pomocí IDXGISwapChain:: CreateSwapChain nebo D3D11CreateDeviceAndSwapChain pomocí kódu takto:
 
 ```cpp

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9d1c151b7f3afe977786ef3b308eff2de1c0857f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57820a7532255c0084bafc5134cf7793b8c88ab6
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282355"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407663"
 ---
 # <a name="handle-a-concurrency-exception"></a>Zpracování výjimky souběžnosti
 
@@ -49,7 +49,7 @@ Tento návod vás provede následujícím procesem:
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio**můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio** můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
 
 2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
@@ -73,13 +73,13 @@ Začněte vytvořením nové aplikace model Windows Forms:
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **ConcurrencyWalkthrough**a klikněte na **tlačítko OK**.
+4. Pojmenujte projekt **ConcurrencyWalkthrough** a klikněte na **tlačítko OK**.
 
-     Projekt **ConcurrencyWalkthrough** je vytvořen a přidán do **Průzkumník řešení**a otevře se nový formulář v návrháři.
+     Projekt **ConcurrencyWalkthrough** je vytvořen a přidán do **Průzkumník řešení** a otevře se nový formulář v návrháři.
 
 ## <a name="create-the-northwind-dataset"></a>Vytvoření datové sady Northwind
 
-Dále vytvořte datovou sadu s názvem **NorthwindDataSet**:
+Dále vytvořte datovou sadu s názvem **NorthwindDataSet** :
 
 1. V nabídce **data** klikněte na tlačítko **Přidat nový zdroj dat**.
 
@@ -112,7 +112,7 @@ V této části vytvoříte <xref:System.Windows.Forms.DataGridView?displayPrope
 
 4. Přetáhněte tabulku do prázdné oblasti formuláře.
 
-     <xref:System.Windows.Forms.DataGridView>Ovládací prvek s názvem **customersDataGridView**a <xref:System.Windows.Forms.BindingNavigator> pojmenovaný **CustomersBindingNavigator**se přidá do formuláře vázaného na <xref:System.Windows.Forms.BindingSource> . To je zase vázané na tabulku Customers v NorthwindDataSet.
+     <xref:System.Windows.Forms.DataGridView>Ovládací prvek s názvem **customersDataGridView** a <xref:System.Windows.Forms.BindingNavigator> pojmenovaný **CustomersBindingNavigator** se přidá do formuláře vázaného na <xref:System.Windows.Forms.BindingSource> . To je zase vázané na tabulku Customers v NorthwindDataSet.
 
 ## <a name="test-the-form"></a>Testování formuláře
 
@@ -176,14 +176,14 @@ Vytvořte zprávu přidáním následujícího kódu do **editoru kódu**. Zadej
 
 ### <a name="process-the-users-response"></a>Zpracovat reakci uživatele
 
-Také potřebujete kód pro zpracování reakce uživatele na okno se zprávou. Možnosti jsou buď k přepsání aktuálního záznamu v databázi navrhovanou změnou, nebo k opuštění místních změn a aktualizaci datové tabulky záznamem, který je aktuálně v databázi. Pokud uživatel zvolí **Ano**, je <xref:System.Data.DataTable.Merge%2A> metoda volána s argumentem *PreserveChanges* nastaveným na **hodnotu true**. Tím dojde k úspěšnému pokusu o aktualizaci, protože původní verze záznamu nyní odpovídá záznamu v databázi.
+Také potřebujete kód pro zpracování reakce uživatele na okno se zprávou. Možnosti jsou buď k přepsání aktuálního záznamu v databázi navrhovanou změnou, nebo k opuštění místních změn a aktualizaci datové tabulky záznamem, který je aktuálně v databázi. Pokud uživatel zvolí **Ano** , je <xref:System.Data.DataTable.Merge%2A> metoda volána s argumentem *PreserveChanges* nastaveným na **hodnotu true**. Tím dojde k úspěšnému pokusu o aktualizaci, protože původní verze záznamu nyní odpovídá záznamu v databázi.
 
 Pod kód, který byl přidán v předchozí části, přidejte následující kód:
 
 [!code-csharp[VbRaddataConcurrency#3](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_4.cs)]
 [!code-vb[VbRaddataConcurrency#3](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_4.vb)]
 
-## <a name="test-the-form"></a>Testování formuláře
+## <a name="test-the-form-behavior"></a>Testování chování formuláře
 
 Nyní můžete testovat formulář, abyste se ujistili, že se chová podle očekávání. Chcete-li simulovat porušení souběžnosti, změňte data v databázi po vyplnění NorthwindDataSet.
 
@@ -193,18 +193,18 @@ Nyní můžete testovat formulář, abyste se ujistili, že se chová podle oče
 
 3. V nabídce **zobrazení** vyberte možnost **Průzkumník serveru**.
 
-4. V **Průzkumník serveru**rozbalte připojení, které aplikace používá, a potom rozbalte uzel **tabulky** .
+4. V **Průzkumník serveru** rozbalte připojení, které aplikace používá, a potom rozbalte uzel **tabulky** .
 
 5. Klikněte pravým tlačítkem myši na tabulku **Customers** a potom vyberte možnost **Zobrazit data tabulky**.
 
-6. V prvním záznamu (**ALFKI**) změňte **kontakt** na **Marie Anders2**.
+6. V prvním záznamu ( **ALFKI** ) změňte **kontakt** na **Marie Anders2**.
 
     > [!NOTE]
     > Změnu potvrďte tak, že přejdete na jiný řádek.
 
 7. Přepněte do běžícího formuláře ConcurrencyWalkthrough.
 
-8. V prvním záznamu ve formuláři (**ALFKI**) změňte **kontakt** na **Marie Anders1**.
+8. V prvním záznamu ve formuláři ( **ALFKI** ) změňte **kontakt** na **Marie Anders1**.
 
 9. Vyberte tlačítko **Uložit**.
 

@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c70195cdc0a6a03395744c63f556ce8c2970aa30
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e8612bd2423849c61f21a5c184a3e1d39da0302b
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731509"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407741"
 ---
 # <a name="limitations-on-wcf-debugging"></a>Omezení ladění WCF
 Existují tři způsoby, jak můžete začít s laděním služby WCF:
@@ -73,10 +73,9 @@ Existují tři způsoby, jak můžete začít s laděním služby WCF:
   <system.web>
   ```
 
-## <a name="self-hosting"></a>Samoobslužné hostování
- *Samoobslužná služba* je služba WCF, která neběží ve službě IIS, hostiteli služby WCF ani [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] vývojovém serveru. Informace o tom, jak ladit samoobslužné služby, naleznete v tématu [How to: Debug a on-Hosted Service WCF](../debugger/how-to-debug-a-self-hosted-wcf-service.md).
+## <a name="self-hosting"></a>Self-Hosting
+ *Samoobslužná služba* je služba WCF, která neběží ve službě IIS, hostiteli služby WCF ani [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] vývojovém serveru. Informace o tom, jak ladit samoobslužné služby, naleznete v tématu [How to: Debug a Self-Hosted WCF Service](../debugger/how-to-debug-a-self-hosted-wcf-service.md).
 
-## <a name="self-hosting"></a>Samoobslužné hostování
  Aby bylo možné povolit ladění [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikací 3,0 nebo 3,5, je [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] nutné před instalací nástroje 3,0 nebo 3,5 nainstalovat [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] . Pokud [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] je nainstalována před [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 nebo 3,5, dojde k chybě při pokusu o ladění [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace 3,0 nebo 3,5. Chybová zpráva: "nelze automaticky krokovat se serverem." Chcete-li tento problém vyřešit, opravte instalaci pomocí **ovládacího panelu**  >  **programy a funkce** systému Windows [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] .
 
 ## <a name="see-also"></a>Viz také

@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 314ec61da7ed61cc8bdd573e201d98a53862a32c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 075fc9c4be3890ce9a63c1aa79762dbd8ceaeea5
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66262922"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407559"
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Varianty bodového, bilineárního, trilineárního a anisotropního filtrování textur
 Přepíše režim filtrování na příslušných vzorkovačích textury.
@@ -61,7 +61,7 @@ Přepíše režim filtrování na příslušných vzorkovačích textury.
 ## <a name="restrictions-and-limitations"></a>Omezení a omezení
  V rozhraní Direct3D úroveň funkce 9,1 určuje maximální anisotropy hodnotu 2x. Vzhledem k tomu, že se varianta **Anisotropního textur filtrování** pokusí použít výhradně 16x anisotropy, přehrávání se nezdařilo, když je analýza snímků spuštěna na zařízení 9,1 na úrovni funkce. Mezi moderní zařízení ovlivněná tímto omezením patří zařízení s platformou RT a Surface 2 pro tablety na bázi ARM. Starší grafické procesory, které by se mohly v některých počítačích pořád najít, můžou mít vliv i na zastaralé a pořád stále neobvyklá.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
  Variantu **filtrování pro texturu bodu** je možné reprodukovat pomocí kódu, jako je tato:
 
 ```cpp
@@ -75,7 +75,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
  Variantu **filtrování textury varianty** je možné reprodukovat pomocí kódu podobného následujícímu:
 
 ```cpp
@@ -89,7 +89,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-3"></a>Příklad 3
  Variantu **filtrování textury trilineárního** je možné reprodukovat pomocí kódu podobného následujícímu:
 
 ```cpp
@@ -103,7 +103,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-4"></a>Příklad 4
  Variantu **filtrování textury anisotropního** je možné reprodukovat pomocí kódu podobného následujícímu:
 
 ```cpp
