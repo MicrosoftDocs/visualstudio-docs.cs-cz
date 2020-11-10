@@ -12,21 +12,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f392cc2dcb474487a37076229c0b10f7359b9251
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: a96ea0fe4b4bbbebfc29cde7258273ea4f4b21e2
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349565"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437684"
 ---
 # <a name="deploy-an-app-to-a-folder-using-visual-studio"></a>Nasazení aplikace do složky pomocí sady Visual Studio
 
 Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET Core, .NET Core a Python do složky ze sady Visual Studio. Pro Node.js se tyto kroky podporují, ale uživatelské rozhraní se liší.
 
 [!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
-
+::: moniker range=">=vs-2017"
 > [!NOTE]
 > Pokud potřebujete publikovat desktopovou aplikaci pro Windows do složky, přečtěte si téma [nasazení desktopové aplikace pomocí technologie ClickOnce](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# nebo Visual Basic). V jazyce C++/CLR naleznete informace v tématu [nasazení nativní aplikace pomocí ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo pro C/C++ viz [nasazení nativní aplikace pomocí projektu instalace](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> Pokud potřebujete publikovat aplikaci klasické pracovní plochy systému Windows pro .NET Core 3,1 nebo novější, přečtěte si téma [nasazení aplikace .NET pro Windows pomocí technologie ClickOnce](quickstart-deploy-using-clickonce-folder.md).
+
+::: moniker-end
 
 ## <a name="deploy-to-a-local-folder"></a>Nasazení do místní složky
 
@@ -40,7 +48,17 @@ Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET C
 
     ![Zvolit složku jako cíl publikování](../deployment/media/quickstart-publish-folder-new.png "Zvolit složku")
 
-1. Zadejte cestu nebo vyberte **Procházet** a zadejte složku.
+::: moniker range=">=vs-2019"
+
+4. Pokud nasazujete rozhraní .NET Core 3,1 nebo novější, aplikace systému Windows může být nutné vybrat **složku** v **konkrétním cílovém** okně.
+
+![Zvolit složku jako konkrétní cíl](../deployment/media/quickstart-publish-folder-targets.png "Zvolit konkrétní cíl")
+
+5. Pokud chcete publikovat rozhraní .NET Core 3,1 nebo novější, aplikace pro Windows s ClickOnce, přečtěte si téma [nasazení aplikace .NET pro Windows pomocí technologie ClickOnce](quickstart-deploy-using-clickonce-folder.md).
+
+ ::: moniker-end
+
+4. Zadejte cestu nebo vyberte **Procházet** a zadejte složku.
 
     ![Zadejte cestu ke složce.](../deployment/media/quickstart-publish-folder-path.png "Zvolit složku")
 
@@ -73,3 +91,6 @@ Pro aplikace .NET:
 - [Nasazení aplikace .NET Core pomocí nástroje Publikovat](/dotnet/core/deploying/deploy-with-vs)
 - [Publikování aplikace .NET Core (nasazení závislá na rozhraní vs. samostatně zahrnutá nasazení)](/dotnet/core/deploying/)
 - [Nasazení .NET Framework a aplikací](/dotnet/framework/deployment/)
+::: moniker range=">=vs-2019"
+- [Nasazení aplikace .NET pro Windows pomocí technologie ClickOnce](quickstart-deploy-using-clickonce-folder.md).
+ ::: moniker-end

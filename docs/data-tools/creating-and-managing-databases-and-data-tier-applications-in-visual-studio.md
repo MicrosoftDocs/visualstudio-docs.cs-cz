@@ -1,5 +1,7 @@
 ---
 title: Databázové projekty a projekty DAC
+description: Přečtěte si o databázových projektech a aplikacích datové vrstvy (DAC). Pomocí DATABÁZOVÝch projektů můžete vytvářet nové databáze, vytvářet nové DAC a aktualizovat existující databáze a DAC.
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: cc8d32ddcc332264278cf76392ac69a6188ca51c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57b889f025b06e127e8e4bb38be311f6bbe55952
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586728"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436599"
 ---
 # <a name="database-projects-and-data-tier-applications"></a>Databázové projekty a aplikace na datové vrstvě
 
@@ -25,7 +27,7 @@ Seznam funkcí databáze podporovaných aplikacemi datové vrstvy najdete v tém
 
 ## <a name="common-high-level-tasks"></a>Běžné úlohy na nejvyšší úrovni
 
-| Úloha vysoké úrovně | Podpůrný obsah |
+| High-Level úkol | Podpůrný obsah |
 | - | - |
 | **Zahájení vývoje aplikace na datové vrstvě:** Koncept aplikace na datové vrstvě (DAC) byl představený s SQL Server 2008. DAC obsahuje definici pro SQL Server databázi a pomocné objekty instance používané aplikací typu klient-server nebo 3 vrstva. DAC zahrnuje databázové objekty, jako jsou tabulky a zobrazení, spolu s entitami instancí, jako jsou například přihlašovací údaje. Sadu Visual Studio můžete použít k vytvoření projektu DAC, sestavení souboru balíčku DAC a odeslání souboru balíčku DAC správci databáze pro nasazení do instance databázového stroje SQL Server. | - [Aplikace datové vrstvy](/sql/relational-databases/data-tier-applications/data-tier-applications)<br />- [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) |
 | **Provádění iterativního vývoje databází:** Vývojáři mohou rezervovat části projektu a aktualizovat je v izolovaném vývojovém prostředí. Pomocí tohoto typu prostředí můžete testovat své změny bez ovlivnění ostatních členů týmu. Po dokončení změn se soubory vrátí zpět do správy verzí, kde ostatní členové týmu mohou získat vaše změny a sestavit je a nasadit na testovací server. | - [Projektově orientovaný vývoj offline databází (SQL Server Data Tools)](/sql/ssdt/project-oriented-offline-database-development)<br />- [Ladicí program Transact-SQL (SQL Server Management Studio)](/sql/ssms/scripting/transact-sql-debugger) |

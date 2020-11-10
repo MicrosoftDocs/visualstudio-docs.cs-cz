@@ -1,6 +1,6 @@
 ---
 title: Chyba použití samostatných projektů
-description: Rozdělování datových sad a objektů TableAdapter do různých projektů
+description: Naučte se oddělit datové sady a objekty TableAdapter do různých projektů, takže můžete rychle oddělit vrstvy aplikace a generovat N-vrstvou datovou aplikaci.
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.custom: SEO-VS-2020
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4ed815b73cade73c38b52528d918b4af4de2a618
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: f039dc445acd9032a5fe6862e78e5c28ec67bf5d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036272"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436000"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>Rozdělování datových sad a objektů TableAdapter do různých projektů
 Typové datové sady byly vylepšeny, takže třídy [objekty TableAdapter](create-and-configure-tableadapters.md) a DataSet lze generovat do samostatných projektů. Díky tomu můžete rychle oddělit aplikační vrstvy a generovat n-vrstvou datovou aplikaci.
@@ -54,10 +54,10 @@ Když oddělíte kód datové sady z TableAdapter kódu, projekt, který obsahuj
 
      Kód datové sady je vygenerován do vybraného projektu ve vlastnosti **projektu DataSet** a kód **TableAdapter** je vygenerován do aktuálního projektu.
 
-Ve výchozím nastavení platí, že po oddělení datové sady a kódu TableAdapter je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem *DataSet. Designer. vb* (nebo *DatasetName.Designer.cs*), který obsahuje kód TableAdapter. Projekt, který je určen vlastností **projektu DataSet** , má soubor pojmenovaný *DataSet. DataSet. Designer. vb* (nebo *DatasetName.DataSet.Designer.cs*), který obsahuje kód datové sady.
+Ve výchozím nastavení platí, že po oddělení datové sady a kódu TableAdapter je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem *DataSet. Designer. vb* (nebo *DatasetName.Designer.cs* ), který obsahuje kód TableAdapter. Projekt, který je určen vlastností **projektu DataSet** , má soubor pojmenovaný *DataSet. DataSet. Designer. vb* (nebo *DatasetName.DataSet.Designer.cs* ), který obsahuje kód datové sady.
 
 > [!NOTE]
-> Chcete-li zobrazit vygenerovaný soubor třídy, vyberte projekt DataSet nebo TableAdapter. Pak v **Průzkumník řešení**vyberte možnost **Zobrazit všechny soubory**.
+> Chcete-li zobrazit vygenerovaný soubor třídy, vyberte projekt DataSet nebo TableAdapter. Pak v **Průzkumník řešení** vyberte možnost **Zobrazit všechny soubory**.
 
 ## <a name="see-also"></a>Viz také
 

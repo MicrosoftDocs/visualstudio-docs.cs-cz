@@ -18,17 +18,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8423c2820aaf7daf479df6c14dd2e8de9e0e6e5a
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 4b719f9609dfb2feb432f4692b31e820d806ff92
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383193"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437720"
 ---
 # <a name="build-clickonce-applications-from-the-command-line"></a>Vytváření aplikací ClickOnce z příkazového řádku
+
 V nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] můžete sestavit projekty z příkazového řádku, i když jsou vytvořeny v integrovaném vývojovém prostředí (IDE). Ve skutečnosti můžete znovu sestavit projekt vytvořený pomocí nástroje [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] v jiném počítači, který má nainstalován pouze .NET Framework. To umožňuje reprodukování sestavení pomocí automatizovaného procesu, například v centrálním vývojovém prostředí, nebo pomocí pokročilých skriptovacích technik nad rámec sestavování samotného projektu.
 
-## <a name="use-msbuild-to-reproduce-clickonce-application-deployments"></a>Použití nástroje MSBuild k reprodukování nasazení aplikace ClickOnce
+## <a name="use-msbuild-to-reproduce-net-framework-clickonce-application-deployments"></a>Použití nástroje MSBuild k reprodukování .NET Framework nasazení aplikací ClickOnce
+
  Když vyvoláte MSBuild/target: Publish na příkazovém řádku, sdělí systému MSBuild, aby projekt sestavil a vytvořil [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci ve složce pro publikování. Jedná se o ekvivalent výběru příkazu **publikovat** v integrovaném vývojovém prostředí (IDE).
 
  Tento příkaz provede *msbuild.exe* , který je v cestě v prostředí příkazového řádku sady Visual Studio.
@@ -41,7 +43,7 @@ V nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_shor
 
 ## <a name="create-and-build-a-basic-clickonce-application-with-msbuild"></a>Vytvoření a sestavení základní aplikace ClickOnce pomocí nástroje MSBuild
 
-#### <a name="to-create-and-publish-a-clickonce-project"></a>Vytvoření a publikování projektu ClickOnce
+### <a name="to-create-and-publish-a-clickonce-project"></a>Vytvoření a publikování projektu ClickOnce
 
 1. Otevřete Visual Studio a vytvořte nový projekt.
 
@@ -76,12 +78,26 @@ V nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_shor
 5. Zadejte `msbuild /target:publish`.
 
    Výše uvedené kroky vytvoří úplné [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace v podsložce projektu s názvem **Publish**. *CmdLineDemo. Application* je [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest nasazení. Složka *CmdLineDemo_1.0.0.0* obsahuje soubory *CmdLineDemo.exe* a *CmdLineDemo.exe. manifest* , [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace. *Setup.exe* je zaváděcí nástroj, který je ve výchozím nastavení nakonfigurován pro instalaci .NET Framework. Složka DotNetFX obsahuje distribuovatelné součásti pro .NET Framework. Toto je celá sada souborů, kterou potřebujete k nasazení aplikace přes web nebo přes UNC nebo CD/DVD.
-   
+
 > [!NOTE]
 > Systém MSBuild používá možnost **PublishDir** k určení umístění pro výstup, například `msbuild /t:publish /p:PublishDir="<specific location>"` .
 
+::: moniker range=">=vs-2019"
+
+## <a name="build-net-clickonce-applications-from-the-command-line"></a>Sestavení aplikací .NET ClickOnce z příkazového řádku
+
+Sestavování aplikací .NET ClickOnce z příkazového řádku je podobné prostředí s výjimkou, je třeba zadat další vlastnost profilu publikování v příkazovém řádku MSBuild. Nejjednodušší způsob, jak vytvořit publikační profil, je pomocí sady Visual Studio.  Další informace najdete v tématu [nasazení aplikace .NET pro Windows pomocí ClickOnce](quickstart-deploy-using-clickonce-folder.md) .
+
+Po vytvoření profilu publikování můžete zadat soubor pubxml jako vlastnost v příkazovém řádku MSBuild. Příklad:
+
+```cmd
+    msbuild /t:publish /p:PublishProfile=<pubxml file> /p:PublishDir="<specific location>"
+```
+::: moniker-end
+
 ## <a name="publish-properties"></a>Vlastnosti publikování
- Při publikování aplikace ve výše uvedených postupech jsou následující vlastnosti vloženy do souboru projektu pomocí Průvodce publikováním. Tyto vlastnosti mají přímo vliv na to, jak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je aplikace vytvořená.
+
+ Při publikování aplikace ve výše uvedených postupech jsou následující vlastnosti vloženy do souboru projektu pomocí Průvodce publikováním nebo v souboru profilu publikování pro .NET Core 3,1 nebo novější. Tyto vlastnosti mají přímo vliv na to, jak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je aplikace vytvořená.
 
  V *CmdLineDemo. vbproj*  /  *CmdLineDemo. csproj* :
 
@@ -105,21 +121,36 @@ V nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_shor
 <BootstrapperEnabled>true</BootstrapperEnabled>
 ```
 
- Jakoukoli z těchto vlastností můžete přepsat na příkazovém řádku bez změny samotného souboru projektu. Následující příklad vytvoří [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace bez zaváděcího nástroje:
+ U .NET Framework projektů můžete přepsat kteroukoli z těchto vlastností z příkazového řádku bez změny samotného souboru projektu. Následující příklad vytvoří [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace bez zaváděcího nástroje:
 
 ```cmd
 msbuild /target:publish /property:BootstrapperEnabled=false
-```
+ ```
+
+::: moniker range=">=vs-2019"
+Pro .NET Core 3,1 nebo novější projekty Tato nastavení jsou k dispozici v souboru pubxml.
 
  Vlastnosti publikování jsou ovládány [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] na stránkách **vlastností publikování** , **zabezpečení** a **podepisování** v **Návrháři projektu**. Níže je uveden popis vlastností publikování spolu s uvedením toho, jak jsou jednotlivé vlastnosti nastaveny na různých stránkách vlastností návrháře aplikace:
 
+> [!NOTE]
+> Pro desktopové projekty Windows .NET se tato nastavení nacházejí v Průvodci publikováním.
+::: moniker-end
+
 - `AssemblyOriginatorKeyFile` Určuje soubor klíče, který se používá k podepsání [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestů aplikace. Stejný klíč lze také použít k přiřazení silného názvu sestavením. Tato vlastnost je nastavena na stránce **podepisování** v **Návrháři projektu**.
+::: moniker range=">=vs-2019"
+Pro aplikace .NET pro Windows zůstane toto nastavení v souboru projektu.
+::: moniker-end
 
   Na stránce **zabezpečení** jsou nastaveny následující vlastnosti:
 
 - **Povolit nastavení zabezpečení ClickOnce** určuje, jestli [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] jsou vygenerované manifesty. Při počátečním vytvoření projektu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je generování manifestu ve výchozím nastavení vypnuto. Průvodce automaticky zapne tento příznak při prvním publikování.
 
 - **TargetZone** určuje úroveň důvěryhodnosti, která se má vygenerovat do [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestu aplikace. Možné hodnoty jsou "Internet", "LocalIntranet" a "vlastní". Internet a LocalIntranet způsobí, že se do manifestu aplikace pošle výchozí nastavení oprávnění [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . LocalIntranet je výchozí a v podstatě znamená úplný vztah důvěryhodnosti. Vlastní určuje, že do manifestu aplikace budou generována pouze oprávnění explicitně zadaná v souboru *manifestu základní aplikace.* [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Soubor *App. manifest* je částečný soubor manifestu, který obsahuje jenom definice informací o důvěryhodnosti. Jedná se o skrytý soubor, který se automaticky přidá do projektu při konfiguraci oprávnění na stránce **zabezpečení** .
+-
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> Pro .NET Core 3,1 nebo novější se tato nastavení zabezpečení nepodporují pro desktopové projekty Windows.
+::: moniker-end
 
   Na stránce **publikovat** jsou nastaveny následující vlastnosti:
 
@@ -140,10 +171,18 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 - `UpdateEnabled` Určuje, zda má aplikace vyhledat aktualizace.
 
 - `UpdateMode` Určuje aktualizace popředí nebo aktualizace na pozadí.
-
+::: moniker range=">=vs-2019"
+   Pro .NET Core 3,1 nebo novější se projekty, pozadí nepodporují.  
+::: moniker-end
 - `UpdateInterval` Určuje, jak často by měla aplikace vyhledávat aktualizace.
+::: moniker range=">=vs-2019"
+   Pro .NET Core 3,1 nebo novější se toto nastavení nepodporuje.
+::: moniker-end
 
 - `UpdateIntervalUnits` Určuje, zda `UpdateInterval` je hodnota v jednotkách hodiny, dny nebo týdny.
+::: moniker range=">=vs-2019"
+   Pro .NET Core 3,1 nebo novější se toto nastavení nepodporuje.
+::: moniker-end
 
 - `UpdateUrl` (nezobrazený) je umístění, ze kterého bude aplikace přijímat aktualizace. Je-li tento parametr zadán, je tato hodnota vložena do manifestu aplikace.
 
@@ -160,6 +199,7 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 - `IsWebBootstrapper` Určuje, zda *setup.exe* zaváděcí nástroj funguje na webu nebo v režimu na disku.
 
 ## <a name="installurl-supporturl-publishurl-and-updateurl"></a>InstallURL, SupportUrl, PublishURL a UpdateURL
+
  V následující tabulce jsou uvedeny čtyři možnosti adresy URL pro nasazení ClickOnce.
 
 |Možnost adresy URL|Popis|
@@ -170,6 +210,7 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 |`UpdateURL`|Nepovinný parametr. Nastavte tuto možnost adresy URL, pokud se umístění aktualizace liší od `InstallURL` . Můžete například nastavit `PublishURL` cestu k serveru FTP a nastavit na `UpdateURL` adresu URL webu.|
 
 ## <a name="see-also"></a>Viz také
+
 - <xref:Microsoft.Build.Tasks.GenerateBootstrapper>
 - <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>
 - <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest>

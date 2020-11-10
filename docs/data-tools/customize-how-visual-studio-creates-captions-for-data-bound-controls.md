@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení popisků pro ovládací prvky vázané na data
+description: Přizpůsobení způsobu, jakým Visual Studio vytváří titulky pro ovládací prvky vázané na data. Upravte chování inteligentního titulkování v okně zdroje dat. Vypnutí inteligentního titulkování
+ms.custom: SEO-VS-2020
 ms.date: 11/03/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 085542f912cc5747c2012adb05e6097b5891ed60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65c0f1146549dfbee6f84fab06be12053b174aeb
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282576"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436625"
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Úprava způsobu, kterým Visual Studio vytváří titulky pro ovládací prvky vázané daty
 
@@ -26,13 +28,13 @@ Při přetahování položek z [okna zdroje dat](add-new-data-sources.md#data-so
 
 ::: moniker range="vs-2017"
 
-Způsob, jakým se tyto popisky vytvářejí, můžete přizpůsobit nastavením hodnot **SmartCaptionExpression**, **SmartCaptionReplacement**a **SmartCaptionSuffix** v klíči registru **HKEY_CURRENT_USER \software\microsoft\visualstudio\15.0\Data Designs** .
+Způsob, jakým se tyto popisky vytvářejí, můžete přizpůsobit nastavením hodnot **SmartCaptionExpression** , **SmartCaptionReplacement** a **SmartCaptionSuffix** v klíči registru **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data Designers** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Způsob, jakým se tyto popisky vytvářejí, můžete přizpůsobit nastavením hodnot **SmartCaptionExpression**, **SmartCaptionReplacement**a **SmartCaptionSuffix** v klíči registru **HKEY_CURRENT_USER \software\microsoft\visualstudio\16.0\Data Designs** .
+Způsob, jakým se tyto popisky vytvářejí, můžete přizpůsobit nastavením hodnot **SmartCaptionExpression** , **SmartCaptionReplacement** a **SmartCaptionSuffix** v klíči registru **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0\Data Designers** .
 
 ::: moniker-end
 

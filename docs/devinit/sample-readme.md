@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 30fc2c467d08b06da382b62b4cbc04eb731b196b
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: b10d3cd72c52c2cabda0eb4d9b0da81366e4acb3
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400300"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437092"
 ---
 # <a name="sample-list"></a>Seznam ukázek
 
@@ -26,8 +26,8 @@ Následující tabulka obsahuje seznam všech aktuálně dostupných příkladů
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---|
 | [**Všechny nástroje**](sample-all-tool.md)               | Příklad použití všech nástrojů.                                                                                              |   |
 | [**eShopOnWeb**](sample-eshoponweb.md)            | Příklad přizpůsobení aplikace [dotnet-Architecture/eshoponweb](https://github.com/dotnet-architecture/eShopOnWeb) .          |   |
-| [**Privátní verze Preview**](sample-private-preview.md)  | Příklad přizpůsobení použitých v Codespaces veřejné beta verzi sady Visual Studio v GitHubu                                      |   |
+| [**Privátní beta verze**](sample-private-preview.md)     | Příklad přizpůsobení použitých v Codespaces veřejné beta verzi sady Visual Studio v GitHubu                                      |   |
 | [**Otevřít CV**](sample-opencv.md)                   | Příklad přizpůsobení vyžadovaných projektem OpenCV                                                                |   |
 | [**.NET Core Runtime**](sample-dotnet-runtime.md) | Příklad přizpůsobení vyžadovaných projektem [dotnet/runtime](https://github.com/dotnet/runtime) .NET Core Runtime |   |
 | [**Aplikace .NET Core**](sample-dotnet-core.md)        | Příklad úložiště, které používá devinit k instalaci požadované .NET Core SDK.                                             |   |
-| [**AplikaceNode.js**](sample-nodejs.md)               | Příklad úložiště, které používá devinit k instalaci balíčků npm pro projekt Node.js Express.                             |   |
+| [**Aplikace Node.js**](sample-nodejs.md)               | Příklad úložiště, které používá devinit k instalaci balíčků npm pro projekt Node.js Express.                             |   |

@@ -1,5 +1,6 @@
 ---
 title: Vztahy mezi třídami LINQ to SQL
+description: Pomocí dialogového okna Editor přidružení v Návrhář relací objektů (O/R Designer) vytvořte přidružení mezi třídami LINQ to SQL entit.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5c8872a7dc18829ca9a0b4328c58498352385ce6
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 96932dca3d7f8799c316e05dc36c3f38a0e8110f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037065"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436317"
 ---
 # <a name="how-to-create-an-association-between-linq-to-sql-classes-or-designer"></a>Postupy: vytvoření přidružení mezi třídami LINQ to SQL (Návrhář O/R)
 Přidružení mezi třídami entit v [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] jsou podobná vztahům mezi tabulkami v databázi. Přidružení mezi třídami entit můžete vytvořit pomocí dialogového okna **Editor přidružení** .
@@ -22,22 +23,22 @@ Přidružení mezi třídami entit v [!INCLUDE[vbtecdlinq](../data-tools/include
 Je nutné vybrat nadřazenou třídu a podřízenou třídu při použití dialogového okna **Editor přidružení** k vytvoření přidružení. Nadřazená třída je třída entity, která obsahuje primární klíč; podřízená třída je třída entity, která obsahuje cizí klíč. Například pokud byly vytvořeny třídy entit, které jsou namapovány `Northwind Customers` na `Orders` tabulky a, `Customer` třída bude nadřazenou třídou a `Order` třída by byla podřízenou třídou.
 
 > [!NOTE]
-> Když přetáhnete tabulky z **Průzkumník serveru** nebo **průzkumníka databáze** do **Návrhář relací objektů** (**O/R Designer**), vytvoří se přidružení automaticky na základě stávajících vztahů cizího klíče v databázi.
+> Když přetáhnete tabulky z **Průzkumník serveru** nebo **průzkumníka databáze** do **Návrhář relací objektů** ( **O/R Designer** ), vytvoří se přidružení automaticky na základě stávajících vztahů cizího klíče v databázi.
 
 ## <a name="association-properties"></a>Vlastnosti přidružení
-Když při vytváření přidružení vyberete přidružení v **Návrháři pro/R**, v okně **vlastnosti** jsou některé konfigurovatelné vlastnosti. (Přidružení je čára mezi souvisejícími třídami.) Následující tabulka uvádí popisy vlastností přidružení.
+Když při vytváření přidružení vyberete přidružení v **Návrháři pro/R** , v okně **vlastnosti** jsou některé konfigurovatelné vlastnosti. (Přidružení je čára mezi souvisejícími třídami.) Následující tabulka uvádí popisy vlastností přidružení.
 
 |Vlastnost|Popis|
 |--------------|-----------------|
 |**Kardinalita**|Určuje, zda je přidružení typu 1: n nebo 1:1.|
-|**Podřízená vlastnost**|Určuje, zda se má vytvořit vlastnost u nadřazené položky, která je kolekcí nebo odkazem na podřízené záznamy na straně cizího klíče asociace. Například v přidružení mezi `Customer` a `Order` , pokud je **Podřízená vlastnost** nastavena na **hodnotu true**, je vytvořena vlastnost s názvem `Orders` v nadřazené třídě.|
+|**Podřízená vlastnost**|Určuje, zda se má vytvořit vlastnost u nadřazené položky, která je kolekcí nebo odkazem na podřízené záznamy na straně cizího klíče asociace. Například v přidružení mezi `Customer` a `Order` , pokud je **Podřízená vlastnost** nastavena na **hodnotu true** , je vytvořena vlastnost s názvem `Orders` v nadřazené třídě.|
 |**Nadřazená vlastnost**|Vlastnost u podřízené třídy, která odkazuje na přidruženou nadřazenou třídu. Například při přidružení mezi `Customer` a `Order` je vlastnost s názvem `Customer` , která odkazuje na přidruženého zákazníka pro objednávku, vytvořena na `Order` třídě.|
 |**Zúčastněné vlastnosti**|Zobrazí vlastnosti přidružení a poskytne tlačítko se **třemi tečkami** (...), které znovu otevře dialogové okno **Editor přidružení** .|
-|**Tabulka**|Určuje, zda mají sloupce cizího cíle omezení jedinečnosti.|
+|**Jedinečná**|Určuje, zda mají sloupce cizího cíle omezení jedinečnosti.|
 
 ## <a name="to-create-an-association-between-entity-classes"></a>Vytvoření přidružení mezi třídami entit
 
-1. Klikněte pravým tlačítkem na třídu entity, která představuje nadřazenou třídu v přidružení, přejděte na **Přidat**a pak klikněte na **přidružení**.
+1. Klikněte pravým tlačítkem na třídu entity, která představuje nadřazenou třídu v přidružení, přejděte na **Přidat** a pak klikněte na **přidružení**.
 
 2. Ověřte, zda je v dialogovém okně **Editor přidružení** vybrána správná **nadřazená třída** .
 

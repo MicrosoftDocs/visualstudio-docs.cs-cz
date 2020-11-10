@@ -1,5 +1,7 @@
 ---
 title: Vytvoření parametrizovaných dotazů TableAdapter
+description: Naučte se vytvářet parametrizované dotazy TableAdapter. Parametrizovaný dotaz vrátí data, která splňují podmínky klauzule WHERE v dotazu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,18 +20,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a2b94e10dd09d26a17a7574db97880567f7725cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6eb2f6e1358c91a1103615aca67ede4a3561fae
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282602"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436664"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>Vytvoření parametrizovaných dotazů TableAdapter
 
 Parametrizovaný dotaz vrátí data, která splňují podmínky klauzule WHERE v dotazu. Například můžete parametrizovat seznam zákazníků, aby zobrazoval pouze zákazníky v určitém městě přidáním `WHERE City = @City` na konec příkazu SQL, který vrátí seznam zákazníků.
 
-V **Návrhář datových sad**vytvoříte parametrizované dotazy TableAdapter. Můžete je také vytvořit v aplikaci systému Windows pomocí příkazu **parametrizovat zdroj dat** v nabídce **data** . Příkaz **parametrizovat data source** vytvoří ovládací prvky ve formuláři, kde můžete zadat hodnoty parametrů a spustit dotaz.
+V **Návrhář datových sad** vytvoříte parametrizované dotazy TableAdapter. Můžete je také vytvořit v aplikaci systému Windows pomocí příkazu **parametrizovat zdroj dat** v nabídce **data** . Příkaz **parametrizovat data source** vytvoří ovládací prvky ve formuláři, kde můžete zadat hodnoty parametrů a spustit dotaz.
 
 > [!NOTE]
 > Při sestavování parametrizovaného dotazu použijte zápis parametru, který je specifický pro databázi, se kterou píšete. Například přístup a zdroje dat OleDb používají otazník "?" k označení parametrů, takže klauzule WHERE by vypadala takto: `WHERE City = ?` .
@@ -92,9 +94,9 @@ Pokud se jednalo o dotaz na TableAdapter, mohli byste zadat dotaz na všechny ob
 
 Povolení dotazu pro příjem hodnot null:
 
-1. V **Návrhář datových sad**vyberte dotaz TableAdapter, který musí přijmout hodnoty parametrů s hodnotou null.
+1. V **Návrhář datových sad** vyberte dotaz TableAdapter, který musí přijmout hodnoty parametrů s hodnotou null.
 
-2. V okně **vlastnosti** vyberte možnost **parametry**a potom klikněte na tlačítko se třemi tečkami (**...**) a otevřete tak **Editor kolekce Parameters**.
+2. V okně **vlastnosti** vyberte možnost **parametry** a potom klikněte na tlačítko se třemi tečkami ( **...** ) a otevřete tak **Editor kolekce Parameters**.
 
 3. Vyberte parametr, který povoluje hodnoty null, a nastavte vlastnost **AllowDBNull** na hodnotu `true` .
 

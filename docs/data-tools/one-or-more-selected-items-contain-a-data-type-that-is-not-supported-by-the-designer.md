@@ -1,6 +1,6 @@
 ---
 title: Nepodporovaný datový typ
-description: Minimálně jedna vybraná položka obsahuje datový typ, který návrhář nepodporuje.
+description: Jedna nebo více vybraných položek obsahuje datový typ, který Návrhář nepodporuje. Zobrazit informace o této zprávě návrháře sady Visual Studio O/R.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -10,16 +10,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 167146b9a7938e5498e8db023602b2e13f74379c
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 4f678ad9bc6bcfc36baabad8a8d4d64d7bf2f89e
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90034075"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436130"
 ---
 # <a name="one-or-more-selected-items-contain-a-data-type-that-is-not-supported-by-the-designer"></a>Minimálně jedna vybraná položka obsahuje datový typ, který návrhář nepodporuje.
 
-Jedna nebo více položek přetažených z **Průzkumník serveru** nebo **Průzkumníka databáze** do **návrháře o/r** obsahuje datový typ, který není podporován **návrhářem o/r**, například [uživatelsky definované typy CLR](/dotnet/framework/data/adonet/sql/clr-user-defined-types).
+Jedna nebo více položek přetažených z **Průzkumník serveru** nebo **Průzkumníka databáze** do **návrháře o/r** obsahuje datový typ, který není podporován **návrhářem o/r** , například [uživatelsky definované typy CLR](/dotnet/framework/data/adonet/sql/clr-user-defined-types).
 
 ## <a name="to-correct-this-error"></a>Oprava této chyby
 

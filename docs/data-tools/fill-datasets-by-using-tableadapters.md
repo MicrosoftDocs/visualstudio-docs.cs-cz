@@ -1,5 +1,7 @@
 ---
 title: Vyplnění datových sad pomocí objektů TableAdapter
+description: Vyplní datové sady pomocí objekty TableAdapter. Komponenta TableAdapter vyplní datovou sadu daty z databáze na základě jednoho nebo více dotazů nebo uložených procedur, které zadáte.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 888e2ac47348d7e61d115f51e3ea52d15ea9f447
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6a10eb996acbdbf5411688860ce2ec8b00da1f6
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282433"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436456"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>Vyplnění datových sad pomocí objektů TableAdapter
 
@@ -39,7 +41,7 @@ Podrobné informace o operacích TableAdapter můžete přeskočit přímo na je
 |-----------|-----------------|
 |[Vytvoření a konfigurace objektů TableAdapter](../data-tools/create-and-configure-tableadapters.md)|Jak používat návrháře k vytváření a konfiguraci objekty TableAdapter|
 |[Vytvoření parametrizovaných dotazů TableAdapter](../data-tools/create-parameterized-tableadapter-queries.md)|Jak povolit uživatelům dodávat argumenty TableAdapter procedurám nebo dotazům|
-|[Přímý přístup k databázi pomocí objektů TableAdapter](../data-tools/directly-access-the-database-with-a-tableadapter.md)|Jak používat metody DBDirect objekty TableAdapter|
+|[Přímý přístup k databázi pomocí objektu TableAdapter](../data-tools/directly-access-the-database-with-a-tableadapter.md)|Jak používat metody DBDirect objekty TableAdapter|
 |[Vypnutí omezení při naplňování datové sady](../data-tools/turn-off-constraints-while-filling-a-dataset.md)|Jak pracovat s omezeními cizího klíče při aktualizaci dat|
 |[Postup rozšiřování funkcí TableAdapter](../data-tools/fill-datasets-by-using-tableadapters.md)|Postup přidání vlastního kódu do objekty TableAdapter|
 |[Čtení dat XML do datové sady](../data-tools/read-xml-data-into-a-dataset.md)|Jak pracovat s XML|
@@ -52,7 +54,7 @@ Objekty TableAdapter jsou komponenty generované návrhářem, které se připoj
 
 ![Tok dat v klientské aplikaci](../data-tools/media/clientdatadiagram.gif)
 
-I když jsou objekty TableAdapter navrhovány pomocí **Návrhář datových sad**, třídy TableAdapter nejsou generovány jako vnořené třídy  <xref:System.Data.DataSet> . Jsou umístěny v samostatných oborech názvů, které jsou specifické pro každou datovou sadu. Například pokud máte datovou sadu s názvem `NorthwindDataSet` , objekty TableAdapter, která jsou asociována s  <xref:System.Data.DataTable> s s, `NorthwindDataSet` by měla být v `NorthwindDataSetTableAdapters` oboru názvů. Pro programový přístup k určitému typu TableAdapter musíte deklarovat novou instanci typu TableAdapter. Příklad:
+I když jsou objekty TableAdapter navrhovány pomocí **Návrhář datových sad** , třídy TableAdapter nejsou generovány jako vnořené třídy  <xref:System.Data.DataSet> . Jsou umístěny v samostatných oborech názvů, které jsou specifické pro každou datovou sadu. Například pokud máte datovou sadu s názvem `NorthwindDataSet` , objekty TableAdapter, která jsou asociována s  <xref:System.Data.DataTable> s s, `NorthwindDataSet` by měla být v `NorthwindDataSetTableAdapters` oboru názvů. Pro programový přístup k určitému typu TableAdapter musíte deklarovat novou instanci typu TableAdapter. Příklad:
 
 [!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
 [!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]

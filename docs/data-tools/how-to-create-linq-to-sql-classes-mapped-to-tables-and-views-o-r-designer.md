@@ -1,5 +1,7 @@
 ---
 title: Mapování tříd LINQ to SQL na tabulky nebo zobrazení (O-R Designer)
+description: Pochopte, jak vytvořit LINQ to SQL třídy entit (třídy, které jsou namapované na tabulky a zobrazení) v Návrhář relací objektů (O/R Designer).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 0fb78bbc-7a78-4ab4-b32f-85ece912e660
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 19b634973e555fd037d20c3ad359ccbb1465c894
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 79e5c529c1aefb4777e174489fc8fd1ca95a4111
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282121"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436343"
 ---
 # <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>Postupy: Vytvoření tříd LINQ to SQL namapovaných na tabulky a zobrazení (Návrhář relací objektů)
 
@@ -32,7 +34,7 @@ Ve výchozím nastavení [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq
 
 ### <a name="to-create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Vytvoření LINQ to SQL třídy, které jsou mapovány na tabulky nebo zobrazení databáze
 
-1. V Průzkumníku **serveru** nebo **databáze**rozbalte položku **tabulky** nebo **zobrazení** a vyhledejte databázovou tabulku nebo zobrazení, které chcete použít ve své aplikaci.
+1. V Průzkumníku **serveru** nebo **databáze** rozbalte položku **tabulky** nebo **zobrazení** a vyhledejte databázovou tabulku nebo zobrazení, které chcete použít ve své aplikaci.
 
 2. Přetáhněte tabulku nebo zobrazení do **návrháře o/R**.
 
@@ -40,7 +42,7 @@ Ve výchozím nastavení [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq
 
 ## <a name="create-an-object-data-source-and-display-the-data-on-a-form"></a>Vytvoření zdroje dat objektu a zobrazení dat ve formuláři
 
-Po vytvoření tříd entit pomocí **návrháře o/R**můžete vytvořit objekt zdroje dat a naplnit [okno zdroje dat](add-new-data-sources.md#data-sources-window) pomocí tříd entit.
+Po vytvoření tříd entit pomocí **návrháře o/R** můžete vytvořit objekt zdroje dat a naplnit [okno zdroje dat](add-new-data-sources.md#data-sources-window) pomocí tříd entit.
 
 ### <a name="to-create-an-object-data-source-based-on-linq-to-sql-entity-classes"></a>Vytvoření zdroje dat objektu na základě LINQ to SQL třídy entit
 

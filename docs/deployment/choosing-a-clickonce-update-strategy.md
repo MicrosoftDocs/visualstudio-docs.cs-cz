@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5618a8996b9858f0799f2a359573d5b7b9da1ce9
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 7f231f3426821b7f3148d3e6c268234f125f88f0
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383154"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437601"
 ---
 # <a name="choose-a-clickonce-update-strategy"></a>Výběr strategie aktualizace ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] může poskytovat automatické aktualizace aplikací. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Aplikace pravidelně čte soubor manifestu nasazení a zjistí, zda jsou k dispozici aktualizace aplikace. Pokud je k dispozici nová verze aplikace, je stažena a spuštěna. Z důvodu efektivity budou staženy pouze soubory, které byly změněny.
@@ -73,6 +73,8 @@ ms.locfileid: "94383154"
    </update>
 </subscription>
 ```
+> [!NOTE]
+> U .NET 3,1 a novějších aplikací kontroluje aktualizace před spuštěním aplikace jedinou podporovanou možnost aktualizace.
 
 ## <a name="make-updates-required"></a>Nastavit požadované aktualizace
  Mohou nastat situace, kdy požadujete, aby uživatelé spouštěli aktualizovanou verzi aplikace. Například můžete provést změnu externího prostředku, jako jsou webové služby, které by omezily správnou funkčnost starší verze aplikace. V tomto případě budete pravděpodobně chtít nastavit aktualizaci jako povinnou a zabránit uživatelům ve spouštění starší verze.
@@ -119,7 +121,7 @@ ms.locfileid: "94383154"
  Pokud použijete nasazení důvěryhodné aplikace, nebude tato výzva týkající se úrovně důvěryhodnosti zobrazena. Další informace najdete v tématu [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md).
 
 ## <a name="see-also"></a>Viz také
- \<xref:System.Deployment.Application>
+- <xref:System.Deployment.Application>
 - [Zabezpečení a nasazení ClickOnce](../deployment/clickonce-security-and-deployment.md)
 - [Výběr strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md)
 - [Zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md)

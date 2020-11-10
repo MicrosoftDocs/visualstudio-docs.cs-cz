@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 6543dfe8298ea24aa731a74556b01be1beeed2bf
-ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
+ms.openlocfilehash: 153864a293ca25fdcf30f23b96f686737411c965
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344476"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435784"
 ---
 # <a name="devinit-commands"></a>příkazy devinit
 
@@ -26,7 +26,7 @@ ms.locfileid: "93344476"
 devinit init
 ```
 
-Inicializujte prostředí spuštěním nástrojů určených v [_.devinit.jspro_](devinit-json.md) soubor v aktuálním pracovním adresáři.  
+Inicializujte prostředí spuštěním nástrojů určených v [.devinit.jsv](devinit-json.md) souboru.
 
 ### <a name="options-for-init"></a>Možnosti pro init
 
@@ -34,7 +34,7 @@ Volitelné možnosti pro `devinit init` příkaz
 
 | Argument             | Povinné | Popis                                                               |
 |----------------------|----------|---------------------------------------------------------------------------|
-| -f,--soubor            | No       | Cesta k _.devinit.jsv_ souboru                                         |
+| -f,--soubor            | No       | Cesta k `.devinit.json` souboru                                         |
 | --Error-Action       | No       | Určuje, jak se mají zpracovávat chyby. Možnosti: zastavit, ignorovat, pokračovat (výchozí).|
 | -v,--verbose         | No       | Vygeneruje podrobný výstup.                                                      |
 | -n,--suchého běhu         | No       | Suché spuštění.                                                                  |
@@ -97,6 +97,10 @@ Určuje akci, která má být provedena, pokud nástroj vrátí nenulový ukonč
 | continue | Pokračovat v zpracovávání jiných nástrojů po vygenerování chyby se standardní chybou Ukončovací kód devinit.exe je nenulový (selhání). Toto chování je podobné akci zastavení chyby, ale zpracování pokračuje. `continue` je výchozí chyba – akce příkazu init.              |
 | ignorovat   | Pokračujte v zpracovávání jiných nástrojů po vygenerování upozornění na standardní výstup. Ukončovací kód procesu DevInit by měl vždy být nula (úspěch). `ignore`Nastavení ignoruje všechny chyby.                                                                                                      |
 | Zastavit     | Vygeneruje chybu standardní chyby a zastaví zpracování nástrojů. Ukončovací kód devinit.exe je nenulový (selhání). Jedná se o podobnou akci pokračovat při chybě, ale zpracování je zastaveno při první zjištěné chybě. `stop` je výchozí chyba – akce pro všechny příkazy s výjimkou init. |
+
+#### <a name="--dry-run-switch"></a>– přepínač suchého běhu
+
+Příkazy nástroje echo, které by byly spuštěny. Některé nástroje mohou podniknout další kroky popsané pro tento nástroj. 
 
 #### <a name="--verbose-switch"></a>--verbose Switch
 

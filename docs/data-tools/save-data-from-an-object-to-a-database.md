@@ -1,5 +1,7 @@
 ---
 title: Uložení dat z objektu do databáze
+description: Uložení dat z objektu do databáze pomocí nástrojů datové sady v sadě Visual Studio. Přečtěte si, jak uložit nové záznamy, aktualizovat existující záznamy a odstranit existující záznamy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4afa0d376366b154501e1a0e4488af57b4448a32
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ee06ef21be4076a1a0dee6319155144c468bafd
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281653"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436015"
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>Uložení dat z objektu do databáze
 

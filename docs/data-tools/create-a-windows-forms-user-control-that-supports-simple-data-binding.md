@@ -1,5 +1,6 @@
 ---
 title: Vytváření uživatelských ovládacích prvků, které podporují jednoduchou datovou vazbu
+description: Naučte se vytvořit uživatelský ovládací prvek model Windows Forms, který podporuje jednoduchou datovou vazbu, pomocí třídy DefaultBindingPropertyAttribute v aplikaci Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,16 +16,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f5126c6f4c06bc52e98b952a7809ccae9c20e633
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 4ba2010b33b1defa6ef7dcb601fde9417fa47f70
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037364"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436742"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>Vytvoření uživatelského ovládacího prvku modelu Windows Forms, který podporuje jednoduchou datovou vazbu
 
-Při zobrazování dat ve formulářích v aplikacích systému Windows můžete zvolit existující ovládací prvky z **panelu nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou k dispozici ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje rozhraní <xref:System.ComponentModel.DefaultBindingPropertyAttribute> . Ovládací prvky, které implementují, <xref:System.ComponentModel.DefaultBindingPropertyAttribute> mohou obsahovat jednu vlastnost, která může být svázána s daty. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.TextBox> nebo <xref:System.Windows.Forms.CheckBox> .
+Při zobrazování dat ve formulářích v aplikacích systému Windows můžete zvolit existující ovládací prvky z **panelu nástrojů** , nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou k dispozici ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje rozhraní <xref:System.ComponentModel.DefaultBindingPropertyAttribute> . Ovládací prvky, které implementují, <xref:System.ComponentModel.DefaultBindingPropertyAttribute> mohou obsahovat jednu vlastnost, která může být svázána s daty. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.TextBox> nebo <xref:System.Windows.Forms.CheckBox> .
 
 Další informace o vytváření ovládacích prvků naleznete v tématu [vývoj model Windows Formsch ovládacích prvků v době návrhu](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).
 
@@ -54,11 +55,11 @@ V tomto návodu se naučíte:
 
 - Vytvořte formulář pro zobrazení dat v novém ovládacím prvku.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio**můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio** můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
 
 2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
@@ -74,7 +75,7 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
 ## <a name="create-a-windows-forms-application"></a>Vytvoření aplikace model Windows Forms
 
-Prvním krokem je vytvoření **model Windows Forms aplikace**:
+Prvním krokem je vytvoření **model Windows Forms aplikace** :
 
 1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  >  **projekt**.
 
@@ -82,7 +83,7 @@ Prvním krokem je vytvoření **model Windows Forms aplikace**:
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **SimpleControlWalkthrough**a klikněte na **tlačítko OK**.
+4. Pojmenujte projekt **SimpleControlWalkthrough** a klikněte na **tlačítko OK**.
 
      Vytvoří se projekt **SimpleControlWalkthrough** a přidá se do **Průzkumník řešení**.
 
@@ -94,7 +95,7 @@ Tento návod vytvoří jednoduchý ovládací prvek s datovou vazbou z **uživat
 
 2. Do oblasti název zadejte **PhoneNumberBox** a klikněte na **Přidat**.
 
-     Ovládací prvek **PhoneNumberBox** je přidán do **Průzkumník řešení**a otevře se v návrháři.
+     Ovládací prvek **PhoneNumberBox** je přidán do **Průzkumník řešení** a otevře se v návrháři.
 
 ## <a name="design-the-phonenumberbox-control"></a>Návrh ovládacího prvku PhoneNumberBox
 
@@ -127,7 +128,7 @@ Tento krok používá Průvodce **konfigurací zdroje dat** k vytvoření zdroje
 
 2. V okně **zdroje dat** vyberte možnost **Přidat nový zdroj dat** a spusťte průvodce **konfigurací zdroje dat** .
 
-3. Na stránce **Zvolte typ zdroje dat** vyberte možnost **databáze**a poté klikněte na tlačítko **Další**.
+3. Na stránce **Zvolte typ zdroje dat** vyberte možnost **databáze** a poté klikněte na tlačítko **Další**.
 
 4. Na stránce **Vyberte datové připojení** proveďte jednu z následujících akcí:
 

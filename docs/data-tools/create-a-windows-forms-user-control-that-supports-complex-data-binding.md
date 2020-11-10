@@ -1,5 +1,7 @@
 ---
 title: Vytvoření uživatelského ovládacího prvku model Windows Forms s datovou vazbou
+description: Pochopte, jak vytvořit uživatelský ovládací prvek model Windows Forms, který podporuje složitou datovou vazbu implementací třídy ComplexBindingPropertiesAttribute.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 97d9e64a0fcabb207d4606d4819f6afcb61b1043
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 465636b2b5bbf1a47752b4f0917258e264172abd
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586845"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436781"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>Vytvoření uživatelského ovládacího prvku modelu Windows Forms, který podporuje složitou datovou vazbu
 
@@ -51,11 +53,11 @@ V tomto návodu se dozvíte, jak:
 
 - Přidejte nový ovládací prvek přetažením z okna **zdroje dat** do formuláře **Form1**.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio**můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio** můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
 
 1. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
@@ -75,13 +77,13 @@ Prvním krokem je vytvoření projektu **aplikace model Windows Forms** pro C# n
 
 ## <a name="add-a-user-control-to-the-project"></a>Přidat uživatelský ovládací prvek do projektu
 
-Vzhledem k tomu, že tento návod vytvoří komplexní ovládací prvek s datovou vazbou z **uživatelského ovládacího prvku**, přidejte do projektu položku **uživatelského ovládacího prvku** :
+Vzhledem k tomu, že tento návod vytvoří komplexní ovládací prvek s datovou vazbou z **uživatelského ovládacího prvku** , přidejte do projektu položku **uživatelského ovládacího prvku** :
 
 1. V nabídce **projekt** vyberte možnost **Přidat uživatelský ovládací prvek**.
 
 1. Do oblasti **název** zadejte **ComplexDataGridView** a pak klikněte na **Přidat**.
 
-    Ovládací prvek **ComplexDataGridView** je přidán do **Průzkumník řešení**a otevře se v návrháři.
+    Ovládací prvek **ComplexDataGridView** je přidán do **Průzkumník řešení** a otevře se v návrháři.
 
 ## <a name="design-the-complexdatagridview-control"></a>Návrh ovládacího prvku ComplexDataGridView
 

@@ -1,5 +1,7 @@
 ---
 title: Vytváření vyhledávacích tabulek v aplikacích WPF
+description: Vytváření vyhledávacích tabulek v aplikacích WPF Vyhledávací tabulka je ovládací prvek, který zobrazuje informace z tabulky dat na základě hodnoty pole cizího klíče v jiné tabulce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -16,16 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7485c63d358bc6f6fe7030e589fbdf7286ded3fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 293f04ca111fe88c905a288885f7e4763ec1cdc3
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282615"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436690"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>Vytváření vyhledávacích tabulek v aplikacích WPF
 
-*Vyhledávací tabulka* termínů (někdy označované jako *vyhledávací vazba*) popisuje ovládací prvek, který zobrazuje informace z jedné tabulky dat na základě hodnoty pole cizího klíče v jiné tabulce. Vyhledávací tabulku lze vytvořit přetažením hlavního uzlu nadřazené tabulky nebo objektu v okně **zdroje dat** do ovládacího prvku, který je již svázán se sloupcem nebo vlastností v související podřízené tabulce.
+*Vyhledávací tabulka* termínů (někdy označované jako *vyhledávací vazba* ) popisuje ovládací prvek, který zobrazuje informace z jedné tabulky dat na základě hodnoty pole cizího klíče v jiné tabulce. Vyhledávací tabulku lze vytvořit přetažením hlavního uzlu nadřazené tabulky nebo objektu v okně **zdroje dat** do ovládacího prvku, který je již svázán se sloupcem nebo vlastností v související podřízené tabulce.
 
 Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` tabulce obsahuje položku `CustomerID` , která označuje zákazníka, který objednávku zadal. `CustomerID`Je cizí klíč, který odkazuje na záznam zákazníka v `Customers` tabulce. Když zobrazíte seznam objednávek z `Orders` tabulky, možná budete chtít zobrazit skutečný název zákazníka namísto `CustomerID` . Vzhledem k tomu, že je název zákazníka v `Customers` tabulce, je nutné vytvořit vyhledávací tabulku pro zobrazení názvu zákazníka. Vyhledávací tabulka používá `CustomerID` `Orders` k navigaci vztahu hodnotu v záznamu a vrací jméno zákazníka.
 
@@ -42,7 +44,7 @@ Předpokládejme například tabulku `Orders` v prodejní databázi. Každý z�
     > [!NOTE]
     > Předtím, než můžete vytvořit vyhledávací tabulku, musí existovat dva související tabulky nebo objekty jako zdroj dat pro projekt.
 
-2. Otevřete **Návrháře WPF**a ujistěte se, že Návrhář obsahuje kontejner, který je platným cílem přetažení pro položky v okně **zdroje dat** .
+2. Otevřete **Návrháře WPF** a ujistěte se, že Návrhář obsahuje kontejner, který je platným cílem přetažení pro položky v okně **zdroje dat** .
 
      Další informace o platných cílech přetažení naleznete v tématu [BIND WPF Controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
 

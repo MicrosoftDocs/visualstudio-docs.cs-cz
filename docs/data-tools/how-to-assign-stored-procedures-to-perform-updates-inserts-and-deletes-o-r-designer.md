@@ -1,5 +1,6 @@
 ---
 title: Použití uložených procedur v LINQ to SQL k aktualizaci dat
+description: Pomocí uložených procedur v LINQ to SQL Návrhář relací objektů (Návrhář O/R) můžete provádět aktualizace, vkládání a odstraňování dat.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3f8b2f783d6ae449a6124afe5d8e25dd836f0f8e
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 5915de290a84429878eccb4eae17821f8ac27f70
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036311"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436410"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>Postupy: Přiřazení uložených procedur za účelem aktualizací, vkládání a odstraňování (Návrhář relací objektů)
 
@@ -36,7 +37,7 @@ Ve výchozím nastavení logika aktualizace databáze (vložení, aktualizace a 
 
 1. Otevřete soubor **LINQ to SQL** v návrháři. (Poklikejte na soubor **. dbml** v **Průzkumník řešení**.)
 
-2. V **Průzkumník serveru** nebo **Průzkumníku databáze**rozbalte **uložené procedury** a vyhledejte uložené procedury, které chcete použít pro příkazy INSERT, Update a Delete třídy entity.
+2. V **Průzkumník serveru** nebo **Průzkumníku databáze** rozbalte **uložené procedury** a vyhledejte uložené procedury, které chcete použít pro příkazy INSERT, Update a Delete třídy entity.
 
 3. Přetáhněte uloženou proceduru do **návrháře o/R**.
 
@@ -44,7 +45,7 @@ Ve výchozím nastavení logika aktualizace databáze (vložení, aktualizace a 
 
 4. Vyberte třídu entity, pro kterou chcete použít uloženou proceduru pro provádění aktualizací.
 
-5. V okně **vlastnosti** vyberte příkaz, který chcete přepsat (**Vložit**, **aktualizovat**nebo **Odstranit**).
+5. V okně **vlastnosti** vyberte příkaz, který chcete přepsat ( **Vložit** , **aktualizovat** nebo **Odstranit** ).
 
 6. Klikněte na tlačítko se třemi tečkami (...) vedle slov **použít modul runtime** k otevření dialogového okna **Konfigurovat chování** .
 
@@ -60,9 +61,9 @@ Ve výchozím nastavení logika aktualizace databáze (vložení, aktualizace a 
 10. Klikněte na tlačítko **OK** nebo **použít**.
 
     > [!NOTE]
-    > Můžete pokračovat v konfiguraci chování pro každou kombinaci třídy a chování, pokud kliknete na **použít** po provedení každé změny. Pokud změníte třídu nebo chování předtím, než kliknete na **použít**, zobrazí se dialogové okno s upozorněním a nabídne vám možnost použít změny.
+    > Můžete pokračovat v konfiguraci chování pro každou kombinaci třídy a chování, pokud kliknete na **použít** po provedení každé změny. Pokud změníte třídu nebo chování předtím, než kliknete na **použít** , zobrazí se dialogové okno s upozorněním a nabídne vám možnost použít změny.
 
-Chcete-li se vrátit k používání výchozí logiky modulu runtime pro aktualizace, klikněte na tři tečky vedle příkazu **Vložit**, **aktualizovat**nebo **Odstranit** v okně **vlastnosti** a pak v dialogovém okně **Konfigurovat chování** vyberte **použít modul runtime** .
+Chcete-li se vrátit k používání výchozí logiky modulu runtime pro aktualizace, klikněte na tři tečky vedle příkazu **Vložit** , **aktualizovat** nebo **Odstranit** v okně **vlastnosti** a pak v dialogovém okně **Konfigurovat chování** vyberte **použít modul runtime** .
 
 ## <a name="see-also"></a>Viz také
 

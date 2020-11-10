@@ -1,5 +1,6 @@
 ---
 title: Vytvoření jednoduché datové aplikace pomocí ADO.NET
+description: Naučte se vytvářet jednoduché aplikace založené na datových formulářích pomocí model Windows Forms a ADO.NET v aplikaci Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 08/23/2017
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c7db4d0072f217604e7ca163e581cc8fe138ffdb
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 44205f7f8f12d453a7c1d93ec8fee6ed1a3c1765
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037429"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436794"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>Vytvoření jednoduché datové aplikace pomocí ADO.NET
 
@@ -28,7 +29,7 @@ Tento článek ukazuje jednoduchý způsob, jak rychle získat data z databáze.
 > [!IMPORTANT]
 > Aby byl kód jednoduchý, nezahrnuje zpracování výjimek připravené pro produkční prostředí.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Chcete-li vytvořit aplikaci, budete potřebovat:
 
@@ -48,7 +49,7 @@ Vytvořte ukázkovou databázi pomocí následujících kroků:
 
 3. Do textového pole **název serveru** zadejte **(LocalDB) \mssqllocaldb**.
 
-4. Do textového pole **nový název databáze** zadejte **Sales**a pak zvolte **OK**.
+4. Do textového pole **nový název databáze** zadejte **Sales** a pak zvolte **OK**.
 
      Prázdná **prodejní** databáze je vytvořena a přidána do uzlu datová připojení v Průzkumník serveru.
 
@@ -123,10 +124,10 @@ Vytvořte ukázkovou databázi pomocí následujících kroků:
 ## <a name="store-the-connection-string"></a>Uložení připojovacího řetězce
 Když se aplikace pokusí otevřít připojení k databázi, aplikace musí mít přístup k připojovacímu řetězci. Chcete-li se vyhnout zadávání řetězce ručně na každém formuláři, uložte řetězec do souboru *App.config* v projektu a vytvořte metodu, která vrátí řetězec, pokud je metoda volána z libovolného formuláře v aplikaci.
 
-Připojovací řetězec můžete najít tak, že kliknete pravým tlačítkem na připojení k datům **prodeje** v **Průzkumník serveru** a zvolíte **vlastnosti**. Vyhledejte vlastnost **ConnectionString** a pak pomocí **kombinace kláves CTRL** + **a**, **CTRL** + **C** vyberte a zkopírujte řetězec do schránky.
+Připojovací řetězec můžete najít tak, že kliknete pravým tlačítkem na připojení k datům **prodeje** v **Průzkumník serveru** a zvolíte **vlastnosti**. Vyhledejte vlastnost **ConnectionString** a pak pomocí **kombinace kláves CTRL** + **a** , **CTRL** + **C** vyberte a zkopírujte řetězec do schránky.
 
-1. Pokud používáte jazyk C#, v **Průzkumník řešení**rozbalte uzel **vlastnosti** v projektu a pak otevřete soubor **Settings. Settings** .
-    Pokud používáte Visual Basic, klikněte v **Průzkumník řešení**na **Zobrazit všechny soubory**, rozbalte uzel **můj projekt** a pak otevřete soubor **Settings. Settings** .
+1. Pokud používáte jazyk C#, v **Průzkumník řešení** rozbalte uzel **vlastnosti** v projektu a pak otevřete soubor **Settings. Settings** .
+    Pokud používáte Visual Basic, klikněte v **Průzkumník řešení** na **Zobrazit všechny soubory** , rozbalte uzel **můj projekt** a pak otevřete soubor **Settings. Settings** .
 
 2. Do sloupce **název** zadejte `connString` .
 
@@ -149,9 +150,9 @@ Navigační formulář se otevře při spuštění aplikace. Tlačítko **Přida
 
 #### <a name="make-the-navigation-form-the-startup-form"></a>Nastavit navigační formulář jako úvodní formulář
 
-Pokud používáte jazyk C#, v **Průzkumník řešení**otevřete **program.cs**a potom změňte `Application.Run` řádek na toto: `Application.Run(new Navigation());`
+Pokud používáte jazyk C#, v **Průzkumník řešení** otevřete **program.cs** a potom změňte `Application.Run` řádek na toto: `Application.Run(new Navigation());`
 
-Pokud používáte Visual Basic, v **Průzkumník řešení**otevřete okno **vlastnosti** , vyberte kartu **aplikace** a pak v seznamu **spouštěcí formulář** vyberte **SimpleDataApp. Navigation** .
+Pokud používáte Visual Basic, v **Průzkumník řešení** otevřete okno **vlastnosti** , vyberte kartu **aplikace** a pak v seznamu **spouštěcí formulář** vyberte **SimpleDataApp. Navigation** .
 
 #### <a name="create-auto-generated-event-handlers"></a>Vytváření automaticky generovaných obslužných rutin událostí
 

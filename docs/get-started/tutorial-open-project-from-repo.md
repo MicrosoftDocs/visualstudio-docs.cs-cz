@@ -2,7 +2,7 @@
 title: 'Kurz: otevření projektu z úložiště'
 description: Naučte se, jak otevřít projekt v úložišti Git nebo Azure DevOps pomocí sady Visual Studio.
 ms.custom: get-started
-ms.date: 11/03/2020
+ms.date: 11/10/2020
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 56005faa4475f040375108ca02abbca40cd2652d
-ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
+ms.openlocfilehash: 91fb06a50fe0c992d3018aee31cfc963544f8b97
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344537"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436078"
 ---
 # <a name="tutorial-open-a-project-from-a-repo"></a>Kurz: otevření projektu z úložiště
 
@@ -75,6 +75,9 @@ Prohlédněte si následující animaci a zkontrolujte práci, kterou jste dokon
 
 ::: moniker range="vs-2019"
 
+> [!NOTE]
+> Pokud chcete vyzkoušet nové integrované prostředí Git v aplikaci Visual Studio 2019, nezapomeňte aktualizovat na [**verzi 16,8**](/visualstudio/releases/2019/release-notes/). Další informace najdete na stránce [nové prostředí Git na stránce sady Visual Studio](../ide/git-with-visual-studio.md) .
+
 1. Otevřete Visual Studio 2019.
 
 1. V okně Start vyberte **klonovat nebo rezervovat kód**.
@@ -92,9 +95,6 @@ Prohlédněte si následující animaci a zkontrolujte práci, kterou jste dokon
    ![Z rozevíracího seznamu Průzkumník řešení vyberte, co chcete otevřít.](./media/open-proj-repo-github-solutions-folders-picker.png)
 
    Pokud v úložišti nemáte soubor řešení (konkrétně soubor. sln), nabídka rozchodu znamená "žádná řešení nebyla nalezena." Můžete však dvakrát kliknout na libovolný soubor v nabídce složka a otevřít ho v editoru kódu sady Visual Studio.
-
-> [!TIP]
-> Pokud byste chtěli vyzkoušet nové integrované prostředí Git v aplikaci Visual Studio a používáte [verzi 16,6](/visualstudio/releases/2019/release-notes-v16.6) nebo novější, můžete je přepínat kliknutím na **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** a následným zaškrtnutím políčka **nové uživatelské prostředí Git** . Další informace najdete na stránce [nové prostředí Git na stránce sady Visual Studio](../ide/git-with-visual-studio.md) .
 
 ::: moniker-end
 

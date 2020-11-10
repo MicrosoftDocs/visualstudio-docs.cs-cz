@@ -1,6 +1,8 @@
 ---
 title: Kompatibilita verzí pro zásady vracení se změnami Analýzy kódu
 ms.date: 11/04/2016
+description: Přečtěte si, jak Team System 2008 Team Foundation Server a Team Foundation Server 2010 vyhodnotit zásady vrácení se změnami sady Visual Studio různě.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - version compatibility, code analysis check-in policy
@@ -11,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4757b3a105ff02a92944d9b45e645e2c63a8b81c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3a681f510da270bc22ae4bc983103f9a5735a127
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75587157"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436872"
 ---
 # <a name="version-compatibility-for-code-analysis-check-in-policies"></a>Kompatibilita verzí pro zásady vracení se změnami Analýzy kódu
 
 Pokud je nutné vyhodnotit a vytvořit zásady pro vrácení se změnami analýzy kódu pomocí různých verzí nástroje [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] , je nutné znát rozdíly ve způsobu [!INCLUDE[vstsTfsOrcasLong](../code-quality/includes/vststfsorcaslong_md.md)] a [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] vyhodnocení zásad vrácení se změnami.
 
-## <a name="version-compatibility-for-evaluating-check-in-policies"></a>Kompatibilita verzí pro vyhodnocení zásad vrácení se změnami
+## <a name="version-compatibility-for-evaluating-check-in-policies"></a>Kompatibilita verzí pro vyhodnocení Check-Inch zásad
 
 - Pokud jsou vyhodnocovány zásady vrácení se změnami analýzy kódu v nástroji [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] , všechna pravidla, která existovala v, [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ale neexistují v, [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] jsou ignorována.
 
@@ -32,7 +34,7 @@ Pokud je nutné vyhodnotit a vytvořit zásady pro vrácení se změnami analýz
 
 - Pokud zásada pro vrácení se změnami analýzy kódu určuje sestavení pravidel, která [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] nerozpoznají, zobrazí se zpráva.
 
-## <a name="version-compatibility-for-authoring-check-in-policies"></a>Kompatibilita verzí pro vytváření zásad vracení se změnami
+## <a name="version-compatibility-for-authoring-check-in-policies"></a>Kompatibilita verzí pro vytváření Check-Inch zásad
 
 - Pokud jste vytvořili zásadu pro vrácení se změnami analýzy kódu pomocí verze nástroje [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] , nemůžete [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] ji upravovat pomocí verze. A také [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] nemůže vyhodnotit zásady.
 

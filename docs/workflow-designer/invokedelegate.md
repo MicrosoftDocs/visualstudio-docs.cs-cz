@@ -1,5 +1,7 @@
 ---
 title: Návrhář postupu provádění – InvokeDelegate
+description: Přečtěte si o návrháři InvokeDelegate a o tom, jak můžete pomocí návrháře InvokeDelegate vytvořit a nakonfigurovat aktivitu InvokeDelegate.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ author: TerryGLee
 ms.author: tglee
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e63fb7a766b79467749cc5181a575e0d35a07b8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a482f23b1df1587e9a1c7e3023bfb0d1737f1fae
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876070"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437746"
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
 
@@ -35,9 +37,9 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.InvokeD
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Popisný název <xref:System.Activities.Statements.InvokeDelegate> aktivity Výchozí hodnota je InvokeDelegate.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je vhodné použít jeden.|
-|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|Ano|Název, který se má <xref:System.Activities.ActivityDelegate> volat, když se aktivita spustí. Tato vlastnost se dá upravovat na návrhové ploše a je povinná.|
-|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|Ne|Kolekce argumentů volaného delegáta. Klíče jsou názvy objektů parametrů v a <xref:System.Activities.ActivityDelegate> hodnoty jsou argumenty, jejichž výrazy jsou vyhodnocovány a přiřazeny odpovídajícím objektům parametrů. Chcete-li zobrazit dialogové okno **DelegateArguments** , kde můžete nastavit tuto vlastnost, klikněte na tlačítko se třemi tečkami v poli **DelegateArguments** v mřížce vlastností. Klikněte na pole **vytvořit argument** a přidejte argumenty.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Popisný název <xref:System.Activities.Statements.InvokeDelegate> aktivity Výchozí hodnota je InvokeDelegate.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je vhodné použít jeden.|
+|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|Pravda|Název, který se má <xref:System.Activities.ActivityDelegate> volat, když se aktivita spustí. Tato vlastnost se dá upravovat na návrhové ploše a je povinná.|
+|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|Nepravda|Kolekce argumentů volaného delegáta. Klíče jsou názvy objektů parametrů v a <xref:System.Activities.ActivityDelegate> hodnoty jsou argumenty, jejichž výrazy jsou vyhodnocovány a přiřazeny odpovídajícím objektům parametrů. Chcete-li zobrazit dialogové okno **DelegateArguments** , kde můžete nastavit tuto vlastnost, klikněte na tlačítko se třemi tečkami v poli **DelegateArguments** v mřížce vlastností. Klikněte na pole **vytvořit argument** a přidejte argumenty.|
 
 ## <a name="see-also"></a>Viz také
 

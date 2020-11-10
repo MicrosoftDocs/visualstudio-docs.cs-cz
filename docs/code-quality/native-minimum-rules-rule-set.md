@@ -1,6 +1,8 @@
 ---
 title: Sada pravidel Nativní minimální pravidla
 ms.date: 11/04/2016
+description: Přečtěte si o nativním pravidlu minimálních pravidel v sadě Visual Studio. Přečtěte si popis pravidel pro zabezpečení, odolnost a další kritické problémy v nativním kódu.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 2d898bc4-fba5-472e-8f09-b0c6b511c5a3
 author: mikejo5000
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5646986381907d6ba524b27ae28985e579d6e379
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 182c896aea682287f89119217e5d4b8b860b6dcf
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600036"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437080"
 ---
 # <a name="native-minimum-rules-rule-set"></a>Sada pravidel Nativní minimální pravidla
 
@@ -43,8 +45,8 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C6276](/cpp/code-quality/c6276)|Neplatné přetypování řetězce|
 |[C6277](/cpp/code-quality/c6277)|Neplatné volání funkce CreateProcess|
 |[C6284](/cpp/code-quality/c6284)|Neplatný argument objektu pro formátování funkce|
-|[C6290](/cpp/code-quality/c6290)|Logický operátor NOT a Priorita|
-|[C6291](/cpp/code-quality/c6291)|Logický operátor NOT ani Priorita|
+|[C6290](/cpp/code-quality/c6290)|Logical-Not priority Bitwise-And|
+|[C6291](/cpp/code-quality/c6291)|Logical-Not priority Bitwise-Or|
 |[C6302](/cpp/code-quality/c6302)|Neplatný argument řetězce znaků pro formátování funkce|
 |[C6303](/cpp/code-quality/c6303)|Neplatný argument řetězce s velkým znakem pro formátování funkce|
 |[C6305](/cpp/code-quality/c6305)|Neshoda s použitím velikosti a počtu|

@@ -1,18 +1,20 @@
 ---
 title: Sada pravidel Smíšená doporučená pravidla
 ms.date: 11/04/2016
+description: Seznamte se se smíšenou sadou pravidel doporučených pravidel v sadě Visual Studio. Viz popisy pravidel pro projekty jazyka C++, které podporují modul CLR (Common Language Runtime).
+ms.custom: SEO-VS-2020
 ms.topic: reference
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 324595021a11fb533a1eeb1936df6f4894d4fbce
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: bc30012dc025c5fc92f6d589c8e40740d689a86b
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658448"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437067"
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>Sada pravidel Smíšená doporučená pravidla
 
@@ -20,7 +22,7 @@ Doporučená pravidla společnosti Microsoft se zaměřují na nejběžnější 
 
 Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoříte pro projekty C++, které podporují modul CLR (Common Language Runtime).
 
-|Pravidlo|Description|
+|Pravidlo|Popis|
 |----------|-----------------|
 |[C6001](/cpp/code-quality/c6001)|Použití neinicializované paměti|
 |[C6011](/cpp/code-quality/c6011)|Přesměrování ukazatele null|
@@ -38,20 +40,20 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C6201](/cpp/code-quality/c6201)|Index překračuje maximum vyrovnávací paměti zásobníku.|
 |[C6214](/cpp/code-quality/c6214)|Neplatné přetypování HRESULT na BOOL|
 |[C6215](/cpp/code-quality/c6215)|Neplatné přetypování typu BOOL na HRESULT|
-|[C6216](/cpp/code-quality/c6216)|Neplatné přetypování vložené kompilátorem typu BOOL na HRESULT|
+|[C6216](/cpp/code-quality/c6216)|Neplatná hodnota typu BOOL přetypování Compiler-Inserted na HRESULT|
 |[C6217](/cpp/code-quality/c6217)|Neplatný test HRESULT s NOT|
 |[C6220](/cpp/code-quality/c6220)|Neplatné porovnání HRESULT s-1|
 |[C6226](/cpp/code-quality/c6226)|Neplatné přiřazení HRESULT na-1|
 |[C6230](/cpp/code-quality/c6230)|Neplatné použití HRESULT jako Boolean|
-|[C6235](/cpp/code-quality/c6235)|Nenulová konstanta s logickým operátorem OR|
-|[C6236](/cpp/code-quality/c6236)|Logický operátor OR s nenulovou konstantou|
-|[C6237](/cpp/code-quality/c6237)|Nula s logickým operátorem and ztratí vedlejší účinky|
+|[C6235](/cpp/code-quality/c6235)|Nenulová konstanta s Logical-Or|
+|[C6236](/cpp/code-quality/c6236)|Logical-Or s nenulovou konstantou|
+|[C6237](/cpp/code-quality/c6237)|Nula s Logical-And ztratí vedlejší účinky|
 |[C6242](/cpp/code-quality/c6242)|Vynucené místní unwind|
 |[C6248](/cpp/code-quality/c6248)|Vytváření seznamu DACL s hodnotou null|
 |[C6250](/cpp/code-quality/c6250)|Nevydané popisovače adres|
 |[C6255](/cpp/code-quality/c6255)|Nechráněné použití alokace|
 |[C6258](/cpp/code-quality/c6258)|Použití vlákna ukončit|
-|[C6259](/cpp/code-quality/c6259)|Mrtvý kód v bitovém nebo omezeném přepínači|
+|[C6259](/cpp/code-quality/c6259)|Mrtvý kód v Bitwise-Or omezený přepínač|
 |[C6260](/cpp/code-quality/c6260)|Použití aritmetických bajtů|
 |[C6262](/cpp/code-quality/c6262)|Nadměrné využití zásobníku|
 |[C6263](/cpp/code-quality/c6263)|Použití alokačního příkazu ve smyčce|
@@ -64,20 +66,20 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C6274](/cpp/code-quality/c6274)|Argument bez znaku pro formátování funkce|
 |[C6276](/cpp/code-quality/c6276)|Neplatné přetypování řetězce|
 |[C6277](/cpp/code-quality/c6277)|Neplatné volání funkce CreateProcess|
-|[C6278](/cpp/code-quality/c6278)|Array – nová neshoda skalárního odstranění|
-|[C6279](/cpp/code-quality/c6279)|Neshoda mezi skalárním a novým polem – odstranění|
-|[C6280](/cpp/code-quality/c6280)|Neshoda přidělení paměti – neshoda|
+|[C6278](/cpp/code-quality/c6278)|Neshoda Array-New Scalar-Delete|
+|[C6279](/cpp/code-quality/c6279)|Neshoda Scalar-New Array-Delete|
+|[C6280](/cpp/code-quality/c6280)|Neshoda Allocation-Deallocation paměti|
 |[C6281](/cpp/code-quality/c6281)|Priorita bitového vztahu|
 |[C6282](/cpp/code-quality/c6282)|Přiřazení nahrazuje test|
-|[C6283](/cpp/code-quality/c6283)|Primitivní pole – neshoda s novým skalárním odstraněním|
+|[C6283](/cpp/code-quality/c6283)|Neshoda primitivních Array-New Scalar-Delete|
 |[C6284](/cpp/code-quality/c6284)|Neplatný argument objektu pro formátování funkce|
-|[C6285](/cpp/code-quality/c6285)|Logický operátor OR konstanta|
-|[C6286](/cpp/code-quality/c6286)|Nenulový logický operátor OR neztratící vedlejší účinky|
+|[C6285](/cpp/code-quality/c6285)|Logical-Or konstant|
+|[C6286](/cpp/code-quality/c6286)|Nenulové Logical-Or ztráty vedlejších účinků|
 |[C6287](/cpp/code-quality/c6287)|Redundantní test|
-|[C6288](/cpp/code-quality/c6288)|Vzájemné zahrnutí přes logický operátor and je false.|
-|[C6289](/cpp/code-quality/c6289)|Vzájemné vyloučení přes logický operátor OR je pravda.|
-|[C6290](/cpp/code-quality/c6290)|Logický operátor NOT a Priorita|
-|[C6291](/cpp/code-quality/c6291)|Logický operátor NOT ani Priorita|
+|[C6288](/cpp/code-quality/c6288)|Vzájemné zahrnutí přes Logical-And je nepravdivé.|
+|[C6289](/cpp/code-quality/c6289)|Vzájemné vyloučení přes Logical-Or je pravdivé.|
+|[C6290](/cpp/code-quality/c6290)|Logical-Not priority Bitwise-And|
+|[C6291](/cpp/code-quality/c6291)|Logical-Not priority Bitwise-Or|
 |[C6292](/cpp/code-quality/c6292)|Smyčka počítá směrem nahoru od maxima|
 |[C6293](/cpp/code-quality/c6293)|Smyčka odpočítává dolů z minima|
 |[C6294](/cpp/code-quality/c6294)|Tělo smyčky není nikdy provedeno|
@@ -92,7 +94,7 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C6308](/cpp/code-quality/c6308)|Vrácení realokace|
 |[C6310](/cpp/code-quality/c6310)|Neplatná konstanta filtru výjimky|
 |[C6312](/cpp/code-quality/c6312)|Výjimka při provádění smyčky pro pokračování|
-|[C6314](/cpp/code-quality/c6314)|Priorita bitového operátoru OR|
+|[C6314](/cpp/code-quality/c6314)|Bitwise-Or priorita|
 |[C6317](/cpp/code-quality/c6317)|Nedoplnit|
 |[C6318](/cpp/code-quality/c6318)|Výjimka – hledání v pokračování|
 |[C6319](/cpp/code-quality/c6319)|Ignoruje čárkou|
@@ -103,7 +105,7 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C6333](/cpp/code-quality/c6333)|VirtualFree neplatná velikost|
 |[C6335](/cpp/code-quality/c6335)|Nevrácení popisovače procesu|
 |[C6381](/cpp/code-quality/c6381)|Chybí informace o vypnutí.|
-|[C6383](/cpp/code-quality/c6383)|Přetečení vyrovnávací paměti počtu bajtů počtu elementů|
+|[C6383](/cpp/code-quality/c6383)|Přetečení vyrovnávací paměti Element-Count Byte-Count|
 |[C6384](/cpp/code-quality/c6384)|Dělení velikosti ukazatele|
 |[C6385](/cpp/code-quality/c6385)|Přetečení čtení|
 |[C6386](/cpp/code-quality/c6386)|Přetečení zápisu|

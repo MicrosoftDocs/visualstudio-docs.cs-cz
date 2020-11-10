@@ -1,5 +1,7 @@
 ---
 title: Ukládání dat zpět do databáze
+description: Pomocí nástrojů datové sady můžete ukládat data zpátky do databáze. Datová sada je kopie dat v paměti, která by měla být uložena zpět do databáze, pokud je upravena.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -20,12 +22,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 493637f81df15fadf65d6c7d90e980e322919b13
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 77f6a837fcc88c7154978e8031b17febaa0fcd39
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281744"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436052"
 ---
 # <a name="save-data-back-to-the-database"></a>Ukládání dat zpět do databáze
 
@@ -52,7 +54,7 @@ Pokud jste obeznámeni s objekty TableAdapter, můžete přejít přímo na jedn
 |[Uložení dat do databáze (více tabulek)](../data-tools/save-data-to-a-database-multiple-tables.md)|Postup úpravy záznamů a uložení změn v několika tabulkách zpět do databáze|
 |[Uložení dat z objektu do databáze](../data-tools/save-data-from-an-object-to-a-database.md)|Předání dat z objektu, který není v datové sadě, do databáze pomocí metody DbDirect TableAdapter|
 |[Ukládání dat pomocí metod TableAdapter DBDirect](../data-tools/save-data-with-the-tableadapter-dbdirect-methods.md)|Jak používat TableAdapter k posílání dotazů SQL přímo do databáze|
-|[Uložení datové sady ve formátu XML](../data-tools/save-a-dataset-as-xml.md)|Uložení datové sady do dokumentu XML|
+|[Uložení datové sady jako XML](../data-tools/save-a-dataset-as-xml.md)|Uložení datové sady do dokumentu XML|
 
 ## <a name="two-stage-updates"></a>Aktualizace se dvěma fázemi
 

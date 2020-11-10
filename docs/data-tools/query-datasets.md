@@ -1,5 +1,7 @@
 ---
 title: Datové sady dotazů
+description: Porozumění datovým sadám dotazů. Přečtěte si o citlivosti velikosti datových sad. Najde konkrétní řádek v tabulce dat, vyhledá řádky podle hodnot sloupce a přístup k souvisejícím záznamům.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4ef1c806914b0f134702e010b58229ee3fc15c7a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8ccf228b147301eb9fccf41da98f8cc5204971a9
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281861"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436065"
 ---
 # <a name="query-datasets"></a>Datové sady dotazů
 Chcete-li vyhledat konkrétní záznamy v datové sadě, použijte `FindBy` metodu v objektu DataTable, zapište vlastní příkaz foreach k zacyklení nad kolekcí řádků tabulky nebo použijte [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset).
@@ -70,7 +72,7 @@ Tato stránka poskytuje příklady pomocí typových datových sad. Informace o 
 > [!NOTE]
 > Pokud pracujete v aplikaci model Windows Forms a pomocí funkcí pro datovou vazbu zobrazíte data, formulář generovaný návrhářem může poskytovat dostatek funkcí pro vaši aplikaci. Další informace najdete v tématu [vázání ovládacích prvků k datům v aplikaci Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md). Konkrétně najdete [v tématu relace v datových sadách](relationships-in-datasets.md).
 
-Následující příklady kódu ukazují, jak procházet vztahy nahoru a dolů v zadaných datových sadách. Příklady kódu používají typové <xref:System.Data.DataRow> s ( `NorthwindDataSet.OrdersRow` ) a generované metody FindBy*PrimaryKey* ( `FindByCustomerID` ) k vyhledání požadovaného řádku a vrácení souvisejících záznamů. Příklady jsou kompilovány a spouštěny správně pouze v případě, že máte:
+Následující příklady kódu ukazují, jak procházet vztahy nahoru a dolů v zadaných datových sadách. Příklady kódu používají typové <xref:System.Data.DataRow> s ( `NorthwindDataSet.OrdersRow` ) a generované metody FindBy *PrimaryKey* ( `FindByCustomerID` ) k vyhledání požadovaného řádku a vrácení souvisejících záznamů. Příklady jsou kompilovány a spouštěny správně pouze v případě, že máte:
 
 - Instance sady dat s názvem `NorthwindDataSet` s `Customers` tabulkou
 

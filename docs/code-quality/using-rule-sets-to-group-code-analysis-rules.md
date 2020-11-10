@@ -1,6 +1,8 @@
 ---
 title: Množiny pravidel analýzy kódu
 ms.date: 04/02/2018
+description: Přečtěte si o předdefinovaných a přizpůsobených sadách pravidel v sadě Visual Studio Code Analysis. Přečtěte si, jak zadat sady pravidel v souborech a jak konfigurovat sady pravidel v projektech.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.learnmore
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fde3f3200a4764c231b97b0b44e36c38dd0b3e23
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 49d17e8321aa6567a6ae0936291a73d5cb854b5c
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860431"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436885"
 ---
 # <a name="use-rule-sets-to-group-code-analysis-rules"></a>Použití sad pravidel k seskupení pravidel analýzy kódu
 
@@ -28,7 +30,7 @@ Sady pravidel jsou k dispozici pro [analýzu spravovaného kódu](/dotnet/fundam
 
 ## <a name="rule-set-format"></a>Formát sady pravidel
 
-Sada pravidel je určena ve formátu XML v souboru *. ruleset* . Pravidla, která se skládají z ID a *Akce*, jsou seskupena podle ID analyzátoru a oboru názvů v souboru.
+Sada pravidel je určena ve formátu XML v souboru *. ruleset* . Pravidla, která se skládají z ID a *Akce* , jsou seskupena podle ID analyzátoru a oboru názvů v souboru.
 
 Obsah souboru *. ruleset* vypadá podobně jako tento kód XML:
 

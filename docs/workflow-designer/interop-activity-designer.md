@@ -1,5 +1,7 @@
 ---
 title: Návrhář aktivity Návrhář postupu provádění-Interop
+description: Přečtěte si o návrháři aktivit spolupráce a o tom, jak můžete pomocí návrháře aktivit spolupráce vytvořit a nakonfigurovat aktivitu spolupráce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8047df3787c0871e369b6079e4f0cc80f6d93949
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4a45187f01469f568a98098a8470ad62f67307a6
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72650214"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437772"
 ---
 # <a name="interop-activity-designer"></a>Návrhář aktivity Interop
 
@@ -27,7 +29,7 @@ Návrhář aktivity **spolupráce** slouží k vytvoření a konfiguraci <xref:S
 
 ### <a name="use-the-interop-activity-designer"></a>Použití návrháře aktivit spolupráce
 
-Návrháře aktivit **spolupráce** můžete najít v kategorii **migrace** v **sadě nástrojů**, ke které se dostanete kliknutím na kartu **panel nástrojů** . Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
+Návrháře aktivit **spolupráce** můžete najít v kategorii **migrace** v **sadě nástrojů** , ke které se dostanete kliknutím na kartu **panel nástrojů** . Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
 
 Kategorie [migrace](../workflow-designer/migration-activity-designers.md) obsahující <xref:System.Activities.Statements.Interop> aktivitu se zobrazí v **sadě nástrojů** pouze v případě, že se váš projekt zaměřuje na .NET Framework 4 (úplné) nebo vyšší. V případě potřeby můžete změnit verzi rozhraní .NET Framework, na kterou projekt cílí.
 
@@ -41,8 +43,8 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.Interop
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Popisný název <xref:System.Activities.Statements.Interop> aktivity Výchozí hodnota je **Interop**. I když se zobrazované jméno nepožaduje, doporučuje se ho zadat.|
-|<xref:System.Activities.Statements.Interop.ActivityType%2A>|Ano|Určuje typ aktivity obsažené v <xref:System.Activities.Statements.Interop> aktivitě. Zadaný typ musí být odvozen od <xref:System.Workflow.ComponentModel.Activity> .|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Popisný název <xref:System.Activities.Statements.Interop> aktivity Výchozí hodnota je **Interop**. I když se zobrazované jméno nepožaduje, doporučuje se ho zadat.|
+|<xref:System.Activities.Statements.Interop.ActivityType%2A>|Pravda|Určuje typ aktivity obsažené v <xref:System.Activities.Statements.Interop> aktivitě. Zadaný typ musí být odvozen od <xref:System.Workflow.ComponentModel.Activity> .|
 
 ## <a name="see-also"></a>Viz také
 

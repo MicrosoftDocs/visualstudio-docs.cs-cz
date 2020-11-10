@@ -1,6 +1,8 @@
 ---
 title: Okno metriky kódu
 ms.date: 12/12/2017
+description: Naučte se zobrazovat, filtrovat, přeuspořádávat a exportovat data analýzy metrik kódu sady Visual Studio. Podívejte se, jak vytvořit pracovní položky na základě výsledků metrik kódu.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 f1_keywords:
 - vs.codemetrics.output
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c01543b290d991a189c0851c64526c9c513068ba
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: d29109811c3dd5f354b510d046b33b0ba31d60e5
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91927975"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436807"
 ---
 # <a name="use-the-code-metrics-results-window"></a>Použití okna výsledků metrik kódu
 
@@ -30,9 +32,9 @@ Okno **Výsledky metrik kódu** se zobrazí automaticky při generování výsle
 
 Můžete zobrazit okno výsledků metrik kódu pomocí jedné z následujících sekvencí nabídky:
 
-- V nabídce **analyzovat** vyberte **Windows**  >  **Výsledky metrik kódu**Windows.
+- V nabídce **analyzovat** vyberte **Windows**  >  **Výsledky metrik kódu** Windows.
 
-- V nabídce **Zobrazit** klikněte na položku **Other Windows**  >  **výsledky jiné metriky kódu**Windows.
+- V nabídce **Zobrazit** klikněte na položku **Other Windows**  >  **výsledky jiné metriky kódu** Windows.
 
 Otevře se okno **výsledků metrik kódu** , a to i v případě, že neobsahuje žádné výsledky.
 
@@ -50,9 +52,9 @@ Rozevírací seznam **filtru** obsahuje názvy sloupců výsledků. Když je def
 
 1. V seznamu **Filtr** vyberte název sloupce.
 
-2. V poli **min**zadejte minimální hodnotu, která se má zobrazit.
+2. V poli **min** zadejte minimální hodnotu, která se má zobrazit.
 
-3. V poli **Max**(maximální) zadejte maximální hodnotu, která se má zobrazit.
+3. V poli **Max** (maximální) zadejte maximální hodnotu, která se má zobrazit.
 
 4. Klikněte na tlačítko **použít filtr** .
 
@@ -90,7 +92,7 @@ Další informace o Azure Boards pracovních položek naleznete v tématu [work 
 
 1. Klikněte pravým tlačítkem na výsledek.
 
-2. Přejděte na **vytvořit pracovní položku**a potom klikněte na typ pracovní položky, kterou chcete vytvořit (**Chyba**, **úkol**a tak dále).
+2. Přejděte na **vytvořit pracovní položku** a potom klikněte na typ pracovní položky, kterou chcete vytvořit ( **Chyba** , **úkol** a tak dále).
 
 3. Vyplňte formulář pracovní položky vyplněním všech povinných polí.
 

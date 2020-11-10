@@ -1,5 +1,7 @@
 ---
 title: Vkládání nových záznamů do databáze
+description: Vložte nové záznamy do databáze pomocí metody TableAdapter. Update, jedné z DBDirect metod TableAdapter nebo objektů příkazů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b703d3ccc6ffbd5e2449a1768071b930f606f37f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3586cf45e152cd8a0149140556916b11544a00bb
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281991"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436273"
 ---
 # <a name="insert-new-records-into-a-database"></a>Vkládání nových záznamů do databáze
 
@@ -34,7 +36,7 @@ Pokud vaše aplikace používá k ukládání dat datové sady, použijte `Table
 
 Pokud vaše aplikace používá objekty k ukládání dat nebo pokud chcete lepší kontrolu nad vytvářením nových záznamů v databázi, použijte `TableAdapter.Insert` metodu.
 
-Pokud vaše TableAdapter nemá `Insert` metodu, znamená to, že buď je TableAdapter nakonfigurovaná na použití uložených procedur, nebo `GenerateDBDirectMethods` je jeho vlastnost nastavena na `false` . Zkuste nastavit `GenerateDBDirectMethods` vlastnost TableAdapter na v `true` rámci **Návrhář datových sad**a pak datovou sadu uložte. Tím se znovu vygeneruje TableAdapter. Pokud TableAdapter stále nemá `Insert` metodu, tabulka pravděpodobně neposkytuje dostatek informací o schématu pro odlišení jednotlivých řádků (například v tabulce nemusí být nastaven žádný primární klíč).
+Pokud vaše TableAdapter nemá `Insert` metodu, znamená to, že buď je TableAdapter nakonfigurovaná na použití uložených procedur, nebo `GenerateDBDirectMethods` je jeho vlastnost nastavena na `false` . Zkuste nastavit `GenerateDBDirectMethods` vlastnost TableAdapter na v `true` rámci **Návrhář datových sad** a pak datovou sadu uložte. Tím se znovu vygeneruje TableAdapter. Pokud TableAdapter stále nemá `Insert` metodu, tabulka pravděpodobně neposkytuje dostatek informací o schématu pro odlišení jednotlivých řádků (například v tabulce nemusí být nastaven žádný primární klíč).
 
 ## <a name="insert-new-records-by-using-tableadapters"></a>Vložení nových záznamů pomocí objekty TableAdapter
 

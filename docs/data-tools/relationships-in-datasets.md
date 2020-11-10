@@ -1,5 +1,6 @@
 ---
 title: Vytváření vztahů mezi tabulkami
+description: Vytváření vztahů mezi datovými sadami v sadě Visual Studio. Pochopení objektů a omezení DataRelation. Ručně vytvořte datový vztah ve Správci datových sad.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,15 +17,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 93575cb299513dbb0616f3c7ed6f1c7db6d65bb5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 0a07ca2d30e27cdcbc06e8f90a810982d4410931
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037683"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436091"
 ---
 # <a name="create-relationships-between-datasets"></a>Vytváření vztahů mezi tabulkami
-Datové sady, které obsahují související tabulky dat, používají <xref:System.Data.DataRelation> objekty k reprezentaci vztahu nadřazený-podřízený mezi tabulkami a k vrácení souvisejících záznamů od sebe. Přidání souvisejících tabulek do datových sad pomocí **Průvodce konfigurací zdroje dat**nebo **Návrhář datových sad**vytvoří a nakonfiguruje <xref:System.Data.DataRelation> objekt pro vás.
+Datové sady, které obsahují související tabulky dat, používají <xref:System.Data.DataRelation> objekty k reprezentaci vztahu nadřazený-podřízený mezi tabulkami a k vrácení souvisejících záznamů od sebe. Přidání souvisejících tabulek do datových sad pomocí **Průvodce konfigurací zdroje dat** nebo **Návrhář datových sad** vytvoří a nakonfiguruje <xref:System.Data.DataRelation> objekt pro vás.
 
 <xref:System.Data.DataRelation>Objekt provádí dvě funkce:
 
@@ -69,9 +70,9 @@ Další informace o aktualizacích v tabulkách datové sady najdete v tématu [
 Při vytváření <xref:System.Data.DataRelation> objektu máte možnost určit, že relace bude použita pouze k vynutit omezení – to znamená, že nebude použito také pro přístup k souvisejícím záznamům. Pomocí této možnosti můžete vygenerovat datovou sadu, která je poněkud efektivnější a která obsahuje méně metod, než je jedna se schopností souvisejících záznamů. Nebudete ale mít přístup k souvisejícím záznamům. Relace jenom s omezením například brání v odstranění nadřazeného záznamu, který má podřízené záznamy a nelze k podřízeným záznamům přistupovat prostřednictvím nadřazeného objektu.
 
 ## <a name="manually-creating-a-data-relation-in-the-dataset-designer"></a>Ruční vytvoření relace dat v Návrhář datových sad
-Při vytváření datových tabulek pomocí nástrojů pro návrh dat v aplikaci Visual Studio se vztahy vytvoří automaticky, pokud se informace mohou shromažďovat ze zdroje dat. Pokud ručně přidáte tabulky dat z karty **datová sada** na **panelu nástrojů**, bude pravděpodobně nutné vytvořit relaci ručně. Informace o tom, jak vytvářet <xref:System.Data.DataRelation> objekty programově, najdete v tématu [Přidání datových vztahů](/dotnet/framework/data/adonet/dataset-datatable-dataview/adding-datarelations).
+Při vytváření datových tabulek pomocí nástrojů pro návrh dat v aplikaci Visual Studio se vztahy vytvoří automaticky, pokud se informace mohou shromažďovat ze zdroje dat. Pokud ručně přidáte tabulky dat z karty **datová sada** na **panelu nástrojů** , bude pravděpodobně nutné vytvořit relaci ručně. Informace o tom, jak vytvářet <xref:System.Data.DataRelation> objekty programově, najdete v tématu [Přidání datových vztahů](/dotnet/framework/data/adonet/dataset-datatable-dataview/adding-datarelations).
 
-Relace mezi tabulkami dat se zobrazí jako řádky v **Návrhář datových sad**s klíčovým a nekonečným glyfem znázorňujícím aspekt vztahu 1: n. Ve výchozím nastavení se název vztahu nezobrazí na návrhové ploše.
+Relace mezi tabulkami dat se zobrazí jako řádky v **Návrhář datových sad** s klíčovým a nekonečným glyfem znázorňujícím aspekt vztahu 1: n. Ve výchozím nastavení se název vztahu nezobrazí na návrhové ploše.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 

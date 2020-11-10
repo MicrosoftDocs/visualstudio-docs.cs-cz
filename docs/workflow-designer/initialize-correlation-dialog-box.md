@@ -1,5 +1,7 @@
 ---
 title: Dialogová okna Návrhář postupu provádění-inicializace korelace
+description: Přečtěte si, jak můžete použít dialogové okno inicializovat korelaci v Návrhář postupu provádění k úpravě vlastnosti CorrelationData aktivity InitializeCorrelation.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04f0a3bb70dbab31e0faa5c38caac9b54c6154fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a35911fef39315580f402e174b0f32d443a33cf
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114785"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437798"
 ---
 # <a name="initialize-correlation-dialog-box"></a>Dialogové okno Inicializace korelace
 

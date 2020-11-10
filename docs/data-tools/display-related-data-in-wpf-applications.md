@@ -1,5 +1,7 @@
 ---
 title: Zobrazení souvisejících dat v aplikacích WPF
+description: Zobrazit související data v aplikacích WPF Pracujte s daty z více tabulek nebo entit, které jsou vzájemně propojené v relaci nadřazený-podřízený.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6694d3c1521a6a405323edc33adc44dac0e66829
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a9604ac7c0083bc40edb17b19d4de608eb7366b1
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282550"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436495"
 ---
 # <a name="display-related-data-in-wpf-applications"></a>Zobrazení souvisejících dat v aplikacích WPF
 
@@ -33,7 +35,7 @@ Můžete vytvořit ovládací prvky vázané na data, které zobrazují souvisej
 
 1. V nabídce **data** klikněte na **Zobrazit zdroje dat** . tím otevřete okno **zdroje dat** .
 
-2. Klikněte na tlačítko **Přidat nový zdroj dat**a dokončete průvodce **konfigurací zdroje dat** .
+2. Klikněte na tlačítko **Přidat nový zdroj dat** a dokončete průvodce **konfigurací zdroje dat** .
 
 3. Otevřete návrháře WPF a ujistěte se, že Návrhář obsahuje kontejner, který je platným cílem přetažení pro položky v okně **zdroje dat** .
 

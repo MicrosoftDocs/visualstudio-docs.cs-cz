@@ -6,16 +6,16 @@ keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 08/05/2020
+ms.date: 11/10/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 276a99c6d9f2c1245137cc99d943fe63eb1a3711
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 62295e6b63ffd38d57d218d5f2458a48353db7f2
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87805675"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437344"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2019"></a>Základní editor Visual Studio (zahrnutý v rámci sady Visual Studio Team Explorer 2019)
 
@@ -25,7 +25,7 @@ ms.locfileid: "87805675"
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Název | Verze | Typ závislosti
+ID součásti | Name (Název) | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. CoreEditor | Základní editor sady Visual Studio | 16.1.28811.260 | Vyžadováno
 Microsoft. VisualStudio. Component. StartPageExperiment. cpp | Úvodní stránka sady Visual Studio pro uživatele C++ | 16.0.28315.86 | Volitelné
@@ -34,6 +34,6 @@ Microsoft. VisualStudio. Component. StartPageExperiment. cpp | Úvodní stránka
 
 Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé komponenty.
 
-ID součásti | Název | Verze
+ID součásti | Name (Název) | Verze
 --- | --- | ---
-Není k dispozici | Není k dispozici | Není k dispozici
+neuvedeno | neuvedeno | neuvedeno

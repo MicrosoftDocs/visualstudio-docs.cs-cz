@@ -1,5 +1,7 @@
 ---
 title: Uložení dat do databáze (více tabulek)
+description: V tomto návodu uložíte data z několika tabulek do databáze pomocí nástrojů datové sady v sadě Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b512263cd5d0ca8c83b0ba6848fb16feca1a71f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2f6401fedc3158e2743f08775da93faf2ddfee73
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281640"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436039"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>Uložení dat do databáze (více tabulek)
 
@@ -45,7 +47,7 @@ Data v aplikaci můžete uložit zpět do databáze voláním `Update` metody Ta
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio**můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio** můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
 
 2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
@@ -73,7 +75,7 @@ Tento krok vytvoří zdroj dat z databáze Northwind pomocí **Průvodce konfigu
 
 2. V okně **zdroje dat** vyberte možnost **Přidat nový zdroj dat** a spusťte **Průvodce konfigurací zdroje dat**.
 
-3. Na obrazovce **Vybrat typ zdroje dat** vyberte **databáze**a pak vyberte **Další**.
+3. Na obrazovce **Vybrat typ zdroje dat** vyberte **databáze** a pak vyberte **Další**.
 
 4. Na obrazovce **Vybrat datové připojení** proveďte jednu z následujících akcí:
 
@@ -85,7 +87,7 @@ Tento krok vytvoří zdroj dat z databáze Northwind pomocí **Průvodce konfigu
 
 5. Pokud vaše databáze vyžaduje heslo, vyberte možnost zahrnutí citlivých dat a pak vyberte **Další**.
 
-6. V části **Uložit připojovací řetězec do konfiguračního souboru aplikace**vyberte možnost **Další**.
+6. V části **Uložit připojovací řetězec do konfiguračního souboru aplikace** vyberte možnost **Další**.
 
 7. Na obrazovce **zvolit vaše databázové objekty** rozbalte uzel **tabulky** .
 

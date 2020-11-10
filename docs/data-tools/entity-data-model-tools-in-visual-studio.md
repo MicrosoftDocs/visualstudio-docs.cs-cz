@@ -1,5 +1,7 @@
 ---
 title: Entity Framework Tools
+description: Pochopení Entity Framework Tools v aplikaci Visual Studio. Entity Framework Tools jsou navržené tak, aby vám pomohly sestavovat aplikace Entity Framework (EF).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 250f1ad55f8d60396b8423098e58801d0ed81e77
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cc1aa43945ceee19b70a037b1c865c67539fb61
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916726"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436638"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Entity Framework Tools v aplikaci Visual Studio
 
@@ -30,9 +32,9 @@ Nástroje Entity Framework jsou nainstalovány v rámci úlohy **ukládání a z
 
 Jedná se o konkrétní nástroje, které tvoří Entity Framework nástrojů v aplikaci Visual Studio:
 
-- [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)]K vizuálnímu vytváření a úpravám entit, přidružení, mapování a vztahů dědičnosti můžete použít ** [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Návrháře** (**Entity Designer**). **Entity Designer** také generuje [!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)] [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kód objektové vrstvy.
+- [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)]K vizuálnímu vytváření a úpravám entit, přidružení, mapování a vztahů dědičnosti můžete použít **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Návrháře** ( **Entity Designer** ). **Entity Designer** také generuje [!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)] [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kód objektové vrstvy.
 
-- ** [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Průvodce** můžete použít ke generování koncepčního modelu z existující databáze a přidání informací o připojení databáze do aplikace.
+- **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Průvodce** můžete použít ke generování koncepčního modelu z existující databáze a přidání informací o připojení databáze do aplikace.
 
 - Pomocí **Průvodce vytvořením databáze** můžete nejdřív vytvořit koncepční model a pak vytvořit databázi, která tento model podporuje.
 

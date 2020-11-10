@@ -1,5 +1,6 @@
 ---
 title: Konfigurace dědičnosti pomocí návrháře O-R
+description: Naučte se, jak nakonfigurovat dědičnost pomocí Návrhář relací objektů (O/R Designer), který podporuje dědičnost jedné tabulky. Byly vytvořeny zděděné datové třídy.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,19 +10,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a0f56d7b123571e9a65d5bb2baa99a8d7dac2461
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 4bc36bca3cc5bd13b3dcfad5ebed66eca7eeb019
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037052"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436330"
 ---
 # <a name="how-to-configure-inheritance-by-using-the-or-designer"></a>Postupy: Konfigurace dědičnosti pomocí Návrháře relací objektů
-**Návrhář relací objektů** (**O/R Designer**) podporuje koncept dědičnosti s jednou tabulkou, protože je často implementován v relačních systémech. V případě dědičnosti s jednou tabulkou existuje jedna databázová tabulka, která obsahuje pole pro nadřazené informace i podřízené informace. U relačních dat obsahuje sloupec diskriminátor hodnotu, která určuje, do které třídy patří libovolný záznam.
+**Návrhář relací objektů** ( **O/R Designer** ) podporuje koncept dědičnosti s jednou tabulkou, protože je často implementován v relačních systémech. V případě dědičnosti s jednou tabulkou existuje jedna databázová tabulka, která obsahuje pole pro nadřazené informace i podřízené informace. U relačních dat obsahuje sloupec diskriminátor hodnotu, která určuje, do které třídy patří libovolný záznam.
 
 Představte si třeba `Persons` tabulku, která obsahuje každého zaměstnaného společností. Někteří lidé jsou zaměstnanci a někteří lidé jsou manažeři. `Persons`Tabulka obsahuje sloupec s názvem `EmployeeType` , který má hodnotu 1 pro manažery a hodnotu 2 pro zaměstnance. Toto je sloupec diskriminátor. V tomto scénáři můžete vytvořit podtřídu zaměstnanců a naplnit třídu pouze záznamy, které mají `EmployeeType` hodnotu 2. Můžete také odebrat sloupce, které se nevztahují na jednotlivé třídy.
 
-Vytvoření objektového modelu, který používá dědičnost (a odpovídá relačním datům) může být poněkud matoucí. Následující postup popisuje kroky požadované pro konfiguraci dědičnosti s **návrhářem relací v/R**. Následující obecné kroky, aniž by odkazovaly na existující tabulku a sloupce, mohou být obtížné, takže je k dispozici návod, který používá data. Podrobné pokyny pro konfiguraci dědičnosti pomocí **Návrháře O/r**naleznete v tématu [návod: vytváření LINQ to SQLch tříd pomocí dědičnosti s jednou tabulkou (O/r Designer)](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md).
+Vytvoření objektového modelu, který používá dědičnost (a odpovídá relačním datům) může být poněkud matoucí. Následující postup popisuje kroky požadované pro konfiguraci dědičnosti s **návrhářem relací v/R**. Následující obecné kroky, aniž by odkazovaly na existující tabulku a sloupce, mohou být obtížné, takže je k dispozici návod, který používá data. Podrobné pokyny pro konfiguraci dědičnosti pomocí **Návrháře O/r** naleznete v tématu [návod: vytváření LINQ to SQLch tříd pomocí dědičnosti s jednou tabulkou (O/r Designer)](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md).
 
 ## <a name="to-create-inherited-data-classes"></a>Vytvoření zděděných datových tříd
 
@@ -31,7 +32,7 @@ Vytvoření objektového modelu, který používá dědičnost (a odpovídá rel
 
 3. Přetáhněte druhou kopii tabulky do **návrháře o/R** a přejmenujte ji. Toto je odvozená třída nebo podtřída.
 
-4. Klikněte na **Dědičnost** na kartě **Návrhář relací objektů** **panelu nástrojů**a potom klikněte na podtřídu (tabulku, kterou jste přejmenovali), a připojte ji k základní třídě.
+4. Klikněte na **Dědičnost** na kartě **Návrhář relací objektů** **panelu nástrojů** a potom klikněte na podtřídu (tabulku, kterou jste přejmenovali), a připojte ji k základní třídě.
 
     > [!NOTE]
     > Klikněte na položku **Dědičnost** v **sadě nástrojů** a uvolněte tlačítko myši, klikněte na druhou kopii třídy, kterou jste vytvořili v kroku 3, a poté klikněte na první třídu, kterou jste vytvořili v kroku 2. Šipka na čáře dědičnosti odkazuje na první třídu.

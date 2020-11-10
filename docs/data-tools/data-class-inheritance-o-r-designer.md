@@ -1,5 +1,7 @@
 ---
 title: Dědičnost datových tříd (O-R Designer)
+description: Práce s dědičností datových tříd v Návrhář relací objektů (Návrhář O/R), nástroj LINQ to SQL třídy v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: af32653c-f4e6-4217-8c5a-e32b322b4918
@@ -8,16 +10,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7172c868780aec61de8688614fbb93627dc23bf5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aba03be7014880618d32be250e08c735622d8c4d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462392"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436573"
 ---
 # <a name="data-class-inheritance-or-designer"></a>Dědičnost datových tříd (Návrhář relací objektů)
 
-Stejně jako jiné objekty mohou LINQ to SQL třídy používat dědičnost a být odvozeny od jiných tříd. V kódu můžete určit vztahy dědičnosti mezi objekty tím, že deklarujete, že jedna třída dědí z jiné třídy. V databázi jsou vztahy dědičnosti vytvářeny několika způsoby. **Návrhář relací objektů** (**O/R Designer**) podporuje koncept dědičnosti s jednou tabulkou, protože je často implementován v relačních systémech.
+Stejně jako jiné objekty mohou LINQ to SQL třídy používat dědičnost a být odvozeny od jiných tříd. V kódu můžete určit vztahy dědičnosti mezi objekty tím, že deklarujete, že jedna třída dědí z jiné třídy. V databázi jsou vztahy dědičnosti vytvářeny několika způsoby. **Návrhář relací objektů** ( **O/R Designer** ) podporuje koncept dědičnosti s jednou tabulkou, protože je často implementován v relačních systémech.
 
 V případě dědičnosti s jednou tabulkou existuje jedna databázová tabulka, která obsahuje sloupce pro základní i odvozené třídy. U relačních dat obsahuje sloupec diskriminátor hodnotu, která určuje, do které třídy daný záznam patří. Představte si třeba `Persons` tabulku, která obsahuje každého zaměstnaného společností. Někteří lidé jsou zaměstnanci a někteří lidé jsou manažeři. `Persons`Tabulka obsahuje sloupec s názvem `Type` , který má hodnotu 1 pro manažery a hodnotu 2 pro zaměstnance. `Type`Sloupec je sloupec diskriminátoru. V tomto scénáři můžete vytvořit podtřídu zaměstnanců a naplnit třídu pouze záznamy, které mají `Type` hodnotu 2.
 
@@ -30,8 +32,8 @@ V následující tabulce jsou uvedeny vlastnosti dědičnosti a jejich popis:
 |Vlastnost|Popis|
 |--------------|-----------------|
 |**Vlastnost diskriminátoru**|Vlastnost (namapovaná na sloupec), která určuje, do které třídy aktuální záznam patří.|
-|**Hodnota diskriminátoru základní třídy**|Hodnota (ve sloupci určeném jako **vlastnost diskriminátoru**), která určuje, že záznam je základní třídou.|
-|**Hodnota diskriminátoru odvozené třídy**|Hodnota (ve vlastnosti určené jako **vlastnost diskriminátor**), která určuje, že záznam je odvozenou třídou.|
+|**Hodnota diskriminátoru základní třídy**|Hodnota (ve sloupci určeném jako **vlastnost diskriminátoru** ), která určuje, že záznam je základní třídou.|
+|**Hodnota diskriminátoru odvozené třídy**|Hodnota (ve vlastnosti určené jako **vlastnost diskriminátor** ), která určuje, že záznam je odvozenou třídou.|
 |**Výchozí dědičnost**|Třída, která je naplněna v případě, že hodnota ve vlastnosti určené jako **vlastnost diskriminátoru** neodpovídá **hodnotě diskriminátoru základní třídy** ani **hodnoty diskriminátoru odvozené třídy**.|
 
 Vytvoření objektového modelu, který používá dědičnost a odpovídá relačním datům, může být poněkud matoucí. V tomto tématu najdete informace o základních konceptech a jednotlivých vlastnostech, které jsou potřeba ke konfiguraci dědičnosti. V následujících tématech najdete srozumitelnější vysvětlení způsobu konfigurace dědičnosti s **návrhářem pro/R**.

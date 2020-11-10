@@ -1,5 +1,7 @@
 ---
 title: 'Návrhář postupu provádění-postupy: použití editoru výrazů'
+description: Přečtěte si, jak je editor výrazů Návrhář postupu provádění ovládacím prvkem, který můžete použít v mnoha aktivitách pracovního postupu pro zadávání a vyhodnocení výrazů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -10,18 +12,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04c0fdaab87c88028b8c14ca59e93fa93e74be74
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 855326085a51ec6590bd1b3f0e1e5565c53396cb
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817434"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437850"
 ---
 # <a name="how-to-use-the-expression-editor"></a>Postupy: Používání editoru výrazů
 
 Editor výrazů je Návrhář postupu provádění ovládací prvek, který se používá v mnoha aktivitách pracovního postupu pro zadávání a vyhodnocení výrazů. Editor výrazů poskytuje prostředí pro úpravu podrobnějším integrovaného vývojového prostředí (IDE), včetně IntelliSense, barev, ParamInfo, chybových vlnovek, mimo jiné funkce. Kompilátor po jeho zadání ověří výraz. Pokud je výraz neplatný, zobrazí se ikona chyby. Editor lze také otevřít jako dialogové okno **Editor výrazů** .
 
-Výrazy jsou hodnoty literálu nebo Visual Basic kód vázaný na argumenty nebo vlastnosti. Obsahují prvky hodnoty (například proměnné, konstanty, literály, vlastnosti), které jsou kombinovány s operacemi, aby zadávaly novou hodnotu. Výrazy jsou zapisovány pomocí syntaxe VB.NET, i když je aplikace v programu pomocí jazyka C#. To znamená, že při použití velkých a malých písmen je porovnávání provedeno pomocí jednoho znaménka rovná se (=) místo "= ="), logické operátory jsou slova "a" a "nebo" namísto symbolů "&&" a "| |" a namísto **hodnoty null**nejsou použity **žádné** údaje. Další informace o výrazech a operátorech v Visual Basic a některých ukázkách naleznete v tématu [operátory a výrazy v Visual Basic](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100)).
+Výrazy jsou hodnoty literálu nebo Visual Basic kód vázaný na argumenty nebo vlastnosti. Obsahují prvky hodnoty (například proměnné, konstanty, literály, vlastnosti), které jsou kombinovány s operacemi, aby zadávaly novou hodnotu. Výrazy jsou zapisovány pomocí syntaxe VB.NET, i když je aplikace v programu pomocí jazyka C#. To znamená, že při použití velkých a malých písmen je porovnávání provedeno pomocí jednoho znaménka rovná se (=) místo "= ="), logické operátory jsou slova "a" a "nebo" namísto symbolů "&&" a "| |" a namísto **hodnoty null** nejsou použity **žádné** údaje. Další informace o výrazech a operátorech v Visual Basic a některých ukázkách naleznete v tématu [operátory a výrazy v Visual Basic](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100)).
 
 **Editor výrazů** se chová takto:
 

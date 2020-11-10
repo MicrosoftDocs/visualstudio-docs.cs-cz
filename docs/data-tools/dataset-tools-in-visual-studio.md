@@ -1,5 +1,7 @@
 ---
 title: Nástroje datové sady
+description: Projděte si nástroje datové sady, které jsou dostupné v sadě Visual Studio. Přečtěte si o pracovním postupu datových sad, datových sadách a N-vrstvých architektuře a datových sadách a XML.
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
 ms.topic: conceptual
 f1_keywords:
@@ -47,12 +49,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: cb41a4e3e4ed1c0032c579779a18c7df0bc22477
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0ccb15d65f021099bb48c26dbdb7c03122049a7
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586715"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436482"
 ---
 # <a name="dataset-tools-in-visual-studio"></a>Nástroje datových sad v sadě Visual Studio
 
@@ -79,7 +81,7 @@ Sada Visual Studio poskytuje nástroje pro zjednodušení práce s datovými sad
 
   - [Úprava dat v datových sadách](../data-tools/edit-data-in-datasets.md)
 
-  - [Ověřování dat v datových sadách](../data-tools/validate-data-in-datasets.md)
+  - [Ověřit data v datových sadách](../data-tools/validate-data-in-datasets.md)
 
   - [Ukládání dat zpět do databáze](../data-tools/save-data-back-to-the-database.md)
 

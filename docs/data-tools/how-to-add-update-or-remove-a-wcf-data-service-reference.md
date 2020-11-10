@@ -1,5 +1,6 @@
 ---
 title: Přidání, aktualizace nebo odebrání odkazu na službu WCF Data Service
+description: Přečtěte si, jak přidat, aktualizovat nebo odebrat odkaz na datovou službu Windows Communication Foundation (WCF).
 ms.date: 11/04/2016
 ms.custom: SEO-VS-2020
 ms.topic: how-to
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d9a05924bd7c790d2a1cc9ffd96d66eb905acb39
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 6e6c289038c3f8cb9d1586ae4a1f7a84b563239f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037312"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436430"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Postupy: Přidání, aktualizace nebo odebrání odkazu na službu WCF Data Service
 
@@ -28,7 +29,7 @@ ms.locfileid: "90037312"
 *Odkaz na službu* umožňuje projektu přístup k jednomu nebo více [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] . Pomocí dialogového okna **Přidat odkaz na službu** můžete vyhledat [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] v aktuálním řešení, místně, v místní síti nebo na internetu.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Uzel **připojené služby** v **Průzkumník řešení** můžete použít pro přístup k **Microsoft WCF Web Service reference Provider**, který umožňuje spravovat odkazy na datové služby Windows Communication Foundation (WCF).
+Uzel **připojené služby** v **Průzkumník řešení** můžete použít pro přístup k **Microsoft WCF Web Service reference Provider** , který umožňuje spravovat odkazy na datové služby Windows Communication Foundation (WCF).
 ::: moniker-end
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
@@ -39,7 +40,7 @@ Uzel **připojené služby** v **Průzkumník řešení** můžete použít pro 
 
 ::: moniker range="vs-2017"
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název projektu, do kterého chcete přidat službu, a pak klikněte na **Přidat odkaz na službu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na název projektu, do kterého chcete přidat službu, a pak klikněte na **Přidat odkaz na službu**.
 
    Zobrazí se dialogové okno **Přidat odkaz na službu** .
 
@@ -61,7 +62,7 @@ Uzel **připojené služby** v **Průzkumník řešení** můžete použít pro 
      Dojde k vygenerování klienta služby (proxy) a do souboru *app.config* přidat metadata, která popisují službu.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-1. V **Průzkumník řešení**dvakrát klikněte nebo klepněte na uzel **připojené služby** .
+1. V **Průzkumník řešení** dvakrát klikněte nebo klepněte na uzel **připojené služby** .
 
    Otevře se karta **Konfigurovat služby** .
 
@@ -95,7 +96,7 @@ Uzel **připojené služby** v **Průzkumník řešení** můžete použít pro 
 
 ::: moniker range="vs-2017"
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název projektu, do kterého chcete přidat službu, a pak klikněte na **Přidat odkaz na službu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na název projektu, do kterého chcete přidat službu, a pak klikněte na **Přidat odkaz na službu**.
 
     Zobrazí se dialogové okno **Přidat odkaz na službu** .
 
@@ -112,7 +113,7 @@ Uzel **připojené služby** v **Průzkumník řešení** můžete použít pro 
     Klient služby (proxy) vygeneruje a metadata, která popisují službu, se přidají do souboru *app.config* .
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-1. V **Průzkumník řešení**dvakrát klikněte nebo klepněte na uzel **připojené služby** . 
+1. V **Průzkumník řešení** dvakrát klikněte nebo klepněte na uzel **připojené služby** . 
 
    Otevře se karta **Konfigurovat služby** .
 
@@ -140,7 +141,7 @@ Model EDM (Entity Data Model) se [!INCLUDE[ssAstoria](../data-tools/includes/ssa
 
 ### <a name="to-update-a-service-reference"></a>Aktualizace odkazu na službu
 
-- V **Průzkumník řešení**klikněte pravým tlačítkem na odkaz na službu a pak klikněte na **aktualizovat odkaz na službu**.
+- V **Průzkumník řešení** klikněte pravým tlačítkem na odkaz na službu a pak klikněte na **aktualizovat odkaz na službu**.
 
      Dialogové okno průběh se zobrazí, když je odkaz aktualizován z jeho původního umístění a klient služby se znovu vygeneruje, aby odrážel všechny změny v metadatech.
 
@@ -150,7 +151,7 @@ Pokud se už odkaz na službu nepoužívá, můžete ho odebrat z řešení.
 
 ### <a name="to-remove-a-service-reference"></a>Odebrání odkazu na službu
 
-- V **Průzkumník řešení**klikněte pravým tlačítkem na odkaz na službu a pak klikněte na **Odstranit**.
+- V **Průzkumník řešení** klikněte pravým tlačítkem na odkaz na službu a pak klikněte na **Odstranit**.
 
      Klient služby se odebere z řešení a metadata, která popisují službu, se odeberou z *app.config* souboru.
 

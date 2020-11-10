@@ -6,7 +6,7 @@ keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 08/05/2020
+ms.date: 11/10/2020
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -17,12 +17,12 @@ ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: bfa6217f92ae56874a39775796a974c95a25c495
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.openlocfilehash: 87b8b70f8adb10f0451d276520219c6954ff7325
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352241"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437302"
 ---
 # <a name="visual-studio-workload-and-component-ids"></a>ID úloh a komponent sady Visual Studio
 
@@ -32,7 +32,7 @@ Kliknutím na názvy edice v následující tabulce zobrazíte dostupná zatíž
 
 **Aktualizováno pro [verzi 15,9](/visualstudio/releasenotes/vs2017-relnotes/)**
 
-| **Edice** | **ID** | **Popis** |
+| **Edice** | **ÚČET** | **Popis** |
 | ----------- | ------ | --------------- |
 | [Visual &nbsp; Studio Enterprise &nbsp; 2017](workload-component-id-vs-enterprise.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. Enterprise | Řešení Microsoft DevOps pro produktivitu a koordinaci napříč týmy libovolné velikosti |
 | [Visual &nbsp; Studio Professional &nbsp; 2017](workload-component-id-vs-professional.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. Professional | Profesionální vývojářské nástroje a služby pro malé týmy |
@@ -51,9 +51,9 @@ Další informace o použití těchto seznamů naleznete na stránce [použití 
 
 ::: moniker range="vs-2019"
 
-**Aktualizováno pro [verzi 16,7](/visualstudio/releases/2019/release-notes/)**
+**Aktualizováno pro [verzi 16,8](/visualstudio/releases/2019/release-notes/)**
 
-| **Edice** | **ID** | **Popis** |
+| **Edice** | **ÚČET** | **Popis** |
 | ----------- | ------ | --------------- |
 | [Visual &nbsp; Studio Enterprise &nbsp; 2019](workload-component-id-vs-enterprise.md?view=vs-2019&preserve-view=true) | Microsoft. VisualStudio. Product. Enterprise | Řešení Microsoft DevOps pro produktivitu a koordinaci napříč týmy libovolné velikosti |
 | [Visual &nbsp; Studio Professional &nbsp; 2019](workload-component-id-vs-professional.md?view=vs-2019&preserve-view=true) | Microsoft. VisualStudio. Product. Professional | Profesionální vývojářské nástroje a služby pro malé týmy |

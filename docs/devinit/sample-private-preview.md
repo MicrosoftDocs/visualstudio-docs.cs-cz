@@ -1,6 +1,6 @@
 ---
-title: Privátní verze Preview
-description: Příklady vlastních nastavení použitých v úložišti GitHub Codespaces sady Visual Studio ve verzi Preview beta.
+title: Privátní beta verze
+description: Příklady vlastních nastavení použitých v úložišti GitHub Codespaces sady Visual Studio Preview beta verze.
 ms.date: 08/28/2020
 ms.topic: reference
 author: andysterland
@@ -11,20 +11,20 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 61ef0a0575e5b86ab7cbd7c17e37c552c0c14388
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: c79206295615fc984d2a95b52e0ecc0f70814e6f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005629"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437099"
 ---
-# <a name="private-preview"></a>Privátní verze Preview
+# <a name="private-beta"></a>Privátní beta verze
 
 Tento příklad ukazuje, jak přizpůsobit codespace pro Visual Studio tak, aby měly stejné funkce jako první Codespaces privátní beta verze [GitHubu](https://github.com/features/codespaces) .
 
 ## <a name="devinitjson"></a>.devinit.json
 
-Obsah [_.devinit.jsv_](devinit-json.md) souboru. Tento soubor musí být ve stejné složce jako _.devcontainer.jsna_.
+Obsah [`.devinit.json`](devinit-json.md) souboru Tento soubor musí být ve stejné složce jako _.devcontainer.jsna_.
 
 ```json
 {

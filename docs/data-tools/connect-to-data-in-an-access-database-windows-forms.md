@@ -1,5 +1,7 @@
 ---
 title: Připojení k datům v accessové databázi
+description: Zjistěte, jak se připojit k datům v databázi Access (soubor. mdb nebo soubor. accdb. accdb) v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 07/18/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3a94467dbfa0c11fdb7bb6ba7aa4d304fef3979f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 156acfd56789ec13201738e72c6df283e257e94f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800629"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94436859"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Připojení k datům v accessové databázi
 
@@ -33,7 +35,7 @@ Pomocí následujícího postupu se připojte k databázím vytvořeným pomocí
 
 1. Otevřete projekt aplikace model Windows Forms nebo WPF v aplikaci Visual Studio.
 
-2. Chcete-li otevřít okno **zdroje dat** , vyberte v nabídce **zobrazení** položku **jiné**  >  **zdroje dat**systému Windows.
+2. Chcete-li otevřít okno **zdroje dat** , vyberte v nabídce **zobrazení** položku **jiné**  >  **zdroje dat** systému Windows.
 
    ![Zobrazení dalších zdrojů dat Windows](../data-tools/media/viewdatasources.png)
 
@@ -49,11 +51,11 @@ Pomocí následujícího postupu se připojte k databázím vytvořeným pomocí
 
    Otevře se dialogové okno **Přidat připojení** .
 
-7. Pokud **zdroj dat** není nastaven na **soubor databáze aplikace Microsoft Access**, vyberte tlačítko **změnit** .
+7. Pokud **zdroj dat** není nastaven na **soubor databáze aplikace Microsoft Access** , vyberte tlačítko **změnit** .
 
-   Otevře se dialogové okno **změnit zdroj dat** . V seznamu zdrojů dat vyberte **soubor databáze aplikace Microsoft Access**. V rozevíracím seznamu **Zprostředkovatel dat** vyberte **pro OLE DB možnost .NET Framework Zprostředkovatel dat**a pak zvolte **OK**.
+   Otevře se dialogové okno **změnit zdroj dat** . V seznamu zdrojů dat vyberte **soubor databáze aplikace Microsoft Access**. V rozevíracím seznamu **Zprostředkovatel dat** vyberte **pro OLE DB možnost .NET Framework Zprostředkovatel dat** a pak zvolte **OK**.
 
-8. Klikněte na tlačítko **Procházet** vedle **pole název souboru databáze**a poté přejděte k souboru *. accdb* a zvolte možnost **otevřít**.
+8. Klikněte na tlačítko **Procházet** vedle **pole název souboru databáze** a poté přejděte k souboru *. accdb* a zvolte možnost **otevřít**.
 
 9. Zadejte uživatelské jméno a heslo (v případě potřeby) a pak zvolte **OK**.
 
@@ -75,7 +77,7 @@ Pomocí následujícího postupu se připojte k databázím vytvořeným pomocí
 
 1. Otevřete projekt aplikace model Windows Forms nebo WPF v aplikaci Visual Studio.
 
-2. V nabídce **zobrazení** vyberte **jiné**  >  **zdroje dat**Windows.
+2. V nabídce **zobrazení** vyberte **jiné**  >  **zdroje dat** Windows.
 
    ![Zobrazení dalších zdrojů dat Windows](../data-tools/media/viewdatasources.png)
 
@@ -89,9 +91,9 @@ Pomocí následujícího postupu se připojte k databázím vytvořeným pomocí
 
 6. Na stránce **Vyberte datové připojení** vyberte **nové připojení** a nakonfigurujte nové datové připojení.
 
-7. Pokud zdroj dat není **soubor databáze Microsoft Access (OLE DB)**, vyberte **změnit** , aby se otevřelo dialogové okno **změnit zdroj dat** , vyberte **soubor databáze Microsoft Access**a pak vyberte **OK**.
+7. Pokud zdroj dat není **soubor databáze Microsoft Access (OLE DB)** , vyberte **změnit** , aby se otevřelo dialogové okno **změnit zdroj dat** , vyberte **soubor databáze Microsoft Access** a pak vyberte **OK**.
 
-8. Do pole **název databázového souboru**zadejte cestu a název souboru *. mdb* , ke kterému se chcete připojit, a pak vyberte **OK**.
+8. Do pole **název databázového souboru** zadejte cestu a název souboru *. mdb* , ke kterému se chcete připojit, a pak vyberte **OK**.
 
    ![Přidat soubor databáze přístupu k připojení](../data-tools/media/add-connection-access-db.png)
 
