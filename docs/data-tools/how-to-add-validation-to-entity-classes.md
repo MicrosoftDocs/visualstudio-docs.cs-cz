@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání ověřování do tříd entit'
+description: Přečtěte si, jak přidat ověřování do tříd entit. Přidejte ověřování pro změny hodnoty v určitém sloupci. Přidejte ověřování pro aktualizace třídy entity.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5d408c67b2e54fecd6404bac93d93ecfb35de162
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4f367cf799dd00b8b442870554e499e5405865cb
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282342"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435101"
 ---
 # <a name="how-to-add-validation-to-entity-classes"></a>Postupy: Přidání ověřování do tříd entit
 *Ověřování* tříd entit je proces potvrzení, že hodnoty zadané do datových objektů vyhovují omezením ve schématu objektu a také k pravidlům stanoveným pro aplikaci. Ověřování dat před odesláním aktualizací do podkladové databáze je dobrým zvykem, který snižuje chyby. Také snižuje potenciální počet výměn mezi aplikací a databází.
@@ -35,7 +37,7 @@ Tento postup ukazuje, jak ověřit data při změně hodnoty ve sloupci. Vzhlede
 
 1. Otevřete nebo vytvořte nový soubor LINQ to SQLch tříd (soubor **. dbml** ) v **Návrháři o/R**. (Poklikejte na soubor **. dbml** v **Průzkumník řešení**.)
 
-2. V **Návrháři o/R**klikněte pravým tlačítkem na třídu, pro kterou chcete přidat ověřování, a pak klikněte na **Zobrazit kód**.
+2. V **Návrháři o/R** klikněte pravým tlačítkem na třídu, pro kterou chcete přidat ověřování, a pak klikněte na **Zobrazit kód**.
 
      Otevře se Editor kódu s částečnou třídou pro vybranou třídu entity.
 

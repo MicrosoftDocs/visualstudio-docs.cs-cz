@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Uložení dat do transakce'
+description: V tomto návodu naleznete informace v tématu Jak uložit data v transakci pomocí oboru názvů System. Transactions v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 09/08/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: caeb06ac3f38293b493463ff456e222f148ef93a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1bb0262139e2096cf55ae7581ef854a57c67d22a
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281627"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434542"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>Návod: Uložení dat do transakce
 
@@ -56,7 +58,7 @@ Prvním krokem je vytvoření **aplikace model Windows Forms**.
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **SavingDataInATransactionWalkthrough**a klikněte na **tlačítko OK**.
+4. Pojmenujte projekt **SavingDataInATransactionWalkthrough** a klikněte na **tlačítko OK**.
 
      Projekt **SavingDataInATransactionWalkthrough** je vytvořen a přidán do **Průzkumník řešení**.
 
@@ -68,7 +70,7 @@ Tento krok používá **Průvodce konfigurací zdroje dat** k vytvoření zdroje
 
 2. V okně **zdroje dat** vyberte možnost **Přidat nový zdroj dat** a spusťte **Průvodce konfigurací zdroje dat**.
 
-3. Na obrazovce **Vybrat typ zdroje dat** vyberte **databáze**a pak vyberte **Další**.
+3. Na obrazovce **Vybrat typ zdroje dat** vyberte **databáze** a pak vyberte **Další**.
 
 4. Na obrazovce **Vybrat datové připojení** proveďte jednu z následujících akcí:
 
@@ -139,28 +141,28 @@ Postup pro sjednocení změn souvisejících dat je následující:
 
 ### <a name="to-delete-existing-orders"></a>Odstranění existujících objednávek
 
-- `DeleteOrders`Do **Form1**přidejte následující metodu:
+- `DeleteOrders`Do **Form1** přidejte následující metodu:
 
      [!code-vb[VbRaddataSaving#5](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_2.vb)]
      [!code-csharp[VbRaddataSaving#5](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_2.cs)]
 
 ### <a name="to-delete-existing-customers"></a>Odstranění stávajících zákazníků
 
-- `DeleteCustomers`Do **Form1**přidejte následující metodu:
+- `DeleteCustomers`Do **Form1** přidejte následující metodu:
 
      [!code-vb[VbRaddataSaving#6](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_3.vb)]
      [!code-csharp[VbRaddataSaving#6](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_3.cs)]
 
 ### <a name="to-add-new-customers"></a>Přidání nových zákazníků
 
-- `AddNewCustomers`Do **Form1**přidejte následující metodu:
+- `AddNewCustomers`Do **Form1** přidejte následující metodu:
 
      [!code-vb[VbRaddataSaving#7](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_4.vb)]
      [!code-csharp[VbRaddataSaving#7](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_4.cs)]
 
 ### <a name="to-add-new-orders"></a>Přidání nových objednávek
 
-- `AddNewOrders`Do **Form1**přidejte následující metodu:
+- `AddNewOrders`Do **Form1** přidejte následující metodu:
 
      [!code-vb[VbRaddataSaving#8](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_5.vb)]
      [!code-csharp[VbRaddataSaving#8](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_5.cs)]

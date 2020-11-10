@@ -1,5 +1,7 @@
 ---
 title: '&lt;Návrhář aktivity T Návrhář postupu provádění-Switch &gt;'
+description: Naučte se používat <T> Návrháře aktivity Switch k vytvoření a konfiguraci <T> aktivity přepnutí v Návrhář postupu provádění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7430dec75e898a6695b146ce50076b8f57ed9d3e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6bdf05878c08b1c175b78ff2205b74c4ea5669b
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88711609"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433931"
 ---
 # <a name="switcht-activity-designer"></a>Návrhář aktivity Switch\<T>
 
@@ -30,20 +32,20 @@ Editor aktivity **Switch<\> T** se používá k vytvoření a konfiguraci <xref:
 
 ## <a name="how-to-use-the-switcht-activity-designer"></a>Jak používat \<T> Návrháře aktivity Switch
 
-Přihlaste se k Návrháři aktivity **Switch \<T> ** v kategorii **tok řízení** v **sadě nástrojů**. Po přetažení do Návrhář postupu provádění se zobrazí dialogové okno **vybrat typy** , které uživateli umožní zadat typ *T* použitý v <xref:System.Activities.Statements.Switch%601> aktivitě. Výchozí hodnota je **Int32**. Po výběru obecného typu *t* se do návrháře pracovních postupů přidá **přepínač<\> T** Designer.
+Přihlaste se k Návrháři aktivity **Switch \<T>** v kategorii **tok řízení** v **sadě nástrojů**. Po přetažení do Návrhář postupu provádění se zobrazí dialogové okno **vybrat typy** , které uživateli umožní zadat typ *T* použitý v <xref:System.Activities.Statements.Switch%601> aktivitě. Výchozí hodnota je **Int32**. Po výběru obecného typu *t* se do návrháře pracovních postupů přidá **přepínač<\> T** Designer.
 
-Níže jsou uvedené vlastnosti **přepínače<T \> ** Designer. Všechny tyto vlastnosti lze upravit v mřížce vlastností. Některé z nich je také možné upravovat na návrhové ploše.
+Níže jsou uvedené vlastnosti **přepínače<T \>** Designer. Všechny tyto vlastnosti lze upravit v mřížce vlastností. Některé z nich je také možné upravovat na návrhové ploše.
 
 V následující tabulce jsou uvedeny nejužitečnější <xref:System.Activities.Statements.Switch%601> vlastnosti a popisuje, jak se používají v návrháři.
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje popisný název <xref:System.Activities.Statements.Switch%601> návrháře aktivit. Výchozí hodnota je Switch<Int32 \> . Hodnotu lze upravit v okně **vlastnosti** nebo přímo v záhlaví návrháře.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
-|<xref:System.Activities.Statements.Switch%601.Expression%2A>|Ano|Určuje výraz, který se použije k porovnání s klíči v kolekci Cases, aby se určilo, který případ se má provést.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje popisný název <xref:System.Activities.Statements.Switch%601> návrháře aktivit. Výchozí hodnota je Switch<Int32 \> . Hodnotu lze upravit v okně **vlastnosti** nebo přímo v záhlaví návrháře.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.Switch%601.Expression%2A>|Pravda|Určuje výraz, který se použije k porovnání s klíči v kolekci Cases, aby se určilo, který případ se má provést.|
 |<xref:System.Activities.Statements.Switch%601.Default%2A>||Určuje prováděnou aktivitu, pokud nebyla nalezena žádná shoda. Kliknutím na tlačítko **Přidat aktivitu** v Návrháři otevřete **výchozí** pole, ve kterém lze aktivitu vyřadit.|
 |<xref:System.Activities.Statements.Switch%601.Cases%2A>||Určuje případy, které mají být vyhodnoceny. Chcete-li přidat případ, klikněte na tlačítko **Přidat nový případ** v dolní části **Návrháře \<T> přepínače** . Tlačítko se změní na textové pole (pole se seznamem, pokud je obecný typ vybraný při přidávání přepínače \<T> řetězec nebo výčet). Po přidání klíče do pole **hodnota případu** se oblast Case rozbalí a aktivita může být vynechána tam, kde text nápovědy "Sem přetáhněte aktivitu" pro definování logiky spuštění pro daný případ.|
 
-Více případů lze přidat, dokud klíče Case nejsou duplikovány. V opačném případě se v dialogovém okně chyby zobrazí zpráva, že zadaný klíč Case již existuje a že je nutné zvolit jiný klíč. V Návrháři **přepínače \<T> ** může být v jednom okamžiku v rozšířeném zobrazení pouze jedna oblast Case. Pokud je oblast případu ve sbaleném zobrazení, po kliknutí na oblast případu ji zvětšíte. Všimněte si, že pro sbalený případ Návrhář zobrazuje zobrazovaný název aktivity v případu na pravé straně, pokud existuje. V opačném případě se zobrazí tlačítko **Přidat aktivitu** , které rozbalí případ, pokud na něj kliknete, a umožní vám přidat aktivitu.
+Více případů lze přidat, dokud klíče Case nejsou duplikovány. V opačném případě se v dialogovém okně chyby zobrazí zpráva, že zadaný klíč Case již existuje a že je nutné zvolit jiný klíč. V Návrháři **přepínače \<T>** může být v jednom okamžiku v rozšířeném zobrazení pouze jedna oblast Case. Pokud je oblast případu ve sbaleném zobrazení, po kliknutí na oblast případu ji zvětšíte. Všimněte si, že pro sbalený případ Návrhář zobrazuje zobrazovaný název aktivity v případu na pravé straně, pokud existuje. V opačném případě se zobrazí tlačítko **Přidat aktivitu** , které rozbalí případ, pokud na něj kliknete, a umožní vám přidat aktivitu.
 
 Kliknutím na klíč existujícího případu změníte klíč z popisku na textové pole, abyste mohli upravit klíč případu.
 

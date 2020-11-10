@@ -1,5 +1,7 @@
 ---
 title: Návrhář aktivity Návrhář postupu provádění – operace PickBranch
+description: Přečtěte si, jak Návrhář aktivity operace PickBranch poskytuje cestu založenou na událostech pro spuštění v rámci aktivity výběru, kterou může aktivovat příchozí událost.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34da9091c0f96b7270678f9b36fe861e4a87418f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bce1cee7fad7ccff57a6911c99a9470a22b9a927
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876083"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434230"
 ---
 # <a name="pickbranch-activity-designer"></a>Návrhář aktivity PickBranch
 
@@ -31,7 +33,7 @@ Přístup k Návrháři **operace PickBranch** v kategorii **toku řízení** v 
 
 Dva prázdné <xref:System.Activities.Statements.PickBranch> objekty se zobrazovanými názvy **Pobočka1** a **Branch2** jsou vytvořeny ve výchozím nastavení jako prvky <xref:System.Activities.Statements.Pick> aktivity při počátečním zařazování návrháře aktivit **výběru** na Návrhář postupu provádění. Tyto odpovídající <xref:System.Activities.Statements.PickBranch.DisplayName%2A> hodnoty vlastností lze upravit v záhlaví návrháře **operace PickBranch** nebo v okně **vlastností** každé větve.
 
-Existují dva způsoby, jak přidat <xref:System.Activities.Statements.PickBranch> objekty do kolekce <xref:System.Activities.Statements.Pick> objektu: přetažení návrháře **operace PickBranch** ze **sady nástrojů**nebo pomocí místní nabídky na návrhové ploše pro **Výběr** :
+Existují dva způsoby, jak přidat <xref:System.Activities.Statements.PickBranch> objekty do kolekce <xref:System.Activities.Statements.Pick> objektu: přetažení návrháře **operace PickBranch** ze **sady nástrojů** nebo pomocí místní nabídky na návrhové ploše pro **Výběr** :
 
 - Návrhář **operace PickBranch** vytvoří, <xref:System.Activities.Statements.PickBranch> když je přetažen ze **sady nástrojů** a vyřazen do jedné z větví návrháře aktivity **výběru** na Návrhář postupu provádění povrchu. Nové <xref:System.Activities.Statements.PickBranch> objekty lze umístit do <xref:System.Activities.Statements.Pick> Návrháře vlevo nebo vpravo od všech existujících prvků, které <xref:System.Activities.Statements.PickBranch> jsou již obsaženy v kolekci. Když přetáhnete návrháře **operace PickBranch** do návrháře **výběru** pomocí myši, Návrhář **výběru** použije svislou modrou šedou plochu k označení, kde <xref:System.Activities.Statements.PickBranch> je přidáno pro dané umístění myši.
 
@@ -54,9 +56,9 @@ Následující tabulka uvádí nejužitečnější <xref:System.Activities.State
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Statements.PickBranch.DisplayName%2A>|Ne|Popisný název zobrazený v záhlaví návrháře **operace PickBranch** Výchozí hodnota je větev.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
-|<xref:System.Activities.Statements.PickBranch.Trigger%2A>|Ano|Každý <xref:System.Activities.Statements.PickBranch> obsahuje <xref:System.Activities.Statements.PickBranch.Trigger%2A> akci, která může vyvolat <xref:System.Activities.Statements.PickBranch.Action%2A> .|
-|<xref:System.Activities.Statements.PickBranch.Action%2A>|Ne|Každý <xref:System.Activities.Statements.PickBranch> obsahuje <xref:System.Activities.Statements.PickBranch.Action%2A> , který se spustí, když se aktivuje.|
+|<xref:System.Activities.Statements.PickBranch.DisplayName%2A>|Nepravda|Popisný název zobrazený v záhlaví návrháře **operace PickBranch** Výchozí hodnota je větev.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.PickBranch.Trigger%2A>|Pravda|Každý <xref:System.Activities.Statements.PickBranch> obsahuje <xref:System.Activities.Statements.PickBranch.Trigger%2A> akci, která může vyvolat <xref:System.Activities.Statements.PickBranch.Action%2A> .|
+|<xref:System.Activities.Statements.PickBranch.Action%2A>|Nepravda|Každý <xref:System.Activities.Statements.PickBranch> obsahuje <xref:System.Activities.Statements.PickBranch.Action%2A> , který se spustí, když se aktivuje.|
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,5 +1,7 @@
 ---
 title: Vytvoření a konfigurace datových sad
+description: Vytváření a konfigurace datových sad v sadě Visual Studio. Datová sada je sada objektů, které ukládají data z databáze v paměti a podporují operace CRUD u těchto dat.
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1065c5efdcf73016e61ee0f016511579d41acd88
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a9a10d68b5b0617b5c4e2152cbbbb920a7c683f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282745"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435401"
 ---
 # <a name="how-to-create-and-configure-datasets-in-visual-studio"></a>Postupy: vytváření a konfigurace datových sad v sadě Visual Studio
 

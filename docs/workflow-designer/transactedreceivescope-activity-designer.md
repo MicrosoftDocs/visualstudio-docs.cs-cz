@@ -1,5 +1,7 @@
 ---
 title: Návrhář aktivity Návrhář postupu provádění – TransactedReceiveScope
+description: Přečtěte si, jak můžete pomocí návrháře TransactedReceiveScope vytvořit a nakonfigurovat aktivitu TransactedReceiveScope.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75fb1da392bce7dbd0cd7849d83b3b452521e0c7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 70117ab8b27a23dfb2836800c41ff0844fb8de1c
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86875927"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433775"
 ---
 # <a name="transactedreceivescope-activity-designer"></a>Návrhář aktivity TransactedReceiveScope
 
@@ -37,9 +39,9 @@ V následující tabulce jsou uvedeny <xref:System.ServiceModel.Activities.Trans
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Volitelný popisný název <xref:System.ServiceModel.Activities.TransactedReceiveScope> aktivity. Výchozí hodnota je TransactedReceiveScope.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> název není nezbytně nutný, je osvědčeným postupem použití zobrazovaného názvu.|
-|<xref:System.ServiceModel.Activities.TransactedReceiveScope.Request%2A>|Ano|Zruší <xref:System.ServiceModel.Activities.Receive> aktivitu do bloku **žádosti** na povrchu návrháře aktivit.|
-|<xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A>|Ne|Přenechá <xref:System.Activities.Activity> do bloku **text** na ploše návrháře aktivit.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Volitelný popisný název <xref:System.ServiceModel.Activities.TransactedReceiveScope> aktivity. Výchozí hodnota je TransactedReceiveScope.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> název není nezbytně nutný, je osvědčeným postupem použití zobrazovaného názvu.|
+|<xref:System.ServiceModel.Activities.TransactedReceiveScope.Request%2A>|Pravda|Zruší <xref:System.ServiceModel.Activities.Receive> aktivitu do bloku **žádosti** na povrchu návrháře aktivit.|
+|<xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A>|Nepravda|Přenechá <xref:System.Activities.Activity> do bloku **text** na ploše návrháře aktivit.|
 
 ## <a name="see-also"></a>Viz také
 

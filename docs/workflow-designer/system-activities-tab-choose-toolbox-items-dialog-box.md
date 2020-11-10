@@ -1,5 +1,7 @@
 ---
 title: 'Návrhář postupu provádění: System. Activities, zvolit položky nástrojů'
+description: Přečtěte si, jak se na kartě System. Activities zobrazuje seznam aktivit programovací model Windows Workflow Foundation (WF), šablon a položek, které máte k dispozici.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f1a7030b6c351407814314ccd41e0e2ed6a880e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d13aadb135f6dcf72d146f74ea2804ef34228641
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593106"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433892"
 ---
 # <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>Karta System. Activities, dialogové okno zvolit položky sady nástrojů
 
@@ -33,7 +35,7 @@ Z této karty dialogového okna můžete zrušit kontrolu všech položek, kter�
 
 Vytvoření instance aktivity přetáhnutím a přetažením v Návrháři přidáte sestavení, které obsahuje položku na seznam odkazovaných sestavení automaticky. Také Pokud aktivita odkazuje na sestavení C, nepřidá C do odkazovaného seznamu sestavení. Sestavení C musí být v globální mezipaměti sestavení (GAC) nebo ve stejném adresáři jako aktivita B. V samostatném případě musí být sestavení v globální mezipaměti sestavení (GAC) nebo cesty testu VS. Jenom potom můžete aktivitu přetáhnout na plochu návrháře pracovního postupu.
 
-Nastavení **sady nástrojů** se ve výchozím nastavení ukládají jako uživatelské možnosti, takže při příštím otevření **sady nástrojů**se zobrazí váš přizpůsobený seznam aktivit pracovních postupů. Jedním z nich je, že pokud jste přidali konkrétní položky domény do **sady nástrojů** prostřednictvím dialogového okna **Vybrat položky sady nástrojů** , pořád se tyto položky zobrazí, i když pracujete v konzolové aplikaci pracovního postupu. Pokud je nechcete zobrazit, odstraňte je pomocí nabídky po kliknutí pravým tlačítkem myši nebo zrušte jejich výběr pomocí dialogového okna **zvolit položky sady nástrojů** , jak bylo uvedeno dříve.
+Nastavení **sady nástrojů** se ve výchozím nastavení ukládají jako uživatelské možnosti, takže při příštím otevření **sady nástrojů** se zobrazí váš přizpůsobený seznam aktivit pracovních postupů. Jedním z nich je, že pokud jste přidali konkrétní položky domény do **sady nástrojů** prostřednictvím dialogového okna **Vybrat položky sady nástrojů** , pořád se tyto položky zobrazí, i když pracujete v konzolové aplikaci pracovního postupu. Pokud je nechcete zobrazit, odstraňte je pomocí nabídky po kliknutí pravým tlačítkem myši nebo zrušte jejich výběr pomocí dialogového okna **zvolit položky sady nástrojů** , jak bylo uvedeno dříve.
 
 Sloupce v tomto dialogovém okně obsahují následující informace:
 

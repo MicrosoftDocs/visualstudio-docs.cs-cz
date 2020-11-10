@@ -1,5 +1,7 @@
 ---
 title: Hierarchická aktualizace
+description: Projděte si hierarchické aktualizace, které zahrnují ukládání aktualizovaných dat (z datové sady se 2 + souvisejícími tabulkami) zpátky do databáze a přitom zachovává pravidla referenční integrity.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +23,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 158908c45d33781bc9f983950d5558a23481ad37
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bfc0c1ca96f5bf6ce58a1b7df9ad0ea10f283e1e
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586572"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435153"
 ---
 # <a name="hierarchical-update"></a>Hierarchická aktualizace
 
@@ -38,7 +40,7 @@ Ve výchozím nastavení datová sada zpracovává související tabulky jako "j
 
 ## <a name="enable-hierarchical-update-in-a-dataset"></a>Povolit hierarchickou aktualizaci v datové sadě
 
-Ve výchozím nastavení je hierarchická aktualizace povolena pro všechny nové datové sady, které jsou přidány nebo vytvořeny v projektu. Zapnutí nebo vypnutí hierarchické aktualizace nastavením vlastnosti **hierarchické aktualizace** typované datové sady v datové sadě na **hodnotu true** nebo **false**:
+Ve výchozím nastavení je hierarchická aktualizace povolena pro všechny nové datové sady, které jsou přidány nebo vytvořeny v projektu. Zapnutí nebo vypnutí hierarchické aktualizace nastavením vlastnosti **hierarchické aktualizace** typované datové sady v datové sadě na **hodnotu true** nebo **false** :
 
 ![Nastavení hierarchické aktualizace](../data-tools/media/hierarchical-update-setting.png)
 

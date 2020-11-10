@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/22/2018
 ms.assetid: 6F2ECF5A-E195-4890-8399-12A88C7D62FD
-ms.openlocfilehash: 5e8fa7f740275f416f80827276d74be1f05b0e21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6668e0b61c541ffc0327120cb6e699ada6f1b690
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74984744"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434373"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Program Zlepšování softwaru a služeb na základě zkušeností uživatelů pro Visual Studio
 
@@ -37,5 +37,5 @@ VSCEIP je ve výchozím nastavení zapnutý. Můžete ho zase zapnout nebo znovu
 * [Program Zlepšování softwaru a služeb na základě zkušeností uživatelů (Visual Studio ve Windows)](/visualstudio/ide/visual-studio-experience-improvement-program)
 * [Systémem generované protokoly shromážděné aplikací Visual Studio (ve Windows)](/visualstudio/ide/diagnostic-data-collection)
 * [Jak ohlásit problém s Visual Studio pro Mac](report-a-problem.md)
-* [Komunita vývojářů Visual Studio pro Mac](https://developercommunity.visualstudio.com/spaces/41/index.html)
+* [Komunita vývojářů Visual Studio pro Mac](https://aka.ms/feedback/vsm-home)
 * [Prohlášení společnosti Microsoft o zásadách ochrany osobních údajů](https://privacy.microsoft.com/privacystatement)

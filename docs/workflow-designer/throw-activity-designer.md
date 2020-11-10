@@ -1,5 +1,7 @@
 ---
 title: Návrhář postupu provádění – Návrhář aktivity throw
+description: Přečtěte si o aktivitě throw a o tom, jak můžete pomocí nástroje throw Activity Designer vytvořit a nakonfigurovat aktivitu throw.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 650082ab0e4f8576b7028b8011c88bf5d93b2afd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d836a666c0b09366f5c8f3c9245def63faba462
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593093"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433853"
 ---
 # <a name="throw-activity-designer"></a>Návrhář aktivity Throw
 
@@ -37,8 +39,8 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.Throw> 
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje nepovinný popisný název <xref:System.Activities.Statements.Throw> aktivity. Výchozí hodnota je throw.|
-|<xref:System.Activities.Statements.Throw.Exception%2A>|Ano|Výjimka, která se má vyvolat Tato výjimka musí být odvozena z <xref:System.Exception> . Chcete-li zadat výjimku, zadejte výraz Visual Basic v mřížce vlastností.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje nepovinný popisný název <xref:System.Activities.Statements.Throw> aktivity. Výchozí hodnota je throw.|
+|<xref:System.Activities.Statements.Throw.Exception%2A>|Pravda|Výjimka, která se má vyvolat Tato výjimka musí být odvozena z <xref:System.Exception> . Chcete-li zadat výjimku, zadejte výraz Visual Basic v mřížce vlastností.|
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,5 +1,7 @@
 ---
 title: Úpravy dat v datových sadách
+description: Naučte se upravovat data v datových sadách. Informace o tom, jak upravit řádky datové sady, vložit nové řádky do datové sady, zjistit, zda jsou řádky změněny, a vyhledat řádky s chybami
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: fe59b30e9af7ee1d98c0aba65339af1d53cba8fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e547d3a6a07a7881c34462138ffbe708b8d74080
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282459"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435088"
 ---
 # <a name="edit-data-in-datasets"></a>Úpravy dat v datových sadách
 Data v datových tabulkách můžete upravovat podobně, jako když upravujete data v tabulce v libovolné databázi. Tento proces může zahrnovat vkládání, aktualizaci a mazání záznamů v tabulce. Ve formuláři vázaného na data můžete určit, která pole jsou uživatelsky upravitelná. V těchto případech infrastruktura vázání dat zpracovává všechna sledování změn tak, aby se změny mohly poslat zpátky do databáze později. Pokud budete programově upravovat data a máte v úmyslu odeslat tyto změny zpět do databáze nástroje, musíte použít objekty a metody, které pro vás provedou sledování změn.

@@ -1,5 +1,7 @@
 ---
 title: Návrhář postupu provádění – Návrhář šablon ReceiveAndSendReply
+description: Naučte se, jak pomocí šablony ReceiveAndSendReply vytvořit dvojici předem nakonfigurovaných aktivit Receive a SendReply.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66822664766ac64e466882fda27906f56ebb4aad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b66b403fb5df98bc4a23131b6062b2d06f95719
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876005"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434165"
 ---
 # <a name="receiveandsendreply-template-designer"></a>Návrhář šablony ReceiveAndSendReply
 
@@ -44,12 +46,12 @@ V následující tabulce jsou uvedeny <xref:System.ServiceModel.Activities.SendR
 
 | Název vlastnosti | Požaduje se | Využití |
 |-|----------|-|
-| <xref:System.Activities.Activity.DisplayName%2A> | Ne | Volitelný popisný název <xref:System.ServiceModel.Activities.SendReply> aktivity. Výchozí hodnota je SendReplyToReceive.<br /><br /> I když použití jiné než výchozí hodnoty pro popis není <xref:System.Activities.Activity.DisplayName%2A> naprosto povinné, je vhodné použít takovou hodnotu. |
-| <xref:System.ServiceModel.Activities.SendReply.Request%2A> | Ano | Odkaz na <xref:System.ServiceModel.Activities.Receive> aktivitu spárované s touto <xref:System.ServiceModel.Activities.SendReply> aktivitou Tato vlastnost nesmí mít **hodnotu null**. <xref:System.ServiceModel.Activities.Receive> a <xref:System.ServiceModel.Activities.SendReply> aktivity se společně na serveru používají k modelování vzoru zasílání zpráv požadavku a odpovědí. Tato vlastnost určuje, která <xref:System.ServiceModel.Activities.Send> aktivita se spáruje. V Návrháři tuto vlastnost nemůžete upravit, protože je automaticky svázána s <xref:System.ServiceModel.Activities.Send> aktivitou, ze které jste <xref:System.ServiceModel.Activities.SendReply> aktivitu vytvořili. |
-| <xref:System.ServiceModel.Activities.SendReply.Content%2A> | Ne | Určuje zprávu nebo parametr obsahu, který se má přijmout. Může to být buď <xref:System.ServiceModel.Activities.ReceiveMessageContent> aktivita, nebo <xref:System.ServiceModel.Activities.ReceiveParametersContent> aktivita. Tuto vlastnost můžete upravit kliknutím na tlačítko se třemi tečkami vedle pole **obsah** v mřížce vlastností nebo kliknutím na tlačítko **definovat** vedle popisku **obsahu** na ploše návrháře aktivity **příjmu** . V obou zobrazeních se zobrazí dialogové okno **definice obsahu** . Další informace o tom, jak používat toto pole, najdete v tématu věnovaném [definici obsahu v dialogu](../workflow-designer/content-definition-dialog-box.md) . |
-| <xref:System.ServiceModel.Activities.SendReply.CorrelationInitializers%2A> | Ne | Určuje kolekci <xref:System.ServiceModel.Activities.CorrelationInitializer> objektů, které inicializují více <xref:System.ServiceModel.Activities.CorrelationHandle> objektů, které konfigurují tuto <xref:System.ServiceModel.Activities.Receive> aktivitu v rámci pracovního postupu. Kliknutím na tlačítko se třemi tečkami vedle <xref:System.ServiceModel.Activities.SendReply.CorrelationInitializers%2A> vlastnosti v mřížce vlastnosti otevřete dialogové okno **Přidat Inicializátory korelace** . Další informace o použití tohoto pole najdete v tématu věnovaném [dialogovému oknu Přidat inicializátoři CorrelationInitializers](../workflow-designer/add-correlationinitializers-dialog-box.md) . |
-| <xref:System.ServiceModel.Activities.SendReply.Action%2A> | Ne | Určuje hlavičku akce zprávy. Pokud není nastavena explicitně, jeho hodnota se nastaví jako výchozí:<br /><br /> `https://tempuri.org/{service contract namespace}/{service contract name}/{operation name}` |
-| <xref:System.ServiceModel.Activities.SendReply.PersistBeforeSend%2A> | Ne | Určuje, zda má být instance pracovního postupu trvalá před odesláním zprávy s odpovědí. Výchozí hodnota je **false** (nepravda). |
+| <xref:System.Activities.Activity.DisplayName%2A> | Nepravda | Volitelný popisný název <xref:System.ServiceModel.Activities.SendReply> aktivity. Výchozí hodnota je SendReplyToReceive.<br /><br /> I když použití jiné než výchozí hodnoty pro popis není <xref:System.Activities.Activity.DisplayName%2A> naprosto povinné, je vhodné použít takovou hodnotu. |
+| <xref:System.ServiceModel.Activities.SendReply.Request%2A> | Pravda | Odkaz na <xref:System.ServiceModel.Activities.Receive> aktivitu spárované s touto <xref:System.ServiceModel.Activities.SendReply> aktivitou Tato vlastnost nesmí mít **hodnotu null**. <xref:System.ServiceModel.Activities.Receive> a <xref:System.ServiceModel.Activities.SendReply> aktivity se společně na serveru používají k modelování vzoru zasílání zpráv požadavku a odpovědí. Tato vlastnost určuje, která <xref:System.ServiceModel.Activities.Send> aktivita se spáruje. V Návrháři tuto vlastnost nemůžete upravit, protože je automaticky svázána s <xref:System.ServiceModel.Activities.Send> aktivitou, ze které jste <xref:System.ServiceModel.Activities.SendReply> aktivitu vytvořili. |
+| <xref:System.ServiceModel.Activities.SendReply.Content%2A> | Nepravda | Určuje zprávu nebo parametr obsahu, který se má přijmout. Může to být buď <xref:System.ServiceModel.Activities.ReceiveMessageContent> aktivita, nebo <xref:System.ServiceModel.Activities.ReceiveParametersContent> aktivita. Tuto vlastnost můžete upravit kliknutím na tlačítko se třemi tečkami vedle pole **obsah** v mřížce vlastností nebo kliknutím na tlačítko **definovat** vedle popisku **obsahu** na ploše návrháře aktivity **příjmu** . V obou zobrazeních se zobrazí dialogové okno **definice obsahu** . Další informace o tom, jak používat toto pole, najdete v tématu věnovaném [definici obsahu v dialogu](../workflow-designer/content-definition-dialog-box.md) . |
+| <xref:System.ServiceModel.Activities.SendReply.CorrelationInitializers%2A> | Nepravda | Určuje kolekci <xref:System.ServiceModel.Activities.CorrelationInitializer> objektů, které inicializují více <xref:System.ServiceModel.Activities.CorrelationHandle> objektů, které konfigurují tuto <xref:System.ServiceModel.Activities.Receive> aktivitu v rámci pracovního postupu. Kliknutím na tlačítko se třemi tečkami vedle <xref:System.ServiceModel.Activities.SendReply.CorrelationInitializers%2A> vlastnosti v mřížce vlastnosti otevřete dialogové okno **Přidat Inicializátory korelace** . Další informace o použití tohoto pole najdete v tématu věnovaném [dialogovému oknu Přidat inicializátoři CorrelationInitializers](../workflow-designer/add-correlationinitializers-dialog-box.md) . |
+| <xref:System.ServiceModel.Activities.SendReply.Action%2A> | Nepravda | Určuje hlavičku akce zprávy. Pokud není nastavena explicitně, jeho hodnota se nastaví jako výchozí:<br /><br /> `https://tempuri.org/{service contract namespace}/{service contract name}/{operation name}` |
+| <xref:System.ServiceModel.Activities.SendReply.PersistBeforeSend%2A> | Nepravda | Určuje, zda má být instance pracovního postupu trvalá před odesláním zprávy s odpovědí. Výchozí hodnota je **false** (nepravda). |
 
 ## <a name="see-also"></a>Viz také
 

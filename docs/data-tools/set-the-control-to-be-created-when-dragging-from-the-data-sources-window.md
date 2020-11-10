@@ -1,5 +1,6 @@
 ---
 title: Nastavení ovládacího prvku, který se má vytvořit při přetahování
+description: Zjistíte, jak nastavit, aby byl ovládací prvek vytvořen při přetažení z okna zdroje dat do návrháře WPF nebo návrháře model Windows Forms v sadě Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a7588fc23e7d52adb6c7ea780a75e11715688e26
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 8a81ecb35c37dbef6d48227c27ed877c64e6e26f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036259"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434464"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>Nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdrojů dat
 
@@ -38,7 +39,7 @@ V tomto kontextu pojem *objekt* odkazuje na vlastní obchodní objekt, entitu (v
 2. V okně **zdroje dat** vyberte položku, která představuje datovou tabulku nebo objekt, který chcete nastavit.
 
    > [!TIP]
-   > Pokud okno **zdroje dat** není otevřeno, můžete ho otevřít výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat**systému Windows.
+   > Pokud okno **zdroje dat** není otevřeno, můžete ho otevřít výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat** systému Windows.
 
 3. Klikněte na rozevírací nabídku pro položku a potom v nabídce klikněte na jednu z následujících položek:
 

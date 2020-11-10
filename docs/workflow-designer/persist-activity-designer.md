@@ -1,5 +1,7 @@
 ---
 title: Návrhář aktivity trvalého Návrhář postupu provádění
+description: Přečtěte si o aktivitě trvalé aktivity a o tom, jak pomocí návrháře trvalé aktivity vytvořit a nakonfigurovat aktivitu trvalé aktivity.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75236d7955cba6b8c62b9a4504f02c66cebe4062
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3daa7cef76d2448cc7bcda66a967a3406bb2352c
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114769"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435570"
 ---
 # <a name="persist-activity-designer"></a>Návrhář aktivity Persist
 
@@ -27,7 +29,7 @@ Návrhář **trvalé** aktivity se používá k vytvoření a konfiguraci <xref:
 
 ### <a name="using-the-persist-activity-designer"></a>Použití návrháře trvalé aktivity
 
-Návrháře **trvalých** aktivit lze najít v kategorii **runtime** sady **nástrojů**, ke které se dostanete kliknutím na kartu **panel** nástrojů (případně můžete vybrat možnost **Sada nástrojů** v nabídce **zobrazení** nebo CTRL + ALT + X).)
+Návrháře **trvalých** aktivit lze najít v kategorii **runtime** sady **nástrojů** , ke které se dostanete kliknutím na kartu **panel** nástrojů (případně můžete vybrat možnost **Sada nástrojů** v nabídce **zobrazení** nebo CTRL + ALT + X).)
 
 Návrhář **trvalé** aktivity lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity, například dovnitř <xref:System.Activities.Statements.Sequence> . Tím se vytvoří <xref:System.Activities.Statements.Persist> aktivita s výchozím **názvem DisplayName** trvalého. <xref:System.Activities.Activity.DisplayName%2A>Lze upravit v záhlaví návrháře **trvalé** aktivity nebo v poli **DisplayName** v mřížce vlastností.
 
@@ -37,9 +39,9 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.Persist
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Popisný název <xref:System.Activities.Statements.Persist> aktivity Výchozí hodnota je trvalá. I když zobrazovaný název není nezbytně nutný, je vhodné použít zobrazovaný název.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Popisný název <xref:System.Activities.Statements.Persist> aktivity Výchozí hodnota je trvalá. I když zobrazovaný název není nezbytně nutný, je vhodné použít zobrazovaný název.|
 
 ## <a name="see-also"></a>Viz také
 
-- [Modul runtime](../workflow-designer/runtime-activity-designers.md)
+- [Runtime (Modul runtime)](../workflow-designer/runtime-activity-designers.md)
 - [TerminateWorkflow](../workflow-designer/terminateworkflow-activity-designer.md)

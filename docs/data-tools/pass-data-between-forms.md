@@ -1,5 +1,7 @@
 ---
 title: Předávání dat mezi formuláři
+description: V tomto model Windows Forms jsou uvedeny podrobné pokyny pro předání dat z jednoho formuláře do jiného.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 198eb09cabe16c72415520aa493a3395cdbf6d48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e740483a855bbfd736810dd4d41e3f4d01b7dd60
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281874"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434672"
 ---
 # <a name="pass-data-between-forms"></a>Předávání dat mezi formuláři
 
@@ -73,7 +75,7 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **PassingDataBetweenForms**a klikněte na **tlačítko OK**.
+4. Pojmenujte projekt **PassingDataBetweenForms** a klikněte na **tlačítko OK**.
 
      Vytvoří se projekt **PassingDataBetweenForms** a přidá se do **Průzkumník řešení**.
 
@@ -119,7 +121,7 @@ Vytvořte druhý formulář, do kterého se budou předávat data.
 
 1. V nabídce **projekt** vyberte možnost **Přidat formulář Windows**.
 
-2. Ponechte výchozí název **Form2**a klikněte na **Přidat**.
+2. Ponechte výchozí název **Form2** a klikněte na **Přidat**.
 
 3. Přetáhněte uzel hlavní **objednávky** z okna **zdroje dat** do **Form2**.
 
@@ -135,11 +137,11 @@ Přidejte dotaz TableAdapter k Form2 pro načtení objednávek pro vybraného z�
 
 1. Dvakrát klikněte na soubor **NorthwindDataSet. xsd** v **Průzkumník řešení**.
 
-2. Klikněte pravým tlačítkem na **OrdersTableAdapter**a vyberte **Přidat dotaz**.
+2. Klikněte pravým tlačítkem na **OrdersTableAdapter** a vyberte **Přidat dotaz**.
 
-3. Ponechte výchozí možnost **použít příkazy SQL**a pak klikněte na **Další**.
+3. Ponechte výchozí možnost **použít příkazy SQL** a pak klikněte na **Další**.
 
-4. Ponechte výchozí možnost **vybrat, která vrátí řádky**, a pak klikněte na **Další**.
+4. Ponechte výchozí možnost **vybrat, která vrátí řádky** , a pak klikněte na **Další**.
 
 5. Přidejte do dotazu klauzuli WHERE, která se má vrátit na `Orders` základě `CustomerID` . Dotaz by měl vypadat přibližně takto:
 
@@ -154,7 +156,7 @@ Přidejte dotaz TableAdapter k Form2 pro načtení objednávek pro vybraného z�
 
 6. Klikněte na **Next** (Další).
 
-7. Pro **naplnění názvu DataTableMethod**zadejte `FillByCustomerID` .
+7. Pro **naplnění názvu DataTableMethod** zadejte `FillByCustomerID` .
 
 8. Zrušte zaškrtnutí možnosti **vrátit DataTable** a potom klikněte na tlačítko **Další**.
 
@@ -162,7 +164,7 @@ Přidejte dotaz TableAdapter k Form2 pro načtení objednávek pro vybraného z�
 
 ## <a name="create-a-method-on-form2-to-pass-data-to"></a>Vytvoření metody v Form2 k předání dat
 
-1. Klikněte pravým tlačítkem na **Form2**a výběrem **Zobrazit kód** otevřete **Form2** v **editoru kódu**.
+1. Klikněte pravým tlačítkem na **Form2** a výběrem **Zobrazit kód** otevřete **Form2** v **editoru kódu**.
 
 2. Do **Form2** přidejte následující kód za `Form2_Load` metodu:
 
@@ -171,7 +173,7 @@ Přidejte dotaz TableAdapter k Form2 pro načtení objednávek pro vybraného z�
 
 ## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>Vytvoření metody na Form1 pro předání dat a zobrazení Form2
 
-1. V poli **Form1**klikněte pravým tlačítkem myši na datovou mřížku zákaznických dat a pak klikněte na **vlastnosti**.
+1. V poli **Form1** klikněte pravým tlačítkem myši na datovou mřížku zákaznických dat a pak klikněte na **vlastnosti**.
 
 2. V okně **vlastnosti** klikněte na položku **události**.
 

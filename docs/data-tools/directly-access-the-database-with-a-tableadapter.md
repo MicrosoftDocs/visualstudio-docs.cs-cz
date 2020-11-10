@@ -1,5 +1,7 @@
 ---
 title: Přímý přístup k databázi pomocí objektu TableAdapter
+description: Přímý přístup k databázi pomocí TableAdapter pomocí metod, jako je vložení, aktualizace a odstranění, pro manipulaci s daty přímo v databázi.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -23,12 +25,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 22d84e9b4beafd64cc629a295bcfa7f9f67afb6d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ebf6233116c62ee1e25e2bef0ab4d80bdec029b7
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282563"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435179"
 ---
 # <a name="directly-access-the-database-with-a-tableadapter"></a>Přímý přístup k databázi pomocí objektu TableAdapter
 

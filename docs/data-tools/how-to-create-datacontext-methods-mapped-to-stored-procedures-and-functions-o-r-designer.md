@@ -1,5 +1,6 @@
 ---
 title: Mapování metod DataContext na sprocs a funkce
+description: Naučte se vytvářet metody DataContext, které jsou namapované na uložené procedury (sprocs) a funkce pomocí Návrhář relací objektů (O/R Designer).
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e6926631cfd9d04992d92553a346348ea18af847
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 4cb02a7fc7fdcbb4ff3c9c3750e722ff0fe031a5
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038332"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434945"
 ---
 # <a name="how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-or-designer"></a>Postupy: Vytvoření metod DataContext namapovaných na uložené procedury a funkce (Návrhář relací objektů)
 
@@ -34,7 +35,7 @@ Metody můžete vytvořit <xref:System.Data.Linq.DataContext> přetažením ulo�
 
 ### <a name="to-create-datacontext-methods-that-return-automatically-generated-types"></a>Vytvoření metod DataContext, které vracejí automaticky generované typy
 
-1. V **Průzkumník serveru** nebo **Průzkumníku databáze**rozbalte uzel **uložené procedury** databáze, se kterou pracujete.
+1. V **Průzkumník serveru** nebo **Průzkumníku databáze** rozbalte uzel **uložené procedury** databáze, se kterou pracujete.
 
 2. Vyhledejte požadovanou uloženou proceduru a přetáhněte ji do prázdné oblasti **návrháře o/R**.
 
@@ -42,7 +43,7 @@ Metody můžete vytvořit <xref:System.Data.Linq.DataContext> přetažením ulo�
 
 ### <a name="to-create-datacontext-methods-that-have-the-return-type-of-an-entity-class"></a>Vytvoření metod DataContext, které mají návratový typ třídy entity
 
-1. V **Průzkumník serveru** nebo **Průzkumníku databáze**rozbalte uzel **uložené procedury** databáze, se kterou pracujete.
+1. V **Průzkumník serveru** nebo **Průzkumníku databáze** rozbalte uzel **uložené procedury** databáze, se kterou pracujete.
 
 2. Vyhledejte požadovanou uloženou proceduru a přetáhněte ji do existující třídy entity v **Návrháři o/R**.
 

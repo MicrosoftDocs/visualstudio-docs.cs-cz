@@ -1,34 +1,30 @@
 ---
-title: Nové prostředí Git v sadě Visual Studio (Preview)
+title: Prostředí Git v aplikaci Visual Studio
 titleSuffix: ''
-description: Další informace o novém integrovaném prostředí Git v aplikaci Visual Studio 2019
-ms.date: 10/13/2020
+description: Přečtěte si, jak vám nové integrované prostředí Git v rámci sady Visual Studio 2019 může přispět k vyšší produktivitě.
+ms.date: 11/10/2020
 ms.topic: conceptual
 ms.author: tglee
 author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: ad75fcff26365afdbc4fb4b02975d7c3211fa79b
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 71136bb634bd42eaf4933dead8c024b290177da3
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "92334204"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434698"
 ---
-# <a name="new-git-experience-in-visual-studio-preview"></a>Nové prostředí Git v sadě Visual Studio (Preview)
+# <a name="git-productivity-in-visual-studio"></a>Produktivita Git v aplikaci Visual Studio
 
-Od [verze 16,6](/visualstudio/releases/2019/release-notes-v16.6)nabízí Visual Studio 2019 nové prostředí Git, které usnadňuje použití Gitu z integrovaného vývojového prostředí (IDE). Git je nejčastěji používaný moderní systém správy verzí, takže bez ohledu na to, jestli jste profesionální vývojář, nebo pokud se naučíte, jak kód, může být Git pro vás velmi užitečné.
+Git je teď výchozím prostředím pro řízení verzí v aplikaci Visual Studio 2019. Od [verze 16,6](/visualstudio/releases/2019/release-notes-v16.6)jsme pracovali na vytvoření sady funkcí a na základě vašich názorů na ni se bude iterace provádět. Nové prostředí Git je ve výchozím nastavení zapnuté pro všechny s vydáním [verze 16,8](/visualstudio/releases/2019/release-notes/).
 
 > [!TIP]
-> Pokud s Git začínáte, https://git-scm.com/ je web dobrým místem, kde začít. Tam najdete oblíbenou online knihu, videa o základech Git a tahák listy.
+> Git je nejpoužívanějším systémem pro správu verzí, takže ať už jste profesionální vývojář, nebo pokud se naučíte, jak kód, může být Git pro vás velmi užitečné. Pokud s Git začínáte, https://git-scm.com/ je web dobrým místem, kde začít. Tam najdete tahák listy, oblíbené online knihy a videa o základech Git.
 
-## <a name="how-to-start-using-git-in-visual-studio"></a>Jak začít používat Git v aplikaci Visual Studio
+## <a name="how-to-use-git-in-visual-studio"></a>Jak používat Git v aplikaci Visual Studio
 
-Chcete-li přepnout nové prostředí Git, v nabídce **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** a zaškrtněte políčko **nové prostředí pro uživatele git** .
-
-:::image type="content" source="media/git-opt-new-user-experience.png" alt-text="Snímek obrazovky oddílu s funkcemi verze Preview v dialogovém okně Možnosti v aplikaci Visual Studio ":::
-
-Existují tři způsoby, jak použít Git v aplikaci Visual Studio 2019:
+Existují tři způsoby, jak začít používat Git se sadou Visual Studio 2019 k zajištění vyšší produktivity:
 
 - [Otevřete existující úložiště Git](#open-an-existing-local-repository). Pokud je váš kód již na vašem počítači, můžete jej otevřít pomocí **souboru**  >  **otevřít**  >  **projekt/řešení** (nebo **složky** ) a Visual Studio automaticky detekuje, zda má inicializované úložiště Git.
 - [Vytvořte nové úložiště Git](#create-a-new-git-repository). Pokud váš kód není přidružen k Gitu, můžete vytvořit nové úložiště Git.
@@ -184,16 +180,23 @@ Chcete-li přizpůsobit a přizpůsobit nastavení Gitu na úrovni úložiště 
 
 :::image type="content" source="media/git-options-settings.png" alt-text="Snímek obrazovky dialogového okna Možnosti, kde můžete zvolit nastavení přizpůsobení a přizpůsobení v integrovaném vývojovém prostředí sady Visual Studio ":::
 
+## <a name="how-to-use-legacy-team-explorer-experience-in-visual-studio"></a>Jak používat starší verze Team Explorer v prostředí Visual Studio
+
+Nové prostředí Git je výchozím systémem pro správu verzí v aplikaci Visual Studio 2019 od [verze 16,8](/visualstudio/releases/2019/release-notes/) a vyšší. Pokud je však chcete vypnout, můžete. Přejděte do části **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** a potom zaškrtněte políčko **nové uživatelské prostředí Git** , které vás přepne zpět na starší verzi Team Explorer.
+
+:::image type="content" source="media/git-opt-new-user-experience.png" alt-text="Snímek obrazovky oddílu s funkcemi verze Preview v dialogovém okně Možnosti v aplikaci Visual Studio ":::
+
 ## <a name="whats-next"></a>Kam dál
 
-Zůstat vyladěné; tuto stránku aktualizujeme, protože budeme dál zdokonalovat nové prostředí Git v aplikaci Visual Studio 2019.
+I když je nové prostředí Git ve výchozím nastavení v aplikaci Visual Studio 2019 [verze 16,8](/visualstudio/releases/2019/release-notes/), budeme k vylepšení prostředí dál přidávat nové funkce. Pokud chcete zaregistrovat nové aktualizace prostředí Git ve verzi Preview, můžete si ho stáhnout a nainstalovat na stránce [Preview sady Visual Studio](https://aka.ms/vspreview/) .
 
 > [!IMPORTANT]
 > Pokud máte k dispozici nějaký návrh, dejte nám prosím nějaké informace. Oceňujeme vám možnost zapojit se do rozhodnutí o návrhu prostřednictvím portálu [**komunity vývojářů**](https://aka.ms/vs-suggest) .
 
 ## <a name="see-also"></a>Viz také
 
-- [Nové video o prostředí Git](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience) na webu Channel 9 a [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be)
+- [Spuštění nového prostředí Git](https://www.youtube.com/watch?v=UHrAg3iKoe0&t) na YouTube
+- Sada [nástrojů sady Visual Studio představuje nové video o prostředí Git](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience) na webu Channel 9 a na [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be) .
 - [Skvělé nové aktualizace prostředí Git v](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/) příspěvku na blogu sady Visual Studio
 - [Vylepšené prostředí Git v příspěvku na blogu sady Visual Studio 2019](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/)
 - [Zpráva k vydání verze pro Visual Studio 2019](/visualstudio/releases/2019/release-notes)

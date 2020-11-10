@@ -1,5 +1,7 @@
 ---
 title: Vytváření vyhledávacích tabulek v aplikacích modelu Windows Forms
+description: Přečtěte si, jak vytvořit vyhledávací tabulky v aplikacích model Windows Forms. Vyhledávací tabulka popisuje ovládací prvky, které jsou svázané se dvěma tabulkami s relačními daty.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9a1ae368b7d2bf8548bf78a6a9795e19206bc277
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d6ec8860d2c163d16e29d229203bb77abcdf65f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282654"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435192"
 ---
 # <a name="create-lookup-tables-in-windows-forms-applications"></a>Vytváření vyhledávacích tabulek v aplikacích modelu Windows Forms
 
@@ -28,7 +30,7 @@ Předpokládejme například tabulku `Orders` v prodejní databázi. Každý z�
 
 ## <a name="to-databind-a-lookup-control"></a>Vytvoření datové vazby ovládacího prvku vyhledávání
 
-1. Otevřete projekt a otevřete okno **zdroje dat** výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat**systému Windows.
+1. Otevřete projekt a otevřete okno **zdroje dat** výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat** systému Windows.
 
     > [!NOTE]
     > Vyhledávací tabulky vyžadují, aby v okně **zdroje dat** byly k dispozici dvě související tabulky nebo objekty. Další informace najdete v tématu [relace v datových sadách](relationships-in-datasets.md).

@@ -1,5 +1,7 @@
 ---
 title: Ukládání dat pomocí metod TableAdapter DBDirect
+description: V tomto návodu spouštějte příkazy SQL přímo proti databázi pomocí metod DBDirect TableAdapter.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 77d7aa0859ee383258f80dfd74f36d584790e464
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d79b2081e2d30d77ae3507884b44421f0f14bae
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281606"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434568"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>Ukládání dat pomocí metod TableAdapter DBDirect
 
@@ -43,7 +45,7 @@ V tomto návodu se naučíte:
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio**můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio** můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
 
 2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
@@ -67,7 +69,7 @@ Prvním krokem je vytvoření **aplikace model Windows Forms**.
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **TableAdapterDbDirectMethodsWalkthrough**a klikněte na **tlačítko OK**.
+4. Pojmenujte projekt **TableAdapterDbDirectMethodsWalkthrough** a klikněte na **tlačítko OK**.
 
      Projekt **TableAdapterDbDirectMethodsWalkthrough** je vytvořen a přidán do **Průzkumník řešení**.
 
@@ -83,7 +85,7 @@ Tento krok používá **Průvodce konfigurací zdroje dat** k vytvoření zdroje
 
 2. V okně **zdroje dat** vyberte možnost **Přidat nový zdroj dat** a spusťte **Průvodce konfigurací zdroje dat**.
 
-3. Na obrazovce **Vybrat typ zdroje dat** vyberte **databáze**a pak vyberte **Další**.
+3. Na obrazovce **Vybrat typ zdroje dat** vyberte **databáze** a pak vyberte **Další**.
 
 4. Na obrazovce **Vybrat datové připojení** proveďte jednu z následujících akcí:
 
@@ -113,11 +115,11 @@ Chcete-li vytvořit ovládací prvky vázané na data ve formuláři Windows, p�
 
 ### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Chcete-li přidat tlačítka, která budou volat jednotlivé metody DbDirect TableAdapter
 
-1. Přetáhněte tři <xref:System.Windows.Forms.Button> ovládací prvky z **panelu nástrojů** na **Form1** (pod **RegionDataGridView**).
+1. Přetáhněte tři <xref:System.Windows.Forms.Button> ovládací prvky z **panelu nástrojů** na **Form1** (pod **RegionDataGridView** ).
 
 2. Pro každé tlačítko nastavte následující vlastnosti **názvu** a **textu** .
 
-    |Název|Text|
+    |Name (Název)|Text|
     |----------|----------|
     |`InsertButton`|**Insert**|
     |`UpdateButton`|**Aktualizace**|

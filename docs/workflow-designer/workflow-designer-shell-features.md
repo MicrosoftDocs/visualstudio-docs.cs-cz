@@ -1,5 +1,7 @@
 ---
 title: Funkce prostředí návrháře postupu provádění
+description: Přečtěte si, jak funkce Návrhář postupu provádění Shell obsahují řadu tlačítek pro správu aktuálního zobrazení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a6b192eae3340c6a3d84bb3ccbcce7cbf8d65b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 239a879fbffe67bf54149ba29e98edcd3428410d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816381"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433645"
 ---
 # <a name="workflow-designer-shell-features"></a>Funkce prostředí návrháře postupu provádění
 

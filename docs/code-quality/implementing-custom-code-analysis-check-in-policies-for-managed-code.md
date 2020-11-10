@@ -1,6 +1,8 @@
 ---
 title: Vlastní zásady vrácení se změnami analýzy kódu pro spravovaný kód
 ms.date: 11/04/2016
+description: Přečtěte si, jak vytvořit přizpůsobenou zásadu pro vrácení se změnami analýzy kódu. Podívejte se, jak zajistit, aby byl spravovaný kód sady Visual Studio v souladu se zásadami projektu Azure DevOps.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 f1_keywords:
 - vs.code.analysis.selecttfsrulesets
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1404386445d24284a2231ed557a65568fdb1ba2b
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 567b6d2fe8906fd1a7a07ab73835439f8a9a9955
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928014"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435421"
 ---
 # <a name="implement-custom-code-analysis-check-in-policies-for-managed-code"></a>Implementace vlastních zásad vracení zpět se změnami analýzy kódu pro spravovaný kód
 
@@ -42,11 +44,11 @@ Pokud chcete vytvořit vlastní sadu pravidel pro projekt Azure DevOps, nejdří
 
 2. V podokně **složky** klikněte pravým tlačítkem myši na projekt a potom klikněte na možnost **Nová složka**.
 
-3. V hlavním podokně Správa zdrojového kódu klikněte pravým tlačítkem myši na **Nová složka**, klikněte na příkaz **Přejmenovat**a zadejte název složky sady pravidel.
+3. V hlavním podokně Správa zdrojového kódu klikněte pravým tlačítkem myši na **Nová složka** , klikněte na příkaz **Přejmenovat** a zadejte název složky sady pravidel.
 
 ### <a name="to-create-the-check-in-policy-rule-set"></a>Vytvoření sady pravidel zásad vracení se změnami
 
-1. V nabídce **soubor** přejděte na příkaz **Nový**a poté klikněte na možnost **soubor**.
+1. V nabídce **soubor** přejděte na příkaz **Nový** a poté klikněte na možnost **soubor**.
 
 2. V seznamu **kategorie** klikněte na **Obecné**.
 
@@ -56,7 +58,7 @@ Pokud chcete vytvořit vlastní sadu pravidel pro projekt Azure DevOps, nejdří
 
 ### <a name="to-add-the-rule-set-file-to-version-control"></a>Přidání souboru sady pravidel do správy verzí
 
-1. V **Průzkumník správy zdrojových souborů**klikněte pravým tlačítkem na novou složku a pak klikněte na **Přidat položky do složky**.
+1. V **Průzkumník správy zdrojových souborů** klikněte pravým tlačítkem na novou složku a pak klikněte na **Přidat položky do složky**.
 
      Další informace najdete v tématu [Git a Azure Repos](/azure/devops/repos/git/overview?view=vsts&preserve-view=true).
 
@@ -66,18 +68,18 @@ Pokud chcete vytvořit vlastní sadu pravidel pro projekt Azure DevOps, nejdří
 
 3. V okně Podrobnosti o **Průzkumník správy zdrojových souborů** klikněte pravým tlačítkem myši na název souboru a potom klikněte na možnost **vrátit se změnami do stavu nedokončené změny**.
 
-4. V dialogovém okně **vrácení se změnami** máte možnost Přidat komentář a potom kliknout na možnost **vrátit se**změnami.
+4. V dialogovém okně **vrácení se změnami** máte možnost Přidat komentář a potom kliknout na možnost **vrátit se** změnami.
 
     > [!NOTE]
-    > Pokud jste již nakonfigurovali zásadu vrácení se změnami analýzy kódu pro váš projekt Azure DevOps a vybrali jste možnost **vykonat vrácení se změnami, která bude obsahovat pouze soubory, které jsou součástí aktuálního řešení**, dojde k aktivaci upozornění na selhání zásad. V dialogovém okně selhání zásady vyberte možnost **přepsat selhání zásad a pokračovat v vrácení se změnami**. Přidejte požadovaný komentář a potom klikněte na tlačítko **OK**.
+    > Pokud jste již nakonfigurovali zásadu vrácení se změnami analýzy kódu pro váš projekt Azure DevOps a vybrali jste možnost **vykonat vrácení se změnami, která bude obsahovat pouze soubory, které jsou součástí aktuálního řešení** , dojde k aktivaci upozornění na selhání zásad. V dialogovém okně selhání zásady vyberte možnost **přepsat selhání zásad a pokračovat v vrácení se změnami**. Přidejte požadovaný komentář a potom klikněte na tlačítko **OK**.
 
 ### <a name="to-specify-the-rule-set-file-as-the-check-in-policy"></a>Určení souboru sady pravidel jako zásady vracení se změnami
 
-1. V nabídce **tým** přejděte na **nastavení projektu**a pak klikněte na **Správa zdrojového kódu**.
+1. V nabídce **tým** přejděte na **nastavení projektu** a pak klikněte na **Správa zdrojového kódu**.
 
-2. Klikněte na **Zásady vracení se změnami**a pak klikněte na **Přidat**.
+2. Klikněte na **Zásady vracení se změnami** a pak klikněte na **Přidat**.
 
-3. V seznamu **zásad vracení se změnami** dvakrát klikněte na **Analýza kódu**a ujistěte se, že je zaškrtnuté políčko **vykonat analýzu kódu pro spravovaný kód** .
+3. V seznamu **zásad vracení se změnami** dvakrát klikněte na **Analýza kódu** a ujistěte se, že je zaškrtnuté políčko **vykonat analýzu kódu pro spravovaný kód** .
 
 4. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Select Rule Set from Source Control>** .
 
@@ -88,7 +90,7 @@ Pokud chcete vytvořit vlastní sadu pravidel pro projekt Azure DevOps, nejdří
      **$/** `TeamProjectName` **/** `VersionControlPath`
 
     > [!NOTE]
-    > Cestu můžete zkopírovat pomocí jednoho z následujících postupů v **Průzkumník správy zdrojových souborů**:
+    > Cestu můžete zkopírovat pomocí jednoho z následujících postupů v **Průzkumník správy zdrojových souborů** :
 
     - V podokně **složky** klikněte na složku, která obsahuje soubor sady pravidel. Zkopírujte cestu správy verzí složky, která se zobrazí v poli **zdroj** , a zadejte název souboru sady pravidel ručně.
 
@@ -104,7 +106,7 @@ V dialogovém okně Vlastnosti projektu kódu zadáte sadu pravidel pro vrácen�
 
    Tento krok můžete provést v **Průzkumník správy zdrojových souborů** tak, že kliknete pravým tlačítkem na složku sady pravidel a pak kliknete na **načíst nejnovější verzi**.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
 
 3. **Klikněte na analýza kódu**.
 

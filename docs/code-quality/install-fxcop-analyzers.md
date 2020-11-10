@@ -1,6 +1,8 @@
 ---
 title: Instalace analyzátorů FxCop
 ms.date: 08/03/2018
+description: Přečtěte si, jak nainstalovat analyzátory FxCop v aplikaci Visual Studio. Podívejte se, jak nainstalovat tyto analyzátory buď jako balíček NuGet, nebo jako rozšíření VSIX.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
 - fxcop analyzers
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d789299212ec7420f40135dd655056f16b6e4f35
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e9950941680f9e251fe9c589a1df1d0314f149a7
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88893343"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435518"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>Instalace analyzátorů FxCop v aplikaci Visual Studio
 
@@ -28,13 +30,13 @@ Tyto analyzátory FxCop můžete nainstalovat buď jako balíček NuGet, nebo ja
 
 V aplikaci Visual Studio 2019 verze 16,3 a novější můžete balíček NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) nainstalovat přímo ze stránky vlastností analýzy kódu projektu:
 
-1. Klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení**, vyberte **vlastnosti**a pak vyberte kartu **Analýza kódu** .
+1. Klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** , vyberte **vlastnosti** a pak vyberte kartu **Analýza kódu** .
 
    ![Instalace balíčku FxCop Analyzer z vlastností stránky v aplikaci Visual Studio](media/install-fxcop-properties-page.png)
 
 2. Vyberte **Install** (Nainstalovat).
 
-   Sada Visual Studio nainstaluje nejnovější verzi balíčku Microsoft. CodeAnalysis. FxCopAnalyzers. Sestavení se zobrazí v **Průzkumník řešení** v **References**části  >  **analyzátory**odkazů.
+   Sada Visual Studio nainstaluje nejnovější verzi balíčku Microsoft. CodeAnalysis. FxCopAnalyzers. Sestavení se zobrazí v **Průzkumník řešení** v **References** části  >  **analyzátory** odkazů.
 
    ![Uzel analyzátorů v Průzkumník řešení](media/solution-explorer-analyzers-node.png)
 
@@ -53,7 +55,7 @@ Pokud používáte starší verzi sady Visual Studio 2019, nainstalujte balíče
    >
    > ![Stránka NuGet.org zobrazující příkaz konzoly Správce balíčků](media/nuget-package-manager-command.png)
 
-   Jsou nainstalována sestavení analyzátoru a jsou uvedena v **Průzkumník řešení** v části **References** > **analyzátory**odkazů.
+   Jsou nainstalována sestavení analyzátoru a jsou uvedena v **Průzkumník řešení** v části **References** > **analyzátory** odkazů.
 
 ::: moniker-end
 
@@ -139,11 +141,11 @@ Rozšíření [Microsoft Code Analysis 2019](https://marketplace.visualstudio.co
 
    Po jedné nebo dvou minutách se instalace dokončí.
 
-7. Vyberte **Zavřít**a pak znovu otevřít Visual Studio.
+7. Vyberte **Zavřít** a pak znovu otevřít Visual Studio.
 
 ::: moniker range="vs-2017"
 
-Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **Tools**možnost  >  **rozšíření a aktualizace**nástroje. V dialogovém okně **rozšíření a aktualizace** vyberte **nainstalovanou** kategorii na levé straně a potom vyhledejte rozšíření podle názvu.
+Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **Tools** možnost  >  **rozšíření a aktualizace** nástroje. V dialogovém okně **rozšíření a aktualizace** vyberte **nainstalovanou** kategorii na levé straně a potom vyhledejte rozšíření podle názvu.
 
 ::: moniker-end
 

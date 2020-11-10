@@ -1,5 +1,7 @@
 ---
 title: Návrhář aktivity Návrhář postupu provádění – náhrada
+description: Přečtěte si informace o nástroji pro vytváření kompenzací a o tom, jak můžete pomocí návrháře aktivity kompenzace vytvořit a nakonfigurovat aktivitu kompenzace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5332b6d9ec087f4e1b127d93563dc0f2fe5fdd15
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96ae76bac3f6163e8b4434878017df07f1341828
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876148"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434321"
 ---
 # <a name="compensate-activity-designer"></a>Návrhář aktivity Compensate
 
@@ -29,7 +31,7 @@ Návrhář aktivity **kompenzace** se používá k vytvoření a konfiguraci <xr
 
 ### <a name="using-the-compensate-activity-designer"></a>Pomocí návrháře aktivity kompenzace
 
-Návrhář aktivity **kompenzace** lze najít v kategorii **transakce** sady **nástrojů**. Chcete-li otevřít **sadu nástrojů**, vyberte kartu **panelu nástrojů** na levé straně Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
+Návrhář aktivity **kompenzace** lze najít v kategorii **transakce** sady **nástrojů**. Chcete-li otevřít **sadu nástrojů** , vyberte kartu **panelu nástrojů** na levé straně Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
 
 Návrhář aktivity **kompenzace** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou umístěny aktivity, například dovnitř <xref:System.Activities.Statements.Sequence> . Vyřazení návrháře aktivit vytvoří <xref:System.Activities.Statements.Compensate> aktivitu s výchozí <xref:System.Activities.Activity.DisplayName%2A> kompenzací. <xref:System.Activities.Activity.DisplayName%2A>Hodnotu lze upravit v záhlaví návrháře aktivity **kompenzace** nebo v poli **DisplayName** v mřížce vlastností.
 
@@ -39,8 +41,8 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.Cancell
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje nepovinný popisný název <xref:System.Activities.Statements.Compensate> aktivity. Výchozí hodnota je kompenzovat.|
-|<xref:System.Activities.Statements.Compensate.Target%2A>|Ano|Určuje <xref:System.Activities.InArgument%601> , který obsahuje <xref:System.Activities.Statements.CompensationToken> pro tuto <xref:System.Activities.Statements.Compensate> aktivitu.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje nepovinný popisný název <xref:System.Activities.Statements.Compensate> aktivity. Výchozí hodnota je kompenzovat.|
+|<xref:System.Activities.Statements.Compensate.Target%2A>|Pravda|Určuje <xref:System.Activities.InArgument%601> , který obsahuje <xref:System.Activities.Statements.CompensationToken> pro tuto <xref:System.Activities.Statements.Compensate> aktivitu.|
 
 ## <a name="see-also"></a>Viz také
 

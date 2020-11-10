@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: ukládání dat pomocí transakce'
+description: Přečtěte si, jak uložit data pomocí transakce s nástroji datové sady v sadě Visual Studio. Data uložíte v transakci pomocí oboru názvů System. Transactions.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 40894adefb42d6de077a2e2812d26f90bc5f40dd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1cd112a1960078c72c575542525a5ecf6571b06
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281692"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434581"
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>Postupy: ukládání dat pomocí transakce
 
@@ -39,7 +41,7 @@ Chcete-li transakci vrátit zpět, vyvolejte výjimku před voláním <xref:Syst
 
 1. V nabídce **projekt** vyberte možnost **Přidat odkaz**.
 
-2. Na kartě **.NET** (**SQL Server** pro SQL Server projekty) vyberte **System. Transactions**a pak vyberte **OK**.
+2. Na kartě **.NET** ( **SQL Server** pro SQL Server projekty) vyberte **System. Transactions** a pak vyberte **OK**.
 
      Do projektu se přidá odkaz na *System.Transactions.dll* .
 

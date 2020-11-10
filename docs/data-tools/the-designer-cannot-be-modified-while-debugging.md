@@ -1,5 +1,7 @@
 ---
 title: Návrháře nemůžete změnit během ladění.
+description: Návrháře nelze upravovat v průběhu ladění. Zobrazit informace o této zprávě aplikace Visual Studio Návrhář relací objektů (Návrhář O/R).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: 487dafe4-d57c-4be1-9e3a-bb0a8699b2fa
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 483267e2e570efbcc3cc1842560014ee9ba73d11
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f83462328897a8a02b068507d0fa6903bad49367
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281445"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434828"
 ---
 # <a name="the-designer-cannot-be-modified-while-debugging"></a>Návrháře nemůžete změnit během ladění.
 

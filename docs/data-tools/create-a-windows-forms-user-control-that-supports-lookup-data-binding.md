@@ -1,5 +1,6 @@
 ---
 title: Použití vyhledávacích tabulek v datové vazbě – model Windows Forms
+description: Naučte se vytvořit uživatelský ovládací prvek model Windows Forms, který podporuje vazbu vyhledávacích dat, pomocí třídy LookupBindingPropertiesAttribute v aplikaci Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,16 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: fe2289a54dba0c3b3e34de54991e9b7cfbee4c93
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: de89839dd85f0f330356e1ade7d4658428ea3d3e
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037390"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435271"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-lookup-data-binding"></a>Vytvoření uživatelského ovládacího prvku modelu Windows Forms, který podporuje vazbu vyhledávacích dat
 
-Při zobrazování dat v model Windows Forms můžete zvolit existující ovládací prvky z **panelu nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou dostupné ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje rozhraní <xref:System.ComponentModel.LookupBindingPropertiesAttribute> . Ovládací prvky, které implementují, <xref:System.ComponentModel.LookupBindingPropertiesAttribute> mohou obsahovat tři vlastnosti, které mohou být vázány na data. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.ComboBox> .
+Při zobrazování dat v model Windows Forms můžete zvolit existující ovládací prvky z **panelu nástrojů** , nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou dostupné ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje rozhraní <xref:System.ComponentModel.LookupBindingPropertiesAttribute> . Ovládací prvky, které implementují, <xref:System.ComponentModel.LookupBindingPropertiesAttribute> mohou obsahovat tři vlastnosti, které mohou být vázány na data. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.ComboBox> .
 
 Další informace o vytváření ovládacích prvků naleznete v tématu [vývoj model Windows Formsch ovládacích prvků v době návrhu](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).
 
@@ -55,11 +56,11 @@ V tomto návodu se dozvíte, jak:
 
 - Vytvořte formulář pro zobrazení dat v novém ovládacím prvku.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio**můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio** můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
 
 2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
@@ -83,19 +84,19 @@ Prvním krokem je vytvoření projektu **aplikace model Windows Forms** .
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **LookupControlWalkthrough**a klikněte na **tlačítko OK**.
+4. Pojmenujte projekt **LookupControlWalkthrough** a klikněte na **tlačítko OK**.
 
      Vytvoří se projekt **LookupControlWalkthrough** a přidá se do **Průzkumník řešení**.
 
 ## <a name="add-a-user-control-to-the-project"></a>Přidat uživatelský ovládací prvek do projektu
 
-Tento návod vytvoří ovládací prvek vyhledávání z **uživatelského ovládacího prvku**, takže přidejte položku **uživatelského ovládacího prvku** do projektu **LookupControlWalkthrough** .
+Tento návod vytvoří ovládací prvek vyhledávání z **uživatelského ovládacího prvku** , takže přidejte položku **uživatelského ovládacího prvku** do projektu **LookupControlWalkthrough** .
 
 1. V nabídce **projekt** vyberte možnost **Přidat uživatelský ovládací prvek**.
 
 2. `LookupBox`Do oblasti **název** zadejte a pak klikněte na **Přidat**.
 
-     Ovládací prvek **LookupBox** je přidán do **Průzkumník řešení**a otevře se v návrháři.
+     Ovládací prvek **LookupBox** je přidán do **Průzkumník řešení** a otevře se v návrháři.
 
 ## <a name="design-the-lookupbox-control"></a>Návrh ovládacího prvku LookupBox
 

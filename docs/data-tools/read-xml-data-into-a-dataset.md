@@ -1,5 +1,7 @@
 ---
 title: Načtení dat XML do datové sady
+description: Čtení dat XML do datové sady. V tomto návodu vytvoříte aplikaci pro Windows, která načte data XML do datové sady.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6cceca336403bdd8907cf0e28e36387eb25a2402
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5e0c287565c001870f91f4912afad28864fe2ef
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281783"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434646"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>Načtení dat XML do datové sady
 
@@ -41,7 +43,7 @@ Vzhledem k tomu, že se tento návod zaměřuje na čtení dat XML do datové sa
 
 1. V nabídce **projekt** vyberte možnost **Přidat novou položku**.
 
-2. Vyberte **soubor XML**, název souboru **authors.xml**a pak vyberte **Přidat**.
+2. Vyberte **soubor XML** , název souboru **authors.xml** a pak vyberte **Přidat**.
 
    Soubor XML se načte do návrháře a je připravený k úpravám.
 
@@ -127,7 +129,7 @@ Uživatelské rozhraní pro tuto aplikaci se skládá z těchto možností:
 
 1. Otevřete `Form1` v návrhovém zobrazení.
 
-2. Z **panelu nástrojů**přetáhněte následující ovládací prvky do formuláře:
+2. Z **panelu nástrojů** přetáhněte následující ovládací prvky do formuláře:
 
     - Jeden <xref:System.Windows.Forms.DataGridView> ovládací prvek
 
@@ -141,20 +143,20 @@ Uživatelské rozhraní pro tuto aplikaci se skládá z těchto možností:
     |-------------|--------------|-------------|
     |`TextBox1`|**Multiline**|`true`|
     ||**Posuvníky**|**Svisle**|
-    |`Button1`|**Name**|`ReadXmlButton`|
+    |`Button1`|**Název**|`ReadXmlButton`|
     ||**Text**|`Read XML`|
-    |`Button2`|**Name**|`ShowSchemaButton`|
+    |`Button2`|**Název**|`ShowSchemaButton`|
     ||**Text**|`Show Schema`|
 
 ## <a name="create-the-dataset-that-receives-the-xml-data"></a>Vytvoření datové sady, která přijímá data XML
 
 V tomto kroku vytvoříte novou datovou sadu s názvem `authors` . Další informace o datových sadách naleznete v tématu [nástroje datové sady v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md).
 
-1. V **Průzkumník řešení**vyberte zdrojový soubor pro **Form1**a pak na panelu nástrojů **Průzkumník řešení** vyberte tlačítko **Návrhář zobrazení** .
+1. V **Průzkumník řešení** vyberte zdrojový soubor pro **Form1** a pak na panelu nástrojů **Průzkumník řešení** vyberte tlačítko **Návrhář zobrazení** .
 
 2. Na [kartě sada nástrojů data](../ide/reference/toolbox-data-tab.md)přetáhněte **datovou sadu** na **Form1**.
 
-3. V dialogovém okně **Přidat datovou sadu** vyberte **netypové datové sady**a pak vyberte **OK**.
+3. V dialogovém okně **Přidat datovou sadu** vyberte **netypové datové sady** a pak vyberte **OK**.
 
      **DataSet1.** se přidá do zásobníku komponent.
 
@@ -164,7 +166,7 @@ V tomto kroku vytvoříte novou datovou sadu s názvem `authors` . Další infor
 
 Tlačítko **číst XML** přečte soubor XML do datové sady. Poté nastaví vlastnosti <xref:System.Windows.Forms.DataGridView> ovládacího prvku, který jej sváže s datovou sadou.
 
-1. V **Průzkumník řešení**vyberte **Form1**a pak na panelu nástrojů **Průzkumník řešení** vyberte tlačítko **Návrhář zobrazení** .
+1. V **Průzkumník řešení** vyberte **Form1** a pak na panelu nástrojů **Průzkumník řešení** vyberte tlačítko **Návrhář zobrazení** .
 
 2. Vyberte tlačítko **číst XML** .
 
@@ -181,7 +183,7 @@ Tlačítko **číst XML** přečte soubor XML do datové sady. Poté nastaví vl
 
 Tlačítko **Zobrazit schéma** vytvoří <xref:System.IO.StringWriter> objekt, který je vyplněn schématem a je zobrazen v <xref:System.Windows.Forms.TextBox> ovládacím prvku.
 
-1. V **Průzkumník řešení**vyberte **Form1**a pak klikněte na tlačítko **Návrhář zobrazení** .
+1. V **Průzkumník řešení** vyberte **Form1** a pak klikněte na tlačítko **Návrhář zobrazení** .
 
 2. Vyberte tlačítko **Zobrazit schéma** .
 

@@ -1,6 +1,8 @@
 ---
 title: Sada pravidel Smíšená minimální pravidla
 ms.date: 11/04/2016
+description: Přečtěte si o sadě pravidel smíšeného minima Rules v sadě Visual Studio. Viz popisy pravidel pro projekty jazyka C++, které podporují modul CLR (Common Language Runtime).
+ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: bc8df61c-19af-40ab-a871-315807e5f4bf
 author: mikejo5000
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edacd898cc1deb0382dd8e8b4b048af895c3b579
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 5bb87da3cc668ba946c6ee607fa3be5a2c79cc32
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658461"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435323"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>Sada pravidel Smíšená minimální pravidla
 
@@ -21,7 +23,7 @@ Minimální pravidla Microsoft Mixed se zaměřují na nejdůležitější probl
 
 Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoříte pro projekty C++, které podporují modul CLR (Common Language Runtime).
 
-|Pravidlo|Description|
+|Pravidlo|Popis|
 |----------|-----------------|
 |[C6001](/cpp/code-quality/c6001)|Použití neinicializované paměti|
 |[C6011](/cpp/code-quality/c6011)|Přesměrování ukazatele null|
@@ -43,8 +45,8 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C6276](/cpp/code-quality/c6276)|Neplatné přetypování řetězce|
 |[C6277](/cpp/code-quality/c6277)|Neplatné volání funkce CreateProcess|
 |[C6284](/cpp/code-quality/c6284)|Neplatný argument objektu pro formátování funkce|
-|[C6290](/cpp/code-quality/c6290)|Logický operátor NOT a Priorita|
-|[C6291](/cpp/code-quality/c6291)|Logický operátor NOT ani Priorita|
+|[C6290](/cpp/code-quality/c6290)|Logical-Not priority Bitwise-And|
+|[C6291](/cpp/code-quality/c6291)|Logical-Not priority Bitwise-Or|
 |[C6302](/cpp/code-quality/c6302)|Neplatný argument řetězce znaků pro formátování funkce|
 |[C6303](/cpp/code-quality/c6303)|Neplatný argument řetězce s velkým znakem pro formátování funkce|
 |[C6305](/cpp/code-quality/c6305)|Neshoda s použitím velikosti a počtu|

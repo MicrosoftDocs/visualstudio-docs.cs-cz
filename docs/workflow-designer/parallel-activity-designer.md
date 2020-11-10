@@ -1,5 +1,7 @@
 ---
 title: Návrhář aktivity Návrhář postupu provádění – paralelní
+description: Přečtěte si o paralelní aktivitě a o tom, jak používat návrháře paralelních aktivit k souběžnému spuštění kolekce podřízených aktivit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f07dd02f682cd5c61d4d17099c1aeb76bb39bf8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8751c15e40658e7a901550eef3d86050da842cc7
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593158"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435596"
 ---
 # <a name="parallel-activity-designer"></a>Návrhář aktivity Parallel
 
@@ -25,7 +27,7 @@ Tato <xref:System.Activities.Statements.Parallel> aktivita provádí souběžnou
 
 <xref:System.Activities.Statements.Parallel>Aktivita ukládá své podřízené aktivity do <xref:System.Activities.Statements.Parallel.Branches%2A> kolekce. Tuto <xref:System.Activities.Statements.Parallel> aktivitu použijte místo aktivity, <xref:System.Activities.Statements.Sequence> Pokud některé z podřízených aktivit můžou přijít na nečinné.
 
-<xref:System.Activities.Statements.Parallel>Aktivita má <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> vlastnost, která obsahuje uživatelem zadanou Visual Basic výraz. <xref:System.Activities.Statements.Parallel>Aktivita vyhodnotí tuto vlastnost po dokončení každé větve. Pokud se vyhodnotí jako **true**, <xref:System.Activities.Statements.Parallel> aktivita se dokončí bez provedení ostatních větví. Pokud se <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> nevyhodnotí jako **true**, aktivita se <xref:System.Activities.Statements.Parallel> dokončí po dokončení všech jejích podřízených aktivit.
+<xref:System.Activities.Statements.Parallel>Aktivita má <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> vlastnost, která obsahuje uživatelem zadanou Visual Basic výraz. <xref:System.Activities.Statements.Parallel>Aktivita vyhodnotí tuto vlastnost po dokončení každé větve. Pokud se vyhodnotí jako **true** , <xref:System.Activities.Statements.Parallel> aktivita se dokončí bez provedení ostatních větví. Pokud se <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> nevyhodnotí jako **true** , aktivita se <xref:System.Activities.Statements.Parallel> dokončí po dokončení všech jejích podřízených aktivit.
 
 ### <a name="using-the-parallel-activity-designer"></a>Použití návrháře paralelní aktivity
 
@@ -41,9 +43,9 @@ V následující tabulce jsou uvedeny vlastnosti paralelní aktivity a popisuje,
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje popisný zobrazovaný název návrháře aktivit v hlavičce. Výchozí hodnota je **Parallel**. Hodnota může být volitelně upravena v mřížce **vlastnosti** nebo přímo v hlavičce návrháře aktivit.|
-|<xref:System.Activities.Statements.Parallel.Branches%2A>|Ano|Obsahuje kolekci podřízených aktivit, které mají být provedeny.|
-|<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|Ne|Vyhodnoceno po dokončení větve. Pokud se vyhodnotí jako **true**, naplánovaných nevyřízených větví se zruší. Pokud tato vlastnost není nastavená nebo se vyhodnotí jako **false**, aktivita se dokončí po dokončení všech jejích podřízených aktivit. Výchozí hodnota je **null**.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje popisný zobrazovaný název návrháře aktivit v hlavičce. Výchozí hodnota je **Parallel**. Hodnota může být volitelně upravena v mřížce **vlastnosti** nebo přímo v hlavičce návrháře aktivit.|
+|<xref:System.Activities.Statements.Parallel.Branches%2A>|Pravda|Obsahuje kolekci podřízených aktivit, které mají být provedeny.|
+|<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|Nepravda|Vyhodnoceno po dokončení větve. Pokud se vyhodnotí jako **true** , naplánovaných nevyřízených větví se zruší. Pokud tato vlastnost není nastavená nebo se vyhodnotí jako **false** , aktivita se dokončí po dokončení všech jejích podřízených aktivit. Výchozí hodnota je **null**.|
 
 ## <a name="see-also"></a>Viz také
 

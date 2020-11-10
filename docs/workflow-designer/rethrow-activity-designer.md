@@ -1,5 +1,7 @@
 ---
 title: Návrhář aktivity Rethrow Návrhář postupu provádění
+description: Přečtěte si o aktivitě Rethrow a o tom, jak pomocí návrháře aktivity opětovného vyvolání vytvořit a nakonfigurovat aktivitu opětovného vyvolání.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cb73a674e702d54f970c5dea7ec051f100382c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9195fc95ac905213b048aa16882ea6584adacd33
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114749"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434113"
 ---
 # <a name="rethrow-activity-designer"></a>Návrhář aktivity Rethrow
 
@@ -35,7 +37,7 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.Rethrow
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje nepovinný popisný název <xref:System.Activities.Statements.Rethrow> aktivity. Výchozí hodnota je znovu vyvolána.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje nepovinný popisný název <xref:System.Activities.Statements.Rethrow> aktivity. Výchozí hodnota je znovu vyvolána.|
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,5 +1,7 @@
 ---
 title: Návrhář aktivity Návrhář postupu provádění-WriteLine
+description: Přečtěte si o aktivitě WriteLine a o tom, jak můžete pomocí návrháře aktivity WriteLine vytvořit a nakonfigurovat aktivitu WriteLine.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e3b4da69a2d9154f36e42d3b20657e204767872
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03aedaf522924266b0951ec189e96fb3f83c142c
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593021"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433658"
 ---
 # <a name="writeline-activity-designer"></a>Návrhář aktivity WriteLine
 
@@ -35,9 +37,9 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.WriteLi
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Popisný název <xref:System.Activities.Statements.WriteLine> aktivity Výchozí hodnota je WriteLine. I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je vhodné použít jeden.|
-|<xref:System.Activities.Statements.WriteLine.Text%2A>|Ne|Text, který se má zapsat Chcete-li nastavit vlastnost, zadejte výraz Visual Basic do **textového** pole v Návrháři aktivity **WriteLine** nebo v mřížce vlastností.|
-|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|Ne|<xref:System.IO.TextWriter>Do které <xref:System.Activities.Statements.WriteLine> zapisuje <xref:System.Activities.Statements.WriteLine.Text%2A> . Výchozím nastavením je konzola.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Popisný název <xref:System.Activities.Statements.WriteLine> aktivity Výchozí hodnota je WriteLine. I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je vhodné použít jeden.|
+|<xref:System.Activities.Statements.WriteLine.Text%2A>|Nepravda|Text, který se má zapsat Chcete-li nastavit vlastnost, zadejte výraz Visual Basic do **textového** pole v Návrháři aktivity **WriteLine** nebo v mřížce vlastností.|
+|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|Nepravda|<xref:System.IO.TextWriter>Do které <xref:System.Activities.Statements.WriteLine> zapisuje <xref:System.Activities.Statements.WriteLine.Text%2A> . Výchozím nastavením je konzola.|
 
 ## <a name="see-also"></a>Viz také
 

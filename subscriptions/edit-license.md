@@ -7,12 +7,12 @@ ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
 ms.date: 11/09/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci upravovat přiřazení předplatného.
-ms.openlocfilehash: 785bad481e4329647582d1f441988b1cd83a055a
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 0f1ec9c9aa63b5bd877e13f112964f7d74a4b5af
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382491"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433554"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Upravit přiřazení předplatných sady Visual Studio
 Jako správce předplatného můžete provádět změny v předplatných přiřazených jednotlivcům ve vaší organizaci.  Tento článek popisuje typy změn, které lze provést, a poskytuje potřebné kroky.
@@ -39,6 +39,8 @@ Podívejte se na toto video nebo si přečtěte, kde se dozvíte, jak upravit v�
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vkAF]
 
+> [!NOTE]
+> V šabloně neměňte identifikátory GUID předplatného. Přečtěte si prosím náš článek o [přiřazování konkrétních identifikátorů GUID předplatného](assign-guid.md).
 
 1. Chcete-li upravit více předplatitelů najednou, přejděte na kartu předplatitelé. Na pásu karet nahoře klikněte na **Hromadná úprava**.
 
@@ -46,7 +48,7 @@ Podívejte se na toto video nebo si přečtěte, kde se dozvíte, jak upravit v�
    > [!div class="mx-imgBorder"]
    > ![Úprava seznamu hromadných úprav pro export licencí](_img/edit-license/edit-license-bulk-edit-export.png "Kliknutím na exportovat tento Excel vytvořte seznam aktuálních předplatných.")
 
-3. Potom uložte soubor místně, abyste ho mohli snadno najít a provést potřebné změny před jeho odesláním. Aby se zajistilo úspěšné nahrání, neupravujte v souboru hromadného úprav **úroveň předplatného nebo identifikátor GUID předplatného** , což způsobí selhání nahrávání.
+3. Potom uložte soubor místně, abyste ho mohli snadno najít a provést potřebné změny před jeho odesláním. 
 
 4. Vraťte se na portál pro správu předplatných sady Visual Studio a v dialogovém okně hromadné úpravy klikněte na **Procházet**. Vyberte excelový soubor, který jste uložili, a klikněte na **OK**. Na obrazovce se zobrazí průběh nahrávání.
    > [!div class="mx-imgBorder"]

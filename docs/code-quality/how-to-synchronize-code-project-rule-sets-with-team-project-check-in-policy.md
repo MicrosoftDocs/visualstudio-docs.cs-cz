@@ -1,6 +1,8 @@
 ---
 title: Synchronizace sad pravidel projektu se zásadou vrácení se změnami
 ms.date: 11/04/2016
+description: Naučte se, jak synchronizovat sadu pravidel projektu Visual Studio Code se zásadou vrácení se změnami projektu Azure DevOps.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.selecttfsruleset
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e27987f7fa298ddcedf52a9f01a80f57d3d329f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 913860538fe7f9da1514d0e51d23bb3ea48c3b66
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371778"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434685"
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Postupy: synchronizace sady pravidel projektu kódu se zásadou vrácení se změnami projektu Azure DevOps
 
@@ -31,7 +33,7 @@ Synchronizujete nastavení analýzy kódu pro projekty kódu se zásadou vrácen
 
 ## <a name="to-specify-a-microsoft-standard-rule-set"></a>Určení standardní sady pravidel společnosti Microsoft
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
 
 2. Klikněte na **Analýza kódu**.
 
@@ -51,7 +53,7 @@ Synchronizujete nastavení analýzy kódu pro projekty kódu se zásadou vrácen
 
 1. V případě potřeby proveďte operaci získat v souboru sady pravidel, který určuje zásadu vrácení se změnami.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
 
 3. Klikněte na **Analýza kódu**.
 

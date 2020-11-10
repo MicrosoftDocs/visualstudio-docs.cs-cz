@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8c4a1effcf61348d2f2267fb38164fd166f7d48
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 45fc0a58262a533416f630ede795d0060f9fc909
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382968"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434490"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Nasazení aplikace do složky, služby IIS, Azure nebo jiného cíle
 
@@ -147,19 +147,29 @@ Další informace najdete v následujících článcích:
 
 ## <a name="folder"></a>Složka
 
-Nasazení do systému souborů znamená jednoduše zkopírovat soubory aplikace do konkrétní složky ve vašem počítači. Tento postup se nejčastěji používá pro účely testování nebo pro nasazení aplikace pro použití v omezeném počtu lidí, pokud počítač používá také server. Pokud je cílová složka sdílena v síti, pak nasazení do systému souborů může zpřístupnit soubory webové aplikace ostatním uživatelům, kteří je pak mohli nasadit na konkrétní servery.
+Nasazení do systému souborů znamená kopírování souborů aplikace do konkrétní složky na vašem počítači. Nasazení do složky se nejčastěji používá pro účely testování nebo pro nasazení aplikace pro použití v omezeném počtu lidí, pokud počítač používá taky Server. Pokud je cílová složka sdílena v síti, pak nasazení do systému souborů může zpřístupnit soubory webové aplikace ostatním uživatelům, kteří je pak mohli nasadit na konkrétní servery.
+::: moniker range=">=vs-2019"
+Počínaje sadou Visual Studio 2019 16,8 obsahuje cíl složky možnost publikování aplikace .NET pro Windows pomocí technologie ClickOnce.
 
+Pokud chcete publikovat rozhraní .NET Core 3,1 nebo novější, aplikace pro Windows s ClickOnce, přečtěte si téma [nasazení aplikace .NET pro Windows pomocí technologie ClickOnce](quickstart-deploy-using-clickonce-folder.md).
+::: moniker-end
 Všechny místní počítače, na kterých běží server, můžou aplikaci zpřístupnit přes Internet nebo intranet v závislosti na tom, jak je nakonfigurovaná, a sítích, ke kterým jsou připojené. (Pokud počítač připojujete přímo k Internetu, buďte obzvláště opatrní při ochraně před externími bezpečnostními hrozbami.) Vzhledem k tomu, že tyto počítače spravujete, budete mít plnou kontrolu nad tím, jak softwarové, tak hardwarové konfigurace.
 
-Všimněte si, že pokud z nějakého důvodu (například přístup k počítači) nemůžete používat cloudové služby, jako je Azure App Service nebo Azure Virtual Machines, můžete [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) použít ve svém vlastním datovém centru. Azure Stack umožňuje spravovat a používat výpočetní prostředky prostřednictvím Azure App Service a Azure Virtual Machines, a přitom přitom udržuje vše v místním prostředí.
+Pokud z nějakého důvodu (například přístup k počítači) nemůžete používat cloudové služby, jako je Azure App Service nebo Azure Virtual Machines, můžete [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) použít ve svém vlastním datovém centru. Azure Stack umožňuje spravovat a používat výpočetní prostředky prostřednictvím Azure App Service a Azure Virtual Machines, a přitom přitom udržuje vše v místním prostředí.
 
 ### <a name="when-to-choose-file-system-deployment"></a>Kdy zvolit nasazení systému souborů
 
 - Aplikaci musíte nasadit jenom do sdílené složky, ze které ji ostatní nasadí na různé servery.
+::: moniker range=">=vs-2019"
+- Chcete nasadit aplikaci .NET pro Windows pomocí technologie ClickOnce
+::: moniker-end
 - Potřebujete pouze místní testovací nasazení.
 - Chcete prošetřit a potenciálně upravit soubory aplikace nezávisle, než je odešlete do jiného cíle nasazení.
 
 Další informace najdete v tématu [rychlý Start – nasazení do místní složky](quickstart-deploy-to-local-folder.md).
+::: moniker range=">=vs-2019"
+Další informace o nasazení aplikace .NET pro Windows pomocí technologie ClickOnce naleznete v tématu [nasazení aplikace .NET pro Windows pomocí technologie ClickOnce](quickstart-deploy-using-clickonce-folder.md).
+::: moniker-end
 
 Další nápovědu k výběru nastavení najdete v následujících tématech:
 
@@ -171,7 +181,7 @@ Další nápovědu k výběru nastavení najdete v následujících tématech:
 
 Server FTP/FTPS umožňuje nasazení aplikace na jiný server než Azure. Může se nasadit na systém souborů nebo na jiný server (Internet nebo intranet), ke kterému máte přístup, včetně těch, které jsou k dispozici v jiných cloudových službách. Může pracovat s nasazením webu (soubory nebo. ZIP) a FTP.
 
-Při volbě serveru FTP/FTPS vás Visual Studio vyzve k zadání názvu profilu a následnému shromáždění dalších informací o **připojení** , včetně cílového serveru nebo umístění, názvu lokality a přihlašovacích údajů. Na kartě **Nastavení** můžete řídit následující chování:
+Při volbě serveru FTP/FTPS vás Visual Studio vyzve k zadání názvu profilu a pak shromáždí další informace o **připojení** , včetně cílového serveru nebo umístění, názvu lokality a přihlašovacích údajů. Na kartě **Nastavení** můžete řídit následující chování:
 
 - Konfigurace, kterou chcete nasadit.
 - Zda odebrat existující soubory z cílového umístění.
@@ -190,7 +200,7 @@ V aplikaci Visual Studio můžete vytvořit libovolný počet profilů nasazení
 
 Webový server služby IIS umožňuje nasazení aplikace na jiný webový server než Azure. Může se nasadit na server IIS (Internet nebo intranet), ke kterému máte přístup, včetně těch, které jsou k dispozici v jiných cloudových službách. Může pracovat s Nasazení webu nebo balíčkem Nasazení webu.
 
-Při volbě webového serveru služby IIS vás aplikace Visual Studio vyzve k zadání názvu profilu a následnému shromáždění dalších informací o **připojení** , včetně cílového serveru nebo umístění, názvu lokality a přihlašovacích údajů. Na kartě **Nastavení** můžete řídit následující chování:
+Při výběru webového serveru služby IIS vás aplikace Visual Studio vyzve k zadání názvu profilu a následnému shromažďování dalších informací o **připojení** , včetně cílového serveru nebo umístění, názvu lokality a přihlašovacích údajů. Na kartě **Nastavení** můžete řídit následující chování:
 
 - Konfigurace, kterou chcete nasadit.
 - Zda odebrat existující soubory z cílového umístění.
@@ -207,7 +217,7 @@ V aplikaci Visual Studio můžete vytvořit libovolný počet profilů nasazení
 
 Další informace najdete v tématu [rychlý Start – nasazení na web](quickstart-deploy-to-a-web-site.md).
 
-Pomoc při řešení potíží ASP.NET Core ve službě IIS najdete v tématu věnovaném [řešení potíží ASP.NET Core na Azure App Service a IIS](/aspnet/core/test/troubleshoot-azure-iis).
+Nápovědu k řešení potíží ASP.NET Core ve službě IIS najdete v tématu věnovaném [řešení potíží ASP.NET Core na Azure App Service a IIS](/aspnet/core/test/troubleshoot-azure-iis).
 
 ## <a name="import-profile"></a>Importovat profil
 
@@ -218,7 +228,7 @@ Použití souboru nastavení publikování může zjednodušit konfiguraci nasaz
 ### <a name="when-to-choose-import-profile"></a>Kdy zvolit možnost importovat profil
 
 - Publikujete do služby IIS a chcete zjednodušit konfiguraci nasazení.
-- Publikujete do služby IIS nebo Azure App Service a chcete zrychlit konfiguraci nasazení pro opětovné použití nebo pro členy týmu, kteří publikují do stejné služby.
+- Publikujete do služby IIS nebo Azure App Service a chcete zrychlit konfiguraci nasazení pro opakované použití nebo pro členy týmu, kteří publikují do stejné služby.
 
 Další informace najdete v následujících článcích:
 
