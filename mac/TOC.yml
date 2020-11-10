@@ -32,8 +32,6 @@
   items:
     - name: Přizpůsobení vzhledu a chování integrovaného vývojového prostředí (IDE)
       href: customizing-the-ide.md
-    - name: Rozšíření sady Visual Studio pro Mac
-      href: extending-visual-studio-mac.md
 - name: "Projekty a\_řešení"
   items:
     - name: Přehled
