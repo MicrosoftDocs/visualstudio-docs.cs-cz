@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 04ac5ba718e72085f8e050ecf0e2ce0cc1305629
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 0cc36dc58b65188b21115569f1216446784d227a
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134265"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438220"
 ---
 # <a name="net-core-runtime"></a>Modul runtime .NET Core
 
@@ -24,7 +24,7 @@ Tento příklad ukazuje, jak přizpůsobit prostředí .NET Core Runtime [dotnet
 
 ## <a name="postclonesetupps1"></a>PostCloneSetup.ps1
 
-Tento skript se volá z _PostCloneSetup.ps1_ a dá se spustit taky místně, aby se nastavilo úložiště. Tento soubor musí být ve stejné složce jako _.devcontainer.jsna_ .
+Tento skript se volá z _PostCloneSetup.ps1_ a dá se spustit taky místně, aby se nastavilo úložiště. Tento soubor musí být ve stejné složce jako _.devcontainer.jsna_.
 
 ```console
 devinit init
@@ -33,7 +33,7 @@ git config --system core.longpaths true
 
 ## <a name="packagesconfig"></a>packages.config
 
-_packages.config_ soubor je [čokoládový](https://chocolatey.org/) soubor, který definuje seznam čokoládových balíčků, které se mají nainstalovat. Tento soubor musí být ve stejné složce jako _.devcontainer.jsna_ .
+_packages.config_ soubor je [čokoládový](https://chocolatey.org/) soubor, který definuje seznam čokoládových balíčků, které se mají nainstalovat. Tento soubor musí být ve stejné složce jako _.devcontainer.jsna_.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -45,7 +45,7 @@ _packages.config_ soubor je [čokoládový](https://chocolatey.org/) soubor, kte
 
 ## <a name="devinitjson"></a>.devinit.json
 
-Obsah [_.devinit.jsv_](devinit-json.md) souboru. Tento soubor musí být ve stejné složce jako _.devcontainer.jsv_ souboru.
+Obsah [`.devinit.json`](devinit-json.md) souboru Tento soubor musí být ve stejné složce jako _.devcontainer.jsv_ souboru.
 
 ```json
 {

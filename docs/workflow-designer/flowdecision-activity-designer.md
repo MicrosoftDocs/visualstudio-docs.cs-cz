@@ -1,5 +1,7 @@
 ---
 title: Návrhář aktivity Návrhář postupu provádění – použitím objektu FlowDecision
+description: Přečtěte si, jak je uzel použitím objektu FlowDecision podmíněný uzel, který poskytuje větev pro tok řízení do jedné ze dvou alternativ.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79e405f82bcf33bc01ad07f1092879c17dec5849
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a70e7e44976df975be721d93e918d7c25d192bf
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76111433"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437993"
 ---
 # <a name="flowdecision-activity-designer"></a>Návrhář aktivity FlowDecision
 
@@ -27,11 +29,11 @@ Tuto možnost použijte <xref:System.Activities.Statements.FlowDecision> , když
 
 ### <a name="using-the-flowdecision-designer"></a>Použití návrháře použitím objektu FlowDecision
 
-Návrháře **použitím objektu FlowDecision** lze najít v kategorii **vývojové diagramy** v **sadě nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** na Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
+Návrháře **použitím objektu FlowDecision** lze najít v kategorii **vývojové diagramy** v **sadě nástrojů** , ke které se dostanete kliknutím na kartu **panelu nástrojů** na Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
 
 Návrhář **použitím objektu FlowDecision** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu v Návrháři aktivity **vývojového diagramu** . Tím se <xref:System.Activities.Statements.FlowDecision> v rámci aktivity **Decision** vytvoří označené rozhodnutí <xref:System.Activities.Statements.Flowchart> . Myš nad návrhářem a čtvercové táhlo **true** a **false** pro dvě větve se zobrazí.
 
-Po přetažení návrháře **použitím objektu FlowDecision** a dalších návrhářů do **vývojového diagramu**lze uzly propojit dohromady, aby bylo možné určit pořadí spouštění. Chcete-li vytvořit propojení mezi zdrojovým uzlem (včetně hodnot **true** a **false** v **použitím objektu FlowDecision**) a cílového uzlu, myši v Návrháři zdrojového uzlu a čtvercového táhla se zobrazí na každé straně. Klikněte na jeden z čtvercových popisovačů a přetáhněte ho tak, že podržíte tlačítko myši na jeden z úchytů, který se zobrazí podobným způsobem kolem cílového uzlu při pohybu myší. Uvolněte tlačítko myši a propojení mezi vytvořením těchto dvou uzlů, které jsou reprezentovány jako šipka od zdrojového návrháře do cílového návrháře.
+Po přetažení návrháře **použitím objektu FlowDecision** a dalších návrhářů do **vývojového diagramu** lze uzly propojit dohromady, aby bylo možné určit pořadí spouštění. Chcete-li vytvořit propojení mezi zdrojovým uzlem (včetně hodnot **true** a **false** v **použitím objektu FlowDecision** ) a cílového uzlu, myši v Návrháři zdrojového uzlu a čtvercového táhla se zobrazí na každé straně. Klikněte na jeden z čtvercových popisovačů a přetáhněte ho tak, že podržíte tlačítko myši na jeden z úchytů, který se zobrazí podobným způsobem kolem cílového uzlu při pohybu myší. Uvolněte tlačítko myši a propojení mezi vytvořením těchto dvou uzlů, které jsou reprezentovány jako šipka od zdrojového návrháře do cílového návrháře.
 
 Výraz, který uvádí stav, <xref:System.Activities.Statements.FlowDecision.Condition%2A> lze zadat v poli **Podmínka** v okně **vlastnosti** kliknutím na místo, kde text nápovědy říká "zadejte výraz jazyka VB".
 
@@ -41,9 +43,9 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.FlowDec
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Statements.FlowDecision.Condition%2A>|Ano|Podmínka, která určuje, která cesta má řízení toku trvat.|
-|<xref:System.Activities.Statements.FlowDecision.True%2A>|Ne|Cesta provedená ovládacím prvkem flow, pokud <xref:System.Activities.Statements.FlowDecision.Condition%2A> je splněna.|
-|<xref:System.Activities.Statements.FlowDecision.False%2A>|Ne|Cesta provedená ovládacím prvkem flow, pokud <xref:System.Activities.Statements.FlowDecision.Condition%2A> není splněna.|
+|<xref:System.Activities.Statements.FlowDecision.Condition%2A>|Pravda|Podmínka, která určuje, která cesta má řízení toku trvat.|
+|<xref:System.Activities.Statements.FlowDecision.True%2A>|Nepravda|Cesta provedená ovládacím prvkem flow, pokud <xref:System.Activities.Statements.FlowDecision.Condition%2A> je splněna.|
+|<xref:System.Activities.Statements.FlowDecision.False%2A>|Nepravda|Cesta provedená ovládacím prvkem flow, pokud <xref:System.Activities.Statements.FlowDecision.Condition%2A> není splněna.|
 
 ## <a name="see-also"></a>Viz také
 

@@ -3,14 +3,14 @@ title: Program Zlepšování softwaru a služeb na základě zkušeností uživa
 description: Přečtěte si, jak spravovat nastavení ochrany osobních údajů v Visual Studio pro Mac.
 author: therealjohn
 ms.author: johmil
-ms.date: 06/18/2019
+ms.date: 11/05/2020
 ms.assetid: 6F2ECF5A-E195-4890-8399-12A88C7D62FD
-ms.openlocfilehash: 7c2e2dc1cc0171e9e7a8ab81f820ff6be0f389c2
-ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
+ms.openlocfilehash: 5cf5670b18aa6840eb3b36e6148cba4834aa709e
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89284262"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438201"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Program Zlepšování softwaru a služeb na základě zkušeností uživatelů pro Visual Studio
 
@@ -37,5 +37,5 @@ VSCEIP je ve výchozím nastavení zapnutý. Můžete ho zase zapnout nebo znovu
 * [Program Zlepšování softwaru a služeb na základě zkušeností uživatelů (Visual Studio ve Windows)](/visualstudio/ide/visual-studio-experience-improvement-program)
 * [Systémem generované protokoly shromážděné aplikací Visual Studio (ve Windows)](/visualstudio/ide/diagnostic-data-collection)
 * [Jak ohlásit problém s Visual Studio pro Mac](report-a-problem.md)
-* [Komunita vývojářů Visual Studio pro Mac](https://developercommunity.visualstudio.com/spaces/41/index.html)
+* [Komunita vývojářů Visual Studio pro Mac](https://aka.ms/feedback/vsm-home)
 * [Prohlášení společnosti Microsoft o zásadách ochrany osobních údajů](https://privacy.microsoft.com/privacystatement)

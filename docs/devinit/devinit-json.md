@@ -11,18 +11,20 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 2b6cc27d2614f71c85988457ab9bb64228bbaebb
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: acd3b65f520a9be048fe2d0209a85a85d086df2f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399964"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438227"
 ---
 # <a name="devinit-configuration-file"></a>konfigurační soubor devinit
 
+`.devinit.json`Soubor definuje závislosti v rámci systému, které vaše aplikace potřebuje ke spuštění a sestavení. Závislosti v rámci systému jsou například Node.js, SQL Server, IIS, RabbitMQ, Docker atd. Jedná se o řazení věcí, které byste normálně nainstalovali do pole pro vývoj, které není nainstalované konkrétním úložištěm. Nejedná se o místo pro definování závislostí specifických pro aplikaci, jako byste měli v rámci správce balíčků, jako je NuGet nebo NPM. Je však místo, kde můžete definovat, že potřebujete tyto správce balíčků.
+
 ## <a name="file-location"></a>Umístění souboru
 
-`devinit.exe init`Příkaz je ovládán prostřednictvím _.devinit.jsv_ souboru. Ve výchozím nastavení `devinit.exe` vyhledá soubor v následujících umístěních:
+`devinit init`Příkaz je ovládán prostřednictvím `.devinit.json` souboru. Ve výchozím nastavení `devinit` vyhledá soubor v následujících umístěních:
 
 * {Current-Directory} \\.devinit.jsna
 * {Current-Directory} \\devinit.jsna
@@ -36,7 +38,7 @@ ms.locfileid: "93399964"
 > [!NOTE]
 > Pokud je nalezeno více výchozích souborů, pak devinit použije soubor, který se zobrazí jako první v seznamu výše.
 
-_.devinit.jsv_ souboru lze také zadat explicitně prostřednictvím `--file` / `-f` Možnosti.
+`.devinit.json`Soubor lze také zadat explicitně prostřednictvím `--file` / `-f` Možnosti.
 
 ### <a name="directories-and-relative-paths"></a>Adresáře a relativní cesty
 

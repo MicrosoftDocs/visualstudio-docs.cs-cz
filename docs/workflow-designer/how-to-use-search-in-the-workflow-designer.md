@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Hledání v návrháři postupu provádění'
+description: Naučte se hledat v Návrhář postupu provádění, abyste našli položky podle klíčového slova, abyste mohli snadněji vytvářet větší a složitější pracovní postupy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: f42d3115-2ed2-4941-8f1e-92dac41c30fa
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63ad6f8b6d3afd1f30f2e9a02eaa4927fb3608d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3dadaf6ce4728dfac8d4052804cbed70ee7cefcd
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817473"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437902"
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>Postupy: Hledání v návrháři postupu provádění
 
@@ -33,7 +35,7 @@ Rychlé hledání najde v Návrháři následující:
 
 ### <a name="use-quick-find"></a>Použít rychlé hledání
 
-1. Pomocí návrháře pracovních postupů otevřete, stiskněte **CTRL + F**nebo vyberte **Upravit**  >  **Najít a nahradit**  >  **Rychlé hledání**.
+1. Pomocí návrháře pracovních postupů otevřete, stiskněte **CTRL + F** nebo vyberte **Upravit**  >  **Najít a nahradit**  >  **Rychlé hledání**.
 
 2. Do textového pole **Najít** zadejte hledaný termín a klikněte na **Najít další**.
 
@@ -47,7 +49,7 @@ Hledání v souborech vyhledává řetězce v souborech pracovního postupu, vč
 
 ### <a name="use-find-in-files"></a>Použít hledání v souborech
 
-1. V aplikaci Visual Studio stiskněte klávesy **CTRL** + **SHIFT** + **F**nebo vyberte možnost **Upravit**  >  **Najít a nahradit**  >  **najít v souborech**.
+1. V aplikaci Visual Studio stiskněte klávesy **CTRL** + **SHIFT** + **F** nebo vyberte možnost **Upravit**  >  **Najít a nahradit**  >  **najít v souborech**.
 
 2. Do textového pole **Najít** zadejte hledaný text a klikněte na **Najít vše**.
 

@@ -1,5 +1,7 @@
 ---
 title: Návrhář postupu provádění – procházení a výběr dialogového okna typu .NET
+description: Přečtěte si, jak můžete použít dialogové okno Procházet a vybrat typ .NET k výběru typu ze stromového zobrazení sestavení a projektů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a526bc9504f4f63a7a135978ade02654bbe63ffd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e887cf339647df9bca7fdc3d07a45dd44901c42
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597110"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438175"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>Dialogové okno Procházet a vybrat typ .NET
 
@@ -39,7 +41,7 @@ Toto dialogové okno se používá v řadě uživatelských scénářů, včetn�
 
 1. Do pole **název typu** zadejte název typu, který chcete použít.
 
-2. Proveďte jednu z následujících akcí:
+2. Proveďte některou z následujících akcí:
 
     - Jakmile se název typu, který chcete použít, zobrazí ve stromové struktuře v poli **název typu** , dvakrát klikněte na typ a vyberte ho.
 
@@ -55,7 +57,7 @@ Toto dialogové okno se používá v řadě uživatelských scénářů, včetn�
 
 ## <a name="types-displayed-in-the-type-browser"></a>Typy zobrazené v prohlížeči typů
 
-Typy zobrazené v prohlížeči typů se mohou lišit v závislosti na tom, jak byl prohlížeč typu spuštěn. Pokud byl prohlížeč typu spuštěn z projektu pracovního postupu v rámci **VS2010**, zobrazí se ve výchozím nastavení všechny typy v odkazovaných sestaveních a odkazovaných projektech. Pokud se prohlížeč typů spustil mimo systém projektu **VS2010** (například v rámci hostitele aplikace pracovního postupu nebo v samostatném souboru pracovního postupu), pak se ve výchozím nastavení zobrazí typy ze všech sestavení načtených v doméně AppDomain.
+Typy zobrazené v prohlížeči typů se mohou lišit v závislosti na tom, jak byl prohlížeč typu spuštěn. Pokud byl prohlížeč typu spuštěn z projektu pracovního postupu v rámci **VS2010** , zobrazí se ve výchozím nastavení všechny typy v odkazovaných sestaveních a odkazovaných projektech. Pokud se prohlížeč typů spustil mimo systém projektu **VS2010** (například v rámci hostitele aplikace pracovního postupu nebo v samostatném souboru pracovního postupu), pak se ve výchozím nastavení zobrazí typy ze všech sestavení načtených v doméně AppDomain.
 
 Typy v prohlížeči typů lze filtrovat podle vývojářů návrháře aktivit. U jakékoli dané aktivity se může zobrazit pouze podmnožina typů. Například v <xref:System.Activities.Statements.TryCatch> aktivitě <xref:System.Exception> jsou v prohlížeči typu zobrazeny pouze typy odvozené z.
 

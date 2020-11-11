@@ -1,5 +1,7 @@
 ---
 title: Vytvoření projektu modelu Workflow Foundation
+description: Naučte se vytvářet knihovny a aplikace pomocí šablon projektů, které jsou k dispozici v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 06/25/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8c3e4930376d2d2f9a6ee3334d8b164279d5ac2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4df3a1b4ead644058147473a4f95cf16fe6fc5cc
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597071"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438097"
 ---
 # <a name="workflow-project-templates"></a>Šablony projektu pracovního postupu
 
@@ -43,7 +45,7 @@ Chcete-li získat přístup k těmto šablonám, nejprve nainstalujte **programo
 1. Pokračujte v vytváření projektu.
 
    > [!NOTE]
-   > Chcete-li přidat nový projekt do existujícího řešení, otevřete toto řešení v aplikaci Visual Studio, klikněte pravým tlačítkem myši na řešení v **Průzkumník řešení**a vyberte možnost **Přidat**  >  **Nový projekt**.
+   > Chcete-li přidat nový projekt do existujícího řešení, otevřete toto řešení v aplikaci Visual Studio, klikněte pravým tlačítkem myši na řešení v **Průzkumník řešení** a vyberte možnost **Přidat**  >  **Nový projekt**.
 
 ## <a name="workflow-console-app"></a>Konzolová aplikace pracovního postupu
 

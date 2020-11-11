@@ -1,5 +1,7 @@
 ---
 title: 'Návrhář postupu provádění: definování a používání delegátů aktivit'
+description: Přečtěte si, jak .NET Framework 4,5 obsahuje předem připravený Návrhář pro aktivitu InvokeDelegate, kterou můžete použít k definování a využívání delegátů aktivit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c68e42ad-3ec0-4c2d-b104-fe36c6d83b5e
@@ -8,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: 41271266793927f6029f50c0411bb9a150f5a64a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c59c828f380e47a06f8feb7b72788e76ad7ee08f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817499"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437915"
 ---
 # <a name="how-to-define-and-consume-activity-delegates-in-the-workflow-designer"></a>Postupy: Definování a použití delegátů aktivit v návrháři postupu provádění
 
@@ -32,25 +34,25 @@ ms.locfileid: "85817499"
 
 4. V Návrhář postupu provádění klikněte na kartu **argumenty** .
 
-5. Klikněte na **vytvořit argument**. Pojmenujte nové **položky**argumentu.
+5. Klikněte na **vytvořit argument**. Pojmenujte nové **položky** argumentu.
 
 6. Ve sloupci **typ argumentu** vyberte **pole z [T]**.
 
 7. V prohlížeči typů vyberte **objekt** a pak vyberte **OK**.
 
-8. Znovu klikněte na tlačítko **vytvořit argument** . Pojmenujte nový **hlavní část**argumentu. Ve sloupci **směr** pro nový argument vyberte **vlastnost**.
+8. Znovu klikněte na tlačítko **vytvořit argument** . Pojmenujte nový **hlavní část** argumentu. Ve sloupci **směr** pro nový argument vyberte **vlastnost**.
 
 9. Ve sloupci Typ argumentu vyberte **Vyhledat typy** .
 
-10. V prohlížeči typu zadejte **ActivityAction** do pole **název typu** . Ve stromovém zobrazení vyberte **ActivityAction \<T> ** . V rozevíracím seznamu vyberte **objekt** , který se zobrazí, chcete-li typ **ActivityAction \<Object> ** přiřadit k argumentu.
+10. V prohlížeči typu zadejte **ActivityAction** do pole **název typu** . Ve stromovém zobrazení vyberte **ActivityAction \<T>** . V rozevíracím seznamu vyberte **objekt** , který se zobrazí, chcete-li typ **ActivityAction \<Object>** přiřadit k argumentu.
 
 11. Přetáhněte <xref:System.Activities.Statements.While> aktivitu z části **tok řízení** v sadě nástrojů na plochu návrháře.
 
 12. Vyberte <xref:System.Activities.Statements.While> aktivitu a vyberte kartu **proměnné** .
 
-13. Vyberte **vytvořit proměnnou**. Pojmenujte nový **index**proměnné.
+13. Vyberte **vytvořit proměnnou**. Pojmenujte nový **index** proměnné.
 
-14. Ve sloupci **typ proměnné** vyberte **Int32**. Tento **obor** ponechte jako **while**a **výchozí** sloupec je prázdný.
+14. Ve sloupci **typ proměnné** vyberte **Int32**. Tento **obor** ponechte jako **while** a **výchozí** sloupec je prázdný.
 
 15. Nastavte vlastnost **Condition** <xref:System.Activities.Statements.While> aktivity na **index < položky. Length;**.
 
@@ -60,7 +62,7 @@ ms.locfileid: "85817499"
 
 18. V mřížce **vlastnosti** <xref:System.Activities.Statements.InvokeDelegate> aktivity klikněte na tlačítko **...** ve vlastnosti **argumenty delegátů** .
 
-19. Do sloupce **hodnota** argumentu pojmenovaného **argumentu**zadejte **Items [index]**. Kliknutím na tlačítko **OK** zavřete dialogové okno **DelegateArguments** .
+19. Do sloupce **hodnota** argumentu pojmenovaného **argumentu** zadejte **Items [index]**. Kliknutím na tlačítko **OK** zavřete dialogové okno **DelegateArguments** .
 
 20. Přetáhněte <xref:System.Activities.Statements.Assign> aktivitu na vodorovnou čáru pod <xref:System.Activities.Statements.InvokeDelegate> aktivitou. <xref:System.Activities.Statements.Assign>Aktivita se vytvoří a <xref:System.Activities.Statements.Sequence> automaticky se vytvoří aktivita, která bude obsahovat dvě aktivity v části **tělo** aktivity **MyForEach** . Sekvence je nutná, protože oddíl **body** může obsahovat pouze jednu aktivitu. Automatické vytvoření nové <xref:System.Activities.Statements.Sequence> aktivity je nová funkce .NET Framework 4,5.
 
@@ -72,7 +74,7 @@ ms.locfileid: "85817499"
 
 1. Sestavte projekt stisknutím **kombinace kláves CTRL** + **SHIFT** + **B**.
 
-2. V **Průzkumník řešení**otevřete **Workflow1. XAML** v návrháři.
+2. V **Průzkumník řešení** otevřete **Workflow1. XAML** v návrháři.
 
 3. Přetáhněte aktivitu **MyForEach** ze sady nástrojů na plochu návrháře. Aktivita je v části sady nástrojů se stejným názvem jako projekt.
 

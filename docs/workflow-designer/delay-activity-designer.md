@@ -1,5 +1,7 @@
 ---
 title: Návrhář postupu provádění – Návrhář aktivity zpoždění
+description: Přečtěte si o aktivitách zpoždění a o tom, jak můžete pomocí návrháře aktivity zpoždění vytvořit a nakonfigurovat aktivitu zpoždění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: abfd625a248c14f646683c7b035065e6ca096f68
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e6bbadcbabbe1dbd274c48f2325217c17d3933d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876109"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438084"
 ---
 # <a name="delay-activity-designer"></a>Návrhář aktivity Delay
 
@@ -27,7 +29,7 @@ Návrhář aktivity **zpoždění** se používá k vytvoření a konfiguraci <x
 
 ### <a name="use-the-delay-activity-designer"></a>Použití návrháře aktivit zpoždění
 
-Návrhář aktivity **zpoždění** lze najít v kategorii **primitivních** prvků sady **nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
+Návrhář aktivity **zpoždění** lze najít v kategorii **primitivních** prvků sady **nástrojů** , ke které se dostanete kliknutím na kartu **panelu nástrojů** Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
 
 Návrhář aktivity **zpoždění** lze přetáhnout ze **sady nástrojů** a přetáhnout na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity, například dovnitř <xref:System.Activities.Statements.Sequence> . Vyřazení návrháře aktivit vytvoří <xref:System.Activities.Statements.Delay> aktivitu s výchozí hodnotou <xref:System.Activities.Activity.DisplayName%2A> zpoždění. <xref:System.Activities.Activity.DisplayName%2A>Lze upravit v záhlaví návrháře **zpoždění** aktivity nebo v poli **DisplayName** v mřížce vlastností.
 
@@ -37,8 +39,8 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.Delay> 
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Popisný název <xref:System.Activities.Statements.Delay> aktivity Výchozí hodnota je Delay. I když <xref:System.Activities.Activity.DisplayName%2A> hodnota není naprosto nutná, je osvědčeným postupem použití jednoho.|
-|<xref:System.Activities.Statements.Delay.Duration%2A>|Ano|Doba, po kterou má být pracovní postup zpožděn. Tato vlastnost je nastavena v mřížce vlastností. Zadejte buď literál <xref:System.TimeSpan> ve formátu 00:00:00, nebo výraz Visual Basic a určete tak dobu.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Popisný název <xref:System.Activities.Statements.Delay> aktivity Výchozí hodnota je Delay. I když <xref:System.Activities.Activity.DisplayName%2A> hodnota není naprosto nutná, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.Delay.Duration%2A>|Pravda|Doba, po kterou má být pracovní postup zpožděn. Tato vlastnost je nastavena v mřížce vlastností. Zadejte buď literál <xref:System.TimeSpan> ve formátu 00:00:00, nebo výraz Visual Basic a určete tak dobu.|
 
 ## <a name="see-also"></a>Viz také
 

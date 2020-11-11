@@ -1,5 +1,7 @@
 ---
 title: Návrháři aktivity toku řízení Návrhář postupu provádění
+description: Seznamte se s návrháři aktivity toku řízení, což jsou aktivity poskytnuté systémem, které slouží k řízení toku v rámci pracovního postupu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
@@ -8,18 +10,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84f9de21dbf0529823690effb4285b63a3b226fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d7cf2f4f05db2fbc06c6209d5b39b211dd731f6
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114680"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438136"
 ---
 # <a name="control-flow-activity-designers"></a>Návrháři aktivit toku řízení
 
 Návrhář postupu provádění zahrnuje řadu aktivit poskytovaných systémem, které můžete použít při vytváření pracovních postupů. Tato část obsahuje aktivity poskytované systémem, které slouží k řízení toku v rámci pracovního postupu. Následující témata popisují tyto aktivity a poskytují pokyny k jejich použití.
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
 
  <xref:System.Activities.Activity>
 
@@ -53,7 +55,7 @@ Další typy návrháře aktivit najdete v následujících tématech:
 
  [Zasílání zpráv](../workflow-designer/messaging-activity-designers.md)
 
- [Modul runtime](../workflow-designer/runtime-activity-designers.md)
+ [Runtime (Modul runtime)](../workflow-designer/runtime-activity-designers.md)
 
  [Primitiva](../workflow-designer/primitives-activity-designers.md)
 

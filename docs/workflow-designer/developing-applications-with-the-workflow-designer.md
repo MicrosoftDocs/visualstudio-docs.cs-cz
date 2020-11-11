@@ -1,5 +1,7 @@
 ---
 title: Vývoj aplikací pomocí Návrháře postupu provádění
+description: Naučte se vyvíjet aplikace pomocí Návrhář postupu provádění, které můžete použít pro grafické vytváření a ladění aplikací WF v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f1b7aa37794618cd051cfdaaacb9359087cc664
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 88825e5328fc11702a503311b227fde155c79d73
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85814717"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438071"
 ---
 # <a name="develop-apps-with-the-workflow-designer"></a>Vývoj aplikací pomocí Návrháře postupu provádění
 

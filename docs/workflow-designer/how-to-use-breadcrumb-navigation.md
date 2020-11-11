@@ -1,5 +1,7 @@
 ---
 title: 'Návrhář postupu provádění-postupy: použití navigace s popisem cesty'
+description: Přečtěte si, jak pomocí navigace s popisem cesty získat přístup k podřízené aktivitě, jak přejít na aktivitu předchůdce, nebo můžete rozbalit nebo sbalit aktivity na místě.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 4a688056-37dc-406a-9071-be2141e192fe
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a432d7cfc40ad6116f570d0e7beb4bfc5b40493
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a15f44b33e7109b126b091dcbf7102aa86a649a9
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817460"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437889"
 ---
 # <a name="how-to-use-breadcrumb-navigation"></a>Postupy: Používání navigace s popisem cesty
 
@@ -50,4 +52,4 @@ Existují tři hlavní způsoby, jak změnit sadu aktivit, které jsou zobrazeny
     > Pokud se u aktivity, jako <xref:System.Activities.Statements.Flowchart> je třeba, nerozhodlo o rozbalení, funkce přidružená tlačítkům **Rozbalit vše** a **sbalit všechna** jsou v Návrháři **vývojového diagramu** zakázané. Další informace o návrháři **vývojového diagramu** najdete v tématu [vývojové diagramy](../workflow-designer/flowchart-activity-designer.md) .
 
     > [!WARNING]
-    > Možnost Rozbalit vše má také zvláštní efekt v Návrháři aktivity **Switch** a **TryCatch** . Po kliknutí na **Rozbalit vše**se zobrazí všechny případy přepínače a všechny bloky try/catch/finally. Kliknutím na tlačítko **obnovit** nebo **Sbalit vše** vrátíte tyto návrháře do jejich výchozího stavu, ze kterého můžete kliknutím na jednotlivý případ/blok zobrazit jeho obsah.
+    > Možnost Rozbalit vše má také zvláštní efekt v Návrháři aktivity **Switch** a **TryCatch** . Po kliknutí na **Rozbalit vše** se zobrazí všechny případy přepínače a všechny bloky try/catch/finally. Kliknutím na tlačítko **obnovit** nebo **Sbalit vše** vrátíte tyto návrháře do jejich výchozího stavu, ze kterého můžete kliknutím na jednotlivý případ/blok zobrazit jeho obsah.
