@@ -80,7 +80,7 @@
           href: sample-eshoponweb.md
         - name: úložiště OpenCV
           href: sample-opencv.md
-        - name: Codespaces – privátní verze Preview
+        - name: Soukromá beta verze Codespaces
           href: sample-private-preview.md
         - name: Aplikace .NET Core
           href: sample-dotnet-core.md

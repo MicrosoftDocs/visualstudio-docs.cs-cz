@@ -24,7 +24,9 @@
           href: /dotnet/core/deploying/deploy-with-vs
         - name: Zabalení desktopové aplikace pro Microsoft Store
           href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
-        - name: Nasazení desktopové aplikace pomocí technologie ClickOnce
+        - name: Nasazení aplikace .NET pro Windows pomocí ClickOnce
+          href: quickstart-deploy-using-clickonce-folder.md
+        - name: Nasazení desktopové aplikace .NET Framework pomocí ClickOnce
           href: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
         - name: Vytváření aplikací ClickOnce z příkazového řádku
           href: building-clickonce-applications-from-the-command-line.md
