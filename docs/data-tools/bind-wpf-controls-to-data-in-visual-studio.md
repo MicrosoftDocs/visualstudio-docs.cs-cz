@@ -1,6 +1,7 @@
 ---
 title: Svázání ovládacích prvků WPF s daty – část 1
 description: Navažte ovládací prvky WPF na data. Chcete-li vytvořit tyto ovládací prvky vázané na data, přetáhněte položky z okna zdroje dat do návrháře WPF v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 697b5efb172a09f2dcd5512a6301febd7429411f
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: e35171a116272700de676cb03d116210753c599f
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94381919"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518606"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků WPF k datům v sadě Visual Studio
 
@@ -53,10 +54,10 @@ V následující tabulce je uveden [!INCLUDE[TLA#tla_titlexaml](../data-tools/in
 
 | Zdroj dat | Generování souboru XAML, který váže ovládací prvek na zdroj dat | Generování kódu, který vyplní daty zdroj dat |
 | - | - | - |
-| Datová sada | Ano | Ano |
-| [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | Ano | Ano |
-| Služba | Ano | Ne |
-| Objekt | Ano | Ne |
+| Datová sada | Yes | Yes |
+| [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | Yes | Yes |
+| Služba | Yes | Ne |
+| Objekt | Yes | Ne |
 
 ### <a name="datasets"></a>Datové sady
 
@@ -107,6 +108,6 @@ Aplikace Visual Studio vygeneruje [!INCLUDE[TLA#tla_titlexaml](../data-tools/inc
 
 - Vytvoří datové vazby pro ovládací prvek. Pokud přetáhnete položku na existující ovládací prvek v návrháři, XAML naváže ovládací prvek na položku. Pokud přetáhnete položku do kontejneru, XAML vytvoří ovládací prvek, který byl vybrán pro přetaženou položku, a naváže ovládací prvek na položku. Ovládací prvek je vytvořen uvnitř nového <xref:System.Windows.Controls.Grid> .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)

@@ -1,6 +1,7 @@
 ---
 title: Vytvoření vazby ovládacích prvků modelu Windows Forms k datům
 description: Navažte model Windows Forms ovládací prvky na data v aplikaci Visual Studio, abyste mohli zobrazit data uživatelům vaší aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 11/03/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -18,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 48697fb5a031496b5e69c4dd8d6821ad243d3874
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: ee50a01093ff83faba17ec6fd59f4ddc1101012a
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382374"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518645"
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio
 
@@ -81,7 +82,7 @@ Následující ilustrace znázorňuje výchozí ovládací prvky vázané na dat
 
 Všimněte si také, že každý ovládací prvek má inteligentní značku. Tato značka povoluje vlastní nastavení, která se vztahují pouze na tento ovládací prvek.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vázání ovládacích prvků k datům v aplikaci Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)
 - [Datová vazba v model Windows Forms (.NET Framework)](/dotnet/framework/winforms/windows-forms-data-binding)

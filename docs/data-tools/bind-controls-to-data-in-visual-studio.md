@@ -1,6 +1,7 @@
 ---
 title: Svázání ovládacích prvků s daty
 description: Vázání ovládacích prvků k datům v aplikaci Visual Studio. Vytvořte ovládací prvky vázané na data přetažením položek z okna zdroje dat.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f92382721558d76cf9e84fa587b322d56af72247
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 1b48c2e8b557a47c1ed795b6f9d3c3ced6247a43
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382166"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518619"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio
 
@@ -33,12 +34,12 @@ V souvislosti s datovou vazbou představuje zdroj dat data v paměti, která lze
 
 | Zdroj dat | Podpora přetažení v **Návrhář formulářů** | Podpora přetažení v **Návrháři WPF** | Podpora přetažení v **Návrháři Silverlight** |
 | - | - | - | - |
-| Datová sada | Ano | Ano | Ne |
-| Entity Data Model | Ano<sup>1</sup> | Ano | Ano |
+| Datová sada | Yes | Yes | Ne |
+| Entity Data Model | Ano<sup>1</sup> | Yes | Yes |
 | Třídy LINQ to SQL | Ne<sup>2</sup> | Ne<sup>2</sup> | Ne<sup>2</sup> |
-| Služby (včetně [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] , služeb WCF a webových služeb) | Ano | Ano | Ano |
-| Objekt | Ano | Ano | Ano |
-| SharePoint | Ano | Ano | Ano |
+| Služby (včetně [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] , služeb WCF a webových služeb) | Yes | Yes | Yes |
+| Objekt | Yes | Yes | Yes |
+| SharePoint | Yes | Yes | Yes |
 
 1. Vygenerujte model pomocí průvodce **model EDM (Entity Data Model)** a pak tyto objekty přetáhněte do návrháře.
 
@@ -67,7 +68,7 @@ V následující tabulce jsou uvedeny některé nejběžnější úlohy, které 
 |Filtrovat data, která se zobrazí v uživatelském rozhraní.|[Filtrování a řazení dat ve formulářové aplikaci Windows](../data-tools/filter-and-sort-data-in-a-windows-forms-application.md)|
 |Přizpůsobení popisků pro ovládací prvky|[Úprava způsobu, kterým Visual Studio vytváří titulky pro ovládací prvky vázané daty](../data-tools/customize-how-visual-studio-creates-captions-for-data-bound-controls.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Visual Studio Data Tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)
 - [model Windows Forms datové vazby](/dotnet/framework/winforms/windows-forms-data-binding)

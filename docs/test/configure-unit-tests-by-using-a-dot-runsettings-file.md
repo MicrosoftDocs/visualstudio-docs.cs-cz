@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 6361b6b3d85c970d74a624c82d052054ab66e44a
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 8194a5f61b45ac2b4358922aaf8c7c7b8bea4ae9
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400099"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518762"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
@@ -221,8 +221,8 @@ Kolektor dat pokrytí kódu vytvoří protokol uvádějící, které části kó
       <CollectFromChildProcesses>True</CollectFromChildProcesses>
       <CollectAspDotNet>False</CollectAspDotNet>
     </CodeCoverage>
-  </CodeCoverage>
-</Configuration>
+  </Configuration>
+</DataCollector>
 ```
 
 ### <a name="videorecorder-data-collector"></a>Kolekce dat VideoRecorder
@@ -464,7 +464,7 @@ Uzel **RunConfiguration** by měl obsahovat uzel **EnvironmentVariables** . Prom
 > [!NOTE]
 > Vzhledem k tomu, že tyto proměnné prostředí by měly být vždy nastaveny při spuštění testovacího hostitele, testy by měly vždy běžet v samostatném procesu. V tomto případě se příznak */inisolation.* nastaví, když jsou proměnné prostředí, aby se testovací hostitel vždycky vyvolal.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Konfigurace testovacího běhu](https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md)
 - [Přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md)

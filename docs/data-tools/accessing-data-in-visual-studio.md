@@ -1,6 +1,7 @@
 ---
 title: Práce s daty v sadě Visual Studio
 description: Práce s daty v aplikaci Visual Studio. Vytvářejte aplikace, které se připojují k datům v jiných databázových produktech nebo službách přes místní počítače, sítě LAN nebo veřejné nebo privátní cloudy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 846898c1cf93d0f90ce04e77ee93bd8802e22ec2
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: a5458ffca549026c99c8faedc8f47d3f3285a7ca
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382088"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518736"
 ---
 # <a name="work-with-data-in-visual-studio"></a>Práce s daty v sadě Visual Studio
 
@@ -39,7 +40,7 @@ Většina ostatních databázových produktů SQL a NoSQL, které jsou tady uved
 
 **Microsoft Azure**
 
-- Databáze SQL
+- SQL Database
 - Azure Cosmos DB
 - Storage (objekty blob, tabulky, fronty, soubory)
 - SQL Data Warehouse

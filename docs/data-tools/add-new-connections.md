@@ -1,6 +1,7 @@
 ---
 title: Přidání nových připojení
 description: Přidejte připojení do sady Visual Studio do databáze nebo služby a prozkoumejte obsah a schémata databáze pomocí Průzkumník serveru, Průzkumníka cloudu nebo Průzkumník objektů systému SQL Server.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: ghogen
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 34f3ef6823ddfae806de11b85cc5bfe6b14c9b19
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 32fbd3462f6a496d681f76480c3eb4451f325b35
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382413"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518710"
 ---
 # <a name="add-new-connections"></a>Přidání nových připojení
 
@@ -55,6 +56,6 @@ Po výběru zdroje dat klikněte na tlačítko **Test připojení**. Pokud to ne
 
 Pokud je test úspěšný, jste připraveni vytvořit *zdroj dat* , což je Visual Studio Term, který se skutečně označuje jako *datový model* založený na podkladové databázi nebo službě.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Visual Studio Data Tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)
