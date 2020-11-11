@@ -8,12 +8,12 @@ ms.author: tglee
 author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 71136bb634bd42eaf4933dead8c024b290177da3
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 33606a2b4290735d5c15788a1e6961191d6d92f9
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434698"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493553"
 ---
 # <a name="git-productivity-in-visual-studio"></a>Produktivita Git v aplikaci Visual Studio
 
@@ -180,7 +180,7 @@ Chcete-li přizpůsobit a přizpůsobit nastavení Gitu na úrovni úložiště 
 
 :::image type="content" source="media/git-options-settings.png" alt-text="Snímek obrazovky dialogového okna Možnosti, kde můžete zvolit nastavení přizpůsobení a přizpůsobení v integrovaném vývojovém prostředí sady Visual Studio ":::
 
-## <a name="how-to-use-legacy-team-explorer-experience-in-visual-studio"></a>Jak používat starší verze Team Explorer v prostředí Visual Studio
+## <a name="how-to-use-the-legacy-team-explorer-experience-in-visual-studio"></a>Jak používat starší verze Team Explorer v prostředí Visual Studio
 
 Nové prostředí Git je výchozím systémem pro správu verzí v aplikaci Visual Studio 2019 od [verze 16,8](/visualstudio/releases/2019/release-notes/) a vyšší. Pokud je však chcete vypnout, můžete. Přejděte do části **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** a potom zaškrtněte políčko **nové uživatelské prostředí Git** , které vás přepne zpět na starší verzi Team Explorer.
 

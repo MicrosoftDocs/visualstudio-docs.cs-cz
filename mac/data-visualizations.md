@@ -3,28 +3,28 @@ title: Ladění – vizualizace dat
 description: Ladění je běžné a nezbytné, což je součást programování. Visual Studio pro Mac obsahuje celou sadu funkcí, aby bylo ladění snadné. V tomto článku se podíváme na různé vizualizace dat, které se dají zobrazit při kontrole objektů v ladicím programu.
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 05/06/2018
+ms.date: 11/09/2020
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
-ms.openlocfilehash: 14696040160dfc33f89b7647fb73b116b41afa16
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 838762435268ea06c09392475f294dbb22c3038d
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67691731"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493241"
 ---
 # <a name="data-visualizations"></a>Vizualizace dat
 
 Visual Studio pro Mac zahrnuje podporu uživatelského rozhraní pro ladicí program, což umožňuje vizualizace hodnot proměnné, pole nebo vlastnosti při ladění. Tyto vizualizace dat zobrazují rozšířenou verzi dat a umožňují vývojářům kontrolovat známé struktury, například zobrazení barvy barevné struktury.
 
-Vizualizace v  **místní** nabídce ladění se dají zobrazit tak, že kliknete na ikonu náhledu, která se zobrazí napravo od hodnoty, když uživatel najede na řádek:
+Vizualizace v okně  **místní** okna ladění se dají zobrazit tak, že kliknete na ikonu náhledu, která se zobrazí napravo od hodnoty, když uživatel najede na řádek:
 
-![Místní panel](media/data-visualizations-image9.png)
+![Okno místních hodnot](media/data-visualizations-image9.png)
 
 Následující seznam vyhledá mnoho nových vizualizací, které jsou k dispozici při ladění v Visual Studio pro Mac.
 
 ## <a name="point"></a>Vyberte
-Bod/PointF nebo CGPoint v iOS a Mac se vykreslí jako řazená kolekce členů ukazující hodnoty X a Y na panelu ladění:
+Bod/PointF nebo CGPoint v iOS a Mac se vykreslí jako řazená kolekce členů ukazující hodnoty X a Y v ladicích oknech:
 
 ![Vizualizace bodů](media/data-visualizations-image10.png)
 

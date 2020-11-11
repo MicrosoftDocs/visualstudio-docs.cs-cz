@@ -3,15 +3,15 @@ title: Práce s úložištěm Git
 description: Použití Gitu v Visual Studio pro Mac.
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 05/06/2018
+ms.date: 11/09/2020
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
 ms.custom: video
-ms.openlocfilehash: 767c08505877391d71ca085097a0464d516f4f24
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 148a72fb13ff34e3fa15f0c56e145a70fa16608d
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70108027"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493228"
 ---
 # <a name="working-with-git"></a>Práce s úložištěm Git
 
@@ -65,7 +65,7 @@ Nezávislá čára vývoje se dá vytvořit pomocí větvení mimo hlavní (nebo
 
 Uživatelé můžou pro každé úložiště vytvořit libovolný počet větví, ale doporučuje se, aby po dokončení používání větve ho odstranili, aby se úložiště zachovalo.
 
-Větve se zobrazují v Visual Studio pro Mac procházením **správy verzí > správě větví a vzdálených...**:
+Větve se zobrazují v Visual Studio pro Mac procházením **správy verzí > správě větví a vzdálených...** :
 
 ![Zobrazení větví](media/version-control-gitBranch2.png)
 
@@ -77,9 +77,9 @@ Pokud chcete vytvořit novou větev, vyberte v dialogovém okně konfigurace úl
 
 Můžete také nastavit vzdálenou větev na _sledovací_ větev. Přečtěte si další informace o sledovacích větvích v [dokumentaci k Gitu](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#Tracking-Branches).
 
-Zobrazit aktuální větev v Oblast řešení vedle názvu projektu:
+Podívejte se na aktuální větev v okně řešení vedle názvu projektu:
 
- ![Aktuální větev zobrazená na panelu řešení](media/version-control-gitBranchName.png)
+ ![Aktuální větev zobrazená v okně řešení](media/version-control-gitBranchName.png)
 
 ## <a name="reviewing-and-committing"></a>Kontrola a potvrzování
 
@@ -91,7 +91,7 @@ Zkontrolujte všechny změny v projektu, a to tak, že přejdete na **řízení 
 
 To umožňuje zobrazení všech změn v každém souboru projektu s možností vrácení, vytvoření opravy nebo potvrzení změn.
 
-Pokud chcete soubor potvrdit do vzdáleného úložiště, stiskněte **Potvrdit**, zadejte potvrzovací zprávu a potvrďte tlačítko Potvrdit:
+Pokud chcete soubor potvrdit do vzdáleného úložiště, stiskněte **Potvrdit** , zadejte potvrzovací zprávu a potvrďte tlačítko Potvrdit:
 
 ![Potvrzení souboru](media/version-control-gitCommit.png)
 

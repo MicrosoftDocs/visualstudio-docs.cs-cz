@@ -1,20 +1,20 @@
 ---
 title: Fragmenty kódu
 description: Jak používat fragmenty kódu k efektivnímu programování v Visual Studio pro Mac
-author: cobey
-ms.author: cobey
-ms.date: 02/07/2019
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/09/2020
 ms.assetid: 0FE27C0C-A861-4133-A74E-8D0505CF5342
-ms.openlocfilehash: 1dacc935549d738ff1b5e84c3ac4420c343155fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8fdf70b4d966c644719047eca4249e432561ace
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68787689"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493449"
 ---
 # <a name="code-snippets"></a>Fragmenty kódu
 
-Fragmenty kódu, často označované jako _šablony kódu_, jsou užitečné pro efektivní programování, protože umožňují vkládání a úpravy předem zapsaných bloků kódu. Používání fragmentů kódu může být pohodlné pro rychlé přidávání běžných vzorů nebo dokonce i pro učení nových vzorů, pokud vývojář si nejste jisti syntaxí. K dispozici jsou šablony pro jazyky C#, F #, HTML, XML, Python a Razor.
+Fragmenty kódu, často označované jako _šablony kódu_ , jsou užitečné pro efektivní programování, protože umožňují vkládání a úpravy předem zapsaných bloků kódu. Používání fragmentů kódu může být pohodlné pro rychlé přidávání běžných vzorů nebo dokonce i pro učení nových vzorů, pokud vývojář si nejste jisti syntaxí. K dispozici jsou šablony pro jazyky C#, F #, HTML, XML, Python a Razor.
 
 Tato část vysvětluje, jak vytvářet, vkládat a používat fragmenty kódu v kódu.
 
@@ -22,21 +22,21 @@ Tato část vysvětluje, jak vytvářet, vkládat a používat fragmenty kódu v
 
 Existují různé způsoby, jak přidat fragmenty kódu, některé z nich jsou popsány níže:
 
-- **Rozšíření karty** &ndash; Začněte psát název šablony, vyberte ji ze seznamu a stiskněte klávesu **TAB**a **kartu** přidejte:
+- **Rozšíření karty** &ndash; Začněte psát název šablony, vyberte ji ze seznamu a stiskněte klávesu **TAB** a **kartu** přidejte:
 
   ![Rozšíření tabulátoru v kódu](media/source-editor-image13.png)
 
-- **Sada nástrojů** &ndash; Pomocí panelu nástrojů zobrazte seznam všech fragmentů kódu. Přetáhněte libovolnou šablonu ze sady nástrojů do správné pozice ve zdrojovém kódu:
+- **Sada nástrojů** &ndash; Použijte okno panelu nástrojů k zobrazení seznamu všech fragmentů kódu. Přetáhněte libovolnou šablonu ze sady nástrojů do správné pozice ve zdrojovém kódu:
 
   [![Fragmenty kódu v sadě nástrojů](media/source-editor-image14-sml.png)](media/source-editor-image14.png#lightbox)
 
-- **Vložit šablony – příkaz** &ndash; Pro vložení šablony není aktuálně k dispozici žádná výchozí sada vazeb klíčů. Pokud ho chcete vytvořit, přejděte do sady **Visual Studio > předvolby > klíčové vazby** a vyhledejte `template` . To umožňuje přidat požadovanou vazbu klíče do pole Upravit vazbu a pak kliknout na **použít**:
+- **Vložit šablony – příkaz** &ndash; Pro vložení šablony není aktuálně k dispozici žádná výchozí sada vazeb klíčů. Pokud ho chcete vytvořit, přejděte do sady **Visual Studio > předvolby > klíčové vazby** a vyhledejte `template` . To umožňuje přidat požadovanou vazbu klíče do pole Upravit vazbu a pak kliknout na **použít** :
 
   ![Příkaz vsazení Template](media/source-editor-image15.png)
 
 ## <a name="creating-a-new-template"></a>Vytvoření nové šablony
 
-I když existuje mnoho existujících šablon v různých jazycích, které lze použít a upravit, lze přidat nové šablony také tak, že přejdete do sady **Visual Studio > předvolby > textový Editor > fragmenty kódu**:
+I když existuje mnoho existujících šablon v různých jazycích, které lze použít a upravit, lze přidat nové šablony také tak, že přejdete do sady **Visual Studio > předvolby > textový Editor > fragmenty kódu** :
 
 ![Odkrýt novou šablonu](media/source-editor-image12.png)
 

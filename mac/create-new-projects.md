@@ -3,14 +3,14 @@ title: Vytváření nových projektů a řešení
 description: Tento článek popisuje, jak vytvořit projekty a řešení v Visual Studio pro Mac
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 05/23/2019
+ms.date: 11/06/2020
 ms.assetid: 5880BB10-0A12-47E2-8A82-7A2D59C4D579
-ms.openlocfilehash: fa77993892c79cf29d268aa942b8c77ccb7a2139
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ee9b23f9ede12a353f6c6fdc0f578d7f78a772c
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183951"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493291"
 ---
 # <a name="create-a-new-project"></a>Vytvořit nový projekt
 
@@ -27,7 +27,7 @@ Pokud je už Visual Studio pro Mac otevřený pomocí načtené řešení, můž
 
 ## <a name="creating-a-new-project"></a>Vytvoření nového projektu
 
-V dialogovém okně **Nový projekt** se ve výchozím nastavení zobrazí vaše naposledy použité šablony seřazené podle *naposledy použitých*šablon.
+V dialogovém okně **Nový projekt** se ve výchozím nastavení zobrazí vaše naposledy použité šablony seřazené podle *naposledy použitých* šablon.
 
 Pokud nechcete používat poslední šablonu, můžete vybrat z kategorií na levé straně dialogového okna. Každá kategorie obsahuje několik šablon projektů, ze kterých si můžete vybrat. Kliknutí na typ projektu umožňuje zobrazit popis na pravé straně obrazovky.
 
@@ -45,7 +45,7 @@ Volitelně můžete v této fázi nakonfigurovat také možnosti správy zdrojov
 
 ## <a name="adding-additional-projects-to-a-solution"></a>Přidání dalších projektů do řešení
 
-Do řešení můžete přidat další projekty tak, že kliknete pravým tlačítkem na řešení v Oblast řešení a zvolíte buď **přidat > přidat nový projekt** , nebo **Přidat > přidat existující projekt**.
+Do řešení můžete přidat další projekty tak, že kliknete pravým tlačítkem na řešení v **okně řešení** a zvolíte buď **Přidat > přidat nový projekt** , nebo **Přidat > přidat existující projekt**.
 
 Přidání nového projektu vás provede vytvořením projektu, jak je znázorněno v [konfiguraci nového projektu](#configuring-your-new-project).
 

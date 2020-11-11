@@ -3,15 +3,15 @@ title: Přizpůsobení integrovaného vývojového prostředí (IDE)
 description: Visual Studio pro Mac lze přizpůsobit různými způsoby a umožnit tak uživatelům vyvíjet aplikace v prostředí, které splňuje požadavky jejich efektivity i estetickosti. V tomto článku se seznámíte s různými způsoby, Visual Studio pro Mac je můžete přizpůsobit podle svých potřeb.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 05/06/2018
+ms.date: 11/06/2020
 ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
 ms.custom: video
-ms.openlocfilehash: 98adf6aa252f4151af8a5504efd3856aef0afc8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 05fd1091a279a085c2a727eb36cbc56fcb201057
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801773"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493296"
 ---
 # <a name="customizing-the-ide"></a>Přizpůsobení integrovaného vývojového prostředí (IDE)
 
@@ -64,7 +64,7 @@ Vyplněné pole **jméno** a **e-mail** se použijí v jakémkoli potvrzení, kt
 
 Klávesové zkratky nebo klávesové zkratky umožňují přizpůsobit vývojové prostředí, abyste se mohli efektivněji pohybovat v rámci Visual Studio pro Mac. Poskytuje známé klíčové vazby pro spoustu oblíbených systémů IDEs, jako je například Visual Studio (ve Windows), ReSharper, Visual Studio Code a Xcode.
 
-Klíčové vazby lze nastavit tak, že přejdete do sady **Visual Studio > předvolby > > vazby klíčů prostředí**, jak je znázorněno na následujícím obrázku:
+Klíčové vazby lze nastavit tak, že přejdete do sady **Visual Studio > předvolby > > vazby klíčů prostředí** , jak je znázorněno na následujícím obrázku:
 
 ![Nastavit vazby klíčů](media/customizing-the-ide-image10a.png)
 
@@ -76,43 +76,41 @@ Tyto vazby je možné nastavit i při počátečním nastavení Visual Studio pr
 
 ## <a name="workspace-layout"></a>Rozložení pracovního prostoru
 
-Pracovní prostor Visual Studio pro Mac se skládá z oblasti hlavního dokumentu (obvykle editor, plochu návrháře nebo soubor možností), které jsou obklopeny bezplatnými *panely* , které obsahují užitečné informace pro přístup a správu souborů aplikace, testování a ladění.
+Pracovní prostor Visual Studio pro Mac se skládá z oblasti hlavního dokumentu (normálně editor, plochu návrháře nebo soubor možností) *, které obsahují* užitečné informace pro přístup a správu souborů aplikace, testování a ladění.
 
  ![Rozložení pracovního prostoru](media/customizing-the-ide-image1a.png)
 
-### <a name="viewing-and-arranging-pads"></a>Zobrazení a uspořádání ladicích panely
+### <a name="viewing-and-arranging-tool-windows"></a>Zobrazení a uspořádání oken nástrojů
 
-Když otevřete jakékoli nové řešení nebo soubor v Visual Studio pro Mac, měli byste si *všimnout některých Center* v pracovním prostoru, včetně oblast řešení, osnovy dokumentu a chyb:
+Když otevřete jakékoli nové řešení nebo soubor v Visual Studio pro Mac, měli byste si všimnout některých *oken nástrojů* v pracovním prostoru, včetně okna řešení, osnovy dokumentu a chyb:
 
-![Panely řešení](media/customizing-the-ide-image2a.png)
+![Okno nástroje](media/customizing-the-ide-image2a.png)
 
-Visual Studio pro Mac poskytuje panely obsahující další informace, nástroje a navigační pomůcky, ke kterým lze získat pøístup, a to tak, že přejdete na položku nabídky **zobrazit > panely** a vyberete panel, který chcete přidat:
+Visual Studio pro Mac poskytuje okna nástrojů obsahující další informace, nástroje a navigační pomůcky, ke kterým lze získat pøístup procházením položky nabídky **zobrazení** a výběrem okna nástroje pro přidání:
 
-![Vybrat novou plochu](media/customizing-the-ide-image3a.png)
+![Vybrat nové okno nástrojů](media/customizing-the-ide-image3a.png)
 
-Může být také otevřeno automaticky pomocí různých příkazů, jako je například příkaz **Find in Files** (Shift + cmd + F), který otevře odpojenou plochu výsledků hledání.
+Okna nástrojů lze také automaticky otevřít pomocí různých příkazů, například příkazu **najít v souborech** (Shift + cmd + F), který otevře odpojené okno výsledků hledání.
 
-Můžete je snadno přesouvat a uspořádat v rámci pracovního postupu, a to jakýmkoli způsobem. Mohou být například ukotveny na kterékoli straně editoru dokumentu, sousedící s jinou podložkou, nad nebo pod jiným panelem nebo jako sadu oken s kartami, které umožňují rychlé přepínání mezi nimi.
+Okna nástrojů je možné přesunout a uspořádat v rámci pracovního postupu jakýmkoli způsobem, který je pro vás nejvhodnější. Mohou být například ukotveny na kterékoli straně editoru dokumentu, sousedící s jiným oknem nástrojů, nad nebo pod jiným oknem nebo jako sada oken s kartami, které umožňují rychlé přepínání mezi nimi.
 
-Pro často používané panely můžete také celou plochu odpojit od okna Visual Studio pro Mac a vytvořit pro tuto plochu samostatné okno.
+U často používaných oken nástrojů je také možné je zcela odpojit od okna Visual Studio pro Mac a do jejich nového okna.
 
-Panely můžou být v pravém horním rohu každého panelu skryté a zavřené:
+Okna nástrojů lze připnout a uzavřít ovládacími prvky v pravém horním rohu každého okna:
 
-![Skrývání a zavírání oken](media/customizing-the-ide-image5a.png)
+:::image type="content" source="media/customizing-the-ide-image5a.png" alt-text="Používání ovládacích prvků pro připnutí nebo zavření oken nástrojů":::
 
-Automaticky skryté panely jsou ukotvené na stranách pracovního prostoru, aby byly snadno přístupné v případě potřeby. Najetí myší na panel se znovu zobrazí, a pokud ho opustí fokus myši a klávesnice, bude skrytý.
+Připnuté okna jsou ukotvena na stranách pracovního prostoru a zůstanou otevřená pro rychlejší přístup, když je potřebujete. Nepřipnutý systém Windows je ukotven, ale není zobrazen, dokud nepřejdete myší na kartu pro okno s myší nebo fokusem s klávesnicí. můžou být skryté, když je fokus myší a klávesnicí opustí.
 
 ### <a name="organizing-layouts"></a>Uspořádání rozložení
 
-Panely, které se zobrazují kdykoli, jsou závislé na aktuálním kontextu. Například při použití vizuálního návrháře jsou panely nástrojů a okna mřížky vlastností nejdůležitější; Při ladění je užitečné mít k dispozici ladicí program pro zobrazení zásobníku a místních hodnot.
+Okna nástrojů, která jsou zobrazena kdykoli, jsou závislá na aktuálním kontextu. Například při použití vizuálního návrháře jsou okna sada nástrojů a Mřížka vlastností nejdůležitější; Při ladění je užitečné mít okna ladicího programu pro zobrazení zásobníku a místních hodnot.
 
-Stav otevřených ladicích programu je reprezentován *rozložením*. Rozložení lze ručně přepnout prostřednictvím nabídky zobrazení, jak je znázorněno na následujícím obrázku, nebo je automaticky přepnuta při provedení akce, jako je například ladění nebo otevření scénáře:
+Stav otevřených oken nástrojů je reprezentován *rozložením*. Rozložení lze ručně přepnout prostřednictvím nabídky zobrazení, jak je znázorněno na následujícím obrázku, nebo je automaticky přepnuta při provedení akce, jako je například ladění nebo otevření scénáře:
 
 ![Výběr nových rozložení](media/customizing-the-ide-image6b.png)
 
-K dispozici je vždy jedno aktivní rozložení a změna, kterou provedete v rozložení, jako je například přidání nebo přemístění panelu, změní se pouze aktivní rozložení. Jakmile Visual Studio pro Mac zavřete, změny, které jste provedli, nebudou uloženy.
-
-Nové rozložení je však možné vytvořit pomocí položky nabídky **zobrazit > Uložit aktuální rozložení** . Tento příkaz přidá vaše aktuální rozložení do nabídky, takže ho můžete kdykoli vybrat:
+Je možné vytvořit nové rozložení pomocí položky nabídky **zobrazit > rozložení > Uložit aktuální rozložení...** Tento příkaz přidá vaše aktuální rozložení do nabídky, takže ho můžete kdykoli vybrat:
 
 ![Uložit aktuální rozložení](media/customizing-the-ide-image6a.png)
 
@@ -120,7 +118,7 @@ Nové rozložení je však možné vytvořit pomocí položky nabídky **zobrazi
 
 Visual Studio pro Mac umožňuje otevírat textové editory vedle sebe nebo mít editor jako odpojené plovoucí okno.
 
-Režim se dvěma sloupci lze povolit prostřednictvím položky nabídky zobrazit výběrem možnosti **zobrazit > Editor sloupce > 2 sloupce**nebo přetažením karty editoru do jednoho okraje oblasti editoru:
+Režim se dvěma sloupci lze povolit prostřednictvím položky nabídky zobrazit výběrem možnosti **zobrazit > Editor sloupce > 2 sloupce** nebo přetažením karty editoru do jednoho okraje oblasti editoru:
 
 ![Dva sloupce vedle sebe – souběžný režim](media/customizing-the-ide-sbs.png)
 

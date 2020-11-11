@@ -1,20 +1,20 @@
 ---
 title: Visual Studio pro Mac pro uživatele Windows
-description: Představení funkcí pro usnadnění přístupu v Visual Studio pro Mac a jak je možné je povolit.
+description: Úvod do Visual Studio pro Mac pro vývojáře obeznámené s používáním sady Visual Studio v operačním systému Windows.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 09/25/2019
+ms.date: 11/09/2020
 ms.assetid: 61CB6883-08CE-470F-8599-6F7570DB756E
-ms.openlocfilehash: b414026ba7297dd6c93fecdf56d9a9c58c99f294
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 880811c675aac34a18a65c6eccb8ee10f3347d4c
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74984268"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493371"
 ---
 # <a name="visual-studio-for-mac-for-windows-users"></a>Visual Studio pro Mac pro uživatele Windows
 
-Migrace z jednoho operačního systému na jiný může být těžké. V aplikacích pro různé platformy jsou často drobné rozdíly, od uživatelského rozhraní po kategorizaci položek nabídky. Uživatelé budou mít také výukovou křivku acclimatizing k novému uživatelskému rozhraní operačního systému. Tady se dozvíte o nejběžnějších rozdílech mezi Visual Studio pro Mac a Visual Studiem pro Windows. Naučíte se také několik různých konvencí mezi macOS a Windows.
+Migrace z jednoho operačního systému na jiný může být těžké. V aplikacích pro různé platformy jsou často drobné rozdíly, od uživatelského rozhraní po kategorizaci položek nabídky. Tady se dozvíte o nejběžnějších rozdílech mezi Visual Studio pro Mac a Visual Studiem pro Windows. Naučíte se také několik různých konvencí mezi macOS a Windows.
 
 ## <a name="keyboard-shortcuts"></a>Klávesové zkratky
 
@@ -45,14 +45,13 @@ Modifikační klávesa příkazu macOS (⌘) může běžně nahradit řídicí 
 
 Nabídky v macOS jsou uspořádány jinak než nabídky ve Windows. Visual Studio pro Mac není žádná výjimka. Některé z nejběžnějších možností nabídky najdete tady:
 
-|Úkol                   |Visual Studio (Windows)                                              |Visual Studio for Mac                |
+|Úkol                   |Visual Studio (Windows)                                              |Visual Studio pro Mac                |
 |-----------------------|---------------------------------------------------------------------|-------------------------------------|
 |Předvolby (možnosti)  |Možnosti > nástrojů...                                                   |Visual Studio – předvolby pro >...       |
 |Rozšíření             |Rozšíření > Správa rozšíření                                       |Rozšíření Visual studia >...        |
-|Rozložení                |Okno > použít rozložení okna > [vybrat rozložení]                       |Zobrazit > [vybrat rozložení]               |
+|Rozložení                |Okno > použít rozložení okna > [vybrat rozložení]                       |Zobrazit > rozložení > [vybrat rozložení]               |
 |Aktualizace                |Help > vyhledat aktualizace                                             |Visual Studio > vyhledat aktualizace... |
 |Správce balíčků NuGet  |Nástroje > správce balíčků NuGet > spravovat balíčky nebo řešení NuGet... |Projekt > spravovat balíčky NuGet...   |
-|Panely nebo okna         |Zobrazení > [vybrat panel nebo okno]                                         |Zobrazení >ových >ů [vybrat plochu/okno]  |
 |Nástroje pro hledání             |Upravit > najít a nahradit > [vybrat nástroj]                              |Search > [vybrat nástroj]               |
 |O sadě Visual Studio    |Help > o Microsoft Visual Studio                                 |Visual Studio > o aplikaci Visual Studio  
 

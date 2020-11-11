@@ -1,21 +1,21 @@
 ---
 title: Začínáme s ASP.NET Core
 description: Tento článek popisuje, jak začít s ASP.NET v Visual Studio pro Mac, včetně instalace a vytvoření nového projektu.
-author: sayedihashimi
-ms.author: sayedha
-ms.date: 04/02/2019
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/06/2020
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
 no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.topic: how-to
-ms.openlocfilehash: 7f8795b798b492370a08e55171c5627485c7869a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: a2f45069967df412f9245f8044c53ef425a00fdf
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584058"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493358"
 ---
 # <a name="getting-started-with-aspnet-core"></a>Začínáme s ASP.NET Core
 
@@ -44,13 +44,13 @@ K dispozici je řada projektů, které vám poskytnou předem vytvořenou šablo
 
 ![Možnosti projektu ASP.NET](media/asp-net-core-2019-new-asp-core.png)
 
-Vyberte **ASP.NET Core prázdné webové aplikace** a klikněte na tlačítko **Další**. Zadejte název projektu a stiskněte **vytvořit**. Tím se vytvoří nová aplikace ASP.NET Core. V levém podokně panelu řešení rozbalte druhou šipku a pak vyberte **Startup.cs**. Měl by vypadat podobně jako na následujícím obrázku:
+Vyberte **ASP.NET Core prázdné webové aplikace** a klikněte na tlačítko **Další**. Zadejte název projektu a stiskněte **vytvořit**. Tím se vytvoří nová aplikace ASP.NET Core. V levém podokně okna řešení rozbalte druhou šipku a pak vyberte **Startup.cs**. Měl by vypadat podobně jako na následujícím obrázku:
 
 ![Nové ASP.NET Core prázdné zobrazení projektu](media/asp-net-core-2019-empty-project.png)
 
-Prázdná šablona ASP.NET Core vytvoří webovou aplikaci se dvěma výchozími soubory: **program.cs** a **Startup.cs**, které jsou vysvětleny níže. Vytvoří také složku závislosti, která obsahuje závislosti balíčku NuGet vašeho projektu, například ASP.NET Core, rozhraní .NET Core Framework a cíle MSBuild, které sestavují projekt:
+Prázdná šablona ASP.NET Core vytvoří webovou aplikaci se dvěma výchozími soubory: **program.cs** a **Startup.cs** , které jsou vysvětleny níže. Vytvoří také složku závislosti, která obsahuje závislosti balíčku NuGet vašeho projektu, například ASP.NET Core, rozhraní .NET Core Framework a cíle MSBuild, které sestavují projekt:
 
-![Oblast řešení zobrazení závislostí](media/asp-net-core-2019-solution-dependencies.png)
+![Okno řešení zobrazující závislosti](media/asp-net-core-2019-solution-dependencies.png)
 
 ### <a name="programcs"></a>Program.cs
 
@@ -128,7 +128,7 @@ Tento jednoduchý Hello, World Project může běžet hned bez dalšího přidá
 
 ![Spuštění prohlížeče](media/asp-net-web-picker.png)
 
-Visual Studio pro Mac používá náhodný port pro spuštění webového projektu. Chcete-li zjistit, jaký port je to, otevřete výstup aplikace, který je uveden v části **zobrazit > panely**. Výsledek by měl vypadat podobně jako v následujícím příkladu:
+Visual Studio pro Mac používá náhodný port pro spuštění webového projektu. Chcete-li zjistit, jaký port je to, otevřete výstup aplikace, který je uveden v nabídce **zobrazit > jiné nabídce systému Windows** . Výsledek by měl vypadat podobně jako v následujícím příkladu:
 
 ![Výstup aplikace zobrazující port naslouchání](media/asp-net-core-image6.png)
 
@@ -138,17 +138,17 @@ Po spuštění projektu by měl být výchozí webový prohlížeč spuštěn a 
 
 ## <a name="adding-a-controller"></a>Přidání kontroleru
 
-ASP.NET Core aplikace používají vzor návrhu MVC (Model-View-Controller) k poskytnutí logického oddělení zodpovědností pro každou část aplikace. MVC se skládá z následujících:
+ASP.NET Core aplikace používají vzor návrhu MVC (Model-View-Controller) k poskytnutí logického oddělení zodpovědností pro každou část aplikace. Vzor návrhu MVC se skládá z následujících konceptů:
 
-- **Model**: třída, která představuje data aplikace.
-- **Zobrazit**: zobrazí uživatelské rozhraní aplikace (což jsou často data modelu).
-- **Kontroler**: třída, která zpracovává požadavky prohlížeče, reaguje na vstupy a interakce uživatele.
+- **Model** : třída, která představuje data aplikace.
+- **Zobrazit** : zobrazí uživatelské rozhraní aplikace (což jsou často data modelu).
+- **Kontroler** : třída, která zpracovává požadavky prohlížeče, reaguje na vstupy a interakce uživatele.
 
-Další informace o použití MVC najdete v tématu [přehled ASP.NET Core příručka MVC](/aspnet/core/mvc/overview) .
+Další informace o použití MVC najdete v tématu [Přehled příručky ASP.NET Core MVC](/aspnet/core/mvc/overview) .
 
 Chcete-li přidat kontroler, postupujte následovně:
 
-1. Klikněte pravým tlačítkem myši na název projektu a vyberte **přidat > nové soubory**. Vyberte **obecné > prázdnou třídu**a zadejte název kontroleru:
+1. Klikněte pravým tlačítkem myši na název projektu a vyberte **přidat > nové soubory**. Vyberte **obecné > prázdnou třídu** a zadejte název kontroleru:
 
     ![Dialogové okno Nový soubor](media/asp-net-core-image8.png)
 
@@ -228,9 +228,9 @@ Chcete-li přidat kontroler, postupujte následovně:
 
     ![Spuštění aplikace v prohlížeči s argumenty](media/asp-net-core-image10.png)
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Odstraňování potíží
 
-Pokud potřebujete .NET Core nainstalovat ručně na Mac OS 10,12 (Sierra) a vyšší, udělejte toto:
+Pokud potřebujete .NET Core nainstalovat ručně na macOS 10,12 (Sierra) a vyšší, udělejte toto:
 
 1. Než začnete s instalací .NET Core, ujistěte se, že jste aktualizovali všechny aktualizace operačního systému na nejnovější stabilní verzi. Můžete to vrátit tak, že v aplikaci App Storu kliknete na kartu aktualizace a vyberete kartu aktualizace.
 
@@ -241,8 +241,8 @@ Ujistěte se, že jste úspěšně dokončili všechny kroky, abyste zajistili, 
 ## <a name="summary"></a>Shrnutí
 
 Tento průvodce vám poskytl Úvod do ASP.NET Core. Popisuje, co je, kdy se používá, a poskytuje informace o jeho použití v Visual Studio pro Mac.
-Další informace o dalších krocích odsud najdete v následujících příručkách:
-- [ASP.NET Core](/aspnet/core/?view=aspnetcore-2.1) docs.
+Další informace o dalších krocích najdete v následujících příručkách:
+- [ASP.NET Core](/aspnet/core/) docs.
 - [Vytváření back-end služeb pro nativní mobilní aplikace](/aspnet/core/mobile/native-mobile-backend), které ukazují, jak vytvořit službu REST pomocí ASP.NET Core pro aplikaci Xamarin. Forms.
 - [ASP.NET Core praktické laboratorní prostředí](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started).
 

@@ -1,18 +1,18 @@
 ---
 title: Použití dat pro čas návrhu s Návrhář XAML v aplikaci Visual Studio
 description: Naučte se používat data v jazyce XAML v době návrhu.
-ms.date: 09/29/2020
+ms.date: 11/10/2020
 ms.topic: overview
 author: alihamie
 ms.author: tglee
 manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: b9477868d265e9ad8b927d9e13b67112c0ea14f7
-ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
+ms.openlocfilehash: 1dd0b4df440f6addd474ef08e7bf0b2958a58076
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92298479"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492891"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Použití dat pro čas návrhu s Návrhář XAML v aplikaci Visual Studio
 
@@ -25,7 +25,7 @@ Některá rozložení je obtížné vizualizovat bez dat. V tomto dokumentu si u
 
 Data v době návrhu jsou vzorová data, která jste nastavili tak, aby byly vaše ovládací prvky v Návrhář XAML snadněji vizualizace. Chcete-li začít, přidejte následující řádky kódu do záhlaví dokumentu jazyka XAML, pokud ještě nejsou k dispozici:
 
-```xml 
+```xml
 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
@@ -138,9 +138,9 @@ Výhodou je, že můžete navazovat ovládací prvky na statickou verzi vašeho 
 
 ## <a name="use-design-time-data-with-custom-types-and-properties"></a>Použití dat při návrhu s vlastními typy a vlastnostmi
 
-Tato funkce ve výchozím nastavení funguje pouze s ovládacími prvky a vlastnostmi platformy. V této části provedeme kroky potřebné k tomu, abyste mohli používat vlastní ovládací prvky jako ovládací prvky pro dobu návrhu, pro zákazníky, kteří používají Visual Studio 2019 Preview verze [16,8](/visualstudio/releases/2019/preview-notes) nebo novější, k dispozici nové funkce. Tuto možnost můžete povolit třemi požadavky:
+Tato funkce ve výchozím nastavení funguje pouze s ovládacími prvky a vlastnostmi platformy. V této části provedeme kroky potřebné k tomu, abyste mohli používat vlastní ovládací prvky jako ovládací prvky pro dobu návrhu, pro zákazníky, kteří používají Visual Studio 2019 verze [16,8](/visualstudio/releases/2019/release-notes/) nebo novější, dostupné možnosti. Tuto možnost můžete povolit třemi požadavky:
 
-- Vlastní obor názvů xmlns 
+- Vlastní obor názvů xmlns
 
     ```xml
     xmlns:myControls="http://MyCustomControls"
@@ -173,7 +173,7 @@ Chcete-li vytvořit vlastní obor názvů xmlns v prostředí WPF .NET Core, je 
 [assembly: XmlnsDefinition("http://MyCustomControls", "MyViews.MyButtons")]
    ```
 
-## <a name="troubleshooting"></a>Řešení potíží
+## <a name="troubleshooting"></a>Odstraňování potíží
 
 Pokud se setkáte s problémem, který není uvedený v této části, informujte nás pomocí nástroje [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio.md) .
 

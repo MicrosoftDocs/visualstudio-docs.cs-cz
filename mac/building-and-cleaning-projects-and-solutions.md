@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 09/19/2019
 ms.assetid: E4B6CB42-9FE2-43B9-93B7-BD4BD50518B1
 ms.topic: how-to
-ms.openlocfilehash: a33b590290880a7e20e7c0ec44c0b12942b1240e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de6be4b509eff8a013f7367614e0016f810b3657
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85939098"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492695"
 ---
 # <a name="building-and-cleaning-projects-and-solutions"></a>Sestavování a čištění projektů a řešení
 
@@ -22,7 +22,7 @@ Podle kroků v tomto článku se dozvíte, jak sestavit, znovu sestavit nebo vy�
 
 ## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Sestavení, opětovné sestavení nebo vyčištění celého řešení
 
-1. Vyberte uzel řešení v **oblast řešení**:
+1. V **okně řešení** vyberte uzel řešení:
 
     ![Výběr uzlu řešení](media/compiling-and-building-image1.png)
 
@@ -38,7 +38,7 @@ Podle kroků v tomto článku se dozvíte, jak sestavit, znovu sestavit nebo vy�
 
 ## <a name="to-build-or-rebuild-a-single-project"></a>Sestavení nebo opětovné sestavení jednoho projektu
 
-1. Vyberte projekt v **oblast řešení**.
+1. Vyberte projekt v **okně řešení**.
 
 2. V řádku nabídek vyberte nabídku **sestavení** .
 

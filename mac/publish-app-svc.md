@@ -1,5 +1,6 @@
 ---
 title: Publikování do Azure App Service
+description: Publikování webové aplikace pomocí nástrojů pro publikování v Visual Studio pro Mac.
 ms.date: 04/02/2019
 helpviewer_keywords:
 - deployment, website
@@ -12,12 +13,12 @@ ms.custom: video
 ms.topic: how-to
 ms.workload:
 - azure
-ms.openlocfilehash: 81ae8c8dde91655a4b9b3b8dcb4d0033af34e4d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 054c5e7871daca0d349064f261e949dec7f738a5
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950514"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493423"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio-for-mac"></a>Publikování webové aplikace pro Azure App Service pomocí Visual Studio pro Mac
 
@@ -31,7 +32,7 @@ K publikování ASP.NET Corech aplikací do Azure App Service můžete použít 
 
 ## <a name="publish-to-azure-app-service"></a>Publikování do Azure App Service
 
- 1. V Oblast řešení klikněte pravým tlačítkem myši na projekt a vyberte možnost **publikovat**.
+ 1. V okně řešení klikněte pravým tlačítkem myši na projekt a vyberte možnost **publikovat**.
 
     ![Místní nabídka publikovat](media/publish-context-menu.png)
 

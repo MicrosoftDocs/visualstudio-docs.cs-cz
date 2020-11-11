@@ -7,12 +7,12 @@ ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 26A0DE31-2FBF-4E1B-99FB-083111AA1680
 ms.topic: how-to
-ms.openlocfilehash: adeab06341c0691bdb902a3bb8a813ac38d786f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c7269b4272fb8ed2c73dbe9f57e94da071dc623e
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85938514"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493059"
 ---
 # <a name="creating-and-editing-a-custom-editorconfig-file"></a>Vytvoření a úprava vlastního souboru EditorConfig
 
@@ -51,7 +51,7 @@ EditorConfig také podporuje [konvence kódování](/visualstudio/ide/editorconf
 
     Přidání položky na úrovni řešení se automaticky vytvoří a zahnízda ve složce **položky řešení** :
 
-    ![Položka řešení zobrazená na panelu řešení](media/editorconfig-image1a.png)
+    ![Položka řešení zobrazená v okně řešení](media/editorconfig-image1a.png)
 
 4. Upravte soubor. Příklad:
 
@@ -86,11 +86,11 @@ Je možné, že budete chtít znovu použít existující `.editorconfig` soubor
 
 3. Soubory začínající `.` (například `.editorconfig` ) jsou skryté soubory v MacOS, takže stiskněte kombinaci kláves **Command + Shift +.** aby byl `.editorconfig` soubor viditelný.
 
-4. Vyberte `.editorconfig` soubor a klikněte na **otevřít**:
+4. Vyberte `.editorconfig` soubor a klikněte na **otevřít** :
 
     ![Přidání nového okna souboru](media/editorconfig-image3b.png)
 
-5. Až se zobrazí následující dialogové okno, vyberte možnost **zkopírovat soubor do adresáře** a vyberte **OK**:
+5. Až se zobrazí následující dialogové okno, vyberte možnost **zkopírovat soubor do adresáře** a vyberte **OK** :
 
     ![Přidat soubor do složky možnosti dialogového okna](media/editorconfig-image3.png)
 
@@ -123,15 +123,15 @@ csharp_new_line_before_open_brace = none
 
 Nastavení `root` pro `true` označení tohoto souboru jako souboru nejvyšší úrovně základu kódu a všech vyšších `.editorconfig` souborů v projektu jsou ignorovány, jak je vysvětleno v části [přepsání nastavení EditorConfig](#override-editorconfig-settings) .
 
-Každý oddíl obsahuje hranaté závorky (**[]**) a určuje informace o typech souborů, ke kterým by měly být tyto vlastnosti.
+Každý oddíl obsahuje hranaté závorky ( **[]** ) a určuje informace o typech souborů, ke kterým by měly být tyto vlastnosti.
 
 V předchozím příkladu jsou některá nastavení použita pro všechny soubory v projektu a ostatní jsou přidány pouze do souborů C#. Snímky obrazovky uvedené níže se zobrazí před a po `.editorconfig` použití nastavení:
 
-**Před**:
+**Před** :
 
 ![Před použitím nastavení editorconfig](media/editorconfig-image4.png)
 
-**Po**:
+**Po** :
 
 ![Po použití nastavení editorconfig](media/editorconfig-image5.png)
 

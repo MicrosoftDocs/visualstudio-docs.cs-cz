@@ -3,15 +3,15 @@ title: Zahrnutí balíčku NuGet do projektu
 description: Tento dokument popisuje, jak zahrnout balíček NuGet do projektu pomocí Visual Studio pro Mac. Provede vás tím, že najde a stáhne balíček a také zavádí funkce integrace IDE.
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 09/04/2020
+ms.date: 11/09/2020
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: conceptual
-ms.openlocfilehash: e361a1a0fba05a6fdabc66b03008049dfa34784f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 46ceb99617c6a0e9ba457fdb769c1162090d1d31
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349321"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493488"
 ---
 # <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>Instalace a Správa balíčků NuGet v Visual Studio pro Mac
 
@@ -23,7 +23,7 @@ Tento článek popisuje, jak zahrnout balíček NuGet do projektu a demonstruje 
 
 ## <a name="find-and-install-a-package"></a>Vyhledání a instalace balíčku
 
-1. Otevřete-li projekt v Visual Studio pro Mac, klikněte pravým tlačítkem myši na složku **závislosti** (složka **balíčky** , pokud používáte projekt Xamarin) v **oblast řešení** a vyberte možnost **Spravovat balíčky NuGet...**.
+1. Otevřete-li projekt v Visual Studio pro Mac, klikněte pravým tlačítkem myši na složku **závislosti** (složka **balíčky** , pokud používáte projekt Xamarin) v **okně řešení** a vyberte možnost **Spravovat balíčky NuGet...**.
 
     ![Akce kontextu přidání nového balíčku NuGet](media/nuget-walkthrough-packages-menu.png)
 
@@ -85,7 +85,7 @@ Nakonec na kartě **aktualizace** v dialogovém okně vyberte balíček, který 
 ![Dialogové okno Spravovat balíčky NuGet se otevřelo na kartě nainstalované, s vybraným balíčkem a otevře se rozevírací seznam nová verze.](media/nuget-walkthrough-packages-nuget-dialog-update-installed-package.png)
 
 ### <a name="locating-outdated-packages"></a>Hledání zastaralých balíčků
-Z panelu řešení můžete zobrazit aktuálně nainstalovanou verzi balíčku a kliknutím pravým tlačítkem na balíček aktualizovat.
+V okně řešení můžete zobrazit aktuálně nainstalovanou verzi balíčku a kliknutím pravým tlačítkem na balíček aktualizovat.
 
 ![Nabídka balíčky s možnostmi aktualizace, odebrání a aktualizace](media/nuget-walkthrough-PackageMenu.png)
 

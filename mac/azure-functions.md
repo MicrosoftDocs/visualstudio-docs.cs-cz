@@ -1,18 +1,18 @@
 ---
 title: Úvod do Azure Functions
-description: Použití služby Azure Functions v Visual Studio pro Mac.
+description: Začínáme s Azure Functions v Visual Studio pro Mac.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 04/02/2019
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
-ms.openlocfilehash: 586d03e88ba3a2523dde00a6826980830ad54fbc
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: 69ecab4f4d3dd7d99821b384dbda0c8986297282
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402314"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492838"
 ---
 # <a name="introduction-to-azure-functions"></a>Úvod do Azure Functions
 
@@ -27,7 +27,7 @@ K vytváření a nasazování funkcí budete také potřebovat předplatné Azur
 ## <a name="creating-your-first-azure-functions-project"></a>Vytvoření prvního projektu Azure Functions
 
 1. V Visual Studio pro Mac vyberte **soubor > nové řešení**.
-2. V dialogovém okně Nový projekt vyberte šablonu Azure Functions v oblasti **Cloud > obecné** a klikněte na **Další**:
+2. V dialogovém okně Nový projekt vyberte šablonu Azure Functions v oblasti **Cloud > obecné** a klikněte na **Další** :
 
     ![Dialogové okno Nový projekt znázorňující možnost Azure Functions](media/azure-functions-image1.png)
 
@@ -81,7 +81,7 @@ Díky podpoře Azure Functions v Visual Studio pro Mac můžete testovat a ladit
 
 Šablony funkcí umožňují rychle vytvářet nové funkce s použitím nejběžnějších aktivačních událostí a šablon. Chcete-li vytvořit jiný typ funkce, postupujte takto:
 
-1. Chcete-li přidat novou funkci, klikněte pravým tlačítkem myši na název projektu a vyberte **přidat > přidat funkci...**:
+1. Chcete-li přidat novou funkci, klikněte pravým tlačítkem myši na název projektu a vyberte **přidat > přidat funkci...** :
 
     ![akce kontextu pro přidání nové funkce](media/azure-functions-addnew.png)
 
@@ -95,10 +95,10 @@ Výše uvedený postup můžete použít k přidání dalších funkcí do proje
 
 ## <a name="publish-to-azure"></a>Publikování do Azure
 
-1. Klikněte pravým tlačítkem na název projektu a vyberte **publikovat > publikovat do Azure**:  ![ možnost publikovat do Azure.](media/azure-functions-image5.png)
+1. Klikněte pravým tlačítkem na název projektu a vyberte **publikovat > publikovat do Azure** :  ![ místní nabídka s publikováním > publikování do Azure... možnost zvýraznění](media/azure-functions-image5.png)
 2. Pokud jste už účet Azure připojili k Visual Studio pro Mac zobrazí se seznam dostupných služeb App Services. Pokud jste se přihlásili, budete vyzváni k tomu.
 3. V dialogovém okně **publikovat do Azure App Service** můžete buď vybrat existující službu App Service, nebo vytvořit novou, kliknutím na **Nový**.
-4. V dialogovém okně **vytvořit novou App Service** zadejte nastavení:  ![ možnost publikovat do Azure menu.](media/azure-functions-image7.png)
+4. V dialogovém okně **vytvořit novou App Service** zadejte nastavení:  ![ Nový App Service dialogové okno s poli pro název služby, předplatné, skupinu prostředků a nastavení plánu služeb.](media/azure-functions-image7.png)
 
     |Nastavení  |Popis  |
     |---------|---------|
@@ -109,23 +109,23 @@ Výše uvedený postup můžete použít k přidání dalších funkcí do proje
 
 5. Kliknutím na **Další** vytvořte účet úložiště. Modul runtime Functions vyžaduje účet úložiště Azure. Kliknutím na **vlastní** vytvořte účet úložiště pro obecné účely nebo použijte existující:
 
-    ![Možnost publikování do nabídky Azure](media/azure-functions-image8.png)
+    ![Nový dialog App Service s výzvou k zadání názvu účtu úložiště](media/azure-functions-image8.png)
 
 6. Kliknutím na **Vytvořit** vytvořte aplikaci funkce a související prostředky v Azure a nasaďte kód projektu funkce.
 
-7. Můžete být vyzváni k zadání dialogového okna během publikování, které vás informují o verzi funkcí Update v Azure. Klikněte na **Ano**:
+7. Můžete být vyzváni k zadání dialogového okna během publikování, které vás informují o verzi funkcí Update v Azure. Klikněte na **Ano** :
 
-    ![Možnost publikování do nabídky Azure](media/azure-functions-image12.png)
+    ![Vyzvat k aktualizaci nastavení aplikace Azure tak, aby odpovídalo verzi místní funkce? s možností Ano a ne.](media/azure-functions-image12.png)
 
 ## <a name="function-app-settings"></a>Nastavení aplikace funkcí
 
 Všechna nastavení, která jste přidali v local.settings.js, musí být přidána také do aplikace Function App v Azure. Tato nastavení nejsou nahrána automaticky při publikování projektu.
 
-Přístup k nastavení aplikace získáte tak, že přejdete na Azure Portal na adrese [https://ms.portal.azure.com/](https://ms.portal.azure.com/) . V části **aplikace Functions**vyberte **aplikace Function** App a zvýrazněte název vaší funkce:
+Přístup k nastavení aplikace získáte tak, že přejdete na Azure Portal na adrese [https://ms.portal.azure.com/](https://ms.portal.azure.com/) . V části **aplikace Functions** vyberte **aplikace Function** App a zvýrazněte název vaší funkce:
 
 ![Nabídka Azure Functions](media/azure-functions-image9.png)
 
-Na kartě **Přehled** vyberte **nastavení aplikace** v části **nakonfigurované funkce**:
+Na kartě **Přehled** vyberte **nastavení aplikace** v části **nakonfigurované funkce** :
 
 ![Karta over funkce Azure Functions](media/azure-functions-image10.png)
 

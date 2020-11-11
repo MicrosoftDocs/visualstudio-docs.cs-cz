@@ -3,15 +3,15 @@ title: Ukázka Visual Studio pro Mac
 description: Visual Studio pro Mac poskytuje integrované vývojové prostředí pro sestavování aplikací .NET na macOS, včetně ASP.NET Core webů a projektů Xamarin pro iOS, Android, Mac a Xamarin. Forms.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 07/03/2020
+ms.date: 11/09/2020
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: a385e58f73edbcea6eb25b7b2e2728e00f9bcb8d
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: a2caadd454564b389f48987e69e1bc08475affea
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584006"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493267"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Prohlídka sady Visual Studio 2019 for Mac
 
@@ -58,11 +58,11 @@ Následující obrázek ukazuje Visual Studio pro Mac s načtenou aplikací:
 
 Následující části obsahují přehled hlavních oblastí v Visual Studio pro Mac.
 
-## <a name="solution-pad"></a>Panel řešení
+## <a name="solution-window"></a>Okno řešení
 
-Oblast řešení uspořádá projekt (y) v řešení:
+Okno řešení uspořádá projekt (y) v řešení:
 
-![Projekty uspořádané v Oblast řešení](media/ide-tour-image18.png)
+![Projekty uspořádané v okně řešení](media/ide-tour-image18.png)
 
 To je místo, kde jsou soubory zdrojového kódu, prostředků, uživatelského rozhraní a závislostí uspořádány do projektů specifických pro platformu.
 
@@ -72,7 +72,7 @@ Další informace o použití projektů a řešení v Visual Studio pro Mac nale
 
 Odkazy na sestavení pro každý projekt jsou k dispozici ve složce odkazy:
 
-![Odkazuje na složku na panelu řešení.](media/ide-tour-image19.png)
+![Odkazuje na složku v okně řešení.](media/ide-tour-image19.png)
 
 Další odkazy jsou přidány pomocí dialogového okna **Upravit odkazy** , které se zobrazí Poklikáním na složku odkazy, nebo výběrem možnosti **Upravit odkazy** v jeho kontextových nabídkách:
 
@@ -86,7 +86,7 @@ Všechny externí závislosti použité ve vaší aplikaci jsou uloženy ve slo�
 
 NuGet je nejoblíbenější správce balíčků pro vývoj pro .NET. Díky podpoře NuGet v aplikaci Visual Studio můžete snadno vyhledat a přidat balíčky do projektu do aplikace.
 
-Pokud chcete do aplikace přidat závislost, klikněte pravým tlačítkem na složku závislosti/balíčky a vyberte **Přidat balíčky**:
+Pokud chcete do aplikace přidat závislost, klikněte pravým tlačítkem na složku závislosti/balíčky a vyberte **Přidat balíčky** :
 
 ![Přidat balíček NuGet](media/ide-tour-image21.png)
 
@@ -135,9 +135,9 @@ Visual Studio pro Mac se integruje se systémy správy zdrojového kódu Git a s
 
 ![Název větve, který označuje projekt pod správou zdrojových kódů](media/ide-tour-image22.png)
 
-Soubory s nepotvrzenými změnami mají pro své ikony v podokně řešení poznámku, jak je znázorněno na následujícím obrázku:
+Soubory s nepotvrzenými změnami mají v okně řešení anotaci se svými ikonami, jak je znázorněno na následujícím obrázku:
 
-![Nepotvrzené soubory na panelu řešení](media/ide-tour-image23.png)
+![Nepotvrzené soubory v okně řešení](media/ide-tour-image23.png)
 
 Další informace o použití správy verzí v aplikaci Visual Studio naleznete v článku Správa [verzí](./version-control.md) .
 

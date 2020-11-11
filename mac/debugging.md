@@ -7,16 +7,16 @@ ms.date: 5/13/2020
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
 ms.topic: overview
-ms.openlocfilehash: 09a761a8269fa40c3fab49a34b3e43a7f0ec63cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04fae5874a4fefcb51bdef8b00c8cb3b7171057e
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85939080"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493254"
 ---
 # <a name="debugging-with-visual-studio-for-mac"></a>Ladění pomocí Visual Studio pro Mac
 
-Visual Studio pro Mac obsahuje ladicí programy s podporou pro aplikace .Net Core, .NET Framework, Unity a Xamarin.
+Visual Studio pro Mac obsahuje ladicí programy s podporou pro aplikace .NET Core, .NET Framework, Unity a Xamarin.
 
 Visual Studio pro Mac používá [*měkký ladicí program mono*](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), který je implementován do mono runtime a umožňuje Visual Studio pro Mac ladit spravovaný kód napříč všemi platformami.
 
@@ -40,7 +40,7 @@ Chcete-li nastavit zarážku v integrovaném vývojovém prostředí (IDE), klik
 
 ![Nastavení zarážky v okraji](media/debugging-image0.png)
 
-Všechny zarážky, které byly nastaveny v kódu, můžete zobrazit tak, že na  **panelu zarážek**kliknete:
+Kliknutím na  **okno zarážky** můžete zobrazit všechny zarážky, které byly nastaveny v kódu.
 
 ![Seznam zarážek](media/debugging-image0a.png)
 
@@ -61,15 +61,15 @@ Nástroje pro ladění, jako je například ta, která se používá ke kontrole
 
 ## <a name="conditional-breakpoints"></a>Podmíněné zarážky
 
-Můžete také nastavit pravidla, která určují okolnosti, za kterých by měla být zarážka, což se říká přidání *podmíněné zarážky*. Chcete-li nastavit podmíněnou zarážku, přejděte k  **okno vlastnosti zarážky**, kterou lze provést dvěma způsoby:
+Můžete také nastavit pravidla, která určují okolnosti, za kterých by měla být zarážka, což se říká přidání *podmíněné zarážky*. Chcete-li nastavit podmíněnou zarážku, přejděte k  **okno vlastnosti zarážky** , kterou lze provést dvěma způsoby:
 
 * Chcete-li přidat novou podmíněnou zarážku, klikněte pravým tlačítkem myši na okraj editoru, nalevo od čísla řádku pro kód, na kterém chcete nastavit zarážku, a vyberte Nová zarážka:
 
  ![Místní nabídka zarážky](media/debugging-image4.png)
 
-* Chcete-li přidat podmínku do existující zarážky, klikněte pravým tlačítkem myši na zarážku a vyberte možnost  **vlastnosti zarážky**, nebo v panelu  **zarážky**vyberte tlačítko Upravit zarážku, které je zobrazeno níže:
+* Chcete-li přidat podmínku do existující zarážky, klikněte pravým tlačítkem myši na zarážku a vyberte možnost  **vlastnosti zarážky** , nebo v  **okně zarážky** vyberte tlačítko Upravit zarážku, které je zobrazeno níže:
 
- ![Upravit existující zarážku v panelu zarážek](media/debugging-image5.png)
+ ![Upravit existující zarážku v okně zarážek](media/debugging-image5.png)
 
 Pak můžete zadat podmínku, pod kterou chcete, aby se zarážka nastala:
 
@@ -103,7 +103,7 @@ Produkty Xamarin dodávané se zdrojovým kódem pro knihovny tříd mono a mů�
 
 Vzhledem k tomu, že tato funkce spotřebovává větší množství paměti během ladění, je ve výchozím nastavení vypnutá.
 
-Pokud chcete tuto funkci povolit, přejděte na **Visual Studio pro Mac > předvolby > ladicí program** a ujistěte se, že je **Vybraná**možnost "**Krok do externího kódu**", jak je znázorněno níže:
+Pokud chcete tuto funkci povolit, přejděte na **Visual Studio pro Mac > předvolby > ladicí program** a ujistěte se, že je **Vybraná** možnost " **Krok do externího kódu** ", jak je znázorněno níže:
 
 ![Krokovat s vnořením do externího kódu – možnost](media/debugging-image8.png)
 

@@ -1,23 +1,23 @@
 ---
 title: Visual Studio pro Mac – integrovaný terminál
-description: Visual Studio pro Mac poskytuje integrované vývojové prostředí pro sestavování aplikací .NET na macOS, včetně ASP.NET Core webů a projektů Xamarin pro iOS, Android, Mac a Xamarin. Forms.
+description: Práce s integrovaným terminálem v Visual Studio pro Mac.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 05/14/2020
 ms.assetid: EFD53CE9-8174-4FE4-8863-2984D22FD921
-ms.openlocfilehash: d362938e8f0075591ea5d4ed8461d11395680b5c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f91c2b1c3f06f8f1fbe54e32fde70b9fe88c5f5d
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84185201"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492867"
 ---
 # <a name="integrated-terminal"></a>Integrovaný terminál
 V Visual Studio pro Mac můžete otevřít integrované okno terminálu, zpočátku začínáte v kořenovém adresáři vašeho řešení. Terminál může být užitečný pro různé druhy situací – spouští se úlohy front-end (například: NPM, NG nebo Vue), správu kontejnerů, spouštění pokročilých příkazů Git, spouštění Entity Frameworkch příkazů, zobrazení výstupu rozhraní příkazového řádku dotnet, přidávání balíčků NuGet a další. 
 
 Otevření terminálu:
 - K zobrazení nebo skrytí okna terminálu použijte klávesovou zkratku **CTRL +** .
-- Použijte **View** \> **Pads** \> nabídku **terminálu** Zobrazit nástroje.
+- Použijte nabídku **Zobrazit** \> **terminál** .
 - Použijte příkaz **terminálu** z panelu hledání.
 
 ![* Visual Studio pro Mac Integrated Terminal hned po spuštění. *](media/integrated-terminal-intro.png)
@@ -26,7 +26,7 @@ Ve výchozím nastavení se při spuštění terminálu provede:
 - Nastavte pracovní adresář na cestu k aktuálnímu řešení.
 - Načtěte výchozí systémové prostředí.
 
-## <a name="search"></a>Search
+## <a name="search"></a>Hledat
 Obsah okna terminálu můžete vyhledat pomocí nabídky **hledat > najít...** .
 
 ![* Možnosti vyhledávání v integrovaném terminálu Visual Studio pro Mac *](media/integrated-terminal-search.png)
@@ -38,18 +38,18 @@ Obsah okna terminálu můžete vyhledat pomocí nabídky **hledat > najít...** 
 |Vytvořit novou instanci terminálu|**Ctrl+'**|
 |Posunout o stránku nahoru|**PageUp**|
 |Posunout o stránku dolů|**PageDown**|
-|Přepínat mezi dříve použitými příkazy|**↑**, **↓**|
+|Přepínat mezi dříve použitými příkazy|**↑** , **↓**|
 |Zvětšit velikost písma|**⌘ +**|
 |Zmenšit velikost písma|**⌘-**|
 
 ## <a name="multiple-instances"></a>Několik instancí
 V každém okamžiku může běžet víc instancí terminálu. Novou instanci můžete vytvořit pomocí klávesové zkratky **CTRL +** . Mezi instancemi můžete přepínat kliknutím na kartu pro každou instanci nebo pomocí klávesové zkratky **CTRL + TAB** v dialogovém okně pro výběr okna.
 
-![* Více instancí terminálů ve Visual Studio pro Mac *](media/integrated-terminal-multiple-instances.png) 
+![* Více instancí terminálů ve Visual Studio pro Mac *](media/integrated-terminal-multiple-instances.png) 
 
 ## <a name="customizing-the-terminal-window"></a>Přizpůsobení okna terminálu
 ### <a name="configuring-the-terminal-font"></a>Konfigurace písma terminálu
-Velikost písma a velikosti, která se používá pro obsah terminálu, můžete změnit v podokně předvolby > prostředí > písma. Ve výchozím nastavení bude písmo stejné jako obsah panelu výstupů, a to pomocí Menlo Regular, Size 11. Můžete ho nastavit na libovolné písmo, nezávisle na písmu v editoru.
+Velikost písma a velikosti, která se používá pro obsah terminálu, můžete změnit v podokně předvolby > prostředí > písma. Ve výchozím nastavení bude písmo stejné jako obsah okno Výstup, a to pomocí Menlo Regular, Size 11. Můžete ho nastavit na libovolné písmo, nezávisle na písmu v editoru.
 
 ![* Přizpůsobení nastavení písma pro integrovaný terminál *](media/integrated-terminal-change-font.png)
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: f3dfdecb28254e5b9683cd1e9640c5a45b728a6c
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: d4d3c0965d638c9e048cef29d7f1b535a54e54a5
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134691"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493475"
 ---
 # <a name="tutorial-get-started-with-windows-forms-designer"></a>Kurz: Začínáme s Návrhář formulářů
 
@@ -37,7 +37,7 @@ Až budete hotovi, budete mít vlastní ovládací prvek, který je sestaven pom
 
 Prvním krokem je vytvoření projektu ovládacího prvku DemoCalculator.
 
-1. Otevřete Visual Studio a vytvořte nový projekt **knihovny ovládacích prvků model Windows Forms** . Pojmenujte projekt **DemoCalculatorLib** .
+1. Otevřete Visual Studio a vytvořte nový projekt **knihovny ovládacích prvků model Windows Forms** . Pojmenujte projekt **DemoCalculatorLib**.
 
    ::: moniker range=">=vs-2019"
 
@@ -73,7 +73,7 @@ Ovládací prvek DemoCalculator obsahuje několik ovládacích prvků model Wind
     > [!NOTE]
     > Několik ovládacích prvků nabízí inteligentní značky pro usnadnění návrhu. Další informace najdete v tématu [Návod: provádění běžných úloh pomocí inteligentních značek v ovládacích prvcích model Windows Forms](/dotnet/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls).
 
-5. Vyberte svislé ohraničení mezi panely a přetáhněte je napravo, aby se většina místa v levém panelu vybrala na maximum.
+5. Vyberte svislé ohraničení mezi panely a přetáhněte je napravo, aby se většina místa vybrala v levém panelu.
 
     `SplitContainer`Rozdělí ovládací prvek DemoCalculator na dva panely s pohyblivým ohraničením, které ho odděluje. Panel na levé straně bude obsahovat tlačítka a zobrazení kalkulačky a panel na pravé straně zobrazí záznam aritmetických operací provedených uživatelem.
 
@@ -83,11 +83,11 @@ Ovládací prvek DemoCalculator obsahuje několik ovládacích prvků model Wind
 
 8. Vyberte `ListView` glyf inteligentních značek ovládacího prvku. Na panelu inteligentních značek změňte `View` nastavení na `Details` .
 
-9. Na panelu inteligentních značek vyberte **Upravit sloupce** .
+9. Na panelu inteligentních značek vyberte **Upravit sloupce**.
 
    Otevře se dialogové okno **Editor kolekce ColumnHeader** .
 
-10. V dialogovém okně **Editor kolekce ColumnHeader** vyberte **Přidat** a přidejte do `ListView` ovládacího prvku sloupec. Změňte hodnotu `Text` vlastnosti sloupce na **history** . Vyberte **OK** a vytvořte sloupec.
+10. V dialogovém okně **Editor kolekce ColumnHeader** vyberte **Přidat** a přidejte do `ListView` ovládacího prvku sloupec. Změňte hodnotu `Text` vlastnosti sloupce na **history**. Vyberte **OK** a vytvořte sloupec.
 
 11. Na panelu inteligentních značek vyberte **ukotvit v nadřazeném kontejneru** a pak výběrem glyfu inteligentních značek zavřete panel inteligentních značek.
 
@@ -99,11 +99,11 @@ Ovládací prvek DemoCalculator obsahuje několik ovládacích prvků model Wind
 
     Otevře se dialogové okno **styly sloupců a řádků** .
 
-14. Vyberte tlačítko **Přidat** , dokud se nezobrazí pět sloupců. Vyberte všechny pět sloupců a v poli **typ velikosti** vyberte **procenta** . Nastavte hodnotu **procenta** na **20** . Tím se u každého sloupce nastaví stejná šířka.
+14. Vyberte tlačítko **Přidat** , dokud se nezobrazí pět sloupců. Vyberte všechny pět sloupců a v poli **typ velikosti** vyberte **procenta** . Nastavte hodnotu **procenta** na **20**. Tím se u každého sloupce nastaví stejná šířka.
 
-15. V části **Zobrazit** vyberte **řádky** .
+15. V části **Zobrazit** vyberte **řádky**.
 
-16. Vyberte **Přidat** do zobrazení pěti řádků. Vyberte možnost všechny pět řádků a v poli **typ velikosti** vyberte **procento** . Nastavte hodnotu **procenta** na **20** . Tím se nastaví každý řádek na stejnou výšku.
+16. Vyberte **Přidat** do zobrazení pěti řádků. Vyberte možnost všechny pět řádků a v poli **typ velikosti** vyberte **procento** . Nastavte hodnotu **procenta** na **20**. Tím se nastaví každý řádek na stejnou výšku.
 
 17. Vyberte **OK** a potvrďte provedené změny a potom vyberte glyf inteligentních značek, který panel inteligentních značek zavře.
 
@@ -117,7 +117,7 @@ Nyní, když je nastaveno rozložení ovládacího prvku, lze naplnit ovládací
 
    `TextBox`Ovládací prvek je umístěn v první buňce `TableLayoutPanel` ovládacího prvku.
 
-2. V okně **vlastnosti** změňte hodnotu `TextBox` vlastnosti jeho ColumnSpan ovládacího prvku na hodnotu **5** .
+2. V okně **vlastnosti** změňte hodnotu `TextBox` vlastnosti jeho ColumnSpan ovládacího prvku na hodnotu **5**.
 
    `TextBox`Ovládací prvek se přesune na pozici, která je zarovnána na střed svého řádku.
 
@@ -147,13 +147,13 @@ Nyní, když je nastaveno rozložení ovládacího prvku, lze naplnit ovládací
 
     Všechny `Button` ovládací prvky Dock, aby vyplnily buňky, které obsahují.
 
-13. V okně **vlastnosti** rozbalte `Margin` uzel vlastnost. Nastavte hodnotu `All` na **5** .
+13. V okně **vlastnosti** rozbalte `Margin` uzel vlastnost. Nastavte hodnotu `All` na **5**.
 
     Všechny `Button` ovládací prvky mají menší velikost pro vytvoření většího okraje mezi nimi.
 
 14. Vyberte **button10** a **Button20** a pak stiskněte **Delete** pro jejich odebrání z rozložení.
 
-15. Vyberte **Button5** a **button15** a pak změňte hodnotu `RowSpan` vlastnosti na **2** . Toto jsou tlačítka **clear** a **=** pro ovládací prvek DemoCalculator.
+15. Vyberte **Button5** a **button15** a pak změňte hodnotu `RowSpan` vlastnosti na **2**. Toto jsou tlačítka **clear** a **=** pro ovládací prvek DemoCalculator.
 
 ## <a name="use-the-document-outline-window"></a>Použití okna Osnova dokumentu
 
@@ -163,7 +163,7 @@ Když se ovládací prvek nebo formulář naplní několika ovládacími prvky, 
 
    Okno Osnova dokumentu zobrazuje stromové zobrazení ovládacího prvku DemoCalculator a jeho ovládacích prvků na jeho prvku. Ovládací prvky kontejneru, jako je `SplitContainer` například zobrazit jejich podřízené ovládací prvky jako poduzly ve stromové struktuře. Můžete také přejmenovat ovládací prvky na místě pomocí okna Osnova dokumentu.
 
-2. V okně **Osnova dokumentu** klikněte pravým tlačítkem myši na možnost **Button1** a pak vyberte možnost **Přejmenovat** . Změňte jeho název na sevenButton.
+2. V okně **Osnova dokumentu** klikněte pravým tlačítkem myši na možnost **Button1** a pak vyberte možnost **Přejmenovat**. Změňte jeho název na sevenButton.
 
 3. Pomocí okna **Osnova dokumentu** přejmenujte `Button` ovládací prvky z názvu vygenerovaného návrhářem na název výroby podle následujícího seznamu:
 
@@ -259,13 +259,13 @@ Tlačítka na ovládacím prvku DemoCalculator mají obslužné rutiny událost�
 
 ## <a name="test-the-control"></a>Testování ovládacího prvku
 
-Vzhledem k tomu, že ovládací prvek DemoCalculator dědí z <xref:System.Windows.Forms.UserControl> třídy, můžete otestovat jeho chování pomocí **kontejneru testu UserControl** . Další informace naleznete v tématu [How to: test runtime Behavior prvku UserControl](/dotnet/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol).
+Vzhledem k tomu, že ovládací prvek DemoCalculator dědí z <xref:System.Windows.Forms.UserControl> třídy, můžete otestovat jeho chování pomocí **kontejneru testu UserControl**. Další informace naleznete v tématu [How to: test runtime Behavior prvku UserControl](/dotnet/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol).
 
-1. Stisknutím klávesy **F5** Sestavte a spusťte ovládací prvek DemoCalculator v **kontejneru testu UserControl** .
+1. Stisknutím klávesy **F5** Sestavte a spusťte ovládací prvek DemoCalculator v **kontejneru testu UserControl**.
 
 2. Vyberte ohraničení mezi `SplitContainer` panely a přetáhněte je doleva a doprava. `TableLayoutPanel`A všechny jeho podřízené ovládací prvky mění velikost sebe sama tak, aby se vešly do dostupného místa.
 
-3. Po dokončení testování ovládacího prvku vyberte možnost **Zavřít** .
+3. Po dokončení testování ovládacího prvku vyberte možnost **Zavřít**.
 
 ## <a name="use-the-control-on-a-form"></a>Použití ovládacího prvku na formuláři
 
@@ -275,15 +275,15 @@ Ovládací prvek DemoCalculator lze použít v jiných složených ovládacích 
 
 Prvním krokem je vytvoření projektu aplikace. Pomocí tohoto projektu sestavíte aplikaci, která zobrazuje váš vlastní ovládací prvek.
 
-1. Vytvořte nový projekt **aplikace model Windows Forms** a pojmenujte ho **DemoCalculatorTest** .
+1. Vytvořte nový projekt **aplikace model Windows Forms** a pojmenujte ho **DemoCalculatorTest**.
 
 2. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt **DemoCalculatorTest** a pak vyberte **Přidat odkaz** . tím otevřete dialogové okno **Přidat odkaz** .
 
 3. Pokud chcete přidat odkaz na testovací projekt, klikněte na kartu **projekty** a potom vyberte projekt DemoCalculatorLib.
 
-4. V **Průzkumník řešení** klikněte pravým tlačítkem na **DemoCalculatorTest** a pak vyberte **nastavit jako spouštěný projekt** .
+4. V **Průzkumník řešení** klikněte pravým tlačítkem na **DemoCalculatorTest** a pak vyberte **nastavit jako spouštěný projekt**.
 
-5. V Návrhář formulářů zvětšete velikost formuláře na přibližně **700 x 500** .
+5. V Návrhář formulářů zvětšete velikost formuláře na přibližně **700 x 500**.
 
 ### <a name="use-the-control-in-the-forms-layout"></a>Použití ovládacího prvku v rozložení formuláře
 
@@ -299,11 +299,11 @@ Chcete-li použít ovládací prvek DemoCalculator v aplikaci, je nutné jej um�
 
 4. Přesuňte `Button` ovládací prvek kolem ovládacího prvku DemoCalculator a sledujte, kde se zobrazuje zarovnávacím čárám. Pomocí této funkce můžete zarovnat ovládací prvky přesně a snadno. `Button`Po dokončení tento ovládací prvek odstraňte.
 
-5. Klikněte pravým tlačítkem myši na ovládací prvek DemoCalculator a pak vyberte **vlastnosti** .
+5. Klikněte pravým tlačítkem myši na ovládací prvek DemoCalculator a pak vyberte **vlastnosti**.
 
 6. Změňte hodnotu `Dock` vlastnosti na `Fill` .
 
-7. Vyberte formulář a potom rozbalte `Padding` uzel vlastnost. Změňte hodnotu **vše** na **20** .
+7. Vyberte formulář a potom rozbalte `Padding` uzel vlastnost. Změňte hodnotu **vše** na **20**.
 
    Velikost ovládacího prvku DemoCalculator je zmenšena tak, aby odpovídala nové `Padding` hodnotě formuláře.
 

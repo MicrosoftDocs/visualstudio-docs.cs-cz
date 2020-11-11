@@ -1,17 +1,17 @@
 ---
 title: Nastavení úložiště Git
-description: Použití Gitu a podverze v Visual Studio pro Mac.
+description: Připojení k úložišti Git pomocí Visual Studio pro Mac.
 author: therealjohn
 ms.author: johmil
-ms.date: 05/13/2020
+ms.date: 11/09/2020
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
 ms.topic: how-to
-ms.openlocfilehash: bc981530f5493ce1899de1c888e20129c7ae0f8c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 862f073d3c6d535d612a67f215aee740cea175bd
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88214697"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493124"
 ---
 # <a name="set-up-a-git-repository"></a>Nastavení úložiště Git
 
@@ -45,7 +45,7 @@ Chcete-li nastavit úložiště Git, proveďte následující kroky:
 
 Máte-li existující projekt, který ještě _není_ ve správě verzí, postupujte podle následujících kroků a nastavte ho v Gitu:
 
-1. Vyberte název řešení z Oblast řešení v Visual Studio pro Mac.
+1. Vyberte název řešení z okna řešení v Visual Studio pro Mac.
 
 2. V řádku nabídek vyberte možnost Správa **verzí > publikovat v řízení verze** , aby se zobrazilo dialogové okno **úložiště klonování** :
 
@@ -67,14 +67,14 @@ Máte-li existující projekt, který ještě _není_ ve správě verzí, postup
 
     ![Pokus o publikování projektu do Gitu](media/version-control-git7.png)
 
-6. Klikněte na **OK**a pak na **publikovat** v dialogovém okně Výstraha.
+6. Klikněte na **OK** a pak na **publikovat** v dialogovém okně Výstraha.
 
 7. V okně **pověření Git** zadejte svoje uživatelské jméno a heslo GitHubu. 
 
 > [!NOTE]
 > Pokud má váš účet povolené dvojúrovňové ověřování (2FA), budete muset vytvořit přístupový token, který se používá místo hesla. Pokud jste přístupový token nevytvořili, postupujte podle kroků v dokumentaci [k přístupovému tokenu](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) Git.
 
-8. Zadejte uživatelské jméno a osobní přístupový token a stiskněte **OK**:
+8. Zadejte uživatelské jméno a osobní přístupový token a stiskněte **OK** :
 
     ![Zadejte uživatelské jméno a heslo pro Git.](media/version-control-git9-sml.png)
 
@@ -101,15 +101,15 @@ Pomocí následujících kroků Nahrajte nové místní úložiště do nového 
 
 2. Na kartě stav vyberte **Potvrdit** v levém horním rohu.
 
-3. Napište potvrzovací zprávu, třeba First Commit, a pak klikněte na **potvrzení změn**:
+3. Napište potvrzovací zprávu, třeba First Commit, a pak klikněte na **potvrzení změn** :
 
     ![Potvrdit počáteční změny v úložišti Git](media/version-control-git-publish-new2.png)
 
-4. Dále v řádku nabídek přejděte na Správa **verzí > spravovat větve a vzdálené**části.
+4. Dále v řádku nabídek přejděte na Správa **verzí > spravovat větve a vzdálené** části.
 
 5. Přejděte na kartu **vzdálené zdroje** a pak klikněte na **Přidat**.
 
-6. V okně **vzdálené zdroje** přidejte podrobnosti o dříve vytvořeném úložišti GitHub a klikněte na **OK**:
+6. V okně **vzdálené zdroje** přidejte podrobnosti o dříve vytvořeném úložišti GitHub a klikněte na **OK** :
 
     ![Konfigurace vzdálených zdrojů pro úložiště Git](media/version-control-git-publish-new3.png)
 
@@ -132,7 +132,7 @@ Visual Studio pro Mac nyní vloží změny do vzdáleného úložiště GitHub:
 
 Je možné, že budete muset pracovat s úložištěm GitHub, které existuje jenom na vzdáleném, ne na vašem místním počítači. Visual Studio pro Mac umožňuje rychlé naklonování tohoto úložiště. Pomocí následujících kroků naklonujte tento počítač do počítače:
 
-1. V řádku nabídek vyberte možnost Správa **verzí > úložiště klonování**:
+1. V řádku nabídek vyberte možnost Správa **verzí > úložiště klonování** :
 
 2. Zobrazí se karta **připojit s adresou URL** :
 
@@ -149,7 +149,7 @@ Je možné, že budete muset pracovat s úložištěm GitHub, které existuje je
 > [!NOTE]
 > Pokud je úložiště větší než 4 GB, může docházet k problémům.
 
-## <a name="troubleshooting"></a>Řešení potíží
+## <a name="troubleshooting"></a>Odstraňování potíží
 
 Pokud máte problémy s inicializací projektu s prázdným vzdáleným úložištěm, můžete vyzkoušet následující postup:
 
@@ -159,7 +159,7 @@ Pokud máte problémy s inicializací projektu s prázdným vzdáleným úloži�
 1. Pokud existuje soubor **gitignore** , odstraňte ho.
 1. Stiskněte **příkaz + Shift +.** skrytí souborů a složek.
 1. Otevřete své řešení v sadě VS pro Mac.
-1. Na panelu řešení vyberte uzel řešení.
+1. V okně řešení vyberte uzel řešení.
 1. Přejděte do nabídky Správa verzí a v části **Správa verzí vyberte publikovat**.
 1. Postupujte podle kroků v předchozím kurzu počínaje krokem 6.
 

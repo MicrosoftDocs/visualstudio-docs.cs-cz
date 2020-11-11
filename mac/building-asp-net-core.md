@@ -1,17 +1,17 @@
 ---
 title: Sestavování ASP.NET Corech aplikací
-description: Tento článek popisuje, jak začít s ASP.NET v Visual Studio pro Mac, včetně instalace a vytvoření nového projektu.
+description: Tento článek vás provede vytvořením a prozkoumáním ASP.NET Core aplikací pomocí Visual Studio pro Mac.
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 05/30/2019
 ms.assetid: 771C2F8E-46BC-4280-AFE8-ED9D5C7790CE
 ms.topic: how-to
-ms.openlocfilehash: 47ddfa11b4c05896037c1fb18e285d46fc79520b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 22dfa4a33005afd64be54828f3b49c45244779d2
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88214611"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493501"
 ---
 # <a name="building-aspnet-core-applications-in-visual-studio-for-mac"></a>Vytváření aplikací ASP.NET Core v sadě Visual Studio pro Mac
 
@@ -80,15 +80,15 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
 ## <a name="task-3-understanding-how-the-application-is-hosted"></a>Úloha 3: princip hostování aplikace
 
-1. Z **Průzkumník řešení**otevřete **program.cs**. Toto je zaváděcí nástroj, který spustí vaši aplikaci.
+1. Z **Průzkumník řešení** otevřete **program.cs**. Toto je zaváděcí nástroj, který spustí vaši aplikaci.
 
     ![Snímek obrazovky řešení s vybraným zdrojovým souborem C# s názvem program](media/netcore-image10.png)
 
-2. I když zde jsou pouze dva řádky kódu, jsou zásadní. Pojďme je rozdělit. Nejprve se vytvoří nový **WebHostBuilder** . ASP.NET Core aplikace vyžadují hostitele, ve kterém se má provést. Hostitel musí implementovat rozhraní **IWebHost** , které zpřístupňuje kolekce funkcí a služeb a metodu **Start** . Hostitel je obvykle vytvořen pomocí instance třídy **WebHostBuilder**, která sestaví a vrací instanci **webhost** . **Webhost** odkazuje na server, který bude zpracovávat požadavky.
+2. I když zde jsou pouze dva řádky kódu, jsou zásadní. Pojďme je rozdělit. Nejprve se vytvoří nový **WebHostBuilder** . ASP.NET Core aplikace vyžadují hostitele, ve kterém se má provést. Hostitel musí implementovat rozhraní **IWebHost** , které zpřístupňuje kolekce funkcí a služeb a metodu **Start** . Hostitel je obvykle vytvořen pomocí instance třídy **WebHostBuilder** , která sestaví a vrací instanci **webhost** . **Webhost** odkazuje na server, který bude zpracovávat požadavky.
 
     ![Snímek obrazovky s hlavní metodou jazyka C# s příkazem, který inicializuje proměnnou s názvem host s typem WebHostBuilder.](media/netcore-image11.png)
 
-3. I když je **WebHostBuilder** zodpovědný za vytvoření hostitele, který spustí server aplikace, vyžaduje poskytnutí serveru, který implementuje **IServer**. Ve výchozím nastavení se jedná o **[Kestrel](/aspnet/core/fundamentals/servers/kestrel)** webový server pro různé platformy pro ASP.NET Core založený na **libuv**, což je asynchronní vstupně-výstupní knihovna pro různé platformy.
+3. I když je **WebHostBuilder** zodpovědný za vytvoření hostitele, který spustí server aplikace, vyžaduje poskytnutí serveru, který implementuje **`IServer`** . Ve výchozím nastavení se jedná o **[Kestrel](/aspnet/core/fundamentals/servers/kestrel)** webový server pro různé platformy pro ASP.NET Core založený na **libuv** , což je asynchronní vstupně-výstupní knihovna pro různé platformy.
 
     ![Snímek obrazovky Main Method v jazyce C# zvýraznění proměnné hostitele nastavení serveru pomocí metody UseKestrel](media/netcore-image12.png)
 
@@ -108,25 +108,25 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
     ![Snímek z hlavní metody C# zvýrazňující proměnnou hostitele metodou sestavení.](media/netcore-image16.png)
 
-8. I když třídy **IWebHost** jsou vyžadovány k implementaci neblokujícího **spuštění**, ASP.NET Core projekty mají metodu rozšíření s názvem **Run** , která zabalí **začátek** s blokujícím kódem, takže nemusíte ručně zabránit, aby byla metoda ukončena okamžitě.
+8. I když třídy **IWebHost** jsou vyžadovány k implementaci neblokujícího **spuštění** , ASP.NET Core projekty mají metodu rozšíření s názvem **Run** , která zabalí **začátek** s blokujícím kódem, takže nemusíte ručně zabránit, aby byla metoda ukončena okamžitě.
 
     ![Snímek obrazovky s hlavní metodou jazyka C# zvýraznění příkazu pro spuštění hostitele příkazu](media/netcore-image17.png)
 
 ## <a name="task-4-running-and-debugging-the-application"></a>Úloha 4: spuštění a ladění aplikace
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu **CoreLab** a vyberte **možnost možnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu **CoreLab** a vyberte **možnost možnosti**.
 
     ![Snímek obrazovky znázorňující kontextovou nabídku řešení CoreLab, zvýraznění možností.](media/netcore-image18.png)
 
 2. Dialog **Možnosti projektu** obsahuje vše, co potřebujete k úpravě způsobu sestavení a spuštění aplikace. V levém panelu vyberte **Konfigurace spustit > > výchozí** uzel.
 
-3. Kontrolovat **spuštění na externí konzole** a zrušit kontrolu **výstupu konzoly pozastavit**. Obvykle by se konzola aplikace v místním prostředí nezobrazovala, ale místo toho se do panelu **výstupu** zaprotokoluje jeho výsledky. Pro účely tohoto testovacího prostředí ji zobrazíme v samostatném okně, i když to nemusíte dělat během normálního vývoje.
+3. Kontrolovat **spuštění na externí konzole** a zrušit kontrolu **výstupu konzoly pozastavit**. Obvykle by se konzola aplikace v místním prostředí neměla zobrazovat, ale místo toho se zaprotokoluje jeho výsledky do okna **výstup** . Pro účely tohoto testovacího prostředí ji zobrazíme v samostatném okně, i když to nemusíte dělat během normálního vývoje.
 
 4. Klikněte na **OK**.
 
     ![Snímek obrazovky s kartou pro obecné spuštění konfigurace s vybranou možnost spustit u externí konzoly a pozastavit výstup konzoly nebyl vybrán.](media/netcore-image19.png)
 
-5. Stiskněte **F5**, aby se aplikace sestavila a spustila. Případně můžete vybrat **spustit > spustit ladění**.
+5. Stiskněte **F5** , aby se aplikace sestavila a spustila. Případně můžete vybrat **spustit > spustit ladění**.
 
 6. Visual Studio pro Mac spustí dvě okna. První je okno konzoly, které nabízí zobrazení serverové aplikace s místním hostitelem.
 
@@ -174,7 +174,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
 ## <a name="task-5-application-startup-configuration"></a>Úkol 5: konfigurace spuštění aplikace
 
-1. Z **Průzkumník řešení**otevřete **Startup.cs**. Všimněte si, že některé červené vlnovky jsou zpočátku obnoveny na pozadí a kompilátor Roslyn vytváří kompletní přehled závislostí projektu.
+1. Z **Průzkumník řešení** otevřete **Startup.cs**. Všimněte si, že některé červené vlnovky jsou zpočátku obnoveny na pozadí a kompilátor Roslyn vytváří kompletní přehled závislostí projektu.
 
     ![Snímek obrazovky řešení se souborem třídy jazyka C# s názvem Startup Selected.](media/netcore-image29.png)
 
@@ -200,7 +200,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
 ## <a name="task-6-inserting-application-middleware"></a>Úloha 6: vložení middlewaru aplikace
 
-1. Vyhledejte metodu **Configure** ve třídě **Startup** . Tady je místo, kde je nakonfigurované všechny middleware, aby je bylo možné vložit do kanálu HTTP a použít ke zpracování všech požadavků na server. I když je tato metoda volána pouze jednou, může být obsah metod (například **UseStaticFiles**) proveden při každém požadavku.
+1. Vyhledejte metodu **Configure** ve třídě **Startup** . Tady je místo, kde je nakonfigurované všechny middleware, aby je bylo možné vložit do kanálu HTTP a použít ke zpracování všech požadavků na server. I když je tato metoda volána pouze jednou, může být obsah metod (například **UseStaticFiles** ) proveden při každém požadavku.
 
     ![Snímek obrazovky znázorňující metodu Configure ve třídě Startup](media/netcore-image36.png)
 

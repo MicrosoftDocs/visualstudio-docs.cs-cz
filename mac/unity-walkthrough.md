@@ -3,16 +3,16 @@ title: Začínáme s tvorbou her pomocí platformy Unity
 description: Začínáme s Unity a Visual Studio pro Mac
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 05/20/2019
+ms.date: 11/09/2020
 ms.technology: vs-ide-general
 ms.assetid: D07FA43B-9D18-4DFA-8343-CD538FAD84DB
 ms.topic: how-to
-ms.openlocfilehash: da9c8b3470fee406b577b136b6c55d76c9346e44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cae68b54623564028ea85dd1aa319fad5ceaec48
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950647"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493579"
 ---
 # <a name="getting-started-building-games-with-unity-in-visual-studio-for-mac"></a>Začínáme s vytvářením her v Unity v Visual Studio pro Mac
 
@@ -74,7 +74,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
     ![zobrazit kontextovou akci vyhledávacího kontextu](media/unity-image8.png)
 
-12. Projekty obsahují **prostředky**, **knihovny**, **ProjectSettings**a **dočasné** složky, jak vidíte. Pouze ten, který se zobrazí v rozhraní, je složka **assets** . Složka **Library (knihovna** ) je místní mezipaměť pro importované prostředky; obsahuje všechna metadata pro prostředky. Složka **ProjectSettings** ukládá nastavení, která můžete konfigurovat. Dočasná **Složka se používá pro dočasné soubory** z mono a Unity během procesu sestavení. Existuje také soubor řešení, který můžete otevřít v Visual Studio pro Mac (**UnityLab. sln** ).
+12. Projekty obsahují **prostředky** , **knihovny** , **ProjectSettings** a **dočasné** složky, jak vidíte. Pouze ten, který se zobrazí v rozhraní, je složka **assets** . Složka **Library (knihovna** ) je místní mezipaměť pro importované prostředky; obsahuje všechna metadata pro prostředky. Složka **ProjectSettings** ukládá nastavení, která můžete konfigurovat. Dočasná **Složka se používá pro dočasné soubory** z mono a Unity během procesu sestavení. Existuje také soubor řešení, který můžete otevřít v Visual Studio pro Mac ( **UnityLab. sln** ).
 
     ![assety ve Finderu](media/unity-image9.png)
 
@@ -108,11 +108,11 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
     ![zobrazení scény znázorňující krychli](media/unity-image16.png)
 
-21. Přesuňte datovou krychli směrem dolů a doprava podél osy. Tím se v **inspektoru**aktualizuje vlastnost **Transform. Position** . Nezapomeňte na umístění, které se tady zobrazuje, podle toho, co se tady zobrazuje, abyste v testovacím prostředí usnadnili pozdější kroky.
+21. Přesuňte datovou krychli směrem dolů a doprava podél osy. Tím se v **inspektoru** aktualizuje vlastnost **Transform. Position** . Nezapomeňte na umístění, které se tady zobrazuje, podle toho, co se tady zobrazuje, abyste v testovacím prostředí usnadnili pozdější kroky.
 
     ![Přesunutí jedné krychle podél osy](media/unity-image17.png)
 
-22. Nyní můžete přidat nějaký kód, který bude řídit logiku Enemy tak, aby vykonává hráč. Klikněte pravým tlačítkem na složku **assets (prostředky** ) na panelu **projektu** a vyberte **vytvořit > skript jazyka C#**.
+22. Nyní můžete přidat nějaký kód, který bude řídit logiku Enemy tak, aby vykonává hráč. V okně **projektu** klikněte pravým tlačítkem na složku **assets (prostředky** ) a vyberte **vytvořit > skript jazyka C#**.
 
     ![Akce kontextu skriptu jazyka C#](media/unity-image18.png)
 
@@ -142,9 +142,9 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
     ![Enemy Asset vybraný v Unity](media/unity-image23.png)
 
-5. Řešení sady Visual Studio je jednoduché. Obsahuje složku **assets** (která je stejná jako u služby **Finder**) a skript **EnemyAI.cs** , který jste vytvořili dříve. V propracovanějších projektech bude hierarchie pravděpodobně vypadat jinak, než co vidíte v Unity.
+5. Řešení sady Visual Studio je jednoduché. Obsahuje složku **assets** (která je stejná jako u služby **Finder** ) a skript **EnemyAI.cs** , který jste vytvořili dříve. V propracovanějších projektech bude hierarchie pravděpodobně vypadat jinak, než co vidíte v Unity.
 
-    ![Panel řešení v Visual Studio pro Mac](media/unity-image24.png)
+    ![Okno řešení v Visual Studio pro Mac](media/unity-image24.png)
 
 6. **EnemyAI.cs** je otevřen v editoru. Počáteční skript obsahuje pouze zástupné procedury pro metody **Start** a **Update** .
 
@@ -194,11 +194,11 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
 1. Nastavte zarážku na prvním řádku kódu v metodě **Start** . Můžete buď kliknout na okraj editoru na cílovém řádku, nebo umístit kurzor na řádek a stisknout klávesu **F9**.
 
-    ![Nastavení zarážky v aplikaci Visual Studio pro Mac](media/unity-image25.png)
+    ![Nastavení zarážky v Visual Studio pro Mac](media/unity-image25.png)
 
 2. Klikněte na tlačítko **Spustit ladění** nebo stiskněte klávesu **F5**. Tím se projekt sestaví a připojí k Unity pro ladění.
 
-    ![tlačítko Start v aplikaci Visual Studio pro Mac](media/unity-image26.png)
+    ![tlačítko Start v Visual Studio pro Mac](media/unity-image26.png)
 
 3. Vraťte se do **Unity** a kliknutím na tlačítko **Spustit** hru spusťte.
 
@@ -206,21 +206,21 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
 4. Měla by být zarážka a teď můžete použít nástroje pro ladění Visual Studio pro Mac.
 
-    ![dosažení zarážky v aplikaci Visual Studio pro Mac](media/unity-image28.png)
+    ![pozice zarážky v Visual Studio pro Mac](media/unity-image28.png)
 
-5. Z panelu **místní** hodnoty vyhledejte **Tento** ukazatel, který odkazuje na objekt **EnemyAI** . Rozbalte odkaz a podívejte se, že můžete procházet přidružené členy jako **rychlost**.
+5. V okně **místní** hodnoty vyhledejte **Tento** ukazatel, který odkazuje na objekt **EnemyAI** . Rozbalte odkaz a podívejte se, že můžete procházet přidružené členy jako **rychlost**.
 
-    ![panel ladění místních hodnot v aplikaci Visual Studio pro Mac](media/unity-image29.png)
+    ![Okno místní hodnoty v Visual Studio pro Mac](media/unity-image29.png)
 
 6. Odeberte zarážku z metody **Start** stejným způsobem jako byl přidán – kliknutím na něj na okraji nebo výběrem řádku a stisknutím klávesy **F9**.
 
-    ![dosažení zarážky v aplikaci Visual Studio pro Mac](media/unity-image30.png)
+    ![Odebrání zarážky v Visual Studio pro Mac kliknutím na ni](media/unity-image30.png)
 
 7. Stisknutím klávesy **F10** můžete krokovat s prvním řádkem kódu, který nalezne objekt hry **přehrávače** pomocí značky jako parametru.
 
 8. Když najedete myší ukazatel myši na proměnnou **přehrávače** v okně editoru kódu, zobrazí se její přidružení členové. Můžete dokonce rozšířit překryv a zobrazit podřízené vlastnosti.
 
-    ![okno ladění v aplikaci Visual Studio pro Mac Editor](media/unity-image31.png)
+    ![okno ladění v editoru Visual Studio pro Mac](media/unity-image31.png)
 
 9. Stiskněte klávesu **F5** nebo stiskněte tlačítko **Spustit** a pokračujte v provádění. Vraťte se do Unity, abyste viděli datovou krychli Enemy opakovaně pro přístup k datové krychli přehrávače. Pokud není vidět, možná budete muset fotoaparát upravit.
 
@@ -228,7 +228,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
 10. Přepněte zpět na **Visual Studio pro Mac** a nastavte zarážku na prvním řádku **aktualizační** metody. Měl by se hned vysáhnout.
 
-    ![Nastavení zarážky v aplikaci Visual Studio pro Mac](media/unity-image33.png)
+    ![Odebrání zarážky v Visual Studio pro Mac](media/unity-image33.png)
 
 11. Předpokládejme, že je rychlost příliš rychlá a chceme otestovat dopad změny bez restartování aplikace. V okně **Automatické** hodnoty nebo **místní** hodnoty Najděte proměnnou **rychlost** a pak ji změňte na **"10"** a stiskněte klávesu **ENTER**.
 
@@ -258,21 +258,21 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
     ![Otevře se okno prohlížeče s dokumentací](media/unity-image39.png)
 
-3. Visual Studio pro Mac také poskytuje některým pomocníkům k rychlému vytváření tříd chování Unity. Z **Průzkumník řešení**klikněte pravým tlačítkem na **assety** a vyberte **Přidat > nový MonoBehaviour**.
+3. Visual Studio pro Mac také poskytuje některým pomocníkům k rychlému vytváření tříd chování Unity. Z **Průzkumník řešení** klikněte pravým tlačítkem na **assety** a vyberte **Přidat > nový MonoBehaviour**.
 
     ![Nová akce kontextu MonoBehaviour](media/unity-image40.png)
 
 4. Nově vytvořená Třída poskytuje zástupné procedury pro metody **Start** a **Update** . Po pravé závorce metody **Update** začněte psát **"-MouseUp"**. Při psaní si všimněte, že technologie IntelliSense v aplikaci Visual Studio je v rámci metody, kterou plánujete implementovat, rychle nulová. Vyberte ji ze seznamu poskytnutých funkcí automatického dokončování. Vyplní pro vás zástupnou proceduru metody, včetně všech parametrů.
 
-    ![IntelliSense v aplikaci Visual Studio pro Mac](media/unity-image41.png)
+    ![IntelliSense v Visual Studio pro Mac](media/unity-image41.png)
 
 5. Uvnitř metody " **MouseUp** " zadejte **"Base".** pro zobrazení všech základních metod, které jsou k dispozici pro volání. Můžete také prozkoumat různá přetížení každé funkce pomocí možnosti stránkování v pravém horním rohu informačního rámečku technologie IntelliSense.
 
-    ![zkoumání přetížení v aplikaci Visual Studio pro Mac](media/unity-image42.png)
+    ![prozkoumávání přetížení v Visual Studio pro Mac](media/unity-image42.png)
 
-6. Visual Studio pro Mac také umožňují snadno definovat nové shadery. Z **Průzkumník řešení**klikněte pravým tlačítkem na **prostředky** a vyberte **Přidat > nový shader**.
+6. Visual Studio pro Mac také umožňují snadno definovat nové shadery. Z **Průzkumník řešení** klikněte pravým tlačítkem na **prostředky** a vyberte **Přidat > nový shader**.
 
-    ![Nová akce shaderu v aplikaci Visual Studio pro Mac](media/unity-image43.png)
+    ![Nová akce shaderu v Visual Studio pro Mac](media/unity-image43.png)
 
 7. Formát souboru shaderu získá plnou barvu a zpracování písma, aby bylo snazší ho číst a pochopit.
 

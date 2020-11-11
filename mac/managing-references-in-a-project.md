@@ -3,15 +3,15 @@ title: Správa odkazů v projektu
 description: Tento článek popisuje, jak spravovat odkazy v projektu v Visual Studio pro Mac
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 05/06/2018
+ms.date: 11/09/2020
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
 ms.topic: overview
-ms.openlocfilehash: 28ea53826a19a9ec97349060702cf13c68342ad2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41d49fe6b23818f3cb9de8dec72462d4b2029bb6
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85938994"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493514"
 ---
 # <a name="managing-references-in-a-project"></a>Správa odkazů v projektu
 
@@ -21,8 +21,8 @@ Visual Studio pro Mac poskytuje dva způsoby přidávání dalších odkazů do 
 
 Jsou to:
 
-* Odkazy
-* Balíčky NuGet (přidáno prostřednictvím složky Packages)
+* Reference
+* Balíčky NuGet (přidané prostřednictvím složky Packages)
 
 Kromě toho lze do libovolného projektu přidat také webové odkazy a nativní odkazy.
 
@@ -40,7 +40,7 @@ Informace o sestaveních dostupných pro každé rozhraní Xamarin Framework nal
 
 NuGet je nejoblíbenější správce balíčků pro vývoj pro .NET. Podpora NuGet Visual Studio pro Mac umožňuje vyhledat balíčky, které se mají přidat do projektu.
 
-Provedete to tak, že kliknete pravým tlačítkem na složku **balíčku** v oblast řešení a vyberete Přidat balíčky.
+Provedete to tak, že kliknete pravým tlačítkem na složku **balíčku** v okně řešení a vyberete Přidat balíčky.
 
 Další informace o použití balíčku NuGet najdete v návodu [zahrnutí balíčku NuGet v projektu](nuget-walkthrough.md) .
 

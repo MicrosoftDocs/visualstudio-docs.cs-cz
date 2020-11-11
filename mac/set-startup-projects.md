@@ -1,18 +1,18 @@
 ---
 title: Nastavení více projektů po spuštění
 description: Tento článek popisuje, jak nastavit více projektů, které se spustí při spuštění nebo ladění.
-author: sayedihashimi
-ms.author: sayedha
-ms.date: 12/13/2019
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/09/2020
 ms.topic: how-to
 ms.prod: visual-studio-mac
 ms.assetid: fd354fff-ce6b-4505-a815-84a2311e39ba
-ms.openlocfilehash: e0e1af97ec91af4105d1934a431f9aabc6562793
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df1e088a5e2d0f65d8b72dad0895f1edb1740f1f
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950110"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493566"
 ---
 # <a name="set-multiple-startup-projects"></a>Nastavení více projektů po spuštění
 
@@ -20,11 +20,11 @@ Visual Studio pro Mac umožňuje určit, že při ladění nebo spuštění ře�
 
 ## <a name="to-set-multiple-startup-projects"></a>Nastavení více projektů po spuštění
 
-1. V Oblast řešení vyberte řešení (nejvyšší uzel).
+1. V okně řešení vyberte řešení (nejvyšší uzel).
 
-2. Klikněte pravým tlačítkem na uzel řešení a pak vyberte **nastavit projekty po spuštění**:
+2. Klikněte pravým tlačítkem na uzel řešení a pak vyberte **nastavit projekty po spuštění** :
 
-   ![Vyberte nastavit projekty po spuštění.](media/startup-proj-ctx-menu.png)
+   ![Vyberte Nastavit projekty po spuštění.](media/startup-proj-ctx-menu.png)
 
 3. Otevře se dialogové okno **vytvořit konfiguraci spuštění řešení** . Toto dialogové okno umožňuje vytvořit novou konfiguraci spuštění pojmenovaného řešení pro vaše řešení. Můžete použít libovolný název, který chcete. Výchozí název je `Multiple Projects` .
 
@@ -42,7 +42,7 @@ Visual Studio pro Mac umožňuje určit, že při ladění nebo spuštění ře�
 
    ![Řešení s více projekty nakonfigurovanými na spouštění při ladění nebo běhu](media/startup-project-configured.png)
 
-   Můžete vidět, že dva projekty jsou nakonfigurovány pro spuštění, protože oba projekty jsou **tučně** v oblast řešení. Na panelu nástrojů je nová konfigurace spuštění nastavena jako aktuální konfigurace spuštění řešení.
+   Teď jsou tyto dva projekty nakonfigurované tak, aby se spouštěly, které jsou v okně řešení zobrazeny **tučně** . Na panelu nástrojů je nová konfigurace spuštění nastavena jako aktuální konfigurace spuštění řešení.
 
 ## <a name="next-steps"></a>Další kroky
 

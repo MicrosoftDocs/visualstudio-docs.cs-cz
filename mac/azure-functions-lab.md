@@ -1,18 +1,18 @@
 ---
 title: 'Kurz: Azure Functions'
-description: Použití služby Azure Functions v Visual Studio pro Mac.
-author: sayedihashimi
-ms.author: sayedha
-ms.date: 05/06/2018
+description: Podrobný návod k práci s Azure Functions v Visual Studio pro Mac.
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/06/2020
 ms.technology: vs-ide-install
 ms.assetid: 38FD2070-5151-482E-B0A9-993715128736
 ms.topic: tutorial
-ms.openlocfilehash: 99373d7da8c7f83c8703b237ff83c63f9d1b6a53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3fa653a1acaae0f9b58d17f86d6e2e0feeb027a6
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85939087"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493020"
 ---
 # <a name="tutorial-getting-started-with-azure-functions"></a>Kurz: Začínáme s Azure Functions
 
@@ -44,20 +44,20 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
 
     ![pojmenování a vytvoření projektu funkce Azure Functions](media/azure-functions-lab-image2.png)
 
-5. Rozbalte uzly v **oblast řešení**. Výchozí šablona projektu obsahuje odkazy NuGet na nejrůznější balíčky Azure WebJobs a také Newtonsoft.Jsv balíčku.
+5. Rozbalte uzly v **okně řešení**. Výchozí šablona projektu obsahuje odkazy NuGet na nejrůznější balíčky Azure WebJobs a také Newtonsoft.Jsv balíčku.
 
      K dispozici jsou také tři soubory:- **host.js** pro popis globálních možností konfigurace pro hostitele- **local.settings.jsv** pro konfiguraci nastavení služby.
         – Šablona projektu také vytvoří výchozí HttpTrigger. V zájmu tohoto testovacího prostředí byste měli soubor **HttpTrigger.cs** odstranit z projektu.
 
     Otevřete **local.settings.js**. Ve výchozím nastavení má dvě prázdné nastavení připojovacího řetězce.
 
-    ![panel řešení zobrazující local.settings.jsv souboru](media/azure-functions-lab-image3.png)
+    ![okno řešení zobrazující local.settings.jsv souboru](media/azure-functions-lab-image3.png)
 
 ## <a name="exercise-2-creating-an-azure-storage-account"></a>Cvičení 2: vytvoření účtu služby Azure Storage
 
 1. Přihlaste se k účtu Azure na adrese [https://portal.azure.com](https://portal.azure.com) .
 
-1. V části **Oblíbené** , která se nachází na levé straně obrazovky, vyberte **účty úložiště**:
+1. V části **Oblíbené** , která se nachází na levé straně obrazovky, vyberte **účty úložiště** :
 
     ![oddíl oblíbených položek v Azure Portal zobrazení položky účtů úložiště](media/azure-functions-lab-image4.png)
 
@@ -69,7 +69,7 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
 
     ![Podrobnosti o novém účtu úložiště](media/azure-functions-lab-image6.png)
 
-1. Klikněte na možnost **Vytvořit**. Vytvoření účtu úložiště může trvat několik minut. Po úspěšném vytvoření oznámení obdržíte oznámení.
+1. Klikněte na **Vytvořit**. Vytvoření účtu úložiště může trvat několik minut. Po úspěšném vytvoření oznámení obdržíte oznámení.
 
     ![oznámení o úspěšném nasazení](media/azure-functions-lab-image7.png)
 
@@ -89,7 +89,7 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
 
 ## <a name="example-3-creating-and-debugging-an-azure-function"></a>Příklad 3: vytvoření a ladění funkce Azure Functions
 
-1. Teď jste připraveni začít přidávat nějaký kód. Při práci s knihovnou tříd .NET jsou Azure Functions přidány jako statické metody. Z **oblast řešení**klikněte pravým tlačítkem myši na uzel projektu **AzureFunctions** a vyberte **Přidat > přidat funkci**:
+1. Teď jste připraveni začít přidávat nějaký kód. Při práci s knihovnou tříd .NET jsou Azure Functions přidány jako statické metody. V **okně řešení** klikněte pravým tlačítkem myši na uzel projektu **AzureFunctions** a vyberte **Přidat > přidat funkci** :
 
     ![Přidat možnost funkce](media/azure-functions-lab-image11.png)
 
@@ -127,7 +127,7 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
 
     ![Nová metoda Run s atributem Function byl zvýrazněna.](media/azure-functions-lab-image13.png)
 
-1. Dále je metoda označena jako **veřejná statická** metoda, která je povinná. Všimněte si také, že návratová hodnota je **int**. Pokud není uvedeno jinak pomocí atributů metody, vrátí se klientovi jako text jakákoli návratová hodnota typu Azure Function, která není typu void. Ve výchozím nastavení se vrátí jako **XML**, ale dá se změnit na **JSON**, které budete později dělat v testovacím prostředí.
+1. Dále je metoda označena jako **veřejná statická** metoda, která je povinná. Všimněte si také, že návratová hodnota je **int**. Pokud není uvedeno jinak pomocí atributů metody, vrátí se klientovi jako text jakákoli návratová hodnota typu Azure Function, která není typu void. Ve výchozím nastavení se vrátí jako **XML** , ale dá se změnit na **JSON** , které budete později dělat v testovacím prostředí.
 
     ![Nová metoda Run se zvýrazněnou inicializací metody](media/azure-functions-lab-image14.png)
 
@@ -143,7 +143,7 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
 
     ![Zarážka nastavená na řádku vrácení](media/azure-functions-lab-image17.png)
 
-1. Sestavte a spusťte projekt v ladicí relaci stisknutím klávesy **F5** nebo výběrem možnosti **Spustit > spustit ladění**. Případně můžete kliknout na tlačítko **Spustit** . Všechny tyto možnosti provádějí stejnou úlohu. Zbytek tohoto testovacího prostředí se odkazuje na **F5**, ale můžete použít metodu, kterou vyhledáte nejpohodlnější.
+1. Sestavte a spusťte projekt v ladicí relaci stisknutím klávesy **F5** nebo výběrem možnosti **Spustit > spustit ladění**. Případně můžete kliknout na tlačítko **Spustit** . Všechny tyto možnosti provádějí stejnou úlohu. Zbytek tohoto testovacího prostředí se odkazuje na **F5** , ale můžete použít metodu, kterou vyhledáte nejpohodlnější.
 
     ![Sestavit a spustit projekt](media/azure-functions-lab-image18.png)
 
@@ -165,9 +165,9 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
 
 1. Pokračujte v běhu stisknutím klávesy **F5** .
 
-1. V prohlížeči se vykreslí výsledek XML metody. Jak bylo očekáváno, operace sčítání pevně zakódované vytvoří plausible Sum. Všimněte si, že pokud v Safari vidíte pouze "3", přejděte na **safari > předvolby > Upřesnit** a zapište stránku v**nabídce Zobrazit vývoj na řádku nabídek**a znovu ji načtěte.
+1. V prohlížeči se vykreslí výsledek XML metody. Jak bylo očekáváno, operace sčítání pevně zakódované vytvoří plausible Sum. Všimněte si, že pokud v Safari vidíte pouze "3", přejděte na **safari > předvolby > Upřesnit** a zapište stránku v **nabídce Zobrazit vývoj na řádku nabídek** a znovu ji načtěte.
 
-1. V **Visual Studio pro Mac**kliknutím na tlačítko **zastavit** ukončete ladicí relaci. Chcete-li zajistit, aby byly nové změny vyzvednuty, nezapomeňte restartovat (zastavit a poté spustit) relaci ladění.
+1. V **Visual Studio pro Mac** kliknutím na tlačítko **zastavit** ukončete ladicí relaci. Chcete-li zajistit, aby byly nové změny vyzvednuty, nezapomeňte restartovat (zastavit a poté spustit) relaci ladění.
 
     ![Zastavit možnost ladění](media/azure-functions-lab-image22.png)
 
@@ -183,7 +183,7 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
     return x + y;
     ```
 
-1. Aplikaci spusťte.
+1. Spusťte aplikaci.
 
 1. Vraťte se do okna prohlížeče a přidejte řetězec `/?x=2&y=3` k adrese URL. Celá adresa URL by teď měla být `http://localhost:7071/api/Add?x=2&y=3` . Přejděte na novou adresu URL.
 
@@ -193,7 +193,7 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
 
 ## <a name="exercise-4-working-with-functionjson"></a>Cvičení 4: práce s function.jsna
 
-1. V dřívějším cvičení bylo zmíněno Visual Studio pro Mac "vygenerované" funkce úlohy pro funkci Azure, která je definována v knihovně. Důvodem je to, že Azure Functions ve skutečnosti nepoužívají atributy metody za běhu, ale místo toho používá konvenci systému souborů při kompilaci ke konfiguraci, kde a jakým způsobem Azure Functions k dispozici. Z **oblast řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Zobrazit ve Finderu**.
+1. V dřívějším cvičení bylo zmíněno Visual Studio pro Mac "vygenerované" funkce úlohy pro funkci Azure, která je definována v knihovně. Důvodem je to, že Azure Functions ve skutečnosti nepoužívají atributy metody za běhu, ale místo toho používá konvenci systému souborů při kompilaci ke konfiguraci, kde a jakým způsobem Azure Functions k dispozici. V **okně řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Zobrazit ve Finderu**.
 
      ![Zobrazit ve Finderu – možnost nabídky](media/azure-functions-lab-image23.png)
 
@@ -201,11 +201,11 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
 
     ![function.jsv adresáři souborů](media/azure-functions-lab-image24.png)
 
-1. V předchozích krocích tohoto kurzu byste měli mít základní znalosti atributů C#. Tento kód JSON by měl brát v úvahu. Existuje však několik položek, které nebyly pokryty v předchozích cvičeních. Například každá **vazba** musí mít svou **směrovou** sadu. Jak je možné odvodit, **"in"** znamená, že parametr je Input, zatímco **"out"** označuje, že parametr je buď návratovou hodnotou (prostřednictvím **$return**), nebo **výstupním** parametrem metody. Také je nutné zadat **scriptFile** (vzhledem k tomuto konečnému umístění) a metodu **EntryPoint** (Public a static) v rámci sestavení. V několika dalších krocích přidáte vlastní cestu funkce pomocí tohoto modelu, takže zkopírujete obsah tohoto souboru do schránky.
+1. V předchozích krocích tohoto kurzu byste měli mít základní znalosti atributů C#. Tento kód JSON by měl brát v úvahu. Existuje však několik položek, které nebyly pokryty v předchozích cvičeních. Například každá **vazba** musí mít svou **směrovou** sadu. Jak je možné odvodit, **"in"** znamená, že parametr je Input, zatímco **"out"** označuje, že parametr je buď návratovou hodnotou (prostřednictvím **$return** ), nebo **výstupním** parametrem metody. Také je nutné zadat **scriptFile** (vzhledem k tomuto konečnému umístění) a metodu **EntryPoint** (Public a static) v rámci sestavení. V několika dalších krocích přidáte vlastní cestu funkce pomocí tohoto modelu, takže zkopírujete obsah tohoto souboru do schránky.
 
     ![function.jsv souboru otevřeném v aplikaci Visual Studio pro Mac](media/azure-functions-lab-image25.png)
 
-1. V **oblast řešení**klikněte pravým tlačítkem myši na uzel projektu **AzureFunctionsLab** a vyberte **Přidat > nová složka**. Pojmenujte nové **přidávání**složek. Ve výchozím nastavení určuje název této složky cestu k rozhraní API, jako je například **rozhraní API nebo přidávání**.
+1. V **okně řešení** klikněte pravým tlačítkem myši na uzel projektu **AzureFunctionsLab** a vyberte **Přidat > nová složka**. Pojmenujte nové **přidávání** složek. Ve výchozím nastavení určuje název této složky cestu k rozhraní API, jako je například **rozhraní API nebo přidávání**.
 
     ![Možnost nové složky](media/azure-functions-lab-image26.png)
 
@@ -243,7 +243,7 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
     }
     ```
 
-1. Aktualizujte také vlastnost **EntryPoint** v dolní části souboru tak, aby používala metodu nazvanou **"Add2"**, například níže. To ukazuje, že rozhraní API pro cestu a přizpůsobování **...** se může namapovat na odpovídající metodu s libovolným názvem (**Add2** ).
+1. Aktualizujte také vlastnost **EntryPoint** v dolní části souboru tak, aby používala metodu nazvanou **"Add2"** , například níže. To ukazuje, že rozhraní API pro cestu a přizpůsobování **...** se může namapovat na odpovídající metodu s libovolným názvem ( **Add2** ).
 
     ```json
     "entryPoint": "<project-name>.<function-class-name>.Add2"
@@ -276,11 +276,11 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
     }
     ```
 
-1. V posledním kroku, který je potřeba k tomu, aby všechno fungovalo, je dát Visual Studio pro Mac zkopírovat tento soubor do stejné relativní cesty ve výstupním adresáři pokaždé, když se změní. Když je vybraný soubor, zvolte kartu vlastnosti z pravého panelu a pro **Kopírovat do výstupního adresáře** vyberte **Kopírovat, pokud je novější**:
+1. V posledním kroku, který je potřeba k tomu, aby všechno fungovalo, je dát Visual Studio pro Mac zkopírovat tento soubor do stejné relativní cesty ve výstupním adresáři pokaždé, když se změní. Když je vybraný soubor, zvolte kartu vlastnosti z pravého panelu a pro **Kopírovat do výstupního adresáře** vyberte **Kopírovat, pokud je novější** :
 
     ![Možnosti vlastností souboru JSON](media/azure-functions-lab-image30.png)
 
-1. V **Add.cs**nahraďte `Run` metodu (včetně atributu) následující metodou pro splnění očekávané funkce. Je velmi podobný jako s `Run` tím rozdílem, že nepoužívá žádné atributy a má explicitní parametry pro **x** a **y**.
+1. V **Add.cs** nahraďte `Run` metodu (včetně atributu) následující metodou pro splnění očekávané funkce. Je velmi podobný jako s `Run` tím rozdílem, že nepoužívá žádné atributy a má explicitní parametry pro **x** a **y**.
 
     ```csharp
     public static int Add2(
@@ -309,7 +309,7 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
 
 Služba, kterou sestavíte, může být často mnohem složitější než ta, kterou jsme zatím sestavili, a vyžádat si značné množství času a/nebo infrastruktury, která se má spustit. V takovém případě může být vhodné přijmout žádosti, které jsou zařazeny do fronty ke zpracování, když budou prostředky k dispozici, což Azure Functions poskytuje podporu pro. V jiných případech budete chtít data ukládat centrálně. Azure Storage tabulky vám to umožní rychle.
 
-1. Do **Add.cs**přidejte třídu níže. Měl by jít dovnitř oboru názvů, ale mimo stávající třídu.
+1. Do **Add.cs** přidejte třídu níže. Měl by jít dovnitř oboru názvů, ale mimo stávající třídu.
 
     ```csharp
     public class TableRow : TableEntity
@@ -320,7 +320,7 @@ Služba, kterou sestavíte, může být často mnohem složitější než ta, kt
     }
     ```
 
-1. V rámci **Přidat** třídu přidejte následující kód, aby bylo možné zavést další funkci. Všimněte si, že toto je jedinečné, zatím v tom, že nezahrnuje odpověď HTTP. Poslední řádek vrátí nové **TableRow** vyplněné s některými klíčovými informacemi, které usnadňují pozdější načtení (**PartitionKey** a **RowKey**) a také jeho parametry a součet. Kód v rámci metody také používá **TraceWriter** k tomu, aby bylo snazší zjistit, kdy se funkce spouští.
+1. V rámci **Přidat** třídu přidejte následující kód, aby bylo možné zavést další funkci. Všimněte si, že toto je jedinečné, zatím v tom, že nezahrnuje odpověď HTTP. Poslední řádek vrátí nové **TableRow** vyplněné s některými klíčovými informacemi, které usnadňují pozdější načtení ( **PartitionKey** a **RowKey** ) a také jeho parametry a součet. Kód v rámci metody také používá **TraceWriter** k tomu, aby bylo snazší zjistit, kdy se funkce spouští.
 
     ```csharp
     [FunctionName("Process")]
