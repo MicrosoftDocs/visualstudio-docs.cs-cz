@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: a4e0079fa301d751962a945a0bf8348ffd3c359d
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: b5d2f8205c72f2fd661a76296392bb94d1d24469
+ms.sourcegitcommit: 83a39d48b00c6c351e5c1707942633b7f73aaad6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047792"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94531859"
 ---
 # <a name="whats-new-in-msbuild-160"></a>Novinky ve verzi 16.0 nástroje MSBuild
 
@@ -33,10 +33,14 @@ Tento článek popisuje aktualizované funkce a vlastnosti v MSBuild 16,0. Podro
 
 - `VisualStudioVersion` pro tuto verzi nástrojů je to "16,0"
 
+## <a name="change-waves"></a>Změnit vlny
+
+Počínaje nástrojem MSBuild 16,8 můžete selektivně zvolit, zda se chcete odhlásit z určitých potenciálně rušivých změn v nástroji MSBuild. Viz [Změna vlny](change-waves.md).
+
 ## <a name="updates"></a>Aktualizace
 
 MSBuild (a Visual Studio) nyní cílí na .NET Framework 4.7.2. Pokud chcete používat nové funkce rozhraní API nástroje MSBuild, musíte upgradovat také sestavení, ale stávající kód bude fungovat i nadále.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [MSBuild](../msbuild/msbuild.md)
+- [Nástroji](../msbuild/msbuild.md)
