@@ -1,7 +1,7 @@
 ---
 title: wsl-install
 description: devinit Tool WSL – Install.
-ms.date: 08/28/2020
+ms.date: 11/10/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,18 +11,19 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 3283b6e90cb2bced27f09b8c4491992fb5ac315f
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ab63b5feb8c71659b83e824f104dd7bbcbb744f9
+ms.sourcegitcommit: 62f91179f2c3a51c85dd7b0e6172a3a53393fb7e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400176"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94567011"
 ---
 # <a name="wsl-install"></a>wsl-install
 
 Tento `wsl-install` nástroj slouží k instalaci systému Linux distribuce pro [subsystém Windows pro Linux](/windows/wsl/) (WSL).
 
-`wsl-install`Nástroj vyžaduje, aby v systému Windows byla povolena možnost WSL 2. Pokud z nějakého důvodu není WSL2 povolené, můžete WSL2 povolit pomocí nástroje [WindowsFeature – Enable](tool-windowsfeature-enable.md) a názvu funkce `Microsoft-Windows-Subsystem-Linux` .
+> [!IMPORTANT]
+> `wsl-install`Nástroj vyžaduje, aby v systému Windows byla povolena možnost WSL 2. Pokud z nějakého důvodu nepovolíte WSL 2, můžete postupovat podle [dokumentace k instalaci WSL](https://docs.microsoft.com/windows/wsl/install-win10). K povolení všech potřebných funkcí Windows můžete použít taky Nástroj pro [Povolení WindowsFeature](tool-windowsfeature-enable.md) .
 
 ## <a name="usage"></a>Využití
 
