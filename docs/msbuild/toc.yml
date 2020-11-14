@@ -6,6 +6,8 @@
       href: whats-new-msbuild-16-0.md
     - name: Novinky ve verzi 15.0 nástroje MSBuild
       href: what-s-new-in-msbuild-15-0.md
+    - name: Změna vln
+      href: change-waves.md
     - name: Koncepty nástroje MSBuild
       items:
         - name: Přehled

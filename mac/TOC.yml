@@ -169,7 +169,7 @@
         - name: Vytvoření vícekontejnerové aplikace pomocí nástroje Docker Compose
           href: docker-multi-container.md
     - name: Vývoj her pro Unity
-      href: /visualstudio/gamedev/unity/get-started/visual-studio-tools-for-unity.md
+      href: /visualstudio/gamedev/unity/get-started/visual-studio-tools-for-unity
     - name: Mobilní aplikace s Xamarinem
       href: ./xamarin.md
 - name: Usnadnění

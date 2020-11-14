@@ -2,20 +2,20 @@
 title: Prostředí Git v aplikaci Visual Studio
 titleSuffix: ''
 description: Přečtěte si, jak vám nové integrované prostředí Git v rámci sady Visual Studio 2019 může přispět k vyšší produktivitě.
-ms.date: 11/10/2020
+ms.date: 11/13/2020
 ms.topic: conceptual
 ms.author: tglee
 author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 33606a2b4290735d5c15788a1e6961191d6d92f9
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: cf2f55f64eff13e9f7966ac21decf669c36284bd
+ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493553"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94626265"
 ---
-# <a name="git-productivity-in-visual-studio"></a>Produktivita Git v aplikaci Visual Studio
+# <a name="git-experience-in-visual-studio"></a>Prostředí Git v aplikaci Visual Studio
 
 Git je teď výchozím prostředím pro řízení verzí v aplikaci Visual Studio 2019. Od [verze 16,6](/visualstudio/releases/2019/release-notes-v16.6)jsme pracovali na vytvoření sady funkcí a na základě vašich názorů na ni se bude iterace provádět. Nové prostředí Git je ve výchozím nastavení zapnuté pro všechny s vydáním [verze 16,8](/visualstudio/releases/2019/release-notes/).
 
@@ -24,7 +24,11 @@ Git je teď výchozím prostředím pro řízení verzí v aplikaci Visual Studi
 
 ## <a name="how-to-use-git-in-visual-studio"></a>Jak používat Git v aplikaci Visual Studio
 
-Existují tři způsoby, jak začít používat Git se sadou Visual Studio 2019 k zajištění vyšší produktivity:
+Provedeme vás procesem použití nového prostředí Git v rámci sady Visual Studio 2019, ale pokud byste chtěli nejdřív vytvořit rychlou prohlídku, podívejte se na následující video: <br><br>*Délka videa: 5,27 minut*
+
+> [!VIDEO https://www.youtube.com/embed/UHrAg3iKoe0]
+
+Existují tři způsoby, jak začít používat Git se sadou Visual Studio k zajištění vyšší produktivity:
 
 - [Otevřete existující úložiště Git](#open-an-existing-local-repository). Pokud je váš kód již na vašem počítači, můžete jej otevřít pomocí **souboru**  >  **otevřít**  >  **projekt/řešení** (nebo **složky** ) a Visual Studio automaticky detekuje, zda má inicializované úložiště Git.
 - [Vytvořte nové úložiště Git](#create-a-new-git-repository). Pokud váš kód není přidružen k Gitu, můžete vytvořit nové úložiště Git.
@@ -195,6 +199,7 @@ I když je nové prostředí Git ve výchozím nastavení v aplikaci Visual Stud
 
 ## <a name="see-also"></a>Viz také
 
+- [Oznamujeme vydání prostředí Git v](https://devblogs.microsoft.com/visualstudio/announcing-the-release-of-the-git-experience-in-visual-studio/) příspěvku na blogu sady Visual Studio
 - [Spuštění nového prostředí Git](https://www.youtube.com/watch?v=UHrAg3iKoe0&t) na YouTube
 - Sada [nástrojů sady Visual Studio představuje nové video o prostředí Git](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience) na webu Channel 9 a na [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be) .
 - [Skvělé nové aktualizace prostředí Git v](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/) příspěvku na blogu sady Visual Studio

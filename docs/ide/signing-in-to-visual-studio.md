@@ -11,12 +11,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 870d5005cb74a3c130af3d720991a6797bb53bc5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 3fd3a6153a347bcaf7d17fd265b7d9c7d4e6a5e5
+ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036168"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94626174"
 ---
 # <a name="sign-in-to-visual-studio"></a>Přihlášení k sadě Visual Studio
 
@@ -51,19 +51,19 @@ Tady je úplný seznam toho, co můžete očekávat a co můžete udělat po př
 
 ## <a name="how-to-sign-in-to-visual-studio"></a>Jak se přihlásit k Visual Studiu
 
-Při prvním otevření aplikace Visual Studio budete vyzváni k přihlášení a zadání některých základních registračních informací. 
+Při prvním otevření aplikace Visual Studio budete vyzváni k přihlášení a zadání některých základních registračních informací.
 
 ![Výzva k přihlášení](../ide/media/vs2019_signinpopup.png)
 
 Měli byste zvolit účet Microsoft nebo pracovní nebo školní účet, který vás nejlépe zaznamená. Pokud nemáte žádné z těchto účtů, můžete účet Microsoft zdarma vytvořit kliknutím na odkaz pod tlačítkem přihlásit se. Pokud máte problémy, přečtěte si téma [návody registrace účet Microsoft?](https://support.microsoft.com/help/4026324/microsoft-account-how-to-create)
 
-Dále zvolte nastavení uživatelského rozhraní a barevný motiv, který chcete použít v aplikaci Visual Studio. Visual Studio pamatuje tato nastavení a synchronizuje je ve všech prostředích sady Visual Studio, ke kterým jste se přihlásili. Seznam nastavení, která jsou synchronizovaná, najdete v tématu [synchronizovaná nastavení](../ide/synchronized-settings-in-visual-studio.md). Nastavení můžete později změnit, pokud otevřete **Tools**  >  nabídku**Možnosti** nástrojů v aplikaci Visual Studio.
+Dále zvolte nastavení uživatelského rozhraní a barevný motiv, který chcete použít v aplikaci Visual Studio. Visual Studio pamatuje tato nastavení a synchronizuje je ve všech prostředích sady Visual Studio, ke kterým jste se přihlásili. Seznam nastavení, která jsou synchronizovaná, najdete v tématu [synchronizovaná nastavení](../ide/synchronized-settings-in-visual-studio.md). Nastavení můžete později změnit, pokud otevřete **Tools**  >  nabídku **Možnosti** nástrojů v aplikaci Visual Studio.
 
 Po zadání nastavení se spustí aplikace Visual Studio, přihlásíte se a budete připraveni začít. Chcete-li ověřit, zda jste přihlášeni, hledejte své jméno v pravém horním rohu prostředí sady Visual Studio.
 
 ![Aktuálně přihlášený uživatel v VS2019](../ide/media/vs2019_username.png)
 
-Pokud se rozhodnete, že se nechcete přihlašovat při prvním spuštění sady Visual Studio, je snadné to provést později. Vyhledejte odkaz pro **přihlášení** v pravém horním rohu prostředí sady Visual Studio. 
+Pokud se rozhodnete, že se nechcete přihlašovat při prvním spuštění sady Visual Studio, je snadné to provést později. Vyhledejte odkaz pro **přihlášení** v pravém horním rohu prostředí sady Visual Studio.
 
 ![Přihlášený uživatel](../ide/media/vs2019_usernotsignedin.png)
 

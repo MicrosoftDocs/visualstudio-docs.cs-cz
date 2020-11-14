@@ -1,6 +1,6 @@
 ---
 title: Možnosti, textový editor, C#, upřesnit
-ms.date: 08/12/2020
+ms.date: 11/13/2020
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
@@ -10,16 +10,16 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b8e515058b17205a65bab401c7b31c7205aa55bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: acd04f80d5ade3a4afea418def69d4bbb6e20fa0
+ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88214683"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94626190"
 ---
 # <a name="options-text-editor-c-advanced"></a>Možnosti, textový editor, C#, upřesnit
 
-Stránka **Upřesnit** možnosti slouží k úpravě nastavení formátování editoru, refaktoringu kódu a dokumentačních komentářů XML pro jazyk C#. Chcete-li získat přístup k této **Tools**stránce Možnosti, zvolte  >  **možnost**nástroje a pak zvolte možnost **textový editor**  >  **C#**  >  **Upřesnit**.
+Stránka **Upřesnit** možnosti slouží k úpravě nastavení formátování editoru, refaktoringu kódu a dokumentačních komentářů XML pro jazyk C#. Chcete-li získat přístup k této **Tools** stránce Možnosti, zvolte  >  **možnost** nástroje a pak zvolte možnost **textový editor**  >  **C#**  >  **Upřesnit**.
 
 > [!NOTE]
 > Ne všechny možnosti mohou být uvedeny zde.
@@ -101,7 +101,7 @@ Stránka **Upřesnit** možnosti slouží k úpravě nastavení formátování e
 
    ![Rychlá akce pro instalaci balíčku NuGet v aplikaci Visual Studio](media/nuget-lightbulb.png)
 
-## <a name="highlighting"></a>Zvýraznění
+## <a name="highlighting"></a>Zvýrazňování
 
 - Zvýraznit odkazy na symbol pod kurzorem
 
@@ -134,6 +134,12 @@ Tato zaškrtávací políčka zaškrtněte, pokud chcete ve svém kódu zobrazit
     Je-li vybrána tato možnost, vloží parametry názvu parametru pro literály, přetypováníný literál a instance objektů před každý argument ve volání funkce.  
     
     ![Parametry názvu vloženého parametru pro CSharp](media/inline-parameter-name-hints-csharp.png)
+
+- Tipy pro vložené typy 
+    
+    Je-li vybrána tato možnost, vloží parametry typu pro proměnné s odvozenými typy a typy parametrů lambda.  
+    
+    ![Tipy pro vložené typy pro CSharp](media/inline-type-hints-csharp.png)
 ::: moniker-end
 - Generovat dokumentační komentáře XML pro///
 

@@ -7,16 +7,16 @@ ms.date: 04/02/2019
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
-ms.openlocfilehash: 69ecab4f4d3dd7d99821b384dbda0c8986297282
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: f3c1c528e9201c66bc566f9867f8325c653700b9
+ms.sourcegitcommit: f915322d60182143da7036893d2941bc200cf439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94492838"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94575538"
 ---
 # <a name="introduction-to-azure-functions"></a>Úvod do Azure Functions
 
-Azure Functions je způsob, jak vytvořit a spustit fragmenty kódu řízené událostmi – – funkce – – v cloudu, aniž byste museli explicitně zřizovat nebo spravovat infrastrukturu. Další informace o Azure Functions najdete v dokumentaci k [Azure Functions](/azure/azure-functions/).
+Azure Functions je způsob, jak vytvořit a spustit fragmenty kódu řízené událostmi – – funkce – – v cloudu, aniž by bylo nutné explicitně zřizovat nebo spravovat infrastrukturu. Další informace o Azure Functions najdete v dokumentaci k [Azure Functions](/azure/azure-functions/).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -29,15 +29,15 @@ K vytváření a nasazování funkcí budete také potřebovat předplatné Azur
 1. V Visual Studio pro Mac vyberte **soubor > nové řešení**.
 2. V dialogovém okně Nový projekt vyberte šablonu Azure Functions v oblasti **Cloud > obecné** a klikněte na **Další** :
 
-    ![Dialogové okno Nový projekt znázorňující možnost Azure Functions](media/azure-functions-image1.png)
+    ![Dialogové okno Nový projekt zobrazující možnost Azure Functions](media/azure-functions-image1.png)
 
 3. Vyberte šablonu počáteční Azure Functions, kterou chcete použít, zadejte název funkce a klikněte na **Další**.
 
-    ![Dialogové okno Nový projekt zobrazující šablony Azure Functions](media/azure-functions-image2.png)
+    ![Dialog Nový projekt zobrazující šablony Azure Functions](media/azure-functions-image2.png)
 
     > [!TIP]
     > I když jsou v sadě Azure Functions běhové prostředí a šablony (CLI) zachované jako dostupné, nevyhnutelně jsou zastaralé. Při vytváření nového projektu Functions Visual Studio pro Mac zkontroluje aktualizace rozhraní příkazového řádku a upozorní vás, jak je znázorněno na následujícím obrázku. Stačí kliknout na tlačítko a stáhnout aktualizované šablony.
-    > ![K dispozici je dialogové okno Nový projekt zobrazující aktualizace služby Azure Functions.](media/azure-functions-update.png)
+    > ![K dispozici je dialogové okno Nový projekt zobrazující Azure Functions aktualizace.](media/azure-functions-update.png)
 
     V závislosti na typu vybrané funkce vás na další stránce zobrazí výzva k zadání podrobností, jako jsou například přístupová práva, jak je znázorněno na následujícím obrázku:
 
@@ -147,15 +147,15 @@ Možná budete muset nastavit jedno důležité nastavení `FUNCTIONS_EXTENSION_
   - Http POST – Metoda CRUD
   - Aktivační událost http s parametry
 
-- **Timer** – provede vyčištění nebo jiné úlohy Batch podle předdefinovaného plánu. Tato šablona má dvě pole: název a plán, což je šestý výraz CRON pole. Další informace najdete v článku informace [o službě Azure Functions v čase](/azure/azure-functions/functions-create-scheduled-function) .
+- **Timer** – provede vyčištění nebo jiné úlohy Batch podle předdefinovaného plánu. Tato šablona má dvě pole: název a plán, což je šestý výraz CRON pole. Další informace najdete v [článku o Azure Functions v čase](/azure/azure-functions/functions-create-scheduled-function) .
 
-- **Aktivační událost fronty** – jedná se o funkci, která bude reagovat na zprávy, když dorazí do fronty Azure Storage. Kromě názvu funkce Tato šablona přebírá **cestu** (název fronty, ze které se bude číst zpráva) a **připojení** k účtu úložiště (název nastavení aplikace, které obsahuje připojovací řetězec účtu úložiště). Další informace najdete v [článku o službě Azure Functions na Queue Storage](/azure/azure-functions/functions-create-storage-queue-triggered-function).
+- **Aktivační událost fronty** – jedná se o funkci, která bude reagovat na zprávy, když dorazí do fronty Azure Storage. Kromě názvu funkce Tato šablona přebírá **cestu** (název fronty, ze které se bude číst zpráva) a **připojení** k účtu úložiště (název nastavení aplikace, které obsahuje připojovací řetězec účtu úložiště). Další informace najdete v [Azure Functions článku o Queue Storage](/azure/azure-functions/functions-create-storage-queue-triggered-function).
 
-- **Trigger objektu BLOB** – proces Azure Storage objekty BLOB při přidání do kontejneru Kromě názvu funkce Tato šablona také přebírá cestu a vlastnost připojení. Vlastnost Path (cesta) je cesta v účtu úložiště, kterou bude aktivační událost monitorovat. Účet pro připojení je název nastavení aplikace, které obsahuje připojovací řetězec účtu úložiště. Další informace najdete v článku o [službě Azure functions BLOB Storage](/azure/azure-functions/functions-create-storage-blob-triggered-function).
+- **Trigger objektu BLOB** – proces Azure Storage objekty BLOB při přidání do kontejneru Kromě názvu funkce Tato šablona také přebírá cestu a vlastnost připojení. Vlastnost Path (cesta) je cesta v účtu úložiště, kterou bude aktivační událost monitorovat. Účet pro připojení je název nastavení aplikace, které obsahuje připojovací řetězec účtu úložiště. Další informace najdete v [článku Azure Functions BLOB Storage](/azure/azure-functions/functions-create-storage-blob-triggered-function).
 
-- **Obecný Webhook** – jedná se o jednoduchou funkci, která se spustí pokaždé, když přijme žádost od libovolné služby, která podporuje Webhooky. Další informace najdete v [článku Azure Functions na obecných webhookech](/azure/azure-functions/functions-create-generic-webhook-triggered-function).
+- **Obecný Webhook** – jedná se o jednoduchou funkci, která se spustí pokaždé, když přijme žádost od libovolné služby, která podporuje Webhooky. Další informace najdete v [článku o Azure Functions v tématu Obecné Webhooky](/azure/azure-functions/functions-create-generic-webhook-triggered-function).
 
-- **Orchestrace trvalých funkcí** – Durable Functions umožňuje psát stavové funkce v prostředí bez serveru. Toto rozšíření za vás spravuje stav, kontrolní body a restartování. Další informace najdete v průvodci funkcemi Azure na [trvalých funkcích](/azure/azure-functions/durable-functions-overview).
+- **Orchestrace trvalých funkcí** – Durable Functions umožňuje psát stavové funkce v prostředí bez serveru. Toto rozšíření za vás spravuje stav, kontrolní body a restartování. Další informace najdete v průvodci Azure Functions na [trvalých funkcích](/azure/azure-functions/durable-functions-overview).
 
 - **Změna velikosti obrázku** – Tato funkce vytvoří obrázky se změněnou velikostí pokaždé, když se do kontejneru přidá objekt BLOB. Šablona používá cestu a připojovací řetězec pro aktivační událost, malý výstup obrázku a střední výstup obrázku.
 

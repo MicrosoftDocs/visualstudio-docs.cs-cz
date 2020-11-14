@@ -11,16 +11,16 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 7ba3ff8e22923590c21333c35563a98352eeef21
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 929be4682465494738d859f9fe8144b5e26aaf4f
+ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438234"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94626166"
 ---
 # <a name="devinit-and-github-codespaces"></a>Codespaces devinit a GitHub
 
-devinit je skvělý bezplatný [Codespaces](https://github.com/features/codespaces) a devinit se dá použít k získání codespace nastavení, takže přispěvatelé můžou hned sestavovat, spouštět a ladit.
+devinit je skvělý doplněk k [GitHubu Codespaces](https://github.com/features/codespaces) a devinit se dá použít k získání codespace nastavení, takže přispěvatelé můžou hned sestavovat, spouštět a ladit.
 
 > [!IMPORTANT]
 > Před integrací devinit s vaším codespace musíte nejdřív zkontrolovat, že máte `.devinit.json` soubor, který definuje vaše závislosti. Další informace o tom, jak vytvořit `.devinit.json` , najdete v [dokumentaci Začínáme](getting-started-with-devinit.md).
