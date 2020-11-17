@@ -1,5 +1,6 @@
 ---
 title: EnableEditOfLocationField – element (šablony sady Visual Studio)
+description: Přečtěte si o prvku Enableeditoflocationfield – a o tom, jak určuje, jestli uživatel může upravit pole umístění.
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -13,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0fdc6398a5130c2f537c2f1ad6b12f484add42b3
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 46af48bf8bf9f128103767be1aa5fa64968e68f5
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037403"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671295"
 ---
 # <a name="enableeditoflocationfield-element-visual-studio-templates"></a>Enableeditoflocationfield – – element (šablony sady Visual Studio)
 Určuje, zda uživatel může upravit pole umístění.

@@ -1,5 +1,7 @@
 ---
 title: CustomParameters – – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o prvku CustomParameters – a o tom, jak seskupuje vlastní parametry, které mají být předány Průvodci šablonou, když průvodce provede nahrazení parametru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f524996c226f001c68ddc7ac9aa8cb3b99857fc5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c78c8a038df33d9b548229966402d0058f53144
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739418"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671476"
 ---
 # <a name="customparameters-element-visual-studio-templates"></a>CustomParameters – – element (šablony sady Visual Studio)
 Seskupí vlastní parametry, které mají být předány Průvodci šablonou, když průvodce provede nahrazení parametru.

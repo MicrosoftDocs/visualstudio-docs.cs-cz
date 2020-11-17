@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 464460d6a33c01e5c53b66e8a03de7aa7f844953
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 85a8beafdc9b19a807becabb459baa5de88169e2
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399651"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672217"
 ---
 # <a name="dotnet-toolinstall"></a>dotnet-toolinstall
 
@@ -29,7 +29,7 @@ Pokud `input` `additionalOptions` jsou vlastnosti i vynechány nebo jsou prázdn
 | Název                                             | Typ   | Vyžadováno | Hodnota                                                                 |
 |--------------------------------------------------|--------|----------|-----------------------------------------------------------------------|
 | **vyjádření**                                     | řetězec | No       | Volitelná vlastnost komentářů Nepoužívá se.                                 |
-| [**vstup**](#input)                              | řetězec | Yes      | Nástroj .NET Core, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) . |
+| [**vstup**](#input)                              | řetězec | Ano      | Nástroj .NET Core, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) . |
 | [**additionalOptions**](#additional-options)     | řetězec | No       | Podrobnosti najdete níže v části [Další možnosti](#additional-options) .      |
 
 ### <a name="input"></a>Vstup
@@ -47,18 +47,27 @@ Další možnosti konfigurace mohou být předány jako hodnota `additionalOptio
 Výchozím chováním `dotnet-toolinstall` nástroje je chyba, jak `input` je požadováno.
 
 ## <a name="example-usage"></a>Příklad použití
+Níže jsou uvedeny příklady, jak spustit `dotnet-toolinstall` pomocí `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-the-dotnet-trace-tool"></a>.devinit.js, na které se nainstaluje nástroj dotnet-Trace Tool:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Example that will install the dotnet-trace tool.",
             "tool": "dotnet-toolinstall",
             "input": "dotnet-trace"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-the-dotnet-trace-tool-as-a-global-tool"></a>.devinit.js, na které se nainstaluje nástroj dotnet-Trace Tool jako globální nástroj:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install the dotnet-trace tool as a global tool.",
             "tool": "dotnet-toolinstall",
             "input": "dotnet-trace",
             "additionalOptions": "--global"

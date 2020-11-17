@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 5c5b68b663d6ee4cd0294aa77bd89c2e778f8d2b
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: b75f7961008c8b575cd21b42fdb5246c3b65078d
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399604"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672137"
 ---
 # <a name="require-dotnetcoresdk"></a>require-dotnetcoresdk
 
@@ -48,28 +48,53 @@ Další možnosti konfigurace mohou být předány jako hodnota `additionalOptio
 Výchozím chováním `require-dotnetcoresdk` nástroje je instalace verze .NET Core SDK uvedená v `global.json` souboru [(dokumentace)](/dotnet/core/tools/global-json?tabs=netcore3x) v aktuálním pracovním adresáři. Pokud `global.json` se nenajde žádný soubor, `require-dotnetcoresdk` nainstaluje nejnovější aktuální verzi .NET Core SDK a sdíleného modulu runtime.
 
 ## <a name="example-usage"></a>Příklad použití
+Níže jsou uvedeny příklady, jak spustit `require-dotnetcoresdk` pomocí `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-the-latest-version-of-net-core"></a>.devinit.js, které budou instalovat nejnovější verzi rozhraní .NET Core:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Example that will trigger the Default behavior of installing latest or, if present, the SDK version from a global.json file.",
             "tool": "require-dotnetcoresdk"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-a-specific-version-of-net-core"></a>.devinit.js, který nainstaluje konkrétní verzi .NET Core:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install a specific version.",
             "tool": "require-dotnetcoresdk",
             "input": "3.0.0"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-a-specific-version-of-net-core-and-aspnet-core"></a>.devinit.js, na které se nainstaluje konkrétní verze .NET Core a ASP.NET Core:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install a specific version and the aspnetcore runtime.",
             "tool": "require-dotnetcoresdk",
             "input": "3.0.0",
             "additionalOptions": "-Runtime aspnetcore"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-net-core-in-a-specific-directory"></a>.devinit.js, který nainstaluje .NET Core do konkrétního adresáře:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install in a specific directory.",
             "tool": "require-dotnetcoresdk",
             "additionalOptions": "-InstallDir \"C:\\Program Files\\dotnet\""
         }

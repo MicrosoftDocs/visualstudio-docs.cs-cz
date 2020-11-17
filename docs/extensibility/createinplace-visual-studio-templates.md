@@ -1,5 +1,7 @@
 ---
 title: CreateInPlace – element (šablony sady Visual Studio)
+description: Přečtěte si o prvku CreateInPlace a o tom, jak určuje, zda se má projekt vytvořit, a provedení nahrazení parametru v konkrétním nebo dočasném umístění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab2b5d68be069f30c8f71536b6d47cb1ce8823b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51348e8304b67314ffd19d0aec15d43d904ee651
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739658"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671979"
 ---
 # <a name="createinplace-element-visual-studio-templates"></a>CreateInPlace – element (šablony sady Visual Studio)
 Určuje, zda se má vytvořit projekt a provést nahrazení parametru v zadaném umístění, nebo provést nahrazení parametru v dočasném umístění a pak projekt uložit do zadaného umístění.

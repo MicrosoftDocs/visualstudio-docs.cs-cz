@@ -1,5 +1,8 @@
 ---
 title: Assembly – element (šablony sady Visual Studio) | Microsoft Docs
+titleSuffix: ''
+description: Přečtěte si o elementu sestavení a o tom, jak určuje informace o sestavení, které šablona používá k přidání odkazu na toto sestavení do projektů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c80044657b16448ba4567fff839274226985fa14
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f4115e999cc061be53ba437a090f207046f71ef8
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740042"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671643"
 ---
 # <a name="assembly-element-visual-studio-templates"></a>Assembly – element (šablony sady Visual Studio)
 Určuje informace o sestavení, které šablona používá k přidání odkazu na toto sestavení do projektů.
@@ -55,7 +58,7 @@ Určuje informace o sestavení, které šablona používá k přidání odkazu n
 
  Tento text určuje sestavení, které se má přidat do projektu při vytvoření instance šablony položky. Tento název sestavení musí být zadán v jednom z následujících způsobů:
 
-- Jako úplný název sestavení. Příklad:
+- Jako úplný název sestavení. Například:
 
     ```
     <Assembly>
@@ -63,7 +66,7 @@ Určuje informace o sestavení, které šablona používá k přidání odkazu n
     </Assembly>
     ```
 
-- Jako jednoduchý textový odkaz. Příklad:
+- Jako jednoduchý textový odkaz. Například:
 
     ```
     <Assembly> System </Assembly>

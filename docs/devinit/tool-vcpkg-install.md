@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 30bd66310f386a920b20522f59e54d586e3d3af1
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 6e10887e09c329a241aab7f18c6170c873705fbf
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400230"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672050"
 ---
 # <a name="vcpkg-install"></a>vcpkg-install
 
@@ -29,7 +29,7 @@ Pokud `input` `additionalOptions` jsou vlastnosti i vynechány nebo jsou prázdn
 | Název                                             | Typ   | Vyžadováno | Hodnota                                                                                   |
 |--------------------------------------------------|--------|----------|-----------------------------------------------------------------------------------------|
 | **vyjádření**                                     | řetězec | No       | Volitelná vlastnost komentářů Nepoužívá se.                                                   |
-| [**vstup**](#input)                              | řetězec | Yes      | Balíčky, které se mají nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .                       |
+| [**vstup**](#input)                              | řetězec | Ano      | Balíčky, které se mají nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .                       |
 | [**additionalOptions**](#additional-options)     | řetězec | No       | Podrobnosti najdete níže v části [Další možnosti](#additional-options) .                        |
 
 ### <a name="input"></a>Vstup
@@ -45,18 +45,28 @@ Další možnosti jsou předány přímo příkazu [vcpkg](/powershell/module/po
 Výchozím chováním `vcpkg-install` nástroje je chyba, jak `input` je třeba.
 
 ## <a name="example-usage"></a>Příklad použití
+Níže jsou uvedeny příklady, jak spustit `vcpkg-install` pomocí `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-the-sdl2-port"></a>.devinit.js, na které se nainstaluje port sdl2:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Installs the sdl2 port.",
             "tool": "vcpkg-install",
             "input": "sdl2",
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-multiple-ports"></a>.devinit.js, na které se nainstaluje víc portů:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
+
         {
-            "comments": "Installs the sdl2 and sqlite3 ports.",
             "tool": "vcpkg-install",
             "input": "sdl2 sqlite3"
         }

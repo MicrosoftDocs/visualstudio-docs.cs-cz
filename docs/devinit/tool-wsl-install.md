@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: ab63b5feb8c71659b83e824f104dd7bbcbb744f9
-ms.sourcegitcommit: 62f91179f2c3a51c85dd7b0e6172a3a53393fb7e
+ms.openlocfilehash: 4cbb30842ebbed148b2aea80f941a738d18ae262
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94567011"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671971"
 ---
 # <a name="wsl-install"></a>wsl-install
 
@@ -32,7 +32,7 @@ Pokud `input` `additionalOptions` jsou vlastnosti i vynechány nebo jsou prázdn
 | Název                                             | Typ   | Vyžadováno | Hodnota                                                             |
 |--------------------------------------------------|--------|----------|-------------------------------------------------------------------|
 | **vyjádření**                                     | řetězec | No       | Volitelná vlastnost komentářů Nepoužívá se.                             |
-| [**vstup**](#input)                              | řetězec | Yes      | Distribuce, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .     |
+| [**vstup**](#input)                              | řetězec | Ano      | Distribuce, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .     |
 | [**additionalOptions**](#additional-options)     | řetězec | No       | Podrobnosti najdete níže v části [Další možnosti](#additional-options) .  |
 
 ### <a name="input"></a>Vstup
@@ -66,24 +66,41 @@ Podporuje se víc dalších možností:
 Výchozím chováním tohoto `wsl-install` nástroje je chyba `input` , protože vlastnost distribuce, která se má nainstalovat, je povinná.
 
 ## <a name="example-usage"></a>Příklad použití
+Níže jsou uvedeny příklady, jak spustit `wsl-install` pomocí `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-ubuntu-2004"></a>.devinit.js, které budou instalovat Ubuntu 20,04:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Example that will install Ubuntu 20.04.",
             "tool": "wsl-install",
             "input": "https://aka.ms/wslubuntu2004"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-ubuntu-2004-and-perform-a-post-create-command"></a>.devinit.js, který nainstaluje Ubuntu 20,04 a provede příkaz post Create:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install Ubuntu 20.04 using WSL2, and echo 'Hello from Ubuntu!' after installing.",
             "tool": "wsl-install",
             "input": "https://aka.ms/wslubuntu2004",
             "additionalOptions": "--wsl-version 2 --post-create-command 'echo Hello from Ubuntu!'"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-ubuntu-2004-and-perform-a-post-create-command-that-configures-the-packages-listed"></a>.devinit.js, který nainstaluje Ubuntu 20,04, a provede příkaz post Create, který nakonfiguruje balíčky v seznamu:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install Ubuntu 20.04 using WSL2, and configure it with various packages.",
             "tool": "wsl-install",
             "input": "https://aka.ms/wslubuntu2004",
             "additionalOptions": "--wsl-version 2 --post-create-command 'apt-get update && apt-get install g++ gcc g++-9 gcc-9 cmake gdb ninja-build zip rsync -y'"

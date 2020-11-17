@@ -1,5 +1,7 @@
 ---
 title: Name – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o elementu Name a o tom, jak Určuje název šablony, jak se zobrazuje v dialogovém okně Nový projekt nebo přidat novou položku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2a02dc377bac5f93f8e0365f6f3d9ccb81737a8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2aa14005a202b7868f61cd41ffb6ac9e2f872b68
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702458"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671178"
 ---
 # <a name="name-element-visual-studio-templates"></a>Name – element (šablony sady Visual Studio)
 Určuje název šablony tak, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .

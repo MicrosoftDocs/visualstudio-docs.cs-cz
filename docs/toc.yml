@@ -945,7 +945,7 @@
       displayName: 'marketplace, gallery, vsix'
     - name: Správa externích nástrojů
       href: ide/managing-external-tools.md
-    - name: Účty přizpůsobení
+    - name: Správa účtů
       items:
         - name: Přihlášení k sadě Visual Studio
           displayName: personalization accounts
@@ -954,6 +954,8 @@
           href: ide/work-with-multiple-user-accounts.md
         - name: 'Práce s účty, které vyžadují vícefaktorové ověřování'
           href: ide/work-with-multi-factor-authentication.md
+        - name: Práce s účty GitHub v sadě Visual Studio
+          href: ide/work-with-github-accounts.md
         - name: Prodloužení zkušební verze nebo aktualizace licence
           href: ide/how-to-unlock-visual-studio.md
     - name: Ladění výkonu sady Visual Studio

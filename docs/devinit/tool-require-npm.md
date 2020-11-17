@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 87938b05b860921ee81cb2ca9191ad58fa85dd7a
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: e28a1f896904c89a4553f18c73324293ea468ee6
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399590"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672123"
 ---
 # <a name="require-npm"></a>require-npm
 
@@ -29,7 +29,7 @@ Pokud `input` `additionalOptions` jsou vlastnosti i vynechány nebo jsou prázdn
 | Název                                             | Typ   | Vyžadováno | Hodnota                                                                                       |
 |--------------------------------------------------|--------|----------|---------------------------------------------------------------------------------------------|
 | **vyjádření**                                     | řetězec | No       | Volitelná vlastnost komentářů Nepoužívá se.                                                       |
-| [**vstup**](#input)                              | řetězec | Yes      | Určuje verzi NPM. Podrobnosti najdete níže v části o [zadání](#input) .                           |
+| [**vstup**](#input)                              | řetězec | Ano      | Určuje verzi NPM. Podrobnosti najdete níže v části o [zadání](#input) .                           |
 | [**additionalOptions**](#additional-options)     | řetězec | No       | Nepoužívá se. Podrobnosti najdete níže v části [Další možnosti](#additional-options) .                  |
 
 ### <a name="input"></a>Vstup
@@ -45,17 +45,26 @@ Nepoužívá se.
 Výchozím chováním `require-nodejs` nástroje je instalace nejnovější LTS verze npm.
 
 ## <a name="example-usage"></a>Příklad použití
+Níže jsou uvedeny příklady, jak spustit `require-npm` pomocí `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-the-lts-of-npm"></a>.devinit.js, na které se bude instalovat LTS npm:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Example that will trigger the Default behavior of installing latest LTS of NPM.",
             "tool": "require-npm"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-a-specific-version-of-npm"></a>.devinit.js, na které se nainstaluje konkrétní verze npm:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install a specific version.",
             "tool": "require-npm",
             "input": "6.14.6"
         }

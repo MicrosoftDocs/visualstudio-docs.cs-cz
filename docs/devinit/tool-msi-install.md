@@ -1,5 +1,5 @@
 ---
-title: MSI – instalace
+title: msi-install
 description: devinit Tool for Msiexec.
 ms.date: 10/13/2020
 ms.topic: reference
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 98667c602272f22e7803647a688ee75d6c6cbd70
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ab56157d531e762ed36f8c2349e50e76596b05ec
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93402265"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672171"
 ---
-# <a name="msi-install"></a>MSI – instalace
+# <a name="msi-install"></a>msi-install
 
 `msi-install`Nástroj se používá k instalaci `.msi` formátů souborů balíčku pomocí souboru [msiexec](https://docs.microsoft.com/windows-server/administration/windows-commands/msiexec).
 
@@ -29,7 +29,7 @@ Pokud `input` je hodnota vynechána nebo je prázdná, nástroj při výstupu zo
 | Název                                         | Typ   | Vyžadováno | Hodnota                                                                             |
 |----------------------------------------------|--------|----------|-----------------------------------------------------------------------------------|
 | **vyjádření**                                 | řetězec | No       | Volitelná vlastnost komentářů Nepoužívá se.                                             |
-| [**vstup**](#input)                          | řetězec | Yes      | `msi`Instalace. Podrobnosti najdete níže v části o [zadání](#input) .                      |
+| [**vstup**](#input)                          | řetězec | Ano      | `msi`Instalace. Podrobnosti najdete níže v části o [zadání](#input) .                      |
 | [**additionalOptions**](#additional-options) | řetězec | No       | Podrobnosti najdete níže v části [Další možnosti](#additional-options) .                  |
 
 ### <a name="input"></a>Vstup
@@ -54,13 +54,14 @@ Nástroj pro instalaci MSI nastaví řadu `msiexec` argumentů příkazového ř
 | /norestart    | Zastaví restart počítače po dokončení instalace, ale vrátí ukončovací kód 3010, pokud je potřeba restartovat počítač.                                                                  | 
 
 ## <a name="example-usage"></a>Příklad použití
+Níže je uveden příklad, jak spustit `msi-install` pomocí `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-the-7-zip-msi"></a>.devinit.js, na které se nainstaluje soubor MSI pro 7-zip:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-4.0",
     "run": [
         {
-            "comments": "Installs the 7-Zip MSI",
             "tool": "msi-install",
             "input": "https://www.7-zip.org/a/7z1900.msi"
         }

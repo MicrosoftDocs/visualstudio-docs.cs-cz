@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: f58809465e41b3b1b6020de91fe0ab590ca1c428
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: e4f08e8c3f5967eb2e9db53633a12b304ac23bfb
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400258"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671758"
 ---
 # <a name="require-nuget"></a>require-nuget
 
@@ -45,16 +45,16 @@ Nepoužívá se.
 Výchozím chováním `require-nuget` nástroje je instalace nejnovějšího rozhraní příkazového řádku NuGet.
 
 ## <a name="example-usage"></a>Příklad použití
+Níže je uveden příklad, jak spustit `require-nuget` pomocí `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-a-specified-version-of-nuget"></a>.devinit.js, na které se nainstaluje zadaná verze NuGetu:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
-    "comments": "A sample dot-devinit file that downloads NuGet CLI and adds to PATH variable.'",
     "run": [
         {
             "tool": "require-nuget",
             "input": "5.5.1",
-            "comments": "Installs NuGet for given input version. If no input given, then installs latest."
         }
     ]
 }

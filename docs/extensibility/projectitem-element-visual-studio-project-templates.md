@@ -1,5 +1,7 @@
 ---
 title: ProjectItem – element (šablony projektů sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o elementu ProjectItem pro šablony projektů a o tom, jak akceptuje různé atributy v závislosti na tom, zda je šablona určena pro projekt nebo položku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 943f50823892e3cd942709bdcd4556b65c006b58
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf2d41fe83b440e2a3b4bfebd4fac6f5d06094a4
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770309"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671321"
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem – element (šablony projektů sady Visual Studio)
 Určuje soubor, který je součástí šablony projektu.
@@ -53,7 +55,7 @@ Určuje soubor, který je součástí šablony projektu.
 | Atribut | Popis |
 |---------------------| - |
 | `TargetFileName` | Nepovinný atribut.<br /><br /> Určuje název a cestu položky projektu při vytvoření projektu ze šablony. Tento atribut je vhodný pro vytvoření adresářové struktury odlišné od struktury adresáře v souboru template *. zip* nebo pro vytvoření názvu položky pomocí nahrazení parametru. |
-| `ReplaceParameters` | Nepovinný atribut.<br /><br /> Logická hodnota určující, zda má položka hodnoty parametrů, které musí být nahrazeny při vytvoření projektu ze šablony. Výchozí hodnota je `false` . |
+| `ReplaceParameters` | Nepovinný atribut.<br /><br /> Logická hodnota určující, zda má položka hodnoty parametrů, které musí být nahrazeny při vytvoření projektu ze šablony. Výchozí hodnota je `false`. |
 | `OpenInEditor` | Nepovinný atribut.<br /><br /> Logická hodnota určující, zda má být položka otevřena v příslušném editoru v případě, že [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je projekt vytvořen ze šablony.<br /><br /> `OpenInWebBrowser`Atributy a `OpenInHelpBrowser` jsou ignorovány u položky s `OpenInEditor` hodnotou `true` .<br /><br /> Výchozí hodnota je `false`. |
 | `OpenInWebBrowser` | Nepovinný atribut.<br /><br /> Logická hodnota určující, zda má být položka otevřena ve webovém prohlížeči při vytvoření projektu ze šablony.<br /><br /> Ve webovém prohlížeči lze otevřít pouze soubory HTML a textové soubory, které jsou místní pro projekt. Externí adresy URL nelze pomocí tohoto atributu otevřít.<br /><br /> Výchozí hodnota je `false`. |
 | `OpenInHelpBrowser` | Nepovinný atribut.<br /><br /> Logická hodnota určující, zda má být položka otevřena v aplikaci Help Viewer při vytvoření projektu ze šablony.<br /><br /> V prohlížeči Help lze otevřít pouze soubory HTML a textové soubory, které jsou místní pro projekt. Externí adresy URL nelze pomocí tohoto atributu otevřít.<br /><br /> Výchozí hodnota je `false`. |

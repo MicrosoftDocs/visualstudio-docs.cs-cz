@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 3bdcf6caa52f19bc03559fb57d41fadb0ac56485
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 82c1bfbaed4a8ae5540447991f1a097760ade0bd
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399856"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671938"
 ---
 # <a name="choco-install"></a>choco-install
 
@@ -34,7 +34,7 @@ Pokud `input` `additionalOptions` jsou vlastnosti i vynechány nebo jsou prázdn
 
 ### <a name="input"></a>Vstup
 
-Tato `input` vlastnost slouží k zadání názvu balíčku, který má být nainstalován (například ' MongoDB ') nebo cesty ke konfiguračnímu souboru následujících formátů _packages.config_ , _. nuspec_ a _. nupkg_. Hodnota `input` bude připojena k `choco install` příkazu (například `choco install mongodb` ) spolu s případnými argumenty, které jsou specifické v nástroji [`additionalOptions`](#additional-options) a integrovanými `choco` možnostmi (definované [níže](#built-in-options)). Balíčky najdete v [galerii balíčků pro čokolády](https://chocolatey.org/packages). Při použití konfiguračního souboru můžete v této vlastnosti předat cestu k tomuto souboru `input` , například `"input":"packages.config"` .
+Tato `input` vlastnost slouží k zadání názvu balíčku, který má být nainstalován (například ' MongoDB ') nebo cesty ke konfiguračnímu souboru následujících formátů _packages.config_, _. nuspec_ a _. nupkg_. Hodnota `input` bude připojena k `choco install` příkazu (například `choco install mongodb` ) spolu s případnými argumenty, které jsou specifické v nástroji [`additionalOptions`](#additional-options) a integrovanými `choco` možnostmi (definované [níže](#built-in-options)). Balíčky najdete v [galerii balíčků pro čokolády](https://chocolatey.org/packages). Při použití konfiguračního souboru můžete v této vlastnosti předat cestu k tomuto souboru `input` , například `"input":"packages.config"` .
 
 ### <a name="additional-options"></a>Další možnosti
 
@@ -51,23 +51,40 @@ Další možnosti konfigurace mohou být předány jako hodnota `additionalOptio
 | **--Skip-PowerShell** | Přeskočit PowerShell – chocolateyInstall.ps1 nebude spuštěná.                                              |
 
 ## <a name="example-usage"></a>Příklad použití
+Níže jsou uvedeny příklady, jak spustit `choco-install` pomocí `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-packages-listed-in-packagesconfig"></a>.devinit.js, které budou instalovat balíčky uvedené v packages.config:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Example that will trigger the Default behavior of installing packages listed in a packages.config file.",
             "tool": "choco-install",
             "input": "packages.config",
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-mongodb"></a>.devinit.js, které budou instalovat MongoDB:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install the package 'mongodb'.",
             "tool": "choco-install",
             "input": "mongodb"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-a-specific-version-of-mongodb"></a>.devinit.js, na které se nainstaluje konkrétní verze MongoDB:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install the '4.2.7' version of 'mongodb'.",
             "tool": "choco-install",
             "input": "mongodb",
             "additionalOptions": "--version 4.2.7"

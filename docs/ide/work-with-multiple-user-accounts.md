@@ -1,18 +1,18 @@
 ---
 title: Práce s několika uživatelskými účty
-ms.date: 07/23/2019
+ms.date: 11/16/2020
 ms.topic: conceptual
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: abca888cda2d309951d6b8921cfd2078972ce195
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe124fc35eabec4b3c48cdf8dfa53ef8f17b0003
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800226"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671334"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Práce s několika uživatelskými účty
 
@@ -23,7 +23,7 @@ Po přidání více účtů na jednom počítači se tato sada účtů s vámi p
 > [!NOTE]
 > I když se názvy účtů roamingují, přihlašovací údaje ne. Při prvním pokusu o použití prostředků na novém počítači se zobrazí výzva k zadání přihlašovacích údajů pro tyto účty.
 
-V tomto článku se dozvíte, jak přidat více účtů do sady Visual Studio. Také se dozvíte, jak zobrazit prostředky dostupné z těchto účtů na místech, jako je dialogové okno **Přidat připojenou službu** , **Průzkumník serveru**a **Team Explorer**.
+V tomto článku se dozvíte, jak přidat více účtů do sady Visual Studio. Také se dozvíte, jak zobrazit prostředky dostupné z těchto účtů na místech, jako je dialogové okno **Přidat připojenou službu** , **Průzkumník serveru** a **Team Explorer**.
 
 ## <a name="sign-in-to-visual-studio"></a>Přihlášení k sadě Visual Studio
 
@@ -37,17 +37,17 @@ Chcete-li otevřít Průzkumník serveru, zvolte možnost **Zobrazit**  >  **Pr�
 
 ![Průzkumník serveru s rozbaleným uzlem Azure](../ide/media/work-with-multiple-user-accounts/server-explorer.png)
 
-Při prvním použití sady Visual Studio na jakémkoli konkrétním zařízení zobrazí dialog pouze odběry registrované pod účtem, pomocí kterého jste se přihlásili. K prostředkům pro libovolný z vašich dalších účtů můžete přistupovat přímo z **Průzkumník serveru** tak, že kliknete pravým tlačítkem na uzel **Azure** , zvolíte **Spravovat a filtrovat předplatná**a pak přidáte svoje účty z ovládacího prvku pro výběr účtu. Kliknutím na šipku dolů a výběrem ze seznamu účtů pak můžete vybrat jiný účet, a to v případě potřeby. Po výběru účtu můžete přizpůsobit, která předplatná se v rámci tohoto účtu mají zobrazit v **Průzkumník serveru**.
+Při prvním použití sady Visual Studio na jakémkoli konkrétním zařízení zobrazí dialog pouze odběry registrované pod účtem, pomocí kterého jste se přihlásili. K prostředkům pro libovolný z vašich dalších účtů můžete přistupovat přímo z **Průzkumník serveru** tak, že kliknete pravým tlačítkem na uzel **Azure** , zvolíte **Spravovat a filtrovat předplatná** a pak přidáte svoje účty z ovládacího prvku pro výběr účtu. Kliknutím na šipku dolů a výběrem ze seznamu účtů pak můžete vybrat jiný účet, a to v případě potřeby. Po výběru účtu můžete přizpůsobit, která předplatná se v rámci tohoto účtu mají zobrazit v **Průzkumník serveru**.
 
 ![Dialogové okno Správa předplatných Azure](../ide/media/vs2015_manage_subs.png)
 
-Při příštím otevření **Průzkumník serveru**se zobrazí prostředky pro toto předplatné.
+Při příštím otevření **Průzkumník serveru** se zobrazí prostředky pro toto předplatné.
 
 ### <a name="access-your-azure-account-via-add-connected-service-dialog"></a>Přístup k účtu Azure prostřednictvím dialogu Přidat připojenou službu
 
 1. Otevřete existující projekt nebo vytvořte nový projekt.
 
-1. Zvolte uzel projektu v **Průzkumník řešení**a potom klikněte pravým tlačítkem a zvolte **Přidat**  >  **připojenou službu**.
+1. Zvolte uzel projektu v **Průzkumník řešení** a potom klikněte pravým tlačítkem a zvolte **Přidat**  >  **připojenou službu**.
 
    Zobrazí se průvodce **Přidat připojenou službu** a zobrazí se seznam služeb v účtu Azure, který je přidružený k vašemu účtu přizpůsobení sady Visual Studio. Nemusíte se přihlašovat nezávisle na Azure. Při prvním pokusu o přístup k prostředkům z jiného počítače se ale budete muset přihlásit k ostatním účtům.
 
@@ -83,13 +83,13 @@ Další informace najdete v tématu [připojení k projektům v Team Explorer](c
 
 Přidání dalšího účtu do sady Visual Studio:
 
-1. Vyberte **File**  >  **Nastavení účtu**souboru.
+1. Vyberte **File**  >  **Nastavení účtu** souboru.
 
-1. V části **všechny účty**vyberte **Přidat účet**.
+1. V části **všechny účty** vyberte **Přidat účet**.
 
 1. Na stránce **Přihlásit se k účtu** vyberte účet nebo zvolte **použít jiný účet**. Postupujte podle výzev a zadejte nové přihlašovací údaje k účtu.
 
-Volitelné Nyní můžete přejít na **Průzkumník serveru** a zobrazit služby Azure přidružené k účtu, který jste právě přidali. V **Průzkumník serveru**klikněte pravým tlačítkem na uzel **Azure** a vyberte **Spravovat a filtrovat předplatná**. Kliknutím na šipku rozevíracího seznamu vedle aktuálního účtu zvolte nový účet a pak zvolte, která předplatná chcete zobrazit v **Průzkumník serveru**. Měly by se zobrazit všechny služby přidružené k zadanému předplatnému. I když jste se ještě přihlásili do sady Visual Studio s druhým účtem, jste přihlášeni ke službám a prostředkům tohoto účtu. Totéž platí pro **Project**  >  **Přidání připojené služby** a připojení **týmu**  >  **k Team Foundation Server do**projektu.
+Volitelné Nyní můžete přejít na **Průzkumník serveru** a zobrazit služby Azure přidružené k účtu, který jste právě přidali. V **Průzkumník serveru** klikněte pravým tlačítkem na uzel **Azure** a vyberte **Spravovat a filtrovat předplatná**. Kliknutím na šipku rozevíracího seznamu vedle aktuálního účtu zvolte nový účet a pak zvolte, která předplatná chcete zobrazit v **Průzkumník serveru**. Měly by se zobrazit všechny služby přidružené k zadanému předplatnému. I když jste se ještě přihlásili do sady Visual Studio s druhým účtem, jste přihlášeni ke službám a prostředkům tohoto účtu. Totéž platí pro **Project**  >  **Přidání připojené služby** a připojení **týmu**  >  **k Team Foundation Server do** projektu.
 
 ### <a name="add-an-account-using-device-code-flow"></a>Přidání účtu pomocí toku kódu zařízení
 
@@ -97,11 +97,11 @@ V některých případech se nemůžete běžným způsobem přihlašovat nebo p
 
 Přihlášení pomocí toku kódu zařízení:
 
-1. Otevřete stránku [**účty**](reference/accounts-environment-options-dialog-box.md) v nabídce **nástroje**  >  **Možnosti**  >  **prostředí**a pak **při přidávání nebo opětovném ověřování účtu vyberte Povolit tok kódu zařízení**. Kliknutím na **tlačítko OK** zavřete stránky možnosti.
+1. Otevřete stránku [**účty**](reference/accounts-environment-options-dialog-box.md) v nabídce **nástroje**  >  **Možnosti**  >  **prostředí** a pak **při přidávání nebo opětovném ověřování účtu vyberte Povolit tok kódu zařízení**. Kliknutím na **tlačítko OK** zavřete stránky možnosti.
 
 1. Zvolením **File**  >  **Možnosti účet** souboru otevřete stránku Správa účtů.
 
-1. V části **všechny účty**vyberte **Přidat účet** .
+1. V části **všechny účty** vyberte **Přidat účet** .
 
    V dialogovém okně se zobrazí adresa URL a kód pro vložení do webového prohlížeče.
 
@@ -113,7 +113,7 @@ Přihlášení pomocí toku kódu zařízení:
 
    Název aplikace sady **Visual Studio** by měl být na stránce uveden dál.
 
-1. V části **Visual Studio**klikněte na **pokračovat**.
+1. V části **Visual Studio** klikněte na **pokračovat**.
 
    ![device-login-page.png](media/work-with-multiple-user-accounts/device-login-page.png)
 
@@ -124,6 +124,15 @@ Přihlášení pomocí toku kódu zařízení:
    ![Přihlášení do sady Visual Studio prostřednictvím prohlížeče bylo dokončeno.](media/work-with-multiple-user-accounts/sign-in-browser-complete.png)
 
 1. Vraťte se na stránku Správa účtů v sadě Visual Studio a zobrazí se nově přidaný účet v seznamu **všechny účty**. Klikněte na tlačítko **Zavřít**.
+
+::: moniker range=">=vs-2019"
+
+### <a name="add-a-github-account-to-visual-studio"></a>Přidání účtu GitHubu do sady Visual Studio
+
+Počínaje verzí 16,8 budete moct do řetězce klíčů přidat jak účty GitHub, tak i oba účty v rámci GitHubu. Budete je moct přidávat a využívat stejně jako s účty Microsoft, což znamená, že budete mít snazší přístup k prostředkům GitHubu v rámci sady Visual Studio.
+
+Podrobné pokyny najdete v tématu [práce s účty GitHub v aplikaci Visual Studio](work-with-github-accounts.md).
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,5 +1,7 @@
 ---
 title: ProjectItem – element (šablony položek sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o elementu ProjectItem pro šablony položek a o tom, jak akceptuje různé atributy v závislosti na tom, zda je šablona určena pro projekt nebo položku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 885d0fbb50204f23a30fa43c1ffad45c9d67f829
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 431f1d5f81827b47b57a53dbe411a2a7e8a57941
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770726"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672330"
 ---
 # <a name="projectitem-element-visual-studio-item-templates"></a>ProjectItem – element (šablony položek sady Visual Studio)
 Určuje soubor, který je součástí šablony položky.
@@ -53,7 +55,7 @@ Určuje soubor, který je součástí šablony položky.
 | `SubType` | Nepovinný atribut.<br /><br /> Určuje podtyp položky v šabloně položky s více soubory. Tato hodnota se používá k určení editoru, který [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bude použit k otevření položky. |
 | `CustomTool` | Nepovinný atribut.<br /><br /> Nastaví CustomTool pro položku v souboru projektu. |
 | `ItemType` | Nepovinný atribut.<br /><br /> Nastaví typ ItemType pro položku v souboru projektu. |
-| `ReplaceParameters` | Nepovinný atribut.<br /><br /> Logická hodnota určující, zda má položka hodnoty parametrů, které musí být nahrazeny při vytvoření projektu ze šablony. Výchozí hodnota je `false` . |
+| `ReplaceParameters` | Nepovinný atribut.<br /><br /> Logická hodnota určující, zda má položka hodnoty parametrů, které musí být nahrazeny při vytvoření projektu ze šablony. Výchozí hodnota je `false`. |
 | `TargetFileName` | Nepovinný atribut.<br /><br /> Určuje název položky, která je vytvořena ze šablony. Tento atribut je vhodný pro použití nahrazení parametru pro vytvoření názvu položky. |
 
 ### <a name="child-elements"></a>Podřízené prvky

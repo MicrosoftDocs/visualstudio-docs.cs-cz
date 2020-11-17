@@ -1,5 +1,7 @@
 ---
 title: Ladění rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio | Microsoft Docs
+description: Rozšíření ladění pro nástroje služby SharePoint v aplikaci Visual Studio. Ladění rozšíření nástrojů služby SharePoint v experimentální instanci nebo v normální instanci VS.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1179779d07e7674babc51231ba629d7e25556f89
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 5ad95ce8b4ab9567f22748453ae59c258f24aa86
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584630"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671217"
 ---
 # <a name="debug-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Rozšíření ladění pro nástroje služby SharePoint v aplikaci Visual Studio
   Rozšíření nástrojů služby SharePoint můžete ladit v experimentální instanci nebo v běžné instanci aplikace Visual Studio. Pokud potřebujete řešit potíže s chováním rozšíření, můžete také změnit hodnoty registru a zobrazit tak další informace o chybě a nakonfigurovat, jak aplikace Visual Studio provede příkazy služby SharePoint.
@@ -51,7 +53,7 @@ ms.locfileid: "91584630"
 
 3. V dialogovém okně **instalační program rozšíření sady Visual Studio** zvolte edici sady Visual Studio, do které chcete rozšíření nainstalovat, a poté klikněte na tlačítko **instalovat** .
 
-     Visual Studio nainstaluje soubory rozšíření do%USERPROFILE%\AppData\Local\Microsoft\VisualStudio\11.0\Extensions \\ *author name* \\ *názvu přípony*názvu autora \\ *version*. Poslední tři složky v této cestě jsou sestaveny z `Author` prvků, `Name` a `Version` v souboru *extension. vsixmanifest* pro rozšíření.
+     Visual Studio nainstaluje soubory rozšíření do%USERPROFILE%\AppData\Local\Microsoft\VisualStudio\11.0\Extensions \\ *author name* \\ *názvu přípony* názvu autora \\ *version*. Poslední tři složky v této cestě jsou sestaveny z `Author` prvků, `Name` a `Version` v souboru *extension. vsixmanifest* pro rozšíření.
 
 4. Poté, co Visual Studio nainstaluje rozšíření, klikněte na tlačítko **Zavřít** .
 
@@ -92,7 +94,7 @@ ms.locfileid: "91584630"
 4. Kliknutím na tlačítko **restartovat nyní** dokončete odinstalaci.
 
 ## <a name="debug-sharepoint-commands"></a>Ladění příkazů služby SharePoint
- Chcete-li ladit příkaz služby SharePoint, který je součástí rozšíření nástrojů služby SharePoint, je nutné připojit ladicí program k procesu *vssphost4.exe* . Toto je 64 hostitelský proces, který spouští příkazy služby SharePoint. Další informace o příkazech a *vssphost4.exeech *služby SharePoint naleznete v tématu [Calling to a model Object Models služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md).
+ Chcete-li ladit příkaz služby SharePoint, který je součástí rozšíření nástrojů služby SharePoint, je nutné připojit ladicí program k procesu *vssphost4.exe* . Toto je 64 hostitelský proces, který spouští příkazy služby SharePoint. Další informace o příkazech a *vssphost4.exeech* služby SharePoint naleznete v tématu [Calling to a model Object Models služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md).
 
 #### <a name="to-attach-the-debugger-to-the-vssphost4exe-process"></a>Připojení ladicího programu k procesu vssphost4.exe
 
@@ -110,7 +112,7 @@ ms.locfileid: "91584630"
 5. V instanci aplikace Visual Studio, která je laděna, proveďte kroky, které jsou nutné ke spuštění příkazu.
 
 ## <a name="modify-registry-values-to-help-debug-sharepoint-tools-extensions"></a>Úprava hodnot registru pro usnadnění ladění rozšíření nástrojů služby SharePoint
- Když ladíte rozšíření nástrojů služby SharePoint v aplikaci Visual Studio, můžete upravit hodnoty v registru, které vám pomohou s tímto rozšířením. Hodnoty existují v klíči **HKEY_CURRENT_USER \software\microsoft\visualstudio\11.0\SharePointTools** . Tyto hodnoty ve výchozím nastavení neexistují.
+ Když ladíte rozšíření nástrojů služby SharePoint v aplikaci Visual Studio, můžete upravit hodnoty v registru, které vám pomohou s tímto rozšířením. Hodnoty existují pod klíčem **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0\SharePointTools** . Tyto hodnoty ve výchozím nastavení neexistují.
 
  Chcete-li pomoct řešit jakékoli rozšíření nástrojů služby SharePoint, můžete vytvořit a nastavit hodnotu EnableDiagnostics. Tato hodnota je popsána v následující tabulce.
 

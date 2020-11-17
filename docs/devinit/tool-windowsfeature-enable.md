@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 6e3d2fdaf6be019cae504d4f71258d410d232ff5
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 9ed1cc5379cc28c3932c96271fda27e23f4cd27c
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400203"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672004"
 ---
 # <a name="windowsfeature-enable"></a>windowsfeature-enable
 
@@ -27,7 +27,7 @@ ms.locfileid: "93400203"
 | Název                                             | Typ   | Vyžadováno | Hodnota                                                                    |
 |--------------------------------------------------|--------|----------|--------------------------------------------------------------------------|
 | **vyjádření**                                     | řetězec | No       | Volitelná vlastnost komentářů Nepoužívá se.                                    |
-| [**vstup**](#input)                              | řetězec | Yes      | Funkce Windows, která se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .   |
+| [**vstup**](#input)                              | řetězec | Ano      | Funkce Windows, která se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .   |
 | [**additionalOptions**](#additional-options)     | řetězec | No       | Podrobnosti najdete níže v části [Další možnosti](#additional-options) .         |
 
 ### <a name="input"></a>Vstup
@@ -43,28 +43,53 @@ ms.locfileid: "93400203"
 Výchozím chováním `windowsfeature-enable` nástroje je chyba, jak `input` je třeba.
 
 ## <a name="example-usage"></a>Příklad použití
+Níže jsou uvedeny příklady, jak spustit `windowsfeature-enable` pomocí `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-iis"></a>.devinit.js, které budou instalovat službu IIS:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Installs IIS.",
             "tool": "windowsfeature-enable",
             "input": "web-server",
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-the-net-framework"></a>.devinit.js, na které se nainstaluje .NET Framework:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Installs the .NET Framework 3.5.",
             "tool": "windowsfeature-enable",
             "input": "net-framework-features"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-the-net-framework-45"></a>.devinit.js, na které se nainstaluje .NET Framework 4,5:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Installs the .NET Framework 4.5.",
             "tool": "windowsfeature-enable",
             "input": "net-framework-45-features"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-the-windows-subsystem-for-linux-20"></a>.devinit.js, na které se nainstaluje podsystém Windows pro Linux 2,0:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Installs Windows Subsystem for Linux 2.0.",
             "tool": "windowsfeature-enable",
             "input": "Microsoft-Windows-Subsystem-Linux"
         }

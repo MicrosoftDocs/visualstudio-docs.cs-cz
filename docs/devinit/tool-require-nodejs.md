@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 6ba6b5a53c6b6f1c67c957c55a612cbe461b108c
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 3da6bd121aff31c680bea2c4655ee2250f5edb05
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400265"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671785"
 ---
 # <a name="require-nodejs"></a>require-nodejs
 
@@ -45,17 +45,26 @@ Další možnosti konfigurace mohou být předány jako hodnota `additionalOptio
 Výchozím chováním `require-nodejs` nástroje je nainstalovat nejnovější verzi LTS uzlu, jak je podrobně popsáno na [webu](https://nodejs.org/en/download/)Node.JS.
 
 ## <a name="example-usage"></a>Příklad použití
+Níže jsou uvedeny příklady, jak spustit `require-nodejs` pomocí `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-the-lts-of-nodejs"></a>.devinit.js, na které se bude instalovat LTS Node.js:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Example that will trigger the Default behavior of installing latest LTS of Node.JS.",
             "tool": "require-nodejs"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-a-specific-version-of-nodejs"></a>.devinit.js, na které se nainstaluje konkrétní verze Node.js:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install a specific version.",
             "tool": "require-nodejs",
             "input": "14.4.0"
         }

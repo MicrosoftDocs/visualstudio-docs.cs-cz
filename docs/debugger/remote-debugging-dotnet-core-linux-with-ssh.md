@@ -1,5 +1,5 @@
 ---
-title: Vzdálené ladění .NET Core v systému Linux | Microsoft Docs
+title: Ladění .NET Core v systému Linux
 ms.date: 02/26/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,50 +9,62 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d66181f5e6720348e18c34b735ef29e24c0111a
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 39b77d68e7f8876f7e0d038166f4b2a6517bb3cb
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796300"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671503"
 ---
-# <a name="remote-debug-net-core-on-linux-using-ssh"></a>Vzdálené ladění .NET Core na platformě Linux pomocí SSH
+# <a name="debug-net-core-on-linux-using-ssh-by-attaching-to-a-process"></a>Ladění .NET Core v systému Linux pomocí SSH připojením k procesu
 
-Od sady Visual Studio 2017 se můžete připojit k procesům .NET Core běžícím na Linux přes SSH. Tento článek popisuje, jak nastavit ladění a jak ladit.
+Od sady Visual Studio 2017 se můžete připojit k procesům .NET Core běžícím na místním nebo vzdáleném nasazení Linux přes SSH. Tento článek popisuje, jak nastavit ladění a jak ladit. Pro scénáře ladění pomocí kontejnerů Docker použijte místo toho příkaz [připojit k procesu spuštěnému v kontejneru Docker](../debugger/attach-to-process-running-in-docker-container.md) .
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
-V počítači se systémem Visual Studio je potřeba nainstalovat jak úlohu **vývoj pro ASP.NET, tak webové** prostředí a **vývoj aplikací .NET Core pro různé platformy** .
+- V počítači se systémem Visual Studio je potřeba nainstalovat jak úlohu **vývoj pro ASP.NET, tak webové** prostředí a **vývoj aplikací .NET Core pro různé platformy** .
 
-Na serveru se systémem Linux je nutné nainstalovat server SSH, rozbalit a nainstalovat buď s kudrlinkou, nebo wget. Například na Ubuntu můžete to provést spuštěním:
+- Na serveru se systémem Linux je nutné nainstalovat server SSH, rozbalit a nainstalovat buď s kudrlinkou, nebo wget. Například na Ubuntu můžete to provést spuštěním:
 
-``` cmd
-sudo apt-get install openssh-server unzip curl
-```
+  ``` cmd
+  sudo apt-get install openssh-server unzip curl
+  ```
 
-## <a name="build-and-deploy-the-application"></a>Sestavení a nasazení aplikace
+- Na serveru Linux [nainstalujte modul runtime .NET v systému Linux](/dotnet/core/install/linux)a Najděte stránku, která odpovídá distribuci systému Linux (například Ubuntu). Sada .NET SDK není povinná.
+
+- Podrobné pokyny pro ASP.NET Core najdete v tématu [hostitelská ASP.NET Core v systému Linux s Nginx](/aspnet/core/host-and-deploy/linux-nginx) a [Host ASP.NET Core v systému Linux s Apache](/aspnet/core/host-and-deploy/linux-apache).
+
+## <a name="prepare-your-application-for-debugging"></a>Příprava aplikace pro ladění
 
 Příprava aplikace pro ladění:
 
-- Zvažte použití konfigurace ladění při sestavování aplikace. Je mnohem obtížnější ladit kód kompilovaný v maloobchodě (konfigurace vydané verze) než ladicí kód kompilovaný. Pokud potřebujete použít konfiguraci vydané verze, nejdřív zakažte Pouze můj kód. Chcete-li toto nastavení zakázat, zvolte možnost **nástroje**  >  **Options**  >  **ladění** a potom zrušte zaškrtnutí možnosti **Povolit pouze můj kód** .
+- Zvažte použití konfigurace ladění při sestavování aplikace. Je mnohem obtížnější ladit kód kompilovaný v maloobchodě (konfigurace vydané verze) než ladicí kód kompilovaný. Pokud potřebujete použít konfiguraci vydané verze, nejdřív zakažte Pouze můj kód. Chcete-li toto nastavení zakázat, zvolte možnost **nástroje**  >  **Options**  >  **ladění** a potom zrušte zaškrtnutí možnosti **Povolit pouze můj kód**.
 
-- Ujistěte se, že je projekt nakonfigurován tak, aby vytvořil [přenosné soubory PDB](https://github.com/OmniSharp/omnisharp-vscode/wiki/Portable-PDBs) (což je výchozí nastavení), a ujistěte se, že je PBDs ve stejném umístění jako knihovna DLL. Pokud chcete tuto možnost nakonfigurovat v aplikaci Visual Studio, klikněte pravým tlačítkem na projekt a pak zvolte **vlastnosti**  >  **sestavit**  >  **Pokročilé**  >  **ladicí informace** .
+- Ujistěte se, že je projekt nakonfigurován tak, aby vytvořil [přenosné soubory PDB](https://github.com/OmniSharp/omnisharp-vscode/wiki/Portable-PDBs) (což je výchozí nastavení), a ujistěte se, že je soubory PDB ve stejném umístění jako knihovna DLL. Pokud chcete tuto možnost nakonfigurovat v aplikaci Visual Studio, klikněte pravým tlačítkem na projekt a pak zvolte **vlastnosti**  >  **sestavit**  >  **Pokročilé**  >  **ladicí informace**.
+
+## <a name="build-and-deploy-the-application"></a>Sestavení a nasazení aplikace
 
 K nasazení aplikace před laděním můžete použít několik metod. Můžete například:
 
 - Zkopírujte zdroje do cílového počítače a sestavte ```dotnet build``` je v počítači se systémem Linux.
 
-- Sestavte aplikaci ve Windows a pak přeneste artefakty sestavení do počítače se systémem Linux. (Artefakty sestavení se skládají z samotné aplikace, všechny běhové knihovny, na kterých může záviset, a *.deps.jsv* souboru.)
+- Sestavte aplikaci ve Windows a pak přeneste artefakty sestavení do počítače se systémem Linux. (Artefakty sestavení se skládají z samotné aplikace, přenosných soubory PDB, knihoven za běhu, na kterých může záviset, a *.deps.jsv* souboru.)
+
+Po nasazení aplikace spusťte aplikaci.
 
 ## <a name="attach-the-debugger"></a>Připojit ladicí program
 
-Po nakonfigurování počítačů spusťte aplikaci na počítači se systémem Linux a potom jste připraveni připojit ladicí program.
+Když je aplikace spuštěna v počítači se systémem Linux, jste připraveni k připojení ladicího programu.
 
-1. V aplikaci Visual Studio vyberte možnost **ladění**  >  **připojit k procesu...** .
+1. V aplikaci Visual Studio vyberte možnost **ladění**  >  **připojit k procesu...**.
 
-1. V seznamu **Typ připojení** vyberte **SSH** .
+1. V seznamu **Typ připojení** vyberte **SSH**.
 
 1. Změňte **cíl připojení** na IP adresu nebo název hostitele cílového počítače.
+
+   Pokud jste ještě nezadali přihlašovací údaje, zobrazí se výzva k zadání hesla nebo souboru privátního klíče.
+
+   Nejsou k dispozici žádné požadavky na port ke konfiguraci, s výjimkou portu, ve kterém je spuštěný Server SSH.
 
 1. Vyhledejte proces, který chcete ladit.
 
@@ -62,9 +74,9 @@ Po nakonfigurování počítačů spusťte aplikaci na počítači se systémem 
 
    ![Připojit k procesu Linux](media/remote-debug-linux-over-ssh-attach.png)
 
-1. Klikněte na tlačítko **připojit** .
+1. Klikněte na tlačítko **připojit**.
 
-1. V dialogovém okně, které se zobrazí, vyberte typ kódu, který chcete ladit. Vyberte možnost **Managed (.NET Core pro UNIX)** .
+1. V dialogovém okně, které se zobrazí, vyberte typ kódu, který chcete ladit. Vyberte možnost **Managed (.NET Core pro UNIX)**.
 
 1. K ladění aplikace použijte funkce ladění sady Visual Studio.
 

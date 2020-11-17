@@ -1,5 +1,7 @@
 ---
 title: CreateNewFolder – – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o prvku CreateNewFolder – a o tom, jak určuje, zda se má ověřit, zda cílový adresář, kde má být projekt vytvořen, neexistuje.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 860f4df3e69a568a3e391da4d7437d9a5fd83f15
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 15633c2f701c813ca24c5484fd4108a86c57b05b
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739680"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671570"
 ---
 # <a name="createnewfolder-element-visual-studio-templates"></a>CreateNewFolder – – element (šablony sady Visual Studio)
 Určuje, zda se má ověřit, zda cílový adresář, kde má být projekt vytvořen, neexistuje. Pokud adresář existuje, lze pro projekt vytvořit nový adresář. Toto nastavení je obvykle přepsáno `NewProjectRequiresNewFolder(VsTemplate)` příznakem registru ( `HKEY_LOCAL_MACHINE/SOFTWARE(/Wow6432Node)/Microsoft/VisualStudio/<version number>/Projects/<project GUID>` ), který používají všechny běžné typy projektů k určení, zda vytvořit nový projekt v novém adresáři.

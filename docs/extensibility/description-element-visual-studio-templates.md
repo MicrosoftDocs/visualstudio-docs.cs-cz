@@ -1,5 +1,7 @@
 ---
 title: Description – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o elementu Description a o tom, jak Určuje popis šablony tak, jak se zobrazuje v dialogovém okně Nový projekt nebo přidat novou položku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ea10b43662d2818792dbc57aeac09a056cb63ce
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2f244fb6d681c9cc22416422be3ade098c67deea
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712263"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671282"
 ---
 # <a name="description-element-visual-studio-templates"></a>Description – element (šablony sady Visual Studio)
 Určuje popis šablony, jak je zobrazen v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .
