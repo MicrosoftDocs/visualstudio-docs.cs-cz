@@ -1,5 +1,7 @@
 ---
 title: NumberOfParentCategoriesToRollUp – element (šablony)
+description: Přečtěte si o prvku NumberOfParentCategoriesToRollUp a o tom, jak určuje počet nadřazených kategorií, které zobrazí šablonu v dialogovém okně Nový projekt.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b903b9d0bdab2c17dd2e489de01badad82c15473
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58c702a70392f4a0330ea51b563570362f51df35
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702358"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672408"
 ---
 # <a name="numberofparentcategoriestorollup-element-visual-studio-templates"></a>NumberOfParentCategoriesToRollUp – element (šablony sady Visual Studio)
 Určuje počet nadřazených kategorií, které budou zobrazovat šablonu v dialogovém okně **Nový projekt** .

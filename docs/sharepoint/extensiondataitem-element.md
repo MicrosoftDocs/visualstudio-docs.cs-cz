@@ -1,5 +1,7 @@
 ---
 title: Element ExtensionDataItem – | Microsoft Docs
+description: Zobrazení referenčních informací o prvku ExtensionDataItem –, což je prvek ve schématu položky projektu služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 295ee649cec01e50b237b4fad1798806d460727b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 23bd231343b3e7a6c68883aa7fe3ee4e518ac883
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546546"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672610"
 ---
 # <a name="extensiondataitem-element"></a>ExtensionDataItem – element
   Vlastní datová položka, která je přidružena k položce projektu služby SharePoint, ve formátu klíč/hodnota. Klíč i hodnota musí být řetězce.
@@ -58,7 +60,7 @@ ms.locfileid: "85546546"
 |**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
-|**Může být prázdné**|Ne|
+|**Může být prázdné**|No|
 
 ## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)

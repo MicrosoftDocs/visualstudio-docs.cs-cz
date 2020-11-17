@@ -1,5 +1,7 @@
 ---
 title: Rozšíření položek projektu služby SharePoint | Microsoft Docs
+description: Projděte si úlohy pro rozšíření položek projektu služby SharePoint. Pochopte, jak souvisí rozšíření položek projektu a instance položek projektu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f60c95418379399196c461e055645ae7c85a473e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 22ba5acb995466e695c0e25b5b7540f3677b1264
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62967393"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672571"
 ---
 # <a name="extend-sharepoint-project-items"></a>Rozšiřování položek projektu služby SharePoint
   Vytvořte rozšíření položky projektu, pokud chcete přidat funkce do typu položky projektu služby SharePoint, která je již nainstalována v aplikaci Visual Studio. Můžete například vytvořit rozšíření pro integrovaný **přijímač událostí** nebo položky projektu **definice seznamu** v aplikaci Visual Studio, nebo můžete vytvořit rozšíření pro vlastní typ položky projektu. Můžete také vytvořit rozšíření pro všechny typy položek projektu služby SharePoint.

@@ -1,5 +1,7 @@
 ---
 title: Rozdíly mezi řešeními v izolovaném prostoru a farmách | Microsoft Docs
+description: Seznamte se s rozdíly mezi řešeními v izolovaném prostoru a farmách. Zjistěte, jak Visual Studio přistupuje k ladění pomocí libovolného typu řešení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 073e62b473ebfcec5f71ae1907e8f9e385333411
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25c1c9047ba9e38e3e652abcbe92ce6575d7b750
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62967543"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672779"
 ---
 # <a name="differences-between-sandboxed-and-farm-solutions"></a>Rozdíly mezi řešeními v izolovaném prostoru a farmách
   Když kompilujete řešení služby SharePoint, nasadí se na server SharePoint a ladicí program se připojí k ladění. Proces použitý k ladění řešení závisí na nastavení vlastnosti řešení v izolovaném prostoru: řešení v izolovaném prostoru nebo řešení farmy.

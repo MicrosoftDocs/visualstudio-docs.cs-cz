@@ -1,5 +1,7 @@
 ---
 title: FullClassName – – element (rozšíření Průvodce šablonou VS)
+description: Přečtěte si o prvku FullClassName – a o tom, jak je plně kvalifikovaný název třídy, která implementuje rozhraní IWizard.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ed9ceb57f49d8c08b75aa140e45a0f4268f4336c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 987a97a34c846f93ef52765375c1512dd8968fb1
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769599"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672740"
 ---
 # <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>FullClassName – – element (rozšíření Průvodce šablonami sady Visual Studio)
 Plně kvalifikovaný název třídy, která implementuje `IWizard` rozhraní.

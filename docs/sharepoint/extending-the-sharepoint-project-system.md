@@ -1,5 +1,7 @@
 ---
 title: Rozšíření systému projektu služby SharePoint | Microsoft Docs
+description: Rozšíří systém projektu služby SharePoint. Naučte se, jak rozšiřuje systém projektu služby SharePoint. Pochopení běžných vývojových úloh.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7dce10c2bc44eb4fde6a6e38417d136ea5e9ba41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c017217f66e38eed6248b90efaeabce0efaa9c70
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62557021"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672545"
 ---
 # <a name="extend-the-sharepoint-project-system"></a>Rozšíří systém projektu služby SharePoint.
   Můžete vytvořit řešení služby SharePoint pomocí sady šablon projektů a šablon položek v sadě Visual Studio. Tyto šablony splňují požadavky mnoha scénářů vývoje, ale můžete zjistit, že některé případy neposkytují funkce, které požadujete. V těchto případech můžete roztáhnout systém projektu služby SharePoint.

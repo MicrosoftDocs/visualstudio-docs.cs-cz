@@ -1,5 +1,7 @@
 ---
 title: Project – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o prvku projektu a o tom, jak Určuje soubory nebo adresáře, které mají být přidány do projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 335a1e4efa62f07e10bb24b9971627d24bb13273
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 652d438d6a0fdf0c42648ded7d3dc9c18b0212ff
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701994"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672382"
 ---
 # <a name="project-element-visual-studio-templates"></a>Project – element (šablony sady Visual Studio)
 Určuje soubory nebo adresáře, které se mají přidat do projektu.
@@ -47,7 +49,7 @@ Určuje soubory nebo adresáře, které se mají přidat do projektu.
 |Atribut|Popis|
 |---------------|-----------------|
 |`File`|Požadovaný atribut.<br /><br /> Určuje název souboru projektu v souboru template *. zip* .|
-|`ReplaceParameters`|Nepovinný atribut.<br /><br /> Logická hodnota určující, zda soubor projektu obsahuje hodnoty parametrů, které musí být nahrazeny při vytvoření projektu ze šablony. Výchozí hodnota je `false` .|
+|`ReplaceParameters`|Nepovinný atribut.<br /><br /> Logická hodnota určující, zda soubor projektu obsahuje hodnoty parametrů, které musí být nahrazeny při vytvoření projektu ze šablony. Výchozí hodnota je `false`.|
 |`TargetFileName`|Nepovinný atribut.<br /><br /> Určuje název souboru projektu při vytvoření projektu ze šablony.|
 |`IgnoreProjectParameter`|Nepovinný atribut.<br /><br /> Určuje, zda má být projekt přidán do aktuálního řešení. Pokud hodnota vlastního parametru, "$*myCustomParameter*$" existuje v souboru náhradního parametru, projekt se vytvoří, ale nepřidá se jako součást aktuálně otevřeného řešení.|
 

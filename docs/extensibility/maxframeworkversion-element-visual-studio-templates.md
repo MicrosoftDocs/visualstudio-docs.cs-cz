@@ -1,5 +1,7 @@
 ---
 title: MaxFrameworkVersion – – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o prvku MaxFrameworkVersion – a o tom, jak určuje maximální verzi .NET Framework, kterou šablona vyžaduje.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c3acf9c40499417fe180ce470224824cc89a113
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44345b712f448bd7eedf288d7c58cb4193e1b020
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702625"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672422"
 ---
 # <a name="maxframeworkversion-element-visual-studio-templates"></a>MaxFrameworkVersion – – element (šablony sady Visual Studio)
 

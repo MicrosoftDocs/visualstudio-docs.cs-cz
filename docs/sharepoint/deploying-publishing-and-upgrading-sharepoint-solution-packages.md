@@ -1,5 +1,7 @@
 ---
 title: Nasazení, publikování & upgradu balíčků řešení služby SharePoint
+description: Nasazení, publikování a Upgrade balíčků řešení služby SharePoint. Přizpůsobte proces nasazení. Publikujte balíčky na vzdáleném nebo místním serveru.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 574712b870256fa7422e64a3c29ae8733f4c2251
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ab97efc82575c31c8e05b73063c2b53a09691d2d
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583876"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672662"
 ---
 # <a name="deploy-publish-and-upgrade-sharepoint-solution-packages"></a>Nasazení, publikování a Upgrade balíčků řešení služby SharePoint
   Po vývoji řešení služby SharePoint v aplikaci Visual Studio můžete buď nasadit soubor balíčku (. wsp) na místní server SharePoint nebo ho publikovat na vzdáleném nebo místním serveru SharePoint. Pokud soubory nasadíte, můžete přizpůsobit způsob nasazení souborů balíčku (. wsp).
@@ -55,7 +57,7 @@ ms.locfileid: "91583876"
  Můžete také přidat příkazy, které se spustí před a po nasazení. Další informace najdete v tématu [Postup: nastavení příkazů nasazení služby SharePoint](../sharepoint/how-to-set-sharepoint-deployment-commands.md).
 
 ## <a name="publish-packages-to-a-remote-or-local-server"></a>Publikování balíčků na vzdáleném nebo místním serveru
- Chcete-li publikovat řešení služby SharePoint v izolovaném prostoru na vzdáleném serveru, v panelu nabídek zvolte možnost **sestavení**, **publikování**a potom v dialogovém okně **publikovat** zvolte možnost **publikovat na webu služby SharePoint** a zadejte adresu URL vzdáleného serveru, například `https://someremoteserver.sharepoint.microsoftonline.com` .
+ Chcete-li publikovat řešení služby SharePoint v izolovaném prostoru na vzdáleném serveru, v panelu nabídek zvolte možnost **sestavení**, **publikování** a potom v dialogovém okně **publikovat** zvolte možnost **publikovat na webu služby SharePoint** a zadejte adresu URL vzdáleného serveru, například `https://someremoteserver.sharepoint.microsoftonline.com` .
 
  Chcete-li publikovat řešení služby SharePoint na místním serveru, klikněte v dialogovém okně **publikovat** na přepínač **publikovat do systému souborů** a zadejte cestu k místnímu systému.
 

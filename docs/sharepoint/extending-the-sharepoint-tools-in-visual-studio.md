@@ -1,5 +1,7 @@
 ---
 title: Rozšíření nástrojů služby SharePoint v aplikaci Visual Studio | Microsoft Docs
+description: Rozšíříte nástroje služby SharePoint v aplikaci Visual Studio. Rozšíří systém projektu služby SharePoint. Rozšíří uzel připojení služby SharePoint v Průzkumník serveru.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7dc0cc0d0af73d032d870629877b62c94e6b347b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a921f45ea151ce7ee3313dba47e81a5acc86063d
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016034"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672623"
 ---
 # <a name="extend-the-sharepoint-tools-in-visual-studio"></a>Rozšiřování nástrojů služby SharePoint v aplikaci Visual Studio
   Nástroje služby SharePoint v aplikaci Visual Studio splňují požadavky mnoha scénářů vývoje aplikací. Můžete však zjistit případy, kdy neposkytují funkce, které požadujete vy nebo ostatní vývojáři. V těchto případech můžete nástroje služby SharePoint rozšíříte tak, aby se vytvořila funkčnost, kterou potřebujete.

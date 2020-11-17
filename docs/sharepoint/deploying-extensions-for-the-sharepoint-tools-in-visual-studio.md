@@ -1,5 +1,7 @@
 ---
 title: Nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio | Microsoft Docs
+description: Nasaďte rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio. Použijte projekty rozšíření sady Visual Studio (VSIX) k vytvoření balíčků VSIX.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8178a660f757ae7d7c2758c76d6fd0fc4b22918f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9c8b05b5cb74a28157436f95f01992515c716e6a
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584700"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672675"
 ---
 # <a name="deploy-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio
 
@@ -130,7 +132,7 @@ Následující postupy popisují, jak přidat položky do souboru. vsixmanifest 
 
 5. V seznamu **projekt** zvolte název projektu a pak klikněte na tlačítko **OK** .
 
-6. V **Průzkumník řešení**otevřete místní nabídku pro projekt šablony projektu nebo šablony položky a pak zvolte **Uvolnit projekt**.
+6. V **Průzkumník řešení** otevřete místní nabídku pro projekt šablony projektu nebo šablony položky a pak zvolte **Uvolnit projekt**.
 
 7. Znovu otevřete místní nabídku uzlu projektu a pak zvolte **Upravit**_YourTemplateProjectName_**. csproj** nebo **Upravit**_YourTemplateProjectName_**. vbproj**.
 
@@ -152,7 +154,7 @@ Následující postupy popisují, jak přidat položky do souboru. vsixmanifest 
 
 10. Uložte soubor a zavřete ho.
 
-11. V **Průzkumník řešení**otevřete místní nabídku pro projekt šablony projektu nebo šablony položky a pak zvolte možnost **znovu načíst projekt**.
+11. V **Průzkumník řešení** otevřete místní nabídku pro projekt šablony projektu nebo šablony položky a pak zvolte možnost **znovu načíst projekt**.
 
 #### <a name="to-include-a-template-that-you-create-manually"></a>Chcete-li zahrnout šablonu, kterou vytvoříte ručně
 
@@ -172,7 +174,7 @@ Následující postupy popisují, jak přidat položky do souboru. vsixmanifest 
 
      Například pokud máte šablonu položky s názvem ContosoCustomAction.zip, která podporuje národní prostředí English (USA), může být celá cesta *ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip*.
 
-3. V **Průzkumník řešení**vyberte soubor šablony (*YourTemplateName*. zip).
+3. V **Průzkumník řešení** vyberte soubor šablony (*YourTemplateName*. zip).
 
 4. V okně **vlastnosti** nastavte vlastnost **Akce sestavení** na **obsah**.
 

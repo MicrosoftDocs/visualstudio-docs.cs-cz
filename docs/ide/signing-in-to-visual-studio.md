@@ -11,12 +11,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fd3a6153a347bcaf7d17fd265b7d9c7d4e6a5e5
-ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
+ms.openlocfilehash: 7873d42e075619e23c14d4e2e1babc6898825a6b
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94626174"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672766"
 ---
 # <a name="sign-in-to-visual-studio"></a>Přihlášení k sadě Visual Studio
 
@@ -84,6 +84,7 @@ Pokud narazíte na problémy při přihlašování, získáte pomoc na stránce 
 ## <a name="see-also"></a>Viz také
 
 * [Prodloužení zkušební verze nebo aktualizace licence](../ide/how-to-unlock-visual-studio.md)
+* [Práce s účty GitHub v sadě Visual Studio](../ide/work-with-github-accounts.md)
 * [Přehled integrovaného vývojového prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
 * [Přihlásit se (Visual Studio pro Mac)](/visualstudio/mac/signing-in)
 * [Aktivace (Visual Studio pro Mac)](/visualstudio/mac/activation)

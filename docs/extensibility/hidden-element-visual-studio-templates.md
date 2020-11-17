@@ -1,5 +1,7 @@
 ---
 title: Hidden – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o skrytém prvku a o tom, jak určuje, zda se šablona zobrazuje v dialogových oknech Nový projekt nebo přidat novou položku.
+ms.custom: SEO-VS-2020
 ms.date: 04/17/2019
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9943cefe2b624cede19c05eddd88f155f4aa4c5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04cb966f21bbb501545f1a203297d06f8e852793
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711114"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672697"
 ---
 # <a name="hidden-element-visual-studio-templates"></a>Hidden – element (šablony sady Visual Studio)
 

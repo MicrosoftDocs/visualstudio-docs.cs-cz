@@ -1,5 +1,7 @@
 ---
 title: Vývoj řešení služby SharePoint | Microsoft Docs
+description: Vývoj řešení služby SharePoint. Znáte prvky projektu služby SharePoint. Pochopení projektu SharePoint a vlastností položek projektu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 36823637c530d65776c149ff576bf5e7e0ca545f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 755723dd2ae309e971e86852646ee33d2caa22cf
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016798"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672818"
 ---
 # <a name="develop-sharepoint-solutions"></a>Vývoj řešení služby SharePoint
   V nástroji je k dispozici několik šablon typu projektu služby SharePoint [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] pro vytváření webů a prvků webu služby SharePoint. Seznam dostupných typů projektů naleznete v tématu [šablony projektů a položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md). Následuje popis prvků a vlastností projektu služby SharePoint.
@@ -47,7 +49,7 @@ ms.locfileid: "86016798"
 
  Chcete-li ručně přidat funkci, spusťte příkaz **Přidat funkci** v místní nabídce uzlu funkce. Obsah funkce můžete zobrazit nebo změnit pomocí návrháře funkcí. Další informace naleznete v tématu [How to: Customize a SharePoint Feature](../sharepoint/how-to-customize-a-sharepoint-feature.md).
 
- Při přidání funkce do projektu služby SharePoint se zobrazí v **Průzkumník řešení** jako uzel s výchozí funkcí name*x*. Feature, kde *x* je jedinečné číslo. Po nasazení funkce na server SharePoint může ji správce služby SharePoint aktivovat a zpřístupnit ji uživatelům webu služby SharePoint.
+ Při přidání funkce do projektu služby SharePoint se zobrazí v **Průzkumník řešení** jako uzel s výchozí funkcí name *x*. Feature, kde *x* je jedinečné číslo. Po nasazení funkce na server SharePoint může ji správce služby SharePoint aktivovat a zpřístupnit ji uživatelům webu služby SharePoint.
 
 #### <a name="package-node"></a>Uzel balíčku
  Uzel **balíčku** obsahuje jeden soubor, který slouží jako mechanismus distribuce pro projekt služby SharePoint. Tento soubor, známý jako *balíček řešení*, je. CAB založený na. Rozšíření WSP Balíček řešení je nasaditelné, opakovaně použitelný soubor, který obsahuje sadu funkcí, definic webů a sestavení, které se vztahují na weby SharePointu a které můžete povolit nebo zakázat jednotlivě. Uzel **balíčku** také vždy obsahuje soubor s názvem Package. wspdef, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] definiční soubor balíčku. Po nasazení balíčku na server, na kterém je spuštěna služba SharePoint, může správce služby SharePoint nainstalovat a aktivovat jeho funkce.
@@ -57,7 +59,7 @@ ms.locfileid: "86016798"
 ## <a name="sharepoint-project-and-project-item-properties"></a>Vlastnosti projektu a položky projektu služby SharePoint
  Projekty služby SharePoint, stejně jako jiné [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projekty, zobrazují vlastnosti na okno Vlastnosti a na stránce vlastností. Vlastnosti, které jsou zobrazeny, závisí na uzlu, který je vybrán.
 
- Když je v **Průzkumník řešení**vybrán projekt služby SharePoint, položka projektu nebo soubor položky projektu, v okno Vlastnosti nebo na stránce vlastností se zobrazí následující vlastnosti:
+ Když je v **Průzkumník řešení** vybrán projekt služby SharePoint, položka projektu nebo soubor položky projektu, v okno Vlastnosti nebo na stránce vlastností se zobrazí následující vlastnosti:
 
 ### <a name="project-properties"></a>Vlastnosti projektu
 
@@ -101,7 +103,7 @@ ms.locfileid: "86016798"
 |Umístění nasazení|Plně kvalifikovaná cesta k souboru na serveru SharePoint. Tato cesta se skládá z kořene nasazení a cesty nasazení podvlastností.|
 |Cesta nasazení|Relativní cesta k souboru v souboru serveru SharePoint, například Workflow1 \\ . Plně kvalifikovaná cesta k souboru je vytvořena zřetězením hodnoty *cesty nasazení* na konec *kořenové hodnoty nasazení* .<br /><br /> Výběr hodnoty *RootFile* pro vlastnost *typ nasazení* změní *kořenovou vlastnost nasazení* na \<SharePointRoot> \\ . Výsledkem je plně kvalifikovaná cesta \<SharePointRoot> \Workflow1 \\ . Další informace naleznete v tématu [balení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md).|
 |Kořen nasazení|Řetězec. Kořenová složka, ve které je soubor nasazen na serveru SharePoint. Například \<SharePointRoot> \Template\Features \\ \<FeatureName> \\ .<br /><br /> Hodnota *kořenové vlastnosti nasazení* je určena nastavením *typ nasazení* .|
-|Typ nasazení|Typ nasazení souboru, který určuje jeho *kořenovou hodnotu nasazení* . Může to být jedna z následujících hodnot:<br /><br /> Nasazení: *\<no value>*<br /><br /> ElementManifest: * \<SharePointRoot> \Template\Features \\ \<FeatureName> *\\<br /><br /> ElementFile: * \<SharePointRoot> \\ \<FeatureName> \Template\Features \\ *<br /><br /> TemplateFile: * \<SharePointRoot> \TEMPLATE \\ *<br /><br /> RootFile: *\<SharePointRoot>\\*<br /><br /> GlobalResource: * \<SharePointRoot> \Resources \\ *<br /><br /> ClassResource: *\<ClassResourcePath>\\*<br /><br /> Další informace naleznete v tématu <xref:Microsoft.VisualStudio.SharePoint.DeploymentType>.|
+|Typ nasazení|Typ nasazení souboru, který určuje jeho *kořenovou hodnotu nasazení* . Může to být jedna z následujících hodnot:<br /><br /> Nasazení: *\<no value>*<br /><br /> ElementManifest: *\<SharePointRoot> \Template\Features \\ \<FeatureName>*\\<br /><br /> ElementFile: *\<SharePointRoot> \\ \<FeatureName> \Template\Features \\*<br /><br /> TemplateFile: *\<SharePointRoot> \TEMPLATE \\*<br /><br /> RootFile: *\<SharePointRoot>\\*<br /><br /> GlobalResource: *\<SharePointRoot> \Resources \\*<br /><br /> ClassResource: *\<ClassResourcePath>\\*<br /><br /> Další informace naleznete v tématu <xref:Microsoft.VisualStudio.SharePoint.DeploymentType>.|
 |Název souboru|Název souboru nebo složky pro soubor položky|
 |Úplná cesta|Umístění souboru pro položku (Jen pro čtení.)|
 

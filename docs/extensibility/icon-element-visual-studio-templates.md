@@ -1,5 +1,7 @@
 ---
 title: Icon – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o prvku ikony a o tom, jak Určuje cestu a název souboru obrázku, který slouží jako ikona.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff725e2db0d74e571b8c41d8a8aa80228938fbff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 059105b9d188c0e7a81252172aa2d1bf7002420c
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710534"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672688"
 ---
 # <a name="icon-element-visual-studio-templates"></a>Icon – element (šablony sady Visual Studio)
 Určuje cestu a název souboru obrázku, který slouží jako ikona, která se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** pro šablonu.

@@ -1,5 +1,7 @@
 ---
 title: Default – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o elementu default a o tom, jak Určuje název, který bude systém projektu sady Visual Studio generovat pro projekt nebo položku při jejím vytvoření.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92bd29824cf1d3b91a7bdaa7220479c583ad0f23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 23defc424d3e7ed5095f0e29d673c191c755f9ce
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712310"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672727"
 ---
 # <a name="defaultname-element-visual-studio-templates"></a>Default – element (šablony sady Visual Studio)
 Určuje název, který bude systém projektu sady Visual Studio generovat pro projekt nebo položku při jejím vytvoření.

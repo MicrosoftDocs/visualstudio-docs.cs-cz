@@ -2,7 +2,7 @@
 title: Protokol změn (Visual Studio Tools for Unity, Mac) | Microsoft Docs
 description: Zobrazit protokol změn pro Visual Studio Tools for Unity, Mac. Viz změny od verze 1.0.0.0 až po 2.7.0.0 a vyšší.
 ms.custom: ''
-ms.date: 5/19/2020
+ms.date: 11/13/2020
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,16 +12,70 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 72e1897e8eb7f7072ba22189c6414ba2585a6711
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 2f026c9d33f5aa49ebb7e974a507c85b87073897
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94341592"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672844"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Protokol změn (Visual Studio Tools for Unity, Mac)
 
 Protokol změn Visual Studio Tools for Unity
+
+## <a name="2830"></a>2.8.3.0
+Vydáno 10. listopadu 2020
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Ladění**
+
+  - Pevně se připojuje k Unity i v případě, že v řešení není žádný projekt VSTU.
+
+## <a name="2820"></a>2.8.2.0
+Vydáno 27. října 2020
+
+### <a name="new-features"></a>Nové funkce
+
+- **Spolupráci**
+
+  - Vylepšená [`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0010.md) Diagnostika, která se má použít pro všechno, co je děděné z `Component` nejenom `MonoBehaviour` .
+
+## <a name="2810"></a>2.8.1.0
+Vydáno 13. října 2020
+
+### <a name="new-features"></a>Nové funkce
+
+- **Hodnocení**
+
+  - Přidání podpory pro implicitní převod s voláními. Dříve vyhodnocovací vyhodnocení vynutilo striktní ověřování typu, což má za následek `Failed to find a match for method([parameters...])` varovné zprávy.
+
+- **Spolupráci**
+
+  - Přidání [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) diagnostiky Nepoužívejte `System.Reflection` funkce pro kritické zprávy o výkonu, jako `Update` je,, `FixedUpdate` `LateUpdate` nebo `OnGUI` .
+
+  - Vylepšené [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0003.md) a [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0005.md) potlačené objekty s podporou pro všechny `AssetPostprocessor` statické metody.
+
+  - Přidání [`USP0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0016.md) Suppressor pro `CS8618` . `C# 8.0` zavádí typy odkazů s možnou hodnotou null a odkazy, které neumožňují hodnotu null. Detekce inicializace typů, které dědí z `UnityEngine.Object` , není podporována a bude mít za následek chyby.
+
+  - Nyní použijte stejný mechanismus pro vytváření projektů a přehrávač asmdef pro Unity 2019. x a 2020. x +.
+  
+  - Vylepšené uživatelské prostředí při generování zpráv Unity pomocí průvodce.
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Spolupráci**
+
+  - Opravilo se neočekávané dokončení zpráv v komentářích.
+
+## <a name="2800"></a>2.8.0.0 
+Vydáno 14. září 2020
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Spolupráci**
+
+  - Pevné generování projektů v přehrávači pomocí Unity 2019. x
 
 ## <a name="2710"></a>2.7.1.0
 Vydáno 5. srpna 2020

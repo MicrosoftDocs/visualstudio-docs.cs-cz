@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: acd3b65f520a9be048fe2d0209a85a85d086df2f
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 863c2715b7dfbc2c331bb57f6cf06851401c51df
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438227"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672498"
 ---
 # <a name="devinit-configuration-file"></a>konfigurační soubor devinit
 
@@ -45,6 +45,7 @@ ms.locfileid: "94438227"
 Cesty jsou relativní vzhledem k umístění, kde je spuštěný devinit. Obvykle se jedná o aktuální pracovní adresář, ze kterého `devinit` byl proveden.
 
 ## <a name="file-format"></a>Formát souboru
+V nástroji `.devinit.json` můžete zadat více než jeden nástroj, který se má spustit. V `run` části můžete umístit libovolný počet objektů. Příklad tohoto příkladu se zobrazuje v našem ukázkovém [.devinit.jsna](sample-all-tool.md) všech našich nástrojích.
 
 ```json
 {
@@ -66,14 +67,14 @@ Cesty jsou relativní vzhledem k umístění, kde je spuštěný devinit. Obvykl
 | Název         | Typ   | Vyžadováno | Hodnota                              |
 |--------------|--------|----------|------------------------------------|
 | **vyjádření** | řetězec | No       | Komentáře k souboru             |
-| **spouštěl**      | array  | Yes      | [Objekt RunTool](#run-tool-object) |
+| **spouštěl**      | array  | Ano      | [Objekt RunTool](#run-tool-object) |
 
 #### <a name="run-tool-object"></a>Spustit objekt nástroje
 
 | Název                  | Typ   | Vyžadováno | Hodnota                                                                                                      |
 |-----------------------|--------|----------|------------------------------------------------------------------------------------------------------------|
 | **vyjádření**          | řetězec | No       | Komentáře pro položku Nástroje                                                                               |
-| **štětec**              | řetězec | Yes      | Název nástroje. `devinit list`Seznam dostupných nástrojů najdete v příkazu.                            |
+| **štětec**              | řetězec | Ano      | Název nástroje. `devinit list`Seznam dostupných nástrojů najdete v příkazu.                            |
 | **vstup**             | řetězec | No       | Vstup nástroje. Liší se podle nástroje. Například požadovaná verze, ID balíčku, název souboru nebo složka.|
 | **additionalOptions** | řetězec | No       | Další argumenty příkazového řádku, které mají být předány nástroji.                                                |
 

@@ -1,5 +1,7 @@
 ---
 title: Definování vlastních typů položek projektu služby SharePoint | Microsoft Docs
+description: Definujte vlastní typ položky projektu služby SharePoint, pokud chcete vytvořit nový typ položky projektu služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e5f32abba4c4cbdeab59ed66e38019d913e704e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc2e3670dd734b368795f270fa6c1d63c8c079e8
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62580781"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672831"
 ---
 # <a name="define-custom-sharepoint-project-item-types"></a>Definování vlastních typů položek projektu služby SharePoint
   Definujte nový typ položky projektu služby SharePoint, pokud chcete vytvořit nový druh položky projektu služby SharePoint. Například Visual Studio nezahrnuje položky SharePointového projektu pro přidání polí nebo vlastních akcí do webu služby SharePoint. Můžete definovat vlastní typy položek projektu služby SharePoint pro vytváření polí, vlastní akce nebo jiné typy komponent služby SharePoint.

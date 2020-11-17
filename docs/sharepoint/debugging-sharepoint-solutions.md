@@ -1,5 +1,7 @@
 ---
 title: Ladění řešení služby SharePoint | Microsoft Docs
+description: Ladění řešení služby SharePoint pomocí ladicího programu sady Visual Studio. Prozkoumejte proces ladění a nasazení F5, ladit pracovní postupy a ladit přijímače událostí funkcí.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d83c8ffd4fe5ebb627b70fa07f010bdc713225dd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c0bd1996f5d42561cb2d44879ab702d6b6c4b4f7
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72984498"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672857"
 ---
 # <a name="debug-sharepoint-solutions"></a>Ladění řešení služby SharePoint
   Můžete ladit řešení služby SharePoint pomocí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ladicího programu. Když spustíte ladění, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nasadí soubory projektu na server SharePoint a pak otevře instanci webu služby SharePoint ve webovém prohlížeči. Následující části vysvětlují, jak ladit aplikace služby SharePoint v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -118,7 +120,7 @@ ms.locfileid: "72984498"
 ## <a name="sharepoint-project-features"></a>Funkce SharePointového projektu
  Funkce je přenosná a modulární jednotka funkcí, která zjednodušuje úpravu lokalit pomocí definic webů. Také se jedná o prvky balíčku [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] (WSS), které je možné aktivovat pro konkrétní obor a které pomáhají uživatelům provádět konkrétní cíl nebo úlohu. Šablony se nasazují jako funkce.
 
- Při spuštění projektu v režimu ladění vytvoří proces nasazení složku v adresáři *funkce* na adrese *%COMMONPROGRAMFILES%\Microsoft Shared\web server extensions\14\TEMPLATE\FEATURES*. Názvy funkcí mají formát *název projektu*_Feature*x*, například TestProject_Feature1.
+ Při spuštění projektu v režimu ladění vytvoří proces nasazení složku v adresáři *funkce* na adrese *%COMMONPROGRAMFILES%\Microsoft Shared\web server extensions\14\TEMPLATE\FEATURES*. Názvy funkcí mají formát *název projektu* _Feature *x*, například TestProject_Feature1.
 
  Složka řešení v adresáři funkcí obsahuje soubor *definice funkce* a soubor *definice pracovního postupu* . Definiční soubor funkce (Feature.xml) popisuje soubory ve funkci projektu. definiční soubor projektu (*Elements.xml*) popisuje šablonu projektu. *Elements.xml* lze nalézt v **Průzkumník řešení**, ale při vytvoření balíčku řešení se vygeneruje Feature.xml. Další informace o těchto souborech naleznete v tématu [šablony projektů a položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
@@ -140,7 +142,7 @@ ms.locfileid: "72984498"
 ## <a name="enable-enhanced-debugging-information"></a>Povolit rozšířené informace o ladění
  Z důvodu občas složitých interakcí mezi [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] procesem (devenv.exe), [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hostitelským procesem služby sharepoint (*vssphost4.exe*), serverem SharePoint a vrstvou WCF se při diagnostice chyb, ke kterým dochází při sestavování, nasazování a tak dále, může jednat o výzvu. Abychom vám pomohli tyto chyby vyřešit, můžete povolit rozšířené ladicí informace. Provedete to tak, že v registru systému Windows přejdete na následující klíč registru:
 
- **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\11.0\SharePointTools**
+ **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0\SharePointTools**
 
  Pokud hodnota **REG_DWORD** EnableDiagnostics ještě neexistuje, vytvořte ji ručně. Nastavte hodnotu "EnableDiagnostics" na "1".
 

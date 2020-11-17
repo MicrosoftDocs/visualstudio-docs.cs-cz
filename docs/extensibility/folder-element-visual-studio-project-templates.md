@@ -1,5 +1,7 @@
 ---
 title: Folder – element (šablony projektů sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o elementu Folder a o tom, jak Určuje složku, která bude přidána do projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b05ef44896e5cd428584c7efed267f130597ee35
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba3f357f6c48280d12e4ddab6135245e699d0a44
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769588"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672714"
 ---
 # <a name="folder-element-visual-studio-project-templates"></a>Folder – element (šablony projektů sady Visual Studio)
 Určuje složku, která bude přidána do projektu.
@@ -64,7 +66,7 @@ Určuje složku, která bude přidána do projektu.
 
  K uspořádání položek projektu do složek v šabloně můžete použít kteroukoli z následujících metod:
 
-- Zahrňte složky do souboru template *. zip* a přidejte je do projektu v souboru *. vstemplate* zadáním cesty k souboru v `ProjectItem` prvcích bez `Folder` elementů. Toto je doporučená metoda. Příklad:
+- Zahrňte složky do souboru template *. zip* a přidejte je do projektu v souboru *. vstemplate* zadáním cesty k souboru v `ProjectItem` prvcích bez `Folder` elementů. Toto je doporučená metoda. Například:
 
      `...`
 
@@ -74,7 +76,7 @@ Určuje složku, která bude přidána do projektu.
 
      `...`
 
-- Zahrňte složky do souboru template *. zip* a přidejte je do projektu v souboru *. vstemplate* s `Folder` prvky. Příklad:
+- Zahrňte složky do souboru template *. zip* a přidejte je do projektu v souboru *. vstemplate* s `Folder` prvky. Například:
 
      `...`
 
@@ -88,7 +90,7 @@ Určuje složku, která bude přidána do projektu.
 
      `...`
 
-- Nezahrnujte složky do souboru template *. zip* , ale přidejte složky pomocí `TargetFileName` atributu `ProjectItem` elementu. Příklad:
+- Nezahrnujte složky do souboru template *. zip* , ale přidejte složky pomocí `TargetFileName` atributu `ProjectItem` elementu. Například:
 
      `...`
 
