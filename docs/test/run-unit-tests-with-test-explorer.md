@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2d7dc38f1a25826ba275738cd8e758a2ad5d90e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95e35037ba07dcba1f51da7b47b7fca40a447dfb
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86386638"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850023"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
@@ -34,7 +34,7 @@ Visual Studio obsahuje rozhraní pro testování částí společnosti Microsoft
 
 ## <a name="run-tests-in-test-explorer"></a>Spustit testy v Průzkumníku testů
 
-Při sestavování testovacího projektu se testy zobrazí v Průzkumníku testů. Pokud není Průzkumník testů viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **Windows**a pak zvolte možnost **Průzkumník testů**.
+Při sestavování testovacího projektu se testy zobrazí v Průzkumníku testů. Pokud není Průzkumník testů viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **Windows** a pak zvolte možnost **Průzkumník testů**.
 
 ::: moniker range="vs-2017"
 ![Průzkumník testů jednotek](../test/media/ute_failedpassednotrunsummary.png)
@@ -47,7 +47,7 @@ Při sestavování testovacího projektu se testy zobrazí v Průzkumníku test�
 Při spuštění, zápisu a opětovném spuštění testů se v Průzkumníku testů zobrazí výsledky ve výchozích skupinách **neúspěšných testů**, **Úspěšné testy**, **přeskočené testy** a **nespouštějí se testy**. Můžete změnit způsob, jakým Průzkumník testů seskupí testy.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Při spuštění, zápisu a opětovném spuštění testů zobrazuje Průzkumník testů výsledky ve výchozím seskupení **projektu**, **oboru názvů**a **třídy**. Můžete změnit způsob, jakým Průzkumník testů seskupí testy.
+Při spuštění, zápisu a opětovném spuštění testů zobrazuje Průzkumník testů výsledky ve výchozím seskupení **projektu**, **oboru názvů** a **třídy**. Můžete změnit způsob, jakým Průzkumník testů seskupí testy.
 ::: moniker-end
 
 Na panelu nástrojů **Průzkumníka testů** můžete provádět spoustu práce při hledání, organizování a spouštění testů.
@@ -62,7 +62,7 @@ Na panelu nástrojů **Průzkumníka testů** můžete provádět spoustu práce
 ### <a name="run-tests"></a>Spouštění testů
 
 ::: moniker range="vs-2017"
-Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte jednu z následujících akcí:
+Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte některou z následujících akcí:
 
 - Chcete-li spustit všechny testy v řešení, vyberte možnost **Spustit vše**.
 
@@ -75,7 +75,7 @@ Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sad
 V horní části okna **Průzkumníka testů** je animovaný **řádek Pass/selhat** , protože testy jsou spouštěny. Při uzavírání testovacího běhu se **pruh úspěch/selhání** změní na zelený, pokud všechny testy proběhly úspěšně, nebo pokud dojde k selhání testu na červenou.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte jednu z následujících akcí:
+Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte některou z následujících akcí:
 
 - Chcete-li spustit všechny testy v řešení, vyberte ikonu **Spustit vše** .
 
@@ -144,7 +144,7 @@ Chcete-li změnit způsob, jakým jsou testy uspořádány, zvolte šipku dolů 
 ![Seskupit testy podle kategorie v Průzkumníku testů](../test/media/ute_groupbycategory.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Průzkumník testů umožňuje seskupit testy do hierarchie. Výchozím seskupením hierarchie je **projekt**, **obor názvů**a **Třída**. Chcete-li změnit způsob, jakým jsou testy uspořádány, zvolte tlačítko **Seskupit v** ![ Průzkumníku testu ](../test/media/ute_groupby_btn.png) a vyberte Nová kritéria seskupení.
+Průzkumník testů umožňuje seskupit testy do hierarchie. Výchozím seskupením hierarchie je **projekt**, **obor názvů** a **Třída**. Chcete-li změnit způsob, jakým jsou testy uspořádány, zvolte tlačítko **Seskupit v** ![ Průzkumníku testu ](../test/media/ute_groupby_btn.png) a vyberte Nová kritéria seskupení.
 
 ![Seskupit testy podle kategorie v Průzkumníku testů](../test/media/vs-2019/test-explorer-groupby-162.png)
 
@@ -158,7 +158,7 @@ Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak
 ::: moniker range="vs-2017"
 |Skupina|Popis|
 |-|-----------------|
-|**Doba trvání**|Seskupuje test podle doby spuštění: **rychlá**, **střední**a **pomalá**.|
+|**Doba trvání**|Seskupuje test podle doby spuštění: **rychlá**, **střední** a **pomalá**.|
 |**Zaznamenaný**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Traits**|Seskupí testy podle párů kategorií/hodnot, které definujete. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
 |**Projekt**|Seskupí testy podle názvu projektů.|
@@ -166,7 +166,7 @@ Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak
 ::: moniker range=">=vs-2019"
 |Skupina|Popis|
 |-|-----------------|
-|**Doba trvání**|Seskupí testy podle doby spuštění: **rychlá**, **střední**a **pomalá**.|
+|**Doba trvání**|Seskupí testy podle doby spuštění: **rychlá**, **střední** a **pomalá**.|
 |**Stav**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné** .|
 |**Cílová architektura** | Seskupí testy podle cíle v rámci svých projektů. |
 |**Obor názvů**|Seskupí testy podle obsahujícího oboru názvů.|
@@ -203,7 +203,7 @@ Můžete vytvořit a uložit seznam testů, které chcete spustit nebo zobrazit 
 
 **Chcete-li vytvořit seznam stop**, vyberte jeden nebo více testů v Průzkumníku testů. V nabídce kliknutím pravým tlačítkem myši vyberte možnost **Přidat do seznamu**  >  **NewPlaylist**. Uložte soubor s názvem a umístěním, které zadáte v dialogovém okně **vytvořit nový seznam** testů.
 
-**Chcete-li přidat testy do seznamu stop**, vyberte jeden nebo více testů v Průzkumníku testů. V nabídce klepněte pravým tlačítkem myši na položku **Přidat do seznamu stop**a zvolte seznam testů, do kterého chcete přidat testy.
+**Chcete-li přidat testy do seznamu stop**, vyberte jeden nebo více testů v Průzkumníku testů. V nabídce klepněte pravým tlačítkem myši na položku **Přidat do seznamu stop** a zvolte seznam testů, do kterého chcete přidat testy.
 
 **Chcete-li otevřít seznam stop**, zvolte možnost **test** > **seznamu** testů v nabídce aplikace Visual Studio a buď zvolte ze seznamu naposledy použitých seznamů stop, nebo zvolte možnost **otevřít seznam stop** a zadejte název a umístění seznamu skladeb.
 
@@ -220,9 +220,9 @@ Seznam se otevře na nové kartě Průzkumník testů. Tento seznam je možné p
 
 ![Seznam testů se otevře na samostatné kartě Průzkumníka testů.](../test/media/vs-2019/test-explorer-playlist-tab-16-7.png)
 
-**Chcete-li vytvořit seznam stop**, vyberte jeden nebo více testů v Průzkumníku testů. Klikněte pravým tlačítkem a vyberte **Přidat do seznamu**testů  >  **Nový seznam**testů.
+**Chcete-li vytvořit seznam stop**, vyberte jeden nebo více testů v Průzkumníku testů. Klikněte pravým tlačítkem a vyberte **Přidat do seznamu** testů  >  **Nový seznam** testů.
 
-**Chcete-li otevřít seznam**testů, zvolte ikonu seznamu stop na panelu nástrojů sady Visual Studio a v nabídce vyberte dříve uložený soubor seznamu testů.
+**Chcete-li otevřít seznam** testů, zvolte ikonu seznamu stop na panelu nástrojů sady Visual Studio a v nabídce vyberte dříve uložený soubor seznamu testů.
 
 Pokud **chcete upravit seznam stop**, můžete kliknout pravým tlačítkem na libovolný test a pomocí možností nabídky ho přidat nebo odebrat ze seznamu testů.
 
@@ -233,6 +233,21 @@ Počínaje verzí Visual Studio 2019 verze 16,7 můžete zvolit tlačítko **Upr
 Můžete také zaškrtnout nebo zrušit kontrolu polí nadřazených skupin v hierarchii. Tato akce vytvoří dynamický seznam testů, který vždy aktualizuje seznam stop na základě testů, které jsou v dané skupině. Například pokud umístíte značku zaškrtnutí vedle třídy, všechny testy přidané z této třídy se stávají součástí tohoto seznamu testů. Pokud odstraníte test z této třídy, je odebrán ze seznamu. Další informace o pravidlech najdete tak, že seznam stop uložíte na panelu nástrojů na tlačítko Uložit a otevřete soubor *. playlist* , který je vytvořený na disku. Tento soubor obsahuje seznam všech pravidel a jednotlivých testů, které tvoří seznam testů.
 
 ![Soubor XML se seznamem testů](../test/media/vs-2019/test-explorer-playlist-xml-file.png)
+
+Chcete-li vytvořit seznam stop pro vlastnosti, použijte následující formát. Ujistěte se, že mezi vaším `TestCategory` jménem a příponou je mezera `[Value]` .
+```xml
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+        <Rule Match="Any">
+            <Property Name="Trait" Value="TestCategory [Value]" />
+        </Rule>
+    </Rule>
+  </Rule>
+</Playlist>
+```
+
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"

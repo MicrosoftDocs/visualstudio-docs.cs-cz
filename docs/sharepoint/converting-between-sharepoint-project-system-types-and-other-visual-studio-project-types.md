@@ -1,6 +1,8 @@
 ---
 title: 'Převést: systémové typy projektů SharePointu na/z jiných typů'
 titleSuffix: ''
+description: Převod mezi systémovými typy projektů SharePoint a jinými typy projektů Visual Studio. Podívejte se na seznam, který podrobně popisuje typy, které je možné převést.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 44b3e32114b10eae776f39e4c3d7337bba636f3f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 75f8a2072e81936c4c1c691261e301aae37b0191
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584643"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850478"
 ---
 # <a name="convert-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>Převod mezi systémovými typy projektů SharePoint a jinými typy projektů Visual Studio
   V některých případech může být objekt v systému projektu služby SharePoint a chcete používat funkce odpovídajícího objektu v modelu automatizačních objektů sady Visual Studio nebo v modelu integračních objektů, nebo naopak. V těchto případech můžete použít <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> metodu služby projektu služby SharePoint k převedení objektu na jiný objektový model.

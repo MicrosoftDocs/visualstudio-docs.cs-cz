@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání konkrétní vyhledávací metody | Microsoft Docs'
+description: Získejte instanci entity přidáním vyhledávací metody. Služba BDC volá metodu, když uživatel vybere entitu ve webové části nebo v externím seznamu obchodních dat.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,19 +19,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 403213b6dcd87251df0b24333c759c8de8720afd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a02e88b0168a6aa4b1a69af3ee14150a71e76037
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014818"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849725"
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>Postupy: Přidání konkrétní vyhledávací metody
   Jednu instanci entity můžete vrátit vytvořením *konkrétní vyhledávací* metody. Služba BDC (Business Data Connectivity) spouští konkrétní vyhledávací metodu, když uživatel zvolí entitu ve webové části nebo v externím seznamu obchodních dat. Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
 
 ### <a name="to-create-a-specific-finder-method"></a>Vytvoření konkrétní vyhledávací metody
 
-1. V **Návrháři BDC**vyberte entitu.
+1. V **Návrháři BDC** vyberte entitu.
 
     Informace o tom, jak přidat entitu do **návrháře služby BDC** v aplikaci Visual Studio, naleznete v tématu [How to: Add a entity to a model](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
@@ -65,9 +67,9 @@ ms.locfileid: "86014818"
 
 6. V okně **Podrobnosti metody** vyberte instanci metody metody.
 
-7. V **okně Vlastnosti**nastavte vlastnost **název návratového parametru** na název návratového parametru metody. Další informace o vlastnostech instance metody naleznete v tématu [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
+7. V **okně Vlastnosti** nastavte vlastnost **název návratového parametru** na název návratového parametru metody. Další informace o vlastnostech instance metody naleznete v tématu [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 
-8. V **Průzkumník řešení**otevřete místní nabídku souboru kódu služby, který byl vygenerován pro danou entitu, a pak zvolte možnost **Zobrazit kód**.
+8. V **Průzkumník řešení** otevřete místní nabídku souboru kódu služby, který byl vygenerován pro danou entitu, a pak zvolte možnost **Zobrazit kód**.
 
     V editoru kódu se otevře soubor kódu entity Service. Další informace o souboru kódu entity Service najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
 

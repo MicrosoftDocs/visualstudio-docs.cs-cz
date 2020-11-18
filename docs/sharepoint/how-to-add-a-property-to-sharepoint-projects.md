@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání vlastnosti do projektů služby SharePoint | Microsoft Docs'
+description: K přidání vlastnosti do projektu služby SharePoint použijte rozšíření projektu. Vlastnost se zobrazí v okno Vlastnosti, když vyberete projekt v Průzkumník řešení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb72b0546b504e2df1a7e93ea9d4def350143d1d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 62766b704d140805a3b76dbc3c00acaf6257f5e5
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015919"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850153"
 ---
 # <a name="how-to-add-a-property-to-sharepoint-projects"></a>Postupy: Přidání vlastnosti do projektů služby SharePoint
   K přidání vlastnosti do libovolného projektu služby SharePoint lze použít rozšíření projektu. Vlastnost se zobrazí v okně **vlastnosti** , když je projekt vybrán v **Průzkumník řešení**.

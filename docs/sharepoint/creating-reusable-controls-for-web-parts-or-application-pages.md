@@ -1,6 +1,8 @@
 ---
 title: Vytváření opakovaně použitelných ovládacích prvků pro Webové části nebo stránky aplikace | Microsoft Docs
 titleSuffix: ''
+description: Vytváření vlastních, opakovaně použitelných ovládacích prvků (uživatelských ovládacích prvků) v aplikaci Visual Studio, které mohou být spotřebovány stránkami aplikace a webovými částmi, které jsou spuštěny v SharePoint
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d3052b2eab3dc353cdccc991a793c47485037fe8
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2e9d2f3a99e3e43ebf40208bf8dfc01d5ac92dca
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585090"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850595"
 ---
 # <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>Vytváření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací
   V aplikaci Visual Studio můžete vytvořit vlastní, opakovaně použitelné ovládací prvky, které mohou být spotřebovány stránkami aplikace a Webové části, které běží na SharePointu. Tyto ovládací prvky se nazývají uživatelské ovládací prvky. Uživatelský ovládací prvek je druh složeného ovládacího prvku, který funguje podobně jako ASP.NET webová stránka – můžete přidat existující ovládací prvky webového serveru a značky k uživatelskému ovládacímu prvku a definovat vlastnosti a metody pro ovládací prvek. Pak je můžete vložit na ASP.NET webové stránky, kde se chovají jako jednotka.

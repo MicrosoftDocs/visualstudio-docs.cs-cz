@@ -1,6 +1,8 @@
 ---
 title: 'Postupy: Přidání položky místní nabídky do projektů služby SharePoint | Microsoft Docs'
 titleSuffix: ''
+description: Přidat položku místní nabídky do projektu služby SharePoint v aplikaci Visual Studio. Položka nabídky se zobrazí po kliknutí pravým tlačítkem myši na uzel projektu v Průzkumník řešení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ea862eb21aaee75499f3b1bac7007063227150e2
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 074f5b8a3ed31587b86b172ad2da000b7b81e9c3
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585846"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850062"
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>Postupy: Přidání položky místní nabídky do projektů služby SharePoint
   Můžete přidat položku místní nabídky do libovolného projektu služby SharePoint. Položka nabídky se zobrazí, když uživatel klikne pravým tlačítkem myši na uzel projektu v **Průzkumník řešení**.

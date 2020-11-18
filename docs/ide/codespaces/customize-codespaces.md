@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 2223aecd66da721ff1afe9877853c8a00c837611
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 9072676dfc96ffc6286f81785048eca8ec46b0b8
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862227"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850504"
 ---
 # <a name="how-to-customize-a-codespace-preview"></a>Přizpůsobení codespace (Preview)
 
@@ -28,21 +28,21 @@ Windows codespaces už má nainstalovanou spoustu rozhraní a nástrojů, abyste
 
 | Aplikace                                         | Alias cesty | Verze            |
 |---------------------------------------------|------------|--------------------|
-| .NET                                        | Není k dispozici        | 4,8                |
+| .NET                                        | –        | 4.8                |
 | .NET Core Runtime                           | dotnet     | 2,1, 3,1           |
 | Sada .NET Core SDK                               | dotnet     | 2,1, 3.1.3, 3.1.4  |
-| Azure CLI                                   | AZ         | 2,5                |
+| Azure CLI                                   | AZ         | 2.5                |
 | Chocolatey                                  | choco      | 0.10.15            |
 | CMake                                       | cmake      | 3,17               |
 | Git                                         | git        | 2,26               |
 | Microsoft Build                             | nástroji    | 16,7               |
-| Microsoft SQL Server Express edice 2019   | Není k dispozici        | 15,0               |
+| Microsoft SQL Server Express edice 2019   | –        | 15,0               |
 | Expertem                                       | expertem      | 1.8.2              |
 | Node.js                                     | node       | 12,16              |
 | NPM                                         | npm        | 6,14               |
 | Python                                      | python     | 3.7                |
 | Správce balíčků VC                          | vcpkg      | 2020,02            |
-| Sada SDK pro Windows                                 | Není k dispozici        | 10.0.18362         |
+| Sada SDK pro Windows                                 | –        | 10.0.18362         |
 
 Výše uvedený seznam není vyčerpávající a vylučuje mnoho nástrojů, které Visual Studio nainstaluje (například IISExpress). Komponenta může mít také jinou dílčí nebo opravnou verzi než ta, která je uvedena výše.
 
@@ -84,7 +84,7 @@ Codespaces GitHubu podporuje na vlastnostech následující *devcontainer.js* . 
 
 ## <a name="customize-with-devinit"></a>Přizpůsobení pomocí devinit
 
-[devinit](../../devinit/getting-started-with-devinit.md) je nástroj příkazového řádku, který je součástí Windows codespaces, který umožňuje do svého prostředí nainstalovat rozhraní a nástroje. Dá se spustit ručně z příkazového řádku ( `devinit -t require-dotnetcoresdk` ), ale jeho skutečný výkon pochází z vytvoření vlastního [ *.devinit.jsv* ](../../devinit/devinit-json.md) souboru pro jednotnou konfiguraci codespace, kdykoli ho vytvoříte.
+[devinit](../../devinit/getting-started-with-devinit.md) je nástroj příkazového řádku, který je součástí Windows codespaces, který umožňuje do svého prostředí nainstalovat rozhraní a nástroje. Dá se spustit ručně z příkazového řádku ( `devinit run -t require-dotnetcoresdk` ), ale jeho skutečný výkon pochází z vytvoření vlastního [ *.devinit.jsv*](../../devinit/devinit-json.md) souboru pro jednotnou konfiguraci codespace, kdykoli ho vytvoříte.
 
 `devinit` obsahuje sadu nástrojů pro instalaci konkrétních položek, jako je SQL Server a Azure CLI, a také spuštění obecných správců balíčků, jako jsou čokolády, npm a vcpkg. Úplný seznam `devinit` nástrojů najdete v dokumentaci [k dostupným nástrojům](../../devinit/devinit-tool-list.md) .
 
@@ -126,7 +126,7 @@ Když zadáte, spustí se `devinit init` `devinit` v konfiguraci pomocí *devini
 
 Tady je jednoduchý příklad instalace nástroje příkazového řádku .NET Core Entity Framework `dotnet-ef` .
 
-**devcontainer.jsna**
+**devcontainer.json**
 
 Obsah *.devcontainer.js* v souboru v kořenovém adresáři úložiště. 
 

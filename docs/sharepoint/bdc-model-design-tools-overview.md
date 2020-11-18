@@ -1,5 +1,7 @@
 ---
 title: Přehled nástrojů pro návrh modelu služby BDC | Microsoft Docs
+description: Přečtěte si přehled návrhových nástrojů pro použití s modelem připojení obchodních dat (BDC). Seznamte se s návrhářem služby BDC, oknem podrobnosti metody služby BDC a průzkumníkem služby BDC.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7a2531f1cc6352a03acf0b3d6af82c35e47c2743
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6e78b6809d3136c0db1f558d175706dc0ecd75b
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64827956"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850309"
 ---
 # <a name="bdc-model-design-tools-overview"></a>Přehled nástrojů pro návrh modelu služby BDC
   Model služby připojení obchodních dat (BDC) můžete navrhovat pomocí návrháře služby BDC, okna **Podrobnosti metody služby BDC** a **Průzkumníka služby BDC**.
@@ -58,9 +60,9 @@ ms.locfileid: "64827956"
  Rozbalení nebo sbalení uzlů v okně **Podrobnosti metody služby BDC** k definování parametrů, instancí a popisovačů filtru. K definování popisovačů typů použijte **Průzkumníka služby BDC** .
 
 ## <a name="bdc-explorer"></a>Průzkumník modelu BDC
- **Průzkumník služby BDC** zobrazuje prvky, které tvoří model. **Průzkumníka služby BDC**otevřete tak, že na řádku nabídek kliknete na **Zobrazit**  >  **ostatní Windows**v  >  **Průzkumníkovi služby**Windows. Pokud chcete model Procházet, rozbalte uzly v **Průzkumníkovi služby BDC**. Každý uzel představuje prvek v XML souboru modelu.
+ **Průzkumník služby BDC** zobrazuje prvky, které tvoří model. **Průzkumníka služby BDC** otevřete tak, že na řádku nabídek kliknete na **Zobrazit**  >  **ostatní Windows** v  >  **Průzkumníkovi služby** Windows. Pokud chcete model Procházet, rozbalte uzly v **Průzkumníkovi služby BDC**. Každý uzel představuje prvek v XML souboru modelu.
 
- Při výběru uzlů v **Průzkumníkovi služby BDC**se v okně **vlastnosti** zobrazí vlastnosti každého uzlu, který vyberete. Mnohé z těchto vlastností odpovídají atributům v souboru modelu. Model můžete vyhledat pomocí vyhledávacího pole v horní části **Průzkumníka služby BDC**.
+ Při výběru uzlů v **Průzkumníkovi služby BDC** se v okně **vlastnosti** zobrazí vlastnosti každého uzlu, který vyberete. Mnohé z těchto vlastností odpovídají atributům v souboru modelu. Model můžete vyhledat pomocí vyhledávacího pole v horní části **Průzkumníka služby BDC**.
 
 > [!NOTE]
 > **Průzkumník služby BDC** nezobrazuje identifikátory, vlastní vlastnosti, lokalizované řetězce, skupiny přidružení, akce, popisovače filtrů, seznamy řízení akcí a výchozí hodnoty parametrů.

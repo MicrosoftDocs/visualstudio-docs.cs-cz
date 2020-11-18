@@ -1,5 +1,7 @@
 ---
 title: Vytváření stránek aplikace pro SharePoint | Microsoft Docs
+description: Vytvořte stránky aplikace pro službu SharePoint. Stránka aplikace je webová stránka ASP.NET, která je navržena pro použití na webu služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 47f403f4eec6ec66563ae88bec226e073f625716
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1228ef551235fd616803d6e05057ee50f0ea7ec4
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72981101"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850439"
 ---
 # <a name="create-application-pages-for-sharepoint"></a>Vytváření stránek aplikací pro službu SharePoint
   *Stránka aplikace* je webová stránka ASP.NET, která je navržena pro použití na webu služby SharePoint. Stránky aplikace jsou specializovaného typu stránky ASP.NET. Hlavním rozdílem mezi stránkou aplikace a standardní stránkou ASP.NET je, že stránka aplikace obsahuje obsah, který je sloučen se stránkou předlohy služby SharePoint. Stránka předlohy umožňuje stránkám aplikace sdílet stejný vzhled a chování jako ostatní stránky na webu.

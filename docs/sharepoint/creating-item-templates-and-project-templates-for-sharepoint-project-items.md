@@ -1,5 +1,7 @@
 ---
 title: Šablony položek/šablony projektů pro položky projektu služby SharePoint
+description: Vytvořte šablony položek a šablony projektů pro položky projektu služby SharePoint. Vytvoří průvodce pro šablony položek a šablony projektů.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ec97eb2dfab7ab92c1e324c89fd044c1a50c2173
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 59710eb4651f363d669dc27b6190f8d224d9917f
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585612"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850634"
 ---
 # <a name="create-item-templates-and-project-templates-for-sharepoint-project-items"></a>Vytváření šablon položek a šablon projektů pro položky projektu služby SharePoint
 
@@ -75,7 +77,7 @@ Například Visual Studio nezahrnuje šablonu projektu nebo šablonu položky pr
 |-------------------|-----------------|
 |SharePoint – položky projektu|Můžete zahrnout jeden nebo více souborů. spdata, které definují typy položek projektu služby SharePoint. Každý soubor *. spdata* musí mít odpovídající <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> implementaci v sestavení rozšíření, které je součástí balíčku VSIX se šablonou projektu. Další informace naleznete v tématu [Create Item Templates](#create-item-templates).<br /><br /> Projekty SharePoint obvykle obsahují alespoň jednu položku SharePointového projektu. To však není vyžadováno.|
 |*\<featureName>. funkce*|Tento soubor definuje funkci SharePointu, která se používá k seskupení několika položek projektu pro nasazení. Při použití návrháře funkcí k přizpůsobení funkce v projektu aplikace Visual Studio ukládá data o funkci do tohoto souboru. Pokud chcete seskupit položky projektu do různých funkcí, můžete zahrnout více souborů *. Features* .<br /><br /> Když vytváříte vlastní šablonu projektu služby SharePoint, doporučujeme zahrnout do každého souboru *. Feature* pouze minimální požadovaný obsah a nakonfigurovat funkce pomocí rozhraní API v <xref:Microsoft.VisualStudio.SharePoint.Features> oboru názvů v rozšíření, které je přidruženo k šabloně projektu. Pokud to uděláte, šablona projektu je chráněna před budoucími změnami struktury souboru *. Feature* . Příklad, jak vytvořit soubor *. Feature* pouze s minimálním požadovaným obsahem, najdete v tématu [Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md).<br /><br /> Chcete-li upravit soubor *. Features* přímo, můžete ověřit obsah pomocí schématu v *% Program Files (x86)% \ Microsoft Visual Studio 11.0 \ Xml\Schemas\FeatureModelSchema.xsd*.|
-|*\<featureName>.Template.xml*|Tento soubor poskytuje základ pro soubor manifestu funkce (*Feature.xml*) pro každou funkci, která je vygenerována z projektu. Můžete přidat obsah do tohoto souboru, pokud chcete určit chování, které není určeno pro změny uživatelů typu projektu. Další informace najdete v tématu [stavební blok: funkce](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)) a [Feature.xml](/sharepoint/dev/schema/feature-xml-files) soubory.<br /><br /> Při sestavování balíčku řešení z projektu Visual Studio sloučí obsah každé dvojice souborů * \<featureName> . feature* a * \<featureName>.Template.xml* souborů do souboru manifestu funkce. Další informace o sestavování balíčků řešení naleznete v tématu [How to: Create a web Solution Package using a Tasks MSBuild](../sharepoint/how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md).|
+|*\<featureName>.Template.xml*|Tento soubor poskytuje základ pro soubor manifestu funkce (*Feature.xml*) pro každou funkci, která je vygenerována z projektu. Můžete přidat obsah do tohoto souboru, pokud chcete určit chování, které není určeno pro změny uživatelů typu projektu. Další informace najdete v tématu [stavební blok: funkce](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)) a [Feature.xml](/sharepoint/dev/schema/feature-xml-files) soubory.<br /><br /> Při sestavování balíčku řešení z projektu Visual Studio sloučí obsah každé dvojice souborů *\<featureName> . feature* a *\<featureName>.Template.xml* souborů do souboru manifestu funkce. Další informace o sestavování balíčků řešení naleznete v tématu [How to: Create a web Solution Package using a Tasks MSBuild](../sharepoint/how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md).|
 
 ## <a name="create-wizards-for-item-templates-and-project-templates"></a>Vytvoření průvodců pro šablony položek a šablony projektů
  Po definování typu položky projektu SharePoint a jeho přidružení k položce nebo šabloně projektu můžete také vytvořit průvodce. Průvodce se zobrazí, když vývojář použije šablonu položky k přidání položky SharePointového projektu do projektu, nebo když vývojář používá šablonu projektu k vytvoření nového projektu, který obsahuje položku SharePointového projektu. Průvodce lze použít ke shromažďování informací od vývojářů a k inicializaci nové položky projektu služby SharePoint.

@@ -1,5 +1,7 @@
 ---
 title: Sestavování a ladění řešení služby SharePoint | Microsoft Docs
+description: Naučte se sestavovat a ladit řešení služby SharePoint a porozumět tomu, jak se liší od vytváření a ladění jiných typů projektů v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e4b34df23c8cb612d72fed108a6c0aecbf57875c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6801f6b60d2ef522385ecdf290d0a1913bd6df2
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016358"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850218"
 ---
 # <a name="build-and-debug-sharepoint-solutions"></a>Sestavování a ladění řešení služby SharePoint
   Obecně platí, že sestavování a ladění řešení služby SharePoint je stejné jako sestavení a ladění jiných typů projektů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Témata v této části vysvětlují rozdíly, které existují.
@@ -28,10 +30,10 @@ ms.locfileid: "86016358"
 
 |Položka sestavení|Výstupní složka|
 |----------------|-------------------|
-|Sestavení, databáze programu (*PDB*) a soubory *. wsp* .|* \<ProjectName> \bin\debug* nebo * \<ProjectName> \bin\Release*|
-|Soubory položek projektu služby SharePoint.|* \<ProjectName> \pkg\debug* nebo * \<ProjectName> \pkg\release*|
-|Sestavujte mezilehlé soubory.|* \<ProjectName> \obj\debug* nebo * \<ProjectName> \obj\release*|
-|Balíčky zprostředkujících souborů.|* \<ProjectName> \pkgobj\debug* nebo * \<ProjectName> \pkgobj\release*|
+|Sestavení, databáze programu (*PDB*) a soubory *. wsp* .|*\<ProjectName> \bin\debug* nebo *\<ProjectName> \bin\Release*|
+|Soubory položek projektu služby SharePoint.|*\<ProjectName> \pkg\debug* nebo *\<ProjectName> \pkg\release*|
+|Sestavujte mezilehlé soubory.|*\<ProjectName> \obj\debug* nebo *\<ProjectName> \obj\release*|
+|Balíčky zprostředkujících souborů.|*\<ProjectName> \pkgobj\debug* nebo *\<ProjectName> \pkgobj\release*|
 
 ## <a name="build-sharepoint-solutions"></a>Sestavení řešení pro SharePoint
  Aby bylo možné sestavovat řešení služby SharePoint, musí mít vývojový počítač nainstalovanou správnou verzi SharePoint serveru. V opačném případě sestavování řešení služby SharePoint je stejné jako vytváření dalších typů projektů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace najdete v tématu [Postupy: sestavení řešení služby SharePoint](../sharepoint/how-to-build-sharepoint-solutions.md).

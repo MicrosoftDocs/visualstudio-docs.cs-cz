@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vytvoření příkazu SharePointu | Microsoft Docs'
+description: Naučte se vytvořit vlastní příkaz SharePointu, který bude volat rozhraní API modelu objektu serveru v rozšíření nástrojů služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 15ea7ff86e90bf7a474f9d64c30a9803e3e20bf5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41e4ab0fd70f4993d148cd5c67cb816bdc92e77a
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016221"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850699"
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>Postupy: vytvoření příkazu SharePoint
   Pokud chcete použít objektový model serveru v rozšíření nástrojů služby SharePoint, je nutné vytvořit vlastní *příkaz SharePointu* pro volání rozhraní API. Příkaz SharePoint definujete v sestavení, které lze přímo volat do objektového modelu serveru.
@@ -53,7 +55,7 @@ ms.locfileid: "86016221"
 
     - Druhý parametr a návratová hodnota musí být typ, který může být serializován pomocí Windows Communication Foundation (WCF). Další informace najdete v tématu [typy podporované serializátorem kontraktu dat](/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer) a [pomocí třídy XmlSerializer](/dotnet/framework/wcf/feature-details/using-the-xmlserializer-class).
 
-    - Metoda může mít libovolnou viditelnost (**Public**, **internal**nebo **Private**) a může být statická nebo nestatická.
+    - Metoda může mít libovolnou viditelnost (**Public**, **internal** nebo **Private**) a může být statická nebo nestatická.
 
 4. Použijte <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> pro metodu. Tento atribut určuje jedinečný identifikátor příkazu. Tento identifikátor nemusí odpovídat názvu metody.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Vytvoření rozšíření projektu služby SharePoint | Microsoft Docs'
+description: Zjistěte, jak vytvořit rozšíření projektu, abyste mohli přidat funkce do libovolného projektu SharePoint, který je otevřen v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 04/28/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 191f5d718064a4e094a2c28e3f584168b20fb3fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad8ee37cba6f6f85e480fc0fe3ccaef081cefae4
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017150"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850660"
 ---
 # <a name="how-to-create-a-sharepoint-project-extension"></a>Postupy: Vytvoření rozšíření projektu služby SharePoint
   Vytvořte rozšíření projektu, pokud chcete přidat funkce do jakéhokoli projektu SharePoint, který je otevřen v aplikaci Visual Studio. Další informace najdete v tématu věnovaném [roztažení systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).

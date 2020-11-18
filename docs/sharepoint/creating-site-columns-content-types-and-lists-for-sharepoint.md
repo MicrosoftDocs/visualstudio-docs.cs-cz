@@ -1,6 +1,8 @@
 ---
 title: Vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint | Microsoft Docs
 titleSuffix: ''
+description: Vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint. Visual Studio poskytuje šablony položek projektu pro tyto typy položek SharePointu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 269be4aaf34e9b6c611a5d79ba38cddba04276bf
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 29d0ebc33bf3df198f3ee9b3f9d80a747087341c
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585103"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850517"
 ---
 # <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>Vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint
   Visual Studio poskytuje šablony položek projektu pro mnoho různých základních položek SharePointu, včetně *seznamů* a *typů obsahu*, které mohou zahrnovat sloupce (nebo *pole*) webu. Noví návrháři pro typy obsahu a seznamy vytvářejí tyto položky snadněji než kdy dřív.

@@ -1,5 +1,7 @@
 ---
 title: Vytváření balíčků řešení služby SharePoint | Microsoft Docs
+description: Vytvářejte a upravujte balíčky pro nasazení pro řešení služby SharePoint pomocí návrháře balíčků. Prozkoumejte nástroje pro balení, možnosti návrháře a strukturu složek.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b250be3b61cdfc524f049f952f0cf7e65f1c295a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bbe458f6ab4de01ffb224ae4e493bf23e3fc6ceb
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74876061"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850556"
 ---
 # <a name="create-sharepoint-solution-packages"></a>Vytváření balíčků řešení služby SharePoint
   Pomocí návrháře balíčků můžete vytvořit a přizpůsobit balíčky pro nasazení. Můžete například přidat položky a funkce projektu služby SharePoint, obnovit server služby IIS, nastavit obory aktivace funkcí a identifikovat závislosti funkcí. Návrhář také vygeneruje manifest, soubor XML, který popisuje jednotlivé balíčky.
@@ -35,7 +37,7 @@ ms.locfileid: "74876061"
 
 |Vlastnost návrháře balíčku|Popis výchozího nastavení|
 |-------------------------------|------------------------------------|
-|Název|Povinná hodnota. Výchozí název balíčku je nastaven na *ProjectName*.|
+|Name|Povinná hodnota. Výchozí název balíčku je nastaven na *ProjectName*.|
 |Resetování serveru|Nepovinný parametr. Tuto možnost vyberte, pokud chcete webový server restartovat po instalaci souboru *. wsp* na sharepointovém serveru.|
 |Typ serveru nasazení|Nepovinný parametr. Představuje typ serveru, který je hostitelem balíčku. Pokud tato hodnota není nastavená, nastaví se jako výchozí na front-endu.<br /><br /> ApplicationServer: popisuje Server, který hostuje služby.<br /><br /> Webfront-end: popisuje Server, který je hostitelem webů.|
 |Položky v řešení|Všechny položky a funkce projektu služby SharePoint, které lze přidat do balíčku.|
@@ -69,7 +71,7 @@ ms.locfileid: "74876061"
 6. Soubory v zprostředkujícím adresáři se přidají do souboru *. wsp* .
 
 ## <a name="package-folder-structure"></a>Struktura složky balíčku
- Po zabalení projektu služby SharePoint se vytvoří soubor *. wsp* pro vás ve složce *SolutionFolder\bin \\ \<BuildConfiguration> * . Například pokud je vaše řešení v *C:\Visual studiu 2013 \ Projects\ListDefinition1* a vaše konfigurace sestavení je nastavená na Release, soubor *. wsp* se nachází v *C:\Visual studiu 2013 \ Projects\ListDefinition1\bin\Release*.
+ Po zabalení projektu služby SharePoint se vytvoří soubor *. wsp* pro vás ve složce *SolutionFolder\bin \\ \<BuildConfiguration>* . Například pokud je vaše řešení v *C:\Visual studiu 2013 \ Projects\ListDefinition1* a vaše konfigurace sestavení je nastavená na Release, soubor *. wsp* se nachází v *C:\Visual studiu 2013 \ Projects\ListDefinition1\bin\Release*.
 
 ## <a name="see-also"></a>Viz také
 - [Postupy: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)

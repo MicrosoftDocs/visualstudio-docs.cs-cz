@@ -1,5 +1,7 @@
 ---
 title: Vytvoření modelu připojení obchodních dat | Microsoft Docs
+description: Vytvořte si model služby připojení obchodních dat (BDC) nebo upravte existující model služby BDC pomocí sady Visual Studio. Každý projekt služby SharePoint může obsahovat pouze jeden model.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9f3da13858507a3ff176aaa0a44051674fd5285f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0486ce6ac53850b1b607f9e7f859806cdc3ef8fe
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64788196"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850465"
 ---
 # <a name="create-a-business-data-connectivity-model"></a>Vytvoření modelu připojení obchodních dat
   Můžete vytvořit model služby připojení obchodních dat (BDC) nebo upravit existující model služby BDC pomocí sady Visual Studio. Každý projekt služby SharePoint může obsahovat pouze jeden model. Další informace najdete v tématu [Integrace obchodních dat do služby SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md).

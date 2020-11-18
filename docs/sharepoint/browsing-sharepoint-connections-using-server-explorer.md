@@ -1,5 +1,7 @@
 ---
 title: Procházení připojení služby SharePoint pomocí Průzkumník serveru | Microsoft Docs
+description: Procházení připojení služby SharePoint pomocí Průzkumník serveru. Přečtěte si o příkazech Průzkumník serveru uzlech a místní nabídce uzlu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 f1_keywords:
@@ -16,18 +18,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: baf580ace98ab14032de1e9a3edf18af2b2cfee8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 79e8d3dbc1dab865b2ab9048cea8d13c478f2a12
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016344"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849828"
 ---
 # <a name="browse-sharepoint-connections-by-using-server-explorer"></a>Procházení připojení služby SharePoint pomocí Průzkumník serveru
   Nyní můžete procházet místní připojení služby SharePoint v **Průzkumník serveru**. Pomocí této techniky můžete procházet komponenty webu služby SharePoint ve vašem systému. Komponenty SharePointového webu, jako jsou definice seznamů a typy obsahu, se zobrazí v uzlu s názvem **připojení služby SharePoint** ve stromovém zobrazení **Průzkumník serveru**. Chcete-li zobrazit **Průzkumník serveru**, na panelu nabídek vyberte možnost **Zobrazit**  >  **Průzkumník serveru**. Kromě zobrazení součástí webu služby SharePoint můžete odebrat položky, zobrazit jejich vlastnosti nebo aktualizovat stromové zobrazení pomocí příkazů v místní nabídce.
 
 > [!IMPORTANT]
-> Chcete-li procházet web služby SharePoint, musíte být správcem kolekce webů služby SharePoint a musíte mít aplikaci Visual Studio spuštěnou jako správce místního počítače. V opačném případě se web zobrazí v **Průzkumník serveru**, ale nemůžete rozbalit jeho uzel. Chcete-li ověřit, zda jste správcem kolekce webů, otevřete web ve webovém prohlížeči, otevřete nabídku **Akce webu** , zvolte možnost **oprávnění webového**serveru a poté na stránce **oprávnění: týmový web** zvolte příkaz **správce kolekce webů** ve skupině **Spravovat** na pásu karet. Pokud jste správcem kolekce webů, zobrazí se v textovém poli vaše jméno. Pokud se příkaz **správce kolekce webů** ve skupině Správa na pásu karet nezobrazí, nejste správcem této kolekce webů a musíte získat příslušná oprávnění od správce lokality.
+> Chcete-li procházet web služby SharePoint, musíte být správcem kolekce webů služby SharePoint a musíte mít aplikaci Visual Studio spuštěnou jako správce místního počítače. V opačném případě se web zobrazí v **Průzkumník serveru**, ale nemůžete rozbalit jeho uzel. Chcete-li ověřit, zda jste správcem kolekce webů, otevřete web ve webovém prohlížeči, otevřete nabídku **Akce webu** , zvolte možnost **oprávnění webového** serveru a poté na stránce **oprávnění: týmový web** zvolte příkaz **správce kolekce webů** ve skupině **Spravovat** na pásu karet. Pokud jste správcem kolekce webů, zobrazí se v textovém poli vaše jméno. Pokud se příkaz **správce kolekce webů** ve skupině Správa na pásu karet nezobrazí, nejste správcem této kolekce webů a musíte získat příslušná oprávnění od správce lokality.
 
 ## <a name="server-explorer-nodes"></a>Uzly Průzkumník serveru
  Všechny komponenty webu služby SharePoint jsou reprezentovány uzlem ve stromovém zobrazení **Průzkumník serveru** v části **připojení služby SharePoint**. Například výchozí weby služby SharePoint zahrnují typ obsahu s názvem diskuze, který představuje typ diskuze, který se zobrazí na stránce **diskuze** na webu služby SharePoint. Typ obsahu diskuze obsahuje několik polí. Chcete-li zobrazit tato pole v **Průzkumník serveru**, rozbalte uzel **ContentTypes** a potom uzel **diskuze** . V rámci tohoto pole jsou k dispozici několik uzlů, například body, předmět diskuze a název.

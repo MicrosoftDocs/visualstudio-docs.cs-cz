@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vytvoření modelu služby BDC | Microsoft Docs'
+description: Vytvořte model služby připojení obchodních dat pomocí šablony sady Visual Studio pro daný druh položky a poté přidejte model do libovolného projektu služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 139da31ced1d32def450a1dc176ca241b0c4677f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f95533a5ad3955ee00829194bc4da1498baace0
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014537"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850673"
 ---
 # <a name="how-to-create-a-bdc-model"></a>Postupy: vytvoření modelu služby BDC
   Můžete vytvořit model služby připojení obchodních dat (BDC) pomocí šablony pro daný druh položky a potom přidat model do libovolného projektu služby SharePoint. Další informace najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md). Další informace o návrhu modelu naleznete v tématu [design a model připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).

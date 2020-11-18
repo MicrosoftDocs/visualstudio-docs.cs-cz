@@ -1,5 +1,7 @@
 ---
 title: Reference k rozhraní API (rozšíření nástrojů SharePoint) | Microsoft Docs
+description: Přečtěte si referenční dokumentaci k rozhraní API pro rozšíření nástrojů SharePoint v sadě Visual Studio. Podívejte se na seznam souvisejících oborů názvů, jako je Microsoft. VisualStudio. SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 37639068b74b5d99864871355a8b9ef36906f6cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4599a2c305558f2ef551d19abac210bdf05269f3
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62987988"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850387"
 ---
 # <a name="api-reference-sharepoint-tools-extensibility"></a>Reference k rozhraní API (rozšíření nástrojů služby SharePoint)
   Tato část obsahuje referenční dokumentaci rozhraní API pro rozšíření nástrojů SharePoint v sadě Visual Studio.

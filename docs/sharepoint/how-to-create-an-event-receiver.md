@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vytvoření přijímače událostí | Microsoft Docs'
+description: Vytvořte přijímač událostí, abyste mohli reagovat na to, kdy uživatel komunikuje s položkami SharePointu, jako jsou seznamy nebo položky seznamu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,15 +19,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 26d8c9f433fad051716b6ebd37e3d1f3b3f9f4eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e94bd1594f94f43c82eed5033d6ec2660905c18
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016927"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849880"
 ---
 # <a name="how-to-create-an-event-receiver"></a>Postupy: vytvoření přijímače událostí
-  Vytvořením *přijímačů událostí*můžete reagovat, když uživatel komunikuje s položkami SharePointu, jako jsou seznamy nebo položky seznamu. Například kód v přijímači událostí může být aktivován, když uživatel změní kalendář nebo odstraní název ze seznamu kontaktů. V tomto tématu se dozvíte, jak přidat přijímač událostí do instance seznamu.
+  Vytvořením *přijímačů událostí* můžete reagovat, když uživatel komunikuje s položkami SharePointu, jako jsou seznamy nebo položky seznamu. Například kód v přijímači událostí může být aktivován, když uživatel změní kalendář nebo odstraní název ze seznamu kontaktů. V tomto tématu se dozvíte, jak přidat přijímač událostí do instance seznamu.
 
  Chcete-li provést tento postup, musíte mít nainstalované [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a podporované edice Windows a SharePointu. Vzhledem k tomu, že tento příklad vyžaduje projekt služby SharePoint, musíte také provést postup v tématu [Návod: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md).
 
@@ -36,13 +38,13 @@ ms.locfileid: "86016927"
 
 1. Otevřete projekt, který jste vytvořili v [návodu: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md).
 
-2. V **Průzkumník řešení**vyberte uzel projektu služby SharePoint, který je pojmenován **Clinic**.
+2. V **Průzkumník řešení** vyberte uzel projektu služby SharePoint, který je pojmenován **Clinic**.
 
 3. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 
-4. V části **Visual C#** nebo **Visual Basic**rozbalte uzel **SharePoint** a pak zvolte položku **2010** .
+4. V části **Visual C#** nebo **Visual Basic** rozbalte uzel **SharePoint** a pak zvolte položku **2010** .
 
-5. V podokně **šablony** zvolte položku **přijímač událostí**, pojmenujte ji **TestEventReceiver1**a pak klikněte na tlačítko **OK** .
+5. V podokně **šablony** zvolte položku **přijímač událostí**, pojmenujte ji **TestEventReceiver1** a pak klikněte na tlačítko **OK** .
 
      Zobrazí se **Průvodce přizpůsobením SharePointu** .
 
@@ -50,7 +52,7 @@ ms.locfileid: "86016927"
 
 7. V seznamu **jaká položka by měla být zdroj události?** vyberte **pacienty (Clinic\Patients)**.
 
-8. V seznamu **zpracovat následující události** zaškrtněte políčko vedle **položky bylo přidáno**a pak klikněte na tlačítko **Dokončit** .
+8. V seznamu **zpracovat následující události** zaškrtněte políčko vedle **položky bylo přidáno** a pak klikněte na tlačítko **Dokončit** .
 
      Soubor s kódem pro nového příjemce události obsahuje jedinou metodu s názvem `ItemAdded` . V dalším kroku přidáte kód do této metody tak, aby každý kontakt byl ve výchozím nastavení pojmenován Scott Brown.
 

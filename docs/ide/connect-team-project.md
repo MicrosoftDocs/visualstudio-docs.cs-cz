@@ -1,25 +1,45 @@
 ---
 title: Připojení k projektům v Team Explorer
-ms.date: 07/07/2020
+description: Naučte se používat Team Explorer v aplikaci Visual Studio pro práci se členy týmu pro vývoj a správu projektů.
+ms.date: 11/17/2020
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: ff2e78698bb9180a50a4c2c8014b88dfd07b0b77
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 4e4fdfb26c601ce6b706c1c946ea9afe9b18ecb2
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91829908"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850088"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Připojení k projektům v Team Explorer
 
+::: moniker range="vs-2017"
+
 Použijte okno **Team Explorer** Tool k koordinaci vašeho kódu s ostatními členy týmu pro vývoj projektu a ke správě práce, která je přiřazena vám, vašemu týmu nebo vašim projektům. **Team Explorer** připojuje sadu Visual Studio k úložištím Git a GitHubu, úložištím správy verzí Team Foundation (TFVC) a projektům hostovaným v [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) nebo v místní [Azure DevOps Server](/azure/devops/index-all) (dříve označované jako TFS). Můžete spravovat zdrojový kód, pracovní položky a sestavení.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Můžete použít okno **Team Explorer** nástrojů k koordinaci vašeho kódu s ostatními členy týmu pro vývoj projektu a ke správě práce, která je přiřazena vám, vašemu týmu nebo vašim projektům.
+
+> [!IMPORTANT]
+> S nejnovější verzí sady Visual Studio 2019 [verze 16,8](/visualstudio/releases/2019/release-notes/)je nyní ve výchozím nastavení standardně nastaveno nové prostředí pro řízení verzí Git. Pokud ale dáváte přednost i nadále používat Team Explorer, přejděte do části **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** a potom zaškrtněte políčko **nové uživatelské prostředí Git** . Další informace najdete na stránce věnované [prostředí Git](git-with-visual-studio.md) na stránce sady Visual Studio.
+
+**Team Explorer** připojuje sadu Visual Studio k úložištím Git a GitHubu, úložištím správy verzí Team Foundation (TFVC) a projektům hostovaným v [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) nebo v místní [Azure DevOps Server](/azure/devops/index-all) (dříve označované jako TFS). Můžete spravovat zdrojový kód, pracovní položky a sestavení.
+
+::: moniker-end
 
 ![Team Explorer domovskou stránku v aplikaci Visual Studio](media/team-explorer/team-explorer.png)
 
+::: moniker range="vs-2017"
+
 > [!TIP]
 > Pokud otevřete Visual Studio a **Team Explorer** se nezobrazí, otevřete ho tak, že v řádku nabídek kliknete na **Zobrazit**  >  **Team Explorer** nebo stisknete **CTRL** + **&#92;**, **CTRL** + **M**.
+
+::: moniker-end
 
 ## <a name="connect-to-a-project-or-repository"></a>Připojení k projektu nebo úložišti
 
@@ -42,6 +62,7 @@ Připojení k projektu:
 
 ## <a name="see-also"></a>Viz také
 
+- [Nové prostředí Git v aplikaci Visual Studio](git-with-visual-studio.md)
 - [Kurz: otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo.md)
 - [Referenční dokumentace k Team Exploreru](reference/team-explorer-reference.md)
 - [Připojení k projektu (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)

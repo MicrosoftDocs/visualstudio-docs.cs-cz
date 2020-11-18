@@ -1,6 +1,8 @@
 ---
 title: Přidat položku místní nabídky do vlastního typu položky projektu služby SharePoint
 titleSuffix: ''
+description: Informace o tom, jak přidat položku místní nabídky do vlastního typu položky projektu služby SharePoint. Položka nabídky se zobrazí po kliknutí pravým tlačítkem myši na položku projektu v Průzkumník řešení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 39de735c09c97541684628c8e4140aa42d119500
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2916b806c6e149a9c0cbe2495a7edabcfc883e7e
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585872"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850075"
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type"></a>Postupy: Přidání položky místní nabídky do vlastního typu položky projektu služby SharePoint
   Při definování vlastního typu položky projektu služby SharePoint lze přidat položku místní nabídky do položky projektu. Položka nabídky se zobrazí, když uživatel klikne pravým tlačítkem myši na položku projektu v **Průzkumník řešení**.

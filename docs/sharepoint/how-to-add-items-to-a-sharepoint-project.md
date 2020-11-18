@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání položek do projektu služby SharePoint | Microsoft Docs'
+description: Po otevření nebo vytvoření řešení služby SharePoint přidejte nové nebo existující položky do projektu služby SharePoint v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1f7a36591d94e846a0024bce8c5d0b618479e647
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4471f6a593e9349f32e4837da15df2e3e952d227
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014695"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850725"
 ---
 # <a name="how-to-add-items-to-a-sharepoint-project"></a>Postupy: Přidání položek do projektu služby SharePoint
   Řešení služby SharePoint obsahují jeden nebo více projektů, z nichž každý obsahuje více položek projektu služby SharePoint. Po otevření nebo vytvoření řešení služby SharePoint můžete do těchto projektů přidat buď nové nebo existující položky. Například nové projekty pracovního postupu jsou dodávány s výchozím formulářem s názvem default. aspx, ale tento formulář můžete nahradit novým nebo jiným formulářem nebo přidat další formulář ASPX.
@@ -26,7 +28,7 @@ ms.locfileid: "86014695"
 
 1. V aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevřete nebo vytvořte řešení služby SharePoint.
 
-2. V **Průzkumník řešení**vyberte uzel projektu.
+2. V **Průzkumník řešení** vyberte uzel projektu.
 
 3. Na panelu nabídek vyberte možnost **projekt**  >  **Přidat novou položku** , chcete-li zobrazit dialogové okno **Přidat novou položku** .
 
@@ -40,7 +42,7 @@ ms.locfileid: "86014695"
 
 1. V aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevřete nebo vytvořte řešení služby SharePoint.
 
-2. V **Průzkumník řešení**vyberte uzel projektu.
+2. V **Průzkumník řešení** vyberte uzel projektu.
 
 3. Na panelu nabídek vyberte možnost **projekt**  >  **Přidat existující položku** . zobrazí se dialogové okno **Přidat existující položku** .
 

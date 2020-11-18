@@ -1,6 +1,8 @@
 ---
 title: 'Postupy: Přidání vlastnosti do rozšíření položky projektu služby SharePoint | Microsoft Docs'
 titleSuffix: ''
+description: Použijte rozšíření položky projektu SharePoint pro přidání vlastnosti do jakékoli položky SharePointového projektu, která je již nainstalována v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 752a782bb4aafd977ff10a0b57dd971f7ad6bed4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ae43eb1fd2c20fde6e7b1ad503b87a5d1cb367b1
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584253"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850166"
 ---
 # <a name="how-to-add-a-property-to-a-sharepoint-project-item-extension"></a>Postupy: Přidání vlastnosti do rozšíření položky projektu služby SharePoint
   K přidání vlastnosti do libovolné položky SharePointového projektu, která je již nainstalována v aplikaci Visual Studio, lze použít rozšíření položky projektu. Vlastnost se zobrazí v okně **vlastnosti** , když je vybrána položka projektu v **Průzkumník řešení**.

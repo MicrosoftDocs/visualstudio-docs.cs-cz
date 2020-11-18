@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vytvoření přidružení mezi entitami | Microsoft Docs'
+description: Definování vztahů mezi entitami v modelu služby připojení obchodních dat (BDC) vytvořením přidružení v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 75d4fcc9b99c9c5e2960e152eb5dac1da1343109
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e736e0befe8aaf9a6c090615d0c43bb3f3116dbf
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016938"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849841"
 ---
 # <a name="how-to-create-an-association-between-entities"></a>Postupy: vytvoření přidružení mezi entitami
   Vytvořením přidružení můžete definovat vztahy mezi entitami v modelu služby připojení obchodních dat. Visual Studio generuje metody, které poskytují uživatelům modelu informace o jednotlivých přidruženích. Tyto metody mohou být využívány webovými částmi, seznamy nebo vlastními aplikacemi služby SharePoint pro zobrazení relací dat v uživatelském rozhraní (UI).
@@ -35,7 +37,7 @@ ms.locfileid: "86016938"
 
 ### <a name="to-create-an-association-between-entities"></a>Vytvoření přidružení mezi entitami
 
-1. Na kartě **BusinessDataConnectivity** sady **nástrojů**vyberte položku **přidružení** .
+1. Na kartě **BusinessDataConnectivity** sady **nástrojů** vyberte položku **přidružení** .
 
 2. V Návrháři BDC Zvolte zdrojovou entitu a pak zvolte cílovou entitu.
 

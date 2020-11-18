@@ -1,5 +1,7 @@
 ---
 title: Vytváření definic webů pro SharePoint | Microsoft Docs
+description: Vytvořte definice webu pro SharePoint. Definice lokalit určují vzhled a chování webu služby SharePoint a jeho výchozího obsahu a funkce.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0f1a512218c3c1b7af179cfaba3e231a90941fe0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7585a4b80322afb37e816758fc7074806a443676
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015065"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850569"
 ---
 # <a name="create-site-definitions-for-sharepoint"></a>Vytvořit definice webu pro SharePoint
   Projekt definice webu služby SharePoint v aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] umožňuje vytvořit *definici webu*, která slouží jako základ pro nový web služby SharePoint. Tyto definice nejen určují vzhled a chování webu služby SharePoint, ale také jeho výchozí obsah a funkce. V definici můžete vložit předem konfigurované seznamy, typy obsahu, přijímače událostí, obrázky a další položky. SharePoint obsahuje některé definice webů, například BLOG. Když vytvoříte lokalitu na základě definice webu blogu, lokalita obsahuje seznamy, webové části a další položky, které vyžaduje blogovací Web.
@@ -40,7 +42,7 @@ ms.locfileid: "86015065"
 |*onet.xml*|Určuje konfiguraci nového webu, součástí šablony definice webu a výchozího chování. Tato nastavení můžou zahrnovat atributy, jako jsou povolené typy obsahu, které jsou povolené, výchozí zobrazení seznamu, soubory šablon dokumentů a webové části, které jsou součástí tohoto webu. Ve výchozím nastavení `Modules` obsahuje oddíl soubory, které se mají přidat do sharepointového webu a jak se konfigurují.|
 |*webtemp_ \<SiteDefinitionName> . XML*|Určuje konfigurace definic webů, které se zobrazí v části **Výběr šablony** na **nové stránce webu SharePoint** .|
 
- Ve výchozím nastavení se všechny definice lokalit ukládají do složky * \<drive:> \Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\SiteTemplates* . Každá definice webu má svou vlastní podsložku.
+ Ve výchozím nastavení se všechny definice lokalit ukládají do složky *\<drive:> \Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\SiteTemplates* . Každá definice webu má svou vlastní podsložku.
 
 ## <a name="related-topics"></a>Související témata
 

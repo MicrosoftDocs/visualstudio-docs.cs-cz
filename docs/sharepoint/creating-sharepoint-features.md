@@ -1,5 +1,7 @@
 ---
 title: Vytváření funkcí služby SharePoint | Microsoft Docs
+description: Vytvoření funkce služby SharePoint pro seskupení souvisejících položek projektu služby SharePoint pro snazší nasazení. Přidejte funkce do řešení služby SharePoint. Použijte návrháře funkcí.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8d3f453770dbb389a688db0a9edcc8e97e179858
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06a8fdef9c194e9b0f81768f93b675ade77d39ef
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62952737"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850582"
 ---
 # <a name="create-sharepoint-features"></a>Vytvoření funkcí služby SharePoint
   Funkci služby SharePoint můžete použít k seskupení souvisejících položek projektu služby SharePoint pro snazší nasazení. Pomocí návrháře funkcí služby SharePoint můžete vytvořit funkce, nastavit obory a označit jiné funkce jako závislosti. Návrhář také generuje manifest, což je soubor XML, který popisuje jednotlivé funkce.
@@ -26,9 +28,9 @@ ms.locfileid: "62952737"
 ## <a name="add-features-to-the-sharepoint-solution"></a>Přidání funkcí do řešení služby SharePoint
  Funkci můžete přidat do řešení služby SharePoint pomocí Průzkumník řešení nebo Průzkumníka balíčků. K přidání funkce můžete použít jednu z následujících metod.
 
-- V **Průzkumník řešení**otevřete místní nabídku pro **funkce**a zvolte možnost **Přidat funkci**.
+- V **Průzkumník řešení** otevřete místní nabídku pro **funkce** a zvolte možnost **Přidat funkci**.
 
-- V **Průzkumníku balení**otevřete místní nabídku balíčku a zvolte možnost **Přidat funkci**.
+- V **Průzkumníku balení** otevřete místní nabídku balíčku a zvolte možnost **Přidat funkci**.
 
 ## <a name="using-the-feature-designer"></a>Pomocí návrháře funkcí
  Řešení služby SharePoint může obsahovat jednu nebo více funkcí služby SharePoint, které jsou seskupeny pod uzlem funkce v Průzkumník řešení. Každá funkce má svůj vlastní **Návrhář funkcí** , který můžete použít k přizpůsobení vlastností funkce. Další informace naleznete v tématu [How to: Customize a SharePoint Feature](../sharepoint/how-to-customize-a-sharepoint-feature.md). Pro odlišení dalších funkcí můžete nakonfigurovat vlastnosti funkce, jako je název, popis, verze a obor.
@@ -40,9 +42,9 @@ ms.locfileid: "62952737"
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|Nadpis|Nepovinný parametr. Výchozí *název funkce je nastaven na* *vlastnost*název souboru.|
+|Nadpis|Nepovinný parametr. Výchozí *název funkce je nastaven na* *vlastnost* název souboru.|
 |Popis|Nepovinný parametr. Popis funkce SharePointu|
-|Obor|Povinná hodnota. Pokud se funkce vytvoří pomocí **Průzkumník řešení**, obor je ve výchozím nastavení nastavený na web.<br /><br /> -Farma: Aktivujte funkci pro celou serverovou farmu.<br /><br /> -Site: aktivuje funkci pro všechny weby v kolekci webů.<br /><br /> -Web: aktivuje funkci pro určitý web.<br /><br /> -WebApplication: aktivuje funkci pro všechny weby ve webové aplikaci.|
+|Rozsah|Povinná hodnota. Pokud se funkce vytvoří pomocí **Průzkumník řešení**, obor je ve výchozím nastavení nastavený na web.<br /><br /> -Farma: Aktivujte funkci pro celou serverovou farmu.<br /><br /> -Site: aktivuje funkci pro všechny weby v kolekci webů.<br /><br /> -Web: aktivuje funkci pro určitý web.<br /><br /> -WebApplication: aktivuje funkci pro všechny weby ve webové aplikaci.|
 |Položky v řešení|Všechny položky SharePointu, které lze přidat do funkce.|
 |Položky v této funkci|Položky projektu služby SharePoint, které byly přidány do funkce.|
 

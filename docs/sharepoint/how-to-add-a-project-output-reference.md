@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání odkazu na výstup projektu | Microsoft Docs'
+description: Naučte se přidat odkaz na výstup projektu, abyste mohli v projektech Silverlight nasadit sestavení projektu, která nepatří do SharePointu (nebo soubory. XAP).
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bea0f39ae161d8b695f872cb634c35d0cb205c91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03980eea9d16cde2b6f079e0b33973958fed7a7f
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016757"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849867"
 ---
 # <a name="how-to-add-a-project-output-reference"></a>Postupy: Přidání odkazu na výstup projektu
   Chcete-li nasadit sestavení projektu jiného typu než SharePoint (nebo soubory. xap v projektech Silverlight) do služby SharePoint, přidejte je jako výstupní odkaz projektu.
@@ -30,7 +32,7 @@ ms.locfileid: "86016757"
 
 1. Načtěte řešení, které obsahuje alespoň jeden projekt služby SharePoint a jeden projekt, který není projektem služby SharePoint.
 
-2. V **Průzkumník řešení**vyberte položku v uzlu projektu služby SharePoint.
+2. V **Průzkumník řešení** vyberte položku v uzlu projektu služby SharePoint.
 
 3. V okně **vlastnosti** zvolte vlastnost **výstupní odkazy projektu** a potom klikněte na tlačítko se třemi tečkami (![Elipsa ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.gif "Elipsa ASP.NET Mobile Designer")) vedle ní.
 

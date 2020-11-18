@@ -1,18 +1,18 @@
 ---
 title: Použití dat pro čas návrhu s Návrhář XAML v aplikaci Visual Studio
 description: Naučte se používat data v jazyce XAML v době návrhu.
-ms.date: 11/10/2020
+ms.date: 11/17/2020
 ms.topic: overview
 author: alihamie
 ms.author: tglee
 manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: bda4af3a3985ec6fc3aae1e991b7f5f622d67965
-ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
+ms.openlocfilehash: 992c97b188535fb39548fca4fd9d02d588a45474
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703998"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850738"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Použití dat pro čas návrhu s Návrhář XAML v aplikaci Visual Studio
 
@@ -179,11 +179,11 @@ Pokud se setkáte s problémem, který není uvedený v této části, informujt
 
 ### <a name="requirements"></a>Požadavky
 
-- Data při návrhu vyžadují Visual Studio 2019 verze [16,7](/visualstudio/releases/2019/release-notes) nebo novější.
+- Data při návrhu vyžadují Visual Studio 2019 verze [16,7](/visualstudio/releases/2019/release-notes-v16.7) nebo novější.
 
-- Podporuje desktopové projekty Windows, které cílí na Windows Presentation Foundation (WPF) pro .NET Core a UWP. Tato funkce je k dispozici také v [kanálu verze Preview](/visualstudio/releases/2019/release-notes-preview) pro .NET Framework. Pokud ho chcete povolit, v nabídce **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** vyberte **Nový Návrhář XAML WPF pro .NET Framework** a restartujte Visual Studio.
+- Podporuje desktopové projekty Windows, které cílí na Windows Presentation Foundation (WPF) pro .NET Core a UWP. Tato funkce je také k dispozici pro .NET Framework v [kanálu verze Preview](/visualstudio/releases/2019/release-notes-preview). Pokud ho chcete povolit, v nabídce **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** vyberte **Nový Návrhář XAML WPF pro .NET Framework** a restartujte Visual Studio.
 
-- Počínaje sadou Visual Studio 2019 verze 16,7 Tato funkce funguje se všemi integrovanými ovládacími prvky z rozhraní WPF a UWP. Podpora pro ovládací prvky třetích stran je teď dostupná ve verzi 16,8 Preview.
+- Počínaje sadou Visual Studio 2019 verze 16,7 Tato funkce funguje se všemi integrovanými ovládacími prvky z rozhraní WPF a UWP. Podpora pro ovládací prvky třetích stran je teď dostupná ve [verzi 16,8](/visualstudio/releases/2019/release-notes/).
 
 ### <a name="the-xaml-designer-stopped-working"></a>Návrhář XAML přestal fungovat.
 

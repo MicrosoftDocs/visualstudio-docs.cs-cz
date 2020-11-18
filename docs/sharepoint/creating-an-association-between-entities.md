@@ -1,5 +1,7 @@
 ---
 title: Vytváření přidružení mezi entitami | Microsoft Docs
+description: Vytvořte přidružení mezi entitami v modelu služby připojení obchodních dat (BDC). Seznamte se s metodami přidružení a typy přidružení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -21,18 +23,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ee767ded0687baa09653bd82785b68bee7fa0ebd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a5decf8ad803bea8b1d64c79410c319dbef0be9
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72981095"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850543"
 ---
 # <a name="create-an-association-between-entities"></a>Vytvoření přidružení mezi entitami
   Vytvořením přidružení můžete definovat vztahy mezi entitami v modelu služby připojení obchodních dat. Visual Studio generuje metody, které poskytují uživatelům modelu informace o jednotlivých přidruženích. Tyto metody mohou být využívány webovými částmi, seznamy nebo vlastními aplikacemi služby SharePoint pro zobrazení relací dat v uživatelském rozhraní (UI).
 
 ## <a name="create-an-association"></a>Vytvořit přidružení
- Vytvořte přidružení výběrem ovládacího prvku **přidružení** v sadě **nástrojů sady**Visual Studio, zvolením první entity (označované jako zdrojová entita) a následným zvolením druhé entity (označované jako Cílová entita). Podrobnosti o přidružení můžete definovat v **editoru přidružení**. Další informace najdete v tématu [Postupy: vytvoření přidružení mezi entitami](../sharepoint/how-to-create-an-association-between-entities.md).
+ Vytvořte přidružení výběrem ovládacího prvku **přidružení** v sadě **nástrojů sady** Visual Studio, zvolením první entity (označované jako zdrojová entita) a následným zvolením druhé entity (označované jako Cílová entita). Podrobnosti o přidružení můžete definovat v **editoru přidružení**. Další informace najdete v tématu [Postupy: vytvoření přidružení mezi entitami](../sharepoint/how-to-create-an-association-between-entities.md).
 
 ## <a name="association-methods"></a>Metody asociace
  Aplikace, jako jsou webové části obchodní data služby SharePoint, využívají přidružení voláním metod ve třídě služby entity. Můžete přidat metody do třídy služby entity tím, že je vyberete v **editoru přidružení**.

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Vytvoření stránky aplikace | Microsoft Docs'
+description: Vytvoření webové stránky ASP.NET (označované také jako stránka aplikace) v aplikaci Visual Studio pro jeden nebo více webů SharePointu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 32e6fbb7cece4c3b7513dfc1f5de3aca22f145ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df52ca75ef99fe98158cb5f874e59fe4ee0c47b4
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016942"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849854"
 ---
 # <a name="how-to-create-an-application-page"></a>Postupy: Vytvoření stránky aplikace
   Pro jeden nebo více webů služby SharePoint můžete vytvořit webovou stránku ASP.NET. V SharePointu se tyto stránky nazývají stránky aplikace. Na rozdíl od stránky webu obsahuje stránka aplikace kód, který se spouští za stránkou. Další informace najdete v tématu [Vytvoření stránek aplikace pro službu SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).
@@ -29,7 +31,7 @@ ms.locfileid: "86016942"
 
      Další informace naleznete v tématu [šablony projektů a položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. V **Průzkumník řešení**vyberte uzel projektu.
+2. V **Průzkumník řešení** vyberte uzel projektu.
 
 3. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 

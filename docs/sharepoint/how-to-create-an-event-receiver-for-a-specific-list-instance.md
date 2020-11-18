@@ -1,6 +1,8 @@
 ---
 title: 'Postupy: vytvoření přijímače událostí pro konkrétní instanci seznamu | Microsoft Docs'
 titleSuffix: ''
+description: Vytvoření přijímače událostí pro konkrétní instanci seznamu. Přijímač událostí instance seznamu reaguje na události, ke kterým dochází v jakékoli instanci definice seznamu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c37da8b798c3b6a0fdc093d5c443584f68b4b5cc
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 8bd76f2aafc5d0b3058dcaba68b6f3099f01ff8d
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585833"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849893"
 ---
 # <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>Postupy: vytvoření přijímače událostí pro specifickou instanci seznamu
   Přijímač událostí instance seznamu reaguje na události, ke kterým dochází v jakékoli instanci definice seznamu. I když šablona příjemce událostí nepovoluje cílení na konkrétní instanci seznamu, můžete změnit přijímač událostí, který je vymezen na definici seznamu, aby odpovídal na události v konkrétní instanci seznamu.
@@ -37,7 +39,7 @@ ms.locfileid: "91585833"
 
 3. Na stránce **veškerý obsah webu** klikněte na odkaz **vytvořit** .
 
-4. V dialogovém okně **vytvořit** vyberte typ **oznámení** , pojmenujte oznámení **TestAnnouncements**a pak klikněte na tlačítko **vytvořit** .
+4. V dialogovém okně **vytvořit** vyberte typ **oznámení** , pojmenujte oznámení **TestAnnouncements** a pak klikněte na tlačítko **vytvořit** .
 
 5. V aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvořte projekt přijímače událostí.
 
@@ -50,7 +52,7 @@ ms.locfileid: "91585833"
 
 8. V seznamu **zpracovat následující události** vyberte zaškrtávací políčko a **přidejte položku** a pak klikněte na tlačítko **Dokončit** .
 
-9. V **Průzkumník řešení**v části EventReceiver1 otevřete *Elements.xml*.
+9. V **Průzkumník řešení** v části EventReceiver1 otevřete *Elements.xml*.
 
      Přijímač událostí aktuálně odkazuje na definici seznamu oznámení pomocí následujícího řádku:
 
