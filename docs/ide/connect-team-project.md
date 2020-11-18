@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 4e4fdfb26c601ce6b706c1c946ea9afe9b18ecb2
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 7d920370013b2d624430acbdbe8e38dcc9aab03d
+ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850088"
+ms.locfileid: "94878254"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Připojení k projektům v Team Explorer
 
@@ -32,7 +32,7 @@ Můžete použít okno **Team Explorer** nástrojů k koordinaci vašeho kódu s
 
 ::: moniker-end
 
-![Team Explorer domovskou stránku v aplikaci Visual Studio](media/team-explorer/team-explorer.png)
+![Team Explorer domovskou stránku v aplikaci Visual Studio](media/team-explorer/team-explorer.png "Team Explorer – Domovská stránka v aplikaci Visual Studio.")
 
 ::: moniker range="vs-2017"
 
@@ -45,17 +45,17 @@ Můžete použít okno **Team Explorer** nástrojů k koordinaci vašeho kódu s
 
 Připojte se k projektu nebo úložišti na stránce **připojit** .
 
-![Připojit stránku v Team Explorer](media/team-explorer/connect.png)
+![Připojit stránku v Team Explorer](media/team-explorer/connect.png "Stránka Team Explorer-Connect v aplikaci Visual Studio")
 
 Připojení k projektu:
 
 1. Otevřete stránku **připojit** výběrem ikony **Spravovat připojení** .
 
-   ![Tlačítko Spravovat připojení v Team Explorer](media/team-explorer/manage-connections.png)
+   ![Tlačítko Spravovat připojení v Team Explorer](media/team-explorer/manage-connections.png "Tlačítko Team Explorer-spravovat připojení v aplikaci Visual Studio.")
 
 1. Na stránce **připojit** vyberte možnost **Spravovat připojení**  >  **připojit k projektu**.
 
-   ![Připojit se k projektu v Team Explorer](media/team-explorer/connect-project.png)
+   ![Připojit se k projektu v Team Explorer](media/team-explorer/connect-project.png "Team Explorer – připojení k možnosti projektu v aplikaci Visual Studio.")
 
 > [!TIP]
 > Pokud chcete otevřít projekt z úložiště, přečtěte si téma [otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo.md). Pokud chcete vytvořit nový projekt nebo přidat uživatele do projektu, přečtěte si téma [Vytvoření projektu (Azure DevOps)](/azure/devops/organizations/projects/create-project) a [Přidání uživatelů do projektu nebo týmu (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).

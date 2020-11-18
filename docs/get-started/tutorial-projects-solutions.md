@@ -1,5 +1,6 @@
 ---
 title: Seznámení s projekty a řešení
+description: Přečtěte si o rozdílech mezi projekty a řešeními a jejich používáním v aplikaci Visual Studio.
 ms.date: 11/17/2020
 ms.technology: vs-ide-general
 ms.custom: get-started
@@ -9,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf99c191ef6cfe32ec8ccc9b2cfd57f761941be7
-ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
+ms.openlocfilehash: 026e046e4bcc2291bd27907f10e6ac6a50729601
+ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94704050"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94878267"
 ---
 # <a name="learn-about-projects-and-solutions"></a>Další informace o projektech a řešeních
 
@@ -55,7 +56,7 @@ Náš průzkum začneme vytvořením prázdného řešení. Až se dostanete k a
 
 1. V levém podokně rozbalte položku **jiné typy projektů** a pak zvolte možnost **řešení sady Visual Studio**. V prostředním podokně vyberte šablonu **prázdná řešení** . Pojmenujte své řešení **QuickSolution** a pak klikněte na tlačítko **OK** .
 
-   ![Prázdná šablona řešení v aplikaci Visual Studio 2017](media/tutorial-projects-new-solution.png)
+   ![Prázdná šablona řešení v aplikaci Visual Studio 2017](media/tutorial-projects-new-solution.png "Prázdná šablona řešení v aplikaci Visual Studio 2017.")
 
    **Úvodní stránka** se zavře a na pravé straně okna sady Visual Studio se zobrazí řešení **Průzkumník řešení** . K procházení obsahu svých projektů pravděpodobně použijete **Průzkumník řešení** často.
 
@@ -69,7 +70,7 @@ Náš průzkum začneme vytvořením prázdného řešení. Až se dostanete k a
 
 3. Na stránce **vytvořit nový projekt** zadejte do vyhledávacího pole **prázdné řešení** , vyberte šablonu **prázdného řešení** a klikněte na tlačítko **Další**.
 
-   ![Prázdná šablona řešení v aplikaci Visual Studio 2019](media/vs-2019/tutorial-projects-blank-solution-template.png)
+   ![Prázdná šablona řešení v aplikaci Visual Studio 2019](media/vs-2019/tutorial-projects-blank-solution-template.png "Prázdná šablona řešení v aplikaci Visual Studio 2019.")
 
     > [!TIP]
     > Pokud máte nainstalované několik úloh, **prázdná šablona řešení** se nemusí zobrazit v horní části seznamu výsledků hledání. Zkuste posun k **ostatním výsledkům na základě vašeho oddílu hledání** v seznamu. Mělo by se tady zobrazit.
@@ -97,7 +98,7 @@ Nyní do řešení přidáme náš první projekt. Začneme s prázdným projekt
    > [!NOTE]
    > Pokud nevidíte v levém podokně dialogového okna **Visual C#** , je nutné nainstalovat úlohu aplikace **.NET Desktop Development** sady Visual Studio. Visual Studio používá instalaci založenou na úlohách k instalaci jenom těch komponent, které potřebujete pro typ vývoje. Snadný způsob, jak nainstalovat novou úlohu, je kliknout na odkaz **otevřít instalační program pro Visual Studio** v levém dolním rohu dialogového okna **Přidat nový projekt** . Po spuštění Instalační program pro Visual Studio zvolte úlohu **vývoj desktopových** aplikací pro .NET a pak klikněte na tlačítko **Upravit** .
    >
-   > ![Otevřít Instalační program pro Visual Studio odkaz](media/tutorial-projects-open-installer.png)
+   > ![Otevřít Instalační program pro Visual Studio odkaz](media/tutorial-projects-open-installer.png "Odkaz otevřít Instalační program pro Visual Studio v dialogovém okně Přidat nový projekt v aplikaci Visual Studio 2017.")
 
 ::: moniker-end
 
@@ -116,9 +117,11 @@ Nyní do řešení přidáme náš první projekt. Začneme s prázdným projekt
    Projekt s názvem QuickDate se zobrazí pod řešením v **Průzkumník řešení**. V současné době obsahuje jeden soubor s názvem *App.config*.
 
    > [!NOTE]
-   > Pokud nevidíte **prázdnou šablonu projektu (.NET Framework)** , je nutné nainstalovat úlohu aplikace **.NET Desktop Development** sady Visual Studio. Visual Studio používá instalaci založenou na úlohách k instalaci jenom těch komponent, které potřebujete pro typ vývoje. Snadný způsob, jak nainstalovat novou úlohu při vytváření nového projektu, je odkaz pro **instalaci dalších nástrojů a funkcí** pod textem, který **nehledá, co hledáte?**. Po spuštění Instalační program pro Visual Studio zvolte úlohu **vývoj desktopových** aplikací pro .NET a pak klikněte na tlačítko **Upravit** .
+   > Pokud nevidíte **prázdnou šablonu projektu (.NET Framework)** , je nutné nainstalovat úlohu aplikace **.NET Desktop Development** sady Visual Studio. Visual Studio používá instalaci založenou na úlohách k instalaci jenom těch komponent, které potřebujete pro typ vývoje.
    >
-   > ![Otevřít Instalační program pro Visual Studio odkaz](media/vs-2019/tutorial-projects-open-installer.png)
+   >Snadný způsob, jak nainstalovat novou úlohu při vytváření nového projektu, je odkaz pro **instalaci dalších nástrojů a funkcí** pod textem, který **nehledá, co hledáte?**. Po spuštění Instalační program pro Visual Studio zvolte úlohu **vývoj desktopových** aplikací pro .NET a pak klikněte na tlačítko **Upravit** .
+   >
+   > ![Otevřít Instalační program pro Visual Studio odkaz](media/vs-2019/tutorial-projects-open-installer.png "Odkaz otevřít Instalační program pro Visual Studio v dialogovém okně vytvořit nový projekt v aplikaci Visual Studio.")
 
 ::: moniker-end
 
@@ -174,7 +177,7 @@ Pojďme do našeho řešení přidat projekt testování částí. Tentokrát za
 
    Druhý projekt je přidán do **Průzkumník řešení** a v editoru se otevře soubor s názvem *UnitTest1.cs* .
 
-   ![Visual Studio Průzkumník řešení se dvěma projekty](media/tutorial-projects-solution-explorer.png)
+   ![Visual Studio Průzkumník řešení se dvěma projekty](media/tutorial-projects-solution-explorer.png "Průzkumník řešení se dvěma projekty v aplikaci Visual Studio 2017.")
 
 ::: moniker-end
 
@@ -188,7 +191,7 @@ Pojďme do našeho řešení přidat projekt testování částí. Tentokrát za
 
    Druhý projekt je přidán do **Průzkumník řešení** a v editoru se otevře soubor s názvem *UnitTest1.cs* .
 
-   ![Visual Studio Průzkumník řešení se dvěma projekty](media/vs-2019/tutorial-projects-solution-explorer.png)
+   ![Visual Studio Průzkumník řešení se dvěma projekty](media/vs-2019/tutorial-projects-solution-explorer.png "Průzkumník řešení se dvěma projekty v aplikaci Visual Studio.")
 
 ::: moniker-end
 
@@ -204,7 +207,7 @@ Použijeme nový projekt testování částí k otestování naší metody v pro
 
    Přidá se odkaz na projekt **QuickDate** .
 
-   ![Visual Studio 2019 Průzkumník řešení zobrazení odkazu na projekt](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
+   ![Visual Studio 2019 Průzkumník řešení zobrazení odkazu na projekt](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Průzkumník řešení zobrazení odkazu na projekt v aplikaci Visual Studio.")
 
 ## <a name="add-test-code"></a>Přidat testovací kód
 
@@ -240,7 +243,7 @@ Použijeme nový projekt testování částí k otestování naší metody v pro
 
    Soubor kódu by měl vypadat takto:
 
-   ![CSharp kód](media/tutorial-projects-cs-code.png)
+   ![CSharp kód](media/tutorial-projects-cs-code.png "Fragment kódu z části Přidat testovací kód v tomto článku.")
 
 ## <a name="project-properties"></a>Vlastnosti projektu
 
@@ -250,7 +253,7 @@ Použijeme nový projekt testování částí k otestování naší metody v pro
 
    *Stránky vlastností* projektu otevřené na kartě **aplikace** Stránky vlastností obsahují různá nastavení projektu. Všimněte si, že název sestavení projektu **QuickTest** je skutečně "QuickTest". Pokud jste ho chtěli změnit, je to místo, kde to uděláte. Při sestavování testovacího projektu se pak název výsledného binárního souboru změní z *QuickTest.dll* na cokoliv, co jste zvolili.
 
-   ![Vlastnosti projektu](media/tutorial-projects-netcore-properties.png)
+   ![Vlastnosti projektu](media/tutorial-projects-netcore-properties.png "Dialogové okno Vlastnosti projektu v aplikaci Visual Studio.")
 
 1. Prozkoumejte některé z ostatních karet na stránkách vlastností projektu, jako je například **sestavení** a **ladění**. Tyto karty jsou odlišné pro různé typy projektů.
 
@@ -258,7 +261,7 @@ Použijeme nový projekt testování částí k otestování naší metody v pro
 
 Chcete-li zkontrolovat, zda je test jednotky funkční, vyberte možnost **test**  >  **Spustit**  >  **všechny testy** z řádku nabídek. Otevře se okno s názvem **Průzkumník testů** , které by mělo vidět, že test **TestGetCurrentDate** projde.
 
-![Průzkumník testů v aplikaci Visual Studio zobrazující prošlý test](media/tutorial-projects-test-explorer.png)
+![Průzkumník testů v aplikaci Visual Studio zobrazující prošlý test](media/tutorial-projects-test-explorer.png "Průzkumník testů v aplikaci Visual Studio zobrazující úspěšný test.")
 
 ::: moniker range="vs-2017"
 

@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34e038256d46909e135f8285cb1b3edc45d0ba3e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cbd85ece0cf7b84230e37c74c27e746df7a52439
+ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565341"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94878280"
 ---
 # <a name="intellisense-in-visual-studio"></a>IntelliSense v aplikaci Visual Studio
 
@@ -38,11 +38,11 @@ V seznamu členů ikona vlevo představuje typ členu, například obor názvů,
 
 ![Seznam členů sady Visual Studio](../ide/media/vs2015_intellisense.png)
 
-Funkci **vypsat členy** můžete vyvolat ručně zadáním **kombinace kláves CTRL** + **J**, výběrem možnosti **Upravit**  >  **IntelliSense**  >  **členy seznamu**IntelliSense nebo kliknutím na tlačítko **vypsat členy** na panelu nástrojů editoru. Při vyvolání na prázdném řádku nebo mimo podporovaný rozsah zobrazí seznam symboly v globálním oboru názvů.
+Funkci **vypsat členy** můžete vyvolat ručně zadáním **kombinace kláves CTRL** + **J**, výběrem možnosti **Upravit**  >  **IntelliSense**  >  **členy seznamu** IntelliSense nebo kliknutím na tlačítko **vypsat členy** na panelu nástrojů editoru. Při vyvolání na prázdném řádku nebo mimo podporovaný rozsah zobrazí seznam symboly v globálním oboru názvů.
 
 Chcete-li vypnout členy seznamu ve výchozím nastavení (takže se nezobrazí, pokud není výslovně vyvoláno), vyberte možnost **nástroje**  >  **Možnosti**  >  **všechny jazyky** a zrušte zaškrtnutí políčka **Členové automatických seznamů**. Pokud chcete vypnout seznam členů jenom pro určitý jazyk, přečtěte si **Obecné** nastavení daného jazyka.
 
-Můžete také změnit nastavení na režim návrhu, ve kterém je do kódu vložen pouze text, který zadáte. Například pokud zadáte identifikátor, který není v seznamu a stiskněte klávesu **TAB**, v režimu dokončování by položka nahradila typový identifikátor. Chcete-li přepnout mezi režimem dokončení a režimem návrhu, stiskněte klávesu **CTRL** + **ALT +** + **MEZERNÍK**nebo zvolte možnost **Upravit**  >  **IntelliSense**  >  **režim dokončení přepnout**IntelliSense.
+Můžete také změnit nastavení na režim návrhu, ve kterém je do kódu vložen pouze text, který zadáte. Například pokud zadáte identifikátor, který není v seznamu a stiskněte klávesu **TAB**, v režimu dokončování by položka nahradila typový identifikátor. Chcete-li přepnout mezi režimem dokončení a režimem návrhu, stiskněte klávesu **CTRL** + **ALT +** + **MEZERNÍK** nebo zvolte možnost **Upravit**  >  **IntelliSense**  >  **režim dokončení přepnout** IntelliSense.
 
 ## <a name="parameter-info"></a>Informace o parametrech
 
@@ -54,7 +54,7 @@ Parametr tučně označuje další parametr, který je vyžadován při zadává
 
 Když opatřujete poznámkami funkce a parametry s komentáři XML dokumentace, komentáře se zobrazí jako informace o parametru. Další informace najdete v tématu [zadání komentářů kódu XML](reference/generate-xml-documentation-comments.md).
 
-Informace o parametrech lze vyvolat ručně kliknutím na možnost **Upravit**  >  **IntelliSense**  >  **informace o parametrech**technologie IntelliSense, stisknutím klávesy **CTRL** + **SHIFT** + **Space**nebo výběrem tlačítka **informace o parametru** na panelu nástrojů editoru.
+Informace o parametrech lze vyvolat ručně kliknutím na možnost **Upravit**  >  **IntelliSense**  >  **informace o parametrech** technologie IntelliSense, stisknutím klávesy **CTRL** + **SHIFT** + **Space** nebo výběrem tlačítka **informace o parametru** na panelu nástrojů editoru.
 
 ## <a name="quick-info"></a>Rychlé informace
 
@@ -66,15 +66,15 @@ Když vyberete člena v poli **seznam členů** , zobrazí se také pole rychlé
 
 ![Informace o parametrech v souboru kódu&#35; jazyka C](../ide/media/vs2015_paraminfo.png)
 
-Rychlé informace můžete vyvolat ručně výběrem možnosti **Upravit**  >  **IntelliSense**  >  **rychlé informace**technologie IntelliSense stisknutím **kombinace kláves CTRL +** + **I**nebo výběrem tlačítka **rychlé informace** na panelu nástrojů editoru.
+Rychlé informace můžete vyvolat ručně výběrem možnosti **Upravit**  >  **IntelliSense**  >  **rychlé informace** technologie IntelliSense stisknutím **kombinace kláves CTRL +** + **I** nebo výběrem tlačítka **rychlé informace** na panelu nástrojů editoru.
 
 Pokud je funkce přetížena, technologie IntelliSense nemusí zobrazit informace pro všechny formy přetížení.
 
-Rychlé informace pro kód jazyka C++ můžete vypnout přechodem na možnosti **nástroje**  >  **Options**  >  **textový editor**  >  **C/C++**  >  **Upřesnit**a nastavením možnosti **automatické rychlé informace** na `false` .
+Rychlé informace pro kód jazyka C++ můžete vypnout přechodem na možnosti **nástroje**  >  **Options**  >  **textový editor**  >  **C/C++**  >  **Upřesnit** a nastavením možnosti **automatické rychlé informace** na `false` .
 
 ## <a name="complete-word"></a>Dokončit slovo
 
-Po zadání dostatečného počtu znaků k odstranění nejednoznačného období dokončí aplikace slovo zbytek proměnné, příkazu nebo názvu funkce. Úplné slovo můžete vyvolat tak, že kliknete na tlačítko **Upravit**  >  **IntelliSense**  >  **kompletní Word**, stisknete **klávesu CTRL** + **Space**nebo na panelu nástrojů editoru kliknete na tlačítko **Dokončit slovo** .
+Po zadání dostatečného počtu znaků k odstranění nejednoznačného období dokončí aplikace slovo zbytek proměnné, příkazu nebo názvu funkce. Úplné slovo můžete vyvolat tak, že kliknete na tlačítko **Upravit**  >  **IntelliSense**  >  **kompletní Word**, stisknete **klávesu CTRL** + **Space** nebo na panelu nástrojů editoru kliknete na tlačítko **Dokončit slovo** .
 
 ## <a name="intellisense-options"></a>Možnosti technologie IntelliSense
 
@@ -111,6 +111,7 @@ MessageBox( hWnd, "String literal|")
 
 - [Visual Basic IntelliSense](../ide/visual-basic-specific-intellisense.md)
 - [C# IntelliSense](../ide/visual-csharp-intellisense.md)
+- [Python IntelliSense](../python/editing-python-code-in-visual-studio.md#intellisense)
 - [JavaScript IntelliSense](../ide/javascript-intellisense.md)
 - [Zápis a refaktoring kódu (C++)](/cpp/ide/writing-and-refactoring-code-cpp)
 - [Zadejte komentáře kódu XML](reference/generate-xml-documentation-comments.md)
