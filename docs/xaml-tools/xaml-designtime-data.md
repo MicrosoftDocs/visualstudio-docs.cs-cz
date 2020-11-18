@@ -7,12 +7,12 @@ author: alihamie
 ms.author: tglee
 manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 1dd0b4df440f6addd474ef08e7bf0b2958a58076
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: bda4af3a3985ec6fc3aae1e991b7f5f622d67965
+ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94492891"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703998"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Použití dat pro čas návrhu s Návrhář XAML v aplikaci Visual Studio
 
@@ -173,7 +173,7 @@ Chcete-li vytvořit vlastní obor názvů xmlns v prostředí WPF .NET Core, je 
 [assembly: XmlnsDefinition("http://MyCustomControls", "MyViews.MyButtons")]
    ```
 
-## <a name="troubleshooting"></a>Odstraňování potíží
+## <a name="troubleshooting"></a>Řešení potíží
 
 Pokud se setkáte s problémem, který není uvedený v této části, informujte nás pomocí nástroje [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio.md) .
 
@@ -181,7 +181,7 @@ Pokud se setkáte s problémem, který není uvedený v této části, informujt
 
 - Data při návrhu vyžadují Visual Studio 2019 verze [16,7](/visualstudio/releases/2019/release-notes) nebo novější.
 
-- Podporuje desktopové projekty Windows, které cílí Windows Presentation Foundation (WPF) pro .NET Core a UWP. Tato funkce je k dispozici také pro .NET Framework, pokud je povolena funkce "New WPF Návrhář XAML for .NET Framework" Preview.
+- Podporuje desktopové projekty Windows, které cílí na Windows Presentation Foundation (WPF) pro .NET Core a UWP. Tato funkce je k dispozici také v [kanálu verze Preview](/visualstudio/releases/2019/release-notes-preview) pro .NET Framework. Pokud ho chcete povolit, v nabídce **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** vyberte **Nový Návrhář XAML WPF pro .NET Framework** a restartujte Visual Studio.
 
 - Počínaje sadou Visual Studio 2019 verze 16,7 Tato funkce funguje se všemi integrovanými ovládacími prvky z rozhraní WPF a UWP. Podpora pro ovládací prvky třetích stran je teď dostupná ve verzi 16,8 Preview.
 

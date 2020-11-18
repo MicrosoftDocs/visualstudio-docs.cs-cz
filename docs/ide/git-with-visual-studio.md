@@ -8,12 +8,12 @@ ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 621aed831e55d2fca1fda7063f8c10f859ca5157
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 30ae69f07c89efb6d01228088596fc1bc05fac87
+ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672519"
+ms.locfileid: "94704063"
 ---
 # <a name="git-experience-in-visual-studio"></a>Prostředí Git v aplikaci Visual Studio
 
@@ -35,7 +35,7 @@ Existují tři způsoby, jak začít používat Git se sadou Visual Studio k zaj
 - [Naklonujte existující úložiště Git](#clone-an-existing-git-repository). Pokud kód, na kterém chcete pracovat, není na vašem počítači, můžete naklonovat všechna existující vzdálená úložiště.
 
 > [!NOTE]
-> Visual Studio 2019 teď nabízí plně integrované prostředí pro účet GitHubu. Počínaje [verzí 16,8](/visualstudio/releases/2019/release-notes/)můžete do řetězce klíčů přidat jak účty na GitHubu, tak i firemní účty GitHubu. Budete je moct přidávat a využívat stejně jako s účty Microsoft, což znamená, že budete mít snazší přístup k prostředkům GitHubu v rámci sady Visual Studio. Další informace najdete v tématu [práce s účty GitHubu na stránce sady Visual Studio](work-with-github-accounts.md) .
+> Počínaje [verzí 16,8](/visualstudio/releases/2019/release-notes/)obsahuje Visual Studio 2019 plně integrované prostředí pro účet GitHubu. Nyní můžete do řetězce klíčů přidat oba účty GitHub a GitHub Enterprise. Budete je moct přidávat a využívat stejně jako s účty Microsoft, což znamená, že budete mít snazší přístup k prostředkům GitHubu v rámci sady Visual Studio. Další informace najdete v tématu [práce s účty GitHubu na stránce sady Visual Studio](work-with-github-accounts.md) .
 
 ## <a name="create-a-new-git-repository"></a>Vytvořit nové úložiště Git
 

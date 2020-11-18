@@ -1,6 +1,6 @@
 ---
 title: Práce s účty GitHub v sadě Visual Studio
-ms.date: 11/13/2020
+ms.date: 11/16/2020
 ms.custom: ''
 ms.topic: conceptual
 description: Naučte se používat Visual Studio s účty GitHubu.
@@ -10,16 +10,16 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: cdea71e2d5c376e465bb5cdb990ec7ed45caa1f3
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 845b663a3a0828806766fa0609e45efafabec50a
+ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672356"
+ms.locfileid: "94704018"
 ---
 # <a name="work-with-github-accounts-in-visual-studio"></a>Práce s účty GitHub v sadě Visual Studio
 
-Pokud máte veřejný účet GitHubu nebo GitHub Enterprise, můžete ho přidat do řetězce klíčů sady Visual Studio. Po přidání účtu budete moct využít výhod integrace platformy tím, že budete mít přístup k úložištím GitHubu přímo ze sady Visual Studio a vytváříte je.  
+Pokud máte veřejný účet GitHubu nebo GitHub Enterprise, můžete ho přidat do řetězce klíčů sady Visual Studio. Po přidání účtu budete moct využít výhod integrace platformy tím, že budete mít přístup k úložištím GitHubu přímo ze sady Visual Studio a vytváříte je.
 
 ## <a name="adding-public-github-accounts"></a>Přidávání veřejných účtů GitHubu
 
