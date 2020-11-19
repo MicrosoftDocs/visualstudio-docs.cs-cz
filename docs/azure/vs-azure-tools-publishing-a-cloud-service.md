@@ -3,17 +3,16 @@ title: Publikování cloudové služby pomocí nástrojů Azure | Microsoft Docs
 description: Přečtěte si, jak publikovat projekty cloudových služeb Azure pomocí sady Visual Studio.
 author: ghogen
 manager: jillfra
-assetId: 1a07b6e4-3678-4cbf-b37e-4520b402a3d9
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 4e8aa31189a04dace088f1bcf8cc7ad88e0b20ac
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: f4aebb023aa764b0f2d7cc1c5426a63e7df81200
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399315"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902126"
 ---
 # <a name="publishing-a-cloud-service-using-visual-studio"></a>Publikování cloudové služby pomocí sady Visual Studio
 
@@ -66,13 +65,13 @@ Pokud je infrastruktura back-end vaší aplikace stabilní, ale webové role pot
 
 ### <a name="requirements-for-using-web-deploy"></a>Požadavky na použití Nasazení webu
 
-- **Pouze pro účely vývoje a testování** : změny jsou provedeny přímo na virtuálním počítači, kde je webová role spuštěna. Pokud je nutné tento virtuální počítač recyklovat, změny se ztratí, protože původní balíček, který jste publikovali, slouží k opětovnému vytvoření virtuálního počítače pro danou roli. Znovu publikujte aplikaci, abyste získali nejnovější změny webové role.
+- **Pouze pro účely vývoje a testování**: změny jsou provedeny přímo na virtuálním počítači, kde je webová role spuštěna. Pokud je nutné tento virtuální počítač recyklovat, změny se ztratí, protože původní balíček, který jste publikovali, slouží k opětovnému vytvoření virtuálního počítače pro danou roli. Znovu publikujte aplikaci, abyste získali nejnovější změny webové role.
 
-- **Aktualizovat lze pouze webové role** : role pracovního procesu nelze aktualizovat. Kromě toho nejde aktualizovat `RoleEntryPoint` v `web role.cs` .
+- **Aktualizovat lze pouze webové role**: role pracovního procesu nelze aktualizovat. Kromě toho nejde aktualizovat `RoleEntryPoint` v `web role.cs` .
 
-- **Může podporovat jenom jednu instanci webové role** : v prostředí nasazení nemůžete mít více instancí žádné webové role. Podporuje se ale víc webových rolí s jenom jednou instancí.
+- **Může podporovat jenom jednu instanci webové role**: v prostředí nasazení nemůžete mít více instancí žádné webové role. Podporuje se ale víc webových rolí s jenom jednou instancí.
 
-- **Povolit připojení ke vzdálené ploše** : Tento požadavek umožňuje nasazení webu použít uživatele a heslo pro připojení k virtuálnímu počítači, aby se nasadily změny na server, na kterém běží Internetová informační služba (IIS). Kromě toho může být nutné připojit se k virtuálnímu počítači a Přidat důvěryhodný certifikát do služby IIS na tomto virtuálním počítači. (Tento certifikát zajišťuje zabezpečení vzdáleného připojení pro službu IIS používaného Nasazení webu.)
+- **Povolit připojení ke vzdálené ploše**: Tento požadavek umožňuje nasazení webu použít uživatele a heslo pro připojení k virtuálnímu počítači, aby se nasadily změny na server, na kterém běží Internetová informační služba (IIS). Kromě toho může být nutné připojit se k virtuálnímu počítači a Přidat důvěryhodný certifikát do služby IIS na tomto virtuálním počítači. (Tento certifikát zajišťuje zabezpečení vzdáleného připojení pro službu IIS používaného Nasazení webu.)
 
 Následující postup předpokládá, že používáte Průvodce **publikováním aplikace Azure** .
 

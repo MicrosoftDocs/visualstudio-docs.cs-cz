@@ -1,5 +1,7 @@
 ---
 title: WizardData – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o prvku WizardData a o tom, jak určuje vlastní kód XML.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa3f9d2e971d944b964f4b194d1324ff960fbd24
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0472bfeb3a988bcb39b4daf80cea92398130f59f
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740389"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903400"
 ---
 # <a name="wizarddata-element-visual-studio-templates"></a>WizardData – element (šablony sady Visual Studio)
 
@@ -30,7 +32,7 @@ Určuje vlastní XML
 \<WizardData>
 ```
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <WizardData>

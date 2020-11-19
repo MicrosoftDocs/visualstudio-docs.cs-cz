@@ -1,5 +1,7 @@
 ---
 title: TemplateID – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o prvku TemplateID a o tom, jak Určuje identifikátor pro šablonu položky, která je zařazena do skupiny šablon položek pomocí elementu TemplateGroupID –.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8eb5abac9c837b3022354d6da743ac8f21d5e41d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 734af9de80da5f095f9ad7f0e52023659fea6b67
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699056"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903179"
 ---
 # <a name="templateid-element-visual-studio-templates"></a>TemplateID – element (šablony sady Visual Studio)
 Určuje identifikátor šablony položky, která je zařazena do skupiny šablon položek pomocí elementu [TemplateGroupID –](../extensibility/templategroupid-element-visual-studio-templates.md) .
@@ -27,7 +29,7 @@ Určuje identifikátor šablony položky, která je zařazena do skupiny šablon
  \<VSTemplate> \<TemplateData>
  \<TemplateID>
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 <TemplateID> ... </TemplateID>
@@ -56,7 +58,7 @@ Určuje identifikátor šablony položky, která je zařazena do skupiny šablon
 
  Pokud soubor. vstemplate vynechává `TemplateID` prvek, pak se jako identifikátor šablony používá element [Name](../extensibility/name-element-visual-studio-templates.md) .
 
- Hodnota `TemplateID` elementu se používá společně s registrací systému projektu (HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\11.0\Projects \\ ) pro filtrování šablon, které se zobrazí v dialogovém okně **Přidat novou položku** .
+ Hodnota `TemplateID` prvku se používá společně s registrací systému projektu (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Projects\\ ) k filtrování šablon, které se zobrazí v dialogovém okně **Přidat novou položku** .
 
 ## <a name="see-also"></a>Viz také
 - [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)

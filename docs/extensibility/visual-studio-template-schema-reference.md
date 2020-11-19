@@ -1,5 +1,7 @@
 ---
 title: Referenční informace ke schématu šablon sady Visual Studio | Microsoft Docs
+description: Seznamte se se schématem šablon sady Visual Studio. Prozkoumejte prvky XML v souborech. vstemplate.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49e41431938eed0078f6cbb241d3d62812899942
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9402efcc6c08343f1661945ae1701f7be7909bab
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697964"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903413"
 ---
 # <a name="visual-studio-template-schema-reference"></a>Referenční dokumentace schématu šablon sady Visual Studio
 Tato část obsahuje informace o prvcích XML v souborech *. vstemplate* , což jsou soubory, které ukládají metadata pro šablony projektů, šablony položek a startovní sady.
@@ -34,21 +36,21 @@ Tato část obsahuje informace o prvcích XML v souborech *. vstemplate* , což 
 |[CreateInPlace](../extensibility/createinplace-visual-studio-templates.md)|--|--|
 |[CreateNewFolder](../extensibility/createnewfolder-element-visual-studio-templates.md)|--|--|
 |[CustomDataSignature](../extensibility/customdatasignature-element-visual-studio-templates.md)|--|--|
-|[CustomParameter](../extensibility/customparameter-element-visual-studio-templates.md)|--|Název<br /><br /> Hodnota|
+|[CustomParameter](../extensibility/customparameter-element-visual-studio-templates.md)|--|Name<br /><br /> Hodnota|
 |[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|CustomParameter|--|
 |[DefaultName](../extensibility/defaultname-element-visual-studio-templates.md)|--|--|
 |[Popis](../extensibility/description-element-visual-studio-templates.md)|--|Balíček<br /><br /> ID|
 |[EnableEditOfLocationField](../extensibility/enableeditoflocationfield-element-visual-studio-templates.md)|--|--|
 |[EnableLocationBrowseButton](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md)|--|--|
-|[Složka](../extensibility/folder-element-visual-studio-project-templates.md)|ProjectItem<br /><br /> Složka|Název|
+|[Složka](../extensibility/folder-element-visual-studio-project-templates.md)|ProjectItem<br /><br /> Složka|Name|
 ||[zastaralé]|--|
 |[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|--|--|
-|[Neobsahuje](../extensibility/hidden-element-visual-studio-templates.md)|--|--|
+|[Skrytý](../extensibility/hidden-element-visual-studio-templates.md)|--|--|
 |[Ikona](../extensibility/icon-element-visual-studio-templates.md)|--|Balíček<br /><br /> ID|
 |[LocationField](../extensibility/locationfield-element-visual-studio-project-templates.md)|--|--|
 |[LocationFieldMRUPrefix](../extensibility/locationfieldmruprefix-element-visual-studio-templates.md)|--|--|
 |[MaxFrameworkVersion](../extensibility/maxframeworkversion-element-visual-studio-templates.md)|--|--|
-|[Name](../extensibility/name-element-visual-studio-templates.md)|--|Balíček<br /><br /> ID|
+|[Název](../extensibility/name-element-visual-studio-templates.md)|--|Balíček<br /><br /> ID|
 |[NumberOfParentCategoriesToRollUp](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)|--|--|
 |[PreviewImage](../extensibility/previewimage-element-visual-studio-templates.md)|--|--|
 |[Projekt](../extensibility/project-element-visual-studio-templates.md)|Složka<br /><br /> ProjectItem|Soubor<br /><br /> TargetFileName<br /><br /> ReplaceParameters|
@@ -61,23 +63,23 @@ Tato část obsahuje informace o prvcích XML v souborech *. vstemplate* , což 
 |[PromptForSaveOnCreation](../extensibility/promptforsaveoncreation-element-visual-studio-templates.md)|--|--|
 |[ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md)|--|--|
 |[Odkaz](../extensibility/reference-element-visual-studio-templates.md)|Sestavení|--|
-|[Odkazy](../extensibility/references-element-visual-studio-templates.md)|Referenční informace|--|
+|[Reference](../extensibility/references-element-visual-studio-templates.md)|Reference|--|
 |[RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md)|--|--|
 |[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|--|Verze|
 |[SDKReference –](../extensibility/sdkreference-element-visual-studio-templates.md)|--|Balíček|
 |[ShowByDefault](../extensibility/showbydefault-visual-studio-templates.md)|--|--|
-|[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|Název|
+|[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|Name|
 |[SortOrder](../extensibility/sortorder-element-visual-studio-templates.md)|--|--|
 |[SupportsCodeSeparation](../extensibility/supportscodeseparation-element-visual-studio-templates.md)|--|--|
 |[SupportsLanguageDropDown](../extensibility/supportslanguagedropdown-element-visual-studio-templates.md)|--|--|
 |[SupportsMasterPage](../extensibility/supportsmasterpage-element-visual-studio-templates.md)|--|--|
 |[TargetPlatformName](../extensibility/targetplatformname-element-visual-studio-templates.md)|RequiredPlatformVersion|--|
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|ProjectCollection<br /><br /> Project<br /><br /> Odkazy<br /><br /> ProjectItem<br /><br /> CustomParameters|[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|
+|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|ProjectCollection<br /><br /> Project<br /><br /> Reference<br /><br /> ProjectItem<br /><br /> CustomParameters|[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Název<br /><br /> Popis<br /><br /> Ikona<br /><br /> PreviewImage<br /><br /> ProjectType<br /><br /> ProjectSubType<br /><br /> TemplateID<br /><br /> TemplateGroupID<br /><br /> SortOrder<br /><br /> CreateNewFolder<br /><br /> DefaultName<br /><br /> ProvideDefaultName<br /><br /> PromptForSaveOnCreation<br /><br /> EnableLocationBrowseButton<br /><br /> EnableEditOfLocationField<br /><br /> Skrytý<br /><br /> DisplayInParentCategories<br /><br /> LocationFieldMRUPrefix<br /><br /> NumberOfParentCategoriesToRollUp<br /><br /> CreateInPlace<br /><br /> BuildOnLoad<br /><br /> BuildProjectOnload<br /><br /> ShowByDefault<br /><br /> LocationField<br /><br /> SupportsMasterPage<br /><br /> SupportsCodeSeparation<br /><br /> SupportsLanguageDropDown<br /><br /> RequiredFrameworkVersion<br /><br /> FrameworkVersion<br /><br /> MaxFrameworkVersion<br /><br /> CustomDataSignature<br /><br /> TargetPlatformName|--|
 |[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)|--|--|
 |[TemplateID](../extensibility/templateid-element-visual-studio-templates.md)|--|--|
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|TemplateData<br /><br /> TemplateContent<br /><br /> WizardExtension<br /><br /> WizardData|Typ<br /><br /> Verze|
-|[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|--|Název|
+|[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|--|Name|
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Sestavení<br /><br /> FullClassName|--|
 
 ## <a name="see-also"></a>Viz také

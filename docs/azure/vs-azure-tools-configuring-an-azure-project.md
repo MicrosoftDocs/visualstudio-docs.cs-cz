@@ -3,17 +3,16 @@ title: Konfigurace projektu cloudové služby Azure
 description: Naučte se konfigurovat projekt cloudové služby Azure v aplikaci Visual Studio v závislosti na vašich požadavcích na daný projekt.
 author: ghogen
 manager: jillfra
-assetId: 609d6965-05cc-47b1-82dc-c76a92d4f295
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/06/2017
 ms.author: ghogen
-ms.openlocfilehash: 388cd20468624c6441342267f6545dfaf0e21901
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: dbf8d1ce8e668adb5fbab61178fafa980fd56298
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399143"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902530"
 ---
 # <a name="configure-an-azure-cloud-service-project-with-visual-studio"></a>Konfigurace projektu cloudové služby Azure v sadě Visual Studio
 Můžete nakonfigurovat projekt cloudové služby Azure v závislosti na vašich požadavcích na daný projekt. Můžete nastavit vlastnosti projektu pro následující kategorie:

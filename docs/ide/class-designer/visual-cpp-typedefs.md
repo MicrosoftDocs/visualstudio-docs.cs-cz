@@ -1,5 +1,7 @@
 ---
 title: Definice typedef C++ v Návrhář tříd
+description: Přečtěte si, jak Návrhář tříd podporuje definice typu C++ typedef deklarované s klíčovým slovem typedef.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c57382809b7730df2d7c674c24902d70ccab647
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f95b948d4ffc70d225dd4a8b2bb2debe111c967e
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590693"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903439"
 ---
 # <a name="c-typedefs-in-class-designer"></a>Definice typedef C++ v Návrhář tříd
 
@@ -39,9 +41,9 @@ Pak můžete použít tento typ k deklaraci instance:
 
 ## <a name="class-and-struct-shapes"></a>Obrazce třídy a struktury
 
-V **Návrhář tříd**má definice typedef jazyka C++ tvar typu určeného v typedef. Pokud zdroj deklaruje `typedef class` , má obrazec zaoblené rohy a **třídu**Label. Pro má `typedef struct` obrazec čtvercové rohy a **strukturu**popisku.
+V **Návrhář tříd** má definice typedef jazyka C++ tvar typu určeného v typedef. Pokud zdroj deklaruje `typedef class` , má obrazec zaoblené rohy a **třídu** Label. Pro má `typedef struct` obrazec čtvercové rohy a **strukturu** popisku.
 
-Třídy a struktury mohou mít v rámci sebe vnořené definice typedef deklarované. V **Návrhář tříd**tvary třídy a struktury mohou zobrazit vnořené deklarace typedef jako vnořené tvary.
+Třídy a struktury mohou mít v rámci sebe vnořené definice typedef deklarované. V **Návrhář tříd** tvary třídy a struktury mohou zobrazit vnořené deklarace typedef jako vnořené tvary.
 
 Tvary typedef podporují příkazy **Zobrazit jako přidružení** a **Zobrazit jako přidružení kolekce** v místní nabídce (kontextová nabídka) kliknutím pravým tlačítkem myši.
 

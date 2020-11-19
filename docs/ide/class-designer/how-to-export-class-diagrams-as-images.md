@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Export diagramů tříd jako obrázky (návrhář tříd)'
+description: Naučte se exportovat diagram tříd, který jste vytvořili z kódu v projektu tím, že diagram uložíte jako obrázek.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fdecb8834f296d24cbd53d6725b800612f9bcf57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2cb72a494cbafc9e2ab6661f056436a083b52de1
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770155"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901398"
 ---
 # <a name="how-to-export-class-diagrams-as-images"></a>Postupy: Export diagramů tříd jako obrázků
 

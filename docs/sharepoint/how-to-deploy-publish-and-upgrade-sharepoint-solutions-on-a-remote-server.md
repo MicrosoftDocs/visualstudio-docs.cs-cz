@@ -1,6 +1,8 @@
 ---
 title: Vzdálená nasazení, publikování & upgrade řešení SharePoint
 titleSuffix: ''
+description: Nasazení, publikování a upgrade řešení SharePoint v izolovaném prostoru na vzdáleném webu nebo na místním webu služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,19 +18,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5de5128ff19472390e65aa5d9a437aee269ff897
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: db476af4a9d3be9cab2109fb3489d0767765075f
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585781"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903569"
 ---
 # <a name="how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server"></a>Postupy: nasazení, publikování a upgrade řešení služby SharePoint na vzdáleném serveru
   Kromě nasazení řešení služby SharePoint do místního systému můžete publikovat řešení služby SharePoint v izolovaném prostoru na vzdálené weby nebo místní weby služby SharePoint. Proces vzdáleného publikování kopíruje soubor *. wsp* na server SharePoint, nainstaluje řešení a pak vám umožní toto řešení aktivovat. Můžete také upgradovat vzdálenou instalaci řešení SharePoint po provedení změn.
 
 ## <a name="to-publish-a-sandboxed-sharepoint-solution-to-a-remote-sharepoint-server"></a>Publikování řešení služby SharePoint v izolovaném prostoru na vzdáleném serveru SharePoint
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro projekt služby SharePoint v izolovaném prostoru, který chcete publikovat, a pak zvolte **publikovat**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro projekt služby SharePoint v izolovaném prostoru, který chcete publikovat, a pak zvolte **publikovat**.
 
 2. V dialogovém okně **publikovat** zvolte možnost **publikovat na webu služby SharePoint** a potom zadejte adresu URL webu pro publikování online, například: `https://mytestsite.sharepoint.microsoftonline.com` .
 
@@ -51,11 +53,11 @@ ms.locfileid: "91585781"
 
 1. Přejmenujte balíček služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . To provedete tak, že v **Průzkumník řešení** otevřete balíček. Zobrazí se v **Průzkumníkovi balíčku**.
 
-2. V **Průzkumníku balíčků**v poli **název** změňte název balíčku na jedinečný název.
+2. V **Průzkumníku balíčků** v poli **název** změňte název balíčku na jedinečný název.
 
 3. Uložte projekt.
 
-4. V **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **publikovat**.
+4. V **Průzkumník řešení** otevřete místní nabídku pro projekt a poté zvolte možnost **publikovat**.
 
 5. V dialogovém okně **publikovat** zvolte možnost **publikovat na webu služby SharePoint** a potom v případě, že chybí adresa URL vzdáleného serveru, na kterém je řešení uloženo, zadejte.
 

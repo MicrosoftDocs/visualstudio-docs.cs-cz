@@ -1,5 +1,7 @@
 ---
 title: Změna mezi zápisem přidružení člena & (Návrhář tříd)
+description: Naučte se, jak změnit způsob, jakým diagram tříd představuje vztah přidružení mezi dvěma typy ze zápisu členů k zápisu přidružení a naopak.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,16 +15,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d453dd2cd19f8a6c9c76ebcc48a762ba3142ea74
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64d26b6ca1c71fe3484544f02006a27866ff4843
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85771004"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901658"
 ---
 # <a name="how-to-change-between-member-notation-and-association-notation-in-class-designer"></a>Postupy: Změna mezi zápisem člena a zápisem přidružení v Návrhář tříd
 
-V **Návrhář tříd**můžete změnit způsob, jakým diagram tříd představuje vztah přidružení mezi dvěma typy ze zápisu členů na notaci přidružení a naopak. Členy zobrazené jako řádky přidružení často poskytují užitečnou vizualizaci způsobu, jakým jsou typy spojeny.
+V **Návrhář tříd** můžete změnit způsob, jakým diagram tříd představuje vztah přidružení mezi dvěma typy ze zápisu členů na notaci přidružení a naopak. Členy zobrazené jako řádky přidružení často poskytují užitečnou vizualizaci způsobu, jakým jsou typy spojeny.
 
 > [!NOTE]
 > Vztahy přidružení mohou být reprezentovány jako vlastnost nebo pole člena. Chcete-li změnit zápis členů na zápis přidružení, jeden typ musí mít člena jiného typu. Chcete-li změnit notaci přidružení na zápis členů, musí být tyto dva typy propojeny asociační linkou. Další informace naleznete v tématu [How to: Create Associations bBetween Types](how-to-create-associations-between-types.md). Pokud projekt obsahuje více diagramů tříd, změny provedené v diagramu způsob zobrazení vztahů přidružení ovlivňují pouze tento diagram. Chcete-li změnit způsob, jakým jiný diagram zobrazuje vztahy přidružení, otevřete nebo zobrazte tento diagram a proveďte tyto kroky.

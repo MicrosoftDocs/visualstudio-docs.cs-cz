@@ -4,17 +4,16 @@ description: Procházení a Správa prostředků úložiště pomocí Průzkumn�
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
-assetId: 658dc064-4a4e-414b-ae5a-a977a34c930d
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: ab8373a24d296052b7ecfc7fcae6c85c14c74a1d
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ae45fafb562387720b652e0921624bc859ea5920
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398862"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902217"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Procházení a správa prostředků úložiště pomocí Průzkumníka serveru
 
@@ -34,7 +33,7 @@ Průzkumník serveru automaticky zobrazuje seznam objektů blob, front a tabulek
 
 Prostředky účtu emulátoru úložiště zobrazíte tak, že rozbalíte uzel pro **vývoj** . Pokud se emulátor úložiště nespustí, když rozbalíte **vývojový** uzel, automaticky se spustí. Tento proces může trvat několik sekund. Během spouštění emulátoru úložiště můžete pokračovat v práci v jiných oblastech sady Visual Studio.
 
-Pokud chcete zobrazit prostředky v účtu úložiště, rozbalte uzel účtu úložiště v Průzkumník serveru, kde vidíte uzly **BLOB** , **Queues** a **Tables** .
+Pokud chcete zobrazit prostředky v účtu úložiště, rozbalte uzel účtu úložiště v Průzkumník serveru, kde vidíte uzly **BLOB**, **Queues** a **Tables** .
 
 ## <a name="work-with-blob-resources"></a>Práce s prostředky objektů BLOB
 
@@ -94,7 +93,7 @@ Vzhledem k tomu, že složky v kontejnerech objektů BLOB jsou virtuálními slo
 
 Můžete filtrovat objekty blob, které se zobrazí, zadáním společné předpony.
 
-Pokud například zadáte předponu **Hello** do textového pole Filter a potom vyberete tlačítko **Spustit** ( **!** ), zobrazí se pouze objekty blob začínající na "Hello".
+Pokud například zadáte předponu **Hello** do textového pole Filter a potom vyberete tlačítko **Spustit** (**!**), zobrazí se pouze objekty blob začínající na "Hello".
 
 ![Filtrovat textové pole](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC519076.png)
 
@@ -235,7 +234,7 @@ Když se Průzkumník serveru připojí k účtu úložiště nebo získá data,
 ### <a name="to-refresh-table-data"></a>Aktualizace dat tabulky
 
 * V části **úložiště** vyberte uzel **tabulky** a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
-* Chcete-li aktualizovat seznam entit, které jsou zobrazeny v **Návrháři tabulky** , vyberte v Návrháři tabulky tlačítko **Spustit** .
+* Chcete-li aktualizovat seznam entit, které jsou zobrazeny v **Návrháři tabulky**, vyberte v Návrháři tabulky tlačítko **Spustit** .
 
 ### <a name="to-refresh-queue-data"></a>Aktualizace dat fronty
 

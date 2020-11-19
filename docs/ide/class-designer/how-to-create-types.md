@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Vytváření typů pomocí návrháře tříd'
+description: Naučte se navrhovat nové typy pro projekty v jazyce C# a Visual Basic vytvořením v diagramu tříd.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98e489a37e5d75cbc17d17c32a1fa3b53f9993f8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac6e59f4dc6fa68962ac061132e3fab90ec8e955
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770212"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901437"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>Postupy: vytváření typů pomocí Návrhář tříd
 
@@ -30,7 +32,7 @@ Chcete-li navrhnout nové typy pro projekty v jazyce C# a Visual Basic, vytvořt
 
 ## <a name="create-a-new-type"></a><a name="CreateType"></a> Vytvořit nový typ
 
-1. V **sadě nástrojů**v části **Návrhář tříd**přetáhněte jeden z nich do diagramu tříd:
+1. V **sadě nástrojů** v části **Návrhář tříd** přetáhněte jeden z nich do diagramu tříd:
 
     - **Třída** nebo **abstraktní třída**
 
@@ -70,7 +72,7 @@ Chcete-li navrhnout nové typy pro projekty v jazyce C# a Visual Basic, vytvořt
 
 1. Klikněte na tvar typu v diagramu tříd.
 
-2. V okně **vlastnosti**vedle vlastnosti **vlastní atributy** pro typ klikněte na tlačítko se třemi tečkami (...).
+2. V okně **vlastnosti** vedle vlastnosti **vlastní atributy** pro typ klikněte na tlačítko se třemi tečkami (...).
 
 3. Přidejte jeden nebo více uživatelských atributů, vždy jeden na řádek. Nevkládejte je do závorek.
 
@@ -80,7 +82,7 @@ Chcete-li navrhnout nové typy pro projekty v jazyce C# a Visual Basic, vytvořt
 
 1. Klikněte na název člena ve tvaru jeho typu v diagramu tříd nebo na jeho řádku v okně Detaily třídy.
 
-2. Ve **vlastnostech**Najděte vlastnost **vlastní atributy** člena.
+2. Ve **vlastnostech** Najděte vlastnost **vlastní atributy** člena.
 
 3. Přidejte jeden nebo více uživatelských atributů, vždy jeden na řádek. Nevkládejte je do závorek.
 

@@ -1,5 +1,7 @@
 ---
 title: Přejmenování a přesun tříd a typů v Návrhář tříd
+description: Přečtěte si, jak přejmenovat a přesunout třídy a typy pomocí Návrhář tříd a okna podrobností třídy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: baf0e9d9d0f4bb45ef965f64c256bd9360af112b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d51a541edb30e24405faccfec6e05264303d049
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85768608"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901085"
 ---
 # <a name="refactor-classes-and-types-in-class-designer"></a>Refaktoring tříd a typů v Návrhář tříd
 
@@ -78,7 +80,7 @@ V Návrhář tříd můžete přejmenovat typ nebo člen typu v diagramu tříd 
 
 ## <a name="move-type-members-from-one-type-to-another"></a>Přesunout členy typu z jednoho typu na jiný
 
-Pomocí **Návrhář tříd**můžete přesunout člena typu z jednoho typu na jiný typ. Oba typy musí být viditelné v aktuálním diagramu tříd.
+Pomocí **Návrhář tříd** můžete přesunout člena typu z jednoho typu na jiný typ. Oba typy musí být viditelné v aktuálním diagramu tříd.
 
 1. V typu, který je viditelný na návrhové ploše, klikněte pravým tlačítkem na člen, který chcete přesunout na jiný typ, a pak vyberte **Vyjmout**.
 

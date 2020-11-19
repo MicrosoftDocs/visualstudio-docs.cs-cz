@@ -1,5 +1,7 @@
 ---
 title: VSTemplate – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o elementu VSTemplate a o tom, jak obsahuje všechna metadata o šabloně projektu, šabloně položky nebo úvodní sadě.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,17 +15,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 651e8b6dbbe11c450b105f3185e7e987bb30da9b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 973e2ede7e97d1e7710e6571d520be3d8919b9d9
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697868"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903478"
 ---
 # <a name="vstemplate-element-visual-studio-templates"></a>VSTemplate – element (šablony sady Visual Studio)
 Obsahuje všechna metadata o šabloně projektu, šabloně položky nebo úvodní sadě.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```csharp
 <VSTemplate Type="TemplateType" Version="x.x.x">

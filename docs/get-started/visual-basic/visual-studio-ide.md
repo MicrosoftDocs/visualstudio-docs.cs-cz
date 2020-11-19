@@ -1,8 +1,11 @@
 ---
 title: Přehled Visual Basic vývojářů
+description: Přečtěte si, jak pomocí sady Visual Studio upravovat, ladit a sestavovat kód a pak publikovat aplikace jako vývojář Visual Basic.
 ms.date: 11/15/2018
 ms.technology: vs-ide-general
-ms.custom: get-started
+ms.custom:
+- get-started
+- SEO-VS-2020
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
@@ -11,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9938d017d683fd27a3f303824f9568a3876c2c4d
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 990bff2832f290987ed29fd48b69f4d7a1a05bba
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928040"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901567"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio | Visual Basic
 
@@ -235,9 +238,9 @@ Postup pro změnu na **tmavý** motiv:
 
 ::: moniker-end
 
-2. V panelu nabídek **Tools**  >  otevřete dialogové okno **Možnosti** výběrem**Možnosti** nástroje.
+2. V panelu nabídek **Tools**  >  otevřete dialogové okno **Možnosti** výběrem **Možnosti** nástroje.
 
-3. Na stránce **Environment**  >  **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavý**a pak zvolte **OK**.
+3. Na stránce **Environment**  >  **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavý** a pak zvolte **OK**.
 
    ![Změnit barevný motiv na tmavý v aplikaci Visual Studio](media/change-color-theme.png)
 
@@ -261,11 +264,11 @@ Teď nakonfigurujeme Visual Studio tak, aby používalo nastavení prostředí, 
 
 1. Na řádku nabídek klikněte na **nástroje**  >  **importovat a exportovat nastavení**.
 
-2. V **Průvodci importem a exportem nastavení**vyberte **Obnovit všechna nastavení** na první stránce a pak zvolte **Další**.
+2. V **Průvodci importem a exportem nastavení** vyberte **Obnovit všechna nastavení** na první stránce a pak zvolte **Další**.
 
 3. Na stránce **Uložit aktuální nastavení** vyberte možnost pro uložení aktuálního nastavení, nebo ne, a poté klikněte na tlačítko **Další**. (Pokud jste nepřizpůsobili žádné nastavení, vyberte možnost **Ne, pouze resetovat nastavení a přepsat aktuální nastavení**.)
 
-4. Na stránce **Výběr výchozí kolekce nastavení** zvolte **Visual Basic**a pak zvolte **Dokončit**.
+4. Na stránce **Výběr výchozí kolekce nastavení** zvolte **Visual Basic** a pak zvolte **Dokončit**.
 
 5. Na stránce **obnovení dokončena** klikněte na tlačítko **Zavřít**.
 
@@ -281,9 +284,9 @@ Pojďme se podrobně a vytvořit jednoduchý program.
 
    ![Soubor > nový projekt na řádku nabídek](media/file-new-project-menu.png)
 
-   Dialogové okno **Nový projekt** ukazuje několik *šablon*projektů. Šablona obsahuje základní soubory a nastavení potřebná pro daný typ projektu.
+   Dialogové okno **Nový projekt** ukazuje několik *šablon* projektů. Šablona obsahuje základní soubory a nastavení potřebná pro daný typ projektu.
 
-1. Zvolte kategorii **.NET Core** v části **Visual Basic**a pak zvolte šablonu **Konzolová aplikace (.NET Core)** . Do textového pole **název** zadejte **HelloWorld**a pak klikněte na tlačítko **OK** .
+1. Zvolte kategorii **.NET Core** v části **Visual Basic** a pak zvolte šablonu **Konzolová aplikace (.NET Core)** . Do textového pole **název** zadejte **HelloWorld** a pak klikněte na tlačítko **OK** .
 
    ![Šablona aplikace .NET Core](media/overview-npd.png)
 
@@ -345,7 +348,7 @@ Pojďme se podrobně a vytvořit jednoduchý program.
 
    ![Soubor > nový projekt na řádku nabídek](media/vs-2019/file-new-project.png)
 
-   Otevře se okno **vytvořit nový projekt** a zobrazí se několik *šablon*projektů. Šablona obsahuje základní soubory a nastavení potřebná pro daný typ projektu.
+   Otevře se okno **vytvořit nový projekt** a zobrazí se několik *šablon* projektů. Šablona obsahuje základní soubory a nastavení potřebná pro daný typ projektu.
 
 1. Pokud chcete najít požadovanou šablonu, zadejte nebo zadejte do vyhledávacího pole **konzolu .NET Core** . Seznam šablon, které jsou k dispozici, se automaticky filtruje na základě klíčových slov, která jste zadali. Výsledky šablony můžete dál filtrovat volbou **Visual Basic** v rozevíracím seznamu **jazyk** .
 
@@ -375,7 +378,7 @@ Pojďme se podrobně a vytvořit jednoduchý program.
 
    Visual Studio sestaví aplikaci a otevře se okno konzoly se zprávou **Hello World!**. Teď máte spuštěnou aplikaci.
 
-   ![Okno konzoly](../media/vs-2019/overview-console-window.png)
+   ![Snímek obrazovky okna konzoly znázorňující Hello Worldovou zprávu](../media/vs-2019/overview-console-window.png)
 
 1. Okno konzoly zavřete stisknutím libovolné klávesy na klávesnici.
 
@@ -400,7 +403,7 @@ Pojďme se podrobně a vytvořit jednoduchý program.
 
 1. Do okna konzoly zadejte své jméno a stiskněte klávesu **ENTER**.
 
-   ![Okno konzoly](../media/vs-2019/overview-console-input.png)
+   ![Snímek obrazovky okna konzoly s informacemi o tom, jaká je vaše otázka na jméno a odpověď aplikace](../media/vs-2019/overview-console-input.png)
 
 1. Stisknutím libovolné klávesy zavřete okno konzoly a zastavte spuštěný program.
 

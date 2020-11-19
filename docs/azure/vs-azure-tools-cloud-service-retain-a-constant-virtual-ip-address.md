@@ -4,17 +4,16 @@ description: Naučte se, jak zajistit, aby se virtuální IP adresa (VIP) cloudo
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
-assetId: 4a58e2c6-7a79-4051-8a2c-99182ff8b881
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 95d6a695c31dc62bbe12c2e7aec217aeac8403d8
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 08473bc03e1e8b7a6882d83b7f1770403186e58a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399836"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902543"
 ---
 # <a name="retain-a-constant-virtual-ip-address-for-an-azure-cloud-service"></a>Zachování konstantní virtuální IP adresy cloudové služby Azure
 Když aktualizujete cloudovou službu, která je hostovaná v Azure, možná budete muset zajistit, aby se virtuální IP adresa (VIP) služby nezměnila. Mnoho služeb správy domény používá k registraci názvů domén systém DNS (Domain Name System). Služba DNS funguje jenom v případě, že VIP zůstane stejná. Pomocí **Průvodce publikováním** v nástrojích Azure můžete zajistit, aby se virtuální IP adresa vaší cloudové služby při aktualizaci nezměnila. Další informace o tom, jak používat službu Správa domén DNS pro cloudové služby, najdete v tématu [Konfigurace vlastního názvu domény pro cloudovou službu Azure](/azure/cloud-services/cloud-services-custom-domain-name-portal).
@@ -22,7 +21,7 @@ Když aktualizujete cloudovou službu, která je hostovaná v Azure, možná bud
 ## <a name="publish-a-cloud-service-without-changing-its-vip"></a>Publikování cloudové služby beze změny její virtuální IP adresy
 Virtuální IP adresa cloudové služby se přidělí při prvním nasazení do Azure v konkrétním prostředí, například v produkčním prostředí. VIP se mění jenom v případě, že nasazení odstraníte explicitně nebo se nasazení implicitně odstraní procesem aktualizace nasazení. Chcete-li zachovat virtuální IP adresy, nesmíte odstranit nasazení a je nutné zajistit, aby aplikace Visual Studio automaticky neodstranila nasazení.
 
-Nastavení nasazení můžete zadat v **Průvodci publikováním** , který podporuje několik možností nasazení. Můžete zadat nové nasazení nebo nasazení aktualizace, které může být přírůstkové nebo souběžné. V obou druzích nasazení aktualizace se virtuální IP adresa uchovává. Definice těchto různých typů nasazení najdete v tématu [Průvodce publikováním aplikace Azure](vs-azure-tools-publish-azure-application-wizard.md). Kromě toho můžete řídit, jestli se při výskytu chyby odstraní předchozí nasazení cloudové služby. Pokud tuto možnost nenastavíte správně, může se stát, že se virtuální IP adresa neočekávaně změní.
+Nastavení nasazení můžete zadat v **Průvodci publikováním**, který podporuje několik možností nasazení. Můžete zadat nové nasazení nebo nasazení aktualizace, které může být přírůstkové nebo souběžné. V obou druzích nasazení aktualizace se virtuální IP adresa uchovává. Definice těchto různých typů nasazení najdete v tématu [Průvodce publikováním aplikace Azure](vs-azure-tools-publish-azure-application-wizard.md). Kromě toho můžete řídit, jestli se při výskytu chyby odstraní předchozí nasazení cloudové služby. Pokud tuto možnost nenastavíte správně, může se stát, že se virtuální IP adresa neočekávaně změní.
 
 ## <a name="update-a-cloud-service-without-changing-its-vip"></a>Aktualizace cloudové služby beze změny její virtuální IP adresy
 1. Vytvořte nebo otevřete projekt cloudové služby Azure v aplikaci Visual Studio.
@@ -35,7 +34,7 @@ Nastavení nasazení můžete zadat v **Průvodci publikováním** , který podp
 
     ![Publikovat přihlašovací stránku aplikace Azure](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-signin.png)
 
-4. Na kartě **běžné nastavení** ověřte správnost názvu cloudové služby, do které nasazujete, **prostředí** , **konfigurace sestavení** a **Konfigurace služby** .
+4. Na kartě **běžné nastavení** ověřte správnost názvu cloudové služby, do které nasazujete, **prostředí**, **konfigurace sestavení** a **Konfigurace služby** .
 
     ![Karta pro publikování Common Settings aplikace Azure](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-common-settings.png)
 

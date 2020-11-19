@@ -4,17 +4,16 @@ ms.custom: SEO-VS-2020
 description: Naučte se ladit cloudovou službu pomocí sady Visual Studio a IntelliTrace
 author: mikejo5000
 manager: jillfra
-ms.assetid: 5e6662fc-b917-43ea-bf2b-4f2fc3d213dc
 ms.topic: how-to
 ms.workload: azure-vs
 ms.date: 03/21/2017
 ms.author: mikejo
-ms.openlocfilehash: b89ed536e6483f54d4d7370a02935728dedfb517
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: abfe3de9bad150fbfb187646592218e62c1cce20
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809817"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902412"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>Ladění publikované cloudové služby Azure pomocí sady Visual Studio a nástroje IntelliTrace
 Pomocí IntelliTrace můžete protokolovat rozsáhlé ladicí informace pro instanci role, když běží v Azure. Pokud potřebujete najít příčinu problému, můžete pomocí protokolů IntelliTrace Procházet kód ze sady Visual Studio, jako kdyby běžel v Azure. V důsledku toho IntelliTrace zaznamenává provádění kódu klíče a data prostředí, když je vaše aplikace Azure spuštěná jako cloudová služba v Azure a umožňuje přehrajte zaznamenaná data ze sady Visual Studio.
@@ -32,7 +31,7 @@ Pokud chcete povolit IntelliTrace pro aplikaci Azure, musíte vytvořit a publik
 
 1. Až budete připraveni k nasazení aplikace Azure, ověřte, že cíle sestavení projektu jsou nastavené na **ladění**.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte **publikovat**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte **publikovat**.
 
 1. V dialogovém okně **publikovat aplikaci Azure** vyberte předplatné Azure a **pak vyberte další**.
 
@@ -57,7 +56,7 @@ Po publikování cloudové služby Azure do Azure můžete zjistit, jestli je In
 ## <a name="download-intellitrace-logs-for-a-role-instance"></a>Stažení protokolů IntelliTrace pro instanci role
 Pomocí sady Visual Studio můžete stáhnout protokoly IntelliTrace pro instanci role pomocí následujících kroků:
 
-1. V **Průzkumník serveru**rozbalte uzel **Cloud Services** a najděte instanci role, jejíž protokoly chcete stáhnout.
+1. V **Průzkumník serveru** rozbalte uzel **Cloud Services** a najděte instanci role, jejíž protokoly chcete stáhnout.
 
 1. Klikněte pravým tlačítkem myši na instanci role a v kontextové nabídce s vyberte **Zobrazit protokoly IntelliTrace**.
 

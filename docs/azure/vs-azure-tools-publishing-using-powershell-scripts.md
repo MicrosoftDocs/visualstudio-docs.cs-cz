@@ -4,17 +4,16 @@ description: Naučte se používat skripty prostředí Windows PowerShell ze sad
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
-assetId: 5fff1301-5469-4d97-be88-c85c30f837c1
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 0fafcd0042fce6d3f9eece8e493ee01a9a6923e5
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 97c337adabc5ce22ce92c720a3a4d776eaecf867
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407585"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902140"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Použití skriptů PowerShellu k publikování do vývojových a testovacích prostředí
 
@@ -208,7 +207,7 @@ Pokud jste nikdy nespouštěli skript prostředí Windows PowerShell, musíte ne
 
 Můžete přizpůsobit skript pro publikování a konfigurační soubor JSON. Funkce v modulu Windows PowerShell **AzureWebAppPublishModule. psm1** nejsou určeny pro úpravy. Pokud chcete pouze zadat jinou databázi nebo změnit některé z vlastností virtuálního počítače, upravte konfigurační soubor JSON. Chcete-li rozšířené funkce skriptu pro automatizaci vytváření a testování projektu, můžete implementovat zástupné procedury funkce v **Publish-WebApplication.ps1**.
 
-Chcete-li automatizovat sestavování projektu, přidejte kód, který volá MSBuild do, `New-WebDeployPackage` jak je znázorněno v tomto příkladu kódu. Cesta k příkazu MSBuild se liší v závislosti na verzi sady Visual Studio, kterou jste nainstalovali. Chcete-li získat správnou cestu, můžete použít funkci **Get-MSBuildCmd** , jak je znázorněno v tomto příkladu.
+Chcete-li automatizovat sestavování projektu, přidejte kód, který volá MSBuild do, `New-WebDeployPackage` jak je znázorněno v tomto příkladu kódu. Cesta k příkazu MSBuild se liší v závislosti na verzi sady Visual Studio, kterou jste nainstalovali. Chcete-li získat správnou cestu, můžete použít funkci **Get-MSBuildCmd**, jak je znázorněno v tomto příkladu.
 
 ### <a name="to-automate-building-your-project"></a>Automatizace sestavení projektu
 
@@ -322,7 +321,7 @@ Nápovědu k funkcím, které můžete použít na příkazovém řádku prostř
 | Find-AzureVM |Načte zadaný virtuální počítač Azure. |
 | Format-DevTestMessageWithTime |Dořadí datum a čas do zprávy. Tato funkce je navržena pro zprávy zapsané do chyby a podrobné datové proudy. |
 | Get-AzureSQLDatabaseConnectionString |Sestaví připojovací řetězec pro připojení k databázi SQL Azure. |
-| Get-AzureVMStorage |Vrátí název prvního účtu úložiště se vzorem názvu "DevTest *" (bez rozlišení malých a velkých písmen) v zadaném umístění nebo skupině vztahů. Pokud účet úložiště "DevTest* " neodpovídá umístění nebo skupině vztahů, funkce ho ignoruje. Zadejte buď umístění, nebo skupinu vztahů. |
+| Get-AzureVMStorage |Vrátí název prvního účtu úložiště se vzorem názvu "DevTest *" (bez rozlišení malých a velkých písmen) v zadaném umístění nebo skupině vztahů. Pokud účet úložiště "DevTest*" neodpovídá umístění nebo skupině vztahů, funkce ho ignoruje. Zadejte buď umístění, nebo skupinu vztahů. |
 | Get-MSDeployCmd |Vrátí příkaz pro spuštění nástroje MsDeploy.exe. |
 | New-AzureVMEnvironment |Najde nebo vytvoří v předplatném virtuální počítač, který odpovídá hodnotám v konfiguračním souboru JSON. |
 | Publish-WebPackage |Používá MsDeploy.exe a webový balíček pro publikování. Soubor zip k nasazení prostředků na web. Tato funkce negeneruje žádný výstup. Pokud volání MSDeploy.exe selžou, funkce vyvolá výjimku. Chcete-li získat podrobnější výstup, použijte možnost **-verbose** . |
@@ -334,8 +333,8 @@ Nápovědu k funkcím, které můžete použít na příkazovém řádku prostř
 | Test-HttpsUrl |Převede vstupní adresu URL na objekt System. URI. Vrátí `$True` , zda je adresa URL absolutní a její schéma je HTTPS. Vrátí `$false` , zda je adresa URL relativní, její schéma není https, nebo vstupní řetězec nelze převést na adresu URL. |
 | Test-Member |Vrátí, `$true` zda je vlastnost nebo metoda členem objektu. V opačném případě vrátí `$false` . |
 | Write-ErrorWithTime |Zapíše chybovou zprávu s aktuálním časem. Tato funkce volá funkci **Format-DevTestMessageWithTime** , aby předpsala čas před zápisem zprávy do datového proudu chyb. |
-| Write-HostWithTime |Zapíše zprávu do hostitelského programu ( **Write-Host** ) s aktuálním časem. Účinek psaní do hostitelského programu se liší. Většina programů, které hostují Windows PowerShell, zapíše tyto zprávy do standardního výstupu. |
-| Write-VerboseWithTime |Zapíše podrobnou zprávu s aktuálním časem. Vzhledem k tomu, že volá metodu **Write-verbose** , zpráva se zobrazí pouze v případě, že se skript spustí s parametrem **verbose** nebo pokud je nastavená předvolby **VerbosePreference** na **pokračovat**. |
+| Write-HostWithTime |Zapíše zprávu do hostitelského programu (**Write-Host**) s aktuálním časem. Účinek psaní do hostitelského programu se liší. Většina programů, které hostují Windows PowerShell, zapíše tyto zprávy do standardního výstupu. |
+| Write-VerboseWithTime |Zapíše podrobnou zprávu s aktuálním časem. Vzhledem k tomu, že volá metodu **Write-verbose**, zpráva se zobrazí pouze v případě, že se skript spustí s parametrem **verbose** nebo pokud je nastavená předvolby **VerbosePreference** na **pokračovat**. |
 
 **Publikování – WebApplication**
 

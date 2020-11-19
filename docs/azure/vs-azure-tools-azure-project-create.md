@@ -3,17 +3,16 @@ title: Vytvoření projektu cloudové služby Azure
 description: Naučte se vytvořit projekt cloudové služby Azure se sadou Visual Studio
 author: ghogen
 manager: jillfra
-assetId: ec580df7-3dcc-45a9-a1d9-8c110678dfb5
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/19/2019
 ms.author: ghogen
-ms.openlocfilehash: 1fd554a397c6db3bb1f1d5beb2fc12c0423aed22
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 667d3a0a4e4642c348f6a0dd6663a30fcf704d14
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399751"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902789"
 ---
 # <a name="create-an-azure-cloud-service-project-with-visual-studio"></a>Vytvoření projektu cloudové služby Azure v sadě Visual Studio
 
@@ -53,11 +52,11 @@ V této části se seznámíte s vytvořením projektu cloudové služby Azure v
 
     ![Vyberte nové role Azure Cloud Service.](./media/vs-azure-tools-azure-project-create/new-cloud-service.png)
 
-1. Pokud chcete přejmenovat přidanou roli, najeďte na ni v dialogovém okně **nový Microsoft Azure cloudová služba** a v místní nabídce vyberte **Přejmenovat**. Můžete také přejmenovat roli v rámci řešení (v **Průzkumník řešení** ) po jejím přidání.
+1. Pokud chcete přejmenovat přidanou roli, najeďte na ni v dialogovém okně **nový Microsoft Azure cloudová služba** a v místní nabídce vyberte **Přejmenovat**. Můžete také přejmenovat roli v rámci řešení (v **Průzkumník řešení**) po jejím přidání.
 
     ![Přejmenování role cloudové služby Azure](./media/vs-azure-tools-azure-project-create/new-cloud-service-rename.png)
 
-Projekt aplikace Visual Studio Azure obsahuje přidružení k projektům rolí v řešení. Projekt obsahuje také *soubor definice služby* a *konfigurační soubor služby* :
+Projekt aplikace Visual Studio Azure obsahuje přidružení k projektům rolí v řešení. Projekt obsahuje také *soubor definice služby* a *konfigurační soubor služby*:
 
 - **Definiční soubor služby** – definuje nastavení modulu runtime pro vaši aplikaci, včetně toho, jaké role jsou povinné, koncové body a velikost virtuálního počítače.
 - **Konfigurační soubor služby** – konfiguruje, kolik instancí role se spouští, a hodnoty nastavení definované pro roli.

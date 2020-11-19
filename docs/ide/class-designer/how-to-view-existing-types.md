@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Zobrazení existujících typů (návrhář tříd)'
+description: Naučte se, jak zobrazit existující typ a jeho členy přidáním jejího tvaru do diagramu tříd.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa27489844bc59bc0d4da32440cc1caa74ecbea6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6b4660c4efc7c22431b7c9f0d9180576d524a372
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770013"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901164"
 ---
 # <a name="how-to-view-existing-types-in-class-designer"></a>Postupy: zobrazení existujících typů v Návrhář tříd
 
@@ -31,9 +33,9 @@ Chcete-li navrhnout nové typy v diagramech tříd, přečtěte si téma [Postup
 
 ## <a name="to-see-types-in-a-project-on-a-class-diagram"></a>Zobrazení typů v projektu v diagramu tříd
 
-1. Z projektu v **Průzkumník řešení**otevřete existující soubor diagramu tříd (. CD). Nebo pokud neexistuje žádný diagram tříd, přidejte do projektu nový diagram tříd. Viz [Postupy: Přidání diagramů tříd do projektů](how-to-add-class-diagrams-to-projects.md).
+1. Z projektu v **Průzkumník řešení** otevřete existující soubor diagramu tříd (. CD). Nebo pokud neexistuje žádný diagram tříd, přidejte do projektu nový diagram tříd. Viz [Postupy: Přidání diagramů tříd do projektů](how-to-add-class-diagrams-to-projects.md).
 
-2. Z projektu v **Průzkumník řešení**přetáhněte soubor zdrojového kódu do diagramu tříd.
+2. Z projektu v **Průzkumník řešení** přetáhněte soubor zdrojového kódu do diagramu tříd.
 
     > [!NOTE]
     > Pokud má vaše řešení projekt, který sdílí kód napříč více aplikacemi, můžete přetáhnout soubory nebo kód do diagramu tříd pouze z těchto zdrojů:
@@ -59,7 +61,7 @@ Při prvním zobrazení typu v diagramu se jeho tvar ve výchozím nastavení zo
 
 ### <a name="to-display-the-contents-of-a-project-in-a-class-diagram"></a>Zobrazení obsahu projektu v diagramu tříd
 
-V **Průzkumník řešení** nebo **zobrazení tříd**klikněte pravým tlačítkem myši na projekt a zvolte možnost **Zobrazit**a pak zvolte možnost **Zobrazit diagram tříd**. Vytvoří se automaticky vyplněný diagram tříd.
+V **Průzkumník řešení** nebo **zobrazení tříd** klikněte pravým tlačítkem myši na projekt a zvolte možnost **Zobrazit** a pak zvolte možnost **Zobrazit diagram tříd**. Vytvoří se automaticky vyplněný diagram tříd.
 
 ## <a name="see-also"></a>Viz také
 

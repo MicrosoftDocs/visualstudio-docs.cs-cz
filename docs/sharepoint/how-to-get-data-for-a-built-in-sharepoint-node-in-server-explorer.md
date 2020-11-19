@@ -1,6 +1,8 @@
 ---
 title: Získat data pro integrovaný uzel služby SharePoint v Průzkumník serveru
 titleSuffix: ''
+description: Získat data pro základní komponentu služby SharePoint integrovaného uzlu služby SharePoint v Průzkumník serverum okně sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7649092cc21fcc7b861f4ddf630007bde896e852
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 3a975374b82b10c0e29d74bcf68d7bce3225a967
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585768"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903517"
 ---
 # <a name="how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer"></a>Postupy: získání dat pro předdefinovaný uzel služby SharePoint v Průzkumník serveru
-  Pro každý integrovaný uzel služby SharePoint v **Průzkumník serveru**můžete získat data pro základní komponentu služby SharePoint, kterou uzel představuje. Další informace najdete v tématu věnovaném [rozšiřování uzlu připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
+  Pro každý integrovaný uzel služby SharePoint v **Průzkumník serveru** můžete získat data pro základní komponentu služby SharePoint, kterou uzel představuje. Další informace najdete v tématu věnovaném [rozšiřování uzlu připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
 ## <a name="example"></a>Příklad
  Následující příklad kódu ukazuje, jak získat data pro základní SharePointový seznam, který uzel seznamu představuje v **Průzkumník serveru**. Ve výchozím nastavení mají uzly seznam uzlů **zobrazení v** kontextové nabídce prohlížeče, na které můžete kliknout a otevřít seznamy ve webovém prohlížeči. Tento příklad rozšiřuje seznam uzlů přidáním **zobrazení v místní nabídce aplikace Visual Studio** , která otevře seznamy přímo v aplikaci Visual Studio. Kód přistupuje k datům seznamu uzlu, aby získal adresu URL seznamu, který se má otevřít v aplikaci Visual Studio.

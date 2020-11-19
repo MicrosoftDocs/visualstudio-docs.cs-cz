@@ -3,17 +3,16 @@ title: Optimalizace kódu Azure
 description: Přečtěte si, jak nástroje pro optimalizaci kódu Azure v aplikaci Visual Studio pomůžou zajistit robustnější a lepší výkon kódu.
 author: ghogen
 manager: jillfra
-ms.assetid: ed48ee06-e2d2-4322-af22-07200fb16987
 ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 853b51fb5990d74a79f76cc55743ff9ba50f282e
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 5ae141c4ecdf5cfe1819ba2f47aac45f1763fa34
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399776"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902295"
 ---
 # <a name="optimizing-your-azure-code"></a>Optimalizace kódu Azure
 Při programování aplikací, které používají Microsoft Azure, je třeba dodržovat některé postupy kódování, které vám pomohou zabránit problémům s škálovatelností aplikace, chováním a výkonem v cloudovém prostředí. Microsoft poskytuje nástroj pro analýzu kódu Azure, který rozpozná a identifikuje několik těchto běžně zjištěných problémů a pomůže vám je vyřešit. Nástroj si můžete stáhnout v aplikaci Visual Studio prostřednictvím NuGet.
@@ -119,7 +118,7 @@ Aby nedocházelo k tomu **, že volání metody "** Receive", je lepším řeše
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
 
 ### <a name="reason"></a>Důvod
-Při volání **metody** "klient spustí interní čerpadlo zpráv, které se neustále dotazuje na frontu nebo odběr. Toto čerpadlo zpráv obsahuje nekonečnou smyčku, která vydává volání pro příjem zpráv. Pokud vyprší časový limit volání, vydá nové volání. Interval časového limitu je určen hodnotou vlastnosti [OperationTimeout](/dotnet/api/microsoft.servicebus.messaging.messagingfactorysettings) [MessagingFactory](/dotnet/api/microsoft.servicebus.messaging.messagingfactory), která je používána.
+Při volání **metody**"klient spustí interní čerpadlo zpráv, které se neustále dotazuje na frontu nebo odběr. Toto čerpadlo zpráv obsahuje nekonečnou smyčku, která vydává volání pro příjem zpráv. Pokud vyprší časový limit volání, vydá nové volání. Interval časového limitu je určen hodnotou vlastnosti [OperationTimeout](/dotnet/api/microsoft.servicebus.messaging.messagingfactorysettings) [MessagingFactory](/dotnet/api/microsoft.servicebus.messaging.messagingfactory), která je používána.
 
 Výhodou použití rutiny **informování** v porovnání s **příjmem** je, že uživatelé nemusejí provádět ruční dotazování na zprávy, zpracovávat výjimky, zpracovávat paralelní zpracování více zpráv a doplňovat zprávy.
 

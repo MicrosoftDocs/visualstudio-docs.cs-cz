@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Úprava konfigurace nasazení služby SharePoint | Microsoft Docs'
+description: Zjistěte, jak vytvořit konfiguraci nasazení služby SharePoint nebo upravit existující konfiguraci nasazení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 74f6377bad0f62aa2c470e72afe64b85b3017ee6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e64f805496d03b42ca70489bab1302ecf58b33bc
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016775"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903556"
 ---
 # <a name="how-to-edit-a-sharepoint-deployment-configuration"></a>Postupy: Úprava konfigurace nasazení služby SharePoint
   Můžete vytvořit konfiguraci nasazení nebo upravit existující konfiguraci nasazení. Můžete například spustit jeden krok nebo změnit pořadí kroků v procesu nasazení. Konfigurace nasazení možná budete chtít vytvořit nebo upravit, protože předdefinované a programově přidané konfigurace nelze změnit.
@@ -28,7 +30,7 @@ ms.locfileid: "86016775"
 
 #### <a name="to-create-a-sharepoint-deployment-configuration"></a>Vytvoření konfigurace nasazení služby SharePoint
 
-1. V **Průzkumník řešení**zvolte projekt služby SharePoint a potom v řádku nabídek zvolte **projekt**,**vlastnosti** _ProjectName_.
+1. V **Průzkumník řešení** zvolte projekt služby SharePoint a potom v řádku nabídek zvolte **projekt**,**vlastnosti** _ProjectName_.
 
 2. Na kartě **SharePoint** klikněte na tlačítko **Nový** .
 
@@ -45,7 +47,7 @@ ms.locfileid: "86016775"
 
 #### <a name="to-change-the-active-deployment-configuration"></a>Změna aktivního nastavení nasazení
 
-1. V **Průzkumník řešení**zvolte projekt služby SharePoint a poté v panelu nabídky zvolte možnost **Project**  >  ** \<*ProjectName*> vlastnosti**projektu.
+1. V **Průzkumník řešení** zvolte projekt služby SharePoint a poté v panelu nabídky zvolte možnost **Project**  >  **\<*ProjectName*> vlastnosti** projektu.
 
 2. Vyberte kartu **služby SharePoint** .
 

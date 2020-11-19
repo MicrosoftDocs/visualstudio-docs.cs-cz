@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Definice dědičnosti mezi typy (Návrhář tříd)'
+description: Naučte se vytvořit vztah dědičnosti mezi dvěma typy v diagramu tříd pomocí Návrhář tříd.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1ffae72a3fe171b6bd16cfbc623a777f4d4d2e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 199f220529b28d4ca0c668d30564da65f6553e0e
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770204"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901463"
 ---
 # <a name="how-to-create-inheritance-between-types-in-class-designer"></a>Postupy: vytvoření dědičnosti mezi typy v Návrhář tříd
 
@@ -26,11 +28,11 @@ Chcete-li vytvořit vztah dědičnosti mezi dvěma typy v diagramu tříd pomoc�
 
 ## <a name="to-create-an-inheritance-between-types"></a>Vytvoření dědičnosti mezi typy
 
-1. Z projektu v **Průzkumník řešení**otevřete soubor diagramu tříd (. CD).
+1. Z projektu v **Průzkumník řešení** otevřete soubor diagramu tříd (. CD).
 
      Pokud nemáte diagram tříd, vytvořte jej. Viz [Postupy: Přidání diagramů tříd do projektů](how-to-add-class-diagrams-to-projects.md).
 
-2. V **soupravě nástrojů**v části **Návrhář tříd**klikněte na **Dědičnost**.
+2. V **soupravě nástrojů** v části **Návrhář tříd** klikněte na **Dědičnost**.
 
 3. V diagramu tříd nakreslete čáru dědičnosti mezi typy, které chcete, od:
 

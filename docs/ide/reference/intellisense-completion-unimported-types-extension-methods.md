@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3eb912ebb4d8d7d4596a6aae6499ac054d4514ca
-ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
+ms.openlocfilehash: d2ac806b4a83b23a783c59eeee5df801c9237685
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93102503"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94900917"
 ---
 # <a name="intellisense-completion-for-unimported-types-and-extension-methods"></a>Dokončení technologie IntelliSense pro neimportované typy a metody rozšíření
 
@@ -38,7 +38,7 @@ Tento refaktoring platí pro:
 1. Po zahájení psaní názvu typu nebo metody rozšíření, která má závislost v projektu, vám IntelliSense nabídne návrhy. Položky z neimportovaných oborů názvů budou mít svůj obor názvů, který je zobrazen jako přípona.
 
    > [!TIP]
-   > Můžete zobrazit nebo skrýt položky z neimportovaných oborů názvů na vyžádání pomocí **rozbalovacího tlačítka (ALT + A)** , které se zobrazí v levém dolním rohu seznamu dokončení. Chcete-li změnit výchozí chování, přejděte do části **nástroje**  >  **Možnosti**  >  **textový editor**  >  **C#**  /  **základní**  >  **IntelliSense** a vyhledejte **položku Zobrazit položky z neimportované obory názvů** .
+   > Můžete zobrazit nebo skrýt položky z neimportovaných oborů názvů na vyžádání pomocí **rozbalovacího tlačítka (ALT + A)** , které se zobrazí v levém dolním rohu seznamu dokončení. Chcete-li změnit výchozí chování, přejděte do části **nástroje**  >  **Možnosti**  >  **textový editor**  >  **C#**  /  **základní**  >  **IntelliSense** a vyhledejte **položku Zobrazit položky z neimportované obory názvů**.
 
 2. Vyberte a potvrďte neimportované položky.
 

@@ -3,18 +3,17 @@ title: Přidání Azure Storage pomocí připojených služeb | Microsoft Docs
 description: Přidání závislosti služby Azure Storage do aplikace pomocí připojených služeb sady Visual Studio
 author: ghogen
 manager: jillfra
-assetId: 521ec044-ad4b-4828-8864-01decde2e758
 ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 08/13/2020
 ms.author: ghogen
-ms.openlocfilehash: f2f55a149420205435d9f64ea1f66c8c6854ec38
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d169940d6deffdf67bcbcb94e9f647631d0f606a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800512"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902633"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Přidání služby Azure Storage pomocí připojených služeb sady Visual Studio
 
@@ -22,7 +21,7 @@ Pomocí sady Visual Studio můžete pomocí funkce **připojené služby** přip
 
 - .NET Framework Konzolová aplikace
 - ASP.NET MVC (.NET Framework)
-- Jádro ASP.NET
+- ASP.NET Core
 - .NET Core (včetně konzolové aplikace, WPF, model Windows Forms, knihovny tříd)
 - Role pracovního procesu .NET Core
 - Azure Functions
@@ -45,7 +44,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
 1. Otevřete svůj projekt v sadě Visual Studio.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
 
     ![Přidat připojenou službu Azure](./media/vs-azure-tools-connected-services-storage/add-connected-service.png)
 
@@ -76,7 +75,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
 1. Otevřete svůj projekt v sadě Visual Studio.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
 
     ![Přidat připojenou službu Azure](./media/vs-azure-tools-connected-services-storage/vs-2019/add-connected-service.png)
 

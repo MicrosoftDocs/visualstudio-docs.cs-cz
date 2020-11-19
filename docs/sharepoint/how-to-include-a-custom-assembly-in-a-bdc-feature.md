@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Zahrnutí vlastního sestavení ve funkci BDC | Microsoft Docs'
+description: Zahrňte vlastní sestavení do funkce připojení obchodních dat (BDC), aby váš projekt mohl odkazovat na sestavení z jiných projektů ve stejném řešení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,19 +19,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 79336e241b822e5fa9f84dbb771aa4187ea5eadb
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: e7a2a0109faca4da5406b45b4d606ae8a5cd0685
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740068"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903465"
 ---
 # <a name="how-to-include-a-custom-assembly-in-a-bdc-feature"></a>Postupy: Zahrnutí vlastního sestavení ve funkci BDC
   Projekt může odkazovat na sestavení z jiných projektů ve stejném řešení. Je však nutné přidat tato sestavení do souboru funkce projektu pomocí dialogového okna **Přiřadit odkazovaná sestavení k LobSystems** .
 
 ### <a name="to-include-a-custom-assembly-in-a-business-data-connectivity-bdc-feature"></a>Zahrnutí vlastního sestavení do funkce připojení obchodních dat (BDC)
 
-1. V **Průzkumník řešení**vyberte složku, která obsahuje model služby BDC.
+1. V **Průzkumník řešení** vyberte složku, která obsahuje model služby BDC.
 
 2. V nabídce **zobrazení** klikněte na položku **Vlastnosti okno**.
 

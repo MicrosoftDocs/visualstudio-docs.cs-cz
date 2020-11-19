@@ -1,5 +1,7 @@
 ---
 title: Doporučené postupy pro používání fragmentů kódu
+description: Přečtěte si o fragmentech kódu, o tom, co je záměr fragmentu kódu, a jak to nejlépe vyhovuje vaší aplikaci.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08add20b59e3e14897d1870aa45fd6cce8698d96
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f54a451bea8345d06073e6f3a8ab944b3c7ea820
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591707"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903140"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>Osvědčené postupy pro používání fragmentů kódu
 
@@ -31,7 +33,7 @@ Při přizpůsobování umístění souborů k aplikaci byste měli zvážit ná
 
 - Hledání přístupného umístění. Uživatelé nemusí mít přístup ke složce *Program Files* v počítači, takže ukládání souborů se soubory aplikace nemusí fungovat.
 
-- Hledání zabezpečeného umístění. Ukládání souborů do kořenové složky (*C: \\ *) není zabezpečené. Pro data aplikací doporučujeme složku *Application data* . Pro jednotlivá uživatelská data může aplikace vytvořit soubor pro každého uživatele ve složce *dokumenty* .
+- Hledání zabezpečeného umístění. Ukládání souborů do kořenové složky (*C: \\*) není zabezpečené. Pro data aplikací doporučujeme složku *Application data* . Pro jednotlivá uživatelská data může aplikace vytvořit soubor pro každého uživatele ve složce *dokumenty* .
 
 - Použijte platný název souboru. Pomocí <xref:System.Windows.Forms.OpenFileDialog> ovládacích prvků a můžete <xref:System.Windows.Forms.SaveFileDialog> snížit pravděpodobnost neplatných názvů souborů. Uvědomte si, že mezi časem, kdy uživatel vybere soubor, a časem, kdy kód zpracovává soubor, je možné soubor odstranit. Kromě toho uživatel nemusí mít oprávnění k zápisu do souboru.
 

@@ -4,17 +4,16 @@ description: Naučte se migrovat a publikovat webovou aplikaci do cloudové slu�
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
-ms.assetid: 9394adfd-a645-4664-9354-dd5df08e8c91
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: eb87aff7bf4ca1e3eac359b27a4280877eaefc50
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: c9d689ddca7b6f1b0c02f89c7afb82392e8a58af
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399816"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902347"
 ---
 # <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>Postupy: migrace a publikování webové aplikace do cloudové služby Azure ze sady Visual Studio
 

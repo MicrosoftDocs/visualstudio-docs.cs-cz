@@ -3,17 +3,16 @@ title: Správa prostředků Azure pomocí Průzkumníka cloudu | Microsoft Docs
 description: Naučte se používat Průzkumníka cloudu k procházení a správě prostředků Azure v rámci sady Visual Studio.
 author: ghogen
 manager: jillfra
-assetId: 6347dc53-f497-49d5-b29b-e8b9f0e939d7
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: 12c82cca6c8873facc1a16a926d90fd0f3918c07
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: c9c2ce60b2096b6c3a4f06fad7360b1d5ea0c753
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399387"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902277"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Správa prostředků přidružených k účtům Azure v Průzkumníkovi cloudu sady Visual Studio
 

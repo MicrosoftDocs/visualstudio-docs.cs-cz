@@ -1,5 +1,7 @@
 ---
 title: Pokročilé funkce
+description: Seznamte se s pokročilými funkcemi, které by mohly být vhodnější pro zkušené vývojáře, nebo vývojářům, kteří už mají zkušenosti se sadou Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 06/01/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04c725e5bcae5d72562e767a06afdee8aa84950b
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 61109a315a7f331821527ee882dd7c019411fca3
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399250"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903296"
 ---
 # <a name="features-of-visual-studio"></a>Funkce sady Visual Studio
 
@@ -90,7 +92,7 @@ Pomocí sady Visual Studio můžete vytvářet aplikace a hry pro macOS, Linux a
 
 ## <a name="connect-to-databases"></a>Připojení k databázím
 
-**Průzkumník serveru** vám pomůže najít a spravovat SQL Server instance a prostředky místně, vzdáleně a v Azure, Salesforce.com, Microsoft 365 a websites. Chcete-li otevřít **Průzkumník serveru** , v hlavní nabídce vyberte možnost **Zobrazit**  >  **Průzkumník serveru**. Další informace o použití Průzkumník serveru naleznete v tématu [Add New Connections](../data-tools/add-new-connections.md).
+**Průzkumník serveru** vám pomůže najít a spravovat SQL Server instance a prostředky místně, vzdáleně a v Azure, Salesforce.com, Microsoft 365 a websites. Chcete-li otevřít **Průzkumník serveru**, v hlavní nabídce vyberte možnost **Zobrazit**  >  **Průzkumník serveru**. Další informace o použití Průzkumník serveru naleznete v tématu [Add New Connections](../data-tools/add-new-connections.md).
 
 [SQL Server Data Tools (SSDT)](/sql/ssdt/download-sql-server-data-tools-ssdt) je výkonné vývojové prostředí pro SQL Server, Azure SQL Database a Azure SQL Data Warehouse. Umožňuje sestavovat, ladit, udržovat a Refaktorovat databáze. Můžete pracovat s databázovým projektem nebo přímo s instancí připojené databáze v místním prostředí.
 

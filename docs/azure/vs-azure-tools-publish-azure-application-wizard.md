@@ -3,17 +3,16 @@ title: Publikování cloudové služby Azure
 description: Naučte se konfigurovat různá nastavení v Průvodci publikováním aplikace Azure v nástroji Visual Studio.
 author: ghogen
 manager: jillfra
-assetId: 7d8f1ac9-e439-47e0-a183-0642c4ea1920
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 281547356dcb8910af9426a853ceeb7e757b195d
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 87082a0d4df4542f36b1ce95cba92d261a2b4d9e
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399453"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902308"
 ---
 # <a name="using-the-visual-studio-publish-azure-application-wizard"></a>Použití průvodce publikováním aplikace Azure v sadě Visual Studio
 
@@ -78,7 +77,7 @@ Průvodce publikováním aplikace Azure můžete použít dvěma způsoby v záv
 
 **Nasazení aktualizace** – tuto možnost vyberte, pokud chcete nasadit jenom aktualizované součásti. Tento typ nasazení může být rychlejší než úplné nasazení. Tuto možnost byste měli zkontrolovat, pokud chcete zachovat konstantní virtuální IP adresu pro cloudovou službu.
 
-**Aktualizace nasazení – nastavení** – pomocí tohoto dialogového okna můžete dále určit, jak se mají role aktualizovat. Zvolíte-li možnost **přírůstková aktualizace** , každá instance aplikace je po jiné aktualizována, aby byla aplikace vždy k dispozici. Pokud zvolíte možnost **Souběžná aktualizace** , všechny instance aplikace se aktualizují ve stejnou dobu. Současná aktualizace je rychlejší, ale služba nemusí být během procesu aktualizace dostupná.
+**Aktualizace nasazení – nastavení** – pomocí tohoto dialogového okna můžete dále určit, jak se mají role aktualizovat. Zvolíte-li možnost **přírůstková aktualizace**, každá instance aplikace je po jiné aktualizována, aby byla aplikace vždy k dispozici. Pokud zvolíte možnost **Souběžná aktualizace**, všechny instance aplikace se aktualizují ve stejnou dobu. Současná aktualizace je rychlejší, ale služba nemusí být během procesu aktualizace dostupná.
 
 ![Nastavení nasazení](./media/vs-azure-tools-publish-azure-application-wizard/deployment-settings.png)
 

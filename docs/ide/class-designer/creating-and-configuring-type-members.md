@@ -1,5 +1,7 @@
 ---
 title: Vytváření a konfigurace členů typů (návrhář tříd)
+description: Naučte se, jak přidat členy do typů v diagramu tříd a nakonfigurovat tyto členy v okně podrobností třídy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -29,12 +31,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2bb65cc70bfec5e8eafc4a823d24f609166d4327
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 504488bdd08e80c34ebeed727e7b95badf12ca37
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85771050"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903011"
 ---
 # <a name="create-and-configure-type-members-in-class-designer"></a>Vytvoření a konfigurace členů typu v Návrhář tříd
 
@@ -86,7 +88,7 @@ Ve výchozím nastavení se okno **podrobností třídy** zobrazí automaticky p
 
 ### <a name="create-a-member-using-class-designer"></a>Vytvoření člena pomocí Návrhář tříd
 
-1. Klikněte pravým tlačítkem na typ, ke kterému chcete přidat člena, přejděte na **Přidat**a pak vyberte typ člena, který chcete přidat.
+1. Klikněte pravým tlačítkem na typ, ke kterému chcete přidat člena, přejděte na **Přidat** a pak vyberte typ člena, který chcete přidat.
 
      Vytvoří se nový podpis člena a přidá se k typu. Je mu přiřazen výchozí název, který lze změnit v **Návrhář tříd**, v okně **podrobností třídy** nebo v okně **vlastnosti** .
 
@@ -98,7 +100,7 @@ Ve výchozím nastavení se okno **podrobností třídy** zobrazí automaticky p
 
      Typ získá fokus a jeho obsah se zobrazí v okně **podrobností třídy** .
 
-2. Na panelu nástrojů okna **podrobností třídy** klikněte na ikonu shora a v rozevíracím seznamu vyberte **nový \<member> ** .
+2. Na panelu nástrojů okna **podrobností třídy** klikněte na ikonu shora a v rozevíracím seznamu vyberte **nový \<member>** .
 
      Kurzor se přesune do pole **název** v řádku pro druh člena, který chcete přidat. Například pokud jste klikli na možnost **Nová vlastnost**, kurzor se přesune na nový řádek v oddílu **vlastnosti** okna **podrobností třídy** .
 
@@ -131,7 +133,7 @@ V Návrháři tříd můžete upravit členy typů, které se zobrazí v diagram
 
 Všichni členové zobrazení v okně **podrobností třídy** reprezentují členy typů v diagramu tříd. Existují čtyři typy členů: metody, vlastnosti, pole a události.
 
-Všechny řádky členů jsou zobrazeny pod nadpisy, které je seskupují podle druhu. Například všechny vlastnosti se zobrazí pod **vlastnostmi**záhlaví, které mohou být jako uzel v mřížce sbaleny nebo rozbaleny.
+Všechny řádky členů jsou zobrazeny pod nadpisy, které je seskupují podle druhu. Například všechny vlastnosti se zobrazí pod **vlastnostmi** záhlaví, které mohou být jako uzel v mřížce sbaleny nebo rozbaleny.
 
 Každý řádek členu zobrazuje následující prvky:
 
@@ -163,7 +165,7 @@ Každý řádek členu zobrazuje následující prvky:
 
 - **Souhrn**
 
-     Buňka **summary** zpřístupňuje shrnutí informací o členovi. Kliknutím na tlačítko se třemi tečkami v buňce **Souhrn** zobrazíte nebo upravíte informace o **souhrnu**, **návratovém typu**a **komentáři** člena.
+     Buňka **summary** zpřístupňuje shrnutí informací o členovi. Kliknutím na tlačítko se třemi tečkami v buňce **Souhrn** zobrazíte nebo upravíte informace o **souhrnu**, **návratovém typu** a **komentáři** člena.
 
 - **Skrýt**
 
@@ -186,7 +188,7 @@ Přidejte parametry do metod pomocí okna **podrobností třídy** . Parametry l
 
 Řádky parametru obsahují následující položky:
 
-- **Name**
+- **Název**
 
      Sloupec **název** v řádku parametrů zobrazuje název parametru. Tento název se zobrazí také ve vlastnosti **název** v okno Vlastnosti. Tuto buňku můžete použít ke změně názvu jakéhokoli parametru, který má oprávnění pro čtení i zápis.
 
@@ -198,7 +200,7 @@ Přidejte parametry do metod pomocí okna **podrobností třídy** . Parametry l
 
 - **Upravující**
 
-     Buňka **modifikátoru** v řádku parametrů přijímá a zobrazuje nový modifikátor parametru. Chcete-li zadat nový modifikátor parametru, použijte rozevírací seznam k výběru z **žádného**, **ref**, **out**nebo **params** v jazyce C# a **ByVal**, **ByRef**nebo **ParamArray** v jazyce VB.
+     Buňka **modifikátoru** v řádku parametrů přijímá a zobrazuje nový modifikátor parametru. Chcete-li zadat nový modifikátor parametru, použijte rozevírací seznam k výběru z **žádného**, **ref**, **out** nebo **params** v jazyce C# a **ByVal**, **ByRef** nebo **ParamArray** v jazyce VB.
 
 - **Souhrn**
 
@@ -206,9 +208,9 @@ Přidejte parametry do metod pomocí okna **podrobností třídy** . Parametry l
 
 - **\<add parameter>**
 
-     Poslední řádek parametru členu obsahuje text<v buňce **název** **Přidat parametr \> ** . Kliknutím na tuto buňku vytvoříte nový parametr. Další informace naleznete v tématu [Přidání parametru do metody](creating-and-configuring-type-members.md#add-parameters-to-methods).
+     Poslední řádek parametru členu obsahuje text<v buňce **název** **Přidat parametr \>** . Kliknutím na tuto buňku vytvoříte nový parametr. Další informace naleznete v tématu [Přidání parametru do metody](creating-and-configuring-type-members.md#add-parameters-to-methods).
 
-V okně **vlastnosti** se zobrazí stejné vlastnosti parametrů, které se zobrazují v okně **podrobností třídy** : **název**, **typ**, **Modifikátor**, **Souhrn**a také **volitelná výchozí** vlastnost. Změnou vlastnosti na jednom místě aktualizujete hodnotu vlastnosti globálně, včetně zobrazení hodnoty v jiném umístění.
+V okně **vlastnosti** se zobrazí stejné vlastnosti parametrů, které se zobrazují v okně **podrobností třídy** : **název**, **typ**, **Modifikátor**, **Souhrn** a také **volitelná výchozí** vlastnost. Změnou vlastnosti na jednom místě aktualizujete hodnotu vlastnosti globálně, včetně zobrazení hodnoty v jiném umístění.
 
 > [!NOTE]
 > Chcete-li přidat parametr delegáta, přečtěte si téma [Create Members](creating-and-configuring-type-members.md#create-members).
@@ -224,7 +226,7 @@ V okně **vlastnosti** se zobrazí stejné vlastnosti parametrů, které se zobr
 
 2. V okně **podrobností třídy** rozbalte řádek metody, do které chcete přidat parametr.
 
-     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slov ** \<add parameter> .**
+     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slov **\<add parameter> .**
 
 3. Klikněte na **\<add parameter>** , zadejte název nového parametru a stiskněte klávesu **ENTER**.
 
@@ -240,7 +242,7 @@ V okně **vlastnosti** se zobrazí stejné vlastnosti parametrů, které se zobr
 
 2. V okně **podrobností třídy** rozbalte řádek metody, do které chcete přidat volitelný parametr.
 
-     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slov ** \<add parameter> .**
+     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slov **\<add parameter> .**
 
 3. Klikněte na **\<add parameter>** , zadejte název nového parametru a stiskněte klávesu **ENTER**.
 
@@ -305,7 +307,7 @@ Projekt může být jen pro čtení z jiného důvodu než pro správu zdrojové
 
 **Typy jen pro čtení**
 
-Pokud se pokusíte uložit projekt obsahující typ, jehož soubor zdrojového kódu je jen pro čtení, zobrazí se dialogové okno **uložení souboru jen pro čtení** , které vám umožní soubor uložit pod novým názvem nebo novým umístěním, nebo přepsat soubor, který je jen pro čtení. Pokud soubor přepíšete, nová kopie již není jen pro čtení.
+Pokud se pokusíte uložit projekt obsahující typ, jehož soubor zdrojového kódu je jen pro čtení, zobrazí se dialogové okno **uložit Read-Only soubor** , které vám nabídne možnost Uložit soubor pod novým názvem nebo novým umístěním, nebo přepsat soubor, který je jen pro čtení. Pokud soubor přepíšete, nová kopie již není jen pro čtení.
 
 Pokud soubor s kódem obsahuje chybu syntaxe, tvary zobrazující kód v daném souboru budou dočasně jen pro čtení, dokud chyba syntaxe nebude opravena. Tvary v tomto stavu zobrazí červený text a červenou ikonu, která zobrazí popisek s textem „Soubor zdrojového kódu obsahuje chybu analýzy“.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: provedení příkazu SharePointu | Microsoft Docs'
+description: Přečtěte si, jak vytvořit vlastní příkaz SharePointu pro volání rozhraní API objektového modelu serveru z rozšíření nástrojů služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 789b77f3161b5fe566ea033060e8cab16cbaecc7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2746704e30a61b0971db50a5083855b4a93560d4
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016991"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903532"
 ---
 # <a name="how-to-execute-a-sharepoint-command"></a>Postupy: provedení příkazu SharePoint
   Pokud chcete použít objektový model serveru v rozšíření nástrojů služby SharePoint, je nutné vytvořit vlastní *příkaz SharePointu* pro volání rozhraní API. Po definování příkazu a jeho nasazení pomocí rozšíření nástrojů služby SharePoint může rozšíření spustit příkaz pro volání do objektového modelu serveru SharePoint. Chcete-li spustit příkaz, použijte jednu z metod ExecuteCommand <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> objektu.
@@ -32,7 +34,7 @@ ms.locfileid: "86016991"
 
          Další informace o rozšířeních systému projektů naleznete v tématu [rozšíření systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).
 
-    - V rozšíření uzlu **připojení služby SharePoint** v **Průzkumník serveru**použijte <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> vlastnost. Chcete-li získat <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> objekt, použijte <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> vlastnost.
+    - V rozšíření uzlu **připojení služby SharePoint** v **Průzkumník serveru** použijte <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> vlastnost. Chcete-li získat <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> objekt, použijte <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> vlastnost.
 
          Další informace o rozšířeních **Průzkumník serveru** najdete [v tématu rozšíření uzlu připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 

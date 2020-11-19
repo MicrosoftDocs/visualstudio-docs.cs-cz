@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Kopírování elementů diagramu tříd do dokumentu sady Microsoft Office (návrhář tříd)'
+description: Naučte se kopírovat tvary z diagramu tříd .NET do dalších dokumentů. Získáte buď kopii tvaru, nebo jeho podkladový kód.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fa6d97b5087659b9fc8120d9480a241517ca8ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe473dfdfdf78934ad018a507c6386a1da9babb6
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770996"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901619"
 ---
 # <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document"></a>Postupy: kopírování elementů diagramu tříd do dokumentu systém Microsoft Office
 
@@ -34,7 +36,7 @@ Klikněte pravým tlačítkem na tvar a vyberte **Kopírovat obrázek**.
 
 ## <a name="copy-all-the-elements-in-a-class-diagram"></a>Kopírovat všechny prvky v diagramu tříd
 
-1. Klikněte pravým tlačítkem myši na plochu diagramu a zvolte **možnost Vybrat vše**nebo stiskněte klávesovou **zkratku CTRL + A**.
+1. Klikněte pravým tlačítkem myši na plochu diagramu a zvolte **možnost Vybrat vše** nebo stiskněte klávesovou **zkratku CTRL + A**.
 
 2. V nabídce **Upravit** vyberte **Kopírovat obrázek**.
 

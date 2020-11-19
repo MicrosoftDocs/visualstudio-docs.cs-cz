@@ -3,17 +3,16 @@ title: Upgradovat projekty na aktuální verzi nástrojů Azure
 description: Zjistěte, jak upgradovat projekt Azure v aplikaci Visual Studio na aktuální verzi nástrojů Azure.
 author: ghogen
 manager: jillfra
-assetId: 1d64070a-078d-468a-87f4-e6715de6475f
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
-ms.openlocfilehash: 4cd9ffac5f668a9f6cd6ab266d38b90658ce9336
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: fce77f6417a14c204df883efd2f64655fa79b432
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398576"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901905"
 ---
 # <a name="how-to-upgrade-projects-to-the-current-version-of-the-azure-tools-for-visual-studio"></a>Postup upgradu projektů na aktuální verzi nástrojů Azure pro Visual Studio
 ## <a name="overview"></a>Přehled

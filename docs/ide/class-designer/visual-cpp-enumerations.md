@@ -1,5 +1,7 @@
 ---
 title: Výčty C++ v Návrhář tříd
+description: Přečtěte si, jak Návrhář tříd podporuje výčty výčtového typu C++ a vymezené třídy výčtu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee56850c05e4b06ea4325ec238e56e99b38978d0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b12d270884ca9877d6c1c80780a9ae96324f3af4
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114196"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903452"
 ---
 # <a name="c-enumerations-in-class-designer"></a>Výčty C++ v Návrhář tříd
 

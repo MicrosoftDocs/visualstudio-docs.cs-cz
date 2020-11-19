@@ -3,18 +3,17 @@ title: Ladění cloudové služby Azure nebo virtuálního počítače
 description: Ladění cloudové služby nebo virtuálního počítače v aplikaci Visual Studio
 author: mikejo5000
 manager: jillfra
-ms.assetid: 945e06e0-2100-41af-b218-72347367ddab
 ms.topic: how-to
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: cd55ebd9171a7f9cd2157194da8876f47aa22ece
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: c6e03bb4048b077bb4e1faa8b0382a3f4dbaf856
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398693"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902556"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Ladění cloudové služby Azure nebo virtuálního počítače v aplikaci Visual Studio
 

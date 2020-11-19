@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Vytváření typů s povolenou hodnotou Null (návrhář tříd)'
+description: Naučte se, jak vytvořit typ s možnou hodnotou null v Návrhář tříd.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ad371f987ab7ff0e50dc7d2fe4effeba5205e74e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3e229583b2ff375928ea462ee676e21462157dcb
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770982"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901645"
 ---
 # <a name="how-to-create-a-nullable-type-in-class-designer"></a>Postupy: vytvoření typu s možnou hodnotou null v Návrhář tříd
 
@@ -60,7 +62,7 @@ Další informace o typech s možnou hodnotou null v C# naleznete v tématu [typ
 
 ## <a name="to-add-a-nullable-type-by-using-the-code-editor"></a>Přidání typu s možnou hodnotou null pomocí editoru kódu
 
-1. Přidejte do projektu třídu. Vyberte uzel projektu v **Průzkumník řešení**a v nabídce **projekt** klikněte na **Přidat třídu**.
+1. Přidejte do projektu třídu. Vyberte uzel projektu v **Průzkumník řešení** a v nabídce **projekt** klikněte na **Přidat třídu**.
 
 2. V souboru. cs nebo. vb pro novou třídu přidejte do nové třídy jeden nebo více typů s možnou hodnotou null do deklarace třídy.
 

@@ -1,5 +1,7 @@
 ---
 title: Použít Návrhář tříd
+description: Naučte se, jak navrhovat, vizualizovat a Refaktorovat třídy a další typy v kódu pomocí Návrhář tříd v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 05/08/2018
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 80668f3b999d9e022de3d22abb383f2dbd10730a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 72d646150baafb7e7169a3c0a2452da6aec5df9b
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87507908"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902984"
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>Návrh a zobrazení tříd a typů pomocí Návrhář tříd
 

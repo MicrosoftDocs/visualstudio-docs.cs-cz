@@ -1,6 +1,7 @@
 ---
 title: SupportsCodeSeparation – element (šablony sady Visual Studio)
 titleSuffix: ''
+description: Přečtěte si o prvku SupportsCodeSeparation – a o tom, jak určuje, jestli je v dialogovém okně Přidat novou položku povoleno zaškrtávací políčko umístit kód do samostatného souboru.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -16,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4dfdf3244d09c5f3418c5403a32570c382c5365c
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 1847d5f0a0fa77b1dd0ddd0d74eeba84326d0205
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038462"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901853"
 ---
 # <a name="supportscodeseparation-element-visual-studio-templates"></a>SupportsCodeSeparation – element (šablony sady Visual Studio)
 Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrtávací políčko **umístit kód do samostatného souboru** .
@@ -29,7 +30,7 @@ Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrt�
  \<VSTemplate> \<TemplateData>
  \<SupportsCodeSeparation>
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 <SupportsCodeSeparation> true/false </SupportsCodeSeparation>

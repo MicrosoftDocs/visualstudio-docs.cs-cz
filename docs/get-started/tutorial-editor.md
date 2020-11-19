@@ -1,8 +1,11 @@
 ---
 title: Úvod do úprav v editoru kódu
+description: Naučte se, jak pomocí editoru kódu v aplikaci Visual Studio přidat kód do souboru a také jak napsat kód, přejít na něj a Refaktorovat ho.
 ms.date: 11/30/2017
 ms.technology: vs-ide-general
-ms.custom: get-started
+ms.custom:
+- get-started
+- SEO-VS-2020
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
@@ -11,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: a0c8122bd08e4eb9af68a0aa70f06cfb18e51469
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39c5fd62b67c8153da0a64dcd92142300912c25f
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595264"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901775"
 ---
 # <a name="learn-to-use-the-code-editor"></a>Naučte se používat editor kódu.
 
@@ -76,7 +79,7 @@ Visual Studio poskytuje užitečné *fragmenty kódu* , které můžete použít
 
    Uvidíte, že `static void Main()` signatura metody se přidá do souboru.
 
-Dostupné fragmenty kódu se liší v různých programovacích jazycích. Můžete se podívat na dostupné fragmenty kódu pro váš jazyk, a to tak, že vyberete **Upravit**  >  **IntelliSense**  >  **Vložit fragment**a pak zvolíte složku vašeho jazyka. V jazyce C# seznam vypadá takto:
+Dostupné fragmenty kódu se liší v různých programovacích jazycích. Můžete se podívat na dostupné fragmenty kódu pro váš jazyk, a to tak, že vyberete **Upravit**  >  **IntelliSense**  >  **Vložit fragment** a pak zvolíte složku vašeho jazyka. V jazyce C# seznam vypadá takto:
 
 ![Seznam fragmentů kódu v jazyce C#](media/tutorial-code-snippet-list.png)
 
@@ -171,7 +174,7 @@ Nikdo nezíská kód napravo poprvé a jedna z věcí, kterou je třeba změnit,
 
    Automaticky otevíraná okna pro **přejmenování** se zobrazí v pravém horním rohu editoru.
 
-1. Zadejte požadovaná **slova**názvu. Všimněte si, že odkaz na `words` v dotazu je také automaticky přejmenován. Než stisknete klávesu **ENTER**, zaškrtněte políčko **zahrnout komentáře** v automaticky otevíraném okně pro **přejmenování** .
+1. Zadejte požadovaná **slova** názvu. Všimněte si, že odkaz na `words` v dotazu je také automaticky přejmenován. Než stisknete klávesu **ENTER**, zaškrtněte políčko **zahrnout komentáře** v automaticky otevíraném okně pro **přejmenování** .
 
    ![přejmenování dialogového okna](media/tutorial-rename.png)
 

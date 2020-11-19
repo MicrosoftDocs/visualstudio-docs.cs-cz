@@ -3,17 +3,16 @@ title: Správa konfigurací a profilů služby | Microsoft Docs
 description: Naučte se pracovat s konfiguračními soubory profilů a konfigurací služby | nastavení úložišť pro prostředí pro nasazení a nastavení publikování pro cloudové služby.
 author: ghogen
 manager: jillfra
-assetId: 7da8c551-fb06-4057-b5c7-c77f4b39d803
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 42c4668b2bf9925fe92db51b6a4275c535960a61
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 751214a99c7724c83f01226164202f90425ebf65
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398875"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902075"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>Postup správy konfigurací a profilů služby
 ## <a name="overview"></a>Přehled

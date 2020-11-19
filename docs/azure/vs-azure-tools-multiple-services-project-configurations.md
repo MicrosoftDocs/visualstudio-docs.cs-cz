@@ -4,17 +4,16 @@ description: Přečtěte si, jak nakonfigurovat projekt cloudové služby Azure 
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
-assetId: a4fb79ed-384f-4183-9f74-5cac257206b9
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: a811c30114f9a45119eaccc666d6eb39be80a562
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 58d7a967c3a8cf46330c169db1b73bc048a2110c
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399803"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902360"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Konfigurace projektu Azure v sadě Visual Studio za účelem použití více konfigurací služby
 
@@ -39,7 +38,7 @@ Vybere, který `ServiceConfiguration.*.cscfg` soubor má vliv na změny. Ve výc
 
 Nastavte vlastnost počet **instancí** na počet instancí, které má služba spustit pro tuto roli.
 
-Nastavte vlastnost **Velikost virtuálního počítače** tak, aby byla větší než **malá** , **malá** , **střední** , **Velká** nebo **velmi velká**.  Další informace najdete v článku [Velikosti cloudových služeb](/azure/cloud-services/cloud-services-sizes-specs).
+Nastavte vlastnost **Velikost virtuálního počítače** tak, aby byla větší než **malá**, **malá**, **střední**, **Velká** nebo **velmi velká**.  Další informace najdete v článku [Velikosti cloudových služeb](/azure/cloud-services/cloud-services-sizes-specs).
 
 ### <a name="startup-action-web-role-only"></a>Spouštěcí akce (jenom webová role)
 
@@ -51,7 +50,7 @@ Pokud jste už přidali koncový bod HTTPS, je ve výchozím nastavení povolen�
 
 ### <a name="diagnostics"></a>Diagnostika
 
-Ve výchozím nastavení jsou pro webovou roli povoleny diagnostiky. Projekt cloudové služby Azure a účet úložiště se nastaví tak, aby používal emulátor místního úložiště. Až budete připraveni k nasazení do Azure, můžete vybrat tlačítko Tvůrce ( **...** ) a místo toho použít službu Azure Storage. Diagnostická data můžete přenést na účet úložiště na vyžádání nebo v automaticky naplánovaných intervalech. Další informace o diagnostice Azure najdete v tématu [Povolení diagnostiky v azure Cloud Services a Virtual Machines](/azure/cloud-services/cloud-services-dotnet-diagnostics).
+Ve výchozím nastavení jsou pro webovou roli povoleny diagnostiky. Projekt cloudové služby Azure a účet úložiště se nastaví tak, aby používal emulátor místního úložiště. Až budete připraveni k nasazení do Azure, můžete vybrat tlačítko Tvůrce (**...**) a místo toho použít službu Azure Storage. Diagnostická data můžete přenést na účet úložiště na vyžádání nebo v automaticky naplánovaných intervalech. Další informace o diagnostice Azure najdete v tématu [Povolení diagnostiky v azure Cloud Services a Virtual Machines](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
 ## <a name="settings-page"></a>Stránka Nastavení
 
@@ -68,7 +67,7 @@ Připojovací řetězec můžete nastavit tak, aby v případě potřeby použí
 
 Pokud chcete vytvořit připojovací řetězec, vyberte **Přidat nastavení** a nastavit **typ** na připojovací řetězec.
 
-Pro nové nebo existující připojovací řetězce vyberte **...** _ na pravé straně pole _ *Value* * pro otevření dialogového okna **vytvořit připojovací řetězec úložiště** :
+Pro nové nebo existující připojovací řetězce vyberte **...** _ na pravé straně pole _ *Value** pro otevření dialogového okna **vytvořit připojovací řetězec úložiště** :
 
 1. V části **připojit pomocí** zvolte možnost **vaše předplatné** a vyberte účet úložiště z předplatného. Visual Studio pak automaticky získá přihlašovací údaje k účtu úložiště ze `.publishsettings` souboru.
 1. Po výběru **ručně zadaných přihlašovacích údajů** můžete zadat název účtu a klíč přímo pomocí informací z Azure Portal. Zkopírování klíče účtu:

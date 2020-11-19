@@ -4,17 +4,16 @@ ms.custom: SEO-VS-2020
 description: Naučte se, jak nastavit diagnostiku pro ladění cloudových služeb Azure a virtuálních počítačů v sadě Visual Studio.
 author: ghogen
 manager: jillfra
-ms.assetid: e70cd7b4-6298-43aa-adea-6fd618414c26
 ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: 55a0f96959d0e3e8bbc70c458ab99bbc06b06a62
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ababbbfcfa71f3083a292103f4fa4f1ba481faae
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809843"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902601"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Nastavení diagnostiky pro službu Azure Cloud Services a virtuální počítače
 Pokud potřebujete řešit potíže s cloudovou službou Azure nebo virtuálním počítačem, můžete pomocí sady Visual Studio snadněji nastavit Azure Diagnostics. Diagnostika zaznamenává systémová data a data protokolování do virtuálních počítačů a instancí virtuálních počítačů, které spouštějí vaši cloudovou službu. Diagnostická data se přenesou na účet úložiště, který zvolíte. Další informace o protokolování diagnostiky v Azure najdete v tématu [Povolení protokolování diagnostiky pro Web Apps v Azure App Service](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -81,7 +80,7 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro role, kt
    * Pokud vyberete možnost **emulátor úložiště Microsoft Azure**, připojovací řetězec je nastaven na hodnotu `UseDevelopmentStorage=true` .
    * Pokud vyberete **své předplatné**, můžete vybrat předplatné Azure, které chcete použít, a zadat název účtu. Pokud chcete spravovat předplatná Azure, vyberte **Spravovat účty**.
    * Pokud vyberete možnost **ručně zadané přihlašovací údaje**, zadejte název a klíč účtu Azure, který chcete použít.
-5. Chcete-li zobrazit dialogové okno **Konfigurace diagnostiky** , vyberte možnost **Konfigurovat**. S výjimkou adresářů pro **Obecné** a **protokoly**představuje každá karta zdroj dat diagnostiky, který můžete shromažďovat. Výchozí karta **Obecné** nabízí následující možnosti shromažďování diagnostických dat: **jenom chyby**, **všechny informace**a **vlastní plán**. Možnost **pouze výchozí chyby** používá minimální velikost úložiště, protože nepřenáší upozornění nebo zprávy trasování. Možnost **všechny informace** přenáší většinu informací, používá nejvíce úložiště, a proto je nejdražším parametrem.
+5. Chcete-li zobrazit dialogové okno **Konfigurace diagnostiky** , vyberte možnost **Konfigurovat**. S výjimkou adresářů pro **Obecné** a **protokoly** představuje každá karta zdroj dat diagnostiky, který můžete shromažďovat. Výchozí karta **Obecné** nabízí následující možnosti shromažďování diagnostických dat: **jenom chyby**, **všechny informace** a **vlastní plán**. Možnost **pouze výchozí chyby** používá minimální velikost úložiště, protože nepřenáší upozornění nebo zprávy trasování. Možnost **všechny informace** přenáší většinu informací, používá nejvíce úložiště, a proto je nejdražším parametrem.
 
    > [!NOTE]
    > Minimální podporovaná velikost pro "disková kvóta v MB" je 50 MB a výchozí velikost je 4 GB. Pokud však shromažďujete výpisy paměti, zvyšte tuto hodnotu na vyšší hodnotu, jako je 10 GB.
@@ -90,7 +89,7 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro role, kt
     ![Povolit diagnostiku a konfiguraci Azure](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758144.png)
 6. V tomto příkladu vyberte možnost **vlastního plánu** , abyste mohli shromážděná data přizpůsobit.
 7. V poli disková **kvóta v MB** můžete nastavit, kolik místa se má v účtu úložiště pro diagnostická data přidělit. Můžete změnit nebo přijmout výchozí hodnotu.
-8. Na každé kartě diagnostických dat, která chcete shromáždit, zaškrtněte políčko **Povolit přenos pro \<log type\> ** . Například pokud chcete shromažďovat protokoly aplikací, zaškrtněte na kartě **protokoly aplikací** políčko **Povolit přenos protokolů aplikací** . Také zadejte všechny další informace, které jsou požadovány pro každý typ dat diagnostiky. Informace o konfiguraci pro každou kartu najdete v části **Nastavení diagnostických zdrojů dat** dále v tomto článku.
+8. Na každé kartě diagnostických dat, která chcete shromáždit, zaškrtněte políčko **Povolit přenos pro \<log type\>** . Například pokud chcete shromažďovat protokoly aplikací, zaškrtněte na kartě **protokoly aplikací** políčko **Povolit přenos protokolů aplikací** . Také zadejte všechny další informace, které jsou požadovány pro každý typ dat diagnostiky. Informace o konfiguraci pro každou kartu najdete v části **Nastavení diagnostických zdrojů dat** dále v tomto článku.
 9. Po povolení shromažďování všech diagnostických dat vyberte **OK**.
 10. Spusťte v aplikaci Visual Studio projekt cloudové služby Azure obvyklým způsobem. Při použití vaší aplikace se informace protokolu, které jste povolili, uloží do účtu úložiště Azure, který jste zadali.
 
@@ -104,7 +103,7 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro virtuál
 3. V místní nabídce požadovaného virtuálního počítače vyberte **Konfigurovat**. Zobrazí se dialogové okno Konfigurace virtuálního počítače.
 
     ![Konfigurace virtuálního počítače Azure](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796663.png)
-4. Pokud ještě není nainstalovaná, přidejte rozšíření Microsoft Monitoring Agent Diagnostics. S tímto rozšířením můžete shromažďovat diagnostická data pro virtuální počítač Azure. V části **nainstalovaná rozšíření**vyberte v rozevíracím seznamu **Vybrat dostupné rozšíření** možnost **Microsoft Monitoring Agent Diagnostika**.
+4. Pokud ještě není nainstalovaná, přidejte rozšíření Microsoft Monitoring Agent Diagnostics. S tímto rozšířením můžete shromažďovat diagnostická data pro virtuální počítač Azure. V části **nainstalovaná rozšíření** vyberte v rozevíracím seznamu **Vybrat dostupné rozšíření** možnost **Microsoft Monitoring Agent Diagnostika**.
 
     ![Nainstalovat rozšíření virtuálního počítače Azure](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766024.png)
 
@@ -113,16 +112,16 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro virtuál
    >
    >
 5. Chcete-li přidat rozšíření a zobrazit dialogové okno **Konfigurace diagnostiky** , vyberte možnost **Přidat**.
-6. Pokud chcete zadat účet úložiště, vyberte **Konfigurovat**a pak vyberte **OK**.
+6. Pokud chcete zadat účet úložiště, vyberte **Konfigurovat** a pak vyberte **OK**.
 
     Každá karta (kromě adresářů **obecně** a **protokolu**) představuje zdroj dat diagnostiky, který můžete shromažďovat.
 
     ![Povolit diagnostiku a konfiguraci Azure](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758144.png)
 
-    Výchozí karta **všeobecně**nabízí následující možnosti shromažďování diagnostických dat: **jenom chyby**, **všechny informace**a **vlastní plán**. Výchozí možnost, **pouze chyby**, využívá minimální velikost úložiště, protože nepřenosuje upozornění nebo zprávy trasování. Možnost **všechny informace** přenáší nejvíc informací a je tedy nejdražším parametrem z podmínek úložiště.
+    Výchozí karta **všeobecně** nabízí následující možnosti shromažďování diagnostických dat: **jenom chyby**, **všechny informace** a **vlastní plán**. Výchozí možnost, **pouze chyby**, využívá minimální velikost úložiště, protože nepřenosuje upozornění nebo zprávy trasování. Možnost **všechny informace** přenáší nejvíc informací a je tedy nejdražším parametrem z podmínek úložiště.
 7. V tomto příkladu vyberte možnost **vlastního plánu** , abyste mohli přizpůsobit shromážděná data.
 8. V poli **disková kvóta v MB** určuje, kolik místa chcete přidělit účtu úložiště pro diagnostická data. Pokud chcete, můžete změnit výchozí hodnotu.
-9. Na každé kartě diagnostických dat, která chcete shromáždit, zaškrtněte políčko **Povolit přenos pro \<log type\> ** zaškrtávací políčko.
+9. Na každé kartě diagnostických dat, která chcete shromáždit, zaškrtněte políčko **Povolit přenos pro \<log type\>** zaškrtávací políčko.
 
     Například pokud chcete shromažďovat protokoly aplikací, zaškrtněte políčko **Povolit přenos protokolů aplikace** na kartě **protokoly aplikací** . Také zadejte všechny další informace, které jsou požadovány pro každý typ dat diagnostiky. Informace o konfiguraci pro každou kartu najdete v části **Nastavení diagnostických zdrojů dat** dále v tomto článku.
 10. Až budete mít povolenou kolekci všech diagnostických dat, vyberte **OK**.
@@ -215,7 +214,7 @@ Jakmile shromáždíte diagnostická data pro cloudovou službu nebo virtuální
     Pokud chcete data hned aktualizovat, vyberte odkaz **aktualizovat** . Pokud chcete data aktualizovat automaticky, vyberte interval v rozevíracím seznamu **Automatické aktualizace** . Pokud chcete exportovat data chyby, vyberte tlačítko **exportovat do sdíleného svazku clusteru** a vytvořte soubor hodnot oddělených čárkami, který můžete otevřít v excelovém listu.
 
     V Průzkumníku cloudu nebo Průzkumník serveru otevřete účet úložiště, který je přidružený k nasazení.
-3. Otevřete diagnostické tabulky v prohlížeči tabulky a potom zkontrolujte shromážděná data. Pro protokoly služby IIS a vlastní protokoly můžete otevřít kontejner objektů BLOB. V následující tabulce jsou uvedeny tabulky nebo kontejnery objektů blob, které obsahují data pro různé soubory protokolu. Kromě dat pro tento soubor protokolu obsahují položky tabulky **EventTickCount**, **DeploymentID**, **role**a **RoleInstance**, které vám pomůžou zjistit, který virtuální počítač a role vygenerovala data a kdy.
+3. Otevřete diagnostické tabulky v prohlížeči tabulky a potom zkontrolujte shromážděná data. Pro protokoly služby IIS a vlastní protokoly můžete otevřít kontejner objektů BLOB. V následující tabulce jsou uvedeny tabulky nebo kontejnery objektů blob, které obsahují data pro různé soubory protokolu. Kromě dat pro tento soubor protokolu obsahují položky tabulky **EventTickCount**, **DeploymentID**, **role** a **RoleInstance**, které vám pomůžou zjistit, který virtuální počítač a role vygenerovala data a kdy.
 
    | Diagnostická data | Popis | Umístění |
    | --- | --- | --- |
@@ -250,7 +249,7 @@ Pokud zkoumáte problém s cloudovou službou, která je už spuštěná, možn�
 1. V Průzkumník serveru rozbalte uzel **Cloud Services** a potom rozbalte seznam uzlů, abyste našli roli nebo instanci (nebo obojí), kterou chcete prozkoumat.
 
     ![Konfigurace diagnostiky](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC748913.png)
-2. V místní nabídce uzlu instance nebo uzlu role vyberte **aktualizovat nastavení diagnostiky**a pak vyberte nastavení diagnostiky, která chcete shromažďovat.
+2. V místní nabídce uzlu instance nebo uzlu role vyberte **aktualizovat nastavení diagnostiky** a pak vyberte nastavení diagnostiky, která chcete shromažďovat.
 
     Informace o nastavení konfigurace najdete v části **Nastavení diagnostických zdrojů dat** v tomto článku. Informace o tom, jak zobrazit diagnostická data, najdete v části **zobrazení diagnostických dat** v tomto článku.
 
@@ -278,7 +277,7 @@ Doba přenosu je doba, která uplyne mezi zachycením dat. Po každém období p
 
 **Návody spravovat náklady při shromažďování diagnostických informací?**
 
-Výchozí nastavení (**úroveň protokolu** je nastavená **na chyba**a **perioda přenosu** nastavené na **1 minutu**) jsou navržené tak, aby se minimalizovaly náklady. Náklady na výpočetní výkon se zvyšují při shromažďování dalších diagnostických dat nebo při snížení doby přenosu. Neshromážděte více dat, než kolik potřebujete, a nezapomeňte zakázat shromažďování dat, když už ho nepotřebujete. Tuto akci můžete kdykoli znovu povolit, a to i v době běhu, jak je popsáno výše v tomto článku.
+Výchozí nastavení (**úroveň protokolu** je nastavená **na chyba** a **perioda přenosu** nastavené na **1 minutu**) jsou navržené tak, aby se minimalizovaly náklady. Náklady na výpočetní výkon se zvyšují při shromažďování dalších diagnostických dat nebo při snížení doby přenosu. Neshromážděte více dat, než kolik potřebujete, a nezapomeňte zakázat shromažďování dat, když už ho nepotřebujete. Tuto akci můžete kdykoli znovu povolit, a to i v době běhu, jak je popsáno výše v tomto článku.
 
 **Návody shromažďování neúspěšných požadavků – protokoly služby IIS?**
 

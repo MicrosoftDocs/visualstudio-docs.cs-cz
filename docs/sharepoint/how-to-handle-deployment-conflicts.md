@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: zpracování konfliktů nasazení | Microsoft Docs'
+description: Podívejte se na příklad, jak implementovat vlastní kód pro zpracování konfliktů nasazení pro položku SharePointového projektu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5df9677fd349825983cc33c5a8ed2648f34b8c9e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 975fa69a503f5e2acd3e90defd9fa9895c70db00
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015308"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903504"
 ---
 # <a name="how-to-handle-deployment-conflicts"></a>Postupy: zpracování konfliktů nasazení
   Můžete zadat vlastní kód pro zpracování konfliktů nasazení pro položku projektu služby SharePoint. Například můžete určit, zda některé soubory v aktuální položce projektu již existují v umístění nasazení, a poté odstranit nasazené soubory před nasazením aktuální položky projektu. Další informace o konfliktech nasazení najdete v tématu [rozšíření balení a nasazení služby SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md).

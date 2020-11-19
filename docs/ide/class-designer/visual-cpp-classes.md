@@ -1,5 +1,7 @@
 ---
 title: Třídy jazyka C++ v Návrhář tříd
+description: Přečtěte si o třídách jazyka C++ a o tom, jak jsou podporované a můžou mít víc vztahů dědičnosti v Návrhář tříd.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7af49e94045e519e32aacd12ec33a4a31a4c905
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 593ca8ba3edc3c779a0440a35551bf870f20c831
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808126"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901203"
 ---
 # <a name="c-classes-in-class-designer"></a>Třídy jazyka C++ v Návrhář tříd
 
@@ -91,7 +93,7 @@ class Swimmer
 };
 ```
 
-Při zobrazení těchto deklarací v diagramu tříd jsou název třídy `Swimmer` a její čistě virtuální funkce `swim` zobrazeny v kurzívě v nadřazeném tvaru třídy spolu s **abstraktní třídou**Notation. Všimněte si, že obrazec typu abstraktní třídy je stejný jako u regulární třídy s tím rozdílem, že jeho ohraničení je tečkovaná čára.
+Při zobrazení těchto deklarací v diagramu tříd jsou název třídy `Swimmer` a její čistě virtuální funkce `swim` zobrazeny v kurzívě v nadřazeném tvaru třídy spolu s **abstraktní třídou** Notation. Všimněte si, že obrazec typu abstraktní třídy je stejný jako u regulární třídy s tím rozdílem, že jeho ohraničení je tečkovaná čára.
 
 Třída odvozená z abstraktní základní třídy musí přepsat každou čistě virtuální funkci v základní třídě, jinak nelze vytvořit instanci odvozené třídy. Takže pokud například odvodit `Fish` třídu z `Swimmer` třídy, `Fish` musí přepsat `swim` metodu:
 
@@ -175,7 +177,7 @@ V následující tabulce jsou uvedeny některé příklady kanonického speciali
 ## <a name="see-also"></a>Viz také
 
 - [Práce s kódem C++](working-with-visual-cpp-code.md)
-- [Třídy a struktury](/cpp/cpp/classes-and-structs-cpp)
+- [Třídy a struktury](/cpp/cpp/classes-and-structs-cpp)
 - [Anonymní typy tříd](/cpp/cpp/anonymous-class-types)
 - [Vícenásobná dědičnost](/previous-versions/6td5yws2(v=vs.140))
 - [Více základních tříd](/cpp/cpp/multiple-base-classes)

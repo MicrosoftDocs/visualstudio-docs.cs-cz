@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Import stránky předlohy nebo motivu | Microsoft Docs'
+description: Vytvořte šablony pro hlavní stránky a motivy v SharePoint designeru a pak je importujte do sady Visual Studio, aby stránky na SharePointovém webu měly konzistentní vzhled.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7abca9e9141fdc8d4540e8a38e9579862fc540f1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c17f4e7477a20ea245eaa359a6f9611a8dc4ece6
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015299"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903491"
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>Postupy: Import stránky předlohy nebo motivu
   Stránky na SharePointovém webu můžete poskytovat konzistentní vzhled vytvořením a použitím stránek předloh a motivů. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] neposkytuje šablony pro tyto prvky, ale můžete je vytvořit v aplikaci SharePoint Designer a pak je importovat do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace naleznete v tématu [stavební blok: stránky a uživatelské rozhraní](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) na webu společnosti Microsoft.
@@ -41,7 +43,7 @@ ms.locfileid: "86015299"
 
 6. Vyberte uzel modul.
 
-7. V panelu nabídek zvolte **projekt**  >  **Přidat existující položku**a pak zvolte stránku předlohy nebo soubor motivu.
+7. V panelu nabídek zvolte **projekt**  >  **Přidat existující položku** a pak zvolte stránku předlohy nebo soubor motivu.
 
      Soubory stránky předlohy mají příponu. Master a soubory motivů mají příponu. thmx.
 
@@ -76,7 +78,7 @@ ms.locfileid: "86015299"
 
      Atribut `Type="GhostableInLibrary"` označuje, že položka je přidána do databáze obsahu, a `Url` atribut Module určuje, kam uložit soubor v databázi obsahu služby SharePoint.
 
-11. Chcete-li změnit rozsah nasazení pro stránku předlohy, v **Průzkumník řešení**otevřete soubor funkce v Návrháři funkcí a pak zvolte nový obor nasazení ze seznamu **Rozsah** .
+11. Chcete-li změnit rozsah nasazení pro stránku předlohy, v **Průzkumník řešení** otevřete soubor funkce v Návrháři funkcí a pak zvolte nový obor nasazení ze seznamu **Rozsah** .
 
      Hodnota **Web** znamená, že se stránka předlohy vztahuje pouze na web, který je aktuálně zadaný v projektu. Hodnota **webu** znamená, že se stránka předlohy vztahuje na aktuální kolekci webů, která zahrnuje všechny podřízené weby a kořenový Web. Ostatní hodnoty se nevztahují.
 
