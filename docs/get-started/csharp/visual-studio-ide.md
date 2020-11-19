@@ -1,8 +1,11 @@
 ---
 title: Přehled pro vývojáře v jazyce C#
+description: Přečtěte si o integrovaném vývojovém prostředí sady Visual Studio a o tom, jak ho můžete přizpůsobit vývojářům v jazyce C#.
 ms.date: 03/19/2019
 ms.technology: vs-ide-general
-ms.custom: get-started
+ms.custom:
+- get-started
+- SEO-VS-2020
 ms.topic: overview
 author: TerryGLee
 ms.author: tglee
@@ -11,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: ade9dbfb17aa4330b572ac96080117562498a338
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 688a4377b9e4bd6f80d65744955dc84908a18e7a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85771122"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94904011"
 ---
 # <a name="welcome-to-the-visual-studio-ide--c"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio | R\#
 
@@ -28,7 +31,7 @@ Pojďme nakonfigurovat Visual Studio na použití nastavení prostředí přizp�
 
 1. Na řádku nabídek klikněte na **nástroje**  >  **importovat a exportovat nastavení**.
 
-2. V **Průvodci importem a exportem nastavení**vyberte **Obnovit všechna nastavení** na první stránce a pak zvolte **Další**.
+2. V **Průvodci importem a exportem nastavení** vyberte **Obnovit všechna nastavení** na první stránce a pak zvolte **Další**.
 
 3. Na stránce **Uložit aktuální nastavení** vyberte možnost pro uložení aktuálního nastavení, nebo ne, a poté klikněte na tlačítko **Další**. (Pokud jste nepřizpůsobili žádné nastavení, vyberte možnost **Ne, pouze resetovat nastavení a přepsat aktuální nastavení**.)
 

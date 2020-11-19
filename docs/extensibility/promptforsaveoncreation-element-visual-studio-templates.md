@@ -1,6 +1,8 @@
 ---
 title: PromptForSaveOnCreation – element (šablony sady Visual Studio)
 titleSuffix: ''
+description: Přečtěte si o prvku PromptForSaveOnCreation – a o tom, jak určuje, zda se uživateli zobrazí výzva k zadání umístění pro uložení projektu prostřednictvím dialogového okna Nový projekt.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,12 +17,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: ffc610cf701bdf5be3a0b6116455ac413fbd6dcd
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: e6897eb86f531ca86d0e935836683b8a0b244645
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743141"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903790"
 ---
 # <a name="promptforsaveoncreation-element-visual-studio-templates"></a>PromptForSaveOnCreation – – element (šablony sady Visual Studio)
 
@@ -32,7 +34,7 @@ Určuje, zda je uživatel vyzván k zadání umístění pro uložení projektu 
 \<PromptForSaveOnCreation>
 ```
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <PromptForSaveOnCreation> true/false </PromptForSaveOnCreation>
@@ -91,7 +93,7 @@ Určuje, zda je uživatel vyzván k zadání umístění pro uložení projektu 
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

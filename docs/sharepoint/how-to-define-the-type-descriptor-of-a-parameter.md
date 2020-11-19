@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: definování deskriptoru typu pro parametr | Microsoft Docs'
+description: Naučte se definovat popisovač typu parametru pro metodu v modelu služby připojení obchodních dat (BDC).
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0b3ae803576c98a86a45d175af45aa28b3852134
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8044f04902e74b2597d6cf331e54eb4a6138817a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016839"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903595"
 ---
 # <a name="how-to-define-the-type-descriptor-of-a-parameter"></a>Postupy: definování deskriptoru typu pro parametr
   Popisovač typu obsahuje vlastnosti, které popisují datový typ parametru. Deskriptor typu může definovat pole, entitu nebo kolekci entit. Další informace naleznete v tématu [TypeDescriptor](/previous-versions/office/developer/sharepoint-2007/ms543392\(v\=office.12\)).
@@ -71,7 +73,7 @@ ms.locfileid: "86016839"
 
      Otevře se okno **Průzkumník služby BDC** .
 
-4. V **Průzkumníku služby BDC**otevřete místní nabídku popisovače typu a pak zvolte **Přidat popisovač typu**.
+4. V **Průzkumníku služby BDC** otevřete místní nabídku popisovače typu a pak zvolte **Přidat popisovač typu**.
 
      Nový popisovač typu je přidán jako podřízený k popisovači typu entity. Nakonfigurujte tento popisovač typu jako pole.
 
@@ -113,7 +115,7 @@ ms.locfileid: "86016839"
 
     Otevře se okno **Průzkumník služby BDC** .
 
-7. V **Průzkumníku služby BDC**otevřete místní nabídku popisovače typu a pak zvolte **Přidat popisovač typu**.
+7. V **Průzkumníku služby BDC** otevřete místní nabídku popisovače typu a pak zvolte **Přidat popisovač typu**.
 
     Nový popisovač typu je přidán jako podřízený popisovač typu kolekce. Tento deskriptor typu nakonfigurujte jako entitu.
 

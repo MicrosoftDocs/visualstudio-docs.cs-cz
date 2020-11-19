@@ -1,5 +1,7 @@
 ---
 title: Odkaz – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o elementu reference a o tom, jak určuje odkaz na sestavení, který se má přidat při přidání položky do projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11d893f6268a69172d27a0f7caee707767abfe89
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dcb713a62ebc9a0c3e4daf5aa16f36779b1a1fdc
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701628"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903764"
 ---
 # <a name="reference-element-visual-studio-templates"></a>Reference – element (šablony sady Visual Studio)
 Určuje odkaz na sestavení, který se má přidat při přidání položky do projektu.
@@ -28,7 +30,7 @@ Určuje odkaz na sestavení, který se má přidat při přidání položky do p
  \<References>
  \<Reference>
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <Reference>
@@ -52,7 +54,7 @@ Určuje odkaz na sestavení, který se má přidat při přidání položky do p
 
 |Element|Popis|
 |-------------|-----------------|
-|[Odkazy](../extensibility/references-element-visual-studio-templates.md)|Seskupí sestavení odkazuje na to, že šablona přičítá k projektům.|
+|[Reference](../extensibility/references-element-visual-studio-templates.md)|Seskupí sestavení odkazuje na to, že šablona přičítá k projektům.|
 
 ## <a name="remarks"></a>Poznámky
  `Reference` je požadovaný podřízený prvek `References` .

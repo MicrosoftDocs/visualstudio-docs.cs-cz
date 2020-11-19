@@ -1,6 +1,8 @@
 ---
 title: Nasazení & publikování řešení služby SharePoint na místní SharePointový Web
 titleSuffix: ''
+description: Přečtěte si, jak nasadit nebo publikovat řešení služby SharePoint na místním SharePointovém serveru na vašem vývojovém počítači.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,19 +16,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 78a837cc7145187fbc529e6e86cc27f88dd81f51
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 65683544f345a2378fdec559f582985ffec7bc43
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585794"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903582"
 ---
 # <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>Postupy: nasazení a publikování řešení služby SharePoint na místní web služby SharePoint
   Řešení služby SharePoint můžete nasadit nebo publikovat na místním SharePointovém serveru na svém vývojovém počítači. Proces nasazení zkopíruje soubor *. wsp* na server SharePoint, nainstaluje řešení a potom tyto funkce aktivuje. Proces publikování kopíruje pouze soubor *. wsp* na server SharePoint a nainstaluje jej. Pokud ho chcete povolit v SharePointu, musíte ho ručně aktivovat.
 
 ## <a name="to-deploy-a-sharepoint-solution-to-the-local-sharepoint-server"></a>Nasazení řešení služby SharePoint na místní server SharePoint
 
-1. V **Průzkumník řešení**vyberte projekt, který chcete nasadit.
+1. V **Průzkumník řešení** vyberte projekt, který chcete nasadit.
 
 2. Na řádku nabídek klikněte na položku **sestavit**, **nasadit řešení**.
 
@@ -34,7 +36,7 @@ ms.locfileid: "91585794"
 
 ## <a name="to-publish-a-sharepoint-solution-to-a-local-sharepoint-server"></a>Publikování řešení služby SharePoint na místním serveru SharePoint
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro projekt služby SharePoint, který chcete publikovat, a pak zvolte možnost **publikovat**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro projekt služby SharePoint, který chcete publikovat, a pak zvolte možnost **publikovat**.
 
 2. V dialogovém okně **publikovat** klikněte na tlačítko možnosti **publikovat do systému souborů** .
 

@@ -1,5 +1,7 @@
 ---
 title: ProjectType – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o prvku ProjectType a o tom, jak kategorizuje šablonu projektu tak, aby se zobrazila v dialogovém okně Nový projekt nebo přidat novou položku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d794bd5e81e77a892b5a3be38ff73ab805582dd7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2bd457bfb639ff0def2662476e60c8736e14b3ce
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701811"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903816"
 ---
 # <a name="projecttype-element-visual-studio-templates"></a>ProjectType – element (šablony sady Visual Studio)
 Kategorizuje šablonu projektu tak, aby se zobrazila pod určenou skupinou v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .
@@ -29,7 +31,7 @@ Kategorizuje šablonu projektu tak, aby se zobrazila pod určenou skupinou v dia
  \<VSTemplate> \<TemplateData>
  \<ProjectType>
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <ProjectType> CSharp/VisualBasic/VC/Web </ProjectType>

@@ -1,6 +1,8 @@
 ---
 title: Vytvoření funkcí a ověření balíčku pro řešení služby SharePoint
 titleSuffix: ''
+description: Vytvořte vlastní ověřovací pravidla pro ověření balíčku řešení vygenerovaného aplikací Visual Studio nebo pro ověření celé funkce.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,16 +16,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7ac718d16383448ea13f01ad367d97f917bb42ed
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 8f76abeee6ace851025a29ce6d85b894bf479dfa
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585820"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903686"
 ---
 # <a name="create-feature-and-package-validations-for-sharepoint-solutions"></a>Vytvoření funkcí a ověření balíčku pro řešení služby SharePoint
 
-  Můžete vytvořit vlastní ověřovací pravidla pro ověření balíčku řešení vygenerovaného aplikací Visual Studio. Úplné ověřování pro celou funkci nebo balíček můžete provést tak, že v místní nabídce balíčku nebo funkce v **PackagingExplorer**vyberete **ověřit** . Částečné ověřování se provádí při přidávání nových položek SharePointového projektu nebo funkcí do projektu, aby bylo možné zjistit, zda by byl balíček nebo funkce v platném stavu.
+  Můžete vytvořit vlastní ověřovací pravidla pro ověření balíčku řešení vygenerovaného aplikací Visual Studio. Úplné ověřování pro celou funkci nebo balíček můžete provést tak, že v místní nabídce balíčku nebo funkce v **PackagingExplorer** vyberete **ověřit** . Částečné ověřování se provádí při přidávání nových položek SharePointového projektu nebo funkcí do projektu, aby bylo možné zjistit, zda by byl balíček nebo funkce v platném stavu.
 
 ### <a name="to-create-a-custom-package-validation-rule"></a>Vytvoření vlastního ověřovacího pravidla balíčku
 

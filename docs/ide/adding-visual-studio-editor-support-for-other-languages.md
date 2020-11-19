@@ -1,5 +1,7 @@
 ---
 title: Přidat podporu editoru pro jiné jazyky
+description: Seznamte se s tím, jak editor sady Visual Studio podporuje čtení a navigaci v různých jazycích počítače a jak můžete přidat podporu pro jiné jazyky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c6761e74e68bad1ef800246d400c79b9689a18c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7bf84f4e48b9f070b3cebed4c2e17e5fc07992e3
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809069"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903894"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>Přidat podporu editoru sady Visual Studio pro jiné jazyky
 
@@ -60,7 +62,7 @@ Visual Studio aktuálně poskytuje barevné zvýrazňování syntaxe a podporu d
 - Python
 - SQL
 - VBNet
-- Šablony stylů CSS
+- CSS
 - INI
 - LUA
 - R

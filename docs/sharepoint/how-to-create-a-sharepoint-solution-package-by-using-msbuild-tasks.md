@@ -1,5 +1,7 @@
 ---
 title: Vytvoření balíčku řešení služby SharePoint pomocí úloh nástroje MSBuild
+description: Naučte se, jak sestavit, vyčistit a ověřit balíček řešení služby SharePoint (. wsp) pomocí úloh MSBuild příkazového řádku na vývojovém počítači.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c59a38e1153a57c1bd886121eeac244075045a42
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2979073414434d2b8f5be9d070b6b505c09ee14
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017016"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903725"
 ---
 # <a name="how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks"></a>Postupy: vytvoření balíčku řešení služby SharePoint pomocí úloh nástroje MSBuild
   Můžete sestavit, vyčistit a ověřit balíček služby SharePoint (*. wsp*) pomocí úloh nástroje MSBuild příkazového řádku ve vývojovém počítači. Tyto příkazy lze použít také k automatizaci procesu sestavení pomocí Team Foundation Server v počítači sestavení.

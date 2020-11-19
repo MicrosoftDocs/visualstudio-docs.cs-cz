@@ -1,6 +1,8 @@
 ---
 title: Vytvořit uživatelský ovládací prvek pro stránku aplikace SharePoint nebo webovou část
 titleSuffix: ''
+description: Vytvořte vlastní uživatelské ovládací prvky, které poskytují vlastní funkce pro vaše řešení služby SharePoint, a pak tuto funkci znovu použijte v rámci webové části nebo stránky aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b9c8a99562d937d7b10c3539888c2dd62eb1d1da
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: cbaeaff14d365f41bff73c29e678a08130b03dc0
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584097"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903673"
 ---
 # <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>Postupy: vytvoření uživatelského ovládacího prvku pro stránku aplikace SharePoint nebo webovou část
   Můžete také vytvářet vlastní uživatelské ovládací prvky, které poskytují vlastní funkce pro řešení služby SharePoint, a tyto funkce v rámci svého projektu znovu využívat. De webové části nebo do stránky aplikace lze zahrnout uživatelské ovládací prvky, přidat další ovládací prvky technologie ASP.NET, ovládací prvky služby SharePoint a definovat vlastnosti a metody pro ovládací prvek. Další informace o uživatelských ovládacích prvcích naleznete v tématu [Create recyklovatelné ovládací prvky pro webové části nebo stránky aplikací](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md) a [uživatelské ovládací prvky a ovládací prvky serveru v SharePointu](https://blogs.msdn.microsoft.com/kaevans/2011/04/28/user-controls-and-server-controls-in-sharepoint/).
@@ -30,7 +32,7 @@ ms.locfileid: "91584097"
 
      Viz [šablony projektů a položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. V **Průzkumník řešení**vyberte uzel projektu.
+2. V **Průzkumník řešení** vyberte uzel projektu.
 
 3. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 

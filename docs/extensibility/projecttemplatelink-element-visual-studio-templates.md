@@ -1,5 +1,7 @@
 ---
 title: ProjectTemplateLink – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o <element> prvku a o tom, jak Určuje cestu k souboru. vstemplate jednoho projektu v šabloně více projektů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e87b33d9b4b3863b89ecd06c3ea959c6e35ec7c0
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 51098553d0b4b969b600f6e6e55cf62871cb44bf
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011980"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903842"
 ---
 # <a name="projecttemplatelink-element-visual-studio-templates"></a>ProjectTemplateLink – element (šablony sady Visual Studio)
 Určuje cestu k souboru *. vstemplate* jednoho projektu v šabloně více projektů.
@@ -33,7 +35,7 @@ ani \<VSTemplate>
  \<SolutionFolder>
  \<ProjectTemplateLink>
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <ProjectTemplateLink ProjectName="Name">
@@ -94,7 +96,7 @@ ani \<VSTemplate>
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
 - [Postupy: vytváření šablon více projektů](../ide/how-to-create-multi-project-templates.md)

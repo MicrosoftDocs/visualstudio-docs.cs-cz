@@ -1,5 +1,7 @@
 ---
 title: TemplateContent – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o prvku TemplateContent a o tom, jak určuje obsah šablony.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 577ce71d3900947cde1de9a1e913124ab778a1ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 53cd7d4b5302652fc371f27b76d7e789a6942640
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699237"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903946"
 ---
 # <a name="templatecontent-element-visual-studio-templates"></a>TemplateContent – element (šablony sady Visual Studio)
 
@@ -31,7 +33,7 @@ Hierarchie elementů:
   <TemplateContent>
 ```
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <TemplateContent>
@@ -54,7 +56,7 @@ Hierarchie elementů:
 |-------------|-----------------|
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje uspořádání a obsah víceprojektových šablon.|
 |[Projekt](../extensibility/project-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje soubory nebo adresáře, které se mají přidat do projektu.|
-|[Odkazy](../extensibility/references-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje odkazy na sestavení požadované pro šablonu položky.|
+|[Reference](../extensibility/references-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje odkazy na sestavení požadované pro šablonu položky.|
 |[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|Volitelný element.<br /><br /> Určuje soubor obsažený v šabloně.|
 |[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje všechny vlastní parametry, které mají být použity při vytvoření projektu nebo položky ze šablony.|
 

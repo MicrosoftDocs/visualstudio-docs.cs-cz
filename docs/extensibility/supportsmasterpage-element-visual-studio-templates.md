@@ -1,5 +1,7 @@
 ---
 title: SupportsMasterPage – – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o prvku SupportsMasterPage – a o tom, jak určuje, zda je v dialogovém okně Přidat novou položku zaškrtnuto políčko vybrat hlavní stránku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 384672303d00b72431820b98fa02d09e440a1de5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07230c3a9b76be8d78e22acaa83addd0fa21005a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699455"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903829"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage – element (šablony sady Visual Studio)
 Určuje, zda je v dialogovém okně **Přidat novou položku** zaškrtnuto políčko **Vybrat hlavní stránku** .
@@ -27,7 +29,7 @@ Určuje, zda je v dialogovém okně **Přidat novou položku** zaškrtnuto polí
  \<VSTemplate> \<TemplateData>
  \<SupportsMasterPage>
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 <SupportsMasterPage> true/false </SupportsMasterPage>

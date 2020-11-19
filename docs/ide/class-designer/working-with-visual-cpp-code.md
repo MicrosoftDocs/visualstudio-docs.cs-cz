@@ -1,5 +1,7 @@
 ---
 title: Práce s kódem C++ (Návrhář tříd)
+description: Naučte se používat diagramy tříd pro návrh a vizualizaci prvku kódu C++, tříd a dalších typů v projektu.
+ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54087a719b0079ba32ff08ff1e08ad01f5e64ed0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c3509f625686f97156efe79f5e1b72aa991ce5ca
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596746"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903881"
 ---
 # <a name="work-with-c-code-in-class-designer"></a>Práce s kódem jazyka C++ v Návrhář tříd
 
@@ -74,7 +76,7 @@ Pokud diagram třídy neaktualizuje změny, které jste provedli v kódu, může
 
 - Ujistěte se, že **Návrhář tříd** podporuje typ, který jste zadali. Viz [omezení pro prvky kódu jazyka C++](#limitations-for-c-code-elements).
 
-Chyba, kterou nejčastěji vidíte pro problém s rozlišením typu, nebyl **nalezen pro jeden nebo více tvarů v diagramu tříd \<element> **. Tato chybová zpráva nemusí nutně znamenat, že váš kód je v chybovém prostředí. Označuje pouze to, že návrhář tříd nemůže zobrazit váš kód. Vyzkoušejte následující míry:
+Chyba, kterou nejčastěji vidíte pro problém s rozlišením typu, nebyl **nalezen pro jeden nebo více tvarů v diagramu tříd \<element>**. Tato chybová zpráva nemusí nutně znamenat, že váš kód je v chybovém prostředí. Označuje pouze to, že návrhář tříd nemůže zobrazit váš kód. Vyzkoušejte následující míry:
 
 - Ujistěte se, že typ existuje. Ujistěte se, že jste neúmyslně zakomentováni nebo odstranili zdrojový kód.
 

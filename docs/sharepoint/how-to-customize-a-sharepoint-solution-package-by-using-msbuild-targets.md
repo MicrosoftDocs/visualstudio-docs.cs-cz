@@ -1,6 +1,8 @@
 ---
 title: Přizpůsobení balíčku řešení služby SharePoint pomocí cílů nástroje MSBuild
 titleSuffix: ''
+description: Přizpůsobení způsobu, jakým Visual Studio vytváří soubory balíčku řešení SharePoint (. wsp) pomocí cílů MSBuild na příkazovém řádku.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9845f755d184c18b6b5ade4c5504e393edae7b00
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 5aa0afbe685c85d9a005dc621f58f17d396c0236
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585807"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903647"
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets"></a>Postupy: Přizpůsobení balíčku řešení služby SharePoint pomocí cílů nástroje MSBuild
   Pomocí cílů nástroje MSBuild v příkazovém řádku můžete přizpůsobit, jak sada Visual Studio vytváří soubory balíčku služby SharePoint (*. wsp*). Můžete například přizpůsobit vlastnosti nástroje MSBuild pro změnu zprostředkujícího adresáře balení a skupin položek MSBuild, které určují výčtové soubory.
@@ -40,11 +42,11 @@ ms.locfileid: "91585807"
 
     Tento příklad zobrazí zprávu před balením tohoto cíle.
 
-2. Pojmenujte soubor **CustomLayout. SharePoint. targets**a uložte jej do složky pro projekt služby SharePoint.
+2. Pojmenujte soubor **CustomLayout. SharePoint. targets** a uložte jej do složky pro projekt služby SharePoint.
 
 3. Otevřete projekt, otevřete místní nabídku a zvolte možnost **Uvolnit projekt**.
 
-4. V **Průzkumník řešení**otevřete místní nabídku pro projekt a pak zvolte **Upravit** * \<ProjectName> . vbproj* nebo **Upravit** * \<ProjectName> . csproj*.
+4. V **Průzkumník řešení** otevřete místní nabídku pro projekt a pak zvolte **Upravit** *\<ProjectName> . vbproj* nebo **Upravit** *\<ProjectName> . csproj*.
 
 5. Po `Import` řádku poblíž konce souboru projektu přidejte následující řádek.
 
@@ -54,7 +56,7 @@ ms.locfileid: "91585807"
 
 6. Uložte a zavřete soubor projektu.
 
-7. V **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **znovu načíst projekt**.
+7. V **Průzkumník řešení** otevřete místní nabídku pro projekt a poté zvolte možnost **znovu načíst projekt**.
 
    Při publikování projektu se zpráva zobrazí ve výstupu před zahájením balení.
 

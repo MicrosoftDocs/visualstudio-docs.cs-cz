@@ -1,5 +1,7 @@
 ---
 title: Ikony zobrazení třídy a prohlížeče objektů
+description: Přečtěte si o Zobrazení tříd a Prohlížeč objektů zobrazit ikony, které reprezentují entity kódu, například obory názvů, třídy, funkce a proměnné.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87bce70f83be2af80f93cf9888432257f6139732
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8c0cf21d6d9055f183d15728fb63118ffb87e9c
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285140"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903998"
 ---
 # <a name="class-view-and-object-browser-icons"></a>Ikony zobrazení tříd a prohlížeče objektů
 
@@ -39,7 +41,7 @@ ms.locfileid: "85285140"
 |![Symbol modulu sady Visual Studio](../ide/media/vxmodule_icon.gif)|Modul|![Symbol položky mapy](../ide/media/vxmapitem_icon.gif)|Položka mapování|
 |![Symbol metody rozšíření](../ide/media/extensionmethod.gif)|Metoda rozšíření|![Symbol deklarace](../ide/media/vxmethod_icon.gif)|Externí deklarace|
 |![Symbol delegáta](../ide/media/vxdelegate_icon.gif)|Delegát|![Ikona chyby pro Zobrazení tříd a Prohlížeč objektů](../ide/media/erroricon.gif)|Chyba|
-|![Symbol výjimky](../ide/media/vxexception_icon.gif)|Výjimka|![Symbol šablony](../ide/media/vxtemplate_icon.gif)|Šablona|
+|![Symbol výjimky](../ide/media/vxexception_icon.gif)|Výjimka|![Symbol šablony](../ide/media/vxtemplate_icon.gif)|Template (Šablona)|
 |![Symbol mapy](../ide/media/vxmap_icon.gif)|Mapa|![Chybový symbol pro vykřičník](../ide/media/vxerror_icon.gif)|Neznámý|
 |![Symbol předávání typu](../ide/media/ob_type_forward.gif)|Přesměrování typu|||
 

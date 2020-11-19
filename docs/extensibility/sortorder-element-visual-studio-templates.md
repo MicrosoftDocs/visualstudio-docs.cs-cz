@@ -1,5 +1,7 @@
 ---
 title: Element prořazení (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o elementu upřesňuj a o tom, jak Určuje hodnotu, která se používá k uspořádání šablony, jak se zobrazuje v dialogovém okně Nový projekt nebo přidat novou položku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 935d00335a21d3e129e79ce351e554ea93787447
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f07c3b62d1412564fd74c420b31b2a9fed41d1fa
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699956"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903748"
 ---
 # <a name="sortorder-element-visual-studio-templates"></a>SortOrder – element (šablony sady Visual Studio)
 Určuje hodnotu, která se používá k uspořádání šablony, mezi ostatními šablonami ve stejné kategorii, jak se zobrazuje v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .
@@ -27,7 +29,7 @@ Určuje hodnotu, která se používá k uspořádání šablony, mezi ostatními
  \<VSTemplate> \<TemplateData>
  \<SortOrder>
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 <SortOrder> ... </SortOrder>

@@ -1,5 +1,7 @@
 ---
 title: ProvideDefaultName – – element (šablony sady Visual Studio) | Microsoft Docs
+description: Přečtěte si o prvku ProvideDefaultName – a o tom, jak určuje, zda aplikace Visual Studio vygeneruje výchozí název sady Visual Studio v dialogovém okně Přidat novou položku nebo nový projekt.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 192716198f605a5f6b4f62730e84dcf83b4229cc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7732c6f02ae5ec086a89bd9ade5c00ea533a68f2
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701721"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903803"
 ---
 # <a name="providedefaultname-element-visual-studio-templates"></a>ProvideDefaultName – – element (šablony sady Visual Studio)
 Určuje, zda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] systém projektu bude generovat výchozí název šablony v dialogovém okně **Přidat novou položku** nebo **Nový projekt** .
@@ -26,7 +28,7 @@ Určuje, zda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] systém p
  \<VSTemplate> \<TemplateData>
  \<ProvideDefaultName>
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <ProvideDefaultName> true/false </ProvideDefaultName>
