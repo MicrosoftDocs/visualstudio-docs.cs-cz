@@ -104,6 +104,12 @@
               href: vs-concierge-chat.md
             - name: Technická podpora
               href: vs-tech-support.md
+            - name: Komunita vývojářů
+              href: vs-developer-community.md
+            - name: Microsoft Q&A
+              href: vs-microsoft-qa.md
+            - name: Technická komunita Microsoftu
+              href: vs-microsoft-tech-community.md
 - name: Software a klíče
   items:
     - name: Software ke stažení
