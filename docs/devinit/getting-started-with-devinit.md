@@ -1,7 +1,7 @@
 ---
 title: Začínáme s devinit
 description: Příručka Začínáme pro devinit.
-ms.date: 08/28/2020
+ms.date: 11/18/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 1f66f691bd92c6cc9d315c58225b9345198fe96d
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: d071a49c9996c9f7f161faf676117704fbcbbdcd
+ms.sourcegitcommit: 3b9a8aec34c7e835069f4db5c133dd002028180c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435764"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94937693"
 ---
 # <a name="getting-started-with-devinit"></a>Začínáme s devinit
 
@@ -32,7 +32,9 @@ devinit je v současné době k dispozici pouze jako součást GitHubu Codespace
 
 Nejdůležitějším krokem je definování vývojového prostředí v [.devinit.jsv souboru](devinit-json.md). Tento soubor bude používat devinit k vytvoření prostředí při spuštění `devinit init` .
 
-V tomto kroku si představte pokyny, které byste měli někomu poskytnout, aby mohli začít pracovat s úložištěm projektu. Například musí mít nainstalován SQL? Konkrétní verze .NET Core? A tak dále. Pak u každé z těchto závislostí vyhledejte odpovídající nástroj devinit v [seznamu nástrojů](devinit-tool-list.md) a přidejte ho do `.devinit.json` souboru úložiště. Můžete si také prohlédnout výběr příkladů v [dokumentaci k ukázkám](sample-readme.md).
+V tomto kroku si představte pokyny, které byste měli někomu poskytnout, aby mohli začít pracovat s úložištěm projektu. Například musí mít nainstalován SQL? Konkrétní verze .NET Core? A tak dále. Pak u každé z těchto závislostí vyhledejte odpovídající nástroj devinit v [seznamu nástrojů](devinit-tool-list.md) a přidejte ho do `.devinit.json` souboru úložiště.
+
+Můžete si také prohlédnout výběr příkladů v [dokumentaci k ukázkám](sample-readme.md)nebo si přečtěte [kurz](tutorial.md).
 
 ## <a name="step-3-enjoy"></a>Krok 3: užívejte!
 
