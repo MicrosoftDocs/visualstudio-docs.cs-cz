@@ -1,5 +1,6 @@
 ---
 title: Třídy LINQ to SQL s děděním jednou tabulkou
+description: V tomto návodu vytvořte LINQ to SQL třídy pomocí dědění s jednou tabulkou v aplikaci Visual Studio Návrhář relací objektů (Návrhář O/R).
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b0b5319cb36179e51b34eacce56282b97ad4a4bb
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: b83fd664cb2969c12d69e1e818f61190deed3804
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036753"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998236"
 ---
 # <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>Návod: vytvoření tříd LINQ to SQL pomocí dědičnosti s jednou tabulkou (O/R Designer)
 [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) podporují dědičnost jedné tabulky, protože je obvykle implementována v relačních systémech. Tento názorný postup se rozšíří na obecný postup, který je k dispozici v tématu [How to: Configure dědičnost pomocí návrháře o/R](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) a poskytuje některá skutečná data k předvedení použití dědičnosti v [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] .
@@ -43,12 +44,12 @@ Chcete-li zjistit, jak dědičnost funguje, vytvořte malou `Person` tabulku, po
 
 ### <a name="to-create-a-base-table-to-demonstrate-inheritance"></a>Vytvoření základní tabulky k demonstraci dědičnosti
 
-1. V **Průzkumník serveru** nebo **Průzkumníku databáze**klikněte pravým tlačítkem myši na uzel **tabulky** a pak klikněte na **Přidat novou tabulku**.
+1. V **Průzkumník serveru** nebo **Průzkumníku databáze** klikněte pravým tlačítkem myši na uzel **tabulky** a pak klikněte na **Přidat novou tabulku**.
 
     > [!NOTE]
     > Můžete použít databázi Northwind nebo jakoukoli jinou databázi, do které můžete přidat tabulku.
 
-2. V **Návrháři tabulky**přidejte do tabulky následující sloupce:
+2. V **Návrháři tabulky** přidejte do tabulky následující sloupce:
 
     |Název sloupce|Typ dat|Povoluje hodnoty null.|
     |-----------------|---------------|-----------------|
@@ -56,7 +57,7 @@ Chcete-li zjistit, jak dědičnost funguje, vytvořte malou `Person` tabulku, po
     |**Typ**|**int**|**True**|
     |**FirstName**|**nvarchar (200)**|**False**|
     |**LastName**|**nvarchar (200)**|**False**|
-    |**Manager**|**int**|**True**|
+    |**Manažer**|**int**|**True**|
 
 3. Nastavte sloupec ID jako primární klíč.
 
@@ -71,7 +72,7 @@ Aby bylo možné ověřit, že je dědění správně nakonfigurováno, tabulka 
 
 2. Zkopírujte do tabulky následující data. (Můžete ho zkopírovat a pak ho vložit do tabulky výběrem celého řádku v podokně **výsledků** .)
 
-    |**ID**|**Typ**|**FirstName**|**LastName**|**Manager**|
+    |**ID**|**Typ**|**FirstName**|**LastName**|**Manažer**|
     |-|-|-|-|-|
     |**1**|**1**|**Anne**|**Wallace**|**PLATNOST**|
     |**2**|**1**|**Carlos**|**Grilo**|**PLATNOST**|
@@ -97,7 +98,7 @@ Teď, když jste vytvořili tabulku, vytvořte nový projekt pro ukázku konfigu
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **InheritanceWalkthrough**a klikněte na **tlačítko OK**.
+4. Pojmenujte projekt **InheritanceWalkthrough** a klikněte na **tlačítko OK**.
 
      Vytvoří se projekt **InheritanceWalkthrough** a přidá se do **Průzkumník řešení**.
 
@@ -116,7 +117,7 @@ Nastavte dědičnost přetažením objektu **dědičnosti** z **panelu nástroj�
 
 ### <a name="to-create-the-inheritance"></a>Vytvoření dědičnosti
 
-1. V **Průzkumník serveru** nebo **Průzkumníku databáze**přejděte do tabulky **Person** , kterou jste vytvořili dříve.
+1. V **Průzkumník serveru** nebo **Průzkumníku databáze** přejděte do tabulky **Person** , kterou jste vytvořili dříve.
 
 2. Přetáhněte tabulku **Person** na návrhovou plochu **návrháře o/R** .
 
@@ -124,9 +125,9 @@ Nastavte dědičnost přetažením objektu **dědičnosti** z **panelu nástroj�
 
 4. Odstraňte vlastnost **správce** z objektu **Person** .
 
-5. Z objektu **Employee** odstraňte vlastnosti **Type**, **ID**, **FirstName**a **LastName** . (Jinými slovy, odstraňte všechny vlastnosti s výjimkou **manažera**.)
+5. Z objektu **Employee** odstraňte vlastnosti **Type**, **ID**, **FirstName** a **LastName** . (Jinými slovy, odstraňte všechny vlastnosti s výjimkou **manažera**.)
 
-6. Na kartě **Návrhář relací objektů** **panelu nástrojů**vytvořte **Dědičnost** mezi objekty **Person** a **Employee** . Provedete to tak, že kliknete na položku **Dědičnost** v **sadě nástrojů** a uvolníte tlačítko myši. Potom klikněte na objekt **zaměstnance** a pak na objekt **Person** v **Návrháři o/R**. Šipka na čáře dědičnosti pak odkazuje na objekt **Person** .
+6. Na kartě **Návrhář relací objektů** **panelu nástrojů** vytvořte **Dědičnost** mezi objekty **Person** a **Employee** . Provedete to tak, že kliknete na položku **Dědičnost** v **sadě nástrojů** a uvolníte tlačítko myši. Potom klikněte na objekt **zaměstnance** a pak na objekt **Person** v **Návrháři o/R**. Šipka na čáře dědičnosti pak odkazuje na objekt **Person** .
 
 7. Klikněte na čáru **dědičnosti** na návrhové ploše.
 

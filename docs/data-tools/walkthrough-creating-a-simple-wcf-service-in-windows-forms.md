@@ -1,5 +1,6 @@
 ---
 title: Vytvoření jednoduché služby WCF v model Windows Forms
+description: V tomto návodu vytvoříte službu Windows Communication Foundation (WCF) v aplikaci Visual Studio, otestujete ji a pak k ní přistupujete z aplikace model Windows Forms.
 ms.date: 11/04/2016
 ms.custom: SEO-VS-2020
 ms.topic: conceptual
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7b0c874509622b34d7a9703a6b31481e0d88e586
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 215ae1409c36417526bb1362f0029029ed95e801
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036792"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998132"
 ---
 # <a name="walkthrough-create-a-simple-wcf-service-in-windows-forms"></a>Návod: Vytvoření jednoduché služby WCF v model Windows Forms
 
@@ -38,7 +39,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
 2. V nabídce **soubor** klikněte na příkaz **Nový** > **projekt**.
 
-3. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#** a vyberte položku **WCF**a potom **knihovnu služby WCF**.
+3. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#** a vyberte položku **WCF** a potom **knihovnu služby WCF**.
 
 4. Kliknutím na tlačítko **OK** vytvořte projekt.
 
@@ -50,12 +51,12 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
 2. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-3. Do vyhledávacího pole na stránce **vytvořit nový projekt** zadejte **Knihovna služby WCF** . Vyberte šablonu C# nebo Visual Basic pro **knihovnu služby WCF**a potom klikněte na tlačítko **Další**.
+3. Do vyhledávacího pole na stránce **vytvořit nový projekt** zadejte **Knihovna služby WCF** . Vyberte šablonu C# nebo Visual Basic pro **knihovnu služby WCF** a potom klikněte na tlačítko **Další**.
 
    ![Vytvoření nového projektu knihovny služby WCF v aplikaci Visual Studio 2019](media/vs-2019/create-new-wcf-service-library.png)
 
    > [!TIP]
-   > Pokud nevidíte žádné šablony, možná budete muset nainstalovat **Windows Communication Foundation** součást sady Visual Studio. Kliknutím na **nainstalovat další nástroje a funkce** otevřete instalační program pro Visual Studio. Zvolte kartu **jednotlivé komponenty** , přejděte dolů k **aktivitám vývoje**a pak vyberte **Windows Communication Foundation**. Klikněte na **Upravit**.
+   > Pokud nevidíte žádné šablony, možná budete muset nainstalovat **Windows Communication Foundation** součást sady Visual Studio. Kliknutím na **nainstalovat další nástroje a funkce** otevřete instalační program pro Visual Studio. Zvolte kartu **jednotlivé komponenty** , přejděte dolů k **aktivitám vývoje** a pak vyberte **Windows Communication Foundation**. Klikněte na **Upravit**.
 
 4. Na stránce **Konfigurace nového projektu** klikněte na **vytvořit**.
 
@@ -64,7 +65,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
    > [!NOTE]
    > Tím se vytvoří funkční služba, kterou lze otestovat a použít. Následující dva kroky ukazují, jak můžete změnit výchozí metodu, aby používala jiný datový typ. Ve skutečné aplikaci byste do služby přidali také vlastní funkce.
 
-5. V **Průzkumník řešení**dvakrát klikněte na **IService1. vb** nebo **IService1.cs**.
+5. V **Průzkumník řešení** dvakrát klikněte na **IService1. vb** nebo **IService1.cs**.
 
    ![Soubor IService1](../data-tools/media/wcf2.png)
 
@@ -80,7 +81,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
    Ve výše uvedeném kódu si všimněte `<OperationContract()>` atributů nebo `[OperationContract]` . Tyto atributy jsou vyžadovány pro jakoukoliv metodu zveřejněnou službou.
 
-6. V **Průzkumník řešení**dvakrát klikněte na **Service1. vb** nebo **Service1.cs**.
+6. V **Průzkumník řešení** dvakrát klikněte na **Service1. vb** nebo **Service1.cs**.
 
    ![Soubor Service1](../data-tools/media/wcf3.png)
 
@@ -118,7 +119,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
 1. V nabídce **soubor** přejděte na příkaz **Přidat** a potom klikněte na možnost **Nový projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#** , vyberte možnost **Windows**a potom vyberte možnost **model Windows Forms aplikace**. Kliknutím na tlačítko **OK** otevřete projekt.
+2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#** , vyberte možnost **Windows** a potom vyberte možnost **model Windows Forms aplikace**. Kliknutím na tlačítko **OK** otevřete projekt.
 
      ![Projekt aplikace model Windows Forms](../data-tools/media/wcf7.png)
 
@@ -134,9 +135,9 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
 ### <a name="build-a-client-application"></a>Sestavení klientské aplikace
 
-1. V **Průzkumník řešení**dvakrát klikněte na **Form1. vb** nebo **Form1.cs** a otevřete Návrhář formulářů, pokud ještě není otevřený.
+1. V **Průzkumník řešení** dvakrát klikněte na **Form1. vb** nebo **Form1.cs** a otevřete Návrhář formulářů, pokud ještě není otevřený.
 
-2. Z **panelu nástrojů**přetáhněte ovládací prvek, `TextBox` `Label` ovládací prvek a `Button` ovládací prvek do formuláře.
+2. Z **panelu nástrojů** přetáhněte ovládací prvek, `TextBox` `Label` ovládací prvek a `Button` ovládací prvek do formuláře.
 
      ![Přidání ovládacích prvků do formuláře](../data-tools/media/wcf9.png)
 
@@ -145,7 +146,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
      [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.cs)]
      [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.vb)]
 
-4. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **WindowsApplication1** a klikněte na **nastavit jako spouštěný projekt**.
+4. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **WindowsApplication1** a klikněte na **nastavit jako spouštěný projekt**.
 
 5. Stisknutím klávesy **F5** spusťte projekt. Zadejte nějaký text a klikněte na tlačítko. Popisek zobrazí "zadali jste:" a zobrazí se text, který jste zadali.
 

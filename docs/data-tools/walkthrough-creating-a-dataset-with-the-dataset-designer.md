@@ -1,5 +1,6 @@
 ---
 title: Vytvoření datové sady pomocí Návrhář datových sad
+description: V tomto návodu Vytvořte datovou sadu pomocí Návrhář datových sad. Pochopení procesu vytvoření nového projektu a přidání nové položky DataSet
 ms.custom: SEO-VS-2020
 ms.date: 09/11/2017
 ms.topic: conceptual
@@ -14,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 20cd8bdc4f7d72cd0ed3920f75a4955ee57d2a68
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 1f124a459d55b945cd8dbb480d7e7c22b5de4f3e
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036779"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998028"
 ---
 # <a name="walkthrough-create-a-dataset-with-the-dataset-designer"></a>Návod: vytvoření datové sady pomocí Návrhář datových sad
 
@@ -51,7 +52,7 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **DatasetDesignerWalkthrough**a klikněte na **tlačítko OK**.
+4. Pojmenujte projekt **DatasetDesignerWalkthrough** a klikněte na **tlačítko OK**.
 
      Visual Studio přidá projekt do **Průzkumník řešení** a zobrazí nový formulář v návrháři.
 
@@ -61,9 +62,9 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
      Zobrazí se dialogové okno **Přidat novou položku**.
 
-2. V levém podokně vyberte **data**a potom v prostředním podokně vyberte **datová sada** .
+2. V levém podokně vyberte **data** a potom v prostředním podokně vyberte **datová sada** .
 
-3. Pojmenujte datovou sadu **NorthwindDataSet**a pak zvolte **Přidat**.
+3. Pojmenujte datovou sadu **NorthwindDataSet** a pak zvolte **Přidat**.
 
      Visual Studio přidá do projektu soubor s názvem **NorthwindDataSet. xsd** a otevře ho v **Návrhář datových sad**.
 
@@ -71,7 +72,7 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
 1. V nabídce **zobrazení** klikněte na příkaz **Průzkumník serveru**.
 
-2. V **Průzkumník serveru**klikněte na tlačítko **připojit k databázi** .
+2. V **Průzkumník serveru** klikněte na tlačítko **připojit k databázi** .
 
 3. Vytvořte připojení ke vzorové databázi Northwind.
 
@@ -81,7 +82,7 @@ V této části se dozvíte, jak přidat tabulky do datové sady.
 
 ### <a name="to-create-the-customers-table"></a>Vytvoření tabulky Zákazníci
 
-1. Rozbalte datové připojení, které jste vytvořili v **Průzkumník serveru**a potom rozbalte uzel **tabulky** .
+1. Rozbalte datové připojení, které jste vytvořili v **Průzkumník serveru** a potom rozbalte uzel **tabulky** .
 
 2. Přetáhněte tabulku **Customers** z **Průzkumník serveru** na **Návrhář datových sad**.
 
@@ -91,13 +92,13 @@ V této části se dozvíte, jak přidat tabulky do datové sady.
 
 - Přetáhněte tabulku **Orders** z **Průzkumník serveru** na **Návrhář datových sad**.
 
-     Tabulka dat **Orders** , **OrdersTableAdapter**a data relace mezi tabulkami **Customers** a **Orders** se přidají do datové sady.
+     Tabulka dat **Orders** , **OrdersTableAdapter** a data relace mezi tabulkami **Customers** a **Orders** se přidají do datové sady.
 
 ### <a name="to-create-the-orderdetails-table"></a>Postup vytvoření tabulky OrderDetails
 
 - Přetáhněte tabulku **Order Details** z **Průzkumník serveru** na **Návrhář datových sad**.
 
-     Do datové sady jsou přidány tabulky dat **objednávky** , **OrderDetailsTableAdapter**a datový vztah mezi tabulkami **Orders** a **OrderDetails** .
+     Do datové sady jsou přidány tabulky dat **objednávky** , **OrderDetailsTableAdapter** a datový vztah mezi tabulkami **Orders** a **OrderDetails** .
 
 ## <a name="next-steps"></a>Další kroky
 

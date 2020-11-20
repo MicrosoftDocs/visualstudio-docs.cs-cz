@@ -1,5 +1,7 @@
 ---
 title: Upgrade souborů .mdf
+description: Zkontrolujte možnosti upgradu databázového souboru (. mdf) po instalaci novější verze sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d35611dcc7b6067cf6d6166aff521ef291b8dfcd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: babc82469d32540f1a003b629c9d83887ca91595
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281120"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998041"
 ---
 # <a name="upgrade-mdf-files"></a>Upgrade souborů .mdf
 
@@ -57,7 +59,7 @@ Před upgradem databáze Vezměte v úvahu následující kritéria:
 
 ### <a name="to-upgrade-a-database-file-to-use-the-localdb-version"></a>Postup upgradu databázového souboru tak, aby používal verzi LocalDB
 
-1. V **Průzkumník serveru**klikněte na tlačítko **připojit k databázi** .
+1. V **Průzkumník serveru** klikněte na tlačítko **připojit k databázi** .
 
 2. V dialogovém okně **Přidat připojení** zadejte následující informace:
 
@@ -97,11 +99,11 @@ SQL Server Express připojení můžete také upravit tak, aby používalo Local
 
   - Chcete-li spustit projekt, vyberte klávesu **F5** .
 
-  - Chcete-li upravit databázi, otevřete soubor *MDF* v **Průzkumník řešení**a rozbalte uzel v **Průzkumník serveru** pro práci s databází.
+  - Chcete-li upravit databázi, otevřete soubor *MDF* v **Průzkumník řešení** a rozbalte uzel v **Průzkumník serveru** pro práci s databází.
 
 ### <a name="to-make-sql-server-express-the-default-database-engine"></a>Zpřístupnění SQL Server Express výchozím databázovým strojem
 
-1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
+1. Na panelu nabídek vyberte **Tools**  >  **Možnosti** nástroje.
 
 2. V dialogovém okně **Možnosti** rozbalte možnosti **nástroje databáze** a pak vyberte **datová připojení**.
 

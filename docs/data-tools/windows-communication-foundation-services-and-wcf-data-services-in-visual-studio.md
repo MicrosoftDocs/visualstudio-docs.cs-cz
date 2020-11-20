@@ -1,5 +1,7 @@
 ---
 title: Windows Communication Foundation a WCF Data Services
+description: Prozkoumejte služby Windows Communication Foundation (WCF) a WCF Data Services v aplikaci Visual Studio, abyste mohli vytvářet distribuované aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 dev_langs:
@@ -35,12 +37,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c1f24a33a482b1994d0d8667b4fc71cf968e4625
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 983ff598003a4f966b5173dc9ae78dd9aaa16580
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281042"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94997898"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio
 
@@ -163,7 +165,7 @@ V takovém případě můžete zadat `endpointConfigurationName` jako parametr k
 
 ### <a name="to-find-the-available-endpoints-for-a-wcf-service"></a>Vyhledání dostupných koncových bodů pro službu WCF
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na soubor **app.config** pro projekt, který obsahuje odkaz na službu, a pak klikněte na **otevřít**. Soubor se zobrazí v editoru kódu.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na soubor **app.config** pro projekt, který obsahuje odkaz na službu, a pak klikněte na **otevřít**. Soubor se zobrazí v editoru kódu.
 
 2. Vyhledejte `<Client>` značku v souboru.
 
@@ -186,7 +188,7 @@ Ve výchozím nastavení, když je přidán odkaz na službu do projektu, je nak
 
 ### <a name="to-call-a-service-method-asynchronously"></a>Postup asynchronního volání metody služby
 
-1. V **Průzkumník řešení**vyberte odkaz na službu.
+1. V **Průzkumník řešení** vyberte odkaz na službu.
 
 2. V nabídce **projekt** klikněte na položku **Konfigurovat odkaz na službu**.
 
@@ -234,7 +236,7 @@ Chcete-li se tomuto problému vyhnout, jsou typy v odkazovaných sestaveních sd
 
 ### <a name="to-disable-type-sharing-in-a-single-assembly"></a>Zakázání sdílení typu v jednom sestavení
 
-1. V **Průzkumník řešení**vyberte odkaz na službu.
+1. V **Průzkumník řešení** vyberte odkaz na službu.
 
 2. V nabídce **projekt** klikněte na položku **Konfigurovat odkaz na službu**.
 
@@ -244,7 +246,7 @@ Chcete-li se tomuto problému vyhnout, jsou typy v odkazovaných sestaveních sd
 
 ### <a name="to-disable-type-sharing-in-all-assemblies"></a>Zakázání sdílení typů ve všech sestaveních
 
-1. V **Průzkumník řešení**vyberte odkaz na službu.
+1. V **Průzkumník řešení** vyberte odkaz na službu.
 
 2. V nabídce **projekt** klikněte na položku **Konfigurovat odkaz na službu**.
 
@@ -263,7 +265,7 @@ Chcete-li se tomuto problému vyhnout, jsou typy v odkazovaných sestaveních sd
 | [Návod: Vytvoření n-vrstvých datových aplikací](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | Poskytuje podrobné pokyny pro vytvoření typové datové sady a oddělení kódu TableAdapter a datové sady do více projektů. |
 | [Dialogové okno Konfigurovat odkaz na službu](../data-tools/configure-service-reference-dialog-box.md) | Popisuje prvky uživatelského rozhraní dialogového okna **Konfigurovat odkaz na službu** . |
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
 
 - <xref:System.ServiceModel>
 - <xref:System.Data.Services>

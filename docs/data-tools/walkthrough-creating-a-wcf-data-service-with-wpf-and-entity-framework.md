@@ -1,5 +1,7 @@
 ---
 title: Vytvoření datové služby WCF pomocí & WPF Entity Framework
+description: Pomocí WPF a Entity Framework, která je hostovaná ve webové aplikaci ASP.NET, vytvořte datovou službu WCF a pak k ní přihlaste z model Windows Forms aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9abdeee9a785a8bccf6cbb580c87bae4fa313036
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c8c9ced0b589b28f1cd21de4a862c6f11dc6e03e
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585987"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998262"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>Návod: Vytvoření datové služby WCF pomocí WPF a Entity Framework
 Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] hostovaný ve [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webové aplikaci a pak k němu přistupovat z aplikace model Windows Forms.
@@ -43,7 +45,7 @@ V tomto návodu:
 ## <a name="prerequisites"></a>Požadavky
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio**můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio** můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
 
 2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
@@ -70,9 +72,9 @@ V prvním kroku přidáte webový projekt, který bude hostitelem služby.
 
 2. V dialogovém okně **Nový projekt** rozbalte **Visual Basic** nebo **Visual C#** a **webový** uzel a pak zvolte šablonu **webové aplikace ASP.NET** .
 
-3. Do textového pole **název** zadejte **NorthwindWeb**a poté klikněte na tlačítko **OK** .
+3. Do textového pole **název** zadejte **NorthwindWeb** a poté klikněte na tlačítko **OK** .
 
-4. V dialogovém okně **Nový projekt ASP.NET** v seznamu **Vyberte šablonu** zvolte **prázdné**a pak klikněte na tlačítko **OK** .
+4. V dialogovém okně **Nový projekt ASP.NET** v seznamu **Vyberte šablonu** zvolte **prázdné** a pak klikněte na tlačítko **OK** .
 
 V dalším kroku vytvoříte [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] , který představuje `Customers` tabulku v databázi Northwind.
 
@@ -120,9 +122,9 @@ V dalším kroku vytvoříte a otestujete datovou službu.
 
 3. Do textového pole **název** zadejte `NorthwindCustomers` a pak klikněte na tlačítko **Přidat** .
 
-     V **editoru kódu**se zobrazí soubor **NorthwindCustomers. svc** .
+     V **editoru kódu** se zobrazí soubor **NorthwindCustomers. svc** .
 
-4. V **editoru kódu**vyhledejte první `TODO:` komentář a nahraďte kód následujícím kódem:
+4. V **editoru kódu** vyhledejte první `TODO:` komentář a nahraďte kód následujícím kódem:
 
      [!code-vb[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.vb)]
      [!code-csharp[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.cs)]
@@ -134,7 +136,7 @@ V dalším kroku vytvoříte a otestujete datovou službu.
 
 6. Na panelu nabídek vyberte možnost **ladit**  >  **Spustit bez ladění** a spusťte službu. Otevře se okno prohlížeče a zobrazí se schéma XML pro službu.
 
-7. Do **adresního** řádku zadejte `Customers` na konci adresy URL pro **NorthwindCustomers. svc**a pak zvolte klávesu **ENTER** .
+7. Do **adresního** řádku zadejte `Customers` na konci adresy URL pro **NorthwindCustomers. svc** a pak zvolte klávesu **ENTER** .
 
      Zobrazí se reprezentace dat v tabulce v jazyce XML `Customers` .
 
@@ -158,7 +160,7 @@ V prvním kroku přidáte model Windows Forms projekt do řešení a nastavíte 
 
 3. Do textového pole **název** zadejte `NorthwindClient` a pak klikněte na tlačítko **OK** .
 
-4. V **Průzkumník řešení**vyberte uzel projektu **NorthwindClient** .
+4. V **Průzkumník řešení** vyberte uzel projektu **NorthwindClient** .
 
 5. V panelu nabídek vyberte položku **projekt**, **nastavit jako spouštěný projekt**.
 
@@ -178,13 +180,13 @@ V dalším kroku nakonfigurujete zdroj dat, který povolí datovou vazbu ke slu�
 
 ### <a name="to-enable-data-binding-to-the-service"></a>Vytvoření datové vazby na službu
 
-1. Na panelu nabídek vyberte možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
+1. Na panelu nabídek vyberte možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat** Windows.
 
    Otevře se okno **zdroje dat** .
 
 2. V okně **zdroje dat** klikněte na tlačítko **Přidat nový zdroj dat** .
 
-3. Na stránce **Vybrat typ zdroje dat** v **Průvodci konfigurací zdroje dat**zvolte možnost **objekt**a poté klikněte na tlačítko **Další** .
+3. Na stránce **Vybrat typ zdroje dat** v **Průvodci konfigurací zdroje dat** zvolte možnost **objekt** a poté klikněte na tlačítko **Další** .
 
 4. Na stránce **Vyberte datové objekty** rozbalte uzel **NorthwindClient** a potom rozbalte uzel **NorthwindClient. ServiceReference1** .
 
@@ -202,7 +204,7 @@ V dalším kroku vytvoříte uživatelské rozhraní, které zobrazí data ze sl
 
 3. Zvolte ovládací prvek **customersDataGridView** a potom v okně **vlastnosti** nastavte vlastnost **Dock** na **Fill**.
 
-4. V **Průzkumník řešení**otevřete místní nabídku pro uzel **Form1** a výběrem možnosti **Zobrazit kód** otevřete Editor kódu a přidejte následující `Imports` `Using` příkaz nebo příkaz v horní části souboru:
+4. V **Průzkumník řešení** otevřete místní nabídku pro uzel **Form1** a výběrem možnosti **Zobrazit kód** otevřete Editor kódu a přidejte následující `Imports` `Using` příkaz nebo příkaz v horní části souboru:
 
    ```vb
    Imports NorthwindClient.ServiceReference1
@@ -230,7 +232,7 @@ V dalším kroku vytvoříte uživatelské rozhraní, které zobrazí data ze sl
    }
    ```
 
-6. V **Průzkumník řešení**otevřete místní nabídku pro soubor **NorthwindCustomers. svc** a v prohlížeči vyberte možnost **Zobrazit**. Otevře se aplikace Internet Explorer a zobrazí se schéma XML pro službu.
+6. V **Průzkumník řešení** otevřete místní nabídku pro soubor **NorthwindCustomers. svc** a v prohlížeči vyberte možnost **Zobrazit**. Otevře se aplikace Internet Explorer a zobrazí se schéma XML pro službu.
 
 7. Zkopírujte adresu URL z panelu Adresa aplikace Internet Explorer.
 
@@ -247,11 +249,11 @@ V tomto kroku přizpůsobíte aplikaci pro filtrování dat podle města zákazn
 
 ### <a name="to-add-filtering-by-city"></a>Přidání filtrování podle města
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu **Form1. vb** nebo **Form1.cs** a klikněte na tlačítko **otevřít**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu **Form1. vb** nebo **Form1.cs** a klikněte na tlačítko **otevřít**.
 
 2. Přidejte <xref:System.Windows.Forms.TextBox> ovládací prvek a <xref:System.Windows.Forms.Button> ovládací prvek ze **sady nástrojů** do formuláře.
 
-3. Otevřete místní nabídku pro <xref:System.Windows.Forms.Button> ovládací prvek, zvolte možnost **Zobrazit kód**a přidejte následující kód do `Button1_Click` obslužné rutiny události:
+3. Otevřete místní nabídku pro <xref:System.Windows.Forms.Button> ovládací prvek, zvolte možnost **Zobrazit kód** a přidejte následující kód do `Button1_Click` obslužné rutiny události:
 
     ```vb
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -284,7 +286,7 @@ V tomto kroku přizpůsobíte aplikaci pro filtrování dat podle města zákazn
 
 5. Na panelu nabídek vyberte **ladit**  >  **Spustit ladění** a spusťte aplikaci.
 
-6. Do textového pole zadejte **London**a pak klikněte na tlačítko. Zobrazí se pouze zákazníci z Londýna.
+6. Do textového pole zadejte **London** a pak klikněte na tlačítko. Zobrazí se pouze zákazníci z Londýna.
 
 ## <a name="see-also"></a>Viz také
 

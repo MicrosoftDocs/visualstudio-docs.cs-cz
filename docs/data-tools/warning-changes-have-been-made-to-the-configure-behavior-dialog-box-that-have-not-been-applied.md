@@ -1,6 +1,6 @@
 ---
 title: Nepoužité změny
-description: Upozornění – v dialogovém okně Konfigurovat chování byly provedeny změny, které nebyly aplikovány.
+description: Upozornění – v dialogovém okně Konfigurovat chování byly provedeny změny, které nebyly aplikovány. Zobrazit informace o této zprávě návrháře sady Visual Studio O/R.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 02a94c7038e0825a9793521ed57eefd3a61d9e39
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 7f93c4277f1922ae2d78e32d3ed940f9d7215c96
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036727"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998210"
 ---
 # <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>Upozornění: byly provedeny změny v dialogovém okně Konfigurovat chování, které nebylo použito.
 

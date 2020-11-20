@@ -1,5 +1,6 @@
 ---
 title: Vytvoření DataTable v Návrhář datových sad
+description: V tomto návodu vytvořte DataTable (bez TableAdapter) pomocí Návrhář datových sad. Vytvořte novou aplikaci model Windows Forms a přidejte do ní novou datovou sadu.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7dd762c6df5eebc9ebbf142a3ad7dfe430800802
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a0dad1e6878adc73a08753dca21500499e652602
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036766"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998249"
 ---
 # <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>Návod: vytvoření DataTable v Návrhář datových sad
 
@@ -32,7 +33,7 @@ Tento návod vysvětluje, jak vytvořit <xref:System.Data.DataTable> (bez TableA
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **DataTableWalkthrough**a klikněte na **tlačítko OK**.
+4. Pojmenujte projekt **DataTableWalkthrough** a klikněte na **tlačítko OK**.
 
      Projekt **DataTableWalkthrough** je vytvořen a přidán do **Průzkumník řešení**.
 
@@ -42,7 +43,7 @@ Tento návod vysvětluje, jak vytvořit <xref:System.Data.DataTable> (bez TableA
 
      Zobrazí se dialogové okno **Přidat novou položku**.
 
-2. V levém podokně vyberte **data**a potom v prostředním podokně vyberte **datová sada** .
+2. V levém podokně vyberte **data** a potom v prostředním podokně vyberte **datová sada** .
 
 3. Klikněte na tlačítko **Přidat**.
 
@@ -58,7 +59,7 @@ Tento návod vysvětluje, jak vytvořit <xref:System.Data.DataTable> (bez TableA
 
 ## <a name="add-columns-to-the-datatable"></a>Přidat sloupce do objektu DataTable
 
-1. Klikněte pravým tlačítkem myši na tabulku **hudba** . Přejděte na **Přidat**a potom klikněte na **sloupec**.
+1. Klikněte pravým tlačítkem myši na tabulku **hudba** . Přejděte na **Přidat** a potom klikněte na **sloupec**.
 
 2. Pojmenujte sloupec `SongID` .
 

@@ -1,5 +1,6 @@
 ---
 title: Přizpůsobení chování funkce Vložit/aktualizovat/odstranit
+description: V tomto návodu Přizpůsobte chování vložení, aktualizace a odstranění tříd entit pomocí LINQ (jazyka integrovaného dotazu) do nástrojů SQL v aplikaci Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5323cfa41dc4931db514977238fd359b4f38ab3f
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: cac9f27263fc7d316d308f1f8d906751f419f104
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036740"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94997924"
 ---
 # <a name="walkthrough-customize-the-insert-update-and-delete-behavior-of-entity-classes"></a>Návod: přizpůsobení chování při vložení, aktualizaci a odstranění tříd entit
 
@@ -26,7 +27,7 @@ ms.locfileid: "90036740"
 Ve výchozím nastavení je logika pro provádění aktualizací poskytována modulem runtime LINQ to SQL. Modul runtime vytvoří výchozí `Insert` `Update` příkazy, a `Delete` v závislosti na schématu tabulky (definice sloupců a informace o primárním klíči). Pokud nechcete použít výchozí chování, můžete nakonfigurovat chování aktualizace a určit konkrétní uložené procedury pro provádění nezbytných vložení, aktualizací a odstranění, které je nutné pro práci s daty v databázi. To lze provést také v případě, že se výchozí chování negeneruje, například když vaše třídy entit budou mapovány na zobrazení. Kromě toho můžete přepsat výchozí chování aktualizace, když databáze vyžaduje přístup k tabulce prostřednictvím uložených procedur. Další informace najdete v tématu [přizpůsobení operací pomocí uložených procedur](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures).
 
 > [!NOTE]
-> Tento návod vyžaduje dostupnost uložených procedur **InsertCustomer**, **UpdateCustomer**a **DeleteCustomer** pro databázi Northwind.
+> Tento návod vyžaduje dostupnost uložených procedur **InsertCustomer**, **UpdateCustomer** a **DeleteCustomer** pro databázi Northwind.
 
 Tento názorný postup popisuje kroky, které je nutné provést, chcete-li přepsat výchozí LINQ to SQL běhové chování pro ukládání dat zpět do databáze pomocí uložených procedur.
 
@@ -50,7 +51,7 @@ V tomto návodu se dozvíte, jak provádět následující úlohy:
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio**můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio** můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **ukládání a zpracování dat** nebo jako jednotlivé komponenty.
 
 2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
@@ -78,7 +79,7 @@ Vzhledem k tomu, že pracujete se LINQ to SQLmi třídami a zobrazujete data ve 
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
-4. Pojmenujte projekt **UpdatingWithSProcsWalkthrough**a klikněte na **tlačítko OK**.
+4. Pojmenujte projekt **UpdatingWithSProcsWalkthrough** a klikněte na **tlačítko OK**.
 
      Vytvoří se projekt **UpdatingWithSProcsWalkthrough** a přidá se do **Průzkumník řešení**.
 
@@ -96,9 +97,9 @@ Vytvořte LINQ to SQL třídy, které jsou namapovány na tabulky databáze, př
 
 ### <a name="to-create-a-customer-entity-class-and-configure-a-data-source-with-it"></a>Vytvoření třídy entity zákazníka a konfigurace zdroje dat
 
-1. V **Průzkumník serveru** nebo **Průzkumníku databáze**vyhledejte tabulku **Customer** v SQL Server verzi ukázkové databáze Northwind.
+1. V **Průzkumník serveru** nebo **Průzkumníku databáze** vyhledejte tabulku **Customer** v SQL Server verzi ukázkové databáze Northwind.
 
-2. Přetáhněte uzel **Customers** z **Průzkumník serveru** nebo **Průzkumníka databáze** na plochu*Návrháře * O/R* .
+2. Přetáhněte uzel **Customers** z **Průzkumník serveru** nebo **Průzkumníka databáze** na plochu *Návrháře * O/R* .
 
      Vytvoří se Třída entity s názvem **Zákazník** . Obsahuje vlastnosti, které odpovídají sloupcům v tabulce Customers. Třída entity se nazývá **Customer** (ne **zákazníci**), protože představuje jednoho zákazníka z tabulky Customers.
 
@@ -184,15 +185,15 @@ Ve výchozím nastavení není tlačítko Uložit povoleno a funkce Uložit nejs
 
 ### <a name="to-override-the-default-update-behavior"></a>Přepsání výchozího chování aktualizace
 
-1. Otevřete soubor LINQ to SQL v **Návrháři o/R**. (V **Průzkumník řešení**dvakrát klikněte na soubor **Northwind. dbml** .)
+1. Otevřete soubor LINQ to SQL v **Návrháři o/R**. (V **Průzkumník řešení** dvakrát klikněte na soubor **Northwind. dbml** .)
 
-2. V **Průzkumník serveru** nebo **Průzkumníku databáze**rozbalte uzel **uložené procedury** databáze Northwind a vyhledejte uložené procedury **InsertCustomers**, **UpdateCustomers**a **DeleteCustomers** .
+2. V **Průzkumník serveru** nebo **Průzkumníku databáze** rozbalte uzel **uložené procedury** databáze Northwind a vyhledejte uložené procedury **InsertCustomers**, **UpdateCustomers** a **DeleteCustomers** .
 
 3. Přetáhněte všechny tři uložené procedury do **návrháře o/R**.
 
      Uložené procedury jsou přidány do podokna metody jako <xref:System.Data.Linq.DataContext> metody. Další informace naleznete v tématu [metody DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
-4. V **Návrháři o/R**vyberte třídu entity **zákazníka** .
+4. V **Návrháři o/R** vyberte třídu entity **zákazníka** .
 
 5. V okně **vlastnosti** vyberte vlastnost **Vložit** .
 

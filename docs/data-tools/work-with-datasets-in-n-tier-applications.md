@@ -1,5 +1,7 @@
 ---
 title: Práce s datovými sadami ve vícevrstvých aplikacích
+description: Naučte se pracovat s datovými sadami v n-vrstvých aplikacích. N-vrstvé datové aplikace jsou aplikace zaměřené na data, které jsou rozdělené do několika logických vrstev (nebo vrstev).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c7532bed6a7d43c24d698870723d2265fc2b176f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d450bb60bdb604f658f73d0b5df4b9bd739cf923
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585922"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998184"
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>Práce s datovými sadami ve vícevrstvých aplikacích
 

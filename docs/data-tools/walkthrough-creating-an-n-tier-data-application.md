@@ -1,5 +1,7 @@
 ---
 title: 'Návod: vytvoření N-vrstvých datových aplikací'
+description: V tomto návodu vytvoříte N-vrstvou datovou aplikaci. N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou rozdělené do mnoha logických vrstev nebo vrstev.
+ms.custom: SEO-VS-2020
 ms.date: 09/08/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a09ef4cec4b7c2921322b934eef39ba660d02587
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 76bf07e99f9965e88804c51663bcc37053bf74d6
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426652"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998080"
 ---
 # <a name="walkthrough-create-an-n-tier-data-application"></a>Návod: Vytvoření n-vrstvých datových aplikací
 *N-vrstvé* datové aplikace jsou aplikace, které přistupují k datům a jsou rozdělené do několika logických vrstev nebo *vrstev*. Oddělení součástí aplikace do diskrétních vrstev zvyšuje udržovatelnost a škálovatelnost aplikace. Je to díky tomu, že umožňuje snazší přijímání nových technologií, které se dají použít na jednu vrstvu, aniž byste museli přenavrhovat celé řešení. N-vrstvá architektura zahrnuje prezentační vrstvu, střední vrstvu a datovou vrstvu. Střední vrstva obvykle zahrnuje vrstvu přístupu k datům, vrstvu obchodní logiky a sdílené komponenty, jako je ověřování a ověřování. Datová vrstva zahrnuje relační databázi. N-vrstvé aplikace obvykle ukládají citlivé informace do vrstvy přístupu k datům střední vrstvy, aby zachovaly izolaci od koncových uživatelů, kteří přistupují k prezentační vrstvě. Další informace najdete v tématu [N-vrstvých datových aplikací – přehled](../data-tools/n-tier-data-applications-overview.md).
@@ -53,7 +55,7 @@ Během tohoto Názorného postupu provedete následující kroky:
 ## <a name="prerequisites"></a>Požadavky
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
-1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio**můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **vývoj desktopových** aplikací pro .NET nebo jako jednotlivé komponenty.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji buď ze [stránky pro stažení SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program pro Visual Studio**. V **instalační program pro Visual Studio** můžete nainstalovat SQL Server Express LocalDB jako součást úlohy **vývoj desktopových** aplikací pro .NET nebo jako jednotlivé komponenty.
 
 2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
@@ -71,7 +73,7 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 Prvním krokem tohoto návodu je vytvoření řešení a dvou projektů knihovny tříd. První knihovna tříd obsahuje datovou sadu (generovanou typovou `DataSet` třídu a datové tabulky, které obsahují data aplikace). Tento projekt se používá jako vrstva datové entity aplikace a obvykle se nachází v prostřední vrstvě. Datová sada vytvoří počáteční datovou sadu a automaticky odděluje kód do dvou knihoven tříd.
 
 > [!NOTE]
-> Před kliknutím na tlačítko **OK**nezapomeňte projekt a řešení pojmenovat správně. To vám usnadní dokončení tohoto návodu.
+> Před kliknutím na tlačítko **OK** nezapomeňte projekt a řešení pojmenovat správně. To vám usnadní dokončení tohoto návodu.
 
 ### <a name="to-create-the-n-tier-solution-and-dataentitytier-class-library"></a>Vytvoření n-vrstvého řešení a knihovny tříd DataEntityTier
 
@@ -83,7 +85,7 @@ Prvním krokem tohoto návodu je vytvoření řešení a dvou projektů knihovny
 
 4. Pojmenujte projekt **DataEntityTier**.
 
-5. Pojmenujte řešení **NTierWalkthrough**a pak zvolte **OK**.
+5. Pojmenujte řešení **NTierWalkthrough** a pak zvolte **OK**.
 
      NTierWalkthrough řešení, které obsahuje projekt DataEntityTier, je vytvořeno a přidáno do **Průzkumník řešení**.
 
@@ -177,7 +179,7 @@ Datová služba musí volat dvě metody ve vrstvě přístupu k datům: `GetCust
 
 ### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-customers-table"></a>Vytvoření metody, která vrací tabulku Customers, ve vrstvě přístupu k datům
 
-1. V **Průzkumník řešení**dvakrát klikněte na **NorthwindDataSet. xsd** a otevřete datovou sadu.
+1. V **Průzkumník řešení** dvakrát klikněte na **NorthwindDataSet. xsd** a otevřete datovou sadu.
 
 2. Klikněte pravým tlačítkem na **CustomersTableAdapter** a klikněte na **Přidat dotaz**.
 
@@ -301,14 +303,14 @@ Nastavíme projekt **PresentationTier** jako projekt po spuštění pro řešen�
 
 ### <a name="to-set-the-new-presentation-tier-project-as-the-startup-project"></a>Nastavení nového projektu prezentační vrstvy jako spouštěného projektu
 
-- V **Průzkumník řešení**klikněte pravým tlačítkem myši na **PresentationTier** a klikněte na **nastavit jako spouštěný projekt**.
+- V **Průzkumník řešení** klikněte pravým tlačítkem myši na **PresentationTier** a klikněte na **nastavit jako spouštěný projekt**.
 
 ## <a name="add-references-to-the-presentation-tier"></a>Přidání odkazů do prezentační vrstvy
 Klientská aplikace PresentationTier vyžaduje odkaz na službu datové služby, aby mohla získat přístup k metodám ve službě. Kromě toho je vyžadován odkaz na datovou sadu, aby bylo možné povolit sdílení typů službou WCF. Dokud nepovolíte sdílení typů prostřednictvím datové služby, není kód přidaný do třídy částečné datové sady k dispozici pro prezentační vrstvu. Vzhledem k tomu, že obvykle přidáte kód, jako je například ověřovací kód do události změny řádku a sloupce tabulky dat, je pravděpodobně vhodné získat přístup k tomuto kódu z klienta.
 
 ### <a name="to-add-a-reference-to-the-presentation-tier"></a>Přidání odkazu do prezentační vrstvy
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **PresentationTier** a vyberte **Přidat odkaz**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **PresentationTier** a vyberte **Přidat odkaz**.
 
 2. V dialogovém okně **Přidat odkaz** vyberte kartu **projekty** .
 
@@ -316,7 +318,7 @@ Klientská aplikace PresentationTier vyžaduje odkaz na službu datové služby,
 
 ### <a name="to-add-a-service-reference-to-the-presentation-tier"></a>Přidání odkazu na službu do prezentační vrstvy
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **PresentationTier** a vyberte **Přidat odkaz na službu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **PresentationTier** a vyberte **Přidat odkaz na službu**.
 
 2. V dialogovém okně **Přidat odkaz na službu** vyberte možnost **zjistit**.
 
@@ -330,7 +332,7 @@ Po přidání odkazu na službu do datové služby se okno **zdroje dat** automa
 
 ### <a name="to-add-two-data-bound-datagridviews-to-the-form"></a>Přidání dvou ovládacích prvků DataGridView vázaných na data do formuláře
 
-1. V **Průzkumník řešení**vyberte projekt **PresentationTier** .
+1. V **Průzkumník řešení** vyberte projekt **PresentationTier** .
 
 2. V okně **zdroje dat** rozbalte **NorthwindDataSet** a vyhledejte uzel **Customers (zákazníci** ).
 
@@ -365,7 +367,7 @@ Výchozí hodnota pro `maxReceivedMessageSize` není dostatečně velká pro ulo
 
 ### <a name="to-increase-the-maxreceivedmessagesize-value"></a>Zvýšení hodnoty maxReceivedMessageSize
 
-1. V **Průzkumník řešení**dvakrát klikněte na **app.config** soubor v projektu **PresentationTier** .
+1. V **Průzkumník řešení** dvakrát klikněte na **app.config** soubor v projektu **PresentationTier** .
 
 2. Vyhledejte atribut size **maxReceivedMessage** a změňte hodnotu na `6553600` .
 

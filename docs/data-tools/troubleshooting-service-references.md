@@ -1,5 +1,7 @@
 ---
 title: Řešení potíží s odkazy na služby
+description: Projděte si běžné problémy, ke kterým může dojít při práci s Windows Communication Foundation (WCF) nebo WCF Data Services odkazy v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d52562382f10615c7da1dfab22d4c18323b725b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d1a1f0efc21f1f612d85725358555fcb0cb8245
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586117"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998067"
 ---
 # <a name="troubleshoot-service-references"></a>Řešení potíží s odkazy na služby
 
@@ -33,7 +35,7 @@ Když vrátíte `DataSet` nebo `DataTable` ze služby, může se zobrazit výjim
 
 Oprava této chyby:
 
-1. V **Průzkumník řešení**dvakrát klikněte na soubor *app.config* a otevřete ho.
+1. V **Průzkumník řešení** dvakrát klikněte na soubor *app.config* a otevřete ho.
 
 2. Vyhledejte `MaxReceivedMessageSize` vlastnost a změňte ji na větší hodnotu.
 
@@ -43,7 +45,7 @@ Když v dialogovém okně **Přidat odkazy na službu** kliknete na tlačítko *
 
 Oprava této chyby:
 
-- V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt knihovny služby WCF a klikněte na **sestavit**.
+- V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt knihovny služby WCF a klikněte na **sestavit**.
 
 ## <a name="error-accessing-a-service-over-a-remote-desktop"></a>Chyba při přístupu ke službě přes vzdálenou plochu
 
@@ -76,7 +78,7 @@ Chcete-li tuto chybu opravit, je nutné ručně znovu sestavit projekt služby:
 
 1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).
 
-2. V dialogovém okně **Možnosti** rozbalte položku **projekty a řešení**a pak vyberte možnost **Obecné**.
+2. V dialogovém okně **Možnosti** rozbalte položku **projekty a řešení** a pak vyberte možnost **Obecné**.
 
 3. Ujistěte se, že je zaškrtnuté políčko **Zobrazit pokročilou konfiguraci sestavení** , a pak klikněte na **OK**.
 
@@ -84,7 +86,7 @@ Chcete-li tuto chybu opravit, je nutné ručně znovu sestavit projekt služby:
 
 5. V dialogovém okně **Configuration Manager** nastavte **konfiguraci aktivního řešení** na **ladit**. Další informace najdete v tématu [Postup: vytváření a úpravy konfigurací](../ide/how-to-create-and-edit-configurations.md).
 
-6. V **Průzkumník řešení**vyberte projekt služby WCF.
+6. V **Průzkumník řešení** vyberte projekt služby WCF.
 
 7. V nabídce **sestavení** klikněte na znovu **sestavit** a znovu sestavte projekt služby WCF.
 
