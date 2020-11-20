@@ -20,45 +20,45 @@
   items:
     - name: .NET
       items:
-        - name: Nasazení aplikace .NET Core pomocí nástroje Publish
-          href: /dotnet/core/deploying/deploy-with-vs
-        - name: Zabalení desktopové aplikace pro Microsoft Store
-          href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
         - name: Nasazení aplikace .NET pro Windows pomocí ClickOnce
           href: quickstart-deploy-using-clickonce-folder.md
         - name: Nasazení desktopové aplikace .NET Framework pomocí ClickOnce
           href: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
+        - name: Vytvoření instalačního balíčku (Windows Desktop)
+          href: deploying-applications-services-and-components.md#create-an-installer-package-windows-desktop
+        - name: Zabalení desktopové aplikace pro Microsoft Store >>
+          href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
         - name: Vytváření aplikací ClickOnce z příkazového řádku
           href: building-clickonce-applications-from-the-command-line.md
     - name: ASP.NET
       items:
-        - name: Publikování aplikace ASP.NET Core do Azure
+        - name: Publikování aplikace ASP.NET Core do Azure >>
           href: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs
         - name: Import nastavení publikování a nasazení do služby IIS
           href: tutorial-import-publish-settings-iis.md
         - name: Import nastavení publikování a nasazení do Azure
           href: tutorial-import-publish-settings-azure.md
-        - name: Průběžné nasazování ASP.NET Core do Azure s Gitem
+        - name: Průběžné nasazování ASP.NET Core do Azure s Gitem >>
           href: /aspnet/core/publishing/azure-continuous-deployment
     - name: C++
       items:
-        - name: Nasazení aplikace v jazyce C/C++
-          href: /cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project
-        - name: Zabalení desktopové aplikace pro Microsoft Store
+        - name: Vytvoření instalačního balíčku
+          href: deploying-applications-services-and-components.md#create-an-installer-package-windows-desktop
+        - name: Zabalení desktopové aplikace pro Microsoft Store >>
           href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
-        - name: Nasazení aplikace v jazyce C/C++ pomocí technologie ClickOnce...
+        - name: Nasazení aplikace v jazyce C/C++ pomocí technologie ClickOnce >>
           href: /cpp/windows/clickonce-deployment-for-visual-cpp-applications
     - name: UWP
       items:
-        - name: Balíček aplikace pro UPW pomocí sady Visual Studio
+        - name: Zabalení aplikace pro UPW pomocí sady Visual Studio >>
           href: /windows/uwp/packaging/packaging-uwp-apps
     - name: Node.js
       items:
-        - name: Publikování do App Service pro Linux
+        - name: Publikování do App Service pro Linux >>
           href: ../javascript/publish-nodejs-app-azure.md
     - name: Python
       items:
-        - name: Publikování do Azure App Service
+        - name: Publikování do Azure App Service >>
           href: ../python/publishing-python-web-applications-to-azure-from-visual-studio.md
 - name: Návody
   items:

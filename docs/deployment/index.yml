@@ -10,12 +10,12 @@ metadata:
   ms.author: mikejo
   manager: jillfra
   ms.date: 09/17/2019
-  ms.openlocfilehash: 26c3ce01f656f77c578eaa78902bddb7fd844a7d
-  ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+  ms.openlocfilehash: f3ec7ac35844d149a63a76144f9fe6ba54db12e1
+  ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/11/2020
-  ms.locfileid: "90038488"
+  ms.lasthandoff: 11/19/2020
+  ms.locfileid: "94903907"
 landingContent:
 - title: Informace o nasazení
   linkLists:
@@ -23,10 +23,12 @@ landingContent:
     links:
     - text: První seznámení s nasazováním
       url: deploying-applications-services-and-components.md
+- title: Začínáme (.NET Core, Python)
+  linkLists:
+  - linkListType: overview
+    links:
     - text: Nasazení do složky, služby IIS nebo Azure
       url: deploying-applications-services-and-components-resources.md
-- title: Začínáme
-  linkLists:
   - linkListType: quickstart
     links:
     - text: Publikování do Azure App Service
@@ -37,18 +39,28 @@ landingContent:
       url: quickstart-deploy-to-a-web-site.md
     - text: Publikování do složky
       url: quickstart-deploy-to-local-folder.md
+    - text: Nasazení aplikace .NET Core pomocí ClickOnce
+      url: quickstart-deploy-using-clickonce-folder.md
 - title: Nasazení aplikací .NET
   linkLists:
   - linkListType: tutorial
     links:
     - text: Nasazování aplikací .NET Core
       url: /dotnet/core/deploying/deploy-with-vs
-    - text: Nasazení desktopové aplikace pomocí technologie ClickOnce
+    - text: Nasazení desktopové aplikace .NET Framework pomocí ClickOnce
       url: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
-    - text: Vytváření aplikací ClickOnce z příkazového řádku
-      url: building-clickonce-applications-from-the-command-line.md
+    - text: Nasazení desktopové aplikace pomocí instalačního balíčku
+      url: deploying-applications-services-and-components.md#create-an-installer-package-windows-desktop
   - linkListType: how-to-guide
     links:
+    - text: Zabalení desktopové aplikace pro Windows Store
+      url: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
+- title: Nasazení aplikací C++
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Nasazení pomocí instalačního balíčku
+      url: deploying-applications-services-and-components.md#create-an-installer-package-windows-desktop
     - text: Zabalení desktopové aplikace pro Windows Store
       url: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
 - title: Nasazení aplikací ASP.NET Core
@@ -61,31 +73,15 @@ landingContent:
       url: tutorial-import-publish-settings-iis.md
     - text: Publikování pomocí Gitu
       url: /aspnet/core/host-and-deploy/azure-apps/azure-continuous-deployment
-- title: Nasazení aplikací C++
+- title: Další typy nasazení
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Nasazení pomocí projektu instalace (C/C++)
-      url: /cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project
-    - text: Zabalení desktopové aplikace pro Windows Store
-      url: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
-- title: Nasazení aplikací v Pythonu
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Publikování do App Service pro Linux
+    - text: Aplikace Pythonu do App Service pro Linux
       url: ../python/publishing-python-web-applications-to-azure-from-visual-studio.md
-- title: Nasazení aplikace Node.js
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: Publikování do App Service pro Linux
+    - text: Aplikace Node.js do App Service pro Linux
       url: ../javascript/publish-nodejs-app-azure.md
-- title: Nasazení balíčků .NET do NuGet.org
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: Publikování do NuGet.org (.NET Standard)
-      url: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
-    - text: Publikování do NuGet.org (.NET Framework)
-      url: /nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework
+    - text: Nasazení kontejnerizovaných aplikací
+      url: ../containers/index.yml
+    - text: Publikování balíčků NuGet
+      url: /nuget
