@@ -1,5 +1,7 @@
 ---
 title: Změna vzhledu příkazu | Microsoft Docs
+description: Naučte se, jak poskytnout zpětnou vazbu, která mění vzhled příkazu, jako je například zpřístupnění příkazů/nedostupné, skryté/zobrazené nebo zaškrtnuté nebo nezaškrtnuté.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c1574704f8848c16f4740189688cb1719f19623
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f79ac7873a1746e0b14db51ba864e94f6bbfa1e
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183714"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974418"
 ---
 # <a name="change-the-appearance-of-a-command"></a>Změna vzhledu příkazu
 Zpětnou vazbu můžete poskytnout uživateli změnou vzhledu příkazu. Například může být vhodné, aby příkaz vypadal jinak, pokud není k dispozici. Příkazy lze zpřístupnit nebo není k dispozici, skrýt nebo zobrazit, nebo je v nabídce zaškrtnout nebo zrušit jejich kontrolu.

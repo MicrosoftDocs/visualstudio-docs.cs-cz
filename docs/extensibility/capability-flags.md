@@ -1,5 +1,7 @@
 ---
 title: Příznaky schopností | Microsoft Docs
+description: Přečtěte si o příznacích SCC_CAP_xxx, které označují možnosti modulu plug-in správy zdrojových kódů a SCC_EXCAP_xxx příznaky, které označují rozšířené možnosti.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9660cbe5a18e82974858fa4d923a38fc73e773f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b80672b00bec95c740824ef7e29f1faba0e63cf4
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739865"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974446"
 ---
 # <a name="capability-flags"></a>Příznaky schopností
-Příznaky SCC_CAP_*xxx* jsou bitové příznaky používané k označení schopností modulu plug-in správy zdrojového kódu. Příznaky SCC_EXCAP_*xxx* jsou přírůstkové příznaky, které označují rozšířené možnosti a jsou přeloženy na celočíselné hodnoty.
+Příznaky SCC_CAP_ *xxx* jsou bitové příznaky používané k označení schopností modulu plug-in správy zdrojového kódu. Příznaky SCC_EXCAP_ *xxx* jsou přírůstkové příznaky, které označují rozšířené možnosti a jsou přeloženy na celočíselné hodnoty.
 
 |Kód možnosti|Hodnota|Popis|
 |---------------------|-----------|-----------------|

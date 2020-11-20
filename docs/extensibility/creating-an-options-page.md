@@ -1,5 +1,7 @@
 ---
 title: Vytváření stránky možností | Microsoft Docs
+description: Naučte se vytvářet jednoduché stránky nástrojů/možnosti, které pro kontrolu a nastavování vlastností používají mřížku vlastností.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: be826b73e28a73216ea88ceba8e23eb1e9ea457b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41102dfbbf1e49dadb1360ab0182810a47651dca
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903819"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973713"
 ---
 # <a name="create-an-options-page"></a>Vytvoření stránky možnosti
 
@@ -25,7 +27,7 @@ Tento návod vytvoří jednoduchou stránku nástrojů/možností, která použ�
 
  Parametr MPF poskytuje dvě třídy, které vám pomůžou vytvořit stránky možností nástrojů, <xref:Microsoft.VisualStudio.Shell.Package> třídu a <xref:Microsoft.VisualStudio.Shell.DialogPage> třídu. Vytvoříte VSPackage pro poskytnutí kontejneru pro tyto stránky podtřídou `Package` třídy. Můžete vytvořit každou stránku možností nástrojů odvozením z `DialogPage` třídy.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
@@ -37,7 +39,7 @@ Tento návod vytvoří jednoduchou stránku nástrojů/možností, která použ�
 
 1. Každé rozšíření sady Visual Studio začíná projektem nasazení VSIX, který bude obsahovat prostředky rozšíření. Vytvořte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt VSIX s názvem `MyToolsOptionsExtension` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Přidejte VSPackage přidáním šablony položky balíčku sady Visual Studio s názvem `MyToolsOptionsPackage` . V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V **dialogovém okně Přidat novou položku**přejít na rozšiřitelnost **položek Visual C#**  >  **Extensibility** a vybrat **balíček sady Visual Studio**. V poli **název** v dolní části dialogového okna změňte název souboru na `MyToolsOptionsPackage.cs` . Další informace o tom, jak vytvořit VSPackage, najdete v tématu [Vytvoření rozšíření pomocí sady VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md).
+2. Přidejte VSPackage přidáním šablony položky balíčku sady Visual Studio s názvem `MyToolsOptionsPackage` . V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V **dialogovém okně Přidat novou položku** přejít na rozšiřitelnost **položek Visual C#**  >  **Extensibility** a vybrat **balíček sady Visual Studio**. V poli **název** v dolní části dialogového okna změňte název souboru na `MyToolsOptionsPackage.cs` . Další informace o tom, jak vytvořit VSPackage, najdete v tématu [Vytvoření rozšíření pomocí sady VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md).
 
 ### <a name="to-create-the-tools-options-property-grid"></a>Vytvoření tabulky vlastností možnosti nástrojů
 
@@ -99,7 +101,7 @@ Tento návod vytvoří jednoduchou stránku nástrojů/možností, která použ�
 
 7. V experimentální instanci aplikace Visual Studio klikněte v nabídce **nástroje** na **Možnosti**.
 
-     V levém podokně byste měli vidět **Moje kategorie**. (Kategorie možností jsou uvedeny v abecedním pořadí, takže by se měla objevit přibližně uprostřed seznamu.) Otevřete **kategorii Moje kategorie** a potom klikněte na možnost **Stránka mřížka**. V pravém podokně se zobrazí mřížka možnosti. Kategorie vlastností je **Moje možnosti**a název vlastnosti je **Moje celočíselná možnost**. Popis vlastnosti, **možnost mé celé číslo**, se zobrazí v dolní části podokna. Změňte hodnotu z počáteční hodnoty 256 na něco jiného. Klikněte na tlačítko **OK**a potom znovu otevřete **stránku mřížka**. Uvidíte, že nová hodnota přetrvává.
+     V levém podokně byste měli vidět **Moje kategorie**. (Kategorie možností jsou uvedeny v abecedním pořadí, takže by se měla objevit přibližně uprostřed seznamu.) Otevřete **kategorii Moje kategorie** a potom klikněte na možnost **Stránka mřížka**. V pravém podokně se zobrazí mřížka možnosti. Kategorie vlastností je **Moje možnosti** a název vlastnosti je **Moje celočíselná možnost**. Popis vlastnosti, **možnost mé celé číslo**, se zobrazí v dolní části podokna. Změňte hodnotu z počáteční hodnoty 256 na něco jiného. Klikněte na tlačítko **OK** a potom znovu otevřete **stránku mřížka**. Uvidíte, že nová hodnota přetrvává.
 
      Vaše stránka možnosti je také k dispozici prostřednictvím vyhledávacího pole sady Visual Studio. Do vyhledávacího pole v horní části rozhraní IDE zadejte **Moje kategorie** a zobrazí se **Stránka moje kategorie – > mřížka** uvedená ve výsledcích.
 
@@ -190,7 +192,7 @@ Tento návod vytvoří jednoduchou stránku nástrojů/možností, která použ�
     }
     ```
 
-     `optionsPage`Pole obsahuje odkaz na nadřazenou `OptionPageCustom` instanci. `Initialize`Metoda se zobrazí `OptionString` v **textovém**poli. Obslužná rutina události zapíše aktuální hodnotu **textového pole** do pole `OptionString` když fokus opustí **textové pole**.
+     `optionsPage`Pole obsahuje odkaz na nadřazenou `OptionPageCustom` instanci. `Initialize`Metoda se zobrazí `OptionString` v **textovém** poli. Obslužná rutina události zapíše aktuální hodnotu **textového pole** do pole `OptionString` když fokus opustí **textové pole**.
 
 9. V souboru s kódem balíčku přidejte přepsání pro `OptionPageCustom.Window` vlastnost do `OptionPageCustom` třídy pro vytvoření, inicializaci a vrácení instance `MyUserControl` . Třída by teď měla vypadat takto:
 
@@ -225,7 +227,7 @@ Tento návod vytvoří jednoduchou stránku nástrojů/možností, která použ�
 
 12. Najde **moji kategorii** a pak **moji vlastní stránku**.
 
-13. Změňte hodnotu **OptionString**. Klikněte na **OK**a pak znovu otevřete **moji vlastní stránku**. Můžete vidět, že nová hodnota je trvalá.
+13. Změňte hodnotu **OptionString**. Klikněte na **OK** a pak znovu otevřete **moji vlastní stránku**. Můžete vidět, že nová hodnota je trvalá.
 
 ## <a name="access-options"></a>Možnosti přístupu
 

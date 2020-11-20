@@ -1,5 +1,7 @@
 ---
 title: Element Button | Microsoft Docs
+description: 'Element Button definuje prvek, se kterým může uživatel pracovat. Tlačítka mohou být různá druh: Button, MenuButton a SplitDropDown.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05bd73764e96a27a92d741f144c222acc48fa518
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8da92f721f0f4333ffb32ac5cb080d87e4fc0543
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739937"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974492"
 ---
 # <a name="button-element"></a>Element Button
 Definuje prvek, se kterým může uživatel pracovat. Tlačítka mohou mít různé druhy: Button, MenuButton a SplitDropDown.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 <Button guid="guidMyCommandSet" id="MyCommand" priority="0x102" type="button">

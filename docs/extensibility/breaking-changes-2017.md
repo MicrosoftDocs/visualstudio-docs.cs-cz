@@ -1,5 +1,7 @@
 ---
 title: Průlomové změny v rozšíření Visual Studio 2017
+description: Seznamte se s technickými podrobnostmi o zásadních změnách v modelu rozšiřitelnosti v aplikaci Visual Studio 2017 a k tomu, abyste je mohli řešit.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/09/2016
 ms.topic: conceptual
@@ -9,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d872003b319773401ef4da72c1fac8dc177ecbdb
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 3121189b1d73543d2a01bbf0b149c6a98eab6909
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011785"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973753"
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Změny v rozšíření sady Visual Studio 2017
 
@@ -98,7 +100,7 @@ Většina základních sestavení sady Visual Studio již není nainstalována d
 ### <a name="global-com-registration"></a>Globální registrace COM
 
 * Dříve Visual Studio nainstalovalo mnoho klíčů registru do HKEY_CLASSES_ROOT a HKEY_LOCAL_MACHINE podregistry pro podporu nativní registrace modelu COM. Aby se tento dopad vyloučil, Visual Studio teď používá [aktivaci bez registrace pro komponenty com](/previous-versions/dotnet/articles/ms973913(v=msdn.10)).
-* V důsledku toho většina souborů TLB/OLB/DLL pod% ProgramFiles (x86)% \ Common Files\Microsoft Shared\MSEnv již není ve výchozím nastavení sady Visual Studio nainstalována. Tyto soubory jsou nyní nainstalovány v rámci [INSTALLDIR] s odpovídajícími manifesty COM bez registrace, které používá hostitelský proces sady Visual Studio.
+* V důsledku toho většina souborů TLB/OLB/DLL pod% ProgramFiles (x86)% \ Common Files\Microsoft Shared\MSEnv již není ve výchozím nastavení sady Visual Studio nainstalována. Tyto soubory jsou nyní nainstalovány v rámci [INSTALLDIR] s Registration-Free odpovídajícími manifesty COM, které používá hostitelský proces sady Visual Studio.
 * Výsledkem je, že externí kód, který závisí na globální registraci COM pro rozhraní COM sady Visual Studio, již nebude tyto registrace najít. Kód spuštěný uvnitř procesu sady Visual Studio neuvidí rozdíl.
 
 ### <a name="visual-studio-registry"></a>Registr sady Visual Studio
@@ -115,7 +117,7 @@ Většina základních sestavení sady Visual Studio již není nainstalována d
 
 ### <a name="react-to-this-breaking-change"></a>Reagovat na tuto zásadní změnu
 
-* Externí kód by měl být převeden tak, aby používal i aktivaci bez registrace pro komponenty modelu COM.
+* Externí kód by měl být převeden tak, aby používal i Registration-Free aktivaci pro součásti modelu COM.
 * Externí komponenty mohou najít umístění sady Visual Studio [podle pokynů uvedených tady](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup).
 * Doporučujeme, aby externí komponenty používaly [Správce externích nastavení](/dotnet/api/microsoft.visualstudio.settings.externalsettingsmanager) namísto čtení/zápisu přímo do klíčů registru sady Visual Studio.
 * Ověřte, zda komponenty používané rozšířením mohou být implementovány jiným způsobem pro registraci. Například rozšíření ladicího programu může být schopné využít novou [registraci souboru com msvsmon JSON](migrate-debugger-COM-registration.md).

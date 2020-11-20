@@ -1,5 +1,7 @@
 ---
 title: Vytvoření sady SDK (Software Development Kit) | Microsoft Docs
+description: Přečtěte si o obecné infrastruktuře sad SDK a o tom, jak vytvořit sadu SDK platformy a sadu SDK rozšíření.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 8496afb4-1573-4585-ac67-c3d58b568a12
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61e547be5f240cafccc058eb7ea2249fd492554b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b3a793e3d7233eb1b6d0aaaa74fbe16d52cf6f43
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904112"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974328"
 ---
 # <a name="create-a-software-development-kit"></a>Vytvoření sady SDK (Software Development Kit)
 
@@ -53,7 +55,7 @@ Sady SDK platforem mají následující rozložení:
 | Node | Popis |
 |------------------------| - |
 | *Odkazuje na* složku | Obsahuje binární soubory, které obsahují rozhraní API, se kterými se dá zakódovat. Ty můžou zahrnovat soubory Windows metadata (WinMD) nebo sestavení. |
-| *DesignTime* složka | Obsahuje soubory, které jsou potřeba pouze v době před spuštěním nebo ladění. Mezi ně můžou patřit dokumentace XML, knihovny, hlavičky, sady nástrojů pro vytváření binárních souborů v době návrhu, artefakty MSBuild a tak dále.<br /><br /> Dokumentace XML by v ideálním případě měla být umístěna do složky *\DesignTime* , ale dokumenty XML pro reference budou nadále umístěny společně s referenčním souborem v aplikaci Visual Studio. Například DOC XML pro referenci<em>\References \\ [config] \\ [arch] \sample.dll</em> bude *\References \\ [config] \\ [arch] \sample.xml*a lokalizovaná verze tohoto dokumentu bude *\References \\ [config] \\ [arch] \\ [locale] \sample.xml*. |
+| *DesignTime* složka | Obsahuje soubory, které jsou potřeba pouze v době před spuštěním nebo ladění. Mezi ně můžou patřit dokumentace XML, knihovny, hlavičky, sady nástrojů pro vytváření binárních souborů v době návrhu, artefakty MSBuild a tak dále.<br /><br /> Dokumentace XML by v ideálním případě měla být umístěna do složky *\DesignTime* , ale dokumenty XML pro reference budou nadále umístěny společně s referenčním souborem v aplikaci Visual Studio. Například DOC XML pro referenci <em>\References \\ [config] \\ [arch] \sample.dll</em> bude *\References \\ [config] \\ [arch] \sample.xml* a lokalizovaná verze tohoto dokumentu bude *\References \\ [config] \\ [arch] \\ [locale] \sample.xml*. |
 | *Konfigurační* složka | K dispozici můžou být jenom tři složky: *Debug*, *Retail* a *CommonConfiguration*. Autoři sady SDK mohou umístit své soubory do *CommonConfiguration* , pokud by měla být spotřebována stejná sada souborů sady SDK bez ohledu na konfiguraci, kterou bude příjemce sady SDK cílit. |
 | Složka *architektury* | Může existovat libovolná podporovaná složka *architektury* . Visual Studio podporuje následující architektury: x86, x64, ARM a neutrální. Poznámka: Win32 mapuje na x86 a AnyCPU se mapuje na neutrální.<br /><br /> Nástroj MSBuild hledá v sadách SDK platformy pouze *\CommonConfiguration\neutral* . |
 | *SDKManifest.xml* | Tento soubor popisuje, jak by měla sada Visual Studio využívat sadu SDK. Podívejte se na manifest sady SDK pro [!INCLUDE[win81](../debugger/includes/win81_md.md)] :<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **Zobrazovaný název:** Hodnota, kterou Prohlížeč objektů zobrazuje v seznamu procházení.<br /><br /> **PlatformIdentity:** Existence tohoto atributu oznamuje sadě Visual Studio a MSBuild, že sada SDK je Platform SDK a že odkazy z nich přidané by neměly být kopírovány lokálně.<br /><br /> **TargetFramework:** Tento atribut je používán sadou Visual Studio k zajištění toho, aby sada SDK mohla využívat pouze projekty, které cílí na stejné architektury, jak je uvedeno v hodnotě tohoto atributu.<br /><br /> **MinVSVersion:** Tento atribut používá aplikace Visual Studio ke zpracování pouze sad SDK, které na něj vztahují.<br /><br /> **Odkaz:** Tento atribut musí být zadán pouze pro odkazy obsahující ovládací prvky. Informace o tom, jak určit, zda odkaz obsahuje ovládací prvky, naleznete níže. |
@@ -107,7 +109,7 @@ Sady SDK rozšíření mají následující rozložení instalace:
 
 2. Složka *odkazů* : binární soubory, které obsahují rozhraní API. Můžou to být soubory nebo sestavení Windows metadata (WinMD).
 
-3. Složka *Redist* : soubory, které jsou potřebné pro modul runtime/ladění a měly by být zabaleny jako součást aplikace uživatele. Všechny binární soubory by se měly umístit pod *\redist \\<config \> \\<\> *a binární názvy by měly mít následující formát, aby se zajistila jedinečnost: *]* \<company> . \<product> . \<purpose> . \<extension> <em>. Například * Microsoft.Cpp.Build.dll</em>. Všechny soubory s názvy, které mohou kolidovat s názvy souborů z jiných sad SDK (například JavaScript, CSS, pri, XAML, PNG a jpg), by měly být umístěny pod <em>\redist \\<config \> \\<\> \\<sdkname \> \* s výjimkou souborů, které jsou spojeny s ovládacími prvky XAML. Tyto soubory by měly být umístěny pod * \redist \\<config \> \\<\> \\<součásti \> \\ </em>.
+3. Složka *Redist* : soubory, které jsou potřebné pro modul runtime/ladění a měly by být zabaleny jako součást aplikace uživatele. Všechny binární soubory by se měly umístit pod *\redist \\<config \> \\<\>* a binární názvy by měly mít následující formát, aby se zajistila jedinečnost: *]* \<company> . \<product> . \<purpose> . \<extension> <em>. Například * Microsoft.Cpp.Build.dll</em>. Všechny soubory s názvy, které mohou kolidovat s názvy souborů z jiných sad SDK (například JavaScript, CSS, pri, XAML, PNG a jpg), by měly být umístěny pod <em>\redist \\<config \> \\<\> \\<sdkname \> \* s výjimkou souborů, které jsou spojeny s ovládacími prvky XAML. Tyto soubory by měly být umístěny pod * \redist \\<config \> \\<\> \\<součásti \> \\ </em>.
 
 4. *DesignTime* složka: soubory, které jsou potřeba pouze v době před spuštěním a ladění, by neměly být zabaleny jako součást aplikace uživatele. Může se jednat o dokumentaci XML, knihovny, hlavičky, sady nástrojů pro vytváření binárních souborů v době návrhu, artefakty MSBuild a tak dále. Všechny sady SDK, které jsou určené pro spotřebu v nativním projektu, musí mít soubor *SDKName. props* . Následující příklad ukazuje ukázku tohoto typu souboru.
 
@@ -127,9 +129,9 @@ Sady SDK rozšíření mají následující rozložení instalace:
 
    ```
 
-    Referenční dokumenty XML jsou umístěny společně s referenčním souborem. Například referenční dokument XML pro *\References \\<config \> \\<arch \>\sample.dll* sestavení je *\References \\<config \> \\<\sample.xml\><* a lokalizovaná verze tohoto dokumentu je *\References \\<config \> \\<\sample.xml\> \\ locale \> *.
+    Referenční dokumenty XML jsou umístěny společně s referenčním souborem. Například referenční dokument XML pro *\References \\<config \> \\<arch \>\sample.dll* sestavení je *\References \\<config \> \\<\sample.xml\><* a lokalizovaná verze tohoto dokumentu je *\References \\<config \> \\<\sample.xml\> \\ locale \>*.
 
-5. *Konfigurační* složka: tři podsložky: *Debug*, *Retail*a *CommonConfiguration*. Autoři sady SDK mohou umístit své soubory do *CommonConfiguration* , pokud by se měla používat stejná sada souborů sady SDK, a to bez ohledu na konfiguraci, kterou uživatel SDK zacílí.
+5. *Konfigurační* složka: tři podsložky: *Debug*, *Retail* a *CommonConfiguration*. Autoři sady SDK mohou umístit své soubory do *CommonConfiguration* , pokud by se měla používat stejná sada souborů sady SDK, a to bez ohledu na konfiguraci, kterou uživatel SDK zacílí.
 
 6. Složka *architektury* : podporovány jsou následující architektury: x86, x64, ARM, neutrální. Systém Win32 mapuje na x86 a AnyCPU se mapuje na neutrální.
 
@@ -183,7 +185,7 @@ Následující seznam obsahuje prvky souboru:
 
 10. SupportsMultipleVersions: Pokud je tento atribut nastaven na hodnotu **Error** nebo **Warning**, MSBuild indikuje, že stejný projekt nemůže odkazovat na více verzí stejné řady SDK. Pokud tento atribut neexistuje nebo je nastaven na hodnotu **Allow**, nástroj MSBuild nezobrazí tento typ chyby nebo upozornění.
 
-11. AppX: Určuje cestu k balíčkům aplikací pro knihovnu součástí Windows na disku. Tato hodnota je předána registrační komponentě knihovny součástí systému Windows během místního ladění. Konvence pojmenování pro název souboru je * \<Company> . \<Product> . \<Architecture> \<Configuration> . \<Version> . appx*. Konfigurace a architektura jsou nepovinné v názvu atributu a v případě hodnoty atributu, pokud se nevztahují na knihovnu součástí Windows. Tato hodnota se vztahuje pouze na knihovny součástí systému Windows.
+11. AppX: Určuje cestu k balíčkům aplikací pro knihovnu součástí Windows na disku. Tato hodnota je předána registrační komponentě knihovny součástí systému Windows během místního ladění. Konvence pojmenování pro název souboru je *\<Company> . \<Product> . \<Architecture> \<Configuration> . \<Version> . appx*. Konfigurace a architektura jsou nepovinné v názvu atributu a v případě hodnoty atributu, pokud se nevztahují na knihovnu součástí Windows. Tato hodnota se vztahuje pouze na knihovny součástí systému Windows.
 
 12. CopyRedistToSubDirectory: Určuje, kde se mají soubory ve složce *\redist* zkopírovat vzhledem k kořenovému adresáři balíčku aplikace (to znamená **umístění balíčku** zvolenému v průvodci **vytvořením balíčku aplikace** ) a kořenovému adresáři rozložení modulu runtime. Výchozím umístěním je kořen balíčku aplikace a rozložení **F5** .
 

@@ -1,5 +1,7 @@
 ---
 title: Vytvoření rozšíření pomocí příkazu nabídky | Microsoft Docs
+description: Naučte se vytvořit rozšíření pomocí příkazu nabídky, který spustí Poznámkový blok. Vytvořte příkaz nabídky a pak změňte obslužnou rutinu příkazu nabídky.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,18 +15,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c8639ede4a01157718f0ab1a1514927e620fa8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00afdc31e72e4b0336db19939955a0b2360a00a1
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86972332"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974274"
 ---
 # <a name="create-an-extension-with-a-menu-command"></a>Vytvoření rozšíření pomocí příkazu nabídky
 
 Tento návod ukazuje, jak vytvořit rozšíření pomocí příkazu nabídky, který spustí Poznámkový blok.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
@@ -34,13 +36,13 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ::: moniker range="vs-2017"
 
-2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **FirstCommand**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >  **Extensibility** a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstCommand.cs*.
+2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **FirstCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >  **Extensibility** a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstCommand.cs*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **FirstCommand**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na **Visual C#**  >  **rozšiřitelnost** jazyka Visual C# a vybrat **příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstCommand.cs*.
+2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **FirstCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na **Visual C#**  >  **rozšiřitelnost** jazyka Visual C# a vybrat **příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstCommand.cs*.
 
 ::: moniker-end
 
@@ -50,7 +52,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ::: moniker range="vs-2017"
 
-4. V experimentální instanci otevřete **Tools**  >  okno**rozšíření a aktualizace** nástrojů. Tady byste měli vidět rozšíření **FirstMenuCommand** . (Pokud v pracovní instanci sady Visual Studio otevřete **rozšíření a aktualizace** , neuvidíte **FirstMenuCommand**).
+4. V experimentální instanci otevřete **Tools**  >  okno **rozšíření a aktualizace** nástrojů. Tady byste měli vidět rozšíření **FirstMenuCommand** . (Pokud v pracovní instanci sady Visual Studio otevřete **rozšíření a aktualizace** , neuvidíte **FirstMenuCommand**).
 
 ::: moniker-end
 
@@ -106,7 +108,7 @@ Nyní aktualizujeme obslužnou rutinu příkazu na spustit Poznámkový blok.
 
 ## <a name="clean-up-the-experimental-environment"></a>Vyčištění experimentálního prostředí
 
-Pokud vyvíjíte více rozšíření nebo pouze prozkoumáte výsledky s různými verzemi kódu rozšíření, může vaše experimentální prostředí přestat pracovat způsobem, který by měl. V takovém případě byste měli spustit skript pro resetování. Nazývá se to **resetování experimentální instance sady Visual Studio**a dodává se jako součást sady Visual Studio SDK. Tento skript odebere všechny odkazy na vaše rozšíření z experimentálního prostředí, takže můžete začít od začátku.
+Pokud vyvíjíte více rozšíření nebo pouze prozkoumáte výsledky s různými verzemi kódu rozšíření, může vaše experimentální prostředí přestat pracovat způsobem, který by měl. V takovém případě byste měli spustit skript pro resetování. Nazývá se to **resetování experimentální instance sady Visual Studio** a dodává se jako součást sady Visual Studio SDK. Tento skript odebere všechny odkazy na vaše rozšíření z experimentálního prostředí, takže můžete začít od začátku.
 
 Tento skript se dá získat jedním ze dvou způsobů:
 
@@ -127,9 +129,9 @@ Soubor *. vsix* pro toto rozšíření najdete v adresáři *FirstMenuCommand* b
 
 *\<code directory>\FirstMenuCommand\FirstMenuCommand\bin\Release\FirstMenuCommand.vsix*
 
-Chcete-li nainstalovat rozšíření, váš přítel potřebuje zavřít všechny otevřené instance aplikace Visual Studio a potom poklikejte na soubor *. vsix* , který spustí **instalační program VSIX**. Soubory se zkopírují do adresáře * \<version> \Extensions%localappdata%\Microsoft\VisualStudio* .
+Chcete-li nainstalovat rozšíření, váš přítel potřebuje zavřít všechny otevřené instance aplikace Visual Studio a potom poklikejte na soubor *. vsix* , který spustí **instalační program VSIX**. Soubory se zkopírují do adresáře *\<version> \Extensions%localappdata%\Microsoft\VisualStudio* .
 
-Když váš přítel znovu vyvolá Visual Studio, nalezne rozšíření FirstMenuCommand v části **Tools**  >  **rozšíření a aktualizace**nástrojů. Můžou přejít na **rozšíření a aktualizace** pro odinstalaci nebo zakázání rozšíření.
+Když váš přítel znovu vyvolá Visual Studio, nalezne rozšíření FirstMenuCommand v části **Tools**  >  **rozšíření a aktualizace** nástrojů. Můžou přejít na **rozšíření a aktualizace** pro odinstalaci nebo zakázání rozšíření.
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -1,5 +1,7 @@
 ---
 title: Vázání klávesových zkratek k položkám nabídky | Microsoft Docs
+description: Naučte se, jak namapovat klávesovou zkratku v sadě Visual Studio na vlastní tlačítko, položku nabídky nebo příkaz panelu nástrojů pro výchozí editor nebo vlastní editor.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8df973ef6a75a9134b4ee6e945a5702708ece712
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 112089581965b96133f2160341a13efe23329934
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407715"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974620"
 ---
 # <a name="bind-keyboard-shortcuts-to-menu-items"></a>Vázání klávesových zkratek k položkám nabídky
 Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, stačí přidat položku do souboru *. vsct* pro balíček. Toto téma vysvětluje, jak namapovat klávesovou zkratku na vlastní tlačítko, položku nabídky nebo příkaz panelu nástrojů a jak použít mapování klávesnice ve výchozím editoru nebo omezit na vlastní editor.
@@ -42,7 +44,7 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
 4. Vyzkoušejte různé kombinace klíčů, dokud nezjistíte, která z nich není namapovaná.
 
    > [!NOTE]
-   > Klávesové zkratky, které používají **ALT** , můžou otevřít nabídku a ne přímo spustit příkaz. Proto může být **zástupce aktuálně používaný v** boxu při psaní zástupce, který obsahuje **ALT** , prázdný. Můžete ověřit, že zástupce neotevře nabídku zavřením dialogového okna **Možnosti** a následným stisknutím kláves.
+   > Klávesové zkratky, které používají **ALT** , můžou otevřít nabídku a ne přímo spustit příkaz. Proto může být **zástupce aktuálně používaný v** boxu při psaní zástupce, který obsahuje **ALT**, prázdný. Můžete ověřit, že zástupce neotevře nabídku zavřením dialogového okna **Možnosti** a následným stisknutím kláves.
 
    Následující postup předpokládá, že máte existující VSPackage s příkazem nabídky. Pokud k tomu potřebujete pomoc, podívejte se na [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
 
@@ -59,7 +61,7 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
 
     Nastavte `guid`  atributy a  `id` pro příkazy, které chcete vyvolat.
 
-    Nastavte `mod1` atribut na **Control** , **ALT** nebo **SHIFT**.
+    Nastavte `mod1` atribut na **Control**, **ALT** nebo **SHIFT**.
 
     Oddíl vazeb klíčů by měl vypadat přibližně takto:
 

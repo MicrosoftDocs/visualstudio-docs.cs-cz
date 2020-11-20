@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 03a0eb6808b2298e0727492978d9beb7cfaf2216
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a06c6dbacf21cb2ce00539af901c24c77aaf9ef5
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89313741"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974094"
 ---
 # <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>Krok 2: Vytvoření aplikace v baňce se zobrazeními a šablonami stránek
 
@@ -36,7 +36,7 @@ V kódu vytvořeném šablonou "prázdný webový projekt" je k dispozici jeden 
 
 1. Ve složce projektu vytvořte složku aplikace s názvem (klikněte `HelloFlask` pravým tlačítkem na projekt v **Průzkumník řešení** a vyberte **Přidat**  >  **novou složku**.)
 
-2. Ve složce *HelloFlask* vytvořte soubor s názvem * \_ \_ init \_ \_ . py* s následujícím obsahem, který vytvoří `Flask` instanci a načte zobrazení aplikace (vytvořené v dalším kroku):
+2. Ve složce *HelloFlask* vytvořte soubor s názvem *\_ \_ init \_ \_ . py* s následujícím obsahem, který vytvoří `Flask` instanci a načte zobrazení aplikace (vytvořené v dalším kroku):
 
     ```python
     from flask import Flask
@@ -45,7 +45,7 @@ V kódu vytvořeném šablonou "prázdný webový projekt" je k dispozici jeden 
     import HelloFlask.views
     ```
 
-3. Ve složce *HelloFlask* vytvořte soubor s názvem *views.py* s následujícím obsahem. Název *views.py* je důležitý, protože jste použili `import HelloFlask.views` v * \_ \_ init \_ \_ . py*; při běhu se zobrazí chyba, pokud se názvy neshodují.
+3. Ve složce *HelloFlask* vytvořte soubor s názvem *views.py* s následujícím obsahem. Název *views.py* je důležitý, protože jste použili `import HelloFlask.views` v *\_ \_ init \_ \_ . py*; při běhu se zobrazí chyba, pokud se názvy neshodují.
 
     ```python
     from flask import Flask
@@ -57,11 +57,11 @@ V kódu vytvořeném šablonou "prázdný webový projekt" je k dispozici jeden 
         return "Hello Flask!"
     ```
 
-    Kromě přejmenování funkce a směrování na `home` , obsahuje tento kód kód vykreslování stránky z *App.py* a importuje `app` objekt deklarovaný v * \_ \_ init \_ \_ . py*.
+    Kromě přejmenování funkce a směrování na `home` , obsahuje tento kód kód vykreslování stránky z *App.py* a importuje `app` objekt deklarovaný v *\_ \_ init \_ \_ . py*.
 
 4. Vytvoří podsložku v *HelloFlask* s názvem *Templates*, která teď zůstává prázdná.
 
-5. V kořenové složce projektu přejmenujte *App.py* na *runserver.py*a nastavte obsah tak, aby odpovídal následujícímu kódu:
+5. V kořenové složce projektu přejmenujte *App.py* na *runserver.py* a nastavte obsah tak, aby odpovídal následujícímu kódu:
 
     ```python
     import os
@@ -84,7 +84,7 @@ V kódu vytvořeném šablonou "prázdný webový projekt" je k dispozici jeden 
 
 7. Vyberte **ladit**  >  **Spustit ladění** (**F5**) nebo použijte tlačítko **webový server** na panelu nástrojů (prohlížeč, který vidíte, se může lišit) a spusťte aplikaci a otevřete prohlížeč. Vyzkoušejte trasy adresy URL/a/Home.
 
-8. Můžete také nastavit zarážky v různých částech kódu a restartovat aplikaci, aby následovala za spouštěcí sekvenci. Například nastavte zarážku na prvních řádcích *runserver.py* a *HelloFlask \_ *init_*. py*a na `return "Hello Flask!"` řádku v *views.py*. Pak aplikaci znovu spusťte (**ladit**  >  **restart**, **CTRL** + **F5**nebo tlačítko panelu nástrojů zobrazené níže) a proveďte krok po (**F10**) kódu nebo spusťte z každé zarážky pomocí klávesy **F5**.
+8. Můžete také nastavit zarážky v různých částech kódu a restartovat aplikaci, aby následovala za spouštěcí sekvenci. Například nastavte zarážku na prvních řádcích *runserver.py* a *HelloFlask \_* init_ *. py* a na `return "Hello Flask!"` řádku v *views.py*. Pak aplikaci znovu spusťte (**ladit**  >  **restart**, **CTRL** + **SHIFT** + **F5** nebo tlačítko panelu nástrojů zobrazené níže) a krok po (**F10**) kódu nebo spusťte z každé zarážky pomocí klávesy **F5**.
 
     ![Tlačítko restartovat na panelu nástrojů ladění v sadě Visual Studio](media/debugging-restart-toolbar-button.png)
 
@@ -98,7 +98,7 @@ Vzhledem k tomu, že jste provedli změny kódu a úspěšně jste je otestovali
 
     ![Tlačítko změny správy zdrojového kódu na stavovém řádku sady Visual Studio](media/flask/step02-source-control-changes-button.png)
 
-1. V **Team Explorer**zadejte potvrzovací zprávu, jako je refaktoring Code, a vyberte **potvrdit vše**. Po dokončení potvrzení se zobrazí **potvrzení vytvoření zprávy v \<hash> místním počítači. Synchronizace pro sdílení změn se serverem.** Pokud chcete doručovat změny do vzdáleného úložiště, vyberte **synchronizovat**a potom v části **odchozí potvrzení**vyberte možnost **push** . Před odesláním do vzdáleného úložiště můžete také shromáždit několik místních potvrzení.
+1. V **Team Explorer** zadejte potvrzovací zprávu, jako je refaktoring Code, a vyberte **potvrdit vše**. Po dokončení potvrzení se zobrazí **potvrzení vytvoření zprávy v \<hash> místním počítači. Synchronizace pro sdílení změn se serverem.** Pokud chcete doručovat změny do vzdáleného úložiště, vyberte **synchronizovat** a potom v části **odchozí potvrzení** vyberte možnost **push** . Před odesláním do vzdáleného úložiště můžete také shromáždit několik místních potvrzení.
 
     ![Vložení potvrzení do vzdáleného úložiště v Team Explorer](media/flask/step02-source-control-push-to-remote.png)
 

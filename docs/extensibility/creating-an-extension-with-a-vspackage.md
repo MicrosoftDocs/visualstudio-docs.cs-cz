@@ -1,5 +1,7 @@
 ---
 title: Vytvoření rozšíření pomocí sady VSPackage | Microsoft Docs
+description: Naučte se, jak vytvořit projekt VSIX a přidat položku projektu VSPackage pomocí VSPackage k získání služby prostředí uživatelského rozhraní, aby se zobrazilo okno se zprávou.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 ms.assetid: c0cc5e08-4897-44f2-8309-e3478f1f999e
@@ -8,18 +10,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 68ade2f8d334c1f93349e396d910fa300f6b5417
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 431de32838ad236229db5e41330aba372e30ea75
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903858"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973778"
 ---
 # <a name="create-an-extension-with-a-vspackage"></a>Vytvoření rozšíření pomocí VSPackage
 
 Tento návod ukazuje, jak vytvořit projekt VSIX a přidat položku projektu VSPackage. Pomocí VSPackage získáme službu prostředí uživatelského rozhraní, aby se zobrazilo okno se zprávou.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
@@ -27,13 +29,13 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. Vytvořte projekt VSIX s názvem **FirstPackage**. Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Po otevření projektu přidejte šablonu položky balíčku sady Visual Studio s názvem **FirstPackage**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejít na rozšiřitelnost **Visual C#**  >  **Extensibility** a vybrat **balíček sady Visual Studio**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstPackage.cs*.
+2. Po otevření projektu přidejte šablonu položky balíčku sady Visual Studio s názvem **FirstPackage**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejít na rozšiřitelnost **Visual C#**  >  **Extensibility** a vybrat **balíček sady Visual Studio**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstPackage.cs*.
 
 3. Sestavte projekt a spusťte ladění.
 
     Zobrazí se experimentální instance aplikace Visual Studio. Další informace o experimentální instanci naleznete v [experimentální instanci](../extensibility/the-experimental-instance.md).
 
-4. V experimentální instanci otevřete **Tools**  >  okno**rozšíření a aktualizace** nástrojů. Tady byste měli vidět rozšíření **FirstPackage** . (Pokud v pracovní instanci sady Visual Studio otevřete **rozšíření a aktualizace** , neuvidíte **FirstPackage**).
+4. V experimentální instanci otevřete **Tools**  >  okno **rozšíření a aktualizace** nástrojů. Tady byste měli vidět rozšíření **FirstPackage** . (Pokud v pracovní instanci sady Visual Studio otevřete **rozšíření a aktualizace** , neuvidíte **FirstPackage**).
 
 ## <a name="load-the-vspackage"></a>Načíst VSPackage
 

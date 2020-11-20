@@ -1,5 +1,7 @@
 ---
 title: Volba mezi Shared a VSPackage se správou verzí | Microsoft Docs
+description: Přečtěte si o souběžných instalacích VSPackage prostřednictvím sdílených nebo verzí sady Visual Studio a .NET Framework.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 96386c2d3b7d1e822fdd1dd6632d754740f86301
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 725dd8368bd4db9509426fa1a98ce56ef85bc3c0
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011928"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974397"
 ---
 # <a name="choose-between-shared-and-versioned-vspackages"></a>Volba mezi Shared a VSPackage se správou verzí
 V jednom počítači mohou existovat různé verze sady Visual Studio. Sady VSPackage můžou podporovat jakoukoli kombinaci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] verzí.
@@ -61,6 +63,6 @@ V jednom počítači mohou existovat různé verze sady Visual Studio. Sady VSPa
 
   Kromě plánování binární kompatibility pro binární soubory VSPackage byste měli také zvážit formáty souborů řešení a projektu. Pokud VSPackage vytvoří nový typ projektu, je nutné rozhodnout, zda může běžet pouze v jedné verzi nebo ve více verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Další informace najdete v tématu [Upgrade vlastních projektů](../extensibility/internals/upgrading-projects.md#upgrading-custom-projects).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Instalace VSPackage pomocí Instalační služba systému Windows](../extensibility/internals/installing-vspackages-with-windows-installer.md)
 - [Správa součástí](../extensibility/internals/component-management.md)

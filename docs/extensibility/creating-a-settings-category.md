@@ -1,5 +1,7 @@
 ---
 title: Vytváření kategorie nastavení | Microsoft Docs
+description: Naučte se, jak vytvořit kategorii nastavení sady Visual Studio a použít ji k ukládání a obnovování hodnot ze souboru nastavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03d50ca998efa034b1d4392c1fb7cecb8de8ed06
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 468b1a44fb4754f86b31992e2c6d96bf6380592d
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904023"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974548"
 ---
 # <a name="create-a-settings-category"></a>Vytvoření kategorie nastavení
 
@@ -25,7 +27,7 @@ Kategorii nastavení můžete vytvořit odvozením z <xref:Microsoft.VisualStudi
 
 Chcete-li spustit tento návod, je nutné nejprve dokončit první část [stránky vytvořit možnosti](../extensibility/creating-an-options-page.md). Výsledná Mřížka vlastností možností umožňuje prozkoumávat a měnit vlastnosti v kategorii. Po uložení kategorie vlastností do souboru nastavení prověřte soubor, abyste viděli, jak jsou hodnoty vlastností uložené.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-settings-category"></a>Vytvoření kategorie nastavení
@@ -37,7 +39,7 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
 
 2. Otevřete soubor *VSPackage. resx* a přidejte tyto tři řetězcové prostředky:
 
-    |Název|Hodnota|
+    |Name|Hodnota|
     |----------|-----------|
     |106|Moje kategorie|
     |107|Moje nastavení|
@@ -48,18 +50,18 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
     > [!NOTE]
     > Z těchto tří typů se v průvodci **importem a exportem nastavení** nezobrazí pouze název kategorie.
 
-3. V *MyToolsOptionsPackage.cs*přidejte `float` vlastnost s názvem `OptionFloat` do `OptionPageGrid` třídy, jak je znázorněno v následujícím příkladu.
+3. V *MyToolsOptionsPackage.cs* přidejte `float` vlastnost s názvem `OptionFloat` do `OptionPageGrid` třídy, jak je znázorněno v následujícím příkladu.
 
     ```csharp
-    public class OptionPageGrid : DialogPage
+    public class OptionPageGrid : DialogPage
     {
-        private int optionInt = 256;
-        private float optionFloat = 3.14F;
+        private int optionInt = 256;
+        private float optionFloat = 3.14F;
 
         [Category("My Options")]
         [DisplayName("My Integer option")]
         [Description("My integer option")]
-        public int OptionInteger
+        public int OptionInteger
         {
             get { return optionInt; }
             set { optionInt = value; }
@@ -67,7 +69,7 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
         [Category("My Options")]
         [DisplayName("My Float option")]
         [Description("My float option")]
-        public float OptionFloat
+        public float OptionFloat
         {
             get { return optionFloat; }
             set { optionFloat = value; }
@@ -92,7 +94,7 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
 
 1. Spusťte projekt v režimu ladění stisknutím klávesy **F5**. Tím se spustí experimentální instance.
 
-2. Otevřete **Tools**  >  dialogové okno**Možnosti** nástrojů.
+2. Otevřete **Tools**  >  dialogové okno **Možnosti** nástrojů.
 
 3. Ve stromovém zobrazení v levém podokně rozbalte **Moje kategorie** a potom klikněte na **stránku mřížka**.
 
@@ -118,7 +120,7 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
 
      Stránka **exportovat kompletní** hlásí, že vaše nastavení bylo úspěšně exportováno.
 
-10. V nabídce **soubor** přejděte na příkaz **otevřít**a poté klikněte na možnost **soubor**. Vyhledejte *MySettings. vssettings* a otevřete ho.
+10. V nabídce **soubor** přejděte na příkaz **otevřít** a poté klikněte na možnost **soubor**. Vyhledejte *MySettings. vssettings* a otevřete ho.
 
      Kategorii vlastností, kterou jste exportovali, můžete najít v následující části souboru (vaše identifikátory GUID se budou lišit).
 
@@ -139,7 +141,7 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
 
 12. V nabídce **nástroje** klikněte na **Možnosti**, rozbalte **Moje kategorie**, klikněte na **Stránka mřížka** a pak změňte hodnotu **OptionFloat** na 1,0 a **OptionInteger** na 1. Klikněte na **OK**.
 
-13. V nabídce **nástroje** klikněte na položku **Nastavení importu a exportu**, vyberte možnost **Importovat vybrané nastavení prostředí**a pak klikněte na tlačítko **Další**.
+13. V nabídce **nástroje** klikněte na položku **Nastavení importu a exportu**, vyberte možnost **Importovat vybrané nastavení prostředí** a pak klikněte na tlačítko **Další**.
 
      Zobrazí se stránka **Uložit aktuální nastavení** .
 

@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: cf93d619ddeb385960eae74de8b64a7f11b7be4d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 67368f8bc8e6762dedf448829aca364e06b83fd3
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87115288"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973768"
 ---
 # <a name="visual-studio-documentation"></a>Dokumentace sady Visual Studio
 
 Vítejte! Toto úložiště obsahuje zdrojové soubory pro technickou dokumentaci sady Visual Studio. Témata jsou publikována v [docs.Microsoft.com](https://docs.microsoft.com/visualstudio).
 
-Toto úložiště se přesunulo do 23. června 2017 od https://github.com/Microsoft/vsdocs . Sem se přesměrují přenosy na staré adresy URL.
+Toto úložiště se přesunulo do 23. června 2017 od https://github.com/Microsoft/vsdocs .
 
 Dokumentace pro Visual Basic a Visual C# se nachází v [úložišti docs](https://github.com/dotnet/docs/tree/master/docs)a dokumentace k Visual C++ se nachází v [úložišti dokumentů C++](https://github.com/MicrosoftDocs/cpp-docs).
 

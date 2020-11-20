@@ -1,5 +1,7 @@
 ---
 title: Vytvoření ovládacího prvku panelu nástrojů WPF | Microsoft Docs
+description: Naučte se používat šablonu ovládacího prvku sady nástrojů WPF k vytvoření ovládacího prvku panelu nástrojů, který můžete distribuovat jiným uživatelům.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6aa6051648e495e21f7954a737f7b572ce6a6f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6dbe9ed00223fa549420537579d39a4c88cf37cb
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903949"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973977"
 ---
 # <a name="create-a-wpf-toolbox-control"></a>Vytvoření ovládacího prvku sady nástrojů WPF
 
@@ -31,9 +33,9 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. Vytvořte projekt VSIX s názvem `MyToolboxControl` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Po otevření projektu přidejte šablonu položky **ovládacího prvku sady nástrojů WPF** s názvem `MyToolboxControl` . V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na rozšiřitelnost v jazyce **Visual C#**  >  **Extensibility** a vyberete **ovládací prvek sada nástrojů WPF**. V poli **název** v dolní části okna změňte název souboru příkazů na *MyToolboxControl.cs*.
+2. Po otevření projektu přidejte šablonu položky **ovládacího prvku sady nástrojů WPF** s názvem `MyToolboxControl` . V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na rozšiřitelnost v jazyce **Visual C#**  >  **Extensibility** a vyberete **ovládací prvek sada nástrojů WPF**. V poli **název** v dolní části okna změňte název souboru příkazů na *MyToolboxControl.cs*.
 
-    Řešení nyní obsahuje uživatelský ovládací prvek, `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> který přidá ovládací prvek do **panelu nástrojů**a položku prostředku **Microsoft. VISUALSTUDIO. ToolboxControl** v manifestu VSIX pro nasazení.
+    Řešení nyní obsahuje uživatelský ovládací prvek, `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> který přidá ovládací prvek do **panelu nástrojů** a položku prostředku **Microsoft. VISUALSTUDIO. ToolboxControl** v manifestu VSIX pro nasazení.
 
 #### <a name="to-create-the-control-ui"></a>Vytvoření uživatelského rozhraní ovládacího prvku
 

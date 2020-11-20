@@ -1,5 +1,7 @@
 ---
 title: Vytvoření rozšíření pomocí šablony položky editoru | Microsoft Docs
+description: Naučte se používat šablony položek v sadě Visual Studio SDK k vytvoření základních rozšíření editoru, která přidávají do editoru klasifikátory, doplňky a okraje.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,17 +12,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91daa7e195435f33b93e6286cb19d820b4418d48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6264cb35e404d69900094513875fc7b79310a4d
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903838"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973737"
 ---
 # <a name="create-an-extension-with-an-editor-item-template"></a>Vytvoření rozšíření pomocí šablony položky editoru
 Šablony položek, které jsou součástí sady Visual Studio SDK, můžete použít k vytvoření základních rozšíření editoru, která přidávají do editoru třídění, doplňky a okraje. Šablony položek editoru jsou k dispozici pro projekty v jazyce Visual C# nebo Visual Basic VSIX.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-classifier-extension"></a>Vytvoření rozšíření klasifikátoru
@@ -28,7 +30,7 @@ ms.locfileid: "85903838"
 
 1. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#** nebo **Visual Basic** a potom klikněte na možnost **rozšiřitelnost**. V podokně **šablony** vyberte **projekt VSIX**. Do pole **Název** zadejte `TestClassifier`. Klikněte na **OK**.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. Přejít na uzel **rozšiřitelnosti** Visual C# a vyberte **klasifikátor editoru**. Ponechte výchozí název souboru (*EditorClassifier1.cs*).
+2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. Přejít na uzel **rozšiřitelnosti** Visual C# a vyberte **klasifikátor editoru**. Ponechte výchozí název souboru (*EditorClassifier1.cs*).
 
 3. Existují čtyři soubory kódu, a to následujícím způsobem:
 
@@ -49,7 +51,7 @@ ms.locfileid: "85903838"
 
 1. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#** nebo **Visual Basic** a potom klikněte na možnost **rozšiřitelnost**. V podokně **šablony** vyberte **projekt VSIX**. Do pole **Název** zadejte `TestAdornment`. Klikněte na **OK**.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. Přejít na uzel **rozšiřitelnosti** v jazyce Visual C# a vyberte možnost **Editor textu editoru**. Ponechte výchozí název souboru (*TextAdornment1.cs/VB*).
+2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. Přejít na uzel **rozšiřitelnosti** v jazyce Visual C# a vyberte možnost **Editor textu editoru**. Ponechte výchozí název souboru (*TextAdornment1.cs/VB*).
 
 3. Existují dva soubory kódu, a to následujícím způsobem:
 
@@ -69,7 +71,7 @@ ms.locfileid: "85903838"
 
 1. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#** nebo **Visual Basic** a potom klikněte na možnost **rozšiřitelnost**. V podokně **šablony** vyberte **projekt VSIX**. Do pole **Název** zadejte `ViewportAdornment`. Klikněte na **OK**.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. Přejít na uzel **rozšiřitelnosti** Visual C# a výběr vizuálního **zobrazení editoru**. Ponechte výchozí název souboru (*ViewportAdornment1.cs/VB*).
+2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. Přejít na uzel **rozšiřitelnosti** Visual C# a výběr vizuálního **zobrazení editoru**. Ponechte výchozí název souboru (*ViewportAdornment1.cs/VB*).
 
 3. Existují dva soubory kódu, a to následujícím způsobem:
 
@@ -86,7 +88,7 @@ ms.locfileid: "85903838"
 
 1. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#** nebo **Visual Basic** a potom klikněte na možnost **rozšiřitelnost**. V podokně **šablony** vyberte **projekt VSIX**. Do pole **Název** zadejte `MarginExtension`. Klikněte na **OK**.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. Přejít do uzlu **rozšiřitelnost** v jazyce Visual C# a vybrat **okraj editoru**. Ponechte výchozí název souboru (EditorMargin1.cs/vb).
+2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. Přejít do uzlu **rozšiřitelnost** v jazyce Visual C# a vybrat **okraj editoru**. Ponechte výchozí název souboru (EditorMargin1.cs/vb).
 
 3. Existují dva soubory kódu, a to následujícím způsobem:
 

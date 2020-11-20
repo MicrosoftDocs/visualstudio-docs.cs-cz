@@ -1,5 +1,7 @@
 ---
 title: Funkce zpětného volání implementované rozhraním IDE | Microsoft Docs
+description: Přečtěte si o funkcích zpětného volání, které modul plug-in může zavolat během příslušné doby během operace správy zdrojových kódů k předání informací do IDE.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 666486f5b800707a4467a129abeed7a13306f10a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9dfb7e8b7e046c9587f591aec96a6a7fbd270865
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739894"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974454"
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>Funkce zpětného volání implementované rozhraním IDE
 Pro zajištění bezproblémové integrace s integrovaným vývojovým prostředím (IDE) a zajištěním jednotného prostředí koncového uživatele může modul plug-in správy zdrojových kódů používat funkce zpětného volání, které jsou implementovány rozhraním IDE. Modul plug-in může zavolat tyto funkce v příslušné době během operace správy zdrojových kódů, aby předávala informace prostředí IDE. rozhraní IDE pak může tyto informace zobrazit jako vložené prvky v jeho nativním uživatelském rozhraní. V tomto scénáři má uživatel méně fragmentovaných prostředí, než kdyby byl modul plug-in zaměstnán vlastním uživatelským rozhraním.
 
- Požadovaný hlavičkový soubor je *SCC. h*. Výchozí umístění je *\Program Files\VSIP 8.0 \ EnvSDK\common\inc \\ *. Je také ve složce VSIP, která obsahuje ukázku modulu plug-in správy zdrojových kódů v *\Program Files\VSIP 8.0 \ MSSCCI \\ *.
+ Požadovaný hlavičkový soubor je *SCC. h*. Výchozí umístění je *\Program Files\VSIP 8.0 \ EnvSDK\common\inc \\*. Je také ve složce VSIP, která obsahuje ukázku modulu plug-in správy zdrojových kódů v *\Program Files\VSIP 8.0 \ MSSCCI \\*.
 
 ## <a name="in-this-section"></a>V této části
 - [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) Popisuje funkci zpětného volání, která je používána [SccOpenProject](../extensibility/sccopenproject-function.md) k zobrazení zpráv z modulu plug-in správy zdrojových kódů prostřednictvím integrovaného vývojového prostředí (IDE).

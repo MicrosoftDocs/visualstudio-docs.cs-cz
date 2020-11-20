@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: bf10a1f4474c2916cd63402eac487af7545b0f8f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b47b59c8d45d76fae1e61584510ae39fe5a91784
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810663"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973811"
 ---
 # <a name="profile-python-code"></a>Profil kódu Pythonu
 
@@ -23,7 +23,7 @@ Při použití překladačů založeného na CPython můžete profilovat aplikac
 
 ## <a name="profiling-for-cpython-based-interpreters"></a>Profilace pro interprety založené na CPython
 
-Profilování se spouští příkazem nabídky **analyzovat**  >  **spuštění v Pythonu** , který otevře dialogové okno Konfigurace:
+Profilování se spouští příkazem nabídky pro spuštění **ladění**  >  **otevřít Python** , který otevře dialogové okno Konfigurace:
 
 ![Dialog konfigurace profilace](media/profiling-start.png)
 

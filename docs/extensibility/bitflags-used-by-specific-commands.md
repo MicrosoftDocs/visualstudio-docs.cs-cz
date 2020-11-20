@@ -1,5 +1,7 @@
 ---
 title: Bitflags používané konkrétními příkazy | Microsoft Docs
+description: Přečtěte si informace o bitflags, které používá rozhraní API modulu plug-in správy zdrojového kódu, uspořádané podle funkce, která je používá.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ffa1fd8bf025d665977e87dc8b88da724ade5a8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c6c48dbad986d8bc4be58f1ebd9c5bd1fffbd57
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740008"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974592"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>Bitflags používané konkrétními příkazy
 Chování řady funkcí v rozhraní API modulu plug-in správy zdrojového kódu lze upravit nastavením jedné nebo více bitů v rámci jedné hodnoty. Tyto hodnoty se označují jako bitflags. Různé bitflags, které používá rozhraní API modulu plug-in správy zdrojových kódů, jsou zde popsány seskupeny podle funkce, která je používá.

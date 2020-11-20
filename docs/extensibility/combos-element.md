@@ -1,5 +1,7 @@
 ---
 title: Element Combos | Microsoft Docs
+description: Prvky kombinované skupiny elementů Combos, které definují příkazy, které se zobrazí v poli se seznamem. Tento článek obsahuje příklad.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d005ea69aea7f0331877326abe4087fcff403553
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eba7b40a6e770c5076a4d1aa89bf6196f7ef8684
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739801"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974251"
 ---
 # <a name="combos-element"></a>Element Combos
 Seskupuje prvky prvků [se seznamem](../extensibility/combo-element.md) .
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 <Combos>

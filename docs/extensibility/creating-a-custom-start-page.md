@@ -1,5 +1,7 @@
 ---
 title: Vytvoření vlastní úvodní stránky | Microsoft Docs
+description: Přečtěte si, jak vytvořit vlastní úvodní stránku. Zahajte prázdnou úvodní stránku, přidejte ovládací prvky do prázdného prvku UserControl a potom stránku otestujte.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d67e0c53-9f5a-45fb-a929-b9d2125c3c82
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: ed35948158866b7d0bbb2e458c8f8bc2f7b3f844
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7e4c9690e573d2807eb3ad9d842921ee08417d8
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903671"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974553"
 ---
 # <a name="creating-a-custom-start-page"></a>Vytvoření vlastní úvodní stránky
 
@@ -69,7 +71,7 @@ Nenastavujte primární instanci aplikace Visual Studio tak, aby spouštěla vla
 
 ### <a name="to-test-a-manually-created-custom-start-page"></a>Testování ručně vytvořené vlastní úvodní stránky
 
-1. Zkopírujte soubor XAML a všechny podpůrné textové soubory nebo soubory s označením do složky *%USERPROFILE%\My Documents\Visual Studio 2015 \ StartPages \\ * .
+1. Zkopírujte soubor XAML a všechny podpůrné textové soubory nebo soubory s označením do složky *%USERPROFILE%\My Documents\Visual Studio 2015 \ StartPages \\* .
 
 2. Pokud Úvodní stránka odkazuje na jakékoli ovládací prvky nebo typy v sestaveních, která nejsou nainstalována aplikací Visual Studio, zkopírujte sestavení a vložte je do *složky {instalační složka sady Visual Studio \\ } \Common7\IDE\PrivateAssemblies*.
 

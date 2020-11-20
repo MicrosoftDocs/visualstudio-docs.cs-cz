@@ -1,5 +1,7 @@
 ---
 title: Vytvoření základního systému projektu, část 2 | Microsoft Docs
+description: Naučte se, jak do projektu vytvořeného v předchozím článku přidat šablonu, stránku vlastností a další funkce sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b9d5ce673e0ee44e888905239c12251241015ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 564d975a60c54a074d830742eb0ab6133fdbfe4e
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903822"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974608"
 ---
 # <a name="create-a-basic-project-system-part-2"></a>Vytvoření základního projektového systému, část 2
 První návod v této sérii, který [vytvoří základní projektový systém, část 1](../extensibility/creating-a-basic-project-system-part-1.md), ukazuje, jak vytvořit základní projektový systém. Tento návod sestaví základní systém projektu přidáním šablony sady Visual Studio, stránky vlastností a dalších funkcí. Před zahájením tohoto postupu je nutné nejprve provést první návod.
@@ -40,7 +42,7 @@ Tento návod učí, jak provádět tyto úlohy:
 > Kroky v tomto návodu jsou založeny na projektu C#. Avšak s výjimkou specifických jako přípon názvů souborů a kódu, můžete použít stejný postup pro Visual Basic projekt.
 
 ## <a name="create-a-visual-studio-template"></a>Vytvoření šablony sady Visual Studio
-- [Vytvoření základního projektového systému, část 1 ukazuje,](../extensibility/creating-a-basic-project-system-part-1.md) jak vytvořit základní šablonu projektu a přidat ji do systému projektu. Také ukazuje, jak zaregistrovat tuto šablonu v aplikaci Visual Studio pomocí <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> atributu, který zapisuje úplnou cestu ke složce * \\ Templates\Projects\SimpleProject \\ * v systémovém registru.
+- [Vytvoření základního projektového systému, část 1 ukazuje,](../extensibility/creating-a-basic-project-system-part-1.md) jak vytvořit základní šablonu projektu a přidat ji do systému projektu. Také ukazuje, jak zaregistrovat tuto šablonu v aplikaci Visual Studio pomocí <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> atributu, který zapisuje úplnou cestu ke složce *\\ Templates\Projects\SimpleProject \\* v systémovém registru.
 
 Pomocí šablony sady Visual Studio (soubor *. vstemplate* ) namísto základní šablony projektu můžete určit, jak se šablona zobrazí v dialogovém okně **Nový projekt** a jak budou nahrazeny parametry šablony. Soubor *. vstemplate* je soubor XML, který popisuje, jak se mají zahrnout zdrojové soubory při vytvoření projektu pomocí šablony systém projektu. Samotný projektový systém je sestaven tak, že shromažďuje soubor *. vstemplate* a zdrojové soubory v souboru *. zip* a je nasazen zkopírováním souboru *. zip* do umístění, které je známo v aplikaci Visual Studio. Tento proces je podrobněji vysvětlen dále v tomto návodu.
 
@@ -55,7 +57,7 @@ Pomocí šablony sady Visual Studio (soubor *. vstemplate* ) namísto základní
     LanguageVsTemplate = "SimpleProject")]
     ```
 
-3. Přidejte soubor XML s názvem *SimpleProject. vstemplate* do složky * \\ Templates\Projects\SimpleProject \\ * .
+3. Přidejte soubor XML s názvem *SimpleProject. vstemplate* do složky *\\ Templates\Projects\SimpleProject \\* .
 
 4. Nahraďte obsah *SimpleProject. vstemplate* následujícím kódem.
 
@@ -83,7 +85,7 @@ Pomocí šablony sady Visual Studio (soubor *. vstemplate* ) namísto základní
     </VSTemplate>
     ```
 
-5. V okně **vlastnosti** vyberte všechny pět souborů ve složce * \\ Templates\Projects\SimpleProject \\ * a nastavte **akci sestavení** na **ZipProject**.
+5. V okně **vlastnosti** vyberte všechny pět souborů ve složce *\\ Templates\Projects\SimpleProject \\* a nastavte **akci sestavení** na **ZipProject**.
 
     ![Jednoduchá složka projektu](../extensibility/media/simpproj2.png "SimpProj2")
 
@@ -188,7 +190,7 @@ Otestujte objekt pro vytváření projektu, abyste viděli, zda vytváří hiera
 
     V novějších verzích Windows: na obrazovce **Start** zadejte **resetování Microsoft Visual Studio \<version> experimentální instance**.
 
-2. Zobrazí se okno příkazového řádku. Po zobrazení slov **stiskněte libovolnou klávesu a pokračujte**tím, že kliknete na **ENTER**. Po zavření okna otevřete Visual Studio.
+2. Zobrazí se okno příkazového řádku. Po zobrazení slov **stiskněte libovolnou klávesu a pokračujte** tím, že kliknete na **ENTER**. Po zavření okna otevřete Visual Studio.
 
 3. Znovu sestavte projekt SimpleProject a spusťte ladění. Objeví se experimentální instance.
 
@@ -207,9 +209,9 @@ Podřízené uzly jsou vytvořeny změnou souboru projektu a přidáním \<Outpu
 
 V této části se dozvíte, jak vytvořit podřízený uzel konzoly pro typ projektu SimpleProject.
 
-1. Přejmenujte složku * \\ Templates\Projects\SimpleProject \\ * na * \\ Templates\Projects\ConsoleApp \\ *.
+1. Přejmenujte složku *\\ Templates\Projects\SimpleProject \\* na *\\ Templates\Projects\ConsoleApp \\*.
 
-2. V okně **vlastnosti** vyberte všechny pět souborů ve složce * \\ Templates\Projects\ConsoleApp \\ * a ujistěte se, že je **Akce sestavení** nastavena na **ZipProject**.
+2. V okně **vlastnosti** vyberte všechny pět souborů ve složce *\\ Templates\Projects\ConsoleApp \\* a ujistěte se, že je **Akce sestavení** nastavena na **ZipProject**.
 
 3. V souboru SimpleProject. vstemplate přidejte následující řádek na konci \<TemplateData> oddílu těsně před uzavírací značku.
 
@@ -285,13 +287,13 @@ Při vytváření projektu pomocí šablony sady Visual Studio v dialogovém okn
 
 1. V souboru *SimpleProjectNode.cs* odeberte `AddFileFromTemplate` metodu.
 
-2. V souboru * \\ Templates\Projects\ConsoleApp\SimpleProject.myproj* vyhledejte \<RootNamespace> vlastnost a změňte její hodnotu na $safeprojectname $.
+2. V souboru *\\ Templates\Projects\ConsoleApp\SimpleProject.myproj* vyhledejte \<RootNamespace> vlastnost a změňte její hodnotu na $safeprojectname $.
 
     ```
     <RootNamespace>$safeprojectname$</RootNamespace>
     ```
 
-3. V souboru * \\ Templates\Projects\SimpleProject\Program.cs* nahraďte obsah souboru následujícím kódem:
+3. V souboru *\\ Templates\Projects\SimpleProject\Program.cs* nahraďte obsah souboru následujícím kódem:
 
     ```
     using System;
@@ -315,7 +317,7 @@ Při vytváření projektu pomocí šablony sady Visual Studio v dialogovém okn
 
 4. Znovu sestavte projekt SimpleProject a spusťte ladění. Měla by se zobrazit experimentální instance.
 
-5. Vytvořte novou konzolovou aplikaci SimpleProject. (V podokně **typy projektů** vyberte možnost **SimpleProject**. V části **Nainstalované šablony sady Visual Studio**vyberte **Konzolová aplikace**.)
+5. Vytvořte novou konzolovou aplikaci SimpleProject. (V podokně **typy projektů** vyberte možnost **SimpleProject**. V části **Nainstalované šablony sady Visual Studio** vyberte **Konzolová aplikace**.)
 
 6. V nově vytvořeném projektu otevřete *program.cs*. Měl by vypadat nějak takto (hodnoty GUID v souboru se budou lišit.):
 
@@ -462,7 +464,7 @@ Stránka vlastností, kterou vytvoříte v této části, vám umožní změnit 
 
 7. Visual Studio volá vaši továrnu projektu, aby vytvořila projekt pomocí šablony sady Visual Studio. Nový soubor *program.cs* je otevřen v editoru kódu.
 
-8. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a pak klikněte na **vlastnosti**. Zobrazí se dialogové okno **Stránky vlastností**.
+8. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a pak klikněte na **vlastnosti**. Zobrazí se dialogové okno **Stránky vlastností**.
 
     ![Stránka vlastností jednoduchého projektu](../extensibility/media/simpproj2_proppage.png "SimpProj2_PropPage")
 
@@ -473,7 +475,7 @@ Nyní můžete testovat, zda lze upravit a změnit hodnoty vlastností.
 
 2. Vyberte vlastnost **OutputType** a pak vyberte **Knihovna tříd**.
 
-3. Klikněte na **použít**a pak na **OK**.
+3. Klikněte na **použít** a pak na **OK**.
 
 4. Znovu otevřete dialogové okno **stránky vlastností** a ověřte, zda byly vaše změny trvalé.
 

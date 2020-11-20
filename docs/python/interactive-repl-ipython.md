@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b1fe36a4ee74ca1b41c1db1d79a6e4683c1f2b1f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e53ef96ad8fab8b26f04ccd5f7f0488d1f0d6985
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542425"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974079"
 ---
 # <a name="use-ipython-in-the-interactive-window"></a>Použití IPython v interaktivním okně
 
@@ -30,7 +30,7 @@ V tomto návodu byste měli mít nainstalované prostředí [Anaconda](https://w
 
 2. Zkontrolujte kartu **balíčky (conda)** (která se může zobrazit jako **PIP** nebo **balíčky**) pro toto prostředí, aby se zajistilo, že `ipython` a `matplotlib` jsou uvedené. Pokud ne, nainstalujte je sem. (Viz [prostředí Python Windows – karta balíčky](python-environments-window-tab-reference.md).)
 
-3. Vyberte kartu **Přehled** a vyberte **použít interaktivní režim IPython**. (V sadě Visual Studio 2015 vyberte **Konfigurovat interaktivní možnosti** pro otevření dialogového okna **Možnosti** , pak nastavte **interaktivní režim** na **IPython**a vyberte **OK**).
+3. Vyberte kartu **Přehled** a vyberte **použít interaktivní režim IPython**. (V sadě Visual Studio 2015 vyberte **Konfigurovat interaktivní možnosti** pro otevření dialogového okna **Možnosti** , pak nastavte **interaktivní režim** na **IPython** a vyberte **OK**).
 
 4. Vyberte **otevřít interaktivní okno** a zobrazte **interaktivní** okno v režimu IPython. Pokud jste právě změnili interaktivní režim, možná budete muset resetovat okno. Pokud se zobrazí jenom >>> výzvy, budete muset stisknout **ENTER** , takže se zobrazí výzva jako **v [2]**.
 
@@ -51,7 +51,7 @@ V tomto návodu byste měli mít nainstalované prostředí [Anaconda](https://w
 
     ![Vložený graf v interaktivním okně](media/ipython-repl-04.png)
 
-7. Namísto psaní do REPL můžete místo toho napsat kód v editoru, vybrat ho, kliknout pravým tlačítkem a vybrat možnost **Odeslat do interaktivního** příkazu (nebo stisknout klávesu **CTRL** + **ENTER**). Zkuste vložit kód uvedený níže do nového souboru v editoru, vybrat ho pomocí **kombinace kláves CTRL** + **a**a odeslat do **interaktivního** okna. (Visual Studio pošle kód jako jednu jednotku, abyste se vyhnuli poskytování mezilehlých nebo částečných grafů. A pokud nemáte otevřený projekt v Pythonu s vybraným jiným prostředím, Visual Studio otevře **interaktivní** okno pro jakékoli prostředí, které je v okně **prostředí Pythonu** vybrané jako výchozí.)
+7. Namísto psaní do REPL můžete místo toho napsat kód v editoru, vybrat ho, kliknout pravým tlačítkem a vybrat možnost **Odeslat do interaktivního** příkazu (nebo stisknout klávesu **CTRL** + **ENTER**). Zkuste vložit kód uvedený níže do nového souboru v editoru, vybrat ho pomocí **kombinace kláves CTRL** + **a** a odeslat do **interaktivního** okna. (Visual Studio pošle kód jako jednu jednotku, abyste se vyhnuli poskytování mezilehlých nebo částečných grafů. A pokud nemáte otevřený projekt v Pythonu s vybraným jiným prostředím, Visual Studio otevře **interaktivní** okno pro jakékoli prostředí, které je v okně **prostředí Pythonu** vybrané jako výchozí.)
 
     ```python
     from mpl_toolkits.mplot3d import Axes3D
@@ -82,6 +82,4 @@ IPython má mnoho dalších užitečných funkcí, jako je například uvozovac�
 
 ## <a name="see-also"></a>Viz také
 
-- Pokud chcete snadno používat Jupyter a bez instalace, vyzkoušejte bezplatnou [Azure Notebooks hostovanou službu](https://notebooks.azure.com/) , která vám umožní zachovat a sdílet poznámkové bloky s ostatními.
-
-- [Azure Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview) také předem nakonfigurujeme tak, aby spouštěla poznámkové bloky Jupyter spolu s řadou dalších nástrojů pro datové vědy.
+- [Azure Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview) je předem nakonfigurovaný tak, aby spouštěl poznámkové bloky Jupyter spolu s řadou dalších nástrojů pro datové vědy.
