@@ -1,5 +1,7 @@
 ---
 title: Hledání odkazů v kódu
+description: Přečtěte si o příkazu Najít všechny odkazy, kde najdete odkazy na konkrétní prvky kódu ve vašem kódu.
+ms.custom: SEO-VS-2020
 ms.date: 09/26/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +12,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e4ef16ef88e871778fd4e0c755ffb156c374109
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5ee6a0792c5dbfa1661018e75806499d1aa1028
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592032"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006546"
 ---
 # <a name="find-references-in-your-code"></a>Hledání odkazů v kódu
 
 Pomocí příkazu **Najít všechny odkazy** můžete najít, kde se v rámci základu kódu odkazuje na konkrétní prvky kódu. Příkaz **Najít všechny odkazy** je k dispozici v nabídce kontextu (klikněte pravým tlačítkem myši) prvku, na který chcete najít odkazy. Pokud jste uživatel klávesnice, stiskněte klávesy **SHIFT + F12**.
 
-Výsledky se zobrazí v okně nástroje s názvem ** \<element> odkazy**, kde *element* je název položky, kterou hledáte. Panel nástrojů v okně **odkazy** vám umožní:
+Výsledky se zobrazí v okně nástroje s názvem **\<element> odkazy**, kde *element* je název položky, kterou hledáte. Panel nástrojů v okně **odkazy** vám umožní:
 - Změna rozsahu hledání v rozevíracím seznamu. Můžete se rozhodnout, že budete hledat jenom v změněných dokumentech až do celého řešení.
 - Kliknutím na tlačítko **Kopírovat** zkopírujte vybranou odkazovanou položku.
 - Zvolte tlačítka pro přechod na další nebo předchozí umístění v seznamu nebo stiskněte klávesy **F8** a **Shift + F8** .
@@ -40,10 +42,10 @@ K přechodu na odkazy v okně **odkazy** můžete použít následující metody
 - Stisknutím klávesy **F8** přejděte na další odkaz nebo stiskněte **Shift + F8** a přejděte na předchozí odkaz.
 - Stiskněte klávesu **ENTER** na odkaz, nebo na ni poklikejte, abyste na ni mohli přejít v kódu.
 - V nabídce kliknutím pravým tlačítkem (kontextová nabídka) pro odkaz vyberte příkaz **Přejít na předchozí umístění** nebo **Přejít na další umístění** .
-- Vyberte **šipky nahoru** a **dolů** (pokud jsou povolené v dialogovém okně **Možnosti** ). Pokud chcete tuto funkci povolit, na panelu nabídek zvolte možnosti **nástroje**  >  **Options**  >  **Environment**  >  **karty prostředí a Windows**  >  **Preview**a potom vyberte možnost **povolit otevírání nových souborů na kartě náhled** a **Zobrazit náhled vybraných souborů v polích výsledky hledání** .
+- Vyberte **šipky nahoru** a **dolů** (pokud jsou povolené v dialogovém okně **Možnosti** ). Pokud chcete tuto funkci povolit, na panelu nabídek zvolte možnosti **nástroje**  >  **Options**  >  **Environment**  >  **karty prostředí a Windows**  >  **Preview** a potom vyberte možnost **povolit otevírání nových souborů na kartě náhled** a **Zobrazit náhled vybraných souborů v polích výsledky hledání** .
 
 ## <a name="change-reference-groupings"></a>Změnit seskupení odkazů
-Ve výchozím nastavení se odkazy seskupují podle projektu a pak podle definice. Toto pořadí seskupení ale můžete změnit změnou nastavení v rozevíracím seznamu **Seskupit podle:** na panelu nástrojů. Můžete ho například změnit z výchozího nastavení **projektu, pak definice** na **definice, projekt**i další nastavení.
+Ve výchozím nastavení se odkazy seskupují podle projektu a pak podle definice. Toto pořadí seskupení ale můžete změnit změnou nastavení v rozevíracím seznamu **Seskupit podle:** na panelu nástrojů. Můžete ho například změnit z výchozího nastavení **projektu, pak definice** na **definice, projekt** i další nastavení.
 
 Pro **definici** a **projekt** se používají dvě výchozí skupiny, ale můžete přidat další kliknutím na příkaz **seskupení** v místní nabídce a kliknutí pravým tlačítkem vybrané položky. Přidání více seskupení může být užitečné, pokud vaše řešení obsahuje velké množství souborů a cest.
 

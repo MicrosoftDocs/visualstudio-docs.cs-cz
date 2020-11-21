@@ -1,5 +1,7 @@
 ---
 title: Vývoj kódu bez projektů nebo řešení
+description: Naučte se vyvíjet kód přímo v aplikaci Visual Studio bez potřeby projektů nebo řešení.
+ms.custom: SEO-VS-2020
 ms.date: 06/22/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68665acfcc3ea00f118dc19cf155cb3e6f5d1b36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d706ccdc07abcc91e956878e1bc180be9c542223
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769655"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006000"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>Vývoj kódu v sadě Visual Studio bez projektů nebo řešení
 
@@ -28,15 +30,15 @@ Po otevření souborů kódu v aplikaci Visual Studio **Průzkumník řešení**
 
 Kód můžete otevřít do sady Visual Studio následujícími způsoby:
 
-- V panelu nabídek sady Visual Studio zvolte **soubor**  >  **otevřít**  >  **složku**a pak přejděte do umístění kódu.
+- V panelu nabídek sady Visual Studio zvolte **soubor**  >  **otevřít**  >  **složku** a pak přejděte do umístění kódu.
 
 - V nabídce kontextu (klikněte pravým tlačítkem myši) složky obsahující kód vyberte příkaz **otevřít v aplikaci Visual Studio** .
 
 ::: moniker range="vs-2017"
-- Klikněte na odkaz **Otevřít složku** na **úvodní stránce**sady Visual Studio.
+- Klikněte na odkaz **Otevřít složku** na **úvodní stránce** sady Visual Studio.
 
     > [!IMPORTANT]
-    > Ne všechny kódy lze otevřít pomocí odkazu **Otevřít složku** na **úvodní stránce**sady Visual Studio. Například pokud byl soubor kódu uložen jako součást řešení &mdash; jinými slovy, v souboru. sln je &mdash; nutné použít jednu z dalších možností, které jsou zde uvedeny, pro otevření kódu.
+    > Ne všechny kódy lze otevřít pomocí odkazu **Otevřít složku** na **úvodní stránce** sady Visual Studio. Například pokud byl soubor kódu uložen jako součást řešení &mdash; jinými slovy, v souboru. sln je &mdash; nutné použít jednu z dalších možností, které jsou zde uvedeny, pro otevření kódu.
 
 ::: moniker-end
 
@@ -70,7 +72,7 @@ Následující příklad ukazuje, jak klonovat úložiště GitHub a pak otevř�
 
 1. Klikněte na tlačítko **klonovat** a naklonujte soubory projektu do místního úložiště Git. V závislosti na velikosti úložiště může tento proces trvat několik minut.
 
-1. Po naklonování úložiště do svého systému v **Team Explorer**vyberte v nabídce kontextu (klikněte pravým tlačítkem myši) v nově klonovaném úložišti příkaz **otevřít** .
+1. Po naklonování úložiště do svého systému v **Team Explorer** vyberte v nabídce kontextu (klikněte pravým tlačítkem myši) v nově klonovaném úložišti příkaz **otevřít** .
 
    ![Klonované úložiště](./media/VSIDE_Code_Clone3.png)
 
@@ -101,11 +103,11 @@ Pokud váš základ kódu používá vlastní nástroje sestavení, je nutné sd
 
 Pokud váš základ kódu obsahuje kód Python nebo JavaScript, nemusíte konfigurovat žádné soubory *. JSON* , ale musíte nainstalovat odpovídající úlohu. Také je nutné nakonfigurovat spouštěcí skript:
 
-1. Pomocí **nástrojů** [Python development](https://visualstudio.microsoft.com/vs/python/) [Node.js development](https://visualstudio.microsoft.com/vs/node-js/)  >  **získat nástroje a funkce**nebo zavřením sady Visual Studio a spuštěním instalační program pro Visual Studio nainstalujte úlohu vývoj pro vývojNode.js nebo Python.
+1. Pomocí **nástrojů** [Python development](https://visualstudio.microsoft.com/vs/python/) [Node.js development](https://visualstudio.microsoft.com/vs/node-js/)  >  **získat nástroje a funkce** nebo zavřením sady Visual Studio a spuštěním instalační program pro Visual Studio nainstalujte úlohu vývoj pro vývojNode.js nebo Python.
 
    ![Úlohy vývoje Node.js a Pythonu](media/python_nodejs_workloads.png)
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši nebo v místní nabídce souboru JavaScriptu nebo Pythonu na příkaz **nastavit jako položku při spuštění** .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši nebo v místní nabídce souboru JavaScriptu nebo Pythonu na příkaz **nastavit jako položku při spuštění** .
 
 1. Spusťte ladění kliknutím na tlačítko **Start** .
 

@@ -1,5 +1,7 @@
 ---
 title: Hledání a instalace rozšíření
+description: Přečtěte si o rozšířeních v aplikaci Visual Studio a o tom, jak je spravovat, abyste měli ovládací prvky, ukázky, šablony, nástroje a další komponenty, které potřebujete.
+ms.custom: SEO-VS-2020
 ms.date: 09/18/2019
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f016af58b5799ca37b1a8f0cc54366d639c57c03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c5d4cf36d722c260f52584b16557bcb8d7cda83c
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594406"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006533"
 ---
 # <a name="manage-extensions-for-visual-studio"></a>Správa rozšíření pro Visual Studio
 
@@ -31,7 +33,7 @@ Informace o vytváření rozšíření sady Visual Studio naleznete v tématu [V
 
 ## <a name="extensions-and-updates-dialog-box"></a>Dialogové okno rozšíření a aktualizace
 
-Pomocí dialogového okna **rozšíření a aktualizace** můžete nainstalovat a spravovat rozšíření sady Visual Studio. Chcete-li otevřít dialogové okno **rozšíření a aktualizace** , vyberte možnost **nástroje**  >  **rozšíření a aktualizace**nebo **rozšíření** zadejte do vyhledávacího pole snadné **spuštění** .
+Pomocí dialogového okna **rozšíření a aktualizace** můžete nainstalovat a spravovat rozšíření sady Visual Studio. Chcete-li otevřít dialogové okno **rozšíření a aktualizace** , vyberte možnost **nástroje**  >  **rozšíření a aktualizace** nebo **rozšíření** zadejte do vyhledávacího pole snadné **spuštění** .
 
 ::: moniker-end
 
@@ -55,7 +57,7 @@ Rozšíření můžete nainstalovat z [Visual Studio Marketplace](https://market
 
 Instalace rozšíření z aplikace Visual Studio:
 
-1. V **Tools**  >  části**rozšíření a aktualizace**nástrojů Najděte rozšíření, které chcete nainstalovat. Pokud znáte název nebo část názvu rozšíření, můžete hledat v okně **hledání** .
+1. V **Tools**  >  části **rozšíření a aktualizace** nástrojů Najděte rozšíření, které chcete nainstalovat. Pokud znáte název nebo část názvu rozšíření, můžete hledat v okně **hledání** .
 
 2. Vyberte **Stáhnout**.
 
@@ -65,7 +67,7 @@ Pokud se pokusíte nainstalovat rozšíření, která obsahuje závislosti, inst
 
 ### <a name="install-without-using-the-extensions-and-updates-dialog-box"></a>Instalace bez použití dialogového okna rozšíření a aktualizace
 
-Rozšíření, která byla zabalena v souborech *. vsix* , mohou být k dispozici v jiných umístěních než Visual Studio Marketplace. V **Tools**  >  dialogovém okně**rozšíření a aktualizace** nástrojů nelze tyto soubory rozpoznat, ale můžete nainstalovat soubor *. vsix* dvojitým kliknutím na soubor nebo vybráním souboru a stisknutím klávesy **ENTER**. Pak stačí postupovat podle pokynů. Po instalaci rozšíření můžete použít dialogové okno **rozšíření a aktualizace** k jeho povolení, jeho zakázání nebo odinstalaci.
+Rozšíření, která byla zabalena v souborech *. vsix* , mohou být k dispozici v jiných umístěních než Visual Studio Marketplace. V **Tools**  >  dialogovém okně **rozšíření a aktualizace** nástrojů nelze tyto soubory rozpoznat, ale můžete nainstalovat soubor *. vsix* dvojitým kliknutím na soubor nebo vybráním souboru a stisknutím klávesy **ENTER**. Pak stačí postupovat podle pokynů. Po instalaci rozšíření můžete použít dialogové okno **rozšíření a aktualizace** k jeho povolení, jeho zakázání nebo odinstalaci.
 
 > [!NOTE]
 > - Visual Studio Marketplace obsahuje rozšíření VSIX i MSI. Dialogové okno rozšíření a aktualizace nemůže povolit ani zakázat rozšíření založená na MSI.
@@ -79,7 +81,7 @@ Rozšíření můžete nainstalovat z [Visual Studio Marketplace](https://market
 
 Instalace rozšíření z aplikace Visual Studio:
 
-1. Z **rozšíření**  >  **Správa rozšíření**Najděte rozšíření, které chcete nainstalovat. (Pokud znáte název nebo část názvu rozšíření, můžete hledat v okně **hledání** .)
+1. Z **rozšíření**  >  **Správa rozšíření** Najděte rozšíření, které chcete nainstalovat. (Pokud znáte název nebo část názvu rozšíření, můžete hledat v okně **hledání** .)
 
 2. Vyberte **Stáhnout**.
 
@@ -106,13 +108,13 @@ Pokud chcete přestat používat rozšíření, lze jej zakázat nebo odinstalov
 
 ## <a name="per-user-and-administrative-extensions"></a>Rozšíření pro jednotlivé uživatele a správce
 
-Většina rozšíření je vázaná na uživatele a je nainstalovaná ve složce *%LocalAppData%\Microsoft\VisualStudio \\<Visual Studio \> verze \\ \Extensions* . Některá rozšíření jsou rozšíření pro správu a jsou nainstalovaná ve složce * \<Visual Studio installation folder> \Common7\IDE\Extensions \\ * .
+Většina rozšíření je vázaná na uživatele a je nainstalovaná ve složce *%LocalAppData%\Microsoft\VisualStudio \\<Visual Studio \> verze \\ \Extensions* . Některá rozšíření jsou rozšíření pro správu a jsou nainstalovaná ve složce *\<Visual Studio installation folder> \Common7\IDE\Extensions \\* .
 
 Chcete-li chránit systém proti rozšířením, která mohou obsahovat chyby nebo škodlivý kód, můžete omezit rozšíření vázaná na uživatele pro načtení pouze v případě, že je aplikace Visual Studio spuštěna s normálním uživatelským oprávněním. To znamená, že rozšíření vázaná na uživatele jsou zakázána při spuštění sady Visual Studio se zvýšenými oprávněními.
 
 Omezení načtení rozšíření pro jednotlivé uživatele:
 
-1. Otevřete stránku možnosti rozšíření (**nástroje**  >  **Možnosti**  >  **Environment**  >  **rozšíření**prostředí).
+1. Otevřete stránku možnosti rozšíření (**nástroje**  >  **Možnosti**  >  **Environment**  >  **rozšíření** prostředí).
 
 2. Zrušte zaškrtnutí políčka **načíst rozšíření pro jednotlivé uživatele při spuštění jako správce** .
 
@@ -126,7 +128,7 @@ Pokud chcete zakázat automatické aktualizace, můžete tuto funkci zakázat pr
 
 ::: moniker range="vs-2017"
 
-- Chcete-li zakázat automatické aktualizace pro všechna rozšíření, klikněte v **Tools**dialogovém okně rozšíření a aktualizace nástrojů na odkaz **změnit nastavení rozšíření a aktualizace**  >  **Extensions and Updates** . V dialogovém okně **Možnosti** zrušte možnost **automaticky aktualizovat rozšíření**.
+- Chcete-li zakázat automatické aktualizace pro všechna rozšíření, klikněte v **Tools** dialogovém okně rozšíření a aktualizace nástrojů na odkaz **změnit nastavení rozšíření a aktualizace**  >  **Extensions and Updates** . V dialogovém okně **Možnosti** zrušte možnost **automaticky aktualizovat rozšíření**.
 
 - Chcete-li zakázat automatické aktualizace konkrétního rozšíření, zrušte v podokně podrobností rozšíření na pravé straně dialogového okna **rozšíření a aktualizace** možnost **automaticky aktualizovat tuto příponu** .
 
@@ -150,7 +152,7 @@ Po zobrazení těchto oznámení můžete oznámení ignorovat nebo provést jed
 
 ::: moniker range="vs-2017"
 
-- Vyberte možnost **zakázat toto rozšíření**. Visual Studio zakáže rozšíření a umožní vám zjistit, jestli je potřeba restartovat systém, aby se zakazování projevilo. Pokud chcete, můžete rozšíření znovu povolit v **Tools**  >  dialogovém okně**rozšíření a aktualizace** nástrojů.
+- Vyberte možnost **zakázat toto rozšíření**. Visual Studio zakáže rozšíření a umožní vám zjistit, jestli je potřeba restartovat systém, aby se zakazování projevilo. Pokud chcete, můžete rozšíření znovu povolit v **Tools**  >  dialogovém okně **rozšíření a aktualizace** nástrojů.
 
 ::: moniker-end
 

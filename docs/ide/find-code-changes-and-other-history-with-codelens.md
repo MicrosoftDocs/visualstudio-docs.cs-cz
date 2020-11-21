@@ -1,5 +1,7 @@
 ---
 title: Nalezení změn kódu a další historie pomocí CodeLensu
+description: Přečtěte si o CodeLens a o tom, jak ho použít k procházení historie kódu bez nutnosti opustit Editor.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -9,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98bdbecb12897602a70c590b9cee64b992193b7d
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 485287239a13f61d10ee39bad854a0f3bdae4f55
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928499"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006702"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>Nalezení změn kódu a další historie pomocí CodeLensu
 
@@ -79,11 +81,11 @@ Budete potřebovat:
 
 - [Skype pro firmy](/skypeforbusiness/) , aby se kontaktoval váš tým z editoru kódu
 
-Pro C# nebo Visual Basic kód uložený pomocí Správa verzí Team Foundation (TFVC) nebo Git získáte podrobnosti CodeLens na úrovni třídy a metody (indikátory*na úrovni elementu kódu* ). Pokud je vaše úložiště Git hostované v TfGit, získáte také odkazy na pracovní položky sady TFS.
+Pro C# nebo Visual Basic kód uložený pomocí Správa verzí Team Foundation (TFVC) nebo Git získáte podrobnosti CodeLens na úrovni třídy a metody (indikátory *na úrovni elementu kódu* ). Pokud je vaše úložiště Git hostované v TfGit, získáte také odkazy na pracovní položky sady TFS.
 
 ![Indikátory na úrovni elementu kódu](../ide/media/codelens-element-level-indicators.png)
 
-Pro jiné typy souborů než *. cs* nebo *. vb*získáte CodeLens podrobnosti o celém souboru na jednom místě v dolní části okna (indikátory na*úrovni souborů* ).
+Pro jiné typy souborů než *. cs* nebo *. vb* získáte CodeLens podrobnosti o celém souboru na jednom místě v dolní části okna (indikátory na *úrovni souborů* ).
 
 ![Indikátory CodeLens na úrovni souboru](../ide/media/almcodelensfilelevelindicators.png)
 
@@ -128,9 +130,9 @@ Můžete také zjistit, kdo změnil kód v průběhu času. To vám může pomá
 
 Váš tým může mít více větví, například hlavní větev a podřízenou vývojovou větev pro snížení rizika poškození stabilního kódu.
 
-![CodeLens: najít, kdy byl kód v větve](../ide/media/codelensfirstbranchconceptual.png)
+![CodeLens: hledání změn v aktuální větvi](../ide/media/codelensfirstbranchconceptual.png)
 
-Stisknutím **kombinace kláves ALT**6 zjistíte, kolik lidí změnilo váš kód a kolik změn bylo provedeno v hlavní větvi + **6**.
+Stisknutím **kombinace kláves ALT** 6 zjistíte, kolik lidí změnilo váš kód a kolik změn bylo provedeno v hlavní větvi + **6**.
 
 ![CodeLens: najít počet změn ve větvi](../ide/media/codelens-branch-changes.png)
 
@@ -156,7 +158,7 @@ Změnu můžete zkontrolovat bez nutnosti opustit aktuální větev ("Main"):
 
 Můžete vidět, kdy byly změny sloučeny, abyste mohli určit, které změny budou zahrnuty do vaší větve:
 
-![CodeLens – sloučení změn mezi větvemi](../ide/media/codelensbranchmergedconceptual.png)
+![CodeLens – vyhledání změn, které byly sloučeny](../ide/media/codelensbranchmergedconceptual.png)
 
 Například váš kód v hlavní větvi teď obsahuje opravu chyby z větve pro vývoj:
 
@@ -164,7 +166,7 @@ Například váš kód v hlavní větvi teď obsahuje opravu chyby z větve pro 
 
 ### <a name="compare-an-incoming-change-with-your-local-version"></a>Porovnání příchozí změny s místní verzí
 
-Porovnejte příchozí změnu s místní verzí stisknutím klávesy **SHIFT** + **F10**nebo Poklikáním na sadu změn.
+Porovnejte příchozí změnu s místní verzí stisknutím klávesy **SHIFT** + **F10** nebo Poklikáním na sadu změn.
 
 ![CodeLens: porovná příchozí změnu s místními](../ide/media/codelens-branch-incoming-change-menu.png)
 

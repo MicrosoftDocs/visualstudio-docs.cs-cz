@@ -1,5 +1,7 @@
 ---
 title: Nastavení prostředí
+description: Přečtěte si o nastaveních prostředí sady Visual Studio a o tom, jak je nastavit tak, aby byly optimální pro daný typ vývoje.
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 780f9e6cdd3a2b30a8cc5ce31b0c8cc61a6d5e55
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e38505b800037be63b326003bfa6c7fc5396126
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89313026"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006650"
 ---
 # <a name="environment-settings-for-visual-studio"></a>Nastavení prostředí pro Visual Studio
 
@@ -32,13 +34,13 @@ K dispozici jsou následující kolekce nastavení:
 
 Chcete-li změnit nastavení pro vývoj po prvním spuštění aplikace Visual Studio, postupujte takto:
 
-1. **Tools**  >  Chcete-li otevřít **Průvodce importem a exportem nastavení**, vyberte možnost nástroje**importovat a exportovat** z řádku nabídek.
+1. **Tools**  >  Chcete-li otevřít **Průvodce importem a exportem nastavení**, vyberte možnost nástroje **importovat a exportovat** z řádku nabídek.
 
-1. V **Průvodci importem a exportem nastavení**vyberte **Obnovit všechna nastavení**a pak vyberte **Další**.
+1. V **Průvodci importem a exportem nastavení** vyberte **Obnovit všechna nastavení** a pak vyberte **Další**.
 
    ![Průvodce importem a exportem nastavení v aplikaci Visual Studio](media/reset-all-settings.png)
 
-1. Na stránce **Uložit aktuální nastavení** vyberte možnost **Ano** nebo **ne**a potom vyberte možnost **Další**.
+1. Na stránce **Uložit aktuální nastavení** vyberte možnost **Ano** nebo **ne** a potom vyberte možnost **Další**.
 
 1. Na stránce **Zvolte výchozí soubor nastavení** vyberte kolekci a pak vyberte **Dokončit**.
 

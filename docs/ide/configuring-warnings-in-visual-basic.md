@@ -1,5 +1,7 @@
 ---
 title: Konfigurace upozornění v jazyce Visual Basic
+description: Přečtěte si, jak můžete nakonfigurovat upozornění v Visual Basic, které vám usnadní psaní čisticího a rychlejšího kódu s menšími chybami.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33302a4a686d80621cc64ee018371a2d03ea30ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd5239c4fd01aefa247fc63a66af3e872dbecbb6
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114726"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006403"
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Konfigurace upozornění v Visual Basic
 

@@ -1,5 +1,7 @@
 ---
 title: Diagnostická data a systémem generované protokoly
+description: Přečtěte si o protokolech generovaných systémem Visual Studio, typech shromažďovaných dat a o tom, jak se používají k řešení problémů a zlepšení kvality produktu.
+ms.custom: SEO-VS-2020
 ms.date: 05/24/2018
 ms.topic: conceptual
 author: jillre
@@ -7,12 +9,12 @@ ms.author: michma
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b3f3774a816ca31bfcdd4013d35dadbb1737e5ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93f450eab5879991f45f4a924338d4a277d13544
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387249"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95005922"
 ---
 # <a name="system-generated-logs-collected-by-visual-studio"></a>Systémem generované protokoly shromážděné aplikací Visual Studio
 
@@ -24,7 +26,7 @@ Visual Studio shromažďuje systémem generované protokoly chyb, nereagující 
 
 - Pro zajištění vysokého využití procesoru a nereagují se shromažďují záznamy zásobníku relevantních vláken sady Visual Studio.
 
-- V případě, že trasování zásobníku některých vláken nestačí k určení původní příčiny problému, například chyby, nereagující nebo vysoké využití paměti, shromažďujeme *Výpis*paměti. Výpis stavu paměti představuje stav procesu, kdy došlo k chybě.
+- V případě, že trasování zásobníku některých vláken nestačí k určení původní příčiny problému, například chyby, nereagující nebo vysoké využití paměti, shromažďujeme *Výpis* paměti. Výpis stavu paměti představuje stav procesu, kdy došlo k chybě.
 
 - V případě neočekávaných chybových stavů, například při pokusu o zápis do souboru na disku, shromažďujeme informace o výjimce. Informace obsahují název výjimky, trasování zásobníku vlákna, kde došlo k výjimce, zprávu spojenou s výjimkou a další informace, které jsou relevantní pro konkrétní výjimku.
 

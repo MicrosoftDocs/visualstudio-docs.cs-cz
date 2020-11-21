@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení rozložení oken
+description: Naučte se, jak přizpůsobit charakteristiky, které Windows vykazuje pro vytváření rozložení, která fungují nejlépe pro různé vývojové pracovní postupy.
+ms.custom: SEO-VS-2020
 ms.date: 07/31/2020
 ms.topic: conceptual
 f1_keywords:
@@ -23,18 +25,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2135183a474e29229d941bbd47af8d6abc263e49
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c433a6faf3eab9dd959cc25f26033c74852c0899
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87546066"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006663"
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Přizpůsobení rozložení oken v aplikaci Visual Studio
 
 V aplikaci Visual Studio můžete přizpůsobit polohu, velikost a chování Windows pro vytváření rozložení oken, která fungují nejlépe pro různé vývojové pracovní postupy. Když rozložení přizpůsobíte, IDE ho zapamatuje. Například pokud změníte umístění ukotvení **Průzkumník řešení** a pak zavřete Visual Studio, při příštím otevření sady Visual Studio, a to i v případě, že pracujete na jiném počítači, **Průzkumník řešení** bude ukotveno ve stejném umístění.
 
-Můžete také pojmenovat a uložit vlastní rozložení a pak přepínat mezi rozloženími jediným příkazem. Můžete například vytvořit rozložení pro úpravy a rozložení pro ladění a mezi nimi přepínat pomocí příkazu **okna**pro  >  **použití nabídky rozložení** okna.
+Můžete také pojmenovat a uložit vlastní rozložení a pak přepínat mezi rozloženími jediným příkazem. Můžete například vytvořit rozložení pro úpravy a rozložení pro ladění a mezi nimi přepínat pomocí příkazu **okna** pro  >  **použití nabídky rozložení** okna.
 
 ## <a name="tool-and-document-windows"></a>Okna nástrojů a dokumentů
 
@@ -52,7 +54,7 @@ Pomocí karet můžete uspořádat rozložení několika různými způsoby. Mů
 
 #### <a name="preview-tab-document-windows"></a>Karta náhled (okna dokumentu)
 
-Na kartě **Náhled** můžete zobrazit soubory v editoru bez nutnosti jejich otevírání. Můžete zobrazit náhled souborů tak, že je vyberete v **Průzkumník řešení**, během ladění, když přejdete do souboru s možností **Přejít k definici**a při procházení výsledků hledání. Soubory náhledu se zobrazí na kartě na pravé straně karty dokumentu. Soubor se otevře pro úpravy, pokud ho upravíte, nebo klikněte na  **otevřít**.
+Na kartě **Náhled** můžete zobrazit soubory v editoru bez nutnosti jejich otevírání. Můžete zobrazit náhled souborů tak, že je vyberete v **Průzkumník řešení**, během ladění, když přejdete do souboru s možností **Přejít k definici** a při procházení výsledků hledání. Soubory náhledu se zobrazí na kartě na pravé straně karty dokumentu. Soubor se otevře pro úpravy, pokud ho upravíte, nebo klikněte na  **otevřít**.
 
 ::: moniker range="vs-2019"
 
@@ -62,9 +64,9 @@ Na kartě **Náhled** můžete zobrazit soubory v editoru bez nutnosti jejich ot
 
 Svislé karty dokumentu můžete použít následujícími způsoby:
 
-- **Tools**  >  **Options**  >  V řádku nabídek vyberte možnosti nástrojů karta**prostředí**  >  **a okna** . Pak z ovládacího prvku **rozložení karty sada** zvolte v rozevíracím seznamu buď **nahoře**, **vlevo**nebo **vpravo** .
+- **Tools**  >  **Options**  >  V řádku nabídek vyberte možnosti nástrojů karta **prostředí**  >  **a okna** . Pak z ovládacího prvku **rozložení karty sada** zvolte v rozevíracím seznamu buď **nahoře**, **vlevo** nebo **vpravo** .
 
-- Klikněte pravým tlačítkem myši na kartu, zvolte možnost **nastavit rozložení karty**a pak zvolte možnost **vlevo** nebo **vpravo**. (Pokud chcete tabulátory vrátit na výchozí pozici, vyberte **nahoře**.)
+- Klikněte pravým tlačítkem myši na kartu, zvolte možnost **nastavit rozložení karty** a pak zvolte možnost **vlevo** nebo **vpravo**. (Pokud chcete tabulátory vrátit na výchozí pozici, vyberte **nahoře**.)
 
     :::image type="content" source="./media/vs-2019/vertical-tabs.gif" alt-text="Animace, která zobrazuje svislé karty dokumentu v akci":::
 
@@ -167,7 +169,7 @@ Nejprve vytvořte testovací řešení, které má dva projekty, z nichž každ�
 
 3. Stisknutím **kombinace kláves CTRL** + **ALT** + **X** zobrazte okno **panelu nástrojů** . Je-li okno ukotveno, přetáhněte jej tak, aby bylo na místě, kde byste ho chtěli umístit jinam.
 
-4. Stisknutím klávesy **F5** vložte aplikaci Visual Studio do režimu ladění. Upravte umístění oken **Automatické**hodnoty, **zásobník volání**a **výstup ladění výstupu** tak, jak chcete. Rozložení, které se chystáte vytvořit, bude platit jak v režimu úprav, tak v režimu ladění.
+4. Stisknutím klávesy **F5** vložte aplikaci Visual Studio do režimu ladění. Upravte umístění oken **Automatické** hodnoty, **zásobník volání** a **výstup ladění výstupu** tak, jak chcete. Rozložení, které se chystáte vytvořit, bude platit jak v režimu úprav, tak v režimu ladění.
 
 5. V případě, že vaše rozložení v režimu ladění i v režimu úprav, jak chcete, vyberte možnost **okno**  >  **Uložit rozložení okna**. Zavolejte toto rozložení "Návrhář".
 

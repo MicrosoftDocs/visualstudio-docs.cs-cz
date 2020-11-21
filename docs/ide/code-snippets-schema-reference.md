@@ -1,5 +1,7 @@
 ---
 title: Referenční informace ke schématu fragmentů kódu
+description: Přečtěte si o schématu XML fragmentu kódu technologie IntelliSense a o tom, jak je můžete využít ke zvýšení produktivity.
+ms.custom: SEO-VS-2020
 ms.date: 03/31/2020
 ms.topic: reference
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e31ec2be9ccce0b07b04746d2ed51ab3909cdd2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5030efcfe6fc774a1bb576f6056db7d9f8fd662
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183675"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006468"
 ---
 # <a name="code-snippets-schema-reference"></a>Referenční informace ke schématu fragmentů kódu
 
@@ -633,7 +635,7 @@ Určuje typ objektu. `Object`Element se používá k identifikaci položky, kter
 | - |-----------------|
 |[Element Object](../ide/code-snippets-schema-reference.md#object-element)|Definuje pole objektu fragment kódu, která lze upravovat.|
 
-Je vyžadována textová hodnota. Tento text určuje typ objektu. Příklad:
+Je vyžadována textová hodnota. Tento text určuje typ objektu. Například:
 
 ```xml
 <Type>System.Data.SqlClient.SqlConnection</Type>

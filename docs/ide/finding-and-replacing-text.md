@@ -1,5 +1,7 @@
 ---
 title: Hledání a nahrazování textu a výběr vícenásobného kurzoru
+description: Přečtěte si o funkci najít a nahradit a o tom, jak ji použít k vyhledání a nahrazení instancí vzoru.
+ms.custom: SEO-VS-2020
 ms.date: 10/17/2020
 ms.topic: conceptual
 f1_keywords:
@@ -30,12 +32,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b878ccbf6714987599d1585ca9c0dc3ceb759144
-ms.sourcegitcommit: 4450abc99453ccaf8936449bbff437c5b9efa022
+ms.openlocfilehash: 475f0249bd6af8176fba3ecc79ad758cc6ceceb7
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92334191"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006585"
 ---
 # <a name="find-and-replace-text"></a>Vyhledání a nahrazení textu
 
@@ -54,7 +56,7 @@ Můžete určit rozsah hledání na aktuální dokument, aktuální řešení ne
 ## <a name="find-and-replace-control"></a>Najít a nahradit ovládací prvek
 
 - Stiskněte klávesu **CTRL** + **F** jako zástupce a *vyhledejte* řetězec v aktuálním souboru.
-- Stisknutím **Ctrl** + klávesové zkratky CTRL**H** *vyhledejte a nahraďte* řetězec v aktuálním souboru.
+- Stisknutím **Ctrl** + klávesové zkratky CTRL **H** *vyhledejte a nahraďte* řetězec v aktuálním souboru.
 
 Ovládací prvek **Najít a nahradit** se zobrazí v pravém horním rohu okna Editor kódu. Okamžitě zvýrazní všechny výskyty daného hledaného řetězce v aktuálním dokumentu. Můžete přecházet z jednoho výskytu na jiný kliknutím na tlačítko **Najít další** nebo tlačítko **Najít předchozí** v ovládacím prvku hledání.
 
@@ -62,7 +64,7 @@ Ovládací prvek **Najít a nahradit** se zobrazí v pravém horním rohu okna E
 
 K možnostem nahrazení se dostanete tak, že vyberete tlačítko vedle textového pole **Najít** . Chcete-li provést nahrazení v jednom okamžiku, klikněte na tlačítko **nahradit další** vedle textového pole **nahradit** . Chcete-li nahradit všechny shody, klikněte na tlačítko **Nahradit vše** .
 
-Chcete-li změnit barvu zvýraznění shody, zvolte nabídku **nástroje** , vyberte možnost **Možnosti**a pak zvolte možnost **prostředí**a vyberte možnost **písma a barvy**. V seznamu **Zobrazit nastavení pro** vyberte možnost **textový editor**a potom v seznamu **Zobrazit položky** vyberte možnost **Najít zvýraznění (rozšíření)**.
+Chcete-li změnit barvu zvýraznění shody, zvolte nabídku **nástroje** , vyberte možnost **Možnosti** a pak zvolte možnost **prostředí** a vyberte možnost **písma a barvy**. V seznamu **Zobrazit nastavení pro** vyberte možnost **textový editor** a potom v seznamu **Zobrazit položky** vyberte možnost **Najít zvýraznění (rozšíření)**.
 
 ### <a name="search-tool-windows"></a>Hledání v oknech nástrojů
 
@@ -92,7 +94,7 @@ Rozsah vyhledávání můžete definovat tak, že kliknete na tlačítko **Zvoli
 
 ### <a name="create-custom-component-sets"></a>Vytváření vlastních sad součástí
 
-Sady součástí můžete definovat jako rozsah hledání tak, že vyberete tlačítko **Upravit sadu vlastních komponent** vedle pole **Hledat v** . Můžete určit nainstalované komponenty .NET nebo COM, projekty sady Visual Studio, které jsou součástí vašeho řešení, nebo jakékoli sestavení nebo knihovnu typů (*. dll*, *. tlb*, *. olb*, *. exe*nebo *. ocx*). Chcete-li hledat odkazy, vyberte pole **Hledat v odkazech** .
+Sady součástí můžete definovat jako rozsah hledání tak, že vyberete tlačítko **Upravit sadu vlastních komponent** vedle pole **Hledat v** . Můžete určit nainstalované komponenty .NET nebo COM, projekty sady Visual Studio, které jsou součástí vašeho řešení, nebo jakékoli sestavení nebo knihovnu typů (*. dll*, *. tlb*, *. olb*, *. exe* nebo *. ocx*). Chcete-li hledat odkazy, vyberte pole **Hledat v odkazech** .
 
 ## <a name="multi-caret-selection"></a>Výběr násobného kurzoru
 

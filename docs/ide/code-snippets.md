@@ -1,5 +1,7 @@
 ---
 title: Fragmenty kódu
+description: Přečtěte si o fragmentech kódu a o tom, jak jsou malými bloky opakovaně použitelného kódu, který lze vložit do souboru kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: c06f9f7dc7e5a672e3fd5da3f3fc834fe223a783
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52059dd464ad0c720a4a2e77a961b7d6f3525c6d
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585415"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006390"
 ---
 # <a name="code-snippets"></a>Fragmenty kódu
 
@@ -39,7 +41,7 @@ K fragmentům kódu je možné přistupovat následujícími obecnými způsoby:
 
 - Na panelu nabídek vyberte možnost **Upravit**  >  **IntelliSense**  >  **Vložit fragment** .
 
-- V editoru kódu kliknutím pravým tlačítkem myši nebo v místní nabídce vyberte **fragment**kódu  >  **Vložit fragment**
+- V editoru kódu kliknutím pravým tlačítkem myši nebo v místní nabídce vyberte **fragment** kódu  >  **Vložit fragment**
 
 - Na klávesnici stiskněte klávesu **CTRL** + **K**,**CTRL** + **X**
 

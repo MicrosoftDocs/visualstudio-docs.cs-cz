@@ -1,5 +1,7 @@
 ---
 title: Možnosti stylu kódu a vyčištění kódu
+description: Naučte se, jak nakonfigurovat Visual Studio pro použití předvoleb stylu kódu pomocí příkazů pro vyčištění kódu (Visual Studio 2019) a formátování dokumentu (Visual Studio 2017).
+ms.custom: SEO-VS-2020
 ms.date: 04/25/2019
 ms.topic: conceptual
 author: mikejo5000
@@ -10,16 +12,16 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 82eec2a911ec113c42423fe14b06539e465e8bb3
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 9172fff2dde1528c5ea382aea996d316e0738ea0
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658383"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006676"
 ---
 # <a name="code-style-preferences"></a>Předvolby stylu kódu
 
-Můžete definovat nastavení stylu kódu pro jednotlivé projekty pomocí [souboru EditorConfig](#code-styles-in-editorconfig-files)nebo pro veškerý kód, který upravíte v aplikaci Visual Studio na [stránce **Možnosti** ](#code-styles-in-the-options-dialog-box)textového editoru. Pro kód jazyka C# můžete také nakonfigurovat aplikaci Visual Studio, aby používala Tyto předvolby stylu kódu pomocí příkazů pro **Vyčištění kódu** (visual Studio 2019) a **formátovat dokument** (Visual Studio 2017).
+Můžete definovat nastavení stylu kódu pro jednotlivé projekty pomocí [souboru EditorConfig](#code-styles-in-editorconfig-files)nebo pro veškerý kód, který upravíte v aplikaci Visual Studio na [stránce **Možnosti**](#code-styles-in-the-options-dialog-box)textového editoru. Pro kód jazyka C# můžete také nakonfigurovat aplikaci Visual Studio, aby používala Tyto předvolby stylu kódu pomocí příkazů pro **Vyčištění kódu** (visual Studio 2019) a **formátovat dokument** (Visual Studio 2017).
 
 > [!NOTE]
 > Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [chování editoru v Visual Studio pro Mac](/visualstudio/mac/editor-behavior).
@@ -58,7 +60,7 @@ Možnosti nastavené v tomto okně se vztahují na váš účet přizpůsobení 
 
 ### <a name="preference-and-severity"></a>Preference a závažnost
 
-U každého nastavení stylu kódu na této stránce můžete nastavit hodnoty **předvoleb** a **závažnosti** pomocí rozevíracích seznamu na každém řádku. Závažnost se dá nastavit jenom na **refaktoring**, **Návrh**, **varování**nebo **chybu**. Pokud chcete povolit [rychlé akce](../ide/quick-actions.md) pro styl kódu, zajistěte, aby bylo nastavení **závažnosti** nastaveno na jinou hodnotu než **refaktoring**. V **Quick Actions** případě, že ![ ](media/light-bulb-dropdown.png) ![ ](media/error-bulb.png) ![ ](media/screwdriver.png) se používá nepreferovaný styl, zobrazí se při použití nepreferovaného stylu chybová žárovka žárovky, která je v krátkém smyslu žárovky, a můžete zvolit možnost v seznamu **rychlé akce** a automaticky přepisovat kód na preferovaný styl.
+U každého nastavení stylu kódu na této stránce můžete nastavit hodnoty **předvoleb** a **závažnosti** pomocí rozevíracích seznamu na každém řádku. Závažnost se dá nastavit jenom na **refaktoring**, **Návrh**, **varování** nebo **chybu**. Pokud chcete povolit [rychlé akce](../ide/quick-actions.md) pro styl kódu, zajistěte, aby bylo nastavení **závažnosti** nastaveno na jinou hodnotu než **refaktoring**. V **Quick Actions** případě, že :::image type="icon" source="media/light-bulb-dropdown.png"::: :::image type="icon" source="media/error-bulb.png"::: :::image type="icon" source="media/screwdriver.png"::: se používá nepreferovaný styl, se v případě použití nepreferovaného stylu zobrazí žárovka s rychlými akcemi, chybová žárovka nebo ikona Screwdriver a můžete vybrat možnost v seznamu **rychlé akce** a automaticky přepisovat kód na preferovaný styl.
 
 ::: moniker range=">=vs-2019"
 
@@ -101,7 +103,7 @@ Nejprve nakonfigurujte styly kódu, které chcete použít (v jednom ze dvou pro
 
 ![Konfigurace vyčištění kódu v aplikaci Visual Studio 2019](media/configure-code-cleanup.png)
 
-Po nakonfigurování vyčištění kódu můžete buď kliknout na ikonu Broom, nebo stisknout **kombinaci kláves CTRL** + **k**, **CTRL** + **E** a spustit program Vyčištění kódu. Můžete také spustit vyčištění kódu v celém projektu nebo řešení. Klikněte pravým tlačítkem myši na název projektu nebo řešení v **Průzkumník řešení**, vyberte **Analýza a vyčištění kódu**a pak vyberte **Spustit vyčištění kódu**.
+Po nakonfigurování vyčištění kódu můžete buď kliknout na ikonu Broom, nebo stisknout **kombinaci kláves CTRL** + **k**, **CTRL** + **E** a spustit program Vyčištění kódu. Můžete také spustit vyčištění kódu v celém projektu nebo řešení. Klikněte pravým tlačítkem myši na název projektu nebo řešení v **Průzkumník řešení**, vyberte **Analýza a vyčištění kódu** a pak vyberte **Spustit vyčištění kódu**.
 
 ![Spustit čištění kódu v celém projektu nebo řešení](media/run-code-cleanup-project-solution.png)
 

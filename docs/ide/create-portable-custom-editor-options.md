@@ -1,5 +1,7 @@
 ---
 title: Nastavení EditorConfig
+description: Naučte se, jak přidat soubor EditorConfig do projektu nebo základ kódu k prosazování konzistentních stylů kódování pro všechny, které fungují v základu kódu.
+ms.custom: SEO-VS-2020
 ms.date: 09/02/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -7,12 +9,12 @@ helpviewer_keywords:
 author: mikadumont
 ms.author: midumont
 manager: jillfra
-ms.openlocfilehash: 277e5cd03d4006ced0791356be73ca1fcbe5c217
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: a1f66368972614347df9eebe33af435987ea9cc8
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659248"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006494"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>Vytvoření přenosného nastavení vlastního editoru pomocí řešení EditorConfig
 
@@ -37,7 +39,7 @@ Když do projektu přidáte soubor EditorConfig v aplikaci Visual Studio, nové 
 
 ::: moniker range="vs-2017"
 
-Můžete definovat, která nastavení EditorConfig má **formátovat dokument** použít na [stránce možnosti **formátování** ](reference/options-text-editor-csharp-formatting.md#format-document-settings).
+Můžete definovat, která nastavení EditorConfig má **formátovat dokument** použít na [stránce možnosti **formátování**](reference/options-text-editor-csharp-formatting.md#format-document-settings).
 
 ::: moniker-end
 
@@ -80,7 +82,7 @@ Pokud odeberete soubor EditorConfig z projektu nebo základu kódu a chcete, aby
 
 1. Otevřete projekt nebo řešení v aplikaci Visual Studio. Vyberte buď projekt nebo uzel řešení v závislosti na tom, zda má být nastavení *. editorconfig* použito pro všechny projekty v řešení nebo pouze jeden. Můžete také vybrat složku v projektu nebo řešení, do které chcete přidat soubor *. editorconfig* .
 
-1. Z panelu nabídek zvolte **projekt**  >  **Přidat novou položku**nebo stiskněte klávesy **CTRL** + **SHIFT** + **A**.
+1. Z panelu nabídek zvolte **projekt**  >  **Přidat novou položku** nebo stiskněte klávesy **CTRL** + **SHIFT** + **A**.
 
    Otevře se dialogové okno **Přidat novou položku** .
 
@@ -104,7 +106,7 @@ Existuje několik dalších způsobů, jak můžete přidat soubor EditorConfig 
 
 - [Funkce odvození kódu](/visualstudio/intellicode/code-style-inference) IntelliCode pro Visual Studio odvodí vaše styly kódu z existujícího kódu. Pak vytvoří neprázdný soubor EditorConfig s předem definovanými preferencemi stylu kódu.
 
-- Od sady Visual Studio 2019 můžete [vygenerovat soubor EditorConfig v závislosti na nastavení stylu kódu](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files) v **Tools**  >  **možnostech**nástrojů.
+- Od sady Visual Studio 2019 můžete [vygenerovat soubor EditorConfig v závislosti na nastavení stylu kódu](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files) v **Tools**  >  **možnostech** nástrojů.
 
 ## <a name="file-hierarchy-and-precedence"></a>Hierarchie souborů a Priorita
 
@@ -166,7 +168,7 @@ Pokud je soubor EditorConfig kdekoli ve struktuře adresáře na umístění pro
 
    **"Předvolby uživatele pro tento typ souboru se přepsaly konvencemi psaní kódu tohoto projektu."**
 
-To znamená, že pokud se **v**  >  **Options**  >  souboru EditorConfig v projektu ve struktuře adresáře nebo nad projektem v rámci struktury v adresáři nachází všechna**nastavení editoru** (například velikost odsazení a styl, velikost tabulátoru nebo konvence kódování), nahradí konvence v souboru EditorConfig nastavení v **možnostech**. Toto chování můžete řídit přepnutím možnosti **konvence psaní kódu projektu** v části **nástroje**  >  **Options**  >  **textový editor**. Zrušením zaškrtnutí možnosti vypnete podporu EditorConfig pro Visual Studio.
+To znamená, že pokud se **v**  >  **Options**  >  souboru EditorConfig v projektu ve struktuře adresáře nebo nad projektem v rámci struktury v adresáři nachází všechna **nastavení editoru** (například velikost odsazení a styl, velikost tabulátoru nebo konvence kódování), nahradí konvence v souboru EditorConfig nastavení v **možnostech**. Toto chování můžete řídit přepnutím možnosti **konvence psaní kódu projektu** v části **nástroje**  >  **Options**  >  **textový editor**. Zrušením zaškrtnutí možnosti vypnete podporu EditorConfig pro Visual Studio.
 
 ![Možnosti nástrojů – Sledujte konvence psaní kódu projektu](media/coding_conventions_option.png)
 

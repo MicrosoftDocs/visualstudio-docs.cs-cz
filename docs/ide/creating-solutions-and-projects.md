@@ -1,5 +1,7 @@
 ---
 title: Vytváření řešení a projektů
+description: Přečtěte si o rozdílech mezi řešeními a projekty a o jejich použití v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/06/2018
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19a836847aa01038bdbb015612c4fb4a3964d9a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7bd893c06da9bc2c2c8d95fc4c085affa815edd2
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770543"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006442"
 ---
 # <a name="create-solutions-and-projects"></a>Vytváření řešení a projektů
 
@@ -57,7 +59,7 @@ Pokud máte kolekci zdrojových souborů kódu, můžete je snadno přidat do pr
 
 ## <a name="add-files-to-a-solution"></a>Přidat soubory do řešení
 
-Pokud máte soubor, který se vztahuje na více projektů, jako je soubor Readme pro řešení nebo jiné soubory, které logicky náležejí na úrovni řešení, nikoli v rámci konkrétního projektu, můžete je přidat do samotného řešení. Chcete-li přidat položku do řešení, v nabídce kontext (klikněte pravým tlačítkem myši) uzlu řešení v **Průzkumník řešení**, vyberte možnost **Přidat**  >  **novou položku**nebo **Přidat**  >  **existující položku**.
+Pokud máte soubor, který se vztahuje na více projektů, jako je soubor Readme pro řešení nebo jiné soubory, které logicky náležejí na úrovni řešení, nikoli v rámci konkrétního projektu, můžete je přidat do samotného řešení. Chcete-li přidat položku do řešení, v nabídce kontext (klikněte pravým tlačítkem myši) uzlu řešení v **Průzkumník řešení**, vyberte možnost **Přidat**  >  **novou položku** nebo **Přidat**  >  **existující položku**.
 
 ## <a name="create-a-net-project-that-targets-a-specific-version-of-the-net-framework"></a>Vytvořte projekt .NET, který se zaměřuje na konkrétní verzi .NET Framework
 
@@ -122,7 +124,7 @@ Jak bylo zmíněno dříve, můžete také otevřít soubory kódu bez potřeby 
 
 Pokud vytvoříte. Projekt založený na síti bez určení umístění na disku, jedná se o dočasný projekt. Dočasné projekty umožňují experimentovat s projekty .NET. Kdykoli při práci s dočasným projektem, můžete ho uložit nebo zahodit.
 
-Chcete-li vytvořit dočasný projekt, nejprve přejít na **nástroje**  >  **Možnosti**  >  **projekty a řešení**  >  **Obecné**a zrušte zaškrtnutí políčka **Uložit nové projekty, pokud je vytvořeno** . Pak otevřete dialogové okno **Nový projekt** obvyklým způsobem.
+Chcete-li vytvořit dočasný projekt, nejprve přejít na **nástroje**  >  **Možnosti**  >  **projekty a řešení**  >  **Obecné** a zrušte zaškrtnutí políčka **Uložit nové projekty, pokud je vytvořeno** . Pak otevřete dialogové okno **Nový projekt** obvyklým způsobem.
 
 ::: moniker-end
 
@@ -135,7 +137,7 @@ Chcete-li vytvořit dočasný projekt, nejprve přejít na **nástroje**  >  **M
 
 ### <a name="permanently-delete-a-solution"></a>Trvalé odstranění řešení
 
-1. V **Průzkumník řešení**v nabídce kliknutím pravým tlačítkem (kontextová nabídka) řešení, které chcete odstranit, vyberte **Otevřít složku v Průzkumníkovi souborů**.
+1. V **Průzkumník řešení** v nabídce kliknutím pravým tlačítkem (kontextová nabídka) řešení, které chcete odstranit, vyberte **Otevřít složku v Průzkumníkovi souborů**.
 
 1. V Průzkumníku souborů přejděte o jednu úroveň výše.
 

@@ -1,5 +1,6 @@
 ---
 title: Klávesové zkratky pro často používané příkazy
+description: Přečtěte si o klávesových zkratkách, které EVOKE nejčastěji používané příkazy sady Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64c3a163f706898dfb358b15279e62729f40cf84
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: c60da36ac6a8e5002e65e0973af0f3e0cb13eef7
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93045660"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006481"
 ---
 # <a name="popular-keyboard-shortcuts-for-visual-studio"></a>Oblíbené klávesové zkratky pro Visual Studio
 
@@ -22,7 +23,7 @@ Výběrem těchto výchozích klávesových zkratek získáte snadno přístup k
 *Globální* kontext znamená, že zástupce je použitelný v jakémkoli okně nástroje v aplikaci Visual Studio.
 
 > [!NOTE]
-> Zástupce libovolného příkazu můžete [Vyhledat](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) otevřením dialogového okna **Možnosti** , rozbalením uzlu **prostředí** a následným výběrem **klávesnice** .
+> Zástupce libovolného příkazu můžete [Vyhledat](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) otevřením dialogového okna **Možnosti** , rozbalením uzlu **prostředí** a následným výběrem **klávesnice**.
 
 ## <a name="build"></a>Sestavení
 
@@ -58,9 +59,9 @@ Výběrem těchto výchozích klávesových zkratek získáte snadno přístup k
 |Příkazy|Klávesové zkratky [kontexty]|
 |--------------| - |
 |Edit.BreakLine|**Zadejte** [textový editor, Návrhář sestav, Návrhář formulářů].<br /><br />nebo **SHIFT + ENTER** [textový editor]|
-|Upravit. CollapseToDefinitions|**CTRL + M** , **CTRL + O** [textový editor]|
-|Edit.CommentSelection|**CTRL + K** , **CTRL + C** [textový editor]|
-|Edit.CompleteWord|**ALT + šipka doprava** [textový Editor, Návrhář postupu provádění]<br /><br />nebo **CTRL + MEZERNÍK** [textový Editor, Návrhář postupu provádění]<br /><br />nebo **CTRL + K** , **W** [Návrhář postupu provádění]<br /><br />nebo **CTRL + K, CTRL + W** [Návrhář postupu provádění]|
+|Upravit. CollapseToDefinitions|**CTRL + M**, **CTRL + O** [textový editor]|
+|Edit.CommentSelection|**CTRL + K**, **CTRL + C** [textový editor]|
+|Edit.CompleteWord|**ALT + šipka doprava** [textový Editor, Návrhář postupu provádění]<br /><br />nebo **CTRL + MEZERNÍK** [textový Editor, Návrhář postupu provádění]<br /><br />nebo **CTRL + K**, **W** [Návrhář postupu provádění]<br /><br />nebo **CTRL + K, CTRL + W** [Návrhář postupu provádění]|
 |Edit.Copy|**CTRL + C** [Global]<br /><br />nebo **CTRL + INSERT** [Global]|
 |Edit.Cut|**CTRL + X** [Global]<br /><br />nebo **SHIFT + DELETE** [Global]|
 |Edit.Delete|**Delete** [Global, Team Explorer]<br /><br />nebo **SHIFT + DELETE** [sekvenční diagram, diagram aktivity UML, Diagram vrstev]<br /><br />nebo **CTRL + Delete** [Class Diagram]|
@@ -76,7 +77,7 @@ Výběrem těchto výchozích klávesových zkratek získáte snadno přístup k
 |Edit.GoToDefinition|**F12**|
 |Edit.GoToFindCombo|**CTRL + D** [Global]|
 |Edit.GoToNextLocation|**F8** [Global]|
-|Edit.InsertSnippet|**CTRL + K** , **CTRL + X** [Global]|
+|Edit.InsertSnippet|**CTRL + K**, **CTRL + X** [Global]|
 |Edit.InsertTab|**TAB** [Návrhář sestav, Návrhář formulářů, textový editor]|
 |Edit.LineCut|**CTRL + L** [textový editor]|
 |Edit.LineDownExtendColumn|**SHIFT + ALT + Šipka dolů** [textový editor]|

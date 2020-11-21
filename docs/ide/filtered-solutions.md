@@ -1,5 +1,7 @@
 ---
 title: Načtení podmnožiny projektů
+description: Přečtěte si o filtrování řešení a o tom, jak umožňuje rychle načíst podmnožinu projektů v řešení.
+ms.custom: SEO-VS-2020
 ms.date: 04/22/2019
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -10,12 +12,12 @@ author: jillre
 ms.author: stsu
 manager: jillfra
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 4c44d267ef5686d04e9549601e05866aabbfb62d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 73cb7afe913f7656ac6124d1f54fbc1cb7b611cb
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72650841"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006611"
 ---
 # <a name="filtered-solutions-in-visual-studio"></a>Filtrovaná řešení v aplikaci Visual Studio
 
@@ -47,7 +49,7 @@ Chcete-li otevřít řešení bez načtení některého z jeho projektů pomocí
 
    Řešení se otevře se všemi jeho projekty se Nenačtené.
 
-4. V **Průzkumník řešení**vyberte projekty, které chcete načíst (stisknutím klávesy **CTRL** vyberte více než jeden projekt) a pak klikněte pravým tlačítkem na projekt a zvolte **znovu načíst projekt**.
+4. V **Průzkumník řešení** vyberte projekty, které chcete načíst (stisknutím klávesy **CTRL** vyberte více než jeden projekt) a pak klikněte pravým tlačítkem na projekt a zvolte **znovu načíst projekt**.
 
    ![Opětovné načtení více projektů v aplikaci Visual Studio Průzkumník řešení](media/filtered-solutions/reload-project.png)
 
@@ -92,7 +94,7 @@ Soubory filtru řešení jsou vizuálně odlišené od běžných souborů řeš
 
 ### <a name="create-a-solution-filter-file"></a>Vytvoření souboru filtru řešení
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte **Uložit jako filtr řešení**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení a vyberte **Uložit jako filtr řešení**.
 
    ![Nabídka Uložit jako filtr řešení v aplikaci Visual Studio Průzkumník řešení](media/filtered-solutions/save-as-solution-filter.png)
 

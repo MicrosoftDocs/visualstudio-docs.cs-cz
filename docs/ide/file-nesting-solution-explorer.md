@@ -1,5 +1,7 @@
 ---
 title: Pravidla vnořování souborů pro Průzkumník řešení
+description: Přečtěte si o Průzkumník řešení pravidel, přednastavení a přizpůsobení pro vnořování souborů.
+ms.custom: SEO-VS-2020
 ms.date: 05/25/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,16 +10,16 @@ helpviewer_keywords:
 author: angelosp
 ms.author: angelpe
 manager: jillfra
-ms.openlocfilehash: a36ca2535785f72756ad66a69c2ebe4d7d5a373b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5425c255e85a2785383f1e8e718340fc2049e0c4
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67587029"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006689"
 ---
 # <a name="file-nesting-in-solution-explorer"></a>Vnořování souborů v Průzkumníku řešení
 
-**Průzkumník řešení** vnořovat soubory, které jim pomůžou s jejich uspořádáním a usnadnit jejich vyhledání. Například pokud přidáte model Windows Forms formuláře do projektu, soubor kódu formuláře je vnořen pod formulář v **Průzkumník řešení**. V ASP.NET Core projektech je možné vnoření souborů provést podrobněji. Můžete si vybrat mezi přednastavením vnořování souborů **mimo**jiné, **výchozí**a **Web**. Můžete také [přizpůsobit způsob vnoření souborů](#customize-file-nesting) nebo [vytváření nastavení specifických pro konkrétní řešení a projekt](#create-project-specific-settings).
+**Průzkumník řešení** vnořovat soubory, které jim pomůžou s jejich uspořádáním a usnadnit jejich vyhledání. Například pokud přidáte model Windows Forms formuláře do projektu, soubor kódu formuláře je vnořen pod formulář v **Průzkumník řešení**. V ASP.NET Core projektech je možné vnoření souborů provést podrobněji. Můžete si vybrat mezi přednastavením vnořování souborů **mimo** jiné, **výchozí** a **Web**. Můžete také [přizpůsobit způsob vnoření souborů](#customize-file-nesting) nebo [vytváření nastavení specifických pro konkrétní řešení a projekt](#create-project-specific-settings).
 
 > [!NOTE]
 > Tato funkce je momentálně podporovaná jenom pro projekty ASP.NET Core.
@@ -148,7 +150,7 @@ Tento zprostředkovatel vám umožní definovat pravidla vnořování souborů n
 
 ### <a name="file-nesting-button"></a>Tlačítko pro vnořování souborů
 
-Přes stejné tlačítko v **Průzkumník řešení**můžete spravovat všechna nastavení, včetně vlastních nastavení.
+Přes stejné tlačítko v **Průzkumník řešení** můžete spravovat všechna nastavení, včetně vlastních nastavení.
 
 ![Aktivovat vlastní pravidla vnořování souborů](media/filenesting_activatecustom.png)
 

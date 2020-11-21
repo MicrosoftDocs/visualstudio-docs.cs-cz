@@ -1,5 +1,7 @@
 ---
 title: Znaky kódování a zalomení řádku
+description: Přečtěte si o znacích, které Visual Studio interpretuje jako zalomení řádků a jak se uchovávají původní kódování a znaky zalomení řádků.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6634a0b2715fb83a397b5e8cd0c8c68274771e2a
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 889af1c0fd28224b2f31eb80bbeecad28346cd1c
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93045596"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006637"
 ---
 # <a name="encodings-and-line-endings"></a>Kódování a konce řádků
 
@@ -50,13 +52,13 @@ Pomocí **File**  >  dialogového okna **Upřesnit možnosti uložení** můžet
 
 > [!NOTE]
 > Pokud nevidíte **možnost Upřesnit možnosti uložení** v nabídce **soubor** , můžete ji přidat. 
-> 1. Vyberte **nástroje** , **přizpůsobit** , 
-> 1. Zvolte kartu **příkazy** , vyberte přepínač **panelu nabídek** a z odpovídajícího rozevíracího seznamu zvolte možnost **soubor** . Klikněte na tlačítko **Přidat příkaz** . 
-> 1. V dialogovém okně **Přidat příkaz** v části **kategorie** zvolte možnost **soubor** a potom v seznamu **příkazy** zvolte **možnost Upřesnit možnosti uložení** . Klikněte na tlačítko **OK** .
+> 1. Vyberte **nástroje**, **přizpůsobit**, 
+> 1. Zvolte kartu **příkazy** , vyberte přepínač **panelu nabídek** a z odpovídajícího rozevíracího seznamu zvolte možnost **soubor**. Klikněte na tlačítko **Přidat příkaz** . 
+> 1. V dialogovém okně **Přidat příkaz** v části **kategorie** zvolte možnost **soubor** a potom v seznamu **příkazy** zvolte **možnost Upřesnit možnosti uložení**. Klikněte na tlačítko **OK** .
 > 1. Pomocí tlačítek **nahoru a** **dolů** můžete příkaz přesunout na libovolné místo v nabídce. Kliknutím na tlačítko **Zavřít** zavřete dialogové okno **přizpůsobit** . 
 > Další informace najdete v tématu [přizpůsobení nabídek a panelů nástrojů](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#customizing_menu).
 >
-> Alternativně můžete k dialogovému oknu **Upřesnit možnosti uložení** získat přístup tak, že kliknete na **soubor**  >  **Uložit \<file\> jako** . V dialogovém okně **Uložit soubor jako** zvolte trojúhelník rozevíracího seznamu vedle tlačítka **Uložit** a pak zvolte **Uložit s kódováním** .
+> Alternativně můžete k dialogovému oknu **Upřesnit možnosti uložení** získat přístup tak, že kliknete na **soubor**  >  **Uložit \<file\> jako**. V dialogovém okně **Uložit soubor jako** zvolte trojúhelník rozevíracího seznamu vedle tlačítka **Uložit** a pak zvolte **Uložit s kódováním**.
 
 ## <a name="see-also"></a>Viz také
 

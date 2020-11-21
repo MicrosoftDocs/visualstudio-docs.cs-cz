@@ -1,5 +1,7 @@
 ---
 title: Výchozí klávesové zkratky
+description: Seznamte se s výchozími klávesovými zkratkami v aplikaci Visual Studio, které umožňují přístup k nejrůznějším příkazům a systémům Windows.
+ms.custom: SEO-VS-2020
 ms.date: 06/26/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eab8798dfb5c1666ef2829361adb8c48202c3981
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: 06bbbb0124984530e92b0066044c71bfbe80ad2b
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022214"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006364"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Výchozí klávesové zkratky v aplikaci Visual Studio
 
@@ -48,7 +50,7 @@ Další informace o usnadnění přístupu v aplikaci Visual Studio naleznete v 
 - [Nápověda](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_help)
 - [Průzkumník řešení](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL)
 - [Zobrazení](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_view)
-- [Ladění](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)
+- [Ladí](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)
 - [Zátěžový test](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_loadtest)
 - [Team](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_team)
 - [Okno](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_window)
@@ -195,7 +197,7 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 |Upravit. GoToAll|**CTRL +,** nebo **CTRL + T**|
 |Edit.GoToDeclaration|**Ctrl+F12**|
 |Edit.GoToDefinition|**F12**|
-|Upravit. GoToMember|**CTRL + 1, CTRL + M** nebo **CTRL + 1, M** nebo **ALT + \\ **|
+|Upravit. GoToMember|**CTRL + 1, CTRL + M** nebo **CTRL + 1, M** nebo **ALT + \\**|
 |Edit.GoToNextLocation|**F8** (Další chyba v seznam chyb nebo okně výstup)|
 |Edit.GoToPrevLocation|**Shift + F8** (předchozí chyba v okně Seznam chyb nebo výstupu)|
 |Edit.InsertSnippet|**Ctrl+K, Ctrl+X**|
@@ -219,7 +221,7 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 |Edit.Replace|**Ctrl+H**|
 |Edit.ReplaceinFiles|**Ctrl+Shift+H**|
 |Edit.SelectAll|**Ctrl+A**|
-|Edit.SelectNextControl|**Karta**|
+|Edit.SelectNextControl|**Rážky**|
 |Edit.SelectPreviousControl|**Shift+Tab**|
 |Edit.ShowTileGrid|**Napište**|
 |Edit.SizeControlDown|**Ctrl + Shift + šipka dolů**|
@@ -724,7 +726,7 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 |Edit.CharLeftExtend|**Shift + šipka doleva**|
 |Edit.CharRight|**Šipka doprava**|
 |Edit.CharRightExtend|**Shift + šipka doprava**|
-|Edit.InsertTab|**Karta**|
+|Edit.InsertTab|**Rážky**|
 |Edit.LineDown|**Šipka dolů**|
 |Edit.LineDownExtend|**Shift + šipka dolů**|
 |Edit.LineUp|**Šipka nahoru**|
@@ -838,13 +840,13 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 | Edit.IncrementalSearch | **Ctrl+I** |
 | Upravit. InsertCaretsatAllMatching | **Shift + Alt +;** |
 | Upravit. InsertNextMatchingCaret | **Shift + Alt +.** |
-| Edit.InsertTab | **Karta** |
+| Edit.InsertTab | **Rážky** |
 | Edit.LineCut | **Ctrl+L** |
 | Edit.LineDelete | **Ctrl+Shift+L** |
 | Edit.LineDown | **Šipka dolů** |
 | Edit.LineDownExtend | **Shift + šipka dolů** |
 | Edit.LineDownExtendColumn | **Shift +Alt + šipka dolů** |
-| Edit.LineEnd | **Účelu** |
+| Edit.LineEnd | **End** |
 | Edit.LineEndExtend | **Shift+End** |
 | Edit.LineEndExtendColumn | **Shift+Alt+End** |
 | Edit.LineOpenAbove | **Ctrl+Enter** |
@@ -1054,11 +1056,11 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 |Edit.CharLeftExtend|**Shift + šipka doleva**|
 |Edit.CharRight|**Šipka doprava**|
 |Edit.CharRightExtend|**Shift + šipka doprava**|
-|Edit.DocumentEnd|**Účelu**|
+|Edit.DocumentEnd|**End**|
 |Edit.DocumentEndExtend|**Shift+End**|
 |Edit.DocumentStart|**Domů**|
 |Edit.DocumentStartExtend|**Shift+Home**|
-|Edit.InsertTab|**Karta**|
+|Edit.InsertTab|**Rážky**|
 |Edit.LineDown|**Šipka dolů**|
 |Edit.LineDownExtend|**Shift + šipka nahoru**|
 |Edit.LineUp|**Šipka nahoru**|
