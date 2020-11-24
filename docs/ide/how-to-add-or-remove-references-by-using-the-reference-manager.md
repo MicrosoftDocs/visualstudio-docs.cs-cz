@@ -1,5 +1,7 @@
 ---
 title: Přidání odkazů ve Správci odkazů
+description: Naučte se používat dialogové okno Správce odkazů k přidávání a správě odkazů na vyvíjené komponenty.
+ms.custom: SEO-VS-2020
 ms.date: 08/02/2019
 ms.topic: how-to
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f02dcc5f38bf8eb4acc702c5d8a1ee466a6a4a71
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4884fdc857abd524fa62bb126e7a74af48e9ca88
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87390259"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597311"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Postupy: Přidání nebo odebrání odkazů pomocí Správce odkazů
 
@@ -36,7 +38,7 @@ Dialogové okno Správce odkazů můžete použít k přidání a správě odkaz
 
 Dialogové okno Správce odkazů zobrazuje na levé straně různé kategorie v závislosti na typu projektu:
 
-- **Sestavení**s podskupinami **architektury** a **rozšíření**
+- **Sestavení** s podskupinami **architektury** a **rozšíření**
 
 - **Com** obsahuje seznam všech komponent modelu COM, které jsou k dispozici pro odkazování
 
@@ -44,7 +46,7 @@ Dialogové okno Správce odkazů zobrazuje na levé straně různé kategorie v 
 
 - **Sdílené projekty**
 
-- **Windows**s podskupinami **základní** a **rozšíření** . Můžete prozkoumat odkazy v sadách SDK Windows SDK nebo rozšíření pomocí **Prohlížeč objektů**.
+- **Windows** s podskupinami **základní** a **rozšíření** . Můžete prozkoumat odkazy v sadách SDK Windows SDK nebo rozšíření pomocí **Prohlížeč objektů**.
 
 - **Procházet**, s **Poslední** podskupinou
  
@@ -53,7 +55,7 @@ Dialogové okno Správce odkazů zobrazuje na levé straně různé kategorie v 
 
 ## <a name="add-a-reference"></a>Přidat odkaz
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **odkazy** nebo **závislosti** a vyberte možnost **Přidat odkaz**. Můžete také kliknout pravým tlačítkem myši na uzel projektu a vybrat možnost **Přidat**  >  **odkaz**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **odkazy** nebo **závislosti** a vyberte možnost **Přidat odkaz**. Můžete také kliknout pravým tlačítkem myši na uzel projektu a vybrat možnost **Přidat**  >  **odkaz**.
 
    Otevře se **Správce odkazů** a zobrazí seznam dostupných odkazů podle skupin.
 
@@ -91,7 +93,7 @@ Karta **sestavení** se skládá ze dvou dílčích karet:
 
    A starší verze [identifikátor cílového rozhraní .NET Framework]
 
-   Například pokud je projekt .NET Framework cílen na 32-bit počítače, **rozšíření** vytvoří výčet sestavení, která jsou registrována v části *\Microsoft \. NETFramework\v4.0\AssemblyFoldersEx*, *\Microsoft \. NETFramework\v3.5\AssemblyFoldersEx*, *\Microsoft \. NETFramework\v3.0\AssemblyFoldersEx*a *\Microsoft \. NETFramework\v2.0\AssemblyFoldersEx*.
+   Například pokud je projekt .NET Framework cílen na 32-bit počítače, **rozšíření** vytvoří výčet sestavení, která jsou registrována v části *\Microsoft \. NETFramework\v4.0\AssemblyFoldersEx*, *\Microsoft \. NETFramework\v3.5\AssemblyFoldersEx*, *\Microsoft \. NETFramework\v3.0\AssemblyFoldersEx* a *\Microsoft \. NETFramework\v2.0\AssemblyFoldersEx*.
 
 Některé součásti v seznamu nemusí být zobrazeny v závislosti na verzi rozhraní projektu. K tomu může dojít při splnění následujících podmínek:
 
@@ -189,11 +191,11 @@ Vyhněte se přidávání odkazů na soubory do výstupů jiného projektu ve st
 
 Nemůžete procházet sadu SDK a přidat ji do projektu. Můžete přejít pouze k souboru (například sestavení nebo *. winmd*) a přidat ho do projektu.
 
-Při odkazování na soubor winmd je očekávané rozložení, že soubory * \<FileName> . winmd*, * \<FileName> . dll*a * \<FileName> . pri* jsou umístěny vedle sebe. Pokud odkazujete na soubor WinMD v následujících scénářích, do výstupního adresáře projektu budou zkopírovány neúplné sady souborů a v důsledku toho dojde k chybám při sestavení a za běhu.
+Při odkazování na soubor winmd je očekávané rozložení, že soubory *\<FileName> . winmd*, *\<FileName> . dll* a *\<FileName> . pri* jsou umístěny vedle sebe. Pokud odkazujete na soubor WinMD v následujících scénářích, do výstupního adresáře projektu budou zkopírovány neúplné sady souborů a v důsledku toho dojde k chybám při sestavení a za běhu.
 
-- **Nativní komponenta**: nativní projekt vytvoří jednu winmd pro každou nesouvislou sadu oborů názvů a jednu knihovnu DLL, která se skládá z implementace. Soubory WinMDs budou mít nesouvislé názvy. Při odkazování na tento soubor nativní komponenty nástroj MSBuild nerozpozná, že s názvem soubory WinMD vytvořit jednu komponentu. V důsledku toho budou zkopírovány pouze identicky pojmenované * \<FileName> . dll* a * \<FileName> . winmd* a dojde k chybám za běhu. Pokud chcete tento problém obejít, vytvořte sadu SDK rozšíření. Další informace najdete v tématu [Vytvoření sady SDK (Software Development Kit](../extensibility/creating-a-software-development-kit.md)).
+- **Nativní komponenta**: nativní projekt vytvoří jednu winmd pro každou nesouvislou sadu oborů názvů a jednu knihovnu DLL, která se skládá z implementace. Soubory WinMDs budou mít nesouvislé názvy. Při odkazování na tento soubor nativní komponenty nástroj MSBuild nerozpozná, že s názvem soubory WinMD vytvořit jednu komponentu. V důsledku toho budou zkopírovány pouze identicky pojmenované *\<FileName> . dll* a *\<FileName> . winmd* a dojde k chybám za běhu. Pokud chcete tento problém obejít, vytvořte sadu SDK rozšíření. Další informace najdete v tématu [Vytvoření sady SDK (Software Development Kit](../extensibility/creating-a-software-development-kit.md)).
 
-- **Spotřebovávání ovládacích prvků**: ovládací prvek XAML je přinejmenším tvořen * \<FileName> příponou. winmd*, * \<FileName> . dll*, * \<FileName> . pri*, * \<XamlName> . XAML*a * \<ImageName> . jpg*. Po sestavení projektu se soubory prostředků, které jsou spojeny s odkazem na soubor, nezkopírují do výstupního adresáře projektu a zkopírují se pouze soubory * \<FileName> . winmd*, * \<FileName> . dll* a * \<FileName> . pri* . Chyba sestavení je protokolována pro informování uživatele, že nebyly nalezeny prostředky * \<XamlName> . XAML* a * \<ImageName> . jpg* . Aby sestavení proběhlo úspěšně, bude uživatel muset ručně zkopírovat tyto soubory prostředků do výstupního adresáře projektu pro sestavení a ladění/dobu běhu. Pokud chcete tento problém obejít, buď vytvořte sadu rozšíření SDK podle kroků v části [Vytvoření sady Software Development Kit](../extensibility/creating-a-software-development-kit.md) nebo upravte soubor projektu a přidejte následující vlastnost:
+- **Spotřebovávání ovládacích prvků**: ovládací prvek XAML je přinejmenším tvořen *\<FileName> příponou. winmd*, *\<FileName> . dll*, *\<FileName> . pri*, *\<XamlName> . XAML* a *\<ImageName> . jpg*. Po sestavení projektu se soubory prostředků, které jsou spojeny s odkazem na soubor, nezkopírují do výstupního adresáře projektu a zkopírují se pouze soubory *\<FileName> . winmd*, *\<FileName> . dll* a *\<FileName> . pri* . Chyba sestavení je protokolována pro informování uživatele, že nebyly nalezeny prostředky *\<XamlName> . XAML* a *\<ImageName> . jpg* . Aby sestavení proběhlo úspěšně, bude uživatel muset ručně zkopírovat tyto soubory prostředků do výstupního adresáře projektu pro sestavení a ladění/dobu běhu. Pokud chcete tento problém obejít, buď vytvořte sadu rozšíření SDK podle kroků v části [Vytvoření sady Software Development Kit](../extensibility/creating-a-software-development-kit.md) nebo upravte soubor projektu a přidejte následující vlastnost:
 
     ```xml
     <PropertyGroup>
@@ -206,7 +208,7 @@ Při odkazování na soubor winmd je očekávané rozložení, že soubory * \<F
 
 ## <a name="recent"></a>Nedávné
 
-**Sestavení**, **com**, **Windows**a **procházení** jednotlivých **podporovaných karet,** které vyčíslují seznam komponent, které byly nedávno přidány do projektů.
+**Sestavení**, **com**, **Windows** a **procházení** jednotlivých **podporovaných karet,** které vyčíslují seznam komponent, které byly nedávno přidány do projektů.
 
 ## <a name="search"></a>Search
 

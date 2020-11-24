@@ -1,5 +1,7 @@
 ---
 title: Přidání nabídky do panelu nabídek aplikace Visual Studio | Microsoft Docs
+description: Naučte se, jak přidat nabídku do řádku nabídek integrovaného vývojového prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,16 +13,16 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3eb5afbbe688c15f429054d50210a68769173e73
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc84eb8854c0a6ff738a51c2ca883ad0527ec919
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801851"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597857"
 ---
 # <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Přidání nabídky do řádku nabídek sady Visual Studio
 
-Tento návod ukazuje, jak přidat nabídku do řádku nabídek integrovaného vývojového prostředí (IDE) sady Visual Studio. Panel nabídek rozhraní IDE obsahuje kategorie nabídky, jako je **soubor**, **Úprava**, **zobrazení**, **okno**a **help**.
+Tento návod ukazuje, jak přidat nabídku do řádku nabídek integrovaného vývojového prostředí (IDE) sady Visual Studio. Panel nabídek rozhraní IDE obsahuje kategorie nabídky, jako je **soubor**, **Úprava**, **zobrazení**, **okno** a **help**.
 
 Před přidáním nové nabídky do řádku nabídek sady Visual Studio zvažte, zda by měly být příkazy umístěny v existující nabídce. Další informace o umístění příkazu naleznete v tématu [nabídky a příkazy pro aplikaci Visual Studio](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md).
 
@@ -43,13 +45,13 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ::: moniker range="vs-2017"
 
-2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **TestCommand**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >   **novou položku**. V dialogovém okně **Přidat novou položku** přejít na **Visual C#/rozšiřitelnost** a vyberte **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *TestCommand.cs*.
+2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **TestCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >   **novou položku**. V dialogovém okně **Přidat novou položku** přejít na **Visual C#/rozšiřitelnost** a vyberte **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *TestCommand.cs*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **TestCommand**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >   **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na **Visual C#/rozšiřitelnost** a vyberte **příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *TestCommand.cs*.
+2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **TestCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >   **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na **Visual C#/rozšiřitelnost** a vyberte **příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *TestCommand.cs*.
 
 ::: moniker-end
 
@@ -57,7 +59,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ::: moniker range="vs-2017"
 
-1. V **Průzkumník řešení**otevřete *TestCommandPackage. vsct*.
+1. V **Průzkumník řešení** otevřete *TestCommandPackage. vsct*.
 
     Na konci souboru je `<Symbols>` uzel, který obsahuje několik `<GuidSymbol>` uzlů. V uzlu s názvem `guidTestCommandPackageCmdSet` přidejte nový symbol následujícím způsobem:
 
@@ -101,7 +103,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ::: moniker range=">=vs-2019"
 
-1. V **Průzkumník řešení**otevřete *TopLevelMenuPackage. vsct*.
+1. V **Průzkumník řešení** otevřete *TopLevelMenuPackage. vsct*.
 
     Na konci souboru je `<Symbols>` uzel, který obsahuje několik `<GuidSymbol>` uzlů. V uzlu s názvem `guidTopLevelMenuPackageCmdSet` přidejte nový symbol následujícím způsobem:
 

@@ -1,5 +1,7 @@
 ---
 title: Použití grafu aktivity virtuálního uživatele pro zátěžové testy
+description: Naučte se používat graf aktivity virtuálních uživatelů k izolaci chyb, ke kterým došlo u jednotlivých virtuálních uživatelů, kteří spustili zátěžový test.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: d1c10fb9-cfeb-4e7f-9991-2d1e1103699e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c58dd4f6e6a0c8fe1bd468053bf18c3635b1ee9d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f87542e528b743fa59dfe82aa52a57f1a9cfa2c
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78169375"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598234"
 ---
 # <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>Návod: použití grafu aktivity virtuálního uživatele k izolaci problémů
 
@@ -46,7 +48,7 @@ Graf aktivity virtuálního uživatele umožňuje vizualizovat aktivitu virtuál
 
 Spusťte zátěžový test pro shromažďování dat o aktivitě virtuálního uživatele.
 
-- V **Editor zátěžového testu**klikněte na panelu nástrojů na tlačítko **Spustit** . LoadTest1 začne běžet.
+- V **Editor zátěžového testu** klikněte na panelu nástrojů na tlačítko **Spustit** . LoadTest1 začne běžet.
 
 ## <a name="isolate-issues-in-the-virtual-user-activity-chart"></a>Izolace problémů v grafu aktivity virtuálního uživatele
 
@@ -54,7 +56,7 @@ Po spuštění zátěžového testu a shromáždění dat aktivity virtuálního
 
 ### <a name="to-use-the-virtual-user-activity-chart-in-your-load-test-results"></a>Použití grafu aktivity virtuálních uživatelů ve výsledcích zátěžového testu
 
-1. Po skončení běhu zátěžového testu se v **analyzátoru zátěžového testu**zobrazí stránka **Souhrn** pro výsledky zátěžového testu. Na panelu nástrojů klikněte na tlačítko **grafy** .
+1. Po skončení běhu zátěžového testu se v **analyzátoru zátěžového testu** zobrazí stránka **Souhrn** pro výsledky zátěžového testu. Na panelu nástrojů klikněte na tlačítko **grafy** .
 
      Zobrazí se zobrazení grafů.
 
@@ -67,9 +69,9 @@ Po spuštění zátěžového testu a shromáždění dat aktivity virtuálního
 
      Na ose y vodorovné zobrazení znázorňují jednotlivé virtuální uživatele. Na ose x se zobrazuje časová osa pro běh zátěžového testu.
 
-3. V nástroji **přiblížení do časového období** pod **grafem aktivity virtuálního uživatele**upravte posuvníky vlevo a vpravo, dokud obě nebudou blízko ikony porušení mezní hodnoty. Tím se změní časová škála v **grafu aktivity virtuálního uživatele**
+3. V nástroji **přiblížení do časového období** pod **grafem aktivity virtuálního uživatele** upravte posuvníky vlevo a vpravo, dokud obě nebudou blízko ikony porušení mezní hodnoty. Tím se změní časová škála v **grafu aktivity virtuálního uživatele**
 
-4. V **legendě podrobností**zaškrtněte políčko u **(zvýraznit chyby)**. Všimněte si, že virtuální uživatel, který způsobil porušení mezní hodnoty, je zvýrazněný.
+4. V **legendě podrobností** zaškrtněte políčko u **(zvýraznit chyby)**. Všimněte si, že virtuální uživatel, který způsobil porušení mezní hodnoty, je zvýrazněný.
 
 5. Na panelu **výsledky filtru** zrušte zaškrtnutí políček **Zobrazit úspěšné výsledky** a **HttpError** , ale nechte políčko **ValidationRuleError** zaškrtnuté.
 

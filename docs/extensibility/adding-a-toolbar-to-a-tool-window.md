@@ -1,5 +1,7 @@
 ---
 title: Přidání panelu nástrojů do okna nástroje | Microsoft Docs
+description: Naučte se, jak přidat panel nástrojů, který obsahuje tlačítka, která jsou vázaná na příkazy, do panelu nástrojů v integrovaném vývojovém prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e5351fe6a713c217f8fca20d6740b542dc75f053
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a093dd65ce4de187cadf7e277c695bac99b5ca6
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904129"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597974"
 ---
 # <a name="add-a-toolbar-to-a-tool-window"></a>Přidání panelu nástrojů do okna nástrojů
 Tento návod ukazuje, jak přidat panel nástrojů do okna nástroje.
@@ -34,7 +36,7 @@ Tento návod ukazuje, jak přidat panel nástrojů do okna nástroje.
 
 1. Vytvořte projekt VSIX s názvem `TWToolbar` , který má příkaz nabídky s názvem **TWTestCommand** a okno nástrojů s názvem **TestToolWindow**. Další informace najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) a [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md). Před přidáním šablony okna nástroje je nutné přidat šablonu položky příkazu.
 
-2. V *TWTestCommandPackage. vsct*vyhledejte oddíl symboly. V uzlu GuidSymbol s názvem guidTWTestCommandPackageCmdSet deklarujte panel nástrojů a skupinu panelů nástrojů následujícím způsobem.
+2. V *TWTestCommandPackage. vsct* vyhledejte oddíl symboly. V uzlu GuidSymbol s názvem guidTWTestCommandPackageCmdSet deklarujte panel nástrojů a skupinu panelů nástrojů následujícím způsobem.
 
     ```xml
     <IDSymbol name="TWToolbar" value="0x1000" />

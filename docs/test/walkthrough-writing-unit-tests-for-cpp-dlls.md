@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: zápis testů jednotek pro knihovny DLL C++'
+description: Naučte se vyvíjet nativní knihovny DLL jazyka C++ pomocí metodologie test-First. Začněte vytvořením nativního testovacího projektu.
+ms.custom: SEO-VS-2020
 ms.date: 06/13/2019
 ms.topic: how-to
 ms.author: corob
@@ -7,12 +9,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 16020c0928229c80a9eb33b3bc4804b004d9f432
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 178fef548bc52346a78c7f9e4607aad7b1c56f65
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816004"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598403"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>Postupy: zápis testů jednotek pro knihovny DLL C++
 
@@ -188,7 +190,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
     Nový test se zobrazí v **Průzkumníku testů**.
 
-5. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+5. V **Průzkumníku testů** vyberte možnost **Spustit vše**.
 
     ![Průzkumník testů jednotek &#45; základní test byl úspěšný](../test/media/utecpp10.png)
 
@@ -215,7 +217,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
     >
     > Když uživatelé změní své požadavky, zakažte testy, které už nejsou správné. Zapište nové testy a zpřístupněte je po jednom, a to stejným přírůstkovým způsobem.
 
-2. Sestavte řešení a potom v **Průzkumníku testů**zvolte možnost **Spustit vše**.
+2. Sestavte řešení a potom v **Průzkumníku testů** zvolte možnost **Spustit vše**.
 
      Nový test se nezdařil.
 
@@ -243,7 +245,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
     }
     ```
 
-4. Sestavte řešení a potom v **Průzkumníku testů**zvolte možnost **Spustit vše**.
+4. Sestavte řešení a potom v **Průzkumníku testů** zvolte možnost **Spustit vše**.
 
      Oba testy proběhnou.
 

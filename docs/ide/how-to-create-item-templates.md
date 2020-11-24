@@ -1,5 +1,7 @@
 ---
 title: Vytváření šablon položek
+description: Naučte se používat Průvodce exportem šablony k vytvoření šablony položky v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -7,12 +9,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 0a0d4122d36c0946b6c1c98ef0f1523ce35751a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: abf058526a6ff48a37d4c7585e7deabe1decb14a
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284474"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597272"
 ---
 # <a name="how-to-create-item-templates"></a>Postupy: vytváření šablon položek
 
@@ -83,7 +85,7 @@ Můžete určit, že by šablona měla být zobrazena pouze pro některé podtyp
     - databáze
     - Web
 
-Například: `<ProjectSubType>Database</ProjectSubType>`.
+Příklad: `<ProjectSubType>Database</ProjectSubType>`.
 
 Následující příklad ukazuje šablonu položky pro projekty **systému Office** .
 
@@ -119,7 +121,7 @@ V některých případech je vhodné vytvořit šablonu položky ručně, od nul
 
 6. Uložte soubor *. vstemplate* a zavřete ho.
 
-7. V **Průzkumníku Windows**vyberte soubory, které chcete zahrnout do šablony. Klikněte pravým tlačítkem myši na výběr a vyberte možnost **Odeslat do**  >  **komprimované složky (ZIP)**. Soubory, které jste vybrali, se komprimují do souboru *zip* .
+7. V **Průzkumníku Windows** vyberte soubory, které chcete zahrnout do šablony. Klikněte pravým tlačítkem myši na výběr a vyberte možnost **Odeslat do**  >  **komprimované složky (ZIP)**. Soubory, které jste vybrali, se komprimují do souboru *zip* .
 
 ::: moniker range="vs-2017"
 

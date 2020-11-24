@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: ukládání a otevírání souborů s kódováním'
+description: Naučte se, jak ukládat a otevírat soubory s konkrétním kódováním. při otevření souboru Visual Studio zobrazí soubor správně.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72496e842841b2c55833075e890da4b7088cb489
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cfec7d31e6fc2c120ef42dc9de2a5a7eea4132e0
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284162"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597090"
 ---
 # <a name="how-to-save-and-open-files-with-encoding"></a>Postupy: ukládání a otevírání souborů s kódováním
 
@@ -26,13 +28,13 @@ Můžete ukládat soubory s konkrétním kódováním znaků pro podporu obousm�
 
 ## <a name="to-save-a-file-with-encoding"></a>Uložení souboru s kódováním
 
-1. V nabídce **soubor** zvolte možnost **Uložit soubor jako**a pak klikněte na tlačítko rozevíracího seznamu vedle tlačítka **Uložit** .
+1. V nabídce **soubor** zvolte možnost **Uložit soubor jako** a pak klikněte na tlačítko rozevíracího seznamu vedle tlačítka **Uložit** .
 
      Zobrazí se dialogové okno **Upřesnit možnosti uložení** .
 
-2. V části **kódování**vyberte kódování, které chcete pro soubor použít.
+2. V části **kódování** vyberte kódování, které chcete pro soubor použít.
 
-3. V případě potřeby můžete v části **konce řádků**vybrat formát znaků konce řádku.
+3. V případě potřeby můžete v části **konce řádků** vybrat formát znaků konce řádku.
 
      Tato možnost je užitečná, pokud máte v úmyslu vyměňovat si soubor s uživateli s jiným operačním systémem.
 
@@ -40,7 +42,7 @@ Můžete ukládat soubory s konkrétním kódováním znaků pro podporu obousm�
 
 ## <a name="to-open-an-encoded-file-that-is-part-of-a-project"></a>Otevření kódovaného souboru, který je součástí projektu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor a vyberte možnost **otevřít v programu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor a vyberte možnost **otevřít v programu**.
 
 2. V dialogovém okně **otevřít v aplikaci** vyberte editor, ve kterém se má soubor otevřít.
 
@@ -50,7 +52,7 @@ Můžete ukládat soubory s konkrétním kódováním znaků pro podporu obousm�
 
 ## <a name="to-open-an-encoded-file-that-is-not-part-of-a-project"></a>Otevření kódovaného souboru, který není součástí projektu
 
-1. V nabídce **soubor** přejděte na příkaz **otevřít**, zvolte **soubor** nebo **soubor z webu**a potom vyberte soubor, který chcete otevřít.
+1. V nabídce **soubor** přejděte na příkaz **otevřít**, zvolte **soubor** nebo **soubor z webu** a potom vyberte soubor, který chcete otevřít.
 
 2. Klikněte na tlačítko rozevíracího seznamu vedle tlačítka **otevřít** a vyberte možnost **otevřít v programu**.
 

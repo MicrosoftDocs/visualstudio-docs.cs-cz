@@ -1,5 +1,7 @@
 ---
 title: Anatomie balíčku VSIX | Microsoft Docs
+description: Přečtěte si o obsahu balíčku VSIX v aplikaci Visual Studio, souboru, který obsahuje jedno nebo více rozšíření sady Visual Studio a soubor manifestu metadat.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33cecb4767193010d7e7ca330d891d1835091875
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 3fc65cda5eb969e361e90771e0245fdaeaeebcd1
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012331"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598156"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>Anatomie balíčku VSIX
 VSIX balíček je soubor *VSIX* , který obsahuje jedno nebo více rozšíření sady Visual Studio, společně s metadaty, které Visual Studio používá ke klasifikaci a instalaci rozšíření. Tato metadata jsou obsažena v manifestu VSIX a souboru *[Content_Types]. XML* . Balíček VSIX může také obsahovat jeden nebo více souborů s *příponou. vsixlangpack* pro poskytnutí lokalizovaného textu instalace a může obsahovat další balíčky VSIX pro instalaci závislostí.

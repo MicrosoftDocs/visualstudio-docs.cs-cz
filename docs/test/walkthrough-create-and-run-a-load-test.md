@@ -1,5 +1,7 @@
 ---
 title: Vytvoření a spuštění zátěžového testu
+description: Naučte se vytvořit zátěžový test, který obsahuje testy jednotek. Zátěžové testy můžete vytvářet a spouštět pomocí Visual Studio Enterprise.
+ms.custom: SEO-VS-2020
 ms.date: 10/01/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.assetid: bbf075a5-96d5-48ed-a03c-330f0fc04748
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 780485a4d42cad574cddaaa5a9ae51a65a1a9b7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdcd96e8fc87a7627689af1c67a81b69b2ecee72
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79093631"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598260"
 ---
 # <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>Návod: vytvoření a spuštění zátěžového testu, který obsahuje testy jednotek
 
@@ -45,7 +47,7 @@ V tomto návodu provedete následující úlohy:
 
 1. Otevřete bankovní řešení, které jste vytvořili v [návodu: vytváření a spouštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md).
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro uzel banka řešení, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro uzel banka řešení, zvolte možnost **Přidat** a pak zvolte možnost **Nový projekt**.
 
      Zobrazí se dialogové okno **Přidat nový projekt** .
 
@@ -53,7 +55,7 @@ V tomto návodu provedete následující úlohy:
 
      Do řešení se přidá projekt webového výkonu a zátěžového testu BankLoadTest.
 
-1. Otevřete místní nabídku pro nový projekt webového výkonu a zátěžového testu BankLoadTest, zvolte možnost **Přidat**a pak zvolte možnost **zátěžový test**.
+1. Otevřete místní nabídku pro nový projekt webového výkonu a zátěžového testu BankLoadTest, zvolte možnost **Přidat** a pak zvolte možnost **zátěžový test**.
 
 1. Spustí se **nový Průvodce zátěžovým testem** .
 
@@ -141,7 +143,7 @@ V tomto návodu provedete následující úlohy:
 
 ### <a name="to-run-the-load-test"></a>Spuštění zátěžového testu
 
-1. S otevřeným zátěžovým testem v **Editor zátěžového testu**vyberte zelené tlačítko **Spustit test** na panelu nástrojů. Zátěžový test začne běžet.
+1. S otevřeným zátěžovým testem v **Editor zátěžového testu** vyberte zelené tlačítko **Spustit test** na panelu nástrojů. Zátěžový test začne běžet.
 
 2. Pokud vaše simulace testů překročí prahové hodnoty, zobrazí se v uzlech ovládacího prvku stromové struktury ikony, které označují porušení prahové hodnoty. Chyby mají překryv červeného kruhu, upozornění mají překryv žlutého trojúhelníku. Můžete najít čítač, který překročil prahovou hodnotu a graf přetáhnete přetažením ikony do grafu. To můžete provést, když je test spuštěn.
 

@@ -1,5 +1,6 @@
 ---
 title: Izolace aplikace pomocí překrytí (testování jednotek)
+description: Naučte se používat typy překrytí k přesměrování volání na konkrétní metody do kódu, který píšete jako součást testu. Překrytí může vracet konzistentní výsledky při každém volání.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 13a5c8c4058fc051cf7ec0093632220c757604f0
-ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
+ms.openlocfilehash: 0ce89246d227d747fee2d3a02484855257f016f8
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93325932"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598208"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>Izolace vaší aplikace při testování částí pomocí překrytí
 
@@ -70,11 +71,11 @@ Nejprve přidejte napodobeniny sestavení:
 1. V **Průzkumník řešení** 
     - Pro starší projekt .NET Framework (jiný styl než SDK) rozbalte uzel **odkazy** projektu testování jednotek.
     ::: moniker range=">=vs-2019"
-    - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení** , **projektů** nebo **balíčků**.
+    - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení**, **projektů** nebo **balíčků**.
     ::: moniker-end
     - Pokud pracujete v Visual Basic, vyberte **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** a zobrazte tak uzel **odkazy** .
 
-2. Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete překrýt **data a času** , vyberte **System.dll**.
+2. Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete překrýt **data a času**, vyberte **System.dll**.
 
 3. V místní nabídce vyberte možnost **Přidat napodobeniny sestavení**.
 
@@ -525,7 +526,7 @@ System.Fakes.ShimEnvironment.GetCommandLineArgsGet = ...
 
 Překrytí nelze použít pro všechny typy z knihovny tříd rozhraní .NET Base třídy **mscorlib** a **System** v .NET Framework a v **System. Runtime** v .NET Core.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Izolace testovaného kódu pomocí Napodobenin Microsoft](../test/isolating-code-under-test-with-microsoft-fakes.md)
 - [Blog Petra Provost: překrytí sady Visual Studio 2012](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)

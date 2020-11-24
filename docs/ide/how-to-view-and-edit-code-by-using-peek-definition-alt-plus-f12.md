@@ -1,5 +1,7 @@
 ---
 title: Použití náhledu definice
+description: Naučte se, jak pomocí příkazu Náhled definice zobrazit a upravit kód, aniž byste museli přepínat kontext z kódu, který právě píšete.
+ms.custom: SEO-VS-2020
 ms.date: 01/10/2018
 ms.topic: how-to
 author: TerryGLee
@@ -7,16 +9,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 753d26e2c48f6263ccbc9c403f255948b5077924
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0b706e730767c7c79fbeebc11291ecd11f4635b6
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86092307"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596921"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>Postupy: zobrazení a úpravy kódu pomocí funkce Náhled definice (Alt + F12)
 
-Pomocí příkazu **Náhled definice** můžete zobrazit a upravit kód bez přepínání mimo kód, který píšete. **Náhled definice** a **Přejít k definici** zobrazí stejné informace, ale **Náhled definice** je zobrazí v místním okně a **Přejít k definici** zobrazuje kód v samostatném okně kódu. **Přejít k definici** způsobí, že váš kontext (tj. aktivní okno kódu, aktuální řádek a pozice kurzoru) přepne do okna kód definice. Pomocí **náhledu definice**můžete zobrazit a upravit definici a přesunout se v rámci souboru definice a přitom zachovat místo v původním souboru kódu.
+Pomocí příkazu **Náhled definice** můžete zobrazit a upravit kód bez přepínání mimo kód, který píšete. **Náhled definice** a **Přejít k definici** zobrazí stejné informace, ale **Náhled definice** je zobrazí v místním okně a **Přejít k definici** zobrazuje kód v samostatném okně kódu. **Přejít k definici** způsobí, že váš kontext (tj. aktivní okno kódu, aktuální řádek a pozice kurzoru) přepne do okna kód definice. Pomocí **náhledu definice** můžete zobrazit a upravit definici a přesunout se v rámci souboru definice a přitom zachovat místo v původním souboru kódu.
 
 Můžete použít **Náhled definice** s kódem C#, Visual Basic a C++. V Visual Basic **Náhled definice** zobrazuje odkaz na **Prohlížeč objektů** pro symboly, které nemají Metadata definice (například typy .NET, které jsou integrovány).
 

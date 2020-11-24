@@ -1,5 +1,7 @@
 ---
 title: Vytváření webových šablon
+description: Naučte se, jak ručně vytvořit webovou šablonu a určit jazyk programování, který šablona používá.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 6870143be825469fde2be4b3448da24d54034fc1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8546b1364248b5c419a32e8f8ed40abf0b69fb5a
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284175"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597077"
 ---
 # <a name="how-to-manually-create-web-templates"></a>Postupy: Ruční vytvoření webových šablon
 
@@ -41,7 +43,7 @@ Vytvoření webové šablony se liší od vytváření jiných druhů šablon. V
    - CSharp
    - VisualBasic
 
-     Příklad:
+     Například:
 
      ```xml
      <TemplateData>

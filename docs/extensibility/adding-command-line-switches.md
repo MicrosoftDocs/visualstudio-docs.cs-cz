@@ -1,5 +1,7 @@
 ---
-title: Přidávání přepínačů příkazového řádku | Microsoft Docs
+title: Přidávání přepínačů Command-Line | Microsoft Docs
+description: Naučte se, jak přidat přepínače příkazového řádku, které se při spuštění příkazu devenv.exe aplikují na VSPackage.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb4abf5352ac6ad78852bd3224df0b22784470db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0eefb532380badcf917f6d512bc5b41ebb96b1d1
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903477"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597727"
 ---
 # <a name="add-command-line-switches"></a>Přidat přepínače příkazového řádku
 Můžete přidat přepínače příkazového řádku, které se použijí pro VSPackage při spuštění *devenv.exe* . Slouží <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> k deklaraci názvu přepínače a jeho vlastností. V tomto příkladu je přidán přepínač MySwitch pro podtřídu VSPackage s názvem **AddCommandSwitchPackage** bez argumentů a automaticky načtený rozhraní VSPackage.
@@ -34,7 +36,7 @@ Můžete přidat přepínače příkazového řádku, které se použijí pro VS
 | Arguments | Počet argumentů pro přepínač. Může být "*" nebo seznam argumentů. |
 | Výzvu DemandLoad | Pokud je tato hodnota nastavená na hodnotu 1, načtěte VSPackage automaticky, jinak nastavte na 0. |
 | HelpString | Řetězec nebo ID prostředku v řetězci, který se má zobrazit v **devenv/?** |
-| Název | Přepínač. |
+| Name | Přepínač. |
 | PackageGuid | Identifikátor GUID balíčku |
 
  První hodnota argumentu je obvykle 0 nebo 1. Pomocí speciální hodnoty * lze označit, že celý zbytek příkazového řádku je argumentem. To může být užitečné pro scénáře ladění, kdy uživatel musí předat řetězec příkazu ladicího programu.
@@ -72,4 +74,4 @@ cmdline.GetOption("MySwitch", out isPresent, out optionValue);
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>
 - [Devenv – přepínače příkazového řádku](../ide/reference/devenv-command-line-switches.md)
 - [Nástroj CreatePkgDef](../extensibility/internals/createpkgdef-utility.md)
-- [. Soubory pkgdef](https://devblogs.microsoft.com/visualstudio/whats-a-pkgdef-and-why/)
+- [Soubory. pkgdef](https://devblogs.microsoft.com/visualstudio/whats-a-pkgdef-and-why/)

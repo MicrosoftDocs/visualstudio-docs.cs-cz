@@ -1,5 +1,7 @@
 ---
 title: Distribuce fragmentů kódu jako rozšíření
+description: Naučte se používat Správce fragmentů kódu k distribuci fragmentů kódu jiným vývojářům.
+ms.custom: SEO-VS-2020
 ms.date: 03/21/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: c283d5ca29b67e772df2a0bb2e25dee70cd63fd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17f477fe2d02a43cef77358e862cfdf80a079ba5
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284370"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597168"
 ---
 # <a name="how-to-distribute-code-snippets"></a>Postupy: distribuce fragmentů kódu
 
@@ -63,23 +65,23 @@ V tomto postupu použijete stejný Hello World fragment kódu, který je vytvoř
 
 ### <a name="set-up-the-directory-structure"></a>Nastavení adresářové struktury
 
-1. V **Průzkumník řešení**vyberte uzel projektu a přidejte složku, která má název, který má fragment obsahovat ve **Správci fragmentů kódu**. V takovém případě by měl být **HelloWorldVB**.
+1. V **Průzkumník řešení** vyberte uzel projektu a přidejte složku, která má název, který má fragment obsahovat ve **Správci fragmentů kódu**. V takovém případě by měl být **HelloWorldVB**.
 
 2. Přesuňte soubor *. fragmentů* do složky *HelloWorldVB* .
 
-3. Vyberte soubor *. fragment* v **Průzkumník řešení**a v okně **vlastnosti** se ujistěte, že je **Akce sestavení** nastavena na **obsah**, možnost **Kopírovat do výstupního adresáře** je nastavena na hodnotu **vždy kopírovat**a možnost **zahrnout do souboru VSIX** je nastavena na **hodnotu true**.
+3. Vyberte soubor *. fragment* v **Průzkumník řešení** a v okně **vlastnosti** se ujistěte, že je **Akce sestavení** nastavena na **obsah**, možnost **Kopírovat do výstupního adresáře** je nastavena na hodnotu **vždy kopírovat** a možnost **zahrnout do souboru VSIX** je nastavena na **hodnotu true**.
 
 ### <a name="add-the-pkgdef-file"></a>Přidat soubor. pkgdef
 
 ::: moniker range="vs-2017"
 
-1. Do složky *HelloWorldVB* přidejte textový soubor a pojmenujte ho *HelloWorldVB. pkgdef*. Tento soubor se používá k přidání určitých klíčů do registru. V tomto případě přidá nový podklíč do klíče **HKEY_CURRENT_USER \software\microsoft\visualstudio\15.0\languages\codeexpansions\basic** .
+1. Do složky *HelloWorldVB* přidejte textový soubor a pojmenujte ho *HelloWorldVB. pkgdef*. Tento soubor se používá k přidání určitých klíčů do registru. V tomto případě přidá nový podklíč do klíče **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Languages\CodeExpansions\Basic** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Do složky *HelloWorldVB* přidejte textový soubor a pojmenujte ho *HelloWorldVB. pkgdef*. Tento soubor se používá k přidání určitých klíčů do registru. V tomto případě přidá nový podklíč do klíče **HKEY_CURRENT_USER \software\microsoft\visualstudio\16.0\languages\codeexpansions\basic** .
+1. Do složky *HelloWorldVB* přidejte textový soubor a pojmenujte ho *HelloWorldVB. pkgdef*. Tento soubor se používá k přidání určitých klíčů do registru. V tomto případě přidá nový podklíč do klíče **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0\Languages\CodeExpansions\Basic** .
 
 ::: moniker-end
 
@@ -93,7 +95,7 @@ V tomto postupu použijete stejný Hello World fragment kódu, který je vytvoř
 
     Pokud prohlížíte tento klíč, můžete se podívat, jak zadat různé jazyky.
 
-3. V **Průzkumník řešení**vyberte soubor *. pkgdef* a v okně **vlastnosti** se ujistěte, že:
+3. V **Průzkumník řešení** vyberte soubor *. pkgdef* a v okně **vlastnosti** se ujistěte, že:
 
    - **Akce sestavení** je nastavena na **obsah**
    - **Kopírovat do výstupního adresáře** je nastaveno na **Kopírovat vždycky**
@@ -101,7 +103,7 @@ V tomto postupu použijete stejný Hello World fragment kódu, který je vytvoř
 
 4. Přidejte soubor *. pkgdef* jako prostředek do manifestu VSIX. V souboru *source. extension. vsixmanifest* přejděte na kartu **assets (prostředky** ) a klikněte na **Nový**.
 
-5. V dialogovém okně **Přidat nový prostředek** nastavte **typ** na **Microsoft. VisualStudio. VSPackage**, **zdroj** na **soubor v systému souborů**a **cestu** k **HelloWorldVB. pkgdef** (která by se měla objevit v rozevíracím seznamu).
+5. V dialogovém okně **Přidat nový prostředek** nastavte **typ** na **Microsoft. VisualStudio. VSPackage**, **zdroj** na **soubor v systému souborů** a **cestu** k **HelloWorldVB. pkgdef** (která by se měla objevit v rozevíracím seznamu).
 
 ### <a name="test-the-snippet"></a>Test fragmentu
 

@@ -1,5 +1,7 @@
 ---
 title: Přidání seznamu naposledy použitých do podnabídky | Microsoft Docs
+description: Naučte se, jak přidat dynamický seznam obsahující naposledy použité příkazy nabídky do podnabídky v integrovaném vývojovém prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f73f948befc7665ecc3a40f816389bfaae8e4fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0de48e30ea20ab2f7df4e512312978e4faa3a46b
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904204"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597923"
 ---
 # <a name="add-a-most-recently-used-list-to-a-submenu"></a>Přidat seznam naposledy použitých do podnabídky
 Tento názorný postup se sestavuje v předváděních v [nabídce Přidat podnabídku do nabídky](../extensibility/adding-a-submenu-to-a-menu.md)a ukazuje, jak přidat dynamický seznam do podnabídky. Dynamický seznam tvoří základ pro vytvoření seznamu naposledy použitých položek.
@@ -47,7 +49,7 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
 
     ```xml
     <IDSymbol name="MRUListGroup" value="0x1200"/>
-    <IDSymbol name="cmdidMRUList" value="0x0200"/>
+    <IDSymbol name="cmdidMRUList" value="0x0200"/>
     ```
 
 3. V `Groups` části přidejte deklarovanou skupinu za existující položky skupiny.
@@ -77,15 +79,15 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
 
 5. Sestavte projekt a spusťte ladění pro otestování zobrazení nového příkazu.
 
-    V nabídce **TestMenu** klikněte na novou **podnabídku**a zobrazte nový **zástupný symbol MRU**. Po implementaci dynamického seznamu příkazů v dalším postupu bude popisek tohoto příkazu nahrazen tímto seznamem pokaždé, když je podnabídka otevřena.
+    V nabídce **TestMenu** klikněte na novou **podnabídku** a zobrazte nový **zástupný symbol MRU**. Po implementaci dynamického seznamu příkazů v dalším postupu bude popisek tohoto příkazu nahrazen tímto seznamem pokaždé, když je podnabídka otevřena.
 
 ## <a name="filling-the-mru-list"></a>Naplnění seznamu naposledy použitých
 
-1. V *TestCommandPackageGuids.cs*přidejte následující řádky za existující identifikátory příkazů v `TestCommandPackageGuids` definici třídy.
+1. V *TestCommandPackageGuids.cs* přidejte následující řádky za existující identifikátory příkazů v `TestCommandPackageGuids` definici třídy.
 
     ```csharp
     public const string guidTestCommandPackageCmdSet = "00000000-0000-0000-0000-00000000"; // get the GUID from the .vsct file
-    public const uint cmdidMRUList = 0x200;
+    public const uint cmdidMRUList = 0x200;
     ```
 
 2. Do *TestCommand.cs* přidejte následující příkaz using.
@@ -147,7 +149,7 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
 6. Za `InitMRUMenu` metodu přidejte následující `OnMRUQueryStatus` metodu. Toto je obslužná rutina, která nastavuje text pro každou naposledy použitou položku.
 
     ```csharp
-    private void OnMRUQueryStatus(object sender, EventArgs e)
+    private void OnMRUQueryStatus(object sender, EventArgs e)
     {
         OleMenuCommand menuCommand = sender as OleMenuCommand;
         if (null != menuCommand)
@@ -155,7 +157,7 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
             int MRUItemIndex = menuCommand.CommandID.ID - this.baseMRUID;
             if (MRUItemIndex >= 0 && MRUItemIndex < this.mruList.Count)
             {
-                menuCommand.Text = this.mruList[MRUItemIndex] as string;
+                menuCommand.Text = this.mruList[MRUItemIndex] as string;
             }
         }
     }
@@ -164,7 +166,7 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
 7. Za `OnMRUQueryStatus` metodu přidejte následující `OnMRUExec` metodu. Toto je obslužná rutina pro výběr naposledy použité položky. Tato metoda přesune vybranou položku na začátek seznamu a potom zobrazí vybranou položku v okně se zprávou.
 
     ```csharp
-    private void OnMRUExec(object sender, EventArgs e)
+    private void OnMRUExec(object sender, EventArgs e)
     {
         var menuCommand = sender as OleMenuCommand;
         if (null != menuCommand)
@@ -172,7 +174,7 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
             int MRUItemIndex = menuCommand.CommandID.ID - this.baseMRUID;
             if (MRUItemIndex >= 0 && MRUItemIndex < this.mruList.Count)
             {
-                string selection = this.mruList[MRUItemIndex] as string;
+                string selection = this.mruList[MRUItemIndex] as string;
                 for (int i = MRUItemIndex; i > 0; i--)
                 {
                     this.mruList[i] = this.mruList[i - 1];

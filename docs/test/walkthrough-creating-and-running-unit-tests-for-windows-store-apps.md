@@ -1,5 +1,7 @@
 ---
 title: Vytváření a spouštění testů jednotek pro aplikace pro UWP
+description: Přečtěte si o podpoře sady Visual Studio pro testování částí Univerzální platforma Windows aplikacích. Visual Studio poskytuje šablony testů jednotek pro C#, Visual Basic a C++.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 ms.workload:
 - uwp
 author: mikejo5000
-ms.openlocfilehash: 4109f743caf7c62450591f78e90b92113fc4107e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fcf93dff859e2332c79b50086d0dc50d6bd304c8
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568877"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598338"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-uwp-apps"></a>Návod: Vytváření a spouštění testů jednotek pro aplikace pro UPW
 
@@ -58,7 +60,7 @@ Po dokončení těchto kroků se vytvoří projekt testování částí a zobraz
 
    Zobrazí se dialogové okno **Nový projekt** .
 
-2. V části šablony zvolte programovací jazyk, ve kterém chcete vytvořit testy jednotek, a pak zvolte přidruženou knihovnu testů pro Windows Universal Unit Test. Například zvolte **Visual C#** , pak zvolte **Windows Universal**a pak zvolte **Knihovna testů jednotek (univerzální pro Windows)**.
+2. V části šablony zvolte programovací jazyk, ve kterém chcete vytvořit testy jednotek, a pak zvolte přidruženou knihovnu testů pro Windows Universal Unit Test. Například zvolte **Visual C#** , pak zvolte **Windows Universal** a pak zvolte **Knihovna testů jednotek (univerzální pro Windows)**.
 
 3. Volitelné Do textového pole **název** zadejte název, který chcete použít pro projekt.
 
@@ -78,11 +80,11 @@ Po dokončení těchto kroků se vytvoří projekt testování částí a zobraz
 
 ## <a name="edit-the-unit-test-projects-uwp-application-manifest-file"></a>Upravit soubor manifestu aplikace UWP projektu pro testování jednotek
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na soubor *Package. appxmanifest* a vyberte **otevřít**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na soubor *Package. appxmanifest* a vyberte **otevřít**.
 
-2. V **Návrháři manifestu**klikněte na kartu **Možnosti** .
+2. V **Návrháři manifestu** klikněte na kartu **Možnosti** .
 
-3. V seznamu v části **Možnosti**vyberte možnosti, které budete potřebovat pro testování částí, a kód, který má testovat. Například zaškrtněte políčko **Internet** , pokud test jednotky potřebuje a kód, který testuje, musí mít možnost přístupu k Internetu.
+3. V seznamu v části **Možnosti** vyberte možnosti, které budete potřebovat pro testování částí, a kód, který má testovat. Například zaškrtněte políčko **Internet** , pokud test jednotky potřebuje a kód, který testuje, musí mít možnost přístupu k Internetu.
 
    > [!NOTE]
    > Možnosti, které vyberete, by měly obsahovat pouze funkce, které jsou nezbytné pro správné fungování testu jednotky.
@@ -97,7 +99,7 @@ V editoru kódu upravte test jednotky a přidejte výrazy a logiku vyžadované 
 
 Chcete-li sestavit řešení a spustit test jednotky pomocí Průzkumníka testů:
 
-1. V nabídce **test** zvolte možnost **Windows**a pak zvolte možnost **Průzkumník testů**.
+1. V nabídce **test** zvolte možnost **Windows** a pak zvolte možnost **Průzkumník testů**.
 
 2. V nabídce **sestavení** klikněte na příkaz **Sestavit řešení**.
 
@@ -106,7 +108,7 @@ Chcete-li sestavit řešení a spustit test jednotky pomocí Průzkumníka test�
    > [!NOTE]
    > Chcete-li aktualizovat seznam testů jednotek v Průzkumníku testů, je nutné sestavit řešení.
 
-3. V **Průzkumníku testů**vyberte test jednotky, který jste vytvořili.
+3. V **Průzkumníku testů** vyberte test jednotky, který jste vytvořili.
 
 4. Vyberte **Spustit vše**.
 
@@ -115,7 +117,7 @@ Chcete-li sestavit řešení a spustit test jednotky pomocí Průzkumníka test�
    > [!TIP]
    > Můžete vybrat jednu nebo více testů jednotek uvedených v Průzkumníku testů a potom kliknout pravým tlačítkem a vybrat možnost **Spustit vybrané testy**.
    >
-   > Kromě toho můžete zvolit **ladění vybraných testů**, **Otevřít test**a použít možnost **vlastnosti** .
+   > Kromě toho můžete zvolit **ladění vybraných testů**, **Otevřít test** a použít možnost **vlastnosti** .
    >
    > ![Průzkumník testu jednotek &#45; místní nabídka testu jednotek](../test/media/unit_test_win8_unittestexplorer_contextmenu.png)
 

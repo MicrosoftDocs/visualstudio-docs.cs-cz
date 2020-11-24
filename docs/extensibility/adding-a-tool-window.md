@@ -1,5 +1,7 @@
 ---
 title: Přidání okna nástroje | Microsoft Docs
+description: Naučte se vytvořit okno nástroje a integrovat ho do sady Visual Studio přidáním ovládacího prvku a panelu nástrojů obsahujícího příkaz do okna nástroje.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 169f386128ccdd79aef6b90a6703f50323b9b6f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 184e04e74e2065ea2a9e1bcd41b2e878981dd218
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904136"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597987"
 ---
 # <a name="add-a-tool-window"></a>Přidat okno nástrojů
 
@@ -47,12 +49,12 @@ Sada Visual Studio SDK je součástí instalačního programu sady Visual Studio
 
 1. Odeberte výchozí ovládací prvek. Otevřete *FirstToolWindowControl. XAML* a odstraňte ho **kliknutím.** .
 
-2. V sadě **nástrojů**rozbalte část **všechny ovládací prvky WPF** a přetáhněte ovládací prvek **mediální prvek** do formuláře **FirstToolWindowControl** . Vyberte ovládací prvek a v okně **vlastnosti** pojmenujte tento element **mediaElement1**.
+2. V sadě **nástrojů** rozbalte část **všechny ovládací prvky WPF** a přetáhněte ovládací prvek **mediální prvek** do formuláře **FirstToolWindowControl** . Vyberte ovládací prvek a v okně **vlastnosti** pojmenujte tento element **mediaElement1**.
 
 ## <a name="add-a-toolbar-to-the-tool-window"></a>Přidání panelu nástrojů do okna nástroje
 Přidáním panelu nástrojů tímto způsobem zaručujete, že jeho přechody a barvy jsou konzistentní se zbytkem rozhraní IDE.
 
-1. V **Průzkumník řešení**otevřete *FirstToolWindowPackage. vsct*. Soubor *. vsct* definuje prvky grafického uživatelského rozhraní (GUI) v okně nástroje pomocí XML.
+1. V **Průzkumník řešení** otevřete *FirstToolWindowPackage. vsct*. Soubor *. vsct* definuje prvky grafického uživatelského rozhraní (GUI) v okně nástroje pomocí XML.
 
 2. V `<Symbols>` části vyhledejte `<GuidSymbol>` uzel, jehož `name` atribut je `guidFirstToolWindowPackageCmdSet` . Přidejte následující dva `<IDSymbol>` prvky do seznamu `<IDSymbol>` prvků v tomto uzlu pro definování panelu nástrojů a skupiny panelů nástrojů.
 
@@ -129,7 +131,7 @@ Přidejte příkaz na panel nástrojů, který se zobrazí jako tlačítko.
 ## <a name="add-a-mediaplayer-property-to-firsttoolwindowcontrol"></a>Přidání vlastnosti MediaPlayer do FirstToolWindowControl
 Z obslužných rutin událostí pro ovládací prvky panelu nástrojů musí být váš kód schopný získat přístup k ovládacímu prvku Media Player, který je podřízenou třídou FirstToolWindowControl.
 
-V **Průzkumník řešení**klikněte pravým tlačítkem myši na *FirstToolWindowControl. XAML*, klikněte na **Zobrazit kód**a přidejte následující kód do třídy FirstToolWindowControl.
+V **Průzkumník řešení** klikněte pravým tlačítkem myši na *FirstToolWindowControl. XAML*, klikněte na **Zobrazit kód** a přidejte následující kód do třídy FirstToolWindowControl.
 
 ```csharp
 public System.Windows.Controls.MediaElement MediaPlayer
@@ -255,7 +257,7 @@ Přidejte panel nástrojů a příkaz nabídky, který vyvolá dialog **otevří
 
 Dále zadejte výchozí umístění v integrovaném vývojovém prostředí pro okno nástroje. Konfigurační informace pro okno nástroje jsou v souboru *FirstToolWindowPackage.cs* .
 
-1. V *FirstToolWindowPackage.cs*vyhledejte <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atribut `FirstToolWindowPackage` třídy, který předá typ FirstToolWindow konstruktoru. Chcete-li určit výchozí pozici, je nutné přidat další parametry do konstruktoru následujícím příkladem.
+1. V *FirstToolWindowPackage.cs* vyhledejte <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atribut `FirstToolWindowPackage` třídy, který předá typ FirstToolWindow konstruktoru. Chcete-li určit výchozí pozici, je nutné přidat další parametry do konstruktoru následujícím příkladem.
 
     ```csharp
     [ProvideToolWindow(typeof(FirstToolWindow),

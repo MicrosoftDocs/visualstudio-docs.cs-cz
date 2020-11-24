@@ -1,5 +1,7 @@
 ---
 title: Izolace částí vaší aplikace za účelem testování pomocí zástupných procedur
+description: Seznamte se se zástupnými procedurami, což je malé množství kódu, který při testování převezme místo jiné součásti. Použití zástupných procedur vrátí konzistentní výsledky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -10,12 +12,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 268cfaa0a5df458ae529f5f2d369dc157ef64548
-ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
+ms.openlocfilehash: eeb7b981dcaec97d52c24ea40476f0bec84e608e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93325960"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598559"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Vzájemná izolace částí aplikace pomocí zástupných procedur za účelem testování částí
 
@@ -29,7 +31,7 @@ Chceme otestovat součást StockAnalyzer uvedenou na obrázku. Obvykle použív�
 
 ![Třídy Real a stub jsou v souladu s jedním rozhraním.](../test/media/fakesinterfaces.png)
 
-Vzhledem k tomu, že zástupné procedury závisí na vaší schopnosti strukturovat váš kód tímto způsobem, můžete použít zástupné procedury k izolování jedné části vaší aplikace od jiné. Chcete-li ji izolovat od jiných sestavení, která nejsou pod vaší kontrolou, jako je například *System.dll* , obvykle byste použili překrytí. Viz [použití překrytí k izolaci aplikace od jiných sestavení pro testování částí](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
+Vzhledem k tomu, že zástupné procedury závisí na vaší schopnosti strukturovat váš kód tímto způsobem, můžete použít zástupné procedury k izolování jedné části vaší aplikace od jiné. Chcete-li ji izolovat od jiných sestavení, která nejsou pod vaší kontrolou, jako je například *System.dll*, obvykle byste použili překrytí. Viz [použití překrytí k izolaci aplikace od jiných sestavení pro testování částí](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
 
 ## <a name="how-to-use-stubs"></a>Jak používat zástupné procedury
 
@@ -150,11 +152,11 @@ Chcete-li použít zástupné procedury, musíte nejdříve vygenerovat typy zá
 1. V **Průzkumník řešení** 
     - Pro starší projekt .NET Framework (jiný styl než SDK) rozbalte uzel **odkazy** projektu testování jednotek.
     ::: moniker range=">=vs-2019"
-    - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení** , **projektů** nebo **balíčků**.
+    - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení**, **projektů** nebo **balíčků**.
     ::: moniker-end
     - Pokud pracujete v Visual Basic, vyberte **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** a zobrazte tak uzel **odkazy** .
 
-2. Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete překrýt **data a času** , vyberte **System.dll**.
+2. Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete překrýt **data a času**, vyberte **System.dll**.
 
 3. V místní nabídce vyberte možnost **Přidat napodobeniny sestavení**.
 
@@ -461,6 +463,6 @@ Chování lze také globálně změnit pro všechny objekty se zástupnými proc
 StubBehaviors.Current = BehavedBehaviors.DefaultValue;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Izolace testovaného kódu pomocí Napodobenin Microsoft](../test/isolating-code-under-test-with-microsoft-fakes.md)

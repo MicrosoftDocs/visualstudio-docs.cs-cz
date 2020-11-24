@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: určení ikony aplikace (Visual Basic, C#)'
+description: Naučte se používat vlastnost Icon k určení ikony, kterou Průzkumník souborů a hlavní panel Windows zobrazí pro zkompilované aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 20e5d8a915c1621b26c070976f27db56d8f2c84e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 34405fd52b49e89c2fa0fc95ec1268448bad3061
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284058"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596908"
 ---
 # <a name="how-to-specify-an-application-icon-visual-basic-c"></a>Postupy: určení ikony aplikace (Visual Basic, C#)
 
@@ -29,9 +31,9 @@ ms.locfileid: "85284058"
 
 ## <a name="to-specify-an-application-icon"></a>Určení ikony aplikace
 
-1. V **Průzkumník řešení**vyberte uzel projektu (ne uzel **řešení** ).
+1. V **Průzkumník řešení** vyberte uzel projektu (ne uzel **řešení** ).
 
-1. Na panelu nabídek vyberte **Project**  >  **vlastnosti**projektu.
+1. Na panelu nabídek vyberte **Project**  >  **vlastnosti** projektu.
 
 1. Když se zobrazí **Návrhář projektu** , vyberte kartu **aplikace** .
 

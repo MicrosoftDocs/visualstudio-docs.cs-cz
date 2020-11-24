@@ -1,6 +1,6 @@
 ---
 title: Výjimka ze systému Windows Information Protection
-description: Přečtěte si o vyloučení vizuálního studia ze systému Windows Information Protection a pořád tak, aby používal podniková data.
+description: Seznamte se s výjimkou sady Visual Studio ze systému Windows Information Protection a přitom pořád umožňuje používat podniková data.
 ms.custom: SEO-VS-2020
 ms.date: 06/01/2018
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cfb078ee3f136a1d33f5b25040198c23411a05fb
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 34765cc7ac303bd44c3c4ccca87ea7c00a36ccda
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006624"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598390"
 ---
 # <a name="configure-visual-studio-as-a-wip-exempt-app"></a>Konfigurace sady Visual Studio jako aplikace s výjimkou nedokončené výroby
 

@@ -1,5 +1,7 @@
 ---
 title: Přidání příkazu na panel nástrojů Průzkumník řešení | Microsoft Docs
+description: Naučte se, jak přidat tlačítko, které spustí příkaz na panelu nástrojů Průzkumník řešení v sadě Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7cc2eee209129867696955eb22c9e851c17973c1
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: d080791c94c77577f80a4b55db67febd3d48b56a
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414097"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597506"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>Přidání příkazu na panel nástrojů Průzkumník řešení
 Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník řešení** .
@@ -27,7 +29,7 @@ Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník 
  Další informace o nabídkách, příkazech panelů nástrojů a souborech *. vsct* naleznete v tématech [příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).
 
 > [!NOTE]
-> Použijte soubory tabulky příkazů XML ( *. vsct* ) místo souborů konfigurace příkazového řádku ( *. ctc* ), abyste definovali, jak se nabídky a příkazy zobrazí ve vašich VSPackage. Další informace naleznete v tématu [tabulka příkazů sady Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+> Použijte soubory tabulky příkazů XML (*. vsct*) místo souborů konfigurace příkazového řádku (*. ctc*), abyste definovali, jak se nabídky a příkazy zobrazí ve vašich VSPackage. Další informace naleznete v tématu [tabulka příkazů sady Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
 ## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).

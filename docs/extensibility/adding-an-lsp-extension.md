@@ -1,5 +1,7 @@
 ---
 title: Přidání rozšíření protokolu jazykového serveru | Microsoft Docs
+description: Naučte se vytvořit rozšíření sady Visual Studio, které integruje jazykový Server na základě protokolu LSP (Language Server Protocol).
+ms.custom: SEO-VS-2020
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.assetid: 52f12785-1c51-4c2c-8228-c8e10316cd83
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0c43d5a50b7a2acb536dee5fe9c6ed9ec3d36d7
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 26f78be8708e61370be3256c8cde481d5c61c89d
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860460"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598143"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>Přidání rozšíření protokolu LSP (Language Server Protocol)
 
@@ -107,7 +109,7 @@ textDocument/přejmenovat | ano
 
 Pokud chcete vytvořit rozšíření jazykové služby pomocí serveru založeného na LSP, nejdřív se ujistěte, že máte nainstalovanou úlohu **vývoj rozšíření sady Visual Studio** pro vaši instanci vs.
 
-Dále vytvořte nový projekt VSIX tak, že přejdete na **soubor**  >  **Nový projekt**  >  **Visual C#**  >  **rozšíření**  >  **VSIX**Visual C#:
+Dále vytvořte nový projekt VSIX tak, že přejdete na **soubor**  >  **Nový projekt**  >  **Visual C#**  >  **rozšíření**  >  **VSIX** Visual C#:
 
 ![vytvořit projekt VSIX](media/lsp-vsix-project.png)
 
@@ -125,7 +127,7 @@ LSP nezahrnuje specifikaci, jak zadat barvu textu pro jazyky. Pro zajištění v
 
 1. V rámci rozšíření vytvořte složku s názvem "gramatiky" (nebo se může jednat o libovolný název, který zvolíte).
 
-2. Do složky *gramatiky* Zahrňte všechny soubory * \* . tmlanguage*, * \* . plist*, * \* . tmtheme*nebo * \* . JSON* , které byste chtěli použít k vlastnímu zabarvení.
+2. Do složky *gramatiky* Zahrňte všechny soubory *\* . tmlanguage*, *\* . plist*, *\* . tmtheme* nebo *\* . JSON* , které byste chtěli použít k vlastnímu zabarvení.
 
    > [!TIP]
    > Soubor *. tmtheme* definuje, jak se obory mapují na klasifikace sady Visual Studio (pojmenované barevné klíče). Pro doprovodné materiály můžete odkazovat na soubor Global *. tmtheme* v adresáři *% ProgramFiles (x86)% \ Microsoft Visual Studio \\ \<version> \\ \<SKU> \Common7\IDE\CommonExtensions\Microsoft\TextMate\Starterkit\Themesg* .
@@ -292,7 +294,7 @@ K dispozici je podpora vlastního nastavení pro konkrétní jazyk a server, ale
 
 Pomocí následujících kroků přidejte podporu pro nastavení do rozšíření služby jazyka LSP:
 
-1. Přidejte soubor JSON (například *MockLanguageExtensionSettings.json*) do projektu, který obsahuje nastavení a jejich výchozí hodnoty. Příklad:
+1. Přidejte soubor JSON (například *MockLanguageExtensionSettings.json*) do projektu, který obsahuje nastavení a jejich výchozí hodnoty. Například:
 
     ```json
     {
@@ -342,7 +344,7 @@ Pomocí následujících kroků přidejte podporu pro nastavení do rozšířen�
 
 1. Uživatel otevře pracovní prostor obsahující soubory, které váš server vlastní.
 2. Uživatel přidá soubor do složky *. vs* s názvem *VSWorkspaceSettings.js*.
-3. Uživatel přidá řádek do *VSWorkspaceSettings.jsv* souboru pro nastavení serveru. Příklad:
+3. Uživatel přidá řádek do *VSWorkspaceSettings.jsv* souboru pro nastavení serveru. Například:
 
     ```json
     {

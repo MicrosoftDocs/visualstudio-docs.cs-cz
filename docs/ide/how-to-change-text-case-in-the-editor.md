@@ -1,5 +1,7 @@
 ---
 title: Převod textu na velká a malá písmena
+description: Naučte se používat příkazy nabídky nebo klávesové zkratky pro převod velkých a malých písmen na vybraný text na velká písmena nebo na malá písmena.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,19 +13,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28ed534a72c542f978fc8d4121f471cad79ea64d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4574874e14ee66bbfb0f11d7767d59516b6666f3
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284630"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597285"
 ---
 # <a name="how-to-change-text-case-in-the-editor"></a>Postupy: Změna velikosti písmen textu v editoru
 
 Pomocí příkazů nabídky nebo klávesových zkratek můžete převést velikost písmen vybraného textu na velká a malá písmena.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v tomto článku, které jsou založeny na **obecném** nastavení prostředí. Chcete-li změnit nastavení prostředí, zvolte **nástroje**  >  **Nastavení importu a exportu**a pak zvolte možnost **resetovat všechna nastavení**.
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v tomto článku, které jsou založeny na **obecném** nastavení prostředí. Chcete-li změnit nastavení prostředí, zvolte **nástroje**  >  **Nastavení importu a exportu** a pak zvolte možnost **resetovat všechna nastavení**.
 
 ## <a name="to-change-text-case"></a>Změna velikosti písmen textu
 

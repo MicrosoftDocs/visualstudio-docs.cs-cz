@@ -1,5 +1,7 @@
 ---
 title: Přidávání příkazů sady Visual Studio na úvodní stránku | Microsoft Docs
+description: Přečtěte si o různých způsobech, jak navazovat příkazy sady Visual Studio na objekty XAML na vlastní úvodní stránce v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 13dd40006039209b06cc6a71760fdbaa240db4fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7784b077093660eb5f9c9a0bf471a8965811ba72
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740110"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597519"
 ---
 # <a name="add-visual-studio-commands-to-a-start-page"></a>Přidání příkazů sady Visual Studio na úvodní stránku
 
@@ -34,7 +36,7 @@ xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.Vis
 xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"
 ```
 
-Přidejte další obor názvů pro Microsoft. VisualStudio. Shell ze *Microsoft.VisualStudio.Shell.Immutable.11.0.dll*sestavení. (V projektu možná budete muset přidat odkaz na toto sestavení.)
+Přidejte další obor názvů pro Microsoft. VisualStudio. Shell ze *Microsoft.VisualStudio.Shell.Immutable.11.0.dll* sestavení. (V projektu možná budete muset přidat odkaz na toto sestavení.)
 
 ```xml
 xmlns:vscom="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.Immutable.11.0"

@@ -1,5 +1,6 @@
 ---
 title: Přidání nebo odebrání importovaných oborů názvů (Visual Basic)
+description: Přečtěte si, jak přidat nebo odebrat importované obory názvů a přidat nebo odebrat importy uživatelů.
 ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: how-to
@@ -15,18 +16,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff6b63db07d515e85c4c756f8d302d292c62dd50
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: c175f838389067ef7e40b07d2f3f9d15aa5df03e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047095"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597363"
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>Postupy: Přidání nebo odebrání importovaných oborů názvů (Visual Basic)
 
 Import oboru názvů umožňuje použít prvky z tohoto oboru názvů ve vašem kódu bez úplného zařazení prvku. Například pokud chcete získat přístup k `Create` metodě ve `System.Messaging.MessageQueue` třídě, můžete importovat `System.Messaging` obor názvů a pouze odkazovat na prvek, který potřebujete v kódu jako `MessageQueue.Create` .
 
-Importované obory názvů jsou spravovány na stránce **odkazy** v **Návrháři projektu** . Importy, které zadáte v tomto dialogovém okně, jsou předány přímo kompilátoru ( */Imports* ) a platí pro všechny soubory v projektu. Použijte `Imports` příkaz pro použití oboru názvů v jednom souboru zdrojového kódu.
+Importované obory názvů jsou spravovány na stránce **odkazy** v **Návrháři projektu**. Importy, které zadáte v tomto dialogovém okně, jsou předány přímo kompilátoru (*/Imports*) a platí pro všechny soubory v projektu. Použijte `Imports` příkaz pro použití oboru názvů v jednom souboru zdrojového kódu.
 
 ### <a name="to-add-an-imported-namespace"></a>Přidání importovaného oboru názvů
 

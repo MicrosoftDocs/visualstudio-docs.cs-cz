@@ -1,5 +1,7 @@
 ---
 title: Kurz pro testování částí v jazyce C#
+description: Naučte se vytvářet, spouštět a přizpůsobovat řadu testů jednotek pomocí rozhraní Microsoft Unit Test Framework pro spravovaný kód a Průzkumníka testů sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 05/14/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +15,16 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: b68cb720a636483a0c5e8c3193142d95dbb0afcd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed2e7f11a6e36c797bb6c506c19b0fff11fb5ad1
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81223668"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598546"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>Návod: Vytváření a spouštění testů jednotek pro spravovaný kód
 
-Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady testů jednotek pomocí rozhraní Microsoft Unit Test Framework pro spravovaný kód a **Průzkumníka testů**sady Visual Studio. Začínáte s projektem C#, který je ve vývoji, vytváříte testy, které vykonávají svůj kód, spouštíte testy a prohlížíte výsledky. Pak změníte kód projektu a znovu spustíte testy.
+Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady testů jednotek pomocí rozhraní Microsoft Unit Test Framework pro spravovaný kód a **Průzkumníka testů** sady Visual Studio. Začínáte s projektem C#, který je ve vývoji, vytváříte testy, které vykonávají svůj kód, spouštíte testy a prohlížíte výsledky. Pak změníte kód projektu a znovu spustíte testy.
 
 
 
@@ -38,7 +40,7 @@ Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady 
 
 3. V kategorii **Visual C#** > **.NET Core** vyberte šablonu projektu **Konzolová aplikace (.NET Core)** .
 
-4. Pojmenujte projektový **bank**a pak klikněte na **OK**.
+4. Pojmenujte projektový **bank** a pak klikněte na **OK**.
 
    Projekt banky se vytvoří a zobrazí v **Průzkumník řešení** se souborem *program.cs* otevřeným v editoru kódu.
 
@@ -55,7 +57,7 @@ Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady 
 
 3. Vyhledejte a vyberte šablonu projektu **aplikace konzoly C# (.NET Core)** a pak klikněte na **Další**.
 
-4. Pojmenujte projektový **bank**a pak klikněte na **vytvořit**.
+4. Pojmenujte projektový **bank** a pak klikněte na **vytvořit**.
 
    Projekt banky se vytvoří a zobrazí v **Průzkumník řešení** se souborem *program.cs* otevřeným v editoru kódu.
 
@@ -165,7 +167,7 @@ Nyní máte projekt s metodami, které můžete testovat. V tomto článku se te
 
 3. Pojmenujte projekt **BankTests**.
 
-4. Klikněte na možnost **Vytvořit**.
+4. Klikněte na **Vytvořit**.
 
    Projekt **BankTests** se přidá do řešení **bank** .
 
@@ -173,9 +175,9 @@ Nyní máte projekt s metodami, které můžete testovat. V tomto článku se te
 
 5. V projektu **BankTests** přidejte odkaz na projekt **banky** .
 
-   V **Průzkumník řešení**vyberte **závislosti** v rámci projektu **BankTests** a pak zvolte **Přidat odkaz** z nabídky kliknutím pravým tlačítkem myši.
+   V **Průzkumník řešení** vyberte **závislosti** v rámci projektu **BankTests** a pak zvolte **Přidat odkaz** z nabídky kliknutím pravým tlačítkem myši.
 
-6. V dialogovém okně **Správce odkazů** rozbalte položku **projekty**, vyberte možnost **řešení**a poté zkontrolujte položku **banka** .
+6. V dialogovém okně **Správce odkazů** rozbalte položku **projekty**, vyberte možnost **řešení** a poté zkontrolujte položku **banka** .
 
 7. Vyberte **OK**.
 
@@ -185,7 +187,7 @@ Vytvořte testovací třídu pro ověření `BankAccount` třídy. Můžete pou�
 
 ### <a name="rename-a-file-and-class"></a>Přejmenovat soubor a třídu
 
-1. Chcete-li přejmenovat soubor, v **Průzkumník řešení**vyberte soubor *UnitTest1.cs* v projektu BankTests. V nabídce klikněte pravým tlačítkem myši na položku **Přejmenovat**a potom přejmenujte soubor na *BankAccountTests.cs*.
+1. Chcete-li přejmenovat soubor, v **Průzkumník řešení** vyberte soubor *UnitTest1.cs* v projektu BankTests. V nabídce klikněte pravým tlačítkem myši na položku **Přejmenovat** a potom přejmenujte soubor na *BankAccountTests.cs*.
 
 ::: moniker range="vs-2017"
 
@@ -321,7 +323,7 @@ m_balance -= amount;
 
 ### <a name="rerun-the-test"></a>Znovu spustit test
 
-V **Průzkumníku testů**vyberte **Spustit vše** a spusťte test znovu. Červený/zelený pruh se změní na zelenou, aby označoval, že test proběhl úspěšně.
+V **Průzkumníku testů** vyberte **Spustit vše** a spusťte test znovu. Červený/zelený pruh se změní na zelenou, aby označoval, že test proběhl úspěšně.
 
 ![Průzkumník testů v aplikaci Visual Studio 2019 zobrazující úspěšný test](media/test-explorer-banktests-passed.png)
 

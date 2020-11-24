@@ -1,5 +1,7 @@
 ---
 title: VSTest.Console.exe – možnosti příkazového řádku
+description: Přečtěte si o nástroji příkazového řádku VSTest.Console.exe, který spouští testy. Tento článek obsahuje obecné možnosti příkazového řádku.
+ms.custom: SEO-VS-2020
 ms.date: 07/17/2020
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 875af363cbd85f8667d56a33cf7646ac2a9da429
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 98d58b745b35870d287b6e81aa0a14fcdaeac921
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037013"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598520"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe – možnosti příkazového řádku
 
@@ -57,7 +59,7 @@ V následující tabulce jsou uvedeny všechny možnosti pro *VSTest.Console.exe
 |**/ResultsDirectory: [*cesta*]**|Adresář výsledků testů bude vytvořen v zadané cestě, pokud neexistuje.<br />Příklad: `/ResultsDirectory:<pathToResultsDirectory>`|
 |**/ParentProcessId: [*ParentProcessId*]**|ID procesu nadřazeného procesu zodpovědného za spuštění aktuálního procesu.|
 |**/Port: [*port*]**|Port pro připojení soketu a příjem zpráv událostí.|
-|**/Collect: [DataCollector*FriendlyName*]**|Povolí shromažďování dat pro testovací běh. [Další informace](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md).|
+|**/Collect: [DataCollector *FriendlyName*]**|Povolí shromažďování dat pro testovací běh. [Další informace](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md).|
 
 > [!TIP]
 > V možnostech a hodnotách se nerozlišují velká a malá písmena.
@@ -68,7 +70,7 @@ Syntaxe pro spuštění *vstest.console.exe* je:
 
 `vstest.console.exe [TestFileNames] [Options]`
 
-Následující příkaz spustí *vstest.console.exe* pro *myTestProject.dll*knihovny testů:
+Následující příkaz spustí *vstest.console.exe* pro *myTestProject.dll* knihovny testů:
 
 ```cmd
 vstest.console.exe myTestProject.dll
@@ -86,7 +88,7 @@ Následující příkaz se spustí *vstest.console.exe* s několika možnostmi. 
 vstest.console.exe myTestFile.dll /Settings:Local.RunSettings /InIsolation /TestCaseFilter:"Priority=1" /Logger:trx
 ```
 
-Následující příkaz se spustí *vstest.console.exe* s `/blame` možností pro *myTestProject.dll*knihovny testů:
+Následující příkaz se spustí *vstest.console.exe* s `/blame` možností pro *myTestProject.dll* knihovny testů:
 
 ```cmd
 vstest.console.exe myTestFile.dll /blame

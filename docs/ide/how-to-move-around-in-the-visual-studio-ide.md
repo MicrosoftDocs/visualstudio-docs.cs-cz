@@ -1,5 +1,7 @@
 ---
 title: Jak se pohybovat v integrovaném vývojovém prostředí (IDE)
+description: Naučte se, jak se pohybovat v integrovaném vývojovém prostředí sady Visual Studio z okna do okna a souboru do souboru několika různými způsoby.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -17,19 +19,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1052deb04a93d11349ef9beb2ff667893095902f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b8f2e796ed122bc4dba0c1fb4cfca85c74065fb8
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769839"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597038"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>Postupy: pohyb v integrovaném vývojovém prostředí sady Visual Studio
 
 Integrované vývojové prostředí (IDE) bylo navrženo tak, aby bylo možné přesouvat z okna do okna a souboru do souboru několika různými způsoby v závislosti na požadavcích na preference nebo projektu. Můžete se rozhodnout přepínat v editoru otevřené soubory nebo cyklicky procházet všechna aktivní okna nástrojů v integrovaném vývojovém prostředí (IDE). Můžete také přepnout přímo na libovolný soubor otevřený v editoru bez ohledu na pořadí, ve kterém byl naposledy použit. Tyto funkce mohou zvýšit vaši produktivitu při práci v integrovaném vývojovém prostředí.
 
 > [!NOTE]
-> Možnosti dostupné v dialogových oknech a názvy a umístění příkazů nabídky, které vidíte, se mohou lišit od toho, co je popsáno v tomto článku v závislosti na aktivních nastaveních nebo edici. Tento článek se vytvořil s **obecným** nastavením. Chcete-li změnit nastavení, například **Obecné** nebo **Visual C++** nastavení, zvolte **nástroje**  >  **Nastavení importu a exportu**a pak zvolte možnost **resetovat všechna nastavení**.
+> Možnosti dostupné v dialogových oknech a názvy a umístění příkazů nabídky, které vidíte, se mohou lišit od toho, co je popsáno v tomto článku v závislosti na aktivních nastaveních nebo edici. Tento článek se vytvořil s **obecným** nastavením. Chcete-li změnit nastavení, například **Obecné** nebo **Visual C++** nastavení, zvolte **nástroje**  >  **Nastavení importu a exportu** a pak zvolte možnost **resetovat všechna nastavení**.
 
 ## <a name="keyboard-shortcuts"></a>Klávesové zkratky
 

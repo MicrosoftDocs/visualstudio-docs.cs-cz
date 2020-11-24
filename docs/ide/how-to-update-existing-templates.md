@@ -1,5 +1,7 @@
 ---
 title: Aktualizovat existující šablony položek projektu
+description: Naučte se, jak pomocí Průvodce exportem šablony a dalších ručních procesů aktualizovat šablony položek projektu, které jste už vytvořili.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: d5d9726ecbf3cb7c403f682aadb197a26b0dc26b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3a709070d777ebaf600fc05abf0e651eaef5b1a
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283915"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596882"
 ---
 # <a name="how-to-update-existing-templates"></a>Postupy: Aktualizace existujících šablon
 
@@ -43,7 +45,7 @@ Visual Studio poskytuje **Průvodce exportem šablony** , který se dá použít
 
 ## <a name="manually-update-an-existing-template"></a>Ruční aktualizace existující šablony
 
-Existující šablonu můžete aktualizovat bez použití **Průvodce exportem šablony**úpravou souborů v komprimovaném souboru *zip* .
+Existující šablonu můžete aktualizovat bez použití **Průvodce exportem šablony** úpravou souborů v komprimovaném souboru *zip* .
 
 ### <a name="to-manually-update-an-existing-template"></a>Ruční aktualizace stávající šablony
 

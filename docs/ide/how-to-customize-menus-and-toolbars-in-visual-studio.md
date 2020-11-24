@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení nabídek a panelů nástrojů
+description: Naučte se přizpůsobit nabídky a panely nástrojů sady Visual Studio a také se naučíte, jak přizpůsobit jakékoli příkazy, které jsou součástí nabídek a panelů nástrojů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -27,12 +29,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed85d3a3406cf7abf4bc08e728cc647d605e16ae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e9111631014275da92da73966ba0310971dbf27f
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284396"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597229"
 ---
 # <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>Postupy: přizpůsobení nabídek a panelů nástrojů v aplikaci Visual Studio
 

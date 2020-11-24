@@ -1,5 +1,7 @@
 ---
 title: Přidání řadiče nabídky na panel nástrojů | Microsoft Docs
+description: Naučte se vytvořit kontroler nabídek a přidat ho do panelu nástrojů panelu nástrojů v sadě Visual Studio a potom implementovat příkazy řadiče nabídky a otestovat ho.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32cbbbc7784c112b33b5f720b306b8c93269bb82
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3ce14999913a3928cbe25d9f034c8288651629a3
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903523"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597818"
 ---
 # <a name="add-a-menu-controller-to-a-toolbar"></a>Přidání řadiče nabídky na panel nástrojů
 Tento názorný postup sestaví na panelu nástrojů [Přidat panel nástrojů](../extensibility/adding-a-toolbar-to-a-tool-window.md) a ukazuje, jak přidat řadič nabídky do panelu nástrojů okna nástroje. Níže uvedené kroky lze použít také na panelu nástrojů, který je vytvořen v návodu [Přidat panel nástrojů](../extensibility/adding-a-toolbar.md) .
@@ -33,7 +35,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. Postupujte podle pokynů popsaných v tématu [Přidání panelu nástrojů do okna nástroje](../extensibility/adding-a-toolbar-to-a-tool-window.md) k vytvoření panelu nástrojů, který obsahuje panel nástrojů.
 
-2. V *TWTestCommandPackage. vsct*přejít do části symboly. V elementu GuidSymbol s názvem **guidTWTestCommandPackageCmdSet**deklarujte svůj kontroler nabídek, skupinu kontrolérů nabídky a tři položky nabídky.
+2. V *TWTestCommandPackage. vsct* přejít do části symboly. V elementu GuidSymbol s názvem **guidTWTestCommandPackageCmdSet** deklarujte svůj kontroler nabídek, skupinu kontrolérů nabídky a tři položky nabídky.
 
     ```xml
     <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />
@@ -110,18 +112,18 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ## <a name="implement-the-menu-controller-commands"></a>Implementace příkazů řadiče nabídky
 
-1. V *TWTestCommandPackageGuids.cs*přidejte identifikátory příkazů pro tři položky nabídky za existující identifikátory příkazů.
+1. V *TWTestCommandPackageGuids.cs* přidejte identifikátory příkazů pro tři položky nabídky za existující identifikátory příkazů.
 
     ```csharp
-    public const int cmdidMCItem1 = 0x130;
-    public const int cmdidMCItem2 = 0x131;
-    public const int cmdidMCItem3 = 0x132;
+    public const int cmdidMCItem1 = 0x130;
+    public const int cmdidMCItem2 = 0x131;
+    public const int cmdidMCItem3 = 0x132;
     ```
 
-2. V *TWTestCommand.cs*přidejte následující kód na začátek `TWTestCommand` třídy.
+2. V *TWTestCommand.cs* přidejte následující kód na začátek `TWTestCommand` třídy.
 
     ```csharp
-    private int currentMCCommand; // The currently selected menu controller command
+    private int currentMCCommand; // The currently selected menu controller command
     ```
 
 3. V konstruktoru TWTestCommand po posledním volání `AddCommand` metody přidejte kód pro směrování událostí pro každý příkaz přes stejné obslužné rutiny.
@@ -136,7 +138,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
           EventHandler(OnMCItemClicked), cmdID);
         mc.BeforeQueryStatus += new EventHandler(OnMCItemQueryStatus);
         commandService.AddCommand(mc);
-        // The first item is, by default, checked. 
+        // The first item is, by default, checked. 
         if (TWTestCommandPackageGuids.cmdidMCItem1 == i)
         {
             mc.Checked = true;
@@ -148,7 +150,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 4. Přidejte obslužnou rutinu události do třídy **TWTestCommand** k označení vybraného příkazu jako zaškrtnutého.
 
     ```csharp
-    private void OnMCItemQueryStatus(object sender, EventArgs e)
+    private void OnMCItemQueryStatus(object sender, EventArgs e)
     {
         OleMenuCommand mc = sender as OleMenuCommand;
         if (null != mc)
@@ -161,7 +163,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 5. Přidejte obslužnou rutinu události, která zobrazí MessageBox, když uživatel vybere příkaz na řadiči nabídky:
 
     ```csharp
-    private void OnMCItemClicked(object sender, EventArgs e)
+    private void OnMCItemClicked(object sender, EventArgs e)
     {
         OleMenuCommand mc = sender as OleMenuCommand;
         if (null != mc)

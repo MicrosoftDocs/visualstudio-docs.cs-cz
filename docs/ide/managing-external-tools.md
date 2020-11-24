@@ -1,5 +1,7 @@
 ---
 title: Správa externích nástrojů
+description: Naučte se přidávat a spravovat nové externí nástroje, ke kterým máte přístup prostřednictvím nabídky nástroje.
+ms.custom: SEO-VS-2020
 ms.date: 11/20/2017
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f22c687f88c7736d5c088ebc28ff490c4c16b8f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c77ab079a2950d4417c2d00ef74cf86d5c206de7
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591291"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596687"
 ---
 # <a name="manage-external-tools"></a>Správa externích nástrojů
 
@@ -49,7 +51,7 @@ Můžete přidat externí nástroj, který se zobrazí v nabídce **nástroje** 
 
 1. Otevřete dialogové okno **externí nástroje** výběrem **nástrojů**  >  **externí nástroje**.
 
-1. Klikněte na **Přidat**a potom zadejte informace. Například následující položka způsobí, že **Průzkumník Windows** se otevře v adresáři souboru, který aktuálně máte otevřený v aplikaci Visual Studio:
+1. Klikněte na **Přidat** a potom zadejte informace. Například následující položka způsobí, že **Průzkumník Windows** se otevře v adresáři souboru, který aktuálně máte otevřený v aplikaci Visual Studio:
 
    * Hlava `Open File Location`
 
@@ -61,7 +63,7 @@ Můžete přidat externí nástroj, který se zobrazí v nabídce **nástroje** 
 
 Následuje úplný seznam argumentů, které lze použít při definování externího nástroje:
 
-|Název|Argument|Popis|
+|Name|Argument|Popis|
 |----------|--------------|-----------------|
 |Cesta položky|$(ItemPath)|Celý název souboru aktuálního souboru (jednotka + cesta + název souboru).|
 |Adresář položky|$(ItemDir)|Adresář aktuálního souboru (jednotka + cesta).|

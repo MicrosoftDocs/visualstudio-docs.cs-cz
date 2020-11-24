@@ -1,5 +1,7 @@
 ---
 title: Přejít na soubor, přejít na symbol, přejít na řádek
+description: Přečtěte si o příkazech přejít na příkazy v aplikaci Visual Studio a o tom, jak je můžete použít k provádění cíleného prohledávání kódu.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb39f1d395e48351aeacb587556224b0f86aac3e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3e000224fc09810e15ba3cdbdc4be729139eaaa
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593782"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597532"
 ---
 # <a name="find-code-using-go-to-commands"></a>Vyhledání kódu pomocí příkazu Přejít
 

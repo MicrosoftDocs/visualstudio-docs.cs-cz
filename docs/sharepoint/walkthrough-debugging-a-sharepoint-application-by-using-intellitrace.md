@@ -1,5 +1,7 @@
 ---
 title: Ladění aplikace SharePoint pomocí IntelliTrace
+description: Pomocí IntelliTrace můžete snadněji ladit a opravovat aplikace SharePoint. Umožňuje vytvořit a přidat kód pro přijímač funkcí. Otestujte projekt. Shromažďovat data IntelliTrace.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 041a110ee39ae7711756b8d689bdf68ae2368caf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c7ab11dbe213208a2e8f5e39c3af2d20b79f5cb
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015754"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598481"
 ---
 # <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>Návod: ladění aplikace služby SharePoint pomocí IntelliTrace
 
@@ -65,7 +67,7 @@ Nejprve vytvořte prázdný projekt služby SharePoint, který má přijímač f
 
      IntelliTrace funguje pouze pro řešení farmy.
 
-3. V **Průzkumník řešení**otevřete místní nabídku uzlu **funkce** a zvolte možnost **Přidat funkci**.
+3. V **Průzkumník řešení** otevřete místní nabídku uzlu **funkce** a zvolte možnost **Přidat funkci**.
 
      Zobrazí se *Feature1. Feature* .
 
@@ -258,15 +260,15 @@ Teď, když je kód přidaný do přijímače funkcí a kolekce dat je spuštěn
 
 2. Zobrazí obsah seznamů oznámení a úkoly.
 
-     Seznam oznámení by měl mít nové oznámení s názvem **aktivovaná funkce: IntelliTraceTest_Feature1**a seznam úkoly by měl mít novou úlohu s názvem **deaktivovat funkci: IntelliTraceTest_Feature1**. Pokud některá z těchto položek chybí, ověřte, zda je funkce aktivována. Pokud není aktivována, aktivujte ji.
+     Seznam oznámení by měl mít nové oznámení s názvem **aktivovaná funkce: IntelliTraceTest_Feature1** a seznam úkoly by měl mít novou úlohu s názvem **deaktivovat funkci: IntelliTraceTest_Feature1**. Pokud některá z těchto položek chybí, ověřte, zda je funkce aktivována. Pokud není aktivována, aktivujte ji.
 
 3. Deaktivujte funkci provedením následujících kroků:
 
    1. V nabídce **Akce webu** ve službě SharePoint vyberte možnost **Nastavení webu**.
 
-   2. V části **Akce webu**vyberte odkaz **Spravovat funkce webu** .
+   2. V části **Akce webu** vyberte odkaz **Spravovat funkce webu** .
 
-   3. Vedle **IntelliTraceTest Feature1**klikněte na tlačítko **deaktivovat** .
+   3. Vedle **IntelliTraceTest Feature1** klikněte na tlačítko **deaktivovat** .
 
    4. Na stránce s upozorněním klikněte na odkaz **deaktivovat tuto funkci** .
 
@@ -285,9 +287,9 @@ Pokud nainstalujete Microsoft Monitoring Agent do systému, na kterém je spušt
 
    1. V nabídce **Akce webu** ve službě SharePoint vyberte možnost **Nastavení webu**.
 
-   2. V části **Akce webu**vyberte odkaz **Spravovat funkce webu** .
+   2. V části **Akce webu** vyberte odkaz **Spravovat funkce webu** .
 
-   3. Vedle **IntelliTraceTest Feature1**klikněte na tlačítko **deaktivovat** .
+   3. Vedle **IntelliTraceTest Feature1** klikněte na tlačítko **deaktivovat** .
 
    4. Na stránce s upozorněním klikněte na odkaz **deaktivovat tuto funkci** .
 
@@ -319,9 +321,9 @@ Nyní můžete zobrazit soubor protokolu IntelliTrace v aplikaci Visual Studio a
 
     1. V nabídce **Akce webu** ve službě SharePoint vyberte možnost **Nastavení webu**.
 
-    2. V části **Akce webu**vyberte odkaz **Spravovat funkce webu** .
+    2. V části **Akce webu** vyberte odkaz **Spravovat funkce webu** .
 
-    3. Vedle **IntelliTraceTest Feature1**klikněte na tlačítko **deaktivovat** .
+    3. Vedle **IntelliTraceTest Feature1** klikněte na tlačítko **deaktivovat** .
 
     4. Na stránce s upozorněním klikněte na odkaz **deaktivovat tuto funkci** .
 

@@ -1,5 +1,7 @@
 ---
 title: Použití konfiguračního souboru k definování zdroje dat
+description: Naučte se používat zdroj dat definovaný v souboru app.config pro testování částí počínaje vytvořením app.config souboru, který definuje zdroj dat.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a4f5731a828eb04e57f56a46fe399125b5ded2f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06e33721fa4ac1cc657c79c8aa68b35e5ceec00b
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75776160"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598494"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>Návod: použití konfiguračního souboru k definování zdroje dat
 
@@ -46,7 +48,7 @@ K dokončení tohoto názorného postupu potřebujete:
 
 1. Pokud váš projekt testů již obsahuje soubor *app.config* , použijte příkaz [definovat vlastní konfigurační oddíl](#define-a-custom-configuration-section).
 
-2. Klikněte pravým tlačítkem na projekt testů v **Průzkumník řešení**a pak vyberte **Přidat**  >  **novou položku**.
+2. Klikněte pravým tlačítkem na projekt testů v **Průzkumník řešení** a pak vyberte **Přidat**  >  **novou položku**.
 
      Otevře se okno **Přidat novou položku** .
 

@@ -1,5 +1,7 @@
 ---
 title: Režim mapy posuvníku a režim pruhového okna
+description: Naučte se sledovat změny v kódu prostřednictvím přizpůsobení posuvníku a také se naučíte, jak používat režim pruhů a režim mapování.
+ms.custom: SEO-VS-2020
 ms.date: 03/20/2020
 ms.topic: how-to
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d1b659dabed2337013ffb84ff48277f0edacb09
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c59ac152be9528ef3e01410f0a3b5f34dd882286
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283980"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596934"
 ---
 # <a name="how-to-customize-the-scroll-bar"></a>Postupy: přizpůsobení posuvníku
 
@@ -24,7 +26,7 @@ Můžete vybrat, zda posuvník zobrazuje poznámky, jako jsou například změny
 
    1. Otevřete stránku možnosti **posuvníku** výběrem možnosti **nástroje**  >  **Options**  >  **textový editor**  >  **všechny jazyky**  >  **posuvníky**.
 
-   2. Vyberte možnost **Zobrazit poznámky přes svislý posuvník**a pak vyberte poznámky, které chcete zobrazit. K dispozici jsou tyto poznámky:
+   2. Vyberte možnost **Zobrazit poznámky přes svislý posuvník** a pak vyberte poznámky, které chcete zobrazit. K dispozici jsou tyto poznámky:
 
       - změny
       - značky
@@ -68,7 +70,7 @@ Následující obrázek ukazuje možnost **Zobrazit náhled popisku** :
 ![Posuvník sady Visual Studio s popisem tlačítka](../ide/media/enhancedscrollbarsearchtooltip.png)
 
 > [!TIP]
-> Chcete-li změnit barvy, které vidíte v režimu mapování, vyberte možnost **nástroje**  >  **Možnosti**  >  **prostředí**  >  **písma a barvy**. V části **Zobrazit položky**vyberte některou z položek, u kterých se předchází "Přehled", proveďte požadované změny barev a pak zvolte **OK**.
+> Chcete-li změnit barvy, které vidíte v režimu mapování, vyberte možnost **nástroje**  >  **Možnosti**  >  **prostředí**  >  **písma a barvy**. V části **Zobrazit položky** vyberte některou z položek, u kterých se předchází "Přehled", proveďte požadované změny barev a pak zvolte **OK**.
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,5 +1,7 @@
 ---
 title: Režim celé obrazovky a virtuální prostor
+description: Naučte se spravovat režimy editoru sady Visual Studio pro zobrazení všech nástrojů a oken způsobem, který vám vyhovuje nejlépe.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -24,19 +26,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f8f86d635e1e57d82dd2d18084c91a9267f9a0b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b86859f5f5718871499bb1f3e2014da59f956db
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284201"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597142"
 ---
 # <a name="how-to-manage-editor-modes"></a>Postupy: Správa režimů editoru
 
 Editor kódu sady Visual Studio můžete zobrazit v různých režimech zobrazení.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v tomto článku v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, například **Obecné** nebo **Visual C++** nastavení, zvolte **nástroje**  >  **Nastavení importu a exportu**a pak zvolte možnost **resetovat všechna nastavení**.
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v tomto článku v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, například **Obecné** nebo **Visual C++** nastavení, zvolte **nástroje**  >  **Nastavení importu a exportu** a pak zvolte možnost **resetovat všechna nastavení**.
 
 ## <a name="enable-full-screen-mode"></a>Povolit režim zobrazení na celé obrazovce
 
@@ -56,7 +58,7 @@ V režimu **virtuálního prostoru** jsou mezery vloženy na konci každého ř�
 
 2. Rozbalte složku **textový editor** a výběrem možnosti **všechny jazyky** nastavte globálně nebo vyberte konkrétní jazykovou složku. Chcete-li například zapnout číslování řádků pouze v Visual Basic, vyberte uzel **Basic**  >  **Text Editor** .
 
-3. Vyberte **Obecné** možnosti a v části **Nastavení**vyberte **Povolit virtuální prostor**.
+3. Vyberte **Obecné** možnosti a v části **Nastavení** vyberte **Povolit virtuální prostor**.
 
     > [!NOTE]
     > **Virtuální prostor** je povolený v režimu **výběru sloupce** . Pokud není režim **virtuálního prostoru** povolený, přesune se bod vložení z konce řádku přímo na první znak dalšího.

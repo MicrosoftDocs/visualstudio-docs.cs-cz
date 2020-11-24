@@ -1,5 +1,7 @@
 ---
 title: Přidání uživatelského ovládacího prvku na úvodní stránku | Microsoft Docs
+description: Naučte se, jak přidat uživatelský ovládací prvek Windows Presentation Foundation (WPF) na úvodní stránku v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 1d093ecc8afd9fe822c19c2c1f2ceb5765208865
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: fa812b477f88b03b8f0d4bdcba6c69f009ec2894
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011993"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597545"
 ---
 # <a name="add-user-control-to-the-start-page"></a>Přidání uživatelského ovládacího prvku na úvodní stránku
 
@@ -32,7 +34,7 @@ Nejprve přidejte uživatelský ovládací prvek Windows Presentation Foundation
 
 1. Vytvořte úvodní stránku pomocí jsme vytvořili na [stránce vytvořit vlastní úvodní stránku](../extensibility/creating-a-custom-start-page.md).
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na řešení, klikněte na tlačítko **Přidat**a poté klikněte na možnost **Nový projekt**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na řešení, klikněte na tlačítko **Přidat** a poté klikněte na možnost **Nový projekt**.
 
 3. V levém podokně dialogového okna **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#** a klikněte na tlačítko **Windows**. V prostředním podokně vyberte možnost **Knihovna uživatelských ovládacích prvků WPF**.
 
@@ -111,7 +113,7 @@ Chcete-li implementovat uživatelský ovládací prvek WPF, sestavte uživatelsk
 2. V obslužné rutině události SetButton_Click zadejte následující.
 
     ```csharp
-    private void SetButton_Click(object sender, RoutedEventArgs e)
+    private void SetButton_Click(object sender, RoutedEventArgs e)
     {
         try
         {
@@ -139,7 +141,7 @@ Chcete-li implementovat uživatelský ovládací prvek WPF, sestavte uživatelsk
 
 Chcete-li zpřístupnit tento ovládací prvek projektu úvodní stránky, v souboru projektu úvodní stránky přidejte odkaz na novou knihovnu ovládacích prvků. Potom můžete přidat ovládací prvek do kódu XAML úvodní stránky.
 
-1. V **Průzkumník řešení**v projektu úvodní stránky klikněte pravým tlačítkem na **odkazy** a pak klikněte na **Přidat odkaz**.
+1. V **Průzkumník řešení** v projektu úvodní stránky klikněte pravým tlačítkem na **odkazy** a pak klikněte na **Přidat odkaz**.
 
 2. Na kartě **projekty** vyberte prvek **WebUserControl** a pak klikněte na tlačítko **OK**.
 
@@ -151,7 +153,7 @@ Chcete-li zpřístupnit tento ovládací prvek projektu úvodní stránky, v sou
 
 ### <a name="to-add-the-control-to-the-markup"></a>Přidání ovládacího prvku do značky
 
-1. V **Průzkumník řešení**otevřete soubor úvodní stránky *. XAML* .
+1. V **Průzkumník řešení** otevřete soubor úvodní stránky *. XAML* .
 
 2. V podokně **XAML** přidejte následující deklaraci oboru názvů do elementu nejvyšší úrovně <xref:System.Windows.Controls.Grid> .
 
@@ -177,9 +179,9 @@ Chcete-li zpřístupnit tento ovládací prvek projektu úvodní stránky, v sou
 
 ## <a name="test-a-manually-created-custom-start-page"></a>Testování ručně vytvořené vlastní úvodní stránky
 
-1. Zkopírujte soubor XAML a všechny podpůrné textové soubory nebo soubory s označením do složky *%USERPROFILE%\My Documents\Visual Studio 2015 \ StartPages \\ * .
+1. Zkopírujte soubor XAML a všechny podpůrné textové soubory nebo soubory s označením do složky *%USERPROFILE%\My Documents\Visual Studio 2015 \ StartPages \\* .
 
-2. Pokud Úvodní stránka odkazuje na jakékoli ovládací prvky nebo typy v sestaveních, která nejsou nainstalována aplikací Visual Studio, zkopírujte sestavení a vložte je do _instalační složky sady Visual Studio_**\Common7\IDE\PrivateAssemblies \\ **.
+2. Pokud Úvodní stránka odkazuje na jakékoli ovládací prvky nebo typy v sestaveních, která nejsou nainstalována aplikací Visual Studio, zkopírujte sestavení a vložte je do _instalační složky sady Visual Studio_**\Common7\IDE\PrivateAssemblies \\**.
 
 3. Na příkazovém řádku sady Visual Studio zadejte **devenv/rootsuffix exp** a otevřete experimentální instanci sady Visual Studio.
 
@@ -189,7 +191,7 @@ Chcete-li zpřístupnit tento ovládací prvek projektu úvodní stránky, v sou
 
     Měla by se zobrazit vaše vlastní úvodní stránka. Pokud chcete změnit nějaké soubory, musíte zavřít experimentální instanci, provést změny, zkopírovat změněné soubory a potom znovu otevřít experimentální instanci a zobrazit změny.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Ovládací prvky kontejneru WPF](/previous-versions/bb675291(v=vs.110))
 - [Návod: Přidání vlastního kódu XAML na úvodní stránku](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)

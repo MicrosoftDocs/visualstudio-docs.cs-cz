@@ -1,5 +1,7 @@
 ---
 title: Přidávání ikon do příkazů nabídky | Microsoft Docs
+description: Naučte se, jak přidat ikony do příkazů, které se mohou objevit v nabídkách a panelech nástrojů v integrovaném vývojovém prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c9f038dc43c1705a7cef47eb09a17607c535e307
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eaf0a089c10c850c14b9ba2f807a69eada5d04b9
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903432"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597649"
 ---
 # <a name="add-icons-to-menu-commands"></a>Přidat ikony do příkazů nabídky
 Příkazy se můžou objevit v nabídkách i na panelech nástrojů. Na panelech nástrojů je běžné, že se příkaz zobrazí jenom s ikonou (k uložení prostoru), zatímco v nabídkách se příkaz obvykle zobrazuje s ikonou i textem.
@@ -33,7 +35,7 @@ Příkazy se můžou objevit v nabídkách i na panelech nástrojů. Na panelech
 
      Použijete-li 8bitové hloubku barev, jako průhlednost použijte purpurovou barvu `RGB(255,0,255)` . Nicméně jsou upřednostňovány 32 bitové ikony barev.
 
-2. Zkopírujte soubor ikony do adresáře *prostředků* v projektu VSPackage. V **Průzkumník řešení**přidejte ikonu do projektu. (Vyberte **prostředky**a v místní nabídce klikněte na **Přidat**, pak na **existující položku**a vyberte soubor ikony.)
+2. Zkopírujte soubor ikony do adresáře *prostředků* v projektu VSPackage. V **Průzkumník řešení** přidejte ikonu do projektu. (Vyberte **prostředky** a v místní nabídce klikněte na **Přidat**, pak na **existující položku** a vyberte soubor ikony.)
 
 3. Otevřete soubor *. vsct* v editoru.
 

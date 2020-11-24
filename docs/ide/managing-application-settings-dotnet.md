@@ -1,5 +1,7 @@
 ---
 title: Správa nastavení aplikace (.NET)
+description: Naučte se spravovat nastavení aplikace (dříve označované jako dynamické vlastnosti), která nejsou obsažená v kódu aplikace, ale jsou potřeba za běhu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d792a6147795f81211203fc442539371f3caa91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f62e03210e83f434bd32d08c3fe0f7b2b539155e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593704"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596895"
 ---
 # <a name="manage-application-settings-net"></a>Správa nastavení aplikace (.NET)
 
@@ -50,7 +52,7 @@ Všimněte si, že změny v nastavení uživatele nejsou zapsány na disk, pokud
 
 ## <a name="create-application-settings-at-design-time"></a>Vytvoření nastavení aplikace v době návrhu
 
-V době návrhu můžete vytvořit nastavení aplikace dvěma způsoby: pomocí stránky **Nastavení** **Návrháře projektu**nebo pomocí okna **vlastnosti** pro formulář nebo ovládací prvek, který umožňuje vytvořit svázání nastavení s vlastností.
+V době návrhu můžete vytvořit nastavení aplikace dvěma způsoby: pomocí stránky **Nastavení** **Návrháře projektu** nebo pomocí okna **vlastnosti** pro formulář nebo ovládací prvek, který umožňuje vytvořit svázání nastavení s vlastností.
 
 Když vytvoříte nastavení s rozsahem aplikace (například připojovací řetězec databáze nebo odkaz na prostředky serveru), [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] uloží se do *app.config* se `<applicationSettings>` značkou. (Připojovací řetězce jsou uloženy pod `<connectionStrings>` značkou.)
 

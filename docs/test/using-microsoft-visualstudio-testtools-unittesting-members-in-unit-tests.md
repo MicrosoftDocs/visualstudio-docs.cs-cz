@@ -1,5 +1,6 @@
 ---
 title: Použití MSTest v testování částí
+description: Přečtěte si o MSTest Framework, který podporuje testování částí v aplikaci Visual Studio. Tyto třídy a členy použijte k testování částí kódu.
 ms.custom: SEO-VS-2020
 ms.date: 03/02/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 759eaded70c3e95b76123062e00072aced4ecdfa
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 21e78263e848a501d83414630de734368f90a179
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810533"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598572"
 ---
 # <a name="use-the-mstest-framework-in-unit-tests"></a>Použití rozhraní MSTest v testování částí
 
@@ -96,7 +97,7 @@ Testy jednotek mohou ověřit konkrétní chování aplikace podle jejich použi
 
 ## <a name="the-testcontext-class"></a>Třída TestContext
 
-Následující atributy a hodnoty, které jsou přiřazeny, se zobrazí v okno Vlastnosti sady Visual Studio pro konkrétní testovací metodu. Tyto atributy nejsou určeny pro použití v kódu testu jednotek. Místo toho ovlivňují způsoby použití nebo spuštění testu jednotky, a to buď prostřednictvím integrovaného vývojového prostředí (IDE) sady Visual Studio, nebo pomocí testovacího modulu sady Visual Studio. Například některé z těchto atributů se zobrazí jako sloupce v okně **Test Manager** a v **výsledky testů** okně, což znamená, že je můžete použít k seskupení a seřazení testů a výsledků testů. Jeden z těchto atributů je <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> , který použijete k přidání libovolných metadat k jednotkovým testům. Můžete ji například použít k uložení názvu testu průchodu, který tento test pokrývá, označením testu jednotky pomocí `[TestProperty("TestPass", "Accessibility")]` . Nebo můžete použít k uložení indikátoru typu testu, u kterého se jedná `[TestProperty("TestKind", "Localization")]` . Vlastnost, kterou vytvoříte pomocí tohoto atributu a hodnotu vlastnosti, kterou přiřadíte, se zobrazí v okně **vlastnosti** sady Visual Studio pod položkou **test**pro daný nadpis.
+Následující atributy a hodnoty, které jsou přiřazeny, se zobrazí v okno Vlastnosti sady Visual Studio pro konkrétní testovací metodu. Tyto atributy nejsou určeny pro použití v kódu testu jednotek. Místo toho ovlivňují způsoby použití nebo spuštění testu jednotky, a to buď prostřednictvím integrovaného vývojového prostředí (IDE) sady Visual Studio, nebo pomocí testovacího modulu sady Visual Studio. Například některé z těchto atributů se zobrazí jako sloupce v okně **Test Manager** a v **výsledky testů** okně, což znamená, že je můžete použít k seskupení a seřazení testů a výsledků testů. Jeden z těchto atributů je <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> , který použijete k přidání libovolných metadat k jednotkovým testům. Můžete ji například použít k uložení názvu testu průchodu, který tento test pokrývá, označením testu jednotky pomocí `[TestProperty("TestPass", "Accessibility")]` . Nebo můžete použít k uložení indikátoru typu testu, u kterého se jedná `[TestProperty("TestKind", "Localization")]` . Vlastnost, kterou vytvoříte pomocí tohoto atributu a hodnotu vlastnosti, kterou přiřadíte, se zobrazí v okně **vlastnosti** sady Visual Studio pod položkou **test** pro daný nadpis.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>
 

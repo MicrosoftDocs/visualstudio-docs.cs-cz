@@ -1,5 +1,7 @@
 ---
 title: Přidání panelu nástrojů | Microsoft Docs
+description: Naučte se, jak přidat panel nástrojů, který obsahuje tlačítka, která jsou vázaná na příkazy, do integrovaného vývojového prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: beb97356daf3c932470bf2598e58e1f5b40ea233
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 434f7470fe5fca13f217c981cc99d6a884117a86
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904070"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597948"
 ---
 # <a name="add-a-toolbar"></a>Přidat panel nástrojů
 Tento návod ukazuje, jak přidat panel nástrojů do integrovaného vývojového prostředí sady Visual Studio.
@@ -35,7 +37,7 @@ Tento návod ukazuje, jak přidat panel nástrojů do integrovaného vývojovéh
 
 ## <a name="create-a-toolbar-for-the-ide"></a>Vytvoření panelu nástrojů pro prostředí IDE
 
-1. V *ToolbarTestCommandPackage. vsct*vyhledejte oddíl symboly. V elementu GuidSymbol s názvem guidToolbarTestCommandPackageCmdSet přidejte deklarace pro panel nástrojů a skupinu panelu nástrojů následujícím způsobem.
+1. V *ToolbarTestCommandPackage. vsct* vyhledejte oddíl symboly. V elementu GuidSymbol s názvem guidToolbarTestCommandPackageCmdSet přidejte deklarace pro panel nástrojů a skupinu panelu nástrojů následujícím způsobem.
 
     ```xml
     <IDSymbol name="Toolbar" value="0x1000" />

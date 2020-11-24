@@ -1,5 +1,7 @@
 ---
 title: MSTest, třídy a metody kontrolního výrazu
+description: Naučte se používat příkazy Assert k otestování správnosti chování kódu během testování částí kódu vaší aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 06/07/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c36916c79bd783ed2c6ce960b068e85478b9971d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c5401fb15a19d069c0bf454661d6d9283abb2585
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592045"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598195"
 ---
 # <a name="use-assert-classes-for-unit-testing"></a>Použití tříd Assert pro testování částí
 

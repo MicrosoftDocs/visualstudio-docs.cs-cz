@@ -1,5 +1,7 @@
 ---
 title: Hledání šablon
+description: Naučte se vyhledávat a organizovat šablony projektů a položek.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: ecbc5421562ca79466ace0d93a16ac4e3635ddfb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 517918bf7e56381a4d4d2a36fc43f976a07c29ea
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284240"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597155"
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>Postupy: vyhledání a uspořádání šablon projektů a položek
 
@@ -87,7 +89,7 @@ Například následující adresář má šablony uživatelských projektů pro 
 ::: moniker-end
 
 > [!TIP]
-> Můžete změnit známé umístění pro šablony uživatelů v **nabídce nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění**řešení.
+> Můžete změnit známé umístění pro šablony uživatelů v **nabídce nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení.
 
 ::: moniker range="vs-2017"
 

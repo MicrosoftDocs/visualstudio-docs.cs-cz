@@ -1,5 +1,7 @@
 ---
 title: Vytváření šablon položek s více soubory
+description: Naučte se, jak vytvořit šablonu položky v aplikaci Visual Studio, která se skládá z více souborů.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 4a4f0c50fc0a3fe21da560356d3551ca85ef9d66
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a947d23bd7094e003bae3cfe880299bb3698d92e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284422"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597259"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>Postupy: vytváření šablon položek s více soubory
 
@@ -36,7 +38,7 @@ ms.locfileid: "85284422"
 
 1. Vytvořte šablonu položky, protože byste mohli ručně vytvořit šablonu položky s jedním souborem, ale zahrnout každý soubor, který tvoří položku s více soubory.
 
-1. V souboru XML *. vstemplate* přidejte `ProjectItem` element pro každý jednotlivý soubor a přidejte do `TargetFileName` tohoto prvku atribut. Nastavte hodnotu `TargetFileName` atributu na *$fileinputname $. Přípona*souboru, kde *přípona* souboru je přípona souboru, který je součástí šablony. Příklad:
+1. V souboru XML *. vstemplate* přidejte `ProjectItem` element pro každý jednotlivý soubor a přidejte do `TargetFileName` tohoto prvku atribut. Nastavte hodnotu `TargetFileName` atributu na *$fileinputname $. Přípona* souboru, kde *přípona* souboru je přípona souboru, který je součástí šablony. Například:
 
     ```xml
     <ProjectItem TargetFileName="$fileinputname$.vb">
