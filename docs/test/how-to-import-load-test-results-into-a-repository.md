@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Import výsledků zátěžového testu do úložiště'
+description: Naučte se, jak načíst informace do úložiště Load Výsledky testů pomocí dialogového okna otevřít a spravovat Výsledky testů Load.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: a955b3d2-c8ad-40dd-8ea3-9f1a271e1eed
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f8f0ec6b9f1a5664ac898e525420ec2cc374f5ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2133977de827fe558ee9323280c5f05df683ed59
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287737"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442310"
 ---
 # <a name="how-to-import-load-test-results-into-a-repository"></a>Postupy: Import výsledků zátěžového testu do úložiště
 
@@ -36,7 +38,7 @@ Výsledky zátěžového testu můžete spravovat z Editor zátěžového testu 
 
 3. V **Zadejte název kontroleru pro hledání výsledků zátěžového testu**, vyberte kontroler. Vyberte **\<local>** pro přístup k výsledkům uloženým místně.
 
-     Pokud jsou k dispozici výsledky testu zatížení, zobrazí se v seznamu **výsledků zátěžového testu** . Sloupce jsou **čas**, **Doba trvání**, **uživatel**, **výsledek**, **test**a **Popis**. **Test** obsahuje název testu a **Popis** obsahuje volitelný popis, který je přidán před spuštěním testu.
+     Pokud jsou k dispozici výsledky testu zatížení, zobrazí se v seznamu **výsledků zátěžového testu** . Sloupce jsou **čas**, **Doba trvání**, **uživatel**, **výsledek**, **test** a **Popis**. **Test** obsahuje název testu a **Popis** obsahuje volitelný popis, který je přidán před spuštěním testu.
 
 4. Klikněte na tlačítko **importovat**.
 

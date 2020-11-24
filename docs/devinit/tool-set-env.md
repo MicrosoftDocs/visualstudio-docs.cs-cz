@@ -1,7 +1,7 @@
 ---
 title: set-env
 description: Nástroj devinit vyžaduje-set-env.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: ce3876884061246d8ac1dbc1b211766903ea840a
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 820cd87f26e4babc7a83d975c3fb480187af564f
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671737"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442282"
 ---
 # <a name="set-env"></a>set-env
 
@@ -38,7 +38,7 @@ Tento nástroj využívá rozhraní API .NET Core `Environment.SetEnvironment` a
 
 | Akce       | Vstup            | Popis                                                                                                                                                              | Příklad             |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
-| **Zobrazit vše** | prázdné nebo vynecháno | Vypíše všechny aktuální proměnné prostředí.                                                                                                                              | `"input":""`        |
+| **Zobrazit vše** | prázdné nebo vynecháno | Vypíše všechny aktuální proměnné prostředí.                                                                                                                           | `"input":""`        |
 | **seznam 1** | řetězec           | Vypíše hodnotu konkrétní proměnné prostředí podle názvu.                                                                                                               | `"input":"foo"`     |
 | **add**      | řetězec           | Nastaví hodnotu proměnné prostředí jako dvojici klíč-hodnota. Přidá novou proměnnou prostředí, pokud ještě není přítomná, nebo nastavte hodnotu existující proměnné prostředí. | `"input":"foo=bar"` |
 | **delete**   | řetězec           | Odstraní existující proměnnou prostředí předáním prázdného řetězce hodnoty.                                                                                            | `"input":"foo="`    |
@@ -49,12 +49,16 @@ Tento nástroj využívá rozhraní API .NET Core `Environment.SetEnvironment` a
 
 Nepoužívá se.
 
+### <a name="default-behavior"></a>Výchozí chování
+
+Výchozím chováním `set-env` nástroje je zobrazit seznam všech aktuálních proměnných prostředí.
+
 ## <a name="usage-in-a-codespace"></a>Využití v codespace
 
 Pokud používáte codespace, můžete nastavit proměnné prostředí používané v codespace prostřednictvím přizpůsobení `remoteEnv` vlastnosti v [`.devcontainer.json`](/visualstudio/codespaces/reference/configuring) souboru.
 
 ## <a name="example-usage"></a>Příklad použití
-Níže jsou uvedeny příklady, jak spustit `set-env` pomocí `.devinit.json` . 
+Níže jsou uvedeny příklady, jak spustit `set-env` pomocí `.devinit.json` .
 
 #### <a name="devinitjson-that-will-set-an-environment-variable-foo-to-value-bar"></a>.devinit.js, která nastaví proměnnou prostředí, `foo` na hodnotu `bar` :
 ```json

@@ -1,5 +1,7 @@
 ---
 title: Záznam obrazovky a hlasu během testů
+description: Naučte se konfigurovat adaptér diagnostických dat, který zaznamenává obrazovku a hlas uživatele, který spouští test v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 2cefe8c2-430a-4cb4-bbe0-f3edb2e5bc03
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2366e77b0b66e2a31ce17e1aefb9240e4f45df2d
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 08ae6d19327a956b5dab71fa30b0b33742390d2b
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928642"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440984"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>Postupy: zahrnutí záznamů obrazovky a hlasu během testů pomocí nastavení testu
 
@@ -48,7 +50,7 @@ Záznam obrazovky a hlasu lze použít buď ručním, nebo automatizovaným test
     > [!WARNING]
     > Pokud vyberete možnost **Uložit záznam, pokud testovací případ projde**, záznam je uložen s výsledky testu, který využívá prostor úložiště na serveru. K vyčištění těchto příloh můžete použít nástroj pro **čištění příloh testu** .
 
-6. V části **kvalita záznamu obrazovky**nakonfigurujte následující možnosti rozevíracího seznamu:
+6. V části **kvalita záznamu obrazovky** nakonfigurujte následující možnosti rozevíracího seznamu:
 
     1. **Snímková frekvence:** Zadejte, kolik snímků za sekundu chcete použít na obrazovce a v záznamu hlasu. Výchozí hodnota je 4 snímky za sekundu. Je možné zadat hodnoty mezi 2 a 20.
 

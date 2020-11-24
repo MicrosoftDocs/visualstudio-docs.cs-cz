@@ -1,5 +1,7 @@
 ---
 title: Vzory zatížení pro zátěžové testování
+description: Přečtěte si o vestavěných vzorech zatížení, které poskytuje Visual Studio. Vyberte vzor zatížení a upravte vlastnosti na odpovídající úrovně pro zátěžový test.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.assetid: 0ba0363b-7f50-4bde-a919-0e3bce7bc115
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0836fdb085ab33b2a646d9774c94bd859b5ca5ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c46c353b09df792b2e204ce90a04b372e23ebd8b
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590303"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440256"
 ---
 # <a name="edit-load-patterns-to-model-virtual-user-activities"></a>Úprava vzorů zatížení pro modelování aktivit virtuálních uživatelů
 
@@ -116,7 +118,7 @@ Jedna z věcí, na kterou se můžete podívat, je, že pokud nějaký jiný pro
 
 ## <a name="change-the-load-pattern"></a>Změna vzoru zatížení
 
-Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete pomocí **Editor zátěžového testu** změnit vlastnosti vzoru zatížení přidružené ke scénáři na úrovně, které splňují vaše cíle testování.
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem** můžete pomocí **Editor zátěžového testu** změnit vlastnosti vzoru zatížení přidružené ke scénáři na úrovně, které splňují vaše cíle testování.
 
 > [!NOTE]
 > Úplný seznam vlastností scénáře zátěžového testu a jejich popis naleznete v tématu [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
@@ -130,7 +132,7 @@ Vzor zatížení určuje počet virtuálních uživatelů aktivních během zát
 
 1. Otevřete zátěžový test.
 
-2. V **Editor zátěžového testu**ve složce *scénáře* rozbalte scénář, pro který chcete upravit vzor zatížení a vyberte vzor zatížení pro daný scénář.
+2. V **Editor zátěžového testu** ve složce *scénáře* rozbalte scénář, pro který chcete upravit vzor zatížení a vyberte vzor zatížení pro daný scénář.
 
     > [!NOTE]
     > Formulace uzlu zátěžového vzoru, jak je zobrazen ve stromu scénáře zátěžového testu, odráží profil zatížení, který jste zvolili při vytváření zátěžového testu. Může to být buď **konstantní profil zatížení** , nebo **profil zatížení kroku**.
@@ -141,7 +143,7 @@ Vzor zatížení určuje počet virtuálních uživatelů aktivních během zát
 
 4. Volitelné Změňte vlastnost **Pattern** v kategorii **vzor zatížení** .
 
-     Vaše volby pro vlastnost **Pattern** jsou založené na **kroku**, **konstantě**a **cíli**. Další informace o typech vzorů zatížení naleznete v tématu [určení počtu virtuálních uživatelů se vzorci zatížení ve scénáři zátěžového testu](../test/edit-load-patterns-to-model-virtual-user-activities.md).
+     Vaše volby pro vlastnost **Pattern** jsou založené na **kroku**, **konstantě** a **cíli**. Další informace o typech vzorů zatížení naleznete v tématu [určení počtu virtuálních uživatelů se vzorci zatížení ve scénáři zátěžového testu](../test/edit-load-patterns-to-model-virtual-user-activities.md).
 
 5. Volitelné V kategorii **parametry** změňte hodnoty.
 

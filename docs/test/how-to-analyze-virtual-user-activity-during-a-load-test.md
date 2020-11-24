@@ -1,5 +1,7 @@
 ---
 title: Analýza aktivity virtuálních uživatelů pro zátěžové testy
+description: Naučte se, jak pomocí grafu aktivity virtuálního uživatele zobrazit, že se každý virtuální uživatel spustil během testu, aby viděli vzory aktivity uživatelů a další informace.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 8bda19b3-91c1-4daf-b6c7-09108bddadff
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 64b69ba926e3c978efa60bd9946da94d846c383f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 353a38c17cdcd3358376547155750914e406f4be
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288400"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442388"
 ---
 # <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>Postupy: Analýza činnosti virtuálních uživatelů během zátěžového testu pomocí grafu aktivity virtuálního uživatele
 
@@ -33,9 +35,9 @@ Níže uvedené postupy ukazují, jak zobrazit **graf aktivity virtuálního už
 
      Otevřete zobrazení grafů tak, že na panelu nástrojů vyberete tlačítko **grafy** . Klikněte pravým tlačítkem na graf a vyberte **Přejít k podrobnostem o uživateli**.
 
-     Pokud použijete tuto možnost, **graf aktivity virtuálního uživatele** se automaticky přiblíží k části testu, na kterou jste klepli pravým tlačítkem. Pokud je například ukazatel na pozici přibližně 30 sekund, zobrazí se v dolní části **grafu aktivity virtuálního uživatele**v zobrazení podrobností přibližně 30 sekundová značka. **Zoom to time period**
+     Pokud použijete tuto možnost, **graf aktivity virtuálního uživatele** se automaticky přiblíží k části testu, na kterou jste klepli pravým tlačítkem. Pokud je například ukazatel na pozici přibližně 30 sekund, zobrazí se v dolní části **grafu aktivity virtuálního uživatele** v zobrazení podrobností přibližně 30 sekundová značka. **Zoom to time period**
 
-     Dále můžete v **grafu aktivity virtuálního uživatele**použít možnost prozkoumat podrobnosti o aktivitě konkrétního uživatele.
+     Dále můžete v **grafu aktivity virtuálního uživatele** použít možnost prozkoumat podrobnosti o aktivitě konkrétního uživatele.
 
 ## <a name="to-investigate-a-specific-users-activity-in-the-virtual-user-activity-chart"></a>Prozkoumání aktivity konkrétního uživatele v grafu aktivity virtuálního uživatele
 
@@ -72,7 +74,7 @@ Níže uvedené postupy ukazují, jak zobrazit **graf aktivity virtuálního už
 
 ## <a name="to-use-filtering-options-in-the-virtual-user-activity-chart"></a>Použití možností filtrování v grafu aktivity virtuálního uživatele
 
-1. V **legendě podrobností**použijte rozevírací seznam a vyberte možnost **test**, **Stránka**nebo **transakce**.
+1. V **legendě podrobností** použijte rozevírací seznam a vyberte možnost **test**, **Stránka** nebo **transakce**.
 
     **Panel legendy podrobností**
 
@@ -90,7 +92,7 @@ Níže uvedené postupy ukazují, jak zobrazit **graf aktivity virtuálního už
 
     ![Panel výsledků filtru](../test/media/ltest_filterresults.png)
 
-3. Ve **výsledcích filtru**zaškrtněte nebo zrušte zaškrtnutí políček pro následující možnosti filtru:
+3. Ve **výsledcích filtru** zaškrtněte nebo zrušte zaškrtnutí políček pro následující možnosti filtru:
 
    - **Zobrazit pouze výsledky s protokoly** Zobrazí pouze výsledky testů, ke kterým jsou přidruženy protokoly testů.
 

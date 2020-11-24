@@ -1,5 +1,7 @@
 ---
-title: Vytváření testů jednotek řízených daty
+title: Vytvořit Data-Driven testování částí
+description: Naučte se, jak pomocí rozhraní Microsoft Unit Test Framework pro spravovaný kód nastavit metodu testování částí pro načtení hodnot ze zdroje dat.
+ms.custom: SEO-VS-2020
 ms.date: 05/08/2019
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 936c6b2ee9e05d059c09c2aa074829b35b6ca5fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31e1fb08d77992e6fb592e286553196928b13ad4
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287984"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441193"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>Postupy: vytvoření testu jednotek řízených daty
 
@@ -160,7 +162,7 @@ int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
 
 ## <a name="run-the-test-and-view-results"></a>Spustit test a zobrazit výsledky
 
-Po dokončení psaní testovací metody Sestavte projekt testů. Testovací metoda se zobrazí v **Průzkumníku testů** ve skupině **Nespuštěné testy** . Když spouštíte, píšete a znovu spustíte testy, **Průzkumník testů** zobrazí výsledky ve skupinách **neúspěšných testů**, **úspěšných testů**a **nespustí testy**. Výběrem možnosti **Spustit vše** můžete spustit všechny testy, nebo výběrem možnosti **Spustit** vyberte podmnožinu testů, které chcete spustit.
+Po dokončení psaní testovací metody Sestavte projekt testů. Testovací metoda se zobrazí v **Průzkumníku testů** ve skupině **Nespuštěné testy** . Když spouštíte, píšete a znovu spustíte testy, **Průzkumník testů** zobrazí výsledky ve skupinách **neúspěšných testů**, **úspěšných testů** a **nespustí testy**. Výběrem možnosti **Spustit vše** můžete spustit všechny testy, nebo výběrem možnosti **Spustit** vyberte podmnožinu testů, které chcete spustit.
 
 Pruh výsledků testu v horní části **Průzkumníka testů** je animovaný jako vaše testovací běhy. Na konci testovacího běhu bude pruh zelený, pokud všechny testy byly úspěšné nebo červené, pokud došlo k selhání některého testu. Souhrn testovacího běhu se zobrazí v podokně podrobností v dolní části okna **Průzkumníka testů** . Vyberte test pro zobrazení podrobností testu v dolním podokně.
 

@@ -1,5 +1,7 @@
 ---
 title: Vytvoření projektu testování částí
+description: Naučte se vytvořit projekt testování částí. Testovací projekt může být ve stejném řešení jako produkční kód, nebo může být v samostatném řešení.
+ms.custom: SEO-VS-2020
 ms.date: 01/29/2019
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: ffa19fb9dc49d6286ef3f54c51d89043445f18ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f0d438c05d3c9608c11903c02119d7c3e267a48b
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288712"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441843"
 ---
 # <a name="create-a-unit-test-project"></a>Vytvoření projektu testování částí
 
@@ -23,7 +25,7 @@ Testy jednotek často zrcadlí strukturu testovaného kódu. Například projekt
 
 ## <a name="to-create-a-unit-test-project"></a>Vytvoření projektu testu jednotek
 
-1. V nabídce **soubor** klikněte na příkaz **Nový**  >  **projekt**nebo stiskněte klávesy **CTRL** + **SHIFT** + **N**.
+1. V nabídce **soubor** klikněte na příkaz **Nový**  >  **projekt** nebo stiskněte klávesy **CTRL** + **SHIFT** + **N**.
 
 ::: moniker range="vs-2017"
 
@@ -37,7 +39,7 @@ Testy jednotek často zrcadlí strukturu testovaného kódu. Například projekt
 
 ::: moniker range=">=vs-2019"
 
-2. Na stránce **vytvořit nový projekt** zadejte do vyhledávacího pole text **Test jednotky** . Vyberte šablonu projektu pro testovací rozhraní, které chcete použít, například **projekt testů MSTest** nebo **projekt testů nunit**a pak zvolte možnost **Další**.
+2. Na stránce **vytvořit nový projekt** zadejte do vyhledávacího pole text **Test jednotky** . Vyberte šablonu projektu pro testovací rozhraní, které chcete použít, například **projekt testů MSTest** nebo **projekt testů nunit** a pak zvolte možnost **Další**.
 
    ![Testování šablon projektů v aplikaci Visual Studio 2019](media/vs-2019/test-project-templates.png)
 
@@ -51,7 +53,7 @@ Testy jednotek často zrcadlí strukturu testovaného kódu. Například projekt
 
    2. V nabídce **projekt** klikněte na příkaz **Přidat odkaz**.
 
-   3. V okně **Správce odkazů**vyberte uzel **řešení** v části **projekty**. Vyberte projekt kódu, který chcete otestovat, a pak vyberte **OK**.
+   3. V okně **Správce odkazů** vyberte uzel **řešení** v části **projekty**. Vyberte projekt kódu, který chcete otestovat, a pak vyberte **OK**.
 
    Pokud je kód, který chcete testovat, v jiném umístění, přečtěte si téma [Správa odkazů v projektu](../ide/managing-references-in-a-project.md) , kde najdete informace o přidání odkazu.
 

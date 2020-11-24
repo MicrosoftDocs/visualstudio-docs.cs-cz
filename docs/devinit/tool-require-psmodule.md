@@ -1,7 +1,7 @@
 ---
 title: require-psmodule
 description: devinit Tool vyžaduje – psmodule.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 51d9353333fac6dcca0035bf7cc8dd722c32cb40
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: c8c87e6df0e7ea66c2413f85fa39f397f30d50a7
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672116"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440002"
 ---
 # <a name="require-psmodule"></a>require-psmodule
 
@@ -47,7 +47,7 @@ Další možnosti jsou předány přímo do příkazu [install-Module](/powershe
 
 Výchozím chováním `require-psmodule` nástroje je chyba, jak `input` je požadováno.
 
-## <a name="builtin-options"></a>Předdefinované možnosti
+### <a name="built-in-options"></a>Předdefinované možnosti
 
 `require-psmodule`Nástroj nastaví řadu `Install-Module` argumentů příkazového řádku, aby bylo zajištěno, že `Install-Module` může běžet bez periferních zařízení. Níže jsou uvedené argumenty a dokumentace k nim najdete v [instalačním modulu](/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true).
 
@@ -59,7 +59,7 @@ Výchozím chováním `require-psmodule` nástroje je chyba, jak `input` je pož
 
 
 ## <a name="example-usage"></a>Příklad použití
-Níže jsou uvedeny příklady, jak spustit `require-psmodule` pomocí `.devinit.json` . 
+Níže jsou uvedeny příklady, jak spustit `require-psmodule` pomocí `.devinit.json` .
 
 #### <a name="devinitjson-that-will-install-the-powershellget-module"></a>.devinit.js, které budou instalovat modul PowerShellGet:
 ```json

@@ -1,7 +1,7 @@
 ---
 title: Jak funguje Přemostění na Kubernetes
 ms.technology: vs-azure
-ms.date: 06/02/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 description: Popisuje procesy pro připojení vašeho vývojového počítače ke clusteru Kubernetes pomocí mostu pro Kubernetes.
 keywords: Most do Kubernetes, Docker, Kubernetes, Azure, kontejnery
@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: afeb612e1d092ebc1f5c33394a62dd9cef6b6a1c
-ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
+ms.openlocfilehash: d1a92433a90e6e6b7f71d0c7db6ced3a52c33315
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92116100"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440607"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Jak funguje Přemostění na Kubernetes
 
@@ -90,7 +90,7 @@ Při přijetí žádosti s poddoménou *GENERATED_NAME* v clusteru se do žádos
 Pokud je v clusteru přijata žádost bez subdomény *GENERATED_NAME* , do žádosti se nepřidá žádné záhlaví. Zástupné lusky zařídí směrování, které požaduje příslušnou službu v clusteru. Pokud je požadavek směrován do služby, která je měněna, je místo vzdáleného agenta směrován do původní služby.
 
 > [!IMPORTANT]
-> Každá služba v clusteru musí při vytváření dalších požadavků předávat hlavičku *Kubernetes-Route-as = GENERATED_NAME* . Například když *Služba* obdrží požadavek, odešle požadavek na *serviceB* před vrácením odpovědi. V tomto příkladu musí *služba Service* . v žádosti o *serviceB*předávat hlavičku *Kubernetes-Route-as = GENERATED_NAME* . Některé jazyky, například [ASP.NET][asp-net-header], mohou mít metody pro zpracování šíření hlaviček.
+> Každá služba v clusteru musí při vytváření dalších požadavků předávat hlavičku *Kubernetes-Route-as = GENERATED_NAME* . Například když *Služba* obdrží požadavek, odešle požadavek na *serviceB* před vrácením odpovědi. V tomto příkladu musí *služba Service* . v žádosti o *serviceB* předávat hlavičku *Kubernetes-Route-as = GENERATED_NAME* . Některé jazyky, například [ASP.NET][asp-net-header], mohou mít metody pro zpracování šíření hlaviček.
 
 Při odpojení od clusteru se ve výchozím nastavení most do Kubernetes odebere ze všech zástupné a duplicitních služeb.
 
@@ -105,6 +105,37 @@ Při odpojení od clusteru se ve výchozím nastavení most do Kubernetes odeber
 ## <a name="diagnostics-and-logging"></a>Diagnostika a protokolování
 
 Při použití přemostění na Kubernetes pro připojení ke clusteru se diagnostické protokoly z vašeho clusteru protokolují do *dočasného* adresáře vašeho vývojového počítače ve složce *most do složky Kubernetes* .
+
+## <a name="rbac-authorization"></a>Autorizace RBAC
+
+Kubernetes poskytuje Access Control na základě rolí (RBAC) pro správu oprávnění pro uživatele a skupiny. Informace najdete v dokumentaci ke službě [Kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) , která umožňuje nastavit oprávnění pro cluster s podporou RBAC pomocí vytvoření souboru YAML a jeho použití pro `kubectl` použití v clusteru. 
+
+Chcete-li nastavit oprávnění pro cluster, vytvořte nebo upravte soubor YAML jako *oprávnění. yml* podobný následujícímu, a to pomocí vlastního oboru názvů pro `<namespace>` a předmětů (uživatelů a skupin), které potřebují přístup.
+
+```yml
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: bridgetokubernetes-<namespace>
+  namespace: development
+subjects:
+  - kind: User
+    name: jane.w6wn8.k8s.ginger.eu-central-1.aws.gigantic.io
+    apiGroup: rbac.authorization.k8s.io
+  - kind: Group
+    name: dev-admin
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: admin
+  apiGroup: rbac.authorization.k8s.io
+```
+
+Použijte oprávnění pomocí příkazu:
+
+```cmd
+kubectl -n <namespace> apply -f <yaml file name>
+```
 
 ## <a name="limitations"></a>Omezení
 

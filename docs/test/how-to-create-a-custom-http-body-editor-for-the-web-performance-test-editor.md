@@ -1,5 +1,6 @@
 ---
 title: Vytvoření editoru těla protokolu HTTP pro test výkonnosti webu
+description: Naučte se, jak vytvořit vlastní Editor obsahu, který umožňuje upravit obsah textu řetězce nebo binární obsah textu žádosti webové služby.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ ms.assetid: a0b2d8ff-3e2a-487e-9172-90047174f336
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7539f9055fb64cdbfa77ebe5beee7173b8967afb
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7d6da75b24a982c420b475815f665851ebf06504
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810282"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440128"
 ---
 # <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>Postupy: Vytvoření vlastního editoru těla protokolu HTTP pro Editor testu výkonnosti webu
 
@@ -36,13 +37,13 @@ Tato rozhraní jsou obsažena v <xref:Microsoft.VisualStudio.TestTools.WebTestin
 
    Projekt je přidán do nového řešení a <xref:System.Windows.Forms.UserControl> s názvem *UserControl1.cs* je prezentována v návrháři.
 
-1. Z **panelu nástrojů**v kategorii **běžné ovládací prvky** přetáhněte na <xref:System.Windows.Forms.RichTextBox> povrch UserControl1.
+1. Z **panelu nástrojů** v kategorii **běžné ovládací prvky** přetáhněte na <xref:System.Windows.Forms.RichTextBox> povrch UserControl1.
 
 1. V pravém ![ horním rohu ovládacího prvku zvolte akci značky akce (glyf inteligentních značek ](../test/media/vs_winformsmttagglyph.gif) ) <xref:System.Windows.Forms.RichTextBox> a pak vyberte a **ukotvěte v nadřazeném kontejneru**.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt knihovny model Windows Forms a vyberte **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt knihovny model Windows Forms a vyberte **vlastnosti**.
 
-1. Ve **vlastnostech**vyberte kartu **aplikace** .
+1. Ve **vlastnostech** vyberte kartu **aplikace** .
 
 1. V rozevíracím seznamu **cílové rozhraní** vyberte .NET Framework 4 (nebo novější).
 
@@ -50,13 +51,13 @@ Tato rozhraní jsou obsažena v <xref:Microsoft.VisualStudio.TestTools.WebTestin
 
 1. Vyberte **Ano**.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **odkazy** a vyberte možnost **Přidat odkaz**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **odkazy** a vyberte možnost **Přidat odkaz**.
 
 1. Zobrazí se dialogové okno **Přidat odkaz** .
 
 1. Vyberte. Karta **net** , přejděte dolů a vyberte **Microsoft. VisualStudio. QualityTools. WebTestFramework** a pak zvolte **OK**.
 
-1. Pokud **Návrhář zobrazení** není ještě otevřený, klikněte v **Průzkumník řešení**pravým tlačítkem myši na **UserControl1.cs** a pak vyberte **zobrazit Návrhář**.
+1. Pokud **Návrhář zobrazení** není ještě otevřený, klikněte v **Průzkumník řešení** pravým tlačítkem myši na **UserControl1.cs** a pak vyberte **zobrazit Návrhář**.
 
 1. Na návrhové ploše klikněte pravým tlačítkem myši a vyberte možnost **Zobrazit kód**.
 
@@ -124,7 +125,7 @@ Při úpravách textu řetězce je dokončena a uživatel klikne na **tlačítko
 
 ### <a name="create-a-class-and-implement-the-istringhttpbodyeditorplugin-interface"></a>Vytvoření třídy a implementace rozhraní IStringHttpBodyEditorPlugin
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt knihovny ovládacích prvků model Windows Forms a vyberte možnost **Přidat novou položku**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt knihovny ovládacích prvků model Windows Forms a vyberte možnost **Přidat novou položku**.
 
    Zobrazí se dialogové okno **Přidat novou položku**.
 
@@ -265,7 +266,7 @@ Při úpravách textu řetězce je dokončena a uživatel klikne na **tlačítko
 
 ## <a name="build-and-deploy-the-plug-ins"></a>Sestavování a nasazování modulů plug-in
 
-1. V nabídce **sestavení** klikněte na příkaz **sestavit \<Windows Form Control Library project name> **.
+1. V nabídce **sestavení** klikněte na příkaz **sestavit \<Windows Form Control Library project name>**.
 
 2. Zavřete všechny instance aplikace Visual Studio.
 

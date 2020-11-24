@@ -1,5 +1,7 @@
 ---
 title: Element ProjectItemFolder – | Microsoft Docs
+description: Získejte referenční informace o elementu ProjectItemFolder –, který představuje mapovanou složku v odkazu schématu XML položky projektu SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 38f8f70cc6480554441809e33c4083735600fbbb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 99a27f8e255aa17e8b9fa604b504109976c5d36a
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85539812"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440789"
 ---
 # <a name="projectitemfolder-element"></a>ProjectItemFolder – element
   Představuje mapovanou složku.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <ProjectItemFolder Target = "Path of SharePoint folder the mapped folder corresponds to"
@@ -58,7 +60,7 @@ ms.locfileid: "85539812"
 
 |Vlastnost|Hodnota|
 |-|-|
-|**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/2010/<br>SharePointTools/SharePointProjectItemModel|
+|**Hosting**|http: \/ \/ schemas.Microsoft.com/VisualStudio/2010/<br>SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|

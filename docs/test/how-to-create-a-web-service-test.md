@@ -1,5 +1,7 @@
 ---
 title: Vytvoření testu webové služby
+description: Naučte se používat test výkonnosti pro webové služby a přizpůsobovat žádosti v Editor testu výkonnosti webu k vyhledání stránek webové služby.
+ms.custom: SEO-VS-2020
 ms.date: 06/30/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.assetid: fbcd57ee-06ad-4260-8694-09f8e0f93e39
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9934f48e6d5900a418995eb96d357b4ea1ea532f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 32b5a6a91221e8942faeefcb89cfc52dd0cc5895
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85814756"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95439924"
 ---
 # <a name="how-to-create-a-web-service-test"></a>Postupy: Vytvoření testu webové služby
 
@@ -34,7 +36,7 @@ Chcete-li otestovat, můžete použít vlastní webovou službu nebo použít š
 
 1. V aplikaci Visual Studio vytvořte nový projekt pomocí šablony ASP.NET Web Application (.NET Framework) a po zobrazení výzvy vyberte **prázdnou** šablonu. Zadejte název a vytvořte projekt.
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu, zvolte možnost **Přidat**  >  **novou položku**a pak zvolte možnost **Webová služba (asmx)**. Přidejte webovou službu.
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu, zvolte možnost **Přidat**  >  **novou položku** a pak zvolte možnost **Webová služba (asmx)**. Přidejte webovou službu.
 
 1. Otevřete *WebService1. asmx* a nahraďte výchozí `HelloWorld` webovou metodu následujícím kódem.
 
@@ -51,7 +53,7 @@ Pokud ještě nemáte nainstalovanou součást Performance Test Tools a nástroj
 
 1. V nabídce **Start** systému Windows otevřete **instalační program pro Visual Studio** . Můžete k němu také přistupovat v aplikaci Visual Studio z dialogového okna Nový projekt nebo výběrem **Možnosti**  >  **získat nástroje a funkce** z panelu nabídek.
 
-1. V **instalační program pro Visual Studio**klikněte na kartu **jednotlivé součásti** a přejděte dolů k části **ladění a testování** . Vyberte **Nástroje pro testování výkonu a zatížení webu**.
+1. V **instalační program pro Visual Studio** klikněte na kartu **jednotlivé součásti** a přejděte dolů k části **ladění a testování** . Vyberte **Nástroje pro testování výkonu a zatížení webu**.
 
    ![Komponenta Performance and Load Test Tools](media/web-perf-load-testing-tools-component.png)
 
@@ -107,7 +109,7 @@ Webový test vyžaduje šablonu projektu webového výkonu a zátěžového test
 
 1. Pro webovou službu otevřete samostatnou relaci prohlížeče a na panelu nástrojů **adresa** zadejte adresu URL stránky *. asmx* . V horní části webové stránky vyberte metodu, kterou chcete testovat, a zkontrolujte zprávu protokolu SOAP. (V ukázkové webové službě je metoda HelloWorld.) Po otevření metody vidíte, že obsahuje `SOAPAction` .
 
-1. V **Editor testu výkonnosti webu**klikněte pravým tlačítkem myši na požadavek a výběrem **Přidat hlavičku** přidejte novou hlavičku. Do vlastnosti **název** zadejte `SOAPAction` . Do vlastnosti **hodnota** zadejte hodnotu, která se zobrazí v `SOAPAction` , například *http://tempuri.org/HelloWorld* .
+1. V **Editor testu výkonnosti webu** klikněte pravým tlačítkem myši na požadavek a výběrem **Přidat hlavičku** přidejte novou hlavičku. Do vlastnosti **název** zadejte `SOAPAction` . Do vlastnosti **hodnota** zadejte hodnotu, která se zobrazí v `SOAPAction` , například *http://tempuri.org/HelloWorld* .
 
 1. Rozbalte uzel adresa URL v editoru testů, vyberte uzel **tělo řetězce** a v vlastnosti **typ obsahu** zadejte hodnotu `text/xml` .
 
@@ -137,7 +139,7 @@ Webový test vyžaduje šablonu projektu webového výkonu a zátěžového test
     > [!NOTE]
     > Datovou vazbu v těle protokolu SOAP můžete použít k nahrazení libovolné zástupné hodnoty hodnotami vázanými daty pomocí `{{DataSourceName.TableName.ColumnName}}` syntaxe.
 
-1. Spusťte test. V horním podokně **prohlížeče webového výkonu výsledky testů**vyberte požadavek webové služby. V dolním podokně vyberte kartu **webový prohlížeč** . Zobrazí se kód XML vrácený webovou službou a výsledky jakékoli operace.
+1. Spusťte test. V horním podokně **prohlížeče webového výkonu výsledky testů** vyberte požadavek webové služby. V dolním podokně vyberte kartu **webový prohlížeč** . Zobrazí se kód XML vrácený webovou službou a výsledky jakékoli operace.
 
    Vyhledejte výsledky pro požadavek webové služby.
 

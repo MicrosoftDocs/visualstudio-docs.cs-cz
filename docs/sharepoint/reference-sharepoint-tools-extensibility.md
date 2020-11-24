@@ -1,5 +1,7 @@
 ---
 title: Reference (rozšíření nástrojů SharePoint) | Microsoft Docs
+description: Získejte odkazy na referenční dokumentaci pro rozšíření nástrojů služby SharePoint v sadě Visual Studio, pokrývající referenční informace o schématu položek projektu služby SharePoint a referenční informace k rozhraní API.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4ab3b60e727f7f4ce113b86fc3491bf244115551
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5fcc1117c88f19eaae7633698dee1698a8108fdb
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62827100"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440711"
 ---
 # <a name="reference-sharepoint-tools-extensibility"></a>Reference (rozšíření nástrojů služby SharePoint)
 

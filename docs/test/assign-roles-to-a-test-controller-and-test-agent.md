@@ -1,5 +1,6 @@
 ---
 title: Testovací kontrolér a role testovacího agenta
+description: Naučte se, jak vytvořit a nakonfigurovat nastavení testu, které používá testovací kontrolér a testovací agenty k distribuci testování napříč několika počítači pomocí sady Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 10/20/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ ms.assetid: 57ed43ae-4e67-4139-8aec-3e9fceb0a745
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c7f4360772f3962ff60517071dcae4318dc71e56
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c059510dc39472d5c981f93e4d7259545b809d38
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809299"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442440"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>Přiřazení rolí k testovacímu kontroleru a testovacímu agentovi
 
@@ -26,7 +27,7 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Vytvořte testy jednotek nebo kódované testy uživatelského rozhraní, které chcete spustit s nastavením testu.
 
@@ -34,7 +35,7 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
 ## <a name="to-create-and-configure-a-test-setting"></a>Vytvoření a konfigurace nastavení testu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **položky řešení,** přejděte na **Přidat**a pak zvolte **Nová položka**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **položky řešení,** přejděte na **Přidat** a pak zvolte **Nová položka**.
 
      Zobrazí se dialogové okno **Přidat novou položku**.
 
@@ -44,15 +45,15 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
 4. Klikněte na tlačítko **Přidat**.
 
-     Nový soubor test *TestSettingDistributedTestWalkthrough. testsettings* se zobrazí v **Průzkumník řešení**ve složce **položky řešení** .
+     Nový soubor test *TestSettingDistributedTestWalkthrough. testsettings* se zobrazí v **Průzkumník řešení** ve složce **položky řešení** .
 
      Zobrazí se dialogové okno **nastavení testu** . Je vybrána stránka **Obecné** .
 
      Nyní můžete upravit a uložit hodnoty nastavení testu.
 
-5. Do pole **název**zadejte název nastavení testu.
+5. Do pole **název** zadejte název nastavení testu.
 
-6. V části **Popis**zadejte **Nastavení distribuovaného testu**.
+6. V části **Popis** zadejte **Nastavení distribuovaného testu**.
 
 7. Ponechte vybrané **výchozí schéma pojmenování** .
 
@@ -69,7 +70,7 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
     > [!NOTE]
     > Pokud přidáváte řadič poprvé, v rozevíracím seznamu nejsou uvedené žádné řadiče. Seznam je vyplněn předchozími řadiči, které jste zadali v jiných nastaveních testu.
 
-4. V části **role**klikněte na možnost **Přidat**.
+4. V části **role** klikněte na možnost **Přidat**.
 
 5. Do zvýrazněného řádku ve sloupci **název** zadejte **Distribuovaný test**.
 
@@ -79,15 +80,15 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
      Zobrazí se stránka **data a diagnostika** .
 
-2. V části **role**ověřte, že je vybraná role **distribuovaného testu** .
+2. V části **role** ověřte, že je vybraná role **distribuovaného testu** .
 
-3. V části **data a Diagnostika pro vybranou roli**vyberte adaptéry **IntelliTrace** a **Systémové informace** .
+3. V části **data a Diagnostika pro vybranou roli** vyberte adaptéry **IntelliTrace** a **Systémové informace** .
 
      Informace o těchto adaptérech a jiných adaptérech, které lze použít v nastavení testu, naleznete v tématu [Configure Unit Tests](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
 
 4. Vyberte možnost **hostitelé**.
 
-5. Volitelné Pokud je v počítači spuštěná 64 verze Microsoft Windows a váš test jste zkompilováni pomocí **jakékoli konfigurace CPU** , použijte rozevírací seznam **Spustit test v systému 32 nebo 64 bitových procesů** a vyberte možnost **spouštět testy 64 v 64 procesu 16Bitového počítače v počítači s operačním**systémem.
+5. Volitelné Pokud je v počítači spuštěná 64 verze Microsoft Windows a váš test jste zkompilováni pomocí **jakékoli konfigurace CPU** , použijte rozevírací seznam **Spustit test v systému 32 nebo 64 bitových procesů** a vyberte možnost **spouštět testy 64 v 64 procesu 16Bitového počítače v počítači s operačním** systémem.
 
     > [!TIP]
     > Pro maximální flexibilitu byste měli kompilovat testovací projekty s libovolnou konfigurací **procesoru** . Pak můžete spustit na 32 i 64 bitových agentů. Není k dispozici žádná výhoda pro kompilování testovacích projektů s **64** konfigurací.

@@ -1,5 +1,7 @@
 ---
 title: Sady čítačů zátěžového testu
+description: Naučte se, jak pomocí Editor zátěžového testu spravovat sady čítačů výběrem počítačů a přiřazením sad čítačů ke shromáždění z každého počítače.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 f1_keywords:
@@ -13,16 +15,16 @@ ms.assetid: 64315c2f-a0b2-4378-be16-0774b99beef5
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1eeb99d58a9fc0547d118c529878d8b02cc83dda
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 15d04d105264d07a1f883c5b67ce57c8590375a8
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287685"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440010"
 ---
 # <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>Postupy: Správa sad čítačů pomocí Editor zátěžového testu
 
-Při vytváření zátěžového testu s **novým Průvodce zátěžovým testem**přidáte počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy.
+Při vytváření zátěžového testu s **novým Průvodce zátěžovým testem** přidáte počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy.
 
 > [!NOTE]
 > Pokud jsou zátěžové testy distribuovány napříč vzdálenými počítači, jsou čítače kontroléru a agentů namapovány na sady čítačů kontrolérů a agentů. Další informace o použití vzdálených počítačů v rámci zátěžového testu naleznete v tématu [řadiče testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md).
@@ -50,7 +52,7 @@ Správa sad čítačů zahrnuje výběr sady počítačů, ze kterých chcete sh
     > [!NOTE]
     > To platí pouze v případě, že máte více než jedno nastavení spuštění v rámci zátěžového testu.
 
-4. Volitelné Zvolením možnosti **Přidat počítač** přidejte nový počítač, který chcete monitorovat. Zobrazí se výzva k zadání názvu. Zadejte název počítače a zobrazí se uzly pod novou položkou. Například **ASP.NET**, **IIS**, **SQL**a další. Zaškrtněte políčka před uzly, které chcete vybrat. Nové čítače se zobrazí v podokně **výběr ve verzi Preview** .
+4. Volitelné Zvolením možnosti **Přidat počítač** přidejte nový počítač, který chcete monitorovat. Zobrazí se výzva k zadání názvu. Zadejte název počítače a zobrazí se uzly pod novou položkou. Například **ASP.NET**, **IIS**, **SQL** a další. Zaškrtněte políčka před uzly, které chcete vybrat. Nové čítače se zobrazí v podokně **výběr ve verzi Preview** .
 
 5. Volitelné Do textového pole **značky počítače** zadejte značku, kterou chcete přidružit k počítači. Například "TestMachine12 in lab3".
 

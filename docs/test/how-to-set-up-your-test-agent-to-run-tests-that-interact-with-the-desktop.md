@@ -1,5 +1,7 @@
 ---
 title: Konfigurace testovacího agenta
+description: Naučte se spouštět automatizované testy, které spolupracují s plochou, nastavením agenta tak, aby se spouštěl jako proces namísto služby.
+ms.custom: SEO-VS-2020
 ms.date: 09/18/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 3a94dd07-6d17-402c-ae8f-7947143755c9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 994d5da8af7b00ab8af55681d4a67e9681ebbde6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13949465677301a336f0a4738e903657dbfe2b7f
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287529"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441010"
 ---
 # <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>Postupy: nastavení testovacího agenta pro spouštění testů, které komunikují s plochou
 
@@ -56,10 +58,10 @@ Pomocí následujícího postupu můžete nastavit všechny agenty, kteří jsou
    > [!NOTE]
    > - Uživatel, kterého jste přidali ke spuštění procesu, musí být také přidán jako člen skupiny TeamTestAgentService v počítači pro testovací kontrolér tohoto agenta. Pokud je tento uživatel aktuálním uživatelem, při přidání tohoto uživatele do počítače testovacího kontroléru je nutné se odhlásit nebo restartovat.
    > - Hesla s hodnotou null nejsou pro uživatelské účty podporována.
-   > - Pokud chcete používat IntelliTrace nebo data emulace sítě a diagnostický adaptér, musí být uživatelský účet členem skupiny Administrators. Pokud je v počítači, na kterém běží testovací agent, spuštěn operační systém, který má nejméně privilegovaný uživatelský účet, musíte ho spustit také jako správce (se zvýšenými oprávněními). Pokud uživatelské jméno agenta není ve službě agenta, pokusí se ho přidat, což vyžaduje oprávnění k testovacímu kontroléru.
+   > - Pokud chcete používat IntelliTrace nebo data emulace sítě a diagnostický adaptér, musí být uživatelský účet členem skupiny Administrators. Pokud je v počítači, na kterém běží testovací agent, spuštěný operační systém, který má Least-Privileged uživatelský účet, musíte ho spustit také jako správce (se zvýšenými oprávněními). Pokud uživatelské jméno agenta není ve službě agenta, pokusí se ho přidat, což vyžaduje oprávnění k testovacímu kontroléru.
    > - Uživatel, který se pokouší použít testovací kontrolér, musí být v účtu uživatele testovacího kontroléru nebo nebude moci spustit testy na řadiči.
 
-4. Chcete-li zajistit, aby počítač s testovacím agentem mohl po restartování spustit testy, můžete nastavit počítač pro automatické přihlášení jako uživatel testovacího agenta. Vyberte **automaticky přihlásit**se. Tím se uživatelské jméno a heslo uloží do šifrovaného formuláře v registru.
+4. Chcete-li zajistit, aby počítač s testovacím agentem mohl po restartování spustit testy, můžete nastavit počítač pro automatické přihlášení jako uživatel testovacího agenta. Vyberte **automaticky přihlásit** se. Tím se uživatelské jméno a heslo uloží do šifrovaného formuláře v registru.
 
    > [!NOTE]
    > Když jste připojeni k testovacímu prostředí pomocí vzdálené plochy nebo připojení k hostům, může docházet k častým neočekávaným odpojením. Jednou z možných příčin ztráty připojení je to, že je počítač nakonfigurovaný tak, aby se automaticky přihlásil k síti.

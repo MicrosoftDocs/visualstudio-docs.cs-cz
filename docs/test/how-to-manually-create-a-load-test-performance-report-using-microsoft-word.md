@@ -1,5 +1,6 @@
 ---
 title: Vytvoření sestavy výkonu zátěžového testu pomocí MS Wordu
+description: Přečtěte si, jak ručně vytvořit sestavy zátěžového testu aplikace Microsoft Word kopírováním a vložením dat ze souhrnného zobrazení a zobrazení grafů pro načtení Výsledky testů.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ ms.assetid: 3b864c75-2699-48c1-a2b4-9651f108c267
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8100ec72beea715a97402f304cfe9dbe6dc54dad
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 2bddd2585d3bc88821fb2c265f21bfda84ed7bef
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810243"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440997"
 ---
 # <a name="how-to-manually-create-a-load-test-performance-report-using-microsoft-word"></a>Postupy: Ruční vytvoření sestavy výkonu zátěžového testu pomocí Microsoft Wordu
 
@@ -31,7 +32,7 @@ Sestavy zátěžového testu aplikace Microsoft Word lze vytvořit ručně zkop�
 
 ## <a name="copy-summary-view-data"></a>Kopírovat data souhrnného zobrazení
 
-1. Pokud se zobrazení souhrnu v okně **Load výsledky testů**aktuálně nezobrazuje, klikněte na panelu nástrojů na možnost **Souhrn** .
+1. Pokud se zobrazení souhrnu v okně **Load výsledky testů** aktuálně nezobrazuje, klikněte na panelu nástrojů na možnost **Souhrn** .
 
 2. V souhrnném zobrazení klikněte pravým tlačítkem a vyberte **Vybrat vše**.
 
@@ -43,7 +44,7 @@ Sestavy zátěžového testu aplikace Microsoft Word lze vytvořit ručně zkop�
 
 ## <a name="copy-graph-view-data"></a>Kopírovat data zobrazení grafu
 
-1. Pokud se v **výsledky testů zatížení**nezobrazuje zobrazení grafů, vyberte na panelu nástrojů možnost **grafy** .
+1. Pokud se v **výsledky testů zatížení** nezobrazuje zobrazení grafů, vyberte na panelu nástrojů možnost **grafy** .
 
 2. Volitelné Přiblížte se ke konkrétnímu grafu, který chcete zkopírovat do dokumentu Microsoft Wordu, jak je znázorněno na následujícím obrázku. Další informace najdete v tématu [Postup: přiblížení v oblasti grafu](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md).
 

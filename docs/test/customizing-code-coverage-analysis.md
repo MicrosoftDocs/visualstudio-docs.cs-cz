@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení analýzy pokrytí kódu
+description: Naučte se používat atribut ExcludeFromCodeCoverageAttribute k vyloučení testovacího kódu z výsledků pokrytí. Můžete zahrnout sestavení mimo vaše řešení.
+ms.custom: SEO-VS-2020
 ms.date: 08/21/2019
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 9171afdc6fe5ca65a8ba2bcae81fe255981cdae6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 99eb322e1eebe2d8845b355cd76a9e34a7516348
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86475988"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441825"
 ---
 # <a name="customize-code-coverage-analysis"></a>Přizpůsobení analýzy pokrytí kódu
 
@@ -28,7 +30,7 @@ Chcete-li zahrnout sestavení, která nejsou součástí vašeho řešení, Zís
 
 Chcete-li přizpůsobit pokrytí kódu, postupujte podle následujících kroků:
 
-1. Přidejte do svého řešení soubor s parametry spuštění. V **Průzkumník řešení**v místní nabídce řešení zvolte možnost **Přidat**  >  **novou položku**a vyberte **soubor XML**. Uložte soubor s názvem, například *CodeCoverage. runsettings*.
+1. Přidejte do svého řešení soubor s parametry spuštění. V **Průzkumník řešení** v místní nabídce řešení zvolte možnost **Přidat**  >  **novou položku** a vyberte **soubor XML**. Uložte soubor s názvem, například *CodeCoverage. runsettings*.
 
 2. Přidejte obsah z ukázkového souboru na konci tohoto článku a pak ho Přizpůsobte podle svých potřeb, jak je popsáno v následujících částech.
 
@@ -65,7 +67,7 @@ Chcete-li vlastní nastavení vypnout a zapnout, zrušte výběr nebo vyberte so
 
 ## <a name="symbol-search-paths"></a>Cesty pro hledání symbolů
 
-Pokrytí kódu vyžaduje soubory symbolů (soubory*PDB* ) pro sestavení. Pro sestavení sestavená vaším řešením jsou soubory symbolů obvykle přítomny společně s binárními soubory a pokrytí kódu funguje automaticky. V některých případech může být vhodné zahrnout odkazovaná sestavení do analýzy pokrytí kódu. V takových případech soubory *. pdb* nemusí být sousedící s binárními soubory, ale můžete zadat cestu pro hledání symbolů v souboru *. runsettings* .
+Pokrytí kódu vyžaduje soubory symbolů (soubory *PDB* ) pro sestavení. Pro sestavení sestavená vaším řešením jsou soubory symbolů obvykle přítomny společně s binárními soubory a pokrytí kódu funguje automaticky. V některých případech může být vhodné zahrnout odkazovaná sestavení do analýzy pokrytí kódu. V takových případech soubory *. pdb* nemusí být sousedící s binárními soubory, ale můžete zadat cestu pro hledání symbolů v souboru *. runsettings* .
 
 ```xml
 <SymbolSearchPaths>
@@ -118,11 +120,11 @@ Následující tabulka ukazuje různé způsoby, jak mohou být sestavení a čl
 
 Uzly include a Exclude používejte regulární výrazy, které nejsou stejné jako zástupné znaky. Ve shodách se nerozlišují velká a malá písmena. Tady je několik příkladů:
 
-- **.\*** odpovídá řetězci libovolných znaků
+- **.\** _ odpovídá řetězci libovolných znaků
 
-- **\\.** odpovídá tečkě "."
+- _ *\\.* * odpovídá tečkě "."
 
-- ** \\ ( \\ )** odpovídá závorce "()"
+- **\\ ( \\ )** odpovídá závorce "()"
 
 - **\\\\** odpovídá oddělovači cesty souboru " \\ "
 

@@ -1,7 +1,7 @@
 ---
 title: require-mssql
 description: Nástroj devinit vyžaduje – MSSQL.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 7d7a5e7d8ba78b98e05d1b9aff3145c3c34c6ca0
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 95558da015462899d0388870fce95d19030fc291
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672130"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442096"
 ---
 # <a name="require-mssql"></a>require-mssql
 
@@ -49,7 +49,7 @@ Nepoužívá se.
 
 Výchozím chováním `require-mssql` nástroje je instalace systému SQL Server.
 
-### <a name="builtin-options"></a>Předdefinované možnosti
+### <a name="built-in-options"></a>Předdefinované možnosti
 
 `require-mssql`Nástroj nastaví řadu argumentů příkazového řádku instalačního programu, aby bylo zajištěno, že instalační program může běžet bez periferních zařízení. Níže jsou uvedené argumenty a dokumentace k nim najdete v [dokumentaci k instalaci SQL](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-ver15&preserve-view=true).
 
@@ -75,7 +75,7 @@ Výchozím chováním `require-mssql` nástroje je instalace systému SQL Server
 | /IACCEPTSQLSERVERLICENSETERMS                                      |             |
 
 ## <a name="example-usage"></a>Příklad použití
-Níže je uveden příklad, jak spustit `require-msssql` pomocí `.devinit.json` . 
+Níže je uveden příklad, jak spustit `require-msssql` pomocí `.devinit.json` .
 
 #### <a name="devinitjson-that-will-install-mssql"></a>.devinit.js, které budou instalovat MSSQL:
 ```json

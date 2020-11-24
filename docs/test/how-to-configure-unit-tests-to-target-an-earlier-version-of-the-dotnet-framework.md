@@ -1,5 +1,7 @@
 ---
 title: Testování částí cílí na starší verzi .NET Framework
+description: Naučte se vytvářet projekty testování částí pro cílení na konkrétní verze .NET Framework. Cílová verze musí být 3,5 nebo vyšší a nemůže se jednat o verzi klienta.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 670ec672c55d591496e26435db5a3112c345a44d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6badbb7723bf4d8ed0c9385558204c2dc4907574
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288166"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441245"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Postupy: konfigurace testů jednotek pro cílení na dřívější verzi .NET Framework
 
@@ -50,7 +52,7 @@ Následující omezení platí při opětovném cílení testovacích projektů,
 
 1. Vytvořte nový projekt Visual Basic **testování částí** .
 
-2. V **Průzkumník řešení**v nabídce klikněte pravým tlačítkem myši na nový projekt testů Visual Basic a vyberte **vlastnosti** .
+2. V **Průzkumník řešení** v nabídce klikněte pravým tlačítkem myši na nový projekt testů Visual Basic a vyberte **vlastnosti** .
 
      Zobrazí se vlastnosti testovacího projektu Visual Basic.
 
@@ -66,7 +68,7 @@ Následující omezení platí při opětovném cílení testovacích projektů,
 
 1. Vytvoří nový projekt **testů jednotek** C#.
 
-2. V **Průzkumník řešení**vyberte **vlastnosti** v nabídce kliknutím pravým tlačítkem myši v novém projektu testů jazyka C#.
+2. V **Průzkumník řešení** vyberte **vlastnosti** v nabídce kliknutím pravým tlačítkem myši v novém projektu testů jazyka C#.
 
    Zobrazí se vlastnosti testovacího projektu v jazyce C#.
 
@@ -81,9 +83,9 @@ Následující omezení platí při opětovném cílení testovacích projektů,
    > [!WARNING]
    > Chcete-li sestavit testy jednotek C++/CLI pro předchozí verzi rozhraní .NET Framework pro Visual C++, je nutné použít odpovídající verzi sady Visual Studio.
 
-2. V **Průzkumník řešení**vyberte **Uvolnit projekt** z nového projektu C++ test.
+2. V **Průzkumník řešení** vyberte **Uvolnit projekt** z nového projektu C++ test.
 
-3. V **Průzkumník řešení**zvolte nenačtený projekt testů jazyka C++ a pak zvolte **Upravit \<project name> . vcxproj**.
+3. V **Průzkumník řešení** zvolte nenačtený projekt testů jazyka C++ a pak zvolte **Upravit \<project name> . vcxproj**.
 
    V editoru se otevře soubor *. vcxproj* .
 
@@ -102,7 +104,7 @@ Následující omezení platí při opětovném cílení testovacích projektů,
 
 5. Uložte a zavřete soubor *. vcxproj* .
 
-6. V **Průzkumník řešení**zvolte v nabídce kliknutím pravým tlačítkem myši v novém projektu testů jazyka C++ možnost vybrat **znovu načíst projekt** .
+6. V **Průzkumník řešení** zvolte v nabídce kliknutím pravým tlačítkem myši v novém projektu testů jazyka C++ možnost vybrat **znovu načíst projekt** .
 
 ## <a name="see-also"></a>Viz také
 

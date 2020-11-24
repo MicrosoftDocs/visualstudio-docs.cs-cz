@@ -1,5 +1,7 @@
 ---
 title: Vytvořit zástupné procedury metody testování částí
+description: Naučte se používat příkaz vytvořit testy jednotek, který umožňuje snadnou konfiguraci testovacího projektu, testovací třídy a zástupné procedury testovací metody v ní.
+ms.custom: SEO-VS-2020
 ms.date: 04/24/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b2712210d4761edb90414e2a27beba74a3bacbf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8afbc73e8c778829a9a1ce5a59d30df6de2f0daa
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288660"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441856"
 ---
 # <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>Vytvořte zástupné procedury metody testování částí pomocí příkazu vytvořit testy jednotek.
 

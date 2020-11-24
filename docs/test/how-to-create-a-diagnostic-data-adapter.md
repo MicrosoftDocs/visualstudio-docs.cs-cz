@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Vytvoření adaptéru diagnostických dat'
+description: Naučte se vytvořit adaptér diagnostických dat vytvořením knihovny tříd pomocí sady Visual Studio a přidáním rozhraní API adaptéru diagnostických dat.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,16 +10,16 @@ ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: bd5d4d14267be51dfea20c43630ff9f31f6d13ac
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 730a3e2618bd5f424d21eaf3eb4ef3621ec1838e
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928616"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95439846"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>Postupy: vytvoření adaptéru diagnostických dat
 
-Pro vytvoření *adaptéru diagnostických dat*můžete vytvořit knihovnu tříd pomocí sady Visual Studio a poté přidat rozhraní API adaptéru diagnostických dat poskytovaná Visual Studio Enterprise do knihovny tříd. <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink>Při zpracování událostí, které jsou vyvolány během testovacího běhu, odešlete všechny informace, které chcete použít jako datový proud nebo soubor do poskytnutého rozhraní. Datové proudy nebo soubory odeslané do <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> jsou uloženy jako přílohy výsledků testu po dokončení testu. Pokud vytvoříte chybu z těchto výsledků testu nebo když použijete [!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)] , soubory jsou také propojeny s chybou.
+Pro vytvoření *adaptéru diagnostických dat* můžete vytvořit knihovnu tříd pomocí sady Visual Studio a poté přidat rozhraní API adaptéru diagnostických dat poskytovaná Visual Studio Enterprise do knihovny tříd. <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink>Při zpracování událostí, které jsou vyvolány během testovacího běhu, odešlete všechny informace, které chcete použít jako datový proud nebo soubor do poskytnutého rozhraní. Datové proudy nebo soubory odeslané do <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> jsou uloženy jako přílohy výsledků testu po dokončení testu. Pokud vytvoříte chybu z těchto výsledků testu nebo když použijete [!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)] , soubory jsou také propojeny s chybou.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -32,7 +34,7 @@ Události jsou vyvolány při spuštění testů, aby adaptér diagnostických d
 
 Následuje částečný seznam klíčových událostí, které můžete použít při vytváření adaptéru diagnostických dat. Úplný seznam událostí adaptéru diagnostických dat naleznete v abstraktní <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents> třídě.
 
-|Událost|Description|
+|Událost|Popis|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart>|Začátek testovacího běhu|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd>|Konec testovacího běhu|
@@ -54,7 +56,7 @@ Pomocí následujícího postupu můžete vytvořit adaptér diagnostických dat
 
 2. Přidejte sestavení **Microsoft.VisualStudio.QualityTools.ExecutionCommon**.
 
-   1. V **Průzkumník řešení**klikněte pravým tlačítkem na **odkazy** a vyberte příkaz **Přidat odkaz** .
+   1. V **Průzkumník řešení** klikněte pravým tlačítkem na **odkazy** a vyberte příkaz **Přidat odkaz** .
 
    2. Vyberte **.NET** a vyhledejte **Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll**.
 
@@ -62,7 +64,7 @@ Pomocí následujícího postupu můžete vytvořit adaptér diagnostických dat
 
 3. Přidejte sestavení **Microsoft. VisualStudio. QualityTools. Common**.
 
-   1. V **Průzkumník řešení**klikněte pravým tlačítkem na **odkazy** a vyberte příkaz **Přidat odkaz** .
+   1. V **Průzkumník řešení** klikněte pravým tlačítkem na **odkazy** a vyberte příkaz **Přidat odkaz** .
 
    2. Vyberte **/.NET**, najděte **Microsoft.VisualStudio.QualityTools.Common.dll**.
 
@@ -79,7 +81,7 @@ Pomocí následujícího postupu můžete vytvořit adaptér diagnostických dat
    using System;
    ```
 
-5. Přidejte <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute> do třídy pro adaptér diagnostických dat, abyste ho identifikovali jako adaptér diagnostických dat a nahradili **Společnost**, **produkt**a **verzi** odpovídajícími informacemi pro adaptér diagnostických dat:
+5. Přidejte <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute> do třídy pro adaptér diagnostických dat, abyste ho identifikovali jako adaptér diagnostických dat a nahradili **Společnost**, **produkt** a **verzi** odpovídajícími informacemi pro adaptér diagnostických dat:
 
    ```csharp
    [DataCollectorTypeUri("datacollector://Company/Product/Version")]

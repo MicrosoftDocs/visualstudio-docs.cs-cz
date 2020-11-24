@@ -1,5 +1,7 @@
 ---
 title: Uložit protokol zátěžového testu pro selhání testu
+description: Naučte se, jak určit, zda má být protokol testu uložen v případě, že test selže v zátěžovém testu, změnou vlastnosti uložit protokol selhání testu.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,16 +11,16 @@ ms.assetid: 08a7fe98-a7f7-4b8d-94a3-ec82b65a2aaf
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: eaef2888cecc7622a3dc589a6bab816b0c134668
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6dbde0f1a1f854bfd7dc6c2f74e3081a33b4796
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287503"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95439898"
 ---
 # <a name="how-to-specify-if-test-failures-are-saved-to-test-logs-using-the-load-test-editor"></a>Postupy: určení, zda se chyby testu ukládají do protokolů testů pomocí Editor zátěžového testu
 
-Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**lze pomocí **Editor zátěžového testu** změnit vlastnosti zátěžového testu tak, aby vyhovovaly vašim požadavkům na testování a cílům. Viz [Návod: vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md). Můžete určit, zda má být protokol testu uložen v případě selhání testu v rámci zátěžového testu změnou vlastnosti **Uložit protokol selhání testu** .
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem** lze pomocí **Editor zátěžového testu** změnit vlastnosti zátěžového testu tak, aby vyhovovaly vašim požadavkům na testování a cílům. Viz [Návod: vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md). Můžete určit, zda má být protokol testu uložen v případě selhání testu v rámci zátěžového testu změnou vlastnosti **Uložit protokol selhání testu** .
 
 > [!NOTE]
 > Úplný seznam vlastností parametrů spuštění a jejich popis naleznete v tématu [Vlastnosti nastavení běhu zátěžového testu](../test/load-test-run-settings-properties.md).

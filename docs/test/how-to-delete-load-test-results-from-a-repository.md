@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Odstranění výsledků zátěžového testu z úložiště'
+description: Naučte se, jak odebrat informace z úložiště Load Výsledky testů pomocí dialogového okna otevřít a spravovat Výsledky testů Load.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.assetid: c2afe36b-d061-4f0e-9580-c18569ec08f9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dd196076fb769f80c36ab8630eebf1e8a0f8b234
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b838d79237fc54f6d44d5b8222489973dea0c6e
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287776"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440945"
 ---
 # <a name="how-to-delete-load-test-results-from-a-repository"></a>Postupy: odstranění výsledků zátěžového testu z úložiště
 
@@ -38,9 +40,9 @@ Výsledky zátěžového testu můžete spravovat z Editor zátěžového testu 
 
 3. V **Zadejte název kontroleru pro hledání výsledků zátěžového testu**, vyberte kontroler. Tuto možnost vyberte, pokud **\<Local - No controller>** chcete získat přístup k výsledkům uloženým místně.
 
-4. V **části Zobrazit výsledky pro následující zátěžový test**vyberte zátěžový test, jehož výsledky chcete zobrazit. Tuto možnost vyberte **\<Show results for all tests>** , pokud chcete zobrazit všechny výsledky pro všechny testy.
+4. V **části Zobrazit výsledky pro následující zátěžový test** vyberte zátěžový test, jehož výsledky chcete zobrazit. Tuto možnost vyberte **\<Show results for all tests>** , pokud chcete zobrazit všechny výsledky pro všechny testy.
 
-     Pokud jsou výsledky zátěžového testu k dispozici, zobrazí se v seznamu **výsledků zátěžového testu** . Sloupce jsou **čas**, **Doba trvání**, **uživatel**, **výsledek**, **test**a **Popis**. **Test** obsahuje název testu a **Popis** obsahuje volitelný popis, který je přidán před spuštěním testu. Sloupec **Description (popis** ) zobrazuje krátké popisy, které byly zadány v **komentářích analýzy** pro tento výsledek testu.
+     Pokud jsou výsledky zátěžového testu k dispozici, zobrazí se v seznamu **výsledků zátěžového testu** . Sloupce jsou **čas**, **Doba trvání**, **uživatel**, **výsledek**, **test** a **Popis**. **Test** obsahuje název testu a **Popis** obsahuje volitelný popis, který je přidán před spuštěním testu. Sloupec **Description (popis** ) zobrazuje krátké popisy, které byly zadány v **komentářích analýzy** pro tento výsledek testu.
 
 5. V seznamu **výsledky zátěžového testu** vyberte výsledek. K výběru více než jednoho výsledku můžete použít klávesu **SHIFT** , klávesu **CTRL** nebo obojí.
 

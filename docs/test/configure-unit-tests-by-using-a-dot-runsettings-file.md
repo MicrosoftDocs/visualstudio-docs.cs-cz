@@ -1,5 +1,7 @@
 ---
 title: Konfigurace testů jednotek pomocí souboru. runsettings
+description: Naučte se, jak pomocí souboru. runsettings v aplikaci Visual Studio konfigurovat testy jednotek, které jsou spouštěny z příkazového řádku, z rozhraní IDE nebo z pracovního postupu sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 07/15/2020
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 8194a5f61b45ac2b4358922aaf8c7c7b8bea4ae9
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: ca15e265f9e6f3188826c019a8c81d02a7668bcf
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518762"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442687"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
@@ -65,7 +67,7 @@ Chcete-li zadat soubor parametrů běhu v rozhraní IDE, vyberte možnost **test
 
 ![Výběr nabídky soubor nastavení testu v aplikaci Visual Studio 2017](media/select-test-settings-file.png)
 
-Soubor se zobrazí v nabídce nastavení testu a můžete ho vybrat nebo zrušit jeho výběr. Když vyberete možnost **Analyzovat pokrytí kódu** , soubor parametrů běhu se použije vždy.
+Soubor se zobrazí v nabídce nastavení testu a můžete ho vybrat nebo zrušit jeho výběr. Když vyberete možnost **Analyzovat pokrytí kódu**, soubor parametrů běhu se použije vždy.
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
@@ -126,7 +128,7 @@ Chcete-li zadat soubor parametrů běhu v rozhraní IDE, vyberte možnost **test
 
 ![Výběr nabídky soubor nastavení testu v aplikaci Visual Studio 2019](media/vs-2019/select-settings-file.png)
 
-Soubor se zobrazí v nabídce Test a můžete ho vybrat nebo zrušit jeho výběr. Když vyberete možnost **Analyzovat pokrytí kódu** , soubor parametrů běhu se použije vždy.
+Soubor se zobrazí v nabídce Test a můžete ho vybrat nebo zrušit jeho výběr. Když vyberete možnost **Analyzovat pokrytí kódu**, soubor parametrů běhu se použije vždy.
 ::: moniker-end
 
 ## <a name="specify-a-run-settings-file-from-the-command-line"></a>Zadání souboru parametrů spuštění z příkazového řádku
@@ -233,7 +235,7 @@ Chcete-li přizpůsobit jakýkoli jiný typ adaptérů diagnostických dat, pou�
 
 ### <a name="blame-data-collector"></a>Kolekce dat viny
 
-Tato možnost vám může přispět k izolaci problematického testu, který způsobí selhání hostitele testu. Spuštění kolektoru vytvoří výstupní soubor ( *Sequence.xml* ) v *TestResults* , který zachycuje pořadí provádění testu před selháním.
+Tato možnost vám může přispět k izolaci problematického testu, který způsobí selhání hostitele testu. Spuštění kolektoru vytvoří výstupní soubor (*Sequence.xml*) v *TestResults*, který zachycuje pořadí provádění testu před selháním.
 
 ```xml
 <DataCollector friendlyName="blame" enabled="True">
@@ -312,7 +314,7 @@ Tato nastavení jsou specifická pro testovací adaptér, který spouští testo
 |**IgnoreTestImpact**|false (nepravda)|Funkce dopadu testu určuje prioritu testů, které jsou ovlivněny nedávnými změnami při spuštění v MSTest nebo z Microsoft Test Manager (zastaralé v aplikaci Visual Studio 2017). Toto nastavení funkci deaktivuje. Další informace naleznete v tématu [které testy mají být spuštěny od předchozího sestavení](/previous-versions/dd286589(v=vs.140)).|
 |**SettingsFile**||Soubor nastavení testu, který se má použít s adaptérem MSTest, můžete zadat tady. Můžete také zadat soubor nastavení testu [z nabídky nastavení](#specify-a-run-settings-file-in-the-ide).<br /><br />Pokud zadáte tuto hodnotu, musíte také nastavit **položku forcedlegacymode** na **hodnotu true**.<br /><br />`<ForcedLegacyMode>true</ForcedLegacyMode>`|
 |**KeepExecutorAliveAfterLegacyRun**|false (nepravda)|Po dokončení běhu testu je adaptér MSTest vypnut. Všechny procesy, které jsou spuštěny jako součást testu, jsou také ukončeny. Pokud chcete ponechat prováděcí modul testu aktivní, nastavte hodnotu na **true**. Pomocí tohoto nastavení můžete například zachovat, aby prohlížeč běžel mezi kódovanými testy uživatelského rozhraní.|
-|**DeploymentEnabled**|true|Pokud nastavíte hodnotu **false** , položky nasazení, které jste určili v testovací metodě, se zkopírují do adresáře nasazení.|
+|**DeploymentEnabled**|true|Pokud nastavíte hodnotu **false**, položky nasazení, které jste určili v testovací metodě, se zkopírují do adresáře nasazení.|
 |**CaptureTraceOutput**|true|Můžete zapisovat do trasování ladění z testovací metody pomocí <xref:System.Diagnostics.Trace.WriteLine%2A?displayProperty=nameWithType> .|
 |**DeleteDeploymentDirectoryAfterTestRunIsComplete**|true|Chcete-li zachovat adresář nasazení po spuštění testu, nastavte tuto hodnotu na **false**.|
 |**MapInconclusiveToFailed**|false (nepravda)|Pokud je test dokončen s neprůkazovým stavem, je namapován na stav přeskočeno v **Průzkumníku testů**. Pokud chcete, aby se neprůkazné testy zobrazovaly jako neúspěšné, nastavte hodnotu na **true**.|
@@ -464,7 +466,7 @@ Uzel **RunConfiguration** by měl obsahovat uzel **EnvironmentVariables** . Prom
 > [!NOTE]
 > Vzhledem k tomu, že tyto proměnné prostředí by měly být vždy nastaveny při spuštění testovacího hostitele, testy by měly vždy běžet v samostatném procesu. V tomto případě se příznak */inisolation.* nastaví, když jsou proměnné prostředí, aby se testovací hostitel vždycky vyvolal.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Konfigurace testovacího běhu](https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md)
 - [Přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md)

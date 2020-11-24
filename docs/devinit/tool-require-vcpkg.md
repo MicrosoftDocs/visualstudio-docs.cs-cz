@@ -1,7 +1,7 @@
 ---
 title: require-vcpkg
 description: devinit Tool vyžaduje – vcpkg.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 6a9559da218912b6e045c174b7ed20a60f93062e
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 7fabd803645e9e79e273683c364ca427793c0aff
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671744"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442289"
 ---
 # <a name="require-vcpkg"></a>require-vcpkg
 
@@ -42,10 +42,10 @@ Nepoužívá se.
 
 ### <a name="default-behavior"></a>Výchozí chování
 
-Výchozím chováním `require-vcpkg` nástroje je instalace vcpkg a jeho přidání do cesty (pouze Windows).
+Výchozím chováním `require-vcpkg` nástroje je instalace vcpkg a jeho přidání do `PATH` .
 
 ## <a name="example-usage"></a>Příklad použití
-Níže je uveden příklad, jak spustit `require-vcpkg` pomocí `.devinit.json` . 
+Níže je uveden příklad, jak spustit `require-vcpkg` pomocí `.devinit.json` .
 
 #### <a name="devinitjson-that-will-install-vcpkg"></a>.devinit.js, které budou instalovat vcpkg:
 ```json

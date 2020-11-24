@@ -1,7 +1,7 @@
 ---
 title: windowsfeature-list
 description: devinit – seznam nástrojů WindowsFeature
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: b521009affbc1db81676481e33640a69e619aaf3
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 07b92e8783393fa19e5c09344a396a6c5c4fc011
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671710"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442124"
 ---
 # <a name="windowsfeature-list"></a>windowsfeature-list
 
@@ -41,7 +41,7 @@ Nepoužívá se. Přeskočen.
 Výchozím chováním tohoto `windowsfeature-list` nástroje je vypsat stav povolit/zakázat všechny funkce systému Windows.
 
 ## <a name="example-usage"></a>Příklad použití
-Níže je uveden příklad, jak spustit `windowsfeature-list` pomocí `.devinit.json` . 
+Níže je uveden příklad, jak spustit `windowsfeature-list` pomocí `.devinit.json` .
 
 #### <a name="devinitjson-that-will-list-the-state-of-all-windows-features"></a>.devinit.jsv seznamu se zobrazí stav všech funkcí Windows:
 ```json

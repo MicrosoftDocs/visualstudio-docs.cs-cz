@@ -1,5 +1,7 @@
 ---
 title: Začínáme s testováním jednotek
+description: Pomocí sady Visual Studio definujte a spusťte testy jednotek, abyste zachovali stav kódu, zajistili pokrytí kódu a vyhledali chyby a chyby před vašimi zákazníky.
+ms.custom: SEO-VS-2020
 ms.date: 04/07/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c167e98f9419842876aed713e008b8746064669a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3daff1a7b7c2e62b4ca4a508c5c8dd31261a40dd
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82153038"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441778"
 ---
 # <a name="get-started-with-unit-testing"></a>Začínáme s testováním jednotek
 
@@ -41,7 +43,7 @@ Tato část popisuje, jak vytvořit projekt testování částí.
       }
    ```
 
-1. V **Průzkumník řešení**vyberte uzel řešení. Pak na horním panelu nabídek vyberte **soubor**  >  **Přidat**  >  **Nový projekt**.
+1. V **Průzkumník řešení** vyberte uzel řešení. Pak na horním panelu nabídek vyberte **soubor**  >  **Přidat**  >  **Nový projekt**.
 
 1. V dialogovém okně Nový projekt vyhledejte šablonu projektu testování částí pro testovací rozhraní, které chcete použít, a vyberte ji.
 
@@ -236,7 +238,7 @@ Postup vytvoření jednotkových testů, které používají [nunit](https://nun
 
 4. Přidejte odkaz z testovacího projektu do projektu, který obsahuje kód, který chcete otestovat.
 
-   V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **Přidat**  >  **odkaz**. (Můžete také přidat odkaz z místní nabídky na uzlu **odkazy** nebo **závislosti** .)
+   V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a pak vyberte **Přidat**  >  **odkaz**. (Můžete také přidat odkaz z místní nabídky na uzlu **odkazy** nebo **závislosti** .)
 
 5. Přidejte kód do testovací metody.
 

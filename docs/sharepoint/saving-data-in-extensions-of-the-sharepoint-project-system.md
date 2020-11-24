@@ -1,6 +1,8 @@
 ---
 title: Ukládání dat v rozšířeních systému projektu služby SharePoint | Microsoft Docs
 titleSuffix: ''
+description: Naučte se, jak uložit řetězcová data, která se přetrvají po ukončení projektu služby SharePoint, který obsahuje rozšíření.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 30142b9aaec3df7ce0d43845e369eb538533de62
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 1e3c05b9ad570febcfc28fec367a8d180dd2b222
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583863"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440646"
 ---
 # <a name="save-data-in-extensions-of-the-sharepoint-project-system"></a>Uložení dat v rozšířeních systému projektu služby SharePoint
   Když rozšíříte systém projektu služby SharePoint, můžete uložit řetězcová data, která se budou přetrvávat po zavření projektu služby SharePoint. Data jsou obvykle přidružena k určité položce projektu nebo samotnému projektu.

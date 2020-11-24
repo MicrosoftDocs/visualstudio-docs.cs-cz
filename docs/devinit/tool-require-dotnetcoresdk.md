@@ -1,7 +1,7 @@
 ---
 title: require-dotnetcoresdk
 description: devinit Tool vyžaduje – dotnetcoresdk.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: b75f7961008c8b575cd21b42fdb5246c3b65078d
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: fe860b697bb5a85ec2bb3c8221118254552b5301
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672137"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441690"
 ---
 # <a name="require-dotnetcoresdk"></a>require-dotnetcoresdk
 
@@ -48,7 +48,7 @@ Další možnosti konfigurace mohou být předány jako hodnota `additionalOptio
 Výchozím chováním `require-dotnetcoresdk` nástroje je instalace verze .NET Core SDK uvedená v `global.json` souboru [(dokumentace)](/dotnet/core/tools/global-json?tabs=netcore3x) v aktuálním pracovním adresáři. Pokud `global.json` se nenajde žádný soubor, `require-dotnetcoresdk` nainstaluje nejnovější aktuální verzi .NET Core SDK a sdíleného modulu runtime.
 
 ## <a name="example-usage"></a>Příklad použití
-Níže jsou uvedeny příklady, jak spustit `require-dotnetcoresdk` pomocí `.devinit.json` . 
+Níže jsou uvedeny příklady, jak spustit `require-dotnetcoresdk` pomocí `.devinit.json` .
 
 #### <a name="devinitjson-that-will-install-the-latest-version-of-net-core"></a>.devinit.js, které budou instalovat nejnovější verzi rozhraní .NET Core:
 ```json

@@ -1,5 +1,7 @@
 ---
-title: Kurz pro programový test uživatelského rozhraní řízený daty
+title: Kurz Data-Driven programový test uživatelského rozhraní
+description: Naučte se používat datově řízené testy UI k testování různých podmínek spuštěním testů několikrát s různými hodnotami parametrů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ada1f297bbb30fbe636042c87aae42849c1b6b7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d9c4deb02bea8bf6e3dc3615ba9c5f0eddc6c877
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595355"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442674"
 ---
 # <a name="create-a-data-driven-coded-ui-test"></a>Vytvořit datově řízený programový test uživatelského rozhraní
 
@@ -68,7 +70,7 @@ Tato ukázka vytvoří programový test uživatelského rozhraní, který je spu
 
     Výsledek testu, který ukazuje, zda byl test úspěšný nebo neúspěšný, se zobrazí v okně **Průzkumník testů** . Chcete-li otevřít okno Průzkumník testů, v nabídce **test** zvolte možnost **okna** a pak zvolte možnost **Průzkumník testů**.
 
-6. Vzhledem k tomu, že zdroj dat je možné použít také pro hodnoty parametru kontrolního výrazu, které jsou používány testem k ověření očekávaných hodnot – přidáváme kontrolní výraz pro ověření, že součet dvou čísel je správný. Umístěte kurzor do zkušební metody zobrazené výše, otevřete nabídku klikněte pravým tlačítkem myši a zvolte příkaz **generovat kód pro programový test uživatelského rozhraní**a pak **použijte Tvůrce programového testu uživatelského rozhraní**.
+6. Vzhledem k tomu, že zdroj dat je možné použít také pro hodnoty parametru kontrolního výrazu, které jsou používány testem k ověření očekávaných hodnot – přidáváme kontrolní výraz pro ověření, že součet dvou čísel je správný. Umístěte kurzor do zkušební metody zobrazené výše, otevřete nabídku klikněte pravým tlačítkem myši a zvolte příkaz **generovat kód pro programový test uživatelského rozhraní** a pak **použijte Tvůrce programového testu uživatelského rozhraní**.
 
     Namapujte ovládací prvek text v kalkulačce, který zobrazuje součet.
 

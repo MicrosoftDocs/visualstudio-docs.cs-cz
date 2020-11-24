@@ -1,5 +1,7 @@
 ---
 title: Úpravy programových testů uživatelského rozhraní
+description: Naučte se používat Editor programového testu uživatelského rozhraní k vyhledání, zobrazení a úpravám testovacích metod a akcí uživatelského rozhraní. Pomocí mapování ovládacích prvků uživatelského rozhraní můžete zobrazit a upravit odpovídající ovládací prvky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: d6c2fcf3d8807e9095abc9546e8bf1e39aecb8ea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f78839280ae19da5020b08d499d347c0537a045
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288725"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441440"
 ---
 # <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>Úpravy programových testů uživatelského rozhraní pomocí editoru programových testů uživatelského rozhraní
 
@@ -57,11 +59,11 @@ Když otevřete soubor *UIMap. UITest* přidružený k zakódovanému testu UI, 
 
 ## <a name="open-a-coded-ui-test"></a>Otevření programového testu uživatelského rozhraní
 
-Pomocí editoru programového **testu UI**můžete zobrazit a upravit programový test UI založený na jazyce Visual C# a Visual Basic.
+Pomocí editoru programového **testu UI** můžete zobrazit a upravit programový test UI založený na jazyce Visual C# a Visual Basic.
 
 ![Místní nabídka upravit pomocí Tvůrce programového testu uživatelského rozhraní](../test/media/editcodeduitest.png)
 
-V **Průzkumník řešení**otevřete místní nabídku pro *UIMap. UITest* a klikněte na **otevřít**. Programový test uživatelského rozhraní se zobrazí v **editoru programového testu UI**. Nyní můžete zobrazit a upravit zaznamenané metody, akce a odpovídající ovládací prvky v programovém testu uživatelského rozhraní.
+V **Průzkumník řešení** otevřete místní nabídku pro *UIMap. UITest* a klikněte na **otevřít**. Programový test uživatelského rozhraní se zobrazí v **editoru programového testu UI**. Nyní můžete zobrazit a upravit zaznamenané metody, akce a odpovídající ovládací prvky v programovém testu uživatelského rozhraní.
 
 > [!TIP]
 > Když vyberete akci uživatelského rozhraní, která je umístěna v metodě v podokně **akce uživatelského rozhraní** , je zvýrazněn odpovídající ovládací prvek. Můžete také upravit akci uživatelského rozhraní nebo vlastnosti ovládacích prvků.
@@ -86,7 +88,7 @@ Po dokončení úprav uložte změny do souboru *UIMap. Designer* kliknutím na 
 
 ### <a name="tips"></a>Tipy
 
-- Pokud se okno **vlastnosti** nezobrazí, stiskněte a podržte klávesu **ALT** , stiskněte klávesu **ENTER**nebo stiskněte klávesu **F4**.
+- Pokud se okno **vlastnosti** nezobrazí, stiskněte a podržte klávesu **ALT** , stiskněte klávesu **ENTER** nebo stiskněte klávesu **F4**.
 
 - Provedené změny vlastností vrátíte zpět výběrem možnosti **zpět** v nabídce **Úpravy** nebo stisknutím klávesy **CTRL** + **Z**.
 

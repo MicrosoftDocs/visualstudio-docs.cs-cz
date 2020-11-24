@@ -1,7 +1,7 @@
 ---
 title: choco-install
 description: devinit Tool Choco – instalace pro instalaci balíčků čokolády
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 82c1bfbaed4a8ae5540447991f1a097760ade0bd
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: d26b2aa89ad295b63f0115acae11148c505720a5
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671938"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440508"
 ---
 # <a name="choco-install"></a>choco-install
 
@@ -26,11 +26,11 @@ ms.locfileid: "94671938"
 
 Pokud `input` `additionalOptions` jsou vlastnosti i vynechány nebo jsou prázdné, nástroj neprovede žádnou akci.
 
-| Název                                             | Typ   | Vyžadováno | Hodnota                                                                                                          |
-|--------------------------------------------------|--------|----------|----------------------------------------------------------------------------------------------------------------|
-| **vyjádření**                                     | řetězec | No       | Volitelná vlastnost komentářů Nepoužívá se.                                                                          |
-| [**vstup**](#input)                              | řetězec | No       | Balíček, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .                                                 |
-| [**additionalOptions**](#additional-options)     | řetězec | No       | Další možnosti, které se mají předat nástroji Podrobnosti najdete níže v části [Další možnosti](#additional-options) .       |
+| Název                                             | Typ   | Vyžadováno  | Hodnota                                                                                                          |
+|--------------------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------|
+| **vyjádření**                                     | řetězec | No        | Volitelná vlastnost komentářů Nepoužívá se.                                                                          |
+| [**vstup**](#input)                              | řetězec | Ano       | Balíček, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .                                                 |
+| [**additionalOptions**](#additional-options)     | řetězec | No        | Další možnosti, které se mají předat nástroji Podrobnosti najdete níže v části [Další možnosti](#additional-options) .       |
 
 ### <a name="input"></a>Vstup
 
@@ -50,8 +50,12 @@ Další možnosti konfigurace mohou být předány jako hodnota `additionalOptio
 | **--No-Progress**     | Nezobrazovat průběh – procento průběhu nebude zobrazeno.                                         |
 | **--Skip-PowerShell** | Přeskočit PowerShell – chocolateyInstall.ps1 nebude spuštěná.                                              |
 
+### <a name="default-behavior"></a>Výchozí chování
+
+Výchozím chováním `choco-install` nástroje je chyba, protože `input` vlastnost je povinná.
+
 ## <a name="example-usage"></a>Příklad použití
-Níže jsou uvedeny příklady, jak spustit `choco-install` pomocí `.devinit.json` . 
+Níže jsou uvedeny příklady, jak spustit `choco-install` pomocí `.devinit.json` .
 
 #### <a name="devinitjson-that-will-install-packages-listed-in-packagesconfig"></a>.devinit.js, které budou instalovat balíčky uvedené v packages.config:
 ```json

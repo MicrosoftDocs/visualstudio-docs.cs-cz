@@ -1,5 +1,7 @@
 ---
 title: Analýza Výsledky testů načítání a chyb
+description: Naučte se zobrazovat podokna, která poskytují různé způsoby analýzy výsledků zátěžového testu, jako je například graf v čase nebo podrobné tabulky.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.assetid: 0a84bda3-6051-45eb-9c7f-d57419e1f97d
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c5e337c30a4b6a08f123ef7ee33dee704e9412de
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7787b3b0afaed0bc3592b458646b97151e309905
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565172"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442505"
 ---
 # <a name="analyze-load-test-results-and-errors-in-the-tables-view-of-the-load-test-analyzer"></a>Analýza výsledků zátěžových testů a chyb v zobrazení tabulky analyzátoru zátěžového testu
 
@@ -64,7 +66,7 @@ V následující tabulce jsou uvedeny tabulky, které jsou k dispozici pro anal�
 
 ## <a name="collect-percentile-data"></a>Shromáždit data percentilu
 
-Některé tabulky zátěžových testů mohou obsahovat další sloupce, které zahrnují data percentilu a doby odezvy rozdělené do skupin na základě emulace sítě. Ve výchozím nastavení se tato data neshromažďují. Data percentilu jsou k dispozici pouze v případě, že ukládáte výsledky do databáze a ne když ukládáte místně. Další informace najdete v tématu [Správa výsledků zátěžových testů v úložišti load výsledky testů](../test/manage-load-test-results-in-the-load-test-results-repository.md). Kromě toho ke shromáždění těchto dat v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte konkrétní uzel nastavení spuštění, který se má změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **StatisticsOnly** nebo **AllIndividualDetails**. Další informace najdete v tématu [Postup: zobrazení odpovědi na webovou stránku](../test/how-to-view-web-page-response-time-in-a-load-test.md).
+Některé tabulky zátěžových testů mohou obsahovat další sloupce, které zahrnují data percentilu a doby odezvy rozdělené do skupin na základě emulace sítě. Ve výchozím nastavení se tato data neshromažďují. Data percentilu jsou k dispozici pouze v případě, že ukládáte výsledky do databáze a ne když ukládáte místně. Další informace najdete v tématu [Správa výsledků zátěžových testů v úložišti load výsledky testů](../test/manage-load-test-results-in-the-load-test-results-repository.md). Kromě toho ke shromáždění těchto dat v **Editor zátěžového testu** pod uzlem **nastavení spuštění** vyberte konkrétní uzel nastavení spuštění, který se má změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **StatisticsOnly** nebo **AllIndividualDetails**. Další informace najdete v tématu [Postup: zobrazení odpovědi na webovou stránku](../test/how-to-view-web-page-response-time-in-a-load-test.md).
 
 ## <a name="the-requests-table"></a>Tabulka požadavků
 
@@ -74,13 +76,13 @@ V následující tabulce jsou uvedeny sloupce v tabulce **requests** :
 
 |Sloupec|Popis|Ve výchozím nastavení viditelné|
 |-|-|-|
-|**Žádost**|Adresa URL požadavku Například *home.html*nebo *orange-arrow.gif*.|Ano|
+|**Žádost**|Adresa URL požadavku Například *home.html* nebo *orange-arrow.gif*.|Ano|
 |**Scénář**|Název scénáře.|Ano|
 |**Test**|Název testu.|Ano|
 |**Celkem**|Celkový počet této žádosti testu výkonnosti webu vydaný během běhu zátěžového testu. Celkový součet zahrnuje úspěšné a neúspěšné požadavky, ale nezahrnuje požadavky uložené v mezipaměti, protože nejsou vydané webovému serveru.|Ano|
 |**Předaný**|Počet, kolikrát byl požadavek vydán a předán.|Ne|
 |**Neúspěšný**|Počet vydaných a neúspěšných požadavků. Položky v tomto sloupci se zobrazí jako hypertextové odkazy. Můžete vybrat libovolný hypertextový odkaz a zobrazit seznam jednotlivých chyb v dialogovém okně **chyby zátěžového testu** . Další informace naleznete v tématu [Analýza výsledků zátěžového testu](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|Ano|
-|**Ukládán**|Celkový počet, kolikrát již byl požadavek uložen do mezipaměti.|Ne|
+|**V mezipaměti**|Celkový počet, kolikrát již byl požadavek uložen do mezipaměti.|Ne|
 |**Počet požadavků za sekundu**|Sazba za sekundu žádosti během běhu zátěžového testu.|Ne|
 |**Úspěšné za sekundu**|Sazba za sekundu této žádosti během běhu zátěžového testu pro instance této žádosti, které prošly.|Ne|
 |**Selhání za sekundu**|Sazba za sekundu této žádosti během běhu zátěžového testu pro instance této žádosti, která selhala.|Ne|
@@ -214,7 +216,7 @@ Pokud je povoleno trasování SQL, vytvoří se soubor během spuštění zátě
 
 ## <a name="tile-load-test-tables"></a>Tabulky zátěžových testů dlaždic
 
-Při zobrazení výsledků zátěžového testu můžete zobrazit data jako podrobné tabulky. Chcete-li přepnout na zobrazení tabulky, vyberte možnost **tabulky** na panelu nástrojů **zátěžového testu** . Dostupné tabulky jsou **chyby**, **stránky**, **požadavky**, **trasování SQL**, **testy**, **prahové hodnoty**a **transakce**. Další informace naleznete v tématu [práce s tabulkami zátěžových testů](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+Při zobrazení výsledků zátěžového testu můžete zobrazit data jako podrobné tabulky. Chcete-li přepnout na zobrazení tabulky, vyberte možnost **tabulky** na panelu nástrojů **zátěžového testu** . Dostupné tabulky jsou **chyby**, **stránky**, **požadavky**, **trasování SQL**, **testy**, **prahové hodnoty** a **transakce**. Další informace naleznete v tématu [práce s tabulkami zátěžových testů](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
 V tabulkovém zobrazení můžete zobrazit až čtyři tabulky najednou, aniž by se tabulky překrývaly.
 

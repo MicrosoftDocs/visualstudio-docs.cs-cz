@@ -1,5 +1,7 @@
 ---
 title: Element ProjectOutputFile – | Microsoft Docs
+description: Získejte referenční informace o elementu ProjectOutputFile –, který představuje výstup samostatného projektu v odkazu schématu XML položky projektu SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 12f399b7a09c18c77482475575ca387a11955762
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffe6f95bdfd7795c837aaaa25ec7ef2a35a7ae76
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542386"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442025"
 ---
 # <a name="projectoutputfile-element"></a>ProjectOutputFile – element
   Představuje výstup samostatného projektu, který má být zahrnut do položky projektu při nasazení do služby SharePoint.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <ProjectOutputFile ProjectId = "GUID of the project"
@@ -62,7 +64,7 @@ ms.locfileid: "85542386"
 
 |Vlastnost|Hodnota|
 |-|-|
-|**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Hosting**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|

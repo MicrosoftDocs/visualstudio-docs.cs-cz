@@ -1,5 +1,7 @@
 ---
 title: Úpravy zátěžových testů
+description: Přečtěte si o rozdílech mezi scénáři, sadami čítačů a s parametry spuštění, které definují zátěžové testy.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: ba16ed02-137e-40bf-a4cb-45d87d922d37
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b95689871a987c018720c529743b8447f39b2bf6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81825b2a9060d75a792e73519486275fd34569a4
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288699"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441466"
 ---
 # <a name="edit-load-tests"></a>Upravit zátěžové testy
 
@@ -22,7 +24,7 @@ Zátěžové testy spouštějí testy webového výkonu nebo testy jednotek pro 
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Zátěžový test je definován *scénáři*, *sadami čítačů*a *parametry spuštění*. Následující ilustrace vysvětluje rozdíly mezi [scénáři](../test/edit-load-test-scenarios.md), [sadami čítačů](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)a [parametry spuštění](../test/load-test-run-settings-properties.md):
+Zátěžový test je definován *scénáři*, *sadami čítačů* a *parametry spuštění*. Následující ilustrace vysvětluje rozdíly mezi [scénáři](../test/edit-load-test-scenarios.md), [sadami čítačů](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)a [parametry spuštění](../test/load-test-run-settings-properties.md):
 
 ![Architektura zátěžového testu](../test/media/load_test_editor.png)
 

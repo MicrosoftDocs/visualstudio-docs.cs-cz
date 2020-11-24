@@ -1,7 +1,7 @@
 ---
 title: require-vscomponent
 description: devinit Tool vyžaduje – vscomponent.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: e9d2f546e99f83b4c53d0b76abfdaf8ec91868ac
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 4a4725ac0757f43830741afd5aefd540633f05af
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672109"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442275"
 ---
 # <a name="require-vscomponent"></a>require-vscomponent
 
@@ -45,7 +45,7 @@ Nepoužívá se.
 Výchozím chováním `require-vscomponent` nástroje je vyhledat `.vsconfig` soubor v aktuálním adresáři a spustit instalační program pro Visual Studio s těmito podrobnostmi v tichém režimu. `require-vscomponent` podporuje pouze úpravu stávající instalace sady Visual Studio.
 
 ## <a name="example-usage"></a>Příklad použití
-Níže je uveden příklad, jak spustit `require-vscomponent` pomocí `.devinit.json` . 
+Níže je uveden příklad, jak spustit `require-vscomponent` pomocí `.devinit.json` .
 
 #### <a name="devinitjson-that-will-import-the-configurations-of-a-given-vsconfig-file-path"></a>.devinit.js, která importuje konfigurace dané cesty k souboru. vsconfig:
 ```json

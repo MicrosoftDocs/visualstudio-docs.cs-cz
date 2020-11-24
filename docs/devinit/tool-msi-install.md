@@ -1,7 +1,7 @@
 ---
 title: msi-install
 description: devinit Tool for Msiexec.
-ms.date: 10/13/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: ab56157d531e762ed36f8c2349e50e76596b05ec
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 8dfde12f58161dfcf86eeda2b9714f705685d39a
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672171"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440420"
 ---
 # <a name="msi-install"></a>msi-install
 
@@ -46,15 +46,19 @@ Nástroj pro instalaci MSI nastaví řadu `msiexec` argumentů příkazového ř
 
 | Název          | Popis                                                                                                                                                                                   |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /i            | Spustí normální instalaci.                                                                                                                                                                    | 
-| /quiet        | Určuje tichý režim bez nutnosti zásahu uživatele.                                                                                                                                        | 
-| /Qn           | Určuje, že během procesu instalace není žádné uživatelské rozhraní.                                                                                                                                           | 
-| /passive      | Určuje bezobslužný režim, ve kterém se při instalaci zobrazuje indikátor průběhu.                                                                                                                    | 
-| /l * V          | Zapne protokolování a protokolování všech informací, včetně podrobných informací, do `devinit.log` souboru v místní složce Temp v počítači. Pokud se nástroj nezdařil, je zobrazena cesta k souboru protokolu.      | 
-| /norestart    | Zastaví restart počítače po dokončení instalace, ale vrátí ukončovací kód 3010, pokud je potřeba restartovat počítač.                                                                  | 
+| /i            | Spustí normální instalaci.                                                                                                                                                                    |
+| /quiet        | Určuje tichý režim bez nutnosti zásahu uživatele.                                                                                                                                        |
+| /Qn           | Určuje, že během procesu instalace není žádné uživatelské rozhraní.                                                                                                                                           |
+| /passive      | Určuje bezobslužný režim, ve kterém se při instalaci zobrazuje indikátor průběhu.                                                                                                                    |
+| /l * V          | Zapne protokolování a protokolování všech informací, včetně podrobných informací, do `devinit.log` souboru v místní složce Temp v počítači. Pokud se nástroj nezdařil, je zobrazena cesta k souboru protokolu.      |
+| /norestart    | Zastaví restart počítače po dokončení instalace, ale vrátí ukončovací kód 3010, pokud je potřeba restartovat počítač.                                                                  |
+
+### <a name="default-behavior"></a>Výchozí chování
+
+Výchozím chováním `msi-install` nástroje je chyba, protože `input` vlastnost je povinná.
 
 ## <a name="example-usage"></a>Příklad použití
-Níže je uveden příklad, jak spustit `msi-install` pomocí `.devinit.json` . 
+Níže je uveden příklad, jak spustit `msi-install` pomocí `.devinit.json` .
 
 #### <a name="devinitjson-that-will-install-the-7-zip-msi"></a>.devinit.js, na které se nainstaluje soubor MSI pro 7-zip:
 ```json

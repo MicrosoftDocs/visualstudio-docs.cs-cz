@@ -1,5 +1,7 @@
 ---
 title: 'Napodobeniny Microsoftu: generovat & kód kompilace; zásady vytváření názvů'
+description: Seznamte se s možnostmi a problémy v případě napodobenin generování a kompilace kódu, včetně zásad vytváření názvů pro falešné generované typy, členy a parametry.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 9a1ba469f460e966be581b87226f2a89faac8186
-ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
+ms.openlocfilehash: e3ebb1439c7b8eb958d8e7126ca0197462e89a09
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93325943"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441630"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Vytváření, kompilace a konvence pojmenování kódu v Napodobeniny Microsoft
 
@@ -32,7 +34,7 @@ Tento článek popisuje možnosti a problémy v případě napodobeniny generov�
 
 Generování zástupných typů je konfigurováno v souboru XML s příponou *. falešné* soubory. Rozhraní falešného rozhraní je integrováno do procesu sestavení prostřednictvím vlastních úloh nástroje MSBuild a detekuje tyto soubory v čase sestavení. Generátor falešného kódu zkompiluje typy zástupných procedur do sestavení a přidá odkaz na projekt.
 
-Následující příklad znázorňuje typy zástupných procedur definované v *FileSystem.dll* :
+Následující příklad znázorňuje typy zástupných procedur definované v *FileSystem.dll*:
 
 ```xml
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">
@@ -183,7 +185,7 @@ Chcete-li se tomuto problému vyhnout, je nutné, aby při přidávání soubor�
 
 S ohledem na sestavení MyAssembly a verze 1.2.3.4 je název sestavení falešného formátu MyAssembly. 1.2.3.4. napodobeniny.
 
-Tuto verzi můžete změnit nebo odebrat úpravou atributu verze elementu sestavení v *. napodobeniny* :
+Tuto verzi můžete změnit nebo odebrat úpravou atributu verze elementu sestavení v *. napodobeniny*:
 
 ```xml
 attribute of the Assembly element in the .fakes:
@@ -197,7 +199,7 @@ attribute of the Assembly element in the .fakes:
 
 ### <a name="shim-type-and-stub-type-naming-conventions"></a>Zásady pojmenování typu překrytí a zástupných procedur
 
-**Obory názvů**
+**Jmenné prostory**
 
 - . Do oboru názvů se přidá přípona falešného názvu.
 
@@ -237,7 +239,7 @@ attribute of the Assembly element in the .fakes:
 |-|-|-|
 |**Konstruktor**|`.ctor`|`Constructor`|
 |Statický **konstruktor**|`.cctor`|`StaticConstructor`|
-|**Přistupující objekt** s názvem metody složený ze dvou částí oddělených znakem "_" (například getter vlastnosti)|*kind_name* (běžný případ, ale neuplatňuje ECMA)|*NameKind* , kde byly obě části velkými a prohozeny|
+|**Přistupující objekt** s názvem metody složený ze dvou částí oddělených znakem "_" (například getter vlastnosti)|*kind_name* (běžný případ, ale neuplatňuje ECMA)|*NameKind*, kde byly obě části velkými a prohozeny|
 ||Getter vlastnost `Prop`|`PropGet`|
 ||Metoda setter vlastnosti `Prop`|`PropSet`|
 ||Přidávání událostí|`Add`|
@@ -274,6 +276,6 @@ Následující pravidla se aplikují rekurzivně:
 
 - Je-li výsledný název v konfliktu s jakýmkoli členem deklarovaného typu, je schéma číslování použito připojením počítadla se dvěma číslicemi počínaje od 01.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Izolace testovaného kódu s napodobeninami Microsoftu](../test/isolating-code-under-test-with-microsoft-fakes.md)

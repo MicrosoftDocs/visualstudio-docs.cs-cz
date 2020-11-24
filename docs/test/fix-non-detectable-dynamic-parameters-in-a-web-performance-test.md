@@ -1,5 +1,6 @@
 ---
 title: Opravit nezjistitelné dynamické parametry (test výkonnosti webu)
+description: Zjistěte, jak modul pro záznam a přehrávání testů výkonnosti webu automaticky zpracovává nejběžnější typy dynamických parametrů.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -11,12 +12,12 @@ ms.assetid: 92dff25c-36ee-4135-acdd-315c4962fa11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: cad94040997d8cead6be799bee6b2bc17aab699c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 713d711847d798c617074d2d620e09f914c1a147
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810637"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442713"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>Oprava nedetekovatelných dynamických parametrů v testu výkonnosti webu
 
@@ -104,7 +105,7 @@ Pro demonstraci zjistitelného a nezjistitelného dynamického parametru vytvoř
 
 11. Přidejte třetí webový formulář s názvem *JScriptQuery. aspx*.
 
-     Stejně jako u druhé stránky jsme přetáhli **popisek** do formuláře, nastavete jeho vlastnost **(ID)** na **IndexLabel** a přetáhnete **hypertextový odkaz** na formulář, nastavíte jeho vlastnost **text** na **zpět**a jeho vlastnost **NavigationURL** na **QueryString. aspx**.
+     Stejně jako u druhé stránky jsme přetáhli **popisek** do formuláře, nastavete jeho vlastnost **(ID)** na **IndexLabel** a přetáhnete **hypertextový odkaz** na formulář, nastavíte jeho vlastnost **text** na **zpět** a jeho vlastnost **NavigationURL** na **QueryString. aspx**.
 
      ![Přidání a konfigurace třetího webového formuláře](../test/media/web_test_dynamicparameter_addwebform3.png)
 
@@ -119,7 +120,7 @@ Pro demonstraci zjistitelného a nezjistitelného dynamického parametru vytvoř
 
 13. Uložte projekt.
 
-14. V **Průzkumník řešení**jako úvodní stránku nastavte *QueryString. aspx* .
+14. V **Průzkumník řešení** jako úvodní stránku nastavte *QueryString. aspx* .
 
      ![Nastavení úvodní stránky na QueryString. aspx](../test/media/web_test_dynamicparameter_setstartpage.png)
 
@@ -159,7 +160,7 @@ Pro demonstraci zjistitelného a nezjistitelného dynamického parametru vytvoř
 
 7. Automaticky se detekuje dynamický parametr pro CustomQueryString na stránce ASPQuery. Nicméně dynamický parametr pro CustomQueryString na stránce JScriptQuery není zjištěn.
 
-     Kliknutím na **tlačítko OK** přidejte pravidlo extrakce do *QueryString. aspx*a navážete ho na stránku ASPQuery.
+     Kliknutím na **tlačítko OK** přidejte pravidlo extrakce do *QueryString. aspx* a navážete ho na stránku ASPQuery.
 
      ![Zvýšit úroveň zjištěného dynamického parametru](../test/media/web_test_dynamicparameter_promotedialog.png)
 

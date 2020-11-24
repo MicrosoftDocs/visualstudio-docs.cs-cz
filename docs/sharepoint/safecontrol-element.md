@@ -1,5 +1,7 @@
 ---
 title: Element SafeControl – | Microsoft Docs
+description: Získat informace o prvku SafeControl –, který představuje ovládací prvek ASPX nebo webovou část označenou jako zabezpečený pro uživatele pro přístup na stránku ASPX webu služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6c9936054c5cc622e6f335d81d1568ebed16518f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 36a8b0ed45fbdb8d2dfe8e93a027a47adf407587
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547924"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440620"
 ---
 # <a name="safecontrol-element"></a>SafeControl – element
   Představuje ovládací prvek ASPX nebo webovou část, která je označena jako zabezpečená pro všechny uživatele, kteří mají přístup k libovolné stránce ASPX na webu služby SharePoint.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <SafeControl Assembly = "Name of assembly that contains the safe control"
@@ -43,8 +45,8 @@ ms.locfileid: "85547924"
 |**Sestavení**|Volitelný atribut **xs: String** .<br /><br /> Název sestavení, ve kterém je definován ovládací prvek ASPX nebo webová část. Ve výchozím nastavení tento atribut používá pro název sestavení nahraditelný parametr **$SharePoint. Project. AssemblyFullName nemohou mít $** . Další informace najdete v tématu [nahraditelných parametrů](../sharepoint/replaceable-parameters.md).|
 |**Zabezpečení**|Volitelný atribut **xs: Boolean** .<br /><br /> Určuje, zda je ovládací prvek ASPX nebo webová část zabezpečena pro nedůvěryhodné uživatele, aby k nim měli přístup.|
 |**IsSafeAgainstScript**|Volitelný atribut **xs: Boolean** .<br /><br /> Určuje, zda nedůvěryhodní uživatelé mohou zobrazit nebo upravit vlastnosti ovládacího prvku ASPX nebo webové části.|
-|**Name**|Volitelný atribut **xs: String** .<br /><br /> Název této položky bezpečného řízení v kolekci.|
-|**Obor názvů**|Volitelný atribut **xs: String** .<br /><br /> Obor názvů ovládacího prvku ASPX nebo webové části.|
+|**Název**|Volitelný atribut **xs: String** .<br /><br /> Název této položky bezpečného řízení v kolekci.|
+|**Hosting**|Volitelný atribut **xs: String** .<br /><br /> Obor názvů ovládacího prvku ASPX nebo webové části.|
 |**Popisuje**|Volitelný atribut **xs: String** .<br /><br /> Název typu ovládacího prvku ASPX nebo webové části.|
 
 ### <a name="child-elements"></a>Podřízené prvky
@@ -63,7 +65,7 @@ ms.locfileid: "85547924"
 
 |Vlastnost|Hodnota|
 |-|-|
-|**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Hosting**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|

@@ -1,5 +1,7 @@
 ---
-title: Vytvoření modulu plug-in zátěžového testu
+title: Vytvoření Plug-In zátěžového testu
+description: Naučte se, jak vytvořit modul plug-in zátěžového testu pro spuštění kódu v různých časech během spuštění zátěžového testu, který může rozšiřovat nebo měnit funkčnost zátěžového testu.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 f1_keywords:
@@ -12,12 +14,12 @@ ms.assetid: 27806972-1b15-4388-833d-6d0632816f1f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0abcc3865c21a4f4673331377af8d17b223c7875
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6fee903c9fd2001b6c6d229e5786dd7ffb9037b9
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288023"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441088"
 ---
 # <a name="how-to-create-a-load-test-plug-in"></a>Postupy: Vytvoření modulu plug-in zátěžového testu
 
@@ -38,9 +40,9 @@ Lze vytvořit modul plug-in zátěžového testu pro spuštění kódu v různ�
 
      Další informace naleznete v tématu [rychlý Start: vytvoření projektu zátěžového testu](../test/quickstart-create-a-load-test-project.md).
 
-3. Přidejte do řešení nový projekt **knihovny tříd** . (V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte **Přidat** a pak zvolte **Nový projekt**.)
+3. Přidejte do řešení nový projekt **knihovny tříd** . (V **Průzkumník řešení** klikněte pravým tlačítkem na řešení a vyberte **Přidat** a pak zvolte **Nový projekt**.)
 
-4. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku **odkazy** v nové knihovně tříd a vyberte možnost **Přidat odkaz**.
+4. V **Průzkumník řešení** klikněte pravým tlačítkem myši na složku **odkazy** v nové knihovně tříd a vyberte možnost **Přidat odkaz**.
 
    Zobrazí se dialogové okno **Přidat odkaz** .
 
@@ -50,7 +52,7 @@ Lze vytvořit modul plug-in zátěžového testu pro spuštění kódu v různ�
 
    Odkaz na **Microsoft. VisualStudio. QualityTools. LoadTestFramework** se přidá do **referenční** složky v **Průzkumník řešení**.
 
-7. V **Průzkumník řešení**klikněte pravým tlačítkem myši na nejvyšší uzel projektu testování výkonu webu a zátěžového testu, který obsahuje zátěžový test, do kterého chcete přidat modul plug-in zátěžového testu, a vyberte možnost **Přidat odkaz**.
+7. V **Průzkumník řešení** klikněte pravým tlačítkem myši na nejvyšší uzel projektu testování výkonu webu a zátěžového testu, který obsahuje zátěžový test, do kterého chcete přidat modul plug-in zátěžového testu, a vyberte možnost **Přidat odkaz**.
 
    **Zobrazí se dialogové okno Přidat odkaz**.
 
@@ -58,7 +60,7 @@ Lze vytvořit modul plug-in zátěžového testu pro spuštění kódu v různ�
 
 9. Vyberte **OK**.
 
-10. V **editoru kódu**přidejte `using` příkaz pro <xref:Microsoft.VisualStudio.TestTools.LoadTesting> obor názvů.
+10. V **editoru kódu** přidejte `using` příkaz pro <xref:Microsoft.VisualStudio.TestTools.LoadTesting> obor názvů.
 
 11. Ve třídě vytvořené v projektu knihovny tříd implementujte rozhraní <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>. V následujícím oddílu s příklady naleznete ukázku implementace.
 
@@ -68,7 +70,7 @@ Lze vytvořit modul plug-in zátěžového testu pro spuštění kódu v různ�
 
      Zobrazí se dialogové okno **Přidat modul plug-in zátěžového testu** .
 
-14. V části **Vybrat modul plug-in**vyberte svoji třídu modulu plug-in zátěžového testu.
+14. V části **Vybrat modul plug-in** vyberte svoji třídu modulu plug-in zátěžového testu.
 
 15. V podokně **vlastnosti pro vybraný modul plug-in** nastavte počáteční hodnoty pro modul plug-in, které se použijí v době běhu.
 

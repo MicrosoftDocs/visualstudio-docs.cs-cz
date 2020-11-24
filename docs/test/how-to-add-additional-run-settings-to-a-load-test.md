@@ -1,5 +1,7 @@
 ---
 title: Přidání parametrů spuštění do zátěžového testu
+description: Naučte se používat další nastavení pro zátěžový test, včetně doby trvání testu, úrovně podrobností kolekce výsledků a shromažďovaných sad čítačů.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: 257d2a24-d582-4cfe-8b2b-51f51ba9cc84
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a2f62b3e9797e411138590fc15b0fe872920d203
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aef68ac9371833fb44b1ead026e669ad14f7b5d8
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288452"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441232"
 ---
 # <a name="how-to-add-additional-run-settings-to-a-load-test"></a>Postupy: Přidání dalších parametrů spuštění do zátěžového testu
 

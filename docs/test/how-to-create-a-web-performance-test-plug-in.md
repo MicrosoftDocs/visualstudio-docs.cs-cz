@@ -1,5 +1,7 @@
 ---
-title: Vytvoření modulu plug-in testu výkonnosti webu
+title: Vytvoření Plug-In testu výkonnosti webu
+description: Přečtěte si, jak moduly plug-in testu výkonu webu umožňují opakované použití kódu mimo hlavní deklarativní příkazy v testu výkonnosti webu.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ ms.assetid: a612f2d2-9806-477d-a126-12842f07da6e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3c9651f4003647e18ba52e916aeb21e176274de5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ddb46b3e83c86396dfea6fbcdb3584882591fce
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287932"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442336"
 ---
 # <a name="how-to-create-a-web-performance-test-plug-in"></a>Postupy: Vytvoření modulu plug-in testu výkonnosti webu
 
@@ -35,13 +37,13 @@ Můžete použít vlastní moduly plug-in testu výkonnosti webu s testy webové
 
 1. Otevřete projekt webového výkonu a zátěžového testu, který obsahuje test výkonnosti webu.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte **Přidat** a pak zvolte **Nový projekt**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení a vyberte **Přidat** a pak zvolte **Nový projekt**.
 
 3. Vytvořte nový projekt **knihovny tříd** .
 
    Nový projekt knihovny tříd je přidán do **Průzkumník řešení** a nová třída se zobrazí v **editoru kódu**.
 
-4. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku **odkazy** v nové knihovně tříd a vyberte možnost **Přidat odkaz**.
+4. V **Průzkumník řešení** klikněte pravým tlačítkem myši na složku **odkazy** v nové knihovně tříd a vyberte možnost **Přidat odkaz**.
 
    Zobrazí se dialogové okno **Přidat odkaz** .
 
@@ -51,7 +53,7 @@ Můžete použít vlastní moduly plug-in testu výkonnosti webu s testy webové
 
      Odkaz na **Microsoft. VisualStudio. QualityTools. WebTestFramework** se přidá do **referenční** složky v **Průzkumník řešení**.
 
-7. V **Průzkumník řešení**klikněte pravým tlačítkem myši na nejvyšší uzel projektu webového výkonu a zátěžového testu, který obsahuje zátěžový test, ke kterému chcete přidat modul plug-in testu výkonnosti webu, a vyberte možnost **Přidat odkaz**.
+7. V **Průzkumník řešení** klikněte pravým tlačítkem myši na nejvyšší uzel projektu webového výkonu a zátěžového testu, který obsahuje zátěžový test, ke kterému chcete přidat modul plug-in testu výkonnosti webu, a vyberte možnost **Přidat odkaz**.
 
 8. **Zobrazí se dialogové okno Přidat odkaz**.
 
@@ -59,7 +61,7 @@ Můžete použít vlastní moduly plug-in testu výkonnosti webu s testy webové
 
 10. Vyberte **OK**.
 
-11. V **editoru kódu**napište kód modulu plug-in. Nejprve vytvořte novou veřejnou třídu, která je odvozena z <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> .
+11. V **editoru kódu** napište kód modulu plug-in. Nejprve vytvořte novou veřejnou třídu, která je odvozena z <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> .
 
 12. Implementujte kód uvnitř jedné nebo více obslužných rutin událostí. V následujícím oddílu s příklady naleznete ukázku implementace.
 
@@ -87,7 +89,7 @@ Můžete použít vlastní moduly plug-in testu výkonnosti webu s testy webové
 
      Zobrazí se dialogové okno **Přidat modul plug-in webového testu** .
 
-16. V části **Vybrat modul plug-in**vyberte třídu modulu plug-in test výkonnosti webu.
+16. V části **Vybrat modul plug-in** vyberte třídu modulu plug-in test výkonnosti webu.
 
 17. V podokně **vlastnosti pro vybraný modul plug-in** nastavte počáteční hodnoty pro modul plug-in, které se použijí v době běhu.
 

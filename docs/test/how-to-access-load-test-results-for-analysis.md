@@ -1,5 +1,7 @@
 ---
 title: Analyzovat výsledky zátěžového testu
+description: Naučte se, jak získat přístup k výsledkům zátěžového testu pro analýzu, a to buď automaticky prostřednictvím analyzátoru zátěžového testu, nebo ručně pro testy z příkazového řádku.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.assetid: b0a3e694-2894-479b-b270-7e61e9fafacd
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b72db87014304dc2b9baf57e05015e53a630c431
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95108a5901a00582e708f6bf3660cb07d2126e0a
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288530"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442596"
 ---
 # <a name="how-to-access-load-test-results-for-analysis"></a>Postupy: přístup k výsledkům zátěžového testu pro analýzu
 
@@ -37,11 +39,11 @@ Výsledek zátěžového testu pro dokončený zátěžový test obsahuje ukázk
 
      Zobrazí se dialogové okno **otevřít a spravovat výsledky** .
 
-3. V **Zadejte název kontroleru pro hledání výsledků zátěžového testu**, vyberte kontroler. Vybrat ** \<local> – žádný kontroler** k přístupu k výsledkům uloženým místně.
+3. V **Zadejte název kontroleru pro hledání výsledků zátěžového testu**, vyberte kontroler. Vybrat **\<local> – žádný kontroler** k přístupu k výsledkům uloženým místně.
 
-4. V **části Zobrazit výsledky pro následující zátěžový test**vyberte zátěžový test, jehož výsledky chcete zobrazit. Tuto možnost vyberte **\<Show results for all tests>** , pokud chcete zobrazit všechny výsledky pro všechny testy.
+4. V **části Zobrazit výsledky pro následující zátěžový test** vyberte zátěžový test, jehož výsledky chcete zobrazit. Tuto možnost vyberte **\<Show results for all tests>** , pokud chcete zobrazit všechny výsledky pro všechny testy.
 
-     Pokud jsou k dispozici výsledky testu zatížení, zobrazí se v seznamu **výsledků zátěžového testu** . Sloupce jsou **čas**, **Doba trvání**, **uživatel**, **výsledek**, **test**a **Popis**. **Test** obsahuje název testu a **Popis** obsahuje volitelný popis, který je přidán před spuštěním testu.
+     Pokud jsou k dispozici výsledky testu zatížení, zobrazí se v seznamu **výsledků zátěžového testu** . Sloupce jsou **čas**, **Doba trvání**, **uživatel**, **výsledek**, **test** a **Popis**. **Test** obsahuje název testu a **Popis** obsahuje volitelný popis, který je přidán před spuštěním testu.
 
     > [!NOTE]
     > Výsledky se zobrazí s nejnovějšími výsledky v horní části seznamu.

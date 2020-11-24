@@ -1,5 +1,7 @@
 ---
 title: Určení testovacích agentů pro použití ve scénářích zátěžových testů
+description: Zjistěte, jak určit agenty k použití ve scénáři nastavením agentů k použití vlastnosti v okno Vlastnosti Editor zátěžového testu.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,16 +14,16 @@ ms.assetid: e86806dd-5897-4e4c-bfd4-8d687fb72a6e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5d9e22200a63544b4539f7bf78c48d5711974776
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af0dac96bef5218a80e01c3ec205b58d122677c6
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287490"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440906"
 ---
 # <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>Postupy: Určení testovacích agentů pro použití ve scénářích zátěžových testů
 
-Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete pomocí **Editor zátěžového testu** změnit vlastnosti scénářů tak, aby vyhovovaly vašim požadavkům na testování a cílům.
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem** můžete pomocí **Editor zátěžového testu** změnit vlastnosti scénářů tak, aby vyhovovaly vašim požadavkům na testování a cílům.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 

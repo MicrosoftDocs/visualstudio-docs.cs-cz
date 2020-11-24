@@ -1,5 +1,7 @@
 ---
 title: Kombinace testů prohlížeče pro zátěžové testování
+description: Naučte se, jak upravit kombinaci prohlížečů, která vám dává možnost simulovat ve scénáři zátěžového testu realističtější zatížení.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 47f981d9-3038-45cc-a486-82b9daf9a9a1
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 394331ae06760e0547cfc2b5a37a6dcd357e3614
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4dae1a89eb40e71a07540eef7512327282ef0b9b
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114531"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441311"
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario"></a>Upravit poměr testů pro určení typů webových prohlížečů ve scénáři zátěžového testu
 

@@ -1,5 +1,7 @@
 ---
 title: Analýza aktivity virtuálního uživatele zátěžového testu
+description: Přečtěte si informace o zobrazení podrobností, které zobrazuje graf aktivity virtuálního uživatele. Analyzujte, které jednotlivé virtuální uživatele byly během zátěžového testu.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 63f4bd42-3cfb-4eee-af68-e8334976539e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0289ff0d4a20eacc4f6801d9300d39df594bc79e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c05a907bf75ffcdff5bb579ec2624e0dc8a7df9
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591232"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441895"
 ---
 # <a name="analyzing-load-test-virtual-user-activity-in-the-details-view-of-the-load-test-analyzer"></a>Analýza aktivity virtuálního uživatele zátěžového testu v zobrazení podrobností analyzátoru zátěžového testu
 

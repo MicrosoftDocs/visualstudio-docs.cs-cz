@@ -1,5 +1,7 @@
 ---
 title: Použít distribuci na zpoždění stimulace pro zátěžové testování
+description: Naučte se nastavit vlastnost použít distribuci na stimulace zpoždění pro zátěžový test pomocí okno Vlastnosti.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,16 +10,16 @@ ms.assetid: ae8b35f9-d465-4d72-8d7d-7b56ae6ffd22
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: aa5d3239e3b096a2018d6ef9c9b3c6666dcd31c3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c966eb9b4ad0bbf8e00c8a27fd69fef0c59cbc1
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288270"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440118"
 ---
 # <a name="how-to-apply-distribution-to-pacing-delay-for-a-user-pace-test-mix-model"></a>Postupy: použití distribuce na zpoždění stimulace pro model kombinace testů tempa uživatele
 
-Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete pomocí Editor zátěžového testu změnit vlastnosti scénáře tak, aby splňovaly potřeby testování a cíle.
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem** můžete pomocí Editor zátěžového testu změnit vlastnosti scénáře tak, aby splňovaly potřeby testování a cíle.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -48,9 +50,9 @@ Hodnotu pro **zpoždění použití rozdělení na stimulace** lze nastavit buď
 
    Kategorie a vlastnosti scénáře se zobrazí v okně **vlastnosti** .
 
-4. V hodnotě vlastnosti pro **zpoždění použít rozdělení na stimulace**vyberte **true** nebo **false**.
+4. V hodnotě vlastnosti pro **zpoždění použít rozdělení na stimulace** vyberte **true** nebo **false**.
 
-5. Vyberte **File**  >  **Uložit**soubor. Nyní můžete spustit zátěžový test s novou hodnotou **zpoždění použít rozdělení na stimulace** .
+5. Vyberte **File**  >  **Uložit** soubor. Nyní můžete spustit zátěžový test s novou hodnotou **zpoždění použít rozdělení na stimulace** .
 
 ## <a name="see-also"></a>Viz také
 

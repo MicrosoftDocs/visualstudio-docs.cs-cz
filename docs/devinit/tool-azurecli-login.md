@@ -1,7 +1,7 @@
 ---
 title: azurecli-login
 description: devinit Tool Azure CLI – přihlášení.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 304c7b12e3b290c3e47857877b050b18873e3934
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 572f0af5f7ff586ebbda8785245637f10d66abed
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672309"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440501"
 ---
 # <a name="azurecli-login"></a>azurecli-login
 
@@ -42,10 +42,10 @@ Nepoužívá se.
 
 ### <a name="default-behavior"></a>Výchozí chování
 
-Výchozím chováním `azurecli-login` nástroje je nainstalovat nejnovější verzi rozhraní příkazového řádku Azure CLI a přidat ji do cesty (jenom Windows).
+Výchozím chováním `azurecli-login` nástroje je nainstalovat nejnovější verzi rozhraní příkazového řádku Azure a přidat ho do služby `PATH` .
 
 ## <a name="example-usage"></a>Příklad použití
-Níže je uveden příklad, jak spustit `azurecli-login` pomocí `.devinit.json` . 
+Níže je uveden příklad, jak spustit `azurecli-login` pomocí `.devinit.json` .
 
 #### <a name="devinitjson-that-will-trigger-azure-login"></a>.devinit.js, který spustí přihlášení Azure:
 

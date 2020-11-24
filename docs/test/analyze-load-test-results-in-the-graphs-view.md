@@ -1,5 +1,6 @@
 ---
 title: Analyzovat výsledky zátěžového testu – zobrazení grafů (analyzátor zátěžového testu)
+description: Naučte se zobrazovat výsledky testů jako grafy. Každý graf se zobrazí v panelu s názvem grafu v rozevíracím seznamu.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
@@ -16,12 +17,12 @@ ms.assetid: 4a919cd8-541c-40ee-be3b-352fabc56140
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b48162da7a753516ce0c1ae0dba4cfe1f94387e4
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e30d81277ae28a3f5d6ca45a259fa66e0f4ee004
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810650"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441973"
 ---
 # <a name="analyze-load-test-results-in-the-graphs-view-of-the-load-test-analyzer"></a>Analýza výsledků zátěžových testů v zobrazení grafů analyzátoru zátěžového testu
 

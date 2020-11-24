@@ -1,5 +1,7 @@
 ---
 title: Přidávání a odstraňování čítačů v grafech v načtení Výsledky testů
+description: Naučte se pomocí panelu čítačů přidat čítače výkonu do grafu a vlastnost vzorkovací frekvence.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 81536233-1962-40d9-9511-0b4633814d90
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2b2cefc56d299c9ec917aea555aec1cd9ca53887
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 82794efc8d3065c9b428602e50455cccd162bbd4
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288465"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442583"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>Postupy: Přidání a odstranění čítačů pro grafy ve výsledcích zátěžového testu
 
@@ -41,7 +43,7 @@ Tady jsou některé pokyny pro vzorkovací frekvence:
 
 **Informace o tom, jak zahrnout podrobnosti časování ke shromáždění dat percentilu**
 
-V nastavení běhu v Editor zátěžového testu s názvem **Podrobnosti o časování úložiště**existuje vlastnost. Pokud je povolena vlastnost **úložiště podrobností časování** , pak bude čas pro spuštění každého jednotlivého testu, transakce a stránky během zátěžového testu uložen v úložišti výsledků zátěžového testu. To umožňuje zobrazení dat 90 a 95. percentilu v **analyzátoru zátěžového testu** v tabulkách testy, transakce a stránky.
+V nastavení běhu v Editor zátěžového testu s názvem **Podrobnosti o časování úložiště** existuje vlastnost. Pokud je povolena vlastnost **úložiště podrobností časování** , pak bude čas pro spuštění každého jednotlivého testu, transakce a stránky během zátěžového testu uložen v úložišti výsledků zátěžového testu. To umožňuje zobrazení dat 90 a 95. percentilu v **analyzátoru zátěžového testu** v tabulkách testy, transakce a stránky.
 
 Existují dvě možnosti, jak povolit vlastnost **úložiště podrobností časování** ve vlastnostech parametrů spuštění s názvem **StatisticsOnly** a **AllIndividualDetails**. S kteroukoli z možností všechny jednotlivé testy, stránky a transakce jsou časované a data percentilu se vypočítávají z dat jednotlivých časování. Rozdíl je v tom, že s možností **StatisticsOnly** , jakmile se dokončí data percentilu, se z úložiště odstraní jednotlivá data časování. Tím se sníží množství místa, které je nutné v úložišti, když použijete podrobnosti časování. Pokročilí uživatelé ale můžou chtít zpracovat podrobná data časování jiným způsobem pomocí nástrojů SQL. V takovém případě by měla být použita možnost **AllIndividualDetails** , aby byly k dispozici podrobná data časování pro toto zpracování. Kromě toho, pokud nastavíte vlastnost na **AllIndividualDetails**, pak můžete analyzovat aktivitu virtuálního uživatele pomocí grafu **aktivity virtuálního uživatele** v **analyzátoru zátěžového testu** po dokončení zátěžového testu. Další informace najdete v tématu [Analýza aktivity virtuálních uživatelů v zobrazení podrobností](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).
 

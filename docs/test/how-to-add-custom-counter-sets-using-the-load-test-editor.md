@@ -1,5 +1,7 @@
 ---
 title: Přidání vlastních sad čítačů pro zátěžové testování
+description: Při vytváření zátěžového testu pomocí Průvodce zátěžovým testem přidáte počáteční sadu čítačů. Naučte se přidávat vlastní sady čítačů pomocí Editor zátěžového testu.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,16 +12,16 @@ ms.assetid: 499aca80-1069-408d-ac68-326da6a50645
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: e2b78cb68f1e7a7e1f47c6cc3e771353d7e46ca9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c65226a8694cbccf7c5b94f7688d1828a2526cf6
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288426"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440230"
 ---
 # <a name="how-to-add-custom-counter-sets-using-the-load-test-editor"></a>Postupy: Přidání vlastních sad čítačů pomocí Editor zátěžového testu
 
-Při vytváření zátěžového testu s **novým Průvodce zátěžovým testem**přidáte počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy.
+Při vytváření zátěžového testu s **novým Průvodce zátěžovým testem** přidáte počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy.
 
 > [!NOTE]
 > Pokud jsou zátěžové testy distribuovány napříč vzdálenými počítači, jsou čítače kontroléru a agentů namapovány na sady čítačů kontrolérů a agentů. Další informace o použití vzdálených počítačů v rámci zátěžového testu naleznete v tématu [řadiče testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md).

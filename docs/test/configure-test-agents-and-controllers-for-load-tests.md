@@ -1,5 +1,6 @@
 ---
 title: Konfigurace testovacích agentů/řadičů testů pro zátěžové testy
+description: Přečtěte si, jak může Visual Studio vytvořit simulované zatížení pomocí fyzických nebo virtuálních počítačů, aby se vygenerovalo více zátěže, než může jeden počítač vygenerovat samostatně.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -8,12 +9,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4e9aea22a63f2eee8f83ee597ed11c90df7f6b1a
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: e70c1f3783945fbea00816d961f8ae6518ff726b
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099398"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442609"
 ---
 # <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>Přehled testovacích agentů a testovacích kontrolérů pro spouštění zátěžových testů
 

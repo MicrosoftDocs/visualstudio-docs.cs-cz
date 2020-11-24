@@ -1,5 +1,7 @@
 ---
-title: Vytvoření modulu plug-in pro záznam pro testy výkonnosti webu
+title: Vytvoření zapisovače Plug-In pro testy výkonnosti webu
+description: Zjistěte, jak vám WebTestRecorderPlugin umožňuje upravit zaznamenaný test výkonnosti webu po zvolení možnosti zastavit na panelu nástrojů zapisovače testu výkonnosti webu.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 6fe13be1-aeb5-4927-9bff-35950e194da9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3f75114683a4f456d0514af20c1c201c373bd4b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce4be33e2e29ee0089184a034e56cf3a0539dc76
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288001"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440057"
 ---
 # <a name="how-to-create-a-recorder-plug-in"></a>Postupy: Vytvoření modulu plug-in pro záznam
 
@@ -37,7 +39,7 @@ Následující postupy popisují, jak vytvořit kód základní pro modul plug-i
 
 2. Přidejte do řešení nový projekt **knihovny tříd** .
 
-3. V **Průzkumník řešení**v nové složce projektu knihovny tříd klikněte pravým tlačítkem myši na složku **odkazy** a vyberte možnost **Přidat odkaz**.
+3. V **Průzkumník řešení** v nové složce projektu knihovny tříd klikněte pravým tlačítkem myši na složku **odkazy** a vyberte možnost **Přidat odkaz**.
 
     > [!TIP]
     > Příkladem nové složky projektu knihovny tříd je **RecorderPlugins**.
@@ -48,7 +50,7 @@ Následující postupy popisují, jak vytvořit kód základní pro modul plug-i
 
 5. Posuňte se dolů a vyberte **Microsoft. VisualStudio. QualityTools. WebTestFramework** a pak zvolte **OK**.
 
-     Do složky **odkazy** v **Průzkumník řešení**se přidá **Microsoft. VisualStudio. QualityTools. WebTestFramework** .
+     Do složky **odkazy** v **Průzkumník řešení** se přidá **Microsoft. VisualStudio. QualityTools. WebTestFramework** .
 
 6. Napište kód pro modul plug-in zapisovače. Nejprve vytvořte novou veřejnou třídu, která je odvozena z <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> .
 
@@ -71,7 +73,7 @@ Následující postupy popisují, jak vytvořit kód základní pro modul plug-i
 
 8. Přidejte další kód podle toho, co chcete, aby se modul plug-in zapisovače spouštěl po výskytu záznamu webu. Můžete například přidat kód pro zpracování vlastní korelace, jak je znázorněno v následující ukázce. Můžete také vytvořit modul plug-in pro záznam věcí, jako je převod komentářů na transakce, nebo přidání ověřovacích pravidel do testu výkonnosti webu.
 
-9. V nabídce **sestavení** klikněte na příkaz **sestavit \<class library project name> **.
+9. V nabídce **sestavení** klikněte na příkaz **sestavit \<class library project name>**.
 
 V dalším kroku nasaďte modul plug-in zapisovače, aby se mohl zaregistrovat v aplikaci Visual Studio.
 

@@ -1,5 +1,7 @@
 ---
 title: Vytvoření nastavení testu pro distribuovaný zátěžový test
+description: Naučte se konfigurovat nastavení testu pro zátěžové testy, abyste mohli distribuovat tyto testy napříč více počítači pomocí testovacích agentů a testovacích kontrolérů.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: b63d4b71-3b74-4872-b2d1-f0bd1a9a8544
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c4c33072c1b42d76f1f6ea26222c4674f9e6ff77
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: b52fad24cf0772099e619b08ad877bae891365c3
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036090"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95439963"
 ---
 # <a name="how-to-create-a-test-settings-file-for-a-distributed-load-test"></a>Postupy: vytvoření souboru nastavení testu pro distribuovaný zátěžový test
 
@@ -41,7 +43,7 @@ Pomocí těchto kroků můžete vytvořit a odebrat nastavení testu ve vašem �
 
 ## <a name="create-a-test-settings-file"></a>Vytvořit soubor s nastavením testu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **položky řešení**, přejděte na **Přidat**a pak zvolte **Nová položka**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **položky řešení**, přejděte na **Přidat** a pak zvolte **Nová položka**.
 
      Zobrazí se dialogové okno **Přidat novou položku**.
 
@@ -51,15 +53,15 @@ Pomocí těchto kroků můžete vytvořit a odebrat nastavení testu ve vašem �
 
 4. Klikněte na tlačítko **Přidat**.
 
-     Nový soubor nastavení testu se zobrazí v **Průzkumník řešení**ve složce **položky řešení** .
+     Nový soubor nastavení testu se zobrazí v **Průzkumník řešení** ve složce **položky řešení** .
 
 5. Zobrazí se dialogové okno **nastavení testu** . Je vybrána stránka **Obecné** .
 
      Nyní můžete upravit a uložit hodnoty nastavení testu.
 
-6. Do pole **název**zadejte název nastavení testu.
+6. Do pole **název** zadejte název nastavení testu.
 
-7. Volitelné V části **Popis**zadejte popis nastavení testu tak, aby ostatní členové týmu věděli, k čemu je určena.
+7. Volitelné V části **Popis** zadejte popis nastavení testu tak, aby ostatní členové týmu věděli, k čemu je určena.
 
 8. Volitelné Pokud chcete pro testovací běhy vybrat výchozí schéma pojmenování, vyberte **výchozí schéma pojmenování**. Chcete-li definovat vlastní schéma pojmenování, vyberte **uživatelsky definované schéma** a potom zadejte požadovaný text v **textu předpony**. Chcete-li k názvu testovacího běhu připojit datum a časové razítko, vyberte možnost **připojit datum a časové razítko**.
 
@@ -76,7 +78,7 @@ Pomocí těchto kroků můžete vytvořit a odebrat nastavení testu ve vašem �
     > [!NOTE]
     > Pokud přidáváte řadič poprvé, nebudou v rozevíracím seznamu uvedeny žádné řadiče. Seznam je vyplněn předchozími řadiči, které jste zadali v jiných nastaveních testu. Do pole musíte zadat název kontroleru (například **TestControllerMachine1**).
 
-12. Chcete-li přidat role, které chcete použít ke spuštění testů a sběru dat, klikněte v části **role**na možnost **Přidat**.
+12. Chcete-li přidat role, které chcete použít ke spuštění testů a sběru dat, klikněte v části **role** na možnost **Přidat**.
 
 13. Do sloupce **název** zadejte název role. Role může být například "webový server".
 
@@ -93,7 +95,7 @@ Pomocí těchto kroků můžete vytvořit a odebrat nastavení testu ve vašem �
 
      Zobrazí se dialogové okno **pravidlo výběru agenta** .
 
-     Zadejte název do pole **název atributu** a hodnota v poli **hodnota atributu**a pak zvolte **OK**. Přidejte tolik atributů, kolik budete potřebovat.
+     Zadejte název do pole **název atributu** a hodnota v poli **hodnota atributu** a pak zvolte **OK**. Přidejte tolik atributů, kolik budete potřebovat.
 
      Můžete například přidat atribut s názvem "RAM > 16GB", který má hodnotu "true" nebo "false", chcete-li filtrovat počítače testovacího agenta, které mají více než 16GB paměti. Chcete-li použít stejný atribut pro jeden nebo více testovacích agentů, použijte dialogové okno **spravovat Test Controller** . Další informace najdete v tématu [Správa testovacích kontrolérů a testovacích agentů pomocí sady Visual Studio](../test/manage-test-controllers-and-test-agents.md).
 
@@ -135,7 +137,7 @@ Pomocí těchto kroků můžete vytvořit a odebrat nastavení testu ve vašem �
     > [!NOTE]
     > Pokud to uděláte, můžete pokračovat v sestavování aplikace při spuštění testů.
 
-21. Chcete-li přidat soubor do adresáře, který používáte ke spuštění testů, zvolte možnost **Přidat soubor**a potom vyberte soubor, který chcete přidat.
+21. Chcete-li přidat soubor do adresáře, který používáte ke spuštění testů, zvolte možnost **Přidat soubor** a potom vyberte soubor, který chcete přidat.
 
     > [!NOTE]
     > Při spuštění testů zatížení jsou automaticky nasazena sestavení modulů plug-in, datové soubory a nahrané soubory.
@@ -152,7 +154,7 @@ Pomocí těchto kroků můžete vytvořit a odebrat nastavení testu ve vašem �
 
 24. Chcete-li spustit testy pomocí jiného hostitele, vyberte možnost **hostitelé**.
 
-    1. V poli **typ hostitele**ověřte, zda je vybrána možnost **výchozí** .
+    1. V poli **typ hostitele** ověřte, zda je vybrána možnost **výchozí** .
 
         > [!NOTE]
         > **ASP.NET** v **typu hostitele** není v zátěžových testech podporován.
@@ -166,7 +168,7 @@ Pomocí těchto kroků můžete vytvořit a odebrat nastavení testu ve vašem �
 
     1. Pokud chcete přerušit testovací běh při překročení časového limitu, vyberte možnost **přerušit testovací běh, pokud celková doba překročí** , a pak zadejte hodnotu pro toto omezení.
 
-    2. Pro selhání individuálního testu při překročení časového limitu vyberte **Označit jednotlivý test jako neúspěšný, pokud doba běhu překročí**a zadejte hodnotu pro toto omezení.
+    2. Pro selhání individuálního testu při překročení časového limitu vyberte **Označit jednotlivý test jako neúspěšný, pokud doba běhu překročí** a zadejte hodnotu pro toto omezení.
 
 26. Přeskočit **test jednotek** Zátěžové testy nepoužívají tato nastavení.
 
@@ -176,7 +178,7 @@ Pomocí těchto kroků můžete vytvořit a odebrat nastavení testu ve vašem �
 
 ## <a name="remove-a-test-settings-file-from-your-solution"></a>Odebrání souboru nastavení testu z řešení
 
-Ve složce **položky řešení** v **Průzkumník řešení**klikněte pravým tlačítkem myši na nastavení testu, které chcete odebrat, a poté zvolte možnost **Odebrat**.
+Ve složce **položky řešení** v **Průzkumník řešení** klikněte pravým tlačítkem myši na nastavení testu, které chcete odebrat, a poté zvolte možnost **Odebrat**.
 
 Soubor nastavení testu se odebere z vašeho řešení.
 

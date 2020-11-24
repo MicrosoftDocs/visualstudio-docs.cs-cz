@@ -1,5 +1,7 @@
 ---
 title: Konfigurace profileru ASP.NET pro zátěžové testy
+description: Naučte se používat adaptér diagnostiky dat profileru ASP.NET ke shromažďování informací o profileru ASP.NET.
+ms.custom: SEO-VS-2020
 ms.date: 10/13/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 6832fe39-04d5-4d94-8a18-3e2730bad423
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c4f82f8f4c518a9c72399b6e28a01d112f5678c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: baea8be1da9a6dd89c06aa328bf579974503921f
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288205"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442323"
 ---
 # <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>Postupy: Konfigurace profileru ASP.NET pro zátěžové testy pomocí nastavení testu v aplikaci Visual Studio
 
@@ -44,7 +46,7 @@ Před provedením kroků v tomto postupu je nutné otevřít nastavení testu ze
 
      Zobrazí se dialogové okno pro konfiguraci shromažďování dat profilování ASP.NET.
 
-3. Do **číselníku interval vzorkování profileru**zadejte hodnotu, která indikuje počet nezastavených cyklů hodin procesoru, které se mají čekat mezi pořizováním ukázek ASP.NET profilace.
+3. Do **číselníku interval vzorkování profileru** zadejte hodnotu, která indikuje počet nezastavených cyklů hodin procesoru, které se mají čekat mezi pořizováním ukázek ASP.NET profilace.
 
 4. Chcete-li povolit profilaci interakce vrstev, vyberte možnost **Povolit Profilování interakce vrstev**.
 

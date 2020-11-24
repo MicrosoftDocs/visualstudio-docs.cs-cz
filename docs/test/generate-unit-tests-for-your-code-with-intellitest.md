@@ -1,5 +1,7 @@
 ---
 title: Generování testů jednotek kódu pomocí funkce IntelliTest
+description: IntelliTest prozkoumá váš kód .NET a vygeneruje testovací data a sadu testů jednotek. Naučte se spouštět IntelliTest a zjistit, které testy selžou a opraví je.
+ms.custom: SEO-VS-2020
 ms.date: 10/05/2015
 ms.topic: conceptual
 f1_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 65b1de58f195b957d080bd21144c22479b1aafed
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d503d37cfcacace8250da4d3e91221364c66b5c
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589588"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442466"
 ---
 # <a name="how-to-generate-unit-tests-by-using-intellitest"></a>Postupy: generování testů jednotek pomocí IntelliTest
 

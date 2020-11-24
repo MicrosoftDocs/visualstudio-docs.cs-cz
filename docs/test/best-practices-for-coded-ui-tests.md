@@ -1,5 +1,7 @@
 ---
 title: Doporučené postupy pro programové testy UI
+description: Přečtěte si o doporučeních pro vývoj programových testů uživatelského rozhraní. Tyto pokyny slouží k vytvoření flexibilního programového testu uživatelského rozhraní.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e71029a185d1b3fea1812b2a4b1cf7bf20effff8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2a4a79ca397b46d06e18c62fde2034551ff7afe0
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565159"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441804"
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>Osvědčené postupy pro programové testy uživatelského rozhraní
 

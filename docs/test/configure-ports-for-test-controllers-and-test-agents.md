@@ -1,5 +1,7 @@
 ---
 title: Konfigurace portů pro testovací kontroléry a testovací agenty
+description: Naučte se, jak změnit výchozí příchozí porty používané testovacím kontrolérem, testovacím agentem a klientem, aby nedocházelo ke konfliktům s jiným softwarem.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.assetid: 211edbd7-9fe4-4251-ba85-8bec4363261b
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7889feffc41d6bb64b85b4ea95a17a4a986d22df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2726d489c0c67bffb11bc59357f6ad107a6c94ba
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288816"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441565"
 ---
 # <a name="configure-ports-for-test-controllers-and-test-agents"></a>Konfigurace portů pro testovací kontroléry a testovací agenty
 
@@ -83,9 +85,9 @@ Postupujte podle těchto pokynů ke konfiguraci portů pro testovací kontrolér
 
 - **Klient** Pomocí Editoru registru přidejte následující hodnoty registru (**DWORD**). Klient bude používat jeden z portů ze zadaného rozsahu pro příjem dat z kontroleru testů:
 
-     **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeStart**
+     **HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeStart**
 
-     **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeEnd**
+     **HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeEnd**
 
 ## <a name="see-also"></a>Viz také
 

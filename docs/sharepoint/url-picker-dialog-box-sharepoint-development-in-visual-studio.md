@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno pro výběr adresy URL (vývoj pro SharePoint)
+description: Přečtěte si o dialogovém okně pro výběr adresy URL, které umožňuje uživateli zvolit soubory ve svém projektu nebo na místním serveru, na kterém je spuštěna služba SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 991693c3379e008a2a907efd3127290c7e804c22
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 584b77ab714cb692069fadd6c6fad50e20d46f80
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66261947"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442531"
 ---
 # <a name="url-picker-dialog-box-sharepoint-development-in-visual-studio"></a>Dialogové okno pro výběr adresy URL (vývoj pro SharePoint v aplikaci Visual Studio)
   V dialogovém okně pro výběr adresy URL můžete zvolit soubory, jako jsou soubory stránky předlohy nebo soubory obrázků, které jsou umístěné ve vašem projektu, nebo na místním serveru, na kterém je spuštěna služba SharePoint.
@@ -42,7 +44,7 @@ ms.locfileid: "66261947"
 
   Rozbalte uzel **Server** a vyberte soubory nacházející se na místním serveru, na kterém je spuštěna služba SharePoint. Aby se v dialogovém okně zobrazovala možnost výběru, musí tyto soubory splňovat následující kritéria:
 
-- Soubor se musí nacházet v jedné z následujících mapovaných složek: **Image**, **rozložení**nebo **ControlTemplates**.
+- Soubor se musí nacházet v jedné z následujících mapovaných složek: **Image**, **rozložení** nebo **ControlTemplates**.
 
 - Soubor se nenašel v databázi obsahu SharePointu.
 

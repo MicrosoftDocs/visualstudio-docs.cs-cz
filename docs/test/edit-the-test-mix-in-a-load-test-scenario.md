@@ -1,5 +1,7 @@
 ---
 title: Kombinace testů pro scénář zátěžového testu
+description: Naučte se, jak upravit kombinaci testů scénáře, která je kombinací výběru výkonnosti webu a testování částí a distribuce těchto testů.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 303e1d70-5d98-424a-b51e-e0898e16d3f8
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4a52d660140416ce829493a733171cfcf64ebbe4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d6681b8aead05a180df04b1c3953002aa832a281
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595927"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441375"
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-performance-unit-and-coded-ui-tests-to-include-in-a-load-test-scenario"></a>Úpravou kombinace testů určete, který webový výkon, jednotku a programové testy uživatelského rozhraní mají být zahrnuty do scénáře zátěžového testu.
 
@@ -35,7 +37,7 @@ Po přidání testů do kombinace je můžete odebrat. Můžete také změnit ro
 
 Když vytvoříte nový scénář pomocí **nového Průvodce zátěžovým testem**, můžete zadat testy výkonnosti webu a jednotky, které chcete přidat do kombinace testů v novém scénáři.
 
-Pomocí **Editor zátěžového testu**můžete přidat další testy výkonu webu a testování částí na textovou kombinaci scénáře.
+Pomocí **Editor zátěžového testu** můžete přidat další testy výkonu webu a testování částí na textovou kombinaci scénáře.
 
 ![Přidání testu do stávajícího zátěžového testu](../test/media/ltest_addingtests.png)
 
@@ -43,7 +45,7 @@ Pomocí **Editor zátěžového testu**můžete přidat další testy výkonu we
 
 1. Otevřete zátěžový test.
 
-2. V **Editor zátěžového testu**klikněte pravým tlačítkem myši na existující scénář a zvolte možnost **Přidat testy**.
+2. V **Editor zátěžového testu** klikněte pravým tlačítkem myši na existující scénář a zvolte možnost **Přidat testy**.
 
      Zobrazí se dialogové okno **Přidat testy** . Všechny webové testy webového výkonu, jednotky a programový test uživatelského rozhraní ve vašem řešení, které ještě nejsou ve vašem scénáři, jsou k dispozici pro přidání do scénáře.
 
@@ -62,7 +64,7 @@ Pomocí **Editor zátěžového testu**můžete přidat další testy výkonu we
 
 1. Otevřete zátěžový test.
 
-2. V **Editor zátěžového testu**ve stromu zátěžového testu klikněte pravým tlačítkem myši na scénář, ze kterého chcete odebrat test, a vyberte možnost **Upravit kombinaci testů**. Zobrazí se dialogové okno **Upravit kombinaci testů** .
+2. V **Editor zátěžového testu** ve stromu zátěžového testu klikněte pravým tlačítkem myši na scénář, ze kterého chcete odebrat test, a vyberte možnost **Upravit kombinaci testů**. Zobrazí se dialogové okno **Upravit kombinaci testů** .
 
 3. V mřížce vyberte webový výkon, jednotku nebo programový test uživatelského rozhraní a pak zvolte možnost **Odebrat**.
 

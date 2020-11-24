@@ -1,5 +1,6 @@
 ---
 title: Vytvoření sestavy výkonu zátěžového testu pomocí aplikace Excel
+description: Naučte se generovat sestavy zátěžového testu v aplikaci Microsoft Excel, které jsou založeny na dvou nebo více výsledcích testů. Můžete vytvářet sestavy porovnání spuštění a trend.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ ms.assetid: b87fb196-9973-4512-a924-088788def4ea
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9ce92e157ba3fe02dbabd1ddd408492c440102a1
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: a89818630258aab42535fb4256fa3e844b0c6878
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810256"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442427"
 ---
 # <a name="how-to-create-load-test-performance-reports-using-microsoft-excel"></a>Postupy: vytváření sestav výkonu zátěžového testu pomocí aplikace Microsoft Excel
 
@@ -63,13 +64,13 @@ Sestavy aplikace Excel lze buď vygenerovat v **analyzátoru zátěžového test
 
       Otevře se aplikace Microsoft Excel s **Průvodcem vytvořením sestavy zátěžového testu**.
 
-   **ANI**
+   **OR**
 
    1. Otevřete aplikaci Microsoft Excel, na pásu karet **Office** vyberte kartu **zátěžový test** a pak zvolte možnost **Sestava zátěžového testu**.
 
        Zobrazí se **Průvodce vytvořením sestavy zátěžového testu** .
 
-   2. Na stránce **Vyberte databázi, která obsahuje testy zatížení** v části **název serveru**zadejte název serveru obsahujícího výsledky zátěžového testu.
+   2. Na stránce **Vyberte databázi, která obsahuje testy zatížení** v části **název serveru** zadejte název serveru obsahujícího výsledky zátěžového testu.
 
    3. V rozevíracím seznamu **název databáze** vyberte databázi obsahující výsledky zátěžového testu.
 
@@ -81,7 +82,7 @@ Sestavy aplikace Excel lze buď vygenerovat v **analyzátoru zátěžového test
 
 6. Vyberte zátěžový test, pro který chcete vytvořit sestavu, a klikněte na tlačítko **Další**.
 
-7. Na stránce **Vyberte běhy pro sestavu** v části **vybrat jedno nebo více spuštění pro přidání do sestavy**vyberte dva výsledky zátěžových testů, které chcete v sestavě porovnat, a klikněte na tlačítko **Další**.
+7. Na stránce **Vyberte běhy pro sestavu** v části **vybrat jedno nebo více spuštění pro přidání do sestavy** vyberte dva výsledky zátěžových testů, které chcete v sestavě porovnat, a klikněte na tlačítko **Další**.
 
    > [!NOTE]
    > Můžete vygenerovat pouze sestavu porovnání dvou výsledků zátěžového testu. Pokud vyberete buď jeden výsledek zátěžového testu, nebo více než dva výsledky zátěžového testu, zobrazí se varovná zpráva.
@@ -118,13 +119,13 @@ Sestavy aplikace Excel lze buď vygenerovat v **analyzátoru zátěžového test
 
       Otevře se aplikace Microsoft Excel s **Průvodcem vytvořením sestavy zátěžového testu**.
 
-   **ANI**
+   **OR**
 
    1. Otevřete aplikaci Microsoft Excel, na pásu karet **Office** vyberte kartu **zátěžový test** a pak zvolte možnost **Sestava zátěžového testu**.
 
        Zobrazí se **Průvodce vytvořením sestavy zátěžového testu** .
 
-   2. Na stránce **Vyberte databázi, která obsahuje testy zatížení** v části **název serveru**zadejte název serveru obsahujícího výsledky zátěžového testu.
+   2. Na stránce **Vyberte databázi, která obsahuje testy zatížení** v části **název serveru** zadejte název serveru obsahujícího výsledky zátěžového testu.
 
    3. V rozevíracím seznamu **název databáze** vyberte databázi obsahující výsledky zátěžového testu.
 
@@ -136,7 +137,7 @@ Sestavy aplikace Excel lze buď vygenerovat v **analyzátoru zátěžového test
 
 6. Vyberte zátěžový test, pro který chcete vytvořit sestavu, a klikněte na tlačítko **Další**.
 
-7. Na stránce **Vyberte běhy pro sestavu** v části **vybrat jedno nebo více spuštění pro přidání do sestavy**vyberte výsledky zátěžového testu, které chcete v sestavě porovnat, a klikněte na tlačítko **Další**.
+7. Na stránce **Vyberte běhy pro sestavu** v části **vybrat jedno nebo více spuštění pro přidání do sestavy** vyberte výsledky zátěžového testu, které chcete v sestavě porovnat, a klikněte na tlačítko **Další**.
 
 8. Na stránce **Vybrat čítače pro sestavu** v části **Vyberte jeden nebo více čítačů, které chcete přidat do sestavy**, je k dispozici rozevírací seznam čítačů pro přizpůsobení sestavy. Vyberte čítače, které chcete porovnat pro analýzu trendů, a klikněte na tlačítko **Dokončit**.
 
