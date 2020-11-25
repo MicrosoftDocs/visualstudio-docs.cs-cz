@@ -13,12 +13,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 78dc44f4cebbfd245d8e5a8e1a667b422282c7ee
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: f5ca27d44e611ab3b541dfb5992ef37d230513c3
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349149"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040638"
 ---
 # <a name="overview"></a>Přehled
 
@@ -28,7 +28,7 @@ Každé *diagnostice* nebo pravidlo Roslyn Analyzer má výchozí závažnost a 
 
 ::: moniker range=">=vs-2019"
 
-Počínaje verzí Visual Studio 2019 verze 16,3 můžete nakonfigurovat závažnost pravidel analyzátoru nebo *diagnostiky* , v [souboru EditorConfig](#set-rule-severity-in-an-editorconfig-file), v [nabídce žárovky](#set-rule-severity-from-the-light-bulb-menu)a v seznamu chyb.
+Počínaje verzí Visual Studio 2019 verze 16,3 můžete nakonfigurovat závažnost pravidel analyzátoru nebo *diagnostiky*, v [souboru EditorConfig](#set-rule-severity-in-an-editorconfig-file), v [nabídce žárovky](#set-rule-severity-from-the-light-bulb-menu)a v seznamu chyb.
 
 ::: moniker-end
 
@@ -173,7 +173,7 @@ Z **Průzkumník řešení** můžete provádět většinu úprav diagnostiky an
 
 ![Uzel analyzátorů v Průzkumník řešení](media/analyzers-expanded-in-solution-explorer.png)
 
-V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem na pravidlo a vyberte **vlastnosti** , nebo vyberte pravidlo a stiskněte klávesu **ALT** + **ENTER**.
+V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem na pravidlo a vyberte **vlastnosti**, nebo vyberte pravidlo a stiskněte klávesu **ALT** + **ENTER**.
 
 ![Diagnostické vlastnosti v okno Vlastnosti](media/analyzer-diagnostic-properties.png)
 
@@ -292,7 +292,7 @@ dotnet_diagnostic.CA2231.severity = warning
   Pokud se jedná o první úpravu sady pravidel, sada Visual Studio vytvoří kopii výchozího souboru sady pravidel a pojmenuje ho *\<projectname> . ruleset* a přidá ho do projektu. Tato vlastní sada pravidel se také stal aktivní sadou pravidel pro váš projekt.
 
    > [!NOTE]
-   > Projekty .NET Core a .NET Standard nepodporují příkazy nabídky pro sady pravidel v **Průzkumník řešení** , například **otevřete aktivní sadu pravidel**. Chcete-li určit nevýchozí sadu pravidel pro projekt .NET Core nebo .NET Standard, přidejte do souboru projektu ručně [vlastnost **CodeAnalysisRuleSet**](using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) . Pravidla můžete konfigurovat v rámci sady pravidel v uživatelském rozhraní editoru sad pravidel sady Visual Studio.
+   > Projekty .NET Core a .NET Standard nepodporují příkazy nabídky pro sady pravidel v **Průzkumník řešení**, například **otevřete aktivní sadu pravidel**. Chcete-li určit nevýchozí sadu pravidel pro projekt .NET Core nebo .NET Standard, přidejte do souboru projektu ručně [vlastnost **CodeAnalysisRuleSet**](using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) . Pravidla můžete konfigurovat v rámci sady pravidel v uživatelském rozhraní editoru sad pravidel sady Visual Studio.
 
 1. Přejděte k pravidlu tak, že rozbalíte jeho obsahující sestavení.
 
@@ -347,7 +347,7 @@ Existuje několik způsobů, jak potlačit porušení pravidel:
 
 - Z **Průzkumník řešení**
 
-  Nastavte závažnost pravidla na **None (žádné** ).
+  Nastavte závažnost pravidla na **None (žádné**).
 
 - Z **editoru sad pravidel**
 
@@ -363,18 +363,18 @@ Existuje několik způsobů, jak potlačit porušení pravidel:
 
   Vyberte pravidla, která chcete potlačit, a potom klikněte pravým tlačítkem myši a vyberte možnost **potlačit**  >  **ve zdroji nebo v souboru potlačení**.
 
-  - Pokud potlačíte **ve zdroji** , otevře se dialogové okno **Náhled změn** , ve kterém se zobrazí náhled [#pragma upozornění](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) a direktiva Visual Basic [#Disable upozornění](/dotnet/visual-basic/language-reference/directives/directives) , která je přidána do zdrojového kódu.
+  - Pokud potlačíte **ve zdroji**, otevře se dialogové okno **Náhled změn** , ve kterém se zobrazí náhled [#pragma upozornění](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) a direktiva Visual Basic [#Disable upozornění](/dotnet/visual-basic/language-reference/directives/directives) , která je přidána do zdrojového kódu.
 
     ![Náhled Přidání upozornění #pragma v souboru kódu](media/pragma-warning-preview.png)
 
-  - Pokud vyberete možnost **v souboru potlačení** , otevře se dialogové okno **Náhled změn** a zobrazí náhled <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atributu, který je přidán do globálního souboru potlačení.
+  - Pokud vyberete možnost **v souboru potlačení**, otevře se dialogové okno **Náhled změn** a zobrazí náhled <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atributu, který je přidán do globálního souboru potlačení.
 
     ![Náhled přidání atributu SuppressMessage do souboru potlačení](media/preview-changes-in-suppression-file.png)
 
   V dialogovém okně **Náhled změn** vyberte **použít**.
 
   > [!NOTE]
-  > Pokud nevidíte možnost nabídky **potlačit** v **Průzkumník řešení** , porušení pravděpodobně přijde z buildu a ne za živou analýzu. **Seznam chyb** zobrazuje narušení diagnostiky nebo pravidla, a to od živých analýz kódu i sestavení. Vzhledem k tomu, že diagnostika sestavení může být zastaralá, například pokud jste upravili kód pro opravu porušení, ale ještě nebyla znovu sestavena, nemůžete tuto diagnostiku z **Seznam chyb** potlačit. Diagnostika z živých analýz nebo IntelliSense je vždy aktuální s aktuálními zdroji a lze ji potlačit z **Seznam chyb**. Pokud chcete z výběru vyloučit diagnostiku *sestavení* , přepněte filtr zdroje **Seznam chyb** z **Build + IntelliSense** na **pouze IntelliSense**. Pak vyberte diagnostiku, kterou chcete potlačit, a pokračujte podle postupu popsaného výše.
+  > Pokud nevidíte možnost nabídky **potlačit** v **Průzkumník řešení**, porušení pravděpodobně přijde z buildu a ne za živou analýzu. **Seznam chyb** zobrazuje narušení diagnostiky nebo pravidla, a to od živých analýz kódu i sestavení. Vzhledem k tomu, že diagnostika sestavení může být zastaralá, například pokud jste upravili kód pro opravu porušení, ale ještě nebyla znovu sestavena, nemůžete tuto diagnostiku z **Seznam chyb** potlačit. Diagnostika z živých analýz nebo IntelliSense je vždy aktuální s aktuálními zdroji a lze ji potlačit z **Seznam chyb**. Pokud chcete z výběru vyloučit diagnostiku *sestavení* , přepněte filtr zdroje **Seznam chyb** z **Build + IntelliSense** na **pouze IntelliSense**. Pak vyberte diagnostiku, kterou chcete potlačit, a pokračujte podle postupu popsaného výše.
   >
   > ![Zdrojový filtr Seznam chyb v aplikaci Visual Studio](media/error-list-filter.png)
 
@@ -386,7 +386,7 @@ Při sestavování projektu na příkazovém řádku se porušení pravidla zobr
 
 - V kódu projektu je porušeno jedno nebo více pravidel.
 
-- [Závažnost](#configure-severity-levels) narušeného pravidla je nastavena na možnost **Upozornění** , v takovém případě porušení nezpůsobí selhání sestavení nebo **Chyba**. v takovém případě porušení způsobí selhání sestavení.
+- [Závažnost](#configure-severity-levels) narušeného pravidla je nastavena na možnost **Upozornění**, v takovém případě porušení nezpůsobí selhání sestavení nebo **Chyba**. v takovém případě porušení způsobí selhání sestavení.
 
 Podrobnosti výstupu sestavení neovlivňují, zda jsou zobrazena porušení pravidel. I při **tiché** podrobnostech se ve výstupu sestavení zobrazí porušení pravidel.
 
@@ -408,7 +408,7 @@ Následující obrázek ukazuje výstup sestavení příkazového řádku z sest
 Pokud v projektu .NET Core přidáte odkaz na projekt, který obsahuje analyzátory NuGet, tyto analyzátory jsou také automaticky přidány do závislého projektu. Chcete-li toto chování zakázat, například pokud je závislý projekt projekt testování částí, označte balíček NuGet jako soukromý v souboru *. csproj* nebo *. vbproj* odkazovaného projektu nastavením atributu **PrivateAssets** :
 
 ```xml
-<PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.0" PrivateAssets="all" />
+<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.0" PrivateAssets="all" />
 ```
 
 ## <a name="see-also"></a>Viz také

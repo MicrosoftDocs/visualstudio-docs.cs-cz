@@ -1,5 +1,7 @@
 ---
 title: Možnosti, textový editor, C#, IntelliSense
+description: Naučte se používat stránku IntelliSense v části C# pro úpravu nastavení, která ovlivňují chování technologie IntelliSense v jazyce C#.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +18,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87a167a75f3b06522da77d562b0137df89757975
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e727fad6d3cb15f70cf630b1077170d16d28b7f
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596213"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039741"
 ---
 # <a name="options-text-editor-c-intellisense"></a>Možnosti, textový editor, C#, IntelliSense
 
-Stránka možnosti **technologie IntelliSense** slouží k úpravě nastavení, která mají vliv na chování technologie IntelliSense v jazyce C#. Chcete-li získat přístup k této **Tools**stránce Možnosti, zvolte  >  **možnost**nástroje a pak zvolte **textový editor**  >  **C#**  >  **IntelliSense**.
+Stránka možnosti **technologie IntelliSense** slouží k úpravě nastavení, která mají vliv na chování technologie IntelliSense v jazyce C#. Chcete-li získat přístup k této **Tools** stránce Možnosti, zvolte  >  **možnost** nástroje a pak zvolte **textový editor**  >  **C#**  >  **IntelliSense**.
 
 Stránka možnosti **technologie IntelliSense** obsahuje následující možnosti:
 

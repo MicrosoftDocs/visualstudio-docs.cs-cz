@@ -1,5 +1,7 @@
 ---
 title: Možnosti, Návrhář formulářů, obecné
+description: Naučte se, jak pomocí stránky Obecné nastavit předvolby pro mřížky a další funkce Návrhář formulářů v sadě Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 08/09/2019
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 2a72b27dc2277501d0e0957c8b89b551f4d6852d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7172ca12344ab046c9bf65e7df280a9fa6dd0aa
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568058"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040079"
 ---
 # <a name="options-dialog-box-windows-forms-designer"></a>Dialogové okno Možnosti: Návrhář formulářů
 

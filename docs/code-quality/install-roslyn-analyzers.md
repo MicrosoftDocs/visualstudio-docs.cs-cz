@@ -13,16 +13,16 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3c6978c19f01b278886f72ff21d62ebf6c5cf57f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 93cd01c0a90f2864843549c3ce11e066a16a8843
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348681"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040378"
 ---
 # <a name="install-third-party-analyzers"></a>Instalace analyzátorů jiných výrobců
 
-Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform ( *Roslyn* ). Tyto analyzátory jsou vždycky zapnuté. Můžete nainstalovat další analyzátory buď jako balíčky NuGet, nebo jako rozšíření sady Visual Studio v souborech *VSIX* .
+Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform (*Roslyn*). Tyto analyzátory jsou vždycky zapnuté. Můžete nainstalovat další analyzátory buď jako balíčky NuGet, nebo jako rozšíření sady Visual Studio v souborech *VSIX* .
 
 ## <a name="to-install-nuget-analyzer-packages"></a>Instalace balíčků analyzátoru NuGet
 
@@ -63,7 +63,7 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
 
 2. V levém podokně rozbalte položku **online** a vyberte možnost **Visual Studio Marketplace**.
 
-3. Do vyhledávacího pole zadejte název rozšíření analyzátoru, které chcete nainstalovat. Například můžete chtít [nainstalovat analyzátory nástroje Microsoft FxCop](install-fxcop-analyzers.md#vsix) , abyste mohli kontrolovat kód pro problémy se zabezpečením a výkonem mimo jiné.
+3. Do vyhledávacího pole zadejte název rozšíření analyzátoru, které chcete nainstalovat.
 
 4. Vyberte **Stáhnout**.
 
@@ -101,4 +101,4 @@ Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **rozšíření
 ## <a name="see-also"></a>Viz také
 
 - [Přehled analyzátorů kódu v aplikaci Visual Studio](../code-quality/roslyn-analyzers-overview.md)
-- [Instalace analyzátorů FxCop](../code-quality/install-fxcop-analyzers.md)
+- [Nainstalovat analyzátory .NET](../code-quality/install-net-analyzers.md)

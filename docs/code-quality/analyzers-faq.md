@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20d566937286743a684ecce2ff54ff2cafe4b3a4
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 567af541b819186bda3dc869628c2812be9888b8
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348388"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039585"
 ---
 # <a name="code-analysis-faq"></a>Nejčastější dotazy k analýze kódu
 
@@ -24,13 +24,13 @@ Tato stránka obsahuje odpovědi na některé nejčastější dotazy týkající
 
 ## <a name="code-analysis-versus-editorconfig"></a>Analýza kódu oproti EditorConfig
 
-**Otázka** : mám použít analýzu kódu nebo EditorConfig pro kontrolu stylu kódu?
+**Otázka**: mám použít analýzu kódu nebo EditorConfig pro kontrolu stylu kódu?
 
 Odpověď **: analýza** kódu a soubory EditorConfig fungují ručně. Při definování stylů kódu [v souboru EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options) nebo na stránce [Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) ve skutečnosti konfigurujete analyzátory kódu, které jsou součástí sady Visual Studio. Soubory EditorConfig se dají použít k povolení nebo zakázání pravidel analyzátoru a také ke konfiguraci balíčků NuGet Analyzer.
 
 ## <a name="editorconfig-versus-rule-sets"></a>EditorConfig oproti sadám pravidel
 
-**Otázka** : mám nakonfigurovat analyzátory pomocí sady pravidel nebo souboru EditorConfig?
+**Otázka**: mám nakonfigurovat analyzátory pomocí sady pravidel nebo souboru EditorConfig?
 
 Odpověď: sady pravidel a soubory EditorConfig mohou existovat společně a **lze je použít** ke konfiguraci analyzátorů. Soubory EditorConfig a sady pravidel umožňují povolit a zakázat pravidla a nastavit jejich závažnost.
 
@@ -47,13 +47,13 @@ Kromě sad pravidel a souborů EditorConfig jsou některé analyzátory nakonfig
 
 ## <a name="code-analysis-in-ci-builds"></a>Analýza kódu v sestaveních CI
 
-**Otázka** : provádí analýzy kódu na základě .NET Compiler Platform v sestaveních průběžné integrace (CI)?
+**Otázka**: provádí analýzy kódu na základě .NET Compiler Platform v sestaveních průběžné integrace (CI)?
 
 Odpověď **: Ano**. Pro analyzátory, které jsou nainstalovány z balíčku NuGet, jsou tato pravidla [vynutila v době sestavování](roslyn-analyzers-overview.md#build-errors), včetně během sestavení CI. Analyzátory používané v sestaveních CI mají na zřeteli konfiguraci pravidel ze sad pravidel i souborů EditorConfig. Analyzátory kódu, které jsou součástí sady Visual Studio, nejsou aktuálně k dispozici jako balíček NuGet, takže tato pravidla se v sestavení CI nedají vymáhat.
 
 ## <a name="ide-analyzers-versus-stylecop"></a>Analyzátory IDE versus StyleCop
 
-**Otázka** : Jaký je rozdíl mezi analyzátory kódu integrovaného vývojového prostředí (IDE) sady Visual Studio a analyzátory StyleCop?
+**Otázka**: Jaký je rozdíl mezi analyzátory kódu integrovaného vývojového prostředí (IDE) sady Visual Studio a analyzátory StyleCop?
 
 Odpověď **: rozhraní IDE sady Visual** Studio obsahuje integrované analyzátory, které hledají jak styl kódu, tak i problémy s kvalitou. Tato pravidla vám pomůžou používat nové jazykové funkce při jejich zavedení a zlepšení udržovatelnosti kódu. Analyzátory IDE se průběžně aktualizují s každou verzí sady Visual Studio.
 
@@ -61,13 +61,19 @@ Odpověď **: rozhraní IDE sady Visual** Studio obsahuje integrované analyzát
 
 ## <a name="code-analyzers-versus-legacy-analysis"></a>Analyzátory kódu oproti starší analýze
 
-**Otázka** : Jaký je rozdíl mezi staršími verzemi analýzy a analýz kódu založenými na .NET Compiler Platform?
+**Otázka**: Jaký je rozdíl mezi staršími verzemi analýzy a analýz kódu založenými na .NET Compiler Platform?
 
-Odpověď **: Analýza kódu na základě**.NET Compiler Platform analyzuje zdrojový kód v reálném čase a během kompilace, zatímco starší verze analýzy analyzuje binární soubory po dokončení sestavení. Další informace najdete v tématu [Analýza na základě .NET Compiler Platform oproti starší analýze](../code-quality/fxcop-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-fxcop-analyzers).
+Odpověď **: Analýza kódu na základě**.NET Compiler Platform analyzuje zdrojový kód v reálném čase a během kompilace, zatímco starší verze analýzy analyzuje binární soubory po dokončení sestavení. Další informace najdete v tématu [Analýza na základě .NET Compiler Platform oproti starší analýze](../code-quality/net-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-net-analyzers).
+
+## <a name="fxcop-analyzers-versus-net-analyzers"></a>Analyzátory FxCop versus analyzátory .NET
+
+**Otázka**: Jaký je rozdíl mezi analyzátory FxCop a analyzátory .NET?
+
+**A** Odpověď: analyzátory FxCop a analyzátory .NET .NET Compiler Platform odkazují na implementace analyzátoru pro FxCop pravidla certifikační autority ("Roslyn"). Před vydáním sady Visual Studio 2019 16,8 a .NET 5,0 byly tyto analyzátory dodávány jako `Microsoft.CodeAnalysis.FxCopAnalyzers` [balíček NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers). Počínaje sadou Visual Studio 2019 16,8 a .NET 5,0 jsou tyto analyzátory [součástí sady .NET SDK](/dotnet/fundamentals/code-analysis/overview). Jsou také k dispozici jako `Microsoft.CodeAnalysis.NetAnalyzers` [balíček NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers). Zvažte prosím možnost [migrace z analyzátorů FxCop na analyzátory .NET](migrate-from-fxcop-analyzers-to-net-analyzers.md).
 
 ## <a name="treat-warnings-as-errors"></a>Zpracovávat upozornění jako chyby
 
-**Otázka** : můj projekt používá možnost sestavení k považovat upozornění jako chyby. Po migraci ze starší verze analýzy do analýzy zdrojového kódu se nyní všechna upozornění analýzy kódu zobrazují jako chyby. Jak to můžu zabránit?
+**Otázka**: můj projekt používá možnost sestavení k považovat upozornění jako chyby. Po migraci ze starší verze analýzy do analýzy zdrojového kódu se nyní všechna upozornění analýzy kódu zobrazují jako chyby. Jak to můžu zabránit?
 
 Odpověď **: Chcete-li** zabránit tomu, aby se výstraha analýzy kódu nacházela jako chyby, postupujte podle následujících kroků:
 
@@ -81,18 +87,18 @@ Odpověď **: Chcete-li** zabránit tomu, aby se výstraha analýzy kódu nachá
      </Project>
      ```
 
-  2. Přidejte řádek do souboru projektu. csproj nebo. vbproj pro import souboru. props, který jste vytvořili v předchozím kroku. Tento řádek musí být umístěn před řádky, které importují soubory FxCop Analyzer. props. Například pokud má soubor. props název CodeAnalysis. props:
+  2. Přidejte řádek do souboru projektu. csproj nebo. vbproj pro import souboru. props, který jste vytvořili v předchozím kroku. Tento řádek musí být umístěn před řádky, které importují soubory Analyzer. props. Například pokud má soubor. props název CodeAnalysis. props:
 
      ```xml
      ...
      <Import Project="..\..\codeanalysis.props" Condition="Exists('..\..\codeanalysis.props')" />
-     <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.5\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.5\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+     <Import Project="..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.0\build\Microsoft.CodeAnalysis.NetAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.0\build\Microsoft.CodeAnalysis.NetAnalyzers.props')" />
      ...
      ```
 
 ## <a name="code-analysis-solution-property-page"></a>Stránka vlastností řešení analýzy kódu
 
-**Otázka** : kde je stránka vlastností analýzy kódu pro řešení?
+**Otázka**: kde je stránka vlastností analýzy kódu pro řešení?
 
 Odpověď **: stránka** vlastností analýzy kódu na úrovni řešení se odebrala a upřednostňuje spolehlivější sdílenou skupinu vlastností. Pro správu analýzy kódu na úrovni projektu je stránka vlastností analýza kódu stále k dispozici. (U spravovaných projektů doporučujeme také migrovat z RuleSets na EditorConfig pro konfiguraci pravidel.)  Pro sdílení RuleSets napříč několika/všemi projekty v rámci řešení nebo úložiště doporučujeme definovat skupinu vlastností s vlastností CodeAnalysisRuleSet v souboru Shared/Targets nebo Directory. props/Directory. targets. Pokud tyto běžné vlastnosti nebo cíle nechcete importovat do všech vašich projektů, měli byste zvážit [Přidání takové skupiny vlastností do adresáře. props nebo Directory. targets v adresáři řešení na nejvyšší úrovni, který je automaticky importován do všech souborů projektu definovaných v adresáři nebo v jeho podadresářích](../msbuild/customize-your-build.md).
 

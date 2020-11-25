@@ -1,33 +1,33 @@
 ---
 title: Stav portu pravidla FxCop
 ms.date: 05/21/2019
-description: Seznamte se s pravidly analýzy statických kódů, které byly v aplikaci Visual Studio přesměrované do analyzátorů FxCop. Zobrazit přepravovaná pravidla a prostředky při přenosu aktualizací.
+description: Seznamte se s pravidly analýzy statických kódů, které byly v aplikaci Visual Studio přesměrované na analyzátory .NET. Zobrazit přepravovaná pravidla a prostředky při přenosu aktualizací.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 helpviewer_keywords:
 - fxcop rules
-- fxcop analyzers, ported rules
+- .NET analyzers, ported rules
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: cedd96036a6d0725dbde5f0b11400a20360a20ec
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: dde5a3d8ccf5557905395ee03d108e995ecffe7e
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348942"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039572"
 ---
 # <a name="fxcop-rule-port-status"></a>Stav portu pravidla FxCop
 
-Pokud jste dříve používali analýzu statického kódu v aplikaci Visual Studio, můžete si všimnout, že tato pravidla jsou k dispozici v aktuální implementaci jako [analyzátory FxCop](install-fxcop-analyzers.md). Tato stránka obsahuje seznam pravidel, která byla předaná. Podívejte se na nepřipojená [pravidla](fxcop-unported-rules.md) pro ty, které se nedostaly do portu a zda existují plány pro jejich přenos.
+Pokud jste dříve používali analýzu statického kódu v aplikaci Visual Studio, můžete si všimnout, že tato pravidla jsou k dispozici v aktuální implementaci jako [analyzátory .NET](install-net-analyzers.md). Tato stránka obsahuje seznam pravidel, která byla předaná. Podívejte se na nepřipojená [pravidla](fxcop-unported-rules.md) pro ty, které se nedostaly do portu a zda existují plány pro jejich přenos.
 
 ## <a name="ported-rules"></a>Přenesená pravidla
 
-[Stránka pro automaticky generovanou dokumentaci](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md) v úložišti Roslyn-Analyzer obsahuje nejaktuálnější seznam pravidel, která byla předaná do analyzátorů FxCop. Tato stránka obsahuje také další informace, například zda je pravidlo povoleno ve výchozím nastavení a zda má přidruženou *opravu kódu*. ([Opravy kódu](../ide/quick-actions.md) jsou dostupné opravy jedním kliknutím v nabídce ikony žárovky v aplikaci Visual Studio.)
+[Stránka pro automaticky generovanou dokumentaci](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Microsoft.CodeAnalysis.NetAnalyzers.md) v úložišti Roslyn-Analyzer obsahuje nejaktuálnější seznam pravidel, která byla předaná do analyzátorů Roslyn. Tato stránka obsahuje také další informace, například zda je pravidlo povoleno ve výchozím nastavení a zda má přidruženou *opravu kódu*. ([Opravy kódu](../ide/quick-actions.md) jsou dostupné opravy jedním kliknutím v nabídce ikony žárovky v aplikaci Visual Studio.)
 
-Od data na této stránce seznam pravidel FxCop, která byla předaná do [analyzátorů FxCop](install-fxcop-analyzers.md) , zahrnují:
+Od data na této stránce seznam pravidel FxCop, která byla předaná do [analyzátorů .NET](install-net-analyzers.md) , zahrnují:
 
 ID pravidla | Nadpis
 --------|---------
@@ -64,7 +64,7 @@ ID pravidla | Nadpis
 [CA1050](/dotnet/fundamentals/code-analysis/quality-rules/ca1050) | Deklarujte typy v oborech názvů
 [CA1051](/dotnet/fundamentals/code-analysis/quality-rules/ca1051) | Nedeklarujte viditelná pole instance
 [CA1052](/dotnet/fundamentals/code-analysis/quality-rules/ca1052) | Statické typy držitelů by měly být statické nebo NotInheritable.
-[CA1053](/dotnet/fundamentals/code-analysis/quality-rules/ca1053) | Typy statických držitelů by neměly mít konstruktory (CA1053 je součást [CA1052](/dotnet/fundamentals/code-analysis/quality-rules/ca1052) pro analyzátory FxCop).
+[CA1053](/dotnet/fundamentals/code-analysis/quality-rules/ca1053) | Typy statických držitelů by neměly mít konstruktory (CA1053 je součást [CA1052](/dotnet/fundamentals/code-analysis/quality-rules/ca1052) pro analyzátory .NET).
 [CA1054](/dotnet/fundamentals/code-analysis/quality-rules/ca1054) | Parametry identifikátoru URI by neměly být řetězce
 [CA1055](/dotnet/fundamentals/code-analysis/quality-rules/ca1055) | Návratové hodnoty identifikátoru URI by neměly být řetězce
 [CA1056](/dotnet/fundamentals/code-analysis/quality-rules/ca1056) | Vlastnosti identifikátoru URI by neměly být řetězce
@@ -204,4 +204,4 @@ CA9999 | Neshoda verze analyzátoru
 
 ## <a name="see-also"></a>Viz také
 
-- [Pravidla Microsoft. CodeAnalysis. FxCopAnalyzers](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md)
+- [Pravidla analyzátoru .NET](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Microsoft.CodeAnalysis.NetAnalyzers.md)

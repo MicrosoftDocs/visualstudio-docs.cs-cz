@@ -1,5 +1,7 @@
 ---
 title: Možnosti, textový editor, HTML (webové formuláře), formátování
+description: Naučte se používat stránku formátování v sekci HTML k nastavení možností projektu HTML pro formátování kódu v editoru kódu.
+ms.custom: SEO-VS-2020
 ms.date: 1/15/2019
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -10,16 +12,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e28caf7f71af7c7a07634d1732a1001a32a4aee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3c8fe85b7bce856867802d43411816ae2df5d2c
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568318"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040976"
 ---
 # <a name="options-text-editor-html-web-forms-formatting"></a>Možnosti, textový editor, HTML (webové formuláře), formátování
 
-Stránka možnosti **formátování** slouží k nastavení možností projektu HTML pro formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce, v řádku **Tools**nabídek zvolte  >  **možnost**nástroje a potom rozbalte formátování **textový editor**  >  **HTML (webové formuláře)**  >  **Formatting**.
+Stránka možnosti **formátování** slouží k nastavení možností projektu HTML pro formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce, v řádku **Tools** nabídek zvolte  >  **možnost** nástroje a potom rozbalte formátování **textový editor**  >  **HTML (webové formuláře)**  >  **Formatting**.
 
 ## <a name="capitalization"></a>Malá
 

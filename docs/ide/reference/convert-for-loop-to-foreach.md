@@ -1,5 +1,6 @@
 ---
 title: Refaktoring pro smyčku for na příkaz foreach
+description: Naučte se, jak pomocí nabídky rychlé akce a refaktoring převádět mezi smyčkou for a příkazu foreach.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
@@ -11,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 68ed736a1e3a07c7cd3f67ea9c936821cf4ac78c
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 70c2b17f00c1f5e72ce0e913c360b4655b18df12
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93045922"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040820"
 ---
 # <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>Refaktoring pro převod mezi smyčkou for a příkazem foreach
 
@@ -51,7 +52,7 @@ Důvody, proč je vhodné převést smyčku [for](/dotnet/csharp/language-refere
 
    ![Nabídka převést na foreach](media/convert-to-foreach.png)
 
-1. Vyberte **převést na foreach** . Případně můžete výběrem **Zobrazit náhled změn** otevřít dialogové okno [Náhled změn](../../ide/preview-changes.md) a pak vybrat **použít** .
+1. Vyberte **převést na foreach**. Případně můžete výběrem **Zobrazit náhled změn** otevřít dialogové okno [Náhled změn](../../ide/preview-changes.md) a pak vybrat **použít**.
 
 ## <a name="convert-a-foreach-statement-to-a-for-loop"></a>Převod příkazu foreach na smyčku for
 
@@ -79,12 +80,12 @@ Důvody, které byste mohli chtít převést příkaz [foreach](/dotnet/csharp/l
 
    ![Nabídka převést na pro](media/convert-to-for.png)
 
-1. Vyberte **převést na pro** . Případně můžete výběrem **Zobrazit náhled změn** otevřít dialogové okno [Náhled změn](../../ide/preview-changes.md) a pak vybrat **použít** .
+1. Vyberte **převést na pro**. Případně můžete výběrem **Zobrazit náhled změn** otevřít dialogové okno [Náhled změn](../../ide/preview-changes.md) a pak vybrat **použít**.
 
 1. Vzhledem k tomu, že refaktoring zavádí novou proměnnou počtu iterací, zobrazí se pole **Přejmenovat** v pravém horním rohu editoru. Chcete-li pro proměnnou zvolit jiný název, zadejte ji do pole a potom stiskněte klávesu **ENTER** nebo zvolte možnost **použít** v poli **Přejmenovat** . Pokud nechcete zvolit nový název, stiskněte klávesu **ESC** nebo vyberte **použít** k zavření pole **Přejmenovat** .
 
 > [!NOTE]
-> V jazyce C# kód vygenerovaný těmito refaktoringy používá explicitní typ nebo [var](/dotnet/csharp/language-reference/keywords/var) pro typ položek v kolekci. Typ v generovaném kódu, explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v rozsahu. Tato konkrétní nastavení stylu kódu jsou konfigurována na úrovni počítače v nabídce **nástroje**  >  **Možnosti**  >  **textový editor**  >  **C#**  >  **Code Style**  >  **General**  >  **\' Předvolby obecné var** nebo na úrovni řešení v souboru [EditorConfig](/dotnet/fundamentals/code-analysis/style-rules/language-rules#implicit-and-explicit-types) . Pokud změníte nastavení stylu kódu v **možnostech** , znovu otevřete soubor kódu, aby se změny projevily.
+> V jazyce C# kód vygenerovaný těmito refaktoringy používá explicitní typ nebo [var](/dotnet/csharp/language-reference/keywords/var) pro typ položek v kolekci. Typ v generovaném kódu, explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v rozsahu. Tato konkrétní nastavení stylu kódu jsou konfigurována na úrovni počítače v nabídce **nástroje**  >  **Možnosti**  >  **textový editor**  >  **C#**  >  **Code Style**  >  **General**  >  **\' Předvolby obecné var** nebo na úrovni řešení v souboru [EditorConfig](/dotnet/fundamentals/code-analysis/style-rules/language-rules#implicit-and-explicit-types) . Pokud změníte nastavení stylu kódu v **možnostech**, znovu otevřete soubor kódu, aby se změny projevily.
 
 ## <a name="see-also"></a>Viz také
 

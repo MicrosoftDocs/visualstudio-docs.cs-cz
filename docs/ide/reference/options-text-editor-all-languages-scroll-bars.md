@@ -1,5 +1,7 @@
 ---
 title: Možnosti, textový editor, všechny jazyky, posuvníky
+description: Naučte se, jak pomocí stránky posuvníky v části všechny jazyky změnit výchozí chování posuvníků editoru kódu v rámci sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 10/25/2018
 ms.topic: reference
 f1_keywords:
@@ -32,12 +34,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c89be8a79aad9a2e3e0cdbc8601a08a99c1ad1aa
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f75ba02b65b7025f9cf1e4f2eb9b5b6e3de96be0
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808087"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039793"
 ---
 # <a name="options-text-editor-all-languages-scroll-bars"></a>Možnosti, textový editor, všechny jazyky, posuvníky
 Toto dialogové okno umožňuje změnit výchozí chování posuvníku editoru kódu. Chcete-li zobrazit tyto možnosti, vyberte **Možnosti** v nabídce **nástroje** . V rámci složky **textový editor** rozbalte podsložku **všechny jazyky** a pak zvolte **posuvníky**.
@@ -81,7 +83,7 @@ Posuvník má dva režimy: režim pruhů a režim mapování.
 
 ### <a name="use-map-mode-for-vertical-scroll-bar"></a>Pro svislý posuvník použít režim mapování
 
-Když v *režimu mapování*kliknete na umístění na posuvníku, přesune se kurzor na toto místo v souboru místo pouhého posouvání nahoru nebo dolů stránky. Řádky kódu jsou v miniaturním zobrazení zobrazeny na posuvníku. Můžete zvolit, jak velký má sloupec mapy výběrem hodnoty v **přehledu zdroje**. Chcete-li povolit větší náhled kódu při přesunutí ukazatele na mapu, vyberte možnost **Zobrazit náhled tlačítka** . Sbalené oblasti jsou vybarvené jinak a při jejich dvojitém kliknutí se rozbalí.
+Když v *režimu mapování* kliknete na umístění na posuvníku, přesune se kurzor na toto místo v souboru místo pouhého posouvání nahoru nebo dolů stránky. Řádky kódu jsou v miniaturním zobrazení zobrazeny na posuvníku. Můžete zvolit, jak velký má sloupec mapy výběrem hodnoty v **přehledu zdroje**. Chcete-li povolit větší náhled kódu při přesunutí ukazatele na mapu, vyberte možnost **Zobrazit náhled tlačítka** . Sbalené oblasti jsou vybarvené jinak a při jejich dvojitém kliknutí se rozbalí.
 
 > [!TIP]
 > Zobrazení miniaturního kódu můžete zapnout v režimu mapování nastavením **zdrojového přehledu** na **vypnuto**. Pokud je vybrána možnost **Zobrazit náhled náhledu** , stále se zobrazuje náhled kódu v tomto umístění, když na posuvníku najedete ukazatel myši, a když na něj kliknete, přesune se kurzor na toto umístění v souboru.

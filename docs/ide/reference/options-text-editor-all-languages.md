@@ -1,5 +1,7 @@
 ---
 title: Možnosti, textový editor, všechny jazyky
+description: Naučte se používat stránku Obecné v části všechny jazyky ke změně výchozího chování editoru kódu v sadě Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -42,12 +44,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9815bdec94ce32a3bfcc170dd95d834bc43ea58f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 682097ca08bd570ac025e7b6a1861e45a8f761e4
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75566875"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96041002"
 ---
 # <a name="options-dialog-box-text-editor--all-languages"></a>Dialogové okno Možnosti: textový editor \> všechny jazyky
 
@@ -68,7 +70,7 @@ V případě, že je tato možnost vybrána, budou při psaní v editoru v techn
 
 Když se tato možnost vybere, zkrátí se seznamy pro doplňování příkazů tím, že se zobrazí jenom ty položky, které se nejčastěji používají. Další položky jsou filtrovány ze seznamu.
 
-**Informace o parametrech**
+**Informace o parametru**
 
 Je-li vybrána tato možnost, je zobrazena Úplná syntaxe pro aktuální deklaraci nebo proceduru v editoru s použitím všech dostupných parametrů. Další parametr, který můžete přiřadit, se zobrazí tučně.
 

@@ -1,5 +1,7 @@
 ---
 title: -LCID (devenv.exe)
+description: Naučte se, jak použít přepínač příkazového řádku devenv pro LCID k nastavení výchozího jazyka používaného pro text, měnu a jiné hodnoty v rámci rozhraní IDE.
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cabbf36adb5019543b3cfb72b0b0e56976517d2d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eda3a4d9242655af1b018664273ceb693c7e775c
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77557930"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96043982"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
@@ -43,7 +45,7 @@ devenv {/LCID|/L} LocaleID
 
 ## <a name="remarks"></a>Poznámky
 
-Načte rozhraní IDE a nastaví výchozí přirozený jazyk pro prostředí. Tato změna je trvalá mezi relacemi a IDE tuto změnu zobrazuje v **Tools**  >  **Options**  >  **Environment**  >  poli jazyk možností**nastavení prostředí mezinárodní nastavení**  >  **Language** .
+Načte rozhraní IDE a nastaví výchozí přirozený jazyk pro prostředí. Tato změna je trvalá mezi relacemi a IDE tuto změnu zobrazuje v **Tools**  >  **Options**  >  **Environment**  >  poli jazyk možností **nastavení prostředí mezinárodní nastavení**  >  **Language** .
 
 Pokud zadaný jazyk není ve vašem systému k dispozici, `/LCID` přepínač se ignoruje.
 

@@ -1,5 +1,7 @@
 ---
 title: Možnosti formátování editoru C#
+description: Naučte se, jak pomocí stránky možnosti formátování a jejích podstránek nastavit možnosti formátování kódu v editoru kódu při programování v jazyce C#.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2018
 ms.topic: reference
 f1_keywords:
@@ -18,21 +20,21 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57d95cd3f3dcf68e7af143bdde3a16474beda20c
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: a29f298579d571595cbf537f99ed67b333fbbb9c
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659274"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039768"
 ---
 # <a name="options-dialog-box-text-editor--c--code-style--formatting"></a>Dialogové okno Možnosti: \> \> formátování stylu kódu C# editoru \> textu
 
-Pomocí stránky možnosti **formátování** a jejích podstránek ([**odsazení**](#indentation-page), **nové řádky**, **mezery**a **zalamování**) nastavte možnosti formátování kódu v editoru kódu.
+Pomocí stránky možnosti **formátování** a jejích podstránek ([**odsazení**](#indentation-page), **nové řádky**, **mezery** a **zalamování**) nastavte možnosti formátování kódu v editoru kódu.
 
-Chcete-li získat přístup k této **Tools**stránce Možnosti,  >  v řádku nabídek**Vyberte možnost** nástroje. V dialogovém okně **Možnosti** vyberte možnost **textový editor**  >  **C#**  >  **formátování stylu kódu**  >  **Formatting**.
+Chcete-li získat přístup k této **Tools** stránce Možnosti,  >  v řádku nabídek **Vyberte možnost** nástroje. V dialogovém okně **Možnosti** vyberte možnost **textový editor**  >  **C#**  >  **formátování stylu kódu**  >  **Formatting**.
 
 > [!TIP]
-> **Odsazení**, **nové řádky**, **mezery**a **zabalení** podstránky každý zobrazí okno náhledu v dolní části, které zobrazuje účinek jednotlivých možností. Chcete-li použít okno náhledu, vyberte možnost formátování. V okně náhledu se zobrazí příklad vybrané možnosti. Když změníte nastavení tak, že vyberete přepínač nebo zaškrtávací políčko, okno náhledu se aktualizuje a zobrazí efekt nového nastavení.
+> **Odsazení**, **nové řádky**, **mezery** a **zabalení** podstránky každý zobrazí okno náhledu v dolní části, které zobrazuje účinek jednotlivých možností. Chcete-li použít okno náhledu, vyberte možnost formátování. V okně náhledu se zobrazí příklad vybrané možnosti. Když změníte nastavení tak, že vyberete přepínač nebo zaškrtávací políčko, okno náhledu se aktualizuje a zobrazí efekt nového nastavení.
 
 ## <a name="formatting-general-page"></a>Stránka formátování (Obecné)
 
@@ -40,7 +42,7 @@ Chcete-li získat přístup k této **Tools**stránce Možnosti,  >  v řádku n
 
 Tato nastavení mají vliv na to, *kdy* Editor kódu aplikuje možnosti formátování na kód.
 
-|Popisek|Description|
+|Popisek|Popis|
 |-----------|-----------------|
 |**Automaticky formátovat při psaní**|Při zrušení výběru jsou možnosti **Format zapnuté** a **formátový blok zapnuté** .|
 |**Automaticky formátovat příkaz v;**|Pokud je tato možnost vybrána, formátuje příkazy při dokončení podle možností formátování vybraných pro Editor.|
@@ -60,7 +62,7 @@ Pokud jste dříve použili nastavení stylu kódu pro soubory jazyka C# pomocí
 
 Tato nastavení nakonfigurují příkaz **formátovat dokument** , aby pro soubor prováděl další vyčištění kódu. Další informace o tom, jak se tato nastavení používají, najdete v tématu [Format Document Command](../code-styles-and-code-cleanup.md#apply-code-styles).
 
-|Popisek|Description|Odpovídající pravidla možností > EditorConfig a nástrojů|
+|Popisek|Popis|Odpovídající pravidla možností > EditorConfig a nástrojů|
 |-----------|-----------------|-----------------|-----------------|
 |**Použít všechna pravidla formátování C# (odsazení, zalamování, rozestupy)**|Příkaz **Formát dokumentu** vždy opravuje problémy s formátováním. Toto nastavení nelze změnit.| [Základní možnosti EditorConfig](../../ide/create-portable-custom-editor-options.md)<br/>[Možnosti formátování .NET EditorConfig](/dotnet/fundamentals/code-analysis/style-rules/formatting-rules)<br/><br/>**Nástroje**  >  **Možnosti**  >  **Textový editor**  >  **Jazyk C#**  >  **Formátování** > [**odsazení** nebo **nové řádky** nebo **mezery** nebo **zalomení**]|
 |**Při formátování provést vyčištění kódu**|Když se tato možnost vybere, použije opravy pro níže uvedená pravidla v příkazu **Edit. FormatDocument** .| – |
@@ -90,7 +92,7 @@ Možnosti odsazení na této stránce se použijí při automatickém formátov�
 ![Možnosti odsazení textového editoru v C# v aplikaci Visual Studio](media/csharp-indentation-options.png)
 
 > [!TIP]
-> Na **Text Editor**  >  **C#**  >  stránce Možnosti na**kartě** C# editoru textu se nacházejí taky možnosti odsazení. Tyto možnosti určují, kde Editor kódu umístí kurzor po stisknutí klávesy **ENTER** na konci řádku.
+> Na **Text Editor**  >  **C#**  >  stránce Možnosti na **kartě** C# editoru textu se nacházejí taky možnosti odsazení. Tyto možnosti určují, kde Editor kódu umístí kurzor po stisknutí klávesy **ENTER** na konci řádku.
 >
 > ![Možnosti karet textového editoru v jazyce C# v aplikaci Visual Studio](media/csharp-tabs-options.png)
 

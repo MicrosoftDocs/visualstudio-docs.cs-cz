@@ -1,5 +1,7 @@
 ---
 title: Možnosti, textový editor, C/C++, experimentální
+description: Naučte se používat experimentální stránku v části C/C++ ke změně experimentálního chování souvisejícího s technologií IntelliSense a databází procházení.
+ms.custom: SEO-VS-2020
 ms.date: 08/02/2017
 ms.topic: reference
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e239ad3d2091f334f18ec00a367fc47d5c21db3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e35bdb8c6a56ef3174277836769201cd00e47dad
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77278697"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040300"
 ---
 # <a name="options-text-editor-cc-experimental"></a>Možnosti, textový editor, C/C++, experimentální
 
@@ -28,7 +30,7 @@ Tento článek popisuje možnosti sady Visual Studio 2017. V případě sady Vis
 
 ::: moniker-end
 
-Chcete-li získat přístup k této stránce vlastností, stiskněte klávesu **CTRL** + **Q** pro aktivaci vyhledávacího pole a pak zadejte **experimentální**. Hledání najde stránku za několika prvních písmeny. K tomu se můžete dostat taky tak, **Tools**že vyberete  >  **Možnosti** nástrojů a rozbalíte **textový editor**, pak **C/C++** a pak zvolíte **experimentální**.
+Chcete-li získat přístup k této stránce vlastností, stiskněte klávesu **CTRL** + **Q** pro aktivaci vyhledávacího pole a pak zadejte **experimentální**. Hledání najde stránku za několika prvních písmeny. K tomu se můžete dostat taky tak, **Tools** že vyberete  >  **Možnosti** nástrojů a rozbalíte **textový editor**, pak **C/C++** a pak zvolíte **experimentální**.
 
 Tyto funkce jsou k dispozici v instalaci sady Visual Studio.
 

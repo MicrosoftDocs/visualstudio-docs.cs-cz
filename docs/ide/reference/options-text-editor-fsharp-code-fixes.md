@@ -1,5 +1,7 @@
 ---
 title: 'Možnosti, textový editor, F #, opravy kódu'
+description: 'Naučte se, jak pomocí stránky opravy kódu v oddílu F # určit nastavení, které může pomáhat identifikovat chyby kódu a nabízet řešení.'
+ms.custom: SEO-VS-2020
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
@@ -9,16 +11,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c20646c8da4101ac674a64c5ca1ed23a3b1fd7b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 73d66e4f8611a08d6dee3733c30b075d71f6712c
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770928"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039598"
 ---
 # <a name="options-text-editor--f--code-fixes"></a>Možnosti: textový editor > F # > opravy kódu
 
-Pomocí stránky možnosti oprav kódu můžete určit nastavení, které může pomáhat identifikovat chyby kódu a nabízet řešení. Chcete-li získat přístup k této **Tools**stránce Možnosti, zvolte  >  **možnost**nástroje a pak zvolte **textový editor**  >  **F #**  >  **opravy kódu**.
+Pomocí stránky možnosti oprav kódu můžete určit nastavení, které může pomáhat identifikovat chyby kódu a nabízet řešení. Chcete-li získat přístup k této **Tools** stránce Možnosti, zvolte  >  **možnost** nástroje a pak zvolte **textový editor**  >  **F #**  >  **opravy kódu**.
 
 ## <a name="code-fixes"></a>Opravy kódu
 

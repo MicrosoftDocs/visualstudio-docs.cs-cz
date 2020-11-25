@@ -1,5 +1,7 @@
 ---
 title: -Project (devenv.exe)
+description: Naučte se používat přepínač příkazového řádku devenv projektu k identifikaci jednoho projektu v rámci zadané konfigurace řešení k sestavení, vyčištění, opětovnému sestavení nebo nasazení projektu.
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4b57a5bd51ff20de8da87798aa398db04bc1c7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 90c1cdf37ddda7209b4f951e42ad07720e5cc40b
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75567772"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040105"
 ---
 # <a name="project-devenvexe"></a>/Project (devenv.exe)
 

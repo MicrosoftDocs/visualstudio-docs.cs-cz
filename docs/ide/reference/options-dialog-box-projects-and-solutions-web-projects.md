@@ -1,5 +1,6 @@
 ---
 title: Webové projekty v dialogovém okně Možnosti
+description: Naučte se používat možnosti webových projektů k nastavení webového serveru, který budou webové projekty používat pro vývoj v rámci sady Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 07/14/2017
 ms.topic: reference
@@ -11,16 +12,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efff521076b2d4a4b091ebf30b42f0d3ea4daa1f
-ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
+ms.openlocfilehash: 60aadb43c40e109fef9c4b9e2aa046c3f0d51edd
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93102633"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96044008"
 ---
 # <a name="options-dialog-box-projects-and-solutions-web-projects"></a>Dialogové okno Možnosti, Projekty a řešení, Webové projekty
 
-Nastaví webový server, který budou webové projekty používat pro vývoj v rámci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Chcete-li získat přístup k těmto možnostem, vyberte možnost **nástroje > možnosti** rozbalte položku **projekty a řešení** a vyberte možnost **webové projekty** .
+Nastaví webový server, který budou webové projekty používat pro vývoj v rámci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Chcete-li získat přístup k těmto možnostem, vyberte možnost **nástroje > možnosti** rozbalte položku **projekty a řešení** a vyberte možnost **webové projekty**.
 
 Ve výchozím nastavení používá webový projekt v systému Visual Studio vývojový server sady Visual Studio. Další informace naleznete v tématu [webové servery v aplikaci Visual Studio pro webové projekty ASP.NET](/previous-versions/aspnet/58wxa9w5\(v\=vs.120\)).
 

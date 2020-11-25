@@ -1,5 +1,7 @@
 ---
 title: -DoNotLoadProjects (devenv.exe)
+description: Naučte se používat přepínač příkazového řádku DoNotLoadProjects devenv k otevření zadaného řešení bez načtení projektů.
+ms.custom: SEO-VS-2020
 ms.date: 04/30/2019
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51e3341082ff354fc8bc87a89b3d7bc56e4e7887
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ef3502a2180f7ae7ed5963deb14844b46f3dbff9
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569852"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040625"
 ---
 # <a name="donotloadprojects-devenvexe"></a>/DoNotLoadProjects (devenv.exe)
 

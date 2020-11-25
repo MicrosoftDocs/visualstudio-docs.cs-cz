@@ -1,5 +1,7 @@
 ---
 title: -Upgrade (devenv.exe)
+description: Naučte se, jak použít přepínač příkazového řádku devenv pro upgrade k aktualizaci souboru řešení a všech jeho souborů projektu, nebo souboru projektu, na aktuální formáty sady Visual Studio pro tyto soubory.
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bb2b296d8728587c9aa3c22b7a670d89612eff1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2bb0565783efb27cf4194bb25982ee0f717be776
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596421"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040950"
 ---
 # <a name="upgrade-devenvexe"></a>/Upgrade (devenv.exe)
 

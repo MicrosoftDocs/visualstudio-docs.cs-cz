@@ -1,5 +1,7 @@
 ---
 title: Možnosti, textový editor, XAML, formátování
+description: Naučte se, jak pomocí stránky možnosti formátování a jejích podstránek nastavit možnosti formátování kódu v editoru kódu při programování v jazyce XAML.
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -29,12 +31,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d340a3b9468ea23c4cab23aabe19a7c1390955a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddeb503153eacdcff993405e29bb8b3bdbe0c722
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568240"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040521"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>Možnosti, textový editor, XAML, formátování
 

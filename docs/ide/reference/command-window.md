@@ -1,5 +1,7 @@
 ---
 title: Příkazové okno
+description: Naučte se, jak můžete použít okno Příkaz k provádění příkazů nebo aliasů přímo v integrovaném vývojovém prostředí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb855cbed67bffc5ff2fb63b1785c577dd9fea25
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e133f20464fb19752c7616d2fab1a631fa802c9
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75570346"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040886"
 ---
 # <a name="command-window"></a>Příkazové okno
 **Příkazové** okno se používá ke spouštění příkazů nebo aliasů přímo v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí (IDE). Příkazy nabídky a příkazy, které se nezobrazí v žádné nabídce, můžete spustit. Chcete-li zobrazit **příkazové** okno, zvolte možnost **Další okna** v nabídce **zobrazení** a vyberte **příkazová okna**.
@@ -98,7 +100,7 @@ Skoro každý přepínač podporovaný příkazem má dvě formy: krátký tvar 
 Pokud jsou zkrácené přepínače kombinovány do skupiny a zadány hodnoty, tato hodnota se vztahuje na každý přepínač. Například je `/pgm:123` rovno `/p:123 /g:123 /m:123` . Pokud některý z přepínačů ve skupině nepřijímá hodnotu, dojde k chybě.
 
 ## <a name="escape-characters"></a>Řídicí znaky
-Znak stříšky (^) na příkazovém řádku znamená, že znak bezprostředně za ním je interpretován doslova, nikoli jako řídicí znak. To lze použít k vložení přímých uvozovek ("), mezer, počátečních lomítek, znakových přepínačů nebo jiných literálových znaků v parametru nebo hodnotě přepínače s výjimkou názvů přepínačů. Příklad:
+Znak stříšky (^) na příkazovém řádku znamená, že znak bezprostředně za ním je interpretován doslova, nikoli jako řídicí znak. To lze použít k vložení přímých uvozovek ("), mezer, počátečních lomítek, znakových přepínačů nebo jiných literálových znaků v parametru nebo hodnotě přepínače s výjimkou názvů přepínačů. Třeba
 
 ```cmd
 >Edit.Find ^^t /regex

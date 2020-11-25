@@ -1,5 +1,7 @@
 ---
 title: Možnosti, textový editor, všechny jazyky, karty
+description: Naučte se, jak pomocí stránky karty v části všechny jazyky změnit výchozí chování karet editoru kódu v rámci sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -41,12 +43,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fc169960cf757e4e334d5f77b06ff70b0d6da7c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e66654c8ceefa2cb7983c29f441cbb0f9cf97aff
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594744"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96043969"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>Možnosti, textový editor, všechny jazyky, karty
 

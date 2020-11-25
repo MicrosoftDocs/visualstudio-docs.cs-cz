@@ -1,5 +1,7 @@
 ---
 title: Možnosti, textový editor, XAML, různé
+description: Naučte se používat různé stránky v oddílu XML k určení způsobu formátování prvků a atributů v dokumentech XAML.
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -28,12 +30,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: f646d52e3aae3d52f6cd24d75421fbdc71d30d66
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c5662381d025fa2c74ac82ac217122ea9097ab14
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544089"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040963"
 ---
 # <a name="options-text-editor-xaml-miscellaneous"></a>Možnosti, textový editor, XAML, různé
 

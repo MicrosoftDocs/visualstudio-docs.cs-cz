@@ -1,5 +1,7 @@
 ---
 title: Sběrač fragmentů kódu
+description: Naučte se, jak pomocí nástroje pro výběr fragmentu kódu vkládat připravené bloky kódu do aktivního dokumentu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb03da430f43bbfd5c7398c147560a9c823f8811
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf0b1c264911c92389c6c3afe722b5061455c3da
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75570489"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96041015"
 ---
 # <a name="code-snippet-picker"></a>Sběrač fragmentů kódu
 
@@ -48,7 +50,7 @@ Ve většině vývojových jazyků sady Visual Studio můžete pomocí **Správc
 
 Název položky
 
-Upravitelné textové pole, které zobrazuje název položky vybrané v **seznamu položek**. Chcete-li provést přírůstkové hledání požadované položky, začněte zadávat název do tohoto pole. Pokračujte v přidávání písmen, dokud není v **seznamu položek**vybraná požadovaná položka.
+Upravitelné textové pole, které zobrazuje název položky vybrané v **seznamu položek**. Chcete-li provést přírůstkové hledání požadované položky, začněte zadávat název do tohoto pole. Pokračujte v přidávání písmen, dokud není v **seznamu položek** vybraná požadovaná položka.
 
 Seznam položek
 

@@ -1,5 +1,7 @@
 ---
 title: -UseEnv (devenv.exe)
+description: Naučte se, jak pomocí přepínače příkazového řádku devenv UseEnv spustit Visual Studio a načíst určité proměnné prostředí pro kompilaci.
+ms.custom: SEO-VS-2020
 ms.date: 01/10/2019
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 35808b27964b3ca8fa0488f1be2ce6dc5530b3dd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51b47156b73d81f427c08e62006dc6e457e5780b
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596391"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040937"
 ---
 # <a name="useenv-devenvexe"></a>/UseEnv (devenv.exe)
 
@@ -51,7 +53,7 @@ devenv /UseEnv {SolutionName|ProjectName}
 
 ## <a name="remarks"></a>Poznámky
 
-Tento přepínač ovlivňuje rozhraní IDE sady Visual Studio ve vlastnostech projektu pro **adresáře VC + +**. Pokud zadáte `/UseEnv` přepínač, uzel **adresáře VC + +** zobrazí hodnoty proměnných prostředí PATH, include, LIBPATH a lib. (Zobrazí se taky hodnoty pro **zdrojové adresáře** a **vyloučené adresáře**.) V opačném případě uzel nahrazuje proměnné prostředí pomocí pěti hodnot adresářů: **spustitelné adresáře**, **adresáře zahrnutí**, adresáře **odkazů**, **adresáře knihoven**a **adresáře knihovny WinRT**.
+Tento přepínač ovlivňuje rozhraní IDE sady Visual Studio ve vlastnostech projektu pro **adresáře VC + +**. Pokud zadáte `/UseEnv` přepínač, uzel **adresáře VC + +** zobrazí hodnoty proměnných prostředí PATH, include, LIBPATH a lib. (Zobrazí se taky hodnoty pro **zdrojové adresáře** a **vyloučené adresáře**.) V opačném případě uzel nahrazuje proměnné prostředí pomocí pěti hodnot adresářů: **spustitelné adresáře**, **adresáře zahrnutí**, adresáře **odkazů**, **adresáře knihoven** a **adresáře knihovny WinRT**.
 
 > [!TIP]
 > Přístup k vlastnostem projektu získáte tak, že kliknete pravým tlačítkem na projekt C++ a vyberete **vlastnosti**. V dialogovém okně **stránky vlastností** vyberte možnost **Vlastnosti konfigurace** a potom **adresáře VC + +**.
