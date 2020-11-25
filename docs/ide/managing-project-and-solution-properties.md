@@ -1,5 +1,7 @@
 ---
 title: Správa vlastností projektu a řešení
+description: Naučte se spravovat vlastnosti projektu a vlastnosti řešení v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01fcdc09c9d3ee4f5a38a95ef4304bfdf537d527
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b7b89588e778a142e7dd49e1a3051a9aa188ff1
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591304"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871389"
 ---
 # <a name="manage-project-and-solution-properties"></a>Správa vlastností projektu a řešení
 
@@ -37,7 +39,7 @@ V projektech C#, Visual Basic a F # jsou vlastnosti zpřístupněny v **Návrhá
 
 ![Návrhář projektu sady Visual Studio](../ide/media/vs2015_proppage_build.png)
 
-Informace o jednotlivých stránkách vlastností v **Návrháři projektu**naleznete v tématu [reference Project Properties reference](../ide/reference/project-properties-reference.md).
+Informace o jednotlivých stránkách vlastností v **Návrháři projektu** naleznete v tématu [reference Project Properties reference](../ide/reference/project-properties-reference.md).
 
 > [!TIP]
 > Řešení mají několik vlastností, a proto položky projektu. Tyto vlastnosti jsou k dispozici v [okno Vlastnosti](../ide/reference/properties-window.md), nikoli v **Návrháři projektu**.

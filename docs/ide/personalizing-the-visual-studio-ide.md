@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení integrovaného vývojového prostředí
+description: Naučte se přizpůsobit integrované vývojové prostředí (IDE) sady Visual Studio způsobem, který nejlépe podporuje váš vlastní styl a požadavky.
+ms.custom: SEO-VS-2020
 ms.date: 11/20/2017
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39c9edbf5e96a59912c0cf16d7b4178f6fba2a62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4acd399aeb9de1d25cbe6abe2b8bba3f347dbc8a
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585740"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871454"
 ---
 # <a name="personalize-the-visual-studio-ide"></a>Přizpůsobení integrovaného vývojového prostředí sady Visual Studio
 
@@ -29,7 +31,7 @@ Můžete zvolit výchozí kolekci nastavení, která optimalizuje Visual Studio 
 
 K dispozici je mnoho možností přizpůsobení prostřednictvím dialogového okna [možnosti prostředí](../ide/reference/general-environment-options-dialog-box.md) . Existují dva způsoby, jak získat přístup k tomuto dialogovému oknu:
 
-- Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje a pokud ještě není rozbalený, rozbalte uzel **prostředí** .
+- Na panelu nabídek vyberte **Tools**  >  **Možnosti** nástroje a pokud ještě není rozbalený, rozbalte uzel **prostředí** .
 
 - Stiskněte **kombinaci kláves CTRL** + **Q**, do vyhledávacího pole zadejte **prostředí** a v části Výsledky zvolte **prostředí > obecné** .
 
@@ -44,7 +46,7 @@ Chcete-li změnit možnosti zabarvení v editoru, do vyhledávacího pole zadejt
 
 ### <a name="main-menu-casing"></a>Velká písmena hlavní nabídky
 
-Můžete změnit velikost písmen v hlavní nabídce mezi **písmenem nadpisu** ("soubor") a **všemi velkými** písmeny ("soubor"). Do vyhledávacího pole zadejte **prostředí** , vyberte **prostředí > obecné**a pak změňte možnost **použít styl případu použití pro nadpis na panel nabídek** .
+Můžete změnit velikost písmen v hlavní nabídce mezi **písmenem nadpisu** ("soubor") a **všemi velkými** písmeny ("soubor"). Do vyhledávacího pole zadejte **prostředí** , vyberte **prostředí > obecné** a pak změňte možnost **použít styl případu použití pro nadpis na panel nabídek** .
 
 ### <a name="customize-menus-and-toolbars"></a>Přizpůsobení nabídek a panelů nástrojů
 

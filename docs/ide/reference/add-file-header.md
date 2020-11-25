@@ -1,5 +1,7 @@
 ---
 title: Přidání hlavičky souboru
+description: Naučte se používat soubor EditorConfig k přidávání hlaviček souborů do existujících souborů, projektů a řešení.
+ms.custom: SEO-VS-2020
 ms.date: 07/10/2020
 ms.topic: reference
 author: mikadumont
@@ -7,12 +9,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 44c3b64d9fb8944a578d054b7d98d4bf39bde3bc
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 5f2e4715c0333b02f120ec5f92d9f742196c04f3
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810373"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870856"
 ---
 # <a name="add-file-header"></a>Přidání hlavičky souboru
 
@@ -36,7 +38,7 @@ Tato generace kódu platí pro:
 
 3. Nastavte hodnotu pravidla tak, aby se rovnala textu záhlaví, který chcete použít. Můžete použít `{fileName}` jako zástupný symbol pro název souboru.
 
-    ![Pravidlo záhlaví souboru EditorConfig](media/add-file-header-rule.png)
+    ![Snímek obrazovky se souborem EditorConfig zobrazujícím hodnotu file_header_template](media/add-file-header-rule.png)
 
     > [!NOTE]
     > V EditorConfig nemůžete mít explicitní víceřádkové řádky a k vložení nových řádků bude potřeba použít znak nového řádku UNIX.
@@ -47,7 +49,7 @@ Tato generace kódu platí pro:
 
 6. Vyberte možnost **Přidat hlavičku souboru**. 
 
-    ![Pravidlo záhlaví souboru EditorConfig](media/add-file-header.png)
+    ![Snímek obrazovky s možností záhlaví přidat soubor](media/add-file-header.png)
 
 7. Chcete-li použít hlavičku souboru na celý projekt nebo řešení, vyberte možnost **projekt** nebo **řešení** pod možností **opravit všechny výskyty v:** .
 

@@ -1,5 +1,7 @@
 ---
 title: Došlo k neopravitelné chybě procesu.
+description: Přečtěte si o procesech, které se můžou setkat s neodstranitelnými chybami při normálním provozu sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 09/10/2020
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1c9dc5053e2168482f4463f805bdc5e724ef6b0
-ms.sourcegitcommit: d9dd86c421532cfca6c0c5761d160f35829419c6
+ms.openlocfilehash: e44f96e0a8056a369b164e725aca6832b5a349cb
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90025562"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871480"
 ---
 # <a name="visual-studio-unrecoverable-process-error"></a>Chyba neodstranitelné procesu sady Visual Studio
 

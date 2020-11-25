@@ -1,5 +1,7 @@
 ---
 title: Výběr položek sady nástrojů, součásti WPF
+description: Naučte se používat kartu komponenty WPF k zobrazení Windows Presentation Foundationch ovládacích prvků, které jsou k dispozici pro výběr v místním počítači.
+ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: reference
 f1_keywords:
@@ -12,23 +14,23 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28576fab1ed4b39810b6f4cc32fb2955a7a44039
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 7b9727d335607f15101222e40be193de2315b7dc
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099346"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871324"
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>Výběr položek sady nástrojů, součásti WPF
 
 Tato karta dialogového okna **zvolit položky sady nástrojů** zobrazí seznam ovládacích prvků Windows Presentation Foundation (WPF), které jsou k dispozici v místním počítači. Chcete-li zobrazit tento seznam, vyberte možnost **zvolit položky sady nástrojů** v nabídce **nástroje** , chcete-li zobrazit dialogové okno **zvolit položky sady nástrojů** a pak vyberte kartu **komponenty WPF** . Pokud chcete uvedené součásti seřadit, vyberte libovolné záhlaví sloupce.
 
-- Pokud je vybráno zaškrtávací políčko vedle komponenty, zobrazí se v **sadě nástrojů**ikona této součásti.
+- Pokud je vybráno zaškrtávací políčko vedle komponenty, zobrazí se v **sadě nástrojů** ikona této součásti.
 
     > [!TIP]
     > Chcete-li přidat ovládací prvek WPF do dokumentu projektu, který je otevřen pro úpravy, přetáhněte ikonu **panelu nástrojů** na zobrazení Návrh plochu. Výchozí značky a kód pro komponentu jsou vloženy do projektu, který je připraven k úpravám. Další informace najdete v tématu [Sada nástrojů](../../ide/reference/toolbox.md).
 
-- Pokud je zaškrtnutí políčka vedle komponenty vymazáno, bude z **panelu nástrojů**odebrána odpovídající ikona.
+- Pokud je zaškrtnutí políčka vedle komponenty vymazáno, bude z **panelu nástrojů** odebrána odpovídající ikona.
 
     > [!NOTE]
     > Komponenty rozhraní .NET nainstalované v počítači zůstávají dostupné bez ohledu na to, zda jsou ikony pro ně zobrazeny v sadě **nástrojů**.
@@ -53,7 +55,7 @@ Zobrazuje umístění sestavení .NET. Výchozím umístěním pro všechna sest
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
-### <a name="filter"></a>Filtrovat
+### <a name="filter"></a>Filtr
 
 Filtruje seznam ovládacích prvků WPF v závislosti na řetězci, který zadáte do textového pole. Zobrazí se všechny shody ze všech čtyř sloupců.
 

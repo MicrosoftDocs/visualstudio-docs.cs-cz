@@ -1,5 +1,7 @@
 ---
 title: Průvodce produktivitou
+description: Přečtěte si o klávesových zkratkách a funkcích produktivity v aplikaci Visual Studio, které vám pomůžou efektivně psát kód, ladit kód a zpracovávat chyby.
+ms.custom: SEO-VS-2020
 ms.date: 4/29/2020
 ms.topic: conceptual
 author: ornellaalt
@@ -7,12 +9,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a10b1f9b3dd6dda643a2775cf7b89221fba71d8
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: bee392ddc4e7a0d185bdcc2d0e31dbd17832c733
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808139"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870869"
 ---
 # <a name="productivity-guide-for-visual-studio"></a>Průvodce produktivitou pro Visual Studio
 
@@ -40,17 +42,17 @@ Informace o užitečných klávesových zkratkách najdete v tématu věnovaném
 
 Vytvářejte kód rychleji pomocí následujících funkcí.
 
-- **Používejte praktické příkazy**. Visual Studio obsahuje různé příkazy, které vám pomůžou rychleji provádět běžné úlohy úprav. Můžete například zvolit příkaz pro snadné duplikování řádku kódu bez nutnosti jeho zkopírování, přemístění kurzoru a vložení. Zvolte možnost **Upravit**  >  **Duplikovat** nebo stiskněte klávesu **CTRL** + **E**,**V**. Můžete také rychle rozbalit nebo Sbalit výběr textu výběrem možnosti **Upravit**  >  **Rozšířené**  >  **rozbalení výběru** nebo **Upravit**  >  **pokročilý**  >  **Výběr smlouvy**nebo stisknutím klávesy **SHIFT** + **ALT** + **=** nebo **SHIFT** + **ALT** + **-** .
+- **Používejte praktické příkazy**. Visual Studio obsahuje různé příkazy, které vám pomůžou rychleji provádět běžné úlohy úprav. Můžete například zvolit příkaz pro snadné duplikování řádku kódu bez nutnosti jeho zkopírování, přemístění kurzoru a vložení. Zvolte možnost **Upravit**  >  **Duplikovat** nebo stiskněte klávesu **CTRL** + **E**,**V**. Můžete také rychle rozbalit nebo Sbalit výběr textu výběrem možnosti **Upravit**  >  **Rozšířené**  >  **rozbalení výběru** nebo **Upravit**  >  **pokročilý**  >  **Výběr smlouvy** nebo stisknutím klávesy **SHIFT** + **ALT** + **=** nebo **SHIFT** + **ALT** + **-** .
 
 - **Použijte technologii IntelliSense**. Při zadávání kódu v editoru se zobrazí informace IntelliSense, jako jsou například členové seznamu, informace o parametrech, rychlé informace, signatura podpisu a hotové slovo. Tyto funkce podporují přibližnou shodu textu; například seznam výsledků pro seznam členů zahrnuje nejen položky, které začínají znaky, které jste zadali, ale také záznamy, které obsahují kombinaci znaků kdekoli v jejich jménu. Další informace najdete v tématu [použití technologie IntelliSense](../ide/using-intellisense.md).
 
 - **Umožňuje změnit automatické vkládání možností IntelliSense při zadávání kódu**. Přepnutím technologie IntelliSense na režim návrhu můžete určit, zda jsou možnosti technologie IntelliSense vloženy pouze v případě, že je zvolíte explicitně.
 
-     Chcete-li povolit režim návrhu, **stiskněte klávesy CTRL** + **ALT +** + **MEZERNÍK** nebo na panelu nabídek vyberte možnost **Upravit**  >  **IntelliSense**  >  **režim dokončení přepínání**technologie IntelliSense.
+     Chcete-li povolit režim návrhu, **stiskněte klávesy CTRL** + **ALT +** + **MEZERNÍK** nebo na panelu nabídek vyberte možnost **Upravit**  >  **IntelliSense**  >  **režim dokončení přepínání** technologie IntelliSense.
 
 - **Použijte fragmenty kódu**. Můžete použít předdefinované fragmenty nebo vytvořit vlastní fragmenty kódu.
 
-     Chcete-li vložit fragment kódu, v panelu nabídek vyberte možnost **Upravit**  >  **IntelliSense**  >  **Vložit fragment** nebo **obklopit pomocí**nebo otevřete místní nabídku v souboru a vyberte možnost **fragment**  >  **Vložit fragment** nebo **obklopit pomocí**. Další informace naleznete v tématu [fragmenty kódu](../ide/code-snippets.md).
+     Chcete-li vložit fragment kódu, v panelu nabídek vyberte možnost **Upravit**  >  **IntelliSense**  >  **Vložit fragment** nebo **obklopit pomocí** nebo otevřete místní nabídku v souboru a vyberte možnost **fragment**  >  **Vložit fragment** nebo **obklopit pomocí**. Další informace naleznete v tématu [fragmenty kódu](../ide/code-snippets.md).
 
 - **Opravte chyby kódu jako vložené**. Rychlé akce umožňují snadno Refaktorovat, generovat nebo jinak upravovat kód jedinou akcí. Tyto akce lze použít pomocí ikony ikony Screwdriver Screwdriver nebo ikony žárovky žárovky nebo ![ ](media/screwdriver-icon.png) stisknutím klávesy ![ ](media/light-bulb-icon.png) **ALT** + **ENTER** nebo **CTRL** + **.** Když je kurzor na příslušném řádku kódu. Další informace najdete v tématu [rychlé akce](quick-actions.md) .
 
@@ -76,7 +78,7 @@ Můžete použít různé techniky k rychlejšímu vyhledání a přesunu do kon
 
    Přístup k této funkci získáte tak, že v řádku nabídek kliknete na možnost **Upravit**  >  **Navigovat na**.
 
-- **Projděte si celkovou strukturu kódu**. V **Průzkumník řešení**můžete vyhledávat a procházet třídy a jejich typy a členy v projektech. Můžete také vyhledat symboly, zobrazit hierarchii volání metody, najít odkazy na symboly a provádět další úkoly. Pokud zvolíte prvek kódu v **Průzkumník řešení**, otevře se přidružený soubor na kartě **Preview** a kurzor se přesune do prvku v souboru. Další informace naleznete v tématu [zobrazení struktury kódu](../ide/viewing-the-structure-of-code.md).
+- **Projděte si celkovou strukturu kódu**. V **Průzkumník řešení** můžete vyhledávat a procházet třídy a jejich typy a členy v projektech. Můžete také vyhledat symboly, zobrazit hierarchii volání metody, najít odkazy na symboly a provádět další úkoly. Pokud zvolíte prvek kódu v **Průzkumník řešení**, otevře se přidružený soubor na kartě **Preview** a kurzor se přesune do prvku v souboru. Další informace naleznete v tématu [zobrazení struktury kódu](../ide/viewing-the-structure-of-code.md).
 
 - **Přejděte na umístění v souboru s režimem mapy**. V režimu mapy se na posuvníku zobrazují řádky kódu v miniaturách. Další informace o tomto režimu zobrazení naleznete v tématu [How to: Customize a Scroll posuvník](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md#map-mode).
 
@@ -160,7 +162,7 @@ Můžete rychle získat přístup k Developer Command Prompt nebo k jinému nás
 
 ::: moniker-end
 
-2. Klikněte pravým tlačítkem nebo otevřete kontextovou nabídku pro **Developer Command Prompt**a pak zvolte připnout pro **začátek** nebo **Připnout na hlavní panel**.
+2. Klikněte pravým tlačítkem nebo otevřete kontextovou nabídku pro **Developer Command Prompt** a pak zvolte připnout pro **začátek** nebo **Připnout na hlavní panel**.
 
 ## <a name="manage-files-toolbars-and-windows"></a>Správa souborů, panelů nástrojů a oken
 
@@ -172,7 +174,7 @@ V jednom okamžiku můžete pracovat v několika souborech kódu a při vývoji 
 
 - **Přesuňte dokumenty a okna do jiných monitorů**. Pokud používáte více než jedno monitorování při vývoji aplikací, můžete snadněji pracovat na částech aplikace tím, že přesunete soubory, které jsou otevřeny v editoru, na jiný monitor. Můžete také přesunout okna nástrojů, jako je například okna ladicího programu, na jiný monitor a umístit kartu dokumentů a nástrojů společně a vytvořit "vory". Další informace naleznete v tématu [přizpůsobení rozložení oken v aplikaci Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md).
 
-   Soubory můžete spravovat i snadněji tím, že vytvoříte jinou instanci **Průzkumník řešení** a přesunete ji do jiného monitoru. Chcete-li vytvořit jinou instanci **Průzkumník řešení**, otevřete místní nabídku v **Průzkumník řešení**a zvolte možnost **zobrazení nového Průzkumník řešení**.
+   Soubory můžete spravovat i snadněji tím, že vytvoříte jinou instanci **Průzkumník řešení** a přesunete ji do jiného monitoru. Chcete-li vytvořit jinou instanci **Průzkumník řešení**, otevřete místní nabídku v **Průzkumník řešení** a zvolte možnost **zobrazení nového Průzkumník řešení**.
 
 - **Přizpůsobení písem, která se zobrazí v aplikaci Visual Studio**. U textu v integrovaném vývojovém prostředí můžete změnit řez písma, jeho velikost a barvu. Například můžete přizpůsobit barvu konkrétních prvků kódu v editoru a řez písma v oknech nástrojů nebo v celém rozhraní IDE. Další informace najdete v tématu [Postup: Změna písma a barev](../ide/how-to-change-fonts-and-colors-in-visual-studio.md) a [Postupy: Změna písma a barev v editoru](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md).
 

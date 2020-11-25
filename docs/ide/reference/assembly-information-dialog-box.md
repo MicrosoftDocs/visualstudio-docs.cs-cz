@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Informace o sestavení
+description: Přečtěte si o dialogovém okně informace o sestavení a o tom, jak se používá k určení hodnot .NET Framework globálních atributů sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,18 +14,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1813c4e399a125aca0185436b4a7216b72b5842
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ee8738d06c0f02adb6f5e6352d2006e0133c66ef
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809004"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871337"
 ---
 # <a name="assembly-information-dialog-box"></a>dialogové okno Informace o sestavení
 
 Dialogové okno informace o sestavení slouží k určení hodnot .NET Framework atributů globálních sestavení, které jsou uloženy v souboru AssemblyInfo vytvořeném automaticky s vaším projektem. V Průzkumník řešení je soubor AssemblyInfo umístěný v uzlu **můj projekt** pro Visual Basic projekty (kliknutím na **Zobrazit všechny soubory** ho zobrazíte). Pro projekty v jazyce C# je umístěn v části **Properties (vlastnosti**). Další informace najdete v tématu [atributy (C#)](/dotnet/csharp/programming-guide/concepts/attributes/index).
 
-Chcete-li získat přístup k tomuto dialogovému oknu, vyberte uzel projektu v **Průzkumník řešení**a potom v nabídce **projekt** vyberte možnost **vlastnosti**. Na stránce **aplikace** vyberte tlačítko **informace o sestavení** .
+Chcete-li získat přístup k tomuto dialogovému oknu, vyberte uzel projektu v **Průzkumník řešení** a potom v nabídce **projekt** vyberte možnost **vlastnosti**. Na stránce **aplikace** vyberte tlačítko **informace o sestavení** .
 
 ## <a name="uielement-list"></a>UIElement – seznam
 
@@ -36,7 +38,7 @@ Určuje volitelný popis manifestu sestavení. Odpovídá <xref:System.Reflectio
 **Podnikový**\
 Určuje název společnosti pro manifest sestavení. Odpovídá <xref:System.Reflection.AssemblyCompanyAttribute> .
 
-V registru můžete nastavit nebo změnit výchozí hodnotu pro společnost. V závislosti na vaší verzi Windows vyhledejte hodnotu **RegisteredOrganization** v části **počítač \ HKEY_LOCAL_MACHINE \Software\wow6432node\microsoft\windows NT\CurrentVersion** nebo **počítač \ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion** Key.
+V registru můžete nastavit nebo změnit výchozí hodnotu pro společnost. V závislosti na vaší verzi Windows hledejte hodnotu **RegisteredOrganization** pod **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion** nebo **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** klíč.
 
 **Produktu**\
 Určuje název produktu pro manifest sestavení. Odpovídá <xref:System.Reflection.AssemblyProductAttribute> .

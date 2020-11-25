@@ -1,5 +1,7 @@
 ---
 title: Přidání explicitního přetypování
+description: Přečtěte si, jak automaticky přidat explicitní přetypování do výrazu založeného na kontextu kódu.
+ms.custom: SEO-VS-2020
 ms.date: 03/26/2020
 ms.topic: reference
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: e159082266b848ce4742e436c706f3f71b2cc9ea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8208ec9c84eb076ab5c313b3078d3853619fb06
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84182973"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870843"
 ---
 # <a name="add-explicit-cast"></a>Přidání explicitního přetypování
 

@@ -1,5 +1,7 @@
 ---
 title: Hledání volání metody
+description: Naučte se používat okno hierarchie volání k procházení všech volání, a to v rámci vybrané metody, vlastnosti nebo konstruktoru.
+ms.custom: SEO-VS-2020
 ms.date: 05/18/2018
 ms.topic: reference
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dcedc6a49c0df84b4482f8030524d59d4336bcc8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 75c330855d3fca1187f88171adb893c3f77c4ccd
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595797"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871402"
 ---
 # <a name="view-call-hierarchy"></a>Zobrazit hierarchii volání
 
@@ -28,7 +30,7 @@ V aplikaci Visual Studio můžete zobrazit hierarchii volání v době návrhu. 
 
 Chcete-li zobrazit okno **hierarchie volání** , klikněte pravým tlačítkem myši v editoru kódu na název metody, vlastnosti nebo volání konstruktoru a pak vyberte **Zobrazit hierarchii volání**.
 
-Název člena se zobrazí v podokně stromového zobrazení v okně **hierarchie volání** . Rozbalíte-li členský uzel, **volání na** *název člena*a pro jazyk C++, budou **volána volání z** *názvu člena*, poduzly.
+Název člena se zobrazí v podokně stromového zobrazení v okně **hierarchie volání** . Rozbalíte-li členský uzel, **volání na** *název člena* a pro jazyk C++, budou **volána volání z** *názvu člena*, poduzly.
 
 Pro kód jazyka C++ vidíte volání do a od člena:
 
@@ -42,13 +44,13 @@ Pro kód C# a Visual Basic můžete zobrazit volání členu, ale ne volání z:
 
 - V jazyce C++, f rozšíříte **volání z** uzlu, jsou zobrazeny všichni členové, kteří jsou voláni vybraným členem.
 
-Pak můžete rozbalit každého volajícího člena a zobrazit jeho **volání do**a pro jazyk C++ **volání z** uzlů. To vám umožní přejít do zásobníku volajících, jak je znázorněno na následujícím obrázku:
+Pak můžete rozbalit každého volajícího člena a zobrazit jeho **volání do** a pro jazyk C++ **volání z** uzlů. To vám umožní přejít do zásobníku volajících, jak je znázorněno na následujícím obrázku:
 
 ![Rozbalení okna hierarchie volání s více úrovněmi](media/call-hierarchy-csharp-expanded.png)
 
 Pro členy, které jsou definovány buď jako virtuální, nebo jako abstraktní, se zobrazí uzel **název metody přepsání** . Pro členy rozhraní se zobrazí uzel **implementující název metody** . Tyto rozbalitelné uzly se zobrazí na stejné úrovni jako **volání** a **volání z** uzlů.
 
-Pole **Rozsah hledání** na panelu nástrojů obsahuje možnosti pro **moje řešení**, **aktuální projekt**a **aktuální dokument**.
+Pole **Rozsah hledání** na panelu nástrojů obsahuje možnosti pro **moje řešení**, **aktuální projekt** a **aktuální dokument**.
 
 Když vyberete podřízeného člena v podokně zobrazení stromu **hierarchie volání** :
 

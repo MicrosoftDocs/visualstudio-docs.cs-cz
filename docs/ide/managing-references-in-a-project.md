@@ -1,5 +1,7 @@
 ---
 title: Správa odkazů v projektu
+description: Naučte se spravovat odkazy na externí komponenty a připojené služby v projektu.
+ms.custom: SEO-VS-2020
 ms.date: 08/02/2019
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c55b0d3487eb18db33805b418882f157d55b1253
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fdf737d26ec14c2a108125425a3b66cdf4a0e519
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183532"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870947"
 ---
 # <a name="manage-references-in-a-project"></a>Správa odkazů v projektu
 

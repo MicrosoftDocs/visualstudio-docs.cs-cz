@@ -1,5 +1,7 @@
 ---
 title: Zlepšit čas spuštění
+description: Přečtěte si, jak řídit nastavení rozšíření a oken nástrojů v dialogovém okně Spravovat výkon sady Visual Studio pro zlepšení času spuštění sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/15/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: 399bab1b95a7f17166f205902d04a1abec10e6dd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a9cc3309e75e23ff325dd08ef9d2cceacb5f5db5
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770972"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871493"
 ---
 # <a name="optimize-visual-studio-startup-time"></a>Optimalizace doby spuštění sady Visual Studio
 
@@ -39,7 +41,7 @@ Dialogové okno obsahuje seznam oken rozšíření a nástroje, které mají vli
 
 1. Otevřete dialogové okno **spravovat výkon sady Visual Studio** výběrem možnosti **help**  >  **spravovat výkon sady Visual Studio** z řádku nabídek.
 
-    Pokud rozšíření zpomaluje spuštění sady Visual Studio, načítání řešení nebo psaní, toto rozšíření se zobrazí v dialogovém okně **spravovat výkon sady Visual Studio** v části spuštění **rozšíření**  >  **Startup** (nebo **načtení** nebo **zadání**řešení).
+    Pokud rozšíření zpomaluje spuštění sady Visual Studio, načítání řešení nebo psaní, toto rozšíření se zobrazí v dialogovém okně **spravovat výkon sady Visual Studio** v části spuštění **rozšíření**  >  **Startup** (nebo **načtení** nebo **zadání** řešení).
 
     ![Správa zobrazení výkon – zobrazení rozšíření pro Visual Studio](../ide/media/vside_perfdialog_extensions.png)
 

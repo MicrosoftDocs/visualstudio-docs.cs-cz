@@ -1,5 +1,7 @@
 ---
 title: Příkazy navigace v kódu
+description: Seznamte se s různými možnostmi, kterými se můžete pohybovat v kódu v editoru.
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +20,12 @@ ms.author: tglee
 manager: tglee
 ms.workload:
 - multiple
-ms.openlocfilehash: 0216a71b675473d54aec9738ea7bdc85b7643841
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 77b0f8782f9ffaf37701f13b30be6e068ce05f8d
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585818"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871519"
 ---
 # <a name="navigate-code"></a>Navigace v kódu
 
@@ -57,7 +59,7 @@ Můžete se pohybovat v rozevíracích seznamech následujícím způsobem:
 
 - Chcete-li vrátit fokus z navigačního panelu na kód bez výběru všeho, stiskněte klávesu **ESC** .
 
-Chcete-li skrýt navigační panel, změňte možnost **navigační panel** v nastavení **textový editor všechny jazyky** (možnosti**nástrojů**  >  **Options**  >  **textový editor**  >  **všechny jazyky**), nebo můžete změnit nastavení pro jednotlivé jazyky.
+Chcete-li skrýt navigační panel, změňte možnost **navigační panel** v nastavení **textový editor všechny jazyky** (možnosti **nástrojů**  >  **Options**  >  **textový editor**  >  **všechny jazyky**), nebo můžete změnit nastavení pro jednotlivé jazyky.
 
 ## <a name="find-all-references"></a>Najít všechny odkazy
 
@@ -153,7 +155,7 @@ Funkce Vizualizér struktury v editoru kódu zobrazuje *čáry vodítka struktur
 
 ![Vizualizér struktury](../ide/media/vside_structure_visualizer.png)
 
-Chcete-li zakázat čáry vodítka struktury **Tools**, otevřete  >  okno**Možnosti**nástroje  >  **textový editor**  >  **Obecné** a zrušte zaškrtnutí políčka **Zobrazit čáry Průvodce strukturou** .
+Chcete-li zakázat čáry vodítka struktury **Tools**, otevřete  >  okno **Možnosti** nástroje  >  **textový editor**  >  **Obecné** a zrušte zaškrtnutí políčka **Zobrazit čáry Průvodce strukturou** .
 
 ## <a name="enhanced-scroll-bar"></a>Vylepšený posuvník
 

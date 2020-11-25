@@ -1,5 +1,7 @@
 ---
 title: Stránka aplikace – vlastnosti projektu C#
+description: Naučte se používat stránku aplikace Návrháře projektu C# k určení nastavení aplikace a vlastností projektu.
+ms.custom: SEO-VS-2020
 ms.date: 10/30/2018
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ef9a38fc13d0d9c9f6b912f4cb2b83971d105c29
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0b77ee4edca8f9cb8de2079e01d9c9997a24aeff
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595823"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871376"
 ---
 # <a name="application-page-project-designer-c"></a>Stránka Aplikace, návrhář projektu (C#)
 
@@ -65,7 +67,7 @@ Další informace najdete v tématu [Přehled cílení na rozhraní](../../ide/v
 
 **Typ výstupu**
 
-Určuje typ aplikace, která se má sestavit. Hodnoty se liší v závislosti na typu projektu. Například pro projekt **konzolové** aplikace můžete jako výstupní typ zadat **aplikaci systému Windows**, **konzolovou aplikaci**nebo **knihovnu tříd** .
+Určuje typ aplikace, která se má sestavit. Hodnoty se liší v závislosti na typu projektu. Například pro projekt **konzolové** aplikace můžete jako výstupní typ zadat **aplikaci systému Windows**, **konzolovou aplikaci** nebo **knihovnu tříd** .
 
 Pro projekt webové aplikace je nutné zadat **knihovnu tříd**.
 
@@ -115,7 +117,7 @@ Vybere možnost generování manifestu, pokud je aplikace spuštěna v systému 
 
 - **Vytvořit aplikaci bez manifestu** Tato metoda se označuje jako *virtualizace*. Tato možnost slouží k zajištění kompatibility se staršími aplikacemi.
 
-- **Properties\app.manifest**. Tato možnost je vyžadována pro aplikace nasazené pomocí technologie ClickOnce nebo bez registrace modelu COM. Pokud publikujete aplikaci pomocí nasazení ClickOnce, **manifest** je automaticky nastaven na tuto možnost.
+- **Properties\app.manifest**. Tato možnost je vyžadována pro aplikace nasazené pomocí technologie ClickOnce nebo Registration-Free COM. Pokud publikujete aplikaci pomocí nasazení ClickOnce, **manifest** je automaticky nastaven na tuto možnost.
 
 **Soubor prostředků**
 

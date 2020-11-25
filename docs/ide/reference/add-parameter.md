@@ -1,5 +1,7 @@
 ---
 title: Přidání parametru do rychlé akce metody
+description: Naučte se používat rychlou akci k automatickému přidání a deklaraci parametru na základě využití metody.
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: reference
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6720421fd5188688214665d85de682542b1c1357
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c2582228426afcefdb2587d646a8668f622309c6
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595862"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871298"
 ---
 # <a name="add-a-parameter-to-a-method-using-a-quick-action"></a>Přidání parametru do metody pomocí rychlé akce
 

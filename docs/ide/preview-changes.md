@@ -1,5 +1,7 @@
 ---
 title: Náhled změn kódu
+description: Naučte se, jak pomocí okna Náhled změn přejít na změny, které se mají udělat v projektu, než je přijmete.
+ms.custom: SEO-VS-2020
 ms.date: 12/16/2016
 ms.topic: conceptual
 author: TerryGLee
@@ -9,12 +11,12 @@ f1_keywords:
 - vs.codefix.previewchanges
 ms.workload:
 - multiple
-ms.openlocfilehash: f45b186153b4cc046d35fd941f6a80e108476fc0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8eef438f1dd504120b62e2e0018935489d6c80a
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585766"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871441"
 ---
 # <a name="preview-changes-window"></a>Okno Náhled změn
 

@@ -1,5 +1,7 @@
 ---
 title: Stránka aplikace – vlastnosti projektu VB
+description: Naučte se používat stránku aplikace Návrháře projektu Visual Basic k určení nastavení a vlastností aplikace projektu.
+ms.custom: SEO-VS-2020
 ms.date: 10/30/2018
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe303f86b282e7e803dacc1dd8f4d3c1d6b72121
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 675c3fbaaf1a3e49648befebca4927299649b057
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595810"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871415"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Stránka Aplikace, návrhář projektu (Visual Basic)
 
@@ -68,7 +70,7 @@ Další informace najdete v tématu [Přehled cílení na rozhraní](../../ide/v
 
 ### <a name="application-type"></a>Typ aplikace
 
-Určuje typ aplikace, která se má sestavit. Hodnoty se liší v závislosti na typu projektu. Například pro projekt **model Windows Forms aplikace** můžete určit **model Windows Forms aplikace**, **knihovny tříd**, **Konzolová aplikace**, **službu systému Windows**nebo **knihovnu webového ovládacího prvku**.
+Určuje typ aplikace, která se má sestavit. Hodnoty se liší v závislosti na typu projektu. Například pro projekt **model Windows Forms aplikace** můžete určit **model Windows Forms aplikace**, **knihovny tříd**, **Konzolová aplikace**, **službu systému Windows** nebo **knihovnu webového ovládacího prvku**.
 
 Pro projekt webové aplikace je nutné zadat **knihovnu tříd**.
 
@@ -86,7 +88,7 @@ Určuje spouštěcí formulář nebo vstupní bod aplikace.
 
 Pokud je vybrána **možnost Povolit aplikační rozhraní** (výchozí), tento seznam má hodnotu " **úvodní formulář** " a zobrazuje pouze formuláře, protože aplikační rozhraní podporuje pouze formuláře po spuštění, nikoli objekty.
 
-Pokud se jedná o aplikaci prohlížeče WPF, tento seznam má hodnotu **spouštěcí identifikátor URI**a výchozí hodnota je **Page1. XAML**. Seznam **spouštěcích identifikátorů URI** umožňuje zadat prostředek uživatelského rozhraní (prvek XAML), který aplikace zobrazuje při spuštění aplikace. Další informace naleznete v tématu <xref:System.Windows.Application.StartupUri%2A>.
+Pokud se jedná o aplikaci prohlížeče WPF, tento seznam má hodnotu **spouštěcí identifikátor URI** a výchozí hodnota je **Page1. XAML**. Seznam **spouštěcích identifikátorů URI** umožňuje zadat prostředek uživatelského rozhraní (prvek XAML), který aplikace zobrazuje při spuštění aplikace. Další informace naleznete v tématu <xref:System.Windows.Application.StartupUri%2A>.
 
 Pokud je zaškrtnuto políčko **Povolit rozhraní Application Framework** , tento seznam se zobrazí jako **spouštěcí objekt** a zobrazí jak formuláře, třídy, tak moduly s `Sub Main` příponou.
 
@@ -102,7 +104,7 @@ Kliknutím na toto tlačítko zobrazíte [dialogové okno informace o sestavení
 
 ### <a name="enable-application-framework"></a>Povolit aplikační architekturu
 
-Určuje, zda projekt bude používat aplikační rozhraní. Nastavení této možnosti má vliv na možnosti dostupné při spuštění **Startup form** / **spouštěcího objektu**formuláře.
+Určuje, zda projekt bude používat aplikační rozhraní. Nastavení této možnosti má vliv na možnosti dostupné při spuštění **Startup form** / **spouštěcího objektu** formuláře.
 
 Pokud je toto políčko zaškrtnuté, vaše aplikace používá standard `Sub Main` . Zaškrtnutí tohoto políčka povolí funkce v části **Vlastnosti rozhraní Windows Application Framework** a také vyžaduje, abyste vybrali úvodní formulář.
 

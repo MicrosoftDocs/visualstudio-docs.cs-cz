@@ -1,5 +1,7 @@
 ---
 title: 'Rychlý Start: prohlídka integrovaného vývojového prostředí (IDE) sady Visual Studio'
+description: Přečtěte si o některých oknech, nabídkách a dalších funkcích uživatelského rozhraní integrovaného vývojového prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/21/2019
 ms.topic: quickstart
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08ec25312068d5c69cdb0df9b7c293ae0575f608
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4511658a454c1431967905e88428842c3ba00c64
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238852"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870882"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>Rychlý Start: první pohled na integrované vývojové prostředí (IDE) sady Visual Studio
 
@@ -35,7 +37,7 @@ Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke staže
 
 ## <a name="start-page"></a>Úvodní stránka
 
-První věc, kterou uvidíte po otevření sady Visual Studio, je největší pravděpodobně **úvodní stránkou**. **Úvodní stránka** je navržena jako "centrum", která vám pomůžou najít příkazy a soubory projektu, které potřebujete rychleji. V části **Poslední** se zobrazují projekty a složky, které jste nedávno pracovali. V části **Nový projekt**můžete kliknout na odkaz pro otevření dialogového okna **Nový projekt** nebo v části **otevřít**můžete otevřít existující projekt kódu nebo složku. Napravo je informační kanál nejnovějších příspěvků pro vývojáře.
+První věc, kterou uvidíte po otevření sady Visual Studio, je největší pravděpodobně **úvodní stránkou**. **Úvodní stránka** je navržena jako "centrum", která vám pomůžou najít příkazy a soubory projektu, které potřebujete rychleji. V části **Poslední** se zobrazují projekty a složky, které jste nedávno pracovali. V části **Nový projekt** můžete kliknout na odkaz pro otevření dialogového okna **Nový projekt** nebo v části **otevřít** můžete otevřít existující projekt kódu nebo složku. Napravo je informační kanál nejnovějších příspěvků pro vývojáře.
 
 ![Úvodní stránka v aplikaci Visual Studio](media/start-page.png)
 
@@ -67,7 +69,7 @@ Abychom mohli pokračovat v prozkoumávání funkcí sady Visual Studio, vytvoř
 
 ::: moniker range="vs-2017"
 
-1. Na **úvodní stránce**zadejte do pole Hledat v části **Nový projekt**možnost **Konzola** , aby se seznam typů projektů vyfiltroval na ty, které v názvu obsahují "Console".
+1. Na **úvodní stránce** zadejte do pole Hledat v části **Nový projekt** možnost **Konzola** , aby se seznam typů projektů vyfiltroval na ty, které v názvu obsahují "Console".
 
    ![Hledat v šablonách projektů na úvodní stránce Visual studia](media/start-page-search-templates.png)
 
@@ -105,7 +107,7 @@ Abychom mohli pokračovat v prozkoumávání funkcí sady Visual Studio, vytvoř
 
 ## <a name="menus"></a>Nabídky
 
-Panel nabídek podél horního okraje příkazů skupiny sady Visual Studio do kategorií. Například nabídka **projekt** obsahuje příkazy týkající se projektu, ve kterém pracujete. V nabídce **nástroje** můžete přizpůsobit, jak se aplikace Visual Studio chová, výběrem **možností**nebo přidáním funkcí do instalace výběrem možnosti **získat nástroje a funkce**.
+Panel nabídek podél horního okraje příkazů skupiny sady Visual Studio do kategorií. Například nabídka **projekt** obsahuje příkazy týkající se projektu, ve kterém pracujete. V nabídce **nástroje** můžete přizpůsobit, jak se aplikace Visual Studio chová, výběrem **možností** nebo přidáním funkcí do instalace výběrem možnosti **získat nástroje a funkce**.
 
 ::: moniker range="vs-2017"
 
@@ -163,7 +165,7 @@ Vyhledávací pole představuje rychlý a snadný způsob, jak v aplikaci Visual
 
 ::: moniker-end
 
-3. V části **Podrobnosti výstupu sestavení projektu nástroje MSBuild**zvolte možnost **normální**a pak klikněte na tlačítko **OK**.
+3. V části **Podrobnosti výstupu sestavení projektu nástroje MSBuild** zvolte možnost **normální** a pak klikněte na tlačítko **OK**.
 
 4. Sestavte projekt znovu tak, že kliknete pravým tlačítkem na projekt **ConsoleApp1** v **Průzkumník řešení** a z kontextové nabídky zvolíte **znovu sestavit** .
 
