@@ -12,11 +12,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 02d26416357ec13b61232f2adb0bc3e5e3c67818
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136599"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970199"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>Postupy: zobrazování, ukládání a konfigurace souborů protokolu sestavení
 
@@ -32,11 +32,11 @@ Pokud sestavíte jakýkoli typ projektu pomocí nástroje MSBuild, můžete vytv
 
 ## <a name="to-view-the-build-log-file-for-a-c-project"></a>Zobrazení souboru protokolu sestavení pro projekt C++
 
-1. V **Průzkumníku Windows** nebo **Průzkumníkovi souborů**otevřete následující soubor (relativní vzhledem k kořenové složce projektu): *release* \\ <ProjectName> \> . Log * nebo *Debug \\<ProjectName \> . log*
+1. V **Průzkumníku Windows** nebo **Průzkumníkovi souborů** otevřete následující soubor (relativní vzhledem k kořenové složce projektu): *release* \\ <ProjectName> \> . Log * nebo *Debug \\<ProjectName \> . log*
 
 ## <a name="to-create-a-build-log-file-for-a-managed-code-project"></a>Vytvoření souboru protokolu sestavení pro projekt spravovaného kódu
 
-1. Na řádku nabídek klikněte na **sestavit**sestavení  >  **řešení**.
+1. Na řádku nabídek klikněte na **sestavit** sestavení  >  **řešení**.
 
 2. V okně **výstup** klikněte někam do textu.
 
@@ -48,13 +48,13 @@ Můžete také vygenerovat protokoly spuštěním nástroje MSBuild přímo z p�
 
 ## <a name="to-change-the-amount-of-information-included-in-the-build-log"></a>Změna množství informací obsažených v protokolu sestavení
 
-1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
+1. Na panelu nabídek vyberte **Tools**  >  **Možnosti** nástroje.
 
 2. Na stránce **projekty a řešení** vyberte stránku **sestavení a spuštění** .
 
 3. V seznamu **podrobností výstupu sestavení projektu nástroje MSBuild** zvolte jednu z následujících hodnot a pak klikněte na tlačítko **OK** .
 
-    |Úroveň podrobností|Popis|
+    |Úroveň podrobností|Description|
     | - |-----------------|
     |**Quiet**|Zobrazí souhrn pouze pro sestavení.|
     |**Minimální**|Zobrazí souhrn sestavení a chyb, upozornění a zpráv, které jsou zařazeny do kategorie s vysokou důležitostí.|
@@ -65,7 +65,7 @@ Můžete také vygenerovat protokoly spuštěním nástroje MSBuild přímo z p�
      Další informace najdete v [dialogovém okně Možnosti, projekty a řešení, sestavení a spuštění](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) a <xref:Microsoft.Build.Framework.LoggerVerbosity> .
 
     > [!IMPORTANT]
-    > Je nutné znovu sestavit projekt, aby se změny projevily v okně **výstup** (všechny projekty) a souboru * \<ProjectName> . txt* (pouze projekty C++).
+    > Je nutné znovu sestavit projekt, aby se změny projevily v okně **výstup** (všechny projekty) a souboru *\<ProjectName> . txt* (pouze projekty C++).
 
 ## <a name="use-binary-logs-to-make-it-easier-to-browse-large-log-files"></a>Použití binárních protokolů pro snazší procházení velkých souborů protokolu
 

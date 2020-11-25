@@ -1,5 +1,7 @@
 ---
 title: SharePoint projekt a šablony položek projektu | Microsoft Docs
+description: Zkontrolujte popisy dostupných šablon projektů a položek projektu služby SharePoint a způsob jejich použití.
+ms.custom: SEO-VS-2020
 ms.date: 02/22/2017
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2878bd2092e000cf63c2b4fcb531a502a470203e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6cbcc4d0bc99ce7ab495e0a24591b145c58f377
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649228"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970368"
 ---
 # <a name="sharepoint-project-and-project-item-templates"></a>Šablony projektů a položek projektu služby SharePoint
   V následujících částech jsou popsány dostupné šablony projektu a položky projektu služby SharePoint a způsob jejich použití.
@@ -36,7 +38,7 @@ ms.locfileid: "81649228"
  Informace o základech služby SharePoint naleznete v části [stavební bloky služby SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/ee534971(v=office.14)). Pokročilí uživatelé mohou vytvořit vlastní šablony projektů a položek projektu. Další informace najdete v tématu věnovaném [roztažení systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).
 
 ## <a name="project-templates"></a>Šablony projektů
- Následuje seznam šablon projektu služby SharePoint. Chcete-li zobrazit šablony projektu služby SharePoint v aplikaci Visual Studio, rozbalte v dialogovém okně **Nový projekt** uzel **služby SharePoint** v jazyce **Visual C#** nebo **Visual Basic**a pak zvolte **2010**.
+ Následuje seznam šablon projektu služby SharePoint. Chcete-li zobrazit šablony projektu služby SharePoint v aplikaci Visual Studio, rozbalte v dialogovém okně **Nový projekt** uzel **služby SharePoint** v jazyce **Visual C#** nebo **Visual Basic** a pak zvolte **2010**.
 
 ### <a name="sharepoint-2010-project"></a>Projekt SharePoint 2010
  Obsah *projektu sharepoint 2010* je obsažen v každé šabloně projektu služby SharePoint. Projekt SharePoint 2010 obsahuje:
@@ -68,7 +70,7 @@ ms.locfileid: "81649228"
 ## <a name="project-item-templates"></a>Šablony položek projektu
  Následuje seznam šablon položek projektu služby SharePoint. Šablony položek projektů přidávají soubory do řešení služby SharePoint pro podporu funkcí služby SharePoint, jako jsou sloupce webu, seznamy a typy obsahu. Například přidání sloupce webu do řešení přidá sloupec webového serveru, který obsahuje soubor definice *Elements.xml* . Přidáním vizuální webové části přidáte do řešení projekt Visual Web Part, který obsahuje soubor *Elements.xml* , položku uživatelského ovládacího prvku a položku vizuální webové části.
 
- Chcete-li zobrazit šablony položek projektu služby SharePoint, v **Průzkumník řešení**otevřete místní nabídku projektu služby SharePoint a poté zvolte možnost **Přidat**, **Nová položka**. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic**a pak zvolte **2010**.
+ Chcete-li zobrazit šablony položek projektu služby SharePoint, v **Průzkumník řešení** otevřete místní nabídku projektu služby SharePoint a poté zvolte možnost **Přidat**, **Nová položka**. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic** a pak zvolte **2010**.
 
 ### <a name="application-page-farm-solution-only"></a>Stránka aplikace (jenom pro řešení farmy)
  Položka **aplikace (pouze řešení farmy)** umožňuje navrhnout [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] webovou stránku pro web služby SharePoint. Stránky aplikací lze použít pouze v řešeních farmy. Tuto položku projektu můžete přidat pouze do řešení farmy. Další informace naleznete v tématu [How to: Create a Page](../sharepoint/how-to-create-an-application-page.md) a [Application _layouts Type Page](/previous-versions/office/aa979604(v=office.14)).

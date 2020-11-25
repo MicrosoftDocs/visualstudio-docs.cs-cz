@@ -1,5 +1,7 @@
 ---
 title: Vytvoření pracovního postupu pomocí formulářů přidružení a inicializace
+description: V tomto návodu k SharePointu vytvořte základní sekvenční pracovní postup, který zahrnuje použití formulářů přidružení a inicializace.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6f257dfed2fe439c5ab22ab9951b6258116c6567
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 62501a23695b81ee0437d3210dced7c81f9b054e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017131"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970435"
 ---
 # <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>Návod: vytvoření pracovního postupu pomocí formulářů přidružení a inicializace
   Tento návod ukazuje, jak vytvořit základní sekvenční pracovní postup, který zahrnuje použití formulářů přidružení a inicializace. Jedná se o formuláře ASPX, které umožňují přidání parametrů do pracovního postupu, když jsou nejprve přidruženy správcem služby SharePoint (formulář přidružení), a pokud je pracovní postup spuštěn uživatelem (inicializační formulář).
@@ -54,7 +56,7 @@ ms.locfileid: "86017131"
 >
 > Kromě toho může počítač v následujících pokynech zobrazit jiné názvy nebo umístění pro některé [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] prvky uživatelského rozhraní. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Tyto prvky jsou určeny edicí a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.
@@ -68,7 +70,7 @@ ms.locfileid: "86017131"
 
 1. Na panelu nabídek vyberte možnost **soubor**  >  **Nový**  >  **projekt** . zobrazí se dialogové okno **Nový projekt** .
 
-2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic**a pak vyberte uzel **2010** .
+2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic** a pak vyberte uzel **2010** .
 
 3. V podokně **šablony** vyberte šablonu projektu **projektu SharePoint 2010** .
 
@@ -80,11 +82,11 @@ ms.locfileid: "86017131"
 
      Tento krok také nastaví úroveň důvěryhodnosti pro řešení jako řešení farmy, což je jediná dostupná možnost pro projekty pracovního postupu.
 
-6. V **Průzkumník řešení**vyberte uzel projektu.
+6. V **Průzkumník řešení** vyberte uzel projektu.
 
 7. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 
-8. V části **Visual C#** nebo **Visual Basic**rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
+8. V části **Visual C#** nebo **Visual Basic** rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
 9. V podokně **šablony** zvolte šablonu **sekvenční pracovní postup (pouze řešení farmy)** a pak klikněte na tlačítko **Přidat** .
 
@@ -103,7 +105,7 @@ ms.locfileid: "86017131"
 
 #### <a name="to-add-an-association-form-to-the-workflow"></a>Přidání formuláře přidružení k pracovnímu postupu
 
-1. V **Průzkumník řešení**vyberte uzel **Workflow1** .
+1. V **Průzkumník řešení** vyberte uzel **Workflow1** .
 
 2. Na panelu nabídek vyberte možnost **projekt**  >  **Přidat novou položku** , chcete-li zobrazit dialogové okno **Přidat novou položku** .
 
@@ -164,7 +166,7 @@ ms.locfileid: "86017131"
 
 #### <a name="to-create-an-initiation-form"></a>Vytvoření inicializačního formuláře
 
-1. V **Průzkumník řešení**vyberte uzel **Workflow1** .
+1. V **Průzkumník řešení** vyberte uzel **Workflow1** .
 
 2. Na panelu nabídek vyberte možnost **projekt**  >  **Přidat novou položku** . zobrazí se dialogové okno **Přidat novou položku** .
 
@@ -253,13 +255,13 @@ ms.locfileid: "86017131"
 
 1. V Návrháři pracovního postupu zobrazte pracovní postup otevřením Workflow1 v projektu.
 
-2. V sadě **nástrojů**rozbalte uzel **Windows Workflow v 3.0** a vyhledejte aktivitu **IfElse** .
+2. V sadě **nástrojů** rozbalte uzel **Windows Workflow v 3.0** a vyhledejte aktivitu **IfElse** .
 
 3. Přidejte tuto aktivitu do pracovního postupu provedením jednoho z následujících kroků:
 
     - Otevřete místní nabídku aktivity **IfElse** , zvolte možnost **Kopírovat**, otevřete místní nabídku pro řádek pod aktivitou **onWorkflowActivated1** v Návrháři pracovních postupů a pak zvolte možnost **Vložit**.
 
-    - Přetáhněte aktivitu **IfElse** ze **sady nástrojů**a připojte ji k řádku pod aktivitou **onWorkflowActiviated1** v Návrháři pracovních postupů.
+    - Přetáhněte aktivitu **IfElse** ze **sady nástrojů** a připojte ji k řádku pod aktivitou **onWorkflowActiviated1** v Návrháři pracovních postupů.
 
 4. V sadě nástrojů rozbalte uzel **pracovní postup služby SharePoint** a vyhledejte aktivitu **CreateTask –** .
 
@@ -283,13 +285,13 @@ ms.locfileid: "86017131"
 
 12. Zvolte kartu **vazba na novou členskou** položku, klikněte na tlačítko **vytvořit pole** a pak klikněte na tlačítko **OK** .
 
-13. V sadě **nástrojů**rozbalte uzel **pracovní postup služby SharePoint** a vyhledejte aktivitu **LogToHistoryListActivity** .
+13. V sadě **nástrojů** rozbalte uzel **pracovní postup služby SharePoint** a vyhledejte aktivitu **LogToHistoryListActivity** .
 
 14. Přidejte tuto aktivitu do pracovního postupu provedením jednoho z následujících kroků:
 
     - Otevřete místní nabídku aktivity **LogToHistoryListActivity** , zvolte možnost **Kopírovat**, v Návrháři pracovního postupu otevřete místní nabídku pro ostatní **aktivity přetažení** v rámci **IfElseActivity1** a pak zvolte možnost **Vložit**.
 
-    - Přetáhněte aktivitu **LogToHistoryListActivity** ze **sady nástrojů**a přetáhněte ji do jiných oblastí **přetažení** v rámci **IfElseActivity1**.
+    - Přetáhněte aktivitu **LogToHistoryListActivity** ze **sady nástrojů** a přetáhněte ji do jiných oblastí **přetažení** v rámci **IfElseActivity1**.
 
 ## <a name="add-code-to-the-workflow"></a>Přidat kód do pracovního postupu
  Potom do pracovního postupu přidejte kód, který bude poskytovat funkci IT.
@@ -426,11 +428,11 @@ ms.locfileid: "86017131"
 
      Tím se zobrazí inicializační formulář pracovního postupu. (Všimněte si, že hodnota zobrazená v poli **omezení automatického schvalování** je jen pro čtení, protože byla zadána do formuláře přidružení.)
 
-7. Do textového pole **Celková cena za výdaj** zadejte **1600**a pak klikněte na tlačítko **Spustit pracovní postup** .
+7. Do textového pole **Celková cena za výdaj** zadejte **1600** a pak klikněte na tlačítko **Spustit pracovní postup** .
 
      Tím se znovu zobrazí seznam **sdílených dokumentů** . Nový sloupec s názvem **ExpenseReportWorkflow** s hodnotou **Completed** se přidá do položky pracovního postupu, který jste právě spustili.
 
-8. Zvolte šipku rozevíracího seznamu vedle nahraného dokumentu a pak zvolte položku **pracovní postupy** pro zobrazení stránky stavu pracovního postupu. V části **dokončené pracovní postupy**vyberte **Dokončená** hodnota. Úloha je uvedena v části **úlohy** .
+8. Zvolte šipku rozevíracího seznamu vedle nahraného dokumentu a pak zvolte položku **pracovní postupy** pro zobrazení stránky stavu pracovního postupu. V části **dokončené pracovní postupy** vyberte **Dokončená** hodnota. Úloha je uvedena v části **úlohy** .
 
 9. Vyberte název úlohy, pro kterou chcete zobrazit podrobnosti o úloze.
 

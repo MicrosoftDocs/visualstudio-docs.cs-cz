@@ -1,5 +1,7 @@
 ---
 title: 'Návod: profilace aplikace SharePoint | Microsoft Docs'
+description: V tomto návodu použijte nástroje pro profilaci v aplikaci Visual Studio k optimalizaci výkonu aplikace SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9a2e4ca528c7f534cc3a7f04d7e1e2832ee9b412
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 66e19f7744a56d147fb0760c6f20254ea4308603
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "92298636"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970111"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>Návod: profilování aplikace SharePoint
   Tento návod ukazuje, jak používat nástroje pro profilaci v aplikaci Visual Studio k optimalizaci výkonu aplikace služby SharePoint. Ukázková aplikace je přijímač událostí funkce SharePointu, který obsahuje smyčku nečinnosti, která snižuje výkon přijímače událostí funkce. Profiler sady Visual Studio umožňuje vyhledat a eliminovat nejnákladný (nejpomalejší) část projektu, označovanou také jako *horká cesta*.
@@ -37,7 +39,7 @@ ms.locfileid: "92298636"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice Microsoft Windows a SharePointu.
@@ -51,11 +53,11 @@ ms.locfileid: "92298636"
 
 1. Na panelu nabídek vyberte možnost **soubor**  >  **Nový**  >  **projekt** . zobrazí se dialogové okno **Nový projekt** .
 
-2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic**a pak vyberte uzel **2010** .
+2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic** a pak vyberte uzel **2010** .
 
 3. V podokně šablony vyberte šablonu **projektu SharePoint 2010** .
 
-4. Do pole **název** zadejte **ProfileTest**a poté klikněte na tlačítko **OK** .
+4. Do pole **název** zadejte **ProfileTest** a poté klikněte na tlačítko **OK** .
 
     Zobrazí se **Průvodce přizpůsobením SharePointu** .
 
@@ -72,9 +74,9 @@ ms.locfileid: "92298636"
 
 ### <a name="to-add-a-feature-and-feature-event-receiver"></a>Přidání funkce a přijímače událostí funkcí
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu **funkce** , vyberte možnost **Přidat funkci**a ponechte název na výchozí hodnotu **Feature1**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu **funkce** , vyberte možnost **Přidat funkci** a ponechte název na výchozí hodnotu **Feature1**.
 
-2. V **Průzkumník řešení**otevřete místní nabídku pro **Feature1**a pak zvolte **Přidat přijímač událostí**.
+2. V **Průzkumník řešení** otevřete místní nabídku pro **Feature1** a pak zvolte **Přidat přijímač událostí**.
 
      Tím se do funkce přidá soubor kódu s několika obslužnými rutinami událostí s komentářem a otevře se soubor pro úpravy.
 
@@ -178,7 +180,7 @@ ms.locfileid: "92298636"
     }
     ```
 
-6. V **Průzkumník řešení**otevřete místní nabídku pro projekt (**ProfileTest**) a pak zvolte **vlastnosti**.
+6. V **Průzkumník řešení** otevřete místní nabídku pro projekt (**ProfileTest**) a pak zvolte **vlastnosti**.
 
 7. V dialogovém okně **vlastnosti** klikněte na kartu **SharePoint** .
 
@@ -195,19 +197,19 @@ ms.locfileid: "92298636"
 
 1. V nabídce **analyzovat** klikněte na možnost **Spustit Průvodce výkonem**.
 
-2. Na stránce jeden z **Průvodce výkonem**ponechte metodu profilování jako **vzorkování procesoru** a klikněte na tlačítko **Další** .
+2. Na stránce jeden z **Průvodce výkonem** ponechte metodu profilování jako **vzorkování procesoru** a klikněte na tlačítko **Další** .
 
      Další metody profilace lze použít v pokročilejších situacích profilace. Další informace najdete v tématu [principy metod shromažďování výkonu](../profiling/understanding-performance-collection-methods.md).
 
-3. Na druhé straně **Průvodce výkonem**ponechte cíl profilu jako **ProfileTest** a klikněte na tlačítko **Další** .
+3. Na druhé straně **Průvodce výkonem** ponechte cíl profilu jako **ProfileTest** a klikněte na tlačítko **Další** .
 
      Pokud má řešení více projektů, zobrazí se v tomto seznamu.
 
-4. Na stránce tři **Průvodce výkonem**zrušte zaškrtnutí políčka **Povolit Profilování interakce vrstev** a pak klikněte na tlačítko **Další** .
+4. Na stránce tři **Průvodce výkonem** zrušte zaškrtnutí políčka **Povolit Profilování interakce vrstev** a pak klikněte na tlačítko **Další** .
 
      Funkce profilování interakce vrstev (TIP) je užitečná pro měření výkonu aplikací, které dotazují databáze a které vám ukáže, kolikrát se webová stránka požaduje. Vzhledem k tomu, že tato data nejsou v tomto příkladu vyžadována, tuto funkci Nepovolíme.
 
-5. Na stránce čtyři **Průvodce výkonem**ponechte zaškrtnuté políčko **Spustit profilaci po dokončení průvodce** a pak klikněte na tlačítko **Dokončit** .
+5. Na stránce čtyři **Průvodce výkonem** ponechte zaškrtnuté políčko **Spustit profilaci po dokončení průvodce** a pak klikněte na tlačítko **Dokončit** .
 
      Průvodce povolí profilaci aplikace na serveru, zobrazí okno **prohlížeč výkonu** a poté sestaví, nasadí a spustí aplikaci služby SharePoint.
 
@@ -262,7 +264,7 @@ ms.locfileid: "92298636"
 
 2. Uložte projekt.
 
-3. V **prohlížeč výkonu**otevřete složku cíle a pak zvolte uzel **ProfileTest** .
+3. V **prohlížeč výkonu** otevřete složku cíle a pak zvolte uzel **ProfileTest** .
 
 4. Na panelu nástrojů **prohlížeč výkonu** na kartě **Akce** klikněte na tlačítko **Spustit profilaci** .
 

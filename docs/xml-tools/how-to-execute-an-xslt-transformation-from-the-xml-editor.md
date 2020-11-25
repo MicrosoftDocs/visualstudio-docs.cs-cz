@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f1c7165f301c82dfaf5aa066a3e15bd7ab244089
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399479"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970242"
 ---
 # <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Postupy: spuštění transformace XSLT z editoru XML
 
 Editor XML umožňuje přidružit šablonu stylů XSLT k dokumentu XML, provést transformaci a zobrazit výstup. Výsledný výstup z transformace XSLT se zobrazí v novém okně dokumentu.
 
-Vlastnost **Output** Určuje název souboru pro výstup. Pokud je vlastnost **Output** prázdná, v dočasném adresáři se vygeneruje název souboru. Přípona souboru je založena na `xsl:output` elementu v šabloně stylů a může být. *XML* ,. *txt* nebo. *htm*.
+Vlastnost **Output** Určuje název souboru pro výstup. Pokud je vlastnost **Output** prázdná, v dočasném adresáři se vygeneruje název souboru. Přípona souboru je založena na `xsl:output` elementu v šabloně stylů a může být.*XML*,. *txt* nebo. *htm*.
 
-Pokud **výstupní** vlastnost určuje název souboru s příponou. *htm* nebo. *HTML* rozšíření, výstup XSLT je zobrazený ve webovém prohlížeči. Všechny ostatní přípony souborů jsou otevřeny pomocí výchozího editoru zvoleného v aplikaci Visual Studio. Například pokud je přípona souboru. *XML* , Visual Studio používá editor XML.
+Pokud **výstupní** vlastnost určuje název souboru s příponou. *htm* nebo. *HTML* rozšíření, výstup XSLT je zobrazený ve webovém prohlížeči. Všechny ostatní přípony souborů jsou otevřeny pomocí výchozího editoru zvoleného v aplikaci Visual Studio. Například pokud je přípona souboru. *XML*, Visual Studio používá editor XML.
 
 ## <a name="execute-an-xslt-transformation-from-an-xml-file"></a>Spuštění transformace XSLT ze souboru XML
 

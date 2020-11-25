@@ -10,11 +10,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0bd8f90c586366a298ba96009dfe5d87a042141b
-ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918107"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970289"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj
 
@@ -39,26 +39,26 @@ Chcete-li se rozhodnout, které nástroje a výsledky použít, vezměte v úvah
 
 ## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Shromažďování dat profilace během ladění
 
-Když spustíte ladění v aplikaci Visual Studio tak, že vyberete **ladění**  >  **Spustit ladění** nebo stisknete klávesu **F5** , ve výchozím nastavení se zobrazí okno **diagnostické nástroje** . Pokud ho chcete otevřít ručně, vyberte **ladit**  >  **Windows**  >  **Zobrazit diagnostické nástroje** . V okně **diagnostické nástroje** se zobrazují informace o událostech, paměti procesu a využití procesoru.
+Když spustíte ladění v aplikaci Visual Studio tak, že vyberete **ladění**  >  **Spustit ladění** nebo stisknete klávesu **F5**, ve výchozím nastavení se zobrazí okno **diagnostické nástroje** . Pokud ho chcete otevřít ručně, vyberte **ladit**  >  **Windows**  >  **Zobrazit diagnostické nástroje**. V okně **diagnostické nástroje** se zobrazují informace o událostech, paměti procesu a využití procesoru.
 
 ![Snímek obrazovky okna Diagnostické nástroje](../profiling/media/diagnostictoolswindow.png " Okno Diagnostické nástroje")
 
-- Pomocí ikony **Nastavení** na panelu nástrojů vyberte, jestli se má zobrazit **využití paměti** , **Analýza uživatelského rozhraní** a **využití procesoru** .
+- Pomocí ikony **Nastavení** na panelu nástrojů vyberte, jestli se má zobrazit **využití paměti**, **Analýza uživatelského rozhraní** a **využití procesoru**.
 
 - V rozevíracím seznamu **Nastavení** vyberte **Nastavení** a otevřete **stránku vlastností diagnostické nástroje** s dalšími možnostmi.
 
-- Pokud používáte Visual Studio Enterprise, můžete povolit nebo zakázat IntelliTrace tak, že kliknete na **nástroje**  >  **Možnosti**  >  **IntelliTrace** .
+- Pokud používáte Visual Studio Enterprise, můžete povolit nebo zakázat IntelliTrace tak, že kliknete na **nástroje**  >  **Možnosti**  >  **IntelliTrace**.
 
 Diagnostická relace skončí po zastavení ladění.
 
-Další informace naleznete v tématech:
+Další informace naleznete v tématu:
 
 - [Měření výkonu aplikace analýzou využití CPU](../profiling/beginners-guide-to-performance-profiling.md)
 - [Měření paměti profilu v sadě Visual Studio](../profiling/memory-usage.md)
 
 ### <a name="the-events-tab"></a>Karta události
 
-Během relace ladění vypíše karta události v okně Diagnostické nástroje diagnostické události, ke kterým dojde. Kategorie *zarážky* , *soubory* a další v této kategorii vám umožní rychle vyhledat seznam pro kategorii nebo přeskočit kategorie, o kterých nezáleží.
+Během relace ladění vypíše karta události v okně Diagnostické nástroje diagnostické události, ke kterým dojde. Kategorie *zarážky*, *soubory* a další v této kategorii vám umožní rychle vyhledat seznam pro kategorii nebo přeskočit kategorie, o kterých nezáleží.
 
 Pomocí rozevíracího seznamu **Filtr** můžete filtrovat události v zobrazení a mimo ně výběrem nebo zrušením určitých kategorií událostí.
 
@@ -74,21 +74,21 @@ Další informace najdete v tématu [hledání a filtrování událostí diagnos
 
 Chcete-li shromažďovat data o výkonu bez ladění, můžete spustit nástroje profileru výkonu.
 
-1. Otevřete projekt v sadě Visual Studio, nastavte konfiguraci řešení na **release** a jako cíl nasazení vyberte **místní ladicí program systému Windows** (nebo **místní počítač** ).
+1. Otevřete projekt v sadě Visual Studio, nastavte konfiguraci řešení na **release** a jako cíl nasazení vyberte **místní ladicí program systému Windows** (nebo **místní počítač**).
 
-1. Vyberte **ladit**  >  **Performance Profiler** nebo stiskněte **ALT** + **F2** .
+1. Vyberte **ladit**  >  **Performance Profiler** nebo stiskněte **ALT** + **F2**.
 
 1. Na stránce spuštění diagnostických nástrojů vyberte jeden nebo více nástrojů, které chcete spustit. Zobrazují se jenom nástroje, které platí pro typ projektu, operační systém a programovací jazyk. Vyberte **Zobrazit všechny nástroje** a zobrazí se také nástroje, které jsou pro tuto diagnostickou relaci zakázané.
 
    ![Snímek obrazovky diagnostických nástrojů](../profiling/media/diaghubsummarypage.png "DIAG_SelectTool")
 
-1. Chcete-li spustit relaci diagnostiky, vyberte možnost **Spustit** .
+1. Chcete-li spustit relaci diagnostiky, vyberte možnost **Spustit**.
 
    Když je relace spuštěná, některé nástroje zobrazují grafy dat v reálném čase na stránce diagnostické nástroje a také ovládací prvky pro pozastavení a obnovení sběru dat.
 
     ![Snímek obrazovky shromažďování dat v profileru výkonu](../profiling/media/diaghubcollectdata.png "Shromáždění dat z centra")
 
-1. Chcete-li ukončit relaci diagnostiky, vyberte **Zastavit shromažďování** .
+1. Chcete-li ukončit relaci diagnostiky, vyberte **Zastavit shromažďování**.
 
    Analyzovaná data se zobrazí na stránce **sestavy** .
 
@@ -96,7 +96,7 @@ Sestavy můžete uložit a otevřít je ze seznamu **naposledy otevřených rela
 
 ![Snímek obrazovky se seznamem Diagnostické nástroje naposledy otevřené relace](../profiling/media/diaghubopenexistingdiagsession.png "PDHUB_OpenExistingDiagSession")
 
-Další informace naleznete v tématech:
+Další informace naleznete v tématu:
 
 - [Analýza využití procesoru](../profiling/cpu-usage.md)
 - [Analýza využití paměti pro kód .NET](../profiling/dotnet-alloc-tool.md)

@@ -18,11 +18,11 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 755723dd2ae309e971e86852646ee33d2caa22cf
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672818"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970394"
 ---
 # <a name="develop-sharepoint-solutions"></a>Vývoj řešení služby SharePoint
   V nástroji je k dispozici několik šablon typu projektu služby SharePoint [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] pro vytváření webů a prvků webu služby SharePoint. Seznam dostupných typů projektů naleznete v tématu [šablony projektů a položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md). Následuje popis prvků a vlastností projektu služby SharePoint.
@@ -63,7 +63,7 @@ ms.locfileid: "94672818"
 
 ### <a name="project-properties"></a>Vlastnosti projektu
 
-|Název vlastnosti|Popis|
+|Název vlastnosti|Description|
 |-------------------|-----------------|
 |Konfigurace aktivního nasazení|Určuje řadu kroků provedených během nasazování. Další informace najdete v tématu [Postupy: Úprava konfigurace nasazení služby SharePoint](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).|
 |Cíl nasazení sestavení|Určuje, kde se nachází *sestavení aplikace služby SharePoint* . Platné hodnoty umístění sestavení jsou buď *GlobalAssemblyCache* (výchozí), nebo *WebApplication*.<br /><br /> Pokud je vlastnost *řešení v izolovaném prostoru* nastavena na **hodnotu true**, tato vlastnost je zakázána.|
@@ -83,7 +83,7 @@ ms.locfileid: "94672818"
 
 ### <a name="project-item-properties"></a>Vlastnosti položky projektu
 
-|Název vlastnosti|Popis|
+|Název vlastnosti|Description|
 |-------------------|-----------------|
 |Řešení konfliktů při nasazení|Určuje akci, která má být provedena při nasazení položky projektu, jejíž vlastnosti jsou stejné jako u položky, která je již na serveru. Další informace najdete v tématu [řešení potíží s balíčkem a nasazením služby SharePoint](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md).|
 |Vlastnosti funkce|Určuje sadu hodnot (uložených jako páry klíč/hodnota), která je součástí funkce při nasazení do služby SharePoint. Po nasazení funkce můžete získat přístup k hodnotám vlastností v kódu. Další informace naleznete v tématu [poskytnutí informací o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).|
@@ -94,7 +94,7 @@ ms.locfileid: "94672818"
 
 ### <a name="project-item-file-properties"></a>Vlastnosti souboru položky projektu
 
-|Název vlastnosti|Popis|
+|Název vlastnosti|Description|
 |-------------------|-----------------|
 |Akce sestavení|Určuje, jak se soubor vztahuje k procesům sestavení a nasazení. Další informace najdete v tématu [vlastnosti souboru](/previous-versions/visualstudio/visual-studio-2010/0c6xyb66\(v\=vs.100\)).|
 |Kopírovat do výstupního adresáře|Určuje, zda budou zdrojové soubory zkopírovány do výstupního adresáře. Může to být jedna z následujících hodnot:<br /><br /> -   *Nekopírovat*<br />-   *Vždycky kopírovat*<br />-   *Kopírovat, pokud je novější*<br /><br /> Další informace najdete v tématu [vlastnosti souboru](/previous-versions/visualstudio/visual-studio-2010/0c6xyb66\(v\=vs.100\)).|

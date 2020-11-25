@@ -8,11 +8,11 @@ ms.date: 10/21/2020
 ms.topic: how-to
 description: Seznamte se s výhodou LinkedIn Learning zahrnutou jako součást předplatného LinkedIn Premium, které jsou součástí vybraných předplatných sady Visual Studio.
 ms.openlocfilehash: 7a5e15ad5d1101123a03b98da30d48895410313b
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435851"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970309"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Zvýhodnění učení LinkedInu v předplatných sady Visual Studio
 
@@ -99,7 +99,7 @@ Odpověď: Ne, nabídka LinkedIn Learning je dostupná jenom pro nové předplat
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

@@ -1,5 +1,7 @@
 ---
 title: Balení informací o nasazení & v položkách projektu
+description: Přidejte data o balení a nasazení v položkách projektu služby SharePoint pomocí vlastností funkcí, přijímačů funkcí, odkazů na výstup projektu a entit bezpečný ovládací prvek.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +26,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: db805c308fd245554824997b24236eb2e2d80e62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f73d8727fb960cf519d368d928aa20cae38ae1a9
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72984205"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970474"
 ---
 # <a name="provide-packaging-and-deployment-information-in-project-items"></a>Poskytnutí informací o balení a nasazení v položkách projektu
   Všechny položky projektu služby SharePoint v aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] mají vlastnosti, které lze použít k poskytnutí dalších dat při nasazení projektu do služby SharePoint. Tyto vlastnosti jsou následující:

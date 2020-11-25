@@ -11,11 +11,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bebca3a27d11015388e45ff6839f446506e716c
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400112"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970607"
 ---
 # <a name="how-to-use-xml-snippets"></a>Postupy: používání fragmentů kódu XML
 
@@ -28,7 +28,7 @@ Po přidání fragmentu kódu XML do editoru jsou všechna upravitelná pole ve 
 Následující postupy popisují, jak získat přístup k příkazu **Vložit fragment** .
 
 > [!NOTE]
-> Příkaz **Vložit fragment** je také k dispozici prostřednictvím klávesové zkratky ( **CTRL** + **K** a pak **CTRL** + **X** ).
+> Příkaz **Vložit fragment** je také k dispozici prostřednictvím klávesové zkratky (**CTRL** + **K** a pak **CTRL** + **X**).
 
 ### <a name="to-insert-snippets-from-the-shortcut-menu"></a>Vložení fragmentů z místní nabídky
 
@@ -58,7 +58,7 @@ Následující postupy popisují, jak získat přístup k příkazu **Vložit fr
 
 3. Vyberte fragment kódu XML ze seznamu kompletních slov.
 
-4. Stiskněte **tabulátor** , **TAB** a volejte fragment kódu XML.
+4. Stiskněte **tabulátor**, **TAB** a volejte fragment kódu XML.
 
 > [!NOTE]
 > Můžou nastat případy, kdy fragment kódu XML není vyvolán. Například pokud se pokusíte vložit `xs:complexType` element do `xs:element` uzlu, Editor negeneruje fragment kódu XML. Pokud `xs:complexType` je v uzlu použit element `xs:element` , nejsou vyžadovány žádné atributy ani dílčí prvky, takže Editor neobsahuje žádná data, která by bylo možné vložit.
@@ -78,7 +78,7 @@ Následující postupy popisují, jak získat přístup k příkazu **Vložit fr
 Následující postupy popisují, jak získat přístup k příkazu **uzavřít pomocí** příkazu.
 
 > [!NOTE]
-> Příkaz **obklopit pomocí** je také k dispozici prostřednictvím klávesové zkratky ( **CTRL** + **K** a potom **CTRL** + **S** ).
+> Příkaz **obklopit pomocí** je také k dispozici prostřednictvím klávesové zkratky (**CTRL** + **K** a potom **CTRL** + **S**).
 
 ### <a name="to-use-surround-with-from-the-context-menu"></a>Použití Surround with v místní nabídce
 

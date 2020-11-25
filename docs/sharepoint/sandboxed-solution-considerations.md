@@ -1,5 +1,7 @@
 ---
 title: Otázky řešení v izolovaném prostoru | Microsoft Docs
+description: Prozkoumejte řešení v izolovaném prostoru, což je funkce služby Microsoft SharePoint, která umožňuje uživatelům kolekce webů nahrávat vlastní řešení pro kód.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3f6345e7627549c672aa28fac8cba5f6d9658a23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17b310a3f992f80b04ad14bb6e038e05b009a4af
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64793817"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970466"
 ---
 # <a name="sandboxed-solution-considerations"></a>Otázky řešení v izolovaném prostoru
   *Řešení v izolovaném prostoru* jsou funkce služby Microsoft SharePoint 2010, která umožňuje uživatelům kolekce webů nahrávat vlastní řešení pro kód. Společné řešení v izolovaném prostoru (sandbox) ukládá uživatelům své vlastní Webové části.
@@ -69,7 +71,7 @@ ms.locfileid: "64793817"
  Ve WSS 3,0 se řešení mohla nasadit jenom na úroveň farmy. To znamenalo, že by mohla být nasazena potenciálně škodlivá nebo destabilizující řešení, která ovlivnila celou webovou farmu a všechny další kolekce webů a aplikace, které jsou v ní spuštěné. Nicméně pomocí řešení v izolovaném prostoru můžete nasadit vaše řešení do dílčí oblasti farmy, konkrétní kolekce webů. Pro zajištění další ochrany není sestavení řešení načteno do hlavního [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] procesu (*w3wp.exe*). Místo toho je načten do samostatného procesu (*SPUCWorkerProcess.exe*). Tento proces se monitoruje a implementuje kvóty a omezování pro ochranu farmy z řešení v izolovaném prostoru, které provádí škodlivé aktivity, jako je spouštění těsných smyček využívajících cykly procesoru.
 
 ## <a name="site-collection-solution-gallery"></a>Galerie řešení kolekce webů
- [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] 2010 má funkci, která se nazývá galerie řešení kolekce webů. K této funkci můžete přistupovat ze stránky centrální správy SharePoint 2010 nebo otevřením nabídky **Akce webu** , volbou možnosti **nastavení lokality**a následným výběrem odkazu **řešení** v části  **Galerie** na webu služby SharePoint. Galerie řešení jsou úložiště řešení, která správcům kolekce webů umožňují spravovat řešení v kolekcích webů.
+ [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] 2010 má funkci, která se nazývá galerie řešení kolekce webů. K této funkci můžete přistupovat ze stránky centrální správy SharePoint 2010 nebo otevřením nabídky **Akce webu** , volbou možnosti **nastavení lokality** a následným výběrem odkazu **řešení** v části  **Galerie** na webu služby SharePoint. Galerie řešení jsou úložiště řešení, která správcům kolekce webů umožňují spravovat řešení v kolekcích webů.
 
  Galerie řešení je knihovna dokumentů uložená na kořenovém webu webu služby SharePoint. Galerie řešení nahrazuje šablony webů a podporuje balíčky řešení. Když se nahraje soubor balíčku řešení SharePoint (*. wsp*), zpracuje se jako řešení v izolovaném prostoru (sandbox).
 

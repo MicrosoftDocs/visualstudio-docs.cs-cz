@@ -10,11 +10,11 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: 563531b6dfbf59e33b63dcb4561612d86cd39acc
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075415"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970233"
 ---
 # <a name="analyze-memory-usage-by-using-the-net-object-allocation-tool"></a>Analýza využití paměti pomocí nástroje pro přidělování objektů .NET
 
@@ -68,21 +68,21 @@ Tabulková data můžete filtrovat, chcete-li zobrazit aktivitu pouze pro zadan�
 
 Zobrazení **přidělení** zobrazuje umístění objektů, které přiděluje paměť a kolik paměti tyto objekty přiděluje.
 
-- Sloupec **typ**   je seznam tříd a struktur, které zabírají paměť. Poklikejte na typ pro zobrazení zpětného trasování jako opačného stromu volání. V zobrazení **přidělení** můžete zobrazit položky v rámci vybrané kategorie, které zabírají paměť.
+- Sloupec **typ** je seznam tříd a struktur, které zabírají paměť. Poklikejte na typ pro zobrazení zpětného trasování jako opačného stromu volání. V zobrazení **přidělení** můžete zobrazit položky v rámci vybrané kategorie, které zabírají paměť.
 
-- Sloupec **alokace**   zobrazuje počet objektů, které zabírají paměť v rámci konkrétního typu nebo funkce přidělení. Tento sloupec se zobrazí pouze v zobrazeních **přidělení**, **strom volání**a **funkce**   .
+- Sloupec **alokace** zobrazuje počet objektů, které zabírají paměť v rámci konkrétního typu nebo funkce přidělení. Tento sloupec se zobrazí pouze v zobrazeních **přidělení**, **strom volání** a **funkce** .
 
-- Sloupce **bajtů**   a **Průměrná velikost (bajty)**   se ve výchozím nastavení nezobrazí. Pokud je chcete zobrazit, klikněte pravým tlačítkem myši na sloupec **typ**   nebo **přidělení**   a potom vyberte možnosti **bajtů**   a **Průměrná velikost (bajty)**,   které chcete přidat do grafu. 
+- Sloupce **bajtů** a **Průměrná velikost (bajty)** se ve výchozím nastavení nezobrazí. Pokud je chcete zobrazit, klikněte pravým tlačítkem myši na sloupec **typ** nebo **přidělení** a potom vyberte možnosti **bajtů** a **Průměrná velikost (bajty)** , které chcete přidat do grafu. 
 
-   Tyto dva sloupce se podobají **součtům (přidělení)** a **sobě samým (přidělením)**, s výjimkou toho, že se místo počtu objektů, které zabírají paměť, zobrazuje velikost paměti, která je zavedená. Tyto sloupce se zobrazí pouze v zobrazení **přidělení** .
+   Tyto dva sloupce se podobají **součtům (přidělení)** a **sobě samým (přidělením)**, s výjimkou toho, že se místo počtu objektů, které zabírají paměť, zobrazuje velikost paměti, která je zavedená. Tyto sloupce se zobrazí pouze v zobrazení **přidělení** .
 
-- Ve sloupci **název modulu**se   zobrazuje modul, který obsahuje funkci nebo proces, který je volán.
+- Ve sloupci **název modulu** se zobrazuje modul, který obsahuje funkci nebo proces, který je volán.
 
-Všechny tyto sloupce jsou seřaditelné. Pro sloupce **typ** a **název modulu** můžete seřadit položky abecedně ve vzestupném nebo sestupném pořadí. Pro **přidělení**, **bajty**   a **průměrnou velikost (bajty)** můžete položky seřadit pomocí zvýšení nebo snížení číselné hodnoty.
+Všechny tyto sloupce jsou seřaditelné. Pro sloupce **typ** a **název modulu** můžete seřadit položky abecedně ve vzestupném nebo sestupném pořadí. Pro **přidělení**, **bajty** a **průměrnou velikost (bajty)** můžete položky seřadit pomocí zvýšení nebo snížení číselné hodnoty.
 
 #### <a name="symbols"></a>Symboly
 
-Na kartách **přidělení**, **strom volání**a **funkce** se zobrazí následující symboly:
+Na kartách **přidělení**, **strom volání** a **funkce** se zobrazí následující symboly:
 
 - ![Symbol typu hodnoty](../profiling/media/valuetypeicon.png "Symbol typu hodnoty") – typ hodnoty jako celé číslo
 
@@ -96,20 +96,20 @@ Na kartách **přidělení**, **strom volání**a **funkce** se zobrazí násled
 
 ![Zobrazení stromu volání](../profiling/media/calltreelight.png "Zobrazení stromu volání")
 
-Zobrazení **stromu volání**   ukazuje cesty provádění funkce, které obsahují objekty, které přiděluje mnoho paměti.
+Zobrazení **stromu volání** ukazuje cesty provádění funkce, které obsahují objekty, které přiděluje mnoho paměti.
 
-- Sloupec **název funkce**   zobrazuje proces nebo název funkce obsahující objekty, které přidělují paměť. Zobrazení vychází z úrovně uzlu, který kontrolujete.
-- Sloupce **celkem (přidělení)** a **Celková velikost (bajty)**   zobrazují počet přidělených objektů a velikost paměti, která je využívána funkcí a všemi jinými funkcemi, které volá.
+- Sloupec **název funkce** zobrazuje proces nebo název funkce obsahující objekty, které přidělují paměť. Zobrazení vychází z úrovně uzlu, který kontrolujete.
+- Sloupce **celkem (přidělení)** a **Celková velikost (bajty)** zobrazují počet přidělených objektů a velikost paměti, která je využívána funkcí a všemi jinými funkcemi, které volá.
 - Sloupce **samy (alokace)** a **samo Size (bajty)** zobrazují počet přidělených objektů a velikost paměti, kterou používá jedna vybraná funkce nebo typ přidělení.
 - Sloupec **Průměrná velikost (bajty)** zobrazuje stejné informace jako v zobrazení **přidělení** .
-- Ve sloupci **název modulu**se   zobrazuje modul, který obsahuje funkci nebo proces, který je volán.
+- Ve sloupci **název modulu** se zobrazuje modul, který obsahuje funkci nebo proces, který je volán.
 
    ![Rozbalení kritické cesty](../profiling/media/hotpathlight.png "Rozbalení kritické cesty")
 
 - Tlačítko **Rozbalit cestu k Hotu zvýrazní cestu** spuštění funkce, která obsahuje mnoho objektů, které přiděluje paměť. Algoritmus se spustí na uzlu, který vyberete, a zvýrazní cestu největší alokace a provede vás při šetření.
 - Tlačítko **Zobrazit horkou cestu** zobrazí nebo skryje plamenové symboly, které označují, které uzly jsou součástí cesty k Hot.
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkce
 
 ![Zobrazení funkcí](../profiling/media/functionslight.png "Zobrazení funkcí")
 
@@ -135,7 +135,7 @@ Zobrazení **kolekce** ukazuje, kolik objektů bylo shromážděno nebo uchován
 
 ### <a name="filtering-tools"></a>Nástroje pro filtrování
 
-Všechny zobrazení **přidělení**, **strom volání**a **funkce** všechny obsahují možnosti **Zobrazit pouze můj kód** a **Zobrazit nativní kód** a pole filtru.
+Všechny zobrazení **přidělení**, **strom volání** a **funkce** všechny obsahují možnosti **Zobrazit pouze můj kód** a **Zobrazit nativní kód** a pole filtru.
 
 - **Zobrazit pouze můj kód** sbalí systémy, rozhraní a jiný neuživatelský kód do snímků **[External Code]** , abyste se mohli soustředit jenom na váš kód. Další informace naleznete v tématu [ladění uživatelského kódu pomocí pouze můj kód](../debugger/just-my-code.md).
 - **Zobrazit nativní kód** zobrazí nativní kód v rámci analytického cíle a může obsahovat neuživatelský kód.

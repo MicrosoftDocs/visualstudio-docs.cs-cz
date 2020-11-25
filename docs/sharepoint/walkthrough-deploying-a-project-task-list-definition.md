@@ -1,5 +1,7 @@
 ---
 title: 'Návod: nasazení definice Seznam úkolů projektu | Microsoft Docs'
+description: V tomto návodu použijte Visual Studio k vytvoření, přizpůsobení, ladění a nasazení SharePointového seznamu pro sledování úkolů projektu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b5639fe7a1b35dea41b14be3730986ad7c7309b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0be8eed2dc41ad433c0e0514dfd34e3c6e3d7193
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015771"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970418"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>Návod: nasazení definice seznamu úkolů projektu
 
@@ -25,7 +27,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vs_dev11_long](../sharepoint/includ
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Podporované edice Microsoft Windows a SharePointu.
 
@@ -37,7 +39,7 @@ Vytvořte projekt SharePointového seznamu a přidružte definici seznamu k úko
 
 1. Otevřete dialogové okno **Nový projekt** , rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
-2. V podokně **šablony** zvolte šablonu **projektu SharePoint 2010** , pojmenujte projekt **ProjectTaskList**a pak klikněte na tlačítko **OK** .
+2. V podokně **šablony** zvolte šablonu **projektu SharePoint 2010** , pojmenujte projekt **ProjectTaskList** a pak klikněte na tlačítko **OK** .
 
      Zobrazí se **Průvodce přizpůsobením SharePointu** .
 
@@ -51,15 +53,15 @@ Vytvořte projekt SharePointového seznamu a přidružte definici seznamu k úko
 
 6. V poli **jaký název chcete zobrazit pro váš seznam?** zadejte **projekt seznam úkolů**.
 
-7. Zvolte možnost **vytvořit nepřizpůsobitelný seznam na základě existujícího typu seznamu** možností a potom v seznamu vyberte položku **úlohy**a pak klikněte na tlačítko **Dokončit** .
+7. Zvolte možnost **vytvořit nepřizpůsobitelný seznam na základě existujícího typu seznamu** možností a potom v seznamu vyberte položku **úlohy** a pak klikněte na tlačítko **Dokončit** .
 
-     V **Průzkumník řešení**se zobrazí seznam, funkce a balíček.
+     V **Průzkumník řešení** se zobrazí seznam, funkce a balíček.
 
 ## <a name="add-an-event-receiver"></a>Přidat přijímač událostí
 
 V seznamu úkolů můžete přidat přijímač událostí, který automaticky nastaví datum splatnosti a popis úkolu. Následující postup přidá jednoduchou obslužnou rutinu události do instance seznamu jako přijímač událostí.
 
-1. Otevřete místní nabídku uzlu projektu, zvolte možnost **Přidat**a poté možnost **Nová položka**.
+1. Otevřete místní nabídku uzlu projektu, zvolte možnost **Přidat** a poté možnost **Nová položka**.
 
 2. V seznamu šablon služby SharePoint vyberte šablonu **příjemce událostí** a pojmenujte ji **ProjectTaskListEventReceiver**.
 
@@ -82,9 +84,9 @@ V seznamu úkolů můžete přidat přijímač událostí, který automaticky na
 
 Když vytvoříte řešení služby SharePoint, Visual Studio automaticky vytvoří funkce pro výchozí položky projektu. Můžete přizpůsobit nastavení seznamu úkolů projektu pro web služby SharePoint pomocí návrháře funkcí.
 
-1. V **Průzkumník řešení**rozbalte možnost **funkce**.
+1. V **Průzkumník řešení** rozbalte možnost **funkce**.
 
-2. Otevřete místní nabídku pro **Feature1**a pak zvolte možnost **Návrhář zobrazení**.
+2. Otevřete místní nabídku pro **Feature1** a pak zvolte možnost **Návrhář zobrazení**.
 
 3. Do pole **název** zadejte **funkce Project seznam úkolů**.
 
@@ -96,7 +98,7 @@ Když vytvoříte řešení služby SharePoint, Visual Studio automaticky vytvo�
 
 Při vytváření projektu služby SharePoint sada Visual Studio automaticky přidá funkce, které obsahují výchozí položky projektu, do balíčku. Můžete přizpůsobit nastavení seznamu úkolů projektu pro web služby SharePoint pomocí návrháře balíčků.
 
-1. V **SolutionExplorer**otevřete místní nabídku pro **balíček**a zvolte možnost **Návrhář zobrazení**.
+1. V **SolutionExplorer** otevřete místní nabídku pro **balíček** a zvolte možnost **Návrhář zobrazení**.
 
 2. Do pole **název** zadejte **ProjectTaskListPackage**.
 

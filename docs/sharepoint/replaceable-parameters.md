@@ -1,5 +1,7 @@
 ---
 title: Nahraditelné parametry | Microsoft Docs
+description: Zkontrolujte nahraditelné parametry (tokeny), které určují hodnoty v souborech projektu pro položky řešení služby SharePoint, jejichž skutečné hodnoty nejsou v době návrhu známy.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,18 +16,18 @@ author: John-Hart
 ms.author: johnhart
 manager: jillfra
 ms.workload: office
-ms.openlocfilehash: 165ef1256a0150e0942d85c4f876c8b3f5e15c72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cd44b3edfaeae376e5a4a9698d138bd75c03bf8
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64825306"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970251"
 ---
 # <a name="replaceable-parameters"></a>Nahraditelné parametry
-  Nahraditelné parametry nebo *tokeny*lze použít uvnitř projektových souborů k poskytnutí hodnot pro položky řešení služby SharePoint, jejichž skutečné hodnoty nejsou v době návrhu známy. Jsou obdobou funkcí pro standardní [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] tokeny šablon. Další informace najdete v tématu [parametry šablony](../ide/template-parameters.md).
+  Nahraditelné parametry nebo *tokeny* lze použít uvnitř projektových souborů k poskytnutí hodnot pro položky řešení služby SharePoint, jejichž skutečné hodnoty nejsou v době návrhu známy. Jsou obdobou funkcí pro standardní [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] tokeny šablon. Další informace najdete v tématu [parametry šablony](../ide/template-parameters.md).
 
 ## <a name="token-format"></a>Formát tokenu
- Tokeny začínají a končí znakem dolaru ($). Při nasazení jsou všechny použité tokeny nahrazeny skutečnými hodnotami, pokud je projekt zabalen do balíčku řešení služby SharePoint (soubor*WSP* ). Například token **$SharePoint. Package.Name $** může překládat na řetězec "test SharePoint Package".
+ Tokeny začínají a končí znakem dolaru ($). Při nasazení jsou všechny použité tokeny nahrazeny skutečnými hodnotami, pokud je projekt zabalen do balíčku řešení služby SharePoint (soubor *WSP* ). Například token **$SharePoint. Package.Name $** může překládat na řetězec "test SharePoint Package".
 
 ## <a name="token-rules"></a>Pravidla tokenů
  Následující pravidla platí pro tokeny:
@@ -48,7 +50,7 @@ ms.locfileid: "64825306"
 ## <a name="tokens-list"></a>Seznam tokenů
  V následující tabulce jsou uvedeny dostupné tokeny.
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |$SharePoint. Project. FileName $|Název obsahujícího souboru projektu, například, *NewProj. csproj*|
 |$SharePoint. Project. FileNameWithoutExtension $|Název obsahujícího souboru projektu bez přípony názvu souboru. Například "NewProj".|

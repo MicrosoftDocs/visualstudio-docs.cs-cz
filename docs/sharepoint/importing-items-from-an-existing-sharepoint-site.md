@@ -19,11 +19,11 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 9c2703bfdd4f47281a1fc19060cb69f8b312e7d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017026"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970550"
 ---
 # <a name="import-items-from-an-existing-sharepoint-site"></a>Import položek z existujícího webu služby SharePoint
   Šablona projektu importovat balíček řešení služby SharePoint umožňuje znovu použít prvky, jako jsou typy obsahu a pole z existujících webů služby SharePoint v novém [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] řešení služby SharePoint. I když lze spustit většinu importovaných řešení bez úprav, existují určitá omezení a problémy, které je třeba zvážit, zejména pokud po importu změníte jakékoli položky.

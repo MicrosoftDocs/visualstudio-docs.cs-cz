@@ -1,5 +1,7 @@
 ---
 title: Importovat vlastní stránku & stránky webu s obrázkem
+description: V tomto návodu importujte vlastní stránku předlohy služby SharePoint a stránku webu, která obsahuje obrázek, do projektu služby Visual Studio SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 311124b2e0b81e70c4c2a7b40754207e6c66b749
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ceb69608a2d1770f082991f3d927d4e4639ae56
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015686"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970152"
 ---
 # <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>Návod: import vlastní stránky předlohy a stránky webu s obrázkem
   Tento návod ukazuje, jak importovat vlastní stránku předlohy služby SharePoint a stránku webu, která obsahuje obrázek do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu služby SharePoint.
@@ -33,7 +35,7 @@ ms.locfileid: "86015686"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto Názorného postupu musíte mít následující komponenty:
 
 - Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.
@@ -158,7 +160,7 @@ ms.locfileid: "86015686"
 
 3. Kliknutím na tlačítko **Dokončit** naimportujete vybrané položky.
 
-4. V **Průzkumník řešení**vyberte \_ \_ uzel catalogsmasterpage a nastavte hodnotu vlastnosti **řešení konfliktů nasazení** na hodnotu **automaticky**.
+4. V **Průzkumník řešení** vyberte \_ \_ uzel catalogsmasterpage a nastavte hodnotu vlastnosti **řešení konfliktů nasazení** na hodnotu **automaticky**.
 
     To pomáhá zajistit, aby byly všechny konflikty nasazení vyřešeny automaticky.
 

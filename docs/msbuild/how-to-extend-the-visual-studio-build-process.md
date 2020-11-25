@@ -16,11 +16,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 07f0312892d9f4f4073cf6fb2c9537ffa52a6267
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436354"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970074"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>Postupy: rozšiřování procesu sestavení sady Visual Studio
 
@@ -41,7 +41,7 @@ Společné cíle obsahují sadu předdefinovaných prázdných cílů, které js
 
 1. Identifikujte předdefinovaný cíl v rámci běžných cílů, které chcete přepsat. Úplný seznam cílů, které můžete bez obav přepsat, najdete v následující tabulce.
 
-2. Definujte cíl nebo cíle na konci souboru projektu, bezprostředně před `</Project>` značku. Příklad:
+2. Definujte cíl nebo cíle na konci souboru projektu, bezprostředně před `</Project>` značku. Například:
 
     ```xml
     <Project>
@@ -59,7 +59,7 @@ Společné cíle obsahují sadu předdefinovaných prázdných cílů, které js
 
 V následující tabulce jsou uvedeny všechny cíle v rámci běžných cílů, které lze bezpečně přepsat.
 
-|Název cíle|Popis|
+|Název cíle|Description|
 |-----------------|-----------------|
 |`BeforeCompile`, `AfterCompile`|Úkoly, které jsou vloženy v jednom z těchto cílů, jsou spouštěny před nebo po dokončení základní kompilace. Většina úprav se provádí v jednom z těchto dvou cílů.|
 |`BeforeBuild`, `AfterBuild`|Úkoly, které jsou vloženy v jednom z těchto cílů, budou spouštěny před nebo po vše ostatní v sestavení. **Poznámka:**  `BeforeBuild` Cíle a `AfterBuild` jsou již definovány v komentářích na konci většiny souborů projektu, což vám umožní snadno přidat události před a po sestavení do souboru projektu.|
@@ -130,7 +130,7 @@ Tato část XML značí, že před `Build` spuštěním cíle se musí nejdřív
 </PropertyGroup>
 ```
 
-Tuto hodnotu vlastnosti lze přepsat deklarováním jiné vlastnosti pojmenované `BuildDependsOn` na konci souboru projektu. Zahrnutím předchozí `BuildDependsOn` vlastnosti do nové vlastnosti můžete přidat nové cíle na začátek a konec cílového seznamu. Příklad:
+Tuto hodnotu vlastnosti lze přepsat deklarováním jiné vlastnosti pojmenované `BuildDependsOn` na konci souboru projektu. Zahrnutím předchozí `BuildDependsOn` vlastnosti do nové vlastnosti můžete přidat nové cíle na začátek a konec cílového seznamu. Například:
 
 ```xml
 <PropertyGroup>
@@ -163,7 +163,7 @@ Projekty, které importují soubory projektu, mohou tyto vlastnosti přepsat bez
 
 ### <a name="commonly-overridden-dependson-properties"></a>Běžně přepsané vlastnosti DependsOn
 
-|Název vlastnosti|Popis|
+|Název vlastnosti|Description|
 |-------------------|-----------------|
 |`BuildDependsOn`|Vlastnost, která má být přepsána, pokud chcete vložit vlastní cíle před nebo po celém procesu sestavení.|
 |`CleanDependsOn`|Vlastnost, která má být přepsána, pokud chcete vyčistit výstup z vlastního procesu sestavení.|

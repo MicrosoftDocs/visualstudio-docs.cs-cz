@@ -1,6 +1,8 @@
 ---
 title: 'Návod: import položek z existujícího webu služby SharePoint | Microsoft Docs'
 titleSuffix: ''
+description: V tomto návodu importujte položky z existujícího webu služby SharePoint do projektu služby Visual Studio SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c5f9fd5e3cc9b0df5feb60149e58e895996bb1f0
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7eeff880538d98f997f48f82c49d01045e834031
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298641"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970121"
 ---
 # <a name="walkthrough-import-items-from-an-existing-sharepoint-site"></a>Návod: import položek z existujícího webu služby SharePoint
   Tento návod ukazuje, jak importovat položky z existujícího webu služby SharePoint do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu služby SharePoint.
@@ -34,7 +36,7 @@ ms.locfileid: "92298641"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.
@@ -56,7 +58,7 @@ ms.locfileid: "92298641"
 
 5. Po vytvoření lokality přejděte v prohlížeči zpátky do hlavní lokality, http://<em>systémový název</em>/SitePages/Home.aspx.
 
-6. Znovu vytvořte prázdný podřízený web z hlavního webu služby SharePoint tak, že otevřete nabídku **Akce webu** , zvolíte možnost **Nový web**a pak zvolíte **prázdný typ webu** .
+6. Znovu vytvořte prázdný podřízený web z hlavního webu služby SharePoint tak, že otevřete nabídku **Akce webu** , zvolíte možnost **Nový web** a pak zvolíte **prázdný typ webu** .
 
 7. Do pole **název** zadejte **test sloupce webu 2**; do pole **název adresy URL** zadejte **columntest2**; Ostatní nastavení ponechte na jejich výchozích hodnotách. a pak klikněte na tlačítko **vytvořit** .
 
@@ -84,7 +86,7 @@ ms.locfileid: "92298641"
 
 2. V části **Akce webu** na stránce nastavení lokality vyberte odkaz **Uložit web jako šablonu** .
 
-3. Do pole **název souboru** zadejte **ExampleSite**a do pole **název šablony** zadejte **příklad site**.
+3. Do pole **název souboru** zadejte **ExampleSite** a do pole **název šablony** zadejte **příklad site**.
 
 4. V tomto příkladu ponechejte zaškrtávací políčko **Zahrnout obsah** nejasné.
 
@@ -105,7 +107,7 @@ ms.locfileid: "92298641"
 
 1. V aplikaci klikněte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] na panelu nabídek na položku **soubor**  >  **Nový**  >  **projekt** . zobrazí se dialogové okno **Nový projekt** . Pokud je vaše rozhraní IDE nastaveno na použití Visual Basic vývojové nastavení, na panelu nabídky vyberte **soubor**  >  **Nový projekt**.
 
-2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic**a pak vyberte uzel **2010** .
+2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic** a pak vyberte uzel **2010** .
 
 3. Zvolte šablonu **balíčku řešení pro import sady SharePoint 2010** v podokně **šablony** , ponechte název projektu jako WspImportProject1 a pak klikněte na tlačítko **OK** .
 
@@ -120,7 +122,7 @@ ms.locfileid: "92298641"
    > [!NOTE]
    > Pokud na této stránce kliknete na tlačítko **Dokončit** , naimportují se všechny dostupné položky v souboru *. wsp* .
 
-7. V poli **Vybrat položky k importu** zrušte zaškrtnutí všech políček v seznamu s výjimkou **sloupce test**a potom klikněte na tlačítko **Dokončit** .
+7. V poli **Vybrat položky k importu** zrušte zaškrtnutí všech políček v seznamu s výjimkou **sloupce test** a potom klikněte na tlačítko **Dokončit** .
 
     Vzhledem k tomu, že seznam obsahuje mnoho položek, můžete zvolit možnost **kláves CTRL** + **a** vybrat všechny položky v seznamu, zvolit klávesu MEZERNÍK pro zrušení zaškrtnutí všech políček a pak zaškrtnout políčko vedle položky **sloupce testu** .
 

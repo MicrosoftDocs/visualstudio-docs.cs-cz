@@ -23,11 +23,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dbfd8ac877fce4b1808a76e3bb2a66ac595693de
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599499"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970618"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Soubory s výpisem paměti v ladicím programu sady Visual Studio
 
@@ -69,7 +69,7 @@ Když je povoleno [ladění za běhu](../debugger/just-in-time-debugging-in-visu
 
 1. Při zastavení při chybě nebo zarážce během ladění vyberte **ladit**  >  **Uložit výpis jako**.
 
-1. V dialogovém okně **Uložit výpis paměti jako** v části **Uložit jako typ**vyberte možnost **s minimálním výpisem** nebo **s minimálním výpisem s haldou** (výchozí).
+1. V dialogovém okně **Uložit výpis paměti jako** v části **Uložit jako typ** vyberte možnost **s minimálním výpisem** nebo **s minimálním výpisem s haldou** (výchozí).
 
 1. Přejděte k cestě a vyberte název souboru s výpisem paměti a pak vyberte **Uložit**.
 
@@ -88,7 +88,7 @@ Když je povoleno [ladění za běhu](../debugger/just-in-time-debugging-in-visu
 
 1. V části **Akce**:
    - Chcete-li nastavit umístění pro načítání symbolů, vyberte možnost **nastavit cesty k symbolům**.
-   - Chcete-li spustit ladění, vyberte možnost **ladit pouze se spravovanými**, **ladit pouze s nativním**, **laděním se smíšeným**nebo **laděním pomocí spravované paměti**.
+   - Chcete-li spustit ladění, vyberte možnost **ladit pouze se spravovanými**, **ladit pouze s nativním**, **laděním se smíšeným** nebo **laděním pomocí spravované paměti**.
 
 ## <a name="find-exe-pdb-and-source-files"></a><a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> Najít. exe,. pdb a zdrojové soubory
 
@@ -111,7 +111,7 @@ Visual Studio automaticky vyhledá tato umístění pro soubory *. exe* , které
 
 ### <a name="use-the-no-binary-no-symbols-or-no-source-found-pages"></a>Použití žádného binárního souboru, žádných symbolů nebo stránek nenalezených zdrojů
 
-Pokud Visual Studio nemůže najít soubory potřebné k ladění modulu ve výpisu paměti, zobrazí se **žádný binární soubor**, **nenašly se žádné symboly**nebo se **nenašly žádné zdrojové** stránky. Tyto stránky obsahují podrobné informace o příčině problému a poskytují odkazy na akce, které vám mohou pomáhat při hledání souborů. Viz [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+Pokud Visual Studio nemůže najít soubory potřebné k ladění modulu ve výpisu paměti, zobrazí se **žádný binární soubor**, **nenašly se žádné symboly** nebo se **nenašly žádné zdrojové** stránky. Tyto stránky obsahují podrobné informace o příčině problému a poskytují odkazy na akce, které vám mohou pomáhat při hledání souborů. Viz [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
 ## <a name="see-also"></a>Viz také
 

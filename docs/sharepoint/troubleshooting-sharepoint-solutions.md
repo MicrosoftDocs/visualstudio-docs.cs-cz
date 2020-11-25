@@ -1,5 +1,7 @@
 ---
 title: Řešení potíží s řešeními SharePoint | Microsoft Docs
+description: Podívejte se, jaké problémy nebo výstrahy mohou nastat při ladění řešení služby SharePoint pomocí ladicího programu sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/22/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e79a08d3f8dbc4b579a52501afb08ffb7dca33f2
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: a9ef5e7d47f72b82e7a8fab52cc2f1f8716c83bf
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "92298402"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970270"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>Řešení potíží s řešeními služby SharePoint
   Při ladění řešení služby SharePoint pomocí ladicího programu mohou nastat následující problémy nebo výstrahy [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace najdete v tématu [ladění řešení pracovních postupů pro SharePoint 2007](/previous-versions/bb386166(v=vs.100)).
@@ -115,7 +117,7 @@ ms.locfileid: "92298402"
 
 ##### <a name="to-reenter-the-workflow-wizard"></a>Postup pro znovu zadat průvodce pracovním postupem
 
-1. V **Průzkumník řešení**vyberte uzel pracovního postupu.
+1. V **Průzkumník řešení** vyberte uzel pracovního postupu.
 
 2. V okně **vlastnosti** klikněte na tlačítko se třemi tečkami (...) u libovolné vlastnosti, která má tlačítko se třemi tečkami.
 
@@ -156,9 +158,9 @@ ms.locfileid: "92298402"
 
 ##### <a name="to-change-the-feature-scope-of-the-event-receiver"></a>Změna rozsahu funkcí přijímače událostí
 
-1. V **Průzkumník řešení**otevřete soubor *. Feature* příjemce události v **Návrháři funkcí** Poklikáním na soubor nebo otevřením jeho místní nabídky a následným výběrem možnosti **otevřít**.
+1. V **Průzkumník řešení** otevřete soubor *. Feature* příjemce události v **Návrháři funkcí** Poklikáním na soubor nebo otevřením jeho místní nabídky a následným výběrem možnosti **otevřít**.
 
-2. Vyberte šipku vedle možnosti **Rozsah**a potom v seznamu, který se zobrazí, vyberte možnost **lokalita** .
+2. Vyberte šipku vedle možnosti **Rozsah** a potom v seznamu, který se zobrazí, vyberte možnost **lokalita** .
 
 ## <a name="deployment-error-appears-after-the-name-of-an-identifier-in-a-business-data-connectivity-model-project-is-changed"></a>Po změně názvu identifikátoru v projektu modelu připojení obchodních dat se zobrazí chyba nasazení.
  K tomuto problému dochází, pokud změníte název identifikátoru entity v modelu služby připojení obchodních dat (BDC) a pak se pokusíte nasazení řešení nasadit.
@@ -189,7 +191,7 @@ ms.locfileid: "92298402"
 
 ##### <a name="to-resolve-this-issue"></a>Řešení tohoto problému
 
-1. V **Průzkumník řešení**vyberte soubor uživatelského ovládacího prvku, jehož přípona názvu souboru je *. ascx*.
+1. V **Průzkumník řešení** vyberte soubor uživatelského ovládacího prvku, jehož přípona názvu souboru je *. ascx*.
 
 2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **okno vlastností**.
 
@@ -257,7 +259,7 @@ ms.locfileid: "92298402"
 ### <a name="resolution"></a>Řešení
  K tomu dochází, protože po zavření relace ladění řešení služby SharePoint, funkce automatického odčítání odvolá řešení. Odvolání odstraní definici seznamu ze SharePointu, ale neodstraní instanci tohoto seznamu. Základní definice seznamu je vyžadována instancí seznamu.
 
- Chcete-li vyřešit tento problém, nasaďte řešení pomocí nástroje, v řádku nabídek **Build**zvolte možnost  >  **nasazení**sestavení. (Neladit řešení volbou klávesy **F5** .) Pak odstraňte instanci seznamu na SharePointu.
+ Chcete-li vyřešit tento problém, nasaďte řešení pomocí nástroje, v řádku nabídek **Build** zvolte možnost  >  **nasazení** sestavení. (Neladit řešení volbou klávesy **F5** .) Pak odstraňte instanci seznamu na SharePointu.
 
 ## <a name="original-sharepoint-solution-is-replaced-by-an-exported-version"></a>Původní řešení služby SharePoint je nahrazeno exportovanou verzí.
  Pokud exportujete řešení služby SharePoint, importujte řešení do nástroje [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a pak řešení nasaďte zpátky na stejnou lokalitu, ze které byla exportována, původní řešení služby SharePoint bude nahrazeno. K tomuto problému nedojde, pokud řešení nasazujete na server, na kterém není aktivované původní řešení.
@@ -275,7 +277,7 @@ ms.locfileid: "92298402"
  Nepodařilo se načíst konfigurační soubor Web.config. Ověřte soubor pro všechny poškozené prvky XML a zkuste to znovu. Došlo k následující chybě: daný klíč není ve slovníku přítomen.
 
 ### <a name="resolution"></a>Řešení
- Chcete-li vyřešit tento problém, ujistěte se, že hodnota vlastnosti Adresa URL webu projektu služby SharePoint v aplikaci Visual Studio odpovídá adrese URL, která je přiřazena výchozí zóně pro mapování alternativního přístupu pro webovou aplikaci. Tuto chybu nelze vyřešit pomocí jiné zóny, jako je například intranet, pro adresu URL. Adresa URL webu projektu a adresa URL ve výchozí zóně se musí shodovat. Chcete-li získat přístup k mapování alternativního přístupu, otevřete nástroj centrální správy služby SharePoint 2010, zvolte odkaz **Správa aplikací** a potom v části **webové aplikace**zvolte odkaz **Konfigurovat mapování alternativního přístupu** . Další informace najdete v tématu [vytvoření zón pro webové aplikace](/previous-versions/office/sharepoint-2007-products-and-technologies/cc263087(v=office.12)).
+ Chcete-li vyřešit tento problém, ujistěte se, že hodnota vlastnosti Adresa URL webu projektu služby SharePoint v aplikaci Visual Studio odpovídá adrese URL, která je přiřazena výchozí zóně pro mapování alternativního přístupu pro webovou aplikaci. Tuto chybu nelze vyřešit pomocí jiné zóny, jako je například intranet, pro adresu URL. Adresa URL webu projektu a adresa URL ve výchozí zóně se musí shodovat. Chcete-li získat přístup k mapování alternativního přístupu, otevřete nástroj centrální správy služby SharePoint 2010, zvolte odkaz **Správa aplikací** a potom v části **webové aplikace** zvolte odkaz **Konfigurovat mapování alternativního přístupu** . Další informace najdete v tématu [vytvoření zón pro webové aplikace](/previous-versions/office/sharepoint-2007-products-and-technologies/cc263087(v=office.12)).
 
 ## <a name="see-also"></a>Viz také
 
