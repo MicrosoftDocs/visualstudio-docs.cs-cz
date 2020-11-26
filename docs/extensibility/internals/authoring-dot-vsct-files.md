@@ -1,5 +1,7 @@
 ---
 title: Zdroj. Soubory vsct | Microsoft Docs
+description: Naučte se, jak vytvářet soubory. vsct, které přidávají položky nabídky, panely nástrojů a další prvky uživatelského rozhraní do integrovaného vývojového prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 54e67a28d59cb739abbeab188ff1f100751f2aa8
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: e0aeb601449ffcc47b7f7786825ee222b8b6ac5b
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93413904"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190080"
 ---
 # <a name="author-vsct-files"></a>Soubory Author. vsct
 Tento dokument ukazuje, jak vytvořit soubor *. vsct* pro přidání položek nabídky, panelů nástrojů a dalších prvků uživatelského rozhraní (UI) do integrovaného vývojového prostředí (IDE) sady Visual Studio. Tyto kroky použijte při přidávání prvků uživatelského rozhraní do balíčku sady Visual Studio (VSPackage), který ještě nemá soubor *. vsct* .
@@ -51,9 +53,9 @@ Tento dokument ukazuje, jak vytvořit soubor *. vsct* pro přidání položek na
 
 1. V horní části `CommandTable` elementu přidejte jeden `Extern` element pro každý externí soubor, na který se má odkazovat, a nastavte `href` atribut na název souboru. Pro přístup k prostředkům sady Visual Studio můžete odkazovat na následující soubory hlaviček:
 
-   - *Stdidcmd. h* : definuje ID pro všechny příkazy zveřejněné v aplikaci Visual Studio.
+   - *Stdidcmd. h*: definuje ID pro všechny příkazy zveřejněné v aplikaci Visual Studio.
 
-   - *Vsshlids. h* : obsahuje ID příkazů pro nabídky sady Visual Studio.
+   - *Vsshlids. h*: obsahuje ID příkazů pro nabídky sady Visual Studio.
 
 2. Pokud balíček volá jakékoli příkazy, které jsou definovány v aplikaci Visual Studio nebo jinými balíčky, přidejte `UsedCommands` prvek za `Commands` element. Naplňte tento prvek elementem [UsedCommand](../../extensibility/usedcommand-element.md) pro každý příkaz, který zavoláte, který není součástí vašeho balíčku. Nastavte `guid` atributy a `id` `UsedCommand` prvků na identifikátory GUID a ID příkazů, které mají být volány.
 

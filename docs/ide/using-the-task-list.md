@@ -16,11 +16,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8d19794b4fce3e4a1388f864cecf408e0f7e9c53
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959799"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189833"
 ---
 # <a name="use-the-task-list"></a>Použití seznamu úkolů
 
@@ -33,11 +33,11 @@ Použijte **seznam úkolů** ke sledování komentářů kódu, které používa
 
 Když je **seznam úkolů** otevřené, zobrazí se v dolní části okna aplikace.
 
-Chcete-li otevřít **seznam úkolů**, vyberte možnost **Zobrazit**  >  **seznam úkolů**nebo na klávesnici stiskněte klávesu **CTRL** + **\\** ,**T**.
+Chcete-li otevřít **seznam úkolů**, vyberte možnost **Zobrazit**  >  **seznam úkolů** nebo na klávesnici stiskněte klávesu **CTRL** + **\\** ,**T**.
 
 ![okno Seznam úkolů](../ide/media/vs2015_task_list.png)
 
-Chcete-li změnit pořadí řazení seznamu, vyberte záhlaví libovolného sloupce. Chcete-li dále zpřesnit výsledky hledání, stiskněte klávesu **SHIFT** a klikněte na druhé záhlaví sloupce. Případně můžete v místní nabídce vybrat položku **Seřadit podle**a potom zvolit záhlaví. Chcete-li dále zpřesnit výsledky hledání, stiskněte klávesu **SHIFT** a zvolte druhé záhlaví.
+Chcete-li změnit pořadí řazení seznamu, vyberte záhlaví libovolného sloupce. Chcete-li dále zpřesnit výsledky hledání, stiskněte klávesu **SHIFT** a klikněte na druhé záhlaví sloupce. Případně můžete v místní nabídce vybrat položku **Seřadit podle** a potom zvolit záhlaví. Chcete-li dále zpřesnit výsledky hledání, stiskněte klávesu **SHIFT** a zvolte druhé záhlaví.
 
 Chcete-li zobrazit nebo skrýt sloupce, v místní nabídce vyberte možnost **Zobrazit sloupce**. Vyberte sloupce, které chcete zobrazit nebo skrýt.
 
@@ -89,13 +89,13 @@ Vytvoření vlastního tokenu:
 5. Klikněte na tlačítko **Přidat**.
 
 > [!TIP]
-> Tlačítko **Přidat** se aktivuje po zadání názvu. Před kliknutím na **Přidat**je nutné zadat název.
+> Tlačítko **Přidat** se aktivuje po zadání názvu. Před kliknutím na **Přidat** je nutné zadat název.
 
 ### <a name="c-todo-comments"></a>Komentáře C++ TODO
 
 Ve výchozím nastavení se komentáře C++ TODO zobrazují v **seznam úkolů**.
 
-Chcete-li vypnout komentáře C++ todo, v nabídce **nástroje** vyberte **možnost možnosti**  >  **textový editor**  >  **C/C++**  >  **Zobrazit**  >  **výčet úkolů komentářů**a nastavte hodnotu na **false**.
+Chcete-li vypnout komentáře C++ todo, v nabídce **nástroje** vyberte **možnost možnosti**  >  **textový editor**  >  **C/C++**  >  **Zobrazit**  >  **výčet úkolů komentářů** a nastavte hodnotu na **false**.
 
 ## <a name="shortcuts"></a>Zástupci
 

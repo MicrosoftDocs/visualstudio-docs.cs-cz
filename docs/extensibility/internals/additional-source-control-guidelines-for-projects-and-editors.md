@@ -1,5 +1,6 @@
 ---
 title: Pokyny pro správu zdrojového kódu pro projekty a editory
+description: Seznamte se s pokyny, které by projekty a editory měly dodržovat, aby bylo možné podporovat správu zdrojového kódu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d1066995537ff6c43a587326c1087b66f79ff52
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: fdd7e23840701981eaea46b44355c34b55b37a33
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037631"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190132"
 ---
 # <a name="additional-source-control-guidelines-for-projects-and-editors"></a>Další pokyny pro správu zdrojového kódu pro projekty a editory
 K dispozici je řada zásad, které by projekty a editory měly dodržovat, aby bylo možné podporovat správu zdrojového kódu.

@@ -18,11 +18,11 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: ea12076e41185e9de4ee10afe3056ff97403d6ea
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352267"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190201"
 ---
 # <a name="visual-studio-administrator-guide"></a>Příručka správce sady Visual Studio
 
@@ -40,11 +40,11 @@ Před nasazením sady Visual Studio napříč vaší organizací je potřeba pro
 
 * Rozhodněte se o potřebě údržby.
 
-  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace najdete v části ***Možnosti podpory pro zákazníky v Enterprise a Professional*** na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) , jakož i na stránce [směrného plánu údržby aktualizace sady Visual Studio](update-servicing-baseline.md) .
+  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace najdete v části ***Možnosti podpory pro Enterprise a Professional Customers** _ na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) , a také na stránce [směrného plánu údržby aktualizovat sadu Visual Studio](update-servicing-baseline.md) .
 
   Pokud plánujete použít aktualizace pro údržbu spolu s kumulativními aktualizacemi funkcí, můžete zvolit nejnovější bity.
 
-* Určete model aktualizace.
+_ Určete model aktualizace.
 
   Kam chcete, aby jednotlivé klientské počítače získaly aktualizace? Konkrétně se rozhodněte, jestli chcete získávat aktualizace z Internetu nebo z místní sdílené složky v rámci společnosti. Pokud se pak rozhodnete použít místní sdílenou složku, rozhodněte se, jestli jednotliví uživatelé můžou aktualizovat svoje vlastní klienty, nebo jestli chcete, aby správce aktualizoval klienty programově.
 
@@ -66,11 +66,11 @@ Před nasazením sady Visual Studio napříč vaší organizací je potřeba pro
 
 * Rozhodněte se o potřebě údržby.
 
-  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace naleznete v části ***Podpora pro starší verze sady Visual Studio*** na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) a také na stránce [směrného plánu pro údržbu aktualizace sady Visual Studio](update-servicing-baseline.md) .
+  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace naleznete v části ***Podpora pro starší verze sady Visual Studio** _ na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) , a také na stránce [směrného plánu údržby aktualizace sady Visual Studio](update-servicing-baseline.md) .
 
   Pokud plánujete použít aktualizace pro údržbu spolu s kumulativními aktualizacemi funkcí, můžete zvolit nejnovější bity.
 
-* Určete model aktualizace.
+_ Určete model aktualizace.
 
   Kam chcete, aby jednotlivé klientské počítače získaly aktualizace? Konkrétně se rozhodněte, jestli chcete získávat aktualizace z Internetu nebo z místní sdílené složky v rámci společnosti. Pokud se pak rozhodnete použít místní sdílenou složku, rozhodněte se, jestli jednotliví uživatelé můžou aktualizovat svoje vlastní klienty, nebo jestli chcete, aby správce aktualizoval klienty programově.
 

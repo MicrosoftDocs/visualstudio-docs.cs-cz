@@ -8,11 +8,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a70199f6a46fc5fd78c9b40dc5c68ed1e1c85a56
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352359"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189859"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Tipy a triky pro výkon sady Visual Studio
 
@@ -39,11 +39,11 @@ Pokud automatické obnovení dokumentů způsobuje výrazné zpomalení řešen�
 
 Pokud automatické obnovení souborů zakážete, můžete rychlým způsobem navigace do souborů, které chcete otevřít, použít jeden z příkazů [Přejít na](../ide/go-to.md) :
 
-- V části Obecné **přejděte na** funkce vyberte **Upravit**  >  **Přejít na**  >  **vše**nebo stiskněte **CTRL** + **T**.
+- V části Obecné **přejděte na** funkce vyberte **Upravit**  >  **Přejít na**  >  **vše** nebo stiskněte **CTRL** + **T**.
 
-- Přejděte do posledního umístění pro úpravy v řešení pomocí možnosti **Upravit**  >  **Přejít na**  >  **Přejít na poslední umístění úprav**nebo stiskněte **klávesovou zkratku CTRL** + **SHIFT** + **BACKSPACE**.
+- Přejděte do posledního umístění pro úpravy v řešení pomocí možnosti **Upravit**  >  **Přejít na**  >  **Přejít na poslední umístění úprav** nebo stiskněte **klávesovou zkratku CTRL** + **SHIFT** + **BACKSPACE**.
 
-- Pomocí **Přejít na poslední soubor** zobrazíte seznam nedávno navštívených souborů v řešení. Vyberte **Upravit**  >  **Přejít**na  >  **Poslední soubor**nebo stiskněte **CTRL** + **1**, **CTRL** + **R**.
+- Pomocí **Přejít na poslední soubor** zobrazíte seznam nedávno navštívených souborů v řešení. Vyberte **Upravit**  >  **Přejít** na  >  **Poslední soubor** nebo stiskněte **CTRL** + **1**, **CTRL** + **R**.
 
 ## <a name="configure-debugging-options"></a>Konfigurace možností ladění
 
@@ -53,7 +53,7 @@ Pokud obvykle dochází k nedostatku paměti během relace ladění, můžete op
 
     Nejjednodušší optimalizace je povolit funkci **pouze můj kód** , která načte jenom symboly pro váš projekt. Povolení této funkce může způsobit významné uložení paměti pro ladění spravovaných aplikací (.NET). Tato možnost je již ve výchozím nastavení povolena v některých typech projektů.
 
-    Pokud chcete povolit **pouze můj kód**, zvolte **nástroje**  >  **Možnosti**  >  **ladění**  >  **Obecné**a potom vyberte **Povolit pouze můj kód**.
+    Pokud chcete povolit **pouze můj kód**, zvolte **nástroje**  >  **Možnosti**  >  **ladění**  >  **Obecné** a potom vyberte **Povolit pouze můj kód**.
 
 - **Zadejte symboly, které se mají načíst.**
 
@@ -69,7 +69,7 @@ Pokud obvykle dochází k nedostatku paměti během relace ladění, můžete op
 
     Doporučuje se, abyste po použití zakázali profilaci procesoru. Tato funkce může využívat velké množství prostředků. Po povolení profilace procesoru je tento stav trvale v následných ladicích relacích, takže je po dokončení potřeba ho explicitně zapnout. Můžete uložit některé prostředky zakázáním diagnostických nástrojů během ladění, pokud nepotřebujete poskytované funkce.
 
-    Pokud chcete **diagnostické nástroje**zakázat, spusťte ladicí relaci, zvolte možnosti **nástrojů**  >  **Options**  >  **Povolit diagnostické nástroje**a zrušte výběr možnosti.
+    Pokud chcete **diagnostické nástroje** zakázat, spusťte ladicí relaci, zvolte možnosti **nástrojů**  >  **Options**  >  **Povolit diagnostické nástroje** a zrušte výběr možnosti.
 
     Další informace najdete v tématu [Nástroje pro profilaci](../profiling/profiling-feature-tour.md).
 
@@ -88,13 +88,13 @@ Informace o požadavcích na výkon .NET Compiler Platform (Roslyn) najdete v t�
 
     Visual Studio provede analýzu celého řešení, aby před vyvoláním sestavení poskytovala bohatou zkušenost s chybami. Tato funkce je užitečná k identifikaci chyb co nejdříve. U velkých řešení ale tato funkce může využívat významné paměťové prostředky. Pokud se setkáváte s tlakem na paměť nebo podobnými problémy, můžete toto prostředí zakázat a uvolnit tak tyto prostředky. Ve výchozím nastavení je tato možnost povolená pro Visual Basic a zakázaná pro C#.
 
-    Chcete-li zakázat **kompletní analýzu řešení**, zvolte možnost **nástroje**  >  **Options**  >  **textový editor**a pak vyberte možnost **Visual Basic** nebo **C#**. Zvolte **Upřesnit** a zrušte výběr možnosti **Povolit úplnou analýzu řešení**.
+    Chcete-li zakázat **kompletní analýzu řešení**, zvolte možnost **nástroje**  >  **Options**  >  **textový editor** a pak vyberte možnost **Visual Basic** nebo **C#**. Zvolte **Upřesnit** a zrušte výběr možnosti **Povolit úplnou analýzu řešení**.
 
 - **Zakázat CodeLens**
 
     Visual Studio provede úlohu **Najít všechny odkazy** na každé metodě, která je zobrazena. CodeLens poskytuje funkce, jako je vložené zobrazení počtu odkazů. Práce se provádí v samostatném procesu, jako je *ServiceHub. RoslynCodeAnalysisService32*. Ve velkých řešeních nebo v systémech s omezením prostředků může mít tato funkce výrazný dopad na výkon. Pokud máte problémy s pamětí, například při načítání velkého řešení na 4 GB počítače nebo vysokém využití procesoru pro tento proces, můžete CodeLens vypnout a uvolnit tak prostředky.
 
-    Chcete-li zakázat **CodeLens**, zvolte **nástroje**  >  **Možnosti**  >  **textový editor**  >  **všechny jazyky**  >  **CodeLens**a zrušte výběr funkce.
+    Chcete-li zakázat **CodeLens**, zvolte **nástroje**  >  **Možnosti**  >  **textový editor**  >  **všechny jazyky**  >  **CodeLens** a zrušte výběr funkce.
 
     > [!NOTE]
     > CodeLens je k dispozici v edicích Professional a Enterprise sady Visual Studio.
@@ -107,13 +107,13 @@ Informace o požadavcích na výkon .NET Compiler Platform (Roslyn) najdete v t�
 
    ::: moniker range="vs-2017"
 
-    Pokud chcete rozšíření zakázat, použijte **Možnosti** > **rozšíření a aktualizace**nástrojů a zakažte konkrétní rozšíření.
+    Pokud chcete rozšíření zakázat, použijte **Možnosti** > **rozšíření a aktualizace** nástrojů a zakažte konkrétní rozšíření.
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-    Chcete-li zakázat rozšíření, použijte příkaz **rozšíření** > **Správa rozšíření**a zakažte konkrétní rozšíření.
+    Chcete-li zakázat rozšíření, použijte příkaz **rozšíření** > **Správa rozšíření** a zakažte konkrétní rozšíření.
 
    ::: moniker-end
 
@@ -121,7 +121,7 @@ Informace o požadavcích na výkon .NET Compiler Platform (Roslyn) najdete v t�
 
     V [**režimu mapy**](how-to-track-your-code-by-customizing-the-scrollbar.md#display-modes) se na posuvníku zobrazují řádky kódu v miniaturách. Režim mapování je ve výchozím nastavení povolen.
 
-    Chcete-li zakázat režim mapování, přejděte do části **nástroje**  >  **Možnosti**  >  **Editor textu**  >  **všechny jazyky**  >  **posuvníky**a v části **chování** zrušte výběr **možnosti použít režim mapy pro svislou lištu posuvníku** .
+    Chcete-li zakázat režim mapování, přejděte do části **nástroje**  >  **Možnosti**  >  **Editor textu**  >  **všechny jazyky**  >  **posuvníky** a v části **chování** zrušte výběr **možnosti použít režim mapy pro svislou lištu posuvníku** .
 
 - **Vypnout zalamování řádků**
 
@@ -129,13 +129,13 @@ Informace o požadavcích na výkon .NET Compiler Platform (Roslyn) najdete v t�
 
     Chcete-li vypnout zalamování řádků pro projekt, na kterém aktuálně pracujete, přejdete na **Upravit**  >  **Rozšířené**  >  **zalamování řádků**. (Toto nastavení můžete přepínat pomocí stejných příkazů nabídky.)
 
-    Chcete-li vypnout zalamování řádků pro všechny projekty, použijte možnost **nástroje**  >  **Možnosti**  >  **Obecné**  >  **textový editor**  >  **Obecné**  >  **General**a v části **Nastavení** zrušte výběr možnosti **zalamování řádků** .
+    Chcete-li vypnout zalamování řádků pro všechny projekty, použijte možnost **nástroje**  >  **Možnosti**  >  **Obecné**  >  **textový editor**  >  **Obecné**  >  **General** a v části **Nastavení** zrušte výběr možnosti **zalamování řádků** .
 
 - **Zakázat Návrhář XAML**
 
     Návrhář XAML je ve výchozím nastavení povolen, ale spotřebovává prostředky pouze v případě, že otevřete soubor *. XAML* . Pokud pracujete se soubory XAML, ale nechcete používat funkci návrháře, zakažte tuto funkci, aby uvolnila nějakou paměť.
 
-    Návrhář XAML zakážete tak, že přejdete na možnosti **nástroje**  >  **Options**  >  **Návrhář XAML**  >  **Povolit Návrhář XAML**a odškrtnete políčko.
+    Návrhář XAML zakážete tak, že přejdete na možnosti **nástroje**  >  **Options**  >  **Návrhář XAML**  >  **Povolit Návrhář XAML** a odškrtnete políčko.
 
 - **Odebrat úlohy**
 

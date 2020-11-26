@@ -1,5 +1,7 @@
 ---
 title: Přehled modelu automatizace | Microsoft Docs
+description: Přečtěte si o modelu automatizace sady Visual Studio, který se skládá ze sady objektů, pro které můžete napsat doplněk nebo rozšíření sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa06b58ccd8d4cba8e16b17bc725798ae02d7e8f
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: f88d064c551ccffe1c59e68c8472b519a58db436
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414435"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190093"
 ---
 # <a name="automation-model-overview"></a>Přehled modelu automatizace
 Model automatizace se skládá ze sady objektů, pro které můžete napsat doplněk nebo rozšíření sady Visual Studio. Doplněk je aplikace, která může pracovat s prostředím sady Visual Studio a automatizovat běžné úlohy. Rozšíření sady Visual Studio může vytvořit vlastní součásti sady Visual Studio nebo přidat funkce standardních komponent, jako je textový editor.

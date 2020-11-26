@@ -1,5 +1,7 @@
 ---
 title: Přidávání položek do dialogových oken Přidat novou položku | Microsoft Docs
+description: Naučte se, jak přidat položky do dialogového okna Přidat novou položku v aplikaci Visual Studio, abyste mohli zobrazit šablony a prvky projektu pro použití ve vašich projektech.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af7f9e5c792785a23ad1674a50abeb4eb6d3cba9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 99377db0e835de8d84485d0254d84892a360f5f0
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710215"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190158"
 ---
 # <a name="add-items-to-the-add-new-item-dialog-box"></a>Přidání položek do dialogového okna Přidat novou položku
 Proces přidávání položek do dialogového okna **Přidat novou položku** začíná klíči registru. Jak je znázorněno v následujících položkách registru, část **AddItemTemplates** obsahuje cestu a název adresáře, ve kterém jsou položky zpřístupněny v dialogovém okně **Přidat novou položku** .
@@ -23,7 +25,7 @@ Proces přidávání položek do dialogového okna **Přidat novou položku** za
 > [!NOTE]
 > Tabulka hned následující po segmentu kódu obsahuje další informace o položce registru.
 
- Tato část je umístěná v části **HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\14.0Exp\Projects**.
+ Tato část je umístěná v části **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0Exp\Projects**.
 
  První identifikátor GUID je identifikátor CLSID pro projekty tohoto typu; Druhý identifikátor GUID označuje typ registrovaného projektu pro šablony přidat položky:
 
@@ -46,7 +48,7 @@ Proces přidávání položek do dialogového okna **Přidat novou položku** za
 > - [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]: {FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}
 > - [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]: {F184B08F-C81C-45F6-A57F-5ABD9991F28F}
 
- Adresář uvedený pro **TemplatesDir**, který je *% TEMPLATE_PATH% \\ &lt; SomeProjectItems &gt; *, je uzel na levé straně stromu dialogového okna **Přidat novou položku** . Další prvky ve stromu jsou založeny na podadresáři v daném kořenovém adresáři. Soubory, které jsou k dispozici pro přidání do projektu, jsou položky v pravém podokně dialogového okna **Přidat novou položku** .
+ Adresář uvedený pro **TemplatesDir**, který je *% TEMPLATE_PATH% \\ &lt; SomeProjectItems &gt;*, je uzel na levé straně stromu dialogového okna **Přidat novou položku** . Další prvky ve stromu jsou založeny na podadresáři v daném kořenovém adresáři. Soubory, které jsou k dispozici pro přidání do projektu, jsou položky v pravém podokně dialogového okna **Přidat novou položku** .
 
  Obvykle tato složka bude obsahovat soubory šablon pro váš projekt, jako je například šablona HTML nebo *. cpp* , a všechny soubory *. vsz* pro spouštění průvodců. Chcete-li určit, jak se položky zobrazí, můžete také zahrnout soubory *. vsdir* pro lokalizaci názvů a ikon adresářů. Lokalizovaný řetězec je titulek, který se zobrazí v dialogovém okně, které představuje tento uzel ve stromové struktuře dialogového okna **Přidat novou položku** .
 

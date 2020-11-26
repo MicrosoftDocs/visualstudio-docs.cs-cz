@@ -1,5 +1,7 @@
 ---
 title: Podpora automatizace pro stránky možností | Microsoft Docs
+description: Naučte se, jak zpřístupnit stránky možností vlastních nástrojů v rozhraních VSPackage pro model automatizace sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +13,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe45238948d5b4cdebbf9f002f6b242515e7622e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e15b1f8bdd27e013e1ef2060d9867a81e8ddde3
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709934"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190028"
 ---
 # <a name="automation-support-for-options-pages"></a>Podpora automatizace pro stránky možností
-Sady VSPackage mohou poskytnout dialogová okna vlastních **možností** do nabídky **nástroje** (stránky**možností nástrojů** ) v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a mohou je zpřístupnit modelu automatizace.
+Sady VSPackage mohou poskytnout dialogová okna vlastních **možností** do nabídky **nástroje** (stránky **možností nástrojů** ) v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a mohou je zpřístupnit modelu automatizace.
 
 ## <a name="tools-options-pages"></a>stránky Možnosti nástrojů
  Chcete-li vytvořit stránku **možností nástroje** , VSPackage musí poskytnout implementaci uživatelského ovládacího prvku vrácenou do prostředí prostřednictvím implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> metody VSPackage. (Nebo, pro spravovaný kód, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> metoda.)

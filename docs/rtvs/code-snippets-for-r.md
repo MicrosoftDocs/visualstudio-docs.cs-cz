@@ -9,11 +9,11 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 31dfa975cea519d4d064856090a265b844f265f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238722"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189105"
 ---
 # <a name="code-snippets-for-r"></a>Fragmenty kódu pro R
 
@@ -32,7 +32,7 @@ Fragmenty kódu mohou být mnohem více než pouze dokončování znaků znaků.
 
 V takovém případě `readc` IntelliSense zobrazí seznam dokončení. Výběr tohoto dokončování v rozevíracím seznamu a stisknutí klávesy **TAB vybere** `readc` a opětovným stisknutím klávesy **TAB** se fragment rozbalí. (Z tohoto důvodu je expanze fragmentů často považována za "napsat fragment a stisknout klávesu TAB dvakrát"). Ve většině případů první karta dokončí výběr technologie IntelliSense a druhá karta spustí rozšíření.
 
-Chcete-li zobrazit všechny dostupné fragmenty, otevřete **Tools**  >  dialogové okno**Správce fragmentů kódu** nástrojů (**CTRL** + **K**,**B**) a vyberte **R** pro **jazyk**. Rozbalte skupiny a vyberte jednotlivé fragmenty kódu, abyste zobrazili popis a text zástupce:
+Chcete-li zobrazit všechny dostupné fragmenty, otevřete **Tools**  >  dialogové okno **Správce fragmentů kódu** nástrojů (**CTRL** + **K**,**B**) a vyberte **R** pro **jazyk**. Rozbalte skupiny a vyberte jednotlivé fragmenty kódu, abyste zobrazili popis a text zástupce:
 
 ![Dialogové okno fragmenty kódu pro R](media/code-snippet-dialog.png)
 

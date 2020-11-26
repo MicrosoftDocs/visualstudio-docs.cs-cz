@@ -1,5 +1,7 @@
 ---
 title: Vytváření balíčku Instalační služba systému Windows | Microsoft Docs
+description: Naučte se, jak vytvořit balíček Instalační služba systému Windows pro sadu Visual Studio, který se skládá z tabulek databáze obsahující data souborů a registru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03d30c0e2b3b375e6e0efedddd3a017fbfb8646a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 82c96bdf8e73f7d40b41220524edef022c216f1b
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710028"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190119"
 ---
 # <a name="author-a-windows-installer-package"></a>Vytvořit balíček Instalační služba systému Windows
 Datové jednotky Instalační služba systému Windows modelu. Místo psaní skriptu procedurálního kopírování souborů a zápis položek registru například můžete vytvářet řádky a sloupce v databázových tabulkách, které obsahují data souborů a registru.

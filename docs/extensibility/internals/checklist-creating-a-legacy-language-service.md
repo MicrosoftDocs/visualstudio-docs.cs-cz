@@ -1,5 +1,7 @@
 ---
 title: 'Kontrolní seznam: vytvoření služby starší verze jazyka | Microsoft Docs'
+description: Seznamte se se základními kroky, které musíte provést při vytváření služby starší verze jazyka pro základní editor sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11785dab63cbb6a95ab2d34c5edbfb4525ebf34c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 905d81d49706c3ae5348d71c03189d6e036dd3e5
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709794"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189989"
 ---
 # <a name="checklist-create-a-legacy-language-service"></a>Kontrolní seznam: vytvoření služby starší verze jazyka
 Následující kontrolní seznam shrnuje základní kroky, které je třeba provést, aby bylo možné vytvořit službu jazyka pro [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] základní editor. Chcete-li integrovat službu jazyka do nástroje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , je nutné vytvořit vyhodnocovací filtr výrazů ladění. Další informace naleznete v tématu [Write a vyhodnocovací filtr výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) v [rozšíření ladicího programu sady Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md).

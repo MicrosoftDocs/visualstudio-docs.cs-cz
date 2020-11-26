@@ -21,11 +21,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dfd1b876e58c05c668fd74087d5131bb1e9fcd40
-ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91135089"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189781"
 ---
 # <a name="options-dialog-box-environment--general"></a>Dialogové okno Možnosti: \> Obecné prostředí
 
@@ -35,7 +35,7 @@ Tato stránka slouží ke změně barevných motivů, nastavení stavového řá
 
 **Color Theme**
 
-Vyberte barevný motiv **Blue**, **světlý**, **tmavý**nebo **modrý (extra Contrast)** pro rozhraní IDE.
+Vyberte barevný motiv **Blue**, **světlý**, **tmavý** nebo **modrý (extra Contrast)** pro rozhraní IDE.
 
 Můžete nainstalovat další předdefinované motivy a vytvořit vlastní motivy stažením a instalací **editoru barevných motivů sady Visual Studio** z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor). Po instalaci tohoto nástroje se v seznamu **barevný motiv** zobrazí další barevné motivy.
 

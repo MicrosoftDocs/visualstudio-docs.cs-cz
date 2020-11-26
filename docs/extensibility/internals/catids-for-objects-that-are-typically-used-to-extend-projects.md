@@ -1,5 +1,6 @@
 ---
 title: CATID pro objekty, které se obvykle používají pro rozšiřování projektů
+description: Seznamte se s CATID pro objekty, které se používají k rozšiřování objektů automatizace projektů a ProjectItem pro projekty Visual Basic, Visual C# a Visual C++.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,19 +14,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f69a2de627a0200f7b4eb2185e68d4de5ef2cf08
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 1b0b20425cd1508db29932e9687d00055e4db58c
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037117"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190015"
 ---
 # <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>CATID pro objekty, které se obvykle používají pro rozšiřování projektů
 V následující tabulce jsou uvedeny CATID, které se používají k rozšiřování `Project` a `ProjectItem` automatizaci objektů pro [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] projekty, a [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . Tyto CATID jsou definované v *VSLangProj. olb*.
 
 ## <a name="listing-of-catids"></a>Výpis CATID
 
-|Name|Identifikátor GUID|
+|Název|Identifikátor GUID|
 |----------|----------|
 |<xref:VSLangProj.PrjCATID.prjCATIDProject>|{610D4614-D0D5-11D2-8599-006097C68E81}|
 |<xref:VSLangProj.PrjCATID.prjCATIDProjectItem>|{610D4615-D0D5-11D2-8599-006097C68E81}|
@@ -33,7 +34,7 @@ V následující tabulce jsou uvedeny CATID, které se používají k rozšiřov
 ## <a name="visual-basic-catids"></a>Visual Basic CATID
  V následující tabulce jsou uvedeny CATID, které se používají k rozšiřování [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] objektů procházení. Jsou definovány v *VSLangProj. olb*.
 
-|Name|Identifikátor GUID|
+|Název|Identifikátor GUID|
 |----------|----------|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectBrowseObject>|{E0FDC879-C32A-4751-A3D3-0B3824BD575F}|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectConfigBrowseObject>|{67F8DD11-14EB-489b-87F0-F01C52AF3870}|
@@ -44,7 +45,7 @@ V následující tabulce jsou uvedeny CATID, které se používají k rozšiřov
 ## <a name="visual-c-catids"></a>Visual C# CATID
  Následující CATID lze použít k rozšiřování [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] objektů procházení. Jsou definovány v *VSLangProj. olb*.
 
-|Name|Identifikátor GUID|
+|Název|Identifikátor GUID|
 |----------|----------|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectBrowseObject>|{4EF9F003-DE95-4d60-96B0-212979F2A857}|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectConfigBrowseObject>|{A12CE10A-227F-4963-ADB6-3A43388513CA}|
@@ -55,7 +56,7 @@ V následující tabulce jsou uvedeny CATID, které se používají k rozšiřov
 ## <a name="c-catids"></a>CATID C++
  Následující [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projektový systém CATID nejsou zveřejněny v knihovnách typů v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozhraní .NET 2003 a musí být zahrnuty do kódu vždy, když chcete tyto objekty projektu zvětšit. Tyto CATID budou zahrnuty do knihoven typů v pozdějších verzích [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-|Name|Identifikátor GUID|
+|Název|Identifikátor GUID|
 |----------|----------|
 |`CVCProjectNode`|{EE8299CB-19B6-4f20-ABEA-E1FD9A33B683}|
 |`CVCFolderNode`|{EE8299CA-19B6-4f20-ABEA-E1FD9A33B683}|
@@ -71,7 +72,7 @@ const LPOLESTR CVCFileNode::s_wszCATID = L"{EE8299C9-19B6-4f20-ABEA-E1FD9A33B683
 
  Následující [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projektové systém CATID nejsou také zveřejněny v knihovnách typů v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozhraní .NET 2003 a musí být zahrnuty do kódu vždy, když chcete tyto objekty projektu zvětšit. Tyto CATID jsou k dispozici pouze v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozhraní .net 2003 a nebudou dostupné v pozdějších verzích [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-|Name|Identifikátor GUID|
+|Název|Identifikátor GUID|
 |----------|----------|
 |`CVCAssemblyReferenceNode`|{FE8299C9-19B6-4f20-ABEA-E1FD9A33B683}|
 |`CVCProjectReferenceNode`|{593DCFCE-20A7-48e4-ACA1-49ADE9049887}|

@@ -1,5 +1,7 @@
 ---
 title: Přidání adresářů do dialogového okna Přidat novou položku | Microsoft Docs
+description: Naučte se přidávat adresáře do dialogového okna Přidat novou položku v aplikaci Visual Studio pomocí skriptu registru pro registraci adresářů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d4af79f95c87271e9a10eece6c728daa9a81305
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d6a8090a47c275e66272ed3ee3e5d5a1eef1926d
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710256"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189729"
 ---
 # <a name="add-directories-to-the-add-new-item-dialog-box"></a>Přidání adresářů do dialogového okna Přidat novou položku
-Následující příklad kódu ukazuje, jak zaregistrovat novou sadu adresářů pro dialogové okno **Přidat novou položku** . Adresáře pro dialogové okno **Přidat novou položku** se pro každý projekt liší. Proto jsou adresáře registrovány v podklíči **projekty** , které byly nalezeny v **HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\8.0Exp\Projects**.
+Následující příklad kódu ukazuje, jak zaregistrovat novou sadu adresářů pro dialogové okno **Přidat novou položku** . Adresáře pro dialogové okno **Přidat novou položku** se pro každý projekt liší. Proto jsou adresáře registrovány v podklíči **projekty** , které byly nalezeny v **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\Projects**.
 
 ## <a name="registry-script"></a>Skript registru
 
@@ -50,7 +52,7 @@ NoRemove Projects
  `SortPriority`Hodnota určuje prioritu řazení.
 
 ## <a name="add-items-to-an-existing-project"></a>Přidat položky do existujícího projektu
- Můžete také přidat položky do existujícího projektu. Například pro [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] projekt můžete přidat položky do složky * \<root> \Program Files\Microsoft Visual Studio\VC # \CSharpProjectItems\LocalProjectItems* . V tomto případě `%GUID_Project%` je identifikátor GUID pro projekt C# ({FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}).
+ Můžete také přidat položky do existujícího projektu. Například pro [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] projekt můžete přidat položky do složky *\<root> \Program Files\Microsoft Visual Studio\VC # \CSharpProjectItems\LocalProjectItems* . V tomto případě `%GUID_Project%` je identifikátor GUID pro projekt C# ({FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}).
 
  Můžete také roztáhnout existující projekt programováním podtypu projektu. S podtypem projektu můžete projekt roztáhnout, aniž byste museli psát nový typ projektu. Další informace o podtypůch projektů naleznete v tématu [podtypy projektu](../../extensibility/internals/project-subtypes.md).
 

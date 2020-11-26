@@ -7,11 +7,11 @@ ms.date: 11/09/2020
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
 ms.openlocfilehash: a2caadd454564b389f48987e69e1bc08475affea
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493267"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190184"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Prohlídka sady Visual Studio 2019 for Mac
 
@@ -86,7 +86,7 @@ Všechny externí závislosti použité ve vaší aplikaci jsou uloženy ve slo�
 
 NuGet je nejoblíbenější správce balíčků pro vývoj pro .NET. Díky podpoře NuGet v aplikaci Visual Studio můžete snadno vyhledat a přidat balíčky do projektu do aplikace.
 
-Pokud chcete do aplikace přidat závislost, klikněte pravým tlačítkem na složku závislosti/balíčky a vyberte **Přidat balíčky** :
+Pokud chcete do aplikace přidat závislost, klikněte pravým tlačítkem na složku závislosti/balíčky a vyberte **Přidat balíčky**:
 
 ![Přidat balíček NuGet](media/ide-tour-image21.png)
 

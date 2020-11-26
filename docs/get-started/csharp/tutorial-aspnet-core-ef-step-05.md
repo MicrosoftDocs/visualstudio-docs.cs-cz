@@ -17,11 +17,11 @@ ms.workload:
 - aspnet
 - dotnetcore
 ms.openlocfilehash: fc0729eccc6f1392561959dcdac0cf13dfc8e04a
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91780954"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189755"
 ---
 # <a name="step-5-deploy-your-aspnet-core-app-to-azure"></a>Krok 5: nasazení aplikace ASP.NET Core do Azure
 
@@ -57,7 +57,7 @@ Otevřete aplikaci ASP.NET Core v aplikaci Visual Studio 2019. Aplikace by už m
 
 Teď přidejte databázi Azure SQL Server.
 
-1. Na kartě **publikovat** klikněte v části **závislosti služby**na položky **SQL Server databáze**na položku **Konfigurovat**.
+1. Na kartě **publikovat** klikněte v části **závislosti služby** na položky **SQL Server databáze** na položku **Konfigurovat**.
 
 1. Na další obrazovce vyberte **Azure SQL Database**.
 
@@ -101,7 +101,7 @@ Ve výchozím nastavení očekává Azure nové připojení aplikace k nové SQL
 
 Přejděte na cestu */Games* a měli byste být schopni přidat novou hru a zobrazit ji v seznamu. Potom přejděte na cestu k */Swagger* a měli byste být schopni použít koncové body webového rozhraní API z této služby, aby bylo možné také ověřit, zda rozhraní API aplikace funguje.
 
-Blahopřejeme vám. Dokončili jste tuto řadu kurzů videí!
+Gratulujeme! Dokončili jste tuto řadu kurzů videí!
 
 ## <a name="next-steps"></a>Další kroky
 

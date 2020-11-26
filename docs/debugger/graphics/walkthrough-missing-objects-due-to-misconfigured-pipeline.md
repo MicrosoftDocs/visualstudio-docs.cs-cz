@@ -10,11 +10,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 64c00c10b8b7207e1162aa0041145000126fde87
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809169"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189846"
 ---
 # <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>Návod: Chybějící objekty z důvodu nesprávné konfigurace kanálu
 Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nástroje Diagnostika grafiky k prozkoumání objektu, který chybí z důvodu nenastavené funkce pixel shader.
@@ -43,7 +43,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 1. V nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načtěte dokument protokolu grafiky, který obsahuje rámeček, který vykazuje chybějící objekt. V nástroji se zobrazí nová karta protokol grafiky [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . V horní části této karty je výstup cíle vykreslování vybraného snímku. V dolní části je **seznam rámců**, který zobrazuje jednotlivé zachycené rámce jako obrázek miniatury.
 
-2. V **seznamu snímků**vyberte rámec, který ukazuje, že se objekt nezobrazuje. Cíl vykreslování se aktualizuje tak, aby odrážel vybraný snímek. V tomto scénáři vypadá karta protokol grafiky takto:
+2. V **seznamu snímků** vyberte rámec, který ukazuje, že se objekt nezobrazuje. Cíl vykreslování se aktualizuje tak, aby odrážel vybraný snímek. V tomto scénáři vypadá karta protokol grafiky takto:
 
     ![Dokument protokolu grafiky v aplikaci Visual Studio](media/gfx_diag_demo_misconfigured_pipeline_step_1.png "gfx_diag_demo_misconfigured_pipeline_step_1")
 

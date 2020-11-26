@@ -1,5 +1,7 @@
 ---
 title: Spárování složených závorek ve službě starší verze jazyka | Microsoft Docs
+description: Přečtěte si o shodě složených závorek ve službě starší verze jazyka, která pomáhá sledovat prvky jazyka, které se musí vyskytovat společně, například závorky a složené závorky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0081be3e3ab5a53f7d85f77475d4288aa5c87092
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d9f93f0081d45e986ab6845cdaee53209b84e13
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709807"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190002"
 ---
 # <a name="brace-matching-in-a-legacy-language-service"></a>Spárování složených závorek ve službě starší verze jazyka
 Spárování složených závorek pomáhá vývojářům sledovat prvky jazyka, které musí probíhat společně, například kulaté závorky a složené závorky. Když vývojář zadá pravou složenou závorku, zvýrazní se levá složená závorka.
@@ -38,7 +40,7 @@ Spárování složených závorek pomáhá vývojářům sledovat prvky jazyka, 
  Úplný popis způsobu, jakým se při zadávání složené závorky aktivují zvýrazňování složených závorek, najdete v části *příklad operace analýzy* v článku [analyzátor a skener služby starší verze jazyka](../../extensibility/internals/legacy-language-service-parser-and-scanner.md).
 
 ## <a name="enable-support-for-brace-matching"></a>Povolit podporu pro spárování složených závorek
- <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>Atribut může nastavit položky registru **MatchBraces**, **MatchBracesAtCaret**a **ShowMatchingBrace** , které nastaví odpovídající vlastnosti <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy. Vlastnosti jazykové předvolby může nastavit i uživatel.
+ <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>Atribut může nastavit položky registru **MatchBraces**, **MatchBracesAtCaret** a **ShowMatchingBrace** , které nastaví odpovídající vlastnosti <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy. Vlastnosti jazykové předvolby může nastavit i uživatel.
 
 |Položka registru|Vlastnost|Popis|
 |--------------------|--------------|-----------------|

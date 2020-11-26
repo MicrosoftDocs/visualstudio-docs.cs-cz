@@ -1,5 +1,7 @@
 ---
 title: Přidávání adresářů do dialogového okna Nový projekt | Microsoft Docs
+description: Naučte se, jak přidat adresáře do dialogového okna Nový projekt v aplikaci Visual Studio, abyste mohli vytvořit nové typy projektů a zobrazit je pro použití jako šablony.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 827e383bba13c9742deb654bf3d680adeb3c109b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 87e4c0bcb44690a36579fe77564962515534338d
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710236"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190145"
 ---
 # <a name="add-directories-to-the-new-project-dialog-box"></a>Přidání adresářů do dialogového okna Nový projekt
 Při vytváření nových typů projektů můžete také zaregistrovat nový adresář v dialogovém okně **Nový projekt** a zobrazit je pro použití jako šablony. Následující příklad kódu vysvětluje, jak registrovat nový adresář, označovaný také jako uzel. V příkladu jsou zaregistrovány šablony vystavené VSPackage, *CLSID_Package*. V důsledku toho levá strana dialogového okna **Nový projekt** nabízí přidaný uzel s názvem určeným prostředkem *Folder_Label_ResID* . Tento prostředek je načtený z knihovny VSPackage Satellite DLL.

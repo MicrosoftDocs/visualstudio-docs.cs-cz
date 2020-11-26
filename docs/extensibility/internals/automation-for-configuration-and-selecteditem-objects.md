@@ -1,5 +1,7 @@
 ---
 title: Automatizace pro objekty Configuration a SelectedItem | Microsoft Docs
+description: Naučte se automatizovat procesy sestavení a vybrané položky sady Visual Studio pomocí objektů Configuration a SelectedItem v tématu interoperabilita prostředí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0341cdf56b32b8b1ac77104b3f3e813ae0610767
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5bc4b23662efe688146a7266d1b061d2d9611a45
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709975"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190067"
 ---
 # <a name="automation-for-configuration-and-selecteditem-objects"></a>Automatizace pro objekty Configuration a SelectedItem
 

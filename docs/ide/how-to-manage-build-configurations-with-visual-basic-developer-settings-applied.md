@@ -18,11 +18,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bd13c0a9f64ce484d9ba4e3193f7da94d0b1e446
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136716"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189287"
 ---
 # <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Postupy: Správa konfigurací sestavení s použitím Visual Basic nastavení pro vývojáře
 
@@ -34,7 +34,7 @@ Ve výchozím nastavení skryje Visual Basic vývojář možnost otevřít dialo
 
 1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).
 
-2. Rozbalte **projekty a řešení**a klikněte na **Obecné**.
+2. Rozbalte **projekty a řešení** a klikněte na **Obecné**.
 
 3. Klikněte na **Zobrazit pokročilé konfigurace sestavení**.
 

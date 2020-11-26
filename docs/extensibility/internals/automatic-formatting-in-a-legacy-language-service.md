@@ -1,5 +1,7 @@
 ---
 title: Automatické formátování ve službě starší verze jazyka | Microsoft Docs
+description: Přečtěte si o automatickém formátování ve službě starší verze jazyka, která automaticky vloží fragment kódu, když začnete psát známou konstrukci kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a11e9c1fdef60e71f46cee9986d925e876dcac35
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 651cecb20604069c6e8ccc5a5c7b983ab43d7384
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709981"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190054"
 ---
 # <a name="automatic-formatting-in-a-legacy-language-service"></a>Automatické formátování ve službě starší verze jazyka
 Při automatickém formátování vloží služba jazyka automaticky fragment kódu, když uživatel začne psát známou konstrukci kódu.

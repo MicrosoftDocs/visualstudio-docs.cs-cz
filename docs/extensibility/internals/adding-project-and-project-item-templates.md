@@ -1,5 +1,7 @@
 ---
 title: Přidávání šablon projektů a položek projektů | Microsoft Docs
+description: Přečtěte si o přidání projektů a šablon položek projektů do dialogových oken v integrovaném vývojovém prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14eb1a9e2e63fa6e63d3ba2efa4426421e6b5593
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e97b04294f0545c378210d39f343f3b009b6d15
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710199"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190171"
 ---
 # <a name="add-project-and-project-item-templates"></a>Přidat šablony projektů a položek projektů
 Při vytváření vlastních typů projektů je nutné poskytnout podporu pro přidávání nových projektů a položek projektu pomocí standardních dialogových [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] oken integrované vývojové prostředí (IDE). Následující témata popisují různé techniky pro přidávání projektů a položek projektu.

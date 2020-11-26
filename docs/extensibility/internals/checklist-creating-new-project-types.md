@@ -1,5 +1,7 @@
 ---
 title: 'Kontrolní seznam: vytváření nových typů projektů | Microsoft Docs'
+description: Seznamte se s úkoly, které je třeba dokončit pro vytvoření a zobrazení nového typu projektu v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 111eb74d388682ff3cf97d5e0aa7e7e5a91cbaf3
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 20579422e8253b2c0cff7961a91395b5e44137ab
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414188"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189963"
 ---
 # <a name="checklist-create-new-project-types"></a>Kontrolní seznam: vytvoření nových typů projektů
 Chcete-li vytvořit nový typ projektu, je nutné provést několik úloh. Následující kontrolní seznam poskytuje pokyny k těmto úlohám:
@@ -49,13 +51,13 @@ Chcete-li vytvořit nový typ projektu, je nutné provést několik úloh. Násl
 
     - Objekty nebo třídy odvozené z `IDispatch` , k dispozici pro automatizaci.
 
-    - Soubory tabulek příkazů jazyka XML ( *. vsct* ). Další informace naleznete v tématu [soubory tabulek příkazů sady Visual Studio (. vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+    - Soubory tabulek příkazů jazyka XML (*. vsct*). Další informace naleznete v tématu [soubory tabulek příkazů sady Visual Studio (. vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
 6. Otestujte, laďte a spusťte typ projektu.
 
 7. Zobrazte projekt na kartě **projekt** dialogového okna **Přidat odkaz** nastavením `VARIANT_TRUE` hodnoty pro `VSHPROPID_ShowProjInSolutionPage` . Další informace naleznete v tématech <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>.
 
-8. Vytvořte soubor Instalační služby Microsoft ( *. msi* ) pro instalaci vašich VSPackage. Další informace najdete v tématu [Instalace VSPackage pomocí Instalační služba systému Windows](../../extensibility/internals/installing-vspackages-with-windows-installer.md), [Registrace typu projektu](../../extensibility/internals/registering-a-project-type.md)a [VSPackage](../../extensibility/internals/vspackages.md).
+8. Vytvořte soubor Instalační služby Microsoft (*. msi*) pro instalaci vašich VSPackage. Další informace najdete v tématu [Instalace VSPackage pomocí Instalační služba systému Windows](../../extensibility/internals/installing-vspackages-with-windows-installer.md), [Registrace typu projektu](../../extensibility/internals/registering-a-project-type.md)a [VSPackage](../../extensibility/internals/vspackages.md).
 
 ## <a name="see-also"></a>Viz také
 - [Hierarchie v sadě Visual Studio](../../extensibility/internals/hierarchies-in-visual-studio.md)

@@ -1,5 +1,7 @@
 ---
 title: Osvědčené postupy pro zabezpečení v VSPackage | Microsoft Docs
+description: Přečtěte si o osvědčených postupech pro zabezpečení ve VSPackage, základní jednotce zabezpečení a nasazení aplikace Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e73be2af3d24a6a719f353fbd0ab25dbdf86fe09
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: f81f682271a949954d113ffd2f6228db0de814e8
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012136"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190041"
 ---
 # <a name="best-practices-for-security-in-vspackages"></a>Osvědčené postupy pro zabezpečení v VSPackage
 Chcete-li nainstalovat aplikaci do [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] počítače, je nutné, abyste byli spuštěni v kontextu s pověřením správce. Základní jednotkou zabezpečení a nasazení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] aplikace je [VSPackage](../../extensibility/internals/vspackages.md). VSPackage musí být registrován pomocí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , který také vyžaduje pověření správce.
@@ -30,6 +32,6 @@ Chcete-li nainstalovat aplikaci do [!INCLUDE[vsipsdk](../../extensibility/includ
 
  Další informace najdete v tématu [pokyny k zabezpečenému kódování pro .NET Framework](/previous-versions/visualstudio/visual-studio-2008/d55zzx87(v=vs.90)).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zabezpečení doplňku](/previous-versions/1326zbk3(v=vs.140))
 - [Zabezpečení DDEX](/previous-versions/bb163703(v=vs.140))

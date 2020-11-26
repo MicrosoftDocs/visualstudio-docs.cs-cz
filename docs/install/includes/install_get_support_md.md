@@ -7,11 +7,11 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: f8f4645c9b69ff0fa7aa332f0716cc07b7a46e8a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80234247"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190200"
 ---
 ## <a name="get-support"></a>Získání podpory
 

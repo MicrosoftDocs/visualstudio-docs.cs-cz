@@ -14,11 +14,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e854425bab10174220188b23fb7e292371e9cb48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88168720"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189339"
 ---
 # <a name="step-7-keep-pairs-visible"></a>Krok 7: Zachování dvojic ve viditelném stavu
 Hra funguje dobře tak dlouho, dokud hráč vybírá pouze dvojice ikon, které neodpovídají. Ale zvažte, co by mělo nastat, pokud hráč vybere shodnou dvojici. Místo toho, aby ikony zmizely zapnutím časovače (pomocí <xref:System.Windows.Forms.Timer.Start> metody), by se hra měla resetovat sama tak, aby již nesledovala popisky pomocí `firstClicked` `secondClicked` proměnných a, aniž by bylo nutné resetovat barvy pro dva popisky, které byly zvoleny.
@@ -62,7 +62,7 @@ Hra funguje dobře tak dlouho, dokud hráč vybírá pouze dvojice ikon, které 
 2. Uložte a spusťte program a začněte vybírat ikony ve formuláři. Pokud zvolíte dvojici, která neodpovídá, událost časovače Tick se aktivuje a obě ikony zmizí. Pokud zvolíte odpovídající dvojici, příkaz New se `if` spustí a příkaz return způsobí, že metoda přeskočí kód, který spouští časovač, takže ikony zůstanou viditelné, jak je znázorněno na následujícím obrázku.
 
      ![Hra, kterou vytvoříte v tomto tutoriálu](../ide/media/express_finishedgame.png)<br/>
-***Porovnávací hra*** *s viditelnými páry ikon*
+***Porovnávací hra** _ _with viditelné páry ikon *
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 

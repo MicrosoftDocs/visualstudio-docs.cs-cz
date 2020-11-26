@@ -12,11 +12,11 @@ ms.workload:
 - multiple
 monikerRange: vs-2019
 ms.openlocfilehash: c3a2e14236c2d24bc9650fab81150cc295826844
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006251"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189924"
 ---
 # <a name="how-to-use-visual-studio-with-a-codespace-preview"></a>Jak používat Visual Studio s codespace (Preview)
 
@@ -32,9 +32,9 @@ Visual Studio má skvělou podporu pro vývoj na GitHubu Codespaces. Můžete vy
 
 Připojení k GitHub Codespaces s Visual Studio 2019 Preview není ve výchozím nastavení povolené, takže budete nejdřív muset povolit možnost funkce verze Preview.
 
-1. V aplikaci Visual Studio 2019 Preview pomocí **Tools**  >  položky nabídky**Možnosti** nástrojů otevřete dialogové okno Možnosti.
+1. V aplikaci Visual Studio 2019 Preview pomocí **Tools**  >  položky nabídky **Možnosti** nástrojů otevřete dialogové okno Možnosti.
 
-2. V části **prostředí**vyberte **funkce verze Preview** a podívejte se na funkci **připojit k GitHub Codespaces** verze Preview.
+2. V části **prostředí** vyberte **funkce verze Preview** a podívejte se na funkci **připojit k GitHub Codespaces** verze Preview.
 
    ![Podívejte se na funkci připojit k GitHubu Codespaces Preview](media/connect-to-github-codespaces-preview-feature.png)
 
@@ -86,7 +86,7 @@ Po vytvoření codespace můžete otevřít codespace přímo ze sady Visual Stu
 
    ![Úvodní okno sady Visual Studio s připojením k codespace](media/visual-studio-start-window.png)
 
-   Pokud jste již v aplikaci Visual Studio, můžete použít **File**  >  položku**připojit k** položce nabídky Codespace.
+   Pokud jste již v aplikaci Visual Studio, můžete použít **File**  >  položku **připojit k** položce nabídky Codespace.
 
    ![Soubor sady Visual Studio připojit k položce nabídky codespace](media/visual-studio-file-connect-to-codespace.png)
 
