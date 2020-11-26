@@ -6,11 +6,11 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
 ms.openlocfilehash: 3a4b2a56e5ac6ed29289c3946a65fc57b54eaa21
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493202"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188975"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Výchozí klávesové zkratky v Visual Studio pro Mac
 
@@ -32,9 +32,9 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 
 |Příkazy|Klávesové zkratky|
 |-|-|
-|Najít odkazy|**⇧ ⌘ R** , **F12**|
-|Přejít k deklaraci|**⌘ D** , **F12**|
-|Další chyba|**⌥ ⇧ ⇟** , **⇧ ⌘ F12**|
+|Najít odkazy|**⇧ ⌘ R**, **F12**|
+|Přejít k deklaraci|**⌘ D**, **F12**|
+|Další chyba|**⌥ ⇧ ⇟**, **⇧ ⌘ F12**|
 |Další problém v souboru|**⌥⇟**|
 |Předchozí chyba|**⌥⇧⇞**|
 |Předchozí problém v souboru|**⌥⇞**|
@@ -43,16 +43,16 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 
 |Příkazy|Klávesové zkratky|
 |-|-|
-|Povolit nebo zakázat zarážku|**⌥ ⌘/** , **⌘ F9**|
-|Pozastavení|**⌥ ⌘ P** , **⌥ ⌘ L5**|
+|Povolit nebo zakázat zarážku|**⌥ ⌘/**, **⌘ F9**|
+|Pozastavení|**⌥ ⌘ P**, **⌥ ⌘ L5**|
 |Odebrat všechny zarážky|**⇧ ⌘ F9**|
 |Spustit ke kurzoru|**⌘ F10**|
 |Nastavit další příkaz|**⇧ ⌘ F10**|
 |Zobrazit další příkaz|**⌥ \** _|
 |Krokovat s vnořením|_ * ⇧ ⌘ I * *, **⌘ F11**|
-|Krok ven|**⇧ ⌘ U** , **⇧ ⌘ F11**|
-|Krokovat|**⇧ ⌘ O** , **F10**|
-|Přepnout zarážku|**⌘ \\** , **F9**|
+|Krok ven|**⇧ ⌘ U**, **⇧ ⌘ F11**|
+|Krokovat|**⇧ ⌘ O**, **F10**|
+|Přepnout zarážku|**⌘ \\**, **F9**|
 |Zobrazit zarážky|**⌥ ⌘ B**|
 
 ## <a name="designer"></a>Návrhář
@@ -74,7 +74,7 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 |Vložit|**⌘ V**|
 |Předvolby|**⌘,**|
 |Opakovat|**⇧ ⌘ Z**|
-|přejmenování|**⌘ R** , **F2**|
+|přejmenování|**⌘ R**, **F2**|
 |Vybrat vše|**⌘ A**|
 |Zobrazit generování kódu|**⌘ I**|
 |Přepnout všechna skládání|**⌥⇧⌘↑**|
@@ -131,14 +131,14 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 |Příkazy|Klávesové zkratky|
 |-|-|
 |Přidání souborů|**⌥ ⌘ A**|
-|Sestavení|**⌘ K** , **⇧ F6**|
-|Sestavit vše|**⌘ B** , **F6**|
+|Sestavení|**⌘ K**, **⇧ F6**|
+|Sestavit vše|**⌘ B**, **F6**|
 |Clean|**⇧ ⌘ K**|
 |Opětovné sestavení (Rebuild)|**⌃ ⌘ K**|
 |Sestavit vše znovu|**⌃ ⌘ B**|
-|Spustit ladění|**⌘ ⏎** , **F5**|
-|Spustit bez ladění|**⌥ ⌘ ⏎** , **⌃ F5**|
-|Zastavit|**⇧ ⌘ ⏎** , **⇧ F5**|
+|Spustit ladění|**⌘ ⏎**, **F5**|
+|Spustit bez ladění|**⌥ ⌘ ⏎**, **⌃ F5**|
+|Zastavit|**⇧ ⌘ ⏎**, **⇧ F5**|
 
 ## <a name="refactoring"></a>Refaktoring
 
@@ -153,9 +153,9 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 |-|-|
 |Příkaz|**⇧ ⌘ P**|
 |Najít v souborech|**⇧ ⌘ F**|
-|Najít další|**⌘ G** , **F3**|
-|Najít další podobný výběr|**⌘ E** , **⌘ F3**|
-|Najít předchozí|**⇧ ⌘ G** , **⇧ F3**|
+|Najít další|**⌘ G**, **F3**|
+|Najít další podobný výběr|**⌘ E**, **⌘ F3**|
+|Najít předchozí|**⇧ ⌘ G**, **⇧ F3**|
 |Najít předchozí podobný výběr|**⇧ ⌘ F3**|
 |Vyhledávání|**⌘ F**|
 |Přejít k souboru|**⇧ ⌘ D**|
@@ -180,10 +180,10 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 |Dynamické zkratky|**⌃/**|
 |Rozšíření výběru|**⌥⇧↓**|
 |Rozšíření výběru|**⌥⇧↑**|
-|Rozšířit výběr do konce dokumentu|**⇧ ⌘ ↓** , **⇧ ⌘ ↘**|
-|Rozšířit výběr na začátek dokumentu|**⇧ ⌘ ↑** , **⇧ ⌘ ↖**|
-|Rozšířit výběr do konce řádku|**⇧ ↘** , **⇧ ⌘ →**|
-|Rozšířit výběr na začátek řádku|**⇧ ↖** , **⇧ ⌘ ←**|
+|Rozšířit výběr do konce dokumentu|**⇧ ⌘ ↓**, **⇧ ⌘ ↘**|
+|Rozšířit výběr na začátek dokumentu|**⇧ ⌘ ↑**, **⇧ ⌘ ↖**|
+|Rozšířit výběr do konce řádku|**⇧ ↘**, **⇧ ⌘ →**|
+|Rozšířit výběr na začátek řádku|**⇧ ↖**, **⇧ ⌘ ←**|
 |Rozšířit výběr na další řádek|**⇧↓**|
 |Rozšířit výběr na následující slovo|**⌥ ⇧ →**|
 |Rozšířit výběr o stránku dolů|**⇧⇟**|
@@ -196,9 +196,9 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 |Přejít o jeden znak doleva|**⌃ B**|
 |Přejít o jeden znak vpravo|**⌃ F**|
 |Přejít na začátek dokumentu|**⌘↑**|
-|Přejít na začátek řádku|**⌘ ←** , **⌃ A**|
+|Přejít na začátek řádku|**⌘ ←**, **⌃ A**|
 |Přejít na konec dokumentu|**⌘↓**|
-|Přejít na konec řádku|**⌘ →** , **⌃ E**|
+|Přejít na konec řádku|**⌘ →**, **⌃ E**|
 |Přejít k párové závorce|**⇧⌘\\**|
 |Přejít na další řádek|**⌃ N**|
 |Přejít na následující slovo|**⌥ →**|
@@ -229,11 +229,11 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 |Přejít vpřed|**⌃ ⌘ →**|
 |Normální velikost|**⌘ 0**|
 |Jeden sloupec editoru|**⌥ ⌘ 1**|
-|Zobrazit další|**⌥ ⌘ ↓** , **F8**|
-|Zobrazit předchozí|**⌥ ⌘ ↑** , **⇧ F8**|
+|Zobrazit další|**⌥ ⌘ ↓**, **F8**|
+|Zobrazit předchozí|**⌥ ⌘ ↑**, **⇧ F8**|
 |Dva sloupce editoru|**⌥ ⌘ 2**|
-|Přiblížit|**⌘ +** , **⌘ =**|
-|Oddálit|**⌘-** , **⌘ _**|
+|Přiblížit|**⌘ +**, **⌘ =**|
+|Oddálit|**⌘-**, **⌘ _**|
 
 ## <a name="window"></a>Okno
 
@@ -251,8 +251,8 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 |Skrýt ostatní|**⌥ ⌘ H**|
 |Skrýt Visual Studio|**⌘ H**|
 |Minimalizovat|**⌘ M**|
-|Další dokument|**⌘}** , **⌘ F6**|
-|Předchozí dokument|**⌘ {** , **⇧ ⌘ F6**|
+|Další dokument|**⌘}**, **⌘ F6**|
+|Předchozí dokument|**⌘ {**, **⇧ ⌘ F6**|
 |Přepnout na následující dokument|**⌃⇥**|
 |Přepnout na další okno nástroje|**⌃⌥⇥**|
 |Přepnout na předchozí dokument|**⌃⇧⇥**|
@@ -262,13 +262,13 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 
 |Symbol|Klíč|
 |-|-|
-|⌘|**Příkaz** ( **cmd** )|
-|⌥|**Možnost** ( **ALT** )|
+|⌘|**Příkaz** (**cmd**)|
+|⌥|**Možnost** (**ALT**)|
 |⇧|**Posouvá**|
-|⌃|**Ovládací prvek** ( **CTRL** )
-|⇞|O **stránku nahoru** ( **str. výš** )|
-|⇟|O **stránku dolů** ( **pg DN** )|
-|⌫|**Odstranit** ( **BACKSPACE** )|
+|⌃|**Ovládací prvek** (**CTRL**)
+|⇞|O **stránku nahoru** (**str. výš**)|
+|⇟|O **stránku dolů** (**pg DN**)|
+|⌫|**Odstranit** (**BACKSPACE**)|
 |⌦|**Před odstraněním**|
 |⏎|**Vrátit**|
 |←→↑↓|**Klávesy se šipkami**|

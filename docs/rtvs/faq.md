@@ -9,11 +9,11 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 8c89f1d59405fb7475e827cac9624c6623d7041e
-ms.sourcegitcommit: 1d74273a50ede5a90d9d64372d93aad357daef42
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89365662"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189092"
 ---
 # <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
@@ -49,7 +49,7 @@ A. 1,0 verze RTVS je jenom v angličtině. Verze 1,1 bude lokalizována do stejn
 
 **Č. Opravdu se mi líbí aktuální nastavení sady Visual Studio, ale chci si vyzkoušet nové nastavení pro datové vědy. Co mám dělat?**
 
-A. Pomocí **nástrojů**  >  **Nastavení importu a exportu**uložte aktuální nastavení sady Visual Studio a pak přepněte do nastavení datové vědy. Pro obnovení uložených nastavení použijte znovu příkaz **Import a export nastavení** .
+A. Pomocí **nástrojů**  >  **Nastavení importu a exportu** uložte aktuální nastavení sady Visual Studio a pak přepněte do nastavení datové vědy. Pro obnovení uložených nastavení použijte znovu příkaz **Import a export nastavení** .
 
 **Č. Můžu svůj projekt sady Visual Studio Uložit do sdílené síťové složky?**
 
