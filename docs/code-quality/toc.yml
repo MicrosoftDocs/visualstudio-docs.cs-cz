@@ -13,21 +13,25 @@
           items:
             - name: Přehled
               href: use-roslyn-analyzers.md
-            - name: Kvalita kódu
+            - name: Analyzátory .NET
               items:
-                - name: Možnosti kvality kódu
-                  href: /dotnet/fundamentals/code-analysis/code-quality-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
-                - name: Použití souborů EditorConfig pro kvalitu kódu
-                  href: /dotnet/fundamentals/code-analysis/configuration-files?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
-            - name: Styl kódu
-              items:
-                - name: Předvolby stylu kódu
-                  href: ../ide/code-styles-and-code-cleanup.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
-                - name: Použití souborů EditorConfig pro styl kódu
-                  displayName: Configure code style analyzers
-                  href: ../ide/create-portable-custom-editor-options.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
-                - name: Možnosti pravidel
-                  href: /dotnet/fundamentals/code-analysis/code-style-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
+                - name: Instalace analyzátorů .NET
+                  href: install-net-analyzers.md
+                - name: Kvalita kódu
+                  items:
+                    - name: Možnosti kvality kódu
+                      href: /dotnet/fundamentals/code-analysis/code-quality-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
+                    - name: Použití souborů EditorConfig pro kvalitu kódu
+                      href: /dotnet/fundamentals/code-analysis/configuration-files?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
+                - name: Styl kódu
+                  items:
+                    - name: Předvolby stylu kódu
+                      href: ../ide/code-styles-and-code-cleanup.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                    - name: Použití souborů EditorConfig pro styl kódu
+                      displayName: Configure code style analyzers
+                      href: ../ide/create-portable-custom-editor-options.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                    - name: Možnosti pravidel
+                      href: /dotnet/fundamentals/code-analysis/code-style-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
             - name: Konfigurace živé analýzy kódu
               href: configure-live-code-analysis-scope-managed-code.md
             - name: Ruční spuštění analýzy kódu
@@ -49,8 +53,8 @@
           href: static-code-analysis-for-managed-code-overview.md
         - name: Názorný postup pro spuštění starší verze analýzy
           href: walkthrough-analyzing-managed-code-for-code-defects.md
-        - name: Migrace na analyzátory FxCop
-          href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
+        - name: Migrace na analyzátory .NET
+          href: migrate-from-legacy-analysis-to-net-analyzers.md
         - name: Ruční spuštění starší verze analýzy
           href: how-to-run-legacy-code-analysis-manually-for-managed-code.md
         - name: Konfigurace
@@ -77,16 +81,14 @@
               href: how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md
             - name: Kompatibilita verzí
               href: version-compatibility-for-code-analysis-check-in-policies.md
-        - name: Analyzátory FxCop
+        - name: Migrace na analyzátory .NET
           items:
-            - name: Instalace analyzátorů FxCop
-              href: install-fxcop-analyzers.md
-            - name: Migrace na analyzátory FxCop
-              items:
-                - name: Migrace ze starší verze analýzy na analyzátory FxCop
-                  href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
-                - name: Nejčastější dotazy
-                  href: fxcop-analyzers-faq.md
+            - name: Migrace ze starší verze analýzy na analyzátory .NET
+              href: migrate-from-legacy-analysis-to-net-analyzers.md
+            - name: Migrace z analyzátorů FxCop na analyzátory .NET
+              href: migrate-from-fxcop-analyzers-to-net-analyzers.md
+            - name: Nejčastější dotazy
+              href: net-analyzers-faq.md
         - name: Sady pravidel
           items:
             - name: Přehled
