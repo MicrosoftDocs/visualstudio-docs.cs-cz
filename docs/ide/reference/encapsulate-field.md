@@ -1,5 +1,7 @@
 ---
 title: Refaktorujte pole na vlastnost
+description: Přečtěte si, jak pomocí nabídky rychlé akce a refaktoring převést pole na vlastnost.
+ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -12,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: db0bd17cd0bead3807f857b2198b8d4ea4c72ffb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4ac28646af9d68accd18c0d40480dd22e47b023
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569709"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305470"
 ---
 # <a name="encapsulate-a-field-refactoring"></a>Zapouzdření refaktoringu pole
 
@@ -48,7 +50,7 @@ Tento refaktoring platí pro:
 2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte klávesy **CTRL + R**a pak **kombinaci kláves CTRL + E**.  (Všimněte si, že se vaše klávesová zkratka může lišit v závislosti na vybraném profilu.)
+      - Stiskněte klávesy **CTRL + R** a pak **kombinaci kláves CTRL + E**.  (Všimněte si, že se vaše klávesová zkratka může lišit v závislosti na vybraném profilu.)
       - Stiskněte klávesu **CTRL** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoring** a v okně náhledu vyberte položku **zapouzdřit pole** .
    - **Myš**
       - Vyberte možnost **upravit > refaktoring > zapouzdřit pole**.

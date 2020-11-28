@@ -1,5 +1,7 @@
 ---
 title: Import položek z existujícího webu služby SharePoint | Microsoft Docs
+description: Import položek z existujícího webu služby SharePoint pomocí šablony projektu importovat balíček řešení služby SharePoint, takže můžete znovu použít prvky v novém řešení služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9c2703bfdd4f47281a1fc19060cb69f8b312e7d2
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: ef77fb280021fcfb701a677bc9ce17ec26e39516
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970550"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304513"
 ---
 # <a name="import-items-from-an-existing-sharepoint-site"></a>Import položek z existujícího webu služby SharePoint
   Šablona projektu importovat balíček řešení služby SharePoint umožňuje znovu použít prvky, jako jsou typy obsahu a pole z existujících webů služby SharePoint v novém [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] řešení služby SharePoint. I když lze spustit většinu importovaných řešení bez úprav, existují určitá omezení a problémy, které je třeba zvážit, zejména pokud po importu změníte jakékoli položky.

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Lokalizace kódu | Microsoft Docs'
+description: Naučte se lokalizovat kód ve službě SharePoint nahrazením pevně kódovaných řetězců pomocí volání GetGlobalResourceObject, metody, která odkazuje na lokalizované prostředky.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6c1963ff0b6ef317dfa1a2c8154a1628710dc562
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2cbe38c55b92514954cc3487544fed89d68cc4dc
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016683"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304581"
 ---
 # <a name="how-to-localize-code"></a>Postupy: Lokalizace kódu
   Nemístní kód používá pevně kódované řetězcové hodnoty. Chcete-li lokalizovat řetězce kódu, nahraďte je voláními <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> , což je metoda, která odkazuje na lokalizované prostředky.
@@ -27,7 +29,7 @@ ms.locfileid: "86016683"
 
 #### <a name="to-localize-code"></a>Lokalizace kódu
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro položku projektu a pak zvolte **Přidat**  >  **modul**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro položku projektu a pak zvolte **Přidat**  >  **modul**.
 
      Vyberte šablonu **souboru prostředků** .
 
@@ -50,9 +52,9 @@ ms.locfileid: "86016683"
 
 7. Sestavte projekt pro vytvoření prostředků satelitních knihoven DLL.
 
-8. V **Návrháři balíčků**zvolte kartu **Upřesnit** a pak přidejte satelitní sestavení.
+8. V **Návrháři balíčků** zvolte kartu **Upřesnit** a pak přidejte satelitní sestavení.
 
-9. V poli **umístění** předřaďte složku ID jazykové verze na cestu k umístění, například *.resources.dllde-de \\ \<Project Item Name> *.
+9. V poli **umístění** předřaďte složku ID jazykové verze na cestu k umístění, například *.resources.dllde-de \\ \<Project Item Name>*.
 
 10. Pokud vaše řešení ještě neodkazuje na sestavení System. Web, přidejte na něj odkaz a přidejte do kódu direktivu do <xref:System.Web> .
 

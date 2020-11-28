@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: lokalizace značek ASPX | Microsoft Docs'
+description: Naučte se lokalizovat značky ASPX na SharePointu tak, že nahradíte pevně kódované řetězcové hodnoty výrazy, které odkazují na lokalizované prostředky.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 63bd8ee614a78752069002820689a2cc6c0be783
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0a4fcf724a8ae1586354f620a68b32e9f281b545
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016289"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304664"
 ---
 # <a name="how-to-localize-aspx-markup"></a>Postupy: lokalizace značek ASPX
   [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] stránky (. aspx) obvykle používají pevně kódované řetězcové hodnoty. Chcete-li lokalizovat tyto řetězce, nahraďte je výrazy, které odkazují na lokalizované prostředky.
@@ -31,9 +33,9 @@ ms.locfileid: "86016289"
 
      Pokud lokalizaci pouze kódu a nikoli kódu, přidejte položku projektu globální soubor prostředků. Pokud lokalizaci kódu a značky, přidejte položku projektu soubor prostředků.
 
-    1. Chcete-li přidat soubor globálních prostředků, v **Průzkumník řešení**otevřete místní nabídku pro položku sharepointového projektu a pak zvolte možnost **Přidat**  >  **novou položku**. V uzlu SharePoint **2010** vyberte šablonu **souboru globálních zdrojů** .
+    1. Chcete-li přidat soubor globálních prostředků, v **Průzkumník řešení** otevřete místní nabídku pro položku sharepointového projektu a pak zvolte možnost **Přidat**  >  **novou položku**. V uzlu SharePoint **2010** vyberte šablonu **souboru globálních zdrojů** .
 
-    2. Chcete-li přidat soubor prostředků, v **Průzkumník řešení**otevřete místní nabídku pro položku sharepointového projektu a pak zvolte možnost **Přidat**  >  **novou položku**. V uzlu **Visual Basic** nebo **Visual C#** vyberte šablonu **soubor prostředků** .
+    2. Chcete-li přidat soubor prostředků, v **Průzkumník řešení** otevřete místní nabídku pro položku sharepointového projektu a pak zvolte možnost **Přidat**  >  **novou položku**. V uzlu **Visual Basic** nebo **Visual C#** vyberte šablonu **soubor prostředků** .
 
     > [!NOTE]
     > Nezapomeňte přidat soubory prostředků do položky projektu služby SharePoint a povolit vlastnost typ nasazení. Tato vlastnost je povinná později v tomto postupu. Pokud vaše řešení neobsahuje položku SharePointového projektu, můžete přidat prázdný projekt SharePoint a odebrat jeho výchozí *Elements.xml* soubor.

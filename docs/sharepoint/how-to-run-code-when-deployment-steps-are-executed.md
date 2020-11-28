@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: spuštění kódu při spuštění kroků nasazení | Microsoft Docs'
+description: Spusťte kód pro zpracování událostí, které jsou vyvolány položkami projektu služby SharePoint před a poté, co aplikace Visual Studio spustí krok nasazení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b2b0431ab4f985d801a78159fc2d324a29f8b638
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00b921d8500c95ebbb771b5c0b5817db87b7c6ca
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015534"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304454"
 ---
 # <a name="how-to-run-code-when-deployment-steps-are-executed"></a>Postupy: spuštění kódu při spuštění kroků nasazení
   Chcete-li provést další úkoly pro krok nasazení v projektu služby SharePoint, můžete zpracovávat události, které jsou vyvolány položkami projektu služby SharePoint před a poté, co aplikace Visual Studio provede jednotlivé kroky nasazení. Další informace najdete v tématu [rozšíření balení a nasazení služby SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md).

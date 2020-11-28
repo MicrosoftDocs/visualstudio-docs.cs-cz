@@ -1,5 +1,7 @@
 ---
 title: Protokolovat výstup příkazového okna – příkaz
+description: Přečtěte si o příkazu příkazového řádku příkazu protokolu a o tom, jak zkopíruje všechny vstupy a výstupy z okno Příkaz do souboru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6ba8fb419726018bd089e217386ab5dbd6a9c33
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cab4f102832e8dfa6ce51b61abed8e3bfd672c40
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568656"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305277"
 ---
 # <a name="log-command-window-output-command"></a>Okno výstupu příkazů protokolu – příkaz
 

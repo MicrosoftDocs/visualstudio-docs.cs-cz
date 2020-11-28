@@ -1,5 +1,7 @@
 ---
 title: Okno Seznam chyb
+description: Přečtěte si o okně Seznam chyb a o tom, jak ho použít k provádění úloh souvisejících s řešením chyb, které zobrazuje.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c6d925f61714c524f97a57690870229b2340d21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf008bd7c1355f5991890ca5ab8bd999f2a8dd32
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569660"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305442"
 ---
 # <a name="error-list-window"></a>Okno Seznam chyb
 
@@ -41,9 +43,9 @@ Okno **Seznam chyb** umožňuje provádět následující úlohy:
 
 - Vyhledat konkrétní výrazy a určit rozsah hledání pouze v aktuálním projektu nebo dokumentu.
 
-Chcete-li zobrazit **Seznam chyb**, zvolte možnost **Zobrazit**  >  **Seznam chyb**nebo stiskněte klávesu **CTRL** + **\\** + **E**.
+Chcete-li zobrazit **Seznam chyb**, zvolte možnost **Zobrazit**  >  **Seznam chyb** nebo stiskněte klávesu **CTRL** + **\\** + **E**.
 
-Můžete vybrat karty **chyby**, **varování**a **zprávy** , abyste viděli různé úrovně informací.
+Můžete vybrat karty **chyby**, **varování** a **zprávy** , abyste viděli různé úrovně informací.
 
 Chcete-li seznam seřadit, klikněte na záhlaví sloupce. Pokud ho chcete znovu seřadit podle dalšího sloupce, stiskněte a podržte klávesu **SHIFT** a klikněte na jiné záhlaví sloupce. Chcete-li vybrat sloupce, které jsou zobrazeny a které jsou skryté, zvolte možnost **Zobrazit sloupce** z místní nabídky. Chcete-li změnit pořadí, ve kterém jsou sloupce zobrazeny, přetáhněte libovolné záhlaví sloupce vlevo nebo vpravo.
 
@@ -62,11 +64,11 @@ Můžete omezit rozsah hledání tak, aby se mohly analyzovat a reagovat na skup
 
 3. **Aktuální dokument**: zobrazí chyby, varování a zprávy pro aktuálně vybraný dokument v **editoru** nebo **Průzkumník řešení**.
 
-Pokud je filtr aktuálně použit pro výsledek hledání, název filtru se zobrazí v záhlaví **Seznam chyb** . Tlačítka **chyby**, **Upozornění**a **zprávy** pak zobrazují počet filtrovaných položek zobrazených společně s celkovým počtem položek. Například tlačítka zobrazují "x z y Errors". Pokud není použit žádný filtr, záhlaví zobrazí pouze "Seznam chyb".
+Pokud je filtr aktuálně použit pro výsledek hledání, název filtru se zobrazí v záhlaví **Seznam chyb** . Tlačítka **chyby**, **Upozornění** a **zprávy** pak zobrazují počet filtrovaných položek zobrazených společně s celkovým počtem položek. Například tlačítka zobrazují "x z y Errors". Pokud není použit žádný filtr, záhlaví zobrazí pouze "Seznam chyb".
 
 Seznam na pravé straně panelu nástrojů určuje, zda se mají zobrazovat chyby ze sestavení (chyby vyplývající z operace sestavení) nebo z technologie IntelliSense (chyby zjištěné před spuštěním sestavení) nebo z obou.
 
-## <a name="search"></a>Search
+## <a name="search"></a>Hledat
 
 Pomocí textového pole **hledat seznam chyb** na pravé straně panelu nástrojů **Seznam chyb** můžete najít konkrétní chyby v seznamu chyb. Můžete vyhledat libovolný viditelný sloupec v seznamu chyb a výsledky hledání jsou vždy seřazené podle sloupce, který má prioritu řazení místo na dotazu nebo použitém filtru. Pokud zvolíte klávesu **ESC** , zatímco je fokus v **Seznam chyb**, můžete vymazat hledaný termín a filtrované výsledky hledání. Můžete také kliknout na **X** na pravé straně textového pole a vymazat ho.
 
@@ -84,7 +86,7 @@ Kód
 
 Zobrazí kód chyby.
 
-Popis
+Description
 
 Zobrazí text položky.
 

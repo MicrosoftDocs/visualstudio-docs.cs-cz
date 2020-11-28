@@ -1,5 +1,7 @@
 ---
 title: ProjectItem – element | Microsoft Docs
+description: Získejte referenční informace o elementu ProjectItem, který představuje položku SharePointového projektu v odkazu schématu XML položky projektu SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 44fc1b918960f0268d916ccfa560f118cea47144
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3e211aa44b1402d6667fc3e02ca7e271a29c3ec7
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536874"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305055"
 ---
 # <a name="projectitem-element"></a>ProjectItem – element
   Představuje položku SharePointového projektu. Tento prvek vyžaduje kořenový prvek souboru *. spdata* .
@@ -73,7 +75,7 @@ ms.locfileid: "85536874"
 |**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
-|**Může být prázdné**|Ne|
+|**Může být prázdné**|No|
 
 ## <a name="see-also"></a>Viz také
 [Rseference schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)

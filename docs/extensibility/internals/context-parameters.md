@@ -1,5 +1,7 @@
 ---
 title: Kontextové parametry | Microsoft Docs
+description: Přečtěte si o kontextových parametrech v integrovaném vývojovém prostředí (IDE) sady Visual Studio, které definuje stav projektu při přidání nebo implementaci průvodce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +13,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d1a8c83ef9794479c35cd36609d77ef94621732
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 654ebf68efebaa44766079c172e87396134805e3
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012448"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304715"
 ---
 # <a name="context-parameters"></a>Kontextové parametry
-V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí (IDE) můžete přidat průvodce do dialogového okna **Nový projekt**, **Přidat novou položku**nebo **Přidat dílčí projekt** . Přidaní průvodci jsou k dispozici v nabídce **soubor** nebo kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení**. Rozhraní IDE předá parametry kontextu implementaci průvodce. Kontextové parametry definují stav projektu, když rozhraní IDE zavolá průvodce.
+V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí (IDE) můžete přidat průvodce do dialogového okna **Nový projekt**, **Přidat novou položku** nebo **Přidat dílčí projekt** . Přidaní průvodci jsou k dispozici v nabídce **soubor** nebo kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení**. Rozhraní IDE předá parametry kontextu implementaci průvodce. Kontextové parametry definují stav projektu, když rozhraní IDE zavolá průvodce.
 
  Rozhraní IDE spustí Průvodce nastavením <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> příznaku v volání rozhraní IDE do <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> metody pro projekt. Při nastavení musí projekt způsobit `IVsExtensibility::RunWizardFile` spuštění metody pomocí registrovaného názvu průvodce nebo identifikátoru GUID a dalších kontextových parametrů, které do něj rozhraní IDE předává.
 
@@ -58,7 +60,7 @@ V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vý
 | `InstallationDirectory` | Cesta k adresáři [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] instalace |
 | `Silent` | Logická hodnota, která označuje, zda má být průvodce spuštěn tiše jako při kliknutí na tlačítko **Dokončit** `TRUE` . |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2>
 - [Vlastní parametry](../../extensibility/internals/custom-parameters.md)

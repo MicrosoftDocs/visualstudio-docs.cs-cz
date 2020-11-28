@@ -1,5 +1,7 @@
 ---
 title: Najít – příkaz
+description: Přečtěte si o příkazu find a o tom, jak prohledává soubory pomocí podmnožiny možností dostupných na kartě najít v souborech okna Najít a nahradit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 288fb294ab712713d6be116f46ca159ea40a6e67
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 886695cea38909a8efa74797391adb1b6dd97d19
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595641"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305398"
 ---
 # <a name="find-command"></a>Najít – příkaz
 Vyhledá soubory pomocí podmnožiny možností dostupných na kartě **najít v souborech** okna **Najít a nahradit** .

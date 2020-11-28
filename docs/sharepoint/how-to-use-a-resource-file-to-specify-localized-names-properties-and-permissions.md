@@ -1,6 +1,8 @@
 ---
 title: Jak použít soubor prostředků v projektu služby SharePoint | Microsoft Docs
 titleSuffix: ''
+description: Použijte soubor prostředků v projektu služby SharePoint, abyste mohli poskytnout lokalizované názvy, definovat vlastnosti a aplikovat oprávnění pro objekty definované v modelu služby BDC.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1693308c591e60a2df0e4d8e18ece8cc9b598fd2
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ecc2bfab37e534e4edc005273ab5fc826b771228
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585742"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304368"
 ---
 # <a name="how-to-use-a-resource-file-in-a-sharepoint-project"></a>Použití souboru prostředků v projektu služby SharePoint
 
@@ -33,7 +35,7 @@ ms.locfileid: "91585742"
 
 ### <a name="to-add-a-bdc-resource-file-to-a-sharepoint-project"></a>Přidání souboru prostředků služby BDC do projektu služby SharePoint
 
-1. V **Průzkumník řešení**rozbalte složku pro projekt služby SharePoint a pak zvolte složku, která obsahuje model služby BDC.
+1. V **Průzkumník řešení** rozbalte složku pro projekt služby SharePoint a pak zvolte složku, která obsahuje model služby BDC.
 
 2. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 

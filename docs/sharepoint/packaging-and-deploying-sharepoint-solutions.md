@@ -1,5 +1,7 @@
 ---
 title: Balení a nasazení řešení služby SharePoint | Microsoft Docs
+description: Zabalení a nasazení řešení služby SharePoint, která jsou nasazena na server SharePoint pomocí souboru balíčku řešení (. wsp).
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9a4bf3394cf47b4f355fbe6a330ff5374e2da1c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd06a5be3c9e7ceea38bdb4560f8b6262175bd45
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015598"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305080"
 ---
 # <a name="package-and-deploy-sharepoint-solutions"></a>Zabalení a nasazení řešení služby SharePoint
   Řešení služby SharePoint je obvykle nasazeno na server SharePoint pomocí souboru balíčku řešení (. wsp). Sadu Visual Studio můžete použít k uspořádání položek projektu služby SharePoint do funkcí a k vytvoření balíčku pro nasazení funkcí služby SharePoint.
@@ -89,13 +91,13 @@ ms.locfileid: "86015598"
  Můžete také přizpůsobit kroky nasazení na vývojovém počítači. Další informace najdete v tématu [nasazení, publikování a Upgrade balíčků řešení služby SharePoint](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md).
 
 ## <a name="deploy-files-in-sharepoint-solutions"></a>Nasazení souborů v řešeních služby SharePoint
- Obvykle když přidáte položku SharePointového projektu do řešení služby SharePoint, jsou zahrnuty všechny požadované soubory. Soubory, které mohou být kompilovány (soubory kódu), jsou integrovány do výstupního sestavení řešení. Můžete ale také přidat soubory, které nejsou kompilovatelný, například *. XML*, *. txt*nebo soubory prostředků, do projektu služby SharePoint. Tyto soubory nejsou automaticky zabaleny do vašeho řešení. Chcete-li zajistit, že jsou zabaleny, buď přidejte soubory do mapované složky nebo do položky projektu služby SharePoint.
+ Obvykle když přidáte položku SharePointového projektu do řešení služby SharePoint, jsou zahrnuty všechny požadované soubory. Soubory, které mohou být kompilovány (soubory kódu), jsou integrovány do výstupního sestavení řešení. Můžete ale také přidat soubory, které nejsou kompilovatelný, například *. XML*, *. txt* nebo soubory prostředků, do projektu služby SharePoint. Tyto soubory nejsou automaticky zabaleny do vašeho řešení. Chcete-li zajistit, že jsou zabaleny, buď přidejte soubory do mapované složky nebo do položky projektu služby SharePoint.
 
  Soubory přidané do mapovaných složek se při nasazení řešení automaticky zkopírují do podregistru služby SharePoint. Soubory přidané do položky projektu služby SharePoint jsou nasazeny do umístění, které je zadáno ve vlastnosti **umístění nasazení** pro každý soubor, který je částečně nastaven na základě vlastnosti **typ nasazení** . Ve výchozím nastavení je hodnota vlastnosti **typ nasazení** nastaveno na **Nenasazení**, což znamená, že soubor není nasazen s řešením. Je nutné nastavit další hodnotu vlastnosti tak, aby obsahovala soubor v balíčku.
 
  Chcete-li například přidat soubor *. XML* do projektu služby SharePoint, proveďte jednu z následujících akcí:
 
-- Přidejte do projektu mapovanou složku SharePointu rozložení. Tím se vytvoří **Průzkumník řešení** složka s názvem **Layouts** , která má podsložku pro projekt. Přidejte soubor *. XML* do nové podsložky. Ve výchozím nastavení je soubor nasazen do systému souborů služby SharePoint v části *.. \\\TEMPLATE\LAYOUTS \<Folder Name> *. Informace o tom, jak přidat mapované složky, naleznete v tématu [How to: Add and Remove mapované složky](../sharepoint/how-to-add-and-remove-mapped-folders.md).
+- Přidejte do projektu mapovanou složku SharePointu rozložení. Tím se vytvoří **Průzkumník řešení** složka s názvem **Layouts** , která má podsložku pro projekt. Přidejte soubor *. XML* do nové podsložky. Ve výchozím nastavení je soubor nasazen do systému souborů služby SharePoint v části *.. \\\TEMPLATE\LAYOUTS \<Folder Name>*. Informace o tom, jak přidat mapované složky, naleznete v tématu [How to: Add and Remove mapované složky](../sharepoint/how-to-add-and-remove-mapped-folders.md).
 
 - Přidejte soubor *. XML* do složky položky projektu služby SharePoint a poté změňte vlastnost **typ nasazení** souboru *. XML* z **nasazení** na jiné nastavení, jako je například **RootFile** nebo **ElementFile**. Odpovídající nastavení **typu nasazení** závisí na souboru a projektu. Další informace o nastavení vlastností **typu nasazení** najdete v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).
 

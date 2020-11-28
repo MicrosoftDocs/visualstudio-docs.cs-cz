@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti nástroje MSBuild podporované službou SharePoint | Microsoft Docs
+description: Přečtěte si seznam názvů a popisů vlastností MSBuild, které jsou podporovány nástrojem a jsou specifické pro službu SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5470160c6b0af1af39238a14319ad497e1541a43
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1eab3832121f1e0c926257797ddbc79695546a5
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985164"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305137"
 ---
 # <a name="msbuild-properties-supported-by-sharepoint"></a>Vlastnosti nástroje MsBuild podporované službou SharePoint
   Všechny [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] vlastnosti definované v souboru Microsoft. VisualStudio. SharePoint. targets, souboru projektu nebo uživatelském souboru projektu lze použít v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektech služby SharePoint. Kromě běžných [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] vlastností dodaných projektem definuje SharePoint další vlastnosti, které jsou specifické pro projekty služby SharePoint.
@@ -27,7 +29,7 @@ ms.locfileid: "72985164"
 ## <a name="msbuild-properties-specific-to-sharepoint"></a>Vlastnosti nástroje MsBuild specifické pro službu SharePoint
  V následující tabulce jsou uvedeny [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] vlastnosti, které platí konkrétně pro projekty služby SharePoint v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Existují další vlastnosti, ale jsou pro interní použití.
 
-|Název vlastnosti|Popis|
+|Název vlastnosti|Description|
 |-------------------|-----------------|
 |SharePointSiteUrl|Řetězec, který představuje [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] web služby SharePoint.|
 |SandboxedSolution|Logická hodnota, která označuje, zda je řešení řešením v izolovaném prostoru.|

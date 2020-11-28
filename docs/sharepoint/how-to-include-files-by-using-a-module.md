@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: zahrnutí souborů pomocí modulu | Microsoft Docs'
+description: Zjistěte, jak zahrnout soubory pomocí modulu, což je kontejner, který umožňuje nasadit soubory, jako jsou hlavní stránky ASPX, textové soubory nebo obrázky, do služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1ada86be30e207e36c7e0d84d3fd5dd877605e4d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 381cb529db3f4116a9c42041c26e0e1e242073df
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016302"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305410"
 ---
 # <a name="how-to-include-files-by-using-a-module"></a>Postupy: zahrnutí souborů pomocí modulu
   *Moduly* (nezaměňovat s [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] moduly) jsou kontejnery, které umožňují nasadit soubory, jako jsou hlavní stránky ASPX, textové soubory nebo obrázky, do SharePointu.
@@ -33,7 +35,7 @@ ms.locfileid: "86016302"
 
      Další informace naleznete v tématu [šablony projektů a položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. V **Průzkumník řešení**zvolte uzel projektu a potom v řádku nabídek zvolte **projekt**  >  **Přidat novou položku**.
+2. V **Průzkumník řešení** zvolte uzel projektu a potom v řádku nabídek zvolte **projekt**  >  **Přidat novou položku**.
 
      Otevře se dialogové okno **Přidat novou položku** .
 
@@ -53,7 +55,7 @@ ms.locfileid: "86016302"
 
      Když do projektu přidáte soubor, automaticky se přidá položka pro tento soubor modulu Elements.xml. Po nasazení projektu jsou soubory zkopírovány na server SharePoint, relativně k kořenovému adresáři projektu, který je určen atributem **URL** elementu **souboru** , například `Url="Module1/New Folder/SomeFile.doc` . Pokud chcete změnit umístění nasazení souboru, přesuňte ho buď do jiné složky v **Průzkumník řešení** nebo změňte jeho nastavení **adresy URL** .
 
-8. Pro všechny soubory, které se mají zobrazit v knihovně dokumentů, přidejte `Type="GhostableInLibrary"` atribut ke své položce v *Elements.xml*. Příklad:
+8. Pro všechny soubory, které se mají zobrazit v knihovně dokumentů, přidejte `Type="GhostableInLibrary"` atribut ke své položce v *Elements.xml*. Třeba
 
     ```xml
     <File Path="Module1\Some Folder\SomePage.aspx" Url="Module1/Some Folder/SomePage.aspx" Type="GhostableInLibrary" />

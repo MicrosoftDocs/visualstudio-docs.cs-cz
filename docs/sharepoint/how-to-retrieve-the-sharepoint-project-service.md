@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: načtení služby projektu SharePoint | Microsoft Docs'
+description: Zjistěte, jak získat přístup ke službě projektu služby SharePoint v rozšířeních systému projektu, Průzkumník serveru rozšířeních nebo jiných rozšířeních sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f49883337c5748c0f8bcab5d0a88e02612e51b4c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 553b4ae3b7ecfa9fa49065824020ebdcecf77215
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015558"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304439"
 ---
 # <a name="how-to-retrieve-the-sharepoint-project-service"></a>Postupy: načtení služby projektu SharePoint
   Ke službě projektu služby SharePoint máte přístup v následujících typech řešení:
@@ -73,7 +75,7 @@ ms.locfileid: "86015558"
      Další informace o definování typů položek projektu naleznete v tématu [How to: define a Project Item Type](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).
 
 ## <a name="retrieve-the-service-in-server-explorer-extensions"></a>Načtení služby v rozšířeních Průzkumník serveru
- V rozšíření uzlu **připojení služby SharePoint** v **Průzkumník serveru**můžete ke službě projektu přistupovat pomocí <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider%2A> vlastnosti <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode> objektu.
+ V rozšíření uzlu **připojení služby SharePoint** v **Průzkumník serveru** můžete ke službě projektu přistupovat pomocí <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider%2A> vlastnosti <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode> objektu.
 
 #### <a name="to-retrieve-the-service-in-a-server-explorer-extension"></a>Načtení služby v rozšíření Průzkumník serveru
 
@@ -86,7 +88,7 @@ ms.locfileid: "86015558"
      [!code-vb[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.vb#1)]
      [!code-csharp[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.cs#1)]
 
-     Další informace o rozšíření uzlu **připojení služby SharePoint** v **Průzkumník serveru**naleznete v tématu [How to: Extend and SharePoint Node in Průzkumník serveru](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).
+     Další informace o rozšíření uzlu **připojení služby SharePoint** v **Průzkumník serveru** naleznete v tématu [How to: Extend and SharePoint Node in Průzkumník serveru](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).
 
 ## <a name="retrieve-the-service-in-other-visual-studio-extensions"></a>Načtení služby v jiných rozšířeních sady Visual Studio
  Můžete načíst službu projektu ve VSPackage nebo v jakémkoli rozšíření sady Visual Studio, které má přístup k <xref:EnvDTE80.DTE2> objektu v modelu automatizačních objektů, jako je například Průvodce šablonou projektu, který implementuje <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> rozhraní.

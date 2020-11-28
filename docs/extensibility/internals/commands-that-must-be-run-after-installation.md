@@ -1,5 +1,7 @@
 ---
 title: Příkazy, které je třeba spustit po instalaci | Microsoft Docs
+description: Přečtěte si o příkazech, které musí být spuštěny v rámci instalace rozšíření nasazeného pomocí souboru. msi v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77add5afd5d44358f0077a11bb70559a796e74c6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64eda9c95b9c469d8defc8ab0318031e9e43172a
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709476"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305037"
 ---
 # <a name="commands-that-must-be-run-after-installation"></a>Příkazy, které se musí spustit po instalaci
 Pokud nasadíte rozšíření prostřednictvím souboru *. msi* , je nutné spustit nástroj **devenv/Setup** jako součást instalace, aby aplikace Visual Studio mohla zjistit vaše rozšíření.
@@ -44,7 +46,7 @@ Pokud nasadíte rozšíření prostřednictvím souboru *. msi* , je nutné spus
 |DEVENV_EXE_2005|RL_DevenvExe_2005|
 |DEVENV_EXE_2008|RL_DevenvExe_2008|
 
- Například instalační program sady Visual Studio zapíše hodnotu registru **HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\9.0\setup\vs\environmentpath** jako *C:\VS2008\Common7\IDE\devenv.exe*, úplná cesta ke spustitelnému souboru, který musí instalační program spustit.
+ Například instalační program sady Visual Studio zapíše hodnotu registru **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS\EnvironmentPath** jako *C:\VS2008\Common7\IDE\devenv.exe*, úplná cesta ke spustitelnému souboru, který musí instalační program spustit.
 
 > [!NOTE]
 > Vzhledem k tomu, že sloupec typu tabulka RegLocator je 2, není nutné zadávat další informace o verzi v tabulce podpisů.

@@ -1,5 +1,7 @@
 ---
 title: Profilace výkonu aplikací služby SharePoint | Microsoft Docs
+description: Profilujte výkon aplikací SharePoint, pokud jsou spuštěné pomalu nebo neefektivně. Pomocí funkcí profilace sady Visual Studio Najděte problematický kód.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 13f2e3f5df236157550aa79af40f0cbc575eb8bf
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: ecdacce58e17c616b22c9a6a8ba6fce9d5cf272c
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414409"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305109"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>Profilace výkonu aplikací služby SharePoint
 
@@ -39,7 +41,7 @@ Po vytvoření a spuštění analýzy profilů v aplikaci vám Sestava poskytne 
 
 ## <a name="performance-session-process"></a>Proces relace výkonu
 
-Chcete-li profilovat aplikaci, začněte pomocí Průvodce Nástroje pro profilaci výkon a vytvořte relaci výkonu. Na panelu nabídek vyberte možnost **analyzovat** , **Spustit Průvodce výkonem**. Při dokončování Průvodce zadáte požadované informace pro vaši relaci výkonu, například požadovanou metodu profilu, a aplikaci, kterou chcete profilovat. Další informace najdete v tématu [Postup: profilování webu nebo webové aplikace pomocí Průvodce výkonem](../profiling/how-to-collect-performance-data-for-a-web-site.md). Alternativně můžete použít možnosti příkazového řádku k nastavení a spuštění relace výkonu. Další informace najdete v tématu [použití nástroje pro profilaci z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md). Pokud chcete nakonfigurovat všechny aspekty relace výkonu ručně, přečtěte si téma [Postup: Ruční vytvoření relací výkonu pomocí nástroje pro profilaci](../profiling/how-to-manually-create-performance-sessions.md). Můžete také vytvořit relaci výkonu z testu jednotky tak, že v okně **výsledky testů** otevřete místní nabídku pro test jednotky a pak zvolíte možnost **vytvořit relaci výkonu**.
+Chcete-li profilovat aplikaci, začněte pomocí Průvodce Nástroje pro profilaci výkon a vytvořte relaci výkonu. Na panelu nabídek vyberte možnost **analyzovat**, **Spustit Průvodce výkonem**. Při dokončování Průvodce zadáte požadované informace pro vaši relaci výkonu, například požadovanou metodu profilu, a aplikaci, kterou chcete profilovat. Další informace najdete v tématu [Postup: profilování webu nebo webové aplikace pomocí Průvodce výkonem](../profiling/how-to-collect-performance-data-for-a-web-site.md). Alternativně můžete použít možnosti příkazového řádku k nastavení a spuštění relace výkonu. Další informace najdete v tématu [použití nástroje pro profilaci z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md). Pokud chcete nakonfigurovat všechny aspekty relace výkonu ručně, přečtěte si téma [Postup: Ruční vytvoření relací výkonu pomocí nástroje pro profilaci](../profiling/how-to-manually-create-performance-sessions.md). Můžete také vytvořit relaci výkonu z testu jednotky tak, že v okně **výsledky testů** otevřete místní nabídku pro test jednotky a pak zvolíte možnost **vytvořit relaci výkonu**.
 
 Po nastavení relace výkonu se konfigurace relace uloží, server se nakonfiguruje tak, aby poskytoval data profilace a aplikace se spustí. Při použití aplikace se data o výkonu zapisují do souboru protokolu. Relace výkonu jsou uvedené v **prohlížeč výkonu** ve složce **cíle** . Po dokončení relace výkonu se její sestava zobrazí ve složce **sestavy** v **prohlížeč výkonu**. Chcete-li zobrazit sestavu, otevřete ji v **prohlížeč výkonu**. Chcete-li zobrazit nebo nakonfigurovat vlastnosti relace výkonu, otevřete její místní nabídku v **prohlížeč výkonu** a zvolte možnost **vlastnosti**. Další informace o konkrétních vlastnostech relace výkonu najdete v tématu [Konfigurace relací výkonu pro nástroje pro profilaci](../profiling/configuring-performance-sessions.md). Informace o tom, jak interpretovat výsledky relace výkonu, najdete v tématu [analýza nástroje pro profilacich dat](../profiling/analyzing-performance-tools-data.md).
 

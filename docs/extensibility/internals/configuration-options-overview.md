@@ -1,5 +1,7 @@
 ---
 title: Přehled možností konfigurace | Microsoft Docs
+description: Seznamte se s možnostmi konfigurace projektu v aplikaci Visual Studio. Konfigurace je typ sestavení popsaný s pojmenovanou sadou vlastností a umístění souborů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d5ac25fcef7b942b791402baf17982c9810e92a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df8931066aef5f7163018fba540dd46dcfe5dcc0
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709413"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304736"
 ---
 # <a name="configuration-options-overview"></a>Přehled možností konfigurace
 Projekty v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] můžou podporovat více konfigurací, které se dají sestavit, ladit, spouštět nebo nasazovat. Konfigurace je typ sestavení popsaný s pojmenovanou sadou vlastností, obvykle se jedná o přepínače kompilátoru a umístění souborů. Ve výchozím nastavení obsahují nová řešení dvě konfigurace, *ladění* a *vydání*. Tyto konfigurace je možné použít s jejich výchozími nastaveními nebo úpravou tak, aby splňovaly vaše specifické požadavky řešení nebo projektu. Některé balíčky lze sestavit dvěma způsoby: jako editor ActiveX nebo jako místní komponenta. Projekty však nepotřebují podporovat více konfigurací. Pokud je k dispozici pouze jedna konfigurace, je tato konfigurace namapována na všechny konfigurace řešení.
@@ -31,7 +33,7 @@ Projekty v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] můžou 
 
 |Název konfigurace|Platforma: Win32|Platforma: Win64|
 |------------------------|----------------------|----------------------|
-|*Ladění*|\<Debug Win32 settings>|\<Debug Win64 settings>|
+|*Ladí*|\<Debug Win32 settings>|\<Debug Win64 settings>|
 |*Vydaná verze*|\<Release Win32 settings>|\<Release Win64 settings>|
 |*MyConfig*|–|\<MyConfig Win64 settings>|
 

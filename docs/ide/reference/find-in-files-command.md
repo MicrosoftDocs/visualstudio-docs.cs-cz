@@ -1,5 +1,7 @@
 ---
 title: Najít v souborech – příkaz
+description: Přečtěte si informace o příkazu find a o tom, jak prohledává soubory pomocí některých možností, které jsou k dispozici na kartě najít v souborech okna Najít a nahradit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87d313c29be1d5fb4f1be1febe9b5b7cd32e7e11
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aa0a907332b3ce0164573b809ee9c4b2ac2addda
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569579"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305393"
 ---
 # <a name="find-in-files-command"></a>Najít v souborech – příkaz
 Vyhledejte soubory pomocí podmnožiny možností dostupných na kartě **najít v souborech** okna **Najít a nahradit** .

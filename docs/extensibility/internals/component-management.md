@@ -1,5 +1,7 @@
 ---
 title: Správa součástí | Microsoft Docs
+description: Naučte se spravovat Instalační služba systému Windows komponenty při vytváření instalačního programu sady VSPackage v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5dcac9fb14a83021b852be2c52436fcdca84bf5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 648a1c90b143a0f38f8911fcaed3ee1ed16908b6
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709327"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304924"
 ---
 # <a name="component-management"></a>Správa součástí
 Jednotky úloh v Instalační služba systému Windows jsou označovány jako Instalační služba systému Windows komponenty (někdy označované jako WICs nebo pouze komponenty). Identifikátor GUID identifikuje každou součást WIC, což je základní jednotka instalace a počítání odkazů pro nastavení, která používají Instalační služba systému Windows.
@@ -29,7 +31,7 @@ Jednotky úloh v Instalační služba systému Windows jsou označovány jako In
 
 - Vytváření souborů a klíčů registru, které jsou sdíleny mezi verzemi, do jejich vlastních komponent.
 
-     Díky tomu je můžete snadno využívat v další verzi. Například zadejte knihovny, které jsou registrovány globálně, přípony souborů, další položky zaregistrované v **HKEY_CLASSES_ROOT**atd.
+     Díky tomu je můžete snadno využívat v další verzi. Například zadejte knihovny, které jsou registrovány globálně, přípony souborů, další položky zaregistrované v **HKEY_CLASSES_ROOT** atd.
 
 - Seskupte sdílené součásti do samostatných slučovacích modulů.
 

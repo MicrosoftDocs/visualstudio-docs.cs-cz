@@ -1,5 +1,7 @@
 ---
 title: Algoritmus směrování příkazů | Microsoft Docs
+description: Přečtěte si o pořadí řešení příkazů v aplikaci Visual Studio, protože příkazy jsou zpracovávány různými komponentami a směrovány z nejvnitřnějšího kontextu do nejvzdálenějšího kontextu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af8d3e53e09214ce36a80ca18856085dfb2bb746
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1694e0835add6eac75986538a8abae99adf717b1
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709539"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305234"
 ---
 # <a name="command-routing-algorithm"></a>Algoritmus směrování příkazů
 Příkazy v aplikaci Visual Studio jsou zpracovávány řadou různých komponent. Příkazy jsou směrovány z nejvnitřnějšího kontextu, který je založen na aktuálním výběru, na nejvzdálenější kontext (označovaný také jako globální). Další informace najdete v tématu [dostupnost příkazu](../../extensibility/internals/command-availability.md).
@@ -38,7 +40,7 @@ Příkazy v aplikaci Visual Studio jsou zpracovávány řadou různých komponen
 
 7. Aktuální hierarchie: Aktuální hierarchie může být projekt, který je vlastníkem okna aktivního dokumentu, nebo hierarchie, která je vybrána v **Průzkumník řešení**. Visual Studio hledá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní, které je implementováno v aktuální nebo aktivní hierarchii. Hierarchie by měla podporovat příkazy, které jsou platné vždy, když je hierarchie aktivní, a to i v případě, že okno dokumentu položky projektu má fokus. Nicméně příkazy, které platí pouze v případě, že **Průzkumník řešení** má fokus, musí být podporovány pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> rozhraní a jeho <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> metod a.
 
-     Příkazy **Vyjmout**, **Kopírovat**, **Vložit**, **Odstranit**, **Přejmenovat**, **ENTER**a **DoubleClick** vyžadují speciální zpracování. Informace o tom, jak zpracovávat příkazy **Delete** a **Remove** v hierarchiích, najdete v tématu <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler> rozhraní.
+     Příkazy **Vyjmout**, **Kopírovat**, **Vložit**, **Odstranit**, **Přejmenovat**, **ENTER** a **DoubleClick** vyžadují speciální zpracování. Informace o tom, jak zpracovávat příkazy **Delete** a **Remove** v hierarchiích, najdete v tématu <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler> rozhraní.
 
 8. Global: Pokud příkaz nebyl zpracován dříve uvedenými kontexty, Visual Studio se pokusí ho směrovat do VSPackage, který vlastní příkaz, který implementuje <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní. Pokud rozhraní VSPackage již nebylo načteno, není načteno, když aplikace Visual Studio zavolá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu. VSPackage je načten pouze v případě, že <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> je volána metoda.
 

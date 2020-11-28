@@ -1,5 +1,7 @@
 ---
 title: Listovat registry – příkaz
+description: Přečtěte si o příkazu seznam registrů a o tom, jak zobrazuje hodnotu vybraných registrů, a umožňuje upravit seznam registrů, které se mají zobrazit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e87b10a7827b5365b507abb2c72a21506e59c19e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5459ded60ea90ae00a3f943f829065a82548d160
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568682"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305298"
 ---
 # <a name="list-registers-command"></a>Listovat registry – příkaz
 Zobrazí hodnotu vybraných registrů a umožňuje upravit seznam registrů, které se mají zobrazit.

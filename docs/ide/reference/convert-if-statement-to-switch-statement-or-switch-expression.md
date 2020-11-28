@@ -1,5 +1,6 @@
 ---
 title: Příkaz převést if na switch – příkaz nebo výraz
+description: Naučte se, jak pomocí nabídky rychlé akce a refaktoring převést příkaz if na příkaz switch nebo výraz přepínače C# 8,0.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
@@ -10,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8e093325ff4a4e6a9f8a2623e7e42f69bb6fa62f
-ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
+ms.openlocfilehash: e19314b8bf73f5859fdf2cef7d281f142c643b68
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93102529"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305562"
 ---
 # <a name="convert-if-statement-to-switch-statement-or-switch-expression"></a>Převod příkazu if na příkaz switch nebo výraz switch
 
@@ -35,11 +36,11 @@ Tento refaktoring platí pro:
 2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
 3. Vyberte z následujících dvou možností:
 
-    Vyberte **převést na příkaz switch** .
+    Vyberte **převést na příkaz switch**.
 
    ![Příkaz převést if na Switch](media/convert-if-to-switch-statement.png)
 
-    Vyberte **převést na výraz Switch** .
+    Vyberte **převést na výraz Switch**.
 
     ![Převést příkaz if na výraz Switch](media/convert-if-to-switch-expression.png)
 

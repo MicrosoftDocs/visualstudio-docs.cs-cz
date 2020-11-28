@@ -1,5 +1,7 @@
 ---
 title: Lokalizace řešení služby SharePoint | Microsoft Docs
+description: Lokalizace řešení služby SharePoint odebráním pevně kódovaných řetězců z kódu a jejich abstrakcí do souborů prostředků založených na jazyce XML (. resx) obsahujících přeložené řetězce.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0a7b04ab1f77eba15f2bc617f89514a8d0952674
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16cb372e5acf719d3edc79f081cff6f4b0396b6a
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017140"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304276"
 ---
 # <a name="localize-sharepoint-solutions"></a>Lokalizace řešení služby SharePoint
 
@@ -36,7 +38,7 @@ ms.locfileid: "86017140"
 ## <a name="resource-files"></a>Soubory prostředků
  Existují tři typy souborů prostředků: výchozí, jazykově neutrální a specifické pro jazyk.
 
-|Typ souboru prostředků|Popis|
+|Typ souboru prostředků|Description|
 |------------------------|-----------------|
 |Výchozí|Také označované jako záložní prostředek, výchozí soubory prostředků obsahují řetězce lokalizované pro výchozí jazykovou verzi, například angličtinu. Používají se, pokud nelze najít žádné lokalizované soubory prostředků pro zadaný jazyk. Výchozí prostředky nemají samostatné soubory, jsou uloženy v sestavení hlavní aplikace.|
 |Jazykově neutrální|Soubor prostředků obsahující řetězce lokalizované pro jazyk, ale ne specifickou jazykovou verzi. Například "fr" pro francouzštinu.|

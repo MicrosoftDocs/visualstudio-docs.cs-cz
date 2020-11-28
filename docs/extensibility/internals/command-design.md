@@ -1,5 +1,7 @@
 ---
 title: Návrh příkazu | Microsoft Docs
+description: Naučte se navrhovat příkaz pro VSPackage v aplikaci Visual Studio. Včetně, jak určit, kde se zobrazí, když je k dispozici a jak se má zpracovat.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6aa58813623dc8150cafb4fbfee6496d09f889ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2ab06ade9be1ccd0683cd298a5e758ddcfa883f8
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709660"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304871"
 ---
 # <a name="command-design"></a>Návrh příkazu
 Když přidáte příkaz do balíčku VSPackage, je nutné určit, kde se má objevit, kdy je k dispozici a jak má být zpracován.
@@ -41,7 +43,7 @@ Když přidáte příkaz do balíčku VSPackage, je nutné určit, kde se má ob
 ### <a name="command-organization"></a>Organizace příkazu
  Prostředí umisťuje příkazy podle skupiny, priority a nabídky.
 
-- Skupiny jsou logické kolekce souvisejících příkazů, například skupina příkazů **Vyjmout**, **Kopírovat**a **Vložit** . Skupiny jsou příkazy, které se zobrazují v nabídkách.
+- Skupiny jsou logické kolekce souvisejících příkazů, například skupina příkazů **Vyjmout**, **Kopírovat** a **Vložit** . Skupiny jsou příkazy, které se zobrazují v nabídkách.
 
 - Priorita určuje pořadí, ve kterém se jednotlivé příkazy ve skupině zobrazí v nabídce.
 

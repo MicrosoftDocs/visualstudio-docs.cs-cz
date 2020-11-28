@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Lokalizace funkce | Microsoft Docs'
+description: Naučte se lokalizovat názvy a popisy funkcí na SharePointu tím, že nahradíte pevně kódované řetězcové hodnoty výrazy, které odkazují na lokalizované prostředky.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b0d15654ba48b6c95cf2b2f7fa4f9cd665f0959a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3865c11c67fd826e0ce914b6aeb88364da3212b7
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016144"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305193"
 ---
 # <a name="how-to-localize-a-feature"></a>Postupy: Lokalizace funkce
   Ve výchozím nastavení používají tituly a popisy funkcí pevně zakódované řetězcové hodnoty. Chcete-li lokalizovat název a popis funkce, nahraďte řetězce výrazy, které odkazují na lokalizované prostředky.
@@ -27,7 +29,7 @@ ms.locfileid: "86016144"
 
 #### <a name="to-localize-a-feature"></a>Lokalizace funkce
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu **Feature1** a pak zvolte **Přidat prostředek funkce**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu **Feature1** a pak zvolte **Přidat prostředek funkce**.
 
 2. V dialogovém okně **Přidat prostředek** , ze seznamu vyberte možnost **invariantní jazyk** jako jazykovou verzi pro soubor prostředků výchozí funkce jazyka.
 
@@ -37,7 +39,7 @@ ms.locfileid: "86016144"
 
 4. Otevřete všechny soubory prostředků v editoru prostředků a potom zadejte všechna ID řetězců a jejich hodnoty.
 
-     Například ve výchozím souboru prostředků funkce zadejte ID řetězce s hodnotou **název funkce**a druhý **řetězec s** **popisem** s hodnotou **Moje Popis funkce**. U každého lokalizovaného souboru prostředků použijte stejné ID řetězců jako v prostředku výchozí funkce, ale zadejte lokalizované řetězce pro hodnoty.
+     Například ve výchozím souboru prostředků funkce zadejte ID řetězce s hodnotou **název funkce** a druhý **řetězec s** **popisem** s hodnotou **Moje Popis funkce**. U každého lokalizovaného souboru prostředků použijte stejné ID řetězců jako v prostředku výchozí funkce, ale zadejte lokalizované řetězce pro hodnoty.
 
 5. Po zadání všech hodnot prostředku otevřete místní nabídku pro funkci (například *Feature1. Feature*) a pak zvolte možnost **Návrhář zobrazení** a otevřete funkci v Návrháři funkcí.
 
@@ -51,7 +53,7 @@ ms.locfileid: "86016144"
 
 7. Kliknutím na klávesu **F5** sestavíte a spustíte aplikaci.
 
-8. V SharePointu otevřete nabídku **Akce webu** , zvolte **nastavení lokality**a potom v části **Akce webu** zvolte odkaz **Spravovat funkce webu** .
+8. V SharePointu otevřete nabídku **Akce webu** , zvolte **nastavení lokality** a potom v části **Akce webu** zvolte odkaz **Spravovat funkce webu** .
 
 9. Ve službě SharePoint změňte jazyk zobrazení z výchozí hodnoty.
 

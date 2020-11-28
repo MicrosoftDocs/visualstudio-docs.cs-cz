@@ -1,5 +1,7 @@
 ---
 title: Vytváření modulu plug-in správy zdrojových kódů | Microsoft Docs
+description: Naučte se, jak vytvořit modul plug-in správy zdrojového kódu, který přidá schopnost správy zdrojového kódu do integrovaného vývojového prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e0d9dc54a61cabe7bdd5c21c10abf0def34ff6a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ae887e8752e1603af173ed569d19a6602ac84f0
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709174"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305372"
 ---
 # <a name="create-a-source-control-plug-in"></a>Vytvoření modulu plug-in správy zdrojového kódu
 Sada Visual Studio SDK poskytuje prostředky, které umožňují přidat schopnost správy zdrojového kódu do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE). Umožňuje použít všechny knihovny DLL modulu plug-in, které jsou v souladu s rozhraním API modulu plug-in správy zdrojového kódu popsaným v této dokumentaci.

@@ -1,5 +1,7 @@
 ---
 title: Listovat paměť – příkaz
+description: Přečtěte si o příkazu výpis paměti a o tom, jak zobrazuje obsah zadaného rozsahu paměti.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c500b1b516c2b1ab1bc66b7970fccc4ec7a85baa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 696cb36f932a1a79388d94d749b4b5d4bff7d0c2
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568708"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305331"
 ---
 # <a name="list-memory-command"></a>Listovat paměť – příkaz
 Zobrazí obsah zadaného rozsahu paměti.
@@ -70,11 +72,11 @@ Tady je seznam dostupných aliasů pro příkaz **Debug. ListMemory –** :
 
 |Alias|Příkazy a přepínače|
 |-----------| - |
-|**trojrozměrné**|Debug. ListMemory –|
+|**d**|Debug. ListMemory –|
 |**&**|Ladit. ListMemory –/ANSI|
 |**inženýr**|Debug. ListMemory –/Format: OneByte|
 |**DC**|Debug. ListMemory –/Format: FourBytes/ANSI|
-|**DD**|Debug. ListMemory –/Format: FourBytes|
+|**dd**|Debug. ListMemory –/Format: FourBytes|
 |**příznak**|Debug. ListMemory –/Format: float|
 |**DQ**|Debug. ListMemory –/Format: EightBytes|
 |**du**|Ladit. ListMemory –/Unicode|

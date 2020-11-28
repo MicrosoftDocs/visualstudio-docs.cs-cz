@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků | Microsoft Docs'
+description: Označte ovládací prvky jako bezpečné ovládací prvky v vlastnosti položky projektu služby SharePoint nebo v Návrháři balíčku při přidání sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cd7ed13504d3d91f4239a8ea070454e1c31b1114
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 024cd50fc36b84addca11dc3c0f23cdc64fa507d
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016253"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304509"
 ---
 # <a name="how-to-mark-controls-as-safe-controls"></a>Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků
-  Z důvodu zabezpečení rozlišuje SharePoint mezi webovými ovládacími prvky, které jsou chráněny proti vkládání skriptu a webovým ovládacím prvkům, které nejsou. K chráněným ovládacím prvkům nebo *bezpečným ovládacím prvkům*může mít přístup nedůvěryhodní uživatelé. Ovládací prvky lze označit jako bezpečné v vlastnosti položky projektu služby SharePoint nebo v **Návrháři balíčku** při přidání sestavení do balíčku. Další informace najdete v tématu
+  Z důvodu zabezpečení rozlišuje SharePoint mezi webovými ovládacími prvky, které jsou chráněny proti vkládání skriptu a webovým ovládacím prvkům, které nejsou. K chráněným ovládacím prvkům nebo *bezpečným ovládacím prvkům* může mít přístup nedůvěryhodní uživatelé. Ovládací prvky lze označit jako bezpečné v vlastnosti položky projektu služby SharePoint nebo v **Návrháři balíčku** při přidání sestavení do balíčku. Další informace najdete v tématu
 
 - [web.config nastavení souboru se změní](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) a [registruje sestavení webové části jako bezpečný ovládací prvek](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11)).
 
@@ -43,7 +45,7 @@ ms.locfileid: "86016253"
 
 4. V dialogovém okně **položky bezpečného řízení** klikněte dvakrát na tlačítko **Přidat** a přidejte dvě položky bezpečného řízení do podokna **Členové** : jeden pro tlačítko a druhý pro textové pole.
 
-5. Zvolte první položku bezpečného řízení a pak změňte hodnotu vlastnosti **Safe** na **false**, vlastnost **název typu** na **Button1**a její vlastnost **Safe** na **hodnotu false**.
+5. Zvolte první položku bezpečného řízení a pak změňte hodnotu vlastnosti **Safe** na **false**, vlastnost **název typu** na **Button1** a její vlastnost **Safe** na **hodnotu false**.
 
      Tento krok určuje ovládací prvek tlačítko jako nezabezpečený ovládací prvek.
 
@@ -67,11 +69,11 @@ ms.locfileid: "86016253"
 
 4. Vytvořte další řešení SharePoint.
 
-5. V **Průzkumník řešení**otevřete místní nabídku pro soubor *Package. Package* a pak zvolte **otevřít** . otevře se **Návrhář balíčku**.
+5. V **Průzkumník řešení** otevřete místní nabídku pro soubor *Package. Package* a pak zvolte **otevřít** . otevře se **Návrhář balíčku**.
 
-6. V **Návrháři balíčků**klikněte na kartu **Upřesnit** .
+6. V **Návrháři balíčků** klikněte na kartu **Upřesnit** .
 
-7. V části **Další sestavení**zvolte tlačítko **Přidat** a poté ze seznamu zvolte možnost **Přidat existující sestavení** .
+7. V části **Další sestavení** zvolte tlačítko **Přidat** a poté ze seznamu zvolte možnost **Přidat existující sestavení** .
 
 8. V dialogovém okně **Přidat existující sestavení** klikněte na tlačítko se třemi tečkami (![Elipsa ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.gif "Elipsa ASP.NET Mobile Designer")) vedle **cesty ke zdroji**.
 
@@ -94,7 +96,7 @@ ms.locfileid: "86016253"
     |Bezpečné proti skriptu|Zrušte zaškrtnutí políčka **bezpečné proti skriptu** .|
 
     > [!NOTE]
-    > Hodnota **názvu sestavení** pro sestavení přidaná prostřednictvím karty **Upřesnit** v **Návrháři balíčku** nemůže být token, musí se jednat o sestavení se silným názvem. Další informace naleznete v tématu [vytváření a používání sestavení se silným názvem](/previous-versions/dotnet/netframework-4.0/xwb8f617(v=vs.100)).
+    > Hodnota **názvu sestavení** pro sestavení přidaná prostřednictvím karty **Upřesnit** v **Návrháři balíčku** nemůže být token, musí se jednat o sestavení se silným názvem. Další informace naleznete v tématu [vytváření a používání Strong-Named sestavení](/previous-versions/dotnet/netframework-4.0/xwb8f617(v=vs.100)).
 
 13. Chcete-li vytvořit další položku bezpečného řízení, vyberte klávesu **TAB** .
 

@@ -1,5 +1,7 @@
 ---
 title: Devenv – přepínače příkazového řádku
+description: Přečtěte si o přepínačích příkazového řádku devenv a o tom, jak je použít k nastavení možností IDE, a také sestavování, ladění a nasazování projektů, a to vše z příkazového řádku.
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed7a36ad561daf87ec65db0f6c51c9dd7833eb9e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 597a3f7e9a9b36d52f55a9215891c40b18f1a9e9
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82255567"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305513"
 ---
 # <a name="devenv-command-line-switches"></a>Devenv – přepínače příkazového řádku
 
@@ -62,7 +64,7 @@ Pravidla syntaxe pro `devenv` přepínače se podobají pravidlům pro další n
 
 Následující přepínače příkazového řádku zobrazují integrované vývojové prostředí (IDE) a dělají popsaný úkol.
 
-|Přepínač příkazového řádku|Popis|
+|Přepínač příkazového řádku|Description|
 | - |-----------------|
 |[/Command](command-devenv-exe.md)|Spustí integrované vývojové prostředí (IDE) a provede zadaný příkaz.<br /><br /> `devenv /command "nav https://docs.microsoft.com/"`|
 |[/DebugExe](debugexe-devenv-exe.md)|Načte spustitelný soubor C++ pod ovládacím prvkem ladicího programu. Tento přepínač není k dispozici pro Visual Basic nebo pro spustitelné soubory v jazyce C#. Další informace najdete v tématu [automatické spuštění procesu v ladicím programu](../../debugger/debug-multiple-processes.md#BKMK_Automatically_start_an_process_in_the_debugger).<br /><br /> `devenv /debugexe mysln.exe`|
@@ -76,11 +78,11 @@ Následující přepínače příkazového řádku zobrazují integrované vývo
 |[/Run nebo/R](run-devenv-exe.md)|Zkompiluje a spustí zadané řešení.<br /><br /> `devenv /run mysln.sln`|
 |[/RunExit](runexit-devenv-exe.md)|Zkompiluje a spustí zadané řešení, minimalizuje integrované vývojové prostředí (IDE) při spuštění řešení a po skončení běhu řešení ukončí prostředí IDE.<br /><br /> `devenv /runexit mysln.sln`|
 |[/SafeMode](safemode-devenv-exe.md)|Spustí aplikaci Visual Studio v nouzovém režimu. Tento přepínač načte jenom výchozí prostředí, výchozí služby a dodávané verze balíčků třetích stran.<br /><br /> Tento přepínač nepřijímá žádné argumenty.|
-|[/UseEnv](useenv-devenv-exe.md)|Způsobí, že rozhraní IDE použije proměnné prostředí PATH, INCLUDE, LIBPATH a LIB pro kompilaci C++. Tento přepínač se instaluje s úlohou **vývoj desktopových aplikací v C++** . Další informace naleznete v tématu [Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds).|
+|[/UseEnv](useenv-devenv-exe.md)|Způsobí, že rozhraní IDE použije proměnné prostředí PATH, INCLUDE, LIBPATH a LIB pro kompilaci C++. Tento přepínač se instaluje s úlohou **vývoj desktopových aplikací v C++** . Další informace najdete v tématu [Nastavení cesty a proměnných prostředí pro Command-Line sestavení](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds).|
 
 Následující přepínače příkazového řádku nezobrazují integrované vývojové prostředí (IDE).
 
-|Přepínač příkazového řádku|Popis|
+|Přepínač příkazového řádku|Description|
 | - |-----------------|
 |[/?](q-devenv-exe.md)|Zobrazí nápovědu pro `devenv` přepínače v **okně příkazového řádku**.<br /><br /> Tento přepínač nepřijímá žádné argumenty.|
 |[/Build](build-devenv-exe.md)|Sestavení zadaného řešení nebo projektu podle konfigurace zadaného řešení.<br /><br /> `devenv mysln.sln /build`|

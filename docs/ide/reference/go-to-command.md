@@ -1,5 +1,7 @@
 ---
 title: Přejít na – příkaz
+description: Přečtěte si o příkazu Přejít na a o tom, jak přesune kurzor na určený řádek.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 535906d8b8d7f8ba0c2984d22ceead18a0d47c2d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0ef161cb8108ed3244c263ee51fee4251fc05d8
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569202"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305210"
 ---
 # <a name="go-to-command"></a>Přejít na – příkaz
 Přesune kurzor na zadaný řádek.

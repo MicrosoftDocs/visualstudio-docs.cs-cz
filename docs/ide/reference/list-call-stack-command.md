@@ -1,5 +1,7 @@
 ---
 title: Listovat zásobník volání – příkaz
+description: Přečtěte si o příkazu výpis zásobníku volání a o tom, jak zobrazuje aktuální zásobník volání.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34de768f41079311505ae7948502bb4356814ec7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 845d48f6a0fcc2b844777870bd7c9551f4a4d471
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770685"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305347"
 ---
 # <a name="list-call-stack-command"></a>Listovat zásobník volání – příkaz
 Zobrazí aktuální zásobník volání.
@@ -47,35 +49,35 @@ Nepovinný parametr. Maximální počet zásobníků volání, které se mají z
 
 /ShowTypes: `yes`&#124;`no` [nebo]/t: `yes`&#124;`no`
 
-Nepovinný parametr. Určuje, zda se mají zobrazit typy parametrů. Výchozí hodnota je `yes` .
+Nepovinný parametr. Určuje, zda se mají zobrazit typy parametrů. Výchozí hodnota je `yes`.
 
 /ShowNames: `yes`&#124;`no` [nebo]/n: `yes`&#124;`no`
 
-Nepovinný parametr. Určuje, zda se mají zobrazovat názvy parametrů. Výchozí hodnota je `yes` .
+Nepovinný parametr. Určuje, zda se mají zobrazovat názvy parametrů. Výchozí hodnota je `yes`.
 
 /ShowValues: `yes`&#124;`no` [nebo]/v: `yes`&#124;`no`
 
-Nepovinný parametr. Určuje, zda se mají zobrazovat hodnoty parametrů. Výchozí hodnota je `yes` .
+Nepovinný parametr. Určuje, zda se mají zobrazovat hodnoty parametrů. Výchozí hodnota je `yes`.
 
 /ShowModule: `yes`&#124;`no` [nebo]/m: `yes`&#124;`no`
 
-Nepovinný parametr. Určuje, zda se má zobrazit název modulu. Výchozí hodnota je `yes` .
+Nepovinný parametr. Určuje, zda se má zobrazit název modulu. Výchozí hodnota je `yes`.
 
 /ShowLineOffset: `yes`&#124;`no` [nebo]/#: `yes`&#124;`no`
 
-Nepovinný parametr. Určuje, zda se má zobrazit posun řádku. Výchozí hodnota je `no` .
+Nepovinný parametr. Určuje, zda se má zobrazit posun řádku. Výchozí hodnota je `no`.
 
 /ShowByteOffset: `yes`&#124;`no` [nebo]/b: `yes`&#124;`no`
 
-Nepovinný parametr. Určuje, zda se má zobrazovat posun bajtů. Výchozí hodnota je `no` .
+Nepovinný parametr. Určuje, zda se má zobrazovat posun bajtů. Výchozí hodnota je `no`.
 
 /ShowLanguage: `yes`&#124;`no` [nebo]/l: `yes`&#124;`no`
 
-Nepovinný parametr. Určuje, zda se má jazyk zobrazit. Výchozí hodnota je `no` .
+Nepovinný parametr. Určuje, zda se má jazyk zobrazit. Výchozí hodnota je `no`.
 
 /IncludeCallsAcrossThreads: `yes`&#124;`no` [nebo]/i: `yes`&#124;`no`
 
-Nepovinný parametr. Určuje, zda se mají zahrnout volání do nebo z jiných vláken. Výchozí hodnota je `no` .
+Nepovinný parametr. Určuje, zda se mají zahrnout volání do nebo z jiných vláken. Výchozí hodnota je `no`.
 
 /ShowExternalCode: `yes`&#124;`no`
 

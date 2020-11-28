@@ -1,5 +1,7 @@
 ---
 title: Nástroj CreateExpInstance | Microsoft Docs
+description: Přečtěte si o nástroji CreateExpInstance, který umožňuje vytvořit, obnovit nebo odstranit experimentální instanci sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a6b302976495e6067fad14317856cda4ac4625f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c02e85a96d59645787d3018100949369d52c8980
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709244"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305377"
 ---
 # <a name="createexpinstance-utility"></a>Nástroj CreateExpInstance
 Pomocí nástroje **CreateExpInstance** můžete vytvořit, obnovit nebo odstranit experimentální instanci sady Visual Studio. Experimentální instanci můžete použít k ladění a testování rozšíření sady Visual Studio, aniž byste museli měnit příslušný produkt.
@@ -44,7 +46,7 @@ CreateExpInstance.exe [/Create | /Reset | /Clean] /VSInstance=VsInstance /RootSu
 ## <a name="remarks"></a>Poznámky
  Když pracujete s rozšířením sady Visual Studio, můžete stisknutím klávesy F5 otevřít výchozí experimentální instanci a nainstalovat aktuální rozšíření. Pokud není k dispozici žádná experimentální instance, Visual Studio vytvoří jednu, která má výchozí nastavení.
 
- Výchozí umístění experimentální instance závisí na čísle verze sady Visual Studio. Například pro Visual Studio 2015 je umístění *%localappdata%\Microsoft\VisualStudio\14.0Exp \\ *. Všechny soubory v umístění adresáře jsou považovány za součást této instance. Žádná další experimentální instance nebude aplikací Visual Studio načtena, pokud nebude název adresáře změněn na výchozí umístění.
+ Výchozí umístění experimentální instance závisí na čísle verze sady Visual Studio. Například pro Visual Studio 2015 je umístění *%localappdata%\Microsoft\VisualStudio\14.0Exp \\*. Všechny soubory v umístění adresáře jsou považovány za součást této instance. Žádná další experimentální instance nebude aplikací Visual Studio načtena, pokud nebude název adresáře změněn na výchozí umístění.
 
  Visual Studio nepřistupuje k systémovému registru při otevření experimentální instance. To se liší od dřívějších verzí sady Visual Studio, které používaly experimentální verzi podregistru.
 
