@@ -1,5 +1,7 @@
 ---
 title: Spuštění testování částí v podobě 64bitového procesu
+description: Naučte se spouštět testy jednotek a zachytit informace o pokrytí kódu jako 64 proces. Musíte mít 64 počítač.
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 3c5cb51232457a43200c8a71ace51cc4b8a63e02
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d18a97a3cf8f680e7bfe3d679e8e57f7cc716fb
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88507983"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329065"
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>Spuštění testování částí v podobě 64bitového procesu
 
@@ -26,7 +28,7 @@ Pokud máte 64 počítač, můžete spustit testy jednotek a zachytit informace 
 1. Pokud byl váš kód nebo testy zkompilován jako 32bitový/x86, ale nyní je chcete spouštět jako 64 proces, zkompilujte je znovu jako **jakýkoli procesor**.
 
    ::: moniker range="vs-2017"
-   Případně můžete také zkompilovat projekt jako **64-bit**v aplikaci Visual Studio 2017.
+   Případně můžete také zkompilovat projekt jako **64-bit** v aplikaci Visual Studio 2017.
    ::: moniker-end
 
     > [!TIP]
@@ -35,10 +37,10 @@ Pokud máte 64 počítač, můžete spustit testy jednotek a zachytit informace 
 2. Nastavte testy jednotek tak, aby se spouštěly jako 64 proces.
 
    ::: moniker range=">=vs-2019"
-   V nabídce aplikace Visual Studio zvolte možnost **test**a pak zvolte možnost **Architektura procesoru pro projekty anycpu**. Zvolením možnosti **x64** spustíte testy jako 64 proces.
+   V nabídce aplikace Visual Studio zvolte možnost **test** a pak zvolte možnost **Architektura procesoru pro projekty anycpu**. Zvolením možnosti **x64** spustíte testy jako 64 proces.
    ::: moniker-end
    ::: moniker range="vs-2017"
-   V nabídce aplikace Visual Studio zvolte možnost **test**, zvolte možnost **nastavení testu**a pak zvolte možnost **Architektura procesoru**. Zvolením možnosti **x64** spustíte testy jako 64 proces.
+   V nabídce aplikace Visual Studio zvolte možnost **test**, zvolte možnost **nastavení testu** a pak zvolte možnost **Architektura procesoru**. Zvolením možnosti **x64** spustíte testy jako 64 proces.
    ::: moniker-end
 
    \- ani

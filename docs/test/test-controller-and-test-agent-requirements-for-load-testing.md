@@ -1,5 +1,6 @@
 ---
 title: Testovací kontrolér/požadavky testovacího agenta (zátěžové testování)
+description: Přečtěte si o požadavcích testovacího kontroleru a testovacího agenta pro zátěžové testování. Visual Studio podporuje několik typů testů.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
@@ -10,12 +11,12 @@ ms.assetid: 372d97ce-12e4-46a9-9863-da508adba68f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a5d4e0562ed15aa44beba858f46870bf672d46ba
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 6668e669fdc26db9d81c7176aeee16e5af42987b
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810546"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330183"
 ---
 # <a name="test-controller-and-test-agent-requirements-for-load-testing"></a>Testovací kontrolér a požadavky testovacího agenta pro zátěžové testování
 
@@ -33,14 +34,14 @@ V následující tabulce jsou uvedeny doporučené hardwarové požadavky pro na
 
 |**Konfigurace**|**Komponenta**|**Procesor**|**REŽIM**|**Memory (Paměť)**|
 |-|-------------------|-|------------|-|
-|Virtuální uživatelé < 500|Testovací agent|2,6 GHz|10 GB|2 GB|
-|Virtuální uživatelé < 1000|Testovací agent|Dvoujádrový procesor 2,6 GHz|10 GB|2 GB|
+|Virtuální uživatelé < 500|Testovací agent|2,6 GHz|10 GB|2 GB|
+|Virtuální uživatelé < 1000|Testovací agent|Dvoujádrový procesor 2,6 GHz|10 GB|2 GB|
 |Virtuální uživatelé N x 1000|Testovací agent|Horizontální navýšení kapacity na N agentů s duální 2,6 GHz|OVLADAČ|GB|
 |\< 30 počítačů v testovacím prostředí. To zahrnuje agenty a testované servery.|Test Controller|2,6 GHz|||
 |N x 30 počítačů v testovacím prostředí. To zahrnuje agenty a testované servery.|Test Controller|Procesory N 2,6 GHz|||
 
 > [!NOTE]
-> Počet virtuálních uživatelů se bude výrazně lišit od testu až po otestování. Klíčovou příčinou této odchylky je odchylka v *časech pomýšlení*nebo zpoždění uživatele. Další informace najdete v tématu [úpravy časů pomýšlení pro simulaci zpoždění lidské interakce webu](../test/edit-think-times-in-load-test-scenarios.md). V zátěžovém testu jsou webové testy obecně efektivnější a generují větší zátěž než testování částí. Čísla v předchozí tabulce jsou platná pro spouštění webových testů s 3-5 sekundami v typické webové aplikaci.
+> Počet virtuálních uživatelů se bude výrazně lišit od testu až po otestování. Klíčovou příčinou této odchylky je odchylka v *časech pomýšlení* nebo zpoždění uživatele. Další informace najdete v tématu [úpravy časů pomýšlení pro simulaci zpoždění lidské interakce webu](../test/edit-think-times-in-load-test-scenarios.md). V zátěžovém testu jsou webové testy obecně efektivnější a generují větší zátěž než testování částí. Čísla v předchozí tabulce jsou platná pro spouštění webových testů s 3-5 sekundami v typické webové aplikaci.
 
 Zde uvedené pokyny jsou k dispozici jako obecné pokyny k plánování hardwaru. Výkon testu se výrazně liší v závislosti na množství testovacích dat a počtu testovacích agentů. V případě testovacích agentů je dostupná rychlost procesoru a paměť, aby se zátěž testu omezila. Řadiče testů potřebují větší prostředky v závislosti na počtu testovacích agentů a množství dat zapojených do testů.
 

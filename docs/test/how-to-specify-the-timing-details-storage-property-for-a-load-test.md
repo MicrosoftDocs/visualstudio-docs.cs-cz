@@ -1,5 +1,6 @@
 ---
 title: Vlastnost úložiště podrobností časování (nastavení běhu zátěžového testu)
+description: Naučte se, jak upravit vlastnost úložiště podrobností časování pro nastavení spuštění. Platné hodnoty jsou pouze podrobnosti o všech jednotlivých podrobnostech, None a statistice.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,16 +11,16 @@ ms.assetid: 867a9c21-0909-4963-bc02-d41e9393008c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 132c55b4cd6f716d8983358064f749eabeb9ba88
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 94603c2da0eb339df52aa58e3b2bb5666b75ead7
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810559"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330014"
 ---
 # <a name="how-to-specify-the-timing-details-storage-property-for-a-load-test-run-setting"></a>Postupy: určení vlastnosti úložiště podrobností časování pro nastavení běhu zátěžového testu
 
-Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete pomocí **Editor zátěžového testu** změnit nastavení tak, aby vyhovovalo vašim požadavkům na testování a cílům.
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem** můžete pomocí **Editor zátěžového testu** změnit nastavení tak, aby vyhovovalo vašim požadavkům na testování a cílům.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -36,7 +37,7 @@ Hodnotu vlastnosti **úložiště podrobnosti časování** nastavení běhu mů
 
   **Požadavky na vlastnost úložiště podrobností časování**
 
-  Pokud je povolena vlastnost **úložiště podrobností časování** , pak bude čas pro spuštění každého jednotlivého testu, transakce a stránky během zátěžového testu uložen v úložišti výsledků zátěžového testu. To umožňuje zobrazení dat 90 a 95. percentilu v **analyzátoru zátěžového testu** v tabulkách **testy**, **transakce**a **stránky** .
+  Pokud je povolena vlastnost **úložiště podrobností časování** , pak bude čas pro spuštění každého jednotlivého testu, transakce a stránky během zátěžového testu uložen v úložišti výsledků zátěžového testu. To umožňuje zobrazení dat 90 a 95. percentilu v **analyzátoru zátěžového testu** v tabulkách **testy**, **transakce** a **stránky** .
 
   Pokud je vlastnost **úložiště podrobností časování** povolena, nastavením její hodnoty na buď **StatisticsOnly** nebo **AllIndividualDetails**, všechny jednotlivé testy, stránky a transakce budou časované a data percentilu se vypočítají z jednotlivých časových údajů. Rozdíl je v tom, že s možností **StatisticsOnly** po výpočtu dat percentilu se jednotlivá data časování odstraní z úložiště. Tím se sníží množství místa, které je nutné v úložišti, pokud jsou použity podrobnosti časování. Můžete však chtít zpracovat podrobná data časování jiným způsobem pomocí nástrojů SQL. v takovém případě by měla být použita možnost **AllIndividualDetails** , aby byly k dispozici podrobná data časování pro toto zpracování. Kromě toho, pokud nastavíte vlastnost na **AllIndividualDetails**, pak můžete analyzovat aktivitu virtuálního uživatele pomocí **grafu aktivity virtuálního uživatele** v **analyzátoru zátěžového testu** po dokončení zátěžového testu. Další informace najdete v tématu [Analýza aktivity virtuálních uživatelů v zobrazení podrobností](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).
 

@@ -1,5 +1,7 @@
 ---
 title: Izolace testovaného kódu pomocí zástupného rozhraní Microsoft
+description: Seznamte se s tím, jak Microsoft předstírá pomáhá izolovat testovaný kód nahrazením jiných částí aplikace pomocí zástupných procedur nebo překrytí.
+ms.custom: SEO-VS-2020
 ms.date: 06/03/2020
 ms.topic: how-to
 ms.author: mikejo
@@ -10,12 +12,12 @@ author: mikejo5000
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: e837b1a0e9a1d8fe06342352e4eedf5ce0fa9117
-ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
+ms.openlocfilehash: aa1f0505d37059ce65da80fcf483473610cf2f6d
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93325955"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329533"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>Izolace testovaného kódu pomocí Napodobenin Microsoft
 
@@ -86,10 +88,10 @@ Podrobnější popis najdete v tématu použití zástupných [procedur k izolac
    1. V **Průzkumník řešení** 
        - Pro starší projekt .NET Framework (jiný styl než SDK) rozbalte uzel **odkazy** projektu testování jednotek.
        ::: moniker range=">=vs-2019"
-       - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení** , **projektů** nebo **balíčků**.
+       - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení**, **projektů** nebo **balíčků**.
        ::: moniker-end
        - Pokud pracujete v Visual Basic, vyberte **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** a zobrazte tak uzel **odkazy** .
-   2. Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete překrýt **data a času** , vyberte **System.dll**.
+   2. Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete překrýt **data a času**, vyberte **System.dll**.
 
    3. V místní nabídce vyberte možnost **Přidat napodobeniny sestavení**.
 

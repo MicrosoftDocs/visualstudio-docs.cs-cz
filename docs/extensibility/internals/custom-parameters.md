@@ -1,5 +1,7 @@
 ---
 title: Vlastní parametry | Microsoft Docs
+description: Přečtěte si, jak vytvořit vlastní parametry, které řídí fungování průvodce po spuštění Průvodce úpravou souboru. vsz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cd52a49daa7d57a21d8cb0896f7108efa09e32b2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2fd2ba746f10094a79f1b37e57ba4ca90ff117b
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708938"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328441"
 ---
 # <a name="custom-parameters"></a>Vlastní parametry
 Vlastní parametry řídí operaci průvodce po spuštění průvodce. Související soubor *. vsz* poskytuje pole uživatelsky definovaných parametrů, které jsou zabaleny integrovaným vývojovým prostředím (IDE) a předány do průvodce jako pole řetězců při spuštění průvodce. Průvodce pak analyzuje pole řetězců a používá informace k řízení skutečné operace průvodce. Tímto způsobem může průvodce přizpůsobit funkčnost v závislosti na obsahu souboru *. vsz* .

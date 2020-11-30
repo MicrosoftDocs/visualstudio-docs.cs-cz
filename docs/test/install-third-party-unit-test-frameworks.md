@@ -1,5 +1,7 @@
 ---
 title: Instalace systémů testování částí od třetích stran
+description: Průzkumník testů sady Visual Studio může spouštět testy z libovolného rozhraní pro testování částí, které pro něj vyvinulo rozhraní adaptéru.
+ms.custom: SEO-VS-2020
 ms.date: 07/09/2020
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c274f203b9bf2746716c0625c61141aaa332977a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6433d665157c186a390e2963ef7ad1447b2f982
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387184"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329975"
 ---
 # <a name="install-unit-test-frameworks"></a>Nainstalovat rozhraní pro testování částí
 
@@ -33,7 +35,7 @@ Nainstalujte rozhraní pro testování částí od třetích stran pomocí **Spr
 
 1. Klikněte pravým tlačítkem na projekt, který bude obsahovat testovací kód a vyberte možnost **Spravovat balíčky NuGet**.
 
-2. Ve **Správci balíčků NuGet**vyhledejte testovací rozhraní, které chcete nainstalovat, a pak klikněte na **nainstalovat**.
+2. Ve **Správci balíčků NuGet** vyhledejte testovací rozhraní, které chcete nainstalovat, a pak klikněte na **nainstalovat**.
 
    ![Správce balíčků NuGet v aplikaci Visual Studio](media/vs-2019/nuget-package-manager.png)
 

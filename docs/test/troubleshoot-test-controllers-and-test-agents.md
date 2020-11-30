@@ -1,5 +1,7 @@
 ---
 title: Řešení potíží s testovacími kontroléry a testovacími agenty
+description: Přečtěte si o některých běžných problémech, se kterými se můžete setkat při práci s testovacími kontroléry a testovacími agenty ve Visual Studiu.
+ms.custom: SEO-VS-2020
 ms.date: 10/20/2016
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 77329348-3a5d-43de-b6cb-90f93296a081
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 51d7e15ec71eec7134dfc49b3515385970e593a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e86811739df2d59e3de7980cfa346da68cc0eb43
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565952"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330144"
 ---
 # <a name="strategies-for-troubleshooting-test-controllers-and-test-agents-in-load-tests"></a>Strategie pro řešení potíží s testovacími kontroléry a testovacími agenty v zátěžových testech
 
@@ -97,7 +99,7 @@ Chcete-li tuto chybu opravit, je nutné vytvořit vazby kontroleru testů k jedn
 
 ### <a name="to-obtain-the-ip-address-of-the-network-adapter"></a>Získání IP adresy síťového adaptéru
 
-1. Zvolte možnost **Start**a pak zvolte možnost **Spustit**.
+1. Zvolte možnost **Start** a pak zvolte možnost **Spustit**.
 
      Zobrazí se dialogové okno **Spustit** .
 
@@ -105,7 +107,7 @@ Chcete-li tuto chybu opravit, je nutné vytvořit vazby kontroleru testů k jedn
 
      Otevře se příkazový řádek.
 
-3. Zadejte příkaz `ipconfig /all`.
+3. Zadejte `ipconfig /all`.
 
      Zobrazí se IP adresy pro vaše síťové adaptéry. Poznamenejte si IP adresu síťového adaptéru, ke kterému chcete vytvořit vazby řadiče.
 

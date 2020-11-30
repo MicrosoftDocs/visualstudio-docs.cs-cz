@@ -1,5 +1,7 @@
 ---
 title: Naučte se testovat kód pomocí živého testování částí
+description: Naučte se používat Live Unit Testing vytvořením jednoduché knihovny tříd, která cílí na .NET Standard a vytvoření projektu MSTest, který cílí na .NET Core pro otestování.
+ms.custom: SEO-VS-2020
 ms.date: 04/03/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ef0fbd5c422d16df4e361ff95f4ac8deabdd5bae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce2376f2dc3cb6abeb11b328452defb891949558
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287009"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329494"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Začínáme s funkcí Live Unit Testing
 
@@ -24,7 +26,7 @@ Live Unit Testing lze použít k testování řešení, která cílí na .NET Fr
 
 Kompletní řešení C# se dá stáhnout z úložiště [MicrosoftDocs/VisualStudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs/tree/master/docs/test/samples/csharp/UtilityLibraries/) na GitHubu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Tento kurz vyžaduje, abyste nainstalovali edici Visual Studio Enterprise s využitím úlohy **vývoje .NET Core pro různé platformy** .
 
@@ -34,7 +36,7 @@ Začněte vytvořením řešení sady Visual Studio s názvem UtilityLibraries, 
 
 Řešení je pouze kontejner pro jeden nebo více projektů. Chcete-li vytvořit prázdné řešení, otevřete aplikaci Visual Studio a proveďte následující kroky:
 
-1. **File**  >  **New**  >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte soubor nový**projekt** .
+1. **File**  >  **New**  >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte soubor nový **projekt** .
 
 1. Do vyhledávacího pole šablony zadejte **řešení** a pak vyberte šablonu **prázdného řešení** . Pojmenujte projekt **UtilityLibraries**.
 
@@ -48,7 +50,7 @@ Začněte vytvořením řešení sady Visual Studio s názvem UtilityLibraries, 
 
 Teď, když jste vytvořili řešení, vytvoříte knihovnu tříd s názvem StringLibrary, která obsahuje řadu metod rozšíření pro práci s řetězci.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení UtilityLibraries a vyberte **Přidat**  >  **Nový projekt**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení UtilityLibraries a vyberte **Přidat**  >  **Nový projekt**.
 
 ::: moniker range="vs-2017"
 
@@ -90,13 +92,13 @@ Teď, když jste vytvořili řešení, vytvoříte knihovnu tříd s názvem Str
 
    - `HasEmbeddedSpaces` Vrátí, `true` zda řetězec obsahuje vložený prázdný znak. v opačném případě vrátí `false` .
 
-6. **Build**  >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte**řešení** sestavení Build. Sestavení by mělo být úspěšné.
+6. **Build**  >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte **řešení** sestavení Build. Sestavení by mělo být úspěšné.
 
 ## <a name="create-the-test-project"></a>Vytvoření testovacího projektu
 
 Dalším krokem je vytvoření projektu testu jednotek pro otestování knihovny StringLibrary. Testy jednotek vytvoříte provedením následujících kroků:
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení UtilityLibraries a vyberte **Přidat**  >  **Nový projekt**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení UtilityLibraries a vyberte **Přidat**  >  **Nový projekt**.
 
 ::: moniker range="vs-2017"
 
@@ -156,7 +158,7 @@ Zatím i když jste napsali testy pro knihovnu tříd StringLibrary, neudělali 
 
 1. Volitelně můžete vybrat okno editoru kódu, které obsahuje kód pro StringLibrary. Toto je buď *Class1.cs* pro projekt C# nebo *Class1. vb* pro projekt Visual Basic. (Tento krok vám umožní vizuální kontrolu výsledku testů a rozsahu pokrytí kódu, když povolíte Live Unit Testing.)
 
-1. **Test**  >  **Live Unit Testing**  >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte test Live Unit Testing**Spustit** .
+1. **Test**  >  **Live Unit Testing**  >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte test Live Unit Testing **Spustit** .
 
 1. Visual Studio spustí živý test jednotek, který automaticky spustí všechny testy.
 
@@ -260,7 +262,7 @@ V této části se seznámíte s tím, jak můžete pomocí Live Unit Testing id
 
    Všimněte si, že v okně **Automatické** hodnoty `phrase` je hodnota proměnné "Name\tDescription", což je druhý prvek pole. Testovací metoda očekává `HasEmbeddedSpaces` , že se vrátí, `true` když je tento řetězec předán, namísto toho vrátí `false` . Zjevně nerozpozná "\t", znak tabulátoru jako vložené místo.
 
-1. Vyberte **Debug**  >  **pokračovat**v ladění, stiskněte klávesu **F5**nebo klikněte na tlačítko **pokračovat** na panelu nástrojů a pokračujte v provádění testovacího programu. Protože došlo k neošetřené výjimce, test skončí.
+1. Vyberte **Debug**  >  **pokračovat** v ladění, stiskněte klávesu **F5** nebo klikněte na tlačítko **pokračovat** na panelu nástrojů a pokračujte v provádění testovacího programu. Protože došlo k neošetřené výjimce, test skončí.
 To poskytuje dostatek informací pro předběžné šetření chyby. Buď `TestHasEmbeddedSpaces` (testovací rutina) vytvořil nesprávný předpoklad, nebo `HasEmbeddedSpaces` nerozpozná správně všechny vložené mezery.
 
 1. Chcete-li problém diagnostikovat a opravit, začněte `StringLibrary.HasEmbeddedSpaces` metodou. Podívejte se na porovnání v `HasEmbeddedSpaces` metodě. Považuje se za vložené místo U + 0020. Standard Unicode ale obsahuje řadu dalších znakových mezer. To naznačuje, že kód knihovny byl nesprávně testován pro prázdný znak.

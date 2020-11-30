@@ -1,5 +1,7 @@
 ---
 title: Testování pokrytí kódu
+description: Naučte se, jak pomocí funkce pokrytí kódu v aplikaci Visual Studio určit, jaký podíl kódu projektu se testuje pomocí kódovaných testů.
+ms.custom: SEO-VS-2020
 ms.date: 07/23/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2d1b51661d9fc9a5492d123bdacd6c49d241ed87
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.openlocfilehash: c2c7bcb270184bcc140dbadef63af1315df765dc
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959772"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330053"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>Určení rozsahu testovaného kódu pomocí pokrytí kódu
 
@@ -57,7 +59,7 @@ Funkce pokrytí kódu je k dispozici pouze v edici Visual Studio Enterprise.
 2. Po spuštění testů, chcete-li zjistit, které řádky byly spuštěny, vyberte možnost ![ Zobrazit ikonu barevného pokrytí kódu ](../test/media/codecoverage-showcoloringicon.png) **Zobrazit barvy pokrytí kódu** v okně **výsledky pokrytí kódu** . Ve výchozím nastavení je kód, který je pokrytý testy, zvýrazněný světle modře.
 
    > [!TIP]
-   > Chcete-li změnit barvy nebo použít tučnou plochu, vyberte možnost **nástroje**  >  **Možnosti**  >  **prostředí**  >  **písma a barvy**  >  **Zobrazit nastavení pro: textový editor**. V části **Zobrazit položky**upravte nastavení položek pokrytí, například **Rozsah nedotčená oblast**.
+   > Chcete-li změnit barvy nebo použít tučnou plochu, vyberte možnost **nástroje**  >  **Možnosti**  >  **prostředí**  >  **písma a barvy**  >  **Zobrazit nastavení pro: textový editor**. V části **Zobrazit položky** upravte nastavení položek pokrytí, například **Rozsah nedotčená oblast**.
    >
    > ![Písma a barvy pokrytí kódu](media/vs-2019/coverage-fonts-and-colors.png)
 
@@ -124,7 +126,7 @@ Je možné vyloučit určité prvky v kódu z výpočtů pokrytí, například
 > [!TIP]
 > Vyloučení třídy nevylučuje své odvozené třídy.
 
-Například:
+Příklad:
 
 ```csharp
 using System.Diagnostics.CodeAnalysis;

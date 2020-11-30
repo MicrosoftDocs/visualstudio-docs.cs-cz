@@ -1,5 +1,7 @@
 ---
 title: Návrh tabulky příkazů jazyka XML (. Soubory vsct) | Microsoft Docs
+description: Naučte se navrhovat soubor tabulky příkazů XML (. vsct), který popisuje rozložení a vzhled položek příkazů, včetně tlačítek, polí se seznamem, nabídek a panelů nástrojů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fcd29aee98139bb151c87590b256df6b8370abff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a1ccab1eddf38e2f93cb00f1f5fdea6ce09f2f05
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708743"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328428"
 ---
 # <a name="design-xml-command-table-vsct-files"></a>Návrh souborů tabulek příkazů XML (. vsct)
 Soubor tabulky příkazů XML (*. vsct*) popisuje rozložení a vzhled položek příkazů pro VSPackage. Položky příkazů obsahují tlačítka, pole se seznamem, nabídky, panely nástrojů a skupiny položek příkazů. Tento článek popisuje soubory tabulek příkazů jazyka XML, jak ovlivňují položky příkazů a nabídky a jak je vytvořit.
@@ -25,7 +27,7 @@ Soubor tabulky příkazů XML (*. vsct*) popisuje rozložení a vzhled položek 
 
  Při vytváření nového rozhraní VSPackage spuštěním [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] šablony balíčku vygeneruje šablona soubor *. vsct* s nezbytnými prvky pro příkaz nabídky, panel nástrojů nebo vlastní editor v závislosti na vašich volbách. Tento soubor *. vsct* je pak možné upravit tak, aby splňoval požadavky specifického VSPackage. Příklady úprav souboru *. vsct* najdete v tématu věnovaném [rozšiřování nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).
 
- Chcete-li vytvořit nový prázdný soubor *. vsct* , přečtěte si téma [Postupy: vytvoření souboru *. vsct* ](../../extensibility/internals/how-to-create-a-dot-vsct-file.md). Po vytvoření přidáte elementy XML, atributy a hodnoty do souboru pro popis rozložení položky příkazu. Podrobné schéma XML naleznete v [referenčních informacích o schématu XML vsct](../../extensibility/vsct-xml-schema-reference.md).
+ Chcete-li vytvořit nový prázdný soubor *. vsct* , přečtěte si téma [Postupy: vytvoření souboru *. vsct*](../../extensibility/internals/how-to-create-a-dot-vsct-file.md). Po vytvoření přidáte elementy XML, atributy a hodnoty do souboru pro popis rozložení položky příkazu. Podrobné schéma XML naleznete v [referenčních informacích o schématu XML vsct](../../extensibility/vsct-xml-schema-reference.md).
 
 ## <a name="differences-between-ctc-and-vsct-files"></a>Rozdíly mezi soubory. CTC a. vsct
  I když jsou významy za tagy XML v souboru *. vsct* stejné jako tyto značky ve formátu souboru. *CTC* , který je nyní zastaralý, jejich implementace je trochu odlišná:

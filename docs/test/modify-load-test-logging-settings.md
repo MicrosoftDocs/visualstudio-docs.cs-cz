@@ -1,5 +1,7 @@
 ---
 title: Nastavení protokolování zátěžového testu
+description: Naučte se, jak upravit nastavení protokolování zátěžového testu, abyste mohli řídit množství shromážděných dat o výkonu, což může vést k velmi rozsáhlým souborům výsledků.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 9649226a-857d-41ef-8ec7-047b6e498033
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0c0a9967f1248c6dc23c5d70be35788ad9e05eb2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 464429ef516d3f4cd6dadd013f274139eb106a57
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75566303"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329195"
 ---
 # <a name="modify-load-test-logging-settings"></a>Změnit nastavení protokolování zátěžového testu
 

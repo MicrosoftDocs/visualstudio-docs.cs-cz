@@ -1,5 +1,7 @@
 ---
 title: Zajistěte, aby zakódované testy uživatelského rozhraní čekaly na konkrétní události
+description: Přečtěte si, jak dát pokyn k testu při přehrávání programového testu UI počkat na výskyt určitých událostí, jako je například okno se zobrazením nebo zmizí indikátor průběhu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: mikejo5000
@@ -7,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea0bd0135ca90f96c2275248da7d116ecfd92e01
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 401888eee7fb5952c69c953824f3959c2b456a4d
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286775"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329559"
 ---
 # <a name="make-coded-ui-tests-wait-for-specific-events-during-playback"></a>Zajistěte, aby kódované testy uživatelského rozhraní čekaly na konkrétní události během přehrávání.
 

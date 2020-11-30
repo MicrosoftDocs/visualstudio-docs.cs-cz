@@ -1,5 +1,7 @@
 ---
 title: Dynamické symbolické spuštění | Nástroj Microsoft IntelliTest Developer test Tool
+description: Přečtěte si, jak IntelliTest generuje vstupy pro parametrizované testy jednotek analýzou podmínek větve v programu.
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e5a3248d3f081bcab08c08110d305f0aa6235817
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 771fd167a2dc9fce8278ca53f730872a9f170eb7
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315197"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329907"
 ---
 # <a name="input-generation-using-dynamic-symbolic-execution"></a>Generování vstupu s použitím dynamického symbolického spuštění
 
@@ -59,7 +61,7 @@ V důsledku toho, že se při analýze objeví více dosažitelných metod, mů�
 
 ## <a name="integers-and-floats"></a>Celá čísla a čísla s plovoucí desetinnou čárkou
 
-[Řešitel omezení](#constraint-solver) IntelliTest určuje vstupní hodnoty testů primitivních typů, jako je **Byte**, **int**, **float**a další, aby se aktivovaly různé cesty spuštění pro test a testovaný program.
+[Řešitel omezení](#constraint-solver) IntelliTest určuje vstupní hodnoty testů primitivních typů, jako je **Byte**, **int**, **float** a další, aby se aktivovaly různé cesty spuštění pro test a testovaný program.
 
 ## <a name="objects"></a>Objekty
 
@@ -79,7 +81,7 @@ Pokud typ není viditelný nebo pokud nejsou pole [viditelná](#visibility), Int
 
 ## <a name="visibility"></a>Viditelnost
 
-.NET má model podrobné viditelnosti: typy, metody, pole a další členy můžou být **soukromé**, **veřejné**, **interní**a další.
+.NET má model podrobné viditelnosti: typy, metody, pole a další členy můžou být **soukromé**, **veřejné**, **interní** a další.
 
 Když IntelliTest generuje testy, pokusí se provést pouze akce (například volající konstruktory, metody a nastavení polí), které jsou platné s ohledem na pravidla viditelnosti .NET v rámci kontextu vygenerovaných testů.
 
@@ -133,6 +135,6 @@ Statickou třídu [PexChoose](static-helper-classes.md#pexchoose) lze použít k
 
 Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
 
-## <a name="further-reading"></a>Další materiály
+## <a name="further-reading"></a>Další čtení
 
 * [Jak to funguje?](https://devblogs.microsoft.com/devops/smart-unit-tests-a-mental-model/)

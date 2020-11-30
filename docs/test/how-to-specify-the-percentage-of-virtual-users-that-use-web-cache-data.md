@@ -1,5 +1,7 @@
 ---
 title: 'Zátěžový test: nastavte procento virtuálních uživatelů pomocí dat webové mezipaměti'
+description: Zjistěte, jak zadat procento nových vlastností uživatelů v okno Vlastnosti. Vlastnosti scénáře zátěžového testu upravíte v Editor zátěžového testu.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,16 +10,16 @@ ms.assetid: f66d5d43-4121-4487-b27f-d0a0baaf7601
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0a31ea50cdedbeb825d03de38a89200b6e8e5200
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 19568cce3fbd7abd4a74922d2a726ff7c92dd09a
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287399"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329052"
 ---
 # <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>Postupy: určení procenta virtuálních uživatelů, kteří používají data mezipaměti webu
 
-Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete změnit vlastnosti scénářů tak, aby splňovaly potřeby testování a cíle pomocí **Editor zátěžového testu**. Úplný seznam vlastností scénáře zátěžového testu a jejich popis naleznete v tématu [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem** můžete změnit vlastnosti scénářů tak, aby splňovaly potřeby testování a cíle pomocí **Editor zátěžového testu**. Úplný seznam vlastností scénáře zátěžového testu a jejich popis naleznete v tématu [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 

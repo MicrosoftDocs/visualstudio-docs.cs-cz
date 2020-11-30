@@ -1,5 +1,7 @@
 ---
 title: Spravovat Výsledky testů zatížení
+description: Naučte se spravovat data shromážděná během zátěžového testu, který je uložený v databázi SQL úložiště Load Výsledky testů.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 1cd63c4b-4f74-4133-b675-5e8fbeab25f3
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9945551469541cdcffe520844da600d758dc43b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ea27d94f4fbe4c0ebe81cf0153ce2e98a0789dd6
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286762"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328740"
 ---
 # <a name="manage-load-test-results-in-the-load-test-results-repository"></a>Správa výsledků zátěžového testu v úložišti Výsledky testů zatížení
 

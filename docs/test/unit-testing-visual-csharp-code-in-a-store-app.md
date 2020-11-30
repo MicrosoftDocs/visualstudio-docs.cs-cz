@@ -1,5 +1,7 @@
 ---
 title: Testování částí kódu v jazyce Visual C#
+description: Naučte se vytvářet testy jednotek pro třídu C# v aplikaci UWP. Tento článek ukazuje vývoj řízený testováním.
+ms.custom: SEO-VS-2020
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,12 +9,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 31fbbfaa5d16dd51776f592b89a7846936b3013f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 410d5dfefa5980bceabff99d66067987b390a615
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590862"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330079"
 ---
 # <a name="unit-test-c-code"></a>Test jednotek kódu C#
 
@@ -28,9 +30,9 @@ Tento článek ukazuje *Vývoj řízený testováním*. V tomto přístupu nejpr
 
 2. Vyhledejte a vyberte šablonu projektu **prázdná aplikace (univerzální pro Windows)** .
 
-3. Pojmenujte **matematiky**projektu.
+3. Pojmenujte **matematiky** projektu.
 
-4. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte možnost **Přidat**  >  **Nový projekt**.
+4. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení a vyberte možnost **Přidat**  >  **Nový projekt**.
 
 5. Vyhledejte a vyberte šablonu projektu **aplikace pro testování jednotek (univerzální pro Windows)** .
 
@@ -66,7 +68,7 @@ Tento článek ukazuje *Vývoj řízený testováním*. V tomto přístupu nejpr
 
 ## <a name="add-the-rooter-class-to-the-maths-project"></a>Přidat třídu Rooter do projektu matematického typu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt **matematického** typu a pak zvolte **Přidat**  >  **třídu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt **matematického** typu a pak zvolte **Přidat**  >  **třídu**.
 
 2. Pojmenujte soubor třídy *Rooter.cs*.
 
@@ -96,7 +98,7 @@ Tento článek ukazuje *Vývoj řízený testováním*. V tomto přístupu nejpr
 
 1. Přidejte odkaz z projektu RooterTests do aplikace Maths.
 
-    1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt **RooterTests** a pak zvolte **Přidat**  >  **odkaz**.
+    1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt **RooterTests** a pak zvolte **Přidat**  >  **odkaz**.
 
     2. V dialogovém okně **Přidat odkaz – RooterTests** rozbalte položku **řešení** a vyberte možnost **projekty**. Vyberte projekt **matematiky** .
 
@@ -112,7 +114,7 @@ Tento článek ukazuje *Vývoj řízený testováním*. V tomto přístupu nejpr
        using Maths;
        ```
 
-3. Přidejte test, který používá funkci **root** . Do *UnitTest.cs*přidejte následující kód:
+3. Přidejte test, který používá funkci **root** . Do *UnitTest.cs* přidejte následující kód:
 
    ```csharp
    [TestMethod]
@@ -128,11 +130,11 @@ Tento článek ukazuje *Vývoj řízený testováním*. V tomto přístupu nejpr
 
    Nový test se zobrazí v **Průzkumníku testů** v uzlu **Nespuštěné testy** .
 
-4. Aby nedošlo k chybě "datová část obsahuje dva nebo více souborů se stejnou cílovou cestou", v **Průzkumník řešení**rozbalte uzel **vlastnosti** v projektu **matematické** řetězce a pak odstraňte soubor *Default.rd.xml* .
+4. Aby nedošlo k chybě "datová část obsahuje dva nebo více souborů se stejnou cílovou cestou", v **Průzkumník řešení** rozbalte uzel **vlastnosti** v projektu **matematické** řetězce a pak odstraňte soubor *Default.rd.xml* .
 
 ::: moniker range="vs-2017"
 
-6. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+6. V **Průzkumníku testů** vyberte možnost **Spustit vše**.
 
    Řešení se sestaví a spustí a projde testy.
 
@@ -142,7 +144,7 @@ Tento článek ukazuje *Vývoj řízený testováním*. V tomto přístupu nejpr
 
 ::: moniker range=">=vs-2019"
 
-6. V **Průzkumníku testů**vyberte možnost **Spustit všechny testy**.
+6. V **Průzkumníku testů** vyberte možnost **Spustit všechny testy**.
 
    Řešení se sestaví a spustí a projde testy.
 
@@ -200,13 +202,13 @@ Nastavili jste projekty testů a aplikací a ověřili, že můžete spouštět 
 
 ::: moniker range="vs-2017"
 
-4. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+4. V **Průzkumníku testů** vyberte možnost **Spustit vše**.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. V **Průzkumníku testů**vyberte možnost **Spustit všechny testy**.
+4. V **Průzkumníku testů** vyberte možnost **Spustit všechny testy**.
 
 ::: moniker-end
 

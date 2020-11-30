@@ -1,5 +1,7 @@
 ---
 title: Instalace testovacích agentů a kontrolerů testů
+description: Naučte se používat Visual Studio Agents k orchestraci testování pomocí Azure Test Plans nebo Team Foundation Server.
+ms.custom: SEO-VS-2020
 ms.date: 04/17/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b75ae05a65ae15e82c45ec0cf43935fb0809160
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: d2ffa3a1006057169d7e4f473922ff2eebbfe7bb
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928603"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328883"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>Instalace testovacích agentů a kontrolerů testů
 
@@ -28,13 +30,13 @@ V následující tabulce jsou uvedeny požadavky na systém pro instalaci testov
 
 | Položka | Požadavky |
 | ---- | ------------ |
-| **Agenta** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
-| **Kontrolér** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
+| **Agent** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
+| **Controller** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard a Datacenter<br />Windows Server 2012 R2 |
 | **.NET Framework** | .NET Framework 4.5 |
 
 ## <a name="install-the-test-controller-and-test-agents"></a>Instalace testovacího kontroléru a testovacích agentů
 
-Agenty pro Visual Studio si můžete stáhnout z [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/downloads/?q=agents). Vyhledejte *agenty sady Visual Studio 2019*, vyberte buď možnost *Agent* , nebo *kontrolér*a pak zvolte možnost *Stáhnout*. Spusťte stažený spustitelný soubor pro instalaci testovacího agenta nebo kontroleru.
+Agenty pro Visual Studio si můžete stáhnout z [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/downloads/?q=agents). Vyhledejte *agenty sady Visual Studio 2019*, vyberte buď možnost *Agent* , nebo *kontrolér* a pak zvolte možnost *Stáhnout*. Spusťte stažený spustitelný soubor pro instalaci testovacího agenta nebo kontroleru.
 
 Agenty pro Visual Studio 2017, Visual Studio 2015 a Visual Studio 2013 můžete stáhnout ze stránky [starší verze ke stažení](https://visualstudio.microsoft.com/vs/older-downloads/) .
 
@@ -45,7 +47,7 @@ Tyto instalační programy jsou k dispozici jako soubory ISO pro jednoduchou ins
 
 Můžete kombinovat různé verze serveru TFS, Microsoft Test Manager, testovací kontrolér a testovacího agenta, a to v závislosti na následující tabulce:
 
-| TFS | Microsoft Test Manager s centrem testovacího prostředí | Kontrolér | Agent |
+| TFS | Microsoft Test Manager s centrem testovacího prostředí | Controller | Agent |
 | --- | -------------------------------------- | ---------- | ----- |
 | 2017: Upgradujte z 2015 nebo nové instalace | 2017 | 2017 | 2017 |
 | 2017: Upgradujte z 2015 nebo nové instalace | 2017 | 2013 aktualizace 5 | 2013 aktualizace 5 |
@@ -61,7 +63,7 @@ Můžete kombinovat různé verze serveru TFS, Microsoft Test Manager, testovac�
 
 Můžete kombinovat různé verze TFS, kontroler testů a testovacího agenta, a to v závislosti na následující tabulce:
 
-| TFS | Kontrolér | Agent |
+| TFS | Controller | Agent |
 | --- | -------------------------------------- | ---------- | ----- |
 | 2017: Upgradujte z 2015 nebo nové instalace | 2017 | 2017 |
 | 2017: Upgradujte z 2015 nebo nové instalace | 2013 aktualizace 5 | 2013 aktualizace 5 |

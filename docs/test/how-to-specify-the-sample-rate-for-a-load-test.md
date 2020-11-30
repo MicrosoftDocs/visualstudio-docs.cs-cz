@@ -1,5 +1,6 @@
 ---
 title: Zadat vzorkovací frekvenci pro nastavení běhu zátěžového testu
+description: Naučte se, jak upravit vzorkovací frekvenci pro hodnotu nastavení běhu v okno Vlastnosti pomocí Editor zátěžového testu.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -9,20 +10,20 @@ ms.assetid: 51cbe7d6-5dfd-4842-bca3-f7f8a665dc84
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 522ddebaf17a6e1c447c15732e8a60a9c4e7f5da
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c21e38671a43755c55a3f0c37c5b8ab40ae11530
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810585"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329001"
 ---
 # <a name="how-to-specify-the-sample-rate-for-a-load-test-run-setting"></a>Postupy: určení vzorkovací frekvence pro nastavení běhu zátěžového testu
 
-Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete pomocí **Editor zátěžového testu** změnit vlastnosti tak, aby splňovaly potřeby testování a cíle.
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem** můžete pomocí **Editor zátěžového testu** změnit vlastnosti tak, aby splňovaly potřeby testování a cíle.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Pomocí **Editor zátěžového testu**můžete upravit hodnotu vlastnosti **vzorkovací frekvence** nastavení běhu v okně **vlastnosti** . Úplný seznam vlastností parametrů spuštění a jejich popis naleznete v tématu [Vlastnosti nastavení běhu zátěžového testu](../test/load-test-run-settings-properties.md).
+Pomocí **Editor zátěžového testu** můžete upravit hodnotu vlastnosti **vzorkovací frekvence** nastavení běhu v okně **vlastnosti** . Úplný seznam vlastností parametrů spuštění a jejich popis naleznete v tématu [Vlastnosti nastavení běhu zátěžového testu](../test/load-test-run-settings-properties.md).
 
 Vyberte vhodnou hodnotu pro vlastnost **vzorkovací frekvence** pro nastavení spuštění zátěžového testu na základě délky zátěžového testu. Menší vzorkovací frekvence, jako je například výchozí hodnota pět sekund, vyžaduje více místa v databázi výsledků zátěžového testu. U delších zátěžových testů zkracuje vzorkovací frekvence omezení množství shromažďovaných dat. Další informace naleznete v tématu [Postupy: určení vzorkovací frekvence pro nastavení běhu zátěžového testu](../test/how-to-specify-the-sample-rate-for-a-load-test.md).
 

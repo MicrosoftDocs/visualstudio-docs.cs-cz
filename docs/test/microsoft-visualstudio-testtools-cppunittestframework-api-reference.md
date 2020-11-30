@@ -1,5 +1,7 @@
 ---
 title: Microsoft. VisualStudio. TestTools. CppUnitTestFramework API
+description: Tento článek popisuje CppUnitTestFramework členy, které můžete použít k zápisu jednotkových testů C++ na základě nativního testovacího prostředí společnosti Microsoft.
+ms.custom: SEO-VS-2020
 ms.date: 09/27/2019
 ms.topic: reference
 ms.author: corob
@@ -7,18 +9,18 @@ manager: jillfra
 ms.workload:
 - multiple
 author: corob-msft
-ms.openlocfilehash: 16ea629312237dd859e9eb1aad21b9b219de7229
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b552ff667d4b7aef5f982d4fb0cda78d65c98ed6
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82109426"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329182"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Reference k rozhraní API Microsoft. VisualStudio. TestTools. CppUnitTestFramework
 
 Toto téma obsahuje seznam veřejných členů `Microsoft::VisualStudio::CppUnitTestFramework` oboru názvů. Tato rozhraní API použijte k zápisu jednotkových testů C++ na základě nativního testovacího prostředí společnosti Microsoft. Na konci tématu je [Příklad použití](#example) .
 
-Soubory hlaviček a lib jsou umístěny v * \<Visual Studio installation folder> \VC\Auxiliary\VS\UnitTest*.
+Soubory hlaviček a lib jsou umístěny v *\<Visual Studio installation folder> \VC\Auxiliary\VS\UnitTest*.
 
 Cesty k hlavičkám a lib jsou automaticky nakonfigurované v nativním testovacím projektu.
 
@@ -239,7 +241,7 @@ Definuje `TEST_METHOD_ATTRIBUTE` s názvem `Priority` a hodnotou atributu *prior
 TEST_WORKITEM(workitem)
 ```
 
-Definuje `TEST_METHOD_ATTRIBUTE` s názvem `WorkItem` a hodnotou atributu *pracovní*položky.
+Definuje `TEST_METHOD_ATTRIBUTE` s názvem `WorkItem` a hodnotou atributu *pracovní* položky.
 
 ```cpp
 TEST_IGNORE()

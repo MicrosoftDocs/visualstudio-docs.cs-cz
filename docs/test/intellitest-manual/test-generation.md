@@ -1,5 +1,7 @@
 ---
 title: Generování testu | Nástroj Microsoft IntelliTest Developer test Tool
+description: Naučte se, jak IntelliTest generuje testovací případy z metod implementace, a potom generuje vstupy pro metody a kontroluje kontrolní výrazy nad daty.
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c251a1539b42da2b4e92c2996457075f3c3be135
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 790146e3014765224f22bd247732c7ac3f062269
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315171"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329442"
 ---
 # <a name="test-generation"></a>Generování testů
 
@@ -235,7 +237,7 @@ namespace MyTests
 ```
 
 <a name="further-reading"></a>
-## <a name="further-reading"></a>Další materiály
+## <a name="further-reading"></a>Další čtení
 
 * [Testování vazby kódu](https://devblogs.microsoft.com/devops/smart-unit-tests-test-to-code-binding-test-case-management/)
 * [Jeden test pro všechna pravidla](https://devblogs.microsoft.com/devops/intellitest-one-test-to-rule-them-all/)

@@ -1,5 +1,7 @@
 ---
 title: Vytvořit projekt testů výkonnosti webu a zátěžového testu
+description: Naučte se, jak vytvořit a spustit projekt testů výkonnosti webu a zátěžový test v aplikaci Visual Studio pomocí tohoto rychlého startu.
+ms.custom: SEO-VS-2020
 ms.date: 03/14/2018
 ms.topic: quickstart
 helpviewer_keywords:
@@ -7,12 +9,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d883d531737caf32ec202955ff951382b5ff9009
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 3833542dc00f347014dabf96f836fbd4fa810862
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928577"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329130"
 ---
 # <a name="quickstart-create-a-load-test-project"></a>Rychlý start: Vytvoření projektu pro zátěžový test
 
@@ -30,7 +32,7 @@ Pokud ještě nemáte nainstalovanou součást Performance Test Tools a nástroj
 
 1. V nabídce **Start** systému Windows otevřete **instalační program pro Visual Studio** . Můžete k němu také přistupovat v aplikaci Visual Studio z dialogového okna Nový projekt nebo výběrem **Možnosti**  >  **získat nástroje a funkce** z panelu nabídek.
 
-1. V **instalační program pro Visual Studio**klikněte na kartu **jednotlivé součásti** a přejděte dolů k části **ladění a testování** . Vyberte **Nástroje pro testování výkonu a zatížení webu**.
+1. V **instalační program pro Visual Studio** klikněte na kartu **jednotlivé součásti** a přejděte dolů k části **ladění a testování** . Vyberte **Nástroje pro testování výkonu a zatížení webu**.
 
    ![Komponenta Performance and Load Test Tools](media/web-perf-load-testing-tools-component.png)
 
@@ -74,7 +76,7 @@ V této části vytvoříme projekt zátěžového testu C#. V případě potře
 
 ## <a name="add-a-load-test-to-the-project"></a>Přidat zátěžový test do projektu
 
-1. V nabídce klepněte pravým tlačítkem myši nebo v kontextové nabídce uzlu projektu v **Průzkumník řešení**vyberte možnost **Přidat**  >  **zátěžový test**.
+1. V nabídce klepněte pravým tlačítkem myši nebo v kontextové nabídce uzlu projektu v **Průzkumník řešení** vyberte možnost **Přidat**  >  **zátěžový test**.
 
    Otevře se **nový Průvodce zátěžovým testem** .
 
@@ -86,11 +88,11 @@ V této části vytvoříme projekt zátěžového testu C#. V případě potře
 
    Otevře se dialogové okno **Přidat testy** .
 
-1. V části **Dostupné testy**vyberte **WebTest1**a pak zvolte šipku doprava pro přesunutí do pole **vybrané testy** . Klikněte na tlačítko **OK** .
+1. V části **Dostupné testy** vyberte **WebTest1** a pak zvolte šipku doprava pro přesunutí do pole **vybrané testy** . Klikněte na tlačítko **OK** .
 
    ![Přidat testy – dialogové okno](media/add-tests-dialog-box.png)
 
-1. Zpět v **novém Průvodce zátěžovým testem**klikněte na tlačítko **Dokončit** .
+1. Zpět v **novém Průvodce zátěžovým testem** klikněte na tlačítko **Dokončit** .
 
    Zátěžový test je přidán do projektu a soubor zátěžového testu se otevře v okně editoru.
 
@@ -102,7 +104,7 @@ V nabídce kliknutím pravým tlačítkem nebo v kontextové nabídce pro zátě
 
 ![Nabídka spustit zátěžový test](media/run-load-test.png)
 
-Zátěžový test začíná běžet. Okno **výsledky testů** ukazuje, že probíhá test, a v okně editoru je zobrazen analyzátor zátěžového testu. Po dokončení testu, který by měl být pět minut, pokud jste přijali výchozí hodnoty, zobrazí se v editoru souhrn. Můžete zvolit **grafy**, **tabulky**nebo **Podrobnosti** a získat tak různé informace o výsledcích zátěžového testu.
+Zátěžový test začíná běžet. Okno **výsledky testů** ukazuje, že probíhá test, a v okně editoru je zobrazen analyzátor zátěžového testu. Po dokončení testu, který by měl být pět minut, pokud jste přijali výchozí hodnoty, zobrazí se v editoru souhrn. Můžete zvolit **grafy**, **tabulky** nebo **Podrobnosti** a získat tak různé informace o výsledcích zátěžového testu.
 
 ![Okno analyzátoru zátěžového testu](media/load-test-analyzer.png)
 

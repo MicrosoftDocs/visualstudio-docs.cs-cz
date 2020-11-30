@@ -1,5 +1,7 @@
 ---
 title: Vlastní uživatelské rozhraní (VSPackage správy zdrojového kódu) | Microsoft Docs
+description: Naučte se, jak vytvořit vlastní uživatelské rozhraní (UI) v aplikaci Visual Studio pomocí sady VSPackage správy zdrojového kódu pro určení prvků uživatelského rozhraní.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6ef807cef17a6ca3cddfee05ba57ace27e34a9e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e1426b271ea8db4d486043c9fbe885a0f428b514
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708934"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328519"
 ---
 # <a name="custom-user-interface-source-control-vspackage"></a>Vlastní uživatelské rozhraní (VSPackage správy zdrojového kódu)
 VSPackage deklaruje své položky nabídky a jejich výchozí stavy prostřednictvím souboru tabulky příkazů sady Visual Studio (*. vsct*). [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Integrované vývojové prostředí (IDE) zobrazuje položky nabídky ve svých výchozích stavech, dokud není načteno VSPackage. Následně <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> je metoda volána k povolení nebo zakázání položek nabídky.

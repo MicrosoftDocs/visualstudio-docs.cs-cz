@@ -1,5 +1,7 @@
 ---
 title: Správa kontrolerů testů a testovacích agentů
+description: Naučte se spravovat testovací kontroléry a testovací agenty, když je nainstalujete a nakonfigurujete poprvé.
+ms.custom: SEO-VS-2020
 ms.date: 09/18/2018
 ms.topic: how-to
 author: mikejo5000
@@ -7,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 78bd0143ee2584bcabb5e8ed4946818ee2590789
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8d9a416dc64a9d49d14e367a04023f067c7b595c
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286697"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329637"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>Správa kontrolerů testů a testovacích agentů
 
@@ -45,13 +47,13 @@ Můžete chtít přidat testovacího agenta k jinému testovacímu kontroleru ne
 
 2. Máte k dispozici dvě možnosti, jak lze spustit testovacího agenta:
 
-   - **Služba**: Pokud nemusíte spouštět automatizované testy, které spolupracují s plochou, jako jsou programové testy uživatelského rozhraní nebo vytváření záznamu videa při spuštění testu, v části **spustit testovacího agenta jako**vyberte **Služba**. Testovací agent bude spuštěn jako služba. Zvolte **Další**.
+   - **Služba**: Pokud nemusíte spouštět automatizované testy, které spolupracují s plochou, jako jsou programové testy uživatelského rozhraní nebo vytváření záznamu videa při spuštění testu, v části **spustit testovacího agenta jako** vyberte **Služba**. Testovací agent bude spuštěn jako služba. Zvolte **Další**.
 
       Nyní můžete zadat podrobné informace o uživateli, když se testovací agent spustí jako služba.
 
       1. Zadejte název do pole **uživatelské jméno**.
 
-      2. Do pole **heslo**zadejte heslo.
+      2. Do pole **heslo** zadejte heslo.
 
         |**Důležité informace o uživatelském účtu**|
         |-|
@@ -66,12 +68,12 @@ Můžete chtít přidat testovacího agenta k jinému testovacímu kontroleru ne
 
       1. Zadejte název do pole **uživatelské jméno**.
 
-      2. Do pole **heslo**zadejte heslo.
+      2. Do pole **heslo** zadejte heslo.
 
         > [!NOTE]
         > Pokud nakonfigurujete testovacího agenta tak, aby běžel jako interaktivní proces s jiným uživatelem, který není aktuálně aktivním uživatelem, je nutné restartovat počítač a přihlásit se jako tento jiný uživatel, aby bylo možné agenta spustit. Kromě toho se u uživatelských účtů nepodporují hesla s hodnotou null. Pokud chcete použít kolektor IntelliTrace nebo emulaci sítě, musí být uživatelský účet členem skupiny Administrators.
 
-      3. Chcete-li se ujistit, že počítač s testovacím agentem může po restartu spustit testy, můžete nastavit počítač pro automatické přihlášení jako testovací agent. Vyberte **automaticky přihlásit**se. Tím se uživatelské jméno a heslo uloží do šifrovaného formuláře v registru.
+      3. Chcete-li se ujistit, že počítač s testovacím agentem může po restartu spustit testy, můžete nastavit počítač pro automatické přihlášení jako testovací agent. Vyberte **automaticky přihlásit** se. Tím se uživatelské jméno a heslo uloží do šifrovaného formuláře v registru.
 
       4. Chcete-li se ujistit, že je spořič obrazovky zakázán, protože to může narušit všechny automatizované testy, které musí s plochou pracovat, vyberte možnost **zkontrolovat, zda je spořič obrazovky zakázán**.
 

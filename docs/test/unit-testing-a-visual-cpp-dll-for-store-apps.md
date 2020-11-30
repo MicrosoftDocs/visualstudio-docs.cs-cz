@@ -1,5 +1,7 @@
 ---
 title: Postup testování knihovny DLL C++ pro aplikace pro UWP
+description: Naučte se, jak vytvořit testy částí pro knihovnu DLL C++ pro Univerzální platforma Windows aplikace pomocí Microsoft Test Framework pro C++.
+ms.custom: SEO-VS-2020
 ms.date: 05/01/2019
 ms.topic: how-to
 ms.author: corob
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - uwp
 author: corob-msft
-ms.openlocfilehash: 7b556f085ae4e4a9c610aefa87b3f9125fb27042
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a7ae79ff4df783d3c4541720c9fef709087e7da6
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285606"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330092"
 ---
 # <a name="how-to-test-a-c-dll"></a>Postup testování knihovny DLL jazyka C++
 
@@ -81,14 +83,14 @@ Začněte vytvořením nového testovacího projektu. V nabídce **soubor** klik
 
 ::: moniker range="vs-2019"
 
-V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte možnost **Přidat**a **Nový projekt**. V dialogovém okně **Přidat nový projekt** nastavte **jazyk** na C++ a do vyhledávacího pole zadejte "dll". V seznamu výsledků vyberte možnost **aplikace pro testování částí (univerzální pro Windows-C++/CX)**.
+V **Průzkumník řešení** vyberte název řešení. V místní nabídce zvolte možnost **Přidat** a **Nový projekt**. V dialogovém okně **Přidat nový projekt** nastavte **jazyk** na C++ a do vyhledávacího pole zadejte "dll". V seznamu výsledků vyberte možnost **aplikace pro testování částí (univerzální pro Windows-C++/CX)**.
 
 ![Vytvoření projektu RooterLib](../test/media/vs-2019/cpp-new-uwp-test-project-vs2019.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte možnost **Přidat**a **Nový projekt**.
+V **Průzkumník řešení** vyberte název řešení. V místní nabídce zvolte možnost **Přidat** a **Nový projekt**.
 
 ![Vytvoření projektu RooterLib](../test/media/ute_cpp_windows_rooterlib_create.png)
 
@@ -124,7 +126,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
 
 3. Přidejte symbol ROOTERLIB_EXPORTS do příkazového řádku.
 
-    1. V **Průzkumník řešení**zvolte projekt **RooterLib** a pak v místní nabídce zvolte možnost **vlastnosti** .
+    1. V **Průzkumník řešení** zvolte projekt **RooterLib** a pak v místní nabídce zvolte možnost **vlastnosti** .
 
          ![Přidání definice symbolu preprocesoru](../test/media/ute_cpp_windows_addpreprocessorsymbol.png)
 
@@ -152,7 +154,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
 
 1. Přidejte RooterLib do projektu RooterLibTests.
 
-   1. V **Průzkumník řešení**zvolte projekt **RooterLibTests** a pak zvolte **Přidat**  >  **odkaz** v místní nabídce.
+   1. V **Průzkumník řešení** zvolte projekt **RooterLibTests** a pak zvolte **Přidat**  >  **odkaz** v místní nabídce.
 
    1. V dialogovém okně **Přidat odkaz** vyberte možnost **projekty**. Pak vyberte položku **RouterLib** .
 
@@ -166,7 +168,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
        #include "..\RooterLib\RooterLib.h"
        ```
 
-3. Přidejte test, který používá importovanou funkci. Do *UnitTest1. cpp*přidejte následující kód:
+3. Přidejte test, který používá importovanou funkci. Do *UnitTest1. cpp* přidejte následující kód:
 
    ```cpp
    TEST_METHOD(BasicTest)
@@ -190,7 +192,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
 
     Nový test se zobrazí v **Průzkumníku testů** v uzlu **Nespuštěné testy** .
 
-5. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+5. V **Průzkumníku testů** vyberte možnost **Spustit vše**.
 
     ![Základní test byl úspěšný.](../test/media/ute_cpp_testexplorer_basictest.png)
 
@@ -219,7 +221,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
     >
     > Když uživatelé změní své požadavky, zakažte testy, které už nejsou správné. Zapište nové testy a zpřístupněte je po jednom, a to stejným přírůstkovým způsobem.
 
-2. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+2. V **Průzkumníku testů** vyberte možnost **Spustit vše**.
 
 3. Test se nezdařil.
 
@@ -228,7 +230,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
     > [!TIP]
     > Ověřte, že se každý test nezdařil okamžitě po jeho zápisu. To pomáhá vyhnout se jednoduchému omylu při psaní testu, který se nikdy nezdařil.
 
-4. Zvyšte testovaný kód, aby nový test prošl. Do *RooterLib. cpp*přidejte následující:
+4. Zvyšte testovaný kód, aby nový test prošl. Do *RooterLib. cpp* přidejte následující:
 
     ```cpp
     #include <math.h>
@@ -249,7 +251,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
 
     ```
 
-5. Sestavte řešení a potom v **Průzkumníku testů**zvolte možnost **Spustit vše**.
+5. Sestavte řešení a potom v **Průzkumníku testů** zvolte možnost **Spustit vše**.
 
      Oba testy proběhnou.
 
@@ -289,9 +291,9 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
    };
    ```
 
-2. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+2. V **Průzkumníku testů** vyberte možnost **Spustit vše**.
 
-    Test se nezdařil. V **Průzkumníku testů**vyberte název testu. Kontrolní výraz neúspěšného zpracování je zvýrazněný. Zpráva o selhání je zobrazena v podokně podrobností v **Průzkumníku testů**.
+    Test se nezdařil. V **Průzkumníku testů** vyberte název testu. Kontrolní výraz neúspěšného zpracování je zvýrazněný. Zpráva o selhání je zobrazena v podokně podrobností v **Průzkumníku testů**.
 
     ![NegativeRangeTests se nezdařilo](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
@@ -319,7 +321,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
 
        ```
 
-   1. V **Průzkumníku testů**vyberte možnost **Spustit vše** pro otestování opravené metody a ujistěte se, že jste nepředstavili regresi.
+   1. V **Průzkumníku testů** vyberte možnost **Spustit vše** pro otestování opravené metody a ujistěte se, že jste nepředstavili regresi.
 
    Všechny testy jsou nyní passované.
 

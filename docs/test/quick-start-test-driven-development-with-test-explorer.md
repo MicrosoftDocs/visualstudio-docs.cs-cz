@@ -1,5 +1,7 @@
 ---
 title: Návod pro vývoj řízený testovacím prostředím
+description: Naučte se vyvíjet testovaný způsob v jazyce C# pomocí rozhraní Microsoft Test Framework, které lze snadno přizpůsobit pro jiné jazyky nebo testovací architektury, jako je například NUnit.
+ms.custom: SEO-VS-2020
 ms.date: 07/24/2019
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,16 +9,16 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: a264975014fea88126bbca0589fe037e629dae10
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 82cccbc47d26dd9ef74ee02931d6efb4bbfa0054
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75566277"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329156"
 ---
 # <a name="walkthrough-test-driven-development-using-test-explorer"></a>Návod: Vývoj řízený testovacím prostředím pomocí Průzkumníka testů
 
-Vytvořte testy jednotek, které vám pomůžou zajistit správné fungování kódu prostřednictvím přírůstkových změn kódu. Existuje několik platforem, které můžete použít k zápisu jednotkových testů, včetně některých vyvinutých třetími stranami. Některé testovací architektury jsou specializované pro testování v různých jazycích nebo platformách. Průzkumník testů poskytuje jedno rozhraní pro testování částí v kterékoli z těchto rozhraní. Další informace o **Průzkumníku testů**naleznete v tématu [spuštění testů jednotek pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md) a [nejčastějších dotazů Průzkumníka testů](test-explorer-faq.md).
+Vytvořte testy jednotek, které vám pomůžou zajistit správné fungování kódu prostřednictvím přírůstkových změn kódu. Existuje několik platforem, které můžete použít k zápisu jednotkových testů, včetně některých vyvinutých třetími stranami. Některé testovací architektury jsou specializované pro testování v různých jazycích nebo platformách. Průzkumník testů poskytuje jedno rozhraní pro testování částí v kterékoli z těchto rozhraní. Další informace o **Průzkumníku testů** naleznete v tématu [spuštění testů jednotek pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md) a [nejčastějších dotazů Průzkumníka testů](test-explorer-faq.md).
 
 Tento návod ukazuje, jak vyvíjet testovaný způsob v jazyce C# pomocí rozhraní Microsoft Test Framework (MSTest). Můžete ji snadno přizpůsobit pro jiné jazyky nebo jiné testovací architektury, jako je například NUnit. Další informace najdete v tématu [instalace rozhraní pro testování částí třetích stran](install-third-party-unit-test-frameworks.md).
 
@@ -60,9 +62,9 @@ Tento návod ukazuje, jak vyvíjet testovaný způsob v jazyce C# pomocí rozhra
 
 6. Spusťte test jednotky.
 
-   1. Chcete-li otevřít **Průzkumníka testů**, v nabídce **test** vyberte **Windows**možnost  >  **Průzkumník testů aplikace**Windows.
+   1. Chcete-li otevřít **Průzkumníka testů**, v nabídce **test** vyberte **Windows** možnost  >  **Průzkumník testů aplikace** Windows.
 
-   2. V **Průzkumníku testů**klikněte na tlačítko **Spustit vše** a spusťte test.
+   2. V **Průzkumníku testů** klikněte na tlačítko **Spustit vše** a spusťte test.
 
    Řešení se sestaví a testovací běhy a selžou.
 
@@ -87,7 +89,7 @@ V tomto okamžiku jste vytvořili test a zástupnou proceduru, kterou lze upravi
     }
     ```
 
-2. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+2. V **Průzkumníku testů** vyberte možnost **Spustit vše**.
 
    Řešení sestaví a spustí test a projde.
 
@@ -124,7 +126,7 @@ Chcete-li zlepšit naši jistotu, že kód funguje ve všech případech, přide
     }
     ```
 
-2. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+2. V **Průzkumníku testů** vyberte možnost **Spustit vše**.
 
    Nový test se nezdařil (i když první test stále projde). Chcete-li najít bod selhání, vyberte neúspěšný test a potom se podívejte na podrobnosti v podokně **Souhrn podrobností testu** .
 
@@ -144,7 +146,7 @@ Chcete-li zlepšit naši jistotu, že kód funguje ve všech případech, přide
     }
     ```
 
-4. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+4. V **Průzkumníku testů** vyberte možnost **Spustit vše**.
 
    Oba testy jsou nyní passované.
 
@@ -169,11 +171,11 @@ Chcete-li zlepšit naši jistotu, že kód funguje ve všech případech, přide
     }
     ```
 
-2. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+2. V **Průzkumníku testů** vyberte možnost **Spustit vše**.
 
    Metoda v testovacích cyklech a je nutné ji zrušit ručně.
 
-3. Na panelu nástrojů v **Průzkumníku testů**klikněte na **tlačítko zrušit** .
+3. Na panelu nástrojů v **Průzkumníku testů** klikněte na **tlačítko zrušit** .
 
    Test zastaví provádění.
 
@@ -189,7 +191,7 @@ Chcete-li zlepšit naši jistotu, že kód funguje ve všech případech, přide
         ...
     ```
 
-5. V **Průzkumníku testů**vyberte možnost **Spustit vše**.
+5. V **Průzkumníku testů** vyberte možnost **Spustit vše**.
 
    Všechny testy jsou passované.
 
@@ -224,6 +226,6 @@ Refaktorujte kód, ale neměňte testy.
     }
     ```
 
-2. Vyberte možnost **Spustit vše**a ověřte, zda všechny testy jsou stále průchodné.
+2. Vyberte možnost **Spustit vše** a ověřte, zda všechny testy jsou stále průchodné.
 
    ![Průzkumník testů zobrazující 3 úspěšné testy](../test/media/test-driven-development-three-passed-tests.png)

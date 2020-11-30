@@ -1,5 +1,7 @@
 ---
 title: Vytváření stránek možností | Microsoft Docs
+description: Naučte se, jak vytvořit stránku možností v nabídce nástroje v aplikaci Visual Studio implementací třídy třídy DialogPage ze spravovaného rozhraní balíčku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 368efaa78a56723d4a72c482bea9ee739385127e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4759b3590fcde116e6f106ac326ff875e9566c43
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709153"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328636"
 ---
 # <a name="create-options-pages"></a>Vytvořit stránky možností
 V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozhraní spravovaného balíčku třídy odvozené z <xref:Microsoft.VisualStudio.Shell.DialogPage> rozšíření [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE přidáním stránek **Možnosti** v nabídce **nástroje** .

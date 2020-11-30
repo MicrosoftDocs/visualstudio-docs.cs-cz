@@ -1,5 +1,7 @@
 ---
 title: Vlastní barevné položky | Microsoft Docs
+description: Naučte se vytvářet vlastní barevné položky jako součást služby jazyka přepsáním položek v dialogovém okně písma a barvy, jako jsou klíčová slova a komentáře.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: feecd9e8f8178045f66999b775e2d0792f50b288
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 648a8e45b5b472ccc1a37cd69e2043f0bb5b9aa3
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709000"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328532"
 ---
 # <a name="custom-colorable-items"></a>Vlastní barevné položky
 Můžete přepsat seznam typů pro Colorizing, jako jsou klíčová slova a komentáře, implementací vlastních barevně vypsaných položek jako součást vaší jazykové služby.
@@ -32,7 +34,7 @@ Můžete přepsat seznam typů pro Colorizing, jako jsou klíčová slova a kome
 >
 > *C:\Program Files (x86) \Microsoft Visual Studio 14.0 \ VSSDK\VisualStudioIntegration\Tools\Bin*
 >
-> Mezipaměť resetujete tak, že zadáte **CreateExpInstance/reset po vyčištění**. Další informace o **CreateExpInstance**najdete v tématu [CreateExpInstance Utility](../../extensibility/internals/createexpinstance-utility.md).
+> Mezipaměť resetujete tak, že zadáte **CreateExpInstance/reset po vyčištění**. Další informace o **CreateExpInstance** najdete v tématu [CreateExpInstance Utility](../../extensibility/internals/createexpinstance-utility.md).
 
  Na první položku v seznamu položek, na které jsou barvy, se nikdy neodkazuje. První položka odpovídá indexu položek s barvou 0 a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vždy poskytuje výchozí barvy textu a atributy pro tuto položku. Nejjednodušší způsob, jak se vypořádat s touto neodkaznou položkou, je dodat v seznamu zástupnou položku s barvou barvy jako první položku.
 

@@ -1,5 +1,7 @@
 ---
 title: Průzkumník testů – nejčastější dotazy
+description: Přečtěte si tyto Nejčastější dotazy k aplikaci Visual Studio Test Explorer, která zahrnuje některé běžné řešení potíží.
+ms.custom: SEO-VS-2020
 ms.date: 06/25/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jillfra
-ms.openlocfilehash: 5d0e98c3201d1e0e58ee972ad38c3a49bc9555de
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ef6c6bf3cedcccd156e7ae9ae02c2e5f70805521
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037026"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330170"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio Test Explorer – Nejčastější dotazy
 
@@ -31,7 +33,7 @@ ms.locfileid: "90037026"
 Sestavte projekt pro spuštění zjišťování založeného na sestavení.
 ::: moniker-end
 ::: moniker range="vs-2017"
-Sestavte projekt a ujistěte se, že je v **nabídce nástroje** > **Options** > **test**možností zapnuto zjišťování na základě sestavení.
+Sestavte projekt a ujistěte se, že je v **nabídce nástroje** > **Options** > **test** možností zapnuto zjišťování na základě sestavení.
 ::: moniker-end
 [Zjišťování testů v reálném čase](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) je zjišťování založené na zdrojovém testu. Nedokáže zjistit testy, které používají teorie, vlastní adaptéry, vlastní vlastnosti, `#ifdef` příkazy a další, protože jsou definovány v době běhu. Aby byly testy přesně nalezeny, je nutné sestavit sestavení. V aplikaci Visual Studio 2017 verze 15,6 a novější se zjišťování na základě sestavení (tradiční zjišťování) spouští pouze po sestaveních. Toto nastavení znamená, že zjišťování testů v reálném čase najde tolik testů, kolik jich může při úpravách a zjišťování na základě sestavení umožňuje zobrazit dynamicky definované testy po sestavení. Zjišťování testů v reálném čase vylepšuje rychlost odezvy, ale pořád umožňuje získat úplné a přesné výsledky po sestavení.
 
@@ -69,7 +71,7 @@ Tato funkce se nazývá [zjišťování testů v reálném čase](https://devblo
 
 **Jak můžu zapnout protokoly pro Průzkumníka testů?**
 
-Přejděte k **Tools**  >  **Možnosti**nástroje  >  **test** a vyhledejte část protokolování.
+Přejděte k **Tools**  >  **Možnosti** nástroje  >  **test** a vyhledejte část protokolování.
 
 ## <a name="uwp-test-discovery"></a>Zjišťování testů UWP
 
@@ -115,7 +117,7 @@ Místo používání rozšíření testovacího adaptéru se projekty vyžadují
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Pokud používáte testovací adaptér nunit 2 a nemůžete migrovat na testovací adaptér nunit 3, můžete toto nové chování zjišťování vypnout v aplikaci Visual Studio verze 15,8 v části **nástroje**  >  **Options**  >  **test**možností.
+> Pokud používáte testovací adaptér nunit 2 a nemůžete migrovat na testovací adaptér nunit 3, můžete toto nové chování zjišťování vypnout v aplikaci Visual Studio verze 15,8 v části **nástroje**  >  **Options**  >  **test** možností.
 
 ![Chování adaptéru Průzkumníka testů v možnostech nástrojů](media/testex-adapterbehavior.png)
 ::: moniker-end

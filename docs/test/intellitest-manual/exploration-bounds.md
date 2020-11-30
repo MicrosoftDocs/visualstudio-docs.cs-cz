@@ -1,5 +1,7 @@
 ---
 title: Meze průzkumu | Nástroj Microsoft IntelliTest Developer test Tool
+description: PexSettingsAttributeBase je abstraktní základní třída pro nastavení, která je vázaná jako atributy. Naučte se upravovat nastavení pomocí pojmenovaných vlastností.
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 2a57d79fb64675f90edf50e6a0d7d50b8a3c6fd7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 713ccf139e4110923f45073308da2c249305eb18
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315210"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328896"
 ---
 # <a name="exploration-bounds"></a>Hranice průzkumu
 

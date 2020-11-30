@@ -1,5 +1,7 @@
 ---
 title: Použití legendy zobrazení grafů k analýze zátěžových testů
+description: Přečtěte si o zobrazení grafů analyzátoru zátěžového testu, který obsahuje panel legendy, který zobrazuje informace o čítačích výkonu pro vybraný graf.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: 0f6ba8e4-1343-419c-8a9f-240cf50efed7
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1455c67c3cb6d8dc99aeab91a7bfa63cce009c51
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25200b691e0bebf2e3bd1c6252efb371ed9caeb2
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590797"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330066"
 ---
 # <a name="use-the-graphs-view-legend-to-analyze-load-tests"></a>Použití legendy zobrazení grafů k analýze zátěžových testů
 
@@ -33,7 +35,7 @@ Legenda obsahuje následující informace:
     > [!NOTE]
     > Automatickou úpravu hodnoty rozsahu můžete vypnout tak, že zamknete rozsah na určitou hodnotu. Je-li rozsah uzamčen, jsou všechny hodnoty přesahující tento rozsah zobrazeny jako maximální hodnota zadaná v horní části grafu. Použijte dialogové okno **Možnosti grafu** k uzamknutí rozsahu na konkrétní hodnotu.
 
-- **Čítač:** Čtyři sloupce s názvem **čítač**, **instance**, **kategorie**a **počítač** společně identifikují čítač výkonu jednoznačně.
+- **Čítač:** Čtyři sloupce s názvem **čítač**, **instance**, **kategorie** a **počítač** společně identifikují čítač výkonu jednoznačně.
 
 - **Barva:** Sloupec **Color (barva** ) zobrazuje barvu a styl čáry vykreslené čáry pro čítač výkonu. Pomocí dialogového okna **Možnosti grafu** můžete změnit barvu nebo styl čáry čítače výkonu v grafu. Dialogové okno **Možnosti grafu** je k dispozici v místní nabídce legendy.
 

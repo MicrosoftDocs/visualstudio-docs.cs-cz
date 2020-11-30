@@ -1,5 +1,6 @@
 ---
 title: Nastavení jedinečné vlastnosti automatizace – testování ovládacích prvků UWP
+description: Naučte se, jak přiřadit jedinečnou vlastnost Automation na základě typu ovládacího prvku jazyka XAML v aplikaci UWP založené na jazyce XAML pro spuštění kódovaného testu uživatelského rozhraní.
 ms.custom: SEO-VS-2020
 ms.date: 05/31/2018
 ms.topic: how-to
@@ -8,12 +9,12 @@ manager: jillfra
 ms.workload:
 - uwp
 author: mikejo5000
-ms.openlocfilehash: 1790ac51f513ddcb42500eb271212b68a4aefe63
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 5af4f9c70696144e0efb420ab27860a1969bddc6
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810217"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328325"
 ---
 # <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>Nastavení jedinečné vlastnosti automatizace pro ovládací prvky UWP pro testování
 
@@ -44,7 +45,7 @@ Nastavte **AutomationProperties.Name** na **tlačítko** pomocí vlastnosti **Co
 Nastavte **Vlastnosti automatizace. AutomationId** na **ButtonX** explicitně v jazyce XAML pro ovládací prvek.
 
 ```xaml
-<Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />
+<Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />
 ```
 
 Nastavte **AutomationProperties.Name** na **tlačítko** explicitně v jazyce XAML ovládacího prvku.
@@ -61,7 +62,7 @@ Chcete-li přiřadit jedinečné názvy existujícím ovládacím prvkům, vyber
 
 ![Pojmenování interaktivních prvků v Blend pro Visual Studio](../test/media/cuit_windowsstoreproperty_blend_1.png)
 
-Chcete-li automaticky zadat jedinečné názvy pro nové ovládací prvky, které **Tools**přidáte, vyberte možnost  >  **Možnosti** nástrojů a otevřete dialogové okno **Možnosti** . Vyberte **Návrhář XAML** a pak **při vytváření automaticky pojmenovat interaktivní prvky**. Kliknutím na **tlačítko OK** zavřete dialogové okno.
+Chcete-li automaticky zadat jedinečné názvy pro nové ovládací prvky, které **Tools** přidáte, vyberte možnost  >  **Možnosti** nástrojů a otevřete dialogové okno **Možnosti** . Vyberte **Návrhář XAML** a pak **při vytváření automaticky pojmenovat interaktivní prvky**. Kliknutím na **tlačítko OK** zavřete dialogové okno.
 
 ## <a name="use-a-data-template"></a>Použití šablony dat
 

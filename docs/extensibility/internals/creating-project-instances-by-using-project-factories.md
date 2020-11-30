@@ -1,5 +1,7 @@
 ---
 title: Vytváření instancí projektu pomocí Továrnování projektu | Microsoft Docs
+description: Naučte se vytvářet instance tříd projektu pomocí továrny projektu v integrovaném vývojovém prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31ba5dd11af18f8a723b2271544eff2bd292e2e8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59ad41bda80337fd0adc65d4792adbbbb1cf38f1
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709053"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328584"
 ---
 # <a name="create-project-instances-by-using-project-factories"></a>Vytváření instancí projektu pomocí továrnování projektu
 Typy projektů v aplikaci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] používají *objekt* pro vytváření projektů k vytvoření instancí objektů projektu. Objekt pro vytváření projektu je podobný jako objekt pro vytváření standardních tříd pro spoluvytvořitelné objekty COM. Objekty projektu však nelze vytvořit sami; lze je vytvořit pouze pomocí objektu pro vytváření projektu.
@@ -38,7 +40,7 @@ Typy projektů v aplikaci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_m
 
    Typy projektů jsou přidruženy k určité příponě názvu souboru. Když se uživatel pokusí otevřít existující soubor projektu nebo se pokusí vytvořit nový projekt naklonování šablony, rozhraní IDE použije rozšíření na soubor k určení odpovídajícího identifikátoru GUID projektu.
 
-   Jakmile rozhraní IDE určí, zda musí vytvořit nový projekt nebo otevřít existující projekt určitého typu, rozhraní IDE použije informace v systémovém registru v oddílu **[HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\8.0\Projects]** k nalezení, který VSPackage implementuje požadovaný objekt pro vytváření projektu. Rozhraní IDE načte tento VSPackage. V <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> metodě musí VSPackage registrovat svůj objekt pro vytváření projektu pomocí rozhraní IDE voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes.RegisterProjectType%2A> metody.
+   Jakmile rozhraní IDE určí, zda musí vytvořit nový projekt nebo otevřít existující projekt určitého typu, rozhraní IDE použije informace v systémovém registru v rámci **[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\8.0\Projects]** k nalezení, který VSPackage implementuje požadovaný objekt pro vytváření projektu. Rozhraní IDE načte tento VSPackage. V <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> metodě musí VSPackage registrovat svůj objekt pro vytváření projektu pomocí rozhraní IDE voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes.RegisterProjectType%2A> metody.
 
    Primární metodou `IVsProjectFactory` rozhraní je <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A> , který by měl zpracovávat dva scénáře: otevření existujícího projektu a vytvoření nového projektu. Většina projektů ukládá svůj stav projektu do souboru projektu. Nové projekty jsou obvykle vytvořeny vytvořením kopie souboru šablony předaného do `CreateProject` metody a následným otevřením kopie. Existující projekty jsou vytvořeny přímo otevřením souboru projektu předaného `CreateProject` metodě. `CreateProject`Metoda může uživateli podle potřeby zobrazit další funkce uživatelského rozhraní.
 

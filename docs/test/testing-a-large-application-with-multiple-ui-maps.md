@@ -1,5 +1,7 @@
 ---
 title: Testování rozsáhlé aplikace s více mapami uživatelského rozhraní
+description: Naučte se používat kódované testy uživatelského rozhraní při testování rozsáhlých aplikací pomocí více mapování uživatelského rozhraní. Tato funkce vyžaduje Visual Studio Enterprise.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99e703d10d2bc6ed8fd573f4973e73f7ad40a937
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93ae6aaa77a133a0d1805554a38b2714bff5b312
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286580"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330157"
 ---
 # <a name="test-a-large-application-with-multiple-ui-maps"></a>Testování rozsáhlé aplikace s více mapami uživatelského rozhraní
 
@@ -50,11 +52,11 @@ Vytvoření více mapování uživatelského rozhraní v každém z těchto typ�
 
 ### <a name="to-add-a-ui-map-to-your-coded-ui-test-project"></a>Chcete-li přidat mapu uživatelského rozhraní do projektu programového testu uživatelského rozhraní
 
-1. V **Průzkumník řešení**vytvořte složku v projektu programového testu uživatelského rozhraní pro uložení všech map uživatelského rozhraní, klikněte pravým tlačítkem na soubor projektu programového testu UI, přejděte na **Přidat**a pak zvolte **Nová složka**. Můžete ho například pojmenovat `UIMaps` .
+1. V **Průzkumník řešení** vytvořte složku v projektu programového testu uživatelského rozhraní pro uložení všech map uživatelského rozhraní, klikněte pravým tlačítkem na soubor projektu programového testu UI, přejděte na **Přidat** a pak zvolte **Nová složka**. Můžete ho například pojmenovat `UIMaps` .
 
     Nová složka se zobrazí v rámci projektu programového testu uživatelského rozhraní.
 
-2. Klikněte pravým tlačítkem na `UIMaps` složku, přejděte na **Přidat**a pak zvolte **Nová položka**.
+2. Klikněte pravým tlačítkem na `UIMaps` složku, přejděte na **Přidat** a pak zvolte **Nová položka**.
 
     Zobrazí se dialogové okno **Přidat novou položku**.
 

@@ -1,5 +1,7 @@
 ---
 title: Rozhraní API testu výkonnosti webu
+description: Přečtěte si o rozhraní API testu výkonnosti webu, které podporuje kódované testy výkonnosti webu, testovací moduly plug-in, požadavky na moduly plug-in, požadavky a pravidla pro extrakci a ověření.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: 93a6a1dd-663b-4ab5-8760-7d6b081561d3
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 14b7320a38d474748713d687f4ee00b5b91f0208
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d4802d95c46d1187911f4bbc134cc0c50ce08b18
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287074"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329715"
 ---
 # <a name="how-to-use-the-web-performance-test-api"></a>Postupy: použití rozhraní API testu výkonnosti webu
 
@@ -51,7 +53,7 @@ Moduly plug-in lze vytvořit také pro zátěžové testy. Další informace nal
 
          Zobrazí se dialogové okno **Přidat modul plug-in webového testu** .
 
-    2. V části **Vybrat modul plug-in**vyberte třídu modulu plug-in test výkonnosti webu.
+    2. V části **Vybrat modul plug-in** vyberte třídu modulu plug-in test výkonnosti webu.
 
     3. V podokně **vlastnosti pro vybraný modul plug-in** nastavte počáteční hodnoty pro modul plug-in, které se použijí v době běhu.
 

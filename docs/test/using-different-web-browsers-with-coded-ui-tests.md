@@ -1,5 +1,7 @@
 ---
 title: Používání jiných webových prohlížečů v programových testech uživatelského rozhraní
+description: Naučte se přizpůsobit svůj test a přehrát ho pomocí různých prohlížečů pro vaše webové aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 507da254d108ddc31f2b1c9fdf7f393d42934f2a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6baddaeac3fdea3d27f60722e728df209bfd768d
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289323"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330027"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>Použití různých webových prohlížečů s programovým testem uživatelského rozhraní
 

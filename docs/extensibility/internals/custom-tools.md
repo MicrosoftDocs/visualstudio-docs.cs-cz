@@ -1,5 +1,7 @@
 ---
 title: Vlastní nástroje | Microsoft Docs
+description: Naučte se, jak vytvořit vlastní nástroje v aplikaci Visual Studio, které přiřadí nástroj k položce v projektu a spustí tento nástroj pokaždé, když je soubor uložený.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e60f1d8cb8b25ed50b0b20c5ebb538286687ad72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2ba8760ce53f222ebbe4626bde0d897d4d12c8a6
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708949"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329962"
 ---
 # <a name="custom-tools"></a>Vlastní nástroje
 *Vlastní nástroje* umožňují přidružit nástroj k položce v projektu a spustit tento nástroj pokaždé, když je soubor uložený. Některé vlastní nástroje, které se někdy označují jako *generátory tvořené jedním souborem*, se často používají k implementaci překladatelů, které generují kód z dat a naopak. Například generátory s jedním souborem vytvoří [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] zdrojový kód ze souborů *. Settings* a *. resx* . Generovaný zdrojový kód poskytuje přístup silného typu k datům v souborech *. Settings* a *. resx* . [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] Typy projektů a podporují vlastní nástroje; [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] typy projektů ne. Vlastní typy projektů mohou také podporovat vlastní nástroje.

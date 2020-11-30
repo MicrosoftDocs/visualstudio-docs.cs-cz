@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti scénáře zátěžového testu
+description: Naučte se změnit nastavení vlastností scénáře zátěžového testu v aplikaci Visual Studio na jednu z různých vlastností scénáře zátěžového testu v tomto článku.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: 4414a638-1fa2-40ad-b1f4-b99f90b62e62
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c2011438f1fcb0230cde0de527216456553e7c64
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 263a3a1f928fe42d1f5b910f82d0d4a6ea24412e
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75584436"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328805"
 ---
 # <a name="load-test-scenario-properties"></a>Vlastnosti scénáře zátěžového testu
 
@@ -26,7 +28,7 @@ Změňte nastavení vlastnosti scénáře zátěžového testu v aplikaci Visual
 
 |Vlastnost|Definice|
 |-|----------------|
-|**Name**|Název scénáře|
+|**Název**|Název scénáře|
 
 ## <a name="mix"></a>Kombinace
 

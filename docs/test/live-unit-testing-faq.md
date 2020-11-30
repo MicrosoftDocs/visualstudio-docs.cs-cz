@@ -1,5 +1,7 @@
 ---
 title: Nejčastější dotazy k funkci Live Unit Testing
+description: Přečtěte si tyto Live Unit Testing Nejčastější dotazy, včetně podporovaných platforem, konfigurace a přizpůsobení.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +10,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba231e6c203197518b75a7a8c0592f01bba4ffe9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bb2c9a4cae25b388d5817b04ff54f6e6443b2f44
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591538"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329286"
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing nejčastějších dotazech
 
@@ -37,7 +39,7 @@ V některých případech může být nutné explicitně obnovit balíčky NuGet
 
 **Funguje Live Unit Testing s .NET Core?**
 
-Yes. Live Unit Testing funguje s .NET Core a .NET Framework.
+Ano. Live Unit Testing funguje s .NET Core a .NET Framework.
 
 ## <a name="configuration"></a>Konfigurace
 
@@ -77,7 +79,7 @@ V okně výstup (když se vybere rozevírací seznam Live Unit Testing) by vám 
 
 Pokud vaše řešení vyžaduje vlastní kroky k sestavení pro instrumentaci (Live Unit Testing), které nejsou vyžadovány pro "normální" neinstrumentované sestavení, pak můžete přidat kód do projektu nebo *. soubory cílů* , které kontrolují `BuildingForLiveUnitTesting` vlastnost a provádí vlastní kroky před/po sestavení. Můžete také zvolit odebrání některých kroků sestavení (například publikování nebo generování balíčků) nebo přidání kroků sestavení (například zkopírování požadavků) do Live Unit Testing sestavení na základě této vlastnosti projektu. Přizpůsobení sestavení na základě této vlastnosti nemění vaše pravidelné sestavení jakýmkoli způsobem a má vliv pouze na Live Unit Testing sestavení.
 
-Může se například jednat o cíl, který vytváří balíčky NuGet během pravidelného sestavování. Pravděpodobně nechcete generovat balíčky NuGet po každé úpravě, kterou provedete. Proto můžete tento cíl v Live Unit Testing sestavení zakázat následujícím způsobem:  
+Může se například jednat o cíl, který vytváří balíčky NuGet během pravidelného sestavování. Pravděpodobně nechcete generovat balíčky NuGet po každé úpravě, kterou provedete. Proto můžete tento cíl v Live Unit Testing sestavení zakázat následujícím způsobem:  
 
 ```xml
 <Target Name="GenerateNuGetPackages" BeforeTargets="AfterBuild" Condition="'$(BuildingForLiveUnitTesting)' != 'true'">
@@ -171,7 +173,7 @@ Během Live Unit Testing sestavení `<LiveUnitTestingBuildRootPath>` je vlastnos
 
 **Chci, aby artefakty Live Unit Testing sestavení přešly do konkrétního umístění namísto výchozího umístění ve složce *. vs* . Jak můžu změnit tuto možnost?**
 
-Nastavte `LiveUnitTesting_BuildRoot` proměnnou prostředí na úrovni uživatele na cestu, kam chcete vyřadit artefakty sestavení Live Unit Testing. 
+Nastavte `LiveUnitTesting_BuildRoot` proměnnou prostředí na úrovni uživatele na cestu, kam chcete vyřadit artefakty sestavení Live Unit Testing. 
 
 ## <a name="test-explorer-versus-live-unit-testing"></a>Průzkumník testů versus Live Unit Testing
 
@@ -179,11 +181,11 @@ Nastavte `LiveUnitTesting_BuildRoot` proměnnou prostředí na úrovni uživatel
 
 Existuje několik rozdílů:
 
-- Spuštění nebo ladění testů z okna **Průzkumníka testů** spouští běžné binární soubory, zatímco Live Unit Testing spouští instrumentované binární soubory. Pokud chcete ladit instrumentované binární soubory, přidejte [ladicí program.](xref:System.Diagnostics.Debugger.Launch)   volání metody spuštění v testovací metodě způsobí, že se ladicí program spustí vždy, když se spustí Tato metoda (včetně okamžiku, kdy je spuštěna Live Unit testing), a pak můžete připojit a ladit instrumentované binární soubory. Ale doufáme, že je instrumentace pro většinu uživatelských scénářů transparentní a že nepotřebujete ladit instrumentované binární soubory.
+- Spuštění nebo ladění testů z okna **Průzkumníka testů** spouští běžné binární soubory, zatímco Live Unit Testing spouští instrumentované binární soubory. Pokud chcete ladit instrumentované binární soubory, přidejte [ladicí program.](xref:System.Diagnostics.Debugger.Launch) volání metody spuštění v testovací metodě způsobí, že se ladicí program spustí vždy, když se spustí Tato metoda (včetně okamžiku, kdy je spuštěna Live Unit testing), a pak můžete připojit a ladit instrumentované binární soubory. Ale doufáme, že je instrumentace pro většinu uživatelských scénářů transparentní a že nepotřebujete ladit instrumentované binární soubory.
 
 - Live Unit Testing nevytváří novou doménu aplikace pro spuštění testů, ale testy spouštěné z okna **Průzkumník testů** vytvoří novou doménu aplikace.
 
-- Live Unit Testing spouští testy v každém testovacím sestavení sekvenčně. V **Průzkumníku testů**můžete zvolit paralelní spuštění více testů.
+- Live Unit Testing spouští testy v každém testovacím sestavení sekvenčně. V **Průzkumníku testů** můžete zvolit paralelní spuštění více testů.
 
 - **Průzkumník testů** ve výchozím nastavení spouští testy v modelu STA (Single-threaded Apartment), zatímco Live Unit Testing spouští testy v modelu MTA (multi-threaded Apartment). Chcete-li spustit testy MSTest v modelu STA v Live Unit Testing, seupravte testovací metodu nebo obsahující `<STATestMethod>` třídu `<STATestClass>` atributem nebo, který lze najít v `MSTest.STAExtensions 1.0.3-beta` balíčku NuGet. Pro NUnit seupravte testovací metodu s `<RequiresThread(ApartmentState.STA)>` atributem a pro xUnit s `<STAFact>` atributem.
 
@@ -248,7 +250,7 @@ Live Unit Testing spustí sestavení pokaždé, když zjistí, že se změnily z
 
 **Proč v editoru nevidím žádné ikony, i když Live Unit Testing zdá spustit testy na základě zpráv v okně výstup?**
 
-V editoru se nemusí zobrazovat ikony, pokud sestavení, na kterých Live Unit Testing pracuje, nejsou z nějakého důvodu instrumentovaná. Například Live Unit Testing není kompatibilní s projekty, které jsou nastaveny `<UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>` . V takovém případě je potřeba aktualizovat proces sestavení, aby toto nastavení buď odebralo, nebo bylo možné ho změnit, aby `true` Live Unit Testing fungovalo. 
+V editoru se nemusí zobrazovat ikony, pokud sestavení, na kterých Live Unit Testing pracuje, nejsou z nějakého důvodu instrumentovaná. Například Live Unit Testing není kompatibilní s projekty, které jsou nastaveny `<UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>` . V takovém případě je potřeba aktualizovat proces sestavení, aby toto nastavení buď odebralo, nebo bylo možné ho změnit, aby `true` Live Unit Testing fungovalo. 
 
 ## <a name="capture-logs"></a>Zaznamenat protokoly
 
@@ -256,7 +258,7 @@ V editoru se nemusí zobrazovat ikony, pokud sestavení, na kterých Live Unit T
 
 K shromažďování podrobnějších protokolů můžete provést několik věcí:
 
-- Přejděte na **Tools**  >  **Možnosti**nástroje  >  **Live Unit Testing** a změňte možnost protokolování na **verbose**. Podrobné protokolování způsobí, že se v okně **výstup** Zobrazí podrobnější protokoly.
+- Přejděte na **Tools**  >  **Možnosti** nástroje  >  **Live Unit Testing** a změňte možnost protokolování na **verbose**. Podrobné protokolování způsobí, že se v okně **výstup** Zobrazí podrobnější protokoly.
 
 - Nastavte `LiveUnitTesting_BuildLog` proměnnou prostředí uživatele na název souboru, který chcete použít k zachycení protokolu MSBuild. Podrobné zprávy protokolu MSBuild z Live Unit Testing sestavení je možné z tohoto souboru načíst.
 

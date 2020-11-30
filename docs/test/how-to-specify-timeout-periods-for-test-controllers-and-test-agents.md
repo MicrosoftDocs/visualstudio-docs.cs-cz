@@ -1,5 +1,7 @@
 ---
 title: Období časového limitu pro testovací kontroléry a testovací agenty
+description: Přečtěte si, jak změnit hodnoty časového limitu testovacího kontroléru a testovacího agenta úpravou přidružených konfiguračních souborů XML.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7b06dc7d363cefd568a6e1432582744f486fa222
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9dc661999eb12bb679aa3622f0f14adc3ffc661a
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287282"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330001"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>Postupy: určení období časového limitu pro testovací kontroléry a testovací agenty
 

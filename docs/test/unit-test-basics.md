@@ -1,5 +1,7 @@
 ---
 title: Základní informace o testování částí
+description: Přečtěte si, jak Visual Studio Test Explorer poskytuje flexibilní a efektivní způsob, jak spustit testy jednotek a zobrazit jejich výsledky.
+ms.custom: SEO-VS-2020
 ms.date: 08/07/2019
 ms.topic: conceptual
 f1_keywords:
@@ -9,18 +11,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77ac5ffd14f97fd6fdd753327fe193ceb80ea57e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f563d37e6456ec775b2e70d59e07b0627c82994b
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75846933"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330196"
 ---
 # <a name="unit-test-basics"></a>Základní informace o testování částí
 
 Vytvořením a spuštěním testů jednotek ověřte, zda váš kód funguje podle očekávání. Nazývá se testování částí, protože funkce programu rozdělíte do diskrétního testovatelné chování, které můžete testovat jako jednotlivé *jednotky*. Visual Studio Test Explorer nabízí flexibilní a efektivní způsob, jak spustit testy jednotek a zobrazit jejich výsledky v aplikaci Visual Studio. Visual Studio nainstaluje architektury testování částí společnosti Microsoft pro spravovaný a nativní kód. Pomocí *architektury jednotkového testování* můžete vytvořit testy jednotek, spustit je a ohlásit výsledky těchto testů. Spusťte testy jednotek znovu, když provedete změny a otestujete, zda váš kód stále pracuje správně. Visual Studio Enterprise to lze provést automaticky pomocí [Live Unit Testing](live-unit-testing-intro.md), což detekuje testy ovlivněné změnami kódu a spouští je na pozadí při psaní.
 
-Testování částí má největší vliv na kvalitu kódu, pokud je nedílnou součástí pracovního postupu vývoje softwaru. Jakmile napíšete funkci nebo jiný blok kódu aplikace, vytvořte testy jednotek, které ověřují chování kódu v reakci na standardní, hranici a nesprávné případy vstupních dat a které kontrolují všechny explicitní nebo implicitní předpoklady, které provádí kód. U *vývoje řízeného testem*vytvoříte testy jednotek před zápisem kódu, takže používáte testy jednotek jako dokumentaci k návrhu i funkční specifikace.
+Testování částí má největší vliv na kvalitu kódu, pokud je nedílnou součástí pracovního postupu vývoje softwaru. Jakmile napíšete funkci nebo jiný blok kódu aplikace, vytvořte testy jednotek, které ověřují chování kódu v reakci na standardní, hranici a nesprávné případy vstupních dat a které kontrolují všechny explicitní nebo implicitní předpoklady, které provádí kód. U *vývoje řízeného testem* vytvoříte testy jednotek před zápisem kódu, takže používáte testy jednotek jako dokumentaci k návrhu i funkční specifikace.
 
 Můžete rychle vygenerovat testovací projekty a testovací metody z vašeho kódu nebo je ručně vytvořit podle potřeby. Když použijete IntelliTest k prozkoumávání kódu .NET, můžete vygenerovat testovací data a sadu testů jednotek. Pro každý příkaz v kódu se generuje zkušební vstup, který tento příkaz spustí.  Zjistěte, jak [pro svůj kód generovat testy jednotek](generate-unit-tests-for-your-code-with-intellitest.md).
 
@@ -123,7 +125,7 @@ Projekt testování částí obvykle odráží strukturu jednoho kódu projektu.
 
 **Přidání projektu testu jednotek do řešení:**
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte možnost **Přidat**  >  **Nový** **projekt**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení a vyberte možnost **Přidat**  >  **Nový** **projekt**.
 
 ::: moniker range="vs-2017"
 
@@ -162,7 +164,7 @@ Každý projekt testů jednotek obsahuje třídy, které zrcadlí názvy tříd 
 
 ## <a name="write-your-tests"></a>Zápis testů
 
-Rozhraní pro testování částí, které použijete, a Visual Studio IntelliSense vás provede zápisem kódu pro testování částí pro projekt kódu. Pro spuštění v **Průzkumníku testů**většina rozhraní vyžaduje, abyste přidali konkrétní atributy pro identifikaci metod testování částí. Rozhraní také poskytují způsob – obvykle prostřednictvím příkazů kontrolního výrazu nebo atributů metody – k označení, zda metoda testu prošla nebo se nezdařila. Jiné atributy identifikují volitelné metody nastavení, které jsou při inicializaci třídy a před každou metodou testu a rozboru metody, které jsou spouštěny po každé testovací metodě a před zničením třídy.
+Rozhraní pro testování částí, které použijete, a Visual Studio IntelliSense vás provede zápisem kódu pro testování částí pro projekt kódu. Pro spuštění v **Průzkumníku testů** většina rozhraní vyžaduje, abyste přidali konkrétní atributy pro identifikaci metod testování částí. Rozhraní také poskytují způsob – obvykle prostřednictvím příkazů kontrolního výrazu nebo atributů metody – k označení, zda metoda testu prošla nebo se nezdařila. Jiné atributy identifikují volitelné metody nastavení, které jsou při inicializaci třídy a před každou metodou testu a rozboru metody, které jsou spouštěny po každé testovací metodě a před zničením třídy.
 
 Vzor AAA (uspořádat, ACT, Assert) je běžným způsobem psaní testů jednotek pro testované metody.
 
@@ -234,7 +236,7 @@ public void My_Test ()
 
 ## <a name="run-tests-in-test-explorer"></a>Spustit testy v Průzkumníku testů
 
-Při sestavování testovacího projektu se testy zobrazí v **Průzkumníku testů**. Pokud není **Průzkumník testů** viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **Windows**a pak zvolte možnost **Průzkumník testů**.
+Při sestavování testovacího projektu se testy zobrazí v **Průzkumníku testů**. Pokud není **Průzkumník testů** viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **Windows** a pak zvolte možnost **Průzkumník testů**.
 
 ::: moniker range="vs-2017"
 ![Průzkumník testů jednotek](../test/media/ute_failedpassednotrunsummary.png)
@@ -319,7 +321,7 @@ Další informace naleznete v tématu [spuštění testů jednotek pomocí Průz
     > [!NOTE]
     > Vzhledem k tomu, že testovací metody lze spustit v libovolném pořadí, nastavte zarážky ve všech testovacích metodách, které chcete ladit.
 
-2. V **Průzkumníku testů**vyberte testovací metody a pak zvolte možnost **ladit vybrané testy** z místní nabídky.
+2. V **Průzkumníku testů** vyberte testovací metody a pak zvolte možnost **ladit vybrané testy** z místní nabídky.
 
 Přečtěte si další informace o [ladění testů jednotek](../debugger/debugger-feature-tour.md).
 

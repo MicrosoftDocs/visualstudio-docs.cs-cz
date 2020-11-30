@@ -1,5 +1,7 @@
 ---
 title: Vytváření nadřazených složek kontejneru pro řešení | Microsoft Docs
+description: Naučte se používat rozhraní API modulu plug-in správy zdrojového kódu verze 1,2 k určení jednoho cílového umístění ovládacího prvku pro všechny webové projekty v rámci řešení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e5481e20a12fc05ccba97eef55173e5ce9b30d6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e65da2b50984b0259079a1693dd31d400e1e12e3
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709103"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329936"
 ---
 # <a name="create-parent-container-folders-for-solutions"></a>Vytvoření nadřazených složek kontejneru pro řešení
 V rozhraní API modulu plug-in správy zdrojového kódu verze 1,2 může uživatel pro všechny webové projekty v rámci řešení zadat jeden cíl ovládacího prvku kořenového zdrojového kódu. Tento jediný kořen se nazývá Super Unified root (SUR).
@@ -45,7 +47,7 @@ V rozhraní API modulu plug-in správy zdrojového kódu verze 1,2 může uživa
 
 V nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je doporučeno, aby název složky sur byl stejný jako název řešení bez přípony. Následující tabulka shrnuje chování ve dvou verzích.
 
-|Příznak|Rozhraní API modulu plug-in správy zdrojového kódu verze 1,1|Rozhraní API modulu plug-in správy zdrojového kódu verze 1,2|
+|Funkce|Rozhraní API modulu plug-in správy zdrojového kódu verze 1,1|Rozhraní API modulu plug-in správy zdrojového kódu verze 1,2|
 |-------------| - | - |
 |Přidat řešení do SCC|SccInitialize()<br /><br /> SccGetProjPath()<br /><br /> SccGetProjPath()<br /><br /> SccOpenProject()|SccInitialize()<br /><br /> SccGetProjPath()<br /><br /> SccCreateSubProject()<br /><br /> SccCreateSubProject()<br /><br /> SccOpenProject()|
 |Přidat projekt do řešení se správou zdrojů|SccGetProjPath()<br /><br /> OpenProject()|SccGetParentProjectPath()<br /><br /> SccOpenProject()<br /><br />  **Poznámka:**  Visual Studio předpokládá, že řešení je přímým podřízeným prvku SUR.|
@@ -62,7 +64,7 @@ V nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je dopo
 
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] použije se výchozí chování verze 1,1, pokud modul plug-in správy zdrojových kódů nevrací `SCC_CAP_CREATESUBPROJECT` `SCC_CAP_GETPARENTPROJECT` značky a schopnosti. Kromě toho mohou uživatelé [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zvolit možnost vrátit se k chování verze 1,1 nastavením hodnoty následujícího klíče na hodnotu *DWORD: 00000001*:
 
- **[HKEY_CURRENT_USER \software\microsoft\visualstudio\8.0\sourcecontrol] DoNotCreateSolutionRootFolderInSourceControl**  =  *DWORD: 00000001*
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] DoNotCreateSolutionRootFolderInSourceControl**  =  *DWORD: 00000001*
 
 ## <a name="see-also"></a>Viz také
 - [Co je nového v rozhraní API modulu plug-in správy zdrojového kódu verze 1,2](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

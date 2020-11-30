@@ -1,5 +1,7 @@
 ---
 title: Live Unit Testing
+description: Přečtěte si o Live Unit Testing při vývoji aplikací, včetně podporovaných platforem a způsobu konfigurace Live Unit Testing.
+ms.custom: SEO-VS-2020
 ms.date: 04/07/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1084b79fceda34cceed51ae8d4a5a84d7ebfb016
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 82ed41514109887d32f38faf4f965c923864ae32
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249897"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329351"
 ---
 # <a name="how-to-configure-and-use-live-unit-testing"></a>Konfigurace a použití Live Unit Testing
 
@@ -40,7 +42,7 @@ V některých případech může být nutné explicitně obnovit balíčky NuGet
 
 ## <a name="configure"></a>Konfigurace
 
-Nakonfigurujte Live Unit Testing tak, **Tools**že vyberete  >  **Možnosti** nástrojů na panelu nabídek nejvyšší úrovně a pak v levém podokně dialogového okna **Možnosti** vyberete **Live Unit Testing** .
+Nakonfigurujte Live Unit Testing tak, **Tools** že vyberete  >  **Možnosti** nástrojů na panelu nabídek nejvyšší úrovně a pak v levém podokně dialogového okna **Možnosti** vyberete **Live Unit Testing** .
 
 > [!TIP]
 > Po povolení Live Unit Testing (viz další část, [spuštění, pozastavení a zastavení Live Unit Testing](#start-pause-and-stop)) můžete také otevřít dialogové okno **Možnosti** výběrem možnosti **test**  >  **Live Unit Testing**  >  **Options**.
@@ -136,7 +138,7 @@ Například selhání testu zobrazené na předchozím obrázku bylo způsobeno 
 **Průzkumník testů** poskytuje rozhraní, které umožňuje spouštět a ladit testy a analyzovat výsledky testů. Live Unit Testing se integruje s **průzkumníkem testů**. Pokud Live Unit Testing není povolen nebo je zastaven, **Průzkumník testů** zobrazí stav testů testování při posledním spuštění testu. Změny zdrojového kódu vyžadují, abyste znovu znovu provedli testy. Naproti tomu, pokud je povolena Live Unit Testing, se stav testů jednotek v **Průzkumníku testů** okamžitě aktualizuje. Nemusíte explicitně spouštět testy jednotek.
 
 > [!TIP]
-> Otevřete **Live Unit Testing** tím, **Test**že  >  **Windows**  >  v nabídce aplikace Visual Studio nejvyšší úrovně vyberete test Windows**Test Explorer** .
+> Otevřete **Live Unit Testing** tím, **Test** že  >  **Windows**  >  v nabídce aplikace Visual Studio nejvyšší úrovně vyberete test Windows **Test Explorer** .
 
 V okně **Průzkumník testů** si můžete všimnout, že některé testy jsou vybledlé. Pokud například povolíte Live Unit Testing po otevření dříve uloženého projektu, okno **Průzkumník testů** vynechalo vše, ale neúspěšný test, jak ukazuje následující obrázek. V tomto případě Live Unit Testing znovu spustit neúspěšný test, ale nespustí úspěšné testy znovu. Důvodem je to, že trvalá data Live Unit Testing znamenají, že se od posledního spuštění testů nezměnily žádné změny.
 
@@ -157,7 +159,7 @@ Některé rozdíly mezi Live Unit Testing automaticky spouští a aktualizují v
 **Live Unit Testing**, podobně jako **Průzkumník testů**, poskytuje rozhraní, které umožňuje spouštět a ladit testy a analyzovat výsledky testů. Když je povoleno Live Unit Testing, stav testů jednotek v **Průzkumníku testů** se okamžitě aktualizuje. Nemusíte explicitně spouštět testy jednotek. Pokud Live Unit Testing není povolen nebo je zastaven, **Live Unit Testing** zobrazí stav testů testování při posledním spuštění testu. Po restartování Live Unit Testing se pro opětovné spuštění testů vyžaduje změna zdrojového kódu.
 
 > [!TIP]
-> Začněte Live Unit Testing výběrem možnosti **test**  >  **Live Unit Testing**  >  **začít** v nabídce aplikace Visual Studio nejvyšší úrovně. Můžete také otevřít okno **Live Unit Testing** pomocí **zobrazení**  >  **jiných**  >  **oken Live Unit Testing**Windows.
+> Začněte Live Unit Testing výběrem možnosti **test**  >  **Live Unit Testing**  >  **začít** v nabídce aplikace Visual Studio nejvyšší úrovně. Můžete také otevřít okno **Live Unit Testing** pomocí **zobrazení**  >  **jiných**  >  **oken Live Unit Testing** Windows.
 
 V okně **Live Unit Testing** můžete všimnout, že některé testy jsou vybledlé. Například při zastavení a restartování Live Unit Testing **Live Unit Testing** okno vykreslí všechny testy, jak ukazuje následující obrázek. Výsledky nepatrného testu ukazují, že test nebyl součástí nejnovějšího běhu služby Live Unit Test. Testy se spustí pouze v případě, že je zjištěna změna testu nebo závislostí testu. Pokud nedojde ke změně, vyhnete se tak zbytečnému spuštění testu. V tomto případě je výsledek šedé testu stále "aktuální", i když nebyl součástí posledního spuštění.
 
@@ -177,7 +179,7 @@ Některé rozdíly mezi Live Unit Testing automaticky spouští a aktualizují v
 Pokud má vaše řešení 10 nebo více projektů, Visual Studio zobrazí následující dialog, když:
 
 - spustit Live Unit Testing a neexistují žádná trvalá data
-- Vyberte **Tools**  >  **Možnosti**nástrojů  >  **Live Unit Testing**  >  **Odstranit trvalá data** .
+- Vyberte **Tools**  >  **Možnosti** nástrojů  >  **Live Unit Testing**  >  **Odstranit trvalá data** .
 
 ![Dialog Live Unit Testing pro velké projekty](media/lut-large-project.png)
 
@@ -198,9 +200,9 @@ Chcete-li vybrat jednotlivé projekty v testování částí, proveďte následu
 
 Můžete použít okno editoru kódu k zahrnutí nebo vyloučení jednotlivých testovacích metod. Klikněte pravým tlačítkem na podpis testovací metody v okně editoru kódu a vyberte jednu z následujících možností:
 
-- **Live Unit Testing**  >  **Zahrnout \<selected method> **
-- **Live Unit Testing**  >  **Vyloučit \<selected method> **
-- **Live Unit Testing**  >  **Vyloučit všechny kromě \<selected method> **
+- **Live Unit Testing**  >  **Zahrnout \<selected method>**
+- **Live Unit Testing**  >  **Vyloučit \<selected method>**
+- **Live Unit Testing**  >  **Vyloučit všechny kromě \<selected method>**
 
 ### <a name="exclude-tests-programmatically"></a>Vyloučení testů prostřednictvím kódu programu
 

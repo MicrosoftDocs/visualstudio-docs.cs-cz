@@ -1,5 +1,7 @@
 ---
 title: Zobrazení souborů pomocí příkazu otevřít v programu | Microsoft Docs
+description: Přečtěte si, jak projekt může volat příkaz Otevřít v integrovaném vývojovém prostředí (IDE) sady Visual Studio k zobrazení souborů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4051793077e613981e1dd5b44f1736878f5853e9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2cb6bd44148d470cac68addc09db9e9207e9d70
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708583"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329689"
 ---
 # <a name="display-files-by-using-the-open-with-command"></a>Zobrazení souborů pomocí příkazu otevřít v programu
 Projekt může požádat IDE o zobrazení dialogového okna **otevřít v programu** . Tento požadavek vyzve uživatele k otevření souboru, který má výběr standardních editorů. Tento proces je popsán v následujících krocích:

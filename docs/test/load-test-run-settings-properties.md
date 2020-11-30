@@ -1,5 +1,7 @@
 ---
 title: Parametry spuštění zátěžového testu
+description: Naučte se, jak vytvořit a uložit více parametrů spuštění pro každý zátěžový test a pak vybrat konkrétní nastavení, které se použije při spuštění testu.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: de10dabb-02ed-403b-9e6f-0b735524988c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8898a474888ce9efbf4c91a5251bf8fe7036fe5f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 651d3937e51be4ec1deeb748f2e4f32cfd08ee81
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75584462"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329247"
 ---
 # <a name="load-test-run-settings-properties"></a>Vlastnosti nastavení běhu zátěžového testu
 
@@ -34,8 +36,8 @@ Další informace najdete v tématu [Konfigurace nastavení běhu zátěžového
 |**Maximální počet vykázaných adres URL žádosti**|Maximální počet jedinečných adres URL žádostí testu webového výkonu, na kterých se má vykázat výsledky v tomto zátěžovém testu.<br /><br /> Toto číslo můžete zvýšit, pokud je to nutné, ale v takovém případě dojde také ke zvýšení velikosti a doby zpracování výsledku zátěžového testu.|
 |**Maximální počet překročení mezních hodnot**|Maximální počet překročení mezních hodnot, které mají být uloženy pro tento zátěžový test.<br /><br /> Toto číslo můžete zvýšit, pokud je to nutné, ale v takovém případě dojde také ke zvýšení velikosti a doby zpracování výsledku zátěžového testu.|
 |**Spustit testy jednotek v aplikační doméně**|Logická hodnota, která určuje, zda každé testovací sestavení jednotky bude spuštěno v samostatné aplikační doméně, pokud zátěžový test obsahuje testy jednotek. Výchozí nastavení je true (pravda).<br /><br /> Pokud testy jednotek nevyžadují, aby správně fungovala samostatná aplikační doména nebo soubor app.config, testy jednotek by mohly běžet rychleji nastavením hodnoty této vlastnosti na `False` .|
-|**Name**|Název nastavení spuštění, jak se zobrazí v uzlu **nastavení spuštění** **Editor zátěžového testu**.|
-|**Úroveň ověření**|Tato definice definuje nejvyšší úroveň ověřovacího pravidla, které se spustí v rámci zátěžového testu. Ověřovací pravidla jsou přidružena k žádostem o test výkonnosti webu. Každé ověřovací pravidlo má přidruženou úroveň ověření: **Vysoká**, **střední**nebo **Nízká**. Toto nastavení běhu zátěžového testu určí, která ověřovací pravidla budou spuštěna, když je test výkonnosti webu spuštěn v rámci zátěžového testu. Pokud je například toto nastavení běhu nastaveno na **hodnotu Střední**, spustí se všechna ověřovací pravidla označená jako **střední**nebo **Nízká** .|
+|**Název**|Název nastavení spuštění, jak se zobrazí v uzlu **nastavení spuštění** **Editor zátěžového testu**.|
+|**Úroveň ověření**|Tato definice definuje nejvyšší úroveň ověřovacího pravidla, které se spustí v rámci zátěžového testu. Ověřovací pravidla jsou přidružena k žádostem o test výkonnosti webu. Každé ověřovací pravidlo má přidruženou úroveň ověření: **Vysoká**, **střední** nebo **Nízká**. Toto nastavení běhu zátěžového testu určí, která ověřovací pravidla budou spuštěna, když je test výkonnosti webu spuštěn v rámci zátěžového testu. Pokud je například toto nastavení běhu nastaveno na **hodnotu Střední**, spustí se všechna ověřovací pravidla označená jako **střední** nebo **Nízká** .|
 
 ## <a name="logging-properties"></a>Vlastnosti protokolování
 
@@ -52,7 +54,7 @@ Další informace najdete v tématu [Úprava nastavení protokolování zátěž
 |Vlastnost|Definice|
 |-|----------------|
 |**Typ úložiště**|Způsob ukládání čítačů výkonu, které jsou získány v rámci zátěžového testu. Možnosti jsou tyto:<br /><br /> -   **Databáze** – vyžaduje databázi SQL, která má **Load výsledky testů Store**.<br />-   **Žádné**.|
-|**Úložiště podrobností časování**|Slouží k určení, které podrobnosti budou uloženy v **úložišti výsledky testů zatížení**. K dispozici jsou tři hodnoty:<br /><br /> -   **AllIndividualDetails** – shromáždí a uloží jednotlivé hodnoty časování pro každý test, transakci a stránku, které byly spuštěny nebo vydány během zátěžového testu v **úložišti Load výsledky testů**. Je vyžadováno, pokud chcete v **analyzátoru zátěžového testu**použít **graf aktivity virtuálního uživatele** .<br />     Další informace najdete v tématu [Analýza aktivity virtuálních uživatelů v zobrazení podrobností](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).<br />-   **Žádný** – neshromažďuje žádné hodnoty jednotlivých časování. Toto je výchozí hodnota pro Visual Studio 2013 Update 4 a novější verze.<br />-   **StatisticsOnly** – shromáždí a uloží pouze statistiku místo uložení jednotlivých hodnot časování pro každý test, transakci a stránku, která byla provedena nebo vydána během zátěžového testu v **úložišti Load výsledky testů**.<br /><br /> Další informace najdete v tématu [Postupy: určení vlastnosti úložiště podrobností časování](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md).|
+|**Úložiště podrobností časování**|Slouží k určení, které podrobnosti budou uloženy v **úložišti výsledky testů zatížení**. K dispozici jsou tři hodnoty:<br /><br /> -   **AllIndividualDetails** – shromáždí a uloží jednotlivé hodnoty časování pro každý test, transakci a stránku, které byly spuštěny nebo vydány během zátěžového testu v **úložišti Load výsledky testů**. Je vyžadováno, pokud chcete v **analyzátoru zátěžového testu** použít **graf aktivity virtuálního uživatele** .<br />     Další informace najdete v tématu [Analýza aktivity virtuálních uživatelů v zobrazení podrobností](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).<br />-   **Žádný** – neshromažďuje žádné hodnoty jednotlivých časování. Toto je výchozí hodnota pro Visual Studio 2013 Update 4 a novější verze.<br />-   **StatisticsOnly** – shromáždí a uloží pouze statistiku místo uložení jednotlivých hodnot časování pro každý test, transakci a stránku, která byla provedena nebo vydána během zátěžového testu v **úložišti Load výsledky testů**.<br /><br /> Další informace najdete v tématu [Postupy: určení vlastnosti úložiště podrobností časování](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md).|
 
 ## <a name="sql-tracing-properties"></a>Vlastnosti trasování SQL
 

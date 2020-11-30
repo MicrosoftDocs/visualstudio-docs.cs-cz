@@ -1,5 +1,7 @@
 ---
 title: Konfigurace a platformy pro programové testy uživatelského rozhraní
+description: Tento článek obsahuje podporované konfigurace a platformy pro programové testy uživatelského rozhraní pro Visual Studio Enterprise.
+ms.custom: SEO-VS-2020
 ms.date: 10/04/2015
 ms.topic: reference
 helpviewer_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 3636f87db5c395f1660d9271d0eed5cacec99161
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 2b749375c398b3deb6ac56e8b1a787b0bcb82b22
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036896"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330248"
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznamy akcí
 

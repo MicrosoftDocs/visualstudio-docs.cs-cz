@@ -1,5 +1,7 @@
 ---
 title: Určení editoru, který otevře soubor v projektu | Microsoft Docs
+description: Přečtěte si o klíčích registru a metodách sady Visual Studio SDK používaných sadou Visual Studio k určení, který Editor otevře soubor v projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af7037a3b4bfbae1801e802256af240d017d2789
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f9574a3319d3c43c17d7351e462b6956ae899d84
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708658"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328402"
 ---
 # <a name="determine-which-editor-opens-a-file-in-a-project"></a>Určete, který Editor otevře soubor v projektu.
 Když uživatel otevře soubor v projektu, prostředí projde procesem cyklického dotazování a nakonec otevře příslušný editor nebo návrháře pro tento soubor. Počáteční postup používaný prostředím je stejný pro standardní i vlastní editory. Prostředí používá různá kritéria při cyklickém dotazování, který Editor použít k otevření souboru a VSPackage musí během tohoto procesu koordinovat prostředí.
@@ -27,9 +29,9 @@ Když uživatel otevře soubor v projektu, prostředí projde procesem cyklické
 
  Projekt různých souborů deklarace identity všechny soubory, které nejsou vyžádány jinými projekty. Tímto způsobem mohou vlastní editory otevřít dokumenty před tím, než je otevřou standardní editory. Pokud projekt různé soubory deklaruje soubor, prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metodu pro otevření souboru pomocí standardního editoru. Prostředí zkontroluje svůj interní seznam registrovaných editorů pro jeden, který zpracovává soubory *. RTF* . Tento seznam najdete v registru v následujícím klíči:
 
- **HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio \\ \<version> \Editors \\ \<editor factory guid> \Extensions**
+ **HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ \<version> \Editors \\ \<editor factory guid> \Extensions**
 
- Prostředí také kontroluje identifikátory třídy v klíči **HKEY_CLASSES_ROOT \CLSID** pro všechny objekty, které mají podklíč **DocObject**. Pokud je nalezena přípona souboru, vložená verze aplikace, jako je například Microsoft Word, je vytvořena místně v aplikaci Visual Studio. Tyto objekty dokumentu musí být složené soubory, které implementují <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage> rozhraní, nebo objekt musí implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> rozhraní.
+ Prostředí také kontroluje identifikátory třídy v **HKEY_CLASSES_ROOT\CLSID** klíč pro všechny objekty, které mají podklíč **DocObject**. Pokud je nalezena přípona souboru, vložená verze aplikace, jako je například Microsoft Word, je vytvořena místně v aplikaci Visual Studio. Tyto objekty dokumentu musí být složené soubory, které implementují <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage> rozhraní, nebo objekt musí implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> rozhraní.
 
  Pokud v registru není k dispozici žádný *objekt pro vytváření* editorů, pak prostředí vyhledá klíč **HKEY_CLASSES_ROOT \\ . RTF** a otevře Editor, který zde zadal. Pokud se přípona souboru nenajde v **HKEY_CLASSES_ROOT**, pak prostředí používá základní textový editor sady Visual Studio k otevření souboru, pokud se jedná o textový soubor.
 

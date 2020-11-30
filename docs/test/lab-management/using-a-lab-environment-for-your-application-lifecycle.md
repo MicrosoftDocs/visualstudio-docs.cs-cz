@@ -1,5 +1,7 @@
 ---
 title: Použití testovacího prostředí pro DevOps
+description: Přečtěte si o testovacích prostředích a o používání cloudu s Azure Pipelines nebo Team Foundation Server sestavování a vydávání.
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 1a5958b03b9797882b3df37f4ba99c75ff832d22
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: cb25561f70882336a1143918d3cf78849b394065
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928105"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328922"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>Použití testovacího prostředí pro DevOps
 
@@ -28,7 +30,7 @@ Testovací prostředí je kolekce virtuálních a fyzických počítačů, kter�
 
 Tady jsou příklady běžných topologií testovacího prostředí:
 
-| Topologie | Description |
+| Topologie | Popis |
 |---|---|
 |![Topologie pouze serveru](../media/topology_backend.png)| Toto testovací prostředí má *topologii serveru*, která se často používá ke spouštění manuálních testů u serverových aplikací a který umožňuje testerům používat vlastní klientské počítače k ověření chyb v prostředí. V back-endu topologie obsahuje testovací prostředí pouze servery. Když použijete tento typ topologie, obvykle se k serverům v testovacím prostředí připojíte pomocí klientského počítače, který není součástí prostředí.|
 |![Cloudové testovací prostředí](../media/topology_cloud.png)| Toto testovací prostředí poskytuje podobné možnosti a funkce jako _topologie serveru_, ale odebírá požadavek fyzických nebo virtuálních počítačů spuštěných v místním prostředí. což může zkrátit dobu nastavení, zjednodušit údržbu a minimalizovat náklady. Nastavení více webů a virtuálních počítačů společně s vlastními sítěmi je rychlé a snadné v cloudovém prostředí, jako je Microsoft Azure.|
@@ -120,7 +122,7 @@ Standardní prostředí a prostředí SCVMM podporují mnoho stejných funkcí. 
 
 Tady je několik dalších konceptů, které byste před pokračováním měli znát:
 
-|Období|Description|
+|Termín|Popis|
 |-|-----------------|
 |Centrum testovacích prostředí|Oblast Microsoft Test Manager, kde můžete vytvářet a spravovat testovací prostředí.|
 |Testovací prostředí projektu Azure DevOps|Kolekce laboratorních prostředí, která byla nastavena, abyste se k nim mohli připojit a spouštět jejich virtuální počítače.|

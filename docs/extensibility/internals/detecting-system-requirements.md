@@ -1,5 +1,7 @@
 ---
 title: Zjišťují se požadavky na systém | Microsoft Docs
+description: Naučte se, jak nakonfigurovat Microsoft Instalační služba systému Windows pro detekci požadavků na systém, jako je třeba edice sady Visual Studio, která je nainstalovaná.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ab254df5d53f379704128d8860b8d7fe5655bae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4befcf3950c41beba2440e6f023983269137b1f
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708737"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329806"
 ---
 # <a name="detect-system-requirements"></a>Zjistit požadavky na systém
 VSPackage nemůže fungovat, pokud není nainstalována aplikace Visual Studio. Když použijete Microsoft Instalační služba systému Windows ke správě instalace VSPackage, můžete nakonfigurovat instalační program, aby zjistil, jestli je nainstalovaná aplikace Visual Studio. Můžete ji také nakonfigurovat tak, aby zkontrolovala, jestli v systému nejsou jiné požadavky, třeba na konkrétní verzi Windows nebo konkrétní velikost paměti RAM.
@@ -33,14 +35,14 @@ VSPackage nemůže fungovat, pokud není nainstalována aplikace Visual Studio. 
 Když je nainstalovaná novější edice, přidají se klíče registru pro tuto edici i pro předchozí edice. To znamená, že pokud je verze Enterprise Edition nainstalovaná, **instalační** klíč se nastaví na *1* pro Enterprise a také na edice Professional a Community. Proto je nutné zaškrtnout pouze nejnovější edici, kterou potřebujete.
 
 > [!NOTE]
-> V 64 bitové verzi editoru registru se v části **HKEY_LOCAL_MACHINE \software\wow6432node \\ **zobrazí 32 bitů klíčů. Klíče sady Visual Studio jsou pod **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\devdiv\vs\servicing \\ **.
+> V 64 bitové verzi editoru registru se v části **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\\** zobrazí 32 bitové klíče. Klíče sady Visual Studio jsou pod **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\\**.
 
 |Produkt|Klíč|
 |-------------|---------|
-|Visual Studio Enterprise 2015|HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\enterprise|
-|Visual Studio Professional 2015|HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\professional|
-|Visual Studio Community 2015|HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\community|
-|Prostředí sady Visual Studio 2015 (integrovaný a izolovaný režim)|HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell|
+|Visual Studio Enterprise 2015|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\enterprise|
+|Visual Studio Professional 2015|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\professional|
+|Visual Studio Community 2015|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\community|
+|Prostředí sady Visual Studio 2015 (integrovaný a izolovaný režim)|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell|
 
 ## <a name="detect-when-visual-studio-is-running"></a>Rozpoznat, kdy je spuštěná aplikace Visual Studio
  Rozhraní VSPackage nelze správně zaregistrovat, pokud je aplikace Visual Studio spuštěna při instalaci sady VSPackage. Instalační program musí zjistit, kdy je spuštěná aplikace Visual Studio, a pak zamítnout instalaci programu. Instalační služba systému Windows neumožňují použití položek tabulky k povolení takového zjišťování. Místo toho je nutné vytvořit vlastní akci, a to následujícím způsobem: pomocí `EnumProcesses` funkce zjistíte *devenv.exe* proces a potom buď nastavte instalační vlastnost, která se používá v podmínce spuštění, nebo podmíněně zobrazí dialogové okno s výzvou, aby uživatel zavřel sadu Visual Studio.

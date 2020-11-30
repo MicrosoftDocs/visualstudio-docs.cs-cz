@@ -1,5 +1,7 @@
 ---
 title: Zápis testů jednotek pro knihovny DLL C++
+description: Přečtěte si o několika způsobech testování kódu knihovny DLL v závislosti na tom, zda knihovna DLL exportuje funkce, které chcete testovat.
+ms.custom: SEO-VS-2020
 ms.date: 05/01/2019
 ms.topic: how-to
 ms.author: corob
@@ -7,12 +9,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 3bfbe5fd0147a04d6fc6142fd1d722f8f2304586
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7eb7b7be524e20ca87c70c3f1f771f4f8a01141
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287035"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328623"
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Zápis testů jednotek pro knihovny DLL C++ v aplikaci Visual Studio
 
@@ -42,7 +44,7 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
 - Pokud vaše testy musí používat členy, které nejsou exportovány knihovnou DLL, a testovaný projekt je sestaven jako dynamická knihovna, zvažte jeho převod na statickou knihovnu.
 
-  1. V **Průzkumník řešení**v místní nabídce testovaného projektu vyberte možnost **vlastnosti**. Otevře se okno **vlastnosti** projektu.
+  1. V **Průzkumník řešení** v místní nabídce testovaného projektu vyberte možnost **vlastnosti**. Otevře se okno **vlastnosti** projektu.
 
   2. Vyberte **Vlastnosti konfigurace**  >  **Obecné**.
 
@@ -68,9 +70,9 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
       ::: moniker-end
 
-  1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt testu a pak zvolte **Přidat**  >  **odkaz**.
+  1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt testu a pak zvolte **Přidat**  >  **odkaz**.
 
-  1. Vyberte **projekty**a potom projekt, který chcete otestovat.
+  1. Vyberte **projekty** a potom projekt, který chcete otestovat.
 
        Vyberte tlačítko **Přidat**.
 
@@ -78,7 +80,7 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
        Vyberte možnost **Vlastnosti konfigurace**  >  **adresáře VC + +**  >  **adresáře včetně adresářů**.
 
-       Zvolte **Upravit**a pak přidejte adresář záhlaví testovaného projektu.
+       Zvolte **Upravit** a pak přidejte adresář záhlaví testovaného projektu.
 
   Přejít na [zápis testů jednotek](#addTests).
 
@@ -100,19 +102,19 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
       ::: moniker-end
 
-  2. V **Průzkumník řešení**v místní nabídce testovacího projektu vyberte možnost **vlastnosti**.
+  2. V **Průzkumník řešení** v místní nabídce testovacího projektu vyberte možnost **vlastnosti**.
 
   3. Vyberte **Vlastnosti konfigurace**  >  **linker**  >  **vstup**  >  **Další závislosti**.
 
-       Vyberte **Upravit**a přidejte názvy souborů **. obj** nebo **. lib** . Nepoužívejte názvy úplných cest.
+       Vyberte **Upravit** a přidejte názvy souborů **. obj** nebo **. lib** . Nepoužívejte názvy úplných cest.
 
   4. Vyberte **Vlastnosti konfigurace**  >  **linker**  >  **Obecné**  >  **Další adresáře knihoven**.
 
-       Vyberte **Upravit**a přidejte cestu k adresáři souborů **. obj** nebo **. lib** . Cesta je obvykle ve složce sestavení testovaného projektu.
+       Vyberte **Upravit** a přidejte cestu k adresáři souborů **. obj** nebo **. lib** . Cesta je obvykle ve složce sestavení testovaného projektu.
 
   5. Vyberte možnost **Vlastnosti konfigurace**  >  **adresáře VC + +**  >  **adresáře včetně adresářů**.
 
-       Zvolte **Upravit**a pak přidejte adresář záhlaví testovaného projektu.
+       Zvolte **Upravit** a pak přidejte adresář záhlaví testovaného projektu.
 
   Přejít na [zápis testů jednotek](#addTests).
 
@@ -120,7 +122,7 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
 1. Upravte vlastnosti projektu kódu produktu tak, aby obsahovaly hlavičky a soubory knihoven, které jsou požadovány pro testování částí.
 
-   1. V **Průzkumník řešení**v místní nabídce testovaného projektu vyberte možnost **vlastnosti**. Otevře se okno **vlastnosti** projektu.
+   1. V **Průzkumník řešení** v místní nabídce testovaného projektu vyberte možnost **vlastnosti**. Otevře se okno **vlastnosti** projektu.
 
    2. Vyberte **Možnosti konfigurace**  >  **adresáře VC + +**.
 
@@ -133,7 +135,7 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
 2. Přidat soubor testu jednotek C++:
 
-   - V **Průzkumník řešení**v místní nabídce projektu vyberte možnost **Přidat**  >  **novou položku**  >  **C++ test jednotek**.
+   - V **Průzkumník řešení** v místní nabídce projektu vyberte možnost **Přidat**  >  **novou položku**  >  **C++ test jednotek**.
 
    Přejít na [zápis testů jednotek](#addTests).
 
@@ -167,7 +169,7 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
 1. Pokud nejsou všechny testy v okně viditelné, sestavte projekt testu kliknutím pravým tlačítkem myši na jeho uzel v **Průzkumník řešení** a výběrem možnosti **sestavit** nebo **znovu sestavit**.
 
-1. V **Průzkumníku testů**zvolte možnost **Spustit vše**nebo vyberte konkrétní testy, které chcete spustit. Klikněte pravým tlačítkem na test pro další možnosti, včetně spuštění v režimu ladění se zapnutými zarážkami.
+1. V **Průzkumníku testů** zvolte možnost **Spustit vše** nebo vyberte konkrétní testy, které chcete spustit. Klikněte pravým tlačítkem na test pro další možnosti, včetně spuštění v režimu ladění se zapnutými zarážkami.
 
 ## <a name="see-also"></a>Viz také
 

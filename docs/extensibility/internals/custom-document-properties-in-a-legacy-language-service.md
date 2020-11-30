@@ -1,5 +1,6 @@
 ---
 title: Vlastní vlastnosti dokumentu ve službě starší verze jazyka
+description: Naučte se vytvářet vlastní vlastnosti dokumentu, které se zobrazují v okno Vlastnosti sady Visual Studio, jako součást služby starší verze jazyka.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c38ad28456ab8b9bccf29d2249307b718a5767b
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: d5fa24f3d052ab9122776967607b2c197fb102bf
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036831"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329897"
 ---
 # <a name="custom-document-properties-in-a-legacy-language-service"></a>Vlastní vlastnosti dokumentu ve službě starší verze jazyka
 Vlastnosti dokumentu lze zobrazit v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] okně **vlastnosti** . Programovací jazyky obecně nemají vlastnosti spojené s jednotlivými zdrojovými soubory. XML však podporuje vlastnosti dokumentu, které mají vliv na kódování, schéma a šablonu stylů.

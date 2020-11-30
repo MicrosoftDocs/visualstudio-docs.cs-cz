@@ -1,5 +1,7 @@
 ---
 title: Vytváření typů projektů | Microsoft Docs
+description: Naučte se, jak roztáhnout Visual Studio návrhem, vytvořením a registrací nového typu projektu, který podporuje úlohy programování.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2398b63b8cd52784252cfc764bb6c6a30e1accc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4038a122c6d2ec5f6ed29df6e529b2bff2e2bb71
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709072"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329923"
 ---
 # <a name="create-project-types"></a>Vytváření typů projektů
 Můžete ho zvětšit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vytvořením nového typu projektu. Chcete-li vytvořit nový typ projektu, je nutné pochopit několik konceptů a provést několik kroků. Následující témata poskytují přehled o tom, jak vytvořit typy projektů.

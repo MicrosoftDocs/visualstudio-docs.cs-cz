@@ -1,5 +1,7 @@
 ---
 title: Sady čítačů a pravidla prahové hodnoty pro zátěžové testování
+description: Přečtěte si, jak zadat sady čítačů a pravidla prahové hodnoty v rámci zátěžového testu. Přidejte testované servery do seznamu počítačů, ve kterých chcete shromáždit čítače.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.assetid: 9e14d955-f3a4-4717-bbfe-7f08cdda5678
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 440bc01b52269c477d9d2f2194fd831041f1d20d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04348eb2d88c560e9687c687486e6b44d8394371
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596317"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328948"
 ---
 # <a name="specify-counter-sets-and-threshold-rules-for-computers-in-a-load-test"></a>Určení sad čítačů a mezních pravidel pro počítače v zátěžovém testu
 
@@ -40,7 +42,7 @@ Je důležité přidat testované servery do seznamu počítačů, ve kterých s
 |Úlohy|Související témata|
 |-|-----------------------|
 |**Správa sad čítačů pro zátěžový test:** Po vytvoření zátěžového testu můžete upravit sadu čítačů v Editor zátěžového testu. Správa sad čítačů zahrnuje výběr sady počítačů, ze kterých chcete shromažďovat údaje o výkonu a přiřazování sady čítačů pro shromažďování dat z jednotlivých počítačů. Čítače můžete spravovat v Editor zátěžového testu.|-   [Postupy: Správa sad čítačů](../test/how-to-manage-counter-sets-using-the-load-test-editor.md)|
-|**Přidejte sady čítačů do zátěžového testu:** Při vytváření zátěžového testu s **novým Průvodce zátěžovým testem**přidáte počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy. Po vytvoření zátěžového testu můžete přidat nové čítače do existujících sad čítačů pomocí Editor zátěžového testu.|-   [Postupy: Přidání čítačů do sad čítačů](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)<br />-   [Postupy: Přidání vlastních sad čítačů](../test/how-to-add-custom-counter-sets-using-the-load-test-editor.md)|
+|**Přidejte sady čítačů do zátěžového testu:** Při vytváření zátěžového testu s **novým Průvodce zátěžovým testem** přidáte počáteční sadu čítačů. Ty nabízejí sadu předdefinovaných sad čítačů pro zátěžové testy. Po vytvoření zátěžového testu můžete přidat nové čítače do existujících sad čítačů pomocí Editor zátěžového testu.|-   [Postupy: Přidání čítačů do sad čítačů](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)<br />-   [Postupy: Přidání vlastních sad čítačů](../test/how-to-add-custom-counter-sets-using-the-load-test-editor.md)|
 |**Určete prahové pravidlo pomocí čítačů pro zátěžový test:** Pravidlo prahové hodnoty je pravidlo, které je nastaveno na jednotlivé čítače výkonu pro sledování využití systémových prostředků během zátěžového testu. Definice sady čítačů obsahují předdefinovaná pravidla prahové hodnoty pro mnoho klíčových čítačů výkonu. Mezní pravidla v zátěžových testech porovnávají hodnotu čítače výkonu s konstantní hodnotou nebo jinou hodnotou čítače výkonu.|-   [Postupy: Přidání prahového pravidla](../test/how-to-add-a-threshold-rule-using-the-load-test-editor.md)|
 |**Přiřaďte počítačům popisné názvy, na které jsou namapované sady čítačů:** Můžete přidat značky počítačů, které vám umožní použít snadno rozpoznaný název počítače. Značky se zobrazí v uzlu **mapování sady čítačů** pro strom v Editor zátěžového testu. Důležitější je, že značky se zobrazí v sestavách aplikace Excel, které pomůžou účastníkům určit, jakou roli má počítač v rámci zátěžového testu, například "Web Server1 v lab2" nebo "SQL Server2 v Phoenixu pobočce".<br /><br /> Další informace naleznete v tématu [výsledky testů zatížení sestav pro porovnání testů nebo analýzy trendů](../test/compare-load-test-results.md).||
 
@@ -93,9 +95,9 @@ Když vytváříte prahová pravidla, nastavíte také úrovně pro pravidlo. Ú
 
 ## <a name="the-alert-if-over-property"></a>Výstraha, pokud je vlastnost překročena
 
-Pokud chcete určit, že překročení prahové hodnoty je problém, nastavte vlastnost **Alert** na **hodnotu true** . Pokud je například pravidlo prahové hodnoty nastaveno na **% času procesoru**a chcete-li být upozorněni, je-li hodnota větší než 90, použijte typ pravidla **konstanta Compare** , nastavte **kritickou prahovou hodnotu** na 90 a nastavte **výstrahu, pokud** je nastavena na **hodnotu true**.
+Pokud chcete určit, že překročení prahové hodnoty je problém, nastavte vlastnost **Alert** na **hodnotu true** . Pokud je například pravidlo prahové hodnoty nastaveno na **% času procesoru** a chcete-li být upozorněni, je-li hodnota větší než 90, použijte typ pravidla **konstanta Compare** , nastavte **kritickou prahovou hodnotu** na 90 a nastavte **výstrahu, pokud** je nastavena na **hodnotu true**.
 
-Nastavte **výstrahu, pokud** má vlastnost over **hodnotu false** , aby označovala, že se jedná o problém, který je pod prahovou hodnotou. Pokud je například pravidlo prahové hodnoty nastaveno na **požadavky za sekundu**a chcete být upozorněni, pokud je hodnota nižší než 50, použijte typ pravidla **konstanta Compare** , nastavte **kritickou prahovou hodnotu** na 50 a nastavte **výstrahu, pokud má být překročena** hodnota **false**.
+Nastavte **výstrahu, pokud** má vlastnost over **hodnotu false** , aby označovala, že se jedná o problém, který je pod prahovou hodnotou. Pokud je například pravidlo prahové hodnoty nastaveno na **požadavky za sekundu** a chcete být upozorněni, pokud je hodnota nižší než 50, použijte typ pravidla **konstanta Compare** , nastavte **kritickou prahovou hodnotu** na 50 a nastavte **výstrahu, pokud má být překročena** hodnota **false**.
 
 ## <a name="see-also"></a>Viz také
 

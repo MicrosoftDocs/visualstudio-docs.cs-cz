@@ -1,5 +1,7 @@
 ---
 title: Rozhraní API zátěžového testu
+description: Naučte se používat rozhraní API zátěžového testu, které podporuje testovací moduly plug-in, které mohou řídit nebo zdokonalit zátěžový test.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.assetid: e15567bc-1f21-4feb-b81d-f17ba35cfde5
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1fc3ff1aa238249f7425c61b5b28d2a96e299fec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd2064a76777390eb4b708b402578f1d89ca52c7
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287100"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328675"
 ---
 # <a name="how-to-use-the-load-test-api"></a>Postupy: použití rozhraní API zátěžového testu
 

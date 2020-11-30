@@ -1,5 +1,7 @@
 ---
 title: Co je nového v Live Unit Testing v aplikaci Visual Studio 2017
+description: Tento článek popisuje nové funkce, které byly přidány do Live Unit Testing v každé verzi sady Visual Studio počínaje verzí Visual Studio 2017 verze 15,3.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 10/11/2017
 ms.topic: conceptual
@@ -11,12 +13,12 @@ ms.author: mikejo
 ms.workload:
 - dotnet
 monikerRange: vs-2017
-ms.openlocfilehash: cc6a7a25ebd2f7d07dcb887952b82bda34aaad35
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ae1caef04c1ccd1c51c38ddef5dc8c783bdbfaa9
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851460"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328831"
 ---
 # <a name="whats-new-in-live-unit-testing-for-visual-studio-2017"></a>Co je nového v Live Unit Testing pro Visual Studio 2017
 

@@ -1,5 +1,7 @@
 ---
 title: Testování částí
+description: Přečtěte si o nástrojích pro testování částí, pomocí kterých můžete vývojářům a testerům poskytnout rychlý způsob vyhledávání logických chyb v kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: be0f8f7eeb116a251477ce57027a2176119c2d17
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 8f48a50b39c04df9abab7c11b3b85cc0d2670025
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099307"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330131"
 ---
 # <a name="unit-test-your-code"></a>Testování částí kódu
 

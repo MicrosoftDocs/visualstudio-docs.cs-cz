@@ -1,5 +1,7 @@
 ---
 title: Poradce při potížích s pokrytím kódu
+description: Naučte se řešit chybné prázdné zprávy výsledků, pokud očekáváte, že Visual Studio shromáždí data pro nativní a spravovaná sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 03/31/2020
 ms.topic: troubleshooting
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 39d5d54021e7b8286bd653941d233a73bcf8cfb4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e960e0729e7d13b27d0c4fbda9b3f8eca0ac57c
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80527987"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330118"
 ---
 # <a name="troubleshoot-code-coverage"></a>Řešení problémů s pokrytím kódu
 
@@ -43,7 +45,7 @@ Analýza &mdash; zkontroluje okno výstup. V rozevíracím seznamu **Zobrazit v�
 
 &mdash;Analýza pokrytí kódu je prováděna během testů, které jsou spuštěny. Zahrnuje pouze sestavení, která jsou načtena do paměti v průběhu testů. Pokud není proveden žádný z testů, není pro sestavu k dispozici žádný kód.
 
-Řešení &mdash; v Průzkumníku testů vyberte možnost **Spustit vše** a ověřte, zda byly testy úspěšně spuštěny. Před použitím **analýzy pokrytí kódu**opravte případné chyby.
+Řešení &mdash; v Průzkumníku testů vyberte možnost **Spustit vše** a ověřte, zda byly testy úspěšně spuštěny. Před použitím **analýzy pokrytí kódu** opravte případné chyby.
 
 ### <a name="youre-looking-at-a-previous-result"></a>Můžete si prohlédnout předchozí výsledek.
 
@@ -61,7 +63,7 @@ Vysvětlení &mdash; modulu pokrytí kódu vyžaduje, aby každé sestavení mě
 
 Soubor *. pdb* musí být vygenerován ze stejného sestavení jako soubory *. dll* nebo *. exe* .
 
-Řešení se &mdash; ujistěte, že vaše nastavení sestavení generuje soubor *. pdb* . Pokud se soubory *. pdb* po sestavení projektu neaktualizují, otevřete vlastnosti projektu, vyberte stránku **sestavení** , zvolte možnost **Upřesnit**a zkontrolujte **informace o ladění**.
+Řešení se &mdash; ujistěte, že vaše nastavení sestavení generuje soubor *. pdb* . Pokud se soubory *. pdb* po sestavení projektu neaktualizují, otevřete vlastnosti projektu, vyberte stránku **sestavení** , zvolte možnost **Upřesnit** a zkontrolujte **informace o ladění**.
 
 Pro projekty v jazyce C++ zajistěte, aby generované soubory. pdb měly úplné informace o ladění. Otevřete vlastnosti projektu a ověřte, že **ladění linkeru**  >  **Debugging**  >  **generovat informace o ladění** je nastaveno na **generovat ladicí informace optimalizované pro sdílení a publikování (/debug: Full)**.
 
