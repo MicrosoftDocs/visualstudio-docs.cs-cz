@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 820cd87f26e4babc7a83d975c3fb480187af564f
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 20f2d142c0e253cf5ad5a7ec5d85974ff5522508
+ms.sourcegitcommit: 593bdd2da62633f8d1f1eef70d0238e2682f3e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442282"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96356832"
 ---
 # <a name="set-env"></a>set-env
 
@@ -30,7 +30,7 @@ Tento nástroj využívá rozhraní API .NET Core `Environment.SetEnvironment` a
 |----------------------------------------------|--------|----------|-----------------------------------------------------------------------------|
 | **vyjádření**                                 | řetězec | No       | Volitelná vlastnost komentářů Nepoužívá se.                                       |
 | [**vstup**](#input)                          | řetězec | No       | Vstup do nástroje. Podrobnosti najdete níže v části o [zadání](#input) .               |
-| [**additionalOptions**](#additional-options) | řetězec | No       | Nepoužívá se. Podrobnosti najdete níže v části [Další možnosti](#additional-options) .  |
+| [**additionalOptions**](#additional-options) | řetězec | No       | Podrobnosti najdete níže v části [Další možnosti](#additional-options) .            |
 
 ### <a name="input"></a>Vstup
 
@@ -47,7 +47,7 @@ Tento nástroj využívá rozhraní API .NET Core `Environment.SetEnvironment` a
 
 ### <a name="additional-options"></a>Další možnosti
 
-Nepoužívá se.
+ `--user`, `--process` nebo `--machine` lze zahrnout k určení, kde nastavit proměnné prostředí. Ve výchozím nastavení cílíme na uživatele. Další informace o možných cílech pro proměnné prostředí naleznete v tématu [EnvironmentVariableTarget](https://docs.microsoft.com/dotnet/api/system.environmentvariabletarget).
 
 ### <a name="default-behavior"></a>Výchozí chování
 
@@ -68,6 +68,20 @@ Níže jsou uvedeny příklady, jak spustit `set-env` pomocí `.devinit.json` .
     {
       "tool": "set-env",
       "input": "foo=bar",
+    }
+  ]
+}
+```
+
+#### <a name="devinitjson-that-will-set-an-environment-variable-foo-to-value-bar-stored-in-the-environment-block-associated-with-the-current-process"></a>.devinit.js, která nastaví proměnnou prostředí, `foo` na hodnotu, `bar` uloženou v bloku prostředí přidruženého k aktuálnímu procesu:
+```json
+{
+  "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+  "run": [
+    {
+      "tool": "set-env",
+      "input": "foo=bar",
+      "additionalOptions": "--process",
     }
   ]
 }
