@@ -1,7 +1,7 @@
 ---
-title: Povolit nebo nainstalovat analyzátory .NET
+title: Povolit nebo nainstalovat analyzátory .NET First stran
 ms.date: 08/03/2018
-description: Naučte se, jak povolit analyzátory .NET ze sady .NET SDK nebo nainstalovat tyto analyzátory jako balíček NuGet.
+description: Naučte se, jak povolit analyzátory .NET First stran ze sady .NET SDK nebo nainstalovat tyto analyzátory jako balíček NuGet.
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,18 +11,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a14d89caba498a07c2447f9df1109e4da9f6a466
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 60eb4828d4c8450376178c2fdccf7d4c0f63d989
+ms.sourcegitcommit: 208bd1edebfe6dec5d3bb92c63b5c1e093677e35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96112221"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440376"
 ---
-# <a name="enable-or-install-net-analyzers"></a>Povolit nebo nainstalovat analyzátory .NET
+# <a name="enable-or-install-first-party-net-analyzers"></a>Povolit nebo nainstalovat analyzátory .NET First stran
 
 ## <a name="overview"></a>Přehled
 
-Analyzátory platformy .NET Compiler Platform (Roslyn) kontrolují kód jazyka C# nebo Visual Basic z hlediska problémů s kvalitou a stylem kódu. Tyto analyzátory můžete povolit nebo nainstalovat jedním z následujících způsobů:
+Analyzátory platformy .NET Compiler Platform (Roslyn) kontrolují kód jazyka C# nebo Visual Basic z hlediska problémů s kvalitou a stylem kódu. Analyzátory .NET pro první stranu můžete povolit nebo nainstalovat jedním z následujících způsobů:
 
 - **Povolení ze sady .NET SDK**: počínaje verzí Visual Studio 2019 16,8 a .NET 5,0 jsou tyto analyzátory [součástí sady .NET SDK](/dotnet/fundamentals/code-analysis/overview). Analýza je ve výchozím nastavení povolená pro projekty, které cílí na .NET 5,0 nebo novější. Můžete povolit analýzu kódu pro projekty, které cílí na starší verze rozhraní .NET, nastavením `EnableNETAnalyzers` vlastnosti na `true` . Můžete také zakázat analýzu kódu pro projekt nastavením `EnableNETAnalyzers` na `false` .
 
@@ -35,5 +35,5 @@ Analyzátory platformy .NET Compiler Platform (Roslyn) kontrolují kód jazyka C
 
 - [Přehled analyzátorů kódu v aplikaci Visual Studio](roslyn-analyzers-overview.md)
 - [Použití analyzátorů kódu v aplikaci Visual Studio](use-roslyn-analyzers.md)
-- [Migrace ze starší verze z analýzy do analyzátorů .NET](migrate-from-legacy-analysis-to-net-analyzers.md)
-- [Migrace z analyzátorů FxCop do analyzátorů .NET](migrate-from-fxcop-analyzers-to-net-analyzers.md)
+- [Migrace ze starší verze analýzy na analyzátory .NET](migrate-from-legacy-analysis-to-net-analyzers.md)
+- [Migrace z analyzátorů FxCop na analyzátory .NET](migrate-from-fxcop-analyzers-to-net-analyzers.md)
