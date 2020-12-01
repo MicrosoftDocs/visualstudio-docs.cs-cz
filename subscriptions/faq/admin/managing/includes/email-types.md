@@ -8,10 +8,10 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
 ms.openlocfilehash: dd2c7de8ad2c96c148857b2c11960fba190a5939
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.sourcegitcommit: 593bdd2da62633f8d1f1eef70d0238e2682f3e02
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
+ms.lasthandoff: 12/01/2020
 ms.locfileid: "92157806"
 ---
 ## <a name="what-is-the-difference-between-a-sign-in-email-address-and-a-notification-email-address"></a>Jaký je rozdíl mezi e-mailovou adresou pro přihlášení a e-mailovou adresou pro oznámení?

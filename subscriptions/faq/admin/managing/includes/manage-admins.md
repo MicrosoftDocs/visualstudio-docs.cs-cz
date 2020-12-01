@@ -8,11 +8,11 @@ ms.technology: ''
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 496c8ecc16c67997de3999a48850afdcc7c1f58b
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 8bbeb8a5e13ad000939057a7d476f6979b15dca8
+ms.sourcegitcommit: 593bdd2da62633f8d1f1eef70d0238e2682f3e02
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2020
+ms.lasthandoff: 12/01/2020
 ms.locfileid: "91838429"
 ---
 ## <a name="how-do-i-manage-administrators"></a>Jak můžu spravovat správce?
@@ -39,4 +39,4 @@ Přiřazení dalších správců:
 8. V horní části podokna klikněte na rozevírací seznam Role, posuňte se dolů a vyberte  Správce uživatelských přístupů.
 9. Klikněte na Uložit.
 
-Přečtěte si [další informace](../../../../cloud-admin.md) o správě cloudových předplatných.
+Přečtěte si [další informace](https://docs.microsoft.com/visualstudio/subscriptions/cloud-admin) o správě cloudových předplatných.
