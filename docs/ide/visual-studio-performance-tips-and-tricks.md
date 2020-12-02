@@ -1,5 +1,7 @@
 ---
 title: Tipy pro zlepšení výkonu
+description: Naučte se optimalizovat některé funkce sady Visual Studio, které nemusíte používat, aby bylo možné lépe vylepšit výkon.
+ms.custom: SEO-VS-2020
 ms.date: 08/13/2020
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a70199f6a46fc5fd78c9b40dc5c68ed1e1c85a56
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 6f4c36987e198be576d843b984be14ddea824919
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189859"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479612"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Tipy a triky pro výkon sady Visual Studio
 

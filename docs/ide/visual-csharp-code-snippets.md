@@ -1,5 +1,7 @@
 ---
 title: Fragmenty kódu v jazyce C#
+description: Naučte se používat fragmenty kódu k přidání běžně používaného kódu do souborů kódu jazyka C#.
+ms.custom: SEO-VS-2020
 ms.date: 06/05/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -12,18 +14,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d41907a15b7e0b1692dda3f4d678c2b843dfcd03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46b2d231f1fa9a0e90538c426f48c86e5fafecbe
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594159"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478754"
 ---
 # <a name="c-code-snippets"></a>Fragmenty kódu v jazyce C#
 
 Fragmenty kódu jsou předem připravené fragmenty kódu, které můžete rychle vložit do kódu. Například `for` fragment kódu vytvoří prázdnou `for` smyčku. Některé fragmenty kódu jsou obklopeny – s fragmenty kódu, které umožňují vybrat řádky kódu a pak vybrat fragment kódu, který zahrnuje vybrané řádky kódu. Například když vyberete řádky kódu a pak aktivujete `for` fragment kódu, vytvoří `for` smyčku s těmito řádky kódu uvnitř bloku smyčky. Fragmenty kódu můžou urychlit psaní kódu programu, jednodušší a spolehlivější.
 
-Fragment kódu můžete vložit do umístění kurzoru nebo vložit obklopit s fragmentem kódu kolem aktuálně vybraného kódu. Fragment kódu Inserter je vyvolán prostřednictvím příkazu **Vložit fragment kódu** nebo **obklopit** příkazy v nabídce **IntelliSense** nebo pomocí klávesových zkratek **CTRL** + **K**,**X** nebo **CTRL** + **k**, v**S** tomto pořadí.
+Fragment kódu můžete vložit do umístění kurzoru nebo vložit obklopit s fragmentem kódu kolem aktuálně vybraného kódu. Fragment kódu Inserter je vyvolán prostřednictvím příkazu **Vložit fragment kódu** nebo **obklopit** příkazy v nabídce **IntelliSense** nebo pomocí klávesových zkratek **CTRL** + **K**,**X** nebo **CTRL** + **k**, v **S** tomto pořadí.
 
 **Fragment kódu Inserter** zobrazí název fragmentu kódu pro všechny dostupné fragmenty kódu. Fragment kódu Inserter také obsahuje vstupní dialogové okno, kde můžete zadat název fragmentu kódu nebo část názvu fragmentu kódu. Fragment kódu Inserter zvýrazňuje nejbližší shodu s názvem fragmentu kódu. Stiskem klávesy **TAB** kdykoliv dojde k zavření fragmentu kódu Inserter a vložení aktuálně vybraného fragmentu kódu. Stisknutím klávesy **ESC** nebo kliknutím na myš v editoru kódu zavřete fragment kódu Inserter bez vložení fragmentu kódu.
 

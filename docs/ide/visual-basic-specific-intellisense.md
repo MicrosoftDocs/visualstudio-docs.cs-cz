@@ -1,5 +1,7 @@
 ---
 title: Visual Basic IntelliSense
+description: Naučte se používat funkce IntelliSense, které nabízí Editor zdrojového kódu Visual Basic.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 118de9ec05bcd5c56376376619bea0c5148d36ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 70cdcf9eb6d741fc579ce555ce0bfa3cdea0d774
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594185"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478819"
 ---
 # <a name="intellisense-for-visual-basic-code-files"></a>IntelliSense pro Visual Basic soubory kódu
 
@@ -39,7 +41,7 @@ V popisech syntaxe se zobrazuje syntaxe příkazu, který píšete. To je užite
 
 Dokončení může být vypnuto ve výchozím nastavení tím, že se na stránce **Obecné** vlastnosti ve složce **Visual Basic** odhlásí **Automatické seznam členů** .
 
-Doplňování můžete ručně vyvolat vyvoláním členů seznamu, kompletního slova nebo **Alt** + **šipky vpravo**v kombinaci kláves. Další informace najdete v tématu [použití technologie IntelliSense](../ide/using-intellisense.md).
+Doplňování můžete ručně vyvolat vyvoláním členů seznamu, kompletního slova nebo **Alt** + **šipky vpravo** v kombinaci kláves. Další informace najdete v tématu [použití technologie IntelliSense](../ide/using-intellisense.md).
 
 ## <a name="intellisense-in-zone"></a>IntelliSense v zóně
 

@@ -1,5 +1,6 @@
 ---
 title: Spustit jako správce
+description: Naučte se spouštět Visual Studio jako správce.
 ms.date: 01/06/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 927031b4755644aeac553367a4f8a08faa0c0992
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d69d916b8b99d6f5b5b3421ae4aea073e24fa67
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75718633"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478949"
 ---
 # <a name="user-permissions-and-visual-studio"></a>Uživatelská oprávnění a Visual Studio
 
@@ -55,7 +56,7 @@ Pokud potřebujete spustit Visual Studio jako správce, postupujte podle těchto
 
 1. Otevřete nabídku **Start** a přejděte na Visual Studio 2017.
 
-1. V **aplikaci Visual Studio 2017**pravým tlačítkem nebo v místní nabídce vyberte **Další** > **Spustit jako správce**.
+1. V **aplikaci Visual Studio 2017** pravým tlačítkem nebo v místní nabídce vyberte **Další** > **Spustit jako správce**.
 
    Po spuštění sady Visual Studio se za názvem produktu v záhlaví zobrazí **(správce)** .
 
@@ -65,7 +66,7 @@ Pokud potřebujete spustit Visual Studio jako správce, postupujte podle těchto
 
 1. Otevřete nabídku **Start** a přejděte na Visual Studio 2019.
 
-1. V **aplikaci Visual Studio 2019**pravým tlačítkem nebo v místní nabídce vyberte **Další** > **Spustit jako správce**.
+1. V **aplikaci Visual Studio 2019** pravým tlačítkem nebo v místní nabídce vyberte **Další** > **Spustit jako správce**.
 
    Po spuštění sady Visual Studio se za názvem produktu v záhlaví zobrazí **(správce)** .
 

@@ -1,5 +1,7 @@
 ---
 title: 'Krok 8: Přidání metody k ověření, jestli hráč vyhrál'
+description: Naučte se, jak přidat metodu k určení, jestli hráč zvítězil.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 881fa0d90390a059bea28cb19584381f814396d3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c53afebfd8c39e9c43f82916095d8eeef2ec8b11
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579761"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479287"
 ---
 # <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>Krok 8: Přidání metody k ověření, jestli hráč vyhrál
 Vytvořili jste zábavnou hru, která však potřebuje ještě něco. Hra by měla skončit, když je přehrávač WINS, takže potřebujete přidat `CheckForWinner()` metodu pro ověření, zda hráč zvítězil.
@@ -43,10 +45,10 @@ Vytvořili jste zábavnou hru, která však potřebuje ještě něco. Hra by mě
 3. Program uložte a spusťte jej. Zahrajte si hru a spárujte všechny ikony. Když nahrajete, program zobrazí congratulatory **MessageBox** (jak je znázorněno na následujícím snímku obrazovky) a pak okno zavře.
 
      ![Porovnávací hra s ovládacím prvkem MessageBox](../ide/media/express_tut4step8.png)<br/>
-***Porovnávací hra*** *s* ***MessageBox***
+**_Porovnávací hra_* _ _s * ***MessageBox**_
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si **[článek krok 9: Vyzkoušejte si další funkce](../ide/step-9-try-other-features.md)**.
+- Pokud chcete přejít na další krok kurzu, přečtěte si _ *[Krok 9: Vyzkoušejte další funkce](../ide/step-9-try-other-features.md)* *.
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si část [Krok 7: zůstat páry viditelné](../ide/step-7-keep-pairs-visible.md).

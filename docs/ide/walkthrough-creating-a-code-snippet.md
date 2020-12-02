@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Vytvoření fragmentu kódu'
+description: 'Naučte se vytvořit fragment kódu ve třech krocích: Vytvořte soubor XML, vyplňte příslušné prvky a přidejte do něj svůj kód.'
+ms.custom: SEO-VS-2020
 ms.date: 03/31/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -17,12 +19,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 46744decddcc2d50fd05ea86cc6ebfad9d210031
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 61b7f227344f00fe277d4bf062f83bd3c1d79fd5
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800499"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479638"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>Návod: Vytvoření fragmentu kódu
 
@@ -52,9 +54,9 @@ Následující kód XML je základní šablona fragmentu:
 
 1. Vytvořte nový soubor XML v aplikaci Visual Studio a přidejte šablonu uvedenou výše.
 
-2. Vyplňte název fragmentu v prvku **Nadpis** . Použijte název **druhé**odmocniny.
+2. Vyplňte název fragmentu v prvku **Nadpis** . Použijte název **druhé** odmocniny.
 
-3. Vyplňte jazyk fragmentu v atributu **Language** elementu **Code** . Pro jazyk C# použijte **CSharp**, pro Visual Basic použijte **VB**a pro C++ použijte **cpp**.
+3. Vyplňte jazyk fragmentu v atributu **Language** elementu **Code** . Pro jazyk C# použijte **CSharp**, pro Visual Basic použijte **VB** a pro C++ použijte **cpp**.
 
    > [!TIP]
    > Chcete-li zobrazit všechny dostupné jazykové hodnoty, Projděte si [část atributy elementu kódu](code-snippets-schema-reference.md#attributes) na [referenční stránce schématu fragmenty kódu](code-snippets-schema-reference.md) .
@@ -90,7 +92,7 @@ Následující kód XML je základní šablona fragmentu:
 
 3. Přejděte do umístění, kam jste uložili fragment kódu v předchozím postupu, vyberte jej a klikněte na tlačítko **otevřít**.
 
-4. Otevře se dialogové okno **importovat fragment kódu** a požádá vás, abyste zvolili, kam se má fragment přidat z voleb v pravém podokně. Jedna z možností by měla být **Moje fragmenty kódu**. Vyberte ji a klikněte na **Dokončit**a pak na **OK**.
+4. Otevře se dialogové okno **importovat fragment kódu** a požádá vás, abyste zvolili, kam se má fragment přidat z voleb v pravém podokně. Jedna z možností by měla být **Moje fragmenty kódu**. Vyberte ji a klikněte na **Dokončit** a pak na **OK**.
 
 5. Fragment kódu je zkopírován do jednoho z následujících umístění v závislosti na jazyku kódu:
 

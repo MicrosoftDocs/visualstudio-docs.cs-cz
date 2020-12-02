@@ -1,5 +1,7 @@
 ---
 title: 'Krok 9: Kontrola, okomentování a otestování kódu'
+description: Naučte se, jak do kódu přidat komentář a otestovat svoji aplikaci.
+ms.custom: SEO-VS-2020
 ms.date: 08/30/2019
 ms.assetid: f26f79ba-c91b-4164-b87f-679a1b231c09
 ms.topic: tutorial
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b31532bf6c26512e471ee787dc7219620e6db62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f5be5d8c59d9ef402bd929bd386a7bdaaa9912e
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579744"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479300"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>Krok 9: Kontrola, okomentování a otestování kódu
 
@@ -28,13 +30,13 @@ V jazyce C# dvě lomítka (//) označí řádek jako komentář. V Visual Basic 
 
 Právě jste vytvořili něco, co funguje, a i když ještě není hotové, může už načíst obrázek. Než přidáte komentář do kódu a otestujete jej, vezměte v úvahu čas ke kontrole konceptů kódu, protože tyto koncepty budete používat často:
 
-- Po dvojitém kliknutí na tlačítko **Zobrazit obrázek** v **Návrhář formulářů**rozhraní IDE automaticky přidalo do kódu programu *metodu* .
+- Po dvojitém kliknutí na tlačítko **Zobrazit obrázek** v **Návrhář formulářů** rozhraní IDE automaticky přidalo do kódu programu *metodu* .
 
 - Metody slouží k uspořádání kódu: Jedná se o způsob seskupení kódu dohromady.
 
 - Ve většině případů metoda dělá malý počet věcí v určitém pořadí, například jak vaše `showButton_Click()` metoda (nebo `ShowButton_Click()` ) zobrazuje dialogové okno a následně načítá obrázek.
 
-- Metoda je tvořena *příkazy*kódu nebo řádky kódu. Metodu můžete představit jako způsob, jak seskupit příkazy kódu dohromady.
+- Metoda je tvořena *příkazy* kódu nebo řádky kódu. Metodu můžete představit jako způsob, jak seskupit příkazy kódu dohromady.
 
 - Když je metoda spuštěna nebo *volána*, příkazy v metodě jsou spouštěny v pořadí, jeden po druhém, počínaje první.
 
@@ -65,24 +67,24 @@ Právě jste vytvořili něco, co funguje, a i když ještě není hotové, mů�
     > [!TIP]
     > Rozhraní IDE je sestaveno tak, aby bylo snadné psát kód a *fragmenty kódu* jsou jedním ze způsobů, jak to provést. Fragment kódu je zástupce, který se rozšíří na malý blok kódu.
     >
-    >  Můžete zobrazit všechny dostupné fragmenty kódu. Na řádku nabídek klikněte na **nástroje**  >  **Správce fragmentů kódu**. V jazyce C# `if` je fragment kódu v jazyce **Visual C#** . Pro Visual Basic `if` jsou fragmenty **kódu**v  >  **podmíněných vzorcích a smyčkách**. Pomocí tohoto správce můžete procházet existující fragmenty nebo přidávat vlastní fragmenty kódu.
+    >  Můžete zobrazit všechny dostupné fragmenty kódu. Na řádku nabídek klikněte na **nástroje**  >  **Správce fragmentů kódu**. V jazyce C# `if` je fragment kódu v jazyce **Visual C#** . Pro Visual Basic `if` jsou fragmenty **kódu** v  >  **podmíněných vzorcích a smyčkách**. Pomocí tohoto správce můžete procházet existující fragmenty nebo přidávat vlastní fragmenty kódu.
     >
     >  Chcete-li aktivovat fragment při psaní kódu, zadejte jej a vyberte klávesu **TAB** . Mnoho fragmentů kódu se zobrazí v okně **technologie IntelliSense** , což je důvod, proč si vyberete klávesu **TAB** dvakrát: nejprve vyberte fragment kódu z okna **technologie IntelliSense** a potom pro určení rozhraní IDE, aby používal fragment. (Technologie IntelliSense podporuje `if` fragment, ale ne `ifelse` fragment.)
 
 1. Před spuštěním aplikace uložte aplikaci tak, že kliknete na tlačítko **Uložit vše** na panelu nástrojů, které by mělo vypadat podobně jako na následujícím snímku obrazovky.
 
      ![Tlačítko Uložit vše na panelu nástrojů](../ide/media/express_iconsaveall.png)<br>
-*Tlačítko* ***Uložit vše***
+**_Uložit všechny_* _ _button *
 
      Pokud chcete aplikaci uložit, zvolte **soubor**  >  **Uložit vše** z panelu nabídek (nebo stiskněte klávesy **CTRL** + **SHIFT** + **S**). Osvědčeným postupem je ukládat včas a často.
 
      Když je spuštěný, váš program by měl vypadat jako na následujícím obrázku.
 
-     ![Prohlížeč obrázků](../ide/media/express_pictureviewerdonerun.png)<br>***Prohlížeč obrázků***
+     ![Prohlížeč obrázků](../ide/media/express_pictureviewerdonerun.png)<br>**_Prohlížeč obrázků_* _
 
 ## <a name="to-test-your-app"></a>Testování aplikace
 
-1. Klikněte na klávesu **F5** nebo vyberte tlačítko **Spustit ladění** na panelu nástrojů.
+1. Vyberte klávesu _ *F5** nebo klikněte na tlačítko **Spustit ladění** na panelu nástrojů.
 
 1. Kliknutím na tlačítko **Zobrazit obrázek** spusťte kód, který jste právě napsali. Nejprve aplikace otevře dialogové okno **otevřít soubor** . Ověřte, že se filtry zobrazí v rozevíracím seznamu **soubory typu** v dolní části dialogového okna. Pak přejděte na obrázek a otevřete ho. Ukázkové obrázky, které se dodávají s operačním systémem Windows, můžete obvykle najít ve složce *dokumenty* ve složce *Moje Pictures\Sample obrázky* .
 

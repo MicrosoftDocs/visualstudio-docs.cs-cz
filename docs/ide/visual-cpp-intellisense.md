@@ -1,5 +1,7 @@
 ---
 title: C++ IntelliSense
+description: Seznamte se s některými funkcemi technologie IntelliSense, které lze použít při kódování projektu jazyka C++.
+ms.custom: SEO-VS-2020
 ms.date: 10/08/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d1be12f733a858bf223fb1dce6a091c0dc6c50
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 49d555b2e509237e34375e1b85a35c57a6db4f3b
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594211"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478884"
 ---
 # <a name="visual-c-intellisense-features"></a>Visual C++ funkce IntelliSense
 
@@ -62,7 +64,7 @@ Vlnovky pod prvkem programu (proměnná, klíčové slovo, složené závorky, n
 
 ### <a name="code-colorization-and-fonts"></a>Zabarvení kódu a písma
 
-Výchozí barvy a písma lze změnit v dialogovém okně **Možnosti** v části **Environment**  >  **písma a barvy**prostředí. Můžete změnit písma pro mnoho oken uživatelského rozhraní, nikoli jenom Editor. Nastavení, která jsou specifická pro jazyk C++, začínají řetězcem "C++"; Ostatní nastavení platí pro všechny jazyky.
+Výchozí barvy a písma lze změnit v dialogovém okně **Možnosti** v části **Environment**  >  **písma a barvy** prostředí. Můžete změnit písma pro mnoho oken uživatelského rozhraní, nikoli jenom Editor. Nastavení, která jsou specifická pro jazyk C++, začínají řetězcem "C++"; Ostatní nastavení platí pro všechny jazyky.
 
 ## <a name="cross-platform-intellisense"></a>IntelliSense pro různé platformy
 

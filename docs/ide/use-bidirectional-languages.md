@@ -1,5 +1,7 @@
 ---
 title: Podpora pro arabštinu a hebrejštinu
+description: Naučte se, jak zobrazit arabskou a hebrejskou text a zadat obousměrný text pro názvy a hodnoty objektů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57bccfccb77c5a80fd2630680564f88f08d7ca5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aa2520527259c476f84d83cdff81d9f96bc2bbd7
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591993"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478962"
 ---
 # <a name="support-for-bidirectional-languages-in-visual-studio"></a>Podpora obousměrných jazyků v aplikaci Visual Studio
 

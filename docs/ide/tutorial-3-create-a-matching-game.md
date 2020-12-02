@@ -1,5 +1,7 @@
 ---
 title: 'Kurz 3: vytvoření porovnávací hry'
+description: Naučte se, jak vytvořit porovnávací hru, kde hráč musí hledat dvojice skrytých ikon.
+ms.custom: SEO-VS-2020
 ms.date: 10/16/2019
 ms.assetid: 525815c8-2845-45e8-be96-100d1f144725
 ms.topic: tutorial
@@ -9,12 +11,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 399275b64392ab4c6def97eb8c4f6a5bdafb2c4a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 62859c86ff3b4057eceb1f6e00ebfd46867f9927
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810832"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479027"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>Kurz 3: vytvoření porovnávací hry
 

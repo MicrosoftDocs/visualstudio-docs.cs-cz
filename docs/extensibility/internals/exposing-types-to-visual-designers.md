@@ -1,5 +1,7 @@
 ---
 title: Vystavení typů pro vizuální návrháře | Microsoft Docs
+description: Naučte se vystavit definice tříd a typů, včetně těch ve vlastních nástrojích, aby je Visual Studio mohly zpřístupnit vizuálním návrhářům.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48aa8a729b5cc38d3cee08a7f5ec143d5e84931a
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 43d1e1dca1860faa44d6bb5bc256bb8f0465e8b2
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012527"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479522"
 ---
 # <a name="expose-types-to-visual-designers"></a>Vystavení typů pro vizuální návrháře
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pro zobrazení vizuálního návrháře musí mít přístup k třídám a definicím typu v době návrhu. Třídy jsou načteny z předdefinované sady sestavení, které zahrnují kompletní sadu závislostí aktuálního projektu (odkazy plus jejich závislosti). Může být také nutné, aby vizuální návrháři mohli přistupovat ke třídám a typům, které jsou definovány v souborech generovaných vlastními nástroji.
@@ -37,13 +39,13 @@ ms.locfileid: "90012527"
 
 - Vygenerovaný kód musí být ve stejném jazyce jako globální nastavení projektu.
 
-     Dočasné prostředí PE je kompilováno bez ohledu na to, co vlastní nástroj hlásí jako požadované rozšíření v systému <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> za předpokladu, že **GeneratesDesignTimeSource** je v registru nastaveno na hodnotu 1. Přípona nemusí být *. vb*, *. cs*nebo *. jsl*; může to být jakékoli rozšíření.
+     Dočasné prostředí PE je kompilováno bez ohledu na to, co vlastní nástroj hlásí jako požadované rozšíření v systému <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> za předpokladu, že **GeneratesDesignTimeSource** je v registru nastaveno na hodnotu 1. Přípona nemusí být *. vb*, *. cs* nebo *. jsl*; může to být jakékoli rozšíření.
 
 - Kód generovaný vlastním nástrojem musí být platný a musí být zkompilován sám s použitím pouze sady odkazů přítomných v projektu v době, kdy je <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> dokončeno.
 
      Když je kompilováno dočasné prostředí PE, jediný zdrojový soubor poskytnutý kompilátoru je výstup vlastního nástroje. Proto vlastní nástroj, který používá dočasné prostředí PE, musí generovat výstupní soubory, které mohou být kompilovány nezávisle na jiných souborech v projektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Úvod do objektu BuildManager](/previous-versions/8f9kffa8(v=vs.140))
 - [Implementace generátorů tvořených jedním souborem](../../extensibility/internals/implementing-single-file-generators.md)
 - [Registrovat generátory jednoho souboru](../../extensibility/internals/registering-single-file-generators.md)

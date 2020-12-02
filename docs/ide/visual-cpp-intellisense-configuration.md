@@ -1,5 +1,7 @@
 ---
 title: Konfigurace projektu C++ pro IntelliSense
+description: Naučte se, jak ručně nakonfigurovat projekt C++ pro správné fungování technologie IntelliSense pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio, které vám pomůžou identifikovat a opravit problémy IntelliSense.
+ms.custom: SEO-VS-2020
 ms.date: 10/08/2018
 ms.topic: conceptual
 author: corob-msft
@@ -7,12 +9,12 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610f3d92d86e227973be9c481adaf830d3d16737
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 34be73203f5c1d01e4674e7892e0f89d4aae4816
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509884"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478793"
 ---
 # <a name="configure-a-c-project-for-intellisense"></a>Konfigurace projektu C++ pro IntelliSense
 
@@ -93,7 +95,7 @@ Okno Výstup nyní zobrazí příkazové řádky, které jsou předány kompilá
 /Yustdafx.h
 ```
 
-Tyto informace vám pomohou pochopit, proč technologie IntelliSense poskytuje nepřesné informace. Například Pokud adresář include vašeho projektu obsahuje **$ (MojePromenna) \Include**a diagnostický protokol ukazuje **/I\Include** jako cestu include, znamená to, že **$ (MojePromenna)** se nevyhodnotila a byla odebrána z poslední cesty include.
+Tyto informace vám pomohou pochopit, proč technologie IntelliSense poskytuje nepřesné informace. Například Pokud adresář include vašeho projektu obsahuje **$ (MojePromenna) \Include** a diagnostický protokol ukazuje **/I\Include** jako cestu include, znamená to, že **$ (MojePromenna)** se nevyhodnotila a byla odebrána z poslední cesty include.
 
 ## <a name="about-the-intellisense-build"></a>O sestavení IntelliSense
 

@@ -1,5 +1,7 @@
 ---
 title: Řešení problémů s poškozenými odkazy
+description: Naučte se řešit potíže s přerušenými odkazy, které mohou být způsobeny jinou výjimkou vašich aplikací, které neumožňují najít odkazovanou součást.
+ms.custom: SEO-VS-2020
 ms.date: 03/21/2017
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5116d2487ca9f53c460e1cae8f362f3ff1bcdf8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 627724410ac9e0829faeb23cb5b0eef01b153293
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565913"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479170"
 ---
 # <a name="troubleshoot-broken-references"></a>Řešení problémů s poškozenými odkazy
 
@@ -43,7 +45,7 @@ Níže jsou uvedená opatření pro tyto problémy.
 
 Pokud jsou projekty sdíleny v různých počítačích, některé odkazy nemusí být nalezeny, pokud je komponenta umístěna v jiném adresáři v každém počítači. Odkazy jsou uloženy pod názvem souboru komponenty (například *MyComponent*). Při přidání odkazu do projektu je umístění složky souboru komponenty (například *C:\MyComponents*) připojeno k vlastnosti projektu **ReferencePath** .
 
-Po otevření projektu se pokusí vyhledat tyto soubory odkazované součásti hledáním v adresářích v cestě reference. Pokud je projekt otevřen v počítači, který ukládá komponentu do jiného adresáře, například *D:\MyComponents*, odkaz nebyl nalezen a v **seznam úkolů**se zobrazí chyba.
+Po otevření projektu se pokusí vyhledat tyto soubory odkazované součásti hledáním v adresářích v cestě reference. Pokud je projekt otevřen v počítači, který ukládá komponentu do jiného adresáře, například *D:\MyComponents*, odkaz nebyl nalezen a v **seznam úkolů** se zobrazí chyba.
 
 Chcete-li tento problém vyřešit, můžete poškozený odkaz odstranit a pak ho nahradit pomocí dialogového okna **Přidat odkaz** . Dalším řešením je použít položku **referenční cesty** na stránkách vlastností projektu a upravit složky v seznamu tak, aby odkazovaly na správná umístění. Vlastnost **cesty odkazů** je u každého uživatele na každém počítači trvalá. Proto změna referenční cesty nemá vliv na ostatní uživatele projektu.
 
@@ -52,7 +54,7 @@ Chcete-li tento problém vyřešit, můžete poškozený odkaz odstranit a pak h
 
 ### <a name="to-fix-a-broken-project-reference-by-correcting-the-reference-path"></a>Oprava poškozeného odkazu na projekt opravou cesty reference
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a klikněte na příkaz **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a klikněte na příkaz **vlastnosti**.
 
    Zobrazí se **Návrhář projektu** .
 

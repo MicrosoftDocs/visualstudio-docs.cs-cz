@@ -1,5 +1,7 @@
 ---
 title: Visual C++ fragmentů kódu
+description: Naučte se používat fragmenty kódu k přidání běžně používaného kódu do souborů kódu jazyka C++.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: corob-msft
@@ -9,12 +11,12 @@ dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db6ea1e233d32872322926a4d75b847ee6a49ba3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5cde2be817c49344e02ff06030022f99790a7a2
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77277830"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478806"
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ fragmentů kódu
 

@@ -1,5 +1,7 @@
 ---
 title: 'Kurz 1: vytvoření prohlížeče obrázků'
+description: Naučte se, jak vytvořit aplikaci, která načte obrázek ze souboru a zobrazí ji v okně.
+ms.custom: SEO-VS-2020
 ms.date: 10/16/2019
 ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 ms.topic: tutorial
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44fe22aa1d4549d1daba4324349160afcd3133ba
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 1c0eea844b04cbe8ba261fd4d65a6d21fb99aa4b
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811211"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479131"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>Kurz 1: vytvoření prohlížeče obrázků
 

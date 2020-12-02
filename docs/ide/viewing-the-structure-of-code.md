@@ -1,5 +1,6 @@
 ---
 title: Zobrazení struktury kódu pomocí oken nástrojů
+description: Naučte se používat Zobrazení tříd nástrojů, hierarchii volání, Prohlížeč objektů a definice kódu (pouze C++) k prohlédnutí tříd a jejich členů v aplikaci Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 09/19/2019
 ms.topic: reference
@@ -26,16 +27,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76e65dd22ccf1b47559238efcd2be18cf6b81fcb
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: e33a060718fc5fd8a3545baaa7e78b6b763ab78d
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049279"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478936"
 ---
 # <a name="view-the-structure-of-code-by-using-different-tool-windows"></a>Zobrazení struktury kódu pomocí různých oken nástrojů
 
-Můžete prozkoumávat třídy a jejich členy v aplikaci Visual Studio pomocí různých oken nástrojů, včetně **zobrazení tříd** , **hierarchie volání** , **Prohlížeč objektů** a **definice kódu** (pouze C++). Tyto nástroje mohou kontrolovat kód v projektech aplikace Visual Studio, komponentách .NET, komponentách COM, dynamických knihovnách (DLL) a knihovnách typů (TLB).
+Můžete prozkoumávat třídy a jejich členy v aplikaci Visual Studio pomocí různých oken nástrojů, včetně **zobrazení tříd**, **hierarchie volání**, **Prohlížeč objektů** a **definice kódu** (pouze C++). Tyto nástroje mohou kontrolovat kód v projektech aplikace Visual Studio, komponentách .NET, komponentách COM, dynamických knihovnách (DLL) a knihovnách typů (TLB).
 
 Můžete také použít **Průzkumník řešení** pro procházení typů a členů v projektech, hledání symbolů, zobrazení hierarchie volání metody, hledání odkazů na symboly a další, aniž byste museli přepínat mezi několika okny nástrojů.
 
@@ -45,19 +46,19 @@ Pokud máte edici Visual Studio Enterprise, můžete použít *mapy kódu* k viz
 
 **Zobrazení tříd** se zobrazuje jako součást **Průzkumník řešení** a jako samostatné okno. **Zobrazení tříd** zobrazí prvky aplikace. V horním podokně se zobrazí obory názvů, typy, rozhraní, výčty a třídy a v dolním podokně se zobrazí členové, kteří patří k typu vybranému v horním podokně. Pomocí tohoto okna můžete přejít na definice členů ve zdrojovém kódu (nebo v **Prohlížeč objektů** , pokud je prvek definován mimo vaše řešení).
 
-Není nutné kompilovat projekt, aby bylo možné zobrazit jeho prvky v **zobrazení tříd** . Okno je aktualizováno při úpravách kódu v projektu.
+Není nutné kompilovat projekt, aby bylo možné zobrazit jeho prvky v **zobrazení tříd**. Okno je aktualizováno při úpravách kódu v projektu.
 
 Do projektu můžete přidat kód tak, že vyberete uzel projektu a kliknete na tlačítko **Přidat** a otevřete dialogové okno **Přidat novou položku** . Kód se přidá do samostatného souboru.
 
-Pokud je váš projekt vrácen se změnami do správy zdrojového kódu, každý **zobrazení tříd** element zobrazí ikonu, která označuje stav zdrojového kódu souboru. Běžné příkazy pro řízení zdrojového kódu, jako je **rezervace** , **vrácení se změnami** a **získání nejnovější verze** , jsou také k dispozici v místní nabídce prvku.
+Pokud je váš projekt vrácen se změnami do správy zdrojového kódu, každý **zobrazení tříd** element zobrazí ikonu, která označuje stav zdrojového kódu souboru. Běžné příkazy pro řízení zdrojového kódu, jako je **rezervace**, **vrácení se změnami** a **získání nejnovější verze** , jsou také k dispozici v místní nabídce prvku.
 
 ### <a name="class-view-toolbar"></a>Panel nástrojů Zobrazení tříd
 
 Panel nástrojů **zobrazení tříd** obsahuje následující příkazy:
 
-|Název|Description|
+|Název|Popis|
 |-|-|
-|**Nová složka**|Vytvoří virtuální složku nebo podsložku, ve které můžete uspořádat často používané prvky. Jsou uloženy v souboru aktivního řešení ( *. suo* ). Po přejmenování nebo odstranění elementu v kódu se může zobrazit ve virtuální složce jako chybový uzel. Chcete-li tento problém vyřešit, odstraňte chybový uzel. Pokud jste přejmenovali element, můžete jej přesunout z hierarchie projektu do složky znovu.|
+|**Nová složka**|Vytvoří virtuální složku nebo podsložku, ve které můžete uspořádat často používané prvky. Jsou uloženy v souboru aktivního řešení (*. suo*). Po přejmenování nebo odstranění elementu v kódu se může zobrazit ve virtuální složce jako chybový uzel. Chcete-li tento problém vyřešit, odstraňte chybový uzel. Pokud jste přejmenovali element, můžete jej přesunout z hierarchie projektu do složky znovu.|
 |**Zpět**|Přejde k dříve vybrané položce.|
 |**Forward**|Přejde na další vybranou položku.|
 |**Zobrazení diagramu tříd** (pouze projekty spravovaného kódu)|Bude k dispozici, když v **zobrazení tříd** vyberete obor názvů nebo typ. Když je vybrán obor názvů, diagram třídy zobrazí všechny typy v něm. Když je vybrán typ, diagram třídy zobrazí pouze tento typ.|
@@ -66,7 +67,7 @@ Panel nástrojů **zobrazení tříd** obsahuje následující příkazy:
 
 Tlačítko **zobrazení tříd nastavení** na panelu nástrojů má následující nastavení:
 
-|Název|Description|
+|Název|Popis|
 |-|-|
 |**Zobrazit základní typy**|Zobrazí se základní typy.|
 |**Zobrazit odkazy projektu**|Zobrazí se odkazy na projekt.|
@@ -81,12 +82,12 @@ Tlačítko **zobrazení tříd nastavení** na panelu nástrojů má následují
 
 Místní nabídka (nebo kliknutí pravým tlačítkem myši) v **zobrazení tříd** může obsahovat následující příkazy v závislosti na zvoleném typu projektu:
 
-|Název|Description|
+|Název|Popis|
 |-|-|
-|**Přejít k definici**|Vyhledá definici prvku ve zdrojovém kódu nebo v **Prohlížeč objektů** , pokud element není definován v otevřeném projektu.|
-|**Procházet definici**|Zobrazí vybranou položku v **Prohlížeč objektů** .|
+|**Přejít k definici**|Vyhledá definici prvku ve zdrojovém kódu nebo v **Prohlížeč objektů**, pokud element není definován v otevřeném projektu.|
+|**Procházet definici**|Zobrazí vybranou položku v **Prohlížeč objektů**.|
 |**Najít všechny odkazy**|Vyhledá aktuálně vybranou položku objektu a zobrazí výsledky v okně **hledání výsledků** .|
-|**Filtrovat podle typu** (jenom spravovaný kód)|Zobrazí pouze vybraný typ nebo obor názvů. Filtr můžete odebrat tak, že kliknete na tlačítko **Vymazat hledání** ( **X** ) vedle pole **Najít** .|
+|**Filtrovat podle typu** (jenom spravovaný kód)|Zobrazí pouze vybraný typ nebo obor názvů. Filtr můžete odebrat tak, že kliknete na tlačítko **Vymazat hledání** (**X**) vedle pole **Najít** .|
 |**Kopírovat**|Zkopíruje plně kvalifikovaný název položky.|
 |**Seřadit abecedně**|Zobrazí seznam typů a členů abecedně podle názvu.|
 |**Seřadit podle typu člena**|Seznam typů a členů v pořadí podle typu (takové třídy předcházejí rozhraní, rozhraní před delegáty a metody předcházejí vlastností).|
@@ -113,7 +114,7 @@ Okno **hierarchie volání** nenalezne odkazy na skupiny metod, které obsahují
 
 Místní nabídka v okně **hierarchie volání** obsahuje následující příkazy:
 
-|Název|Description|
+|Název|Popis|
 |-|-|
 |**Přidat jako nový kořen**|Přidá vybraný uzel jako nový kořenový uzel.|
 |**Odebrat kořen**|Odebere vybraný kořenový uzel z podokna zobrazení stromu.|
@@ -130,19 +131,19 @@ Pomocí rozevíracího seznamu v horní části okna můžete filtrovat komponen
 
 ::: moniker range="vs-2017"
 
-Vlastní nastavení se ukládají v adresáři aplikace Visual Studio User, *%AppData%\Microsoft\VisualStudio\15.0\ObjBrowEX.dat* .
+Vlastní nastavení se ukládají v adresáři aplikace Visual Studio User, *%AppData%\Microsoft\VisualStudio\15.0\ObjBrowEX.dat*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Vlastní nastavení se ukládají v adresáři aplikace Visual Studio User, *%AppData%\Microsoft\VisualStudio\16.0\ObjBrowEX.dat* .
+Vlastní nastavení se ukládají v adresáři aplikace Visual Studio User, *%AppData%\Microsoft\VisualStudio\16.0\ObjBrowEX.dat*.
 
 ::: moniker-end
 
 V levém podokně **Prohlížeč objektů** se zobrazují sestavení. Rozbalením sestavení můžete zobrazit obory názvů, které obsahují, a poté rozšířit obory názvů tak, aby se zobrazily typy, které obsahují. Když vyberete typ, jeho členové (například vlastnosti a metody) jsou uvedeny v pravém podokně. V pravém dolním podokně se zobrazí podrobné informace o vybrané položce.
 
-Konkrétní položku můžete vyhledat pomocí **vyhledávacího** pole v horní části okna. Při hledání se nerozlišují malá a velká písmena. Výsledky hledání se zobrazí v levém podokně. Hledání vymažete tak, že kliknete na tlačítko **Vymazat vyhledávání** ( **X** ) vedle pole **hledání** .
+Konkrétní položku můžete vyhledat pomocí **vyhledávacího** pole v horní části okna. Při hledání se nerozlišují malá a velká písmena. Výsledky hledání se zobrazí v levém podokně. Hledání vymažete tak, že kliknete na tlačítko **Vymazat vyhledávání** (**X**) vedle pole **hledání** .
 
 **Prohlížeč objektů** sleduje výběry, které jste provedli, a můžete přecházet mezi jednotlivými výběry pomocí tlačítek **vpřed** a **zpět** na panelu nástrojů.
 
@@ -152,7 +153,7 @@ Můžete použít **Prohlížeč objektů** pro přidání odkazu na sestavení 
 
 Pomocí tlačítka **Prohlížeč objektů nastavení** na panelu nástrojů můžete zadat jedno z následujících zobrazení:
 
-|Název|Description|
+|Název|Popis|
 |-|-|
 |**Zobrazit obory názvů**|Zobrazuje obory názvů místo fyzických kontejnerů v levém podokně. Obory názvů uložené ve více fyzických kontejnerech jsou sloučeny.|
 |**Zobrazit kontejnery**|Zobrazí v levém podokně fyzické kontejnery, nikoli obory názvů. **Zobrazit obory názvů** a **kontejnery zobrazení** se vzájemně exkluzivním nastavením.|
@@ -169,7 +170,7 @@ Pomocí tlačítka **Prohlížeč objektů nastavení** na panelu nástrojů mů
 
 Místní nabídka (nebo kliknutí pravým tlačítkem myši) v **Prohlížeč objektů** může obsahovat následující příkazy v závislosti na zvoleném typu položky:
 
-|Název|Description|
+|Název|Popis|
 |-|-|
 |**Procházet definici**|Zobrazuje primární uzel pro vybranou položku.|
 |**Najít všechny odkazy**|Vyhledá aktuálně vybranou položku objektu a zobrazí výsledky v okně **hledání výsledků** .|
@@ -198,7 +199,7 @@ I když je toto okno jen pro čtení, můžete v něm nastavit zarážky nebo z�
 
 Místní nabídka (nebo kliknutí pravým tlačítkem myši) v okně **definice kódu** může obsahovat následující příkazy:
 
-|Název|Description|
+|Název|Popis|
 |-|-|
 |**Rychlé akce a refaktoringy**||
 |**Přejmenovat**||
@@ -214,7 +215,7 @@ Místní nabídka (nebo kliknutí pravým tlačítkem myši) v okně **definice 
 |**Bodu**|Vloží zarážku (nebo zarážka s trasováním).|
 |**Spustit ke kurzoru**|Spustí program v režimu ladění do umístění kurzoru.|
 |**Fragment kódu**||
-|**Vyjmutí** , **zkopírování** a **vložení**||
+|**Vyjmutí**, **zkopírování** a **vložení**||
 |**Poznámka**||
 |**Sbalování**|Standardní příkazy pro sbalení.|
 |**Prohledat znovu**||

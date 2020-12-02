@@ -1,5 +1,7 @@
 ---
 title: Parametry šablony projektu a položky
+description: Naučte se, jak pomocí parametrů šablony nahradit hodnoty ve vaší šabloně při vytváření instance šablony.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 7076e8f5718e44cc382eb0768e6456dbd6ee5664
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e575011f76370083b5a0f461fbb62bbbc839ea3
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78169362"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479194"
 ---
 # <a name="template-parameters"></a>Parametry šablony
 

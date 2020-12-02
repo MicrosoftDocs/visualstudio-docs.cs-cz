@@ -1,5 +1,7 @@
 ---
 title: Rozšíření vlastností | Microsoft Docs
+description: Přečtěte si o rozhraních, která je nutné implementovat, a zavolejte k roztažení seznamu vlastností v okno Vlastnosti sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7064128c54434b0a7bb8799e62b751e765511c48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 721f45ebe83e0edb7bf7a182ea71b2181593ad6e
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708421"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479530"
 ---
 # <a name="extend-properties"></a>Rozšířené vlastnosti
 Okno [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **vlastnosti** je univerzální prohlížeč vlastností pro součásti COM a com+ a podporuje všechny [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] produkty. Okno **vlastnosti** pracuje s `ITypeInfo` informacemi o typu a metadaty modelu COM+ k vypsání vlastností doby návrhu pro aktuálně vybraný objekt v jakémkoli jiném okně v integrovaném vývojovém prostředí (IDE).

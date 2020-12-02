@@ -1,5 +1,7 @@
 ---
 title: 'Krok 9: Vyzkoušení dalších funkcí'
+description: Naučte se, jak změnit ikony a barvy, Přidat časovač her, přidat zvuky a zvětšit herní panel.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 32ac2f1977bb0b8b391651ed7ed459b9dc560330
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4f462d70fda9a212bf848477952ecc7132a60265
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579730"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479248"
 ---
 # <a name="step-9-try-other-features"></a>Krok 9: Vyzkoušení dalších funkcí
 Chcete-li získat další informace, zkuste změnit ikony a barvy, přidat časovač hry a zvuky. Chcete-li, aby hra byla náročnější, zkuste zvětšit hrací plochu a upravte časovač.
