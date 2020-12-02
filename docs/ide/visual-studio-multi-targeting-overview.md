@@ -1,5 +1,6 @@
 ---
 title: Cílené rozhraní .NET Framework
+description: Naučte se, jak určit verzi .NET Framework, na kterou má projekt cílit, aby aplikace mohla využívat pouze funkce, které jsou k dispozici v zadané verzi.
 ms.date: 03/31/2020
 ms.topic: overview
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7c3c2b6b81f8f7793bda35c6b220e43caee9b5f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9bc20c2ee08a2b838e0fd1ab14ee9a8388912542
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770450"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479729"
 ---
 # <a name="framework-targeting-overview"></a>Přehled cílení na rozhraní
 
@@ -81,7 +82,7 @@ Při vytváření projektu .NET Framework můžete po výběru šablony projektu
 
 V existujícím projektu Visual Basic, C# nebo F # můžete cílovou verzi rozhraní .NET změnit v dialogovém okně Vlastnosti projektu. Informace o tom, jak změnit cílovou verzi pro projekty v jazyce C++, naleznete v tématu [jak upravit cílové rozhraní a sadu nástrojů platformy](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset) .
 
-1. V **Průzkumník řešení**otevřete nabídku kliknutím pravým tlačítkem u projektu, který chcete změnit, a poté zvolte možnost **vlastnosti**.
+1. V **Průzkumník řešení** otevřete nabídku kliknutím pravým tlačítkem u projektu, který chcete změnit, a poté zvolte možnost **vlastnosti**.
 
 1. V levém sloupci okna **vlastnosti** vyberte kartu **aplikace** .
 

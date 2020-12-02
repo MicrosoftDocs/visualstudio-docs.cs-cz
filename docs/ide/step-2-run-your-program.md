@@ -1,5 +1,7 @@
 ---
 title: 'Krok 2: spuštění aplikace pro prohlížeč obrázků'
+description: Naučte se, jak spustit aplikaci pro prohlížení obrázků.
+ms.custom: SEO-VS-2020
 ms.date: 09/06/2019
 ms.assetid: 9a8fe90e-c97b-4e98-b6c8-0c6b3962c49d
 ms.topic: tutorial
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8204f2a32a1bb29203c75af55aa383141f17853f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddc016df63a7bb6ffbe3923de72c4f23cb32739c
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579414"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480652"
 ---
 # <a name="step-2-run-your-picture-viewer-app"></a>Krok 2: spuštění aplikace pro prohlížeč obrázků
 
@@ -32,17 +34,17 @@ Tady je postup, jak aplikaci spustit.
     - Na panelu nástrojů klikněte na tlačítko **Spustit ladění** , které se zobrazí takto:
 
       ![Spustit ladění – tlačítko panelu nástrojů](../ide/media/express_icondebug.png)<br>
-      ***Spustit ladění*** – *tlačítko panelu nástrojů*
+      **_Spustit ladění_* _ _toolbar tlačítko *
 
 1. Visual Studio spustí vaši aplikaci a zobrazí se okno s názvem **Form1** . Na následujícím snímku obrazovky vidíte aplikaci, kterou jste právě sestavili. Aplikace je spuštěná a později do ní přidáte.
 
      ![Spuštěná aplikace model Windows Forms](../ide/media/express_firstrun.png)<br>
-***Aplikace model Windows Forms***, *spuštěné*
+**_Model Windows Forms aplikace_* _ _running *
 
 1. Vraťte se do integrovaného vývojového prostředí (IDE) sady Visual Studio a podívejte se na nový panel nástrojů. Další tlačítka se zobrazí na panelu nástrojů při spuštění aplikace. Tato tlačítka umožňují provádět akce, jako je zastavení a spuštění vaší aplikace, a umožňují vám sledovat případné chyby, které může mít. V tomto příkladu ho používáme ke spuštění a zastavení aplikace.
 
      ![Panel nástrojů ladění](../ide/media/express_debugtoolbar.png)<br>
-***Debugging*** *Panel nástrojů* ladění
+***Ladění** _ _toolbar *
 
 1. K zastavení vaší aplikace použijte jednu z následujících metod:
 

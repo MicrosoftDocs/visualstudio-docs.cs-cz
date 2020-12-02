@@ -1,5 +1,7 @@
 ---
 title: Začínáme se moduly plug-in správy zdrojových kódů | Microsoft Docs
+description: Přečtěte si o vytváření modulu plug-in správy zdrojových kódů, který implementuje funkce definované v rozhraní API modulu plug-in správy zdrojového kódu pro použití ve správě verzí zdrojového kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: efc21e07830614d9d3041b2d2d231fd82c652114
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1524e4c4f08b272fd17973597d558efdabec41af
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708350"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480496"
 ---
 # <a name="get-started-with-source-control-plug-ins"></a>Začínáme se moduly plug-in správy zdrojového kódu
 Chcete-li vytvořit modul plug-in správy zdrojových kódů, je nutné vytvořit knihovnu DLL, která implementuje funkce definované v rozhraní API modulu plug-in správy zdrojového kódu, a poté pro registraci knihovny DLL pomocí nástroje, aby [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ji bylo možné použít ve správě verzí zdrojového kódu.

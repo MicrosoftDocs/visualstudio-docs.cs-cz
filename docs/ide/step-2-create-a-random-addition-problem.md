@@ -1,5 +1,7 @@
 ---
 title: 'Krok 2: Vytvoření úlohy sčítání náhodných čísel'
+description: Naučte se, jak udělat tento kvíz jako nenáročný přidáním matematických problémů, které jsou založeny na náhodných číslech.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2febef6987cf3440f92f6a6c505840cfe3ca3448
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c23b85dec73c6810420dc5e8ab2d3f4121fc903
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579884"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480678"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>Krok 2: Vytvoření úlohy sčítání náhodných čísel
 

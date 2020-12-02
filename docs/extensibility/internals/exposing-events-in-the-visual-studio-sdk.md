@@ -1,5 +1,7 @@
 ---
 title: Vystavení událostí v sadě Visual Studio SDK | Microsoft Docs
+description: Seznamte se s metodami sady Visual Studio SDK a položkami registru, které zpřístupňují události pro projekty a položky projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48f1e0ea0dcd07bbc26fc89d5c61a6a5941d4727
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5eec842f989497fda618482916154aabdcdd406
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708491"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480535"
 ---
 # <a name="expose-events-in-the-visual-studio-sdk"></a>Vystavení událostí v sadě Visual Studio SDK
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] umožňuje pomocí automatizace použít zdrojové události. Pro projekty a položky projektu doporučujeme použít zdrojové události.
@@ -27,7 +29,7 @@ ms.locfileid: "80708491"
 
 1. Spustí se prostředí.
 
-2. Čte z registru všechny názvy hodnot v rámci **Automatizace**, **AutomationEvents**a **Vlastnosti automatizace** klíčů všech VSPackage a ukládá tyto názvy do tabulky.
+2. Čte z registru všechny názvy hodnot v rámci **Automatizace**, **AutomationEvents** a **Vlastnosti automatizace** klíčů všech VSPackage a ukládá tyto názvy do tabulky.
 
 3. Uživatel automatizace volá v tomto příkladu `DTE.Events.AutomationProjectsEvents` nebo `DTE.Events.AutomationProjectItemsEvents` .
 
@@ -46,7 +48,7 @@ ms.locfileid: "80708491"
 ## <a name="registry-entries-from-the-basic-project-sample"></a>Položky registru z ukázky základní projekt
  V této části se dozvíte, kde přidat do registru hodnoty událostí automatizace.
 
- **[HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0\Packages \\<PkgGUID \> \AutomationEvents]**
+ **[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Packages\\<PkgGUID \> \AutomationEvents]**
 
  **AutomationProjectEvents** = vrátí `AutomationProjectEvents` objekt.
 
@@ -62,7 +64,7 @@ ms.locfileid: "80708491"
 
  ![Události projektu sady Visual Studio](../../extensibility/internals/media/projectevents.gif "ProjectEvents") Model automatizace pro události
 
- Třída `CProjectEventsContainer` reprezentuje zdrojový objekt pro *BscProjectsEvents*a `CProjectItemsEventsContainer` představuje zdrojový objekt pro *BscProjectItemsEvents*.
+ Třída `CProjectEventsContainer` reprezentuje zdrojový objekt pro *BscProjectsEvents* a `CProjectItemsEventsContainer` představuje zdrojový objekt pro *BscProjectItemsEvents*.
 
  Ve většině případů je nutné vrátit nový objekt pro každou žádost o událost, protože většina objektů události vezme objekt Filter. Při vyvolání události zkontrolujte tento filtr a ověřte, zda je volána obslužná rutina události.
 

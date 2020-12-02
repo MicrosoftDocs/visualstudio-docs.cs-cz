@@ -1,5 +1,7 @@
 ---
 title: 'Krok 1: Vytvoření projektu a přidání popisků do formuláře'
+description: Naučte se, jak vytvořit projekt, přidat popisky, tlačítko a další ovládací prvky do formuláře a nastavit vlastnosti pro každý ovládací prvek, který přidáte.
+ms.custom: SEO-VS-2020
 ms.date: 10/15/2019
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bf904fca84fba88e81306ff91add6c2156b4544
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd84b7b11f58b8deb62f6138255b4c8d942b5a00
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579444"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480106"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>Krok 1: Vytvoření projektu a přidání popisků do formuláře
 
@@ -32,7 +34,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 1. Na levé straně dialogového okna **Nový projekt** vyberte buď **Visual C#** , nebo **Visual Basic** , a pak zvolte **Windows Desktop**.
 
-1. V seznamu šablon vyberte šablonu **model Windows Forms App (.NET Framework)** , pojmenujte ji *MathQuiz*a pak klikněte na tlačítko **OK** .
+1. V seznamu šablon vyberte šablonu **model Windows Forms App (.NET Framework)** , pojmenujte ji *MathQuiz* a pak klikněte na tlačítko **OK** .
 
     Zobrazí se formulář s názvem *Form1.cs* nebo *Form1. vb* v závislosti na zvoleném programovacím jazyce.
 
@@ -78,13 +80,13 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
      Velikost formuláře můžete změnit přetažením jeho okrajů, dokud se nezobrazí správná velikost v levém dolním rohu integrovaného vývojového prostředí (IDE). Alternativně můžete změnit hodnoty vlastnosti **Size** .
 
-1. Změňte hodnotu vlastnosti **FormBorderStyle** na **Fixed3D**a vlastnost **MaximizeBox** nastavte na **false**.
+1. Změňte hodnotu vlastnosti **FormBorderStyle** na **Fixed3D** a vlastnost **MaximizeBox** nastavte na **false**.
 
      Tyto hodnoty zabrání v uživatelé vyplňujícíi kvízu změnit velikost formuláře.
 
 ## <a name="to-create-the-time-remaining-box"></a>Vytvoření pole pro zbývající čas
 
-1. Přidejte <xref:System.Windows.Forms.Label> ovládací prvek z **panelu nástrojů**a pak nastavte jeho vlastnost **(Name)** na hodnotu **timeLabel**.
+1. Přidejte <xref:System.Windows.Forms.Label> ovládací prvek z **panelu nástrojů** a pak nastavte jeho vlastnost **(Name)** na hodnotu **timeLabel**.
 
      Tento popisek se stane polem v pravém horním rohu, které zobrazuje počet sekund, které zůstanou v kvízu.
 
@@ -106,7 +108,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
      ![okno Vlastnosti zobrazení velikosti písma](../ide/media/express_setfontsize.png)
 
-8. Přidejte další ovládací prvek popisek z **panelu nástrojů**a nastavte jeho velikost písma na **15,75**.
+8. Přidejte další ovládací prvek popisek z **panelu nástrojů** a nastavte jeho velikost písma na **15,75**.
 
 9. Nastavte vlastnost **text** na hodnotu **zbývající čas**.
 
@@ -114,7 +116,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 ### <a name="to-add-controls-for-the-addition-problems"></a>Přidání ovládacích prvků pro úlohy sčítání
 
-1. Přidejte ovládací prvek popisek z **panelu nástrojů**a potom nastavte jeho vlastnost **text** na **?** (otazník).
+1. Přidejte ovládací prvek popisek z **panelu nástrojů** a potom nastavte jeho vlastnost **text** na **?** (otazník).
 
 2. Nastavte vlastnost **AutoSize** na **hodnotu false**.
 
@@ -128,7 +130,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 7. Nastavte vlastnost **(Name)** na **plusLeftLabel**.
 
-8. Zvolte popisek **plusLeftLabel** a pak zvolte **buď klávesovou** + zkratku**C** , nebo příkaz **Kopírovat** v nabídce **Upravit** .
+8. Zvolte popisek **plusLeftLabel** a pak zvolte **buď klávesovou** + zkratku **C** , nebo příkaz **Kopírovat** v nabídce **Upravit** .
 
 9. Vložte popisek třikrát tak, že vyberete buď klávesy **CTRL** + **v** , nebo **Vložit** v nabídce **Upravit** .
 
@@ -142,7 +144,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 13. Nastavte hodnotu vlastnosti **text** čtvrtého popisku na **=** (symbol rovná se).
 
-14. Přidejte <xref:System.Windows.Forms.NumericUpDown> ovládací prvek ze sady **nástrojů**, nastavte jeho velikost písma na **18**a nastavte jeho šířku na **100**.
+14. Přidejte <xref:System.Windows.Forms.NumericUpDown> ovládací prvek ze sady **nástrojů**, nastavte jeho velikost písma na **18** a nastavte jeho šířku na **100**.
 
      O tomto druhu řízení se dozvíte později.
 
@@ -170,20 +172,20 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 5. Pojmenujte druhou jmenovku otazníku **minusRightLabel**.
 
-6. Pojmenujte **rozdíl**ovládacího prvku NumericUpDown.
+6. Pojmenujte **rozdíl** ovládacího prvku NumericUpDown.
 
 7. Vložte pět ovládacích prvků dvakrát.
 
-8. Pro třetí řádek pojmenujte první jmenovku **timesLeftLabel**, změňte vlastnost **text** druhé jmenovky na hodnotu **×** (znaménko násobení), pojmenujte třetí popisek **timesRightLabel**a pojmenujte ho na řídicí **produkt**NumericUpDown.
+8. Pro třetí řádek pojmenujte první jmenovku **timesLeftLabel**, změňte vlastnost **text** druhé jmenovky na hodnotu **×** (znaménko násobení), pojmenujte třetí popisek **timesRightLabel** a pojmenujte ho na řídicí **produkt** NumericUpDown.
 
-9. U čtvrtého řádku pojmenujte první popisek **dividedLeftLabel**, změňte vlastnost **text** druhé jmenovky na **÷** (znaménko dělení), pojmenujte třetí popisek **dividedRightLabel**a pojmenujte **podíl**ovládacího prvku NumericUpDown.
+9. U čtvrtého řádku pojmenujte první popisek **dividedLeftLabel**, změňte vlastnost **text** druhé jmenovky na **÷** (znaménko dělení), pojmenujte třetí popisek **dividedRightLabel** a pojmenujte **podíl** ovládacího prvku NumericUpDown.
 
     > [!NOTE]
     > V tomto kurzu můžete zkopírovat znaménko násobení × a znaménko dělení ÷ a vložit je do formuláře.
 
 ## <a name="to-add-a-start-button-and-set-the-tab-index-order"></a>Přidání tlačítka Start a nastavení pořadí indexů karet
 
-1. Přidejte <xref:System.Windows.Forms.Button> ovládací prvek z **panelu nástrojů**a potom nastavte jeho vlastnost **(Name)** na **startButton**.
+1. Přidejte <xref:System.Windows.Forms.Button> ovládací prvek z **panelu nástrojů** a potom nastavte jeho vlastnost **(Name)** na **startButton**.
 
 2. Nastavte vlastnost **text** na hodnotu **spustit kvíz**.
 
@@ -198,7 +200,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
     > [!NOTE]
     > Vlastnost **TabIndex** nastaví pořadí ovládacích prvků, když si autor kvízu zvolí klávesu **TAB** . Pokud chcete zjistit, jak to funguje, otevřete libovolné dialogové okno (například na panelu nabídek, zvolte otevřít **soubor**  >  **Open**) a pak několikrát zvolte klávesu **TAB** . Sledujte, jak se kurzor pohybuje od ovládacího prvku a řídí se pokaždé, když vyberete klávesu **TAB** . Programátor určil pořadí při vytváření tohoto formuláře.
 
-7. Nastavte hodnotu vlastnosti **TabIndex** pro ovládací prvek NumericUpDown suma na **2**, pro ovládací prvek rozdíl na **3**, pro řízení produktu na **4**a pro řízení podílu na **5**.
+7. Nastavte hodnotu vlastnosti **TabIndex** pro ovládací prvek NumericUpDown suma na **2**, pro ovládací prvek rozdíl na **3**, pro řízení produktu na **4** a pro řízení podílu na **5**.
 
      Formulář by měl vypadat podobně jako na následujícím snímku obrazovky.
 

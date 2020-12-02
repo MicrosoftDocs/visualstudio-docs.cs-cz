@@ -1,5 +1,7 @@
 ---
 title: 'Krok 3: Přidání časovače odpočítávání'
+description: Naučte se, jak přidat časovač odpočítávání pro sledování počtu sekund, které zbývá pro dokončení příjemce kvízu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ca2dce7f6f9ddc484b67f250f34d69747c6e46e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 723b5daabd19d2e49462bf62d2657c6a6cd14b7f
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579867"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480639"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>Krok 3: Přidání časovače odpočítávání
 
@@ -94,7 +96,7 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
 
      Příkaz `addend1 + addend2` sečte hodnoty dvou proměnných dohromady. První část ( `sum.Value` ) používá vlastnost **Value** součtového ovládacího prvku NumericUpDown k zobrazení správné odpovědi. Stejnou vlastnost použijete později ke kontrole odpovědí pro kvíz.
 
-     Kvíz uživatelé vyplňující může snadněji zadat čísla pomocí <xref:System.Windows.Forms.NumericUpDown> ovládacího prvku, což je důvod, proč ho použijete pro odpovědi na matematické problémy. Všechny možné odpovědi jsou celá čísla od 0 do 100. Ponecháním výchozích hodnot vlastností **minimum**, **Maximum**a **počet desetinných míst** zajistíte, že uživatelé vyplňující kvízu nemůže vstupovat do desetinných míst, záporná čísla nebo čísla, která jsou příliš vysoká. (Pokud jste chtěli uživatelé vyplňující kvízu zadat 3,141, ale ne 3,1415, mohli byste nastavit vlastnost **počet desetinných míst** na 3.)
+     Kvíz uživatelé vyplňující může snadněji zadat čísla pomocí <xref:System.Windows.Forms.NumericUpDown> ovládacího prvku, což je důvod, proč ho použijete pro odpovědi na matematické problémy. Všechny možné odpovědi jsou celá čísla od 0 do 100. Ponecháním výchozích hodnot vlastností **minimum**, **Maximum** a **počet desetinných míst** zajistíte, že uživatelé vyplňující kvízu nemůže vstupovat do desetinných míst, záporná čísla nebo čísla, která jsou příliš vysoká. (Pokud jste chtěli uživatelé vyplňující kvízu zadat 3,141, ale ne 3,1415, mohli byste nastavit vlastnost **počet desetinných míst** na 3.)
 
 6. Přidejte tři řádky na konec `StartTheQuiz()` metody, aby kód vypadal jako následující.
 

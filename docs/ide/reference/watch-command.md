@@ -1,5 +1,7 @@
 ---
 title: Kukátko – příkaz
+description: Přečtěte si o příkazu Watch a o tom, jak vytvoří a otevře zadanou instanci okno Kukátko.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d7c89761dfc12d342747567389e39daeed4a227
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 631c9cf61e6da70b3c7554a1aac0cacc8eef0294
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585649"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480145"
 ---
 # <a name="watch-command"></a>Kukátko – příkaz
 Vytvoří a otevře zadanou instanci okna **kukátka** . Okno **kukátka** můžete použít k výpočtu hodnot proměnných, výrazů a registrů pro úpravu těchto hodnot a k uložení výsledků.

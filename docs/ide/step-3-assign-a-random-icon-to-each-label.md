@@ -1,5 +1,7 @@
 ---
 title: 'Krok 3: Přiřazení náhodné ikony každému popisku'
+description: Přečtěte si, jak přiřadit náhodné ikony každému popisku, aby se ikony nezobrazovaly ve stejných buňkách v každé hře.
+ms.custom: SEO-VS-2020
 ms.date: 03/21/2020
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 627b798827cd0b966d1f34336c7e1119841f9d4a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f3330daeed243f96c44825a4be5516c573bb005
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80472626"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480626"
 ---
 # <a name="step-3-assign-a-random-icon-to-each-label"></a>Krok 3: Přiřazení náhodné ikony každému popisku
 

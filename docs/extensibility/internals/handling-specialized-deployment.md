@@ -1,5 +1,7 @@
 ---
 title: Zpracování specializovaného nasazení | Microsoft Docs
+description: Naučte se, jak zpracovat specializované nasazení projektu aplikace v aplikaci Visual Studio. Například nasazení na webový server nebo do zařízení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 972965c3565088af8205d6f7903d7098e568c057
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 664625cd8737fb9a9a3e398716d750d6d9665529
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708213"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480431"
 ---
 # <a name="handle-specialized-deployment"></a>Obsluha specializovaného nasazení
 Nasazení je volitelná operace pro projekty. Webový projekt, například podporuje nasazení, aby mohl projekt aktualizovat webový server. Podobně, projekt **inteligentního zařízení** podporuje nasazení a zkopírování sestavené aplikace do cílového zařízení. Podtypy projektů mohou poskytovat specializované chování nasazení implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> rozhraní. Toto rozhraní definuje úplnou sadu operací nasazení:

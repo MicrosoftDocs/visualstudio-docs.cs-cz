@@ -1,5 +1,7 @@
 ---
 title: 'Krok 1: Vytvoření projektu a přidání tabulky do formuláře'
+description: Naučte se, jak vytvořit odpovídající projekt hry a přidat tabulku do formuláře.
+ms.custom: SEO-VS-2020
 ms.date: 10/15/2019
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1134fb5bb02bd8c78f347ef582f12da35074c36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a8ae9b17df85431945b19d65f5435ac081b4a1c
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579930"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480717"
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>Krok 1: Vytvoření projektu a přidání tabulky do formuláře
 
@@ -29,7 +31,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
 
 1. Na levé straně dialogového okna **Nový projekt** vyberte buď **Visual C#** , nebo **Visual Basic** , a pak zvolte **Windows Desktop**.
 
-1. V seznamu šablon vyberte šablonu **model Windows Forms App (.NET Framework)** , pojmenujte ji *MatchingGame*a pak klikněte na tlačítko **OK** .
+1. V seznamu šablon vyberte šablonu **model Windows Forms App (.NET Framework)** , pojmenujte ji *MatchingGame* a pak klikněte na tlačítko **OK** .
 
     Zobrazí se formulář s názvem *Form1.cs* nebo *Form1. vb* v závislosti na zvoleném programovacím jazyce.
 
@@ -71,7 +73,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
 
    1. Změňte vlastnost **text** formuláře z **Form1** na **porovnávací hru**. Tento text se zobrazí v horní části herního okna.
 
-   2. Nastavte velikost formuláře na šířku 550 pixelů a výšku 550 pixelů. To můžete provést buď nastavením vlastnosti **Size** na **550, 550**nebo přetažením rohu formuláře, dokud neuvidíte správnou velikost v pravém dolním rohu integrovaného vývojového prostředí (IDE).
+   2. Nastavte velikost formuláře na šířku 550 pixelů a výšku 550 pixelů. To můžete provést buď nastavením vlastnosti **Size** na **550, 550** nebo přetažením rohu formuláře, dokud neuvidíte správnou velikost v pravém dolním rohu integrovaného vývojového prostředí (IDE).
 
 2. Zobrazení panelu nástrojů výběrem karty **panelu nástrojů** na levé straně rozhraní IDE.
 
@@ -108,7 +110,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
 
    5. Vyberte vlastnost **Font** . Mělo by se zobrazit tlačítko se třemi tečkami (**...**).
 
-   6. Klikněte na tlačítko se třemi tečkami a nastavte hodnotu **písma** na **Webdings**, **styl písma** na **tučné**a **Velikost** na **48**.
+   6. Klikněte na tlačítko se třemi tečkami a nastavte hodnotu **písma** na **Webdings**, **styl písma** na **tučné** a **Velikost** na **48**.
 
    7. Nastavte vlastnost **text** popisku na písmeno **c**.
 

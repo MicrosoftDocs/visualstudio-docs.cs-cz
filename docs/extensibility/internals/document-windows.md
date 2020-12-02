@@ -1,5 +1,7 @@
 ---
 title: Dokumentovat okna | Microsoft Docs
+description: Přečtěte si o oknech dokumentů v aplikaci Visual Studio, včetně způsobu jejich implementace a způsobu, jakým běžící tabulka dokumentů (RDT) sleduje svůj stav.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca834a5414c73f6acf6ac744620a46bba54b8fbf
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: f39c02ece35a36ceb763a2a5b84f8431043a1b50
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93413733"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480002"
 ---
 # <a name="document-windows"></a>Okna dokumentů
 V aplikaci Visual Studio je *okno dokumentu* rámcové podřízené okno, které je spojeno s oknem MDI (Multiple Document Interface). Okna dokumentů se obvykle používají pro zobrazení a úpravy zdrojového kódu nebo textu, ale mohou také hostovat jiné funkční typy. Okna dokumentů:

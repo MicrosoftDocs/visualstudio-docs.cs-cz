@@ -1,5 +1,7 @@
 ---
 title: 'Krok 6: Pojmenování tlačítkových ovládacích prvků'
+description: Přečtěte si, jak pojmenovat vaše ovládací prvky tlačítka.
+ms.custom: SEO-VS-2020
 ms.date: 08/30/2016
 ms.assetid: 56b3baa3-651e-4ad4-8942-e334c5c57158
 ms.topic: tutorial
@@ -13,32 +15,32 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5c23f48e803665e00155d1b546ace4e4ec7bc54
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bfa5b69cc106aeae18012a7116fd511263423b2c
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579792"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480314"
 ---
 # <a name="step-6-name-your-button-controls"></a>Krok 6: Pojmenování tlačítkových ovládacích prvků
 
 Ve formuláři je pouze jeden <xref:System.Windows.Forms.PictureBox> . Po přidání se rozhraní IDE automaticky jmenuje **pictureBox1**. Existuje pouze jeden <xref:System.Windows.Forms.CheckBox> , který má název **checkBox1**. Brzy napíšete kód a tento kód bude odkazovat na zaškrtávací políčko a PictureBox. Vzhledem k tomu, že existuje pouze jeden z těchto ovládacích prvků, budete znát, co to znamená, když ve svém kódu uvidíte **pictureBox1** nebo **checkBox1** .
 
 > [!TIP]
-> V Visual Basic výchozí první písmeno libovolného názvu ovládacího prvku má počáteční zakončení, takže názvy jsou **pictureBox1**, **checkBox1**a tak dále.
+> V Visual Basic výchozí první písmeno libovolného názvu ovládacího prvku má počáteční zakončení, takže názvy jsou **pictureBox1**, **checkBox1** a tak dále.
 
-Ve formuláři jsou čtyři tlačítka a rozhraní IDE s názvem **Button1**, **Button2**, **Button3**a **Button4**. Pouhým zobrazením jejich aktuálních názvů nevíte, které tlačítko představuje tlačítko **Zavřít** a který je jedním z tlačítek **Zobrazit obrázek** . To je důvod, proč vaše tlačítko ovládá více informativních názvů je užitečné.
+Ve formuláři jsou čtyři tlačítka a rozhraní IDE s názvem **Button1**, **Button2**, **Button3** a **Button4**. Pouhým zobrazením jejich aktuálních názvů nevíte, které tlačítko představuje tlačítko **Zavřít** a který je jedním z tlačítek **Zobrazit obrázek** . To je důvod, proč vaše tlačítko ovládá více informativních názvů je užitečné.
 
 ## <a name="to-name-your-button-controls"></a>Chcete-li pojmenovat ovládací prvky tlačítka
 
 1. Ve formuláři klikněte na tlačítko **Zavřít** . (Pokud máte stále vybraná všechna tlačítka, kliknutím na klávesu **ESC** výběr zrušte.) Posuňte se v okně **vlastnosti** , dokud se nezobrazí vlastnost **(název)** . (Vlastnost **(Name)** je blízko horní části, pokud jsou vlastnosti seřazené abecedně.) Změňte název na **closeButton**, jak je znázorněno na následujícím snímku obrazovky.
 
-    ![okno Vlastnosti s názvem closeButton](../ide/media/express_setnameproperty.png)<br>Okno ***vlastností*** *s* ***closeButton*** *názvem* closeButton
+    ![okno Vlastnosti s názvem closeButton](../ide/media/express_setnameproperty.png)<br>**_Properties_* _ _Window s * ***closeButton**_ _name *
 
     > [!NOTE]
-    > Zkuste změnit název tlačítka na **tlačítko Zavřít**s mezerou mezi slovy "Zavřít" a "tlačítko". Pokud tak učiníte, IDE zobrazí chybovou zprávu: "hodnota vlastnosti není platná." Mezery (a několik dalších znaků) nejsou povoleny v názvech ovládacích prvků.
+    > Zkuste změnit název tlačítka na **tlačítko Zavřít** s mezerou mezi slovy "Zavřít" a "tlačítko". Pokud tak učiníte, IDE zobrazí chybovou zprávu: "hodnota vlastnosti není platná." Mezery (a několik dalších znaků) nejsou povoleny v názvech ovládacích prvků.
 
-1. Přejmenujte další tři tlačítka na **backgroundButton**, **clearButton**a **showButton**.
+1. Přejmenujte další tři tlačítka na **backgroundButton**, **clearButton** a **showButton**.
 Názvy můžete ověřit tak, že v okně **vlastnosti** zvolíte rozevírací seznam výběr ovládacího prvku. Nové názvy tlačítek se zobrazí.
 
 1. Dvakrát klikněte na tlačítko **Zobrazit obrázek** ve formuláři. Jako alternativu zvolte na formuláři tlačítko **Zobrazit obrázek** a potom stiskněte klávesu **ENTER** . Když to uděláte, IDE otevře další kartu v hlavním okně s názvem **Form1.cs**. (Pokud používáte Visual Basic, karta má název **Form1. vb**).
@@ -46,7 +48,7 @@ Názvy můžete ověřit tak, že v okně **vlastnosti** zvolíte rozevírací s
    Tato karta zobrazuje soubor kódu za formulářem, jak je znázorněno na následujícím snímku obrazovky.
 
     ![Karta Form1.cs s kódem jazyka Visual C&#35;](../ide/media/express_showbuttoncode.png)<br>
-Karta ***Form1.cs*** *s kódem jazyka C#*
+**_Form1.cs_* _ _tab s kódem C# *
 
     > [!NOTE]
     > Karta Form1.cs nebo Form1. vb může místo toho zobrazovat **showButton** jako **showButton** .
@@ -74,7 +76,7 @@ Karta ***Form1.cs*** *s kódem jazyka C#*
 1. Chcete-li přidat další metodu, otevřete soubor kódu pro ovládací prvek **CheckBox** v **Návrhář formulářů** , aby rozhraní IDE přidalo `checkBox1_CheckedChanged()` metodu. Tato metoda je volána vždy, když uživatel vybere nebo zruší zaškrtnutí políčka.
 
    > [!TIP]
-   > Při práci na aplikaci se často přesouváte mezi editorem kódu a **Návrhář formulářů**. Rozhraní IDE usnadňuje navigaci v projektu. Pomocí **Průzkumník řešení** otevřít **Návrhář formulářů** dvojím kliknutím na *Form1.cs* v jazyce C# nebo *Form1. vb* v Visual Basic nebo na panelu nabídek vyberte možnost **View**  >  **Návrhář**zobrazení.
+   > Při práci na aplikaci se často přesouváte mezi editorem kódu a **Návrhář formulářů**. Rozhraní IDE usnadňuje navigaci v projektu. Pomocí **Průzkumník řešení** otevřít **Návrhář formulářů** dvojím kliknutím na *Form1.cs* v jazyce C# nebo *Form1. vb* v Visual Basic nebo na panelu nabídek vyberte možnost **View**  >  **Návrhář** zobrazení.
 
     Následující příklad ukazuje nový kód, který se zobrazí v editoru kódu.
 

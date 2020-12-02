@@ -1,5 +1,7 @@
 ---
 title: 'Krok 2: přidejte náhodný objekt a seznam ikon'
+description: Naučte se vytvořit sadu vyhovujících symbolů pro hru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f4731778ebb3acbdc3bb7d9b5827c1015541d98
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1018b390f6ebbf67fab88554aa85fe6a8ecec88d
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579418"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480691"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>Krok 2: přidejte náhodný objekt a seznam ikon
 
@@ -26,7 +28,7 @@ V tomto kroku vytvoříte sadu odpovídajících symbolů pro hru. Každý symbo
 
 ## <a name="to-add-a-random-object-and-a-list-of-icons"></a>Přidání náhodného objektu a seznamu ikon
 
-1. V **Průzkumník řešení**zvolte *Form1.cs* , pokud používáte jazyk C# nebo *Form1. vb* , pokud používáte Visual Basic a pak na panelu nabídek zvolte **Zobrazit**  >  **kód**. Alternativně můžete zvolit klávesu **F7** nebo dvakrát kliknout na položku **Form1** v **Průzkumník řešení**.
+1. V **Průzkumník řešení** zvolte *Form1.cs* , pokud používáte jazyk C# nebo *Form1. vb* , pokud používáte Visual Basic a pak na panelu nabídek zvolte **Zobrazit**  >  **kód**. Alternativně můžete zvolit klávesu **F7** nebo dvakrát kliknout na položku **Form1** v **Průzkumník řešení**.
 
      Zobrazí se modul kódu pro Form1.
 
@@ -42,7 +44,7 @@ V tomto kroku vytvoříte sadu odpovídajících symbolů pro hru. Každý symbo
 
 3. Při přidávání objektu seznamu si všimněte okna **technologie IntelliSense** , které se otevře. Následuje příklad v jazyce C#, ale podobný text se zobrazí při přidání seznamu do Visual Basic.
 
-     ![Okno Vlastnosti zobrazující událost Click](../ide/media/express_listintellisense.png)<br/>*Okno **IntelliSense***
+     ![Okno Vlastnosti zobrazující událost Click](../ide/media/express_listintellisense.png)<br/>*Okno *_IntelliSense_**
 
     > [!NOTE]
     > Okno technologie IntelliSense se zobrazí pouze v případě, že zadáte kód ručně. Pokud kód zkopírujete a vložíte, nezobrazí se.

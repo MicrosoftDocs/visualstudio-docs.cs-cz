@@ -1,5 +1,7 @@
 ---
 title: 'Krok 4: Přidání obslužné rutiny události Click ke každému popisku'
+description: Přečtěte si, jak přidat obslužnou rutinu události Click do každého popisku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7049271dddb4e763bf5ecb3760358bdd63e38df5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f620b097e2a565bbacf3322d03385aa70fd0356f
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579345"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480600"
 ---
 # <a name="step-4-add-a-click-event-handler-to-each-label"></a>Krok 4: Přidání obslužné rutiny události Click ke každému popisku
 
@@ -34,7 +36,7 @@ Porovnávací hra probíhá takto:
 
 ## <a name="to-add-a-click-event-handler-to-each-label"></a>Přidání obslužné rutiny události Click do každého popisku
 
-1. Otevřete formulář v **Návrhář formulářů**. V **Průzkumník řešení**vyberte *Form1.cs* nebo *Form1. vb*. Na panelu nabídek vyberte možnost Návrhář **zobrazení**  >  **Designer**.
+1. Otevřete formulář v **Návrhář formulářů**. V **Průzkumník řešení** vyberte *Form1.cs* nebo *Form1. vb*. Na panelu nabídek vyberte možnost Návrhář **zobrazení**  >  **Designer**.
 
 2. Vyberte první ovládací prvek popisku. Pak podržte stisknutou klávesu **CTRL** a vyberte všechny ostatní štítky, které chcete vybrat. Je nutné vybrat všechny popisky.
 

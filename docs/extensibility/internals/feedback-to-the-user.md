@@ -1,5 +1,7 @@
 ---
 title: Zpětná vazba pro uživatele | Microsoft Docs
+description: Naučte se, jak poskytnout uživateli vizuální zpětnou vazbu k dostupným funkcím v integrovaném vývojovém prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 46b9190b16b9aa444384847bf209ccca50c7f768
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8f3f79a61729a641ee7c046ddd196a648469fb3
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708404"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480522"
 ---
 # <a name="feedback-to-the-user"></a>Zpětná vazba uživateli
 V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí (IDE) je vizuální zpětná vazba týkající se dostupných funkcí založena na aktuálním výběru a kontextu globálního výběru uživatele. V následující tabulce jsou uvedeny funkce, které jsou k dispozici v různých kontextech výběru.
@@ -55,7 +57,7 @@ V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vý
 
 - Zobrazí se panel nástrojů **editoru** a nabídka **tabulka** a záhlaví se aktualizuje tak, aby odráželo okno webového formuláře.
 
-- Okno aktivní hierarchie, které je obvykle **Průzkumník řešení**a jeho záhlaví se aktualizuje tak, aby odráželo aktuální kontext a příkazy místní nabídky **projektu** se teď vztahují na aktivní projekt webové aplikace.
+- Okno aktivní hierarchie, které je obvykle **Průzkumník řešení** a jeho záhlaví se aktualizuje tak, aby odráželo aktuální kontext a příkazy místní nabídky **projektu** se teď vztahují na aktivní projekt webové aplikace.
 
 ## <a name="see-also"></a>Viz také
 - [Výběr a měna v integrovaném vývojovém prostředí](../../extensibility/internals/selection-and-currency-in-the-ide.md)

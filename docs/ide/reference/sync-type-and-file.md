@@ -1,5 +1,7 @@
 ---
 title: Přejmenovat název souboru tak, aby odpovídal typu
+description: Naučte se, jak pomocí nabídky rychlé akce a refaktoring přejmenovat typ tak, aby odpovídal názvu souboru, nebo přejmenujte název souboru tak, aby odpovídal typu, který obsahuje.
+ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5b7a42a174fecd078e804f2ab3c35fbe442364a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 020dcedd6b0cb2117984d45548b5c1e099c67aee
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594393"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479820"
 ---
 # <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>Synchronizovat typ s názvem souboru nebo název souboru pro refaktoring typu
 
@@ -50,10 +52,10 @@ Tento refaktoring platí pro:
 
    - **Klávesnice**
       - Stiskněte klávesu **CTRL** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoringu** a v okně náhledu vyberte **Přejmenovat soubor na *TypeName*. cs** , kde *TypeName* je název typu, který jste vybrali.
-      - Stiskněte klávesu **CTRL** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoringy** a v okně Náhled vyberte možnost **Přejmenovat typ názvu _souboru_ ** , kde *filename* je název aktuálního souboru.
+      - Stiskněte klávesu **CTRL** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoringy** a v okně Náhled vyberte možnost **Přejmenovat typ názvu _souboru_** , kde *filename* je název aktuálního souboru.
    - **Myš**
       - Klikněte pravým tlačítkem na kód, vyberte nabídku **rychlé akce a refaktoring** a v okně Náhled vyberte **Přejmenovat soubor na *TypeName*. cs** , kde *TypeName* je název typu, který jste vybrali.
-      - Klikněte pravým tlačítkem na kód, vyberte nabídku **rychlé akce a refaktoring** a v okně Náhled vyberte **Přejmenovat typ na _název souboru_ ** , kde *filename* je název aktuálního souboru.
+      - Klikněte pravým tlačítkem na kód, vyberte nabídku **rychlé akce a refaktoring** a v okně Náhled vyberte **Přejmenovat typ na _název souboru_** , kde *filename* je název aktuálního souboru.
 
    Typ nebo soubor se přejmenují.
 

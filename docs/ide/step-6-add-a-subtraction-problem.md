@@ -1,5 +1,7 @@
 ---
 title: 'Krok 6: Přidání úlohy odčítání'
+description: Naučte se, jak přidat problém odčítání a také zjistit, jak provádět úlohy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b6dd2b572074265cca62a45b962c604abf5c849
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8157335e47ec13c66da471f77ddbd2877bcac12d
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579814"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480665"
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>Krok 6: Přidání úlohy odčítání
 V šesté části tohoto kurzu přidáte problém odčítání a naučíte se, jak provádět následující úlohy:
@@ -60,12 +62,12 @@ V šesté části tohoto kurzu přidáte problém odčítání a naučíte se, j
      Můžete zavolat `Next()` metodu náhodné třídy, kterou jste pojmenovali "randomizer" dříve v tomto kurzu, a to více způsoby. Metody, které lze volat více než jedním způsobem, jsou označovány jako přetížené a můžete je prozkoumat pomocí technologie IntelliSense. Prohlédněte si znovu Popis popisku okna technologie IntelliSense pro `Next()` metodu.
 
      ![Popisek okna IntelliSense](../ide/media/express_overloads.png)<br/>
-***IntelliSense*** *Popisek okna* IntelliSense
+**_IntelliSense_* _ _window popisu tlačítka *
 
      V popisu se zobrazí **(+ 2 přetížení)**, což znamená, že můžete zavolat `Next()` metodu dvěma dalšími způsoby. Přetížení obsahují odlišná čísla nebo typy argumentů, aby byly mírně odlišné od sebe. Například metoda může mít jeden celočíselný argument a jedno z jeho přetížení může mít celočíselnou hodnotu a řetězec. Můžete zvolit správné přetížení na základě toho, co chcete udělat. Při přidání kódu do `StartTheQuiz()` metody se v okně IntelliSense zobrazí další informace hned po zadání `randomizer.Next(` . Chcete-li cyklicky přepínat, vyberte **šipky nahoru** a **dolů** , jak je znázorněno na následujícím obrázku:
 
      ![Přetížení pro metodu Next&#40;&#41; v IntelliSense](../ide/media/express_nextoverload.png)<br/>
-*Overload pro* metodu ***Next ()*** *v* ***IntelliSense***
+*Přetížení pro*  * **Next ()** _ _Metoda ve * ***IntelliSense**_
 
      V takovém případě chcete zvolit poslední přetížení, protože můžete zadat minimální a maximální hodnoty.
 
@@ -86,7 +88,7 @@ V šesté části tohoto kurzu přidáte problém odčítání a naučíte se, j
      Váš program zahrnuje úlohu odčítání, jak ukazuje následující obrázek:
 
      ![Matematický kvíz s problémem odčítání](../ide/media/express_addsubtract.png)<br/>
-***Matematický kvíz*** *s problémem odčítání*
+Problém odčítání _with _*_matematického kvízu_*_ *
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 

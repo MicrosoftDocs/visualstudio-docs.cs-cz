@@ -1,5 +1,7 @@
 ---
 title: Identifikátory GUID a ID příkazů sady Visual Studio | Microsoft Docs
+description: Naučte se, jak najít identifikátor GUID a ID pro příkazy zahrnuté v integrovaném vývojovém prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8932f23d301eabc97414bf76453d70336e0dabae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cabf5c9452cf0a6809673d488f9cf01252d7b0ef
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708257"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480444"
 ---
 # <a name="guids-and-ids-of-visual-studio-commands"></a>Identifikátory GUID a ID příkazů sady Visual Studio
 Hodnoty identifikátoru GUID a ID příkazů zahrnutých v integrovaném vývojovém prostředí (IDE) sady Visual Studio jsou definovány v souborech. vsct, které jsou nainstalovány jako součást sady Visual Studio SDK. Další informace naleznete v tématu [příkazy, nabídky a skupiny definované rozhraním IDE](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -31,7 +33,7 @@ Hodnoty identifikátoru GUID a ID příkazů zahrnutých v integrovaném vývojo
 
 ### <a name="to-locate-a-command-definition"></a>Vyhledání definice příkazu
 
-1. V sadě Visual Studio otevřete následující soubory ve složce *<instalační cesta sady Visual Studio SDK \> \VisualStudioIntegration\Common\Inc \\ * složka: *SharedCmdDef. vsct*, *ShellCmdDef. vsct*, *VsDbgCmdUsed. vsct*, *Venusmenu. vsct*.
+1. V sadě Visual Studio otevřete následující soubory ve složce *<instalační cesta sady Visual Studio SDK \> \VisualStudioIntegration\Common\Inc \\* složka: *SharedCmdDef. vsct*, *ShellCmdDef. vsct*, *VsDbgCmdUsed. vsct*, *Venusmenu. vsct*.
 
     Většina příkazů sady Visual Studio je definována v *SharedCmdDef. vsct* a *ShellCmdDef. vsct*. *VsDbgCmdUsed. vsct* definuje příkazy, které se vztahují k ladicímu programu, a *Venusmenu. vsct* definuje příkazy, které jsou specifické pro vývoj na webu.
 
@@ -54,11 +56,11 @@ Hodnoty identifikátoru GUID a ID příkazů zahrnutých v integrovaném vývojo
 
 - Položky nabídky, které obsahují podtržený znak, jako je například příkaz **Tisk** v nabídce **soubor** , ve kterém je podtržena *P* .
 
-     Znaky, které jsou uvozeny znakem ampersand (&) v názvu položky nabídky, jsou zobrazeny podtrženě. Soubory *. vsct* jsou však napsány v jazyce XML, který používá znak ampersand (&) k označení speciálních znaků a vyžaduje, aby byl ampersand zobrazen jako * &amp; amp;*. Proto se v souboru *. vsct* zobrazí příkaz **Tisk** jako * &amp; amp; Tisk*.
+     Znaky, které jsou uvozeny znakem ampersand (&) v názvu položky nabídky, jsou zobrazeny podtrženě. Soubory *. vsct* jsou však napsány v jazyce XML, který používá znak ampersand (&) k označení speciálních znaků a vyžaduje, aby byl ampersand zobrazen jako *&amp; amp;*. Proto se v souboru *. vsct* zobrazí příkaz **Tisk** jako *&amp; amp; Tisk*.
 
 - Příkazy, které mají dynamický text, jako je například **Save (Uložit** ) \<Current Filename\> a dynamicky generované položky nabídky, jako například položky v seznamu **Poslední soubory** .
 
-     Neexistuje spolehlivý způsob, jak prohledávat dynamický text. Místo toho vyhledejte skupinu, která je hostitelem požadovaného příkazu, pomocí konzultačních [identifikátorů GUID a ID nabídek](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md) nebo [identifikátorů GUID](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)sady Visual Studio a vyhledejte ID této skupiny. Pokud definice příkazu nemá skupinu jako svůj [nadřazený prvek](../../extensibility/parent-element.md), vyhledejte *SharedCmdPlace. vsct* a *ShellCmdPlace. vsct* (nebo *VsDbgCmdPlace. vsct* pro příkazy ladicího programu) pro `<CommandPlacement>` prvek, který nastaví nadřazený objekt příkazu. *SharedCmdPlace. vsct*, *ShellCmdPlace. vsct*a *VsDbgCmdPlace. vsct* jsou ve složce * \<Visual Studio SDK installation path\> \VisualStudioIntegration\Common\Inc \\ * .
+     Neexistuje spolehlivý způsob, jak prohledávat dynamický text. Místo toho vyhledejte skupinu, která je hostitelem požadovaného příkazu, pomocí konzultačních [identifikátorů GUID a ID nabídek](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md) nebo [identifikátorů GUID](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)sady Visual Studio a vyhledejte ID této skupiny. Pokud definice příkazu nemá skupinu jako svůj [nadřazený prvek](../../extensibility/parent-element.md), vyhledejte *SharedCmdPlace. vsct* a *ShellCmdPlace. vsct* (nebo *VsDbgCmdPlace. vsct* pro příkazy ladicího programu) pro `<CommandPlacement>` prvek, který nastaví nadřazený objekt příkazu. *SharedCmdPlace. vsct*, *ShellCmdPlace. vsct* a *VsDbgCmdPlace. vsct* jsou ve složce *\<Visual Studio SDK installation path\> \VisualStudioIntegration\Common\Inc \\* .
 
 ## <a name="see-also"></a>Viz také
 

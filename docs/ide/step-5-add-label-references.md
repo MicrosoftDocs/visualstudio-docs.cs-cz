@@ -1,5 +1,7 @@
 ---
 title: 'Krok 5: Přidání odkazů popisků'
+description: Naučte se, jak do formuláře přidat odkazy na popisky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de89d7194425e1a8cba9e11f2734372d80b256b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95a4286feb778e17b345f964b1b7ccca5343e461
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579325"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480561"
 ---
 # <a name="step-5-add-label-references"></a>Krok 5: Přidání odkazů popisků
 Program potřebuje sledovat, která jmenovka řídí, aby hráč zvolil. Nyní program zobrazí všechny popisky, které hráč zvolí. Ale to změníme. Po výběru prvního popisku by program měl zobrazit ikonu popisku. Po výběru druhého popisku by program měl krátce zobrazit obě ikony a pak je opět skrýt. Váš program teď bude sledovat, který ovládací prvek popisek je vybraný jako první a který se volí za druhým pomocí *referenčních proměnných*.
@@ -47,7 +49,7 @@ Program potřebuje sledovat, která jmenovka řídí, aby hráč zvolil. Nyní p
 4. Vyberte další ovládací prvek popisku a všimněte si, že se nic nestane. Program již sleduje první štítek, který hráč zvolí, takže se `firstClicked` nerovná `null` v jazyce C# nebo `Nothing` v Visual Basic. Když `if` příkaz zkontroluje, `firstClicked` zda je roven `null` nebo `Nothing` , zjistí, že není a neprovede příkazy v `if` příkazu. Proto pouze první ikona, která je vybrána, se změní na černou a ostatní ikony jsou neviditelné, jak je znázorněno na následujícím obrázku.
 
      ![Porovnávací hra zobrazující jednu ikonu](../ide/media/express_tut4step5.png)<br/>
-***Porovnávací hra*** *ukazující jednu ikonu*
+***Porovnávací hra** _ _showing jednu ikonu *
 
      Tuto situaci opravíte v dalším kroku kurzu přidáním ovládacího prvku **Timer** .
 

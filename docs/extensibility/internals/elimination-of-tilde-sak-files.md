@@ -1,5 +1,7 @@
 ---
 title: Eliminace souborů ~ SAK | Microsoft Docs
+description: Přečtěte si o eliminaci souborů ~ SAK z modulu plug-in správy zdrojových kódů rozhraní API 1,2 a o tom, jak byly nahrazeny příznaky schopností a novými funkcemi.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0294198bb1560f8df6f17170013f88d4fe11e5cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e846354b2d48b2f7866daa14987e757f41779c8
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708505"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480509"
 ---
 # <a name="elimination-of-sak-files"></a>Eliminace souborů ~ SAK
 V modulu plug-in správy zdrojového kódu rozhraní API 1,2 byly soubory *~ sak* nahrazeny příznaky schopností a novými funkcemi, které zjišťují, zda modul plug-in správy zdrojových kódů podporuje soubor *MSSCCPRJ* a sdílené rezervace.
@@ -45,7 +47,7 @@ Pro moduly plug-in, které podporují rozšířené funkce poskytované v rozhra
 
  Pokud modul plug-in správy zdrojových kódů podporuje vytvoření a použití souboru *MSSCCPRJ. SCC* , deklaruje `SCC_CAP_SCCFILE` schopnost a implementuje rozhraní [SccWillCreateSccFile](../../extensibility/sccwillcreatesccfile-function.md). Tato funkce se volá se seznamem souborů. Funkce vrátí `TRUE' or 'FALSE` pro každý soubor, aby označoval, zda má Visual Studio pro něj použít soubor *MSSCCPRJ. SCC* . Pokud se modul plug-in správy zdrojových kódů rozhodne nepodporovat tyto nové funkce a funkce, může k zakázání vytváření těchto souborů použít následující klíč registru:
 
- **[HKEY_CURRENT_USER \software\microsoft\visualstudio\8.0\sourcecontrol] DoNotCreateTemporaryFilesInSourceControl**  =  *DWORD: 00000001*
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl]DoNotCreateTemporaryFilesInSourceControl**  =  *DWORD: 00000001*
 
 > [!NOTE]
 > Pokud je tento klíč registru nastaven na *hodnotu DWORD: 00000000*, je ekvivalentní klíč k neexistujícímu a Visual Studio se stále pokusí vytvořit dočasné soubory. Pokud je ale klíč registru nastavený na *DWORD: 00000001*, Visual Studio se nepokusí vytvořit dočasné soubory. Místo toho předpokládá, že modul plug-in správy zdrojových kódů nepodporuje soubor *MSSCCPRJ. SCC* a nepodporuje sdílené rezervace.

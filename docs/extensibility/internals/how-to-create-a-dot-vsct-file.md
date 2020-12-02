@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vytvoření. Soubor vsct | Microsoft Docs'
+description: Naučte se, jak ručně vytvořit soubor. vsct, konfigurační soubor tabulky příkazů sady Visual Studio založený na jazyce XML.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a571098deeeca0e8262d855c24d0bf1ce66be08e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47d38e68494f29947131bcc8ce3a2a59b2e8d48b
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905528"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480366"
 ---
 # <a name="how-to-create-a-vsct-file"></a>Postupy: vytvoření souboru. vsct
 
@@ -35,7 +37,7 @@ Existuje několik způsobů, jak vytvořit soubor konfigurace příkazového ř�
 
 1. Spustit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-2. V nabídce **soubor** přejděte na příkaz **Nový**a poté klikněte na možnost **soubor**.
+2. V nabídce **soubor** přejděte na příkaz **Nový** a poté klikněte na možnost **soubor**.
 
 3. V podokně **šablony** klikněte na **soubor XML** a potom klikněte na **otevřít**.
 
@@ -61,7 +63,7 @@ Soubor *. vsct* založený na jazyce XML můžete vytvořit z existující tabul
 
 1. Získá kopii jazyka Perl.
 
-2. Získejte kopii skriptu Perl *ConvertCTCToVSCT.pl*, která se obvykle nachází ve složce * \<Visual Studio SDK installation path> \VisualStudioIntegration\Tools\bin* .
+2. Získejte kopii skriptu Perl *ConvertCTCToVSCT.pl*, která se obvykle nachází ve složce *\<Visual Studio SDK installation path> \VisualStudioIntegration\Tools\bin* .
 
 3. Získejte kopii zdrojového souboru *. ctc* , který chcete převést.
 
@@ -138,7 +140,7 @@ Soubor *. vsct* založený na jazyce XML můžete vytvořit z existujícího bin
 
      Tento kód by měl jít uvnitř `ItemGroup` elementu, který obsahuje vložené prostředky.
 
-4. V editoru otevřete soubor balíčku, obvykle nazvaný * \<ProjectName\> Package.cs* nebo * \<ProjectName\> Package. vb*.
+4. V editoru otevřete soubor balíčku, obvykle nazvaný *\<ProjectName\> Package.cs* nebo *\<ProjectName\> Package. vb*.
 
 5. Přidejte `ProvideMenuResource` atribut do třídy Package, jak je znázorněno v následujícím příkladu.
 

@@ -1,5 +1,7 @@
 ---
 title: Prvky modelu projektu | Microsoft Docs
+description: Přečtěte si o prvcích modelu projektu a o tom, jak se rozhraní a implementace všech projektů v aplikaci Visual Studio sdílí se základní strukturou.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5cafc167eac28b7560287c6de88ee8c490196007
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: e366b2923d5903f00241db0a6b71017dc25f3dee
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011772"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480041"
 ---
 # <a name="elements-of-a-project-model"></a>Prvky modelu projektu
 Rozhraní a implementace všech projektů v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rámci sdílí základní strukturu: projektový model pro typ projektu. V modelu projektu, který je VSPackage, který vyvíjíte, vytváříte objekty, které vyhovují vašim rozhodnutím o návrhu a pracují společně s globálními funkcemi poskytovanými IDE. I když máte kontrolu nad tím, jak je položka projektu trvalá, například neřídíte oznámení, že soubor musí být trvalý. Když uživatel umístí fokus na otevřenou položku projektu a klikne na tlačítko **Uložit** v nabídce **soubor** na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] řádku nabídek, kód typu projektu musí zachytit příkaz z integrovaného vývojového prostředí, zachovat soubor a odeslat oznámení zpět do integrovaného vývojového prostředí, že soubor již není změněn.
@@ -40,7 +42,7 @@ Rozhraní a implementace všech projektů v [!INCLUDE[vsprvs](../../code-quality
 
   Projekty mohou podporovat příkazy, a proto musí implementovat <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní pro účast v směrování příkazů prostřednictvím identifikátorů GUID kontextu příkazu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Kontrolní seznam: vytvoření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [Použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](/previous-versions/bb166212(v=vs.100))
 - [Základní komponenty modelu projektu](../../extensibility/internals/project-model-core-components.md)

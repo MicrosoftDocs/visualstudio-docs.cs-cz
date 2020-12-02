@@ -1,5 +1,7 @@
 ---
 title: Řešení a projekty
+description: Seznamte se s projekty a řešeními sady Visual Studio a Naučte se, jak vytvořit nový projekt pomocí nástroje pro Průzkumník řešení.
+ms.custom: SEO-VS-2020
 ms.date: 06/26/2020
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad0ee64afa78a962271d2b702ee525287c5b2457
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 949da02ac074e9740038fef7917655ca552a12f6
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468727"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480704"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -42,7 +44,7 @@ Při vytváření aplikace nebo webu v aplikaci Visual Studio začnete s *projek
 
 Visual Studio používá [MSBuild](../msbuild/msbuild.md) k sestavení jednotlivých projektů v řešení a každý projekt obsahuje soubor projektu MSBuild. Přípona souboru odráží typ projektu, například projekt C# (. csproj), Visual Basic projekt (. vbproj) nebo databázový projekt (. dbproj). Soubor projektu je dokument XML, který obsahuje všechny informace a pokyny, které nástroj MSBuild potřebuje k sestavení projektu, včetně obsahu, požadavků na platformu, informací o verzích, webového serveru nebo databázového serveru a úkolů, které mají být provedeny.
 
-Soubory projektu jsou založeny na [schématu XML jazyka MSBuild](../msbuild/msbuild-project-file-schema-reference.md). Chcete-li se podívat na obsah novějších [souborů projektů ve stylu sady SDK v sadě](../msbuild/how-to-use-project-sdk.md) Visual Studio, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte možnost **Upravit \<projectname\> **. Chcete-li se podívat na obsah .NET Framework a dalších projektů tohoto stylu, nejprve uvolněte projekt (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **Uvolnit projekt**). Potom klikněte pravým tlačítkem na projekt a zvolte možnost **Upravit \<projectname\> **.
+Soubory projektu jsou založeny na [schématu XML jazyka MSBuild](../msbuild/msbuild-project-file-schema-reference.md). Chcete-li se podívat na obsah novějších [souborů projektů ve stylu sady SDK v sadě](../msbuild/how-to-use-project-sdk.md) Visual Studio, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte možnost **Upravit \<projectname\>**. Chcete-li se podívat na obsah .NET Framework a dalších projektů tohoto stylu, nejprve uvolněte projekt (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **Uvolnit projekt**). Potom klikněte pravým tlačítkem na projekt a zvolte možnost **Upravit \<projectname\>**.
 
 > [!NOTE]
 > K úpravám, sestavování a ladění kódu nemusíte používat řešení nebo projekty v aplikaci Visual Studio. Jednoduše otevřete složku, která obsahuje zdrojové soubory v aplikaci Visual Studio, a začněte upravovat. Další informace naleznete v tématu [vývoj kódu v aplikaci Visual Studio bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
@@ -64,7 +66,7 @@ Nejjednodušší způsob, jak vytvořit nový projekt, je začít od šablony pr
 
 Pokud často přizpůsobíte projekty určitým způsobem, můžete vytvořit vlastní šablonu projektu, kterou pak můžete použít k vytvoření nových projektů z. Další informace naleznete v tématu [Create Project and Item Templates](../ide/creating-project-and-item-templates.md).
 
-Když vytvoříte nový projekt, uloží se ve výchozím nastavení na *%USERPROFILE%\source\repos*. Toto umístění můžete změnit v nastavení **umístění projektů** v nabídce **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění**řešení. Další informace naleznete na [stránce projekty a řešení, dialogové okno Možnosti](../ide/reference/projects-and-solutions-options-dialog-box.md).
+Když vytvoříte nový projekt, uloží se ve výchozím nastavení na *%USERPROFILE%\source\repos*. Toto umístění můžete změnit v nastavení **umístění projektů** v nabídce **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení. Další informace naleznete na [stránce projekty a řešení, dialogové okno Možnosti](../ide/reference/projects-and-solutions-options-dialog-box.md).
 
 ## <a name="solution-explorer"></a>Průzkumník řešení
 

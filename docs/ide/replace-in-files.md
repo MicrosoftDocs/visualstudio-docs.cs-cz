@@ -1,5 +1,7 @@
 ---
 title: Najít a nahradit v souborech
+description: Přečtěte si o funkci nahrazení v souborech a o tom, jak vám umožňuje vyhledat v kódu zadanou sadu souborů pro řetězec nebo výraz a změnit některé nebo všechny nalezené shody.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,19 +16,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dddd55714e53516ba1ccd8a11c99761a4db7136a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c3499c1b2073d0263231eb1f60129b2cd3548fa
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585623"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480028"
 ---
 # <a name="replace-in-files"></a>Nahradit v souborech
 
 Možnost **nahradit v souborech** umožňuje vyhledat v kódu zadanou sadu souborů pro řetězec nebo výraz a změnit některé nebo všechny nalezené shody. Nalezené shody a podniknuté akce jsou uvedeny v okně **výsledky hledání** vybrané v **Možnosti výsledek**.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v **nápovědě** v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, například **Obecné** nebo **Visual C++** nastavení, zvolte **nástroje**  >  **Nastavení importu a exportu**a pak zvolte možnost **resetovat všechna nastavení**.
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v **nápovědě** v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, například **Obecné** nebo **Visual C++** nastavení, zvolte **nástroje**  >  **Nastavení importu a exportu** a pak zvolte možnost **resetovat všechna nastavení**.
 
 Pomocí kterékoli z následujících metod můžete v okně **Najít a nahradit** zobrazit **nahradit v souborech** .
 

@@ -1,5 +1,7 @@
 ---
 title: C# IntelliSense
+description: Seznamte se s některými funkcemi technologie IntelliSense, které lze použít při kódování projektu C#.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ed5d86599fa99b9c1360b414b37ef95ab59082d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e725a06a2bc90c91cff11b05ad32b20a0db8e4fc
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89313429"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479781"
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
@@ -78,7 +80,7 @@ IntelliSense odebere nepotřebné členy ze seznamu pro doplňování pomocí fi
 
 ### <a name="most-recently-used-members"></a>Naposledy použité členy
 
-Technologie IntelliSense pamatuje členy, které jste v poslední době vybrali v rozevíracím [seznamu Členové](../ide/using-intellisense.md) okna pro automatické dokončování názvů objektů. Při příštím použití **seznamu členů**se v horní části zobrazí naposledy použité členy. Historie naposledy použitých členů se mezi jednotlivými relacemi sady Visual Studio vymaže.
+Technologie IntelliSense pamatuje členy, které jste v poslední době vybrali v rozevíracím [seznamu Členové](../ide/using-intellisense.md) okna pro automatické dokončování názvů objektů. Při příštím použití **seznamu členů** se v horní části zobrazí naposledy použité členy. Historie naposledy použitých členů se mezi jednotlivými relacemi sady Visual Studio vymaže.
 
 ### <a name="override"></a>override
 
@@ -102,7 +104,7 @@ Klikněte na ikonu žárovky chyba a pak zvolte **použít System.Xml;** k autom
 
 ### <a name="remove-and-sort-usings"></a>Odebrat a seřadit direktivy using
 
-Možnost **Odebrat a seřadit pomocí** se seřadí a odebere `using` a `extern` deklarace beze změny chování zdrojového kódu. V průběhu času se zdrojové soubory můžou bloated a obtížně číst z důvodu zbytečných a neuspořádaných `using` direktiv. Možnost **Odebrat a seřadit pomocí** komprimuje zdrojový kód tím, že se odeberou nepoužité `using` direktivy a vylepšuje čitelnost jejich řazením. V nabídce **Upravit** zvolte **IntelliSense**a pak zvolte **uspořádat pomocí**.
+Možnost **Odebrat a seřadit pomocí** se seřadí a odebere `using` a `extern` deklarace beze změny chování zdrojového kódu. V průběhu času se zdrojové soubory můžou bloated a obtížně číst z důvodu zbytečných a neuspořádaných `using` direktiv. Možnost **Odebrat a seřadit pomocí** komprimuje zdrojový kód tím, že se odeberou nepoužité `using` direktivy a vylepšuje čitelnost jejich řazením. V nabídce **Upravit** zvolte **IntelliSense** a pak zvolte **uspořádat pomocí**.
 
 ### <a name="implement-interface"></a>Implementace rozhraní
 

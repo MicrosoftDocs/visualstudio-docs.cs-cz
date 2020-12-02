@@ -1,5 +1,7 @@
 ---
 title: 'Krok 1: Vytvoření projektu aplikace modelu Windows Forms'
+description: Naučte se, jak vytvořit projekt aplikace model Windows Forms pro prohlížeč obrázků.
+ms.custom: SEO-VS-2020
 ms.date: 08/30/2019
 ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 ms.topic: tutorial
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d5e34d825d2a4d296a8a394105b412195b4e3fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76225685a9f68ca6f6cb05f902922f8fa208015d
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579910"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480392"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>Krok 1: Vytvoření projektu aplikace modelu Windows Forms
 
@@ -27,11 +29,11 @@ Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu
 
 1. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. Dialogové okno by mělo vypadat podobně jako na následujícím snímku obrazovky.
 
-     ![Dialog Nový projekt](../ide/media/newprojectdialogcallouts.png)<br/>***Nový projekt*** – *dialogové okno*
+     ![Dialog Nový projekt](../ide/media/newprojectdialogcallouts.png)<br/>**_Nový projekt_* _ _dialog pole *
 
-2. Na levé straně dialogového okna **Nový projekt** vyberte možnost **Visual C#** nebo **Visual Basic**a pak zvolte možnost **plocha systému Windows**.
+2. Na levé straně dialogového okna **Nový projekt** vyberte možnost **Visual C#** nebo **Visual Basic** a pak zvolte možnost **plocha systému Windows**.
 
-3. V seznamu šablony projektu vyberte možnost **model Windows Forms aplikace (.NET Framework)**. Pojmenujte novou formu *PictureViewer*a pak klikněte na tlačítko **OK** .
+3. V seznamu šablony projektu vyberte možnost **model Windows Forms aplikace (.NET Framework)**. Pojmenujte novou formu *PictureViewer* a pak klikněte na tlačítko **OK** .
 
     >[!NOTE]
     >Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![Úloha vývoj desktopových aplikací .NET v Instalační program pro Visual Studio](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
@@ -71,7 +73,7 @@ Visual Studio vytvoří řešení pro vaši aplikaci. Řešení funguje jako kon
 
 ## <a name="about-the-windows-forms-app-project"></a>O projektu aplikace model Windows Forms
 
-1. Vývojové prostředí obsahuje tři okna: hlavní okno, **Průzkumník řešení**a okno **vlastnosti** .
+1. Vývojové prostředí obsahuje tři okna: hlavní okno, **Průzkumník řešení** a okno **vlastnosti** .
 
      Pokud chybí některá z těchto oken, můžete obnovit výchozí rozložení okna. Na panelu nabídek vyberte **okno**  >  **obnovit rozložení okna**.
 
@@ -105,7 +107,7 @@ Visual Studio vytvoří řešení pro vaši aplikaci. Řešení funguje jako kon
      Jako alternativu klikněte na tlačítko **Uložit vše** na panelu nástrojů, které ukazuje následující obrázek.
 
      ![Tlačítko Uložit vše na panelu nástrojů](../ide/media/express_iconsaveall.png)<br/>
-     Tlačítko ***Uložit vše*** na *panelu nástrojů*
+     **_Uložit vše_* _ _toolbar tlačítko *
 
      Visual Studio automaticky vyplní název složky a název projektu a pak projekt uloží ve složce Projects.
 
