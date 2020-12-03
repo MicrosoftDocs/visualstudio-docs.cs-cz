@@ -7,12 +7,12 @@ ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
 ms.date: 07/22/2020
 ms.topic: conceptual
 description: Zjistěte, jak můžete Azure DevOps použít jako předplatitel sady Visual Studio.
-ms.openlocfilehash: 536941d02b790349d126257e61164d2b0b98d794
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: f8cf4cd5f2165a528301d5dc2387a7906f11dcab
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970496"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537692"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Výhody Azure DevOps pro předplatitele sady Visual Studio
 Jako aktivní předplatitelé sady Visual Studio můžete využívat řadu funkcí v Azure DevOps, které jsou součástí vašeho předplatného jako výhod. Tyto stejné funkce budete moct používat v každé organizaci Azure DevOps, ve které jste členem, ať už jste organizaci vytvořili nebo ji přidali někdo jiný.
@@ -30,12 +30,12 @@ Když se přihlásíte k Azure DevOps pomocí identity, kterou jste použili k a
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup>  | Azure Boards & úložiště (úrovně Basic<sup>2</sup>), Azure test Plans, samoobslužné Paralelní úlohy. |  Yes          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL| Azure Boards & úložiště (úrovně Basic<sup>2</sup>), Azure test Plans, samoobslužné Paralelní úlohy. |  Yes          |
-| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                        | Úložiště & Azure Boards (Basic<sup>2</sup>)                                                             |  Yes          |
-| Visual Studio Professional s GitHubem Enterprise | VL| Úložiště & Azure Boards (Basic<sup>2</sup>)                                                             |  Yes          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Azure Boards & úložiště (Basic<sup>2</sup>), Azure test Plans                                              |  Yes          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Azure Boards & úložiště (Basic<sup>2</sup>), Azure test Plans                                             |  Yes          |
+| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup>  | Azure Boards & úložiště (úrovně Basic<sup>2</sup>), Azure test Plans, samoobslužné Paralelní úlohy. |  Ano          |
+| Visual Studio Enterprise předplatné s GitHubem Enterprise   | VL| Azure Boards & úložiště (úrovně Basic<sup>2</sup>), Azure test Plans, samoobslužné Paralelní úlohy. |  Ano          |
+| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                        | Úložiště & Azure Boards (Basic<sup>2</sup>)                                                             |  Ano          |
+| Visual Studio Professional předplatné s GitHubem Enterprise | VL| Úložiště & Azure Boards (Basic<sup>2</sup>)                                                             |  Ano          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Azure Boards & úložiště (Basic<sup>2</sup>), Azure test Plans                                              |  Ano          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Azure Boards & úložiště (Basic<sup>2</sup>), Azure test Plans                                             |  Ano          |
 ||
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), nejvíc hodnotných specialistů (MVP), oblastní ředitel (RD), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (Enterprise), BizSpark, MCT software & Services Developer, FTE. Nezahrnuje se: MCT software & Services, Představte si.*
@@ -57,7 +57,7 @@ Odpověď: Ano. Visual Studio Enterprise předplatitelé získají jednu paralel
 - Máte dotazy k integrovanému vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps nebo k jiným produktům nebo službám sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 - [Dokumentace ke službě Azure DevOps](/azure/devops/).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)

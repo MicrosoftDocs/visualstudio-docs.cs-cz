@@ -1,5 +1,5 @@
 ---
-title: Visual Studio s GitHubem Enterprise | Microsoft Docs
+title: Předplatná sady Visual Studio s GitHubem Enterprise | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,14 +7,14 @@ ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
 ms.date: 10/22/2020
 ms.topic: conceptual
 description: Přečtěte si informace o přístupu k GitHub Enterprise jako součást předplatných sady Visual Studio.
-ms.openlocfilehash: fc4c36e72affb94f0707389d219284cc2a652bfd
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: 59b665b1da7d46732f1f4e967ae2a98ec54875ff
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467515"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537900"
 ---
-# <a name="visual-studio-with-github-enterprise-subscriptions"></a>Visual Studio s předplatnými GitHub Enterprise
+# <a name="visual-studio-subscriptions-with-github-enterprise"></a>Předplatná sady Visual Studio s GitHubem Enterprise 
 
 Zákazníci, kteří mají smlouvu Enterprise (EA) se společností Microsoft, mají nárok na zakoupení nové nabídky předplatných, která přináší společné předplatné sady Visual Studio a společnost GitHub. Předplatitelé sady Visual Studio mají snadný a ekonomický způsob získání GitHubu Enterprise. 
 
@@ -33,13 +33,13 @@ Visual Studio Enterprise, Visual Studio Professional a GitHub Enterprise budou t
 
 Další informace o výhodách a možnostech najdete na stránce <https://visualstudio.microsoft.com/subscriptions/visual-studio-github> . 
 
-## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>Co je proces nastavení předplatného sady Visual Studio s předplatným GitHub Enterprise?
+## <a name="what-is-the-visual-studio-subscription-with-github-enterprise-setup-process"></a>Co je předplatné sady Visual Studio s procesem instalace GitHub Enterprise?
 
-Visual Studio s předplatnými GitHub Enterprise se spravují ve dvou částech:
+Předplatná sady Visual Studio s GitHubem Enterprise se spravují ve dvou částech:
 1. Předplatné sady Visual Studio (Enterprise nebo Professional)
 2. GitHub Enterprise 
 
-Po přiřazení sady Visual Studio s předplatným GitHub obdržíte e-mail s oznámením, že vám správce předplatných sady Visual Studio přiřadil předplatné.  V tomto okamžiku si budete moct zobrazit dostupné výhody předplatného na <https://my.visualstudio.com/benefits> .  Patří sem i zvýhodněné podnikání na webu GitHub, jak vidíte níže.
+Po přiřazení předplatného sady Visual Studio k GitHub Enterprise obdržíte e-mail s oznámením, že vám správce předplatných sady Visual Studio přiřadil předplatné.  V tomto okamžiku si budete moct zobrazit dostupné výhody předplatného na <https://my.visualstudio.com/benefits> .  Patří sem i zvýhodněné podnikání na webu GitHub, jak vidíte níže.
 
    > [!div class="mx-imgBorder"]
    > ![Nastavení podnikového účtu v GitHubu Enterprise](_img/access-github/pending-account-setup.png "Vaše organizace musí nejdřív nastavit podnikový účet.")  
@@ -89,9 +89,9 @@ Odpověď: společně s GitHubem Enterprise obdržíte všechny výhody standard
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 - Získejte [technickou podporu](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) pro GitHub Enterprise.   
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 

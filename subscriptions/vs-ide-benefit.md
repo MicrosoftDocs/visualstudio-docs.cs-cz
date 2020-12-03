@@ -1,18 +1,18 @@
 ---
-title: Zvýhodnění Visual Studio IDE v Visual Studio Subscription | Microsoft Docs
+title: Zvýhodnění Visual Studio IDE v předplatném sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
-description: Naučte se stáhnout a nainstalovat integrované vývojové prostředí (IDE) sady Visual Studio zahrnuté v předplatném Visual studia.
-ms.openlocfilehash: 2baf2e452e86d44d814e3f4a511ebb5442b83578
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+description: Přečtěte si, jak stáhnout a nainstalovat integrované vývojové prostředí (IDE) sady Visual Studio, které je součástí předplatného
+ms.openlocfilehash: edabaa21e8f8b6c7fe8fee33d2c1a4252efa7a1c
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435757"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538056"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Výhody sady Visual Studio 2019
 
@@ -62,11 +62,11 @@ Stažení integrovaného vývojového prostředí (IDE):
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici.       |  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL | K dispozici.       |  Ano          |
-| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | K dispozici.                                                            |  Ano          |
-| Visual Studio Professional s GitHubem Enterprise | VL   | K dispozici.              |  Ano          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici.                                             |  Ano         |
+| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ano          |
+| Visual Studio Enterprise předplatné s GitHubem Enterprise   | VL | K dispozici       |  Ano          |
+| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | K dispozici                                                            |  Ano          |
+| Visual Studio Professional předplatné s GitHubem Enterprise | VL   | K dispozici              |  Ano          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Ano         |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  –          |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, představte, MVP (MVP), regionální ředitel (RD).  Nezahrnuje se: MCT software & služby.*
@@ -82,9 +82,9 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
   - [Dokumentace](/visualstudio/)
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

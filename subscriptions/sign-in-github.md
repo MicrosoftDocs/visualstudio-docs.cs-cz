@@ -1,18 +1,18 @@
 ---
 title: Přihlášení k předplatným sady Visual Studio s vaším účtem GitHubu | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 1bdcb3c9-bba1-4e25-a609-9d7e539d78e0
-ms.date: 03/09/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 description: Přečtěte si, jak se přihlásit k předplatným sady Visual Studio s vaším účtem GitHub.
-ms.openlocfilehash: 0dcbe5a908a2d149de7c254ec6ac6f3ec1eb6e72
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 52f67afdf8a4056063cdefef618be5b895dbb960
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005261"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537991"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>Přihlášení k předplatným sady Visual Studio s vaším účtem GitHubu 
 
@@ -64,9 +64,9 @@ Odpověď: přejděte na [kartu zabezpečení](https://account.microsoft.com/sec
 #### <a name="q--i-try-to-use-my-github-account-to-sign-in-but-im-prompted-that-i-already-have-a-microsoft-identity-that-i-should-use-instead--whats-happening"></a>Otázka: Zkusím použít svůj účet GitHub pro přihlášení, ale zobrazí se výzva, že již mám identitu Microsoftu, kterou mám použít místo toho.  Co se děje?
 Odpověď: Pokud máte na svém účtu GitHub Azure Active Directory e-mailovou adresu, znamená to, že už máte identitu Microsoftu, která má přístup k Azure a spouštět kanály CI pomocí vašeho kódu GitHubu. Pomocí tohoto účtu zajistíte, aby vaše prostředky a kanály pro vytváření prostředků Azure zůstaly v rámci svých organizačních hranic. Pokud ale provádíte osobní práci, doporučujeme, abyste na svém účtu GitHub umístili osobní e-mailovou adresu, abyste k nim měli vždycky přístup. Až to uděláte, zkuste se znovu přihlásit a při zobrazení výzvy k přihlášení ke svému pracovnímu nebo školnímu účtu vyberte **použít jinou e-mailovou adresu** . To vám umožní vytvořit novou účet Microsoft pomocí této osobní e-mailové adresy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

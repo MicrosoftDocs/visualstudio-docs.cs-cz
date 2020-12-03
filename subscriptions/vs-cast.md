@@ -7,12 +7,12 @@ ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
 ms.date: 10/21/2020
 ms.topic: how-to
 description: Přečtěte si o výhodách zvýraznění přetypování dostupných ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: a6c1836724f05255c5120a336b8976ccae3cadbd
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: fbc7b6278d29d96ed8d97933c295468c7d3e2754
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353366"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538134"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Výhoda zvýraznění přetypování v předplatných sady Visual Studio
 Při migraci do cloudu potřebují vývojáři důležité poznatky o jejich softwaru. S zvýrazňováním přetypování může předplatitelé sady Visual Studio rychle prověřit svůj zdrojový kód aplikace a identifikovat připravenost svých aplikací pro Cloud na migraci do Azure a monitorovat průběh své aplikace jak během migrace, tak i po ní.
@@ -78,9 +78,9 @@ Po schválení vaší žádosti obdržíte druhý e-mail potvrzující úspěšn
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | Vyhodnocení 5 aplikací po dobu tří měsíců|  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | Vyhodnocení 5 aplikací po dobu tří měsíců|  Ne.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise předplatné s GitHubem Enterprise  | VL | Vyhodnocení 5 aplikací po dobu tří měsíců|  Ne.  Dostupné jenom pro nové předplatitele          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Posouzení 1 aplikace po dobu tří měsíců                                                             |  Ne.  Dostupné jenom pro nové předplatitele                  |
-| Visual Studio Professional s GitHubem Enterprise | VL                                       | Posouzení 1 aplikace po dobu tří měsíců                                                            |  Ne.  Dostupné jenom pro nové předplatitele                  |
+| Visual Studio Professional předplatné s GitHubem Enterprise | VL                                       | Posouzení 1 aplikace po dobu tří měsíců                                                            |  Ne.  Dostupné jenom pro nové předplatitele                  |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  –           |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  –          |
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | – |
@@ -101,9 +101,9 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

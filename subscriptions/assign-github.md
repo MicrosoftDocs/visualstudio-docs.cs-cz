@@ -1,18 +1,18 @@
 ---
-title: Visual Studio + nabídka GitHub Enterprise | Microsoft Docs
+title: Přiřazení předplatných sady Visual Studio k GitHubu Enterprise | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
-description: Správa předplatných v nabídce sady Visual Studio + GitHub Enterprise
-ms.openlocfilehash: ef651a75a0daed1e5e975386a26d1bffcf9b4b82
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+description: Správa předplatných v předplatných sady Visual Studio s GitHubem Enterprise
+ms.openlocfilehash: eed2f0636b0751c996da79c54d1a439532bce097
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467580"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538121"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>Správa předplatných sady Visual Studio pomocí GitHubu Enterprise
 Zákazníci, kteří mají smlouvu Enterprise (EA) se společností Microsoft, mají nárok na zakoupení nové nabídky předplatných, která přináší společné předplatné sady Visual Studio a společnost GitHub. Předplatitelé sady Visual Studio mají snadný a ekonomický způsob získání GitHubu Enterprise. 
@@ -20,7 +20,7 @@ Zákazníci, kteří mají smlouvu Enterprise (EA) se společností Microsoft, m
 Když vaše organizace koupí předplatné sady Visual Studio s GitHubem Enterprise, zřídí se a spravuje ve dvou částech.
 
 ## <a name="manage-visual-studio-subscriptions"></a>Spravovat předplatná sady Visual Studio
-Když vaše organizace zakoupí předplatné sady Visual Studio pomocí GitHubu Enterprise, je část sady Visual Studio pro odběry zřízena okamžitě a odběry jsou k dispozici pro přiřazení a správu na portálu [pro správu předplatných](https://manage.visualstudio.com) sady Visual Studio. Po přiřazení sady Visual Studio s předplatným GitHub obdrží předplatitel e-mail s oznámením, že mají přístup ke svému předplatnému sady Visual Studio na adrese <https://my.visualstudio.com/subscriptions> .
+Když vaše organizace zakoupí předplatné sady Visual Studio pomocí GitHubu Enterprise, je část sady Visual Studio pro odběry zřízena okamžitě a odběry jsou k dispozici pro přiřazení a správu na portálu [pro správu předplatných](https://manage.visualstudio.com) sady Visual Studio. Po přiřazení předplatného sady Visual Studio k GitHubu Enterprise obdrží předplatitel e-mail s oznámením, že mají přístup ke svému předplatnému sady Visual Studio na adrese <https://my.visualstudio.com/subscriptions> .
 
 Další informace o správě předplatných sady Visual Studio najdete v těchto tématech:
 - [Použití portálu pro správu](using-admin-portal.md)
@@ -30,12 +30,12 @@ Další informace o správě předplatných sady Visual Studio najdete v těchto
 - [Nadměrná přidělení](handle-overclaimed-license.md)
 
 > [!Important]
-> Pokud jsou předplatná sady Visual Studio s GitHubem Enterprise přiřazena pomocí Správce předplatných sady Visual Studio, aniž byste nejdřív nakoupili, GitHub nebude upozorněn, že chcete vytvořit účet GitHub Enterprise.  **Nákup alespoň jednoho** Předplatné sady Visual Studio s předplatným GitHub Enterprise by se mělo provést před přiřazením předplatných.
+> Pokud jsou předplatná sady Visual Studio s GitHubem Enterprise přiřazena pomocí Správce předplatných sady Visual Studio, aniž byste nejdřív nakoupili, GitHub nebude upozorněn, že chcete vytvořit účet GitHub Enterprise.  **Nákup alespoň jednoho** Předplatné sady Visual Studio s GitHubem Enterprise je potřeba provést před přiřazením předplatných.
 
 ## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>Co je proces nastavení předplatného sady Visual Studio s předplatným GitHub Enterprise?
-Předplatné GitHub Enterprise se nastavuje a spravuje odděleně od předplatných sady Visual Studio. Po zakoupení produktu Visual Studio s nákupem na GitHubu Enterprise se proces nastavení účtu GitHub Enterprise zahajuje paralelně s (ale odděleně od), kdy se stanovuje smlouva v [Manage.VisualStudio.com](https://manage.visualstudio.com). Zřízení tohoto účtu GitHub Enterprise může nějakou dobu trvat. 
+Předplatné GitHub Enterprise se nastavuje a spravuje odděleně od předplatných sady Visual Studio. Po předplatném sady Visual Studio s nákupem na GitHubu Enterprise se proces nastavení účtu GitHub Enterprise zahajuje paralelně s (ale nezávisle na), který stanovuje smlouvu v [Manage.VisualStudio.com](https://manage.visualstudio.com). Zřízení tohoto účtu GitHub Enterprise může nějakou dobu trvat. 
 
-Jakmile vaše společnost nastaví účet GitHub Enterprise, obdrží předplatitelé, kteří mají přiřazené předplatné sady Visual Studio s předplatným GitHub Enterprise, e-mail z GitHubu s oznámením, že jejich předplatná sady Visual Studio byla propojena. Po přijetí tohoto e-mailu od předplatitelů se můžou obrátit na správce organizace GitHubu, aby dostal pozvánku do příslušné organizace.
+Jakmile vaše společnost nastaví účet GitHub Enterprise, obdrží předplatitelé, kteří mají přiřazená předplatná sady Visual Studio s GitHubem Enterprise, e-mail od GitHubu s upozorněním, že jejich předplatná sady Visual Studio byla propojena. Po přijetí tohoto e-mailu od předplatitelů se můžou obrátit na správce organizace GitHubu, aby dostal pozvánku do příslušné organizace.
 
 Další podrobnosti o instalaci GitHub Enterprise najdete v [dokumentaci pro předplatitele](access-github.md).   
 
@@ -55,10 +55,10 @@ GitHub je k dispozici buď jako cloudový GitHub.com, nebo na místním serveru 
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 - Získejte [technickou podporu](https://support.microsoft.com/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) pro GitHub Enterprise.   
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

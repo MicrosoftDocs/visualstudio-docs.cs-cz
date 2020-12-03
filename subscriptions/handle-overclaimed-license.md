@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: a747100c-6f08-41a4-aaad-05099741742b
-ms.date: 10/28/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 description: Informace o tom, jak můžou správci vyřešit přetížená předplatná
-ms.openlocfilehash: bf3c23cad87dc88b24bae3e8b31ebf8b7d9e1dfe
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: c2876223d2aa4f8da5f267595a193a2fecc3ace2
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904293"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537744"
 ---
 # <a name="over-allocated-subscriptions"></a>Přetížená předplatná
 V některých případech se po přidání předplatitelů mění objednávky, což může vést k většímu počtu přiřazených předplatných než k licencím vlastněných vaší společností. Tato možnost se nazývá "přepřidělování".  
@@ -37,9 +37,9 @@ Existuje několik způsobů, jak převádět více prostředků:
 Pokud má vaše organizace smlouva Enterprise (EA), správci můžou přiřadit předplatné bez jejich nákupu a platit za ně později prostřednictvím procesu odsouhlasení označovaného jako "pravda".  Při překročení přidělení se vaší organizaci bude účtovat maximální počet předplatných přiřazených uživatelům během "pravdivého".  Platí to i v případě, že už nebudete mít k dispozici maximální počet předplatných, které jsou přiřazené v době, kdy se pravdivá doba projeví.  Další informace o monitorování maximálního využití najdete v tématu věnovaném [maximálnímu využití](maximum-usage.md) .
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

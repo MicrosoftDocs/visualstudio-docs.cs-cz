@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
-ms.date: 10/21/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Seznamte se s výhodou LinkedIn Learning zahrnutou jako součást předplatného LinkedIn Premium, které jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 7a5e15ad5d1101123a03b98da30d48895410313b
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: b3c8d0b61dbde3f9e45d6000e1de409255750931
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970309"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537887"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Zvýhodnění učení LinkedInu v předplatných sady Visual Studio
 
@@ -72,9 +72,9 @@ Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, maloobch.<sup>1</sup> | 6 měsíců       |  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL | 6 měsíců       |  Ne.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise předplatné s GitHubem Enterprise   | VL | 6 měsíců       |  Ne.  Dostupné jenom pro nové předplatitele          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 3 měsíce                                                            |Ne.  Dostupné jenom pro nové předplatitele         |
-| Visual Studio Professional s GitHubem Enterprise | VL | 3 měsíce      | Ne.  Dostupné jenom pro nové předplatitele         |
+| Visual Studio Professional předplatné s GitHubem Enterprise | VL | 3 měsíce      | Ne.  Dostupné jenom pro nové předplatitele         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  Není k dispozici         |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              | Není k dispozici         |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
@@ -97,7 +97,7 @@ Odpověď: Ne, nabídka LinkedIn Learning je dostupná jenom pro nové předplat
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)

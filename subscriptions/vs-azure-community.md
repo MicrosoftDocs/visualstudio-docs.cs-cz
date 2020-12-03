@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
-ms.date: 11/17/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 description: Seznamte se s výhodou podpory komunity Azure, která je součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 21f984d3c41ae4f654fea638792b5db4f3c8acb2
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 58f587d5e9c27197b28457c512e4eb94f07851ef
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903920"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538017"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Fórum podpory komunity Azure v předplatných sady Visual Studio
 Získejte pomoc přímo od týmu Azure v rámci vybraných fór podpory prostřednictvím komunity Azure.  Výhoda komunity Azure poskytuje přístup ke kolekci fór zaměřené na témata související s Azure.
@@ -22,7 +22,7 @@ Získejte pomoc přímo od týmu Azure v rámci vybraných fór podpory prostře
 :::row:::
     :::column:::
         - [Azure Active Directory](https://social.msdn.microsoft.com/forums/home?forum=WindowsAzureAD&filter=alltypes&sort=lastpostdesc)  
-        - [API Management Azure](https://social.msdn.microsoft.com/Forums/home?forum=azureapimgmt&filter=alltypes&sort=lastpostdesc)  
+        - [Azure API Management](https://social.msdn.microsoft.com/Forums/home?forum=azureapimgmt&filter=alltypes&sort=lastpostdesc)  
         - [Azure App Service – Web Apps](https://social.msdn.microsoft.com/forums/home?forum=windowsazurewebsitespreview&filter=alltypes&sort=lastpostdesc)  
         - [Azure Backup](https://social.msdn.microsoft.com/forums/home?forum=windowsazureonlinebackup&filter=alltypes&sort=lastpostdesc)  
         - [Azure DevTest Labs](https://social.msdn.microsoft.com/forums/home?forum=AzureDevTestLabs&filter=alltypes&sort=lastpostdesc)  
@@ -70,12 +70,12 @@ Dostupnost výhod komunity Azure závisí na úrovni předplatného, jak je zná
 
 |                                          Úroveň předplatného                                           |     Kanály      |    Výhoda    | Mlčky? |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
-|                           Visual Studio Enterprise (Standard), NFR<sup>1</sup>                            | VL, Azure, Retail |   K dispozici    |    Yes     |
-|                           Visual Studio Enterprise s GitHubem Enterprise                           | VL, Azure, Retail |   K dispozici    |    Yes     |
-|                          Visual Studio Professional (Standard)                          | VL, Azure, Retail |   K dispozici    |    Yes     |
-|                          Visual Studio Professional s GitHubem Enterprise                          | VL, Azure, Retail |   K dispozici    |    Yes     |
-|                              Visual Studio Test Professional (Standard)                               |    VL, maloobchodní prodej     |   K dispozici    |    Yes     |
-|                                       MSDN Platforms (Standard)                                       |    VL, maloobchodní prodej     |   K dispozici    |    Yes     |
+|                           Visual Studio Enterprise (Standard), NFR<sup>1</sup>                            | VL, Azure, Retail |   K dispozici    |    Ano     |
+|                           Visual Studio Enterprise předplatné s GitHubem Enterprise                           | VL, Azure, Retail |   K dispozici    |    Ano     |
+|                          Visual Studio Professional (Standard)                          | VL, Azure, Retail |   K dispozici    |    Ano     |
+|                          Visual Studio Professional předplatné s GitHubem Enterprise                          | VL, Azure, Retail |   K dispozici    |    Ano     |
+|                              Visual Studio Test Professional (Standard)                               |    VL, maloobchodní prodej     |   K dispozici    |    Ano     |
+|                                       MSDN Platforms (Standard)                                       |    VL, maloobchodní prodej     |   K dispozici    |    Ano     |
 | Visual Studio Enterprise (měsíční Cloud), Visual Studio Professional (měsíční Cloud)|        Vše        | Není k dispozici |     Ne     |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Microsoft FTE, nejvíc hodnotných Professional (MVP), oblastní ředitel (RD), Visual Studio Industry Partner (VSIP), BizSpark, Představte si Microsoft Certified Trainer (MCT).*
@@ -91,7 +91,7 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
 - Potřebujete pomoc s prodejem, předplatnými, účty a fakturací pro předplatná sady Visual Studio?  Obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio.
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)

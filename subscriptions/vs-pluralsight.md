@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
-ms.date: 08/04/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Seznamte se s předplatným školení Pluralsight, která jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 26056c823dc4ab67f576eb430b85caac26d854af
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 02ed0d2417317116182800980206a1fcc7fbfc16
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "91005339"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537978"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Výhody školení Pluralsight v předplatných sady Visual Studio
 
@@ -31,7 +31,7 @@ Následující tabulka uvádí podrobnosti o tom, jaké výhody předplatného P
 1. Budete přesměrováni na stránku Pluralsight, kde najdete výhody, které jsou součástí vašeho předplatného sady Visual Studio.
    - Zadejte kontaktní informace požadované ve formuláři.
    - Kliknutím na zaškrtávací políčko přijměte podmínky použití.
-   - Klikněte na **uplatnit** .
+   - Klikněte na **uplatnit**.
    > [!div class="mx-imgBorder"]
    > ![Registrace Pluralsight](_img/vs-pluralsight/vs-pluralsight-registration.png "Vyplňte formulář pro registraci, kliknutím na zaškrtávací políčko podmínky přijměte a klikněte na uplatnit.")
 
@@ -43,9 +43,9 @@ Následující tabulka uvádí podrobnosti o tom, jaké výhody předplatného P
    > [!NOTE]
    > Pokud váš účet nemá nárok na uplatnění nových nabídek, objasnění e-mailové zprávy vám vysvětlí, že při vytváření účtu došlo k potížím, protože to není vhodné.  Bude také obsahovat informace, které vám pomůžou kontaktovat tým podpory Pluralsight, který může zodpovědět všechny otázky, které se týkají vašeho účtu.
 
-1. Klikněte na **nastavit heslo** .
+1. Klikněte na **nastavit heslo**.
 
-1. Do pole **nové heslo** zadejte požadované heslo, zadejte ho znovu do pole **Potvrdit heslo** a klikněte na **Uložit** .
+1. Do pole **nové heslo** zadejte požadované heslo, zadejte ho znovu do pole **Potvrdit heslo** a klikněte na **Uložit**.
 
 1. A to je vše!  Teď jste připraveni začít s tisíci Pluralsight kurzy.
 
@@ -73,9 +73,9 @@ Po vypršení platnosti předplatného Pluralsight se stav změní na 0 dní zb�
 |                          Úroveň předplatného                          |     Kanály      |    Výhoda    |   Mlčky?   |
 |----------------------------------------------------------------------|-------------------|---------------|----------------|
 |          Visual Studio Enterprise (Standard)           | VL, Azure, Retail |   6 měsíců    | Ano<sup>2</sup> |
-|          Visual Studio Enterprise s GitHubem Enterprise          | VL  |   6 měsíců    | Ano<sup>2</sup> |
+|          Visual Studio Enterprise předplatné s GitHubem Enterprise          | VL  |   6 měsíců    | Ano<sup>2</sup> |
 |         Visual Studio Professional (Standard)          | VL, Azure, Retail |   3 měsíce    | Ano<sup>2</sup> |
-|         Visual Studio Professional s GitHubem Enterprise          | VL  |   3 měsíce    | Ano<sup>2</sup> |
+|         Visual Studio Professional předplatné s GitHubem Enterprise          | VL  |   3 měsíce    | Ano<sup>2</sup> |
 |              Visual Studio Test Professional (Standard)              |    VL, maloobchodní prodej     |   Není k dispozici    | Není k dispozici  |
 |                      MSDN Platforms (Standard)                       |    VL, maloobchodní prodej     |   Není k dispozici    | Není k dispozici  |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) |       Azure       | Není k dispozici |       Není k dispozici       |
@@ -110,9 +110,9 @@ Odpověď: na konci bezplatného předplatného Pluralsight se můžete rozhodno
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

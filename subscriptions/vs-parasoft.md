@@ -2,17 +2,17 @@
 title: Parasoft virtualizovat/SOAtest Professional v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Naučte se aktivovat předplatné Parasoft Virtualization/SOA Test Professional, které je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 6209be915d3744e13aad674ea893e77e0b276044
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: dbe3ee78d46128a5944ee7b4d0bc69f001270588
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436030"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537445"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Parasoft Virtualization/SOAtest Professional Desktop v předplatných sady Visual Studio
 
@@ -51,7 +51,7 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
     > [!div class="mx-imgBorder"]
     > ![Začátek instalace výhody Parasoft](_img/vs-parasoft/vs-parasoft-start-install.png "Kliknutím na tlačítko Další zahajte instalaci Parasoft SOAtest & virtualizovat.")
 
-11. Klikněte na **Přijímám smlouvu**a pak klikněte na **Další**.
+11. Klikněte na **Přijímám smlouvu** a pak klikněte na **Další**.
 
 12. Vyberte umístění, kam chcete nainstalovat soubory, a klikněte na tlačítko **Další**.
 
@@ -74,9 +74,9 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ano       |
-| Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Ano       |
+| Visual Studio Enterprise předplatné s GitHubem Enterprise | VL | 6 měsíců       |  Ano       |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |Není k dispozici         |
-| Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |Není k dispozici         |
+| Visual Studio Professional předplatné s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |Není k dispozici         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
@@ -94,9 +94,9 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 
