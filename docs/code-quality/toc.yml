@@ -8,15 +8,21 @@
       items:
         - name: Přehled
           href: roslyn-analyzers-overview.md
+        - name: Instalace
+          expanded: true
+          items:
+            - name: Analyzátory .NET
+              href: install-net-analyzers.md
+            - name: Analyzátory jiných výrobců
+              href: install-roslyn-analyzers.md
         - name: Konfigurace
           expanded: true
           items:
             - name: Přehled
               href: use-roslyn-analyzers.md
             - name: Analyzátory .NET
+              expanded: true
               items:
-                - name: Instalace analyzátorů .NET
-                  href: install-net-analyzers.md
                 - name: Kvalita kódu
                   items:
                     - name: Možnosti kvality kódu
@@ -42,8 +48,6 @@
               href: automatic-feature-suspension.md
             - name: Potlačení porušení analýzy kódu
               href: in-source-suppression-overview.md
-        - name: Instalace analyzátorů jiných výrobců
-          href: install-roslyn-analyzers.md
         - name: Nejčastější dotazy
           href: analyzers-faq.md
     - name: Starší verze analýzy
