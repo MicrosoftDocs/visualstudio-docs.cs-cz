@@ -188,7 +188,7 @@
           href: aliasing.md
         - name: Předplatitelé s přihlášením pomocí osobního e-mailu
           href: personal-email-sign-ins.md
-        - name: Správa sady Visual Studio s GitHub Enterprise
+        - name: Správa předplatných sady Visual Studio s GitHub Enterprise
           href: assign-github.md
 - name: Zdroje a prostředky
   items:
