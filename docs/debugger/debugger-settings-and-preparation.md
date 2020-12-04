@@ -1,5 +1,7 @@
 ---
 title: Nastavení a příprava ladicího programu | Microsoft Docs
+description: V této části se dozvíte, jak připravit na použití ladicího programu sady Visual Studio a popisuje relevantní vlastnosti. Použijte odkazy na informace, které potřebujete.
+ms.custom: SEO-VS-2020
 ms.date: 08/01/2018
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2704f4e73b1077f14c89e377453a858d341a2738
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ddae505580781c707678e95d9e270c46b86cdae
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738283"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560223"
 ---
 # <a name="debugger-settings-and-preparation"></a>Nastavení a příprava ladicího programu
 Tato část popisuje nastavení vlastností souvisejících s ladicím programem a přípravu potřebnou k ladění programu pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicího programu. Pokud vytvoříte program [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pomocí šablon projektu, tato nastavení jsou nastavena správně v konfiguraci ladění.
@@ -46,7 +48,7 @@ Tato část popisuje nastavení vlastností souvisejících s ladicím programem
 
  [Postupy: určení starší verze .NET Framework pro ladění](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md) Popisuje, jak nastavit klíč registru tak, aby označoval ladicí program, který má verze používat.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

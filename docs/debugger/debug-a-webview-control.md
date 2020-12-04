@@ -1,5 +1,7 @@
 ---
 title: Ladění ovládacího prvku WebView (UWP) | Microsoft Docs
+description: Naučte se kontrolovat a ladit ovládací prvky WebView používané v aplikaci prostředí Windows Runtime. Můžete použít Průzkumníka modelu DOM a okno konzoly JavaScriptu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: f0cab4a77c601414e766851aaf048fb3c32f6458
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 5439f9f253126e159df5dd9ea58bad04c3f6c649
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211112"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560548"
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>Ladění ovládacího prvku WebView v aplikaci UWP
 
@@ -39,7 +41,7 @@ ms.locfileid: "91211112"
 
      ![Připojit ladicí program skriptu](../debugger/media/js_dom_webview_script_debugger.png "JS_DOM_WebView_Script_Debugger")
 
-4. Volitelné Pro neexpresní verze sady Visual Studio zakažte ladění JIT (just-in-time), a to tak, že zvolíte **nástroje > možnosti > ladění > za běhu**a potom zakážete ladění JIT pro skript.
+4. Volitelné Pro neexpresní verze sady Visual Studio zakažte ladění JIT (just-in-time), a to tak, že zvolíte **nástroje > možnosti > ladění > za běhu** a potom zakážete ladění JIT pro skript.
 
     > [!NOTE]
     > Zakázáním ladění JIT můžete skrýt dialogová okna pro neošetřené výjimky, ke kterým dochází na některých webových stránkách. V Visual Studio Express je ladění JIT vždy zakázáno.
@@ -54,7 +56,7 @@ ms.locfileid: "91211112"
 
 3. Přejděte na stránku obsahující `Webview` ovládací prvek (y).
 
-4. Otevřete okno Průzkumníka modelu DOM pro `WebView` ovládací prvek tak, že vyberete **ladit**, **Windows**, **Průzkumník modelu DOM**a pak zvolíte adresu URL `WebView` , kterou chcete zkontrolovat.
+4. Otevřete okno Průzkumníka modelu DOM pro `WebView` ovládací prvek tak, že vyberete **ladit**, **Windows**, **Průzkumník modelu DOM** a pak zvolíte adresu URL `WebView` , kterou chcete zkontrolovat.
 
      ![Otevření Průzkumníka modelu DOM](../debugger/media/js_dom_webview.png "JS_DOM_WebView")
 
@@ -83,6 +85,6 @@ ms.locfileid: "91211112"
 
 6. Zobrazení a úprava proměnných ve vaší aplikaci nebo použití příkazů konzoly, jak je popsáno v tématu [rychlý Start: ladění](../debugger/quickstart-debug-javascript-using-the-console.md) [příkazů konzoly](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)JavaScript a JavaScript.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md)

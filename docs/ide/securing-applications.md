@@ -1,5 +1,7 @@
 ---
 title: Zabezpečení
+description: Přečtěte si o některých konceptech zabezpečení a funkcích zabezpečení, které vám pomůžou efektivně vyvíjet zabezpečené aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 06/01/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e02900c96991a402d7ea7b789a47f8f2dea447c3
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: 07f0c685b61ab72d3db9ada79b29dcb5b4e4a1f1
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781017"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560821"
 ---
 # <a name="secure-applications"></a>Zabezpečené aplikace
 
@@ -38,7 +40,7 @@ Zabezpečení je také důležitým aspektem procesu sestavení. Několik dalš�
 - [Dotfuscator](dotfuscator/index.md) je zdarma a pomáhá chránit sestavení .NET před zpětným technickým a neoprávněným použitím, jako je například neoprávněné ladění.
 - [Podpis se silným názvem](managing-assembly-and-manifest-signing.md) se dá použít k jednoznačné identifikaci softwarových komponent a k zabránění falšování názvů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Zabezpečení v .NET](/dotnet/standard/security/index)
 - [Zabezpečení Azure](/azure/security/)

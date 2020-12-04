@@ -1,5 +1,7 @@
 ---
 title: Implementace dodavatele portu | Microsoft Docs
+description: Seznamte se s implementací dodavatele portu, který je nezbytný při ladění na počítač, který není typu DCOM, nebo když nové zařízení vyžaduje podporu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8218e372ad3aece922811bc20cfd7650f33296f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 72963660e4f50a72cdbc04bab4833b397d15fc27
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738552"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560665"
 ---
 # <a name="implement-a-port-supplier"></a>Implementace dodavatele portu
 Dodavatel portu dodává porty na žádost do Správce ladění relace (SDM). Dodavatel portu se musí implementovat při ladění na počítač, který není typu DCOM, nebo když nové zařízení vyžaduje podporu. Chcete-li například poskytnout ladění na mobilní telefon, můžete nastavit dodavatele portu, který poskytuje porty, které se připojují k mobilnímu telefonu (například pomocí INFRAČERVENého připojení nebo připojení k buňce) a vyčísluje procesy a programy běžící na telefonu.
@@ -31,5 +33,5 @@ Dodavatel portu dodává porty na žádost do Správce ladění relace (SDM). Do
 ## <a name="related-sections"></a>Související oddíly
  [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md) Popisuje hlavní koncepty architektury ladění.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
  [Rozšiřitelnost ladicího programu sady Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

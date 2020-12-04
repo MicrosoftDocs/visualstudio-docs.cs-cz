@@ -1,5 +1,7 @@
 ---
 title: Podrobnosti haldy ladění CRT | Microsoft Docs
+description: Halda ladění poskytuje výkonné nástroje, které vám pomůžou vyřešit problémy s přidělováním paměti. Přečtěte si informace o nástrojích a o tom, jak můžou pomáhat s problémy, jako jsou nevracení a přetečení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -73,12 +75,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22307c44e4f82056887fadf6e8fde9e1449a19a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 774c6c03d0485664eb01e1a7967003ef2f5bd2bc
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247940"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560613"
 ---
 # <a name="crt-debug-heap-details"></a>Podrobnosti haldy ladění CRT
 Toto téma poskytuje podrobný přehled o haldě ladění CRT.
@@ -181,10 +183,10 @@ Příznak **_crtDbgFlag** obsahuje následující bitová pole:
 |Bitové pole|Výchozí<br /><br /> value|Popis|
 |---------------|-----------------------|-----------------|
 |**_CRTDBG_ALLOC_MEM_DF**|Zapnout|Zapne alokaci ladění. Když je tento bit vypnutý, přidělení zůstane zřetězené společně, ale jeho typ bloku je **_IGNORE_BLOCK**.|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|Vypnuto|Zabraňuje ve skutečném uvolnění paměti, jako při simulaci podmínek s nízkou pamětí. Pokud je tento bit zapnutý, uvolněné bloky jsou uchovávány v propojeném seznamu haldy ladění, ale jsou označeny jako **_FREE_BLOCK** a jsou vyplněny speciální bajtovou hodnotou.|
-|**_CRTDBG_CHECK_ALWAYS_DF**|Vypnuto|Způsobí, že **_CrtCheckMemory** být volány při každém přidělení a zrušení přidělení. To zpomaluje provádění, ale rychle zachycuje chyby.|
-|**_CRTDBG_CHECK_CRT_DF**|Vypnuto|Způsobí, že bloky označené jako Type **_CRT_BLOCK** mají být zahrnuty do operací detekce nevracení a rozdíl stavu. Pokud je tento bit vypnutý, paměť používaná interně knihovnou runtime se během takových operací ignoruje.|
-|**_CRTDBG_LEAK_CHECK_DF**|Vypnuto|Způsobuje kontrolu nevracení při ukončení programu prostřednictvím volání **_CrtDumpMemoryLeaks**. Pokud aplikace nedokázala uvolnit veškerou přidělenou paměť, bude vygenerována zpráva o chybách.|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|Vypnout|Zabraňuje ve skutečném uvolnění paměti, jako při simulaci podmínek s nízkou pamětí. Pokud je tento bit zapnutý, uvolněné bloky jsou uchovávány v propojeném seznamu haldy ladění, ale jsou označeny jako **_FREE_BLOCK** a jsou vyplněny speciální bajtovou hodnotou.|
+|**_CRTDBG_CHECK_ALWAYS_DF**|Vypnout|Způsobí, že **_CrtCheckMemory** být volány při každém přidělení a zrušení přidělení. To zpomaluje provádění, ale rychle zachycuje chyby.|
+|**_CRTDBG_CHECK_CRT_DF**|Vypnout|Způsobí, že bloky označené jako Type **_CRT_BLOCK** mají být zahrnuty do operací detekce nevracení a rozdíl stavu. Pokud je tento bit vypnutý, paměť používaná interně knihovnou runtime se během takových operací ignoruje.|
+|**_CRTDBG_LEAK_CHECK_DF**|Vypnout|Způsobuje kontrolu nevracení při ukončení programu prostřednictvím volání **_CrtDumpMemoryLeaks**. Pokud aplikace nedokázala uvolnit veškerou přidělenou paměť, bude vygenerována zpráva o chybách.|
 
 ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
@@ -353,5 +355,5 @@ Nyní se název zdrojového souboru a číslo řádku, kde `addNewRecord` byla v
 
 ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 [Ladění nativního kódu](../debugger/debugging-native-code.md)

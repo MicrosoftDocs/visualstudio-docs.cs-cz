@@ -1,5 +1,7 @@
 ---
 title: Ostatní soubory
+description: Naučte se pracovat se soubory, které nejsou součástí projektu nebo řešení sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 793500faf217c74772506b4b7394d926447ffd40
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc797fe7676d24a80867cc318cbe02f94e90e7d0
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585294"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561094"
 ---
 # <a name="miscellaneous-files"></a>Ostatní soubory
 
@@ -48,7 +50,7 @@ Nabídky, panely nástrojů a příkazy, které obsahují změny, jsou založeny
 
 Můžete nastavit možnosti zobrazení pro složku **různé soubory** tak, aby se složka zobrazila, i když jste neotevřeli žádné jiné soubory. Soubor řešení trvale nespravuje seznam různých souborů. Používá volitelnou funkci, která umožňuje, aby si pamatovala na uživatele, naposledy použitý seznam souborů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vývoj kódu v sadě Visual Studio bez projektů nebo řešení](../develop-code-in-visual-studio-without-projects-or-solutions.md)
 - [Řešení a projekty](../../ide/solutions-and-projects-in-visual-studio.md)

@@ -1,5 +1,7 @@
 ---
 title: Sada nástrojů, karta HTML
+description: Přečtěte si o komponentách HTML, které najdete na kartě HTML okna panelu nástrojů.
+ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: reference
 f1_keywords:
@@ -13,16 +15,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0489f534466149a437384d4f21e34f1fa9e98c5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f91e832e33d6a65d9fc70ee594d0c0670242306e
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596434"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560457"
 ---
 # <a name="toolbox-html-tab"></a>Panel nástrojů, karta HTML
 
-Karta **HTML** v sadě nástrojů poskytuje komponenty, které jsou užitečné pro webové stránky a webové formuláře. Chcete-li zobrazit tuto kartu, nejprve otevřete dokument pro úpravy v Návrháři HTML. V nabídce **zobrazení** klikněte na **panel nástrojů**a pak klikněte na kartu **HTML** sady nástrojů.
+Karta **HTML** v sadě nástrojů poskytuje komponenty, které jsou užitečné pro webové stránky a webové formuláře. Chcete-li zobrazit tuto kartu, nejprve otevřete dokument pro úpravy v Návrháři HTML. V nabídce **zobrazení** klikněte na **panel nástrojů** a pak klikněte na kartu **HTML** sady nástrojů.
 
 Chcete-li vytvořit instanci nástroje na kartě **HTML** , buď poklikejte na nástroj a přidejte ho do dokumentu v aktuálním místě vložení, nebo ho vyberte a přetáhněte ho na požadovanou pozici na ploše pro úpravy.
 
@@ -180,7 +182,7 @@ Když přetáhnete **tabulku** na zobrazení Návrh plochu, do dokumentu se vlo�
 <table cellspacing="1" width="75%" border=1> <tr><td></td></tr></table>
 ```
 
-**Image**
+**Obrázek**
 
 ![Položka obrázku stránky HTML](../../ide/reference/media/vximage.gif)
 
@@ -230,6 +232,6 @@ Když přetáhnete **div** na zobrazení Návrh plochu, do dokumentu se vloží 
 <div ms_positioning="FlowLayout" style="width: 70px; position: relative; height: 15px">Label</div>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Sada nástrojů](../../ide/reference/toolbox.md)

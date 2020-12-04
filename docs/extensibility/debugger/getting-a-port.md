@@ -1,5 +1,7 @@
 ---
 title: Načítá se port | Microsoft Docs
+description: Přečtěte si, jak Visual Studio poskytuje port ladicímu stroji k registraci uzlů programu s portem a k uspokojení požadavků na informace o procesu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7bf4948e7cb2590136774eab76fbafec91dbfa40
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd86d84ba4187df70d2aa02181249336c38dda41
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738631"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560045"
 ---
 # <a name="get-a-port"></a>Získat port
 Port představuje připojení k počítači, na kterém běží procesy. Tento počítač může být místní počítač nebo vzdálený počítač (což může být spuštěný operační systém, který není založený na Windows). Další informace najdete v tématu [porty](../../extensibility/debugger/ports.md) .
@@ -96,7 +98,7 @@ HRESULT CDebugEngine::ResumeProcess(IDebugProcess2 *pDebugProcess)
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Registrace programu](../../extensibility/debugger/registering-the-program.md)
 - [Povolení ladění programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
 - [Dodavatelé portů](../../extensibility/debugger/port-suppliers.md)

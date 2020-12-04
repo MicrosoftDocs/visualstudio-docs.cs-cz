@@ -1,5 +1,7 @@
 ---
 title: Implementace typů vizualizace a vlastních prohlížečů | Microsoft Docs
+description: Seznamte se s implementací typů vizualizací a vlastních prohlížečů, které uživateli umožňují zobrazit data způsobem, který je smysluplnější než výpis čísel.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2ebbb5c8e27df4ae4baf2d9a9f1c3314188e2b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc3b1f2510742e2d0656727826e5b4aeae935b6f
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738510"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559898"
 ---
 # <a name="implement-type-visualizers-and-custom-viewers"></a>Implementace typů vizualizace a vlastních prohlížečů
 > [!IMPORTANT]
@@ -55,7 +57,7 @@ ms.locfileid: "80738510"
 
 - [IDebugBinder3](../../extensibility/debugger/reference/idebugbinder3.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zápis vyhodnocovacího filtru výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
 - [Vizualizace a zobrazování dat](../../extensibility/debugger/visualizing-and-viewing-data.md)
 - [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md)

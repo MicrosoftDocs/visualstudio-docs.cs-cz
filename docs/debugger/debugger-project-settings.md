@@ -1,5 +1,7 @@
 ---
 title: Nastavení projektu ladicího programu | Microsoft Docs
+description: Existuje různé nastavení projektu, která mají vliv na ladění. Podle odkazů v tomto článku se dozvíte, jak pomocí dialogového okna stránky vlastností změnit nastavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77f5ca5dcc1b886ec56b7177dd0d6aa62a8ce4f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a3a5ba7a1e215fddd5b1127859948496e9b4e1d
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188629"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561029"
 ---
 # <a name="debugger-project-settings"></a>Nastavení projektu ladicího programu
 Určité nastavení projektu má vliv také na ladění. Tato nastavení určují, co se v adresářích ladicí program zobrazuje, argumenty příkazu a příkazu používané k spuštění programu a typ informací o ladění vytvořených pro program. Tato nastavení můžete změnit v dialogovém okně **stránky vlastností** .
@@ -48,5 +50,5 @@ Určité nastavení projektu má vliv také na ladění. Tato nastavení určuj�
 
  [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md) Popisuje nastavení vlastností související s ladicím programem a přípravu potřebné k ladění programu pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicího programu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)

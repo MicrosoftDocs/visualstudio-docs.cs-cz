@@ -1,6 +1,7 @@
 ---
 title: Kontrola dat pomocí ladicího programu Windows | Microsoft Docs
-ms.custom: seodec18
+description: K dispozici je mnoho typů oken ladicího programu, které vám poskytnou informace. Tento článek uvádí seznam typů. Pro každý z nich je odkaz na Další informace.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 04/25/2018
 ms.topic: conceptual
 ms.assetid: 4c6fe8f1-b015-4989-bb31-72ebac390026
@@ -9,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c27d2b4436fc5defedcda44c4f7840760018ade
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e8caa5f11f4f0501d8b56c308d5336f10d518062
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188537"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560730"
 ---
 # <a name="inspect-data-using-debugger-windows-in-visual-studio"></a>Kontrola dat pomocí oken ladicího programu v aplikaci Visual Studio
 
@@ -43,10 +44,10 @@ Při ladění programu můžete otevřít většinu oken ladicího programu. Chc
 |Živý vizuální strom|-|[Kontrola vlastností XAML při ladění](../xaml-tools/inspect-xaml-properties-while-debugging.md)|
 |Živý Průzkumník vlastností|-|[Kontrola vlastností XAML při ladění](../xaml-tools/inspect-xaml-properties-while-debugging.md)|
 |Procesy|CTRL + ALT + Z|[Ladění vláken a procesů](../debugger/debug-threads-and-processes.md)|
-|Paměť|CTRL + ALT + M, (1, 2, 3, 4)|[Okna paměti](../debugger/memory-windows.md)|
+|Memory (Paměť)|CTRL + ALT + M, (1, 2, 3, 4)|[Okna paměti](../debugger/memory-windows.md)|
 |Zpětný překlad|CTRL + ALT + D|[Postupy: Použití okna zpětného překladu](../debugger/how-to-use-the-disassembly-window.md)|
 |Registrovat|CTRL + ALT + G|[Postupy: Použití okna Registry](../debugger/how-to-use-the-registers-window.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

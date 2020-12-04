@@ -1,5 +1,7 @@
 ---
 title: Techniky ladění CRT | Microsoft Docs
+description: Existují různé techniky, pomocí kterých můžete ladit program, který používá knihovnu runtime jazyka C (CRT). V tomto článku a na jeho odkazech se dozvíte, jak tyto techniky využít.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 88cdc78fd739de412b4cf796d0ca7a42f9174e0a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b71c91dbcc420fd4cc89a5e86fb976cca738bdcc
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62564031"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560522"
 ---
 # <a name="crt-debugging-techniques"></a>Techniky ladění CRT
 Pokud ladíte program, který používá knihovnu run-time jazyka C, mohou být tyto techniky ladění užitečné.
@@ -32,7 +34,7 @@ Pokud ladíte program, který používá knihovnu run-time jazyka C, mohou být 
 ## <a name="in-this-section"></a>V tomto oddílu
  [Použití knihovny ladění CRT](../debugger/crt-debug-library-use.md)
 
- Popisuje podporu ladění, kterou poskytuje knihovna run-time jazyka C, a poskytuje pokyny pro přístup k nástrojům.
+ Popisuje podporu ladění poskytovanou knihovnou Run-Time jazyka C a poskytuje pokyny pro přístup k nástrojům.
 
  [Makra pro vytváření sestav](../debugger/macros-for-reporting.md)
 
@@ -46,13 +48,13 @@ Pokud ladíte program, který používá knihovnu run-time jazyka C, mohou být 
 
  Poskytuje odkazy na správu paměti a haldu ladění, typy bloků v haldě ladění, použití haldy ladění, funkce vytváření sestav o stavu haldy a sledování požadavků na přidělení haldy.
 
- [Zápis funkce háku ladění](../debugger/debug-hook-function-writing.md)
+ [Zápis funkce zavěšení ladění](../debugger/debug-hook-function-writing.md)
 
  Obsahuje odkazy na funkce zavěšení bloků klienta, funkce zavěšení přidělení, zavěšení přidělení a přidělení paměti CRT a funkce zavěšení sestav.
 
  [Hledání nevrácené paměti pomocí knihovny CRT](../debugger/finding-memory-leaks-using-the-crt-library.md)
 
- Zahrnuje techniky pro detekci a izolaci nevracení paměti pomocí ladicího programu a knihovny run-time jazyka C.
+ Zahrnuje techniky pro detekci a izolaci nevracení paměti pomocí ladicího programu a knihovny jazyka C Run-Time.
 
 ## <a name="related-sections"></a>Související oddíly
 

@@ -1,5 +1,7 @@
 ---
 title: Webový prohlížeč, prostředí, dialogové okno Možnosti
+description: Naučte se, jak pomocí stránky webového prohlížeče v části prostředí nastavit možnosti pro interní webový prohlížeč i Internet Explorer.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85592076b99cf54991d21e1249cf30c609413733
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 2898984896ef96f9e7767e0c56ad58c92be42f54
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808675"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560925"
 ---
 # <a name="options-dialog-box-environment--web-browser"></a>Dialogové okno Možnosti: \> webový prohlížeč prostředí
 
@@ -63,7 +65,7 @@ Kliknutím můžete změnit možnosti pro Internet Explorer v dialogovém okně 
 > [!NOTE]
 > Pomocí dialogového okna **Procházet s** můžete nahradit interní webový prohlížeč sady Visual Studio prohlížečem podle vašeho výběru. Můžete získat přístup k dialogovému oknu procházet s pomocí kliknutí pravým tlačítkem nebo místní nabídky, například souboru HTML v projektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
 - [návrhář HTML](/previous-versions/ex0hkwbx(v=vs.140))

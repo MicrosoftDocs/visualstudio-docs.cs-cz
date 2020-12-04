@@ -1,5 +1,7 @@
 ---
 title: Vyhodnocení výrazu (Visual Studio Debugging SDK) | Microsoft Docs
+description: Během režimu přerušení rozhraní IDE vyhodnocuje výrazy zahrnující proměnné programu. Přečtěte si, jak ladicí stroj analyzuje a vyhodnocuje výraz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e41179fd530818f5ac59aa54420ede1b4eafa1ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8c398d9eb79a6b5fcd1a6851596ab8913faf32fa
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738713"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560886"
 ---
 # <a name="expression-evaluation-visual-studio-debugging-sdk"></a>Vyhodnocení výrazu (sada SDK pro ladění sady Visual Studio)
 Během režimu přerušení musí IDE vyhodnotit jednoduché výrazy, které obsahují několik proměnných programu. Aby bylo možné provést vyhodnocení, musí modul ladění (DE) analyzovat a vyhodnocovat výraz, který je zadán v jednom z oken rozhraní IDE.
@@ -38,5 +40,5 @@ Během režimu přerušení musí IDE vyhodnotit jednoduché výrazy, které obs
 
  Synchronní a asynchronní vyhodnocení vyžaduje implementaci metody [IDebugProperty2:: GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) . Vyhodnocení asynchronního výrazu vyžaduje implementaci [IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Řízení provádění a vyhodnocení stavu](../../extensibility/debugger/execution-control-and-state-evaluation.md)

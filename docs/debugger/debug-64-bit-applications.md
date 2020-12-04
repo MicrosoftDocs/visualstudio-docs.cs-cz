@@ -1,5 +1,7 @@
 ---
 title: Ladit 64 – bitové aplikace | Microsoft Docs
+description: Naučte se ladit 64 aplikace pomocí sady Visual Studio. K dispozici jsou tipy pro řešení neočekávaných zpoždění ladění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cc84f690962cd83f45245758f88f7fd8261e500
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29deb50bb57f018d3031ed1065145b6a39abab67
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86386248"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560444"
 ---
 # <a name="debug-64-bit-applications"></a>Ladění 64bitových aplikací
 Můžete ladit 64 aplikaci, která běží na místním počítači nebo na vzdáleném počítači.
@@ -52,7 +54,7 @@ Můžete ladit 64 aplikaci, která běží na místním počítači nebo na vzd�
 
 - Máte potíže s tím, že aplikace Visual Studio přestane reagovat nebo se jedná o jiný problém s výkonem. Pokud k problému dochází pravidelně, můžete shromáždit výpisy sady Visual Studio (devenv.exe) a pracovní proces (msvsmon.exe) a odeslat je do Microsoftu. Informace o tom, jak nahlásit problém, najdete v tématu [postup nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [64bitové aplikace](/dotnet/framework/64-bit-apps)
 - [Konfigurace programů pro 64. bit](/cpp/build/configuring-programs-for-64-bit-visual-cpp)

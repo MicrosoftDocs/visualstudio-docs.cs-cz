@@ -1,5 +1,7 @@
 ---
 title: Implementace a registrace dodavatele portu | Microsoft Docs
+description: Naučte se implementovat a registrovat dodavatele portu, který sleduje a dodává porty, které spravují procesy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: efa9cdd8740648b66fe7190177b5fe769c4b2539
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5bce26a00a525ed93e27b531b36aca1fc04dce4
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738530"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559924"
 ---
 # <a name="implement-and-register-a-port-supplier"></a>Implementace a registrace dodavatele portu
 Role dodavatele portu je ke sledování a dodávání portů, které zase spravují procesy. Pokud je potřeba vytvořit port, dodavatel portu se vytvoří pomocí spoluvytváření s identifikátorem GUID dodavatele portu (Správce ladění relace [SDM] bude používat dodavatele portu, který uživatel vybral, nebo dodavatel portu určený systémem projektu). Model SDM pak zavolá [CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) a zjistí, jestli je možné přidat nějaké porty. Pokud je možné přidat port, je požadován nový port voláním [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) a předáním [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) , který popisuje daný port. `AddPort` Vrátí nový port reprezentovaný rozhraním [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) .
@@ -55,11 +57,11 @@ RemoveMetric(metrictypePortSupplier,
 ```
 
 > [!NOTE]
-> [Pomocníka sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` a `RemoveMetric` jsou statické funkce definované v *dbgmetric. h* a kompilovány do *ad2de. lib*. `metrictypePortSupplier` `metricCLSID` `metricName` V *dbgmetric. h*jsou také definovány pomocníki, a.
+> [Pomocníka sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` a `RemoveMetric` jsou statické funkce definované v *dbgmetric. h* a kompilovány do *ad2de. lib*. `metrictypePortSupplier` `metricCLSID` `metricName` V *dbgmetric. h* jsou také definovány pomocníki, a.
 
  Dodavatel portu může dodat svůj název a identifikátor GUID prostřednictvím metod [GetPortSupplierName](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md) a [GetPortSupplierId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md)v uvedeném pořadí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Implementace dodavatele portu](../../extensibility/debugger/implementing-a-port-supplier.md)
 - [Pomocníka sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
 - [Dodavatelé portů](../../extensibility/debugger/port-suppliers.md)

@@ -1,5 +1,7 @@
 ---
 title: Stránka Nastavení, Návrhář projektu
+description: Naučte se používat stránku nastavení Návrháře projektu k určení nastavení aplikace projektu.
+ms.custom: SEO-VS-2020
 ms.date: 06/14/2018
 ms.topic: reference
 f1_keywords:
@@ -12,18 +14,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f4ca1def334241999445e3f11cf142aa426d962
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b5aa077043b16c01a05e8730bcd2b42719edaf0
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75566771"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560314"
 ---
 # <a name="settings-page-project-designer"></a>Stránka nastavení, Návrhář projektu
 
 Stránku **Nastavení** Návrháře projektu použijte k určení nastavení aplikace projektu. Nastavení aplikace umožňují dynamicky ukládat a načítat nastavení vlastností a další informace pro aplikaci. Také umožňují udržovat vlastní aplikace a uživatelské předvolby v klientském počítači. Další informace najdete v tématu [Správa nastavení aplikace](../managing-application-settings-dotnet.md).
 
-Chcete-li získat přístup na stránku **Nastavení** , vyberte uzel projektu v **Průzkumník řešení**a pak **Project**vyberte  >  **vlastnosti**projektu. Když se zobrazí Návrhář projektu, vyberte kartu **Nastavení** .
+Chcete-li získat přístup na stránku **Nastavení** , vyberte uzel projektu v **Průzkumník řešení** a pak **Project** vyberte  >  **vlastnosti** projektu. Když se zobrazí Návrhář projektu, vyberte kartu **Nastavení** .
 
 ## <a name="header-bar"></a>Záhlaví
 
@@ -65,7 +67,7 @@ Další informace o pomocných třídách nastavení najdete v tématu [Správa 
 
 Pro konfiguraci nastavení aplikace se používá **Mřížka nastavení** . Tato mřížka obsahuje následující sloupce:
 
-**Name**
+**Název**
 
 Do tohoto pole zadejte název nastavení aplikace.
 
@@ -73,7 +75,7 @@ Do tohoto pole zadejte název nastavení aplikace.
 
 Pomocí rozevíracího seznamu vyberte typ nastavení. Nejčastěji používané typy se zobrazí v rozevíracím seznamu, například **řetězec**, **(připojovací řetězec)** a **System. Drawing. Font**. Můžete zvolit jiný typ výběrem možnosti **Procházet** na konci seznamu a následným výběrem typu v dialogovém okně **Vybrat typ** . Po zvolení typu se tento typ přidá do společných typů v rozevíracím seznamu (pouze pro aktuální řešení).
 
-**Scope**
+**Rozsah**
 
 Vyberte možnost **aplikace** nebo **uživatel**.
 
@@ -85,7 +87,7 @@ Nastavení s rozsahem uživatele, jako jsou například systémová písma, je u
 
 Data nebo hodnota přidružená k nastavení aplikace. Pokud je například nastavení Font, může být jeho hodnota **Verdana, 9.75 PT, Style = Bold**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Spravovat nastavení aplikace](../managing-application-settings-dotnet.md)
 - [Přístup k nastavení aplikace (Visual Basic)](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings)

@@ -1,5 +1,7 @@
 ---
 title: Přepnout zarážku – příkaz
+description: Naučte se, jak pomocí příkazu Přepnout zarážku zapnout nebo vypnout zarážku v závislosti na aktuálním stavu v aktuálním umístění v souboru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d393890e6166b4a4ef53c9520a556e9a9edd64d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b65144271f91d518dd6649fa1e97fc627d1b0009
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597318"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560964"
 ---
 # <a name="toggle-breakpoint-command"></a>Přepnout zarážku – příkaz
 Zapne nebo vypne zarážku v závislosti na jejím aktuálním stavu, a to v aktuálním umístění v souboru.
@@ -42,7 +44,7 @@ Následující příklad přepíná aktuální zarážku.
 >Debug.ToggleBreakpoint
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)

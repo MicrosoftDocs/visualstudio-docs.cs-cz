@@ -10,12 +10,12 @@ ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.workload:
 - unity
-ms.openlocfilehash: 5b7e36d0f0c29e997b4b39506fb27d73ceb45146
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: c1b745e4a1da85324b2dc73e30bebb873e2d0720
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94341587"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559807"
 ---
 # <a name="using-net-4x-in-unity"></a>Používání .NET 4.x v Unity
 
@@ -23,7 +23,7 @@ V jazyce C# a .NET mají tyto technologie i nadále k dispozici aktualizace od s
 
 V případě vydání Unity 2017,1 představila Unity experimentální verzi svého skriptovacího modulu runtime upgradovanou na verzi kompatibilní s platformou .NET 4,6 a C# 6. V Unity 2018,1 se ekvivalentní modul runtime .NET 4. x už nepovažuje za experimentální, zatímco starší modul runtime ekvivalentní .NET 3,5 se teď považuje za starší verzi. A s vydáním Unity 2018,3 se Unity přizpůsobuje, aby byl upgradovaný skriptovací modul runtime výchozím výběrem a aby ještě více aktualizoval C# 7. Pokud chcete získat další informace a nejnovější aktualizace tohoto plánu, přečtěte si [Blogový příspěvek](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/) v Unity nebo navštivte své [experimentální fórum s náhledy pro skriptování](https://forum.unity.com/forums/experimental-scripting-previews.107/). Mezitím se podívejte na následující části, kde se dozvíte další informace o nových funkcích, které jsou teď dostupné s modulem runtime skriptování .NET 4. x.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * [Unity 2017,1 nebo vyšší](https://unity3d.com/) (doporučeno 2018,2)
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
@@ -40,7 +40,7 @@ Pokud chcete povolit modul runtime skriptování .NET 4. x, proveďte následuj�
 
 ## <a name="choosing-between-net-4x-and-net-standard-20-profiles"></a>Volba mezi profily .NET 4. x a .NET Standard 2,0
 
-Po přepnutí na ekvivalentní skriptovací modul runtime .NET 4. x můžete určit **úroveň kompatibility API** pomocí rozevírací nabídky v PlayerSettings ( **Upravit > nastavení projektu > Player** ). Existují dvě možnosti:
+Po přepnutí na ekvivalentní skriptovací modul runtime .NET 4. x můžete určit **úroveň kompatibility API** pomocí rozevírací nabídky v PlayerSettings (**Upravit > nastavení projektu > Player**). Existují dvě možnosti:
 
 * **.NET Standard 2,0**. Tento profil se shoduje s [profilem .NET Standard 2,0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md) zveřejněným rozhraním .NET Foundation. Unity doporučuje .NET Standard 2,0 pro nové projekty. Je menší než .NET 4. x, což je výhodné pro platformy s omezením velikosti. V Unity se navíc zavázala podporovat tento profil napříč všemi platformami, které podporuje Unity.
 
@@ -58,9 +58,9 @@ Například pokud používáte profil .NET 4. x a chcete použít `HttpClient` ,
 
 ![chybějící odkaz na sestavení](media/vs/vstu-missing-reference.png)
 
-Visual Studio znovu generuje soubory. csproj a. sln pro projekty Unity pokaždé, když jsou otevřené. V důsledku toho nebudete moci přidat odkazy na sestavení přímo v sadě Visual Studio, protože budou po opětovném otevření projektu ztraceny. Místo toho je nutné použít speciální textový soubor s názvem **MCS. rsp** :
+Visual Studio znovu generuje soubory. csproj a. sln pro projekty Unity pokaždé, když jsou otevřené. V důsledku toho nebudete moci přidat odkazy na sestavení přímo v sadě Visual Studio, protože budou po opětovném otevření projektu ztraceny. Místo toho je nutné použít speciální textový soubor nazvaný **CSc. rsp** :
 
-1. Vytvořte nový textový soubor s názvem **MCS. rsp** v adresáři kořenových **assetů** vašeho projektu Unity.
+1. Vytvořte nový textový soubor s názvem **CSc. rsp** v adresáři kořenových **assetů** vašeho projektu Unity.
 
 1. Do prvního řádku v prázdném textovém souboru zadejte: `-r:System.Net.Http.dll` a uložte soubor. "System.Net.Http.dll" můžete nahradit případným zahrnutým sestavením, které by mohlo chybět odkaz.
 

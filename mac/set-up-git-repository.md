@@ -3,15 +3,15 @@ title: Nastavení úložiště Git
 description: Připojení k úložišti Git pomocí Visual Studio pro Mac.
 author: therealjohn
 ms.author: johmil
-ms.date: 11/09/2020
+ms.date: 12/03/2020
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
 ms.topic: how-to
-ms.openlocfilehash: 862f073d3c6d535d612a67f215aee740cea175bd
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: bacd533bf5c28c6f431fe7088fad36b6bbd3d04b
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493124"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561055"
 ---
 # <a name="set-up-a-git-repository"></a>Nastavení úložiště Git
 
@@ -45,6 +45,9 @@ Chcete-li nastavit úložiště Git, proveďte následující kroky:
 
 Máte-li existující projekt, který ještě _není_ ve správě verzí, postupujte podle následujících kroků a nastavte ho v Gitu:
 
+> [!TIP]
+> Pomocí souboru. gitignore můžete řídit, které složky a soubory jsou sledovány a publikovány v Gitu. Můžete chtít vyloučit adresáře sestavení, binární soubory nebo generované soubory. Další informace najdete v [dokumentaci k GitHubu o ignorování souborů](https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files).
+
 1. Vyberte název řešení z okna řešení v Visual Studio pro Mac.
 
 2. V řádku nabídek vyberte možnost Správa **verzí > publikovat v řízení verze** , aby se zobrazilo dialogové okno **úložiště klonování** :
@@ -74,7 +77,7 @@ Máte-li existující projekt, který ještě _není_ ve správě verzí, postup
 > [!NOTE]
 > Pokud má váš účet povolené dvojúrovňové ověřování (2FA), budete muset vytvořit přístupový token, který se používá místo hesla. Pokud jste přístupový token nevytvořili, postupujte podle kroků v dokumentaci [k přístupovému tokenu](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) Git.
 
-8. Zadejte uživatelské jméno a osobní přístupový token a stiskněte **OK** :
+8. Zadejte uživatelské jméno a osobní přístupový token a stiskněte **OK**:
 
     ![Zadejte uživatelské jméno a heslo pro Git.](media/version-control-git9-sml.png)
 
@@ -101,7 +104,7 @@ Pomocí následujících kroků Nahrajte nové místní úložiště do nového 
 
 2. Na kartě stav vyberte **Potvrdit** v levém horním rohu.
 
-3. Napište potvrzovací zprávu, třeba First Commit, a pak klikněte na **potvrzení změn** :
+3. Napište potvrzovací zprávu, třeba First Commit, a pak klikněte na **potvrzení změn**:
 
     ![Potvrdit počáteční změny v úložišti Git](media/version-control-git-publish-new2.png)
 
@@ -109,7 +112,7 @@ Pomocí následujících kroků Nahrajte nové místní úložiště do nového 
 
 5. Přejděte na kartu **vzdálené zdroje** a pak klikněte na **Přidat**.
 
-6. V okně **vzdálené zdroje** přidejte podrobnosti o dříve vytvořeném úložišti GitHub a klikněte na **OK** :
+6. V okně **vzdálené zdroje** přidejte podrobnosti o dříve vytvořeném úložišti GitHub a klikněte na **OK**:
 
     ![Konfigurace vzdálených zdrojů pro úložiště Git](media/version-control-git-publish-new3.png)
 
@@ -132,7 +135,7 @@ Visual Studio pro Mac nyní vloží změny do vzdáleného úložiště GitHub:
 
 Je možné, že budete muset pracovat s úložištěm GitHub, které existuje jenom na vzdáleném, ne na vašem místním počítači. Visual Studio pro Mac umožňuje rychlé naklonování tohoto úložiště. Pomocí následujících kroků naklonujte tento počítač do počítače:
 
-1. V řádku nabídek vyberte možnost Správa **verzí > úložiště klonování** :
+1. V řádku nabídek vyberte možnost Správa **verzí > úložiště klonování**:
 
 2. Zobrazí se karta **připojit s adresou URL** :
 
@@ -149,7 +152,7 @@ Je možné, že budete muset pracovat s úložištěm GitHub, které existuje je
 > [!NOTE]
 > Pokud je úložiště větší než 4 GB, může docházet k problémům.
 
-## <a name="troubleshooting"></a>Odstraňování potíží
+## <a name="troubleshooting"></a>Poradce při potížích
 
 Pokud máte problémy s inicializací projektu s prázdným vzdáleným úložištěm, můžete vyzkoušet následující postup:
 
@@ -163,6 +166,6 @@ Pokud máte problémy s inicializací projektu s prázdným vzdáleným úloži�
 1. Přejděte do nabídky Správa verzí a v části **Správa verzí vyberte publikovat**.
 1. Postupujte podle kroků v předchozím kurzu počínaje krokem 6.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Správa verzí v aplikaci Visual Studio (ve Windows)](/visualstudio/version-control/)

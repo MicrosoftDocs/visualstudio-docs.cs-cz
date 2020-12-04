@@ -1,5 +1,7 @@
 ---
 title: Zabezpečení ladicího programu | Microsoft Docs
+description: Přečtěte si rizika zabezpečení vyplývající z ladění, rizika pro ladicí počítač a počítač, který ladíte. K minimalizaci rizika použijte doporučení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8b7ac2aed43bcb39b4bb5924ad6f1cf2c438b64
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: f6d0c09a7f54157bd2ace9a6be09a357eb436ceb
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600077"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559742"
 ---
 # <a name="debugger-security"></a>Zabezpečení ladicího programu
 Možnost ladit jiný proces vám poskytne velmi široké pravomoci, které byste jinak neměli mít, zejména při vzdáleném ladění. Škodlivý ladicí program může způsobit rozšířenou škodu v laděném počítači.
@@ -37,7 +39,7 @@ Možnost ladit jiný proces vám poskytne velmi široké pravomoci, které byste
 ### <a name="managed-debugging-security"></a>Zabezpečení spravovaného ladění
  Tady jsou některá obecná doporučení, která platí pro všechna spravovaná ladění.
 
-- Buďte opatrní při připojování k procesu nedůvěryhodného uživatele: Pokud tak učiníte, předpokládá se, že je důvěryhodný. Když se pokusíte připojit k procesu nedůvěryhodného uživatele, zobrazí se dialogové okno upozornění zabezpečení s dotazem, zda se chcete připojit k procesu. "Důvěryhodní uživatelé" zahrnují vás a sadu standardních uživatelů, kteří jsou obvykle definováni v počítačích s nainstalovaným .NET Framework, jako jsou **ASPNET**, **LocalSystem**, **NetworkService**a **LocalService**. Další informace najdete v tématu [Upozornění zabezpečení: připojení k procesu, který vlastní nedůvěryhodný uživatel, může být nebezpečné. Pokud tyto informace vypadají podezřele nebo si nejste jistí, nepřipojujte se k tomuto procesu](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md).
+- Buďte opatrní při připojování k procesu nedůvěryhodného uživatele: Pokud tak učiníte, předpokládá se, že je důvěryhodný. Když se pokusíte připojit k procesu nedůvěryhodného uživatele, zobrazí se dialogové okno upozornění zabezpečení s dotazem, zda se chcete připojit k procesu. "Důvěryhodní uživatelé" zahrnují vás a sadu standardních uživatelů, kteří jsou obvykle definováni v počítačích s nainstalovaným .NET Framework, jako jsou **ASPNET**, **LocalSystem**, **NetworkService** a **LocalService**. Další informace najdete v tématu [Upozornění zabezpečení: připojení k procesu, který vlastní nedůvěryhodný uživatel, může být nebezpečné. Pokud tyto informace vypadají podezřele nebo si nejste jistí, nepřipojujte se k tomuto procesu](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md).
 
 - Buďte opatrní při stahování projektu z Internetu a jeho načtení do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . To je velice riskantní, aby se dokonce i bez ladění. Když to uděláte, předpokládá se, že projekt a kód, který obsahuje, jsou důvěryhodné.
 
@@ -77,7 +79,7 @@ Možnost ladit jiný proces vám poskytne velmi široké pravomoci, které byste
 
   Viz [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Upozornění zabezpečení: připojení k procesu, jehož vlastníkem je nedůvěryhodný uživatel, může být nebezpečné. Pokud tyto informace vypadají podezřele nebo si nejste jistí, nepřipojujte se k tomuto procesu.](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)

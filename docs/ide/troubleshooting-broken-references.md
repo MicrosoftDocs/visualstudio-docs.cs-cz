@@ -1,6 +1,6 @@
 ---
 title: Řešení problémů s poškozenými odkazy
-description: Naučte se řešit potíže s přerušenými odkazy, které mohou být způsobeny jinou výjimkou vašich aplikací, které neumožňují najít odkazovanou součást.
+description: Naučte se řešit potíže s přerušenými odkazy, které mohou být způsobeny jinou výjimkou neschopnosti vaší aplikace najít odkazovanou součást.
 ms.custom: SEO-VS-2020
 ms.date: 03/21/2017
 ms.topic: troubleshooting
@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 627724410ac9e0829faeb23cb5b0eef01b153293
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 6c47f8c399c89df9bf91879abc7cf926eac925bc
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479170"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560236"
 ---
 # <a name="troubleshoot-broken-references"></a>Řešení problémů s poškozenými odkazy
 
@@ -90,6 +90,6 @@ Může existovat celá řada možných příčin nepřístupných souborů: chyb
 
 Pokud uživatel přidal odkaz na komponentu COM a druhý uživatel se pokusí spustit kód v počítači, na kterém není tato součást nainstalována, obdrží druhý uživatel chybu, že odkaz je přerušen. Při instalaci komponenty na druhý počítač se chyba opraví. Další informace o tom, jak používat odkazy na komponenty modelu COM v projektech, naleznete v tématu [interoperabilita modelu COM v .NET Frameworkch aplikacích](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Stránka Odkazy, návrhář projektu (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)

@@ -1,5 +1,7 @@
 ---
 title: Vyhodnocení výrazu | Microsoft Docs
+description: Přečtěte si o vyhodnocovacích filtrech výrazů, které prozkoumají syntaxi jazyka pro analýzu a vyhodnocení proměnných a výrazů za běhu v režimu pozastavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a477aaceb57e6ccd2eb5125fcf9d8af9be59472b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8223e39eb804684fede50ceb2f7c859e198a272
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738686"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560132"
 ---
 # <a name="expression-evaluator"></a>Vyhodnocení výrazu
 Vyhodnocovací filtry výrazů (EE) prozkoumají syntaxi jazyka pro analýzu a vyhodnocení proměnných a výrazů za běhu, aby je mohl uživatel zobrazit, když je IDE v režimu pozastavení.
@@ -40,5 +42,5 @@ Vyhodnocovací filtry výrazů (EE) prozkoumají syntaxi jazyka pro analýzu a v
 ## <a name="implementation-notes"></a>Poznámky k implementaci
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Ladicí stroje očekávají, že mluví s vyhodnocovacím filtrem výrazů pomocí rozhraní CLR (Common Language Runtime). V důsledku toho vyhodnocení výrazu, které funguje s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladicími moduly, musí podporovat modul CLR (úplný seznam všech ladicích rozhraní CLR lze nalézt v debugref.doc, který je součástí [!INCLUDE[winsdklong](../../deployment/includes/winsdklong_md.md)] ).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Komponenty ladicího programu](../../extensibility/debugger/debugger-components.md)

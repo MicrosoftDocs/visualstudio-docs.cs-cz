@@ -1,16 +1,18 @@
 ---
 title: Referenční dokumentace k Team Exploreru
+description: Přečtěte si o různých funkcích v Team Explorer ke správě práce a koordinaci s ostatními členy týmu k vývoji projektu.
+ms.custom: SEO-VS-2020
 ms.date: 12/04/2018
 ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
 ms.manager: jillfra
-ms.openlocfilehash: fa73894d713ded42696f5e47d40dffb2d2405b1a
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: a7089defb41c3ba8379d1020cbf1225d6333b912
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928079"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560990"
 ---
 # <a name="team-explorer-reference"></a>Referenční dokumentace k Team Exploreru
 
@@ -20,7 +22,7 @@ Použijte okno **Team Explorer** Tool k koordinaci vašeho kódu s ostatními č
 
 ## <a name="home-page"></a>Domovská stránka
 
-Po [připojení k projektu](../connect-team-project.md) v **Team Explorer**jsou v části **projektu** k dispozici následující odkazy:
+Po [připojení k projektu](../connect-team-project.md) v **Team Explorer** jsou v části **projektu** k dispozici následující odkazy:
 
 - [Klonovat úložiště](/azure/devops/repos/git/clone)
 - [Webový portál](/azure/devops/project/navigation/index)
@@ -102,10 +104,10 @@ Přečtěte si:
 
 Stránka **Nastavení** umožňuje nakonfigurovat funkce pro správu projektu nebo kolekce projektů. Viz následující články:
 
-| Project | Kolekce projektů | Jiné |
+| Project | Kolekce projektů | Další |
 | - | - | - |
 | [Zabezpečení, členství ve skupinách](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Zabezpečení, Správa zdrojového kódu (TFVC)](/azure/devops/organizations/security/set-git-tfvc-repository-permissions)<br/>[Oblasti pracovních položek](/azure/devops/organizations/settings/set-area-paths)<br/>[Iterace pracovních položek](/azure/devops/organizations/settings/set-iteration-paths-sprints)<br/>[Nastavení portálu](/azure/devops/report/sharepoint-dashboards/configure-or-add-a-project-portal)<br/>[Výstrahy projektu](/azure/devops/notifications/howto-manage-team-notifications) | [Zabezpečení, členství ve skupinách](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Správa zdrojového kódu (TFVC)](/azure/devops/repos/tfvc/decide-between-using-local-server-workspace)<br/>[Správce šablon procesů](/azure/devops/boards/work-items/guidance/manage-process-templates) | [Globální nastavení Gitu](/azure/devops/repos/git/git-config)<br/>[Nastavení úložiště Git](/azure/devops/repos/git/git-config) |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Připojení k projektům v Team Explorer](../../ide/connect-team-project.md)

@@ -1,5 +1,7 @@
 ---
 title: Referenční dokumentace k vlastnostem projektu
+description: Přečtěte si, jak nakonfigurovat a přizpůsobit vlastnosti projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc3ec00ed771caba7e779e708801d611ca16b8c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f76e34f0a806a524c1305796bddabebd155e680c
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75567720"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560340"
 ---
 # <a name="project-properties-reference"></a>Reference k vlastnostem projektu
 
@@ -38,6 +40,6 @@ Přečtěte si další informace o tom, jak nakonfigurovat a přizpůsobit vlast
 | [Stránka Zabezpečení, návrhář projektu](../../ide/reference/security-page-project-designer.md) | Pomocí této stránky lze konfigurovat nastavení zabezpečení přístupu ke kódu pro aplikace, které jsou nasazeny pomocí [!INCLUDE[ndptecclick](../../deployment/includes/ndptecclick_md.md)] nasazení. |
 | [Stránka Podepisování, návrhář projektu (C#)](../../ide/reference/signing-page-project-designer.md) | Tato stránka slouží k podepsání manifestů aplikace a nasazení a podepsání sestavení. |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Řešení a projekty](../../ide/solutions-and-projects-in-visual-studio.md)

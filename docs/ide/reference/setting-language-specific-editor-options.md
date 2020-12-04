@@ -1,5 +1,7 @@
 ---
 title: Nastavení možností editoru pro konkrétní jazyk
+description: Naučte se, jak nastavit různé možnosti textového editoru, které se vztahují na konkrétní programovací jazyky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 988e89b9019b149e89ed569cf3ff585fdd4641bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1060abe1b16b9391eadb88be1499fa2231fb1859
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590836"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560743"
 ---
 # <a name="set-language-specific-editor-options"></a>Nastavení možností editoru pro konkrétní jazyk
 
@@ -45,7 +47,7 @@ Popisuje nastavení, která určují, jak se bude seznam dokončování technolo
 [Možnosti, textový editor, XAML, formátování](../../ide/reference/options-text-editor-xaml-formatting.md)\
 Popisuje nastavení pro uspořádání elementů a atributů v dokumentech XAML.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přizpůsobení editoru](../how-to-change-text-case-in-the-editor.md)
 - [Vytvoření přenosného nastavení vlastního editoru pomocí řešení EditorConfig](../../ide/create-portable-custom-editor-options.md)

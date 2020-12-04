@@ -1,5 +1,7 @@
 ---
 title: Stránka možností Návrhář XAML
+description: Naučte se používat stránku Obecné v části Návrhář XAML k určení toho, jak se prvky a atributy naformátují v dokumentech XAML.
+ms.custom: SEO-VS-2020
 ms.date: 03/02/2017
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 45c7a5ba87c006332b601b93143cbf8acfda16b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0955a6644e8f1dc1d42a1b22b15399a6d1ca452d
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547300"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560977"
 ---
 # <a name="xaml-designer-options-page"></a>Stránka možností Návrhář XAML
 
@@ -106,7 +108,7 @@ Pomocí těchto nastavení můžete určit, zda jsou při úpravách souborů XA
 |**Vykreslení efektů**|Určuje, zda se při úpravách souborů XAML v Návrhář XAML pomocí nástroje Blend vykreslí efekty.|
 |**Prahová hodnota přiblížení**|Určuje procento přiblížení, ve kterém se při výběru zaškrtávacího políčka **efekty vykreslování** vykreslují efekty. Pokud toto nastavení zvětšíte, efekty se už nevykreslují v Návrhář XAML.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [XAML ve WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [Návod: Moje první desktopová aplikace WPF](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)

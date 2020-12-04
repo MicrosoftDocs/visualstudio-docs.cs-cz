@@ -1,5 +1,7 @@
 ---
 title: Implementace vyhodnocovacího filtru výrazů | Microsoft Docs
+description: Přečtěte si o vyhodnocení výrazu, který zahrnuje ladicí stroj, poskytovatele symbolů, objekt pořadače a vyhodnocovací filtr výrazů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a8c7c9a1130794dd4c28f212afd6cb3c030f5a1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28989178ab726a9b274f66e0a9296f2bf49ead4a
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738542"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559963"
 ---
 # <a name="implement-an-expression-evaluator"></a>Implementace vyhodnocovacího filtru výrazů
 > [!IMPORTANT]
@@ -46,7 +48,7 @@ ms.locfileid: "80738542"
 
 - [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)
 
-  V EE se spustí [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md). `IDebugProperty2` poskytuje mechanismus pro popis výsledku vyhodnocení výrazu, jako je například místní proměnná, primitivum nebo objekt do sady Visual Studio, který pak zobrazí příslušné informace v oknech **místní**hodnoty, **kukátko**nebo **okamžité** .
+  V EE se spustí [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md). `IDebugProperty2` poskytuje mechanismus pro popis výsledku vyhodnocení výrazu, jako je například místní proměnná, primitivum nebo objekt do sady Visual Studio, který pak zobrazí příslušné informace v oknech **místní** hodnoty, **kukátko** nebo **okamžité** .
 
   Tato aktualizace je uvedena v EE pomocí DE, když se požádá o informace. SP spouští rozhraní, která popisují adresy a pole, například následující rozhraní a jejich deriváty:
 
@@ -61,5 +63,5 @@ ms.locfileid: "80738542"
 ## <a name="in-this-section"></a>V této části
  [Strategie implementace vyhodnocovacího filtru výrazů](../../extensibility/debugger/expression-evaluator-implementation-strategy.md) Definuje proces tří kroků pro strategii pro implementaci vyhodnocovacího filtru výrazů (EE).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zápis vyhodnocovacího filtru výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

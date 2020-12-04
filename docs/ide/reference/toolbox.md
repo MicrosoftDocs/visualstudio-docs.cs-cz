@@ -1,5 +1,7 @@
 ---
 title: Okno panelu nástrojů
+description: Přečtěte si o okně panelu nástrojů a o tom, jak zobrazuje ovládací prvky, které lze přidat do projektů aplikace Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 06/01/2020
 ms.topic: reference
 f1_keywords:
@@ -13,18 +15,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9807762a4573cdbc68a4af26bf9d73b46827c7af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 905288d4a580f5633196273666fbea3954d1767c
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285326"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560275"
 ---
 # <a name="toolbox"></a>Sada nástrojů
 
 Okno **panelu nástrojů** zobrazuje ovládací prvky, které lze přidat do projektů aplikace Visual Studio. Chcete-li otevřít **sadu nástrojů**, zvolte možnost **Zobrazit**  >  **sadu nástrojů** na panelu nabídek nebo stiskněte klávesovou **zkratku CTRL** + **ALT** + **X**.
 
-![Okno panelu nástrojů](media/vs-2019/toolbox.png "Snímek obrazovky okna panelu nástrojů")
+![Snímek obrazovky okna sady nástrojů zobrazující možnosti v sekci kontejnery](media/vs-2019/toolbox.png "Snímek obrazovky okna panelu nástrojů")
 
 Můžete přetáhnout různé ovládací prvky na povrch návrháře, který používáte, a změnit velikost ovládacích prvků a jejich velikost a umístění.
 
@@ -33,11 +35,11 @@ Sada nástrojů se zobrazí ve spojení se zobrazeními návrháře, jako je nap
 > [!NOTE]
 > U některých typů projektů nemusí **Sada nástrojů** zobrazit žádné položky.
 
-Verze rozhraní .NET, na kterou projekt cílí, také ovlivňuje sadu ovládacích prvků viditelných v sadě nástrojů. V případě potřeby můžete změnit cílovou verzi rozhraní .NET Framework ze stránek vlastností projektu. Vyberte uzel projektu v **Průzkumník řešení**a pak na panelu nabídek zvolte vlastnosti **projektu projektu**  >  **projectname Properties**. Na kartě **aplikace** použijte rozevírací seznam **cílové rozhraní** .
+Verze rozhraní .NET, na kterou projekt cílí, také ovlivňuje sadu ovládacích prvků viditelných v sadě nástrojů. V případě potřeby můžete změnit cílovou verzi rozhraní .NET Framework ze stránek vlastností projektu. Vyberte uzel projektu v **Průzkumník řešení** a pak na panelu nabídek zvolte vlastnosti **projektu projektu**  >  **projectname Properties**. Na kartě **aplikace** použijte rozevírací seznam **cílové rozhraní** .
 
 ::: moniker range="vs-2019"
 
-![Okno panelu nástrojů](media/vs-2019/toolbox-change-dotnet-version.png "Snímek obrazovky s dialogovým oknem, kde můžete změnit verzi rozhraní .NET")
+![Snímek obrazovky dialogového okna aplikace zobrazující možnosti v rozevíracím seznamu cílové rozhraní](media/vs-2019/toolbox-change-dotnet-version.png "Snímek obrazovky s dialogovým oknem, kde můžete změnit verzi rozhraní .NET")
 
 ::: moniker-end
 
@@ -80,6 +82,6 @@ Peru následující odkazy na Další informace o dostupných kartách **sady n�
 - [Sada nástrojů, karta Součásti](../../ide/reference/toolbox-components-tab.md)
 - [Sada nástrojů, karta HTML](../../ide/reference/toolbox-html-tab.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Výběr položek sady nástrojů, součásti WPF](choose-toolbox-items-wpf-components.md)

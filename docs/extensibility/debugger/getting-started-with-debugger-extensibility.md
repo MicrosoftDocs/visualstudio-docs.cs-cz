@@ -1,5 +1,7 @@
 ---
 title: Začínáme s rozšířením ladicího programu | Microsoft Docs
+description: Začněte vytvářet a přizpůsobovat komponenty ladicího programu používané pro ladění programů v prostředí Visual studia.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 153db8889c78890a31a2e8003e6aa95ed24a02eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6949b9b8a9168915c64bc6183f6b1391a1c79220
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738592"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560032"
 ---
 # <a name="get-started-with-debugger-extensibility"></a>Začínáme s rozšířením ladicího programu
 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]Poskytuje informace, které potřebujete k vytvoření a přizpůsobení komponent ladicího programu používaných pro ladění programů v rámci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí.

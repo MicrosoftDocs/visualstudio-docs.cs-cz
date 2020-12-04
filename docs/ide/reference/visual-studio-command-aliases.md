@@ -1,5 +1,7 @@
 ---
 title: Aliasy příkazů
+description: Naučte se používat aliasy příkazů k psaní méně znaků, když chcete spustit příkaz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b420644672309371ab61f1499e22d4745c69c569
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9dda564939652a09b64fec65747ca14d1315b3f1
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596408"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561068"
 ---
 # <a name="visual-studio-command-aliases"></a>Aliasy příkazů sady Visual Studio
 
@@ -51,16 +53,16 @@ Následující tabulka obsahuje seznam předem definovaných aliasů příkazů 
 |Zobrazit kód|kód|View.ViewCode|
 |[Listovat paměť – příkaz](../../ide/reference/list-memory-command.md)|d|Debug. ListMemory –|
 |[Výpis paměti – příkaz](../../ide/reference/list-memory-command.md) jako ANSI|&|Ladit. ListMemory –/ANSI|
-|[Listovat paměť – příkaz](../../ide/reference/list-memory-command.md) Formát s jedním bytem|inženýr|Debug. ListMemory –/Format: OneByte|
-|[Výpis paměti – příkaz](../../ide/reference/list-memory-command.md) jako ANSI se formátem na 4 bajty|DC|Debug. ListMemory –/Format: FourBytes/ANSI|
-|[Listovat paměť – příkaz](../../ide/reference/list-memory-command.md) Formát se čtyřmi bajty|dd|Debug. ListMemory –/Format: FourBytes|
+|Příkaz One-Byte Format pro [Výpis paměti](../../ide/reference/list-memory-command.md)|inženýr|Debug. ListMemory –/Format: OneByte|
+|[Výpis paměti – příkaz](../../ide/reference/list-memory-command.md) jako ANSI s formátem Four-Byte|DC|Debug. ListMemory –/Format: FourBytes/ANSI|
+|Příkaz Four-Byte Format pro [Výpis paměti](../../ide/reference/list-memory-command.md)|dd|Debug. ListMemory –/Format: FourBytes|
 |Odstranit do knihách online|DelBOL|Upravit. DeleteToBOL|
 |Odstranit do konce řádku|DelEOL|Upravit. DeleteToEOL|
 |Odstranit horizontální prázdné znaky|DelHSp|Upravit. DeleteHorizontalWhitespace|
 |Návrhář zobrazení|návrhář|View.ViewDesigner|
 |[Listovat paměť – příkaz](../../ide/reference/list-memory-command.md) Formát float|příznak|Debug. ListMemory –/Format: float|
 |okno Zpětný překlad|DISASM|Debug.Disassembly|
-|[Listovat paměť – příkaz](../../ide/reference/list-memory-command.md) Formát 8 bajtů|DQ|Debug. ListMemory –/Format: EightBytes|
+|Příkaz Eight-Byte Format pro [Výpis paměti](../../ide/reference/list-memory-command.md)|DQ|Debug. ListMemory –/Format: EightBytes|
 |[Výpis paměti – příkaz](../../ide/reference/list-memory-command.md) jako Unicode|du|Ladit. ListMemory –/Unicode|
 |[Evaluate – příkaz příkazu](../../ide/reference/evaluate-statement-command.md)|platnost|Debug. EvaluateStatement|
 |Ukončit|Ukončit|File.Exit|
@@ -94,7 +96,7 @@ Následující tabulka obsahuje seznam předem definovaných aliasů příkazů 
 |Sbalit do definic/zastavit sbalení|OutlineDefs StopOutlining|Upravit. CollapseToDefinitions|
 |Krokovat|p|Debug.StepOver|
 |Informace o parametrech|ParamInfo|Edit.ParameterInfo|
-|Krok ven|Pronájem|Debug.StepOut|
+|Krok ven|pr|Debug.StepOut|
 |Předchozí záložka|PrevBook|Edit.PreviousBookmark|
 |Tisk souboru|Tisk|File.Print|
 |Okno vlastností|props|View.PropertiesWindow|
@@ -125,7 +127,7 @@ Následující tabulka obsahuje seznam předem definovaných aliasů příkazů 
 |Výpis procesů|&#124;|Debug. ListProcesses|
 |[Listovat vlákna – příkaz](../../ide/reference/list-threads-command.md)|~ ~ * k ~ \* KB|Debug. Listthreads – Debug. ListTheads/AllThreads|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)

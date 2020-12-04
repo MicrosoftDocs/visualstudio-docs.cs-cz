@@ -1,5 +1,7 @@
 ---
 title: Sada nástrojů, karta Součásti
+description: Přečtěte si informace o komponentách, které najdete na kartě komponenty v okně panelu nástrojů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,18 +15,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5eb8c320a3190121d95395f7b359aa9ed978408
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40ba84712a343a071d6213dc9cd985727fc20ebf
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597305"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560938"
 ---
 # <a name="toolbox-components-tab"></a>Panel nástrojů, karta součásti
 
 Zobrazí komponenty, které lze přidat do Visual Basic a návrháře jazyka C# pro model Windows Forms. Kromě součástí .NET, které jsou součástí sady Visual Studio, jako jsou například <xref:System.Messaging.MessageQueue> <xref:System.Diagnostics.EventLog> komponenty a, můžete na tuto kartu přidat vlastní součásti nebo komponenty třetích stran.
 
-Chcete-li zobrazit tuto kartu, otevřete model Windows Forms Designer. Vyberte **zobrazení**  >  **sady nástrojů**. Na **panelu nástrojů**vyberte kartu **součásti** .
+Chcete-li zobrazit tuto kartu, otevřete model Windows Forms Designer. Vyberte **zobrazení**  >  **sady nástrojů**. Na **panelu nástrojů** vyberte kartu **součásti** .
 
 ## <a name="components"></a>Komponenty
 
@@ -87,7 +89,7 @@ Vytvoří <xref:System.Windows.Forms.Timer> instanci komponenty, kterou můžete
 > [!NOTE]
 > K dispozici je také systém založený <xref:System.Timers.Timer> na systému, který lze přidat do **sady nástrojů** <xref:System.Timers.Timer> , což je optimalizováno pro serverové aplikace a model Windows Forms <xref:System.Windows.Forms.Timer> je nejvhodnější pro použití v model Windows Forms.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Ovládací prvky pro použití na model Windows Forms](/dotnet/framework/winforms/controls/controls-to-use-on-windows-forms)
 - [Výběr položek sady nástrojů, součásti WPF](choose-toolbox-items-wpf-components.md)

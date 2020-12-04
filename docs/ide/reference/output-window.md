@@ -1,5 +1,7 @@
 ---
 title: Okno Výstup
+description: Přečtěte si o okně výstup a o tom, jak zobrazuje stavové zprávy pro různé funkce v integrovaném vývojovém prostředí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +18,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f820fe2f3cca0eddb709462961f328c906f6f2d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b8615fcdb7e6751087c499967478aaf63e68d624
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810360"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560379"
 ---
 # <a name="output-window"></a>Výstup – okno
 
-V okně **výstup** se zobrazí stavové zprávy pro různé funkce v integrovaném vývojovém prostředí (IDE). Chcete-li otevřít okno **výstup** , v řádku nabídek zvolte možnost **Zobrazit**  >  **výstup**nebo stiskněte klávesovou zkratku **CTRL** + **Alt** + **O**.
+V okně **výstup** se zobrazí stavové zprávy pro různé funkce v integrovaném vývojovém prostředí (IDE). Chcete-li otevřít okno **výstup** , v řádku nabídek zvolte možnost **Zobrazit**  >  **výstup** nebo stiskněte klávesovou zkratku **CTRL** + **Alt** + **O**.
 
 ## <a name="toolbar"></a>Panel nástrojů
 
@@ -73,7 +75,7 @@ V jazyce C++ můžete vytvořit vlastní kroky sestavení a události sestavení
 
 Použijete-li automatické posouvání v okně **výstup** a pak přejdete pomocí myši nebo kláves se šipkami, automatické posouvání se zastaví. Automatické posouvání obnovíte stisknutím klávesy **CTRL** + **End**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Diagnostické zprávy v okně výstup](../../debugger/diagnostic-messages-in-the-output-window.md)
 - [Postupy: řízení okna výstupu](/previous-versions/ht6z4e28(v=vs.140))

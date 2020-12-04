@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: ladění vlastního ladicího stroje | Microsoft Docs'
+description: Přečtěte si o krocích, které vám umožní použít Visual Studio k ladění vlastního ladicího stroje nebo vlastního typu projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a65e69655c4e8699bd267f1835ec0c49603014d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e79ceea58fc78922cd07bb6635ed2f399e97dd1c
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903312"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560808"
 ---
 # <a name="how-to-debug-a-custom-debug-engine"></a>Postupy: ladění vlastního ladicího stroje
 Typ projektu spustí ladicí modul (DE) z <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> metody. To znamená, že DE se spustí pod kontrolou instance [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] řízení typu projektu. Nicméně, tato instance [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nemůže LADIT de. Níže jsou uvedené kroky, které vám umožní ladit vlastní DE.
@@ -31,7 +33,7 @@ Typ projektu spustí ladicí modul (DE) z <xref:Microsoft.VisualStudio.Shell.Int
 
 1. Spusťte *msvsmon.exe*, sledování vzdáleného ladění.
 
-2. V nabídce **nástroje** v *msvsmon.exe*vyberte **Možnosti** a otevřete tak dialogové okno **Možnosti** .
+2. V nabídce **nástroje** v *msvsmon.exe* vyberte **Možnosti** a otevřete tak dialogové okno **Možnosti** .
 
 3. Vyberte možnost bez ověřování a klikněte na tlačítko **OK**.
 
@@ -57,13 +59,13 @@ Typ projektu spustí ladicí modul (DE) z <xref:Microsoft.VisualStudio.Shell.Int
 
 1. Spusťte [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v normálním podregistru a načtěte projekt typu projektu (Toto je zdroj pro typ projektu, nikoli instanci typu projektu).
 
-2. Otevřete vlastnosti projektu a přejdete na stránku **ladění** . Pro **příkaz**zadejte cestu k [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE (ve výchozím nastavení to je *[jednotka]* \Program Files\Microsoft [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 8\Common7\IDE\devenv.exe).
+2. Otevřete vlastnosti projektu a přejdete na stránku **ladění** . Pro **příkaz** zadejte cestu k [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE (ve výchozím nastavení to je *[jednotka]* \Program Files\Microsoft [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 8\Common7\IDE\devenv.exe).
 
-3. Pro **argumenty příkazu**zadejte `/rootsuffix exp` experimentální podregistr registru (vytvořený při instalaci VSIP).
+3. Pro **argumenty příkazu** zadejte `/rootsuffix exp` experimentální podregistr registru (vytvořený při instalaci VSIP).
 
 4. Potvrďte změny kliknutím na tlačítko **OK** .
 
-5. Stisknutím klávesy **F5**spusťte typ projektu. Tím se spustí druhá instance [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+5. Stisknutím klávesy **F5** spusťte typ projektu. Tím se spustí druhá instance [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
 6. V tomto okamžiku můžete umístit zarážky do zdrojového kódu typu projektu.
 
@@ -73,5 +75,5 @@ Typ projektu spustí ladicí modul (DE) z <xref:Microsoft.VisualStudio.Shell.Int
 
 9. Pokud se rozhodnete ladit proces spuštění příkazu DE, můžete postupovat podle postupu v tématu "ladění vlastního ladicího stroje", aby se připojil ke složce DE po jejím spuštění. To poskytuje tři instance, které jsou [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] spuštěny: jeden pro váš typ projektu, druhý pro instanci typu projektu a třetí připojený k de.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Vytvoření vlastního ladicího stroje](../../extensibility/debugger/creating-a-custom-debug-engine.md)

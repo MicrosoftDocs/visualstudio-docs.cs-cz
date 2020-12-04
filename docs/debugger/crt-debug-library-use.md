@@ -1,5 +1,7 @@
 ---
 title: Použití knihovny ladění CRT | Microsoft Docs
+description: Přečtěte si, jak Knihovna CRT (C run-time) podporuje vaše ladění a co musíte udělat, abyste mohli používat knihovny ladění CRT.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2019
 ms.topic: conceptual
 f1_keywords:
@@ -28,24 +30,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20aeee220bec600c2232286d18600b04201ad03b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4d145ccd8764e488a5d1270985050b29bcd8987d
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745608"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560561"
 ---
 # <a name="crt-debug-library-use"></a>Použití knihovny ladění CRT
-Knihovna run-time jazyka C poskytuje rozsáhlou podporu ladění. Chcete-li použít jednu z knihoven ladění CRT, je nutné propojit s [/Debug](/cpp/build/reference/debug-generate-debug-info) a kompilovat pomocí **/MDD**, **/MTD**nebo **/LDD**.
+Knihovna run-time jazyka C poskytuje rozsáhlou podporu ladění. Chcete-li použít jednu z knihoven ladění CRT, je nutné propojit s [/Debug](/cpp/build/reference/debug-generate-debug-info) a kompilovat pomocí **/MDD**, **/MTD** nebo **/LDD**.
 
 ## <a name="remarks"></a>Poznámky
  Hlavní definice a makra pro ladění CRT lze nalézt v souboru hlaviček souboru Crtdbg. h.
 
  Funkce v ladicích knihovnách CRT jsou kompilovány s ladicími informacemi ([/Z7,/zd,/Zi,/Zi (formát ladicích informací)](/cpp/build/reference/z7-zi-zi-debug-information-format)) a bez optimalizace. Některé funkce obsahují kontrolní výrazy pro ověření parametrů, které jsou předány, a zdrojový kód je k dispozici. Pomocí tohoto zdrojového kódu můžete krokovat s funkcí CRT a ověřit tak, že funkce fungují podle očekávání a kontrolovat chybné parametry nebo stavy paměti. (Některé technologie CRT jsou proprietární a neposkytují zdrojový kód pro zpracování výjimek, plovoucí desetinnou čárku a několik dalších rutin.)
 
- Další informace o různých knihovnách modulu runtime, které lze použít, naleznete v tématu [C run-time libraries](/cpp/c-runtime-library/crt-library-features).
+ Další informace o různých knihovnách modulu runtime, které můžete použít, najdete v tématu [knihovny Run-Time C](/cpp/c-runtime-library/crt-library-features).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Techniky ladění CRT](../debugger/crt-debugging-techniques.md)
-- [/MD,/MT,/LD (Použít běhovou knihovnu)](/cpp/build/reference/md-mt-ld-use-run-time-library)
+- [/MD,/MT,/LD (použití knihovny Run-Time)](/cpp/build/reference/md-mt-ld-use-run-time-library)

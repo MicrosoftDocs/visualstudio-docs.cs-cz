@@ -1,5 +1,7 @@
 ---
 title: Příkazy
+description: Přečtěte si o různých příkazech, ke kterým máte přístup v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,18 +14,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac0284ce274791f21c9c0f85d265d92a7097cb09
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7928c03e52e4a72fb354bd7202e041ec2264fcd6
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596369"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560951"
 ---
 # <a name="visual-studio-commands"></a>Příkazy sady Visual Studio
 
 Příkazy sady Visual Studio můžete zadat v **příkazovém** okně, **příkazovém** okně, nebo v poli **Najít/příkaz** . V každém případě symbol větší než ( `>` ) označuje, že příkaz místo operace hledání nebo ladění následuje.
 
-Úplný seznam příkazů a jejich syntaxi najdete na stránce **klávesnice** v **Tools**  >  **Options**  >  **prostředí**možností nástroje.
+Úplný seznam příkazů a jejich syntaxi najdete na stránce **klávesnice** v **Tools**  >  **Options**  >  **prostředí** možností nástroje.
 
 V lokalizovaných verzích rozhraní IDE lze názvy příkazů zadat v nativním jazyce integrovaného vývojového prostředí (IDE) nebo v angličtině. Můžete například zadat buď `File.NewFile` nebo `Fichier.NouveauFichier` ve francouzštině integrovaného vývojového prostředí, a spustit tak stejný příkaz.
 
@@ -64,7 +66,7 @@ Následující příkazy přebírají argumenty nebo přepínače:
 | [Nový soubor](../../ide/reference/new-file-command.md) | Vytvoří nový soubor a přidá jej do aktuálně vybraného projektu. |
 | [Otevřít soubor](../../ide/reference/open-file-command.md) | Otevře existující soubor a umožňuje určit editor. |
 | [Otevřít projekt](../../ide/reference/open-project-command.md) | Otevře existující projekt a umožňuje přidat projekt do aktuálního řešení. |
-| [Tiskový](../../ide/reference/print-command.md) | Vyhodnotí výraz a zobrazí výsledky nebo zadaný text. |
+| [Tisk](../../ide/reference/print-command.md) | Vyhodnotí výraz a zobrazí výsledky nebo zadaný text. |
 | [Rychlé kukátko – příkaz](../../ide/reference/quick-watch-command.md) | Zobrazí vybraný nebo zadaný text v poli **výraz** dialogového okna **Rychlé kukátko** . |
 | [Náhrady](../../ide/reference/replace-command.md) | Nahradí text v souborech pomocí podmnožiny možností dostupných v ovládacím prvku **Najít a nahradit** . |
 | [Nahradit v souborech](../../ide/reference/replace-in-files-command.md) | Nahradí text v souborech pomocí podmnožiny možností, které jsou k dispozici v [souborech nahradit v](../../ide/replace-in-files.md). |
@@ -78,7 +80,7 @@ Následující příkazy přebírají argumenty nebo přepínače:
 | [Přepnout zarážku](../../ide/reference/toggle-breakpoint-command.md) | Zapne nebo vypne zarážku v závislosti na jejím aktuálním stavu, a to v aktuálním umístění v souboru. |
 | [Kukátko – příkaz](../../ide/reference/watch-command.md) | Vytvoří a otevře zadanou instanci okna **kukátka** . |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Okno Příkaz](../../ide/reference/command-window.md)
 - [Pole Najít/příkaz](../../ide/find-command-box.md)

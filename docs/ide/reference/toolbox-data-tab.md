@@ -1,5 +1,7 @@
 ---
 title: Sada nástrojů, karta Data
+description: Seznamte se s datovými objekty, které najdete na kartě data v okně panelu nástrojů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e79b80890925bdf4d6d191db759516b5545fc403
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 78a697ae8d9f3f551c8bb734c28c1f53551b1f81
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590251"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561081"
 ---
 # <a name="toolbox-data-tab"></a>Panel nástrojů, karta data
 
@@ -37,7 +39,7 @@ Chcete-li přejít přímo na referenční stránku .NET pro komponentu, stiskn�
 |<xref:System.Windows.Forms.BindingSource>|Zjednodušuje proces vazby ovládacích prvků k základnímu zdroji dat.|
 |<xref:System.Windows.Forms.BindingNavigator>|Představuje navigační a manipulační uživatelské rozhraní (UI) pro ovládací prvky ve formuláři, které jsou svázané s daty.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přístup k datům v aplikaci Visual Studio](../../data-tools/accessing-data-in-visual-studio.md)
 - [Visual Studio Data Tools for .NET](../../data-tools/visual-studio-data-tools-for-dotnet.md)
@@ -45,4 +47,4 @@ Chcete-li přejít přímo na referenční stránku .NET pro komponentu, stiskn�
 - [Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../../data-tools/bind-controls-to-data-in-visual-studio.md)
 - [Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio](../../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [Úprava dat v datových sadách](../../data-tools/edit-data-in-datasets.md)
-- [Ověřování dat v datových sadách](../../data-tools/validate-data-in-datasets.md)
+- [Ověřit data v datových sadách](../../data-tools/validate-data-in-datasets.md)

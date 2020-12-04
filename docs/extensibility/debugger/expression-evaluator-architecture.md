@@ -1,5 +1,7 @@
 ---
 title: Architektura vyhodnocovacího filtru výrazů | Microsoft Docs
+description: Seznamte se s integrací vlastního jazyka do balíčku ladění sady Visual Studio, včetně vyhodnocovacího filtru výrazů a rozhraní API Provider/Binder.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aac782c653f230d5598a49d43eb70f548de6dc41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 216bf2f19d528084685a2361a158e105e2284010
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738693"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560158"
 ---
 # <a name="expression-evaluator-architecture"></a>Architektura vyhodnocovacího filtru výrazů
 > [!IMPORTANT]
@@ -51,7 +53,7 @@ ms.locfileid: "80738693"
 
  [Rozhraní vyhodnocovacích výrazů výrazu Key](../../extensibility/debugger/key-expression-evaluator-interfaces.md) Popisuje podklíčová rozhraní potřebná při psaní EE spolu s kontextem vyhodnocení.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zápis vyhodnocovacího filtru výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
 - [Zobrazení místních hodnot](../../extensibility/debugger/displaying-locals.md)
 - [Změna hodnoty místního](../../extensibility/debugger/changing-the-value-of-a-local.md)

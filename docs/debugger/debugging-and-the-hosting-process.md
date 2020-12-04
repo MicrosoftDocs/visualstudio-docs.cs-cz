@@ -1,5 +1,7 @@
 ---
 title: Ladění a proces hostování | Microsoft Docs
+description: U verzí sady Visual Studio starších než 2017 použijte hostitelský proces pro zlepšení výkonu ladicího programu a přístup k některým funkcím ladicího programu.
+ms.custom: SEO-VS-2020
 ms.date: 08/01/2018
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f77df2eae643b658e915662e0f50f6a376141d27
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b6f2650da6a83d936869d01fdc661bc9ddf8fc0
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188469"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560691"
 ---
 # <a name="debugging-and-the-hosting-process"></a>Ladění a proces hostování
 Proces hostování sady Visual Studio vylepšuje výkon ladicího programu a umožňuje nové funkce ladicího programu, jako je například ladění částečného vztahu důvěryhodnosti a vyhodnocení výrazu v době návrhu. V případě potřeby můžete hostitelský proces zakázat. Následující části popisují některé rozdíly mezi laděním s a bez hostujícího procesu.
@@ -29,10 +31,10 @@ Proces hostování sady Visual Studio vylepšuje výkon ladicího programu a umo
 > [!NOTE]
 > Od sady Visual Studio 2017 není možnost ladění pomocí hostitelského procesu nadále potřebná a byla odebrána. Další informace naleznete v tématu [ladění: Visual Studio 2017 směřuje k urychlení nejméně oblíbené úlohy](https://vslive.com/Blogs/News-and-Tips/2017/02/Debugging-Visual-Studio-2017-aims-to-speed-up-your-least-favorite-job.aspx).
 
-## <a name="partial-trust-debugging-and-click-once-security"></a>Ladění s částečným vztahem důvěryhodnosti a zabezpečení po kliknutí
- Ladění s částečným vztahem důvěryhodnosti vyžaduje hostující proces. Pokud zakážete hostující proces, ladění s částečným vztahem důvěryhodnosti nebude fungovat ani v případě, že je na stránce **zabezpečení** **vlastností projektu**povoleno zabezpečení s částečnou důvěryhodností. Další informace najdete v tématu [Postup: ladění aplikace s částečnou důvěryhodností](debugger-security.md).
+## <a name="partial-trust-debugging-and-click-once-security"></a>Partial-Trust ladění a zabezpečení Click-Once
+ Ladění s částečným vztahem důvěryhodnosti vyžaduje hostující proces. Pokud zakážete hostující proces, ladění s částečným vztahem důvěryhodnosti nebude fungovat ani v případě, že je na stránce **zabezpečení** **vlastností projektu** povoleno zabezpečení s částečnou důvěryhodností. Další informace najdete v tématu [Postup: ladění aplikace s částečnou důvěryhodností](debugger-security.md).
 
-## <a name="design-time-expression-evaluation"></a>Vyhodnocení výrazu pro dobu návrhu
+## <a name="design-time-expression-evaluation"></a>Vyhodnocení výrazu Design-Time
  Výraz při návrhu vždy používá hostitelský proces. Zakázání hostitelského procesu ve **vlastnostech projektu** zakáže vyhodnocení výrazu v době návrhu pro projekty knihovny tříd. Pro jiné typy projektů není vyhodnocení výrazu v době návrhu zakázáno. Místo toho Visual Studio spustí skutečný spustitelný soubor a použije ho pro vyhodnocení v době návrhu bez hostujícího procesu. Tento rozdíl může způsobit odlišné výsledky.
 
 ## <a name="appdomaincurrentdomainfriendlyname-differences"></a>Rozdíly v AppDomain. CurrentDomain. FriendlyName
@@ -41,6 +43,6 @@ Proces hostování sady Visual Studio vylepšuje výkon ladicího programu a umo
 ## <a name="assemblygetcallingassemblyfullname-differences"></a>Assembly. GetCallingAssembly (). Nafullname rozdíly
  `Assembly.GetCallingAssembly().FullName` vrátí různé výsledky v závislosti na tom, zda je povolen hostitelský proces. Pokud zavoláte `Assembly.GetCallingAssembly().FullName` s povoleným hostitelským procesem, vrátí se `mscorlib` . Pokud zavoláte `Assembly.GetCallingAssembly().FullName` se zakázaným hostitelským procesem, vrátí název aplikace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Postupy: Ladění aplikace s částečnou důvěryhodností](debugger-security.md)

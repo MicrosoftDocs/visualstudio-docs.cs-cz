@@ -1,5 +1,7 @@
 ---
 title: Operátor kontextu v ladicím programu (C++) | Microsoft Docs
+description: Možná budete muset zadat kontext pro název C++, který je ve vnějším oboru a skrytý pomocí místního názvu. Naučte se používat operátor kontextu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa16bd6f93198e5360139dbc5a6a0d96f02a1e41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1bc238cc56e1b815e79ba381a7cd4866085d3bef
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62564701"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559755"
 ---
 # <a name="context-operator-in-the-visual-studio-debugger-c"></a>Operátor kontextu v ladicím programu sady Visual Studio (C++)
 Operátor kontextu v jazyce C++ lze použít k získání umístění zarážky, názvu proměnné nebo výrazu. Kontextový operátor je vhodný pro zadání názvu z vnějšího oboru, který je jinak skrytý místními názvy.

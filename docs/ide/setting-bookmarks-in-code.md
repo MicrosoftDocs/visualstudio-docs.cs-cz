@@ -1,5 +1,7 @@
 ---
 title: Nastavit záložky kódu
+description: Naučte se, jak pomocí záložek označit řádky v kódu, abyste se mohli rychle vrátit do konkrétního umístění nebo přejít zpátky a zpátky mezi umístěními.
+ms.custom: SEO-VS-2020
 ms.date: 02/23/2018
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c62ded0b94db9d39a197dde55fbc77434c5325d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ded48fcea0630bf07311cbb92ed2e258cdf4afb1
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595433"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560860"
 ---
 # <a name="set-bookmarks-in-code"></a>Nastavení záložek v kódu
 
@@ -40,6 +42,6 @@ Záložky můžete uspořádat do virtuálních složek výběrem možnosti **No
 
 Záložky můžete vypnout (bez jejich odebrání) tak, že v okně záložky vyberete tlačítko **Zakázat všechny záložky** . Můžete je znovu povolit výběrem stejného tlačítka (které se nyní označuje jako **Povolit všechny záložky**).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)

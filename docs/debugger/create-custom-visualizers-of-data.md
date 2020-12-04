@@ -1,5 +1,7 @@
 ---
 title: Vytváření vlastních vizualizací dat | Microsoft Docs
+description: Vizualizace ladicího programu sady Visual Studio jsou komponenty, které zobrazují data. Přečtěte si o šesti standardních vizualizujích a o tom, jak můžete psát nebo stahovat ostatní.
+ms.custom: SEO-VS-2020
 ms.date: 05/27/2020
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e184507415810f64060b0d2b2e92a825d642d2e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c39fae399cd735d09218699f10c1eaead8e40ee
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85280873"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560678"
 ---
 # <a name="create-custom-data-visualizers"></a>Vytváření vlastních vizualizací dat
 
@@ -93,11 +95,11 @@ V kódu na straně laděného procesu:
 
    Toto jsou jediné podporované TFM.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Návod: Zápis vizualizéru v jazyce C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
 - [Návod: Zápis vizualizéru v jazyce Visual Basic](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)
 - [Postupy: Instalace vizualizéru](../debugger/how-to-install-a-visualizer.md)
 - [Postupy: Testování a ladění vizualizéru](../debugger/how-to-test-and-debug-a-visualizer.md)
-- [Reference k rozhraní Vizualizátor API](../debugger/visualizer-api-reference.md)
+- [Referenční dokumentace k rozhraní API vizualizéru](../debugger/visualizer-api-reference.md)
 - [Zobrazit data v ladicím programu](../debugger/viewing-data-in-the-debugger.md)

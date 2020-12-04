@@ -1,5 +1,7 @@
 ---
 title: Označení členů jako statických
+description: Přečtěte si, jak pomocí nabídky rychlé akce a refaktoring učinit člena statickou.
+ms.custom: SEO-VS-2020
 ms.date: 02/19/2020
 ms.topic: reference
 author: mikadumont
@@ -9,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1ecc66cb58ad11bd431acb341dae0493ce8192da
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e663d59f47728bc4a7c84290ee0e89ae453f23ae
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77515300"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561016"
 ---
 # <a name="make-member-static"></a>Označení členů jako statických
 
@@ -38,6 +40,6 @@ Tento refaktoring platí pro:
 
 3. Vyberte **Nastavit jako statickou**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Refactoring](../refactoring-in-visual-studio.md)
