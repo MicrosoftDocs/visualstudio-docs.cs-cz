@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: d1a92433a90e6e6b7f71d0c7db6ced3a52c33315
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: c6a85faf2d1451dcab9bc822fcdf228513b90dca
+ms.sourcegitcommit: ab60fd7b4a8219e378d100df1386e1b038ecdafc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440607"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595263"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Jak funguje Přemostění na Kubernetes
 
@@ -72,7 +72,8 @@ Když povolíte izolaci na izolovaném prostředí, most na Kubernetes spolu s p
 Pokud most na Kubernetes zjistí, že je ve vašem clusteru Kubernetes povolený Azure Dev Spaces, budete vyzváni k zakázání Azure Dev Spaces předtím, než budete moci použít most na Kubernetes.
 
 Správce směrování při spuštění provede následující kroky:
-* Duplikuje všechny příchozí přenosy nalezené v oboru názvů pomocí *GENERATED_NAME* pro subdoménu.
+
+* Duplikuje všechny příchozí přenosy (včetně vstupů nástroje Load Balancer) nalezené v oboru názvů pomocí *GENERATED_NAME* pro subdoménu.
 * Vytvoří zástupné pod pro každou službu přidruženou s duplicitními příchozími přenosy s *GENERATED_NAME* subdoménou.
 * Vytvoří další zástupné pod pro službu, na které pracujete, v izolaci. To umožňuje směrovat požadavky s subdoménou do vašeho vývojového počítače.
 * Konfiguruje pravidla směrování pro každý zástupné pod tím, aby zpracovávala směrování služeb s subdoménou.
@@ -144,7 +145,7 @@ Most na Kubernetes má následující omezení:
 * Služba musí být za účelem připojení k této službě zajištěna jedním pod. Nemůžete se připojit ke službě s více lusky, jako je třeba služba s replikami.
 * Objekt pod může mít v takovém případě k úspěšnému připojení pouze jeden kontejner spuštěný v takovém případě pro přemostění na Kubernetes. Most do Kubernetes se nemůže připojit ke službám s lusky, které mají další kontejnery, jako jsou například kontejnery na vozíky vložené pomocí sítí služby.
 * V současné době musí být most na Kubernetes lusky kontejnery Linux. Kontejnery Windows se nepodporují.
-* Izolaci nelze použít s protokolem HTTPS.
+* Izolaci nelze použít s protokolem HTTPS při použití mostu pro Kubernetes se sadou Visual Studio. Protokol HTTPS je podporován pouze v izolovaném režimu, pokud používáte Visual Studio Code.
 * Most do Kubernetes potřebuje zvýšená oprávnění ke spuštění ve vývojovém počítači, aby bylo možné upravit soubor hostitelů.
 * Most na Kubernetes se nedá použít u clusterů s povoleným Azure Dev Spaces.
 
