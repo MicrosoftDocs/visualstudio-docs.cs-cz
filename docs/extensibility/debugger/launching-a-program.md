@@ -1,5 +1,7 @@
 ---
 title: Spuštění programu | Microsoft Docs
+description: Přečtěte si o řadě událostí, ke kterým dochází při ladění programu pomocí klávesy F5 ke spuštění ladicího programu z integrovaného vývojového prostředí (IDE).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf638e0c96c7df1de2650260427a972a07efce23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0dce13e49eeadf4dc02fec07707bebcfe164ed9c
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738474"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606694"
 ---
 # <a name="launch-a-program"></a>Spustit program
 Uživatelé, kteří chtějí ladit program, mohou stisknout klávesu **F5** ke spuštění ladicího programu z integrovaného vývojového prostředí (IDE). Tím se spustí řada událostí, které nakonec mají za následek připojení rozhraní IDE k ladicímu stroji (DE), který je zase připojen nebo připojen k programu následujícím způsobem:

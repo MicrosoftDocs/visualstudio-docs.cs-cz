@@ -1,5 +1,7 @@
 ---
 title: Moduly | Microsoft Docs
+description: Tento článek popisuje definice a roli modulu v architektuře ladicího programu v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: abdf76c7f5f031d2ef7f3bcac2bae8a2c508b783
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57202231c1bbfc7712d322b8cc7a30e3f64c87af
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738344"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606642"
 ---
 # <a name="modules"></a>Moduly
 V podobě architektury ladicího programu *modul*:

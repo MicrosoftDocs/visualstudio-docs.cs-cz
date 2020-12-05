@@ -1,5 +1,7 @@
 ---
 title: Vnitřní rozšíření pro .NET Framework | Microsoft Docs
+description: Tyto prostředky popisují interní typy, metody a pole tříd, které slouží k implementaci vlastního ladicího programu pro paralelní rozšíření .NET Framework.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a3583e94a0bfff4474db03aa9d083add921f3da
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f9625af464e2695c6dd4302f4f7590d20e8f6af7
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738269"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606590"
 ---
 # <a name="parallel-extension-internals-for-the-net-framework"></a>Vnitřní rozšíření pro .NET Framework
 Tato část popisuje interní typy, metody a pole tříd, které vám pomůžou implementovat vlastní ladicí program pro paralelní rozšíření .NET Framework.

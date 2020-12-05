@@ -1,5 +1,7 @@
 ---
 title: Pomocníka sady SDK pro ladění | Microsoft Docs
+description: Seznamte se s funkcemi a deklaracemi, které jsou globálními podpůrnými funkcemi pro implementaci modulů ladění, vyhodnocení výrazů a zprostředkovatelů symbolů v jazyce C++.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9edb7c508fdea6736a71c0f70c0d2ff305d4a399
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 32d0dd7dbeee70b8c4eb566a07cf9a44d40d4f49
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713653"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606538"
 ---
 # <a name="sdk-helpers-for-debugging"></a>Pomocníci sad SDK pro ladění
 Tyto funkce a deklarace jsou globální pomocné funkce pro implementaci modulů ladění, vyhodnocení výrazů a poskytovatele symbolů v jazyce C++.
@@ -414,7 +416,7 @@ HRESULT EnumMetricSections(
 |Zástupný symbol|Popis|
 |-----------------|-----------------|
 |*[GUID modulu ladění]*|Identifikátor GUID ladicího stroje, který podporuje výjimky.|
-|*[typy výjimek]*|Obecný název podklíče identifikující třídu výjimek, které lze zpracovat. Typickými názvy jsou **výjimky jazyka C++**, **výjimky Win32**, **výjimky modulu CLR (Common Language Runtime)** a **Kontrola nativního běhu**. Tyto názvy slouží také k identifikaci konkrétní třídy výjimky pro uživatele.|
+|*[typy výjimek]*|Obecný název podklíče identifikující třídu výjimek, které lze zpracovat. Typickými názvy jsou **výjimky jazyka C++**, výjimky **Win32**, **výjimky modulu CLR (Common Language Runtime)** a **Kontrola nativního Run-Time**. Tyto názvy slouží také k identifikaci konkrétní třídy výjimky pro uživatele.|
 |*jímka*|Název pro výjimku: například **_com_error** nebo **Control-break**. Tyto názvy slouží také k identifikaci konkrétní výjimky pro uživatele.|
 
 ## <a name="requirements"></a>Požadavky

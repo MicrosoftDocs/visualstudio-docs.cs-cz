@@ -1,5 +1,7 @@
 ---
 title: Příloha na základě spuštění | Microsoft Docs
+description: Přečtěte si o připojení na základě spouštěcích programů k programu, který je automaticky a následuje po cestě, jako je například ruční příloha.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4910a97350366500b56593ec0076fdf0990b6d8f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e041c692a833b7d0a1891c078388a3f5b2d11e4
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738469"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606668"
 ---
 # <a name="launch-based-attachment"></a>Příloha na základě spuštění
 Příloha založená na spouštění programu je automatická. V případě, že je proces hostující program spuštěný pomocí modelu SDM, je příloha založená na spuštění následující jako cesta podobná metodě ručního připojení. Informace najdete v tématu věnovaném [připojení k programu](../../extensibility/debugger/attaching-to-the-program.md).
