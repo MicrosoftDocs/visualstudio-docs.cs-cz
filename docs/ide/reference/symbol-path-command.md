@@ -1,5 +1,7 @@
 ---
 title: Cesta k symbolu – příkaz
+description: Přečtěte si o příkazu pro cestu k symbolu a o tom, jak nastaví seznam adresářů pro ladicí program pro hledání symbolů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83acc551c778fdb245b3bacec164a7544253d55f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: bd3268f3c40736f85a18b35e33c6cc78c96d6c88
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808688"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616444"
 ---
 # <a name="symbol-path-command"></a>Cesta k symbolu – příkaz
 Nastaví seznam adresářů ladicího programu pro hledání symbolů.

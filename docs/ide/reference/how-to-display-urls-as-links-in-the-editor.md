@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Zobrazení adres URL ve formě odkazů v editoru'
+description: Naučte se zobrazovat adresy URL jako odkazy v editoru kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 80ad0fcc7409bd91f24ef197ef12ed64610a2e0b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ead76a3db9ff146aa82347a67e0bf7d52d04f30e
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770351"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617081"
 ---
 # <a name="how-to-display-urls-as-links-in-the-editor"></a>Postupy: Zobrazení adres URL ve formě odkazů v editoru
 
@@ -41,7 +43,7 @@ Můžete zvolit, aby Editor kódu považoval jako aktivní odkazy adresy URL (Un
 
      Chcete-li změnit možnost pro všechny jazyky, rozbalte složku **všechny jazyky** a vyberte možnost **Obecné**.
 
-4. V části **zobrazení**vyberte **Povolit navigaci URL jediným kliknutím**.
+4. V části **zobrazení** vyberte **Povolit navigaci URL jediným kliknutím**.
 
 ## <a name="see-also"></a>Viz také
 

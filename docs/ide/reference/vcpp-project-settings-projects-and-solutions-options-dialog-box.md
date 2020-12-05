@@ -1,5 +1,7 @@
 ---
 title: Možnosti nastavení projektu C++
+description: Naučte se, jak používat stránku nastavení projektu VC + + v části projekty a řešení k definování sestavení C++ a nastavení projektu, která souvisí s protokolováním, výkonem a podpůrnými typy souborů.
+ms.custom: SEO-VS-2020
 ms.date: 08/02/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7acd0d8f9c6d15f9f20c42f59c3bd5562884ac3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16226cd66c2cf46d1dc46f1cb3f90dc3bad9658c
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68918889"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616275"
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>Nastavení projektu VC++, projekty a řešení, dialogové okno Možnosti
 
@@ -33,7 +35,7 @@ Toto dialogové okno umožňuje definovat sestavení C++ a nastavení projektu s
 
 1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).
 
-2. Vyberte **projekty a řešení**a pak vyberte **nastavení projektu VC + +**.
+2. Vyberte **projekty a řešení** a pak vyberte **nastavení projektu VC + +**.
 
 ## <a name="build-logging"></a>Protokolování sestavení
 

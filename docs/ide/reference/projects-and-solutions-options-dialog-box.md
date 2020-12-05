@@ -1,5 +1,7 @@
 ---
 title: Projekty a řešení, dialogové okno Možnosti
+description: Naučte se používat stránku Obecné v části projekty a řešení k definování chování sady Visual Studio souvisejících s projekty a řešeními.
+ms.custom: SEO-VS-2020
 ms.date: 07/26/2019
 ms.topic: reference
 f1_keywords:
@@ -13,16 +15,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ed60e07c625665f92838cfbc671b03c605fda0d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 01ee7e0da5fab8ceba2e5dc0642148033e2415da
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75567642"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616899"
 ---
 # <a name="options-dialog-box-projects-and-solutions--general"></a>Dialogové okno Možnosti: Obecné projekty a řešení \>
 
-Pomocí této stránky můžete definovat chování sady Visual Studio související s projekty a řešeními. Chcete-li získat přístup k těmto možnostem, vyberte možnost **nástroje**  >  **Options**, rozbalte položku **projekty a řešení**a pak vyberte možnost **Obecné**.
+Pomocí této stránky můžete definovat chování sady Visual Studio související s projekty a řešeními. Chcete-li získat přístup k těmto možnostem, vyberte možnost **nástroje**  >  **Options**, rozbalte položku **projekty a řešení** a pak vyberte možnost **Obecné**.
 
 Na stránce **Obecné** jsou k dispozici následující možnosti.
 
@@ -38,7 +40,7 @@ Když se tato možnost vybere, **Průzkumník řešení** se automaticky otevře
 
 Je-li vybrána tato možnost, možnosti konfigurace sestavení se zobrazí v dialogovém okně **stránky vlastností projektu** a v dialogovém okně **stránky vlastností řešení** . Pokud není zaškrtnuto, možnosti konfigurace sestavení se nezobrazí v dialogovém okně **stránky vlastností projektu** a v dialogovém okně **stránky vlastností řešení** pro projekty Visual Basic a C#, které obsahují jednu konfiguraci nebo dvě konfigurace ladění a vydání. Pokud má projekt uživatelsky definované konfigurace, zobrazí se možnosti konfigurace sestavení.
 
-Pokud není vybráno, příkazy v nabídce **sestavení** , jako je **sestavení řešení**, **opětovné sestavení**řešení a **Vyčištění**, jsou prováděny v konfiguraci vydané verze a příkazy v nabídce **ladění** , jako je například **Spustit ladění** a **Spustit bez ladění**, jsou prováděny v konfiguraci ladění.
+Pokud není vybráno, příkazy v nabídce **sestavení** , jako je **sestavení řešení**, **opětovné sestavení** řešení a **Vyčištění**, jsou prováděny v konfiguraci vydané verze a příkazy v nabídce **ladění** , jako je například **Spustit ladění** a **Spustit bez ladění**, jsou prováděny v konfiguraci ladění.
 
 ## <a name="always-show-solution"></a>Vždy zobrazit řešení
 
@@ -92,7 +94,7 @@ Pokud je vybrána tato možnost a dvakrát kliknete na uzel projektu ve stylu sa
 Pokud tuto možnost nemáte zaškrtnuté a chcete upravit soubor projektu ve stylu sady SDK, klikněte pravým tlačítkem myši na uzel projektu v Průzkumník řešení a vyberte **Upravit soubor projektu**. Pro jiné typy projektů je nutné nejprve uvolnit projekt před jeho úpravou v aplikaci Visual Studio.
 
 > [!TIP]
-> *Projekt ve stylu sady SDK*nebo [sada SDK projektu](../../msbuild/how-to-use-project-sdk.md)mají novější a efektivnější formát souboru projektu, který byl představen nástrojem MSBuild 15,0. Projekt ve stylu sady SDK obsahuje `Sdk` atribut `Project` prvku, například `<Project Sdk="Microsoft.NET.Sdk">` . Sada Visual Studio vytvoří projekt ve stylu sady SDK při vytváření nového projektu .NET Core v jedné ze šablon sady Visual Studio, například.
+> *Projekt ve stylu sady SDK* nebo [sada SDK projektu](../../msbuild/how-to-use-project-sdk.md)mají novější a efektivnější formát souboru projektu, který byl představen nástrojem MSBuild 15,0. Projekt ve stylu sady SDK obsahuje `Sdk` atribut `Project` prvku, například `<Project Sdk="Microsoft.NET.Sdk">` . Sada Visual Studio vytvoří projekt ve stylu sady SDK při vytváření nového projektu .NET Core v jedné ze šablon sady Visual Studio, například.
 
 ::: moniker-end
 

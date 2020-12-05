@@ -1,5 +1,7 @@
 ---
 title: Najít a nahradit, prostředí, dialogové okno Možnosti
+description: Naučte se používat stránku najít a nahradit v části prostředí k řízení oken zpráv a dalších aspektů operace Find a nahrazování.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,16 +16,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ef53be4d3894dd1d22a3afbde9dbf631b472aa2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29f5fb6034c693c14cd04c83fe4c71f8763a0b0c
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569566"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617315"
 ---
 # <a name="find-and-replace-environment-options-dialog-box"></a>Najít a nahradit, prostředí, dialogové okno Možnosti
 
-Tato stránka dialogového okna **Možnosti** slouží k řízení oken zpráv a dalších aspektů operace Find a Replace. K tomuto dialogovému oknu se dostanete z nabídky **nástroje** kliknutím na **Možnosti**, rozbalením **prostředí**a kliknutím na **Najít a nahradit**. Pokud se tato stránka v seznamu nezobrazuje, vyberte v dialogovém okně **Možnosti** možnost **Zobrazit všechna nastavení** .
+Tato stránka dialogového okna **Možnosti** slouží k řízení oken zpráv a dalších aspektů operace Find a Replace. K tomuto dialogovému oknu se dostanete z nabídky **nástroje** kliknutím na **Možnosti**, rozbalením **prostředí** a kliknutím na **Najít a nahradit**. Pokud se tato stránka v seznamu nezobrazuje, vyberte v dialogovém okně **Možnosti** možnost **Zobrazit všechna nastavení** .
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 

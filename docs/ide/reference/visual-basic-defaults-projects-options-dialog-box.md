@@ -1,5 +1,7 @@
 ---
 title: Výchozí možnosti jazyka Visual Basic, projekty, dialogové okno Možnosti
+description: Naučte se používat stránku výchozích hodnot Visual Basic v části projekty a řešení k určení výchozího nastavení pro Visual Basic možnosti projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f33dd9b19297811597be406337d70392904e6e44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f761161f2ad29be994b3a6260bafe827a41fabe0
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596381"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616353"
 ---
 # <a name="visual-basic-defaults-projects-options-dialog-box"></a>Výchozí možnosti jazyka Visual Basic, projekty, dialogové okno Možnosti
 Určuje výchozí nastavení pro Visual Basic možnosti projektu. Při vytvoření nového projektu budou zadané příkazy Option přidány do záhlaví projektu v editoru kódu. Možnosti platí pro všechny projekty Visual Basic.

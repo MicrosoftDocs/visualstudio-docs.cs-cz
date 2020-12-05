@@ -1,5 +1,7 @@
 ---
 title: Generovat refaktoring parametrů
+description: Přečtěte si, jak pomocí nabídky rychlé akce a refaktoring automaticky vygenerovat parametr metody.
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 372a3f705e5e85c0edb31a754105f61056402b9f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21e209f5be9072390df58e78db34811f886fa9c5
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79094364"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617146"
 ---
 # <a name="generate-parameter"></a>Vygenerování parametru
 

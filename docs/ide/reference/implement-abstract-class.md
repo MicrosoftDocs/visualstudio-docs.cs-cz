@@ -1,5 +1,7 @@
 ---
 title: Implementace abstraktní třídy
+description: Naučte se, jak pomocí nabídky rychlé akce a refaktoring hned vygenerovat kód potřebný k implementaci abstraktní třídy.
+ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6fcfdc06a055df28159f9d1ddc440aaf113f3264
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08e1c0ec2a79e14b1306eaa5330ee3e62dca5a98
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568903"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617445"
 ---
 # <a name="implement-an-abstract-class-in-visual-studio"></a>Implementace abstraktní třídy v aplikaci Visual Studio
 
@@ -55,7 +57,7 @@ Tato generace kódu platí pro:
 
    > [!TIP]
    > - Pomocí odkazu **Náhled změn** v dolní části okna Preview [zobrazíte všechny změny](../../ide/preview-changes.md) , které budou provedeny před provedením výběru.
-   > - Použijte odkazy **dokumentu**, **projektu**a **řešení** v dolní části okna Preview k vytvoření správných signatur metod napříč více třídami, které dědí z abstraktní třídy.
+   > - Použijte odkazy **dokumentu**, **projektu** a **řešení** v dolní části okna Preview k vytvoření správných signatur metod napříč více třídami, které dědí z abstraktní třídy.
 
    Signatury abstraktní metody jsou vytvořeny a jsou připraveny k implementaci.
 

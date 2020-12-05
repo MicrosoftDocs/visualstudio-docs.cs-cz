@@ -1,5 +1,7 @@
 ---
 title: Přesunout deklaraci proměnné poblíž odkazu
+description: Přečtěte si, jak pomocí nabídky rychlé akce a refaktoring přesunout deklarace proměnných blíž na jejich použití.
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1339f4a9d151ef41d9a35c5aac0a96f220a297b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 188907b4f1b6630e95ab435d588878b16c763f4a
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79093995"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616925"
 ---
 # <a name="move-declaration-near-reference-refactoring"></a>Přesunout deklaraci do blízkosti referenčního faktoru
 

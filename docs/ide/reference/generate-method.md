@@ -1,5 +1,7 @@
 ---
 title: Vygenerovat metodu
+description: Přečtěte si, jak pomocí nabídky rychlé akce a refaktoring hned přidat metodu do třídy.
+ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f166c31a1615c951170367223a5b19ab93811b5d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 22c49085a430c7afc002fe4e11dcf1184348efdc
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595589"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617211"
 ---
 # <a name="generate-a-method-in-visual-studio"></a>Generování metody v aplikaci Visual Studio
 

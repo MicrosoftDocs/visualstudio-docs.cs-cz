@@ -1,5 +1,7 @@
 ---
 title: Nastavit základ – příkaz
+description: Přečtěte si o příkazu set základ a o tom, jak nastaví nebo vrátí číselnou základnu použitou k zobrazení celočíselných hodnot.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e88dc1318e29ddf35073b78218eb113fe8952aac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b47c30ed938a83a2b4c47f73f55b5f7ca1db6a62
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769642"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616405"
 ---
 # <a name="set-radix-command"></a>Nastavit základ – příkaz
 Nastaví nebo vrátí číselnou základnu použitou k zobrazení celočíselných hodnot.

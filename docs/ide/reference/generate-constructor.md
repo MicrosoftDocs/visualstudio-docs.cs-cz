@@ -1,5 +1,7 @@
 ---
 title: Rychlá akce při generování konstruktoru
+description: Naučte se, jak pomocí nabídky rychlé akce a refaktoring hned vytvořit kód pro nový konstruktor ve třídě.
+ms.custom: SEO-VS-2020
 ms.date: 07/10/2020
 ms.topic: reference
 author: mikadumont
@@ -7,12 +9,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ead3242c348acdf846fb57ec06057cc50c4b1c3b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 80de8b5c8b5699f4ddbf5148e16afd2da42388f2
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86285407"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617549"
 ---
 # <a name="generate-a-constructor-in-visual-studio"></a>Generování konstruktoru v aplikaci Visual Studio
 
@@ -49,9 +51,9 @@ Tato generace kódu platí pro:
       - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
       - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
-      - Klikněte na ![screwdriver](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud je textový kurzor již na prázdném řádku ve třídě.
+      - Klikněte na :::image type="icon" source="media/screwdriver.png"::: ikonu, která se zobrazí v levém okraji, pokud je textový kurzor již na prázdném řádku ve třídě.
 
-   ![Generovat náhled konstruktoru](media/constructor1-preview-cs.png)
+   ![Snímek obrazovky s možností generování konstruktoru](media/constructor1-preview-cs.png)
 
 1. V rozevírací nabídce vyberte **vytvořit konstruktor** .
 
@@ -66,7 +68,7 @@ Tato generace kódu platí pro:
 
    Vytvoří se konstruktor se zadanými parametry.
 
-   ![Generovat výsledek konstruktoru](media/constructor1-result-cs.png)
+   ![Snímek obrazovky znázorňující, že je vytvořen konstruktor se zadanými parametry.](media/constructor1-result-cs.png)
 
 ## <a name="generate-constructor-with-properties-c-only"></a><a id = "with"></a> Generovat konstruktor s vlastnostmi (jenom C#)
 
@@ -76,7 +78,7 @@ Tato generace kódu platí pro:
 
 3. **V `<QualifiedName>` (s vlastnostmi) vyberte generovat konstruktor**.
 
-   ![Generovat náhled konstruktoru](media/generate-constructor-with-properties.png)
+   ![Snímek obrazovky s možností generování konstruktoru v klíči (s vlastnostmi)](media/generate-constructor-with-properties.png)
 
 ## <a name="generate-constructor-from-selected-fields-c-only"></a><a id="selection"></a> Generovat konstruktor z vybraných polí (jenom C#)
 
@@ -90,15 +92,15 @@ Tato generace kódu platí pro:
       - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
       - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
-      - Klikněte na ![screwdriver](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud je textový kurzor již na řádku s výběrem.
+      - Klikněte na :::image type="icon" source="media/screwdriver.png"::: ikonu, která se zobrazí v levém okraji, pokud se na řádku s výběrem již nachází textový kurzor.
 
-      ![Generovat náhled konstruktoru](media/constructor2-preview-cs.png)
+      ![Snímek obrazovky možnosti generovat řetězec řetězce osoby z konstruktoru](media/constructor2-preview-cs.png)
 
 1. V rozevírací nabídce vyberte **Generovat konstruktor TypeName (...)** .
 
    Vytvoří se konstruktor s vybranými parametry.
 
-   ![Generovat výsledek konstruktoru](media/constructor2-result-cs.png)
+   ![Snímek obrazovky znázorňující, že je konstruktor vytvořen s vybranými parametry](media/constructor2-result-cs.png)
 
 ## <a name="generate-constructor-from-new-usage-c-and-visual-basic"></a><a id="usage"></a> Generovat konstruktor z nového použití (C# a Visual Basic)
 
@@ -118,10 +120,10 @@ Tato generace kódu platí pro:
       - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
       - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
-      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
+      - Najeďte myší na červenou vlnovkou a klikněte na :::image type="icon" source="media/error-bulb.png"::: ikonu, která se zobrazí.
+      - Klikněte na :::image type="icon" source="media/error-bulb.png"::: ikonu, která se zobrazí v levém okraji, pokud se textový kurzor již na řádku nachází v červené vlnovce.
 
-      ![Generovat náhled konstruktoru](media/constructor-preview-cs.png)
+      ![Snímek obrazovky s možností generovat konstruktor v osobě](media/constructor-preview-cs.png)
 
 3. V rozevírací nabídce vyberte **vytvořit konstruktor v '*TypeName*'** .
 
@@ -144,7 +146,7 @@ Tato generace kódu platí pro:
 
 2. Umístěte kurzor na řádek, kde je červená vlnovka, což značí, že jste použili konstruktor, který ještě neexistuje.
 
-    ![Vygenerovat zvýraznění konstruktoru](media/constructor4-highlight-cs.png)
+    ![Snímek obrazovky zobrazující čáru, kde je červená vlnovka.](media/constructor4-highlight-cs.png)
 
 3. Dále proveďte jednu z následujících akcí:
 
@@ -152,16 +154,16 @@ Tato generace kódu platí pro:
       - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
       - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
-      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
+      - Najeďte myší na červenou vlnovkou a klikněte na :::image type="icon" source="media/error-bulb.png"::: ikonu, která se zobrazí.
+      - Klikněte na :::image type="icon" source="media/error-bulb.png"::: ikonu, která se zobrazí v levém okraji, pokud se textový kurzor již na řádku nachází v červené vlnovce.
 
-      ![Generovat náhled konstruktoru](media/constructor4-preview-cs.png)
+      ![Snímek obrazovky možnosti Přidat parametr řetězce řetězce osoby](media/constructor4-preview-cs.png)
 
 4. Z rozevírací nabídky vyberte **Přidat parametr do TypeName (...)** .
 
    Parametr se přidá do konstruktoru s jeho typem odvozeným z jeho využití.
 
-   ![Generovat výsledek konstruktoru](media/constructor4-result-cs.png)
+   ![Snímek obrazovky ukazující, že je do konstruktoru přidán parametr s jeho typem odvozeným z jeho využití.](media/constructor4-result-cs.png)
 
 Můžete také přidat parametr do existující metody. Další informace naleznete v tématu [Přidání parametru do metody](add-parameter.md).
 
@@ -169,7 +171,7 @@ Můžete také přidat parametr do existující metody. Další informace nalezn
 
 1. Najděte existující konstruktor a přidejte parametr:
 
-   ![Vygenerovat zvýraznění konstruktoru](media/constructor5-highlight-cs.png)
+   ![Snímek obrazovky zobrazující existující konstruktor](media/constructor5-highlight-cs.png)
 
 1. Umístěte kurzor do nově přidaného parametru.
 
@@ -179,15 +181,15 @@ Můžete také přidat parametr do existující metody. Další informace nalezn
       - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
       - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
-      - Klikněte na ![screwdriver](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s přidaným parametrem.
+      - Klikněte na :::image type="icon" source="media/screwdriver.png"::: ikonu, která se zobrazí v levém okraji, pokud se na řádku s přidaným parametrem již nachází textový kurzor.
 
-   ![Generovat náhled konstruktoru](media/constructor5-preview-cs.png)
+   ![Snímek obrazovky s možností vytvoření a inicializace stáří vlastnosti](media/constructor5-preview-cs.png)
 
 1. V rozevírací nabídce vyberte možnost **vytvořit a inicializovat vlastnost** nebo **vytvořit a inicializovat pole** .
 
    Pole nebo vlastnost jsou deklarovány a automaticky pojmenovány tak, aby odpovídaly vašim typům. Také je přidána řádka kódu pro inicializaci pole nebo vlastnosti v těle konstruktoru.
 
-   ![Generovat výsledek konstruktoru](media/constructor5-result-cs.png)
+   ![Snímek obrazovky zobrazující, že pole nebo vlastnost jsou deklarovány a automaticky pojmenovány tak, aby odpovídaly vašim typům.](media/constructor5-result-cs.png)
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,5 +1,7 @@
 ---
 title: Písma a barvy, prostředí, dialogové okno Možnosti
+description: Naučte se, jak používat stránku písma a barvy v části prostředí k vytvoření vlastního písma a barevného schématu pro různé prvky uživatelského rozhraní v integrovaném vývojovém prostředí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -25,16 +27,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d5c9edd47e3db43735d3c6e8f6a4ec1a881214e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbbd42b0e4eae6d124fc59d68592155bf2c9bd49
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595615"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617523"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>Písma a barvy, prostředí, dialogové okno Možnosti
 
-Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvořit vlastní písmo a barevné schéma pro různé prvky uživatelského rozhraní v integrovaném vývojovém prostředí (IDE). Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na možnost **nástroje**  >  a pak vyberte**možnost** **Environment**  >  **písma a barvy**prostředí.
+Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvořit vlastní písmo a barevné schéma pro různé prvky uživatelského rozhraní v integrovaném vývojovém prostředí (IDE). Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na možnost **nástroje**  >  a pak vyberte **možnost** **Environment**  >  **písma a barvy** prostředí.
 
 Změny barevného schématu se neprojeví během relace, ve které jste je provedli. Změny barev můžete vyhodnotit tak, že otevřete jinou instanci aplikace Visual Studio a vydáte podmínky, za kterých očekáváte, že se vaše změny použijí.
 
@@ -107,7 +109,7 @@ Mezi některé položky zobrazení patří:
 |**Okraj indikátoru**|Okraj na levé straně editoru kódu, kde se zobrazují zarážky a ikony záložek.|
 |**Čísla řádků**|Volitelná čísla, která se zobrazí vedle každého řádku kódu|
 |**Viditelné prázdné znaky**|Mezery, tabulátory a indikátory zalamování slov|
-|**Záložku**|Řádky, které mají záložky. **Záložka** je viditelná pouze v případě, že je okraj indikátoru zakázán.|
+|**Záložka**|Řádky, které mají záložky. **Záložka** je viditelná pouze v případě, že je okraj indikátoru zakázán.|
 |**Spárování složených závorek (zvýraznění)**|Zvýraznění, které obvykle formátuje tučně pro odpovídající závorky.|
 |**Spárování složených závorek (obdélník)**|Zvýraznění, které je obvykle šedý obdélník na pozadí.|
 |**Zarážka (zakázaná)**|Nepoužívá se.|
@@ -155,7 +157,7 @@ Mezi některé položky zobrazení patří:
 |**Data paměti**|Barva textu používaná k zobrazení dat v okně **paměti**|
 |**Paměť je nečitelná.**|Barva textu používaná k zobrazení nečitelných paměťových oblastí v okně **paměti**|
 |**Číselná**|Číslo v kódu, které představuje skutečnou číselnou hodnotu.|
-|**Podnikatel**|Operátory, jako jsou +,-a! =.|
+|**Operátor**|Operátory, jako jsou +,-a! =.|
 |**Jiná chyba**|Jiné typy chyb, na které se nevztahují jiné chybové vlnovky. V současné době zahrnuje úpravy hrubé v úpravách a pokračování.|
 |**Klíčové slovo preprocesoru**|Klíčová slova používaná preprocesorem, jako je například #include.|
 |**Oblast jen pro čtení**|Kód, který nelze upravovat. Například kód zobrazený v okně zobrazení definice kódu nebo kód, který nelze změnit během úprav a pokračování.|
@@ -212,7 +214,7 @@ Mezi některé položky zobrazení patří:
 
 Zobrazuje dostupné barvy, které můžete zvolit pro popředí položky vybrané v části **Zobrazit položky**. Vzhledem k tomu, že některé položky souvisejí a měly by proto udržovat konzistentní schéma zobrazení, změna barvy popředí textu také změní výchozí hodnoty pro prvky, jako je chyba kompilátoru, klíčové slovo nebo operátor.
 
-**Automaticky**
+**Automatické**
 
 Položky mohou dědit barvu popředí z jiných položek zobrazení, jako je například **prostý text**. Použijete-li tuto možnost, bude při změně barvy zděděné položky zobrazení také automaticky změněna barva souvisejících položek zobrazení. Například pokud jste vybrali možnost **Automatická** hodnota pro **chybu kompilátoru** a později jste změnili barvu **prostého textu** na červenou, **Chyba kompilátoru** by také automaticky dědila červenou barvu.
 
@@ -231,7 +233,7 @@ Zobrazí dialogové okno barvy, které umožňuje nastavit vlastní barvu pro po
 
 Poskytuje paletu barev, ze které můžete zvolit barvu pozadí pro položku vybranou v **zobrazení položky**. Vzhledem k tomu, že některé položky jsou v relaci, a měla by proto zachovat konzistentní schéma zobrazení, změna barvy pozadí textu také změní výchozí hodnoty pro prvky, jako je chyba kompilátoru, klíčové slovo nebo operátor.
 
-**Automaticky**
+**Automatické**
 
 Položky mohou dědit barvu pozadí z jiných položek zobrazení, jako je například **prostý text**. Použijete-li tuto možnost, bude při změně barvy zděděné položky zobrazení také automaticky změněna barva souvisejících položek zobrazení. Například pokud jste vybrali možnost **Automatická** hodnota pro **chybu kompilátoru** a později jste změnili barvu **prostého textu** na červenou, **Chyba kompilátoru** by také automaticky dědila červenou barvu.
 
@@ -243,7 +245,7 @@ Barva, která se zobrazí pro položku při prvním otevření sady Visual Studi
 
 Zobrazí dialogové okno barvy, které umožňuje nastavit vlastní barvu pro položku vybranou v seznamu zobrazit položky.
 
-**Bold**
+**Tučný**
 
 Tuto možnost vyberte, chcete-li zobrazit text vybraných **položek zobrazení** v tučném textu. V editoru je snadnější identifikovat tučný text.
 

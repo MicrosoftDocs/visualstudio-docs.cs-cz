@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Po spuštění, Prostředí, Možnosti
+description: Naučte se, jak pomocí úvodní stránky v části prostředí nastavit jinou výchozí akci při otevření sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 03/28/2019
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27803983fe0b387f98934adfa6be3abbbe23611c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8e6cbac9da68a31c345805c1070c4d5b9fd168d
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770589"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616301"
 ---
 # <a name="options-dialog-box-environment--startup"></a>Dialogové okno Možnosti: \> spuštění prostředí
 
@@ -27,6 +29,6 @@ Pomocí této stránky můžete přizpůsobit úvodní stránku aplikace Visual 
 
 ::: moniker range=">=vs-2019"
 
-Tato stránka slouží k nastavení jiné výchozí akce při spuštění sady Visual Studio. V rozevíracím seznamu **při spuštění** vyberte možnost z **okna Start** (umožňuje otevřít nový nebo existující projekt), nejnovější **řešení**nebo **prázdné prostředí**.
+Tato stránka slouží k nastavení jiné výchozí akce při spuštění sady Visual Studio. V rozevíracím seznamu **při spuštění** vyberte možnost z **okna Start** (umožňuje otevřít nový nebo existující projekt), nejnovější **řešení** nebo **prázdné prostředí**.
 
 ::: moniker-end

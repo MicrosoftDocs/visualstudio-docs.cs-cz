@@ -1,5 +1,7 @@
 ---
 title: Invertování podmíněných výrazů a logických operací
+description: Přečtěte si, jak pomocí nabídky rychlé akce a refaktoring Invertovat podmíněný výraz nebo podmíněný operátor OR.
+ms.custom: SEO-VS-2020
 ms.date: 02/19/2019
 ms.topic: reference
 author: kendrahavens
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3931ae53fc29b0ffd8b8b6e96951a0f4786ff756
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 180e42d5399116df95289e4e5fd0aed1255bf3de
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "65531679"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617380"
 ---
 # <a name="invert-conditional-expressions-and-conditional-andor-operators"></a>Invertovat podmíněné výrazy a podmíněné operátory AND/OR
 
@@ -36,9 +38,9 @@ Tento refaktoring platí pro:
 2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
 3. Vyberte **Invertovat podmíněné** nebo **nahraďte ' && ' znakem ' | | '**
 
-    ![Invertovat podmíněný](media/invert-conditional.png)
+    ![Snímek obrazovky s možností Invertovat podmíněný](media/invert-conditional.png)
 
-    ![Invertovat podmíněný](media/invert-logical-operator.png)
+    ![Snímek obrazovky nahrazující && s | | nastavení.](media/invert-logical-operator.png)
 
 ## <a name="see-also"></a>Viz také
 

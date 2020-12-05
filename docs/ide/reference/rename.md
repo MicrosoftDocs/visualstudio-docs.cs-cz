@@ -1,5 +1,7 @@
 ---
 title: Přejmenování refaktoru
+description: Naučte se používat funkci refaktor rename k přejmenování identifikátorů pro symboly kódu, jako jsou pole, místní proměnné, metody, obory názvů, vlastnosti a typy.
+ms.custom: SEO-VS-2020
 ms.date: 05/04/2020
 ms.topic: reference
 author: TerryGLee
@@ -12,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8d5b3d32b23b336dc86a92c33bcb97d02312f2dc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43a6e93815732c4f9d2ec7f29d6d6bef4c1f3451
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84182951"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616717"
 ---
 # <a name="rename-a-code-symbol-refactoring"></a>Přejmenování refaktoringu symbolů kódu
 
@@ -48,7 +50,7 @@ Tento refaktoring platí pro:
 2. Pak použijte svou klávesnici nebo myš následujícím způsobem:
 
    - **Klávesnice**
-      - Stiskněte klávesy **Ctrl + r**a pak **kombinaci kláves Ctrl + r**. (Všimněte si, že se vaše klávesová zkratka může lišit v závislosti na vybraném profilu.)
+      - Stiskněte klávesy **Ctrl + r** a pak **kombinaci kláves Ctrl + r**. (Všimněte si, že se vaše klávesová zkratka může lišit v závislosti na vybraném profilu.)
    - **Myš**
       - Vyberte možnost **upravit > refaktoring > přejmenovat**.
       - Klikněte pravým tlačítkem na kód a vyberte **Přejmenovat**.
@@ -78,7 +80,7 @@ Tento refaktoring platí pro:
 
    ![Konflikt přejmenování](media/rename-conflict-cs.png)
 
-- Dalším způsobem, jak přejmenovat symbol, je změnit jeho název v editoru. Pak stiskněte klávesu CTRL v názvu symbolu a potom stiskněte **klávesu CTRL** + **.** nebo jednoduše rozbalte nabídku ikony žárovky, která se zobrazí, a vyberte možnost **Přejmenovat \<old name> na \<new name> **.
+- Dalším způsobem, jak přejmenovat symbol, je změnit jeho název v editoru. Pak stiskněte klávesu CTRL v názvu symbolu a potom stiskněte **klávesu CTRL** + **.** nebo jednoduše rozbalte nabídku ikony žárovky, která se zobrazí, a vyberte možnost **Přejmenovat \<old name> na \<new name>**.
 
    ![Přejmenování v editoru](media/rename-with-editor-cs.png)
 

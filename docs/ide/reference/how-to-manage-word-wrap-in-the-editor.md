@@ -1,5 +1,7 @@
 ---
 title: Zalamování řádků
+description: Naučte se, jak zapnout a vypnout možnost zalamování řádků v editoru kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/07/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4bf76643ce1ea6e2f449c54fbc31d441418becf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20540fe7cc124c44cd1af0e031e10d5ee0b06ba1
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770334"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617419"
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>Postupy: Správa zalamování řádků v editoru
 
@@ -36,7 +38,7 @@ Můžete nastavit a vymazat možnost **zalamování slov** . Pokud je tato možn
 
      V podsložce vyberte **Obecné** možnosti pro jazyk, ve kterém programujete.
 
-3. V části **Nastavení**zaškrtněte nebo zrušte zaškrtnutí políčka **zalamování řádků** .
+3. V části **Nastavení** zaškrtněte nebo zrušte zaškrtnutí políčka **zalamování řádků** .
 
      Je-li vybrána možnost **zalamování řádků** , možnost **Zobrazit vizuální glyfy pro zalamování řádků** je povolena.
 

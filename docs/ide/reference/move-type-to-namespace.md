@@ -1,5 +1,7 @@
 ---
 title: Přesun typu do oboru názvů
+description: Naučte se, jak pomocí nabídky rychlé akce a refaktoring přesunout typ na jiný obor názvů nebo složku.
+ms.custom: SEO-VS-2020
 ms.date: 06/17/2019
 ms.topic: reference
 author: mikadumont
@@ -10,12 +12,12 @@ dev_langs:
 ms.workload:
 - dotnet
 monikerRange: vs-2019
-ms.openlocfilehash: 58d2757fa8798b67c8e597f5f82bc65a279f4a90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21e13938bcb19306b897501a4aad11d6b4bd15ea
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80375572"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616912"
 ---
 # <a name="move-type-to-namespace"></a>Přesun typu do oboru názvů
 

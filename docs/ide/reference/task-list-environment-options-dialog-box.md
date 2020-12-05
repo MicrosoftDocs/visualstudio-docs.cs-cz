@@ -1,5 +1,7 @@
 ---
 title: Seznam úkolů, prostředí, dialogové okno Možnosti
+description: Naučte se, jak pomocí stránky Seznam úkolů v části prostředí přidávat, odstraňovat a měnit tokeny komentářů, které generují Seznam úkolů připomenutí.
+ms.custom: SEO-VS-2020
 ms.date: 03/28/2019
 ms.topic: reference
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e28b3b9c3fe4d6e89228dc18ba8b98aa5e0d2e76
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4b7b29c477bf046cfd47db9e39cb57360d999dee
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80233119"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616288"
 ---
 # <a name="options-dialog-box-environment--task-list"></a>Dialogové okno Možnosti: prostředí \> seznam úkolů
 
@@ -41,7 +43,7 @@ Seznam tokenů \
 Zobrazí seznam tokenů a umožňuje přidat nebo odebrat vlastní tokeny. Tokeny komentáře rozlišují velká a malá písmena v jazycích C# a C++, ale ne v Visual Basic.
 
 > [!NOTE]
-> Pokud nechcete požadovaný token zadat přesně tak, jak se zobrazuje v seznamu tokenů, nebude se v **seznam úkolů**zobrazovat úloha s komentářem.
+> Pokud nechcete požadovaný token zadat přesně tak, jak se zobrazuje v seznamu tokenů, nebude se v **seznam úkolů** zobrazovat úloha s komentářem.
 
 Upřednostněn
 Nastaví prioritu úloh, které používají vybraný token (nízká, normální nebo vysoká). K komentářům úlohy začínajícím tímto tokenem se automaticky přiřadí určená priorita v **seznam úkolů**.

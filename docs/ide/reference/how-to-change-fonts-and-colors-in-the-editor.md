@@ -1,5 +1,7 @@
 ---
 title: Změna písma a barev editoru
+description: Naučte se, jak změnit výchozí řez písma, upravit velikost písma a změnit barvy popředí a pozadí pro různé položky zobrazení textu v editoru kódu.
+ms.custom: SEO-VS-2020
 ms.date: 06/01/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa56a7ab8b3147cc3e8fbb784211d9a34536189d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6ad32d814b67cae9a9a0a538d6c131aecba9c0b8
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770423"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617120"
 ---
 # <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio"></a>Postupy: Změna písma a barev pro Editor v aplikaci Visual Studio
 
@@ -29,22 +31,22 @@ Můžete změnit výchozí řez písma, upravit velikost písma a změnit barvy 
 
 - Názvy písem s pevnou šířkou jsou uvedeny tučně.
 
-- Můžete nastavit možnosti **popředí položky**, **pozadí položky**a **tučné písmo** pro každý typ textového prvku. Například pokud změníte barvy a vyberete **tučné** pro **Komentáře** a **záložky**, jiné typy textových prvků nebudou nijak ovlivněny.
+- Můžete nastavit možnosti **popředí položky**, **pozadí položky** a **tučné písmo** pro každý typ textového prvku. Například pokud změníte barvy a vyberete **tučné** pro **Komentáře** a **záložky**, jiné typy textových prvků nebudou nijak ovlivněny.
 
 > [!IMPORTANT]
 > Chcete-li se dozvědět, jak přizpůsobit písma a barvy pro rozhraní IDE a ne pouze pro Editor kódu, přečtěte si téma **[Postupy: Změna písma a barev na stránce sady Visual Studio](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)** .
 
 ## <a name="change-the-default-font-face-size-and-colors"></a>Změna výchozího vzhledu písma, velikosti a barev
 
-1. V nabídce **nástroje** vyberte **možnost možnosti** . V části **prostředí**vyberte **písma a barvy**.
+1. V nabídce **nástroje** vyberte **možnost možnosti** . V části **prostředí** vyberte **písma a barvy**.
 
-1. V **zobrazení zobrazit nastavení pro**vyberte **textový editor**.
+1. V **zobrazení zobrazit nastavení pro** vyberte **textový editor**.
 
    ![Snímek obrazovky dialogového okna Možnosti pro změnu písma a barev v editoru](../../ide/media/fonts-colors-text-editor.png "Snímek obrazovky dialogového okna Možnosti pro změnu písma a barev v editoru")
 
 1. Upravte možnosti **písmo** a **Velikost** pro změnu vzhledu a velikosti písma pro všechny textové prvky ve všech editorech.
 
-1. Vyberte příslušnou položku v části **Zobrazit položky**a pak změňte možnosti pozadí **položky** a **pozadí položky** .
+1. Vyberte příslušnou položku v části **Zobrazit položky** a pak změňte možnosti pozadí **položky** a **pozadí položky** .
 
     > [!TIP]
     > Kliknutím na **použít výchozí** obnovíte výchozí nastavení.

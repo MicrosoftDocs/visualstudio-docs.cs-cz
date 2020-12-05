@@ -1,5 +1,7 @@
 ---
 title: Projekty a řešení – dialogové okno umístění
+description: Naučte se používat stránku umístění v části projekty a řešení k nastavení výchozích umístění pro projekty, šablony projektů a šablony položek.
+ms.custom: SEO-VS-2020
 ms.date: 07/26/2019
 ms.topic: reference
 f1_keywords:
@@ -9,16 +11,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2be4f2977f34ec57198ed3e87f58bdacb4daae4a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 171635e9f08b0c427679d874dee3466d9eb5e3f6
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565718"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616821"
 ---
 # <a name="options-dialog-box-projects-and-solutions--locations"></a>Dialogové okno Možnosti: projekty a \> umístění řešení
 
-Tato stránka slouží k nastavení výchozích umístění pro projekty, šablony projektů a šablony položek. Chcete-li získat přístup k těmto možnostem, vyberte možnost **nástroje**  >  **Options**, rozbalte položku **projekty a řešení**a potom vyberte **umístění**.
+Tato stránka slouží k nastavení výchozích umístění pro projekty, šablony projektů a šablony položek. Chcete-li získat přístup k těmto možnostem, vyberte možnost **nástroje**  >  **Options**, rozbalte položku **projekty a řešení** a potom vyberte **umístění**.
 
 Na stránce **umístění** jsou k dispozici níže uvedené možnosti.
 

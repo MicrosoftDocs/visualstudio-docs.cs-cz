@@ -1,5 +1,7 @@
 ---
 title: Prostředí – příkaz
+description: Přečtěte si o příkazu shell a o tom, jak spouští spustitelné programy v rámci sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bf13c7624d6c9d8e64b79f653eb83a0c5f3b3f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6197201ed35520ba8d362b6aa448fe625a2fe3a
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565874"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616366"
 ---
 # <a name="shell-command"></a>Prostředí – příkaz
 Spustí spustitelné programy v rámci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .

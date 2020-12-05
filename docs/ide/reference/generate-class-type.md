@@ -1,5 +1,7 @@
 ---
 title: Generovat třídu nebo typ
+description: Naučte se, jak pomocí nabídky rychlé akce a refaktoring hned vygenerovat kód pro třídu nebo typ.
+ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -12,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94786ef10e427a0deb4f80471305509124f1638b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe38cacf9f33acfac6b1634b6be6a8a3e45de820
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595628"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617536"
 ---
 # <a name="generate-a-class-or-type-in-visual-studio"></a>Generování třídy nebo typu v aplikaci Visual Studio
 
@@ -59,8 +61,8 @@ Tato generace kódu platí pro:
 3. Vyberte jednu z možností z rozevírací nabídky:
 
    - Při generování třídy '*TypeName*' v novém souboru se &mdash; vytvoří třída s názvem *TypeName* v souboru s názvem *TypeName*. cs/. vb
-   - Při generování třídy*TypeName*se &mdash; v aktuálním souboru vytvoří třída s názvem *TypeName* .
-   - Vygenerovat vnořenou*TypeName*třídu TypeName &mdash; vytvoří třídu s názvem *TypeName* vnořenou uvnitř aktuální třídy.
+   - Při generování třídy *TypeName* se &mdash; v aktuálním souboru vytvoří třída s názvem *TypeName* .
+   - Vygenerovat vnořenou *TypeName* třídu TypeName &mdash; vytvoří třídu s názvem *TypeName* vnořenou uvnitř aktuální třídy.
    - Generovat nový typ... &mdash; Vytvoří novou třídu nebo strukturu se všemi zadanými vlastnostmi.
 
    > [!TIP]

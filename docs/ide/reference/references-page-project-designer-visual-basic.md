@@ -1,5 +1,7 @@
 ---
 title: Stránka Odkazy, návrhář projektu (Visual Basic)
+description: Naučte se používat stránku odkazy Návrháře projektu ke správě odkazů projektu, webových odkazů a importovaných oborů názvů.
+ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: reference
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b80427999ad841c493e61cd704b64435f81c3914
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6cc06bd51d66b49991e12db8bb03a63a5a742fe1
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565601"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616665"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>Stránka Odkazy, návrhář projektu (Visual Basic)
 
@@ -44,7 +46,7 @@ Kliknutím na toto tlačítko otevřete dialogové okno **cesty odkazů** .
 > 3. Složky, které zobrazují soubory v dialogovém okně **Přidat odkaz** .
 > 4. Složka obj projektu. (Pokud do projektu přidáte odkaz modelu COM, jedno nebo více sestavení může být přidáno do složky obj projektu.)
 
- **Odkazy**
+ **Reference**
 
 Tento seznam obsahuje všechny odkazy v projektu, použité nebo nepoužívané.
 
@@ -68,7 +70,7 @@ Vyberte webový odkaz v seznamu **odkazy** a kliknutím na toto tlačítko ho ak
 
 V tomto poli můžete zadat vlastní obor názvů a kliknutím na **Přidat import uživatele** ho přidat do seznamu oborů názvů.
 
-Můžete vytvořit aliasy pro uživatelem importované obory názvů. Provedete to tak, že zadáte alias a obor názvů *alias*do = *oboru názvů*aliasu formátu. To je užitečné, pokud používáte dlouhé obory názvů, například: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http` .
+Můžete vytvořit aliasy pro uživatelem importované obory názvů. Provedete to tak, že zadáte alias a obor názvů *alias* do = *oboru názvů* aliasu formátu. To je užitečné, pokud používáte dlouhé obory názvů, například: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http` .
 
  **Přidat import uživatele**
 

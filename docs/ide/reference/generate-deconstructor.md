@@ -1,5 +1,7 @@
 ---
 title: Generovat rychlou akci dekonstruktoru
+description: Naučte se, jak pomocí nabídky rychlé akce a refaktoring hned vygenerovat zástupnou proceduru metody pro nový dekonstruktor.
+ms.custom: SEO-VS-2020
 ms.date: 02/19/2019
 ms.topic: reference
 author: kendrahavens
@@ -9,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5a3a89d15d05b44575fede98d3043d706b24c1d9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff2ac7682eff1c3da0597a95945a6a0b016d9213
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "65531888"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617250"
 ---
 # <a name="generate-a-deconstructor-in-visual-studio"></a>Generování dekonstruktoru v aplikaci Visual Studio
 
@@ -40,7 +42,7 @@ Tato generace kódu platí pro:
       - V deklaraci kurzoru vyberte CTRL +. pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
       - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
-      - Výběrem ![screwdriver](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud je textový kurzor již na prázdném řádku ve třídě.
+      - Vyberte :::image type="icon" source="media/screwdriver.png"::: ikonu, která se zobrazí v levém okraji, pokud je textový kurzor již na prázdném řádku ve třídě.
 
       ![Generovat opravu dekonstruktor Code](media/deconstruct-codefix.png)
 

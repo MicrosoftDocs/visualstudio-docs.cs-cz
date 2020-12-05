@@ -1,5 +1,7 @@
 ---
 title: Příkazové podokno
+description: Naučte se používat okamžité okno k ladění a vyhodnocení výrazů, provádění příkazů a tisku hodnot proměnných.
+ms.custom: SEO-VS-2020
 ms.date: 02/25/2019
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b21cdb9136abe1e960e5b74bbf09e7d1694519d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 342a2a34528134ed1174058b6701c77c9217fc63
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568955"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617016"
 ---
 # <a name="immediate-window"></a>Příkazové podokno
 
@@ -90,7 +92,7 @@ Při vytváření kontextu pro vyhodnocení výrazu v době návrhu aplikace Vis
 
 Při vydávání příkazů sady Visual Studio v **příkazovém** okně zadejte symbol větší než (>). Pomocí šipek **nahoru** a **dolů** můžete procházet dříve použité příkazy.
 
-|Úkol|Řešení|Příklad|
+|Úloha|Řešení|Příklad|
 |----------|--------------|-------------|
 |Vyhodnotit výraz.|Předtvářte výraz otazníkem (?).|`? a+b`|
 |Dočasné zadání režimu příkazů v přímém režimu (pro spuštění jednoho příkazu).|Zadejte příkaz s znakem větším než (>).|`>alias`|
@@ -125,7 +127,7 @@ V některých konfiguracích nastavení se v **příkazovém podokně** zobrazuj
 
 ### <a name="toggle-first-chance-exception-notifications-in-the-immediate-window"></a>Přepínání oznámení o první odpovídající výjimce v příkazovém podokně
 
-1. V nabídce **zobrazení** klikněte na položku **ostatní okna**a klikněte na možnost **výstup**.
+1. V nabídce **zobrazení** klikněte na položku **ostatní okna** a klikněte na možnost **výstup**.
 
 2. Klikněte pravým tlačítkem myši na oblast textu v okně **výstup** a pak vyberte nebo zrušte výběr **zprávy o výjimce**.
 

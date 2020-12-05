@@ -1,5 +1,7 @@
 ---
 title: Generovat pole, vlastnost, místní proměnná
+description: Naučte se, jak pomocí nabídky rychlé akce a refaktoringy vygenerovat kód pro dříve nedeklarované pole, vlastnost nebo místní.
+ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b554aa5586150942c0fc7d7aeada9356a67029ca
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ebce688317a04bdc223659fb0c085b2f0223119d
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595602"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617497"
 ---
 # <a name="generate-a-field-property-or-local-variable-in-visual-studio"></a>Generování pole, vlastnosti nebo místní proměnné v aplikaci Visual Studio
 

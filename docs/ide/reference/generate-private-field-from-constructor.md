@@ -1,5 +1,7 @@
 ---
 title: Generovat soukromé pole a vlastnost z konstruktoru
+description: Naučte se, jak pomocí nabídky rychlé akce a refaktoring vytvořit soukromé pole nebo vlastnost z konstruktoru.
+ms.custom: SEO-VS-2020
 ms.date: 06/20/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 56bd361d2bffb4ff17b03ac6743837032d1934e1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e989efed8b58746312ed5f5a510efa049393f3db
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283720"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617458"
 ---
 # <a name="generate-private-field-and-property-from-constructor"></a>Generovat soukromé pole a vlastnost z konstruktoru
 

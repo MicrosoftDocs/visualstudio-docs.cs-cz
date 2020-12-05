@@ -1,5 +1,6 @@
 ---
 title: Nastavení importu a exportu v dialogovém okně Možnosti
+description: Naučte se, jak pomocí stránky nastavení importu a exportu v části prostředí určit, kam se má uložit soubor uživatelských nastavení.
 ms.custom: SEO-VS-2020
 ms.date: 03/28/2019
 ms.topic: reference
@@ -11,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b78cae626e6e000e6c916c801ada6c1938f1731e
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 1e2ef878ec548baed476205cbc3dcaddce67355a
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046603"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616952"
 ---
 # <a name="options-dialog-box-environment--import-and-export-settings"></a>Dialogové okno Možnosti: \> Nastavení importu a exportu prostředí
 
