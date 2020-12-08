@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení pásu karet pro Outlook
+description: Dozvíte se, že při přizpůsobení pásu karet v aplikaci systém Microsoft Office Outlook je nutné vzít v úvahu, kde se vlastní pás karet zobrazí v aplikaci.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2865bd89da3b59a24208e07739e8c56254959c88
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25b4faa994a99bccdc2122ad6b9d124f7391e9f8
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986107"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848102"
 ---
 # <a name="customize-a-ribbon-for-outlook"></a>Přizpůsobení pásu karet pro Outlook
   Při přizpůsobení pásu karet v aplikaci systém Microsoft Office Outlook je nutné vzít v úvahu, kde se vlastní pás karet zobrazí v aplikaci. Outlook zobrazí pás karet v hlavním uživatelském rozhraní aplikace (UI) a ve Windows, které se otevře, když uživatelé provedou určité úlohy, například vytváření e-mailových zpráv. Tato okna aplikací jsou pojmenována jako kontroloři.

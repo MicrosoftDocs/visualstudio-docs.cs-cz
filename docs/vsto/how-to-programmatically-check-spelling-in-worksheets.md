@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Kontrola pravopisu v listech prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete programově kontrolovat pravopis slov v listu Microsoft Excelu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 797fc498c54bdbc466fe8ddc35229b2c106db80d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f2a9f50767082ead9daafe684aae7fc1524ba9c
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541541"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848285"
 ---
 # <a name="how-to-programmatically-check-spelling-in-worksheets"></a>Postupy: Kontrola pravopisu v listech prostřednictvím kódu programu
   Můžete programově kontrolovat pravopis slov v listu. Dialogové okno **Pravopis** se zobrazí automaticky v případě, že se v listu nacházejí nesprávně napsaná slova.

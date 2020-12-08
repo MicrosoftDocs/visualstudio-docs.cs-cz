@@ -1,5 +1,7 @@
 ---
 title: Pokyny pro vytváření oblastí formulářů aplikace Outlook
+description: Seznamte se s pokyny pro vytváření oblastí formulářů Outlooku, které vám pomůžou optimalizovat oblasti formuláře a vyhnout se potenciálním problémům.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a962b1ae2bff7b9a954204485a6ee73a3b63eb7b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aaf6b96548a9856833fcd1768764ed914da30a07
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255957"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848089"
 ---
 # <a name="guidelines-to-create-outlook-form-regions"></a>Pokyny pro vytváření oblastí formulářů aplikace Outlook
   Následující informace vám můžou přispět k optimalizaci oblastí formuláře a vyhnout se potenciálním problémům:
@@ -84,7 +86,7 @@ ms.locfileid: "71255957"
 
   Ikona **stránky** se zobrazí na pásu karet inspektora pro položky, které mají samostatné, nahrazující nebo nahrazené oblasti formuláře.
 
-  Ikona **okna** se zobrazí v oznamovací oblasti a v **Alt** + dialogovém okně**karta** Alt pro otevřené položky, které zobrazují náhradní nebo nahrazené oblasti formuláře.
+  Ikona **okna** se zobrazí v oznamovací oblasti a v **Alt** + dialogovém okně **karta** Alt pro otevřené položky, které zobrazují náhradní nebo nahrazené oblasti formuláře.
 
 ## <a name="see-also"></a>Viz také
 - [Přístup k oblasti formuláře v době běhu](../vsto/accessing-a-form-region-at-run-time.md)

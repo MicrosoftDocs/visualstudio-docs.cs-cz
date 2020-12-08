@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání ovládacích prvků ListObject do listů'
+description: Naučte se, jak přidat ovládací prvky ListObject do listu aplikace systém Microsoft Office Excel v době návrhu a v době běhu v projektech na úrovni dokumentu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4c53d820170c359e568b0a7b0ab5711a632d9eba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5dd72db2678f448158f268b790d39d4f6e44a737
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538317"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848154"
 ---
 # <a name="how-to-add-listobject-controls-to-worksheets"></a>Postupy: Přidání ovládacích prvků ListObject do listů
   <xref:Microsoft.Office.Tools.Excel.ListObject>Ovládací prvky můžete přidat do listu aplikace systém Microsoft Office Excel v době návrhu a v době běhu v projektech na úrovni dokumentu.
@@ -38,7 +40,7 @@ ms.locfileid: "85538317"
   Další informace o <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacích prvcích naleznete v tématu [ListObject Control](../vsto/listobject-control.md).
 
 ## <a name="add-listobject-controls-at-design-time"></a><a name="designtime"></a> Přidat ovládací prvky ListObject v době návrhu
- Existuje několik způsobů, jak přidat <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvky do listu v projektu na úrovni dokumentu v době návrhu: v aplikaci Excel, v sadě **nástrojů sady**Visual Studio a v okně **zdroje dat** .
+ Existuje několik způsobů, jak přidat <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvky do listu v projektu na úrovni dokumentu v době návrhu: v aplikaci Excel, v sadě **nástrojů sady** Visual Studio a v okně **zdroje dat** .
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -50,7 +52,7 @@ ms.locfileid: "85538317"
 
 #### <a name="to-use-the-toolbox"></a>Použití panelu nástrojů
 
-1. Z karty **ovládací prvky aplikace Excel** na **panelu nástrojů**přetáhněte <xref:Microsoft.Office.Tools.Excel.ListObject> na list.
+1. Z karty **ovládací prvky aplikace Excel** na **panelu nástrojů** přetáhněte <xref:Microsoft.Office.Tools.Excel.ListObject> na list.
 
      Zobrazí se dialogové okno **Přidat ovládací prvek ListObject** .
 

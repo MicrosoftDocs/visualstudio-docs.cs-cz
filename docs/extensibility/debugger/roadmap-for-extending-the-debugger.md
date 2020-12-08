@@ -1,5 +1,7 @@
 ---
 title: Plán pro rozšíření ladicího programu | Microsoft Docs
+description: Dokumentace k ladění sady Visual Studio obsahuje ukázky, reference a několik scénářů, které ukazují typické způsoby přizpůsobení ladicího programu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9d97a7edd62540d12a0a60d15b3179ca0a623c26
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 2574fe76faadf4284088c0d47592d0c5ba0d38f9
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011824"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848336"
 ---
 # <a name="roadmap-for-extending-the-debugger"></a>Plán pro rozšíření ladicího programu
 Tato dokumentace poskytuje návod a referenční informace pro rozšíření [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] ladicího programu pomocí nástroje [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .
@@ -47,7 +49,7 @@ Tato dokumentace poskytuje návod a referenční informace pro rozšíření [!I
 
    [Implementace dodavatele portu](../../extensibility/debugger/implementing-a-port-supplier.md)
 
-   [ukázky](../../extensibility/debugger/visual-studio-debugging-samples.md)
+   [Ukázky](../../extensibility/debugger/visual-studio-debugging-samples.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Začínáme](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Správa rozložení ovládacích prvků v podoknech akcí'
+description: Zjistěte, jak můžete spravovat rozložení ovládacích prvků v podoknech akcí psaním kódu pro správné skládání uživatelských ovládacích prvků.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b6df90847000560299b8b1a6f259ffa6e7df0729
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbee49a97ab6cb3e6084950e53f30b3cb6ce1b7c
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520144"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848245"
 ---
 # <a name="how-to-manage-control-layout-on-actions-panes"></a>Postupy: Správa rozložení ovládacích prvků v podoknech akcí
   Podokno akce je ukotveno napravo od dokumentu nebo listu ve výchozím nastavení. dá se ale ukotvit vlevo, nahoře nebo dole. Pokud používáte více uživatelských ovládacích prvků, můžete napsat kód pro správné vytvoření zásobníku uživatelských ovládacích prvků v podokně akce. Další informace najdete v tématu [Přehled podokna akcí](../vsto/actions-pane-overview.md).

@@ -1,7 +1,8 @@
 ---
 title: 'Postupy: mapování schémat na listy v rámci sady Visual Studio'
+description: Přečtěte si, jak můžete mapovat schéma XML na excelový list systém Microsoft Office v době, kdy je sešit otevřený v aplikaci Visual Studio.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c8a0437b940953e89e24969314f63df34d223496
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7a7e1a06e644536ce9ce881d9b9f1dc23aae03f1
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538135"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848206"
 ---
 # <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>Postupy: mapování schémat na listy v rámci sady Visual Studio
   Pokud je sešit otevřený v aplikaci Visual Studio, můžete namapovat schéma XML na list. Použijete stejné systém Microsoft Office excelové nástroje, které použijete, když je sešit otevřený mimo sadu Visual Studio. Projekt sady Office vytvoří stejné objekty bez ohledu na to, zda je schéma namapováno na list před nebo po vytvoření řešení aplikace Excel.

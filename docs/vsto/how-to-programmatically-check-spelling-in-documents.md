@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Kontrola pravopisu v dokumentech prostřednictvím kódu programu'
+description: Přečtěte si, že pokud chcete v dokumentu programově kontrolovat pravopis, můžete použít metodu CheckSpelling.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 93ba9d9907135952f7408652bfb36f440d23138d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85294b21e9fd1f52f5cc707fc6824a87530e3cda
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537849"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848310"
 ---
 # <a name="how-to-programmatically-check-spelling-in-documents"></a>Postupy: Kontrola pravopisu v dokumentech prostřednictvím kódu programu
   Chcete-li kontrolovat pravopis v dokumentu, použijte <xref:Microsoft.Office.Interop.Word._Application.CheckSpelling%2A> metodu. Tato metoda vrací logickou hodnotu, která označuje, zda je zadaný parametr správně zadán.

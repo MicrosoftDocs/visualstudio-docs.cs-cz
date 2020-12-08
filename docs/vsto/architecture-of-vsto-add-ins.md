@@ -1,5 +1,7 @@
 ---
 title: Architektura doplňků VSTO
+description: Doplňky VSTO vytvořené v aplikaci Visual Studio mají funkce architektury, které zdůrazňují stabilitu a zabezpečení a umožňují, aby s systém Microsoft Office úzce spolupracovaly.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 401ce9b8421cd636fc72c59dcd6641ff4e05d968
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 451ae0bd466403819a5b4e53d76070876d762c38
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64814519"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848349"
 ---
 # <a name="architecture-of-vsto-add-ins"></a>Architektura doplňků VSTO
   Doplňky VSTO vytvořené pomocí nástrojů Office Developer Tools v sadě Visual Studio mají funkce architektury, které zdůrazňují stabilitu a zabezpečení a umožňují, aby při systém Microsoft Office úzce spolupracovaly. Toto téma popisuje následující aspekty doplňků VSTO:

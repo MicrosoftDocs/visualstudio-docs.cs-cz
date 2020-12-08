@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: mapování sloupců ListObject na data'
+description: Zjistěte, jak můžete namapovat, které sloupce se mají zobrazit v ListObject při volání metody SetDataBinding.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b09c07c8b36baeed096c0049c778e431fe232458
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aa24e4a0f0dab9c01de8e5a2960f28d71a9dad6e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538161"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848232"
 ---
 # <a name="how-to-map-listobject-columns-to-data"></a>Postupy: mapování sloupců ListObject na data
   Když svážete <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek s objektem, nebudete <xref:System.Data.DataTable> chtít zobrazit všechny sloupce v seznamu, nebo můžete mít určité sloupce, které nejsou vázány na data. Můžete namapovat, které sloupce se mají zobrazit v <xref:Microsoft.Office.Tools.Excel.ListObject> při volání <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> metody.

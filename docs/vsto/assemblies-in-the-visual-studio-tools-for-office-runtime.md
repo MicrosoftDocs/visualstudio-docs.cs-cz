@@ -1,5 +1,7 @@
 ---
 title: Sestavení v modulu runtime Visual Studio Tools for Office
+description: Přečtěte si, že Visual Studio automaticky přidá odkazy na sestavení modulu runtime Visual Studio Tools for Office.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b2fc47aa917fa9c9d5351fd313ec46ae4aaa0664
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86c3c2b77b6bbea1e609bbea092b44bd1dee1dd4
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75918786"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848295"
 ---
 # <a name="assemblies-in-the-visual-studio-tools-for-office-runtime"></a>Sestavení v modulu runtime Visual Studio Tools for Office
   Při vytváření projektu sady Office sada Visual Studio automaticky přidá odkazy na [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)] sestavení, která jsou použita pro typ projektu a cílovou .NET Framework projektu. Existují různá sestavení v rozšířeních sady Office pro .NET Framework 3,5, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] a [!INCLUDE[net_v45](includes/net-v45-md.md)] . Další informace o rozšířeních Office najdete v tématu [Visual Studio Tools for Office runtime – přehled](visual-studio-tools-for-office-runtime-overview.md).
@@ -41,7 +43,7 @@ ms.locfileid: "75918786"
 
 |Název sestavení|Popis|
 |-------------------|-----------------|
-|Microsoft.Office.Tools.Common.v4.0.Utilities.dll|Poskytuje základní třídy pro generovanou `ThisAddIn` třídu v projektech doplňku VSTO a generovanou třídu pásu karet ve všech projektech.|
+|Microsoft.Office.Tools.Common.v4.0.Utilities.dll|Poskytuje základní třídy pro generovanou `ThisAddIn` třídu v projektech VSTO Add-In a vygenerovanou třídu pásu karet ve všech projektech.|
 |Microsoft.Office.Tools.Excel.v4.0.Utilities.dll|Poskytuje následující typy:<br /><br /> – Základní třídy pro vygenerované `ThisWorkbook` `Sheet` třídy a v projektech na úrovni dokumentu pro Excel.<br />-Model Windows Forms ovládací prvky, které lze použít na listech v projektech aplikace Excel.|
 |Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll|Poskytuje základní třídy pro třídy vygenerované `ThisAddIn` a formové oblasti v projektech aplikace Outlook.|
 |Microsoft.Office.Tools.Word.v4.0.Utilities.dll|Poskytuje následující typy:<br /><br /> – Základní třídy pro generovanou `ThisDocument` třídu v projektech na úrovni dokumentu pro Word<br />-Model Windows Forms ovládací prvky, které lze použít na dokumentech v projektech aplikace Word.|

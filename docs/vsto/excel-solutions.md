@@ -1,5 +1,7 @@
 ---
 title: řešení pro aplikaci Excel
+description: Naučte se používat šablony projektů k automatizaci Excelu, rozšiřování funkcí Excelu a přizpůsobení uživatelského rozhraní (UI) Excelu.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 53351354a470eb5770f07b9afd527b81c4e587b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6ca4cfd45c1147d10ffaf8d3308b9adb09c689e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986072"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848115"
 ---
 # <a name="excel-solutions"></a>řešení pro aplikaci Excel
   Visual Studio poskytuje projektové šablony, které můžete použít k vytvoření přizpůsobení na úrovni dokumentu a doplňků VSTO pro systém Microsoft Office Excel. Tato řešení můžete použít k automatizaci aplikace Excel, rozšiřování funkcí aplikace Excel a přizpůsobení uživatelského rozhraní (UI) aplikace Excel. Další informace o rozdílech mezi přizpůsobením na úrovni dokumentu a doplňky VSTO najdete v tématu [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -85,7 +87,7 @@ ms.locfileid: "72986072"
 ### <a name="options-for-all-project-types"></a>Možnosti pro všechny typy projektů
  V následující tabulce jsou uvedeny možnosti přizpůsobení, které jsou k dispozici pro přizpůsobení na úrovni dokumentu a doplňky VSTO.
 
-|Úkol|Další informace|
+|Úloha|Další informace|
 |----------|--------------------------|
 |Přizpůsobení pásu karet.|[Přehled pásu karet](../vsto/ribbon-overview.md)|
 |Přidejte model Windows Forms ovládací prvky nebo rozšířené ovládací prvky aplikace Excel do listu v přizpůsobeném sešitu pro přizpůsobení na úrovni dokumentu nebo v jakémkoli otevřeném sešitu doplňku VSTO.|[Postupy: Přidání ovládacích prvků Windows Forms do dokumentů Office](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)<br /><br /> [Postupy: Přidání ovládacích prvků grafu do listů](../vsto/how-to-add-chart-controls-to-worksheets.md)<br /><br /> [Postupy: Přidání ovládacích prvků ListObject do listů](../vsto/how-to-add-listobject-controls-to-worksheets.md)<br /><br /> [Postupy: Přidání ovládacích prvků NamedRange do listů](../vsto/how-to-add-namedrange-controls-to-worksheets.md)|
@@ -93,7 +95,7 @@ ms.locfileid: "72986072"
 ### <a name="options-for-document-level-customizations"></a>Možnosti pro přizpůsobení na úrovni dokumentu
  V následující tabulce jsou uvedeny možnosti přizpůsobení, které jsou k dispozici pouze pro přizpůsobení na úrovni dokumentu.
 
-|Úkol|Další informace|
+|Úloha|Další informace|
 |----------|--------------------------|
 |Přidejte podokno akcí do sešitu.|[Přehled podokna akcí](../vsto/actions-pane-overview.md)<br /><br /> [Postupy: Přidání podokna akcí do dokumentů aplikace Word nebo sešitů aplikace Excel](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)|
 |Přidejte rozšířené ovládací prvky rozsahu, které jsou namapovány na uzly XML na list.|[Postupy: Přidání ovládacích prvků XmlMappedRange – do listů](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)|
@@ -101,7 +103,7 @@ ms.locfileid: "72986072"
 ### <a name="options-for-vsto-add-ins"></a>Možnosti doplňků VSTO
  V následující tabulce jsou uvedeny možnosti přizpůsobení, které jsou k dispozici pouze pro doplňky VSTO.
 
-|Úkol|Další informace|
+|Úloha|Další informace|
 |----------|--------------------------|
 |Vytvoří vlastní podokno úloh.|[Vlastní podokna úloh](../vsto/custom-task-panes.md)|
 

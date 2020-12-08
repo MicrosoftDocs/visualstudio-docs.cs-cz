@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání ovládacích prvků NamedRange do listů'
+description: Naučte se, jak přidat ovládací prvky NamedRange do listu aplikace systém Microsoft Office Excel v době návrhu a v době běhu v projektech na úrovni dokumentu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 448a44c8f4bc9380a4ef1ebfec33b264e797cac8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 54487ed7f7cdcb7e7da024e4b96fcbb6d5c2cfe4
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543517"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848141"
 ---
 # <a name="how-to-add-namedrange-controls-to-worksheets"></a>Postupy: Přidání ovládacích prvků NamedRange do listů
   <xref:Microsoft.Office.Tools.Excel.NamedRange>Ovládací prvky můžete přidat do listu aplikace systém Microsoft Office Excel v době návrhu a v době běhu v projektech na úrovni dokumentu.
@@ -39,7 +41,7 @@ ms.locfileid: "85543517"
   Další informace o <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacích prvcích naleznete v tématu [NamedRange Control](../vsto/namedrange-control.md).
 
 ## <a name="add-namedrange-controls-at-design-time"></a><a name="designtime"></a> Přidat ovládací prvky NamedRange v době návrhu
- Existuje několik způsobů, jak přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvky do listu v projektu na úrovni dokumentu v době návrhu: v aplikaci Excel, v sadě **nástrojů sady**Visual Studio a v okně **zdroje dat** .
+ Existuje několik způsobů, jak přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvky do listu v projektu na úrovni dokumentu v době návrhu: v aplikaci Excel, v sadě **nástrojů sady** Visual Studio a v okně **zdroje dat** .
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -47,7 +49,7 @@ ms.locfileid: "85543517"
 
 1. Vyberte buňku nebo buňky, které chcete zahrnout do pojmenovaného rozsahu.
 
-2. Do **pole název**zadejte název rozsahu a stiskněte klávesu **ENTER**.
+2. Do **pole název** zadejte název rozsahu a stiskněte klávesu **ENTER**.
 
      **Pole název** se nachází vedle řádku vzorců, přesně nad sloupce **A** listu.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: zavírání dokumentů aplikace Visio prostřednictvím kódu programu'
+description: Zjistěte, jak můžete zavřít aktivní systém Microsoft Office dokument Visia pomocí Microsoft.Office.Interop.Visio.Document. Close – metoda
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 478905a8ba4dacd2102c4b19fe091016a7409773
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5117714564fe4d8a52dad6f3663f870ce39209ad
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547482"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848267"
 ---
 # <a name="how-to-programmatically-close-visio-documents"></a>Postupy: zavírání dokumentů aplikace Visio prostřednictvím kódu programu
   Aktivní systém Microsoft Office dokument Visia můžete zavřít pomocí `Microsoft.Office.Interop.Visio.Document.Close` metody.

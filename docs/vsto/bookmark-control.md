@@ -1,5 +1,7 @@
 ---
 title: Bookmark – ovládací prvek
+description: Zjistěte, jak je ovládací prvek záložky záložka, která má jedinečný název, zpřístupňuje události a může být svázána s daty.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2b8557581e93c8d2ba5a54a13c04d5de74b24f71
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 53f68bfd9abd26d9dfcb9e253c412a1ddf3c0e28
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255151"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848362"
 ---
 # <a name="bookmark-control"></a>Bookmark – ovládací prvek
   <xref:Microsoft.Office.Tools.Word.Bookmark>Ovládací prvek je záložka, která má jedinečný název, zpřístupňuje události a může být vázána na data. Záložka se dá použít jako zástupný symbol k označení položky nebo umístění v dokumentu aplikace Wordu systém Microsoft Office. <xref:Microsoft.Office.Tools.Word.Bookmark>Ovládací prvek je kombinací <xref:Microsoft.Office.Interop.Word.Bookmark> objektu a <xref:Microsoft.Office.Interop.Word.Range> objektu.

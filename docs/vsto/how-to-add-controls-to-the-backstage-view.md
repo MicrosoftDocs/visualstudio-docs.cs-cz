@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání ovládacích prvků do zobrazení Backstage '
+description: Přečtěte si, jak můžete pomocí Návrháře pásu karet přidat ovládací prvky do nabídky, která se otevře po kliknutí na kartu soubor.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5b4ea5cdcd869f16f987e9431359511831af9573
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9f0fa33318e2407b01178971c6965b8ea035dd42
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538343"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848167"
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>Postupy: Přidání ovládacích prvků do zobrazení Backstage
   Pomocí Návrháře pásu karet můžete přidat ovládací prvky do nabídky, která se otevře po kliknutí na kartu **soubor** . Když aplikaci spustíte, ovládací prvky, které přidáte na kartu **soubor** , se zobrazí ve skupině s názvem **Doplňky**.
@@ -44,7 +46,7 @@ ms.locfileid: "85538343"
 
      Zobrazí se Návrhář nabídek. Tato návrhová plocha neobsahuje žádné ovládací prvky.
 
-3. Na kartě **ovládací prvky pásu karet sady Office** **přetáhněte do návrháře**nabídky libovolný z následujících ovládacích prvků:
+3. Na kartě **ovládací prvky pásu karet sady Office** **přetáhněte do návrháře** nabídky libovolný z následujících ovládacích prvků:
 
     - Tlačítko
 
