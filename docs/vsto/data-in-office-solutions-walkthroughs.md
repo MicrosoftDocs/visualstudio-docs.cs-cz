@@ -1,5 +1,7 @@
 ---
 title: Návody pro data v řešeních pro systém Office
+description: Naučte se pracovat s daty v přizpůsobení na úrovni dokumentu a doplňcích VSTO pro Microsoft Word a Microsoft Excel.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 52b2efa5e5def8214736d648e2b90906fe720dbe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25bf42015dcc60014012faf0254d4b6d02c30d56
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62956027"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845580"
 ---
 # <a name="data-in-office-solutions-walkthroughs"></a>Návody pro data v řešeních pro systém Office
   Následující návody ukazují, jak pracovat s daty v přizpůsobení na úrovni dokumentu a doplňku VSTO pro systém Microsoft Office Wordu a systém Microsoft Office Excelu.

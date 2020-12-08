@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: ukládání dat do mezipaměti v dokumentu chráněném heslem'
+description: Přečtěte si, že pokud přidáte data do mezipaměti dat v dokumentu nebo sešitu chráněném heslem, můžete uložit změny dat uložených v mezipaměti přepsáním dvou metod v projektu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 12b04b985d54161343d26cdd32178b67bd6e6b91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2a11b70da4bdd2500f70d2b45f025340af21ea94
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547235"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845996"
 ---
 # <a name="how-to-cache-data-in-a-password-protected-document"></a>Postupy: ukládání dat do mezipaměti v dokumentu chráněném heslem
   Pokud přidáte data do mezipaměti dat v dokumentu nebo sešitu chráněném heslem, změny v uložených datech se neukládají automaticky. Změny dat uložených v mezipaměti můžete uložit přepsáním dvou metod v projektu.

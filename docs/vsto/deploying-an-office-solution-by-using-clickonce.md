@@ -1,5 +1,7 @@
 ---
 title: Nasazení řešení Office pomocí technologie ClickOnce
+description: Přečtěte si, jak můžete nasadit řešení pro Office v méně krocích, pokud používáte ClickOnce. Když publikujete aktualizace, vaše řešení je automaticky rozpozná a nainstaluje.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bb495b30950105d1ff19a1f4fb13da1ee624b228
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d808348528a64cc184c7a6c50359c057b2325a75
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809346"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845645"
 ---
 # <a name="deploy-an-office-solution-by-using-clickonce"></a>Nasazení řešení Office pomocí technologie ClickOnce
   Pokud používáte ClickOnce, můžete řešení pro Office nasadit v méně krocích. Když publikujete aktualizace, vaše řešení je automaticky rozpozná a nainstaluje. Technologie ClickOnce ale vyžaduje, aby bylo řešení nainstalováno zvlášť pro každého uživatele počítače. Proto byste měli zvážit použití Instalační služba systému Windows (*. msi*), pokud vaše řešení bude spouštět více než jeden uživatel ve stejném počítači.
@@ -50,11 +52,11 @@ ms.locfileid: "90809346"
 
 #### <a name="to-publish-the-solution"></a>Publikování řešení
 
-1. V **Průzkumník řešení**vyberte uzel s názvem pro váš projekt.
+1. V **Průzkumník řešení** vyberte uzel s názvem pro váš projekt.
 
 2. V panelu nabídek vyberte **projekt**, **vlastnosti** *ProjectName* .
 
-3. V **Návrháři projektu**klikněte na kartu **publikovat** , která je znázorněna na následujícím obrázku.
+3. V **Návrháři projektu** klikněte na kartu **publikovat** , která je znázorněna na následujícím obrázku.
 
     ![Karta publikovat v Návrháři projektu](../vsto/media/vsto-publishtab.png "Karta publikovat v Návrháři projektu")
 
@@ -64,9 +66,9 @@ ms.locfileid: "90809346"
 
    - Místní cesta (například *C:\FolderName\FolderName*).
 
-   - Cesta UNC (Uniform Naming Convention) ke složce v síti (například * \\ \ServerName\FolderName*).
+   - Cesta UNC (Uniform Naming Convention) ke složce v síti (například *\\ \ServerName\FolderName*).
 
-   - Relativní cesta (například *PublishFolder \\ *, což je složka, do které je projekt publikován ve výchozím nastavení).
+   - Relativní cesta (například *PublishFolder \\*, což je složka, do které je projekt publikován ve výchozím nastavení).
 
 5. Do pole **Adresa URL instalační složky** zadejte plně kvalifikovanou cestu k umístění, kde budou koncoví uživatelé hledat vaše řešení.
 
@@ -85,7 +87,7 @@ ms.locfileid: "90809346"
     > [!NOTE]
     > Ve výchozím nastavení se toto zaškrtávací políčko nezobrazí. Aby se toto zaškrtávací políčko zobrazilo, je nutné vytvořit balíček zaváděcího nástroje. Další informace najdete v tématu [Vytvoření balíčku zaváděcího nástroje pro doplněk VSTO Office 2013 s Visual studiem 2012](create-vsto-add-ins-for-office-by-using-visual-studio.md).
 
-10. V části **Zadejte umístění instalace pro požadované součásti**zvolte jednu z možností, které se zobrazí, a pak klikněte na tlačítko **OK** .
+10. V části **Zadejte umístění instalace pro požadované součásti** zvolte jednu z možností, které se zobrazí, a pak klikněte na tlačítko **OK** .
 
      Jednotlivé možnosti jsou popsány v následující tabulce.
 
@@ -170,7 +172,7 @@ ms.locfileid: "90809346"
 
 1. Na serveru, na kterém je spuštěná služba IIS 7,0, vyberte **Start**  >  **všechny programy**  >  **příslušenství**.
 
-2. Otevřete místní nabídku **příkazového řádku**a pak zvolte možnost  **Spustit jako správce.**
+2. Otevřete místní nabídku **příkazového řádku** a pak zvolte možnost  **Spustit jako správce.**
 
 3. Do pole **otevřít** zadejte následující cestu a pak klikněte na tlačítko **OK** .
 
@@ -200,9 +202,9 @@ ms.locfileid: "90809346"
 
 3. V podokně **šablony** vyberte šablonu **Knihovna tříd** .
 
-4. Do pole **název** zadejte **FileCopyPDA**a poté klikněte na tlačítko **OK** .
+4. Do pole **název** zadejte **FileCopyPDA** a poté klikněte na tlačítko **OK** .
 
-5. V **Průzkumník řešení**vyberte projekt **FileCopyPDA** .
+5. V **Průzkumník řešení** vyberte projekt **FileCopyPDA** .
 
 6. Na panelu nabídek vyberte **projekt**  >  **Přidat odkaz**.
 
@@ -221,21 +223,21 @@ ms.locfileid: "90809346"
 
 ### <a name="build-and-publish-the-solution"></a>Sestavení a publikování řešení
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro projekt **FileCopyPDA** a pak zvolte možnost **sestavit**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro projekt **FileCopyPDA** a pak zvolte možnost **sestavit**.
 
 2. Otevřete místní nabídku pro projekt **ExcelWorkbook** a pak zvolte možnost **sestavit**.
 
 3. Otevřete místní nabídku projektu **ExcelWorkbook** a poté zvolte možnost **Přidat odkaz**.
 
-4. V dialogovém okně **Přidat odkaz** zvolte kartu **projekty** , zvolte možnost **FileCopyPDA**a pak klikněte na tlačítko **OK** .
+4. V dialogovém okně **Přidat odkaz** zvolte kartu **projekty** , zvolte možnost **FileCopyPDA** a pak klikněte na tlačítko **OK** .
 
-5. V **Průzkumník řešení**vyberte projekt **ExcelWorkbook** .
+5. V **Průzkumník řešení** vyberte projekt **ExcelWorkbook** .
 
 6. Na panelu nabídek vyberte položku **projekt**  >  **Nová složka**.
 
-7. Zadejte **data**a pak zvolte klávesu **ENTER** .
+7. Zadejte **data** a pak zvolte klávesu **ENTER** .
 
-8. V **Průzkumník řešení**vyberte složku **data** .
+8. V **Průzkumník řešení** vyberte složku **data** .
 
 9. Na panelu nabídek vyberte **projekt**  >  **Přidat existující položku**.
 
@@ -253,7 +255,7 @@ ms.locfileid: "90809346"
 
 ### <a name="modify-the-application-manifest"></a>Úprava manifestu aplikace
 
-1. Pomocí **Průzkumníka souborů**otevřete adresář řešení, **c:\publish**.
+1. Pomocí **Průzkumníka souborů** otevřete adresář řešení, **c:\publish**.
 
 2. Otevřete složku **soubory aplikace** a poté otevřete složku, která odpovídá nejnovější publikované verzi vašeho řešení.
 
@@ -342,18 +344,18 @@ ms.locfileid: "90809346"
 
  *%COMMONPROGRAMFILES%\Microsoft shared\VSTO\10.0\VSTOInstaller.exe*
 
- Pokud nástroj v tomto umístění není, můžete k vyhledání cesty k tomuto nástroji HKEY_LOCAL_MACHINE použít klíč registru **\Software\microsoft\vsto runtime Setup\v4\InstallerPath** nebo **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\vsto runtime Setup\v4\InstallerPath** .
+ Pokud nástroj není v tomto umístění, můžete k vyhledání cesty k tomuto nástroji použít klíč registru **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSTO Runtime Setup\v4\InstallerPath** nebo **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSTO Runtime Setup\v4\InstallerPath** .
 
- Pomocí *VSTOinstaller.exe*můžete použít následující parametry.
+ Pomocí *VSTOinstaller.exe* můžete použít následující parametry.
 
-| Parametr | Definice |
+| parametr | Definice |
 |------------------| - |
-| /Install nebo /I | Nainstaluje řešení. Za tímto parametrem musí následovat cesta k manifestu nasazení. Můžete zadat cestu v místním počítači, sdílenou složku UNC (Universal Naming Convention). Můžete zadat místní cestu (*C:\FolderName\PublishFolder*), relativní cestu (* \\ publikování*) nebo plně kvalifikované umístění (* \\ \ServerName\FolderName* nebo http://<em>servername/název_složky</em>). |
-| /Uninstall nebo /U | Odinstaluje řešení. Za tímto parametrem musí následovat cesta k manifestu nasazení. Můžete zadat cestu v místním počítači, sdílenou složku ve formátu UNC. Můžete zadat místní cestu (*c:\FolderName\PublishFolder*), relativní cestu (* \\ publikování*) nebo plně kvalifikované umístění (* \\ \ServerName\FolderName* nebo http://<em>servername/název_složky</em>). |
+| /Install nebo /I | Nainstaluje řešení. Za tímto parametrem musí následovat cesta k manifestu nasazení. Můžete zadat cestu v místním počítači, sdílenou složku UNC (Universal Naming Convention). Můžete zadat místní cestu (*C:\FolderName\PublishFolder*), relativní cestu (*\\ publikování*) nebo plně kvalifikované umístění (*\\ \ServerName\FolderName* nebo http://<em>servername/název_složky</em>). |
+| /Uninstall nebo /U | Odinstaluje řešení. Za tímto parametrem musí následovat cesta k manifestu nasazení. Můžete zadat cestu v místním počítači, sdílenou složku ve formátu UNC. Můžete zadat místní cestu (*c:\FolderName\PublishFolder*), relativní cestu (*\\ publikování*) nebo plně kvalifikované umístění (*\\ \ServerName\FolderName* nebo http://<em>servername/název_složky</em>). |
 | /Silent nebo /S | Při instalaci nebo odinstalaci se uživatelům nebudou zobrazovat výzvy k zadání vstupu ani žádné jiné zprávy. Pokud je vyžadováno zobrazení výzvy vztahu důvěryhodnosti, přizpůsobení není nainstalováno nebo aktualizováno. |
 | /Help nebo /? | Zobrazí informace nápovědy. |
 
- Při spuštění *VSTOinstaller.exe*se mohou zobrazit následující chybové kódy.
+ Při spuštění *VSTOinstaller.exe* se mohou zobrazit následující chybové kódy.
 
 |Kód chyby|Definice|
 |----------------|----------------|
@@ -370,7 +372,7 @@ ms.locfileid: "90809346"
 |-500|Operace byla zrušena, protože řešení nelze nainstalovat nebo odinstalovat nebo nelze stáhnout manifest nasazení.|
 
 ## <a name="publish-an-update"></a><a name="Update"></a> Publikování aktualizace
- Chcete-li aktualizovat řešení, znovu ho publikujete pomocí **Návrháře projektu** nebo **Průvodce publikováním**a poté zkopírujete aktualizované řešení do umístění instalace. Při kopírování souborů do umístění instalace je nutné přepsat předchozí soubory.
+ Chcete-li aktualizovat řešení, znovu ho publikujete pomocí **Návrháře projektu** nebo **Průvodce publikováním** a poté zkopírujete aktualizované řešení do umístění instalace. Při kopírování souborů do umístění instalace je nutné přepsat předchozí soubory.
 
  Když řešení příště vyhledá aktualizaci, najde a automaticky načte novou verzi.
 

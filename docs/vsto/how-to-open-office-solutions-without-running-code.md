@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: otevření řešení pro systém Office bez spuštění kódu'
+description: Zjistěte, jak lze otevřít dokument nebo sešit, který obsahuje rozšíření spravovaného kódu bez spuštění kódu sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d84515c2c3159b61b96f77555b23eef0df0ae961
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8339f21fbf7add4335941360b73d42700ef6e635
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543478"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844917"
 ---
 # <a name="how-to-open-office-solutions-without-running-code"></a>Postupy: otevření řešení pro systém Office bez spuštění kódu
   Systém Microsoft Office řešení vytvořené pomocí rozšíření spravovaného kódu běží i v případě, že nastavení zabezpečení v aplikaci Office koncového uživatele je nastaveno na hodnotu Vysoká. Je to proto, že zabezpečení kódu sestavení .NET je spravováno společností Microsoft .NET Framework, nikoli systém Microsoft Office.

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: přidávání příkazů do místních nabídek'
+description: Přečtěte si, jak můžete přidat příkazy do místní nabídky v aplikaci Office pomocí doplňku VSTO.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1ad27481799718d9d2b0872d7a43837fc822ca40
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95cc6a9dc773c9a0cb07eff518566af9dcc49e96
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546195"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845489"
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>Postupy: přidávání příkazů do místních nabídek
   Toto téma ukazuje, jak přidat příkazy do místní nabídky v aplikaci Office pomocí doplňku VSTO.
@@ -29,7 +31,7 @@ ms.locfileid: "85546195"
 
 1. Přidejte položku **XML pásu karet** do projektu doplňku VSTO na úrovni dokumentu nebo VSTO. Další informace najdete v tématu [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md). V
 
-2. **Průzkumník řešení**vyberte **ThisAddIn.cs** nebo **ThisAddIn. vb**.
+2. **Průzkumník řešení** vyberte **ThisAddIn.cs** nebo **ThisAddIn. vb**.
 
 3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 
@@ -40,7 +42,7 @@ ms.locfileid: "85546195"
      [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]
      [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]
 
-5. V **Průzkumník řešení**vyberte soubor XML pásu karet. Ve výchozím nastavení se soubor XML pásu karet jmenuje *Ribbon1.xml*.
+5. V **Průzkumník řešení** vyberte soubor XML pásu karet. Ve výchozím nastavení se soubor XML pásu karet jmenuje *Ribbon1.xml*.
 
 6. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 
@@ -70,7 +72,7 @@ ms.locfileid: "85546195"
     </customUI>
     ```
 
-8. V **Průzkumník řešení**vyberte **MyRibbon.cs** nebo **MyRibbon. vb**.
+8. V **Průzkumník řešení** vyberte **MyRibbon.cs** nebo **MyRibbon. vb**.
 
 9. Přidejte do třídy metodu zpětného volání `Ribbon1` pro každý ovládací prvek, který chcete zpracovat.
 

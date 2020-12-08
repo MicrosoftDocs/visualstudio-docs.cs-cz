@@ -1,5 +1,7 @@
 ---
 title: Manifesty nasazení pro řešení Office
+description: Přečtěte si, že manifest nasazení je soubor XML, který popisuje nastavení nasazení řešení Office a identifikuje aktuální verzi aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3540420d07bd158b19f0b078f01cfdb37ce18beb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31909d2a6765c357635cd0a8c039132f14b5967d
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547547"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845502"
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Manifesty nasazení pro řešení Office
   Manifest nasazení je soubor XML, který popisuje nastavení nasazení řešení Office a identifikuje aktuální verzi aplikace.

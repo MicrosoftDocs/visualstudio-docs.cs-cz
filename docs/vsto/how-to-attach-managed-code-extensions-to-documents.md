@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: připojení rozšíření spravovaného kódu k dokumentům'
+description: Přečtěte si, jak můžete připojit sestavení vlastního nastavení k existujícímu systém Microsoft Office dokumentu aplikace Word nebo systém Microsoft Office sešitu aplikace Excel.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f44b153ac7d55704ba649a7dc09860518a5e76b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1929daaa82dbfec6f58513bf94eefe01f9520601
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547521"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844385"
 ---
 # <a name="how-to-attach-managed-code-extensions-to-documents"></a>Postupy: připojení rozšíření spravovaného kódu k dokumentům
   Sestavení vlastního nastavení můžete připojit k existujícímu systém Microsoft Office dokumentu aplikace Word nebo sešitu systém Microsoft Office aplikace Excel. Dokument nebo sešit může být ve formátu souboru, který je podporován systém Microsoft Office projekty a vývojové nástroje v aplikaci Visual Studio. Další informace najdete v tématu [Architektura přizpůsobení na úrovni dokumentu](../vsto/architecture-of-document-level-customizations.md).

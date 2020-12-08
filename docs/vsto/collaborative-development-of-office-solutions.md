@@ -1,5 +1,7 @@
 ---
 title: Spolupráce na vývoji řešení pro systém Office
+description: Zjistěte, jak může více vývojářů pracovat na projektu Office stejným způsobem jako spolupráce na jiných projektech sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 76c26a110d88d3dee8bf7540647ea0bfde4e7c4f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d30f28b3e97469bc9e0bf921438960206b4f89c0
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62949484"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845801"
 ---
 # <a name="collaborative-development-of-office-solutions"></a>Spolupráce na vývoji řešení pro systém Office
   V projektu Office může pracovat s více vývojáři stejným způsobem jako spolupracovat na jiných projektech sady Visual Studio. Visual Studio správně vyhledá systém Microsoft Office instalaci na každém počítači, i když je Office nainstalovaný v různých umístěních. Je ale potřeba mít na paměti několik důležitých informací.
@@ -33,7 +35,7 @@ ms.locfileid: "62949484"
  Pokud je projekt umístěn ve sdílené síťové složce místo ve správě zdrojového kódu, je nutné provést některé další kroky, aby mohli vývojáři spolupracovat na otevření řešení a testování sestavení.
 
 ## <a name="source-control-requires-checking-out-all-files"></a>Správa zdrojového kódu vyžaduje rezervaci všech souborů.
- Použijete-li pro své projekty správu zdrojového kódu, měli byste rezervovat všechny soubory v souboru kódu v **Průzkumník řešení** (například soubory kódu *ThisDocument*, *ThisWorkbook*nebo *ThisAddIn* ) pokaždé, když změníte soubor s kódem, dokonce i soubory, které jsou ve výchozím nastavení skryté. Pokud se rezervuje jenom soubor s kódem nejvyšší úrovně, změny se můžou ztratit.
+ Použijete-li pro své projekty správu zdrojového kódu, měli byste rezervovat všechny soubory v souboru kódu v **Průzkumník řešení** (například soubory kódu *ThisDocument*, *ThisWorkbook* nebo *ThisAddIn* ) pokaždé, když změníte soubor s kódem, dokonce i soubory, které jsou ve výchozím nastavení skryté. Pokud se rezervuje jenom soubor s kódem nejvyšší úrovně, změny se můžou ztratit.
 
  Až provedete změny, zkontrolujte všechny soubory zpátky. Další informace o skrytých souborech kódu v projektech naleznete v tématu [projekty pro systém Office v prostředí Visual Studio](../vsto/office-projects-in-the-visual-studio-environment.md).
 

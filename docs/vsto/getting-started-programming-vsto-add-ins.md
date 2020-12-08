@@ -1,5 +1,7 @@
 ---
 title: Začínáme s programováním doplňků VSTO
+description: Naučte se používat doplňky VSTO k automatizaci systém Microsoft Office aplikací, rozšiřování funkcí aplikace a přizpůsobení uživatelského rozhraní aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 39cf3e8d59a2ced26f878da979fa87fc663b5bab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be4e129de68d2a7f7690ba24acc92fb09400cfb2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71253580"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845112"
 ---
 # <a name="get-started-programming-vsto-add-ins"></a>Začínáme s programováním doplňků VSTO
   Doplňky VSTO můžete použít k automatizaci systém Microsoft Office aplikací, k rozšiřování funkcí aplikace a k přizpůsobení uživatelského rozhraní (UI) aplikace. Informace o tom, jak se doplňky VSTO rovnají jiným typům řešení pro Office, které můžete vytvořit pomocí sady Visual Studio, najdete v tématu [Přehled vývoje řešení pro systém office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -74,7 +76,7 @@ ms.locfileid: "71253580"
 
 - [Návod: vytvoření prvního doplňku VSTO pro Excel](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)
 
-- [Návod: vytvoření prvního doplňku VSTO pro Outlook](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)
+- [Návod: vytvoření prvního Add-In VSTO pro Outlook](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)
 
 - [Návod: vytvoření prvního doplňku VSTO pro PowerPoint](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)
 

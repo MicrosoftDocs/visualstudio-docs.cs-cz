@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: instalace primárních sestavení vzájemné spolupráce pro systém Office'
+description: Naučte se, jak při instalaci Office nainstalovat primární spolupracující sestavení (PIA) systém Microsoft Office.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b6f90b568f98abe5026525a60723efb59f737235
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 15a55650f2e4a434343c9128cc8f28117b54288e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544778"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845879"
 ---
 # <a name="how-to-install-office-primary-interop-assemblies"></a>Postupy: instalace primárních sestavení vzájemné spolupráce pro systém Office
   Při instalaci Office nainstalujte systém Microsoft Office primární spolupracující sestavení (PIA).

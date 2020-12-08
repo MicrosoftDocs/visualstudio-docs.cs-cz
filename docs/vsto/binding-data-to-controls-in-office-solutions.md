@@ -1,5 +1,7 @@
 ---
 title: Vázání dat k ovládacím prvkům v řešeních pro systém Office
+description: Přečtěte si, jak můžete navazovat ovládací prvky model Windows Forms a hostitelské ovládací prvky v dokumentu systém Microsoft Office Wordu nebo excelovém listu na zdroj dat.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 93e2d5abb9c8fda9d4a1300a9bb0958ac9266499
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9be201899f0e2ff4f685343d58a859d8a9157068
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986175"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844423"
 ---
 # <a name="bind-data-to-controls-in-office-solutions"></a>Vázání dat k ovládacím prvkům v řešeních pro systém Office
   Ovládací prvky model Windows Forms a *hostitelské ovládací prvky* lze vytvořit pomocí systém Microsoft Office dokumentu aplikace Word nebo systém Microsoft Office listu aplikace Excel na zdroj dat, aby ovládací prvky automaticky zobrazily data. Data lze navazovat na ovládací prvky v projektech na úrovni aplikace i na úrovni dokumentu.

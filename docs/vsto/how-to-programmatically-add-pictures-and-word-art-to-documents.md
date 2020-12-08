@@ -1,5 +1,7 @@
 ---
 title: Přidávání obrázků a aplikace Word Art do dokumentů prostřednictvím kódu programu
+description: Přečtěte si, jak můžete přidávat obrázky a kreslit objekty do dokumentů v době návrhu nebo v době běhu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e73473229a35bebb99eac03963fb43f880a39903
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 0662c9324aaab8f5a368bc4db300ccff1a0ece33
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585389"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844046"
 ---
 # <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>Postupy: Přidávání obrázků a aplikace Word Art do dokumentů prostřednictvím kódu programu
   Obrázky a kresby objektů můžete přidat do dokumentů v době návrhu nebo během doby běhu. WordArt umožňuje přidat do systém Microsoft Office wordové dokumenty dekorativní text. Tyto speciální textové efekty jsou kresby objektů, které lze přizpůsobit a vkládat do dokumentu.
@@ -63,7 +65,7 @@ ms.locfileid: "91585389"
 
 2. Klikněte na kartu **Vložit** na pás karet.
 
-3. Ve skupině **text** klikněte na **WordArt**a pak vyberte styl WordArt.
+3. Ve skupině **text** klikněte na **WordArt** a pak vyberte styl WordArt.
 
 4. Přidejte text, který se má zobrazit v dokumentu, do dialogového okna **Upravit text WordArtu** a klikněte na tlačítko **OK**.
 

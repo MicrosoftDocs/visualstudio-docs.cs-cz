@@ -1,5 +1,7 @@
 ---
 title: Přehled podokna akcí
+description: Seznamte se s tím, jak je podokno akcí přizpůsobitelné akce dokumentu podokno úloh, které je připojené k určitému systém Microsoft Office dokumentu aplikace Word nebo excelovém sešitu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82bf3ac9515effaa1053a011085849f0afea67f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d03ba8968b08fb07eb2cc9c17839af57cf06eca
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986315"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844826"
 ---
 # <a name="actions-pane-overview"></a>Přehled podokna akcí
   Podokno akcí je podokno úloh přizpůsobitelné **Akce dokumentu** , které je připojené k určitému systém Microsoft Office dokumentu aplikace Word nebo systém Microsoft Office excelovém sešitu. Podokno akce je hostováno v podokně úloh Office společně s dalšími vestavěnými podokny úloh, jako je podokno úloh **zdroj XML** v aplikaci Excel nebo podokno úloh **styly a formátování** ve Wordu. Můžete použít ovládací prvky model Windows Forms nebo ovládací prvky WPF pro návrh uživatelského rozhraní podokna akce.

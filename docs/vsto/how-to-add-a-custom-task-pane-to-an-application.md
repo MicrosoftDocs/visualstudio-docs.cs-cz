@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání vlastního podokna úloh do aplikace'
+description: Přečtěte si, jak můžete do aplikací přidat vlastní podokno úloh pomocí doplňku Visual Studio Tools for Office (VSTO).
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0df4d51795f01c98790f1d5b0525c45cc71899ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e8056eddef6329aeb10ed5545c4146f0af0f167
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546208"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845047"
 ---
 # <a name="how-to-add-a-custom-task-pane-to-an-application"></a>Postupy: Přidání vlastního podokna úloh do aplikace
   Pomocí doplňku VSTO můžete přidat vlastní podokno úloh k aplikacím uvedeným výše. Další informace najdete v tématu [vlastní podokna úloh](../vsto/custom-task-panes.md).
@@ -36,7 +38,7 @@ ms.locfileid: "85546208"
 
 2. V nabídce **projekt** klikněte na příkaz **Přidat uživatelský ovládací prvek**.
 
-3. V dialogovém okně **Přidat novou položku** změňte název nového uživatelského ovládacího prvku na **MyUserControl**a potom klikněte na tlačítko **Přidat**.
+3. V dialogovém okně **Přidat novou položku** změňte název nového uživatelského ovládacího prvku na **MyUserControl** a potom klikněte na tlačítko **Přidat**.
 
      Uživatelský ovládací prvek se otevře v návrháři.
 
@@ -44,7 +46,7 @@ ms.locfileid: "85546208"
 
 5. Otevřete soubor kódu **ThisAddIn.cs** nebo **ThisAddIn. vb** .
 
-6. Do třídy přidejte následující kód `ThisAddIn` . Tento kód deklaruje instance `MyUserControl` a <xref:Microsoft.Office.Tools.CustomTaskPane> jako členy `ThisAddIn` třídy.
+6. Do třídy `ThisAddIn` přidejte následující kód. Tento kód deklaruje instance `MyUserControl` a <xref:Microsoft.Office.Tools.CustomTaskPane> jako členy `ThisAddIn` třídy.
 
      [!code-vb[Trin_TaskPaneBasic#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb#1)]
      [!code-csharp[Trin_TaskPaneBasic#1](../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs#1)]

@@ -1,5 +1,7 @@
 ---
 title: Architektura přizpůsobení na úrovni dokumentu
+description: Přečtěte si o aspektech přizpůsobení na úrovni dokumentu, včetně součástí přizpůsobení a způsobu, jakým přizpůsobení fungují s systém Microsoft Office aplikacemi.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f5028f5a9b16ecfc2461c0d29cbedb44be70a64c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a522446f9109d996088dff9389f267ef5ff39447
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68926564"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845958"
 ---
 # <a name="architecture-of-document-level-customizations"></a>Architektura přizpůsobení na úrovni dokumentu
   [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] obsahuje projekty pro vytváření přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word a systém Microsoft Office Excel. Toto téma popisuje následující aspekty přizpůsobení na úrovni dokumentu:
@@ -61,7 +63,7 @@ ms.locfileid: "68926564"
 
 2. Návrhář – buď vývojář, který vytváří projekt, nebo jiný uživatel – vytvoří konečný vzhled a chování dokumentu pro koncového uživatele.
 
-#### <a name="runtime"></a>Modul runtime
+#### <a name="runtime"></a>Runtime (Modul runtime)
  Prostředí runtime zahrnuje následující kroky:
 
 1. Koncový uživatel otevře dokument nebo sešit, který má rozšíření spravovaného kódu.
@@ -91,11 +93,11 @@ ms.locfileid: "68926564"
 ### <a name="support-for-word-documents-that-have-xml-file-name-extensions"></a>Podpora pro dokumenty aplikace Word, které mají příponu názvu souboru. XML
  Šablony projektů na úrovni dokumentu neumožňují vytvářet projekty na základě následujících formátů souborů:
 
-- Dokument XML aplikace Word (* \* XML*).
+- Dokument XML aplikace Word (*\* XML*).
 
-- Dokument XML pro Word 2003 (* \* XML*).
+- Dokument XML pro Word 2003 (*\* XML*).
 
-  Pokud chcete, aby koncoví uživatelé používali vlastní nastavení v těchto formátech souborů, sestavte a nasaďte vlastní nastavení, které používá jeden z podporovaných formátů souborů uvedených v tabulce výše. Po instalaci vlastního nastavení mohou koncoví uživatelé dokument uložit ve formátu dokumentu XML aplikace Word (* \* XML** \* ) nebo*ve formátu dokumentu aplikace Word 2003 XML a přizpůsobení bude nadále fungovat podle očekávání.
+  Pokud chcete, aby koncoví uživatelé používali vlastní nastavení v těchto formátech souborů, sestavte a nasaďte vlastní nastavení, které používá jeden z podporovaných formátů souborů uvedených v tabulce výše. Po instalaci vlastního nastavení mohou koncoví uživatelé dokument uložit ve formátu dokumentu XML aplikace Word (*\* XML**\* ) nebo* ve formátu dokumentu aplikace Word 2003 XML a přizpůsobení bude nadále fungovat podle očekávání.
 
 ## <a name="components-of-customizations"></a><a name="Components"></a> Komponenty přizpůsobení
  Hlavní součásti vlastního nastavení jsou dokument a sestavení. Kromě těchto součástí je několik dalších částí, které hrají důležitou roli v tématu Jak systém Microsoft Office aplikace zjišťovat a načítat přizpůsobení.

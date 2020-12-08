@@ -1,7 +1,8 @@
 ---
 title: 'Postupy: vytváření projektů Office v sadě Visual Studio'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio vytvořit přizpůsobení na úrovni doplňku VSTO a dokumentu pro systém Microsoft Office aplikace.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -23,12 +24,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c70668f2d4cb9597e00a7e3848b78b9f2ed49db7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 652b7676ddf5d7e095010e711ab0dabc5b5f2ab7
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547560"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844371"
 ---
 # <a name="how-to-create-office-projects-in-visual-studio"></a>Postupy: vytváření projektů Office v sadě Visual Studio
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]K vytvoření doplňku VSTO a přizpůsobení na úrovni dokumentu pro systém Microsoft Office aplikace můžete použít. Další informace o těchto typech projektů naleznete v tématu [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).

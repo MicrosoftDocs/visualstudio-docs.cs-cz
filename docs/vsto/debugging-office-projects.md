@@ -1,5 +1,7 @@
 ---
 title: Ladění projektů Office
+description: Přečtěte si, jak můžete ladit projekty Office pomocí stejných Microsoft Visual Studio nástrojů, které používáte pro jiné projekty sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 92cc0922a36d8c57b54b69ad984d18cf4742b823
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ea4874effcba4ee948f921ae9bf91f145b661f4f
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189696"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845632"
 ---
 # <a name="debug-office-projects"></a>Ladění projektů Office
   Projekty systému Office můžete ladit pomocí stejných nástrojů společnosti Microsoft [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , které používáte pro jiné [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projekty. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] funkce ladicího programu, jako je možnost vložení zarážek a zobrazení proměnných v okně **místní** hodnoty, jsou také k dispozici při ladění projektů Office. Další informace o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nástrojích pro ladění naleznete [v tématu ladění v aplikaci Visual Studio](../debugger/debugger-feature-tour.md).
@@ -48,7 +50,7 @@ ms.locfileid: "73189696"
 ### <a name="debug-office-2013-vsto-add-ins-by-using-either-office-2013-or-office-2016"></a>Ladění doplňků pro Office 2013 VSTO pomocí sady Office 2013 nebo Office 2016
  Pokud používáte sadu Visual Studio 2015 a máte nainstalovanou obě verze sady Office vedle sebe, Visual Studio spustí sadu Office 2016. Pokud používáte Visual Studio 2013, Visual Studio spustí sadu Office 2013.
 
- Pokud chcete ladit doplněk VSTO pomocí jiné verze sady Office (2013 nebo 2016), otevřete **Návrháře projektu**a na kartě **ladění** klikněte na tlačítko **spustit externí program** . Pak přejděte do umístění příslušného spustitelného souboru aplikace Office.
+ Pokud chcete ladit doplněk VSTO pomocí jiné verze sady Office (2013 nebo 2016), otevřete **Návrháře projektu** a na kartě **ladění** klikněte na tlačítko **spustit externí program** . Pak přejděte do umístění příslušného spustitelného souboru aplikace Office.
 
 ## <a name="f10-and-f11-behavior"></a>F10 a F11 – chování
  Když spustíte ladění projektu Office, **F10** a **F11** nemají stejné chování jako při zahájení ladění jiných projektů Visual Basic nebo C#. V projektech Visual Basic nebo C# se ladicí program zastaví na hlavní funkci; v projektech pro systém Office nemá sada Visual Studio kontrolu nad hlavní funkcí aplikace Office. Během ladění mají však aplikace **F10** a **F11** stejné funkce jako v projektech Visual Basic a C#.

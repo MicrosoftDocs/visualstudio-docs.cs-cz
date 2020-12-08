@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: přidávání a odstraňování komentářů v listech prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete programově přidávat a odstraňovat komentáře v systém Microsoft Office excelových sešitech. Komentáře můžete přidávat pouze do jednoduchých buněk, nikoli do oblastí s více buňkami.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c87851afb70e9207f9a24fc18826a4c2b218ec08
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: f845197de6664728a812e2795e51605ed962c575
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583798"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844605"
 ---
 # <a name="how-to-programmatically-add-and-delete-worksheet-comments"></a>Postupy: přidávání a odstraňování komentářů v listech prostřednictvím kódu programu
   Komentáře můžete programově přidávat a odstraňovat v systém Microsoft Office listech aplikace Excel. Komentáře lze přidat pouze do jednoduchých buněk, nikoli do oblastí s více buňkami.

@@ -1,5 +1,7 @@
 ---
 title: Další zdroje informací pro vývoj řešení pro systém Office
+description: Přečtěte si o dalších prostředcích, které můžete použít k vývoji rozšíření pro aplikace systém Microsoft Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8bea9faa315fbd6ec41c667836dac7216f1f8f81
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 828cd2c451e531eeecda7574b5750bc3bb7023b2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986275"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844813"
 ---
 # <a name="additional-resources-to-develop-office-solutions"></a>Další zdroje informací pro vývoj řešení pro systém Office
   Nástroje systém Microsoft Office Developer Tools v sadě Visual Studio představují pouze jeden z mnoha způsobů, jak aplikace Office rozšíří. Aplikace Office mají také některé integrované funkce, jako jsou Open XML formats, které nepokrývá sada Office Developer Tools v sadě Visual Studio ani tato dokumentace.

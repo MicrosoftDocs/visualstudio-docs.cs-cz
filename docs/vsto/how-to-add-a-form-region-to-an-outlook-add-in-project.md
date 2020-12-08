@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání oblasti formuláře do projektu doplňku aplikace Outlook'
+description: Naučte se, jak vytvořit oblast formuláře pro rozšiřování standardního nebo vlastního systém Microsoft Office formuláře Outlooku pomocí Průvodce vytvořením nové oblasti formuláře Outlooku.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a03ba05226720913d48dc1828dcb849bee72d17e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f137dbe88b8b3ecf51f17e0f19f61368359087fa
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538395"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845060"
 ---
 # <a name="how-to-add-a-form-region-to-an-outlook-add-in-project"></a>Postupy: Přidání oblasti formuláře do projektu doplňku aplikace Outlook
   Vytvořte oblast formuláře pro rozšiřování standardního nebo vlastního systém Microsoft Officeho formuláře Outlooku pomocí Průvodce vytvořením **nové oblasti formuláře Outlooku** . Můžete vytvořit novou oblast formuláře a navrhnout uživatelské rozhraní v aplikaci Visual Studio nebo můžete importovat oblast formuláře, která byla navržena v aplikaci Outlook a přidat Visual Basic nebo kód jazyka C#.
@@ -35,7 +37,7 @@ ms.locfileid: "85538395"
 
 1. Otevřete nebo vytvořte projekt doplňku VSTO pro Outlook v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. V **Průzkumník řešení**vyberte uzel projektu DOPLŇKu VSTO pro Outlook.
+2. V **Průzkumník řešení** vyberte uzel projektu DOPLŇKu VSTO pro Outlook.
 
 3. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 

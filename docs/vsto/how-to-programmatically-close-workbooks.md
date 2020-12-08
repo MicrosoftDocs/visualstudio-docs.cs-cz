@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: zavírání sešitů prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete zavřít aktivní sešit, nebo můžete určit sešit, který se má programově zavřít.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3d3fe0f929632bd7021def9f6597182aa8fea87b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13b487054e4e8a12c2479ddfc167ca0b8e90285a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547495"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846055"
 ---
 # <a name="how-to-programmatically-close-workbooks"></a>Postupy: zavírání sešitů prostřednictvím kódu programu
   Aktivní sešit můžete zavřít nebo můžete zadat sešit, který chcete zavřít.

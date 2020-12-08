@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání ovládacích prvků grafu do listů'
+description: Naučte se, jak můžete přidat ovládací prvky grafu do systém Microsoft Office excelového listu v době návrhu a za běhu v přizpůsobení na úrovni dokumentu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fdb1f738fe6e68f7470ae65e6ce08b2f3be0ef6d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e48b8cfbcf4ee1c7340aef4cd59e09698f89412
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546234"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845463"
 ---
 # <a name="how-to-add-chart-controls-to-worksheets"></a>Postupy: Přidání ovládacích prvků grafu do listů
   <xref:Microsoft.Office.Tools.Excel.Chart>Ovládací prvky můžete přidat do listu aplikace systém Microsoft Office Excel v době návrhu a v době běhu v přizpůsobení na úrovni dokumentu. Můžete také přidat <xref:Microsoft.Office.Tools.Excel.Chart> ovládací prvky v době běhu v doplňkech VSTO.

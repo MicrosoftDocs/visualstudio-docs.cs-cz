@@ -1,5 +1,7 @@
 ---
 title: Vlastní podokna úloh
+description: Přečtěte si, že vlastní podokna úloh poskytují způsob, jak vytvořit vlastní podokno úloh a poskytnout uživatelům známé rozhraní pro přístup k funkcím vašeho řešení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -25,12 +27,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 361b04edf2b677c2842376bd9d8fee0d6f3bda12
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: b08e0e3bbc9f45b33ecd0248179011113db7a779
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862356"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844177"
 ---
 # <a name="custom-task-panes"></a>Vlastní podokna úloh
   Podokna úloh jsou panely uživatelského rozhraní, které jsou obvykle ukotveny na jednu stranu okna aplikace systém Microsoft Office. Vlastní podokna úloh poskytují způsob, jak vytvořit vlastní podokno úloh a poskytnout uživatelům známé rozhraní pro přístup k funkcím vašeho řešení. Rozhraní může například obsahovat ovládací prvky, které spouštějí kód pro úpravu dokumentů nebo zobrazení dat ze zdroje dat.

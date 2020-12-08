@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání ovládacích prvků obsahu do dokumentů aplikace Word'
+description: Přečtěte si, že v projektech aplikace Word na úrovni dokumentu můžete do dokumentu v projektu přidat ovládací prvky obsahu v době návrhu nebo v době běhu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2f15adeb801e33a134c681c206e3a5b38ccce70f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aa1528371a1466ec2886bf652ed33561b66b7028
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538382"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845541"
 ---
 # <a name="how-to-add-content-controls-to-word-documents"></a>Postupy: Přidání ovládacích prvků obsahu do dokumentů aplikace Word
   V projektech aplikace Word na úrovni dokumentu můžete do dokumentu v projektu přidat ovládací prvky obsahu v době návrhu nebo v době běhu. V projektech doplňku aplikace Word VSTO můžete přidat ovládací prvky obsahu do libovolného otevřeného dokumentu v době běhu.

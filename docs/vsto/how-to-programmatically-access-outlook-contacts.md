@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: přístup ke kontaktům aplikace Outlook prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete programově přistupovat ke kontaktům aplikace Outlook. Tento příklad vyhledá všechny kontakty, jejichž příjmení obsahují zadaný hledaný řetězec.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2f6d64512af660392c10082e3bcd3c26b6bc6885
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 68fe58f2f70a68c37d9171eb01f9294bb5e4d4af
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520091"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844684"
 ---
 # <a name="how-to-programmatically-access-outlook-contacts"></a>Postupy: přístup ke kontaktům aplikace Outlook prostřednictvím kódu programu
   Tento příklad vyhledá všechny kontakty, jejichž příjmení obsahují zadaný hledaný řetězec.

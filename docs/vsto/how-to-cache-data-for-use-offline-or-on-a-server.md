@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: ukládání dat do mezipaměti pro použití v režimu offline nebo na serveru'
+description: Označte datovou položku, která se uloží do mezipaměti v dokumentu, aby byla dostupná offline. To umožňuje, aby data v dokumentu byla zpracována jiným kódem.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ce295e299e4accb2d79655675f6264a1497b8d69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cefd4cd132e75f8ff622c8e0d809d317242c10f5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546182"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844319"
 ---
 # <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Postupy: ukládání dat do mezipaměti pro použití v režimu offline nebo na serveru
   Můžete označit datovou položku, která se uloží do mezipaměti v dokumentu, aby byla dostupná offline. To také umožňuje, aby data v dokumentu byla zpracována jiným kódem při uložení dokumentu na server.
@@ -32,7 +34,7 @@ ms.locfileid: "85546182"
  Můžete označit datovou položku, která má být uložena do mezipaměti, je-li datová položka deklarována v kódu, nebo, pokud používáte <xref:System.Data.DataSet> , nastavením vlastnosti v okně **vlastnosti** . Pokud ukládáte do mezipaměti datovou položku, která není <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable> , zajistěte, aby splňovala kritéria pro ukládání do mezipaměti v dokumentu. Další informace najdete v tématu [cache data](../vsto/caching-data.md).
 
 > [!NOTE]
-> Datové sady vytvořené pomocí Visual Basic označené jako **mezipaměti** a **WithEvents** (včetně datových sad, které jsou přetaženy z okna **zdroje dat** nebo **sady nástrojů** , které mají vlastnost **CacheInDocument** nastavenou na **hodnotu true**), mají podtržítka s předponou jejich názvů v mezipaměti. Pokud například vytvoříte datovou sadu a pojmenujte ji **zákazníci**, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> název bude **_Customers** v mezipaměti. Když použijete <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> pro přístup k této položce v mezipaměti, musíte místo **zákazníků**zadat **_Customers** .
+> Datové sady vytvořené pomocí Visual Basic označené jako **mezipaměti** a **WithEvents** (včetně datových sad, které jsou přetaženy z okna **zdroje dat** nebo **sady nástrojů** , které mají vlastnost **CacheInDocument** nastavenou na **hodnotu true**), mají podtržítka s předponou jejich názvů v mezipaměti. Pokud například vytvoříte datovou sadu a pojmenujte ji **zákazníci**, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> název bude **_Customers** v mezipaměti. Když použijete <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> pro přístup k této položce v mezipaměti, musíte místo **zákazníků** zadat **_Customers** .
 
 ### <a name="to-cache-data-in-the-document-using-code"></a>Ukládání dat do mezipaměti v dokumentu pomocí kódu
 

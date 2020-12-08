@@ -1,5 +1,7 @@
 ---
 title: Automatizace Wordu pomocí rozšířených objektů
+description: Přečtěte si, jak můžete pomocí hostitelských položek a hostitelských ovládacích prvků ve svých řešeních při vývoji řešení pro Word v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,15 +22,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 083fe8cdd3bf9d0e4de4809aacfb78b537e4ed8e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39ac9d50d0f75f595568c66b02bda1c5ed46a3d6
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255538"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844449"
 ---
 # <a name="automate-word-by-using-extended-objects"></a>Automatizace Wordu pomocí rozšířených objektů
-  Při vývoji řešení aplikace Word v aplikaci Visual Studio můžete použít *hostitelské položky* a *hostitelské řízení*s ve vašich řešeních. Jedná se o objekty, které rozšířily určité běžně používané objekty v objektovém modelu aplikace Word (tj. objektový model, který je zveřejněn v rámci primárního definičního sestavení pro Word), jako jsou například <xref:Microsoft.Office.Interop.Word.Document> <xref:Microsoft.Office.Interop.Word.ContentControl> objekty a. Rozšířené objekty se chovají jako objekty aplikace Word, na kterých jsou založeny, ale přidávají do objektů další události a funkce vazby dat.
+  Při vývoji řešení aplikace Word v aplikaci Visual Studio můžete použít *hostitelské položky* a *hostitelské řízení* s ve vašich řešeních. Jedná se o objekty, které rozšířily určité běžně používané objekty v objektovém modelu aplikace Word (tj. objektový model, který je zveřejněn v rámci primárního definičního sestavení pro Word), jako jsou například <xref:Microsoft.Office.Interop.Word.Document> <xref:Microsoft.Office.Interop.Word.ContentControl> objekty a. Rozšířené objekty se chovají jako objekty aplikace Word, na kterých jsou založeny, ale přidávají do objektů další události a funkce vazby dat.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 

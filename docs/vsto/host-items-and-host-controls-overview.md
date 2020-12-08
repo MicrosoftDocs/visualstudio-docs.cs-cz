@@ -1,5 +1,7 @@
 ---
 title: Přehled hostitelských položek a hostitelských ovládacích prvků
+description: Seznamte se s možnostmi hostování a hostitelskými ovládacími prvky, které vám pomůžou zajistit programovací model pro řešení pro Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -36,12 +38,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c349756eb12fe66800e209bd6a1aad5b8d2337ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: edc8939f2a9e5f41f81c8176d5268528c273a7ce
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255920"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845567"
 ---
 # <a name="host-items-and-host-controls-overview"></a>Přehled hostitelských položek a hostitelských ovládacích prvků
   Hostitelských položek a hostitelských ovládacích prvků jsou typy, které vám pomůžou poskytnout programovací model pro řešení Office vytvořená pomocí vývojářských nástrojů pro Office v sadě Visual Studio. Hostitelské položky a hostitelské ovládací prvky umožňují interakci s objektovými modely systém Microsoft Office Word a systém Microsoft Office Excel, které jsou založeny na modelu COM, podobně jako interakce se spravovanými objekty, jako jsou například ovládací prvky model Windows Forms.
@@ -145,7 +147,7 @@ ms.locfileid: "71255920"
 - [Postupy: Přidání ovládacích prvků XMLNodes do dokumentů aplikace Word](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)
 
 ### <a name="name-host-controls"></a>Název hostitelských ovládacích prvků
- Při přetažení hostitelského ovládacího prvku z **panelu nástrojů** do dokumentu je ovládací prvek automaticky pojmenován pomocí typu ovládacího prvku s přírůstkovým číslem na konci. Například záložky mají název **bookmark1**, **bookmark2**a tak dále. Pokud k přidání ovládacího prvku používáte nativní funkce Wordu nebo Excelu, můžete mu dát konkrétní název v okamžiku, kdy ho vytvoříte. Můžete také přejmenovat ovládací prvky změnou hodnoty vlastnosti **název** v okně **vlastnosti** .
+ Při přetažení hostitelského ovládacího prvku z **panelu nástrojů** do dokumentu je ovládací prvek automaticky pojmenován pomocí typu ovládacího prvku s přírůstkovým číslem na konci. Například záložky mají název **bookmark1**, **bookmark2** a tak dále. Pokud k přidání ovládacího prvku používáte nativní funkce Wordu nebo Excelu, můžete mu dát konkrétní název v okamžiku, kdy ho vytvoříte. Můžete také přejmenovat ovládací prvky změnou hodnoty vlastnosti **název** v okně **vlastnosti** .
 
 > [!NOTE]
 > Pro pojmenování hostitelských ovládacích prvků nelze použít vyhrazená slova. Například pokud přidáte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek do listu a změníte název na **systém**, dojde k chybám při sestavování projektu.

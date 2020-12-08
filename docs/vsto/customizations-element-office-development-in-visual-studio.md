@@ -1,7 +1,8 @@
 ---
 title: '&lt;přizpůsobení – &gt; element (vývoj pro Office v sadě Visual Studio)'
+description: Přečtěte si, jak element Customization oboru názvů vstov4 obsahuje všechny informace o instalaci a načítání jednotlivých řešení pro systém Office.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 58d88f865e5f220000bf021b548e4b9c4b8745f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc1f33101346d334d08d2bd2d7795961ea33011e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64790009"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844033"
 ---
 # <a name="ltcustomizationsgt-element-office-development-in-visual-studio"></a>&lt;přizpůsobení – &gt; element (vývoj pro Office v sadě Visual Studio)
   `customizations`Element `vstov4` oboru názvů obsahuje všechny informace o instalaci a načítání jednotlivých řešení pro systém Office.

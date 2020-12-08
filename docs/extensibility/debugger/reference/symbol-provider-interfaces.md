@@ -1,5 +1,7 @@
 ---
 title: Rozhraní poskytovatele symbolů | Microsoft Docs
+description: Tento článek obsahuje odkazy na popisy rozhraní pro zpracování symbolů pro sadu Visual Studio SDK, které vyhodnotí proměnné v zásobníku volání během režimu přerušení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7929ba36c76f0db1cabab087afe3590de509efff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a24baec6738382f93dee5d8b7843d624eea80890
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715839"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845788"
 ---
 # <a name="symbol-provider-interfaces"></a>Rozhraní poskytovatele symbolů
 Níže jsou uvedené rozhraní pro zpracování symbolů pro [!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)] .

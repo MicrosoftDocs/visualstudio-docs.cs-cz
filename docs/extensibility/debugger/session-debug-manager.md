@@ -1,5 +1,7 @@
 ---
 title: Správce ladění relace | Microsoft Docs
+description: Přečtěte si o Správci ladění relací, který spravuje více ladicích modulů ladění programů ve více procesech napříč libovolným počtem počítačů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 953b4e948ef5e21531a3e73bceed3a363ed3cec5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d2c51b1fd345789cabbb9735621626ab7c2db993
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712875"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845281"
 ---
 # <a name="session-debug-manager"></a>Správce ladění relace
 Správce ladění relace (SDM) spravuje libovolný počet ladicích modulů (DE), které ladí libovolný počet programů ve více procesech napříč libovolným počtem počítačů. Kromě toho, že se jedná o multiplexor ladicího stroje, model SDM poskytuje jednotný přehled o relaci ladění IDE.

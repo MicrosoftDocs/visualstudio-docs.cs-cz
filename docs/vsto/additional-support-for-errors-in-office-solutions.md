@@ -1,5 +1,7 @@
 ---
 title: Další podpora pro chyby v řešeních pro systém Office
+description: Přečtěte si, jak můžete pomocí prostředků podpory najít odpovědi na problémy, se kterými se setkáte při vytváření řešení pro Office v sadě Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -56,12 +58,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 01b225b27dfe9c5e1f006105b8e2676a509234b9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e307c839dfb0aa764ccd0aa5727f009635ecabce
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72984625"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844774"
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Další podpora pro chyby v řešeních pro systém Office
 

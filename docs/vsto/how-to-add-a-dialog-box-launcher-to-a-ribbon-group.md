@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání spouštěče dialogového okna do skupiny pásu karet'
+description: Můžete přidat spouštěč dialogového okna do libovolné skupiny na pásu karet, která může otevřít související dialogová okna nebo podokna úloh, která poskytují další možnosti, které se vztahují ke skupině.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 29b260929d0478749296496db5b454326497d3ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85b5d6f127c6f8b2b8140e778792aa1088efe05c
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541616"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844930"
 ---
 # <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>Postupy: Přidání spouštěče dialogového okna do skupiny pásu karet
   Spouštěč dialogového okna můžete přidat do libovolné skupiny na pásu karet. Spouštěč dialogového okna je malá ikona, která se zobrazí ve skupině. Uživatelé kliknutím na tuto ikonu otevřou související dialogová okna nebo podokna úloh, která poskytují další možnosti vztahující se ke skupině.
@@ -27,7 +29,7 @@ ms.locfileid: "85541616"
 
 ### <a name="to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>Přidání spouštěče dialogového okna do skupiny pásu karet
 
-1. V **Průzkumník řešení**vyberte soubor kódu pásu karet (soubor *. vb* nebo *. cs* ).
+1. V **Průzkumník řešení** vyberte soubor kódu pásu karet (soubor *. vb* nebo *. cs* ).
 
 2. V nabídce **zobrazení** klikněte na možnost **Návrhář**.
 

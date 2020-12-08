@@ -1,5 +1,7 @@
 ---
 title: Vývoj řešení pro systém Office
+description: Naučte se navrhovat projekt pomocí nástrojů Office Developer Tools v sadě Visual Studio. Také se naučíte, jak začít s implementací kódu a vlastního uživatelského rozhraní (UI).
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8ede09f18808eda22c747ac28e3c279fc43266bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fbfe569e587c53aede6d550bc20527ad8d0fd328
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551573"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844995"
 ---
 # <a name="develop-office-solutions"></a>Vývoj řešení pro systém Office
   Po návrhu projektu pomocí nástrojů Office Developer Tools v sadě Visual Studio a nastavení souborů projektu můžete začít soustředit na implementaci kódu a vlastního uživatelského rozhraní (UI).

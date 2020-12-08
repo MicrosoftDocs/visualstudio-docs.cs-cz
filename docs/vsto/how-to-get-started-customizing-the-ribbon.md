@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Začínáme s přizpůsobením pásu karet'
+description: Naučte se přizpůsobit pás karet aplikace systém Microsoft Office, přidejte položku pásu karet (vizuální Návrhář) nebo položku pásu karet (XML) do projektu Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: be311f87862f4447d903294508927735d3507b08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3974fe85a97226a920959b41256fa7e29923c9d1
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520065"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845944"
 ---
 # <a name="how-to-get-started-customizing-the-ribbon"></a>Postupy: Začínáme s přizpůsobením pásu karet
   Chcete-li přizpůsobit pás systém Microsoft Office aplikace, přidejte položku pás **karet (vizuální Návrhář)** nebo položku **pásu karet (XML)** do projektu sady Office.

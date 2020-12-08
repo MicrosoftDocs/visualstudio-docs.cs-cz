@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Export pásu karet z Návrháře pásu karet do XML pásu karet'
+description: Přečtěte si, že k přizpůsobení pásu karet můžete vyexportovat pás karet z návrháře na pás XML pásu karet a přímo upravit XML.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cf3101a062fa8b30ae821bf6a157319b6f37862a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: f39131eb7e3469d389ad2d50aaeb1ee97e3865b9
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298442"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844137"
 ---
 # <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Postupy: Export pásu karet z Návrháře pásu karet do XML pásu karet
   Položka **pás karet (vizuální Návrhář)** nepodporuje všechny možné typy přizpůsobení pásu karet. Chcete-li pás karet přizpůsobit pokročilým způsobům, můžete vyexportovat pás karet z návrháře na pás XML pásu karet a přímo upravit XML.
@@ -36,7 +38,7 @@ ms.locfileid: "92298442"
 
 ### <a name="to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Export pásu karet z Návrháře pásu karet do XML pásu karet
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor kódu pásu karet a pak klikněte na tlačítko **Návrhář zobrazení**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor kódu pásu karet a pak klikněte na tlačítko **Návrhář zobrazení**.
 
 2. Klikněte pravým tlačítkem myši na Návrhář pásu karet a pak klikněte na **exportovat pás karet do XML**.
 
@@ -44,11 +46,11 @@ ms.locfileid: "92298442"
 
 3. Ve třídě kódu pásu karet vyhledejte komentáře, které začínají na `TODO:` .
 
-4. Zkopírujte blok kódu v těchto komentářích do třídy **ThisAddIn**, **ThisWorkbook**nebo **ThisDocument** v závislosti na typu řešení, které vyvíjíte.
+4. Zkopírujte blok kódu v těchto komentářích do třídy **ThisAddIn**, **ThisWorkbook** nebo **ThisDocument** v závislosti na typu řešení, které vyvíjíte.
 
      Tento kód umožňuje aplikaci systém Microsoft Office vyhledat a načíst vlastní pás karet. Další informace najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
-5. V třídě **ThisAddIn**, **ThisWorkbook**nebo **ThisDocument** Odkomentujte blok kódu.
+5. V třídě **ThisAddIn**, **ThisWorkbook** nebo **ThisDocument** Odkomentujte blok kódu.
 
      Po zrušení komentáře kódu by měl vypadat podobně jako v následujícím příkladu. V tomto příkladu je volána třída pásu karet `MyRibbon` .
 

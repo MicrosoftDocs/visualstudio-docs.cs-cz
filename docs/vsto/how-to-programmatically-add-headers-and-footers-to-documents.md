@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: přidávání hlaviček a zápatí do dokumentů prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete do hlaviček a zápatí v dokumentu přidat text pomocí vlastnosti Headers (záhlaví) a vlastnost zápatí oddílu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c6a60f58a116cd01c59145de0fcd29a2f55a787e
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 1abf9c0726a6b4afd1764aec095f129a4fcaf510
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585415"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844514"
 ---
 # <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>Postupy: přidávání hlaviček a zápatí do dokumentů prostřednictvím kódu programu
   Do hlaviček a zápatí v dokumentu můžete přidat text pomocí <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> vlastnosti a <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> vlastnosti <xref:Microsoft.Office.Interop.Word.Section> . Každý oddíl dokumentu obsahuje tři záhlaví a zápatí:

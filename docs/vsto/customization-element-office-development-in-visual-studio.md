@@ -1,7 +1,8 @@
 ---
 title: '&lt;přizpůsobení – &gt; element (vývoj pro Office v sadě Visual Studio)'
+description: Přečtěte si, jak element Customization oboru názvů vstov4 popisuje konkrétní řešení Office.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1239c6749f25bf4bce7a1f5cc89a2a8430c98a4d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f50b441393e9d07dcd0b409248f199484022654
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544869"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844111"
 ---
 # <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;přizpůsobení – &gt; element (vývoj pro Office v sadě Visual Studio)
   `customization`Element `vstov4` oboru názvů popisuje konkrétní řešení Office. Podřízené prvky jsou odlišné pro přizpůsobení na úrovni dokumentu a doplňky VSTO.
@@ -61,7 +62,7 @@ ms.locfileid: "85544869"
 |---------------|-----------------|
 |`id`|Vyžaduje se pro nasazení ve více projektech. `id`Prvek jednoznačně identifikuje řešení pro systém Office.|
 
-### <a name="document-level-customizations"></a>Přizpůsobení na úrovni dokumentu
+### <a name="document-level-customizations"></a>Document-Level přizpůsobení
  `customization`Element má následující podřízený element.
 
 #### <a name="document"></a>dokument

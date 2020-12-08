@@ -1,5 +1,7 @@
 ---
 title: Přehled vlastních částí XML
+description: Přečtěte si, jak můžete do dokumentů vkládat data XML pro některé aplikace systém Microsoft Office. Při vložení dat XML do dokumentu se data nazývají vlastní část XML.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -23,12 +25,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b94deacad38f40d76b4c8485186bfd563808d912
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7998f2a47edd85a65b1e81dd45a046de80d0cdb
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64784425"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844124"
 ---
 # <a name="custom-xml-parts-overview"></a>Přehled vlastních částí XML
   Data XML můžete vložit do dokumentů pro některé aplikace systém Microsoft Office. Při vložení dat XML do dokumentu se data nazývají *vlastní část XML*.
@@ -41,9 +43,9 @@ ms.locfileid: "64784425"
 > Visual Studio také umožňuje ukládat datové objekty do mezipaměti v přizpůsobení na úrovni dokumentu. Tato funkce se liší od vlastních částí XML, i když existují nějaká podobnosti. Další informace najdete v tématu [data uložená v mezipaměti v přizpůsobeních na úrovni dokumentu](../vsto/cached-data-in-document-level-customizations.md).
 
 ## <a name="understand-custom-xml-parts"></a>Principy vlastních částí XML
- Vlastní části XML byly představeny v 2007 systém Microsoft Office systému spolu s otevřenými formáty XML. Tyto formáty zahrnují nové formáty souborů založené na jazyce XML pro aplikace Excel, PowerPoint a Word (například *. xlsx*, *. pptx*a *. docx*). Dokumenty v těchto formátech se skládají ze souborů XML (také názvů *částí XML*), které jsou uspořádány do složek v archivu zip. Většina částí XML je vestavěnými součástmi, které usnadňují definování struktury a stavu dokumentu. Dokumenty však mohou obsahovat také vlastní části XML, které lze použít k uložení libovolných dat XML do dokumentů.
+ Vlastní části XML byly představeny v 2007 systém Microsoft Office systému spolu s otevřenými formáty XML. Tyto formáty zahrnují nové formáty souborů založené na jazyce XML pro aplikace Excel, PowerPoint a Word (například *. xlsx*, *. pptx* a *. docx*). Dokumenty v těchto formátech se skládají ze souborů XML (také názvů *částí XML*), které jsou uspořádány do složek v archivu zip. Většina částí XML je vestavěnými součástmi, které usnadňují definování struktury a stavu dokumentu. Dokumenty však mohou obsahovat také vlastní části XML, které lze použít k uložení libovolných dat XML do dokumentů.
 
- Formáty souborů XML umožňují aplikacím pracovat s dokumenty způsobem, který není možné ve starších binárních formátech souborů (například *. xls*, *. ppt*a *. doc*). Všechny aplikace, které můžou číst archivy ZIP, můžou kontrolovat a upravovat obsah dokumentů, i když systém Microsoft Office není nainstalovaná.
+ Formáty souborů XML umožňují aplikacím pracovat s dokumenty způsobem, který není možné ve starších binárních formátech souborů (například *. xls*, *. ppt* a *. doc*). Všechny aplikace, které můžou číst archivy ZIP, můžou kontrolovat a upravovat obsah dokumentů, i když systém Microsoft Office není nainstalovaná.
 
  Další informace o struktuře Open XML a vlastních částí XML naleznete v následujících článcích:
 

@@ -1,5 +1,7 @@
 ---
 title: Přidání ovládacích prvků do dokumentů Office v době běhu
+description: Naučte se, jak přidat ovládací prvky do systém Microsoft Office dokumentů aplikace Word a systém Microsoft Office excelového sešitu za běhu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -22,12 +24,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 44bf1de5d550a264a63ba7293fe1bdc0c9630aee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e971556605a120b4ef475f434390c6dcf7b17938
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986326"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844839"
 ---
 # <a name="add-controls-to-office-documents-at-run-time"></a>Přidání ovládacích prvků do dokumentů Office v době běhu
   Ovládací prvky lze přidat do systém Microsoft Office dokumentů aplikace Word a systém Microsoft Office excelový sešit v době běhu. Můžete je také odebrat v době běhu. Ovládací prvky, které přidáte nebo odeberete za běhu, se nazývají *dynamické ovládací prvky*.
@@ -54,7 +56,7 @@ ms.locfileid: "72986326"
 - V projektu doplňku VSTO pro Excel nebo Word použijte `Controls` vlastnost <xref:Microsoft.Office.Tools.Excel.Worksheet> nebo <xref:Microsoft.Office.Tools.Word.Document> , kterou jste v době běhu vygenerovali. Další informace o generování těchto objektů v době běhu najdete v tématu [rozšiřování dokumentů aplikace Word a sešitů aplikace Excel v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
 ### <a name="add-controls"></a>Přidat ovládací prvky
- <xref:Microsoft.Office.Tools.Excel.ControlCollection>Typy a <xref:Microsoft.Office.Tools.Word.ControlCollection> zahrnují pomocné metody, které lze použít k přidání ovládacích prvků hostitele a běžných model Windows Formsch ovládacích prvků do dokumentů a listů. Každý název metody má `Add` *třídu ovládacího prvku*Format, kde *Třída ovládacího prvku* je název třídy ovládacího prvku, který chcete přidat. Například pro přidání <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku do dokumentu použijte <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A> metodu.
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection>Typy a <xref:Microsoft.Office.Tools.Word.ControlCollection> zahrnují pomocné metody, které lze použít k přidání ovládacích prvků hostitele a běžných model Windows Formsch ovládacích prvků do dokumentů a listů. Každý název metody má `Add` *třídu ovládacího prvku* Format, kde *Třída ovládacího prvku* je název třídy ovládacího prvku, který chcete přidat. Například pro přidání <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku do dokumentu použijte <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A> metodu.
 
  Následující příklad kódu přidá <xref:Microsoft.Office.Tools.Excel.NamedRange> do `Sheet1` v projektu na úrovni dokumentu pro Excel.
 

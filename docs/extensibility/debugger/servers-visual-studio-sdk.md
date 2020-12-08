@@ -1,5 +1,7 @@
 ---
 title: Servery (Visual Studio SDK) | Microsoft Docs
+description: Tento článek popisuje definice a roli serveru v architektuře ladicího programu v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32fdbb5afca40c3b4fced468d2f9ef0ea5226c00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9eaccebf874fa5fc0e7aaf63823547742215a568
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712900"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845294"
 ---
 # <a name="servers-visual-studio-sdk"></a>Servery (Visual Studio SDK)
 V architektuře ladicího programu *Server*:
