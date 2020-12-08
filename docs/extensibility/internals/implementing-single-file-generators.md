@@ -1,5 +1,7 @@
 ---
-title: Implementace generátorů tvořených jedním souborem | Microsoft Docs
+title: Implementace generátorů Single-File | Microsoft Docs
+description: Naučte se používat vlastní nástroj, který implementuje rozhraní IVsSingleFileGenerator pro rozšiřování Visual Basic a systémů projektů Visual C# v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e700d09277edbb04b30676d3965b6c996d0a11f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 373536844e3572e2e61b56c1b86f3e00ed47845d
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707660"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761241"
 ---
 # <a name="implementing-single-file-generators"></a>Implementace generátorů tvořených jedním souborem
 Vlastní nástroj (někdy označovaný jako generátor jediného souboru) lze použít k rozšiřování [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] systémů a systémů projektů v nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Vlastní nástroj je komponenta modelu COM, která implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> rozhraní. Pomocí tohoto rozhraní vlastní nástroj transformuje jeden vstupní soubor do jednoho výstupního souboru. Výsledkem transformace může být zdrojový kód nebo jakýkoli jiný výstup, který je užitečný. Dva příklady souborů kódu generovaných vlastním nástrojem jsou generovány v reakci na změny ve vizuálním návrháři a v souborech vygenerovaných pomocí jazyka WSDL (Web Services Description Language).

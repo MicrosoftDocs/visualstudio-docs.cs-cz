@@ -1,5 +1,7 @@
 ---
 title: Implementace zpracování příkazů pro vnořené projekty | Microsoft Docs
+description: Naučte se implementovat zpracování příkazů pro vnořené projekty v integrovaném vývojovém prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2092fc8033d5a5cc53b12bd63a945bd9865ca30e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13cfa6ebb8cae645202339c511f15ca15e2b3490
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707597"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761150"
 ---
 # <a name="implementing-command-handling-for-nested-projects"></a>Implementace zpracování příkazů pro vnořené projekty
 Rozhraní IDE může předat příkazy, které jsou předány prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní a pro vnořené projekty, nebo nadřazené projekty mohou příkazy filtrovat nebo přepsat.

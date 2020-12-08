@@ -1,5 +1,7 @@
 ---
-title: Příkazy definované rozhraním IDE pro rozšíření systémů projektů | Microsoft Docs
+title: IDE-Defined příkazy pro rozšíření systémů projektů | Microsoft Docs
+description: Přečtěte si o příkazech a skupinách příkazů definovaných v integrovaném vývojovém prostředí (IDE) sady Visual Studio, které se používá pro rozšiřování systémů projektů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61c0b2924548f50ad650389e3ad81759be1986a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d5147f4e03b019b083613a77afe95b95e9e033a
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707739"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761163"
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>Příkazy definované prostředím IDE pro rozšíření systémů projektů
 Chcete-li zvětšit systémy projektu, můžete použít příkazy a skupiny příkazů poskytované [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozhraním IDE.
@@ -32,7 +34,7 @@ Chcete-li zvětšit systémy projektu, můžete použít příkazy a skupiny př
 |IDM_VS_TOOL_PROJWIN|Panel nástrojů **Průzkumník řešení** .|
 
 ## <a name="shortcut-menus"></a>Místní nabídky
- V následující tabulce jsou uvedeny místní nabídky, které se použijí, když je vybrán jeden uzel v **Průzkumník řešení**, nebo když v **Průzkumník řešení**existuje více homogenních výběrů, což znamená, že všechny vybrané uzly mají stejný typ.
+ V následující tabulce jsou uvedeny místní nabídky, které se použijí, když je vybrán jeden uzel v **Průzkumník řešení**, nebo když v **Průzkumník řešení** existuje více homogenních výběrů, což znamená, že všechny vybrané uzly mají stejný typ.
 
 |Místní nabídka|Popis|
 |-------------------|-----------------|

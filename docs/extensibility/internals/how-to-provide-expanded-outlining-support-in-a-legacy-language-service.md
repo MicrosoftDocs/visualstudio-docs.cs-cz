@@ -1,5 +1,7 @@
 ---
 title: Poskytnutí podpory sbalení ve službě jazyka | Microsoft Docs
+description: Přečtěte si, jak poskytnout rozšířenou podporu sbalení ve službě starší verze jazyka tím, že přidáváte oblasti osnovy se spravovanými editory a oblasti osnovy řízené klienty.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 450ef1430e86467d116cc635a27600756bc36075
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9397ff17ba80368a86ba03260b3c5af3759bfe8d
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905281"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761358"
 ---
 # <a name="how-to-provide-expanded-outlining-support-in-a-legacy-language-service"></a>Postupy: poskytování rozšířené podpory sbalení ve službě starší verze jazyka
 Existují dvě možnosti, jak rozšířit podporu osnovy pro váš jazyk nad rámec podpory příkazu **sbalit na definice** . Můžete přidat oblasti osnovy řízené editorem a přidat oblasti osnovy řízené klientem.

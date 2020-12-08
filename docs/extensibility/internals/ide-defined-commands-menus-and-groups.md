@@ -1,5 +1,7 @@
 ---
-title: Příkazy, nabídky a skupiny definované rozhraním IDE | Microsoft Docs
+title: IDE-Defined příkazy, nabídky a skupiny | Microsoft Docs
+description: Seznamte se s nabídkami, příkazy a skupinami příkazů, které jsou definovány v integrovaném vývojovém prostředí (IDE) sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +14,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6557f49b019a6793698dabe852919ec2e9f28cfd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6314199fdf850c377825ee31e58cd9f315c5f672
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707720"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761020"
 ---
 # <a name="ide-defined-commands-menus-and-groups"></a>Příkazy, nabídky a skupiny definované integrovaným vývojovým prostředím
 Mnoho nabídek, příkazů a skupin příkazů je již definováno pro použití [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozhraním IDE. Tyto příkazy jsou k dispozici také pro vaše použití při rozšiřování [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-## <a name="finding-environment-defined-commands"></a>Hledání příkazů definovaných prostředím
+## <a name="finding-environment-defined-commands"></a>Hledání příkazů Environment-Defined
  Příkazy prostředí jsou definované v sadě čtyř souborů. vsct:
 
 - SharedCmdDef. vsct

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: podpora sbalení ve službě starší verze jazyka | Microsoft Docs'
+description: Naučte se poskytovat podporu pro sbalení, rozbalení nebo sbalení různých oblastí textu ve službě starší verze jazyka.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28396d513c83ed83e2769e75a6020a98b10251b4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c9d1d7b7a74b6565c666e4d5e3293caaef3c7732
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707909"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761319"
 ---
 # <a name="how-to-support-outlining-in-a-legacy-language-service"></a>Postupy: podpora sbalení ve službě starší verze jazyka
 K rozbalení nebo sbalení různých oblastí textu se používá osnova. Způsob, jakým se používá sbalení, lze definovat odlišně podle různých jazyků. Další informace najdete v tématu [popisujícím sbalení](../../ide/outlining.md).

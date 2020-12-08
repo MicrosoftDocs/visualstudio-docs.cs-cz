@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: registrace knihovny pomocí Správce objektů | Microsoft Docs'
+description: Naučte se registrovat knihovnu pomocí Správce objektů sady Visual Studio, abyste mohli zobrazovat symboly v nástrojích pro procházení, jako je Zobrazení tříd a Prohlížeč objektů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7179bd87fdfd9a2c3fc36958a9d964ec4f790dbd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8036a0f4fe073473891805766ea8e3bb941951f8
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905233"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761379"
 ---
 # <a name="how-to-register-a-library-with-the-object-manager"></a>Postupy: registrace knihovny pomocí Správce objektů
 Nástroje pro procházení symbolů, jako je **zobrazení tříd**, **Prohlížeč objektů**, **prohlížeč volání** a **hledání výsledků symbolů**, umožňují zobrazit symboly v projektu nebo externích součástech. Mezi symboly patří obory názvů, třídy, rozhraní, metody a další prvky jazyka. Knihovny sledují tyto symboly a zpřístupňují je [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] správci objektů, který tyto nástroje naplní daty.

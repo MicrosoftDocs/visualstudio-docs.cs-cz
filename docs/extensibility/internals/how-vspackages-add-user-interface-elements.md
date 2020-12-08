@@ -1,5 +1,7 @@
 ---
 title: Jak VSPackage přidávají prvky uživatelského rozhraní | Microsoft Docs
+description: Naučte se, jak sady VSPackage přidávají prvky uživatelského rozhraní (UI), jako jsou nabídky, panely nástrojů a okna nástrojů, do sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d9cc3184009dd98e743064db1b8eb2abe6059d1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3e2fe51c365e3e6936a73aef9d4de9d52024d47
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649600"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761085"
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>Jak prvky VSPackage přidávají prvky uživatelského rozhraní
 VSPackage může přidat prvky uživatelského rozhraní (UI), například nabídky, panely nástrojů a okna nástrojů, do sady Visual Studio prostřednictvím souboru *. vsct* .
@@ -185,7 +187,7 @@ Následující pravidla určují, jak může položka zavolat jinou položku jak
 
 |Prvek|Definováno v této části tabulky příkazů|Může být obsažena (jako nadřazená nebo podle umístění v `CommandPlacements` části nebo obojí)|Může obsahovat (označované jako nadřazené)|
 |-------------| - | - | - |
-|Seskupení|[Groups – element](../../extensibility/groups-element.md), IDE, jiné sady VSPackage|Nabídka, skupina, samotná položka|Nabídky, skupiny a příkazy|
+|Skupina|[Groups – element](../../extensibility/groups-element.md), IDE, jiné sady VSPackage|Nabídka, skupina, samotná položka|Nabídky, skupiny a příkazy|
 |Nabídka|[Menu – element](../../extensibility/menus-element.md), rozhraní IDE, jiné sady VSPackage|1 až *n* skupin|0 až *n* skupin|
 |Panel nástrojů|[Menu – element](../../extensibility/menus-element.md), rozhraní IDE, jiné sady VSPackage|Samotná položka|0 až *n* skupin|
 |Položka nabídky|[Buttons – Element](../../extensibility/buttons-element.md), rozhraní IDE, jiné sady VSPackage|1 až *n* skupin, samotná položka|-0 až *n* skupin|

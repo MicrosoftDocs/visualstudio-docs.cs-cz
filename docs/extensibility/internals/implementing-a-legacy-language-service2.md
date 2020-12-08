@@ -1,5 +1,7 @@
 ---
 title: Implementace starší verze jazyka Jazyka2 | Microsoft Docs
+description: Naučte se implementovat službu starší verze jazyka, která podporuje funkce rozšířené jazykové služby, pomocí rozhraní Managed Package Framework (MPF). 2. část z 2.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: df44b92cdf311689397a062b127d4c3e514a15e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a7da218a9ada593731e6205e017861084e73adc
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238696"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761137"
 ---
 # <a name="implementing-a-legacy-language-service-2"></a>Implementace starší verze jazykové služby 2
 Chcete-li implementovat jazykovou službu pomocí spravovaného balíčku Package Framework (MPF), musíte odvodit třídu od <xref:Microsoft.VisualStudio.Package.LanguageService> třídy a implementovat následující abstraktní metody a vlastnosti:
@@ -32,7 +34,7 @@ Chcete-li implementovat jazykovou službu pomocí spravovaného balíčku Packag
 
   Aby bylo možné podporovat další funkce, může být nutné, aby služba jazyka mohla odvodit třídu z jedné z tříd služby jazyka MPF. například pro podporu dalších příkazů nabídky musíte odvodit třídu z <xref:Microsoft.VisualStudio.Package.ViewFilter> třídy a přepsat několik metod manipulace s příkazy (podrobnosti najdete v tématu <xref:Microsoft.VisualStudio.Package.ViewFilter> ). <xref:Microsoft.VisualStudio.Package.LanguageService>Třída poskytuje řadu metod, které jsou volány pro vytvoření nových instancí různých tříd a přepsání vhodné metody vytvoření pro poskytnutí instance vaší třídy. Například je třeba přepsat <xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A> metodu ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídě, aby vracela instanci vaší vlastní <xref:Microsoft.VisualStudio.Package.ViewFilter> třídy. Další podrobnosti najdete v části vytváření instancí vlastních tříd.
 
-  Vaše jazyková služba může také poskytovat vlastní ikony, které se používají na mnoha místech. Například když se zobrazí seznam dokončení IntelliSense, může mít každá položka v seznamu přiřazenou ikonu a označit položku jako metodu, třídu, obor názvů, vlastnost nebo cokoli, co je potřeba pro váš jazyk. Tyto ikony se používají ve všech seznamech IntelliSense, v **navigačním panelu**a v okně **Seznam chyb** úlohy. Podrobnosti najdete níže v části image služby jazyka.
+  Vaše jazyková služba může také poskytovat vlastní ikony, které se používají na mnoha místech. Například když se zobrazí seznam dokončení IntelliSense, může mít každá položka v seznamu přiřazenou ikonu a označit položku jako metodu, třídu, obor názvů, vlastnost nebo cokoli, co je potřeba pro váš jazyk. Tyto ikony se používají ve všech seznamech IntelliSense, v **navigačním panelu** a v okně **Seznam chyb** úlohy. Podrobnosti najdete níže v části image služby jazyka.
 
 ## <a name="getlanguagepreferences-method"></a>Metoda GetLanguagePreferences
  <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>Metoda vždy vrací stejnou instanci <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy. Základní třídu můžete použít, <xref:Microsoft.VisualStudio.Package.LanguagePreferences> Pokud nepotřebujete žádné další předvolby pro jazykovou službu. Třídy služby jazyka MPF předpokládají přítomnost alespoň základní <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy.

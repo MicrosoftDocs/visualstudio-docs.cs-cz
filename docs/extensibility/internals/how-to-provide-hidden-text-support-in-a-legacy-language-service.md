@@ -1,5 +1,7 @@
 ---
 title: Poskytování podpory skrytých textů ve službě starší verze jazyka
+description: Přečtěte si, jak poskytnout podporu skrytého textu ve službě starší verze jazyka přidáním textových oblastí řízených pomocí editoru nebo klientů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a9d5fe85932f87eb68b6b5a0f5868ebbf8f2b5f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1f51f8e0c5ca268c1171804f663e5d01bd7c2530
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707928"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761306"
 ---
 # <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>Postupy: poskytování podpory skrytého textu ve službě starší verze jazyka
 Kromě oblastí obrysů můžete vytvářet i skryté oblasti textu. Skryté textové oblasti mohou být řízeny klientem nebo editorem a používají se k úplnému skrytí oblasti textu. Editor zobrazuje skrytou oblast jako vodorovné čáry. Příkladem je zobrazení **pouze skriptu** v editoru HTML.

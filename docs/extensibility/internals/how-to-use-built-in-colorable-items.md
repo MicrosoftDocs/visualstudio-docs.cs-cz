@@ -1,5 +1,7 @@
 ---
-title: 'Postupy: Použití vestavěných barevně používaných položek | Microsoft Docs'
+title: 'Postupy: použití Built-In barevně vydaných položek | Microsoft Docs'
+description: Naučte se používat vestavěné barevné položky v integrovaném vývojovém prostředí (IDE) sady Visual Studio pro vaši jazykovou službu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,19 +13,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 762d1e53f7aafa11ed345859e68fc98766eec77d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 926cb77fe9477b7dc78c35c2ab58f9b73530e4fa
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905219"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761007"
 ---
 # <a name="how-to-use-built-in-colorable-items"></a>Postupy: Použití vestavěných barevných položek
 Než začnete používat vestavěné položky barev, musíte nejdřív signalizovat integrované vývojové prostředí (IDE), které neposkytujete vlastní barvy, které by v tomto případě byly <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> objekty. Provedete to tak, že nastavíte položku registru pro službu jazyka.
 
 ## <a name="to-use-built-in-colorable-items"></a>Použití vestavěných barevných položek
 
-1. V části **HKEY_LOCAL_MACHINE \visualstudio \\<X. Y> \languages\language Services \\<název \> jazyka**, kde \<X.Y> je verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a \<Language Name> je název vašeho jazyka, vytvořte hodnotu položky registru DWORD s názvem **RequestStockColors**.
+1. V části **HKEY_LOCAL_MACHINE\VisualStudio\\<X. Y> \languages\language Services \\<název \> jazyka**, kde \<X.Y> je verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a \<Language Name> je název vašeho jazyka, vytvořte hodnotu položky registru DWORD s názvem **RequestStockColors**.
 
 2. Nastavte položku registru **RequestStockColors** na hodnotu *1*.
 
