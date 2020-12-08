@@ -1,5 +1,7 @@
 ---
 title: Problémy se zabezpečením | Microsoft Docs
+description: Přečtěte si o oprávněních potřebných k ladění programu pomocí sady Visual Studio, včetně vzdáleného ladění a situací, které zahrnují další služby.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 40898f5633eac374206ed40bfcac96d9c1c5b753
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 632150101b966e128e8a34636b01a369a1db5c64
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713051"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847608"
 ---
 # <a name="security-issues"></a>Problémy se zabezpečením
 Chcete-li ladit program pomocí sady Visual Studio, jsou jediná potřebná oprávnění stejná jako vývojář, který vyžaduje spuštění programu. To zahrnuje vzdálené ladění ve většině situací. V některých situacích, které se týkají jiných služeb, jako je třeba Internetová informační služba, může vyžadovat vyšší úroveň oprávnění.

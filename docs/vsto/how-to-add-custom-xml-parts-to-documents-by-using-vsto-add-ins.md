@@ -1,5 +1,7 @@
 ---
 title: Přidání vlastních částí XML do dokumentů s použitím doplňků VSTO
+description: Zjistěte, jak můžete ukládat data XML do následujících typů dokumentů vytvořením vlastní části XML v doplňku VSTO.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 92c00ea69069b7374f5f595cc6f198aac23d1f91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b153fe3e7c68ed6a8288ff69a30e16dd32c448a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538291"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847712"
 ---
 # <a name="how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins"></a>Postupy: Přidání vlastních částí XML do dokumentů pomocí doplňků VSTO
   Data XML můžete ukládat do následujících typů dokumentů vytvořením vlastní části XML v doplňku VSTO:
@@ -67,7 +69,7 @@ ms.locfileid: "85538291"
 
 ## <a name="to-add-a-custom-xml-part-to-a-powerpoint-presentation"></a>Přidání vlastní součásti XML do prezentace aplikace PowerPoint
 
-1. Přidejte nový <xref:Microsoft.Office.Core.CustomXMLPart> objekt do kolekce [Microsoft. Office. Interop. PowerPoint. _Presentation. CustomXMLParts](/previous-versions/office/developer/office-2010/ff760806%28v%3doffice.14%29) v prezentaci. <xref:Microsoft.Office.Core.CustomXMLPart>Obsahuje řetězec XML, který chcete uložit do prezentace.
+1. Přidejte nový <xref:Microsoft.Office.Core.CustomXMLPart> objekt do kolekce [Microsoft.Office.Interop.PowerPoint._Presentation. CustomXMLParts](/previous-versions/office/developer/office-2010/ff760806%28v%3doffice.14%29) v prezentaci. <xref:Microsoft.Office.Core.CustomXMLPart>Obsahuje řetězec XML, který chcete uložit do prezentace.
 
      Následující příklad kódu přidá vlastní část XML do zadané prezentace.
 
@@ -76,7 +78,7 @@ ms.locfileid: "85538291"
 
 2. Přidejte `AddCustomXmlPartToPresentation` metodu do `ThisAddIn` třídy v projektu doplňku VSTO pro PowerPoint.
 
-3. Zavolejte metodu z jiného kódu v projektu. Chcete-li například vytvořit vlastní část XML, když uživatel otevře prezentaci, zavolejte metodu z obslužné rutiny události pro událost [Microsoft. Office. Interop. PowerPoint. EApplication_Event. AfterPresentationOpen](/previous-versions/office/developer/office-2010/ff762843(v=office.14)) .
+3. Zavolejte metodu z jiného kódu v projektu. Chcete-li například vytvořit vlastní část XML, když uživatel otevře prezentaci, zavolejte metodu z obslužné rutiny události pro událost [Microsoft.Office.Interop.PowerPoint.EApplication_Event. AfterPresentationOpen](/previous-versions/office/developer/office-2010/ff762843(v=office.14)) .
 
 ## <a name="robust-programming"></a>Robustní programování
  Pro zjednodušení tento příklad používá řetězec XML, který je definován jako místní proměnná v metodě. Obvykle byste měli získat XML z externího zdroje, jako je například soubor nebo databáze.

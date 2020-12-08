@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Konfigurace zabezpečení seznamu zahrnutí'
+description: Nakonfigurujte výzvu pro vztah důvěryhodnosti ClickOnce, abyste měli kontrolu nad tím, jestli mají koncoví uživatelé možnost instalovat řešení Office, a to uložením rozhodnutí o důvěryhodnosti do seznamu pro zahrnutí.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 459cf3f33197939a916a5f11a94bbaf09e8142e3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1f9eca5150e019906805adf40e5c9b6af8a3c14e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541632"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846724"
 ---
 # <a name="how-to-configure-inclusion-list-security"></a>Postupy: Konfigurace zabezpečení seznamu zahrnutí
   Pokud máte oprávnění správce, můžete nakonfigurovat [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] výzvu vztahu důvěryhodnosti, abyste mohli řídit, jestli mají koncoví uživatelé možnost instalovat řešení Office, a to uložením rozhodnutí o důvěryhodnosti do seznamu povolených. Informace o seznamech zahrnutí najdete v tématu [důvěryhodná řešení Office pomocí seznamů zahrnutí](../vsto/trusting-office-solutions-by-using-inclusion-lists.md).
@@ -40,13 +42,13 @@ ms.locfileid: "85541632"
 
 1. Otevřete editor registru: .
 
-    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.
+    1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 
-    2. Do pole **otevřít** zadejte **regedt32.exe**a pak klikněte na **OK**.
+    2. Do pole **otevřít** zadejte **regedt32.exe** a pak klikněte na **OK**.
 
 2. Vyhledejte následující klíč registru:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Pokud klíč neexistuje, vytvořte ho.
 
@@ -99,13 +101,13 @@ ms.locfileid: "85541632"
 
 1. Otevřete editor registru: .
 
-    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.
+    1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 
-    2. Do pole **otevřít** zadejte **regedt32.exe**a pak klikněte na **OK**.
+    2. Do pole **otevřít** zadejte **regedt32.exe** a pak klikněte na **OK**.
 
 2. Vyhledejte následující klíč registru:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Pokud klíč neexistuje, vytvořte ho.
 
@@ -158,13 +160,13 @@ ms.locfileid: "85541632"
 
 1. Otevřete editor registru: .
 
-    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.
+    1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 
-    2. Do pole **otevřít** zadejte **regedt32.exe**a pak klikněte na **OK**.
+    2. Do pole **otevřít** zadejte **regedt32.exe** a pak klikněte na **OK**.
 
 2. Pokud tato akce ještě neexistuje, vytvořte následující klíč registru:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
 3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami.
 

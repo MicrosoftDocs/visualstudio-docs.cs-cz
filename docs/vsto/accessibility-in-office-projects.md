@@ -1,5 +1,7 @@
 ---
 title: Usnadnění v projektech pro systém Office
+description: Přečtěte si, jak systém Microsoft Office projekty obsahují mnoho funkcí usnadnění, které vám umožní vytvářet vlastní řešení, která splňují standardní požadavky na přístupnost.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8bd74f4d61c74a4dc348f7a615e103b283a15fc0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de877ccc2d2a036bf03b0888a7edf455b17788a4
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189621"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847361"
 ---
 # <a name="accessibility-in-office-projects"></a>Usnadnění v projektech pro systém Office
 

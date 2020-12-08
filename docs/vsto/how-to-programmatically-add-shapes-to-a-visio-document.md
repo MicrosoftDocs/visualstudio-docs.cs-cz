@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: přidávání obrazců do dokumentů aplikace Visio prostřednictvím kódu programu'
+description: Naučte se, jak můžete přidat obrazce do systém Microsoft Office dokumentu Visia načtením předloh ze vzorníku a přetažením obrazců na aktivní stránce.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e8eb3ad837f699a1bb0bbc327b6e892a20866e0a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 819560d584f267bfa54ae2bcfc61a162f45e0383
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584227"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848024"
 ---
 # <a name="how-to-programmatically-add-shapes-to-a-visio-document"></a>Postupy: přidávání obrazců do dokumentů aplikace Visio prostřednictvím kódu programu
   Systém Microsoft Office do dokumentu aplikace Visio lze přidat tvary načtením předloh ze vzorníku a přetažením obrazců na aktivní stránce.

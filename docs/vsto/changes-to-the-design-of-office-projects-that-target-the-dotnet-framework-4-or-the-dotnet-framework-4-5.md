@@ -1,5 +1,7 @@
 ---
 title: Změny v návrhu projektů Office cílících na .NET Framework
+description: Přečtěte si o změnách zavedených v sadě Visual Studio na návrh projektů Office, které cílí na .NET Framework 4 nebo novější.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: be681bb930e22b3e4cdd4597eb4d265c27b08139
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 05f3662f1bc6379fa3401e98473971bcefc36ddd
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583824"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847855"
 ---
 # <a name="changes-to-the-design-of-office-projects-that-target-the-net-framework-4-or-the-net-framework-45"></a>Změny v návrhu projektů Office cílených na .NET Framework 4 nebo .NET Framework 4,5
   Počínaje [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] verzí sada Visual Studio zavádí některé změny v návrhu projektů Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější. Pokud jste obeznámeni s projekty Office v předchozích verzích sady Visual Studio, měli byste si být vědomi těchto změn před vývojem projektů Office, které cílí na tyto verze .NET Framework 4,0 nebo novější. Ve výchozím nastavení všechny projekty, které vytvoříte pomocí Visual Studio 2013 nebo novější, cílí na .NET Framework 4,0 nebo novější.

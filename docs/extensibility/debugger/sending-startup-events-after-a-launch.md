@@ -1,5 +1,7 @@
 ---
 title: Posílání událostí po spuštění | Microsoft Docs
+description: Přečtěte si o řadě spouštěcích událostí, které ladicí stroj odešle do ladicí relace poté, co je ladicí stroj připojen k programu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c71db002420a2b822bffd34f2ae05e712f6a4bb9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 99b094fd1019e0d7dea09e2953cb4f31e03b80dc
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713016"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847881"
 ---
 # <a name="send-startup-events-after-a-launch"></a>Po spuštění Odeslat události po spuštění
 Jakmile je ladicí stroj (DE) připojen k programu, pošle řada událostí po spuštění zpět do ladicí relace.

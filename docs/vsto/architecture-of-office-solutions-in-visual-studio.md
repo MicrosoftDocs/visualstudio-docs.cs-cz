@@ -1,5 +1,7 @@
 ---
 title: Architektura řešení pro systém Office v sadě Visual Studio
+description: Přečtěte si o řešeních vytvořených pomocí nástrojů pro vývojáře systém Microsoft Office v aplikaci Visual Studio a o tom, jak fungují.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0842cab03ba92568b0b672e2b8d257af4b6aa490
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0ca40ed18639caae3250ddc1dc2a664b11780f7a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551875"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847582"
 ---
 # <a name="architecture-of-office-solutions-in-visual-studio"></a>Architektura řešení pro systém Office v sadě Visual Studio
   Témata v této části poskytují informace o tom, jak řešení vytvořená pomocí vývojářských nástrojů Office v sadě Visual Studio fungují.

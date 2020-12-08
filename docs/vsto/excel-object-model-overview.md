@@ -1,5 +1,7 @@
 ---
 title: Přehled modelu objektů aplikace Excel
+description: Naučte se, že můžete pracovat s objekty poskytnutými modelem objektu aplikace Excel k vývoji řešení, která používají systém Microsoft Office Excel.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a823692a5cc0f154c514edff4fe9398de0efd212
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb3134b7656fc5156554e60fc88d16e6c2b58120
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649415"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847686"
 ---
 # <a name="excel-object-model-overview"></a>Přehled modelu objektů aplikace Excel
   Pro vývoj řešení, která používají systém Microsoft Office Excel, můžete pracovat s objekty poskytovanými modelem objektu aplikace Excel. V tomto tématu se seznámíte s nejdůležitějšími objekty:

@@ -1,5 +1,7 @@
 ---
 title: Přístup k oblasti formuláře v době běhu
+description: Naučte se, jak získat přístup k oblasti formuláře v různých typech projektů a verzích systém Microsoft Office v době běhu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5dd8818b57a1aa33b70254303150d8f00e36cc02
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d0276405c023717c88f334d6231939d59f79ee4e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255802"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847413"
 ---
 # <a name="access-a-form-region-at-run-time"></a>Přístup k oblasti formuláře v době běhu
 

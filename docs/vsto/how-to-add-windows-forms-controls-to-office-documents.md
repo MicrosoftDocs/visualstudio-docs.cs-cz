@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání ovládacích prvků Windows Forms do dokumentů Office'
+description: Naučte se, jak můžete přidat model Windows Forms ovládací prvky pro systém Microsoft Office Excelu a systém Microsoft Office wordové dokumenty v době návrhu v projektech na úrovni dokumentu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b12d51ffe3a2e647a067b95d320e8beb70cac384
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8f073a72db1a18574dff6ab060b1ea069475fbb
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547534"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846776"
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>Postupy: Přidání ovládacích prvků model Windows Forms do dokumentů Office
   Můžete přidat model Windows Forms ovládací prvky pro systém Microsoft Office Excelu a systém Microsoft Office wordové dokumenty v době návrhu v projektech na úrovni dokumentu. V době běhu můžete přidat ovládací prvky v přizpůsobení na úrovni dokumentu a v Doplňkech VSTO. Můžete například přidat <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> ovládací prvek do listu, aby si uživatelé mohli vybrat ze seznamu možností.
@@ -44,7 +46,7 @@ ms.locfileid: "85547534"
 
 1. V aplikaci Visual Studio vytvořte nebo otevřete projekt sešitu aplikace Excel nebo projekt wordového dokumentu tak, aby byl dokument viditelný v návrháři. Informace o vytváření projektů naleznete v tématu [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**klikněte na ovládací prvek, který chcete přidat, a přetáhněte ho do dokumentu.
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** klikněte na ovládací prvek, který chcete přidat, a přetáhněte ho do dokumentu.
 
     > [!NOTE]
     > Když vyberete ovládací prvek v aplikaci Excel, zobrazí se na **řádku vzorců** **= vložení ("WinForms. Control. host", ")** . Tento text je nezbytný a neměl by být odstraněn.
@@ -53,7 +55,7 @@ ms.locfileid: "85547534"
 
 1. V aplikaci Visual Studio vytvořte nebo otevřete projekt sešitu aplikace Excel nebo projekt wordového dokumentu tak, aby byl dokument viditelný v návrháři. Informace o vytváření projektů naleznete v tématu [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**klikněte na ovládací prvek, který chcete přidat.
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** klikněte na ovládací prvek, který chcete přidat.
 
 3. V dokumentu klikněte na místo, kde chcete umístit levý horní roh ovládacího prvku, a přetáhněte jej na místo, kde chcete umístit pravý dolní roh ovládacího prvku.
 
@@ -66,7 +68,7 @@ ms.locfileid: "85547534"
 
 1. V aplikaci Visual Studio vytvořte nebo otevřete projekt sešitu aplikace Excel nebo projekt wordového dokumentu tak, aby byl dokument viditelný v návrháři. Informace o vytváření projektů naleznete v tématu [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**klikněte na ovládací prvek, který chcete přidat.
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** klikněte na ovládací prvek, který chcete přidat.
 
 3. V jednom dokumentu klikněte na místo, kam chcete ovládací prvek přidat.
 
@@ -79,7 +81,7 @@ ms.locfileid: "85547534"
 
 1. V aplikaci Visual Studio vytvořte nebo otevřete projekt sešitu aplikace Excel nebo projekt wordového dokumentu tak, aby byl dokument viditelný v návrháři. Informace o vytváření projektů naleznete v tématu [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**dvakrát klikněte na ovládací prvek, který chcete přidat.
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** dvakrát klikněte na ovládací prvek, který chcete přidat.
 
      Ovládací prvek je přidán do dokumentu uprostřed dokumentu nebo aktivního podokna.
 
@@ -90,7 +92,7 @@ ms.locfileid: "85547534"
 
 1. V aplikaci Visual Studio vytvořte nebo otevřete projekt sešitu aplikace Excel nebo projekt wordového dokumentu tak, aby byl dokument viditelný v návrháři. Informace o vytváření projektů naleznete v tématu [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**klikněte na ovládací prvek, který chcete přidat, a stiskněte klávesu **ENTER** .
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** klikněte na ovládací prvek, který chcete přidat, a stiskněte klávesu **ENTER** .
 
      Ovládací prvek je přidán do dokumentu uprostřed dokumentu nebo aktivního podokna.
 

@@ -1,5 +1,7 @@
 ---
 title: Položka hostitele dokumentu
+description: Přečtěte si, že položka hostitele dokumentu je typ, který rozšiřuje typ dokumentu z primárního definičního sestavení pro Word.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ebea0c3a09d08741523deddce94def170d844202
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 35455ac7751a34632362cfa3f2c9b8f2f827fc6d
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71253699"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846906"
 ---
 # <a name="document-host-item"></a>Položka hostitele dokumentu
   <xref:Microsoft.Office.Tools.Word.Document>Položka hostitele je typ, který rozšiřuje <xref:Microsoft.Office.Interop.Word.Document> typ z primárního definičního sestavení pro Word. <xref:Microsoft.Office.Tools.Word.Document>Položka hostitele poskytuje všechny stejné vlastnosti, metody a události jako <xref:Microsoft.Office.Interop.Word.Document> objekt, ale také zpřístupňuje další události a funguje jako kontejner pro ovládací prvky hostitele a model Windows Forms ovládací prvky.

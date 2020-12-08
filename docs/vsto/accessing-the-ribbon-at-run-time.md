@@ -1,5 +1,7 @@
 ---
 title: Přístup k pásu karet za běhu
+description: Můžete napsat kód pro zobrazení, skrytí a úpravu pásu karet a povolit uživatelům spouštění kódu z ovládacích prvků ve vlastním podokně úloh, podokně akce nebo oblasti formuláře aplikace Outlook.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7c7fdda6234f1e98117cdb1bf047762ed9d4621a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8facf847e484824b636324d1f84427a08172035
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255747"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847595"
 ---
 # <a name="access-the-ribbon-at-run-time"></a>Přístup k pásu karet za běhu
   Můžete napsat kód pro zobrazení, skrytí a úpravu pásu karet a povolit uživatelům spouštění kódu z ovládacích prvků ve vlastním podokně úloh, podokně akce nebo oblasti formuláře aplikace Outlook.
@@ -39,7 +41,7 @@ ms.locfileid: "71255747"
  [!code-csharp[Trin_Outlook_FR_Access#4](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#4)]
 
 ## <a name="access-a-collection-of-ribbons-that-appear-in-a-specific-outlook-inspector-window"></a>Přístup ke kolekci pásu karet, která se zobrazí v konkrétním okně kontroly aplikace Outlook
- Můžete získat přístup ke kolekci pásu karet, která se zobrazí v *okně kontroly*aplikace Outlook. Inspektor je okno, které se otevře v aplikaci Outlook, když uživatelé provádějí určité úkoly, například vytváření e-mailových zpráv. Chcete-li získat přístup k pásu karet okna inspektora, zavolejte `Ribbons` vlastnost `Globals` třídy a předejte <xref:Microsoft.Office.Interop.Outlook.Inspector> objekt, který představuje inspektor.
+ Můžete získat přístup ke kolekci pásu karet, která se zobrazí v *okně kontroly* aplikace Outlook. Inspektor je okno, které se otevře v aplikaci Outlook, když uživatelé provádějí určité úkoly, například vytváření e-mailových zpráv. Chcete-li získat přístup k pásu karet okna inspektora, zavolejte `Ribbons` vlastnost `Globals` třídy a předejte <xref:Microsoft.Office.Interop.Outlook.Inspector> objekt, který představuje inspektor.
 
  Následující příklad získá kolekci pásu karet inspektoru, který aktuálně má fokus. Tento příklad pak přistupuje k pojmenovanému pásu karet `Ribbon1` a nastaví text, který se zobrazí na poli se seznamem na pásu karet na `Hello World` .
 

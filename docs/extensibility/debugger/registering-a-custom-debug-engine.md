@@ -1,5 +1,7 @@
 ---
 title: Registrace vlastního ladicího modulu | Microsoft Docs
+description: Přečtěte si, jak ladicí stroj zaregistruje sebe sama jako objekt pro vytváření tříd, podle konvencí modelu COM a také při registraci v aplikaci Visual Studio prostřednictvím registru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a664385594f139e2c3c5a18a0d8a59e23c13df0a
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 01d7190bbf087bb60ac670341d82078e94c81c52
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011837"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847179"
 ---
 # <a name="register-a-custom-debug-engine"></a>Registrace vlastního ladicího stroje
 Ladicí modul se musí zaregistrovat jako objekt pro vytváření tříd, podle konvencí COM a také registrovat v aplikaci Visual Studio prostřednictvím podklíče registru sady Visual Studio.
@@ -48,7 +50,7 @@ HRESULT CTextInterpreterModule::RegisterServer(BOOL bRegTypeLib, const CLSID * p
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vytvoření vlastního ladicího stroje](../../extensibility/debugger/creating-a-custom-debug-engine.md)
 - [Pomocníka sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
 - [Kurz: sestavení ladicího stroje pomocí ATL COM](/previous-versions/bb147024(v=vs.90))

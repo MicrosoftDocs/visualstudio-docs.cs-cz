@@ -1,5 +1,7 @@
 ---
 title: Udělení důvěryhodnosti k dokumentům
+description: Přečtěte si, jak projekt na úrovni dokumentu má stejné požadavky na zabezpečení jako projekty na úrovni aplikace, jako je podepisování manifestů s certifikátem nebo kliknutí na výzvu vztahu důvěryhodnosti.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a631e8d8cffe6bfde925dfbae4a7350e6a0ef95a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 9d91a86f8596e0ed7a04ae68099c7c9ab6099a40
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "92298622"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847738"
 ---
 # <a name="grant-trust-to-documents"></a>Udělení důvěryhodnosti k dokumentům
   Projekt na úrovni dokumentu má stejné požadavky na zabezpečení jako projekty na úrovni aplikace: podepisování manifestů pomocí certifikátu nebo kliknutí na výzvu vztahu důvěryhodnosti. Kromě toho musí být dokument nebo sešit umístěn v adresáři, který je určen jako důvěryhodné umístění.

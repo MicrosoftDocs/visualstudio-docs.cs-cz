@@ -1,5 +1,7 @@
 ---
 title: Ukázková implementace vyhodnocení výrazu | Microsoft Docs
+description: Přečtěte si, jak Visual Studio volá ParseText k vytvoření objektu IDebugExpression2 pro kukátko výrazu Windows.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cf994a61ed9283463cd01aa468018f6acce5e209
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba5baf52f18f638730ecc5f3b7c016889503cbbb
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713101"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847699"
 ---
 # <a name="sample-implementation-of-expression-evaluation"></a>Ukázková implementace vyhodnocení výrazu
 > [!IMPORTANT]

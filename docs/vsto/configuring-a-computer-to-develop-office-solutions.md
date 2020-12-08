@@ -1,5 +1,7 @@
 ---
 title: Konfigurace počítače pro vývoj řešení pro systém Office
+description: Přečtěte si, jak můžete nainstalovat podporovanou verzi sady Visual Studio, .NET Framework a systém Microsoft Office, abyste mohli vytvářet doplňky a úpravy VSTO pro systém Microsoft Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7a0304c217599e790b8cfa9e738245927336470e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3658f655c50c9d1a0775a8cc69dd65baf32d1408
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801838"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847257"
 ---
 # <a name="configure-a-computer-to-develop-office-solutions"></a>Konfigurace počítače pro vývoj řešení pro systém Office
 

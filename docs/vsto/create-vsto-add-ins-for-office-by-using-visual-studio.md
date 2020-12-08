@@ -1,7 +1,8 @@
 ---
 title: Vytváření doplňků VSTO pro Office s použitím sady Visual Studio
+description: Přečtěte si, jak můžete pomocí nástrojů systém Microsoft Office Developer Tools v sadě Visual Studio vytvářet .NET Framework aplikace, které rozšíří Office.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1e8cd25b8c4c70067641468dd6fa321e9e4fbe39
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 50337b728647b5e15a877216713cd6fc9823742a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809359"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847972"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Vytváření doplňků VSTO pro Office s použitím sady Visual Studio
   Pomocí nástrojů systém Microsoft Office Developer Tools v sadě Visual Studio můžete vytvářet .NET Framework aplikace, které rozšíří Office. Tyto aplikace se také nazývají *řešení pro systém Office*.

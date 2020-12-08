@@ -1,5 +1,7 @@
 ---
 title: Volání kódu v doplňcích VSTO z jiných řešení pro systém Office
+description: Přečtěte si, jak můžete vystavit objekt v doplňku VSTO do dalších řešení, včetně dalších systém Microsoft Office řešení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 584406098f058c17b3dd215dda9c8c4e9498cf46
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fad3f107487e4736ccd0a6aa59ea5a801b5f72e5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255332"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847842"
 ---
 # <a name="call-code-in-vsto-add-ins-from-other-office-solutions"></a>Volání kódu v doplňcích VSTO z jiných řešení pro systém Office
   Objekt v doplňku VSTO můžete vystavit jiným řešením, včetně dalších systém Microsoft Office řešení. To je užitečné v případě, že doplněk VSTO poskytuje službu, kterou chcete povolit pro používání jiných řešení. Pokud máte například doplněk VSTO pro systém Microsoft Office Excel, který provádí výpočty s finančními daty z webové služby, další řešení mohou provádět tyto výpočty voláním do doplňku Excel VSTO v době běhu.
@@ -56,7 +58,7 @@ ms.locfileid: "71255332"
 2. Přepsat <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> metodu ve `ThisAddIn` třídě. Vrátí instanci třídy, kterou chcete zpřístupnit ostatním řešením.
 
 ### <a name="define-the-class-you-want-to-expose-to-other-solutions"></a>Definujte třídu, kterou chcete zpřístupnit ostatním řešením.
- Přinejmenším třída, kterou chcete zveřejnit, musí být veřejná, musí mít <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut nastaven na **hodnotu true**a musí vystavit rozhraní [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) .
+ Přinejmenším třída, kterou chcete zveřejnit, musí být veřejná, musí mít <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut nastaven na **hodnotu true** a musí vystavit rozhraní [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) .
 
  Doporučeným způsobem, jak vystavit rozhraní [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) , je provést následující kroky:
 

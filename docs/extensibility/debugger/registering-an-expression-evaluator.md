@@ -1,5 +1,7 @@
 ---
 title: Registrace vyhodnocovacího filtru výrazů | Microsoft Docs
+description: Přečtěte si, jak musí vyhodnocovací filtr výrazů zaregistrovat sebe sama jako objekt pro vytváření tříd s prostředím Windows COM a sadou Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 600f7c8a2e2957cddf23ccc82b0872617e491940
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f26eddf7191ee4393dd2ca986fe7a1d2c3af9e2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713200"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847140"
 ---
 # <a name="register-an-expression-evaluator"></a>Registrace vyhodnocovacího filtru výrazů
 > [!IMPORTANT]
@@ -120,7 +122,7 @@ namespace EEMC
     > [!NOTE]
     > `metricLanguage``GUID`Určuje jazyk podle názvu, ale je to `guidLang` argument pro `SetEEMetric` Výběr jazyka. Když kompilátor vygeneruje soubor s informacemi o ladění, měl by napsat vhodné, `guidLang` aby příkaz de ví, který se má použít. Verze DE obvykle žádá poskytovatele symbolů pro tento jazyk `GUID` , který je uložen v ladicím souboru s informacemi.
 
-3. Zaregistrujte se sadou Visual Studio tak, že vytvoříte klíče pod HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ *X. y*, kde *X. y* je verze sady Visual Studio, ve které se má zaregistrovat.
+3. Zaregistrujte se sadou Visual Studio tak, že vytvoříte klíče pod HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *x. y*, kde *X. y* je verze sady Visual Studio, ve které se má zaregistrovat.
 
 ### <a name="example"></a>Příklad
  Následující funkce ukazuje, jak nespravovaný kód (C++) EE registruje a ruší registraci v aplikaci Visual Studio.

@@ -1,5 +1,7 @@
 ---
 title: Změna formátů v řádcích obsahujících vybrané buňky prostřednictvím kódu
+description: Zjistěte, jak můžete změnit písmo pro celý řádek, který obsahuje vybranou buňku, aby byl text tučný.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 31fe16436b09696b79bf760db7b346d1092c0439
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 088b24a93cb82cc7807a996c26c9b2bbbabec04e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585298"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847946"
 ---
 # <a name="how-to-programmatically-change-formatting-in-worksheet-rows-containing-selected-cells"></a>Postupy: Změna formátování řádků listů obsahujících vybrané buňky prostřednictvím kódu programu
   Můžete změnit písmo pro celý řádek, který obsahuje vybranou buňku, aby text byl tučný.

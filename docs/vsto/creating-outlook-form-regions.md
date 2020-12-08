@@ -1,5 +1,7 @@
 ---
 title: Vytvoření oblastí formuláře aplikace Outlook
+description: Naučte se, jak můžete použít oblasti formulářů k přizpůsobení formulářů Microsoft Outlooku pro snadnější návrh, vývoj a ladění oblastí formuláře.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8a999ca11427533690628fb92f28e93d22cf0971
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f3273c02416cac54dfd244ba4f163fb5d726413c
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255919"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847959"
 ---
 # <a name="create-outlook-form-regions"></a>Vytvoření oblastí formuláře aplikace Outlook
   Oblasti formulářů můžete použít k přizpůsobení systém Microsoft Officech formulářů aplikace Outlook. Visual Studio poskytuje pokročilé nástroje, které usnadňují návrh, vývoj a ladění oblastí formuláře.
@@ -116,11 +118,11 @@ ms.locfileid: "71255919"
 
  Existují tři způsoby, jak otevřít Návrhář oblasti formuláře:
 
-- V **Průzkumník řešení**dvakrát klikněte na soubor kódu oblasti formuláře.
+- V **Průzkumník řešení** dvakrát klikněte na soubor kódu oblasti formuláře.
 
-- V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor kódu oblasti formuláře a pak klikněte na tlačítko **Návrhář zobrazení**.
+- V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor kódu oblasti formuláře a pak klikněte na tlačítko **Návrhář zobrazení**.
 
-- V **Průzkumník řešení**vyberte soubor kódu oblasti formuláře a potom v nabídce **zobrazení** klikněte na **Návrhář**.
+- V **Průzkumník řešení** vyberte soubor kódu oblasti formuláře a potom v nabídce **zobrazení** klikněte na **Návrhář**.
 
   Návrhář oblasti formuláře podporuje pouze spravované ovládací prvky. Nelze přidat nativní ovládací prvky aplikace Outlook.
 

@@ -1,5 +1,7 @@
 ---
 title: Běžné úlohy při programování pro systém Office
+description: Naučte se, jak můžete programovat s daty v přizpůsobení na úrovni dokumentu bez nutnosti používat objektový model systém Microsoft Office Word nebo Office Excel.
+ms.custom: SEO-VS-2020SS
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c82b4dec0c92f19933b045040ed0f1fcecb5b10b
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 4f6fae2b7d446035a08e3fcb77bcffaaed6de3a9
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809856"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846295"
 ---
 # <a name="common-tasks-in-office-programming"></a>Běžné úlohy při programování pro systém Office
   Toto téma je navrženo tak, aby vám pomohlo najít odpovědi na následující kategorie běžných otázek týkajících se programování řešení Office pomocí sady Visual Studio.

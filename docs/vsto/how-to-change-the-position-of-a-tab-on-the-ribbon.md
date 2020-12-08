@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Změna pozice karty na pásu karet'
+description: Můžete změnit pořadí vlastních karet na pásu karet a umístit vlastní karty před nebo za integrovanou kartu na pásu karet pomocí editoru kolekce karet.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8f821ea2a469fc06f80a7aaea96d07274d02a81d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21fd7f17f7a990f95ce5c8b781e85807a10608c4
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544856"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846763"
 ---
 # <a name="how-to-change-the-position-of-a-tab-on-the-ribbon"></a>Postupy: Změna pozice karty na pásu karet
   Pořadí vlastních karet na pásu karet můžete změnit pomocí **editoru kolekce karet**. Vlastní karty můžete umístit před nebo za integrovanou kartu na pásu karet. Integrovaná karta je karta, která již je na pásu karet aplikace systém Microsoft Office. Karta **data** je například Integrovaná karta v aplikaci Excel.
@@ -26,7 +28,7 @@ ms.locfileid: "85544856"
 
 ### <a name="to-change-the-order-of-tabs-on-the-ribbon"></a>Změna pořadí karet na pásu karet
 
-1. V **Průzkumník řešení**vyberte soubor kódu pásu karet (soubor *. vb* nebo *. cs* ).
+1. V **Průzkumník řešení** vyberte soubor kódu pásu karet (soubor *. vb* nebo *. cs* ).
 
 2. V nabídce **zobrazení** klikněte na možnost **Návrhář**.
 
@@ -36,7 +38,7 @@ ms.locfileid: "85544856"
 
      Zobrazí se **Editor kolekce karet** .
 
-5. V **editoru kolekce karet**v seznamu **Členové** vyberte kartu, kterou chcete přesunout, a kliknutím na šipky nahoru nebo dolů změňte pořadí ovládacích prvků.
+5. V **editoru kolekce karet** v seznamu **Členové** vyberte kartu, kterou chcete přesunout, a kliknutím na šipky nahoru nebo dolů změňte pořadí ovládacích prvků.
 
 ### <a name="to-position-a-tab-before-or-after-a-built-in-tab-on-the-ribbon"></a>Chcete-li umístit kartu před nebo za integrovanou kartu na pásu karet
 

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přizpůsobení předdefinované karty'
+description: Přečtěte si, jak můžete přidat skupiny a ovládací prvky na integrovanou kartu. Integrovaná karta je karta, která je již na pásu karet aplikace systém Microsoft Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5f73ec7a8555a5e5d569d4316ca619747550bf11
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ac002b4c9ebacaf9cb522b583d6c4c9580b7bf2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547183"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846633"
 ---
 # <a name="how-to-customize-a-built-in-tab"></a>Postupy: Přizpůsobení předdefinované karty
   Můžete přidat skupiny a ovládací prvky na integrovanou kartu. Integrovaná karta je karta, která je již na pásu karet aplikace systém Microsoft Office. Karta **data** je například Integrovaná karta v aplikaci Excel. Když vytvoříte vlastní skupinu, zobrazí se na kartě jako poslední, ale skupinu můžete přesunout kdekoli na kartě.
@@ -30,10 +32,10 @@ ms.locfileid: "85547183"
 
 ### <a name="to-add-groups-to-a-built-in-tab"></a>Přidání skupin na integrovanou kartu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor kódu pásu karet a pak klikněte na tlačítko **Návrhář zobrazení**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor kódu pásu karet a pak klikněte na tlačítko **Návrhář zobrazení**.
 
     > [!NOTE]
-    > Pokud se soubor kódu pásu karet v **Průzkumník řešení**nezobrazí, musíte do projektu přidat **položku pásu karet** . Přečtěte si téma [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md).
+    > Pokud se soubor kódu pásu karet v **Průzkumník řešení** nezobrazí, musíte do projektu přidat **položku pásu karet** . Přečtěte si téma [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md).
 
 2. Klikněte pravým tlačítkem myši na libovolnou kartu v Návrháři pásu karet a pak klikněte na **vlastnosti**.
 
@@ -45,7 +47,7 @@ ms.locfileid: "85547183"
 
      Seznam ID ovládacích prvků najdete v tématu [soubory s nápovědu pro office 2010: identifikátory ovládacích prvků uživatelského rozhraní pro Office Fluent](https://www.microsoft.com/download/details.aspx?id=6627).
 
-5. Na kartě **ovládací prvky pásu karet Office** v **panelu nástrojů**přetáhněte skupiny na kartu.
+5. Na kartě **ovládací prvky pásu karet Office** v **panelu nástrojů** přetáhněte skupiny na kartu.
 
     > [!NOTE]
     > Předdefinované skupiny se nezobrazí v návrháři. Proto jediným způsobem, jak určit, zda pracujete s integrovanou kartou, je prozkoumávat vlastnost **ControlID** karty.

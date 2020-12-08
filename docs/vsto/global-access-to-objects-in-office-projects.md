@@ -1,5 +1,7 @@
 ---
 title: Globální přístup k objektům v projektech pro systém Office
+description: Přečtěte si, jak lze použít třídu Globals pro přístup k několika různým projektovým položkám v době běhu z libovolného kódu v projektu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -30,12 +32,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f76a2e74315980764a2cdffe67af4403552de7fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e2653f314edf07c4dcca6d3afc74af64c548af35
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88041048"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846386"
 ---
 # <a name="global-access-to-objects-in-office-projects"></a>Globální přístup k objektům v projektech pro systém Office
   Při vytváření projektu sady Office sada Visual Studio automaticky generuje třídu s názvem `Globals` v projektu. Třídu můžete použít `Globals` pro přístup k několika různým projektovým položkám v době běhu z libovolného kódu v projektu.

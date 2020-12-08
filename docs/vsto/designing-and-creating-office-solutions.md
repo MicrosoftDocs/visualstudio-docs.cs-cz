@@ -1,5 +1,7 @@
 ---
 title: Návrh a tvorba řešení pro systém Office
+description: Přečtěte si, jak Visual Studio poskytuje šablony projektu, které můžete použít k vytvoření několika různých typů řešení pro systém Office.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cd51c377ed20807c5e5e2b26f842c6152bf7c222
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 191de013c94bfede7d1ddac5f3dd0392143e08dc
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808217"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847530"
 ---
 # <a name="design-and-create-office-solutions"></a>Návrh a tvorba řešení pro systém Office
 

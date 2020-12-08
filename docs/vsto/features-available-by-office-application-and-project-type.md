@@ -1,5 +1,7 @@
 ---
 title: Dostupné funkce podle aplikace systému Office a typu projektu
+description: Přečtěte si, jak Visual Studio obsahuje několik typů šablon projektů, které podporují různé obchodní scénáře pro systém Microsoft Office aplikace.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ba24bdeac9ad51d0173e765c8cb793be2473baf6
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 24db499602642f6ec980628d290ec8b5dd07fed3
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585429"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847803"
 ---
 # <a name="features-available-by-office-application-and-project-type"></a>Dostupné funkce podle aplikace systému Office a typu projektu
   Visual Studio obsahuje několik typů šablon projektů, které podporují různé obchodní scénáře pro systém Microsoft Office aplikace, včetně těchto typů:

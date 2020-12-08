@@ -1,5 +1,7 @@
 ---
 title: Ukázková implementace místních hodnot | Microsoft Docs
+description: Přečtěte si, jak Visual Studio získá národní prostředí pro metodu z vyhodnocovacího filtru výrazů v tomto článku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 86aacb096001bdf634fe019ae9a28f01745c3ce0
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: aad77c9b9481ed6ae32c66260b1e3ef2a662c836
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011889"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847634"
 ---
 # <a name="sample-implementation-of-locals"></a>Ukázková implementace místních hodnot
 > [!IMPORTANT]
@@ -60,5 +62,5 @@ ms.locfileid: "90011889"
 
  [Ukázka mycee](/previous-versions/) Ukazuje jeden implementační postup pro vytvoření vyhodnocovacího filtru výrazů pro jazyk MyC.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zobrazení místních hodnot](../../extensibility/debugger/displaying-locals.md)

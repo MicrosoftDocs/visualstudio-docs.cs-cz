@@ -1,7 +1,8 @@
 ---
 title: 'Postupy: instalace redistribuovatelného prostředí Visual Studio Tools for Office runtime'
+description: Přečtěte si, jak můžete nainstalovat Microsoft Visual Studio 2010 Tools for Office Runtime Redistributable.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ef71de75be5977ab80cbdd85448daa5de381c077
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8fce7cc0fdbba49e0e247a6a65336105e149b6d
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547222"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846529"
 ---
 # <a name="how-to-install-the-visual-studio-tools-for-office-runtime-redistributable"></a>Postupy: instalace redistribuovatelného prostředí Visual Studio Tools for Office runtime
   Nástroje Visual Studio 2010 Tools for Office runtime musí být nainstalované na každém počítači, na kterém běží řešení vytvořená pomocí nástrojů systém Microsoft Office Developer Tools v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Modul runtime se nainstaluje automaticky při instalaci nástroje [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a systém Microsoft Office. Další informace najdete v tématu [scénáře instalace modulu runtime Visual Studio Tools for Office](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md).

@@ -1,5 +1,7 @@
 ---
 title: Glosář ladicího programu sady Visual Studio | Microsoft Docs
+description: Tento článek vysvětluje několik podmínek používaných v sadě Visual Studio Debugging SDK, jako je například vázaná zarážka, příčina a kontext kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 954532311fe6b63fc288877a6d41722e6ea47581
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a01a6ad0e23af04001e9b0990be57d78e84c7241
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713350"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847062"
 ---
 # <a name="visual-studio-debugger-glossary"></a>Slovníček pro Visual Studio Debugger
 Níže jsou uvedené výrazy používané v [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] sadě SDK pro ladění.

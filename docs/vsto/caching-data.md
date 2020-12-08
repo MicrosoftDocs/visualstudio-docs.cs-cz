@@ -1,5 +1,7 @@
 ---
 title: Data mezipaměti
+description: Přečtěte si, jak můžete ukládat datové objekty do mezipaměti v přizpůsobení na úrovni dokumentu, aby data mohla být dostupná offline nebo bez otevírání systém Microsoft Office Wordu nebo Excelu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c6e0f6d7fcf9920ddb8861712b7c5f8bf04506fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: db22378477daffd4562a9d60c6b30bc7b96e58e2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62939412"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847868"
 ---
 # <a name="cache-data"></a>Data mezipaměti
   Datové objekty můžete ukládat do mezipaměti v přizpůsobení na úrovni dokumentu, aby k datům bylo možné přejít offline nebo bez nutnosti otevírat systém Microsoft Office Word nebo systém Microsoft Office Excelu. Chcete-li objekt ukládat do mezipaměti, musí mít objekt datový typ, který splňuje určité požadavky. Mnoho běžných datových typů v .NET Framework splňuje tyto požadavky, včetně <xref:System.String> , <xref:System.Data.DataSet> a <xref:System.Data.DataTable> .
@@ -79,7 +81,7 @@ ms.locfileid: "62939412"
  Další informace najdete v tématu [Postupy: ukládání dat do mezipaměti v dokumentu chráněném heslem](../vsto/how-to-cache-data-in-a-password-protected-document.md).
 
 ## <a name="prevent-data-loss-when-adding-null-values-to-the-data-cache"></a>Zabránit ztrátě dat při přidávání hodnot null do mezipaměti dat
- Při přidávání objektů do mezipaměti dat musí být všechny objekty v mezipaměti inicializovány na hodnotu, která není**null** , před uložením a zavřením dokumentu. Pokud má nějaký objekt v mezipaměti hodnotu **null** , když se dokument uloží a zavře, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] automaticky odebere všechny objekty uložené v mezipaměti z mezipaměti dat.
+ Při přidávání objektů do mezipaměti dat musí být všechny objekty v mezipaměti inicializovány na hodnotu, která není **null** , před uložením a zavřením dokumentu. Pokud má nějaký objekt v mezipaměti hodnotu **null** , když se dokument uloží a zavře, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] automaticky odebere všechny objekty uložené v mezipaměti z mezipaměti dat.
 
  Pokud přidáte objekt s hodnotou **null** do mezipaměti dat pomocí <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> atributu v době návrhu, můžete použít <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> třídu k inicializaci datových objektů uložených v mezipaměti před otevřením dokumentu. To je užitečné, pokud chcete inicializovat data uložená v mezipaměti na serveru bez nainstalovaného aplikace Word nebo Excel, než je dokument otevřen koncovým uživatelem. Další informace najdete v tématu [přístup k datům v dokumentech na serveru](../vsto/accessing-data-in-documents-on-the-server.md).
 

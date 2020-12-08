@@ -1,5 +1,7 @@
 ---
 title: Kombinování přizpůsobení na úrovni VBA a dokumentů
+description: Naučte se, jak můžete použít kód jazyk Visual Basic for Application (VBA) v dokumentu, který je součástí přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word nebo Excel.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +26,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b3bab9c132439c6efa53842f1e13c6c5be31db00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59d0e9122bf35ac6f40799d91d3b52614d027f50
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70977603"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846399"
 ---
 # <a name="combine-vba-and-document-level-customizations"></a>Kombinování přizpůsobení na úrovni VBA a dokumentů
   Kód jazyk Visual Basic for Application (VBA) lze použít v dokumentu, který je součástí přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word nebo systém Microsoft Office Excel. Můžete volat kód VBA v dokumentu ze sestavení vlastního nastavení nebo můžete nakonfigurovat projekt tak, aby v dokumentu povoloval kód v sestavení pro volání kódu v sestavení přizpůsobení.
@@ -90,7 +92,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
 
   - Pro Word: *. docm* nebo *. doc*
 
-  - Pro Excel: *. xlsm*, *. xltm*, *. xls*nebo *. xlt*
+  - Pro Excel: *. xlsm*, *. xltm*, *. xls* nebo *. xlt*
 
 - Dokument musí již obsahovat projekt VBA, který obsahuje kód VBA.
 
@@ -120,7 +122,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
   Vlastnosti **EnableVbaCallers** a **ReferenceAssemblyFromVbaProject** jsou k dispozici pouze v okně **vlastnosti** v době návrhu. nelze je použít v době běhu. Chcete-li zobrazit vlastnosti, otevřete návrháře pro položku hostitele v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace o konkrétních úkolech, které Visual Studio provádí při nastavení těchto vlastností, najdete v tématu úlohy, které [provádí vlastnosti položky hostitele](#PropertyTasks).
 
 > [!NOTE]
-> Pokud sešit nebo dokument ještě neobsahuje kód VBA nebo pokud kód VBA v dokumentu není důvěryhodný ke spuštění, zobrazí se při nastavování vlastnosti **EnableVbaCallers** nebo **ReferenceAssemblyFromVbaProject** na **hodnotu true**chybová zpráva. Je to proto, že Visual Studio nemůže v této situaci upravovat projekt VBA v dokumentu.
+> Pokud sešit nebo dokument ještě neobsahuje kód VBA nebo pokud kód VBA v dokumentu není důvěryhodný ke spuštění, zobrazí se při nastavování vlastnosti **EnableVbaCallers** nebo **ReferenceAssemblyFromVbaProject** na **hodnotu true** chybová zpráva. Je to proto, že Visual Studio nemůže v této situaci upravovat projekt VBA v dokumentu.
 
 ## <a name="use-members-in-vba-code-to-call-into-the-customization-assembly"></a>Použití členů v kódu VBA pro volání do sestavení vlastního nastavení
  Poté, co nakonfigurujete projekt tak, aby povoloval kód VBA pro volání do sestavení vlastního nastavení, Visual Studio přidá následující členy do projektu VBA v dokumentu:
@@ -239,7 +241,7 @@ GetManagedClass(pdispInteropObject Object) As Object
 
 4. Odstraní vloženou knihovnu typů ze sestavení.
 
-## <a name="troubleshoot"></a>Řešení potíží
+## <a name="troubleshoot"></a>Odstraňování potíží
  V následující tabulce jsou uvedeny některé běžné chyby a návrhy pro opravu chyb.
 
 |Chyba|Návrh|
@@ -247,7 +249,7 @@ GetManagedClass(pdispInteropObject Object) As Object
 |Po nastavení vlastnosti **EnableVbaCallers** nebo **ReferenceAssemblyFromVbaProject** se zobrazí chybová zpráva oznamující, že dokument neobsahuje projekt VBA, nebo nemáte oprávnění pro přístup k projektu VBA v dokumentu.|Ujistěte se, že dokument v projektu obsahuje alespoň jedno makro VBA, projekt VBA má dostatečnou důvěryhodnost ke spuštění a projekt VBA není chráněn heslem.|
 |Po nastavení vlastnosti **EnableVbaCallers** nebo **ReferenceAssemblyFromVbaProject** se zobrazí chybová zpráva oznamující, že <xref:System.Runtime.InteropServices.GuidAttribute> deklarace chybí nebo je poškozená.|Zajistěte, aby byla <xref:System.Runtime.InteropServices.GuidAttribute> deklarace v projektu v souboru *AssemblyInfo.cs* nebo *AssemblyInfo. vb* a zda je tento atribut nastaven na platný identifikátor GUID.|
 |Když nastavíte vlastnost **EnableVbaCallers** nebo **ReferenceAssemblyFromVbaProject** , zobrazí se chybová zpráva, že číslo verze určené parametrem není <xref:System.Reflection.AssemblyVersionAttribute> platné.|Zajistěte, aby se <xref:System.Reflection.AssemblyVersionAttribute> deklarace v souboru *AssemblyInfo.cs* nebo *AssemblyInfo. vb* v projektu nastavila na platné číslo verze sestavení. Informace o platných číslech verzí sestavení naleznete v tématu <xref:System.Reflection.AssemblyVersionAttribute> Třída.|
-|Po přejmenování sestavení přizpůsobení přestane fungovat kód VBA, který volá do sestavení vlastního nastavení.|Pokud změníte název sestavení přizpůsobení po jeho zveřejnění kódu v jazyce VBA, propojení mezi projektem VBA v dokumentu a sestavením vlastního nastavení je přerušeno. Chcete-li tento problém vyřešit, změňte vlastnost **ReferenceFromVbaAssembly** v projektu na **hodnotu false** a potom zpět na **hodnotu true**a potom nahraďte všechny odkazy na starý název sestavení v kódu VBA novým názvem sestavení.|
+|Po přejmenování sestavení přizpůsobení přestane fungovat kód VBA, který volá do sestavení vlastního nastavení.|Pokud změníte název sestavení přizpůsobení po jeho zveřejnění kódu v jazyce VBA, propojení mezi projektem VBA v dokumentu a sestavením vlastního nastavení je přerušeno. Chcete-li tento problém vyřešit, změňte vlastnost **ReferenceFromVbaAssembly** v projektu na **hodnotu false** a potom zpět na **hodnotu true** a potom nahraďte všechny odkazy na starý název sestavení v kódu VBA novým názvem sestavení.|
 
 ## <a name="see-also"></a>Viz také
 - [Postupy: vystavení kódu v projektu Visual Basic v jazyce VBA](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)

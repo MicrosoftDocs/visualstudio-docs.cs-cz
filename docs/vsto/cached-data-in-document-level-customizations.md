@@ -1,5 +1,7 @@
 ---
 title: Data uložená v mezipaměti v přizpůsobeních na úrovni dokumentu
+description: Přečtěte si, jak Visual Studio odděluje data ze zobrazení v přizpůsobení na úrovni dokumentu tím, že umožňuje vložení dat jako mezipaměti dat.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9985dd25ba62cc9c0735a8a8f4008a4c0abe0558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be4229c179ec6c5640ab612d28991fe476363a53
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238345"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847894"
 ---
 # <a name="cached-data-in-document-level-customizations"></a>Data uložená v mezipaměti v přizpůsobeních na úrovni dokumentu
   Hlavním cílem přizpůsobení na úrovni dokumentu je oddělení dat od zobrazení v dokumentech Office. Data odkazují na informace, které jsou uloženy v dokumentu, včetně čísel a textu. Zobrazení odkazuje na uživatelské rozhraní a objektový model systém Microsoft Office Word a systém Microsoft Office Excel.

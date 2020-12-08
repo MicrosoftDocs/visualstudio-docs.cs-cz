@@ -1,6 +1,7 @@
 ---
 title: 'Postupy: vystavení kódu pro jazyk VBA v projektu jazyka C#'
-ms.custom: seodec18
+description: Přečtěte si, jak můžete vystavit kód v projektu jazyka Visual C# do kódu jazyk Visual Basic for Application (VBA), pokud chcete, aby mezi nimi vzájemně spolupracovaly dva typy kódu.
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 21d7672d3c08012e75d73ee8bf4d9816b850eb2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a830ec75e3997bee8d4bed9e275fc6229fec3405
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544830"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846594"
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>Postupy: vystavení kódu pro jazyk VBA v projektu jazyka Visual C#
   Můžete vystavit kód v projektu jazyka Visual C# do kódu jazyk Visual Basic for Application (VBA), pokud chcete, aby oba typy kódu byly vzájemně spolupracovaly.
@@ -93,7 +94,7 @@ ms.locfileid: "85544830"
 10. V okně **vlastnosti** vyberte vlastnost **ReferenceAssemblyFromVbaProject** a změňte hodnotu na **true**.
 
     > [!NOTE]
-    > Pokud sešit nebo dokument ještě neobsahuje kód VBA nebo pokud kód VBA v dokumentu není důvěryhodný ke spuštění, zobrazí se při nastavování vlastnosti **ReferenceAssemblyFromVbaProject** na **hodnotu true**chybová zpráva. Je to proto, že Visual Studio nemůže v této situaci upravovat projekt VBA v dokumentu.
+    > Pokud sešit nebo dokument ještě neobsahuje kód VBA nebo pokud kód VBA v dokumentu není důvěryhodný ke spuštění, zobrazí se při nastavování vlastnosti **ReferenceAssemblyFromVbaProject** na **hodnotu true** chybová zpráva. Je to proto, že Visual Studio nemůže v této situaci upravovat projekt VBA v dokumentu.
 
 11. Ve zprávě, která se zobrazí, klikněte na **OK** . Tato zpráva vás provede tím, že pokud přidáte kód VBA do sešitu nebo dokumentu při spuštění projektu z nástroje [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , kód VBA bude při příštím sestavení projektu ztracen. Důvodem je, že dokument ve výstupní složce sestavení je přepsán při každém sestavení projektu.
 

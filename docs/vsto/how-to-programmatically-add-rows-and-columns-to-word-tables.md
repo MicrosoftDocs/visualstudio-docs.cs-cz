@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: přidávání řádků a sloupců do tabulek aplikace Word prostřednictvím kódu programu'
+description: Naučte se, jak můžete použít metodu Add objektu Rows k přidání řádků do tabulky. Můžete také použít metodu Add objektu Columns, chcete-li přidat sloupce.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3887f80a5c2a0cb775059f58876135d91350133c
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 10154033c23cccc134752afb7f8b1e9c67099671
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585376"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846360"
 ---
 # <a name="how-to-programmatically-add-rows-and-columns-to-word-tables"></a>Postupy: přidávání řádků a sloupců do tabulek aplikace Word prostřednictvím kódu programu
   V tabulce systém Microsoft Office Word jsou buňky uspořádány do řádků a sloupců. Můžete použít <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> metodu <xref:Microsoft.Office.Interop.Word.Rows> objektu pro přidání řádků do tabulky a <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> metodu <xref:Microsoft.Office.Interop.Word.Columns> objektu pro přidání sloupců.

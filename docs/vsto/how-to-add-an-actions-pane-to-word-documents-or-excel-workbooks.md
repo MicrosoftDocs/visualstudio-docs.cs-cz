@@ -1,5 +1,7 @@
 ---
 title: Přidání podokna akcí do dokumentů aplikace Word nebo sešitů aplikace Excel
+description: Přečtěte si, že pokud chcete přidat podokno akcí systém Microsoft Office do dokumentu aplikace Word nebo do sešitu aplikace Microsoft Excel, je třeba nejprve vytvořit model Windows Forms uživatelský ovládací prvek.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2d24ec3a17c9e0824c6b7aaffeaaac02c1c4f76e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 69d675209f2a3ac47e8681da8fca73c5cd86e95d
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546221"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848063"
 ---
 # <a name="how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks"></a>Postupy: Přidání podokna akcí do dokumentů aplikace Word nebo sešitů aplikace Excel
   Chcete-li přidat podokno akcí do aplikace systém Microsoft Office wordový dokument nebo do sešitu aplikace Microsoft Excel, nejprve vytvořte model Windows Forms uživatelský ovládací prvek. Pak přidejte uživatelský ovládací prvek do <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> vlastnosti `ThisDocument.ActionsPane` pole (Word) nebo `ThisWorkbook.ActionsPane` pole (Excel) v projektu.
@@ -39,7 +41,7 @@ ms.locfileid: "85546221"
 
 2. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-3. V dialogovém okně **Přidat novou položku** vyberte možnost **ovládací prvek podokno akce**, pojmenujte ji **HelloControl**a klikněte na tlačítko **Přidat**.
+3. V dialogovém okně **Přidat novou položku** vyberte možnost **ovládací prvek podokno akce**, pojmenujte ji **HelloControl** a klikněte na tlačítko **Přidat**.
 
     > [!NOTE]
     > Můžete alternativně přidat položku **uživatelského ovládacího prvku** do projektu. Třídy generované **ovládacími prvky podokna akce** a položkami **uživatelského ovládacího prvku** jsou funkčně ekvivalentní.

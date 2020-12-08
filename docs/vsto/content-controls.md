@@ -1,5 +1,7 @@
 ---
 title: Ovládací prvky obsahu
+description: Seznamte se s ovládacími prvky obsahu a způsobem, jak ovládací prvky obsahu umožňují navrhovat dokumenty a šablony.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -38,12 +40,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8683f5379aaa33446b150adf34f8a5aa57a83ff3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a34211c7fb1fa001719219b7d08baab65340bde5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986179"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848037"
 ---
 # <a name="content-controls"></a>Ovládací prvky obsahu
   Ovládací prvky obsahu poskytují způsob návrhu dokumentů a šablon, které mají tyto funkce:
@@ -94,7 +96,7 @@ ms.locfileid: "72986179"
 ### <a name="drop-down-list"></a>Rozevírací seznam
  V rozevíracím seznamu se zobrazí seznam položek, které mohou uživatelé vybrat. Na rozdíl od pole se seznamem neumožňuje uživatelům přidávat nebo upravovat položky. Další informace najdete v tématu <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> typ.
 
-### <a name="group"></a>Seskupení
+### <a name="group"></a>Skupina
  Ovládací prvek skupiny definuje chráněnou oblast dokumentu, kterou uživatelé nemohou upravovat ani odstraňovat. Ovládací prvek skupiny může obsahovat libovolné položky dokumentu, například text, tabulky, grafiku a další ovládací prvky obsahu. Další informace najdete v tématu <xref:Microsoft.Office.Tools.Word.GroupContentControl> typ.
 
 ### <a name="picture"></a>Obrázek
@@ -204,7 +206,7 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
 ### <a name="data-bind-events-for-content-controls"></a>Události datové vazby pro ovládací prvky obsahu
  Všechny ovládací prvky obsahu poskytují sadu událostí, které lze zpracovat k provádění úloh souvisejících s daty, jako je například ověření, že text v ovládacím prvku splňuje určitá kritéria před aktualizací zdroje dat. V následující tabulce jsou uvedeny události řízení obsahu, které se vztahují k datové vazbě.
 
-|Úkol|Událost|
+|Úloha|Událost|
 |----------|-----------|
 |Spustit kód těsně před tím, než aplikace Word automaticky aktualizuje text v ovládacím prvku obsahu, který je vázán na vlastní část XML.|<xref:Microsoft.Office.Tools.Word.ContentControlBase.ContentUpdating>|
 |Spustit kód těsně před tím, než aplikace Word automaticky aktualizuje data ve vlastní části XML, která je svázána s ovládacím prvkem obsahu (to znamená po změně textu v ovládacím prvku Content Control).|<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating>|

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vyplnění ovládacích prvků ListObject daty'
+description: Pomocí datové vazby můžete rychle přidat data do dokumentu. Můžete také odpojit objekt seznamu, aby zobrazil data, ale již není svázán se zdrojem dat.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2941022cb434198298e9d098ef562efeaba4893f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8ce2ef20b56a1803af5356137b798d83a5f1457f
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544817"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846516"
 ---
 # <a name="how-to-fill-listobject-controls-with-data"></a>Postupy: vyplnění ovládacích prvků ListObject daty
   Datovou vazbu můžete použít jako způsob, jak rychle přidat data do dokumentu. Po vytvoření vazby dat k objektu seznamu můžete odpojit objekt seznamu, aby zobrazil data, ale již není svázán se zdrojem dat.

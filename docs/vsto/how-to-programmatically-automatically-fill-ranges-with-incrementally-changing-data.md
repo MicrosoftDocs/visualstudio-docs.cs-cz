@@ -1,5 +1,7 @@
 ---
 title: Automatické vyplňování přírůstkových změn oblastí dat prostřednictvím kódu programu
+description: Přečtěte si, jak metoda AutoFill objektu Range umožňuje vyplnit rozsah na listu hodnotami automaticky.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d1cdcc02fa3c33945ffc4824310f0957bdbdd2dd
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: dc80b4b589eb46aefa9ef6d75384ed17bb1b7c8c
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585311"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847205"
 ---
 # <a name="how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data"></a>Postupy: Automatické vyplňování oblastí pomocí přírůstkových změn dat prostřednictvím kódu programu
   <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A>Metoda <xref:Microsoft.Office.Interop.Excel.Range> objektu umožňuje vyplnit rozsah na listu hodnotami automaticky. Nejčastěji se <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> Metoda používá k ukládání přírůstkových nebo klesajících hodnot v rozsahu. Chování můžete určit tak, že zadáte volitelnou konstantu z <xref:Microsoft.Office.Interop.Excel.XlAutoFillType> výčtu.

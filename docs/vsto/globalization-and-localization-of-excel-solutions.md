@@ -1,5 +1,7 @@
 ---
 title: Globalizace a lokalizace řešení pro Excel
+description: Přečtěte si o speciálních faktorech pro systém Microsoft Office excelových řešení, která se spustí v počítačích, které mají nastavení jiné než anglické verze systému Windows.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f37ddcbbd3145fc96cd8081d7a1df524ef7ea8ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51e4a2cc4fb74309c44b8068152253de92eed0df
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986047"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847751"
 ---
 # <a name="globalization-and-localization-of-excel-solutions"></a>Globalizace a lokalizace řešení pro Excel
   Tato část obsahuje informace o speciálních faktorech pro systém Microsoft Office excelových řešení, která se spustí v počítačích, které mají nastavení jiné než anglické verze systému Windows. Většina aspektů globalizace a lokalizace systém Microsoft Office řešení se shoduje s tím, jak se setkáte při vytváření jiných druhů řešení pomocí sady Visual Studio. Obecné informace najdete v tématu [globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md).
@@ -77,7 +79,7 @@ Application.ActiveCell.Value2 = "05/12/04"
 
  Stejný kód, při použití v řešení vytvořeném pomocí vývojářských nástrojů Office v sadě Visual Studio a předaných do aplikace Excel prostřednictvím zprostředkovatele komunikace s objekty COM, vytváří stejné výsledky, pokud je datum formátováno ve stylu en-US.
 
- Příklad:
+ Například:
 
  [!code-vb[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#6)]
  [!code-csharp[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#6)]

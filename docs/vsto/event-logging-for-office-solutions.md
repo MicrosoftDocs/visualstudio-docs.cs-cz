@@ -1,5 +1,7 @@
 ---
 title: Protokolování událostí pro řešení pro systém Office
+description: Přečtěte si, jak můžete použít Prohlížeč událostí ve Windows k zobrazení zpráv výjimek, které jsou zachyceny modulem runtime Visual Studio Tools for Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 480a355ee2af321341c54b90edcc582d49102186
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 74aaf7c1c07c349fa3669332a41e4e7d06ba86f1
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62951931"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847764"
 ---
 # <a name="event-logging-for-office-solutions"></a>Protokolování událostí pro řešení pro systém Office
   Prohlížeč událostí ve Windows můžete použít k zobrazení zpráv výjimek, které jsou zachyceny [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] při instalaci nebo odinstalaci řešení Office. Pomocí těchto zpráv z protokolovacího nástroje můžete vyřešit problémy s instalací a nasazením.

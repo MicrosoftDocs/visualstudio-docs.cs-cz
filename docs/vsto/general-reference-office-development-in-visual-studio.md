@@ -1,7 +1,8 @@
 ---
 title: Obecný odkaz (vývoj pro Office v sadě Visual Studio)
+description: Přečtěte si obecné referenční informace o systém Microsoft Office vývojových projektech v aplikaci Visual Studio.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8e8b8dee20b67338bbe1c8c78ebe1d8bcc730175
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c47f4360f63640f869231bc21929c43543d5c72e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551513"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847777"
 ---
 # <a name="general-reference-office-development-in-visual-studio"></a>Obecný odkaz (vývoj pro Office v sadě Visual Studio)
   Tato část obsahuje technické podrobnosti o systém Microsoft Office projektů v aplikaci Visual Studio.

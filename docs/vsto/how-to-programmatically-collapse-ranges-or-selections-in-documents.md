@@ -1,5 +1,7 @@
 ---
 title: Programové sbalení oblastí nebo výběrů v dokumentech
+description: Přečtěte si, že pokud pracujete s objektem rozsahu nebo výběru, můžete před vložením textu změnit výběr na místo vložení.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4bb22f97b6a876029ff5d984abf9bda32cfd3fbc
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: cba19d8cb6c26defcbb7cf39f461a45bf217b5a5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585285"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847647"
 ---
 # <a name="how-to-programmatically-collapse-ranges-or-selections-in-documents"></a>Postupy: sbalení oblastí nebo výběrů v dokumentech prostřednictvím kódu programu
   Pokud pracujete s <xref:Microsoft.Office.Interop.Word.Range> <xref:Microsoft.Office.Interop.Word.Selection> objektem nebo, možná budete chtít před vložením textu změnit výběr na místo, aby se zabránilo přepsání stávajícího textu. <xref:Microsoft.Office.Interop.Word.Range> <xref:Microsoft.Office.Interop.Word.Selection> Objekty i mají metodu sbalení, která využívá <xref:Microsoft.Office.Interop.Word.WdCollapseDirection> hodnoty výčtu:

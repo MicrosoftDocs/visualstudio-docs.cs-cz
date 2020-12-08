@@ -1,5 +1,7 @@
 ---
 title: Registrace programu | Microsoft Docs
+description: Přečtěte si, jak se program, který se má ladit, zaregistruje na portu poté, co ladicí modul získá port.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b68fa67f784d155288482ad724b632ed5ba5fa41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 80c3d13cc7319e43390a7e9e6f4eb42a5a87c780
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713161"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847093"
 ---
 # <a name="register-the-program"></a>Zaregistrovat program
 Poté, co ladicí stroj získá port, který je reprezentován rozhraním [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) , je dalším krokem k tomu, abyste mohli ladit program, zaregistrovat ho v portu. Po registraci je program k dispozici pro ladění jedním z následujících způsobů:

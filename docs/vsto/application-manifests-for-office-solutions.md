@@ -1,5 +1,7 @@
 ---
 title: Manifesty aplikace pro řešení Office
+description: Zjistěte, jak manifest aplikace je soubor XML, který popisuje sestavení, která jsou načtena do řešení systém Microsoft Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a6272f145ee2c7ef2a91cc635112e440e6404457
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a16d0f438d06cbfa48538bb3e370ed9b334ad16
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531505"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847920"
 ---
 # <a name="application-manifests-for-office-solutions"></a>Manifesty aplikace pro řešení Office
   Manifest aplikace je soubor XML, který popisuje sestavení, která jsou načtena do řešení systém Microsoft Office. Vývojové nástroje systém Microsoft Office v aplikaci Visual Studio používají [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] schéma manifestu aplikace definované v referenčních informacích k [manifestu aplikace ClickOnce](../deployment/clickonce-application-manifest.md) .
@@ -86,7 +88,7 @@ ms.locfileid: "85531505"
 |[&#60;elementu friendlyName&#62; &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/friendlyname-element-office-development-in-visual-studio.md)|Nepovinný parametr. Ukládá název doplňku VSTO, který se zobrazí v seznamu nainstalovaných doplňků VSTO.|Žádné|
 |[&#60;Description&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/description-element-office-development-in-visual-studio.md)|Vyžaduje se jenom pro doplňky VSTO. Ukládá popis, který se zobrazí v seznamu nainstalovaných programů.|Žádné|
 |[&#60;formRegions&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/formregions-element-office-development-in-visual-studio.md)|Vyžaduje se jenom pro doplňky Outlook VSTO, které obsahují oblasti formulářů.|Žádné|
-|[&#60;formRegion&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/formregion-element-office-development-in-visual-studio.md)|Vyžaduje se jenom pro doplňky Outlook VSTO, které obsahují oblasti formulářů.|**Name**|
+|[&#60;formRegion&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/formregion-element-office-development-in-visual-studio.md)|Vyžaduje se jenom pro doplňky Outlook VSTO, které obsahují oblasti formulářů.|**Název**|
 |[&#60;vstoRuntime&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/vstoruntime-element-office-development-in-visual-studio.md)|Povinná hodnota. Popisuje specifickou verzi modulu runtime Visual Studio Tools for Office, který je podporován řešením Office.|**předběžné**<br /><br /> **znění**<br /><br /> **supportUrl**|
 
 ## <a name="remarks"></a>Poznámky

@@ -1,5 +1,6 @@
 ---
 title: 'Postupy: Přidání ovládacích prvků záložek do dokumentů aplikace Word'
+description: Přečtěte si, že v projektech na úrovni dokumentu můžete přidat ovládací prvky záložky do dokumentu v projektu v době návrhu nebo v době běhu.
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: de5868674790239b8374ef9796308280588ae96e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6ccf3f5a355cdad682026453691a4203c95a814
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547248"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847465"
 ---
 # <a name="how-to-add-bookmark-controls-to-word-documents"></a>Postupy: Přidání ovládacích prvků záložek do dokumentů aplikace Word
   V projektech na úrovni dokumentu můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do dokumentu v projektu v době návrhu nebo v době běhu. V projektech doplňku VSTO můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do libovolného otevřeného dokumentu v době běhu.
@@ -41,7 +42,7 @@ ms.locfileid: "85547248"
 ## <a name="add-bookmark-controls-at-design-time"></a><a name="designtime"></a> Přidat ovládací prvky záložky v době návrhu
  Existuje několik způsobů, jak přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do dokumentu v projektu na úrovni dokumentu v době návrhu:
 
-- V **sadě nástrojů sady**Visual Studio.
+- V **sadě nástrojů sady** Visual Studio.
 
    Ovládací prvek lze přetáhnout <xref:Microsoft.Office.Tools.Word.Bookmark> z **panelu nástrojů** do dokumentu. Můžete chtít zvolit tento způsob, pokud již používáte **sadu nástrojů** k přidání model Windows Forms ovládacích prvků do dokumentu.
 

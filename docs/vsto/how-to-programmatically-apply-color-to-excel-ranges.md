@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: použití barev v oblastech aplikace Excel prostřednictvím kódu programu'
+description: Přečtěte si, že pokud chcete použít barvu na text v rámci rozsahu buněk, použijte ovládací prvek NamedRange nebo nativní objekt oblasti aplikace Excel.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0d4a99e2e71e6a87b304ceea45a3cd595f911ff1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 63a38bb4fb6f8f8ab35b9e1104a1b93d6d757446
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543452"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847998"
 ---
 # <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>Postupy: použití barev v oblastech aplikace Excel prostřednictvím kódu programu
   Chcete-li použít barvu na text v rámci rozsahu buněk, použijte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek nebo nativní objekt oblasti aplikace Excel.

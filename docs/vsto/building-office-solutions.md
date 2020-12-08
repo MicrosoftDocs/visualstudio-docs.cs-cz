@@ -1,5 +1,7 @@
 ---
 title: Sestavování řešení pro systém Office
+description: Přečtěte si o rozdílech mezi vytvářením a laděním projektů Office a vytvářením a laděním jiných typů projektů v sadě Visual Studio, jako je například model Windows Forms.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3f89e20b710584c678c035f4d85034e90bb11323
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d942a7818c3c71e0859c9271b329688734682f2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551842"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847933"
 ---
 # <a name="build-office-solutions"></a>Sestavování řešení pro systém Office
   Obecně platí, že sestavování a ladění projektů Office je stejné jako vytváření a ladění jiných typů projektů v sadě Visual Studio, například model Windows Forms. Témata v této části vysvětlují rozdíly, které existují. Obecné informace o tom, jak sestavovat aplikace, najdete v tématu [kompilace a sestavování v aplikaci Visual Studio](../ide/compiling-and-building-in-visual-studio.md).

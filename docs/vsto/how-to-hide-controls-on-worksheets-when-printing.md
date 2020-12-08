@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: skrytí ovládacích prvků na listech při tisku'
+description: Naučte se, že ovládací prvky můžete skrýt při tisku systém Microsoft Office excelového listu, který obsahuje ovládací prvky model Windows Forms.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 336723f60a2cd90dc63db24e981dd06e0388cb9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: acc90986dd394e69de12893aac01e0a4f662b1a3
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544804"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846490"
 ---
 # <a name="how-to-hide-controls-on-worksheets-when-printing"></a>Postupy: skrytí ovládacích prvků na listech při tisku
   Když tisknete systém Microsoft Office excelový dokument, který obsahuje ovládací prvky model Windows Forms, ovládací prvky se zobrazí na vytištěném listu. Ovládací prvky lze skrýt při tisku listu.
@@ -37,7 +39,7 @@ ms.locfileid: "85544804"
 
 1. Vytvořte nebo otevřete excelový projekt v aplikaci Visual Studio a ověřte, zda je v Návrháři zobrazená **List1** . Informace o vytváření projektů naleznete v tématu [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**přetáhněte <xref:Microsoft.Office.Tools.Excel.Controls.Button> ovládací prvek na buňku v `Sheet1` .
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** přetáhněte <xref:Microsoft.Office.Tools.Excel.Controls.Button> ovládací prvek na buňku v `Sheet1` .
 
 3. V okně **vlastnosti** nastavte <xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A> vlastnost na **hodnotu NEPRAVDA**.
 

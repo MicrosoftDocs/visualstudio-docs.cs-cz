@@ -1,5 +1,7 @@
 ---
 title: Nasazení řešení VSTO pomocí Instalační služba systému Windows
+description: Přečtěte si, jak nasadit doplněk Microsoft Visual Studio Tools for Office (VSTO) nebo řešení na úrovni dokumentu pomocí Instalační program pro Visual Studio projektu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/18/2010
 ms.topic: conceptual
@@ -19,16 +21,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a6fd2824ae10ad36a7ed50250620e98575e9ea60
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e49705c99801cd6e09f4bf6d9be3c411cc2c53e3
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585690"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846542"
 ---
 # <a name="deploying-a-vsto-solution-using-windows-installer"></a>Nasazení řešení VSTO pomocí Instalační služba systému Windows
 
-## <a name="summary"></a>Shrnutí
+## <a name="summary"></a>Souhrn
 
 Přečtěte si, jak nasadit doplněk Microsoft Visual Studio Tools for Office (VSTO) nebo řešení na úrovni dokumentu pomocí Instalační program pro Visual Studio projektu.
 
@@ -144,7 +146,7 @@ Projekt instalace musí nasadit rozhraní ExcelAddIn. Projekt nastavení pro tut
 
 ### <a name="to-add-the-exceladdin-project-output"></a>Přidání výstupu projektu ExcelAddIn
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **OfficeAddInSetup**, klikněte na **Přidat** a pak na **výstup projektu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **OfficeAddInSetup**, klikněte na **Přidat** a pak na **výstup projektu**.
 2. V dialogovém okně **Přidat výstupní skupinu projektu** vyberte **ExcelAddIn** ze seznamu projektů a **primární výstup**.
 3. Kliknutím na tlačítko **OK** přidejte výstup projektu do projektu instalace.
 
@@ -156,8 +158,8 @@ Projekt instalace musí nasadit manifest nasazení a manifest aplikace. Přidejt
 
 ### <a name="to-add-the-deployment-and-application-manifests"></a>Přidání manifestů nasazení a aplikací
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **OfficeAddInSetup**, klikněte na **Přidat**a pak klikněte na **soubor**.
-2. V dialogovém okně **Přidat soubory** přejděte do výstupního adresáře **ExcelAddIn** . Výstupní adresář obvykle je podsložka ** \\ verze bin** kořenového adresáře projektu v závislosti na vybrané konfiguraci sestavení.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **OfficeAddInSetup**, klikněte na **Přidat** a pak klikněte na **soubor**.
+2. V dialogovém okně **Přidat soubory** přejděte do výstupního adresáře **ExcelAddIn** . Výstupní adresář obvykle je podsložka **\\ verze bin** kořenového adresáře projektu v závislosti na vybrané konfiguraci sestavení.
 3. Vyberte soubory **ExcelAddIn. VSTO** a **ExcelAddIn.dll. manifest** a kliknutím na **otevřít** přidejte tyto dva soubory do projektu instalace.
 
     ![Snímek obrazovky s manifesty aplikace a nasazení v Průzkumník řešení](media/setup-project-figure-3.jpg)
@@ -168,7 +170,7 @@ Odkazování na ExcelAddIn zahrnuje všechny součásti, které ExcelAddIn vyža
 
 ### <a name="to-exclude-the-exceladdin-project-dependencies"></a>Vyloučení závislostí projektu ExcelAddIn
 
-1. V **Průzkumník řešení**v uzlu **OfficeAddInSetup** vyberte všechny položky závislostí pod zjištěnou položkou **zjištěné závislosti** s výjimkou pro **Microsoft .NET Framework** nebo jakékoli sestavení, které končí na ** \*.Utilities.dll**. Sestavení nástrojů jsou určena k nasazení společně s vaší aplikací.
+1. V **Průzkumník řešení** v uzlu **OfficeAddInSetup** vyberte všechny položky závislostí pod zjištěnou položkou **zjištěné závislosti** s výjimkou pro **Microsoft .NET Framework** nebo jakékoli sestavení, které končí na **\*.Utilities.dll**. Sestavení nástrojů jsou určena k nasazení společně s vaší aplikací.
 2. Klikněte pravým tlačítkem na skupinu a vyberte **vlastnosti**.
 3. V okně **vlastnosti** změňte vlastnost **Exclude** na **hodnotu true** , aby se vyloučila závislá sestavení z projektu instalace. Ujistěte se, že nechcete vyloučit žádná sestavení nástrojů.
 
@@ -178,14 +180,14 @@ Odkazování na ExcelAddIn zahrnuje všechny součásti, které ExcelAddIn vyža
 
 Můžete nakonfigurovat Instalační služba systému Windows balíček pro instalaci požadovaných součástí přidáním instalačního programu, který se označuje také jako zaváděcí nástroj. Tento instalační program může nainstalovat požadované součásti, což je proces s názvem zavádění.
 
-Pro **ExcelAddIn**musí být tyto požadavky nainstalovány, aby mohl správně běžet doplněk:
+Pro **ExcelAddIn** musí být tyto požadavky nainstalovány, aby mohl správně běžet doplněk:
 
 - Verze Microsoft .NET Framework, na kterou cílí řešení pro Office
 - Microsoft Visual Studio 2010 Tools for Office runtime.
 
 Postup konfigurace závislých komponent jako požadovaných součástí
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **OfficeAddInSetup** a vyberte možnost **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt **OfficeAddInSetup** a vyberte možnost **vlastnosti**.
 2. Zobrazí se dialogové okno **stránky vlastností OfficeAddInSetup** .
 3. Klikněte na tlačítko **požadavky** .
 4. V dialogovém okně požadavky vyberte správnou verzi .NET Framework a Microsoft Visual Studio Tools for Office runtime.
@@ -201,13 +203,13 @@ Systém Microsoft Office vyhledá doplňky pomocí klíčů registru. Klíče v 
 
 ### <a name="to-configure-the-registry"></a>Konfigurace registru
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **OfficeAddInSetup**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **OfficeAddInSetup**.
 2. Rozbalte **zobrazení**.
 3. Kliknutím na **registr** otevřete okno Editor registru.
 4. V editoru **registru (OfficeAddInSetup)** rozbalte **HKEY \_ místní \_ počítač** a potom na **software**.
-5. Odstraňte klíč ** \[ Manufacturer \] **?, který najdete v části **HKEY \_ \_ \\ software místního počítače**.
+5. Odstraňte klíč **\[ Manufacturer \]**?, který najdete v části **HKEY \_ \_ \\ software místního počítače**.
 6. Rozbalte **HKEY \_ aktuálního \_ uživatele** a pak **software**.
-7. Odstraňte klíč ** \[ výrobce \] ** nalezený v **HKEY \_ aktuálním \_ uživatelském \\ softwaru**.
+7. Odstraňte klíč **\[ výrobce \]** nalezený v **HKEY \_ aktuálním \_ uživatelském \\ softwaru**.
 8. Chcete-li přidat klíče registru pro instalaci doplňku, klikněte pravým tlačítkem myši na klíč registru **uživatele nebo počítače** , vyberte možnost **nový klíč**. Použijte textový **software** pro název nového klíče. Pravým tlačítkem myši klikněte na nově vytvořený klíč **softwaru** a vytvořte nový klíč s textem **Microsoft**.
 9. Použijte podobný postup k vytvoření celé klíčové hierarchie vyžadované pro registraci doplňku:
 
@@ -215,17 +217,17 @@ Systém Microsoft Office vyhledá doplňky pomocí klíčů registru. Klíče v 
 
     Název společnosti se často používá jako předpona pro název doplňku, aby se zajistila jedinečnost.
 
-10. Klikněte pravým tlačítkem myši na klíč **klíče SampleCompany. ExcelAddIn** , vyberte **Nový**a klikněte na **hodnota řetězce**. Použijte textový **Popis** pro název.
+10. Klikněte pravým tlačítkem myši na klíč **klíče SampleCompany. ExcelAddIn** , vyberte **Nový** a klikněte na **hodnota řetězce**. Použijte textový **Popis** pro název.
 11. Tento krok použijte, pokud chcete přidat tři další hodnoty:
     - **FriendlyName** typu **String**
     - **LoadBehavior** typu **DWORD**
     - **Manifest** typu **String**
 
-12. Klikněte pravým tlačítkem na hodnotu **Popis** v editoru registru a klikněte na **okno Vlastnosti**. V **okně Vlastnosti**zadejte jako vlastnost value parametr **Excel demo AddIn** .
-13. V editoru registru vyberte klíč **FriendlyName** . V **okně Vlastnosti**změňte vlastnost **hodnota** na **ukázkový doplněk aplikace Excel**.
-14. V editoru registru vyberte klíč **LoadBehavior** . V **okně Vlastnosti**změňte vlastnost hodnota na **hodnotu** **3.** Hodnota 3 pro LoadBehavior označuje, že doplněk by měl být načten při spuštění hostitelské aplikace. Další informace o chování při načítání najdete v tématu [položky registru pro doplňky VSTO](registry-entries-for-vsto-add-ins.md).
+12. Klikněte pravým tlačítkem na hodnotu **Popis** v editoru registru a klikněte na **okno Vlastnosti**. V **okně Vlastnosti** zadejte jako vlastnost value parametr **Excel demo AddIn** .
+13. V editoru registru vyberte klíč **FriendlyName** . V **okně Vlastnosti** změňte vlastnost **hodnota** na **ukázkový doplněk aplikace Excel**.
+14. V editoru registru vyberte klíč **LoadBehavior** . V **okně Vlastnosti** změňte vlastnost hodnota na **hodnotu** **3.** Hodnota 3 pro LoadBehavior označuje, že doplněk by měl být načten při spuštění hostitelské aplikace. Další informace o chování při načítání najdete v tématu [položky registru pro doplňky VSTO](registry-entries-for-vsto-add-ins.md).
 
-15. V editoru registru vyberte klíč **manifestu** . V **okně Vlastnosti**změňte vlastnost **hodnota** na **soubor:///[TARGETDIR] ExcelAddIn. VSTO | vstolocal**
+15. V editoru registru vyberte klíč **manifestu** . V **okně Vlastnosti** změňte vlastnost **hodnota** na **soubor:///[TARGETDIR] ExcelAddIn. VSTO | vstolocal**
 
     ![Snímek obrazovky s editorem registru](media/setup-project-figure-6.png)
 
@@ -252,10 +254,10 @@ Pokud se balíček MSI používá k instalaci doplňku nebo řešení, může se
 
 ### <a name="configure-a-launch-condition-to-detect-the-vsto-runtime"></a>Konfigurace podmínky spuštění pro detekci modulu runtime VSTO
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **OfficeAddInSetup**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **OfficeAddInSetup**.
 2. Rozbalte **zobrazení**.
 3. Klikněte na možnost **spouštěcí podmínky**.
-4. V editoru **podmínek spuštění (OfficeAddInSetup)** klikněte pravým tlačítkem na **požadavky na cílovém počítači**a pak klikněte na **Přidat podmínku spuštění registru**. Tato podmínka hledání může vyhledat klíč, který je nainstalován modulem runtime VSTO. Hodnota klíče je pak k dispozici pro různé součásti instalačního programu prostřednictvím pojmenované vlastnosti. Podmínka spuštění používá vlastnost definovanou podmínkou vyhledávání ke kontrole určité hodnoty.
+4. V editoru **podmínek spuštění (OfficeAddInSetup)** klikněte pravým tlačítkem na **požadavky na cílovém počítači** a pak klikněte na **Přidat podmínku spuštění registru**. Tato podmínka hledání může vyhledat klíč, který je nainstalován modulem runtime VSTO. Hodnota klíče je pak k dispozici pro různé součásti instalačního programu prostřednictvím pojmenované vlastnosti. Podmínka spuštění používá vlastnost definovanou podmínkou vyhledávání ke kontrole určité hodnoty.
 5. V editoru **podmínek spuštění (OfficeAddInSetup)** vyberte podmínku vyhledávání **RegistryEntry1** , klikněte pravým tlačítkem na podmínku a vyberte **okno Vlastnosti**.
 
 6. V okně **vlastnosti** nastavte tyto vlastnosti:
@@ -280,7 +282,7 @@ Pokud se balíček MSI používá k instalaci doplňku nebo řešení, může se
 
 ### <a name="configure-a-launch-condition-to-detect-the-vsto-runtime-installed-by-office"></a>Konfigurace podmínky spuštění pro detekci modulu runtime VSTO nainstalovaného sadou Office
 
-1. V editoru **podmínek spuštění (OfficeAddInSetup)** klikněte pravým tlačítkem myši na **Hledat cílový počítač**a pak klikněte na **Přidat hledání v registru**.
+1. V editoru **podmínek spuštění (OfficeAddInSetup)** klikněte pravým tlačítkem myši na **Hledat cílový počítač** a pak klikněte na **Přidat hledání v registru**.
 2. Vyberte podmínku hledání **RegistryEntry1** vyhledávání, klikněte pravým tlačítkem na podmínku a vyberte **okno Vlastnosti**.
 3. V okně **vlastnosti** nastavte tyto vlastnosti:
     1. Nastavte hodnotu **(Name)** pro **hledání modulu runtime služby Office VSTO**.
@@ -312,9 +314,9 @@ Další informace naleznete v tématu [ekvivalenci typu a vložené typy spolupr
 
 ### <a name="to-configure-launch-conditions-to-detect-that-for-office-pias"></a>Konfigurace podmínek spuštění k detekci pro PIA pro Office
 
-1. V editoru **podmínek spuštění (OfficeAddInSetup)** klikněte pravým tlačítkem na **požadavky na cílovém počítači**a pak **klikněte na Přidat instalační služba systému Windows podmínku spuštění**. Tato podmínka spuštění vyhledá v Office PIA pomocí hledání konkrétního ID součásti.
+1. V editoru **podmínek spuštění (OfficeAddInSetup)** klikněte pravým tlačítkem na **požadavky na cílovém počítači** a pak **klikněte na Přidat instalační služba systému Windows podmínku spuštění**. Tato podmínka spuštění vyhledá v Office PIA pomocí hledání konkrétního ID součásti.
 2. Klikněte pravým tlačítkem na **Hledat Component1** a kliknutím na **okno Vlastnosti** zobrazte vlastnosti podmínky spuštění.
-3. V **okně Vlastnosti**nastavte tyto vlastnosti:
+3. V **okně Vlastnosti** nastavte tyto vlastnosti:
 
     1. Změňte hodnotu vlastnosti **(Name)** tak, aby **prohledala sdílené PIA pro Office** .
     2. Změňte hodnotu **ComponentID** na ID součásti pro komponentu Office, kterou používáte. Seznam ID součástí můžete najít v následující tabulce, například **{64E2917E-AA13-4CA4-BFFE-EA6EDA3AFCB4}**.
@@ -357,8 +359,8 @@ Podmínky spuštění pro instalaci ExcelAddIn můžete dále upřesnit. Napří
 
 ### <a name="to-build-the-setup-project"></a>Sestavení projektu instalace
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt **OfficeAddInSetup** a klikněte na **sestavit**.
-2. Pomocí **Průzkumníka Windows**přejděte do výstupního adresáře projektu **OfficeAddInSetup** a přejděte do složky vydaná verze nebo ladění v závislosti na vybrané konfiguraci sestavení. Zkopírujte všechny soubory ze složky do umístění, ke kterému mají uživatelé přístup.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt **OfficeAddInSetup** a klikněte na **sestavit**.
+2. Pomocí **Průzkumníka Windows** přejděte do výstupního adresáře projektu **OfficeAddInSetup** a přejděte do složky vydaná verze nebo ladění v závislosti na vybrané konfiguraci sestavení. Zkopírujte všechny soubory ze složky do umístění, ke kterému mají uživatelé přístup.
 
 Otestování instalace ExcelAddIn
 
@@ -514,14 +516,14 @@ Chcete-li přidat přizpůsobení do dokumentu, je nutné mít ID řešení ře�
 Načtení ID řešení
 
 1. V nabídce **sestavení** klikněte na **Sestavit řešení** a sestavte řešení na úrovni dokumentu a přidejte vlastnost ID řešení do souboru projektu.
-2. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt na úrovni dokumentu **ExcelWorkbookProject**
+2. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt na úrovni dokumentu **ExcelWorkbookProject**
 3. Klikněte na **UnloadProject** pro přístup k souboru projektu ze sady Visual Studio.
 
     ![Snímek obrazovky s odinstalováním řešení dokumentu aplikace Excel Průzkumník řešení](media/setup-project-figure-16.jpg)
 
     **Obrázek 13: uvolnění řešení dokumentu aplikace Excel**
 
-4. V **Průzkumník řešení**klikněte pravým tlačítkem na **ExcelWorkbookProject** a klikněte na **EditExcelWorkbookProject. vbproj** nebo **upravte ExcelWorkbookProject. csproj**.
+4. V **Průzkumník řešení** klikněte pravým tlačítkem na **ExcelWorkbookProject** a klikněte na **EditExcelWorkbookProject. vbproj** nebo **upravte ExcelWorkbookProject. csproj**.
 5. V editoru **ExcelWorkbookProject** vyhledejte element **SolutionId** uvnitř elementu **Property Property** .
 6. Zkopírujte hodnotu identifikátoru GUID tohoto elementu.
 
@@ -529,7 +531,7 @@ Načtení ID řešení
 
     **Obrázek 14: načtení SolutionID**
 
-7. V **Průzkumník řešení**klikněte pravým tlačítkem na **ExcelWorkbookProject** a klikněte na **znovu načíst projekt**.
+7. V **Průzkumník řešení** klikněte pravým tlačítkem na **ExcelWorkbookProject** a klikněte na **znovu načíst projekt**.
 8. Kliknutím na **Ano** v dialogovém okně, které se zobrazí, zavřete Editor **ExcelWorkbookProject** .
 9. **ID řešení** se použije při instalaci vlastní akce.
 
@@ -537,7 +539,7 @@ Posledním krokem je nakonfigurovat vlastní akci pro kroky **instalace** a **od
 
 ### <a name="to-configure-the-setup-project"></a>Konfigurace projektu instalace
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **ExcelWorkbookSetup**, rozbalte **Přidat** a klikněte na **výstup projektu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **ExcelWorkbookSetup**, rozbalte **Přidat** a klikněte na **výstup projektu**.
 2. V dialogovém okně **Přidat výstupní skupinu projektu** , v seznamu **projekt** klikněte na **AddCustomizationCustomAction**.
 3. Vyberte **primární výstup** a kliknutím na tlačítko **OK** zavřete dialogové okno a přidejte sestavení obsahující vlastní akci do projektu instalace.
 
@@ -545,12 +547,12 @@ Posledním krokem je nakonfigurovat vlastní akci pro kroky **instalace** a **od
 
     **Obrázek 15: vlastní akce manifestu dokumentu – přidat výstupní skupinu projektu**
 
-4. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **ExcelWorkbookSetup**.
+4. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **ExcelWorkbookSetup**.
 5. Rozbalte **Zobrazit** a klikněte na **vlastní akce**.
 6. V editoru **vlastních akcí (ExcelWorkbookSetup)** klikněte pravým tlačítkem myši na **vlastní akce** a klikněte na **Přidat vlastní akci**.
 7. V dialogovém okně **Vybrat položku v projektu** v seznamu **Hledat v** klikněte na **Složka aplikace**. Vyberte **primární výstup z AddCustomizationCustomAction (aktivní)** a kliknutím na **OK** přidejte vlastní akci do kroku instalace.
-8. V **uzlu instalovat**klikněte pravým tlačítkem na **primární výstup z AddCustomizationCustomAction (aktivní)** a klikněte na **Přejmenovat**. Pojmenujte si vlastní akci **Kopírovat dokument do složky Dokumenty a připojte přizpůsobení**.
-9. V **uzlu odinstalovat**klikněte pravým tlačítkem na **primární výstup z AddCustomizationCustomAction (aktivní)** a klikněte na **Přejmenovat**. Pojmenujte vlastní akci **odebrat dokument ze složky Dokumenty**.
+8. V **uzlu instalovat** klikněte pravým tlačítkem na **primární výstup z AddCustomizationCustomAction (aktivní)** a klikněte na **Přejmenovat**. Pojmenujte si vlastní akci **Kopírovat dokument do složky Dokumenty a připojte přizpůsobení**.
+9. V **uzlu odinstalovat** klikněte pravým tlačítkem na **primární výstup z AddCustomizationCustomAction (aktivní)** a klikněte na **Přejmenovat**. Pojmenujte vlastní akci **odebrat dokument ze složky Dokumenty**.
 
     ![Snímek obrazovky okna s vlastními akcemi manifestu dokumentu](media/setup-project-figure-19.jpg)
 
