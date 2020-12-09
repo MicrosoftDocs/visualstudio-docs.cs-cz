@@ -1,6 +1,6 @@
 ---
-title: 'Postupy: Přidání komentářů do diagramů tříd (návrhář tříd)'
-description: Naučte se používat tvary komentářů k přidávání poznámek k diagramům tříd.
+title: Přidání komentářů do diagramů tříd
+description: Naučte se používat obrazce komentářů k vytváření poznámek v diagramech tříd v Návrhář tříd.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b146efb27bb76d91b7453d574bda6d79d53a68a
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: aa001c301174f2f7b45fb69265eeb24454a6626f
+ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901671"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933541"
 ---
 # <a name="how-to-add-comments-to-class-diagrams"></a>Postupy: Přidání komentářů do diagramů tříd
 

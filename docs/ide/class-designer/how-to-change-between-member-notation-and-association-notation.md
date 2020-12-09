@@ -1,6 +1,6 @@
 ---
-title: Změna mezi zápisem přidružení člena & (Návrhář tříd)
-description: Naučte se, jak změnit způsob, jakým diagram tříd představuje vztah přidružení mezi dvěma typy ze zápisu členů k zápisu přidružení a naopak.
+title: Změna mezi zápisem přidružení & členů
+description: Naučte se, jak změnit způsob, jakým diagram tříd představuje vztah přidružení v Návrhář tříd mezi dvěma typy ze zápisu členů k Notation přidružení a naopak.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64d26b6ca1c71fe3484544f02006a27866ff4843
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: f96fe04ee84be50bd241db6bf9f73280c40dec02
+ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901658"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933567"
 ---
 # <a name="how-to-change-between-member-notation-and-association-notation-in-class-designer"></a>Postupy: Změna mezi zápisem člena a zápisem přidružení v Návrhář tříd
 

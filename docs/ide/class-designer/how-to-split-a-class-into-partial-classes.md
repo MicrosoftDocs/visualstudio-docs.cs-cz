@@ -1,6 +1,6 @@
 ---
-title: 'Postupy: Rozdělení třídy na částečné třídy (návrhář tříd)'
-description: Naučte se používat klíčové slovo Partial k rozdělení deklarace třídy nebo struktury mezi několik deklarací.
+title: Rozdělení třídy na dílčí třídy
+description: Naučte se používat klíčové slovo Partial k rozdělení deklarace třídy nebo struktury mezi několik deklarací v Návrhář tříd.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +16,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ac0726851aec0d86223c2d95027b92137682c8a9
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: d6eb6e72dc409a642dcf8e1a4c7a7389529375c7
+ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901346"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933516"
 ---
 # <a name="how-to-split-a-class-into-partial-classes-in-class-designer"></a>Postupy: rozdělení třídy na částečné třídy v Návrhář tříd
 
