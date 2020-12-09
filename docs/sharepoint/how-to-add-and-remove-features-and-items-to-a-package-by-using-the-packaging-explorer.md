@@ -1,6 +1,8 @@
 ---
 title: 'Průzkumník balení: Přidání & odebrání funkcí & položek do balíčku'
 titleSuffix: ''
+description: Přidání a odebrání funkcí a položek do balíčku služby SharePoint pomocí Průzkumníka balíčků v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9bc4546d598a2fcca822f1921f778034fb768c2b
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ee9b2a12c9eaa168f0223dff29a3379a12b3d691
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585586"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915346"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>Postupy: Přidání a odebrání funkcí a položek do balíčku pomocí Průzkumníka balíčků
   Chcete-li nakonfigurovat balíček pro nasazení položek a funkcí služby SharePoint, můžete použít Průzkumníka balíčků. Položky a funkce projektu služby SharePoint můžete upravit v souboru. wsp.
@@ -32,9 +34,9 @@ ms.locfileid: "91585586"
 
 #### <a name="to-open-the-packaging-explorer"></a>Otevření Průzkumníka balíčků
 
-1. Na panelu nabídek vyberte možnost **Zobrazit**  >  **Další**  >  **Průzkumníka balíčků**Windows.
+1. Na panelu nabídek vyberte možnost **Zobrazit**  >  **Další**  >  **Průzkumníka balíčků** Windows.
 
-     V sadě **nástrojů**se zobrazí **Průzkumník balení** .
+     V sadě **nástrojů** se zobrazí **Průzkumník balení** .
 
 ## <a name="adding-a-feature-to-a-package"></a>Přidání funkce do balíčku
  Do balíčku můžete přidat nové a existující funkce pomocí Průzkumníka balíčků.
@@ -45,7 +47,7 @@ ms.locfileid: "91585586"
 
 #### <a name="to-move-an-existing-sharepoint-feature"></a>Přesunutí existující funkce SharePointu
 
-1. Otevřete **Průzkumníka balíčků**a pak proveďte jeden z následujících kroků:
+1. Otevřete **Průzkumníka balíčků** a pak proveďte jeden z následujících kroků:
 
     - Přetáhněte **funkci** z jednoho projektu do jiného projektu.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání a odebrání dalších sestavení | Microsoft Docs'
+description: Naučte se přidávat a odebírat další sestavení v balíčcích řešení služby SharePoint. Také přidejte nebo odstraňte bezpečné ovládací prvky a prostředky třídy.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 07b9016a4e246d3ed5a2697d924f556517a8226f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41b41ccd5eda2a44457adf23302a833574dade9e
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014825"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914969"
 ---
 # <a name="how-to-add-and-remove-additional-assemblies"></a>Postupy: Přidání a odebrání dalších sestavení
   Pokud balíček služby SharePoint závisí na jiných sestaveních pro funkce nebo data, můžete přidat sestavení do balíčku řešení (. wsp). Tímto způsobem server SharePoint zajistí, že vlastní sestavení jsou nainstalována s balíčkem.
@@ -41,7 +43,7 @@ ms.locfileid: "86014825"
 
 4. Zvolte tři tečky (![ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.gif "Elipsa ASP.NET Mobile Designer")) a pak vyberte sestavení, které chcete přidat. Pro účely přenositelnosti doporučujeme použít relativní cestu k vybranému sestavení.
 
-5. Pro **cíl nasazení**vyberte možnost **GlobalAssemblyCache** pro nasazení sestavení do globální mezipaměti sestavení (GAC), nebo klikněte na tlačítko možnosti **WebApplication** pro nasazení sestavení do složky WebApplication na serveru, na kterém je spuštěna služba SharePoint.
+5. Pro **cíl nasazení** vyberte možnost **GlobalAssemblyCache** pro nasazení sestavení do globální mezipaměti sestavení (GAC), nebo klikněte na tlačítko možnosti **WebApplication** pro nasazení sestavení do složky WebApplication na serveru, na kterém je spuštěna služba SharePoint.
 
 #### <a name="to-add-an-assembly-from-project-output"></a>Přidání sestavení z výstupu projektu
 
@@ -57,7 +59,7 @@ ms.locfileid: "86014825"
 
 4. V seznamu **zdrojový projekt** a vyberte zdrojový projekt, který chcete přidat.
 
-5. Pro **cíl nasazení**vyberte možnost **GlobalAssemblyCache** pro nasazení sestavení do globální mezipaměti sestavení (GAC), nebo klikněte na tlačítko možnosti **WebApplication** pro nasazení sestavení do složky WebApplication na serveru, na kterém je spuštěna služba SharePoint.
+5. Pro **cíl nasazení** vyberte možnost **GlobalAssemblyCache** pro nasazení sestavení do globální mezipaměti sestavení (GAC), nebo klikněte na tlačítko možnosti **WebApplication** pro nasazení sestavení do složky WebApplication na serveru, na kterém je spuštěna služba SharePoint.
 
 #### <a name="to-add-a-safe-control"></a>Postup přidání bezpečného ovládacího prvku
 

@@ -1,5 +1,7 @@
 ---
 title: Kontext dokumentu | Microsoft Docs
+description: Přečtěte si o kontextu dokumentu v ladění sady Visual Studio, které představuje pozici ve zdrojovém souboru nebo pozici ve zdrojovém dokumentu pro kontext kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48fe651e69e5e2c97756788cc30e54454c26e51e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d19830346ea09731dde608e019109f61011cd60
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738918"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915528"
 ---
 # <a name="document-context"></a>Kontext dokumentu
 V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění, *kontext dokumentu*:

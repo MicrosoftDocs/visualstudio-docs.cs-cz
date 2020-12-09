@@ -1,6 +1,8 @@
 ---
 title: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1
 titleSuffix: ''
+description: Pomocí šablony položky vytvořte položku projektu, kterou lze přidat do projektu služby SharePoint a vytvořit tak vlastní akci na webu služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5cdf574d17e63e1ef4906c629d43f5f928784d01
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 5d9d1d2cca8f8ffaec67c92b44e7a621d08ad673
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585560"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915268"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-1"></a>Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1
   Systém projektu služby SharePoint v aplikaci Visual Studio můžete roztáhnout tak, že vytvoříte vlastní typy položek projektu. V tomto návodu vytvoříte položku projektu, kterou lze přidat do projektu služby SharePoint a vytvořit tak vlastní akci na webu služby SharePoint. Vlastní akce přidá položku nabídky do nabídky **Akce webu** na webu služby SharePoint.
@@ -86,13 +88,13 @@ ms.locfileid: "91585560"
 
 5. Vyberte šablonu **projektu VSIX** .
 
-6. Do pole **název** zadejte **CustomActionProjectItem**a pak klikněte na tlačítko **OK** .
+6. Do pole **název** zadejte **CustomActionProjectItem** a pak klikněte na tlačítko **OK** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **CustomActionProjectItem** do **Průzkumník řešení**.
 
 #### <a name="to-create-the-item-template-project"></a>Vytvoření projektu šablony položky
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat** a pak zvolte možnost **Nový projekt**.
 
 2. V seznamu v horní části dialogového okna **Nový projekt** se ujistěte, že je vybrána možnost **.NET Framework 4,5** .
 
@@ -100,19 +102,19 @@ ms.locfileid: "91585560"
 
 4. V seznamu šablon projektů vyberte šablonu **položky C#** nebo šablona **šablony Visual Basic položky** .
 
-5. Do pole **název** zadejte **ItemTemplate**a pak klikněte na tlačítko **OK** .
+5. Do pole **název** zadejte **ItemTemplate** a pak klikněte na tlačítko **OK** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Přidá do řešení projekt **ItemTemplate** .
 
 #### <a name="to-create-the-extension-project"></a>Vytvoření projektu rozšíření
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat** a pak zvolte možnost **Nový projekt**.
 
 2. V seznamu v horní části dialogového okna **Nový projekt** se ujistěte, že je vybrána možnost **.NET Framework 4,5** .
 
 3. V dialogovém okně **Nový projekt** rozbalte uzly **Visual C#** nebo **Visual Basic** , zvolte uzel **Windows** a pak zvolte šablonu projektu **Knihovna tříd** .
 
-4. Do pole **název** zadejte **ProjectItemDefinition**a poté klikněte na tlačítko **OK** .
+4. Do pole **název** zadejte **ProjectItemDefinition** a poté klikněte na tlačítko **OK** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **ProjectItemDefinition** do řešení a otevře soubor Default Class1 Code.
 
@@ -123,13 +125,13 @@ ms.locfileid: "91585560"
 
 #### <a name="to-configure-the-project"></a>Konfigurace projektu
 
-1. V **Průzkumník řešení**otevřete místní nabídku projektu **ProjectItemDefinition** , zvolte možnost **Přidat**a pak zvolte možnost **Nová položka**.
+1. V **Průzkumník řešení** otevřete místní nabídku projektu **ProjectItemDefinition** , zvolte možnost **Přidat** a pak zvolte možnost **Nová položka**.
 
 2. V seznamu položek projektu vyberte možnost **soubor kódu**.
 
 3. Do pole **název** zadejte název **CustomAction** s odpovídající příponou názvu souboru a pak klikněte na tlačítko **Přidat** .
 
-4. V **Průzkumník řešení**otevřete místní nabídku pro projekt **ProjectItemDefinition** a pak zvolte možnost **Přidat odkaz**.
+4. V **Průzkumník řešení** otevřete místní nabídku pro projekt **ProjectItemDefinition** a pak zvolte možnost **Přidat odkaz**.
 
 5. V dialogovém okně **Správce odkazů – ProjectItemDefinition** zvolte uzel **sestavení** a pak zvolte uzel **rozhraní** .
 
@@ -160,20 +162,20 @@ ms.locfileid: "91585560"
 
 #### <a name="to-create-a-custom-icon-for-the-project-item"></a>Vytvoření vlastní ikony pro položku projektu
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro projekt **ProjectItemDefinition** , zvolte možnost **Přidat**a pak zvolte možnost **Nová položka...**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro projekt **ProjectItemDefinition** , zvolte možnost **Přidat** a pak zvolte možnost **Nová položka...**.
 
 2. V seznamu položek projektu vyberte položku **soubor ikony** .
 
     > [!NOTE]
     > V Visual Basic projekty je nutné zvolit uzel **Obecné** pro zobrazení položky **souboru ikony** .
 
-3. Do pole **název** zadejte **CustomAction_SolutionExplorer. ico**a pak klikněte na tlačítko **Přidat** .
+3. Do pole **název** zadejte **CustomAction_SolutionExplorer. ico** a pak klikněte na tlačítko **Přidat** .
 
      Nová ikona se otevře v **editoru obrázků**.
 
 4. Upravte verzi 16x16 souboru ikony tak, aby měla návrh, který můžete rozpoznat a pak soubor ikony uložte.
 
-5. V **Průzkumník řešení**vyberte **CustomAction_SolutionExplorer. ico**.
+5. V **Průzkumník řešení** vyberte **CustomAction_SolutionExplorer. ico**.
 
 6. V okně **vlastnosti** klikněte na šipku vedle vlastnosti **Akce sestavení** .
 
@@ -221,11 +223,11 @@ ms.locfileid: "91585560"
 
      Tento soubor definuje obsah a chování šablony položky. Další informace o obsahu tohoto souboru naleznete v tématu Referenční dokumentace [schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md).
 
-4. V **Průzkumník řešení**otevřete místní nabídku pro projekt **ItemTemplate** , zvolte možnost **Přidat**a poté možnost **Nová položka**.
+4. V **Průzkumník řešení** otevřete místní nabídku pro projekt **ItemTemplate** , zvolte možnost **Přidat** a poté možnost **Nová položka**.
 
 5. V dialogovém okně **Přidat novou položku** vyberte šablonu **textový soubor** .
 
-6. Do pole **název** zadejte **CustomAction. spdata**a pak klikněte na tlačítko **Přidat** .
+6. Do pole **název** zadejte **CustomAction. spdata** a pak klikněte na tlačítko **Přidat** .
 
 7. Přidejte následující kód XML do souboru *CustomAction. spdata* a pak soubor uložte a zavřete.
 
@@ -241,11 +243,11 @@ ms.locfileid: "91585560"
 
      Tento soubor obsahuje informace o souborech, které jsou obsaženy v položce projektu. `Type`Atribut `ProjectItem` elementu musí být nastaven na stejný řetězec, který je předán do <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> definice položky projektu ( `CustomActionProjectItemTypeProvider` třída, kterou jste vytvořili dříve v tomto návodu). Další informace o obsahu souborů *. spdata* naleznete v tématu Referenční dokumentace [schématu položek projektu služby SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md).
 
-8. V **Průzkumník řešení**otevřete místní nabídku pro projekt **ItemTemplate** , zvolte možnost **Přidat**a poté možnost **Nová položka**.
+8. V **Průzkumník řešení** otevřete místní nabídku pro projekt **ItemTemplate** , zvolte možnost **Přidat** a poté možnost **Nová položka**.
 
 9. V dialogovém okně **Přidat novou položku** vyberte šablonu **souboru XML** .
 
-10. Do pole **název** zadejte **Elements.xml**a pak klikněte na tlačítko **Přidat** .
+10. Do pole **název** zadejte **Elements.xml** a pak klikněte na tlačítko **Přidat** .
 
 11. Obsah souboru *Elements.xml* nahraďte následujícím kódem XML a pak soubor uložte a zavřete.
 
@@ -267,7 +269,7 @@ ms.locfileid: "91585560"
 
 12. Volitelně otevřete soubor *ItemTemplate. ico* a upravte jej tak, aby měl návrh, který můžete rozpoznat. Tato ikona se zobrazí vedle položky projektu v dialogovém okně **Přidat novou položku** .
 
-13. V **Průzkumník řešení**otevřete místní nabídku pro projekt **ItemTemplate** a pak zvolte možnost **Uvolnit projekt**.
+13. V **Průzkumník řešení** otevřete místní nabídku pro projekt **ItemTemplate** a pak zvolte možnost **Uvolnit projekt**.
 
 14. Znovu otevřete místní nabídku pro projekt **ItemTemplate** a pak zvolte **Upravit ItemTemplate. csproj** nebo **Upravit ItemTemplate. vbproj**.
 
@@ -287,14 +289,14 @@ ms.locfileid: "91585560"
 
      `OutputSubPath`Element určuje další složky v cestě, kde je vytvořena šablona položky při sestavování projektu. Složky, které jsou zde uvedeny, zajistí, že šablona položky bude k dispozici pouze v případě, že zákazníci otevřou dialogové okno **Přidat novou položku** , rozbalíte uzel **služby SharePoint** a pak zvolíte uzel **2010** .
 
-17. V **Průzkumník řešení**otevřete místní nabídku pro projekt **ItemTemplate** a pak zvolte možnost **znovu načíst projekt**.
+17. V **Průzkumník řešení** otevřete místní nabídku pro projekt **ItemTemplate** a pak zvolte možnost **znovu načíst projekt**.
 
 ## <a name="create-a-vsix-package-to-deploy-the-project-item"></a>Vytvoření balíčku VSIX pro nasazení položky projektu
  Chcete-li nasadit rozšíření, použijte VSIX projekt ve vašem řešení k vytvoření balíčku VSIX. Nejdřív nakonfigurujte balíček VSIX úpravou souboru source. extension. vsixmanifest, který je zahrnutý v projektu VSIX. Pak vytvořte balíček VSIX sestavením řešení.
 
 #### <a name="to-configure-and-create-the-vsix-package"></a>Konfigurace a vytvoření balíčku VSIX
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro soubor **source. extension. vsixmanifest** v projektu CustomActionProjectItem a pak zvolte možnost **otevřít**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro soubor **source. extension. vsixmanifest** v projektu CustomActionProjectItem a pak zvolte možnost **otevřít**.
 
      Visual Studio otevře soubor v editoru manifestu. Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který vyžaduje všechny balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110)).
 
@@ -315,7 +317,7 @@ ms.locfileid: "91585560"
 
 7. V seznamu **zdroj** vyberte **projekt v aktuálním řešení**.
 
-8. V seznamu **projekt** zvolte možnost **ItemTemplate**a pak klikněte na tlačítko **OK** .
+8. V seznamu **projekt** zvolte možnost **ItemTemplate** a pak klikněte na tlačítko **OK** .
 
 9. Na kartě **assety (prostředky** ) znovu klikněte na tlačítko **Nový** .
 
@@ -332,7 +334,7 @@ ms.locfileid: "91585560"
 
 13. Klikněte na tlačítko **OK** .
 
-14. V panelu nabídek zvolte **sestavit**  >  **sestavení řešení**a pak se ujistěte, že se projekt zkompiluje bez chyb.
+14. V panelu nabídek zvolte **sestavit**  >  **sestavení řešení** a pak se ujistěte, že se projekt zkompiluje bez chyb.
 
 15. Ujistěte se, že výstupní složka sestavení pro projekt CustomActionProjectItem obsahuje soubor CustomActionProjectItem. VSIX.
 
@@ -355,15 +357,15 @@ ms.locfileid: "91585560"
 
 1. V experimentální instanci aplikace Visual Studio, na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 
-2. Rozbalte položku **Visual C#** nebo **Visual Basic** (v závislosti na jazyku, který vaše šablona položky podporuje), rozbalte položku **SharePoint**a pak zvolte uzel **2010** .
+2. Rozbalte položku **Visual C#** nebo **Visual Basic** (v závislosti na jazyku, který vaše šablona položky podporuje), rozbalte položku **SharePoint** a pak zvolte uzel **2010** .
 
 3. V seznamu šablon projektu vyberte **projekt SharePoint 2010**.
 
-4. Do pole **název** zadejte **CustomActionTest**a poté klikněte na tlačítko **OK** .
+4. Do pole **název** zadejte **CustomActionTest** a poté klikněte na tlačítko **OK** .
 
-5. V **Průvodci vlastním nastavením služby SharePoint**zadejte adresu URL webu, který chcete použít pro ladění, a poté klikněte na tlačítko **Dokončit** .
+5. V **Průvodci vlastním nastavením služby SharePoint** zadejte adresu URL webu, který chcete použít pro ladění, a poté klikněte na tlačítko **Dokončit** .
 
-6. V **Průzkumník řešení**otevřete místní nabídku uzlu projektu, zvolte možnost **Přidat**a poté **položku Nová položka**.
+6. V **Průzkumník řešení** otevřete místní nabídku uzlu projektu, zvolte možnost **Přidat** a poté **položku Nová položka**.
 
 7. V dialogovém okně **Přidat novou položku** vyberte uzel **2010** pod uzlem **služby SharePoint** .
 
@@ -377,7 +379,7 @@ ms.locfileid: "91585560"
 
 10. Kliknutím na klávesu **F5** pokračujte v ladění projektu.
 
-11. V experimentální instanci aplikace Visual Studio v **Průzkumník řešení**otevřete místní nabídku uzlu **CustomAction1** a pak zvolte **Zobrazit vlastní Návrhář akcí**.
+11. V experimentální instanci aplikace Visual Studio v **Průzkumník řešení** otevřete místní nabídku uzlu **CustomAction1** a pak zvolte **Zobrazit vlastní Návrhář akcí**.
 
 12. Ověřte, že se zobrazí okno se zprávou, a pak klikněte na tlačítko **OK** .
 
@@ -387,7 +389,7 @@ ms.locfileid: "91585560"
 
      Otevře se okno **výstup** .
 
-14. V **Průzkumník řešení**otevřete místní nabídku pro položku **CustomAction1** a změňte její název na **MyCustomAction**.
+14. V **Průzkumník řešení** otevřete místní nabídku pro položku **CustomAction1** a změňte její název na **MyCustomAction**.
 
      V okně **výstup** se zobrazí potvrzovací zpráva. Tato zpráva je zapsána <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemNameChanged> obslužnou rutinou události, kterou jste definovali ve `CustomActionProjectItemTypeProvider` třídě. Tuto událost a další události položky projektu můžete zpracovat pro implementaci vlastního chování, když vývojář změní položku projektu.
 
@@ -439,7 +441,7 @@ ms.locfileid: "91585560"
 
      Otevře se dialogové okno **rozšíření a aktualizace** .
 
-2. V seznamu rozšíření zvolte **položku projekt vlastní akce**a poté klikněte na tlačítko **odinstalovat** .
+2. V seznamu rozšíření zvolte **položku projekt vlastní akce** a poté klikněte na tlačítko **odinstalovat** .
 
 3. V dialogovém okně, které se zobrazí, klikněte na tlačítko **Ano** a potvrďte tak, že chcete rozšíření odinstalovat.
 

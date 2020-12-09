@@ -1,6 +1,8 @@
 ---
 title: Vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2
 titleSuffix: ''
+description: Přidejte průvodce do šablony projektu sloupce webu pro shromáždění dat od uživatelů při použití šablony k vytvoření projektu služby SharePoint obsahujícího položku projektu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 51fb7a4fb3d2ccba8c0a811619d7793e730a8ec4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e6e5c9a0bb461f6b81b9cb7e1aa5f0134a7bdcbd
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585455"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915138"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2
   Po definování vlastního typu položky projektu služby SharePoint a jejich přidružení k šabloně projektu v aplikaci Visual Studio můžete také pro šablonu poskytnout průvodce. Průvodce můžete použít ke shromáždění informací z uživatelů při použití šablony k vytvoření nového projektu, který obsahuje položku projektu. Informace, které shromáždíte, lze použít k inicializaci položky projektu.
@@ -80,13 +82,13 @@ ms.locfileid: "91585455"
 
 1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevřete řešení SiteColumnProjectItem.
 
-2. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení **SiteColumnProjectItem** , zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
+2. V **Průzkumník řešení** otevřete místní nabídku uzlu řešení **SiteColumnProjectItem** , zvolte možnost **Přidat** a pak zvolte možnost **Nový projekt**.
 
 3. V horní části dialogového okna **Přidat nový projekt** se ujistěte, že je v seznamu verzí .NET Framework zvolena možnost **.NET Framework 4,5** .
 
 4. Rozbalte uzel **Visual C#** nebo uzel **Visual Basic** a vyberte uzel **Windows** .
 
-5. V seznamu šablon projektu zvolte možnost **Knihovna uživatelských ovládacích prvků WPF**, pojmenujte projekt **ProjectTemplateWizard**a poté klikněte na tlačítko **OK** .
+5. V seznamu šablon projektu zvolte možnost **Knihovna uživatelských ovládacích prvků WPF**, pojmenujte projekt **ProjectTemplateWizard** a poté klikněte na tlačítko **OK** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **ProjectTemplateWizard** do řešení a otevře výchozí soubor UserControl1. XAML.
 
@@ -94,13 +96,13 @@ ms.locfileid: "91585455"
 
 #### <a name="to-create-the-sharepoint-commands-project"></a>Vytvoření projektu příkazů SharePointu
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení SiteColumnProjectItem, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu řešení SiteColumnProjectItem, zvolte možnost **Přidat** a pak zvolte možnost **Nový projekt**.
 
 2. V horní části dialogového okna **Přidat nový projekt** vyberte v seznamu verzí .NET Framework **.NET Framework 3,5** .
 
 3. Rozbalte uzel **Visual C#** nebo uzel  **Visual Basic** a pak vyberte uzel **Windows** .
 
-4. Zvolte šablonu projektu **Knihovna tříd** , pojmenujte projekt **SharePointCommands**a pak klikněte na tlačítko **OK** .
+4. Zvolte šablonu projektu **Knihovna tříd** , pojmenujte projekt **SharePointCommands** a pak klikněte na tlačítko **OK** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **SharePointCommands** do řešení a otevře soubor Default Class1 Code.
 
@@ -111,17 +113,17 @@ ms.locfileid: "91585455"
 
 #### <a name="to-configure-the-wizard-project"></a>Konfigurace projektu průvodce
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu projektu **ProjectTemplateWizard** a poté zvolte možnost **vlastnosti**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu projektu **ProjectTemplateWizard** a poté zvolte možnost **vlastnosti**.
 
-2. V **Návrháři projektu**vyberte kartu **aplikace** pro projekt jazyka Visual C# nebo kartu **kompilovat** pro Visual Basic projekt.
+2. V **Návrháři projektu** vyberte kartu **aplikace** pro projekt jazyka Visual C# nebo kartu **kompilovat** pro Visual Basic projekt.
 
 3. Ujistěte se, že je cílová architektura nastavena na .NET Framework 4,5, nikoli na profil klienta .NET Framework 4,5.
 
      Další informace najdete v tématu [Postup: cílení na verzi .NET Framework](../ide/visual-studio-multi-targeting-overview.md).
 
-4. Otevřete místní nabídku projektu **ProjectTemplateWizard** , zvolte možnost **Přidat**a pak zvolte možnost **Nová položka**.
+4. Otevřete místní nabídku projektu **ProjectTemplateWizard** , zvolte možnost **Přidat** a pak zvolte možnost **Nová položka**.
 
-5. Zvolte položku **okna (WPF)** , pojmenujte položku **WizardWindow**a pak klikněte na tlačítko **Přidat** .
+5. Zvolte položku **okna (WPF)** , pojmenujte položku **WizardWindow** a pak klikněte na tlačítko **Přidat** .
 
 6. Přidejte do projektu položky dvou **uživatelských ovládacích prvků (WPF)** a pojmenujte je **Page1** a **Page2**.
 
@@ -155,7 +157,7 @@ ms.locfileid: "91585455"
 
 10. Chcete-li přidat sestavení do projektu, klikněte na tlačítko **OK** .
 
-11. V **Průzkumník řešení**ve složce **odkazy** pro projekt **ProjectTemplateWizard** vyberte možnost **EnvDTE**.
+11. V **Průzkumník řešení** ve složce **odkazy** pro projekt **ProjectTemplateWizard** vyberte možnost **EnvDTE**.
 
 12. V okně **vlastnosti** změňte hodnotu vlastnosti **Embed Interop Types** na **false**.
 
@@ -165,7 +167,7 @@ ms.locfileid: "91585455"
 
 #### <a name="to-configure-the-sharepointcommands-project"></a>Konfigurace projektu SharePointcommands
 
-1. V **Průzkumník řešení**vyberte uzel projektu **SharePointCommands** .
+1. V **Průzkumník řešení** vyberte uzel projektu **SharePointCommands** .
 
 2. V panelu nabídek klikněte na položku **projekt**,  **Přidat existující položku**.
 
@@ -318,14 +320,14 @@ ms.locfileid: "91585455"
 
 #### <a name="to-build-your-project"></a>Sestavení projektu
 
-1. Na řádku nabídek klikněte na **sestavit**sestavení  >  **řešení**.
+1. Na řádku nabídek klikněte na **sestavit** sestavení  >  **řešení**.
 
 ## <a name="removing-the-keysnk-file-from-the-project-template"></a>Odebrání souboru key. snk ze šablony projektu
  V [tomto návodu: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md), vytvořená šablona projektu obsahuje soubor Key. snk, který se používá k podepsání instance projektu sloupce webu. Tento soubor Key. snk již není nutný, protože průvodce nyní vygeneruje nový soubor Key. snk pro každý projekt. Odeberte soubor Key. snk ze šablony projektu a odeberte odkazy na tento soubor.
 
 #### <a name="to-remove-the-keysnk-file-from-the-project-template"></a>Odebrání souboru key. snk ze šablony projektu
 
-1. V **Průzkumník řešení**v uzlu **SiteColumnProjectTemplate** otevřete místní nabídku pro soubor **Key. snk** a pak zvolte **Odstranit**.
+1. V **Průzkumník řešení** v uzlu **SiteColumnProjectTemplate** otevřete místní nabídku pro soubor **Key. snk** a pak zvolte **Odstranit**.
 
 2. V potvrzovacím dialogovém okně, které se zobrazí, klikněte na tlačítko **OK** .
 
@@ -365,7 +367,7 @@ ms.locfileid: "91585455"
 
 #### <a name="to-sign-the-wizard-assembly-with-a-strong-name"></a>Podepsání sestavení průvodce silným názvem
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro projekt **ProjectTemplateWizard** a pak zvolte možnost **vlastnosti**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro projekt **ProjectTemplateWizard** a pak zvolte možnost **vlastnosti**.
 
 2. Na kartě **podepisování** vyberte zaškrtávací políčko **podepsat sestavení** .
 
@@ -377,7 +379,7 @@ ms.locfileid: "91585455"
 
 #### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>Získání tokenu veřejného klíče pro sestavení průvodce
 
-1. V **nabídce Start**klikněte na položku **všechny programy**, zvolte **možnost Microsoft Visual Studio**, zvolte možnost **Visual Studio Tools**a pak zvolte možnost **Developer Command Prompt**.
+1. V **nabídce Start** klikněte na položku **všechny programy**, zvolte **možnost Microsoft Visual Studio**, zvolte možnost **Visual Studio Tools** a pak zvolte možnost **Developer Command Prompt**.
 
      Otevře se okno příkazového řádku sady Visual Studio.
 
@@ -393,7 +395,7 @@ ms.locfileid: "91585455"
 
 #### <a name="to-add-a-reference-to-the-wizard-assembly-in-the-vstemplate-file"></a>Přidání odkazu na sestavení průvodce v souboru. vstemplate
 
-1. V **Průzkumník řešení**rozbalte uzel projektu **SiteColumnProjectTemplate** a otevřete soubor SiteColumnProjectTemplate. vstemplate.
+1. V **Průzkumník řešení** rozbalte uzel projektu **SiteColumnProjectTemplate** a otevřete soubor SiteColumnProjectTemplate. vstemplate.
 
 2. Poblíž konce souboru přidejte následující `WizardExtension` prvek mezi `</TemplateContent>` `</VSTemplate>` značky a. Nahraďte hodnotu *tokenu* `PublicKeyToken` atributu tokenem veřejného klíče, který jste získali v předchozím postupu.
 
@@ -438,7 +440,7 @@ ms.locfileid: "91585455"
 
 #### <a name="to-add-the-wizard-to-the-vsix-package"></a>Přidání průvodce do balíčku VSIX
 
-1. V **Průzkumník řešení**v projektu **SiteColumnProjectItem** otevřete místní nabídku pro soubor **source. extension. vsixmanifest** a pak zvolte **otevřít**.
+1. V **Průzkumník řešení** v projektu **SiteColumnProjectItem** otevřete místní nabídku pro soubor **source. extension. vsixmanifest** a pak zvolte **otevřít**.
 
      Visual Studio otevře soubor v editoru manifestu.
 
@@ -450,7 +452,7 @@ ms.locfileid: "91585455"
 
 4. V seznamu **zdroj** vyberte **projekt v aktuálním řešení**.
 
-5. V seznamu **projekt** zvolte možnost **ProjectTemplateWizard**a pak klikněte na tlačítko **OK** .
+5. V seznamu **projekt** zvolte možnost **ProjectTemplateWizard** a pak klikněte na tlačítko **OK** .
 
 6. Na kartě **assets (prostředky** ) editoru znovu klikněte na tlačítko **Nový** .
 
@@ -462,7 +464,7 @@ ms.locfileid: "91585455"
 
 9. V seznamu **projekt** vyberte projekt **SharePointCommands** a pak klikněte na tlačítko **OK** .
 
-10. V panelu nabídek zvolte sestavení sestavení **Build**  >  **sestavení**a pak se ujistěte, že řešení je sestavení bez chyb.
+10. V panelu nabídek zvolte sestavení sestavení **Build**  >  **sestavení** a pak se ujistěte, že řešení je sestavení bez chyb.
 
 ## <a name="test-the-wizard"></a>Otestování Průvodce
  Nyní jste připraveni otestovat Průvodce. Nejdřív začněte ladit řešení SiteColumnProjectItem v experimentální instanci sady Visual Studio. Pak otestujte průvodce pro projekt sloupce webu v experimentální instanci aplikace Visual Studio. Nakonec sestavte a spusťte projekt, abyste ověřili, že sloupec web funguje podle očekávání.
@@ -487,23 +489,23 @@ ms.locfileid: "91585455"
 
 2. Rozbalte uzel **Visual C#** nebo **Visual Basic** uzel (v závislosti na jazyku, který podporuje šablona projektu), rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
-3. V seznamu šablon projektu zvolte **sloupec web**, pojmenujte projekt **SiteColumnWizardTest**a pak klikněte na tlačítko **OK** .
+3. V seznamu šablon projektu zvolte **sloupec web**, pojmenujte projekt **SiteColumnWizardTest** a pak klikněte na tlačítko **OK** .
 
 4. Ověřte, zda se kód v jiné instanci sady Visual Studio zastaví na zarážce, kterou jste nastavili dříve v `RunStarted` metodě.
 
 5. Pokračujte v ladění projektu volbou klávesy **F5** nebo v řádku nabídek zvolte možnost **ladění**  >  **pokračovat**.
 
-6. V **Průvodci vlastním nastavením služby SharePoint**zadejte adresu URL webu, který chcete použít pro ladění, a poté klikněte na tlačítko **Další** .
+6. V **Průvodci vlastním nastavením služby SharePoint** zadejte adresu URL webu, který chcete použít pro ladění, a poté klikněte na tlačítko **Další** .
 
-7. Na druhé stránce **Průvodce vlastním nastavením služby SharePoint**proveďte následující výběry:
+7. Na druhé stránce **Průvodce vlastním nastavením služby SharePoint** proveďte následující výběry:
 
    - V seznamu **typ** vyberte možnost **Boolean**.
 
    - V seznamu **Skupina** vyberte možnost **vlastní Ano/žádné sloupce**.
 
-   - Do pole **název** zadejte **sloupec ano/ne**a pak klikněte na tlačítko **Dokončit** .
+   - Do pole **název** zadejte **sloupec ano/ne** a pak klikněte na tlačítko **Dokončit** .
 
-     V **Průzkumník řešení**se zobrazí nový projekt a obsahuje položku projektu s názvem **pole1**a aplikace Visual Studio otevře soubor *Elements.xml* projektu v editoru.
+     V **Průzkumník řešení** se zobrazí nový projekt a obsahuje položku projektu s názvem **pole1** a aplikace Visual Studio otevře soubor *Elements.xml* projektu v editoru.
 
 8. Ověřte, zda *Elements.xml* obsahuje hodnoty, které jste zadali v průvodci.
 
@@ -518,9 +520,9 @@ ms.locfileid: "91585455"
 
 2. V nabídce **Akce webu** klikněte na možnost **Nastavení webu**.
 
-3. Na stránce nastavení lokality v části **Galerie**vyberte odkaz **sloupce webu** .
+3. Na stránce nastavení lokality v části **Galerie** vyberte odkaz **sloupce webu** .
 
-4. V seznamu sloupců lokality ověřte, že vlastní skupina s **Ano/bez sloupců** obsahuje sloupec s názvem **můj sloupec ano/ne**a pak zavřete webový prohlížeč.
+4. V seznamu sloupců lokality ověřte, že vlastní skupina s **Ano/bez sloupců** obsahuje sloupec s názvem **můj sloupec ano/ne** a pak zavřete webový prohlížeč.
 
 ## <a name="clean-up-the-development-computer"></a>Vyčištění vývojového počítače
  Po dokončení testování položky projektu odeberte šablonu projektu z experimentální instance aplikace Visual Studio.
@@ -531,7 +533,7 @@ ms.locfileid: "91585455"
 
      Otevře se dialogové okno **rozšíření a aktualizace** .
 
-2. V seznamu rozšíření zvolte **sloupec lokalita**a pak klikněte na tlačítko **odinstalovat** .
+2. V seznamu rozšíření zvolte **sloupec lokalita** a pak klikněte na tlačítko **odinstalovat** .
 
 3. V dialogovém okně, které se zobrazí, kliknutím na tlačítko **Ano** potvrďte, že chcete rozšíření odinstalovat, a kliknutím na tlačítko **restartovat nyní** dokončete odinstalaci.
 

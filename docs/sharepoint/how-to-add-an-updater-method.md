@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání aktualizační metody | Microsoft Docs'
+description: Naučte se, jak uživatelům umožnit aktualizovat obchodní data v externím seznamu SharePointu přidáním metody aktualizace.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c76373c710908a8ae7edc49c4e26ff7e94336a6d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d06737de7df40efa2bc6259cc0ea53bdda17b8c
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014990"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915372"
 ---
 # <a name="how-to-add-an-updater-method"></a>Postupy: Přidání aktualizační metody
   Můžete uživatelům umožnit aktualizovat obchodní data v externím seznamu služby SharePoint vytvořením *metody aktualizace* . Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -35,7 +37,7 @@ ms.locfileid: "86014990"
 
     Otevře se okno Podrobnosti metody služby BDC. Další informace o tomto okně najdete v tématu [Přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md).
 
-3. V seznamu **Přidat metodu** vyberte možnost **vytvořit metodu**aktualizace.
+3. V seznamu **Přidat metodu** vyberte možnost **vytvořit metodu** aktualizace.
 
     Visual Studio přidá do modelu následující prvky. Tyto prvky se zobrazí v okně Podrobnosti metody služby BDC.
 
@@ -52,9 +54,9 @@ ms.locfileid: "86014990"
    > [!NOTE]
    > Pokud identifikátor typu entity představuje pole v databázové tabulce, které není automaticky vygenerováno, nastavte vlastnost **pole před** aktualizacemi na **hodnotu true**.
 
-4. V **Průzkumník řešení**otevřete místní nabídku souboru kódu služby, který byl vygenerován pro danou entitu, a pak zvolte možnost **Zobrazit kód**.
+4. V **Průzkumník řešení** otevřete místní nabídku souboru kódu služby, který byl vygenerován pro danou entitu, a pak zvolte možnost **Zobrazit kód**.
 
-    V **editoru kódu**se otevře soubor kódu entity Service. Další informace o tomto souboru najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
+    V **editoru kódu** se otevře soubor kódu entity Service. Další informace o tomto souboru najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
 
 5. Přidejte kód do metody Update pro aktualizaci dat. Následující příklad aktualizuje informace pro kontakt v ukázkové databázi AdventureWorks pro SQL Server.
 

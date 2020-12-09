@@ -1,5 +1,7 @@
 ---
 title: Vytváření vlastních šablon projektů a položek | Microsoft Docs
+description: Přečtěte si, jak šablony pro vytváření šablon v sadě Visual Studio SDK umožňují zahrnout šablony do větších rozšíření.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: overview
 ms.assetid: 586da5dc-f678-402b-afd0-0332959fd7a6
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb6bcd63896a11f9ca1eabddddc17b3e52865e5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 78770c74e5b866ad6791db01a448d46231edfd2a
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801253"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915619"
 ---
 # <a name="create-custom-project-and-item-templates"></a>Vytváření vlastních šablon projektů a položek
 
@@ -32,7 +34,7 @@ V případě scénářů pro základní vytváření šablon byste měli použí
 
 1. Vytvořte projekt šablony projektu. Šablonu projektu najdete v dialogovém okně **Nový projekt** , a to tak, že vyhledáte "šablona projektu" a vyberete buď verzi C# nebo Visual Basic.
 
-     Šablona vygeneruje soubor třídy, ikonu, soubor *. vstemplate* , upravitelný soubor projektu s názvem *ProjectTemplate. vbproj* nebo *ProjectTemplate. csproj*a některé soubory, které jsou obvykle generovány jinými typy projektů, jako například soubor *prostředků. resx* , soubor *AssemblyInfo* a soubor *. Settings* . Každý soubor kódu obsahuje v případě potřeby společné náhrady parametrů.
+     Šablona vygeneruje soubor třídy, ikonu, soubor *. vstemplate* , upravitelný soubor projektu s názvem *ProjectTemplate. vbproj* nebo *ProjectTemplate. csproj* a některé soubory, které jsou obvykle generovány jinými typy projektů, jako například soubor *prostředků. resx* , soubor *AssemblyInfo* a soubor *. Settings* . Každý soubor kódu obsahuje v případě potřeby společné náhrady parametrů.
 
 ![výběr projektu šablony projektu](media/project-template-selection.png)
 
@@ -72,7 +74,7 @@ V případě scénářů pro základní vytváření šablon byste měli použí
 
 1. Vytvořte projekt VSIX. Další informace naleznete v tématu [Šablona projektu VSIX](../extensibility/vsix-project-template.md).
 
-2. Nastavte projekt VSIX jako spouštěný projekt. V **Průzkumník řešení**vyberte uzel projekt VSIX, klikněte pravým tlačítkem myši a vyberte **nastavit jako spouštěný projekt**.
+2. Nastavte projekt VSIX jako spouštěný projekt. V **Průzkumník řešení** vyberte uzel projekt VSIX, klikněte pravým tlačítkem myši a vyberte **nastavit jako spouštěný projekt**.
 
 3. Nastavte projekt šablony projektu jako Asset projektu VSIX. Otevřete soubor *. vsixmanifest* . Přejít na kartu **assety** a vyberte **Nový**.
 
@@ -82,7 +84,7 @@ V případě scénářů pro základní vytváření šablon byste měli použí
 
 4. Sestavte řešení a stiskněte klávesu **F5**. Objeví se experimentální instance.
 
-5. V projektu šablony projektu by se měla zobrazit šablona projektu uvedená v dialogovém okně **Nový projekt** (**soubor**  >  **Nový**  >  **projekt**) v uzlu Visual C# nebo Visual Basic. Pro projekt šablony položky by se měla zobrazit Šablona položky uvedená v dialogovém okně **Přidat novou položku** . Chcete-li zobrazit dialogové okno **Přidat novou položku** , vyberte z **Průzkumník řešení**uzel projektu a vyberte **Přidat**  >  **novou položku**).
+5. V projektu šablony projektu by se měla zobrazit šablona projektu uvedená v dialogovém okně **Nový projekt** (**soubor**  >  **Nový**  >  **projekt**) v uzlu Visual C# nebo Visual Basic. Pro projekt šablony položky by se měla zobrazit Šablona položky uvedená v dialogovém okně **Přidat novou položku** . Chcete-li zobrazit dialogové okno **Přidat novou položku** , vyberte z **Průzkumník řešení** uzel projektu a vyberte **Přidat**  >  **novou položku**).
 
 ## <a name="see-also"></a>Viz také
 

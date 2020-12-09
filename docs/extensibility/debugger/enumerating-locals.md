@@ -1,5 +1,7 @@
 ---
 title: Vytváření výčtu místních hodnot | Microsoft Docs
+description: 'Seznamte se s podrobnostmi o tom, jak Visual Studio používá IDebugProperty2:: EnumChildren k naplnění okna místních hodnot.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 540c062d3d4f73a5468b39629fc277e6fd10df7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4282e55dbf90c4ae24a9e3d16beea8bd93420524
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738868"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915684"
 ---
 # <a name="enumerate-locals"></a>Vytvořit výčet místních hodnot
 > [!IMPORTANT]

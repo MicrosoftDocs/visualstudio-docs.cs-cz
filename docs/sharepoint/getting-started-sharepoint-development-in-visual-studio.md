@@ -1,6 +1,8 @@
 ---
 title: Začínáme (vývoj pro SharePoint v aplikaci Visual Studio) | Microsoft Docs
 titleSuffix: ''
+description: Začněte s vývojem pro SharePoint v aplikaci Visual Studio. SharePoint nabízí webovou platformu pro spolupráci.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ba96887e8a3c8bc3cb1db43b7c24fa90223a2947
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 40eb9444ec72787e154ddd0cd7bc93e786c84397
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585625"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915164"
 ---
 # <a name="get-started-sharepoint-development-in-visual-studio"></a>Začínáme (vývoj pro SharePoint v aplikaci Visual Studio)
   Tato část vám pomůže začít pracovat s [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vývojem řešení SharePoint, která využívají [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] a [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] .
@@ -31,13 +33,13 @@ ms.locfileid: "91585625"
 
 ## <a name="in-this-section"></a>V této části
 
-|Téma|Popis|
+|Téma|Description|
 |-----------|-----------------|
 |[Další informace o chybách služby SharePoint](../sharepoint/additional-information-for-sharepoint-errors.md)|Popisuje, kde najít pomoc při vývoji a řešení problémů služby SharePoint.|
 
 ## <a name="related-sections"></a>Související oddíly
 
-|Téma|Popis|
+|Téma|Description|
 |-----------|-----------------|
 |[Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)|Popisuje vývoj pro SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[Nastavení obecného vývojového prostředí pro SharePoint](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)|Popisuje požadované instalace pro vytvoření řešení služby SharePoint.|

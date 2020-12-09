@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání a odebrání závislostí funkcí | Microsoft Docs'
+description: Přečtěte si, jak přidat a odebrat závislosti funkcí v řešení služby SharePoint pomocí návrháře funkcí v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c318a7dc4672a10e993d0149ec77e7f94679d465
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5011db32123e77e9bf60c99459125302b2bf8264
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014780"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915359"
 ---
 # <a name="how-to-add-and-remove-feature-dependencies"></a>Postupy: Přidání a odebrání závislostí funkcí
   Funkce SharePointu může záviset na dalších funkcích pro funkce nebo data. V těchto případech můžete tyto další funkce označit jako závislosti pro vaši funkci. Tímto způsobem server SharePoint zajišťuje, aby byly před aktivací vaší funkce aktivovány závislé funkce.

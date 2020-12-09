@@ -1,5 +1,7 @@
 ---
 title: Popisy událostí | Microsoft Docs
+description: Seznamte se s typy událostí a důvody jejich použití. Každý typ události má určitý účel.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,19 +12,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c2582717fd4da3b833da90a951f9b8f72a59f71
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ea477d3d21cd3b7a1a5352c736dc2f78195b99a4
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738784"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915606"
 ---
 # <a name="event-descriptions"></a>Popisy událostí
 Každý typ události má určitý účel.
 
 ## <a name="events-and-the-reasons-for-their-use"></a>Události a důvody jejich použití
 
-|Událost|Popis|
+|Událost|Description|
 |-----------|-----------------|
 |Aktivovat události dokumentu|Nastane, pokud ladicí stroj (DE) chce IDE otevřít nebo převést dokument do popředí.|
 |Události zarážek nebo chyb zarážek|Odesílá se, když je navázána zarážka, nebo když se zarážka nemůže svázat a vrátí se chyba.|

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání vyhledávací metody | Microsoft Docs'
+description: Přidejte vyhledávací metodu do sady Visual Studio, která umožňuje službě připojení obchodních dat (BDC) zobrazit seznam entit ve webové části nebo v seznamu SharePointu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,19 +19,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1fa8f8eb34943cc17bc6cabca8e93ea7569a7ba6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7e2bb74278194878ed4496c12c918707cdc1e6e
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016726"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915086"
 ---
 # <a name="how-to-add-a-finder-method"></a>Postupy: Přidání vyhledávací metody
   Chcete-li povolit službě BDC (Business Data Connectivity) zobrazit seznam entit ve webové části nebo seznamu, je nutné vytvořit *vyhledávací* metodu. Vyhledávací metoda je speciální metoda, která vrací kolekci instancí entit. Další informace najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
 
 ### <a name="to-create-a-finder-method"></a>Vytvoření vyhledávací metody
 
-1. V **Návrháři BDC**vyberte entitu.
+1. V **Návrháři BDC** vyberte entitu.
 
     Další informace naleznete v tématu [How to: Add a entity to a model](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
@@ -46,7 +48,7 @@ ms.locfileid: "86016726"
    > [!NOTE]
    > Pokud jste přidali konkrétní vyhledávací metodu k entitě, nemusíte tento krok provádět. Visual Studio používá popisovač typu, který jste definovali v konkrétní vyhledávací metodě.
 
-5. V **Průzkumník řešení**otevřete místní nabídku souboru kódu služby, který byl vygenerován pro danou entitu, a pak zvolte možnost **Zobrazit kód**. Další informace o souboru kódu služby najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
+5. V **Průzkumník řešení** otevřete místní nabídku souboru kódu služby, který byl vygenerován pro danou entitu, a pak zvolte možnost **Zobrazit kód**. Další informace o souboru kódu služby najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
 
 6. Přidejte kód do metody Finder. Tento kód provádí následující úlohy:
 

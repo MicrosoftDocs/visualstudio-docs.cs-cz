@@ -1,5 +1,7 @@
 ---
 title: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat
+description: Vytvořte model služby BDC, který vrací informace o kontaktech v obchodní databázi, a pak vytvořte externí seznam ve službě SharePoint pomocí tohoto modelu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9f4fe79c3a6f158eb61d624ce6c5e1566925e3fd
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: a791f94e46e16369392465e075ade92a833e2868
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740055"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915333"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>Návod: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat
 
@@ -40,7 +42,7 @@ Tento návod znázorňuje následující úlohy:
 - Přidání konkrétní vyhledávací metody
 - Testování projektu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 K dokončení tohoto návodu budete potřebovat následující komponenty:
 
@@ -54,9 +56,9 @@ K dokončení tohoto návodu budete potřebovat následující komponenty:
 
      Otevře se dialogové okno **Nový projekt** .
 
-2. V části **Visual C#** nebo **Visual Basic**rozbalte uzel **SharePoint** a pak zvolte položku **2010** .
+2. V části **Visual C#** nebo **Visual Basic** rozbalte uzel **SharePoint** a pak zvolte položku **2010** .
 
-3. V podokně **šablony** zvolte **projekt SharePoint 2010**, pojmenujte projekt **AdventureWorksTest**a pak klikněte na tlačítko **OK** .
+3. V podokně **šablony** zvolte **projekt SharePoint 2010**, pojmenujte projekt **AdventureWorksTest** a pak klikněte na tlačítko **OK** .
 
      Zobrazí se **Průvodce přizpůsobením SharePointu** . V tomto průvodci můžete určit web, který budete používat k ladění projektu a nastavit úroveň důvěryhodnosti řešení.
 
@@ -64,13 +66,13 @@ K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 5. Kliknutím na tlačítko **Dokončit** přijměte výchozí místní web služby SharePoint.
 
-6. V **Průzkumník řešení**vyberte uzel projektu služby SharePoint.
+6. V **Průzkumník řešení** vyberte uzel projektu služby SharePoint.
 
 7. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 
      Otevře se dialogové okno **Přidat novou položku** .
 
-8. V podokně **šablony** zvolte **Model připojení obchodních dat (pouze řešení farmy)**, pojmenujte projekt **AdventureWorksContacts**a pak klikněte na tlačítko **Přidat** .
+8. V podokně **šablony** zvolte **Model připojení obchodních dat (pouze řešení farmy)**, pojmenujte projekt **AdventureWorksContacts** a pak klikněte na tlačítko **Přidat** .
 
 ## <a name="add-data-access-classes-to-the-project"></a>Přidat třídy přístupu k datům do projektu
 
@@ -82,7 +84,7 @@ K dokončení tohoto návodu budete potřebovat následující komponenty:
 
      Další informace najdete v tématu [Přidání nebo úprava připojení (Microsoft SQL Server)](/previous-versions/dxb6fxah(v=vs.140)).
 
-3. V **Průzkumník řešení**vyberte uzel projektu.
+3. V **Průzkumník řešení** vyberte uzel projektu.
 
 4. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 
@@ -90,13 +92,13 @@ K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 6. V podokně **šablony** vyberte možnost **LINQ to SQL třídy**.
 
-7. V poli **název** zadejte **AdventureWorks**a pak klikněte na tlačítko **Přidat** .
+7. V poli **název** zadejte **AdventureWorks** a pak klikněte na tlačítko **Přidat** .
 
      Do projektu se přidá soubor. dbml a otevře se Návrhář relací objektů (Návrhář O/R).
 
 8. Na panelu nabídek vyberte možnost **Zobrazit**  >  **Průzkumník serveru**.
 
-9. V **Průzkumník serveru**rozbalte uzel reprezentující ukázkovou databázi AdventureWorks a potom rozbalte uzel **tabulky** .
+9. V **Průzkumník serveru** rozbalte uzel reprezentující ukázkovou databázi AdventureWorks a potom rozbalte uzel **tabulky** .
 
 10. Přidejte tabulku **kontaktů (Person)** do návrháře relací výstupů.
 
@@ -106,13 +108,13 @@ K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 Projekt **modelu připojení obchodních dat** přidá do modelu výchozí entitu s názvem Entity1. Odeberte tuto entitu. Později budete přidávat novou entitu. Počínaje prázdným modelem se zmenší počet kroků potřebných k dokončení tohoto postupu.
 
-1. V **Průzkumník řešení**rozbalte uzel **BdcModel1** a pak otevřete soubor *BdcModel1. bdcm* .
+1. V **Průzkumník řešení** rozbalte uzel **BdcModel1** a pak otevřete soubor *BdcModel1. bdcm* .
 
 2. Soubor modelu připojení obchodních dat se otevře v Návrháři služby BDC.
 
-3. V Návrháři otevřete místní nabídku pro **Entity1**a pak zvolte **Odstranit**.
+3. V Návrháři otevřete místní nabídku pro **Entity1** a pak zvolte **Odstranit**.
 
-4. V **Průzkumník řešení**otevřete místní nabídku pro *Entity1. vb* (v Visual Basic) nebo *Entity1.cs* (v jazyce C#) a pak zvolte **Odstranit**.
+4. V **Průzkumník řešení** otevřete místní nabídku pro *Entity1. vb* (v Visual Basic) nebo *Entity1.cs* (v jazyce C#) a pak zvolte **Odstranit**.
 
 5. Otevřete místní nabídku pro *Entity1Service. vb* (v Visual Basic) nebo *Entity1Service.cs* (v jazyce C#) a pak zvolte **Odstranit**.
 
@@ -122,15 +124,15 @@ Přidejte do modelu entitu. Do návrháře služby BDC můžete přidat entity z
 
 1. Na panelu nabídek vyberte možnost **Zobrazit**  >  **sadu nástrojů**.
 
-2. Na kartě **BusinessDataConnectivity** sady **nástrojů**přidejte **entitu** do návrháře služby BDC.
+2. Na kartě **BusinessDataConnectivity** sady **nástrojů** přidejte **entitu** do návrháře služby BDC.
 
      Nová entita se zobrazí v návrháři. Visual Studio přidá soubor s názvem *EntityService. vb* (v Visual Basic) nebo *EntityService.cs* (v jazyce C#) do projektu.
 
-3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **Properties**  >  **okno**vlastností.
+3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **Properties**  >  **okno** vlastností.
 
 4. V okně **vlastnosti** nastavte vlastnost **název** na hodnotu **kontakt**.
 
-5. V Návrháři otevřete místní nabídku pro entitu, zvolte možnost **Přidat**a pak zvolte možnost **identifikátor**.
+5. V Návrháři otevřete místní nabídku pro entitu, zvolte možnost **Přidat** a pak zvolte možnost **identifikátor**.
 
      V entitě se zobrazí nový identifikátor.
 
@@ -170,9 +172,9 @@ Přidejte konkrétní vyhledávací metodu k entitě kontakt pomocí okna **Podr
 
 5. V okně **vlastnosti** otevřete seznam vedle vlastnosti **TypeName** , zvolte kartu **aktuální projekt** a pak zvolte vlastnost **kontakt** .
 
-6. V **Průzkumníku služby BDC**otevřete místní nabídku **kontaktu**a zvolte možnost **Přidat popisovač typu**.
+6. V **Průzkumníku služby BDC** otevřete místní nabídku **kontaktu** a zvolte možnost **Přidat popisovač typu**.
 
-     V **Průzkumníkovi služby BDC**se zobrazí nový popisovač typu s názvem **TypeDescriptor1** .
+     V **Průzkumníkovi služby BDC** se zobrazí nový popisovač typu s názvem **TypeDescriptor1** .
 
 7. V okně **vlastnosti** nastavte vlastnost **název** na hodnotu **ContactID**.
 
@@ -182,7 +184,7 @@ Přidejte konkrétní vyhledávací metodu k entitě kontakt pomocí okna **Podr
 
 10. Opakujte krok 6 a vytvořte popisovač typu pro každé z následujících polí.
 
-    |Name|Název typu|
+    |Název|Název typu|
     |----------|---------------|
     |FirstName|System. String|
     |LastName|System. String|
@@ -252,7 +254,7 @@ Při spuštění projektu se otevře web služby SharePoint a Visual Studio při
 
 3. Na stránce **vytvořit** vyberte šablonu **externí seznam** a pak klikněte na tlačítko **vytvořit** .
 
-4. Pojmenujte **Kontakty**vlastního seznamu.
+4. Pojmenujte **Kontakty** vlastního seznamu.
 
 5. Klikněte na tlačítko Procházet vedle pole **typ externího obsahu** .
 

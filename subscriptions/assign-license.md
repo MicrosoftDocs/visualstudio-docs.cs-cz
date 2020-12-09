@@ -7,12 +7,12 @@ ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
 ms.date: 09/21/2020
 ms.topic: conceptual
 description: Informace o tom, jak můžou správci přiřazovat licence předplatitelům
-ms.openlocfilehash: 95e0358a39ccb88ed93f8e5bcee11d2b36d12d48
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: dd80a14a3ff57100f210fd7ae1b882c0ab7a9faf
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96863111"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915411"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Přiřazení licencí na portálu pro správu předplatných sady Visual Studio
 Jako správce předplatných sady Visual Studio můžete použít portál pro správu k přiřazení předplatných jednotlivým uživatelům a skupinám uživatelů.
@@ -58,7 +58,7 @@ Podívejte se na video nebo si přečtěte informace o tom, jak přiřadit před
 ## <a name="why-use-a-different-notification-email-address"></a>Proč používat jinou e-mailovou adresu pro oznámení?
 Některé organizace nastavily své e-mailové služby na blokování příchozích e-mailů z jiných domén.  Blokování příchozích e-mailů znamená, že předplatitelé a správci nebudou přijít o důležitou komunikaci:
 - Předplatitelům se nezobrazí oznámení o tom, že k nim bylo přiřazeno předplatné.  Tím se jim taky zabrání v aktivaci některých výhod, které přináší.  
-- Předplatitelé, kteří mají přiřazená předplatná sady Visual Studio s GitHubem Enterprise, neobdrží pozvánku k připojení k vaší organizaci GitHubu, což znamená, že pozvánku nepůjde přijmout. Aby mohli získat přístup k vaší organizaci GitHubu, musí přijmout e-mailem pozvánku. 
+- Předplatitelé, kteří mají přiřazená předplatná sady Visual Studio s GitHubem Enterprise, neobdrží pozvánku k připojení k vaší organizaci GitHubu, což znamená, že pozvánku nepůjde přijmout. Aby mohli získat přístup k vaší organizaci GitHubu, **musí přijmout e-mailem pozvánku** . 
 - Správci nebudou upozorňováni, když budou přidáni do smlouvy, obdrží měsíční příkazy správce nebo oznámení o změnách funkcí, které mají vliv na způsob správy předplatných.
 
 Pomocí e-mailové adresy pro oznámení můžete svým předplatitelům dovolit získat důležitou komunikaci o jejich předplatných, aniž byste museli měnit funkčnost jejich e-mailových přihlašovacích adres.  

@@ -1,5 +1,7 @@
 ---
 title: Vytvoření & ladění řešení pracovního postupu služby SharePoint
+description: V tomto návodu vytvoříte a ladíte řešení pracovního postupu služby SharePoint. Vytvoří základní šablonu sekvenčního pracovního postupu. Vytváření aktivit pracovních postupů a zpracování událostí.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 65af3cbfc799a90d640579f8eed0e051fd5888f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c8d5ca5b941a7ae6e6ebada21f1eafaef2b6f43
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014615"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915307"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>Návod: vytvoření a ladění řešení pracovního postupu služby SharePoint
   Tento návod ukazuje, jak vytvořit šablonu základní sekvenční pracovní postup. Pracovní postup zkontroluje vlastnost sdílené knihovny dokumentů a určí, zda byl dokument zkontrolován. Pokud byl dokument revidován, pracovní postup se dokončí.
@@ -91,7 +93,7 @@ ms.locfileid: "86014615"
 
 2. Na panelu nabídek vyberte možnost **soubor**  >  **Nový**  >  **projekt** . zobrazí se dialogové okno **Nový projekt** .
 
-3. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic**a pak vyberte uzel **2010** .
+3. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic** a pak vyberte uzel **2010** .
 
 4. V podokně **šablony** vyberte šablonu **projektu SharePoint 2010** .
 
@@ -103,15 +105,15 @@ ms.locfileid: "86014615"
 
      Tento krok nastaví úroveň důvěryhodnosti pro řešení jako řešení farmy, což je jediná dostupná možnost pro projekty pracovního postupu. Další informace najdete v tématu [požadavky na řešení v izolovaném prostoru](../sharepoint/sandboxed-solution-considerations.md).
 
-7. V **Průzkumník řešení**zvolte uzel projektu a potom v řádku nabídek zvolte **projekt**  >  **Přidat novou položku**.
+7. V **Průzkumník řešení** zvolte uzel projektu a potom v řádku nabídek zvolte **projekt**  >  **Přidat novou položku**.
 
-8. V části **Visual C#** nebo **Visual Basic**rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
+8. V části **Visual C#** nebo **Visual Basic** rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
 9. V podokně **šablony** zvolte šablonu **sekvenční pracovní postup (pouze řešení farmy)** a pak klikněte na tlačítko **Přidat** .
 
      Zobrazí se **Průvodce přizpůsobením SharePointu** .
 
-10. Na stránce **Zadejte název pracovního postupu pro ladění** přijměte výchozí název (**MySharePointWorkflow-Workflow1**). Ponechte výchozí hodnotu typu šablony pracovního postupu, **vypsat pracovní postup**a pak klikněte na tlačítko **Další** .
+10. Na stránce **Zadejte název pracovního postupu pro ladění** přijměte výchozí název (**MySharePointWorkflow-Workflow1**). Ponechte výchozí hodnotu typu šablony pracovního postupu, **vypsat pracovní postup** a pak klikněte na tlačítko **Další** .
 
 11. V chcete, aby **aplikace Visual Studio automaticky přidružil pracovní postup na stránce relace ladění?** kliknutím na tlačítko **Další** potvrďte všechna výchozí nastavení.
 
@@ -136,7 +138,7 @@ ms.locfileid: "86014615"
 
 4. Přepněte zpět do návrháře pracovních postupů, otevřete sadu nástrojů a potom rozbalte uzel **Windows Workflow v 3.0** .
 
-5. V uzlu **Windows Workflow v 3.0** sady **nástrojů**proveďte jednu z následujících sad kroků:
+5. V uzlu **Windows Workflow v 3.0** sady **nástrojů** proveďte jednu z následujících sad kroků:
 
     1. Otevřete místní nabídku aktivity **while** a zvolte možnost **Kopírovat**. V Návrháři pracovního postupu otevřete místní nabídku pro řádek pod aktivitou **onWorkflowActivated1** a pak zvolte **Vložit**.
 
@@ -152,7 +154,7 @@ ms.locfileid: "86014615"
 
 9. Přepněte zpět do návrháře pracovních postupů, otevřete sadu nástrojů a potom rozbalte uzel **pracovní postup služby SharePoint** .
 
-10. V uzlu **pracovní postup služby SharePoint** v **sadě nástrojů**proveďte jednu z následujících sad kroků:
+10. V uzlu **pracovní postup služby SharePoint** v **sadě nástrojů** proveďte jednu z následujících sad kroků:
 
     - Otevřete místní nabídku aktivity **onWorkflowItemChanged** a pak zvolte možnost **Kopírovat**. V Návrháři pracovního postupu otevřete místní nabídku pro řádek uvnitř aktivity **whileActivity1** a pak zvolte **Vložit**.
 
@@ -172,7 +174,7 @@ ms.locfileid: "86014615"
 
 #### <a name="to-handle-activity-events"></a>Zpracování událostí aktivity
 
-1. V *Workflow1.cs* nebo *Workflow1. vb*přidejte následující pole do horní části `Workflow1` třídy. Toto pole se používá v aktivitě k určení, zda byl pracovní postup dokončen.
+1. V *Workflow1.cs* nebo *Workflow1. vb* přidejte následující pole do horní části `Workflow1` třídy. Toto pole se používá v aktivitě k určení, zda byl pracovní postup dokončen.
 
     ```vb
     Dim workflowPending As Boolean = True
@@ -248,7 +250,7 @@ ms.locfileid: "86014615"
 
 #### <a name="to-test-the-sharepoint-workflow-template"></a>Testování šablony pracovního postupu služby SharePoint
 
-1. V *Workflow1.cs* nebo *Workflow1. vb*nastavte zarážku vedle metody **onWorkflowActivated** .
+1. V *Workflow1.cs* nebo *Workflow1. vb* nastavte zarážku vedle metody **onWorkflowActivated** .
 
 2. Klikněte na klávesu **F5** a sestavte a spusťte řešení.
 
@@ -274,7 +276,7 @@ ms.locfileid: "86014615"
 
 10. Na stránce **sdílené dokumenty** zvolte dokument, zvolte šipku, která se zobrazí, a pak zvolte položku nabídky **Upravit vlastnosti** .
 
-11. Nastavte **stav dokumentu** na **zkontrolovat dokončeno**a pak klikněte na tlačítko **Uložit** .
+11. Nastavte **stav dokumentu** na **zkontrolovat dokončeno** a pak klikněte na tlačítko **Uložit** .
 
      Tím se vrátíte na stránku **sdílené dokumenty** na výchozím webu služby SharePoint.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Vytvoření rozšíření projektu služby SharePoint | Microsoft Docs'
+description: Vytvořte rozšíření projektu služby SharePoint, které lze použít k reakci na události na úrovni projektu, například při přidání, odstranění nebo přejmenování projektu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9d79bf66f88a7cbaa5321887b676cc9eca798a92
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: b815f8ea4656cc5a144f8cf12396391e55123ece
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739925"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914865"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>Návod: Vytvoření rozšíření projektu služby SharePoint
   Tento návod ukazuje, jak vytvořit rozšíření pro projekty služby SharePoint. Můžete použít rozšíření projektu pro reakci na události na úrovni projektu, jako je například přidání, odstranění nebo přejmenování projektu. Můžete také přidat vlastní vlastnosti nebo reagovat při změně hodnoty vlastnosti. Na rozdíl od rozšíření položek projektu nelze rozšíření projektu přidružit ke konkrétnímu typu projektu služby SharePoint. Při vytváření rozšíření projektu rozšíření načte, když je otevřen libovolný druh projektu služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -40,7 +42,7 @@ ms.locfileid: "90739925"
 
 - Ladění a testování vlastnosti projektu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] , SharePoint a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -69,19 +71,19 @@ ms.locfileid: "90739925"
 
 4. V horní části dialogového okna zvolte v seznamu verzí .NET Framework **.NET Framework 4,5** a potom zvolte šablonu **projektu VSIX** .
 
-5. Do pole **název** zadejte **ProjectExtensionPackage**a pak klikněte na tlačítko **OK** .
+5. Do pole **název** zadejte **ProjectExtensionPackage** a pak klikněte na tlačítko **OK** .
 
      Projekt **ProjectExtensionPackage** se zobrazí v **Průzkumník řešení**.
 
 #### <a name="to-create-the-extension-project"></a>Vytvoření projektu rozšíření
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat** a pak zvolte možnost **Nový projekt**.
 
 2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual C#** nebo **Visual Basic** a pak zvolte možnost **Windows**.
 
 3. V horní části dialogového okna zvolte v seznamu verzí .NET Framework **.NET Framework 4,5** a pak zvolte šablonu projektu **Knihovna tříd** .
 
-4. Do pole **název** zadejte **ProjectExtension**a poté klikněte na tlačítko **OK** .
+4. Do pole **název** zadejte **ProjectExtension** a poté klikněte na tlačítko **OK** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **ProjectExtension** do řešení a otevře soubor Default Class1 Code.
 
@@ -100,7 +102,7 @@ ms.locfileid: "90739925"
 
 4. Zvolte uzel **rozšíření** , zaškrtněte políčko vedle sestavení Microsoft. VisualStudio. SharePoint a EnvDTE a pak klikněte na tlačítko **OK** .
 
-5. V **Průzkumník řešení**ve složce **odkazy** pro projekt **ProjectExtension** vyberte možnost **EnvDTE**.
+5. V **Průzkumník řešení** ve složce **odkazy** pro projekt **ProjectExtension** vyberte možnost **EnvDTE**.
 
 6. V okně **vlastnosti** změňte vlastnost **Vložit typy spolupráce** na **hodnotu false**.
 
@@ -119,14 +121,14 @@ ms.locfileid: "90739925"
 
 #### <a name="to-build-the-solution"></a>Sestavení řešení
 
-1. Na řádku nabídek klikněte na **sestavit**sestavení  >  **řešení**.
+1. Na řádku nabídek klikněte na **sestavit** sestavení  >  **řešení**.
 
 ## <a name="create-a-vsix-package-to-deploy-the-project-property-extension"></a>Vytvoření balíčku VSIX pro nasazení rozšíření vlastností projektu
  Chcete-li nasadit rozšíření projektu, použijte VSIX projekt ve vašem řešení k vytvoření balíčku VSIX. Nejdřív nakonfigurujte balíček VSIX úpravou souboru source. extension. vsixmanifest, který je zahrnutý v projektu VSIX. Pak vytvořte balíček VSIX sestavením řešení.
 
 #### <a name="to-configure-and-create-the-vsix-package"></a>Konfigurace a vytvoření balíčku VSIX
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro soubor source. extension. vsixmanifest a pak klikněte na tlačítko **otevřít** .
+1. V **Průzkumník řešení** otevřete místní nabídku pro soubor source. extension. vsixmanifest a pak klikněte na tlačítko **otevřít** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře soubor v Návrháři manifestu. Informace, které se zobrazí na kartě **metadata** , se zobrazí také v části **rozšíření a aktualizace**. Všechny balíčky VSIX vyžadují soubor Extension. vsixmanifest. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110)).
 
@@ -155,11 +157,11 @@ ms.locfileid: "90739925"
 
 10. Na panelu nabídek zvolte možnost **soubor**  >  **Uložit vše** po dokončení a poté ukončete návrháře manifestu.
 
-11. V panelu nabídek zvolte **sestavit**  >  **sestavení řešení**a pak se ujistěte, že se projekt zkompiluje bez chyb.
+11. V panelu nabídek zvolte **sestavit**  >  **sestavení řešení** a pak se ujistěte, že se projekt zkompiluje bez chyb.
 
-12. V **Průzkumník řešení**otevřete místní nabídku pro projekt **ProjectExtensionPackage** a klikněte na tlačítko **Otevřít složku v Průzkumníkovi souborů** .
+12. V **Průzkumník řešení** otevřete místní nabídku pro projekt **ProjectExtensionPackage** a klikněte na tlačítko **Otevřít složku v Průzkumníkovi souborů** .
 
-13. V **Průzkumníku souborů**otevřete výstupní složku sestavení pro projekt ProjectExtensionPackage a pak ověřte, že složka obsahuje soubor s názvem ProjectExtensionPackage. VSIX.
+13. V **Průzkumníku souborů** otevřete výstupní složku sestavení pro projekt ProjectExtensionPackage a pak ověřte, že složka obsahuje soubor s názvem ProjectExtensionPackage. VSIX.
 
      Ve výchozím nastavení je výstupní složka sestavení.. Složka \bin\Debug ve složce, která obsahuje soubor projektu.
 
@@ -186,7 +188,7 @@ ms.locfileid: "90739925"
 
     4. Zvolte šablonu **projektu SharePoint 2010** a pak jako název projektu zadejte **ModuleTest** .
 
-4. V **Průzkumník řešení**vyberte uzel projektu **ModuleTest** .
+4. V **Průzkumník řešení** vyberte uzel projektu **ModuleTest** .
 
      V okně **vlastnosti** se zobrazí nová **Složka obrázky mapy** vlastních vlastností s výchozí hodnotou **false (NEPRAVDA**).
 

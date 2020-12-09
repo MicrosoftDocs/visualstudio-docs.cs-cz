@@ -1,6 +1,8 @@
 ---
 title: Vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1
 titleSuffix: ''
+description: Definujte typ položky projektu pro vytvoření sloupce webu a poté vytvořte šablonu projektu, která bude použita pro vytvoření projektu služby SharePoint, který obsahuje položku projektu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a740d96fb6ae846188fc4fa457c5baeb7b5e907d
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 32f56f282dc5755b8162c4f19a9c036dc2e9cc5f
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585547"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915211"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1
   Projekty služby SharePoint jsou kontejnery pro jednu nebo více položek projektu služby SharePoint. Systém projektu služby SharePoint v aplikaci Visual Studio můžete roztáhnout tak, že vytvoříte vlastní typy položek projektu SharePoint a pak je přidružíte k šabloně projektu. V tomto návodu definujete typ položky projektu pro vytvoření sloupce web a potom vytvoříte šablonu projektu, kterou lze použít k vytvoření nového projektu, který obsahuje položku projektu sloupce webu.
@@ -80,13 +82,13 @@ ms.locfileid: "91585547"
 
 5. V seznamu šablon projektu vyberte **projekt VSIX**.
 
-6. Do pole **název** zadejte **SiteColumnProjectItem**a poté klikněte na tlačítko **OK** .
+6. Do pole **název** zadejte **SiteColumnProjectItem** a poté klikněte na tlačítko **OK** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **SiteColumnProjectItem** do **Průzkumník řešení**.
 
 #### <a name="to-create-the-project-template-project"></a>Vytvoření projektu šablony projektu
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat** a pak zvolte možnost **Nový projekt**.
 
 2. V horní části dialogového okna **Nový projekt** se ujistěte, že je v seznamu verzí .NET Framework zvolena možnost **.NET Framework 4,5** .
 
@@ -94,7 +96,7 @@ ms.locfileid: "91585547"
 
 4. V seznamu šablon projektů vyberte šablonu **projektu C#** nebo šablonu šablony **projektu Visual Basic** .
 
-5. Do pole **název** zadejte **SiteColumnProjectTemplate**a poté klikněte na tlačítko **OK** .
+5. Do pole **název** zadejte **SiteColumnProjectTemplate** a poté klikněte na tlačítko **OK** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **SiteColumnProjectTemplate** do řešení.
 
@@ -116,7 +118,7 @@ ms.locfileid: "91585547"
 
 #### <a name="to-create-the-extension-project"></a>Vytvoření projektu rozšíření
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat** a pak zvolte možnost **Nový projekt**.
 
 2. V horní části dialogového okna **Nový projekt** se ujistěte, že je v seznamu verzí .NET Framework zvolena možnost **.NET Framework 4,5** .
 
@@ -163,13 +165,13 @@ ms.locfileid: "91585547"
 2. Vytvořte projekt SharePoint 2010 s názvem **BaseSharePointProject**.
 
    > [!IMPORTANT]
-   > V **Průvodci vlastním nastavením služby SharePoint**nevybírejte možnost **nasadit jako řešení farmy** .
+   > V **Průvodci vlastním nastavením služby SharePoint** nevybírejte možnost **nasadit jako řešení farmy** .
 
 3. Přidejte do projektu prázdnou položku prvku a potom Pojmenujte položku **pole1**.
 
 4. Uložte projekt a pak zavřete druhou instanci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-5. V instanci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , která má otevřené řešení SiteColumnProjectItem otevřete, v **Průzkumník řešení**otevřete místní nabídku uzlu projektu **SiteColumnProjectTemplate** , vyberte možnost **Přidat**a poté možnost **existující položka**.
+5. V instanci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , která má otevřené řešení SiteColumnProjectItem otevřete, v **Průzkumník řešení** otevřete místní nabídku uzlu projektu **SiteColumnProjectTemplate** , vyberte možnost **Přidat** a poté možnost **existující položka**.
 
 6. V dialogovém okně **Přidat existující položku** otevřete seznam přípon souborů a pak zvolte možnost **všechny soubory ( \* . \* )**.
 
@@ -196,7 +198,7 @@ ms.locfileid: "91585547"
 
 #### <a name="to-configure-how-developers-discover-the-project-template-in-the-new-project-dialog-box"></a>Konfigurace způsobu, jakým vývojáři zjišťují šablonu projektu v dialogovém okně Nový projekt
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu projektu **SiteColumnProjectTemplate** a pak zvolte **Uvolnit projekt**. Pokud se zobrazí výzva k uložení změn do libovolného souboru, klikněte na tlačítko **Ano** .
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu projektu **SiteColumnProjectTemplate** a pak zvolte **Uvolnit projekt**. Pokud se zobrazí výzva k uložení změn do libovolného souboru, klikněte na tlačítko **Ano** .
 
 2. Znovu otevřete místní nabídku uzlu **SiteColumnProjectTemplate** a pak zvolte **Upravit SiteColumnProjectTemplate. csproj** nebo **Upravit SiteColumnProjectTemplate. vbproj**.
 
@@ -218,7 +220,7 @@ ms.locfileid: "91585547"
 
 5. Uložte soubor a zavřete ho.
 
-6. V **Průzkumník řešení**otevřete místní nabídku pro projekt **SiteColumnProjectTemplate** a pak zvolte **znovu načíst projekt**.
+6. V **Průzkumník řešení** otevřete místní nabídku pro projekt **SiteColumnProjectTemplate** a pak zvolte **znovu načíst projekt**.
 
 ## <a name="edit-the-project-template-files"></a>Upravit soubory šablon projektu
  V projektu SiteColumnProjectTemplate upravte následující soubory pro definování chování šablony projektu:
@@ -638,7 +640,7 @@ ms.locfileid: "91585547"
 
 #### <a name="to-configure-and-create-the-vsix-package"></a>Konfigurace a vytvoření balíčku VSIX
 
-1. V **Průzkumník řešení**v projektu **SiteColumnProjectItem** otevřete soubor source. extension. vsixmanifest v editoru manifestu.
+1. V **Průzkumník řešení** v projektu **SiteColumnProjectItem** otevřete soubor source. extension. vsixmanifest v editoru manifestu.
 
      Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který vyžaduje všechny balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110)).
 
@@ -659,7 +661,7 @@ ms.locfileid: "91585547"
 
 7. V seznamu **zdroj** vyberte **projekt v aktuálním řešení**.
 
-8. V seznamu **projekt** vyberte možnost **SiteColumnProjectTemplate**a pak klikněte na tlačítko **OK** .
+8. V seznamu **projekt** vyberte možnost **SiteColumnProjectTemplate** a pak klikněte na tlačítko **OK** .
 
 9. Znovu klikněte na tlačítko **Nový** .
 
@@ -672,9 +674,9 @@ ms.locfileid: "91585547"
 
 11. V seznamu **zdroj** vyberte **projekt v aktuálním řešení**.
 
-12. V seznamu **projekt** zvolte možnost **ProjectItemTypeDefinition**a pak klikněte na tlačítko **OK** .
+12. V seznamu **projekt** zvolte možnost **ProjectItemTypeDefinition** a pak klikněte na tlačítko **OK** .
 
-13. V panelu nabídek zvolte **sestavit**  >  **sestavení řešení**a pak se ujistěte, že se projekt zkompiluje bez chyb.
+13. V panelu nabídek zvolte **sestavit**  >  **sestavení řešení** a pak se ujistěte, že se projekt zkompiluje bez chyb.
 
 ## <a name="test-the-project-template"></a>Testování šablony projektu
  Nyní jste připraveni otestovat šablonu projektu. Nejdřív začněte ladit řešení SiteColumnProjectItem v experimentální instanci sady Visual Studio. Pak testujte projekt **sloupce webu** v experimentální instanci aplikace Visual Studio. Nakonec sestavte a spusťte projekt služby SharePoint, abyste ověřili, že sloupec web funguje podle očekávání.
@@ -697,11 +699,11 @@ ms.locfileid: "91585547"
 
 4. Do pole **název** zadejte **SiteColumnTest** a poté klikněte na tlačítko **OK** .
 
-     V **Průzkumník řešení**se zobrazí nový projekt s položkou projektu s názvem **pole1**.
+     V **Průzkumník řešení** se zobrazí nový projekt s položkou projektu s názvem **pole1**.
 
 5. Ověřte, zda se kód v jiné instanci sady Visual Studio zastaví na zarážce, kterou jste nastavili dříve v `InitializeType` metodě, a pak zvolte klávesu **F5** pro pokračování v ladění projektu.
 
-6. V **Průzkumník řešení**vyberte uzel **pole1** a pak zvolte klávesu **F4** .
+6. V **Průzkumník řešení** vyberte uzel **pole1** a pak zvolte klávesu **F4** .
 
      Otevře se okno **vlastnosti** .
 
@@ -709,7 +711,7 @@ ms.locfileid: "91585547"
 
 #### <a name="to-test-the-site-column-in-sharepoint"></a>Testování sloupce webu ve službě SharePoint
 
-1. V **Průzkumník řešení**vyberte uzel **SiteColumnTest** .
+1. V **Průzkumník řešení** vyberte uzel **SiteColumnTest** .
 
 2. V okně **vlastnosti** zadejte do textového pole vedle vlastnosti **Adresa URL webu** **http://localhost** .
 

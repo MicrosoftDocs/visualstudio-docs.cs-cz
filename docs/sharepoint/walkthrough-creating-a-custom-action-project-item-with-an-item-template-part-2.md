@@ -1,6 +1,8 @@
 ---
 title: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 2
 titleSuffix: ''
+description: V tomto návodu přidejte průvodce pro shromáždění informací od uživatelů, když používají šablonu položky k přidání položky projektu vlastní akce na webu služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 957af3fdb4a86f4973ff8ac24251bae923ec299c
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: fe283da2c2a81827ca70414315278cebd775873a
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585468"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915203"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 2
   Po definování vlastního typu položky projektu služby SharePoint a jejich přidružení k šabloně položky v aplikaci Visual Studio můžete také pro šablonu poskytnout průvodce. Průvodce můžete použít ke shromáždění informací z uživatelů při použití šablony k přidání nové instance položky projektu do projektu. Informace, které shromáždíte, lze použít k inicializaci položky projektu.
@@ -59,13 +61,13 @@ ms.locfileid: "91585468"
 
 1. V aplikaci Visual Studio otevřete řešení CustomActionProjectItem
 
-2. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
+2. V **Průzkumník řešení** otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat** a pak zvolte možnost **Nový projekt**.
 
 3. V dialogovém okně **Nový projekt** rozbalte uzly **Visual C#** nebo **Visual Basic** a pak vyberte uzel **Windows** .
 
 4. V horní části dialogového okna **Nový projekt** se ujistěte, že je v seznamu verzí .NET Framework zvolena možnost **.NET Framework 4,5** .
 
-5. Zvolte šablonu projektu **Knihovna uživatelských ovládacích prvků WPF** , pojmenujte si projekt **ItemTemplateWizard**a pak klikněte na tlačítko **OK** .
+5. Zvolte šablonu projektu **Knihovna uživatelských ovládacích prvků WPF** , pojmenujte si projekt **ItemTemplateWizard** a pak klikněte na tlačítko **OK** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Přidá do řešení projekt **ItemTemplateWizard** .
 
@@ -76,9 +78,9 @@ ms.locfileid: "91585468"
 
 #### <a name="to-configure-the-wizard-project"></a>Konfigurace projektu průvodce
 
-1. V **Průzkumník řešení**otevřete místní nabídku z uzlu projektu **ItemTemplateWizard** a zvolte možnost **vlastnosti**.
+1. V **Průzkumník řešení** otevřete místní nabídku z uzlu projektu **ItemTemplateWizard** a zvolte možnost **vlastnosti**.
 
-2. V **Návrháři projektu**se ujistěte, že je cílová architektura nastavena na .NET Framework 4,5.
+2. V **Návrháři projektu** se ujistěte, že je cílová architektura nastavena na .NET Framework 4,5.
 
      Pro projekty Visual C# můžete tuto hodnotu nastavit na kartě **aplikace** . U Visual Basic projektů můžete tuto hodnotu nastavit na kartě **kompilovat** . Další informace najdete v tématu [Postup: cílení na verzi .NET Framework](../ide/visual-studio-multi-targeting-overview.md).
 
@@ -98,7 +100,7 @@ ms.locfileid: "91585468"
 
     - Microsoft. VisualStudio. TemplateWizardInterface
 
-8. V **Průzkumník řešení**ve složce **odkazy** pro projekt ItemTemplateWizard vyberte odkaz **EnvDTE** .
+8. V **Průzkumník řešení** ve složce **odkazy** pro projekt ItemTemplateWizard vyberte odkaz **EnvDTE** .
 
 9. V okně **vlastnosti** změňte hodnotu vlastnosti **Embed Interop Types** na **false**.
 
@@ -159,7 +161,7 @@ ms.locfileid: "91585468"
 
 #### <a name="to-build-your-project"></a>Sestavení projektu
 
-1. Na řádku nabídek klikněte na **sestavit**sestavení  >  **řešení**.
+1. Na řádku nabídek klikněte na **sestavit** sestavení  >  **řešení**.
 
 ## <a name="associate-the-wizard-with-the-item-template"></a>Přidružení průvodce k šabloně položky
  Nyní, když jste implementovali průvodce, je nutné jej přidružit k šabloně položky **vlastní akce** , a to provedením tří hlavních kroků:
@@ -172,7 +174,7 @@ ms.locfileid: "91585468"
 
 #### <a name="to-sign-the-wizard-assembly-with-a-strong-name"></a>Podepsání sestavení průvodce silným názvem
 
-1. V **Průzkumník řešení**otevřete místní nabídku z uzlu projektu **ItemTemplateWizard** a zvolte možnost **vlastnosti**.
+1. V **Průzkumník řešení** otevřete místní nabídku z uzlu projektu **ItemTemplateWizard** a zvolte možnost **vlastnosti**.
 
 2. Na kartě **podepisování** vyberte zaškrtávací políčko **podepsat sestavení** .
 
@@ -180,7 +182,7 @@ ms.locfileid: "91585468"
 
 4. V dialogovém okně **vytvořit klíč se silným názvem** zadejte název, zrušte zaškrtnutí políčka **chránit soubor klíče heslem** a pak klikněte na tlačítko **OK** .
 
-5. Na řádku nabídek klikněte na **sestavit**sestavení  >  **řešení**.
+5. Na řádku nabídek klikněte na **sestavit** sestavení  >  **řešení**.
 
 #### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>Získání tokenu veřejného klíče pro sestavení průvodce
 
@@ -196,7 +198,7 @@ ms.locfileid: "91585468"
 
 #### <a name="to-add-a-reference-to-the-wizard-assembly-in-the-vstemplate-file"></a>Přidání odkazu na sestavení průvodce v souboru. vstemplate
 
-1. V **Průzkumník řešení**rozbalte uzel projektu **ItemTemplate** a poté otevřete soubor *ItemTemplate. vstemplate* .
+1. V **Průzkumník řešení** rozbalte uzel projektu **ItemTemplate** a poté otevřete soubor *ItemTemplate. vstemplate* .
 
 2. Poblíž konce souboru přidejte následující `WizardExtension` prvek mezi `</TemplateContent>` `</VSTemplate>` značky a. Nahraďte hodnotu *YourToken* `PublicKeyToken` atributu tokenem veřejného klíče, který jste získali v předchozím postupu.
 
@@ -243,7 +245,7 @@ ms.locfileid: "91585468"
 
 #### <a name="to-add-the-wizard-to-the-vsix-package"></a>Přidání průvodce do balíčku VSIX
 
-1. V **Průzkumník řešení**otevřete místní nabídku ze souboru **source. extension. vsixmanifest** v projektu CustomActionProjectItem a pak zvolením možnosti **otevřít** otevřete soubor v editoru manifestu.
+1. V **Průzkumník řešení** otevřete místní nabídku ze souboru **source. extension. vsixmanifest** v projektu CustomActionProjectItem a pak zvolením možnosti **otevřít** otevřete soubor v editoru manifestu.
 
 2. V editoru manifestu klikněte na kartu **assets (prostředky** ) a pak klikněte na tlačítko **Nový** .
 
@@ -253,9 +255,9 @@ ms.locfileid: "91585468"
 
 4. V seznamu **zdroj** vyberte **projekt v aktuálním řešení**.
 
-5. V seznamu **projekt** zvolte možnost **ItemTemplateWizard**a pak klikněte na tlačítko **OK** .
+5. V seznamu **projekt** zvolte možnost **ItemTemplateWizard** a pak klikněte na tlačítko **OK** .
 
-6. V panelu nabídek zvolte **sestavit**  >  **sestavení řešení**a pak se ujistěte, že se řešení zkompiluje bez chyb.
+6. V panelu nabídek zvolte **sestavit**  >  **sestavení řešení** a pak se ujistěte, že se řešení zkompiluje bez chyb.
 
 ## <a name="test-the-wizard"></a>Otestování Průvodce
  Nyní jste připraveni otestovat Průvodce. Nejdřív začněte ladit řešení CustomActionProjectItem v experimentální instanci sady Visual Studio. Pak otestujte průvodce pro položku projektu vlastní akce v projektu služby SharePoint v experimentální instanci aplikace Visual Studio. Nakonec sestavte a spusťte projekt služby SharePoint, abyste ověřili, že vlastní akce funguje podle očekávání.
@@ -280,11 +282,11 @@ ms.locfileid: "91585468"
 
 2. Rozbalte uzel **Visual C#** nebo **Visual Basic** (v závislosti na jazyku, který vaše šablona položky podporuje), rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
-3. V seznamu šablon projektu zvolte **projekt SharePoint 2010**, pojmenujte projekt **CustomActionWizardTest**a pak klikněte na tlačítko **OK** .
+3. V seznamu šablon projektu zvolte **projekt SharePoint 2010**, pojmenujte projekt **CustomActionWizardTest** a pak klikněte na tlačítko **OK** .
 
-4. V **Průvodci vlastním nastavením služby SharePoint**zadejte adresu URL webu, který chcete použít pro ladění, a poté klikněte na tlačítko **Dokončit** .
+4. V **Průvodci vlastním nastavením služby SharePoint** zadejte adresu URL webu, který chcete použít pro ladění, a poté klikněte na tlačítko **Dokončit** .
 
-5. V **Průzkumník řešení**otevřete místní nabídku uzlu projektu, zvolte možnost **Přidat**a poté **položku Nová položka**.
+5. V **Průzkumník řešení** otevřete místní nabídku uzlu projektu, zvolte možnost **Přidat** a poté **položku Nová položka**.
 
 6. V dialogovém okně **Přidat novou položku – CustomItemWizardTest** rozbalte uzel **SharePoint** a potom rozbalte uzel **2010** .
 
@@ -296,7 +298,7 @@ ms.locfileid: "91585468"
 
      Zobrazí se Průvodce přizpůsobením SharePointu.
 
-10. V části **umístění**klikněte na tlačítko pro **úpravy seznamu** .
+10. V části **umístění** klikněte na tlačítko pro **úpravy seznamu** .
 
 11. V seznamu **ID skupiny** vyberte možnost **komunikace**.
 

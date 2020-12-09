@@ -1,5 +1,7 @@
 ---
 title: Vyhodnocení výrazu kukátka | Microsoft Docs
+description: Přečtěte si, jak Visual Studio používá EvaluateSync, když je připravený k zobrazení hodnoty výrazu kukátka.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a239e430338e88a0be4bc35ad1c357925f7d8f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d7433c9d4c2d5851dc5078a41c33a4391a75d86
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738852"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915671"
 ---
 # <a name="evaluate-a-watch-expression"></a>Vyhodnocení výrazu kukátka
 > [!IMPORTANT]

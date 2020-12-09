@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Přidání přijímačů událostí funkce | Microsoft Docs'
+description: V tomto návodu přidejte přijímače událostí funkcí, což jsou metody, které se spustí, když je nainstalovaná, aktivovaná, deaktivovaná nebo odebraná funkce SharePointu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,15 +18,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f40358c157ec24557947f36b0c6eadb6d8a2622d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98b85222fca4da6dfca653ad74e1315801798d83
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015364"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915593"
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>Návod: Přidání přijímačů událostí funkce
-  Přijímače událostí funkcí jsou metody, které se spustí, když se v SharePointu vyskytne jedna z následujících událostí souvisejících s funkcemi:
+Přijímače událostí funkcí jsou metody, které se spustí, když se v SharePointu vyskytne jedna z následujících událostí souvisejících s funkcemi:
 
 - Je nainstalována funkce.
 
@@ -34,7 +36,7 @@ ms.locfileid: "86015364"
 
 - Funkce je odebrána.
 
-  Tento návod ukazuje, jak přidat přijímač událostí do funkce v projektu služby SharePoint. Ukazuje následující úlohy:
+Tento návod ukazuje, jak přidat přijímač událostí do funkce v projektu služby SharePoint. Ukazuje následující úlohy:
 
 - Vytvoření prázdného projektu pomocí přijímače událostí funkce.
 
@@ -58,13 +60,13 @@ ms.locfileid: "86015364"
 
 1. Na panelu nabídek vyberte možnost **soubor**  >  **Nový**  >  **projekt** . zobrazí se dialogové okno **Nový projekt** .
 
-2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic**a pak vyberte uzel **2010** .
+2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic** a pak vyberte uzel **2010** .
 
 3. V podokně **šablony** vyberte šablonu **projektu SharePoint 2010** .
 
      Tento typ projektu použijete pro přijímače událostí funkcí, protože nemají žádnou šablonu projektu.
 
-4. Do pole **název** zadejte **FeatureEvtTest**a potom kliknutím na tlačítko **OK** zobrazte **Průvodce přizpůsobením SharePointu**.
+4. Do pole **název** zadejte **FeatureEvtTest** a potom kliknutím na tlačítko **OK** zobrazte **Průvodce přizpůsobením SharePointu**.
 
 5. Na stránce **Zadejte lokalitu a úroveň zabezpečení pro ladění** zadejte adresu URL serveru SharePoint Server, na který chcete přidat novou položku vlastního pole, nebo použijte výchozí umístění (http:// \<*system name*> /).
 
@@ -81,7 +83,7 @@ ms.locfileid: "86015364"
 
 1. Otevřete místní nabídku uzlu funkce a pak zvolte možnost **Přidat funkci** a vytvořte funkci.
 
-2. V uzlu **funkce** otevřete místní nabídku pro **Feature1**a pak zvolte **Přidat přijímač událostí** a přidejte do této funkce přijímač událostí.
+2. V uzlu **funkce** otevřete místní nabídku pro **Feature1** a pak zvolte **Přidat přijímač událostí** a přidejte do této funkce přijímač událostí.
 
      Tím se do Feature1 přidá soubor kódu. V tomto případě se jmenuje buď *Feature1.EventReceiver.cs* nebo *Feature1. EventReceiver. vb*, v závislosti na vývojovém jazyku vašeho projektu.
 

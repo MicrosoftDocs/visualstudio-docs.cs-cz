@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: přidávání a odebírání položek funkcí služby SharePoint | Microsoft Docs'
+description: Ruční přidání a odebrání položek projektu služby SharePoint do funkcí služby SharePoint pomocí návrháře funkcí v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 27c6ebfb0b0cdbff0a184859ffa2a73acab809c1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dacfbf715ff37238af5332976313c3b592d21be6
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014527"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914917"
 ---
 # <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>Postupy: přidávání a odebírání položek do funkcí služby SharePoint
   Když vytvoříte řešení služby SharePoint, Visual Studio přidá výchozí položky projektu služby SharePoint do vaší funkce. Před nasazením můžete přidat a odebrat položky projektu služby SharePoint pro úpravu funkce služby SharePoint.

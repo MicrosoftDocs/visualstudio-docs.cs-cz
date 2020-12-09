@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Přidání stránky aplikace do pracovního postupu | Microsoft Docs'
+description: V tomto návodu přidejte stránku aplikace do řešení pracovního postupu služby SharePoint. Změnit kód pracovního postupu. Vytváření, kódování a testování stránky aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f54914e6676e0cc2400fa04ebb089fac08f58c3c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c862c1de3b0630b3a5144f821e6266c34a88a5db
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015489"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915658"
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>Návod: Přidání stránky aplikace do pracovního postupu
   Tento návod ukazuje, jak přidat stránku aplikace, která zobrazuje data odvozená z pracovního postupu do projektu pracovního postupu. Sestaví se na projektu popsaném v tématu [Názorný postup: vytvoření pracovního postupu pomocí formulářů přidružení a inicializace](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md).
@@ -44,7 +46,7 @@ ms.locfileid: "86015489"
 
 - Také je nutné projekt dokončit v tématu [Návod: vytvoření pracovního postupu pomocí formulářů přidružení a inicializace](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md).
 
-## <a name="ammend-the-workflow-code"></a>Ammend kódu pracovního postupu
+## <a name="amend-the-workflow-code"></a>Změnit kód pracovního postupu
  Nejprve do pracovního postupu přidejte řádek kódu, který nastaví hodnotu sloupce výsledek na množství sestavy výdajů. Tato hodnota se používá později v souhrnném výpočtu sestavy výdajů.
 
 #### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>Nastavení hodnoty sloupce výsledek v pracovním postupu

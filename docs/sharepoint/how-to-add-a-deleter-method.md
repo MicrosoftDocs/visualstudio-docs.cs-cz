@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání metody odstranění | Microsoft Docs'
+description: Naučte se, jak přidat metodu odstranění do návrháře služby BDC v aplikaci Visual Studio, takže koncový uživatel může odstranit záznam dat z externího seznamu na webu služby SharePoint.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -19,19 +21,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dd97d28936e9f0cc50e9064fdc1a6a64bb20fc77
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5e41fbb4f70bd3f5ae2db72b630ae6e524d3def
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017039"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915437"
 ---
 # <a name="how-to-add-a-deleter-method"></a>Postupy: Přidání metody odstranění
   Můžete povolit koncovému uživateli odstranit datový záznam z externího seznamu na webu služby SharePoint přidáním metody odstranění do modelu. Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
 
 ### <a name="to-create-a-deleter-method"></a>Vytvoření metody odstranění
 
-1. V **Návrháři BDC**vyberte entitu.
+1. V **Návrháři BDC** vyberte entitu.
 
 2. Na panelu nabídek vyberte **Zobrazit**  >  **Další**  >  **Podrobnosti o metodě služby Windows BDC**.
 
@@ -51,7 +53,7 @@ ms.locfileid: "86017039"
 
      Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
 
-4. V **Průzkumník řešení**otevřete místní nabídku souboru kódu služby, který byl vygenerován pro danou entitu, a pak zvolte možnost **Zobrazit kód**.
+4. V **Průzkumník řešení** otevřete místní nabídku souboru kódu služby, který byl vygenerován pro danou entitu, a pak zvolte možnost **Zobrazit kód**.
 
     V editoru kódu se otevře soubor kódu entity Service. Další informace o souboru kódu entity Service najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
 

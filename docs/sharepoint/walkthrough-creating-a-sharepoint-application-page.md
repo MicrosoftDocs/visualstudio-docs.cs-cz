@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Vytvoření stránky aplikace služby SharePoint | Microsoft Docs'
+description: V tomto návodu vytvořte stránku aplikace (specializovanou formu stránky ASP.NET) a pak ji pomocí místního webu služby SharePoint Nalaďte.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 76375c15077bf672eaba01c840ba406228046435
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95addb145312de85a3525c228297e7ff9636ea0d
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016489"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914878"
 ---
 # <a name="walkthrough-create-a-sharepoint-application-page"></a>Návod: Vytvoření stránky aplikace služby SharePoint
 
@@ -49,7 +51,7 @@ Nejprve vytvořte **prázdný projekt služby SharePoint**. Později přidáte p
 
 2. Otevřete dialogové okno **Nový projekt** , rozbalte uzel **Office/SharePoint** v jazyce, který chcete použít, a pak zvolte uzel **řešení služby SharePoint** .
 
-3. V podokně **Nainstalované šablony sady Visual Studio** vyberte šablonu **projektu SharePoint 2010 – prázdná** . Pojmenujte projekt **MySharePointProject**a pak klikněte na tlačítko **OK** .
+3. V podokně **Nainstalované šablony sady Visual Studio** vyberte šablonu **projektu SharePoint 2010 – prázdná** . Pojmenujte projekt **MySharePointProject** a pak klikněte na tlačítko **OK** .
 
      Zobrazí se **Průvodce přizpůsobením SharePointu** . Tento průvodce umožňuje vybrat lokalitu, kterou budete používat k ladění projektu a úroveň důvěryhodnosti řešení.
 
@@ -59,13 +61,13 @@ Nejprve vytvořte **prázdný projekt služby SharePoint**. Později přidáte p
 
 Chcete-li vytvořit stránku aplikace, přidejte do projektu položku **stránky aplikace** .
 
-1. V **Průzkumník řešení**vyberte projekt **MySharePointProject** .
+1. V **Průzkumník řešení** vyberte projekt **MySharePointProject** .
 
 2. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 
 3. V dialogovém okně **Přidat novou položku** vyberte **stránku aplikace (jenom šablona řešení farmy** ).
 
-4. Pojmenujte stránku **SearchItems**a pak klikněte na tlačítko **Přidat** .
+4. Pojmenujte stránku **SearchItems** a pak klikněte na tlačítko **Přidat** .
 
      Návrhář Visual Web Developer zobrazí stránku aplikace ve **zdrojovém** zobrazení, kde vidíte prvky HTML stránky. Návrhář zobrazí značky pro několik <xref:System.Web.UI.WebControls.Content> ovládacích prvků. Každý ovládací prvek se mapuje na <xref:System.Web.UI.WebControls.ContentPlaceHolder> ovládací prvek, který je definován na výchozí stránce předlohy aplikací.
 
@@ -75,7 +77,7 @@ Položka stránky aplikace umožňuje použít návrháře k přidání ovládac
 
 1. Na panelu nabídek vyberte možnost **Zobrazit**  >  **sadu nástrojů**.
 
-2. V uzlu standardní v **sadě nástrojů**proveďte jeden z následujících kroků:
+2. V uzlu standardní v **sadě nástrojů** proveďte jeden z následujících kroků:
 
     - Otevřete místní nabídku položky **popisek** , zvolte možnost **Kopírovat**, otevřete místní nabídku pro řádek pod ovládacím prvkem obsahu **PlaceHolderMain** v návrháři a pak zvolte možnost **Vložit**.
 
@@ -127,7 +129,7 @@ Ovládání ovládacích prvků na stránce aplikace stejně jako jakékoli ASP.
 
 Při spuštění projektu se otevře web služby SharePoint a zobrazí se stránka aplikace.
 
-1. V **Průzkumník řešení**otevřete místní nabídku stránky aplikace a zvolte možnost **nastavit jako položku po spuštění**.
+1. V **Průzkumník řešení** otevřete místní nabídku stránky aplikace a zvolte možnost **nastavit jako položku po spuštění**.
 
 2. Klikněte na klávesu **F5** .
 
