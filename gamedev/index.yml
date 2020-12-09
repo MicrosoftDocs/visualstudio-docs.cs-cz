@@ -1,0 +1,91 @@
+### YamlMime:Hub
+title: Dokumentace pro vývoj her v sadě Visual Studio
+summary: Naučte se, jak vytvářet hry pomocí sady Visual Studio, Visual Studio pro Mac a špičkových nástrojů, které integrují, jako je Unity, modul Unreal a další.
+brand: visual-studio
+metadata:
+  title: Dokumentace pro vývoj her v sadě Visual Studio | Microsoft Docs
+  description: V tomto článku se seznámíte s funkcemi nástroje Visual Studio pro vývoj her.
+  author: therealjohn
+  ms.author: johmil
+  ms.date: 08/05/2020
+  ms.topic: hub-page
+  ms.openlocfilehash: 5cd2470d62d90f686cc5175ac15e7c49eadfc014
+  ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 11/05/2020
+  ms.locfileid: "96926484"
+highlightedContent:
+  items:
+  - title: Vývoj her v sadě Visual Studio
+    itemType: overview
+    url: https://visualstudio.microsoft.com/vs/features/game-development
+  - title: Vývoj her v jazyce C# pomocí Unity
+    itemType: learn
+    url: unity/get-started/visual-studio-tools-for-unity.md
+  - title: Co je nového v Visual Studio Tools for Unity?
+    itemType: whats-new
+    url: unity/change-log-visual-studio-tools-for-unity.md
+  - title: Vytvoření první 3D aplikace pomocí Unity
+    itemType: quickstart
+    url: https://dotnet.microsoft.com/learn/games/unity-tutorial/intro
+  - title: Další informace o vývoji her v .NET
+    itemType: learn
+    url: https://dotnet.microsoft.com/apps/gaming
+productDirectory:
+  title: Vývoj her
+  summary: Další informace o špičkových nástrojích a technologiích integrovaných se sadou Visual Studio a .NET
+  items:
+  - title: Unity
+    imageSrc: unity/media/unity-logo.png
+    links:
+    - url: unity/get-started/visual-studio-tools-for-unity.md
+      text: Visual Studio Tools for Unity prohlídky
+    - url: unity/get-started/getting-started-with-visual-studio-tools-for-unity.md
+      text: Začínáme se sadou Visual Studio a Unity
+    - url: unity/troubleshooting/troubleshooting-and-known-issues-visual-studio-tools-for-unity.md
+      text: Řešení potíží s Visual Studio Tools for Unity
+  - title: MonoGame
+    imageSrc: monogame/media/monogame-logo.png
+    links:
+    - url: https://www.monogame.net/
+      text: Přehled MonoGame
+    - url: https://docs.monogame.net/articles/getting_started/0_getting_started.html
+      text: Začínáme s MonoGame
+    - url: https://docs.monogame.net/articles/getting_started/0_getting_started.html#setting-up-your-development-environment
+      text: Nastavení sady Visual Studio pro MonoGame
+  - title: Unreal Engine
+    imageSrc: unreal/media/unreal-engine-logo.png
+    links:
+    - url: https://www.unrealengine.com/features
+      text: Přehled modulu Unreal
+    - url: https://docs.unrealengine.com/GettingStarted/index.html
+      text: Začínáme s modulem Unreal
+    - url: https://docs.unrealengine.com/Programming/Development/VisualStudioSetup/index.html
+      text: Nastavení sady Visual Studio pro Unreal Engine
+conceptualContent:
+  title: Úroveň výš v rámci sady Visual Studio
+  summary: Přečtěte si další informace o úpravách kódu, ladění, sestavování a dalších informacích pomocí sady Visual Studio.
+  items:
+  - title: Jak používat Visual Studio
+    links:
+    - text: Spuštění průvodce
+      url: /docs/get-started/visual-studio-ide.md
+      itemType: overview
+    - text: Psaní kódu a jeho úpravy
+      url: /docs/ide/index-writing-code.yml
+      itemType: tutorial
+    - text: Obecné funkce ladění
+      itemType: tutorial
+      url: /docs/debugger/debugger-feature-tour.md
+  - title: Postupujte podle kurzu
+    links:
+    - text: Vaše první hra s Unity
+      url: https://dotnet.microsoft.com/learn/games/unity-tutorial/intro
+      itemType: tutorial
+    - text: Ukázky MonoGame & ukázky
+      url: https://docs.monogame.net/articles/samples.html
+      itemType: tutorial
+    - text: Kurzy k Unreal Engine
+      url: https://www.unrealengine.com/en-US/onlinelearning-courses
+      itemType: learn
