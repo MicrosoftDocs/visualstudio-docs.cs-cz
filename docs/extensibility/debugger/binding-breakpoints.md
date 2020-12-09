@@ -1,5 +1,7 @@
 ---
 title: Zarážky vazeb | Microsoft Docs
+description: Zjistěte, jak rozhraní IDE formuluje požadavek na zarážku a vyzve relaci ladění, aby vytvořila zarážku, když uživatel nastaví zarážku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e839b6e0e7967c4802bee5617da3334c5d4033c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 606c1f4cb5559722028b78ef4ef21c41c0ba5556
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903234"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914709"
 ---
 # <a name="bind-breakpoints"></a>Vázání zarážek
 Pokud uživatel nastaví zarážku, třeba stisknutím klávesy **F9**, rozhraní IDE formuluje požadavek a vyzve relaci ladění, aby vytvořila zarážku.

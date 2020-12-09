@@ -1,5 +1,7 @@
 ---
 title: Použití služby projektu SharePoint | Microsoft Docs
+description: Použijte službu projektu SharePoint k provádění úloh souvisejících se systémem projektu. Zobrazit seznam funkcí služby projektu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7b3aeee895810eed8e434fda93328e4e179c9d39
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 635e4123d302cf5c3173ee298f0239f5fa1c95f3
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740107"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914540"
 ---
 # <a name="use-the-sharepoint-project-service"></a>Použití služby projektu SharePoint
   Systém projektu služby SharePoint zahrnuje službu projektu, kterou lze použít k provádění úloh souvisejících se systémem projektu. Služba projektu je <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objekt.

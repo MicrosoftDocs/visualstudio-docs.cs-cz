@@ -1,5 +1,7 @@
 ---
 title: Modul CLR (Common Language Runtime) a vyhodnocení výrazu | Microsoft Docs
+description: Přečtěte si, jak modul CLR (Common Language Runtime) spolupracuje s ladicím modulem a jak integrovat proprietární programovací jazyk do integrovaného vývojového prostředí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 013579473189dd9310501b76d2de0d5cf6fa5822
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a7c120ac1da59ab86e9419bcb031af46f1b3d900
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739120"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914254"
 ---
 # <a name="common-language-runtime-and-expression-evaluation"></a>CLR (Common Language Runtime) a vyhodnocení výrazu
 > [!IMPORTANT]

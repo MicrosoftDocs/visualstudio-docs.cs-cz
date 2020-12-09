@@ -1,6 +1,8 @@
 ---
 title: 'Průzkumník serveru: rozšíření uzlu připojení služby SharePoint'
 titleSuffix: ''
+description: V tomto návodu naleznete informace v tématu jak volat objektový model klienta služby SharePoint z rozšíření pro uzel připojení služby SharePoint v Průzkumník serveru.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d7f1ac5b0fb1f25d04139d76efa816ebd059d7da
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: c323f05d341af810eecafae43e8d04d3cba29054
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585573"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913942"
 ---
 # <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>Návod: volání do objektového modelu klienta služby SharePoint v rozšíření Průzkumník serveru
   Tento návod ukazuje, jak volat objektový model klienta služby SharePoint z rozšíření pro uzel **připojení služby SharePoint** v **Průzkumník serveru**. Další informace o použití objektového modelu klienta služby SharePoint naleznete v tématu [volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md).
@@ -78,13 +80,13 @@ Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k doko
 
 5. Vyberte šablonu **projektu VSIX** .
 
-6. Do pole **název** zadejte příkaz **WebPartNode**a pak klikněte na tlačítko **OK** .
+6. Do pole **název** zadejte příkaz **WebPartNode** a pak klikněte na tlačítko **OK** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **WebPartNode** do **Průzkumník řešení**.
 
 #### <a name="to-create-the-extension-project"></a>Vytvoření projektu rozšíření
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat** a pak zvolte možnost **Nový projekt**.
 
 2. V dialogovém okně  **Nový projekt** rozbalte uzel **Visual C#** nebo **Visual Basic** a pak zvolte možnost **Windows**.
 
@@ -92,7 +94,7 @@ Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k doko
 
 4. V seznamu šablon projektu vyberte možnost **Knihovna tříd**.
 
-5. Do pole **název** zadejte **WebPartNodeExtension**a pak klikněte na tlačítko **OK** .
+5. Do pole **název** zadejte **WebPartNodeExtension** a pak klikněte na tlačítko **OK** .
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **WebPartNodeExtension** do řešení a otevře soubor Default Class1 Code.
 
@@ -146,9 +148,9 @@ Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k doko
 
 6. Otevřete místní nabídku pro verzi 32x32 ikony a zvolte možnost **Odstranit typ obrázku**.
 
-7. Opakujte kroky 3 až 7 pro přidání druhé ikony do prostředků projektu a pojmenujte tuto **webovou část**ikona.
+7. Opakujte kroky 3 až 7 pro přidání druhé ikony do prostředků projektu a pojmenujte tuto **webovou část** ikona.
 
-8. V **Průzkumník řešení**ve složce **Resources** projektu **WebPartNodeExtension** vyberte *WebPartsNode. ico*.
+8. V **Průzkumník řešení** ve složce **Resources** projektu **WebPartNodeExtension** vyberte *WebPartsNode. ico*.
 
 9. V okně **vlastnosti** otevřete seznam **Akce sestavení** a pak zvolte možnost **Integrovaný prostředek**.
 
@@ -184,14 +186,14 @@ Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k doko
 
 #### <a name="to-build-the-project"></a>Sestavení projektu
 
-1. V **Průzkumník řešení**otevřete místní nabídku projektu **WebPartNodeExtension** a pak zvolte možnost **sestavit**.
+1. V **Průzkumník řešení** otevřete místní nabídku projektu **WebPartNodeExtension** a pak zvolte možnost **sestavit**.
 
 ## <a name="create-a-vsix-package-to-deploy-the-extension"></a>Vytvoření balíčku VSIX pro nasazení rozšíření
  Chcete-li nasadit rozšíření, použijte VSIX projekt ve vašem řešení k vytvoření balíčku VSIX. Nejdřív nakonfigurujte balíček VSIX úpravou souboru source. extension. vsixmanifest, který je zahrnutý v projektu. Pak vytvořte balíček VSIX sestavením řešení.
 
 #### <a name="to-configure-the-vsix-package"></a>Konfigurace balíčku VSIX
 
-1. V **Průzkumník řešení**v projektu **WebPartNode** otevřete soubor **source. extension. vsixmanifest** v editoru manifestu.
+1. V **Průzkumník řešení** v projektu **WebPartNode** otevřete soubor **source. extension. vsixmanifest** v editoru manifestu.
 
      Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který vyžaduje všechny balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110)).
 
@@ -210,9 +212,9 @@ Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k doko
 
 7. V seznamu **zdroj** vyberte **projekt v aktuálním řešení**.
 
-8. V seznamu **projekt** zvolte **WebPartNodeExtension**a pak klikněte na tlačítko **OK** .
+8. V seznamu **projekt** zvolte **WebPartNodeExtension** a pak klikněte na tlačítko **OK** .
 
-9. V panelu nabídek zvolte **sestavit**  >  **sestavení řešení**a pak se ujistěte, že se řešení zkompiluje bez chyb.
+9. V panelu nabídek zvolte **sestavit**  >  **sestavení řešení** a pak se ujistěte, že se řešení zkompiluje bez chyb.
 
 10. Ujistěte se, že výstupní složka sestavení pro projekt WebPartNode nyní obsahuje soubor WebPartNode. VSIX.
 
@@ -237,7 +239,7 @@ Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k doko
 
 2. Ověřte, zda se web služby SharePoint, který chcete použít pro testování, zobrazuje v uzlu **připojení služby SharePoint** v **Průzkumník serveru**. Pokud není v seznamu uveden, postupujte takto:
 
-    1. Otevřete místní nabídku pro **připojení služby SharePoint**a poté zvolte možnost **Přidat připojení**.
+    1. Otevřete místní nabídku pro **připojení služby SharePoint** a poté zvolte možnost **Přidat připojení**.
 
     2. V dialogovém okně **Přidat připojení služby SharePoint** zadejte adresu URL webu služby SharePoint, ke kterému se chcete připojit, a poté klikněte na tlačítko **OK** .
 
@@ -257,7 +259,7 @@ Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k doko
 
 9. V okně **vlastnosti** ověřte, zda se zobrazí podrobnosti o webové části.
 
-10. V **Průzkumník serveru**otevřete místní nabídku pro stejnou webovou část a zvolte možnost **Zobrazit zprávu**.
+10. V **Průzkumník serveru** otevřete místní nabídku pro stejnou webovou část a zvolte možnost **Zobrazit zprávu**.
 
      V zobrazeném okně se zprávou klikněte na tlačítko **OK** .
 
@@ -270,7 +272,7 @@ Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k doko
 
      Otevře se dialogové okno **rozšíření a aktualizace** .
 
-2. V seznamu rozšíření zvolte **uzel galerie webových částí pro Průzkumník serveru**a pak klikněte na tlačítko **odinstalovat** .
+2. V seznamu rozšíření zvolte **uzel galerie webových částí pro Průzkumník serveru** a pak klikněte na tlačítko **odinstalovat** .
 
 3. V dialogovém okně, které se zobrazí, klikněte na tlačítko **Ano** .
 

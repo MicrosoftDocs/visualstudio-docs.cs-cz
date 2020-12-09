@@ -1,5 +1,7 @@
 ---
 title: Události ovládacího prvku | Microsoft Docs
+description: Přečtěte si o posílání událostí během kontrolovaného provádění programu pomocí rozhraní IDebugEvent2.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc2c3ad9c9b63923bdf2f107e7bc582f3c76cd62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf7f59384d9317e4be173c93b6165d754a35ad8f
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739083"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914241"
 ---
 # <a name="control-events"></a>Události ovládacích prvků
 Během řízeného provádění programu je nutné odesílat události. Všechny události jsou odesílány pomocí rozhraní [IDebugEvent2](../../extensibility/debugger/reference/idebugevent2.md) a mají atributy, které vyžadují implementaci metody [IDebugEvent2:: GetAttributes](../../extensibility/debugger/reference/idebugevent2-getattributes.md) .

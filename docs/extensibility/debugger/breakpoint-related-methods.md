@@ -1,5 +1,7 @@
 ---
-title: Metody související se zarážkami | Microsoft Docs
+title: Metody Breakpoint-Related | Microsoft Docs
+description: Ladění sady Visual Studio podporuje vázané zarážky, které jsou úspěšně svázány s umístěním v kódu a čekají na zarážky, které ještě nejsou vázané.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c72ec63e500ac86a4a5bd66a2956fe0fb06c8834
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9472f1ff4105790951ddd687d7e71c3e57fa39da
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739207"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914462"
 ---
 # <a name="breakpoint-related-methods"></a>Metody související se zarážkami
 Ladicí stroj (DE) musí podporovat nastavení zarážek. Ladění sady Visual Studio podporuje následující typy zarážek:
@@ -42,7 +44,7 @@ Ladicí stroj (DE) musí podporovat nastavení zarážek. Ladění sady Visual S
 |[Zapisovat](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Váže určenou nevyřízenou zarážku na jedno nebo více umístění kódu.|
 |[GetState](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|Získá stav čeká na zarážce.|
 |[GetBreakpointRequest](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|Získá požadavek na zarážku, který se používá k vytvoření nedokončené zarážky.|
-|[Povolení](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Přepne povolený stav čeká na zarážku.|
+|[Povolit](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Přepne povolený stav čeká na zarážku.|
 |[EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Vytvoří výčet všech zarážek vázaných z nedokončené zarážky.|
 |[EnumErrorBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Vytvoří výčet všech zarážek s chybami, které jsou výsledkem nedokončené zarážky.|
 |[Odstranit](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Odstraní nevyřízenou zarážku a všechny zarážky, které jsou z něho svázané.|
@@ -56,7 +58,7 @@ Ladicí stroj (DE) musí podporovat nastavení zarážek. Ladění sady Visual S
 |[GetPendingBreakpoint](../../extensibility/debugger/reference/idebugboundbreakpoint2-getpendingbreakpoint.md)|Získá nevyřízenou zarážku, která obsahuje zarážku.|
 |[GetState](../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)|Získá stav vázané zarážky.|
 |[GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md)|Získá rozlišení zarážky, které popisuje zarážku.|
-|[Povolení](../../extensibility/debugger/reference/idebugboundbreakpoint2-enable.md)|Povoluje nebo zakazuje zarážku.|
+|[Povolit](../../extensibility/debugger/reference/idebugboundbreakpoint2-enable.md)|Povoluje nebo zakazuje zarážku.|
 |[Odstranit](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)|Odstraní vázanou zarážku.|
 
  Informace o řešení a požadavku vyžadují implementaci následujících metod [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) .

@@ -1,5 +1,7 @@
 ---
 title: Koncepty ladicího programu | Microsoft Docs
+description: Přečtěte si o konceptech architektury, které se používají při navrhování balíčku ladění sady Visual Studio, který vám může pomáhat s vytvářením na tomto balíčku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ad8a450f9e79c1d44b8e098c8a00bb4b816e1af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7caecc9c3434afd90462757c9cb544f387df88d3
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738979"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914033"
 ---
 # <a name="debugger-concepts"></a>Koncepty ladicího programu
 Chcete-li vytvořit balíček ladění sady Visual Studio, je třeba znát koncepty architektury používané při navrhování balíčku.

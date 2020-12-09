@@ -1,5 +1,7 @@
 ---
 title: Vytvoření webové části pro službu SharePoint pomocí návrháře
+description: V tomto návodu vytvoříte vizuální webovou část pomocí šablony projektu Visual Web Part na SharePointu v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 732bd9fe3d34a768e0c6f71315f212c49bdf02af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc214e98b2ec0ed6feb31c9aaa6e8170b3ddd2c8
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016385"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913981"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>Návod: Vytvoření webové části pro službu SharePoint pomocí návrháře
 
@@ -53,7 +55,7 @@ Nejprve vytvořte projekt webové části pomocí šablony projektu **Visual Web
 
      Zobrazí se dialogové okno **Nový projekt**.
 
-3. V dialogovém okně **Nový projekt** v části **Visual C#** nebo **Visual Basic**rozbalte možnost **Office/SharePoint**a pak zvolte kategorii **řešení SharePoint** .
+3. V dialogovém okně **Nový projekt** v části **Visual C#** nebo **Visual Basic** rozbalte možnost **Office/SharePoint** a pak zvolte kategorii **řešení SharePoint** .
 
 4. V seznamu šablon vyberte šablonu **SharePoint 2013 – Visual Web Part** a pak klikněte na tlačítko **OK** .
 
@@ -71,11 +73,11 @@ Navrhněte webovou část přidáním ovládacích prvků ze **sady nástrojů**
 
 2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **sadu nástrojů**.
 
-3. V uzlu **standardní** na **panelu nástrojů**zvolte ovládací prvek **CheckBoxList** a pak proveďte jeden z následujících kroků:
+3. V uzlu **standardní** na **panelu nástrojů** zvolte ovládací prvek **CheckBoxList** a pak proveďte jeden z následujících kroků:
 
     - Otevřete místní nabídku ovládacího prvku **CheckBoxList** , zvolte možnost **Kopírovat**, otevřete místní nabídku pro první řádek v návrháři a pak zvolte možnost **Vložit**.
 
-    - Přetáhněte ovládací prvek **CheckBoxList** ze **sady nástrojů**a připojte ovládací prvek k prvnímu řádku v návrháři.
+    - Přetáhněte ovládací prvek **CheckBoxList** ze **sady nástrojů** a připojte ovládací prvek k prvnímu řádku v návrháři.
 
 4. Opakujte předchozí krok, ale přesuňte tlačítko na další řádek návrháře.
 
@@ -95,7 +97,7 @@ Přidejte kód, který umožňuje uživateli přidat kalendáře do zobrazení h
 
    - V Návrháři dvakrát klikněte na tlačítko **aktualizovat** .
 
-   - V okně **vlastnosti** pro tlačítko **aktualizovat** klikněte na tlačítko **události** . Ve vlastnosti **Click** zadejte **Button1_Click**a pak zvolte klávesu ENTER.
+   - V okně **vlastnosti** pro tlačítko **aktualizovat** klikněte na tlačítko **události** . Ve vlastnosti **Click** zadejte **Button1_Click** a pak zvolte klávesu ENTER.
 
      V editoru kódu se otevře soubor kódu uživatelského ovládacího prvku a `Button1_Click` zobrazí se obslužná rutina události. Později přidáte kód do této obslužné rutiny události.
 
@@ -139,7 +141,7 @@ Při spuštění projektu se otevře web služby SharePoint. Webová část je a
 
      Otevře se web služby SharePoint a na [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] stránce se zobrazí panel Snadné spuštění.
 
-2. Na panelu Snadné spuštění v části **seznamy**vyberte odkaz **Kalendář** .
+2. Na panelu Snadné spuštění v části **seznamy** vyberte odkaz **Kalendář** .
 
      Zobrazí se stránka **Kalendář** .
 
@@ -147,13 +149,13 @@ Při spuštění projektu se otevře web služby SharePoint. Webová část je a
 
 3. Na stránce kalendář zvolte den a pak kliknutím na odkaz **Přidat** ve vybraném dni přidejte událost.
 
-4. Do pole **název** zadejte **událost ve výchozím kalendáři**a pak klikněte na tlačítko **Uložit** .
+4. Do pole **název** zadejte **událost ve výchozím kalendáři** a pak klikněte na tlačítko **Uložit** .
 
 5. Zvolte odkaz **obsah webu** a pak zvolte dlaždici **Přidat aplikaci** .
 
 6. Na stránce **vytvořit** vyberte typ **kalendáře** , pojmenujte kalendář a pak klikněte na tlačítko **vytvořit** .
 
-7. Přidejte událost do nového kalendáře, pojmenujte událost události **ve vlastním kalendáři**a pak klikněte na tlačítko **Uložit** .
+7. Přidejte událost do nového kalendáře, pojmenujte událost události **ve vlastním kalendáři** a pak klikněte na tlačítko **Uložit** .
 
 ### <a name="to-add-the-web-part-to-a-web-part-page"></a>Přidání webové části na stránku webové části
 
@@ -161,7 +163,7 @@ Při spuštění projektu se otevře web služby SharePoint. Webová část je a
 
 2. Na pásu karet klikněte na kartu **soubory** , otevřete nabídku **Nový dokument** a zvolte příkaz **Stránka webové části** .
 
-3. Na stránce **Nová stránka webové části** pojmenujte stránku **SampleWebPartPage. aspx**a klikněte na tlačítko **vytvořit** .
+3. Na stránce **Nová stránka webové části** pojmenujte stránku **SampleWebPartPage. aspx** a klikněte na tlačítko **vytvořit** .
 
      Zobrazí se stránka webová část.
 

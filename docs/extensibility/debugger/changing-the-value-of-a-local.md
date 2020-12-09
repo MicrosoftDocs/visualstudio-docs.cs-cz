@@ -1,5 +1,7 @@
 ---
 title: Změna hodnoty místního | Microsoft Docs
+description: Přečtěte si o procesu změny hodnoty místních při zadání nové hodnoty v poli hodnota v okně místní hodnoty.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 565ae9f27b9f5a113e51520724f525599ad5eda7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08f366162f4031b9cc7aa651bf9eca7aab55a15a
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904265"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914332"
 ---
 # <a name="change-the-value-of-a-local"></a>Změna hodnoty místní
 > [!IMPORTANT]

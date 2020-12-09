@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání a odebrání mapovaných složek | Microsoft Docs'
+description: Přidejte a odeberte mapované složky do projektu v SharePointu.  Změna umístění nasazení mapované složky. Přejmenujte nebo odeberte mapované složky.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 80fbd3e18b8d440eae2873c73013ad7468073640
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4d29be9b008bfaa9ad6694725b03e25bf6847df
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014651"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914801"
 ---
 # <a name="how-to-add-and-remove-mapped-folders"></a>Postupy: Přidání a odebrání mapovaných složek
   Některé běžně používané složky v SharePointu, jako jsou obrázky a rozložení, jsou hluboko vložené v hierarchii souborů. Tyto složky lze namapovat na projekt služby SharePoint pro snazší přístup k nim. Mapované složky jsou složky v projektu služby SharePoint, které odpovídají fyzickému umístění souborů v instalaci serveru SharePoint.
@@ -39,15 +41,15 @@ Mapované složky můžete přidat do projektu pomocí příkazů na panelu nab�
 
 3. V seznamu šablon projektů vyberte šablonu **Visual Web Part sady SharePoint 2013** .
 
-4. Do pole **název** zadejte **TestProject1**a poté klikněte na tlačítko **OK** .
+4. Do pole **název** zadejte **TestProject1** a poté klikněte na tlačítko **OK** .
 
-5. V **Průvodci vlastním nastavením služby SharePoint**klikněte na tlačítko **Dokončit** a zachovejte výchozí nastavení.
+5. V **Průvodci vlastním nastavením služby SharePoint** klikněte na tlačítko **Dokončit** a zachovejte výchozí nastavení.
 
-6. V **Průzkumník řešení**zvolte uzel projektu a potom v řádku nabídek zvolte **projekt**  >  **Přidat namapovanou složku SharePoint "obrázky"**.
+6. V **Průzkumník řešení** zvolte uzel projektu a potom v řádku nabídek zvolte **projekt**  >  **Přidat namapovanou složku SharePoint "obrázky"**.
 
      Složka s názvem **Image** se zobrazí ve vašem projektu a obsahuje podsložku s názvem TestProject1. Tato mapovaná složka bude obsahovat obrázky pro projekt Visual Web Part.
 
-7. V **Průzkumník řešení**zvolte uzel projektu a pak na panelu nabídek zvolte **projekt**  >  **přidat SharePoint mapované složky** . zobrazí se dialogové okno **přidat SharePoint mapované složky** .
+7. V **Průzkumník řešení** zvolte uzel projektu a pak na panelu nabídek zvolte **projekt**  >  **přidat SharePoint mapované složky** . zobrazí se dialogové okno **přidat SharePoint mapované složky** .
 
 8. Ve stromovém zobrazení složek, které jsou k dispozici pro mapování, zvolte složku **prostředky** a pak klikněte na tlačítko **OK** .
 
@@ -76,7 +78,7 @@ Mapované složky můžete přidat do projektu pomocí příkazů na panelu nab�
 
      Alternativně můžete zvolit mapovanou složku, kterou chcete přejmenovat, otevřít okno **vlastnosti** a nastavit hodnotu vlastnosti **název složky** na nový název.
 
-3. Chcete-li odebrat namapovanou složku z projektu, otevřete její místní nabídku, zvolte možnost **Odstranit**a poté kliknutím na tlačítko **OK** v dialogovém okně potvrďte odebrání.
+3. Chcete-li odebrat namapovanou složku z projektu, otevřete její místní nabídku, zvolte možnost **Odstranit** a poté kliknutím na tlačítko **OK** v dialogovém okně potvrďte odebrání.
 
 ## <a name="see-also"></a>Viz také
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

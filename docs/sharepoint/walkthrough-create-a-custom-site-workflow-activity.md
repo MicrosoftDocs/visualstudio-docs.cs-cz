@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Vytvoření vlastní aktivity pracovního postupu webu | Microsoft Docs'
+description: V tomto návodu najdete informace v tématu Postup vytvoření vlastní aktivity pro pracovní postup SharePointu na úrovni webu pomocí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dc7eef8b0924be745de436e06acc36785b1cb99b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86302a0b8eef4344a909ae3b8fb2c513c86c4ad6
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016533"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913953"
 ---
 # <a name="walkthrough-create-a-custom-site-workflow-activity"></a>Návod: Vytvoření vlastní aktivity pracovního postupu webu
   Tento návod ukazuje, jak vytvořit vlastní aktivitu pro pracovní postup na úrovni webu pomocí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . (Pracovní postupy na úrovni webu platí pro celou lokalitu, ne jenom pro seznam na webu.) Vlastní aktivita vytvoří seznam oznámení o zálohování a potom do něj zkopíruje obsah seznamu oznámení.
@@ -54,11 +56,11 @@ ms.locfileid: "86016533"
 
 1. Na panelu nabídek vyberte možnost **soubor**  >  **Nový**  >  **projekt** . zobrazí se dialogové okno **Nový projekt** .
 
-2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic**a pak vyberte uzel **2010** .
+2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic** a pak vyberte uzel **2010** .
 
 3. V podokně **šablony** vyberte šablonu **projektu SharePoint 2010** .
 
-4. Do pole **název** zadejte **AnnouncementBackup**a poté klikněte na tlačítko **OK** .
+4. Do pole **název** zadejte **AnnouncementBackup** a poté klikněte na tlačítko **OK** .
 
      Zobrazí se **Průvodce přizpůsobením SharePointu** .
 
@@ -66,15 +68,15 @@ ms.locfileid: "86016533"
 
      Tento krok nastaví úroveň důvěryhodnosti pro řešení jako řešení farmy, což je jediná dostupná možnost pro projekty pracovního postupu.
 
-6. V **Průzkumník řešení**zvolte uzel projektu a potom v řádku nabídek zvolte **projekt**  >  **Přidat novou položku**.
+6. V **Průzkumník řešení** zvolte uzel projektu a potom v řádku nabídek zvolte **projekt**  >  **Přidat novou položku**.
 
-7. V části **Visual C#** nebo **Visual Basic**rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
+7. V části **Visual C#** nebo **Visual Basic** rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
 8. V podokně **šablony** zvolte šablonu **sekvenční pracovní postup (pouze řešení farmy)** a pak klikněte na tlačítko **Přidat** .
 
      Zobrazí se **Průvodce přizpůsobením SharePointu** .
 
-9. Na stránce **Zadejte název pracovního postupu pro ladění** přijměte výchozí název (AnnouncementBackup-Workflow1). Změňte typ šablony pracovního postupu na **pracovní postup webu**a potom klikněte na tlačítko **Další** .
+9. Na stránce **Zadejte název pracovního postupu pro ladění** přijměte výchozí název (AnnouncementBackup-Workflow1). Změňte typ šablony pracovního postupu na **pracovní postup webu** a potom klikněte na tlačítko **Další** .
 
 10. Kliknutím na tlačítko **Dokončit** Potvrďte zbývající výchozí nastavení.
 
@@ -114,7 +116,7 @@ ms.locfileid: "86016533"
 
 1. Kliknutím na klávesu **F5** spusťte projekt a nasaďte ho na SharePoint.
 
-2. Na panelu Rychlé spuštění klikněte na odkaz **seznamy** pro zobrazení všech seznamů, které jsou k dispozici na webu služby SharePoint. Všimněte si, že pro oznámení s názvem **oznámení**je k dispozici pouze jeden seznam.
+2. Na panelu Rychlé spuštění klikněte na odkaz **seznamy** pro zobrazení všech seznamů, které jsou k dispozici na webu služby SharePoint. Všimněte si, že pro oznámení s názvem **oznámení** je k dispozici pouze jeden seznam.
 
 3. V horní části webové stránky služby SharePoint vyberte odkaz **pracovní postupy webu** .
 

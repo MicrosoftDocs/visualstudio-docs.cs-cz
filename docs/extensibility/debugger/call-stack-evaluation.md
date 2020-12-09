@@ -1,5 +1,7 @@
 ---
 title: Vyhodnocení zásobníku volání | Microsoft Docs
+description: Přečtěte si o metodě EnumFrameInfo a o tom, jak ji implementovat pro zobrazení rámců zásobníku volání v průběhu režimu přerušení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5557d7eae0ffe54b0f01f1f9e95935d71455229
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc637ff3ce2fe596eed48684523da7114fe0a03a
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739176"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914670"
 ---
 # <a name="call-stack-evaluation"></a>Vyhodnocení zásobníku volání
 Aby bylo možné zobrazit rámce zásobníku volání během režimu přerušení, je nutné implementovat metodu [EnumFrameInfo](../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) .

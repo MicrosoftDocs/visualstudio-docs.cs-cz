@@ -1,5 +1,7 @@
 ---
 title: Řízení provádění | Microsoft Docs
+description: Přečtěte si o zastavování událostí, což znamená, že příkaz DE čeká odpověď od uživatele prostřednictvím rozhraní IDE.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c59831efb2fc97ad1bb2891fd93a67fe79f8eff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 88adaad3092e084841c40b5e04d45f94985a2ee8
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387002"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913877"
 ---
 # <a name="control-of-execution"></a>Řízení provádění
 Ladicí stroj (DE) obvykle odesílá jednu z následujících událostí jako poslední událost spuštění:
@@ -57,7 +59,7 @@ Ladicí stroj (DE) obvykle odesílá jednu z následujících událostí jako po
 
    Pokud ladicí balíček má ignorovat konkrétní událost zastavení, ladicí balíček volá SDM, který volá [IDebugProgram2:: Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md). Pokud byl program ve fázi, kdy nebo mimo funkci, když zjistil stav zastavení, pokračuje krok. To znamená, že program udržuje stav krokování, aby věděl, jak pokračovat.
 
-   Volání metody SDM provede, provede `Step` a **Execute** **pokračuje** , jsou asynchronní, což znamená, že model SDM očekává, že volání vrátí rychle. Pokud DE pošle událost zastavení SDM ve stejném vlákně před `Step` , **spustí**nebo **pokračuje** , model SDM přestane reagovat.
+   Volání metody SDM provede, provede `Step` a **Execute** **pokračuje** , jsou asynchronní, což znamená, že model SDM očekává, že volání vrátí rychle. Pokud DE pošle událost zastavení SDM ve stejném vlákně před `Step` , **spustí** nebo **pokračuje** , model SDM přestane reagovat.
 
 ## <a name="see-also"></a>Viz také
 - [Úlohy ladění](../../extensibility/debugger/debugging-tasks.md)

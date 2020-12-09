@@ -1,5 +1,7 @@
 ---
 title: Připojení přímo k programu | Microsoft Docs
+description: Přečtěte si, jak Visual Studio implementuje připojení ladicího stroje k procesu, který je už spuštěný pomocí tohoto postupu v integrovaném vývojovém prostředí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc78234b31b98865f1779dd65d743d4196f9cbf5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 80ee40d60b5a7511c3f44c22c16e02751d9f1f36
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903275"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913773"
 ---
 # <a name="attach-directly-to-a-program"></a>Připojit přímo k programu
 Uživatelé, kteří chtějí ladit programy v procesu, který je již spuštěn, obvykle následují za tímto způsobem:

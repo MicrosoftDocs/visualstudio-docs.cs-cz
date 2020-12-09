@@ -1,5 +1,7 @@
 ---
 title: Ladit balíček | Microsoft Docs
+description: Přečtěte si, jak balíček ladění běží v prostředí Visual Studio a zpracovává uživatelské rozhraní tím, že spotřebovává rozhraní pro ladění a komunikuje se správcem ladění relace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: de6240ea5d938d02f8415009203962e124ff049e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad62a487d38500617999a276aa3ae15a75089736
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739021"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914124"
 ---
 # <a name="debug-package"></a>Ladit balíček
 Ladicí balíček běží v prostředí Visual Studio a zpracovává všechna rozhraní. Spotřebovává rozhraní pro ladění sady Visual Studio a komunikuje se správcem ladění relace (SDM).

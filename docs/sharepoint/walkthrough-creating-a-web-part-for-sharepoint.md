@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Vytvoření webové části pro SharePoint | Microsoft Docs'
+description: Vytvoření webové části pro službu SharePoint. Webové části umožňují uživatelům přímo měnit obsah, vzhled a chování stránek webu služby SharePoint pomocí prohlížeče.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7fe560ae0c639ec8c400719738ea1f52b5315a9a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98e0c21fa4e3f119b32e19dd1be6e7d9148a17f4
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247657"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914657"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>Návod: Vytvoření webové části pro službu SharePoint
 
@@ -58,7 +60,7 @@ Nejprve vytvořte prázdný projekt služby SharePoint. Později přidáte do pr
 
 3. V dialogovém okně **Nový projekt** rozbalte uzel **služby SharePoint** v jazyce, který chcete použít, a pak vyberte uzel **2010** .
 
-4. V podokně **šablony** zvolte **projekt SharePoint 2010**a pak klikněte na tlačítko **OK** .
+4. V podokně **šablony** zvolte **projekt SharePoint 2010** a pak klikněte na tlačítko **OK** .
 
      Zobrazí se **Průvodce přizpůsobením SharePointu** . Tento průvodce umožňuje vybrat lokalitu, kterou budete používat k ladění projektu a úroveň důvěryhodnosti řešení.
 
@@ -80,7 +82,7 @@ Přidejte do projektu položku **webové části** . Položka **webové části*
 
 Můžete určit ovládací prvky, které se mají zobrazit ve webové části, jejich přidáním do kolekce Controls třídy webové části.
 
-1. V **Průzkumník řešení**otevřete *WebPart1. vb* (v Visual Basic) nebo *WebPart1.cs* (v jazyce C#).
+1. V **Průzkumník řešení** otevřete *WebPart1. vb* (v Visual Basic) nebo *WebPart1.cs* (v jazyce C#).
 
      V editoru kódu se otevře soubor kódu webové části.
 
@@ -89,7 +91,7 @@ Můžete určit ovládací prvky, které se mají zobrazit ve webové části, j
      [!code-csharp[SP_WebPart#1](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#1)]
      [!code-vb[SP_WebPart#1](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#1)]
 
-3. Do třídy přidejte následující kód `WebPart1` . Tento kód deklaruje následující pole:
+3. Do třídy `WebPart1` přidejte následující kód. Tento kód deklaruje následující pole:
 
    - Datová mřížka pro zobrazení zaměstnanců ve webové části
 
@@ -102,7 +104,7 @@ Můžete určit ovládací prvky, které se mají zobrazit ve webové části, j
      [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)]
      [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]
 
-4. Do třídy přidejte následující kód `WebPart1` . Tento kód přidá vlastní vlastnost s názvem `DataFilePath` do webové části. Vlastní vlastnost je vlastnost, kterou uživatel může nastavit v SharePointu. Tato vlastnost načte a nastaví umístění datového souboru XML, který se používá k naplnění datové mřížky.
+4. Do třídy `WebPart1` přidejte následující kód. Tento kód přidá vlastní vlastnost s názvem `DataFilePath` do webové části. Vlastní vlastnost je vlastnost, kterou uživatel může nastavit v SharePointu. Tato vlastnost načte a nastaví umístění datového souboru XML, který se používá k naplnění datové mřížky.
 
      [!code-csharp[SP_WebPart#3](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#3)]
      [!code-vb[SP_WebPart#3](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#3)]
@@ -178,7 +180,7 @@ Při spuštění projektu se otevře web služby SharePoint. Webová část je a
 
 8. Na stránce **vytvořit** vyberte typ **stránky Webová část** a pak klikněte na tlačítko **vytvořit** .
 
-9. Na stránce **Nová webová část** pojmenujte stránku **SampleWebPartPage. aspx**a pak klikněte na tlačítko **vytvořit** .
+9. Na stránce **Nová webová část** pojmenujte stránku **SampleWebPartPage. aspx** a pak klikněte na tlačítko **vytvořit** .
 
      Zobrazí se stránka webová část.
 

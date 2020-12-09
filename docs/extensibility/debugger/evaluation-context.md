@@ -1,5 +1,7 @@
 ---
 title: Kontext vyhodnocení | Microsoft Docs
+description: 'Když ladicí stroj volá vyhodnocovací filtr výrazů, argumenty určují kontext pro hledání a vyhodnocení symbolů: pSymbolProvider, pAddress a pBinder.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e3d02bd652d6c46b5aabe00e049e425f0921c27
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a021d5dfdff5058211f5bafdfd7854611f977c27
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738798"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914514"
 ---
 # <a name="evaluation-context"></a>Kontext vyhodnocení
 > [!IMPORTANT]
@@ -26,7 +28,7 @@ ms.locfileid: "80738798"
 
 ## <a name="arguments"></a>Arguments
 
-|Argument|Popis|
+|Argument|Description|
 |--------------|-----------------|
 |`pSymbolProvider`|Rozhraní [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md) , které určuje obslužnou rutinu symbolu (SH), která se má použít k identifikaci symbolu.|
 |`pAddress`|Rozhraní [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) , které určuje aktuální bod provádění. Toto rozhraní najde metodu, která obsahuje prováděný kód.|
