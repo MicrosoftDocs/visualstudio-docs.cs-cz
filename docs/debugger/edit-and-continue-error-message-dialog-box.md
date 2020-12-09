@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno chybové zprávy pro úpravy a pokračování | Microsoft Docs
+description: Upravit a pokračovat může hlásit, že není k dispozici pro změny kódu. Tento článek nabízí možné důvody.
+ms.custom: SEO-VS-2020
 ms.date: 10/15/2018
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7df95eae689f7c3abbb0d75a7557ce749bdceee5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8ef34889b838e2f7eaa92420eec90db9def57e65
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188232"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862840"
 ---
 # <a name="edit-and-continue-error-message"></a>Chybová zpráva úpravy a pokračování
 
@@ -45,7 +47,7 @@ Mezi možné příčiny této chybové zprávy patří:
 - Pokus o úpravu kódu v sestavení, které nebylo načteno.
 - Začíná ladit starou verzi aplikace, protože nejnovější verze obsahuje chyby sestavení.
 
-Další informace naleznete v tématu:
+Další informace najdete tady:
 - [Příspěvek na blogu pro úpravu a pokračování C++](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/)
 - [Podporované změny kódu (C++)](../debugger/supported-code-changes-cpp.md)
 - [Upravit a pokračovat](../debugger/edit-and-continue.md)

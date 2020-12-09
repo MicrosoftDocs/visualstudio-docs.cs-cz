@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Upravit a pokračovat | Microsoft Docs
+description: Pokud při ladění upravíte kód, zobrazí se dialogové okno Upravit a pokračovat. Naučte se řídit, jestli se změny kódu budou uplatňovat bez žádosti o oprávnění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 824ee989f17b6a341679f541f95906056cf6f8de
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: ed625d98cc4f3fe793ba0982771b0a57ff189526
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599540"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863098"
 ---
 # <a name="edit-and-continue-dialog-box"></a>Dialogové okno Upravit a pokračovat
 (Pouze nativní) Toto dialogové okno se zobrazí, pokud jste kód upravovali během ladění a možnost **Upravit a pokračovat** rozpozná, že může použít změny kódu. Další informace najdete v tématu [Úpravy a pokračování](../debugger/edit-and-continue.md).

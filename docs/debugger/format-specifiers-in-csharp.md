@@ -1,5 +1,7 @@
 ---
 title: Specifikátory formátu v ladicím programu (C#) | Microsoft Docs
+description: Použijte specifikátor formátu ke změně formátu, ve kterém je hodnota zobrazená v okno Kukátko. Tento článek poskytuje podrobné informace o využití.
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
 ms.topic: conceptual
 dev_langs:
@@ -25,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: caaf36e286f1bdc664ebdbb10e3baf7ed28183e7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31739b9c8fecc862c891173a792986b467730400
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62849850"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862786"
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Specifikátory formátu v jazyce C# v ladicím programu sady Visual Studio
 Můžete změnit formát, ve kterém se hodnota zobrazuje v okně **kukátka** , pomocí specifikátorů formátu. Můžete také použít specifikátory formátu v **příkazovém** okně, v **příkazovém** okně v [trasováním](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)a ve zdrojových oknech. Pokud v těchto oknech pozastavíte výraz, výsledek se zobrazí v  [DataTip](../debugger/view-data-values-in-data-tips-in-the-code-editor.md) v zadaném formátu.
@@ -48,7 +50,7 @@ Použijeme následující příklad kódu:
 }
 ```
 
-Přidat `my_var1` proměnnou do okna **kukátka** během ladění, **ladit**  >  **Windows**  >  **kukátko**kukátko  >  **1**. Potom klikněte pravým tlačítkem na proměnnou a vyberte **hexadecimální zobrazení**. Nyní okno **kukátka** zobrazuje hodnotu 0x0065. Chcete-li zobrazit tuto hodnotu jako desítkové celé číslo, nikoli hexadecimální celé číslo, přidejte specifikátor desítkového formátu **d** ve sloupci **název** za název proměnné. Sloupec **Value** nyní zobrazuje **101**.
+Přidat `my_var1` proměnnou do okna **kukátka** během ladění, **ladit**  >  **Windows**  >  **kukátko** kukátko  >  **1**. Potom klikněte pravým tlačítkem na proměnnou a vyberte **hexadecimální zobrazení**. Nyní okno **kukátka** zobrazuje hodnotu 0x0065. Chcete-li zobrazit tuto hodnotu jako desítkové celé číslo, nikoli hexadecimální celé číslo, přidejte specifikátor desítkového formátu **d** ve sloupci **název** za název proměnné. Sloupec **Value** nyní zobrazuje **101**.
 
 ![WatchFormatCSharp](../debugger/media/watchformatcsharp.png "WatchFormatCSharp")
 

@@ -1,5 +1,7 @@
 ---
 title: Spustitelný soubor pro relaci ladění – dialogové okno | Microsoft Docs
+description: Chcete-li ladit knihovnu DLL, je nutné zadat spustitelný soubor pro volání knihovny DLL. Přečtěte si o dialogovém okně, které se zobrazí, když není zadán žádný spustitelný soubor.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92cf53ed499318d60c8da5147685e3f0f340e404
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f4f1f1a88ad30d5102043571473be0d72d71a054
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72736241"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863046"
 ---
 # <a name="executable-for-debugging-session-dialog-box"></a>Dialogové okno Spustitelný soubor pro relaci ladění
 

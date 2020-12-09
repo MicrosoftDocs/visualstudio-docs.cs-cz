@@ -1,5 +1,7 @@
 ---
 title: Obecné, ladění, dialogové okno Možnosti | Microsoft Docs
+description: Nastavte možnosti ladicího programu sady Visual Studio tak, aby splňovaly vaše požadavky na ladění. Můžete nakonfigurovat chování přerušení, úrovně ladění, chování zobrazení a mnoho dalšího.
+ms.custom: SEO-VS-2020
 ms.date: 06/04/2020
 ms.topic: reference
 f1_keywords:
@@ -21,16 +23,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5b03d7b45e488d7e8026a7d6835bbfba1efa210
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b052c2cce3d396debb4fbaf8ce688ede3effb98
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286554"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863007"
 ---
 # <a name="general-debugging-options"></a>Obecné možnosti ladění
 
-Chcete-li nastavit možnosti ladicího programu sady Visual Studio, vyberte možnost **nástroje**  >  **Options**a v části **ladění** zaškrtněte nebo zrušte zaškrtnutí políček u **obecných** možností. Můžete obnovit všechna výchozí nastavení pomocí **nástrojů**pro  >  **Import a export nastavení**  >  **Obnovit všechna nastavení**. Chcete-li obnovit podmnožinu nastavení, uložte nastavení pomocí **Průvodce importem a exportem nastavení** před provedením změn, které chcete otestovat, a pak import uložených nastavení proveďte později.
+Chcete-li nastavit možnosti ladicího programu sady Visual Studio, vyberte možnost **nástroje**  >  **Options** a v části **ladění** zaškrtněte nebo zrušte zaškrtnutí políček u **obecných** možností. Můžete obnovit všechna výchozí nastavení pomocí **nástrojů** pro  >  **Import a export nastavení**  >  **Obnovit všechna nastavení**. Chcete-li obnovit podmnožinu nastavení, uložte nastavení pomocí **Průvodce importem a exportem nastavení** před provedením změn, které chcete otestovat, a pak import uložených nastavení proveďte později.
 
 Můžete nastavit následující **Obecné** možnosti:
 
@@ -93,7 +95,7 @@ V podmínkách 2 a 3 je výjimka někdy zachycena spravovaným kódem `mscorlib`
 
 **Vyžadovat, aby se zdrojové soubory přesně shodovaly s původní verzí**: instruuje ladicí program, aby ověřil, že zdrojový soubor odpovídá verzi zdrojového kódu používané k sestavení spustitelného souboru, který ladíte. Pokud se verze neshoduje, budete vyzváni k vyhledání odpovídajícího zdroje. Pokud se nenalezne shodný zdroj, během ladění se nezobrazí zdrojový kód.
 
-**Přesměrovat text z okna výstup do**příkazového okna: pošle všechny zprávy ladicího programu, které by se obvykle zobrazovaly v okně **výstup** , do příkazového **podokna místo** toho.
+**Přesměrovat text z okna výstup do** příkazového okna: pošle všechny zprávy ladicího programu, které by se obvykle zobrazovaly v okně **výstup** , do příkazového **podokna místo** toho.
 
 **Zobrazit nezpracovanou strukturu objektů v oknech proměnných**: vypne všechna přizpůsobení zobrazení struktury objektů. Další informace o úpravách zobrazení najdete v tématu [Vytvoření vlastních zobrazení spravovaných objektů](../debugger/create-custom-views-of-managed-objects.md).
 

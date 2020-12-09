@@ -1,5 +1,7 @@
 ---
 title: Upravit a pokračovat (Visual Basic) | Microsoft Docs
+description: Pro Visual Basic projekty jsou k dispozici úpravy a pokračování. Přečtěte si, jaké úpravy jsou podporované a jak můžete řídit, jestli a kdy se vaše úpravy aplikují.
+ms.custom: SEO-VS-2020
 ms.date: 10/11/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f73b67ac4268c04dfa9ff7ab020891623f528f9b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4560973cd6ccd2bbfee48028494731935945a4c
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62851241"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862968"
 ---
 # <a name="edit-and-continue-visual-basic"></a>Upravit a pokračovat (Visual Basic)
 Funkce upravit a pokračovat je funkcí pro [!INCLUDE [vbprvb](../code-quality/includes/vbprvb_md.md)] ladění, která umožňuje změnit kód, který je spuštěn v režimu pozastavení. Po použití úprav kódu můžete pokračovat v provádění kódu s novými úpravami na místě a zobrazit efekt.

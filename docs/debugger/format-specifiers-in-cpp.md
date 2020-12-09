@@ -1,5 +1,7 @@
 ---
 title: Specifikátory formátu v ladicím programu (C++) | Microsoft Docs
+description: Použijte specifikátor formátu ke změně formátu, ve kterém se hodnota zobrazuje v okně kukátko, automatické hodnoty a místní hodnoty. Tento článek poskytuje podrobné informace o využití.
+ms.custom: SEO-VS-2020
 ms.date: 3/11/2019
 ms.topic: conceptual
 f1_keywords:
@@ -24,15 +26,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 287ef3ccfd344786bd98098c5f28d0a2bd6573f6
-ms.sourcegitcommit: 4a9689890f271f9b8b73c3333e0699cce84a95d8
+ms.openlocfilehash: 64166768dea1da015c223a74c74440ae09a0d106
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90832317"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863033"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Specifikátory formátu pro C++ v ladicím programu sady Visual Studio
-Můžete změnit formát, ve kterém se hodnota zobrazuje v oknech **kukátko**, **Automatické**hodnoty a **místní** hodnoty pomocí specifikátorů formátu.
+Můžete změnit formát, ve kterém se hodnota zobrazuje v oknech **kukátko**, **Automatické** hodnoty a **místní** hodnoty pomocí specifikátorů formátu.
 
 Můžete také použít specifikátory formátu v **příkazovém** okně, v **příkazovém** okně, v [trasováním](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)a dokonce i ve zdrojových oknech. Pokud v těchto oknech pozastavíte výraz, výsledek se zobrazí v [DataTip](../debugger/view-data-values-in-data-tips-in-the-code-editor.md). Zobrazení DataTip odráží specifikátor formátu.
 
@@ -50,7 +52,7 @@ int main() {
 }
 ```
 
-Přidat `my_var1` proměnnou do okna **kukátka** během ladění, **ladit**  >  **Windows**  >  **kukátko**kukátko  >  **1**. Potom klikněte pravým tlačítkem na proměnnou a vyberte **hexadecimální zobrazení**. Nyní okno **kukátka** zobrazuje hodnotu 0x0065. Chcete-li zobrazit tuto hodnotu vyjádřenou jako znak, a ne jako celé číslo, napřed klikněte pravým tlačítkem myši a zrušte výběr **hexadecimálního zobrazení**. Poté do sloupce **název** za název proměnné přidejte specifikátor formátu znaků **, c** . Sloupec **Value** nyní zobrazuje **101 "e"**.
+Přidat `my_var1` proměnnou do okna **kukátka** během ladění, **ladit**  >  **Windows**  >  **kukátko** kukátko  >  **1**. Potom klikněte pravým tlačítkem na proměnnou a vyberte **hexadecimální zobrazení**. Nyní okno **kukátka** zobrazuje hodnotu 0x0065. Chcete-li zobrazit tuto hodnotu vyjádřenou jako znak, a ne jako celé číslo, napřed klikněte pravým tlačítkem myši a zrušte výběr **hexadecimálního zobrazení**. Poté do sloupce **název** za název proměnné přidejte specifikátor formátu znaků **, c** . Sloupec **Value** nyní zobrazuje **101 "e"**.
 
 ![WatchFormatCPlus1](../debugger/media/watchformatcplus1.png "WatchFormatCPlus1")
 
@@ -70,7 +72,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |---------------|------------|--------------------------|---------------------|
 |d|desítkové celé číslo|0x00000066|102|
 |o|osmičkové celé číslo bez znaménka|0x00000066|000000000146|
-|x<br /><br /> **y**|šestnáctkové celé číslo|102|0xcccccccc|
+|x<br /><br /> **h**|šestnáctkové celé číslo|102|0xcccccccc|
 |X<br /><br /> **H**|šestnáctkové celé číslo|102|0xCCCCCCCC|
 |XB<br /><br /> **nejenom**|šestnáctkové celé číslo (bez úvodní 0x)|102|cccccccc|
 |XB<br /><br /> **Nejenom**|šestnáctkové celé číslo (bez úvodní 0x)|102|CCCCCCCC|
@@ -91,7 +93,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |**s32b**|Řetězec UTF-32 (žádné uvozovky)|\<location> U "Hello World"|Ahoj světe|
 |**en**|enum|Sobota (6)|Sobota|
 |**hv**|Typ ukazatele – určuje, že hodnota kontrolovaného ukazatele je výsledkem přidělení haldy pole, například `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
-|**ná**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member = Value...}|{member = Value...}|
+|**není k dispozici**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member = Value...}|{member = Value...}|
 |**c**|Zobrazí pouze informace základní třídy, ignorování odvozených tříd.|`(Shape*) square` zahrnuje základní třídu a informace o odvozených třídách.|Zobrazí jenom informace o základní třídě.|
 |hod|Kód chyby HRESULT nebo Win32. Tento specifikátor již není potřeba pro HRESULTs, protože ladicí program je dekóduje automaticky.|S_OK|S_OK|
 |wc|Příznak třídy okna|0x0010|WC_DEFAULTCHAR|
@@ -108,7 +110,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |---------------|------------|--------------------------|---------------------|
 |d|desítkové celé číslo|0x00000066|102|
 |o|osmičkové celé číslo bez znaménka|0x00000066|000000000146|
-|x<br /><br /> **y**|šestnáctkové celé číslo|102|0xcccccccc|
+|x<br /><br /> **h**|šestnáctkové celé číslo|102|0xcccccccc|
 |X<br /><br /> **H**|šestnáctkové celé číslo|102|0xCCCCCCCC|
 |c|jeden znak|0x0065, c|101 "e"|
 |s|const char * String (s uvozovkami)|\<location> Hello World|Hello World|
@@ -123,7 +125,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |**s32b**|Řetězec UTF-32 (žádné uvozovky)|\<location> U "Hello World"|Ahoj světe|
 |**en**|enum|Sobota (6)|Sobota|
 |**hv**|Typ ukazatele – určuje, že hodnota kontrolovaného ukazatele je výsledkem přidělení haldy pole, například `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
-|**ná**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member = Value...}|{member = Value...}|
+|**není k dispozici**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member = Value...}|{member = Value...}|
 |**c**|Zobrazí pouze informace základní třídy, ignorování odvozených tříd.|`(Shape*) square` zahrnuje základní třídu a informace o odvozených třídách.|Zobrazí jenom informace o základní třídě.|
 |hod|Kód chyby HRESULT nebo Win32. Tento specifikátor již není potřeba pro HRESULTs, protože ladicí program je dekóduje automaticky.|S_OK|S_OK|
 |wc|Příznak třídy okna|0x0010|WC_DEFAULTCHAR|
@@ -149,11 +151,11 @@ Specifikátory **tučným písmem** jsou podporovány pouze pro ladění nativn�
 
 |Specifikátor|Formát|Původní hodnota kukátka|Zobrazená hodnota|
 |---------------|------------|--------------------------|---------------------|
-|**trojrozměrné**<br /><br />**i**|desítkové celé číslo se znaménkem|0xF000F065|-268373915|
+|**d**<br /><br />**i**|desítkové celé číslo se znaménkem|0xF000F065|-268373915|
 |**h**|desítkové celé číslo bez znaménka|0x0065|101|
 |o|osmičkové celé číslo bez znaménka|0xF065|0170145|
 |x<br /><br />X|Šestnáctkové celé číslo|61541|0x0000f065|
-|**l**<br /><br />**y**|dlouhá nebo krátká předpona pro: d, i, u, o, x, X|00406042|0x0c22|
+|**l**<br /><br />**h**|dlouhá nebo krátká předpona pro: d, i, u, o, x, X|00406042|0x0c22|
 |**FJ**|přihlášený plovoucí bod|(3./2.), f|1,500000|
 |**cerebrální**|podepsaný vědecký zápis|(3.0/2.0)|1.500000 e + 000|
 |**věcn**|přihlášený plovoucí bod nebo podepsaný vědecký zápis<br/> podle toho, co je kratší|(3.0/2.0)|1.5|
@@ -173,7 +175,7 @@ Následující tabulka popisuje symboly formátování používané pro umístě
 |Symbol|Formát|Původní hodnota kukátka|Zobrazená hodnota|
 |------------|------------|--------------------------|---------------------|
 |**Vy**|64 znaků ASCII|0x0012ffac|0x0012ffac. 4... 0.... 0W&....... 1T&.0.: W... 1.... ".... 1.JO&.1,2... 1... 0y.... první|
-|**4m**|16 bajtů v šestnáctkové soustavě následovaný 16 znaky ASCII|0x0012ffac|0x0012ffac B3 34 z 00 84 30 94 80 FF 22 8A 30 57 26 00 00.4... 0.... 0W&..|
+|**m**|16 bajtů v šestnáctkové soustavě následovaný 16 znaky ASCII|0x0012ffac|0x0012ffac B3 34 z 00 84 30 94 80 FF 22 8A 30 57 26 00 00.4... 0.... 0W&..|
 |**MB**|16 bajtů v šestnáctkové soustavě následovaný 16 znaky ASCII|0x0012ffac|0x0012ffac B3 34 z 00 84 30 94 80 FF 22 8A 30 57 26 00 00.4... 0.... 0W&..|
 |**MW**|8 slov|0x0012ffac|0x0012ffac 34B3 00CB 3084 8094 22FF 308A 2657 0000|
 |**MD**|4 doubleword|0x0012ffac|0x0012ffac 00CB34B3 80943084 308A22FF 00002657|

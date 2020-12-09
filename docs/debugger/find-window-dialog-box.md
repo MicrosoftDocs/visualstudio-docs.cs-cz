@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Najít okno | Microsoft Docs
+description: Pomocí dialogového okna Najít okno můžete vybrat okno a zobrazit jeho vlastnosti nebo zprávy.  Tento článek poskytuje podrobné informace o využití.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 392c0150c9bfb653a3a52c11c0d31097e04c9cc1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 571cee3b1e3a391a8dc328fcc76a0ca0d06ed14f
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62849984"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863020"
 ---
 # <a name="find-window-dialog-box"></a>Dialogové okno vyhledávacího okna
 Pomocí tohoto dialogového okna můžete vybrat okno a zobrazit jeho vlastnosti nebo zprávy. Chcete-li zobrazit toto dialogové okno, vyberte z nabídky **Spy** možnost **Najít okno** .

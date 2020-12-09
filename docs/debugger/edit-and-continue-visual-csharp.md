@@ -1,5 +1,7 @@
 ---
 title: Upravit a pokračovat (Visual C#) | Microsoft Docs
+description: Upravit a pokračovat jsou k dispozici pro projekty Visual C#. Přečtěte si, jaké úpravy jsou podporované a jak můžete řídit, jestli a kdy se vaše úpravy aplikují.
+ms.custom: SEO-VS-2020
 ms.date: 10/11/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 62411229acd2d2f8462984789037fc832dac09b8
-ms.sourcegitcommit: 822e61c69514e9f564d37ba6ca6832ccf7fbc60d
+ms.openlocfilehash: 55406001e4017c853895002445d9bd5d614b4b20
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91421638"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862878"
 ---
 # <a name="edit-and-continue-visual-c"></a>Upravit a pokračovat (Visual C#)
  Při úpravách a pokračování pro jazyk C# můžete provádět změny kódu v režimu pozastavení při ladění. Změny lze použít bez nutnosti zastavit a znovu spustit ladicí relaci. V režimu spuštění je zdrojový Editor určen jen pro čtení.
@@ -34,7 +36,7 @@ ms.locfileid: "91421638"
  > [!NOTE]
  > Mezi nepodporované aplikace a platformy patří Silverlight 5 a Windows 8.1.
 
- Když je povolená možnost upravit a pokračovat, podporované změny se použijí automaticky, když použijete příkaz pro spuštění ladicího programu, jako je například **pokračovat**, **Krok**, **nastavit další příkaz**nebo provést vyhodnocení funkce v okně ladicího programu.
+ Když je povolená možnost upravit a pokračovat, podporované změny se použijí automaticky, když použijete příkaz pro spuštění ladicího programu, jako je například **pokračovat**, **Krok**, **nastavit další příkaz** nebo provést vyhodnocení funkce v okně ladicího programu.
 
  Další informace najdete v tématu [Postupy: použití funkce upravit a pokračovat (C#)](../debugger/how-to-use-edit-and-continue-csharp.md).
 

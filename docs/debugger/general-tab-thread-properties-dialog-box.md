@@ -1,5 +1,6 @@
 ---
 title: Karta Obecné, dialogové okno vlastností vlákna | Microsoft Docs
+description: Zobrazte dialogové okno vlastnosti vlákna pro informace o vlákně, včetně názvu modulu, ID vlákna, ID procesu, stavu vlákna, důvodu čekání a času procesoru.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e8604c2d31f6bb50e9e77efbf6423f56ed719c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd4c2bf24058ce8a69f05d8d2cee17a18ff9505d
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62896364"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862994"
 ---
 # <a name="general-tab-thread-properties-dialog-box"></a>Karta Obecné, dialogové okno vlastností vlákna
 Pomocí tohoto dialogového okna můžete zjistit více o konkrétním vlákně. Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno [zobrazení vlákna](../debugger/threads-view.md) nebo otevřete [zobrazení zprávy](../debugger/messages-view.md) a rozbalte zprávu. Ve stromové struktuře vyberte libovolný uzel vlákna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .

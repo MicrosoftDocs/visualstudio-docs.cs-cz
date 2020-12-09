@@ -1,5 +1,7 @@
 ---
 title: Vyhledání nevrácené paměti pomocí knihovny CRT | Microsoft Docs
+description: Přečtěte si, jak ladicí program C/C++ a Knihovna CRT (C Run-Time Library) můžou najít nevracení paměti. Mezi techniky patří sestavy nevracení paměti a porovnávání snímků paměti.
+ms.custom: SEO-VS-2020
 ms.date: 10/04/2018
 ms.topic: how-to
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5deb42b2ab708bae572aebbcac15af2d077b14fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f5c906bd06fd4107166a45e93bf11be579c2270
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350482"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863072"
 ---
 # <a name="find-memory-leaks-with-the-crt-library"></a>Hledání nevrácené paměti pomocí knihovny CRT
 
@@ -108,7 +110,7 @@ Bez ohledu na to, zda definujete `_CRTDBG_MAP_ALLOC` , se zobrazí zpráva o nev
 - Velikost bloku `64 bytes` v příkladu.
 - Prvních 16 bajtů dat v bloku, v šestnáctkovém tvaru.
 
-Typy bloků paměti jsou *normální*, *klient*nebo *CRT*. *Normální blok* je běžná paměť přidělená vaším programem. *Klientský blok* je speciální typ bloku paměti, který používají programy MFC pro objekty, které vyžadují destruktor. Operátor MFC `new` vytvoří buď normální blok, nebo klientský blok, který je vhodný pro vytvoření objektu.
+Typy bloků paměti jsou *normální*, *klient* nebo *CRT*. *Normální blok* je běžná paměť přidělená vaším programem. *Klientský blok* je speciální typ bloku paměti, který používají programy MFC pro objekty, které vyžadují destruktor. Operátor MFC `new` vytvoří buď normální blok, nebo klientský blok, který je vhodný pro vytvoření objektu.
 
 *Blok CRT* je přidělen knihovnou CRT pro vlastní použití. Knihovna CRT zpracovává dealokaci pro tyto bloky, takže se bloky CRT nebudou zobrazovat v sestavě nevracení paměti, pokud neexistují vážné problémy s knihovnou CRT.
 
@@ -182,7 +184,7 @@ K nastavení zarážky při přidělování paměti lze použít číslo přidě
 
 1. Nastavte zarážku poblíž začátku aplikace a spusťte ladění.
 
-1. Když se aplikace zastaví na zarážce, otevřete okno **kukátka** tak, že vyberete **ladění**  >  **Windows**  >  **kukátko 1** (nebo **Sledujte 2**, **Sledujte 3**nebo **Sledujte 4**).
+1. Když se aplikace zastaví na zarážce, otevřete okno **kukátka** tak, že vyberete **ladění**  >  **Windows**  >  **kukátko 1** (nebo **Sledujte 2**, **Sledujte 3** nebo **Sledujte 4**).
 
 1. V okně **kukátko** zadejte `_crtBreakAlloc` sloupec **název** .
 

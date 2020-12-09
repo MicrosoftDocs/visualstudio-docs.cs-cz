@@ -1,5 +1,7 @@
 ---
 title: Výrazy v ladicím programu | Microsoft Docs
+description: Upravit a pokračovat jsou k dispozici pro projekty Visual C#. Přečtěte si, jaké úpravy jsou podporované a jak můžete řídit, jestli a kdy se vaše úpravy aplikují.
+ms.custom: SEO-VS-2020
 ms.date: 03/02/2020
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4a06a249fee38ca7fd8521459eda7bbf4100a97
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 28d04ce836316024eb4aef9f1b4a9955d98dbba8
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600287"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862864"
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Výrazy v ladicím programu sady Visual Studio
 Ladicí program sady Visual Studio obsahuje vyhodnocovací filtry výrazů, které fungují při zadání výrazu do dialogového okna **QuickWatch** , v okně **kukátka** nebo v okně **Immediate** . Vyhodnocovací filtry výrazů jsou také v práci v okně **zarážky** a v mnoha dalších místech v ladicím programu.
@@ -206,6 +208,6 @@ V oknech ladicího programu nelze deklarovat explicitní nové proměnné. V **p
 
 ## <a name="see-also"></a>Viz také
 - [Specifikátory formátu v jazyce C++](../debugger/format-specifiers-in-cpp.md)
-- [Kontextový operátor (C++)](../debugger/context-operator-cpp.md)
-- [Specifikátory formátu v jazyce C#](../debugger/format-specifiers-in-csharp.md)
+- [Operátor kontextu (C++)](../debugger/context-operator-cpp.md)
+- [Specifikátory formátu v jazyce C #](../debugger/format-specifiers-in-csharp.md)
 - [Pseudoproměnné](../debugger/pseudovariables.md)

@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno písmo (Microsoft Spy + + Help) | Microsoft Docs
+description: Pomocí dialogového okna písmo můžete nakonfigurovat písmo znaků používané v okně zobrazení nástroje Spy + +. Tento článek poskytuje podrobné informace o využití.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1746b8419c342b5627e1c6374b2b29f08f7ee75c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c3a3d5babc0fe78098661f22dd84fca1eac9b19
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62849865"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862825"
 ---
 # <a name="font-dialog-box-microsoft-spy-help"></a>Dialogové okno písem (nápověda nástroje Microsoft Spy++)
 Pomocí tohoto dialogového okna můžete nakonfigurovat písmo znaků používané v okně [zobrazení nástroje Spy + +](../debugger/spy-increment-views.md) . Chcete-li zobrazit toto dialogové okno, rozbalte nabídku **zobrazení** a vyberte možnost **písmo**.
