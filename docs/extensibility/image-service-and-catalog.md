@@ -1,5 +1,7 @@
 ---
 title: Služba a katalog imagí | Microsoft Docs
+description: Tento článek obsahuje doprovodné materiály a osvědčené postupy pro přijetí služby image a katalogu imagí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 04/01/2019
 ms.topic: conceptual
 ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a098e78e8895aea72d830a88e436a06f15de6133
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 41adcbe97f9d0779fbad465bac673a3f7cf086c7
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584539"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993533"
 ---
 # <a name="image-service-and-catalog"></a>Služba a katalog imagí
 Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přijetí služby image a katalogu imagí sady Visual Studio představené v aplikaci Visual Studio 2015.
@@ -118,7 +120,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
  Některé symboly jsou předdefinované pro všechny manifesty. Ty lze použít v atributu identifikátoru URI \<Source> \<Import> prvku nebo na odkazování cest v místním počítači.
 
-|**Písmeno**|**Popis**|
+|**Symbol**|**Popis**|
 |-|-|
 |CommonProgramFiles|Hodnota proměnné prostředí% CommonProgramFiles%|
 |LocalAppData|Hodnota proměnné prostředí% LocalAppData%|
@@ -128,7 +130,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 |Systém|Složka *Windows\System32*|
 |Adresář|Hodnota proměnné prostředí% WinDir%|
 
- **Image**
+ **Obrázek**
 
  \<Image>Prvek definuje obrázek, na který může odkazovat moniker. Identifikátor GUID a ID, které se přijímají společně tvoří moniker bitové kopie. Moniker obrázku musí být v celé knihovně imagí jedinečný. Pokud má více než jeden obrázek daný moniker, při sestavování knihovny je ten, který se zachovává.
 
@@ -160,7 +162,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 |**Atribut**|**Definice**|
 |-|-|
 |Identifikátor URI|Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může to být jedna z následujících:<br /><br /> – [Identifikátor URI balíčku](/dotnet/framework/wpf/app-development/pack-uris-in-wpf) pomocí autority Application:///<br />– Odkaz na prostředek absolutní součásti<br />– Cesta k souboru, který obsahuje nativní prostředek|
-|Pozadí|Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může to být jedna z následujících:<br /><br /> *Světlá:* Zdroj lze použít na světlém pozadí.<br /><br /> *Tmavě tmavá:* Zdroj lze použít na tmavém pozadí.<br /><br /> *HighContrast:* Zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastLight:* Zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastDark:* Zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut Background vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud je pozadí *světlé*, *tmavé*, *HighContrastLight*nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je pozadí vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku.|
+|Pozadí|Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může to být jedna z následujících:<br /><br /> *Světlá:* Zdroj lze použít na světlém pozadí.<br /><br /> *Tmavě tmavá:* Zdroj lze použít na tmavém pozadí.<br /><br /> *HighContrast:* Zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastLight:* Zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastDark:* Zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut Background vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud je pozadí *světlé*, *tmavé*, *HighContrastLight* nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je pozadí vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku.|
 
 \<Source>Element může mít přesně jeden z následujících volitelných dílčích elementů:
 
@@ -465,7 +467,7 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 
  Jedná se o klíčová místa pro použití monikerů v okně nástroje. Postupujte podle pokynů pro každý z těchto kroků:
 
-1. Karta okna nástroje, když se karty dostatečně zmenší (použijí se také v přepínači okna s **klávesou Ctrl** + **Tab** ).
+1. Karta okna nástroje, když se karty dostatečně zmenší (použijí se také v přepínači okna s **klávesou Ctrl** +  ).
 
     Přidejte tento řádek do konstruktoru pro třídu, která je odvozena z typu **třídy ToolWindowPane** :
 
@@ -497,7 +499,7 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 
    Jedná se o klíčová místa pro použití monikerů v okně nástroje. Postupujte podle pokynů pro každý z těchto kroků:
 
-3. Karta okna nástroje, když se karty dostatečně zmenší (použijí se také v přepínači okna s **klávesou Ctrl** + **Tab** ).
+3. Karta okna nástroje, když se karty dostatečně zmenší (použijí se také v přepínači okna s **klávesou Ctrl** +  ).
 
    1. Odeberte tyto řádky (pokud existují) v konstruktoru pro třídu, která je odvozena z typu **třídy ToolWindowPane** :
 
@@ -576,9 +578,9 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 ## <a name="how-do-i-port-a-project-system"></a>Návody rozportovat systém projektu?
  **Jak dodat ImageMonikers pro projekt**
 
-1. Implementujte **VSHPROPID_SupportsIconMonikers** v **IVsHierarchy**projektu a vraťte hodnotu true.
+1. Implementujte **VSHPROPID_SupportsIconMonikers** v **IVsHierarchy** projektu a vraťte hodnotu true.
 
-2. Implementujte **buď VSHPROPID_IconMonikerImageList** (Pokud původní projekt používá **VSHPROPID_IconImgList**) nebo **VSHPROPID_IconMonikerGuid** **VSHPROPID_IconMonikerId** **VSHPROPID_OpenFolderIconMonikerGuid VSHPROPID_OpenFolderIconMonikerId (** Pokud **VSHPROPID_OpenFolderIconMonikerId** původní projekt používá **VSHPROPID_IconHandle** a **VSHPROPID_OpenFolderIconHandle**).
+2. Implementujte **buď VSHPROPID_IconMonikerImageList** (Pokud původní projekt používá **VSHPROPID_IconImgList**) nebo **VSHPROPID_IconMonikerGuid** **VSHPROPID_IconMonikerId** **VSHPROPID_OpenFolderIconMonikerGuid VSHPROPID_OpenFolderIconMonikerId (** Pokud  původní projekt používá **VSHPROPID_IconHandle** a **VSHPROPID_OpenFolderIconHandle**).
 
 3. Změňte implementaci původní VSHPROPIDs pro ikony a vytvořte tak starší verze ikon, pokud je požadují Rozšiřovací body. **IVsImageService2** poskytuje funkce potřebné k získání těchto ikon.
 
@@ -638,7 +640,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
    - Doporučené: Přejmenujte symbol AssetsGuid a symbol pruhu obrázku tak, aby odpovídaly jeho využití.
 
-   - Nahraďte identifikátor GUID každého **ContainedImage**pomocí $ (ImageCatalogGuid), nahraďte jednotlivá ID **ContainedImage**pomocí $ ( \<moniker> ) a přidejte do každého **ContainedImage** atribut External = "true".
+   - Nahraďte identifikátor GUID každého **ContainedImage** pomocí $ (ImageCatalogGuid), nahraďte jednotlivá ID **ContainedImage** pomocí $ ( \<moniker> ) a přidejte do každého **ContainedImage** atribut External = "true".
 
        - \<moniker> by měl být nahrazen **KnownMoniker** , který odpovídá obrázku, ale má "KnownMonikers". odebráno z názvu.
 
@@ -714,9 +716,9 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 ## <a name="testing-your-images"></a>Testování imagí
  Pomocí nástroje Prohlížeč knihovny obrázků můžete testovat manifesty imagí, abyste měli jistotu, že všechno je správně vytvořené. Tento nástroj najdete v [sadě Visual Studio 2015 SDK](visual-studio-sdk.md). Dokumentaci k tomuto nástroji a dalším uživatelům najdete [tady](./internals/vssdk-utilities.md?view=vs-2015&preserve-view=true).
 
-## <a name="additional-resources"></a>Další zdroje informací
+## <a name="additional-resources"></a>Další zdroje
 
-### <a name="samples"></a>Ukázky
+### <a name="samples"></a>ukázky
  Několik ukázek sady Visual Studio na GitHubu bylo aktualizováno, aby ukázaly, jak používat službu Image jako součást různých bodů rozšiřitelnosti sady Visual Studio.
 
  Podívejte [http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples) se na nejnovější ukázky.
@@ -736,7 +738,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
  Nástroj Prohlížeč knihovny obrázků může načíst manifesty obrázků a umožňuje uživatelům manipulovat stejným způsobem, jako by se v aplikaci Visual Studio zajistilo správné vytváření manifestu. Uživatel může změnit nastavení pozadí, velikosti, DPI, Vysoký kontrast a dalších nastavení. Zobrazuje také informace o načítání pro hledání chyb v manifestech a zobrazuje zdrojové informace pro každý obrázek v manifestu.
 
-## <a name="faq"></a>Časté otázky
+## <a name="faq"></a>Nejčastější dotazy
 
 - Existují nějaké závislosti, které je potřeba zahrnout při načítání \<Reference Include="Microsoft.VisualStudio.*.Interop.14.0.DesignTime" /> ?
 
@@ -1009,7 +1011,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphGroupJSharpInterface|GlyphItemShortcut|InterfaceShortcut|
     |GlyphGroupError||StatusError|
     |GlyphBscFile||ClassFile|
-    |GlyphAssembly||Reference|
+    |GlyphAssembly||Referenční informace|
     |GlyphLibrary||Knihovna|
     |GlyphVBProject||VBProjectNode|
     |GlyphCoolProject||CSProjectNode|

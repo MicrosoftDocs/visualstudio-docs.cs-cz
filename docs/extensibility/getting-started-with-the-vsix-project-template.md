@@ -1,5 +1,7 @@
 ---
 title: Začínáme se šablonou projektu VSIX | Microsoft Docs
+description: Naučte se, jak pomocí šablony projektu VSIX vytvořit rozšíření nebo zabalit existující rozšíření pro nasazení.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 18ca9672b22120718f63638d8668812d0e42e41f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c6c7c2e12f01b008be6937a8c974f2eea183d594
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905879"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994339"
 ---
 # <a name="get-started-with-the-vsix-project-template"></a>Začínáme se šablonou projektu VSIX
 
@@ -35,7 +37,7 @@ Můžete použít šablonu projektu VSIX k vytvoření rozšíření nebo pro za
 
     2. V nabídce **projekt** klikněte na položku **Exportovat šablonu**. Dokončete kroky průvodce.
 
-         Soubor *. zip* se vytvoří v *%USERPROFILE%\My Documents\Visual studiu {Version} \My exportovaných šablon \\ *.
+         Soubor *. zip* se vytvoří v *%USERPROFILE%\My Documents\Visual studiu {Version} \My exportovaných šablon \\*.
 
 2. Vytvoří prázdný projekt VSIX.
 
@@ -43,7 +45,7 @@ Můžete použít šablonu projektu VSIX k vytvoření rozšíření nebo pro za
 
 3. Přidejte do projektu soubor *. zip* . Nastavte vlastnost **Kopírovat do výstupního adresáře** na `Copy Always` .
 
-4. V **Průzkumník řešení**dvakrát klikněte na soubor *source. extension. vsixmanifest* a otevřete ho v **Návrháři manifestu VSIX**a proveďte následující změny:
+4. V **Průzkumník řešení** dvakrát klikněte na soubor *source. extension. vsixmanifest* a otevřete ho v **Návrháři manifestu VSIX** a proveďte následující změny:
 
     - Nastavte pole **název produktu** na **Moje šablony projektu**.
 
@@ -83,7 +85,7 @@ Můžete použít šablonu projektu VSIX k vytvoření rozšíření nebo pro za
 
 1. Složky šablon se nacházejí v adresářích *{cesta instalace sady Visual Studio} \Common7\IDE\ProjectTemplates* a *{Visual Studio Installation Path} \Common7\IDE\ItemTemplates* . Názvy sekcí nejvyšší úrovně v dialogovém okně **Nový projekt** se přesně neshodují s názvy složek šablon. Pokud se liší, použijte název složky šablony.
 
-    Změňte příponu souboru *. vsix* na *. zip*a pak soubor otevřete.
+    Změňte příponu souboru *. vsix* na *. zip* a pak soubor otevřete.
 
 2. Vytvořte novou složku se stejným názvem jako oddíl v dialogovém okně **Nový projekt** , ve kterém by se šablona měla zobrazit.
 

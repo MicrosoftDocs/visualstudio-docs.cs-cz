@@ -1,5 +1,6 @@
 ---
 title: Správa soukromé Galerie pomocí nastavení registru
+description: Naučte se řídit přístup k ovládacím prvkům, šablonám a nástrojům v galerii sady Visual Studio, galerii ukázek nebo soukromých galeriích.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2dcbacbe415eac6829dc51e95442905bba932d6a
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: d15d845f07310e3efcba6f05538a2207d9c416e4
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038540"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994003"
 ---
 # <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>Postupy: Správa privátní Galerie pomocí nastavení registru
 Pokud jste správcem nebo vývojářem rozšíření izolovaného prostředí, můžete řídit přístup k ovládacím prvkům, šablonám a nástrojům v galerii sady Visual Studio, galerii ukázek nebo soukromých galeriích. Pokud chcete galerii zpřístupnit nebo není k dispozici, vytvořte soubor *. pkgdef* , který popisuje upravené klíče registru a jejich hodnoty.
@@ -27,7 +28,7 @@ Pokud jste správcem nebo vývojářem rozšíření izolovaného prostředí, m
 
 ```
 [$RootKey$\ExtensionManager\Repositories\{UniqueGUID}]
-@={URI}  (REG_SZ)
+@={URI}  (REG_SZ)
 Disabled=0 | 1 (DWORD)
 Priority=0 (highest priority) ... MaxInt (lowest priority) (DWORD) (uint)
 Protocol=Atom Feed|Sharepoint (REG_SZ)

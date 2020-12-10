@@ -1,5 +1,5 @@
 ---
-title: Uspořádání objektů do kontejnerů rozložení v Návrháři XAML
+title: Uspořádání objektů do kontejnerů rozložení
 description: Přečtěte si o panelech rozložení a ovládacích prvcích v Návrhář XAML, které se používají k uspořádání objektů na stránce, jako jsou Grid, plátno, ohraničení a Viewbox.
 ms.custom: SEO-VS-2020
 ms.date: 07/17/2020
@@ -8,12 +8,12 @@ ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 6df200c5adb4993d13e896eaa6d2041e0e9db044
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 1dbde9c270e0b83a5d85ef3b95c8fb438e43e1b1
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047343"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995522"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>Uspořádání objektů do kontejnerů rozložení v Návrháři XAML
 
@@ -21,7 +21,7 @@ Tento článek popisuje panely rozložení a ovládací prvky pro Návrhář XAM
 
 Představte si, kde byste chtěli zobrazit objekty na objektech stránky, jako jsou &mdash; obrázky, tlačítka a videa. Možná budete chtít, aby se zobrazovaly v řádcích a sloupcích, na jednom řádku svisle nebo vodorovně nebo na pevných pozicích.
 
-Až budete mít možnost si představit, jak se stránka může zobrazit, vyberte panel rozložení. Všechny stránky začínají na jednom, protože potřebujete něco, ke kterému přidáte objekty. Ve výchozím nastavení je to **Mřížka** , ale můžete ji změnit.
+Až budete mít možnost si představit, jak se stránka může zobrazit, vyberte panel rozložení. Všechny stránky začínají na jednom, protože potřebujete něco, ke kterému přidáte objekty. Ve výchozím nastavení je to **Mřížka**, ale můžete ji změnit.
 
 Panely rozložení vám pomohou uspořádat objekty na stránce, ale mají větší hodnotu. Umožňují vám navrhovat různé velikosti a rozlišení obrazovky. Když uživatelé spustí vaši aplikaci, vše v panelu rozložení mění velikost tak, aby odpovídala skutečnému vzhledu zařízení na obrazovce. Samozřejmě, pokud nechcete, aby to vaše rozložení mělo, můžete toto chování přepsat pro část rozložení nebo celé rozložení. Můžete použít vlastnosti Height a Width k řízení.
 
@@ -89,11 +89,11 @@ Vytvořte ohraničení, pozadí nebo obojí kolem objektu. Do **ohraničení** l
 
 ### <a name="popup"></a>Překryvný
 
-Zobrazit informace nebo možnosti uživatelům v okně. Do **překryvného okna** lze přidat pouze jeden objekt. Ve výchozím nastavení obsahuje **automaticky otevírané okno** **mřížku** , ale můžete ho změnit.
+Zobrazit informace nebo možnosti uživatelům v okně. Do **překryvného okna** lze přidat pouze jeden objekt. Ve výchozím nastavení obsahuje **automaticky otevírané okno** **mřížku**, ale můžete ho změnit.
 
 ### <a name="scrollviewer"></a>ScrollViewer
 
-Umožní uživatelům procházet stránku nebo oblast stránky. Do **ScrollViewer** můžete přidat pouze jeden objekt, takže má smysl přidat panel rozložení, jako je například **Mřížka** nebo **StackPanel** .
+Umožní uživatelům procházet stránku nebo oblast stránky. Do **ScrollViewer** můžete přidat pouze jeden objekt, takže má smysl přidat panel rozložení, jako je například **Mřížka** nebo **StackPanel**.
 
 ![Ovládací prvek rozložení ScrollViewer](../designers/media/06b326d4-f23d-41a6-b26b-e1aff37572a7.png)
 

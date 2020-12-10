@@ -1,5 +1,7 @@
 ---
-title: 'Postupy: otevření editorů specifických pro projekt | Microsoft Docs'
+title: 'Postupy: otevření editorů Project-Specific | Microsoft Docs'
+description: Naučte se implementovat metodu OpenItem s editorem specifickým pro projekt, aby projekt mohl otevřít soubor vázaný na editor pro daný projekt.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22106ea09f86e3d61fe7aaa6e86e6e99c002f32d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4cbba1f4d6cf0a2a5a45dd2999afa5bbf3443fca
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905799"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993780"
 ---
 # <a name="how-to-open-project-specific-editors"></a>Postupy: otevření editorů specifických pro projekt
 Pokud je soubor položky, který je otevřen projektem, vnitřně svázán s konkrétním editorem pro daný projekt, projekt musí otevřít soubor pomocí editoru specifického pro projekt. Soubor nelze delegovat na mechanismus rozhraní IDE pro výběr editoru. Například namísto použití standardního editoru rastrového obrázku můžete použít tuto možnost editoru pro konkrétní projekt k určení konkrétního editoru rastrového obrázku, který rozpozná informace v souboru, který je jedinečný pro váš projekt.

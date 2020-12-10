@@ -1,5 +1,7 @@
 ---
 title: Fáze zřetězení grafiky | Microsoft Docs
+description: Řešení problémů s vykreslováním pomocí zobrazení způsobu transformace volání remíz v každé fázi kanálu grafiky Direct3D.
+ms.custom: SEO-VS-2020
 ms.date: 02/09/2017
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d697313289bbf00234764cc04603b7bc256f174
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 150c61e271e7951332848a601aaddc619a1c37e5
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735471"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993923"
 ---
 # <a name="graphics-pipeline-stages"></a>Fáze zřetězení grafiky
 Okno fáze zřetězení grafiky vám pomůže pochopit, jak je jednotlivé volání vykreslování transformované všemi fázemi grafického kanálu Direct3D.

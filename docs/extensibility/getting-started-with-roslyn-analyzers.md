@@ -1,5 +1,7 @@
 ---
 title: Začínáme s analyzátory Roslyn | Microsoft Docs
+description: Pomocí těchto zdrojů můžete začít s analyzátory Roslyn v aplikaci Visual Studio; Obsahuje kurz a několik příkladů.
+ms.custom: SEO-VS-2020
 ms.date: 04/02/2018
 ms.topic: conceptual
 ms.assetid: 367c2ec8-3059-46a5-9d1c-57bead0419e7
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d572c49f7d528b9dbb624bf31ad5e28dc3799aa
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: c63510083f227f617b2a11ddec07510ffd792433
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012240"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994352"
 ---
 # <a name="get-started-with-roslyn-analyzers"></a>Začínáme s analyzátory Roslyn
 
@@ -31,7 +33,7 @@ S živými analyzátory kódu založenými na projektech v aplikaci Visual Studi
 
 [Několik příkladů na GitHubu, seskupené do tří druhů analyzátorů](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Reference k verzi balíčku platformy .NET Compiler](roslyn-version-support.md)
 - [Další dokumentace na webu GitHub OSS](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)

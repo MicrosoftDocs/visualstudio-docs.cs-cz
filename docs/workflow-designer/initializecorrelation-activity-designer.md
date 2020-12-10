@@ -1,6 +1,6 @@
 ---
-title: Návrhář aktivity Návrhář postupu provádění – InitializeCorrelation
-description: Přečtěte si, jak můžete pomocí návrháře aktivit InitializeCorrelation vytvořit a nakonfigurovat aktivitu InitializeCorrelation.
+title: Návrhář aktivity InitializeCorrelation
+description: V Návrhář postupu provádění se dozvíte, jak můžete pomocí návrháře aktivit InitializeCorrelation vytvořit a nakonfigurovat aktivitu InitializeCorrelation.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82b786277c79a355e1859b337a45ab093e6f2a42
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 0ef70cb452c01917f65619d400c21ed18ed11721
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437785"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993195"
 ---
 # <a name="initializecorrelation-activity-designer"></a>Návrhář aktivity InitializeCorrelation
 
@@ -43,9 +43,9 @@ V následující tabulce jsou uvedeny <xref:System.ServiceModel.Activities.Initi
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Popisný název <xref:System.ServiceModel.Activities.InitializeCorrelation> aktivity Výchozí hodnota je InitializeCorrelation.<br /><br /> I když použití jiné než výchozí hodnoty pro popis <xref:System.Activities.Activity.DisplayName%2A> není naprosto povinné, doporučuje se.|
-|<xref:System.ServiceModel.Activities.InitializeCorrelation.Correlation%2A>|Nepravda|<xref:System.ServiceModel.Activities.CorrelationHandle>Slouží k přidružení aktivit pracovního postupu v korelaci.|
-|<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>|Nepravda|Slovník dat korelace, který se týká zpráv instance pracovního postupu.<br /><br /> Pomocí dialogového okna **inicializovat korelaci** můžete nakonfigurovat <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> . Další informace o tom, jak používat toto dialogové okno, najdete v článku [dialogové okno Editor kolekcí typů](../workflow-designer/type-collection-editor-dialog-box.md) .|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Popisný název <xref:System.ServiceModel.Activities.InitializeCorrelation> aktivity Výchozí hodnota je InitializeCorrelation.<br /><br /> I když použití jiné než výchozí hodnoty pro popis <xref:System.Activities.Activity.DisplayName%2A> není naprosto povinné, doporučuje se.|
+|<xref:System.ServiceModel.Activities.InitializeCorrelation.Correlation%2A>|Ne|<xref:System.ServiceModel.Activities.CorrelationHandle>Slouží k přidružení aktivit pracovního postupu v korelaci.|
+|<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>|Ne|Slovník dat korelace, který se týká zpráv instance pracovního postupu.<br /><br /> Pomocí dialogového okna **inicializovat korelaci** můžete nakonfigurovat <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> . Další informace o tom, jak používat toto dialogové okno, najdete v článku [dialogové okno Editor kolekcí typů](../workflow-designer/type-collection-editor-dialog-box.md) .|
 
 ## <a name="see-also"></a>Viz také
 

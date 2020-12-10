@@ -1,5 +1,7 @@
 ---
 title: Rozšiřování projektů | Microsoft Docs
+description: Naučte se vytvářet vlastní typy projektů v sadě Visual Studio SDK a spravovat různé typy řešení sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14108a304cc5f85c9a870bc66804df7daa98f3ca
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 181acea9a5188ba28a4ef109b5bec0e7c040b5da
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711753"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994612"
 ---
 # <a name="extend-projects"></a>Roztažení projektů
 Projekty a řešení jsou způsoby, kterými Visual Studio uspořádává kód a soubory prostředků do kompilace a jednotek nasazení. Můžete najít další informace o projektech v [projektech (Visual Studio SDK)](../extensibility/extending-projects.md).

@@ -1,5 +1,7 @@
 ---
 title: Rozšíření filtru Průzkumník řešení | Microsoft Docs
+description: Naučte se, jak můžete roztáhnout funkce filtru Průzkumník řešení a zobrazit nebo skrýt různé soubory v sadě Visual Studio SDK.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +13,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af0824edd4188481bec8c0703d71043354f5dbcc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cde3377582c3bac0c27371e25f28e5151d641db1
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711562"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994560"
 ---
 # <a name="extend-the-solution-explorer-filter"></a>Rozšíří Průzkumník řešení filtr.
-Můžete roztáhnout funkce filtru **Průzkumník řešení** a zobrazit nebo skrýt jiné soubory. Můžete například vytvořit filtr, který v **Průzkumník řešení**zobrazí pouze soubory továrny tříd C#, jak ukazuje tento návod.
+Můžete roztáhnout funkce filtru **Průzkumník řešení** a zobrazit nebo skrýt jiné soubory. Můžete například vytvořit filtr, který v **Průzkumník řešení** zobrazí pouze soubory továrny tříd C#, jak ukazuje tento návod.
 
 ## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
@@ -54,7 +56,7 @@ Můžete roztáhnout funkce filtru **Průzkumník řešení** a zobrazit nebo sk
 
 4. V poli **zdroj** vyberte **projekt v aktuálním řešení**.
 
-5. V poli **projekt** zvolte možnost **Filtr**a pak klikněte na tlačítko **OK** .
+5. V poli **projekt** zvolte možnost **Filtr** a pak klikněte na tlačítko **OK** .
 
 ### <a name="add-the-filter-code"></a>Přidat kód filtru
 
@@ -158,7 +160,7 @@ Můžete roztáhnout funkce filtru **Průzkumník řešení** a zobrazit nebo sk
 
     ```
 
-4. V *FileFilter.cs*odeberte umístění příkazů a kód pro zpracování z konstruktoru filtru souborů. Výsledek by měl vypadat takto:
+4. V *FileFilter.cs* odeberte umístění příkazů a kód pro zpracování z konstruktoru filtru souborů. Výsledek by měl vypadat takto:
 
     ```csharp
     private FileFilter(Package package)
@@ -174,7 +176,7 @@ Můžete roztáhnout funkce filtru **Průzkumník řešení** a zobrazit nebo sk
 
      Odeberte `ShowMessageBox()` taky tuto metodu.
 
-5. V *FileFilterPackage.cs*nahraďte kód v `Initialize()` metodě následujícím kódem:
+5. V *FileFilterPackage.cs* nahraďte kód v `Initialize()` metodě následujícím kódem:
 
     ```csharp
     protected override void Initialize()

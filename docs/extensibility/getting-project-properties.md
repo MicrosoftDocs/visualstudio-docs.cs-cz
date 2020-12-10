@@ -1,5 +1,7 @@
 ---
 title: Načítají se vlastnosti projektu | Microsoft Docs
+description: Naučte se, jak zobrazit vlastnosti projektu v okně nástroje. Tento příklad znázorňuje ovládací prvek stromu v okně nástroje.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ddfd48827bc762c9189f9b7600cfe9200e5c866
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd8e23b859577301d28cf23ac59462d08ad9a447
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711413"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994456"
 ---
 # <a name="get-project-properties"></a>Získat vlastnosti projektu
 
@@ -30,7 +32,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. Každé rozšíření sady Visual Studio začíná projektem nasazení VSIX, který bude obsahovat prostředky rozšíření. Vytvořte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt VSIX s názvem `ProjectPropertiesExtension` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Přidejte okno nástroje přidáním vlastní šablony položky okna nástroje s názvem `ProjectPropertiesToolWindow` . V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V **dialogovém okně Přidat novou položku**, přejít na rozšiřitelnost **položek Visual C#**  >  **Extensibility** a vybrat **vlastní panel nástrojů**. V poli **název** v dolní části dialogového okna změňte název souboru na `ProjectPropertiesToolWindow.cs` . Další informace o tom, jak vytvořit vlastní panel nástrojů, najdete v tématu [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).
+2. Přidejte okno nástroje přidáním vlastní šablony položky okna nástroje s názvem `ProjectPropertiesToolWindow` . V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V **dialogovém okně Přidat novou položku**, přejít na rozšiřitelnost **položek Visual C#**  >   a vybrat **vlastní panel nástrojů**. V poli **název** v dolní části dialogového okna změňte název souboru na `ProjectPropertiesToolWindow.cs` . Další informace o tom, jak vytvořit vlastní panel nástrojů, najdete v tématu [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).
 
 3. Sestavte řešení a ověřte, zda se zkompiluje bez chyb.
 
@@ -44,9 +46,9 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
     ```
 
-2. V souboru *ProjectPropertiesToolWindowControl. XAML*odeberte existující tlačítko a přidejte prvek TreeView z panelu nástrojů. Můžete také odebrat obslužnou rutinu události Click ze souboru *ProjectPropertiesToolWindowControl.XAML.cs* .
+2. V souboru *ProjectPropertiesToolWindowControl. XAML* odeberte existující tlačítko a přidejte prvek TreeView z panelu nástrojů. Můžete také odebrat obslužnou rutinu události Click ze souboru *ProjectPropertiesToolWindowControl.XAML.cs* .
 
-3. V *ProjectPropertiesToolWindowCommand.cs*použijte `ShowToolWindow()` metodu k otevření projektu a načtení jeho vlastností a poté přidejte vlastnosti do prvku TreeView. Kód pro ShowToolWindow by měl vypadat takto:
+3. V *ProjectPropertiesToolWindowCommand.cs* použijte `ShowToolWindow()` metodu k otevření projektu a načtení jeho vlastností a poté přidejte vlastnosti do prvku TreeView. Kód pro ShowToolWindow by měl vypadat takto:
 
     ```csharp
     private void ShowToolWindow(object sender, EventArgs e)

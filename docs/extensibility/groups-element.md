@@ -1,5 +1,7 @@
 ---
 title: Groups – element | Microsoft Docs
+description: Element Groups obsahuje položky, které definují skupiny příkazů VSPackage. Tento článek obsahuje příklad.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6383c3c7a28f9aa7778fddcbfe36b237d21323f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31b5885ad6e08bd9e22049033d6191c97fdc857b
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711177"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994287"
 ---
 # <a name="groups-element"></a>Groups – element
 Obsahuje položky, které definují skupiny příkazů VSPackage.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <Groups>
@@ -37,7 +39,7 @@ Obsahuje položky, které definují skupiny příkazů VSPackage.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 

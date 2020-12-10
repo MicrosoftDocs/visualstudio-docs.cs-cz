@@ -1,5 +1,7 @@
 ---
 title: Postup převodu rozšíření
+description: Naučte se, jak provést operaci rozšíření projektů rozšiřitelnosti sady Visual Studio mezi Visual Studio 2015 a Visual Studio 2019 nebo Visual Studio 2017.
+ms.custom: SEO-VS-2020
 ms.date: 06/25/2017
 ms.topic: how-to
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
@@ -8,12 +10,12 @@ ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: ca1f367510aa9730c1b3b212438579a8eaeb0e8f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3db3264bf5226b5679452659928e451e7975b001
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387275"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993611"
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>Postupy: zajištění kompatibility rozšíření se sadou Visual Studio 2019/2017 a sadou Visual Studio 2015
 
@@ -55,7 +57,7 @@ Později v tomto dokumentu vložíme podmíněné příkazy import do souboru **
 Pokud projekt obsahuje *project.jsv* souboru:
 
 * Poznamenejte si odkazy v *project.jsna*.
-* Z **Průzkumník řešení**odstraňte *project.jsv* souboru z projektu. Tím se odstraní *project.jsv* souboru a odebere se z projektu.
+* Z **Průzkumník řešení** odstraňte *project.jsv* souboru z projektu. Tím se odstraní *project.jsv* souboru a odebere se z projektu.
 * Přidejte do projektu odkazy NuGet zpátky:
   * Klikněte pravým tlačítkem na **řešení** a vyberte **Spravovat balíčky NuGet pro řešení**.
   * Visual Studio automaticky vytvoří soubor *packages.config* .
@@ -122,7 +124,7 @@ V tomto okamžiku by měl váš soubor manifestu vypadat přibližně takto:
 
 Důrazně doporučujeme mít při provádění tohoto kroku otevřený odkaz na upravený. csproj. [Tady](https://github.com/Microsoft/VSSDK-Extensibility-Samples)můžete najít několik příkladů. Vyberte libovolnou ukázku rozšiřitelnosti, vyhledejte soubor *. csproj* pro referenci a proveďte následující kroky:
 
-* V **Průzkumníku souborů**přejděte do adresáře projektu.
+* V **Průzkumníku souborů** přejděte do adresáře projektu.
 * Otevřete soubor *MyProject. csproj* pomocí textového editoru.
 
 ### <a name="1-update-the-minimumvisualstudioversion"></a>1. aktualizace MinimumVisualStudioVersion
@@ -207,7 +209,7 @@ V tomto okamžiku by měl být projekt připravený k vytvoření nového vsixv3
 * Přejděte do adresáře projektu.
 * Otevřete složku *\bin\debug* .
 * Dvakrát klikněte na soubor VSIX a nainstalujte své rozšíření do sady Visual Studio 2015 a Visual Studio 2019/2017.
-* Ujistěte se, že se v **Tools**  >  části **nainstalováno** zobrazuje rozšíření v části**rozšíření a aktualizace** nástrojů.
+* Ujistěte se, že se v   >  části **nainstalováno** zobrazuje rozšíření v části **rozšíření a aktualizace** nástrojů.
 * Pokuste se spustit nebo použít rozšíření pro kontrolu, že funguje.
 
 ![Najít VSIX](media/finding-a-VSIX-example.png)

@@ -1,5 +1,7 @@
 ---
 title: Rozšíření .NET Compiler Platform ( &quot; Roslyn &quot; ) | Microsoft Docs
+description: Přečtěte si o .NET Compiler Platform, který umožňuje nástrojům a vývojářům sdílet s bohatými kompilátory s informacemi o programech.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 564201b3-1e18-4b88-b615-42c2f57f3fe8
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 62ceac6e2be8a0a84d82f6b86b685c7c8b20a182
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c3bc0ecb6aad5b4da126d5a253a6c0b523444e2c
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712081"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994820"
 ---
 # <a name="net-compiler-platform-quotroslynquot-extensibility"></a>Rozšíření .NET Compiler Platform ( &quot; Roslyn &quot; )
 Základní poslání .NET Compiler Platform ("Roslyn") otevírá kompilátory C# a Visual Basic a umožňuje nástrojům a vývojářům sdílet v bohatě bohatých kompilátorech informace o programech. Nástroje pro analýzu kódu zlepšují kvalitu kódu a pomáhají generátorům kódu při vytváření aplikací. Jako nástroje získají inteligentnější přístup k více a více poznatkům s hlubokým kódem, které mají pouze kompilátory. Namísto neprůhledných překladatelů (zdrojový kód v nástroji a výstupní kód objektu) nabízejí kompilátory Roslyn rozhraní API, která můžete použít pro úlohy související s kódem ve vašich nástrojích a aplikacích.

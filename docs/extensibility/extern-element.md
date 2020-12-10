@@ -1,5 +1,7 @@
 ---
 title: Extern – element | Microsoft Docs
+description: Element extern odkazuje na všechny soubory externích hlaviček (. h), které se mají sloučit se souborem. vsct v době kompilace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2cf6f9db77abaa7034af8d074b9833a4c1560f07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e975c3f721d65b64fc7994824406b0c9af13022
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711489"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994521"
 ---
 # <a name="extern-element"></a>Extern – element
 Element extern odkazuje na všechny soubory externích hlaviček (*. h*), které se mají sloučit se souborem *. vsct* v době kompilace. Soubory, které mají být sloučeny, musí být v cestě include zadané kompilátoru VSCT nebo odkazované [elementem include](../extensibility/include-element.md). Soubory mohou být jiné soubory *. vsct* nebo soubory hlaviček jazyka C++.
@@ -27,7 +29,7 @@ Element extern odkazuje na všechny soubory externích hlaviček (*. h*), které
 
  Element příkazu extern – element
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <Extern href="stdidcmd.h" />
@@ -41,7 +43,7 @@ Element extern odkazuje na všechny soubory externích hlaviček (*. h*), které
 |Atribut|Popis|
 |---------------|-----------------|
 |odkaz|Povinná hodnota. Cesta k souboru hlaviček:<br /><br /> href = "Stdidcmd. h"|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 |language|Nepovinný parametr. Výchozí jazyk všech [\<Strings>](../extensibility/strings-element.md) prvků v tabulce příkazů:<br /><br /> Language = "en-US"|
 
 ### <a name="child-elements"></a>Podřízené prvky

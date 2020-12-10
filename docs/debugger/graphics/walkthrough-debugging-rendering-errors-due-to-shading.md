@@ -1,5 +1,7 @@
 ---
 title: 'Návod: ladění chyb vykreslování z důvodu stínování | Microsoft Docs'
+description: Postupujte podle šetření, které najde chybu shaderu. Zobrazuje použití sady Visual Studio Diagnostika grafiky, včetně historie pixelů grafiky a HLSL ladicího programu.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 01875b05-cc7b-4add-afba-f2b776f86974
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44e542bcbb801ee4035ba501b50bad81b53e8bdf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b42aa5638b668d90fa44335c2d532c9bcddddc2b
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62849304"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995080"
 ---
 # <a name="walkthrough-debugging-rendering-errors-due-to-shading"></a>Návod: Ladění chyb vykreslování způsobených stínováním
 Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Diagnostika grafiky k prozkoumání nesprávně barevného objektu z důvodu chyby shaderu.
@@ -40,7 +42,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 1. V nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načtěte protokol grafiky, který má rámec, který zobrazuje chybějící model. V nástroji se zobrazí nový okno dokumentu s grafickým protokolem [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . V horní části tohoto okna je výstupem cíle vykreslování vybraného snímku. V dolní části je **seznam rámců**, který zobrazuje jednotlivé zachycené rámce jako obrázek miniatury.
 
-2. V **seznamu snímků**vyberte rámec, ve kterém nemá objekt správný vzhled. Cíl vykreslování se aktualizuje tak, aby odrážel vybraný snímek. V tomto scénáři vypadá okno dokumentu protokolu grafiky jako v tomto obrázku:
+2. V **seznamu snímků** vyberte rámec, ve kterém nemá objekt správný vzhled. Cíl vykreslování se aktualizuje tak, aby odrážel vybraný snímek. V tomto scénáři vypadá okno dokumentu protokolu grafiky jako v tomto obrázku:
 
     ![Dokument protokolu grafiky v aplikaci Visual Studio.](media/gfx_diag_demo_render_error_shader_step_1.png "gfx_diag_demo_render_error_shader_step_1")
 
@@ -64,7 +66,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 #### <a name="to-examine-the-pixel-shader"></a>Kontrola funkce pixel shader
 
-1. Spustí ladění pixel shaderu. V okně **Historie pixelů grafiky** v části primitiva objektu vedle **pixel shaderu**klikněte na tlačítko **Spustit ladění** .
+1. Spustí ladění pixel shaderu. V okně **Historie pixelů grafiky** v části primitiva objektu vedle **pixel shaderu** klikněte na tlačítko **Spustit ladění** .
 
 2. V tomto scénáři, protože pixel shader pouze předává barvu z vrcholu shaderu, je snadné sledovat, že pixel shader není zdrojem problému.
 
@@ -78,7 +80,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 #### <a name="to-examine-the-vertex-shader"></a>Kontrola vrcholu shaderu
 
-1. Spusťte ladění vertex shaderu. V okně **Historie pixelů grafiky** v části primitiva objektu vedle možnosti **vertex shader**klikněte na tlačítko **Spustit ladění** .
+1. Spusťte ladění vertex shaderu. V okně **Historie pixelů grafiky** v části primitiva objektu vedle možnosti **vertex shader** klikněte na tlačítko **Spustit ladění** .
 
 2. Vyhledání výstupní struktury funkce vertex shader – jedná se o vstup pro pixel shader. V tomto scénáři je název této struktury `output` . Prohlédněte si kód vertex shader a Všimněte si, že `color` člen `output` struktury byl explicitně nastaven na plně neprůhledný černý, například v důsledku úsilí někoho o ladění.
 

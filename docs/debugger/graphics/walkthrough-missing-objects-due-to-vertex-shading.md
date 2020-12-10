@@ -1,5 +1,7 @@
 ---
 title: 'Návod: chybějící objekty z důvodu stínování vrcholu | Microsoft Docs'
+description: Použijte šetření, které najde chybu vertex shaderu. Zobrazuje seznam událostí použít grafiku, fáze zřetězení grafiky, ladicí program HLSL a zásobník volání událostí grafiky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e42b54a0-8092-455c-945b-9ecafb129d93
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc3bd288044c9fea1da648b64cabc87148b8463a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a7e4c01a990ce4d3fff6769ba016c168b190687f
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64825521"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994994"
 ---
 # <a name="walkthrough-missing-objects-due-to-vertex-shading"></a>Návod: Chybějící objekty z důvodu použití vertex shaderu
 Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nástroje Diagnostika grafiky k prozkoumání objektu, který chybí z důvodu chyby, ke které dojde během fáze vertex shader.
@@ -42,7 +44,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 1. V nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načtěte protokol grafiky, který obsahuje rámeček, který vykazuje chybějící objekt. V nástroji se zobrazí nová karta protokol grafiky [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . V horní části této karty je výstup cíle vykreslování vybraného snímku. V dolní části je **seznam rámců**, který zobrazuje jednotlivé zachycené rámce jako obrázek miniatury.
 
-2. V **seznamu snímků**vyberte rámec, který ukazuje, že se objekt nezobrazuje. Cíl vykreslování se aktualizuje tak, aby odrážel vybraný snímek. V tomto scénáři vypadá karta protokol grafiky takto:
+2. V **seznamu snímků** vyberte rámec, který ukazuje, že se objekt nezobrazuje. Cíl vykreslování se aktualizuje tak, aby odrážel vybraný snímek. V tomto scénáři vypadá karta protokol grafiky takto:
 
     ![Dokument protokolu grafiky v aplikaci Visual Studio](media/gfx_diag_demo_missing_object_shader_step_1.png "gfx_diag_demo_missing_object_shader_step_1")
 

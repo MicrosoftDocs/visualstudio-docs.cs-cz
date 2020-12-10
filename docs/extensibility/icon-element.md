@@ -1,5 +1,7 @@
 ---
 title: Element Icon | Microsoft Docs
+description: Přečtěte si o elementu Icon, který představuje ikony používané v rozšířeních IDE sady Visual Studio, které obsahuje atributy pro použitou bitmapu a slot v rastrovém obrazovém pruhu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cf4f8a69e565620007fba4b9970ce96bb1513995
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ed5a4f64a2c80cfdc61b37a6a8bac72adc97a33
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710510"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993598"
 ---
 # <a name="icon-element"></a>Element Icon
 Atribut GUID značky Icon je identifikátor GUID definované bitmapy. `id`Atribut vybere slot v rastrovém obrázku. Tento element je volitelný. Pokud tento prvek není zahrnut, hodnota **guidOfficeIcon: msotcidNoIcon** bude předpokládaná.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <Icon guid="guidImages" id="bmpPic1" />

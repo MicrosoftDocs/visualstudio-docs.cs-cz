@@ -1,5 +1,7 @@
 ---
 title: Group – element | Microsoft Docs
+description: Prvek Group definuje skupinu příkazů VSPackage. Tento článek popisuje atributy, podřízené prvky a nadřazené prvky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26479257511d74f122dd4064330f5b6a1e8dadd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d0d39d4e4f795ddecab21765db43ba1a2f629dd7
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711235"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993851"
 ---
 # <a name="group-element"></a>Group – element
 Definuje skupinu příkazů VSPackage.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <Group guid="guidMyCommandSet" id="MyGroup" priority="0x101">
@@ -39,7 +41,7 @@ Definuje skupinu příkazů VSPackage.
 |guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID|
 |id|Povinná hodnota. ID identifikátoru příkazu GUID/ID|
 |upřednostněn|Nepovinný parametr. Číselná hodnota, která určuje prioritu.|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 

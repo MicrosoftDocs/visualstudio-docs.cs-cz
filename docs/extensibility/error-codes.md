@@ -1,5 +1,7 @@
 ---
 title: Chybové kódy | Microsoft Docs
+description: Tento článek obsahuje seznam chybových kódů, hodnot a popisů pro funkce rozhraní API modulu plug-in správy zdrojového kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34072f6ddbd632f83dd308c6cb63427e02bb110b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a77f869936531dbc41cc3bd1d9b510bf44c35cec
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711844"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994716"
 ---
 # <a name="error-codes"></a>Kódy chyb
 Pokud funkce rozhraní API modulu plug-in správy zdrojových kódů vrátí chybu, bude se jednat o jeden z následujících kódů chyb. Všechny chyby jsou záporné, upozornění nebo informativní chybové kódy jsou kladné a úspěch je 0.

@@ -1,5 +1,7 @@
 ---
 title: 'Návod: chybějící objekty z důvodu stavu zařízení | Microsoft Docs'
+description: Postupujte podle šetření, které najde nesprávně nakonfigurovaný stav zařízení. Zobrazuje použití seznamu událostí grafiky, fází zřetězení grafiky a Historie pixelů grafiky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1b0d2bbd-0729-4aa5-8308-70c5bf1468c5
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e85aa8fc5af3f32f117b112e8624962a49d90c6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c29e240d4be2f66fb0684bf5372d59fe5d4d825a
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62895442"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995054"
 ---
 # <a name="walkthrough-missing-objects-due-to-device-state"></a>Návod: Chybějící objekty z důvodu stavu zařízení
 Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Diagnostika grafiky k prozkoumání objektu, který chybí kvůli nesprávně nakonfigurovanému stavu zařízení.
@@ -44,7 +46,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 1. V nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načtěte protokol grafiky, který obsahuje rámeček, který vykazuje chybějící model. V nástroji se zobrazí nová karta Diagnostika grafiky [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . V horní části této karty je výstup cíle vykreslování vybraného snímku. V dolní části je **seznam rámců**, který zobrazuje jednotlivé zachycené rámce jako obrázek miniatury.
 
-2. V **seznamu snímků**vyberte rámec, který ukazuje, že model není zobrazen. Cíl vykreslování se aktualizuje tak, aby odrážel vybraný snímek. V tomto scénáři vypadá karta protokol grafiky takto:
+2. V **seznamu snímků** vyberte rámec, který ukazuje, že model není zobrazen. Cíl vykreslování se aktualizuje tak, aby odrážel vybraný snímek. V tomto scénáři vypadá karta protokol grafiky takto:
 
     ![Karta. vsglog framebuffer náhled a seznam snímků](media/vsg_walkthru1_experiment.png "vsg_walkthru1_experiment")
 
@@ -94,7 +96,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 1. Otevřete okno **tabulka objektů grafiky** . Na panelu nástrojů **Diagnostika grafiky** vyberte **tabulka objektů**.
 
-2. Vyhledejte objekt **zařízení d3d10** v **tabulce objekt grafiky**a pak otevřete objekt **zařízení d3d10** . Otevře se nová karta **zařízení d3d10** [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Chcete-li to usnadnit, můžete seřadit **tabulku objektu grafiky** podle **typu**:
+2. Vyhledejte objekt **zařízení d3d10** v **tabulce objekt grafiky** a pak otevřete objekt **zařízení d3d10** . Otevře se nová karta **zařízení d3d10** [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Chcete-li to usnadnit, můžete seřadit **tabulku objektu grafiky** podle **typu**:
 
     ![Tabulka grafických objektů a související stav zařízení](media/vsg_walkthru1_objtable.png "vsg_walkthru1_objtable")
 

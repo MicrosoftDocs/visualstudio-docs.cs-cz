@@ -1,6 +1,7 @@
 ---
 title: Migrace projektů rozšíření do sady Visual Studio 2017
 titleSuffix: ''
+description: Naučte se upgradovat projekty rozšíření na Visual Studio 2017 a postup upgradu z manifestu verze 2 na manifest VSIX verze 3.
 ms.custom: SEO-VS-2020
 ms.date: 11/09/2016
 ms.topic: how-to
@@ -11,12 +12,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 9212add38f877e76aa3eaaa98c3d0d863c97d62e
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.openlocfilehash: 58d802ad97018a3d84e2b6a9f5e759db3a7cb2e3
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352280"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993962"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Postupy: migrace rozšiřujících projektů do sady Visual Studio 2017
 
@@ -109,14 +110,14 @@ Místo toho, abyste přímo upravovali XML manifestu, můžete použít kartu no
 
 ## <a name="update-debug-settings-for-the-project"></a>Aktualizovat nastavení ladění pro projekt
 
-Pokud chcete ladit rozšíření v experimentální instanci aplikace Visual Studio, ujistěte se, že nastavení projektu pro **Debug**  >  **akci spustit** pro ladění má hodnotu **spustit externí program:** hodnota nastavenou na *devenv.exe* soubor instalace sady Visual Studio 2017.
+Pokud chcete ladit rozšíření v experimentální instanci aplikace Visual Studio, ujistěte se, že nastavení projektu pro   >  **akci spustit** pro ladění má hodnotu **spustit externí program:** hodnota nastavenou na *devenv.exe* soubor instalace sady Visual Studio 2017.
 
 Může to vypadat takto: *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe*
 
 ![spustit externí program](media/start-external-program.png)
 
 > [!Note]
-> Akce spustit ladění je obvykle uložena v souboru *. csproj. User* . Tento soubor je obvykle obsažen v souboru *. gitignore* , a proto není obvykle uložen s jinými soubory projektu při potvrzení do správy zdrojových kódů. V takovém případě, pokud jste řešení stáhli ze správy zdrojového kódu, je nejspíš, že projekt nebude mít nastavené žádné hodnoty pro akci spustit. Nové projekty VSIX vytvořené pomocí sady Visual Studio 2017 budou mít vytvořený soubor *. csproj. User* s výchozím nastavením, který odkazuje na aktuální instalační adresář sady Visual Studio. Pokud však migrujete rozšíření VSIX v2, je pravděpodobný, že soubor *. csproj. User* bude obsahovat odkazy na předchozí instalační adresář verze sady Visual Studio. Nastavením hodnoty pro **Debug**  >  **akci spustit** ladění umožníte, aby se při pokusu o ladění rozšíření spouštěla správná experimentální instance sady Visual Studio.
+> Akce spustit ladění je obvykle uložena v souboru *. csproj. User* . Tento soubor je obvykle obsažen v souboru *. gitignore* , a proto není obvykle uložen s jinými soubory projektu při potvrzení do správy zdrojových kódů. V takovém případě, pokud jste řešení stáhli ze správy zdrojového kódu, je nejspíš, že projekt nebude mít nastavené žádné hodnoty pro akci spustit. Nové projekty VSIX vytvořené pomocí sady Visual Studio 2017 budou mít vytvořený soubor *. csproj. User* s výchozím nastavením, který odkazuje na aktuální instalační adresář sady Visual Studio. Pokud však migrujete rozšíření VSIX v2, je pravděpodobný, že soubor *. csproj. User* bude obsahovat odkazy na předchozí instalační adresář verze sady Visual Studio. Nastavením hodnoty pro   >  **akci spustit** ladění umožníte, aby se při pokusu o ladění rozšíření spouštěla správná experimentální instance sady Visual Studio.
 
 ## <a name="check-that-the-extension-builds-correctly-as-a-vsix-v3"></a>Ověřte, zda se rozšíření správně sestavuje (jako VSIX V3).
 
@@ -187,7 +188,7 @@ Pokud si nejste jistí, která součást obsahuje konkrétní binární soubor, 
 
 ### <a name="vs2017-componentbinarymappingxlsx"></a>vs2017-ComponentBinaryMapping.xlsx
 
-V excelovém listu jsou čtyři sloupce: **název komponenty**, **ComponentID**, **verze**a **binární/název souboru**.  Filtry můžete použít k vyhledání a vyhledání konkrétních komponent a binárních souborů.
+V excelovém listu jsou čtyři sloupce: **název komponenty**, **ComponentID**, **verze** a **binární/název souboru**.  Filtry můžete použít k vyhledání a vyhledání konkrétních komponent a binárních souborů.
 
 Pro všechny vaše odkazy nejprve určete, která z nich je v komponentě Core Editor (Microsoft. VisualStudio. Component. CoreEditor).  Minimální je, že vyžaduje, aby byla součást základního editoru zadána jako předpoklad pro všechna rozšíření. Z odkazů, které nejsou v základním editoru, přidejte filtry v části **názvy binárních souborů/souborů** , abyste našli komponenty, které mají kteroukoli z podmnožiny těchto odkazů.
 

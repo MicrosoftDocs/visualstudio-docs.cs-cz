@@ -1,5 +1,6 @@
 ---
 title: Vypnout upozornění pro moduly plug-in správy zdrojového kódu
+description: Uživatel může při využívání správy zdrojového kódu v aplikaci Visual Studio zobrazit několik upozornění na kompatibilitu. Přečtěte si, jak tato upozornění zakázat.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 406d063bd2df6dd1d831c3a8220d8d513596a79a
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: f5607f4a92a14b692f20d509e014991d461815bd
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037182"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993546"
 ---
 # <a name="how-to-turn-off-compatibility-warnings-for-source-control-plug-ins"></a>Postupy: vypnutí upozornění kompatibility pro moduly plug-in správy zdrojového kódu
 
@@ -27,7 +28,7 @@ Uživatel může při využívání správy zdrojového kódu v nástroji zobraz
 
 - Nastavte následující položku registru (Pokud je to nutné, přidejte hodnotu):
 
-   **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl\DontDisplayCheckDotNETCompatible = DWORD: 00000001**
+   **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\DontDisplayCheckDotNETCompatible = DWORD: 00000001**
 
    Toto upozornění se zobrazí pro všechny [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] nemodulované moduly plug-in.
 
@@ -35,9 +36,9 @@ Uživatel může při využívání správy zdrojového kódu v nástroji zobraz
 
 - Nastavte následující dvě hodnoty registru (v případě potřeby přidejte hodnoty):
 
-     **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl\WarnedOldMSSCCIProvider = DWORD: 00000000**
+     **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\WarnedOldMSSCCIProvider = DWORD: 00000000**
 
-    **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl\UseOldSCC = DWORD: 00000001**
+    **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\UseOldSCC = DWORD: 00000001**
 
      Toto upozornění se zobrazí, pokud modul plug-in správy zdrojových kódů explicitně nepodporuje Vícenásobný přístup pro více projektů (tj. Pokud je možné vrátit se změnami pouze jeden soubor a projekt v jednom okamžiku).
 

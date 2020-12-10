@@ -1,6 +1,6 @@
 ---
-title: 'Návrhář postupu provádění: Přidání parametrů & dialogová okna Přidat argumenty'
-description: Přečtěte si, jak se používají prvky uživatelského rozhraní (UI) dialogového okna přidat parametry v Návrháři InvokeMethod.
+title: Přidání parametrů & dialogová okna Přidat argumenty
+description: Seznamte se s tím, jak se v nástroji InvokeMethod Designer používá v dialogovém okně Přidat parametry prvky uživatelského rozhraní (UI) v Návrhář postupu provádění.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: 2038e56770a7d671a25b3982f865926c29697b13
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: f29ee2aeedc971fc25654b6681c87b5dab71e386
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435687"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995509"
 ---
 # <a name="add-parameters-and-add-arguments-dialog-boxes"></a>Dialogová okna Přidat parametry a Přidat argumenty
 

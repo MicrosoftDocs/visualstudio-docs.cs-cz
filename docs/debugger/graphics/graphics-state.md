@@ -1,5 +1,7 @@
 ---
 title: Stav grafiky | Microsoft Docs
+description: Řešení problémů s vykreslováním zobrazením stavu grafiky pro každé volání remízy. Části stavu, které byly změněny z předchozího volání, jsou zvýrazněny.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a07e198c6ff4e432f708ac1751e69bbef77a22c4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de8f3c356cfe05aade3e4f2197b3f7429967a259
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67823775"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994007"
 ---
 # <a name="graphics-state"></a>Stav grafiky
 Okno stav v nástroji Diagnostika grafiky sady Visual Studio pomáhá pochopit stav grafiky, která je aktivní v době aktuální události, jako je například volání metody Draw.
@@ -26,7 +28,7 @@ Okno stav v nástroji Diagnostika grafiky sady Visual Studio pomáhá pochopit s
 ### <a name="state-views"></a>Zobrazení stavu
  Tabulku stavů můžete zobrazit několika různými způsoby:
 
-|Zobrazení|Popis|
+|Zobrazit|Popis|
 |----------|-----------------|
 |Zobrazení stavu vstupu rozhraní API|Toto zobrazení prezentuje stav v podobném rozložení pro objekty Direct3D, které tvoří stav.|
 |Zobrazení stavu logického vstupu|Toto zobrazení prezentuje stav v logickém zobrazení, které nezrcadlí rozložení objektů Direct3D, které tvoří stav.|

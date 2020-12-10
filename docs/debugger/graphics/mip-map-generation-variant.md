@@ -1,5 +1,7 @@
 ---
 title: MIP – varianta generace mapování | Microsoft Docs
+description: Pokud generace na základě MIP obsahuje velký nárůst výkonu, znamená to, že používáte textury, aniž byste povolili mapování MIP a nezískáte maximum z mezipaměti textury.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3b4b3583-0b01-4f5d-aacb-3f96d19111d9
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 422a68f4e33733aa2874c639f0dcc799cd3ec795
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d939fb537ac6aed75d9b0f7bda2970a85f9175ad
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72734893"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994964"
 ---
 # <a name="mip-map-generation-variant"></a>Varianta generování mipmap
 Povoluje mapy MIP u textur, které nejsou cílem vykreslování.

@@ -1,5 +1,7 @@
 ---
-title: Varianty pro rozměry textury s poloviční čtvrti | Microsoft Docs
+title: Varianta Half-Quarterch dimenzí s texturami | Microsoft Docs
+description: Pokud menší textury znázorňují velké zisky z výkonu, navrhne propustnost paměti nebo neefektivní použití mezipaměti textury GPU. Zvažte zmenšení velikosti textury.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 282e9bbb-51aa-4cd0-8e5c-0901268c29e5
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4c82836f5a80fae421a30721d8c3ee4c3d6893d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd3cc5d5517818934a20c9064e718cf65f9d3a65
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735398"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995145"
 ---
 # <a name="halfquarter-texture-dimensions-variant"></a>Varianta polovičních/čtvrtinových dimenzí textury
 Zmenší Rozměry textury u textur, které nejsou cílem vykreslování.

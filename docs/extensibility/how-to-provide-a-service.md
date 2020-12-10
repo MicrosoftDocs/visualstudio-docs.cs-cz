@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: poskytování služby | Microsoft Docs'
+description: VSPackage může poskytovat služby, které mohou používat jiné sady VSPackage. Přečtěte si, jak VSPackage zaregistruje službu pomocí sady Visual Studio a přidá službu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 30bfdd49d871919503be767ea930b3d5f2f0fd95
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac89984539b0870d3921918a5a96b821297c009f
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905759"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993728"
 ---
 # <a name="how-to-provide-a-service"></a>Postupy: poskytování služby
 VSPackage může poskytovat služby, které mohou používat jiné sady VSPackage. Aby bylo možné poskytnout službu, VSPackage musí službu zaregistrovat v aplikaci Visual Studio a přidat službu.
@@ -29,7 +31,7 @@ VSPackage může poskytovat služby, které mohou používat jiné sady VSPackag
 
 ## <a name="implement-a-service"></a>Implementace služby
 
-1. Vytvořte projekt VSIX (**soubor**.  >  **Nový**  >  **projekt**  >  **Visual C#**  >  **rozšiřitelný**  >  **projekt VSIX**Visual C#).
+1. Vytvořte projekt VSIX (**soubor**.  >  **Nový**  >  **projekt**  >    >  **rozšiřitelný**  >  **projekt VSIX** Visual C#).
 
 2. Přidejte do projektu VSPackage. Vyberte uzel projektu v **Průzkumník řešení** a klikněte na tlačítko **Přidat**  >  **novou položku**  >  **Visual C# položky**  >  **rozšiřitelný**  >  **balíček sady Visual Studio**.
 

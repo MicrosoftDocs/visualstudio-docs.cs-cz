@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání závislosti do balíčku VSIX | Microsoft Docs'
+description: Naučte se, jak nastavit nasazení balíčku VSIX, které nainstaluje všechny závislosti, které ještě nejsou v cílovém počítači přítomné.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7ee7cbc4dee800351689386056389d274e07f4f
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: d7ef19bafd0788ed15094979141679625e4e992f
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012227"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993832"
 ---
 # <a name="how-to-add-a-dependency-to-a-vsix-package"></a>Postupy: Přidání závislosti k balíčku VSIX
 
@@ -28,7 +30,7 @@ Můžete nastavit nasazení balíčku VSIX, které nainstaluje všechny závislo
 
 1. Otevřete soubor *source. extension. vsixmanifest* v zobrazení **Návrh** . Přejděte na kartu **závislosti** a klikněte na **Nový**.
 
-2. Přidání nainstalovaného rozšíření: v dialogovém okně **Přidat novou závislost** vyberte možnost **nainstalovaná rozšíření** a potom v rozevíracím seznamu **název**vyberte rozšíření v seznamu.
+2. Přidání nainstalovaného rozšíření: v dialogovém okně **Přidat novou závislost** vyberte možnost **nainstalovaná rozšíření** a potom v rozevíracím seznamu **název** vyberte rozšíření v seznamu.
 
 3. Chcete-li přidat další VSIX, který není nainstalován: v dialogovém okně **Přidat novou závislost** vyberte v **systému souborů možnost soubor** a poté pomocí tlačítka **Procházet** vyberte VSIX.
 
@@ -46,7 +48,7 @@ Pokud vaše rozšíření vyžaduje 15,3 nebo vyšší, deklarujete **verzi Inst
 
 VSIXInstaller detekuje starší verze sady Visual Studio a informuje uživatele o tom, že je požadována pozdější aktualizace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110))
 - [Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md)

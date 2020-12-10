@@ -1,5 +1,7 @@
 ---
 title: Vystavení vlastností oknu vlastností | Microsoft Docs
+description: Přečtěte si o veřejných vlastnostech objektu. Změny, které provedete u těchto vlastností, se projeví v okno Vlastnosti.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f84962628ae550676e2c2eeb10c0f3baeca1bb58
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f2668f8410b6e5f18b23c82202c1d33f8c67b4d
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711831"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994690"
 ---
 # <a name="expose-properties-to-the-properties-window"></a>Vystavení vlastností okno Vlastnosti
 
@@ -35,7 +37,7 @@ V této části vytvoříte vlastní okno nástrojů a zobrazíte veřejné vlas
 
 1. Každé rozšíření sady Visual Studio začíná projektem nasazení VSIX, který bude obsahovat prostředky rozšíření. Vytvořte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt VSIX s názvem `MyObjectPropertiesExtension` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Přidejte okno nástroje přidáním vlastní šablony položky okna nástroje s názvem `MyToolWindow` . V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V **dialogovém okně Přidat novou položku**, přejít na rozšiřitelnost **položek Visual C#**  >  **Extensibility** a vybrat **vlastní panel nástrojů**. V poli **název** v dolní části dialogového okna změňte název souboru na *MyToolWindow.cs*. Další informace o tom, jak vytvořit vlastní panel nástrojů, najdete v tématu [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).
+2. Přidejte okno nástroje přidáním vlastní šablony položky okna nástroje s názvem `MyToolWindow` . V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V **dialogovém okně Přidat novou položku**, přejít na rozšiřitelnost **položek Visual C#**  >   a vybrat **vlastní panel nástrojů**. V poli **název** v dolní části dialogového okna změňte název souboru na *MyToolWindow.cs*. Další informace o tom, jak vytvořit vlastní panel nástrojů, najdete v tématu [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).
 
 3. Otevřete *MyToolWindow.cs* a přidejte následující příkaz using:
 
@@ -53,7 +55,7 @@ V této části vytvoříte vlastní okno nástrojů a zobrazíte veřejné vlas
 
    ```
 
-5. Do třídy přidejte následující kód `MyToolWindow` .
+5. Do třídy `MyToolWindow` přidejte následující kód.
 
    ```csharp
    private ITrackSelection TrackSelection
@@ -110,15 +112,15 @@ V této části přidáte okno nástroje a zpřístupníte jeho vlastnosti. Změ
 
 ### <a name="to-expose-tool-window-properties"></a>Vystavení vlastností okna nástroje
 
-1. Otevřete *MyToolWindow.cs*a přidejte vlastnost Public Boolean-Checked do `MyToolWindow` třídy.
+1. Otevřete *MyToolWindow.cs* a přidejte vlastnost Public Boolean-Checked do `MyToolWindow` třídy.
 
     ```csharp
     [Category("My Properties")]
     [Description("MyToolWindowControl properties")]
-    public bool IsChecked
+    public bool IsChecked
     {
         get {
-            if (base.Content == null)  return false;
+            if (base.Content == null)  return false;
             return (bool)(( MyToolWindowControl) base.Content).checkBox.IsChecked;
         }
         set {
@@ -143,7 +145,7 @@ V této části přidáte okno nástroje a zpřístupníte jeho vlastnosti. Změ
 
      Tím získáte `MyToolWindowControl` přístup k `MyToolWindow` podoknu.
 
-3. V *MyToolWindow.cs*změňte `MyToolWindow` konstruktor následujícím způsobem:
+3. V *MyToolWindow.cs* změňte `MyToolWindow` konstruktor následujícím způsobem:
 
     ```csharp
     base.Content = new MyToolWindowControl(this);
@@ -190,14 +192,14 @@ V této části přidáte okno nástroje a zpřístupníte jeho vlastnosti. Změ
 1. Otevřete *MyToolWindow.cs* a přidejte veřejnou třídu s názvem `Simple` .
 
     ```csharp
-    public class Simple
+    public class Simple
     {
-        private string someText = "";
+        private string someText = "";
 
         [Category("My Properties")]
         [Description("Simple Properties")]
         [DisplayName("My Text")]
-        public string SomeText
+        public string SomeText
         {
             get { return someText; }
             set { someText = value; }
@@ -240,7 +242,7 @@ V této části přidáte okno nástroje a zpřístupníte jeho vlastnosti. Změ
     }
     ```
 
-3. V *MyToolWindowControl.cs*nahraďte obslužné rutiny zaškrtávacího políčka těmito řádky kódu:
+3. V *MyToolWindowControl.cs* nahraďte obslužné rutiny zaškrtávacího políčka těmito řádky kódu:
 
     ```csharp
     private void checkbox_Checked(object sender, RoutedEventArgs e)

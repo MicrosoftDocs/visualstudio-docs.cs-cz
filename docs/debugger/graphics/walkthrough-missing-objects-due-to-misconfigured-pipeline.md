@@ -1,5 +1,6 @@
 ---
 title: Chybějící objekty z důvodu chybně nakonfigurovaného kanálu
+description: Postupujte podle šetření, které najde nesprávně konfigurovaný kanál. Zobrazuje seznam událostí použít grafiku, fáze zřetězení grafiky a zásobník volání událostí grafiky.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -9,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64c00c10b8b7207e1162aa0041145000126fde87
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: e099d94479183e795a2ad3c8fc8db03fa969111c
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189846"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994990"
 ---
 # <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>Návod: Chybějící objekty z důvodu nesprávné konfigurace kanálu
 Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nástroje Diagnostika grafiky k prozkoumání objektu, který chybí z důvodu nenastavené funkce pixel shader.

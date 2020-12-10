@@ -1,5 +1,7 @@
 ---
 title: Vizualizace a zobrazování dat | Microsoft Docs
+description: Naučte se, jak typy vizualizací a vlastní čtenáři prezentují data vývojáři. Vyhodnocovací filtr výrazů podporuje vizualizace typu třetích stran.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b5f984e6c6a3c1c8f3835dfa93a8679ae16680a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 856788546e10e69a8bb7e2787558505937f9effd
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712380"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995444"
 ---
 # <a name="visualizing-and-viewing-data"></a>Vizualizace a zobrazování dat
 Typy vizualizací a vlastní čtenáři prezentují data způsobem, který je pro vývojáře snadno smysluplný. Vyhodnocovací filtr výrazů (EE) může podporovat vizualizace typu třetích stran a poskytovat vlastní diváky.

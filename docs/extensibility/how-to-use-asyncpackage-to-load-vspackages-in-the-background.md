@@ -1,5 +1,6 @@
 ---
 title: Použití AsyncPackage k načtení VSPackage na pozadí
+description: Naučte se používat třídu AsyncPackage, která umožňuje načtení balíčku ve vlákně na pozadí, což může zabránit problémům s odezvou z vstupně-výstupních operací disku.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,18 +9,18 @@ author: acangialosi
 ms.author: anthc
 ms.workload:
 - vssdk
-ms.openlocfilehash: fef717ba7ec135038dcb35348eff870d9eeb3e33
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: e8b5917a42e7083f7357ce76762bf8b51a1b60f9
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037286"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993481"
 ---
 # <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>Postupy: použití AsyncPackage k načtení VSPackage na pozadí
 Načtení a inicializace balíčku VS může mít za následek I/O disku. Pokud takové vstupně-výstupní operace proběhne ve vlákně uživatelského rozhraní, může to vést k potížím s odezvou. Pro vyřešení této sady sada Visual Studio 2015 zavedla  <xref:Microsoft.VisualStudio.Shell.AsyncPackage> třídu, která umožňuje načtení balíčku do vlákna na pozadí.
 
 ## <a name="create-an-asyncpackage"></a>Vytvoření AsyncPackage
- Můžete začít vytvořením projektu VSIX (**soubor**  >  **Nový**  >  **projekt**  >  **Visual C#**  >  **rozšíření**  >  **VSIX**Visual C#) a přidáním VSPackage do projektu (klikněte pravým tlačítkem myši na projekt a **přidejte**  >  **novou položku**  >  **C# item**  >  **rozšiřitelný**  >  **balíček sady Visual Studio**pro položku C#). Pak můžete vytvořit své služby a přidat tyto služby do balíčku.
+ Můžete začít vytvořením projektu VSIX (**soubor**  >  **Nový**  >  **projekt**  >    >  **rozšíření**  >  **VSIX** Visual C#) a přidáním VSPackage do projektu (klikněte pravým tlačítkem myši na projekt a **přidejte**  >  **novou položku**  >    >  **rozšiřitelný**  >  **balíček sady Visual Studio** pro položku C#). Pak můžete vytvořit své služby a přidat tyto služby do balíčku.
 
 1. Odvodit balíček z <xref:Microsoft.VisualStudio.Shell.AsyncPackage> .
 

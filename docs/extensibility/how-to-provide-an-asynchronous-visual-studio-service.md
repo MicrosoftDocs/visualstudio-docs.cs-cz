@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: poskytnutí asynchronní služby sady Visual Studio | Microsoft Docs'
+description: Přečtěte si, jak poskytnout asynchronní službu sady Visual Studio. Tento přístup umožňuje získat službu bez blokování vlákna uživatelského rozhraní.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 0448274c-d3d2-4e12-9d11-8aca78a1f3f5
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad178bf93e49c3d695c1ebd0a5d4f6b151175953
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 11639e178f93a1ebfe2fc5231ee2b35df1b63196
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905745"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993637"
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>Postupy: poskytnutí asynchronní služby sady Visual Studio
 Pokud chcete získat službu bez blokování vlákna uživatelského rozhraní, měli byste vytvořit asynchronní službu a načíst balíček do vlákna na pozadí. Pro tento účel můžete použít <xref:Microsoft.VisualStudio.Shell.AsyncPackage> spíše než a <xref:Microsoft.VisualStudio.Shell.Package> a přidat službu s speciálními asynchronními metodami pro asynchronní balíčky.
@@ -22,11 +24,11 @@ Pokud chcete získat službu bez blokování vlákna uživatelského rozhraní, 
 
 ## <a name="implement-an-asynchronous-service"></a>Implementace asynchronní služby
 
-1. Vytvořte projekt VSIX (**soubor**  >  **Nový**  >  **projekt**projektu  >  **VSIX Visual C#**  >  **Extensiblity**  >  **VSIX Project**). Pojmenujte projekt **TestAsync**.
+1. Vytvořte projekt VSIX (**soubor**  >  **Nový**  >  **projekt** projektu  >  **VSIX Visual C#**  >  **Extensiblity**  >  ). Pojmenujte projekt **TestAsync**.
 
 2. Přidejte do projektu VSPackage. Vyberte uzel projektu v **Průzkumník řešení** a klikněte na tlačítko **Přidat**  >  **novou položku**  >  **Visual C# položky**  >  **rozšiřitelný**  >  **balíček sady Visual Studio**. Pojmenujte tento soubor *TestAsyncPackage.cs*.
 
-3. V *TestAsyncPackage.cs*změňte balíček tak, aby byl zděděný, a `AsyncPackage` ne `Package` :
+3. V *TestAsyncPackage.cs* změňte balíček tak, aby byl zděděný, a `AsyncPackage` ne `Package` :
 
     ```csharp
     public sealed class TestAsyncPackage : AsyncPackage
@@ -120,7 +122,7 @@ public sealed class TestAsyncPackage : AsyncPackage
 
 ## <a name="add-a-service"></a>Přidat službu
 
-1. V *TestAsyncPackage.cs*odeberte `Initialize()` metodu a přepište `InitializeAsync()` metodu. Přidejte službu a přidejte metodu zpětného volání, která vytvoří služby. Tady je příklad asynchronního inicializátoru, který přidává službu:
+1. V *TestAsyncPackage.cs* odeberte `Initialize()` metodu a přepište `InitializeAsync()` metodu. Přidejte službu a přidejte metodu zpětného volání, která vytvoří služby. Tady je příklad asynchronního inicializátoru, který přidává službu:
 
     ```csharp
     protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
@@ -171,7 +173,7 @@ public sealed class TestAsyncPackage : AsyncPackage
 ## <a name="use-an-asynchronous-service-in-a-command-handler"></a>Použít asynchronní službu v obslužné rutině příkazu
  Tady je příklad použití asynchronní služby v příkazu nabídky. Můžete použít postup, který je zde uveden, chcete-li službu použít v jiných neasynchronních metodách.
 
-1. Přidejte do projektu příkaz nabídky. (V **Průzkumník řešení**vyberte uzel projektu, klikněte pravým tlačítkem myši a vyberte Přidat. **Add**  >  **Nová položka**  >  **Rozšiřitelnost**  >  **Vlastní příkaz**.) Pojmenujte soubor příkazů *TestAsyncCommand.cs*.
+1. Přidejte do projektu příkaz nabídky. (V **Průzkumník řešení** vyberte uzel projektu, klikněte pravým tlačítkem myši a vyberte Přidat.   >  **Nová položka**  >  **Rozšiřitelnost**  >  **Vlastní příkaz**.) Pojmenujte soubor příkazů *TestAsyncCommand.cs*.
 
 2. Vlastní šablona příkazu znovu přidá `Initialize()` metodu do souboru *TestAsyncPackage.cs* , aby bylo možné příkaz inicializovat. V `Initialize()` metodě zkopírujte řádek, který inicializuje příkaz. Měl by vypadat takto:
 

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: získání služby | Microsoft Docs'
+description: Naučte se, jak získat služby sady Visual Studio pro přístup k různým funkcím. Většinu služeb můžete získat pomocí VSPackage.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a401103112096a1089b59ba3733d19480f93e891
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0a8f97900f1d400f3208a24ccc45ff9bbd774aeb
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905834"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994068"
 ---
 # <a name="how-to-get-a-service"></a>Postupy: získání služby
 
@@ -29,9 +31,9 @@ Když Visual Studio načte a <xref:Microsoft.VisualStudio.Shell.Package> , před
 
 1. Každé rozšíření sady Visual Studio začíná projektem nasazení VSIX, který bude obsahovat prostředky rozšíření. Vytvořte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt VSIX s názvem `GetServiceExtension` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Nyní přidejte šablonu vlastní položky příkazu s názvem **GetServiceCommand**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >  **Extensibility** a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *GetServiceCommand.cs*. Další informace o tom, jak vytvořit vlastní příkaz, získáte [vytvořením rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) .
+2. Nyní přidejte šablonu vlastní položky příkazu s názvem **GetServiceCommand**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >   a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *GetServiceCommand.cs*. Další informace o tom, jak vytvořit vlastní příkaz, získáte [vytvořením rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) .
 
-3. V *GetServiceCommand.cs*odeberte tělo `MenuItemCommand` metody a přidejte následující kód:
+3. V *GetServiceCommand.cs* odeberte tělo `MenuItemCommand` metody a přidejte následující kód:
 
    ```csharp
    IVsActivityLog activityLog = ServiceProvider.GetService(typeof(SVsActivityLog)) as IVsActivityLog;
@@ -70,7 +72,7 @@ Objekt DTE implementuje <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvide
 Tady je postup, jak získat službu z objektu DTE.
 
 ```csharp
-// Start with the DTE object, for example: 
+// Start with the DTE object, for example: 
 // using EnvDTE;
 // DTE dte = (DTE)GetService(typeof(DTE));
 

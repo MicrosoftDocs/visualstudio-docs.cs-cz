@@ -1,6 +1,7 @@
 ---
 title: Použití kontextu uživatelského rozhraní založeného na pravidlech pro rozšíření sady Visual Studio
 titleSuffix: ''
+description: Naučte se používat kontexty uživatelského rozhraní založené na pravidlech, což správcům rozšíření umožňuje definovat podmínky při aktivaci kontextu uživatelského rozhraní a načtení VSPackage.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ author: acangialosi
 ms.author: anthc
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc24fe3f5b27b3c92f0629ed378c1a97c820cd0a
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 41b804d3f7697890773b4b6888bcffa108b7a11b
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037104"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993455"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Postupy: použití kontextu uživatelského rozhraní založeného na pravidlech pro rozšíření sady Visual Studio
 
@@ -82,7 +83,7 @@ Kontext uživatelského rozhraní založeného na pravidlech lze použít různ�
    <GuidSymbol name="UIContextGuid" value="{8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B}" />
    ```
 
-    Nyní budou příkazy kontextové nabídky pro soubory * \* . config* viditelné pouze v případě, že je vybraná položka v Průzkumníku řešení soubor *. config* a balíček nebude načten, dokud jeden z těchto příkazů není vybrán.
+    Nyní budou příkazy kontextové nabídky pro soubory *\* . config* viditelné pouze v případě, že je vybraná položka v Průzkumníku řešení soubor *. config* a balíček nebude načten, dokud jeden z těchto příkazů není vybrán.
 
    Dále pomocí ladicího programu potvrďte, že se balíček načte jenom v případě, že ho očekáváte. Ladění TestPackage:
 

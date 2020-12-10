@@ -1,5 +1,7 @@
 ---
 title: Dynamické přidávání položek nabídky | Microsoft Docs
+description: Naučte se používat příznak příkazu DynamicItemStart k přidávání položek nabídky za běhu. Tento článek ukazuje, jak nastavit projekt po spuštění v řešení sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4387c1930e09e49c0ec5c36ccedc1bb83dc273f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81fd495c51eff456f66275f33876038d14e43203
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712057"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994807"
 ---
 # <a name="dynamically-add-menu-items"></a>Dynamické přidávání položek nabídky
 Můžete přidat položky nabídky za běhu zadáním `DynamicItemStart` příznaku pro zástupný symbol v definici tlačítka v souboru Command-Table (*. vsct*) sady Visual Studio a následným definováním (v kódu) počet položek nabídky k zobrazení a manipulaci s příkazy. Po načtení rozhraní VSPackage je zástupný symbol nahrazen dynamickými položkami nabídky.
@@ -43,7 +45,7 @@ Můžete přidat položky nabídky za běhu zadáním `DynamicItemStart` přízn
 
 - Dvě tlačítka, která fungují jako zástupný symbol pro položky nabídky a další, které doplní ikonu a popis tlačítka na panelu nástrojů.
 
-1. V *DynamicMenuPackage. vsct*definujte identifikátory příkazů. Přejít do oddílu symboly a nahradit elementy IDSymbol v bloku GuidSymbol **guidDynamicMenuPackageCmdSet** . Je nutné definovat prvky IDSymbol pro tyto dvě skupiny, kontroler nabídek, zástupný příkaz a příkaz Ukotvit.
+1. V *DynamicMenuPackage. vsct* definujte identifikátory příkazů. Přejít do oddílu symboly a nahradit elementy IDSymbol v bloku GuidSymbol **guidDynamicMenuPackageCmdSet** . Je nutné definovat prvky IDSymbol pro tyto dvě skupiny, kontroler nabídek, zástupný příkaz a příkaz Ukotvit.
 
     ```xml
     <GuidSymbol name="guidDynamicMenuPackageCmdSet" value="{ your GUID here }">
@@ -142,7 +144,7 @@ Můžete přidat položky nabídky za běhu zadáním `DynamicItemStart` přízn
 ## <a name="implement-the-dynamic-menu-command"></a>Implementace dynamického příkazu nabídky
  Vytvoříte dynamickou třídu příkazu nabídky, která dědí z <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> . V této implementaci konstruktor určuje predikát, který se má použít pro porovnání příkazů. Chcete-li <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> použít tento predikát k nastavení <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> vlastnosti, která označuje příkaz, který má být vyvolán, je nutné přepsat metodu.
 
-1. Vytvořte nový soubor třídy jazyka C# s názvem *DynamicItemMenuCommand.cs*a přidejte třídu s názvem **DynamicItemMenuCommand** , která dědí z <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> :
+1. Vytvořte nový soubor třídy jazyka C# s názvem *DynamicItemMenuCommand.cs* a přidejte třídu s názvem **DynamicItemMenuCommand** , která dědí z <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> :
 
     ```csharp
     class DynamicItemMenuCommand : OleMenuCommand
@@ -205,7 +207,7 @@ Můžete přidat položky nabídky za běhu zadáním `DynamicItemStart` přízn
 ## <a name="add-the-command"></a>Přidat příkaz
  Konstruktor DynamicMenu je místo, kde jste nastavili příkazy nabídky, včetně dynamických nabídek a položek nabídky.
 
-1. Do *DynamicMenuPackage.cs*přidejte GUID sady příkazů a ID příkazu:
+1. Do *DynamicMenuPackage.cs* přidejte GUID sady příkazů a ID příkazu:
 
     ```csharp
     public const string guidDynamicMenuPackageCmdSet = "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file

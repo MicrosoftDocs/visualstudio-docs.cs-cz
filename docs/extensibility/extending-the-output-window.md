@@ -1,5 +1,7 @@
 ---
 title: Rozšíření okno Výstup | Microsoft Docs
+description: Naučte se, jak zvětšit okno výstup v sadě Visual Studio SDK a vytvořit a spravovat vlastní podokna.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 800b443b079111d1d09fffdd900b246a020578f4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39ee69f934a9962d2beefb83b1ada08b920ce53d
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711645"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994651"
 ---
 # <a name="extend-the-output-window"></a>Rozšíří okno výstup.
 Okno **výstup** je sada textových podoken pro čtení a zápis. Visual Studio obsahuje tato Vestavěná podokna: **sestavení**, ve kterém projekty sdělují zprávy o sestaveních a **Obecné**, ve kterých [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] komunikuje se zprávami o integrovaném vývojovém prostředí (IDE). Projekty automaticky získávají odkaz na podokno **sestavení** prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> metod rozhraní a Visual Studio nabízí přímý přístup k podoknu **Obecné** prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> služby. Kromě integrovaných podoken můžete vytvářet a spravovat vlastní podokna.
@@ -33,14 +35,14 @@ Okno **výstup** je sada textových podoken pro čtení a zápis. Visual Studio 
 
     2. EnvDTE80
 
-3. Do *TestOutput.cs*přidejte následující příkaz using:
+3. Do *TestOutput.cs* přidejte následující příkaz using:
 
     ```f#
     using EnvDTE;
     using EnvDTE80;
     ```
 
-4. V *TestOutput.cs*odstraňte `ShowMessageBox` metodu. Přidejte následující zástupnou proceduru následující metody:
+4. V *TestOutput.cs* odstraňte `ShowMessageBox` metodu. Přidejte následující zástupnou proceduru následující metody:
 
     ```csharp
     private void OutputCommandHandler(object sender, EventArgs e)

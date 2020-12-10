@@ -1,5 +1,7 @@
 ---
 title: Rozšíření uživatelských nastavení a možností | Microsoft Docs
+description: Seznamte se s rozšířením uživatelských nastavení a možností v sadě Visual Studio SDK pomocí prostředků v tomto článku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +15,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 854928c5461d60bb39b75d2895d8d1c8d0a0e8c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: adcefcfc18e64f9a7e082d0398b6609ba1877d28
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711559"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994573"
 ---
 # <a name="extend-user-settings-and-options"></a>Rozšíří uživatelská nastavení a možnosti.
-V aplikaci Visual Studio existují dva hlavní způsoby zachování uživatelských preferencí. Stránky **Tools**  >  **možností** nástroje umožňují uživatelům nastavit vlastní hodnoty pro mnoho různých typů nastavení, a to jak obecné, tak i pro konkrétní jazyk. Uživatelské nastavení umožňuje uživatelům zadat obecné vlastnosti konfigurace sady Visual Studio. Další informace o stránkách možností najdete v tématu [Možnosti a stránky možností](../extensibility/internals/options-and-options-pages.md). Další informace o uživatelských nastaveních najdete v tématu [Podpora uživatelských nastavení](../extensibility/internals/support-for-user-settings.md).
+V aplikaci Visual Studio existují dva hlavní způsoby zachování uživatelských preferencí. Stránky   >  **možností** nástroje umožňují uživatelům nastavit vlastní hodnoty pro mnoho různých typů nastavení, a to jak obecné, tak i pro konkrétní jazyk. Uživatelské nastavení umožňuje uživatelům zadat obecné vlastnosti konfigurace sady Visual Studio. Další informace o stránkách možností najdete v tématu [Možnosti a stránky možností](../extensibility/internals/options-and-options-pages.md). Další informace o uživatelských nastaveních najdete v tématu [Podpora uživatelských nastavení](../extensibility/internals/support-for-user-settings.md).
 
 - [Vytvoření stránky možnosti](../extensibility/creating-an-options-page.md) Vysvětluje, jak vytvořit stránku možností.
 

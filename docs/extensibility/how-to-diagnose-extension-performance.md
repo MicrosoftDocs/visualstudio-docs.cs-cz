@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Diagnostika výkonu rozšíření | Microsoft Docs'
+description: Visual Studio upozorní uživatele na pomalá rozšíření. Přečtěte si, jak se vypočítává dopad na rozšíření a jak se dá analyzovat dopad na rozšíření místně.
+ms.custom: SEO-VS-2020
 ms.date: 11/08/2016
 ms.topic: how-to
 ms.assetid: 46b0a1e3-7e69-47c9-9d8d-a1815d6c3896
@@ -8,12 +10,12 @@ ms.author: bertaygu
 manager: jillfra
 ms.workload:
 - bertaygu
-ms.openlocfilehash: 542d8a6d6d90091aa7a800ef18f847fea6b1a81c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03721f2aedd231dd9d4c4edaadf5eeb3a89389c2
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905902"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994196"
 ---
 # <a name="measuring-extension-impact-in-startup"></a>Měření dopadu rozšíření při spuštění
 
@@ -176,6 +178,6 @@ Jedno z dalších zobrazení v trasování, které bude užitečné k určení d
 
 Je důležité minimalizovat počet načtených sestavení v rámci rutiny inicializace balíčku, protože každé další sestavení bude zahrnovat další vstupně-výstupní operace disku, což může zpomalit spouštění významně na pomalejších počítačích.
 
-## <a name="summary"></a>Shrnutí
+## <a name="summary"></a>Souhrn
 
 Po spuštění sady Visual Studio byla jednou z oblastí, na které průběžně získáváme zpětnou vazbu. Náš cíl uvedený výše je pro všechny uživatele, kteří mají konzistentní prostředí pro spouštění bez ohledu na to, které součásti a rozšíření nainstalovaly. Rádi bychom mohli spolupracovat s vlastníky rozšíření, abychom jim pomohli dosáhnout tohoto cíle. Výše uvedené pokyny by měly být užitečné při porozumění vlivu rozšíření na spuštění a buď k tomu, aby se zabránilo nutnosti automatického načítání nebo načítání asynchronně, aby se minimalizoval dopad na produktivitu uživatelů.

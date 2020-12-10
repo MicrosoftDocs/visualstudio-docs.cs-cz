@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: používání protokolu aktivit | Microsoft Docs'
+description: Sady VSPackage můžou zapisovat zprávy do protokolu aktivit. Naučte se používat protokol aktivit pro ladění VSPackage v maloobchodních prostředích.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 824feee64f928dc837a379aeb539daaa5ba0d1db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2796b8537c0f94c02c91fddc73f6d913ba1b0c4c
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905587"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993572"
 ---
 # <a name="how-to-use-the-activity-log"></a>Postupy: použití protokolu aktivit
 Sady VSPackage můžou zapisovat zprávy do protokolu aktivit. Tato funkce je užitečná hlavně při ladění VSPackage v maloobchodních prostředích.

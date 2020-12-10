@@ -1,5 +1,6 @@
 ---
 title: Ladicí program shaderu HLSL | Microsoft Docs
+description: Pomocí ladicího programu HLSL v analyzátoru grafiky můžete uchopit, jak váš HLSL kód funguje ve vaší aplikaci. Ladicí program může simulovat přesný HLSL podproces, který vás zajímá.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 164c404f3bce6b8216092635e3489843039fb1eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65f643d0f03f9754d580de8be95fb5c1f65a940d
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735305"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995132"
 ---
 # <a name="hlsl-shader-debugger"></a>Ladicí program shaderu HLSL
 Ladicí program HLSL v Analyzátor grafiky sady Visual Studio pomáhá pochopit, jak váš kód shaderu HLSL funguje za reálných podmínek vaší aplikace.

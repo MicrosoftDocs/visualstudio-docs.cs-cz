@@ -1,5 +1,7 @@
 ---
 title: Element GuidSymbol | Microsoft Docs
+description: 'Element GuidSymbol obsahuje identifikátor GUID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59068a9ac9f952b5370681b3684ce4234354afc9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98fd802021f29365b6f338610754214352a996d7
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711131"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994235"
 ---
 # <a name="guidsymbol-element"></a>Element GuidSymbol
 `GuidSymbol`Element obsahuje identifikátor GUID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz. ID pochází z `IDSymbol` prvku v `GuidSymbol` elementu. `GuidSymbol`Element má `name` atribut, který poskytuje popisný název identifikátoru GUID, který je obsažen v `value` atributu.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <GuidSymbol name="guidMyCommandSet" value="{xxxxxxxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx}">
@@ -38,7 +40,7 @@ ms.locfileid: "80711131"
 |Atribut|Popis|
 |---------------|-----------------|
 |name|Povinná hodnota. Název symbolu GUID|
-|value|Povinná hodnota. Identifikátor GUID symbolu GUID|
+|hodnota|Povinná hodnota. Identifikátor GUID symbolu GUID|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
