@@ -1,5 +1,7 @@
 ---
 title: Rozšíření stavového řádku | Microsoft Docs
+description: Naučte se, jak zvětšit stavový řádek sady Visual Studio v dolní části integrovaného vývojového prostředí (IDE), která zobrazuje informace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa62326d82d81f7ee4d10a838209364355cc488e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddce0cdf62d803dac1a5981442424a45d6550193
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711543"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995691"
 ---
 # <a name="extend-the-status-bar"></a>Rozšíří stavový řádek.
 K zobrazení informací můžete použít stavový řádek sady Visual Studio v dolní části rozhraní IDE.
@@ -34,7 +36,7 @@ K zobrazení informací můžete použít stavový řádek sady Visual Studio v 
 
 1. Vytvořte projekt VSIX s názvem **TestStatusBarExtension** a přidejte příkaz nabídky s názvem **TestStatusBarCommand**.
 
-2. V *TestStatusBarCommand.cs*nahraďte kód metody obslužné rutiny příkazu ( `MenuItemCallback` ) následujícím způsobem:
+2. V *TestStatusBarCommand.cs* nahraďte kód metody obslužné rutiny příkazu ( `MenuItemCallback` ) následujícím způsobem:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -110,9 +112,9 @@ K zobrazení informací můžete použít stavový řádek sady Visual Studio v 
 
 ### <a name="display-an-animation"></a>Zobrazení animace
 
-1. Na stavovém řádku se zobrazuje animace smyčky, která indikuje buď dlouhotrvající operaci (například sestavení více projektů v řešení). Pokud tuto animaci nevidíte, ujistěte se, že máte správně **Tools**  >  nastavené**Možnosti** nástrojů:
+1. Na stavovém řádku se zobrazuje animace smyčky, která indikuje buď dlouhotrvající operaci (například sestavení více projektů v řešení). Pokud tuto animaci nevidíte, ujistěte se, že máte správně   >  nastavené **Možnosti** nástrojů:
 
-     Vraťte se na **Tools**  >  kartu**Možnosti**nástrojů  >  **Obecné** a zrušte kontrolu **automaticky upravit vzhled na základě výkonu klienta**. Potom zaškrtněte dílčí možnost **Povolit bohatou aplikaci s webovým prostředím**. Nyní byste měli být schopni zobrazit animaci při sestavování projektu v experimentální instanci aplikace Visual Studio.
+     Vraťte se na   >  kartu **Možnosti** nástrojů  >  **Obecné** a zrušte kontrolu **automaticky upravit vzhled na základě výkonu klienta**. Potom zaškrtněte dílčí možnost **Povolit bohatou aplikaci s webovým prostředím**. Nyní byste měli být schopni zobrazit animaci při sestavování projektu v experimentální instanci aplikace Visual Studio.
 
      V tomto postupu zobrazíme standardní animaci sady Visual Studio, která představuje sestavení projektu nebo řešení.
 

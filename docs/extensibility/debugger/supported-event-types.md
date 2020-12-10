@@ -1,5 +1,7 @@
 ---
 title: Podporované typy událostí | Microsoft Docs
+description: Seznamte se s typy událostí, které podporuje ladění sady Visual Studio, včetně asynchronních událostí, synchronních událostí a zastavování událostí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94e26897c50fd7e10a8b831655610848cb93043f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 215256cbbcff45dfa0b85a480f0900e6f8ddfa71
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712804"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996029"
 ---
 # <a name="supported-event-types"></a>Podporované typy událostí
 Ladění sady Visual Studio aktuálně podporuje následující typy událostí:
@@ -34,7 +36,7 @@ Ladění sady Visual Studio aktuálně podporuje následující typy událostí:
 
    Upozorněte na SDM a IDE, že aplikace, která se právě ladí, zastavila provádění kódu. Při odeslání události zastavení prostřednictvím [události](../../extensibility/debugger/reference/idebugeventcallback2-event.md)metody je vyžadován parametr [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md) . Zastavování událostí pokračuje voláním jedné z následujících metod:
 
-  - [Spuštění](../../extensibility/debugger/reference/idebugprogram2-execute.md)
+  - [Spuštěním](../../extensibility/debugger/reference/idebugprogram2-execute.md)
 
   - [Krok](../../extensibility/debugger/reference/idebugprogram2-step.md)
 
@@ -56,33 +58,33 @@ Ladění sady Visual Studio aktuálně podporuje následující typy událostí:
 |Událost|IDebugProgram2|IDebugThread2|Zastavení událostí|
 |-----------|--------------------|-------------------|---------------------|
 |[IDebugActivateDocumentEvent2](../../extensibility/debugger/reference/idebugactivatedocumentevent2.md)|Povoleno, ale není vyžadováno|Povoleno, ale není vyžadováno|Ne|
-|[IDebugBreakEvent2](../../extensibility/debugger/reference/idebugbreakevent2.md)|Vyžadováno|Vyžadováno|Ano|
+|[IDebugBreakEvent2](../../extensibility/debugger/reference/idebugbreakevent2.md)|Požadováno|Požadováno|Ano|
 |[IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md)|Povoleno, ale není vyžadováno|Povoleno, ale není vyžadováno|Ne|
 |[IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)|Povoleno, ale není vyžadováno|Povoleno, ale není vyžadováno|Ne|
 |[IDebugBreakpointUnboundEvent2](../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)|Povoleno, ale není vyžadováno|Povoleno, ale není vyžadováno|Ne|
-|[IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md)|Vyžadováno|Vyžadováno|Ano|
-|[IDebugCanStopEvent2](../../extensibility/debugger/reference/idebugcanstopevent2.md)|Vyžadováno|Vyžadováno|Ne|
+|[IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md)|Požadováno|Požadováno|Ano|
+|[IDebugCanStopEvent2](../../extensibility/debugger/reference/idebugcanstopevent2.md)|Požadováno|Požadováno|Ne|
 |[IDebugDocumentTextEvents2](../../extensibility/debugger/reference/idebugdocumenttextevents2.md)|Nepovolené|Nepovolené|Ne|
 |[IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md)|Nepovolené|Nepovolené|Ne|
-|[IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md)|Vyžadováno|Vyžadováno|Ano|
+|[IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md)|Požadováno|Požadováno|Ano|
 |[IDebugErrorEvent2](../../extensibility/debugger/reference/idebugerrorevent2.md)|Povoleno, ale není vyžadováno|Povoleno, ale není vyžadováno|Může být|
-|[IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md)|Vyžadováno|Vyžadováno|Ano|
+|[IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md)|Požadováno|Požadováno|Ano|
 |[IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)|Povoleno, ale není vyžadováno|Povoleno, ale není vyžadováno|Může být|
-|[IDebugInterceptExceptionCompleteEvent2](../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)|Vyžadováno|Vyžadováno|Ano|
-|[IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md)|Vyžadováno|Vyžadováno|Ano|
+|[IDebugInterceptExceptionCompleteEvent2](../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)|Požadováno|Požadováno|Ano|
+|[IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md)|Požadováno|Požadováno|Ano|
 |[IDebugMessageEvent2](../../extensibility/debugger/reference/idebugmessageevent2.md)|Povoleno, ale není vyžadováno|Povoleno, ale není vyžadováno|Může být|
-|[IDebugModuleLoadEvent2](../../extensibility/debugger/reference/idebugmoduleloadevent2.md)|Vyžadováno|Povoleno, ale není vyžadováno|Ne|
+|[IDebugModuleLoadEvent2](../../extensibility/debugger/reference/idebugmoduleloadevent2.md)|Požadováno|Povoleno, ale není vyžadováno|Ne|
 |[IDebugOutputStringEvent2](../../extensibility/debugger/reference/idebugoutputstringevent2.md)|Povoleno, ale není vyžadováno|Povoleno, ale není vyžadováno|Ne|
-|[IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)|Vyžadováno|Povoleno, ale není vyžadováno|Ne|
-|[IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)|Vyžadováno|Povoleno, ale není vyžadováno|Ne|
-|[IDebugPropertyCreateEvent2](../../extensibility/debugger/reference/idebugpropertycreateevent2.md)|Vyžadováno|Povoleno, ale není vyžadováno|Ne|
-|[IDebugPropertyDestroyEvent2](../../extensibility/debugger/reference/idebugpropertydestroyevent2.md)|Vyžadováno|Povoleno, ale není vyžadováno|Ne|
+|[IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)|Požadováno|Povoleno, ale není vyžadováno|Ne|
+|[IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)|Požadováno|Povoleno, ale není vyžadováno|Ne|
+|[IDebugPropertyCreateEvent2](../../extensibility/debugger/reference/idebugpropertycreateevent2.md)|Požadováno|Povoleno, ale není vyžadováno|Ne|
+|[IDebugPropertyDestroyEvent2](../../extensibility/debugger/reference/idebugpropertydestroyevent2.md)|Požadováno|Povoleno, ale není vyžadováno|Ne|
 |[IDebugReturnValueEvent2](../../extensibility/debugger/reference/idebugreturnvalueevent2.md)|Povoleno, ale není vyžadováno|Povoleno, ale není vyžadováno|Ne|
-|IDebugStopCompleteEvent2|Vyžadováno|Vyžadováno|Ano|
-|[IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md)|Vyžadováno|Vyžadováno|Ano|
+|IDebugStopCompleteEvent2|Požadováno|Požadováno|Ano|
+|[IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md)|Požadováno|Požadováno|Ano|
 |[IDebugSymbolSearchEvent2](../../extensibility/debugger/reference/idebugsymbolsearchevent2.md)|Povoleno, ale není vyžadováno|Povoleno, ale není vyžadováno|Ne|
-|[IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md)|Vyžadováno|Vyžadováno|Ne|
-|[IDebugThreadDestroyEvent2](../../extensibility/debugger/reference/idebugthreaddestroyevent2.md)|Vyžadováno|Vyžadováno|Ne|
+|[IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md)|Požadováno|Požadováno|Ne|
+|[IDebugThreadDestroyEvent2](../../extensibility/debugger/reference/idebugthreaddestroyevent2.md)|Požadováno|Požadováno|Ne|
 |[IDebugThreadNameChangedEvent2](../../extensibility/debugger/reference/idebugthreadnamechangedevent2.md)|Povoleno, ale není vyžadováno|Povoleno, ale není vyžadováno|Ne|
 
 ## <a name="see-also"></a>Viz také

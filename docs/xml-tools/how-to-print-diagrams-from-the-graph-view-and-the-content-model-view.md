@@ -1,5 +1,5 @@
 ---
-title: 'Schéma XML: Tisk diagramů v zobrazení grafu & zobrazení modelu obsahu'
+title: Tisk diagramů
 description: Naučte se tisknout diagram ze zobrazení grafu nebo z pohledu modelu obsahu v Návrháři schématu XML.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61b9e837af5a1112d03740cc67b5d91f24d186a5
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 4ecf1c9cf062dec8dd1d83a5b99bb8c498667e0f
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399156"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996328"
 ---
 # <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>Postupy: Tisk diagramů ze zobrazení grafu a ze zobrazení modelu obsahu
 

@@ -1,5 +1,7 @@
 ---
 title: Zahrnout element | Microsoft Docs
+description: Element include určuje soubor, který může být umístěn v zadané cestě include pro vložení do aktuálního souboru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,17 +15,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ea89185d28be2816a690d867dbb3eccbb739e04
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 71da1241863e41529af33bdd5e45dcf0a8bfbdb1
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710361"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996341"
 ---
 # <a name="include-element"></a>Include – element
 Element include určuje soubor, který může být umístěn v zadané cestě include pro vložení do aktuálního souboru.  Všechny symboly a typy, které jsou definovány, se stanou součástí zkompilovaného výsledku.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```csharp
 <Include href="stdidcmd.h" />
@@ -37,7 +39,7 @@ Element include určuje soubor, který může být umístěn v zadané cestě in
 |Atribut|Popis|
 |---------------|-----------------|
 |odkaz|Povinná hodnota. Cesta k souboru hlaviček:<br /><br /> href = "Stdidcmd. h"|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 

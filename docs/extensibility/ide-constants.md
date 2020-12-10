@@ -1,5 +1,7 @@
 ---
 title: Konstanty IDE | Microsoft Docs
+description: Třída VSConstants poskytuje konstanty specifické pro integrované vývojové prostředí (IDE), které byly dříve definovány pouze v hlavičkových souborech.
+ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc2eddac1cc7d7e616deb197752adf41a4d68d15
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28b419981e8fe1224cef5c25e112d58924a8301b
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710505"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995561"
 ---
 # <a name="ide-constants"></a>Konstanty rozhraní IDE
 

@@ -1,5 +1,7 @@
 ---
 title: Vlákna | Microsoft Docs
+description: Tento článek popisuje definice a roli vlákna v architektuře ladicího programu v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ed5c06e0c42dac1f0539cc2c7c5886d95b23ae1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b259ffd7814b42145489ee5990cee6da891a9d10
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712482"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995951"
 ---
 # <a name="threads"></a>Vlákna
 V architektuře ladicího programu, *vlákno*:

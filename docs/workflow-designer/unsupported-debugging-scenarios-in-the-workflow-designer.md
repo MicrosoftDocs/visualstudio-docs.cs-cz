@@ -1,5 +1,5 @@
 ---
-title: Nepodporované scénáře ladění v návrháři postupu provádění
+title: Nepodporované scénáře ladění
 description: Přečtěte si o nepodporovaných scénářích ladění v Návrhář postupu provádění, například "spuštění nelze pokračovat po úpravě kódu."
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: d9ce8d15e44fecca673fdaa9fccd70ff13eb6783
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 4e98e2a75905f4c0a4c007691a99961dbcf1477c
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433515"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996263"
 ---
 # <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>Nepodporované scénáře ladění v návrháři postupu provádění
 
@@ -43,13 +43,13 @@ Návrhář postupu provádění nepodporuje následující scénáře ladění:
 
 - Okno zarážky nebo místní nabídka nepodporuje následující sloupce nebo možnosti ladění pracovního postupu:
 
-  - Stav
+  - Podmínka
 
   - Počet volání
 
   - Při volání
 
-  - Function
+  - Funkce
 
   - Data
 

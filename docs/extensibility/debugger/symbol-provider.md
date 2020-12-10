@@ -1,5 +1,7 @@
 ---
 title: Zprostředkovatel symbolů | Microsoft Docs
+description: Přečtěte si o poskytovatelích symbolů, které poskytuje Visual Studio, aby umožnili vyhodnocení výrazu pro vyhodnocení proměnných a výrazů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31b90846d9494ee046cf9dc4a3e5de9ff033ea3f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 043014ebababd990c9cae03f28cb1b642d576071
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712810"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996042"
 ---
 # <a name="symbol-provider"></a>Zprostředkovatel symbolů
 Implementace vyhodnocovacího filtru výrazů musí přistupovat k symbolickým ladicím informacím generovaným kompilátorem jazyka, aby bylo možné vyhodnotit proměnné a výrazy. Udělá to tak, že zabírají rozhraní zprostředkovatele symbolů (SP), označovaného také jako obslužná rutina symbolu.

@@ -1,5 +1,7 @@
 ---
 title: Enumerátory | Microsoft Docs
+description: Seznamte se s datovými typy enumerátoru v rozhraní API modulu plug-in správy zdrojového kódu, včetně kódu příkazu, zprávy, souboru stavového kódu a stavového kódu adresáře.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee48d064612e5519d5ad7e5eaf04de6c5a697837
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55e124ce3d36e2b23ef53c376b660de05cd87043
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711857"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995808"
 ---
 # <a name="enumerators"></a>Enumerátory
 Tato část obsahuje seznam typů dat enumerátorů v rozhraní API modulu plug-in správy zdrojových kódů, o kterých musí modul plug-in správy zdrojových kódů doznat.

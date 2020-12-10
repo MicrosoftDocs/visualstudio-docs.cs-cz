@@ -1,5 +1,7 @@
 ---
 title: Kurz k rozšíření Hello World | Microsoft Docs
+description: Naučte se, jak přidat nový příkaz jako rozšíření do sady Visual Studio, která zahrnuje vytvoření projektu, přidání příkazu a úpravu zdrojového kódu.
+ms.custom: SEO-VS-2020
 ms.date: 03/14/2019
 ms.topic: tutorial
 ms.assetid: f74e1ad1-1ee5-4360-9bd5-d82467b884ca
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 796cb53ea5124662c695cce55241794802f042c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6ba4d6cbca8d55cdaceb04a1a773fde376a8670a
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905937"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995717"
 ---
 # <a name="tutorial---create-your-first-extension-hello-world"></a>Kurz – vytvoření prvního rozšíření: Hello World
 
@@ -46,7 +48,7 @@ Než začnete, ujistěte se, že máte nainstalovanou úlohu **vývoj rozšíře
 
 Krok 1. V nabídce **soubor** vyberte možnost **Nový**  >  **projekt**.
 
-Krok 2. Do vyhledávacího pole v pravém horním rohu zadejte "VSIX" a vyberte **projekt VSIX**Visual C#. Jako **název** v dolní části dialogového okna zadejte "HelloWorld" a vyberte **OK**.
+Krok 2. Do vyhledávacího pole v pravém horním rohu zadejte "VSIX" a vyberte **projekt VSIX** Visual C#. Jako **název** v dolní části dialogového okna zadejte "HelloWorld" a vyberte **OK**.
 
 ![Nový projekt](media/hello-world-new-project.png)
 
@@ -72,7 +74,7 @@ Nyní byste měli vidět projekt HelloWorld v **Průzkumník řešení**.
 
 Krok 1. Pokud vyberete soubor manifestu *. vsixmanifest* , můžete zjistit, jaké možnosti jsou měnitelné, jako je popis, autor a verze.
 
-Krok 2. Klikněte pravým tlačítkem na projekt (ne řešení). V místní nabídce vyberte položku **Přidat**a **Nová položka**.
+Krok 2. Klikněte pravým tlačítkem na projekt (ne řešení). V místní nabídce vyberte položku **Přidat** a **Nová položka**.
 
 Krok 3. Vyberte oddíl **rozšiřitelnost** a pak zvolte **příkaz**.
 
@@ -92,7 +94,7 @@ V tuto chvíli je text příkazu a tlačítka automaticky vygenerován a není v
 
 ::: moniker range="vs-2017"
 
-Krok 1. V **Průzkumník řešení**vyhledejte soubor vsct pro nový příkaz. V takovém případě se bude volat *CommandPackage. vsct*.
+Krok 1. V **Průzkumník řešení** vyhledejte soubor vsct pro nový příkaz. V takovém případě se bude volat *CommandPackage. vsct*.
 
 ![vsct balíčku příkazů](media/hello-world-command-package-vsct.png)
 
@@ -100,7 +102,7 @@ Krok 1. V **Průzkumník řešení**vyhledejte soubor vsct pro nový příkaz. V
 
 ::: moniker range=">=vs-2019"
 
-Krok 1. V **Průzkumník řešení**vyhledejte soubor vsct pro balíček rozšíření vs. V takovém případě se bude volat *HelloWorldPackage. vsct*.
+Krok 1. V **Průzkumník řešení** vyhledejte soubor vsct pro balíček rozšíření vs. V takovém případě se bude volat *HelloWorldPackage. vsct*.
 
 ::: moniker-end
 
@@ -156,7 +158,7 @@ V záhlaví sady Visual Studio se zobrazí slova **experimentální instance** .
 
 ::: moniker-end
 
-Krok 2. V nabídce **nástroje** **experimentální instance**klikněte na příkaz **Hello World!**.
+Krok 2. V nabídce **nástroje** **experimentální instance** klikněte na příkaz **Hello World!**.
 
 ![konečný výsledek](media/hello-world-final-result.png)
 

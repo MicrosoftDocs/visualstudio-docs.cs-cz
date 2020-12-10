@@ -1,5 +1,7 @@
 ---
 title: Rozšíření a přizpůsobení oken nástrojů | Microsoft Docs
+description: Přečtěte si o rozšíření a přizpůsobení oken nástrojů, které poskytuje Visual Studio, včetně okno Vlastnosti, okna výstupu a Seznam úkolů okna.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 76c094ec73a69baa46a5e8313dd26febd57e5887
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ca7f6aa0c029cd3d85ba569aa93d6ae2087afd52
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711821"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995860"
 ---
 # <a name="extend-and-customize-tool-windows"></a>Rozšiřování a přizpůsobení oken nástrojů
 Visual Studio poskytuje několik různých typů oken, například okna nástrojů, okna dokumentů a dialogová okna. Další okna, jako je okno **vlastnosti** , okno **výstup** a okno **seznam úkolů** , jsou typy oken nástrojů.

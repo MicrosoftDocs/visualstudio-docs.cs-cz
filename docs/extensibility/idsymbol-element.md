@@ -1,5 +1,7 @@
 ---
 title: Element IDSymbol | Microsoft Docs
+description: 'Element IDSymbol obsahuje ID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d02a26a6874165738d917a14986d16d142c01915
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4feb477f8507bc3fe57e6db355538ab98ceeeaa
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710378"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995535"
 ---
 # <a name="idsymbol-element"></a>Element IDSymbol
 `IDSymbol`Element obsahuje ID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz. Identifikátor GUID pochází z nadřazeného `GuidSymbol` elementu. `IDSymbol`Element má `name` atribut, který poskytuje popisný název pro ID, který je obsažen v `value` atributu.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <IDSymbol name=ElementName value="0x0010" />
@@ -35,7 +37,7 @@ ms.locfileid: "80710378"
 |Atribut|Popis|
 |---------------|-----------------|
 |name|Povinná hodnota. Název symbolu ID.|
-|value|Povinná hodnota. Hodnota číselného ID symbolu ID.|
+|hodnota|Povinná hodnota. Hodnota číselného ID symbolu ID.|
 
 ### <a name="child-elements"></a>Podřízené prvky
  Žádné

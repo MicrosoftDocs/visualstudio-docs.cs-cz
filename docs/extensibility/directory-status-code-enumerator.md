@@ -1,5 +1,7 @@
 ---
 title: Enumerátor stavového kódu adresáře | Microsoft Docs
+description: Enumerátor SccDirStatus obsahuje pojmenované konstantní hodnoty, které určují stav adresáře v systému správy zdrojového kódu a používá ho SccDirQueryInfo.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,24 +13,24 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b5ebf61f2baa6e4277e27cd3c4d18a51e64f835
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af72b9e14695cb954084abebc3a3c336c90af73d
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712148"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996120"
 ---
 # <a name="directory-status-code-enumerator"></a>Enumerátor stavového kódu adresáře
 `SccDirStatus`Enumerátor obsahuje pojmenované konstantní hodnoty, které určují stav adresáře v systému správy zdrojového kódu. Tento výčet používá [SccDirQueryInfo](../extensibility/sccdirqueryinfo-function.md). Tato verze byla představena ve verzi 1,2 rozhraní API modulu plug-in správy zdrojového kódu.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 enum SccDirStatus {
-   SCC_DIRSTATUS_INVALID       = -1L,
-   SCC_DIRSTATUS_NOTCONTROLLED = 0x0000L,
-   SCC_DIRSTATUS_CONTROLLED    = 0x0001L,
-   SCC_DIRSTATUS_EMPTYPROJ     = 0x0002L
+   SCC_DIRSTATUS_INVALID       = -1L,
+   SCC_DIRSTATUS_NOTCONTROLLED = 0x0000L,
+   SCC_DIRSTATUS_CONTROLLED    = 0x0001L,
+   SCC_DIRSTATUS_EMPTYPROJ     = 0x0002L
 };
 ```
 

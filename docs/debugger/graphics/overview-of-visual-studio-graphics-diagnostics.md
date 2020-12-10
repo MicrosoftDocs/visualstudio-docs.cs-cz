@@ -1,7 +1,7 @@
 ---
 title: Přehled diagnostiky grafiky | Microsoft Docs
-description: Podrobný přehled sady Visual Studio Diagnostika grafiky
-ms.custom: seodec18
+description: Visual Studio Diagnostika grafiky je sada nástrojů pro protokolování aktivity Direct3D a analyzuje protokoly pro řešení problémů s vykreslováním a výkonem.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 02/09/2017
 ms.topic: conceptual
 author: mikejo5000
@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f9193555ef3c9c69f494a78ac779a3724417f63
-ms.sourcegitcommit: a1cb4e2025045c2ad79167645c4c0f33b94b1152
+ms.openlocfilehash: 1ccf3b77c9b1f4dee7183aac32e8810417ba69c5
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671403"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996133"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Přehled diagnostiky grafiky sady Visual Studio
 Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a analýzu problémů s výkonem a výkonem v aplikacích Direct3D. Diagnostika grafiky lze použít pro aplikace, které jsou spuštěny místně na počítači s Windows nebo na vzdáleném počítači nebo zařízení.
 
 ## <a name="using-graphics-diagnostics-to-debug-rendering-problems"></a>Použití Diagnostiky grafiky k ladění problémů s vykreslováním
- Ladění problémů s vykreslováním v aplikaci s bohatou grafikou není tak přímočaré jako spuštění ladicího programu a krokování kódu. V každém snímku jsou produkovány stovky tisíc jedinečných pixelů podle komplexní sady stavu, dat, parametrů a kódu. Z těchto pixelů může problém, který chcete diagnostikovat, vykazovat pouze několik málo pixelů. A aby věci byly ještě složitější, kód, který generuje každý pixel, je spouštěn na specializovaném hardwaru, který paralelně zpracovává stovky pixelů. Tradiční nástroje a techniky ladění, které je obtížné využít i v kódu s malým počtem vláken, jsou v případě velkého množství dat neúčinné.
+ Ladění problémů s vykreslováním v graficky bohatou aplikaci není tak jednoduché jako spuštění ladicího programu a krokování kódu. V každém snímku jsou produkovány stovky tisíc jedinečných pixelů podle komplexní sady stavu, dat, parametrů a kódu. Z těchto pixelů může problém, který chcete diagnostikovat, vykazovat pouze několik málo pixelů. A aby věci byly ještě složitější, kód, který generuje každý pixel, je spouštěn na specializovaném hardwaru, který paralelně zpracovává stovky pixelů. Tradiční nástroje a techniky ladění, které je obtížné využít i v kódu s malým počtem vláken, jsou v případě velkého množství dat neúčinné.
 
  Nástroje Diagnostika grafiky v nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] jsou navržené tak, aby vám pomohly najít problémy s vykreslováním, počínaje vizuálními artefakty, které indikují problém, a pak se k zdroji problému zaměří jenom na relevantní kód shaderu, fáze zřetězení, volání remíz, prostředky a stav zařízení – ve vlastním zdrojovém kódu aplikace.
 

@@ -1,5 +1,5 @@
 ---
-title: Přidat uzly výsledků hledání sady schémat XML do pracovního prostoru
+title: Přidat uzly výsledků hledání sady schémat
 description: Naučte se, jak přidat uzly zvýrazněné v Průzkumníku schémat XML jako výsledek hledání klíčového slova v pracovním prostoru.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e306ec76b6089d822dfdcd154ff1947aef1c9cac
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: cffced7a0b680932a1f2b17bd1261e160563462c
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049180"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996276"
 ---
 # <a name="how-to-add-schema-set-search-result-nodes-to-the-workspace"></a>Postupy: Přidání uzlů výsledků hledání sad schémat do pracovního prostoru
 

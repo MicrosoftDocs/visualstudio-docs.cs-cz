@@ -1,5 +1,7 @@
 ---
 title: Inicializace návrháře a konfigurace metadat | Microsoft Docs
+description: Přečtěte si, jak sada Visual Studio SDK usnadňuje kontrolu inicializace a jejích metadat návrháře komponenty návrháře a jeho metadat pomocí VSPackage.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f48d8ebb285bdc8211f590f49e615042b7029d70
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 9907298cf730d6e51c108dc92f633d0b50451f12
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011706"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996159"
 ---
 # <a name="designer-initialization-and-metadata-configuration"></a>Inicializace návrháře a konfigurace metadat
 
@@ -97,7 +99,7 @@ Pokud byl globální příznak nastaven na `false` , je změna metadat místní 
 > [!NOTE]
 > Návrhová plocha podporuje pouze vytváření komponent, a proto může mít místní metadata pouze součásti. V předchozím příkladu jsme se pokoušeli změnit vlastnost, jako je například `Color` vlastnost objektu. Pokud `false` byla předána pro globální příznak, `CustomBrowser` by se nikdy nezobrazila, protože Návrhář nikdy nevytvořil instanci `Color` . Nastavení globálního příznaku na `false` hodnotu je užitečné pro součásti, jako jsou ovládací prvky, časovače a dialogová okna.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>
 - <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>

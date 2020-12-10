@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: aktualizace rozšíření sady Visual Studio | Microsoft Docs'
+description: Naučte se aktualizovat rozšíření sady Visual Studio v systému pomocí rozšíření a aktualizací pro instalaci aktualizované verze.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee81fe30e10253239bc51dd9d2f199340debc65a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be22ca13fd5af8df88501835c8a030cc6469e179
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905623"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995601"
 ---
 # <a name="how-to-update-a-visual-studio-extension"></a>Postupy: aktualizace rozšíření sady Visual Studio
 Rozšíření sady Visual Studio můžete v systému aktualizovat pomocí **rozšíření a aktualizací** pro instalaci aktualizované verze. Pokud vytvoříte aktualizovanou verzi rozšíření, můžete ji označit jako aktualizovanou zvýšením čísla verze v manifestu VSIX.
@@ -45,7 +47,7 @@ Rozšíření sady Visual Studio můžete v systému aktualizovat pomocí **roz�
     > [!IMPORTANT]
     > Nepodepsaná všechna uživatelská rozšíření se automaticky neaktualizují. Vaše rozšíření byste měli vždycky podepisovat.
 
-2. V **Průzkumník řešení**otevřete *source. extension. manifest*.
+2. V **Průzkumník řešení** otevřete *source. extension. manifest*.
 
 3. V Návrháři manifestu zvyšte hodnotu čísla v poli **verze** .
 
@@ -55,10 +57,10 @@ Rozšíření sady Visual Studio můžete v systému aktualizovat pomocí **roz�
 
      Když uživatel, který má starší verzi rozšíření, otevře **rozšíření a aktualizace**, zobrazí se nová verze v seznamu **aktualizace** za předpokladu, že nástroj je nastaven tak, aby automaticky hledal aktualizace.
 
-     Můžete povolit nebo zakázat automatickou kontrolu aktualizací v dolní části podokna **aktualizace** (**Povolit/zakázat automatickou detekci dostupných aktualizací**), která změní nastavení **Vyhledat aktualizace** v části **nástroje**  >  **Možnosti**  >  **Environment**  >  **rozšíření a aktualizace**prostředí.
+     Můžete povolit nebo zakázat automatickou kontrolu aktualizací v dolní části podokna **aktualizace** (**Povolit/zakázat automatickou detekci dostupných aktualizací**), která změní nastavení **Vyhledat aktualizace** v části **nástroje**  >  **Možnosti**  >    >  **rozšíření a aktualizace** prostředí.
 
     > [!NOTE]
-    > Počínaje verzí Visual Studio 2015 Update 2 můžete zadat ( **nástroje**  >  **Možnosti**  >  **Environment**  >  **rozšíření a aktualizace**prostředí), jestli chcete automatické aktualizace pro jednotlivá uživatelská rozšíření, všechna uživatelská rozšíření nebo obojí (výchozí nastavení).
+    > Počínaje verzí Visual Studio 2015 Update 2 můžete zadat ( **nástroje**  >  **Možnosti**  >    >  **rozšíření a aktualizace** prostředí), jestli chcete automatické aktualizace pro jednotlivá uživatelská rozšíření, všechna uživatelská rozšíření nebo obojí (výchozí nastavení).
 
 ## <a name="see-also"></a>Viz také
 - [Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md)

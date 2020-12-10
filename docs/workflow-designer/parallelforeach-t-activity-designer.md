@@ -1,6 +1,6 @@
 ---
-title: Návrhář aktivity Návrhář postupu provádění – ParallelForEach &lt; T &gt;
-description: Přečtěte si, jak <T> aktivita ParallelForEach vytvoří výčet prvků kolekce a provede vložený příkaz pro každý prvek kolekce paralelně.
+title: '&lt; &gt; Návrhář aktivity ParallelForEach T'
+description: V Návrhář postupu provádění se dozvíte, jak <T> aktivita ParallelForEach vytvoří výčet prvků kolekce a provede vložený příkaz pro každý prvek kolekce paralelně.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,18 +12,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57c8414637d767a57cf9021d907bfb6e1fe467ef
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: e732c6d9d791d789471c49a319ab9945fdd5dc06
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435557"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996172"
 ---
 # <a name="parallelforeach-activity-designer"></a>Návrhář aktivity ParallelForEach
 
 <xref:System.Activities.Statements.ParallelForEach%601>Aktivita vytvoří výčet prvků kolekce a provede vložený příkaz pro každý prvek kolekce paralelně, který je asynchronně ve stejném vlákně. Tuto aktivitu řízení toku použijte místo aktivity, <xref:System.Activities.Statements.Sequence> Pokud se očekává, že se podřízené aktivity této aktivity dostanou nečinné.
 
-<xref:System.Activities.Statements.ParallelForEach%601>Aktivita má <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> vlastnost, která obsahuje uživatelem zadanou Visual Basic výraz. <xref:System.Activities.Statements.ParallelForEach%601>Aktivita vyhodnotí tuto vlastnost po dokončení každé větve. Pokud se vyhodnotí jako **true** , <xref:System.Activities.Statements.ParallelForEach%601> aktivita se dokončí bez provedení ostatních větví. Pokud se <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> nevyhodnotí jako **true** , aktivita se <xref:System.Activities.Statements.ParallelForEach%601> dokončí po dokončení všech jejích podřízených aktivit.
+<xref:System.Activities.Statements.ParallelForEach%601>Aktivita má <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> vlastnost, která obsahuje uživatelem zadanou Visual Basic výraz. <xref:System.Activities.Statements.ParallelForEach%601>Aktivita vyhodnotí tuto vlastnost po dokončení každé větve. Pokud se vyhodnotí jako **true**, <xref:System.Activities.Statements.ParallelForEach%601> aktivita se dokončí bez provedení ostatních větví. Pokud se <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> nevyhodnotí jako **true**, aktivita se <xref:System.Activities.Statements.ParallelForEach%601> dokončí po dokončení všech jejích podřízených aktivit.
 
 ## <a name="the-parallelforeacht-activity"></a>Aktivita ParallelForEach<T \>
 
@@ -45,10 +45,10 @@ Následující tabulka uvádí nejužitečnější <xref:System.Activities.State
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje popisný zobrazovaný název návrháře aktivit v hlavičce. Výchozí hodnota je **ParallelForEach \<Int32>**. Hodnota může být volitelně upravena v mřížce **vlastnosti** nebo přímo v hlavičce návrháře aktivit.|
-|<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>|Nepravda|Aktivita, která se má spustit pro každou položku v kolekci. Chcete-li přidat <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> aktivitu, přetáhněte aktivitu ze sady nástrojů do pole **text** v Návrháři aktivity **ParallelForEach \<T>** s textem nápovědy "Sem přetáhněte aktivitu".|
-|**Pro TypeArgument**|Pravda|Typ položek v <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> kolekci určené obecným parametrem *T*. Ve výchozím nastavení je **pro TypeArgument** nastaveno na hodnotu **Int32**. Chcete-li změnit typ T v Návrháři aktivity **ParallelForEach \><T** , změňte hodnotu pole se seznamem **pro TypeArgument** v mřížce vlastností.|
-|<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>|Pravda|Kolekce položek, které se mají iterovat Chcete-li nastavit <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> , zadejte výraz Visual Basic do pole **hodnoty** v návrháři aktivity **foreach<T \>** v poli s textem nápovědy "zadejte výraz VB" nebo v poli **hodnoty** v okně **vlastnosti** .|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje popisný zobrazovaný název návrháře aktivit v hlavičce. Výchozí hodnota je **ParallelForEach \<Int32>**. Hodnota může být volitelně upravena v mřížce **vlastnosti** nebo přímo v hlavičce návrháře aktivit.|
+|<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>|Ne|Aktivita, která se má spustit pro každou položku v kolekci. Chcete-li přidat <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> aktivitu, přetáhněte aktivitu ze sady nástrojů do pole **text** v Návrháři aktivity **ParallelForEach \<T>** s textem nápovědy "Sem přetáhněte aktivitu".|
+|**Pro TypeArgument**|Ano|Typ položek v <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> kolekci určené obecným parametrem *T*. Ve výchozím nastavení je **pro TypeArgument** nastaveno na hodnotu **Int32**. Chcete-li změnit typ T v Návrháři aktivity **ParallelForEach \><T** , změňte hodnotu pole se seznamem **pro TypeArgument** v mřížce vlastností.|
+|<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>|Ano|Kolekce položek, které se mají iterovat Chcete-li nastavit <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> , zadejte výraz Visual Basic do pole **hodnoty** v návrháři aktivity **foreach<T \>** v poli s textem nápovědy "zadejte výraz VB" nebo v poli **hodnoty** v okně **vlastnosti** .|
 |<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>||Vyhodnoceno po dokončení každé iterace. Pokud se vyhodnotí jako true, naplánované probíhající iterace se zruší. Pokud tato vlastnost není nastavená, všechny naplánované příkazy se spustí až do dokončení.|
 
 Ve výchozím nastavení je iterátor smyčky pojmenovaný Item. Název proměnné iterátoru můžete změnit v poli **foreach** v Návrháři aktivity **ParallelForEach \<T>** . Iterátor smyčky lze použít ve výrazech v podřízených objektech <xref:System.Activities.Statements.ParallelForEach%601> aktivity.

@@ -1,5 +1,7 @@
 ---
 title: Definovat element | Microsoft Docs
+description: Element define definuje dvojici názvu a hodnoty symbolu. Tento symbol lze vyhodnotit pomocí podmíněných atributů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc09de1d822f41b25397c7a56c7cce4449a9e551
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a427371afe55b6ea4ee20f658e683b9dcdb8fbe2
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712271"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996237"
 ---
 # <a name="define-element"></a>Definovat element
 Definuje dvojici názvu a hodnoty symbolu. Tento symbol lze vyhodnotit pomocí podmíněných atributů. Další informace najdete v tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md). Viz také [prvek symboly](../extensibility/symbols-element.md).
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 <Define name="Mode" value="Standard" />
@@ -35,8 +37,8 @@ Definuje dvojici názvu a hodnoty symbolu. Tento symbol lze vyhodnotit pomocí p
 |Atribut|Popis|
 |---------------|-----------------|
 |name|Povinná hodnota. Název symbolu:<br /><br /> Name = "Mode"|
-|value|Povinná hodnota. Hodnota symbolu:<br /><br /> Value = "Standard"|
-|Stav|Nepovinný parametr. Další informace najdete v tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|hodnota|Povinná hodnota. Hodnota symbolu:<br /><br /> Value = "Standard"|
+|Podmínka|Nepovinný parametr. Další informace najdete v tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
  Žádné

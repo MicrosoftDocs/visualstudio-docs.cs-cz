@@ -1,5 +1,7 @@
 ---
 title: Rozšíření vlastností a okna vlastností | Microsoft Docs
+description: Seznamte se s rozšířením vlastností v okno Vlastnosti, který slouží k zobrazení a úpravám vlastností a událostí pro dobu návrhu a událostí vybraných objektů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14cc7bba8f5255d612c0f429aab5acf36729b506
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 75c0deb1b4d1e0fecceefb2e91265c9e6160df8a
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711742"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995782"
 ---
 # <a name="extend-properties-and-the-property-window"></a>Rozšířené vlastnosti a okno vlastností
 Okno **vlastnosti** se používá k zobrazení a úpravě vlastností a událostí pro vybrané objekty v době návrhu.

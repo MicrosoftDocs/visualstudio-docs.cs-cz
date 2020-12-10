@@ -1,5 +1,7 @@
 ---
 title: Rozšíření pro Editor a jazykové služby | Microsoft Docs
+description: Můžete roztáhnout většinu funkcí editoru kódu sady Visual Studio, který je implementován pomocí Windows Presentation Foundation a je napsán ve spravovaném kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78d85cd3651f8769104a61586bea1468e1c21cd2
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 2b15d5f970bfc6a32489991b578a54f2eadc96ea
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414071"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995821"
 ---
 # <a name="editor-and-language-service-extensions"></a>Editor a rozšíření služby jazyka
 Většinu funkcí editoru kódu sady Visual Studio můžete zvětšit. Editor je založen na Windows Presentation Foundation (WPF) a je napsán ve spravovaném kódu. I když se tento návrh liší od návrhů v dřívějších verzích sady Visual Studio, poskytuje většinu stejných funkcí. Chcete-li Editor roztáhnout, použijte Managed Extensibility Framework (MEF).

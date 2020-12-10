@@ -1,5 +1,7 @@
 ---
 title: TaskScheduler třída – interní členové | Microsoft Docs
+description: Přečtěte si o interních členech třídy System. Threading. Tasks. TaskScheduler, které vám pomůžou implementovat vlastní ladicí program.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a53abc8b24edb06445c23c19744d00d50de8735d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 10528e57137f8605e7f140d4ab8d4a3399029a5f
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712566"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996003"
 ---
 # <a name="taskscheduler-class---internal-members"></a>TaskScheduler třída – interní členy
 Tento článek popisuje interní členy <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> třídy, které vám pomůžou implementovat vlastní ladicí program. Obecné informace o této třídě naleznete v <xref:System.Threading.Tasks.TaskScheduler> referenčním článku.
@@ -27,7 +29,7 @@ Tento článek popisuje interní členy <xref:System.Threading.Tasks.TaskSchedul
 
  Vzhledem k tomu, že nemůžete získat přístup k těmto interním členům z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```csharp
 .class public abstract auto ansi beforefieldinit System.Threading.Tasks.TaskScheduler

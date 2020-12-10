@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95e35037ba07dcba1f51da7b47b7fca40a447dfb
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: e3633f3084b875974adac17fc27e7ec7a695ed91
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850023"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996380"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
@@ -167,7 +167,7 @@ Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak
 |Skupina|Popis|
 |-|-----------------|
 |**Doba trvání**|Seskupí testy podle doby spuštění: **rychlá**, **střední** a **pomalá**.|
-|**Stav**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné** .|
+|**Státech**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné** .|
 |**Cílová architektura** | Seskupí testy podle cíle v rámci svých projektů. |
 |**Obor názvů**|Seskupí testy podle obsahujícího oboru názvů.|
 |**Projekt**|Seskupí testy podle obsahujícího projektu.|
@@ -186,7 +186,7 @@ V rozhraní Microsoft pro testování částí pro spravované aplikace definuje
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>|Kategorie vlastník je definována v rámci testovacího rozhraní jednotky a vyžaduje zadání řetězcové hodnoty vlastníka.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute>|Kategorie priority je definována v rámci testovacího rozhraní jednotky a vyžaduje, abyste zadali celočíselnou hodnotu priority.|
-|<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute>|Atribut TestCategory umožňuje zadat kategorii bez hodnoty.|
+|<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute>|Atribut TestCategory umožňuje určit kategorii testu jednotek.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>|Atribut TestProperty umožňuje definovat vlastnost páru kategorie/hodnota.|
 
 
@@ -309,7 +309,7 @@ Filtrování podle různých kritérií:
 ::: moniker range=">=vs-2019"
 |Kvalifikátor|Popis|
 |-|-----------------|
-|**Stav**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
+|**Státech**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Traits**|Vyhledá shody v kategorii a hodnotě vlastností. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
 |**Plně kvalifikovaný název**|Vyhledá plně kvalifikovaný název testovacích oborů názvů, tříd a metod pro shody.|
 |**Projekt**|Vyhledá shody v názvech projektů testů.|

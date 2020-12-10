@@ -1,6 +1,6 @@
 ---
-title: 'Návrhář postupu provádění-postupy: přidání aktivit do sady nástrojů'
-description: Přidejte aktivity do sady nástrojů v řešení jejich přidáním z aktuálního projektu nebo jejich odkazem z jiného projektu.
+title: Přidání aktivit do panelu nástrojů
+description: V Návrhář postupu provádění se naučíte přidávat aktivity do sady nástrojů ve vašem řešení jejich přidáním z aktuálního projektu nebo jejich odkazování z jiného projektu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d2330392ace27a913870e7c7448976d1cae46958
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 0f2ffdb25bfdb359352d62913c984cad07c18aed
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437941"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996302"
 ---
 # <a name="how-to-add-activities-to-the-toolbox"></a>Postupy: Přidání aktivit do panelu nástrojů
 
