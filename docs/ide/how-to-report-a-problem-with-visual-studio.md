@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8e0718eb01f422ad435492304e77d73c14b4dee
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 2956372882d4449345d026e691a12afb2988054a
+ms.sourcegitcommit: 6ef4e46c786c5bbcc52cd9c30e5ddfca12ea8b3c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211172"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050821"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "91211172"
 
 Problém můžete ohlásit buď ze sady Visual Studio, nebo z jeho instalačního programu. Integrovaný nástroj zpětné vazby umožňuje snadno přidat diagnostické informace, které týmům sady Visual Studio pomáhají diagnostikovat a opravovat problémy. Tady je postup nahlášení problému.
 
-1. **V aplikaci Visual Studio**vyberte ikonu zpětné vazby v pravém horním rohu a vyberte Nahlásit problém. K nástroji pro zpětnou vazbu můžete získat přístup také **z nabídky**  >  **Odeslat zpětnou vazbu**  >  **s oznámením o problému**.
+1. **V aplikaci Visual Studio** vyberte ikonu zpětné vazby v pravém horním rohu a vyberte Nahlásit problém. K nástroji pro zpětnou vazbu můžete získat přístup také **z nabídky**  >  **Odeslat zpětnou vazbu**  >  **s oznámením o problému**.
 ![Nahlášení problému v komunitě vývojářů sady Visual Studio ](media/feedback-button.png) nebo nahlášení problému v **instalační program pro Visual Studio** , pokud nemůžete nainstalovat Visual Studio nebo není možné získat přístup k nástroji pro zpětnou vazbu v sadě Visual Studio.  V instalačním programu vyberte ikonu zpětné vazby v pravém horním rohu a vyberte Nahlásit problém.
 ![Nahlášení problému v komunitě vývojářů sady Visual Studio](media/installer.png)
 
@@ -65,7 +65,7 @@ Problém můžete ohlásit buď ze sady Visual Studio, nebo z jeho instalačníh
 
 Pokud problém neobsahuje důležité informace, přiřadíme stav **potřebuje více informací** . K tomuto problému přiřadíme konkrétní informace, které potřebujeme, a obdržíte e-mailové oznámení. Pokud tyto informace do sedmi dnů neobdržíme, pošleme vám připomenutí. Potom uzavřete lístek po 14 dnech nečinnosti.
 
-1. Použijte odkaz v e-mailu na zprávu o problému nebo přejděte na moji zpětnou vazbu a zobrazte si všechny sestavy ve stavu **vyžaduje více informací** .
+1. Použijte odkaz v e-mailu na zprávu o problému nebo přejděte na domovskou stránku, kde se zobrazí všechny sestavy ve stavu **vyžaduje více informací** .
 
     ![Moje zpětná vazba](../ide/media/feedback-my-feedback.png)
 

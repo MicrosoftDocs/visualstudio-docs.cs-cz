@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3633f3084b875974adac17fc27e7ec7a695ed91
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 58faf100c61a25ae014bdcc0b09d161e924ad5c9
+ms.sourcegitcommit: 21ac4a0c8ffac3964b75604678b12e0955e0159b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996380"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97098524"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
@@ -234,7 +234,16 @@ Můžete také zaškrtnout nebo zrušit kontrolu polí nadřazených skupin v hi
 
 ![Soubor XML se seznamem testů](../test/media/vs-2019/test-explorer-playlist-xml-file.png)
 
-Chcete-li vytvořit seznam stop pro vlastnosti, použijte následující formát. Ujistěte se, že mezi vaším `TestCategory` jménem a příponou je mezera `[Value]` .
+Pokud chcete vytvořit seznam testů pro vlastnosti, použijte následující formát pro MSTest.
+```xml
+<Playlist Version="2.0">
+    <Rule Name="Includes" Match="Any">
+        <Property Name="Trait" Value="SchemaUpdateBasic" />
+    </Rule>
+</Playlist>
+```
+
+Pro xUnit použijte následující formát. Ujistěte se, že mezi vaším `TestCategory` jménem a příponou je mezera `[Value]` .
 ```xml
 <Playlist Version="2.0">
   <Rule Name="Includes" Match="Any">
