@@ -1,7 +1,6 @@
 - name: MSBuild
+  href: msbuild.md
   items:
-    - name: MSBuild
-      href: msbuild.md
     - name: Novinky ve verzi 16.0 nástroje MSBuild
       href: whats-new-msbuild-16-0.md
     - name: Novinky ve verzi 15.0 nástroje MSBuild
