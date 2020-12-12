@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení jazyka specifického pro doménu
+description: Naučte se používat vlastní kód pro přístup, úpravy nebo vytvoření modelu v jazyce specifickém pro doménu (DSL).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b67a50623eb1924c4a18b57524c409f7eba6ab20
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31b97b113b763a8f294386d4fa5fe66233a3f980
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546871"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360452"
 ---
 # <a name="write-code-to-customize-a-domain-specific-language"></a>Zápis kódu pro úpravu jazyka specifického pro doménu
 
@@ -24,11 +26,11 @@ Existuje několik kontextů, ve kterých můžete napsat kód, který funguje s 
 
 - **Vlastní příkazy.** Můžete vytvořit příkaz, který mohou uživatelé vyvolat tak, že kliknete pravým tlačítkem myši na diagram a můžete model upravit. Další informace najdete v tématu [Postup: Přidání příkazu do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
 
-- **Export.** Můžete napsat kód, který ověří, že je model ve správném stavu. Další informace najdete v tématu [ověření v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md).
+- **Export.** Můžete napsat kód, který ověří, že je model ve správném stavu. Další informace najdete v tématu [ověřování v Domain-Specificm jazyce](../modeling/validation-in-a-domain-specific-language.md).
 
 - **Přepsání výchozího chování.** Můžete upravit mnoho aspektů kódu, které jsou generovány z DslDefinition. DSL. Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).
 
-- **Transformace textu** Můžete napsat šablony textu, které obsahují kód, který přistupuje k modelu a generuje textový soubor, například pro generování kódu programu. Další informace najdete v tématu [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md).
+- **Transformace textu** Můžete napsat šablony textu, které obsahují kód, který přistupuje k modelu a generuje textový soubor, například pro generování kódu programu. Další informace naleznete v tématu [generování kódu z Domain-Specificho jazyka](../modeling/generating-code-from-a-domain-specific-language.md).
 
 - **Další rozšíření sady Visual Studio.** Můžete napsat samostatná rozšíření VSIX, která čtou a upravují modely. Další informace najdete v tématu [Postup: otevření modelu ze souboru v kódu programu.](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 
@@ -72,6 +74,6 @@ udržování objektů v úložišti (místo stejně jako běžné objekty) posky
 
 - **Serializace**. Úložiště poskytuje standardní způsob, jak serializovat objekty, které obsahuje, do souboru. Můžete přizpůsobit pravidla pro serializaci a deserializaci. Další informace naleznete v tématu [přizpůsobení File Storage a serializace XML](../modeling/customizing-file-storage-and-xml-serialization.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md)

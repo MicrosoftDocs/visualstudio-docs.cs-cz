@@ -1,5 +1,7 @@
 ---
 title: Navigace v modelu a aktualizace modelu v kódu programu
+description: Přečtěte si, jak můžete napsat kód pro vytvoření a odstranění prvků modelu, nastavení jejich vlastností a vytvoření a odstranění propojení mezi prvky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 521ad703b92133f56d38e061123bf13db13d6375
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb7c78351ccd03247d458ca403c81d379ec18d29
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75566173"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362207"
 ---
 # <a name="navigate-and-update-a-model-in-program-code"></a>Procházení a aktualizace modelu v programovém kódu
 
@@ -288,7 +290,7 @@ V některých případech je odstranění znemožněno existence zámku, buď na
 ## <a name="locks"></a><a name="locks"></a> Počtu
  Je možné, že se vaše změny zabrání zámkům. Zámky je možné nastavit u jednotlivých prvků, v oddílech a na úložišti. Pokud má kterákoli z těchto úrovní zámek, který brání druhu změny, kterou chcete provést, může být výjimka vyvolána při pokusu. Můžete zjistit, zda jsou zámky nastaveny pomocí elementu. GetLocks (), což je rozšiřující metoda, která je definována v oboru názvů <xref:Microsoft.VisualStudio.Modeling.Immutability> .
 
- Další informace najdete v tématu [Definování zásady zamykání pro vytváření segmentů jen pro čtení](../modeling/defining-a-locking-policy-to-create-read-only-segments.md).
+ Další informace najdete v tématu [Definování zásady zamykání pro vytváření Read-Onlych segmentů](../modeling/defining-a-locking-policy-to-create-read-only-segments.md).
 
 ## <a name="copy-and-paste"></a><a name="copy"></a> Kopírovat a vložit
  Prvky nebo skupiny prvků můžete kopírovat do <xref:System.Windows.Forms.IDataObject> :
@@ -482,7 +484,7 @@ partial class MyDiagram
 ## <a name="store-partitions"></a>Ukládat oddíly
  Při načtení modelu se načte i doprovodný diagram. Model je obvykle načten do úložiště. DefaultPartition a obsah diagramu je načten do jiného oddílu. Obvykle se obsah každého oddílu načte a uloží do samostatného souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.VisualStudio.Modeling.ModelElement>
 - [Ověřování v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md)

@@ -1,5 +1,7 @@
 ---
 title: Reference diagramů závislostí
+description: Seznamte se s tím, že v aplikaci Visual Studio můžete použít diagram závislosti k vizualizaci logické architektury systému na nejvyšší úrovni.
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: reference
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 774716dff6562b7792c6fa885c40db2a0a133136
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 265bb31dd95aa3a84bdb497a3306278acfd8838e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594562"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360569"
 ---
 # <a name="dependency-diagrams-reference"></a>Diagramy závislostí: Referenční dokumentace
 
@@ -56,7 +58,7 @@ Toto téma popisuje prvky, které lze použít v diagramu závislostí. Podrobn�
 
 Následující tabulka popisuje prvky, které můžete použít v diagramu závislostí.
 
-|**Obrazec**|**Prvek**|**Popis**|
+|**Obrazec**|**Objekt**|**Popis**|
 |-|-|-|
 |1|**Vrstva**|Logická skupina fyzických artefaktů ve vašem systému. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále.<br /><br /> Chcete-li zobrazit artefakty, které jsou propojeny s vrstvou, otevřete místní nabídku pro vrstvu a pak zvolte možnost **Zobrazit odkazy** a otevřete **Průzkumníka vrstev**.<br /><br /> Další informace naleznete v tématu [Průzkumník vrstev](#Explorer).<br /><br /> -   **Zakázané závislosti oboru názvů** – určuje, že artefakty přidružené k této vrstvě nemůžou záviset na zadaných oborech názvů.<br />-   **Zakázané obory názvů** – určuje, že artefakty přidružené k této vrstvě nesmí patřit do zadaných oborů názvů.<br />-   **Povinné obory názvů** – určuje, že artefakty přidružené k této vrstvě musí patřit do jednoho ze zadaných oborů názvů.|
 |2|**Závislost**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **Direction** – určuje směr závislosti.|
@@ -96,6 +98,6 @@ V diagramu závislostí otevřete místní nabídku pro jednu nebo více vrstev 
 |**Podporuje ověřování**|Je-li **nastavena hodnota true**, proces ověření vrstvy může ověřit, zda projekt odpovídá závislostem na nebo z tohoto prvku.<br /><br /> Je-li nastavena **hodnota false**, odkaz se neúčastní procesu ověřování vrstvy.<br /><br /> Další informace najdete v tématu [diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md).|
 |**Identifikátor**|Odkaz na propojený artefakt|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)

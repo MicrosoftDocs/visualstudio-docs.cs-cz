@@ -1,5 +1,7 @@
 ---
 title: Reference k rozhraní API pro modelování sady SDK
+description: Přečtěte si, jak sada Visual Studio pro vizualizaci a modelování nabízí platformu, na které jsou sestavené nástroje DSL (Domain Specific Language).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e4be65a94892aa87dbc7f146ce3671336a37558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 721527b71e12b2c6143fa952d663cccc2786b34f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76113730"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361076"
 ---
 # <a name="api-reference-for-modeling-sdk-for-visual-studio"></a>Referenční dokumentace rozhraní API k sadě Modeling SDK pro sadu Visual Studio
 
@@ -20,7 +22,7 @@ Sada Visual Studio pro vizualizaci a modelování nabízí platformu, na které 
 
 Tato část obsahuje referenční materiály pro obory názvů, které mají názvy začínající na Microsoft. VisualStudio. Modeling.
 
-|Obor názvů|Content|
+|Obor názvů|Obsah|
 |-|-|
 |<xref:Microsoft.VisualStudio.Modeling?displayProperty=fullName>|Třídy jako ModelElement, což je základní třída všech tříd domény, které definujete v DSL.|
 |<xref:Microsoft.VisualStudio.Modeling.Design?displayProperty=fullName>|Třídy, které tvoří součást definice DSL|
@@ -42,6 +44,6 @@ Tato část obsahuje referenční materiály pro obory názvů, které mají ná
 |<xref:Microsoft.VisualStudio.Modeling.Shell.ExtensionEnablement?displayProperty=fullName>|Umožňuje definovat místní (kontextové) příkazy nabídky.|
 |<xref:Microsoft.VisualStudio.Modeling.Validation?displayProperty=fullName>|Umožňuje definovat omezení ověřování.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)

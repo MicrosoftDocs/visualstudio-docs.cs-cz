@@ -1,5 +1,7 @@
 ---
 title: Přepisování a rozšiřování vygenerovaných tříd
+description: Zjistěte, jak je definice DSL platformou, na které můžete vytvořit výkonnou sadu nástrojů založenou na jazyce specifickém pro doménu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3374f67f4fba11543e3dbbca47fef621dd2e714
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1b36a7524530df7f9a18ce9abe1de2d430156d6
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595888"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362090"
 ---
 # <a name="override-and-extend-the-generated-classes"></a>Přepsat a zvětšit vygenerované třídy
 
@@ -46,7 +48,7 @@ public partial class Book
 
 Chcete-li zjistit, jaké metody lze přepsat, zadejte do třídy **přepsání** a za ní mezeru. Popisek technologie IntelliSense vám sdělí, jaké metody lze přepsat.
 
-### <a name="double-derived-classes"></a>Dvojité odvozené třídy
+### <a name="double-derived-classes"></a>Třídy Double-Derived
 
 Většina metod v generovaných třídách je děděna z pevné sady tříd v oborech názvů modelování. Nicméně některé metody jsou definovány ve vygenerovaném kódu. Obvykle to znamená, že je nemůžete přepsat. nelze přepsat jednu částečnou třídu metodami, které jsou definovány v jiné částečné definici stejné třídy.
 

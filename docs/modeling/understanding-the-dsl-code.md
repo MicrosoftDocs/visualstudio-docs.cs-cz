@@ -1,5 +1,7 @@
 ---
 title: Porozumění kódu DSL
+description: Přečtěte si, jak řešení Domain-Specific Language (DSL) generuje rozhraní API, které můžete použít ke čtení a aktualizaci instancí DSL v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,16 +11,16 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1196faa5831ae44a93f21ab1808915357690a0ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd739a7780a2a2c858efc14aa72205e9be161900
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565939"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361453"
 ---
 # <a name="understanding-the-dsl-code"></a>Porozumění kódu DSL
 
-Řešení DSL (Domain-Specific Language) generuje rozhraní API, které můžete použít ke čtení a aktualizaci instancí DSL v aplikaci Visual Studio. Toto rozhraní API je definováno v kódu, který je generován z definice DSL. Toto téma popisuje vygenerované rozhraní API.
+Řešení Domain-Specific Language (DSL) generuje rozhraní API, které můžete použít ke čtení a aktualizaci instancí DSL v aplikaci Visual Studio. Toto rozhraní API je definováno v kódu, který je generován z definice DSL. Toto téma popisuje vygenerované rozhraní API.
 
 ## <a name="the-example-solution-component-diagrams"></a>Ukázkové řešení: diagramy komponent
 
@@ -60,13 +62,13 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  *YourDsl*`Schema.xsd`
 
- Schéma pro soubory, které obsahují instance vaší DSL. Tento soubor je zkopírován do adresáře Compilation (**bin**). Když nainstalujete DSL, můžete tento soubor zkopírovat do **složky \Program Files\Microsoft Visual Studio 11.0 \ Xml\Schemas** , aby bylo možné ověřit soubory modelů. Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
+ Schéma pro soubory, které obsahují instance vaší DSL. Tento soubor je zkopírován do adresáře Compilation (**bin**). Když nainstalujete DSL, můžete tento soubor zkopírovat do **složky \Program Files\Microsoft Visual Studio 11.0 \ Xml\Schemas** , aby bylo možné ověřit soubory modelů. Další informace najdete v tématu [nasazení Domain-Specific jazykových řešení](msi-and-vsix-deployment-of-a-dsl.md).
 
  Pokud přizpůsobíte serializaci nastavením možností v Průzkumníku DSL, schéma se odpovídajícím způsobem změní. Nicméně pokud zapíšete vlastní Serializační kód, tento soubor pravděpodobně nebude reprezentovat skutečné schéma. Další informace naleznete v tématu [přizpůsobení File Storage a serializace XML](../modeling/customizing-file-storage-and-xml-serialization.md).
 
  `ConnectionBuilders.cs`
 
- Tvůrce připojení je třída, která vytváří relace. Jedná se o kód za nástrojem pro připojení. Tento soubor obsahuje dvojici tříd pro každý nástroj pro připojení. Jejich názvy jsou odvozeny z názvů doménového vztahu a nástroje připojení: Tvůrce *vztahů*a *ConnectorTool*ConnectAction.
+ Tvůrce připojení je třída, která vytváří relace. Jedná se o kód za nástrojem pro připojení. Tento soubor obsahuje dvojici tříd pro každý nástroj pro připojení. Jejich názvy jsou odvozeny z názvů doménového vztahu a nástroje připojení: Tvůrce *vztahů* a *ConnectorTool* ConnectAction.
 
  (V příkladu řešení komponenty se jeden ze tvůrců připojení nazývá tvůrci propojení, jedná se o spoludopad, protože doménový vztah se nazývá připojení.)
 
@@ -102,7 +104,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  Tento procesor direktiv pomáhá uživatelům psát textové šablony, které čtou instanci vaší DSL. Procesor direktiv načte sestavení (knihovny DLL) pro vaši DSL a efektivně vloží `using` příkazy pro váš obor názvů. To umožňuje, aby kód v textových šablonách používal třídy a vztahy, které jste definovali v DSL.
 
- Další informace najdete v tématu [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md) a [vytváření vlastních procesorů pro direktivy textových šablon T4](../modeling/creating-custom-t4-text-template-directive-processors.md).
+ Další informace najdete v tématu [generování kódu z Domain-Specific jazyka](../modeling/generating-code-from-a-domain-specific-language.md) a [vytváření vlastních procesorů pro direktivy textových šablon T4](../modeling/creating-custom-t4-text-template-directive-processors.md).
 
  `DomainClasses.cs`
 
@@ -122,7 +124,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
 - Metody obslužné rutiny prototypu skupiny elementů (EGP). Ty jsou nezbytné, pokud uživatel může *Sloučit* (Přidat) jiný prvek do instancí této třídy. Uživatel to obvykle provede přetažením z nástroje prvku nebo jiného tvaru nebo vložením.
 
-   V příkladu DSL je možné do komponenty sloučit vstupní port nebo výstupní port. Součásti a komentáře lze také sloučit do modelu. Prostředek
+   V příkladu DSL je možné do komponenty sloučit vstupní port nebo výstupní port. Součásti a komentáře lze také sloučit do modelu. Rozhraní
 
    Metody obslužné rutiny EGP ve třídě Component umožňují komponentě přijímat porty, ale ne komentáře. Obslužná rutina EGP v kořenové třídě modelu akceptuje komentáře a komponenty, ale ne porty.
 
@@ -139,7 +141,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  To obsahuje řetězce, jako jsou popisy tříd domény a vlastností, názvy vlastností, popisky panelu nástrojů, standardní chybové zprávy a další řetězce, které by se mohly zobrazit uživateli. Obsahuje také ikony a obrázky nástrojů pro obrazové tvary.
 
- Tento soubor je svázán s sestaveným sestavením a poskytuje výchozí hodnoty těchto prostředků. Můžete lokalizovat DSL vytvořením satelitního sestavení, které obsahuje lokalizovanou verzi prostředků. Tato verze se použije, když je DSL nainstalovaná v jazykové verzi odpovídající lokalizovaným prostředkům. Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
+ Tento soubor je svázán s sestaveným sestavením a poskytuje výchozí hodnoty těchto prostředků. Můžete lokalizovat DSL vytvořením satelitního sestavení, které obsahuje lokalizovanou verzi prostředků. Tato verze se použije, když je DSL nainstalovaná v jazykové verzi odpovídající lokalizovaným prostředkům. Další informace najdete v tématu [nasazení Domain-Specific jazykových řešení](msi-and-vsix-deployment-of-a-dsl.md).
 
  `DomainRelationships.cs`
 
@@ -153,7 +155,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  V rolích vztahů, kde zadáte násobnost 1.. 1 nebo 1.. *, by měl uživatel být upozorněn na to, že je požadována alespoň jedna instance relace. Tento soubor poskytuje omezení ověřování, která implementují tato upozornění. Odkaz 1.. 1 na nadřazený objekt pro vložení není ověřen.
 
- Aby tato omezení byla provedena, je nutné nastavit jednu z možností **použití..** . v uzlu **EDITOR\VALIDATION** v Průzkumníku DSL. Další informace najdete v tématu [ověření v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md).
+ Aby tato omezení byla provedena, je nutné nastavit jednu z možností **použití..** . v uzlu **EDITOR\VALIDATION** v Průzkumníku DSL. Další informace najdete v tématu [ověřování v Domain-Specificm jazyce](../modeling/validation-in-a-domain-specific-language.md).
 
  `PropertiesGrid.cs`
 
@@ -342,11 +344,11 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
 > [!WARNING]
 > Pokud upravujete soubor. TT tak, aby zahrnoval prostředky, jako jsou ikony nebo obrázky, ujistěte se, že je prostředek součástí sestavení VSIX. V Průzkumník řešení vyberte soubor a ujistěte se, že je vlastnost **zahrnout do VSIX** `True` .
 
- Tento soubor určuje, jak se DSL zabalí do rozšíření integrace sady Visual Studio (VSIX). Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
+ Tento soubor určuje, jak se DSL zabalí do rozšíření integrace sady Visual Studio (VSIX). Další informace najdete v tématu [nasazení Domain-Specific jazykových řešení](msi-and-vsix-deployment-of-a-dsl.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
 - [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md)
 - [Přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md)
-- [Psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [Psaní kódu pro přizpůsobení Domain-Specificho jazyka](../modeling/writing-code-to-customise-a-domain-specific-language.md)

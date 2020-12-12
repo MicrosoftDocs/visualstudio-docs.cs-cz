@@ -1,5 +1,7 @@
 ---
 title: Analýza a modelování vaší architektury
+description: Přečtěte si, jak můžete pomocí nástrojů architektury a modelování sady Visual Studio navrhovat a modelovat vaši aplikaci, abyste měli jistotu, že vaše aplikace splňuje požadavky na architekturu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -17,12 +19,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1db28867ea47752aa74b7898c44e797c0704594
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 71296b9ccb2e442d1bd9bc13865e0086821bf030
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544219"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361154"
 ---
 # <a name="analyze-and-model-your-architecture"></a>Analýza a modelování vaší architektury
 
@@ -43,7 +45,7 @@ Viz [scénář: Změna návrhu pomocí vizualizace a modelování](../modeling/s
 |**Vizualizovat kód**:<br /><br />– Podívejte se na organizaci a vztahy kódu vytvořením map kódu. Vizualizujte závislosti mezi sestaveními, obory názvů, třídami, metodami a tak dále.<br />– Podívejte se na strukturu třídy a členy pro konkrétní projekt vytvořením diagramů tříd z kódu.<br />– Vyhledejte konflikty mezi vaším kódem a jeho návrh vytvořením diagramů závislostí pro ověření kódu.|- [Vizualizovat kód](../modeling/visualize-code.md)<br />- [Práce s třídami a jinými typy (Návrhář tříd)](../ide/class-designer/designing-and-viewing-classes-and-types.md)<br />- [Video: Principy návrhu z kódu pomocí map kódu Visual Studio 2015](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />- [Video: ověření závislostí architektury v reálném čase](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
 |**Definovat architekturu**:<br /><br />– Definovat a vynutit omezení závislostí mezi komponentami vašeho kódu vytvořením diagramů závislostí.|- [Video: ověření závislostí architektury pomocí sady Visual Studio (kanál 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
 |**Ověřte svůj systém s požadavky a zamýšleným návrhem:**<br /><br />– Ověřte závislosti kódu pomocí diagramů závislostí, které popisují zamýšlenou architekturu a zabraňují změnám, které by mohly být v konfliktu s návrhem.|- [Video: ověření závislostí architektury pomocí sady Visual Studio (kanál 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**Přizpůsobení modelů a diagramů**:<br /><br />– Vytvořte vlastní jazyky specifické pro doménu.|- [Sada Modeling SDK pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
+|**Přizpůsobení modelů a diagramů**:<br /><br />– Vytvořte vlastní jazyky specifické pro doménu.|- [Sada Modeling SDK pro Visual Studio – Domain-Specific jazyky](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
 |**Generovat text pomocí šablon T4**:<br /><br />– Použijte textové bloky a ovládací logiku v šablonách k vygenerování textových souborů.<br /> -T4 šablona sestavení pomocí nástroje MSBuild, který je součástí sady Visual Studio|- [Generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)|
 |**Sdílení modelů, diagramů a map kódu pomocí správy verzí Team Foundation**:<br /><br />– Vložte mapy kódu, projekty a diagramy závislosti v rámci správy verzí Team Foundation, abyste je mohli sdílet.| |
 
@@ -93,7 +95,7 @@ DSL je zápis, který navrhujete pro určitý účel. V aplikaci Visual Studio j
 
 - [Sada Modeling SDK pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Co je nového pro modelování v aplikaci Visual Studio 2017](../modeling/what-s-new-for-design-in-visual-studio.md)
 - [DevOps a správa životního cyklu aplikací](/azure/devops/user-guide/devops-alm-overview)

@@ -1,5 +1,7 @@
 ---
 title: Referenční dokumentace k rozhraní API pro textové šablony T4
+description: Přečtěte si, jak rozhraní text šablonování API umožňuje vyvolat a přizpůsobit transformaci textových šablon.
+ms.custom: SEO-VS-20200
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56b857770ac793e7df7f75ecee03cb089df1eeb2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85e2a21002919fcccca40bf481200e368bd16ed5
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597211"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361037"
 ---
 # <a name="api-reference-for-t4-text-templates"></a>Referenční dokumentace k rozhraní API pro textové šablony T4
 

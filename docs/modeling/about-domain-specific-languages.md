@@ -1,5 +1,7 @@
 ---
 title: O jazycích specifických pro konkrétní domény
+description: Přečtěte si, jak je jazyk specifický pro doménu (DSL) navržený tak, aby restatemental příkazy v konkrétním prostoru problému nebo doméně.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfd073b07902e3c0a9e33dfe9ae50d4947a50ef2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7a1e9b1f853ad540f65101bffabea922f8fdcef1
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597266"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360883"
 ---
 # <a name="about-domain-specific-languages"></a>O jazycích specifických pro konkrétní domény
 
@@ -54,11 +56,11 @@ Obvykle se vytvoří jazyk specifický pro doménu, když vývojový tým musí 
 
 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] umožňuje vytvořit jazyk specifický pro doménu, který má vlastního grafického návrháře a vlastní zápis diagramu, a pak použít jazyk k vygenerování vhodného zdrojového kódu pro každý projekt.
 
-## <a name="domain-specific-development"></a>Vývoj specifický pro doménu
+## <a name="domain-specific-development"></a>Vývoj Domain-Specific
 
 Vývoj specifický pro doménu je proces identifikace částí vašich aplikací, které je možné modelovat pomocí jazyka specifického pro doménu, a následným vytvořením jazyka a jeho nasazením do vývojářů aplikací. Vývojáři používají jazyk specifický pro doménu k vytvoření modelů, které jsou specifické pro jejich aplikace, použijte modely pro generování zdrojového kódu a pak použijte zdrojový kód pro vývoj aplikací.
 
-## <a name="aspects-of-graphical-domain-specific-development"></a>Aspekty vývoje specifického pro grafické domény
+## <a name="aspects-of-graphical-domain-specific-development"></a>Aspekty vývoje grafického Domain-Specific
 
 Jazyk specifický pro doménu musí zahrnovat následující funkce:
 
@@ -94,7 +96,7 @@ Protože [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] je hostovaný v aplikac
 
 Pro jazyk specifický pro doménu můžete také vytvořit adaptér model sběrnice. Tento adaptér umožňuje odkazovat na model a prvky v rámci modelu a umožňuje psát kód, který má přístup k instanci DSL a její aktualizaci. Pomocí výkonného mechanismu sběrnice modelu můžete napsat rozšíření sady Visual Studio, která fungují s více modely. Můžete také psát samostatné aplikace, které pracují s modely. Další informace naleznete v tématu [integrování modelů pomocí sady Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
 
-## <a name="benefits-of-domain-specific-development"></a>Výhody vývoje specifického pro doménu
+## <a name="benefits-of-domain-specific-development"></a>Výhody vývoje Domain-Specific
 
 Jazyk specifický pro doménu může poskytovat následující výhody:
 
@@ -110,7 +112,7 @@ Jazyk specifický pro doménu může poskytovat následující výhody:
 
      Vývojáři mohou pomocí kódu, který svůj model generuje, vytvořit aplikaci prototypu, kterou mohou zobrazit klientům.
 
-## <a name="the-process-of-domain-specific-development"></a>Proces vývoje specifického pro doménu
+## <a name="the-process-of-domain-specific-development"></a>Proces vývoje Domain-Specific
 
 Většina vývojářských týmů, které používají jazyky specifické pro doménu, vám umožní vytvořit a použít jejich modely pomocí následujících kroků:
 

@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti dekorátorů
+description: Přečtěte si, že dekoratéry jsou ikony, text nebo rozbalit nebo sbalit šipky, které se mohou objevit na tvarech nebo spojnicích v diagramu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,17 +11,17 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14965f829530ba5a2f6a7797291e9d1cfab0ae2d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ef863d0d3dab394c2ca427a27d039c19e5921a51
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810051"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360830"
 ---
 # <a name="properties-of-decorators"></a>Vlastnosti dekorátorů
 Dekoratéry jsou ikony, text nebo rozbalit/sbalit šipky, které se mohou objevit na tvarech nebo spojnicích v diagramu. V následujících tabulkách jsou uvedeny vlastnosti pro tři druhy dekoratér. Některé vlastnosti se zobrazí pouze u obrazce dekoratéry nebo pouze na dekoratéry konektoru.
 
- Další informace najdete v tématu [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak tyto vlastnosti používat, najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
+ Další informace najdete v tématu [definování Domain-Specificho jazyka](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak tyto vlastnosti použít, najdete v tématu [přizpůsobení a rozšíření Domain-Specificho jazyka](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 ## <a name="expandcollapse-decorator"></a>Rozbalit/sbalit dekoratér
 
@@ -64,6 +66,6 @@ Dekoratéry jsou ikony, text nebo rozbalit/sbalit šipky, které se mohou objevi
 |OffsetFromShape|Posun dekoratér od tvaru vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
 |Pozice|Výchozí pozice dekoratéru|TargetBottom|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

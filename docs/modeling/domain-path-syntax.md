@@ -1,5 +1,7 @@
 ---
 title: Syntaxe cesty domény
+description: Přečtěte si o syntaxi cest domény a o tom, jak definice DSL používají k vyhledání konkrétních prvků v modelu syntaxi typu XPath.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d7ab5f080328338e40bed080ec8a4c7a85eabdb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a24e2c9bcbecb095282c0914fa09f93e5c21e699
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114635"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361740"
 ---
 # <a name="domain-path-syntax"></a>Syntaxe cesty domény
 Definice DSL používají k vyhledání konkrétních prvků v modelu syntaxi typu XPath.
@@ -35,6 +37,6 @@ Definice DSL používají k vyhledání konkrétních prvků v modelu syntaxi ty
 
  Název, který použijete pro směrování elementu na propojení, je hodnotou role `Property Name` . Název, který použijete pro směrování propojení na prvky, je název cílové role.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md)

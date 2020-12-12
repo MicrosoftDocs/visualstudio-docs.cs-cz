@@ -1,5 +1,7 @@
 ---
 title: Použití řídicích sekvencí v textových šablonách
+description: Zjistěte, jak lze pomocí řídicích sekvencí v textových šablonách vygenerovat značky textových šablon a řídicí znaky a uvozovky pouze v kódu jazyka C#.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83e6e5cf163037077d0517e5f7ea460f9124f27c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b007a9b5ccf41a27cda7d9833064eb60394c4dc
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594042"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361323"
 ---
 # <a name="use-escape-sequences-in-text-templates"></a>Použití řídicích sekvencí v textových šablonách
 
@@ -36,6 +38,6 @@ Pokud textový blok obsahuje řetězce, které slouží k řídicím značkám t
 
 - Pokud \\ se znak escape () nachází kdekoli jinde v jiné sekvenci, než kde řídí řídicí znak nebo uvozovky (pouze v jazyce C#), bude znak přímo výstup.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Postupy: Generování šablon ze šablon pomocí řídicích sekvencí](../modeling/how-to-generate-templates-from-templates-by-using-escape-sequences.md)

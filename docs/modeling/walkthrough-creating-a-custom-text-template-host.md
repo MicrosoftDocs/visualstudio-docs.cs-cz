@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Vytvoření vlastního hostitele textových šablon'
+description: Přečtěte si, jak můžete napsat vlastního hostitele, pokud chcete použít funkci transformace textové šablony z oblasti mimo Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 3979f93de6040078a5b1e4315cadc4f7faa4728e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cc1681d7c761aca123217cbf28cc33b0dbb584c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532220"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361050"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>Návod: Vytvoření vlastního hostitele textových šablon
 
@@ -801,7 +803,7 @@ Při testování vlastního hostitele napíšete textovou šablonu, spustíte vl
 
      Aplikace vlastního hostitele se spustí a dokončí proces transformace textové šablony.
 
-5. V **Průzkumníku Windows**přejděte do složky, která obsahuje soubor TestTemplate.tt.
+5. V **Průzkumníku Windows** přejděte do složky, která obsahuje soubor TestTemplate.tt.
 
      Tato složka obsahuje také soubor TestTemplate1.txt.
 
@@ -821,6 +823,6 @@ Při testování vlastního hostitele napíšete textovou šablonu, spustíte vl
 
 V tomto návodu jste vytvořili hostitele transformace textových šablon, který podporuje základní funkce transformace. Tohoto hostitele můžete rozšířit tak, aby podporoval textové šablony, které volají vlastní nebo vygenerované procesory direktiv. Další informace najdete v tématu [Návod: připojení hostitele k procesoru vygenerovaných direktiv](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))

@@ -1,5 +1,7 @@
 ---
 title: Přidání vlastních vlastností do diagramů závislostí
+description: Přečtěte si, jak můžete ukládat hodnoty pomocí libovolného elementu v diagramu závislostí při psaní kódu rozšíření pro diagramy závislostí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c68d8a75ca8203a790684506ffd44b3d890648a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d3073a42faf0dcc6fbf586847382ba3a83d88ed4
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546911"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360764"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>Přidání vlastních vlastností do diagramů závislostí
 
@@ -22,7 +24,7 @@ Při psaní kódu rozšíření pro diagramy závislosti můžete uložit hodnot
 
 ## <a name="non-visible-properties"></a>Neviditelné vlastnosti
 
-Pokud chcete, aby kód připojil hodnoty k jakémukoli prvku v diagramu závislostí, nemusíte definovat komponentu MEF. V ILayerElement je slovník s `Properties` názvem [ILayerElement](/previous-versions/ff644511(v=vs.140)). Stačí přidat zařazovací hodnoty do slovníku libovolného elementu vrstvy. Budou uloženy jako součást diagramu závislostí.
+Pokud chcete, aby kód připojil hodnoty k jakémukoli prvku v diagramu závislostí, nemusíte definovat komponentu MEF. V ILayerElement je slovník s `Properties` názvem [](/previous-versions/ff644511(v=vs.140)). Stačí přidat zařazovací hodnoty do slovníku libovolného elementu vrstvy. Budou uloženy jako součást diagramu závislostí.
 
 ## <a name="editable-properties"></a>Upravitelné vlastnosti
 
@@ -160,6 +162,6 @@ namespace MyNamespace
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Rozšíření diagramů závislostí](../modeling/extend-layer-diagrams.md)

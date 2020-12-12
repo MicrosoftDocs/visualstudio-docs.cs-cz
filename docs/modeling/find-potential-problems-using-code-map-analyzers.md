@@ -1,5 +1,7 @@
 ---
 title: Nalezení potenciálních problémů pomocí analyzátorů mapy kódu
+description: Naučte se, jak můžete spouštět analyzátory na mapě kódu, abyste mohli identifikovat kód, který může být příliš složitý nebo který může být potřeba zlepšit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd20d3c40a4fbe80ac1578275ccd8614eb018d7a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f31aeb933150f31f4ef9d6a3fbe695dcb5ef174
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596590"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362182"
 ---
 # <a name="find-potential-problems-using-code-map-analyzers"></a>Nalezení potenciálních problémů pomocí analyzátorů mapy kódu
 
@@ -32,20 +34,20 @@ Spuštění analyzátorů v mapách kódu vám usnadní identifikaci kódu, kter
 
 ## <a name="analyze-code-maps"></a>Analyzovat mapy kódu
 
-Na panelu nástrojů mapa zvolte **Layout**  >  **analyzátory**rozložení a pak analyzátor, který chcete spustit:
+Na panelu nástrojů mapa zvolte   >  **analyzátory** rozložení a pak analyzátor, který chcete spustit:
 
 |**MBSA**|**K identifikaci uzlů, které**|
 |-|-|
 |**Analyzátor cyklických odkazů**|Cyklické závislosti na sobě navzájem. **Poznámka:**  Cyklické závislosti, které jsou ve skupině **obecných typů** , se při rozbalení skupiny nezobrazují na mapě.|
-|**Najít analyzátor Center**|Jsou v horním 25% uzlů s vysokou úrovní připojení<br /><br /> **Skrytí všech ostatních uzlů na mapě**<br /><br /> -Otevřete místní nabídku pro mapu, zvolte možnost **Upřesnit**, **Vybrat**a **Skrýt nevybrané**.<br />     Mapa skryje nevybrané uzly a analyzátor identifikuje nové uzly jako centra.|
+|**Najít analyzátor Center**|Jsou v horním 25% uzlů s vysokou úrovní připojení<br /><br /> **Skrytí všech ostatních uzlů na mapě**<br /><br /> -Otevřete místní nabídku pro mapu, zvolte možnost **Upřesnit**, **Vybrat** a **Skrýt nevybrané**.<br />     Mapa skryje nevybrané uzly a analyzátor identifikuje nové uzly jako centra.|
 |**Analyzátor neodkazované uzly**|Nemají odkazy z jiných uzlů. **Upozornění:**  Před za předpokladu, že se kód nepoužívá, ověřte každý z těchto případů. Některé závislosti, například závislosti XAML a závislosti za běhu, nelze v kódu nalézt staticky.|
 
-Analyzátory mapování kódu budou po použití nadále spouštěny. Změníte-li mapu, všechny použité analyzátory budou automaticky znovu zpracovat aktualizované mapování. Chcete-li zastavit spuštění analyzátoru, na panelu nástrojů mapa **Layout**vyberte možnost  >  **analyzátory**rozložení. Vypněte vybraný analyzátor.
+Analyzátory mapování kódu budou po použití nadále spouštěny. Změníte-li mapu, všechny použité analyzátory budou automaticky znovu zpracovat aktualizované mapování. Chcete-li zastavit spuštění analyzátoru, na panelu nástrojů mapa vyberte možnost  >  **analyzátory** rozložení. Vypněte vybraný analyzátor.
 
 > [!TIP]
 > Pokud máte velmi velkou mapu, může spuštění analyzátoru způsobit výjimku z důvodu nedostatku paměti. Pokud k tomu dojde, upravte mapu tak, aby omezila svůj rozsah nebo vygenerovala menší hodnotu, a pak spusťte analyzátor.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 - [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)

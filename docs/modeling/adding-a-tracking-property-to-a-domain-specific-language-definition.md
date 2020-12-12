@@ -1,5 +1,7 @@
 ---
 title: Přidání vlastnosti sledování do definice DSL
+description: Přečtěte si o vlastnosti domény sledování a o tom, jak můžete přidat vlastnost sledování do doménového modelu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfa6c63d9f43c465e5632d40281c1f48fb9d0f0b
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 6709ede3de16a78e0042d035a87a715b9ce4c80c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91830726"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361206"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>Přidání vlastnosti sledování do definice jazyka specifického pro doménu
 
@@ -24,7 +26,7 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 Vlastnost *prostrkání Domain* je vlastnost, kterou může aktualizovat uživatel, ale má výchozí hodnotu, která je vypočítána pomocí hodnot jiných vlastností nebo prvků domény.
 
-Například v Nástroje DSL (nástroje DSL) má vlastnost zobrazovaný název třídy domény výchozí hodnotu, která je vypočítána pomocí názvu doménové třídy, ale uživatel může změnit hodnotu v době návrhu nebo ji obnovit na počítanou hodnotu.
+Například v nástroji Domain-Specific Language Tools (DSL Tools) má vlastnost zobrazovaný název třídy domény výchozí hodnotu, která je vypočítána pomocí názvu doménové třídy, ale uživatel může změnit hodnotu v době návrhu nebo ji obnovit na počítanou hodnotu.
 
 V tomto návodu vytvoříte jazyk specifický pro doménu (DSL), který má vlastnost sledování oboru názvů, která má výchozí hodnotu založenou na vlastnosti výchozího oboru názvů modelu. Další informace o vlastnostech sledování najdete v tématu [Definování vlastností sledování](/previous-versions/cc825929(v=vs.100)).
 
@@ -54,9 +56,9 @@ Než budete moct spustit tento návod, musíte nejdřív nainstalovat tyto kompo
 
 ## <a name="create-the-project"></a>Vytvoření projektu
 
-1. Vytvořte projekt návrháře jazyka specifického pro doménu. Pojmenujte ji `TrackingPropertyDSL`.
+1. Vytvořte projekt návrháře Domain-Specific jazyka. Pojmenujte ji `TrackingPropertyDSL`.
 
-2. V **Průvodci návrháře jazyka specifického pro doménu**nastavte následující možnosti:
+2. V **Průvodci návrháře jazyka specifického pro doménu** nastavte následující možnosti:
 
     1. Vyberte šablonu **MinimalLanguage** .
 
@@ -89,7 +91,7 @@ Než budete moct spustit tento návod, musíte nejdřív nainstalovat tyto kompo
 
 ### <a name="to-add-the-domain-properties"></a>Přidání vlastností domény
 
-1. V Návrháři DSL klikněte pravým tlačítkem na doménovou třídu **ExampleModel** , přejděte na **Přidat**a pak klikněte na **doménová vlastnost**.
+1. V Návrháři DSL klikněte pravým tlačítkem na doménovou třídu **ExampleModel** , přejděte na **Přidat** a pak klikněte na **doménová vlastnost**.
 
     1. Pojmenujte novou vlastnost `DefaultNamespace` .
 
@@ -101,7 +103,7 @@ Než budete moct spustit tento návod, musíte nejdřív nainstalovat tyto kompo
 
 3. Do třídy domény **ExampleElement** přidejte doménovou vlastnost s názvem `Namespace` .
 
-     V okně **vlastnosti** pro novou vlastnost **je** nastaveno procházení na **false**a nastavte **druh** na **nemá CustomStorage**.
+     V okně **vlastnosti** pro novou vlastnost **je** nastaveno procházení na **false** a nastavte **druh** na **nemá CustomStorage**.
 
 4. Do třídy domény **ExampleElement** přidejte doménovou vlastnost s názvem `IsNamespaceTracking` .
 
@@ -109,7 +111,7 @@ Než budete moct spustit tento návod, musíte nejdřív nainstalovat tyto kompo
 
 ### <a name="to-update-the-diagram-elements-and-dsl-details"></a>Aktualizace elementů diagramu a podrobností DSL
 
-1. V Návrháři DSL klikněte pravým tlačítkem myši na obrazec geometrie **ExampleShape** , přejděte na **Přidat**a pak klikněte na **text dekoratér**.
+1. V Návrháři DSL klikněte pravým tlačítkem myši na obrazec geometrie **ExampleShape** , přejděte na **Přidat** a pak klikněte na **text dekoratér**.
 
     1. Pojmenujte nový text dekoratér `NamespaceDecorator` .
 
@@ -121,13 +123,13 @@ Než budete moct spustit tento návod, musíte nejdřív nainstalovat tyto kompo
 
     2. V seznamu **dekoratéry** vyberte možnost **NamespaceDecorator**, zaškrtněte příslušné políčko a potom v seznamu **vlastností zobrazení** vyberte možnost **obor názvů**.
 
-3. V **Průzkumníku DSL**rozbalte složku **třídy domény** , klikněte pravým tlačítkem na uzel **ExampleElement** a pak klikněte na **Přidat nový popisovač typu domény**.
+3. V **Průzkumníku DSL** rozbalte složku **třídy domény** , klikněte pravým tlačítkem na uzel **ExampleElement** a pak klikněte na **Přidat nový popisovač typu domény**.
 
     1. Rozbalte uzel **ExampleElement** a vyberte uzel **popisovač vlastního typu (popisovač typu domény)** .
 
     2. V okně **vlastnosti** pro popisovač typu domény nastavte **vlastní kód** na **hodnotu true**.
 
-4. V **Průzkumníku DSL**vyberte uzel **chování serializace XML** .
+4. V **Průzkumníku DSL** vyberte uzel **chování serializace XML** .
 
     1. V okně **vlastnosti** nastavte **vlastní post Load** na true ( **pravda**).
 
@@ -145,9 +147,9 @@ Při transformaci všech šablon systém generuje zdrojový kód definující ja
 
 Je nutné zadat kód pro zachování hodnoty a stavu vlastnosti sledování. Abychom vám pomohli odlišit svůj vlastní kód od generovaného kódu a vyhnout se konfliktům při pojmenovávání souborů, umístěte vlastní soubory kódu do samostatné podsložky.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **DSL** , přejděte na **Přidat**a pak klikněte na **Nová složka**. Pojmenujte novou složku `CustomCode` .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt **DSL** , přejděte na **Přidat** a pak klikněte na **Nová složka**. Pojmenujte novou složku `CustomCode` .
 
-2. Klikněte pravým tlačítkem na novou složku **CustomCode** , přejděte na **Přidat**a klikněte na **Nová položka**.
+2. Klikněte pravým tlačítkem na novou složku **CustomCode** , přejděte na **Přidat** a klikněte na **Nová položka**.
 
 3. Vyberte šablonu **soubor kódu** , nastavte **název** na `NamespaceTrackingProperty.cs` a pak klikněte na **OK**.
 
@@ -722,9 +724,9 @@ Dalším krokem je sestavení a spuštění návrháře DSL v nové instanci ná
 
     Experimentální sestavení [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] otevře **ladicí** řešení, které obsahuje prázdný testovací soubor.
 
-3. V **Průzkumník řešení**dvakrát klikněte na soubor test. trackingPropertyDsl, aby se otevřel v návrháři, a pak klikněte na návrhovou plochu.
+3. V **Průzkumník řešení** dvakrát klikněte na soubor test. trackingPropertyDsl, aby se otevřel v návrháři, a pak klikněte na návrhovou plochu.
 
-    Všimněte si, že v okně **vlastnosti** diagramu je výchozí vlastnost **Namespace** **DefaultNamespace**a vlastnost **Custom Elements** je **0/0**.
+    Všimněte si, že v okně **vlastnosti** diagramu je výchozí vlastnost **Namespace** **DefaultNamespace** a vlastnost **Custom Elements** je **0/0**.
 
 4. Přetáhněte element **ExampleElement** z **panelu nástrojů** na plochu diagramu.
 
@@ -732,9 +734,9 @@ Dalším krokem je sestavení a spuštění návrháře DSL v nové instanci ná
 
     Všimněte si, že hodnota **oboru názvů element** je nyní zobrazena tučně.
 
-6. V okně **vlastnosti** klikněte pravým tlačítkem myši na **obor názvů element**a potom klikněte na **resetovat**.
+6. V okně **vlastnosti** klikněte pravým tlačítkem myši na **obor názvů element** a potom klikněte na **resetovat**.
 
-    Hodnota vlastnosti se změní na **DefaultNamespace**a hodnota se zobrazí v běžném písmu.
+    Hodnota vlastnosti se změní na **DefaultNamespace** a hodnota se zobrazí v běžném písmu.
 
     Znovu klikněte pravým tlačítkem na **obor názvů elementu** . Příkaz pro **obnovení** je teď zakázaný, protože tato vlastnost je aktuálně ve stavu sledování.
 
@@ -754,7 +756,7 @@ Dalším krokem je sestavení a spuštění návrháře DSL v nové instanci ná
 
 Pokud plánujete použít více než jednu vlastnost sledování nebo implementovat vlastnosti sledování ve více než jedné DSL, můžete vytvořit textovou šablonu, která generuje společný kód pro podporu jednotlivých vlastností sledování. Další informace o textových šablonách naleznete v tématu [Code Generation and T4 text Templates](../modeling/code-generation-and-t4-text-templates.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor>
 - <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>

@@ -1,5 +1,7 @@
 ---
 title: Rozšíření diagramů závislostí
+description: Přečtěte si, jak můžete napsat kód pro vytvoření a aktualizaci diagramů závislostí a jak ověřit strukturu kódu programu v diagramech závislostí v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 305c562c7600dc6955ce0307db92f4e257fc1c21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d78b7005875f0544354c845cd27d187bdbf40d6d
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "92298419"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361622"
 ---
 # <a name="extend-dependency-diagrams"></a>Rozšíření diagramů závislostí
 
@@ -35,7 +37,7 @@ V počítači, na kterém chcete vyvíjet rozšíření vrstev, je nutné mít n
 
 V počítači, na kterém chcete spustit rozšíření vrstvy, musíte mít nainstalovanou vhodnou verzi sady Visual Studio. Chcete-li zjistit, které edice sady Visual Studio podporují diagramy závislostí, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)
 - [Diagramy závislostí: Pokyny](../modeling/layer-diagrams-guidelines.md)

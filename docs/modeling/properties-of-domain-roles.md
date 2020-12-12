@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti rolí domény
+description: Přečtěte si o vlastnostech přidružených k doméně domény, jako je typ kolekce, vlastní atributy a vlastnost, kterou lze procházet.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,15 +9,15 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c1c62126d65107bb25e3c4a475a794116c47193
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6dda8e7c5538b0517c181a451072c4f8a9544965
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544141"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362337"
 ---
 # <a name="properties-of-domain-roles"></a>Vlastnosti rolí domény
-Vlastnosti v následující tabulce jsou spojeny s doménovou rolí. Informace o doménových rolích najdete v tématu [porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md). Další informace o tom, jak tyto vlastnosti používat, najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
+Vlastnosti v následující tabulce jsou spojeny s doménovou rolí. Informace o doménových rolích najdete v tématu [porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md). Další informace o tom, jak tyto vlastnosti použít, najdete v tématu [přizpůsobení a rozšíření Domain-Specificho jazyka](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 |Vlastnost|Popis|Výchozí|
 |-|-|-|
@@ -41,6 +43,6 @@ Vlastnosti v následující tabulce jsou spojeny s doménovou rolí. Informace o
 > [!NOTE]
 > Výchozí hodnota zobrazovaného názvu je založena na přidružené hodnotě vlastnosti vložením mezer před jednotlivá velká písmena, která předchází znakům malých písmen a za kterými nenásleduje další znak velká písmena.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vlastnosti vztahů domény](../modeling/properties-of-domain-relationships.md)

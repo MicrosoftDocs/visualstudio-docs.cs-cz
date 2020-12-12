@@ -1,5 +1,7 @@
 ---
 title: Přidávání příkazů a gest do diagramů závislostí
+description: Přečtěte si, jak můžete definovat příkazy nabídek v nabídce a obslužné rutiny gesta v diagramech závislostí v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ff23e07bd6e81b11d94a8256c33b57b4b0c558c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc91e2c160d2081db868daf8d8dbaeb041172297
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531388"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362220"
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>Přidávání příkazů a gest do diagramů závislostí
 
@@ -73,15 +75,15 @@ Pokud chcete vytvořit jeden VSIX, který obsahuje příkazy, validátory vrstev
 
 2. Přidejte nebo vytvořte projekt VSIX ve vašem řešení. Projekt VSIX obsahuje soubor s názvem **source. extension. vsixmanifest**.
 
-3. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt VSIX a vyberte **nastavit jako spouštěný projekt**.
+3. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt VSIX a vyberte **nastavit jako spouštěný projekt**.
 
-4. V části **source. extension. vsixmanifest**v části **assety**přidejte projekt obslužné rutiny příkazu nebo gesta jako komponentu MEF.
+4. V části **source. extension. vsixmanifest** v části **assety** přidejte projekt obslužné rutiny příkazu nebo gesta jako komponentu MEF.
 
     1. Na kartě **assets**. klikněte na tlačítko **Nový**.
 
-    2. V **typu**vyberte **Microsoft. VisualStudio. MefComponent**.
+    2. V **typu** vyberte **Microsoft. VisualStudio. MefComponent**.
 
-    3. V části **zdroj**vyberte **projekt v aktuálním řešení** a vyberte název projektu obslužné rutiny příkazu nebo gesta.
+    3. V části **zdroj** vyberte **projekt v aktuálním řešení** a vyberte název projektu obslužné rutiny příkazu nebo gesta.
 
     4. Uložte soubor.
 
@@ -261,6 +263,6 @@ Všimněte si následujících bodů pro obslužné rutiny gesta:
 
 - Obslužné rutiny pro některé typy přetažených položek jsou již definovány. Uživatel může třeba přetáhnout položky z Průzkumník řešení do diagramu závislostí. Pro tyto typy položek nelze definovat obslužnou rutinu přetáhnutí. V těchto případech vaše `DragDrop` metody nebudou vyvolány.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přidání vlastního ověřování architektury do diagramů závislostí](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)

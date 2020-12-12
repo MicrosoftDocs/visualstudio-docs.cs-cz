@@ -1,5 +1,7 @@
 ---
 title: Mapy kódu
+description: Přečtěte si, jak vám mapy kódu pomůžou zjistit, jak se kód vejde dohromady bez čtení souborů a řádků kódu.
+ms.custom: SEO-VS-2020
 ms.date: 05/16/2018
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 771a6ccf4749a3464204d3da75f4d403d1ab2dd5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39b34bb124d663d81769c6d3086d6b36803d60eb
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532714"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362233"
 ---
 # <a name="map-dependencies-with-code-maps"></a>Mapování závislostí pomocí map kódu
 
@@ -43,7 +45,7 @@ Závislosti pro kód můžete mapovat v těchto jazycích:
 - Projekty X + + a sestavení vytvořená z modulů .NET pro Microsoft Dynamics AX
 
 > [!NOTE]
-> Pro jiné projekty než C# nebo Visual Basic je k dispozici méně možností pro spuštění mapy kódu nebo přidávání položek do existující mapy kódu. Například nelze kliknout pravým tlačítkem myši na objekt v textovém editoru projektu jazyka C++ a přidat jej do mapy kódu. Jednotlivé prvky nebo soubory kódu však lze přetáhnout z **Průzkumník řešení**, **zobrazení tříd**a **Prohlížeč objektů**.
+> Pro jiné projekty než C# nebo Visual Basic je k dispozici méně možností pro spuštění mapy kódu nebo přidávání položek do existující mapy kódu. Například nelze kliknout pravým tlačítkem myši na objekt v textovém editoru projektu jazyka C++ a přidat jej do mapy kódu. Jednotlivé prvky nebo soubory kódu však lze přetáhnout z **Průzkumník řešení**, **zobrazení tříd** a **Prohlížeč objektů**.
 
 ## <a name="install-code-map-and-live-dependency-validation"></a>Instalovat mapu kódu a ověřování živých závislostí
 
@@ -67,9 +69,9 @@ Můžete vytvořit prázdnou mapu kódu a přetáhnout položky do ní, včetně
 
 Přidání prázdné mapy kódu:
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení nejvyšší úrovně. Vyberte možnost **Přidat**  >  **novou položku**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu řešení nejvyšší úrovně. Vyberte možnost **Přidat**  >  **novou položku**.
 
-2. V dialogovém okně **Přidat novou položku** vyberte v části **nainstalováno**kategorii **Obecné** .
+2. V dialogovém okně **Přidat novou položku** vyberte v části **nainstalováno** kategorii **Obecné** .
 
 3. Zvolte šablonu **dokument orientovaného grafu (. dgml)** a pak vyberte **Přidat**.
 
@@ -96,7 +98,7 @@ Chcete-li zobrazit všechny závislosti ve vašem řešení:
 
    Tento příklad řešení obsahuje složky řešení (**testy** a **komponenty**), projekty testů, webové projekty a sestavení. Ve výchozím nastavení se všechny vztahy zahrnutí zobrazí jako *skupiny*, které můžete rozbalit nebo sbalit. Skupina **externals** obsahuje cokoli mimo vaše řešení, včetně závislostí platformy. Externí sestavení obsahuje pouze položky, které jsou používány. Ve výchozím nastavení jsou systémové základní typy na mapě skryté, aby se snížila přehlednost.
 
-3. Chcete-li přejít k podrobnostem o mapě, rozbalte skupiny, které reprezentují projekty a sestavení. Můžete rozbalit vše stisknutím **kombinace kláves CTRL + a** a vybrat všechny uzly a pak vybrat **skupinu**a **Rozbalit** z místní nabídky.
+3. Chcete-li přejít k podrobnostem o mapě, rozbalte skupiny, které reprezentují projekty a sestavení. Můžete rozbalit vše stisknutím **kombinace kláves CTRL + a** a vybrat všechny uzly a pak vybrat **skupinu** a **Rozbalit** z místní nabídky.
 
    ![Rozbalování všech skupin v mapě kódu](../modeling/media/codemapsexpandallgroups.png)
 
@@ -158,13 +160,13 @@ Předpokládejme, že máte revizi kódu, který se má provést v některých s
 
    ![Zobrazit konkrétní závislosti na mapě kódu](../modeling/media/codemapsspecificdependenciesintro.png)
 
-1. V **Průzkumník řešení**vyberte projekty, odkazy na sestavení, složky, soubory, typy nebo členy, které chcete namapovat.
+1. V **Průzkumník řešení** vyberte projekty, odkazy na sestavení, složky, soubory, typy nebo členy, které chcete namapovat.
 
    ![Vyberte položky, které chcete namapovat.](../modeling/media/codemapsselectinsolutionexplorer.png)
 
 1. Na panelu nástrojů **Průzkumník řešení** klikněte na tlačítko **Zobrazit na mapě kódu** ![ vytvořit nový graf z vybraných uzlů ](../modeling/media/createnewgraphfromselectedbutton.gif) . Případně můžete otevřít místní nabídku pro jednu nebo skupinu položek a zvolit **Zobrazit na mapě kódu**.
 
-   Můžete také přetáhnout položky z **Průzkumník řešení**, **zobrazení tříd**nebo **Prohlížeč objektů**do [nové](#add-a-code-map) nebo existující mapy kódu. Chcete-li zahrnout nadřazenou hierarchii pro vaše položky, stiskněte a podržte klávesu **CTRL** při přetahování položek nebo použijte tlačítko **Zahrnout nadřazené** položky na panelu nástrojů mapa kódu a určete výchozí akci. Soubory sestavení můžete také přetáhnout mimo aplikaci Visual Studio, například z **Průzkumníka Windows**.
+   Můžete také přetáhnout položky z **Průzkumník řešení**, **zobrazení tříd** nebo **Prohlížeč objektů** do [nové](#add-a-code-map) nebo existující mapy kódu. Chcete-li zahrnout nadřazenou hierarchii pro vaše položky, stiskněte a podržte klávesu **CTRL** při přetahování položek nebo použijte tlačítko **Zahrnout nadřazené** položky na panelu nástrojů mapa kódu a určete výchozí akci. Soubory sestavení můžete také přetáhnout mimo aplikaci Visual Studio, například z **Průzkumníka Windows**.
 
    > [!NOTE]
    > Při přidávání položek z projektu, který je sdílen mezi více aplikacemi, například Windows Phone nebo Microsoft Store, se tyto položky zobrazí na mapě s aktuálně aktivním projektem aplikace. Pokud změníte kontext na jiný projekt aplikace a přidáte další položky ze sdíleného projektu, tyto položky se nyní zobrazí s nově aktivním projektem aplikace. Operace, které provádíte s položkou na mapě, se vztahují pouze na ty položky, které sdílejí stejný kontext.
@@ -187,16 +189,16 @@ Předpokládejme, že máte revizi kódu, který se má provést v některých s
 
 6. Chcete-li zobrazit další položky týkající se těch na mapě, vyberte je a zvolte možnost **Zobrazit související** na panelu nástrojů mapa kódu a pak vyberte typ souvisejících položek, které chcete přidat do mapy. Případně vyberte jednu nebo více položek, otevřete místní nabídku a zvolte možnost **Zobrazit** pro typ souvisejících položek, které chcete přidat do mapy. Příklad:
 
-    V případě **sestavení**vyberte:
+    V případě **sestavení** vyberte:
 
     |Možnost|Popis|
     |-|-|
     |**Zobrazit sestavení s odkazy**|Přidejte sestavení, na které odkazuje toto sestavení. Externí sestavení se zobrazí ve skupině **externí** typy.|
     |**Zobrazit sestavení odkazující na tuto**|Přidejte sestavení do řešení, která odkazují na toto sestavení.|
 
-    V případě **oboru názvů**vyberte možnost **Zobrazit obsahující sestavení**, pokud není viditelná.
+    V případě **oboru názvů** vyberte možnost **Zobrazit obsahující sestavení**, pokud není viditelná.
 
-    Pro **třídu** nebo **rozhraní**vyberte:
+    Pro **třídu** nebo **rozhraní** vyberte:
 
     |Možnost|Popis|
     |-|-|
@@ -209,7 +211,7 @@ Předpokládejme, že máte revizi kódu, který se má provést v některých s
     |**Zobrazit všechny základní typy**|Přidejte rekurzivně hierarchii základní třídy nebo rozhraní.|
     |**Zobrazit všechny odvozené typy**|V případě třídy přidejte všechny odvozené třídy rekurzivně.<br /><br /> V rámci rozhraní přidejte rekurzivně veškerá odvozená rozhraní a implementaci tříd nebo struktur.|
 
-     Pro **metodu**vyberte:
+     Pro **metodu** vyberte:
 
     |Možnost|Popis|
     |-|-|
@@ -219,7 +221,7 @@ Předpokládejme, že máte revizi kódu, který se má provést v některých s
     |**Zobrazit obsahující typ, obor názvů a sestavení**|Přidejte hierarchii nadřazeného kontejneru.|
     |**Zobrazit přepsané metody**|V případě metody, která přepíše jiné metody nebo implementuje metodu rozhraní, přidejte všechny abstraktní nebo virtuální metody základních tříd, které jsou přepsány, a případně metodu rozhraní, které je implementováno.|
 
-     Pro **pole** nebo **vlastnost**vyberte:
+     Pro **pole** nebo **vlastnost** vyberte:
 
     |Možnost|Popis|
     |-|-|
@@ -236,7 +238,7 @@ Předpokládejme, že máte revizi kódu, který se má provést v některých s
 
    ![Zjednodušení zobrazení pomocí podokna filtru](../modeling/media/almcodemapfilterpane.png)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Video: Principy návrhu z kódu pomocí map kódu Visual Studio 2015](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)
 - [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)

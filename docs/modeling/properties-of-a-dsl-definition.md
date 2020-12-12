@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti definice DSL
+description: Přečtěte si, že vlastnosti DslDefinition definují vlastnosti definice jazyka specifického pro doménu, jako je například číslování verzí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,17 +11,17 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 650e4db75b3896a04b2dd4ef9056191d4a83d46a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 48771a61577c5c7ca910cc3b4f8496db37ada281
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810090"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360517"
 ---
 # <a name="properties-of-a-dsl-definition"></a>Vlastnosti definice DSL
 Vlastnosti DslDefinition definují vlastnosti definice *jazyka specifického pro doménu* , jako je například číslování verzí. Vlastnosti DslDefinition se zobrazí v okně **vlastnosti** , když kliknete na otevřenou oblast diagramu v *Návrháři jazyka specifického pro doménu*.
 
- Další informace najdete v tématu [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak tyto vlastnosti používat, najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
+ Další informace najdete v tématu [definování Domain-Specificho jazyka](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak tyto vlastnosti použít, najdete v tématu [přizpůsobení a rozšíření Domain-Specificho jazyka](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
  DslDefinition má vlastnosti v následující tabulce:
 
@@ -42,6 +44,6 @@ Vlastnosti DslDefinition definují vlastnosti definice *jazyka specifického pro
 |Podverze|Přírůstkové číslo sestavení pro tuto definici jazyka specifického pro doménu.|0|
 |Revize|Číslo buildu přírůstkové revize pro tuto definici jazyka specifického pro doménu.|0|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

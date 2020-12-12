@@ -1,5 +1,7 @@
 ---
 title: Ladění textové šablony T4
+description: Chcete-li ladit textovou šablonu návrhu, uložte soubor textové šablony a zvolte možnost ladit šablonu T4 v místní nabídce souboru v Průzkumník řešení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1570061feb5da034e2e8fab7168658577f6f990d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26ad1545918a02fbcf530b439e801a656a425864
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589679"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361466"
 ---
 # <a name="debugging-a-t4-text-template"></a>Ladění textové šablony T4
 Můžete nastavit zarážky v textových šablonách. Chcete-li ladit textovou šablonu návrhu, uložte soubor textové šablony a zvolte možnost **ladit šablonu T4** v místní nabídce souboru v Průzkumník řešení. Chcete-li ladit textovou šablonu run-time, stačí ladit aplikaci, do které patří.
@@ -43,7 +45,7 @@ Můžete nastavit zarážky v textových šablonách. Chcete-li ladit textovou �
 |Sestavení {0} pro procesor direktiv se {1} neudělilo sadě oprávnění FullTrust. Procesory direktiv můžou poskytovat jenom důvěryhodná sestavení. Tento procesor direktiv se nenačte.|Vyvolá se v případě, že systém neudělí oprávnění FullTrust k sestavení obsahujícímu procesor direktiv. Zpráva poskytuje název sestavení a název procesoru direktiv.|Ujistěte se, že používáte pouze důvěryhodná sestavení v místním počítači.|
 |Cesta ' {0} ' musí být buď místní k tomuto počítači nebo část vaší důvěryhodné zóny.|Vyvolá se v případě, že direktiva nebo direktiva sestavení odkazuje na soubor, který není na vašem místním počítači nebo v důvěryhodné zóně vaší sítě.|Ujistěte se, že adresář, ve kterém jsou umístěny direktivy direktivy nebo sestavení, je ve vaší důvěryhodné zóně. Pomocí aplikace Internet Explorer můžete přidat síťový adresář do důvěryhodné zóny.|
 |Více syntaktických chyb, jako je například "neplatný token" catch "nebo" obor názvů nemůže přímo obsahovat členy "|V kódu šablony je příliš mnoho uzavíracích závorek. Kompilátor je matoucí pomocí standardního kódu generování.|Ověřte počet uzavíracích závorek a závorek uvnitř oddělovačů kódu.|
-|Smyčky nebo podmíněné výrazy nejsou zkompilovány nebo provedeny správně. Například: `<#if (i>10)#> Number is: <#= i #>`.<br /><br /> Tento kód vždy vyprodukuje hodnotu i. Podmínkou je pouze "číslo je:".|V jazyce C# vždy používejte složené závorky k obklopení textových bloků, které jsou vloženy do řídicích příkazů.|Přidat složené závorky: `<#if (i>10) { #>    Number is: <#= i #><# } #>` .|
+|Smyčky nebo podmíněné výrazy nejsou zkompilovány nebo provedeny správně. Příklad: `<#if (i>10)#> Number is: <#= i #>`.<br /><br /> Tento kód vždy vyprodukuje hodnotu i. Podmínkou je pouze "číslo je:".|V jazyce C# vždy používejte složené závorky k obklopení textových bloků, které jsou vloženy do řídicích příkazů.|Přidat složené závorky: `<#if (i>10) { #>    Number is: <#= i #><# } #>` .|
 |Výraz je moc složitý při zpracování šablony návrhu nebo kompilace šablony modulu runtime (předzpracovaného).<br /><br /> Visual Studio přestane pracovat při pokusu o kontrolu kódu generovaného šablonou modulu runtime.|Textový blok je příliš dlouhý. T4 převede textové bloky na výraz zřetězení řetězců s jedním řetězcovým literálem pro každý řádek šablony. Dlouhé bloky textu můžou přeměnit limity velikosti kompilátoru.|Rozdělte blok dlouhého textu pomocí bloku výrazu, jako je:<br /><br /> `<#= "" #>`|
 
 ## <a name="warning-descriptions-and-fixes"></a>Popisy a opravy upozornění

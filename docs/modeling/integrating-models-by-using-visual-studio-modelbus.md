@@ -1,5 +1,7 @@
 ---
 title: Integrace modelů pomocí ModelBus
+description: Přečtěte si, že Visual Studio ModelBus poskytuje metodu pro vytváření propojení mezi modely a z jiných nástrojů do modelů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a222d5f69d19d2891b4aa20239c1874f55a056e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46705c7a614cd67d81c9e55c03e937f72c29a2fe
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536939"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360723"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>Integrace modelů pomocí Visual Studio Modelbus
 
@@ -70,7 +72,7 @@ Aby bylo zajištěno, že identifikátory prvků jsou trvalé:
 
 1. Otevřete DslDefinition. DSL.
 
-2. V Průzkumníku DSL rozbalte **chování serializace XML**a potom **data třídy**.
+2. V Průzkumníku DSL rozbalte **chování serializace XML** a potom **data třídy**.
 
 3. Pro každou třídu, na kterou chcete vytvořit odkazy na sběrnici modelů:
 
@@ -126,7 +128,7 @@ Pokud chcete DSL povolit použití odkazů na jinou DSL, měli byste nejdřív v
 
 4. Pokud jste se rozhodli odkazovat na prvek v modelu, můžete přidat seznam typů, které může uživatel vybrat, například Company. FamilyTree. Person.
 
-5. Klikněte na **OK**a pak na **transformovat všechny šablony** na panelu nástrojů **Průzkumník řešení** .
+5. Klikněte na **OK** a pak na **transformovat všechny šablony** na panelu nástrojů **Průzkumník řešení** .
 
     > [!WARNING]
     > Pokud jste nevybrali platný model nebo entitu, tlačítko OK nebude mít žádný účinek, i když se může zdát být povoleno.
@@ -303,7 +305,7 @@ using (FamilyTreeAdapter adapter =
 
 1. DSL, ke kterým chcete získat přístup, musí mít adaptér ModelBus, který byl nakonfigurován pro přístup pomocí textových šablon. Další informace najdete v tématu [poskytnutí přístupu k DSL](#provide).
 
-2. Obvykle budete přistupovat k cílové DSL pomocí referenčního modelu sběrnice (MBR), který je uložený ve zdrojové DSL. Vaše šablona proto obsahuje direktivu zdrojového DSL a také kód pro rozpoznání hlavního spouštěcího záznamu (MBR). Další informace o textových šablonách naleznete v tématu [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md).
+2. Obvykle budete přistupovat k cílové DSL pomocí referenčního modelu sběrnice (MBR), který je uložený ve zdrojové DSL. Vaše šablona proto obsahuje direktivu zdrojového DSL a také kód pro rozpoznání hlavního spouštěcího záznamu (MBR). Další informace o textových šablonách naleznete v tématu [generování kódu z Domain-Specificho jazyka](../modeling/generating-code-from-a-domain-specific-language.md).
 
    ```
    <#@ template debug="true" hostspecific="true"
@@ -480,19 +482,19 @@ Následující informace nejsou nezbytné, ale mohou být užitečné, pokud pro
 
 Rozšíření ModelBus provede v řešení DSL tyto změny.
 
-Když kliknete pravým tlačítkem myši na diagram definice DSL, klikněte na **povolit ModelBus**a pak vyberte **Povolit tuto DSL pro využívání ModelBus**:
+Když kliknete pravým tlačítkem myši na diagram definice DSL, klikněte na **povolit ModelBus** a pak vyberte **Povolit tuto DSL pro využívání ModelBus**:
 
 - V projektu DSL se přidá odkaz na **Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0.dll**
 
 - V definici DSL je přidán odkaz na externí typ: `Microsoft.VisualStudio.Modeling.Integration.ModelBusReference` .
 
-   Odkaz můžete zobrazit v **Průzkumníku DSL**v části **typy domén**. Chcete-li přidat odkazy na externí typ ručně, klikněte pravým tlačítkem na kořenový uzel.
+   Odkaz můžete zobrazit v **Průzkumníku DSL** v části **typy domén**. Chcete-li přidat odkazy na externí typ ručně, klikněte pravým tlačítkem na kořenový uzel.
 
 - Přidá se nový soubor šablony, **Dsl\GeneratedCode\ModelBusReferencesSerialization.TT**.
 
 Když nastavíte typ doménové vlastnosti na ModelBusReference, kliknete pravým tlačítkem na vlastnost a kliknete na **Povolit ModelBusReference specifické vlastnosti**:
 
-- Do doménové vlastnosti se přidalo několik atributů CLR. Můžete je zobrazit v poli vlastní atributy v okno Vlastnosti. V **Dsl\GeneratedCode\DomainClasses.cs**uvidíte atributy v deklaraci vlastnosti:
+- Do doménové vlastnosti se přidalo několik atributů CLR. Můžete je zobrazit v poli vlastní atributy v okno Vlastnosti. V **Dsl\GeneratedCode\DomainClasses.cs** uvidíte atributy v deklaraci vlastnosti:
 
   ```csharp
   [System.ComponentModel.TypeConverter(typeof(
@@ -506,7 +508,7 @@ Když nastavíte typ doménové vlastnosti na ModelBusReference, kliknete pravý
     ("Choose a model file", "Target model|*.target")]
   ```
 
-Po kliknutí pravým tlačítkem na diagram definice DSL klikněte na **povolit ModelBus**a vyberte možnost **zveřejnit tuto DSL pro ModelBus**:
+Po kliknutí pravým tlačítkem na diagram definice DSL klikněte na **povolit ModelBus** a vyberte možnost **zveřejnit tuto DSL pro ModelBus**:
 
 - `ModelBusAdapter`Do řešení se přidá nový projekt.
 
@@ -514,7 +516,7 @@ Po kliknutí pravým tlačítkem na diagram definice DSL klikněte na **povolit 
 
 - V **DslPackage\source.extention.TT** `|ModelBusAdapter|` je přidána jako Komponenta MEF.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Postupy: Otevření modelu ze souboru v kódu programu](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 - [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)

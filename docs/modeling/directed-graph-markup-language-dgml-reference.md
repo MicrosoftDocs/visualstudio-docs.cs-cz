@@ -1,5 +1,7 @@
 ---
 title: Referenční dokumentace jazyka přímého značení grafů (DGML)
+description: Přečtěte si, jak DGML (Direct Graph Markup Language) popisuje informace používané k vizualizaci a k provádění analýz složitosti.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bef53e9288f04c9ed7fce6ff7e5ddd69020798f
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 0812cee6555ecc576f7fb78f3069a0ae69f5a16c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099281"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361791"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Referenční dokumentace jazyka přímého značení grafů (DGML)
 
@@ -321,7 +323,7 @@ Chcete-li odkazovat na alias z prvku v souboru. dgml, seložte `Id` \<Path/> ele
 </Properties>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 - [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)

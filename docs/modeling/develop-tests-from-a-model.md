@@ -1,5 +1,7 @@
 ---
 title: Vývoj testů z modelu
+description: Zjistěte, jak můžete pomocí požadavků a modelů architektury lépe organizovat testy vašeho systému a jeho součástí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22c18fd457d4827d3abf3a3494ad622873eb5c7b
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 1f49b52bece0c1dddc65da919d266c4f21b1bf69
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099294"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361830"
 ---
 # <a name="develop-tests-from-a-model"></a>Vývoj testů z modelu
 Můžete použít požadavky a modely architektury, které vám pomůžou organizovat testy vašeho systému a jeho součástí. Tento postup pomáhá zajistit, že budete testovat požadavky, které jsou důležité pro uživatele a další zúčastněné strany, a pomůže vám rychle aktualizovat testy v případě změny požadavků. Pokud používáte [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] , můžete také zachovat propojení mezi modely a testy.
@@ -131,7 +133,7 @@ Assert (countAfter == countBefore = 1);
 ## <a name="attaching-test-cases-to-model-elements"></a><a name="Attaching"></a> Připojení testovacích případů k prvkům modelu
  Pokud váš projekt používá [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] , můžete propojit testy s prvky v modelu. To vám umožní rychle najít testy ovlivněné změnou požadavků a pomůže vám sledovat rozsah, do kterého byl požadavek realizován.
 
- Testy můžete propojit se všemi druhy prvků. Tady je několik příkladů:
+ Testy můžete propojit se všemi druhy prvků. Zde je několik příkladů:
 
 - Propojit případ použití s testy, které ji vykonávají.
 
@@ -155,7 +157,7 @@ Assert (countAfter == countBefore = 1);
 
 3. Přidejte do testovací sady, testovací případy, které ověřují požadavek vyjádřený v prvku modelu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)
 - [Modelování uživatelských požadavků](../modeling/model-user-requirements.md)

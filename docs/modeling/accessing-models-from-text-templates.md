@@ -1,5 +1,7 @@
 ---
 title: Přístup k modelům z textových šablon
+description: Naučte se, jak můžete pomocí textových šablon vytvářet soubory sestav, soubory zdrojového kódu a další textové soubory, které jsou založené na modelech jazyka specifického pro doménu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,19 +11,19 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a66f160d25ccacbdaaaf2238dfc738ade4a4200f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64d937f9a63207e16664bbd9254ae60470caeb41
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531466"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362285"
 ---
 # <a name="access-models-from-text-templates"></a>Přístup k modelům z textových šablon
 
 Pomocí textových šablon můžete vytvářet soubory sestav, soubory zdrojového kódu a další textové soubory založené na modelech jazyka specifického pro doménu. Základní informace o textových šablonách naleznete v tématu [generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md). Textové šablony budou fungovat v experimentálním režimu při ladění DSL a budou fungovat i na počítači, na kterém jste nasadili DSL.
 
 > [!NOTE]
-> Když vytvoříte řešení DSL, ukázkový text šablona. soubory ** \* TT** se generují v ladicím projektu. Když změníte názvy doménových tříd, tyto šablony již nebudou fungovat. Nicméně obsahují základní direktivy, které potřebujete, a poskytněte příklady, které můžete aktualizovat tak, aby odpovídaly vaší DSL.
+> Když vytvoříte řešení DSL, ukázkový text šablona. soubory **\* TT** se generují v ladicím projektu. Když změníte názvy doménových tříd, tyto šablony již nebudou fungovat. Nicméně obsahují základní direktivy, které potřebujete, a poskytněte příklady, které můžete aktualizovat tak, aby odpovídaly vaší DSL.
 
  Přístup k modelu z textové šablony:
 

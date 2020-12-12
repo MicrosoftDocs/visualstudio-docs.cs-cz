@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Vytvoření vlastního procesoru direktiv'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio psát vlastní procesory direktiv pro přizpůsobení textových šablon.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 4efe12b9871dc07bd7427e1567973701d3c6c527
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: efe32db6f8d5aadb815d845bdc9f06be36ec06c9
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532233"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361882"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>Návod: Vytvoření vlastního procesoru direktiv
 
@@ -599,7 +601,7 @@ End Property
     End Namespace
     ```
 
-4. Pouze pro Visual Basic otevřete nabídku **projekt** a klikněte na příkaz **vlastnosti CustomDP**. Na kartě **aplikace** v **kořenovém oboru názvů**odstraňte výchozí hodnotu `CustomDP` .
+4. Pouze pro Visual Basic otevřete nabídku **projekt** a klikněte na příkaz **vlastnosti CustomDP**. Na kartě **aplikace** v **kořenovém oboru názvů** odstraňte výchozí hodnotu `CustomDP` .
 
 5. V nabídce **File** (Soubor) klikněte na **Save All** (Uložit vše).
 
@@ -637,9 +639,9 @@ V tomto oddílu přidáte na stejné místo v registru klíč pro vlastní pro
 
 1. Spusťte `regedit` příkaz pomocí nabídky Start nebo příkazového řádku.
 
-2. Přejděte do umístění **HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ \* 0 \ TextTemplating\DirectiveProcessors**a klikněte na uzel.
+2. Přejděte do umístění **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ \* 0 \ TextTemplating\DirectiveProcessors** a klikněte na uzel.
 
-   V 64 systémech použijte **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\visualstudio \\ \* . 0 \ TextTemplating\DirectiveProcessors**
+   V 64 systémech použijte **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\\ \* . 0 \ TextTemplating\DirectiveProcessors**
 
 3. Přidejte nový klíč s názvem CustomDirectiveProcessor.
 
@@ -830,11 +832,11 @@ V tomto příkladu volá textová šablona direktivu a předá název souboru 
 
 ### <a name="to-test-the-directive-processor"></a>Testování procesoru direktiv
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na TestDP.TT a pak klikněte na **Spustit vlastní nástroj**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na TestDP.TT a pak klikněte na **Spustit vlastní nástroj**.
 
    U Visual Basicch uživatelů se TestDP.txt ve výchozím nastavení nemusí zobrazovat ve **Průzkumník řešení** . Chcete-li zobrazit všechny soubory, které jsou přiřazeny k projektu, otevřete nabídku **projekt** a klikněte na možnost **Zobrazit všechny soubory**.
 
-2. V **Průzkumník řešení**rozbalte uzel TestDP.txt a potom dvakrát klikněte na položku TestDP.txt a otevřete ji v editoru.
+2. V **Průzkumník řešení** rozbalte uzel TestDP.txt a potom dvakrát klikněte na položku TestDP.txt a otevřete ji v editoru.
 
     Zobrazí se vygenerovaný textový výstup. Výstup by měl vypadat takto:
 
@@ -961,6 +963,6 @@ Po otestování vlastního procesoru direktiv můžete k vygenerovanému textu 
 
 2. V nabídce **soubor** klikněte na příkaz **Uložit TestDP.txt**.
 
-3. Chcete-li zobrazit výstup v prohlížeči, klikněte v **Průzkumník řešení**pravým tlačítkem myši na TestDP.htm a klikněte na možnost **Zobrazit v prohlížeči**.
+3. Chcete-li zobrazit výstup v prohlížeči, klikněte v **Průzkumník řešení** pravým tlačítkem myši na TestDP.htm a klikněte na možnost **Zobrazit v prohlížeči**.
 
    Výstup by měl být stejný jako původní text s tím rozdílem, že má použit formát HTML. Název každé položky se zobrazí tučně.

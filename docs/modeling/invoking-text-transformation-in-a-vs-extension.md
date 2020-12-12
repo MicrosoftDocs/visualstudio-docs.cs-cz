@@ -1,5 +1,7 @@
 ---
 title: Volání transformací textu v rozšíření VS
+description: Přečtěte si, jak můžete pomocí služby text šablonování transformovat textové šablony. Naučíte se také, jak získat službu STextTemplating a přetypovat ji na ITextTemplating.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ab846d1d7121d0c36c4187d937330d2ade52eb1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40e781e08bba5e01b5e453e4545b5dd19e5a4d16
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594588"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360868"
 ---
 # <a name="invoke-text-transformation-in-a-visual-studio-extension"></a>Vyvolání transformace textu v rozšíření sady Visual Studio
 

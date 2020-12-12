@@ -1,5 +1,7 @@
 ---
 title: Vložení diagramu do formuláře Windows
+description: Přečtěte si, jak můžete vložit diagram DSL do ovládacího prvku Windows, který se zobrazí v okně sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e81a5ff10cd6e309ffbf17e40ffbaa9ec88f185
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4338bfa824b511ee0be40516e1396a75901188a1
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547625"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361700"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>Vložení diagramu do formuláře Windows
 
@@ -141,7 +143,7 @@ Diagram DSL lze vložit do ovládacího prvku systému Windows, který se zobraz
 
      Všimněte si, že seznam obsahuje seznam prvků v modelu a že je správný po přidání nebo odstranění a po vrácení a opakování.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Zápis kódu pro úpravu jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)

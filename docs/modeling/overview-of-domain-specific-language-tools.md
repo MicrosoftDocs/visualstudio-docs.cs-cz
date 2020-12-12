@@ -1,5 +1,7 @@
 ---
 title: Přehled Jazykových nástrojů specifických pro doménu
+description: Přečtěte si, jak vám nástroje DSL umožňují navrhovat jazyk specifický pro doménu a pak vygenerovat všechno, co uživatelé musí mít, aby mohli vytvářet modely založené na jazyce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -9,15 +11,15 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d9f2446aa793fcd80c3c6786bf1b2002a7ccbc0
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e88a6157e5c9db7914ac6f7470d793be11dfdfc8
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808074"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362025"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>Přehled Jazykových nástrojů specifických pro doménu
-Nástroje DSL (nástroje DSL), které jsou hostovány v aplikaci Visual Studio, vám umožní navrhnout jazyk specifický pro doménu a potom vygenerovat vše, co uživatelé musí mít, aby mohli vytvářet modely založené na jazyce.
+Domain-Specific jazykové nástroje (nástroje DSL), které jsou hostované v aplikaci Visual Studio, vám umožní navrhnout jazyk specifický pro doménu a potom vygenerovat vše, co uživatelé musí mít, aby mohli vytvářet modely založené na jazyce.
 
  V nástrojích DSL jsou k dispozici následující nástroje:
 
@@ -30,7 +32,7 @@ Nástroje DSL (nástroje DSL), které jsou hostovány v aplikaci Visual Studio, 
 - Generátor kódu, který přebírá definici jazyka specifického pro doménu jako vstup a vytváří jako výstup zdrojový kód.
 
 ## <a name="the-dsl-tools-solution"></a>Řešení DSL Tools
- Průvodce návrhářem specifickým pro doménu poskytuje následující šablony řešení:
+ Průvodce návrhářem Domain-Specific poskytuje následující šablony řešení:
 
 - Tok úkolu
 
@@ -46,7 +48,7 @@ Nástroje DSL (nástroje DSL), které jsou hostovány v aplikaci Visual Studio, 
 
 - Knihovna DSL
 
-  Další informace najdete v tématu [Výběr šablony řešení jazyka specifického pro doménu](../modeling/choosing-a-domain-specific-language-solution-template.md).
+  Další informace najdete v tématu [Výběr šablony řešení Domain-Specific jazyka](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
   Průvodce vytvoří řešení sady Visual Studio, které obsahuje následující projekty:
 
@@ -62,9 +64,9 @@ Nástroje DSL (nástroje DSL), které jsou hostovány v aplikaci Visual Studio, 
  Pomocí grafického rozhraní nástrojů DSL můžete přidat prvky a vztahy do jazyka specifického pro doménu. Po přidání prvků můžete jejich vzhled definovat tak, že je namapujete na tvary, upravíte barvy a přidáte dekoratéry. Můžete také přidat prvky do sady nástrojů.
 
 ## <a name="validation-in-dsl-tools"></a>Ověřování v nástrojích DSL
- DSL poskytuje jednu úroveň ověřování, aby se zajistilo, že model domény splňuje základní požadavky pro generování kódu. Při vytváření vlastního jazyka specifického pro doménu byste obvykle přidali vlastní ověřování, abyste mohli vyjádřit pravidla obchodní logiky. Další informace o vlastním ověřování najdete v tématu [ověření v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md).
+ DSL poskytuje jednu úroveň ověřování, aby se zajistilo, že model domény splňuje základní požadavky pro generování kódu. Při vytváření vlastního jazyka specifického pro doménu byste obvykle přidali vlastní ověřování, abyste mohli vyjádřit pravidla obchodní logiky. Další informace o vlastním ověřování najdete v tématu [ověřování v Domain-Specificm jazyce](../modeling/validation-in-a-domain-specific-language.md).
 
- Doporučujeme, abyste při navrhování často ověřili jazyk specifický pro doménu. Pokud váš jazyk specifický pro doménu obsahuje chyby ověřování, nemůžete vytvořit zdrojový kód. Proces generování zdrojového kódu ze šablon se provádí kliknutím na možnost **transformovat všechny šablony** na panelu nástrojů Průzkumník řešení. Kdykoli upravíte definici jazyka, nezapomeňte také **transformovat všechny šablony**. Další informace najdete v tématu [Postup: vytvoření řešení jazyka specifického pro doménu](../modeling/how-to-create-a-domain-specific-language-solution.md).
+ Doporučujeme, abyste při navrhování často ověřili jazyk specifický pro doménu. Pokud váš jazyk specifický pro doménu obsahuje chyby ověřování, nemůžete vytvořit zdrojový kód. Proces generování zdrojového kódu ze šablon se provádí kliknutím na možnost **transformovat všechny šablony** na panelu nástrojů Průzkumník řešení. Kdykoli upravíte definici jazyka, nezapomeňte také **transformovat všechny šablony**. Další informace najdete v tématu [Postup: vytvoření řešení Domain-Specific jazyka](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
 ## <a name="customization-of-dsl-tools"></a>Přizpůsobení nástrojů DSL
  Můžete zadat další kód pro upřesnění chování modelu a definování omezení pro váš jazyk. V případě potřeby můžete provádět významné změny úpravou textových šablon.
@@ -72,9 +74,9 @@ Nástroje DSL (nástroje DSL), které jsou hostovány v aplikaci Visual Studio, 
 ## <a name="distributing-your-dsl-solution"></a>Distribuce řešení DSL
  Nástroje DSL vygenerují balíček hostovaný v aplikaci Visual Studio. Balíček zobrazí sadu nástrojů, Průzkumníka DSL a další prvky uživatelského rozhraní, které uživatelům umožňují vytvářet modely pomocí jazyka specifického pro doménu.
 
- Při sestavování a spouštění řešení DSL v aplikaci Visual Studio se v druhé instanci sady Visual Studio zobrazí informace o tom, jak váš jazyk specifický pro doménu vypadá uživateli tohoto jazyka. Jakmile ověříte, že vše funguje správně, můžete distribuovat `.vsix` soubor, který se nachází ve složce Build projektu DslPackage. Tento soubor se dá použít k instalaci DSL jako rozšíření sady Visual Studio v jiných počítačích.  Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
+ Při sestavování a spouštění řešení DSL v aplikaci Visual Studio se v druhé instanci sady Visual Studio zobrazí informace o tom, jak váš jazyk specifický pro doménu vypadá uživateli tohoto jazyka. Jakmile ověříte, že vše funguje správně, můžete distribuovat `.vsix` soubor, který se nachází ve složce Build projektu DslPackage. Tento soubor se dá použít k instalaci DSL jako rozšíření sady Visual Studio v jiných počítačích.  Další informace najdete v tématu [nasazení Domain-Specific jazykových řešení](msi-and-vsix-deployment-of-a-dsl.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Experimentální instance](../extensibility/the-experimental-instance.md)
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

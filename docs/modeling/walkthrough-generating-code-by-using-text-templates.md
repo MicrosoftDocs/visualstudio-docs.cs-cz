@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Vytvoření kódu pomocí textových šablon'
+description: Naučte se, že generování kódu vám umožní vytvářet kód programu, který je silného typu, a když se změní zdrojový model, lze ho snadno změnit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 181c1ccbeaff0aadee1b3d5ebd255b854b915277
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a39630f8a12ad2c1d7d2bc89f6830fc694e89087
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532057"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360985"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>Návod: Vytvoření kódu pomocí textových šablon
 
@@ -93,7 +95,7 @@ Tuto techniku můžete použít pro libovolný projekt kódu. Tento návod použ
 
 Soubor by měl být součástí projektu, aby jej šablona mohla číst, ale nebude integrován do kompilované aplikace.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt, klikněte na tlačítko **Přidat** a poté klikněte na položku **Nová položka**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt, klikněte na tlačítko **Přidat** a poté klikněte na položku **Nová položka**.
 
 2. V dialogovém okně **Přidat novou položku** vyberte v podokně **šablony** možnost **soubor XML** .
 
@@ -131,7 +133,7 @@ Komplexnější test může zkontrolovat výstup této testovací funkce proti z
 
 Přidejte textový soubor šablony a nastavte rozšíření Output na *. cs*.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt, klikněte na tlačítko **Přidat**a poté klikněte na položku **Nová položka**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt, klikněte na tlačítko **Přidat** a poté klikněte na položku **Nová položka**.
 
 2. V dialogovém okně **Přidat novou položku** vyberte v podokně **šablony** **text šablona** .
 
@@ -428,7 +430,7 @@ V tomto návodu je programový kód skutečně vygenerován z instance modelu, c
 
 Pokud jste viděli transformaci šablony nebo chyby kompilace v **Seznam chyb**, nebo pokud výstupní soubor nebyl vygenerován správně, můžete řešit problémy s textovou šablonou pomocí technik popsaných v tématu [generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 - [Tvorba textové šablony T4](../modeling/writing-a-t4-text-template.md)

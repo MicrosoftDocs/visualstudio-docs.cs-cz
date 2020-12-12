@@ -1,5 +1,7 @@
 ---
 title: Obslužná rutina změny hodnoty vlastnosti domény
+description: Přečtěte si o obslužných rutinách změny hodnot vlastnosti domény, které lze použít v jazyce specifickém pro doménu sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f23984d6c4723b020b361e1da30363442966ea7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 34f7dcf97498895f841f2a68fd3bc1abac224824
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594705"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361726"
 ---
 # <a name="domain-property-value-change-handlers"></a>Obslužné rutiny změny hodnoty vlastnosti domény
 
@@ -22,7 +24,7 @@ V jazyce specifickém pro doménu sady Visual Studio se při změně hodnoty vla
 
 ## <a name="override-the-property-handler-methods"></a>Přepsat metody obslužné rutiny vlastností
 
-Každá doménová vlastnost jazyka specifického pro doménu je zpracována třídou, která je vnořena do své nadřazené třídy domény. Jeho název následuje po formátu *PropertyName*PropertyHandler. Tuto třídu obslužné rutiny vlastnosti můžete zkontrolovat v souboru **Dsl\Generated Code\DomainClasses.cs**. Ve třídě `OnValueChanging()` je volána bezprostředně před změnou hodnoty a `OnValueChanged()` je volána bezprostředně po změně hodnoty.
+Každá doménová vlastnost jazyka specifického pro doménu je zpracována třídou, která je vnořena do své nadřazené třídy domény. Jeho název následuje po formátu *PropertyName* PropertyHandler. Tuto třídu obslužné rutiny vlastnosti můžete zkontrolovat v souboru **Dsl\Generated Code\DomainClasses.cs**. Ve třídě `OnValueChanging()` je volána bezprostředně před změnou hodnoty a `OnValueChanged()` je volána bezprostředně po změně hodnoty.
 
 Předpokládejme například, že máte doménovou třídu s názvem `Comment` , která má řetězcovou vlastnost domény s názvem `Text` a vlastnost Integer s názvem `TextLengthCount` . Chcete-li `TextLengthCount` , aby vždy obsahovala délku `Text` řetězce, mohli byste zapsat následující kód do samostatného souboru v projektu DSL:
 

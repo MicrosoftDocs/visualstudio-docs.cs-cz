@@ -1,5 +1,7 @@
 ---
 title: Obslužné rutiny události šíří změny mimo model
+description: Přečtěte si, že v sadě pro vizualizaci a modelování můžete definovat obslužné rutiny událostí úložiště pro rozšíření změn prostředků mimo úložiště.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76234eea6c689459728e0da876b6a9cce7c290a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b0780007361115aa485b91db70cc413029a6f8f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114603"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361674"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>Obslužné rutiny události šíří změny mimo model
 
@@ -184,7 +186,7 @@ Každý typ události odpovídá kolekci v úložišti. EventManagerDirectory. O
 |TransactionCommitted||
 |TransactionRolledBack||
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md)
 - [Vzorový kód: diagramy okruhů](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

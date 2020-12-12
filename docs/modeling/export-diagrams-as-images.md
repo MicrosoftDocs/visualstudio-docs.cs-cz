@@ -1,5 +1,7 @@
 ---
 title: Exportovat diagramy jako obrázky
+description: Naučte se, že diagramy modelování můžete ukládat ve formátech jen pro čtení, abyste je mohli sdílet s lidmi, kteří nepoužívají stejnou verzi sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e433e47d04a2beb1521aba65be664f7c7efd44f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 12e0036377ed5b67e092ff0cf4588acc39c23525
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547599"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361635"
 ---
 # <a name="export-diagrams-as-images"></a>Exportovat diagramy jako obrázky
 
@@ -36,11 +38,11 @@ Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, p�
 
 1. V nabídce **soubor** klikněte na tlačítko **Tisk** , čímž otevřete dialogové okno **Tisk** .
 
-2. V seznamu **název** vyberte **ZAPISOVAČ dokumentů Microsoft XPS**a pak klikněte na **OK**.
+2. V seznamu **název** vyberte **ZAPISOVAČ dokumentů Microsoft XPS** a pak klikněte na **OK**.
 
 3. V dialogovém okně **Uložit soubor jako** uložte soubor jako soubor **dokumentu XPS ( \* . XPS)** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)
 - [Sdílení modelů a export diagramů](../modeling/share-models-and-exporting-diagrams.md)

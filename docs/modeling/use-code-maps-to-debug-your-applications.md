@@ -1,5 +1,7 @@
 ---
 title: Použití map kódu k ladění aplikací
+description: Naučte se používat mapy kódu k tomu, abyste se vyhnuli ztrátě ve velkých základech kódu, neznámém kódu nebo starším kódu.
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e01857878f927c619529d3bbfc63728f84f0b81d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7af24dbbb510fb1d5c9c62b40d5986ea5c74d35b
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594107"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361648"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>Použití map kódu k ladění aplikací
 
@@ -140,7 +142,7 @@ Podrobnosti o příkazech a akcích, které můžete použít při práci s mapa
 
  Nyní jste hotovi s vaším šetřením. Úspěšně jste našli a opravili problém pomocí mapování kódu. Máte k dispozici také mapu, která usnadňuje navigaci v rámci kódu, zapamatuje si, co jste se naučili, a zobrazí kroky, které jste provedli v zájmu vyřešení problému.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Mapování metod v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
 - [Vizualizace kódu](../modeling/visualize-code.md)

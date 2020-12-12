@@ -1,5 +1,7 @@
 ---
 title: Modelování architektury aplikace &apos;
+description: Přečtěte si, jak můžete vytvořit modely v aplikaci Visual Studio jako součást popisu celkové struktury a chování softwarového systému nebo aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 449f528264f2101a45bc809a5002ce4e88659d05
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c284532a1e7f6407ebea987873665edb4e940019
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88711726"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361024"
 ---
 # <a name="model-your-app39s-architecture"></a>Modelování architektury aplikace&#39;s
 Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují potřebám vašich uživatelů, můžete vytvořit modely v aplikaci Visual Studio jako součást popisu celkové struktury a chování softwarového systému nebo aplikace. Pomocí modelů můžete také popsat vzory používané v celém návrhu. Tyto modely vám pomůžou pochopit stávající architekturu, diskutovat o změnách a jasně sdělit své záměry.
@@ -102,7 +104,7 @@ Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují pot�
 
 - Popis variací, které mohou vývojáři přijmout.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vizualizace kódu](../modeling/visualize-code.md)
 - [Modelování uživatelských požadavků](../modeling/model-user-requirements.md)

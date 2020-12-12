@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti vlastností domény
+description: Zjistěte, jak je doménová vlastnost funkcí prvku modelu, který může obsahovat hodnotu a jak jsou vlastnosti domény uvedeny v poli doménová třída v diagramu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,15 +11,15 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d5ecb87fa23dbf2705eb1df39e3e19e1b2bf578
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 97bfbcf73a950692d5736b7a6e0b529cfe658caa
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810012"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361518"
 ---
 # <a name="properties-of-domain-properties"></a>Vlastnosti vlastností domény
-*Doménová vlastnost* je funkcí prvku modelu, který může obsahovat hodnotu. Například `Person` doménová třída může mít vlastnosti `Name` a `BirthDate` . V definici DSL jsou vlastnosti domény uvedené v poli doménová třída v diagramu a v části doménová třída v Průzkumníku DSL. Další informace najdete v tématu [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md).
+*Doménová vlastnost* je funkcí prvku modelu, který může obsahovat hodnotu. Například `Person` doménová třída může mít vlastnosti `Name` a `BirthDate` . V definici DSL jsou vlastnosti domény uvedené v poli doménová třída v diagramu a v části doménová třída v Průzkumníku DSL. Další informace najdete v tématu [definování Domain-Specificho jazyka](../modeling/how-to-define-a-domain-specific-language.md).
 
 > [!NOTE]
 > Slovo "Property" obsahuje dva způsoby použití. *Doménová vlastnost* je funkce, kterou definujete pro doménovou třídu. Naproti tomu mnoho prvků DSL má *vlastnosti*, které jsou uvedeny v okně **vlastnosti** definice DSL. Například každá doménová vlastnost má sadu vlastností, které jsou popsány v tomto tématu.
@@ -30,7 +32,7 @@ ms.locfileid: "90810012"
 
 - Transakce zabraňují nekonzistentním stavům. Další informace naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-  Když vyberete doménovou vlastnost v diagramu nebo v Průzkumníku DSL, uvidíte v okno Vlastnosti následující položky. Další informace o tom, jak tyto položky použít, najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
+  Když vyberete doménovou vlastnost v diagramu nebo v Průzkumníku DSL, uvidíte v okno Vlastnosti následující položky. Další informace o tom, jak tyto položky použít, najdete v tématu [přizpůsobení a rozšíření Domain-Specificho jazyka](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 |Vlastnost|Popis|Výchozí hodnota|
 |-|-|-|
@@ -48,6 +50,6 @@ ms.locfileid: "90810012"
 |**Modifikátor přístupu metody setter**|Modifikátor přístupu pro metodu setter. Tento ovládací prvek určuje rozsah, ve kterém může kód programu nastavit vlastnost.|`public`|
 |**Typ**|Typ vlastnosti. Pokud chcete přidat seznam dostupných typů, klikněte pravým tlačítkem na kořen DSL v Průzkumníku DSL a pak klikněte na **Přidat externí typ**.|`String`|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

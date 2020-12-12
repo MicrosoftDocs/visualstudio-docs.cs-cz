@@ -1,5 +1,7 @@
 ---
 title: Čtení modelů a diagramů v jiných edicích sady Visual Studio
+description: Přečtěte si informace o čtení modelů a diagramech v aplikaci Visual Studio a také o chování jen pro čtení při použití verze sady Visual Studio, která nepodporuje vytváření modelů.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebe4cdcefb7b823090cca8976055de5a3ebb9b1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffbf39421f507338d14a6b05a667ec4301375067
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595407"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360686"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Čtení modelů a diagramů v jiných edicích sady Visual Studio
 
@@ -45,7 +47,7 @@ Chcete-li si přečíst Diagram závislostí, je minimální sada souborů, kter
 
 - Soubory balíčku pro každý balíček, na který se odkazuje v diagramu (**ModelDefinition\MyPackage.UML**)
 
-## <a name="changes-that-you-can-make-in-read-only-mode"></a>Změny, které lze provést v režimu jen pro čtení
+## <a name="changes-that-you-can-make-in-read-only-mode"></a>Změny, které lze provést v režimu Read-Only
 
 Pokud otevřete model a jeho diagramy ve verzi sady Visual Studio, která nepodporuje vytváření modelů, nelze model změnit. To znamená, že nemůžete změnit prvky a vztahy, které jsou zobrazeny v diagramech nebo v Průzkumníku modelů. V rozložení diagramů ale můžete udělat nějaké změny:
 
@@ -55,7 +57,7 @@ Pokud otevřete model a jeho diagramy ve verzi sady Visual Studio, která nepodp
 
 Tyto změny můžete uložit. Pokud chcete, aby se změny projevily ostatním uživatelům, musíte aspoň odeslat aktualizované soubory **. Layout** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)

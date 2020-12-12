@@ -1,5 +1,7 @@
 ---
 title: Použití modelů ve vývojových procesech
+description: Seznamte se s tím, že v aplikaci Visual Studio můžete použít model, který vám pomůže pochopit a změnit systém, aplikaci nebo komponentu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4a15a6cd0d38ca06b1a0ae25be69a24d42ba8cb
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: dbc817ca7bdf08c4e5ceee79a1e1113b4dd26e0c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "92298097"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361427"
 ---
 # <a name="use-models-in-your-development-process"></a>Použití modelů ve vývojových procesech
 
@@ -136,7 +138,7 @@ Různé druhy diagramů jsou užitečné pro popis návrhu na různých úrovní
 |**Blogy**|[Microsoft DevOps](https://devblogs.microsoft.com/devops/)|
 |**Technické články a deníky**|[Centrum architektury MSDN](/previous-versions/dn630665(v=msdn.10))<br /><br /> [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Používání modelů v agilním vývoji](/previous-versions/ff398061(v=vs.140))
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)

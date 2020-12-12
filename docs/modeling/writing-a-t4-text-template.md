@@ -1,5 +1,7 @@
 ---
 title: Tvorba textové šablony T4
+description: Přečtěte si o textových šablonách T4 a o tom, jak napsat textovou šablonu, která obsahuje direktivy, textové bloky a řídicí bloky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1990377bffe0c663a70520c07bd3ab60b91f8bbd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 086e7ecf568d043142cdc80f020897ed1793b86c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593483"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361219"
 ---
 # <a name="writing-a-t4-text-template"></a>Tvorba textové šablony T4
 Textová šablona obsahuje text, který z ní bude vygenerován. Například šablona, která vytvoří webovou stránku, bude obsahovat " \<html> ..." a všechny ostatní standardní části stránky HTML. Vložení do šablony jsou *řídicí bloky*, které jsou fragmenty kódu programu. Řídicí bloky poskytují různé hodnoty a umožňují, aby části textu byly podmíněné a opakované.
@@ -238,7 +240,7 @@ private void WriteSquareLine(int i)
 
  **Načte soubor jako naviguje model**. Výkonnější metodou je načíst data jako model, kterým kód textové šablony může procházet. Lze například načíst soubor XML a procházet jím pomocí výrazů XPath. Můžete také použít [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) k vytvoření sady tříd, pomocí které můžete číst data XML.
 
- **Upravte soubor modelu v diagramu nebo ve formuláři.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] poskytuje nástroje, které umožňují úpravu modelu jako diagramu nebo formuláře Windows. Můžete tak tento model snáze prodiskutovat s uživateli generované aplikace. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Vytvoří také sadu silně typované třídy, které odrážejí strukturu modelu. Další informace najdete v tématu [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md).
+ **Upravte soubor modelu v diagramu nebo ve formuláři.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] poskytuje nástroje, které umožňují úpravu modelu jako diagramu nebo formuláře Windows. Můžete tak tento model snáze prodiskutovat s uživateli generované aplikace. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Vytvoří také sadu silně typované třídy, které odrážejí strukturu modelu. Další informace naleznete v tématu [generování kódu z Domain-Specificho jazyka](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>Relativní cesty k souborům v návrhových šablonách
  V [textové šabloně návrhu](../modeling/design-time-code-generation-by-using-t4-text-templates.md), pokud chcete odkazovat na soubor v umístění relativní vzhledem k textové šabloně, použijte `this.Host.ResolvePath()` . Je také nutné nastavit hodnotu `hostspecific="true"` v direktivě `template`:
@@ -264,11 +266,11 @@ Lze také získat další služby, které jsou poskytovány tímto hostitelem. D
  (To není pravdivé pro [textovou šablonu běhu](../modeling/run-time-text-generation-with-t4-text-templates.md), která poskytuje kód kompilovaný spolu se zbytkem kódu.)
 
 ## <a name="editing-templates"></a>Úpravy šablon
- Speciální editory textových šablon lze stáhnout z online galerie správce rozšíření. V nabídce **nástroje** klikněte na **Správce rozšíření**. Klikněte na položku **Online galerie**a pak použijte nástroj pro hledání.
+ Speciální editory textových šablon lze stáhnout z online galerie správce rozšíření. V nabídce **nástroje** klikněte na **Správce rozšíření**. Klikněte na položku **Online galerie** a pak použijte nástroj pro hledání.
 
 ## <a name="related-topics"></a>Související témata
 
-|Úkol|Téma|
+|Úloha|Téma|
 |-|-|
 |Vytvoření šablony|[Pokyny pro zápis textových šablon T4](../modeling/guidelines-for-writing-t4-text-templates.md)|
 |Generování textu pomocí kódu programu|[Struktura textových šablon](../modeling/writing-a-t4-text-template.md)|

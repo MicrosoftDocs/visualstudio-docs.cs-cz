@@ -1,5 +1,7 @@
 ---
 title: Ověřování systému během vývoje
+description: Seznamte se s tím, jak Visual Studio vám může pomáhat udržet software v souladu s požadavky uživatelů a architekturou systému.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae2b7d81b1f166e6cc97debc3291661d59ee6960
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a803b2fb7eb7c682e29ae0d17698ef673927d751
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594029"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361401"
 ---
 # <a name="validate-your-system-during-development"></a>Ověřování systému během vývoje
 
@@ -38,7 +40,7 @@ K ověření softwaru použijte následující úlohy:
 |**Videa**|![odkaz na video ](../data-tools/media/playvideo.gif) [kanál 9: Doug 7: principy kódu a systémy s návrhem pomocí sady Visual Studio 2010](https://channel9.msdn.com/shows/VS2010Launch/Doug-Seven-Code-Understanding-and-Systems-Design-with-Visual-Studio-2010)<br /><br /> ![odkaz na video ](../data-tools/media/playvideo.gif) [kanál 9: architekt aplikace](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-5-architecting-an-application)|
 |**Fóra**|- [Nástroje pro vizualizaci sady Visual Studio & modelování](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Rozšiřitelnost sady Visual Studio](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Modelování uživatelských požadavků](../modeling/model-user-requirements.md)
 - [Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md)

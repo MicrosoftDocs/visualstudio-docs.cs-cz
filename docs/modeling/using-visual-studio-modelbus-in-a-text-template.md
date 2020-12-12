@@ -1,5 +1,6 @@
 ---
 title: Použití ModelBus v textové šabloně
+description: Naučte se řešit odkazy na cílové modely přístupu, pokud píšete šablony textu, které čtou model, který obsahuje Visual Studio ModelBus odkazy.
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +8,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22a6c9cb035637347ffd501b5cf3b1038cd09369
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1025e7d35c20dc18c87942e23cf71b598d85637a
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535938"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361362"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>Použití prvku Visual Studio ModelBus v textové šabloně
 
@@ -53,7 +54,7 @@ Chcete-li přeložit odkaz na ModelBus v textové šabloně, musí mít cílový
 
     2. Přejmenujte soubor projektu (například na **T4ModelBusAdapter. csproj**).
 
-    3. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení, přejděte na **Přidat**a pak klikněte na **existující projekt**. Vyhledejte nový projekt adaptéru **T4ModelBusAdapter. csproj**.
+    3. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel řešení, přejděte na **Přidat** a pak klikněte na **existující projekt**. Vyhledejte nový projekt adaptéru **T4ModelBusAdapter. csproj**.
 
     4. V každém `*.tt` souboru nového projektu změňte obor názvů.
 
@@ -181,7 +182,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
    Pokud nevidíte **možnost povolit ModelBus**, Stáhněte a nainstalujte rozšíření ModelBus VMSDK.
 
-3. V dialogovém okně **povolit ModelBus** vyberte možnost **zpřístupnit tuto DSL pro ModelBus**a pak klikněte na **OK**.
+3. V dialogovém okně **povolit ModelBus** vyberte možnost **zpřístupnit tuto DSL pro ModelBus** a pak klikněte na **OK**.
 
     `ModelBusAdapter`Do řešení se přidá nový projekt.
 
@@ -195,7 +196,7 @@ Nyní máte k dispozici DSL, ke které mají prostřednictvím šablony textu pr
 
     Přejmenujte soubor projektu *T4ModelBusAdapter. csproj*.
 
-2. V Průzkumník řešení přidejte T4ModelBusAdapter do řešení MBProvider. Klikněte pravým tlačítkem myši na uzel řešení, přejděte na **Přidat**a pak klikněte na **existující projekt**.
+2. V Průzkumník řešení přidejte T4ModelBusAdapter do řešení MBProvider. Klikněte pravým tlačítkem myši na uzel řešení, přejděte na **Přidat** a pak klikněte na **existující projekt**.
 
 3. Klikněte pravým tlačítkem na uzel projektu T4ModelBusAdapter a pak klikněte na vlastnosti. V okně Vlastnosti projektu změňte **název sestavení** a **výchozí obor názvů** na `Company.MBProvider.T4ModelBusAdapters` .
 
@@ -285,7 +286,7 @@ Nyní máte k dispozici DSL, ke které mají prostřednictvím šablony textu pr
 
 2. Přidejte kopii Sample. Poskytněte projektu **MBConsumer\Debugging** . To je nezbytné, protože odkaz ModelBus musí odkazovat na soubor ve stejném řešení.
 
-   1. Klikněte pravým tlačítkem na projekt ladění, přejděte na **Přidat**a pak klikněte na **existující položka**.
+   1. Klikněte pravým tlačítkem na projekt ladění, přejděte na **Přidat** a pak klikněte na **existující položka**.
 
    2. V dialogovém okně **Přidat položku** nastavte filtr na **všechny soubory ( \* . \* )**.
 
@@ -396,7 +397,7 @@ Nyní máte k dispozici DSL, ke které mají prostřednictvím šablony textu pr
 
     Pokud jste pro tento element nastavili MBR, otevře se odkazovaný model a je vybrán odkazový element.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Integrace modelů pomocí Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)
 - [Vytvoření kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)
