@@ -1,5 +1,7 @@
 ---
 title: Vytvoření kódu v době návrhu pomocí textových šablon T4
+description: Přečtěte si, jak textové šablony T4 v době návrhu umožňují generovat kód programu a další soubory v projektu sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -15,12 +17,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c392862f884fd8082b30cbb673aab116756fdfe
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 698dde24cb66d27a12a0f8785c8ac97e4cfb0eb0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426769"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363806"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>Vytvoření kódu v době návrhu pomocí textových šablon T4
 
@@ -29,19 +31,19 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
 Můžete mít například model definující pracovní postup, a to buď jako tabulku, nebo jako diagram. Z modelu můžete vygenerovat software, který spouští pracovní postup. Když se změní požadavky vašich uživatelů, je snadné diskutovat o novém pracovním postupu s uživateli. Opětovné generování kódu z pracovního postupu je spolehlivější než ruční aktualizace kódu.
 
 > [!NOTE]
-> *Model* je zdroj dat, který popisuje konkrétní aspekt aplikace. Může to být libovolný formulář v jakémkoli typu souboru nebo databáze. Nemusí být v žádném konkrétním formuláři, jako je model UML nebo model jazyka specifického pro doménu. Typické modely jsou ve formě tabulek nebo souborů XML.
+> *Model* je zdroj dat, který popisuje konkrétní aspekt aplikace. Může to být libovolný formulář v jakémkoli typu souboru nebo databáze. Nemusí být v žádném konkrétním formuláři, jako je model UML nebo model Domain-Specificho jazyka. Typické modely jsou ve formě tabulek nebo souborů XML.
 
 Již jste obeznámeni s generováním kódu. Při definování prostředků v souboru **. resx** v řešení aplikace Visual Studio se automaticky generuje sada tříd a metod. Soubor prostředků je mnohem jednodušší a spolehlivější pro úpravu prostředků, než by bylo nutné v případě, že jste museli upravovat třídy a metody. Pomocí textových šablon můžete kód vytvořit stejným způsobem ze zdroje vlastního návrhu.
 
 Textová šablona obsahuje kombinaci textu, který chcete vygenerovat, a kód programu, který generuje proměnné části textu. Programový kód umožňuje opakovat nebo podmíněně vynechat části vygenerovaného textu. Generovaný text může být samotný programový kód, který bude tvořit součást vaší aplikace.
 
-## <a name="create-a-design-time-t4-text-template"></a>Vytvoření textové šablony T4 pro dobu návrhu
+## <a name="create-a-design-time-t4-text-template"></a>Vytvoření textové šablony Design-Time T4
 
 1. Vytvořte nový projekt sady Visual Studio nebo otevřete existující projekt.
 
 2. Přidejte textový soubor šablony do projektu a pojmenujte ho s příponou **. TT**.
 
-    Chcete-li to provést, v **Průzkumník řešení**v místní nabídce projektu vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** vyberte v prostředním podokně **textovou šablonu** .
+    Chcete-li to provést, v **Průzkumník řešení** v místní nabídce projektu vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** vyberte v prostředním podokně **textovou šablonu** .
 
     Všimněte si, že vlastnost **vlastního nástroje** souboru je **hodnotu TextTemplatingFileGenerator**.
 
@@ -64,7 +66,7 @@ Textová šablona obsahuje kombinaci textu, který chcete vygenerovat, a kód pr
 
     Může se zobrazit okno s **upozorněním zabezpečení** , které vás vyzve k potvrzení, že chcete šablonu spustit. Klikněte na **OK**.
 
-6. V **Průzkumník řešení**rozbalte uzel soubor šablony a vyhledejte soubor s příponou **. txt**. Soubor obsahuje text vygenerovaný ze šablony.
+6. V **Průzkumník řešení** rozbalte uzel soubor šablony a vyhledejte soubor s příponou **. txt**. Soubor obsahuje text vygenerovaný ze šablony.
 
    > [!NOTE]
    > Pokud je projekt Visual Basic projektu, musíte kliknout na **Zobrazit všechny soubory** , aby se zobrazil výstupní soubor.
@@ -79,7 +81,7 @@ Spustí se šablona, která generuje soubor dceřiné společnosti v některém 
 
 - V nabídce **sestavení** klikněte na **transformovat všechny šablony** . Tím dojde k transformaci všech šablon v řešení sady Visual Studio.
 
-- V **Průzkumník řešení**v místní nabídce libovolného souboru vyberte možnost **Spustit vlastní nástroj**. Tuto metodu použijte, chcete-li transformovat vybranou podmnožinu šablon.
+- V **Průzkumník řešení** v místní nabídce libovolného souboru vyberte možnost **Spustit vlastní nástroj**. Tuto metodu použijte, chcete-li transformovat vybranou podmnožinu šablon.
 
 Můžete také nastavit projekt sady Visual Studio tak, aby byly šablony spouštěny při změně datových souborů, které čtou. Další informace naleznete v tématu [Automatické generování kódu](#Regenerating).
 
@@ -119,7 +121,7 @@ Textové šablony umožňují použít kód programu k odlišení obsahu generov
 
    Pokud píšete kód generování v nástroji [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] , `template` direktiva by měla obsahovat `language="VB"` . `"C#"` je výchozí možnost.
 
-## <a name="debugging-a-design-time-t4-text-template"></a>Ladění šablony textu T4 v době návrhu
+## <a name="debugging-a-design-time-t4-text-template"></a>Ladění textové šablony Design-Time T4
 
 Ladění textové šablony:
 
@@ -221,7 +223,7 @@ Pro přístup k souboru modelu nebo databázi může váš kód šablony použí
 
 `assembly`Direktiva zpřístupní zadané sestavení kódu šablony stejným způsobem jako oddíl odkazy projektu sady Visual Studio. Nemusíte zahrnovat odkaz na System.dll, na který se odkazuje automaticky. `import`Direktiva umožňuje používat typy bez použití jejich plně kvalifikovaných názvů stejným způsobem jako `using` direktiva v běžném programovém souboru.
 
-Například po importu **System.IO**můžete napsat:
+Například po importu **System.IO** můžete napsat:
 
 ```csharp
 
@@ -388,6 +390,6 @@ Přečtěte si [pokyny pro psaní textových šablon T4](../modeling/guidelines-
 |Transformujte data ve formě jazyka specifického pro doménu.|[Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)|
 |Zapište procesory direktiv pro transformaci vašich vlastních zdrojů dat.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Pokyny pro zápis textových šablon T4](../modeling/guidelines-for-writing-t4-text-templates.md)

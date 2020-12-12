@@ -1,5 +1,7 @@
 ---
 title: Vytváření vlastních procesorů pro direktivy textových šablon T4
+description: Přečtěte si o procesu transformace textové šablony a o tom, jak vytvořit vlastní procesor směrnice textové šablony T4.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c70aa1853701ef671b7057ad698a0fb63334a1ca
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 283f2122c05a91a5e677293f59e3f6e02d43f63a
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597175"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363420"
 ---
 # <a name="create-custom-t4-text-template-directive-processors"></a>Vytváření vlastních procesorů pro direktivy textových šablon T4
 
@@ -64,7 +66,7 @@ Po všech voláních ProcessDirective () modul šablonování vyvolá tyto metod
 
 - Další informace najdete v tématu [Návod: Vytvoření vlastního procesoru direktiv](../modeling/walkthrough-creating-a-custom-directive-processor.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Nasazení vlastního procesoru direktiv](../modeling/deploying-a-custom-directive-processor.md) vysvětluje, jak zaregistrovat vlastní procesor direktiv.
 - [Návod: Vytvoření vlastního procesoru direktiv](../modeling/walkthrough-creating-a-custom-directive-processor.md) popisuje, jak vytvořit vlastní procesor direktiv, jak registrovat a testovat procesor direktiv a jak zformátovat výstupní soubor jako HTML.

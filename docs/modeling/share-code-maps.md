@@ -1,5 +1,7 @@
 ---
 title: Export a uložení map kódu
+description: Přečtěte si, jak můžete ukládat mapy kódu jako součást projektu sady Visual Studio, jako obrázek nebo jako soubor ve formátu XPS.
+ms.custom: SEO-VS-2020
 ms.date: 05/16/2018
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef7f72010623d20e79a327877a512f0b7352bac5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9898b720e51c2750b67054d1f095200372f426da
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542568"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363767"
 ---
 # <a name="share-code-maps"></a>Sdílení map kódu
 
@@ -24,7 +26,7 @@ Uložte mapu pomocí nabídky **soubor** .
 
 -nebo-
 
-Chcete-li uložit mapu jako součást konkrétního projektu, na panelu nástrojů mapa zvolte **položku sdílet**  >  **přesunout \<CodeMapName> . dgml do**a pak zvolte projekt, na který chcete mapu Uložit.
+Chcete-li uložit mapu jako součást konkrétního projektu, na panelu nástrojů mapa zvolte **položku sdílet**  >  **přesunout \<CodeMapName> . dgml do** a pak zvolte projekt, na který chcete mapu Uložit.
 
 ![Přesunout mapu do jiného projektu](../modeling/media/codemapsmovemapmenu.png)
 
@@ -57,6 +59,6 @@ Pokud exportujete mapu kódu jako soubor XPS, můžete ji zobrazit v prohlíže�
 
 3. Pojmenujte mapu kódu. Ujistěte se, že je pole **Uložit jako typ** nastaveno na **soubory XPS ( \* . XPS)**. Klikněte na tlačítko **Uložit**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Mapování závislostí pomocí map kódu](../modeling/map-dependencies-across-your-solutions.md)

@@ -1,5 +1,7 @@
 ---
 title: Proces transformace textových šablon
+description: Přečtěte si, že proces transformace textové šablony převezme soubor textové šablony jako vstup a vygeneruje nový textový soubor jako výstup.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d6cca9a4a98c4afcffa8322acb75a4cef8a7527
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f0caadfe9abf38b2d83995da7efa32d618b4bfe0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565861"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362649"
 ---
 # <a name="the-text-template-transformation-process"></a>Proces transformace textových šablon
 Proces transformace textové šablony převede soubor textové šablony jako vstup a vygeneruje nový textový soubor jako výstup. Můžete například použít šablony textu k vygenerování Visual Basic nebo kódu jazyka C# nebo můžete vygenerovat sestavu jazyka HTML.
@@ -28,8 +30,8 @@ Proces transformace textové šablony převede soubor textové šablony jako vst
 |Komponenta|Popis|Přizpůsobitelné (ano/ne)|
 |-|-|-|
 |Modul|Komponenta Engine řídí proces transformace textové šablony.|Ne.|
-|Hostitel|Hostitel je rozhraní mezi modulem a uživatelským prostředím. Visual Studio je hostitelem procesu transformace textu.|Yes. Můžete napsat vlastního hostitele.|
-|Procesory direktiv|Procesory direktiv jsou třídy, které zpracovávají direktivy v textových šablonách. Direktivy můžete použít k poskytnutí dat pro textovou šablonu ze vstupního zdroje.|Yes. Můžete psát vlastní procesory direktiv.|
+|Hostitel|Hostitel je rozhraní mezi modulem a uživatelským prostředím. Visual Studio je hostitelem procesu transformace textu.|Ano. Můžete napsat vlastního hostitele.|
+|Procesory direktiv|Procesory direktiv jsou třídy, které zpracovávají direktivy v textových šablonách. Direktivy můžete použít k poskytnutí dat pro textovou šablonu ze vstupního zdroje.|Ano. Můžete psát vlastní procesory direktiv.|
 
 ## <a name="the-engine"></a>Modul
  Modul obdrží šablonu jako řetězec z hostitele, který zpracovává všechny soubory, které jsou používány v procesu transformace. Modul pak vyzve hostitele k vyhledání jakýchkoli vlastních procesorů směrnice a dalších aspektů prostředí. Modul pak zkompiluje a spustí generovanou transformační třídu. Modul vrátí vygenerovaný text na hostitele, který obvykle ukládá text do souboru.

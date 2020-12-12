@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení textových a obrazových polí
+description: Přečtěte si o přizpůsobení textových a obrázkových souborů. Naučíte se také, že při definování dekoratér textu v obrazci je reprezentace TextField.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29210ec667bffd6b632bcfbee0b87c0cbb2d5f38
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6effda90580a184bb8ebfb8c4f4830dc6cb844d5
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542711"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362855"
 ---
 # <a name="customizing-text-and-image-fields"></a>Přizpůsobení textových a obrazových polí
 Při definování dekoratér textu v obrazci, je reprezentována TextField. Příklady inicializace TextField a dalších ShapeFields naleznete v Dsl\GeneratedCode\Shapes.cs v řešení DSL.
@@ -261,7 +263,7 @@ partial class ExampleShape
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Definování obrazců a konektorů](../modeling/defining-shapes-and-connectors.md)
 - [Nastavení obrázku pozadí v diagramu](../modeling/setting-a-background-image-on-a-diagram.md)

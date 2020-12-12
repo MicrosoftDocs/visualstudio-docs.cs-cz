@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Vytváření řešení jazyka specifického pro doménu'
+description: Naučte se vytvořit jazyk specifický pro doménu (DSL) pomocí specializovaného řešení sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c47b16bbb9fe5eb352171e6e1cf4c13890890265
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c913f3015c56f7872dfe5ef3471578de7075b7d0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "92298654"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363273"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Postupy: Vytváření řešení jazyka specifického pro doménu
 Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řešení sady Visual Studio.
@@ -89,7 +91,7 @@ Zadejte novou příponu souboru.
 
      \- ani
 
-- Resetovat experimentální instanci sady Visual Studio. Tím zrušíte registraci všech dříve vytvořených DSL. V nabídce **Start** klikněte na **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje**a pak **na experimentální instanci Microsoft Visual Studio 2010 obnovte**. Můžete znovu sestavit jakýkoli jiný DSL, který chcete znovu použít.
+- Resetovat experimentální instanci sady Visual Studio. Tím zrušíte registraci všech dříve vytvořených DSL. V nabídce **Start** klikněte na **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje** a pak **na experimentální instanci Microsoft Visual Studio 2010 obnovte**. Můžete znovu sestavit jakýkoli jiný DSL, který chcete znovu použít.
 
      \- ani
 
@@ -116,7 +118,7 @@ Tento název se použije jako název složený z názvu vaší společnosti a pr
 
  Další informace o silných názvech naleznete v tématu [vytváření a používání Strong-Namedch sestavení](/dotnet/standard/assembly/create-use-strong-named).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

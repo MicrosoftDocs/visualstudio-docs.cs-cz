@@ -1,5 +1,7 @@
 ---
 title: Strukturujte svá řešení modelování
+description: Naučte se schéma modelování pro rozdělení aplikace do různých částí, které odpovídají vrstvám v rámci celkového diagramu vrstev.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc4eba7dc4d185cbd8eb4f1b073fce8b0c9fb07e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d2f865cf66da0bb4496a3d754a49d1f4dcc70ff
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545038"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363728"
 ---
 # <a name="structure-your-modeling-solution"></a>Strukturujte svá řešení modelování
 
@@ -52,7 +54,7 @@ Ve středních nebo rozsáhlých projektech je struktura týmu založena na stru
 
    Nyní máte model pro každou vrstvu a model pro architekturu aplikace. Každý model je obsažen ve vlastním řešení. Díky tomu mohou členové týmu pracovat na vrstvách současně.
 
-2. Do řešení architektury přidejte projekt modelování jednotlivých řešení vrstev. Provedete to tak, že otevřete řešení architektury. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení, přejděte na Přidat a pak klikněte na **existující projekt**. V jednom řešení vrstvy přejděte do projektu modelování (. modelproj).
+2. Do řešení architektury přidejte projekt modelování jednotlivých řešení vrstev. Provedete to tak, že otevřete řešení architektury. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel řešení, přejděte na Přidat a pak klikněte na **existující projekt**. V jednom řešení vrstvy přejděte do projektu modelování (. modelproj).
 
    Každý model je teď viditelný ve dvou řešeních: jeho "domovské" řešení a řešení architektury.
 
@@ -72,9 +74,9 @@ Ve středních nebo rozsáhlých projektech je struktura týmu založena na stru
 
 #### <a name="use-a-separate-package-for-each-layer"></a>Použít samostatný balíček pro každou vrstvu
 
-1. V řešení pro každou vrstvu přidejte projekt modelování architektury. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení, přejděte na **Přidat**a pak klikněte na **existující projekt**. K jednomu projektu modelování se teď dá dostat z každého Řešení: projekt architektury a vývojový projekt pro každou vrstvu.
+1. V řešení pro každou vrstvu přidejte projekt modelování architektury. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel řešení, přejděte na **Přidat** a pak klikněte na **existující projekt**. K jednomu projektu modelování se teď dá dostat z každého Řešení: projekt architektury a vývojový projekt pro každou vrstvu.
 
-2. Ve sdíleném modelu vytvořte balíček pro každou vrstvu: v **Průzkumník řešení**vyberte projekt modelování. V **Průzkumníku modelů UML**klikněte pravým tlačítkem na kořenový uzel modelu, přejděte na **Přidat**a pak klikněte na **balíček**.
+2. Ve sdíleném modelu vytvořte balíček pro každou vrstvu: v **Průzkumník řešení** vyberte projekt modelování. V **Průzkumníku modelů UML** klikněte pravým tlačítkem na kořenový uzel modelu, přejděte na **Přidat** a pak klikněte na **balíček**.
 
    Každý balíček bude obsahovat diagramy, které popisují požadavky a návrh odpovídající vrstvy.
 
@@ -106,7 +108,7 @@ Například pokud často používáte řešení, která mají prezentační, obc
 
 [Uspořádání a Správa modelů](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)
 - [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)

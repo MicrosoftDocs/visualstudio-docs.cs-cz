@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání příkazu do místní nabídky'
+description: Přečtěte si, jak můžete přidat příkazy nabídky do jazyka DSL (Domain-Specific Language), aby uživatelé mohli provádět úlohy, které jsou specifické pro vaši DSL.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6aac779a3c165d10262c078ff431731d9d248f3a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7dc51de28162471262d8c4bd35ddd09bc156896e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545714"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363338"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Postupy: Přidání příkazu do místní nabídky
 
@@ -57,7 +59,7 @@ Použijte metodu v tomto tématu, pokud:
 
 ### <a name="to-add-the-command"></a>Přidání příkazu
 
-1. V **Průzkumník řešení**v projektu **DslPackage** otevřete příkazy Commands. vsct.
+1. V **Průzkumník řešení** v projektu **DslPackage** otevřete příkazy Commands. vsct.
 
 2. V `Commands` elementu definujte jedno nebo více tlačítek a skupinu. *Tlačítko* je položka v nabídce. *Skupina* je oddílem v nabídce. Chcete-li definovat tyto položky, přidejte následující prvky:
 
@@ -135,7 +137,7 @@ Použijte metodu v tomto tématu, pokud:
 
 ### <a name="to-update-the-packagett-file"></a>Aktualizace souboru Package.tt
 
-1. V **Průzkumník řešení**v projektu **DslPackage** ve složce **GeneratedCode** otevřete soubor Package.tt.
+1. V **Průzkumník řešení** v projektu **DslPackage** ve složce **GeneratedCode** otevřete soubor Package.tt.
 
 2. Vyhledejte `ProvideMenuResource` atribut.
 
@@ -157,7 +159,7 @@ Třída sady příkazů je odvozena z <xref:Microsoft.VisualStudio.Modeling.Shel
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. V **DslPackage**vytvořte složku s názvem **vlastní kód**. V této složce vytvořte nový soubor třídy s názvem `CommandSet.cs` .
+2. V **DslPackage** vytvořte složku s názvem **vlastní kód**. V této složce vytvořte nový soubor třídy s názvem `CommandSet.cs` .
 
 3. V novém souboru zapište částečnou deklaraci, která má stejný obor názvů a název jako vygenerovaná částečná třída. Příklad:
 
@@ -333,7 +335,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 **Příkaz se nezobrazuje v nabídce:**
 
-- Příkaz se zobrazí pouze v instancích ladění sady Visual Studio, dokud nenainstalujete balíček DSL. Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
+- Příkaz se zobrazí pouze v instancích ladění sady Visual Studio, dokud nenainstalujete balíček DSL. Další informace najdete v tématu [nasazení Domain-Specific jazykových řešení](msi-and-vsix-deployment-of-a-dsl.md).
 
 - Ujistěte se, že experimentální ukázka má pro tuto DSL správnou příponu názvu souboru. Chcete-li ověřit příponu názvu souboru, Otevřete DslDefinition. DSL v hlavní instanci aplikace Visual Studio. Pak v Průzkumníku DSL klikněte pravým tlačítkem myši na uzel editoru a pak klikněte na vlastnosti. V okno Vlastnosti Projděte vlastnost přípona.
 
@@ -357,7 +359,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 - Ujistěte se, že jste odinstalovali starší verze balíčku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)
 - [Postupy: Úprava příkazu standardní nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)

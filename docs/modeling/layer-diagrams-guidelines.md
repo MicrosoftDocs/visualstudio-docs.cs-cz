@@ -1,5 +1,7 @@
 ---
 title: 'Diagramy závislostí: Pokyny'
+description: Naučte se popsat architekturu vaší aplikace na vysoké úrovni tím, že vytvoříte diagramy závislosti v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f8ec90d045259cd5d10533db6096154376d48fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5bfef2f9397fbe8dfeceaa8789cf8d118315b26d
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594627"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363962"
 ---
 # <a name="dependency-diagrams-guidelines"></a>Diagramy závislostí: pokyny
 
@@ -90,7 +92,7 @@ Přečtěte si:
 Závislost existuje všude, kde artefakt, který je spojen s jednou vrstvou, odkazuje na artefakt, který je přidružen k jiné vrstvě. Třída v jedné vrstvě například deklaruje proměnnou, která má třídu v jiné vrstvě. Stávající závislosti můžete zjistit zpětnou metodologií.
 
 > [!NOTE]
-> Pro určité druhy artefaktů nelze provádět zpětnou analýzu žádných závislostí. Zpětnou analýzou například nebudou získány žádné závislosti z vrstvy nebo do ní, když je propojena s textovým souborem. Chcete-li zjistit, které artefakty mají závislosti, které je možné zpětně analyzovat, klikněte pravým tlačítkem myši na jednu nebo více vrstev a potom klikněte na možnost **Zobrazit odkazy**. V **Průzkumníku vrstev**Projděte sloupec **Podpora ověřování** . Pro artefakty, pro které tento sloupec zobrazuje **hodnotu false**, nebude možné provádět zpětnou analýzu závislostí.
+> Pro určité druhy artefaktů nelze provádět zpětnou analýzu žádných závislostí. Zpětnou analýzou například nebudou získány žádné závislosti z vrstvy nebo do ní, když je propojena s textovým souborem. Chcete-li zjistit, které artefakty mají závislosti, které je možné zpětně analyzovat, klikněte pravým tlačítkem myši na jednu nebo více vrstev a potom klikněte na možnost **Zobrazit odkazy**. V **Průzkumníku vrstev** Projděte sloupec **Podpora ověřování** . Pro artefakty, pro které tento sloupec zobrazuje **hodnotu false**, nebude možné provádět zpětnou analýzu závislostí.
 
 ### <a name="to-reverse-engineer-existing-dependencies-between-layers"></a>Zpětná analýza existujících závislostí mezi vrstvami
 
@@ -102,7 +104,7 @@ Obvykle se zobrazí nějaké závislosti, které by neměly existovat. Tyto záv
 
 Chcete-li popsat změny, které plánujete udělat v systému nebo zamýšlené architektuře, použijte následující postup pro úpravu diagramu závislostí. Můžete také zvážit provedení některých změn refaktoringu pro zlepšení struktury kódu před jeho rozšířením. Viz [vylepšení struktury kódu](#Improving).
 
-|**Záměr**|**Proveďte tyto kroky**|
+|**Schopn**|**Proveďte tyto kroky**|
 |-|-|
 |Odstranit závislost, která neexistuje|Klikněte na závislost a potom stiskněte **Delete**.|
 |Změna nebo omezení směru závislosti|Nastavte vlastnost **Direction** .|
@@ -172,7 +174,7 @@ Během procesu vývoje můžete chtít potlačit některé vykázané konflikty 
 
 Chcete-li zajistit, aby budoucí změny v kódu odpovídaly diagramům závislostí, zahrňte ověřování vrstvy do procesu standardního sestavení vašeho řešení. Kdykoli ostatní členové týmu sestaví řešení, všechny rozdíly mezi závislostmi v kódu a diagramem závislostí budou hlášeny jako chyby sestavení. Další informace o tom, jak zahrnout ověřování vrstev v procesu sestavení, naleznete v tématu [ověření kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)
 - [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)

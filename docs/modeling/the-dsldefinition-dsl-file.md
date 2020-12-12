@@ -1,5 +1,7 @@
 ---
 title: Soubor DslDefinition.dsl
+description: Seznamte se se strukturou souboru DslDefinition. DSL v projektu DSL v řešení DSL nástrojů DSL, které definuje jazyk specifický pro doménu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 893f39149a9000f3672c5b3043551bcbd53e6b87
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c5db379447f39ed3d0c2b82aee23c1ac94aad34d
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808952"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362779"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>Soubor DslDefinition.dsl
 
@@ -22,7 +24,7 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 
 Obecně platí, že pomocí *Návrháře jazyka specifického pro doménu* upravíte soubor DslDefinition. DSL. Nezpracovaný formulář je ale XML a v editoru XML můžete otevřít soubor DslDefinition. DSL. Může být užitečné pochopit, jaké informace soubor obsahuje, a jak je uspořádán pro účely ladění a rozšíření.
 
-Příklady v tomto tématu jsou pořízeny ze šablony řešení diagramu komponent. Chcete-li zobrazit příklad, vytvořte řešení jazyka specifického pro doménu, které je založeno na šabloně řešení modelů komponent. Po vytvoření řešení se soubor DslDefinition. DSL zobrazí v návrháři jazyka specifického pro doménu. Zavřete soubor, klikněte na něj pravým tlačítkem **Průzkumník řešení**, přejděte na **otevřít**v, klikněte na **Editor XML**a pak klikněte na **OK**.
+Příklady v tomto tématu jsou pořízeny ze šablony řešení diagramu komponent. Chcete-li zobrazit příklad, vytvořte řešení jazyka specifického pro doménu, které je založeno na šabloně řešení modelů komponent. Po vytvoření řešení se soubor DslDefinition. DSL zobrazí v návrháři jazyka Domain-Specific. Zavřete soubor, klikněte na něj pravým tlačítkem **Průzkumník řešení**, přejděte na **otevřít** v, klikněte na **Editor XML** a pak klikněte na **OK**.
 
 ## <a name="sections-of-the-dsldefinitiondsl-file"></a>Části souboru DslDefinition. DSL
 
@@ -166,7 +168,7 @@ Každá třída má sadu vlastností a může mít základní třídu. V příkl
 
 Každá doménová třída (včetně vztahů, tvarů, konektorů a diagramů) může mít tyto atributy a podřízené uzly:
 
-- **ID.** Tento atribut je identifikátor GUID. Pokud v souboru nezadáte hodnotu, vytvoří návrhář jazyka specifického pro doménu hodnotu. (Na obrázcích v tomto dokumentu je tento atribut obvykle vynechán pro ukládání prostoru.)
+- **ID.** Tento atribut je identifikátor GUID. Pokud nezadáte hodnotu v souboru, Návrhář Domain-Specificho jazyka vytvoří hodnotu. (Na obrázcích v tomto dokumentu je tento atribut obvykle vynechán pro ukládání prostoru.)
 
 - **Název a obor názvů.** Tyto atributy určují název a obor názvů třídy ve vygenerovaném kódu. Dohromady musí být jedinečné v rámci jazyka specifického pro doménu.
 
@@ -267,7 +269,7 @@ Kromě atributů a podřízených uzlů, které jsou k dispozici pro všechny t�
 
 ## <a name="designer-and-toolbox-tabs"></a>Karty návrháře a panelu nástrojů
 
-Hlavní část oddílu **Návrháře** souboru DslDefinition. DSL je **karta panelu nástrojů** prvky. Jeden Návrhář může mít několik z těchto elementů, z nichž každý představuje oddíl s přístavou v **sadě nástrojů**vygenerovaných prvků návrháře. Každý element **karta panelu nástrojů** může obsahovat jeden nebo více **Nástroj elementu** prvků, **ConnectionTool** elementy nebo obojí.
+Hlavní část oddílu **Návrháře** souboru DslDefinition. DSL je **karta panelu nástrojů** prvky. Jeden Návrhář může mít několik z těchto elementů, z nichž každý představuje oddíl s přístavou v **sadě nástrojů** vygenerovaných prvků návrháře. Každý element **karta panelu nástrojů** může obsahovat jeden nebo více **Nástroj elementu** prvků, **ConnectionTool** elementy nebo obojí.
 
 Nástroje elementu můžou vytvářet instance konkrétní doménové třídy. Když uživatel přetáhne nástroj elementu do diagramu, výsledek je určen pomocí direktiv sloučení elementů, jak je popsáno v části o direktivách sloučení elementů dále v tomto tématu.
 
@@ -296,7 +298,7 @@ V tomto příkladu je InPort podtřídou třídy ComponentPort a má ComponentHa
 Při psaní v jazyce C# proti tomuto modelu můžete přejít přes propojení v jednom kroku pomocí vlastnosti, kterou vztah generuje na každé ze tříd, které se týkají:
 
 ```
-     InPort port; ...  Component c = port.Component;
+     InPort port; ...  Component c = port.Component;
 ```
 
 V syntaxi cesty ale musíte explicitně provést oba segmenty směrování. Z důvodu tohoto požadavku můžete snadněji získat přístup k mezilehlému odkazu. Následující kód dokončí směrování z odkazu na součást:
@@ -474,13 +476,13 @@ Pokud je atribut **OmitElement** nastaven na hodnotu true, název role vztahu je
      <targets> ...
 ```
 
-### <a name="serialization-of-a-domain-specific-language-definition"></a>Serializace definice jazyka specifického pro doménu
+### <a name="serialization-of-a-domain-specific-language-definition"></a>Serializace definice Domain-Specific jazyka
 
 Soubor DslDefinition. DSL je sám serializovaným souborem a odpovídá definici jazyka specifického pro doménu. Níže jsou uvedeny některé příklady definic serializace XML:
 
 - **DSL** je uzel kořenovou třídu a třída diagramu. Doménová třída, doménový vztah a další elementy jsou vloženy do `Dsl` .
 
-- **Třídy** jsou **RoleElementName** relace mezi jazykem specifickým pro doménu a doménová třída.
+- **Třídy** jsou **RoleElementName** vztahu mezi Domain-Specific jazyk a doménová třída.
 
 ```xml
 <Dsl Name="CmptDsl5" ...>
@@ -577,7 +579,7 @@ Mapa minimálního konektoru odkazuje na spojnici a vztah:
 
 Mapy konektorů můžou také obsahovat mapy dekoratér.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)

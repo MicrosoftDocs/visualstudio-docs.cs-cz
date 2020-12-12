@@ -1,5 +1,7 @@
 ---
 title: Pokyny pro tvorbu textových šablon T4
+description: Seznamte se s obecnými pokyny, které jsou užitečné, pokud generujete kód programu nebo jiné prostředky aplikace v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,18 +9,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24c8afd5e34d4957dac3d9f4d5b0e4409ad20895
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f5f7be4ce9b8beb7699844397de3e1fc206d017c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596538"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363403"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>Pokyny pro tvorbu textových šablon T4
 
 Tyto obecné pokyny mohou být užitečné, pokud generujete kód programu nebo jiné prostředky aplikace v aplikaci Visual Studio. Nejedná se o pevná pravidla.
 
-## <a name="guidelines-for-design-time-t4-templates"></a>Pokyny pro šablony T4 v době návrhu
+## <a name="guidelines-for-design-time-t4-templates"></a>Pokyny pro Design-Time šablon T4
 
 Šablony T4 v době návrhu jsou šablony, které generují kód v projektu sady Visual Studio v době návrhu. Další informace najdete v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
@@ -91,7 +93,7 @@ MyProject
    AnotherClass.cs
 ```
 
-## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>Pokyny pro šablony s podporou procesu run-time (předzpracované) T4
+## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>Pokyny pro Run-Time (předzpracované) šablony T4
 
 Přesuňte společný materiál do děděných šablon.
 
@@ -169,7 +171,7 @@ U některých druhů obchodních požadavků ale je důležité objasnit složit
 
 Můžete také navrhnout vlastní typ diagramu jako jazyk specifický pro doménu (DSL). Kód lze vygenerovat z UML i z DSL. Další informace najdete v tématu [Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 - [Generování textu za běhu pomocí textových šablon T4](../modeling/run-time-text-generation-with-t4-text-templates.md)

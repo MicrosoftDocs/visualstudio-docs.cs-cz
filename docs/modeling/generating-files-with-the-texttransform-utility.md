@@ -1,5 +1,7 @@
 ---
 title: Generování souborů pomocí nástroje TextTransform
+description: Přečtěte si, jak je nástroj TextTransform nástrojem příkazového řádku, který můžete použít k transformaci textové šablony.
+ms.custom: SEO-VS-2020
 ms.date: 07/26/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ec659bfee9253dfb198c2747e1b5d7fb6b78f2b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d849439f3c7b8af310f1f82fc0af8f086139d12b
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596551"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363910"
 ---
 # <a name="generate-files-with-the-texttransform-utility"></a>Generování souborů pomocí nástroje TextTransform
 
@@ -81,7 +83,7 @@ TextTransform [<options>] <templateName>
 
 ## <a name="related-topics"></a>Související témata
 
-|Úkol|Téma|
+|Úloha|Téma|
 |-|-|
 |Generování souborů v řešení sady Visual Studio.|[Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
 |Zapište procesory direktiv pro transformaci vašich vlastních zdrojů dat.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|

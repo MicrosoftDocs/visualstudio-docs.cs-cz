@@ -1,5 +1,7 @@
 ---
 title: Nastavení obrázku pozadí v diagramu
+description: Přečtěte si, že v sadě Visual Studio vizualizace and modeling SDK můžete nastavit obrázek pozadí pro vygenerovaný Návrhář pomocí vlastního kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7701bf0ba1467b481f6da64d3c2e229be77a7fe7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f99ce329d4b88037901db2336076bb1d12d411f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542581"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363780"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Nastavení obrázku pozadí v diagramu
 V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obrázek pozadí pro vygenerovaný Návrhář pomocí vlastního kódu.
@@ -23,7 +25,7 @@ V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obr�
 
 1. Zkopírujte soubor obrázku, který chcete použít jako pozadí diagramu, do adresáře Dsl\Resources pro aktuální projekt.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku Dsl\Resources, přejděte na **Přidat**a pak klikněte na **existující položka**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na složku Dsl\Resources, přejděte na **Přidat** a pak klikněte na **existující položka**.
 
 3. V dialogovém okně **Přidat existující položku** přejděte do složky Dsl\Resources.
 
@@ -45,11 +47,11 @@ V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obr�
 
 12. V okně **vlastnosti** nastavte `Custom Tool` vlastnost na hodnotu `ResXFileCodeGenerator` .
 
-13. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt DSL, přejděte na **Přidat**a klikněte na **Nová složka**.
+13. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt DSL, přejděte na **Přidat** a klikněte na **Nová složka**.
 
 14. Pojmenujte složku **Custom**.
 
-15. Klikněte pravým tlačítkem myši na vlastní složku, přejděte na **Přidat**a klikněte na **Nová položka**.
+15. Klikněte pravým tlačítkem myši na vlastní složku, přejděte na **Přidat** a klikněte na **Nová položka**.
 
 16. V dialogovém okně **Přidat novou položku** v seznamu **šablony** klikněte na **soubor kódu**.
 
@@ -100,7 +102,7 @@ V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obr�
 
      Další informace o přizpůsobení modelu pomocí programového kódu naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Definování obrazců a konektorů](../modeling/defining-shapes-and-connectors.md)
 - [Přizpůsobení textových a obrazových polí](../modeling/customizing-text-and-image-fields.md)

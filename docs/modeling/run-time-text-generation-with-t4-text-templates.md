@@ -1,5 +1,7 @@
 ---
 title: Generování textu za běhu pomocí textových šablon T4
+description: Naučte se, jak můžete v aplikaci generovat textové řetězce v době běhu pomocí textových šablon Visual Studio runtime.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 344e15b69bf3e8308c62c6fa1074720b0cd7618d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fcb7048b4319d1edb46911a74e96f440540e4299
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520832"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363936"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>Generování textu za běhu pomocí textových šablon T4
 
@@ -49,7 +51,7 @@ Všimněte si, že šablona je stránka HTML, ve které byly proměnné částí
 
 Použití šablony ve vaší aplikaci usnadňuje zobrazení konečné formy výstupu, než by bylo možné v, například dlouhé řady příkazů zápisu. Provádění změn ve formě výstupu je jednodušší a spolehlivější.
 
-## <a name="creating-a-run-time-text-template-in-any-application"></a>Vytvoření textové šablony Run-time v libovolné aplikaci
+## <a name="creating-a-run-time-text-template-in-any-application"></a>Vytvoření textové šablony Run-Time v libovolné aplikaci
 
 ### <a name="to-create-a-run-time-text-template"></a>Vytvoření textové šablony Run-Time
 
@@ -74,7 +76,7 @@ Použití šablony ve vaší aplikaci usnadňuje zobrazení konečné formy výs
     <#@ import namespace="System.Collections.Generic" #>
     ```
 
-## <a name="converting-an-existing-file-to-a-run-time-template"></a>Převod existujícího souboru na šablonu run-time
+## <a name="converting-an-existing-file-to-a-run-time-template"></a>Převod existujícího souboru na šablonu Run-Time
 
 Dobrým způsobem, jak vytvořit šablonu, je převést existující příklad výstupu. Například pokud vaše aplikace bude generovat soubory HTML, můžete začít vytvořením prostého souboru HTML. Přesvědčte se, zda správně funguje a zda je jeho vzhled správný. Pak ji zahrňte do projektu sady Visual Studio a převeďte ji na šablonu.
 
@@ -191,7 +193,7 @@ partial class MyWebPage
     public MyWebPage(MyData data) { this.m_data = data; }}
 ```
 
-V souboru šablony **MyWebPage.TT**můžete napsat:
+V souboru šablony **MyWebPage.TT** můžete napsat:
 
 ```html
 <h2>Sales figures</h2>
@@ -294,7 +296,7 @@ Zahrnutý obsah může obsahovat libovolnou kombinaci programového kódu a pros
 
 Direktiva include se dá použít kdekoli v textu souboru šablony nebo zahrnutého souboru.
 
-### <a name="inheritance-between-run-time-text-templates"></a>Dědičnost mezi textovými šablonami run-time
+### <a name="inheritance-between-run-time-text-templates"></a>Dědičnost mezi Run-Time textovými šablonami
 
 Můžete sdílet obsah mezi šablonami za běhu, a to tak, že zapíšete šablonu základní třídy, která může být abstraktní. Použijte `inherits` parametr `<@#template#>` direktivy pro odkazování na jinou třídu šablony modulu runtime.
 
@@ -433,7 +435,7 @@ End material for DerivedTemplate1.
 
 Šablony modulu runtime lze použít v libovolné aplikaci, kde jsou šablony a jejich obsah určeny v době kompilace. Pokud ale chcete napsat rozšíření sady Visual Studio, které generuje text ze šablon, které se mění v době běhu, přečtěte si téma [vyvolání transformace textu v rozšíření vs](../modeling/invoking-text-transformation-in-a-vs-extension.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytvoření kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)
 - [Tvorba textové šablony T4](../modeling/writing-a-t4-text-template.md)

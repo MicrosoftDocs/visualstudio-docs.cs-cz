@@ -1,5 +1,7 @@
 ---
 title: Řízení viditelnosti ikony či dekorátoru
+description: Zjistěte, jak můžete řídit viditelnost ikony nebo dekoratér v závislosti na stavu vlastností v modelu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,24 +9,24 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d2082f7e26d3e335ed88bbced0f59d6d6c4780c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdf97cc10543f066665506d3e238386dc39f0d4f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546639"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363494"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Řízení viditelnosti ikony či dekorátoru
 *Dekoratér* je ikona nebo řádek textu, který se zobrazí na obrazci v jazyce specifickém pro doménu (DSL). Dekoratér se může zobrazit a zmizí v závislosti na stavu vlastností v modelu. Například na tvaru, který představuje osobu, můžete mít různé ikony, které se zobrazí v závislosti na pohlaví osoby, počtu podřízených objektů atd.
 
 ## <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Řízení viditelnosti ikony nebo dekoratér
- Následující postup předpokládá, že jste již definovali tvar a jeho mapování na doménovou třídu. Další informace najdete v tématu [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md).
+ Následující postup předpokládá, že jste již definovali tvar a jeho mapování na doménovou třídu. Další informace najdete v tématu [definování Domain-Specificho jazyka](../modeling/how-to-define-a-domain-specific-language.md).
 
 #### <a name="to-control-the-visibility-of-an-icon-or-text-decorator"></a>Řízení viditelnosti ikony nebo textu dekoratér
 
 1. V diagramu definice DSL přidejte do třídy Shape ikony nebo text dekoratéry, které chcete zobrazit.
 
-   1. Klikněte pravým tlačítkem myši na třídu Shape, přejděte na **Přidat**a pak klikněte na požadovaný typ dekoratér.
+   1. Klikněte pravým tlačítkem myši na třídu Shape, přejděte na **Přidat** a pak klikněte na požadovaný typ dekoratér.
 
    2. Nastavte vlastnost **pozice** dekoratér. Stejné umístění může mít víc než jeden dekoratér. Můžete mít například ikony pro pylové a ženy sdílející stejné pozice.
 
@@ -74,9 +76,9 @@ ms.locfileid: "85546639"
 
     2. Zaškrtněte pole **Filtr viditelnosti** .
 
-    3. V poli **vlastnost filtru**vyberte vlastnost ovládacího prvku **DecoratorControl**.
+    3. V poli **vlastnost filtru** vyberte vlastnost ovládacího prvku **DecoratorControl**.
 
-    4. V části **položky viditelnosti**zadejte `True` .
+    4. V části **položky viditelnosti** zadejte `True` .
 
 3. Na panelu nástrojů **Průzkumník řešení** klikněte na **transformovat všechny šablony** .
 
@@ -103,7 +105,7 @@ ms.locfileid: "85546639"
 
 8. Znovu sestavte a spusťte řešení.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Definování obrazců a konektorů](../modeling/defining-shapes-and-connectors.md)
 - [Nastavení obrázku pozadí v diagramu](../modeling/setting-a-background-image-on-a-diagram.md)

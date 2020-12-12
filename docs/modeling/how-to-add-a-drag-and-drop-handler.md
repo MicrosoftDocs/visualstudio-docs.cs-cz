@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Přidání obslužné rutiny operace přetažení myší'
+description: Přečtěte si, jak můžete přidat obslužné rutiny pro události přetažení na DSL, aby uživatelé mohli přetahovat položky do diagramu z jiných diagramů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9272a530eaa15f902a2e295aeaa6d8b34c4eccdd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 337fd73dbe46a97b6f154dfba1714ede834f1e69
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545662"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363325"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>Postupy: Přidání obslužné rutiny operace přetažení myší
 
@@ -405,7 +407,7 @@ namespace Company.CompartmentDrag  // EDIT.
 
  /// <summary>
  /// Override some methods of the compartment shape.
- /// *** GenerateDoubleDerived must be set for this shape in DslDefinition.dsl. ****
+ /// **_ GenerateDoubleDerived must be set for this shape in DslDefinition.dsl. _***
  /// </summary>
  public partial class ClassShape
  {
@@ -569,7 +571,7 @@ namespace Company.CompartmentDrag  // EDIT.
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md)
 - [Nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md)

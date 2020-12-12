@@ -1,5 +1,7 @@
 ---
 title: Aktualizace obrazců a konektorů k vyjádření modelu
+description: Seznamte se s tím, že v jazyce specifickém pro doménu v aplikaci Visual Studio můžete nastavit vzhled tvaru, který odráží stav podkladového modelu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83a43e8570ea65373b8cac0bd3e3e7a8dc1f5791
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3d16cbc35c468c0101db479799215bcccf64ef6
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115021"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362597"
 ---
 # <a name="update-shapes-and-connectors-to-reflect-the-model"></a>Aktualizace obrazců a konektorů k vyjádření modelu
 
@@ -27,11 +29,11 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
 ## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>Nastavení vlastností mapy obrazců pro řízení viditelnosti dekoratér
 
-Můžete ovládat viditelnost dekoratér bez psaní programového kódu tak, že nakonfigurujete mapování mezi obrazcem a doménovou třídou v definici DSL. Další informace najdete v tématu [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md).
+Můžete ovládat viditelnost dekoratér bez psaní programového kódu tak, že nakonfigurujete mapování mezi obrazcem a doménovou třídou v definici DSL. Další informace najdete v tématu [definování Domain-Specificho jazyka](../modeling/how-to-define-a-domain-specific-language.md).
 
 ## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>Vystavení barvy a stylu tvaru jako vlastností
 
-V definici DSL klikněte pravým tlačítkem myši na třídu Shape, přejděte na **Přidat vystavené**a potom klikněte na jednu z položek, jako je **Barva výplně**.
+V definici DSL klikněte pravým tlačítkem myši na třídu Shape, přejděte na **Přidat vystavené** a potom klikněte na jednu z položek, jako je **Barva výplně**.
 
 Tvar má nyní doménovou vlastnost, kterou můžete nastavit v programovém kódu nebo jako uživatel. Například pro nastavení v kódu programu příkazu nebo pravidla můžete napsat:
 

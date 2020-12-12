@@ -1,5 +1,7 @@
 ---
 title: Rozšíření vašeho DSL pomocí MEF
+description: Přečtěte si, jak můžete pomocí Managed Extensibility Framework (MEF) roztáhnout jazyk specifický pro doménu (DSL).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04d14b3b17953ef30620d9f616bb471b186e9c9f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20dc9b6ac1bd4e565fd10793889c611f9b039778
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547638"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363169"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>Rozšíření vašeho DSL pomocí MEF
 
@@ -95,7 +97,7 @@ Další informace o MEF naleznete v tématu [Managed Extensibility Framework (ME
     <#@ include file="Dsl\GestureExtensionController.tt" #>
     ```
 
-3. Do existujícího souboru s názvem **DslPackage\Commands.vsct**přidejte následující řádek:
+3. Do existujícího souboru s názvem **DslPackage\Commands.vsct** přidejte následující řádek:
 
     ```xml
     <Include href="MefExtension\CommandExtensionVSCT.vsct"/>
@@ -129,7 +131,7 @@ Máte-li přístup k DSL podporujícímu MEF, kterou vytvořila nebo někomu jin
 
    - Toto sestavení obvykle má název, který končí na ".Dsl.dll".
 
-   - Máte-li přístup k projektu DSL, můžete najít soubor sestavení v adresáři **DSL \\ \\ \* ** .
+   - Máte-li přístup k projektu DSL, můžete najít soubor sestavení v adresáři **DSL \\ bin \\ \** _
 
    - Máte-li přístup k souboru VSIX DSL, můžete najít sestavení změnou přípony názvu souboru VSIX na ". zip". Dekomprimuje soubor. zip.
 
@@ -145,23 +147,23 @@ Máte-li přístup k DSL podporujícímu MEF, kterou vytvořila nebo někomu jin
 
    - System.Windows.Forms.dll
 
-4. Vytvořte nový projekt **VSIX** projektu.
+4. Vytvořte nový _ *projekt VSIX** projekt.
 
-5. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt VSIX a vyberte **nastavit jako spouštěný projekt**.
+5. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt VSIX a vyberte **nastavit jako spouštěný projekt**.
 
 6. V novém projektu otevřete **source. extension. vsixmanifest**.
 
-7. Klikněte na **Přidat obsah**. V dialogovém okně nastavte **typ obsahu** na **součást MEF**a **zdrojový projekt** na projekt knihovny tříd.
+7. Klikněte na **Přidat obsah**. V dialogovém okně nastavte **typ obsahu** na **součást MEF** a **zdrojový projekt** na projekt knihovny tříd.
 
 8. Přidejte odkaz VSIX na DSL.
 
-   1. Ve **zdroji. extension. vsixmanifest**klikněte na **Přidat odkaz** .
+   1. Ve **zdroji. extension. vsixmanifest** klikněte na **Přidat odkaz** .
 
-   2. V dialogovém okně klikněte na **Přidat datovou část** a pak vyhledejte soubor VSIX pro DSL. Soubor VSIX je sestaven v řešení DSL v **DslPackage \\ bin \\ \* **.
+   2. V dialogovém okně klikněte na **Přidat datovou část** a pak vyhledejte soubor VSIX pro DSL. Soubor VSIX je sestaven v řešení DSL v **DslPackage \\ bin \\ \** _.
 
        To umožní uživatelům instalovat DSL a rozšíření ve stejnou dobu. Pokud uživatel už má nainstalovanou DSL, nainstaluje se jenom vaše rozšíření.
 
-9. Zkontrolujte a aktualizujte ostatní pole **source. extension. vsixmanifest**. Klikněte na **Vybrat edice** a ověřte, jestli jsou nastavené správné edice sady Visual Studio.
+9. Zkontrolujte a aktualizujte ostatní pole _ * source. extension. vsixmanifest * *. Klikněte na **Vybrat edice** a ověřte, jestli jsou nastavené správné edice sady Visual Studio.
 
 10. Přidejte kód do projektu knihovny tříd. Jako vodítko použijte příklady v následující části.
 
@@ -323,7 +325,7 @@ namespace MefExtension
 
 Metody ověřování jsou označeny `ValidationExtension` atributem, který je generován pomocí DSL a také pomocí <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> . Metoda se může objevit v jakékoli třídě, která není označená atributem.
 
-Další informace najdete v tématu [ověření v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md).
+Další informace najdete v tématu [ověřování v Domain-Specificm jazyce](../modeling/validation-in-a-domain-specific-language.md).
 
 ```csharp
 using Company.MyDsl;
@@ -372,7 +374,7 @@ namespace MefExtension
 } } } }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Odesílání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md)
 - [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)

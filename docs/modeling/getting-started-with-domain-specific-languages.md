@@ -1,5 +1,7 @@
 ---
 title: Začínáme s jazyky specifickými pro doménu
+description: Seznamte se se základními pojmy při definování a používání jazyka specifického pro doménu (DSL) vytvořeného pomocí sady Modeling SDK pro sadu Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a4761703610a87818cd1512f96530a0f865faf0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eaab198edae66fc334e854ae1f47dae313dce76b
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238540"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363481"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>Začínáme s jazyky specifickými pro doménu
 
@@ -23,7 +25,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 Pokud s DSL začínáte, doporučujeme vám pracovat přes **testovací prostředí nástrojů DSL**, které najdete na tomto webu: [vizualizace a sada SDK pro modelování](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
-## <a name="what-can-you-do-with-a-domain-specific-language"></a>K čemu slouží jazyk specifický pro doménu?
+## <a name="what-can-you-do-with-a-domain-specific-language"></a>Co se dá dělat s Domain-Specificm jazykem?
 
 Jazyk specifický pro doménu je notaci, obvykle grafický, který je navržený tak, aby se použil pro konkrétní účel. Naopak jazyky, jako je například UML, jsou obecné účely. V DSL můžete definovat typy prvku modelu a jejich vztahy a jak jsou uvedeny na obrazovce.
 
@@ -51,11 +53,11 @@ K definování DSL musíte mít nainstalované následující součásti:
 
 ## <a name="create-a-dsl-solution"></a>Vytvoření řešení DSL
 
-Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové řešení sady Visual Studio pomocí šablony projektu jazyka specifického pro doménu.
+Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové řešení sady Visual Studio pomocí šablony projektu Domain-Specific jazyka.
 
-1. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
+1. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na **projekt**.
 
-2. V části **typy projektů**rozbalte uzel **ostatní typy projektů** a klikněte na **rozšiřitelnost**.
+2. V části **typy projektů** rozbalte uzel **ostatní typy projektů** a klikněte na **rozšiřitelnost**.
 
 3. Klikněte na **Návrhář jazyka specifického pro doménu**.
 
@@ -75,7 +77,7 @@ Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové řešen
 
     - Vyberte rozšíření, které není přidruženo k žádné aplikaci ve vašem počítači, nebo na počítači, na který chcete nainstalovat DSL. Například soubory **DOCX** a **htm** by mohly být nepřijatelné přípony názvů souborů.
 
-    - Průvodce vás upozorní, pokud rozšíření, které jste zadali, je používáno jako DSL. Zvažte použití jiné přípony názvu souboru. Můžete také resetovat experimentální instanci sady Visual Studio SDK a vymazat starší experimentální návrháře. Klikněte na tlačítko **Start**, klikněte na položku **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje**a poté **resetujte experimentální instanci Microsoft Visual Studio 2010**.
+    - Průvodce vás upozorní, pokud rozšíření, které jste zadali, je používáno jako DSL. Zvažte použití jiné přípony názvu souboru. Můžete také resetovat experimentální instanci sady Visual Studio SDK a vymazat starší experimentální návrháře. Klikněte na tlačítko **Start**, klikněte na položku **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje** a poté **resetujte experimentální instanci Microsoft Visual Studio 2010**.
 
 7. Zkontrolujte ostatní stránky a pak klikněte na **Dokončit**.
 
@@ -88,7 +90,7 @@ Uživatelské rozhraní teď vypadá podobně jako na následujícím obrázku.
 
 ![Návrhář DSL](../modeling/media/dsl_designer.png)
 
-Toto řešení definuje jazyk specifický pro doménu. Další informace najdete v tématu [Přehled uživatelského rozhraní nástroje DSL](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md).
+Toto řešení definuje jazyk specifický pro doménu. Další informace najdete v tématu [Přehled uživatelského rozhraní nástroje Domain-Specific Language Tools](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md).
 
 ## <a name="the-important-parts-of-the-dsl-solution"></a>Důležité části řešení DSL
 
@@ -111,7 +113,7 @@ Všimněte si následujících aspektů nového řešení:
     > [!NOTE]
     > Pokaždé, když změníte *DslDefinition. DSL*, musíte před opětovným sestavením řešení kliknout na **transformovat všechny šablony** . Tento krok můžete automatizovat. Další informace najdete v tématu [Jak automatizovat transformaci všech šablon](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\)).
 
-2. Stiskněte klávesu **F5**nebo v nabídce **ladění** klikněte na **Spustit ladění**.
+2. Stiskněte klávesu **F5** nebo v nabídce **ladění** klikněte na **Spustit ladění**.
 
      DSL se vytvoří a nainstaluje v experimentální instanci sady Visual Studio.
 
@@ -121,7 +123,7 @@ Všimněte si následujících aspektů nového řešení:
 
      \- ani
 
-     Klikněte pravým tlačítkem na projekt ladění, přejděte na **Přidat**a pak klikněte na **položka**. V dialogovém okně **Přidat položku** vyberte typ souboru vaší DSL.
+     Klikněte pravým tlačítkem na projekt ladění, přejděte na **Přidat** a pak klikněte na **položka**. V dialogovém okně **Přidat položku** vyberte typ souboru vaší DSL.
 
      Soubor modelu se otevře jako prázdný diagram.
 
@@ -141,13 +143,13 @@ Experimentální Visual Studio bude vypadat jako v následujícím příkladu:
 
 ### <a name="the-content-of-a-model"></a>Obsah modelu
 
-Obsah souboru, který je instancí DSL, se nazývá *model*. Model obsahuje prvky *modelu* <em>elements</em> a *propojení* mezi prvky. Definice DSL určuje, které typy prvků modelu a odkazy mohou existovat v modelu. Například v DSL vytvořené ze šablony minimálního jazyka je jeden typ elementu modelu a jeden typ odkazu.
+Obsah souboru, který je instancí DSL, se nazývá *model*. Model obsahuje prvky *modelu* <em></em> a *propojení* mezi prvky. Definice DSL určuje, které typy prvků modelu a odkazy mohou existovat v modelu. Například v DSL vytvořené ze šablony minimálního jazyka je jeden typ elementu modelu a jeden typ odkazu.
 
 Definice DSL může určovat způsob, jakým se model zobrazuje v diagramu. Můžete vybírat z nejrůznějších stylů obrazců a konektorů. Můžete určit, že se některé obrazce zobrazí uvnitř jiných tvarů.
 
 Model můžete zobrazit jako strom v zobrazení **Průzkumníka** při úpravách modelu. Při přidávání tvarů do diagramu se prvky modelu zobrazí také v Průzkumníkovi. Průzkumník lze použít i v případě, že není k dispozici žádný diagram.
 
-Pokud Průzkumník nevidíte v instanci ladění aplikace Visual Studio, v nabídce **zobrazení** přejděte na položku **ostatní okna**a klikněte na příkaz *\<Your Language>* **Průzkumník**.
+Pokud Průzkumník nevidíte v instanci ladění aplikace Visual Studio, v nabídce **zobrazení** přejděte na položku **ostatní okna** a klikněte na příkaz *\<Your Language>* **Průzkumník**.
 
 ### <a name="the-api-of-your-dsl"></a>Rozhraní API vaší DSL
 
@@ -180,7 +182,7 @@ Do projektu můžete přidat libovolný počet souborů textových šablon. Kaž
 > [!NOTE]
 > Když změníte definici DSL, kód ukázkového textu šablony nebude fungovat, pokud ho neaktualizujete.
 
-Další informace naleznete v tématu [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md) a [psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md).
+Další informace naleznete v tématu [generování kódu z Domain-Specific jazyka](../modeling/generating-code-from-a-domain-specific-language.md) a [psaní kódu pro přizpůsobení Domain-Specificho jazyka](../modeling/writing-code-to-customise-a-domain-specific-language.md).
 
 ## <a name="customizing-the-dsl"></a>Přizpůsobení DSL
 
@@ -191,7 +193,7 @@ Pokud chcete upravit definici DSL, zavřete experimentální instanci a aktualiz
 
 Pro vaši DSL můžete využít širokou škálu rozšíření. Následující příklady vám poskytnou dojem o možnostech.
 
-Po každé změně uložte definici DSL, klikněte na **transformovat všechny šablony** v **Průzkumník řešení**a potom stisknutím klávesy **F5** Experimentujte s měněnou DSL.
+Po každé změně uložte definici DSL, klikněte na **transformovat všechny šablony** v **Průzkumník řešení** a potom stisknutím klávesy **F5** Experimentujte s měněnou DSL.
 
 ### <a name="rename-the-types-and-tools"></a>Přejmenování typů a nástrojů
 
@@ -199,7 +201,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
 #### <a name="to-rename-domain-classes-relationships-and-tools"></a>Přejmenování doménových tříd, relací a nástrojů
 
-1. V diagramu DslDefinition přejmenujte **ExampleModel** na **FamilyTreeModel**, **ExampleElement** na **Person**, **cílení** na **rodiče**a **zdroje** na **podřízené**. Pro změnu můžete kliknout na jednotlivé štítky.
+1. V diagramu DslDefinition přejmenujte **ExampleModel** na **FamilyTreeModel**, **ExampleElement** na **Person**, **cílení** na **rodiče** a **zdroje** na **podřízené**. Pro změnu můžete kliknout na jednotlivé štítky.
 
      ![Diagram definice DSL &#45; model struktury řady](../modeling/media/familyt_person.png)
 
@@ -246,7 +248,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
 1. Přidejte vlastnosti.
 
-   1. V diagramu definice DSL klikněte pravým tlačítkem na třídu doména **osoby** , přejděte na **Přidat**a pak klikněte na **vlastnost domény**.
+   1. V diagramu definice DSL klikněte pravým tlačítkem na třídu doména **osoby** , přejděte na **Přidat** a pak klikněte na **vlastnost domény**.
 
    2. Zadejte seznam nových názvů vlastností, jako je například **narození** a **úmrtí**. Po každém z nich stiskněte klávesu **ENTER** .
 
@@ -254,7 +256,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
    1. Sledujte šedý řádek, který se rozšíří od třídy doména osoby na druhou stranu diagramu. Toto je mapa prvku diagramu. Propojí doménovou třídu s třídou Shape.
 
-   2. Klikněte pravým tlačítkem na tuto třídu tvarů, přejděte na **Přidat**a pak klikněte na **text dekoratér**.
+   2. Klikněte pravým tlačítkem na tuto třídu tvarů, přejděte na **Přidat** a pak klikněte na **text dekoratér**.
 
    3. Přidejte dvě dekoratéry s názvy, jako je například **BirthDecorator** a **DeathDecorator**.
 
@@ -264,11 +266,11 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
 3. Namapujte dekoratéry na vlastnosti.
 
-   1. Otevřete okno Podrobnosti DSL. Obvykle je na kartě vedle okna výstup. Pokud ho nevidíte, přejděte v nabídce **zobrazení** na položku **ostatní okna**a klikněte na **Podrobnosti DSL**.
+   1. Otevřete okno Podrobnosti DSL. Obvykle je na kartě vedle okna výstup. Pokud ho nevidíte, přejděte v nabídce **zobrazení** na položku **ostatní okna** a klikněte na **Podrobnosti DSL**.
 
    2. V diagramu definice DSL klikněte na řádek, který spojuje třídu domény **osoby** s třídou Shape.
 
-   3. V části **Podrobnosti DSL**na kartě **mapy dekoratér** zaškrtněte políčko u nemapovaných dekoratér. V části **Zobrazovaná vlastnost**vyberte vlastnost domény, ke které se má mapovat. Namapujte například **BirthDecorator** na **narozeniny**.
+   3. V části **Podrobnosti DSL** na kartě **mapy dekoratér** zaškrtněte políčko u nemapovaných dekoratér. V části **Zobrazovaná vlastnost** vyberte vlastnost domény, ke které se má mapovat. Namapujte například **BirthDecorator** na **narozeniny**.
 
 4. Uložte DSL, klikněte na transformovat všechny šablony a stiskněte F5.
 
@@ -287,7 +289,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
 1. Přidejte doménovou třídu a nastavte ji jako podřízenou položku modelu kořene.
 
-    1. V diagramu definice DSL klikněte na nástroj pro **vložení vztahu** , klikněte na kořenovou třídu **FamilyTreeModel**a pak klikněte do prázdné části diagramu.
+    1. V diagramu definice DSL klikněte na nástroj pro **vložení vztahu** , klikněte na kořenovou třídu **FamilyTreeModel** a pak klikněte do prázdné části diagramu.
 
          Zobrazí se Nová doménová třída, která je připojena k FamilyTreeModel pomocí vztahu vložení.
 
@@ -331,7 +333,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
 6. Vytvořte nástroj elementu pro vytvoření nového města.
 
-    1. V **Průzkumníku DSL**rozbalte **Editor** a pak vyberte **karty nástrojů**.
+    1. V **Průzkumníku DSL** rozbalte **Editor** a pak vyberte **karty nástrojů**.
 
     2. Klikněte pravým tlačítkem *\<your DSL>* a potom klikněte na tlačítko **Přidat nový prvek nástroje**.
 
@@ -345,11 +347,11 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
     2. Nastavte vlastnost název nového nástroje.
 
-    3. Ve vlastnosti **tvůrci propojení** vyberte Tvůrce, který obsahuje název vztahu person-města.
+    3. Ve vlastnosti **tvůrci propojení** vyberte Tvůrce, který obsahuje název vztahu Person-Town.
 
     4. Nastavte **ikonu panelu nástrojů**.
 
-8. Uložte definici DSL, klikněte na **transformovat všechny šablony**a potom stiskněte klávesu **F5**.
+8. Uložte definici DSL, klikněte na **transformovat všechny šablony** a potom stiskněte klávesu **F5**.
 
 9. V experimentální instanci aplikace Visual Studio otevřete soubor testovacího modelu. Pomocí nových nástrojů můžete vytvářet městy a propojení mezi městy a osobami. Všimněte si, že můžete vytvořit pouze propojení mezi správnými typy elementu.
 
@@ -378,10 +380,10 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
     ```
 
-     Když soubor *. TT uložíte, vytvoří se soubor dceřiné společnosti, který obsahuje seznam lidí a jejich pobytů. Další informace najdete v tématu [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md).
+     Když soubor *. TT uložíte, vytvoří se soubor dceřiné společnosti, který obsahuje seznam lidí a jejich pobytů. Další informace naleznete v tématu [generování kódu z Domain-Specificho jazyka](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ## <a name="validation-and-commands"></a>Ověřování a příkazy
- Tuto DSL můžete vyvinout dále přidáním omezení ověřování. Tato omezení jsou metody, které lze definovat, aby se zajistilo, že model je ve správném stavu. Můžete například definovat omezení, abyste se ujistili, že datum narození dítěte je pozdější než jeho nadřazené položky. Funkce ověřování zobrazí upozornění, pokud se uživatel DSL pokusí uložit model, který zruší některá omezení. Další informace najdete v tématu [ověření v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md).
+ Tuto DSL můžete vyvinout dále přidáním omezení ověřování. Tato omezení jsou metody, které lze definovat, aby se zajistilo, že model je ve správném stavu. Můžete například definovat omezení, abyste se ujistili, že datum narození dítěte je pozdější než jeho nadřazené položky. Funkce ověřování zobrazí upozornění, pokud se uživatel DSL pokusí uložit model, který zruší některá omezení. Další informace najdete v tématu [ověřování v Domain-Specificm jazyce](../modeling/validation-in-a-domain-specific-language.md).
 
  Můžete také definovat příkazy nabídky, které může uživatel vyvolat. Příkazy mohou model upravit. Mohou také komunikovat s jinými modely v aplikaci Visual Studio a s externími prostředky. Další informace naleznete v tématu [How to: Modify a Standard a Command nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
@@ -392,7 +394,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
  Stejný postup můžete použít k instalaci DSL na vlastní počítač, abyste nemuseli používat experimentální instanci sady Visual Studio.
 
- Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
+ Další informace najdete v tématu [nasazení Domain-Specific jazykových řešení](msi-and-vsix-deployment-of-a-dsl.md).
 
 ## <a name="removing-old-experimental-dsls"></a><a name="Reset"></a> Odebrání starých experimentálních DSL
  Pokud jste vytvořili experimentální DSL, které už nechcete, můžete je z počítače odebrat resetováním experimentální instance sady Visual Studio.
@@ -403,11 +405,11 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
 #### <a name="to-reset-the-visual-studio-experimental-instance"></a>Resetování experimentální instance sady Visual Studio
 
-1. Klikněte na tlačítko **Start**, klikněte na položku **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje**a poté **resetujte experimentální instanci Microsoft Visual Studio 2010**.
+1. Klikněte na tlačítko **Start**, klikněte na položku **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje** a poté **resetujte experimentální instanci Microsoft Visual Studio 2010**.
 
 2. Znovu sestavte všechna experimentální DSL nebo jiná experimentální rozšíření sady Visual Studio, která chcete dál používat.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md)
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)

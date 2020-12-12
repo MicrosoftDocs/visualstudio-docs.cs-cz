@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Otevření modelu ze souboru v kódu programu'
+description: Přečtěte si, že ModelBus poskytuje standardní mechanismus pro odkazování modelu nebo prvků v modelu a pro nalezení modelu, pokud byl přesunut.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19cec066d66b08d3f02f3885908722aad047172b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f854edc45724f0e1f3db5bda22cb6aa006d77e60
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532480"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363871"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Postupy: Otevření modelu ze souboru v kódu programu
 
@@ -26,14 +28,14 @@ Nastavte **cílovou architekturu** projektu aplikace na .NET Framework 4 nebo no
 
 1. Otevřete projekt aplikace Visual Studio pro aplikaci, ve které chcete číst model DSL.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak klikněte na **vlastnosti**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a pak klikněte na **vlastnosti**.
 
 3. V okně Vlastnosti projektu na kartě **aplikace** nastavte v poli **cílové rozhraní** **.NET Framework 4** (nebo novější).
 
 > [!NOTE]
 > Cílový rámec by neměl být **.NET Framework 4 profil klienta**.
 
-## <a name="references"></a>Odkazy
+## <a name="references"></a>Reference
 
 Přidejte tyto odkazy do projektu aplikace Visual Studio:
 
@@ -45,7 +47,7 @@ Přidejte tyto odkazy do projektu aplikace Visual Studio:
 
 ## <a name="important-classes-in-the-dsl"></a>Důležité třídy v DSL
 
-Předtím, než budete moct napsat kód, který čte vaši DSL, byste měli znát názvy některých tříd generovaných vaší DSL. V řešení DSL otevřete projekt **DSL** a podívejte se do složky **GeneratedCode** . Případně poklikejte na sestavení DSL v **odkazech**na projekt a otevřete obor názvů dsl v **Prohlížeč objektů**.
+Předtím, než budete moct napsat kód, který čte vaši DSL, byste měli znát názvy některých tříd generovaných vaší DSL. V řešení DSL otevřete projekt **DSL** a podívejte se do složky **GeneratedCode** . Případně poklikejte na sestavení DSL v **odkazech** na projekt a otevřete obor názvů dsl v **Prohlížeč objektů**.
 
 Jsou to třídy, které byste měli identifikovat:
 

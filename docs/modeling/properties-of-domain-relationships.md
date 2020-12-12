@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti vztahů domény
+description: Přečtěte si o vlastnostech přidružených k doméně relationshop, jako jsou modifikátory přístupu, vlastní atributy a generují Double odvozené.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,15 +11,15 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e432e9738009c84b6930b0363ae4048c925d0a6
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 88c5db50432947b99a2667280fe7861e7acd95ac
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809999"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362454"
 ---
 # <a name="properties-of-domain-relationships"></a>Vlastnosti vztahů domény
-Vlastnosti v následující tabulce jsou spojeny s doménovým vztahem. Informace o doménových relacích najdete v tématu [porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md). Další informace o tom, jak tyto vlastnosti používat, najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
+Vlastnosti v následující tabulce jsou spojeny s doménovým vztahem. Informace o doménových relacích najdete v tématu [porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md). Další informace o tom, jak tyto vlastnosti použít, najdete v tématu [přizpůsobení a rozšíření Domain-Specificho jazyka](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 |Vlastnost|Popis|Výchozí|
 |-|-|-|
@@ -36,6 +38,6 @@ Vlastnosti v následující tabulce jsou spojeny s doménovým vztahem. Informac
 |Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři doménového vztahu.|\<none>|
 |Klíčové slovo Help|Volitelné klíčové slovo, které se používá k indexování Nápověda F1 pro doménový vztah.|\<none>|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

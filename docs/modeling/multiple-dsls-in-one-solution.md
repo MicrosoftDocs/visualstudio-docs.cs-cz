@@ -1,5 +1,7 @@
 ---
 title: Vícesouborové DSL v jediném řešení
+description: Přečtěte si, jak můžete zabalit několik jazyků specifických pro doménu (DSL) jako součást jednoho řešení, aby se nainstalovaly dohromady.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2eef29db24da3be0a9376ea76a9a1a551af9e1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1fbadc93f6245427284ea10c1cdd7cf99c5a7f68
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542594"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363089"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>Vícesouborové DSL v jediném řešení
 
@@ -32,7 +34,7 @@ K integraci více DSL můžete použít několik postupů. Další informace nal
 
    - Změňte názvy projektů **DSL** a **DslPackage** tak, aby se všechny lišily. Například: `Dsl1` , `DslPackage1` , `Dsl2` , `DslPackage2` .
 
-   - V každém **DslPackage \* \ source.extension.TT**aktualizujte tento řádek na správný název projektu DSL:
+   - V každém **DslPackage \* \ source.extension.TT** aktualizujte tento řádek na správný název projektu DSL:
 
       `string dslProjectName = "Dsl2";`
 
@@ -54,7 +56,7 @@ K integraci více DSL můžete použít několik postupů. Další informace nal
 
    Výsledný VSIX bude instalovat obě DSL. Můžete je otestovat pomocí F5 nebo nasadit _YourVsixProject_**\bin\debug \\ \* . vsix**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Integrace modelů pomocí Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)
 - [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)

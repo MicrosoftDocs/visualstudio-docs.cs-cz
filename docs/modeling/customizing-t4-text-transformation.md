@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení transformace textu T4
+description: Přečtěte si, jak můžete roztáhnout výchozí proces transformace šablony přizpůsobením procesoru direktivy textové šablony nebo hostitele textových šablon.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e35c279f397f1228c17fb6a41a18a2fe583ab88
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b168e0e66b7704c3e78a241f76ee4122278c9ed
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589731"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362909"
 ---
 # <a name="customize-t4-text-transformation"></a>Přizpůsobení transformace textu T4
 
@@ -33,6 +35,6 @@ Textové šablony jsou funkcí sady Visual Studio, která umožňuje generovat k
 
  Pokud píšete rozšíření sady Visual Studio, zvažte použití existující služby transformace textu namísto psaní vlastního hostitele. Další informace najdete v tématu [vyvolání transformace textu v rozšíření vs](../modeling/invoking-text-transformation-in-a-vs-extension.md).
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
 
 - [Zápis textové šablony T4](../modeling/writing-a-t4-text-template.md) poskytuje syntaxi direktiv textových šablon a řídicích bloků.

@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení chování kopírování
+description: Přečtěte si, že v DSL vytvořené pomocí sady Visual Studio vizualizace and modeling SDK můžete změnit, co se stane, když uživatel zkopíruje a vloží prvky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b189d3dbd5c1872094b0c1be2a64eb2c02bf1e2e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8eee81440c0dda7f193d3e37eab700ada3ff259f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547339"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363104"
 ---
 # <a name="customizing-copy-behavior"></a>Přizpůsobení chování kopírování
 V sadě DSL (Domain-Specific Language) vytvořené pomocí sady Visual Studio vizualizace and modeling SDK můžete změnit, co se stane, když uživatel zkopíruje a vloží prvky.
@@ -552,7 +554,7 @@ namespace Company.MyDsl
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přizpůsobení vytvoření a přesunutí elementu](../modeling/customizing-element-creation-and-movement.md)
 - [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)

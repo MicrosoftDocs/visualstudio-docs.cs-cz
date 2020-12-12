@@ -1,5 +1,7 @@
 ---
 title: Podporovaná edice sady Visual Studio pro vizualizaci a modelování sady SDK
+description: Seznamte se s edicemi sady Visual Studio, které jsou podporované pomocí nástrojů DSL v prostředí pro tvorbu a nasazení.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 908a224feb9f6ad463ae14812b3a8550bf932e35
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 714b3d018e2522c9f6acf3b15ffec82a0b5d49ec
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "92298559"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363715"
 ---
 # <a name="supported-visual-studio-editions-for-visualization--modeling-sdk"></a>Verze Visual Studia podporované pro Visualization & Modeling SDK
 
@@ -48,6 +50,6 @@ K definování DSL musíte mít nainstalované následující součásti:
 > [!NOTE]
 > Aby bylo možné aktivovat DSL na produktovém prostředí, musíte v manifestu rozšíření nastavit pole **podporované edice vs Edition** . Další informace najdete v tématu [nasazení Domain-Specific jazykových řešení](msi-and-vsix-deployment-of-a-dsl.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

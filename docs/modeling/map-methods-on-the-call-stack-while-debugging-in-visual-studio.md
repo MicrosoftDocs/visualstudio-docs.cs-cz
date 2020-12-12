@@ -1,5 +1,7 @@
 ---
 title: Mapování metod v zásobníku volání při ladění
+description: Naučte se vytvořit mapu kódu pro vizuální trasování zásobníku volání během ladění. Také se dozvíte, že můžete vytvořit poznámky k mapě, abyste mohli sledovat, co kód dělá.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -28,12 +30,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1638b16eea9bfa20962359f0b63a7415915d0fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b3d5c531400ddd88cea17b9172f19bf9711105d
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532701"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362428"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Mapování metod v zásobníku volání při ladění v sadě Visual Studio
 
@@ -200,7 +202,7 @@ Vytvořte mapu kódu pro vizuální trasování zásobníku volání při laděn
 
 - [Najít chyby pomocí mapy](#FindBugs)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 - [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)

@@ -1,5 +1,7 @@
 ---
 title: Sdílení tříd mezi DSL pomocí knihovny DSL
+description: Přečtěte si, že v sadě Visual Studio vizualizace a modelování sady SDK můžete vytvořit nekompletní definici DSL, kterou můžete importovat do jiné DSL.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 38496141d6fcdd33f3bf5185c3f50b1bf961d832
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e1685fe4fc7db6728ebc1ca6a12e27bb6f42589b
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542542"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363754"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>Sdílení tříd mezi DSL pomocí knihovny DSL
 V sadě Visual Studio vizualizace and modeling SDK můžete vytvořit nekompletní definici DSL, kterou můžete importovat do jiné DSL. To vám umožní zvážit společné části podobných modelů.
@@ -45,7 +47,7 @@ V sadě Visual Studio vizualizace and modeling SDK můžete vytvořit nekompletn
 
 #### <a name="to-import-a-dsl-library"></a>Import knihovny DSL
 
-1. V jiné definici DSL v **Průzkumníkovi DSL**klikněte pravým tlačítkem na kořenovou třídu DSL a pak klikněte na **Přidat nový DslLibrary import**.
+1. V jiné definici DSL v **Průzkumníkovi DSL** klikněte pravým tlačítkem na kořenovou třídu DSL a pak klikněte na **Přidat nový DslLibrary import**.
 
 2. V okno Vlastnosti nastavte **cestu k souboru** knihovny. Můžete použít buď relativní, nebo absolutní cestu.
 
@@ -61,7 +63,7 @@ V sadě Visual Studio vizualizace and modeling SDK můžete vytvořit nekompletn
 
    Knihovna DSL může importovat jiné knihovny. Při importu knihovny se její importy automaticky zobrazí také v Průzkumníku DSL.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
 

@@ -1,5 +1,7 @@
 ---
 title: Sdílení modelů a export diagramů
+description: Naučte se, jak můžete pomocí sady Visual Studio vytvářet a upravovat modely, diagramy závislostí a řízené grafy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2347ad9f01634fe7fee243a7d5e1a24a6d9ba3b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ecf972974ff2c84cb47cd93d944aced4758d1cb7
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591915"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363741"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>Sdílení modelů a export diagramů
 V aplikaci Visual Studio můžete sdílet modely a diagramy s kolegy několika způsoby.
@@ -49,6 +51,6 @@ V aplikaci Visual Studio můžete sdílet modely a diagramy s kolegy několika z
 |[Exportování diagramů jako obrázků](../modeling/export-diagrams-as-images.md)|Části diagramů můžete kopírovat do aplikací, jako je například PowerPoint nebo Word, nebo tisknout diagram do souboru XPS.|
 |[Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md)|Přehled modelů a diagramů.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)

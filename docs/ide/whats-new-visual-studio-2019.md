@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: de5027024956c03341ac3e2d851bf85430f48f18
-ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
+ms.openlocfilehash: 69fb3d8b5e8af13ec8781e65e60bd060ad69d365
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94878293"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362389"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -136,9 +136,9 @@ Další informace najdete v tématu [získání kódu: jak jsme navrhli nový Bl
 
 ### <a name="git-productivity"></a>Produktivita Git
 
-**Novinka v 16,8** Git je teď výchozím prostředím pro řízení verzí v aplikaci Visual Studio 2019. Sestavili jsme sadu funkcí a na ni jste na základě vašich názorů za poslední dvě verze zavedli iteraci. Nové prostředí je teď ve výchozím nastavení zapnuté pro všechny. Z nové nabídky Git můžete klonovat, vytvářet nebo otevírat úložiště. Pomocí integrovaných oken nástroje Git můžete zapsat a doručovat změny kódu, spravovat větve, udržovat aktuální úložiště pomocí vzdálených úložišť a vyřešit konflikty sloučení.
+**Novinka ve verzi 16,8**: Git je teď výchozím prostředím pro řízení verzí v aplikaci Visual Studio 2019. Sestavili jsme sadu funkcí a na ni jste na základě vašich názorů za poslední dvě verze zavedli iteraci. Nové prostředí je teď ve výchozím nastavení zapnuté pro všechny. Z nové nabídky Git můžete klonovat, vytvářet nebo otevírat úložiště. Pomocí integrovaných oken nástroje Git můžete zapsat a doručovat změny kódu, spravovat větve, udržovat aktuální úložiště pomocí vzdálených úložišť a vyřešit konflikty sloučení.
 
-Další informace najdete na stránce [produktivity Gitu v aplikaci Visual Studio](git-with-visual-studio.md) .
+Další informace najdete na stránce věnované [prostředí Git](git-with-visual-studio.md) na stránce sady Visual Studio.
 
 ### <a name="live-share"></a>Live Share
 
@@ -226,7 +226,7 @@ V současné době jsou zde některé nové funkce, které jsou aktuálně v sad
 
    Přestože nové prostředí pro řízení verzí Git je teď ve výchozím nastavení v aplikaci Visual Studio 2019 [verze 16,8](/visualstudio/releases/2019/release-notes/), pořád ještě přidáváme funkce pro vylepšení prostředí v nejnovější verzi Preview.
 
-   Další informace najdete na stránce [produktivity Gitu v aplikaci Visual Studio](git-with-visual-studio.md) .
+   Další informace najdete na stránce věnované [prostředí Git](git-with-visual-studio.md) na stránce sady Visual Studio.
 
 Další informace o verzi Preview &mdash; a odkazu ke stažení &mdash; najdete na stránce s **[náhledem sady Visual Studio](https://aka.ms/vspreview/)** .
 
@@ -238,8 +238,9 @@ Proč odeslat zpětnou vazbu týmu sady Visual Studio? Vzhledem k tomu, že pove
 
 * Pokud dojde k problému, kdy aplikace Visual Studio přestane reagovat, dojde k selhání nebo k jinému problému s výkonem, můžete snadno sdílet reprodukci kroky a podpůrné soubory s námi pomocí nástroje [nahlásit problém](how-to-report-a-problem-with-visual-studio.md) .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
+* [Novinky v dokumentaci k aplikaci Visual Studio](whats-new-visual-studio-docs.md)
 * [Zpráva k vydání verze pro Visual Studio 2019](/visualstudio/releases/2019/release-notes/)
 * [Zpráva k vydání verze pro Visual Studio 2019 for Mac](/visualstudio/releasenotes/vs2019-mac-relnotes/)
 * [Co je nového v sadě Visual Studio 2019 SDK](../extensibility/whats-new-visual-studio-2019-sdk.md)

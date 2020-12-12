@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení vytvoření a přesunutí elementu
+description: Naučte se, jak můžete dovolit přetáhnout element na jiný, a to buď ze sady nástrojů, nebo v operaci vložení nebo přesunutí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,18 +13,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a94f1e3321d846578ea42c69e50d48713ff618fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96ef956980b08e688970ad0a00d7d1a0804da7c3
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547261"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363117"
 ---
 # <a name="customizing-element-creation-and-movement"></a>Přizpůsobení vytvoření a přesunutí elementu
 
 Můžete určit, že se má element přetáhnout na jiný, a to buď z panelu nástrojů, nebo v operaci vložení nebo přesunutí. Přesunuté prvky lze spojit s cílovými prvky pomocí zadaných relací.
 
-Direktiva sloučení elementů (EMD) určuje, co se stane, když se jeden prvek modelu *sloučí* do jiného elementu modelu. K tomu dojde v těchto případech:
+Direktiva sloučení elementů (EMD) určuje, co se stane, když se jeden prvek modelu *sloučí* do jiného elementu modelu. Kdy k tomu dochází:
 
 - Uživatel je přetažen z panelu nástrojů na diagram nebo tvar.
 
@@ -87,7 +89,7 @@ Uživatelé mohou také vkládat prvky do jiných prvků.
 
 2. Chcete-li uživatelům umožnit sloučení prvků do `ExampleElement` tvarů, vytvořte novou EMD ve `ExampleElement` třídě doména:
 
-   1. V **Průzkumníku DSL**rozbalte položku **doménové třídy**. Klikněte pravým tlačítkem `ExampleElement` a potom klikněte na **Přidat novou direktivu sloučení elementů**.
+   1. V **Průzkumníku DSL** rozbalte položku **doménové třídy**. Klikněte pravým tlačítkem `ExampleElement` a potom klikněte na **Přidat novou direktivu sloučení elementů**.
 
    2. Ujistěte se, že je otevřené okno **Podrobnosti DSL** , takže uvidíte podrobnosti o novém EMD. (Nabídka: **zobrazení**, **ostatní okna**, **Podrobnosti DSL**.)
 
@@ -97,7 +99,7 @@ Uživatelé mohou také vkládat prvky do jiných prvků.
 
     Všimněte si, že třída indexování se v Průzkumníku DSL stane názvem EMD.
 
-4. V části **sloučení procesu vytvořením odkazů**přidejte dvě cesty:
+4. V části **sloučení procesu vytvořením odkazů** přidejte dvě cesty:
 
    - Jedna cesta propojuje nový element s nadřazeným modelem. Výraz cesty, který je třeba zadat, přejde od existujícího elementu až po vložení vztahu k nadřazenému modelu. Nakonec určuje roli v novém odkazu, ke kterému bude nový prvek přiřazen. Cesta je následující:
 
@@ -109,7 +111,7 @@ Uživatelé mohou také vkládat prvky do jiných prvků.
 
       Pomocí nástroje pro navigaci cest můžete vytvořit každou cestu:
 
-      1. V části **proces sloučení vytvořením odkazů na cestách**klikněte na **\<add path>** .
+      1. V části **proces sloučení vytvořením odkazů na cestách** klikněte na **\<add path>** .
 
       2. Klikněte na šipku rozevíracího seznamu napravo od položky seznamu. Zobrazí se stromové zobrazení.
 
@@ -200,7 +202,7 @@ Přidáním vlastního kódu do EMD můžete definovat složitější chování 
 
         - Přetáhněte z **ukázkového prvku** do diagramu.
 
-        - V **Průzkumníku modelů**klikněte pravým tlačítkem na kořenový uzel a pak klikněte na **Přidat nový vzorový element**.
+        - V **Průzkumníku modelů** klikněte pravým tlačítkem na kořenový uzel a pak klikněte na **Přidat nový vzorový element**.
 
         - Zkopírujte a vložte prvek do diagramu.
 
@@ -258,11 +260,11 @@ V kódu vlastního sloučení můžete definovat, co se stane, když uživatel p
 
 ### <a name="to-write-custom-merge-code"></a>Zápis vlastního kódu sloučení
 
-1. V **Dsl\Generated Code\DomainClasses.cs**si Prozkoumejte metody s názvem `MergeRelate` . Tyto metody vytvoří propojení mezi novým prvkem a existujícím modelem.
+1. V **Dsl\Generated Code\DomainClasses.cs** si Prozkoumejte metody s názvem `MergeRelate` . Tyto metody vytvoří propojení mezi novým prvkem a existujícím modelem.
 
     Prozkoumejte také metody s názvem `MergeDisconnect` . Tyto metody odpojí prvek z modelu, když má být odstraněn.
 
-2. V **Průzkumníku DSL**vyberte nebo vytvořte direktivu sloučení elementů, kterou chcete přizpůsobit. V okně **Podrobnosti DSL** nastavte **používat vlastní sloučení**.
+2. V **Průzkumníku DSL** vyberte nebo vytvořte direktivu sloučení elementů, kterou chcete přizpůsobit. V okně **Podrobnosti DSL** nastavte **používat vlastní sloučení**.
 
     Když nastavíte tuto možnost, možnosti **sloučení** a **přeposílání** procesů se ignorují. Místo toho se použije váš kód.
 
@@ -288,7 +290,7 @@ V řešení modelu komponenty můžete vytvořit direktivu pro přeposílání. 
 
 2. Otevřete **Průzkumníka DSL** otevřením DslDefinition. DSL.
 
-3. V **Průzkumníku DSL**rozbalte položku **doménové třídy**.
+3. V **Průzkumníku DSL** rozbalte položku **doménové třídy**.
 
 4. Abstraktní doménová třída **ComponentPort** je základní třídou pro **inportování** i pro **přenos**. Klikněte pravým tlačítkem na **ComponentPort** a pak klikněte na **Přidat novou direktivu sloučení elementů**.
 
@@ -300,7 +302,7 @@ V řešení modelu komponenty můžete vytvořit direktivu pro přeposílání. 
 
 7. Vyberte **předávané sloučení do jiné doménové třídy**.
 
-8. V seznamu výběr cesty rozbalte **ComponentPort**, rozbalte **ComponentHasPorts**a pak vyberte **součást**.
+8. V seznamu výběr cesty rozbalte **ComponentPort**, rozbalte **ComponentHasPorts** a pak vyberte **součást**.
 
     Nová cesta by měla vypadat přibližně takto:
 
@@ -310,13 +312,13 @@ V řešení modelu komponenty můžete vytvořit direktivu pro přeposílání. 
 
 10. Sestavte a spusťte řešení. Zobrazí se nová instance aplikace Visual Studio.
 
-11. V **Průzkumník řešení**otevřete Sample. mydsl. Zobrazí se diagram a **Sada nástrojů ComponentLanguage** .
+11. V **Průzkumník řešení** otevřete Sample. mydsl. Zobrazí se diagram a **Sada nástrojů ComponentLanguage** .
 
 12. Přetáhněte **vstupní port** ze **sady nástrojů** na jiný **vstupní port.** V dalším kroku přetáhněte **OutputPort** do **InputPort** a pak na jiný **OutputPort**.
 
      Neměl by se zobrazovat nedostupný ukazatel a měli byste být schopni vyřadit nový **vstupní port** na stávajícím. Vyberte nový **vstupní port** a přetáhněte jej na jiný bod **součásti**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Přizpůsobení nástrojů a panelu nástrojů](../modeling/customizing-tools-and-the-toolbox.md)

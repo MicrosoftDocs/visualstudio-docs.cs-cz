@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení map kódu úpravou souborů DGML
+description: Přečtěte si, jak přizpůsobit mapu kódu úpravou souboru. dgml (Directed Graph Markup Language).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -20,12 +22,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24afbfcfe31de52ac51329bb67df41cc59dd6f1e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e9b1126b258e36c0aeffd18b9319b15da2b4639
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547274"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363419"
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>Přizpůsobení map kódu úpravou souborů DGML
 
@@ -638,7 +640,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
 
 5. Chcete-li zobrazit odkazový prvek kódu nebo prvky kódu z mapy, otevřete místní nabídku pro prvek kódu nebo odkaz. Zvolte **Přejít na odkaz** a poté prvek kódu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 - [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)

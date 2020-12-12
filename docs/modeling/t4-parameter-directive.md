@@ -1,5 +1,7 @@
 ---
 title: T4 – direktiva Parameter
+description: Přečtěte si, že v aplikaci Visual Studio direktiva parametru deklaruje vlastnosti v kódu šablony, které jsou inicializovány z hodnot předaných z externího kontextu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f833eb651efda0edb837515e1bf2b3567e1a759
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df739f10764f20b415ac74ee4b4e529433c7dc96
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591798"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363624"
 ---
 # <a name="t4-parameter-directive"></a>T4 – direktiva Parameter
 
@@ -82,7 +84,7 @@ string result = t4.ProcessTemplate("",
 //     Test 32 test
 ```
 
-## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>Předávání hodnot do textové šablony běhu (předzpracované)
+## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>Předání hodnot do textové šablony Run-Time (předzpracovaná)
  Není obvykle nutné použít `<#@parameter#>` direktivu s textovými šablonami run-time (předzpracované). Místo toho můžete definovat další konstruktor nebo nastavitelnou vlastnost pro generovaný kód, pomocí kterého předáte hodnoty parametrů. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
  Pokud však chcete použít `<#@parameter>` v šabloně run-time, můžete do ní předat hodnoty pomocí slovníku relace. Předpokládejme například, že jste vytvořili soubor jako předzpracovaná šablona s názvem `PreTextTemplate1` . Šablonu můžete vyvolat v programu pomocí následujícího kódu.

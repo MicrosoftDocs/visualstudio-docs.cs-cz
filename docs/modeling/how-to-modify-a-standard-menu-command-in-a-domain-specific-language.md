@@ -1,5 +1,7 @@
 ---
 title: Příkaz Upravit standardní nabídku v DSL
+description: Zjistěte, jak můžete upravit chování některých standardních příkazů, které jsou v DSL definované automaticky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a7236c074bda17023c989c744042db2de4046558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e04d3d2c5572c0d0b3dbaa25912b7ec59a3bc0fa
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532493"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363884"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>Postupy: Úprava příkazu standardní nabídky v jazyce specifickém pro doménu
 
@@ -53,7 +55,7 @@ Vytvořte nový soubor, který obsahuje částečnou deklaraci třídy sady př�
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. V **DslPackage**vytvořte složku s názvem **vlastní kód**. V této složce vytvořte nový soubor třídy s názvem `CommandSet.cs` .
+2. V **DslPackage** vytvořte složku s názvem **vlastní kód**. V této složce vytvořte nový soubor třídy s názvem `CommandSet.cs` .
 
 3. V novém souboru zapište částečnou deklaraci, která má stejný obor názvů a název jako vygenerovaná částečná třída. Příklad:
 
@@ -143,7 +145,7 @@ Následující fragmenty jsou často užitečné v rámci těchto metod:
 
 Další informace o tom, jak přejít z prvku na prvek a o tom, jak vytvořit objekty a odkazy, naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:System.ComponentModel.Design.MenuCommand>
 - [Zápis kódu pro úpravu jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)

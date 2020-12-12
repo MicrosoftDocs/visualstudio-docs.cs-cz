@@ -1,5 +1,7 @@
 ---
 title: Vypočtené a vlastní vlastnosti úložiště
+description: Přečtěte si, jak se všechny vlastnosti domény v jazyce DSL (Domain-Specific Language) dají zobrazit uživateli v diagramu a ve vašem jazykovém Průzkumníku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 52915f0bac2bd172daf909541ecfa86396d90a5d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c50d205745917b3af7de638a17921f4bcdca509
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115194"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363546"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>Vypočtené a vlastní vlastnosti úložiště
 Všechny vlastnosti domény v jazyce DSL (Domain Specific Language) lze zobrazit uživateli v diagramu a ve vašem jazykovém Průzkumníku a lze k němu přistupovat prostřednictvím kódu programu. Vlastnosti se ale liší ve způsobu, jakým jsou uložené jejich hodnoty.
@@ -43,14 +45,14 @@ Všechny vlastnosti domény v jazyce DSL (Domain Specific Language) lze zobrazit
 
 4. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
-     Zobrazí se následující chybová zpráva: "*YourClass* neobsahuje definici pro Get*YourProperty*".
+     Zobrazí se následující chybová zpráva: "*YourClass* neobsahuje definici pro Get *YourProperty*".
 
 5. Dvakrát klikněte na chybovou zprávu.
 
-     Otevře se Dsl\GeneratedCode\DomainClasses.cs nebo DomainRelationships.cs. Nad zvýrazněným voláním metody komentář vás vyzve k poskytnutí implementace pro Get*YourProperty*().
+     Otevře se Dsl\GeneratedCode\DomainClasses.cs nebo DomainRelationships.cs. Nad zvýrazněným voláním metody komentář vás vyzve k poskytnutí implementace pro Get *YourProperty*().
 
     > [!NOTE]
-    > Tento soubor je vygenerovaný z DslDefinition. DSL. Pokud tento soubor upravíte, změny budou při příštím kliknutí na **transformovat všechny šablony**ztraceny. Místo toho přidejte požadovanou metodu do samostatného souboru.
+    > Tento soubor je vygenerovaný z DslDefinition. DSL. Pokud tento soubor upravíte, změny budou při příštím kliknutí na **transformovat všechny šablony** ztraceny. Místo toho přidejte požadovanou metodu do samostatného souboru.
 
 6. Vytvořte nebo otevřete soubor třídy v samostatné složce, například CustomCode \\ *YourDomainClass*. cs.
 
@@ -79,7 +81,7 @@ Všechny vlastnosti domény v jazyce DSL (Domain Specific Language) lze zobrazit
 
 9. Sestavte a spusťte řešení.
 
-10. Otestujte vlastnost. Ujistěte se, že se pokusíte **vrátit zpět** a **znovu provést**akci.
+10. Otestujte vlastnost. Ujistěte se, že se pokusíte **vrátit zpět** a **znovu provést** akci.
 
 ## <a name="transactions-and-custom-setters"></a><a name="setters"></a> Transakce a vlastní Settery
  V metodě set vlastnosti vlastního úložiště není nutné otevřít transakci, protože metoda je obvykle volána uvnitř aktivní transakce.
@@ -107,7 +109,7 @@ void SetAgeValue(int value)
 
  Další informace o transakcích naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Vlastnosti vlastností domény](../modeling/properties-of-domain-properties.md)

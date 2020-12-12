@@ -1,5 +1,7 @@
 ---
 title: Nasazení DSL v MSI a VSIX
+description: Přečtěte si, jak můžete nainstalovat jazyk domény (DSL) na vlastní počítač nebo na jiné počítače.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d4de8d7560cb43115a30e29516e0e88b4d02d21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 623cbdcfaae6acd1889e265fecafec805e5a9440
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542613"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363130"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>Nasazení DSL v MSI a VSIX
 Jazyk specifický pro doménu můžete nainstalovat na vlastní počítač nebo na jiné počítače. V cílovém počítači již musí být nainstalována aplikace Visual Studio.
@@ -33,9 +35,9 @@ Pokud je vaše DSL nainstalovaná touto metodou, uživatel může otevřít soub
 
 1. Vyhledejte soubor **. vsix** , který byl vytvořen vaším projektem balíčku DSL:
 
-   1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **DslPackage** a potom klikněte na možnost **Otevřít složku v Průzkumníku souborů**.
+   1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt **DslPackage** a potom klikněte na možnost **Otevřít složku v Průzkumníku souborů**.
 
-   2. Vyhledejte soubor ** \\ \* \\ bin**_YourProject_**. DslPackage. vsix**
+   2. Vyhledejte soubor **\\ \* \\ bin**_YourProject_**. DslPackage. vsix**
 
 2. Zkopírujte soubor **. vsix** do cílového počítače, do kterého chcete nainstalovat DSL. Může to být váš vlastní počítač nebo jiný.
 
@@ -94,7 +96,7 @@ Pokud je vaše DSL nainstalovaná touto metodou, uživatel může otevřít soub
 
    - Klikněte na uzel **Editor** a v okno Vlastnosti klikněte na **ikonu**. Nastavte hodnotu tak, aby odkazovala na soubor ikony v **DslPackage\Resources**, jako je **File. ico.**
 
-   - V nabídce **sestavení** otevřete **Configuration Manager**a vyberte konfiguraci, kterou chcete sestavit, například **vydaná verze** nebo **ladění**.
+   - V nabídce **sestavení** otevřete **Configuration Manager** a vyberte konfiguraci, kterou chcete sestavit, například **vydaná verze** nebo **ladění**.
 
 4. Přejít na [domovskou stránku vizualizace a modelování sady SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)a na kartě **stažené soubory** stáhněte **CreateMsiSetupProject.TT**.
 
@@ -106,7 +108,7 @@ Pokud je vaše DSL nainstalovaná touto metodou, uživatel může otevřít soub
 
     (Pokud chcete, můžete teď vyloučit CreateMsiSetupProject.tt z vašeho projektu DSL.)
 
-7. V **Průzkumník řešení**přidejte **Setup \\ \* . vdproj** jako existující projekt.
+7. V **Průzkumník řešení** přidejte **Setup \\ \* . vdproj** jako existující projekt.
 
 8. V nabídce **projekt** klikněte na **závislosti projektu**.
 

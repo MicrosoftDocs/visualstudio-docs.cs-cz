@@ -1,5 +1,7 @@
 ---
 title: T4 – direktiva Template
+description: Seznamte se s tím, že šablona textu T4 sady Visual Studio obvykle začíná direktivou šablony, která určuje, jak by měla být zpracována šablona.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2763ca540a6b0518eed8bf757412716616d3ae3e
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 75001da1829f6dafdac68359d1b0f6c7c14ed266
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808061"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363663"
 ---
 # <a name="t4-template-directive"></a>T4 – direktiva Template
 

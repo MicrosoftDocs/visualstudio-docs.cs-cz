@@ -1,5 +1,7 @@
 ---
 title: Ověřování kódu pomocí diagramů závislostí
+description: Naučte se, že kód není v konfliktu s jeho návrhem, měli byste svůj kód ověřit pomocí diagramů závislostí v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +21,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 975fe8eac5657e245027a4811e50bbc93528cfe5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc8b36768cbac4249b964b167988119b5700d5c7
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80759699"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362545"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>Ověřování kódu pomocí diagramů závislostí
 
@@ -80,13 +82,13 @@ Vrstvy můžete v projektech, které jsou sdíleny napříč více aplikacemi, p
 
 1. V diagramu závislosti vyberte jednu nebo více vrstev, klikněte pravým tlačítkem myši na výběr a potom klikněte na možnost **Zobrazit odkazy**.
 
-2. V **Průzkumníku vrstev**se podívejte do sloupce **podporuje ověřování** . Pokud je hodnota false, položka ověřování nepodporuje.
+2. V **Průzkumníku vrstev** se podívejte do sloupce **podporuje ověřování** . Pokud je hodnota false, položka ověřování nepodporuje.
 
 ## <a name="include-other-net-assemblies-and-projects-for-validation"></a>Zahrnutí dalších projektů a sestavení .NET pro ověřování
 
 Při přetahování položek do diagramu závislostí se automaticky přidají odkazy na odpovídající sestavení nebo projekty .NET do složky **odkazy na vrstvy** v projektu modelování. Tato složka obsahuje odkazy na sestavení a projekty, které jsou analyzovány během ověřování. Můžete zahrnout další sestavení a projekty .NET pro ověřování, aniž byste je museli ručně přetahovat do diagramu závislostí.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt modelování nebo na složku **odkazy na vrstvu** a potom klikněte na tlačítko **Přidat odkaz**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt modelování nebo na složku **odkazy na vrstvu** a potom klikněte na tlačítko **Přidat odkaz**.
 
 2. V dialogovém okně **Přidat odkaz** vyberte sestavení nebo projekty a potom klikněte na tlačítko **OK**.
 
@@ -157,16 +159,16 @@ Během procesu vývoje můžete chtít potlačit některé vykázané konflikty 
 
 #### <a name="create-a-work-item-for-a-validation-error"></a>Vytvoření pracovní položky pro chybu ověření
 
-- V okně **Seznam chyb** klikněte pravým tlačítkem myši na chybu, přejděte na příkaz **vytvořit pracovní položku**a poté klikněte na typ pracovní položky, kterou chcete vytvořit.
+- V okně **Seznam chyb** klikněte pravým tlačítkem myši na chybu, přejděte na příkaz **vytvořit pracovní položku** a poté klikněte na typ pracovní položky, kterou chcete vytvořit.
 
 Pomocí těchto úloh můžete spravovat chyby ověřování v okně **Seznam chyb** :
 
-|**Záměr**|**Postupujte podle těchto kroků**|
+|**Schopn**|**Postupujte podle těchto kroků**.|
 |-|-|
-|Potlačení vybraných chyb během ověřování|Klikněte pravým tlačítkem myši na jednu nebo více vybraných chyb, přejděte na položku **Spravovat chyby ověřování**a potom klikněte na **potlačit chyby**.<br /><br /> Potlačené chyby se zobrazují s přeškrtnutím. Při příštím spuštění ověřování se tyto chyby nezobrazí.<br /><br /> Potlačené chyby jsou sledovány v souboru. potlačení pro odpovídající soubor diagramu závislosti.|
-|Ukončení potlačování vybraných chyb|Klikněte pravým tlačítkem myši na potlačit chybu nebo chyby, přejděte na položku **Spravovat chyby ověřování**a potom klikněte na možnost **ukončit potlačení chyb**.<br /><br /> Vybrané potlačené chyby se při příštím spuštění ověřování zobrazí.|
-|Obnovit všechny Potlačené chyby v okně **Seznam chyb**|Klikněte pravým tlačítkem myši kdekoli v okně **Seznam chyb** , přejděte na položku **Spravovat chyby ověřování**a potom klikněte na možnost **Zobrazit všechny Potlačené chyby**.|
-|Skrýt všechny Potlačené chyby z okna **Seznam chyb**|Klikněte pravým tlačítkem myši kdekoli v okně **Seznam chyb** , přejděte na možnost **Spravovat chyby ověřování**a potom klikněte na **Skrýt všechny Potlačené chyby**.|
+|Potlačení vybraných chyb během ověřování|Klikněte pravým tlačítkem myši na jednu nebo více vybraných chyb, přejděte na položku **Spravovat chyby ověřování** a potom klikněte na **potlačit chyby**.<br /><br /> Potlačené chyby se zobrazují s přeškrtnutím. Při příštím spuštění ověřování se tyto chyby nezobrazí.<br /><br /> Potlačené chyby jsou sledovány v souboru. potlačení pro odpovídající soubor diagramu závislosti.|
+|Ukončení potlačování vybraných chyb|Klikněte pravým tlačítkem myši na potlačit chybu nebo chyby, přejděte na položku **Spravovat chyby ověřování** a potom klikněte na možnost **ukončit potlačení chyb**.<br /><br /> Vybrané potlačené chyby se při příštím spuštění ověřování zobrazí.|
+|Obnovit všechny Potlačené chyby v okně **Seznam chyb**|Klikněte pravým tlačítkem myši kdekoli v okně **Seznam chyb** , přejděte na položku **Spravovat chyby ověřování** a potom klikněte na možnost **Zobrazit všechny Potlačené chyby**.|
+|Skrýt všechny Potlačené chyby z okna **Seznam chyb**|Klikněte pravým tlačítkem myši kdekoli v okně **Seznam chyb** , přejděte na možnost **Spravovat chyby ověřování** a potom klikněte na **Skrýt všechny Potlačené chyby**.|
 
 ## <a name="validate-code-automatically"></a>Ověřování kódu automaticky
 
@@ -182,13 +184,13 @@ K otevření souboru projektu modelování (.modelproj) použijte textový edito
 
 \- ani
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt modelování, který obsahuje diagram nebo diagramy závislosti, a poté klikněte na možnost **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt modelování, který obsahuje diagram nebo diagramy závislosti, a poté klikněte na možnost **vlastnosti**.
 
 2. V okně **vlastnosti** nastavte vlastnost **ověřit architekturu** projektu modelování na **hodnotu true**.
 
     To zahrne projekt modelování do ověřovacího procesu.
 
-3. V **Průzkumník řešení**klikněte na soubor diagramu závislosti (. layerdiagram), který chcete použít k ověření.
+3. V **Průzkumník řešení** klikněte na soubor diagramu závislosti (. layerdiagram), který chcete použít k ověření.
 
 4. V okně **vlastnosti** se ujistěte, že je vlastnost **Akce sestavení** diagramu nastavena na hodnotu **ověřit**.
 
@@ -200,7 +202,7 @@ Chcete-li spravovat chyby v okně Seznam chyb, přečtěte si téma [řešení c
 
 Následující tabulka popisuje problémy s ověřením vrstvy a jejich řešení. Tyto problémy se liší od chyb, které vzniknou z konfliktů mezi kódem a návrhem. Další informace o těchto chybách najdete v tématu [řešení potíží s ověřováním vrstev](#troubleshoot-layer-validation-issues).
 
-|**Problém**|**Možná příčina**|**Řešení**|
+|**Chybu**|**Možná příčina**|**Řešení**|
 |-|-|-|
 |Chyby ověřování se nezobrazí podle očekávání.|Ověřování nefunguje na diagramech závislostí, které se zkopírují z jiných diagramů závislostí v Průzkumník řešení a které jsou ve stejném projektu modelování. diagramy závislostí, které jsou tímto způsobem zkopírovány, obsahují stejné odkazy jako původní Diagram závislostí.|Přidejte do projektu modelování nový diagram závislosti.<br /><br /> Zkopírujte prvky z diagramu závislosti zdrojového kódu do nového diagramu.|
 
@@ -231,10 +233,10 @@ Následující oddíl popisuje syntaxi, která se u těchto chyb používá, vy
 | DV1003: **nepovolený název oboru názvů** | Tento problém je hlášen u elementu kódu přidruženého ke vrstvě, která "nepovolené názvy oborů názvů" obsahuje obor názvů, ve kterém je tento prvek kódu definován. Toto je porušení omezení pojmenování. Všimněte si, že vlastnost "nepovolený název oboru názvů" je definována jako středníkem oddělený seznam oborů názvů, ve kterých by neměly být definovány elementy kódu přidružené k této vrstvě. |
 | DV2001: **přítomnost diagramu vrstvy** | Tento problém se oznamuje v projektu, který neobsahuje soubor s diagramem závislostí, ale odkazuje na analyzátory ověřování závislostí. Pokud nebylo použito ověřování závislostí, můžete odebrat "Microsoft. DependencyValidation. Analyzers" přímo z Průzkumník řešení nebo potlačit toto upozornění. Chcete-li přidat Diagram závislostí, přečtěte si téma [vytvoření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md). |
 | DV2002: **nemapované typy Base** | Tento problém je hlášen, když prvek kódu není namapován na žádnou vrstvu. |
-| DV3001: **chybějící odkaz** | Vrstva "*propojuje" odkazuje*na*artefakt*, který nebyl nalezen. Nechybí odkaz na sestavení? |
+| DV3001: **chybějící odkaz** | Vrstva "*propojuje" odkazuje* na *artefakt*, který nebyl nalezen. Nechybí odkaz na sestavení? |
 | DV9001: **Analýza architektury zjistila vnitřní chyby** . | Výsledky nemusí být úplné. Další informace lze nalézt v podrobném protokolu událostí sestavení nebo ve výstupním okně. |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Ověřování aktivní závislosti v aplikaci Visual Studio](https://devblogs.microsoft.com/devops/live-dependency-validation-in-visual-studio-2017/)
 - [Ověřování systému během vývoje](../modeling/validate-your-system-during-development.md)

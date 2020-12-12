@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení souborového úložiště a serializace XML
+description: Seznamte se se souborem XML vytvořeným nebo aktualizovaným při uložení instance nebo modelu v rámci domény (DSL) v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,23 +13,23 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 07592247e0afb870f3c4774c6f2023a6e8141cd1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e889bb81b4c13d003beb15f733d053ef159b197f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542737"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362935"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>Přizpůsobení úložiště souborů a serializace XML
 
-Když uživatel v aplikaci Visual Studio uloží instanci nebo *model*určitého jazyka (DSL), vytvoří se soubor XML nebo se aktualizuje. Soubor lze znovu načíst a znovu vytvořit model ve Storu.
+Když uživatel v aplikaci Visual Studio uloží instanci nebo *model* určitého jazyka (DSL), vytvoří se soubor XML nebo se aktualizuje. Soubor lze znovu načíst a znovu vytvořit model ve Storu.
 
 Schéma serializace můžete přizpůsobit úpravou nastavení v části **chování serializace XML** v Průzkumníku DSL. U každé doménové třídy, vlastnosti a vztahu je v rámci **chování serializace XML** uzel. Relace jsou umístěny pod svými zdrojovými třídami. K dispozici jsou také uzly odpovídající třídám Shape, Connector a diagram.
 
 Můžete také napsat kód programu pro pokročilejší přizpůsobení.
 
 > [!NOTE]
-> Pokud chcete model uložit v konkrétním formátu, ale nemusíte ho znovu načítat z tohoto formuláře, zvažte použití textových šablon k vygenerování výstupu z modelu namísto vlastního schématu serializace. Další informace najdete v tématu [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md).
+> Pokud chcete model uložit v konkrétním formátu, ale nemusíte ho znovu načítat z tohoto formuláře, zvažte použití textových šablon k vygenerování výstupu z modelu namísto vlastního schématu serializace. Další informace naleznete v tématu [generování kódu z Domain-Specificho jazyka](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ## <a name="model-and-diagram-files"></a>Soubory modelů a diagramů
 
@@ -124,7 +126,7 @@ Kvalifikované monikery klíčů je snazší číst než monikery ID. Pokud mát
 
 1. Ujistěte se, že **je klíč monikeru** `false` pro každou doménovou vlastnost třídy a její základní třídy.
 
-    1. V Průzkumníku DSL rozbalte ** \\ \<the domain class> data \Element serializace XML Behavior\Class data**.
+    1. V Průzkumníku DSL rozbalte **\\ \<the domain class> data \Element serializace XML Behavior\Class data**.
 
     2. Ověřte, že **je klíč monikeru** `false` pro každou doménovou vlastnost.
 
@@ -138,7 +140,7 @@ Kvalifikované monikery klíčů je snazší číst než monikery ID. Pokud mát
 
 - Set **je klíč monikeru** pro doménovou vlastnost existující doménové třídy. Typ vlastnosti musí být `string` .
 
-    1. V Průzkumníku DSL rozbalte data **\Element serializace XML Behavior\Class data \\ \<the domain class> **a pak vyberte doménovou vlastnost.
+    1. V Průzkumníku DSL rozbalte data **\Element serializace XML Behavior\Class data \\ \<the domain class>** a pak vyberte doménovou vlastnost.
 
     2. V okno Vlastnosti nastavte **klíč moniker** na hodnotu `true` .
 
@@ -158,7 +160,7 @@ Použijete-li kvalifikované monikery klíčů, je možné, že dva prvky v mode
 
 Existuje několik metod, které se mohou vyhnout této situaci:
 
-- **Is Element Name**  =  `true` Pro klíčovou vlastnost domény je nastaven název elementu. Vyberte vlastnost doména v diagramu definice DSL a pak nastavte hodnotu v okno Vlastnosti.
+-   =  `true` Pro klíčovou vlastnost domény je nastaven název elementu. Vyberte vlastnost doména v diagramu definice DSL a pak nastavte hodnotu v okno Vlastnosti.
 
      Když uživatel vytvoří novou instanci třídy, tato hodnota způsobí, že se vlastnost domain automaticky přiřadí jiné hodnotě. Výchozí chování přidá číslo na konec názvu třídy. To uživateli nebrání v změně názvu na duplicitní, ale v případě, že uživatel nenastavuje hodnotu před uložením modelu, pomáhá.
 
@@ -166,7 +168,7 @@ Existuje několik metod, které se mohou vyhnout této situaci:
 
      K dispozici je automaticky vygenerovaná metoda ověřování, která kontroluje nejednoznačnosti. Metoda je v `Load` kategorii ověřování. Tím se zajistí, že uživatel bude upozorněn na to, že nemusí být možné soubor znovu otevřít.
 
-     Další informace najdete v tématu [ověření v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md).
+     Další informace najdete v tématu [ověřování v Domain-Specificm jazyce](../modeling/validation-in-a-domain-specific-language.md).
 
 ### <a name="moniker-paths-and-qualifiers"></a>Cesty monikerů a kvalifikátory
 
@@ -230,7 +232,7 @@ Chcete-li provést následující přizpůsobení, rozbalte uzel **chování ser
     </familyTreeModel>
     ```
 
-- Nastavte **element reprezentaci**  =  **Element** tak, aby měl doménovou vlastnost uloženou jako prvek namísto hodnoty atributu.
+- Nastavte **element reprezentaci**  =   tak, aby měl doménovou vlastnost uloženou jako prvek namísto hodnoty atributu.
 
     ```xml
     <person name="Elizabeth I" birthYear="1533">
@@ -273,7 +275,7 @@ Tyto prvky se nacházejí v Průzkumníkovi DSL pod **daty serializace XML Behav
 |Domain – třída|Doménová třída, na kterou se vztahuje tento uzel dat třídy Jen pro čtení.|
 |Název prvku|Název uzlu XML pro prvky této třídy. Výchozí hodnota je nižší verze názvu doménové třídy.|
 |Název atributu monikeru|Název atributu použitého v elementech monikeru, který má obsahovat odkaz. Pokud je pole prázdné, použije se název vlastnosti klíče nebo ID.<br /><br /> V tomto příkladu je to "Name":  `<personMoniker name="/Mike Nash"/>`|
-|Název elementu monikeru|Název XML elementu, který se používá pro monikery, které odkazují na prvky této třídy.<br /><br /> Výchozí hodnota je malá verze názvu třídy s příponou "moniker". Například, `personMoniker`.|
+|Název elementu monikeru|Název XML elementu, který se používá pro monikery, které odkazují na prvky této třídy.<br /><br /> Výchozí hodnota je malá verze názvu třídy s příponou "moniker". Například `personMoniker`.|
 |Název typu monikeru|Název typu XSD vygenerovaného pro monikery v elementech této třídy XSD je ve **schématu Dsl\Generated Code \\ \* Schema. xsd.**|
 |ID serializace|Je-li nastavena hodnota true, je identifikátor GUID elementu obsažen v souboru. Tato hodnota musí být true, pokud neexistuje žádná vlastnost, která je označena **klíčovým** slovem MONIKER a DSL definuje referenční vztahy k této třídě.|
 |Název typu|Název typu XML vygenerovaného v XSD z určené doménové třídy|
@@ -304,7 +306,7 @@ Uzly dat role se nacházejí v uzlech zdrojové třídy.
 |Název elementu role|Určuje název elementu XML, který je odvozen ze zdrojové role. Výchozí hodnota je název vlastnosti role.|
 |Použít úplný formulář|Je-li nastavena hodnota true, je každý cílový element nebo moniker uzavřen v uzlu XML představujícím relaci. Tato hodnota by měla být nastavena na hodnotu true, pokud má vztah své vlastní doménové vlastnosti.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)

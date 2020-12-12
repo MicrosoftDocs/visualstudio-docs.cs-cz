@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Zachycení kliknutí na obrazec či dekorátor'
+description: Naučte se zachytit kliknutí na tvar nebo ikonu dekoratér a jak můžete zachytit kliknutí, poklikáním, přetáhnout a další gesta.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58d447526d83fec406b6fc20a08edcec37de89ae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff49c1950e81098633fab92ffbbdf25020945a1e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532519"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363897"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>Postupy: Zachycení kliknutí na obrazec či dekorátor
 Následující postupy ukazují, jak zachytit kliknutí na tvar nebo ikonu dekoratér. Můžete zachytit kliknutím, dvojitým kliknutím, přetažením a dalším gestům a nastavit prvek jako odpověď.
@@ -227,7 +229,7 @@ namespace Company.CompartmentDrag
 
  /// <summary>
  /// Override some methods of the compartment shape.
- /// *** GenerateDoubleDerived must be set for this shape in DslDefinition.dsl. ****
+ /// **_ GenerateDoubleDerived must be set for this shape in DslDefinition.dsl. _***
  /// </summary>
  public partial class ClassShape
  {
@@ -393,7 +395,7 @@ namespace Company.CompartmentDrag
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md)
 - [Vlastnosti dekorátorů](../modeling/properties-of-decorators.md)

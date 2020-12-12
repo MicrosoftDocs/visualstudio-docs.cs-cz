@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení okna Vlastnosti
+description: Zjistěte, jak můžete přizpůsobit vzhled a chování okna vlastnosti v jazyce DSL (Domain Specific Language) v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4dac40177c3df2a346039a08cf557b6083ed9fc2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f7d4ac76b8b10fde0c193e3eda73cec611c1441
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85548275"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362871"
 ---
 # <a name="customize-the-properties-window"></a>Přizpůsobení okno Vlastnosti
 
@@ -38,15 +40,15 @@ Když nastavíte název vlastnosti v definici DSL, její zobrazovaný název se 
 
 Některé dynamické funkce grafických prvků mohou být reprezentovány nebo *vystaveny* jako vlastnosti domény. Funkce, která byla vystavena tímto způsobem, může být aktualizována uživatelem a lze ji snáze aktualizovat pomocí kódu programu.
 
-V definici DSL klikněte pravým tlačítkem myši na třídu Shape, přejděte na **Přidat vystavené**a pak zvolte funkci.
+V definici DSL klikněte pravým tlačítkem myši na třídu Shape, přejděte na **Přidat vystavené** a pak zvolte funkci.
 
-V obrazcích můžete vystavit vlastnosti **FillColor**, **OutlineColor**, **TextColor**, **OutlineDashStyle**, **OutlineThickness** a **FillGradientMode** . V konektorech můžete vystavit vlastnosti **barev** `,` **TextColor**, **DashStyle**a **tloušťku** . V diagramech můžete zveřejnit vlastnosti **FillColor** a **TextColor** .
+V obrazcích můžete vystavit vlastnosti **FillColor**, **OutlineColor**, **TextColor**, **OutlineDashStyle**, **OutlineThickness** a **FillGradientMode** . V konektorech můžete vystavit vlastnosti **barev** `,` **TextColor**, **DashStyle** a **tloušťku** . V diagramech můžete zveřejnit vlastnosti **FillColor** a **TextColor** .
 
 ## <a name="forwarding-display-properties-of-related-elements"></a>Předávání: zobrazení vlastností souvisejících elementů
 
 Když uživatel vaší DSL vybere prvek v modelu, zobrazí se vlastnosti tohoto prvku v okně Vlastnosti. Můžete ale také zobrazit vlastnosti zadaných souvisejících prvků. To je užitečné, pokud jste definovali skupinu prvků, které pracují dohromady. Například můžete definovat hlavní prvek a volitelný element modulu plug-in. Je-li hlavní prvek mapován na tvar a druhý není, je užitečné zobrazit všechny vlastnosti, jako kdyby byly na jednom prvku.
 
-Tento efekt se nazývá *předávání vlastností*a v několika případech k němu dojde automaticky. V jiných případech můžete dosáhnout předávání vlastností definováním popisovače typu domény.
+Tento efekt se nazývá *předávání vlastností* a v několika případech k němu dojde automaticky. V jiných případech můžete dosáhnout předávání vlastností definováním popisovače typu domény.
 
 ### <a name="default-property-forwarding-cases"></a>Výchozí případy předávání vlastností
 
@@ -71,11 +73,11 @@ Následující postup předpokládá, že jste vytvořili DSL. První pár krok�
 
 #### <a name="forward-a-property-from-another-element"></a>Předejte vlastnost z jiného elementu.
 
-1. Vytvořte [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] řešení, které obsahuje alespoň dvě třídy, v tomto příkladu se říká **Kniha** a **Autor**. Mezi **knihou** a **autorem**by měl existovat vztah obou druhů.
+1. Vytvořte [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] řešení, které obsahuje alespoň dvě třídy, v tomto příkladu se říká **Kniha** a **Autor**. Mezi **knihou** a **autorem** by měl existovat vztah obou druhů.
 
     Násobnost zdrojové role (role na straně **knihy** ) by měla být 0.. 1 nebo 1.. 1, aby každá **Kniha** měla jednoho **autora**.
 
-2. V **Průzkumníku DSL**klikněte pravým tlačítkem na třídu doména **knihy** a pak klikněte na **Přidat nový DomainTypeDescriptor**.
+2. V **Průzkumníku DSL** klikněte pravým tlačítkem na třídu doména **knihy** a pak klikněte na **Přidat nový DomainTypeDescriptor**.
 
     Uzel s názvem **cesty popisovačů vlastních vlastností** se zobrazí v uzlu **vlastní deskriptor typu** .
 
@@ -113,13 +115,13 @@ Můžete však zadat následující editory a typy:
 
 ### <a name="define-a-domain-property-that-has-an-external-type"></a>Definovat doménovou vlastnost, která má externí typ
 
-1. V **Průzkumník řešení**přidejte odkaz na sestavení (DLL), které obsahuje externí typ, v projektu **DSL** .
+1. V **Průzkumník řešení** přidejte odkaz na sestavení (DLL), které obsahuje externí typ, v projektu **DSL** .
 
     Sestavení může být sestavení .NET nebo sestavení, které vám dodal.
 
 2. Přidejte typ do seznamu **typy domén** , pokud jste to ještě neudělali.
 
-   1. Otevřete DslDefinition. DSL a v **Průzkumníku DSL**klikněte pravým tlačítkem na kořenový uzel a pak klikněte na **Přidat nový externí typ**.
+   1. Otevřete DslDefinition. DSL a v **Průzkumníku DSL** klikněte pravým tlačítkem na kořenový uzel a pak klikněte na **Přidat nový externí typ**.
 
         V uzlu **typy domén** se zobrazí nová položka.
 
@@ -319,6 +321,6 @@ public class MyTypeConverter : System.ComponentModel.TypeConverter
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)

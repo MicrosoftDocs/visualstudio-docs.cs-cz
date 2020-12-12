@@ -1,5 +1,7 @@
 ---
 title: Nastavení vlastního procesoru direktiv
+description: Seznamte se s metodami, které jsou k dispozici pro nasazení vlastního procesoru direktiv v aplikaci Visual Studio nebo na jakémkoli počítači.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4762ad21f117bebe22ecfce1c846f15d154b1bf5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 638367f2c3a1238edc257a255280c5197e11d3f0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536016"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363923"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>Nastavení vlastního procesoru direktiv
 
@@ -48,7 +50,7 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
 1. Vytvořte nový projekt **VSIX** projektu.
 
-2. V souboru **source. extension. vsixmanifest**nastavte typ obsahu a podporované edice.
+2. V souboru **source. extension. vsixmanifest** nastavte typ obsahu a podporované edice.
 
     1. V editoru manifestu VSIX na kartě **assets (prostředky** ) vyberte možnost **nové** a nastavte vlastnosti nové položky:
 
@@ -124,7 +126,7 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
 - Vaše `IsDirectiveSupported` Metoda musí vracet `true` , když je předána název vaší `CustomDirective` .
 
-- Pokud se rozšíření v nástroji Správce rozšíření nezobrazuje, ale systém ho neumožní nainstalovat, odstraňte rozšíření z ** \\ \* rozšíření \\ %localappdata%\Microsoft\VisualStudio 0 \**.
+- Pokud se rozšíření v nástroji Správce rozšíření nezobrazuje, ale systém ho neumožní nainstalovat, odstraňte rozšíření z **\\ \* rozšíření \\ %localappdata%\Microsoft\VisualStudio 0 \**.
 
 - Otevřete soubor .vsix a zkontrolujte jeho obsah. Chcete-li jej otevřít, změňte jeho příponu na .zip. Ověřte, zda obsahuje soubory .dll, .pkgdef a extension.vsixmanifest. Soubor extension.vsixmanifest by měl obsahovat příslušný seznam v uzlu SupportedProducts a měl by také obsahovat uzel VsPackage pod uzlem Content:
 
@@ -164,17 +166,17 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
 2. V editoru registru přejděte na
 
-    **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ \* . 0 \ TextTemplating\DirectiveProcessors**
+    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ \* . 0 \ TextTemplating\DirectiveProcessors**
 
     Pokud chcete nainstalovat procesor direktiv v experimentální verzi sady Visual Studio, vložte "EXP" po "11,0".
 
 3. Přidejte klíč registru, který má stejný název jako třída procesoru direktiv.
 
-   - Ve stromové struktuře registru klikněte pravým tlačítkem myši na uzel **DirectiveProcessors** , přejděte na příkaz **Nový**a potom klikněte na možnost **klíč**.
+   - Ve stromové struktuře registru klikněte pravým tlačítkem myši na uzel **DirectiveProcessors** , přejděte na příkaz **Nový** a potom klikněte na možnost **klíč**.
 
 4. V novém uzlu přidejte podle následujících tabulek řetězcové hodnoty Class a CodeBase nebo Assembly.
 
-   1. Pravým tlačítkem myši klikněte na uzel, který jste vytvořili, přejděte na **Nový**a pak klikněte na **hodnota řetězce**.
+   1. Pravým tlačítkem myši klikněte na uzel, který jste vytvořili, přejděte na **Nový** a pak klikněte na **hodnota řetězce**.
 
    2. Upravte název hodnoty.
 
@@ -196,6 +198,6 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 |Třída|REG_SZ|\<**Your Fully Qualified Class Name**>|
 |Sestavení|REG_SZ|\<**Your Assembly Name in the GAC**>|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytváření vlastních procesorů pro direktivy textových šablon T4](../modeling/creating-custom-t4-text-template-directive-processors.md)

@@ -1,5 +1,7 @@
 ---
 title: Porozumění modelům, třídám a vztahům
+description: Přečtěte si, jak je definovaný jazyk domény (DSL) definovaný souborem definice DSL a že většina kódu programu v řešení DSL se z tohoto souboru vygeneruje.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08981e4f63c84d19d4086c75fe33a8b19a515ccf
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d912e98d01448a378acbed79e2278f70f62436e7
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809973"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362688"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Porozumění modelům, třídám a vztahům
 Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společně s jakýmkoli vlastním programovým kódem, který můžete napsat. Většina kódu programu v řešení DSL je vygenerována z tohoto souboru.
@@ -77,7 +79,7 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
 ## <a name="domain-relationships"></a>Doménové vztahy
  Prvky modelu mohou být propojeny pomocí vztahů. Odkazy jsou vždycky binární; propojí přesně dva prvky. Libovolný element ale může mít mnoho odkazů na jiné objekty a může dokonce být více než jedno propojení mezi stejnou dvojicí prvků.
 
- Stejně jako můžete definovat různé třídy prvků, můžete definovat různé třídy odkazů. Třída odkazu se nazývá *doménový vztah*. Doménový vztah určuje, ke kterým třídám prvků se může připojit. Každý konec relace se nazývá *role*a doménová relace definuje názvy pro tyto dvě role a také pro samotný vztah.
+ Stejně jako můžete definovat různé třídy prvků, můžete definovat různé třídy odkazů. Třída odkazu se nazývá *doménový vztah*. Doménový vztah určuje, ke kterým třídám prvků se může připojit. Každý konec relace se nazývá *role* a doménová relace definuje názvy pro tyto dvě role a také pro samotný vztah.
 
  Existují dva typy doménových vztahů: vkládání vztahů a referenčních vztahů. V diagramu definice DSL mají relace vložení plné čáry pro každou roli a referenční relace mají přerušované čáry.
 
@@ -148,6 +150,6 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
 
  Odvozený vztah se specializuje na základní vztah. Třídy domény, na které odkazuje, by měly být odvozeny od nebo stejné jako třídy propojené základní relací. Je-li v modelu vytvořen odkaz odvozeného vztahu, jedná se o instanci odvozeného i základního vztahu. V programovém kódu můžete přejít na opačný konec odkazu pomocí vlastností generovaných buď základní třídou, nebo odvozenou třídou.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

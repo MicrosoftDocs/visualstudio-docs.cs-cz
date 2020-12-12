@@ -1,5 +1,7 @@
 ---
 title: Práce s diagramem definice DSL
+description: Seznamte se s tím, že diagram definice nástrojů DSL je důležitým nástrojem pro definování jazyka specifického pro doménu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ec9e6fa7262fd389be7f1bb66ed2ed7005d6811
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d489bfde8b095e35bc652f1cdb7588b07458e48e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810793"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362831"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>Práce s diagramem definice DSL
 Diagram [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] definice je důležitým nástrojem pro definování jazyka specifického pro doménu. Můžete přidat prvky do doménového modelu a definovat relace v diagramu a upravit rozložení diagramu, aby bylo čitelnější.
@@ -70,6 +72,6 @@ Diagram [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] definice je důležitým
 ### <a name="show-as-class"></a>zobrazit jako třídu
  Pokud relace domény má odvozené relace nebo pokud má relace vložení nebo odkazu s ostatními doménami, můžete relaci zobrazit jako třídu tak, že kliknete pravým tlačítkem na vztah a potom kliknete na tlačítko **Zobrazit jako třídu**. Relace se zobrazí s oddílem **vlastnosti domény** a zobrazí se stromy dědičnosti a vztahů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

@@ -1,5 +1,7 @@
 ---
 title: Vytvoření kódu a textové šablony T4
+description: Zjistěte, jak je šablona textu T4 kombinací textových bloků a řídicí logiky, která může vygenerovat textový soubor.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fbcd41461ab57e3bbb5fb48849ddde8593c587fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 871aa20fe4fc95ea1641b7f478cb9b01d71284aa
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85548236"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363572"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>Vytvoření kódu a textové šablony T4
 
@@ -56,7 +58,7 @@ Další informace najdete v tématu [generování textu v době běhu s textový
 
 ## <a name="design-time-t4-text-templates"></a>Šablony textu T4 v době návrhu
 
-Šablony návrhu definují část zdrojového kódu a dalších prostředků vaší aplikace. Obvykle používáte několik šablon, které čtou data v jednom vstupním souboru nebo databázi, a vygenerujete některé z vašich souborů *. cs*, *. vb*nebo jiných zdrojových souborů. Každá šablona generuje jeden soubor. Jsou spouštěny v sadě Visual Studio nebo MSBuild.
+Šablony návrhu definují část zdrojového kódu a dalších prostředků vaší aplikace. Obvykle používáte několik šablon, které čtou data v jednom vstupním souboru nebo databázi, a vygenerujete některé z vašich souborů *. cs*, *. vb* nebo jiných zdrojových souborů. Každá šablona generuje jeden soubor. Jsou spouštěny v sadě Visual Studio nebo MSBuild.
 
 Vstupní data by například mohla být soubor XML s konfiguračními daty. Kdykoli upravíte soubor XML během vývoje, textové šablony znovu vygenerují část kódu aplikace. Jedna ze šablon by mohla vypadat podobně jako v následujícím příkladu:
 
@@ -90,10 +92,10 @@ Chcete-li vytvořit šablonu pro dobu návrhu, přidejte do projektu soubor **te
 Další informace najdete v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Další informace o syntaxi šablon najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
 
 > [!NOTE]
-> Termínový *model* se někdy používá k popisu dat přečtených jednou nebo více šablonami. Model může být v libovolném formátu v jakémkoli typu souboru nebo databáze. Nemusí se jednat o model UML ani model jazyka specifického pro doménu. Model označuje pouze to, že data lze definovat v rámci obchodních konceptů místo toho, aby se nemusela podobat kódu.
+> Termínový *model* se někdy používá k popisu dat přečtených jednou nebo více šablonami. Model může být v libovolném formátu v jakémkoli typu souboru nebo databáze. Nemusí se jednat o model UML ani Domain-Specific jazykový model. Model označuje pouze to, že data lze definovat v rámci obchodních konceptů místo toho, aby se nemusela podobat kódu.
 
 Funkce transformace textové šablony má název *T4*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)

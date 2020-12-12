@@ -1,5 +1,7 @@
 ---
 title: Definování zásady zamykání pro vytváření segmentů jen pro čtení
+description: Přečtěte si, jak můžete definovat zásady pro program, který zamkne část nebo celý model DSL (Domain-Specific Language), aby se mohl číst, ale nemění se.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0778df98ff5f9665da7220fe40972c9a8f8d8e1d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a76ae38b686e1c77acd9561e9c48fd3444565b0a
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536081"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363195"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>Definování zásady zamykání pro vytváření segmentů jen pro čtení
 Rozhraní neměnnosti API sady Visual Studio pro vizualizaci a modelování umožňuje programu uzamknout část nebo celý model DSL (Domain-Specific Language), aby jej bylo možné číst, ale nikoli měnit. Tuto možnost lze použít například k tomu, aby uživatel mohl požádat o přístup k modelu DSL a zkontrolovat ho, aby se v něm změnil originál.
@@ -79,7 +81,7 @@ partition.SetLocks(Locks.Delete);
 |-|-|
 |Žádné|Bez omezení.|
 |Vlastnost|Vlastnosti domény prvků nelze změnit. Toto neplatí pro vlastnosti, které jsou generovány rolí doménové třídy v relaci.|
-|Přidat|V oddílu nebo v úložišti nelze vytvořit nové prvky a odkazy.<br /><br /> Neplatí pro `ModelElement` .|
+|Přidání|V oddílu nebo v úložišti nelze vytvořit nové prvky a odkazy.<br /><br /> Neplatí pro `ModelElement` .|
 |Přesunout|Element nelze přesunout mezi oddíly, pokud `element.IsLocked(Move)` má hodnotu true, nebo pokud `targetPartition.IsLocked(Move)` má hodnotu true.|
 |Odstranit|Element nelze odstranit, je-li tento zámek nastaven na samotném prvku nebo na některé prvky, na které by se rozšířilo odstranění, jako jsou vložené prvky a tvary.<br /><br /> Můžete použít `element.CanDelete()` k zjištění, zda lze prvek odstranit.|
 |Změnit pořadí|Řazení odkazů na RolePlayer se nedá změnit.|

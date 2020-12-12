@@ -1,5 +1,7 @@
 ---
 title: Vizualizace kódu
+description: Přečtěte si, jak můžete pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio pochopit existující kód a popsat svoji aplikaci.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9886ea905a4997d5735e4dd2cabbfc4798a5c4c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b522ae21de3d0ea115bc83446f0585e1dc9ab1e7
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535873"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362506"
 ---
 # <a name="visualize-code"></a>Vizualizace kódu
 
@@ -40,7 +42,7 @@ Pokud chcete zjistit, které edice sady Visual Studio podporují jednotlivé fun
 |**Porozumění strukturám tříd:**<br /><br /> Vizualizujte strukturu tříd v projektu vytvořením diagramů tříd z kódu.|[Postupy: Přidání diagramů tříd do projektů (Návrhář tříd)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md)|
 |**Popište návrh systému vysoké úrovně a ověřte kód pro tento návrh:**<br /><br /> Popište návrh systému vysoké úrovně a jeho zamýšlené závislosti vytvořením diagramů závislostí. Ověřte kód pro tento návrh a ujistěte se, že závislosti v kódu zůstávají v souladu s návrhem.|- [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)<br />- [Diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md)<br />- [Ověřování kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Scénář: Změna návrhu pomocí vizualizace a modelování](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)
 - [Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md)

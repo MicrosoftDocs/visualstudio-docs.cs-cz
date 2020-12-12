@@ -1,5 +1,7 @@
 ---
 title: Postupy pro textové šablony
+description: Přečtěte si o odpovědích na časté otázky, které se vyskytly při použití textových šablon k vygenerování textu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a7ecabc00f37cb199f203bcd71a1b72bdbfbe1a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50844ce8c6943fcf6b2a0b91c7fd2cfcb6184094
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594653"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363182"
 ---
 # <a name="how-to--with-text-templates"></a>Postupy pro textové šablony
 Textové šablony v aplikaci Visual Studio poskytují užitečný způsob, jak vygenerovat text libovolného druhu. Můžete použít textové šablony k vygenerování textu v době běhu jako součást vaší aplikace a v době návrhu k vygenerování kódu projektu. Toto téma shrnuje nejčastější dotaz "Návody...?" otázky.
@@ -75,7 +77,7 @@ Pokud píšete metody sami:
 
      `foreach (Book book in this.Library) { ... }`
 
-     Další informace najdete v tématu [Začínáme s jazyky specifickými pro doménu](../modeling/getting-started-with-domain-specific-languages.md) a [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md).
+     Další informace najdete v tématu [Začínáme s Domain-Specific jazyky](../modeling/getting-started-with-domain-specific-languages.md) a [generování kódu z Domain-Specificho jazyka](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ### <a name="get-data-from-visual-studio"></a>Získat data ze sady Visual Studio
  Chcete-li použít služby poskytované v aplikaci Visual Studio, nastavte `hostSpecific` atribut a načtěte `EnvDTE` sestavení. Příklad:

@@ -1,5 +1,7 @@
 ---
 title: Ověřování v jazyce specifickém pro doménu
+description: Zjistěte, jak můžete definovat ověřovací omezení a ověřit tak, že model vytvořený uživatelem má smysl.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a37dbb4d9754641b4bcca826ff0ec77c7298d9b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cb9baced0a4cc38ae175146d3f3779c5b9c28dd2
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594003"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362532"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>Ověřování v jazyce specifickém pro doménu
 Jako autor jazyka DSL (Domain-Specific Language) můžete definovat ověřovací omezení a ověřit tak, že model vytvořený uživatelem má smysl. Pokud například vaše DSL umožňuje uživatelům nakreslit rodinný strom lidí a jejich předchůdce, mohli byste napsat omezení, které zajistí, že budou mít děti data po jejich rodičůch.
@@ -193,7 +195,7 @@ if (erroneousLinks.Count < 5) { context.LogError( ... ); }
 
  Pokud nastavíte násobnost role relace domény na hodnotu 1.. * nebo 1.. 1, ale uživatel nevytvoří odkaz na tento vztah, zobrazí se chybová zpráva ověření.
 
- Například pokud vaše DSL má třídy Person a město a vztah PersonLivesInTown s relací **1.. \\ ** * v roli města se zobrazí chybová zpráva pro každou osobu, která nemá žádnou město.
+ Například pokud vaše DSL má třídy Person a město a vztah PersonLivesInTown s relací **1.. \\** v roli města se zobrazí chybová zpráva pro každou osobu, která nemá žádnou město.
 
 ## <a name="running-validation-from-program-code"></a>Spuštění ověřování z kódu programu
  Ověřování můžete spustit přístupem k ValidationController nebo jeho vytvořením. Chcete-li, aby se chyby zobrazily uživateli v okně chyby, použijte ValidationController, který je připojen k DocData vašeho diagramu. Například pokud píšete příkaz nabídky, `CurrentDocData.ValidationController` je k dispozici ve třídě sady příkazů:
@@ -233,7 +235,7 @@ if (!validator.Validate(store, ValidationCategories.Save))
 ## <a name="running-validation-when-a-change-occurs"></a>Spuštění ověřování, když dojde ke změně
  Pokud se chcete ujistit, že uživatel bude upozorněn okamžitě, pokud je model neplatný, můžete definovat událost úložiště, která spouští ověřování. Další informace o událostech úložiště najdete v tématu [obslužné rutiny událostí rozšiřují změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
- Kromě ověřovacího kódu přidejte do projektu **DslPackage** vlastní soubor kódu s podobným obsahem jako v následujícím příkladu. Tento kód používá `ValidationController` , který je připojen k dokumentu. Tento kontroler zobrazuje chyby ověřování v seznamu chyb sady Visual Studio.
+ Kromě ověřovacího kódu přidejte do projektu _ *DslPackage** vlastní soubor kódu s obsahem, který je podobný následujícímu příkladu. Tento kód používá `ValidationController` , který je připojen k dokumentu. Tento kontroler zobrazuje chyby ověřování v seznamu chyb sady Visual Studio.
 
 ```csharp
 using System;
@@ -334,7 +336,7 @@ validationController.ValidateCustom
 > [!WARNING]
 > Ujistěte se, že uživatel ví, že změna byla upravena nebo vrácena zpět. Například použijte `System.Windows.Forms.MessageBox.Show("message").`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Obslužné rutiny události šířící změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md)

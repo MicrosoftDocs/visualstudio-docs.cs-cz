@@ -2,7 +2,7 @@
 title: Řešení a projekty
 description: Seznamte se s projekty a řešeními sady Visual Studio a Naučte se, jak vytvořit nový projekt pomocí nástroje pro Průzkumník řešení.
 ms.custom: SEO-VS-2020
-ms.date: 06/26/2020
+ms.date: 12/11/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewitem
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 949da02ac074e9740038fef7917655ca552a12f6
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 42250d4b60cf272f041fea6f44abd24f99645b93
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480704"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363455"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -60,6 +60,10 @@ Visual Studio používá dva typy souborů (*. sln* a *. suo*) k ukládání nas
 |. sln|Řešení sady Visual Studio|Uspořádá projekty, položky projektu a položky řešení v řešení.|
 |. suo|Možnosti uživatele řešení|Ukládá nastavení a přizpůsobení na úrovni uživatele, například zarážky.|
 
+### <a name="solution-folder"></a>Složka řešení
+
+V tomto kontextu je "Složka řešení" virtuální složkou, která je pouze v **Průzkumník řešení**, kde ji můžete použít k seskupení projektů v řešení. Pokud chcete najít, kde jsou projekty uloženy v počítači, přejděte do části **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení.
+
 ## <a name="create-new-projects"></a>Vytvořit nové projekty
 
 Nejjednodušší způsob, jak vytvořit nový projekt, je začít od šablony projektu pro konkrétní typ aplikace nebo webu. Šablona projektu se skládá ze základní sady předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení. Tyto šablony jsou k dispozici v dialogovém okně, kde vytvoříte nový projekt (**soubor**  >  **Nový**  >  **projekt**). Další informace naleznete v tématu [Vytvoření nového projektu v aplikaci Visual Studio](create-new-project.md) a [vytváření řešení a projektů](../ide/creating-solutions-and-projects.md).
@@ -83,7 +87,7 @@ U ASP.NET Core projektů můžete přizpůsobit, jak jsou soubory vnořené v **
 
 A pokud chcete zobrazit seznam některých ikon, které se zobrazují v Průzkumník řešení, přečtěte si téma [zobrazení tříd a prohlížeč objektů ikony](class-view-and-object-browser-icons.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Integrované vývojové prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
 - [Přenos, migrace a upgrade projektů](../porting/port-migrate-and-upgrade-visual-studio-projects.md)

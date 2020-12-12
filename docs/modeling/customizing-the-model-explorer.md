@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení Průzkumníka modelů
+description: Zjistěte, jak můžete změnit vzhled a chování Průzkumníka pro návrháře jazyka specifického pro doménu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b69748ef44ce0ca2e16f431c0d13d99bfa449411
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7d4bdfcea6cbc54fd620e9aacbdc6250493ca426
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807869"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362887"
 ---
 # <a name="customizing-the-model-explorer"></a>Přizpůsobení Průzkumníka modelů
 Vzhled a chování Průzkumníka pro návrháře jazyka specifického pro doménu můžete změnit následujícím způsobem:
@@ -30,7 +32,7 @@ Vzhled a chování Průzkumníka pro návrháře jazyka specifického pro domén
 - Skrytí uzlů.
 
 ## <a name="changing-the-window-title"></a>Změna názvu okna
- Chcete-li změnit název okna vygenerovaného Průzkumníka, vyberte **chování Průzkumníka** v **Průzkumníkovi DSL**a potom v okně **vlastnosti** nastavte vlastnost **title** na požadovaný název.
+ Chcete-li změnit název okna vygenerovaného Průzkumníka, vyberte **chování Průzkumníka** v **Průzkumníkovi DSL** a potom v okně **vlastnosti** nastavte vlastnost **title** na požadovaný název.
 
 ## <a name="changing-the-tab-icon"></a>Změna ikony karty
  Chcete-li změnit ikonu karty Průzkumníka, použijte ikonu 16x16 pixelů v souboru. bmp. Umístěte soubor ikony do složky \DslPackage\Resources\ a potom změňte název souboru na **ModelExplorerToolWindowBitmaps.bmp**. Můžete třeba změnit soubor ikony Setup. ico sady Visual Studio na formát. bmp a přejmenovat ho na **DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**. Vygenerovaný Návrhář zobrazí tuto ikonu na kartě v Průzkumníkovi, pokud je ukotven spolu s **Průzkumník řešení**.
@@ -44,11 +46,11 @@ Vzhled a chování Průzkumníka pro návrháře jazyka specifického pro domén
 
 2. Vložte soubor. bmp, který obsahuje ikonu 16x16 pixelů ve složce **Dsl\Resources** v řešení.
 
-3. V **Průzkumníku DSL**klikněte pravým tlačítkem myši na **chování Průzkumníka** a pak klikněte na **Přidat nové nastavení uzlu Průzkumníka**.
+3. V **Průzkumníku DSL** klikněte pravým tlačítkem myši na **chování Průzkumníka** a pak klikněte na **Přidat nové nastavení uzlu Průzkumníka**.
 
     Uzel **ExplorerNodeSettings** se zobrazí v uzlu **nastavení vlastního uzlu** .
 
-4. Vyberte **ExplorerNodeSettings**a potom v okně **vlastnosti** nastavte **třídu** na **actor**.
+4. Vyberte **ExplorerNodeSettings** a potom v okně **vlastnosti** nastavte **třídu** na **actor**.
 
 5. Nastavte **ikonu pro zobrazení** na cestu k souboru ikony.
 
@@ -68,21 +70,21 @@ Vzhled a chování Průzkumníka pro návrháře jazyka specifického pro domén
 
 1. Otevřete řešení, které jste vytvořili v předchozím postupu.
 
-2. Ujistěte se, že **Komentář** odkazuje pouze na jednu doménovou třídu nastavením násobnosti role s názvem vlastnosti **subjektům** na hodnotu 0.. 1. Název vlastnosti by měl být **předmětný**a název relace by měl být **CommentReferencesSubject**.
+2. Ujistěte se, že **Komentář** odkazuje pouze na jednu doménovou třídu nastavením násobnosti role s názvem vlastnosti **subjektům** na hodnotu 0.. 1. Název vlastnosti by měl být **předmětný** a název relace by měl být **CommentReferencesSubject**.
 
-3. V **Průzkumníku DSL**klikněte pravým tlačítkem myši na **chování Průzkumníka** a pak klikněte na **Přidat nové nastavení uzlu Průzkumníka**.
+3. V **Průzkumníku DSL** klikněte pravým tlačítkem myši na **chování Průzkumníka** a pak klikněte na **Přidat nové nastavení uzlu Průzkumníka**.
 
      Uzel **ExplorerNodeSettings** se zobrazí v uzlu **nastavení vlastního uzlu** .
 
-4. Vyberte **ExplorerNodeSettings**a potom v okně **vlastnosti** nastavte **třídu** na **komentovat**.
+4. Vyberte **ExplorerNodeSettings** a potom v okně **vlastnosti** nastavte **třídu** na **komentovat**.
 
 5. Klikněte pravým tlačítkem na uzel **Komentáře** a pak klikněte na **Přidat novou cestu k vlastnosti**.
 
      Zobrazí se nový uzel s názvem **zobrazená vlastnost**.
 
-6. Vyberte **zobrazenou vlastnost**a potom v okně **vlastnosti** klikněte na pole hodnota **cesta k vlastnosti**. Vyberte **Komentář**a pak **CommentReferencesSubject**a pak **FlowElement**. Výsledná cesta by měla být podobná **CommentReferencesSubject. Subject/! Předmět**.
+6. Vyberte **zobrazenou vlastnost** a potom v okně **vlastnosti** klikněte na pole hodnota **cesta k vlastnosti**. Vyberte **Komentář** a pak **CommentReferencesSubject** a pak **FlowElement**. Výsledná cesta by měla být podobná **CommentReferencesSubject. Subject/! Předmět**.
 
-7. V poli hodnota **vlastnosti**vyberte možnost **název**.
+7. V poli hodnota **vlastnosti** vyberte možnost **název**.
 
 8. Transformujte všechny šablony a potom Sestavte a spusťte vaše řešení.
 
@@ -99,11 +101,11 @@ Vzhled a chování Průzkumníka pro návrháře jazyka specifického pro domén
 
 1. Otevřete řešení, které jste vytvořili v předchozím postupu.
 
-2. V **Průzkumníku DSL**klikněte pravým tlačítkem myši na **chování Průzkumníka** a pak klikněte na **Přidat novou cestu k doméně**.
+2. V **Průzkumníku DSL** klikněte pravým tlačítkem myši na **chování Průzkumníka** a pak klikněte na **Přidat novou cestu k doméně**.
 
-     V části **skryté uzly**se zobrazí uzel **cesta k doméně** .
+     V části **skryté uzly** se zobrazí uzel **cesta k doméně** .
 
-3. Vyberte možnost **cesta k doméně**a potom v okně **vlastnosti** klikněte na pole hodnota **definice cesty**. Vyberte **FlowGraph**a pak **FlowGraphHasComments**. Výsledná cesta by měla vypadat podobně jako **FlowGraphHasComments. Comments**
+3. Vyberte možnost **cesta k doméně** a potom v okně **vlastnosti** klikněte na pole hodnota **definice cesty**. Vyberte **FlowGraph** a pak **FlowGraphHasComments**. Výsledná cesta by měla vypadat podobně jako **FlowGraphHasComments. Comments**
 
 4. Transformujte všechny šablony a potom Sestavte a spusťte vaše řešení.
 
@@ -111,6 +113,6 @@ Vzhled a chování Průzkumníka pro návrháře jazyka specifického pro domén
 
      Průzkumník by měl zobrazit pouze uzel **Actors** a neměl by zobrazovat uzel **Komentáře** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))
