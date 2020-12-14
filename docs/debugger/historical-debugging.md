@@ -1,5 +1,7 @@
 ---
 title: Historické ladění | Microsoft Docs
+description: Vyřešte potíže s aplikací tak, že zkontrolujete její stav při přesunu zpět a vpřed po jejím spuštění. IntelliTrace shromažďuje informace o této funkci.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 7cc5ddf2-2f7c-4f83-b7ca-58e92e9bfdd2
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e44e62997cac1060047de03253880bbf577935da
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38166f777153206ad4b862ac473226aecdff4147
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62895166"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398542"
 ---
 # <a name="historical-debugging-c-visual-basic-c"></a>Historické ladění (C#, Visual Basic, C++)
 

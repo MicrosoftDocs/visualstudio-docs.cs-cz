@@ -1,6 +1,7 @@
 ---
 title: Ladění narušení přístupu C++ | Microsoft Docs
-ms.custom: seodec18
+description: Přečtěte si tipy pro řešení potíží s porušením přístupu, pokud je více než jeden ukazatel kandidátem. Poslední verze sady Visual Studio pojmenují ukazatel errant.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 02/05/2019
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 803f81d1a26438c2134349a85369d341353e17cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0fb7e6f5ae71cf336f9fe206bc7b0208566b615
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350417"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398568"
 ---
 # <a name="how-can-i-debug-a-c-access-violation"></a>Jak mohu ladit porušení přístupu k C++?
 

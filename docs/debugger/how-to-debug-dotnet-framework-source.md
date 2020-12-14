@@ -1,5 +1,7 @@
 ---
 title: .NET Framework zdroj ladění | Microsoft Docs
+Description: Naučte se ladit zdroj .NET Framework. Je nutné pro něj nakonfigurovat a stáhnout symboly ladění.
+ms.custom: SEO-VS-2020
 ms.date: 11/19/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f054564ff36c538b18525ec9d8adf9b6f3d060b9
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 13a575ec2e77f1b715ec5f17324a6933d8cf0805
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852123"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398620"
 ---
 # <a name="how-to-debug-net-framework-source"></a>Postupy: ladění zdroje .NET Framework
 
@@ -29,7 +31,7 @@ Chcete-li ladit zdroj .NET Framework, musíte:
 
 ### <a name="to-enable-stepping-into-net-framework-source"></a>Postup povolení krokování do zdroje .NET Framework
 
-1. V části **nástroje** (nebo **ladění**) > **Možnosti**  >  **ladění**  >  **obecně**vyberte **Povolit .NET Framework krokování zdroje**.
+1. V části **nástroje** (nebo **ladění**) > **Možnosti**  >  **ladění**  >  **obecně** vyberte **Povolit .NET Framework krokování zdroje**.
 
    - Pokud jste Pouze můj kód povolili, zobrazí se dialogové okno s upozorněním, že Pouze můj kód je teď zakázané. Vyberte **OK**.
 
@@ -39,7 +41,7 @@ Chcete-li ladit zdroj .NET Framework, musíte:
 
 ### <a name="to-set-or-change-symbol-source-locations-and-loading-behavior"></a>Nastavení nebo změna umístění zdroje symbolu a chování načítání
 
-1. Vyberte kategorii **symboly** v nabídce **nástroje** (nebo **ladění**) > **Options**  >  **ladění**možností.
+1. Vyberte kategorii **symboly** v nabídce **nástroje** (nebo **ladění**) >   >  **ladění** možností.
 
 1. Na stránce **symboly** v části **umístění souborů symbolů (. pdb)** vyberte **Microsoft Symbol Servers** , abyste měli přístup k symbolům z veřejných serverů Microsoft symbol. Vyberte tlačítka panelu nástrojů pro přidání dalších umístění symbolů a změňte pořadí načítání.
 
@@ -53,7 +55,7 @@ Chcete-li ladit zdroj .NET Framework, musíte:
 
 ### <a name="to-load-symbols-from-the-modules-or-call-stack-windows"></a>Načtení symbolů z modulů nebo oken zásobníku volání
 
-1. Během ladění otevřete okno výběrem možnosti **ladit**  >  moduly**systému Windows**  >  **Modules** (nebo stiskněte klávesy **CTRL + ALT + U**) nebo **laděním**  >  **Windows**  >  **zásobníku volání** systému Windows (**CTRL + ALT + C**).
+1. Během ladění otevřete okno výběrem možnosti **ladit**  >  moduly **systému Windows**  >   (nebo stiskněte klávesy **CTRL + ALT + U**) nebo **laděním**  >    >  **zásobníku volání** systému Windows (**CTRL + ALT + C**).
 
 1. Klikněte pravým tlačítkem na modul, pro který nejsou načtené symboly. V okně **moduly** je stav načítání symbolů ve sloupci **stav symbolů** . V okně **zásobník volání** je stav ve sloupci **stav rámce** a rámeček je šedý.
 

@@ -1,6 +1,7 @@
 ---
 title: Ladění narušení přístupu při spuštění aplikace mimo Visual Studio
 titleSuffix: ''
+description: Použijte ladicí program za běhu k ladění narušení přístupu, ke kterému dochází mimo prostředí sady Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bbc129c4f5f4aa4d3ed1c6e346f9f8ab0395230
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 49d1fb2b24488692031c647139aa1f1076f0dd6f
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852175"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398481"
 ---
 # <a name="how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger"></a>Jak mohu ladit porušení přístupu, když program spouštím mimo ladicí program?
 

@@ -1,5 +1,7 @@
 ---
 title: Příkazy nabídky Help | Microsoft Docs
+description: Prohlédněte si příkazy dostupné v nabídce nástroje Spy + +.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c58bc069b3d38c4086a5642d13bb907528923bb5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 492062a5ba53eb277263e4284b74710786e13993
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62895099"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398607"
 ---
 # <a name="help-menu-commands"></a>Příkazy nabídky nápovědy
 Nabídka **help** poskytuje příkazy pro otevření souborů s příponou help.

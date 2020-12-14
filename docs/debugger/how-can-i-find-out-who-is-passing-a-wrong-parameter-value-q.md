@@ -1,6 +1,7 @@
 ---
 title: Zjistěte, kdo předává nesprávnou hodnotu parametru | Microsoft Docs
-ms.custom: seodec18
+Description: Můžete zjistit, jaký kód volá vaši funkci a předat nesprávnou hodnotu parametru. Naučte se používat podmíněný bod přerušení.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bd6aaa912a384acbb41c42bfa4785eda52ae78a
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: de87da994dfab59d5df618671737003beea9678b
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599873"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398308"
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>Jak zjistím, kdo předává nesprávnou hodnotu parametru?
 ## <a name="problem-description"></a>Popis problému

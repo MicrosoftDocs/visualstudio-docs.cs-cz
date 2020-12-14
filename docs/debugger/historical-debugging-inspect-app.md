@@ -1,5 +1,7 @@
 ---
 title: Kontrola aplikace s historickým laděním | Microsoft Docs
+description: Sledujte chybu v konzolové aplikaci v jazyce C#, která používá historické ladění IntelliTrace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 629b5d93-39b2-430a-b8ba-d2a47fdf2584
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efabc8cd185daed4f018e3e4209e391b5bc39f44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d51327f67429071d08f6dfd02c0ec0a1fc55822f
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350443"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398698"
 ---
 # <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>Kontrola aplikace pomocí IntelliTrace historické ladění v aplikaci Visual Studio (C#, Visual Basic, C++)
 
@@ -51,7 +53,7 @@ private static int AddInt(int add)
 }
 ```
 
-Předpokládáme, že očekávaná hodnota `resultInt` po volání `AddAll()` je 20 (výsledek násobení `testInt` 20 časů). (Předpokládáme také, že se chyba v nástroji nezobrazuje `AddInt()` ). Výsledek je ale ve skutečnosti 44. Jak můžeme najít chybu bez krokování po `AddAll()` dobu 10 krát? Pomocí historických ladění můžeme najít chybu rychleji a snadněji. Zde je uveden postup:
+Předpokládáme, že očekávaná hodnota `resultInt` po volání `AddAll()` je 20 (výsledek násobení `testInt` 20 časů). (Předpokládáme také, že se chyba v nástroji nezobrazuje `AddInt()` ). Výsledek je ale ve skutečnosti 44. Jak můžeme najít chybu bez krokování po `AddAll()` dobu 10 krát? Pomocí historických ladění můžeme najít chybu rychleji a snadněji. Jak na to:
 
 1. V **nabídce nástroje > možnosti > IntelliTrace > obecné**, ujistěte se, že je povolená možnost IntelliTrace, a vyberte **události IntelliTrace a informace o volání**. Pokud tuto možnost nevyberete, nebudete moci zobrazit navigační vazbu (jak je vysvětleno níže).
 
@@ -71,7 +73,7 @@ Předpokládáme, že očekávaná hodnota `resultInt` po volání `AddAll()` je
 
     ![okno Code v historickém režimu ladění](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")
 
-6. Nyní se můžete krokovat s `AddAll()` metodou (**F11**nebo **krokem** na tlačítku v navigačním hřbetu). Krok nahoru (**F10**nebo **Přejít na další volání** v navigačním hřbetu. Růžová čára je nyní na `j = AddInt(j);` řádku. **F10** v tomto případě nekrokuje na další řádek kódu. Místo toho se postupuje na další volání funkce. Historické ladění přechází z volání na volání a přeskočí řádky kódu, které nezahrnují volání funkce.
+6. Nyní se můžete krokovat s `AddAll()` metodou (**F11** nebo **krokem** na tlačítku v navigačním hřbetu). Krok nahoru (**F10** nebo **Přejít na další volání** v navigačním hřbetu. Růžová čára je nyní na `j = AddInt(j);` řádku. **F10** v tomto případě nekrokuje na další řádek kódu. Místo toho se postupuje na další volání funkce. Historické ladění přechází z volání na volání a přeskočí řádky kódu, které nezahrnují volání funkce.
 
 7. Nyní proveďte krok do `AddInt()` metody. V tomto kódu by se měla zobrazit chyba hned.
 

@@ -1,5 +1,7 @@
 ---
-title: Ladění služby WCF s místním hostováním | Microsoft Docs
+title: Ladění služby Self-Hosted WCF | Microsoft Docs
+Description: Naučte se ladit službu WCF s místním hostováním. Nejjednodušší způsob (ale ne vždy možný) je konfigurace sady Visual Studio tak, aby spouštěla klienta i server.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac58c187e147040c5ef82320a3b44e86912ed5b8
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 983c053ca6bd1370cf67cb04eeb2626c2b1217aa
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852188"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398724"
 ---
 # <a name="how-to-debug-a-self-hosted-wcf-service"></a>Postupy: Ladění služby WCF s vlastním hostováním
 *Samoobslužná služba* je služba WCF, která neběží ve službě IIS, hostiteli služby WCF ani [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] vývojovém serveru. Nejjednodušší způsob, jak ladit technologii WCF v místním prostředí, je nakonfigurovat [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tak, aby spouštěla klienta i server, když zvolíte možnost **Spustit ladění** v nabídce **ladění** .
@@ -41,7 +43,7 @@ ms.locfileid: "90852188"
 
 2. Nakonfigurujte řešení tak, aby spouštělo procesy klienta i serveru, když v nabídce **ladění** zvolíte možnost **Spustit** .
 
-   1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název řešení.
+   1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na název řešení.
 
    2. Klikněte na **nastavit projekty po spuštění**.
 
@@ -55,5 +57,5 @@ ms.locfileid: "90852188"
 
 ## <a name="see-also"></a>Viz také
 - [Ladění služeb WCF](../debugger/debugging-wcf-services.md)
-- [Omezení ladění WCF](../debugger/limitations-on-wcf-debugging.md)
+- [Omezení pro ladění WCF](../debugger/limitations-on-wcf-debugging.md)
 - [Postupy: krokování se službami WCF](../debugger/how-to-step-into-wcf-services.md)

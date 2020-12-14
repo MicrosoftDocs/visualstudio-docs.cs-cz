@@ -1,5 +1,7 @@
 ---
 title: Změnit písma | Microsoft Docs
+Description: Podívejte se, jak nastavit písmo, styl písma a velikost písma pro Windows Spy + +. Své volby můžete uložit jako výchozí hodnoty pro budoucí prostředí Spy + +.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77789ed5d262be87076631e978fbc46e972158ae
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 93a3a0c536e9f3cfc13d2372038651c0765149cf
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851486"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398400"
 ---
 # <a name="how-to-change-fonts"></a>Postupy: Změna písem
 U oken Spy + + můžete změnit písmo, styl písma a velikost písma.
