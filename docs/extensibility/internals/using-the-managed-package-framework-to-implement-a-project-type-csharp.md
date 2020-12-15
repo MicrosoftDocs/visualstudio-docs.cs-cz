@@ -1,5 +1,6 @@
 ---
 title: Použití spravovaného rozhraní balíčků pro typ projektu (C#)
+description: Seznamte se s architekturou spravovaného balíčku, která poskytuje třídy .NET, které můžete použít nebo zdědit z k implementaci vlastních typů projektů.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fca3f95780d548b4482c502f5b3eaa44005fd2e2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 4b425962ed0f664b8255b6489ac8f0d38be7c13c
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038644"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487540"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>Použití rozhraní MPF (Managed Package Framework) k implementaci typu projektu (C#)
 Sada Managed Package Framework (MPF) poskytuje třídy jazyka C#, které můžete použít nebo zdědit z k implementaci vlastních typů projektů. Příkaz MPF implementuje mnoho rozhraní. Visual Studio očekává typ projektu, který má poskytnout, a zachová se soustředit na implementaci podrobností o typu projektu.
@@ -84,7 +85,7 @@ Sada Managed Package Framework (MPF) poskytuje třídy jazyka C#, které můžet
 |`Microsoft.VisualStudio.Package.AssemblyReferenceNode`|
 |`Microsoft.VisualStudio.Package.BuildDependency`|
 
-## <a name="document-handling-classes"></a>Třídy zpracování dokumentu
+## <a name="document-handling-classes"></a>Třídy Document-Handling
  V následující tabulce jsou uvedeny třídy v poli MPF, které podporují zpracování dokumentů. Další informace naleznete v tématu [otevření a uložení položek projektu](../../extensibility/internals/opening-and-saving-project-items.md).
 
 |Název třídy|
@@ -103,7 +104,7 @@ Sada Managed Package Framework (MPF) poskytuje třídy jazyka C#, které můžet
 |`Microsoft.VisualStudio.Package.OutputGroup`|
 |`Microsoft.VisualStudio.Package.ProjectElement`|
 
-## <a name="automation-support-classes"></a>Automatizace – třídy podpory
+## <a name="automation-support-classes"></a>Třídy Automation-Support
  V následující tabulce jsou uvedeny třídy v MPF, které podporují automatizaci, aby uživatelé typu projektu mohli zapisovat doplňky.
 
 |Název třídy|
