@@ -1,5 +1,7 @@
 ---
 title: Omezení model Windows Formsch ovládacích prvků v dokumentech Office
+description: Přečtěte si o omezeních metod a vlastností ovládacích prvků model Windows Forms v dokumentu systém Microsoft Office.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ade7da21a8d07fbd429a88303ad2be375877c1ec
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 63459f4daf1f9fe717946491a997ba47510fbab8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583733"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524456"
 ---
 # <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Omezení model Windows Formsch ovládacích prvků v dokumentech Office
 

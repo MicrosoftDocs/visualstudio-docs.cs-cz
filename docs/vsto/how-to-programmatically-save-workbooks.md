@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: ukládání sešitů prostřednictvím kódu programu'
+description: Programové ukládání sešitů aplikace Microsoft Excel beze změny cesty a uložení kopie sešitu, aniž by bylo nutné upravovat otevřený sešit v paměti.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6b45449f72275ac154a433cad725a2867062cc5e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbc228a703d6c9224fda545a93132ccb45c94b0f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547079"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524627"
 ---
 # <a name="how-to-programmatically-save-workbooks"></a>Postupy: ukládání sešitů prostřednictvím kódu programu
   Existuje několik způsobů, jak sešit uložit. Sešit můžete uložit beze změny cesty. Pokud sešit ještě nebyl uložen, uložte ho zadáním cesty. Bez explicitní cesty systém Microsoft Office Excel uloží soubor do aktuální složky s názvem, který jste zadali při jeho vytvoření. Můžete také uložit kopii sešitu beze změny otevřeného sešitu v paměti.

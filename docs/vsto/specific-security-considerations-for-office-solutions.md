@@ -1,5 +1,7 @@
 ---
 title: Konkrétní požadavky na zabezpečení pro řešení Office
+description: Přečtěte si, jak funkce zabezpečení poskytované Microsoft .NET Framework a systém Microsoft Office můžou pomáhat chránit vaše řešení pro Office proti bezpečnostním hrozbám.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 571b604b87fb7fac4e78c83a791c265d910fae94
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0da77067931d35ee63a9ccc9b0de85752157772b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985585"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524298"
 ---
 # <a name="specific-security-considerations-for-office-solutions"></a>Konkrétní požadavky na zabezpečení pro řešení Office
   Funkce zabezpečení poskytované Microsoftem .NET Framework a systém Microsoft Office můžou pomáhat chránit vaše řešení pro Office proti možným bezpečnostním hrozbám. Toto téma vysvětluje některé z těchto hrozeb a poskytuje doporučení, která jim pomůžou s jejich ochranou. Obsahuje také informace o tom, jak systém Microsoft Office nastavení zabezpečení ovlivňují řešení Office.

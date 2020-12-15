@@ -1,5 +1,7 @@
 ---
 title: 'Návod: import oblasti formuláře navržené v aplikaci Outlook'
+description: Naučte se navrhovat oblast formuláře v aplikaci Microsoft Outlook a pak ji importovat do projektu doplňku VSTO aplikace Outlook pomocí Průvodce vytvořením nové oblasti formuláře.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2a0de1a25a5309e99193b7be8bce2819808665b8
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9b65502bbf29f6e0df7435f6a27d3c51e8082e41
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584973"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522672"
 ---
 # <a name="walkthrough-import-a-form-region-that-is-designed-in-outlook"></a>Návod: import oblasti formuláře navržené v aplikaci Outlook
   Tento názorný postup ukazuje návrh oblasti formuláře v aplikaci systém Microsoft Office Outlook a následné importování oblasti formuláře do projektu doplňku aplikace Outlook VSTO pomocí Průvodce vytvořením **nové oblasti formuláře** . Návrh oblasti formuláře v aplikaci Outlook umožňuje přidat nativní ovládací prvky aplikace Outlook do oblasti formuláře, která je vázána na data aplikace Outlook. Po importu oblasti formuláře můžete zpracovat události každého ovládacího prvku.
@@ -57,7 +59,7 @@ ms.locfileid: "91584973"
 
 2. V Outlooku na kartě **vývojář** klikněte na **navrhnout formulář**. Další informace najdete v tématu [Postup: zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
 
-3. V poli **formulář návrhu** klikněte na **úloha**a pak klikněte na **otevřít**.
+3. V poli **formulář návrhu** klikněte na **úloha** a pak klikněte na **otevřít**.
 
 4. V aplikaci Outlook na kartě **vývojář** ve skupině **Návrh** klikněte na možnost **Nová oblast formuláře**.
 
@@ -71,39 +73,39 @@ ms.locfileid: "91584973"
 
 8. Klikněte pravým tlačítkem na popisek a pak klikněte na **Upřesnit vlastnosti**.
 
-9. V okně **vlastnosti** nastavte vlastnost **Titulek** na **Tento úkol závisí na následujících úkolech**, nastavte vlastnost **Width** na **200**a potom klikněte na tlačítko **použít**.
+9. V okně **vlastnosti** nastavte vlastnost **Titulek** na **Tento úkol závisí na následujících úkolech**, nastavte vlastnost **Width** na **200** a potom klikněte na tlačítko **použít**.
 
 10. Přetáhněte ovládací prvek ListBox z **panelu nástrojů** do oblasti formuláře. Umístit seznam pod **tuto úlohu závisí na následujícím popisku úkolů** .
 
 11. Vyberte pole se seznamem, které jste právě přidali.
 
-12. V okně **vlastnosti** nastavte možnost **Šířka** na **300**a pak klikněte na **použít**.
+12. V okně **vlastnosti** nastavte možnost **Šířka** na **300** a pak klikněte na **použít**.
 
 13. Přetáhněte popisek z **panelu nástrojů** do oblasti formuláře. Umístěte popisek pod pole seznamu.
 
 14. Vyberte popisek, který jste právě přidali.
 
-15. V okně **vlastnosti** nastavte vlastnost **Titulek** na **možnost vyberte úkol, který chcete přidat do seznamu závislých úloh**, nastavte vlastnost **Width** na **200**a potom klikněte na tlačítko **použít**.
+15. V okně **vlastnosti** nastavte vlastnost **Titulek** na **možnost vyberte úkol, který chcete přidat do seznamu závislých úloh**, nastavte vlastnost **Width** na **200** a potom klikněte na tlačítko **použít**.
 
 16. Přetáhněte ovládací prvek ComboBox ze **sady nástrojů** do oblasti formuláře. Umístěte pole se seznamem pod rozevíracím seznamem **Vyberte úkol, který chcete přidat do seznamu popisků závislých úloh** .
 
 17. Vyberte pole se seznamem, které jste právě přidali.
 
-18. V okně **vlastnosti** nastavte vlastnost **Width** na **300**a potom klikněte na **použít**.
+18. V okně **vlastnosti** nastavte vlastnost **Width** na **300** a potom klikněte na **použít**.
 
 19. Přetáhněte ovládací prvek CommandButton z **panelu nástrojů** do oblasti formuláře. Umístěte příkazové tlačítko vedle pole se seznamem.
 
 20. Vyberte příkazové tlačítko, které jste právě přidali.
 
-21. V okně **vlastnosti** nastavte **název** na **AddDependentTask**, nastavit **Titulek** na **přidat závislý úkol**, nastavte možnost **Šířka** na **100**a pak klikněte na **použít**.
+21. V okně **vlastnosti** nastavte **název** na **AddDependentTask**, nastavit **Titulek** na **přidat závislý úkol**, nastavte možnost **Šířka** na **100** a pak klikněte na **použít**.
 
-22. V okně **výběr pole**klikněte na **Nový**.
+22. V okně **výběr pole** klikněte na **Nový**.
 
 23. Do pole **název** v dialogovém okně **nové pole** zadejte **HiddenField** a pak klikněte na **OK**.
 
 24. Přetáhněte pole **HiddenField** z **výběru pole** do oblasti formuláře.
 
-25. V okně **vlastnosti** nastavte hodnotu **Zobrazit** na **0 – NEPRAVDA**a pak klikněte na **použít**.
+25. V okně **vlastnosti** nastavte hodnotu **Zobrazit** na **0 – NEPRAVDA** a pak klikněte na **použít**.
 
 26. V Outlooku na kartě **vývojář** ve skupině **Návrh** klikněte na tlačítko **Uložit** a pak klikněte na **Uložit oblast formuláře jako**.
 
@@ -131,23 +133,23 @@ ms.locfileid: "91584973"
 
 ### <a name="to-import-the-form-region-into-the-outlook-vsto-add-in-project"></a>Import oblasti formuláře do projektu doplňku VSTO pro Outlook
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **TaskAddIn** , přejděte na **Přidat**a klikněte na **Nová položka**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt **TaskAddIn** , přejděte na **Přidat** a klikněte na **Nová položka**.
 
-2. V podokně **šablony** vyberte možnost **oblast formuláře Outlook**, název souboru **TaskFormRegion**a pak klikněte na tlačítko **Přidat**.
+2. V podokně **šablony** vyberte možnost **oblast formuláře Outlook**, název souboru **TaskFormRegion** a pak klikněte na tlačítko **Přidat**.
 
      Spustí se průvodce **oblastí formuláře NewOutlook** .
 
 3. Na stránce **Vyberte, jak chcete vytvořit oblast formuláře** , klikněte na položku **importovat soubor úložiště formuláře aplikace Outlook (. ofs)** a potom klikněte na tlačítko **Procházet**.
 
-4. V dialogovém okně **existující umístění souboru oblasti formuláře Outlooku** přejděte do umístění *TaskFormRegion. ofs*, vyberte **TaskFormRegion. ofs**, klikněte na **otevřít**a pak klikněte na **Další**.
+4. V dialogovém okně **existující umístění souboru oblasti formuláře Outlooku** přejděte do umístění *TaskFormRegion. ofs*, vyberte **TaskFormRegion. ofs**, klikněte na **otevřít** a pak klikněte na **Další**.
 
-5. Na stránce **Vyberte typ oblasti formuláře, který chcete vytvořit** klikněte na **Nahradit vše**a pak klikněte na **Další**.
+5. Na stránce **Vyberte typ oblasti formuláře, který chcete vytvořit** klikněte na **Nahradit vše** a pak klikněte na **Další**.
 
      Region *Replace-All* Form nahrazuje celý formulář aplikace Outlook. Další informace o typech oblastí formuláře najdete v tématu věnovaném [vytváření oblastí formulářů aplikace Outlook](../vsto/creating-outlook-form-regions.md).
 
 6. Na stránce **Zadejte popisný text a vyberte své předvolby zobrazení** klikněte na **Další**.
 
-7. V části **Identifikujte třídy zpráv, které budou zobrazovat tuto stránku oblasti** formuláře, v poli **které vlastní třídy zpráv zobrazí toto pole formuláře** , zadejte **IPM. Task. TaskFormRegion**a potom klikněte na **Dokončit**.
+7. V části **Identifikujte třídy zpráv, které budou zobrazovat tuto stránku oblasti** formuláře, v poli **které vlastní třídy zpráv zobrazí toto pole formuláře** , zadejte **IPM. Task. TaskFormRegion** a potom klikněte na **Dokončit**.
 
      Do projektu se přidá soubor *TaskFormRegion.cs* nebo *TaskFormRegion. vb* .
 
@@ -158,7 +160,7 @@ ms.locfileid: "91584973"
 
 ### <a name="to-handle-the-events-of-controls-on-the-form-region"></a>Zpracování událostí ovládacích prvků v oblasti formuláře
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na *TaskFormRegion.cs* nebo *TaskFormRegion. vb*a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na *TaskFormRegion.cs* nebo *TaskFormRegion. vb* a pak klikněte na **Zobrazit kód**.
 
     V editoru kódu se otevře *TaskFormRegion.cs* nebo *TaskFormRegion. vb* .
 
@@ -212,21 +214,21 @@ ms.locfileid: "91584973"
 
      Spustí se aplikace Outlook.
 
-2. V Outlooku na kartě **Domů** klikněte na **nové položky**a pak klikněte na **úloha**.
+2. V Outlooku na kartě **Domů** klikněte na **nové položky** a pak klikněte na **úloha**.
 
 3. Ve formuláři úlohy zadejte do pole **Předmět** **závislý úkol** .
 
 4. Na kartě **úloha** na pásu karet ve skupině **Akce** klikněte na **Uložit & zavřít**.
 
-5. V Outlooku na kartě **Domů** klikněte na **nové položky**, klikněte na **Další položky**a potom klikněte na **Zvolit formulář**.
+5. V Outlooku na kartě **Domů** klikněte na **nové položky**, klikněte na **Další položky** a potom klikněte na **Zvolit formulář**.
 
-6. V dialogovém okně **Zvolit formulář** klikněte na **TaskFormRegion**a pak klikněte na **otevřít**.
+6. V dialogovém okně **Zvolit formulář** klikněte na **TaskFormRegion** a pak klikněte na **otevřít**.
 
      Zobrazí se oblast formuláře **TaskFormRegion** . Tento formulář nahrazuje celý formulář úkolu. Pole se seznamem **Vybrat úlohu, která se mají přidat do seznamu závislé úlohy** , se naplní dalšími úkoly ve složce úkoly.
 
 7. Ve formuláři úlohy zadejte do pole **Předmět** **primární úlohu**.
 
-8. V poli **Vyberte úkol, který se má přidat do pole se seznamem závislých úloh** vyberte **závislý úkol**a pak klikněte na **přidat závislý úkol**.
+8. V poli **Vyberte úkol, který se má přidat do pole se seznamem závislých úloh** vyberte **závislý úkol** a pak klikněte na **přidat závislý úkol**.
 
      **0% dokončení – závislý úkol** v **této úloze závisí na následujícím poli se seznamem úkolů** . To ukazuje, že jste úspěšně zpracovali `Microsoft.Office.Interop.Outlook.OlkCommandButton.Click` Událost tlačítka.
 

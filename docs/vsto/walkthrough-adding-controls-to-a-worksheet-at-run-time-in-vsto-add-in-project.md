@@ -1,5 +1,7 @@
 ---
 title: Přidat do listu ovládací prvky v době běhu v projektu doplňku VSTO
+description: Naučte se používat pás karet, který uživatelům umožňuje přidat do listu tlačítko, NamedRange a ListObject.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ec1d1361d7ca58d4292cbbb7bc4ea3b707a748ff
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e9987e9427c0fe982cf3ddcb88ce8071caab04b0
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584344"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522772"
 ---
 # <a name="walkthrough-add-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>Návod: Přidání ovládacích prvků na list v době běhu v projektu doplňku VSTO
   Pomocí doplňku pro Excel VSTO můžete přidat ovládací prvky do libovolného otevřeného listu. Tento návod ukazuje, jak použít pás karet k tomu, aby uživatelé mohli do <xref:Microsoft.Office.Tools.Excel.Controls.Button> listu přidat, a <xref:Microsoft.Office.Tools.Excel.NamedRange> a <xref:Microsoft.Office.Tools.Excel.ListObject> . Informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
@@ -65,7 +67,7 @@ ms.locfileid: "91584344"
 
      Soubor s názvem **Ribbon1.cs** nebo **Ribbon1. vb** se otevře v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
 
-3. Na kartě **ovládací prvky pásu karet Office** na **panelu nástrojů**přetáhněte ovládací prvek CheckBox na **Group1**.
+3. Na kartě **ovládací prvky pásu karet Office** na **panelu nástrojů** přetáhněte ovládací prvek CheckBox na **Group1**.
 
 4. Klikněte na možnost **checkBox1** a vyberte ji.
 
@@ -76,14 +78,14 @@ ms.locfileid: "91584344"
     |**Název**|**Tlačítko**|
     |**Popisek**|**Tlačítko**|
 
-6. Přidejte druhé zaškrtávací políčko do **Group1**a potom změňte následující vlastnosti.
+6. Přidejte druhé zaškrtávací políčko do **Group1** a potom změňte následující vlastnosti.
 
     |Vlastnost|Hodnota|
     |--------------|-----------|
     |**Název**|**NamedRange**|
     |**Popisek**|**NamedRange**|
 
-7. Přidejte třetí zaškrtávací políčko do **Group1**a potom změňte následující vlastnosti.
+7. Přidejte třetí zaškrtávací políčko do **Group1** a potom změňte následující vlastnosti.
 
     |Vlastnost|Hodnota|
     |--------------|-----------|
@@ -106,7 +108,7 @@ ms.locfileid: "91584344"
      [!code-csharp[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#2)]
      [!code-vb[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#2)]
 
-3. V **Průzkumník řešení**vyberte *Ribbon1.cs* nebo *Ribbon1. vb*.
+3. V **Průzkumník řešení** vyberte *Ribbon1.cs* nebo *Ribbon1. vb*.
 
 4. V nabídce **zobrazení** klikněte na možnost **Návrhář**.
 
@@ -138,7 +140,7 @@ ms.locfileid: "91584344"
 
 ### <a name="to-remove-controls-from-the-worksheet"></a>Odebrání ovládacích prvků z listu
 
-1. V **Průzkumník řešení**vyberte *ThisAddIn.cs* nebo *ThisAddIn. vb*.
+1. V **Průzkumník řešení** vyberte *ThisAddIn.cs* nebo *ThisAddIn. vb*.
 
 2. V nabídce **zobrazení** klikněte na příkaz **Code (kód**).
 

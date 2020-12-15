@@ -1,5 +1,7 @@
 ---
 title: 'Návod: automatizace aplikace z vlastního podokna úloh'
+description: Vytvořte vlastní podokno úloh, které automatizuje aplikaci Microsoft PowerPoint vložením dat do snímku, když uživatel klikne na ovládací prvek MonthCalendar v vlastním podokně úloh.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 52474aeebfbc03fba2a2e119e1b3366c30cf6959
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7bb53d56a83c74a0ab1719f62377e2da426a83fd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585077"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522802"
 ---
 # <a name="walkthrough-automate-an-application-from-a-custom-task-pane"></a>Návod: automatizace aplikace z vlastního podokna úloh
   Tento návod ukazuje, jak vytvořit vlastní podokno úloh, které automatizuje PowerPoint. Vlastní podokno úloh vloží data do snímku, když uživatel klikne <xref:System.Windows.Forms.MonthCalendar> na ovládací prvek, který se nachází v podokně vlastní úlohy.
@@ -66,11 +68,11 @@ ms.locfileid: "91585077"
 
 1. V nabídce **projekt** klikněte na příkaz **Přidat uživatelský ovládací prvek**.
 
-2. V dialogovém okně **Přidat novou položku** změňte název uživatelského ovládacího prvku na **MyUserControl**a klikněte na tlačítko **Přidat**.
+2. V dialogovém okně **Přidat novou položku** změňte název uživatelského ovládacího prvku na **MyUserControl** a klikněte na tlačítko **Přidat**.
 
      Uživatelský ovládací prvek se otevře v návrháři.
 
-3. Na kartě **běžné ovládací prvky** **panelu nástrojů**přetáhněte ovládací prvek **MonthCalendar** do uživatelského ovládacího prvku.
+3. Na kartě **běžné ovládací prvky** **panelu nástrojů** přetáhněte ovládací prvek **MonthCalendar** do uživatelského ovládacího prvku.
 
      Pokud je ovládací prvek **MonthCalendar** větší než návrhová plocha uživatelského ovládacího prvku, změňte velikost uživatelského ovládacího prvku tak, aby odpovídala ovládacímu prvku **MonthCalendar** .
 
@@ -98,14 +100,14 @@ ms.locfileid: "91585077"
      [!code-csharp[Trin_TaskPaneMonthCalendar#3](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs#3)]
      [!code-vb[Trin_TaskPaneMonthCalendar#3](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb#3)]
 
-5. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt **MyAddIn** a pak klikněte na **sestavit**. Ověřte, že se projekt vytváří bez chyb.
+5. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt **MyAddIn** a pak klikněte na **sestavit**. Ověřte, že se projekt vytváří bez chyb.
 
 ## <a name="display-the-custom-task-pane"></a>Zobrazit vlastní podokno úloh
  Pokud chcete zobrazit vlastní podokno úloh při spuštění doplňku VSTO, přidejte uživatelský ovládací prvek do podokna úloh v <xref:Microsoft.Office.Tools.AddIn.Startup> obslužné rutině události doplňku VSTO.
 
 ### <a name="to-display-the-custom-task-pane"></a>Zobrazení vlastního podokna úloh
 
-1. V **Průzkumník řešení**rozbalte možnost **PowerPoint**.
+1. V **Průzkumník řešení** rozbalte možnost **PowerPoint**.
 
 2. Klikněte pravým tlačítkem na **ThisAddIn.cs** nebo **ThisAddIn. vb** a klikněte na **Zobrazit kód**.
 

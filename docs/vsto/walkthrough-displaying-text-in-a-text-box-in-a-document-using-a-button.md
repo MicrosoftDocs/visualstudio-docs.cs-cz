@@ -1,5 +1,7 @@
 ---
 title: Zobrazit text v textovém poli v dokumentu pomocí tlačítka
+description: Přečtěte si, jak můžete používat tlačítka a textová pole v přizpůsobení na úrovni dokumentu pro Microsoft Word.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8f3c467abcee8fb4faafd2da06ba261e7f3039fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cda1fe3e7430ff30dcc3b3921eb2bcd4d31b699
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328757"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522753"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-document-using-a-button"></a>Návod: zobrazení textu v textovém poli v dokumentu s použitím tlačítka
   Tento návod ukazuje, jak používat tlačítka a textová pole v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word.
@@ -57,7 +59,7 @@ ms.locfileid: "67328757"
 
 1. Ověřte, že je dokument otevřený v návrháři sady Visual Studio.
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**přetáhněte <xref:Microsoft.Office.Tools.Word.Controls.TextBox> ovládací prvek do dokumentu.
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** přetáhněte <xref:Microsoft.Office.Tools.Word.Controls.TextBox> ovládací prvek do dokumentu.
 
    > [!NOTE]
    > V aplikaci Word jsou ovládací prvky ve výchozím nastavení zavěšeny textem. Můžete upravit způsob, jakým jsou ovládací prvky a objekty tvarů vloženy, změnou výchozí hodnoty na kartě **Upravit** v dialogovém okně **Možnosti** ve Wordu.
@@ -80,7 +82,7 @@ ms.locfileid: "67328757"
 
 ### <a name="to-write-to-the-text-box-when-the-button-is-clicked"></a>Zápis do textového pole při kliknutí na tlačítko
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **ThisDocument**a potom klikněte na **Zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **ThisDocument** a potom klikněte na **Zobrazit kód** v místní nabídce.
 
 2. Přidejte následující kód do <xref:System.Windows.Forms.Control.Click> obslužné rutiny události tlačítka.
 

@@ -1,5 +1,7 @@
 ---
 title: Správa přístupových práv k informacím & rozšíření spravovaného kódu
+description: Přečtěte si o funkci Information Rights Management (IRM), která vám umožní zabránit neoprávněným osobám v prohlížení a změně citlivých informací.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 06b55855184aaef57ec0a3425abed7d235ec837b
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: fc300ac83674b8faf2bd4c0fc6128f60c28ee92b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298068"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523049"
 ---
 # <a name="information-rights-management-and-managed-code-extensions-overview"></a>Přehled správy přístupových práv k informacím a rozšíření spravovaného kódu
   Systém Microsoft Office Word a systém Microsoft Office Excel poskytují informace Rights Management (IRM), což je funkce, která vám umožní zabránit neoprávněným osobám v prohlížení a změnách citlivých informací. Podrobnosti o tom, jak Rights Management informace fungují, najdete v nápovědě v konkrétní aplikaci Office.

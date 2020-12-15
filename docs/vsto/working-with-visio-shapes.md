@@ -1,5 +1,7 @@
 ---
 title: Práce s obrazci aplikace Visio
+description: Přečtěte si o podrobných postupech a příkladech kódu pro použití objektového modelu Microsoft Visia pro práci s tvary v projektech Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,17 +15,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 09109d59522fcd6ace69abcd3335e2dec2edd91b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 928e4888c52e5b75a721bb7a1837d8db1ce267ea
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62815060"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523250"
 ---
 # <a name="work-with-visio-shapes"></a>Práce s obrazci aplikace Visio
   Témata v této části poskytují podrobné postupy a příklady kódu pro použití objektového modelu aplikace systém Microsoft Office Visio pro práci s tvary v projektech Office.
 
-|Úkol|Postup|
+|Úloha|Postup|
 |----------|---------------|
 |Přidejte obrazce ze vzorníku do dokumentu aplikace Visio.|[Postupy: přidávání obrazců do dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-add-shapes-to-a-visio-document.md)|
 |Zkopírujte obrazce z jedné stránky Visia a vložte je na jinou stránku.|[Postupy: kopírování a vkládání tvarů v dokumentu aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-copy-and-paste-shapes-in-a-visio-document.md)|

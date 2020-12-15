@@ -1,5 +1,7 @@
 ---
 title: Přehled modelu objektů aplikace Word
+description: Objektový model aplikace Word se skládá z tříd a rozhraní, které jsou k dispozici v primárním sestavení vzájemné spolupráce pro Word a jsou definovány v oboru názvů Word.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 71e66d6cda802b2b1243911e1927af751e2cdbe9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d8ca92fdebb3504331ec38937dd79786fdb8b42
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985395"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523484"
 ---
 # <a name="word-object-model-overview"></a>Přehled modelu objektů aplikace Word
   Při vývoji řešení aplikace Word v aplikaci Visual Studio budete pracovat s modelem objektu aplikace Word. Tento objektový model se skládá z tříd a rozhraní, které jsou k dispozici v primárním sestavení vzájemné spolupráce pro Word, a jsou definovány v <xref:Microsoft.Office.Interop.Word> oboru názvů.

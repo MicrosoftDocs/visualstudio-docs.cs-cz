@@ -1,5 +1,7 @@
 ---
 title: Práce se sešity
+description: Přečtěte si, že třídy sešitů a sešitů obsahují metody a vlastnosti, které slouží k provádění úkolů se sešity.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,17 +15,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3d4d6eec08ae75efbd9104ace25409d336e45f40
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6e328d48873c30626e2b661ede23b3d91066a0e5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62814685"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522568"
 ---
 # <a name="work-with-workbooks"></a>Práce se sešity
   <xref:Microsoft.Office.Tools.Excel.Workbook>Třída a <xref:Microsoft.Office.Interop.Excel.Workbooks> obsahuje metody a vlastnosti, které slouží k provádění úkolů se sešity.
 
-|Úkol|Postup|
+|Úloha|Postup|
 |----------|---------------|
 |Vytvoří nový sešit.|[Postupy: vytváření nových sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-workbooks.md)|
 |Otevře zadaný sešit.|[Postupy: otevírání sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-open-workbooks.md)|

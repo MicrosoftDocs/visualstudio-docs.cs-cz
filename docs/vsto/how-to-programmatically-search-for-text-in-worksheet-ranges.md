@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: hledání textu v oblastech listů prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově vyhledávat text v oblastech listů Microsoft Excelu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f69a0b2c7191f608e4d18c6c3990c1ce19f1ed7e
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 01ce01e76aa56a834f4f63cd2bd0f6f16c4ab03a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584752"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524554"
 ---
 # <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>Postupy: hledání textu v oblastech listů prostřednictvím kódu programu
   <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>Metoda <xref:Microsoft.Office.Interop.Excel.Range> objektu umožňuje vyhledávat text v rámci rozsahu. Tento text může také obsahovat libovolný z chybových řetězců, které se mohou objevit v buňce listu, jako je například `#NULL!` nebo `#VALUE!` . Další informace o chybových řetězcích najdete v tématu [hodnoty chyb buněk](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values).

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: otevírání dokumentů aplikace Visio prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově otevřít dokument Visia pomocí metod Open nebo OpenEx.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb21d201c282461cbe82005f56bed023bb022209
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec46f4fd7be136d16e15e9fa366b7a4cb921b62e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519987"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523838"
 ---
 # <a name="how-to-programmatically-open-visio-documents"></a>Postupy: otevírání dokumentů aplikace Visio prostřednictvím kódu programu
   Existují dvě metody otevření existujících systém Microsoft Office dokumentů aplikace Visio: Open a OpenEx. Metoda OpenEx je shodná s metodou Open, s tím rozdílem, že poskytuje argumenty, ve kterých může volající určit způsob otevření dokumentu.

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: řazení dat v listech prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově seřadit data, která jsou obsažena v oblastech a seznamech listů za běhu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 08fa461dc55bf42857e21a5419cab6a0ff147173
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f09fed7f1caff68a485d9d0d98789555ec30889c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546975"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523686"
 ---
 # <a name="how-to-programmatically-sort-data-in-worksheets"></a>Postupy: řazení dat v listech prostřednictvím kódu programu
   Data, která jsou obsažena v oblasti a v seznamech, můžete řadit v době běhu. Následující kód seřadí rozsah více sloupců s názvem `Fruits` daty v prvním sloupci a následně data ve druhém sloupci.

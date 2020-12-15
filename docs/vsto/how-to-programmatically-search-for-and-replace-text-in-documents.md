@@ -1,5 +1,7 @@
 ---
 title: Hledání a nahrazování textu v dokumentech prostřednictvím kódu programu
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově vyhledat a nahradit text v dokumentu Microsoft Wordu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 18a50d6d4ef52a0c50be0b72b4cab5706da4e2db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ad77da419f70a8e513bf152ced41cccdd0474a8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547040"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524598"
 ---
 # <a name="how-to-programmatically-search-for-and-replace-text-in-documents"></a>Postupy: hledání a nahrazování textu v dokumentech prostřednictvím kódu programu
   <xref:Microsoft.Office.Interop.Word.Find>Objekt je členem <xref:Microsoft.Office.Interop.Word.Selection> objektů i a <xref:Microsoft.Office.Interop.Word.Range> a můžete použít jeden z nich k hledání textu v systém Microsoft Office dokumentů aplikace Word. Příkaz replace je rozšíření příkazu find.

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vytváření tabulek aplikace Word prostřednictvím kódu programu'
+description: Naučte se používat metodu Add kolekce Tables k přidání tabulky v zadaném rozsahu do dokumentu Microsoft Wordu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a1bc20b277df90ae963d257137373457a0196e72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2d31f656f0f383ec63fb50f10b19ee26fe2509e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544752"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523936"
 ---
 # <a name="how-to-programmatically-create-word-tables"></a>Postupy: vytváření tabulek aplikace Word prostřednictvím kódu programu
   <xref:Microsoft.Office.Interop.Word.Tables>Kolekce je členem <xref:Microsoft.Office.Interop.Word.Document> <xref:Microsoft.Office.Tools.Word.Document> tříd,, a <xref:Microsoft.Office.Interop.Word.Selection> <xref:Microsoft.Office.Interop.Word.Range> , což znamená, že můžete vytvořit tabulku v některém z těchto kontextů. Pomocí <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> metody <xref:Microsoft.Office.Interop.Word.Tables> kolekce přidáte tabulku v zadaném rozsahu.

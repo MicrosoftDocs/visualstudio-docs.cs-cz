@@ -1,5 +1,7 @@
 ---
 title: 'Návod: jednoduché datové vazby v projektech na úrovni dokumentu'
+description: Naučte se základy datových vazeb v projektech na úrovni dokumentu a že jedno datové pole v SQL Server databázi je vázáno na pojmenovaný rozsah v aplikaci Microsoft Excel.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0c22947e572a29c2b49a5ce9bb808c3cf2fe2902
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 868a120baa8207d922d3dee55e10c8e903381e19
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584921"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524102"
 ---
 # <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>Návod: jednoduché datové vazby v projektech na úrovni dokumentu
   Tento návod ukazuje základy datové vazby v projektu na úrovni dokumentu. Jedno datové pole v databázi SQL Server je svázáno s pojmenovaným rozsahem v systém Microsoft Office Excel. Návod také ukazuje, jak přidat ovládací prvky, které umožňují procházet všechny záznamy v tabulce.
@@ -64,7 +66,7 @@ ms.locfileid: "91584921"
 
 ### <a name="to-create-the-data-source"></a>Vytvoření zdroje dat
 
-1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
+1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat** Windows.
 
 2. Zvolením možnosti **Přidat nový zdroj dat** spusťte **Průvodce konfigurací zdroje dat**.
 
@@ -103,11 +105,11 @@ ms.locfileid: "91584921"
 
 6. V rozevíracím seznamu klikněte na **NamedRange** a potom přetáhněte sloupec **KódZákazníka** na buňku **B1**.
 
-7. <xref:Microsoft.Office.Tools.Excel.NamedRange> `customerIDNamedRange` V buňce **B1**je vytvořen jiný ovládací prvek s názvem a svázán s <xref:System.Windows.Forms.BindingSource> .
+7. <xref:Microsoft.Office.Tools.Excel.NamedRange> `customerIDNamedRange` V buňce **B1** je vytvořen jiný ovládací prvek s názvem a svázán s <xref:System.Windows.Forms.BindingSource> .
 
 ### <a name="to-add-four-buttons"></a>Přidání čtyř tlačítek
 
-1. Na kartě **běžné ovládací prvky** **panelu nástrojů**přidejte <xref:System.Windows.Forms.Button> ovládací prvek do buňky **a3** listu.
+1. Na kartě **běžné ovládací prvky** **panelu nástrojů** přidejte <xref:System.Windows.Forms.Button> ovládací prvek do buňky **a3** listu.
 
     Toto tlačítko má název `Button1` .
 
@@ -126,7 +128,7 @@ ms.locfileid: "91584921"
 
 ### <a name="to-initialize-the-controls"></a>Inicializace ovládacích prvků
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs**a pak klikněte na **Zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs** a pak klikněte na **Zobrazit kód** v místní nabídce.
 
 2. Přidejte následující kód do `Sheet1_Startup` metody pro nastavení textu pro každé tlačítko.
 

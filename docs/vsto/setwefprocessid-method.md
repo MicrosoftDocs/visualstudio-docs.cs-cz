@@ -1,5 +1,7 @@
 ---
 title: Metoda Setwefprocessid –
+description: Přečtěte si, jak metoda Setwefprocessid – poskytuje identifikátor procesu, který bude spouštět obsah rozhraní Web Extensions (WEF).
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -10,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 13a6748e2e3b66f581a3c72c1f847e0329189e64
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 523279d70215af90ea070ea8272a5221d9947582
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537329"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524324"
 ---
 # <a name="setwefprocessid-method"></a>Metoda Setwefprocessid –
   Poskytuje identifikátor procesu, který spustí obsah architektury Web Extensions (WEF).

@@ -1,5 +1,7 @@
 ---
 title: Řešení chyb v řešeních pro systém Office
+description: Zjistěte, jak můžete řešit chyby, ke kterým může dojít při vývoji systém Microsoft Office řešení v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: troubleshooting
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4f0d4eee6714d29a1609f6f6531ab18c132d5527
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd12c3dd9cd3c90564351dd1c64cebfe5df6e99d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234689"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523029"
 ---
 # <a name="troubleshoot-errors-in-office-solutions"></a>Řešení chyb v řešeních pro systém Office
   Při vývoji řešení pro systém Office v sadě Visual Studio mohou nastat problémy při provádění následujících úloh:
@@ -111,11 +113,11 @@ ms.locfileid: "87234689"
 ### <a name="some-events-of-office-objects-are-not-accessible-when-using-c"></a>Při použití jazyka C nejsou k dispozici některé události objektů Office.\#
  V některých případech se může při pokusu o přístup k určité události instance typu PIA (Primary Interop Assembly) v projektu jazyka Visual C# zobrazit chyba kompilátoru, například následující.
 
- "Nejednoznačnost mezi" Microsoft. Office. Interop. Excel. _Application. NewWorkbook "a" Microsoft. Office. Interop. Excel. AppEvents_Event. NewWorkbook ""
+ "Nejednoznačnost mezi" Microsoft.Office.Interop.Excel._Application. NewWorkbook "a" Microsoft.Office.Interop.Excel.AppEvents_Event. NewWorkbook ""
 
  Tato chyba znamená, že se pokoušíte o přístup k události, která má stejný název jako jiná vlastnost nebo metoda objektu. Chcete-li získat přístup k události, je nutné přetypovat objekt na jeho *rozhraní události*.
 
- Typy PIA Office, které mají události, implementují dvě rozhraní: základní rozhraní se všemi vlastnostmi a metodami a rozhraní události obsahující události, které jsou vystavené objektem. Tato rozhraní událostí používají zásady pojmenování *ObjectName*události*n*_Event, například <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> a <xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event> . Pokud nemůžete získat přístup k události, kterou očekáváte najít u objektu, přetypování objektu na jeho rozhraní události.
+ Typy PIA Office, které mají události, implementují dvě rozhraní: základní rozhraní se všemi vlastnostmi a metodami a rozhraní události obsahující události, které jsou vystavené objektem. Tato rozhraní událostí používají zásady pojmenování *ObjectName* události *n* _Event, například <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> a <xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event> . Pokud nemůžete získat přístup k události, kterou očekáváte najít u objektu, přetypování objektu na jeho rozhraní události.
 
  Například <xref:Microsoft.Office.Interop.Excel.Application> objekty mají <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> událost a <xref:Microsoft.Office.Interop.Excel._Application.NewWorkbook%2A> vlastnost. Chcete-li zpracovat <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> událost, přetypování na <xref:Microsoft.Office.Interop.Excel.Application> <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> rozhraní. Následující příklad kódu ukazuje, jak to provést v projektu na úrovni dokumentu pro Excel.
 
@@ -124,7 +126,7 @@ ms.locfileid: "87234689"
  Další informace o rozhraních událostí v rámci PIA pro Office naleznete v tématu [Přehled tříd a rozhraní v primárních sestaveních vzájemné spolupráce pro systém Office](/previous-versions/office/office-12//ms247299(v=office.12)).
 
 ### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-net_v40_short-or-the-net_v45"></a>Nejde odkazovat na třídy Office PIA v projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo. [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]
- V projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] , kód, který odkazuje na třídu, která je definována v Office PIA, se ve výchozím nastavení nezkompiluje. Třídy v PIA využívají třídu *ObjectName*pro pojmenování, jako je například <xref:Microsoft.Office.Interop.Word.DocumentClass> a <xref:Microsoft.Office.Interop.Excel.WorkbookClass> . Například následující kód z projektu doplňku VSTO aplikace Word nebude zkompilován.
+ V projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] , kód, který odkazuje na třídu, která je definována v Office PIA, se ve výchozím nastavení nezkompiluje. Třídy v PIA využívají třídu *ObjectName* pro pojmenování, jako je například <xref:Microsoft.Office.Interop.Word.DocumentClass> a <xref:Microsoft.Office.Interop.Excel.WorkbookClass> . Například následující kód z projektu doplňku VSTO aplikace Word nebude zkompilován.
 
 ```vb
 Dim document As Word.DocumentClass = Globals.ThisAddIn.Application.ActiveDocument
@@ -197,7 +199,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
  Pokud vytvoříte projekt na úrovni dokumentu pro aplikaci Excel nebo Word v umístění v síti UNC, je nutné přidat umístění dokumentu do seznamu důvěryhodných umístění v aplikaci Excel nebo Word. V opačném případě se přizpůsobení nenačte při pokusu o spuštění nebo ladění projektu v aplikaci Visual Studio. Další informace o důvěryhodných umístěních najdete v tématu [udělení důvěryhodnosti k dokumentům](../vsto/granting-trust-to-documents.md).
 
 ### <a name="threads-are-not-stopped-correctly-after-debugging"></a>Po ladění se vlákna nezastavila správně.
- Projekty Office v sadě Visual Studio následují konvence vytváření názvů vláken, která umožňuje ladicímu programu program správně zavřít. Pokud vytvoříte vlákna ve vašem řešení, měli byste pojmenovat každé vlákno s předponou VSTA_, abyste zajistili, že tato vlákna budou zpracována správně při zastavení ladění. Například můžete nastavit `Name` vlastnost vlákna, která čeká na **VSTA_NetworkListener**události sítě.
+ Projekty Office v sadě Visual Studio následují konvence vytváření názvů vláken, která umožňuje ladicímu programu program správně zavřít. Pokud vytvoříte vlákna ve vašem řešení, měli byste pojmenovat každé vlákno s předponou VSTA_, abyste zajistili, že tato vlákna budou zpracována správně při zastavení ladění. Například můžete nastavit `Name` vlastnost vlákna, která čeká na **VSTA_NetworkListener** události sítě.
 
 ### <a name="cannot-run-or-debug-any-office-solution-on-the-development-computer"></a>Nejde spustit ani ladit žádné řešení Office na vývojovém počítači.
  Pokud nemůžete spustit nebo vyvíjet projekt sady Office na vývojovém počítači, může se zobrazit následující chybová zpráva.

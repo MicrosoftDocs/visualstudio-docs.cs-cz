@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: používání předdefinovaných dialogových oken v aplikaci Word prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově používat integrovaná dialogová okna v aplikaci Microsoft Word.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6edba0b1fe9f06dbf7dba8dd1a3d01c4041ba8fe
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: b2c1a748d38c2b649705fa1ad2de21553b710634
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585651"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523622"
 ---
 # <a name="how-to-programmatically-use-built-in-dialog-boxes-in-word"></a>Postupy: používání předdefinovaných dialogových oken v aplikaci Word prostřednictvím kódu programu
   Při práci s systém Microsoft Office Wordem existují situace, kdy je potřeba zobrazit dialogová okna pro vstup uživatele. I když můžete vytvořit vlastní, můžete také chtít vzít v úvahu přístup k používání vestavěných dialogových oken ve Wordu, které jsou přístupné v <xref:Microsoft.Office.Interop.Word.Dialogs> kolekci <xref:Microsoft.Office.Interop.Word.Application> objektu. To vám umožní přístup přes 200 z vestavěných dialogových oken, které jsou reprezentovány jako výčty.

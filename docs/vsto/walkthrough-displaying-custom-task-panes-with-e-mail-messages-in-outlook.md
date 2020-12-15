@@ -1,5 +1,7 @@
 ---
 title: Zobrazení vlastních podoken úloh s e-mailovými zprávami v Outlooku
+description: Naučte se, jak zobrazit jedinečnou instanci vlastního podokna úloh s každou e-mailovou zprávou v aplikaci Microsoft Outlook, která je vytvořená nebo otevřená.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 00a8eae3f0beea7482c5fd7a1ac1ebd1994b9c35
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ac14eff05c6f776181c20acde4cff4e2ed7a87b6
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584279"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522705"
 ---
 # <a name="walkthrough-display-custom-task-panes-with-email-messages-in-outlook"></a>Návod: zobrazení vlastních podoken úloh s e-mailovými zprávami v aplikaci Outlook
   Tento návod ukazuje, jak zobrazit jedinečnou instanci vlastního podokna úloh s každou vytvořenou nebo otevřenou e-mailovou zprávou. Uživatelé mohou vlastní podokno úloh Zobrazit nebo skrýt pomocí tlačítka na pásu karet jednotlivých e-mailových zpráv.
@@ -72,15 +74,15 @@ ms.locfileid: "91584279"
 
 ### <a name="to-design-the-user-interface-of-the-custom-task-pane"></a>Návrh uživatelského rozhraní vlastního podokna úloh
 
-1. V **Průzkumník řešení**klikněte na projekt **OutlookMailItemTaskPane** .
+1. V **Průzkumník řešení** klikněte na projekt **OutlookMailItemTaskPane** .
 
 2. V nabídce **projekt** klikněte na příkaz **Přidat uživatelský ovládací prvek**.
 
-3. V dialogovém okně **Přidat novou položku** změňte název uživatelského ovládacího prvku na **TaskPaneControl**a potom klikněte na tlačítko **Přidat**.
+3. V dialogovém okně **Přidat novou položku** změňte název uživatelského ovládacího prvku na **TaskPaneControl** a potom klikněte na tlačítko **Přidat**.
 
      Uživatelský ovládací prvek se otevře v návrháři.
 
-4. Na kartě **běžné ovládací prvky** **panelu nástrojů**přetáhněte ovládací prvek **TextBox** do uživatelského ovládacího prvku.
+4. Na kartě **běžné ovládací prvky** **panelu nástrojů** přetáhněte ovládací prvek **TextBox** do uživatelského ovládacího prvku.
 
 ## <a name="design-the-user-interface-of-the-ribbon"></a>Návrh uživatelského rozhraní pásu karet
  Jedním z cílů tohoto doplňku VSTO je poskytnout uživatelům způsob, jak skrýt nebo zobrazit vlastní podokno úloh na pásu karet jednotlivých e-mailových zpráv. K poskytnutí uživatelského rozhraní můžete vytvořit vlastní uživatelské rozhraní pásu karet, které zobrazí přepínací tlačítko, na které uživatelé můžou kliknout a zobrazit nebo skrýt vlastní podokno úloh.
@@ -91,7 +93,7 @@ ms.locfileid: "91584279"
 
 2. V dialogovém okně **Přidat novou položku** vyberte možnost **pás karet (vizuální Návrhář)**.
 
-3. Změňte název nového pásu karet na **ManageTaskPaneRibbon**a klikněte na **Přidat**.
+3. Změňte název nového pásu karet na **ManageTaskPaneRibbon** a klikněte na **Přidat**.
 
      Otevře se soubor *ManageTaskPaneRibbon.cs* nebo *ManageTaskPaneRibbon. vb* v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
 
@@ -99,7 +101,7 @@ ms.locfileid: "91584279"
 
 5. V okně **vlastnosti** nastavte vlastnost **popisek** na **Správce podokna úloh**.
 
-6. Na kartě **ovládací prvky pásu karet Office** přetáhněte **Toolbox**ovládací prvek ToggleButton do skupiny **Správce podokna úloh** .
+6. Na kartě **ovládací prvky pásu karet Office** přetáhněte ovládací prvek ToggleButton do skupiny **Správce podokna úloh** .
 
 7. Klikněte na **ToggleButton1**.
 
@@ -112,7 +114,7 @@ ms.locfileid: "91584279"
 
 1. V Návrháři pásu karet klikněte na pás karet **ManageTaskPaneRibbon** .
 
-2. V okně **vlastnosti** klikněte na rozevírací seznam vedle **RibbonType**a vyberte **Microsoft. Outlook. mail.** Form a **Microsoft. Outlook. mail. Read**.
+2. V okně **vlastnosti** klikněte na rozevírací seznam vedle **RibbonType** a vyberte **Microsoft. Outlook. mail.** Form a **Microsoft. Outlook. mail. Read**.
 
 ## <a name="create-a-class-to-manage-inspector-windows-and-custom-task-panes"></a>Vytvoření třídy pro správu oken Inspector a vlastních podoken úloh
  V některých případech musí doplněk VSTO určit, které vlastní podokno úloh je přidruženo k konkrétní e-mailové zprávě. Tyto případy jsou následující:
@@ -127,7 +129,7 @@ ms.locfileid: "91584279"
 
 ### <a name="to-create-a-class-to-manage-inspector-windows-and-custom-task-panes"></a>Vytvoření třídy pro správu oken Inspector a vlastních podoken úloh
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor *ThisAddIn.cs* nebo *ThisAddIn. vb* a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor *ThisAddIn.cs* nebo *ThisAddIn. vb* a pak klikněte na **Zobrazit kód**.
 
 2. Na začátek souboru přidejte následující příkazy.
 
@@ -200,7 +202,7 @@ ms.locfileid: "91584279"
 
 ### <a name="to-build-your-project"></a>Sestavení projektu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt **OutlookMailItemTaskPane** a pak klikněte na **sestavit**. Ověřte, že se projekt zkompiluje bez chyb.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt **OutlookMailItemTaskPane** a pak klikněte na **sestavit**. Ověřte, že se projekt zkompiluje bez chyb.
 
 ## <a name="synchronize-the-ribbon-toggle-button-with-the-custom-task-pane"></a>Synchronizace přepínacího tlačítka pásu karet s vlastním podoknem úloh
  Přepínací tlačítko se zobrazí, když je podokno úlohy zobrazené, a když je podokno úloh skryté, zobrazí se nestisknuté. Chcete-li synchronizovat stav tlačítka s vlastním podoknem úloh, upravte <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> obslužnou rutinu události přepínacího tlačítka.

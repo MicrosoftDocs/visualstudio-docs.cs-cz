@@ -1,5 +1,7 @@
 ---
 title: Pozdní vazba v řešeních pro systém Office
+description: Přečtěte si, jak některé typy v objektových modelech v aplikacích systém Microsoft Office poskytují funkce, které jsou k dispozici prostřednictvím funkcí s pozdní vazbou.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 62224006d04e0a1e7447053e868dd9946f00c97e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 201b850d8a577f8cc76aff97e2370998b6f885ed
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62583940"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523564"
 ---
 # <a name="late-binding-in-office-solutions"></a>Pozdní vazba v řešeních pro systém Office
   Některé typy v objektových modelech aplikace Office poskytují funkce, které jsou k dispozici prostřednictvím funkcí s pozdní vazbou. Například některé metody a vlastnosti mohou vracet různé typy objektů v závislosti na kontextu aplikace sady Office a některé typy mohou vystavovat různé metody nebo vlastnosti v různých kontextech.

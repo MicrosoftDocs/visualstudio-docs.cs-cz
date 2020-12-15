@@ -1,5 +1,7 @@
 ---
 title: Položka hostitele listu
+description: Přečtěte si, že položka hostitele listu je typ, který rozšiřuje typ listu z primárního definičního sestavení pro Excel.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 301b0a62efae4674432b1051451e5d982899c1b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b25b921d29bee832ef37b943fd57edc38b7518db
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254874"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523222"
 ---
 # <a name="worksheet-host-item"></a>Položka hostitele listu
   <xref:Microsoft.Office.Tools.Excel.Worksheet>Položka hostitele je typ, který rozšiřuje <xref:Microsoft.Office.Interop.Excel.Worksheet> typ z primárního definičního sestavení pro Excel. <xref:Microsoft.Office.Tools.Excel.Worksheet>Položka hostitele poskytuje všechny stejné vlastnosti, metody a události jako <xref:Microsoft.Office.Interop.Excel.Worksheet> objekt, ale také zpřístupňuje další události a funguje jako kontejner pro ovládací prvky hostitele a model Windows Forms ovládací prvky.

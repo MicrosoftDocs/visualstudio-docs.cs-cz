@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: hledání v rámci konkrétní složky prostřednictvím kódu programu'
+description: Zjistěte, jak můžete pomocí sady Visual Studio programově vyhledávat v rámci konkrétní složky Microsoft Outlooku.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f33b56da08fcd05706ac7681740cea04574d0070
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: fa569a2c301cb495f109a612d817937159c257c6
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584739"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524538"
 ---
 # <a name="how-to-programmatically-search-within-a-specific-folder"></a>Postupy: hledání v rámci konkrétní složky prostřednictvím kódu programu
   Tento příklad kódu používá `Find` metody a `FindNext` k hledání textu v poli subjekt e-mailových zpráv, které jsou ve **složce Doručená pošta**. Tato metoda používá filtr řetězce pro kontrolu písmene T jako počáteční písmeno `Subject` textu.

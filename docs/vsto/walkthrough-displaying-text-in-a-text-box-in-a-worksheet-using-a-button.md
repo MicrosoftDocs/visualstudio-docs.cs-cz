@@ -1,5 +1,7 @@
 ---
 title: Zobrazit text v textovém poli na listu pomocí tlačítka
+description: Naučte se základy používání tlačítek a textových polí v listech Microsoft Excelu. Také Vytvářejte projekty aplikace Excel pomocí nástrojů pro vývoj pro Office v sadě Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b30eea0152b75cdd0869ececac674ee5aeee7933
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c499800efa783ce252dbf925f307bc64e814420f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328710"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522645"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-worksheet-using-a-button"></a>Návod: zobrazení textu v textovém poli na listu s použitím tlačítka
   Tento názorný postup ukazuje základy používání tlačítek a textových polí v systém Microsoft Office excelových listů a vytváření projektů aplikace Excel pomocí nástrojů pro vývoj pro Office v sadě Visual Studio. Chcete-li zobrazit výsledek jako dokončený vzorek, přečtěte si ukázku ovládací prvky aplikace Excel v [ukázkách vývoje pro Office a návody](../vsto/office-development-samples-and-walkthroughs.md).
@@ -59,7 +61,7 @@ ms.locfileid: "67328710"
 
 ### <a name="to-add-a-button-and-a-text-box"></a>Přidání tlačítka a textového pole
 
-1. Ověřte, že je sešit **Button.xlsxv aplikaci Excel ** otevřený v návrháři aplikace Visual Studio se `Sheet1` zobrazeným.
+1. Ověřte, že je sešit **Button.xlsxv aplikaci Excel** otevřený v návrháři aplikace Visual Studio se `Sheet1` zobrazeným.
 
 2. Na kartě **běžné ovládací prvky** panelu nástrojů přetáhněte <xref:Microsoft.Office.Tools.Excel.Controls.TextBox> na `Sheet1` .
 
@@ -81,7 +83,7 @@ ms.locfileid: "67328710"
 
 ### <a name="to-write-to-the-text-box-when-the-button-is-clicked"></a>Zápis do textového pole při kliknutí na tlačítko
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **List1**a pak klikněte na **Zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1** a pak klikněte na **Zobrazit kód** v místní nabídce.
 
 2. Přidejte následující kód do <xref:System.Windows.Forms.Control.Click> obslužné rutiny události tlačítka:
 

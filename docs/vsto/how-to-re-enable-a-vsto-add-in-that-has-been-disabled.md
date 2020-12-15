@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: opětovné povolení zakázaného doplňku VSTO'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio znovu povolit doplněk VSTO, který je v aplikaci systém Microsoft Office zakázaný.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3575e119f4da3ca3050a28243104fb4773089cf3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d03a03494b149a761910ddbdaa1d41592704f969
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541255"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524477"
 ---
 # <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>Postupy: opětovné povolení zakázaného doplňku VSTO
   Aplikace systém Microsoft Office mohou zakázat doplňky VSTO, které se chovají neočekávaně. Pokud aplikace nenačte doplněk VSTO při pokusu o jeho ladění, může být aplikace v případě, že je váš doplněk VSTO špatně zakázaná nebo je zakázaná.
@@ -43,7 +45,7 @@ ms.locfileid: "85541255"
 
      Sloupec **Name** Určuje název sestavení a sloupec **umístění** určuje úplnou cestu k manifestu aplikace.
 
-5. V poli **Spravovat** klikněte na položku **Zakázané položky**a potom klikněte na tlačítko **Přejít**.
+5. V poli **Spravovat** klikněte na položku **Zakázané položky** a potom klikněte na tlačítko **Přejít**.
 
 6. Vyberte doplněk VSTO a klikněte na **Povolit**.
 
@@ -67,7 +69,7 @@ ms.locfileid: "85541255"
 
      Sloupec **Name** Určuje název sestavení a sloupec **umístění** určuje úplnou cestu k manifestu aplikace.
 
-5. V poli **Spravovat** klikněte na **Doplňky modelu COM**a potom klikněte na **Přejít**.
+5. V poli **Spravovat** klikněte na **Doplňky modelu COM** a potom klikněte na **Přejít**.
 
 6. V dialogovém okně **Doplňky modelu COM** zaškrtněte políčko vedle zakázaného doplňku VSTO.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Návod: vložení textu do dokumentu z podokna akcí'
+description: Vytvoří podokno akcí v dokumentu aplikace Microsoft Word. Přečtěte si, že podokno akce obsahuje dva ovládací prvky, které shromažďují vstup a pak odesílají text do dokumentu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5c65027d7670c4d6789f32eb4d9080df061d904a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 44fd876dfad99e1a1320a5e5d743ea8e30dfdb98
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584960"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524163"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>Návod: vložení textu do dokumentu z podokna akcí
   Tento návod ukazuje, jak vytvořit podokno akcí v dokumentu aplikace systém Microsoft Office Word. Podokno akce obsahuje dva ovládací prvky, které shromažďují vstup a pak odesílají text do dokumentu.
@@ -72,18 +74,18 @@ ms.locfileid: "91584960"
 
 ### <a name="to-add-a-bookmark-control-to-your-document"></a>Přidání ovládacího prvku záložka do dokumentu
 
-1. Z karty **ovládací prvky aplikace Word** v **panelu nástrojů**přetáhněte <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek do dokumentu.
+1. Z karty **ovládací prvky aplikace Word** v **panelu nástrojů** přetáhněte <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek do dokumentu.
 
      Zobrazí se dialogové okno **Přidat ovládací prvek záložky** .
 
-2. Vyberte **název**slova bez výběru značky odstavce a klikněte na tlačítko **OK**.
+2. Vyberte **název** slova bez výběru značky odstavce a klikněte na tlačítko **OK**.
 
     > [!NOTE]
     > Znak odstavce by měl být mimo záložku. Pokud v dokumentu nejsou viditelné znaky odstavce, klikněte na nabídku **nástroje** , přejděte systém Microsoft Office na příkaz **Nástroje aplikace Word** a pak klikněte na tlačítko **Možnosti**. Klikněte na kartu **zobrazení** a zaškrtněte políčko **označení odstavce** v části **značky formátování** v dialogovém okně **Možnosti** .
 
 3. V okně **vlastnosti** změňte vlastnost **název** vlastnosti **bookmark1** na hodnotu **Zobrazit**.
 
-4. Vyberte **adresu**slova bez výběru značky odstavce.
+4. Vyberte **adresu** slova bez výběru značky odstavce.
 
 5. Na kartě **vložení** na pásu karet ve skupině **odkazy** klikněte na možnost **Záložka**.
 
@@ -104,7 +106,7 @@ ms.locfileid: "91584960"
 
 1. Pokud ovládací prvek podokno akce není viditelný v návrháři, poklikejte na **InsertTextControl**.
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**přetáhněte ovládací prvek **popisek** do ovládacího prvku podokno akcí.
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** přetáhněte ovládací prvek **popisek** do ovládacího prvku podokno akcí.
 
 3. Změňte vlastnost **text** ovládacího prvku popisek na **název**.
 

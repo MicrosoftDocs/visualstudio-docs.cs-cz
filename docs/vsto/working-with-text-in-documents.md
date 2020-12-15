@@ -1,5 +1,7 @@
 ---
 title: Práce s textem v dokumentech
+description: Přečtěte si o podrobných postupech a příkladech kódu pro použití objektového modelu Microsoft Wordu pro práci s textem v projektech Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,19 +17,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cdb38bcb8a86900cae7eb596c48b5765bc247eac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8314752b5d1be6d1d86dcf35cf78851bcb45cb3c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62815084"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523385"
 ---
 # <a name="work-with-text-in-documents"></a>Práce s textem v dokumentech
   Témata v této části poskytují podrobné postupy a příklady kódu pro použití objektového modelu aplikace systém Microsoft Office Word pro práci s textem v projektech Office.
 
  V některých případech se způsoby provádění těchto úkolů v Doplňkech VSTO liší od způsobů, jak je provádíte v přizpůsobení na úrovni dokumentu.
 
-|Úkol|Postup|
+|Úloha|Postup|
 |----------|---------------|
 |Definujte rozsahy na základě různých kritérií a vyberte je.|[Postupy: definování a výběr oblastí v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)|
 |Získá znaky, které začínají a končí rozsah.|[Postupy: načítání počátečních a koncových znaků v oblastech prostřednictvím kódu programu](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)|

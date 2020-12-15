@@ -1,5 +1,7 @@
 ---
 title: Práce s listy
+description: Naučíte se, že listy a třídy listů obsahují metody a vlastnosti, které slouží k provádění úkolů s listy.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,17 +15,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1f518a3d6e271c4f457e50ad6f9affcc3afccdf9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d58576c999d11441122bb0b2115d2367b7ce04ce
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62814586"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522545"
 ---
 # <a name="work-with-worksheets"></a>Práce s listy
   <xref:Microsoft.Office.Tools.Excel.Worksheet>Třídy a <xref:Microsoft.Office.Interop.Excel.Worksheet> obsahují metody a vlastnosti, které slouží k provádění úkolů s listy.
 
-|Úkol|Postup|
+|Úloha|Postup|
 |----------|---------------|
 |Umožňuje přidat nový list do sešitu.|[Postupy: přidávání nových listů do sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)|
 |Vytvoří kopii listu v zadaném umístění v sešitu.|[Postupy: kopírování listů prostřednictvím kódu programu](../vsto/how-to-programmatically-copy-worksheets.md)|

@@ -1,5 +1,7 @@
 ---
 title: Práce s položkami kontaktů
+description: Přečtěte si, že třída ContactItem obsahuje metody a vlastnosti, které slouží k provádění úkolů s kontakty.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,17 +17,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 325f6b1b7ee489102d1ed4d2ef72350b3a6f5f3d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b84d91f2a89a5cf648aaa13f18e404dab2ec138c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63008635"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524776"
 ---
 # <a name="work-with-contact-items"></a>Práce s položkami kontaktů
   <xref:Microsoft.Office.Interop.Outlook.ContactItem>Třída obsahuje metody a vlastnosti, které slouží k provádění úkolů s kontakty.
 
-|Úkol|Postup|
+|Úloha|Postup|
 |----------|---------------|
 |Načte všechny kontakty, jejichž příjmení obsahuje zadaný řetězec.|[Postupy: přístup ke kontaktům aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-access-outlook-contacts.md)|
 |Vyhledejte kontakt podle jména a příjmení.|[Postupy: hledání konkrétního kontaktu prostřednictvím kódu programu](../vsto/how-to-programmatically-search-for-a-specific-contact.md)|

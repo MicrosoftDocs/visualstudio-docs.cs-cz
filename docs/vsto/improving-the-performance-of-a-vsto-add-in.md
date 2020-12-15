@@ -1,5 +1,7 @@
 ---
 title: Zlepšení výkonu doplňku VSTO
+description: Naučte se optimalizovat doplňky VSTO, které vytvoříte pro aplikace Office tak, aby se rychle spouštěly, vypnuly, otevíraly položky a prováděly další úkoly.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -10,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7529c69270b5f33cde32e8a7907f1b80589c43b7
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 83ba2e9cc2cd55b3e3f6362250ffc1e9489b1626
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "92298514"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524442"
 ---
 # <a name="improve-the-performance-of-a-vsto-add-in"></a>Zlepšení výkonu doplňku VSTO
   Uživatelům můžete poskytnout lepší prostředí tím, že optimalizujete doplňky VSTO, které vytvoříte pro aplikace Office tak, aby se rychle spouštěly, vypnuly, otevíraly položky a prováděly další úkoly. Pokud je doplněk VSTO pro Outlook k dispozici, můžete také snížit pravděpodobnost, že bude váš doplněk VSTO zakázán z důvodu špatného výkonu. Výkon doplňku VSTO můžete zvýšit implementací následujících strategií:
@@ -41,7 +43,7 @@ ms.locfileid: "92298514"
 
 ### <a name="to-configure-a-clickonce-solution-to-load-vsto-add-ins-on-demand"></a>Konfigurace řešení ClickOnce pro načtení doplňků VSTO na vyžádání
 
-1. V **Průzkumník řešení**vyberte uzel projektu.
+1. V **Průzkumník řešení** vyberte uzel projektu.
 
 2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **stránky vlastností**.
 
@@ -51,13 +53,13 @@ ms.locfileid: "92298514"
 
 ### <a name="to-configure-a-windows-installer-solution-to-load-vsto-add-ins-on-demand"></a>Konfigurace řešení Instalační služba systému Windows, aby se načetly doplňky VSTO na vyžádání
 
-1. V registru nastavte `LoadBehavior` zadáním klíče ** _root_\Software\Microsoft\Office \\ _ApplicationName_\Addins \\ _Add-in_ ** na **0x10**.
+1. V registru nastavte `LoadBehavior` zadáním klíče **_root_\Software\Microsoft\Office \\ _ApplicationName_\Addins \\ _Add-in_** na **0x10**.
 
      Další informace najdete v tématu [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).
 
 ### <a name="to-configure-a-solution-to-load-vsto-add-ins-on-demand-while-you-debug-the-solution"></a>Konfigurace řešení, které načte doplňky VSTO na vyžádání při ladění řešení
 
-1. Vytvořte skript, který nastaví `LoadBehavior` položku klíč ** _Root_ \\ \\ _ID doplňku_ root \Software\Microsoft\Office_ApplicationName_\Addins** na **0x10**.
+1. Vytvořte skript, který nastaví `LoadBehavior` položku klíč **\\ \\ _ID doplňku_ root \Software\Microsoft\Office _ApplicationName_\Addins** na **0x10**.
 
      Následující kód ukazuje příklad tohoto skriptu.
 

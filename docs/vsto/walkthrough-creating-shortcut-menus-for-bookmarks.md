@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Vytvoření místních nabídek pro záložky'
+description: Naučte se, jak vytvořit místní nabídky pro ovládací prvky záložek v přizpůsobení na úrovni dokumentu pro Microsoft Word.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9b4b412d2e9456142c1be1af388e2803634d15c0
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 8b018687ec10eb725ece7d776277ea1c699dbbec
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "64834302"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524221"
 ---
 # <a name="walkthrough-create-shortcut-menus-for-bookmarks"></a>Návod: Vytvoření místních nabídek pro záložky
   Tento návod ukazuje, jak vytvořit místní nabídky pro <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky v přizpůsobení na úrovni dokumentu pro aplikaci Word. Když uživatel klikne pravým tlačítkem myši na text v záložce, zobrazí se místní nabídka a uživatel bude mít možnost formátování textu.
@@ -39,7 +41,7 @@ ms.locfileid: "64834302"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -53,7 +55,7 @@ ms.locfileid: "64834302"
 
 - Vytvořte projekt wordového dokumentu, který má **místní nabídku název své záložky**. V průvodci vyberte možnost **vytvořit nový dokument**. Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio otevře nový wordový dokument v návrháři a přidá do **Průzkumník řešení**projekt **místní nabídky zástupce moje záložka** .
+     Visual Studio otevře nový wordový dokument v návrháři a přidá do **Průzkumník řešení** projekt **místní nabídky zástupce moje záložka** .
 
 ## <a name="add-text-and-bookmarks-to-the-document"></a><a name="BKMK_addtextandbookmarks"></a> Přidat text a záložky do dokumentu
  Přidejte do dokumentu nějaký text a pak přidejte dvě překrývající se záložky.
@@ -66,7 +68,7 @@ ms.locfileid: "64834302"
 
 ### <a name="to-add-a-bookmark-control-to-your-document"></a>Přidání ovládacího prvku záložka do dokumentu
 
-1. V **sadě nástrojů**na kartě **ovládací prvky aplikace Word** přetáhněte <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek do dokumentu.
+1. V **sadě nástrojů** na kartě **ovládací prvky aplikace Word** přetáhněte <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek do dokumentu.
 
     Zobrazí se dialogové okno **Přidat ovládací prvek záložky** .
 
@@ -90,7 +92,7 @@ ms.locfileid: "64834302"
 
 1. Přidejte položku **XML pásu karet** do projektu. Další informace najdete v tématu [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md).
 
-2. V **Průzkumník řešení**vyberte **ThisDocument.cs** nebo **ThisDocument. vb**.
+2. V **Průzkumník řešení** vyberte **ThisDocument.cs** nebo **ThisDocument. vb**.
 
 3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 
@@ -101,7 +103,7 @@ ms.locfileid: "64834302"
      [!code-csharp[Trin_Word_Document_Menus#1](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#1)]
      [!code-vb[Trin_Word_Document_Menus#1](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#1)]
 
-5. V **Průzkumník řešení**vyberte soubor XML pásu karet. Ve výchozím nastavení se soubor XML pásu karet jmenuje Ribbon1.xml.
+5. V **Průzkumník řešení** vyberte soubor XML pásu karet. Ve výchozím nastavení se soubor XML pásu karet jmenuje Ribbon1.xml.
 
 6. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 
@@ -125,14 +127,14 @@ ms.locfileid: "64834302"
 
      Tento kód přidá dvě tlačítka do místní nabídky, která se zobrazí po kliknutí pravým tlačítkem myši na dokument.
 
-8. V **Průzkumník řešení**klikněte pravým tlačítkem myši `ThisDocument` a pak klikněte na **Zobrazit kód**.
+8. V **Průzkumník řešení** klikněte pravým tlačítkem myši `ThisDocument` a pak klikněte na **Zobrazit kód**.
 
 9. Deklarovat následující proměnné a proměnnou záložky na úrovni třídy.
 
      [!code-csharp[Trin_Word_Document_Menus#2](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#2)]
      [!code-vb[Trin_Word_Document_Menus#2](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#2)]
 
-10. V **Průzkumník řešení**vyberte soubor kódu pásu karet. Ve výchozím nastavení se soubor kódu pásu karet jmenuje **Ribbon1.cs** nebo **Ribbon1. vb**.
+10. V **Průzkumník řešení** vyberte soubor kódu pásu karet. Ve výchozím nastavení se soubor kódu pásu karet jmenuje **Ribbon1.cs** nebo **Ribbon1. vb**.
 
 11. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 
@@ -152,7 +154,7 @@ ms.locfileid: "64834302"
      [!code-csharp[Trin_Word_Document_Menus#6](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#6)]
      [!code-vb[Trin_Word_Document_Menus#6](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#6)]
 
-2. **Průzkumník řešení**vyberte **ThisDocument.cs** nebo **ThisDocument. vb**.
+2. **Průzkumník řešení** vyberte **ThisDocument.cs** nebo **ThisDocument. vb**.
 
 3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 

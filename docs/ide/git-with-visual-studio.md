@@ -8,12 +8,12 @@ ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: e640d19659861a03d0f97abc799344bebb14b936
-ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
+ms.openlocfilehash: 7eed02ffda47de9c6a788d186d41dcc087852e64
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94878306"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524091"
 ---
 # <a name="git-experience-in-visual-studio"></a>Prostředí Git v aplikaci Visual Studio
 
@@ -39,7 +39,7 @@ Existují tři způsoby, jak začít používat Git se sadou Visual Studio k zaj
 
 ## <a name="create-a-new-git-repository"></a>Vytvořit nové úložiště Git
 
-Pokud váš kód není přidružen k Gitu, můžete začít vytvořením nového úložiště Git. Provedete to tak **Git**,  >  že v řádku nabídek vyberete Git **vytvořit úložiště Git** . Pak v dialogovém okně **vytvořit úložiště Git** zadejte svoje informace.
+Pokud váš kód není přidružen k Gitu, můžete začít vytvořením nového úložiště Git. Provedete to tak ,  >  že v řádku nabídek vyberete Git **vytvořit úložiště Git** . Pak v dialogovém okně **vytvořit úložiště Git** zadejte svoje informace.
 
 :::image type="content" source="media/git-create-repository.png" alt-text="Dialogové okno vytvořit úložiště Git v aplikaci Visual Studio.":::
 
@@ -183,13 +183,13 @@ Můžete také použít přepínače k zobrazení nebo skrytí rozdílů, zobraz
 
 ## <a name="personalize-your-git-settings"></a>Přizpůsobení nastavení Gitu
 
-Chcete-li přizpůsobit a přizpůsobit nastavení Gitu na úrovni úložiště i na globální úrovni, přejděte na položku **Git**  >  **Nastavení** Gitu na panelu nabídek nebo na možnost **nástroje**  >  **Options**  >  **Správa zdrojového kódu** na řádku nabídek. Pak zvolte požadované možnosti.
+Chcete-li přizpůsobit a přizpůsobit nastavení Gitu na úrovni úložiště i na globální úrovni, přejděte na položku   >  **Nastavení** Gitu na panelu nabídek nebo na možnost **nástroje**  >    >  **Správa zdrojového kódu** na řádku nabídek. Pak zvolte požadované možnosti.
 
 :::image type="content" source="media/git-options-settings.png" alt-text="Dialogové okno Možnosti, kde můžete zvolit nastavení přizpůsobení a přizpůsobení v integrovaném vývojovém prostředí sady Visual Studio ":::
 
-## <a name="how-to-use-the-legacy-team-explorer-experience-in-visual-studio"></a>Jak používat starší verze Team Explorer v prostředí Visual Studio
+## <a name="how-to-use-the-full-team-explorer-experience-in-visual-studio"></a>Jak používat úplné prostředí Team Explorer v aplikaci Visual Studio
 
-Nové prostředí Git je výchozím systémem pro správu verzí v aplikaci Visual Studio 2019 od [verze 16,8](/visualstudio/releases/2019/release-notes/) a vyšší. Pokud je však chcete vypnout, můžete. Přejděte do části **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** a potom zaškrtněte políčko **nové uživatelské prostředí Git** , které vás přepne zpět na starší verzi Team Explorer.
+Nové prostředí Git je výchozím systémem pro správu verzí v aplikaci Visual Studio 2019 od [verze 16,8](/visualstudio/releases/2019/release-notes/) a vyšší. Pokud je však chcete vypnout, můžete. Přejděte do části **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** a potom zaškrtněte políčko **nové uživatelské prostředí Git** , které vám přepne zpět na Team Explorer pro Git.
 
 :::image type="content" source="media/git-opt-new-user-experience.png" alt-text="Oddíl funkcí verze Preview dialogového okna Možnosti v aplikaci Visual Studio ":::
 

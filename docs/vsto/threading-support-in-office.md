@@ -1,5 +1,7 @@
 ---
 title: Podpora práce s vlákny v systému Office
+description: Dělení na vlákna je podporováno v objektovém modelu systém Microsoft Office. Objektový model Office není bezpečný pro přístup z více vláken, ale může pracovat s více vlákny v řešení Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3218a12add86739c76cd50f82fdda5d845e2b069
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d44c86e17b5df79c44f85cd555b3036e925ae61
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978764"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524195"
 ---
 # <a name="threading-support-in-office"></a>Podpora práce s vlákny v systému Office
   Tento článek poskytuje informace o tom, jak je v objektovém modelu systém Microsoft Office podporován dělení na vlákna. Objektový model Office není bezpečný pro přístup z více vláken, ale je možné pracovat s více vlákny v řešení Office. Aplikace Office jsou servery modelu COM (Component Object Model). Model COM umožňuje klientům volat servery COM na libovolných vláknech. U serverů COM, které nejsou vláknově bezpečné, poskytuje model COM mechanizmus pro serializaci souběžných volání, aby se na serveru mohl kdykoli provést pouze jedno logické vlákno. Tento mechanismus je známý jako model STA (Single-threaded Apartment). Vzhledem k tomu, že volání jsou serializována, volající mohou být blokovány po dobu, kdy je server zaneprázdněný nebo zpracovává jiné volání ve vlákně na pozadí.

@@ -1,5 +1,7 @@
 ---
 title: Návody k zabezpečení a nasazení
+description: Přečtěte si, jak můžete nastavit zásady zabezpečení, které umožní, aby vaše řešení běželo a jak se dá řešení Office nasadit.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 014b59efb945f6390877a2e9764e24b6c4cd639b
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 0a750aa97c371ce25c7b6797ee773e82d8ab8eb6
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810938"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524371"
 ---
 # <a name="security-and-deployment-walkthroughs"></a>Návody k zabezpečení a nasazení
   Následující témata ukazují, jak můžete nastavit zásady zabezpečení, které umožňují spuštění vašeho řešení, a způsob nasazení řešení pro Office.
