@@ -1,5 +1,7 @@
 ---
-title: Příznaky příkazového řádku kompilátoru VSCT | Microsoft Docs
+title: Příznaky Command-Line kompilátoru VSCT | Microsoft Docs
+description: Kompilátor příkazového řádku sady Visual Studio poskytuje možnosti příkazového řádku pro zajištění úspěšné kompilace souborů. vsct.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e4ee29710049453c3163c366eccf96e257b6028d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8d60b248a4941d176ac6ba4e808a94dbc67efbe7
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703960"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488008"
 ---
 # <a name="vsct-compiler-command-line-flags"></a>Příznaky příkazového řádku pro kompilátor VSCT
 Kompilátor sady příkazů sady Visual Studio (VSCT) poskytuje přepínače příkazového řádku, které zajistí úspěšnou kompilaci souborů. vsct.

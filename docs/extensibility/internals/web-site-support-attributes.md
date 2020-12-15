@@ -1,5 +1,7 @@
 ---
 title: Atributy podpory webu | Microsoft Docs
+description: Přečtěte si o atributech podpory webu, které jsou nezbytné pro rozšíření funkcí sady Visual Studio pomocí projektů webu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef75f99480145475278357a552f3ac74c0289800
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9beee39ca6968b0922bc134fa21e0cde3d6dd3b6
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703502"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487865"
 ---
 # <a name="web-site-support-attributes"></a>Atributy podpory webu
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Webový projekt lze rozšířit tak, aby poskytoval podporu webových programovacích jazyků. Jazyk se musí zaregistrovat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , aby se šablony projektu mohly zobrazit v dialogovém okně **Nový web** , když je vybraný jazyk.

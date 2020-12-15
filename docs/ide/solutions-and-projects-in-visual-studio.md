@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42250d4b60cf272f041fea6f44abd24f99645b93
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: d2889729ae539d640bb9d43c64956edc04b74f26
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363455"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488190"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -62,7 +62,7 @@ Visual Studio používá dva typy souborů (*. sln* a *. suo*) k ukládání nas
 
 ### <a name="solution-folder"></a>Složka řešení
 
-V tomto kontextu je "Složka řešení" virtuální složkou, která je pouze v **Průzkumník řešení**, kde ji můžete použít k seskupení projektů v řešení. Pokud chcete najít, kde jsou projekty uloženy v počítači, přejděte do části **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení.
+V tomto kontextu je "Složka řešení" virtuální složkou, která je pouze v **Průzkumník řešení**, kde ji můžete použít k seskupení projektů v řešení. Pokud chcete na počítači najít soubor řešení, přejděte na možnosti **nástroje**  >    >  **projekty a**  >  **umístění** řešení. Další informace najdete v [dialogovém okně Možnosti: projekty a řešení > umístění.](./reference/projects-solutions-locations-options.md)
 
 ## <a name="create-new-projects"></a>Vytvořit nové projekty
 
@@ -70,7 +70,7 @@ Nejjednodušší způsob, jak vytvořit nový projekt, je začít od šablony pr
 
 Pokud často přizpůsobíte projekty určitým způsobem, můžete vytvořit vlastní šablonu projektu, kterou pak můžete použít k vytvoření nových projektů z. Další informace naleznete v tématu [Create Project and Item Templates](../ide/creating-project-and-item-templates.md).
 
-Když vytvoříte nový projekt, uloží se ve výchozím nastavení na *%USERPROFILE%\source\repos*. Toto umístění můžete změnit v nastavení **umístění projektů** v nabídce **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení. Další informace naleznete na [stránce projekty a řešení, dialogové okno Možnosti](../ide/reference/projects-and-solutions-options-dialog-box.md).
+Když vytvoříte nový projekt, uloží se ve výchozím nastavení na *%USERPROFILE%\source\repos*. Toto umístění můžete změnit v nastavení **umístění projektů** v nabídce **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení. Další informace naleznete na [stránce projekty a řešení, dialogové okno Možnosti](./reference/projects-and-solutions-options-dialog-box.md).
 
 ## <a name="solution-explorer"></a>Průzkumník řešení
 
@@ -87,7 +87,7 @@ U ASP.NET Core projektů můžete přizpůsobit, jak jsou soubory vnořené v **
 
 A pokud chcete zobrazit seznam některých ikon, které se zobrazují v Průzkumník řešení, přečtěte si téma [zobrazení tříd a prohlížeč objektů ikony](class-view-and-object-browser-icons.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Integrované vývojové prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
 - [Přenos, migrace a upgrade projektů](../porting/port-migrate-and-upgrade-visual-studio-projects.md)

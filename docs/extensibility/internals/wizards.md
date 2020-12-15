@@ -1,5 +1,7 @@
 ---
 title: Průvodci | Microsoft Docs
+description: Naučte se, jak vypsat průvodce mezi dostupnými průvodci a šablonami v aplikaci Visual Studio a o požadavcích, které váš průvodce musí splnit v integrovaném vývojovém prostředí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +12,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d65cf2dcc10380b0ac750c8e1b0e7fd56eab95b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f367723a3c819635f2d7cf20ed812a36cda12830
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703210"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487748"
 ---
 # <a name="wizards"></a>Průvodci
-Po vytvoření průvodce je obvykle vhodné ho přidat do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE), aby ho ostatní mohli používat. Přidaný průvodce se pak zobrazí v dialogových oknech **Přidat nový projekt** nebo **Přidat novou položku** . Chcete-li zobrazit dialogová okna **Přidat nový projekt** nebo **Přidat novou položku** , klikněte pravým tlačítkem myši na otevřené řešení v **Průzkumník řešení**, přejděte na **Přidat**a pak klikněte na **Nový projekt** nebo **Nová položka**.
+Po vytvoření průvodce je obvykle vhodné ho přidat do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE), aby ho ostatní mohli používat. Přidaný průvodce se pak zobrazí v dialogových oknech **Přidat nový projekt** nebo **Přidat novou položku** . Chcete-li zobrazit dialogová okna **Přidat nový projekt** nebo **Přidat novou položku** , klikněte pravým tlačítkem myši na otevřené řešení v **Průzkumník řešení**, přejděte na **Přidat** a pak klikněte na **Nový projekt** nebo **Nová položka**.
 
- Průvodci mohou být implementováni v aplikaci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , aby uživatelům při otevření dialogového okna **Přidat nový projekt** nebo **Přidat novou položku** nebo po kliknutí pravým tlačítkem myši na položku v **Průzkumník řešení**vybrali ze stromového zobrazení dostupných hodnot.
+ Průvodci mohou být implementováni v aplikaci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , aby uživatelům při otevření dialogového okna **Přidat nový projekt** nebo **Přidat novou položku** nebo po kliknutí pravým tlačítkem myši na položku v **Průzkumník řešení** vybrali ze stromového zobrazení dostupných hodnot.
 
  V průvodci můžete zadat možnost lokalizace názvu nového projektu nebo ITES a můžete určit ikonu, kterou uživatelé uvidí při výběru průvodce. Můžete také řídit pořadí, ve kterém se nové položky zobrazují relativně k ostatním dostupným položkám; položky nemusejí být uspořádány abecedně.
 

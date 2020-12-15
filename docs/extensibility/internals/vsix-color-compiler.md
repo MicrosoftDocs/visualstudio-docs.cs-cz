@@ -1,5 +1,7 @@
 ---
 title: Kompilátor barev VSIX | Microsoft Docs
+description: Přečtěte si o nástroji kompilátor barev rozšíření sady Visual Studio, což je Konzolová aplikace, která převede barvy v motivech sady Visual Studio na soubor. pkgdef.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5059a15c483f648c2248321c7ba8271a634d0c69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e50cd1f1c8c3ff7f86cd00e4b384f548c7ec9d21
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536094"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487995"
 ---
 # <a name="vsix-color-compiler"></a>Kompilátor barev VSIX
 Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová aplikace, která přebírá soubor. XML reprezentující barvy pro existující motivy sady Visual Studio a převede ho na soubor. pkgdef tak, aby tyto barvy mohly být použity v aplikaci Visual Studio. Vzhledem k tomu, že je snadné porovnat rozdíly mezi soubory. XML, tento nástroj je užitečný pro správu vlastních barev ve správě zdrojového kódu. Dá se taky připojit do prostředí pro Build, aby výstup buildu byl platný soubor. pkgdef.
@@ -50,7 +52,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 </Theme>
 ```
 
-|**Atribut**|**Definition**|
+|**Atribut**|**Definice**|
 |-|-|
 |Název|Požadovanou Název motivu|
 |Identifikátor GUID|Požadovanou Identifikátor GUID motivu (musí odpovídat formátování identifikátoru GUID)|
@@ -61,7 +63,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 |-|-|
 |Světlý|{de3dbbcd-f642-433c-8353-8f1df4370aba}|
 |Tmavý|{1ded0138-47ce-435e-84ef-9ec1f439b749}|
-|Blue|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|
+|Modrý|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|
 |Vysoký kontrast|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|
 
  **Kategorie**
@@ -74,7 +76,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
  </Category>
 ```
 
-|**Atribut**|**Definition**|
+|**Atribut**|**Definice**|
 |-|-|
 |Název|Požadovanou Název kategorie|
 |Identifikátor GUID|Požadovanou Identifikátor GUID kategorie (musí odpovídat formátování identifikátoru GUID)|
@@ -90,7 +92,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
  </Color>
 ```
 
-|**Atribut**|**Definition**|
+|**Atribut**|**Definice**|
 |-|-|
 |Název|Požadovanou Název barvy|
 
@@ -103,7 +105,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 <Foreground Type="type" Source="int" />
 ```
 
-|**Atribut**|**Definition**|
+|**Atribut**|**Definice**|
 |-|-|
 |Typ|Požadovanou Typ barvy. Může to být jedna z následujících:<br /><br /> *CT_INVALID:* Barva je neplatná nebo není nastavena.<br /><br /> *CT_RAW:* Nezpracovaná hodnota ARGB<br /><br /> *CT_COLORINDEX:* NEPOUŽÍVEJTE.<br /><br /> *CT_SYSCOLOR:* Systémová barva systému Windows z SysColor.<br /><br /> *CT_VSCOLOR:* Barva sady Visual Studio z __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* Automatická barva.<br /><br /> *CT_TRACK_FOREGROUND:* NEPOUŽÍVEJTE.<br /><br /> *CT_TRACK_BACKGROUND:* NEPOUŽÍVEJTE.|
 |Zdroj|Požadovanou Hodnota barvy reprezentovaná v šestnáctkovém formátu|

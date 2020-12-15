@@ -1,5 +1,7 @@
 ---
 title: Registrace balíčku VSPackage | Microsoft Docs
+description: Přečtěte si o registraci VSPackage, kde si balíčky radí sady Visual Studio, že jsou nainstalované a měly by být načtené pomocí zápisu informací do registru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5941a0bc5d9f9f983a616dcc22cf1260d0911fa8
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 88c8294042bb61939a52f4053f5b27ae915e01df
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012123"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487982"
 ---
 # <a name="vspackage-registration"></a>Registrace balíčku VSPackage
 VSPackage musí poradit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , že jsou nainstalované a měly by být načteny. Tento proces je možné provést zápisem informací do registru. To je typická úloha instalačního programu.
@@ -40,7 +42,7 @@ VSPackage musí poradit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.
 > [!NOTE]
 > Nástroj RegPkg není Distribuovatelný a nedá se použít k registraci VSPackage v systému uživatele.
 
-## <a name="why-vspackages-should-not-self-register-at-install-time"></a>Proč by VSPackage neměly být samy registrovat v době instalace
+## <a name="why-vspackages-should-not-self-register-at-install-time"></a>Proč se v době instalace nemají Self-Register VSPackage
  Instalátory VSPackage by se neměli spoléhat na vlastní registraci. Na první pohled, pokud chcete, aby hodnoty registru VSPackage pouze v balíčku VSPackage vypadaly jako dobrý nápad. Vzhledem k tomu, že vývojáři potřebují k dispozici hodnoty registru pro svou běžnou práci a testování, má smysl, aby se zabránilo zachování samostatné kopie dat registru v instalačním programu. Instalační program může pro zápis hodnot registru spoléhat sám na VSPackage.
 
  I když je v koúrovni teoretická, má Automatická registrace několik vad, které ji nehodí pro instalaci VSPackage:
@@ -55,6 +57,6 @@ VSPackage musí poradit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.
 
 - Kód pro samostatnou registraci je možné odepřít přístup k síťovým prostředkům, jako jsou knihovny typů, pokud je komponenta zadána jako spustit ze zdroje a je uvedena v tabulce SelfReg. To může způsobit selhání instalace komponenty při instalaci pro správu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Instalační služba systému Windows](/windows/desktop/Msi/windows-installer-portal)
 - [Registrace spravovaného balíčku](/previous-versions/bb166783(v=vs.100))

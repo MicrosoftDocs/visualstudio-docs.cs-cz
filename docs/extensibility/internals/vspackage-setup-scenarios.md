@@ -1,5 +1,7 @@
 ---
 title: Scénáře instalace VSPackage | Microsoft Docs
+description: Seznamte se s osvědčenými postupy pro podporu souběžných instalací sady Visual Studio s použitím sdílených nebo souběžných instalací vaší sady VSPackage.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2095087451ded8858382323aabc4048582a6db43
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 97538be6c174f76072a6ca006db6443aa3fcdb57
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012110"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487969"
 ---
 # <a name="vspackage-setup-scenarios"></a>Scénáře instalace balíčku VSPackage
 
@@ -76,7 +78,7 @@ V tomto případě je VSPackage spravovaným rozhraním VSPackage nainstalovaný
 
 Další informace o nasazení souběžných sestavení naleznete v tématu [zjednodušení nasazení a řešení Hell DLL pomocí .NET Framework](/previous-versions/dotnet/articles/ms973843(v=msdn.10)).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Instalační služba systému Windows](/windows/desktop/Msi/windows-installer-portal)
 - [Podpora více verzí sady Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md)

@@ -2,19 +2,19 @@
 title: Tipy pro zlepšení výkonu
 description: Naučte se optimalizovat některé funkce sady Visual Studio, které nemusíte používat, aby bylo možné lépe vylepšit výkon.
 ms.custom: SEO-VS-2020
-ms.date: 08/13/2020
+ms.date: 12/14/2020
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f4c36987e198be576d843b984be14ddea824919
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: b3655407ce94395f74ebe5362e7006075ef1e790
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479612"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488177"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Tipy a triky pro výkon sady Visual Studio
 
@@ -35,7 +35,7 @@ Visual Studio automaticky znovu otevře dokumenty, které zůstaly otevřené v 
 
 Pokud automatické obnovení dokumentů způsobuje výrazné zpomalení řešení, Visual Studio vás upozorní na žlutou čáru. Automatické opětovné otevření souboru můžete zakázat pomocí následujících kroků:
 
-1. Výběrem **Tools**  >  **Možnosti** nástroje otevřete dialogové okno **Možnosti** .
+1. Výběrem   >  **Možnosti** nástroje otevřete dialogové okno **Možnosti** .
 
 1. Na stránce **projekty a**  >  **Obecné** řešení zrušte výběr **znovu otevřít dokumenty při načtení řešení**.
 
@@ -71,7 +71,7 @@ Pokud obvykle dochází k nedostatku paměti během relace ladění, můžete op
 
     Doporučuje se, abyste po použití zakázali profilaci procesoru. Tato funkce může využívat velké množství prostředků. Po povolení profilace procesoru je tento stav trvale v následných ladicích relacích, takže je po dokončení potřeba ho explicitně zapnout. Můžete uložit některé prostředky zakázáním diagnostických nástrojů během ladění, pokud nepotřebujete poskytované funkce.
 
-    Pokud chcete **diagnostické nástroje** zakázat, spusťte ladicí relaci, zvolte možnosti **nástrojů**  >  **Options**  >  **Povolit diagnostické nástroje** a zrušte výběr možnosti.
+    Pokud chcete **diagnostické nástroje** zakázat, spusťte ladicí relaci, vyberte možnosti **nástrojů**  >    >  **ladění**  >  **obecně** a pak zrušte výběr možnosti **Povolit diagnostické nástroje při ladění** .
 
     Další informace najdete v tématu [Nástroje pro profilaci](../profiling/profiling-feature-tour.md).
 
@@ -90,7 +90,7 @@ Informace o požadavcích na výkon .NET Compiler Platform (Roslyn) najdete v t�
 
     Visual Studio provede analýzu celého řešení, aby před vyvoláním sestavení poskytovala bohatou zkušenost s chybami. Tato funkce je užitečná k identifikaci chyb co nejdříve. U velkých řešení ale tato funkce může využívat významné paměťové prostředky. Pokud se setkáváte s tlakem na paměť nebo podobnými problémy, můžete toto prostředí zakázat a uvolnit tak tyto prostředky. Ve výchozím nastavení je tato možnost povolená pro Visual Basic a zakázaná pro C#.
 
-    Chcete-li zakázat **kompletní analýzu řešení**, zvolte možnost **nástroje**  >  **Options**  >  **textový editor** a pak vyberte možnost **Visual Basic** nebo **C#**. Zvolte **Upřesnit** a zrušte výběr možnosti **Povolit úplnou analýzu řešení**.
+    Chcete-li zakázat **kompletní analýzu řešení**, zvolte možnost **nástroje**  >    >  **textový editor** a pak vyberte možnost **Visual Basic** nebo **C#**. Zvolte **Upřesnit** a zrušte výběr možnosti **Povolit úplnou analýzu řešení**.
 
 - **Zakázat CodeLens**
 
@@ -131,13 +131,13 @@ Informace o požadavcích na výkon .NET Compiler Platform (Roslyn) najdete v t�
 
     Chcete-li vypnout zalamování řádků pro projekt, na kterém aktuálně pracujete, přejdete na **Upravit**  >  **Rozšířené**  >  **zalamování řádků**. (Toto nastavení můžete přepínat pomocí stejných příkazů nabídky.)
 
-    Chcete-li vypnout zalamování řádků pro všechny projekty, použijte možnost **nástroje**  >  **Možnosti**  >  **Obecné**  >  **textový editor**  >  **Obecné**  >  **General** a v části **Nastavení** zrušte výběr možnosti **zalamování řádků** .
+    Chcete-li vypnout zalamování řádků pro všechny projekty, použijte možnost **nástroje**  >  **Možnosti**  >  **Obecné**  >  **textový editor**  >  **Obecné**  >  a v části **Nastavení** zrušte výběr možnosti **zalamování řádků** .
 
 - **Zakázat Návrhář XAML**
 
     Návrhář XAML je ve výchozím nastavení povolen, ale spotřebovává prostředky pouze v případě, že otevřete soubor *. XAML* . Pokud pracujete se soubory XAML, ale nechcete používat funkci návrháře, zakažte tuto funkci, aby uvolnila nějakou paměť.
 
-    Návrhář XAML zakážete tak, že přejdete na možnosti **nástroje**  >  **Options**  >  **Návrhář XAML**  >  **Povolit Návrhář XAML** a odškrtnete políčko.
+    Návrhář XAML zakážete tak, že přejdete na možnosti **nástroje**  >    >  **Návrhář XAML**  >  **Povolit Návrhář XAML** a odškrtnete políčko.
 
 - **Odebrat úlohy**
 

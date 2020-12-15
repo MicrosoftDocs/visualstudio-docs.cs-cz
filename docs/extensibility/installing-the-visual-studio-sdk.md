@@ -1,5 +1,7 @@
 ---
 title: Instalace sady Visual Studio SDK | Microsoft Docs
+description: Přečtěte si o možnostech instalace sady Visual Studio Software Development Kit, včetně při instalaci sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 07/12/2018
 ms.topic: overview
 ms.assetid: c730edb6-5099-4c16-85a8-08def09f1455
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31df92b011336320d759461ed16ce2a3c8f61017
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: edab24396f5a3ae5527b76a58db90c19796c4240
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905546"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487566"
 ---
 # <a name="install-the-visual-studio-sdk"></a>Instalace sady Visual Studio SDK
 
@@ -21,7 +23,7 @@ Sada Visual Studio SDK (Software Development Kit) je volitelná funkce instalač
 
 ## <a name="install-the-visual-studio-sdk-as-part-of-a-visual-studio-installation"></a>Instalace sady Visual Studio SDK jako součást instalace sady Visual Studio
 
-Pokud chcete v instalaci sady Visual Studio zahrnout sadu VS SDK, nainstalujte do **jiných sad nástrojů**úlohu **vývoj rozšíření sady Visual Studio** . Tato úloha nainstaluje sadu Visual Studio SDK a nezbytné požadavky. Instalaci můžete dále vyladit tak, že vyberete nebo zrušíte výběr komponent ze **souhrnného** zobrazení.
+Pokud chcete v instalaci sady Visual Studio zahrnout sadu VS SDK, nainstalujte do **jiných sad nástrojů** úlohu **vývoj rozšíření sady Visual Studio** . Tato úloha nainstaluje sadu Visual Studio SDK a nezbytné požadavky. Instalaci můžete dále vyladit tak, že vyberete nebo zrušíte výběr komponent ze **souhrnného** zobrazení.
 
 ## <a name="install-the-visual-studio-sdk-after-installing-visual-studio"></a>Nainstalovat sadu Visual Studio SDK po instalaci sady Visual Studio
 

@@ -1,5 +1,7 @@
 ---
 title: Použití nástroje MSBuild | Microsoft Docs
+description: Nástroj MSBuild poskytuje rozšiřitelný formát XML pro vytváření souborů projektu, které plně popisují položky projektu, které mají být sestaveny, úkoly sestavení a konfigurace sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f961249ff584f7767dc2505bb20b1fb0961b7dd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0d5168d739e49ebfc78054ea695f8b73a3e06fbc
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704292"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487670"
 ---
 # <a name="using-msbuild"></a>Použití nástroje MSBuild
 Nástroj MSBuild poskytuje dobře definovaný rozšiřitelný formát XML pro vytváření souborů projektu, které plně popisují položky projektu, které mají být sestaveny, úkoly sestavení a konfigurace sestavení.
@@ -25,7 +27,7 @@ Nástroj MSBuild poskytuje dobře definovaný rozšiřitelný formát XML pro vy
 ## <a name="general-msbuild-considerations"></a>Obecné předpoklady pro MSBuild
  Soubory projektu MSBuild, například [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] soubory. csproj a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . vbproj, obsahují data, která se používají v době sestavování, ale mohou obsahovat také data, která se používají v době návrhu. Data při sestavení se ukládají pomocí primitiv MSBuild, včetně [prvku Item (MSBuild)](../../msbuild/item-element-msbuild.md) a [elementu Property (MSBuild)](../../msbuild/property-element-msbuild.md). Data v době návrhu, která jsou specifická pro typ projektu a všechny související podtypy projektu, jsou uložena v souboru XML, který je pro něj vyhrazený.
 
- Nástroj MSBuild nemá nativní podporu pro objekty konfigurace, ale poskytuje podmíněné atributy pro zadávání dat specifických pro konfiguraci. Příklad:
+ Nástroj MSBuild nemá nativní podporu pro objekty konfigurace, ale poskytuje podmíněné atributy pro zadávání dat specifických pro konfiguraci. Například:
 
 ```xml
 <OutputDir Condition="'$(Configuration)'=="release'">Bin\MyReleaseConfig</OutputDir>

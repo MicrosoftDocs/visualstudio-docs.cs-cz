@@ -1,5 +1,7 @@
 ---
 title: 'Testovací oblast 6: odstranit | Microsoft Docs'
+description: Tato testovací oblast zdrojového kódu pokrývá akce odstranění v Průzkumník řešení pro modul plug-in správy zdrojových kódů v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9902ab9d1cb9c28ddf67b83590a4cccd5f6562f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1371472a4dec265b5e476d96a32cb725e91ce7fe
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704514"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487553"
 ---
 # <a name="test-area-6-delete"></a>Testovací oblast 6: Odstranit
 Tato testovací oblast modulu plug-in zdrojového ovládacího prvku pokrývá akce odstranění.

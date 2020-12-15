@@ -1,5 +1,6 @@
 ---
 title: 'Co &apos; je nového v rozhraní API modulu plug-in správy zdrojového kódu: 1,2'
+description: Přečtěte si, co je nového v rozšířené funkci řízení zdrojového kódu v rozhraní API modulu plug-in správy zdrojového kódu verze 1,2.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5deb43b3b5d1a654fee82b043f06ec8219530a2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: eca5afe8ea9bb1404acf342cc7edbe1100888c6e
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037618"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487800"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>Co&#39;s novým v rozhraní API modulu plug-in správy zdrojového kódu verze 1,2
 Tato část popisuje pokročilé funkce správy zdrojového kódu v rozhraní API modulu plug-in správy zdrojového kódu verze 1,2. Následující seznam obsahuje nové funkce ve verzi 1,2:

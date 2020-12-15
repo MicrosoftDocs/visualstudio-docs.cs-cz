@@ -1,5 +1,7 @@
 ---
 title: Struktura VSPackage (Správa zdrojového kódu) | Microsoft Docs
+description: Přečtěte si o sadě SDK pro sadu zdrojových kódů, která poskytuje pokyny pro VSPackage se implementátorem správy zdrojového kódu pro integraci se sadou Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3f09b189e1e4b47187586e66c74315ee32495c8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f5850dfb2448364124c8f1778eac48ac9c653269
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703811"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487956"
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>Struktura balíčku VSPackage (balíček VSPackage správy zdrojového kódu)
 

@@ -1,5 +1,7 @@
 ---
 title: Ověřování zarážek ve službě starší verze jazyka | Microsoft Docs
+description: Přečtěte si, jak můžete přepsat metodu ValidateBreakpointLocation ve službě starší verze jazyka pro ověření zarážek před spuštěním ladicího programu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af09e4f8f2156100bea9267c92ffebeb64ce1aa3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d48db7397e2f9a5921315036bea15551fb7baa9
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704095"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488021"
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>Ověřování zarážek ve službě starší verze jazyka
 Zarážka označuje, že by mělo být spuštění programu zastaveno v určitém bodě, v němž je spuštěno v ladicím programu. Uživatel může umístit zarážku na libovolný řádek ve zdrojovém souboru, protože editor nemá žádné znalosti o tom, co představuje platné umístění pro zarážku. Po spuštění ladicího programu jsou všechny označené zarážky (nazývané nedokončené zarážky) vázány na příslušné umístění v běžícím programu. V současné době jsou zarážky ověřeny, aby se zajistilo, že označí platná umístění kódu. Například zarážka na komentáři není platná, protože ve zdrojovém kódu není v tomto umístění žádný kód. Ladicí program zakáže neplatné zarážky.

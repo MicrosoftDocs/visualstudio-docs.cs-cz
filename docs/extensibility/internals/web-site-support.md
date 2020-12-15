@@ -1,5 +1,7 @@
 ---
 title: Podpora webu | Microsoft Docs
+description: Seznamte se se systémy projektů webu, které jsou vytvářeny přidáním šablon a registračních atributů do stávajícího systému projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22047ad1b0709cefa200656e61f8e0d39ace94c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06f8ffdd504182dd82b11d4b5ce5f57e0a7629c3
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703446"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487839"
 ---
 # <a name="web-site-support"></a>Podpora webu
 Systém projektu webu je systém projektu, který vytváří webové projekty. Webové projekty v nástroji zase vytvářejí webové aplikace. Projekt webu generuje jeden spustitelný soubor pro každou webovou stránku, která má přidružený kód. Další spustitelné soubory jsou vygenerovány ze souborů zdrojového kódu ve složce/App_Code.
@@ -25,7 +27,7 @@ Systém projektu webu je systém projektu, který vytváří webové projekty. W
  Kompilátor jazyka použitý ke kompilaci webových stránek musí být zaregistrován v [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)] . Můžete použít [ \<compiler> prvek](/dotnet/framework/configure-apps/file-schema/compiler/compiler-element) v souboru Web.config k registraci kompilátoru, jako v následujícím příkladu:
 
 ```
-<system.codedom>  <compilers>    <compiler language="py;IronPython" extension=".py"       type="IronPython.CodeDom.PythonProvider, IronPython,       Version=1.0.2391.18146, Culture=neutral,       PublicKeyToken=b03f5f7f11d50a3a" />  </compilers></system.codedom>
+<system.codedom>  <compilers>    <compiler language="py;IronPython" extension=".py"       type="IronPython.CodeDom.PythonProvider, IronPython,       Version=1.0.2391.18146, Culture=neutral,       PublicKeyToken=b03f5f7f11d50a3a" />  </compilers></system.codedom>
 ```
 
 ## <a name="in-this-section"></a>V tomto oddílu

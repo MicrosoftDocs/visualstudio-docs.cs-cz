@@ -1,5 +1,7 @@
 ---
 title: Webové projekty | Microsoft Docs
+description: Přečtěte si o interních podrobnostech o fungování systému webového projektu v aplikaci Visual Studio pro vývojáře, kteří chtějí rozšířili Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 23194ba5ad59a113e5599b7fe1f5f39bed557351
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6afdbff1e844f45cac56b68909e1327a190f7a74
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703535"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487878"
 ---
 # <a name="web-projects"></a>Webové projekty
 Systém webového projektu je systém projektu, který vytváří webové projekty. Webové projekty v nástroji zase vytvářejí webové aplikace. Můžete programovat webovou stránku pomocí tradičních programovacích jazyků, například [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] nebo [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] , pro shromažďování a zpracování informací od uživatele, jejich uložení v databázi a tak dále. Webové stránky s přidruženým kódem se nazývají inteligentní webové stránky.

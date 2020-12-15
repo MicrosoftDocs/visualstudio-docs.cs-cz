@@ -1,5 +1,7 @@
 ---
 title: 'Návod: vytvoření služby starší verze jazyka | Microsoft Docs'
+description: Naučte se používat třídy jazyka Managed Package Framework k implementaci jazykové služby v jazyce Visual C#.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dbdad85dd1c0f62b22bb33b5ed6ab2c597e62164
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4fcc4004542f9a566d6c6bfa820cbb8c2e1846fa
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905980"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487930"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>Návod: Vytvoření služby starší verze jazyka
 Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykové služby v nástroji [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] je jednoduché. Pro hostování jazykové služby, samotné služby jazyka a analyzátoru pro váš jazyk potřebujete VSPackage.
@@ -56,13 +58,13 @@ Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykov
 
 ### <a name="create-the-language-service-class"></a>Vytvoření třídy jazykové služby
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt MyLanguagePackage, zvolte možnost **Přidat**, **odkaz**a pak klikněte na tlačítko **Přidat nový odkaz** .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt MyLanguagePackage, zvolte možnost **Přidat**, **odkaz** a pak klikněte na tlačítko **Přidat nový odkaz** .
 
 2. V dialogovém okně **Přidat odkaz** vyberte na kartě **.NET** možnost **Microsoft. VisualStudio. Package. LanguageService** a klikněte na tlačítko **OK**.
 
      To je nutné provést pouze jednou pro projekt jazykové balíčky.
 
-3. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt VSPackage a vyberte **Přidat**, **Třída**.
+3. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt VSPackage a vyberte **Přidat**, **Třída**.
 
 4. Ujistěte se, že je v seznamu šablon vybrána možnost **Třída** .
 
@@ -104,7 +106,7 @@ Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykov
 
 #### <a name="deriving-from-an-mpf-class"></a>Odvození z třídy MPF
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt VSPackage a vyberte **Přidat**, **Třída**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt VSPackage a vyberte **Přidat**, **Třída**.
 
 2. Ujistěte se, že je v seznamu šablon vybrána možnost **Třída** .
 

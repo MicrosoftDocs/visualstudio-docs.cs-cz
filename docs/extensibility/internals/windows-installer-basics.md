@@ -1,5 +1,7 @@
 ---
 title: Základy Instalační služba systému Windows | Microsoft Docs
+description: Přečtěte si o Instalační služba systému Windows pro použití při instalaci VSPackage, včetně uspořádání funkcí VSPackage do Instalační služba systému Windows komponent.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aeea0b17a3c234bb7670642fb9ae0a442c9d60cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1f4ca1908fbd54c0e8d12212bed19fc77e1dff51
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703421"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487774"
 ---
 # <a name="windows-installer-basics"></a>Základní informace o Instalační službě systému Windows
 Instalační služba systému Windows nainstaluje a odinstaluje aplikace nebo softwarové produkty v počítači uživatele. tyto úlohy se provádějí v jednotkách nazývaných Instalační služba systému Windows součásti (někdy označované jako WICs nebo pouze komponenty). Identifikátor GUID identifikuje každou součást WIC, což je základní jednotka instalace a počítání odkazů pro nastavení pomocí Instalační služba systému Windows.
@@ -55,13 +57,13 @@ Instalační služba systému Windows nainstaluje a odinstaluje aplikace nebo so
 > [!NOTE]
 > Vynucování Instalační služba systému Windows pravidel probíhá pouze v případě, že spustíte ověření souboru. msi. Je ale potřeba se s těmito pravidly zacházet jako s osvědčenými postupy. Další informace najdete v tématu [ověření instalační databáze](/windows/desktop/Msi/validating-an-installation-database) a [ověření balíčku](/windows/desktop/Msi/package-validation).
 
-#### <a name="installer-enforced-rules"></a>Pravidla vynutilá instalačním programem
+#### <a name="installer-enforced-rules"></a>Pravidla Installer-Enforced
 
 - Všechny soubory v dané součásti musí být nainstalovány do stejného adresáře. Naopak soubory nainstalované do samostatných složek musí patřit k samostatným součástem.
 
 - Může existovat pouze jedna cesta ke klíči na komponentu. Klíčovou cestou je pouze soubor nebo klíč registru, který představuje celou komponentu.
 
-#### <a name="component-provider-responsibilities"></a>Odpovědnosti poskytovatele součástí
+#### <a name="component-provider-responsibilities"></a>Component-Provider odpovědností
 
 - Všechny dva prostředky, které se mohou samostatně dodávat v následujících verzích, by měly existovat v samostatných součástech. Prostředky by se měly seskupovat do stejné komponenty jenom v případě, že jste si jisti, že tyto prostředky nikdy nebudou dodávat samostatně. Ve skutečnosti se doporučuje, aby všechny primární prostředky (například knihovny DLL) vždy existovaly v samostatných WICs. Další informace najdete v tématu [Definování komponent instalačního programu](/windows/desktop/Msi/defining-installer-components).
 

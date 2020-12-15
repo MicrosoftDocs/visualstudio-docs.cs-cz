@@ -1,5 +1,7 @@
 ---
 title: Průvodce testováním pro moduly plug-in pro správu zdrojového kódu | Microsoft Docs
+description: Přečtěte si o testování modulu plug-in správy zdrojového kódu pomocí sady Visual Studio. Tento přehled zahrnuje běžné oblasti testování.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 321d61175068f135aae87bff73f13ac800f4793c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a288beb618b0b539f53270928366349f47aee9e9
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905148"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487722"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>Testovací příručka pro moduly plug-in správy zdrojového kódu
 V této části najdete pokyny pro testování modulu plug-in správy zdrojového kódu pomocí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . K dispozici je rozsáhlý přehled nejběžnějších testovacích oblastí a také některé z komplikovaných oblastí, které mohou být problematické. Tento přehled není určen jako vyčerpávající seznam testovacích případů.
@@ -51,7 +53,7 @@ V této části najdete pokyny pro testování modulu plug-in správy zdrojovéh
 
 ## <a name="test-areas-covered-in-this-section"></a>Testovací oblasti zahrnuté v této části
 
-- [Testovací oblast 1: přidat do nebo otevřít ze správy zdrojového kódu](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)
+- [Testovací oblast 1: Přidání nebo otevření ze správy zdrojového kódu](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)
 
   - Případ 1a: Přidání řešení do správy zdrojového kódu
 
@@ -61,7 +63,7 @@ V této části najdete pokyny pro testování modulu plug-in správy zdrojovéh
 
 - [Testovací oblast 2: Získání ze správy zdrojového kódu](../../extensibility/internals/test-area-2-get-from-source-control.md)
 
-- [Testovací oblast 3: rezervace/zrušení rezervace](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)
+- [Testovací oblast 3: Rezervace a zrušení rezervace](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)
 
   - Případ 3: rezervování/zrušení rezervace
 
