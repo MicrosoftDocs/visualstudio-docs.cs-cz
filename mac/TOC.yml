@@ -202,6 +202,8 @@
       href: visual-studio-experience-improvement-program.md
     - name: Nahlášení problému
       href: report-a-problem.md
+    - name: 'Řešení potíží: Jak můžu vydat novou verzi svého existujícího rozšíření?'
+      href: migrate-extensions.md
     - name: 'Řešení potíží: Podporuje Visual Studio pro Mac Správu verzí Team Foundation?'
       href: tf-version-control.md
     - name: 'Řešení potíží: Proč se mi nezobrazují všechny šablony?'
