@@ -1,5 +1,7 @@
 ---
 title: Práce s položkami pošty
+description: Přečtěte si, že třída MailItem obsahuje metody a vlastnosti, které slouží k provádění úloh s e-mailovými zprávami.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,17 +17,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1a0e5007163d10aee15e39759448928e44ae5a68
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce91f9773bf4fc212a47bf64d76c8f1131457c38
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62815430"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526880"
 ---
 # <a name="work-with-mail-items"></a>Práce s položkami pošty
   <xref:Microsoft.Office.Interop.Outlook.MailItem>Třída obsahuje metody a vlastnosti, které slouží k provádění úloh s e-mailovými zprávami.
 
-|Úkol|Postup|
+|Úloha|Postup|
 |----------|---------------|
 |Vytvořte e-mailovou zprávu.|[Postupy: vytváření položek e-mailu prostřednictvím kódu programu](../vsto/how-to-programmatically-create-an-e-mail-item.md)|
 |Odešlete e-mailovou zprávu.|[Postupy: odesílání e-mailů prostřednictvím kódu programu](../vsto/how-to-programmatically-send-e-mail-programmatically.md)|

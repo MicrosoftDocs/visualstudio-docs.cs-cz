@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Svázání ovládacích prvků obsahu s vlastními částmi XML'
+description: Naučte se navazovat ovládací prvky obsahu v přizpůsobení na úrovni dokumentu pro Word na data XML, která jsou uložená v dokumentu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,19 +19,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a80488408f680530ed3c9b4094b2997e97484ce3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a82a8fd98bbf1a735661f3e1cf01e2452eb7ee58
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544440"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527957"
 ---
 # <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>Návod: Svázání ovládacích prvků obsahu s vlastními částmi XML
   Tento návod ukazuje, jak navazovat ovládací prvky obsahu v přizpůsobení na úrovni dokumentu pro Word na data XML, která jsou uložená v dokumentu.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
- Word umožňuje ukládat data XML s názvem *Custom XML Parts*v dokumentu. Zobrazení těchto dat můžete řídit vazbou ovládacích prvků obsahu na prvky ve vlastní části XML. Vzorový dokument v tomto návodu zobrazuje informace o zaměstnancích, které jsou uložené ve vlastní části XML. Když otevřete dokument, ovládací prvky obsahu zobrazí hodnoty prvků XML. Všechny změny, které provedete v textu v ovládacích prvcích obsahu, budou uloženy ve vlastní části XML.
+ Word umožňuje ukládat data XML s názvem *Custom XML Parts* v dokumentu. Zobrazení těchto dat můžete řídit vazbou ovládacích prvků obsahu na prvky ve vlastní části XML. Vzorový dokument v tomto návodu zobrazuje informace o zaměstnancích, které jsou uložené ve vlastní části XML. Když otevřete dokument, ovládací prvky obsahu zobrazí hodnoty prvků XML. Všechny změny, které provedete v textu v ovládacích prvcích obsahu, budou uloženy ve vlastní části XML.
 
  Tento návod znázorňuje následující úlohy:
 
@@ -70,7 +72,7 @@ ms.locfileid: "85544440"
 
 1. V dokumentu aplikace Word, který je hostován v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Návrháři, klikněte na pásu karet na kartu **Vložit** .
 
-2. Ve skupině **tabulky** vyberte **tabulka**a vložte tabulku se dvěma sloupci a 3 řádky.
+2. Ve skupině **tabulky** vyberte **tabulka** a vložte tabulku se dvěma sloupci a 3 řádky.
 
 3. Zadejte text do prvního sloupce tak, aby vypadal jako následující sloupec:
 
@@ -110,7 +112,7 @@ ms.locfileid: "85544440"
 
 2. V podokně **šablony** vyberte **soubor XML**.
 
-3. Pojmenujte soubor **employees.xml**a pak klikněte na tlačítko **Přidat** .
+3. Pojmenujte soubor **employees.xml** a pak klikněte na tlačítko **Přidat** .
 
      **employees.xml** soubor se otevře v editoru kódu.
 
@@ -127,7 +129,7 @@ ms.locfileid: "85544440"
     </employees>
     ```
 
-5. V **Průzkumník řešení**vyberte soubor **employees.xml** .
+5. V **Průzkumník řešení** vyberte soubor **employees.xml** .
 
 6. V okně **vlastnosti** vyberte vlastnost **Akce sestavení** a pak změňte hodnotu na **Integrovaný prostředek**.
 
@@ -148,7 +150,7 @@ ms.locfileid: "85544440"
 
      Otevře se Návrhář schémat.
 
-4. V **Průzkumník řešení**otevřete místní nabídku pro  **Employees. xsd**a pak zvolte  **Zobrazit kód**.
+4. V **Průzkumník řešení** otevřete místní nabídku pro  **Employees. xsd** a pak zvolte  **Zobrazit kód**.
 
 5. Obsah souboru **Employees. xsd** nahraďte následujícím schématem.
 
@@ -225,7 +227,7 @@ ms.locfileid: "85544440"
 
 ### <a name="to-add-a-custom-xml-part-to-the-document"></a>Přidání vlastní části XML do dokumentu
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro  **ThisDocument.cs** nebo **ThisDocument. vb**a pak zvolte **Zobrazit kód**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro  **ThisDocument.cs** nebo **ThisDocument. vb** a pak zvolte **Zobrazit kód**.
 
 2. Do třídy přidejte následující deklarace `ThisDocument` . Tento kód deklaruje několik objektů, které použijete k přidání vlastní části XML do dokumentu.
 
@@ -277,7 +279,7 @@ ms.locfileid: "85544440"
     |-|-|
     |**Jméno zaměstnance**|**Karina Leal**|
     |**Datum nástupu**|**1. dubna 1999**|
-    |**Název**|**Manager**|
+    |**Název**|**Manažer**|
 
 3. Vyberte buňku napravo od buňky **název zaměstnance** a zadejte jiný název.
 

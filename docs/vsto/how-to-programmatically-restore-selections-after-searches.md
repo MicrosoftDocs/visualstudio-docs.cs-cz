@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: obnovení výběru po hledání prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově obnovit výběry po hledání v dokumentu Microsoft Wordu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 452e483600f6da0eacd5337b42c728145bcfe8aa
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: d396602a5d2bc0c3a90d32256bf226348abff3f3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584778"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528274"
 ---
 # <a name="how-to-programmatically-restore-selections-after-searches"></a>Postupy: obnovení výběru po hledání prostřednictvím kódu programu
   Pokud vyhledáte a nahradíte text v dokumentu, možná budete chtít obnovit původní výběr uživatele po dokončení hledání.

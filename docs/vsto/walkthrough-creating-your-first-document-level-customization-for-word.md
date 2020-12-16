@@ -1,5 +1,6 @@
 ---
 title: Vytvoření prvního přizpůsobení na úrovni dokumentu pro Word
+description: Vytvoření přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Word. Funkce, které vytvoříte v tomto druhu řešení, jsou k dispozici pouze v případě, že je otevřen konkrétní dokument.
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c1f5d1d6d373a5bbcd3f10d600175a88e88823ad
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: c1f827346c30720cefd781dade3039416504b9c0
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584986"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527079"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-word"></a>Návod: vytvoření prvního přizpůsobení na úrovni dokumentu pro Word
 
@@ -56,9 +57,9 @@ ms.locfileid: "91584986"
 
 1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
+2. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na **projekt**.
 ::: moniker range="vs-2017"
-3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
+3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic** a potom rozbalte položku **Office/SharePoint**.
 
 4. V rozbaleném uzlu **Office/SharePoint** vyberte uzel **doplňky VSTO** .
 
@@ -68,7 +69,7 @@ ms.locfileid: "91584986"
 
 7. Klikněte na **OK**.
 
-8. V **průvodci Visual Studio Tools for Office projektu**vyberte **vytvořit nový dokument** a klikněte na **OK**.
+8. V **průvodci Visual Studio Tools for Office projektu** vyberte **vytvořit nový dokument** a klikněte na **OK**.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 3. V dialogovém okně **vytvořit nový projekt** vyberte projekt **dokumentů aplikace Word VSTO** .
@@ -79,7 +80,7 @@ ms.locfileid: "91584986"
 
 5. Do pole **název** v dialogu **Konfigurovat nový projekt** zadejte **FirstWorkbookCustomization** a klikněte na **vytvořit**.
 
-6. V **průvodci Visual Studio Tools for Office projektu**vyberte **vytvořit nový dokument** a klikněte na **OK**.
+6. V **průvodci Visual Studio Tools for Office projektu** vyberte **vytvořit nový dokument** a klikněte na **OK**.
 ::: moniker-end
    - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Vytvoří projekt **FirstDocumentCustomization** a přidá do projektu soubor kódu dokumentu **FirstDocumentCustomization** a ThisDocument. Dokument **FirstDocumentCustomization** se automaticky otevře v návrháři.
 
@@ -91,11 +92,11 @@ ms.locfileid: "91584986"
 
 1. Zavřete dokument kliknutím na tlačítko **Zavřít** (X) v okně návrháře.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor kódu **ThisDocument** a klikněte na tlačítko **Návrhář zobrazení**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor kódu **ThisDocument** a klikněte na tlačítko **Návrhář zobrazení**.
 
      \- ani
 
-     V **Průzkumník řešení**dvakrát klikněte na soubor kódu **ThisDocument** .
+     V **Průzkumník řešení** dvakrát klikněte na soubor kódu **ThisDocument** .
 
 ## <a name="add-text-to-the-document-in-the-designer"></a>Přidání textu do dokumentu v Návrháři
 
@@ -117,7 +118,7 @@ ms.locfileid: "91584986"
 
 ### <a name="to-add-a-second-paragraph-of-text-to-the-document-by-using-code"></a>Přidání druhého odstavce textu do dokumentu pomocí kódu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **ThisDocument**a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **ThisDocument** a pak klikněte na **Zobrazit kód**.
 
      Soubor kódu se otevře v aplikaci Visual Studio.
 

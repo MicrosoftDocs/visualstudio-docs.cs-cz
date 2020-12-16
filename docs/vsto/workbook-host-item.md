@@ -1,5 +1,7 @@
 ---
 title: Položka hostitele sešitu
+description: Přečtěte si, že položka hostitele sešitu je typ, který rozšiřuje typ sešitu z primárního definičního sestavení pro aplikaci Microsoft Excel.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 797f1a55ec7632114e411bf0ba08e7f4e0cc146e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8d3d5b7efadefd77be7ce25026c8f485ee0ef133
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255087"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528346"
 ---
 # <a name="workbook-host-item"></a>Položka hostitele sešitu
   <xref:Microsoft.Office.Tools.Excel.Workbook>Položka hostitele je typ, který rozšiřuje <xref:Microsoft.Office.Interop.Excel.Workbook> typ z primárního definičního sestavení pro Excel. <xref:Microsoft.Office.Tools.Excel.Workbook>Položka hostitele poskytuje všechny stejné vlastnosti, metody a události jako <xref:Microsoft.Office.Interop.Excel.Workbook> objekt, ale také poskytuje další funkce.

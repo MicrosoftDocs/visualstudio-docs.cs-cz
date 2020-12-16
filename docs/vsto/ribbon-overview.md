@@ -1,5 +1,7 @@
 ---
 title: Přehled pásu karet
+description: Naučte se, jak pás karet představuje způsob, jak uspořádat související příkazy, aby bylo snazší najít a jak se příkazy zobrazí na pásu karet jako ovládací prvky.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 668517705caa7ba6baef0b85305bf4470bc3b26b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ca7f7757cddf89b97f7a374385ea834728f0e975
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985614"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527972"
 ---
 # <a name="ribbon-overview"></a>Přehled pásu karet
   Pás karet je způsob, jak uspořádat související příkazy, aby bylo snazší je najít. Příkazy se zobrazí jako ovládací prvky na pásu karet. Ovládací prvky jsou uspořádány do *skupin* podél vodorovného pruhu v horním rohu okna aplikace. Související skupiny jsou uspořádány na kartách.
@@ -84,7 +86,7 @@ ms.locfileid: "72985614"
  Další informace o exportu pásu karet do XML najdete v tématu [How to: Export pásu karet z Návrháře pásu karet do XML pásu karet](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md).
 
 ### <a name="update-the-code"></a>Aktualizace kódu
- Do **Průzkumník řešení**se přidá nový soubor kódu pásu karet. Tento soubor obsahuje třídu XML pásu karet. `Ribbon Callbacks`Pro zpracování akcí uživatele, jako je například kliknutí na tlačítko, je nutné v oblasti této třídy vytvořit metody zpětného volání. Přesuňte kód z obslužných rutin událostí do těchto metod zpětného volání a upravte kód tak, aby fungoval s programovacím modelem rozšíření pásu karet (Ribbon Extensibility). Další informace najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
+ Do **Průzkumník řešení** se přidá nový soubor kódu pásu karet. Tento soubor obsahuje třídu XML pásu karet. `Ribbon Callbacks`Pro zpracování akcí uživatele, jako je například kliknutí na tlačítko, je nutné v oblasti této třídy vytvořit metody zpětného volání. Přesuňte kód z obslužných rutin událostí do těchto metod zpětného volání a upravte kód tak, aby fungoval s programovacím modelem rozšíření pásu karet (Ribbon Extensibility). Další informace najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
  Musíte také přidat kód do `ThisAddIn` `ThisWorkbook` třídy, nebo, `ThisDocument` která přepisuje `CreateRibbonExtensibilityObject` metodu a vrátí třídu XML pásu karet do aplikace sady Office.
 
@@ -93,7 +95,7 @@ ms.locfileid: "72985614"
 ## <a name="add-multiple-ribbon-items-to-a-project"></a>Přidání více položek pásu karet do projektu
  Do jednoho projektu můžete přidat více než jednu položku pásu karet. To je užitečné v případě, že chcete provést jednu z následujících dvou úloh:
 
-- Vytvořte pás karet pro *kontroly*aplikace Outlook. Další informace najdete v tématu [přizpůsobení pásu karet pro Outlook](../vsto/customizing-a-ribbon-for-outlook.md).
+- Vytvořte pás karet pro *kontroly* aplikace Outlook. Další informace najdete v tématu [přizpůsobení pásu karet pro Outlook](../vsto/customizing-a-ribbon-for-outlook.md).
 
     > [!NOTE]
     > Inspektor je okno, které se otevře, když uživatelé provedou určité úlohy, například vytvoření e-mailové zprávy.

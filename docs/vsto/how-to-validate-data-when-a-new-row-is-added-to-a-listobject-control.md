@@ -1,5 +1,7 @@
 ---
 title: Ověřit data při přidání nového řádku do ovládacího prvku ListObject
+description: Zjistěte, jak můžete pomocí sady Visual Studio ověřit data při přidání nového řádku do ovládacího prvku ListObject.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b89d7c6709b577d23213d23ca25b1ce67e505dab
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e60f19da0d36c5a57f0151318d6d76b43a80de37
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584869"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528522"
 ---
 # <a name="how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control"></a>Postupy: ověření dat při přidání nového řádku do ovládacího prvku ListObject
   Uživatelé mohou přidat nové řádky do <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku vázaného na data. Před potvrzením změn ve zdroji dat můžete ověřit data uživatele.

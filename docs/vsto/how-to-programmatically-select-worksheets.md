@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Výběr listů prostřednictvím kódu programu'
+description: Pomocí sady Visual Studio programově vyberte listy aplikace Microsoft Excel s položkou hostitele listu nebo kolekcí listů sešitu aplikace Excel.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6134b23e7b398794529ee43a428ee8b8962ccf38
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ddef833feeb4e59f5e9e9b2c95a2170ee3c2530
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547001"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528541"
 ---
 # <a name="how-to-programmatically-select-worksheets"></a>Postupy: Výběr listů prostřednictvím kódu programu
   <xref:Microsoft.Office.Tools.Excel.Worksheet.Select%2A>Metoda vybere zadaný objekt, který přesune výběr uživatele do nového objektu. Použijte <xref:Microsoft.Office.Tools.Excel.Worksheet.Activate%2A> metodu, pokud chcete přenést fokus na objekt beze změny výběru uživatele.

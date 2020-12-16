@@ -1,5 +1,7 @@
 ---
 title: Přehled modelu objektů aplikace Visio
+description: Přečtěte si, jak můžete pracovat s modelem objektu aplikace Visio pro vývoj řešení Office pro aplikaci Microsoft Visio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 88695511d22e38262dc969d66e469441c9c3ac47
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9278cede2dc7f105b2741d5d63b01b4cd966c790
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985484"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528382"
 ---
 # <a name="visio-object-model-overview"></a>Přehled modelu objektů aplikace Visio
   Pro vývoj řešení Office pro systém Microsoft Office Visio můžete pracovat s modelem objektu aplikace Visio. Tento objektový model se skládá z tříd a rozhraní, která jsou k dispozici v primárním sestavení vzájemné spolupráce pro aplikaci Visio a jsou definována v `Microsoft.Office.Interop.Visio` oboru názvů.

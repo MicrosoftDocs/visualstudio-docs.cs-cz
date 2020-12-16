@@ -1,5 +1,7 @@
 ---
 title: Cílové aplikace Office prostřednictvím primárních sestavení spolupráce
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově cílit systém Microsoft Office aplikací prostřednictvím primárních spolupracujících sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 60e351a15af4994d2bf64a800e3019501cf0571d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81c2852a92124a7cf9fb6078b196982d22100be7
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545766"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528111"
 ---
 # <a name="how-to-target-office-applications-through-primary-interop-assemblies"></a>Postupy: cílení aplikací Office prostřednictvím primárních sestavení spolupráce
   Při vytváření nového projektu sady Office aplikace Visual Studio automaticky přidá odkazy na systém Microsoft Office primární spolupracující sestavení (PIA), která jsou vyžadována pro sestavení projektu. Odkazy na jiné PIA je nutné přidat v následujících scénářích:

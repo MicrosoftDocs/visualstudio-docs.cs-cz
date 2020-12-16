@@ -1,5 +1,7 @@
 ---
 title: 'Návod: vytvoření prvního doplňku VSTO pro projekt'
+description: Vytvořte doplněk na úrovni aplikace pro aplikaci Microsoft Project. Tato funkce je k dispozici pro samotnou aplikaci, bez ohledu na to, které projekty jsou otevřené.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4a84d295a47d3391f27e7101ad815dca0c910aa6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f4774b8f5ba55d54e05e3a9ef18f8ea13fd48fc
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62981390"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527891"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-project"></a>Návod: vytvoření prvního doplňku VSTO pro projekt
   V tomto návodu se dozvíte, jak vytvořit doplněk VSTO pro systém Microsoft Office projekt. Funkce, které vytvoříte v tomto druhu řešení, jsou k dispozici pro samotnou aplikaci, bez ohledu na to, které projekty jsou otevřené. Další informace najdete v tématu [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -52,9 +54,9 @@ ms.locfileid: "62981390"
 
 1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
+2. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na **projekt**.
 
-3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
+3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic** a potom rozbalte položku **Office/SharePoint**.
 
 4. V rozbaleném uzlu **Office/SharePoint** vyberte uzel **Doplňky Office** .
 

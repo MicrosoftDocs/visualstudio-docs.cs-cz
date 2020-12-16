@@ -1,5 +1,7 @@
 ---
 title: Práce s dokumenty
+description: Přečtěte si o podrobných postupech a příkladech kódu pro použití objektového modelu Microsoft Wordu pro práci s dokumenty v projektech Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,19 +16,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1b21f8c84082e19c1d9f43d6a2ae36d158a15c01
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a8b994ed88c6499d17cc0cf241e60a17f235b97
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63008687"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527026"
 ---
 # <a name="work-with-documents"></a>Práce s dokumenty
   Témata v této části poskytují podrobné postupy a příklady kódu pro použití objektového modelu aplikace systém Microsoft Office Word pro práci s dokumenty v projektech Office.
 
  V některých případech se způsoby provádění těchto úkolů v Doplňkech VSTO liší od způsobů, jak je provádíte v přizpůsobení na úrovni dokumentu.
 
-|Úkol|Postup|
+|Úloha|Postup|
 |----------|---------------|
 |Vytvořte dokument na základě normální šablony nebo jiné šablony.|[Postupy: vytváření nových dokumentů prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-documents.md)|
 |Otevře zadaný dokument jako pro čtení/zápis nebo jen pro čtení.|[Postupy: otevírání existujících dokumentů prostřednictvím kódu programu](../vsto/how-to-programmatically-open-existing-documents.md)|

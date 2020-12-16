@@ -1,5 +1,7 @@
 ---
 title: Pás karet – XML
+description: Naučte se používat položku pásu karet (XML), chcete-li přizpůsobit pás karet způsobem, který není podporován položkou pásu karet (vizuálního návrháře).
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e9ce2388dbf61ef3af524f0debc776891dca004f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c9e1cf4c6af266495b3d85d96aa8cce1697cca7
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64792748"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528421"
 ---
 # <a name="ribbon-xml"></a>Pás karet – XML
   Položka pásu karet (XML) umožňuje přizpůsobit pás karet pomocí XML. Použijte položku pásu karet (XML), chcete-li přizpůsobit pás karet způsobem, který není podporován položkou pásu karet (vizuální Návrhář). Porovnání toho, co můžete s každou položkou dělat, najdete v tématu [Přehled pásu karet](../vsto/Ribbon-overview.md).
@@ -45,7 +47,7 @@ ms.locfileid: "64792748"
   Ve výchozím nastavení tyto soubory přidají vlastní skupinu na kartu **Doplňky** na pásu karet.
 
 ## <a name="display-the-custom-ribbon-in-a-microsoft-office-application"></a>Zobrazení vlastního pásu karet v aplikaci systém Microsoft Office
- Po přidání položky **pásu karet (XML)** do projektu je nutné přidat kód do třídy **ThisAddIn**, **ThisWorkbook**nebo **ThisDocument** , která přepíše `CreateRibbonExtensibilityObject` metodu a vrátí třídu XML pásu karet do aplikace sady Office.
+ Po přidání položky **pásu karet (XML)** do projektu je nutné přidat kód do třídy **ThisAddIn**, **ThisWorkbook** nebo **ThisDocument** , která přepíše `CreateRibbonExtensibilityObject` metodu a vrátí třídu XML pásu karet do aplikace sady Office.
 
  Následující příklad kódu přepíše `CreateRibbonExtensibilityObject` metodu a vrátí třídu XML pásu karet s názvem MyRibbon.
 

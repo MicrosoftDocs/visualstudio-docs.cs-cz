@@ -1,5 +1,7 @@
 ---
 title: Ukázky a návody pro vývoj pro Office
+description: Přečtěte si o ukázkových aplikacích, ukázkovém kódu a podrobných návodech k zobrazení syntaxe, struktury a postupů používaných k sestavování řešení pro systém Office.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a9a8e71395190647fa7a908949a186c511b24610
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5b5b1c34ef295558c42d181032dcf3dd7c456289
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551678"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527725"
 ---
 # <a name="office-development-samples-and-walkthroughs"></a>Ukázky a návody pro vývoj pro Office
   Tato část obsahuje ukázkové aplikace, ukázkový kód a podrobné návody, které ilustrují syntaxi, strukturu a techniky, které slouží k sestavování systém Microsoft Office řešení.

@@ -1,5 +1,7 @@
 ---
 title: 'Návod: vytvoření prvního doplňku VSTO pro Excel'
+description: Vytvořte doplněk na úrovni aplikace pro aplikaci Microsoft Excel. Funkce, které vytvoříte, jsou k dispozici pro samotnou aplikaci, bez ohledu na to, které sešity jsou otevřené.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 52b683b1f75f2967807f171c204fbf02a2e5db69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f04532e627a694e8a234f1842995b92a707e537
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69548014"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527913"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-excel"></a>Návod: vytvoření prvního doplňku VSTO pro Excel
   V tomto úvodním návodu se dozvíte, jak vytvořit doplněk na úrovni aplikace pro systém Microsoft Office Excel. Funkce, které vytvoříte v tomto druhu řešení, jsou k dispozici pro samotnou aplikaci, bez ohledu na to, které sešity jsou otevřené.
@@ -54,9 +56,9 @@ ms.locfileid: "69548014"
 
 1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
+2. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na **projekt**.
 
-3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
+3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic** a potom rozbalte položku **Office/SharePoint**.
 
 4. V rozbaleném uzlu **Office/SharePoint** vyberte uzel **Doplňky Office** .
 

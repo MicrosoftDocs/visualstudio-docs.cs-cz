@@ -1,5 +1,7 @@
 ---
 title: 'Návod: volání kódu z jazyka VBA v projektu Visual Basic'
+description: Naučte se volat metodu v přizpůsobení na úrovni dokumentu pro Microsoft Word z jazyk Visual Basic for Application (VBA) kódu v dokumentu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ad50ed0f55a148a05c0fedc6fe0ccb0dd5b890b9
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 6016dbf53413f6e55c88edfe930af677472bdaf5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298265"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527382"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-basic-project"></a>Návod: volání kódu z jazyka VBA v projektu Visual Basic
   Tento návod ukazuje, jak volat metodu v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word z kódu jazyk Visual Basic for Application (VBA) v dokumentu. Postup zahrnuje tři základní kroky: Přidání metody do `ThisDocument` třídy hostitelské položky, vystavení metody pro kód VBA a následné volání metody z kódu VBA v dokumentu.
@@ -96,9 +98,9 @@ ms.locfileid: "92298265"
 
 1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**. Pokud je vaše rozhraní IDE nastaveno na použití Visual Basic vývojové nastavení, v nabídce **soubor** klikněte na **Nový projekt**.
+2. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na **projekt**. Pokud je vaše rozhraní IDE nastaveno na použití Visual Basic vývojové nastavení, v nabídce **soubor** klikněte na **Nový projekt**.
 
-3. V podokně šablony rozbalte položku **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
+3. V podokně šablony rozbalte položku **Visual Basic** a potom rozbalte položku **Office/SharePoint**.
 
 4. Vyberte uzel **Doplňky pro Office** .
 
@@ -110,7 +112,7 @@ ms.locfileid: "92298265"
 
      Otevře se **Průvodce projektem Visual Studio Tools for Office** .
 
-8. Vyberte možnost **zkopírovat existující dokument**a v poli **Úplná cesta k existujícímu dokumentu** zadejte umístění dokumentu **DocumentWithVBA** , který jste vytvořili dříve. Pokud používáte vlastní dokument s podporou maker, určete místo toho umístění tohoto dokumentu.
+8. Vyberte možnost **zkopírovat existující dokument** a v poli **Úplná cesta k existujícímu dokumentu** zadejte umístění dokumentu **DocumentWithVBA** , který jste vytvořili dříve. Pokud používáte vlastní dokument s podporou maker, určete místo toho umístění tohoto dokumentu.
 
 9. Klikněte na **Finish** (Dokončit).
 
@@ -152,7 +154,7 @@ ms.locfileid: "92298265"
 
 ### <a name="to-add-a-method-to-the-thisdocument-class"></a>Přidání metody do třídy ThisDocument
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **ThisDocument. vb**a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **ThisDocument. vb** a pak klikněte na **Zobrazit kód**.
 
      V editoru kódu se otevře soubor **ThisDocument. vb** .
 
@@ -167,7 +169,7 @@ ms.locfileid: "92298265"
 
 ### <a name="to-expose-the-method-to-vba-code"></a>Vystavení metody pro kód VBA
 
-1. V **Průzkumník řešení**dvakrát klikněte na **ThisDocument. vb**.
+1. V **Průzkumník řešení** dvakrát klikněte na **ThisDocument. vb**.
 
      Otevře se soubor **DocumentWithVBA** v návrháři.
 

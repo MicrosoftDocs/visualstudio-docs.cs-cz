@@ -1,5 +1,7 @@
 ---
 title: Přehled model Windows Formsch ovládacích prvků v dokumentech Office
+description: Přečtěte si, jak model Windows Forms ovládací prvky jsou objekty, se kterými můžou uživatelé interaktivně zadávat data a manipulovat s nimi.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -27,12 +29,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a101f22bccb3624eccff1edcea502c9350991392
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0309ea22444062b117d3684e32b56960585aa184
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254915"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527050"
 ---
 # <a name="windows-forms-controls-on-office-documents-overview"></a>Přehled model Windows Formsch ovládacích prvků v dokumentech Office
   Ovládací prvky model Windows Forms jsou objekty, se kterými můžou uživatelé interaktivně zadávat data nebo pracovat s nimi. V projektech na úrovni dokumentu pro systém Microsoft Office Excel a systém Microsoft Office Word můžete přidat model Windows Forms ovládací prvky do dokumentu nebo sešitu v projektu v době návrhu nebo můžete programově přidat tyto ovládací prvky v době běhu. Tyto ovládací prvky můžete programově přidat do libovolného otevřeného dokumentu nebo listu v době běhu v doplňku VSTO pro Excel nebo Word.

@@ -1,5 +1,7 @@
 ---
 title: Změny požadované pro projekty Office migrované do .NET 4,5
+description: Naučte se změny, které je třeba provést v projektu, pokud se cílová architektura změní na .NET Framework 4 nebo novější ze starší verze .NET Framework.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 40db3cd629f2c3a2ced37a781dea3244a3f19957
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e92a7fc81f77244664be7285cc6fd414dc4409be
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584461"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527491"
 ---
 # <a name="changes-required-for-office-projects-migrated-to-net-45"></a>Změny požadované pro projekty Office migrované do .NET 4,5
 

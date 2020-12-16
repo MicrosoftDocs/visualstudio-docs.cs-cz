@@ -1,5 +1,7 @@
 ---
 title: 'Návod: aktualizace grafu v dokumentu pomocí přepínačů'
+description: Přečtěte si, jak můžete pomocí přepínačů v přizpůsobení na úrovni dokumentu pro Microsoft Word dát uživatelům možnost vybrat si styly grafů v dokumentu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f4b39949deb3bcbf3d9330ca8d820a5841b0f4c4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: df2996d99e752fbe0f7f36bcab537ee8c19d4f06
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584292"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528397"
 ---
 # <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>Návod: aktualizace grafu v dokumentu pomocí přepínačů
   Tento návod ukazuje, jak pomocí přepínačů v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word dát uživatelům možnost vybrat styly grafů v dokumentu.
@@ -79,7 +81,7 @@ ms.locfileid: "91584292"
 
 ### <a name="to-add-a-user-control"></a>Přidání uživatelského ovládacího prvku
 
-1. V **Průzkumník řešení**vyberte projekt **Možnosti grafu** .
+1. V **Průzkumník řešení** vyberte projekt **Možnosti grafu** .
 
 2. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
@@ -89,7 +91,7 @@ ms.locfileid: "91584292"
 
 1. Pokud uživatelský ovládací prvek není viditelný v návrháři, poklikejte na **ChartOptions** v **Průzkumník řešení**.
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**přetáhněte první ovládací prvek **přepínač** na uživatelský ovládací prvek a změňte následující vlastnosti.
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** přetáhněte první ovládací prvek **přepínač** na uživatelský ovládací prvek a změňte následující vlastnosti.
 
     |Vlastnost|Hodnota|
     |--------------|-----------|
@@ -133,7 +135,7 @@ ms.locfileid: "91584292"
 
 ### <a name="to-create-an-event-and-property-on-a-user-control"></a>Vytvoření události a vlastnosti v uživatelském ovládacím prvku
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uživatelský ovládací prvek a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uživatelský ovládací prvek a pak klikněte na **Zobrazit kód**.
 
 2. Přidejte kód pro vytvoření `SelectionChanged` události a `Selection` vlastnosti `ChartOptions` třídy.
 
@@ -175,7 +177,7 @@ ms.locfileid: "91584292"
 
      Uživatelský ovládací prvek **ChartOptions** se přidá do **sady nástrojů**.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **ThisDocument. vb** nebo **ThisDocument.cs**a pak klikněte na tlačítko **Návrhář zobrazení**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **ThisDocument. vb** nebo **ThisDocument.cs** a pak klikněte na tlačítko **Návrhář zobrazení**.
 
 3. Přetáhněte `ChartOptions` ovládací prvek z **panelu nástrojů** do dokumentu.
 

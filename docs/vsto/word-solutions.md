@@ -1,5 +1,7 @@
 ---
 title: řešení pro aplikaci Word
+description: Přečtěte si, jak můžete pomocí řešení sady Visual Studio automatizovat aplikace Word, zvětšit funkce aplikace Word a přizpůsobit uživatelské rozhraní (UI) aplikace Word.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c2d3b9ea3257db11eed766079b169a7bc81fe28a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55ffb54e00af0291a33bd635ea81d3d865cc4c9a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985370"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528367"
 ---
 # <a name="word-solutions"></a>řešení pro aplikaci Word
   Visual Studio poskytuje projektové šablony, které můžete použít k vytvoření přizpůsobení na úrovni dokumentu a doplňku VSTO pro systém Microsoft Office Word. Tato řešení můžete použít k automatizaci aplikace Word, rozšiřování funkcí aplikace Word a přizpůsobení uživatelského rozhraní (UI) aplikace Word. Další informace o rozdílech mezi přizpůsobením na úrovni dokumentu a doplňky VSTO najdete v tématu [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -85,7 +87,7 @@ ms.locfileid: "72985370"
 ### <a name="options-for-all-project-types"></a>Možnosti pro všechny typy projektů
  V následující tabulce jsou uvedeny možnosti přizpůsobení, které jsou k dispozici pro přizpůsobení na úrovni dokumentu a doplňky VSTO.
 
-|Úkol|Další informace|
+|Úloha|Další informace|
 |----------|--------------------------|
 |Přizpůsobení pásu karet.|[Přehled pásu karet](../vsto/ribbon-overview.md)|
 |Přidejte ovládací prvky model Windows Forms nebo rozšířené aplikace Word do přizpůsobeného dokumentu (pro přizpůsobení na úrovni dokumentu) nebo do libovolného otevřeného dokumentu (pro doplněk VSTO).|[Postupy: Přidání ovládacích prvků model Windows Forms do dokumentů Office](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)<br /><br /> [Postupy: Přidání ovládacích prvků obsahu do dokumentů aplikace Word](../vsto/how-to-add-content-controls-to-word-documents.md)<br /><br /> [Postupy: Přidání ovládacích prvků záložek do dokumentů aplikace Word](../vsto/how-to-add-bookmark-controls-to-word-documents.md)|
@@ -93,7 +95,7 @@ ms.locfileid: "72985370"
 ### <a name="options-for-document-level-customizations"></a>Možnosti pro přizpůsobení na úrovni dokumentu
  V následující tabulce jsou uvedeny možnosti přizpůsobení, které jsou k dispozici pouze pro přizpůsobení na úrovni dokumentu.
 
-|Úkol|Další informace|
+|Úloha|Další informace|
 |----------|--------------------------|
 |Přidejte podokno akcí do dokumentu.|[Přehled podokna akcí](../vsto/actions-pane-overview.md)<br /><br /> [Postupy: Přidání podokna akcí do dokumentů aplikace Word nebo sešitů aplikace Excel](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)|
 |Přidejte rozšířené ovládací prvky XMLNode a XMLNodes na plochu dokumentu.|[Postupy: Přidání ovládacích prvků XMLNode do dokumentů aplikace Word](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)<br /><br /> [Postupy: Přidání ovládacích prvků XMLNodes do dokumentů aplikace Word](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)|
@@ -101,7 +103,7 @@ ms.locfileid: "72985370"
 ### <a name="options-for-vsto-add-ins"></a>Možnosti doplňků VSTO
  V následující tabulce jsou uvedeny možnosti přizpůsobení, které jsou k dispozici pouze pro doplňky VSTO.
 
-|Úkol|Další informace|
+|Úloha|Další informace|
 |----------|--------------------------|
 |Vytvoří vlastní podokno úloh.|[Vlastní podokna úloh](../vsto/custom-task-panes.md)|
 

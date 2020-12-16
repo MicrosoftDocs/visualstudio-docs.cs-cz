@@ -1,5 +1,7 @@
 ---
 title: Správa dokumentů na serveru pomocí třídy ServerDocument
+description: Naučte se, jak můžete použít třídu ServerDocument v modulu runtime Visual Studio Tools for Office ke správě několika aspektů přizpůsobení na úrovni dokumentu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e91653734b804693584808478e44443563cdb823
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 585ec1842daeb4e4c4c59047383e5d53b3599bcf
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298275"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528496"
 ---
 # <a name="manage-documents-on-a-server-by-using-the-serverdocument-class"></a>Správa dokumentů na serveru pomocí třídy ServerDocument
   Můžete použít `ServerDocument` třídu v a [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ke správě několika aspektů přizpůsobení na úrovni dokumentu, i když systém Microsoft Office Word a systém Microsoft Office Excel nejsou nainstalované. Můžete provádět následující úlohy:

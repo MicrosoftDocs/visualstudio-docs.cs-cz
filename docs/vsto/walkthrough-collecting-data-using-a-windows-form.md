@@ -1,5 +1,7 @@
 ---
 title: 'Návod: shromáždění dat pomocí formuláře Windows'
+description: Otevřete formulář Windows z přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Excel, shromážděte informace od uživatele a zapište tyto informace do buňky listu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 893418ca5eb82e9466ea13a12088b38fd496e695
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58d6f58f732d4a52aade6ff3678842900f1c29cd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64789829"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527167"
 ---
 # <a name="walkthrough-collect-data-by-using-a-windows-form"></a>Návod: shromáždění dat pomocí formuláře Windows
   Tento návod ukazuje, jak otevřít formulář Windows z přizpůsobení na úrovni dokumentu pro systém Microsoft Office Excel, shromažďovat informace od uživatele a zapisovat tyto informace do buňky listu.
@@ -44,7 +46,7 @@ ms.locfileid: "64789829"
 
 ### <a name="to-create-a-new-project"></a>Vytvoření nového projektu
 
-1. Vytvořte projekt sešitu aplikace Excel s názvem **WinFormInput**a vyberte možnost **vytvořit nový dokument** v průvodci. Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Vytvořte projekt sešitu aplikace Excel s názvem **WinFormInput** a vyberte možnost **vytvořit nový dokument** v průvodci. Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
      Visual Studio otevře nový excelový sešit v návrháři a přidá projekt **WinFormInput** do **Průzkumník řešení**.
 
@@ -71,7 +73,7 @@ ms.locfileid: "64789829"
 
 2. V nabídce **projekt** klikněte na tlačítko **Přidat formulář systému Windows**.
 
-3. Pojmenujte formulář **GetInputString. vb** nebo **GetInputString.cs**a pak klikněte na **Přidat**.
+3. Pojmenujte formulář **GetInputString. vb** nebo **GetInputString.cs** a pak klikněte na **Přidat**.
 
     Nový formulář se otevře v návrháři.
 
@@ -86,7 +88,7 @@ ms.locfileid: "64789829"
 
 #### <a name="to-display-the-form-and-collect-information"></a>Zobrazení formuláře a shromažďování informací
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **ThisWorkbook. vb** nebo **ThisWorkbook.cs** a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **ThisWorkbook. vb** nebo **ThisWorkbook.cs** a pak klikněte na **Zobrazit kód**.
 
 2. V <xref:Microsoft.Office.Tools.Excel.Workbook.Open> obslužné rutině události pro `ThisWorkbook` přidejte následující kód, který deklaruje proměnnou pro formulář `GetInputString` a pak zobrazí formulář.
 
@@ -107,7 +109,7 @@ ms.locfileid: "64789829"
 
 ### <a name="to-send-information-to-the-worksheet"></a>Odeslání informací do listu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **GetInputString** a potom klikněte na **Návrhář zobrazení**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **GetInputString** a potom klikněte na **Návrhář zobrazení**.
 
 2. Dvojím kliknutím na tlačítko otevřete soubor kódu s <xref:System.Windows.Forms.Control.Click> přidaným obslužnou rutinou události tlačítka.
 

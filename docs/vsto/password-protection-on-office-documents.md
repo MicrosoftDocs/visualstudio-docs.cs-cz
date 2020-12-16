@@ -1,5 +1,7 @@
 ---
 title: Ochrana heslem v dokumentech Office
+description: Naučte se, jak nastavit heslo pro dokumenty Microsoft Word a excelové sešity tak, aby je nemohli otevřít neoprávnění uživatelé.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e3c9521389ce348a482f35ec95c9766edea49f5f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6beaf85000438846e5d440e48c9722b9660f9bd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62977897"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528061"
 ---
 # <a name="password-protection-on-office-documents"></a>Ochrana heslem v dokumentech Office
   Je možné nastavit heslo v systém Microsoft Office dokumentech aplikace Word a sešitech aplikace Excel systém Microsoft Office, aby je nikdo neznal. Tato možnost se nazývá **heslo při otevření**.
@@ -30,7 +32,7 @@ ms.locfileid: "62977897"
 
  Projekty na úrovni dokumentu můžete vytvořit pomocí existujících dokumentů a sešitů, které mají **při otevření** zapnuté heslo. Chování v aplikaci Visual Studio se liší pro dokumenty aplikace Word a Excel, které mají **při otevření** zapnuté heslo.
 
- Informace o povolení **hesla při otevření**najdete v nápovědě ve Wordu nebo Excelu.
+ Informace o povolení **hesla při otevření** najdete v nápovědě ve Wordu nebo Excelu.
 
 ## <a name="behavior-of-excel-and-word"></a>Chování Excelu a Wordu
  Pokaždé, když otevřete excelový sešit v aplikaci Visual Studio, který má zapnuté **heslo při otevření** , zobrazí se v Excelu výzva k zadání hesla. Při sestavování řešení se zobrazí výzva k zadání hesla, protože dokument je otevřen během sestavování.

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Změna velikosti ovládacích prvků ListObject'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově měnit velikost ovládacích prvků ListObject v sešitu Microsoft Excelu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 68a9841d8471189538959a311bf9349199d55f78
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c401f3938679c72cee3a07c4bff79a5777fcbc1
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545831"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528530"
 ---
 # <a name="how-to-resize-listobject-controls"></a>Postupy: Změna velikosti ovládacích prvků ListObject
   Velikost <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku se nastavuje při jeho přidání do systém Microsoft Office excelového sešitu, ale můžete ho chtít později změnit. Například může být vhodné změnit seznam se dvěma sloupci na tři sloupce.
@@ -42,7 +44,7 @@ ms.locfileid: "85545831"
 
 ### <a name="to-resize-a-list-by-using-the-resize-list-dialog-box"></a>Změna velikosti seznamu pomocí dialogového okna změnit velikost seznamu
 
-1. Klikněte kamkoli do  <xref:Microsoft.Office.Tools.Excel.ListObject> tabulky. **Table Tools**  >  Zobrazí se karta**Návrh** nástrojů tabulky na pásu karet.
+1. Klikněte kamkoli do  <xref:Microsoft.Office.Tools.Excel.ListObject> tabulky.   >  Zobrazí se karta **Návrh** nástrojů tabulky na pásu karet.
 
 2. V části Vlastnosti klikněte na **změnit velikost tabulky**.
 

@@ -1,5 +1,7 @@
 ---
 title: Vytvoření vazby na data ze služby v projektu doplňku VSTO
+description: Naučte se přidávat ovládací prvky do dokumentu Microsoft Wordu, navazovat ovládací prvky na data získaná ze služby obsahu MSDN a reagovat na události v době běhu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 75d984617b56525e640a74aa4badd6f520c0b892
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6b65308cfc0ba4dee33dd6b20d3fd4028e9ea22e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72381321"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527484"
 ---
 # <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>Návod: vytvoření vazby na data ze služby v projektu doplňku VSTO
   Data můžete navazovat na hostitelské ovládací prvky v projektech doplňku VSTO. Tento návod ukazuje, jak přidat ovládací prvky do dokumentu aplikace systém Microsoft Office Word, navazovat ovládací prvky na data získaná ze služby obsahu MSDN a reagovat na události v době běhu.
@@ -48,7 +50,7 @@ ms.locfileid: "72381321"
 
 ### <a name="to-create-a-new-project"></a>Vytvoření nového projektu
 
-1. Vytvořte projekt doplňku VSTO aplikace Word s názvem **služba obsahu MTPS Content**pomocí Visual Basic nebo C#.
+1. Vytvořte projekt doplňku VSTO aplikace Word s názvem **služba obsahu MTPS Content** pomocí Visual Basic nebo C#.
 
      Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
@@ -61,7 +63,7 @@ ms.locfileid: "72381321"
 
 1. V nabídce **data** klikněte na tlačítko **Přidat nový zdroj dat**.
 
-2. V **Průvodci konfigurací zdroje dat**klikněte na možnost **Služba**a poté klikněte na tlačítko **Další**.
+2. V **Průvodci konfigurací zdroje dat** klikněte na možnost **Služba** a poté klikněte na tlačítko **Další**.
 
 3. Do pole **adresa** zadejte následující adresu URL:
 
@@ -69,7 +71,7 @@ ms.locfileid: "72381321"
 
 4. Klikněte na **Přejít**.
 
-5. Do pole **obor názvů** zadejte **contentservice**a klikněte na **OK**.
+5. Do pole **obor názvů** zadejte **contentservice** a klikněte na **OK**.
 
 6. V dialogovém okně **Průvodce přidáním odkazu** klikněte na tlačítko **Dokončit**.
 

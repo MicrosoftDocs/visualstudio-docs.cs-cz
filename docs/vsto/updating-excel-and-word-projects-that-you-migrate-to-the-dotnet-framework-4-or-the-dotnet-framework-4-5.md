@@ -1,5 +1,7 @@
 ---
 title: Aktualizace aplikace Excel nebo aplikace Word na .NET Framework 4,5
+description: Pokud máte projekt aplikace Excel nebo Word, který používá konkrétní funkce, je nutné upravit kód, pokud je cílová verze rozhraní změněna na .NET Framework 4 nebo novější.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 06f4742317e3702273c5fe7c91ccc76a153c1b3e
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7bc79a53b62cf9fb0ca0ba533a2ce0d542b08c72
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584409"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528426"
 ---
 # <a name="update-excel-and-word-projects-that-you-migrate-to-the-net-framework-45"></a>Aktualizace projektů aplikace Excel a Word, které migrujete do .NET Framework 4,5
   Pokud máte projekt aplikace Excel nebo Word, který používá některou z následujících funkcí, je nutné upravit kód, pokud je cílová architektura změněna na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější:
@@ -68,7 +70,7 @@ ms.locfileid: "91584409"
 
 1. Otevřete projekt v aplikaci Visual Studio a pak otevřete **Průzkumník řešení**.
 
-2. V **Průzkumník řešení**otevřete místní nabídku pro *ThisAddIn.cs* (pro C#) nebo *ThisAddin. vb* (pro Visual Basic) a pak zvolte **Zobrazit kód**.
+2. V **Průzkumník řešení** otevřete místní nabídku pro *ThisAddIn.cs* (pro C#) nebo *ThisAddin. vb* (pro Visual Basic) a pak zvolte **Zobrazit kód**.
 
 3. V editoru kódu v `VSTO generated code` oblasti odeberte nebo odkomentujte následující řádek kódu.
 

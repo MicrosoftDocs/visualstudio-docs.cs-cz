@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: definování a výběr oblastí v dokumentech prostřednictvím kódu programu'
+description: Naučte se programově definovat a vybírat rozsahy v dokumentech Microsoft Wordu pomocí objektu Range.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5af4ceeb37574fef6eb55d80f3c173b71ac090e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d1cc0475f7b25550b85018477d7c842f012445e2
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545948"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528321"
 ---
 # <a name="how-to-programmatically-define-and-select-ranges-in-documents"></a>Postupy: definování a výběr oblastí v dokumentech prostřednictvím kódu programu
   Rozsah můžete definovat v systém Microsoft Office wordovém dokumentu pomocí <xref:Microsoft.Office.Interop.Word.Range> objektu. Celý dokument můžete vybrat několika různými způsoby, například pomocí <xref:Microsoft.Office.Interop.Word.Range.Select%2A> metody <xref:Microsoft.Office.Interop.Word.Range> objektu nebo pomocí vlastnosti Content <xref:Microsoft.Office.Tools.Word.Document> třídy (v přizpůsobení na úrovni dokumentu) nebo <xref:Microsoft.Office.Interop.Word.Document> třídy (v doplňku VSTO) (v doplňku VSTO).

@@ -1,5 +1,7 @@
 ---
 title: Vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel
+description: Vytvoření přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Excel. Funkce, které vytvoříte v tomto druhu řešení, jsou k dispozici pouze v případě, že je otevřen konkrétní sešit.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b75bf6894bff4e5fa8d6ac17ed537f15041b3ede
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 4183e84a930957b7cf87a6cc1e6fabcb21420785
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584999"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527951"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>Návod: vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel
 
@@ -56,9 +58,9 @@ ms.locfileid: "91584999"
 
 1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
+2. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na **projekt**.
 ::: moniker range="vs-2017"
-3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
+3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic** a potom rozbalte položku **Office/SharePoint**.
 
 4. V rozbaleném uzlu **Office/SharePoint** vyberte uzel **doplňky VSTO** .
 
@@ -68,7 +70,7 @@ ms.locfileid: "91584999"
 
 7. Klikněte na **OK**.
 
-8. V **průvodci Visual Studio Tools for Office projektu**vyberte **vytvořit nový dokument** a klikněte na **OK**.
+8. V **průvodci Visual Studio Tools for Office projektu** vyberte **vytvořit nový dokument** a klikněte na **OK**.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 3. V dialogovém okně **vytvořit nový projekt** vyberte projekt **SEŠITU aplikace Excel VSTO** .
@@ -79,7 +81,7 @@ ms.locfileid: "91584999"
 
 5. Do pole **název** v dialogu **Konfigurovat nový projekt** zadejte **FirstWorkbookCustomization** a klikněte na **vytvořit**.
 
-6. V **průvodci Visual Studio Tools for Office projektu**vyberte **vytvořit nový dokument** a klikněte na **OK**.
+6. V **průvodci Visual Studio Tools for Office projektu** vyberte **vytvořit nový dokument** a klikněte na **OK**.
 ::: moniker-end
    - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Vytvoří projekt **FirstWorkbookCustomization** a přidá následující soubory do projektu.
 
@@ -103,11 +105,11 @@ ms.locfileid: "91584999"
 
 1. Zavřete sešit kliknutím na tlačítko **Zavřít** (X) v okně návrháře.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor s kódem **List1** a klikněte na tlačítko **Návrhář zobrazení**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor s kódem **List1** a klikněte na tlačítko **Návrhář zobrazení**.
 
      \- ani
 
-     V **Průzkumník řešení**dvakrát klikněte na soubor s kódem **List1** .
+     V **Průzkumník řešení** dvakrát klikněte na soubor s kódem **List1** .
 
 ## <a name="add-text-to-a-worksheet-in-the-designer"></a>Přidání textu do listu v Návrháři
 
@@ -115,7 +117,7 @@ ms.locfileid: "91584999"
 
 ### <a name="to-add-text-to-a-worksheet-by-using-the-designer"></a>Přidání textu do listu pomocí návrháře
 
-1. Na listu, který je otevřen v návrháři, vyberte buňku **a1**a zadejte následující text.
+1. Na listu, který je otevřen v návrháři, vyberte buňku **a1** a zadejte následující text.
 
      **Tento text byl přidán pomocí návrháře.**
 
@@ -132,7 +134,7 @@ ms.locfileid: "91584999"
 
 ### <a name="to-add-a-second-line-of-text-to-the-worksheet-by-using-code"></a>Přidání druhého řádku textu do listu pomocí kódu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **List1**a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1** a pak klikněte na **Zobrazit kód**.
 
      Soubor kódu se otevře v aplikaci Visual Studio.
 

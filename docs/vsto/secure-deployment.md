@@ -1,5 +1,7 @@
 ---
 title: Zabezpečené nasazení
+description: Přečtěte si, jak musíte poskytnout legitimaci, na které se má založit rozhodnutí o vztahu důvěryhodnosti, podepsáním řešení pomocí certifikátu nebo použitím klíče pro výzvu důvěryhodnosti ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c838eddea5b3118c28fb33411a8c58a19d7b4a2d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b47a18aa3e791d446abc2a57b6aad1f139924ebf
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810951"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528470"
 ---
 # <a name="secure-deployment"></a>Zabezpečené nasazení
   Při vytváření řešení pro systém Office je váš vývojový počítač automaticky aktualizován, aby bylo možné spustit kód v projektu. Pokud však nasazujete řešení, je nutné poskytnout legitimaci, na které se má založit rozhodnutí o vztahu důvěryhodnosti, podepsáním řešení pomocí certifikátu nebo pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] klíče pro výzvu vztahu důvěryhodnosti. Další informace najdete v tématu [udělení vztahu důvěryhodnosti řešením pro systém Office](../vsto/granting-trust-to-office-solutions.md).
@@ -32,9 +34,9 @@ ms.locfileid: "90810951"
 ## <a name="prevent-office-solutions-from-running-code"></a>Zabránit spuštění kódu v řešeních pro Office
  Správci můžou pomocí registru zabránit spuštění všech řešení Office v počítači. Pokud je otevřeno řešení Office, které má rozšíření spravovaného kódu, Visual Studio Tools for Office modul runtime zkontroluje, zda položka s názvem `Disabled` existuje v jednom z následujících klíčů registru v počítači:
 
-- **HKEY_CURRENT_USER \Software\Microsoft\VSTO**
+- **HKEY_CURRENT_USER\Software\Microsoft\VSTO**
 
-- **HKEY_LOCAL_MACHINE \Software\Microsoft\VSTO**
+- **HKEY_LOCAL_MACHINE\Software\Microsoft\VSTO**
 
   Chcete-li zabránit spuštění kódu v řešeních pro systém Office, vytvořte `Disabled` položku v jednom nebo obou těchto klíčích registru a zadejte jeden z následujících datových typů a hodnot pro `Disabled` :
 

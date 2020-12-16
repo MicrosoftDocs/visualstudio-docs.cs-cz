@@ -1,5 +1,7 @@
 ---
 title: Trvalé dynamické ovládací prvky v dokumentech Office
+description: Zjistěte, jak můžete do svého řešení přidat kód pro opětovné vytvoření trvalých dynamických ovládacích prvků, když uživatel znovu otevře uzavřený dokument.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5d48dfab18ec2165753ac19330f7fbe18c923da9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6efb00571a9f594de6045860621fb840076e8f5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71256006"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527535"
 ---
 # <a name="persist-dynamic-controls-in-office-documents"></a>Trvalé dynamické ovládací prvky v dokumentech Office
 
@@ -78,7 +80,7 @@ Odstraněné model Windows Forms ovládací prvky můžete znovu vytvořit, kdy�
 
 1. Uložení informací o velikosti, umístění a stavu ovládacích prvků při uložení nebo zavření dokumentu. V přizpůsobení na úrovni dokumentu můžete ukládat data do mezipaměti dat v dokumentu. V doplňku VSTO můžete data uložit do vlastní části XML v dokumentu.
 
-2. Znovu vytvořte ovládací prvky v události, která je vyvolána při otevření dokumentu. V projektech na úrovni dokumentu můžete to provést v `Sheet` *n* `_Startup` `ThisDocument_Startup` rutinách n nebo. V projektech doplňku VSTO to můžete udělat v obslužných rutinách událostí pro <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookOpen> <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> události nebo.
+2. Znovu vytvořte ovládací prvky v události, která je vyvolána při otevření dokumentu. V projektech na úrovni dokumentu můžete to provést v `Sheet`  `_Startup` `ThisDocument_Startup` rutinách n nebo. V projektech doplňku VSTO to můžete udělat v obslužných rutinách událostí pro <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookOpen> <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> události nebo.
 
 ### <a name="remove-activex-wrappers-in-an-add-in"></a><a name="removingActiveX"></a> Odebrat obálky ActiveX v doplňku
 

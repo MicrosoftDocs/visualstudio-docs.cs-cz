@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: zobrazení karty Vývojář na pásu karet'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově zobrazit kartu Vývojář na pásu karet v dokumentu Microsoft Wordu.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 41070c92d0c27c1ee8fbf480f7461c22421b8fdc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4dc38b941d27cab0653b923ddd03ba8b78eeab58
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545844"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528145"
 ---
 # <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>Postupy: zobrazení karty Vývojář na pásu karet
   Chcete-li získat přístup k kartě **vývojář** na pásu karet aplikace sady Office, je nutné ji nakonfigurovat tak, aby se tato karta zobrazila, protože se ve výchozím nastavení nezobrazuje. Například je třeba zobrazit tuto kartu, pokud chcete přidat <xref:Microsoft.Office.Tools.Word.GroupContentControl> do přizpůsobení na úrovni dokumentu pro aplikaci Word.
@@ -52,7 +54,7 @@ ms.locfileid: "85545844"
 
      ![Tlačítko Možnosti v aplikaci Outlook 2013 Preview](../vsto/media/vsto-office2013-optionsbutton.png "Tlačítko Možnosti v aplikaci Outlook 2013 Preview")
 
-3. V dialogovém okně**Možnosti** _ApplicationName_klikněte na tlačítko **přizpůsobit pás karet** .
+3. V dialogovém okně **Možnosti** _ApplicationName_ klikněte na tlačítko **přizpůsobit pás karet** .
 
      Následující obrázek ukazuje dialogové okno **Možnosti** a tlačítko **přizpůsobit pás karet** v aplikaci Excel 2010. Umístění tohoto tlačítka je podobné jako u všech ostatních aplikací, které jsou uvedeny v části "platí pro" v horní části tohoto tématu.
 

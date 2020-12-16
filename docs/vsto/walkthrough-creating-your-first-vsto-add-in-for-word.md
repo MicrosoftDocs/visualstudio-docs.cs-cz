@@ -1,5 +1,7 @@
 ---
 title: 'Návod: vytvoření prvního doplňku VSTO pro Word'
+description: Vytvoření doplňku na úrovni aplikace pro aplikaci Microsoft Word Tato funkce je k dispozici pro samotnou aplikaci, bez ohledu na to, které dokumenty jsou otevřené.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ed5c5e5b03ce7ee0ffbd361b896f288f6b93a806
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6dc136b1c58f9c627787045b1259d07e27a6b8ad
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64783400"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527873"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-word"></a>Návod: vytvoření prvního doplňku VSTO pro Word
   V tomto úvodním návodu se dozvíte, jak vytvořit doplněk VSTO pro systém Microsoft Office Word. Funkce, které vytvoříte v tomto druhu řešení, jsou k dispozici pro samotnou aplikaci, bez ohledu na to, které dokumenty jsou otevřené.
@@ -52,9 +54,9 @@ ms.locfileid: "64783400"
 
 1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
+2. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na **projekt**.
 
-3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
+3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic** a potom rozbalte položku **Office/SharePoint**.
 
 4. V rozbaleném uzlu **Office/SharePoint** vyberte uzel **Doplňky Office** .
 

@@ -1,5 +1,7 @@
 ---
 title: NamedRange – ovládací prvek
+description: Přečtěte si, jak je ovládací prvek NamedRange rozsah, který má jedinečný název, zpřístupňuje události a může být svázán s daty.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e2b5b5d246e1033148bc199da6e7d2bdfb7aa9b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1881afb0dd718eec3815ab9de3becbeaf070f5d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254717"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528096"
 ---
 # <a name="namedrange-control"></a>NamedRange – ovládací prvek
   <xref:Microsoft.Office.Tools.Excel.NamedRange>Ovládací prvek je rozsah, který má jedinečný název, zpřístupňuje události a může být svázán s daty. Další informace najdete v tématu [Přehled modelu objektů aplikace Excel](../vsto/excel-object-model-overview.md).
@@ -50,7 +52,7 @@ ms.locfileid: "71254717"
  Formátování, které lze použít na objekt, <xref:Microsoft.Office.Interop.Excel.Range> lze použít pro <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek. To zahrnuje ohraničení, písma, formáty čísel a styly.
 
 ## <a name="rename-the-control"></a>Přejmenování ovládacího prvku
- Když přidáte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek do listu ze **sady nástrojů, sada**Visual Studio automaticky vygeneruje název ovládacího prvku. Název můžete změnit v okně **vlastnosti** .
+ Když přidáte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek do listu ze **sady nástrojů, sada** Visual Studio automaticky vygeneruje název ovládacího prvku. Název můžete změnit v okně **vlastnosti** .
 
 ## <a name="events"></a>Události
  Pro ovládací prvek jsou k dispozici následující události <xref:Microsoft.Office.Tools.Excel.NamedRange> :

@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 691e6c3b994649a9f0fa2d0e92a990f317a16208
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b28d87cc0842d5a3de8634ae50378915196366ff
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88508175"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527925"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Kurz: Vytvoření jednoduché konzolové aplikace v jazyce C# v aplikaci Visual Studio
 
@@ -49,13 +49,13 @@ Začněte tím, že vytvoříte projekt aplikace v jazyce C#. Typ projektu se do
 2. V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
    (Případně stiskněte klávesu **CTRL** + **Posun** + **N**).
 
-3. V levém podokně dialogového okna **Nový projekt** rozbalte položku **C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte ***kalkulačku***souborů.
+3. V levém podokně dialogového okna **Nový projekt** rozbalte položku **C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte soubor **_Kalkulačka_* _.
 
    ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém prostředí sady Visual Studio](./media/new-project-csharp-calculator-console-app.png)
 
 ### <a name="add-a-workload-optional"></a>Přidat úlohu (volitelné)
 
-Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete ji získat přidáním úlohy **vývoje .NET Core pro různé platformy** . Jak na to:
+Pokud nevidíte šablonu projektu _ *Konzolová aplikace (.NET Core)**, můžete ji získat přidáním úlohy **vývoje .NET Core pro různé platformy** . Jak na to:
 
 #### <a name="option-1-use-the-new-project-dialog-box"></a>Možnost 1: použití dialogového okna Nový projekt
 
@@ -311,7 +311,7 @@ Pojďme změnit kód pro zpracování této chyby.
 
 Když teď číslo vydělíte nulou, aplikace si vyžádá další číslo. Ještě lepší: přestane zobrazovat výzvy, dokud nezadáte číslo jiné než nula.
 
-   ![V editoru kódu sady Visual Studio se zobrazí chyba dělení nulou.](./media/csharp-console-calculator-dividebyzero.png)
+   ![Opravila se chyba dělení nulou.](./media/csharp-console-calculator-dividebyzero.png)
 
 ### <a name="fix-the-format-error"></a>Opravit chybu "formát"
 
@@ -327,7 +327,7 @@ Místo toho `program` , aby se při zpracování veškerého kódu spoléhá na 
 
 `Calculator`Třída zpracuje hromadnou práci výpočtu a `Program` Třída zpracuje uživatelské rozhraní a zachytávání chyb.
 
-Pusťme se do toho.
+Tak se do toho pusťme.
 
 1. Odstranit vše v `Calculator` oboru názvů mezi otevírací a pravou závorkou:
 
@@ -472,7 +472,7 @@ Pusťme se do toho.
 
    ![Zavření podokna výstup v aplikaci Visual Studio](./media/csharp-calculator-close-output-pane.png)
 
-1. V aplikaci Visual Studio uložte aplikaci stisknutím **kombinace kláves CTRL +** + **S** .
+1. V aplikaci Visual Studio uložte aplikaci stisknutím **kombinace kláves CTRL +** +  .
 
 1. Zavřete Visual Studio.
 
@@ -600,10 +600,25 @@ namespace Calculator
 
 ## <a name="next-steps"></a>Další kroky
 
+:::moniker range="vs-2017"
+
+Pokračovat s dalšími kurzy:
+
+> [!div class="nextstepaction"]
+> [Kurzy C#](/dotnet/csharp/tutorials)
+
+> [!div class="nextstepaction"]
+> [Prohlídka integrovaného vývojového prostředí sady Visual Studio](../visual-studio-ide.md)
+
+:::moniker-end
+
+:::moniker range="vs-2019"
+
 Pokračujte v druhé části tohoto kurzu:
 
 > [!div class="nextstepaction"]
 > [Pokračovat s částí 2](tutorial-console-part-2.md)
+:::moniker-end
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,5 +1,7 @@
 ---
 title: Práce se složkami
+description: Přečtěte si, že třída MAPIFolder obsahuje metody a vlastnosti, které používáte pro přístup, vytvoření a přizpůsobení složek.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,17 +18,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 32dca296ef286e4c892791a1e71cfc765df80f19
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ca2d6c690e094884313bc128291dd7295103d54
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62815494"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526976"
 ---
 # <a name="work-with-folders"></a>Práce se složkami
   <xref:Microsoft.Office.Interop.Outlook.MAPIFolder>Třída obsahuje metody a vlastnosti, které používáte pro přístup k složkám, jejich vytváření a přizpůsobení.
 
-|Úkol|Postup|
+|Úloha|Postup|
 |----------|---------------|
 |Vyhledejte řetězce v poli předmětu zpráv ve **složce Doručená pošta**.|[Postupy: hledání v rámci konkrétní složky prostřednictvím kódu programu](../vsto/how-to-programmatically-search-within-a-specific-folder.md)|
 |Získat odkaz na složku a zobrazit obsah|[Postupy: načítání složek podle názvu prostřednictvím kódu programu](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)|

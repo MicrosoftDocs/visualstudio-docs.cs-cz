@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu'
+description: Přečtěte si, jak programově vytvořit nový dokument Microsoft Visia Drawing a přidat ho do kolekce dokumentů otevřených dokumentů Visia.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 171ad93caf6b5c13d000073a0d7f7e82282b9b4a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59c1fe0264a294692bea04b05e5e143fa28be801
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541528"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526838"
 ---
 # <a name="how-to-programmatically-create-new-visio-documents"></a>Postupy: vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu
   Když vytvoříte nový dokument systém Microsoft Office Visio Drawing, přidáte ho do `Microsoft.Office.Interop.Visio.Documents` kolekce otevřených dokumentů Visia. V důsledku toho `Microsoft.Office.Interop.Visio.Documents.Add` Metoda vytvoří nový dokument pro kreslení aplikace Visio. Další informace najdete v referenční dokumentaci k jazyku VBA pro [Microsoft.Office.Interop.Visio.Documents. Přidat](/office/vba/api/Visio.Documents.Add) metodu.

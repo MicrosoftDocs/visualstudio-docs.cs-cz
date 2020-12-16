@@ -1,5 +1,7 @@
 ---
 title: Změna formátování listů pomocí ovládacích prvků CheckBox
+description: Přečtěte si, jak můžete pomocí vývojářských nástrojů pro Office v sadě Visual Studio vytvořit a přidat kód do projektu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 42d2c46f6fd61d74476933cfda3dea8c62b00c95
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28b9f000c2e8517304387e2b203dfa7888b33d64
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328693"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527221"
 ---
 # <a name="walkthrough-change-worksheet-formatting-using-checkbox-controls"></a>Návod: Změna formátování listů pomocí ovládacích prvků CheckBox
   Tento názorný postup ukazuje základy používání zaškrtávacích políček u systém Microsoft Office excelového listu ke změně formátování. Budete používat vývojové nástroje Office v sadě Visual Studio k vytvoření a přidání kódu do projektu. Chcete-li zobrazit výsledek jako dokončený vzorek, přečtěte si ukázku ovládací prvky aplikace Excel v [ukázkách vývoje pro Office a návody](../vsto/office-development-samples-and-walkthroughs.md).
@@ -60,7 +62,7 @@ ms.locfileid: "67328693"
 
 1. Ověřte, že je sešit otevřený v návrháři sady Visual Studio a `Sheet1` je otevřený.
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**přetáhněte <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> ovládací prvek na nebo poblíž buňky **B2** v hodnotě **List1**.
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** přetáhněte <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> ovládací prvek na nebo poblíž buňky **B2** v hodnotě **List1**.
 
 3. V nabídce **zobrazení** vyberte okno **vlastnosti** .
 
@@ -69,7 +71,7 @@ ms.locfileid: "67328693"
     |Vlastnost|Hodnota|
     |--------------|-----------|
     |**Název**|**applyBoldFont**|
-    |**Text**|**Bold**|
+    |**Text**|**Tučný**|
 
 5. Přetáhněte druhé zaškrtávací políčko na buňku **B4** nebo poblíž něj a změňte následující vlastnosti:
 
@@ -87,7 +89,7 @@ ms.locfileid: "67328693"
 
 7. Zaškrtněte všechny tři ovládací prvky zaškrtávací políčko při držení klávesy **CTRL** .
 
-8. Ve skupině Uspořádat na kartě Formát v Excelu klikněte na **Zarovnat**a pak klikněte na **Zarovnat doleva**.
+8. Ve skupině Uspořádat na kartě Formát v Excelu klikněte na **Zarovnat** a pak klikněte na **Zarovnat doleva**.
 
      Tři ovládací prvky zaškrtávací políčko jsou zarovnány na levou stranu na pozici prvního ovládacího prvku, který jste vybrali.
 
@@ -122,7 +124,7 @@ ms.locfileid: "67328693"
 
 ### <a name="to-change-formatting-when-a-check-box-is-selected"></a>Změna formátování, když je zaškrtnuto zaškrtávací políčko
 
-1. Klikněte pravým tlačítkem na **List1**a pak klikněte na **Zobrazit kód** v místní nabídce.
+1. Klikněte pravým tlačítkem na **List1** a pak klikněte na **Zobrazit kód** v místní nabídce.
 
 2. Do <xref:System.Windows.Forms.Control.Click> obslužné rutiny události zaškrtávacího políčka přidejte následující kód `applyBoldFont` :
 

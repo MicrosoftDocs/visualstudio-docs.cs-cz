@@ -1,5 +1,7 @@
 ---
 title: Přehled modelu objektů aplikace Outlook
+description: Zjistěte, jak můžete pracovat s objekty, které jsou k dispozici v objektovém modelu aplikace Outlook pro vývoj doplňků VSTO pro aplikaci Microsoft Outlook.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6545815a0a24a3ba8579298151194fdd81edee77
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 83ada85ba346e83e5bc5ebc01e91b11be0e844e1
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985684"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528051"
 ---
 # <a name="outlook-object-model-overview"></a>Přehled modelu objektů aplikace Outlook
   Pro vývoj doplňků VSTO pro systém Microsoft Office Outlook můžete pracovat s objekty, které jsou k dispozici v objektovém modelu aplikace Outlook. Objektový model aplikace Outlook poskytuje třídy a rozhraní, které představují položky v uživatelském rozhraní. Například <xref:Microsoft.Office.Interop.Outlook.Application> objekt představuje celou aplikaci, <xref:Microsoft.Office.Interop.Outlook.Folder> objekt představuje složku, která obsahuje e-mailové zprávy nebo jiné položky, a <xref:Microsoft.Office.Interop.Outlook.MailItem> objekt představuje e-mailovou zprávu.
@@ -90,14 +92,14 @@ ms.locfileid: "72985684"
 ### <a name="folder-object"></a>Objekt Folder
  <xref:Microsoft.Office.Interop.Outlook.Folder>Objekt představuje složku, která obsahuje e-mailové zprávy, kontakty, úkoly a další položky. Outlook poskytuje 16 výchozích <xref:Microsoft.Office.Interop.Outlook.Folder> objektů.
 
- Výchozí <xref:Microsoft.Office.Interop.Outlook.Folder> objekty jsou definovány <xref:Microsoft.Office.Interop.Outlook.OlDefaultFolders> hodnotami výčtu. Příklad:
+ Výchozí <xref:Microsoft.Office.Interop.Outlook.Folder> objekty jsou definovány <xref:Microsoft.Office.Interop.Outlook.OlDefaultFolders> hodnotami výčtu. Třeba
 
  Microsoft. Office. Interop. Outlook. OlDefaultFolders. olFolderInbox odpovídá složce **Doručená pošta** v Outlooku.
 
  Příklad, který ukazuje, jak získat přístup k výchozímu <xref:Microsoft.Office.Interop.Outlook.Folder> a vytvořit nový <xref:Microsoft.Office.Interop.Outlook.Folder> , naleznete v tématu [How to: programing a Create a Custom Folder Items](../vsto/how-to-programmatically-create-custom-folder-items.md).
 
 ### <a name="mailitem-object"></a>Objekt MailItem
- <xref:Microsoft.Office.Interop.Outlook.MailItem>Objekt představuje e-mailovou zprávu. <xref:Microsoft.Office.Interop.Outlook.MailItem> objekty jsou obvykle ve složkách, například **Doručená pošta**, **Odeslaná pošta**a **Faxy k odeslání**. <xref:Microsoft.Office.Interop.Outlook.MailItem> zpřístupňuje vlastnosti a metody, které lze použít k vytvoření a odeslání e-mailových zpráv.
+ <xref:Microsoft.Office.Interop.Outlook.MailItem>Objekt představuje e-mailovou zprávu. <xref:Microsoft.Office.Interop.Outlook.MailItem> objekty jsou obvykle ve složkách, například **Doručená pošta**, **Odeslaná pošta** a **Faxy k odeslání**. <xref:Microsoft.Office.Interop.Outlook.MailItem> zpřístupňuje vlastnosti a metody, které lze použít k vytvoření a odeslání e-mailových zpráv.
 
  Příklad, který ukazuje, jak vytvořit e-mailovou zprávu, najdete v tématu [How to: program Create a email Item](../vsto/how-to-programmatically-create-an-e-mail-item.md).
 
@@ -127,7 +129,7 @@ ms.locfileid: "72985684"
 ### <a name="vba-object-model-reference"></a>Referenční dokumentace modelu objektu VBA
  Referenční model objektu VBA odkazuje na dokument model objektu aplikace Outlook, protože je vystavený pro jazyk Visual Basic for Application kód (VBA). Další informace najdete v tématu [referenční materiály k objektovému modelu aplikace Outlook 2010](/office/vba/api/overview/Outlook/object-model).
 
- Všechny objekty a členy v referenčním modelu objektu VBA odpovídají typům a členům v aplikacích Outlook PIA. Například objekt Inspector v odkazu modelu objektu VBA odpovídá <xref:Microsoft.Office.Interop.Outlook.Inspector> objektu v aplikaci Outlook PIA. I když odkaz na objektový model VBA poskytuje příklady kódu pro většinu vlastností, metod a událostí, je nutné překládat kód VBA v tomto odkazu na Visual Basic nebo Visual C#, pokud je chcete použít v projektu doplňku aplikace Outlook VSTO, který vytvoříte pomocí sady Visual Studio.
+ Všechny objekty a členy v referenčním modelu objektu VBA odpovídají typům a členům v aplikacích Outlook PIA. Například objekt Inspector v odkazu modelu objektu VBA odpovídá <xref:Microsoft.Office.Interop.Outlook.Inspector> objektu v aplikaci Outlook PIA. I když Reference k objektovému modelu VBA poskytuje příklady kódu pro většinu vlastností, metod a událostí, je nutné překládat kód VBA v tomto odkazu na Visual Basic nebo Visual C#, pokud je chcete použít v projektu Add-In VSTO aplikace Outlook, který vytvoříte pomocí sady Visual Studio.
 
 ### <a name="related-topics"></a>Související témata
 

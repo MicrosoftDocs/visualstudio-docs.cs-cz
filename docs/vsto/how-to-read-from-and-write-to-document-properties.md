@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: čtení z vlastností dokumentu a zápis do nich'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio získat nebo nastavit vlastnosti dokumentu v aplikacích Microsoft Excel a Microsoft Word.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: adad9ec70290f426ce7c3c59ad13ff8636a69463
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60ee5ccebc9c6c38369ed707c9d2043ffc1995c9
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541320"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528207"
 ---
 # <a name="how-to-read-from-and-write-to-document-properties"></a>Postupy: čtení z vlastností dokumentu a zápis do nich
   Můžete uložit vlastnosti dokumentu spolu s dokumentem. Aplikace Office poskytují řadu předdefinovaných vlastností, jako je například autor, název a předmět. V tomto tématu se dozvíte, jak nastavit vlastnosti dokumentu v systém Microsoft Office Excelu a systém Microsoft Office Wordu.

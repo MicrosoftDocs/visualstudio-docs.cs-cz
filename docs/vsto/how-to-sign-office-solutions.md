@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: podepisování řešení pro systém Office'
+description: Přečtěte si, jak můžete udělit důvěru k vašemu systém Microsoft Office řešení pomocí certifikátu jako legitimace.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 23afc171fd97620b3e6801b8d199da6890198d8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7451630570e6d557dc5d2b635d149ebc07cfb388
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545753"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528112"
 ---
 # <a name="how-to-sign-office-solutions"></a>Postupy: podepisování řešení pro systém Office
   Pokud podepíšete řešení, můžete k řešení důvěřovat pomocí certifikátu jako legitimace. Stejný certifikát můžete použít pro více řešení a všechna řešení budou důvěryhodná bez dalších aktualizací zásad zabezpečení.

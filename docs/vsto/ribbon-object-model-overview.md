@@ -1,5 +1,7 @@
 ---
 title: Přehled modelu objektů pásu karet
+description: Přečtěte si, jak Visual Studio Tools for Office modul runtime zveřejňuje objektový model silného typu, který můžete použít k získání a nastavení vlastností ovládacích prvků pásu karet za běhu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6ca22704345fefb4944bda7dd9f71942fe8dfb50
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f97bbbab4b867f503e5b5befff27844df8a4b4bc
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71256019"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527985"
 ---
 # <a name="ribbon-object-model-overview"></a>Přehled modelu objektů pásu karet
   [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Zpřístupňuje model objektu silného typu, který můžete použít k získání a nastavení vlastností ovládacích prvků pásu karet za běhu. Můžete například dynamicky naplnit ovládací prvky nabídky nebo zobrazit a skrýt ovládací prvky kontextové. Na pás karet můžete také přidat karty, skupiny a ovládací prvky, ale pouze před tím, než se pás karet načte do aplikace Office. Informace najdete v tématu [Nastavení vlastností, které jsou jen pro čtení](#SettingReadOnlyProperties).
@@ -60,7 +62,7 @@ ms.locfileid: "71256019"
 |**Nabídka**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|
 |**Oddělovač**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>|
 |**SplitButton**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|
-|**Karta**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|
+|**Tab**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|
 |**ToggleButton**|<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|
 
  <xref:Microsoft.Office.Tools.Ribbon>Obor názvů používá předponu na pásu karet pro tyto typy, aby se předešlo kolizi názvů s názvy tříd ovládacích prvků v <xref:System.Windows.Forms> oboru názvů.
@@ -145,7 +147,7 @@ ms.locfileid: "71256019"
 |**ImageName**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|
 |**ItemSize**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|
 |**MaxLength**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|
-|**Name**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>|
+|**Název**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>|
 |**Position**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonTab><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|
 |**RibbonType**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|
 |**Řádků**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|

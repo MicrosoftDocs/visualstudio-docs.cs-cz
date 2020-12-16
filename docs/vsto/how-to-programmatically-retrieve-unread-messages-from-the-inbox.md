@@ -1,5 +1,7 @@
 ---
 title: Programově načíst nepřečtené zprávy z doručené pošty
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově načíst nepřečtené zprávy z vaší doručené pošty v aplikaci Microsoft Outlook.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dc913379546c80eef70671ea0ecbd441001e6ab5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6dae629c008c04f7ee9fb66b9dbc5f8f31e53d4
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537602"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528259"
 ---
 # <a name="how-to-programmatically-retrieve-unread-messages-from-the-inbox"></a>Postupy: načítání nepřečtených zpráv z doručené pošty prostřednictvím kódu programu
   Tento příklad načte nepřečtené e-mailové zprávy z **doručené pošty** Outlooku a zobrazí počet položek.

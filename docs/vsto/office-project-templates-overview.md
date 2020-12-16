@@ -1,5 +1,7 @@
 ---
 title: Přehled šablon projektů Office
+description: Přečtěte si, jak vývojové nástroje systém Microsoft Office v sadě Visual Studio obsahují šablony projektů pro vytváření různých typů řešení pro Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -30,12 +32,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d83b04795386cfec80a8a309a9a84da04f6df105
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5e3203eb4bbd7339f5e59ecffea8436b02180b8b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68926592"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528083"
 ---
 # <a name="office-project-templates-overview"></a>Přehled šablon projektů Office
   Nástroje systém Microsoft Office Developer Tools v sadě Visual Studio obsahují šablony projektů pro vytváření následujících typů řešení pro systém Office:
@@ -164,7 +166,7 @@ ms.locfileid: "68926592"
  Pokud má šablona aplikace Microsoft Office Word rozšíření se spravovaným kódem, není voláno sestavení projektu, pokud je šablona připojena jako globální šablona nebo načtena z adresáře Po spuštění aplikace Word. Dokument navíc nerozpozná formát šablony, která je součástí řešení pro Office.
 
 ## <a name="excel-add-ins-xla-files"></a>Excelové doplňky (soubory. xla)
- Není k dispozici žádný projekt Office pro vytvoření doplňku VSTO pro Excel (soubor *. xla* ). Je možné uložit sešit jako soubor s příponou .xla, ale tato operace není podporována ani doporučena. Pokud uložíte sešit, který má rozšíření spravovaného kódu jako **systém Microsoft Office excelový soubor doplňku ( \* . xla)** , můžete ho vybrat v dialogovém okně **Doplňky** a použít ho na jiný sešit. V některých případech se váš kód spustí v cílovém sešitu po použití doplňku VSTO, ale toto použití řešení Office se nepodporuje.
+ Není k dispozici žádný projekt Office pro vytvoření doplňku VSTO pro Excel (soubor *. xla* ). Je možné uložit sešit jako soubor s příponou .xla, ale tato operace není podporována ani doporučena. Pokud uložíte sešit, který má rozšíření spravovaného kódu jako soubor **systém Microsoft Office Excel Add-In ( \* . xla)** , můžete ho vybrat v dialogovém okně **Doplňky** a použít ho na jiný sešit. V některých případech se váš kód spustí v cílovém sešitu po použití doplňku VSTO, ale toto použití řešení Office se nepodporuje.
 
 ## <a name="see-also"></a>Viz také
 - [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)

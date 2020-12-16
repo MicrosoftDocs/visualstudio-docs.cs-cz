@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Změna velikosti ovládacích prvků NamedRange'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově měnit velikost ovládacích prvků NamedRange v sešitu Microsoft Excelu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7762e67b1676f72030cae8d958bef19c501660c3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 043def019d30ee629e672a081cd5aea73bca4304
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545818"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528185"
 ---
 # <a name="how-to-resize-namedrange-controls"></a>Postupy: Změna velikosti ovládacích prvků NamedRange
   Velikost ovládacího prvku můžete nastavit, <xref:Microsoft.Office.Tools.Excel.NamedRange> když ho přidáte do dokumentu aplikace systém Microsoft Office Excel, ale budete ho chtít později změnit.

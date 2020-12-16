@@ -1,5 +1,7 @@
 ---
 title: Migrace řešení Office na .NET Framework 4 nebo novější
+description: Přečtěte si, jak můžete migrovat řešení Office na .NET Framework 4 nebo novější, aby váš projekt fungoval i nadále.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 86b975b7e84c69ff072df06e0a2c7701ab1909e7
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 5b7780b6fccef86dfe4a671c0c468e5899adc36c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584487"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528451"
 ---
 # <a name="migrate-office-solutions-to-the-net-framework-4-or-later"></a>Migrace řešení Office na .NET Framework 4 nebo novější
   Pokud je cílová architektura projektu sady Office změněna na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější z dřívější verze .NET Framework, může být nutné provést některé další kroky, aby bylo možné pokračovat v spouštění řešení na počítačích pro vývoj a koncové uživatele. Další informace najdete v tématu [požadované změny pro spouštění projektů Office, které migrujete do .NET Framework 4 nebo .NET Framework 4,5](../vsto/required-changes-to-run-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md).

@@ -10,17 +10,18 @@ ms.devlang: CSharp
 author: ghogen
 ms.author: ghogen
 manager: jillfra
+monikerRange: '>=vs-2019'
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f2d5bf573da940c39790d6868a94d588e5efb7b
-ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
+ms.openlocfilehash: 55b1e30d214ff85bfc1b7e9c00ebff7e76a95f12
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918166"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527885"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>Kurz: roztažení jednoduché konzolové aplikace v jazyce C#
 
@@ -32,21 +33,21 @@ Pokud jste právě dokončili [první část](tutorial-console.md) této série,
 
 Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. Teď přidáme do aplikace kalkulačky další projekt. To bude knihovna tříd, která poskytuje některé funkce kalkulačky.
 
-1. V aplikaci Visual Studio můžete použít **soubor** příkazů nabídky nejvyšší úrovně  >  **Add**  >  **New Project** pro přidání nového projektu, ale můžete také kliknout pravým tlačítkem na název existujícího projektu (nazývaný "uzel projektu") a otevřít místní nabídku projektu (nebo místní nabídka). Tato místní nabídka obsahuje mnoho způsobů, jak přidat funkce do projektů. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **Nový projekt** .
+1. V aplikaci Visual Studio můžete použít **soubor** příkazů nabídky nejvyšší úrovně  >    >   pro přidání nového projektu, ale můžete také kliknout pravým tlačítkem na název existujícího projektu (nazývaný "uzel projektu") a otevřít místní nabídku projektu (nebo místní nabídka). Tato místní nabídka obsahuje mnoho způsobů, jak přidat funkce do projektů. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **Nový projekt**.
 
-1. Vyberte knihovnu tříd šablony projektu C# **(.NET Standard)** .
+1. Vyberte knihovnu tříd šablony projektu C# **(.NET Standard)**.
 
    ![Snímek obrazovky s výběrem šablony projektu knihovny tříd](media/vs-2019/calculator2-add-project-dark.png)
 
-1. Zadejte název projektu **CalculatorLibrary** a klikněte na **vytvořit** . Visual Studio vytvoří nový projekt a přidá ho do řešení.
+1. Zadejte název projektu **CalculatorLibrary** a klikněte na **vytvořit**. Visual Studio vytvoří nový projekt a přidá ho do řešení.
 
    ![Snímek obrazovky Průzkumník řešení s přidaným projektem knihovny tříd CalculatorLibrary](media/vs-2019/calculator2-solution-explorer-with-class-library-dark2.png)
 
-1. Místo toho, abyste měli *Class1.cs* , přejmenujte soubor **CalculatorLibrary.cs** . Můžete kliknout na název v **Průzkumník řešení** pro přejmenování, nebo kliknout pravým tlačítkem myši a vybrat **Přejmenovat** nebo stisknout klávesu **F2** .
+1. Místo toho, abyste měli *Class1.cs*, přejmenujte soubor **CalculatorLibrary.cs**. Můžete kliknout na název v **Průzkumník řešení** pro přejmenování, nebo kliknout pravým tlačítkem myši a vybrat **Přejmenovat** nebo stisknout klávesu **F2** .
 
    Může se zobrazit výzva, pokud chcete přejmenovat všechny odkazy na `Class1` v souboru. Nezáleží na tom, jak jste odpověděli, protože v budoucím kroku nahradíte kód.
 
-1. Nyní je nutné přidat odkaz na projekt, aby první projekt mohl používat rozhraní API vystavené novou knihovnou tříd.  V prvním projektu klikněte pravým tlačítkem myši na uzel **odkazy** a vyberte možnost **Přidat odkaz na projekt** .
+1. Nyní je nutné přidat odkaz na projekt, aby první projekt mohl používat rozhraní API vystavené novou knihovnou tříd.  V prvním projektu klikněte pravým tlačítkem myši na uzel **odkazy** a vyberte možnost **Přidat odkaz na projekt**.
 
    ![Snímek obrazovky s položkou nabídky Přidat odkaz na projekt](media/vs-2019/calculator2-add-project-reference-dark.png)
 
@@ -54,7 +55,7 @@ Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. T
 
    ![Snímek obrazovky s dialogovým oknem Správce odkazů](media/vs-2019/calculator2-ref-manager-dark.png)
 
-1. V dialogovém okně **Správce odkazů** zaškrtněte políčko u projektu **CalculatorLibrary** a klikněte na **tlačítko OK** .  Odkaz na projekt se zobrazí v uzlu **projekty** v **Průzkumník řešení** .
+1. V dialogovém okně **Správce odkazů** zaškrtněte políčko u projektu **CalculatorLibrary** a klikněte na **tlačítko OK**.  Odkaz na projekt se zobrazí v uzlu **projekty** v **Průzkumník řešení**.
 
    ![Snímek obrazovky s Průzkumník řešení s odkazem na projekt](media/vs-2019/calculator2-solution-explorer-with-project-reference-dark2.png)
 
@@ -204,7 +205,7 @@ Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. T
 
 ## <a name="add-a-nuget-package-write-to-a-json-file"></a>Přidat balíček NuGet: zapsat do souboru JSON
 
-1. Nyní předpokládejme, že chceme výstupovat operace ve formátu JSON, což je oblíbený a přenosný formát pro ukládání dat objektů. Pro implementaci této funkce budeme muset odkazovat na balíček NuGet Newtonsoft.Jsna. Balíčky NuGet představují primární vozidlo pro distribuci knihoven tříd .NET. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **odkazy** pro projekt CalculatorLibrary a vyberte možnost **Spravovat balíčky NuGet** .
+1. Nyní předpokládejme, že chceme výstupovat operace ve formátu JSON, což je oblíbený a přenosný formát pro ukládání dat objektů. Pro implementaci této funkce budeme muset odkazovat na balíček NuGet Newtonsoft.Jsna. Balíčky NuGet představují primární vozidlo pro distribuci knihoven tříd .NET. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **odkazy** pro projekt CalculatorLibrary a vyberte možnost **Spravovat balíčky NuGet**.
 
    ![Snímek obrazovky s možností spravovat balíčky NuGet v místní nabídce](media/vs-2019/calculator2-manage-nuget-packages-dark2.png)
 
@@ -212,13 +213,13 @@ Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. T
 
    ![Snímek správce balíčků NuGet](media/vs-2019/calculator2-nuget-package-manager-dark.png)
 
-1. Vyhledejte Newtonsoft.Jsna balíčku a vyberte **nainstalovat** .
+1. Vyhledejte Newtonsoft.Jsna balíčku a vyberte **nainstalovat**.
 
    ![Snímek obrazovky s informacemi o balíčku NuGet Newtonsoft](media/vs-2019/calculator2-nuget-newtonsoft-json-dark2.png)
 
-   Balíček je stažen a přidán do projektu a nová položka se zobrazí v uzlu odkazy v **Průzkumník řešení** .
+   Balíček je stažen a přidán do projektu a nová položka se zobrazí v uzlu odkazy v **Průzkumník řešení**.
 
-1. Přidejte direktivu using pro System.IO a Newtonsoft.Jsna balíčku na začátku *CalculatorLibrary.cs* .
+1. Přidejte direktivu using pro System.IO a Newtonsoft.Jsna balíčku na začátku *CalculatorLibrary.cs*.
 
    ```csharp
    using Newtonsoft.Json;
@@ -333,7 +334,7 @@ Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. T
 
 Ladicí program sady Visual Studio je výkonný nástroj, který umožňuje spuštění kódu krok za krokem k nalezení přesného bodu, ve kterém jste provedli programové chyby. Pak poznáte, jaké opravy potřebujete ve svém kódu dělat. Visual Studio umožňuje provádět dočasné změny, abyste mohli pokračovat v používání programu.
 
-1. V *program.cs* klikněte na okraj nalevo od následujícího kódu (nebo otevřete místní nabídku a zvolte **zarážku**  >  **Vložit zarážku** nebo stiskněte **F9** ):
+1. V *program.cs* klikněte na okraj nalevo od následujícího kódu (nebo otevřete místní nabídku a zvolte **zarážku**  >  **Vložit zarážku** nebo stiskněte **F9**):
 
    ```csharp
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
@@ -375,11 +376,11 @@ Ladicí program sady Visual Studio je výkonný nástroj, který umožňuje spu�
 
    Okno Automatické hodnoty je podobné oknu **místní** hodnoty, ale zobrazuje proměnné bezprostředně před a za aktuálním řádkem kódu, kde je aplikace pozastavena.
 
-   V dalším kroku spustíte kód v ladicím programu jeden příkaz v čase, který se nazývá *krokování* .
+   V dalším kroku spustíte kód v ladicím programu jeden příkaz v čase, který se nazývá *krokování*.
 
 ## <a name="debug-step-through-code"></a>Ladění: krokovat kód
 
-1. Stiskněte klávesu **F11** (nebo proveďte **ladění**  >  **kroku do** ).
+1. Stiskněte klávesu **F11** (nebo proveďte **ladění**  >  **kroku do**).
 
    Pomocí příkazu krok into aplikace provede aktuální příkaz a přejde k dalšímu spustitelnému příkazu (obvykle se jedná o další řádek kódu). Žlutý ukazatel na levé straně vždy indikuje aktuální příkaz.
 
@@ -387,13 +388,13 @@ Ladicí program sady Visual Studio je výkonný nástroj, který umožňuje spu�
 
    Právě jste se naučili do `DoOperation` metody ve `Calculator` třídě.
 
-1. Chcete-li zobrazit hierarchické zobrazení toku programu, podívejte se do okna **zásobník volání** . (Pokud je uzavřený, vyberte **ladit**  >  **Systém Windows**  >  **Zásobník volání** .)
+1. Chcete-li zobrazit hierarchické zobrazení toku programu, podívejte se do okna **zásobník volání** . (Pokud je uzavřený, vyberte **ladit**  >  **Systém Windows**  >  **Zásobník volání**.)
 
    ![Snímek obrazovky zásobníku volání](media/vs-2019/calculator-2-debug-call-stack.png)
 
-   Toto zobrazení ukazuje aktuální `Calculator.DoOperation` metodu určenou žlutým ukazatelem a druhý řádek ukazuje funkci, která ji volala, od `Main` metody v *program.cs* . Okno **zásobník volání** zobrazuje pořadí, ve kterém jsou metody a funkce volány. Kromě toho poskytuje přístup k mnoha funkcím ladicího programu, jako je například **Přejít ke zdrojovému kódu** , z místní nabídky.
+   Toto zobrazení ukazuje aktuální `Calculator.DoOperation` metodu určenou žlutým ukazatelem a druhý řádek ukazuje funkci, která ji volala, od `Main` metody v *program.cs*. Okno **zásobník volání** zobrazuje pořadí, ve kterém jsou metody a funkce volány. Kromě toho poskytuje přístup k mnoha funkcím ladicího programu, jako je například **Přejít ke zdrojovému kódu**, z místní nabídky.
 
-1. Několikrát stiskněte **F10** (nebo **ladění**  >  **kroku** ), dokud se aplikace nezastaví na `switch` příkazu.
+1. Několikrát stiskněte **F10** (nebo **ladění**  >  **kroku**), dokud se aplikace nezastaví na `switch` příkazu.
 
    ```csharp
    switch (op)
@@ -427,7 +428,7 @@ Ladicí program sady Visual Studio je výkonný nástroj, který umožňuje spu�
 
    V jazyce C# `Infinity` je výsledkem dělení nulou.
 
-1. Stiskněte klávesu **F5** ( **nebo ladění ladění**  >  **pokračujte** ).
+1. Stiskněte klávesu **F5** ( **nebo ladění ladění**  >  **pokračujte**).
 
    Symbol nekonečna se zobrazí v konzole jako výsledek matematické operace.
 

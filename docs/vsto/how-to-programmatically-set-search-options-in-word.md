@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: nastavování možností hledání v aplikaci Word prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově nastavit možnosti hledání pro výběry v Microsoft Wordu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 434dfc85ed6c4e03c7c610a497bd063ce1826c62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 45af6a801a146838919402c31be502cf4825e718
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546988"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528556"
 ---
 # <a name="how-to-programmatically-set-search-options-in-word"></a>Postupy: nastavování možností hledání v aplikaci Word prostřednictvím kódu programu
   Existují dva způsoby, jak nastavit možnosti hledání pro výběry v systém Microsoft Office dokumentů aplikace Word:
@@ -38,7 +40,7 @@ ms.locfileid: "85546988"
 
 ### <a name="to-set-search-options-using-a-find-object"></a>Nastavení možností vyhledávání pomocí objektu Find
 
-1. Nastavení vlastností <xref:Microsoft.Office.Interop.Word.Find> objektu pro hledání textu po výběru. **find me**
+1. Nastavení vlastností <xref:Microsoft.Office.Interop.Word.Find> objektu pro hledání textu po výběru. 
 
      [!code-vb[Trin_VstcoreWordAutomation#76](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#76)]
 
@@ -47,7 +49,7 @@ ms.locfileid: "85546988"
 
 ### <a name="to-set-search-options-using-execute-method-arguments"></a>Nastavení možností vyhledávání pomocí argumentů spustit metodu
 
-1. Předání vyhledávacích kritérií jako parametrů <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> metody pro hledání textu po výběru. **find me**
+1. Předání vyhledávacích kritérií jako parametrů <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> metody pro hledání textu po výběru. 
 
      [!code-vb[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#77)]
      [!code-csharp[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#77)]

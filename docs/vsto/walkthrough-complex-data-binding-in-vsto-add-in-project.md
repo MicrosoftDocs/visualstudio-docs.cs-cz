@@ -1,5 +1,7 @@
 ---
 title: 'Návod: komplexní datová vazba v projektu doplňku VSTO'
+description: Naučte se přidávat ovládací prvky do listu aplikace Microsoft Excel a navazovat ovládací prvky na data v době běhu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c0d65bd96a3860070addc6dc05a791d71959f5ea
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 573f15001dcbd678c576512349c36ae9594e10e8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585038"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527096"
 ---
 # <a name="walkthrough-complex-data-binding-in-vsto-add-in-project"></a>Návod: komplexní datová vazba v projektu doplňku VSTO
   Můžete navazovat data na hostitelské ovládací prvky a model Windows Forms ovládací prvky v projektech doplňku VSTO. Tento návod ukazuje, jak přidat ovládací prvky do listu aplikace systém Microsoft Office Excel a navazovat ovládací prvky na data v době běhu.
@@ -53,7 +55,7 @@ ms.locfileid: "91585038"
 
 ### <a name="to-create-a-new-project"></a>Vytvoření nového projektu
 
-1. Vytvořte projekt doplňku VSTO pro Excel s názvem **vyplňování listů z databáze**pomocí Visual Basic nebo C#.
+1. Vytvořte projekt doplňku VSTO pro Excel s názvem **vyplňování listů z databáze** pomocí Visual Basic nebo C#.
 
      Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
@@ -64,15 +66,15 @@ ms.locfileid: "91585038"
 
 ### <a name="to-add-a-typed-dataset-to-the-project"></a>Chcete-li přidat typovou datovou sadu do projektu
 
-1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
+1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat** Windows.
 
 2. Zvolením možnosti **Přidat nový zdroj dat** spusťte **Průvodce konfigurací zdroje dat**.
 
-3. Klikněte na **databáze**a potom klikněte na **Další**.
+3. Klikněte na **databáze** a potom klikněte na **Další**.
 
 4. Máte-li existující připojení k `AdventureWorksLT` databázi, vyberte toto připojení a klikněte na tlačítko **Další**.
 
-    V opačném případě klikněte na tlačítko **nové připojení**a vytvořte nové připojení pomocí dialogového okna **Přidat připojení** . Další informace najdete v tématu [Přidání nových připojení](../data-tools/add-new-connections.md).
+    V opačném případě klikněte na tlačítko **nové připojení** a vytvořte nové připojení pomocí dialogového okna **Přidat připojení** . Další informace najdete v tématu [Přidání nových připojení](../data-tools/add-new-connections.md).
 
 5. Na stránce **Uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na tlačítko **Další**.
 
@@ -80,7 +82,7 @@ ms.locfileid: "91585038"
 
 7. Klikněte na **Finish** (Dokončit).
 
-    Do **Průzkumník řešení**se přidá soubor *AdventureWorksLTDataSet. xsd* . Tento soubor definuje následující položky:
+    Do **Průzkumník řešení** se přidá soubor *AdventureWorksLTDataSet. xsd* . Tento soubor definuje následující položky:
 
    - Typová datová sada s názvem `AdventureWorksLTDataSet` . Tato datová sada představuje obsah tabulky **Address (tabulky SalesLT)** v databázi AdventureWorksLT.
 

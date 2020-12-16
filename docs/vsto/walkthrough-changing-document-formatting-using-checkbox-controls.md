@@ -1,5 +1,7 @@
 ---
 title: Změna formátování dokumentu pomocí ovládacích prvků CheckBox
+description: Naučte se používat ovládací prvky model Windows Forms v přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Word pro změnu formátování textu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 24c3cb8d76551bb477f9c13cc56c313519f3b617
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 931e9554a10e0e1525d9ee4a10505633b211610b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328728"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527245"
 ---
 # <a name="walkthrough-change-document-formatting-using-checkbox-controls"></a>Návod: Změna formátování dokumentu pomocí ovládacích prvků CheckBox
   Tento návod ukazuje, jak použít ovládací prvky model Windows Forms v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word pro změnu formátování textu.
@@ -63,14 +65,14 @@ ms.locfileid: "67328728"
 
 1. Ověřte, že je dokument otevřený v návrháři sady Visual Studio.
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**přetáhněte první <xref:Microsoft.Office.Tools.Word.Controls.CheckBox> ovládací prvek do dokumentu.
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** přetáhněte první <xref:Microsoft.Office.Tools.Word.Controls.CheckBox> ovládací prvek do dokumentu.
 
 3. V okně **vlastnosti** změňte následující vlastnosti.
 
     |Vlastnost|Hodnota|
     |--------------|-----------|
     |**Název**|**applyBoldFont**|
-    |**Text**|**Bold**|
+    |**Text**|**Tučný**|
 
 4. Stisknutím klávesy **ENTER** přesuňte kurzor pod první zaškrtávací políčko.
 
@@ -96,7 +98,7 @@ ms.locfileid: "67328728"
 
     **Chcete-li změnit formátování tohoto textu, klikněte na zaškrtávací políčko.**
 
-2. Z karty **ovládací prvky aplikace Word** v **panelu nástrojů**přetáhněte <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek do dokumentu.
+2. Z karty **ovládací prvky aplikace Word** v **panelu nástrojů** přetáhněte <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek do dokumentu.
 
     Zobrazí se dialogové okno **Přidat ovládací prvek záložky** .
 
@@ -113,7 +115,7 @@ ms.locfileid: "67328728"
 
 ### <a name="change-formatting-when-a-check-box-is-selected"></a>Změnit formátování, je-li zaškrtnuto zaškrtávací políčko
 
-1. Klikněte pravým tlačítkem na `ThisDocument` **Průzkumník řešení**a pak klikněte na **Zobrazit kód** v místní nabídce.
+1. Klikněte pravým tlačítkem na `ThisDocument` **Průzkumník řešení** a pak klikněte na **Zobrazit kód** v místní nabídce.
 
 2. Pouze pro C# přidejte do třídy **ThisDocument** následující konstanty.
 

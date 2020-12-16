@@ -1,5 +1,7 @@
 ---
 title: Nastavení informací o konfiguraci pro řešení pro systém Office
+description: Přečtěte si, jak můžete pomocí konfiguračních souborů nakonfigurovat nastavení, která jsou specifická pro vaše systém Microsoft Office řešení.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e47ad00e3f9e90913784196894d514a755699864
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 3cff5e6f559245e361eda0db6623312917891969
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91581036"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528161"
 ---
 # <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>Postupy: nastavení informací o konfiguraci pro řešení pro systém Office
   Pomocí konfiguračních souborů můžete nakonfigurovat nastavení, která jsou specifická pro vaše řešení Office. Můžete určit nastavení, jako je například zásada vytváření sestavení, vzdálené objekty, ladění a nastavení trasování.

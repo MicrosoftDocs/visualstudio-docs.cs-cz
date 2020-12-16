@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vytváření vlastních kalendářů prostřednictvím kódu programu'
+description: Tento příklad slouží k programovému vytvoření nové složky kalendáře s názvem PersonalCalendar a pak k vytvoření nové položky události a jejím přidání do složky kalendáře.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: aab9e14c7fa4b4c70b2e61eca382af2ce787148c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d0a76189e96a6551408abe49b6e08a26c91ffa8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546052"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527826"
 ---
 # <a name="how-to-programmatically-create-a-custom-calendar"></a>Postupy: vytváření vlastních kalendářů prostřednictvím kódu programu
-  Tento příklad vytvoří novou složku kalendáře s názvem **PersonalCalendar**a potom vytvoří novou položku události a přidá ji do složky kalendáře. Kód pak zobrazí složku kalendáře.
+  Tento příklad vytvoří novou složku kalendáře s názvem **PersonalCalendar** a potom vytvoří novou položku události a přidá ji do složky kalendáře. Kód pak zobrazí složku kalendáře.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 

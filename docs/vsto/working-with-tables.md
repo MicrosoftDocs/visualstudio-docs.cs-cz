@@ -1,5 +1,7 @@
 ---
 title: Práce s tabulkami
+description: Přečtěte si o podrobných postupech a příkladech kódu pro použití objektového modelu Microsoft Wordu pro práci s tabulkami v projektech Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,17 +17,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f1102a996f06634396f8bec3a02400fa952810e5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 27fdc776589879af6757967b18a7cac47f9f66df
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62815349"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526857"
 ---
 # <a name="work-with-tables"></a>Práce s tabulkami
   Témata v této části poskytují podrobné postupy a příklady kódu pro použití objektového modelu aplikace systém Microsoft Office Word pro práci s tabulkami v projektech Office. V některých případech se způsoby provádění těchto úkolů v Doplňkech VSTO liší od způsobů, jak je provádíte v přizpůsobení na úrovni dokumentu.
 
-|Úkol|Postup|
+|Úloha|Postup|
 |----------|---------------|
 |Vytvoření tabulky, použití stylu a přístup k tabulce v kódu.|[Postupy: vytváření tabulek aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-create-word-tables.md)|
 |Vytvořte tabulku, naformátujte ji a vložte data do buněk.|[Postupy: naplnění tabulek Wordu pomocí vlastností dokumentu prostřednictvím kódu programu](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)|

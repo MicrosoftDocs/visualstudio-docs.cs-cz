@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti v projektech pro systém Office
+description: Přečtěte si informace o vlastnostech, které jsou k dispozici pro projekty Office v sadě Visual Studio, prostřednictvím okno Vlastnosti.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9fc2a0774206eac0c9295a425d81555ffdd3cac8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cdc54de3935646e36f9d4f09727037de4c373c92
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62561359"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528029"
 ---
 # <a name="properties-in-office-projects"></a>Vlastnosti v projektech pro systém Office
   Existuje několik důležitých vlastností, které jsou k dispozici pro projekty Office v sadě Visual Studio. Tyto vlastnosti jsou k dispozici v okně **vlastnosti** .

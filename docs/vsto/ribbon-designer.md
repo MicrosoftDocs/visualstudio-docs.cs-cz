@@ -1,5 +1,7 @@
 ---
 title: Návrhář pásu karet
+description: Zjistěte, jak můžete pomocí Návrháře pásu karet přidat vlastní karty, skupiny a ovládací prvky na pás karet aplikace systém Microsoft Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e1c2941b0c088a832540fd3380c993fe2c380b44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b72270da75d27ed2837540369f74e9c5e87b417b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985617"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528002"
 ---
 # <a name="ribbon-designer"></a>Návrhář pásu karet
   Návrhář pásu karet je vizuální návrh plátna. Pomocí Návrháře pásu karet můžete do pásu karet aplikace systém Microsoft Office přidat vlastní karty, skupiny a ovládací prvky.
@@ -65,15 +67,15 @@ ms.locfileid: "72985617"
 ## <a name="design-a-ribbon"></a><a name="DesigningRibbonLayout"></a> Návrh pásu karet
  Existují tři způsoby, jak otevřít Návrháře pásu karet:
 
-- V **Průzkumník řešení**dvakrát klikněte na soubor kódu pásu karet.
+- V **Průzkumník řešení** dvakrát klikněte na soubor kódu pásu karet.
 
-- V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor kódu pásu karet a potom klikněte na tlačítko **Návrhář zobrazení**.
+- V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor kódu pásu karet a potom klikněte na tlačítko **Návrhář zobrazení**.
 
-- V **Průzkumník řešení**vyberte soubor kódu pásu karet a v nabídce **zobrazení** klikněte na **Návrhář** .
+- V **Průzkumník řešení** vyberte soubor kódu pásu karet a v nabídce **zobrazení** klikněte na **Návrhář** .
 
-  Návrhář pásu karet obsahuje výchozí kartu a skupinu. Výchozí kartu a skupinu můžete odebrat z Návrháře pásu karet. Pokud chcete výchozí skupinu odebrat, klikněte pravým tlačítkem na **Group1**a pak klikněte na **Odstranit**. Chcete-li odebrat výchozí kartu, klikněte pravým tlačítkem myši na prázdnou oblast návrhové plochy a poté klikněte na tlačítko **odebrat kartu pásu karet**.
+  Návrhář pásu karet obsahuje výchozí kartu a skupinu. Výchozí kartu a skupinu můžete odebrat z Návrháře pásu karet. Pokud chcete výchozí skupinu odebrat, klikněte pravým tlačítkem na **Group1** a pak klikněte na **Odstranit**. Chcete-li odebrat výchozí kartu, klikněte pravým tlačítkem myši na prázdnou oblast návrhové plochy a poté klikněte na tlačítko **odebrat kartu pásu karet**.
 
-  Do Návrháře pásu karet můžete také přidat vlastní karty, skupiny a ovládací prvky. Tyto ovládací prvky můžete najít v **sadě nástrojů**ve skupině **ovládací prvky pásu karet Office** . Existují tři způsoby, jak přidat ovládací prvky ze skupiny **ovládací prvky pásu karet Office** do Návrháře pásu karet:
+  Do Návrháře pásu karet můžete také přidat vlastní karty, skupiny a ovládací prvky. Tyto ovládací prvky můžete najít v **sadě nástrojů** ve skupině **ovládací prvky pásu karet Office** . Existují tři způsoby, jak přidat ovládací prvky ze skupiny **ovládací prvky pásu karet Office** do Návrháře pásu karet:
 
 - Přetáhněte ovládací prvek do příslušné oblasti v Návrháři pásu karet.
 
@@ -103,7 +105,7 @@ ms.locfileid: "72985617"
 
 - Klikněte pravým tlačítkem myši na Návrhář pásu karet a potom klikněte na tlačítko **Přidat kartu pásu karet**.
 
-- Otevřete **Editor kolekce karet**a klikněte na tlačítko **Přidat**.
+- Otevřete **Editor kolekce karet** a klikněte na tlačítko **Přidat**.
 
    Chcete-li otevřít **Editor kolekce karet**, v okně **vlastnosti** vyberte vlastnost **karty** a potom klikněte na tlačítko se třemi tečkami ![ASP.NET v nástroji Mobile Designer elipsa](../sharepoint/media/mwellipsis.gif "Elipsa ASP.NET Mobile Designer").
 
@@ -180,7 +182,7 @@ ms.locfileid: "72985617"
 |Přesuňte ovládací prvek před předchozí ovládací prvek v seznamu.|**CTRL** + **Nahoru**<br /><br /> **CTRL** + **Vlevo**|
 |Přesuňte ovládací prvek za další ovládací prvek v seznamu.|**CTRL** + **Dolů**<br /><br /> **CTRL** + **Vpravo**|
 |Přesune výběr z jednoho ovládacího prvku do druhého ve stejné skupině. V případě rozevíracího panelu se pohybujte mezi nadřazeným ovládacím prvkem a ovládacími prvky v rozevíracím panelu.|**Nahoru**<br /><br /> **Dolů**|
-|Iterujte před všemi ovládacími prvky.|**Karta**|
+|Iterujte před všemi ovládacími prvky.|**Tab**|
 |Iterujte zpět všemi ovládacími prvky.|**Posun** + **Karta**|
 |Odstraní vybraný ovládací prvek nebo sadu ovládacích prvků.|**Odstranit**|
 |Zkopírujte vybrané ovládací prvky.|**CTRL** + Jazyk **C**|

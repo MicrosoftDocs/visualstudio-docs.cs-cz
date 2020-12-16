@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: resetování oblastí v dokumentech aplikace Word prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově změnit velikost existující oblasti v dokumentu Microsoft Wordu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1fb36f825f4170a89a78bc4522d3a872bd9e5033
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: b87d157344f1302d4b1ee910ee2dda449bbea5a1
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584791"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527748"
 ---
 # <a name="how-to-programmatically-reset-ranges-in-word-documents"></a>Postupy: resetování oblastí v dokumentech aplikace Word prostřednictvím kódu programu
   Použijte <xref:Microsoft.Office.Interop.Word.Range.SetRange%2A> metodu pro změnu velikosti existujícího rozsahu v systém Microsoft Office wordovém dokumentu.
@@ -45,7 +47,7 @@ ms.locfileid: "91584791"
      [!code-vb[Trin_VstcoreWordAutomation#44](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#44)]
      [!code-csharp[Trin_VstcoreWordAutomation#44](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#44)]
 
-## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu
+## <a name="document-level-customization-example"></a>Příklad přizpůsobení Document-Level
 
 ### <a name="to-reset-an-existing-range-in-a-document-level-customization"></a>Resetování existující oblasti v přizpůsobení na úrovni dokumentu
 

@@ -1,5 +1,7 @@
 ---
 title: 'Návod: komplexní datové vazby v projektech na úrovni dokumentu'
+description: Naučte se, jak můžete navazovat více buněk v listu Microsoft Excelu na pole ve službě Northwind SQL Server Database.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7aba307bcd76cc055e42c11418d42f3dd0cfba1f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 988394595e8aa4710a22e1fedf22a921481c7396
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584318"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527118"
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>Návod: komplexní datové vazby v projektech na úrovni dokumentu
   Tento názorný postup ukazuje základy komplexních datových vazeb v projektech na úrovni dokumentu. V systém Microsoft Officeovém listu aplikace Excel můžete navazovat více buněk na pole v databázi Northwind SQL Server.
@@ -65,7 +67,7 @@ ms.locfileid: "91584318"
 
 ### <a name="to-create-the-data-source"></a>Vytvoření zdroje dat
 
-1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
+1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat** Windows.
 
 2. Zvolením možnosti **Přidat nový zdroj dat** spusťte **Průvodce konfigurací zdroje dat**.
 
@@ -106,7 +108,7 @@ ms.locfileid: "91584318"
 
 ### <a name="to-add-a-button"></a>Přidání tlačítka
 
-1. Na kartě **běžné ovládací prvky** **panelu nástrojů**přidejte <xref:System.Windows.Forms.Button> ovládací prvek do buňky **a4** listu.
+1. Na kartě **běžné ovládací prvky** **panelu nástrojů** přidejte <xref:System.Windows.Forms.Button> ovládací prvek do buňky **a4** listu.
 
    Dalším krokem je přidání textu na tlačítko při otevření listu.
 
@@ -115,7 +117,7 @@ ms.locfileid: "91584318"
 
 ### <a name="to-initialize-the-control"></a>Inicializace ovládacího prvku
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs**a pak klikněte na **Zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs** a pak klikněte na **Zobrazit kód** v místní nabídce.
 
 2. Přidejte následující kód do `Sheet1_Startup` metody pro nastavení textu pro b `utton` .
 
@@ -151,7 +153,7 @@ ms.locfileid: "91584318"
 
 1. Klikněte na buňka **B7**, která by měla obsahovat jméno **Chvojková**.
 
-2. Zadejte název **Anderson**a stiskněte klávesu **ENTER**.
+2. Zadejte název **Anderson** a stiskněte klávesu **ENTER**.
 
 ### <a name="to-modify-a-column-header"></a>Úprava záhlaví sloupce
 
@@ -175,7 +177,7 @@ ms.locfileid: "91584318"
 
 1. Vyberte buňku v rámci objektu list.
 
-    Na konci seznamu se zobrazí nový řádek s hvězdičkou ( **\*** ) v první buňce nového řádku.
+    V dolní části seznamu se zobrazí nový řádek s hvězdičkou (* *\** _) v první buňce nového řádku.
 
 2. Do prázdného řádku přidejte následující informace.
 
@@ -185,7 +187,7 @@ ms.locfileid: "91584318"
 
 ### <a name="to-delete-rows"></a>Odstranění řádků
 
-- Pravým tlačítkem myši klikněte na číslo 16 (řádek 16) na levé straně listu a pak klikněte na **Odstranit**.
+- Pravým tlačítkem myši klikněte na číslo 16 (řádek 16) na levé straně listu a pak klikněte na _ * odstranit * *.
 
 ### <a name="to-sort-the-rows-in-the-list"></a>Řazení řádků v seznamu
 

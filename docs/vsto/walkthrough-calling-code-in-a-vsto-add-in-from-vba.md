@@ -1,5 +1,7 @@
 ---
 title: 'Návod: volání kódu v doplňku VSTO z jazyka VBA'
+description: Naučte se, jak vystavit objekt v doplňku VSTO pro další systém Microsoft Office řešení, včetně jazyk Visual Basic for Application (VBA) a COM VSTO doplňků.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6fdbd2cf85086bac0aa7bb56c128a7ad6fe36f94
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0cbf03ef234ea6cf4eab790d96082d23b7ed5199
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72650789"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527289"
 ---
 # <a name="walkthrough-call-code-in-a-vsto-add-in-from-vba"></a>Návod: volání kódu v doplňku VSTO z jazyka VBA
   Tento názorný postup ukazuje, jak vystavit objekt v doplňku VSTO pro jiná systém Microsoft Office řešení, včetně jazyk Visual Basic for Application (VBA) a COM VSTO doplňky.
@@ -42,7 +44,7 @@ ms.locfileid: "72650789"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -67,7 +69,7 @@ ms.locfileid: "72650789"
 
 1. V nabídce **projekt** klikněte na možnost **Přidat třídu**.
 
-2. V dialogovém okně **Přidat novou položku** změňte název nové třídy na **AddInUtilities**a klikněte na **Přidat**.
+2. V dialogovém okně **Přidat novou položku** změňte název nové třídy na **AddInUtilities** a klikněte na **Přidat**.
 
      V editoru kódu se otevře soubor **AddInUtilities.cs** nebo **AddInUtilities. vb** .
 
@@ -88,11 +90,11 @@ ms.locfileid: "72650789"
 
 ### <a name="to-expose-the-addinutilities-class-to-other-office-solutions"></a>Vystavení třídy AddInUtilities jiným řešením pro systém Office
 
-1. V **Průzkumník řešení**rozbalte položku **Excel**.
+1. V **Průzkumník řešení** rozbalte položku **Excel**.
 
-2. Klikněte pravým tlačítkem na **ThisAddIn.cs** nebo **ThisAddIn. vb**a pak klikněte na **Zobrazit kód**.
+2. Klikněte pravým tlačítkem na **ThisAddIn.cs** nebo **ThisAddIn. vb** a pak klikněte na **Zobrazit kód**.
 
-3. Do třídy přidejte následující kód `ThisAddIn` .
+3. Do třídy `ThisAddIn` přidejte následující kód.
 
      [!code-csharp[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs#1)]
      [!code-vb[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb#1)]
@@ -108,7 +110,7 @@ ms.locfileid: "72650789"
 
 1. Stisknutím klávesy **F5** spusťte projekt.
 
-2. V Excelu uložte aktivní sešit jako excelový sešit s podporou maker (*. xlsm). Uložte ho do vhodného umístění, jako je například plocha.
+2. V Excelu uložte aktivní sešit jako excelový Macro-Enabled sešit (*. xlsm). Uložte ho do vhodného umístění, jako je například plocha.
 
 3. Na pásu karet klikněte na kartu **vývojář** .
 

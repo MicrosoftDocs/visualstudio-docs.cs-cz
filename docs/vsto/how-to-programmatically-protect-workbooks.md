@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Ochrana sešitů prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete chránit sešit aplikace Microsoft Excel, aby uživatelé nemohli přidávat ani odstraňovat listy a zároveň Odemknout sešit prostřednictvím kódu programu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ee7444c63c2d774e9b22ea612049f09429729c79
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b35b0fc234c3015275650ddb51e8ea3011c97a6
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537628"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528283"
 ---
 # <a name="how-to-programmatically-protect-workbooks"></a>Postupy: Ochrana sešitů prostřednictvím kódu programu
   Systém Microsoft Office excelový sešit můžete chránit tak, aby uživatelé nemohli přidávat ani odstraňovat listy a zároveň Odemknout sešit prostřednictvím kódu programu. Volitelně můžete zadat heslo, určit, jestli chcete strukturu chránit (takže uživatelé nemohou přesunout listy kolem) a určit, jestli chcete, aby byl sešit chráněný.

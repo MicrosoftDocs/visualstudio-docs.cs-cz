@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Ochrana částí dokumentů pomocí ovládacích prvků obsahu'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio chránit části dokumentu Microsoft Wordu pomocí ovládacích prvků obsahu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 813bb829e3be243a9812a8856bf4fcfa6de2fd22
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 83052ca3c61fe931c3360a1092ca23740ddcff3f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91581075"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528240"
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>Postupy: Ochrana částí dokumentů pomocí ovládacích prvků obsahu
   Při ochraně části dokumentu zabráníte uživatelům měnit nebo odstraňovat obsah v této části dokumentu. Existuje několik způsobů, jak můžete chránit části dokumentu aplikace systém Microsoft Office Word pomocí ovládacích prvků obsahu:

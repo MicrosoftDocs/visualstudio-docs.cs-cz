@@ -1,5 +1,7 @@
 ---
 title: Volitelné parametry v řešeních pro systém Office
+description: Zjistěte, jak není nutné předávat hodnotu pro volitelné parametry, protože výchozí hodnoty jsou automaticky použity pro každý chybějící parametr.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e8684ad4b9429a5499660ef4ad6fdd8133dccaa5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7567f43dfa79e6a1e5d92b9ecddbf7918a6edef3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64818061"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527568"
 ---
 # <a name="optional-parameters-in-office-solutions"></a>Volitelné parametry v řešeních pro systém Office
   Mnohé z metod v objektových modelech systém Microsoft Office aplikací přijímají volitelné parametry. Použijete-li Visual Basic pro vývoj řešení sady Office v sadě Visual Studio, není nutné předávat hodnotu pro volitelné parametry, protože výchozí hodnoty jsou automaticky použity pro každý chybějící parametr. Ve většině případů můžete také vynechat volitelné parametry v projektech Visual C#. Nemůžete však vynechat volitelné parametry **ref** `ThisDocument` třídy v projektech aplikace Word na úrovni dokumentu.

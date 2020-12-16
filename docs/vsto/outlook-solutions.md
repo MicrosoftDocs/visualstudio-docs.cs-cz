@@ -1,5 +1,7 @@
 ---
 title: řešení pro aplikaci Outlook
+description: Naučte se používat doplňky VSTO k automatizaci Outlooku, rozšiřování funkcí Outlooku nebo přizpůsobení uživatelského rozhraní (UI) Outlooku.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 21e6478bb0f02383066a2c63dad1bdaf980a0b5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ded4652704a47252f0839aed151f0557ae5e6766
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985676"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527546"
 ---
 # <a name="outlook-solutions"></a>řešení pro aplikaci Outlook
   Visual Studio poskytuje šablony projektů, pomocí kterých můžete vytvářet doplňky VSTO pro systém Microsoft Office Outlook. Doplňky VSTO můžete použít k automatizaci Outlooku, rozšiřování funkcí Outlooku nebo k přizpůsobení uživatelského rozhraní Outlooku (UI). Další informace o doplňcích VSTO najdete v tématu [architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md).
@@ -55,7 +57,7 @@ ms.locfileid: "72985676"
 
 ## <a name="customize-the-user-interface-of-an-outlook-application"></a>Přizpůsobení uživatelského rozhraní aplikace Outlook
 
-|Úkol|Další informace|
+|Úloha|Další informace|
 |----------|--------------------------|
 |Přidejte vlastní karty na pás karet nástroje Outlook Inspector.|[Přehled pásu karet](../vsto/ribbon-overview.md)|
 |Přidejte vlastní skupiny do předdefinované karty v okně pro kontrolu aplikace Outlook.|[Postupy: Přizpůsobení předdefinované karty](../vsto/how-to-customize-a-built-in-tab.md)|
@@ -70,5 +72,5 @@ ms.locfileid: "72985676"
 |-----------|-----------------|
 |[Přehled modelu objektů aplikace Outlook](../vsto/outlook-object-model-overview.md)|Poskytuje přehled o objektech, které jsou k dispozici v objektovém modelu aplikace Outlook.|
 |[Vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md)|Vysvětluje nástroje poskytované aplikací Visual Studio, které usnadňují návrh, vývoj a ladění oblastí formuláře.|
-|[Návod: vytvoření prvního doplňku VSTO pro Outlook](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)|Ukazuje, jak vytvořit doplněk VSTO pro systém Microsoft Office Outlook.|
+|[Návod: vytvoření prvního Add-In VSTO pro Outlook](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)|Ukazuje, jak vytvořit doplněk VSTO pro systém Microsoft Office Outlook.|
 |[Outlook 2010 ve vývoji pro Office](/previous-versions/office/developer/office-2010/ff458122(v=office.14))|Oblast knihovny MSDN, kde najdete články a referenční dokumentaci týkající se vývoje řešení Outlooku (netýká se vývoj pro Office pomocí sady Visual Studio).|

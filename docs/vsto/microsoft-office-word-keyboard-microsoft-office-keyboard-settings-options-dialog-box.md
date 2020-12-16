@@ -1,5 +1,7 @@
 ---
 title: Klávesnice Office Word, nastavení, dialogové okno Možnosti
+description: Seznamte se s tím, jak můžete aplikaci Microsoft Word přijmout příkazy klávesových zkratek, když se dokument soustředí na výběr dynamického schématu klávesnice.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 83cfe2e6061f82d48a00354b610955c698a9a11f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: bf4cfbaf23ad9c1e545af25614722cd52c493df7
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584500"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528439"
 ---
 # <a name="microsoft-office-word-keyboard-settings-options-dialog-box"></a>Systém Microsoft Office klávesnice Word, nastavení, dialogové okno Možnosti
   Systém Microsoft Office Word a Visual Studio oba zpracovávají klávesové zkratky. Stejná kombinace klávesových zkratek může být pro různé příkazy ve Wordu a v aplikaci Visual Studio. Když je Word otevřený v projektu na úrovni dokumentu v aplikaci Visual Studio, obdrží příkazy klávesových zkratek jenom jedna aplikace současně. Ve výchozím nastavení Visual Studio přijímá všechny příkazy klávesových zkratek, ale můžete je nechat přijmout, když se dokument soustředí na výběr **dynamického schématu klávesnice**.

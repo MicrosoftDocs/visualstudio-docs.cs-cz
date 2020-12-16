@@ -1,5 +1,7 @@
 ---
 title: Zabezpečení řešení pro systém Office
+description: Přečtěte si, jak model zabezpečení pro řešení Office zahrnuje několik technologií, včetně Visual Studio Tools for Office runtime a ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 31a17fdf51e838405c93efca79d7994cd40ece5c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bedb49a6d5d17e3c9f79a652183c2b4cd748ff6c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978584"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528476"
 ---
 # <a name="secure-office-solutions"></a>Zabezpečení řešení pro systém Office
   Model zabezpečení pro řešení Office zahrnuje několik technologií: [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] , [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] , Centrum zabezpečení v systém Microsoft Office a zónu serverů s omezeným přístupem v Internet Exploreru. Následující části popisují, jak fungují různé funkce zabezpečení:
@@ -62,7 +64,7 @@ ms.locfileid: "62978584"
 ### <a name="document-level-solutions"></a>Řešení na úrovni dokumentu
  Plně kvalifikovaná cesta k dokumentu musí být přidána do seznamu důvěryhodných umístění v aplikaci systém Microsoft Office, pokud vyvíjíte následující typy projektů:
 
-- Řešení na úrovni dokumentu, která jsou v síťové sdílené složce, například * \\ \servername\sharename*.
+- Řešení na úrovni dokumentu, která jsou v síťové sdílené složce, například *\\ \servername\sharename*.
 
 - Řešení na úrovni dokumentu pro Word, které používají soubory. *doc* nebo *. docm* .
 
@@ -71,7 +73,7 @@ ms.locfileid: "62978584"
 ### <a name="temporary-certificates"></a>Dočasné certifikáty
  Pokud podpisový certifikát ještě neexistuje, Visual Studio vytvoří dočasný certifikát. Tento dočasný certifikát byste měli použít jenom během vývoje a koupit oficiální certifikát pro nasazení.
 
- Po prvním sestavení projektu Office se vygeneruje dočasný certifikát. Při příštím stisknutí klávesy **F5**se projekt znovu sestaví, protože projekt je po přidání certifikátu označen jako změněný.
+ Po prvním sestavení projektu Office se vygeneruje dočasný certifikát. Při příštím stisknutí klávesy **F5** se projekt znovu sestaví, protože projekt je po přidání certifikátu označen jako změněný.
 
  Po chvíli může existovat spousta dočasných certifikátů, proto byste měli dočasné certifikáty vymazat občas.
 

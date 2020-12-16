@@ -1,5 +1,7 @@
 ---
 title: Přehled vývoje řešení pro systém Office (VSTO)
+description: Naučte se vyvíjet vlastní nastavení pro známá systém Microsoft Office uživatelská rozhraní a nástroje, jako jsou funkce pro zpracování slov ve Wordu a funkce analýzy dat v Excelu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5c1e9ce9ff2ab0a55de0a7e51325885d86c2fbf1
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 9bb964e90c44c4e0b41e0f09df8931665426dc70
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811016"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527714"
 ---
 # <a name="office-solutions-development-overview-vsto"></a>Přehled vývoje řešení pro systém Office (VSTO)
   Pomocí systém Microsoft Office jako front-endu pro řešení můžete využít výhod známých systém Microsoft Office uživatelských rozhraní a nástrojů, jako jsou funkce pro zpracování slov ve Wordu, funkce analýzy dat Excelu a funkce pro správu e-mailu v Outlooku. V sadě Visual Studio můžete vyvíjet řešení pro přizpůsobení aplikací Office a přidání specifických funkcí, které pro své obchodní procesy potřebujete. Můžete například změnit slovo na generátor smluv, který sestaví smlouvy mimo již existující části, které lze upravovat nebo nelze upravovat. V aplikaci Excel můžete vytvořit automatický sešit rozpočtu přizpůsobený pro různé projekty. Uživatelé mohou také řešení Office přijímat v režimu offline, což usnadňuje složitější řešení, než by se používala při použití webové architektury.

@@ -1,5 +1,7 @@
 ---
 title: 'Návod: volání kódu z jazyka VBA v projektu jazyka Visual C#'
+description: Naučte se volat metodu v přizpůsobení na úrovni dokumentu pro Microsoft Excel z jazyk Visual Basic for Application (VBA) kódu v sešitu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1c089a3156d005da7d49976f6c96bb10daac0662
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: daf25a1e2e80d2c5918d0d11c4b31c75a2e40c87
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "92297944"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527304"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>Návod: volání kódu z jazyka VBA v projektu jazyka Visual C#
   Tento návod ukazuje, jak volat metodu v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Excel z kódu jazyk Visual Basic for Application (VBA) v sešitu. Postup zahrnuje tři základní kroky: Přidejte metodu do `Sheet1` třídy položky hostitele, vystavte metodu pro kód VBA v sešitu a pak zavolejte metodu z kódu VBA v sešitu.
@@ -97,7 +99,7 @@ ms.locfileid: "92297944"
 
 1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
+2. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na **projekt**.
 
 3. V podokně šablony rozbalte položku **Visual C#** a poté rozbalte položku **Office/SharePoint**.
 
@@ -111,7 +113,7 @@ ms.locfileid: "92297944"
 
      Otevře se **Průvodce projektem Visual Studio Tools for Office** .
 
-8. Vyberte možnost **zkopírovat existující dokument**a v poli **Úplná cesta k existujícímu dokumentu** zadejte umístění sešitu **WorkbookWithVBA** , který jste vytvořili dříve. Pokud používáte vlastní sešit s podporou maker, místo toho určete umístění tohoto sešitu.
+8. Vyberte možnost **zkopírovat existující dokument** a v poli **Úplná cesta k existujícímu dokumentu** zadejte umístění sešitu **WorkbookWithVBA** , který jste vytvořili dříve. Pokud používáte vlastní sešit s podporou maker, místo toho určete umístění tohoto sešitu.
 
 9. Klikněte na **Finish** (Dokončit).
 
@@ -153,7 +155,7 @@ ms.locfileid: "92297944"
 
 ### <a name="to-add-a-method-to-the-sheet1-class"></a>Přidání metody do třídy List1
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **Sheet1.cs**a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **Sheet1.cs** a pak klikněte na **Zobrazit kód**.
 
      V editoru kódu se otevře soubor **Sheet1.cs** .
 
@@ -195,7 +197,7 @@ ms.locfileid: "92297944"
 
 ### <a name="to-expose-the-method-to-vba-code"></a>Vystavení metody pro kód VBA
 
-1. V **Průzkumník řešení**dvakrát klikněte na **Sheet1.cs**.
+1. V **Průzkumník řešení** dvakrát klikněte na **Sheet1.cs**.
 
      Soubor **WorkbookWithVBA** se otevře v návrháři a zobrazí se List1.
 

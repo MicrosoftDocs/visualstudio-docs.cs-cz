@@ -1,5 +1,7 @@
 ---
 title: Průvodce publikováním (vývoj pro Office v sadě Visual Studio)
+description: Naučte se, jak můžete použít Průvodce publikováním ke kopírování souborů řešení do zadaného umístění, vytvoření souborů manifestu a vytvoření instalačního programu v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: be5742533280ab2ff7da04ee287b0534980d9436
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 25821a0f245f2f0ed30fcbfb10137a772dd0dd01
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810977"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528008"
 ---
 # <a name="publish-wizard-office-development-in-visual-studio"></a>Průvodce publikováním (vývoj pro Office v sadě Visual Studio)
   Použijte **Průvodce publikováním** ke zkopírování souborů řešení do zadaného umístění, vytvořte soubory manifestu a vytvořte instalační program.
@@ -39,14 +41,14 @@ ms.locfileid: "90810977"
 
 - Relativní nebo absolutní cesta ve standardním formátu Windows, jako je například *C:\deploy\myapplication* nebo *\MyApplication*.
 
-- Cesta UNC (Universal Naming Convention), například * \\ \ServerName\MyApplication \\ *.
+- Cesta UNC (Universal Naming Convention), například *\\ \ServerName\MyApplication \\*.
 
 - Adresa URL webu, například `http://www.contoso.com/MyApplication` .
 
   Ve výchozím nastavení se umístění publikování nachází v případě, že *http://localhost/projectname/* máte nainstalovanou službu IIS, nebo v případě, že nemáte nainstalovanou službu IIS, v adresáři Publish \.
 
 > [!NOTE]
-> Pokud cílový počítač používá systém Windows Vista, existuje další informace. Chcete-li použít místní možnost publikování, musíte být správcem počítače se systémem Windows Vista. Kromě toho je výchozí umístění vždy adresář pro *publikování \\ * bez ohledu na to, zda je nainstalována služba IIS.
+> Pokud cílový počítač používá systém Windows Vista, existuje další informace. Chcete-li použít místní možnost publikování, musíte být správcem počítače se systémem Windows Vista. Kromě toho je výchozí umístění vždy adresář pro *publikování \\* bez ohledu na to, zda je nainstalována služba IIS.
 
 ## <a name="what-is-the-default-installation-path-on-end-user-computers"></a>Jaká je výchozí instalační cesta na počítačích koncových uživatelů?
  Instalační cesta je volitelná. Pokud budete chtít, můžete instalační cestu nastavit později. Podrobnosti najdete v tématu [Postup: změna instalační cesty řešení Office](/previous-versions/bb608626(v=vs.110)).
