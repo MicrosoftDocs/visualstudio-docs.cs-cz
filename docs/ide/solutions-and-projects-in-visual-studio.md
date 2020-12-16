@@ -1,8 +1,8 @@
 ---
 title: Řešení a projekty
-description: Seznamte se s projekty a řešeními sady Visual Studio a Naučte se, jak vytvořit nový projekt pomocí nástroje pro Průzkumník řešení.
+description: Přečtěte si o projektech a řešeních sady Visual Studio, způsobu vytváření nových projektů ze šablony a o tom, jak zobrazit & spravovat projekty v Průzkumník řešení.
 ms.custom: SEO-VS-2020
-ms.date: 12/11/2020
+ms.date: 12/15/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewitem
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a24f56d94d470ca5ff04a99f524af3c76df3a15
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 6504d3e7fe278e8713a897ffacefa1f22cec6a09
+ms.sourcegitcommit: f43e669f3597a4b07975b2bd2dce362a41a2e83f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524059"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97578250"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -53,6 +53,8 @@ Soubory projektu jsou založeny na [schématu XML jazyka MSBuild](../msbuild/msb
 
 Projekt je obsažen v rámci *řešení*. Bez ohledu na jeho název není řešení "Answer". Je to jednoduše kontejner pro jeden nebo více souvisejících projektů, společně s informacemi o sestavení, nastavení okna sady Visual Studio a s dalšími soubory, které nejsou přidružené k určitému projektu. Řešení je popsáno v textovém souboru (s příponou *. sln*) s vlastním jedinečným formátem. není určeno k úpravám rukou.
 
+### <a name="solution-file"></a>Soubor řešení
+
 Visual Studio používá dva typy souborů (*. sln* a *. suo*) k ukládání nastavení řešení:
 
 |Linka|Název|Popis|
@@ -62,7 +64,7 @@ Visual Studio používá dva typy souborů (*. sln* a *. suo*) k ukládání nas
 
 ### <a name="solution-folder"></a>Složka řešení
 
-V tomto kontextu je "Složka řešení" virtuální složkou, která je pouze v **Průzkumník řešení**, kde ji můžete použít k seskupení projektů v řešení. Pokud chcete na počítači najít soubor řešení, přejděte na možnosti **nástroje**  >    >  **projekty a**  >  **umístění** řešení. Další informace najdete v [dialogovém okně Možnosti: projekty a řešení > umístění](./reference/projects-solutions-locations-options.md).
+"Složka řešení" je virtuální složkou, která je pouze v **Průzkumník řešení**, kde ji můžete použít k seskupení projektů v řešení. Pokud chcete na počítači najít soubor řešení, přejděte na možnosti **nástroje**  >    >  **projekty a**  >  **umístění** řešení. Další informace najdete v [dialogovém okně Možnosti: projekty a řešení > umístění](./reference/projects-solutions-locations-options.md).
 
 ## <a name="create-new-projects"></a>Vytvořit nové projekty
 
