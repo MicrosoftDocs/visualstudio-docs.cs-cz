@@ -1,5 +1,5 @@
 ---
-title: Vytváření řešení a projektů
+title: Práce s řešeními a projekty
 description: Přečtěte si o rozdílech mezi řešeními a projekty a o jejich použití v aplikaci Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 02/06/2018
@@ -16,14 +16,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bd893c06da9bc2c2c8d95fc4c085affa815edd2
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 9bbfa16273dc323d2ad175e965a19a22ad0d17ce
+ms.sourcegitcommit: 6f37100d4b8c15a21d3858335ded3c26ab275b93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006442"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599476"
 ---
-# <a name="create-solutions-and-projects"></a>Vytváření řešení a projektů
+# <a name="work-with-solutions-and-projects"></a>Práce s řešeními a projekty
 
 *Projekty* uchovávají položky potřebné k sestavení vaší aplikace v aplikaci Visual Studio, jako jsou soubory zdrojového kódu, rastrové obrázky, ikony a odkazy na komponenty a služby. Při vytváření nového projektu vytvoří Visual Studio *řešení* , které obsahuje projekt. V případě potřeby můžete do řešení přidat další nové nebo existující projekty. Řešení mohou také obsahovat soubory, které nejsou připojeny k žádnému konkrétnímu projektu.
 

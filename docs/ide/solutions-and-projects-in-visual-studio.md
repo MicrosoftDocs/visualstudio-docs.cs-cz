@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6504d3e7fe278e8713a897ffacefa1f22cec6a09
-ms.sourcegitcommit: f43e669f3597a4b07975b2bd2dce362a41a2e83f
+ms.openlocfilehash: ebe6e5c7479ce4e3cda435c51a883c4d5db8cc45
+ms.sourcegitcommit: 6f37100d4b8c15a21d3858335ded3c26ab275b93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 12/16/2020
-ms.locfileid: "97578250"
+ms.locfileid: "97599496"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -68,11 +68,11 @@ Visual Studio používá dva typy souborů (*. sln* a *. suo*) k ukládání nas
 
 ## <a name="create-new-projects"></a>Vytvořit nové projekty
 
-Nejjednodušší způsob, jak vytvořit nový projekt, je začít od šablony projektu pro konkrétní typ aplikace nebo webu. Šablona projektu se skládá ze základní sady předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení. Tyto šablony jsou k dispozici v dialogovém okně, kde vytvoříte nový projekt (**soubor**  >  **Nový**  >  **projekt**). Další informace naleznete v tématu [Vytvoření nového projektu v aplikaci Visual Studio](create-new-project.md) a [vytváření řešení a projektů](../ide/creating-solutions-and-projects.md).
+Nejjednodušší způsob, jak vytvořit nový projekt, je začít od šablony projektu pro konkrétní typ aplikace nebo webu. Šablona projektu se skládá ze základní sady předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení. Tyto šablony jsou k dispozici v dialogovém okně, kde vytvoříte nový projekt (**soubor**  >  **Nový**  >  **projekt**). Další informace najdete v tématu [Vytvoření nového projektu](create-new-project.md) a [práce s řešeními a projekty](../ide/creating-solutions-and-projects.md).
 
 Pokud často přizpůsobíte projekty určitým způsobem, můžete vytvořit vlastní šablonu projektu, kterou pak můžete použít k vytvoření nových projektů z. Další informace naleznete v tématu [Create Project and Item Templates](../ide/creating-project-and-item-templates.md).
 
-Když vytvoříte nový projekt, uloží se ve výchozím nastavení na *%USERPROFILE%\source\repos*. Toto umístění můžete změnit v nastavení **umístění projektů** v nabídce **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení. Další informace naleznete na [stránce projekty a řešení, dialogové okno Možnosti](./reference/projects-and-solutions-options-dialog-box.md).
+Když vytvoříte nový projekt, uloží se ve výchozím nastavení na *%USERPROFILE%\source\repos*. Toto umístění můžete změnit v nastavení **umístění projektů** v nabídce **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení. Další informace o tomto a dalších nastaveních projektů a řešení naleznete v části [projekty a řešení stránky – dialogové okno Možnosti](./reference/projects-and-solutions-options-dialog-box.md).
 
 ## <a name="solution-explorer"></a>Průzkumník řešení
 
