@@ -1,5 +1,7 @@
 ---
 title: Psaní kódu v řešeních pro systém Office
+description: Naučte se psát kód v systém Microsoft Office řešení a Naučte se, jakým způsobem jsou modely objektů Office vystaveny spravovanému kódu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -33,12 +35,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cead0569ae067fcc503f7f2074807c609e6eed75
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40ea589cb4406a383876b1f16721f18fc48ebadd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255045"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526021"
 ---
 # <a name="write-code-in-office-solutions"></a>Psaní kódu v řešeních pro systém Office
   Existují některé aspekty psaní kódu v projektech pro systém Office, které se liší od jiných typů projektů v sadě Visual Studio. Mnohé z těchto rozdílů se týkají způsobu, jakým jsou modely objektů Office vystaveny spravovanému kódu. Další rozdíly se týkají návrhu projektů Office.

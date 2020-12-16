@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: skrytí textu v dokumentech prostřednictvím kódu programu'
+description: Zjistěte, jak lze skrýt text v dokumentu aplikace Microsoft Word nastavením skryté vlastnosti písma pro určitý rozsah textu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4dae19d196f830e5187fa395473c0a5482cb1d03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a375e8b844f82b5d310841d7b4cdc092b18ff6c3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543309"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525701"
 ---
 # <a name="how-to-programmatically-hide-text-in-documents"></a>Postupy: skrytí textu v dokumentech prostřednictvím kódu programu
   Text v dokumentu můžete skrýt nastavením <xref:Microsoft.Office.Interop.Word._Font.Hidden%2A> vlastnosti <xref:Microsoft.Office.Interop.Word.Range.Font%2A> pro určitý rozsah textu.

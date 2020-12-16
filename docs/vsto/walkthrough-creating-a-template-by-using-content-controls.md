@@ -1,5 +1,6 @@
 ---
 title: 'Návod: Vytvoření šablony s použitím ovládacích prvků obsahu'
+description: Naučte se vytvářet přizpůsobení na úrovni dokumentu, které používá ovládací prvky obsahu k vytvoření strukturovaného a opakovaně použitelného obsahu v šabloně Microsoft Wordu.
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 30f2443c724d547afe3c510e64f2c50fd9dd4db9
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2dd7e75048a84a4e235390b99d17d48dfad039ec
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585025"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524988"
 ---
 # <a name="walkthrough-create-a-template-by-using-content-controls"></a>Návod: Vytvoření šablony s použitím ovládacích prvků obsahu
   Tento návod ukazuje, jak vytvořit přizpůsobení na úrovni dokumentu, které používá ovládací prvky obsahu k vytvoření strukturovaného a opakovaně použitelného obsahu v šabloně systém Microsoft Office Wordu.
@@ -68,7 +69,7 @@ ms.locfileid: "91585025"
 
 1. V šabloně aplikace Word, která je hostována v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Návrháři, klikněte na pásu karet na kartu **Vložit** .
 
-2. Ve skupině **tabulky** klikněte na **tabulka**a vložte tabulku se dvěma sloupci a čtyřmi řádky.
+2. Ve skupině **tabulky** klikněte na **tabulka** a vložte tabulku se dvěma sloupci a čtyřmi řádky.
 
 3. Zadejte text do prvního sloupce tak, aby vypadal jako následující sloupec:
 
@@ -109,13 +110,13 @@ ms.locfileid: "91585025"
 
 2. Na pásu karet klikněte na kartu **Vložit** .
 
-3. Ve skupině **tabulky** klikněte na **tabulka**a vložte tabulku se dvěma sloupci a třemi řádky.
+3. Ve skupině **tabulky** klikněte na **tabulka** a vložte tabulku se dvěma sloupci a třemi řádky.
 
 4. Zadejte text do prvního sloupce tak, aby vypadal jako následující sloupec:
 
    ||
    |-|
-   |**Název zákazníka**|
+   |**Jméno zákazníka**|
    |**Hodnocení spokojenosti**|
    |**Komentáře**|
 
@@ -138,7 +139,7 @@ ms.locfileid: "91585025"
 
 ### <a name="to-modify-the-ui-of-the-content-controls-programmatically"></a>Postup úpravy uživatelského rozhraní ovládacích prvků obsahu prostřednictvím kódu programu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **ThisDocument.cs** nebo **ThisDocument. vb**a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **ThisDocument.cs** nebo **ThisDocument. vb** a pak klikněte na **Zobrazit kód**.
 
 2. Do třídy `ThisDocument` přidejte následující kód. Tento kód deklaruje několik objektů, které použijete později v tomto návodu.
 

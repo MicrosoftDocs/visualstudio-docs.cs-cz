@@ -1,5 +1,7 @@
 ---
 title: Aktualizovat graf v listu pomocí přepínačů
+description: Seznamte se se základy používání přepínačů na listu Microsoft Excelu a poskytněte tak uživateli možnost rychlého přepínání mezi možnostmi.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e63d7d09a09fe4c051d8137428fdae90490cbae5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e375f394cd3d8be35ace8e3df07920fb824a07e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238813"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526058"
 ---
 # <a name="walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons"></a>Návod: Aktualizace grafu na listu s použitím přepínačů
   V tomto návodu se dozvíte základy používání přepínačů na listu systém Microsoft Office Excel, které uživateli umožňují rychle přepínat mezi možnostmi. V takovém případě možnosti změní styl grafu.
@@ -68,7 +70,7 @@ ms.locfileid: "88238813"
 
 ### <a name="to-add-a-chart-in-excel"></a>Přidání grafu v Excelu
 
-1. Na kartě **Vložit** ve skupině **grafy** klikněte na **sloupec**a pak klikněte na **všechny typy grafů**.
+1. Na kartě **Vložit** ve skupině **grafy** klikněte na **sloupec** a pak klikněte na **všechny typy grafů**.
 
 2. V dialogovém okně **Vložit graf** klikněte na tlačítko **OK**.
 
@@ -120,7 +122,7 @@ ms.locfileid: "88238813"
 
 ### <a name="to-add-a-user-control"></a>Přidání uživatelského ovládacího prvku
 
-1. V **Průzkumník řešení**vyberte **svůj projekt excelový graf** .
+1. V **Průzkumník řešení** vyberte **svůj projekt excelový graf** .
 
 2. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
@@ -130,7 +132,7 @@ ms.locfileid: "88238813"
 
 1. Pokud uživatelský ovládací prvek není viditelný v návrháři, poklikejte na **ChartOptions** v **Průzkumník řešení**.
 
-2. Na kartě **běžné ovládací prvky** **panelu nástrojů**přetáhněte ovládací prvek **přepínač** na uživatelský ovládací prvek a změňte následující vlastnosti.
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů** přetáhněte ovládací prvek **přepínač** na uživatelský ovládací prvek a změňte následující vlastnosti.
 
    | Vlastnost | Hodnota |
    |----------|------------------|
@@ -165,7 +167,7 @@ ms.locfileid: "88238813"
 
 ### <a name="to-create-an-event-and-property-on-a-user-control"></a>Vytvoření události a vlastnosti v uživatelském ovládacím prvku
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uživatelský ovládací prvek a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uživatelský ovládací prvek a pak klikněte na **Zobrazit kód**.
 
 2. Přidejte kód do `ChartOptions` třídy pro vytvoření `SelectionChanged` události a `Selection` Vlastnosti.
 
@@ -207,7 +209,7 @@ ms.locfileid: "88238813"
 
      Uživatelský ovládací prvek **ChartOptions** se přidá do **sady nástrojů**.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs**a potom klikněte na tlačítko **Návrhář zobrazení**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs** a potom klikněte na tlačítko **Návrhář zobrazení**.
 
 3. Přetáhněte ovládací prvek **ChartOptions** ze **sady nástrojů** na list.
 

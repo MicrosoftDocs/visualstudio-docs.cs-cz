@@ -1,5 +1,7 @@
 ---
 title: ListObject – ovládací prvek
+description: Ovládací prvek ListObject je seznam, který zpřístupňuje události a může být svázán s daty. Do listu můžete také přidat ovládací prvky ListObject v době návrhu nebo v době běhu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3b5286a4bddff2b529abd0a565bb4dbeef7ffaf3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a80b56134f59975a39d24e824b6c83b2513b163
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71251870"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526594"
 ---
 # <a name="listobject-control"></a>ListObject – ovládací prvek
   <xref:Microsoft.Office.Tools.Excel.ListObject>Ovládací prvek je seznam, který zpřístupňuje události a může být svázán s daty. Když přidáte seznam do listu, Visual Studio vytvoří <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek, který lze programovat přímo bez nutnosti procházet systém Microsoft Office objektový model aplikace Excel.

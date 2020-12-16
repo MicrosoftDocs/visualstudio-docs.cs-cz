@@ -1,5 +1,7 @@
 ---
 title: 'Návod: svázání dat s ovládacími prvky v podokně akcí aplikace Word'
+description: Svázání dat s ovládacími prvky v podokně akcí v aplikaci Microsoft Word. Ovládací prvky ukazují relaci hlavního/podrobností mezi tabulkami v SQL Server databázi.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 05df38bf6056b392c0b991617316ba2c1c657306
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 76dffda9b332b9b76d6c0e0a423073959bcc7a56
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585064"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526213"
 ---
 # <a name="walkthrough-bind-data-to-controls-on-a-word-actions-pane"></a>Návod: svázání dat s ovládacími prvky v podokně akcí aplikace Word
   Tento návod ukazuje datovou vazbu k ovládacím prvkům v podokně akce ve Wordu. Ovládací prvky ukazují relaci hlavního/podrobností mezi tabulkami v SQL Server databázi.
@@ -72,11 +74,11 @@ ms.locfileid: "91585064"
 
 2. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-3. V dialogovém okně **Přidat novou položku** vyberte možnost **ovládací prvek podokno akce**, pojmenujte ji **ActionsControl**a pak klikněte na tlačítko **Přidat**.
+3. V dialogovém okně **Přidat novou položku** vyberte možnost **ovládací prvek podokno akce**, pojmenujte ji **ActionsControl** a pak klikněte na tlačítko **Přidat**.
 
 ### <a name="to-add-a-data-source-to-the-project"></a>Přidání zdroje dat do projektu
 
-1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
+1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat** Windows.
 
    > [!NOTE]
    > Pokud možnost **Zobrazit zdroje dat** není k dispozici, klikněte na dokument aplikace Word a pak znovu zkontrolujte.
@@ -202,7 +204,7 @@ ms.locfileid: "91585064"
 
 ### <a name="to-show-the-actions-pane"></a>Zobrazení podokna akce
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **ThisDocument. vb** nebo **ThisDocument.cs**a pak klikněte na **Zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **ThisDocument. vb** nebo **ThisDocument.cs** a pak klikněte na **Zobrazit kód** v místní nabídce.
 
 2. Vytvořte novou instanci ovládacího prvku v horní části `ThisDocument` třídy tak, aby vypadala jako v následujícím příkladu.
 

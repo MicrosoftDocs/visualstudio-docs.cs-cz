@@ -1,5 +1,7 @@
 ---
 title: Synchronizace vlastního podokna úloh s tlačítkem na pásu karet
+description: Přečtěte si, jak můžete vytvořit vlastní podokno úloh, které uživatelé mohou skrýt nebo zobrazit kliknutím na přepínací tlačítko na pásu karet.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -23,12 +25,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ad910f94c6b6a4345f6973e84e02c85d4fe1f0e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7453d221cf57188a2c2f589492e4df59817f2cd9
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328327"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526090"
 ---
 # <a name="walkthrough-synchronize-a-custom-task-pane-with-a-ribbon-button"></a>Návod: Synchronizace vlastního podokna úloh s tlačítkem na pásu karet
   Tento návod ukazuje, jak vytvořit vlastní podokno úloh, které mohou uživatelé skrýt nebo zobrazit kliknutím na přepínací tlačítko na pásu karet. Vždy byste měli vytvořit prvek uživatelského rozhraní (UI), například tlačítko, které mohou uživatelé kliknout k zobrazení nebo skrytí vlastního podokna úloh, protože systém Microsoft Office aplikace neposkytují uživatelům výchozí způsob, jak zobrazit nebo skrýt vlastní podokna úloh.
@@ -73,7 +75,7 @@ ms.locfileid: "67328327"
 
 2. V dialogovém okně **Přidat novou položku** vyberte možnost **pás karet (vizuální Návrhář)**.
 
-3. Změňte název nového pásu karet na **ManageTaskPaneRibbon**a klikněte na **Přidat**.
+3. Změňte název nového pásu karet na **ManageTaskPaneRibbon** a klikněte na **Přidat**.
 
      Otevře se soubor **ManageTaskPaneRibbon.cs** nebo **ManageTaskPaneRibbon. vb** v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
 
@@ -81,7 +83,7 @@ ms.locfileid: "67328327"
 
 5. V okně **vlastnosti** nastavte vlastnost **popisek** na **Správce podokna úloh**.
 
-6. Na kartě **ovládací prvky pásu karet Office** přetáhněte **Toolbox** **ToggleButton** do skupiny **Správce podokna úloh** .
+6. Na kartě **ovládací prvky pásu karet Office** přetáhněte  **ToggleButton** do skupiny **Správce podokna úloh** .
 
 7. Klikněte na **ToggleButton1**.
 
@@ -94,22 +96,22 @@ ms.locfileid: "67328327"
 
 1. V nabídce **projekt** klikněte na příkaz **Přidat uživatelský ovládací prvek**.
 
-2. V dialogovém okně **Přidat novou položku** změňte název uživatelského ovládacího prvku na **TaskPaneControl**a klikněte na tlačítko **Přidat**.
+2. V dialogovém okně **Přidat novou položku** změňte název uživatelského ovládacího prvku na **TaskPaneControl** a klikněte na tlačítko **Přidat**.
 
      Uživatelský ovládací prvek se otevře v návrháři.
 
-3. Na kartě **běžné ovládací prvky** **panelu nástrojů**přetáhněte ovládací prvek **TextBox** do uživatelského ovládacího prvku.
+3. Na kartě **běžné ovládací prvky** **panelu nástrojů** přetáhněte ovládací prvek **TextBox** do uživatelského ovládacího prvku.
 
 ## <a name="create-the-custom-task-pane"></a>Vytvoření vlastního podokna úloh
  Pokud chcete vytvořit vlastní podokno úloh při spuštění doplňku VSTO, přidejte uživatelský ovládací prvek do podokna úloh v <xref:Microsoft.Office.Tools.AddIn.Startup> obslužné rutině události doplňku VSTO. Ve výchozím nastavení se vlastní podokno úloh nezobrazí. Později v tomto návodu přidáte kód, který zobrazí nebo skryje podokno úloh, když uživatel klikne na přepínací tlačítko, které jste přidali na pás karet.
 
 ### <a name="to-create-the-custom-task-pane"></a>Vytvoření vlastního podokna úloh
 
-1. V **Průzkumník řešení**rozbalte položku **Excel**.
+1. V **Průzkumník řešení** rozbalte položku **Excel**.
 
 2. Klikněte pravým tlačítkem na **ThisAddIn.cs** nebo **ThisAddIn. vb** a klikněte na **Zobrazit kód**.
 
-3. Do třídy přidejte následující kód `ThisAddIn` . Tento kód deklaruje instanci `TaskPaneControl` jako člena `ThisAddIn` .
+3. Do třídy `ThisAddIn` přidejte následující kód. Tento kód deklaruje instanci `TaskPaneControl` jako člena `ThisAddIn` .
 
      [!code-csharp[Trin_TaskPaneRibbonSynchronize#1](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#1)]
      [!code-vb[Trin_TaskPaneRibbonSynchronize#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#1)]

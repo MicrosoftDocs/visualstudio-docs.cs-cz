@@ -1,5 +1,7 @@
 ---
 title: Vývoj pro Office a SharePoint v sadě Visual Studio
+description: Naučte se, jak můžete systém Microsoft Office a SharePoint rozšíříte tak, že vytvoříte odlehčenou aplikaci nebo doplněk, kterou uživatelé stahují z Office Storu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bc1241a39707eedc4b34e0ef3531ab65e49b8238
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: abd9d3aac289df702554790673cb6561a6e2488d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811029"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525332"
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Vývoj pro Office a SharePoint v sadě Visual Studio
   Systém Microsoft Office a SharePoint můžete roztáhnout vytvořením zjednodušené aplikace nebo doplňku, kterou uživatelé stahují z [Office Storu](https://store.office.com/) nebo z katalogu organizací, nebo vytvořením řešení založeného na .NET Framework, které uživatelé nainstalují do počítače.

@@ -1,5 +1,7 @@
 ---
 title: Stránka publikování, Návrhář projektu (vývoj pro Office)
+description: Přečtěte si, jak se stránka publikování Návrháře projektu v aplikaci Visual Studio používá ke konfiguraci vlastností pro nasazení.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +18,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4dfa575bea4e629c7521cc7f4c5a79707462714c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7f68ab8f0ee9efde903148d4702e85e99aad77d2
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810990"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525005"
 ---
 # <a name="publish-page-project-designer-office-development-in-visual-studio"></a>Stránka publikování, Návrhář projektu (vývoj pro Office v sadě Visual Studio)
   Stránka **publikovat** v **Návrháři projektu** se používá ke konfiguraci vlastností pro nasazení.
 
- Chcete-li získat přístup k této stránce, vyberte projekt v **Průzkumník řešení**a potom v nabídce **projekt** zvolte vlastnosti *ProjectName* **Properties**. Pokud se stránka **publikování** nezobrazí, klikněte na kartu **publikovat** .
+ Chcete-li získat přístup k této stránce, vyberte projekt v **Průzkumník řešení** a potom v nabídce **projekt** zvolte vlastnosti *ProjectName* . Pokud se stránka **publikování** nezobrazí, klikněte na kartu **publikovat** .
 
 > [!NOTE]
 > Umístění pro publikování můžete také nastavit v **Průvodci publikováním**. Další informace naleznete v tématu [How to: Publishing a řešení Office using ClickOnce](/previous-versions/bb386095(v=vs.110)).
@@ -36,15 +38,15 @@ ms.locfileid: "90810990"
 
  Umístění složky pro publikování je adresář, do kterého aplikace Visual Studio kopíruje soubory řešení, například manifesty, sestavení a další soubory ze sestavení. Musíte mít přístup pro zápis do tohoto adresáře.
 
- Mezi možnosti patří místní počítač, sdílená složka UNC nebo webová stránka HTTP/HTTPS. Cesta může být místní (*c:\FolderName\PublishFolder*), relativní (* \\ publikovat*) nebo plně kvalifikované umístění (* \\ \servername\foldername* nebo http://<em>servername/název_složky</em>).
+ Mezi možnosti patří místní počítač, sdílená složka UNC nebo webová stránka HTTP/HTTPS. Cesta může být místní (*c:\FolderName\PublishFolder*), relativní (*\\ publikovat*) nebo plně kvalifikované umístění (*\\ \servername\foldername* nebo http://<em>servername/název_složky</em>).
 
- Ve výchozím nastavení je umístění publikování v *http://localhost/projectname/* případě, že máte nainstalovanou službu IIS, nebo pokud adresář pro *publikování \\ * nemáte nainstalovanou službou IIS.
+ Ve výchozím nastavení je umístění publikování v *http://localhost/projectname/* případě, že máte nainstalovanou službu IIS, nebo pokud adresář pro *publikování \\* nemáte nainstalovanou službou IIS.
 
  **Adresa URL instalační složky** Volitelné.
 
  Adresa URL instalační složky je adresář, ze kterého bude koncový uživatel instalovat vlastní nastavení. Je to také cesta, kterou řešení použije ke kontrole aktualizací. Cesta může být stejná jako umístění složky pro publikování, ale nejedná se o požadavek.
 
- Mezi možnosti patří místní počítač, sdílená složka UNC nebo webová stránka HTTP/HTTPS. Cesta může být místní (*c:\FolderName\PublishFolder*), relativní (* \\ publikovat*) nebo plně kvalifikované umístění (* \\ \servername\foldername* nebo http://<em>servername/název_složky</em>). Všechna umístění HTTP/HTTPS musí být vytvořená pomocí znaků US-ASCII. Znaky Unicode nejsou podporovány.
+ Mezi možnosti patří místní počítač, sdílená složka UNC nebo webová stránka HTTP/HTTPS. Cesta může být místní (*c:\FolderName\PublishFolder*), relativní (*\\ publikovat*) nebo plně kvalifikované umístění (*\\ \servername\foldername* nebo http://<em>servername/název_složky</em>). Všechna umístění HTTP/HTTPS musí být vytvořená pomocí znaků US-ASCII. Znaky Unicode nejsou podporovány.
 
  Pokud je nastavená cesta instalace, musí být soubory vlastního nastavení v tomto umístění, aby si uživatelé mohli vlastní nastavení nainstalovat. Umístění by mělo být nastaveno pouze v případě, že znáte konečné umístění nasazení.
 

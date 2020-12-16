@@ -1,5 +1,7 @@
 ---
 title: Položky registru pro doplňky VSTO
+description: Přečtěte si, jak můžete vytvořit konkrétní sadu položek registru při nasazení doplňků VSTO, které jsou vytvořené pomocí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b02b50c42692ec2fd455358df5157e0b8481562b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d90b341fb4233c10c54947a6349480ea0c33b23a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79416520"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525000"
 ---
 # <a name="registry-entries-for-vsto-add-ins"></a>Položky registru pro doplňky VSTO
   Pokud nasazujete doplňky VSTO vytvořené pomocí sady Visual Studio, musíte vytvořit konkrétní sadu položek registru. Tyto položky registru obsahují informace, které umožní aplikaci systém Microsoft Office vyhledat a načíst doplněk VSTO.
@@ -54,13 +56,13 @@ ms.locfileid: "79416520"
 
 |Aplikace Office|Konfigurační cesta|
 |------------------|------------------|
-|Visio|*Root* \\ *Visio* \\ *ID doplňku* \Software\Microsoft Visia \Addins v kořenovém adresáři|
+|Visio| \\  \\ *ID doplňku* \Software\Microsoft Visia \Addins v kořenovém adresáři|
 |Všechny ostatní|*Kořenová*\Software\Microsoft\Office \\ *název aplikace Office*\Addins \\ *– ID doplňku*|
 
 > [!NOTE]
-> Pokud instalační služba cílí na všechny uživatele v 64 Windows, doporučujeme, aby obsahovala dvě položky registru, jednu pod HKEY_LOCAL_MACHINE \Software\Microsoft a jednu v podregistru HKEY_LOCAL_MACHINE \Software \\ **Wow6432Node**\Microsoft. Důvodem je, že uživatelé můžou na počítači používat 32 nebo 64 bitové verze systému Office.
+> Pokud instalační služba cílí na všechny uživatele v 64 Windows, doporučujeme, aby obsahovala dvě položky registru, jednu pod HKEY_LOCAL_MACHINE\Software\Microsoft a jednu v \\ podregistru HKEY_LOCAL_MACHINE\Software **Wow6432Node**\Microsoft. Důvodem je, že uživatelé můžou na počítači používat 32 nebo 64 bitové verze systému Office.
 >
->Pokud instalační program cílí na aktuálního uživatele, není nutné ho instalovat do WOW6432Node, protože je sdílená cesta HKEY_CURRENT_USER \Software.
+>Pokud instalační program cílí na aktuálního uživatele, nemusí se instalovat do WOW6432Node, protože cesta HKEY_CURRENT_USER\Software sdílená.
 >
 >Další informace najdete v části [32 a 64 data aplikace v registru](/windows/win32/sysinfo/32-bit-and-64-bit-application-data-in-the-registry) .
 

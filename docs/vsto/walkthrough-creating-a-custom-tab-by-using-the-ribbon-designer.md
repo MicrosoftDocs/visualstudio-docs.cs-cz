@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Vytvoření vlastní karty pomocí Návrháře pásu karet'
+description: Přečtěte si, jak můžete vytvořit vlastní kartu a pak na ni přidat a umístit ovládací prvky pomocí Návrháře pásu karet.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5f311f35ba4a8c443f47941a905ee4cf4d3ebfb2
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 539f75b7770abab75e912a28bc62ed51b7fb61d8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585012"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524824"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-the-ribbon-designer"></a>Návod: Vytvoření vlastní karty pomocí Návrháře pásu karet
   Pomocí Návrháře pásu karet můžete vytvořit vlastní kartu a následně na ni přidat a umístit ovládací prvky.
@@ -64,11 +66,11 @@ ms.locfileid: "91585012"
 
 1. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-2. V dialogovém okně **Přidat novou položku** vyberte možnost **ActionsPaneControl**a pak zvolte možnost **Přidat**.
+2. V dialogovém okně **Přidat novou položku** vyberte možnost **ActionsPaneControl** a pak zvolte možnost **Přidat**.
 
      V návrháři se otevře soubor **ActionsPaneControl1.cs** nebo **ActionsPaneControl1. vb** .
 
-3. Na kartě **běžné ovládací prvky** **panelu nástrojů**přidejte popisek na plochu návrháře.
+3. Na kartě **běžné ovládací prvky** **panelu nástrojů** přidejte popisek na plochu návrháře.
 
 4. V okně **vlastnosti** nastavte vlastnost **text** vlastnosti Label1 na **podokno akce 1**.
 
@@ -83,7 +85,7 @@ ms.locfileid: "91585012"
 
 2. V dialogovém okně **Přidat novou položku** vyberte možnost **pás karet (vizuální Návrhář)**.
 
-3. Změňte název nového pásu karet na **MyRibbon**a klikněte na **Přidat**.
+3. Změňte název nového pásu karet na **MyRibbon** a klikněte na **Přidat**.
 
      Otevře se soubor **MyRibbon.cs** nebo **MyRibbon. vb** v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
 
@@ -97,15 +99,15 @@ ms.locfileid: "91585012"
 
 8. V okně **vlastnosti** nastavte **popisek** na **Správce podokna akce**.
 
-9. Na kartě **ovládací prvky pásu karet Office** přetáhněte **Toolbox**tlačítko na **Group1**.
+9. Na kartě **ovládací prvky pásu karet Office** přetáhněte tlačítko na **Group1**.
 
 10. Vyberte možnost **Button1**.
 
 11. V okně **vlastnosti** nastavte **popisek** na **Zobrazit podokno akcí 1**.
 
-12. Přidejte druhé tlačítko na **Group1**a nastavte vlastnost **popisek** tak, aby **zobrazovala podokno akcí 2**.
+12. Přidejte druhé tlačítko na **Group1** a nastavte vlastnost **popisek** tak, aby **zobrazovala podokno akcí 2**.
 
-13. Na kartě **ovládací prvky pásu karet Office** přetáhněte **Toolbox**ovládací prvek **ToggleButton** na **Group1**.
+13. Na kartě **ovládací prvky pásu karet Office** přetáhněte ovládací prvek **ToggleButton** na **Group1**.
 
 14. Nastavte vlastnost **popisek** na **Skrýt podokno akcí**.
 
@@ -114,7 +116,7 @@ ms.locfileid: "91585012"
 
 ### <a name="to-hide-and-show-actions-panes-by-using-buttons-in-the-custom-tab"></a>Skrytí a zobrazení podoken akcí pomocí tlačítek na vlastní kartě
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro *MyRibbon.cs* nebo *MyRibbon. vb*a pak zvolte **Zobrazit kód**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro *MyRibbon.cs* nebo *MyRibbon. vb* a pak zvolte **Zobrazit kód**.
 
 2. Do horní části třídy přidejte následující kód `MyRibbon` . Tento kód vytvoří dva objekty podokna akce.
 

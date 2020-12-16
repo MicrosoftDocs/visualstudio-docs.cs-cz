@@ -1,5 +1,7 @@
 ---
 title: 'Návod: aktualizace ovládacích prvků na pásu karet v době běhu'
+description: Naučte se, jak můžete použít objektový model pásu karet k aktualizaci ovládacích prvků na pásu karet po načtení pásu karet do aplikace Office.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9c2e870f028b3337fd162adde881281d7050e142
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2246dcdca1e754c885dd610f98986306a256228c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298051"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526052"
 ---
 # <a name="walkthrough-update-the-controls-on-a-ribbon-at-run-time"></a>Návod: aktualizace ovládacích prvků na pásu karet v době běhu
 
@@ -78,7 +80,7 @@ Pás karet tohoto příkladu se zobrazí, když uživatel vytvoří novou e-mail
 
 2. V dialogovém okně **Přidat novou položku** vyberte možnost **pás karet (vizuální Návrhář)**.
 
-3. Změňte název nového pásu karet na **CustomerRibbon**a pak klikněte na **Přidat**.
+3. Změňte název nového pásu karet na **CustomerRibbon** a pak klikněte na **Přidat**.
 
      Otevře se soubor *CustomerRibbon.cs* nebo *CustomerRibbon. vb* v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
 
@@ -98,7 +100,7 @@ Pás karet tohoto příkladu se zobrazí, když uživatel vytvoří novou e-mail
 
 10. V okně **vlastnosti** nastavte **popisek** na **zákazníci**.
 
-11. Na kartě **ovládací prvky pásu karet Office** v **panelu nástrojů**přetáhněte **nabídku** na skupinu **nákupů zákazníků** .
+11. Na kartě **ovládací prvky pásu karet Office** v **panelu nástrojů** přetáhněte **nabídku** na skupinu **nákupů zákazníků** .
 
 12. V okně **vlastnosti** nastavte **popisek** na **koupený produkt**.
 
@@ -136,9 +138,9 @@ Pomocí okna **zdroje dat** přidejte do projektu typovou datovou sadu.
 
      Spustí se **Průvodce konfigurací zdroje dat**.
 
-2. Vyberte **databáze**a pak klikněte na **Další**.
+2. Vyberte **databáze** a pak klikněte na **Další**.
 
-3. Vyberte **datová sada**a potom klikněte na **Další**.
+3. Vyberte **datová sada** a potom klikněte na **Další**.
 
 4. Vyberte datové připojení k ukázkové databázi Northwind Microsoft SQL Server Compact 4,0 nebo přidejte nové připojení pomocí tlačítka **nové připojení** .
 
@@ -178,7 +180,7 @@ Pomocí objektového modelu pásu karet proveďte následující úlohy:
 
     Toto sestavení obsahuje třídy pro použití Language-Integratedch dotazů (LINQ). Pomocí LINQ budete naplnit ovládací prvky ve vlastní skupině daty z databáze Northwind.
 
-3. V **Průzkumník řešení**pro výběr klikněte na **CustomerRibbon.cs** nebo **CustomerRibbon. vb** .
+3. V **Průzkumník řešení** pro výběr klikněte na **CustomerRibbon.cs** nebo **CustomerRibbon. vb** .
 
 4. V nabídce **zobrazení** klikněte na příkaz **Code (kód**).
 
@@ -219,7 +221,7 @@ Pomocí objektového modelu pásu karet proveďte následující úlohy:
      [!code-csharp[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#6)]
      [!code-vb[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#6)]
 
-10. V **Průzkumník řešení**dvakrát klikněte na soubor kódu pásu karet.
+10. V **Průzkumník řešení** dvakrát klikněte na soubor kódu pásu karet.
 
      Otevře se Návrhář pásu karet.
 
@@ -262,7 +264,7 @@ Pokud chcete vytvořit informovou e-mailovou zprávu zákazníka, vyberte zákaz
 
      Spustí se aplikace Outlook.
 
-2. V aplikaci Outlook v nabídce **soubor** přejděte na příkaz **Nový**a poté klikněte na položku **poštovní zpráva**.
+2. V aplikaci Outlook v nabídce **soubor** přejděte na příkaz **Nový** a poté klikněte na položku **poštovní zpráva**.
 
      Provedou se následující akce:
 

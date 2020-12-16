@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: ukládání dokumentů aplikace Visio prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově ukládat existující dokumenty a nové dokumenty, které ještě nebyly uloženy, do aplikace Microsoft Visio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 891a5c44159d10aacbb767cbc5376ae1d62252b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29f8cbc8aa7b2ea796109a8143d348905df671f7
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547053"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525383"
 ---
 # <a name="how-to-programmatically-save-visio-documents"></a>Postupy: ukládání dokumentů aplikace Visio prostřednictvím kódu programu
   Existuje několik způsobů, jak uložit systém Microsoft Office dokumentů aplikace Visio:

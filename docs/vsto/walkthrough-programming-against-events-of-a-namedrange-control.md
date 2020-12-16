@@ -1,5 +1,7 @@
 ---
 title: 'Návod: program na události ovládacího prvku NamedRange'
+description: Naučte se, jak můžete přidat ovládací prvek NamedRange do listu a programu Microsoft Excelu proti jeho událostem pomocí nástrojů pro vývoj pro Office v sadě Visual Studio.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2e5ce12e2de8274afd2c27d4ece36529563a6386
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9e311a567d32ee083bcc13f417c248f5f3d3ee5a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584934"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526133"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>Návod: program na události ovládacího prvku NamedRange
   Tento návod ukazuje, jak přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek do listu aplikace systém Microsoft Office Excel a program na jeho události pomocí nástrojů pro vývoj pro Office v sadě Visual Studio.
@@ -57,9 +59,9 @@ ms.locfileid: "91584934"
      Visual Studio otevře nový excelový sešit v návrháři a přidá projekt **události moje pojmenované oblasti** do **Průzkumník řešení**.
 
 ## <a name="add-text-and-named-ranges-to-the-worksheet"></a>Přidat text a pojmenované rozsahy do listu
- Vzhledem k tomu, že ovládací prvky hostitele jsou rozšířené objekty Office, můžete je přidat do dokumentu stejným způsobem jako při přidávání nativního objektu. Například můžete přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek aplikace Excel do listu otevřením nabídky **Vložit** , přechodem na položku **název**a volbou možnosti **definovat**. Ovládací prvek lze také přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> přetažením z **panelu nástrojů** na list.
+ Vzhledem k tomu, že ovládací prvky hostitele jsou rozšířené objekty Office, můžete je přidat do dokumentu stejným způsobem jako při přidávání nativního objektu. Například můžete přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek aplikace Excel do listu otevřením nabídky **Vložit** , přechodem na položku **název** a volbou možnosti **definovat**. Ovládací prvek lze také přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> přetažením z **panelu nástrojů** na list.
 
- V tomto kroku přidáte do listu dva pojmenované ovládací prvky rozsahu pomocí **sady nástrojů**a následně do listu přidáte text.
+ V tomto kroku přidáte do listu dva pojmenované ovládací prvky rozsahu pomocí **sady nástrojů** a následně do listu přidáte text.
 
 ### <a name="to-add-a-range-to-your-worksheet"></a>Přidání rozsahu do listu
 
@@ -75,7 +77,7 @@ ms.locfileid: "91584934"
 
      Buňka **a1** se zobrazí v rozsahu s názvem `namedRange1` . V listu není žádné viditelné označení, ale zobrazí se `namedRange1` v poli **název** (umístěný hned nad listem na levé straně), když je vybraná buňka **a1** .
 
-5. <xref:Microsoft.Office.Tools.Excel.NamedRange>Do buňky **B3**přidejte další ovládací prvek.
+5. <xref:Microsoft.Office.Tools.Excel.NamedRange>Do buňky **B3** přidejte další ovládací prvek.
 
 6. Ověřte, zda se **$B $3** zobrazí v upravitelném textovém poli a zda je vybrána buňka **B3** . Pokud ne, klikněte na buňku **B3** a vyberte ji.
 
@@ -85,7 +87,7 @@ ms.locfileid: "91584934"
 
 ### <a name="to-add-text-to-your-worksheet"></a>Přidání textu do listu
 
-1. Do buňky **a1**zadejte následující text:
+1. Do buňky **a1** zadejte následující text:
 
     **Toto je příklad ovládacího prvku NamedRange.**
 
@@ -99,7 +101,7 @@ ms.locfileid: "91584934"
 
 ### <a name="to-insert-text-into-namedrange2-based-on-the-beforedoubleclick-event"></a>Vložení textu do NamedRange2 založeného na události BeforeDoubleClick
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs** a vyberte **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs** a vyberte **Zobrazit kód**.
 
 2. Přidejte kód, aby `namedRange1_BeforeDoubleClick` obslužná rutina události vypadala takto:
 

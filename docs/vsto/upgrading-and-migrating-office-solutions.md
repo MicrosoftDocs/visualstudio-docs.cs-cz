@@ -1,5 +1,7 @@
 ---
 title: Upgrade a migrace řešení pro systém Office
+description: Pokud máte projekt Offince, který byl vytvořen v dřívější verzi sady Visual Studio, je třeba upgradovat projekt na jeho použití v aktuálních verzích sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 13cbf08e5767ec548b9fdba9bd0892e0cf50a63d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b18b61ad6854be654582fe8a8a76da185ec9d89e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808786"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526610"
 ---
 # <a name="upgrade-and-migrate-office-solutions"></a>Upgrade a migrace řešení pro systém Office
   Pokud máte projekt systém Microsoft Office, který byl vytvořen v dřívější verzi sady Visual Studio, je nutné upgradovat projekt, aby jej bylo možné použít v aktuálních verzích sady Visual Studio. Chcete-li upgradovat projekt systém Microsoft Office, otevřete ho ve verzi sady Visual Studio, která obsahuje nástroje systém Microsoft Office Developer Tools. Další informace o verzích sady Visual Studio, které obsahují nástroje systém Microsoft Office Developer Tools, najdete v tématu [Konfigurace počítače pro vývoj řešení pro systém Office](../vsto/configuring-a-computer-to-develop-office-solutions.md).

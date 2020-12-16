@@ -1,5 +1,7 @@
 ---
 title: Řešení aplikace Visio
+description: Naučte se používat doplňky VSTO k automatizaci Visia, rozšiřování funkcí Visio nebo přizpůsobení uživatelského rozhraní (UI) aplikace Visio.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a79b3c9964a24daf0a12ab90f47fb5903d89cdd0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5b4cbdfe6cceff279ae20518edf83b4f4ec8912
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985500"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526372"
 ---
 # <a name="visio-solutions"></a>Řešení aplikace Visio
   Visual Studio poskytuje šablony projektů, pomocí kterých můžete vytvářet doplňky VSTO pro systém Microsoft Office Visio. Doplňky VSTO můžete použít k automatizaci aplikace Visio, rozšiřování funkcí aplikace Visio nebo přizpůsobení uživatelského rozhraní (UI) aplikace Visio.
@@ -58,7 +60,7 @@ ms.locfileid: "72985500"
 ## <a name="customize-the-user-interface-of-visio"></a>Přizpůsobení uživatelského rozhraní aplikace Visio
  Uživatelské rozhraní aplikace Visio má následující možnosti přizpůsobení.
 
-|Úkol|Další informace|
+|Úloha|Další informace|
 |----------|--------------------------|
 |Přizpůsobení pásu karet.|[Přehled pásu karet](../vsto/ribbon-overview.md)|
 

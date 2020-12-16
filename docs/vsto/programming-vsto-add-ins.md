@@ -1,5 +1,7 @@
 ---
 title: Programové doplňky VSTO
+description: Naučte se, jak můžete použít třídu ThisAddIn k provádění úloh, jako je například přístup k objektovému modelu systém Microsoft Office hostitelské aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -32,12 +34,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 240995eb744f8107503c108cbcdbbb8522748b79
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c3a4b14a1935d1d276f0884234fcd121b838f39
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87115336"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525120"
 ---
 # <a name="program-vsto-add-ins"></a>Programové doplňky VSTO
   Když rozšíříte systém Microsoft Office aplikaci vytvořením doplňku VSTO, napíšete kód přímo proti `ThisAddIn` třídě v projektu. Tuto třídu můžete použít k provádění úloh, jako je například přístup k objektovému modelu aplikace systém Microsoft Office hosta, přizpůsobení uživatelského rozhraní (UI) aplikace a vystavení objektů v doplňku VSTO do dalších řešení pro Office.
@@ -116,7 +118,7 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
 ### <a name="thisaddin-members-to-use-for-other-tasks"></a>ThisAddIn členové, kteří se mají použít pro jiné úkoly
  Následující tabulka popisuje další běžné úlohy a ukazuje, které členy třídy můžete `ThisAddIn` použít k provádění úkolů.
 
-|Úkol|Člen, který se má použít|
+|Úloha|Člen, který se má použít|
 |----------|-------------------|
 |Spusťte kód pro inicializaci doplňku VSTO při načtení doplňku VSTO.|Přidejte kód do `ThisAddIn_Startup` metody. Toto je výchozí obslužná rutina události pro <xref:Microsoft.Office.Tools.AddInBase.Startup> událost. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).|
 |Spusťte kód pro vyčištění prostředků používaných doplňkem VSTO před uvolněním doplňku VSTO.|Přidejte kód do `ThisAddIn_Shutdown` metody. Toto je výchozí obslužná rutina události pro <xref:Microsoft.Office.Tools.AddInBase.Shutdown> událost. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md). **Poznámka:**  V aplikaci Outlook se ve výchozím nastavení `ThisAddIn_Shutdown` obslužná rutina události nevolá vždy, když je doplněk VSTO uvolněný. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).|

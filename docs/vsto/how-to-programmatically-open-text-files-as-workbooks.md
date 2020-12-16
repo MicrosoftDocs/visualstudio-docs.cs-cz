@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: otevírání textových souborů jako sešitů prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově otevřít textový soubor jako sešit Microsoft Excelu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7a0f1b384aafb491183a750f17653ab55f2003e2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f471161a8563718f69f14ea341ab099fbf138d8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519825"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525533"
 ---
 # <a name="how-to-programmatically-open-text-files-as-workbooks"></a>Postupy: otevírání textových souborů jako sešitů prostřednictvím kódu programu
   Textový soubor můžete otevřít jako sešit. Musíte předat název textového souboru, který chcete otevřít. Můžete zadat několik volitelných parametrů, například které číslo řádku má začít s analýzou a formát sloupce dat v souboru.

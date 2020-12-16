@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: cílení na vícejazyčné uživatelské rozhraní Office'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio programově cílit na systém Microsoft Office vícejazyčného uživatelského rozhraní.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5217f2d6cf67eced00c0c84b9bacda94573c5a09
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6b6771b202515148b757e811fdfc63fc0d5052e9
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537498"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526623"
 ---
 # <a name="how-to-target-the-office-multilingual-user-interface"></a>Postupy: cílení na vícejazyčné uživatelské rozhraní Office
   Rozhraní MUI (Multilingual User Interface) je funkce systém Microsoft Office, která koncovému uživateli umožňuje změnit jazyk uživatelského rozhraní. Například koncový uživatel, který pracuje s anglickou uživatelským ROZHRANÍm, může změnit jazyk uživatelského rozhraní na španělštinu.

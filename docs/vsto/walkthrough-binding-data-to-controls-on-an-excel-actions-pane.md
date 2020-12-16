@@ -1,5 +1,7 @@
 ---
 title: 'Návod: svázání dat s ovládacími prvky v podokně akcí aplikace Excel'
+description: Svázání dat s ovládacími prvky v podokně akcí v aplikaci Microsoft Excel. Ovládací prvky ukazují relaci hlavního/podrobností mezi tabulkami v SQL Server databázi.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3801aff53a5bf9a9a8d77263ab74127c1b2a9846
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 6c53f4c1dfe9838fe4522dcc71b675a7f6b868d4
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585051"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524969"
 ---
 # <a name="walkthrough-bind-data-to-controls-on-an-excel-actions-pane"></a>Návod: svázání dat s ovládacími prvky v podokně akcí aplikace Excel
   Tento návod ukazuje datovou vazbu k ovládacím prvkům v podokně akce v aplikaci systém Microsoft Office Excel. Ovládací prvky ukazují relaci hlavního/podrobností mezi tabulkami v SQL Server databázi.
@@ -67,7 +69,7 @@ ms.locfileid: "91585051"
 
 ### <a name="to-add-a-new-data-source-to-the-project"></a>Přidání nového zdroje dat do projektu
 
-1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
+1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat** Windows.
 
 2. Zvolením možnosti **Přidat nový zdroj dat** spusťte **Průvodce konfigurací zdroje dat**.
 
@@ -83,7 +85,7 @@ ms.locfileid: "91585051"
 
 8. Zaškrtněte políčko vedle tabulky **Dodavatelé** .
 
-9. Rozbalte tabulku **Products** a vyberte **NázevVýrobku**, **KódDodavatele**, **QuantityPerUnit**a **UnitPrice**.
+9. Rozbalte tabulku **Products** a vyberte **NázevVýrobku**, **KódDodavatele**, **QuantityPerUnit** a **UnitPrice**.
 
 10. Klikněte na **Finish** (Dokončit).
 
@@ -121,11 +123,11 @@ ms.locfileid: "91585051"
 
 2. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-3. V dialogovém okně **Přidat novou položku** vyberte možnost **ovládací prvek podokno akce**, pojmenujte ji **ActionsControl**a klikněte na tlačítko **Přidat**.
+3. V dialogovém okně **Přidat novou položku** vyberte možnost **ovládací prvek podokno akce**, pojmenujte ji **ActionsControl** a klikněte na tlačítko **Přidat**.
 
 ### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>Přidání ovládacích prvků model Windows Forms vázaných na data do ovládacího prvku podokna akcí
 
-1. Z karet **běžných ovládacích prvků** na **panelu nástrojů**přetáhněte <xref:System.Windows.Forms.ComboBox> ovládací prvek do ovládacího prvku podokno akcí.
+1. Z karet **běžných ovládacích prvků** na **panelu nástrojů** přetáhněte <xref:System.Windows.Forms.ComboBox> ovládací prvek do ovládacího prvku podokno akcí.
 
 2. Změňte vlastnost **Size** na **171, 21**.
 
@@ -152,7 +154,7 @@ ms.locfileid: "91585051"
 
 #### <a name="to-show-the-actions-pane"></a>Zobrazení podokna akce
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na *ThisWorkbook. vb* nebo *ThisWorkbook.cs*a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na *ThisWorkbook. vb* nebo *ThisWorkbook.cs* a pak klikněte na **Zobrazit kód**.
 
 2. Vytvořte ve třídě novou instanci uživatelského ovládacího prvku `ThisWorkbook` .
 

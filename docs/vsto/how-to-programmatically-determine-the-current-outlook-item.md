@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: určení aktuální položky aplikace Outlook prostřednictvím kódu programu'
+description: Zjistěte, jak programově určit aktuální položku aplikace Microsoft Outlook. V tomto příkladu se používá událost Explorer. SelectionChange.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 428dccf09235e2feea528bcdaef0a447e02ef58d
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 10b8bd8103e80040519b9e3c5546f892da326202
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585233"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526795"
 ---
 # <a name="how-to-programmatically-determine-the-current-outlook-item"></a>Postupy: určení aktuální položky aplikace Outlook prostřednictvím kódu programu
   V tomto příkladu se používá `Explorer.SelectionChange` událost k zobrazení názvu aktuální složky a některých informací o vybrané položce. Kód pak zobrazí vybranou položku.

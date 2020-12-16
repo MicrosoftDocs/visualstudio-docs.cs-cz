@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vytváření nových dokumentů prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete programově vytvářet nové dokumenty v Microsoft Wordu pomocí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8e82c5ca62c407481b73de9394c584c3039a8f57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a7168c6b80657fe0e5ba7c8ae8511c1e000db4cb
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545987"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525879"
 ---
 # <a name="how-to-programmatically-create-new-documents"></a>Postupy: vytváření nových dokumentů prostřednictvím kódu programu
   Při vytváření dokumentu programově je nový dokument nativním <xref:Microsoft.Office.Interop.Word.Document> objektem. Tento objekt nemá další události a možnosti vazby dat pro <xref:Microsoft.Office.Tools.Word.Document> hostitelskou položku. Další informace najdete v tématu [programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).

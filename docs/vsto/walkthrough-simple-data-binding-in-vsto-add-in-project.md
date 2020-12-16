@@ -1,5 +1,7 @@
 ---
 title: 'Návod: jednoduché datové vazby v projektu doplňku VSTO'
+description: Naučte se, jak přidat ovládací prvky do dokumentu aplikace Microsoft Word a navazovat ovládací prvky na data v době běhu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 67264800fd2baa1ca685bcc578fb4d400e6538dd
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: bc0b4f18e0f9a45f19148fde9e3d289ccad9e73f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584908"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526151"
 ---
 # <a name="walkthrough-simple-data-binding-in-vsto-add-in-project"></a>Návod: jednoduché datové vazby v projektu doplňku VSTO
 
@@ -58,7 +60,7 @@ Prvním krokem je vytvoření projektu doplňku VSTO aplikace Word.
 
 ### <a name="to-create-a-new-project"></a>Vytvoření nového projektu
 
-1. Vytvořte projekt doplňku VSTO aplikace Word s názvem **vyplňování dokumentů z databáze**pomocí Visual Basic nebo C#.
+1. Vytvořte projekt doplňku VSTO aplikace Word s názvem **vyplňování dokumentů z databáze** pomocí Visual Basic nebo C#.
 
      Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
@@ -72,15 +74,15 @@ Pomocí okna **zdroje dat** přidejte do projektu typovou datovou sadu.
 
 ### <a name="to-add-a-typed-dataset-to-the-project"></a>Chcete-li přidat typovou datovou sadu do projektu
 
-1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
+1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat** Windows.
 
 2. Zvolením možnosti **Přidat nový zdroj dat** spusťte **Průvodce konfigurací zdroje dat**.
 
-3. Klikněte na **databáze**a potom klikněte na **Další**.
+3. Klikněte na **databáze** a potom klikněte na **Další**.
 
 4. Máte-li existující připojení k `AdventureWorksLT` databázi, vyberte toto připojení a klikněte na tlačítko **Další**.
 
-    V opačném případě klikněte na tlačítko **nové připojení**a vytvořte nové připojení pomocí dialogového okna **Přidat připojení** . Další informace najdete v tématu [Přidání nových připojení](../data-tools/add-new-connections.md).
+    V opačném případě klikněte na tlačítko **nové připojení** a vytvořte nové připojení pomocí dialogového okna **Přidat připojení** . Další informace najdete v tématu [Přidání nových připojení](../data-tools/add-new-connections.md).
 
 5. Na stránce **Uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na tlačítko **Další**.
 
@@ -88,7 +90,7 @@ Pomocí okna **zdroje dat** přidejte do projektu typovou datovou sadu.
 
 7. Klikněte na **Finish** (Dokončit).
 
-    Do **Průzkumník řešení**se přidá soubor *AdventureWorksLTDataSet. xsd* . Tento soubor definuje následující položky:
+    Do **Průzkumník řešení** se přidá soubor *AdventureWorksLTDataSet. xsd* . Tento soubor definuje následující položky:
 
    - Typová datová sada s názvem `AdventureWorksLTDataSet` . Tato datová sada představuje obsah tabulky **Customer (tabulky SalesLT)** v databázi AdventureWorksLT.
 

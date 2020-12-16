@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: otevírání existujících dokumentů prostřednictvím kódu programu'
+description: Naučte se používat metodu Open k otevření existujícího dokumentu Microsoft Wordu, který je určený plně kvalifikovanou cestou a názvem souboru.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eba4d110b06147db384a4d7aafe01c7d9f272ba3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 994afc6f0d8d9bb76aff56097d0a18b8c3f940d9
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519896"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525557"
 ---
 # <a name="how-to-programmatically-open-existing-documents"></a>Postupy: otevírání existujících dokumentů prostřednictvím kódu programu
   <xref:Microsoft.Office.Interop.Word.Documents.Open%2A>Metoda otevře existující systém Microsoft Office wordový dokument určený plně kvalifikovanou cestou a názvem souboru. Tato metoda vrátí <xref:Microsoft.Office.Interop.Word.Document> , který představuje otevřený dokument.

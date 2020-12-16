@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: rozšiřování oblastí v dokumentech prostřednictvím kódu programu'
+description: Přečtěte si, jak programově rozšiřuje rozsahy počátečních a koncových bodů v dokumentu aplikace Microsoft Word na úrovni dokumentu nebo na úrovni aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 35ef0ea0352141f18945632f996237c2d9d90204
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 61ed056b5cebcebb6fe2dffd66dc374e4e1f9205
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547417"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525739"
 ---
 # <a name="how-to-programmatically-extend-ranges-in-documents"></a>Postupy: rozšiřování oblastí v dokumentech prostřednictvím kódu programu
   Po definování <xref:Microsoft.Office.Interop.Word.Range> objektu v systém Microsoft Office dokumentu aplikace Word změníte jeho počáteční a koncové body pomocí <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> metod a. <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A>Metody a <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> přijímají stejné dva argumenty, *jednotky* a *počet*. Argument *Count* je počet jednotek, které se mají přesunout, a argument *Unit* může být jedna z následujících <xref:Microsoft.Office.Interop.Word.WdUnits> hodnot:

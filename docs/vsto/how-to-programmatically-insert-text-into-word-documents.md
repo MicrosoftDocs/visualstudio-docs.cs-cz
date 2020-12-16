@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vkládání textu do dokumentů aplikace Word prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete programově vkládat text do dokumentu Microsoft Wordu pomocí sady Visual Studio.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/14/2019
 ms.topic: how-to
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bbd73a60b05d48eea0252cec9881d6eefca6cdd2
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9567ea197c9a181141aeb52db0cca56ad4776237
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585181"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525690"
 ---
 # <a name="how-to-programmatically-insert-text-into-word-documents"></a>Postupy: vkládání textu do dokumentů aplikace Word prostřednictvím kódu programu
   Existují tři základní způsoby, jak vložit text do systém Microsoft Office dokumentů aplikace Word:
@@ -45,7 +47,7 @@ ms.locfileid: "91585181"
 
 ### <a name="to-insert-text-in-a-range"></a>Vložení textu do rozsahu
 
-1. Zadejte rozsah na začátku dokumentu a vložte text **Nový**text.
+1. Zadejte rozsah na začátku dokumentu a vložte text **Nový** text.
 
      Následující příklad kódu lze použít v přizpůsobení na úrovni dokumentu.
 
@@ -79,7 +81,7 @@ ms.locfileid: "91585181"
      [!code-vb[Trin_VstcoreWordAutomationAddIn#53](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#53)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#53](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#53)]
 
-2. Nahraďte tyto znaky **novým textovým**řetězcem.
+2. Nahraďte tyto znaky **novým textovým** řetězcem.
 
      [!code-vb[Trin_VstcoreWordAutomation#54](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#54)]
      [!code-csharp[Trin_VstcoreWordAutomation#54](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#54)]

@@ -1,5 +1,7 @@
 ---
 title: 'Návod: vytvoření prvního doplňku VSTO pro PowerPoint'
+description: Vytvoření doplňku na úrovni aplikace pro aplikaci Microsoft PowerPoint Tato funkce je k dispozici pro samotnou aplikaci, bez ohledu na to, jaké prezentace jsou otevřené.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a50a47a813891151427707c371f1ebf3f75c336f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 3e02da3484ce7c2beb35e643d3d90d8e37225e11
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584305"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524849"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-powerpoint"></a>Návod: vytvoření prvního doplňku VSTO pro PowerPoint
   V tomto návodu se dozvíte, jak vytvořit doplněk VSTO pro systém Microsoft Office PowerPointu. Funkce, které vytvoříte v tomto druhu řešení, jsou k dispozici pro samotnou aplikaci, bez ohledu na to, jaké prezentace jsou otevřené. Další informace najdete v tématu [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -53,9 +55,9 @@ ms.locfileid: "91584305"
 
 1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
+2. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na **projekt**.
 
-3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
+3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic** a potom rozbalte položku **Office/SharePoint**.
 
 4. V rozbaleném uzlu **Office/SharePoint** vyberte uzel **Doplňky Office** .
 
@@ -76,14 +78,14 @@ ms.locfileid: "91584305"
 
 ### <a name="to-add-a-text-box-to-each-new-slide"></a>Přidání textového pole do každého nového snímku
 
-1. V souboru kódu ThisAddIn přidejte do třídy následující kód `ThisAddIn` . Tento kód definuje obslužnou rutinu události pro událost [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) objektu [Application](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) .
+1. V souboru kódu ThisAddIn přidejte do třídy následující kód `ThisAddIn` . Tento kód definuje obslužnou rutinu události pro událost [Microsoft.Office.Interop.PowerPoint.EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) objektu [Application](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) .
 
     Když uživatel přidá nový snímek do aktivní prezentace, přidá tato obslužná rutina události do horní části nového snímku textové pole a přidá do textového pole nějaký text.
 
     [!code-vb[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_PowerPointAddInTutorial/ThisAddIn.vb#1)]
     [!code-csharp[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#1)]
 
-2. Pokud používáte jazyk C#, přidejte následující kód do `ThisAddIn_Startup` obslužné rutiny události. Tento kód je vyžadován pro připojení `Application_PresentationNewSlide` obslužné rutiny události pomocí události [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) .
+2. Pokud používáte jazyk C#, přidejte následující kód do `ThisAddIn_Startup` obslužné rutiny události. Tento kód je vyžadován pro připojení `Application_PresentationNewSlide` obslužné rutiny události [Microsoft.Office.Interop.PowerPoint.EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) .
 
     [!code-csharp[Trin_PowerPointAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#2)]
 
@@ -91,7 +93,7 @@ ms.locfileid: "91584305"
 
 - `Application`Pole `ThisAddIn` třídy `Application`Pole vrátí objekt [aplikace](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) , který představuje aktuální instanci aplikace PowerPoint.
 
-- `Sld`Parametr obslužné rutiny události pro událost [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) `Sld`Parametr je objekt [snímku](/previous-versions/office/developer/office-2010/ff763417(v=office.14)) , který představuje nový snímek. Další informace najdete v tématu [řešení pro PowerPoint](../vsto/powerpoint-solutions.md).
+- `Sld`Parametr obslužné rutiny události [Microsoft.Office.Interop.PowerPoint.EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) `Sld`Parametr je objekt [snímku](/previous-versions/office/developer/office-2010/ff763417(v=office.14)) , který představuje nový snímek. Další informace najdete v tématu [řešení pro PowerPoint](../vsto/powerpoint-solutions.md).
 
 ## <a name="test-the-project"></a>Testování projektu
  Při sestavování a spouštění projektu ověřte, zda se textové pole zobrazuje v nových snímcích, které přidáte do prezentace.

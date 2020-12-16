@@ -1,5 +1,7 @@
 ---
 title: Programové omezení hostitelských položek a hostitelských ovládacích prvků
+description: Přečtěte si o základních rozdílech mezi chováním hostitelských položek a hostitelskými ovládacími prvky a nativními objekty Office v době běhu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -31,12 +33,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 098145ca901b1f16974058513d3781fc4621f217
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 08205473636a04dbc742b6c09c99e9771094f61c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584474"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525132"
 ---
 # <a name="programmatic-limitations-of-host-items-and-host-controls"></a>Programové omezení hostitelských položek a hostitelských ovládacích prvků
   Každá položka hostitele a řízení hostitele je navržena tak, aby se chovala jako odpovídající nativní objekt systém Microsoft Office Word nebo systém Microsoft Office Excel s dalšími funkcemi. Existují však některé zásadní rozdíly mezi chováním hostitelských položek a hostitelských ovládacích prvků a nativních objektů Office v době běhu.

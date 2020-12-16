@@ -1,5 +1,7 @@
 ---
 title: Použití ovládacích prvků WPF v řešeních pro systém Office
+description: Přečtěte si, jak můžete použít ovládací prvky Windows Presentation Foundation (WPF) pro návrh uživatelských rozhraní v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 717e24315d1f6e57eda224ef17cc4ea5b5d550c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e041cda914cbf8aced4b19adfc80c601984c30e0
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189747"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526437"
 ---
 # <a name="use-wpf-controls-in-office-solutions"></a>Použití ovládacích prvků WPF v řešeních pro systém Office
 
@@ -45,7 +47,7 @@ Ovládací prvky WPF nemůžete přidat přímo do prvků uživatelského rozhra
 
 2. Přidejte do projektu položku **uživatelského ovládacího prvku (WPF)** .
 
-3. Z **panelu nástrojů**přidejte ovládací prvky WPF do návrhové plochy uživatelského ovládacího prvku WPF.
+3. Z **panelu nástrojů** přidejte ovládací prvky WPF do návrhové plochy uživatelského ovládacího prvku WPF.
 
      Ve výchozím nastavení, když je otevřen Návrhář uživatelského ovládacího prvku WPF, obsahuje **Sada nástrojů** pouze ovládací prvky WPF.
 
@@ -59,7 +61,7 @@ Ovládací prvky WPF nemůžete přidat přímo do prvků uživatelského rozhra
 
     - Pro vlastní podokna úloh přidejte do projektu položku **uživatelského ovládacího prvku** . Další informace najdete v tématu [Postup: Přidání vlastního podokna úloh do aplikace](../vsto/how-to-add-a-custom-task-pane-to-an-application.md).
 
-6. Na kartě *ProjectName* **uživatelské ovládací prvky WPF** v **sadě nástrojů**přetáhněte uživatelský ovládací prvek WPF do návrháře podokna akcí, oblasti formuláře nebo vlastního podokna úloh.
+6. Na kartě  **uživatelské ovládací prvky WPF** v **sadě nástrojů** přetáhněte uživatelský ovládací prvek WPF do návrháře podokna akcí, oblasti formuláře nebo vlastního podokna úloh.
 
      Visual Studio automaticky vytvoří <xref:System.Windows.Forms.Integration.ElementHost> objekt, který je hostitelem uživatelského ovládacího prvku WPF na prvku uživatelského rozhraní.
 
@@ -71,7 +73,7 @@ Ovládací prvky WPF nemůžete přidat přímo do prvků uživatelského rozhra
 
 2. Přidejte do projektu položku **uživatelského ovládacího prvku (WPF)** .
 
-3. Z **panelu nástrojů**přidejte ovládací prvky WPF do návrhové plochy uživatelského ovládacího prvku WPF.
+3. Z **panelu nástrojů** přidejte ovládací prvky WPF do návrhové plochy uživatelského ovládacího prvku WPF.
 
 4. Sestavte projekt.
 
@@ -79,7 +81,7 @@ Ovládací prvky WPF nemůžete přidat přímo do prvků uživatelského rozhra
 
 6. Otevřete návrháře model Windows Forms uživatelského ovládacího prvku.
 
-7. Z karty *ProjectName* **uživatelské ovládací prvky WPF** pro ProjectName v **sadě nástrojů**přetáhněte uživatelský ovládací prvek WPF do návrháře.
+7. Z karty  **uživatelské ovládací prvky WPF** pro ProjectName v **sadě nástrojů** přetáhněte uživatelský ovládací prvek WPF do návrháře.
 
      Visual Studio automaticky vytvoří <xref:System.Windows.Forms.Integration.ElementHost> objekt, který je hostitelem uživatelského ovládacího prvku WPF v uživatelském ovládacím prvku model Windows Forms.
 
@@ -92,7 +94,7 @@ Ovládací prvky WPF nemůžete přidat přímo do prvků uživatelského rozhra
 
 ## <a name="host-wpf-controls-by-using-the-elementhost-class"></a>Hostování ovládacích prvků WPF pomocí třídy ElementHost
 
-Sada Visual Studio poskytuje funkce, které vám pomůžou používat model Windows Forms ovládací prvky v řešeních pro systém Office, ale neposkytují podobné funkce pro ovládací prvky WPF. Například můžete přidat ovládací prvky model Windows Forms do dokumentů a listů v době návrhu přetažením ovládacích prvků z **panelu nástrojů**nebo v době běhu pomocí pomocných metod. Tyto nástroje však nejsou k dispozici pro ovládací prvky WPF.
+Sada Visual Studio poskytuje funkce, které vám pomůžou používat model Windows Forms ovládací prvky v řešeních pro systém Office, ale neposkytují podobné funkce pro ovládací prvky WPF. Například můžete přidat ovládací prvky model Windows Forms do dokumentů a listů v době návrhu přetažením ovládacích prvků z **panelu nástrojů** nebo v době běhu pomocí pomocných metod. Tyto nástroje však nejsou k dispozici pro ovládací prvky WPF.
 
 Ovládací prvky WPF používají <xref:System.Windows.Forms.Integration.ElementHost> třídu jako integrační vrstvu mezi ovládacím prvkem model Windows Forms nebo formulářem a ovládacími prvky WPF. Když do svého řešení přidáte ovládací prvky WPF v době návrhu, Visual Studio automaticky vygeneruje <xref:System.Windows.Forms.Integration.ElementHost> objekt pro vás.
 

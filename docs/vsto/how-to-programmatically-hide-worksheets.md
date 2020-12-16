@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: skrývání listů prostřednictvím kódu programu'
+description: Přečtěte si, jak programově zobrazit nebo skrýt libovolný list v sešitu Microsoft Excelu pomocí položky hostitele na listu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 83cf1f63a67525dca4cf9dbb5a4916da5d70b4ce
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a5ba61c7db0a62cf3e97fb8e4df5cb655e9f2dd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547404"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525668"
 ---
 # <a name="how-to-programmatically-hide-worksheets"></a>Postupy: skrývání listů prostřednictvím kódu programu
   V sešitu můžete zobrazit nebo skrýt kterýkoli list. Chcete-li skrýt list, použijte položku hostitele listu nebo přejděte k listu pomocí kolekce listů sešitu.

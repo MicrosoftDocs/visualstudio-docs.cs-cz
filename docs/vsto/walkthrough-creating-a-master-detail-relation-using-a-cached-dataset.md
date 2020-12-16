@@ -1,5 +1,7 @@
 ---
 title: Vytvoření vztahu hlavní podrobnosti pomocí datové sady uložených v mezipaměti
+description: Přečtěte si o vytvoření vztahu hlavní a podrobnosti na listu a ukládání dat do mezipaměti, aby bylo možné řešení použít offline.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0acf84dd983a8c10f2af526ae0bb904eaa90a360
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de7bf3ba34a2a7dd3e7db9ff549e4a839800d524
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328356"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524862"
 ---
 # <a name="walkthrough-create-a-master-detail-relation-using-a-cached-dataset"></a>Návod: Vytvoření vztahu hlavní podrobnosti pomocí datové sady uložené v mezipaměti
   Tento návod ukazuje vytvoření vztahu hlavní/podrobnosti na listu a ukládání dat do mezipaměti, aby bylo možné řešení použít offline.
@@ -54,7 +56,7 @@ ms.locfileid: "67328356"
 
 ### <a name="to-create-a-new-project"></a>Vytvoření nového projektu
 
-1. Vytvořte projekt sešitu aplikace Excel s názvem **Moje hlavní-podrobnosti**pomocí Visual Basic nebo C#. Ujistěte se, že je vybraná možnost **vytvořit nový dokument** . Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Vytvořte projekt sešitu aplikace Excel s názvem **Moje hlavní-podrobnosti** pomocí Visual Basic nebo C#. Ujistěte se, že je vybraná možnost **vytvořit nový dokument** . Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
    Visual Studio otevře nový excelový sešit v návrháři a přidá **můj hlavní projekt s podrobnostmi** do **Průzkumník řešení**.
 
@@ -63,7 +65,7 @@ ms.locfileid: "67328356"
 
 ### <a name="to-create-the-data-source"></a>Vytvoření zdroje dat
 
-1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
+1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat** Windows.
 
 2. Zvolením možnosti **Přidat nový zdroj dat** spusťte **Průvodce konfigurací zdroje dat**.
 
@@ -102,11 +104,11 @@ ms.locfileid: "67328356"
 
 6. V rozevíracím seznamu klikněte na **ListObject** a pak přetáhněte tabulku **OrderDetails** na buňku **a6**.
 
-7. <xref:Microsoft.Office.Tools.Excel.ListObject>Ovládací prvek s názvem **Order_DetailsListObject** je vytvořen v buňce **a6**a svázán s objektem <xref:System.Windows.Forms.BindingSource> .
+7. <xref:Microsoft.Office.Tools.Excel.ListObject>Ovládací prvek s názvem **Order_DetailsListObject** je vytvořen v buňce **a6** a svázán s objektem <xref:System.Windows.Forms.BindingSource> .
 
 ### <a name="to-add-two-buttons"></a>Přidání dvou tlačítek
 
-1. Na kartě **běžné ovládací prvky** **panelu nástrojů**přidejte <xref:System.Windows.Forms.Button> ovládací prvek do buňky **a3** listu.
+1. Na kartě **běžné ovládací prvky** **panelu nástrojů** přidejte <xref:System.Windows.Forms.Button> ovládací prvek do buňky **a3** listu.
 
     Toto tlačítko má název `Button1` .
 
@@ -136,7 +138,7 @@ ms.locfileid: "67328356"
 
 ### <a name="to-initialize-the-data-and-the-controls"></a>Inicializace dat a ovládacích prvků
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs**a pak klikněte na **Zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs** a pak klikněte na **Zobrazit kód** v místní nabídce.
 
 2. Přidejte následující kód do `Sheet1_Startup` metody pro nastavení textu pro tlačítka.
 

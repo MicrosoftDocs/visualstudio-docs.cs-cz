@@ -1,5 +1,7 @@
 ---
 title: Ukázky vývoje pro Office
+description: Přečtěte si o ukázkových aplikacích Visual studia, které ukazují, jak používat nástroje systém Microsoft Office Developer Tools k vytváření řešení pro Office.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b9e20f0d14b2940fdbe8096442848f38183b1db7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d80598033c834e8567ab58368da73350b3cd9ff3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985725"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525170"
 ---
 # <a name="office-development-samples"></a>Ukázky vývoje pro Office
   Sada Visual Studio obsahuje ukázkové aplikace, které demonstrují použití nástrojů systém Microsoft Office Developer Tools k vytváření řešení pro systém Office. Kód v těchto ukázkách ukazuje syntaxi, strukturu a techniky, které slouží k sestavování řešení pro systém Office.

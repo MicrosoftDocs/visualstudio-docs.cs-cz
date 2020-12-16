@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: procházení nalezených položek v dokumentech prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete pomocí programu Visual Studio programově procházet nalezené položky v dokumentu Microsoft Wordu.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e033b3d43f40736d7c77d11b489c0a6c2e91434e
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 634012cae7f12f5346ec83bbd2b41c1019ef066d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585142"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525625"
 ---
 # <a name="how-to-programmatically-loop-through-found-items-in-documents"></a>Postupy: procházení nalezených položek v dokumentech prostřednictvím kódu programu
   <xref:Microsoft.Office.Interop.Word.Find>Třída má <xref:Microsoft.Office.Interop.Word.Find.Found%2A> vlastnost, která vrací **hodnotu true** pokaždé, když se najde hledaná položka. Můžete procházet všemi instancemi, které byly nalezeny v rámci <xref:Microsoft.Office.Interop.Word.Range> pomocí <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> metody.

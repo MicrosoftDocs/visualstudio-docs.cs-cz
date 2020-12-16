@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: seskupování řádků v listu prostřednictvím kódu programu'
+description: Přečtěte si, jak můžete programově seskupit jeden nebo několik celých řádků v Microsoft Excelu pomocí ovládacího prvku NamedRange nebo nativního objektu Range Excelu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 759ba8c6e0796b25a87e8bf0b08795aed5bade05
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 203ea7d17a02a224c290e5dd3c6070c06a1d26e4
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537875"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525711"
 ---
 # <a name="how-to-programmatically-group-rows-in-a-worksheet"></a>Postupy: seskupování řádků v listu prostřednictvím kódu programu
   Můžete seskupit jeden nebo více celých řádků. Chcete-li vytvořit skupinu na listu, použijte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek nebo nativní objekt oblasti aplikace Excel.

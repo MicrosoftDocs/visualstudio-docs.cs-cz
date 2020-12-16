@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: formátování textu v dokumentech prostřednictvím kódu programu'
+description: Naučte se, jak můžete pomocí objektu Range programově formátovat text v dokumentu Microsoft Wordu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 76af290b0e32126689dbe7b60f27889d9742ea7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 931991529b160fedfe65a92e8243183792abf518
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519844"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525720"
 ---
 # <a name="how-to-programmatically-format-text-in-documents"></a>Postupy: formátování textu v dokumentech prostřednictvím kódu programu
   Objekt lze použít <xref:Microsoft.Office.Interop.Word.Range> k formátování textu v dokumentu aplikace systém Microsoft Office Word.

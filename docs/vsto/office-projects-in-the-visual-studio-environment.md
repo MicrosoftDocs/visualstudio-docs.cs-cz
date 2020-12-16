@@ -1,5 +1,7 @@
 ---
 title: Projekty Office v prostředí Visual Studio
+description: Přečtěte si, jak systém Microsoft Office projekty mají vývojové prostředí podobné jiným typům projektů v aplikaci Visual Studio, jako jsou například projekty model Windows Forms.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -41,12 +43,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 65f3a3abfe7e49872c7131a247d74612200bf42a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0e183d5aca3fa856f45f322c2b79a76524b28005
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978055"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525157"
 ---
 # <a name="office-projects-in-the-visual-studio-environment"></a>Projekty Office v prostředí Visual Studio
   Projekty pro Microsoft Office nabízejí vývojové prostředí, které se podobá jiným typům projektů v sadě Visual Studio, například projektům modelu Windows Forms. Při vytváření nebo otevírání projektu sady Office se položky projektu zobrazí v **Průzkumník řešení**. V případě projektů na úrovni dokumentu se dokument (tzn. dokument aplikace Word nebo sešit aplikace Excel) otevře v sadě Visual Studio a dokument se chová jako vizuální návrhář.
@@ -64,14 +66,14 @@ ms.locfileid: "62978055"
 
   V projektu doplňku VSTO **Průzkumník řešení** zobrazí následující výchozí položky:
 
-- Uzel aplikace. Tento uzel má stejný název jako hostitelská aplikace, jako je **Word**, **Excel**nebo **Outlook**. Uzel aplikace obsahuje soubor kódu ThisAddIn. Poskytuje také **obor názvů pro vlastnost položky hostitele** . Další informace o této vlastnosti naleznete v tématu [vlastnosti v projektech Office](../vsto/properties-in-office-projects.md).
+- Uzel aplikace. Tento uzel má stejný název jako hostitelská aplikace, jako je **Word**, **Excel** nebo **Outlook**. Uzel aplikace obsahuje soubor kódu ThisAddIn. Poskytuje také **obor názvů pro vlastnost položky hostitele** . Další informace o této vlastnosti naleznete v tématu [vlastnosti v projektech Office](../vsto/properties-in-office-projects.md).
 
 - Soubor kódu ThisAddIn. Tento soubor obsahuje vygenerovanou `ThisAddIn` třídu pro doplněk VSTO. Další informace o této třídě najdete v tématu [programové doplňky VSTO](../vsto/programming-vsto-add-ins.md).
 
 - Skryté soubory projektu, které nelze přímo upravovat. Další informace najdete v tématu [skryté soubory projektu](#hiddenfiles).
 
 ### <a name="temporary-certificates"></a>Dočasné certifikáty
- Projekty Office také obsahují dočasný certifikát s názvem *název projektu*_TemporaryKey. pfx. Tento certifikát umožňuje podepsat během vývoje projektu manifest aplikace a nasazení. Další informace najdete v tématu [udělení důvěry na řešení pro systém Office](../vsto/granting-trust-to-office-solutions.md) a [zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md).
+ Projekty Office také obsahují dočasný certifikát s názvem *název projektu* _TemporaryKey. pfx. Tento certifikát umožňuje podepsat během vývoje projektu manifest aplikace a nasazení. Další informace najdete v tématu [udělení důvěry na řešení pro systém Office](../vsto/granting-trust-to-office-solutions.md) a [zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md).
 
 ### <a name="hidden-project-files"></a><a name="hiddenfiles"></a> Skryté soubory projektu
  Některé soubory projektu jsou ve výchozím nastavení skryté. Tyto soubory jsou vygenerovány sadou Visual Studio a liší se podle typu projektu. Chcete-li zobrazit skryté soubory, klikněte na tlačítko **Zobrazit všechny soubory** v **Průzkumník řešení**.

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Změna velikosti ovládacích prvků v buňkách listu'
+description: Přečtěte si, jak můžete pomocí sady Visual Studio změnit velikost ovládacích prvků v rámci buněk listu aplikace Microsoft Excel v době návrhu i v době běhu.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f2d22973e13ee77b66de303041f8b6a765b4b93a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba2a77dc44618c0415e645718aff3ead542b4b48
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545870"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525348"
 ---
 # <a name="how-to-resize-controls-within-worksheet-cells"></a>Postupy: Změna velikosti ovládacích prvků v buňkách listu
   Když změníte velikost sloupců nebo řádků na listu, všechny ovládací prvky hostitele v buňkách se automaticky změní na výšku nebo šířku buňky, u které se změnila velikost. Ovládací prvky model Windows Forms ve výchozím nastavení automaticky nemění velikost.
@@ -35,13 +37,13 @@ ms.locfileid: "85545870"
 
 ### <a name="to-make-controls-resize-with-cells-at-design-time"></a>Chcete-li změnit velikost ovládacích prvků s buňkami v době návrhu
 
-1. Z **panelu nástrojů**přetáhněte ovládací prvek model Windows Forms do listu.
+1. Z **panelu nástrojů** přetáhněte ovládací prvek model Windows Forms do listu.
 
 2. Klikněte pravým tlačítkem myši na ovládací prvek a potom klikněte na možnost **Formát ovládacího prvku**.
 
 3. V dialogovém okně **Formát ovládacího prvku** klikněte na kartu **vlastnosti** .
 
-4. V části **umístění objektu**vyberte možnost **přesunout a velikost s buňkami** a pak klikněte na tlačítko **OK**.
+4. V části **umístění objektu** vyberte možnost **přesunout a velikost s buňkami** a pak klikněte na tlačítko **OK**.
 
      Když změníte velikost buňky, která obsahuje ovládací prvek, ovládací prvek změní velikost tak, aby odpovídala buňce.
 

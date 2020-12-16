@@ -1,5 +1,7 @@
 ---
 title: Aktualizace oblastí formuláře Outlooku při migraci na .NET Framework 4,5
+description: Pokud je cílová architektura projektu doplňku VSTO aplikace Outlook s oblastmi formuláře změněna na .NET Framework 4 nebo novější, je nutné upravit kód.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9d8978703630e99ecb930e18e7d128eddff8792f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 507132a28526e4ce008957fa0b988c23c09d686f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584396"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526585"
 ---
 # <a name="update-outlook-form-regions-when-migrated-to-net-framework-45"></a>Aktualizace oblastí formuláře Outlooku při migraci na .NET Framework 4,5
 
