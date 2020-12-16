@@ -16,9 +16,9 @@
     - name: Vytvoření první aplikace jazyka C#
       expanded: true
       items:
-        - name: 'Část 1: Vytvoření konzolové aplikace jazyka C#'
+        - name: Vytvoření konzolové aplikace jazyka C#
           href: tutorial-console.md
-        - name: 'Část 2: Rozšíření konzolové aplikace jazyka C#'
+        - name: Rozšíření konzolové aplikace jazyka C#
           href: tutorial-console-part-2.md
     - name: Vytvoření webové aplikace
       href: tutorial-aspnet-core.md
