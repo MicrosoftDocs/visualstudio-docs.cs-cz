@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b22695dac3f75b9e90950ee5428bb906436d661
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 48fb0f1c22b2f7055005640baff2239a0ad4a32a
+ms.sourcegitcommit: fed8782b2fb2ca18a90746b6e7e0b33f3fde10f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903933"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97646408"
 ---
 # <a name="learn-about-projects-and-solutions"></a>Další informace o projektech a řešeních
 
@@ -131,7 +131,7 @@ Nyní do řešení přidáme náš první projekt. Začneme s prázdným projekt
 
 Máme prázdný projekt. Pojďme přidat soubor kódu.
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši nebo místní nabídky projektu **QuickDate** v části **Solution Explorer** vyberte možnost **Přidat**  >  **novou položku**.
+1. V Průzkumník řešení klikněte pravým tlačítkem myši nebo místní nabídky projektu **QuickDate** v části vyberte možnost **Přidat**  >  **novou položku**.
 
    Otevře se dialogové okno **Přidat novou položku** .
 
@@ -201,6 +201,8 @@ Pojďme do našeho řešení přidat projekt testování částí. Tentokrát za
 
 Použijeme nový projekt testování částí k otestování naší metody v projektu **QuickDate** , takže musíme přidat odkaz na tento projekt. Tím se vytvoří *závislost sestavení* mezi dvěma projekty, což znamená, že při sestavování řešení je **QuickDate** sestaven před **QuickTest**.
 
+::: moniker range="vs-2017"
+
 1. V projektu **QuickTest** vyberte uzel **závislosti** a v místní nabídce klikněte pravým tlačítkem myši nebo vyberte možnost **Přidat odkaz**.
 
    Otevře se dialogové okno **Správce odkazů** .
@@ -210,6 +212,22 @@ Použijeme nový projekt testování částí k otestování naší metody v pro
    Přidá se odkaz na projekt **QuickDate** .
 
    ![Visual Studio 2019 Průzkumník řešení zobrazení odkazu na projekt](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Průzkumník řešení zobrazení odkazu na projekt v aplikaci Visual Studio.")
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. V projektu **QuickTest** vyberte uzel **závislosti** a v místní nabídce klikněte pravým tlačítkem myši nebo vyberte možnost **Přidat odkaz na projekt.**...
+
+   Otevře se dialogové okno **Správce odkazů** .
+
+1. V levém podokně rozbalte položku **projekty** a klikněte na možnost **řešení**. V prostředním podokně klikněte na zaškrtávací políčko vedle **QuickDate** a pak zvolte **OK**.
+
+   Přidá se odkaz na projekt **QuickDate** .
+
+   ![Visual Studio 2019 Průzkumník řešení zobrazení odkazu na projekt](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
+   
+::: moniker-end
 
 ## <a name="add-test-code"></a>Přidat testovací kód
 

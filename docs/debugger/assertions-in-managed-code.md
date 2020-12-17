@@ -22,15 +22,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 529c19753d09d6335e5c9fc5e839cdb7cd0c118c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 824c711fc0ebb26a78338a65808c6fdbed768919
+ms.sourcegitcommit: fed8782b2fb2ca18a90746b6e7e0b33f3fde10f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745780"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97646395"
 ---
 # <a name="assertions-in-managed-code"></a>Kontrolní výrazy ve spravovaném kódu
-Kontrolní výraz nebo `Assert` příkaz testuje podmínku, kterou zadáte jako argument pro `Assert` příkaz. Pokud je podmínka vyhodnocena jako true, nedojde k žádné akci. Pokud je podmínka vyhodnocena jako false, kontrolní výraz se nezdařil. Pokud používáte se sestavením pro ladění, program přejde do režimu přerušení.
+Kontrolní příkaz – neboli příkaz `Assert` – testuje podmínku, kterou zadáte jako argument příkazu `Assert`. Pokud je tato podmínka vyhodnocena jako true, nedojde k žádné akci. Pokud je tato podmínka vyhodnocena jako false, kontrola selže. Pokud máte spuštěný build pro ladění, program přejde do režimu pozastavení.
 
 ## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> V tomto tématu
  [Výrazy v oboru názvů System. Diagnostics](#BKMK_Asserts_in_the_System_Diagnostics_Namespace)
@@ -48,14 +48,14 @@ Kontrolní výraz nebo `Assert` příkaz testuje podmínku, kterou zadáte jako 
  [Nastavení kontrolních výrazů v konfiguračních souborech](#BKMK_Setting_assertions_in_configuration_files)
 
 ## <a name="asserts-in-the-systemdiagnostics-namespace"></a><a name="BKMK_Asserts_in_the_System_Diagnostics_Namespace"></a> Výrazy v oboru názvů System. Diagnostics
- V Visual Basic a Visual C# lze použít `Assert` metodu z <xref:System.Diagnostics.Debug> nebo <xref:System.Diagnostics.Trace> , která jsou v <xref:System.Diagnostics> oboru názvů. <xref:System.Diagnostics.Debug> metody třídy nejsou součástí verze programu, takže nezvyšují velikost ani neomezují rychlost kódu vydání.
+ V Visual Basic a Visual C# lze použít `Assert` metodu z <xref:System.Diagnostics.Debug> nebo <xref:System.Diagnostics.Trace> , která jsou v <xref:System.Diagnostics> oboru názvů. Metody třídy <xref:System.Diagnostics.Debug> nejsou zahrnuty ve vydané verzi vašeho programu, takže nezvyšují velikost ani nesnižují rychlost kódu vydané verze.
 
  Jazyk C++ nepodporuje <xref:System.Diagnostics.Debug> metody třídy. Stejný efekt lze dosáhnout použitím <xref:System.Diagnostics.Trace> třídy s podmínkou kompilace, například `#ifdef DEBUG` ... `#endif` .
 
  [V tomto tématu](#BKMK_In_this_topic)
 
 ## <a name="the-debugassert-method"></a><a name="BKMK_The_Debug_Assert_method"></a> Metoda Debug. Assert
- Použijte <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> metodu volně k testování podmínek, které by měly držet hodnotu true, pokud je váš kód správný. Předpokládejme například, že jste napsali funkci dělení celého čísla. Podle pravidel matematického dělitele nemůže nikdy být nula. Můžete ho otestovat pomocí kontrolního výrazu:
+ Použijte <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> metodu volně k testování podmínek, které by měly držet hodnotu true, pokud je váš kód správný. Předpokládejme například, že jste napsali funkci pro dělení celých čísel. Podle matematických pravidel nemůže být dělitel nikdy nula. Můžete to otestovat pomocí kontrolního příkazu:
 
 ```VB
 Function IntegerDivide(ByVal dividend As Integer, ByVal divisor As Integer) As Integer
@@ -66,11 +66,13 @@ End Function
 
 ```csharp
 int IntegerDivide ( int dividend , int divisor )
-    { Debug.Assert ( divisor != 0 );
-        return ( dividend / divisor ); }
+{
+    Debug.Assert ( divisor != 0 );
+    return ( dividend / divisor );
+}
 ```
 
- Při spuštění tohoto kódu v rámci ladicího programu je vyhodnocen příkaz kontrolního výrazu, ale ve verzi Release není porovnání provedeno, takže nedochází k žádné další režii.
+ Když spustíte tento kód v ladicím programu, je kontrolní příkaz vyhodnocen, ale ve vydané verzi se toto porovnání neprovádí, takže nedochází k žádnému dodatečnému zatížení.
 
  Zde je další příklad. Máte třídu, která implementuje kontrolní účet, a to následujícím způsobem:
 
@@ -109,7 +111,7 @@ savingsAccount.Withdraw ( amount );
  [V tomto tématu](#BKMK_In_this_topic)
 
 ## <a name="side-effects-of-debugassert"></a><a name="BKMK_Side_effects_of_Debug_Assert"></a> Vedlejší účinky příkazu Debug. Assert
- Pokud použijete <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> , ujistěte se, že veškerý kód v rámci `Assert` nemění výsledky programu, pokud `Assert` je odebrán. V opačném případě může dojít k náhodnému zavedení chyby, která se zobrazí pouze v prodejní verzi programu. Buďte obzvláště opatrní na kontrolní výrazy, které obsahují volání funkce nebo procedury, jako je například následující příklad:
+ Pokud použijete <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> , ujistěte se, že veškerý kód v rámci `Assert` nemění výsledky programu, pokud `Assert` je odebrán. Jinak byste mohli náhodně zavést chybu, která se projeví pouze ve vydané verzi vašeho programu. Buďte obzvláště opatrní na kontrolní výrazy, které obsahují volání funkce nebo procedury, jako je například následující příklad:
 
 ```VB
 ' unsafe code
@@ -154,7 +156,7 @@ Debug.Assert ( temp != 0 );
 
   Pokud potřebujete použít metody ladění v sestavení verze C# nebo Visual Basic, je nutné v konfiguraci vydané verze definovat symbol ladění.
 
-  Jazyk C++ nepodporuje <xref:System.Diagnostics.Debug> metody třídy. Stejný efekt lze dosáhnout použitím <xref:System.Diagnostics.Trace> třídy s podmínkou kompilace, například `#ifdef DEBUG` ... `#endif` . Tyto symboly lze definovat v dialogovém okně ** \<Project> stránky vlastností** . Další informace naleznete v tématu [Změna nastavení projektu pro Visual Basic konfigurace ladění](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) nebo [Změna nastavení projektu pro konfiguraci ladění jazyka C nebo C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).
+  Jazyk C++ nepodporuje <xref:System.Diagnostics.Debug> metody třídy. Stejný efekt lze dosáhnout použitím <xref:System.Diagnostics.Trace> třídy s podmínkou kompilace, například `#ifdef DEBUG` ... `#endif` . Tyto symboly lze definovat v dialogovém okně **\<Project> stránky vlastností** . Další informace naleznete v tématu [Změna nastavení projektu pro Visual Basic konfigurace ladění](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) nebo [Změna nastavení projektu pro konfiguraci ladění jazyka C nebo C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).
 
 ## <a name="assert-arguments"></a><a name="BKMK_Assert_arguments"></a> Argumenty kontrolního výrazu
  <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> a <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> Vezměte až tři argumenty. První argument, který je povinný, je podmínka, kterou chcete kontrolovat. Pokud voláte <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> nebo <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> pouze jeden argument, `Assert` Metoda zkontroluje podmínku a, pokud je výsledek false, vypíše obsah zásobníku volání do okna **výstup** . Následující příklad ukazuje <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> a <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> :

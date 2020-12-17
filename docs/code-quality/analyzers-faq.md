@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 567af541b819186bda3dc869628c2812be9888b8
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 48dcb2d01e53502c371595048666fd94c267b6ec
+ms.sourcegitcommit: fed8782b2fb2ca18a90746b6e7e0b33f3fde10f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96039585"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97646382"
 ---
 # <a name="code-analysis-faq"></a>Nejčastější dotazy k analýze kódu
 
@@ -69,7 +69,7 @@ Odpověď **: Analýza kódu na základě**.NET Compiler Platform analyzuje zdro
 
 **Otázka**: Jaký je rozdíl mezi analyzátory FxCop a analyzátory .NET?
 
-**A** Odpověď: analyzátory FxCop a analyzátory .NET .NET Compiler Platform odkazují na implementace analyzátoru pro FxCop pravidla certifikační autority ("Roslyn"). Před vydáním sady Visual Studio 2019 16,8 a .NET 5,0 byly tyto analyzátory dodávány jako `Microsoft.CodeAnalysis.FxCopAnalyzers` [balíček NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers). Počínaje sadou Visual Studio 2019 16,8 a .NET 5,0 jsou tyto analyzátory [součástí sady .NET SDK](/dotnet/fundamentals/code-analysis/overview). Jsou také k dispozici jako `Microsoft.CodeAnalysis.NetAnalyzers` [balíček NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers). Zvažte prosím možnost [migrace z analyzátorů FxCop na analyzátory .NET](migrate-from-fxcop-analyzers-to-net-analyzers.md).
+Odpověď: analyzátory FxCop a analyzátory .NET .NET Compiler Platform odkazují na implementace analyzátoru pro FxCop pravidla certifikační autority ("Roslyn"). Před vydáním sady Visual Studio 2019 16,8 a .NET 5,0 byly tyto analyzátory dodávány jako `Microsoft.CodeAnalysis.FxCopAnalyzers` [balíček NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers). Počínaje sadou Visual Studio 2019 16,8 a .NET 5,0 jsou tyto analyzátory [součástí sady .NET SDK](/dotnet/fundamentals/code-analysis/overview). Jsou také k dispozici jako `Microsoft.CodeAnalysis.NetAnalyzers` [balíček NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers). Zvažte prosím možnost [migrace z analyzátorů FxCop na analyzátory .NET](migrate-from-fxcop-analyzers-to-net-analyzers.md).
 
 ## <a name="treat-warnings-as-errors"></a>Zpracovávat upozornění jako chyby
 
@@ -100,7 +100,7 @@ Odpověď **: Chcete-li** zabránit tomu, aby se výstraha analýzy kódu nachá
 
 **Otázka**: kde je stránka vlastností analýzy kódu pro řešení?
 
-Odpověď **: stránka** vlastností analýzy kódu na úrovni řešení se odebrala a upřednostňuje spolehlivější sdílenou skupinu vlastností. Pro správu analýzy kódu na úrovni projektu je stránka vlastností analýza kódu stále k dispozici. (U spravovaných projektů doporučujeme také migrovat z RuleSets na EditorConfig pro konfiguraci pravidel.)  Pro sdílení RuleSets napříč několika/všemi projekty v rámci řešení nebo úložiště doporučujeme definovat skupinu vlastností s vlastností CodeAnalysisRuleSet v souboru Shared/Targets nebo Directory. props/Directory. targets. Pokud tyto běžné vlastnosti nebo cíle nechcete importovat do všech vašich projektů, měli byste zvážit [Přidání takové skupiny vlastností do adresáře. props nebo Directory. targets v adresáři řešení na nejvyšší úrovni, který je automaticky importován do všech souborů projektu definovaných v adresáři nebo v jeho podadresářích](../msbuild/customize-your-build.md).
+Odpověď **: stránka** vlastností analýzy kódu na úrovni řešení se odebrala a upřednostňuje spolehlivější sdílenou skupinu vlastností. Pro správu analýzy kódu na úrovni projektu je stránka vlastností analýza kódu stále k dispozici. (U spravovaných projektů doporučujeme také migrovat z RuleSets na EditorConfig pro konfiguraci pravidel.)  Pro sdílení RuleSets napříč několika/všemi projekty v rámci řešení nebo úložiště doporučujeme definovat skupinu vlastností s vlastností [CodeAnalysisRuleSet](../code-quality/using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) v souboru Shared/Targets nebo *Directory. props/Directory. targets* . Pokud tyto běžné vlastnosti nebo cíle nechcete importovat do všech projektů, měli byste zvážit přidání takové skupiny vlastností do [souboru Directory. props nebo Directory. targets](../msbuild/customize-your-build.md) v adresáři řešení na nejvyšší úrovni, který je automaticky importován do všech souborů projektu definovaných v adresáři nebo v jeho podadresářích.
 
 ## <a name="see-also"></a>Viz také
 
