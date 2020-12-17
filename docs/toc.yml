@@ -182,11 +182,11 @@
       href: ide/visual-studio-search.md
     - name: Řešení a projekty
       items:
-        - name: Práce s řešeními a projekty
+        - name: Informace o řešeních a projektech
           href: ide/solutions-and-projects-in-visual-studio.md
         - name: Vytvoření nového projektu
           href: ide/create-new-project.md
-        - name: Vytváření řešení a projektů
+        - name: Práce s řešeními a projekty
           href: ide/creating-solutions-and-projects.md
         - name: Otevření projektu z úložiště
           href: get-started/tutorial-open-project-from-repo.md
