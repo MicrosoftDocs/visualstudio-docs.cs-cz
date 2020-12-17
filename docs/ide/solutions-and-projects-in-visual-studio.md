@@ -1,5 +1,5 @@
 ---
-title: Řešení a projekty
+title: Přehled řešení a projektů
 description: Přečtěte si o projektech a řešeních sady Visual Studio, způsobu vytváření nových projektů ze šablony a o tom, jak zobrazit & spravovat projekty v Průzkumník řešení.
 ms.custom: SEO-VS-2020
 ms.date: 12/15/2020
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebe6e5c7479ce4e3cda435c51a883c4d5db8cc45
-ms.sourcegitcommit: 6f37100d4b8c15a21d3858335ded3c26ab275b93
+ms.openlocfilehash: 1981bc5c9d1c2589607f355528c332d01284917e
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97599496"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615750"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -68,11 +68,11 @@ Visual Studio používá dva typy souborů (*. sln* a *. suo*) k ukládání nas
 
 ## <a name="create-new-projects"></a>Vytvořit nové projekty
 
-Nejjednodušší způsob, jak vytvořit nový projekt, je začít od šablony projektu pro konkrétní typ aplikace nebo webu. Šablona projektu se skládá ze základní sady předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení. Tyto šablony jsou k dispozici v dialogovém okně, kde vytvoříte nový projekt (**soubor**  >  **Nový**  >  **projekt**). Další informace najdete v tématu [Vytvoření nového projektu](create-new-project.md) a [práce s řešeními a projekty](../ide/creating-solutions-and-projects.md).
+Nejjednodušší způsob, jak vytvořit nový projekt, je použít šablonu projektu pro typ projektu, který chcete. Šablona projektu obsahuje základní sadu předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení.   >    >  Pro výběr šablony projektu použijte soubor nový **projekt** . Další informace najdete v tématu [Vytvoření nového projektu](create-new-project.md).
 
-Pokud často přizpůsobíte projekty určitým způsobem, můžete vytvořit vlastní šablonu projektu, kterou pak můžete použít k vytvoření nových projektů z. Další informace naleznete v tématu [Create Project and Item Templates](../ide/creating-project-and-item-templates.md).
+Můžete také vytvořit vlastní šablonu projektu, kterou můžete použít k vytvoření nových projektů z. Další informace naleznete v tématu [Create Project and Item Templates](../ide/creating-project-and-item-templates.md).
 
-Když vytvoříte nový projekt, uloží se ve výchozím nastavení na *%USERPROFILE%\source\repos*. Toto umístění můžete změnit v nastavení **umístění projektů** v nabídce **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení. Další informace o tomto a dalších nastaveních projektů a řešení naleznete v části [projekty a řešení stránky – dialogové okno Možnosti](./reference/projects-and-solutions-options-dialog-box.md).
+Když vytvoříte nový projekt, Visual Studio ho uloží do výchozího umístění *%USERPROFILE%\source\repos*. Pokud chcete toto umístění změnit, přejděte na **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení. Další informace najdete v [dialogovém okně Možnosti: projekty a řešení > umístění](./reference/projects-solutions-locations-options.md).
 
 ## <a name="solution-explorer"></a>Průzkumník řešení
 
@@ -94,4 +94,3 @@ A pokud chcete zobrazit seznam některých ikon, které se zobrazují v Průzkum
 - [Integrované vývojové prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
 - [Přenos, migrace a upgrade projektů](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
 - [Projekty a řešení (Visual Studio pro Mac)](/visualstudio/mac/projects-and-solutions)
-- [Přidání a odebrání položek projektu (Visual Studio pro Mac)](/visualstudio/mac/add-and-remove-project-items)

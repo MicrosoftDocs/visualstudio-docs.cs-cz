@@ -1,5 +1,7 @@
 ---
 title: Správa přidružení souborů vedle sebe | Microsoft Docs
+description: Pokud vaše VSPackage poskytuje přidružení souborů, rozhodněte se, jak zpracovávat souběžné instalace, ve kterých konkrétní verze aplikace Visual Studio otevře soubor.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c284fe7ef4c2d07051a8524860583cb634e13bf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 477afbd5bc4586d8c46db11b036364f8058133b0
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702760"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616341"
 ---
 # <a name="manage-side-by-side-file-associations"></a>Spravovat přidružení souborů vedle sebe
 
@@ -23,7 +25,7 @@ Pokud vaše VSPackage poskytuje přidružení souborů, musíte se rozhodnout, j
 
 Uživatelé očekávají, že nová verze produktu bude kompatibilní s předchozími verzemi, takže stávající soubory je možné načíst v nové verzi bez ztráty dat. V ideálním případě může váš VSPackage načítat a ukládat formáty souborů starších verzí. Pokud to neplatí, měli byste nabízet upgrade formátu souboru na novou verzi sady VSPackage. Nevýhodou tohoto přístupu je, že upgradovaný soubor nejde otevřít v předchozí verzi.
 
-Chcete-li se tomuto problému vyhnout, můžete rozšíření změnit, když se formáty souborů stanou nekompatibilní. Například verze 1 balíčku VSPackage by mohla použít rozšíření, *. mypkg10*a verze 2, může použít příponu *. mypkg20*. Tento rozdíl identifikuje VSPackage, který otevírá konkrétní soubor. Pokud přidáte novější sady VSPackage do seznamu programů, které jsou přidruženy k starému rozšíření, mohou uživatelé kliknout pravým tlačítkem myši na soubor a zvolit jeho otevření v novějším VSPackage. V tomto okamžiku může být VSPackage nabízen k upgradu souboru na nový formát nebo otevření souboru a udržování kompatibility se staršími verzemi VSPackage.
+Chcete-li se tomuto problému vyhnout, můžete rozšíření změnit, když se formáty souborů stanou nekompatibilní. Například verze 1 balíčku VSPackage by mohla použít rozšíření, *. mypkg10* a verze 2, může použít příponu *. mypkg20*. Tento rozdíl identifikuje VSPackage, který otevírá konkrétní soubor. Pokud přidáte novější sady VSPackage do seznamu programů, které jsou přidruženy k starému rozšíření, mohou uživatelé kliknout pravým tlačítkem myši na soubor a zvolit jeho otevření v novějším VSPackage. V tomto okamžiku může být VSPackage nabízen k upgradu souboru na nový formát nebo otevření souboru a udržování kompatibility se staršími verzemi VSPackage.
 
 > [!NOTE]
 > Tyto přístupy můžete kombinovat. Můžete například nabízet zpětnou kompatibilitu načtením staršího souboru a nabídnout upgrade formátu souboru, když ho uživatel uloží.
@@ -59,13 +61,13 @@ Pokud chcete, aby stejné rozšíření používalo více souběžných VSPackag
 
   **Řádky tabulky InstallExecuteSequence, které určují nejnovější verzi sady Visual Studio**
 
-  |Akce|Stav|Sequence|
+  |Akce|Podmínka|Sequence|
   |------------|---------------|--------------|
   |CA_SetDevenvLatest_2002|DEVENV_EXE_2002 A NIKOLI (DEVENV_EXE_2003 NEBO DEVENV_EXE_2005)|410|
   |CA_SetDevenvLatest_2003|DEVENV_EXE_2003 A NENÍ DEVENV_EXE_2005|420|
   |CA_SetDevenvLatest_2005|DEVENV_EXE_2005|430|
 
-   Vlastnost DEVENV_EXE_LATEST můžete použít v tabulce registru balíčku Instalační služba systému Windows k zápisu výchozí hodnoty klíče **HKEY_CLASSES_ROOT*ProgID*ShellOpenCommand** , [DEVENV_EXE_LATEST] "%1".
+   Vlastnost DEVENV_EXE_LATEST můžete použít v tabulce registru balíčku Instalační služba systému Windows k zápisu výchozí hodnoty klíče **HKEY_CLASSES_ROOT *ProgID* ShellOpenCommand** , [DEVENV_EXE_LATEST] "%1".
 
 - Spusťte program Shared Launcher, který může nejlépe vydávat možnost z dostupných verzí VSPackage.
 

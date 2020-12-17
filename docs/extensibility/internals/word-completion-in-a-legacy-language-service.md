@@ -1,5 +1,7 @@
 ---
 title: Dokončování slov ve službě starší verze jazyka | Microsoft Docs
+description: V sadě Visual Studio SDK může být podpora dokončování slov podporována pro službu starší verze jazyka. Přečtěte si, jak jsou ve VSPackage implementovány starší jazykové služby.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 948751cde5b6b710d911a30ca26a61e5411bba4d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 489b43c825e3512e1bd33bc732833de84aed54c3
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703165"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616272"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>Dokončování slov ve službě starší verze jazyka
 Doplňování slov chybějících znaků u částečně zadaného slova. Pokud je k dispozici jenom jedno možné dokončení, slovo se po zadání znaku dokončení dokončí. Pokud se v částečném slově shoduje více než jedna možnost, zobrazí se seznam možných dokončení. Znak dokončení může být libovolný znak, který se nepoužívá pro identifikátory.

@@ -1,5 +1,7 @@
 ---
 title: Element vazby elementu | Microsoft Docs
+description: Element vazby klíčů určuje klávesové zkratky pro příkazy. K příkazům můžou být přidruženy obě vazby Single i Dual Key.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b458e70a9a85c11707c50da2e16e3aa73f51bc12
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33b2c1638b41afbdae56e0c4374937e7230dfffe
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703148"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616114"
 ---
 # <a name="keybinding-element"></a>Element Binding elementu
 Element vazby klíčů určuje klávesové zkratky pro příkazy.
 
- K příkazům můžou být přidruženy obě vazby Single i Dual Key. Příkladem vazby s jedním klíčem je **CTRL** + **S** pro příkaz **Save** . Pro aktivaci příkazu vyžadují vazby Dual Key dvě následující kombinace kláves. Příkladem vazby s duálním klíčem je <strong>CTRL *+</strong> k<strong>,</strong>CTRL <strong>+</strong> k** pro nastavení záložky.
+ K příkazům můžou být přidruženy obě vazby Single i Dual Key. Příkladem vazby s jedním klíčem je **CTRL** + **S** pro příkaz **Save** . Pro aktivaci příkazu vyžadují vazby Dual Key dvě následující kombinace kláves. Příkladem vazby s duálním klíčem je <strong>CTRL *+</strong> k <strong>,</strong>CTRL <strong>+</strong> k** pro nastavení záložky.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,11 +42,11 @@ Element vazby klíčů určuje klávesové zkratky pro příkazy.
 |id|Povinná hodnota.|
 |editor|Povinná hodnota. Identifikátor GUID editoru určuje kontext úprav, pro který bude tato klávesová zkratka aktivní. Hodnota oboru globálních vazeb je "guidVSStd97".|
 |key1|Povinná hodnota. Platné hodnoty zahrnují všechny alfanumerické znaky typable a také dvoumístné hexadecimální hodnoty předcházejí 0x a [VK_constants](/windows/desktop/inputdev/virtual-key-codes).|
-|mod1|Nepovinný parametr. Libovolná kombinace **CTRL**, **ALT**a **SHIFT** oddělené mezerou.|
+|mod1|Nepovinný parametr. Libovolná kombinace **CTRL**, **ALT** a **SHIFT** oddělené mezerou.|
 |key2|Nepovinný parametr. Platné hodnoty zahrnují všechny alfanumerické znaky typable a také dvoumístné hexadecimální hodnoty předcházejí 0x a [VK_constants](/windows/desktop/inputdev/virtual-key-codes).|
-|mod2|Nepovinný parametr. Libovolná kombinace **CTRL**, **ALT**a **SHIFT** oddělené mezerou.|
+|mod2|Nepovinný parametr. Libovolná kombinace **CTRL**, **ALT** a **SHIFT** oddělené mezerou.|
 |emulátor|Nepovinný parametr.|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 

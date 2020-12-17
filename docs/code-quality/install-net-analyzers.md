@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f7dfa1c79af832cc54d9aee72eeafbf20bbde707
-ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
+ms.openlocfilehash: ea13fde64f6214cf3c219de45c79458b75e1caf8
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97398413"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615522"
 ---
 # <a name="enable-or-install-first-party-net-analyzers"></a>Povolit nebo nainstalovat analyzátory .NET First stran
 
@@ -31,7 +31,7 @@ Analyzátory .NET pro první stranu můžete povolit nebo nainstalovat jedním z
 - **Instalovat jako balíček NuGet**: Pokud nechcete přejít na sadu .NET 5 + SDK, nebo pokud upřednostňujete model založený na balíčku NuGet, analyzátory jsou také k dispozici v `Microsoft.CodeAnalysis.NetAnalyzers` [balíčku NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers) v sadě Visual Studio 2019.  Můžete upřednostnit model založený na balíčku pro aktualizace verze na vyžádání. Pokud jste v aplikaci Visual Studio 2017, nainstalujte `2.9.x` místo toho nejnovější verzi `Microsoft.CodeAnalysis.FxCopAnalyzers` [balíčku NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) .
 
 > [!NOTE]
-> Doporučuje se povolit analyzátory ze sady .NET SDK namísto instalace `Microsoft.CodeAnalysis.NetAnalyzers` [balíčku NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers), pokud je to možné. Povolení analyzátorů ze sady .NET SDK zajistí, že automaticky získáte opravy chyb analyzátoru a nové analyzátory hned po aktualizaci sady SDK.
+> Doporučuje se povolit analyzátory ze sady .NET SDK namísto instalace `Microsoft.CodeAnalysis.NetAnalyzers` [balíčku NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers), pokud je to možné. Povolení analyzátorů ze sady .NET SDK zajistí, že automaticky získáte opravy chyb analyzátoru a nové analyzátory hned po aktualizaci sady SDK. V modelu NuGet je potřeba aktualizovat balíček NuGet pokaždé, když chcete mít nejnovější opravy chyb. Balíček NuGet se aktualizuje častěji.
 
 ## <a name="see-also"></a>Viz také
 

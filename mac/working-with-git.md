@@ -6,12 +6,12 @@ ms.author: jomatthi
 ms.date: 11/09/2020
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
 ms.custom: video
-ms.openlocfilehash: 148a72fb13ff34e3fa15f0c56e145a70fa16608d
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: dc865ec593f53149d9c004f252015def32325d18
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493228"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616174"
 ---
 # <a name="working-with-git"></a>Práce s úložištěm Git
 
@@ -59,13 +59,13 @@ Tyto akce umožňují následující akce:
 
 ## <a name="switching-branches"></a>Přepínání větví
 
-Ve výchozím nastavení se první větev vytvořená v úložišti nazývá **Hlavní** větev. Mezi hlavní větví a žádnou jinou není nic jiného, ale hlavní větev je ta, která se nejčastěji domnívá ve vývojových týmech jako "živá" nebo "produkční" větev.
+Ve výchozím nastavení se první větev vytvořená v úložišti nazývá **Hlavní** větev. Mezi hlavní větví a žádnou jinou není nic jiného, ale hlavní větev je ta, která se nejčastěji myslela ve vývojových týmech jako "živá" nebo "produkční" větev.
 
-Nezávislá čára vývoje se dá vytvořit pomocí větvení mimo hlavní (nebo jakoukoli jinou větev). To poskytuje novou verzi hlavní větve v určitém časovém okamžiku, což umožňuje vývoj nezávisle na tom, co je Live. Použití větví tímto způsobem se často používá k funkcím vývoje softwaru.
+Nezávislá čára vývoje se dá vytvořit vyskočím z hlavního (nebo jakékoli jiné větve) pro danou problematiku. To poskytuje novou verzi hlavní větve v určitém časovém okamžiku, což umožňuje vývoj nezávisle na tom, co je Live. Použití větví tímto způsobem se často používá k funkcím vývoje softwaru.
 
 Uživatelé můžou pro každé úložiště vytvořit libovolný počet větví, ale doporučuje se, aby po dokončení používání větve ho odstranili, aby se úložiště zachovalo.
 
-Větve se zobrazují v Visual Studio pro Mac procházením **správy verzí > správě větví a vzdálených...** :
+Větve se zobrazují v Visual Studio pro Mac procházením **správy verzí > správě větví a vzdálených...**:
 
 ![Zobrazení větví](media/version-control-gitBranch2.png)
 
@@ -91,7 +91,7 @@ Zkontrolujte všechny změny v projektu, a to tak, že přejdete na **řízení 
 
 To umožňuje zobrazení všech změn v každém souboru projektu s možností vrácení, vytvoření opravy nebo potvrzení změn.
 
-Pokud chcete soubor potvrdit do vzdáleného úložiště, stiskněte **Potvrdit** , zadejte potvrzovací zprávu a potvrďte tlačítko Potvrdit:
+Pokud chcete soubor potvrdit do vzdáleného úložiště, stiskněte **Potvrdit**, zadejte potvrzovací zprávu a potvrďte tlačítko Potvrdit:
 
 ![Potvrzení souboru](media/version-control-gitCommit.png)
 

@@ -1,5 +1,7 @@
 ---
 title: Rozšiřovací body služby jazyka a editoru | Microsoft Docs
+description: Přečtěte si o rozšiřujících bodech v editoru kódu sady Visual Studio, které můžete rozšířit, včetně většiny funkcí jazykové služby.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28bb086eb99e4b8128c04f62f9b370eb2eab8fa3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06329fcfcefe3ea75b772495f6a7e0dd14ced087
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703047"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615548"
 ---
 # <a name="language-service-and-editor-extension-points"></a>Rozšiřovací body služby jazyka a editoru
 Editor poskytuje Rozšiřovací body, které lze rozšířit jako součásti součásti Managed Extensibility Framework (MEF), včetně většiny funkcí jazykové služby. Jedná se o hlavní kategorie rozšiřovacích bodů:
@@ -87,7 +89,7 @@ internal static ContentTypeDefinition TestContentTypeDefinition;
 
 - CSharp
 
-- Šablony stylů CSS
+- CSS
 
 - ENC
 

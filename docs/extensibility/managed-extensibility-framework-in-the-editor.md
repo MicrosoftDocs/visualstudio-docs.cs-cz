@@ -1,5 +1,7 @@
 ---
 title: Managed Extensibility Framework v editoru | Microsoft Docs
+description: Přečtěte si o Managed Extensibility Framework, které vám umožní vytvořit vlastní komponenty pro rozšiřování editoru v sadě Visual Studio SDK.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 888c5206b87079cf9fa91cb68e9801cb3c4f8c1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd6ed0e495056bf2924e46bfdfcd074daf1faf87
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702868"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615587"
 ---
 # <a name="managed-extensibility-framework-in-the-editor"></a>Managed Extensibility Framework v editoru
 Editor je sestaven pomocí komponent Managed Extensibility Framework (MEF). Můžete sestavit vlastní komponenty rozhraní MEF pro rozšiřování editoru a váš kód může také spotřebovávat komponenty editoru.

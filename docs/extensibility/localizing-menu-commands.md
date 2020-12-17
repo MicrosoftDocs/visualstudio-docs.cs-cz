@@ -1,5 +1,7 @@
 ---
 title: Lokalizace příkazů nabídky | Microsoft Docs
+description: Naučte se, jak poskytnout lokalizovaný text pro příkazy nabídek a panelů nástrojů vytvořením lokalizovaných souborů. vsct a lokalizovaných souborů. resx pro VSPackage.
+ms.custom: SEO-VS-2020
 ms.date: 10/08/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -15,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c1c158fd689cbcae18fec5d3306e6d6fadb169f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51f3692a4539eddbf35e24de8024eadd39031080
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904557"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615600"
 ---
 # <a name="localize-menu-commands"></a>Příkazy nabídky lokalizace
 
@@ -32,7 +34,7 @@ Informace o lokalizaci instalačního prostředí naleznete v tématu [lokalizac
 
 V rozhraních VSPackage jsou příkazy nabídky a tlačítka panelu nástrojů definovány v souboru *. vsct* .
 
-1. V **Průzkumník řešení**změňte název souboru *. vsct* z *filename. vsct* na *filename. en-US. vsct*.
+1. V **Průzkumník řešení** změňte název souboru *. vsct* z *filename. vsct* na *filename. en-US. vsct*.
 
 2. Vytvořte kopii *filename. en-US. vsct* pro každý lokalizovaný jazyk.
 
@@ -112,7 +114,7 @@ Textové prostředky jiné než názvy příkazů jsou definovány v souborech p
 
 Je nutné upravit soubor *AssemblyInfo.cs* a soubor projektu pro zahrnutí lokalizovaných prostředků.
 
-1. V uzlu **vlastnosti** v **Průzkumník řešení**otevřete v editoru *AssemblyInfo.cs* nebo *AssemblyInfo. vb* .
+1. V uzlu **vlastnosti** v **Průzkumník řešení** otevřete v editoru *AssemblyInfo.cs* nebo *AssemblyInfo. vb* .
 
 2. Přidejte následující položku.
 

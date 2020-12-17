@@ -1,5 +1,7 @@
 ---
 title: Správa VSPackage | Microsoft Docs
+description: Seznamte se se správou VSPackage, abyste věděli, kdy můžete jednoduše použít výchozí správu rozhraní VSPackage, kterou poskytuje Visual Studio, a jak a kdy se má přizpůsobit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60745d07679ae53b85d169473ed37ab314b67624
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a040777671a5d6a4378e9b2ad68b2ffa2fabaeb
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702656"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615737"
 ---
 # <a name="manage-vspackages"></a>Správa balíčků VSPackage
 Ve většině případů se nemusíte starat o správu VSPackage, protože šablony projektů a položek registrují a automaticky načítají balíček. V některých případech se ale může vyžadovat, abyste se o správě balíčku dozvěděli trochu víc.

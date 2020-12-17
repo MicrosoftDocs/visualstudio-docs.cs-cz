@@ -1,5 +1,7 @@
 ---
 title: Hledání aplikace Visual Studio | Microsoft Docs
+description: Můžete nainstalovat více instancí stejné verze sady Visual Studio. Naučte se používat rozhraní API pro dotazování objektů COM k nalezení požadované instance.
+ms.custom: SEO-VS-2020
 ms.date: 08/21/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: heaths
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 93a6f39a9240002cd8008c9368799e10ab63b78d
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 8935af62b16ed6dd6d0d5d61412f347a95f32f23
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012474"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616285"
 ---
 # <a name="locate-visual-studio"></a>Vyhledání sady Visual Studio
 
@@ -29,7 +31,7 @@ Toto je rychlé rozhraní API jen pro čtení s balíčky NuGet dostupnými pro 
 
 Můžete vyhledat jednu instanci, která má danou cestu nebo aktuální proces, nebo zobrazit výčet všech instancí. Kompletní příklady, jak najít sadu Visual Studio, najdete v [našich ukázkách](https://github.com/Microsoft/vs-setup-samples) .
 
-## <a name="tools"></a>Nástroje
+## <a name="tools"></a>nástroje
 
 Pokud chcete najít sadu Visual Studio a další nástroje v prostředích pro vytváření sestavení, skripty PowerShellu, instalační programy a další scénáře, můžete použít přímo nebo distribuovatelné nástroje společně s vlastními skripty.
 
@@ -39,7 +41,7 @@ Pokud chcete najít sadu Visual Studio a další nástroje v prostředích pro v
 | [Rutiny VSSetup](https://github.com/Microsoft/vssetup.powershell) | Rutiny prostředí PowerShell podporované 2,0 a novějším, které vracejí formátované informace jako objekty, které můžete použít k vyhledání instancí na základě stejných kritérií jako _vswhere_ a zjišťování ještě více vlastností instancí. Příklady najdete na [wikiwebu](https://github.com/Microsoft/vssetup.powershell/wiki) . |
 | [VSIXBootstrapper](https://github.com/Microsoft/vsixbootstrapper) | Automaticky vyhledá _VSIXInstaller_ a předá příkazový řádek a nainstaluje soubor **. vsix* . Tato funkce může být užitečná v instalačních nástrojích, které nemají přímou podporu pro rozhraní API pro dotazy. Příklady najdete na [wikiwebu](https://github.com/Microsoft/vsixbootstrapper/wiki) . |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Změny v instalačním programu sady Visual Studio 2017](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup/)
 * [Spuštění sady Visual Studio pomocí DTE](launch-visual-studio-dte.md)

@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
 ms.custom: video
-ms.openlocfilehash: 33148c5202251525504864f26177da4497b5fabe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31e38d728eb3c336b1d3160a920ef18055de1b1f
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74983569"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616298"
 ---
 # <a name="working-with-git"></a>Práce s úložištěm Git
 
@@ -59,9 +59,9 @@ Tyto akce umožňují následující akce:
 
 ## <a name="switching-branches"></a>Přepínání větví
 
-Ve výchozím nastavení se první větev vytvořená v úložišti nazývá **Hlavní** větev. Mezi hlavní větví a žádnou jinou není nic jiného, ale hlavní větev je ta, která se nejčastěji domnívá ve vývojových týmech jako "živá" nebo "produkční" větev.
+Ve výchozím nastavení se první větev vytvořená v úložišti nazývá **Hlavní** větev. Mezi hlavní větví a žádnou jinou není nic jiného, ale hlavní větev je ta, která se nejčastěji myslela ve vývojových týmech jako "živá" nebo "produkční" větev.
 
-Nezávislá čára vývoje se dá vytvořit pomocí větvení mimo hlavní (nebo jakoukoli jinou větev). To poskytuje novou verzi hlavní větve v určitém časovém okamžiku, což umožňuje vývoj nezávisle na tom, co je Live. Použití větví tímto způsobem se často používá k funkcím vývoje softwaru.
+Nezávislá čára vývoje se dá vytvořit vyskočím z hlavního (nebo jakékoli jiné větve) pro danou problematiku. To poskytuje novou verzi hlavní větve v určitém časovém okamžiku, což umožňuje vývoj nezávisle na tom, co je Live. Použití větví tímto způsobem se často používá k funkcím vývoje softwaru.
 
 Uživatelé můžou pro každé úložiště vytvořit libovolný počet větví, ale doporučuje se, aby po dokončení používání větve ho odstranili, aby se úložiště zachovalo.
 

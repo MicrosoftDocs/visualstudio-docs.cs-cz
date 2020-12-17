@@ -1,5 +1,7 @@
 ---
 title: Lokalizace balíčků VSIX | Microsoft Docs
+description: Naučte se lokalizovat balíček VSIX vytvořením souboru s příponou. vsixlangpack pro každý cílový jazyk a jejich vložením do správné složky.
+ms.custom: SEO-VS-2020
 ms.date: 10/26/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d2d4222e45d56447951e86d558af9983a0d1cc9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc9f7055145748e0625788e7487bb978911bae7f
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702901"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615535"
 ---
 # <a name="localizing-vsix-packages"></a>Lokalizace balíčků VSIX
 
@@ -51,9 +53,9 @@ Při vytváření souboru vsixlangpack je nutné nastavit `Include in Vsix` vlas
 
 ### <a name="to-set-the-include-in-vsix-property"></a>Nastavení vlastnosti include v souboru VSIX
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor Extension. vsixlangpack a potom klikněte na příkaz **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor Extension. vsixlangpack a potom klikněte na příkaz **vlastnosti**.
 
-2. V **mřížce vlastností**klikněte na **zahrnout do VSIX**a nastavte jeho hodnotu na `true` .
+2. V **mřížce vlastností** klikněte na **zahrnout do VSIX** a nastavte jeho hodnotu na `true` .
 
 ## <a name="example"></a>Příklad
 

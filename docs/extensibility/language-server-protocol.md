@@ -1,5 +1,7 @@
 ---
 title: Přehled protokolu jazykového serveru | Microsoft Docs
+description: Přečtěte si, jak protokol jazykového serveru poskytuje užitečnou architekturu pro vystavení funkcí jazyka pro celou řadu nástrojů.
+ms.custom: SEO-VS-2020
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.assetid: 6a7d93c2-31ea-4bae-8b29-6988a567ddf2
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3bd5dce3cfb7022a8abb6397dc87b418144cbe1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2d642d1168cbd2a8bd7abadbcdbd7c1e2851b00e
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703106"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616127"
 ---
 # <a name="language-server-protocol"></a>Protokol jazyka serveru
 
@@ -108,7 +110,7 @@ Když uživatel pracuje s různými jazyky, VS Code obvykle spouští jazykový 
 
 ![Java a Sass](media/lsp-java-and-sass.png)
 
-### <a name="capabilities"></a>Možnosti
+### <a name="capabilities"></a>Schopnosti
 
 Ne všechny jazykové servery můžou podporovat všechny funkce definované protokolem. Proto klient a server oznámí svou podporovanou sadu funkcí prostřednictvím možností možnosti. Například server oznamuje, že může zpracovat požadavek "textDocument/definition", ale nemusí zpracovávat požadavek ' pracovní prostor/symbol '. Obdobně můžou klienti oznámit, že budou moct před uložením dokumentu zadat oznámení o tom, že se mají ukládat. aby mohl server vypočítat textové úpravy pro automatické formátování upravovaného dokumentu.
 

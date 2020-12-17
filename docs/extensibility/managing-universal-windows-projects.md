@@ -1,5 +1,7 @@
 ---
 title: Správa univerzálních projektů Windows | Microsoft Docs
+description: Pro podporu univerzálních aplikací pro Windows by rozšíření sady Visual Studio, která spravují projekty, měla být vědoma struktury projektu univerzální aplikace pro Windows.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 83e3b07bc3373070953709ffe913f37529e74bc7
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: f86edd33e7719dc326aa2c5d252d11322509de64
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012305"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615561"
 ---
 # <a name="manage-universal-windows-projects"></a>Správa univerzálních projektů pro Windows
 
@@ -25,7 +27,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ### <a name="navigate-the-shared-project"></a>Přejít na sdílený projekt
 
-1. Vytvořte projekt VSIX v jazyce C# s názvem **TestUniversalProject**. (**Soubor**  >  **Nové**  >  **Projekt** a potom **C#**  >  **rozšiřitelný**  >  **balíček sady Visual Studio**v jazyce C#). Přidejte šablonu položky projektu **vlastního příkazu** (na **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat**  >  **novou položku**a pak přejít na **rozšiřitelnost**). Název souboru **TestUniversalProject**.
+1. Vytvořte projekt VSIX v jazyce C# s názvem **TestUniversalProject**. (**Soubor**  >  **Nové**  >  **Projekt** a potom   >  **rozšiřitelný**  >  **balíček sady Visual Studio** v jazyce C#). Přidejte šablonu položky projektu **vlastního příkazu** (na **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat**  >  **novou položku** a pak přejít na **rozšiřitelnost**). Název souboru **TestUniversalProject**.
 
 2. Přidejte odkaz na *Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll* a *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* (v části **rozšíření** ).
 
@@ -291,7 +293,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
     output.OutputStringThreadSafe("set active project: " + platformCaption +'\n');
     ```
 
-16. Nyní to vyzkoušejte. Stiskněte klávesu F5 ke spuštění experimentální instance. Vytvoření projektu aplikace univerzálního středu v jazyce C# v experimentální instanci (v dialogovém okně **Nový projekt** , aplikace pro univerzální centrum **Visual C#**  >  **Windows**  >  **8**  >  **Universal**  >  **Hub App**). Po načtení řešení přejděte do nabídky **nástroje** , klikněte na **vyvolat TestUniversalProject**a pak zkontrolujte text v podokně **výstup** . Mělo by se zobrazit něco podobného:
+16. Nyní to vyzkoušejte. Stiskněte klávesu F5 ke spuštění experimentální instance. Vytvoření projektu aplikace univerzálního středu v jazyce C# v experimentální instanci (v dialogovém okně **Nový projekt** , aplikace pro univerzální centrum **Visual C#**  >  **Windows**  >  **8**  >    >  ). Po načtení řešení přejděte do nabídky **nástroje** , klikněte na **vyvolat TestUniversalProject** a pak zkontrolujte text v podokně **výstup** . Mělo by se zobrazit něco podobného:
 
     ```
     Found shared project: HubApp.Shared
@@ -353,7 +355,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
     output.OutputStringThreadSafe(string.Format("Shared item full path: {0}\n", fullPath));
     ```
 
-4. Nyní to vyzkoušejte. Stiskněte klávesu **F5** ke spuštění experimentální instance. Vytvoření projektu aplikace univerzálního centra v C# v experimentální instanci (v dialogovém okně **Nový projekt** **,**  >  aplikace Universal hub v**systému Windows**  >  **Windows 8**  >  **Universal**  >  **Hub App**) přejděte do nabídky **nástroje** a klikněte na **vyvolat TestUniversalProject**a pak zkontrolujte text v podokně **výstup** . Mělo by se zobrazit něco podobného:
+4. Nyní to vyzkoušejte. Stiskněte klávesu **F5** ke spuštění experimentální instance. Vytvoření projektu aplikace univerzálního centra v C# v experimentální instanci (v dialogovém okně **Nový projekt** **,**  >  aplikace Universal hub v **systému Windows**  >  **Windows 8**  >    >  ) přejděte do nabídky **nástroje** a klikněte na **vyvolat TestUniversalProject** a pak zkontrolujte text v podokně **výstup** . Mělo by se zobrazit něco podobného:
 
     ```
     Found shared project: HubApp.Shared
@@ -549,7 +551,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
     this.ModifyFileNameInProject(sharedHier, fullPath);
     ```
 
-11. Sestavte a spusťte projekt. V experimentální instanci vytvořte aplikaci univerzálního centra C#, přejděte do nabídky **nástroje** , klikněte na **vyvolat TestUniversalProject**a zaškrtněte text v podokně obecné výstup. Název první položky ve sdíleném projektu (očekáváme, že se jedná o soubor *App. XAML* ), který by měl být změněn a měla by se zobrazit, že <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> událost byla vyvolána. V takovém případě, protože přejmenování *App. XAML* způsobí, že se přejmenuje *App.XAML.cs* , měli byste vidět čtyři události (dvě pro každý projekt platformy). (Události DTE nesleduje položky ve sdíleném projektu.) Měly by se zobrazit dvě <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> události (jeden pro každý projekt platformy), ale žádné <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> události.
+11. Sestavte a spusťte projekt. V experimentální instanci vytvořte aplikaci univerzálního centra C#, přejděte do nabídky **nástroje** , klikněte na **vyvolat TestUniversalProject** a zaškrtněte text v podokně obecné výstup. Název první položky ve sdíleném projektu (očekáváme, že se jedná o soubor *App. XAML* ), který by měl být změněn a měla by se zobrazit, že <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> událost byla vyvolána. V takovém případě, protože přejmenování *App. XAML* způsobí, že se přejmenuje *App.XAML.cs* , měli byste vidět čtyři události (dvě pro každý projekt platformy). (Události DTE nesleduje položky ve sdíleném projektu.) Měly by se zobrazit dvě <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> události (jeden pro každý projekt platformy), ale žádné <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> události.
 
 12. Nyní se pokuste přejmenovat soubor v projektu platformy a v událostech, které se aktivují, můžete zobrazit rozdíl. `ShowMessageBox`Po volání metody přidejte následující kód `ModifyFileName` .
 
@@ -566,4 +568,4 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
     this.ModifyFileNameInProject(activePlatformHier, unsharedPath);
     ```
 
-13. Sestavte a spusťte projekt. V experimentální instanci vytvořte univerzální projekt C#, přejděte do nabídky **nástroje** , klikněte na **vyvolat TestUniversalProject**a zaškrtněte text v podokně obecné výstup. Po přejmenování souboru v projektu platformy by se měla zobrazit <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> událost a <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> událost. Vzhledem k tomu, že změna souboru nezpůsobila změnu žádné jiné soubory a vzhledem k tomu, že se změny položek v projektu platformy nerozšíří odkudkoli, je k dispozici pouze jedna z těchto událostí.
+13. Sestavte a spusťte projekt. V experimentální instanci vytvořte univerzální projekt C#, přejděte do nabídky **nástroje** , klikněte na **vyvolat TestUniversalProject** a zaškrtněte text v podokně obecné výstup. Po přejmenování souboru v projektu platformy by se měla zobrazit <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> událost a <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> událost. Vzhledem k tomu, že změna souboru nezpůsobila změnu žádné jiné soubory a vzhledem k tomu, že se změny položek v projektu platformy nerozšíří odkudkoli, je k dispozici pouze jedna z těchto událostí.

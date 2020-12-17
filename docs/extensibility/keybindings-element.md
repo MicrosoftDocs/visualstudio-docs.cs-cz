@@ -1,5 +1,7 @@
 ---
 title: Element Bindings elementu | Microsoft Docs
+description: Element Bindings seskupuje prvky vazby klíčů a další seskupení klíčů. Tento článek obsahuje příklad.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: df1720286007d8f6acf073c21f5b2dcc8486782c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 928637d8103a69eafd3bda4446a55bb7523f83a8
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703125"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616088"
 ---
 # <a name="keybindings-element"></a>Element Bindings elementu
 Element Bindings seskupuje prvky vazby klíčů a další seskupení klíčů.
@@ -39,7 +41,7 @@ Element Bindings seskupuje prvky vazby klíčů a další seskupení klíčů.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
