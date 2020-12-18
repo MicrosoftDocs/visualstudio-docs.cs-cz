@@ -3,7 +3,7 @@ title: Použití nástroje MSBuild
 description: Seznamte se s různými částmi souboru projektu MSBuild, včetně položek, metadat položek, vlastností, cílů a úkolů.
 ms.date: 10/19/2020
 ms.topic: conceptual
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 helpviewer_keywords:
 - MSBuild, tutorial
 ms.assetid: b8a8b866-bb07-4abf-b9ec-0b40d281c310
@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b26c13765daf5a82a9961e6509b36e24e18f4e0c
-ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
+ms.openlocfilehash: adc1a191e8fe3869273df546191f7701956018dd
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92298526"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684020"
 ---
 # <a name="walkthrough-use-msbuild"></a>Návod: použití nástroje MSBuild
 
@@ -41,7 +41,7 @@ Pokud máte aplikaci Visual Studio, pak již máte nainstalován nástroj MSBuil
 ::: moniker range="vs-2019"
 Pokud máte aplikaci Visual Studio, pak již máte nainstalován nástroj MSBuild. Se sadou Visual Studio 2019 se instaluje do instalační složky sady Visual Studio. Pro typickou výchozí instalaci ve Windows 10 se MSBuild.exe nachází pod instalační složkou v *MSBuild\Current\Bin*.
 
-Pokud chcete nástroj MSBuild nainstalovat do systému, který nemá Visual Studio, přejděte do sady [Visual Studio ke stažení](https://visualstudio.microsoft.com/downloads/) a přejděte dolů ke **všem souborům ke stažení**a pak rozbalte **Nástroje pro Visual Studio 2019**. Nainstalujte **Nástroje sestavení pro Visual Studio 2019**, které obsahují MSBuild, nebo nainstalujte [.NET Core SDK](/dotnet/core/sdk#acquiring-the-net-core-sdk).
+Pokud chcete nástroj MSBuild nainstalovat do systému, který nemá Visual Studio, přejděte do sady [Visual Studio ke stažení](https://visualstudio.microsoft.com/downloads/) a přejděte dolů ke **všem souborům ke stažení** a pak rozbalte **Nástroje pro Visual Studio 2019**. Nainstalujte **Nástroje sestavení pro Visual Studio 2019**, které obsahují MSBuild, nebo nainstalujte [.NET Core SDK](/dotnet/core/sdk#acquiring-the-net-core-sdk).
 
 V instalačním programu se ujistěte, že jsou vybrané nástroje MSBuild pro používané úlohy, a klikněte na **nainstalovat**.
 
@@ -58,14 +58,14 @@ V instalačním programu se ujistěte, že jsou vybrané nástroje MSBuild pro p
 1. Otevřete Visual Studio a vytvořte projekt.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **WinForms**a pak zvolte **vytvořit novou aplikaci model Windows Forms (.NET Framework)**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **WinForms** a pak zvolte **vytvořit novou aplikaci model Windows Forms (.NET Framework)**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
 
-    Do pole **Název** zadejte `BuildApp`. Zadejte **umístění** pro řešení, například *D: \\ *. Přijměte výchozí hodnoty pro **řešení**, **název řešení** (**BuildApp**) a **rozhraní**.
+    Do pole **Název** zadejte `BuildApp`. Zadejte **umístění** pro řešení, například *D: \\*. Přijměte výchozí hodnoty pro **řešení**, **název řešení** (**BuildApp**) a **rozhraní**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **Visual C#**  >  **Desktop Windows**a pak zvolte možnost **model Windows Forms aplikace (.NET Framework)**. Pak zvolte **OK**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **Visual C#**  >  **Desktop Windows** a pak zvolte možnost **model Windows Forms aplikace (.NET Framework)**. Pak zvolte **OK**.
 
-    Do pole **Název** zadejte `BuildApp`. Zadejte **umístění** pro řešení, například *D: \\ *. Přijměte výchozí hodnoty pro možnost **vytvořit adresář pro řešení** (vybráno), **Přidat do správy zdrojového kódu** (Nevybráno) a **název řešení** (**BuildApp**).
+    Do pole **Název** zadejte `BuildApp`. Zadejte **umístění** pro řešení, například *D: \\*. Přijměte výchozí hodnoty pro možnost **vytvořit adresář pro řešení** (vybráno), **Přidat do správy zdrojového kódu** (Nevybráno) a **název řešení** (**BuildApp**).
     ::: moniker-end
 
 1. Kliknutím na tlačítko **OK** nebo **vytvořit** vytvořte soubor projektu.
@@ -76,7 +76,7 @@ V instalačním programu se ujistěte, že jsou vybrané nástroje MSBuild pro p
 
 **Kontrola souboru projektu**
 
-1. V **Průzkumník řešení**klikněte na uzel projektu **BuildApp**.
+1. V **Průzkumník řešení** klikněte na uzel projektu **BuildApp**.
 
 1. V prohlížeči **vlastností** si všimněte, že vlastnost **soubor projektu** je *BuildApp. csproj*. Všechny soubory projektu jsou pojmenovány s příponou *proj*. Pokud jste vytvořili Visual Basic projekt, název souboru projektu by byl *BuildApp. vbproj*.
 
@@ -163,7 +163,7 @@ Spusťte MSBuild z **Developer Command Prompt** pro Visual Studio k sestavení c
 
 **Sestavení cíle:**
 
-1. Otevřete **okno příkazového**řádku.
+1. Otevřete **okno příkazového** řádku.
 
    (Windows 10) Do vyhledávacího pole na hlavním panelu začněte psát název nástroje, například `dev` nebo `developer command prompt` . Tím se zobrazí seznam nainstalovaných aplikací, které odpovídají vašemu vzoru hledání.
 
@@ -243,7 +243,7 @@ Tuto syntaxi použijte k prohlédnutí některých vlastností v souboru projekt
 
 1. Uložte soubor projektu.
 
-1. V **příkazovém okně**zadejte a spusťte tento řádek:
+1. V **příkazovém okně** zadejte a spusťte tento řádek:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -294,7 +294,7 @@ Vlastnosti mohou být definovány v příkazovém řádku pomocí přepínače-P
 
 **Nastavení hodnoty vlastnosti z příkazového řádku:**
 
-1. V **příkazovém okně**zadejte a spusťte tento řádek:
+1. V **příkazovém okně** zadejte a spusťte tento řádek:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld -p:Configuration=Release
@@ -324,7 +324,7 @@ Změnou úlohy zprávy zobrazíte hodnotu vlastnosti konfigurace se speciálním
 
 1. Uložte soubor projektu.
 
-1. V **příkazovém okně**zadejte a spusťte tento řádek:
+1. V **příkazovém okně** zadejte a spusťte tento řádek:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -388,7 +388,7 @@ Tuto syntaxi použijte k prohlédnutí typu položky kompilace v souboru projekt
 
 1. Uložte soubor projektu.
 
-1. V **příkazovém okně**zadejte a spusťte tento řádek:
+1. V **příkazovém okně** zadejte a spusťte tento řádek:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -420,7 +420,7 @@ Změňte úlohu zprávy na použití návratových znaků a kanálů řádků (%
 
 2. Uložte soubor projektu.
 
-3. V **příkazovém okně**zadejte a spusťte tento řádek:
+3. V **příkazovém okně** zadejte a spusťte tento řádek:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -472,7 +472,7 @@ Změňte úlohu zprávy na použití návratových znaků a kanálů řádků (%
 <Compile Include="*.cs" Exclude="*Designer*">
 ```
 
- Přidá všechny soubory s příponou *. cs* na typ položky kompilace, s výjimkou souborů, jejichž názvy obsahují *Návrháře*řetězce. Další příklady naleznete v tématu [Postupy: vyloučení souborů ze sestavení](../msbuild/how-to-exclude-files-from-the-build.md).
+ Přidá všechny soubory s příponou *. cs* na typ položky kompilace, s výjimkou souborů, jejichž názvy obsahují *Návrháře* řetězce. Další příklady naleznete v tématu [Postupy: vyloučení souborů ze sestavení](../msbuild/how-to-exclude-files-from-the-build.md).
 
 Atribut Exclude ovlivňuje pouze položky přidané atributem include v prvku položky, který je obsahuje obě. Příklad:
 
@@ -501,7 +501,7 @@ nevylučuje soubor *Form1.cs*, který byl přidán do předchozí položky eleme
 
 3. Uložte soubor projektu.
 
-4. V **příkazovém okně**zadejte a spusťte tento řádek:
+4. V **příkazovém okně** zadejte a spusťte tento řádek:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -543,7 +543,7 @@ nevylučuje soubor *Form1.cs*, který byl přidán do předchozí položky eleme
 
 2. Uložte soubor projektu.
 
-3. V **příkazovém okně**zadejte a spusťte tento řádek:
+3. V **příkazovém okně** zadejte a spusťte tento řádek:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -574,7 +574,7 @@ Všimněte si, jak se fráze "zkompilovat. DependentUpon" zobrazuje několikrát
 
 2. Uložte soubor projektu.
 
-3. V **příkazovém okně**zadejte a spusťte tento řádek:
+3. V **příkazovém okně** zadejte a spusťte tento řádek:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -613,7 +613,7 @@ Například seznam položek zdrojových souborů lze transformovat na kolekci so
 
 2. Uložte soubor projektu.
 
-3. V **příkazovém okně**zadejte a spusťte tento řádek:
+3. V **příkazovém okně** zadejte a spusťte tento řádek:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld

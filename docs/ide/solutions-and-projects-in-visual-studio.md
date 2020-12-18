@@ -1,8 +1,8 @@
 ---
 title: Informace o řešeních a projektech
 description: Přečtěte si o projektech a řešeních sady Visual Studio, způsobu vytváření nových projektů ze šablony a o tom, jak zobrazit & spravovat projekty v Průzkumník řešení.
-ms.custom: SEO-VS-2020
-ms.date: 12/15/2020
+ms.custom: SEO-VS-2020, contperf-fy21q2
+ms.date: 12/17/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewitem
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19d0d2fc862572fdf7226a78e0b34d0af0d57541
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 51a2f9683dd2285cc71dfff67020687f0c48afa4
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668089"
+ms.locfileid: "97683906"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -77,11 +77,14 @@ Můžete také vytvořit vlastní šablonu projektu, kterou můžete použít k 
 
 Když vytvoříte nový projekt, Visual Studio ho uloží do výchozího umístění *%USERPROFILE%\source\repos*. Pokud chcete toto umístění změnit, přejděte na **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení. Další informace najdete v [dialogovém okně Možnosti: projekty a řešení > umístění](./reference/projects-solutions-locations-options.md).
 
+> [!TIP]
+> Příklad projektu a řešení vytvořeného od začátku, dokončení s podrobnými pokyny a ukázkový kód naleznete v tématu [Úvod do projektů a řešení](../get-started/tutorial-projects-solutions.md).
+
 ## <a name="solution-explorer"></a>Průzkumník řešení
 
 Po vytvoření nového projektu můžete použít **Průzkumník řešení** k zobrazení a správě projektu a řešení a jejich přidružených položek. Následující ilustrace ukazuje **Průzkumník řešení** s řešením C#, které obsahuje dva projekty:
 
-![Průzkumník řešení](../ide/media/vs2015_solution_explorer.png)
+![Snímek obrazovky Průzkumník řešení.](../ide/media/vs2015_solution_explorer.png)
 
 Řada příkazů nabídky je k dispozici v nabídce po kliknutí pravým tlačítkem myši na různých položkách v **Průzkumník řešení**. Mezi tyto příkazy patří sestavení projektu, Správa balíčků NuGet, přidání odkazu, přejmenování souboru a spuštění testů, stačí jenom pár název. Panel nástrojů v horní části **Průzkumník řešení** obsahuje tlačítka pro přepínání ze zobrazení řešení do zobrazení složky, zobrazení skrytých souborů, sbalení všech uzlů a další.
 

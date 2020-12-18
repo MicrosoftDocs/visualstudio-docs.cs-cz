@@ -1,7 +1,7 @@
 ---
 title: Práce s řešeními a projekty
 description: Přečtěte si o rozdílech mezi řešeními a projekty a o jejich použití v aplikaci Visual Studio.
-ms.custom: SEO-VS-2020
+ms.custom: SEO-VS-2020, contperf-fy21q2
 ms.date: 02/06/2018
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bbfa16273dc323d2ad175e965a19a22ad0d17ce
-ms.sourcegitcommit: 6f37100d4b8c15a21d3858335ded3c26ab275b93
+ms.openlocfilehash: c6649b313d4ab03c1f096a6bcbc466cb338f427c
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97599476"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684029"
 ---
 # <a name="work-with-solutions-and-projects"></a>Práce s řešeními a projekty
 
@@ -48,18 +48,18 @@ Informace o vytvoření nového projektu ze šablony naleznete v tématu [Vytvo�
 
 Pokud máte kolekci zdrojových souborů kódu, můžete je snadno přidat do projektu.
 
-1. V nabídce vyberte možnost **soubor**  >  **Nový**  >  **projekt z existujícího kódu**.
+1. V nabídce vyberte **soubor**  >  **Nový**  >  **projekt z existujícího kódu**.
 
-1. V průvodci **vytvořením projektu z existujících souborů kódu** zvolte požadovaný typ projektu v poli **jaký typ projektu chcete vytvořit?** rozevírací seznam a poté klikněte na tlačítko **Další** .
+1. V průvodci **vytvořit projekt z existujících souborů kódu** vyberte požadovaný typ projektu v poli **jaký typ projektu chcete vytvořit?** rozevírací seznam a pak klikněte na tlačítko **Další** .
 
-1. V průvodci přejděte do umístění souborů a potom do pole **název** zadejte název nového projektu. Až skončíte, klikněte na tlačítko **Dokončit** .
+1. V průvodci přejděte do umístění souborů a potom do pole **název** zadejte název nového projektu. Po dokončení vyberte tlačítko **Dokončit** .
 
 > [!NOTE]
 > Tato možnost funguje nejlépe pro relativně jednoduchou kolekci souborů. V současné době jsou podporovány pouze typy projektů C++, Apache Cordova, Visual Basic a C#.
 
 ## <a name="add-files-to-a-solution"></a>Přidat soubory do řešení
 
-Pokud máte soubor, který se vztahuje na více projektů, jako je soubor Readme pro řešení nebo jiné soubory, které logicky náležejí na úrovni řešení, nikoli v rámci konkrétního projektu, můžete je přidat do samotného řešení. Chcete-li přidat položku do řešení, v nabídce kontext (klikněte pravým tlačítkem myši) uzlu řešení v **Průzkumník řešení**, vyberte možnost **Přidat**  >  **novou položku** nebo **Přidat**  >  **existující položku**.
+Pokud máte soubor, který se vztahuje na více projektů, jako je soubor Readme pro řešení nebo jiné soubory, které logicky náležejí na úrovni řešení, nikoli v rámci konkrétního projektu, můžete je přidat do samotného řešení. Chcete-li přidat položku do řešení, v nabídce kontext (klikněte pravým tlačítkem myši) uzlu řešení v **Průzkumník řešení** vyberte možnost **Přidat**  >  **novou položku** nebo **Přidat**  >  **existující položku**.
 
 ## <a name="create-a-net-project-that-targets-a-specific-version-of-the-net-framework"></a>Vytvořte projekt .NET, který se zaměřuje na konkrétní verzi .NET Framework
 
@@ -67,7 +67,7 @@ Při vytváření projektu .NET Framework můžete zadat konkrétní verzi .NET 
 
 ::: moniker range="vs-2017"
 
-Chcete-li určit .NET Framework verzi, zvolte rozevírací nabídku **rozhraní** v dialogovém okně **Nový projekt** .
+Chcete-li určit verzi .NET Framework, v dialogovém okně **Nový projekt** vyberte rozevírací nabídku **rozhraní** .
 
 ![Rozevírací seznam rozhraní v dialogovém okně Nový projekt](./media/vside-newproject-framework.png)
 
@@ -78,7 +78,7 @@ Chcete-li určit .NET Framework verzi, zvolte rozevírací nabídku **rozhraní*
 
 ::: moniker range=">=vs-2019"
 
-Chcete-li určit .NET Framework verzi, zvolte rozevírací nabídku **rozhraní** na stránce **vytvořit nový projekt** .
+Chcete-li určit .NET Framework verzi, vyberte v rozevírací nabídce **rozhraní** na stránce **vytvořit nový projekt** .
 
 ![Selektor architektury v konfiguraci nového projektu](media/vs-2019/configure-new-project-framework.png)
 
@@ -94,11 +94,11 @@ Můžete také vytvořit prázdná řešení, která neobsahují žádné projek
 
 ::: moniker range="vs-2017"
 
-2. V levém podokně (**šablony**) v rozbaleném seznamu vyberte **jiné typy projektů** > **řešení sady Visual Studio** .
+2. V levém podokně (**šablony**) vyberte v rozbaleném seznamu **Další typy projektů** > **řešení sady Visual Studio** .
 
 3. V prostředním podokně vyberte **prázdné řešení**.
 
-4. Zadejte **název** a hodnoty **umístění** pro vaše řešení a pak zvolte **OK**.
+4. Zadejte **název** a hodnoty **umístění** pro vaše řešení a pak vyberte **OK**.
 
 ::: moniker-end
 
@@ -108,7 +108,7 @@ Můžete také vytvořit prázdná řešení, která neobsahují žádné projek
 
 3. Vyberte šablonu **prázdného řešení** a potom klikněte na tlačítko **Další**.
 
-4. Zadejte **název** a hodnoty **umístění** pro vaše řešení a pak zvolte **vytvořit**.
+4. Zadejte **název** a hodnoty **umístění** pro vaše řešení a pak vyberte **vytvořit**.
 
 ::: moniker-end
 
@@ -141,7 +141,7 @@ Chcete-li vytvořit dočasný projekt, nejprve přejít na **nástroje**  >  **M
 
 1. V Průzkumníku souborů přejděte o jednu úroveň výše.
 
-1. Zvolte složku, která obsahuje řešení, a potom stiskněte klávesu **Delete** .
+1. Vyberte složku, která obsahuje řešení, a potom stiskněte klávesu **Delete** .
 
 ## <a name="see-also"></a>Viz také
 

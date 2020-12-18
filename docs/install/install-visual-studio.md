@@ -3,7 +3,7 @@ title: Instalace sady Visual Studio
 titleSuffix: ''
 description: Přečtěte si, jak nainstalovat Visual Studio, krok za krokem.
 ms.date: 12/13/2019
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 ms.topic: conceptual
 f1_keywords:
 - vs.about
@@ -20,12 +20,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3f0d17fcaf856799ded82ebe684d671b358cb8df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7dee7965d1c98dbdb05f0edc83c6c8799047acde
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88114268"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684054"
 ---
 # <a name="install-visual-studio"></a>Instalace sady Visual Studio
 
@@ -110,7 +110,7 @@ Další informace o tom, jak to udělat, najdete na stránce pro stažení [pře
 
 ::: moniker range="vs-2019"
 
-Chcete-li to provést, zvolte následující tlačítko, zvolte požadovanou verzi sady Visual Studio, zvolte možnost **Uložit**a pak zvolte možnost **Otevřít složku**.
+Chcete-li to provést, zvolte následující tlačítko, zvolte požadovanou verzi sady Visual Studio, zvolte možnost **Uložit** a pak zvolte možnost **Otevřít složku**.
 
  > [!div class="button"]
  > [Stáhnout Visual Studio](https://visualstudio.microsoft.com/downloads)
@@ -139,7 +139,7 @@ Až instalační program nainstalujete, můžete ho použít k přizpůsobení i
 
  ::: moniker range="vs-2017"
 
-1. V **instalační program pro Visual Studio**Najděte požadované zatížení.
+1. V **instalační program pro Visual Studio** Najděte požadované zatížení.
 
    ![Visual Studio 2017: instalace úlohy](../install/media/vs-installer-installing-workloads.png)
 
@@ -153,7 +153,7 @@ Až instalační program nainstalujete, můžete ho použít k přizpůsobení i
 
 ::: moniker range="vs-2019"
 
-1. V **instalační program pro Visual Studio**Najděte požadované zatížení.
+1. V **instalační program pro Visual Studio** Najděte požadované zatížení.
 
    ![Visual Studio 2019: instalace úlohy](../install/media/vs-2019/vs-installer-workloads.png)
 
@@ -233,7 +233,7 @@ Další informace najdete na stránce [Výběr umístění instalace](change-ins
 
 1. Po dokončení instalace sady Visual Studio klikněte na tlačítko **Spustit** a začněte s vývojem v aplikaci Visual Studio.
 
-2. Zvolte **soubor**a pak zvolte **Nový projekt**.
+2. Zvolte **soubor** a pak zvolte **Nový projekt**.
 
 3. Vyberte typ projektu.
 

@@ -3,18 +3,18 @@ title: Nastavení tmavého motivu sady Visual Studio a změna barev textu
 description: Naučte se, jak změnit výchozí barevný motiv sady Visual Studio na tmavý režim a změnit barvy písma v editoru kódu.
 ms.date: 08/20/2020
 ms.topic: how-to
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d58bf3a00d3db208abfad23a67bd115914f14a15
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d261d6c13572be6df80ca36f37e19792d53e2a32
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801396"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684036"
 ---
 # <a name="how-to-personalize-the-visual-studio-ide-and-the-editor"></a>Postupy: Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio a editoru
 
@@ -36,9 +36,9 @@ Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke staže
 
 Výchozí barevný motiv pro uživatelské rozhraní sady Visual Studio se nazývá **modrý**. Pojďme změnit na **tmavě**.
 
-1. Na panelu nabídek, který je řádek nabídek, jako je například **soubor** a **Úpravy**, vyberte možnost **nástroje**  >  **Options**.
+1. Na panelu nabídek, který je řádek nabídek, jako je například **soubor** a **Úpravy**, vyberte možnost **nástroje**  >  .
 
-1. Na stránce **Environment**  >  **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavý**a pak zvolte **OK**.
+1. Na stránce   >  **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavý** a pak zvolte **OK**.
 
    Barevný motiv pro celé vývojové prostředí (IDE) sady Visual Studio se změní na **tmavý**.
 
@@ -74,7 +74,7 @@ Teď přizpůsobíme některé barvy textu pro Editor. Nejprve vytvoříme nový
 
 1. V řádku nabídek vyberte **soubor**  >  **Nový**  >  **soubor**.
 
-1. V dialogovém okně **nový soubor** v kategorii **Obecné** zvolte možnost **soubor XML**a pak zvolte možnost **otevřít**.
+1. V dialogovém okně **nový soubor** v kategorii **Obecné** zvolte možnost **soubor XML** a pak zvolte možnost **otevřít**.
 
 1. Vložte následující kód XML pod řádek, který obsahuje `<?xml version="1.0" encoding="utf-8"?>` .
 
@@ -108,9 +108,9 @@ Teď přizpůsobíme některé barvy textu pro Editor. Nejprve vytvoříme nový
 
    ![Barvy písma souboru XML](media/quickstart-personalize-xml-file.png)
 
-1. Chcete-li otevřít dialogové okno **Možnosti** , v řádku nabídek vyberte možnost **nástroje**  >  **Options** .
+1. Chcete-li otevřít dialogové okno **Možnosti** , v řádku nabídek vyberte možnost **nástroje**  >   .
 
-1. V části **prostředí**vyberte kategorii **písma a barvy** .
+1. V části **prostředí** vyberte kategorii **písma a barvy** .
 
    Všimněte si, že text v části **Zobrazit nastavení pro** říká **textový editor** &mdash; je to, co chceme. Rozbalením rozevíracího seznamu jenom zobrazíte rozsáhlý seznam míst, kde můžete přizpůsobit písma a barvu textu.
 

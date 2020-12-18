@@ -4,7 +4,7 @@ titleSuffix: ''
 description: Naučte se, jak upravit Visual Studio, krok za krokem.
 ms.date: 10/12/2020
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 helpviewer_keywords:
 - modify Visual Studio
 - change visual studio
@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: dad71e4f52350357106ee9a9ef9ce90d18204bfb
-ms.sourcegitcommit: 4eb8fe6eb7f1dc639f1d213db05a7a3007e8087e
+ms.openlocfilehash: 17a02fb8c05c6f1720aa1b352e30c46e04a8b69d
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92157372"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684098"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>Změna sady Visual Studio přidáním nebo odebráním úloh a součástí
 
@@ -55,7 +55,7 @@ Jak na to:
 
 1. Najděte Instalační program pro Visual Studio v počítači.
 
-     Například na počítači se systémem Windows 10 vyberte možnost **Start**a potom přejděte k písmenu **v**, kde je uveden jako **instalační program pro Visual Studio**.
+     Například na počítači se systémem Windows 10 vyberte možnost **Start** a potom přejděte k písmenu **v**, kde je uveden jako **instalační program pro Visual Studio**.
 
      ![Instalační program pro Visual Studio](media/locate-the-visual-studio-installer.png "Vyhledání instalačního programu Microsoft Visual Studio")
 
@@ -67,7 +67,7 @@ Jak na to:
      ![Spuštění nebo změna sady Visual Studio](media/modify-visual-studio.png "Úpravy sady Visual Studio 2017")
 
      > [!IMPORTANT]
-     > Pokud máte vyřízenou aktualizaci, tlačítko Upravit je na jiném místě. Tímto způsobem můžete aplikaci Visual Studio upravit bez aktualizace, takže byste ji měli vybrat. Klikněte na tlačítko **Další**a pak zvolte možnost **Upravit**.
+     > Pokud máte vyřízenou aktualizaci, tlačítko Upravit je na jiném místě. Tímto způsobem můžete aplikaci Visual Studio upravit bez aktualizace, takže byste ji měli vybrat. Klikněte na tlačítko **Další** a pak zvolte možnost **Upravit**.
      >
      > ![Aktualizace nebo změna sady Visual Studio](media/modify-or-update-visual-studio.png "Aktualizace nebo změna sady Visual Studio 2017")
 
@@ -93,7 +93,7 @@ Jak na to:
      ![Zvolte edici Visual Studio a pak upravit.](media/vs-2019/vs-installer-modify.png "Zvolte edici Visual Studio 2019 a pak upravte")
 
      > [!IMPORTANT]
-     > Pokud máte vyřízenou aktualizaci, tlačítko Upravit je na jiném místě. Tímto způsobem můžete aplikaci Visual Studio upravit bez aktualizace, chcete. Zvolte možnost **Další**a pak zvolte možnost **Upravit**.
+     > Pokud máte vyřízenou aktualizaci, tlačítko Upravit je na jiném místě. Tímto způsobem můžete aplikaci Visual Studio upravit bez aktualizace, chcete. Zvolte možnost **Další** a pak zvolte možnost **Upravit**.
      >
      > ![Aktualizace nebo změna sady Visual Studio](media/vs-2019/modify-update-visual-studio.png "Aktualizace nebo změna sady Visual Studio 2019")
 

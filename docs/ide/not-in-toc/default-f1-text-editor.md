@@ -3,19 +3,19 @@ title: Výchozí stránka Nápověda F1 pro textový editor
 description: Výchozí stránka pro žádosti o nápovědu F1 pro textový editor sady Visual Studio
 ms.date: 08/20/2020
 ms.topic: troubleshooting
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 robots: noindex,nofollow
 f1_keywords:
 - vs.texteditor
 manager: jillfra
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 7a26e102ad71025edf92a499a1439022d9735eab
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 1b2c34a2cb93bccd8b9f85d9dcbae9dfb86cae89
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808243"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684074"
 ---
 # <a name="f1-help-for-the-text-editor"></a>Nápověda F1 pro textový editor
 
@@ -23,7 +23,7 @@ Vypadá to, že se nám nepovedlo najít, co jste hledali a Omlouváme se. Můž
 
 ## <a name="cursor-position"></a>Pozice kurzoru
 
-Pokud hledáte nápovědu F1 pro klíčové slovo nebo název rozhraní API, nezapomeňte před stisknutím klávesy **F1**umístit kurzor dovnitř nebo těsně od slova napravo. Pokud se tím problém nevyřeší, zkuste jeden z následujících návrhů.
+Pokud hledáte nápovědu F1 pro klíčové slovo nebo název rozhraní API, nezapomeňte před stisknutím klávesy **F1** umístit kurzor dovnitř nebo těsně od slova napravo. Pokud se tím problém nevyřeší, zkuste jeden z následujících návrhů.
 
 ## <a name="find-help-on-a-keyword-or-api"></a>Najít pomocníka s klíčovým slovem nebo rozhraním API
 
