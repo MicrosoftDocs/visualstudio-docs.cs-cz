@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37d4bc0417d30d64a05cc7f283784d3b23d9adee
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 25819d8d691836c12c73d9d76e334e36d50b83b4
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134024"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668869"
 ---
 # <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Zápis a ladění spuštěného kódu XAML pomocí programu XAML Hot reloading v aplikaci Visual Studio
 
@@ -41,7 +41,7 @@ Následující ilustrace znázorňuje použití živého vizuálního stromu pro
 ![Opětovné načítání XAML za provozu](../debugger/media/xaml-hot-reload-using.gif)
 
 > [!NOTE]
-> Aplikace Visual Studio XAML Hot Loading je aktuálně podporována pouze při spuštění aplikace v aplikaci Visual Studio nebo Blend pro Visual Studio s připojeným ladícím programem ( **F5** nebo **Spustit ladění** ). Toto prostředí nemůžete povolit pomocí možnosti [připojit k procesu](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) , pokud [ručně nenastavíte proměnnou prostředí](xaml-hot-reload-troubleshooting.md#verify-that-you-use-start-debugging-rather-than-attach-to-process).
+> Aplikace Visual Studio XAML Hot Loading je aktuálně podporována pouze při spuštění aplikace v aplikaci Visual Studio nebo Blend pro Visual Studio s připojeným ladícím programem (**F5** nebo **Spustit ladění**). Toto prostředí nemůžete povolit pomocí možnosti [připojit k procesu](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) , pokud [ručně nenastavíte proměnnou prostředí](xaml-hot-reload-troubleshooting.md#verify-that-you-use-start-debugging-rather-than-attach-to-process).
 
 ## <a name="known-limitations"></a>Známá omezení
 
@@ -53,18 +53,18 @@ Níže jsou známá omezení pro opětovné načtení kódu XAML. Chcete-li obej
 |Vytváření objektů prostředků ve slovníku prostředků, jako jsou například v rámci stránky nebo okna vaší aplikace nebo souboru *App. XAML*|Podporováno od aktualizace Visual Studio 2019 Update 2|Podporováno|Příklad: přidání do `SolidColorBrush` slovníku prostředků pro použití jako `StaticResource` .</br>Poznámka: statické prostředky, převaděče stylu a další elementy zapsané do slovníku prostředků mohou být použity nebo použity při použití kódu XAML Hot reloading. Nepodporují se jenom vytváření prostředků.</br> Změna vlastnosti slovníku prostředků `Source` .|
 |Přidání nových ovládacích prvků, tříd, oken nebo jiných souborů do projektu v době, kdy aplikace běží|Nepodporuje se|Nepodporuje se|Žádné|
 |Správa balíčků NuGet (přidávání/odebírání a aktualizace balíčků)|Nepodporuje se|Nepodporuje se|Žádné|
-|Změna datové vazby, která používá rozšíření značek {x:Bind}|Není k dispozici|Podporováno od sady Visual Studio 2019|To vyžaduje Windows 10 verze 1809 (Build 10.0.17763). Nepodporováno v aplikaci Visual Studio 2017 nebo v předchozích verzích.|
-|Změna direktiv X:UID – se nepodporuje.|Není k dispozici|Nepodporuje se|Žádné|
+|Změna datové vazby, která používá rozšíření značek {x:Bind}|–|Podporováno od sady Visual Studio 2019|To vyžaduje Windows 10 verze 1809 (Build 10.0.17763). Nepodporováno v aplikaci Visual Studio 2017 nebo v předchozích verzích.|
+|Změna direktiv X:UID – se nepodporuje.|–|Nepodporuje se|Žádné|
 |Více procesů | Podporováno | Podporováno | Podporováno v aplikaci Visual Studio 2019 [verze 16,6](/visualstudio/releases/2019/release-notes-v16.6) a novější |
 
 ## <a name="error-messages"></a>Chybové zprávy
 
 Při použití kódu XAML Hot reload může docházet k následujícím chybám.
 
-|Chybová zpráva|Description|
+|Chybová zpráva|Popis|
 |-|-|
 |Zajistěte selhání události|Chyba znamená, že se pokoušíte o přenos události do některého z vašich ovládacích prvků, které se při spuštění aplikace nepodporují.|
-|Tato změna není podporována nástrojem XAML Hot Loading a nebude použita během ladicí relace.|Chyba indikuje, že změna, kterou zkoušíte, není podporována kódováním XAML Hot reloading. Zastavte ladicí relaci, proveďte změnu a pak znovu spusťte ladicí relaci. Pokud zjistíte nepodporovaný scénář, který byste chtěli zobrazit, použijte naši novou možnost navrhnout funkci v [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html). |
+|Tato změna není podporována nástrojem XAML Hot Loading a nebude použita během ladicí relace.|Chyba indikuje, že změna, kterou zkoušíte, není podporována kódováním XAML Hot reloading. Zastavte ladicí relaci, proveďte změnu a pak znovu spusťte ladicí relaci. Pokud zjistíte nepodporovaný scénář, který byste chtěli zobrazit, použijte naši novou možnost navrhnout funkci v [komunitě vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8). |
 
 ## <a name="see-also"></a>Viz také
 

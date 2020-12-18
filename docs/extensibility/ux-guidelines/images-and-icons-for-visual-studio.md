@@ -1,5 +1,6 @@
 ---
 title: Obrázky a ikony pro Visual Studio | Microsoft Docs
+description: Přečtěte si o konceptech návrhu používaných k vytváření imagí a ikon pro Visual Studio.
 ms.date: 04/26/2017
 ms.topic: overview
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
@@ -8,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: edbf1542277189f37565e7ff415a52025094e595
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f29fd0a69ceafa33c00593b67f6775a723780c26
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85906119"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668648"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Obrázky a ikony pro Visual Studio
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a> Použití obrázku v aplikaci Visual Studio
@@ -293,7 +294,7 @@ ms.locfileid: "85906119"
 
  Modrá se aplikuje na neutrální modifikátory akcí nejčastěji reprezentované jako šipky, jako je "otevřít", "Další", "předchozí", "Import" a "Export".
 
-|Přejít k poli|Dávkové vrácení se změnami|Editor adres|Editor přidružení|
+|Přejít k poli|Dávková Check-In|Editor adres|Editor přidružení|
 |-|-|-|-|
 |![Přejít na ikonu pole](../../extensibility/ux-guidelines/media/0405-11_gotofield.png "0405-11_GoToField")|![Ikona&#45;kontroly v dávce](../../extensibility/ux-guidelines/media/0405-12_batchedcheckin.png "0405-12_BatchedCheckIn")|![Ikona editoru adres](../../extensibility/ux-guidelines/media/0405-13_addresseditor.png "0405-13_AddressEditor")|![Ikona editoru přidružení](../../extensibility/ux-guidelines/media/0405-14_associationeditor.png "0405-14_AssociationEditor")|
 
@@ -308,7 +309,7 @@ ms.locfileid: "85906119"
 
 |Spustit|Zastavit|Odstranit|Uložit|Přejít zpátky|
 |-|-|-|-|-|
-|![Ikona spuštění](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Ikona zastavení](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")|![Ikona Odstranit](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")|![Ikona Uložit](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")|![Ikona navigace zpátky](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")|
+|![Ikona spuštění](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Ikona zastavení – plné červené čtverce](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")|![Ikona Odstranit](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")|![Ikona Uložit](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")|![Ikona navigace zpátky](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")|
 
 ### <a name="code-hierarchy-palette"></a>Paleta hierarchie kódu
 
@@ -326,7 +327,7 @@ ms.locfileid: "85906119"
 |ASP, HTML, WPF|ASP.NET HTML WPF – modrá|0095D7/0149 215|![0095D7 vzorníku](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|
 |C++|Fialová CPP|9B4F96/155, 79150|![9B4F96 vzorníku](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|
 |C#|CS zelená (akce VS zelená)|388A34/56138, 52|![388A34 vzorníku](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|
-|Šablony stylů CSS|CSS – červená|BD1E2D/189, 30, 45|![BD1E2D vzorníku](../../extensibility/ux-guidelines/media/0405_bd1e2d.png "0405_BD1E2D")|
+|CSS|CSS – červená|BD1E2D/189, 30, 45|![BD1E2D vzorníku](../../extensibility/ux-guidelines/media/0405_bd1e2d.png "0405_BD1E2D")|
 |F#|Nachová FS|672878/103, 40120|![Vzorník 672878](../../extensibility/ux-guidelines/media/0405_672878.png "0405_672878")|
 |JavaScript|JS – oranžová|F16421/241100, 33|![F16421 vzorníku](../../extensibility/ux-guidelines/media/0405_f16421.png "0405_F16421")|
 |VB|VB Blue (VS Action Blue)|00539C/0, 83156|![00539C vzorníku](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|
@@ -339,9 +340,9 @@ ms.locfileid: "85906119"
 |-|-|-|-|-|-|
 |![Ikona Visual Basic](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")|![Ikona&#35; v jazyce C](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")|![Ikona&#43;&#43; v jazyce C](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")|![Ikona F&#35;](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")|![Ikona JavaScriptu](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")|![Ikona Pythonu](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")|
 
-|HTML|WPF|ASP|Šablony stylů CSS|TypeScript|
+|HTML|WPF|ASP|CSS|TypeScript|
 |-|-|-|-|-|-|
-|![Ikona HTML](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![Ikona WPF](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![Ikona ASP](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![Ikona CSS](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />Šablony stylů CSS|![Ikona TypeScript](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript||
+|![Ikona HTML](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![Ikona WPF](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![Ikona ASP](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![Ikona CSS](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![Ikona TypeScript](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript||
 
 #### <a name="intellisense"></a>IntelliSense
  Ikony IntelliSense používají výhradní paletu barev. Tyto barvy slouží k usnadnění rozlišení mezi různými položkami v místním seznamu technologie IntelliSense.
@@ -360,7 +361,7 @@ ms.locfileid: "85906119"
 |-|-|-|-|-|
 |![Ikona třídy IntelliSense](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405-36_IntelliSenseClass")|![Ikona soukromé události technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405-37_IntelliSensePrivateEvent")|![Ikona delegáta technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405-38_IntelliSenseDelegate")|![Metoda IntelliSense – ikona přítele](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405-39_IntelliSenseMethodFriend")|![Ikona pole](../../extensibility/ux-guidelines/media/0405-40_field.png "0405-40_Field")|
 
-|Chráněná položka výčtu|Objekt|Šablona|Zástupce výjimky|
+|Chráněná položka výčtu|Objekt|Template (Šablona)|Zástupce výjimky|
 |-|-|-|-|
 |![Ikona položky výčtu Protected IntelliSense](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405-41_IntelliSenseProtectedEnumItem")|![Ikona objektu IntelliSense](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405-42_IntelliSenseObject")|![Ikona šablony technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405-43_IntelliSenseTemplate")|![Ikona zástupce výjimky technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405-44_IntelliSenseExceptionShortcut")|
 
@@ -380,4 +381,4 @@ ms.locfileid: "85906119"
 
 |Výstrahy|Upozornění|Dokončit|Zastavit|
 |-|-|-|-|
-|![Ikona výstrahy](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")|![Ikona upozornění](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")|![Ikona dokončení](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")|![Ikona zastavení](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")|
+|![Ikona výstrahy](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")|![Ikona upozornění](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")|![Ikona dokončení](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")|![Ikona zastavit – plné červené kolečko s bílým čtvercem uprostřed](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")|

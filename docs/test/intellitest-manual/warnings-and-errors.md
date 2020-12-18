@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 639b68c4d999a5e491f6e52a2cf3a7960563ed17
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: d72ee803389c692233478d742dadbcf514a3a036
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329429"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668063"
 ---
 # <a name="warnings-and-errors"></a>Upozornění a chyby
 
@@ -346,4 +346,4 @@ V některých situacích je změna statického pole přijatelná:
 
 ## <a name="got-feedback"></a>Máte zpětnou vazbu?
 
-Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://aka.ms/feedback/suggest?space=8).

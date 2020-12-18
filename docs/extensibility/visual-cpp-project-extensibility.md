@@ -10,12 +10,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9427895644686c5c3b50311c8a3ab3ee036a6f4
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 6ba78ff7d38d993394072aa9dd18a7a8fa8cbb9d
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862462"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668700"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Rozšiřitelnost systému projektů Visual Studio C++ a integrace sady nástrojů
 
@@ -68,11 +68,11 @@ Tyto hodnoty vlastností určují názvy složek v `$(VCTargetsPath)` kořenové
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PlatformToolsets*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(PlatformToolset)`
 
-`$(VCTargetsPath)` \\ *Platforms* \\ Složka platformy se používá v případě `$(ApplicationType)` , že je v projektech Windows Desktop prázdné.
+`$(VCTargetsPath)` \\  \\ Složka platformy se používá v případě `$(ApplicationType)` , že je v projektech Windows Desktop prázdné.
 
 ### <a name="add-a-new-platform-toolset"></a>Přidat novou sadu nástrojů platformy
 
-Chcete-li přidat novou sadu nástrojů, například "MyToolset" pro existující platformu Win32, vytvořte složku *MyToolset* v rámci `$(VCTargetsPath)` * \\ platforem \\ Win32 \\ PlatformToolsets \\ *a v ní vytvořte sady *nástrojů. props* a *Sada nástrojů. targets* .
+Chcete-li přidat novou sadu nástrojů, například "MyToolset" pro existující platformu Win32, vytvořte složku *MyToolset* v rámci `$(VCTargetsPath)` *\\ platforem \\ Win32 \\ PlatformToolsets \\* a v ní vytvořte sady *nástrojů. props* a *Sada nástrojů. targets* .
 
 Každý název složky v rámci *PlatformToolsets* se zobrazí v dialogovém okně **Vlastnosti projektu** jako dostupná **Sada nástrojů platformy** pro zadanou platformu, jak je znázorněno zde:
 
@@ -82,7 +82,7 @@ Vytvořte podobné složky *MyToolset* a sady *nástrojů. props* a *Sada nástr
 
 ### <a name="add-a-new-platform"></a>Přidat novou platformu
 
-Pokud chcete přidat novou platformu, například "MyPlatform", vytvořte složku *MyPlatform* na `$(VCTargetsPath)` * \\ platformách \\ *a vytvořte v ní soubory *Platform. default. props*, *Platform. props*a *Platform. targets* . Vytvořte také `$(VCTargetsPath)` složku<strong><em>MyPlatform</em></strong> * \\ platformy \\ ** \\ PlatformToolsets \\ * a vytvořte v ní alespoň jednu sadu nástrojů.
+Pokud chcete přidat novou platformu, například "MyPlatform", vytvořte složku *MyPlatform* na `$(VCTargetsPath)` *\\ platformách \\* a vytvořte v ní soubory *Platform. default. props*, *Platform. props* a *Platform. targets* . Vytvořte také `$(VCTargetsPath)` složku <strong><em>MyPlatform</em></strong> *\\ platformy \\**\\ PlatformToolsets \\* a vytvořte v ní alespoň jednu sadu nástrojů.
 
 Všechny názvy složek ve složce *Platforms* pro každý z nich `$(ApplicationType)` `$(ApplicationTypeRevision)` se zobrazí v integrovaném vývojovém prostředí (IDE) jako dostupné možnosti **platformy** pro projekt.
 
@@ -90,7 +90,7 @@ Všechny názvy složek ve složce *Platforms* pro každý z nich `$(Application
 
 ### <a name="add-a-new-application-type"></a>Přidat nový typ aplikace
 
-Chcete-li přidat nový typ aplikace, vytvořte *MyApplicationType* v nabídce `$(VCTargetsPath)` * \\ typ \\ aplikace* složku MyApplicationType a vytvořte v ní soubor *Defaults. props* . Pro typ aplikace je vyžadována aspoň jedna revize, proto vytvořte také `$(VCTargetsPath)` * \\ Typ aplikace \\ MyApplicationType \\ 1,0* a vytvořte v něm soubor *Defaults. props* . Měli byste také vytvořit složku `$(VCTargetsPath)` * \\ \\ \\ \\ platformy typu ApplicationType MyApplicationType 1,0* a vytvořit v ní alespoň jednu platformu.
+Chcete-li přidat nový typ aplikace, vytvořte  v nabídce `$(VCTargetsPath)` *\\ typ \\ aplikace* složku MyApplicationType a vytvořte v ní soubor *Defaults. props* . Pro typ aplikace je vyžadována aspoň jedna revize, proto vytvořte také `$(VCTargetsPath)` *\\ Typ aplikace \\ MyApplicationType \\ 1,0* a vytvořte v něm soubor *Defaults. props* . Měli byste také vytvořit složku `$(VCTargetsPath)` *\\ \\ \\ \\ platformy typu ApplicationType MyApplicationType 1,0* a vytvořit v ní alespoň jednu platformu.
 
 `$(ApplicationType)` a `$(ApplicationTypeRevision)` vlastnosti nejsou v uživatelském rozhraní viditelné. Jsou definovány v šablonách projektů a nelze je změnit po vytvoření projektu.
 
@@ -103,7 +103,7 @@ Zjednodušený strom importu pro soubory Microsoft C++ props a targets vypadá t
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore* \\ *Výchozí hodnota* \\ \* . *props* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Typ* \\ `$(ApplicationType)` aplikace \\ *Default. props* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Typ* \\ `$(ApplicationType)` aplikace \\ `$(ApplicationTypeRevision)` \\ *Default. props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Typ* \\ `$(ApplicationType)` aplikace \\ `$(ApplicationTypeRevision)` \\ *Platforms* \\ `$(Platform)` Platformy \\ *Platform. default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Typ* \\ `$(ApplicationType)` aplikace \\ `$(ApplicationTypeRevision)` \\  \\ `$(Platform)` Platformy \\ *Platform. default. props* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter* \\ *Výchozí hodnota* \\ \* . *props*
 
 Projekty desktopových systémů Windows nedefinují `$(ApplicationType)` , takže importují pouze
@@ -111,7 +111,7 @@ Projekty desktopových systémů Windows nedefinují `$(ApplicationType)` , tak�
 > `$(VCTargetsPath)`\\*Microsoft. cpp. default. props* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft. Common. props* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore* \\ *Výchozí hodnota* \\ \* . *props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Platforms* \\ `$(Platform)` Platformy \\ *Platform. default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\ \\ `$(Platform)` Platformy \\ *Platform. default. props* \
 &nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter* \\ *Výchozí hodnota* \\ \* . *props*
 
 Vlastnost použijeme `$(_PlatformFolder)` pro uchovávání `$(Platform)` umístění složky platformy. Tato vlastnost je
@@ -130,7 +130,7 @@ Soubory props jsou importovány v tomto pořadí:
 &nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform. props* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft. cpp. Platform. props* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore* \\ \* . *props* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets* \\ `$(PlatformToolset)` PlatformToolsets \\ *Sada nástrojů. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\ \\ `$(PlatformToolset)` PlatformToolsets \\ *Sada nástrojů. props* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter* \\ \* . *props*
 
 Soubory cílů jsou importovány v tomto pořadí:
@@ -140,7 +140,7 @@ Soubory cílů jsou importovány v tomto pořadí:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform. targets* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft. cpp. Platform. targets* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore* \\ \* . *cíle* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets* \\ `$(PlatformToolset)` PlatformToolsets \\ *Sada nástrojů. Target* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\ \\ `$(PlatformToolset)` PlatformToolsets \\ *Sada nástrojů. Target* \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter* \\ \* . *cíle*
 
 Pokud potřebujete definovat některé výchozí vlastnosti sady nástrojů, můžete přidat soubory do příslušných složek ImportBefore a ImportAfter.
@@ -285,13 +285,13 @@ Pokud potřebujete vytvořit novou úlohu pro nástroj sestavení, můžete si v
 
    - Úloha XAML (pravidlo vlastního sestavení)
 
-     Jeden příklad deklarace úlohy XAML naleznete v tématu `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *masm.xml*a pro jeho použití naleznete v tématu `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *MASM. targets*.
+     Jeden příklad deklarace úlohy XAML naleznete v tématu `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *masm.xml* a pro jeho použití naleznete v tématu `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *MASM. targets*.
 
    - [Úloha kódu](../msbuild/msbuild-inline-tasks.md)
 
 1. Pokud potřebujete lepší výkon úlohy nebo potřebujete komplexnější funkce, použijte pravidelný proces [zápisu úlohy](../msbuild/task-writing.md) MSBuild.
 
-   Pokud nejsou všechny vstupy a výstupy nástroje uvedeny na příkazovém řádku nástroje, jako v případech, a, `CL` `MIDL` `RC` a pokud chcete automatické vstupní a výstupní soubory pro sledování a vytváření souborů. tlog, odvodíte od `Microsoft.Build.CPPTasks.TrackedVCToolTask` třídy úkol. V současné době existuje dokumentace pro základní třídu [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) , neexistuje žádné příklady ani dokumentace k podrobnostem `TrackedVCToolTask` třídy. Pokud by to bylo obzvláště důležité, přidejte svůj hlas do žádosti na [developercommunity.VisualStudio.com](https://developercommunity.visualstudio.com/spaces/62/index.html).
+   Pokud nejsou všechny vstupy a výstupy nástroje uvedeny na příkazovém řádku nástroje, jako v případech, a, `CL` `MIDL` `RC` a pokud chcete automatické vstupní a výstupní soubory pro sledování a vytváření souborů. tlog, odvodíte od `Microsoft.Build.CPPTasks.TrackedVCToolTask` třídy úkol. V současné době existuje dokumentace pro základní třídu [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) , neexistuje žádné příklady ani dokumentace k podrobnostem `TrackedVCToolTask` třídy. Pokud by to bylo obzvláště důležité, přidejte svůj hlas k žádosti na [komunitu vývojářů](https://aka.ms/feedback/suggest?space=62).
 
 ## <a name="incremental-builds-and-up-to-date-checks"></a>Přírůstková sestavení a aktuální kontroly
 
@@ -308,7 +308,7 @@ Případně je můžete vytvořit pomocí `WriteLinesToFile` úlohy. Jako přík
 
 ## <a name="tlog-files"></a>soubory. tlog
 
-Existují tři typy souborů. tlog: *čtení*, *zápis*a *příkazový řádek*. Čtení a zápis souborů. tlog jsou používány přírůstkovým sestavením a kontrolou aktuálnosti v integrovaném vývojovém prostředí (IDE). Soubory s příkazovým řádkem. tlog se používají pouze v přírůstkových sestaveních.
+Existují tři typy souborů. tlog: *čtení*, *zápis* a *příkazový řádek*. Čtení a zápis souborů. tlog jsou používány přírůstkovým sestavením a kontrolou aktuálnosti v integrovaném vývojovém prostředí (IDE). Soubory s příkazovým řádkem. tlog se používají pouze v přírůstkových sestaveních.
 
 Nástroj MSBuild poskytuje tyto pomocné třídy pro čtení a zápis souborů. tlog:
 
@@ -497,7 +497,7 @@ Formát pravidla je jednoduchý, takže v této části jsou uvedeny pouze atrib
 |------------| - |
 | `generic` | Všechny vlastnosti se zobrazují na jedné stránce v záhlavích kategorií.<br/>Pravidlo může být viditelné pro `Project` a `PropertySheet` kontexty, ale ne `File` .<br/><br/> Příklad: `$(VCTargetsPath)` \\ *1033* \\ *general.xml* |
 | `tool` | Kategorie se zobrazují jako podstránky.<br/>Pravidlo může být viditelné ve všech kontextech: `Project` `PropertySheet` a `File` .<br/>Toto pravidlo je viditelné ve vlastnostech projektu pouze v případě, že projekt obsahuje položky s `ItemType` definovaným v `Rule.DataSource` , pokud není název pravidla zahrnutý ve `ProjectTools` skupině položek.<br/><br/>Příklad: `$(VCTargetsPath)` \\ *1033* \\ *clang.xml* |
-| `debugger` | Stránka je zobrazena jako součást stránky ladění.<br/>Kategorie se aktuálně ignorují.<br/>Název pravidla by měl odpovídat atributu rozhraní MEF spouštěče spouštěcích objektů `ExportDebugger` .<br/><br/>Příklad: `$(VCTargetsPath)` \\ *1033* \\ * \_ místní \_windows.xmlladicího programu* 1033 |
+| `debugger` | Stránka je zobrazena jako součást stránky ladění.<br/>Kategorie se aktuálně ignorují.<br/>Název pravidla by měl odpovídat atributu rozhraní MEF spouštěče spouštěcích objektů `ExportDebugger` .<br/><br/>Příklad: `$(VCTargetsPath)` \\  \\ *\_ místní \_windows.xmlladicího programu* 1033 |
 | *Uživatelská* | Vlastní šablona. Název šablony by měl odpovídat `ExportPropertyPageUIFactoryProvider` atributu `PropertyPageUIFactoryProvider` objektu MEF. Viz **Microsoft. VisualStudio. ProjectSystem. Designers. Properties. IPropertyPageUIFactoryProvider**.<br/><br/> Příklad: `$(VCTargetsPath)` \\ *1033* \\ *userMacros.xml* |
 
 Pokud pravidlo používá jednu z šablon založených na Gridech, může tyto body rozšiřitelnosti použít pro jeho vlastnosti:
@@ -667,7 +667,7 @@ Pokud není zjištěna žádná z těchto podmínek, je vytvořena mezipaměť p
 
 Informace o tom, jak vytvořit soubory VSIX, najdete v tématu dodávání [rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md). Informace o tom, jak přidat soubory do speciálních umístění instalace, například pro přidání souborů do `$(VCTargetsPath)` složky, najdete v tématu [instalace mimo složku rozšíření](../extensibility/set-install-root.md).
 
-## <a name="additional-resources"></a>Další zdroje
+## <a name="additional-resources"></a>Další zdroje informací
 
 Microsoft Build System ([MSBuild](../msbuild/msbuild.md)) poskytuje sestavovací modul a rozšiřitelný formát založený na XML pro soubory projektu. Měli byste být obeznámeni se základními [koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md) a s tím, jak nástroj [MSBuild pro Visual C++](/cpp/build/reference/msbuild-visual-cpp-overview) funguje pro rozšiřování Visual C++ho systému projektu.
 

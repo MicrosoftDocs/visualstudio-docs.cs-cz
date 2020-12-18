@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2410974ed95b1aa8dca3dc3e31a39c39df2d4a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bfe2b73f7f2ba771875355279043558f3c4cf105
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801435"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97667907"
 ---
 # <a name="how-to-change-fonts-colors-and-themes-in-visual-studio"></a>Postupy: Změna písma, barev a motivů v aplikaci Visual Studio
 
@@ -28,7 +28,7 @@ Písma a barvy v aplikaci Visual Studio můžete změnit mnoha způsoby. Napří
 
 Zde je postup změny barevného motivu rámce IDE a oken nástrojů v aplikaci Visual Studio.
 
-1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
+1. Na panelu nabídek vyberte   >  **Možnosti** nástroje.
 
 1. V seznamu Možnosti vyberte možnost **prostředí**  >  **Obecné**.
 
@@ -59,9 +59,9 @@ Můžete změnit velikost písma a textu pro všechna okna rámců a nástrojů 
 
 ### <a name="to-change-the-font-and-text-size-in-the-ide"></a>Změna písma a velikosti textu v integrovaném vývojovém prostředí
 
-1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
+1. Na panelu nabídek vyberte   >  **Možnosti** nástroje.
 
-1. V seznamu Možnosti vyberte možnost **Environment**  >  **písma a barvy**prostředí.
+1. V seznamu Možnosti vyberte možnost   >  **písma a barvy** prostředí.
 
 1. V seznamu **Zobrazit nastavení pro** vyberte možnost **prostředí**.
 
@@ -72,13 +72,13 @@ Můžete změnit velikost písma a textu pro všechna okna rámců a nástrojů 
 
 1. Upravte možnosti **písmo** a **Velikost** pro změnu písma a velikosti textu pro rozhraní IDE.
 
-1. Vyberte příslušnou položku v části **Zobrazit položky**a pak změňte možnosti pozadí **položky** a **pozadí položky** .
+1. Vyberte příslušnou položku v části **Zobrazit položky** a pak změňte možnosti pozadí **položky** a **pozadí položky** .
 
 ### <a name="to-change-the-font-and-text-size-in-the-editor"></a>Změna písma a velikosti textu v editoru
 
-1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
+1. Na panelu nabídek vyberte   >  **Možnosti** nástroje.
 
-1. V seznamu Možnosti vyberte možnost **Environment**  >  **písma a barvy**prostředí.
+1. V seznamu Možnosti vyberte možnost   >  **písma a barvy** prostředí.
 
 1. V seznamu **Zobrazit nastavení pro** vyberte možnost **textový editor**.
 
@@ -86,7 +86,7 @@ Můžete změnit velikost písma a textu pro všechna okna rámců a nástrojů 
 
 1. Upravte možnosti **písmo** a **Velikost** pro změnu písma a velikosti textu pro Editor.
 
-1. Vyberte příslušnou položku v části **Zobrazit položky**a pak změňte možnosti pozadí **položky** a **pozadí položky** .
+1. Vyberte příslušnou položku v části **Zobrazit položky** a pak změňte možnosti pozadí **položky** a **pozadí položky** .
 
 Další informace najdete v tématu [Změna písma a barev pro stránku editoru](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md) .
 
@@ -109,14 +109,14 @@ Chcete-li přepnout možnost vysoký kontrast systému Windows, použijte někte
 
 Pomocí následujících postupů můžete zapnout možnost speciálního kontrastu sady Visual Studio:
 
-1. Na panelu nabídek v aplikaci Visual Studio zvolte možnost **nástroje**  >  **Možnosti**a potom v seznamu možnosti zvolte možnost **Environment**  >  **Obecné**prostředí.
+1. Na panelu nabídek v aplikaci Visual Studio zvolte možnost **nástroje**  >  **Možnosti** a potom v seznamu možnosti zvolte možnost   >  **Obecné** prostředí.
 
 1. V rozevíracím seznamu **barevný motiv** zvolte motiv **Blue (extra Contrast)** a klikněte na **tlačítko OK**.
 
 Další informace o dalších možnostech usnadnění sady Visual Studio, které jsou k dispozici pro vás, najdete na stránce [funkce usnadnění v aplikaci Visual Studio](../ide/reference/accessibility-features-of-visual-studio.md) .
 
 > [!TIP]
-> Pokud máte možnost usnadnění pro barvy nebo písma, která jsou možná užitečná, ale nejsou aktuálně dostupná v aplikaci Visual Studio, dejte nám prosím na výběr **navrhnout funkci** v [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/). Další informace o tomto fóru a o tom, jak to funguje, najdete na stránce [navrhnout funkci](../ide/suggest-a-feature.md) .
+> Pokud máte možnost usnadnění pro barvy nebo písma, která jsou možná užitečná, ale nejsou aktuálně dostupná v aplikaci Visual Studio, dejte nám prosím na výběr **navrhnout funkci** v [komunitě vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8). Další informace o tomto fóru a o tom, jak to funguje, najdete na stránce [navrhnout funkci](../ide/suggest-a-feature.md) .
 
 ## <a name="next-steps"></a>Další kroky
 

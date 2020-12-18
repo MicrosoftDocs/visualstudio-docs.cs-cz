@@ -1,5 +1,6 @@
 ---
 title: Sdílené barvy pro Visual Studio | Microsoft Docs
+description: Naučte se, jak pomocí běžných prvků prostředí a motivů sady Visual Studio navrhnout vlastní uživatelské rozhraní, které je konzistentní s prostředím sady Visual Studio.
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 8d11b9a0-6175-4f2e-8e7f-79daee1bfd41
@@ -8,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e31e5d9c3d1dc284694bd2db2a9f37d863462ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 939a327100b1fcf0908c56a4fc67540e646eac7e
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699933"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668908"
 ---
 # <a name="shared-colors-for-visual-studio"></a>Sdílené barvy pro Visual Studio
 Pokud navrhujete uživatelské rozhraní, které používá společné prvky prostředí sady Visual Studio, nebo chcete, aby element rozhraní byl konzistentní s podobnými funkcemi, použijte existující názvy tokenů v definičních souborech balíčku k výběru a přiřazení barev. Tím se zajistí, že vaše uživatelské rozhraní zůstane v souladu s celkovým prostředím sady Visual Studio a že se automaticky aktualizuje při přidání nebo aktualizaci motivů.
@@ -1333,7 +1334,7 @@ Skupina panelů příkazů se skládá ze související sady ovládacích prvků
 
  **Rozevírací tlačítko panelu příkazů: stav najetí myší**
 
-![Tlačítko rozevíracího seznamu na panelu příkazů při najetí myší](../../extensibility/ux-guidelines/media/0303-034_comboboxdropdownbuttonhover.png "0303 – 034_ComboBoxDropdownButtonHover")<br />Tlačítko rozevíracího seznamu na panelu příkazů při najetí myší
+![Rozevírací tlačítko pole se seznamem panelu příkazů při najetí myší](../../extensibility/ux-guidelines/media/0303-034_comboboxdropdownbuttonhover.png "0303 – 034_ComboBoxDropdownButtonHover")<br />Tlačítko rozevíracího seznamu na panelu příkazů při najetí myší
 
 | Prvek | Název tokenu: category. Color |
 | --- | --- |
@@ -1342,7 +1343,7 @@ Skupina panelů příkazů se skládá ze související sady ovládacích prvků
 
 **Rozevírací seznam panelu příkazů: stav najetí myší**
 
- ![Rozevírací seznam panelu příkazů při najetí myší](../../extensibility/ux-guidelines/media/0303-035_comboboxdropdownlisthover.png "0303 – 035_ComboBoxDropdownListHover")<br />Rozevírací seznam panelu příkazů při najetí myší
+ ![Rozevírací seznam pole se seznamem panelu příkazů při najetí myší](../../extensibility/ux-guidelines/media/0303-035_comboboxdropdownlisthover.png "0303 – 035_ComboBoxDropdownListHover")<br />Rozevírací seznam panelu příkazů při najetí myší
 
 | Prvek | Název tokenu: category. Color |
 | --- | --- |
@@ -1383,7 +1384,7 @@ Skupina panelů příkazů se skládá ze související sady ovládacích prvků
 
 **Rozevírací tlačítko panelu příkazů: stisknutý stav**
 
-![Stisknuté tlačítko rozevíracího seznamu na panelu příkazů](../../extensibility/ux-guidelines/media/0303-039_comboboxdropdownbuttonpressed.png "0303 – 039_ComboBoxDropdownButtonPressed")<br />Stisknuté tlačítko rozevíracího seznamu na panelu příkazů
+![Stisknuté tlačítko rozevíracího seznamu pro panel příkazů](../../extensibility/ux-guidelines/media/0303-039_comboboxdropdownbuttonpressed.png "0303 – 039_ComboBoxDropdownButtonPressed")<br />Stisknuté tlačítko rozevíracího seznamu na panelu příkazů
 
 | Prvek | Název tokenu: category. Color |
 | --- | --- |
@@ -1403,7 +1404,7 @@ Skupina panelů příkazů se skládá ze související sady ovládacích prvků
 
 **Rozevírací tlačítko panelu příkazů: zakázaný stav**
 
-![Tlačítko rozevíracího seznamu zakázaného panelu příkazů](../../extensibility/ux-guidelines/media/0303-040_comboboxdropdownbuttondisabled.png "0303 – 040_ComboBoxDropdownButtonDisabled")<br />Tlačítko rozevíracího seznamu zakázaného panelu příkazů
+![Zakázané rozevírací tlačítko pole se seznamem panelu příkazů](../../extensibility/ux-guidelines/media/0303-040_comboboxdropdownbuttondisabled.png "0303 – 040_ComboBoxDropdownButtonDisabled")<br />Tlačítko rozevíracího seznamu zakázaného panelu příkazů
 
 | Prvek | Název tokenu: category. Color |
 | --- | --- |

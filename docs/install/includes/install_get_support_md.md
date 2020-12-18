@@ -6,14 +6,14 @@ ms.date: 03/23/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: f8f4645c9b69ff0fa7aa332f0716cc07b7a46e8a
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: b00b728e24dc3051c08e9050d761d74a2ced0c69
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190200"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668391"
 ---
-## <a name="get-support"></a>Získání podpory
+## <a name="get-support"></a>Získat podporu
 
 V některých případech může docházet k chybám. Pokud se instalace sady Visual Studio nezdařila, přečtěte si podrobné pokyny v tématu [řešení potíží s instalací a upgradem sady Visual Studio](../troubleshooting-installation-issues.md) .
 
@@ -22,5 +22,5 @@ Nabízíme také možnost podpory [**instalace**](https://visualstudio.microsoft
 Tady je několik dalších možností podpory:
 
 * Nahlaste problémy s produktem prostřednictvím nástroje [nahlásit problém](../../ide/how-to-report-a-problem-with-visual-studio.md) , který se zobrazí v instalační program pro Visual Studio i v integrovaném vývojovém prostředí sady Visual Studio.
-* Navrhněte funkci, Sledujte problémy s produkty a vyhledejte odpovědi v [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/).
+* Navrhněte funkci, Sledujte problémy s produkty a vyhledejte odpovědi v [komunitě vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8).
 * Využijte svůj účet [GitHub](https://github.com/) ke komunikaci s námi a dalšími vývojáři sady Visual Studio v [konverzaci Visual studia v komunitě gitteru](https://gitter.im/Microsoft/VisualStudio).

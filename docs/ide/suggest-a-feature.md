@@ -8,16 +8,16 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d8106463f306ddbc3fe6aefb337935cbe0d316c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a17f196f48b053f8b834b8fd25b8c0295e42b547
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88114205"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668895"
 ---
 # <a name="suggest-a-feature-for-visual-studio"></a>Navrhnout funkci pro sadu Visual Studio
 
-Zavedli jsme nové prostředí pro navrhování funkcí společně s aktuální možností hlášení problémů na [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com). Jedná se o nový způsob, jak můžete s technickým pracovním postupem sady Visual Studio spolupracovat přímo.
+Zavedli jsme nové prostředí pro navrhování funkcí společně s aktuální možností hlášení problémů na [komunitě vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8). Jedná se o nový způsob, jak můžete s technickým pracovním postupem sady Visual Studio spolupracovat přímo.
 
 ![Navrhnout tlačítko funkce na komunitě vývojářů](media/suggest-a-feature/suggest-feature-button.png)
 
@@ -25,7 +25,7 @@ Můžete také začít návrh funkcí přímo ze sady Visual Studio tak, že v p
 
 ![Poskytnutí nabídky návrhů v aplikaci Visual Studio](media/suggest-a-feature/provide-suggestion.png)
 
-Zvolíte-li možnost **poskytnout návrh** , přejdete na [komunitu vývojářů](https://developercommunity.visualstudio.com), kde můžete zadat svůj návrh.
+Zvolíte-li možnost **poskytnout návrh** , přejdete na [komunitu vývojářů](https://aka.ms/feedback/suggest?space=8), kde můžete zadat svůj návrh.
 
 ## <a name="user-voice"></a>User Voice
 

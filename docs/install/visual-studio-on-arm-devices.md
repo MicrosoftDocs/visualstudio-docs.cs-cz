@@ -10,12 +10,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6aacd4639e440998a5123dae8c38a64c84ebb948
-ms.sourcegitcommit: d9dd86c421532cfca6c0c5761d160f35829419c6
+ms.openlocfilehash: 367b3681d2ff8a828ee45f59359043b5fede3d26
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90026287"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668102"
 ---
 # <a name="visual-studio-on-arm-powered-devices"></a>Visual Studio na zařízeních s procesorem ARM
 
@@ -42,4 +42,4 @@ Pokud chcete ladit aplikaci běžící na vzdáleném zařízení, budete muset 
 Ne všechny projekty sady Visual Studio jsou nakonfigurovány tak, aby se projekty spouštěly místně při spuštění ladění (**F5**) ze zařízení ARM. Je možné, že budete muset nakonfigurovat aplikaci Visual Studio pro vzdálené ladění, i když vaše aplikace běží místně. Další informace najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
 
 ## <a name="we-need-your-help"></a>Potřebujeme vaši technickou podporu.
-Pokud chcete, aby aplikace Visual Studio běžela nativně na zařízeních ARM, rádi bychom slyšeli o scénářích a podpoře, které jsou nezbytné. Můžete nás kontaktovat publikováním na [komunitě vývojářů](https://developercommunity.visualstudio.com/idea/1161018/native-arm-support-for-visual-studio.html). 
+Pokud chcete, aby aplikace Visual Studio běžela nativně na zařízeních ARM, rádi bychom slyšeli o scénářích a podpoře, které jsou nezbytné. Můžete nás kontaktovat publikováním na [komunitě vývojářů](https://developercommunity.visualstudio.com/idea/1161018/native-arm-support-for-visual-studio.html).

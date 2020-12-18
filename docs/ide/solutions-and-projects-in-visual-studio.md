@@ -1,5 +1,5 @@
 ---
-title: Přehled řešení a projektů
+title: Informace o řešeních a projektech
 description: Přečtěte si o projektech a řešeních sady Visual Studio, způsobu vytváření nových projektů ze šablony a o tom, jak zobrazit & spravovat projekty v Průzkumník řešení.
 ms.custom: SEO-VS-2020
 ms.date: 12/15/2020
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1981bc5c9d1c2589607f355528c332d01284917e
-ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
+ms.openlocfilehash: 19d0d2fc862572fdf7226a78e0b34d0af0d57541
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97615750"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668089"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -51,7 +51,7 @@ Soubory projektu jsou založeny na [schématu XML jazyka MSBuild](../msbuild/msb
 
 ## <a name="solutions"></a>Řešení
 
-Projekt je obsažen v rámci *řešení*. Bez ohledu na jeho název není řešení "Answer". Je to jednoduše kontejner pro jeden nebo více souvisejících projektů, společně s informacemi o sestavení, nastavení okna sady Visual Studio a s dalšími soubory, které nejsou přidružené k určitému projektu. Řešení je popsáno v textovém souboru (s příponou *. sln*) s vlastním jedinečným formátem. není určeno k úpravám rukou.
+Projekt je obsažen v rámci *řešení*. Bez ohledu na jeho název není řešení "Answer". Je to jednoduše kontejner pro jeden nebo více souvisejících projektů, společně s informacemi o sestavení, nastavení okna sady Visual Studio a s dalšími soubory, které nejsou přidružené k určitému projektu.
 
 ### <a name="solution-file"></a>Soubor řešení
 
@@ -61,6 +61,9 @@ Visual Studio používá dva typy souborů (*. sln* a *. suo*) k ukládání nas
 |---------------|----------|-----------------|
 |. sln|Řešení sady Visual Studio|Uspořádá projekty, položky projektu a položky řešení v řešení.|
 |. suo|Možnosti uživatele řešení|Ukládá nastavení a přizpůsobení na úrovni uživatele, například zarážky.|
+
+> [!IMPORTANT]
+> Řešení je popsáno v textovém souboru (s příponou *. sln*) s vlastním jedinečným formátem. není určeno k úpravám rukou. Naopak soubor *. suo* je skrytý soubor, který není zobrazen pod výchozím nastavením Průzkumníka souborů. Skryté soubory zobrazíte tak, že v nabídce **Zobrazit** v Průzkumníkovi souborů zaškrtnete políčko **skryté položky** .
 
 ### <a name="solution-folder"></a>Složka řešení
 

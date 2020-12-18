@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2956372882d4449345d026e691a12afb2988054a
-ms.sourcegitcommit: 6ef4e46c786c5bbcc52cd9c30e5ddfca12ea8b3c
+ms.openlocfilehash: 5c6c09bbf74cca803156842d185b5bf86ff52439
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97050821"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668817"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio
 
@@ -25,7 +25,7 @@ Problém můžete ohlásit buď ze sady Visual Studio, nebo z jeho instalačníh
 
 1. **V aplikaci Visual Studio** vyberte ikonu zpětné vazby v pravém horním rohu a vyberte Nahlásit problém. K nástroji pro zpětnou vazbu můžete získat přístup také **z nabídky**  >  **Odeslat zpětnou vazbu**  >  **s oznámením o problému**.
 ![Nahlášení problému v komunitě vývojářů sady Visual Studio ](media/feedback-button.png) nebo nahlášení problému v **instalační program pro Visual Studio** , pokud nemůžete nainstalovat Visual Studio nebo není možné získat přístup k nástroji pro zpětnou vazbu v sadě Visual Studio.  V instalačním programu vyberte ikonu zpětné vazby v pravém horním rohu a vyberte Nahlásit problém.
-![Nahlášení problému v komunitě vývojářů sady Visual Studio](media/installer.png)
+![Nahlášení problému v komunitě vývojářů sady Visual Studio v instalačním programu](media/installer.png)
 
 1. Kliknutím na **nahlásit problém** otevřete váš výchozí prohlížeč a přihlásíte se k němu pomocí stejného účtu, který používáte k přihlášení do sady Visual Studio.
 
@@ -71,7 +71,7 @@ Pokud problém neobsahuje důležité informace, přiřadíme stav **potřebuje 
 
 1. Kliknutím na odkaz poskytnout další informace v sestavě problém přejdete na novou obrazovku. Tady uvidíte, jaké informace se vyžadují.
 
-   ![Moje zpětná vazba](../ide/media/feedback-need-more-info.png)
+   ![Podrobnosti o informacích, které se mají odeslat Microsoftu](../ide/media/feedback-need-more-info.png)
 
 1. Další informace můžete zadat přidáním komentářů, příloh nebo kroků záznamu. Toto prostředí je podobné jako hlášení nového problému nebo poskytnutí dalších informací při hlasování o problému.
 
@@ -81,9 +81,9 @@ Tyto žádosti vidíte na obrazovce **Moje zpětná vazba** spolu se všemi dal�
 
 ## <a name="search-for-solutions-or-provide-feedback"></a>Hledání řešení nebo poskytnutí zpětné vazby
 
-Pokud nechcete nebo nemůžete použít aplikaci Visual Studio k nahlášení problému, je pravděpodobné, že problém již byl hlášen a řešení je zveřejněno na stránce [komunity vývojářů v aplikaci Visual Studio](https://developercommunity.visualstudio.com/) .
+Pokud nechcete nebo nemůžete použít aplikaci Visual Studio k nahlášení problému, je pravděpodobné, že problém již byl hlášen a řešení je zveřejněno na stránce [komunity vývojářů v aplikaci Visual Studio](https://developercommunity2.visualstudio.com/search?space=8) .
 
-Pokud nemáte problém se sestavou, ale chcete navrhnout funkci, je to také místo. Další informace najdete na stránce s [návrhem funkce](https://developercommunity.visualstudio.com/content/idea/post.html?space=8) .
+Pokud nemáte problém se sestavou, ale chcete navrhnout funkci, je to také místo. Další informace najdete na stránce s [návrhem funkce](https://aka.ms/feedback/suggest?space=8) .
 
 ## <a name="see-also"></a>Viz také
 
@@ -91,5 +91,5 @@ Pokud nemáte problém se sestavou, ale chcete navrhnout funkci, je to také mí
 * [Možnosti zpětné vazby v aplikaci Visual Studio](../ide/feedback-options.md)
 * [Nahlášení problému s Visual Studio pro Mac](/visualstudio/mac/report-a-problem)
 * [Nahlášení problému s C++](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset)
-* [Komunita vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/)
+* [Komunita vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8)
 * [Ochrana osobních údajů komunity vývojářů](developer-community-privacy.md)

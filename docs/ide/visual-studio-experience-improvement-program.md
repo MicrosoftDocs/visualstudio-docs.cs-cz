@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6c785b755b64f0dd7e367a01d9c05c1981ea558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eae7e4726f720b1c9974682525bbe2a28ee38d5f
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71693017"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97667933"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Program Zlepšování softwaru a služeb na základě zkušeností uživatelů pro Visual Studio
 
@@ -27,11 +27,11 @@ Aplikace Visual Studio program Zlepšování softwaru a služeb na základě zku
 
 VSCEIP je ve výchozím nastavení zapnutý. Můžete ho zase zapnout nebo znovu spustit pomocí následujících pokynů:
 
-1. V aplikaci Visual Studio zvolte možnost **help**  >  **Odeslat názor**a pak vyberte **Nastavení**.
+1. V aplikaci Visual Studio zvolte možnost **help**  >  **Odeslat názor** a pak vyberte **Nastavení**.
 
    Otevře se dialogové okno **Program zlepšování sady Visual Studio na základě zkušeností uživatelů** .
 
-1. Pokud se chcete odhlásit, vyberte **Ne,** nechci se zúčastnit a pak vyberte **OK**. Pokud se chcete přihlásit, vyberte **Ano, chci se zúčastnit**a pak vyberte **OK**.
+1. Pokud se chcete odhlásit, vyberte **Ne,** nechci se zúčastnit a pak vyberte **OK**. Pokud se chcete přihlásit, vyberte **Ano, chci se zúčastnit** a pak vyberte **OK**.
 
    ![Dialog Program zlepšování sady Visual Studio na základě zkušeností uživatelů](media/experience-improvement-program.png)
 
@@ -43,17 +43,17 @@ Relevantní klíč registru a nastavení jsou následující:
 
 ::: moniker range="vs-2017"
 
-- V 64 operačním systému HKEY_LOCAL_MACHINE Key = **\software\wow6432node\microsoft\vscommon\15.0\sqm**
-- V 32 operačním systému HKEY_LOCAL_MACHINE Key = **\software\microsoft\vscommon\15.0\sqm**
-- Když je povolený Zásady skupiny, Key = **HKEY_LOCAL_MACHINE \software\policies\microsoft\visualstudio\sqm**
+- V 64 operačním systému, Key = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM**
+- V 32 operačním systému, Key = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM**
+- Když je povolený Zásady skupiny, Key = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- V 64 operačním systému HKEY_LOCAL_MACHINE Key = **\software\wow6432node\microsoft\vscommon\16.0\sqm**
-- V 32 operačním systému HKEY_LOCAL_MACHINE Key = **\software\microsoft\vscommon\16.0\sqm**
-- Když je povolený Zásady skupiny, Key = **HKEY_LOCAL_MACHINE \software\policies\microsoft\visualstudio\sqm**
+- V 64 operačním systému, Key = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM**
+- V 32 operačním systému, Key = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\16.0\SQM**
+- Když je povolený Zásady skupiny, Key = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
 
 ::: moniker-end
 
@@ -74,5 +74,5 @@ Další informace o informacích shromažďovaných, zpracovávaných nebo odesl
 * [Diagnostické informace shromažďované aplikací Visual Studio](diagnostic-data-collection.md)
 * [Možnosti zpětné vazby v aplikaci Visual Studio](../ide/feedback-options.md)
 * [Nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md)
-* [Komunita vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/)
+* [Komunita vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8)
 * [Prohlášení společnosti Microsoft o zásadách ochrany osobních údajů](https://privacy.microsoft.com/privacystatement)

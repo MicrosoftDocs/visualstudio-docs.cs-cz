@@ -12,16 +12,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82c89f2f6ec2a1a9bc6c87a600c355226b2f3da4
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: dccf962aef39227388f86134a9dd1f8c96440a3c
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95005935"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668544"
 ---
 # <a name="developer-community-data-privacy"></a>Ochrana osobních údajů komunity vývojářů
 
-Ve výchozím nastavení jsou všechny informace o problémech v [komunitě vývojářů](https://developercommunity.visualstudio.com/), včetně všech komentářů a odpovědí, veřejně viditelné. To je užitečné, protože umožňuje celé komunitě zobrazit problémy, řešení a alternativní řešení, která jiní uživatelé našli. Pokud se ale obáváte o soukromí vašich dat nebo identity, máte možnosti.
+Ve výchozím nastavení jsou všechny informace o problémech v [komunitě vývojářů](https://aka.ms/feedback/suggest?space=8), včetně všech komentářů a odpovědí, veřejně viditelné. To je užitečné, protože umožňuje celé komunitě zobrazit problémy, řešení a alternativní řešení, která jiní uživatelé našli. Pokud se ale obáváte o soukromí vašich dat nebo identity, máte možnosti.
 
 ## <a name="identity-privacy"></a>Ochrana identity
 

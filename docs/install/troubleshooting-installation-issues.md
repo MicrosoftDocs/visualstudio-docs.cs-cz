@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 418cc9f75842cb4f3e9d8c0c0753084e2f0633c2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 54bd53f5c63a2f126f4aeae264c4dff745633cf6
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350807"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668310"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Řešení potíží s instalací a upgradem sady Visual Studio
 
@@ -53,7 +53,7 @@ Oprava opravuje mnoho běžných problémů s aktualizací. Další informace o 
 
 ### <a name="step-3---check-with-the-developer-community"></a>Krok 3 – Projděte si komunitu vývojářů
 
-Vyhledejte svou chybovou zprávu pomocí [komunity vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html). Jiní členové komunity si mohli zdokumentovat řešení vašeho problému.
+Vyhledejte svou chybovou zprávu pomocí [komunity vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8). Jiní členové komunity si mohli zdokumentovat řešení vašeho problému.
 
 ### <a name="step-4---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems"></a>Krok 4 – odstranění adresáře Instalační program pro Visual Studio pro vyřešení problémů s upgradem
 

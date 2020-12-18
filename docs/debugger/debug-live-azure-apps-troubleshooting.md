@@ -11,16 +11,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16d55c4e729a39f46b4b038490e92f7cb43bf98d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64ea7f1ea1f665f5180851e42814ad4e8c12c8c5
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84182869"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668518"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Řešení potíží a známé problémy pro ladění snímků v aplikaci Visual Studio
 
-Pokud kroky popsané v tomto článku problém nevyřeší, vyhledejte problém v [komunitě vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html) nebo nahlásit nový problém výběrem možnosti **help**  >  **Odeslat zpětnou vazbu**  >  **ohlásit problém** v aplikaci Visual Studio.
+Pokud kroky popsané v tomto článku problém nevyřeší, vyhledejte problém v [komunitě vývojářů](https://aka.ms/feedback/suggest?space=8) nebo nahlásit nový problém výběrem možnosti **help**  >  **Odeslat zpětnou vazbu**  >  **ohlásit problém** v aplikaci Visual Studio.
 
 ## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>Problém: "připojit Snapshot Debugger" narazí na chybu stavového kódu HTTP
 
@@ -34,7 +34,7 @@ Tato chyba označuje, že volání REST vydané aplikací Visual Studio do Azure
 
 Proveďte tyto kroky:
 
-* Ujistěte se, že váš účet přizpůsobení sady Visual Studio má oprávnění k předplatnému Azure a prostředku, ke kterému se připojujete. Rychlý způsob, jak to zjistit, je ověřit, jestli je prostředek k dispozici v dialogovém okně z okna **ladit**  >  **připojit Snapshot Debugger...**  >  **Prostředek Azure**  >  **Vyberte existující**nebo v Průzkumníku cloudu.
+* Ujistěte se, že váš účet přizpůsobení sady Visual Studio má oprávnění k předplatnému Azure a prostředku, ke kterému se připojujete. Rychlý způsob, jak to zjistit, je ověřit, jestli je prostředek k dispozici v dialogovém okně z okna **ladit**  >  **připojit Snapshot Debugger...**  >  **Prostředek Azure**  >  **Vyberte existující** nebo v Průzkumníku cloudu.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
 Pokud jste na svém App Service povolili ověřování/autorizaci (EasyAuth), může dojít k chybě 401 s LaunchAgentAsync v chybové zprávě zásobníku volání. Ujistěte se prosím, že **akce, která se má provést, když je požadavek ověřený** , je nastavený tak, aby **povoloval anonymní žádosti (bez akce)** v Azure Portal a poskytoval authorization.jsv D:\Home\sites\wwwroot s následujícím obsahem. 
@@ -67,7 +67,7 @@ Tato chyba označuje, že oprávnění bylo odepřeno. To může být způsobeno
 
 Proveďte tyto kroky:
 
-* Ověřte, že váš účet sady Visual Studio má platné předplatné Azure s potřebnými oprávněními pro Access Control na základě rolí (RBAC) pro daný prostředek. V případě AppService se podívejte, jestli máte oprávnění k [dotazování](/rest/api/appservice/appserviceplans/get) plánu App Service hostování vaší aplikace.
+* Ověřte, že váš účet Visual studia má platné předplatné Azure s nezbytným oprávněním Role-Based Access Control (RBAC) pro daný prostředek. V případě AppService se podívejte, jestli máte oprávnění k [dotazování](/rest/api/appservice/appserviceplans/get) plánu App Service hostování vaší aplikace.
 * Ověřte, zda je časové razítko klientského počítače správné a aktuální. Servery s časovými razítky od více než 15 minut v časovém razítku požadavku obvykle vyvolávají tuto chybu.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
@@ -202,7 +202,7 @@ Pokud chcete povolit a zakázat protokolování agenta, otevřete Visual Studio.
 Protokoly agentů najdete v následujících umístěních:
 
 - App Services:
-  - Přejděte na web Kudu vašeho App Service (to znamená yourappservice.** SCM**. azurewebsites.NET) a přejděte na konzolu ladění.
+  - Přejděte na web Kudu vašeho App Service (to znamená yourappservice.**SCM**. azurewebsites.NET) a přejděte na konzolu ladění.
   - Protokoly agentů jsou uloženy v následujícím adresáři: D:\home\LogFiles\SiteExtensions\DiagnosticsAgentLogs\
 - VIRTUÁLNÍ POČÍTAČ/VMSS:
   - Přihlaste se k VIRTUÁLNÍmu počítači, protokoly agentů jsou uložené takto: C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics \<Version> \ SnapshotDebuggerAgent_ *. txt

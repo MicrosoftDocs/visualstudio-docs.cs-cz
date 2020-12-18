@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: bdb053218b65924abfa64053a8a3c7e9e0543d49
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 2ca1cdcc1da97f8fa0d5def89e4f437607b36dd9
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329507"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668752"
 ---
 # <a name="settings-waterfall"></a>Vodopádové nastavení
 
@@ -50,4 +50,4 @@ namespace MyTests
 
 ## <a name="got-feedback"></a>Máte zpětnou vazbu?
 
-Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://aka.ms/feedback/suggest?space=8).

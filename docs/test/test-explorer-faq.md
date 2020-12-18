@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jillfra
-ms.openlocfilehash: ef6c6bf3cedcccd156e7ae9ae02c2e5f70805521
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: b69274058ea939251a772dfb30ddf7b42861542c
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330170"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668583"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio Test Explorer – Nejčastější dotazy
 
@@ -33,7 +33,7 @@ ms.locfileid: "96330170"
 Sestavte projekt pro spuštění zjišťování založeného na sestavení.
 ::: moniker-end
 ::: moniker range="vs-2017"
-Sestavte projekt a ujistěte se, že je v **nabídce nástroje** > **Options** > **test** možností zapnuto zjišťování na základě sestavení.
+Sestavte projekt a ujistěte se, že je v **nabídce nástroje** >  > **test** možností zapnuto zjišťování na základě sestavení.
 ::: moniker-end
 [Zjišťování testů v reálném čase](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) je zjišťování založené na zdrojovém testu. Nedokáže zjistit testy, které používají teorie, vlastní adaptéry, vlastní vlastnosti, `#ifdef` příkazy a další, protože jsou definovány v době běhu. Aby byly testy přesně nalezeny, je nutné sestavit sestavení. V aplikaci Visual Studio 2017 verze 15,6 a novější se zjišťování na základě sestavení (tradiční zjišťování) spouští pouze po sestaveních. Toto nastavení znamená, že zjišťování testů v reálném čase najde tolik testů, kolik jich může při úpravách a zjišťování na základě sestavení umožňuje zobrazit dynamicky definované testy po sestavení. Zjišťování testů v reálném čase vylepšuje rychlost odezvy, ale pořád umožňuje získat úplné a přesné výsledky po sestavení.
 
@@ -50,7 +50,7 @@ Symbol plus (+) označuje, že další testy mohou být zjištěny po sestavení
 
 **Zjišťování na základě sestavení již pro můj projekt nepracuje. Návody ho znovu zapnout?**
 
-Přejít na **Tools** > **Možnosti** nástroje > **test** a zaškrtněte políčko pro další **zjišťování testů z sestavených sestavení po sestaveních.**
+Přejít na  > **Možnosti** nástroje > **test** a zaškrtněte políčko pro další **zjišťování testů z sestavených sestavení po sestaveních.**
 
 ![Možnost založenou na sestavení](media/testex-toolsoptions.png)
 ::: moniker-end
@@ -71,7 +71,7 @@ Tato funkce se nazývá [zjišťování testů v reálném čase](https://devblo
 
 **Jak můžu zapnout protokoly pro Průzkumníka testů?**
 
-Přejděte k **Tools**  >  **Možnosti** nástroje  >  **test** a vyhledejte část protokolování.
+Přejděte k   >  **Možnosti** nástroje  >  **test** a vyhledejte část protokolování.
 
 ## <a name="uwp-test-discovery"></a>Zjišťování testů UWP
 
@@ -97,13 +97,13 @@ Ikony vedle projektu, oboru názvů a seskupení tříd zobrazují stav testů v
 
 **Ve vyhledávacím poli Průzkumníka testů již není k dispozici filtr "Souborová cesta".**
 
-Filtr cesty k souboru v poli Hledat v **Průzkumníku testů** byl odebrán v aplikaci Visual Studio 2017 verze 15,7. Tato funkce měla nízké využití a Průzkumník testů může rychleji načíst testovací metody tím, že tuto funkci opustí. Pokud tato změna přerušuje tok vývoje, dejte nám vědět o odeslání názoru na [komunitu vývojářů](https://developercommunity.visualstudio.com/).
+Filtr cesty k souboru v poli Hledat v **Průzkumníku testů** byl odebrán v aplikaci Visual Studio 2017 verze 15,7. Tato funkce měla nízké využití a Průzkumník testů může rychleji načíst testovací metody tím, že tuto funkci opustí. Pokud tato změna přerušuje tok vývoje, dejte nám vědět o odeslání názoru na [komunitu vývojářů](https://aka.ms/feedback/suggest?space=8).
 
 ## <a name="remove-undocumented-interfaces"></a>Odebrat nedokumentovaná rozhraní
 
 **Některá rozhraní API související s testem již nejsou součástí sady Visual Studio 2019. Co se změnilo?**
 
-V aplikaci Visual Studio 2019 se odeberou některá rozhraní API testovacího okna, která byla dříve označena jako veřejná, ale nebyla nikdy oficiálně dokumentována. Byly označeny jako "zastaralé" v aplikaci Visual Studio 2017, aby udržovaly rozšíření udržovala včasné varování. Pro naše poznatky našla tato rozhraní API mnohem málo rozšíření a na nich se zavedla závislost. Mezi ně patří `IGroupByProvider` ,,,, `IGroupByProvider<T>` `KeyComparer` `ISearchFilter` `ISearchFilterToken` , `ISearchToken` a `SearchFilterTokenType` . Pokud tato změna ovlivní vaše rozšíření, dejte nám prosím jistotu, že napíšete chybu do [komunity vývojářů](https://developercommunity.visualstudio.com).
+V aplikaci Visual Studio 2019 se odeberou některá rozhraní API testovacího okna, která byla dříve označena jako veřejná, ale nebyla nikdy oficiálně dokumentována. Byly označeny jako "zastaralé" v aplikaci Visual Studio 2017, aby udržovaly rozšíření udržovala včasné varování. Pro naše poznatky našla tato rozhraní API mnohem málo rozšíření a na nich se zavedla závislost. Mezi ně patří `IGroupByProvider` ,,,, `IGroupByProvider<T>` `KeyComparer` `ISearchFilter` `ISearchFilterToken` , `ISearchToken` a `SearchFilterTokenType` . Pokud tato změna ovlivní vaše rozšíření, dejte nám prosím jistotu, že napíšete chybu do [komunity vývojářů](https://aka.ms/feedback/suggest?space=8).
 
 ## <a name="test-adapter-nuget-reference"></a>Reference k NuGetu testovacího adaptéru
 
@@ -117,7 +117,7 @@ Místo používání rozšíření testovacího adaptéru se projekty vyžadují
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Pokud používáte testovací adaptér nunit 2 a nemůžete migrovat na testovací adaptér nunit 3, můžete toto nové chování zjišťování vypnout v aplikaci Visual Studio verze 15,8 v části **nástroje**  >  **Options**  >  **test** možností.
+> Pokud používáte testovací adaptér nunit 2 a nemůžete migrovat na testovací adaptér nunit 3, můžete toto nové chování zjišťování vypnout v aplikaci Visual Studio verze 15,8 v části **nástroje**  >    >  **test** možností.
 
 ![Chování adaptéru Průzkumníka testů v možnostech nástrojů](media/testex-adapterbehavior.png)
 ::: moniker-end

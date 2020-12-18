@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dfcdcfc309fb951b2f7e490f0d03dcfe9d381b83
-ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
+ms.openlocfilehash: 3e30dcb6a9d65cb562851ed90e350530759975d2
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92116147"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668557"
 ---
 # <a name="developer-community-guidelines"></a>Pokyny pro komunitu vývojářů
 
@@ -21,7 +21,7 @@ Komunita vývojářů sleduje problémy a návrhy funkcí pro Visual Studio.
 
 ## <a name="submitting-problems-and-suggestions"></a>Odesílání problémů a návrhů
 
-[Komunita vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/) sleduje problémy a návrhy funkcí pro Visual Studio.
+[Komunita vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8) sleduje problémy a návrhy funkcí pro Visual Studio.
 
 ### <a name="before-submitting-an-issue"></a>Před odesláním problému
 
@@ -117,4 +117,4 @@ Komentáře a odpovědi jsou veřejně viditelné, ale všechny připojené soub
 
 ## <a name="next-steps"></a>Další kroky
 
-Přihlaste se k [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/) , abyste mohli nahlásit problémy, navrhovat funkce nebo procházet stávající lístky. Užijte si ji!
+Přihlaste se k [komunitě vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8) , abyste mohli nahlásit problémy, navrhovat funkce nebo procházet stávající lístky. Užijte si ji!

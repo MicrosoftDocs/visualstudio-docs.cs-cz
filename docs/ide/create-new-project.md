@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cba3c19ae939396132af8bb3c2ffee318b7007e
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: c46ad7630717ca6500ddbedf284125e085ddb780
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006520"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668168"
 ---
 # <a name="create-a-new-project-in-visual-studio"></a>Vytvoření nového projektu v aplikaci Visual Studio
 
@@ -103,4 +103,4 @@ Chcete-li přidat další projekt do řešení, klikněte pravým tlačítkem my
 
 ## <a name="see-also"></a>Viz také
 
-- [Vytváření řešení a projektů](creating-solutions-and-projects.md)
+- [Práce s řešeními a projekty](creating-solutions-and-projects.md)

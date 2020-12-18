@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f11b4f7d456e588e6a2920580766ce06530227e0
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: d4b5ad68186142ae61a266d688a0430b0a623605
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329468"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668726"
 ---
 # <a name="static-helper-classes"></a>Třídy statických pomocných rutin
 
@@ -174,4 +174,4 @@ public static void AreElementsNotNull<T>(T[] value)
 
 ## <a name="got-feedback"></a>Máte zpětnou vazbu?
 
-Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://aka.ms/feedback/suggest?space=8).

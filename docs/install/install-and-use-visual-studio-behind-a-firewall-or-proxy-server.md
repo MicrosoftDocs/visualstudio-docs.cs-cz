@@ -17,20 +17,20 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 52eee3535590842db53cd80ac761286fb4a23fa9
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 1fc40c826499b36d5d713d0842a2c0e8dae462d1
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398992"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668362"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Nainstalujte a použijte Visual Studio a služby Azure za bránou firewall nebo proxy server
 
 Pokud vy nebo vaše organizace používáte bezpečnostní opatření, jako je brána firewall nebo proxy server, pak jsou k dispozici adresy URL domény, které byste mohli chtít přidat do seznamu povolených portů a porty a protokoly, které můžete chtít otevřít, abyste měli k dispozici nejlepší prostředí při instalaci a používání služeb Visual Studio a Azure.
 
-* **[Instalace sady Visual Studio](#install-visual-studio)** : tyto tabulky obsahují adresy URL domény, které se mají přidat do seznamu povolených aplikací, abyste měli přístup ke všem komponentám a úlohám, které chcete.
+* **[Instalace sady Visual Studio](#install-visual-studio)**: tyto tabulky obsahují adresy URL domény, které se mají přidat do seznamu povolených aplikací, abyste měli přístup ke všem komponentám a úlohám, které chcete.
 
-* **[Použijte Visual Studio a služby Azure](#use-visual-studio-and-azure-services)** : Tato tabulka obsahuje adresy URL domény, které se mají přidat do seznamu povolených položek a porty a protokoly, které se mají otevřít, abyste měli přístup ke všem funkcím a službám, které chcete.
+* **[Použijte Visual Studio a služby Azure](#use-visual-studio-and-azure-services)**: Tato tabulka obsahuje adresy URL domény, které se mají přidat do seznamu povolených položek a porty a protokoly, které se mají otevřít, abyste měli přístup ke všem funkcím a službám, které chcete.
 
 > [!NOTE]
 > Tento článek byl napsán pro Visual Studio ve Windows, ale některé informace platí i pro [instalaci Visual Studio pro Mac](/visualstudio/mac/install-behind-a-firewall-or-proxy-server) za bránou firewall nebo proxy server.
@@ -95,7 +95,7 @@ Pokud chcete mít jistotu, že máte přístup ke všemu, co potřebujete, když
 | URL<br>řešení | go.microsoft.com<br><br>aka.ms | | Slouží k zkrácení adres URL, které se pak předají do delších adres URL. |
 | Úvodní stránka | vsstartpage.blob.core.windows.net | 443 | Slouží k zobrazení příspěvků vývojáře zobrazených na úvodní stránce (pouze Visual Studio 2017). |
 | Targeted<br> Notification (Oznámení) <br>Služba | targetednotifications-tm.trafficmanager.net <br><br>www.research.net | 443<br><br>443 | Slouží k filtrování globálního seznamu oznámení do seznamu, který se vztahuje pouze na konkrétní typy počítačů nebo scénářů použití. |
-| Rozšíření <br>aktualizovat kontrolu | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Slouží k poskytování oznámení v případě, že je k dispozici aktualizace nainstalovaného rozšíření. <br><br> Používá se jako přihlašovací umístění. |
+| Linka <br>aktualizovat kontrolu | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Slouží k poskytování oznámení v případě, že je k dispozici aktualizace nainstalovaného rozšíření. <br><br> Používá se jako přihlašovací umístění. |
 | Projekt AI <br>Integrace | az861674.vo.msecnd.net | 443<br> | Slouží ke konfiguraci nových projektů k odesílání dat o využití do vašeho registrovaného Application Insights účtu. |
 | Čočka kódu | codelensprodscus1su0. app.<br>codelens.visualstudio.com | 443 | Slouží k zadání informací v editoru týkající se poslední aktualizace souboru, časové osy změn, pracovních položek, ke kterým jsou změny přidruženy, autorů a dalších. |
 | Experimentální <br>povolení funkcí | visualstudio-devdiv-c2s.msedge.net | 80 | Slouží k aktivaci experimentálních nových funkcí nebo změn funkcí. |
@@ -148,14 +148,14 @@ Pokud chcete mít jistotu, že máte přístup ke všemu, co potřebujete, když
 
 V některých případech může při instalaci nebo používání sady Visual Studio za bránou firewall nebo proxy server běžet chyba související se sítí nebo proxy serverem. Další informace o řešeních pro tyto chybové zprávy najdete v tématu [řešení potíží s chybami sítě při instalaci nebo použití stránky sady Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md) .
 
-## <a name="get-support"></a>Získání podpory
+## <a name="get-support"></a>Získat podporu
 
 Nabízíme [**instalační chat**](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině), který umožňuje problémy související s instalací.
 
 Tady je několik dalších možností podpory:
 
 * Nahlaste problémy s produktem prostřednictvím nástroje [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio.md) , který se zobrazí v instalační program pro Visual Studio i v integrovaném vývojovém prostředí sady Visual Studio.
-* Navrhněte funkci, Sledujte problémy s produkty a vyhledejte odpovědi v [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/).
+* Navrhněte funkci, Sledujte problémy s produkty a vyhledejte odpovědi v [komunitě vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8).
 * Využijte svůj účet [GitHub](https://github.com/) ke komunikaci s námi a dalšími vývojáři sady Visual Studio v [konverzaci Visual studia v komunitě gitteru](https://gitter.im/Microsoft/VisualStudio).
 
 ## <a name="see-also"></a>Viz také

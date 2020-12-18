@@ -8,12 +8,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: d213a7add358c46f7088f504d8c54352cda44a1c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 964b360806f6f834aa57c475d2117c124f2cf8af
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905976"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668635"
 ---
 # <a name="open-folder-extensibility"></a>Rozšiřitelnost otevření složky
 
@@ -51,7 +51,7 @@ Funkce, které používají následující typy, budou muset pro podporu otevře
 
 ## <a name="feedback-comments-issues"></a>Zpětná vazba, komentáře, problémy
 
-Otevřená složka a `Microsoft.VisualStudio.Workspace.*` rozhraní API se nacházejí v aktivním vývoji. Pokud se zobrazí neočekávané chování, podívejte se na známé problémy pro vydání zájmu. [Komunita vývojářů](https://developercommunity.visualstudio.com) je doporučeným místem, kde můžete hlasovat a vytvářet případné problémy. U každé zpětné vazby důrazně doporučujeme detailní popis problému. Zahrňte verzi sady Visual Studio, kterou vyvíjíte, rozhraní API, která používáte (jak jste implementovali a co s tím interaktivně pracujete), očekávaný výsledek a skutečný výsledek. Pokud je to možné, zahrňte výpis devenv.exe procesu. Pro poskytování zpětné vazby k této a související dokumentaci použijte sledování problémů GitHubu.
+Otevřená složka a `Microsoft.VisualStudio.Workspace.*` rozhraní API se nacházejí v aktivním vývoji. Pokud se zobrazí neočekávané chování, podívejte se na známé problémy pro vydání zájmu. [Komunita vývojářů](https://aka.ms/feedback/suggest?space=8) je doporučeným místem, kde můžete hlasovat a vytvářet případné problémy. U každé zpětné vazby důrazně doporučujeme detailní popis problému. Zahrňte verzi sady Visual Studio, kterou vyvíjíte, rozhraní API, která používáte (jak jste implementovali a co s tím interaktivně pracujete), očekávaný výsledek a skutečný výsledek. Pokud je to možné, zahrňte výpis devenv.exe procesu. Pro poskytování zpětné vazby k této a související dokumentaci použijte sledování problémů GitHubu.
 
 ## <a name="next-steps"></a>Další kroky
 

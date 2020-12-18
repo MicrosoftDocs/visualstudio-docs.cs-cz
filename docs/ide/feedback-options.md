@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 3b50ec910c6d5880ead2df48db2ef763753379bb
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 11caf55a8412477ac94d290add667b9393435fb6
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807882"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668739"
 ---
 # <a name="visual-studio-feedback-options"></a>Možnosti zpětné vazby v aplikaci Visual Studio
 
@@ -34,7 +34,7 @@ Pokud máte problémy se sadou Visual Studio &mdash; , jako jsou havárie, výko
 
 ![Ikona pro odeslání zpětné vazby v integrovaném vývojovém prostředí sady Visual Studio 2019](./media/vs-2019/send-feedback-icon.png)
 
-V dalším kroku Visual Studio otevře rozhraní [komunity vývojářů](https://developercommunity.visualstudio.com) , kde se můžete přihlásit a nahlásit problém. Další informace najdete v tématu [postup nahlášení problému se sadou Visual Studio](how-to-report-a-problem-with-visual-studio.md).
+V dalším kroku Visual Studio otevře rozhraní [komunity vývojářů](https://aka.ms/feedback/suggest?space=8) , kde se můžete přihlásit a nahlásit problém. Další informace najdete v tématu [postup nahlášení problému se sadou Visual Studio](how-to-report-a-problem-with-visual-studio.md).
 
 ::: moniker-end
 
@@ -44,7 +44,7 @@ Pokud máte problémy se sadou Visual Studio &mdash; , jako jsou havárie, výko
 
 ![Ikona pro odeslání zpětné vazby v integrovaném vývojovém prostředí sady Visual Studio 2019](./media/send-feedback-icon.png)
 
-V dalším kroku Visual Studio otevře rozhraní [komunity vývojářů](https://developercommunity.visualstudio.com) , kde se můžete přihlásit a nahlásit problém. Další informace najdete v tématu [postup nahlášení problému se sadou Visual Studio](how-to-report-a-problem-with-visual-studio.md).
+V dalším kroku Visual Studio otevře rozhraní [komunity vývojářů](https://aka.ms/feedback/suggest?space=8) , kde se můžete přihlásit a nahlásit problém. Další informace najdete v tématu [postup nahlášení problému se sadou Visual Studio](how-to-report-a-problem-with-visual-studio.md).
 
 ::: moniker-end
 
@@ -54,7 +54,7 @@ V dalším kroku Visual Studio otevře rozhraní [komunity vývojářů](https:/
 
 Máte-li nápad nebo návrh, který aplikaci Visual Studio vylepší, dejte nám informace pomocí nástroje **navrhnout funkci** . V aplikaci Visual Studio klikněte na ikonu zpětné vazby v pravém horním rohu nebo vyberte možnost **help**  >  **Odeslat názor**  >  **navrhnout funkci** z řádku nabídek.
 
-V dalším kroku Visual Studio otevře rozhraní [komunity vývojářů](https://developercommunity.visualstudio.com) , kde se můžete přihlásit a sdílet svůj nápad. Další informace najdete v tématu [navrhnout funkci pro Visual Studio](suggest-a-feature.md).
+V dalším kroku Visual Studio otevře rozhraní [komunity vývojářů](https://aka.ms/feedback/suggest?space=8) , kde se můžete přihlásit a sdílet svůj nápad. Další informace najdete v tématu [navrhnout funkci pro Visual Studio](suggest-a-feature.md).
 
 ::: moniker-end
 
@@ -62,7 +62,7 @@ V dalším kroku Visual Studio otevře rozhraní [komunity vývojářů](https:/
 
 Máte-li nápad nebo návrh, který aplikaci Visual Studio vylepší, dejte nám informace pomocí nástroje pro **poskytování návrhů** . V aplikaci Visual Studio vyberte ikonu zpětné vazby vedle vyhledávacího pole nebo klikněte **na tlačítko**  >  **Odeslat zpětnou vazbu**  >  **Zadejte návrh** z řádku nabídek.
 
-Dále Visual Studio otevře stránku [komunity vývojářů](https://developercommunity.visualstudio.com) , kde se můžete přihlásit a sdílet svůj nápad. Další informace najdete v tématu [navrhnout funkci pro Visual Studio](suggest-a-feature.md).
+Dále Visual Studio otevře stránku [komunity vývojářů](https://aka.ms/feedback/suggest?space=8) , kde se můžete přihlásit a sdílet svůj nápad. Další informace najdete v tématu [navrhnout funkci pro Visual Studio](suggest-a-feature.md).
 
 ::: moniker-end
 
@@ -71,7 +71,7 @@ Dále Visual Studio otevře stránku [komunity vývojářů](https://developerco
 Existují dva způsoby, jak nám pomoci zlepšit dokumentaci:
 
 * Použijte **tuto stránku: Tento nástroj je užitečný** pro odpověď v pravém horním rohu každé stránky dokumentace.
-* Použijte svůj účet GitHub k poskytnutí zpětné vazby k libovolné stránce sady Visual Studio na [docs.Microsoft.com](../index.yml). Provedete to tak, že v dolní části stránky dokumentace kliknete na tlačítko **Odeslat názor**na  >  **tuto stránku** .
+* Použijte svůj účet GitHub k poskytnutí zpětné vazby k libovolné stránce sady Visual Studio na [docs.Microsoft.com](../index.yml). Provedete to tak, že v dolní části stránky dokumentace kliknete na tlačítko **Odeslat názor** na  >  **tuto stránku** .
 
 ## <a name="contact-microsoft-support"></a>Obraťte se na podporu Microsoftu
 

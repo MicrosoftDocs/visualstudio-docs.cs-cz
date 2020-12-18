@@ -15,12 +15,12 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: c9f06b72673ea73e68f6c224ec9734568d70e25a
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 4cded3bfdb6adc206f02ef54402964f4e7276f93
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852254"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668778"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>Řešení chyb zarážek dat
 Tato stránka vás provede při řešení běžných chyb, ke kterým dochází při použití možnosti "přerušit při změně hodnoty".
@@ -81,7 +81,7 @@ Architektura (konfigurace platformy), na které se program spouští, má omezen
 
 ## <a name="provide-feedback"></a>Poskytnutí zpětné vazby
 
-Pokud máte nějaké problémy nebo návrhy této funkce, dejte nám prosím vědět prostřednictvím Help > odeslání názoru > [nahlášení problému](../ide/how-to-report-a-problem-with-visual-studio.md) v integrovaném vývojovém prostředí nebo [komunitě vývojářů](https://developercommunity.visualstudio.com/).
+Pokud máte nějaké problémy nebo návrhy této funkce, dejte nám prosím vědět prostřednictvím Help > odeslání názoru > [nahlášení problému](../ide/how-to-report-a-problem-with-visual-studio.md) v integrovaném vývojovém prostředí nebo [komunitě vývojářů](https://aka.ms/feedback/suggest?space=8).
 
 ## <a name="see-also"></a>Viz také
 

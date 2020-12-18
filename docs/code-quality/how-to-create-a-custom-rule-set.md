@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6ad55d3d678a26489983bf276359f2141688272
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 69af1534740ddec2c804f0b7dafec61d985a4b24
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348811"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97667881"
 ---
 # <a name="customize-a-rule-set"></a>Přizpůsobení sady pravidel
 
@@ -53,7 +53,7 @@ Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel
 4. Vyberte **otevřít** a zobrazte pravidla v editoru sad pravidel.
 
 > [!NOTE]
-> Pokud máte projekt .NET Core nebo .NET Standard, proces je trochu odlišný, protože není k dispozici žádná karta vlastnost **Analýza kódu** . Použijte postup [Kopírování předdefinované sady pravidel do projektu a nastavte ji jako aktivní sadu pravidel](/dotnet/fundamentals/code-analysis/code-quality-rule-options). Po zkopírování sady pravidel [ji můžete upravit v editoru sad pravidel sady Visual Studio](working-in-the-code-analysis-rule-set-editor.md) otevřením z **Průzkumník řešení**.
+> Pokud máte projekt .NET Core nebo .NET Standard, proces je trochu odlišný, protože karta **Analýza kódu** ve vlastnostech projektu nepodporuje stejné možnosti. Použijte postup [Kopírování předdefinované sady pravidel do projektu a nastavte ji jako aktivní sadu pravidel](/dotnet/fundamentals/code-analysis/code-quality-rule-options). Po zkopírování sady pravidel [ji můžete upravit v editoru sad pravidel sady Visual Studio](working-in-the-code-analysis-rule-set-editor.md) otevřením z **Průzkumník řešení**.
 
 ## <a name="create-a-new-rule-set"></a>Vytvořit novou sadu pravidel
 
@@ -70,7 +70,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 ## <a name="create-a-custom-rule-set-from-multiple-rule-sets"></a>Vytvoření vlastní sady pravidel z více sad pravidel
 
 > [!NOTE]
-> Následující postup neplatí pro projekty .NET Core, které nemají kartu vlastnost **analýzy kódu** .
+> Následující postup se nevztahuje na projekty .NET Core nebo .NET Standard, které nepodporují stejné funkce na kartě vlastnost **analýzy kódu** .
 
 1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
 
@@ -92,7 +92,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
    ![Dialogové okno Přidat nebo odebrat sady pravidel](media/add-remove-rule-sets.png)
 
-5. Vyberte **Uložit jako** , zadejte název souboru *. ruleset* a pak vyberte **Save (Uložit** ).
+5. Vyberte **Uložit jako**, zadejte název souboru *. ruleset* a pak vyberte **Save (Uložit**).
 
    V seznamu **Spustit sadu pravidel** je vybraná nová sada pravidel.
 

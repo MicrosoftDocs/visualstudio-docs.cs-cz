@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 8c356893b0c9716374950df3edc3dc480f022100
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 0c406f8900ee890eaf8419ce27adeba2d06c81dd
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330222"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668791"
 ---
 # <a name="attribute-glossary"></a>Glosář atributů
 
@@ -249,4 +249,4 @@ class CtorTest(int capacity) {
 
 ## <a name="got-feedback"></a>Máte zpětnou vazbu?
 
-Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Své nápady a žádosti o funkce můžete zadávat na webu [Developer Community](https://aka.ms/feedback/suggest?space=8).

@@ -1,5 +1,6 @@
 ---
 title: Text uživatelského rozhraní a nápovědu pro Visual Studio | Microsoft Docs
+description: Přečtěte si o textu uživatelského rozhraní a terminologii používané v informacích o nápovědě pro Visual Studio.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
@@ -8,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3247aeaa702b59722471c7d28e98957f04f3e07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2795d766c43d6119fa50a12c4dcd1e2c72d79186
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698301"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668596"
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>Text uživatelského rozhraní a nápověda pro Visual Studio
 ## <a name="ui-text-and-terminology"></a><a name="BKMK_UITextAndTerminology"></a> Text uživatelského rozhraní a terminologie
@@ -60,11 +61,11 @@ ms.locfileid: "80698301"
 #### <a name="supplemental-instructions"></a>Doplňkové pokyny
  Doplňkové pokyny poskytují další informace, které pomáhají uživatelům pochopit ovládací prvky nebo seskupení ovládacích prvků. Může to také zahrnovat text nápovědy, který je nezbytný k pochopení toho, jaký formát vstupní ovládací prvek očekává. Používejte doplňkové pokyny zřídka. Rezervujte je pro případy, kdy je pravděpodobnější, že uživatel nebude plně rozumět vlivům volby, které provádějí.
 
- ![Doplňkový text v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601 – b_SupplementalText1")
+ ![Snímek obrazovky s tlačítkem možnosti aplikace Internet Explorer s doplňujícím textem, který popisuje dopad změny nastavení možností.](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601 – b_SupplementalText1")
 
  **Doplňkový text v aplikaci Visual Studio**
 
- ![Doplňkový text v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601 – c_SupplementalText2")
+ ![Snímek obrazovky dialogového okna zvolit správu zdrojového kódu v aplikaci Visual Studio zobrazující doplňkový text, který popisuje jednotlivé možnosti systému správy zdrojů.](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601 – c_SupplementalText2")
 
  **Doplňkový text v aplikaci Visual Studio**
 
@@ -123,7 +124,7 @@ ms.locfileid: "80698301"
 
 - Nikdy nepropojit pouze slovo "zde". To je problematické pro některé čtečky obrazovky, které budou hlas pouze hypertextovým slovem s hypertextovými odkazy.
 
-     Nesprávné: **tady**najdete informace v systému Windows Azure Mobile Services
+     Nesprávné: **tady** najdete informace v systému Windows Azure Mobile Services
 
      Správné: "jaké cenové možnosti jsou k dispozici pro Windows Azure Mobile Services?"
 
@@ -136,15 +137,15 @@ ms.locfileid: "80698301"
 
 - Místo popisku ovládacího prvku:
 
-     ![Text nápovědy v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601 – f_HintText1")
+     ![Snímek obrazovky ovládacího prvku rozevíracího seznamu s textem nápovědy místo popisku ovládacího prvku, který čte "Search Průzkumník řešení (CTRL +;)".](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601 – f_HintText1")
 
 - Pomocí příkazu, který poskytuje pokyny:
 
-     ![Text nápovědy v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601 – g_HintText2")
+     ![Snímek obrazovky s textovým polem s nápovědou v ovládacím prvku, který čte "zadejte své jméno".](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601 – g_HintText2")
 
 - S textem, který označuje požadovanou položku:
 
-     ![Text nápovědy v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601 – h_HintText3")
+     ![Snímek obrazovky s textovým polem s nápovědou v ovládacím prvku, který čte " \< povinné \> ".](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601 – h_HintText3")
 
 #### <a name="watermark-text"></a>Text vodoznaku
  Na prázdné návrhové ploše by měl text indikovat, co dělat, a také poskytnout odkazy na otevírání dalších souvisejících oken, pokud je to vhodné:
@@ -247,7 +248,7 @@ ms.locfileid: "80698301"
 
 - **Courteous.** Neviny uživatele nebo se mu nedaří Stupid. Vyhněte se nepřátelským nebo urážlivému jazyku (kill, Execute, ukončení, kritický, neplatný). Nepoužívejte text na velká písmena, který se často zobrazuje jako Shouting a není tak čitelný. Nepoužívejte humor.
 
-- **Odstranění.** Používejte správnou kontrolu pravopisu a gramatiky (i v alfa). Překlepy jsou neprofesionální a absolutně.
+- **Správně.** Používejte správnou kontrolu pravopisu a gramatiky (i v alfa). Překlepy jsou neprofesionální a absolutně.
 
 - **Podle kontextového závislosti.** Použijte odpovídající text tlačítka. Vyhněte se tlačítku "OK" a místo toho použít "pokračovat" nebo "Ano/ne".
 

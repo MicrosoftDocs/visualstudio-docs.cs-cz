@@ -12,14 +12,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 48fb0f1c22b2f7055005640baff2239a0ad4a32a
-ms.sourcegitcommit: fed8782b2fb2ca18a90746b6e7e0b33f3fde10f1
+ms.openlocfilehash: 8cdc30b34c85a799827519af3cd2bba2c9f1735a
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97646408"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668804"
 ---
-# <a name="learn-about-projects-and-solutions"></a>Další informace o projektech a řešeních
+# <a name="introduction-to-projects-and-solutions"></a>Seznámení s projekty a řešení
 
 V tomto úvodním článku probereme to, co znamená vytvoření *řešení* a *projektu* v aplikaci Visual Studio. Řešení je kontejner, který slouží k uspořádání jednoho nebo více souvisejících kódových projektů, například projektu knihovny tříd a odpovídajícího testovacího projektu. Podíváme se na vlastnosti projektu a na některé ze souborů, které může obsahovat. Také vytvoříme odkaz z jednoho projektu na jiný.
 
@@ -56,7 +56,7 @@ Náš průzkum začneme vytvořením prázdného řešení. Až se dostanete k a
 
    Otevře se dialogové okno **Nový projekt** .
 
-1. V levém podokně rozbalte položku **jiné typy projektů** a pak zvolte možnost **řešení sady Visual Studio**. V prostředním podokně vyberte šablonu **prázdná řešení** . Pojmenujte své řešení **QuickSolution** a pak klikněte na tlačítko **OK** .
+1. V levém podokně rozbalte položku **jiné typy projektů** a potom vyberte možnost **řešení sady Visual Studio**. V prostředním podokně vyberte šablonu **prázdného řešení** . Pojmenujte své řešení **QuickSolution** a pak vyberte tlačítko **OK** .
 
    ![Prázdná šablona řešení v aplikaci Visual Studio 2017](media/tutorial-projects-new-solution.png "Prázdná šablona řešení v aplikaci Visual Studio 2017.")
 
@@ -68,16 +68,16 @@ Náš průzkum začneme vytvořením prázdného řešení. Až se dostanete k a
 
 1. Otevřete sadu Visual Studio.
 
-2. V okně Start vyberte možnost **vytvořit nový projekt**.
+2. V okně Start vyberte **vytvořit nový projekt**.
 
-3. Na stránce **vytvořit nový projekt** zadejte do vyhledávacího pole **prázdné řešení** , vyberte šablonu **prázdného řešení** a klikněte na tlačítko **Další**.
+3. Na stránce **vytvořit nový projekt** zadejte do vyhledávacího pole **prázdné řešení** , vyberte šablonu **prázdného řešení** a pak vyberte **Další**.
 
    ![Prázdná šablona řešení v aplikaci Visual Studio 2019](media/vs-2019/tutorial-projects-blank-solution-template.png "Prázdná šablona řešení v aplikaci Visual Studio 2019.")
 
     > [!TIP]
     > Pokud máte nainstalované několik úloh, **prázdná šablona řešení** se nemusí zobrazit v horní části seznamu výsledků hledání. Zkuste posun k **ostatním výsledkům na základě vašeho oddílu hledání** v seznamu. Mělo by se tady zobrazit.
 
-4. Pojmenujte řešení **QuickSolution** a pak zvolte **vytvořit**.
+4. Pojmenujte řešení **QuickSolution** a pak vyberte **vytvořit**.
 
    Řešení se zobrazí v **Průzkumník řešení** na pravé straně okna aplikace Visual Studio. K procházení obsahu svých projektů pravděpodobně použijete **Průzkumník řešení** často.
 
@@ -89,16 +89,16 @@ Nyní do řešení přidáme náš první projekt. Začneme s prázdným projekt
 
 ::: moniker range="vs-2017"
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem myši nebo v kontextové nabídce **řešení ' QuickSolution '** , vyberte možnost **Přidat** > **Nový projekt**.
+1. V Průzkumník řešení klikněte pravým tlačítkem nebo kontextovou nabídku **řešení ' QuickSolution '** v vyberte **Přidat** > **Nový projekt**.
 
    Otevře se dialogové okno **Přidat nový projekt** .
 
-1. V levém podokně rozbalte položku **Visual C#** a vyberte možnost **plocha systému Windows**. Pak v prostředním podokně vyberte šablonu **prázdného projektu (.NET Framework)** . Pojmenujte projekt **QuickDate** a pak zvolte **OK**.
+1. V levém podokně rozbalte položku **Visual C#** a vyberte možnost **desktopová plocha systému Windows**. Pak v prostředním podokně vyberte šablonu **prázdného projektu (.NET Framework)** . Pojmenujte projekt **QuickDate** a pak vyberte **OK**.
 
    Projekt s názvem QuickDate se zobrazí pod řešením v **Průzkumník řešení**. V současné době obsahuje jeden soubor s názvem *App.config*.
 
    > [!NOTE]
-   > Pokud nevidíte v levém podokně dialogového okna **Visual C#** , je nutné nainstalovat úlohu aplikace **.NET Desktop Development** sady Visual Studio. Visual Studio používá instalaci založenou na úlohách k instalaci jenom těch komponent, které potřebujete pro typ vývoje. Snadný způsob, jak nainstalovat novou úlohu, je kliknout na odkaz **otevřít instalační program pro Visual Studio** v levém dolním rohu dialogového okna **Přidat nový projekt** . Po spuštění Instalační program pro Visual Studio zvolte úlohu **vývoj desktopových** aplikací pro .NET a pak klikněte na tlačítko **Upravit** .
+   > Pokud nevidíte v levém podokně dialogového okna **Visual C#** , je nutné nainstalovat úlohu aplikace **.NET Desktop Development** sady Visual Studio. Visual Studio používá instalaci založenou na úlohách k instalaci jenom těch komponent, které potřebujete pro typ vývoje. Snadný způsob, jak nainstalovat novou úlohu, je vybrat odkaz **otevřít instalační program pro Visual Studio** v levém dolním rohu dialogového okna **Přidat nový projekt** . Po Instalační program pro Visual Studio spuštění vyberte úlohu **vývoj desktopových** aplikací pro .NET a pak klikněte na tlačítko **Upravit** .
    >
    > ![Otevřít Instalační program pro Visual Studio odkaz](media/tutorial-projects-open-installer.png "Odkaz otevřít Instalační program pro Visual Studio v dialogovém okně Přidat nový projekt v aplikaci Visual Studio 2017.")
 
@@ -106,22 +106,22 @@ Nyní do řešení přidáme náš první projekt. Začneme s prázdným projekt
 
 ::: moniker range=">=vs-2019"
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem myši nebo v kontextové nabídce **řešení ' QuickSolution '** , vyberte možnost **Přidat** > **Nový projekt**.
+1. V Průzkumník řešení klikněte pravým tlačítkem nebo kontextovou nabídku **řešení ' QuickSolution '** v vyberte **Přidat** > **Nový projekt**.
 
    Otevře se dialogové okno s informacemi **o přidání nového projektu**.
 
 1. Do vyhledávacího pole v horní části zadejte text **Empty** a potom v části **jazyk** vyberte **C#** .
 
-1. Vyberte šablonu **prázdného projektu (.NET Framework)** a klikněte na tlačítko **Další**.
+1. Vyberte šablonu **prázdného projektu (.NET Framework)** a pak vyberte **Další**.
 
-1. Pojmenujte projekt **QuickDate** a pak zvolte **vytvořit**.
+1. Pojmenujte projekt **QuickDate** a pak vyberte **vytvořit**.
 
    Projekt s názvem QuickDate se zobrazí pod řešením v **Průzkumník řešení**. V současné době obsahuje jeden soubor s názvem *App.config*.
 
    > [!NOTE]
    > Pokud nevidíte **prázdnou šablonu projektu (.NET Framework)** , je nutné nainstalovat úlohu aplikace **.NET Desktop Development** sady Visual Studio. Visual Studio používá instalaci založenou na úlohách k instalaci jenom těch komponent, které potřebujete pro typ vývoje.
    >
-   >Snadný způsob, jak nainstalovat novou úlohu při vytváření nového projektu, je odkaz pro **instalaci dalších nástrojů a funkcí** pod textem, který **nehledá, co hledáte?**. Po spuštění Instalační program pro Visual Studio zvolte úlohu **vývoj desktopových** aplikací pro .NET a pak klikněte na tlačítko **Upravit** .
+   >Snadný způsob, jak při vytváření nového projektu nainstalovat novou úlohu, je odkaz pro **instalaci dalších nástrojů a funkcí** pod textem, který **nehledá, co hledáte?**. Po Instalační program pro Visual Studio spuštění vyberte úlohu **vývoj desktopových** aplikací pro .NET a pak klikněte na tlačítko **Upravit** .
    >
    > ![Otevřít Instalační program pro Visual Studio odkaz](media/vs-2019/tutorial-projects-open-installer.png "Odkaz otevřít Instalační program pro Visual Studio v dialogovém okně vytvořit nový projekt v aplikaci Visual Studio.")
 
@@ -131,11 +131,11 @@ Nyní do řešení přidáme náš první projekt. Začneme s prázdným projekt
 
 Máme prázdný projekt. Pojďme přidat soubor kódu.
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši nebo místní nabídky projektu **QuickDate** v části vyberte možnost **Přidat**  >  **novou položku**.
+1. V Průzkumník řešení klikněte pravým tlačítkem nebo kontextovou nabídku projektu **QuickDate** v části vyberte možnost **Přidat**  >  **novou položku**.
 
    Otevře se dialogové okno **Přidat novou položku** .
 
-1. Rozbalte položku **Visual C# položky** a pak zvolte možnost **kód**. V prostředním podokně vyberte šablonu položky **Třída** . Pojmenujte **Kalendář** třídy a pak klikněte na tlačítko **Přidat** .
+1. Rozbalte položku **Visual C# položky** a pak vyberte možnost **kód**. V prostředním podokně vyberte šablonu položky **Třída** . Pojmenujte **Kalendář** třídy a pak vyberte tlačítko **Přidat** .
 
    Do projektu se přidá soubor s názvem *Calendar.cs* . Přípona *. cs* na konci je přípona souboru, která je předána souborům kódu jazyka C#. Soubor se zobrazí v hierarchii Visual Project v **Průzkumník řešení** a jeho obsah je otevřen v editoru.
 
@@ -171,11 +171,11 @@ Je běžné, že řešení obsahují více než jeden projekt a často tyto proj
 
 Pojďme do našeho řešení přidat projekt testování částí. Tentokrát začneme ze šablony projektu, takže nemusíme do projektu přidat další soubor kódu.
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem myši nebo v kontextové nabídce **řešení ' QuickSolution '** , vyberte možnost **Přidat**  >  **Nový projekt**.
+1. V Průzkumník řešení klikněte pravým tlačítkem nebo kontextovou nabídku **řešení ' QuickSolution '** v vyberte **Přidat**  >  **Nový projekt**.
 
 ::: moniker range="vs-2017"
 
-2. V levém podokně rozbalte položku **Visual C#** a vyberte kategorii **test** . V prostředním podokně vyberte šablonu projektu **projekt testů MSTest (.NET Core)** . Pojmenujte projekt **QuickTest** a klikněte na **tlačítko OK**.
+2. V levém podokně rozbalte položku **Visual C#** a vyberte kategorii **test** . V prostředním podokně vyberte šablonu projektu **projekt testů MSTest (.NET Core)** . Pojmenujte projekt **QuickTest** a pak vyberte **OK**.
 
    Druhý projekt je přidán do **Průzkumník řešení** a v editoru se otevře soubor s názvem *UnitTest1.cs* .
 
@@ -187,9 +187,9 @@ Pojďme do našeho řešení přidat projekt testování částí. Tentokrát za
 
 2. V dialogovém okně **Přidat nový projekt** zadejte do vyhledávacího pole v horní části text **testu jednotek** a potom v části **jazyk** vyberte **C#** .
 
-3. Zvolte šablonu projektu **MSTest test (.NET Core)** a klikněte na tlačítko **Další**.
+3. Vyberte šablonu projektu **projekt testů MSTest (.NET Core)** a pak vyberte **Další**.
 
-4. Pojmenujte projekt **QuickTest** a pak zvolte **vytvořit**.
+4. Pojmenujte projekt **QuickTest** a pak vyberte **vytvořit**.
 
    Druhý projekt je přidán do **Průzkumník řešení** a v editoru se otevře soubor s názvem *UnitTest1.cs* .
 
@@ -203,30 +203,30 @@ Použijeme nový projekt testování částí k otestování naší metody v pro
 
 ::: moniker range="vs-2017"
 
-1. V projektu **QuickTest** vyberte uzel **závislosti** a v místní nabídce klikněte pravým tlačítkem myši nebo vyberte možnost **Přidat odkaz**.
+1. V projektu **QuickTest** vyberte uzel **závislosti** a v místní nabídce klepněte pravým tlačítkem myši nebo vyberte možnost **Přidat odkaz**.
 
    Otevře se dialogové okno **Správce odkazů** .
 
-1. V levém podokně rozbalte položku **projekty** a klikněte na možnost **řešení**. V prostředním podokně klikněte na zaškrtávací políčko vedle **QuickDate** a pak zvolte **OK**.
+1. V levém podokně rozbalte **projekty** a vyberte **řešení**. V prostředním podokně zaškrtněte políčko vedle **QuickDate** a pak vyberte **OK**.
 
    Přidá se odkaz na projekt **QuickDate** .
 
-   ![Visual Studio 2019 Průzkumník řešení zobrazení odkazu na projekt](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Průzkumník řešení zobrazení odkazu na projekt v aplikaci Visual Studio.")
+   ![Snímek obrazovky Průzkumník řešení zobrazující odkaz na projekt v aplikaci Visual Studio](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Snímek obrazovky Průzkumník řešení znázorňující odkaz na projekt v aplikaci Visual Studio.")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. V projektu **QuickTest** vyberte uzel **závislosti** a v místní nabídce klikněte pravým tlačítkem myši nebo vyberte možnost **Přidat odkaz na projekt.**...
+1. V projektu **QuickTest** vyberte uzel **závislosti** a v místní nabídce klikněte pravým tlačítkem nebo vyberte **Přidat odkaz na projekt..**..
 
    Otevře se dialogové okno **Správce odkazů** .
 
-1. V levém podokně rozbalte položku **projekty** a klikněte na možnost **řešení**. V prostředním podokně klikněte na zaškrtávací políčko vedle **QuickDate** a pak zvolte **OK**.
+1. V levém podokně rozbalte položku **projekty** a pak vyberte možnost **řešení**. V prostředním podokně zaškrtněte políčko vedle **QuickDate** a pak vyberte **OK**.
 
    Přidá se odkaz na projekt **QuickDate** .
 
-   ![Visual Studio 2019 Průzkumník řešení zobrazení odkazu na projekt](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
-   
+   ![Snímek obrazovky Průzkumník řešení znázorňující odkaz na projekt v aplikaci Visual Studio 2019](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
+
 ::: moniker-end
 
 ## <a name="add-test-code"></a>Přidat testovací kód
@@ -299,7 +299,7 @@ Chcete-li zkontrolovat, zda je test jednotky funkční, vyberte možnost **test*
 
 ## <a name="see-also"></a>Viz také
 
-- [Vytváření projektů a řešení](../ide/creating-solutions-and-projects.md)
+- [Práce s projekty a řešeními](../ide/creating-solutions-and-projects.md)
 - [Správa vlastností projektu a řešení](../ide/managing-project-and-solution-properties.md)
 - [Správa odkazů v projektu](../ide/managing-references-in-a-project.md)
 - [Vývoj kódu v sadě Visual Studio bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)

@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: f253ba9b7e46f809bc107aa2b3e26f635d778770
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 84be6698c62e3a2a205ceb9d404673ee1d0c6f64
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928551"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668609"
 ---
 # <a name="supported-visual-studio-features-preview"></a>Podporované funkce sady Visual Studio (Preview)
 
@@ -27,7 +27,7 @@ V aktuální [veřejné beta verzi](https://github.com/features/codespaces)GitHu
 Nejedná se tedy o **vyčerpávající seznam**, ale k vysvětlení obecných možností sady Visual Studio, pokud se připojíte k codespace.
 
 > [!NOTE]
-> Pokud se vám při používání codespaces se sadou Visual Studio objevila nějaká funkce, dejte nám prosím o problému na https://developercommunity.visualstudio.com/ . To nám pomůže upřednostnit nejdůležitější funkce.
+> Pokud při používání codespaces se sadou Visual Studio dojde k nějaké funkci, dejte nám prosím o problému na [komunitě vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8)problém. To nám pomůže upřednostnit nejdůležitější funkce.
 
 > [!NOTE]
 > Níže popsané funkce jsou pro Visual Studio, ne pro dva další klienty GitHub Codespaces; Visual Studio Code a Editor v prohlížeči.
@@ -109,7 +109,7 @@ Ještě není k dispozici:
 Při práci se sadou Visual Studio připojenými k codespace získáte stejné funkce usnadnění jako při práci místně.
 
 * Správa zdrojového kódu – kompletní podpora Gitu prostřednictvím nového [okna Git](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/).
-* Usnadnění – existuje jeden známý problém s asistenční technologií, která nemá přístup k appcastingi laděné aplikace. Kromě tohoto omezení nevěříme, že existují žádné jiné problémy s kompatibilitou, které ještě neexistují v místním prostředí sady Visual Studio. Dejte nám prosím jistotu, jestli zjistíte chyby tím, že napíšete problém na [komunitě vývojářů](https://developercommunity.visualstudio.com/).
+* Usnadnění – existuje jeden známý problém s asistenční technologií, která nemá přístup k appcastingi laděné aplikace. Kromě tohoto omezení nevěříme, že existují žádné jiné problémy s kompatibilitou, které ještě neexistují v místním prostředí sady Visual Studio. Dejte nám prosím jistotu, jestli zjistíte chyby tím, že napíšete problém na [komunitě vývojářů](https://aka.ms/feedback/suggest?space=8).
 * Publikování – podporuje publikování do Azure prostřednictvím akcí GitHubu.
 * Připojené služby – podpora pro App Insights, Trezor klíčů, úložiště, SQL, Redis, Cosmos, openAPI a gRPC se podporují částečně.
 * Průzkumník testů * – nejčastěji se podporuje.

@@ -7,12 +7,12 @@ ms.author: madsk
 manager: jillfra
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 1567e75d5e0a6f27aee68cd783b9ebd4a70815f4
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 57009326857672ea648bdf8f531f9509cf8487ff
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211185"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668441"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Jak zvýšit pravděpodobnost vyřešeného problému s výkonem
 
@@ -198,5 +198,5 @@ Díky tomu, co tyto typy problémů nejvíce řeší, je poskytnout další prot
 * [Možnosti zpětné vazby v aplikaci Visual Studio](../ide/feedback-options.md)
 * [Nahlášení problému s Visual Studio pro Mac](/visualstudio/mac/report-a-problem)
 * [Nahlášení problému s C++](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset)
-* [Komunita vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/)
+* [Komunita vývojářů sady Visual Studio](https://aka.ms/feedback/suggest?space=8)
 * [Ochrana osobních údajů komunity vývojářů](developer-community-privacy.md)
