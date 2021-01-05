@@ -1,5 +1,7 @@
 ---
 title: Registrují se generátory jednoho souboru | Microsoft Docs
+description: Naučte se, jak zaregistrovat vlastní nástroj v aplikaci Visual Studio a vytvořit jeho instanci a přidružit ho k určitému typu projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 185e60daac2aef2c8aeeb4f087547984e6fcf510
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 7a0ce4afeddebdec8519467e1f4249095ce98f6b
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012032"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875255"
 ---
 # <a name="registering-single-file-generators"></a>Registrace generátorů tvořených jedním souborem
 Chcete-li zpřístupnit vlastní nástroj v nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , je nutné jej zaregistrovat, aby jej bylo [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] možné vytvořit a přidružit ho k určitému typu projektu.
@@ -67,7 +69,7 @@ Chcete-li zpřístupnit vlastní nástroj v nástroji [!INCLUDE[vsprvs](../../co
    "GeneratesDesignTimeSource"=dword:00000001
    ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>
 - [Implementace generátorů tvořených jedním souborem](../../extensibility/internals/implementing-single-file-generators.md)
 - [Zveřejnění typů pro vizuální návrháře](../../extensibility/internals/exposing-types-to-visual-designers.md)

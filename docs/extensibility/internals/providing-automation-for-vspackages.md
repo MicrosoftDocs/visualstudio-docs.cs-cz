@@ -1,5 +1,7 @@
 ---
 title: Poskytování automatizace pro VSPackage | Microsoft Docs
+description: Přečtěte si, jak poskytnout automatizaci pro sady VSPackage implementací objektů specifických pro VSPackage a implementací standardních objektů automatizace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6364f9cbaf3409e076eeb77365e5d793c7be96cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 939de72d672b750d2f2fc61a6c412368df5523d8
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705951"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875398"
 ---
 # <a name="providing-automation-for-vspackages"></a>Poskytování automatizace pro balíčky VSPackages
 Existují dva hlavní způsoby, jak zajistit automatizaci pro sady VSPackage: implementace objektů specifických pro VSPackage a implementace standardních objektů automatizace. Obecně se používají společně k rozšiřování modelu automatizace prostředí.
 
-## <a name="vspackage-specific-objects"></a>Objekty specifické pro VSPackage
+## <a name="vspackage-specific-objects"></a>VSPackage-Specific objekty
  Určitá místa v modelu automatizace vyžadují, abyste poskytovali automatizační objekty, které jsou pro VSPackage jedinečné. Například nové projekty vyžadují odlišné objekty, které poskytuje pouze vaše VSPackage. Názvy těchto objektů jsou zadány v registru a získány prostřednictvím volání do `DTE` objektu prostředí.
 
  Objekty specifické pro VSPackage lze také získat, pokud uživatel automatizace používá objekt poskytnutý prostřednictvím vlastnosti Object standardního objektu. Například standardní `Window` objekt má `Object` vlastnost, která se často označuje jako `Windows.Object` vlastnost. Když spotřebitelé volají v `Window.Object` okně implementovaném ve VSPackage, předáte zpět konkrétní automatizační objekt vlastního návrhu.

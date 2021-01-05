@@ -1,5 +1,7 @@
 ---
 title: Rozhodnutí o návrhu správy zdrojových kódů | Microsoft Docs
+description: Přečtěte si o několika klíčových rozhodnutích při návrhu, která je potřeba zvážit pro projekty při implementaci správy zdrojového kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c36bb2b50a72a52aeaeb7712f4ed711845b5e6d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98e84167bc9cbbcad41b897c2de69115c6827ca5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705248"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875515"
 ---
 # <a name="source-control-design-decisions"></a>Rozhodnutí o návrhu správy zdrojového kódu
 Při implementaci správy zdrojových kódů by se měla vzít v úvahu následující rozhodnutí o návrhu pro projekty.

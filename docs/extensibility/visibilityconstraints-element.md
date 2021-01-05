@@ -1,5 +1,7 @@
 ---
 title: Element VisibilityConstraints | Microsoft Docs
+description: Element VisibilityConstraints určuje statickou viditelnost skupin příkazů a panelů nástrojů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b1aaa9573b883910ac6fa5d921a9bc79ce1c1cf3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f50f23847da8f6d56da6763146efd147aebca8c6
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698195"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863919"
 ---
 # <a name="visibilityconstraints-element"></a>Element VisibilityConstraints
 Element VisibilityConstraints určuje statickou viditelnost skupin příkazů a panelů nástrojů. Viditelnost je nejprve ovládána [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaným vývojovým prostředím (IDE) bez načtení balíčku VSPackage.
@@ -39,7 +41,7 @@ Element VisibilityConstraints určuje statickou viditelnost skupin příkazů a 
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
@@ -58,7 +60,7 @@ Element VisibilityConstraints určuje statickou viditelnost skupin příkazů a 
 
 ```xml
 <VisibilityConstraints>
-  <VisibilityItem guid="cmdSetGuidMyProductCommands"     id="cmdidAddWidget"
+  <VisibilityItem guid="cmdSetGuidMyProductCommands"     id="cmdidAddWidget"
     context="guidNotViewSourceMode"/>
 </VisibilityConstraints>
 ```

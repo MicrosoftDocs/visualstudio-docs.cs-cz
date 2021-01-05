@@ -1,5 +1,7 @@
 ---
 title: Objekt konfigurace projektu | Microsoft Docs
+description: Přečtěte si, jak objekt konfigurace projektu spravuje zobrazení informací o konfiguraci uživatelského rozhraní.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 001509b56e3bac6a8fd585eb0efe0bd57018acea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4d91f640abc4fd91b68341e825b312b8bfb0d6f6
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706660"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875489"
 ---
 # <a name="project-configuration-object"></a>Objekt konfigurace projektu
 Objekt konfigurace projektu spravuje zobrazení informací o konfiguraci uživatelského rozhraní.

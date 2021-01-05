@@ -1,5 +1,7 @@
 ---
 title: Oznámení a průběh pro Visual Studio | Microsoft Docs
+description: Seznamte se s různými způsoby, jak informovat uživatele o tom, co se děje v aplikaci Visual Studio ohledně jejich úloh vývoje softwaru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f6a7ddd5d1a5a7257617b03098722e1341017b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 56acfd96f8d9be575f6e13c727a294f28301bef4
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699886"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863787"
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>Oznámení a průběh pro Visual Studio
 ## <a name="notification-systems"></a><a name="BKMK_NotificationSystems"></a> Systémy oznámení

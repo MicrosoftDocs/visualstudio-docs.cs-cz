@@ -1,5 +1,7 @@
 ---
 title: Glosář sady Visual Studio SDK | Microsoft Docs
+description: Tento Glosář poskytuje definice pro výrazy, které se používají v dokumentaci sady Visual Studio SDK.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 332e606e689e9394f2fcdc8cbc902e2d4a6e5ab5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec8f6508c6b387ec51872f6e5b59b3f72a57d432
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698159"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863906"
 ---
 # <a name="visual-studio-sdk-glossary"></a>Glosář sady Visual Studio SDK
 Tento Glosář poskytuje definice termínů používaných v [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] dokumentaci.

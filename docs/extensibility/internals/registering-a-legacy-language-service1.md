@@ -1,5 +1,7 @@
 ---
 title: Registrace starší verze jazyka Service1 | Microsoft Docs
+description: Přečtěte si o registraci starší verze jazykové služby ze sady VSPackage v aplikaci Visual Studio přidáním klíčů registru a záznamů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f0076eeee0ebcb0a80925efdde212097a3ec3e7e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e92c831ad3d2f4d75d57c48cfc7ba666d19b7a5e
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238878"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875198"
 ---
 # <a name="registering-a-legacy-language-service-1"></a>Registrace služby starší verze jazyka 1
 V rámci spravovaného balíčku rozhraní (MPF) je jazyková služba proffered pomocí VSPackage (viz [VSPackage](../../extensibility/internals/vspackages.md)) a je zaregistrována přidáním [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] klíčů registru a záznamů. Tento proces registrace se provádí částečně během instalace a částečně v době běhu.
@@ -128,7 +130,7 @@ namespace TestLanguagePackage
  Tento atribut zaregistruje stránku vlastností, která se má zobrazit v dialogovém okně **Možnosti** v kategorii **textový editor** . Pro každou stránku, která se má zobrazit pro vaši jazykovou službu, použijte jeden z těchto atributů. Pokud potřebujete uspořádat své stránky ve stromové struktuře, použijte další atributy k definování každého uzlu stromu.
 
 ### <a name="example"></a>Příklad
- Tento příklad ukazuje dvě stránky vlastností, **Možnosti** a **odsazení**a jeden uzel, který obsahuje druhou stránku vlastností.
+ Tento příklad ukazuje dvě stránky vlastností, **Možnosti** a **odsazení** a jeden uzel, který obsahuje druhou stránku vlastností.
 
 ```csharp
 using Microsoft.VisualStudio.Shell;

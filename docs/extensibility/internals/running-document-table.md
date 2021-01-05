@@ -1,5 +1,7 @@
 ---
 title: Běžící tabulka dokumentů | Microsoft Docs
+description: Přečtěte si, jak IDE sady Visual Studio udržuje spuštěnou tabulku dokumentů, která zahrnuje všechny otevřené dokumenty v paměti.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e6aa882921786b1592922372581beae8c4c2443
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd166626d6043da4ac94658bdd35219efc7a37c2
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705556"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875645"
 ---
 # <a name="running-document-table"></a>Spuštění tabulky dokumentů
 Rozhraní IDE udržuje seznam všech aktuálně otevřených dokumentů ve vnitřní struktuře nazvané spuštěná tabulka dokumentů (RDT). Tento seznam obsahuje všechny otevřené dokumenty v paměti bez ohledu na to, zda jsou tyto dokumenty právě upravovány. Dokument je libovolná položka, která je trvalá, včetně souborů v projektu nebo v souboru hlavního projektu (například soubor. vcxproj).
@@ -40,7 +42,7 @@ Rozhraní IDE udržuje seznam všech aktuálně otevřených dokumentů ve vnit�
 
  Každá položka v RDT má přidruženou jedinečnou hierarchii nebo ID položky, což obvykle odpovídá jednomu uzlu v projektu. Všechny dokumenty, které jsou k dispozici pro úpravy, jsou obvykle vlastněny hierarchií. Položky provedené v ovládacím prvku RDT, který projekt nebo – přesněji – která hierarchie, aktuálně vlastní upravovaný objekt dat dokumentu. Pomocí informací v RDT může rozhraní IDE zabránit otevření dokumentu více než jedním projektem najednou.
 
- Hierarchie také řídí persistenci dat a používá informace v RDT k aktualizaci dialogových oken **Uložit** a **Uložit jako** . Když uživatel upraví dokument a pak v nabídce **soubor** vybere příkaz **Exit** , rozhraní IDE je vyzve k zobrazení všech projektů **Save Changes** a položek projektu, které jsou aktuálně upravovány. To umožňuje uživatelům zvolit, které dokumenty se mají uložit. Seznam dokumentů, které se mají uložit (tj. tyto dokumenty, které mají změny), se generuje z RDT. Všechny položky, které očekáváte, se zobrazí v dialogovém okně **Uložit změny** po ukončení aplikace by měly mít záznamy v RDT. RDT koordinuje, které dokumenty jsou uloženy a zda je uživatel vyzván k uložení operace s použitím hodnot zadaných v položce Flags pro každý dokument. Další informace o příznacích RDT naleznete v tématu <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS> výčet.
+ Hierarchie také řídí persistenci dat a používá informace v RDT k aktualizaci dialogových oken **Uložit** a **Uložit jako** . Když uživatel upraví dokument a pak v nabídce **soubor** vybere příkaz **Exit** , rozhraní IDE je vyzve k zobrazení všech projektů  a položek projektu, které jsou aktuálně upravovány. To umožňuje uživatelům zvolit, které dokumenty se mají uložit. Seznam dokumentů, které se mají uložit (tj. tyto dokumenty, které mají změny), se generuje z RDT. Všechny položky, které očekáváte, se zobrazí v dialogovém okně **Uložit změny** po ukončení aplikace by měly mít záznamy v RDT. RDT koordinuje, které dokumenty jsou uloženy a zda je uživatel vyzván k uložení operace s použitím hodnot zadaných v položce Flags pro každý dokument. Další informace o příznacích RDT naleznete v tématu <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS> výčet.
 
 ## <a name="edit-locks-and-read-locks"></a>Upravit zámky a číst zámky
  Upravit zámky a zámky pro čtení jsou uloženy v RDT. Okno dokumentu zvýší a sníží zámek úprav. Proto když uživatel otevře nové okno dokumentu, počet zámků úpravy se zvýší o jeden. Když počet zámků úpravy dosáhne nuly, hierarchie se zablokuje, aby zachovala nebo uložila data přidruženého dokumentu. Hierarchie pak může uchovávat data jakýmkoli způsobem, včetně uchování jako souboru nebo jako položky v úložišti. Pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.LockDocument%2A> metody v <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> rozhraní můžete přidat zámky úprav a zámky pro čtení a <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnlockDocument%2A> metodu pro odebrání těchto zámků.

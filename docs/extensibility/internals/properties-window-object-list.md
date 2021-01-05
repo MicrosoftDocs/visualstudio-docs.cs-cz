@@ -1,5 +1,7 @@
 ---
 title: Seznam objektů okna vlastností | Microsoft Docs
+description: Přečtěte si o rozhraních používaných k interakci se seznamem objektů v okno Vlastnosti v integrovaném vývojovém prostředí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ffe11ae6ebb4e692686c884b663a4f93d1466535
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 92fcce4dc62cdc84d15ca6dc51420791d4460340
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706152"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875424"
 ---
 # <a name="properties-window-object-list"></a>Seznam objektů okna Vlastnosti
 Seznam objektů v okně **vlastnosti** je rozevírací seznam, který umožňuje změnit výběr na jiné objekty, které jsou k dispozici v rámci jedné nebo více vybraných oken. Výběr jiného objektu v rámci tohoto seznamu aktivuje volání pro <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> informování prostředí, že byl vybrán nový objekt. Informace zobrazené v okně **vlastnosti** se pak změní tak, aby se zobrazily vlastnosti přidružené k nově vybranému objektu.

@@ -1,5 +1,7 @@
 ---
 title: Nabídky a příkazy pro Visual Studio | Microsoft Docs
+description: Přečtěte si, jak panely příkazů umožňují flexibilitu v uživatelském rozhraní při vytváření nových funkcí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0a1ed675-2bd1-4603-ba3a-f40dfb5cfb69
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c1f22b7ac4377b600208c079b6af1eff7fc3cbfc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7abb0249efc1a8da5d7e65572777e192e72c25e7
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698389"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863537"
 ---
 # <a name="menus-and-commands-for-visual-studio"></a>Nabídky a příkazy pro Visual Studio
 ## <a name="command-usage"></a>Použití příkazu
@@ -49,13 +51,13 @@ ms.locfileid: "80698389"
  Je vhodné umístit příkazy do blízkosti oblasti fokusu uživatele. Jedním ze způsobů, jak to provést, je vytvořit vložený panel nástrojů v horní části okna nástrojů nebo editoru dokumentů. Příkazy, které jsou umístěny na panelu nástrojů, by měly být specifické pro oblast obsahu v rámci okna. Na těchto panelech nástrojů Neduplikujte sdílené příkazy. Například nikdy neumísťujete ikonu Uložit v rámci vloženého panelu nástrojů.
 
 ### <a name="content-and-command-visibility"></a>Viditelnost obsahu a příkazu
- Příkazy existují v následujících oborech: **prostředí**, **hierarchie**a **dokument**. Každý obor si poznáte, abyste měli jistotu při umísťování příkazů.
+ Příkazy existují v následujících oborech: **prostředí**, **hierarchie** a **dokument**. Každý obor si poznáte, abyste měli jistotu při umísťování příkazů.
 
- Příkazy v oboru **prostředí** vytvářejí primární kontext a jsou sdíleny mezi více kontexty. Mění viditelnost nebo uspořádání dokumentů a nástrojů v oknech. Mezi příkazy v rozsahu prostředí patří **Nový projekt**, **připojení k serveru**, **připojení procesu**, **vyjmutí**, **kopírování**, **vložení**, **hledání**, **Možnosti**, **přizpůsobení**, **nové okno**a **zobrazení pomocníka**.
+ Příkazy v oboru **prostředí** vytvářejí primární kontext a jsou sdíleny mezi více kontexty. Mění viditelnost nebo uspořádání dokumentů a nástrojů v oknech. Mezi příkazy v rozsahu prostředí patří **Nový projekt**, **připojení k serveru**, **připojení procesu**, **vyjmutí**, **kopírování**, **vložení**, **hledání**, **Možnosti**, **přizpůsobení**, **nové okno** a **zobrazení pomocníka**.
 
- Příkazy v oboru **hierarchie** spravují hierarchie v aplikaci Visual Studio, včetně **projektů**, **týmů**a **dat**. Vztahují se k podkontextu projektu, například **ladit**, **sestavovat**, **testovat**, **architekturu**nebo **analyzovat**. Mezi příkazy v oboru hierarchie patří **Přidat novou položku**, **Nový dotaz**, **nastavení projektu**, **Přidat nový zdroj dat**, **Spustit Průvodce výkonem**a **Nový diagram**.
+ Příkazy v oboru **hierarchie** spravují hierarchie v aplikaci Visual Studio, včetně **projektů**, **týmů** a **dat**. Vztahují se k podkontextu projektu, například **ladit**, **sestavovat**, **testovat**, **architekturu** nebo **analyzovat**. Mezi příkazy v oboru hierarchie patří **Přidat novou položku**, **Nový dotaz**, **nastavení projektu**, **Přidat nový zdroj dat**, **Spustit Průvodce výkonem** a **Nový diagram**.
 
- Příkazy v oboru **dokumentu** fungují na obsahu dokumentu, jako je například kód, návrh nebo dotaz na pracovní položku (wiq). Také pracují se zobrazením okna nástroje nebo jsou jinak specifické pro toto okno nástroje. Příkazy oboru dokumentu také fungují s objekty souborů, které jsou specifické pro konkrétní hierarchii, jako je například **Odebrat z projektu**. Mezi příkazy v oboru dokumentu se **refaktoruje > přejmenovat**, **vytvořit kopii pracovní položky**, **Rozbalit**vše, **Sbalit vše**a **vytvořit uživatelskou úlohu**.
+ Příkazy v oboru **dokumentu** fungují na obsahu dokumentu, jako je například kód, návrh nebo dotaz na pracovní položku (wiq). Také pracují se zobrazením okna nástroje nebo jsou jinak specifické pro toto okno nástroje. Příkazy oboru dokumentu také fungují s objekty souborů, které jsou specifické pro konkrétní hierarchii, jako je například **Odebrat z projektu**. Mezi příkazy v oboru dokumentu se **refaktoruje > přejmenovat**, **vytvořit kopii pracovní položky**, **Rozbalit** vše, **Sbalit vše** a **vytvořit uživatelskou úlohu**.
 
 ### <a name="command-placement-decisions"></a>Rozhodnutí o umístění příkazů
  Jakmile se rozhodnete vytvořit příkaz, budete muset určit jeho vhodné umístění a vytvořit klávesovou zkratku. Podle této rozhodovací cesty určete, kam se má příkaz umístit:

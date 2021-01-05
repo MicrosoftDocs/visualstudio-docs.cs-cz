@@ -1,5 +1,7 @@
 ---
 title: Využití RDT_ReadLock | Microsoft Docs
+description: Přečtěte si o _VSRDTFLAGS. Příznak RDT_ReadLock, který poskytuje logiku pro uzamykání dokumentu v běžící tabulce dokumentů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb897fab61e1e14b52863b5853748c685200d5ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c946d69cf1aded072d27e7c6ccbdf28f1122571
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705920"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875385"
 ---
 # <a name="rdt_readlock-usage"></a>Využití RDT_ReadLock
 

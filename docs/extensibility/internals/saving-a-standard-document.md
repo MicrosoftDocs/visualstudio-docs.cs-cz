@@ -1,5 +1,7 @@
 ---
 title: Ukládání standardního dokumentu | Microsoft Docs
+description: Přečtěte si o procesu, ke kterému dochází pro standardní dokument pro typ projektu, který přidáte do integrovaného vývojového prostředí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +14,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8d50a9e62e69f925564717020a51f88620f5f3b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81c79ece83bc8aaaf7ca4dd28642de5973ad94c1
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705552"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875663"
 ---
 # <a name="saving-a-standard-document"></a>Uložení standardního dokumentu
-Prostředí zpracuje příkazy Uložit, Uložit jako a uložit všechny. Když uživatel vybere příkaz **Uložit**, **Uložit jako**nebo **Uložit vše** v nabídce **soubor** nebo zavře řešení, výsledkem bude **uložení všech**, dojde k následujícímu procesu.
+Prostředí zpracuje příkazy Uložit, Uložit jako a uložit všechny. Když uživatel vybere příkaz **Uložit**, **Uložit jako** nebo **Uložit vše** v nabídce **soubor** nebo zavře řešení, výsledkem bude **uložení všech**, dojde k následujícímu procesu.
 
  ![Standardní editor](../../extensibility/internals/media/public.gif "Veřejná") Uložit, Uložit jako a uložit všechny zpracování příkazů pro standardní editor
 

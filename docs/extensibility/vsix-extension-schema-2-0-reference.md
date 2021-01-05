@@ -1,5 +1,7 @@
 ---
 title: Referenční dokumentace schématu rozšíření VSIX 2,0 | Microsoft Docs
+description: Schéma rozšíření VSIX 2,0 definuje formát souboru manifestu nasazení VSIX, který popisuje obsah balíčku VSIX.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78e260c62d67afc10fea25d52169c48b64c82f72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b2edd0349555380f6d98d24f7a40c22e48797d12
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697916"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863759"
 ---
 # <a name="vsix-extension-schema-20-reference"></a>Referenční dokumentace schématu rozšíření VSIX 2,0
 Soubor manifestu nasazení VSIX popisuje obsah balíčku VSIX. Formát souboru se řídí schématem. Verze 2,0 tohoto schématu podporuje přidávání vlastních typů a atributů.  Schéma manifestu je rozšiřitelné. Zavaděč manifestu ignoruje prvky XML a atributy, které nerozumí.

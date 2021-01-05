@@ -1,5 +1,7 @@
 ---
 title: Registrace šablon projektů a položek | Microsoft Docs
+description: Přečtěte si, jak Visual Studio používá registrační informace pro typy projektů k určení toho, co se má zobrazit v dialogových oknech Přidat nový projekt a přidat novou položku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b64504c39b1fc3c4a82530b265cfd0e96832b4f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 999b435719113883201b7619daca9a84d095294e
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705825"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875268"
 ---
 # <a name="registering-project-and-item-templates"></a>Registrace šablon projektů a položek
 Typy projektů musí registrovat adresáře, ve kterých se nacházejí šablony projektů a položek projektů. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pomocí registračních informací přidružených k vašim typům projektů určuje, co se má zobrazit v dialogových oknech **Přidat nový projekt** a **Přidat novou položku** .
@@ -27,7 +29,7 @@ Typy projektů musí registrovat adresáře, ve kterých se nacházejí šablony
  Další informace o šablonách naleznete v tématu [Přidání projektů a šablon položek projektu](../../extensibility/internals/adding-project-and-project-item-templates.md).
 
 ## <a name="registry-entries-for-projects"></a>Položky registru pro projekty
- Následující příklady ukazují položky registru v části HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ < *verze*>. Doprovodné tabulky vysvětlují prvky používané v příkladech.
+ Následující příklady ukazují položky registru v části HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ <> *verze* . Doprovodné tabulky vysvětlují prvky používané v příkladech.
 
 ```
 [Projects\{ProjectGUID}]
@@ -67,7 +69,7 @@ Typy projektů musí registrovat adresáře, ve kterých se nacházejí šablony
 
  **Soubory Visual C# ( \* . cs, \* . resx, \* . Settings, \* . xsd, \* . WSDL); \* . cs, \* . resx, \* . Settings, \* . xsd, \* . WSDL)**
 
- Aby bylo možné podporovat registraci více filtrů, je každý filtr zaregistrován ve svém vlastním podklíči v části HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ < *verze*> \Projects \\ { \<*ProjectGUID*> } \Filters \\ < *podklíč*>. Název podklíče je libovolný; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ignoruje název podklíče a použije pouze jeho hodnoty.
+ Aby bylo možné podporovat registraci více filtrů, je každý filtr zaregistrován ve svém vlastním podklíči v části HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ < *verze*> \Projects \\ { \<*ProjectGUID*> } \\ < *podklíč* \Filters>. Název podklíče je libovolný; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ignoruje název podklíče a použije pouze jeho hodnoty.
 
  Můžete ovládat kontexty, ve kterých se filtr používá, nastavením příznaků, které jsou uvedeny v následující tabulce. Pokud filtr nemá nastaveny žádné příznaky, bude uveden po běžných filtrech v dialogovém okně **Přidat existující položku** a v dialogovém okně **otevřít soubor** , ale nebude použito v dialogovém okně **najít v souborech** .
 

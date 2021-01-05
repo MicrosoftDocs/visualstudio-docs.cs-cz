@@ -1,5 +1,7 @@
 ---
 title: Soukromé galerie | Microsoft Docs
+description: Naučte se sdílet ovládací prvky, šablony a nástroje, které vyvíjíte v sadě Visual Studio SDK, jejich publikováním do soukromé galerie.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +13,14 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: afd1d79d7f1846e60386d2a9478466bf7eae72e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ec7390acf753af20bc0edbe20194ba17c2d9d80
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81444645"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863501"
 ---
-# <a name="private-galleries"></a>Soukromé galerie
+# <a name="private-galleries"></a>Privátní galerie
 Můžete sdílet ovládací prvky, šablony a nástroje, které vyvíjíte, jejich publikováním do *soukromé Galerie* v intranetu pro vaši organizaci následujícím způsobem:
 
 - Vytvořte informační kanál Atom (RSS) do vhodně nakonfigurovaného centrálního umístění (úložiště) na intranetu. Další informace najdete v tématu [Postup: vytvoření informačního kanálu Atom pro soukromou galerii](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md).
@@ -32,7 +34,7 @@ Můžete sdílet ovládací prvky, šablony a nástroje, které vyvíjíte, jeji
 
 ### <a name="to-add-a-private-gallery-to-extensions-and-updates"></a>Přidání soukromé galerie pro rozšíření a aktualizace
 
-1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
+1. Na panelu nabídek vyberte   >  **Možnosti** nástroje.
 
 2. V uzlu **prostředí** vyberte **rozšíření a aktualizace**.
 
@@ -51,7 +53,7 @@ Můžete sdílet ovládací prvky, šablony a nástroje, které vyvíjíte, jeji
 
 ```
 [$RootKey$\ExtensionManager\Repositories\{UniqueGUID}]
-@={URI}  (REG_SZ)
+@={URI}  (REG_SZ)
 Disabled=0 | 1 (DWORD)
 Priority=0 (highest priority) ... MaxInt (lowest priority) (DWORD) (uint)
 Protocol=Atom|Sharepoint (REG_SZ)
@@ -72,7 +74,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 
 1. Na řádku nabídek klikněte na **nástroje**  >  **rozšíření a aktualizace**.
 
-2. V levém podokně vyberte **rozšíření online**a pak vyberte **Moje galerie**.
+2. V levém podokně vyberte **rozšíření online** a pak vyberte **Moje galerie**.
 
 3. V pravém podokně vyberte rozšíření a pak klikněte na tlačítko **Stáhnout** .
 
@@ -85,7 +87,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 
 1. Na řádku nabídek klikněte na **nástroje**  >  **rozšíření a aktualizace**.
 
-2. V levém podokně vyberte **aktualizace**a pak vyberte **Moje úložiště**.
+2. V levém podokně vyberte **aktualizace** a pak vyberte **Moje úložiště**.
 
 3. V pravém podokně vyberte rozšíření a pak klikněte na tlačítko **aktualizovat** .
 

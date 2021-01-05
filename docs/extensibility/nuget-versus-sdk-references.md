@@ -1,5 +1,7 @@
 ---
 title: Přidání odkazů pomocí nástroje NuGet a sady Extension SDK
+description: Přečtěte si o rozdílech mezi softwarovým softwarem jako balíčkem NuGet nebo jako sadou Software Development Kit, pokud se na něj odkazuje v projektu sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 08/02/2019
 ms.topic: conceptual
 author: acangialosi
@@ -7,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad7fc9132647988aee46a2bb07e992505109d33c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50197eeda1828156113fbbfa507447484618861a
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702436"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863768"
 ---
 # <a name="nuget-versus-sdk-as-a-project-reference"></a>NuGet oproti sadě SDK jako odkaz na projekt
 
@@ -26,12 +28,12 @@ Tento článek je navržený tak, aby pomáhal vývojářům zvolit, jestli chce
 
 Následující tabulka vám pomůže porovnat referenční funkce sady SDK s referenčními funkcemi NuGet.
 
-| Příznak | Podpora sady SDK | Poznámky k sadě SDK | Podpora NuGet | Poznámky k NuGetu |
+| Funkce | Podpora sady SDK | Poznámky k sadě SDK | Podpora NuGet | Poznámky k NuGetu |
 | - | - | - |---------------| - |
 | Mechanismus odkazuje na jednu entitu a všechny soubory a funkce jsou k dispozici. | Y | Sadu SDK můžete přidat pomocí dialogového okna **Správce odkazů** a všechny soubory a funkce jsou k dispozici během vývojového pracovního postupu. | Y | |
 | Nástroj MSBuild automaticky spotřebovává sestavení a soubory metadat Windows (*. winmd*). | Y | Odkazy v sadě SDK jsou automaticky předány kompilátoru. | Y | |
 | Nástroj MSBuild automaticky spotřebovává soubory. h nebo. lib. | Y | Soubor *SDKName. props* oznamuje sadě Visual Studio, jak nastavit adresář Visual C++ a tak dále pro automatickou spotřebu souborů *. h* nebo *. lib* . | N | |
-| Nástroj MSBuild automaticky spotřebovává soubory  *. js* nebo *. CSS* . | Y | V **Průzkumník řešení**můžete rozbalit referenční uzel sady JavaScript SDK pro zobrazení individuálních souborů *. js* nebo *.* potom je možné vygenerovat `<source include/>` značky přetažením těchto souborů do zdrojových souborů. Sada SDK podporuje F5 a automatickou instalaci balíčků. | Y | |
+| Nástroj MSBuild automaticky spotřebovává soubory  *. js* nebo *. CSS* . | Y | V **Průzkumník řešení** můžete rozbalit referenční uzel sady JavaScript SDK pro zobrazení individuálních souborů *. js* nebo *.* potom je možné vygenerovat `<source include/>` značky přetažením těchto souborů do zdrojových souborů. Sada SDK podporuje F5 a automatickou instalaci balíčků. | Y | |
 | Nástroj MSBuild automaticky přidá ovládací prvek do **panelu nástrojů**. | Y | **Sada nástrojů** může využívat sady SDK a zobrazovat ovládací prvky na kartách, které zadáte. | N | |
 | Mechanismus podporuje Instalační program pro Visual Studio pro rozšíření (VSIX). | Y | VSIX má speciální manifest a logiku pro vytváření balíčků sady SDK. | Y | VSIX lze vložit do jiného instalačního programu. |
 | **Prohlížeč objektů** výčtu odkazů. | Y | **Prohlížeč objektů** automaticky získá seznam odkazů v sadách SDK a vytvoří jejich výčet. | N | |

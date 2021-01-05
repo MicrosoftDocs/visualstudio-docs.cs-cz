@@ -1,5 +1,7 @@
 ---
 title: Rozložení pro Visual Studio | Microsoft Docs
+description: Seznamte se s rozložením pro dialogy sady Visual Studio, včetně nezobrazených dialogových oken a nových dialogových oken, které mají vzhled motivů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4eb8eb7468751d46b922c15530389c554a8d3e36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3e6c90831c39f0e378dd9060397c68592ec73384
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698397"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863670"
 ---
 # <a name="layout-for-visual-studio"></a>Rozložení pro Visual Studio
 Většina dialogových oken sady Visual Studio je [rozložení dialogového okna nástrojů](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout), což jsou nezobrazená dialogová okna, která následují standardní [zásady rozložení dialogového okna Windows Desktop](/windows/desktop/uxguide/win-dialog-box). Když se Visual Studio přesune k aktualizaci uživatelského rozhraní, některé z výraznějších dialogových oken mají nový návrh, který je sestavil jako prostředí s definicí produktu. Toto [rozložení dialogového okna s motivem](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout) má vzhled motivu.
@@ -105,9 +107,9 @@ Většina dialogových oken sady Visual Studio je [rozložení dialogového okna
 
 - Použijte svislé zarovnání (sloupec) vnitřních tlačítek, pokud je tlačítko **OK** / **Zrušit** vodorovné orientace v pravém dolním rohu.
 
-- Použijte vodorovné zarovnání (řádek) vnitřních tlačítek, když se **OK** / **Cancel** v pravém horním rohu orientují svisle. Tato situace je méně častá.
+- Použijte vodorovné zarovnání (řádek) vnitřních tlačítek, když se **OK** /  v pravém horním rohu orientují svisle. Tato situace je méně častá.
 
-- Velikost vnitřního tlačítka by měla cílit na velikost standardního tlačítka v 75x23 pixelech, pokud je to možné, odpovídá velikost tlačítek **OK** / **Cancel** . Pokud jmenovka tlačítka změní tlačítko na standardní velikost tlačítka, ostatní tlačítka v této sadě by měla zarovnat s touto širší velikostí.
+- Velikost vnitřního tlačítka by měla cílit na velikost standardního tlačítka v 75x23 pixelech, pokud je to možné, odpovídá velikost tlačítek **OK** /  . Pokud jmenovka tlačítka změní tlačítko na standardní velikost tlačítka, ostatní tlačítka v této sadě by měla zarovnat s touto širší velikostí.
 
   ![Tlačítka pro horizontální tlačítko OK a Storno](../../extensibility/ux-guidelines/media/0801-f_horizokcan.png "0801 – f_HorizOKCan")
 

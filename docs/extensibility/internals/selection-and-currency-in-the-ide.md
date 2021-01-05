@@ -1,5 +1,7 @@
 ---
 title: Výběr a měna v integrovaném vývojovém prostředí | Microsoft Docs
+description: Přečtěte si, jak se v rámci sledování měn přijímají VSPackage. Integrované vývojové prostředí sady Visual Studio uchovává informace o aktuálně vybraných objektech pomocí kontextu výběru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +15,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f580b7c8e1651dcbcd053476ae756399a0ac3482
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b2d745619be8bff77503bc14a1d7a87d84cc7864
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705569"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875593"
 ---
 # <a name="selection-and-currency-in-the-ide"></a>Výběr a měna v prostředí IDE
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Integrované vývojové prostředí (IDE) udržuje informace o aktuálně vybraných objektech uživatelů pomocí *kontextu*výběru. Pomocí kontextu výběru mohou být VSPackage součástí sledování měn dvěma způsoby:
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Integrované vývojové prostředí (IDE) udržuje informace o aktuálně vybraných objektech uživatelů pomocí *kontextu* výběru. Pomocí kontextu výběru mohou být VSPackage součástí sledování měn dvěma způsoby:
 
 - Rozšiřováním informací o měnách na rozhraních VSPackage do integrovaného vývojového prostředí (IDE).
 

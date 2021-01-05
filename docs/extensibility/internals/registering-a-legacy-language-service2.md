@@ -1,5 +1,7 @@
 ---
 title: Registrace starší verze jazyka Jazyka2 | Microsoft Docs
+description: Tento článek obsahuje seznam položek registru pro různé možnosti jazykové služby, které jsou k dispozici v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,20 +14,20 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0a41f3f507579cbd2649e33e81d1368fb5404799
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08b9e88440fcb7b488e479e4188279d82a526e4c
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238839"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875174"
 ---
 # <a name="registering-a-legacy-language-service-2"></a>Registrace služby starší verze jazyka 2
 V následujících částech najdete seznam položek registru pro různé možnosti jazykové služby, které jsou k dispozici v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
- V následujícím seznamu položek registru se jako *kořenový adresář nástroje vs reg* rovná HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ *x. y*, kde *X. y* je [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] číslo verze.
+ V následujícím seznamu položek registru je *hlavní kořenový adresář nástroje vs reg* roven HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *x. y*, kde *X. y* je [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] číslo verze.
 
 ## <a name="registry-entries-for-language-service-options"></a>Položky registru pro možnosti služby jazyka
- Klíč s názvem jazyka *a kořenovým adresářem sady vs reg*\Languages\Language Services \\ *Language Name* může obsahovat následující hodnoty.
+ Klíč s názvem jazyka *a kořenovým adresářem sady vs reg*\Languages\Language Services \\  může obsahovat následující hodnoty.
 
 |Název|Typ|Rozsah|Popis|
 |----------|----------|-----------|-----------------|
@@ -62,7 +64,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ```
 
 ## <a name="registry-entries-for-debugger-languages-options"></a>Položky registru pro možnosti jazyků ladicího programu
- Identifikátor GUID \Languages\Language jazyků sady *vs reg root* \\ \Debugger*languages* \\ *GUID*\ Key může obsahovat následující hodnoty.
+ Identifikátor GUID \Languages\Language jazyků sady *vs reg root* \\ \Debugger *languages* \\ *GUID*\ Key může obsahovat následující hodnoty.
 
 |Název|Typ|Rozsah|Popis|
 |----------|----------|-----------|-----------------|
@@ -132,7 +134,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ```
 
 ## <a name="registry-entries-for-editor-options"></a>Položky registru pro možnosti editoru
- Kořenový klíč \Editors sady *vs reg*může obsahovat následující hodnoty:
+ Kořenový klíč \Editors sady *vs reg* může obsahovat následující hodnoty:
 
 |Název|Typ|Rozsah|Popis|
 |----------|----------|-----------|-----------------|
@@ -157,7 +159,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ```
 
 ## <a name="registry-entries-for-logical-view-options"></a>Položky registru pro možnosti logického zobrazení
- >klíč \LogicalViews pro Editor *vs reg root*\Editors \\ * *může obsahovat následující hodnoty.
+ >klíč \LogicalViews pro Editor *vs reg root*\Editors \\ ** může obsahovat následující hodnoty.
 
 |Název|Typ|Rozsah|Popis|
 |----------|----------|-----------|-----------------|
@@ -179,7 +181,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ```
 
 ## <a name="registry-entries-for-editor-extension-options"></a>Položky registru pro možnosti rozšíření editoru
- \Editors *VS Reg Root* \\ *identifikátor GUID \Extensions editoru*vs REG může obsahovat následující hodnoty. Přípona názvu souboru nezahrnuje úvodní období.
+ \Editors  \\ *identifikátor GUID \Extensions editoru* vs REG může obsahovat následující hodnoty. Přípona názvu souboru nezahrnuje úvodní období.
 
 |Název|Typ|Rozsah|Popis|
 |----------|----------|-----------|-----------------|

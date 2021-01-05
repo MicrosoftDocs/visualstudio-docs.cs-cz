@@ -1,5 +1,7 @@
 ---
 title: Podmíněné atributy schématu XML VSCT | Microsoft Docs
+description: Naučte se, jak použít podmíněné atributy pro VSCT seznamů schémat XML a položek. Atributy se vyhodnotí jako true nebo false a řídí výsledný výstup.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f2b1fb3ee1b2cd396f25ec5591a585f8d87648d0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5f9f51e9380585d4191c5969d96fbb3a93ea42a
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697950"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863709"
 ---
 # <a name="vsct-xml-schema-conditional-attributes"></a>Podmíněné atributy schématu VSCT XML
 U všech seznamů a položek můžete použít podmíněné atributy. Logické operátory a rozšiřovací výrazy se vyhodnotí jako true nebo false. Pokud je nastaveno na true, je přidružený seznam nebo položka součástí výsledného výstupu.

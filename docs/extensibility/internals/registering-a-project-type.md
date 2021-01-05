@@ -1,5 +1,7 @@
 ---
 title: Registrace typu projektu | Microsoft Docs
+description: Seznamte se s vytvářením položek registru, které umožňují aplikaci Visual Studio rozpoznávat a pracovat s novým typem projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7267060f2207b0842885dc3001c3926874be30a9
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 9a34f5c7f1ae3a214a0a72932ae80dbc44845a45
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407728"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875190"
 ---
 # <a name="registering-a-project-type"></a>Registrace typu projektu
 Při vytváření nového typu projektu je nutné vytvořit položky registru, které umožňují [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozpoznat a pracovat s typem projektu. Tyto položky registru obvykle vytváříte pomocí souboru skriptu registru (. rgs).
