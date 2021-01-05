@@ -1,5 +1,7 @@
 ---
 title: Podpora více verzí sady Visual Studio | Microsoft Docs
+description: Seznamte se s tím, jak můžete podporovat několik verzí sady Visual Studio, a vaše VSPackage se můžou načítat do různých verzí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d571f1be4da45ff5ed6b2538cfb515930bde1de
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d1309c6fcda2b27efdc78e7b31189d3a58edfb8
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699478"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715623"
 ---
 # <a name="supporting-multiple-versions-of-visual-studio"></a>Podpora více verzí sady Visual Studio
 Termín *vedle sebe* znamená, že můžete nainstalovat a udržovat více verzí produktu ve stejném počítači. Pro VSPackage, to znamená, že uživatel může mít na stejném počítači nainstalovanou několik verzí sady Visual Studio. Nicméně nemůžete mít nahrané souběžné verze vašich VSPackage do jediné verze sady Visual Studio.

@@ -10,18 +10,18 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 58e6bdae7ef85545d0790782f5ad825b8f27659c
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 303c410bf519561844d95cc13fa036534ddb2aa7
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099242"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726615"
 ---
 # <a name="clone-a-repository-of-python-code-in-visual-studio"></a>Klonování úložiště kódu Pythonu v aplikaci Visual Studio
 
 Po [instalaci Visual Studio Tools for AI](installation.md)můžete snadno klonovat úložiště kódu Pythonu a vytvořit z něj projekt.
 
-1. Pokud se chcete připojit k úložištím GitHub, spusťte instalační program sady Visual Studio, vyberte **Upravit**a vyberte kartu **jednotlivé součásti** . Přejděte dolů do části **nástroje kódu** , vyberte **rozšíření GitHub pro Visual Studio**a vyberte **změnit**.
+1. Pokud se chcete připojit k úložištím GitHub, spusťte instalační program sady Visual Studio, vyberte **Upravit** a vyberte kartu **jednotlivé součásti** . Přejděte dolů do části **nástroje kódu** , vyberte **rozšíření GitHub pro Visual Studio** a vyberte **změnit**.
 
     ![Výběr rozšíření GitHub v instalačním programu sady Visual Studio](media/create-project-repo/installation-github-extension.png)
 
@@ -31,12 +31,12 @@ Po [instalaci Visual Studio Tools for AI](installation.md)můžete snadno klonov
 
     ![Okno Průzkumníka týmových oken zobrazující Azure DevOps, GitHub a klonování úložiště](media/create-project-repo/team-explorer-devops.png)
 
-4. V poli Adresa URL v části **místní úložiště Git**zadejte `https://github.com/Microsoft/samples-for-ai` , zadejte složku pro klonované soubory a vyberte **klonovat**.
+4. V poli Adresa URL v části **místní úložiště Git** zadejte `https://github.com/Microsoft/samples-for-ai` , zadejte složku pro klonované soubory a vyberte **klonovat**.
 
     > [!Tip]
     > Složka, kterou zadáte v Team Explorer, je konkrétní složka pro příjem klonovaných souborů. Na rozdíl od `git clone` příkazu vytvoření klonu v Team Explorer nevytvoří automaticky podsložku s názvem úložiště.
 
-5. Po dokončení klonování poklikejte na složku úložiště v dolní části Team Explorer a přejděte na řídicí panel úložiště. V části **řešení**vyberte **Nový**.
+5. Po dokončení klonování poklikejte na složku úložiště v dolní části Team Explorer a přejděte na řídicí panel úložiště. V části **řešení** vyberte **Nový**.
 
     ![Okno Průzkumník týmových projektů, vytvoření nového projektu z klonu](media/create-project-repo/team-explorer-new-project.png)
 
@@ -57,8 +57,8 @@ Po [instalaci Visual Studio Tools for AI](installation.md)můžete snadno klonov
 
 11. Průběh můžete vizualizovat pomocí TensorBoard. Klikněte pravým tlačítkem na projekt a pak klikněte na **Spustit TensorBoard** a pak vyberte adresář výstupních protokolů TensorBoard.
 
-   ![spustit tensorboard](media/create-project-repo/run-tensorboard.png)
+   ![Snímek obrazovky sady Visual Studio Průzkumník řešení s vybraným projektem MNIST ručně zapsaných a možností spustit TensorBoard vybranou v místní nabídce](media/create-project-repo/run-tensorboard.png)
 
 12. Všimněte si chyby při snižování přesčasu, což znamená, že kvalita vylepšuje.
 
-   ![spustit tensorboard](media/create-project-repo/tensorboard.png)
+   ![Snímek obrazovky hlavního okna TensorBoard zobrazující čtyři grafy, které vizualizují data z protokolů TensorBoard.](media/create-project-repo/tensorboard.png)

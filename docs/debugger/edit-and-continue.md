@@ -1,6 +1,7 @@
 ---
 title: Upravit kód a pokračovat v ladění | Microsoft Docs
-ms.custom: seodec18
+description: Použijte příkaz Upravit a pokračovat při ladění v aplikaci Visual Studio, abyste mohli provádět změny zdrojového kódu, zatímco je program v režimu pozastavení.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 05/31/2018
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d3da21a833764745a7b6fc7dd001eeb4995f44d
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: c335ce5a394454daacd86338a96ba51d04c88c0e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599645"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726537"
 ---
 # <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>Úprava kódu a pokračování v ladění v aplikaci Visual Studio (C#, VB, C++)
 Funkce upravit a pokračovat je funkcí pro ukládání času, která umožňuje provádět změny zdrojového kódu v době, kdy je program v režimu pozastavení. Když budete pokračovat v provádění programu tak, že vyberete příkaz pro spuštění, například **pokračovat** nebo **Krok**, upravit a pokračovat automaticky aplikuje změny kódu s některými omezeními. To vám umožňuje provádět změny v kódu během relace ladění, namísto nutnosti zastavit, znovu kompilovat celý program a restartovat ladicí relaci.
@@ -43,7 +44,7 @@ Funkce upravit a pokračovat je funkcí pro ukládání času, která umožňuje
 
  [Upravit a pokračovat (Visual Basic)](../debugger/edit-and-continue-visual-basic.md)
 
- [Operace Upravit a pokračovat není podporována pro F#.](../debugger/edit-and-continue-not-supported-for-f-hash.md)
+ [Úprava a pokračování není podporována pro F #](../debugger/edit-and-continue-not-supported-for-f-hash.md)
 
 ## <a name="see-also"></a>Viz také
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)

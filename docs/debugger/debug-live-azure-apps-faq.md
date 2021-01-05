@@ -1,5 +1,7 @@
 ---
 title: Nejčastější dotazy k ladění snímků | Microsoft Docs
+description: Projděte si seznam nejčastějších dotazů, které se mohou zobrazit při ladění živých aplikací Azure pomocí Snapshot Debugger v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/07/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8afc67b92a943dd571847bb1a00fb7e4db4514b
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 5276127f0d6755b9fdabdfa965b5c1b8c4d94823
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851096"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727200"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Nejčastější dotazy k ladění snímků v aplikaci Visual Studio
 
@@ -50,7 +52,7 @@ Ano, ladění snímků může fungovat pro servery, které jsou v zatížení. S
 Rozšíření Snapshot Debugger lokality můžete odinstalovat v App Service pomocí následujících kroků:
 
 1. Vypněte svůj App Service buď pomocí Průzkumníka cloudu v aplikaci Visual Studio, nebo Azure Portal.
-1. Přejděte na web Kudu vašeho App Service (to znamená yourappservice.** SCM**. azurewebsites.NET) a přejděte na **rozšíření webu**.
+1. Přejděte na web Kudu vašeho App Service (to znamená yourappservice.**SCM**. azurewebsites.NET) a přejděte na **rozšíření webu**.
 1. Kliknutím na X na rozšíření Snapshot Debugger webu ho odeberte.
 
 #### <a name="why-are-ports-opened-during-a-snapshot-debugger-session"></a>Proč jsou porty otevřené během Snapshot Debugger relace?

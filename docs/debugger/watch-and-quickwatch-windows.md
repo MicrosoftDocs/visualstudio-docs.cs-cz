@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ab66089de25b7648b13e1ba05f88ab55b7868df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7e2a05fe84b023a60ef75f0cb262a08fc02587a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348025"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727421"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>Sledujte proměnné pomocí oken kukátka a QuickWatch
 
@@ -30,7 +30,8 @@ Při ladění můžete ke sledování proměnných a výrazů použít **kukátk
 
 Okna **kukátka** může během ladění zobrazit několik proměnných současně. Dialog **QuickWatch** zobrazuje jednu proměnnou najednou a před pokračováním ladění musí být zavřen.
 
-Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
+> [!NOTE]
+> Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
 
 ## <a name="observe-variables-with-a-watch-window"></a>Sledování proměnných pomocí okno Kukátko
 
@@ -58,13 +59,13 @@ int main()
 
 ```
 
-1. Nastavte zarážku na `c = a + b;` řádku kliknutím na levý okraj, výběrem možnosti **ladit**  >  **přepínací zarážku**nebo stisknutím klávesy **F9**.
+1. Nastavte zarážku na `c = a + b;` řádku kliknutím na levý okraj, výběrem možnosti **ladit**  >  **přepínací zarážku** nebo stisknutím klávesy **F9**.
 
-1. **Spusťte ladění**tak, že vyberete zelenou šipku **Start** nebo  >  **spustíte ladění**, nebo stisknete klávesu **F5**. Spuštění pozastaví na zarážce.
+1. **Spusťte ladění** tak, že vyberete zelenou šipku **Start** nebo  >  **spustíte ladění**, nebo stisknete klávesu **F5**. Spuštění pozastaví na zarážce.
 
-1. Otevřete okno **kukátka** výběrem možnosti **ladit**  >  **Windows**  >  **kukátko**kukátko  >  **1**nebo stisknutím **kombinace kláves CTRL** + **+** + **W**  >  **1**.
+1. Otevřete okno **kukátka** výběrem možnosti **ladit**  >    >  **kukátko** kukátko  >  **1** nebo stisknutím **kombinace kláves CTRL** + **+** + **W**  >  **1**.
 
-   Můžete otevřít další okna **kukátka** tak, že vyberete Windows **2**, **3**nebo **4**.
+   Můžete otevřít další okna **kukátka** tak, že vyberete Windows **2**, **3** nebo **4**.
 
 1. V okně **kukátko** vyberte prázdný řádek a zadejte proměnnou `a` . Proveďte stejné pro `b` a `c` .
 
@@ -130,11 +131,11 @@ Najeďte myší na ikonu aktualizace nebo zobrazte sloupec **hodnota** pro důvo
 
 - Automatické vyhodnocení vlastností a volání implicitních funkcí je zakázáno.
 
-Pokud se zobrazí ikona aktualizace, protože automatické vyhodnocení vlastností a volání implicitních funkcí je zakázané, můžete je povolit výběrem **možnosti Povolit vyhodnocování vlastností a jiných implicitních volání funkcí** v části **nástroje**  >  **Options**  >  **ladění**–  >  **Obecné**.
+Pokud se zobrazí ikona aktualizace, protože automatické vyhodnocení vlastností a volání implicitních funkcí je zakázané, můžete je povolit výběrem **možnosti Povolit vyhodnocování vlastností a jiných implicitních volání funkcí** v části **nástroje**  >    >  **ladění**–  >  **Obecné**.
 
 Ukázka použití ikony aktualizace:
 
-1. V části **nástroje**  >  **Možnosti**  >  **ladění**  >  **Obecné**zrušte zaškrtnutí políčka **Povolit vyhodnocování vlastností a další implicitní volání funkce** .
+1. V části **nástroje**  >  **Možnosti**  >  **ladění**  >  **Obecné** zrušte zaškrtnutí políčka **Povolit vyhodnocování vlastností a další implicitní volání funkce** .
 
 1. Zadejte následující kód a v okně **kukátko** nastavte kukátko pro `list.Count` vlastnost.
 
@@ -217,7 +218,7 @@ Chcete-li zjistit název `Person` v `DoSomething()` metodě, můžete přidat od
 
 1. Spuštění ladění
 
-1. Po pozastavení provádění na zarážce otevřete okno **místní** hodnoty výběrem možnosti **ladit**  >  místní hodnoty**systému Windows**  >  **Locals**.
+1. Po pozastavení provádění na zarážce otevřete okno **místní** hodnoty výběrem možnosti **ladit**  >  místní hodnoty **systému Windows**  >  .
 
 1. V okně **místní** hodnoty klikněte pravým tlačítkem na `Person` proměnnou a vyberte **vytvořit ID objektu**.
 
@@ -230,7 +231,7 @@ Chcete-li zjistit název `Person` v `DoSomething()` metodě, můžete přidat od
 1. Pokračovat v ladění. Po pozastavení provádění v metodě se v `DoSomething()` okně **kukátko** zobrazí `Person` objekt.
 
    > [!NOTE]
-   > Pokud chcete zobrazit vlastnosti objektu, například `Person.Name` , je nutné povolit vyhodnocování vlastností výběrem možností **nástroje**  >  **Options**  >  **ladění**  >  **Obecné**  >  **Povolit vyhodnocování vlastností a jiných implicitních volání funkcí**.
+   > Pokud chcete zobrazit vlastnosti objektu, například `Person.Name` , je nutné povolit vyhodnocování vlastností výběrem možností **nástroje**  >    >  **ladění**  >  **Obecné**  >  **Povolit vyhodnocování vlastností a jiných implicitních volání funkcí**.
 
 ## <a name="dynamic-view-and-the-watch-window"></a>Dynamické zobrazení a okno Kukátko
 
@@ -255,9 +256,9 @@ Chcete-li zobrazit pouze **dynamické zobrazení** pro objekt, přidejte specifi
 1. Klikněte pravým tlačítkem na libovolný podřízený uzel **dynamického zobrazení**.
 1. Vyberte **Přidat kukátko**. `object.name` `((dynamic) object).name` A zobrazí se v novém okně **kukátka** .
 
-Ladicí program také přidá podřízený uzel **dynamického zobrazení** objektu do okna **Automatické** hodnoty. Chcete-li otevřít okno **Automatické** hodnoty, vyberte během ladění možnost **ladit**  >  **okna**  >  **Automatické**hodnoty.
+Ladicí program také přidá podřízený uzel **dynamického zobrazení** objektu do okna **Automatické** hodnoty. Chcete-li otevřít okno **Automatické** hodnoty, vyberte během ladění možnost **ladit**  >  **okna**  >  **Automatické** hodnoty.
 
-**Dynamické zobrazení** také vylepšuje ladění pro objekty modelu COM. Když ladicí program získá objekt modelu COM zabalený v **System. __ComObject**, přidá uzel **dynamického zobrazení** pro objekt.
+**Dynamické zobrazení** také vylepšuje ladění pro objekty modelu COM. Když ladicí program získá do objektu COM zabalený v **System.__ComObject**, přidá uzel **dynamického zobrazení** pro objekt.
 
 ## <a name="observe-a-single-variable-or-expression-with-quickwatch"></a>Sledovat jednu proměnnou nebo výraz pomocí QuickWatch
 
@@ -286,7 +287,7 @@ Chcete-li sledovat `a` proměnnou,
 
 1. Vyberte proměnnou `a` v kódu.
 
-1. Vyberte **Debug**  >  **QuickWatch**, stiskněte **SHIFT** + **F9**nebo klikněte pravým tlačítkem a vyberte **QuickWatch**.
+1. Vyberte **Debug**  >  **QuickWatch**, stiskněte **SHIFT** + **F9** nebo klikněte pravým tlačítkem a vyberte **QuickWatch**.
 
    Zobrazí se dialogové okno **QuickWatch** . `a`Proměnná je v poli **výrazu** s **hodnotou** **1**.
 

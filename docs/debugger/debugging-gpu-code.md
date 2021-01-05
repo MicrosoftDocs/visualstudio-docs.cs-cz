@@ -1,5 +1,7 @@
 ---
 title: Ladění kódu GPU | Microsoft Docs
+description: Přečtěte si o ladění kódu C++, který běží na grafickém procesoru (GPU) v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 02900bc7e0d3746e465c8e4741036605a76190d4
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 36359f8d5f2044c97e3479981290aff07d3f2e31
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599954"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727031"
 ---
 # <a name="debugging-gpu-code"></a>Ladění kódu GPU
 Můžete ladit kód jazyka C++, který je spuštěn na grafické jednotce procesoru (GPU). Podpora ladění GPU v aplikaci Visual Studio zahrnuje detekci časování, spouštění procesů a připojování k nim a integraci do ladicích oken.
@@ -34,7 +36,7 @@ Můžete ladit kód jazyka C++, který je spuštěn na grafické jednotce proces
 
 - V seznamu **typ ladění** na panelu nástrojů **standardní** vyberte možnost **pouze GPU**.
 
-- V **Průzkumník řešení**v místní nabídce projektu vyberte možnost **vlastnosti**. V dialogovém okně **stránky vlastností** vyberte možnost **ladění**a pak vyberte možnost **GPU pouze** v seznamu **Typ ladicího programu** .
+- V **Průzkumník řešení** v místní nabídce projektu vyberte možnost **vlastnosti**. V dialogovém okně **stránky vlastností** vyberte možnost **ladění** a pak vyberte možnost **GPU pouze** v seznamu **Typ ladicího programu** .
 
 ## <a name="launching-and-attaching-to-applications"></a>Spouštění a připojování k aplikacím
  Pomocí příkazů ladění sady Visual Studio můžete spustit a zastavit ladění GPU. Další informace naleznete v tématu [navigace prostřednictvím kódu pomocí ladicího programu](../debugger/navigating-through-code-with-the-debugger.md). Také je možné připojit ladicí program GPU ke spuštěnému procesu, ale pouze v případě, že tento proces spustí kód GPU. Další informace najdete v tématu [připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
@@ -47,7 +49,7 @@ Můžete ladit kód jazyka C++, který je spuštěn na grafické jednotce proces
 2. Příkaz **Spustit aktuální dlaždici ke kurzoru** spustí vaši aplikaci, dokud všechna vlákna v aktuální dlaždici nedosáhne kurzoru a potom se přeruší.
 
 ## <a name="debugging-windows"></a>Okna ladění
- Pomocí některých oken ladění můžete prozkoumat, opatřit příznakem a zablokovat vlákna GPU. Další informace naleznete v tématu:
+ Pomocí některých oken ladění můžete prozkoumat, opatřit příznakem a zablokovat vlákna GPU. Další informace najdete tady:
 
 - [Použití okna Paralelní zásobníky](../debugger/using-the-parallel-stacks-window.md)
 

@@ -7,12 +7,12 @@ ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
-ms.openlocfilehash: 009df6525696405914aeeb224e3817bbfbe27155
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 63793548bd3ea1098cc1113724cd9a3b513adbf5
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189794"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727460"
 ---
 # <a name="introduction-to-azure-functions"></a>Úvod do Azure Functions
 
@@ -91,10 +91,10 @@ Výše uvedený postup můžete použít k přidání dalších funkcí do proje
 
 ## <a name="publish-to-azure"></a>Publikování do Azure
 
-1. Klikněte pravým tlačítkem na název projektu a vyberte **publikovat > publikovat do Azure**:  ![ možnost publikovat do Azure.](media/azure-functions-image5.png)
+1. Klikněte pravým tlačítkem myši na název projektu a vyberte **publikovat > publikovat do Azure**:  ![ snímek obrazovky z Azure Functions, zobrazuje se zvolený projekt AF-Httptrigger a příkazy publikovat a publikovat do Azure zvýrazněné v místní nabídce.](media/azure-functions-image5.png)
 2. Pokud jste už účet Azure připojili k Visual Studio pro Mac zobrazí se seznam dostupných služeb App Services. Pokud jste se přihlásili, budete vyzváni k tomu.
 3. V dialogovém okně **publikovat do Azure App Service** můžete buď vybrat existující službu App Service, nebo vytvořit novou, kliknutím na **Nový**.
-4. V dialogovém okně **vytvořit novou App Service** zadejte nastavení:  ![ možnost publikovat do Azure menu.](media/azure-functions-image7.png)
+4. V dialogovém okně **vytvořit nový App Service** zadejte nastavení:  ![ snímek obrazovky nového okna App Service v Azure Functions, ve kterém se zobrazí nastavení pro vytvoření nového App Service v Azure.](media/azure-functions-image7.png)
 
     |Nastavení  |Popis  |
     |---------|---------|
@@ -108,13 +108,13 @@ Výše uvedený postup můžete použít k přidání dalších funkcí do proje
 
 5. Kliknutím na **Další** vytvořte účet úložiště. Modul runtime Functions vyžaduje účet úložiště Azure. Kliknutím na **vlastní** vytvořte účet úložiště pro obecné účely nebo použijte existující:
 
-    ![Možnost publikování do nabídky Azure](media/azure-functions-image8.png)
+    ![Snímek obrazovky konfigurace účtu úložiště v Azure Functions. Pro účet úložiště je vybraná možnost vlastní, název účtu a typ účtu se vyplní.](media/azure-functions-image8.png)
 
 6. Kliknutím na **Vytvořit** vytvořte aplikaci funkce a související prostředky v Azure a nasaďte kód projektu funkce.
 
 7. Můžete být vyzváni k zadání dialogového okna během publikování, které vás informují o verzi funkcí Update v Azure. Klikněte na **Ano**:
 
-    ![Možnost publikování do nabídky Azure](media/azure-functions-image12.png)
+    ![Snímek obrazovky s výzvou k aktualizaci verze funkcí v Azure, která vás vyzve k aktualizaci nastavení aplikace Azure tak, aby odpovídala verzím místních funkcí.](media/azure-functions-image12.png)
 
 > [!CAUTION]
 > Došlo k chybě ve verzi 7,6 Visual Studio pro Mac, kde není `FUNCTIONS_EXTENSION_VERSION` správně nastavená na "beta", což znamená, že se funkce nemusí spustit. Pokud to chcete opravit, přečtěte si [nastavení aplikace Function App](#function-app-settings) a nastavte nastavení `FUNCTIONS_EXTENSION_VERSION` "-1" na "beta".

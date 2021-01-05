@@ -1,5 +1,7 @@
 ---
 title: Dekompilovat kód .NET při ladění | Microsoft Docs
+description: Generování a vložení zdrojového kódu ze sestavení .NET při ladění v aplikaci Visual Studio. Extrakce a zobrazení vloženého zdrojového kódu.
+ms.custom: SEO-VS-2020
 ms.date: 2/2/2020
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 87f8fbec389e3735b6f1c39cdd671a391c7334d7
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 8ad919b14642dff98746c194ad8c05bbb3aea529
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600113"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726732"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Generovat zdrojový kód ze sestavení .NET během ladění
 
@@ -57,7 +59,7 @@ Zdrojové soubory, které jsou vloženy do souboru symbolů, můžete extrahovat
 
 ![Snímek kontextové nabídky sestavení v okně moduly s příkazem extrahovat zdroje](media/decompilation-extract-source-code.png)
 
-Extrahované zdrojové soubory jsou přidány do řešení jako [jiné soubory](../ide/reference/miscellaneous-files.md). Funkce různé soubory je ve výchozím nastavení v aplikaci Visual Studio vypnutá. Tuto funkci můžete povolit z **Tools**  >  **Options**  >  **dokumentu prostředí**možnosti nástrojů  >  **Documents**  >  **Zobrazit různé soubory v Průzkumník řešení** zaškrtávací políčko. Bez povolení této funkce nebudete moci otevřít extrahovaný zdrojový kód.
+Extrahované zdrojové soubory jsou přidány do řešení jako [jiné soubory](../ide/reference/miscellaneous-files.md). Funkce různé soubory je ve výchozím nastavení v aplikaci Visual Studio vypnutá. Tuto funkci můžete povolit z   >    >  **dokumentu prostředí** možnosti nástrojů  >    >  **Zobrazit různé soubory v Průzkumník řešení** zaškrtávací políčko. Bez povolení této funkce nebudete moci otevřít extrahovaný zdrojový kód.
 
 ![Snímek obrazovky se stránkou možností nástroje s možnostmi různé soubory je povolený.](media/decompilation-tools-options-misc-files.png)
 
@@ -101,7 +103,7 @@ Další podrobnosti najdete v problému GitHubu: [stav generátoru PDB](https://
 
 Nastavení [pouze můj kód (JMC)](./just-my-code.md) umožňuje Visual Studiu krokovat se systémem, architekturou, knihovnou a dalšími neuživatelskými voláními. Během relace ladění zobrazuje okno **moduly** , které kódové moduly ladicí program zpracovává jako můj kód (uživatelský kód).
 
-Dekompilace optimalizovaných nebo vydaných modulů vytváří jiný než uživatelský kód. Pokud ladicí program přeruší v kódu nekompilovaného uživatele, například, nezobrazí se **žádné okno zdroje** . Pokud chcete pouze můj kód zakázat, přejděte **Tools**k  >  **Možnosti** nástroje (nebo **Debug**  >  **Možnosti**ladění) > obecné **ladění**  >  **General**a potom zrušte zaškrtnutí **Povolit pouze můj kód**.
+Dekompilace optimalizovaných nebo vydaných modulů vytváří jiný než uživatelský kód. Pokud ladicí program přeruší v kódu nekompilovaného uživatele, například, nezobrazí se **žádné okno zdroje** . Pokud chcete pouze můj kód zakázat, přejděte k  >  **Možnosti** nástroje (nebo   >  **Možnosti** ladění) > obecné **ladění**  >  a potom zrušte zaškrtnutí **Povolit pouze můj kód**.
 
 ### <a name="extracted-sources"></a>Extrahované zdroje
 

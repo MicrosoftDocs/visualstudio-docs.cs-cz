@@ -1,6 +1,7 @@
 ---
 title: Ladění webových aplikací – chyby a řešení potíží
-ms.custom: seodec18
+description: Odkazy na referenční stránky vám pomůžou ladit webové aplikace, jako je například stránka pro odstraňování potíží a stránky s popisem jednotlivých chyb, ke kterým může dojít.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -27,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4cb60f4d378daab829713cb4bbbb670ef8ed25a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f827dd2bb8081787a4883b2d67ee41d8b6d43876
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188345"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726784"
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>Ladění webových aplikací: chyby a řešení potíží
 Při pokusu o ladění webových aplikací může dojít k následujícím chybám.

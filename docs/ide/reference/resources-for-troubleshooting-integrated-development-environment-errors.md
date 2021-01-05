@@ -1,8 +1,8 @@
 ---
-title: Prostředky pro řešení chyb
+title: Prostředky pro odstraňování chyb integrovaného vývojového prostředí (IDE)
 description: Naučte se používat články a fóra ve znalostní bázi Knowledge Base k odstraňování potíží s chybami IDE, které nejsou dostatečně zajímavé, aby vám pomohly vyřešit problém.
 ms.custom: SEO-VS-2020
-ms.date: 07/23/2020
+ms.date: 12/18/2020
 ms.topic: troubleshooting
 f1_keywords:
 - VS.Message.0x00005A89
@@ -95,16 +95,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3fdf18c67be8188bd03c498778fe8e6ad9409ee
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: 081b36767388da4f78e1fd8f1e0f279d7ca201c9
+ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96616577"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696549"
 ---
-# <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Zdroje informací pro řešení potíží s integrovaným vývojovým prostředím
+# <a name="resources-for-troubleshooting-ide-errors"></a>Prostředky pro odstraňování chyb integrovaného vývojového prostředí (IDE)
 
-Ne všechny chybové zprávy mají konkrétní související téma nápovědy. Pokud informace v chybové zprávě vám nepomůžou problém vyřešit, můžete si prostudovat jiné prostředky, jako jsou články znalostní báze, fóra nebo Podpora produktů.
+Ne všechny chybové zprávy mají konkrétní související téma nápovědy. Pokud informace v chybové zprávě nepomohly problém vyřešit, můžete si prostudovat jiné prostředky, jako jsou články znalostní báze, fóra nebo Podpora produktů.
 
 > [!NOTE]
 > Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [řešení potíží s Visual Studio pro Mac](/visualstudio/mac/troubleshooting).
@@ -115,9 +115,14 @@ Ve znalostní bázi (KB) je možné hledat online články týkající se probl�
 
 ## <a name="developer-forums"></a>Vývojářské fóra
 
-Fóra umožňují interakci s dalšími vývojáři a také zaměstnanci společnosti Microsoft. Pokud narazíte na chybu, pro kterou nelze nalézt řešení, je možné poslat otázky týkající se problému na fórum. Také je možné prohledat diskusní skupiny a zjistit, zda někdo z ostatních psal o stejném problému.
+Fóra umožňují interakci s dalšími vývojáři a také zaměstnanci společnosti Microsoft. Pokud narazíte na chybu, pro kterou nelze nalézt řešení, je možné poslat otázky týkající se problému na fórum. Můžete také vyhledat fóra a zjistit, zda se o stejný problém publikovali jiní uživatelé.
 
-Na webu [technické komunity Microsoftu](https://techcommunity.microsoft.com/t5/Communities/ct-p/communities) můžete získat přístup k fórům, blogům, chatům a dalším prostředkům.
+Tady je seznam prostředků fóra:
+
+- [Visual Studio na Q&A](/answers/products/vs/)
+- [Fórum Visual studia MSDN](https://social.msdn.microsoft.com/Forums/vstudio)
+- [Stack Overflow](https://stackoverflow.com/search?q=%22visual+studio%22)
+- [Reddit](https://www.reddit.com/r/VisualStudio)
 
 ## <a name="product-support"></a>Podpora produktu
 

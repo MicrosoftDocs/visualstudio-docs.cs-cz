@@ -1,5 +1,7 @@
 ---
 title: Ladění, dialogové okno Možnosti | Microsoft Docs
+description: Najděte odkazy, které popisují dialogové okno Možnosti pro obecné ladění, ladění za běhu, ladění výstupního okna a ladění symbolů v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -21,19 +23,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 407da10e5a10ea08a75618046189a87a4ad6c5f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae93f22249540da0121472ce07db52e3747abf85
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738153"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726901"
 ---
 # <a name="debugging-options-dialog-box"></a>Ladění, dialogové okno Možnosti
 Složka **ladění** , v dialogovém okně **Možnosti** v nabídce **nástroje** , poskytuje následující stránky, které umožňují zadat možnosti ladicího nástroje.
 
 - [Obecné, ladění, dialogové okno Možnosti](../debugger/general-debugging-options-dialog-box.md)
 
-- [Za běhu, ladění, dialogové okno Možnosti](../debugger/just-in-time-debugging-options-dialog-box.md)
+- [Just-in-time, ladění, dialogové okno Možnosti](../debugger/just-in-time-debugging-options-dialog-box.md)
 
 - [Okno Výstup, ladění, dialogové okno Možnosti](../debugger/output-window-debugging-options-dialog-box.md)
 

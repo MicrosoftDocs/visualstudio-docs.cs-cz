@@ -1,5 +1,7 @@
 ---
 title: Automaticky synchronně načítaná rozšíření
+description: Přečtěte si o výchozím chování počínaje sadou Visual Studio 2019, které blokuje synchronně automaticky načtené balíčky z libovolného rozšíření.
+ms.custom: SEO-VS-2020
 ms.date: 12/11/2019
 ms.topic: conceptual
 ms.assetid: 822e3cf8-f723-4ff1-8467-e0fb42358a1f
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab62d235fd6ed4e47e765fc23868acd5c56efcb2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 506c098f1f385ddf39c5d000f4571a8ee92c09fc
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699375"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715441"
 ---
 # <a name="synchronously-autoloaded-extensions"></a>Automaticky synchronně načítaná rozšíření
 
@@ -21,7 +23,7 @@ Synchronně převedená rozšíření mají negativní vliv na výkon sady Visua
 
 ![Upozornění kompatibility rozšíření](media/extension-compatibility-warning-16-1.png.png)
 
-Další možnosti:
+Můžete:
 
 - Kliknutím na zapnout **synchronní automatické načítání** povolíte rozšíření automatické načítání. Chcete-li toto nastavení změnit v aplikaci Visual Studio, klikněte na prostředí, pak na rozšíření a potom zaškrtněte políčko "povolí synchronní automatické načtení rozšíření". 
 
@@ -42,7 +44,7 @@ Všechna rozšíření, která synchronně načetla jakékoli balíčky v uživa
 
 Správci mohou Zásady skupiny povolit synchronní automatické načítání. Provedete to tak, že v následujícím klíči nastavíte zásady založené na registru:
 
-**HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\VisualStudio\SynchronousAutoload**
+**HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\SynchronousAutoload**
 
 Entry = **povoleno**
 

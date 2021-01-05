@@ -10,22 +10,22 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 584b0035bf037a8dbf274450f56a359f803dc453
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 9d23e5890942943219990b1244c99f7b2c208dec
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099190"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726329"
 ---
 # <a name="monitoring-gpu-utilization"></a>Monitorování využití GPU
 
 Monitorování využití GPU na vzdálených počítačích se systémem Linux:
 
-1. V **Průzkumník serveru**rozbalte **vzdálené počítače**.
+1. V **Průzkumník serveru** rozbalte **vzdálené počítače**.
 2. Klikněte **pravým tlačítkem na** vzdálený počítač, který chcete monitorovat.
 
-    ![heatmapu GPU](media/monitor-gpu/gpu-heatmap-0.png)
+    ![Snímek obrazovky Průzkumník serveru znázorňující strom složek pro nástroje AI Je vybraná možnost Azure demo a otevře se místní nabídka s příkazem zobrazit Heat mapu.](media/monitor-gpu/gpu-heatmap-0.png)
 
 3. Klikněte na **Zobrazit Heat mapu**.
 
-    ![heatmapu GPU](media/monitor-gpu/heatmap.png)
+    ![Snímek obrazovky okna s Heat mapou nástrojů AI v Průzkumník serveru zobrazuje souhrn, podrobnosti a data Heat mapy pro GPU na virtuálním počítači Azure s DLVM.](media/monitor-gpu/heatmap.png)

@@ -13,12 +13,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5ca27d44e611ab3b541dfb5992ef37d230513c3
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: fc74a556fe6baf21b6270b21951018fc246aa962
+ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040638"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696624"
 ---
 # <a name="overview"></a>Přehled
 
@@ -261,7 +261,7 @@ dotnet_diagnostic.CA2231.severity = warning
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>Nastavit závažnost pravidla z Průzkumník řešení
 
-1. V Průzkumník řešení rozbalte položku **References**  >  **analyzátory** odkazů (nebo **Dependencies**  >  **analyzátory** závislostí pro projekty .NET Core).
+1. V Průzkumník řešení rozbalte položku   >  **analyzátory** odkazů (nebo   >  **analyzátory** závislostí pro projekty .NET Core).
 
 2. Rozbalte sestavení, které obsahuje pravidlo, pro které chcete nastavit závažnost.
 
@@ -382,7 +382,9 @@ Existuje několik způsobů, jak potlačit porušení pravidel:
 
 Při sestavování projektu na příkazovém řádku se porušení pravidla zobrazí ve výstupu sestavení, pokud jsou splněny následující podmínky:
 
-- Analyzátory jsou nainstalovány jako balíček NuGet a nikoli jako rozšíření VSIX.
+- Analyzátory jsou nainstalovány se sadou .NET SDK nebo jako balíček NuGet, nikoli jako rozšíření VSIX.
+
+  Pro analyzátory nainstalované pomocí .NET SDK možná budete muset [Povolit analyzátory](../code-quality/install-net-analyzers.md). Pro styly kódu můžete také [vynutili styly kódu při sestavení](/dotnet/fundamentals/code-analysis/overview#code-style-analysis) nastavením vlastnosti MSBuild.
 
 - V kódu projektu je porušeno jedno nebo více pravidel.
 

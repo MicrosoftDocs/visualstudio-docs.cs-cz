@@ -1,5 +1,7 @@
 ---
 title: Element Strings | Microsoft Docs
+description: Element Strings obsahuje podřízený element ButtonText a další volitelné podřízené prvky. Ampersand v textovém řetězci Určuje klávesovou zkratku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: db44db8926b523665a21c00b710dcee55749ab89
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f517d350f3383dcaeb99d651872ffb8ed09814fe
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699720"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715246"
 ---
 # <a name="strings-element"></a>Strings – element
 Element Strings musí obsahovat alespoň **ButtonText** podřízený element. Všechny ostatní podřízené prvky jsou volitelné. Neplatné znaky XML, například ' & ' a ' < ', musí být kódovány jako entity (' &amp; ' a ' ' a &lt; tak dále).

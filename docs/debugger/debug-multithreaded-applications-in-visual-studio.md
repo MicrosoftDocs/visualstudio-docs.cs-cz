@@ -1,6 +1,7 @@
 ---
 title: Ladění vícevláknových aplikací | Microsoft Docs
-ms.custom: seodec18
+description: Ladění vícevláknových aplikací v aplikaci Visual Studio. Přečtěte si nástroje a další články o ladění aplikací s více vlákny.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/06/2018
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b99f7b44168a451e8e927e5e0d2ca1a7f8d0bf93
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 4fed6580219964ab71f5a5010060c1af193375df
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600331"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727135"
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>Ladění vícevláknových aplikací v aplikaci Visual Studio
 Vlákno je posloupnost pokynů, na které operační systém uděluje čas procesoru. Každý proces, který běží v operačním systému, se skládá alespoň z jednoho vlákna. Procesy, které mají více než jedno vlákno, se nazývají multithreading.
@@ -86,7 +87,7 @@ Označte nebo označte vlákna, kterým chcete poskytnout zvláštní pozornost 
 
 Techniky pro ladění aplikace, která běží v clusteru s vysokým výkonem.
 
- [Tipy pro ladění vláken v nativním kódu](../debugger/tips-for-debugging-threads-in-native-code.md)
+ [Tipy k ladění vláken v nativním kódu](../debugger/tips-for-debugging-threads-in-native-code.md)
 
 Jednoduché techniky, které mohou být užitečné pro ladění nativních vláken.
 

@@ -1,5 +1,7 @@
 ---
 title: Přihlášení k odběru události | Microsoft Docs
+description: Naučte se, jak vytvořit okno nástroje, které reaguje na události v běžící tabulce dokumentů v sadě Visual Studio SDK.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6aefe2efce897aefc26f63835844b0cc705fb5b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c739dad7be8d2a000662eca478bc117699694c8a
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699684"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715870"
 ---
 # <a name="subscribing-to-an-event"></a>Přihlášení k odběru události
 Tento návod vysvětluje, jak vytvořit okno nástroje, které reaguje na události v běžící tabulce dokumentů (RDT). Okno nástroje je hostitelem uživatelského ovládacího prvku, který implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>Metoda připojuje rozhraní k událostem.

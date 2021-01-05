@@ -1,5 +1,7 @@
 ---
 title: Nejčastější dotazy k ladění nativního kódu | Microsoft Docs
+description: Najdete zde odkazy na nejčastější dotazy a odpovědi týkající se ladění nativního kódu v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15a94d20ade7bfe3e5aaac2c90bb3ba452ef4330
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43c6bf4e817f78867534abdca69c7e975397d287
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738176"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726966"
 ---
 # <a name="debugging-native-code-faqs"></a>Nejčastější dotazy k ladění nativního kódu
 Následující témata obsahují odpovědi na některé nejčastější dotazy:
@@ -40,11 +42,11 @@ Následující témata obsahují odpovědi na některé nejčastější dotazy:
 
 - [Při volání funkce stovky časů, které se nezdařily?](../debugger/when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed-q.md)
 
-- [Kde najdu kódy chyb systému Win32?](../debugger/where-can-i-look-up-win32-error-codes-q.md)
+- [Kde najdu kódy chyb Win32?](../debugger/where-can-i-look-up-win32-error-codes-q.md)
 
-- [Jak mohu zachovat fokus při procházení programem?](../debugger/how-can-i-keep-focus-when-stepping-through-my-program-q.md)
+- [Jak zachovám fokus při procházení programem?](../debugger/how-can-i-keep-focus-when-stepping-through-my-program-q.md)
 
-- [Jak mohu použít okna ladicího programu během ladění programu na popředí?](../debugger/how-can-i-use-debugger-windows-while-debugging-a-foreground-program-q.md)
+- [Jak můžu použít ladicí program Windows při ladění programu na popředí?](../debugger/how-can-i-use-debugger-windows-while-debugging-a-foreground-program-q.md)
 
 - [Pokud je v prostředí MFC zastaveno, jak se mohu vrátit k funkci, která se nazývá MFC?](../debugger/how-to-get-back-to-the-function-that-called-mfc-if-halted.md)
 

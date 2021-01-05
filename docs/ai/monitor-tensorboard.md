@@ -10,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: a9242cdd4a09b7d0cb1cae1904800696dc9c3d82
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 650189c4418355ae06b296bac7e16eece0ea88ad
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099177"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727252"
 ---
 # <a name="monitor-with-tensorboard"></a>Monitorování pomocí TensorBoard
 
@@ -23,8 +23,8 @@ Průběh školení modelu můžete vizualizovat pomocí TensorBoard.
 
 1. Klikněte pravým tlačítkem na projekt a pak klikněte na **Spustit TensorBoard**; pak vyberte adresář výstupních protokolů TensorBoard.
 
-    ![spustit tensorboard](media/monitor-tensorboard/run-tensorboard.png)
+    ![Snímek obrazovky sady Visual Studio Průzkumník řešení s vybraným projektem MNIST ručně zapsaných Kontextová nabídka je otevřená a je vybraný příkaz run TensorBoard.](media/monitor-tensorboard/run-tensorboard.png)
 
 2. Všimněte si, že se chyba zkracuje v čase, což znamená, že kvalita se zlepšuje.
 
-    ![spustit tensorboard](media/monitor-tensorboard/tensorboard.png)
+    ![Snímek obrazovky hlavního okna TensorBoard znázorňující grafické vizualizace dat z protokolů TensorBoard.](media/monitor-tensorboard/tensorboard.png)

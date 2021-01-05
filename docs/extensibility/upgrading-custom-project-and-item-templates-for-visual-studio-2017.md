@@ -1,6 +1,8 @@
 ---
 title: Upgrade vlastních šablon projektů a položek pro Visual Studio 2017
 titleSuffix: ''
+description: Naučte se aktualizovat vlastní šablonu projektu a položky z předchozích verzí sady Visual Studio SDK pro použití se sadou Visual Studio 2017 a novějšími verzemi.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ad02477b-e101-4f32-aeb7-292bf95d5c2f
@@ -10,12 +12,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 5f807e142b376d05e5a44600e8f6b24ddb3593be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 089baadcb60afcc8b32e287095b10ab30196ce17
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698848"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715974"
 ---
 # <a name="upgrade-custom-project-and-item-templates-for-visual-studio-2017"></a>Upgrade vlastních šablony projektů a položek pro Visual Studio 2017
 
@@ -27,7 +29,7 @@ Pokud chcete vytvořit šablonu projektu nebo položky jako součást rozšíře
 
 ## <a name="template-scanning"></a>Kontrola šablon
 
-V předchozích verzích sady Visual Studio, **devenv/Setup** nebo **devenv/installvstemplates** kontrolovala místní disk a nalezl šablony projektů a položek. Počínaje verzí Visual Studio 2017 se kontrola provádí jenom pro umístění na úrovni uživatele. Výchozí umístění na úrovni uživatele je **%USERPROFILE%\Documents \\<Visual Studio verze \> \templates \\ **. Toto umístění se používá pro šablony generované šablonami **Project**  >  **exportu projektu...** , pokud je v průvodci vybraná možnost **automaticky importovat šablonu do sady Visual Studio** .
+V předchozích verzích sady Visual Studio, **devenv/Setup** nebo **devenv/installvstemplates** kontrolovala místní disk a nalezl šablony projektů a položek. Počínaje verzí Visual Studio 2017 se kontrola provádí jenom pro umístění na úrovni uživatele. Výchozí umístění na úrovni uživatele je **%USERPROFILE%\Documents \\<Visual Studio verze \> \templates \\**. Toto umístění se používá pro šablony generované šablonami   >  **exportu projektu...** , pokud je v průvodci vybraná možnost **automaticky importovat šablonu do sady Visual Studio** .
 
 U ostatních (neuživatelových) umístění musíte zahrnout soubor manifestu (. vstman), který určuje umístění a další vlastnosti šablony. Soubor. vstman je vygenerován společně se souborem. vstemplate použitým pro šablony. Pokud nainstalujete rozšíření pomocí souboru. vsix, můžete to provést tak, že znovu zkompilujete rozšíření v aplikaci Visual Studio 2017. Pokud ale použijete soubor. msi, musíte provést změny ručně. Seznam toho, co je potřeba udělat k provedení těchto změn, najdete v tématu  **upgrade pro rozšíření nainstalovaná s nástrojem. MSI** později na této stránce.
 

@@ -1,5 +1,7 @@
 ---
 title: Funkce rozhraní API modulu plug-in správy zdrojových kódů | Microsoft Docs
+description: Přečtěte si o funkcích, které poskytuje rozhraní API modulu plug-in správy zdrojových kódů, které musí být implementováno modulem plug-in správy zdrojových kódů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce685729dda8750d772e244398b736cff4951b72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 114862bb3358cc2a5400d6f40031deb030e4e4df
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699925"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715987"
 ---
 # <a name="source-control-plug-in-api-functions"></a>Funkce modulu plug-in správy zdrojového kódu v rozhraní API
 Rozhraní API modulu plug-in správy zdrojových kódů poskytuje následující funkce, které musí být implementovány modulem plug-in správy zdrojových kódů v souladu s tímto rozhraním API. Signatury každé funkce a sémantiky přidružené k bitovým příznakům a dalším parametrům jsou podrobněji popsány v tomto odkazu.

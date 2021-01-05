@@ -1,5 +1,7 @@
 ---
 title: Zahájení vývoje rozšíření sady Visual Studio | Microsoft Docs
+description: Seznamte se s některými běžnými otázkami, které můžete mít při prvním spuštění napsání rozšíření sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 09/18/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 812c5b2366e40226011a15acfc1cae2327e4b897
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: da8bd850413d32e5453b7dc312e863832e5f5218
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099385"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715259"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Začínáme s vývojem rozšíření sady Visual Studio
 

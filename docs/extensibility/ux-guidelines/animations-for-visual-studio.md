@@ -1,5 +1,7 @@
 ---
 title: Animace pro Visual Studio | Microsoft Docs
+description: Seznamte se s pravidly, která vám pomůžou zajistit konzistentní a uživatelsky přívětivé styly animace napříč prostředím IDE sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 446773a9-e6f7-4c0c-8dbc-9e303bf32eb1
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc11eb7bab69728be5ceaa55143f56e93cd1fca4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c86b033986511100415989e76f4f1e6ef7702f10
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698607"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715948"
 ---
 # <a name="animations-for-visual-studio"></a>Animace pro Visual Studio
 ## <a name="animation-fundamentals"></a>Základní informace o animacích
@@ -43,7 +45,7 @@ Použijte tato pravidla, abyste zajistili konzistentní a uživatelsky přívět
 
 - **Subtlety je důležité.** Ve většině případů animace nemusí vyžadovat pozornost uživatele, aby mohla poskytovat svůj účel. Malé změny časování, sekvencování a chování mohou výrazně ovlivnit vnímání a mohou způsobit rozdíl mezi efektivní a neúčinnou animací.
 
-- Při použití animace k navýšení pozornosti na něco se **ujistěte, že stojí za to, že je možné přerušit**vlaky uživatele v myšlenkách.
+- Při použití animace k navýšení pozornosti na něco se **ujistěte, že stojí za to, že je možné přerušit** vlaky uživatele v myšlenkách.
 
 - **Při zobrazování průběhu nebo stavu** prostřednictvím animace:
 

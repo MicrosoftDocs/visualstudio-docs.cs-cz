@@ -1,5 +1,7 @@
 ---
 title: Struktura souboru [Content_types]. XML | Microsoft Docs
+description: Přečtěte si o struktuře souboru typů obsahu, který obsahuje informace o typech obsahu v balíčku VSIX.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e96af4936f27d869409a7215c720d9bb64e4128
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 7117845e4756f8b0e09a8fa603e66448e705b903
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012514"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715220"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>Struktura souboru [Content_types].xml
 Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio používá soubor [Content_Types]. XML k instalaci balíčku, ale neinstaluje samotný soubor.
@@ -99,7 +101,7 @@ Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio použív
 </Types>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md)
 - [Referenční dokumentace schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110))
 - [OPC: nový standard pro vytváření balíčků dat](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data)

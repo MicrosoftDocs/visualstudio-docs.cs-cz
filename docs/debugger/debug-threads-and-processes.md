@@ -1,5 +1,7 @@
 ---
 title: Nástroje pro ladění vláken a procesů | Microsoft Docs
+description: Přečtěte si nástroje pro ladění vláken a procesů v aplikaci Visual Studio. Vlákna a procesy reprezentují sekvence instrukcí, které musí být spuštěny v určitém pořadí.
+ms.custom: SEO-VS-2020
 ms.date: 04/21/2018
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dcdaf083462b75485449cae05894681e2bb5c900
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51917065e8764f7edbebbdb3bfcc7a03cc9723d4
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738383"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727148"
 ---
 # <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Nástroje pro ladění vláken a procesů v aplikaci Visual Studio
 *Vlákna* a *procesy* jsou související koncepty v oblasti počítačové vědy. Obě reprezentují sekvence instrukcí, které se musí provést v určitém pořadí. Pokyny v samostatných vláknech nebo procesech ale mohou být spouštěny paralelně.

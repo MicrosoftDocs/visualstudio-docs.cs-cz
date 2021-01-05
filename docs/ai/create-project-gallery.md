@@ -10,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bcc1932bad5b34d9695257feb163654f6b99514
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6813e834af00330b4018f16d4a19be945be2be9
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371622"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726641"
 ---
 # <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Vytvoření projektu AI z Galerie Azure Machine Learning v aplikaci Visual Studio
 
@@ -52,12 +52,12 @@ Po [instalaci Visual Studio Tools for AI](installation.md)je snadné vytvořit n
 
 5. Visual Studio vytvoří soubor projektu ( `.pyproj` soubor na disku) spolu s dalšími soubory definovanými v ukázce. S šablonou "MNIST ručně zapsaných" projekt obsahuje několik souborů.
 
-    ![mnist ručně zapsaných](media/create-project-gallery/azml-mnist.png)
+    ![Snímek obrazovky sady Visual Studio Průzkumník řešení zobrazující soubory projektu TensorFlowMNIST. V hlavním okně se zobrazí kód pro tf_mnist. py.](media/create-project-gallery/azml-mnist.png)
 
 6. Odešlete úlohu do Azure Machine Learning.
 
-    ![mnist ručně zapsaných](media/create-project-gallery/submit-azml.png)
+    ![Snímek obrazovky sady Visual Studio Průzkumník řešení zobrazující kontextovou nabídku projektu TensorFlowMNIST pomocí příkazu Odeslat úlohu... Vyberte.](media/create-project-gallery/submit-azml.png)
 
 7. Spuštění v kontejneru Docker nebo na místním počítači
 
-    ![mnist ručně zapsaných](media/create-project-gallery/azml-local.png)
+    ![Snímek obrazovky s dialogem odeslat úlohu s použitím sady clusterů s názvem "AzureML:/local" a spouštěcím skriptem nastaveným na "tf_mnist. py".](media/create-project-gallery/azml-local.png)

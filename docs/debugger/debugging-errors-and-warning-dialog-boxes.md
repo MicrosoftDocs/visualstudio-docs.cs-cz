@@ -1,5 +1,7 @@
 ---
 title: Ladění chyb a dialogových oken s upozorněním | Microsoft Docs
+description: Podívejte se na seznam chyb a dialogových oken s upozorněním, se kterými se můžete setkat při ladění aplikace v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,38 +23,38 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: beeba55c873e008b3e096da66f888695d719c882
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 73432c1693db1543095643a998396967b7aa2bdf
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599942"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726979"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Ladění chyb a dialogových oken s upozorněním
 Níže jsou uvedená dialogová okna chyby a varování, se kterými se můžete setkat při ladění aplikace.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Dialogové okno Kontrolní výraz je neplatný](../debugger/assertion-failed-dialog-box.md)
+ [Dialogové okno kontrolního seznamu se nezdařilo](../debugger/assertion-failed-dialog-box.md)
 
- [Dialogové okno Nelze změnit hodnotu](../debugger/cannot-change-value-dialog-box.md)
+ [Nelze změnit hodnotu – dialogové okno](../debugger/cannot-change-value-dialog-box.md)
 
  [Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad.](../debugger/debugger-cannot-display-source-code-or-disassembly.md)
  
  [Službám ladicího programu začíná docházet paměť](../debugger/error-debugger-services-no-memory.md)
 
- [Dialogové okno Spustitelný soubor pro relaci ladění](../debugger/executable-for-debugging-session-dialog-box.md)
+ [Spustitelný soubor pro relaci ladění – dialogové okno](../debugger/executable-for-debugging-session-dialog-box.md)
 
  [Nepovedlo se použít změny kódu – dialogové okno](../debugger/edit-and-continue-dialog-box-cpp.md)
 
- [Dialogové okno programu Microsoft Visual Studio Debugger (vyvolána výjimka)](../debugger/microsoft-visual-studio-debugger-exception-thrown-dialog-box.md)
+ [Dialogové okno Microsoft Visual Studioho ladicího programu (vyvolána výjimka)](../debugger/microsoft-visual-studio-debugger-exception-thrown-dialog-box.md)
 
  [Pro dialogové okno aktuální umístění není k dispozici žádný zdrojový kód.](../debugger/no-source-available.md)
 
  [Dialogové okno žádné symbolické informace](/previous-versions/d493t3ew(v=vs.100))
 
- [Dialogové okno Vyřešit nejednoznačnosti](../debugger/resolve-ambiguity-dialog-box.md)
+ [Vyřešit nejednoznačnosti – dialogové okno](../debugger/resolve-ambiguity-dialog-box.md)
 
- [Dialogové okno Upozornění na starý kód](../debugger/stale-code-warning-dialog-box.md)
+ [Dialogové okno upozornění na starý kód](../debugger/stale-code-warning-dialog-box.md)
 
  [Nepovedlo se připojit k počítači.](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)
 

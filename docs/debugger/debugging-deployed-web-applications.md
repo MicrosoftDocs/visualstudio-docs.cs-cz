@@ -1,5 +1,7 @@
 ---
 title: Ladění nasazených aplikací ASP.NET | Microsoft Docs
+description: Pomocí sady Visual Studio můžete ladit nasazenou aplikaci ASP.NET připojením k pracovnímu procesu a zajištěním, aby ladicí program měl přístup ke symbolům pro aplikaci.
+ms.custom: SEO-VS-2020
 ms.date: 06/30/2018
 ms.topic: how-to
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 8d787e6586a9dcce2ca4d2c840f67e652bfc5714
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e8c99f1988ef1aa2e14c7b0a4d6ed46e10f6f1e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350547"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727044"
 ---
 # <a name="debugging-deployed-aspnet-applications"></a>Ladění nasazených aplikací ASP.NET
 Chcete-li použít nástroj [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] k ladění nasazené aplikace, je nutné se připojit k [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovnímu procesu a zajistit, aby ladicí program měl přístup ke symbolům pro aplikaci. Je také nutné vyhledat a otevřít zdrojové soubory aplikace. Další informace naleznete v tématu [určení symbolu (PDB) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md), [Postupy: hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md)a [systémových požadavků](../debugger/aspnet-debugging-system-requirements.md).

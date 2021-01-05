@@ -1,5 +1,7 @@
 ---
 title: Ladění verzí funkcí přidělení haldy | Microsoft Docs
+description: Použijte ladicí verze funkcí přidělení haldy v knihovně run-time jazyka C. Tyto funkce mají stejné názvy jako verze vydání s _dbg připojena.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0fde776e9f2bd48aca92c7ba6d7f1fe1e23f01a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4be03c96f9c6ffdf8745ab8890e524ca98b4f4f
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738376"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727070"
 ---
 # <a name="debug-versions-of-heap-allocation-functions"></a>Ladění verzí funkcí přidělení haldy
 Knihovna run-time jazyka C obsahuje speciální ladicí verze funkcí přidělení haldy. Tyto funkce mají stejné názvy jako verze pro vydání s _dbg připojené k nim. Toto téma popisuje rozdíly mezi vydáním verze funkce CRT a verzí _dbg, a to pomocí `malloc` `_malloc_dbg` příkladů a jako příklady.

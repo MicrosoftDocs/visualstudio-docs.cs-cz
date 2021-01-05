@@ -1,5 +1,7 @@
 ---
 title: Používání a poskytování služeb | Microsoft Docs
+description: Seznamte se se službami, které Visual Studio IDE nabízí pro sady VSPackage k poskytování a použití. Tyto články popisují, jak získat a poskytnout služby.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8741d8d66af96ad4c6abea44b238393a34c5aa95
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a7c1d9f3632d8b710ac238c372ed4456183a8d1
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698743"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715935"
 ---
 # <a name="using-and-providing-services"></a>Používání a poskytování služeb
 Služba je smlouva mezi dvěma VSPackage. Jedna sada VSPackage nabízí konkrétní sadu rozhraní, které se mají využít pro další VSPackage. Například [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nabízí <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> službu pro všechny rozhraní VSPackage, které načítá. Tato služba poskytuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> rozhraní, které lze použít k zápisu do protokolu aktivit. Další informace najdete v tématu [Postupy: použití protokolu aktivit](../extensibility/how-to-use-the-activity-log.md).

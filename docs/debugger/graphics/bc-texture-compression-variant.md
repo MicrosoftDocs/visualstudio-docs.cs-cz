@@ -1,5 +1,7 @@
 ---
 title: Varianta komprese textury BC | Microsoft Docs
+description: Použijte variantu komprese textury BC, abyste umožnili kompresi bloku (BC) na texturách, které mají formát pixel, který je variantou B8G8R8X8, B8G8R8A8 nebo R8G8B8A8.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2d0f5305-585b-4b01-bc9a-7a32d6e991da
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5faf19632d746105deed3a36af6943627594175
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e767268073f896de590386854a0d2c9ce2803073
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72736165"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726446"
 ---
 # <a name="bc-texture-compression-variant"></a>Varianta komprese textur BC
 Povoluje kompresi bloků na texturách, které mají formát pixel, který je variantou B8G8R8X8, B8G8R8A8 nebo R8G8B8A8.

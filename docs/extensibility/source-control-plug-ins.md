@@ -1,5 +1,7 @@
 ---
 title: Moduly plug-in správy zdrojového kódu | Microsoft Docs
+description: Články v této části popisují kompletní specifikaci rozhraní, která umožňuje integrovat systémy správy zdrojového kódu do sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cc5f092e0ae93109d071af0b1a67999947e73e90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 617b06e46bb150026f49af3e23761dfd6cb4e902
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699895"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715831"
 ---
 # <a name="source-control-plug-ins"></a>Moduly plug-in správy zdrojového kódu
 Referenční část sady SDK modulu plug-in správy zdrojových kódů obsahuje kompletní specifikaci rozhraní, která umožňuje integraci systémů správy zdrojového kódu do nástroje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Určuje syntaxi a sémantiku různých funkcí a datových typů, které musí modul plug-in správy zdrojových kódů implementovat pro rozhraní s [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaným vývojovým prostředím (IDE).

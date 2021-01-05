@@ -10,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: ae419c67b493ef03b08f6fcf627ad0fbe42ca6d0
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: b145c4acf4047356b8996d09d746679900314f1b
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099203"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726563"
 ---
 # <a name="browse-storage-to-upload-data-or-download-models-and-logs"></a>Procházení úložiště pro nahrávání dat nebo stahování modelů a protokolů
 
@@ -27,7 +27,7 @@ Můžete procházet veškeré úložiště ve vzdáleném počítači nebo sdíl
 2. Rozbalte vzdálený počítač nebo Batch AI výpočetního kontextu.
 3. Klikněte pravým tlačítkem na **úložiště**; pak klikněte na tlačítko **Procházet**.
 
-    ![úložiště](media/manage-storage/browse-storage.png)
+    ![Snímek obrazovky Průzkumník serveru se rozšířenou složkou vzdálené počítače Ve stromové struktuře složek je zvýrazněné úložiště a v místní nabídce se vybere možnost Procházet.](media/manage-storage/browse-storage.png)
 
 ## <a name="to-access-job-specific-data-on-the-remote-machine-or-file-share"></a>Přístup k datům specifickým pro úlohu ve vzdáleném počítači nebo sdílené složce
 
@@ -35,4 +35,4 @@ Můžete procházet veškeré úložiště ve vzdáleném počítači nebo sdíl
 2. Vyberte úlohu.
 3. Klikněte na **pracovní složka** nebo pro rychlý přístup k těmto důležitým souborům protokolu klikněte na **stdout/stderr** .
 
-    ![úložiště](media/manage-storage/job-workingfolder.png)
+    ![Snímek obrazovky okna prohlížeče úloh v Průzkumník serveru. Je vybraná úloha train_mnist a v části Podrobnosti o úloze se vybere odkaz pracovní složka.](media/manage-storage/job-workingfolder.png)

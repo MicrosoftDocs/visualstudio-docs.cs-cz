@@ -1,5 +1,7 @@
 ---
 title: Element UsedCommand | Microsoft Docs
+description: Element UsedCommand umožňuje VSPackage získat přístup k příkazu, který je definován v jiném souboru. vsct.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65030c3fe24c3456b0c4c99a667362d2a4c67703
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d1dcef25413bddbb1eb5c35a47a9dc0d30f4a8f
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698827"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715961"
 ---
 # <a name="usedcommand-element"></a>UsedCommand – element
 Umožňuje VSPackage získat přístup k příkazu, který je definován v jiném souboru. vsct. Pokud například vaše VSPackage používá příkaz standardního **kopírování** , který je definován [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředím, můžete příkaz Přidat do nabídky nebo panelu nástrojů, aniž byste ho znovu implementovali.
@@ -36,13 +38,13 @@ Umožňuje VSPackage získat přístup k příkazu, který je definován v jiné
 |---------------|-----------------|
 |guid|Povinná hodnota. Identifikátor GUID páru identifikátorů GUID, který identifikuje příkaz|
 |id|Povinná hodnota. ID páru identifikátorů GUID, který identifikuje příkaz|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|Žádné||
+|Žádná||
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 

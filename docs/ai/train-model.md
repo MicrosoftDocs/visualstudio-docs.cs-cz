@@ -11,12 +11,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - azure
-ms.openlocfilehash: 110468de264370b22d64dae40cf55e9766804c31
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 72f5fa5aab9f9afa6268f8acd737430af0568928
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036610"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727356"
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>Výuka modelů AI v Azure Batch AI
 
@@ -30,32 +30,32 @@ Integruje se s Visual Studio Tools for AI, takže můžete dynamicky škálovat 
 
 2. Rozbalte položku **nástroje AI**. Všechny Batch AI prostředky, které budete mít, se automaticky zjistí a zobrazí se v Průzkumník serveru.
 
-    ![Galerie ukázek](media/train-model/batchai.png)
+    ![Snímek obrazovky rozbaleného stromu složek pro nástroje AI v Průzkumník serveru, který zobrazuje rozšířené podsložky pro Azure Batch AI a Azure Machine Learning.](media/train-model/batchai.png)
 
 3. Vyberte **zobrazení > Team Explorer...** a otevřete tak okno **Team Explorer** , ve kterém se můžete připojit k GitHubu nebo Azure DevOps nebo klonovat úložiště.
 
     ![Okno Průzkumníka týmových oken zobrazující Azure DevOps, GitHub a klonování úložiště](media/train-model/team-explorer-devops.png)
 
-4. V poli Adresa URL v části **místní úložiště Git**zadejte `https://github.com/Microsoft/samples-for-ai` , zadejte složku pro klonované soubory a vyberte **klonovat**.
+4. V poli Adresa URL v části **místní úložiště Git** zadejte `https://github.com/Microsoft/samples-for-ai` , zadejte složku pro klonované soubory a vyberte **klonovat**.
 
     > [!Tip]
     > Složka, kterou zadáte v Team Explorer, je konkrétní složka pro příjem klonovaných souborů. Na rozdíl od `git clone` příkazu vytvoření klonu v Team Explorer nevytvoří automaticky podsložku s názvem úložiště.
 
 5. Po dokončení klonování klikněte na **soubor > otevřít řešení > projekt/řešení** .
 
-    ![Galerie ukázek](media/train-model/open-solution.png)
+    ![Snímek obrazovky, který ukazuje část nabídky soubor Průzkumník serveru s vybraným příkazem otevřít a projektem nebo řešením vybraným v místní nabídce](media/train-model/open-solution.png)
 
 6. Otevřete **Samples-for-ai\TensorFlowExamples\TensorFlowExamples.sln** v adresáři, který jste naklonoval do úložiště.
 
-    ![Galerie ukázek](media/train-model/tensorflowexamples.png)
+    ![Snímek obrazovky zobrazující soubor řešení TensorflowExamples. sln uvedený v obsahu složky TensorflowExamples v úložišti Samples-for-AI.](media/train-model/tensorflowexamples.png)
 
 7. Nastavit projekt MNIST ručně zapsaných jako **spouštěný projekt**
 
-    ![Galerie ukázek](media/train-model/mnist-startup.png)
+    ![Snímek obrazovky s vybranou možností nastavit jako spouštěný projekt v kontextové nabídce pro projekt MNIST ručně zapsaných v Průzkumník řešení.](media/train-model/mnist-startup.png)
 
 8. <strong>Klikněte pravým tlačítkem na **projekt mnist ručně zapsaných,** **odešlete úlohu** .</strong>
 
-    ![Galerie ukázek](media/train-model/submit-job.png)
+    ![Snímek obrazovky s vybranou úlohou odeslat v kontextové nabídce pro projekt MNIST ručně zapsaných v Průzkumník řešení.](media/train-model/submit-job.png)
 9. Vyberte cluster **Azure Batch AI** a pak klikněte na **importovat**. Vyberte `AzureBatchAI_TF_MNIST.json` soubor, abyste mohli rychle naplnit některé výchozí hodnoty, jako je například ta, kterou image Docker má použít. Pak klikněte na **Odeslat** .
 
-    ![Galerie ukázek](media/train-model/submit-batch.png)
+    ![Snímek obrazovky s dialogem odeslat úlohu s hodnotami naplněnými pro použít cluster, spouštěcí skript, název úlohy, název Image, Předpona cesty StdOutErr a parametry CLI](media/train-model/submit-batch.png)

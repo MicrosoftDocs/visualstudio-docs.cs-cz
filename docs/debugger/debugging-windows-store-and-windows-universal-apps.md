@@ -1,6 +1,7 @@
 ---
 title: Ladění aplikací pro UWP | Microsoft Docs
-ms.custom: ''
+description: V ladicím programu sady Visual Studio najdete články o úlohách ladění pro aplikace Univerzální platforma Windows (UWP).
+ms.custom: SEO-VS-2020
 ms.date: 10/22/2019
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 73b9b78be6a6325a422c945db8c51caa7a11b487
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 111a84471ca20659b9a8a4a00345c1c027a0472e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188264"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726706"
 ---
 # <a name="debug-universal-windows-apps-uwp-in-visual-studio"></a>Ladění univerzálních aplikací pro Windows (UWP) v aplikaci Visual Studio
 

@@ -1,5 +1,7 @@
 ---
 title: Expedice rozšíření pro Visual Studio | Microsoft Docs
+description: Naučte se publikovat a udržovat rozšíření sady Visual Studio SDK, včetně práce se soubory VSIX, publikováním, lokalizací a aktualizací.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 767bb24bb5cb47f1af1452aa04ebdc91c778e284
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 812fc4f4e2f8dcf54876e2764f0c091f16348496
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700113"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97716000"
 ---
 # <a name="shipping-visual-studio-extensions"></a>Odesílání rozšíření sady Visual Studio
 Po dokončení vývoje rozšíření ho můžete nainstalovat na jiné počítače, sdílet ho s přáteli a spolupracovníky nebo ho publikovat na Visual Studio Marketplace. V této části vyvysvětlíme všechny věci, které potřebujete k tomu, abyste mohli publikovat a udržovat vaše rozšíření: práce se soubory VSIX, publikováním, lokalizací a aktualizací.
@@ -57,6 +59,6 @@ Po dokončení vývoje rozšíření ho můžete nainstalovat na jiné počíta�
 |[Postupy: Přidání závislosti k balíčku VSIX](../extensibility/how-to-add-a-dependency-to-a-vsix-package.md)|Popisuje, jak přidat odkazy na balíčky nasazení VSIX.|
 |[Příprava rozšíření pro nasazení Instalační služby systému Windows](../extensibility/preparing-extensions-for-windows-installer-deployment.md)|Vysvětluje, jak nasadit rozšíření pomocí Instalační služba systému Windows.|
 |[Podepisování balíčků VSIX](../extensibility/signing-vsix-packages.md)|Vysvětluje, jak podepisovat balíčky VSIX.|
-|[Privátní galerie](../extensibility/private-galleries.md)|Vysvětluje, jak vytvořit privátní Galerie pro rozšíření.|
+|[Soukromé galerie](../extensibility/private-galleries.md)|Vysvětluje, jak vytvořit privátní Galerie pro rozšíření.|
 |[Podpora více verzí sady Visual Studio](../extensibility/supporting-multiple-versions-of-visual-studio.md)|Ukazuje, jak vaše rozšíření podporuje více verzí sady Visual Studio.|
 |[Vyhledání sady Visual Studio](locating-visual-studio.md)|Popisuje, jak vyhledat instance sady Visual Studio pro nasazení vlastního rozšíření.|

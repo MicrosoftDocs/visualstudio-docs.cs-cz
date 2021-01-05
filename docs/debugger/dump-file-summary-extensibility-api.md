@@ -1,5 +1,7 @@
 ---
 title: Rozhraní API pro rozšíření souhrnu souboru výpisu paměti | Microsoft Docs
+description: Pomocí rozhraní API pro rozšíření souhrnu souboru výpisu paměti rozšíříte systém projektu a souhrnnou stránku výpisu paměti, abyste mohli pracovat s vlastním modulem ladění v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d34e60b0b932470dec8a69874e28b99ebe76316b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2a91f262c34d9bdc69d5ce3319f05cdb3f0b952f
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72737984"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726524"
 ---
 # <a name="dump-file-summary-extensibility-api"></a>Rozhraní API rozšíření souhrnu souboru výpisu paměti
 Pomocí rozhraní API pro rozšiřitelnost v této části můžete rozšíření. Systém souborů exe a **souhrnná stránka výpisu paměti** pro použití s vlastním modulem ladění.

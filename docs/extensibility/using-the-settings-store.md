@@ -1,5 +1,7 @@
 ---
 title: Použití úložiště nastavení | Microsoft Docs
+description: Naučte se číst data z úložiště nastavení konfigurace, která jsou jenom pro čtení a nastavení sady Visual Studio a VSPackage.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3bbc09586f883e067e32f525a0331c1a9e253f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aeb147c245f7dc09cf91db8a1b810a7c5f30b46b
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698519"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715909"
 ---
 # <a name="using-the-settings-store"></a>Použití úložiště nastavení
 Existují dva druhy úložišť nastavení:
@@ -79,7 +81,7 @@ Existují dva druhy úložišť nastavení:
 
 1. Otevřete Regedit.exe.
 
-2. Přejděte na HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0Exp_Config \InstalledProducts \\ .
+2. Přejděte na HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp_Config\InstalledProducts\\ .
 
     > [!NOTE]
     > Ujistěte se, že se díváte na klíč, který obsahuje \ 14.0Exp_Config \ a ne \ 14.0_Config \\ . Při spuštění experimentální instance sady Visual Studio se konfigurační nastavení nachází v podregistru "14.0Exp_Config".

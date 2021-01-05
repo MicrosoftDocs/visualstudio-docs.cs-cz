@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 84be6698c62e3a2a205ceb9d404673ee1d0c6f64
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 68fbdef0e86b125971480ae1bd6a7ba6d3108cd8
+ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668609"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696541"
 ---
 # <a name="supported-visual-studio-features-preview"></a>Podporované funkce sady Visual Studio (Preview)
 
@@ -108,8 +108,8 @@ Ještě není k dispozici:
 
 Při práci se sadou Visual Studio připojenými k codespace získáte stejné funkce usnadnění jako při práci místně.
 
-* Správa zdrojového kódu – kompletní podpora Gitu prostřednictvím nového [okna Git](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/).
-* Usnadnění – existuje jeden známý problém s asistenční technologií, která nemá přístup k appcastingi laděné aplikace. Kromě tohoto omezení nevěříme, že existují žádné jiné problémy s kompatibilitou, které ještě neexistují v místním prostředí sady Visual Studio. Dejte nám prosím jistotu, jestli zjistíte chyby tím, že napíšete problém na [komunitě vývojářů](https://aka.ms/feedback/suggest?space=8).
+* Správa zdrojového kódu – kompletní podpora Gitu prostřednictvím nového [integrovaného prostředí Git](../git-with-visual-studio.md).
+* Usnadnění – existuje jeden známý problém s asistenční technologií, která nemá přístup k appcastingi laděné aplikace. Kromě tohoto omezení nevěříme, že existují žádné jiné problémy s kompatibilitou, které ještě neexistují v místním prostředí sady Visual Studio. Dejte nám prosím jistotu, jestli zjistíte chyby tím, že napíšete problém na [komunitě vývojářů](https://aka.ms/feedback/report?space=8).
 * Publikování – podporuje publikování do Azure prostřednictvím akcí GitHubu.
 * Připojené služby – podpora pro App Insights, Trezor klíčů, úložiště, SQL, Redis, Cosmos, openAPI a gRPC se podporují částečně.
 * Průzkumník testů * – nejčastěji se podporuje.

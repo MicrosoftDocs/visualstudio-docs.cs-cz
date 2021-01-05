@@ -1,5 +1,7 @@
 ---
 title: Diagnostikujte problémy po nasazení | Microsoft Docs
+description: Diagnostikujte problémy po nasazení pomocí IntelliTrace v aplikaci Visual Studio. Do své verze zahrňte informace o sestavení. Vyžádejte a monitorujte svou aplikaci a najděte problém.
+ms.custom: SEO-VS-2020
 ms.date: 04/10/2018
 ms.topic: how-to
 ms.assetid: a3463eab-a352-4d17-8551-adbaad526db0
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97499a88a04b2ae7b61b847c4aec133d297e613a
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 9be00d1ad040f6daca52417e4ab6dfa93f0f44cf
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928053"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726823"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace-c-visual-basic"></a>Diagnostikujte problémy po nasazení pomocí IntelliTrace (C#, Visual Basic)
 
@@ -119,7 +121,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 ### <a name="create-the-build-manifest-for-a-manual-build-using-visual-studio"></a><a name="ManualBuild"></a> Vytvoření manifestu sestavení pro ruční sestavení pomocí sady Visual Studio
  Použijte následující postup, chcete-li automaticky vytvořit manifest sestavení (BuildInfo.config soubor) pro váš projekt a umístit soubor do výstupní složky vašeho projektu. Soubor se ve výstupní složce zobrazí jako "*ProjectName*.BuildInfo.config", ale po publikování aplikace se přejmenuje "BuildInfo.config" ve složce pro nasazení.
 
-1. V **Průzkumník řešení**uvolněte webový projekt.
+1. V **Průzkumník řešení** uvolněte webový projekt.
 
 2. Otevřete soubor projektu (. csproj,. vbproj). Přidejte tyto řádky:
 
@@ -191,7 +193,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
 ### <a name="diagnose-a-performance-problem"></a>Diagnostikování problému s výkonem
 
-1. V části **narušení výkonu**Zkontrolujte zaznamenané události výkonu, jejich celkové časy spuštění a další informace o událostech. Pak přejděte hlouběji do metod, které byly volány během konkrétní události výkonu.
+1. V části **narušení výkonu** Zkontrolujte zaznamenané události výkonu, jejich celkové časy spuštění a další informace o událostech. Pak přejděte hlouběji do metod, které byly volány během konkrétní události výkonu.
 
      ![Zobrazit podrobnosti události výkonu](../debugger/media/ffr_itsummarypageperformance.png "FFR_ITSummaryPagePerformance")
 
@@ -219,7 +221,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
 ### <a name="diagnose-an-exception"></a>Diagnostikování výjimky
 
-1. V části **data výjimky**Zkontrolujte zaznamenané události výjimky, jejich typy, zprávy a případy, kdy došlo k výjimkám. Pokud se chcete dostat hlouběji do kódu, spusťte ladění od poslední události ve skupině výjimek.
+1. V části **data výjimky** Zkontrolujte zaznamenané události výjimky, jejich typy, zprávy a případy, kdy došlo k výjimkám. Pokud se chcete dostat hlouběji do kódu, spusťte ladění od poslední události ve skupině výjimek.
 
      ![Spustit ladění z události výjimky](../debugger/media/ffr_itsummarypageexception.png "FFR_ITSummaryPageException")
 
