@@ -9,14 +9,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e1e6951aebac63494aada4e64c5c072eb79c6a9
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 3d259c6fa69821d1fecd26944227bff86cc82104
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074979"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815851"
 ---
-# <a name="measure-memory-usage-in-visual-studio"></a>Měření využití paměti v aplikaci Visual Studio
+# <a name="measure-memory-usage-in-visual-studio"></a>Měření paměti profilu v sadě Visual Studio
 
 Najděte nevracení paměti a neefektivní paměť při ladění pomocí nástroje pro diagnostiku **využití paměti** integrovaného ladicího programu. Nástroj využití paměti umožňuje provést jeden nebo více *snímků* spravované a nativní haldy paměti, aby bylo možné pochopit využití paměti pro typy objektů. Využití paměti můžete také analyzovat bez připojeného ladicího programu nebo zacílení na spuštěnou aplikaci. Další informace najdete v tématu [spuštění nástrojů pro profilaci pomocí ladicího programu nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
@@ -25,7 +25,7 @@ I když můžete shromažďovat snímky paměti kdykoli v nástroji **využití 
 > [!Important]
 > Diagnostické nástroje integrované v ladicím programu se podporují pro vývoj pro .NET v aplikaci Visual Studio, včetně ASP.NET, ASP.NET Core, nativního vývoje/C++ a kombinovaného režimu (.NET a nativních) aplikací. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
 
-V tomto kurzu provedete následující:
+V tomto kurzu:
 
 > [!div class="checklist"]
 > * Pořídit snímky paměti
@@ -124,7 +124,7 @@ Pokud chcete analyzovat využití paměti, klikněte na jeden z odkazů, který 
 
  Chcete-li zobrazit instance vybraného typu v horním podokně, klikněte na ikonu ![ikony instance](../profiling/media/dbgdiag_mem_instanceicon.png "DBGDIAG_MEM_InstanceIcon") .
 
- ![Zobrazení instancí](../profiling/media/dbgdiag_mem_managedtypesreport_instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")
+ ![Snímek obrazovky zobrazení instance v nástroji využití paměti sady Visual Studio, který zobrazuje podokno instance a podokno cesty ke kořenu a odkazované objekty.](../profiling/media/dbgdiag_mem_managedtypesreport_instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")
 
  Zobrazení **instance** zobrazuje instance vybraného objektu ve snímku v horním podokně. Podokno **cesty k kořenu** a **odkazované objekty** zobrazuje objekty, které odkazují na vybranou instanci a typy, na které odkazuje vybraná instance. Když je ladicí program zastaven v místě, kde byl snímek vytvořen, můžete umístit ukazatel myši nad buňku **Value** a zobrazit tak hodnoty objektu v popisu tlačítka.
 
@@ -139,7 +139,7 @@ Pokud chcete analyzovat využití paměti, klikněte na jeden z odkazů, který 
 
      Zobrazení **instance** zobrazuje všechny instance vybraného typu. Výběr instance zobrazí zásobník volání, jehož výsledkem bylo vytvoření instance v podokně **zásobník volání přidělení** .
 
-     ![Zobrazení instancí](../profiling/media/dbgdiag_mem_native_instances.png "DBGDIAG_MEM_Native_Instances")
+     ![Snímek obrazovky zobrazení instance v nástroji využití paměti sady Visual Studio se zobrazením podokna instance a zásobníku volání alokace.](../profiling/media/dbgdiag_mem_native_instances.png "DBGDIAG_MEM_Native_Instances")
 
 - Výběrem možnosti **zobrazení zásobníků** v seznamu **režim zobrazení** zobrazíte zásobník přidělení pro vybraný typ.
 

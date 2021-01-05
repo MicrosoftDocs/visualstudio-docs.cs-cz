@@ -1,6 +1,6 @@
 ---
 title: Kompilování a sestavení kódu TypeScript pomocí npm
-description: Naučte se kompilovat a sestavovat TypeScript v aplikaci Visual Studio.
+description: Naučte se, jak přidat do projektů aplikace Visual Studio podporu TypeScript pomocí node Package Manageru (npm).
 ms.date: 7/23/2020
 ms.topic: conceptual
 author: mikejo5000
@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: add67535c0c3c9e4a48b95c2b9d5fe0717511797
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: be7bc30f260a492fbc783a8e730b1e550fcb4671
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414370"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846805"
 ---
 # <a name="compile-typescript-code-nodejs"></a>Kompilovat kód TypeScriptu (Node.js)
 
@@ -35,7 +35,7 @@ U ASP.NET Core projektů doporučujeme místo toho použít [balíček NuGet](..
 
    Z Průzkumník řešení (pravé podokno) otevřete *package.js* v kořenovém adresáři projektu. Uvedené balíčky odpovídají balíčkům v uzlu npm v Průzkumník řešení. Další informace najdete v tématu [Správa balíčků npm](../javascript/npm-package-management.md).
 
-   V případě Node.js projektu můžete balíček TypeScript npm nainstalovat pomocí příkazového řádku nebo rozhraní IDE. Pokud chcete nainstalovat pomocí prostředí IDE, klikněte pravým tlačítkem na uzel npm v Průzkumník řešení, vyberte **instalovat nový balíček npm** , vyhledejte **TypeScript** a nainstalujte balíček.
+   V případě Node.js projektu můžete balíček TypeScript npm nainstalovat pomocí příkazového řádku nebo rozhraní IDE. Pokud chcete nainstalovat pomocí prostředí IDE, klikněte pravým tlačítkem na uzel npm v Průzkumník řešení, vyberte **instalovat nový balíček npm**, vyhledejte **TypeScript** a nainstalujte balíček.
 
    V okně **výstup** zkontrolujte možnost **npm** a zobrazí se průběh instalace balíčku. Nainstalovaný balíček se zobrazí pod uzlem **npm** v Průzkumník řešení.
 
@@ -72,14 +72,14 @@ U ASP.NET Core projektů doporučujeme místo toho použít [balíček NuGet](..
 
 ## <a name="build-the-application"></a>Sestavení aplikace
 
-1. Přidejte do projektu soubory TypeScript ( *. TS* ) nebo TypeScript JSX ( *. TSX* ) a pak přidejte kód TypeScript. Pro jednoduchý příklad TypeScript použijte následující:
+1. Přidejte do projektu soubory TypeScript (*. TS*) nebo TypeScript JSX (*. TSX*) a pak přidejte kód TypeScript. Pro jednoduchý příklad TypeScript použijte následující:
 
    ```typescript
    let message: string = 'Hello World';
    console.log(message);
    ```
 
-1. V *package.jsna* , přidejte podporu pro příkazy sady Visual Studio pro sestavení a vyčištění pomocí následujících skriptů.
+1. V *package.jsna*, přidejte podporu pro příkazy sady Visual Studio pro sestavení a vyčištění pomocí následujících skriptů.
 
    ```json
    "scripts": {

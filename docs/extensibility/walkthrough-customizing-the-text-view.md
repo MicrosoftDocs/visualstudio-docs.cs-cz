@@ -1,5 +1,7 @@
 ---
 title: 'Návod: přizpůsobení zobrazení textu | Microsoft Docs'
+description: V tomto návodu se dozvíte, jak upravit zobrazení textu změnou kterékoli z několika vlastností v jeho mapě formátu editoru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3b7a62ee2b55bf2b56ae1d8e28fc1910ed444c29
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 057e2a68e1d9a130f69441d8aec4b6a7fe0249e9
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904932"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97862963"
 ---
 # <a name="walkthrough-customize-the-text-view"></a>Návod: přizpůsobení zobrazení textu
 Změnou kterékoli z následujících vlastností v její mapě formátu editoru můžete upravit zobrazení textu:
@@ -37,7 +39,7 @@ Změnou kterékoli z následujících vlastností v její mapě formátu editoru
 
 ## <a name="create-a-mef-project"></a>Vytvořit projekt MEF
 
-1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost**a potom **projekt VSIX**.) Pojmenujte řešení `ViewPropertyTest` .
+1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost** a potom **projekt VSIX**.) Pojmenujte řešení `ViewPropertyTest` .
 
 2. Přidejte do projektu šablonu položky klasifikátoru editoru. Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 

@@ -1,6 +1,7 @@
 ---
 title: Připojení ladicího programu ke spuštěným procesům
-ms.custom: seodec18
+description: Zjistěte, jak připojit ladicí program sady Visual Studio ke spuštěnému procesu na místním nebo vzdáleném počítači.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 06/12/2020
 ms.topic: conceptual
 f1_keywords:
@@ -28,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a33af839406497a2a30fba2f5103a64a1da36ed7
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 1fd1ff5ff0f8c7510185236c425ddd870f8b500f
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671456"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97760923"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Připojení ladicího programu sady Visual Studio ke spuštěným procesům
 
@@ -58,7 +59,7 @@ Chcete-li se rychle znovu připojit k procesu, který jste k dřív připojili, 
 
 1. Nastavte **cíl připojení** na název místního počítače.
 
-   ![DBG_Basics_Attach_To_Process](../debugger/media/DBG_Basics_Attach_To_Process.png "DBG_Basics_Attach_To_Process")
+   ![Snímek obrazovky s dialogovým oknem připojit k procesu s cílem připojení nastaveným na název místního počítače](../debugger/media/DBG_Basics_Attach_To_Process.png)
 
 1. V seznamu **procesy k dispozici** vyhledejte a vyberte proces nebo procesy, ke kterým se chcete připojit.
 
@@ -197,7 +198,7 @@ Chcete-li rychle vybrat běžící proces, ke kterému se chcete připojit, v ap
 |Ladění skriptu na straně klienta na místním serveru IIS pro podporované typy aplikací |Použít **připojit k procesu**|*chrome.exe*, *MicrosoftEdgeCP.exe* nebo *iexplore.exe*|Ladění skriptu musí být povoleno. Pro Chrome musíte také spustit Chrome v režimu ladění (typ `chrome.exe --remote-debugging-port=9222` z příkazového řádku) a v poli **připojit k** vyberte **JavaScript (Chrome)** .|
 |Ladění aplikace v C#, Visual Basic nebo C++ na místním počítači|Použít buď standardní ladění (**F5**), nebo **připojit k procesu**|*\<appname>soubor. exe*|Ve většině scénářů použijte standardní ladění a **Nepřipojujte se k procesu**.|
 |Vzdálené ladění desktopové aplikace pro Windows|Vzdálené nástroje|–| Viz téma [vzdálené ladění aplikace v C# nebo Visual Basic](../debugger/remote-debugging-csharp.md) nebo [vzdálené ladění aplikace C++](../debugger/remote-debugging-cpp.md) .|
-|Ladění .NET Core v systému Linux|Použít **připojit k procesu**|*dotnet.exe* nebo jedinečný název procesu|Pokud chcete použít SSH, přečtěte si téma [vzdálené ladění .NET Core běžící na Linux pomocí SSH](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md). Pro kontejnerové aplikace najdete informace v tématu [připojení k procesu běžícímu v kontejneru Docker](../debugger/attach-to-process-running-in-docker-container.md#attach-to-a-process-running-on-a-linux-docker-container).|
+|Ladění .NET Core v Linuxu|Použít **připojit k procesu**|*dotnet.exe* nebo jedinečný název procesu|Pokud chcete použít SSH, přečtěte si téma [vzdálené ladění .NET Core běžící na Linux pomocí SSH](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md). Pro kontejnerové aplikace najdete informace v tématu [připojení k procesu běžícímu v kontejneru Docker](../debugger/attach-to-process-running-in-docker-container.md#attach-to-a-process-running-on-a-linux-docker-container).|
 |Ladění kontejnerové aplikace|*dotnet.exe* nebo jedinečný název procesu|Viz [připojení k procesu běžícímu v kontejneru Docker](../debugger/attach-to-process-running-in-docker-container.md) .|
 |Vzdálené ladění Pythonu v systému Linux|Použít **připojit k procesu**|*debugpy*|Viz téma [připojit se vzdáleně od nástrojů Pythonu](../python/debugging-python-code-on-remote-linux-machines.md#attach-remotely-from-python-tools) .|
 |Ladění aplikace v ASP.NET v místním počítači po spuštění aplikace bez ladicího programu|Použít **připojit k procesu**|*iiexpress.exe*|To může být užitečné při rychlejším načítání aplikace, například (například) při profilaci. |

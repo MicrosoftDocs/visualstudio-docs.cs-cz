@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64166768dea1da015c223a74c74440ae09a0d106
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: 74b6b6b6a8f7a9f5f234a9b46c799e6e0580536f
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96863033"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761326"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Specifikátory formátu pro C++ v ladicím programu sady Visual Studio
 Můžete změnit formát, ve kterém se hodnota zobrazuje v oknech **kukátko**, **Automatické** hodnoty a **místní** hodnoty pomocí specifikátorů formátu.
@@ -52,9 +52,9 @@ int main() {
 }
 ```
 
-Přidat `my_var1` proměnnou do okna **kukátka** během ladění, **ladit**  >  **Windows**  >  **kukátko** kukátko  >  **1**. Potom klikněte pravým tlačítkem na proměnnou a vyberte **hexadecimální zobrazení**. Nyní okno **kukátka** zobrazuje hodnotu 0x0065. Chcete-li zobrazit tuto hodnotu vyjádřenou jako znak, a ne jako celé číslo, napřed klikněte pravým tlačítkem myši a zrušte výběr **hexadecimálního zobrazení**. Poté do sloupce **název** za název proměnné přidejte specifikátor formátu znaků **, c** . Sloupec **Value** nyní zobrazuje **101 "e"**.
+Přidat `my_var1` proměnnou do okna **kukátka** během ladění, **ladit**  >    >  **kukátko** kukátko  >  **1**. Potom klikněte pravým tlačítkem na proměnnou a vyberte **hexadecimální zobrazení**. Nyní okno **kukátka** zobrazuje hodnotu 0x0065. Chcete-li zobrazit tuto hodnotu vyjádřenou jako znak, a ne jako celé číslo, napřed klikněte pravým tlačítkem myši a zrušte výběr **hexadecimálního zobrazení**. Poté do sloupce **název** za název proměnné přidejte specifikátor formátu znaků **, c** . Sloupec **Value** nyní zobrazuje **101 "e"**.
 
-![WatchFormatCPlus1](../debugger/media/watchformatcplus1.png "WatchFormatCPlus1")
+![Snímek obrazovky sady Visual Studio okno Kukátko s jedním vybraným řádkem, který zobrazuje my_var1. c s hodnotou 101 ' e ' a typem int.](../debugger/media/watchformatcplus1.png)
 
 ::: moniker range=">= vs-2019" 
 Můžete zobrazit a vybrat ze seznamu dostupných specifikátorů formátu připojením čárky (,) k hodnotě v okně **kukátko** . 
@@ -73,7 +73,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |d|desítkové celé číslo|0x00000066|102|
 |o|osmičkové celé číslo bez znaménka|0x00000066|000000000146|
 |x<br /><br /> **h**|šestnáctkové celé číslo|102|0xcccccccc|
-|X<br /><br /> **H**|šestnáctkové celé číslo|102|0xCCCCCCCC|
+|X<br /><br /> **Y**|šestnáctkové celé číslo|102|0xCCCCCCCC|
 |XB<br /><br /> **nejenom**|šestnáctkové celé číslo (bez úvodní 0x)|102|cccccccc|
 |XB<br /><br /> **Nejenom**|šestnáctkové celé číslo (bez úvodní 0x)|102|CCCCCCCC|
 |b|binární celé číslo bez znaménka|25|0b00000000000000000000000000011001|
@@ -93,7 +93,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |**s32b**|Řetězec UTF-32 (žádné uvozovky)|\<location> U "Hello World"|Ahoj světe|
 |**en**|enum|Sobota (6)|Sobota|
 |**hv**|Typ ukazatele – určuje, že hodnota kontrolovaného ukazatele je výsledkem přidělení haldy pole, například `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
-|**není k dispozici**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member = Value...}|{member = Value...}|
+|**ná**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member = Value...}|{member = Value...}|
 |**c**|Zobrazí pouze informace základní třídy, ignorování odvozených tříd.|`(Shape*) square` zahrnuje základní třídu a informace o odvozených třídách.|Zobrazí jenom informace o základní třídě.|
 |hod|Kód chyby HRESULT nebo Win32. Tento specifikátor již není potřeba pro HRESULTs, protože ladicí program je dekóduje automaticky.|S_OK|S_OK|
 |wc|Příznak třídy okna|0x0010|WC_DEFAULTCHAR|
@@ -111,7 +111,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |d|desítkové celé číslo|0x00000066|102|
 |o|osmičkové celé číslo bez znaménka|0x00000066|000000000146|
 |x<br /><br /> **h**|šestnáctkové celé číslo|102|0xcccccccc|
-|X<br /><br /> **H**|šestnáctkové celé číslo|102|0xCCCCCCCC|
+|X<br /><br /> **Y**|šestnáctkové celé číslo|102|0xCCCCCCCC|
 |c|jeden znak|0x0065, c|101 "e"|
 |s|const char * String (s uvozovkami)|\<location> Hello World|Hello World|
 |**SB**|const char * String (žádné uvozovky)|\<location> Hello World|Ahoj světe|
@@ -125,7 +125,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |**s32b**|Řetězec UTF-32 (žádné uvozovky)|\<location> U "Hello World"|Ahoj světe|
 |**en**|enum|Sobota (6)|Sobota|
 |**hv**|Typ ukazatele – určuje, že hodnota kontrolovaného ukazatele je výsledkem přidělení haldy pole, například `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
-|**není k dispozici**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member = Value...}|{member = Value...}|
+|**ná**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member = Value...}|{member = Value...}|
 |**c**|Zobrazí pouze informace základní třídy, ignorování odvozených tříd.|`(Shape*) square` zahrnuje základní třídu a informace o odvozených třídách.|Zobrazí jenom informace o základní třídě.|
 |hod|Kód chyby HRESULT nebo Win32. Tento specifikátor již není potřeba pro HRESULTs, protože ladicí program je dekóduje automaticky.|S_OK|S_OK|
 |wc|Příznak třídy okna|0x0010|WC_DEFAULTCHAR|

@@ -1,21 +1,21 @@
 ---
 title: Nastavení spuštění nástrojů kontejneru sady Visual Studio
 author: ghogen
-description: Přehled procesu sestavení nástrojů kontejneru
+description: Přečtěte si o nastaveních spuštění pro nástroje kontejneru, které souvisejí s tím, jak aplikace Visual Studio zpracovává aplikace s využitím kontejnerů.
 ms.author: ghogen
 ms.date: 08/15/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: a1fdfbd3bf1f0969061365cd592f6054c7116b67
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: 24a36bdbe0d3c6ac57b7595883301841ffa138e1
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91780867"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846716"
 ---
 # <a name="container-tools-launch-settings"></a>Nastavení spuštění nástrojů kontejneru
 
-Ve složce *Properties* v projektu ASP.NET Core můžete najít launchSettings.jsv souboru, který obsahuje nastavení, která určují, jak se vaše webová aplikace spouští ve vývojovém počítači. Podrobné informace o tom, jak se tento soubor používá při vývoji ASP.NET, najdete v tématu [použití více prostředí v ASP.NET Core](/aspnet/core/fundamentals/environments?view=aspnetcore-2.2&preserve-view=true). V *launchSettings.jsna*se nastavení v části **Docker** vztahují k způsobu, jakým aplikace Visual Studio zpracovává kontejnery aplikací.
+Ve složce *Properties* v projektu ASP.NET Core můžete najít launchSettings.jsv souboru, který obsahuje nastavení, která určují, jak se vaše webová aplikace spouští ve vývojovém počítači. Podrobné informace o tom, jak se tento soubor používá při vývoji ASP.NET, najdete v tématu [použití více prostředí v ASP.NET Core](/aspnet/core/fundamentals/environments?view=aspnetcore-2.2&preserve-view=true). V *launchSettings.jsna* se nastavení v části **Docker** vztahují k způsobu, jakým aplikace Visual Studio zpracovává kontejnery aplikací.
 
 ::: moniker range="vs-2017"
 

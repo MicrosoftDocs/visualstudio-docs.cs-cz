@@ -1,5 +1,6 @@
 ---
 title: Tipy pro výkon | Microsoft Docs
+description: Naučte se používat tipy pro výkon ladicího programu sady Visual Studio a integrované Diagnostické nástroje k monitorování a analýze výkonu vaší aplikace při ladění.
 ms.date: 9/11/2020
 ms.topic: how-to
 ms.assetid: 509d2d4f-48a5-4cdf-acad-6f7b75421303
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f260307b677046be54e6d80b0d8fe122b13292e4
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 481113e9f5e2f5b66aec5f4dad29f581462165ca
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075467"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815825"
 ---
 # <a name="perftips"></a>Tipy pro výkon
 
@@ -33,7 +34,7 @@ Zarážky a související časová data se zaznamenávají v okně **diagnostick
 
 Následující obrázek znázorňuje okno **diagnostické nástroje** .
 
-![DiagnosticTools&#45;-datum1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-v-datum1")
+![Snímek obrazovky okna Diagnostické nástroje v ladicím programu sady Visual Studio zobrazující časovou osu událostí a grafy pro využití paměti a procesoru.](../profiling/media/diagnostictools-update1.png)
 
 - Časová osa **událostí přerušení** označuje zarážky, které byly dosaženy v relaci ladění. Kliknutím na událost můžete vybrat seznam podrobností **ladicího programu** .
 

@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: a7bf174191a6a2fb013aa3d25880b01bc2e7f070
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d11ffcb2c43d2c519d75d43afad6383e0bfaa44a
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801669"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761274"
 ---
 # <a name="quickstart-open-and-run-python-code-in-a-folder"></a>Rychlý Start: otevření a spuštění kódu Pythonu ve složce
 
@@ -27,7 +27,7 @@ Po [instalaci podpory Pythonu v aplikaci Visual studio 2019](installing-python-s
 
 1. Pro tento návod můžete použít libovolnou složku s kódem Pythonu, který chcete. Pokud chcete postupovat podle uvedeného příkladu, naklonujte úložiště GitHub gregmalcolm/python_koans do počítače pomocí příkazu `git clone https://github.com/gregmalcolm/python_koans` v příslušné složce.
 
-1. Spusťte sadu Visual Studio 2019 a v okně Start vyberte **otevřít** ve spodní části sloupce **Začínáme** . Případně, pokud již máte spuštěnou aplikaci Visual Studio, vyberte **File**  >  **Open**  >  místo toho příkaz Otevřít**složku** pro otevření souboru.
+1. Spusťte sadu Visual Studio 2019 a v okně Start vyberte **otevřít** ve spodní části sloupce **Začínáme** . Případně, pokud již máte spuštěnou aplikaci Visual Studio, vyberte   >    >  místo toho příkaz Otevřít **složku** pro otevření souboru.
 
     ![Úvodní obrazovka sady Visual Studio](media/quickstart-open-folder/01-open-local-folder.png)
 
@@ -60,7 +60,7 @@ Po [instalaci podpory Pythonu v aplikaci Visual studio 2019](installing-python-s
 
 1. Chcete-li spustit kód v jiném prostředí, vyberte toto prostředí z rozevíracího seznamu na panelu nástrojů a pak znovu spusťte položku po spuštění.
 
-1. Chcete-li složku Zavřít v aplikaci Visual Studio, **File**vyberte  >  příkaz nabídky**Zavřít složku** souboru.
+1. Chcete-li složku Zavřít v aplikaci Visual Studio, vyberte  >  příkaz nabídky **Zavřít složku** souboru.
 
 ## <a name="set-a-working-directory"></a>Nastavení pracovního adresáře
 
@@ -70,11 +70,11 @@ V takových případech musíte přidat řádek do konfiguračního souboru JSON
 
 1. V **Průzkumník řešení** klikněte pravým tlačítkem na spouštěcí soubor Pythonu (*. py*) a vyberte **nastavení ladění a spouštění**.
 
-    ![Příkaz Nastavení ladění a spuštění pro soubor Pythonu](media/quickstart-open-folder/09-debug-launch-settings-menu-command.png)
+    ![Snímek obrazovky zobrazení Průzkumník řešení složky se zvoleným contemplate-koans.py souborem a nastavení ladění a spuštění, které se vybralo v místní nabídce](media/quickstart-open-folder/09-debug-launch-settings-menu-command.png)
 
 1. V zobrazeném dialogovém okně **Vybrat ladicí program** vyberte **výchozí** a pak zvolte **Vybrat**.
 
-    ![Příkaz Nastavení ladění a spuštění pro soubor Pythonu](media/quickstart-open-folder/10-select-debugger.png)
+    ![Snímek obrazovky dialogového okna pro výběr ladicího programu s vybraným výchozím ladícím programem a vybraným tlačítkem vybrat](media/quickstart-open-folder/10-select-debugger.png)
 
     > [!Note]
     > Pokud se možnost **výchozí** nezobrazuje jako volba, ujistěte se, že při výběru příkazu **ladit a spustit nastavení** jste zvolili soubor Python *. py* . Visual Studio používá typ souboru k určení možností ladicího programu, které se mají zobrazit.

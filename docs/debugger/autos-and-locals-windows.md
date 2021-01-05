@@ -1,6 +1,7 @@
 ---
 title: Kontrola proměnných – okna auto a místní hodnoty | Microsoft Docs
-ms.custom: seodec18
+description: Prozkoumejte proměnné v oknech automatické hodnoty a místní hodnoty při ladění v aplikaci Visual Studio. Okna Automatické hodnoty a místní hodnoty zobrazují hodnoty proměnných při ladění.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/18/2018
 ms.topic: how-to
 f1_keywords:
@@ -15,22 +16,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ae67fadf5d9710f2088f47617b74eeeb8212826
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b57c27d038193a5c73bee48814a2aa457a94b6a6
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350742"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97760910"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>Kontrola proměnných v oknech automatické hodnoty a místní hodnoty
 
-Okna **Automatické** hodnoty a **místní** hodnoty zobrazují hodnoty proměnných při ladění. Okna jsou k dispozici pouze během relace ladění. Okno **Automatické** hodnoty zobrazuje proměnné používané kolem aktuální zarážky. Okno **místní** hodnoty zobrazuje proměnné definované v místním oboru, což je obvykle aktuální funkce nebo metoda. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
+Okna **Automatické** hodnoty a **místní** hodnoty zobrazují hodnoty proměnných při ladění. Okna jsou k dispozici pouze během relace ladění. Okno **Automatické** hodnoty zobrazuje proměnné používané kolem aktuální zarážky. Okno **místní** hodnoty zobrazuje proměnné definované v místním oboru, což je obvykle aktuální funkce nebo metoda.
+
+> [!NOTE]
+> Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
 
  Okno **Automatické** hodnoty je k dispozici pro kód C#, Visual Basic, C++ a Python, ale ne pro JavaScript nebo F #.
 
-Chcete-li otevřít okno **Automatické** hodnoty, vyberte možnost **ladit**  >  **Windows**  >  **Autos**nebo stiskněte kombinaci kláves **CTRL** + **ALT** + **V**  >  **a**.
+Chcete-li otevřít okno **Automatické** hodnoty, vyberte možnost **ladit**  >  **Windows**  >  **Autos** nebo stiskněte kombinaci kláves **CTRL** + **ALT** + **V**  >  **a**.
 
-Chcete-li otevřít okno **místních** hodnot, při ladění vyberte možnost **ladit**  >  **Windows**  >  **místní prostředí**systému Windows nebo stiskněte klávesu **ALT** + **4**.
+Chcete-li otevřít okno **místních** hodnot, při ladění vyberte možnost **ladit**  >    >  **místní prostředí** systému Windows nebo stiskněte klávesu **ALT** + **4**.
 
 > [!NOTE]
 > Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [vizualizace dat v Visual Studio pro Mac](/visualstudio/mac/data-visualizations).
@@ -39,7 +43,7 @@ Chcete-li otevřít okno **místních** hodnot, při ladění vyberte možnost *
 
 Pole a objekty se zobrazí v oknech **Automatické** hodnoty a **místní** hodnoty jako stromové ovládací prvky. Výběrem šipky vlevo od názvu proměnné rozbalíte zobrazení a zobrazíte pole a vlastnosti. Tady je příklad <xref:System.IO.FileStream?displayProperty=fullName> objektu v okně **místních** hodnot:
 
-![Lokální hodnoty – FileStream](../debugger/media/locals-filestream.png "Lokální hodnoty – FileStream")
+![Snímek obrazovky okna místních hodnot se souborem nastaveným na hodnotu System. IO. FileStream.](../debugger/media/locals-filestream.png)
 
 Červená hodnota v okně **místní** hodnoty nebo **Automatické** hodnoty znamená, že se od posledního vyhodnocení změnila hodnota. Tato změna může být z předchozí relace ladění, nebo vzhledem k tomu, že jste změnili hodnotu v okně.
 
@@ -116,7 +120,7 @@ Různé jazyky kódu zobrazují různé proměnné v okně **Automatické** hodn
 
    Nastavte zarážku na řádku `c = 3;` a spusťte ladicí program. Po pozastavení provádění se zobrazí okno **Automatické** hodnoty:
 
-   ![Automatické hodnoty – CSharp](../debugger/media/autos-csharp.png "Automatické hodnoty – CSharp")
+   ![Snímek obrazovky okna Automatické hodnoty s hodnotou c nastavenou na 0.](../debugger/media/autos-csharp.png)
 
    Hodnota `c` je 0, protože řádek `c = 3` ještě nebyl spuštěn.
 
@@ -136,7 +140,7 @@ Různé jazyky kódu zobrazují různé proměnné v okně **Automatické** hodn
 
     Nastavte zarážku na řádku `e = 5;` a spusťte ladicí program. Po zastavení spuštění se zobrazí okno **Automatické** hodnoty:
 
-    ![Automatické hodnoty – C + +](../debugger/media/autos-cplus.png "Automatické hodnoty – C + +")
+    ![Snímek obrazovky okna Automatické hodnoty se zvýrazněným řádkem, který zobrazuje int c s hodnotou 3](../debugger/media/autos-cplus.png)
 
     Proměnná `e` není inicializovaná, protože řádek `e = 5` ještě nebyl spuštěn.
 

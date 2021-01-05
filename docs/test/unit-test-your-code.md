@@ -1,5 +1,5 @@
 ---
-title: Testování částí
+title: Nástroje pro testování částí & úkoly
 description: Přečtěte si o nástrojích pro testování částí, pomocí kterých můžete vývojářům a testerům poskytnout rychlý způsob vyhledávání logických chyb v kódu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 8f48a50b39c04df9abab7c11b3b85cc0d2670025
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: ba3db5b74a415d3736c37f54fdb708fde3436d92
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330131"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756588"
 ---
-# <a name="unit-test-your-code"></a>Testování částí kódu
+# <a name="unit-test-tools-and-tasks"></a>Nástroje a úlohy testování částí
 
 Testy jednotek poskytují vývojářům a testerům rychlý způsob vyhledávání logických chyb v rámci metod tříd v projektech C#, Visual Basic a C++.
 
@@ -34,7 +34,7 @@ Nástroje testování částí zahrnují:
 
 * Nástroje pro pokrytí **kódu** &mdash; Můžete určit množství kódu produktu, který testuje Jednotkový Test z jednoho příkazu v Průzkumníku testů.
 
-* Rozhraní pro izolaci **falešného od Microsoftu** &mdash; Rozhraní pro izolaci falešného od společnosti Microsoft může vytvořit náhradní třídy a metody pro produkční a systémový kód, které v testovaném kódu vytvářejí závislosti. Implementací napodobenin delegátů pro funkci je možné kontrolovat chování a výstup závislého objektu.
+* Rozhraní pro izolaci **falešného od Microsoftu** &mdash; Rozhraní pro izolaci falešné od společnosti Microsoft může vytvořit náhradní třídy a metody pro produkční a systémový kód .NET, které vytvářejí závislosti v testovaném kódu. Implementací napodobenin delegátů pro funkci je možné kontrolovat chování a výstup závislého objektu.
 
 Pomocí [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) můžete také prozkoumat kód .NET a vygenerovat testovací data a sadu testů jednotek. Pro každý příkaz v kódu se generuje zkušební vstup, který tento příkaz spustí.  Pro každou podmíněnou větev v kódu se provede případová analýza. 
 
@@ -44,12 +44,12 @@ Následující články vám pomůžou pochopit a vytvářet testy jednotek:
 
 |Úlohy|Související témata|
 |-|-----------------------|
-|**Rychlé starty a návody:** Přečtěte si o testování částí v aplikaci Visual Studio z příkladů kódu.|- [Návod: vytvoření a spuštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />- [Rychlý Start: Vývoj řízený testováním pomocí Průzkumníka testů](../test/quick-start-test-driven-development-with-test-explorer.md)<br />- [Postupy: Přidání testů jednotek do aplikací C++](../test/how-to-use-microsoft-test-framework-for-cpp.md)|
+|**Rychlé starty a návody:** Přečtěte si o testování částí v aplikaci Visual Studio z příkladů kódu.|- [Návod: vytvoření a spuštění testů jednotek pro kód .NET](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />- [Návod: Vývoj řízený testováním pomocí Průzkumníka testů](../test/quick-start-test-driven-development-with-test-explorer.md)<br />- [Postupy: Přidání testů jednotek do aplikací C++](../test/how-to-use-microsoft-test-framework-for-cpp.md)|
 |**Testování částí pomocí Průzkumníka testů:** Přečtěte si, jak může Průzkumník testů přispět k vytváření produktivity a efektivních testů jednotek.|- [Základy testování částí](../test/unit-test-basics.md)<br />- [Vytvořit projekt testu jednotek](../test/create-a-unit-test-project.md)<br />- [Spuštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md)<br />- [Instalace rozhraní pro testování částí třetích stran](../test/install-third-party-unit-test-frameworks.md)|
 |**Kód jednotkového testu C++**|- [Zápis testů jednotek pro C/C++](../test/writing-unit-tests-for-c-cpp.md)|
-|**Izolace testů jednotek**|- [Izolace testovaného kódu pomocí napodobenin společnosti Microsoft](../test/isolating-code-under-test-with-microsoft-fakes.md)|
 |**Použití pokrytí kódu k určení toho, jaká část kódu vašeho projektu je testována:** Přečtěte si o funkci pokrytí kódu v testovacích nástrojích sady Visual Studio.|- [Použití pokrytí kódu k určení množství testovaného kódu](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
-|**Provést zátěžové a výkonnostní analýzy pomocí zátěžových testů:** Naučte se vytvářet zátěžové testy, které vám pomůžou izolovat problémy s výkonem a zátěží ve vaší aplikaci.|- [Rychlý Start: vytvoření projektu zátěžového testu](../test/quickstart-create-a-load-test-project.md)<br />- [Zátěžové testování (Azure Test Plans a TFS)](/azure/devops/test/load-test/index?view=vsts&preserve-view=true)|
+|**Izolace testů jednotek**|- [Izolace testovaného kódu .NET s napodobeninami Microsoftu](../test/isolating-code-under-test-with-microsoft-fakes.md)|
+|**Provést zátěžové a výkonnostní analýzy pomocí zátěžových testů:** Naučte se vytvářet zátěžové testy, které vám pomůžou izolovat problémy s výkonem a zátěží ve vaší aplikaci (zastaralé).|- [Rychlý Start: vytvoření projektu zátěžového testu](../test/quickstart-create-a-load-test-project.md)<br />- [Zátěžové testování (Azure Test Plans a TFS)](/azure/devops/test/load-test/index?view=vsts&preserve-view=true)|
 |**Nastavit brány kvality:** Naučte se vytvořit brány kvality k vyzkoušení testů, které se spustí, než se kód vrátí nebo sloučí.|- [Zásady vracení se změnami (Azure Repos TFVC)](/azure/devops/repos/tfvc/add-check-policies?view=vsts&preserve-view=true)|
 |**Nastavit možnosti testování:** Naučte se konfigurovat možnosti testu, například, kde jsou uloženy výsledky testů.|[Konfigurace testování částí s použitím souboru .runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|
 

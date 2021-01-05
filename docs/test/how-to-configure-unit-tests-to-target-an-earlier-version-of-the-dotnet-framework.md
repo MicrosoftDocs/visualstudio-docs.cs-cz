@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 6badbb7723bf4d8ed0c9385558204c2dc4907574
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 3f90a3d42eb1390adbb242242172aea152a0a54f
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441245"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833231"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Postupy: konfigurace testů jednotek pro cílení na dřívější verzi .NET Framework
 
@@ -62,7 +62,7 @@ Následující omezení platí při opětovném cílení testovacích projektů,
 
 4. Pomocí rozevíracího seznamu **Cílová architektura (všechny konfigurace)** Změňte cílovou architekturu na **.NET Framework 3,5** nebo novější verzi, jak je znázorněno v popisku B na následujícím obrázku. Nemusíte určovat verzi klienta.
 
-     ![Rozevírací seznam&#45;cílové platformy](../test/media/howtoconfigureunitest35frameworkstepb.png)
+     ![Snímek obrazovky dialogového okna Upřesnit nastavení kompilátoru Rozevírací seznam cílové rozhraní je zvýrazněný a hodnota je nastavená na .NET Frameowrk 3,5.](../test/media/howtoconfigureunitest35frameworkstepb.png)
 
 ## <a name="retargeting-for-c-unit-test-projects"></a>Změna cílení pro projekty testování částí v jazyce C#
 
@@ -74,7 +74,7 @@ Následující omezení platí při opětovném cílení testovacích projektů,
 
 3. Na kartě **aplikace** vyberte **Cílová architektura**. V rozevíracím seznamu vyberte **.NET Framework 3,5** nebo novější verzi, jak je znázorněno na následujícím obrázku. Nemusíte určovat verzi klienta.
 
-   ![Rozevírací seznam&#45;cílové platformy](../test/media/howtoconfigureunittest35frameworkcsharp.png)
+   ![Ilustrace karty aplikace v podokně vlastností Průzkumník řešení, která zvýrazňuje umístění rozevíracího seznamu cílové rozhraní .NET Framework.](../test/media/howtoconfigureunittest35frameworkcsharp.png)
 
 ## <a name="retargeting-for-ccli-unit-test-projects"></a>Změna cílení pro projekty testování částí v jazyce C++/CLI
 

@@ -1,6 +1,6 @@
 ---
 title: Kompilování a sestavení kódu TypeScript pomocí NuGetu
-description: Naučte se kompilovat a sestavovat TypeScript v aplikaci Visual Studio.
+description: Naučte se, jak přidat podporu TypeScript do projektů aplikace Visual Studio pomocí balíčku NuGet.
 ms.date: 7/23/2020
 ms.topic: conceptual
 author: mikejo5000
@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 16ff335fdf8ca76889562cfd94807ec1adc516d2
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 929c17c9cbd2a0987bebca02c70b3b751c19fc9a
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91927923"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846829"
 ---
 # <a name="compile-typescript-code-aspnet-core"></a>Kompilovat kód TypeScriptu (ASP.NET Core)
 
@@ -31,7 +31,7 @@ Pokud je nainstalována aplikace Visual Studio, bude sada Visual Studio automati
 
 1. Otevřete projekt ASP.NET Core v aplikaci Visual Studio.
 
-1. V Průzkumník řešení (pravé podokno). Klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Spravovat balíčky NuGet**. Na kartě **Procházet** vyhledejte **Microsoft. TypeScript. MSBuild**a kliknutím na **nainstalovat** napravo nainstalujte balíček.
+1. V Průzkumník řešení (pravé podokno). Klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Spravovat balíčky NuGet**. Na kartě **Procházet** vyhledejte **Microsoft. TypeScript. MSBuild** a kliknutím na **nainstalovat** napravo nainstalujte balíček.
 
    ![Přidat balíček NuGet](../javascript/media/aspnet-core-ts-nuget.png)
 
@@ -44,7 +44,7 @@ Pokud je nainstalována aplikace Visual Studio, bude sada Visual Studio automati
    </PackageReference>
    ```
 
-1. Klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **přidat > novou položku**. Zvolte **konfigurační soubor JSON pro TypeScript**a pak klikněte na **Přidat**.
+1. Klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **přidat > novou položku**. Zvolte **konfigurační soubor JSON pro TypeScript** a pak klikněte na **Přidat**.
 
    Visual Studio přidá *tsconfig.js* do souboru do kořenového adresáře projektu. Tento soubor můžete použít ke [konfiguraci možností](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) pro kompilátor TypeScript.
 
@@ -106,7 +106,7 @@ Pokud je nainstalována aplikace Visual Studio, bude sada Visual Studio automati
 
 Příklad použití Gulp s spouštěčem úloh k sestavení vaší aplikace naleznete v tématu [ASP.NET Core a TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html).
 
-Pokud narazíte na problémy, kde aplikace Visual Studio používá verzi Node.js nebo nástroj třetí strany, který se liší od očekávané verze, bude pravděpodobně nutné nastavit cestu pro aplikaci Visual Studio, která se má použít. Vyberte **Tools**  >  **Možnosti**nástrojů. V části **projekty a řešení**vyberte **Web Správa balíčků**  >  **externí webové nástroje**.
+Pokud narazíte na problémy, kde aplikace Visual Studio používá verzi Node.js nebo nástroj třetí strany, který se liší od očekávané verze, bude pravděpodobně nutné nastavit cestu pro aplikaci Visual Studio, která se má použít. Vyberte   >  **Možnosti** nástrojů. V části **projekty a řešení** vyberte **Web Správa balíčků**  >  **externí webové nástroje**.
 
 ### <a name="run-the-application"></a>Spuštění aplikace
 
@@ -163,7 +163,7 @@ Pokud používáte balíček NuGet pro podporu nástroje MSBuild pro projekt, so
 
 1. Klikněte pravým tlačítkem na projekt a vyberte **Uvolnit projekt**.
 
-1. Klikněte pravým tlačítkem myši na projekt a vyberte možnost **Upravit \<*project file name*\> **.
+1. Klikněte pravým tlačítkem myši na projekt a vyberte možnost **Upravit \<*project file name*\>**.
 
    Otevře se soubor projektu.
 

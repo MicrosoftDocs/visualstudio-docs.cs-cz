@@ -1,7 +1,7 @@
 ---
 title: Ladění aplikací Azure v reálném ASP.NET
 titleSuffix: Visual Studio Enterprise
-description: Naučte se, jak nastavit snímkovací body a zobrazit snímky pomocí Snapshot Debugger.
+description: Naučte se používat Snapshot Debugger v sadě Visual Studio k nastavení snímkovací body a pořizování snímků při ladění aplikací Azure Live ASP.NET.
 ms.custom: ''
 ms.date: 03/16/2018
 ms.topic: how-to
@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 526f7b7cc1af3dd5a370c74baa09cbab50b3d866
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 3393328999793a7e34fb3af9f7abea7430838f76
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91879083"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846981"
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>Ladění živých ASP.NET aplikací Azure pomocí Snapshot Debugger
 
@@ -26,14 +26,14 @@ Snapshot Debugger pořizování snímku vašich aplikací v produkčním prostř
 
 Snímkovací body a protokolovacích bodů jsou podobné zarážekm, ale na rozdíl od zarážek, snímkovací body aplikaci při volání neukončí. Záznam snímku na snímkovací bod obvykle trvá 10-20 milisekund.
 
-V tomto kurzu provedete následující:
+V tomto kurzu:
 
 > [!div class="checklist"]
 > * Spusťte Snapshot Debugger
 > * Nastavení snímkovací bod a zobrazení snímku
 > * Nastavení protokolovací bod
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * Snapshot Debugger je k dispozici pouze počínaje verzí Visual Studio 2017 Enterprise verze 15,5 nebo vyšší s **úlohou vývoj pro Azure**. (Na kartě **jednotlivé součásti** najdete v části **ladění a testování**  >  **Ladicí program snímků**.)
 
@@ -76,7 +76,7 @@ V tomto kurzu provedete následující:
 ::: moniker-end
 
    > [!IMPORTANT]
-   > Při prvním výběru **připojit Snapshot Debugger**budete vyzváni k instalaci rozšíření Snapshot Debugger webu na Azure App Service. Tato instalace vyžaduje restartování Azure App Service.
+   > Při prvním výběru **připojit Snapshot Debugger** budete vyzváni k instalaci rozšíření Snapshot Debugger webu na Azure App Service. Tato instalace vyžaduje restartování Azure App Service.
 
    ::: moniker range="<=vs-2017"
    > [!NOTE]
@@ -121,7 +121,7 @@ Jakmile je snímkovací bod nastaveno, můžete buď ručně vygenerovat snímek
 
    ![Kontrola dat snímku](../debugger/media/snapshot-inspect-data.png)
 
-   Z tohoto zobrazení můžete na proměnné umístit ukazatel myši a zobrazit tak tipy, použít **místní**okna, **kukátka**a **zásobník volání** a také vyhodnotit výrazy.
+   Z tohoto zobrazení můžete na proměnné umístit ukazatel myši a zobrazit tak tipy, použít **místní** okna, **kukátka** a **zásobník volání** a také vyhodnotit výrazy.
 
    Samotný web je stále živý a koncoví uživatelé to neovlivní. Ve výchozím nastavení je zachycen pouze jeden snímek na snímkovací bod: po zachycení snímku se snímkovací bod vypne. Pokud chcete zachytit jiný snímek na snímkovací bod, můžete snímkovací bod znovu zapnout kliknutím na **aktualizovat kolekci**.
 

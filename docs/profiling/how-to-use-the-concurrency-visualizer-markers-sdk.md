@@ -1,5 +1,6 @@
 ---
 title: Použití sady SDK značek Vizualizátor souběžnosti | Microsoft Docs
+description: Naučte se používat sady SDK značek Vizualizátor souběžnosti v sadě Visual Studio k vytváření rozsahů a psaní příznaků, zpráv a výstrah.
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 19a45032-f8a7-4137-890e-2ceeec938b8d
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cf33ad094716ee0f8f4c8cc4bb06220db1237e5
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 24659a101da59ed3a8ca6389debfde6c08a038ed
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851577"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815604"
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>Postupy: použití sady značek Vizualizátor souběžnosti
 V tomto tématu se dozvíte, jak použít sadu Vizualizátor souběžnosti SDK k vytváření rozsahů a zápisových příznaků, zpráv a výstrah.
@@ -70,7 +71,7 @@ V tomto tématu se dozvíte, jak použít sadu Vizualizátor souběžnosti SDK k
 
 6. Spustí aktuální projekt, aby se zobrazil Vizualizér souběžnosti. Tato dvě série značek se zobrazí v zobrazení vláken v jejich vlastních koridorech. Následující ilustrace znázorňuje dvě nová rozpětí.
 
-     ![Vizualizátor souběžnosti se 3 vlastními řadami značek](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
+     ![Snímek obrazovky s zobrazením vláken v Vizualizátor souběžnosti, který zobrazuje značku, příznak a řadu zpráv s rozsahem příznaků a rozsahem zpráv.](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
 
 ### <a name="to-use-visual-basic-or-c"></a>Použití Visual Basic nebo C\#
 
@@ -164,7 +165,7 @@ V tomto tématu se dozvíte, jak použít sadu Vizualizátor souběžnosti SDK k
 
 6. Spustí aktuální projekt, aby se zobrazil Vizualizér souběžnosti. Tři řady značek se zobrazí v zobrazení vláken v jejich vlastních koridorech. Následující ilustrace znázorňuje tři nové rozsahy.
 
-     ![Vizualizátor souběžnosti se 3 vlastními řadami značek](../profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")
+     ![Snímek obrazovky s zobrazením vláken v Vizualizátor souběžnosti, který zobrazuje značku, příznak a řadu zpráv, se zprávou, výstrahou a rozsahem příznaku.](../profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")
 
 ## <a name="see-also"></a>Viz také
 - [SDK Vizualizéru souběžnosti](../profiling/concurrency-visualizer-sdk.md)

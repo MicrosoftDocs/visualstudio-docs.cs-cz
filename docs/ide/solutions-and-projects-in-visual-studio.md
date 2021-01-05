@@ -2,7 +2,7 @@
 title: Informace o řešeních a projektech
 description: Přečtěte si o projektech a řešeních sady Visual Studio, způsobu vytváření nových projektů ze šablony a o tom, jak zobrazit & spravovat projekty v Průzkumník řešení.
 ms.custom: SEO-VS-2020, contperf-fy21q2
-ms.date: 12/17/2020
+ms.date: 12/31/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewitem
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51a2f9683dd2285cc71dfff67020687f0c48afa4
-ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
+ms.openlocfilehash: 3b34d96f49370a71a63e986a79584caffbc00adf
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97683906"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847037"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -49,6 +49,14 @@ Soubory projektu jsou založeny na [schématu XML jazyka MSBuild](../msbuild/msb
 > [!NOTE]
 > K úpravám, sestavování a ladění kódu nemusíte používat řešení nebo projekty v aplikaci Visual Studio. Jednoduše otevřete složku, která obsahuje zdrojové soubory v aplikaci Visual Studio, a začněte upravovat. Další informace naleznete v tématu [vývoj kódu v aplikaci Visual Studio bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
 
+### <a name="create-new-projects"></a>Vytvořit nové projekty
+
+Nejjednodušší způsob, jak vytvořit nový projekt, je použít šablonu projektu pro typ projektu, který chcete. Šablona projektu obsahuje základní sadu předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení.   >    >  Pro výběr šablony projektu použijte soubor nový **projekt** . Další informace najdete v tématu [Vytvoření nového projektu](create-new-project.md).
+
+Můžete také vytvořit vlastní šablonu projektu, kterou můžete použít k vytvoření nových projektů z. Další informace naleznete v tématu [Create Project and Item Templates](../ide/creating-project-and-item-templates.md).
+
+Když vytvoříte nový projekt, Visual Studio ho uloží do výchozího umístění *%USERPROFILE%\source\repos*. Pokud chcete toto umístění změnit, přejděte na **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení. Další informace najdete v [dialogovém okně Možnosti: projekty a řešení > umístění](./reference/projects-solutions-locations-options.md).
+
 ## <a name="solutions"></a>Řešení
 
 Projekt je obsažen v rámci *řešení*. Bez ohledu na jeho název není řešení "Answer". Je to jednoduše kontejner pro jeden nebo více souvisejících projektů, společně s informacemi o sestavení, nastavení okna sady Visual Studio a s dalšími soubory, které nejsou přidružené k určitému projektu.
@@ -69,14 +77,6 @@ Visual Studio používá dva typy souborů (*. sln* a *. suo*) k ukládání nas
 
 "Složka řešení" je virtuální složkou, která je pouze v **Průzkumník řešení**, kde ji můžete použít k seskupení projektů v řešení. Pokud chcete na počítači najít soubor řešení, přejděte na možnosti **nástroje**  >    >  **projekty a**  >  **umístění** řešení. Další informace najdete v [dialogovém okně Možnosti: projekty a řešení > umístění](./reference/projects-solutions-locations-options.md).
 
-## <a name="create-new-projects"></a>Vytvořit nové projekty
-
-Nejjednodušší způsob, jak vytvořit nový projekt, je použít šablonu projektu pro typ projektu, který chcete. Šablona projektu obsahuje základní sadu předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení.   >    >  Pro výběr šablony projektu použijte soubor nový **projekt** . Další informace najdete v tématu [Vytvoření nového projektu](create-new-project.md).
-
-Můžete také vytvořit vlastní šablonu projektu, kterou můžete použít k vytvoření nových projektů z. Další informace naleznete v tématu [Create Project and Item Templates](../ide/creating-project-and-item-templates.md).
-
-Když vytvoříte nový projekt, Visual Studio ho uloží do výchozího umístění *%USERPROFILE%\source\repos*. Pokud chcete toto umístění změnit, přejděte na **nástroje**  >  **Možnosti**  >  **projekty a**  >  **umístění** řešení. Další informace najdete v [dialogovém okně Možnosti: projekty a řešení > umístění](./reference/projects-solutions-locations-options.md).
-
 > [!TIP]
 > Příklad projektu a řešení vytvořeného od začátku, dokončení s podrobnými pokyny a ukázkový kód naleznete v tématu [Úvod do projektů a řešení](../get-started/tutorial-projects-solutions.md).
 
@@ -84,19 +84,34 @@ Když vytvoříte nový projekt, Visual Studio ho uloží do výchozího umíst�
 
 Po vytvoření nového projektu můžete použít **Průzkumník řešení** k zobrazení a správě projektu a řešení a jejich přidružených položek. Následující ilustrace ukazuje **Průzkumník řešení** s řešením C#, které obsahuje dva projekty:
 
-![Snímek obrazovky Průzkumník řešení.](../ide/media/vs2015_solution_explorer.png)
+::: moniker range="vs-2017"
 
-Řada příkazů nabídky je k dispozici v nabídce po kliknutí pravým tlačítkem myši na různých položkách v **Průzkumník řešení**. Mezi tyto příkazy patří sestavení projektu, Správa balíčků NuGet, přidání odkazu, přejmenování souboru a spuštění testů, stačí jenom pár název. Panel nástrojů v horní části **Průzkumník řešení** obsahuje tlačítka pro přepínání ze zobrazení řešení do zobrazení složky, zobrazení skrytých souborů, sbalení všech uzlů a další.
+![Snímek obrazovky Průzkumník řešení se dvěma projekty](../ide/media/vs2015_solution_explorer.png)
+
+Panel nástrojů v horní části **Průzkumník řešení** obsahuje tlačítka pro přepínání ze zobrazení řešení do zobrazení složky, zobrazení skrytých souborů, sbalení všech uzlů a další.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+![Snímek obrazovky Průzkumník řešení se dvěma projekty v aplikaci Visual Studio 2019.](../ide/media/solution-explorer.png)
+
+Panel nástrojů v horní části **Průzkumník řešení** obsahuje tlačítka pro přepínání ze zobrazení řešení do zobrazení složky, filtrování nedokončených změn, zobrazení všech souborů, sbalení všech uzlů, zobrazení stránek [vlastností](managing-project-and-solution-properties.md) , náhled kódu v [editoru kódu](writing-code-in-the-code-and-text-editor.md)a další.
+
+::: moniker-end
+
+Řada příkazů nabídky je k dispozici v kontextové nabídce pravého tlačítka myši na různých položkách v **Průzkumník řešení**. Mezi tyto příkazy patří sestavení projektu, Správa balíčků NuGet, přidání odkazu, přejmenování souboru a spuštění testů, stačí jenom pár název.
 
 > [!TIP]
 > Pokud jste Průzkumník řešení zavřeli a chcete ho znovu otevřít, v řádku nabídek vyberte **okno**  >  **obnovit rozložení okna** .
 
 U ASP.NET Core projektů můžete přizpůsobit, jak jsou soubory vnořené v **Průzkumník řešení**. Další informace najdete v tématu [přizpůsobení vnořování souborů v Průzkumník řešení](file-nesting-solution-explorer.md).
 
-A pokud chcete zobrazit seznam některých ikon, které se zobrazují v Průzkumník řešení, přečtěte si téma [zobrazení tříd a prohlížeč objektů ikony](class-view-and-object-browser-icons.md).
-
 ## <a name="see-also"></a>Viz také
 
-- [Integrované vývojové prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
+- [Seznámení s projekty a řešení](../get-started/tutorial-projects-solutions.md)
+- [Správa vlastností projektu a řešení](managing-project-and-solution-properties.md)
+- [Filtrovaná řešení v aplikaci Visual Studio](filtered-solutions.md)
 - [Přenos, migrace a upgrade projektů](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
+- [Prostředky pro řešení potíží s chybami IDE sady Visual Studio](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md)
 - [Projekty a řešení (Visual Studio pro Mac)](/visualstudio/mac/projects-and-solutions)

@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 83446ab87af07e3ac46594beeecec781f596ecff
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: cf32e0aa1f19bb4398bc5600ae7fc9fbf151c76c
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349578"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815591"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Publikování webové aplikace do služby Azure App Service pomocí sady Visual Studio
 
@@ -33,7 +33,7 @@ Tento článek popisuje, jak používat nástroj pro **publikování** pro nasaz
 
 ## <a name="publish-to-azure-app-service-on-windows"></a>Publikování do Azure App Service ve Windows
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a vyberte **publikovat** (nebo použijte **Build**  >  položku nabídky **publikovat** sestavení).
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a vyberte **publikovat** (nebo použijte   >  položku nabídky **publikovat** sestavení).
 
     ![Příkaz publikovat v místní nabídce projektu v Průzkumník řešení](../deployment/media/quickstart-publish.png "Zvolit publikování")
 
@@ -51,13 +51,13 @@ Tento článek popisuje, jak používat nástroj pro **publikování** pro nasaz
 
     ![Odkaz pro vytvoření nové instance Azure App Service](../deployment/media/quickstart-publish-windows-create-new-link.png)
 
-1. V dialogovém okně **vytvořit Azure App Service (Windows)** se naplní pole **název aplikace** , **skupina prostředků** a položka **plánu App Service** . Tyto názvy můžete zachovat nebo je změnit. Až budete připraveni, vyberte **vytvořit**.
+1. V dialogovém okně **vytvořit Azure App Service (Windows)** se naplní pole **název aplikace**, **skupina prostředků** a položka **plánu App Service** . Tyto názvy můžete zachovat nebo je změnit. Až budete připraveni, vyberte **vytvořit**.
 
-    ![Zvolit Azure App Service](../deployment/media/quickstart-publish-windows-create-new-dialog.png)
+    ![Snímek obrazovky dialogového okna pro vytvoření Azure App Service (Windows) s vyplněnými poli název, předplatné, skupina prostředků a plán hostování](../deployment/media/quickstart-publish-windows-create-new-dialog.png)
 
 1. V dialogovém okně **publikovat** se nově vytvořená instance automaticky vybrala. Až budete připraveni, vyberte **Dokončit**.
 
-    ![Zvolit Azure App Service](../deployment/media/quickstart-publish-windows-select-instance.png)
+    ![Snímek obrazovky okna publikovat, ke kterému se přistupovalo ze sady Visual Studio Průzkumník řešení Jako cíl publikování je vybraný Azure.](../deployment/media/quickstart-publish-windows-select-instance.png)
 
 1. Vyberte **Publikovat**. Visual Studio nasadí aplikaci do vašeho Azure App Service a webová aplikace se načte v prohlížeči. V podokně **publikování** vlastností projektu se zobrazuje adresa URL webu a další podrobnosti.
 
@@ -68,7 +68,7 @@ Tento článek popisuje, jak používat nástroj pro **publikování** pro nasaz
 V předchozích krocích jste vytvořili prostředky Azure ve skupině prostředků. Pokud předpokládáte, že už tyto prostředky nebudete potřebovat, můžete je odstranit tak, že odstraníte skupinu prostředků.
 Na webu Azure Portal v nabídce vlevo vyberte **Skupiny prostředků** a pak vyberte **myResourceGroup**.
 Na stránce skupiny prostředků zkontrolujte, že chcete všechny uvedené prostředky odstranit.
-Vyberte **Odstranit** , do textového pole zadejte **myResourceGroup** a potom vyberte **Odstranit**.
+Vyberte **Odstranit**, do textového pole zadejte **myResourceGroup** a potom vyberte **Odstranit**.
 
 ## <a name="next-steps"></a>Další kroky
 

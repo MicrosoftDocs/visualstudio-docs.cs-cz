@@ -1,17 +1,17 @@
 ---
 title: Nastavení úložiště Subversion
-description: Použití podverze v Visual Studio pro Mac.
+description: Přečtěte si, jak nainstalovat a nastavit podverzi jako centralizovaný systém správy verzí v Visual Studio pro Mac.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
 ms.topic: how-to
-ms.openlocfilehash: 78a5dd2abbef177e2eb949d25d779a46ecc65bda
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5230958fa1624acf7609d6cad7d885e43c013d0
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950689"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847072"
 ---
 # <a name="set-up-a-subversion-repository"></a>Nastavení úložiště podverze
 

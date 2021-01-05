@@ -1,5 +1,7 @@
 ---
 title: Registrace operací pro přípony názvů souborů | Microsoft Docs
+description: Naučte se, jak registrovat příkaz, který je přidružený k programovému identifikátoru pro příponu názvu souboru pomocí klíče prostředí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac2854f1799075cc14d9beb557335be5228be21d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df0dfe90bd5e3bccbb6bb0f9dab400082f539fbf
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701536"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863039"
 ---
 # <a name="register-verbs-for-file-name-extensions"></a>Registrovat operace pro přípony názvů souborů
 Přidružení přípony názvu souboru k aplikaci má obecně upřednostňovanou akci, která nastane, když uživatel dvakrát klikne na soubor. Tato upřednostňovaná akce je propojena s operací, například otevřít, která odpovídá akci.
@@ -25,13 +27,13 @@ Přidružení přípony názvu souboru k aplikaci má obecně upřednostňovanou
 ## <a name="register-standard-verbs"></a>Registrovat standardní příkazy
  Operační systém rozpoznává následující standardní příkazy:
 
-- Otevřená
+- Otevřít
 
 - Upravit
 
 - Zobrazovaný
 
-- Tiskový
+- Tisk
 
 - Preview
 
@@ -106,7 +108,7 @@ Přidružení přípony názvu souboru k aplikaci má obecně upřednostňovanou
 ```
 
 ## <a name="set-the-default-verb"></a>Nastavit výchozí příkaz
- Výchozí operace je akce, která se spustí, když uživatel dvakrát klikne na soubor v Průzkumníkovi Windows. Výchozí příkaz je operace zadaná jako výchozí hodnota pro **HKEY_CLASSES_ROOT klíč \\ \Shell*ProgID*** . Pokud není zadána žádná hodnota, výchozím příkazem je první příkaz určený v seznamu **HKEY_CLASSES_ROOTho \Shell \\ *ProgID*** Key.
+ Výchozí operace je akce, která se spustí, když uživatel dvakrát klikne na soubor v Průzkumníkovi Windows. Výchozí příkaz je operace zadaná jako výchozí hodnota pro **HKEY_CLASSES_ROOT klíč \\ \Shell *ProgID*** . Pokud není zadána žádná hodnota, výchozím příkazem je první příkaz určený v seznamu **HKEY_CLASSES_ROOTho \Shell \\ *ProgID*** Key.
 
 > [!NOTE]
 > Pokud máte v úmyslu změnit výchozí operaci pro rozšíření při souběžném nasazení, zvažte dopad na instalaci a odebrání. Během instalace je původní výchozí hodnota přepsána.

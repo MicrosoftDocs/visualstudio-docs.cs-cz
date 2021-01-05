@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Přidání vlastního XAML na úvodní stránku | Microsoft Docs'
+description: Přečtěte si, jak vytvořit vlastní úvodní stránku sady Visual Studio, která obsahuje webový prohlížeč pomocí tohoto návodu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 85cc6520ea86db664de676232e8d61a643483ca4
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 8f23b1331b2c083a38f6b11d9a4a3647474b2f04
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012071"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97862783"
 ---
 # <a name="walkthrough-add-custom-xaml-to-the-start-page"></a>Návod: Přidání vlastního kódu XAML na úvodní stránku
 
@@ -81,13 +83,13 @@ Tento návod ukazuje, jak vytvořit vlastní úvodní stránku sady Visual Studi
 
 7. Zavřete experimentální instanci.
 
-Chcete-li použít vlastní úvodní stránku, vyberte v části **nástroje**  >  **Možnosti**  >  **prostředí**možnost **spuštění**. V seznamu **Přizpůsobit úvodní stránku** vyberte soubor *. XAML* a klikněte na tlačítko **OK**.
+Chcete-li použít vlastní úvodní stránku, vyberte v části **nástroje**  >  **Možnosti**  >  **prostředí** možnost **spuštění**. V seznamu **Přizpůsobit úvodní stránku** vyberte soubor *. XAML* a klikněte na tlačítko **OK**.
 
 ## <a name="next-steps"></a>Další kroky
 
 Úvodní stránka sady Visual Studio nyní obsahuje kartu, která zobrazuje kartu webového prohlížeče a kartu MyButton. Můžete vytvořit vlastní úvodní stránky, které mají jiné funkce, pomocí modelu *kódu na pozadí* k přidání vlastní knihovny DLL, jak je znázorněno v části [Přidání uživatelského ovládacího prvku na úvodní stránku](../extensibility/adding-user-control-to-the-start-page.md). Můžete sdílet vlastní úvodní stránky s ostatními uživateli publikováním výsledného souboru. VSIX na webu [Visual Studio Marketplace](https://marketplace.visualstudio.com/) , nebo do jiného webu nebo sdílené síťové složky. Další informace najdete v tématu [nasazení vlastních spouštěcích stránek](../extensibility/deploying-custom-start-pages.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přizpůsobení úvodní stránky](../ide/customizing-the-start-page-for-visual-studio.md)
 - [Ovládací prvky kontejneru WPF](/previous-versions/bb675291(v=vs.110))

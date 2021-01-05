@@ -1,5 +1,6 @@
 ---
 title: Analýza využití paměti v profileru výkonu
+description: Naučte se, jak pomocí nástroje využití paměti bez ladicího programu v profileru výkonu sady Visual Studio monitorovat využití paměti vaší aplikace.
 ms.custom: ''
 ms.date: 04/02/2020
 ms.topic: how-to
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6e1bd3d38e6303f11ec5da0e88816d56dd43d98
-ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
+ms.openlocfilehash: 65ac088d52b4e7a288965bb75e1bc6a00da40f7b
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918224"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815812"
 ---
 # <a name="analyze-memory-usage-without-debugging-in-the-performance-profiler"></a>Analýza využití paměti bez ladění v profileru výkonu
 
@@ -34,11 +35,11 @@ Nástroj využití paměti lze spustit [s ladicím programem nebo bez něj](../p
 
    Nástroj využití paměti podporuje aplikace .NET, ASP.NET, C++ nebo smíšený režim (.NET a nativní).
 
-1. V nabídce ladění nastavte možnost konfigurace řešení na **release** a jako cíl nasazení vyberte **místní ladicí program systému Windows** (nebo **místní počítač** ).
+1. V nabídce ladění nastavte možnost konfigurace řešení na **release** a jako cíl nasazení vyberte **místní ladicí program systému Windows** (nebo **místní počítač**).
 
-1. Na panelu nabídek vyberte **ladit**  >  **výkon Profiler** .
+1. Na panelu nabídek vyberte **ladit**  >  **výkon Profiler**.
 
-1. V části **dostupné nástroje** vyberte **využití paměti** a pak vyberte **Spustit** .
+1. V části **dostupné nástroje** vyberte **využití paměti** a pak vyberte **Spustit**.
 
    ![Spustit relaci diagnostiky využití paměti](../profiling/media/memuse_start_diagnosticssession.png "Spustit relaci diagnostiky využití paměti")
 
@@ -46,7 +47,7 @@ Nástroj využití paměti lze spustit [s ladicím programem nebo bez něj](../p
 
 Když spustíte relaci diagnostiky, vaše aplikace se spustí a okno **diagnostické nástroje** zobrazí graf časové osy použití paměti vaší aplikace.
 
-![Stránka s přehledem využití paměti](../profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")
+![Snímek obrazovky okna Diagnostické nástroje v profileru výkonu sady Visual Studio zobrazující graf časové osy použití paměti aplikace](../profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")
 
 Graf časové osy zobrazuje kolísání paměti při spuštění aplikace. Špičky v grafu obvykle označují, že některé kódy shromažďují nebo vytvářejí data a pak je po dokončení zpracování zahodí. Velké špičky označují oblasti, které je možné optimalizovat. Další obavou je nárůst využití paměti, které se nevrátí, protože může znamenat neefektivní využití paměti nebo dokonce nevracení paměti.
 
@@ -58,7 +59,7 @@ Chcete-li shromáždit snímky, vyberte možnost **pořídit snímek** , pokud c
 
 ### <a name="close-the-diagnostic-session"></a><a name="BKMK_Close_a_monitoring_session"></a> Zavřít diagnostickou relaci
 
-Chcete-li zastavit relaci monitorování bez vytváření sestavy, stačí zavřít okno diagnostiky. Pokud chcete vygenerovat sestavu po dokončení shromažďování nebo pořízení snímků, vyberte **Zastavit shromažďování** .
+Chcete-li zastavit relaci monitorování bez vytváření sestavy, stačí zavřít okno diagnostiky. Pokud chcete vygenerovat sestavu po dokončení shromažďování nebo pořízení snímků, vyberte **Zastavit shromažďování**.
 
 ![Zastavit shromažďování](../profiling/media/memuse__stopcollection.png "Zastavit shromažďování")
 
@@ -66,7 +67,7 @@ Chcete-li zastavit relaci monitorování bez vytváření sestavy, stačí zavř
 
 Po zastavení shromažďování dat nástroj **využití paměti** zastaví aplikaci a zobrazí stránku s přehledem **využití paměti** .
 
-![Stránka s přehledem využití paměti](../profiling/media/memuse__reportoverview1.png "Stránka s přehledem využití paměti")
+![Snímek obrazovky se stránkou přehled v nástroji využití paměti v profileru výkonu sady Visual Studio, ve kterém se zobrazuje graf využití paměti a dvě podokna snímků.](../profiling/media/memuse__reportoverview1.png "Stránka s přehledem využití paměti")
 
 ### <a name="memory-usage-snapshots"></a><a name="BKMK_Memory_Usage_snapshot_views"></a> Snímky využití paměti
 
@@ -201,7 +202,7 @@ Pro typ v **cestě ke stromu kořene** se počet objektů, které obsahují odka
 
 ![Odkazované typy v sestavě rozdílů](../profiling/media/memuse_snapshotdiff_referencedtypes.png "Odkazované typy v sestavě rozdílů")
 
-**Odkazovaný strom typů** ve zprávě rozdílového snímku má následující sloupce. Strom **odkazovaných objektů** má pro sebe **instance** , **Velikost (bajty)** , **celkovou velikost (bajty) a počet** sloupců **modulu** .
+**Odkazovaný strom typů** ve zprávě rozdílového snímku má následující sloupce. Strom **odkazovaných objektů** má pro sebe **instance**, **Velikost (bajty)**, **celkovou velikost (bajty) a počet** sloupců **modulu** .
 
 |Název|Popis|
 |-|-|

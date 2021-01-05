@@ -7,12 +7,12 @@ monikerRange: vs-2019
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 6421fd0139b04262ac5f1e835f010c1372c034ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29fa854ab00764fc0166a53d8b48989f2c74f036
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329180"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833296"
 ---
 # <a name="xaml-code-editor"></a>Editor kódu XAML
 
@@ -103,13 +103,13 @@ Prostřední podokno je část Code (kód) editoru kódu XAML. Obsahuje většin
 
 Například jedna užitečná úloha, kterou můžete provést pomocí rychlých akcí, je **odebrat nepotřebné použití** z kódu jazyka C# na kartě **MainWindow.XAML.cs** .
 
-Zde je uveden postup:
+Jak na to:
 
 1. Najeďte myší na příkaz using, zvolte ikonu žárovky a v rozevíracím seznamu zvolte **odebrat nepotřebné** direktivy using.
 
     ![Editor IDE s možností "odebrat nepotřebné použití" z nabídky rychlé akce](media/xaml-code-editor-remove-usings.png "Snímek obrazovky s možností odebrat nepotřebné použití v editoru IDE z nabídky rychlé akce")
 
-1. Vyberte, zda chcete opravit všechny výskyty v **dokumentu**, **projektu**nebo **řešení**.
+1. Vyberte, zda chcete opravit všechny výskyty v **dokumentu**, **projektu** nebo **řešení**.
 1. Zobrazte dialogové okno **Náhled** a pak zvolte **použít**.
 
 K této funkci můžete získat přístup také z panelu nabídek. Pokud to chcete udělat, vyberte **Upravit**  >  **IntelliSense**  >  **Odebrat a seřadit pomocí**.
@@ -128,7 +128,7 @@ Barva levého okraje umožňuje sledovat změny, které jste provedli v souboru.
 
     ![Editor kódu – upravit se zelenou čárou](media/code-editor-edit-green.png "Snímek obrazovky editoru kódu se změnou označenou zeleným pruhem na okraji výběru")
 
-Chcete-li tuto funkci vypnout a zapnout, změňte možnost **sledovat změny** v nastavení **textový editor** (Editor**Tools**  >  **možností**nástroje  >  **textový editor**).
+Chcete-li tuto funkci vypnout a zapnout, změňte možnost **sledovat změny** v nastavení **textový editor** (Editor  >  **možností** nástroje  >  **textový editor**).
 
 Další informace o sledování změn &mdash; pro zahrnutí vlnovek (označované také jako "vlnovky"), které se zobrazují v části řetězce kódu, &mdash; naleznete v části **[editory funkcí](../ide/writing-code-in-the-code-and-text-editor.md#editor-features)** v tématu [funkce editoru kódu sady Visual Studio](../ide/writing-code-in-the-code-and-text-editor.md) .
 
@@ -136,7 +136,7 @@ Další informace o sledování změn &mdash; pro zahrnutí vlnovek (označovan�
 
 Při úpravách kódu v editoru kódu XAML je k dispozici několik funkcí, ke kterým lze přistupovat pomocí místní nabídky kliknutím pravým tlačítkem myši. Většina těchto funkcí je všeobecně dostupná v integrovaném vývojovém prostředí sady Visual Studio, zatímco některé jsou specifické pro použití editoru kódu společně s oknem návrhu.
 
-![Místní nabídka editoru kódu XAML v aplikaci Visual Studio, která je pravým tlačítkem myši](media/xaml-code-editor-right-click-menu.png "Snímek obrazovky s kontextovou nabídkou editoru kódu XAML v aplikaci Visual Studio 2019 kliknutím pravým tlačítkem myši")
+![Snímek obrazovky s místní nabídkou editoru kódu XAML v aplikaci Visual Studio 2019.](media/xaml-code-editor-right-click-menu.png)
 
 V tomto článku jsou jednotlivé funkce a jejich užitečnost:
 
@@ -163,7 +163,7 @@ Posuvník může probírat více než procházet kód. Můžete ji také použí
 
 Na posuvníku v editoru kódu existuje tlačítko **rozdělení** v pravém horním rohu. Když si ho vyberete, můžete otevřít jiný podokno editoru kódu. To je užitečné, protože pracují nezávisle na sobě, takže je můžete použít pro práci s kódem v různých umístěních.
 
-![Editor kódu XAML, pouze prostřední podokno, v aplikaci Visual Studio](media/code-editor-split-window-button.png "Snímek obrazovky editoru kódu XAML, pouze prostřední podokno, v aplikaci Visual Studio 2019")
+![Snímek obrazovky s podoknem editoru kódu XAML v aplikaci Visual Studio 2019 s zvýrazněným tlačítkem rozdělení v pravém horním rohu podokna.](media/code-editor-split-window-button.png)
 
 Další informace o tom, jak rozdělit okno editoru, naleznete na stránce [Správa oken editoru](../ide/how-to-manage-editor-windows.md) .
 
@@ -230,7 +230,7 @@ Tady je několik příkladů, jak můžou využít prostředí kódování XAML:
 
   ![Možnost odebrat nepotřebné obory názvů editoru kódu XAML z rychlých akcí žárovky](media/xaml-code-editor-dimmed-namespaces-preview.png "Snímek obrazovky s možností odebrat nepotřebné obory názvů editoru kódu XAML, která se zobrazí pomocí žárovkyu rychlé akce")
 
-- **Přejmenujte obor názvů**. Tato funkce, která je dostupná v místní nabídce po kliknutí pravým tlačítkem myši po zvýraznění oboru názvů, usnadňuje změnu více instancí nastavení najednou. K této funkci můžete získat přístup také pomocí panelu nabídek, **úpravou**  >  **refaktoru**  >  **přejmenování**nebo stisknutím **kombinace kláves CTRL** + **r**a následným **Ctrl**stisknutím klávesy CTRL + **r** .
+- **Přejmenujte obor názvů**. Tato funkce, která je dostupná v místní nabídce po kliknutí pravým tlačítkem myši po zvýraznění oboru názvů, usnadňuje změnu více instancí nastavení najednou. K této funkci můžete získat přístup také pomocí panelu nabídek, **úpravou**  >  **refaktoru**  >  **přejmenování** nebo stisknutím **kombinace kláves CTRL** + **r** a následným stisknutím klávesy CTRL + **r** .
 
   ![Možnost Přejmenovat Editor kódu XAML z místní nabídky kliknutím pravým tlačítkem myši](media/code-editor-rename-namespace.png "Snímek obrazovky s možností přejmenovat obor názvů editoru kódu XAML, která se zobrazí pomocí místní nabídky klikněte pravým tlačítkem myši")
 
@@ -269,7 +269,7 @@ Můžete použít dialogové okno [Možnosti](../ide/reference/options-dialog-bo
 ![Seznam možností pro textový Editor XAML](media/xaml-tools-options.png "Snímek obrazovky se seznamem možností pro editor textu XAML")
 
 > [!NOTE]
-> Pro přístup k dialogovému oknu možnosti můžete také použít klávesové zkratky. Tady je postup: stisknutím klávesy **CTRL** + **Q** prohledejte IDE, zadejte **Možnosti**a pak stiskněte **ENTER**. Potom stisknutím klávesy **CTRL** + **E** prohledáte dialogové okno Možnosti, zadáte **textový editor**, stisknete **ENTER**, zadáte **kód XAML**a stisknete klávesu **ENTER**.
+> Pro přístup k dialogovému oknu možnosti můžete také použít klávesové zkratky. Tady je postup: stisknutím klávesy **CTRL** + **Q** prohledejte IDE, zadejte **Možnosti** a pak stiskněte **ENTER**. Potom stisknutím klávesy **CTRL** + **E** prohledáte dialogové okno Možnosti, zadáte **textový editor**, stisknete **ENTER**, zadáte **kód XAML** a stisknete klávesu **ENTER**.
 >  
 > Další informace o klávesových zkratkách naleznete na stránce [tipy pro zástupce pro Visual Studio](../ide/productivity-shortcuts.md#code-editor) .
 
@@ -277,7 +277,7 @@ Můžete použít dialogové okno [Možnosti](../ide/reference/options-dialog-bo
 
 V dialogovém okně [Možnosti](../ide/reference/options-text-editor-xaml-formatting.md) pro jazyk XAML jsou následující první tři položky univerzální pro všechny programovací jazyky, které podporuje integrované vývojové prostředí (IDE) sady Visual Studio. Pokud chcete získat další informace o těchto možnostech a jejich použití, přejděte na propojené informace v následující tabulce.
 
-|Název  |Další informace  |
+|Name  |Další informace  |
 |---------|---------|
 |Obecné  | [Dialogové okno Možnosti: textový editor > všechny jazyky](../ide/reference/options-text-editor-all-languages.md) |
 |Posuvníky | [Možnosti, textový editor, všechny jazyky, posuvníky](../ide/reference/options-text-editor-all-languages-scroll-bars.md) |
@@ -287,7 +287,7 @@ V dialogovém okně [Možnosti](../ide/reference/options-text-editor-xaml-format
 
 Následující tabulka uvádí nastavení v dialogovém okně [Možnosti](../ide/reference/options-text-editor-xaml-formatting.md) , které může zlepšit možnosti úprav při vývoji aplikací založených na jazyce XAML. Další informace o těchto možnostech a jejich použití najdete v propojených informacích.
 
-|Název  |Další informace  |
+|Name  |Další informace  |
 |---------|---------|
 |Formátování | [Možnosti, Textový editor, XAML, Formátování](../ide/reference/options-text-editor-xaml-formatting.md) |
 |Různé |  [Možnosti, textový editor, XAML, různé](../ide/reference/options-text-editor-xaml-miscellaneous.md) |

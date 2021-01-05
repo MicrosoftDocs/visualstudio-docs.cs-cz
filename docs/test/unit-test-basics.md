@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f563d37e6456ec775b2e70d59e07b0627c82994b
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 5660d67ac2c8c3bff589c34dd4303d36a3e20cff
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330196"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833309"
 ---
 # <a name="unit-test-basics"></a>Základní informace o testování částí
 
@@ -24,17 +24,17 @@ Vytvořením a spuštěním testů jednotek ověřte, zda váš kód funguje pod
 
 Testování částí má největší vliv na kvalitu kódu, pokud je nedílnou součástí pracovního postupu vývoje softwaru. Jakmile napíšete funkci nebo jiný blok kódu aplikace, vytvořte testy jednotek, které ověřují chování kódu v reakci na standardní, hranici a nesprávné případy vstupních dat a které kontrolují všechny explicitní nebo implicitní předpoklady, které provádí kód. U *vývoje řízeného testem* vytvoříte testy jednotek před zápisem kódu, takže používáte testy jednotek jako dokumentaci k návrhu i funkční specifikace.
 
-Můžete rychle vygenerovat testovací projekty a testovací metody z vašeho kódu nebo je ručně vytvořit podle potřeby. Když použijete IntelliTest k prozkoumávání kódu .NET, můžete vygenerovat testovací data a sadu testů jednotek. Pro každý příkaz v kódu se generuje zkušební vstup, který tento příkaz spustí.  Zjistěte, jak [pro svůj kód generovat testy jednotek](generate-unit-tests-for-your-code-with-intellitest.md).
-
 Průzkumník testů může také spouštět rozhraní a open source testovacích jednotek od třetích stran, které implementovaly rozhraní doplňků Průzkumníka testů. Mnohé z těchto rozhraní můžete přidat prostřednictvím Správce rozšíření sady Visual Studio a galerie sady Visual Studio. Další informace najdete v tématu [instalace rozhraní pro testování částí třetích stran](../test/install-third-party-unit-test-frameworks.md).
+
+Můžete rychle vygenerovat testovací projekty a testovací metody z vašeho kódu nebo je ručně vytvořit podle potřeby. Když použijete IntelliTest k prozkoumávání kódu .NET, můžete vygenerovat testovací data a sadu testů jednotek. Pro každý příkaz v kódu se generuje zkušební vstup, který tento příkaz spustí.  Zjistěte, jak [generovat testy jednotek pro kód .NET](generate-unit-tests-for-your-code-with-intellitest.md).
 
 ## <a name="get-started"></a>Začínáme
 
 Úvodní informace o testování částí, které vás zavedou přímo do kódování, najdete v jednom z těchto témat:
 
-- [Návod: Vytváření a spouštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+- [Návod: vytvoření a spuštění testů jednotek pro kód .NET](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 
-- [Rychlý Start: Vývoj řízený testováním pomocí Průzkumníka testů](../test/quick-start-test-driven-development-with-test-explorer.md)
+- [Návod: Vývoj řízený testováním pomocí Průzkumníka testů](../test/quick-start-test-driven-development-with-test-explorer.md)
 
 - [Zápis testů jednotek pro C/C++ v aplikaci Visual Studio](../test/writing-unit-tests-for-c-cpp.md)
 
@@ -85,7 +85,7 @@ Teď, když máme nějaký kód, je čas na testování.
 
 ## <a name="create-unit-test-projects-and-test-methods"></a>Vytváření projektů testování částí a testovacích metod
 
-Je často rychlejší generovat projekt testování částí a zástupné procedury testu jednotek z vašeho kódu. Nebo můžete zvolit, že se má projekt testování jednotek a testy vytvořit ručně v závislosti na vašich požadavcích. Pokud chcete vytvořit testování částí pomocí architektury třetích stran, budete potřebovat jednu z těchto rozšíření: [nunit](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371) nebo [xUnit](https://marketplace.visualstudio.com/items?itemName=YowkoTsai.xUnitnetTestGenerator).
+V jazyce C# je často rychlejší generovat projekt testování částí a zástupné procedury testu jednotek z kódu. Nebo můžete zvolit, že se má projekt testování jednotek a testy vytvořit ručně v závislosti na vašich požadavcích. Pokud chcete vytvořit testy jednotek z kódu s architekturou třetích stran, budete potřebovat jednu z těchto rozšíření: [nunit](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371) nebo [xUnit](https://marketplace.visualstudio.com/items?itemName=YowkoTsai.xUnitnetTestGenerator). Pokud nepoužíváte C#, přeskočte tuto část a přejděte k části [Vytvoření projektu testování částí a testování částí ručně](#create-the-unit-test-project-and-unit-tests-manually).
 
 ### <a name="generate-unit-test-project-and-unit-test-stubs"></a>Generovat projekt testu jednotek a zástupné procedury testu jednotek
 
@@ -101,7 +101,7 @@ Je často rychlejší generovat projekt testování částí a zástupné proced
    ![V okně editoru zobrazte kontextovou nabídku.](../test/media/vs-2019/basics-create-unit-tests.png)
 
    > [!NOTE]
-   > Příkaz nabídky **vytvořit testy jednotek** je k dispozici pouze pro spravovaný kód.
+   > Příkaz nabídky **vytvořit testy jednotek** je k dispozici pouze pro kód jazyka C#.
    ::: moniker-end
 
 2. Kliknutím na tlačítko **OK** přijměte výchozí hodnoty pro vytvoření testů jednotek, nebo změňte hodnoty používané k vytvoření a pojmenování projektu testování částí a testování částí. Můžete vybrat kód, který je přidán ve výchozím nastavení do metody testování částí.
@@ -264,7 +264,7 @@ Výběrem možnosti **Spustit vše** můžete spustit všechny testy, nebo výb�
 
 ::: moniker range="vs-2017"
 
-Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![USTIT&#95;parallelicon&#45;malá](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
+Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![Snímek obrazovky s přepínačem paralelního spuštění testu na panelu nástrojů Visual Studio Test Explorer.](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
 
 ::: moniker-end
 
@@ -338,7 +338,7 @@ Přečtěte si další informace o [ladění testů jednotek](../debugger/debugg
 
 **Otázka: je možné vytvořit testy jednotek, které při spuštění testu přebírají více sad dat jako vstup?**
 
-**Odpověď:** Ano. *Testovací metody řízené daty* umožňují testovat rozsah hodnot pomocí jediné metody testování částí. Použijte `DataSource` atribut pro testovací metodu, která určuje zdroj dat a tabulku obsahující proměnné hodnoty, které chcete testovat.  V těle metody přiřadíte hodnoty řádku k proměnným pomocí `TestContext.DataRow[` *ColumnName* `]` indexeru ColumnName.
+**Odpověď:** Ano. *Testovací metody řízené daty* umožňují testovat rozsah hodnot pomocí jediné metody testování částí. Použijte `DataSource` atribut pro testovací metodu, která určuje zdroj dat a tabulku obsahující proměnné hodnoty, které chcete testovat.  V těle metody přiřadíte hodnoty řádku k proměnným pomocí `TestContext.DataRow[`  `]` indexeru ColumnName.
 
 > [!NOTE]
 > Tyto postupy se vztahují pouze na testovací metody, které zapisujete pomocí rozhraní Microsoft Unit Test Framework pro spravovaný kód. Pokud používáte jiné rozhraní, Projděte si dokumentaci k rozhraní pro ekvivalentní funkce.

@@ -1,6 +1,6 @@
 ---
 title: Vytvoření aplikace Node.js a Express
-description: V tomto kurzu vytvoříte aplikaci pomocí nástrojů Node.js Tools for Visual Studio.
+description: V tomto kurzu se naučíte, jak vytvořit jednoduchou aplikaci Node.js pomocí rozhraní Express Web Application Framework v aplikaci Visual Studio.
 ms.date: 04/20/2020
 ms.topic: tutorial
 ms.devlang: javascript
@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 3d91f20dec22379d79b5f295fccf49aae0733a24
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ce7b4af783149a53e0eacadaa5753d596f69563
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81744886"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846913"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Kurz: Vytvoření aplikace Node.js a Express v aplikaci Visual Studio
 
@@ -63,10 +63,10 @@ Express je rozhraní webové aplikace, které se používá jako serverová arch
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node.js.
 
     ::: moniker range=">=vs-2019"
-    Pokud jste ještě nenainstalovali Visual Studio 2019, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/)   .
+    Pokud jste ještě nenainstalovali Visual Studio 2019, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) .
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Pokud jste ještě nenainstalovali Visual Studio 2017, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/)   .
+    Pokud jste ještě nenainstalovali Visual Studio 2017, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) .
     ::: moniker-end
 
     Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
@@ -77,7 +77,7 @@ Express je rozhraní webové aplikace, které se používá jako serverová arch
 
     Pokud ho nemáte nainstalovaný, doporučujeme, abyste si nainstalovali verzi LTS z webu [Node.js](https://nodejs.org/en/download/) , abyste dosáhli nejlepší kompatibility s externími architekturami a knihovnami. Node.js je sestavená pro 32 bitové a 64 architektury. Nástroje Node.js v aplikaci Visual Studio, které jsou součástí úlohy Node.js, podporují obě verze. Je vyžadována pouze jedna a instalační služba Node.js podporuje pouze instalaci v jednom okamžiku.
     
-    Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nezjistí nainstalovaný modul runtime, můžete nakonfigurovat projekt tak, aby odkazoval na nainstalovaný modul runtime na stránce vlastnosti (po vytvoření projektu klikněte pravým tlačítkem myši na uzel projektu, vyberte možnost **vlastnosti**a nastavte ** cestuNode.exe**). Můžete použít globální instalaci Node.js nebo můžete zadat cestu k místnímu interpretu v každém z vašich Node.jsch projektů. 
+    Obecně platí, že Visual Studio automaticky rozpozná nainstalovaný modul runtime Node.js. Pokud nezjistí nainstalovaný modul runtime, můžete nakonfigurovat projekt tak, aby odkazoval na nainstalovaný modul runtime na stránce vlastnosti (po vytvoření projektu klikněte pravým tlačítkem myši na uzel projektu, vyberte možnost **vlastnosti** a nastavte **cestuNode.exe**). Můžete použít globální instalaci Node.js nebo můžete zadat cestu k místnímu interpretu v každém z vašich Node.jsch projektů. 
 
     Tento kurz byl testován s Node.js 8.10.0.
 
@@ -92,12 +92,12 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro Node.js a
 1. Vytvoření nového projektu
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **Node.js**a pak zvolte **vytvořit novou základní aplikaci Azure Node.js Express 4** (JavaScript). V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **Node.js** a pak zvolte **vytvořit novou základní aplikaci Azure Node.js Express 4** (JavaScript). V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **JavaScript**a pak zvolte možnost **Node.js**. V prostředním podokně zvolte **základní aplikace Azure Node.js Express 4**a pak zvolte **OK**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **JavaScript** a pak zvolte možnost **Node.js**. V prostředním podokně zvolte **základní aplikace Azure Node.js Express 4** a pak zvolte **OK**.
     ::: moniker-end
-    Pokud nevidíte základní šablonu projektu **aplikace Azure Node.js Express 4** , je nutné přidat úlohu ** vývojeNode.js** . Podrobné pokyny najdete v části [požadavky](#prerequisites).
+    Pokud nevidíte základní šablonu projektu **aplikace Azure Node.js Express 4** , je nutné přidat úlohu **vývojeNode.js** . Podrobné pokyny najdete v části [požadavky](#prerequisites).
 
     Visual Studio vytvoří nové řešení a otevře projekt v pravém podokně. Soubor projektu *app.js* se otevře v editoru (levé podokno).
 
@@ -180,7 +180,7 @@ Aplikace používá Pug pro front-end JavaScript Framework. Pug používá jedno
 
 IntelliSense je nástroj sady Visual Studio, který vám pomáhá při psaní kódu.
 
-1. V *index.js*přejít na řádek kódu, který obsahuje `res.render` .
+1. V *index.js* přejít na řádek kódu, který obsahuje `res.render` .
 
 1. Umístěte kurzor za `data` řetězec, typ `: get` a IntelliSense zobrazí `getData` funkci definovanou dříve v kódu. Vyberte `getData`.
 
@@ -208,7 +208,7 @@ IntelliSense je nástroj sady Visual Studio, který vám pomáhá při psaní k�
 
 Dál budete pokračovat ve spuštění aplikace s připojeným ladicím programem sady Visual Studio. Než to uděláte, musíte nastavit zarážku.
 
-1. V *index.js*klikněte na levé hřbety před následujícím řádkem kódu, abyste nastavili zarážku:
+1. V *index.js* klikněte na levé hřbety před následujícím řádkem kódu, abyste nastavili zarážku:
 
     `res.render('index', { title: 'Express', "data": getData() });`
 

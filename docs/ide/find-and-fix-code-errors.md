@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d743749ebf1c31c25345c89922fee2434c3284bd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 49da1f46ee5e182741d3aaa56432faac39bfe0f1
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86386729"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833283"
 ---
 # <a name="make-code-work-in-visual-studio"></a>Udělejte v aplikaci Visual Studio práci s kódem
 
@@ -44,7 +44,7 @@ Pokud jste neudělali žádné úpravy kódu, který jste předtím a úspěšn�
 
 ![Výstup a Seznam chyb sady Visual Studio](../ide/media/vs_ide_gs_debug_bad_build_error_list.png)
 
-Kliknutím na chybový řádek v okně **Seznam chyb** přejdete na řádek, ve kterém se nachází chyba. (Nebo zapněte čísla řádků stisknutím **klávesy CTRL** + **Q**, zadání **čísel řádků**a následná volba **zapnout nebo vypnout čísla řádků** z výsledků. Toto je nejrychlejší způsob, jak se dostat do dialogového okna **Možnosti** , kde můžete zapnout čísla řádků.)
+Kliknutím na chybový řádek v okně **Seznam chyb** přejdete na řádek, ve kterém se nachází chyba. (Nebo zapněte čísla řádků stisknutím **klávesy CTRL** + **Q**, zadání **čísel řádků** a následná volba **zapnout nebo vypnout čísla řádků** z výsledků. Toto je nejrychlejší způsob, jak se dostat do dialogového okna **Možnosti** , kde můžete zapnout čísla řádků.)
 
 ![Editor sady Visual Studio s čísly řádků](../ide/media/vs_ide_gs_debug_line_numbers.png)
 
@@ -146,13 +146,13 @@ Další informace o použití zarážek naleznete v tématu [použití zarážek
 
 Když váš běžící kód narazí na zarážku a pozastaví, řádek kódu označený žlutě (aktuální příkaz) ještě nebyl proveden. V tomto okamžiku můžete chtít spustit aktuální příkaz a potom zkontrolovat změněné hodnoty. K provedení kódu v ladicím programu můžete použít několik příkazů *kroku* . Pokud je označený kód volání metody, můžete do něj krokovat stisknutím klávesy **F11**. Můžete také *Krokovat* s řádkem kódu stisknutím klávesy **F10**. Další příkazy a podrobnosti o tom, jak procházet kód, najdete v tématu [Navigace v kódu pomocí ladicího programu](../debugger/navigating-through-code-with-the-debugger.md).
 
-![Kontrola běhové hodnoty v aplikaci Visual Studio](../ide/media/vs_ide_gs_debug_hit_breakpoint.png)
+![Snímek obrazovky okna Visual Studio Code Červená tečka na levém hřbetu indikuje zarážku na řádku kódu označeného žlutě.](../ide/media/vs_ide_gs_debug_hit_breakpoint.png)
 
 Na předchozí ilustraci můžete posunout ladicí program jedním příkazem stisknutím klávesy **F10** nebo **F11** (protože zde není žádné volání metody, oba příkazy mají stejný výsledek).
 
 I když je ladicí program pozastaven, můžete zkontrolovat proměnné a zásobníky volání a zjistit, co se chystá. Jsou hodnoty v rozsahu, které očekáváte, abyste viděli? Jsou volání prováděna ve správném pořadí?
 
-![Kontrola běhové hodnoty v aplikaci Visual Studio](../ide/media/vs_ide_gs_debug_inspect_value.png)
+![Snímek obrazovky okna Visual Studio Code Na řádku kódu označeném žlutě je vybrána proměnná a rozevírací seznam zobrazuje svou aktuální hodnotu a odkazy.](../ide/media/vs_ide_gs_debug_inspect_value.png)
 
 Pokud chcete zobrazit aktuální hodnotu a odkazy, najeďte myší na proměnnou. Pokud se zobrazí hodnota, kterou jste neočekávali, pravděpodobně máte chybu v předchozím nebo volajícím kódu. Chcete-li získat podrobné informace o ladění, [Přečtěte si další](../debugger/debugger-feature-tour.md) informace o používání ladicího programu.
 

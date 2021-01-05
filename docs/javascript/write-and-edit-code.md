@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: a033c0fe1fd80edc7959c5f49993714982ecc805
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd1b12be2dba1526301cd0ea9a4356fb9cc14c14
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238177"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815734"
 ---
 # <a name="learn-to-use-the-code-editor-for-javascript"></a>Naučte se používat editor kódu pro JavaScript.
 
@@ -40,11 +40,11 @@ Pomocí integrovaného vývojového prostředí (IDE) můžete přidat nové sou
 
 IntelliSense je nevýznamný prostředek při kódování. Může zobrazit informace o dostupných členech typu nebo podrobnosti o parametrech pro různá přetížení metody. Při psaní v následujícím kódu se `Router()` zobrazí typy argumentů, které lze předat. To se označuje jako Help signatura.
 
-![Používání technologie IntelliSense](../javascript/media/write-code-signature-checking.png)
+![Snímek obrazovky okna Visual Studio Code s vloženým kódem JavaScriptu Pro funkci router () jsou zobrazeny informace technologie IntelliSense.](../javascript/media/write-code-signature-checking.png)
 
 Pomocí technologie IntelliSense můžete také vyplnit slovo poté, co zadáte dostatečný počet znaků, které chcete určit jako nejednoznačnost. Pokud umístíte kurzor za `data` řetězec v následujícím kódu a typu `get` , technologie IntelliSense zobrazí funkce definované dříve v kódu nebo definované v knihovně třetí strany, kterou jste přidali do projektu.
 
-![Používání technologie IntelliSense](../javascript/media/write-code-intellisense.png)
+![Snímek obrazovky okna Visual Studio Code se zadaným slovem "Get". Informace technologie IntelliSense se zobrazí pro všechny funkce začínající na Get.](../javascript/media/write-code-intellisense.png)
 
 Technologie IntelliSense také může zobrazit informace o typech při najetí myší na prvky programování.
 
@@ -52,7 +52,7 @@ Aby mohla služba jazyka poskytovat informace o IntelliSense, může používat 
 
 ## <a name="check-syntax"></a>Ověřit syntaxi
 
-Služba jazyka používá ESLint k zajištění kontroly syntaxe a linting. Pokud potřebujete nastavit možnosti pro kontrolu syntaxe v editoru, vyberte možnosti **nástrojů**  >  **Options**  >  **JavaScript/TypeScript**  >  **linting**. Možnosti linting odkazují na globální konfigurační soubor ESLint.
+Služba jazyka používá ESLint k zajištění kontroly syntaxe a linting. Pokud potřebujete nastavit možnosti pro kontrolu syntaxe v editoru, vyberte možnosti **nástrojů**  >    >  **JavaScript/TypeScript**  >  **linting**. Možnosti linting odkazují na globální konfigurační soubor ESLint.
 
 V následujícím kódu uvidíte zeleně zvýrazněnou syntaxi (zeleně vlnovky) na výrazu. Najeďte myší na zvýrazňování syntaxe.
 
@@ -100,7 +100,7 @@ Zavřete okno s náhledem definice výběrem malého pole se znakem x v pravém 
 
 Visual Studio poskytuje užitečné *fragmenty kódu* , které můžete použít k rychlému a snadnému vygenerování běžně používaných bloků kódu. [Fragmenty kódu](../ide/code-snippets.md) jsou k dispozici pro různé programovací jazyky, včetně JavaScriptu. Pojďme přidat `for` smyčku do souboru kódu.
 
-Umístěte kurzor na místo, kam chcete vložit fragment kódu, klikněte pravým tlačítkem myši a vyberte fragment kódu pro vložení **fragmentu**  >  **Insert Snippet**.
+Umístěte kurzor na místo, kam chcete vložit fragment kódu, klikněte pravým tlačítkem myši a vyberte fragment kódu pro vložení **fragmentu**  >  .
 
 ![Fragment kódu v aplikaci Visual Studio](../javascript/media/write-code-insert-snippet.png)
 
@@ -116,7 +116,7 @@ for (var i = 0; i < length; i++) {
 }
 ```
 
-Můžete se podívat na dostupné fragmenty kódu pro váš jazyk, a to tak, že vyberete **Upravit**  >  **IntelliSense**  >  **Vložit fragment**a pak zvolíte složku vašeho jazyka.
+Můžete se podívat na dostupné fragmenty kódu pro váš jazyk, a to tak, že vyberete **Upravit**  >  **IntelliSense**  >  **Vložit fragment** a pak zvolíte složku vašeho jazyka.
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,5 +1,6 @@
 ---
 title: Vzdálené ladění projektu C++ | Microsoft Docs
+description: Naučte se, jak ladit aplikaci Visual Studio C++ ze vzdáleného počítače pomocí následujících podrobných pokynů.
 ms.custom: remotedebugging
 ms.date: 08/14/2018
 ms.topic: conceptual
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0173ed557afa47129e0cc92d9ef9b2d94a7b198f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8d3b578e62b917a7553b42a04e53062c406c4fd
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "92298735"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815799"
 ---
 # <a name="remote-debugging-a-c-project-in-visual-studio"></a>Vzdálené ladění projektu C++ v aplikaci Visual Studio
 Chcete-li ladit aplikaci Visual Studio na jiném počítači, nainstalujte a spusťte nástroje Remote Tools v počítači, kde budete nasazovat aplikaci, nakonfigurujte projekt tak, aby se připojil ke vzdálenému počítači ze sady Visual Studio, a potom aplikaci nasaďte a spusťte.
@@ -57,13 +58,13 @@ Vzdálený ladicí program je podporován ve Windows 7 a novějších (ne v tele
 
 1. Vytvořte aplikaci knihovny MFC s názvem **mymfc.**
 
-2. Nastavte zarážku někde v aplikaci, která je snadno dostupná, například v **mainfrm. cpp**na začátku `CMainFrame::OnCreate` .
+2. Nastavte zarážku někde v aplikaci, která je snadno dostupná, například v **mainfrm. cpp** na začátku `CMainFrame::OnCreate` .
 
 3. V Průzkumník řešení klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**. Otevřete kartu **ladění** .
 
 4. Nastavte **ladicí program na spouštění** pro **vzdálený ladicí program systému Windows**.
 
-    ![RemoteDebuggingCPlus](../debugger/media/remotedebuggingcplus.png "RemoteDebuggingCPlus")
+    ![Snímek obrazovky karty ladění ve vlastnostech Průzkumník řešení sady Visual Studio Vlastnost ladicího programu na spuštění je nastavená na vzdálený ladicí program systému Windows.](../debugger/media/remotedebuggingcplus.png)
 
 5. Proveďte následující změny vlastností:
 
@@ -83,9 +84,9 @@ Vzdálený ladicí program je podporován ve Windows 7 a novějších (ne v tele
 
 7. V případě konfigurace **ladění** zaškrtněte políčko **nasadit** .
 
-    ![RemoteDebugCplusDeploy](../debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")
+    ![Snímek obrazovky Configuration Manager v Průzkumník řešení sady Visual Studio. Je zvolená konfigurace ladění a je zaškrtnuté políčko nasadit.](../debugger/media/remotedebugcplusdeploy.png)
 
-8. Spusťte ladění (**ladění > spustit ladění**nebo **F5**).
+8. Spusťte ladění (**ladění > spustit ladění** nebo **F5**).
 
 9. Spustitelný soubor se automaticky nasadí do vzdáleného počítače.
 
@@ -109,7 +110,7 @@ Vzdálený ladicí program je podporován ve Windows 7 a novějších (ne v tele
 ## <a name="see-also"></a>Viz také
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
-- [Konfigurace brány firewall ve Windows pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
+- [Konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Přiřazení portů vzdáleného ladicího programu](../debugger/remote-debugger-port-assignments.md)
 - [Vzdálené ladění ASP.NET na vzdáleném počítači se službou IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)
-- [Chyby a řešení potíží se vzdáleným laděním](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Chyby vzdáleného ladění a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)

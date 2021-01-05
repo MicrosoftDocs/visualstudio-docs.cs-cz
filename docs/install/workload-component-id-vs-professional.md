@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Professional úlohy a ID komponent
 titleSuffix: ''
-description: Použití zatížení a ID komponent k instalaci sady Visual Studio pomocí příkazového řádku nebo pro určení jako závislosti v manifestu VSIX
+description: K instalaci sady Visual Studio z příkazového řádku nebo určení závislosti v manifestu VSIX použijte Visual Studio Professional úlohy a ID komponent.
 keywords: ''
 author: ornellaalt
 ms.author: ornella
@@ -16,12 +16,12 @@ ms.assetid: 5719032b-2c2e-416e-a281-a4573ec74e38
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 6ac189de45248d277969be3f38e60daba2985ebc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6274396d35756682ad929b051d155897bcafb8e7
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184327"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846990"
 ---
 # <a name="visual-studio-professional-component-directory"></a>Visual Studio Professional adresář součástí
 

@@ -12,12 +12,12 @@ ms.assetid: 92dff25c-36ee-4135-acdd-315c4962fa11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 713d711847d798c617074d2d620e09f914c1a147
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 9f670c9cf543ae209ebed63ce185fadfbbe253d0
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190227"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815721"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>Oprava nedetekovatelných dynamických parametrů v testu výkonnosti webu
 
@@ -190,13 +190,13 @@ Pro demonstraci zjistitelného a nezjistitelného dynamického parametru vytvoř
 
 3. Vraťte se do prohlížeče webového výkonu Výsledky testů Viewer a vyberte stránku *JScriptQuery. aspx* , která se nezdařila. Pak klikněte na kartu žádost, ověřte, že je zaškrtnuté políčko Zobrazit nezpracovaná data, přejděte dolů a zvolte rychlé hledání na CustomQueryString.
 
-     ![K izolaci dynamického parametru použijte rychlé hledání.](../test/media/web_test_dynamicparameter_runresultsquckfind.png)
+     ![Snímek obrazovky s kartou Request v prohlížeči výsledků textu výkonu webu Je vybrán parametr QueryString a v místní nabídce je zvýrazněna možnost QuickFind.](../test/media/web_test_dynamicparameter_runresultsquckfind.png)
 
 4. Víme od zobrazení editoru testů, že CustomQueryString žádosti *JScriptQuery. aspx* byla přiřazena hodnota: `jScriptQueryString___1v0yhyiyr0raa2w4j4pwf5zl` a podezřelá dynamická část je "1v0yhyiyr0raa2w4j4pwf5zl". V rozevíracím seznamu najít odstraňte podezřelou část hledaného řetězce. Řetězec by měl být "CustomQueryString = jScriptQueryString___".
 
      Dynamické parametry jsou přiřazeny jejich hodnotám v jednom z požadavků, které předcházejí žádosti, která obsahuje chybu. Proto zaškrtněte políčko Hledat nahoru a zvolte Najít další, dokud se na panelu žádosti nezobrazí předchozí požadavek na *QueryString. aspx* . Tato situace by se měla objevit po třech případech, kdy zvolíte Najít další.
 
-     ![K izolaci dynamického parametru použijte rychlé hledání.](../test/media/web_test_dynamicparameter_runresultsquckfind4.png)
+     ![Snímek obrazovky prohlížeče výsledků textu výkonu webu Je vybraný řetězec dotazu a zobrazí se dialogové okno najít s SearchUp a najít další vybraný.](../test/media/web_test_dynamicparameter_runresultsquckfind4.png)
 
      Jak je znázorněno na kartě odpověď a v předchozím příkladu implementovaného v jazyce JavaScript, parametr řetězce dotazu CustomQueryString je přiřazena hodnota "jScriptQueryString___" a je také zřetězena s vrácenou hodnotou z var sessionId.
 

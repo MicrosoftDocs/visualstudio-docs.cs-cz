@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 447725fd27ab81b85890d37a8f0df8a35ad5fbee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03c5dca96b4e20e36bc6c69b907423f27ac4af71
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328474"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833218"
 ---
 # <a name="troubleshooting-xaml-hot-reload"></a>Řešení potíží s opětovným načítáním XAML za provozu
 
@@ -34,24 +34,24 @@ Tato funkce je ve výchozím nastavení povolená. Když začnete ladit aplikaci
 
 ![Dostupné Hot reloading XAML](../debugger/media/xaml-hot-reload-available.png)
 
-Pokud nevidíte panel nástrojů v aplikaci, otevřete možnosti **ladění**  >  **Options**  >  **Obecné**. Ujistěte se, že jsou vybrány obě možnosti, **Povolit ladicí nástroje uživatelského rozhraní pro XAML** a **Povolit kódování XAML Hot reload** .
+Pokud nevidíte panel nástrojů v aplikaci, otevřete možnosti **ladění**  >    >  **Obecné**. Ujistěte se, že jsou vybrány obě možnosti, **Povolit ladicí nástroje uživatelského rozhraní pro XAML** a **Povolit kódování XAML Hot reload** .
 
-![Povolit Hot reloadování XAML](../debugger/media/xaml-hot-reload-enable.png)
+![Snímek obrazovky okna možností ladění aplikace Visual Studio. Jsou vybrány Obecné možnosti ladění a je zaškrtnuta možnost povolit Hot Reloades XAML.](../debugger/media/xaml-hot-reload-enable.png)
 
 Pokud jsou tyto možnosti vybrány, pak přejít do živého vizuálního stromu (**ladit**  >  **Windows**  >  **Live Visual Tree**) a ujistěte se, že je vybrána možnost **Zobrazit běhové nástroje na** panelu nástrojů aplikace (vlevo vlevo).
 
-![Povolit Hot reloadování XAML](../debugger/media/xaml-hot-reload-show-runtime-tools.png)
+![Snímek panelu nástrojů v horní části okna živého vizuálního stromu s vybraným tlačítkem Zobrazit nástroje modulu runtime v aplikaci](../debugger/media/xaml-hot-reload-show-runtime-tools.png)
 
 ## <a name="verify-that-you-use-start-debugging-rather-than-attach-to-process"></a>Ověřte, že používáte spustit ladění, nikoli připojit k procesu.
 
 Kódování XAML Hot reload vyžaduje, aby byla proměnná prostředí v `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` době spuštění aplikace nastavená na hodnotu 1. Sada Visual Studio nastaví tuto automatickou sadu jako součást příkazu **ladit**  >  **spuštění ladění** (nebo **F5**). Pokud chcete použít kódování XAML Hot Load pomocí příkazu **ladit**  >  **připojit k procesu** , pak nastavte proměnnou prostředí sami.
 
 > [!NOTE]
-> Chcete-li nastavit proměnnou prostředí, pomocí tlačítka Start vyhledejte "proměnná prostředí" a vyberte možnost **Upravit proměnné prostředí systému**. V dialogovém okně, které se otevře, zvolte **proměnné prostředí**a pak ho přidejte jako uživatelskou proměnnou a nastavte hodnotu na `1` . Chcete-li vyčistit, po dokončení ladění odeberte proměnnou.
+> Chcete-li nastavit proměnnou prostředí, pomocí tlačítka Start vyhledejte "proměnná prostředí" a vyberte možnost **Upravit proměnné prostředí systému**. V dialogovém okně, které se otevře, zvolte **proměnné prostředí** a pak ho přidejte jako uživatelskou proměnnou a nastavte hodnotu na `1` . Chcete-li vyčistit, po dokončení ladění odeberte proměnnou.
 
 ## <a name="verify-that-your-msbuild-properties-are-correct"></a>Ověřte správnost vlastností MSBuild.
 
-Ve výchozím nastavení jsou informace o zdroji zahrnuty v konfiguraci ladění. Řídí se vlastnostmi MSBuild ve vašich souborech projektu (například *. csproj). Pro WPF je vlastnost `XamlDebuggingInformation` , která musí být nastavena na `True` . U UWP je vlastnost `DisableXbfLineInfo` , která musí být nastavena na `False` . Příklad:
+Ve výchozím nastavení jsou informace o zdroji zahrnuty v konfiguraci ladění. Řídí se vlastnostmi MSBuild ve vašich souborech projektu (například *. csproj). Pro WPF je vlastnost `XamlDebuggingInformation` , která musí být nastavena na `True` . U UWP je vlastnost `DisableXbfLineInfo` , která musí být nastavena na `False` . Například:
 
 SUBSYSTÉM
 

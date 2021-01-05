@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b32b402e2bbf85cf5c028ec2dc94821ec463644
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: f6e2b851057d924353e6e1e9a211fcbb294353c8
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674775"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761261"
 ---
 # <a name="attach-to-a-process-running-on-a-docker-container"></a>Připojení k procesu běžícímu na kontejneru Docker 
 
@@ -34,7 +34,7 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
 
 1. V aplikaci Visual Studio vyberte možnost **ladit > připojit k procesu (CTRL + ALT + P)** a otevřete dialogové okno **připojit k procesu** .
 
-![Nabídka připojit k procesu](../debugger/media/attach-process-menu.png "Attach_To_Process_Menu")
+![Snímek obrazovky dialogového okna připojit k procesu v aplikaci Visual Studio zobrazující typ připojení Docker (kontejner Linux).](../debugger/media/attach-process-menu.png "Attach_To_Process_Menu")
 
 2. Nastavte **Typ připojení** **Docker (kontejner Linux)**.
 3. Vyberte **Najít...** a nastavte **cíl připojení** přes dialogové okno **Vybrat kontejner Docker** .
@@ -63,7 +63,7 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
 
 4. Zvolte odpovídající proces kontejneru ze seznamu **dostupných procesů** a vyberte **připojit** a spusťte ladění procesu kontejneru C# v aplikaci Visual Studio!
 
-    ![Nabídka připojit k Docker je dokončená](../debugger/media/docker-attach-complete.png "Nabídka připojit k systému Linux Docker je dokončená")
+    ![Snímek obrazovky dialogového okna připojit k procesu v aplikaci Visual Studio Typ připojení je nastavený na Docker (kontejner Linux) a je vybraný proces dotnet.](../debugger/media/docker-attach-complete.png "Nabídka připojit k systému Linux Docker je dokončená")
 
 ## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a>Připojení k procesu běžícímu na kontejneru Docker systému Windows
 
@@ -76,7 +76,7 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
 
 1. V aplikaci Visual Studio vyberte možnost **ladit > připojit k procesu** (nebo **CTRL + ALT + P**) a otevřete dialogové okno **připojit k procesu** .
 
-   ![Nabídka připojit k procesu](../debugger/media/attach-process-menu-docker-windows.png "Attach_To_Process_Menu")
+   ![Snímek obrazovky dialogového okna připojit k procesu v aplikaci Visual Studio zobrazující typ připojení Docker (kontejner Windows).](../debugger/media/attach-process-menu-docker-windows.png "Attach_To_Process_Menu")
 
 2. Nastavte **Typ připojení** **Docker (kontejner Windows)**.
 3. Vyberte **Najít...** a nastavte **cíl připojení** pomocí dialogového okna **Vybrat kontejner Docker** .
@@ -93,6 +93,6 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
 
 4. Zvolte odpovídající proces kontejneru ze seznamu **dostupných procesů** a vyberte **připojit** a spusťte ladění procesu kontejneru C#.
 
-    ![Nabídka připojit k Docker je dokončená](../debugger/media/docker-attach-complete-windows.png "Dokončená nabídka připojit k programu Windows Docker")
+    ![Snímek obrazovky dialogového okna připojit k procesu v aplikaci Visual Studio Typ připojení je nastavený na Docker (kontejner Windows) a je vybraný proces dotnet.exe.](../debugger/media/docker-attach-complete-windows.png "Dokončená nabídka připojit k programu Windows Docker")
 
-5.  Vyberte odpovídající proces kontejneru ze seznamu dostupných procesů a klikněte na tlačítko **připojit** a spusťte ladění procesu kontejneru C#.
+5. Vyberte odpovídající proces kontejneru ze seznamu dostupných procesů a klikněte na tlačítko **připojit** a spusťte ladění procesu kontejneru C#.

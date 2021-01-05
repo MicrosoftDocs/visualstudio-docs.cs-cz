@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c6c09bbf74cca803156842d185b5bf86ff52439
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: a6f0d126853c518692725d495586b3adfa57c9aa
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668817"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761352"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio
 
@@ -24,8 +24,9 @@ ms.locfileid: "97668817"
 Problém můžete ohlásit buď ze sady Visual Studio, nebo z jeho instalačního programu. Integrovaný nástroj zpětné vazby umožňuje snadno přidat diagnostické informace, které týmům sady Visual Studio pomáhají diagnostikovat a opravovat problémy. Tady je postup nahlášení problému.
 
 1. **V aplikaci Visual Studio** vyberte ikonu zpětné vazby v pravém horním rohu a vyberte Nahlásit problém. K nástroji pro zpětnou vazbu můžete získat přístup také **z nabídky**  >  **Odeslat zpětnou vazbu**  >  **s oznámením o problému**.
-![Nahlášení problému v komunitě vývojářů sady Visual Studio ](media/feedback-button.png) nebo nahlášení problému v **instalační program pro Visual Studio** , pokud nemůžete nainstalovat Visual Studio nebo není možné získat přístup k nástroji pro zpětnou vazbu v sadě Visual Studio.  V instalačním programu vyberte ikonu zpětné vazby v pravém horním rohu a vyberte Nahlásit problém.
-![Nahlášení problému v komunitě vývojářů sady Visual Studio v instalačním programu](media/installer.png)
+![Snímek obrazovky znázorňující ikonu zpětné vazby vybrané v pravém horním rohu okna Visual studia a nahlásit problém vybraný v místní nabídce](media/feedback-button.png)
+Případně nahlásit problém v **instalační program pro Visual Studio** , pokud nemůžete nainstalovat aplikaci Visual Studio nebo nemáte přístup k nástroji pro zpětnou vazbu v sadě Visual Studio.  V instalačním programu vyberte ikonu zpětné vazby v pravém horním rohu a vyberte Nahlásit problém.
+![Snímek obrazovky znázorňující ikonu zpětné vazby vybrané v pravém horním rohu Instalační program pro Visual Studio a nahlásit problém vybraný v místní nabídce](media/installer.png)
 
 1. Kliknutím na **nahlásit problém** otevřete váš výchozí prohlížeč a přihlásíte se k němu pomocí stejného účtu, který používáte k přihlášení do sady Visual Studio.
 
@@ -67,11 +68,11 @@ Pokud problém neobsahuje důležité informace, přiřadíme stav **potřebuje 
 
 1. Použijte odkaz v e-mailu na zprávu o problému nebo přejděte na domovskou stránku, kde se zobrazí všechny sestavy ve stavu **vyžaduje více informací** .
 
-    ![Moje zpětná vazba](../ide/media/feedback-my-feedback.png)
+    ![Snímek obrazovky domovské stránky okna pro zpětnou vazbu sady Visual Studio V seznamu je uvedena jedna položka zpětné vazby, která je označena popiskem "potřebuje další informace" červeně.](../ide/media/feedback-my-feedback.png)
 
 1. Kliknutím na odkaz poskytnout další informace v sestavě problém přejdete na novou obrazovku. Tady uvidíte, jaké informace se vyžadují.
 
-   ![Podrobnosti o informacích, které se mají odeslat Microsoftu](../ide/media/feedback-need-more-info.png)
+   ![Snímek obrazovky okna pro zpětnou vazbu sady Visual Studio zobrazující informace, které společnost Microsoft požaduje k vyřešení problému.](../ide/media/feedback-need-more-info.png)
 
 1. Další informace můžete zadat přidáním komentářů, příloh nebo kroků záznamu. Toto prostředí je podobné jako hlášení nového problému nebo poskytnutí dalších informací při hlasování o problému.
 

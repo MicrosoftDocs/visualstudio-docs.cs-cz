@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b28d87cc0842d5a3de8634ae50378915196366ff
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 484cb82a3659e306bd4c6bd14a3133c4677160db
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527925"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833335"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Kurz: Vytvoření jednoduché konzolové aplikace v jazyce C# v aplikaci Visual Studio
 
@@ -282,7 +282,7 @@ Pojďme si projít několik běžných chyb vstupu uživatele, vyhledat je v lad
 
 Když se pokusíte dělit číslo nulou, aplikace konzoly se může ukotvit a pak se zobrazí informace o tom, co je v editoru kódu chybné.
 
-   ![V editoru kódu sady Visual Studio se zobrazí chyba dělení nulou.](./media/csharp-console-calculator-dividebyzero-error.png)
+   ![Snímek obrazovky editoru kódu sady Visual Studio ukazující žlutě zvýrazněný řádek a Neošetřená chyba pro ' pokus o dělení nulou '.](./media/csharp-console-calculator-dividebyzero-error.png)
 
 > [!NOTE]
 > V některých případech se aplikace neblokuje a ladicí program nebude zobrazovat chybu s dělením nulou. Místo toho může aplikace vracet neočekávaný nenumerický výsledek, jako je například symbol nekonečno. Následující oprava kódu se pořád používá.
@@ -311,7 +311,7 @@ Pojďme změnit kód pro zpracování této chyby.
 
 Když teď číslo vydělíte nulou, aplikace si vyžádá další číslo. Ještě lepší: přestane zobrazovat výzvy, dokud nezadáte číslo jiné než nula.
 
-   ![Opravila se chyba dělení nulou.](./media/csharp-console-calculator-dividebyzero.png)
+   ![Snímek obrazovky editoru kódu sady Visual Studio zobrazující kód pro příkaz switch s kontrolou pro položku, která je přidána nenulovému děliteli.](./media/csharp-console-calculator-dividebyzero.png)
 
 ### <a name="fix-the-format-error"></a>Opravit chybu "formát"
 

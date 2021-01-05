@@ -12,16 +12,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ffaeff850c739cd81569a88ae980acf837c413c1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c6d451735042374f0e3c6fb2154cd54520a069fc
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184208"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761430"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>První pohled na ladicí program sady Visual Studio
 
-Toto téma představuje nástroje ladicího programu, které poskytuje Visual Studio. V kontextu sady Visual Studio se při *ladění aplikace*obvykle to znamená, že spouštíte aplikaci s připojeným ladicím programem (tj. v režimu ladění). Když to uděláte, ladicí program poskytuje mnoho způsobů, jak zjistit, co váš kód při spuštění dělá. Můžete si projít kód a prohlédnout si hodnoty uložené v proměnných, můžete nastavit hodinky pro proměnné, abyste viděli, kdy se hodnoty mění, můžete zkontrolovat cestu provádění vašeho kódu, a to et al. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete toto téma, přečíst [ladění pro absolutní začátečníky](../debugger/debugging-absolute-beginners.md) .
+Toto téma představuje nástroje ladicího programu, které poskytuje Visual Studio. V kontextu sady Visual Studio se při *ladění aplikace* obvykle to znamená, že spouštíte aplikaci s připojeným ladicím programem (tj. v režimu ladění). Když to uděláte, ladicí program poskytuje mnoho způsobů, jak zjistit, co váš kód při spuštění dělá. Můžete si projít kód a prohlédnout si hodnoty uložené v proměnných, můžete nastavit hodinky pro proměnné, abyste viděli, kdy se hodnoty mění, můžete zkontrolovat cestu provádění vašeho kódu, a to et al. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete toto téma, přečíst [ladění pro absolutní začátečníky](../debugger/debugging-absolute-beginners.md) .
 
 Zde popsané funkce platí pro C#, C++, Visual Basic, JavaScript a další jazyky, které podporuje Visual Studio (s výjimkou popsaných případů).
 
@@ -50,7 +50,7 @@ Pokud chcete aplikaci spustit pomocí připojeného ladicího programu, stiskně
 Klávesa F11 je dobrým způsobem, jak prostudovat tok spouštění v nejpodrobnějším podrobnostech. (K rychlejšímu přesunu kódu vám ukážeme i některé další možnosti.) Ve výchozím nastavení přeskočí ladicí program neuživatelský kód (Pokud chcete více podrobností, přečtěte si téma [pouze můj kód](../debugger/just-my-code.md)).
 
 >[!NOTE]
-> Ve spravovaném kódu se zobrazí dialogové okno s dotazem, zda chcete být upozorněni, když automaticky provedete krok nad vlastnostmi a operátory (výchozí chování). Chcete-li změnit nastavení později, v nabídce **nástroje > možnosti** v části **ladění**zakažte možnost **Krokovat přes vlastnosti a operátory** .
+> Ve spravovaném kódu se zobrazí dialogové okno s dotazem, zda chcete být upozorněni, když automaticky provedete krok nad vlastnostmi a operátory (výchozí chování). Chcete-li změnit nastavení později, v nabídce **nástroje > možnosti** v části **ladění** zakažte možnost **Krokovat přes vlastnosti a operátory** .
 
 ## <a name="step-over-code-to-skip-functions"></a>Krokovat s kódem pro přeskočení funkcí
 
@@ -62,19 +62,19 @@ F10 posune ladicí program bez krokování do funkcí nebo metod v kódu aplikac
 
 Jak bylo zmíněno dříve, ladicí program ve výchozím nastavení přeskočí spravované vlastnosti a pole, ale **Krok do konkrétního** příkazu umožňuje toto chování přepsat.
 
-Klikněte pravým tlačítkem na vlastnost nebo pole a zvolte **Krok do konkrétní**a pak zvolte jednu z dostupných možností.
+Klikněte pravým tlačítkem na vlastnost nebo pole a zvolte **Krok do konkrétní** a pak zvolte jednu z dostupných možností.
 
-![Krokovat do konkrétního](../debugger/media/dbg-tour-step-into-specific.png "Krokovat do konkrétního")
+![Snímek obrazovky ladicího programu sady Visual Studio se zvýrazněným řádkem kódu Krok do konkrétní je vybrán v místní nabídce a je vybrána metoda Path. set.](../debugger/media/dbg-tour-step-into-specific.png)
 
 V tomto příkladu se **Krok do konkrétní** dostane do kódu pro `Path.set` .
 
-![Krokovat do konkrétního](../debugger/media/dbg-tour-step-into-specific-2.png "Krokovat do konkrétního")
+![Snímek obrazovky ladicího programu sady Visual Studio zobrazující kód pro cestu. set. Složené závorky obklopující funkci set jsou zvýrazněné žlutě.](../debugger/media/dbg-tour-step-into-specific-2.png)
 
 ## <a name="run-to-a-point-in-your-code-quickly-using-the-mouse"></a>Rychlé spuštění s bodem v kódu pomocí myši
 
-Když jste v ladicím programu, najeďte myší na řádek kódu, dokud **na něj** ![kliknete](../debugger/media/dbg-tour-run-to-click.png "RunToClick") na tlačítko Spustit a kliknutím na tlačítko Zobrazit na levé straně.
+Když jste v ladicím programu, najeďte myší na řádek kódu, dokud nekliknete na tlačítko **Spustit** pro kliknutí (spustit do tohoto pole) na tlačítku ![ Spustit pro klikněte v ladicím programu sady Visual Studio. Tlačítko označuje, že spuštění by mělo běžet na řádek, kde je tlačítko umístěno.](../debugger/media/dbg-tour-run-to-click.png) zobrazí se vlevo.
 
-![Běžet do kliknutí](../debugger/media/dbg-tour-run-to-click-2.png "Běžet do kliknutí")
+![Snímek obrazovky ladicího programu sady Visual Studio zobrazující tlačítko spustit pro kliknutí, které se zobrazuje hned vlevo od volání funkce Update](../debugger/media/dbg-tour-run-to-click-2.png)
 
 > [!NOTE]
 > Tlačítko **spustit do kliknutím** (spustit do tohoto umístění) je dostupné od začátku v [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] .
@@ -110,13 +110,13 @@ Tento příkaz je užitečný při úpravách kódu a chcete rychle nastavit do�
 
 Klikněte na tlačítko **restartovat** ![aplikaci](../debugger/media/dbg-tour-restart.png "Restartovat aplikaci") na panelu nástrojů ladění (**CTRL + SHIFT + F5**).
 
-Po stisknutí tlačítka **restartovat**ušetří čas oproti zastavování aplikace a restartování ladicího programu. Ladicí program se pozastaví na první zarážce, která je dosaženo spuštěním kódu.
+Po stisknutí tlačítka **restartovat** ušetří čas oproti zastavování aplikace a restartování ladicího programu. Ladicí program se pozastaví na první zarážce, která je dosaženo spuštěním kódu.
 
 Pokud chcete zastavit ladicí program a vrátit se zpět do editoru kódu, můžete stisknout červené tlačítko Zastavit ![ladění](../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") namísto **restartu**.
 
 ## <a name="edit-your-code-and-continue-debugging-c-vb-c-xaml"></a>Úprava kódu a pokračování v ladění (C#, VB, C++, XAML)
 
-Ve většině jazyků podporovaných v rámci sady Visual Studio můžete upravit kód uprostřed relace ladění a pokračovat v ladění. Chcete-li použít tuto funkci, klikněte na svůj kód v průběhu pozastaveného ladicího programu, proveďte úpravy a stisknutím klávesy **F5**, **F10**nebo **F11** pokračujte v ladění.
+Ve většině jazyků podporovaných v rámci sady Visual Studio můžete upravit kód uprostřed relace ladění a pokračovat v ladění. Chcete-li použít tuto funkci, klikněte na svůj kód v průběhu pozastaveného ladicího programu, proveďte úpravy a stisknutím klávesy **F5**, **F10** nebo **F11** pokračujte v ladění.
 
 ![Upravit a pokračovat v ladění](../debugger/media/dbg-tips-edit-and-continue.gif "EditAndContinue")
 
@@ -181,7 +181,7 @@ Okno **zásobník volání** zobrazuje pořadí, ve kterém jsou metody a funkce
 
 Dvakrát klikněte na řádek kódu, abyste se mohli podívat na zdrojový kód a zároveň změnit aktuální rozsah, který je kontrolován ladicím programem. Toto nepokročilý ladicí program.
 
-Můžete také použít nabídky kliknutím pravým tlačítkem z okna **zásobník volání** k provedení dalších akcí. Například můžete vložit zarážky do konkrétních funkcí, restartovat aplikaci pomocí funkce **Spustit na kurzor**a přejít na zdrojový kód. Viz [Postupy: prohlédnutí zásobníku volání](../debugger/how-to-use-the-call-stack-window.md).
+Můžete také použít nabídky kliknutím pravým tlačítkem z okna **zásobník volání** k provedení dalších akcí. Například můžete vložit zarážky do konkrétních funkcí, restartovat aplikaci pomocí funkce **Spustit na kurzor** a přejít na zdrojový kód. Viz [Postupy: prohlédnutí zásobníku volání](../debugger/how-to-use-the-call-stack-window.md).
 
 ## <a name="examine-an-exception"></a><a name="exception"></a> Kontrola výjimky
 

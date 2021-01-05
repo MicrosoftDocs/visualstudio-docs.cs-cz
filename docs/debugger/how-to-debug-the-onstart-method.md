@@ -1,5 +1,6 @@
 ---
 title: Ladění metody OnStart | Microsoft Docs
+description: Naučte se ladit metodu OnStart služby Windows v aplikaci Visual Studio spuštěním ladicího programu zevnitř metody.
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d695e4d22c728eb256aeb0e1350819ba23b93385
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 27cb5a870166e1d8909c80dc617ca16690bf6619
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852371"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761404"
 ---
 # <a name="how-to-debug-the-onstart-method"></a>Postupy: Ladění metody OnStart
 Službu systému Windows můžete ladit spuštěním služby a připojením ladicího programu k procesu služby. Další informace naleznete v tématu [How to: Debug Application Service Applications](/dotnet/framework/windows-services/how-to-debug-windows-service-applications). Chcete-li však ladit <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> metodu služby systému Windows, je nutné spustit ladicí program zevnitř metody.
@@ -42,13 +43,13 @@ Službu systému Windows můžete ladit spuštěním služby a připojením ladi
 
     Mělo by se zobrazit dialogové okno podobné následujícímu:
 
-    ![OnStartDebug](../debugger/media/onstartdebug.png "OnStartDebug")
+    ![Snímek obrazovky dialogového okna pro ladění za běhu sady Visual Studio, které zobrazuje neošetřenou výjimku .NET Framework nastaly v WindowsService-Asis.exe.](../debugger/media/onstartdebug.png)
 
 3. Vyberte **Ano, ladit \<service name> .**
 
 4. V okně ladicí program za běhu vyberte verzi sady Visual Studio, kterou chcete použít pro ladění.
 
-    ![JustInTimeDebugger](../debugger/media/justintimedebugger.png "JustInTimeDebugger")
+    ![Snímek obrazovky okna programu pro ladění za běhu sady Visual Studio s vybranou možností nová instance Microsoft Visual Studio 2015 v seznamu možných ladicích programů.](../debugger/media/justintimedebugger.png)
 
 5. Spustí se nová instance sady Visual Studio a provádění se zastaví v `Debugger.Launch()` metodě.
 

@@ -1,6 +1,6 @@
 ---
 title: Ladění živých ASP.NET služeb Azure Kubernetes
-description: Naučte se, jak nastavit snímkovací body a zobrazit snímky pomocí Snapshot Debugger.
+description: Naučte se používat Snapshot Debugger v sadě Visual Studio k nastavení snímkovací body a pořizování snímků při ladění živých služeb ASP.NET Azure Kubernetes.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.topic: how-to
@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: e0f062108f19b38c6bf6514eda78098f493b3f78
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 823da6da0a842766739cb50c700bb723a47d0309
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350651"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846967"
 ---
 # <a name="debug-live-aspnet-azure-kubernetes-services-using-the-snapshot-debugger"></a>Ladění živých ASP.NET služeb Azure Kubernetes pomocí Snapshot Debugger
 
@@ -26,7 +26,7 @@ Snapshot Debugger pořizování snímku vašich aplikací v produkčním prostř
 
 Snímkovací body a protokolovacích bodů jsou podobné zarážekm, ale na rozdíl od zarážek, snímkovací body aplikaci při volání neukončí. Záznam snímku na snímkovací bod obvykle trvá 10-20 milisekund.
 
-V tomto kurzu provedete následující:
+V tomto kurzu:
 
 > [!div class="checklist"]
 > * Spusťte Snapshot Debugger
@@ -98,7 +98,7 @@ Jakmile je snímkovací bod nastaveno, můžete buď ručně vygenerovat snímek
 
     ![Kontrola dat snímku](../debugger/media/snapshot-inspect-data.png)
 
-    Z tohoto zobrazení můžete na proměnné umístit ukazatel myši a zobrazit tak tipy, použít **místní**okna, **kukátka**a **zásobník volání** a také vyhodnotit výrazy.
+    Z tohoto zobrazení můžete na proměnné umístit ukazatel myši a zobrazit tak tipy, použít **místní** okna, **kukátka** a **zásobník volání** a také vyhodnotit výrazy.
 
     Samotný web je stále živý a koncoví uživatelé to neovlivní. Ve výchozím nastavení je zachycen pouze jeden snímek na snímkovací bod: po zachycení snímku se snímkovací bod vypne. Pokud chcete zachytit jiný snímek na snímkovací bod, můžete snímkovací bod znovu zapnout kliknutím na **aktualizovat kolekci**.
 

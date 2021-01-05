@@ -1,6 +1,6 @@
 ---
 title: 'Kurz: ladění kódu C++'
-description: Naučte se, jak spustit ladicí program sady Visual Studio, krokovat kód a prozkoumat data.
+description: Přečtěte si o funkcích ladicího programu sady Visual Studio a o tom, jak spustit ladicí program, krokovat kód a kontrolovat data v aplikaci C++.
 ms.custom: debug-experiment, seodec18, get-started
 ms.date: 02/04/2020
 ms.technology: vs-ide-debug
@@ -14,20 +14,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47b1a031a6c4e4e823a1fcc12aba228750aee27e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4cc5d0b85ac1406f214784976ca23467a0e0eb6c
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77091805"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847098"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Naučte se ladit kód C++ pomocí sady Visual Studio
 
-V tomto článku se seznámíte s funkcemi ladicího programu sady Visual Studio v podrobném podrobném návodu. Pokud chcete zobrazit vyšší úroveň funkcí ladicího programu, podívejte [se na téma první pohled na ladicí program](../debugger/debugger-feature-tour.md). Při *ladění aplikace*obvykle znamená, že máte spuštěnou aplikaci s připojeným ladicím programem. Když to uděláte, ladicí program poskytuje mnoho způsobů, jak zjistit, co váš kód při spuštění dělá. Můžete krokovat kód a prohlédnout si hodnoty uložené v proměnných, můžete nastavit hodinky pro proměnné, abyste viděli, kdy se hodnoty mění, můžete zkontrolovat cestu spuštění kódu, zjistit, zda je spuštěna větev kódu a tak dále. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprosto začátečníky](../debugger/debugging-absolute-beginners.md) .
+V tomto článku se seznámíte s funkcemi ladicího programu sady Visual Studio v podrobném podrobném návodu. Pokud chcete zobrazit vyšší úroveň funkcí ladicího programu, podívejte [se na téma první pohled na ladicí program](../debugger/debugger-feature-tour.md). Při *ladění aplikace* obvykle znamená, že máte spuštěnou aplikaci s připojeným ladicím programem. Když to uděláte, ladicí program poskytuje mnoho způsobů, jak zjistit, co váš kód při spuštění dělá. Můžete krokovat kód a prohlédnout si hodnoty uložené v proměnných, můžete nastavit hodinky pro proměnné, abyste viděli, kdy se hodnoty mění, můžete zkontrolovat cestu spuštění kódu, zjistit, zda je spuštěna větev kódu a tak dále. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprosto začátečníky](../debugger/debugging-absolute-beginners.md) .
 
 I když je ukázková aplikace C++, většina funkcí je platná pro C#, Visual Basic, F #, Python, JavaScript a další jazyky, které podporuje Visual Studio (F # nepodporuje funkci upravit a pokračovat. F # a JavaScript nepodporují okno **Automatické** hodnoty). Snímky obrazovky jsou v jazyce C++.
 
-V tomto kurzu provedete následující:
+V tomto kurzu:
 
 > [!div class="checklist"]
 > * Spusťte ladicí program a zarážky volání.
@@ -107,7 +107,7 @@ Nejprve vytvoříte projekt konzolové aplikace C++. Typ projektu se dodává se
 
 ## <a name="create-the-application"></a>Vytvoření aplikace
 
-1. V *Get-Started-Debugging. cpp*nahraďte veškerý výchozí kód následujícím kódem:
+1. V *Get-Started-Debugging. cpp* nahraďte veškerý výchozí kód následujícím kódem:
 
     ```cpp
     #include <string>
@@ -186,7 +186,7 @@ Nejprve vytvoříte projekt konzolové aplikace C++. Typ projektu se dodává se
 
 Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak rychle rychle spustit aplikaci v ladicím programu (ekvivalentní příkazy, jako jsou příkazy nabídky, se zobrazují v závorkách).
 
-1. Při pozastavení ve `for` smyčce v `main` metodě stiskněte klávesu **F11** (nebo zvolte možnost **ladění > krokovat**s), aby bylo možné přejít k `SendMessage` volání metody.
+1. Při pozastavení ve `for` smyčce v `main` metodě stiskněte klávesu **F11** (nebo zvolte možnost **ladění > krokovat** s), aby bylo možné přejít k `SendMessage` volání metody.
 
      Po stisknutí klávesy **F11** dvakrát byste měli být na tomto řádku kódu:
 
@@ -210,7 +210,7 @@ Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak 
 
 1. Několikrát stiskněte klávesu **F11** , dokud se znovu nevrátíte k `SendMessage` volání metody.
 
-1. Když jste pozastavili volání metody, stiskněte **F10** (nebo zvolte **ladění > krokovat**s) jednou.
+1. Když jste pozastavili volání metody, stiskněte **F10** (nebo zvolte **ladění > krokovat** s) jednou.
 
      ![Pro krokování kódu použijte F10](../debugger/media/get-started-step-over-cpp.png "F10 krok přes")
 
@@ -237,7 +237,7 @@ Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak 
 
 Klikněte na tlačítko **restartovat** ![aplikaci](../debugger/media/dbg-tour-restart.png "RestartApp") na panelu nástrojů ladění (**CTRL**  +  **SHIFT**  +  **F5**).
 
-Po stisknutí tlačítka **restartovat**ušetří čas oproti zastavování aplikace a restartování ladicího programu. Ladicí program se pozastaví na první zarážce, která je dosaženo spuštěním kódu.
+Po stisknutí tlačítka **restartovat** ušetří čas oproti zastavování aplikace a restartování ladicího programu. Ladicí program se pozastaví na první zarážce, která je dosaženo spuštěním kódu.
 
 Ladicí program se znovu zastaví na zarážce, kterou jste předtím nastavili uvnitř `for` smyčky.
 
@@ -251,7 +251,7 @@ Funkce, které umožňují kontrolu proměnných, jsou jedním z nejužitečněj
 
 1. Potom najeďte myší na `name` proměnnou a uvidíte její aktuální hodnotu, prázdný řetězec.
 
-1. Několikrát stiskněte klávesu **F5** (nebo pokračujte v **ladění**  >  **Continue**) několikrát k iterování několikrát přes smyčku a poklikáním `for` na zarážku, a pokaždé, když se podíváte na `name` proměnnou pokaždé, abyste zkontrolovali její hodnotu.
+1. Několikrát stiskněte klávesu **F5** (nebo pokračujte v **ladění**  >  ) několikrát k iterování několikrát přes smyčku a poklikáním `for` na zarážku, a pokaždé, když se podíváte na `name` proměnnou pokaždé, abyste zkontrolovali její hodnotu.
 
      ![Zobrazit Tip pro data](../debugger/media/get-started-data-tip-cpp.png "Zobrazit Tip pro data")
 
@@ -263,7 +263,7 @@ Funkce, které umožňují kontrolu proměnných, jsou jedním z nejužitečněj
 
 1. Podívejte se na okno **Automatické** hodnoty v dolní části editoru kódu.
 
-    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu, a to volbou **ladit**  >  **okna**  >  **Automatické**hodnoty.
+    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu, a to volbou **ladit**  >  **okna**  >  **Automatické** hodnoty.
 
     V okně **Automatické** hodnoty vidíte proměnné a jejich aktuální hodnotu. Okno **Automatické** hodnoty zobrazuje všechny proměnné, které se používají na aktuálním řádku nebo na předchozím řádku (podívejte se na dokumentaci pro specifické chování jazyka).
 
@@ -287,7 +287,7 @@ Funkce, které umožňují kontrolu proměnných, jsou jedním z nejužitečněj
 
 1. Při pozastavení ve `for` smyčce klikněte na okno **zásobník volání** , které je ve výchozím nastavení otevřené v pravém dolním podokně.
 
-    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu výběrem možnosti **ladit**  >  **Windows**  >  **zásobník volání**systému Windows.
+    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu výběrem možnosti **ladit**  >    >  **zásobník volání** systému Windows.
 
 2. Klikněte několikrát na klávesu **F11** , dokud se nezobrazí pozastavení ladicího programu v `SendMessage` metodě. Podívejte se do okna **zásobník volání** .
 
@@ -302,7 +302,7 @@ Funkce, které umožňují kontrolu proměnných, jsou jedním z nejužitečněj
 
     Dvakrát klikněte na řádek kódu, abyste se mohli podívat na zdrojový kód a zároveň změnit aktuální rozsah, který je kontrolován ladicím programem. Tato akce nepřejde do ladicího programu.
 
-    Můžete také použít nabídky kliknutím pravým tlačítkem z okna **zásobník volání** k provedení dalších akcí. Můžete například vložit zarážky do určených funkcí, pokračovat v ladicím programu pomocí funkce **Run to Cursor**a přejít na zdrojový kód. Další informace naleznete v tématu [How to: Prohlédněte si zásobník volání](../debugger/how-to-use-the-call-stack-window.md).
+    Můžete také použít nabídky kliknutím pravým tlačítkem z okna **zásobník volání** k provedení dalších akcí. Můžete například vložit zarážky do určených funkcí, pokračovat v ladicím programu pomocí funkce **Run to Cursor** a přejít na zdrojový kód. Další informace naleznete v tématu [How to: Prohlédněte si zásobník volání](../debugger/how-to-use-the-call-stack-window.md).
 
 ## <a name="change-the-execution-flow"></a>Změna toku spuštění
 

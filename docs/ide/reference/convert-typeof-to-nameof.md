@@ -1,5 +1,6 @@
 ---
 title: Převedení typeof na nameof
+description: Naučte se, jak pomocí nabídky rychlé akce a Refaktoring v aplikaci Visual Studio převést typeof na nameof v jazyce C# a GetType na NameOf v Visual Basic.
 ms.date: 08/12/2020
 ms.topic: reference
 author: m-redding
@@ -10,12 +11,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 96bd4d67302fb09e5c1cb7837ad73b345ad88c81
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ce76b82e2ebc68634be7cf4d463f6b8216d81e06
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400321"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761196"
 ---
 # <a name="convert-typeof-to-nameof"></a>Převést `typeof` na `nameof`
 
@@ -39,10 +40,10 @@ Tento refaktoring platí pro:
 3. Vyberte jednu z následujících možností:
 
     - C#
-      <br>Vyberte **převést typeof na nameof** : ![ Převod typeof na nameof.](media/convert-type-of.PNG)
+      <br>Vyberte **převést typeof na nameof**: ![ snímek nabídky rychlé akce a nabídka refaktoringu v aplikaci Visual Studio s vybranou možnost převést typeof na ' nameof ' a zobrazí se změny kódu C#.](media/convert-type-of.PNG)
 
     - Visual Basic
-      <br>Vyberte **převést GetType na nameof** : ![ Převod typeof na nameof.](media/convert-get-type.PNG)
+      <br>Vyberte **převést GetType na nameof**: ![ snímek nabídky rychlé akce a nabídka refaktoringu v aplikaci Visual Studio s vybranou rutinou "GetType" na "NameOf" a Visual Basic zobrazené změny kódu.](media/convert-get-type.PNG)
 
 ## <a name="see-also"></a>Viz také
 

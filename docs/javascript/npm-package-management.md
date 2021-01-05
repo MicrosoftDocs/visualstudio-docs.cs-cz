@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: fed525f62466d096aa7868cc57c7fd7c75bf46f8
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: d2c7ec425767e432105bfcec493599197e2fd5ec
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781031"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815682"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Správa balíčků npm v aplikaci Visual Studio
 
@@ -42,7 +42,7 @@ Tyto funkce společně spolupracují a synchronizují se systémem projektu a *p
 
 ### <a name="prerequisites"></a>Předpoklady
 
-Pro přidání podpory npm do projektu potřebujete nainstalovanou úlohu ** vývojeNode.js** a modul runtime Node.js. Podrobný postup najdete v tématu [Vytvoření projektu Node.js](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json).
+Pro přidání podpory npm do projektu potřebujete nainstalovanou úlohu **vývojeNode.js** a modul runtime Node.js. Podrobný postup najdete v tématu [Vytvoření projektu Node.js](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json).
 
 > [!NOTE]
 > Pro existující projekty Node.js použijte šablonu řešení **z existující Node.js kódu** nebo [otevřené složky (Node.js)](../javascript/develop-javascript-code-without-solutions-projects.md) , abyste povolili npm v projektu.
@@ -55,9 +55,9 @@ V případě Node.js projektů je nejjednodušší způsob, jak nainstalovat bal
 
 V tomto okně můžete vyhledat balíček, zadat možnosti a nainstalovat.
 
-![Vyhledat balíček npm](../javascript/media/search-package.png)
+![Snímek obrazovky dialogového okna nainstalovat nové balíčky npm Je vybraný balíček Azure 2.2.1-Preview a zobrazí se podrobnosti a možnosti tohoto balíčku.](../javascript/media/search-package.png)
 
-* **Typ závislosti** – volba mezi **standardním**, **vývojem**a **volitelnými** balíčky. Standard určuje, že balíček je běhová závislost, zatímco při vývoji se určuje, že balíček je vyžadován pouze během vývoje.
+* **Typ závislosti** – volba mezi **standardním**, **vývojem** a **volitelnými** balíčky. Standard určuje, že balíček je běhová závislost, zatímco při vývoji se určuje, že balíček je vyžadován pouze během vývoje.
 * **Přidat k package.js** Doporučené. Tato konfigurovatelná možnost je zastaralá.
 * **Vybraná verze** – vyberte verzi balíčku, který chcete nainstalovat.
 * **Jiné argumenty npm** – zadejte jiné standardní argumenty npm. Můžete například zadat hodnotu verze `@~0.8` , například pro instalaci konkrétní verze, která není v seznamu verzí k dispozici.
@@ -73,7 +73,7 @@ Průběh instalace můžete zobrazit ve výstupu **npm** v okně **výstup** . T
 
 balíčky npm se zobrazují v Průzkumník řešení. Položky v uzlu **npm** napodobují závislosti v *package.jsv* souboru.
 
-![Vyhledat balíček npm](../javascript/media/solution-explorer-status.png)
+![Snímek obrazovky uzlu npm v Průzkumník řešení znázorňující stav instalace balíčků npm.](../javascript/media/solution-explorer-status.png)
 
 ### <a name="package-status"></a>Stav balíčku
 
@@ -86,12 +86,12 @@ Klikněte pravým tlačítkem na uzel **npm** a proveďte jednu z následující
 
 * **Nainstalovat nové balíčky npm** Otevře uživatelské rozhraní pro instalaci nových balíčků.
 * **Nainstalovat balíčky npm** Spustí příkaz Install NPM, který nainstaluje všechny balíčky uvedené v *package.js*. (Spouští `npm install` .)
-* **Aktualizovat balíčky npm** Aktualizuje balíčky na nejnovější verze podle rozsahu semver (sémantické verze), který je zadaný v *package.js*. (Spouští se `npm update --save` .). Semver rozsahy se obvykle zadává pomocí "~" nebo "^". Další informace najdete [ vpackage.jsv konfiguraci](../javascript/configure-packages-with-package-json.md).
+* **Aktualizovat balíčky npm** Aktualizuje balíčky na nejnovější verze podle rozsahu SemVer (sémantické verze), který je zadaný v *package.js*. (Spouští se `npm update --save` .). SemVer rozsahy se obvykle zadává pomocí "~" nebo "^". Další informace najdete [ vpackage.jsv konfiguraci](../javascript/configure-packages-with-package-json.md).
 
 Kliknutím pravým tlačítkem myši na uzel balíčku proveďte jednu z následujících akcí:
 
 * **Nainstalovat balíčky npm** Spustí příkaz Install NPM, který nainstaluje verzi balíčku uvedenou v *package.js*. (Spouští `npm install` .)
-* **Aktualizovat balíčky npm** Aktualizuje balíček na nejnovější verzi podle rozsahu semver zadaného v *package.js*. (Spustit `npm update --save` .) Semver rozsahy se obvykle zadává pomocí "~" nebo "^".
+* **Aktualizovat balíčky npm** Aktualizuje balíček na nejnovější verzi podle rozsahu SemVer zadaného v *package.js*. (Spustit `npm update --save` .) SemVer rozsahy se obvykle zadává pomocí "~" nebo "^".
 * **Odinstalace balíčků npm** Odinstaluje balíček a odebere ho z *package.js* (spustí `npm uninstall --save` ).
 ::: moniker-end
 ::: moniker range="vs-2017"
@@ -140,7 +140,7 @@ Pokud projekt ještě nezahrnuje *package.jsdo* souboru, můžete ho přidat, ab
 
    ![Přidat package.jsdo projektu](../javascript/media/npm-add-package-json.png)
 
-   Pokud se v seznamu nenachází konfigurační soubor NPM, Node.js vývojové nástroje nejsou nainstalované. K přidání úlohy ** vývojeNode.js** můžete použít instalační program pro Visual Studio. Pak opakujte předchozí krok.
+   Pokud se v seznamu nenachází konfigurační soubor NPM, Node.js vývojové nástroje nejsou nainstalované. K přidání úlohy **vývojeNode.js** můžete použít instalační program pro Visual Studio. Pak opakujte předchozí krok.
 
 1. Zahrňte jeden nebo více balíčků npm do `dependencies` `devDependencies` části nebo v *package.jsna*. Do souboru můžete například přidat následující:
 
@@ -160,11 +160,11 @@ Když soubor uložíte, Visual Studio přidá balíček pod uzel **závislosti/n
 
 Pro projekty, které obsahují NPM, můžete nakonfigurovat balíčky npm pomocí `package.json` . V Průzkumník řešení klikněte pravým tlačítkem myši na uzel npm a vyberte možnost **otevřít package.jsna**.
 
-![Vyhledat balíček npm](../javascript/media/npm-add-package.png)
+![Snímek obrazovky Průzkumník řešení s vybraným uzlem npm Místní nabídka kliknutí pravým tlačítkem je otevřená a je vybrána možnost otevřít package.js.](../javascript/media/npm-add-package.png)
 
 IntelliSense v *package.js* vám pomůže vybrat konkrétní verzi balíčku npm.
 
-:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="Nainstalovat nový balíček npm z Průzkumníka řešení" border="true":::
+:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="Vybrat verzi balíčku npm" border="true":::
 
 Když soubor uložíte, Visual Studio přidá balíček pod uzel **závislosti/npm** v Průzkumník řešení. Pokud uzel nevidíte, klikněte pravým tlačítkem na **package.jsna** a vyberte **obnovit balíčky**.
 
@@ -176,7 +176,7 @@ Instalace balíčku může trvat několik minut. V okně **výstupu** přepněte
 
 * NPM vyžaduje Node.js, pokud nemáte Node.js nainstalované, doporučujeme, abyste si nainstalovali verzi LTS z webu [Node.js](https://nodejs.org/en/download/) , abyste dosáhli nejlepší kompatibility s externími architekturami a knihovnami.
 
-* U Node.js projektů musíte mít nainstalovanou úlohu ** vývojNode.js** pro podporu npm.
+* U Node.js projektů musíte mít nainstalovanou úlohu **vývojNode.js** pro podporu npm.
 
 * V některých scénářích Průzkumník řešení nemusí zobrazit správný stav nainstalovaných balíčků npm z důvodu známého problému, který je [zde](https://github.com/aspnet/Tooling/issues/479)popsán. Balíček se například může zobrazit jako nenainstalovaný při instalaci. Ve většině případů můžete aktualizovat Průzkumník řešení odstraněním *package.jsna*, restartováním sady Visual Studio a opětovným přidáním *package.jsdo* souboru, jak je popsáno výše v tomto článku. Nebo při instalaci balíčků můžete použít okno výstup npm k ověření stavu instalace.
 

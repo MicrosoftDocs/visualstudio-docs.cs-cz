@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c3cf9d5e4d72ed316344d1bda930d0416e9efe5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6202fa019aed8e6fc9eb9ff93bdb390bf22f2911
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77416391"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761248"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>Postup ladění pro absolutní začátečníky
 
@@ -64,7 +64,7 @@ Při normálním spuštění aplikace se zobrazí chyby a nesprávné výsledky 
 
 Spuštění aplikace v rámci ladicího programu, označovaného také jako *režim ladění*, znamená, že ladicí program aktivně monitoruje všechno, co se děje při spuštění programu. Umožňuje také pozastavit aplikaci v jakémkoli bodě, abyste prozkoumali její stav a pak procházeli řádky kódu podle řádku, aby se sledovaly všechny podrobnosti, jak se to stane.
 
-V sadě Visual Studio zadáte režim ladění pomocí **F5** (nebo tlačítko spustit **ladění spustit ladění**  >  **Start Debugging** na panelu nástrojů ladění **Start Debugging** ). ![Start Debugging](../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") Pokud dojde k nějakým výjimkám, Pomocník s výjimkami sady Visual Studio vás přesměruje přesně na místo, kde k výjimce došlo, a poskytuje další užitečné informace. Další informace o tom, jak zpracovávat výjimky v kódu, naleznete v tématu [techniky a nástroje ladění](../debugger/write-better-code-with-visual-studio.md).
+V sadě Visual Studio zadáte režim ladění pomocí **F5** (nebo tlačítko spustit **ladění spustit ladění**  >   na panelu nástrojů ladění  ). ![](../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") Pokud dojde k nějakým výjimkám, Pomocník s výjimkami sady Visual Studio vás přesměruje přesně na místo, kde k výjimce došlo, a poskytuje další užitečné informace. Další informace o tom, jak zpracovávat výjimky v kódu, naleznete v tématu [techniky a nástroje ladění](../debugger/write-better-code-with-visual-studio.md).
 
 Pokud jste neobdrželi výjimku, pravděpodobně máte dobrý nápad, kde můžete vyhledat problém ve vašem kódu. Zde je místo, kde pomocí ladicího programu použijete *zarážky* k tomu, abyste si mohli posuzovat kód pečlivě. Zarážky jsou základní a nejjednodušší funkcí spolehlivého ladění. Zarážka označuje, kde by měla aplikace Visual Studio pozastavit běžící kód, abyste se mohli podívat na hodnoty proměnných nebo chování paměti nebo pořadí, ve kterém kód běží.
 
@@ -78,7 +78,7 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
 
 1. V závislosti na typu aplikace, který chcete vytvořit, musíte mít nainstalovanou aplikaci Visual Studio a nainstalovanou úlohu **vývoj desktopových** aplikací pro .NET nebo **.NET Core pro vývoj pro různé platformy** .
 
-    Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/)   a nainstalujte si ji zdarma.
+    Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) a nainstalujte si ji zdarma.
 
     Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, klikněte na **nástroje**  >  **získat nástroje a funkce**. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoj pro desktopové prostředí .NET** (nebo **.NET Core pro vývoj pro různé platformy**) a pak zvolte **změnit**.
 
@@ -88,14 +88,14 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
     V okně Start vyberte možnost **vytvořit nový projekt**. Do vyhledávacího pole zadejte **Console** a pak zvolte buď **Konzolová aplikace (.NET Core)** , nebo **aplikace konzoly (.NET Framework)**. Zvolte **Další**. Zadejte název projektu, například **ConsoleApp-FirstApp** , a klikněte na **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte **Konzolová aplikace**a pak v prostředním podokně zvolte buď **Konzolová aplikace (.NET Framework)** nebo **aplikace konzoly (.NET Core)**. Zadejte název jako **ConsoleApp-FirstApp** a klikněte na **OK**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte **Konzolová aplikace** a pak v prostředním podokně zvolte buď **Konzolová aplikace (.NET Framework)** nebo **aplikace konzoly (.NET Core)**. Zadejte název jako **ConsoleApp-FirstApp** a klikněte na **OK**.
     ::: moniker-end
 
     Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Framework)** nebo **Konzolová aplikace (.NET Core)** , přejděte do části **nástroje**  >  **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Zvolte buď možnost **vývoj pro různé platformy .NET Core** , nebo **desktopový vývoj** pro platformu .NET a pak zvolte možnost **Upravit**.
 
     Visual Studio vytvoří projekt konzoly, který se zobrazí v Průzkumník řešení v pravém podokně.
 
-1. V *program.cs*nahraďte veškerý výchozí kód následujícím kódem:
+1. V *program.cs* nahraďte veškerý výchozí kód následujícím kódem:
 
     ```csharp
     using System;
@@ -229,17 +229,17 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
 
 1. Najeďte myší na `GalaxyType` proměnnou vpravo a pak na levou stranu ikony klíče rozbalte `theGalaxy.GalaxyType` . Uvidíte, že `GalaxyType` obsahuje vlastnost `MyGType` a hodnota vlastnosti je nastavena na `Spiral` .
 
-    ![Kontrola proměnné](../debugger/media/beginners-inspect-variable.png)
+    ![Snímek obrazovky ladicího programu sady Visual Studio s řádkem kódu žlutou a rozbalenou nabídkou pod vlastností theGalaxy. GalaxyType na konci řádku](../debugger/media/beginners-inspect-variable.png)
 
     "Spirála" je ve skutečnosti správná hodnota, kterou jste čekali v tisku do konzoly. Proto je dobré začít mít k této hodnotě v tomto kódu přístup při spuštění aplikace. V tomto scénáři používáme nesprávné rozhraní API. Uvidíme, že to můžeme při spouštění kódu v ladicím programu opravit.
 
 1. Ve stejném kódu, zatímco pořád ladění, umístěte kurzor na konec `theGalaxy.GalaxyType` a změňte jej na `theGalaxy.GalaxyType.MyGType` . I když lze tuto změnu provést, Editor kódu zobrazí chybu oznamující, že nemůže kompilovat tento kód.
 
-    ![Chyba syntaxe](../debugger/media/beginners-edit.png)
+    ![Snímek obrazovky ladicího programu sady Visual Studio se zvýrazněným řádkem kódu, který je zvýrazněný červeně, a polem pro úpravu a pokračování s vybraným tlačítkem Upravit.](../debugger/media/beginners-edit.png)
 
 1. V okně zpráva **Upravit a pokračovat** klikněte na **Upravit** . V okně **Seznam chyb** se teď zobrazí chybová zpráva. Chyba indikuje, že `'object'` neobsahuje definici pro `MyGType` .
 
-    ![Chyba syntaxe](../debugger/media/beginners-no-definition.png)
+    ![Snímek obrazovky ladicího programu sady Visual Studio s řádkem kódu zvýrazněným červenou a Seznam chybovým oknem se dvěma uvedenými chybami.](../debugger/media/beginners-no-definition.png)
 
     I když nastavíme každý Galaxy s objektem typu `GType` (který má `MyGType` vlastnost), ladicí program nerozpozná `theGalaxy` objekt jako objekt typu `GType` . Co se děje? Chcete si projít libovolným kódem, který nastaví typ Galaxy. Když to uděláte, uvidíte, že `GType` Třída má jednoznačně vlastnost `MyGType` , ale něco není napravo. Chybová zpráva o tom, že se `object` zapíná jako na objekt Interpret jazyka, se zdá, že typ je objekt typu `object` místo objektu typu `GType` .
 
@@ -288,9 +288,9 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
 
 1. Stiskněte klávesu **F5** a najeďte na `type` proměnnou znovu. Opakujte tento krok, dokud neuvidíte hodnotu `I` v `type` proměnné.
 
-    ![Kontrola proměnné](../debugger/media/beginners-inspecting-data.png)
+    ![Snímek obrazovky ladicího programu sady Visual Studio s řádkem kódu žlutým a malým oknem zobrazujícím hodnotu proměnné typu jako 73 ' I '.](../debugger/media/beginners-inspecting-data.png)
 
-1. Nyní stiskněte klávesu **F11** (krok**ladění**  >  **do** nebo **Krok do** tlačítka na panelu nástrojů ladění).
+1. Nyní stiskněte klávesu **F11** (krok **ladění**  >  **do** nebo **Krok do** tlačítka na panelu nástrojů ladění).
 
     **F11** posune ladicí program (a spustí kód) v jednom okamžiku. **F10** (**krok za krokem**) je podobný příkaz a obě jsou velmi užitečné při učení, jak použít ladicí program.
 

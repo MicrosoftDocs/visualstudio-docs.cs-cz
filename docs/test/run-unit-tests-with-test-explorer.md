@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58faf100c61a25ae014bdcc0b09d161e924ad5c9
-ms.sourcegitcommit: 21ac4a0c8ffac3964b75604678b12e0955e0159b
+ms.openlocfilehash: b934c6cb7c2a6ba98113a5e68091ab53f54b1423
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97098524"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833361"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
@@ -70,7 +70,7 @@ Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sad
 
 - Vyberte jednotlivé testy, které chcete spustit, otevřete nabídku kliknutím pravým tlačítkem pro vybraný test a pak zvolte možnost **Spustit vybrané testy**.
 
-- Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![USTIT&#95;parallelicon&#45;malá](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
+- Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![Snímek obrazovky s přepínačem paralelního spuštění testu na panelu nástrojů Visual Studio Test Explorer. Pokud je vybráno toto tlačítko, testy budou spuštěny paralelně.](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
 
 V horní části okna **Průzkumníka testů** je animovaný **řádek Pass/selhat** , protože testy jsou spouštěny. Při uzavírání testovacího běhu se **pruh úspěch/selhání** změní na zelený, pokud všechny testy proběhly úspěšně, nebo pokud dojde k selhání testu na červenou.
 ::: moniker-end
@@ -150,7 +150,7 @@ Průzkumník testů umožňuje seskupit testy do hierarchie. Výchozím seskupen
 
 Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak **třídou** , například výběrem možnosti Seskupit podle v upřednostňovaném pořadí.
 
-![Seskupit podle State a pak Class](../test/media/vs-2019/test-explorer-groupby-state-16-2.png)
+![Snímek obrazovky s Průzkumníkem testů sady Visual Studio zobrazující hierarchii testů v jednom podokně a v nabídce Seskupit podle v druhé s vybranými možnostmi třídy a stavu.](../test/media/vs-2019/test-explorer-groupby-state-16-2.png)
 ::: moniker-end
 
 ### <a name="test-explorer-groups"></a>Skupiny Průzkumníka testů
@@ -207,7 +207,7 @@ Můžete vytvořit a uložit seznam testů, které chcete spustit nebo zobrazit 
 
 **Chcete-li otevřít seznam stop**, zvolte možnost **test** > **seznamu** testů v nabídce aplikace Visual Studio a buď zvolte ze seznamu naposledy použitých seznamů stop, nebo zvolte možnost **otevřít seznam stop** a zadejte název a umístění seznamu skladeb.
 
-Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![USTIT&#95;parallelicon&#45;malá](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
+Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![Snímek obrazovky s přepínačem paralelního spuštění testu na panelu nástrojů Visual Studio Test Explorer.](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 Můžete vytvořit a uložit seznam testů, které chcete spustit nebo zobrazit jako skupinu. Když vyberete seznam testů, testy v seznamu se zobrazí na nové kartě Průzkumník testů. Test můžete přidat do více než jednoho seznamu skladeb.
@@ -264,7 +264,7 @@ Pro xUnit použijte následující formát. Ujistěte se, že mezi vaším `Test
 
 [Skupiny](#test-explorer-groups) jsou také k dispozici jako sloupce v Průzkumníku testů, spolu se vlastnostmi, trasováním zásobníku, chybovou zprávou a plně kvalifikovaným názvem. Většina sloupců není ve výchozím nastavení viditelná a můžete přizpůsobit zobrazené sloupce a pořadí, ve kterém se zobrazí.
 
-![Seskupit podle State a pak Class](../test/media/vs-2019/test-explorer-columns-16-2.png)
+![Snímek obrazovky Průzkumníka testů sady Visual Studio zobrazující nabídku se zvolenými sloupci a podnabídku se zvolenou dobou trvání, vlastností a chybové zprávy.](../test/media/vs-2019/test-explorer-columns-16-2.png)
 
 ### <a name="filter-sort-and-rearrange-test-columns"></a>Filtrování, řazení a změna uspořádání sloupců testu
 

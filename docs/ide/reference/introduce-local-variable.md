@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0fbd5ed752b28cc3f8c0dd734ed2b3ce09e80b78
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 564ba133074af3749bd909f1b0a7fe32822f5d75
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568812"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833257"
 ---
 # <a name="introduce-a-local-variable-in-visual-studio"></a>Zavedení místní proměnné v aplikaci Visual Studio
 
@@ -47,7 +47,7 @@ Tato generace kódu platí pro:
       - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
       - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
-      - Klikněte na ![screwdriver](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud je textový kurzor již na řádku se zvýrazněným výrazem.
+      - Klikněte na ![Snímek obrazovky s ikonou Screwdriver, která se zobrazí na levém okraji nabídky rychlé akce a refaktoringu](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud je textový kurzor již na řádku se zvýrazněným výrazem.
 
    ![Zavést místní náhled](media/local-preview-cs.png)
 

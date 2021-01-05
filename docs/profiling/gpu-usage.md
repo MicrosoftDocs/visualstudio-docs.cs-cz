@@ -1,5 +1,6 @@
 ---
 title: Využití GPU | Microsoft Docs
+description: Naučte se používat nástroj využití GPU v profileru výkonu k lepšímu pochopení využití hardwaru na vysoké úrovni vaší aplikace Direct3D.
 ms.date: 11/01/2018
 ms.topic: conceptual
 author: mikejo5000
@@ -7,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a738490933c6f2d1cdf89e7e974a268540af991
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: a6b143cc0b3001f0a182de43f1b6eea554025eda
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074966"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815649"
 ---
 # <a name="gpu-usage"></a>Využití GPU
 
@@ -62,11 +63,11 @@ Generování a zobrazení sestavy využití GPU:
 
 1. V dolní části okna diagnostické relace zvolte odkaz **Zastavit shromažďování** nebo v levém horním rohu vyberte **zastavit** .
 
-   ![Snímek obrazovky okna diagnostické relace](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
+   ![Snímek obrazovky okna diagnostické relace v nástroji využití GPU, který zobrazuje počet snímků za sekundu, využití GPU, tlačítko Zastavit a odkaz na zastavení shromažďování.](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
 
 2. V horní části sestavy vyberte část v jednom z grafů, které zobrazují problém, který chcete prozkoumat. Váš výběr může trvat až 3 sekundy. Delší oddíly jsou zkráceny směrem k začátku.
 
-   ![Snímek obrazovky okna diagnostické relace](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
+   ![Snímek obrazovky okna diagnostické relace v nástroji využití GPU v rámci vybrané časové osy diagnostické relace](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
 
 3. Chcete-li zobrazit detailní časovou osu výběru, v dolní části sestavy v **... Kliknutím sem zobrazíte podrobnosti o využití GPU pro tuto** zprávu o rozsahu. Vyberte **Zobrazit podrobnosti**.
 
@@ -84,7 +85,7 @@ Počínaje sadou Visual Studio 2017 můžete tato data otevřít pomocí [GPUVie
 
 ## <a name="use-the-gpu-usage-report"></a>Použití sestavy využití GPU
 
-Horní část sestavy využití GPU zobrazuje časové osy aktivity zpracování procesoru, aktivity vykreslování GPU a aktivity kopírování GPU. Tyto časové osy jsou rozdělené světlem šedé, svislé pruhy, které označují vsync zobrazení. Frekvence pruhů se shoduje s frekvencí aktualizace jednoho ze zobrazení (vybraná pomocí rozevíracího seznamu **zobrazení** ), ze kterých se data využití GPU shromáždila.
+Horní část sestavy využití GPU zobrazuje časové osy aktivity zpracování procesoru, aktivity vykreslování GPU a aktivity kopírování GPU. Tyto časové osy jsou rozdělené světlem šedé, svislé pruhy, které označují vertikální synchronizaci displeje (vsync). Frekvence pruhů se shoduje s frekvencí aktualizace jednoho ze zobrazení (vybraná pomocí rozevíracího seznamu **zobrazení** ), ze kterých se data využití GPU shromáždila.
 
 Vzhledem k tomu, že displej může mít vyšší obnovovací frekvenci než cíl výkonu vaší aplikace, nemusí se jednat o vztah 1:1 mezi vsync a snímkovou frekvencí, kterou má vaše aplikace dosáhnout. Aby bylo možné splnit svůj cíl výkonu, aplikace musí dokončit všechny zpracování, provést vykreslování a uskutečnit `Present()` hovor na cílovém kmitočtu. Vykreslený snímek se nezobrazí až do dalšího vsync po `Present()` , ale.
 
@@ -126,9 +127,9 @@ Odložení profilování od začátku aplikace:
 
 1. V hlavní nabídce zvolte možnost **ladění**  >  **výkonu a diagnostiky** (nebo na klávesnici stiskněte klávesy Alt + F2).
 
-2. V centru pro **výkon a diagnostiku** vedle možnosti **použití GPU**vyberte odkaz **Nastavení** .
+2. V centru pro **výkon a diagnostiku** vedle možnosti **použití GPU** vyberte odkaz **Nastavení** .
 
-3. V části **Konfigurace profilace GPU**na stránce **Obecné** vlastnosti zrušte zaškrtnutí políčka **zahájit profilování při spuštění aplikace** a odložit profilaci.
+3. V části **Konfigurace profilace GPU** na stránce **Obecné** vlastnosti zrušte zaškrtnutí políčka **zahájit profilování při spuštění aplikace** a odložit profilaci.
 
    ![Snímek stránek vlastností objektu se zobrazením možností kolekce](media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")
 

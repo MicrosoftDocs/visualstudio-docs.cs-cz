@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1873c11d8f2e6243a0dc0f867e579f1927cd1607
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e7c6eec178d0ba3b2934e390cc02310044c4dfa
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579960"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833348"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první ASP.NET Core webové aplikace
 
@@ -70,7 +70,7 @@ Začněte tím, že vytvoříte projekt webové aplikace ASP.NET Core. Typ proje
    >
    > (Před pokračováním v instalaci nové úlohy může být nutné zavřít Visual Studio.)
 
-1. V dialogovém okně **Nová webová aplikace ASP.NET Core** v horním rozevíracím seznamu vyberte **ASP.NET Core 2,1** . V dalším kroku zvolte možnost **Webová aplikace**a pak klikněte na **tlačítko OK**.
+1. V dialogovém okně **Nová webová aplikace ASP.NET Core** v horním rozevíracím seznamu vyberte **ASP.NET Core 2,1** . V dalším kroku zvolte možnost **Webová aplikace** a pak klikněte na **tlačítko OK**.
 
    ![Dialogové okno Nová webová aplikace ASP.NET Core](../ide/media/aspnet-core-2dot1.png)
 
@@ -122,9 +122,9 @@ Brzy poté aplikace Visual Studio otevře soubor projektu.
 
 ::: moniker range="vs-2017"
 
-1. V **Průzkumník řešení**rozbalte složku **stránky** a zvolte možnost **o. cshtml**.
+1. V **Průzkumník řešení** rozbalte složku **stránky** a zvolte možnost **o. cshtml**.
 
-   ![Vyberte soubor About. cshtml z Průzkumník řešení](../ide/media/csharp-aspnet-about-page-html-file.png)
+   ![Snímek obrazovky sady Visual Studio Průzkumník řešení zobrazení souborů v projektu HelloWorld Složka stránky je rozbalena a je vybrána možnost o. cshtml.](../ide/media/csharp-aspnet-about-page-html-file.png)
 
    Tento soubor odpovídá stránce s názvem **o** ve webové aplikaci, která běží ve webovém prohlížeči.
 
@@ -138,9 +138,9 @@ Brzy poté aplikace Visual Studio otevře soubor projektu.
 
    ![Změna výchozího kódu HTML pro další informace o oblasti v editoru sady Visual Studio](../ide/media/csharp-aspnet-about-cshtml-page-hello-world.png)
 
-1. V **Průzkumník řešení**rozbalte položku **About. cshtml**a pak zvolte možnost **About.cshtml.cs**. (Tento soubor také odpovídá stránce **o** stránku ve webovém prohlížeči.)
+1. V **Průzkumník řešení** rozbalte položku **About. cshtml** a pak zvolte možnost **About.cshtml.cs**. (Tento soubor také odpovídá stránce **o** stránku ve webovém prohlížeči.)
 
-   ![Vyberte soubor About. cshtml z Průzkumník řešení](../ide/media/csharp-aspnet-about-page-code-file.png)
+   ![Snímek obrazovky sady Visual Studio Průzkumník řešení zobrazení souborů v projektu HelloWorld O. cshtml je rozbalená a je vybraná možnost About.cshtml.cs.](../ide/media/csharp-aspnet-about-page-code-file.png)
 
    V editoru uvidíte kód C#, který obsahuje text pro oblast Popis aplikace na stránce **o produktu** .
 
@@ -175,7 +175,7 @@ Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozv�
 
 ::: moniker range="vs-2019"
 
-1. V **Průzkumník řešení**rozbalte složku **stránky** a pak zvolte **index. cshtml**.
+1. V **Průzkumník řešení** rozbalte složku **stránky** a pak zvolte **index. cshtml**.
 
    ![Vyberte soubor index. cshtml z Průzkumník řešení](../ide/media/vs-2019/csharp-aspnet-index-page-cshtml-file.png)
 
@@ -187,7 +187,7 @@ Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozv�
 
    ![Kód HTML v souboru index. cshtml pro domovskou stránku v editoru sady Visual Studio](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page.png)
 
-1. Změňte úvodní text tak, aby se načetl**Hello World!**.
+1. Změňte úvodní text tak, aby se načetl **Hello World!**.
 
    ![V editoru sady Visual Studio změňte výchozí kód HTML, který říká úvodní Hello World místo toho.](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png)
 

@@ -1,18 +1,18 @@
 ---
 title: Docker Compose nastavení sestavení
 author: ghogen
-description: Přehled procesu sestavení nástrojů kontejneru
+description: Naučte se, jak upravit vlastnosti Docker Compose buildu a přizpůsobit tak, jak Visual Studio sestavuje a spouští aplikaci Docker Compose.
 ms.custom: SEO-VS-2020
 ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: a25aca5082d8a55eccff861d542d16095c178a4f
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 0a27535e9c07f87391b3cdfd8440578e36feee9e
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036298"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846808"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose vlastnosti sestavení
 
@@ -37,14 +37,14 @@ V následující tabulce jsou uvedeny vlastnosti MSBuild dostupné pro Docker Co
 | Název vlastnosti | Umístění | Popis | Výchozí hodnota  |
 |---------------|----------|-------------|----------------|
 |AdditionalComposeFilePaths|dcproj|Určuje další soubory pro vytváření v seznamu středníkem oddělených souborů, které se budou odesílat docker-compose.exe pro všechny příkazy. Relativní cesty ze souboru projektu Docker-dcproj (sestavení) jsou povoleny.|-|
-|DockerComposeBaseFilePath|dcproj|Určuje první část názvů souborů Docker-skládání souborů bez přípony *. yml* . Například: <br>1. DockerComposeBaseFilePath = null/Nedefinováno: použijte základní cestu k souboru *Docker-skládání*a soubory budou pojmenovány *Docker-Compose. yml* a *Docker-Compose. override. yml*<br>2. DockerComposeBaseFilePath = *mydockercompose*: soubory budou pojmenovány *mydockercompose. yml* a *mydockercompose. override. yml*<br> 3. DockerComposeBaseFilePath = *... \mydockercompose*: soubory budou o jednu úroveň výš. |Docker-Compose|
+|DockerComposeBaseFilePath|dcproj|Určuje první část názvů souborů Docker-skládání souborů bez přípony *. yml* . Například: <br>1. DockerComposeBaseFilePath = null/Nedefinováno: použijte základní cestu k souboru *Docker-skládání* a soubory budou pojmenovány *Docker-Compose. yml* a *Docker-Compose. override. yml*<br>2. DockerComposeBaseFilePath = *mydockercompose*: soubory budou pojmenovány *mydockercompose. yml* a *mydockercompose. override. yml*<br> 3. DockerComposeBaseFilePath = *... \mydockercompose*: soubory budou o jednu úroveň výš. |Docker-Compose|
 |DockerComposeBuildArguments|dcproj|Určuje další parametry, které se mají předat `docker-compose build` příkazu. Například `--parallel --pull`. |
 |DockerComposeDownArguments|dcproj|Určuje další parametry, které se mají předat `docker-compose down` příkazu. Například `--timeout 500`.|-|  
 |DockerComposeProjectPath|CSPROJ nebo VBPROJ|Relativní cesta k souboru dcproj (Docker-psací projekt). Tuto vlastnost nastavte při publikování projektu služby, aby bylo možné najít přidružená nastavení pro sestavení imagí uložená v souboru Docker-Compose. yml.|-|
 |DockerComposeUpArguments|dcproj|Určuje další parametry, které se mají předat `docker-compose up` příkazu. Například `--timeout 500`.|-|
 |DockerDevelopmentMode|dcproj| Určuje, jestli je povolená optimalizace optimalizace sestavení na úrovni hostitele (rychlý režim).  Povolené hodnoty jsou **rychlé** a **pravidelné**. | Rychlý |
 |DockerLaunchAction| dcproj | Určuje akci spuštění, která se má provést na F5 nebo CTRL + F5.  Povolené hodnoty jsou None, LaunchBrowser a LaunchWCFTestClient.|Žádné|
-|DockerLaunchBrowser| dcproj | Označuje, zda se má spustit prohlížeč. Ignoruje se, pokud je zadaný DockerLaunchAction. | Nepravda |
+|DockerLaunchBrowser| dcproj | Označuje, zda se má spustit prohlížeč. Ignoruje se, pokud je zadaný DockerLaunchAction. | Ne |
 |DockerServiceName| dcproj|Pokud jsou zadány DockerLaunchAction nebo DockerLaunchBrowser, pak DockerServiceName je název služby, která se má spustit.  Tato vlastnost slouží k určení, který z potenciálně mnoho projektů, na který může odkazovat soubor Docker-na sestavení, se spustí.|-|
 |DockerServiceUrl| dcproj | Adresa URL, která se má použít při spuštění prohlížeče.  Platné náhradní tokeny jsou {ServiceIPAddress}, {ServicePort} a {schéma}.  Příklad: {schéma}://{ServiceIPAddress}: {ServicePort}|-|
 |DockerTargetOS| dcproj | Cílový operační systém, který se používá při vytváření image Docker.|-|

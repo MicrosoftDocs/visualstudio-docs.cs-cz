@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3da0a3868b410fbb78ed98265eb8f0920e6482b
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 68d6d2823a4944ec74aaa477fb7b3913943a7296
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330105"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833270"
 ---
 # <a name="use-coded-ui-test-to-test-your-code"></a>Použití programového testu uživatelského rozhraní k otestování kódu
 
@@ -217,7 +217,7 @@ Pokud ovládací prvek, který chcete vybrat, ztratí fokus a zmizí při výbě
 
 Někdy, když přidáte ovládací prvky a ověříte jejich vlastnosti, možná budete muset použít klávesnici. Například při pokusu o nahrání kódovaného testu uživatelského rozhraní, který používá ovládací prvek nabídky po kliknutí pravým tlačítkem myši, seznam položek nabídky v ovládacím prvku ztratí fokus a zmizí při pokusu o výběr nástroje **Přidat kontrolní výrazy** z Tvůrce programového **testu uživatelského rozhraní**. To je znázorněno na následujícím obrázku, kde se nabídka kliknutí pravým tlačítkem v aplikaci Internet Explorer ztratí fokus a zmizí, pokud se pokusíte o výběr pomocí nástroje **Přidat kontrolní výrazy** .
 
-![CodedUITest&#95;SelectControlKeyboard](../test/media/codeduitest_selectcontrolkeyboard.png)
+![Snímek obrazovky znázorňující nástroj přidat kontrolní výrazy v Tvůrci programového testu UI překrývající místní nabídku v aplikaci Internet Explorer.](../test/media/codeduitest_selectcontrolkeyboard.png)
 
 Chcete-li použít klávesnici k výběru ovládacího prvku uživatelského rozhraní, najeďte myší nad ovládací prvek myší. Pak podržte stisknutou klávesu **CTRL** a klávesu **I** . Uvolněte klíče. Ovládací prvek je zaznamenán pomocí Tvůrce programového **testu uživatelského rozhraní**.
 
@@ -229,7 +229,7 @@ Za určitých okolností může konkrétní ovládací prvek, který se použív
 
 Při provádění programového testu uživatelského rozhraní, najeďte myší na ovládací prvek. Pak stiskněte a podržte **klávesu CTRL**, zatímco stisknete a podržíte klávesy **SHIFT** a **R** na klávesnici. Uvolněte klíče. Událost najetí myší je zaznamenána pomocí **Tvůrce programového testu uživatelského rozhraní**.
 
-![CodedUI&#95;najetí myší](../test/media/codedui_hover.png)
+![Snímek obrazovky s příkazovým řádkem Tvůrce programového testu UI s vybranou ikonou pozastavení Okno s popisem tlačítka zobrazuje umístění události při přechodu myší.](../test/media/codedui_hover.png)
 
 Po vygenerování testovací metody se kód podobný následujícímu příkladu přidá do souboru *UIMap.Designer.cs* :
 

@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 801ea23430d13dbefd9498c57b07881235275961
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 369fa3c080705f552aed25ecef6bd87a3db43a64
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285189"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815617"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Ladění JavaScriptu nebo aplikace TypeScriptu v aplikaci Visual Studio
 
@@ -29,11 +29,11 @@ Pomocí sady Visual Studio můžete ladit kód JavaScript a TypeScript. Můžete
 
 1. Když máte projekt otevřený v sadě Visual Studio, otevřete soubor JavaScriptu na straně serveru (například *server.js*), klikněte na hřbet na levé straně a nastavte zarážku:
 
-    ![Nastavení zarážky](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
+    ![Snímek obrazovky okna Visual Studio Code zobrazující kód JavaScriptu Červená tečka v levém hřbetu indikuje, že je nastavená zarážka.](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
 
     Zarážky jsou základní a nejjednodušší funkcí spolehlivého ladění. Zarážka určuje, kde má Visual Studio spuštěný kód pozastavit, abyste mohli zkontrolovat hodnoty proměnných či chování paměti, nebo abyste zjistili, jestli se nějaká větev kódu spouští.
 
-1. Pokud chcete aplikaci spustit, stiskněte klávesu **F5** **(ladění**se  >  **Spustí ladění**).
+1. Pokud chcete aplikaci spustit, stiskněte klávesu **F5** **(ladění** se  >  **Spustí ladění**).
 
     Ladicí program se pozastaví na zarážce, kterou jste nastavili (aktuální příkaz je označený žlutě). Teď můžete stav aplikace zkontrolovat tak, že přesunete ukazatel myši nad proměnné v aktuálním rozsahu a použijete okna ladicího programu, například okna **Místní hodnoty** a **Kukátko**.
 
@@ -78,7 +78,7 @@ V tomto scénáři použijte Chrome.
 2. Spusťte prohlížeč s povoleným laděním.
 
     ::: moniker range=">=vs-2019"
-    Počínaje verzí Visual Studio 2019 můžete nastavit `--remote-debugging-port=9222` příznak při spuštění prohlížeče tak, že na panelu nástrojů **ladění** kliknete na **Procházet s...** > a pak zvolíte **Přidat**a pak nastavíte příznak v poli **argumenty** . Použijte jiný popisný název prohlížeče, jako je například **Edge s laděním** nebo **Chrome s laděním**. Podrobnosti najdete v [poznámkách k verzi](/visualstudio/releases/2019/release-notes-v16.2).
+    Počínaje verzí Visual Studio 2019 můžete nastavit `--remote-debugging-port=9222` příznak při spuštění prohlížeče tak, že na panelu nástrojů **ladění** kliknete na **Procházet s...** > a pak zvolíte **Přidat** a pak nastavíte příznak v poli **argumenty** . Použijte jiný popisný název prohlížeče, jako je například **Edge s laděním** nebo **Chrome s laděním**. Podrobnosti najdete v [poznámkách k verzi](/visualstudio/releases/2019/release-notes-v16.2).
 
     ![Nastavte prohlížeč tak, aby se otevřel s povoleným laděním.](../javascript/media/tutorial-nodejs-react-edge-with-debugging.png)
 
@@ -107,11 +107,11 @@ Chcete-li připojit ladicí program ze sady Visual Studio a zarážky volání v
 
 1. Přepněte do sady Visual Studio a pak nastavte zarážku ve zdrojovém kódu, což může být soubor JavaScriptu, soubor TypeScript nebo soubor JSX. (Nastavte zarážku na řádek kódu, který umožňuje zarážky, jako je například návratový příkaz nebo deklarace var.)
 
-    ![Nastavení zarážky](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
+    ![Snímek obrazovky okna Visual Studio Code Je vybrán příkaz return a červená tečka v levém hřbetu značí, že je nastavena zarážka.](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
     Chcete-li najít konkrétní kód v souboru s předaným souborem, použijte **kombinaci kláves CTRL** + **F** (**Upravit**  >  **hledání a nahradit**  >  **Rychlé hledání**).
 
-    Pro kód na straně klienta pro volání zarážky v souboru TypeScript, *. Vue*nebo souboru JSX obvykle vyžaduje použití [zdrojových mapování](#generate_source_maps). Zdrojové mapování musí být správně nakonfigurované, aby podporovalo ladění v aplikaci Visual Studio.
+    Pro kód na straně klienta pro volání zarážky v souboru TypeScript, *. Vue* nebo souboru JSX obvykle vyžaduje použití [zdrojových mapování](#generate_source_maps). Zdrojové mapování musí být správně nakonfigurované, aby podporovalo ladění v aplikaci Visual Studio.
 
 2. Vyberte cílový prohlížeč jako cíl ladění v aplikaci Visual Studio a potom stisknutím klávesy **CTRL** + **F5** (**ladění**  >  **Spusťte bez ladění**) spusťte aplikaci v prohlížeči.
 
@@ -124,7 +124,7 @@ Chcete-li připojit ladicí program ze sady Visual Studio a zarážky volání v
 3. Vyberte **ladit**  >  **připojit k procesu**.
 
     > [!TIP]
-    > Od sady Visual Studio 2017 se po prvním připojení k procesu pomocí následujícího postupu můžete rychle připojit ke stejnému procesu výběrem možnosti **ladění**znovu  >  **připojit k procesu**.
+    > Od sady Visual Studio 2017 se po prvním připojení k procesu pomocí následujícího postupu můžete rychle připojit ke stejnému procesu výběrem možnosti **ladění** znovu  >  **připojit k procesu**.
 
 4. V dialogovém okně **připojit k procesu** Získejte filtrovaný seznam instancí prohlížeče, ke kterým se můžete připojit.
     ::: moniker range=">=vs-2019"
@@ -189,7 +189,7 @@ Chcete-li konfigurovat upřesňující nastavení pro zdrojové mapování, pou�
 
 Chcete-li povolit ladění pomocí sady Visual Studio, je nutné zkontrolovat, zda jsou odkazy na zdrojový soubor ve vygenerovaném zdrojovém mapování správné (to může vyžadovat testování). Například pokud používáte sadu Webpack, odkazy ve zdrojovém souboru mapování zahrnují předponu *Webpack:///* , která zabrání sadě Visual Studio najít zdrojový soubor TYPESCRIPT nebo JSX. Konkrétně při opravě tohoto pro účely ladění musí být odkaz na zdrojový soubor (například *App. TSX*) změněn z nějakého typu *Webpack:///./app.TSX* na něco jako *./app.TSX*, což umožňuje ladění (cesta je relativní ke zdrojovému souboru). Následující příklad ukazuje, jak můžete nakonfigurovat mapování zdrojů v nástroji Webpack, což je jeden z nejběžnějších to software instalující, aby fungoval se sadou Visual Studio.
 
-(Jenom pro Webpack) Pokud nastavujete zarážku na TypeScript souboru JSX (spíše než soubor s příponou JavaScriptu), musíte aktualizovat konfiguraci sady Webpack. Například v *webpack-config.js*může být nutné nahradit následující kód:
+(Jenom pro Webpack) Pokud nastavujete zarážku na TypeScript souboru JSX (spíše než soubor s příponou JavaScriptu), musíte aktualizovat konfiguraci sady Webpack. Například v *webpack-config.js* může být nutné nahradit následující kód:
 
 ```javascript
   output: {

@@ -1,5 +1,7 @@
 ---
 title: 'Návod: vytvoření glyfu marže | Microsoft Docs'
+description: V tomto návodu se dozvíte, jak přizpůsobit vzhled okrajů editoru pomocí rozšíření vlastních editorů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b94ab61f56d74537758c189adc9c104516f67f92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8a2ac481ebf76fc2b34be841cd20d15b97fcfa9
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905056"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863086"
 ---
 # <a name="walkthrough-create-a-margin-glyph"></a>Návod: vytvoření glyfu marže
 Vzhled okrajů editoru lze přizpůsobit pomocí rozšíření vlastních editorů. Tento návod vloží vlastní glyf na okraj indikátoru vždy, když se v komentáři k kódu zobrazí slovo todo.
@@ -25,7 +27,7 @@ Vzhled okrajů editoru lze přizpůsobit pomocí rozšíření vlastních editor
 
 ## <a name="create-a-mef-project"></a>Vytvořit projekt MEF
 
-1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost**a potom **projekt VSIX**.) Pojmenujte řešení `TodoGlyphTest` .
+1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost** a potom **projekt VSIX**.) Pojmenujte řešení `TodoGlyphTest` .
 
 2. Přidejte položku projektu klasifikátoru editoru. Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 

@@ -1,5 +1,6 @@
 ---
 title: Vzdálené ladění ASP.NET na počítači se službou IIS
+description: Naučte se, jak nastavit a nakonfigurovat aplikaci Visual Studio ASP.NET MVC 4.5.2, nasadit ji do služby IIS a připojit vzdálený ladicí program ze sady Visual Studio.
 ms.custom:
 - remotedebugging
 - seodec18
@@ -11,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: cd2b787fe546b9c53332fcdc548d3da829759755
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a3520220da15ef771c8cecbd7962e4448727910
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84173912"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815708"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>Vzdálené ladění ASP.NET na vzdáleném počítači IIS
 Chcete-li ladit aplikaci ASP.NET, která byla nasazena do služby IIS, nainstalujte a spusťte nástroje Remote Tools v počítači, kde jste nasadili aplikaci, a pak se připojte k spuštěné aplikaci ze sady Visual Studio.
@@ -60,10 +61,10 @@ Tento článek obsahuje kroky pro nastavení základní konfigurace služby IIS 
 1. Vytvořte novou aplikaci MVC ASP.NET.
 
     ::: moniker range=">=vs-2019"
-    V aplikaci Visual Studio 2019 zadejte **CTRL + Q** pro otevření vyhledávacího pole, zadejte **ASP.NET**, zvolte **šablony**a pak zvolte **vytvořit novou webovou aplikaci v ASP.NET (.NET Framework)**. V dialogovém okně, které se zobrazí, pojmenujte projekt **MyASPApp**a pak zvolte **vytvořit**. Vyberte **MVC** a zvolte **vytvořit**.
+    V aplikaci Visual Studio 2019 zadejte **CTRL + Q** pro otevření vyhledávacího pole, zadejte **ASP.NET**, zvolte **šablony** a pak zvolte **vytvořit novou webovou aplikaci v ASP.NET (.NET Framework)**. V dialogovém okně, které se zobrazí, pojmenujte projekt **MyASPApp** a pak zvolte **vytvořit**. Vyberte **MVC** a zvolte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Pokud to chcete provést v aplikaci Visual Studio 2017, zvolte **soubor > nový > projekt**a pak vyberte **Webová aplikace Visual C# > web > ASP.NET**. V části šablony **ASP.NET 4.5.2** vyberte **MVC**. Ujistěte se, že není vybraná **možnost povolit podporu Docker** a že **ověřování** je nastaveno na **bez ověřování**. Pojmenujte projekt **MyASPApp**.)
+    Pokud to chcete provést v aplikaci Visual Studio 2017, zvolte **soubor > nový > projekt** a pak vyberte **Webová aplikace Visual C# > web > ASP.NET**. V části šablony **ASP.NET 4.5.2** vyberte **MVC**. Ujistěte se, že není vybraná **možnost povolit podporu Docker** a že **ověřování** je nastaveno na **bez ověřování**. Pojmenujte projekt **MyASPApp**.)
     ::: moniker-end
 
 2. Otevřete soubor  *HomeController.cs* a nastavte zarážku v `About()` metodě.
@@ -91,7 +92,7 @@ Pokud potřebujete podrobnější informace k instalaci ASP.NET ve službě IIS,
 
 1. Pomocí instalačního programu webové platformy (WebPI) nainstalujte ASP.NET 4,5 (z uzlu Server v systému Windows Server 2012 R2 zvolte možnost **získat nové součásti webové platformy** a pak vyhledejte ASP.NET).
 
-    ![RemoteDBG_IIS_AspNet_45](../debugger/media/remotedbg_iis_aspnet_45.png "RemoteDBG_IIS_AspNet_45")
+    ![Snímek obrazovky s instalačním programem webové platformy 5,0 zobrazující výsledky hledání pro asp.net s komponentou webové platformy IIS: ASP.NET 4,5 v kruhu červeně.](../debugger/media/remotedbg_iis_aspnet_45.png)
 
     > [!NOTE]
     > Pokud používáte Windows Server 2008 R2, nainstalujte místo toho ASP.NET 4 pomocí tohoto příkazu:
@@ -148,15 +149,15 @@ Tuto možnost můžete použít k nasazení aplikace, pokud chcete zkopírovat a
 
 3. V části **připojení** v levém podokně přejdete na **lokality**.
 
-4. Vyberte **výchozí web**, zvolte **základní nastavení**a nastavte **fyzickou cestu** na **C:\Publish**.
+4. Vyberte **výchozí web**, zvolte **základní nastavení** a nastavte **fyzickou cestu** na **C:\Publish**.
 
 5. Klikněte pravým tlačítkem myši na uzel **výchozí web** a vyberte **Přidat aplikaci**.
 
 6. Nastavte pole **alias** na **MyASPApp**, přijměte výchozí fond aplikací (**DefaultAppPool**) a nastavte **fyzickou cestu** na **C:\Publish**.
 
-7. V části **připojení**vyberte **fondy aplikací**. Otevřete **DefaultAppPool** a nastavte pole fond aplikací na **ASP.NET v 4.0** (ASP.NET 4,5 není možností pro fond aplikací).
+7. V části **připojení** vyberte **fondy aplikací**. Otevřete **DefaultAppPool** a nastavte pole fond aplikací na **ASP.NET v 4.0** (ASP.NET 4,5 není možností pro fond aplikací).
 
-8. V lokalitě vybrané ve Správci služby IIS vyberte možnost **Upravit oprávnění**a ujistěte se, že je IUSR, IIS_IUSRS nebo uživatel nakonfigurovaný pro fond aplikací autorizovaný uživatel s oprávněním ke čtení &. Pokud žádné z těchto uživatelů nejsou k dispozici, přidejte účty IUSR jako uživatele s právy pro čtení & oprávnění k provádění.
+8. V lokalitě vybrané ve Správci služby IIS vyberte možnost **Upravit oprávnění** a ujistěte se, že je IUSR, IIS_IUSRS nebo uživatel nakonfigurovaný pro fond aplikací autorizovaný uživatel s oprávněním ke čtení &. Pokud žádné z těchto uživatelů nejsou k dispozici, přidejte účty IUSR jako uživatele s právy pro čtení & oprávnění k provádění.
 
 ### <a name="publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>Publikování a nasazení aplikace publikováním do místní složky ze sady Visual Studio
 
@@ -204,13 +205,13 @@ Informace o spuštění vzdáleného ladícího programu jako služby najdete v 
 
 3. Nastavte pole Kvalifikátor na **\<remote computer name>** a stiskněte klávesu **ENTER**.
 
-    Ověřte, že Visual Studio přidá požadovaný port do názvu počítače, který se zobrazí ve formátu: ** \<remote computer name> :p** .
+    Ověřte, že Visual Studio přidá požadovaný port do názvu počítače, který se zobrazí ve formátu: **\<remote computer name> :p** .
 
     ::: moniker range=">=vs-2019"
-    V aplikaci Visual Studio 2019 byste měli vidět ** \<remote computer name> : 4024**
+    V aplikaci Visual Studio 2019 byste měli vidět **\<remote computer name> : 4024**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V aplikaci Visual Studio 2017 byste měli vidět ** \<remote computer name> : 4022**
+    V aplikaci Visual Studio 2017 byste měli vidět **\<remote computer name> : 4022**
     ::: moniker-end
     Port je povinný. Pokud se číslo portu nezobrazuje, přidejte ho ručně.
 
@@ -223,7 +224,7 @@ Informace o spuštění vzdáleného ladícího programu jako služby najdete v 
 
 6. Zadejte první písmeno názvu procesu, abyste mohli rychle najít **w3wp.exe** ASP.NET 4,5.
 
-    Pokud se **w3wp.exe**zobrazuje více procesů, podívejte se do sloupce **uživatelské jméno** . V některých scénářích se ve sloupci **uživatelské jméno** zobrazí název vašeho fondu aplikací, například **Služba IIS APPPOOL\DefaultAppPool**. Pokud se zobrazí fond aplikací, snadný způsob, jak identifikovat správný proces, je vytvořit nový pojmenovaný fond aplikací pro instanci aplikace, kterou chcete ladit, a pak ji můžete snadno najít ve sloupci **uživatelské jméno** .
+    Pokud se **w3wp.exe** zobrazuje více procesů, podívejte se do sloupce **uživatelské jméno** . V některých scénářích se ve sloupci **uživatelské jméno** zobrazí název vašeho fondu aplikací, například **Služba IIS APPPOOL\DefaultAppPool**. Pokud se zobrazí fond aplikací, snadný způsob, jak identifikovat správný proces, je vytvořit nový pojmenovaný fond aplikací pro instanci aplikace, kterou chcete ladit, a pak ji můžete snadno najít ve sloupci **uživatelské jméno** .
 
     ::: moniker range=">=vs-2019"
     ![RemoteDBG_AttachToProcess](../debugger/media/vs-2019/remotedbg-attachtoprocess.png "RemoteDBG_AttachToProcess")
@@ -234,7 +235,7 @@ Informace o spuštění vzdáleného ladícího programu jako služby najdete v 
 
 7. Klikněte na **připojit** .
 
-8. Otevřete web vzdáleného počítače. V prohlížeči, navštivte **http:// \<remote computer name> **.
+8. Otevřete web vzdáleného počítače. V prohlížeči, navštivte **http:// \<remote computer name>**.
 
     Měla by se zobrazit webová stránka ASP.NET.
 9. Ve spuštěné aplikaci ASP.NET klikněte na odkaz na stránku **o** aplikaci.
@@ -261,7 +262,7 @@ Požadované porty:
 
 1. Chcete-li otevřít port na Windows serveru, otevřete nabídku **Start** a vyhledejte **bránu Windows Firewall s pokročilým zabezpečením**.
 
-2. Pak zvolte **příchozí pravidla > nového pravidla > portu**. Zvolte **Další** a v **části konkrétní místní porty**zadejte číslo portu, klikněte na **Další**, pak na **Povolit připojení**, klikněte na další a pro příchozí pravidlo přidejte název (**IIS**, **nasazení webu**nebo **msvsmon**).
+2. Pak zvolte **příchozí pravidla > nového pravidla > portu**. Zvolte **Další** a v **části konkrétní místní porty** zadejte číslo portu, klikněte na **Další**, pak na **Povolit připojení**, klikněte na další a pro příchozí pravidlo přidejte název (**IIS**, **nasazení webu** nebo **msvsmon**).
 
     Pokud potřebujete další podrobnosti o konfiguraci brány Windows Firewall, přečtěte si téma [Konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
 

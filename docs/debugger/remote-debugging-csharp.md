@@ -1,5 +1,6 @@
 ---
 title: Vzdálené ladění projektu v jazyce C# nebo VB | Microsoft Docs
+description: Naučte se, jak ladit aplikaci Visual Studio C# nebo Visual Basic ze vzdáleného počítače pomocí následujících podrobných pokynů.
 ms.custom:
 - remotedebugging"=
 - seodec18
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f147acae956ad380c6e85984de29d5316394c0a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76364dd6817774c38daa62463cd5bc635075ba73
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "92298722"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815695"
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>Vzdálené ladění projektu v jazyce C# nebo Visual Basic v aplikaci Visual Studio
 Chcete-li ladit aplikaci Visual Studio, která byla nasazena v jiném počítači, nainstalujte a spusťte nástroje Remote Tools v počítači, kde jste nasadili aplikaci, nakonfigurujte projekt tak, aby se připojil ke vzdálenému počítači ze sady Visual Studio, a pak spusťte aplikaci.
@@ -67,11 +68,11 @@ Ladicí program nemůže nasadit aplikace Visual C# nebo Visual Basic desktopov�
 
 4. Na stránce **vlastnosti** klikněte na kartu **ladění** .
 
-    ![RemoteDebuggerCSharp](../debugger/media/remotedebuggercsharp.png "RemoteDebuggerCSharp")
+    ![Snímek obrazovky karty ladění ve vlastnostech Průzkumník řešení sady Visual Studio Vlastnost použít vzdálený počítač je nastavená na MJO-DL: 4022.](../debugger/media/remotedebuggercsharp.png)
 
 5. Ujistěte se, že je textové pole **pracovní adresář** prázdné.
 
-6. Vyberte možnost **použít vzdálený počítač**a do textového pole zadejte **yourmachinename: port** . (Číslo portu se zobrazí v okně vzdáleného ladicího programu. Číslo portu zvýší hodnotu 2 v každé verzi sady Visual Studio).
+6. Vyberte možnost **použít vzdálený počítač** a do textového pole zadejte **yourmachinename: port** . (Číslo portu se zobrazí v okně vzdáleného ladicího programu. Číslo portu zvýší hodnotu 2 v každé verzi sady Visual Studio).
 
     V tomto příkladu použijte:
     ::: moniker range=">=vs-2019"
@@ -85,20 +86,20 @@ Ladicí program nemůže nasadit aplikace Visual C# nebo Visual Basic desktopov�
 
 8. Sestavte projekt.
 
-9. Vytvořte složku na vzdáleném počítači, která je stejná jako složka **ladění** v počítači se systémem Visual Studio: ** \<source path> \MyWPF\MyWPF\bin\Debug**.
+9. Vytvořte složku na vzdáleném počítači, která je stejná jako složka **ladění** v počítači se systémem Visual Studio: **\<source path> \MyWPF\MyWPF\bin\Debug**.
 
 10. Zkopírujte spustitelný soubor, který jste právě vytvořili z počítače se systémem Visual Studio, do nově vytvořené složky ve vzdáleném počítači.
 
     > [!CAUTION]
     > Neprovádějte změny kódu nebo znovu sestavte (nebo je nutné tento krok zopakovat). Spustitelný soubor, který jste zkopírovali do vzdáleného počítače, se musí přesně shodovat s vaším místním zdrojem a symboly.
 
-    Projekt můžete kopírovat ručně pomocí příkazu xcopy, Robocopy, PowerShellu nebo jiných možností.
+    Projekt můžete kopírovat ručně pomocí příkazu XCopy, Robocopy, PowerShellu nebo jiných možností.
 
 11. Ujistěte se, že je na cílovém počítači spuštěný vzdálený ladicí program (Pokud není, vyhledejte v nabídce **Start** **vzdálený ladicí program** ). Okno vzdáleného ladicího programu vypadá takto.
 
-     ![RemoteDebuggerWindow](../debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")
+     ![Snímek obrazovky s oknem vzdáleného ladicího programu sady Visual Studio 2017 V seznamu je uvedena jedna akce, která indikuje, že na cílovém počítači je spuštěný ladicí program.](../debugger/media/remotedebuggerwindow.png)
 
-12. V aplikaci Visual Studio spusťte ladění (**ladění > spustit ladění**nebo **F5**).
+12. V aplikaci Visual Studio spusťte ladění (**ladění > spustit ladění** nebo **F5**).
 
 13. Pokud se zobrazí výzva, zadejte síťové přihlašovací údaje pro připojení ke vzdálenému počítači.
 
@@ -110,7 +111,7 @@ Ladicí program nemůže nasadit aplikace Visual C# nebo Visual Basic desktopov�
 
 15. Na počítači se systémem Visual Studio by se mělo zobrazit, že se na zarážce zastavilo provádění.
 
-    Pokud máte nějaké soubory bez kódu, které musí aplikace používat, je nutné je zahrnout do projektu aplikace Visual Studio. Vytvořte složku projektu pro další soubory (v **Průzkumník řešení**klikněte na **Přidat > nová složka**). Pak přidejte soubory do složky (v **Průzkumník řešení**klikněte na **Přidat > existující položku**a pak vyberte soubory). Na stránce **vlastnosti** pro každý soubor nastavte vždy hodnotu **Kopírovat do výstupního adresáře** na **Kopírovat**.
+    Pokud máte nějaké soubory bez kódu, které musí aplikace používat, je nutné je zahrnout do projektu aplikace Visual Studio. Vytvořte složku projektu pro další soubory (v **Průzkumník řešení** klikněte na **Přidat > nová složka**). Pak přidejte soubory do složky (v **Průzkumník řešení** klikněte na **Přidat > existující položku** a pak vyberte soubory). Na stránce **vlastnosti** pro každý soubor nastavte vždy hodnotu **Kopírovat do výstupního adresáře** na **Kopírovat**.
 
 ## <a name="set-up-debugging-with-remote-symbols"></a>Nastavení ladění pomocí vzdálených symbolů
 
@@ -119,7 +120,7 @@ Ladicí program nemůže nasadit aplikace Visual C# nebo Visual Basic desktopov�
 ## <a name="see-also"></a>Viz také
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
-- [Konfigurace brány firewall ve Windows pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
+- [Konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Přiřazení portů vzdáleného ladicího programu](../debugger/remote-debugger-port-assignments.md)
 - [Vzdálené ladění ASP.NET na vzdáleném počítači se službou IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)
-- [Chyby a řešení potíží se vzdáleným laděním](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Chyby vzdáleného ladění a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)

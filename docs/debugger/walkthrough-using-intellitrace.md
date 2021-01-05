@@ -1,5 +1,6 @@
 ---
 title: Zobrazení událostí s IntelliTrace | Microsoft Docs
+description: Naučte se používat IntelliTrace v Visual Studio Enterprise ke shromažďování dat o konkrétních událostech, kategoriích událostí a jednotlivých voláních funkcí.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e1c9c91a-0009-4c4e-9b4f-c9ab3a6022a7
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ffbe0b8365948dc5a69edca390f308cb55ba5a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6fef839b5473881450581db77a885da158e67bbc
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929422"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815747"
 ---
 # <a name="view-events-with-intellitrace-in-visual-studio-enterprise-c-visual-basic"></a>Zobrazení událostí s IntelliTrace v Visual Studio Enterprise (C#, Visual Basic)
 
@@ -60,17 +61,17 @@ Můžete vyzkoušet ladění s pouhými IntelliTrace událostmi. Události Intel
 
 2. Spuštění se zastaví na zarážce. Pokud nevidíte okno **diagnostické nástroje** , klikněte na **ladění > Windows > IntelliTrace události**.
 
-    V okně **diagnostické nástroje** Najděte kartu **události** (měli byste vidět 3 karty, **události**, **využití paměti**a **využití CPU**). Karta **události** zobrazuje chronologický seznam událostí končící poslední událostí před spuštěním ladicího programu podařilo přerušit. Měla by se zobrazit událost s názvem **Access WordSearchInputs.txt**.
+    V okně **diagnostické nástroje** Najděte kartu **události** (měli byste vidět 3 karty, **události**, **využití paměti** a **využití CPU**). Karta **události** zobrazuje chronologický seznam událostí končící poslední událostí před spuštěním ladicího programu podařilo přerušit. Měla by se zobrazit událost s názvem **Access WordSearchInputs.txt**.
 
     Následující snímek obrazovky je ze sady Visual Studio 2015 Update 1.
 
-    ![IntelliTrace&#45;-datum1](../debugger/media/intellitrace-update1.png "IntelliTrace-v-datum1")
+    ![Snímek obrazovky okna Visual Studio Code Spuštění je zastaveno na zarážce a karta události v okně Diagnostické nástroje vypisuje události.](../debugger/media/intellitrace-update1.png)
 
 3. Výběrem události rozbalíte její podrobnosti.
 
     Následující snímek obrazovky je ze sady Visual Studio 2015 Update 1.
 
-    ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1-SingleEvent")
+    ![Snímek obrazovky karty události v okně Diagnostické nástroje sady Visual Studio. Vybere se událost, která se rozbalí, aby se zobrazila její podrobnosti.](../debugger/media/intellitraceupdate1-singleevent.png)
 
     Můžete zvolit odkaz cesta k otevření souboru. Pokud úplná cesta není k dispozici, zobrazí se dialogové okno **otevřít soubor** .
 
@@ -78,7 +79,7 @@ Můžete vyzkoušet ladění s pouhými IntelliTrace událostmi. Události Intel
 
     Následující snímek obrazovky je ze sady Visual Studio 2015 Update 1.
 
-    ![HistoricalDebugging&#45;-datum1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-v-datum1")
+    ![Snímek obrazovky okna Visual Studio Code Spuštění je zastaveno na zarážce, je vybrána událost a odpovídající řádek kódu je zvýrazněn.](../debugger/media/historicaldebugging-update1.png)
 
 4. Pokud jste tuto chybu nenalezli, zkuste zkoumat další události, které se zavedou k chybě. IntelliTrace můžete také zaznamenat informace o volání, abyste mohli krokovat prostřednictvím volání funkcí.
 

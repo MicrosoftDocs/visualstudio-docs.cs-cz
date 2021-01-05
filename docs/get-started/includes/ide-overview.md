@@ -6,12 +6,12 @@ ms.author: tglee
 author: TerryGLee
 manager: jillfra
 ms.topic: include
-ms.openlocfilehash: 03e5f806b428b7ecf08038ef34d6b1dddcd92f9e
-ms.sourcegitcommit: cea9e5787ff33e0e18aa1942bf4236748e0ef547
+ms.openlocfilehash: fbbd2278a59197601afe02e777e89245fc6bb421
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92210874"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97844766"
 ---
 *Integrované vývojové prostředí* sady Visual Studio je kreativní spouštěcí panel, který můžete použít k úpravám, ladění a vytváření kódu a pak k publikování aplikace. Integrované vývojové prostředí (IDE) je program s bohatou funkcí, který se dá použít pro mnoho aspektů vývoje softwaru. Nad rámec a nad standardním editorem a ladicím programem, který využívá většina IDEs, Visual Studio obsahuje kompilátory, nástroje pro dokončování kódu, grafické návrháře a mnoho dalších funkcí, které usnadňují proces vývoje softwaru.
 
@@ -171,9 +171,9 @@ Pojďme se podrobně a vytvořit jednoduchý program.
 
    ![Soubor > nový projekt na řádku nabídek](../media/file-new-project-menu.png)
 
-   Dialogové okno **Nový projekt** ukazuje několik *šablon*projektů. Šablona obsahuje základní soubory a nastavení potřebná pro daný typ projektu.
+   Dialogové okno **Nový projekt** ukazuje několik *šablon* projektů. Šablona obsahuje základní soubory a nastavení potřebná pro daný typ projektu.
 
-1. Zvolte kategorii šablony **.NET Core** v jazyce **Visual C#** a pak zvolte šablonu **Konzolová aplikace (.NET Core)** . Do textového pole **název** zadejte **HelloWorld**a pak klikněte na tlačítko **OK** .
+1. Zvolte kategorii šablony **.NET Core** v jazyce **Visual C#** a pak zvolte šablonu **Konzolová aplikace (.NET Core)** . Do textového pole **název** zadejte **HelloWorld** a pak klikněte na tlačítko **OK** .
 
    ![Šablona aplikace .NET Core](../media/overview-new-project-dialog.png)
 
@@ -198,7 +198,7 @@ Pojďme se podrobně a vytvořit jednoduchý program.
 
    Visual Studio sestaví aplikaci a otevře se okno konzoly se zprávou **Hello World!**. Teď máte spuštěnou aplikaci.
 
-   ![Okno konzoly](../media/overview-console-window.png)
+   ![Snímek obrazovky okna konzoly cmd.exe zobrazující výstup Hello Word! a pokračujte stisknutím libovolné klávesy.](../media/overview-console-window.png)
 
 1. Okno konzoly zavřete stisknutím libovolné klávesy na klávesnici.
 
@@ -239,7 +239,7 @@ Pojďme se podrobně a vytvořit jednoduchý program.
 
    ![Úvodní okno sady Visual Studio – vytvořit nový projekt](../media/vs-2019/start-window-create-new-project.png)
 
-   Otevře se okno **vytvořit nový projekt** a zobrazí se několik *šablon*projektů. Šablona obsahuje základní soubory a nastavení potřebná pro daný typ projektu.
+   Otevře se okno **vytvořit nový projekt** a zobrazí se několik *šablon* projektů. Šablona obsahuje základní soubory a nastavení potřebná pro daný typ projektu.
 
 1. Pokud chcete najít požadovanou šablonu, zadejte nebo zadejte do vyhledávacího pole **konzolu .NET Core** . Seznam šablon, které jsou k dispozici, se automaticky filtruje na základě klíčových slov, která jste zadali. Výsledky šablony můžete dál filtrovat volbou **C#** v rozevíracím seznamu **jazyk** . Vyberte šablonu **aplikace konzoly (.NET Core)** a klikněte na tlačítko **Další**.
 
@@ -267,7 +267,7 @@ Pojďme se podrobně a vytvořit jednoduchý program.
 
    Visual Studio sestaví aplikaci a otevře se okno konzoly se zprávou **Hello World!**. Teď máte spuštěnou aplikaci.
 
-   ![Okno konzoly](../media/vs-2019/overview-console-window.png)
+   ![Snímek obrazovky okna konzoly ladění Microsoft Visual Studio, ve kterém se zobrazuje výstup "Hello Word!" a stisknutím libovolné klávesy zavřete toto okno.](../media/vs-2019/overview-console-window.png)
 
 1. Okno konzoly zavřete stisknutím libovolné klávesy na klávesnici.
 
@@ -292,7 +292,7 @@ Pojďme se podrobně a vytvořit jednoduchý program.
 
 1. Do okna konzoly zadejte své jméno a stiskněte klávesu **ENTER**.
 
-   ![Okno konzoly](../media/vs-2019/overview-console-input.png)
+   ![Snímek obrazovky okna konzoly ladění Microsoft Visual Studio, kde se zobrazí výzva k zadání názvu, vstupu a výstupu "Hello! Georgette!".](../media/vs-2019/overview-console-input.png)
 
 1. Stisknutím libovolné klávesy zavřete okno konzoly a zastavte spuštěný program.
 
@@ -366,7 +366,7 @@ Nejdřív přejmenujte `name` proměnnou:
 
 10. Spusťte program znovu stisknutím **klávesy CTRL** + **F5**. Výstup bude vypadat nějak takto:
 
-    ![Okno konzoly s výstupem programu](../media/overview-console-final.png)
+    ! Snímek obrazovky okna konzoly cmd.exe zobrazující výzvu k zadání názvu, vstupu a výstupu Hello Georgette! Den roku: 151 '.] (.. /Media/overview-console-final.png)
 
 ::: moniker-end
 
@@ -374,7 +374,7 @@ Nejdřív přejmenujte `name` proměnnou:
 
 10. Spusťte program znovu stisknutím **klávesy CTRL** + **F5**. Výstup bude vypadat nějak takto:
 
-    ![Okno konzoly s výstupem programu](../media/vs-2019/overview-console-final.png)
+    ![Snímek obrazovky okna konzoly ladění Microsoft Visual Studio zobrazující výzvu k zadání názvu, vstupu a výstupu Georgette Hello! Den roku: 43 '.](../media/vs-2019/overview-console-final.png)
 
 ::: moniker-end
 
@@ -408,11 +408,11 @@ Další informace o ladění v aplikaci Visual Studio naleznete v tématu [prohl
 
 Můžete přizpůsobit uživatelské rozhraní sady Visual Studio, včetně změny výchozího barevného motivu. Postup pro změnu na **tmavý** motiv:
 
-1. V panelu nabídek **Tools**  >  otevřete dialogové okno **Možnosti** výběrem**Možnosti** nástroje.
+1. V panelu nabídek   >  otevřete dialogové okno **Možnosti** výběrem **Možnosti** nástroje.
 
 ::: moniker range="vs-2017"
 
-2. Na stránce **Environment** > **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavý**a pak zvolte **OK**.
+2. Na stránce  > **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavý** a pak zvolte **OK**.
 
    Barevný motiv pro celé vývojové prostředí se změní na **tmavý**.
 
@@ -422,7 +422,7 @@ Můžete přizpůsobit uživatelské rozhraní sady Visual Studio, včetně změ
 
 ::: moniker range=">=vs-2019"
 
-2. Na stránce **Environment** > **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavý**a pak zvolte **OK**.
+2. Na stránce  > **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavý** a pak zvolte **OK**.
 
    Barevný motiv pro celé vývojové prostředí se změní na **tmavý**.
 

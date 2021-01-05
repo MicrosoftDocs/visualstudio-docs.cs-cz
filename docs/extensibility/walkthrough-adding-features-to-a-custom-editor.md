@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Přidání funkcí do vlastního editoru | Microsoft Docs'
+description: Přečtěte si, jak přidat další funkce do vlastního editoru po vytvoření editoru pomocí tohoto návodu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12f585a3e7dd4a8182d7ed80cf65a20d0a82da83
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: c08af63eaf68701f1a6703ac41fec20368d78931
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414019"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863196"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>Návod: Přidání funkcí do vlastního editoru
 Po vytvoření vlastního editoru můžete do něj přidat další funkce.
@@ -138,7 +140,7 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
   > [!NOTE]
   > `IOleInPlaceComponent`Rozhraní se používá k zamezení sloučení nabídky OLE 2.
 
-   Vaše `IOleCommandTarget` implementace zpracovává příkazy, jako je **vyjmutí** , **kopírování** a **vložení**. Při implementaci nástroje `IOleCommandTarget` se rozhodněte, zda editor vyžaduje vlastní soubor *. vsct* pro definování vlastní struktury nabídky příkazu, nebo pokud může implementovat standardní příkazy definované pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Editory obvykle používají a rozšíří nabídky rozhraní IDE a definují vlastní panely nástrojů. Často je ale nutné, aby Editor Kromě použití standardní sady příkazů IDE definoval vlastní konkrétní příkazy. Editor musí deklarovat standardní příkazy, které používá, a potom definovat všechny nové příkazy, kontextové nabídky, nabídky nejvyšší úrovně a panely nástrojů v souboru *. vsct* . Pokud vytvoříte místní aktivační editor, implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> a definujte nabídky a panely nástrojů pro Editor v souboru *. vsct* namísto použití sloučení nabídky OLE 2.
+   Vaše `IOleCommandTarget` implementace zpracovává příkazy, jako je **vyjmutí**, **kopírování** a **vložení**. Při implementaci nástroje `IOleCommandTarget` se rozhodněte, zda editor vyžaduje vlastní soubor *. vsct* pro definování vlastní struktury nabídky příkazu, nebo pokud může implementovat standardní příkazy definované pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Editory obvykle používají a rozšíří nabídky rozhraní IDE a definují vlastní panely nástrojů. Často je ale nutné, aby Editor Kromě použití standardní sady příkazů IDE definoval vlastní konkrétní příkazy. Editor musí deklarovat standardní příkazy, které používá, a potom definovat všechny nové příkazy, kontextové nabídky, nabídky nejvyšší úrovně a panely nástrojů v souboru *. vsct* . Pokud vytvoříte místní aktivační editor, implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> a definujte nabídky a panely nástrojů pro Editor v souboru *. vsct* namísto použití sloučení nabídky OLE 2.
 
 - Chcete-li zabránit převrácení příkazu nabídky v uživatelském rozhraní, měli byste použít existující příkazy v integrovaném vývojovém prostředí před započetím nových příkazů. Sdílené příkazy jsou definovány v *SharedCmdDef. vsct* a *ShellCmdDef. vsct*. Tyto soubory jsou nainstalovány ve výchozím nastavení v podadresáři VisualStudioIntegration\Common\Inc [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] instalace.
 

@@ -1,5 +1,7 @@
 ---
 title: Příprava rozšíření pro nasazení Instalační služba systému Windows | Microsoft Docs
+description: Naučte se, jak připravit projekt, jehož výchozí výstup je balíček VSIX pro zařazení do projektu instalace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0084cfc6c08db1c1d15013362a186fec175b4ee4
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: ba494af91d3d40720493b27e7381660ece3fba69
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012214"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97862898"
 ---
 # <a name="prepare-extensions-for-windows-installer-deployment"></a>Příprava rozšíření pro nasazení Instalační služba systému Windows
 K nasazení balíčku VSIX nemůžete použít balíček Instalační služba systému Windows (MSI). Můžete však extrahovat obsah balíčku VSIX pro nasazení MSI. Tento dokument ukazuje, jak připravit projekt, jehož výchozí výstup je balíček VSIX pro zařazení do projektu instalace.
@@ -54,6 +56,6 @@ K nasazení balíčku VSIX nemůžete použít balíček Instalační služba sy
 
 5. Přidejte zbývající soubory do projektu instalace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Nasazení instalačního programu sady Visual Studio](/previous-versions/2kt85ked(v=vs.120))
 - [Návod: Vytvoření vlastní akce](/previous-versions/visualstudio/visual-studio-2010/d9k65z2d(v=vs.100))

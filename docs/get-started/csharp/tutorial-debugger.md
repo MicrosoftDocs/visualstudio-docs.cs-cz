@@ -1,6 +1,6 @@
 ---
 title: 'Kurz: ladění kódu C#'
-description: Naučte se, jak spustit ladicí program sady Visual Studio, krokovat kód a prozkoumat data.
+description: Přečtěte si o funkcích ladicího programu sady Visual Studio a o tom, jak spustit ladicí program, krokovat kód a kontrolovat data v aplikaci C#.
 ms.custom: debug-experiment, seodec18, get-started
 ms.date: 04/23/2020
 ms.technology: vs-ide-debug
@@ -15,20 +15,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d6e9ee79602f3a0db8f68d701120c450bfee721
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 435564a9bf4e90dd25ed5fee3a44d0578c201a99
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82153083"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846947"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Naučte se ladit kód v jazyce C# pomocí sady Visual Studio
 
-V tomto článku se seznámíte s funkcemi ladicího programu sady Visual Studio v podrobném podrobném návodu. Pokud chcete zobrazit vyšší úroveň funkcí ladicího programu, podívejte [se na téma první pohled na ladicí program](../../debugger/debugger-feature-tour.md). Při *ladění aplikace*obvykle znamená, že máte spuštěnou aplikaci s připojeným ladicím programem. Když to uděláte, ladicí program poskytuje mnoho způsobů, jak zjistit, co váš kód při spuštění dělá. Můžete krokovat kód a prohlédnout si hodnoty uložené v proměnných, můžete nastavit hodinky pro proměnné, abyste viděli, kdy se hodnoty mění, můžete zkontrolovat cestu spuštění kódu, zjistit, zda je spuštěna větev kódu a tak dále. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprosto začátečníky](../../debugger/debugging-absolute-beginners.md) .
+V tomto článku se seznámíte s funkcemi ladicího programu sady Visual Studio v podrobném podrobném návodu. Pokud chcete zobrazit vyšší úroveň funkcí ladicího programu, podívejte [se na téma první pohled na ladicí program](../../debugger/debugger-feature-tour.md). Při *ladění aplikace* obvykle znamená, že máte spuštěnou aplikaci s připojeným ladicím programem. Když to uděláte, ladicí program poskytuje mnoho způsobů, jak zjistit, co váš kód při spuštění dělá. Můžete krokovat kód a prohlédnout si hodnoty uložené v proměnných, můžete nastavit hodinky pro proměnné, abyste viděli, kdy se hodnoty mění, můžete zkontrolovat cestu spuštění kódu, zjistit, zda je spuštěna větev kódu a tak dále. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprosto začátečníky](../../debugger/debugging-absolute-beginners.md) .
 
 I když je ukázková aplikace C#, většina funkcí platí pro C++, Visual Basic, F #, Python, JavaScript a další jazyky, které podporuje Visual Studio (F # nepodporuje funkci upravit a pokračovat. F # a JavaScript nepodporují okno **Automatické** hodnoty). Snímky obrazovky jsou v jazyce C#.
 
-V tomto kurzu provedete následující:
+V tomto kurzu:
 
 > [!div class="checklist"]
 > * Spusťte ladicí program a zarážky volání.
@@ -106,7 +106,7 @@ Nejprve vytvoříte projekt konzolové aplikace .NET Core. Typ projektu se dodá
 
 ## <a name="create-the-application"></a>Vytvoření aplikace
 
-1. V *program.cs*místo toho nahraďte veškerý výchozí kód následujícím kódem:
+1. V *program.cs* místo toho nahraďte veškerý výchozí kód následujícím kódem:
 
     ```csharp
     using System;
@@ -187,23 +187,23 @@ Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak 
 
 1. Rozbalením `letters` proměnné zobrazíte její vlastnosti, které zahrnují všechny prvky, které proměnná obsahuje.
 
-     ![Zobrazit Tip pro data](../csharp/media/get-started-view-data-tip.png "Zobrazit Tip pro data")
+     ![Snímek obrazovky ladicího programu sady Visual Studio se zvýrazněným příkazem název + = písmena [I] a rozevírací seznam zobrazující prvky v poli dopisy](../csharp/media/get-started-view-data-tip.png)
 
 1. Potom najeďte myší na `name` proměnnou a uvidíte její aktuální hodnotu, prázdný řetězec.
 
-1. Stiskněte **F10** (nebo zvolte možnost **ladění > krokovat**s), abyste mohli přejít ke `SendMessage` volání metody, a pak stiskněte **F10** ještě jednou.
+1. Stiskněte **F10** (nebo zvolte možnost **ladění > krokovat** s), abyste mohli přejít ke `SendMessage` volání metody, a pak stiskněte **F10** ještě jednou.
 
      F10 posune ladicí program na další příkaz bez krokování do funkcí nebo metod v kódu aplikace (kód se pořád spustí). Stisknutím klávesy F10 ve `SendMessage` volání metody jsme přeskočili kód implementace pro `SendMessage` (což možná není zajímatme hned teď).
 
 1. Několikrát stisknutím klávesy **F10** (nebo **ladění**  >  **krok za běhu**) několikrát projdete `for` smyčkou, přechodem znovu na zarážku a pokaždé, když se podíváte na `name` proměnnou pokaždé, aby zkontrolovala její hodnotu.
 
-     ![Zobrazit Tip pro data](../csharp/media/get-started-data-tip.gif "Zobrazit Tip pro data")
+     ![Animovaný snímek obrazovky ladicího programu sady Visual Studio znázorňující efekt stisknutí klávesy F10 ke krokování a iterování prostřednictvím smyčky během ladění.](../csharp/media/get-started-data-tip.gif)
 
-     Hodnota proměnné se mění v každé iteraci `for` smyčky, zobrazuje hodnoty `f` , potom `fr` , `fre` a tak dále. Chcete-li ladit ladicí program přes smyčku rychleji v tomto scénáři, můžete stisknout klávesu **F5** (nebo zvolit možnost pokračovat v **ladění**  >  **Continue**), která vás provede přechodem na zarážku namísto dalšího příkazu.
+     Hodnota proměnné se mění v každé iteraci `for` smyčky, zobrazuje hodnoty `f` , potom `fr` , `fre` a tak dále. Chcete-li ladit ladicí program přes smyčku rychleji v tomto scénáři, můžete stisknout klávesu **F5** (nebo zvolit možnost pokračovat v **ladění**  >  ), která vás provede přechodem na zarážku namísto dalšího příkazu.
 
      Při ladění budete často potřebovat rychlý způsob kontroly hodnot vlastností u proměnných, abyste viděli, zda ukládají hodnoty, které očekáváte pro uložení, a tipy k datům jsou vhodným způsobem.
 
-1. I když se stále pozastaví `for` smyčka v `Main` metodě, stiskněte klávesu **F11** (nebo zvolte možnost **ladit > krokovat**s), dokud nezastavíte `SendMessage` volání metody.
+1. I když se stále pozastaví `for` smyčka v `Main` metodě, stiskněte klávesu **F11** (nebo zvolte možnost **ladit > krokovat** s), dokud nezastavíte `SendMessage` volání metody.
 
      Měli byste být na tomto řádku kódu:
 
@@ -246,7 +246,7 @@ Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak 
 
 Klikněte na tlačítko **restartovat** ![aplikaci](../../debugger/media/dbg-tour-restart.png "RestartApp") na panelu nástrojů ladění (**CTRL**  +  **SHIFT**  +  **F5**).
 
-Po stisknutí tlačítka **restartovat**ušetří čas oproti zastavování aplikace a restartování ladicího programu. Ladicí program se pozastaví na první zarážce, která je dosaženo spuštěním kódu.
+Po stisknutí tlačítka **restartovat** ušetří čas oproti zastavování aplikace a restartování ladicího programu. Ladicí program se pozastaví na první zarážce, která je dosaženo spuštěním kódu.
 
 Ladicí program se znovu zastaví na zarážce, kterou jste předtím nastavili uvnitř `for` smyčky.
 
@@ -254,7 +254,7 @@ Ladicí program se znovu zastaví na zarážce, kterou jste předtím nastavili 
 
 1. Podívejte se na okno **Automatické** hodnoty v dolní části editoru kódu.
 
-    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu, a to volbou **ladit**  >  **okna**  >  **Automatické**hodnoty.
+    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu, a to volbou **ladit**  >  **okna**  >  **Automatické** hodnoty.
 
     V okně **Automatické** hodnoty vidíte proměnné a jejich aktuální hodnotu. Okno **Automatické** hodnoty zobrazuje všechny proměnné, které se používají na aktuálním řádku nebo na předchozím řádku (podívejte se na dokumentaci pro specifické chování jazyka).
 
@@ -278,7 +278,7 @@ Ladicí program se znovu zastaví na zarážce, kterou jste předtím nastavili 
 
 1. Při pozastavení ve `for` smyčce klikněte na okno **zásobník volání** , které je ve výchozím nastavení otevřené v pravém dolním podokně.
 
-    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu výběrem možnosti **ladit**  >  **Windows**  >  **zásobník volání**systému Windows.
+    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu výběrem možnosti **ladit**  >    >  **zásobník volání** systému Windows.
 
 2. Klikněte několikrát na klávesu **F11** , dokud se nezobrazí pozastavení ladicího programu v `SendMessage` metodě. Podívejte se do okna **zásobník volání** .
 
@@ -293,7 +293,7 @@ Ladicí program se znovu zastaví na zarážce, kterou jste předtím nastavili 
 
     Dvakrát klikněte na řádek kódu, abyste se mohli podívat na zdrojový kód a zároveň změnit aktuální rozsah, který je kontrolován ladicím programem. Tato akce nepřejde do ladicího programu.
 
-    Můžete také použít nabídky kliknutím pravým tlačítkem z okna **zásobník volání** k provedení dalších akcí. Můžete například vložit zarážky do určených funkcí, pokračovat v ladicím programu pomocí funkce **Run to Cursor**a přejít na zdrojový kód. Další informace naleznete v tématu [How to: Prohlédněte si zásobník volání](../../debugger/how-to-use-the-call-stack-window.md).
+    Můžete také použít nabídky kliknutím pravým tlačítkem z okna **zásobník volání** k provedení dalších akcí. Můžete například vložit zarážky do určených funkcí, pokračovat v ladicím programu pomocí funkce **Run to Cursor** a přejít na zdrojový kód. Další informace naleznete v tématu [How to: Prohlédněte si zásobník volání](../../debugger/how-to-use-the-call-stack-window.md).
 
 ## <a name="change-the-execution-flow"></a>Změna toku spuštění
 

@@ -1,17 +1,17 @@
 ---
 title: Vlastnosti sestavení kontejnerů sady Visual Studio
 author: ghogen
-description: Přehled procesu sestavení nástrojů kontejneru
+description: Naučte se, jak upravit vlastnosti sestavení kontejnerových nástrojů pro přizpůsobení způsobu sestavení a spuštění projektu kontejneru v aplikaci Visual Studio.
 ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 427a70d9bc4f6ef326ffb16e7d26df9d8fae2365
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e8675bd0ea12b30ce678ce454bcedee457ddacd
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283200"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846736"
 ---
 # <a name="container-tools-build-properties"></a>Vlastnosti sestavení kontejnerových nástrojů
 
@@ -39,7 +39,7 @@ V následující tabulce jsou uvedeny vlastnosti MSBuild dostupné pro projekty 
 | DockerDebuggeeWorkingDirectory | Při ladění je ladicí program vyzván k použití této cesty jako pracovního adresáře. | C:\app (Windows) nebo/App (Linux) |1.7.8 nebo novější|
 | DockerDefaultTargetOS | Výchozí cílový operační systém, který se používá při vytváření image Docker. | Nastaveno sadou Visual Studio. |1.0.1985401 nebo novější|
 | DockerImageLabels | Výchozí sada popisků použitých pro bitovou kopii Docker. | com. Microsoft. Created-by = Visual-Studio; com. Microsoft. Visual-Studio. Project-Name = $ (MSBuildProjectName) |1.5.4 nebo novější|
-| DockerFastModeProjectMountDirectory|V **rychlém režimu**Tato vlastnost řídí, kde je výstupní adresář projektu připojen ke svazku do běžícího kontejneru.|C:\app (Windows) nebo/App (Linux)|1.9.2 nebo novější|
+| DockerFastModeProjectMountDirectory|V **rychlém režimu** Tato vlastnost řídí, kde je výstupní adresář projektu připojen ke svazku do běžícího kontejneru.|C:\app (Windows) nebo/App (Linux)|1.9.2 nebo novější|
 | DockerfileBuildArguments | Do příkazu [Docker Build](https://docs.docker.com/engine/reference/commandline/build/) byly předány další argumenty. | Neužívá se. |1.0.1872750 nebo novější|
 | DockerfileContext | Výchozí kontext použitý při vytváření image Docker jako cesta relativní k souboru Dockerfile. | Nastaveno sadou Visual Studio. |1.0.1872750 nebo novější|
 | DockerfileFastModeStage | Fáze souboru Dockerfile (tj. Target), která se má použít při sestavování image v režimu ladění. | V souboru Dockerfile se našla první fáze (Base). |

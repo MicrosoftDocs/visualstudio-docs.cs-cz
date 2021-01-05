@@ -1,5 +1,7 @@
 ---
 title: POPLISTFUNC | Microsoft Docs
+description: Přečtěte si o funkci zpětného volání POPLISTFUNC, kterou používá modul plug-in správy zdrojových kódů k aktualizaci seznamu souborů nebo adresářů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,17 +14,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c5f8c1683a993915476ff23f1f5d5f2c2aba462
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 239f1aa5a55c3a5ce3a0f2a3ec9145f3cdb0630e
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702065"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863158"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 Toto zpětné volání je dodáno rozhraním IDE do [SccPopulateList](../extensibility/sccpopulatelist-function.md) a používá ho modul plug-in správy zdrojových kódů k aktualizaci seznamu souborů nebo adresářů (také dodaných do `SccPopulateList` funkce).
 
- Když uživatel zvolí příkaz **Get** v integrovaném vývojovém prostředí (IDE), rozhraní IDE zobrazí seznam všech souborů, které uživatel může získat. Rozhraní IDE bohužel neví přesný seznam všech souborů, které uživatel může získat. Tento seznam obsahuje jenom modul plug-in. Pokud jiní uživatelé přidali soubory do projektu správy zdrojového kódu, tyto soubory by se měly zobrazit v seznamu, ale rozhraní IDE je neví. Rozhraní IDE vytvoří seznam souborů, které může uživatel získat. Před zobrazením tohoto seznamu uživateli volá SccPopulateList, který dává modulu [SccPopulateList](../extensibility/sccpopulatelist-function.md) `,` Plug-in správy zdrojového kódu možnost Přidat a odstranit soubory ze seznamu.
+ Když uživatel zvolí příkaz **Get** v integrovaném vývojovém prostředí (IDE), rozhraní IDE zobrazí seznam všech souborů, které uživatel může získat. Rozhraní IDE bohužel neví přesný seznam všech souborů, které uživatel může získat. Tento seznam obsahuje jenom modul plug-in. Pokud jiní uživatelé přidali soubory do projektu správy zdrojového kódu, tyto soubory by se měly zobrazit v seznamu, ale rozhraní IDE je neví. Rozhraní IDE vytvoří seznam souborů, které může uživatel získat. Před zobrazením tohoto seznamu uživateli volá SccPopulateList, který dává modulu [](../extensibility/sccpopulatelist-function.md) `,` Plug-in správy zdrojového kódu možnost Přidat a odstranit soubory ze seznamu.
 
 ## <a name="signature"></a>Podpis
  Modul plug-in správy zdrojových kódů upraví seznam voláním funkce implementované rozhraním IDE s následujícím prototypem:

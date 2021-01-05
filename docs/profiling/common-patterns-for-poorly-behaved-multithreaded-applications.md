@@ -1,5 +1,6 @@
 ---
 title: Běžné vzory pro vícevláknové aplikace s nevhodným chováním
+description: Seznamte se s běžnými vzory pro vícevláknové aplikace, které jsou součástí nástroje Vizualizátor souběžnosti sady Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f45c22684ef737de7235caebd4ad0b1b4189155
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 36e14640da4d66134ca961607f66f6a355f6b9d9
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808939"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815786"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Obecné vzory pro vícevláknové aplikace s nevhodným chováním
 
@@ -27,7 +28,7 @@ Vizualizátor souběžnosti pomáhá vývojářům vizualizovat chování vícev
 
 ![Kolize zámku vyplývající z serializovaného spuštění](../profiling/media/lockcontention_serialized.png "LockContention_Serialized")
 
-V některých případech je stubbornly paralelní aplikace i nadále spouštěna i v případě, že má několik vláken a počítač má dostatečný počet logických jader. Prvním příznakem je nízký výkon s více vlákny, možná i trochu pomalejší než implementace sériového portu. V zobrazení vláken se nezobrazuje paralelní spuštění více vláken; místo toho vidíte, že pouze jedno vlákno je prováděno v jednom okamžiku. Pokud v tomto okamžiku kliknete na segment synchronizace ve vlákně, můžete zobrazit zásobník volání pro blokované vlákno (blokující zásobník volání) a vlákno, které odebralo podmínku blokování (odblokování zásobníku volání). Kromě toho, pokud dojde k odblokování zásobníku volání v procesu, který analyzujete, je zobrazen konektor připravený pro vlákno. Od tohoto okamžiku můžete přejít k vašemu kódu z zásobníků volání blokující a odblokovat, aby bylo možné zjistit příčinu serializace ještě více.
+V některých případech je stubbornly paralelní aplikace i nadále spouštěna i v případě, že má několik vláken a počítač má dostatečný počet logických jader. Prvním příznakem je nízký výkon s více vlákny, možná i trochu pomalejší než implementace sériového portu. V zobrazení vláken se nezobrazuje paralelní spuštění více vláken; místo toho vidíte, že pouze jedno vlákno je prováděno v jednom okamžiku. Pokud v tomto okamžiku kliknete na segment synchronizace ve vlákně, můžete zobrazit zásobník volání pro blokované vlákno (blokující zásobník volání) a vlákno, které odebralo podmínku blokování (odblokování zásobníku volání). Kromě toho, pokud dojde k odblokování zásobníku volání v procesu, který analyzujete, je zobrazen konektor Thread-Ready. Od tohoto okamžiku můžete přejít k vašemu kódu z zásobníků volání blokující a odblokovat, aby bylo možné zjistit příčinu serializace ještě více.
 
 Jak je znázorněno na následujícím obrázku, Vizualizér souběžnosti může tento příznak zobrazit také v zobrazení využití procesoru, kde navzdory přítomnosti více vláken aplikace spotřebovává pouze jeden logický jádro.
 
@@ -37,17 +38,17 @@ Další informace najdete v části "Začínáme s problémem" v článku o výk
 
 ## <a name="uneven-workload-distribution"></a>Nerovnoměrné rozdělení úloh
 
-![Nerovnoměrné zatížení](../profiling/media/unevenworkload_1.png "UnevenWorkLoad_1")
+![Snímek obrazovky grafu úloh pro paralelní vlákna v Vizualizér souběžnosti Vlákna končí v různých časech, v nichž se zobrazuje model schodišťového kroku.](../profiling/media/unevenworkload_1.png)
 
 Pokud dojde k nepravidelné distribuci práce napříč několika paralelními vlákny v aplikaci, typický vzor schodišťového kroku se zobrazí jako každé vlákno dokončí svou práci, jak je znázorněno na předchozím obrázku. Vizualizátor souběžnosti nejčastěji zobrazuje dobu ukončení u každého souběžného vlákna. Nicméně tato vlákna obvykle končí neoprávněným způsobem místo toho, aby bylo souběžně ukončeno. Tento model označuje nepravidelnou distribuci práce mezi skupinou paralelních vláken, což může vést ke snížení výkonu. Nejlepším způsobem, jak tento problém vyřešit, je znovu vyhodnotit algoritmus, podle kterého byla práce rozdělena mezi paralelní vlákna.
 
 Jak je znázorněno na následujícím obrázku, Vizualizér souběžnosti může tento příznak také vystavit v zobrazení využití procesoru jako postupný krok v využití procesoru.
 
-![Nerovnoměrné zatížení](../profiling/media/unevenworkload_2.png "UnevenWorkload_2")
+![Snímek obrazovky s zobrazením využití procesoru v Vizualizátor souběžnosti zobrazující model schodiště na konci grafu využití procesoru.](../profiling/media/unevenworkload_2.png)
 
 ## <a name="oversubscription"></a>Kompenzace
 
-![Kompenzace](../profiling/media/oversubscription.png "Kompenzace")
+![Snímek obrazovky grafu úloh pro všechna aktivní vlákna ve Vizualizátor souběžnosti V legendě se zobrazuje množství času stráveného prováděním a přerušením.](../profiling/media/oversubscription.png)
 
 V případě nadvýšení předplatného je počet aktivních vláken v procesu větší než počet dostupných logických jader v systému. Na předchozím obrázku vidíte výsledky předaného předplatného s významným pásmem přerušení ve všech aktivních vláknech. Kromě toho legenda zobrazuje velké procento času stráveného přerušením (84 procent v tomto příkladu). To může znamenat, že proces žádá systém, aby provedl více souběžných vláken, než je počet logických jader. To však může také znamenat, že jiné procesy v systému používají prostředky, které byly k dispozici pro tento proces.
 

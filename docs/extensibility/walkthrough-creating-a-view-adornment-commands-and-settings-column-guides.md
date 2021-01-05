@@ -1,5 +1,7 @@
 ---
 title: Vytváření doplňků, příkazů a nastavení zobrazení | Microsoft Docs
+description: Přečtěte si, jak pomocí tohoto návodu roztáhnout Editor kódu sady Visual Studio pomocí vodítek sloupců.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 4a2df0a3-42da-4f7b-996f-ee16a35ac922
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 392c4be60f2285edb986d5ca7a1cf4a2202e03c7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2108abe89a47fa276da53a14439a52451d936eea
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905041"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863076"
 ---
 # <a name="walkthrough-create-a-view-adornment-commands-and-settings-column-guides"></a>Návod: vytvoření vylepšení zobrazení, příkazů a nastavení (vodítka sloupců)
 Můžete roztáhnout text nebo Editor kódu sady Visual Studio pomocí příkazů a zobrazení efektů. V tomto článku se dozvíte, jak začít s oblíbenými funkcemi rozšíření, vodítky sloupců. Vodítka sloupců jsou vizuálně světlé čáry vykreslené v zobrazení textový editor, které vám pomohou spravovat kód pro konkrétní šířku sloupců. Konkrétně formátovaný kód může být důležitý pro ukázky, které zahrnete do dokumentů, příspěvků na blogu nebo hlášení o chybách.
@@ -47,7 +49,7 @@ Nejprve vytvoříte projekt VSIX, přidáte doplňky zobrazení editoru a potom 
 
   Můžete vidět, že tato šablona položky přidala do projektu dva soubory (stejně jako odkazy atd.): **ColumnGuideAdornment.cs** a **ColumnGuideAdornmentTextViewCreationListener.cs**. Šablony nakreslí fialový obdélník na zobrazení. V následující části změníte několik řádků v naslouchací službě vytváření zobrazení a nahradíte obsah **ColumnGuideAdornment.cs**.
 
-  **Příkazy**. V **Průzkumník řešení**stiskněte pravé tlačítko ukazatel na uzlu projektu. Vyberte příkaz **přidat &#124; novou položku...** a přidejte tak novou položku zobrazení. V levém navigačním podokně vyberte **rozšiřitelnost &#124; VSPackage** a v pravém podokně vyberte **vlastní příkaz** . Jako název položky zadejte název **ColumnGuideCommands** a klikněte na **Přidat**. Kromě několika odkazů přidávání příkazů a balíčků Přidal také **ColumnGuideCommands.cs**, **ColumnGuideCommandsPackage.cs**a **ColumnGuideCommandsPackage. vsct**. V následující části nahradíte obsah prvních a posledních souborů pro definování a implementaci příkazů.
+  **Příkazy**. V **Průzkumník řešení** stiskněte pravé tlačítko ukazatel na uzlu projektu. Vyberte příkaz **přidat &#124; novou položku...** a přidejte tak novou položku zobrazení. V levém navigačním podokně vyberte **rozšiřitelnost &#124; VSPackage** a v pravém podokně vyberte **vlastní příkaz** . Jako název položky zadejte název **ColumnGuideCommands** a klikněte na **Přidat**. Kromě několika odkazů přidávání příkazů a balíčků Přidal také **ColumnGuideCommands.cs**, **ColumnGuideCommandsPackage.cs** a **ColumnGuideCommandsPackage. vsct**. V následující části nahradíte obsah prvních a posledních souborů pro definování a implementaci příkazů.
 
 ## <a name="set-up-the-text-view-creation-listener"></a>Nastavení naslouchacího procesu pro vytváření zobrazení textu
 Otevřete *ColumnGuideAdornmentTextViewCreationListener.cs* v editoru. Tento kód implementuje obslužnou rutinu pro každé, když aplikace Visual Studio vytvoří zobrazení textu. Existují atributy, které řídí, kdy je obslužná rutina volána v závislosti na vlastnostech zobrazení.

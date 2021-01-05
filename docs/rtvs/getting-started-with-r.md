@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: be0ba7b32af5247bb0dccccb68d900cb6797cc13
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8be766e078a04d713ed69aa0b9cc464433dcb73d
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801175"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761391"
 ---
 # <a name="get-started-with-r-tools-for-visual-studio"></a>Začínáme s Nástroje R pro Visual Studio
 
@@ -23,7 +23,7 @@ Po nainstalování Nástroje R pro Visual Studio (RTVS) (viz [instalace](install
 
 1. Otevřete sadu Visual Studio.
 1. Zvolit **soubor**  >  **Nový**  >  **projekt** (**CTRL** + **SHIFT** + **N**)
-1. V části **šablony**R vyberte "projekt r"  >  **R**, zadejte název a umístění projektu a vyberte **OK**:
+1. V části **šablony** R vyberte "projekt r"  >  , zadejte název a umístění projektu a vyberte **OK**:
 
    ![Dialogové okno Nový projekt pro R v aplikaci Visual Studio (RTVS v VS2017)](media/getting-started-01-new-project.png)
 
@@ -34,7 +34,7 @@ Po nainstalování Nástroje R pro Visual Studio (RTVS) (viz [instalace](install
     - Vlevo dole je **interaktivní R** okno, ve kterém můžete interaktivně vyvíjet a testovat kód.
 
 > [!Note]
-> Můžete použít okno **interaktivní R** bez otevřených projektů a dokonce i v případě, že je načten jiný typ projektu. V každém okamžiku stačí vybrat možnost **nástroje R**  >  **Windows**  >  **interaktivní R** Windows.
+> Můžete použít okno **interaktivní R** bez otevřených projektů a dokonce i v případě, že je načten jiný typ projektu. V každém okamžiku stačí vybrat možnost **nástroje R**  >    >  **interaktivní R** Windows.
 
 ## <a name="explore-the-interactive-window-and-intellisense"></a>Prozkoumejte interaktivní okno a IntelliSense
 
@@ -62,7 +62,7 @@ Po nainstalování Nástroje R pro Visual Studio (RTVS) (viz [instalace](install
 
 1. Některé příkazy, například `plot(1:100)` , otevřou nové okno v aplikaci Visual Studio, když se výstup nedá zobrazit přímo v interaktivním okně:
 
-    ![Zobrazení grafu v aplikaci Visual Studio](media/getting-started-07-plot-window.png)
+    ![Snímek obrazovky okna s diagramem R sady Visual Studio zobrazující výstup grafu funkce grafu (1:100).](media/getting-started-07-plot-window.png)
 
 Interaktivní okno také umožňuje zkontrolovat historii, načíst a uložit pracovní prostory, připojit se k ladicímu programu a pracovat se soubory zdrojového kódu místo pomocí kopírování a vkládání. Podrobnosti najdete v tématu [práce s interaktivní R oknem](interactive-repl-for-r-in-visual-studio.md) .
 
@@ -70,7 +70,7 @@ Interaktivní okno také umožňuje zkontrolovat historii, načíst a uložit pr
 
 V krátkém případě interaktivní okno znázorňuje základní funkce pro úpravu, jako je IntelliSense, které fungují i v editoru kódu. Pokud zadáte stejný kód jako předtím, zobrazí se stejné automatické dokončování a zobrazení výzvy IntelliSense, ale ne výstup.
 
-Psaní kódu v *. Soubor R* umožňuje zobrazit celý kód najednou a zjednodušit provádění malých změn a pak rychle zobrazit výsledek spuštěním kódu v interaktivním okně. V projektu můžete také mít tolik souborů, kolik chcete. Když je kód v souboru, můžete ho také spustit v ladicím programu (popsáno dále v tomto článku). Tyto možnosti jsou užitečné při vývoji výpočetních algoritmů a psaní kódu pro manipulaci s jednou nebo více datovými sadami, zejména pokud chcete prošetřit všechny mezilehlé výsledky.
+Psaní kódu v *. Soubor R* umožňuje zobrazit celý kód najednou a zjednodušit provádění malých změn a pak rychle zobrazit výsledek spuštěním kódu v interaktivním okně. V projektu můžete také mít tolik souborů, kolik chcete. Když je kód v souboru, můžete také spustit krok po kroku v ladicím programu (dále v tomto článku). Tyto možnosti jsou užitečné při vývoji výpočetních algoritmů a psaní kódu pro manipulaci s jednou nebo více datovými sadami, zejména pokud chcete prošetřit všechny mezilehlé výsledky.
 
 V následujícím příkladu vytvoříte malý kód pro zkoumání [centrálního limitu věta](https://en.wikipedia.org/wiki/Central_limit_theorem) (Wikipedii). (Tento příklad je přizpůsobený z *R kuchařkau* Paul Teetor.)
 
@@ -84,14 +84,14 @@ V následujícím příkladu vytvoříte malý kód pro zkoumání [centrálníh
     plot(density(pop), main = "Population Density", xlab = "X", ylab = "")
     ```
 
-1. Chcete-li rychle zobrazit výsledky, vyberte veškerý kód (**CTRL** + **A**), stiskněte **klávesu CTRL** + **Enter** a potom klikněte pravým tlačítkem myši a vyberte možnost **provést v interaktivním**režimu. Veškerý vybraný kód se spustí v interaktivním okně, jako kdybyste ho zadali přímo, a zobrazí výsledek v okně vykreslení:
+1. Chcete-li rychle zobrazit výsledky, vyberte veškerý kód (**CTRL** + **A**), stiskněte **klávesu CTRL** +  a potom klikněte pravým tlačítkem myši a vyberte možnost **provést v interaktivním** režimu. Veškerý vybraný kód se spustí v interaktivním okně, jako kdybyste ho zadali přímo, a zobrazí výsledek v okně vykreslení:
 
-    ![Zobrazení grafu v aplikaci Visual Studio](media/getting-started-08-plot1.png)
+    ![Snímek obrazovky okna s diagramem jazyka Visual Studio R zobrazující graf hustoty populace](media/getting-started-08-plot1.png)
 
 1. V případě jednoho řádku stačí stisknout **klávesovou zkratku** + **ENTER** , aby se tento řádek spouštěl v interaktivním okně.
 
 > [!Tip]
-> Naučte se vytvářet úpravy a stisknout **klávesu CTRL** + **ENTER** (nebo vybrat vše s **klávesou**CTRL + **a** stisknutím klávesy **CTRL** + **ENTER**) a rychle spustit kód. V takovém případě je mnohem efektivnější než použití myši pro stejné operace.
+> Naučte se vytvářet úpravy a stisknout **klávesu CTRL** + **ENTER** (nebo vybrat vše s **klávesou** CTRL + **a** stisknutím klávesy **CTRL** + **ENTER**) a rychle spustit kód. V takovém případě je mnohem efektivnější než použití myši pro stejné operace.
 >
 > Kromě toho můžete přetáhnout okno vykreslení z rámce sady Visual Studio a umístit ho tam, kde chcete zobrazit. Pak můžete změnit velikost okna grafu na požadované rozměry a pak ho uložit do obrázku nebo souboru PDF.
 
@@ -103,7 +103,7 @@ V následujícím příkladu vytvoříte malý kód pro zkoumání [centrálníh
     lines(density(samp.means))
     ```
 
-1. Stisknutím **kombinace kláves CTRL +** + **A** a **Ctrl** + ENTER znovu spusťte kód a**vydáte** následující výsledek:
+1. Stisknutím **kombinace kláves CTRL +** +  a  + ENTER znovu spusťte kód a **vydáte** následující výsledek:
 
     ![Aktualizovaný duální graf v aplikaci Visual Studio](media/getting-started-09-plot2.png)
 
@@ -135,13 +135,13 @@ V editoru můžete dělat víc. Podrobnosti najdete v tématu [Úprava kódu R](
 
 Jednou ze silných klíčů v aplikaci Visual Studio je jeho uživatelské rozhraní pro ladění. RTVS staví na tomto silném základu a přidává inovativní uživatelské rozhraní, jako je [Průzkumník proměnných](variable-explorer.md). V tomto příkladu se podívejme pouze na první pohled na ladění.
 
-1. Začněte tím, že obnovíte aktuální pracovní prostor, abyste mohli vymazat všechno, co jste předtím provedli, pomocí **R Tools**  >  **Session**  >  příkazu nabídky pro**resetování** relace nástroje R. Ve výchozím nastavení se všechno, co v interaktivním okně děláte, rozloží na aktuální relaci, která je pak také používána ladicím programem. Po obnovení relace se ujistěte, že se relace ladění spustí bez stávajících dat. Příkaz pro **obnovení** ale nemá vliv na váš *skript. * Zdrojový soubor R, protože je spravovaný a uložený mimo pracovní prostor.
+1. Začněte tím, že obnovíte aktuální pracovní prostor, abyste mohli vymazat všechno, co jste předtím provedli, pomocí   >    >  příkazu nabídky pro **resetování** relace nástroje R. Ve výchozím nastavení se všechno, co v interaktivním okně děláte, rozloží na aktuální relaci, která je pak také používána ladicím programem. Po obnovení relace se ujistěte, že se relace ladění spustí bez stávajících dat. Příkaz pro **obnovení** ale nemá vliv na váš *skript.* Zdrojový soubor R, protože je spravovaný a uložený mimo pracovní prostor.
 
-1. Pomocí *skriptu. *V rámci souboru R vytvořeného v předchozí části nastavte zarážku na řádku, který začíná `pop <-` vložením blikajícího kurzoru na daný řádek, a stisknutím klávesy **F9**nebo výběrem příkazu **ladit**  >  **Přepnout zarážku** . Případně klikněte na levý okraj (nebo hřbet) pro tento řádek, kde se zobrazuje červená zarážka:
+1. Pomocí *skriptu.* V rámci souboru R vytvořeného v předchozí části nastavte zarážku na řádku, který začíná `pop <-` vložením blikajícího kurzoru na daný řádek, a stisknutím klávesy **F9** nebo výběrem příkazu **ladit**  >  **Přepnout zarážku** . Případně klikněte na levý okraj (nebo hřbet) pro tento řádek, kde se zobrazuje červená zarážka:
 
     ![Nastavení zarážky v editoru](media/getting-started-11-debug1.png)
 
-1. Spusťte ladicí program s kódem ve *skriptu. R* jedním kliknutím na tlačítko **zdrojový spouštěcí soubor** na panelu nástrojů vyberte **Debug**  >  položky nabídky**zdrojový soubor pro spuštění** ladění nebo stiskněte klávesu **F5**. Visual Studio přejde do režimu ladění a spustí běh kódu. Zastaví se však na řádku, kde jste nastavili zarážku:
+1. Spusťte ladicí program s kódem ve *skriptu. R* jedním kliknutím na tlačítko **zdrojový spouštěcí soubor** na panelu nástrojů vyberte   >  položky nabídky **zdrojový soubor pro spuštění** ladění nebo stiskněte klávesu **F5**. Visual Studio přejde do režimu ladění a spustí běh kódu. Zastaví se však na řádku, kde jste nastavili zarážku:
 
     ![Zastavování na zarážce v ladicím programu sady Visual Studio](media/getting-started-12-debug2.png)
 
@@ -149,7 +149,7 @@ Jednou ze silných klíčů v aplikaci Visual Studio je jeho uživatelské rozhr
 
     ![Panel nástrojů ladění v sadě Visual Studio](media/getting-started-13-debug3.png)
 
-1. Při zastavení na zarážce můžete prozkoumávat hodnoty proměnných. V aplikaci Visual Studio Najděte okno **Automatické** hodnoty a vyberte kartu podél dolních pojmenovaných **místních**hodnot. Okno **místní** hodnoty zobrazuje místní proměnné v aktuálním bodě programu. Pokud jste na zarážce zastavili předchozí nastavení, uvidíte, že `pop` Proměnná ještě není definovaná. Nyní použijte příkaz **ladit**  >  **Krok over** (**F10**) a zobrazí se hodnota `pop` Zobrazit:
+1. Při zastavení na zarážce můžete prozkoumávat hodnoty proměnných. V aplikaci Visual Studio Najděte okno **Automatické** hodnoty a vyberte kartu podél dolních pojmenovaných **místních** hodnot. Okno **místní** hodnoty zobrazuje místní proměnné v aktuálním bodě programu. Pokud jste na zarážce zastavili předchozí nastavení, uvidíte, že `pop` Proměnná ještě není definovaná. Nyní použijte příkaz **ladit**  >  **Krok over** (**F10**) a zobrazí se hodnota `pop` Zobrazit:
 
     ![Okno místních hodnot v aplikaci Visual Studio](media/getting-started-14-debug4.png)
 
@@ -163,7 +163,7 @@ Pokud chcete pokračovat, přečtěte si téma [ladění](debugging-r-in-visual-
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto návodu jste se naučili základy projektů jazyka R, pomocí interaktivního okna, úprav kódu a ladění v aplikaci Visual Studio. Chcete-li pokračovat v průzkumu více možností, Projděte si následující články a články uvedené v obsahu:
+V tomto návodu jste se naučili základy projektů jazyka R, pomocí interaktivního okna, úprav kódu a ladění v aplikaci Visual Studio. Pokud chcete pokračovat v průzkumu více možností, přečtěte si následující články a články uvedené v obsahu:
 
 - [Ukázkové projekty](getting-started-samples.md)
 - [Úpravy kódu](editing-r-code-in-visual-studio.md)

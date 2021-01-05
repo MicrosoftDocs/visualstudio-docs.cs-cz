@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: a6b089309ca7202c01028b3323ccabfd3668e909
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: 15fcc5981c5711c7c3ddcf7262649a9d3473ee55
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91780974"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833322"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>Kurz: Začínáme s C# a ASP.NET Core v aplikaci Visual Studio
 
@@ -61,7 +61,7 @@ Nejprve vytvoříte projekt ASP.NET Core. Typ projektu se dodává se všemi sou
 
 2. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
 
-3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual C#**, rozbalte položku **Web**a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **ASP.NET Core webová aplikace**. Pak název souboru *MyCoreApp* a zvolte **OK**.
+3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual C#**, rozbalte položku **Web** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **ASP.NET Core webová aplikace**. Pak název souboru *MyCoreApp* a zvolte **OK**.
 
    ![Šablona projektu webové aplikace ASP.NET Core v dialogovém okně Nový projekt v integrovaném vývojovém prostředí sady Visual Studio](media/csharp-aspnet-choose-template-name-razor-mycoreapp-file.png)
 
@@ -154,7 +154,7 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
  1. Prohlédněte si soubor **About. cshtml** v editoru kódu.
 
-     ![Zobrazení souboru About. cshtml v editoru kódu sady Visual Studio](media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code.png)
+     ![Snímek obrazovky zobrazující prvních deset řádků souboru About. cshtml v editoru kódu sady Visual Studio.](media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code.png)
 
  1. Vyberte soubor **About.cshtml.cs** .
 
@@ -162,7 +162,7 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
  1. Zobrazit soubor **About.cshtml.cs** v editoru kódu.
 
-     ![Zobrazení souboru About. cshtml v editoru kódu sady Visual Studio](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
+     ![Snímek obrazovky zobrazující prvních 18 řádků souboru About.cshtml.cs v editoru kódu sady Visual Studio. ](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
 
  1. Projekt obsahuje složku **wwwroot** , která je kořenem vašeho webu. Rozbalte složku pro zobrazení jejího obsahu.
 
@@ -176,16 +176,16 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
 ## <a name="run-debug-and-make-changes"></a>Spuštění, ladění a provádění změn
 
-1. Kliknutím na tlačítko **IIS Express** v integrovaném vývojovém prostředí sestavíte a spustíte aplikaci v režimu ladění. (Nebo stiskněte klávesu **F5**nebo zvolte **ladění**  >  **Spustit ladění** z řádku nabídek.)
+1. Kliknutím na tlačítko **IIS Express** v integrovaném vývojovém prostředí sestavíte a spustíte aplikaci v režimu ladění. (Nebo stiskněte klávesu **F5** nebo zvolte **ladění**  >  **Spustit ladění** z řádku nabídek.)
 
      ![Výběr tlačítka IIS Express v aplikaci Visual Studio](media/csharp-aspnet-razor-iisexpress.png)
 
      > [!NOTE]
      > Pokud se zobrazí chybová zpráva s oznámením, že se **nelze připojit k webovému serveru ' IIS Express '**, ukončete aplikaci Visual Studio a pak ji otevřete pomocí možnosti **Spustit jako správce** v nabídce nebo v místní nabídce klikněte pravým tlačítkem myši. Pak aplikaci spusťte znovu.
      >
-     > Může se také zobrazit zpráva s dotazem, zda chcete přijmout certifikát IIS SSL Express. Chcete-li zobrazit kód ve webovém prohlížeči, zvolte možnost **Ano**a zvolte možnost **Ano** , pokud se zobrazí zpráva s upozorněním na následné zabezpečení.
+     > Může se také zobrazit zpráva s dotazem, zda chcete přijmout certifikát IIS SSL Express. Chcete-li zobrazit kód ve webovém prohlížeči, zvolte možnost **Ano** a zvolte možnost **Ano** , pokud se zobrazí zpráva s upozorněním na následné zabezpečení.
 
-1. Visual Studio spustí okno prohlížeče. V řádku nabídek byste pak měli vidět stránky **Domů**, **o produktu**a **kontakt** . (Pokud to neuděláte, vyberte položku nabídky "hamburgerovou" "a zobrazte si je.)
+1. Visual Studio spustí okno prohlížeče. V řádku nabídek byste pak měli vidět stránky **Domů**, **o produktu** a **kontakt** . (Pokud to neuděláte, vyberte položku nabídky "hamburgerovou" "a zobrazte si je.)
 
     ![Vyberte položku nabídky "hamburgerovou" "z řádku nabídek ve vaší webové aplikaci.](media/csharp-aspnet-razor-browser-page.png)
 
@@ -205,7 +205,7 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
 1. Vyberte **About.cshtml.cs**. Pak v `using` horní části souboru vyčistěte direktivy pomocí následujícího zástupce:
 
-   Vyberte některou z šedých direktiv-out a žárovku `using` s [rychlými akcemi](../../ide/quick-actions.md) se zobrazí hned pod blikajícím kurzorem nebo na levém okraji. Zvolte žárovku a pak zvolte **odebrat nepotřebné**direktivy using.
+   Vyberte některou z šedých direktiv-out a žárovku `using` s [rychlými akcemi](../../ide/quick-actions.md) se zobrazí hned pod blikajícím kurzorem nebo na levém okraji. Zvolte žárovku a pak zvolte **odebrat nepotřebné** direktivy using.
 
    ![Odebrat nepotřebné direktivy using v souboru About.cshtml.cs](media/csharp-aspnet-razor-remove-unnecessary-usings.png)
 
@@ -221,7 +221,7 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
      }
     ```
 
-1. Všimněte si, že v části **prostředí** a **řetězec**se zobrazí dvě podtržení vlnovkou. Podtržení vlnovkou se zobrazí, protože tyto typy nejsou v oboru.
+1. Všimněte si, že v části **prostředí** a **řetězec** se zobrazí dvě podtržení vlnovkou. Podtržení vlnovkou se zobrazí, protože tyto typy nejsou v oboru.
 
    ![Chyby označené podtrženými vlnovkami v metodě OnGet](media/csharp-aspnet-razor-add-new-on-get-method.png)
 
@@ -233,7 +233,7 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
    ![Přidat direktivu using System;](media/csharp-aspnet-razor-add-usings.png)
 
-1. Stisknutím **kombinace kláves CTRL +** + **S** uložte změny a potom stisknutím klávesy **F5** otevřete projekt ve webovém prohlížeči.
+1. Stisknutím **kombinace kláves CTRL +** +  uložte změny a potom stisknutím klávesy **F5** otevřete projekt ve webovém prohlížeči.
 
 1. V horní části webu vyberte možnost **o** zobrazení změn.
 
@@ -279,16 +279,16 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
 ## <a name="run-debug-and-make-changes"></a>Spuštění, ladění a provádění změn
 
-1. Kliknutím na tlačítko **IIS Express** v integrovaném vývojovém prostředí sestavíte a spustíte aplikaci v režimu ladění. (Nebo stiskněte klávesu **F5**nebo zvolte **ladění**  >  **Spustit ladění** z řádku nabídek.)
+1. Kliknutím na tlačítko **IIS Express** v integrovaném vývojovém prostředí sestavíte a spustíte aplikaci v režimu ladění. (Nebo stiskněte klávesu **F5** nebo zvolte **ladění**  >  **Spustit ladění** z řádku nabídek.)
 
      ![Výběr tlačítka IIS Express v aplikaci Visual Studio](media/csharp-aspnet-razor-iisexpress.png)
 
      > [!NOTE]
      > Pokud se zobrazí chybová zpráva s oznámením, že se **nelze připojit k webovému serveru ' IIS Express '**, ukončete aplikaci Visual Studio a pak ji otevřete pomocí možnosti **Spustit jako správce** v nabídce nebo v místní nabídce klikněte pravým tlačítkem myši. Pak aplikaci spusťte znovu.
      >
-     > Může se také zobrazit zpráva s dotazem, zda chcete přijmout certifikát IIS SSL Express. Chcete-li zobrazit kód ve webovém prohlížeči, zvolte možnost **Ano**a zvolte možnost **Ano** , pokud se zobrazí zpráva s upozorněním na následné zabezpečení.
+     > Může se také zobrazit zpráva s dotazem, zda chcete přijmout certifikát IIS SSL Express. Chcete-li zobrazit kód ve webovém prohlížeči, zvolte možnost **Ano** a zvolte možnost **Ano** , pokud se zobrazí zpráva s upozorněním na následné zabezpečení.
 
-1. Visual Studio spustí okno prohlížeče. Na panelu nabídek byste měli vidět stránky **Domů**a **soukromí** .
+1. Visual Studio spustí okno prohlížeče. Na panelu nabídek byste měli vidět stránky **Domů** a **soukromí** .
 
 1. Z panelu nabídek vyberte **Ochrana osobních údajů** .
 
@@ -304,7 +304,7 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
 1. Teď si provedeme změnu kódu. Vyberte **Privacy.cshtml.cs**. Pak v `using` horní části souboru vyčistěte direktivy pomocí následujícího zástupce:
 
-   Vyberte některou z šedých direktiv-out a žárovku `using` s [rychlými akcemi](../../ide/quick-actions.md) se zobrazí hned pod blikajícím kurzorem nebo na levém okraji. Zvolte žárovku a pak najeďte myší na **odebrat nepotřebné**direktivy using.
+   Vyberte některou z šedých direktiv-out a žárovku `using` s [rychlými akcemi](../../ide/quick-actions.md) se zobrazí hned pod blikajícím kurzorem nebo na levém okraji. Zvolte žárovku a pak najeďte myší na **odebrat nepotřebné** direktivy using.
 
    ![Odebrat nepotřebné direktivy using v souboru Privacy.cshtml.cs](media/vs-2019/csharp-aspnet-remove-unnecessary-usings.png)
 
@@ -324,7 +324,7 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
      }
     ```
 
-1. Všimněte si, že v poli **DateTime**se zobrazí dvě podtržení vlnovkou. Podtržení vlnovkou se zobrazí, protože tento typ není v oboru.
+1. Všimněte si, že v poli **DateTime** se zobrazí dvě podtržení vlnovkou. Podtržení vlnovkou se zobrazí, protože tento typ není v oboru.
 
    ![Chyby označené podtrženými vlnovkami v metodě OnGet](media/vs-2019/csharp-aspnet-add-new-onget-method.png)
 

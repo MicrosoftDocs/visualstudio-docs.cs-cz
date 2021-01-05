@@ -11,16 +11,19 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 6317f7a1f81e6eb6916c10b2f8ce0df91f57a7de
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
-ms.translationtype: HT
+ms.openlocfilehash: 6853ef6040df943ac3050621a5b3a2528d599d9f
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329949"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756614"
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Přehled nástroje Microsoft IntelliTest
 
 IntelliTest vám umožňuje brzy najít chyby a snížit náklady na údržbu testů. Pomocí automatizovaného a transparentního testovacího přístupu může IntelliTest vygenerovat kandidátskou sadu testů pro váš kód .NET. Generování sady testů se dá dále řídit pomocí *vlastností správnosti*, které zadáte. IntelliTest také umí automaticky vyvíjet sadu testů, jak se vyvíjí kód v rámci testu.
+
+> [!NOTE]
+> IntelliTest je k dispozici pouze v edici Enterprise. Je podporováno pro kód jazyka C#, který cílí na .NET Framework. .NET Core a .NET Standard se aktuálně nepodporují.
 
 **Charakterizační testy**: IntelliTest umožňuje určit chování kódu v rámci sady tradičních testů jednotek.
 Taková sada testů může být použita jako regresní sada, která tvoří základ pro řešení složitosti spojené s refaktoringem staršího nebo neznámého kódu.
