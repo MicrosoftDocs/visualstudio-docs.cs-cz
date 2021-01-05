@@ -1,5 +1,7 @@
 ---
 title: Běžné vzory ovládacích prvků pro Visual Studio | Microsoft Docs
+description: Přečtěte si, jak běžné ovládací prvky sady Visual Studio následují podle pokynů pro interakci s desktopy pro Windows a o speciálních situacích, které tyto pokyny rozšiřují
+ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 3e893949-6398-42f1-9eab-a8d8c2b7f02d
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b0b5a1904c01f5688a00e45de7feed7ae326d9b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c1caccebf1dc14146bef214a4d33e1216243780
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698712"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715883"
 ---
 # <a name="common-control-patterns-for-visual-studio"></a>Vzory běžných ovládacích prvků pro Visual Studio
 ## <a name="common-controls"></a><a name="BKMK_CommonControls"></a> Běžné ovládací prvky
@@ -152,7 +154,7 @@ V dialogovém okně, kde existují jiné seskupené oblasti a informace o jejich
 
 To umožňuje uživateli vybrat text v poli, ale nemůže ho upravovat. Tato textová pole jsou ohraničena normálním 3D hrotem s `ButtonShadow` výplní.
 
-Textové pole může být aktivní (upravitelný), když uživatel změní přidružený ovládací prvek, například zaškrtnutí nebo zrušení zaškrtnutí políčka nebo výběr nebo zrušení výběru přepínacího tlačítka. Například na stránce ** &gt; Možnosti nástrojů** zobrazené níže se bude textové pole **domovské stránky** aktivní, když není zaškrtnuto políčko **použít výchozí** .
+Textové pole může být aktivní (upravitelný), když uživatel změní přidružený ovládací prvek, například zaškrtnutí nebo zrušení zaškrtnutí políčka nebo výběr nebo zrušení výběru přepínacího tlačítka. Například na stránce **&gt; Možnosti nástrojů** zobrazené níže se bude textové pole **domovské stránky** aktivní, když není zaškrtnuto políčko **použít výchozí** .
 
 ![Textové pole jen pro čtení, které zobrazuje neaktivní a aktivní stavy](../../extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />Textové pole jen pro čtení, které zobrazuje neaktivní a aktivní stavy
 
@@ -301,7 +303,7 @@ Některá tlačítka by měla vždy používat grafický obraz a nikdy vkládat 
 
 | Funkce | Tlačítko |
 | --- | --- |
-| Přidat | ![Grafické tlačítko Přidat](../../extensibility/ux-guidelines/media/070703-08_buttonadd.png "070703 – 08_ButtonAdd") |
+| Přidání | ![Grafické tlačítko Přidat](../../extensibility/ux-guidelines/media/070703-08_buttonadd.png "070703 – 08_ButtonAdd") |
 | Odebrat | ![Grafické tlačítko odebrat](../../extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 – 09_ButtonRemove") |
 | Přidat vše | ![Grafické tlačítko Přidat vše](../../extensibility/ux-guidelines/media/070703-10_buttonaddall.png "070703 – 10_ButtonAddAll") |
 | Odebrat vše | ![Grafické tlačítko "Odebrat vše"](../../extensibility/ux-guidelines/media/070703-11_buttonremoveall.png "070703 – 11_ButtonRemoveAll") |

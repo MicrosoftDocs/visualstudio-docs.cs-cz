@@ -1,5 +1,7 @@
 ---
 title: 'Ladění F # | Microsoft Docs'
+description: 'Projděte si seznam rozdílů mezi laděním F # v porovnání s laděním jiných spravovaných jazyků v aplikaci Visual Studio.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e7bc3934136f0966439bec2e4368488e52099602
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2dcacff924386cc279708c34d2232e50aa92c55
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738271"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728418"
 ---
 # <a name="debugging-f"></a>Ladění F\#
 Ladění F # je podobné ladění libovolného spravovaného jazyka, s několika výjimkami:

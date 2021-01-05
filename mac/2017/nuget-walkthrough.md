@@ -7,12 +7,12 @@ ms.date: 04/14/2017
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 58d749a1d014288754dcd9eb7e620730933d742a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 274e8defe25fa78c30aee72834e486b302a9af4e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950400"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729428"
 ---
 # <a name="include-a-nuget-package-in-your-project"></a>Zahrnutí balíčku NuGet do projektu
 
@@ -76,7 +76,7 @@ Aktualizace balíčků se dají provést najednou, a to tak, že pravým tlačí
 
 Kliknutím pravým tlačítkem na **balíčky** získáte přístup k místní nabídce:
 
-![Nabídka balíčky](media/nuget-walkthrough-PackagesMenu.png)
+![Snímek obrazovky s vybraným uzlem balíčky a místní nabídka, která se otevře s příkazy pro přidání balíčků, aktualizace, obnovení a aktualizace.](media/nuget-walkthrough-PackagesMenu.png)
 
 * **Přidat balíčky** – otevře okno pro přidání dalších balíčků do projektu.
 * **Aktualizace** – zkontroluje zdrojový server pro každý balíček a stáhne všechny novější verze.
@@ -86,7 +86,7 @@ Možnosti aktualizace a obnovení jsou také k dispozici na úrovni řešení a 
 
 Můžete také kliknout pravým tlačítkem na jednotlivé balíčky a získat přístup k místní nabídce:
 
-![Nabídka balíčky](media/nuget-walkthrough-PackageMenu.png)
+![Snímek obrazovky s vybraným jednotlivými balíčky a místní nabídka, která se zobrazí po kliknutí pravým tlačítkem otevřít s příkazy pro aktualizace, odebrání a aktualizaci.](media/nuget-walkthrough-PackageMenu.png)
 
 * **Číslo verze** – číslo verze je zakázaná položka nabídky – je k dispozici pouze pro informativní účely.
 * **Aktualizace** – zkontroluje zdrojový server a stáhne novější verzi (pokud existuje).
@@ -102,11 +102,11 @@ V Visual Studio pro Mac přejděte do části **Visual Studio > předvolby > > z
 
 Klikněte na tlačítko **Přidat** a nastavte nový zdroj. Zadejte popisný název a adresu URL (nebo cestu k souboru) do zdroje balíčku. Pokud je zdrojem zabezpečený webový server, zadejte taky uživatelské jméno a heslo. jinak ponechte prázdné tyto položky:
 
-![Přidat zdroje balíčků](media/nuget-walkthrough-PackageSource2.png)
+![Snímek obrazovky dialogového okna Přidat zdroj balíčku obsahující pole pro název, umístění, uživatelské jméno a heslo](media/nuget-walkthrough-PackageSource2.png)
 
 Při hledání balíčků se pak dají vybrat různé zdroje:
 
-![Přidat zdroje balíčků](media/nuget-walkthrough-PackageSource3.png)
+![Snímek obrazovky přidat balíčky zobrazující rozevírací seznam zdrojů, které lze vybrat při hledání balíčků.](media/nuget-walkthrough-PackageSource3.png)
 
 ## <a name="version-control"></a>Správa verzí
 

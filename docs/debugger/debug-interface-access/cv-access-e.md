@@ -1,5 +1,7 @@
 ---
 title: CV_access_e | Microsoft Docs
+description: Získat informace o typu výčtu CV_access_e, který určuje rozsah viditelnosti (úroveň přístupu) členů v sadě SDK přístup k rozhraní ladění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00be9f52b8cac067e1d8482fe0378737c68909c4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39b2cfea273d0b98c178c3cf9bcf3894042f760f
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462146"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728693"
 ---
 # <a name="cv_access_e"></a>CV_access_e
 Určuje rozsah viditelnosti (úroveň přístupu) členských funkcí a proměnných.

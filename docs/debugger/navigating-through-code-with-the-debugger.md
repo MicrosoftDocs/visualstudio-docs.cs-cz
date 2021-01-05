@@ -15,20 +15,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d6b9bb2eb6169de2bbbf41b6d4e96a5960e40fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5cd7bb050204d65bb78a597c1ae3c7eea36ac184
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348246"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729350"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Procházení kódu pomocí ladicího programu sady Visual Studio
 
-Ladicí program sady Visual Studio vám může pomáhat s procházením kódu pro kontrolu stavu aplikace a zobrazení toku provádění. Pomocí klávesových zkratek, příkazů ladění, zarážek a dalších funkcí můžete rychle získat kód, který chcete prošetřit. Znalost navigačních příkazů a zástupců ladicího programu usnadňuje a usnadňuje hledání a řešení problémů s aplikacemi.  Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
+Ladicí program sady Visual Studio vám může pomáhat s procházením kódu pro kontrolu stavu aplikace a zobrazení toku provádění. Pomocí klávesových zkratek, příkazů ladění, zarážek a dalších funkcí můžete rychle získat kód, který chcete prošetřit. Znalost navigačních příkazů a zástupců ladicího programu usnadňuje a usnadňuje hledání a řešení problémů s aplikacemi.
+
+> [!NOTE]
+> Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
 
 ## <a name="get-into-break-mode"></a>Přejít do režimu přerušení
 
-V *režimu pozastavení*je spuštění aplikace pozastaveno, zatímco funkce, proměnné a objekty zůstávají v paměti. Jakmile je ladicí program v režimu pozastavení, můžete procházet kód. Nejběžnější způsoby, jak rychle získat režim přerušení, je:
+V *režimu pozastavení* je spuštění aplikace pozastaveno, zatímco funkce, proměnné a objekty zůstávají v paměti. Jakmile je ladicí program v režimu pozastavení, můžete procházet kód. Nejběžnější způsoby, jak rychle získat režim přerušení, je:
 
 - Zahajte krokování kódu stisknutím klávesy **F10** nebo **F11**. To vám umožní rychle najít vstupní bod vaší aplikace, a pak můžete pokračovat stisknutím příkazů Step pro procházení kódu.
 
@@ -51,7 +54,7 @@ Příkazy kroku ladicího programu vám pomůžou zkontrolovat stav aplikace neb
 
 ### <a name="step-into-code-line-by-line"></a><a name="BKMK_Step_into__over__or_out_of_the_code"></a> Krokovat s kódem řádek po řádku
 
-Chcete-li zastavit u každého příkazu během ladění, použijte krok **ladění**  >  **do**nebo stiskněte klávesu **F11**.
+Chcete-li zastavit u každého příkazu během ladění, použijte krok **ladění**  >  **do** nebo stiskněte klávesu **F11**.
 
 Ladicí program provede kroky kódu, ne fyzických řádků. Například `if` klauzule může být napsána na jednom řádku:
 
@@ -89,7 +92,7 @@ Můžete chtít spustit přímo na konkrétní umístění nebo funkci, pokud p�
 
 ### <a name="run-to-a-breakpoint-in-code"></a>Spustit na zarážku v kódu
 
-Chcete-li v kódu nastavit jednoduchou zarážku, klikněte na levý levý okraj vedle řádku kódu, kde chcete pozastavit provádění. Můžete také vybrat řádek a stisknout klávesu **F9**, vybrat **Debug**  >  **přepínač ladit zarážku**nebo kliknout pravým tlačítkem a vybrat **zarážku**  >  **Vložit**zarážku. Zarážka se zobrazí jako červená tečka v levém okraji vedle řádku kódu. Ladicí program pozastaví provádění těsně před spuštěním řádku.
+Chcete-li v kódu nastavit jednoduchou zarážku, klikněte na levý levý okraj vedle řádku kódu, kde chcete pozastavit provádění. Můžete také vybrat řádek a stisknout klávesu **F9**, vybrat   >  **přepínač ladit zarážku** nebo kliknout pravým tlačítkem a vybrat **zarážku**  >  **Vložit** zarážku. Zarážka se zobrazí jako červená tečka v levém okraji vedle řádku kódu. Ladicí program pozastaví provádění těsně před spuštěním řádku.
 
 ![Nastavení zarážky](../debugger/media/dbg_basics_setbreakpoint.png "Nastavení zarážky")
 
@@ -101,7 +104,7 @@ Ladicímu programu můžete sdělit, aby běžel, dokud nedosáhne zadané funkc
 
 **Určení zarážky funkce podle názvu**
 
-1. Vyberte možnost **ladit**  >  **novou**zarážku  >  **funkce** .
+1. Vyberte možnost **ladit**  >  **novou** zarážku  >  **funkce** .
 
 1. V dialogovém okně **Nová zarážka funkce** zadejte název funkce a vyberte její jazyk.
 
@@ -115,15 +118,15 @@ Pokud je funkce přetížena nebo ve více než jednom oboru názvů, můžete z
 
 **Výběr zarážky funkce ze zásobníku volání**
 
-1. Při ladění otevřete okno **zásobník volání** výběrem možnosti **ladit**  >  **Windows**  >  **zásobník volání**systému Windows.
+1. Při ladění otevřete okno **zásobník volání** výběrem možnosti **ladit**  >    >  **zásobník volání** systému Windows.
 
-1. V okně **zásobník volání** klikněte pravým tlačítkem myši na funkci a vyberte možnost **Spustit ke kurzoru**nebo stiskněte klávesovou **zkratku CTRL** + **F10**.
+1. V okně **zásobník volání** klikněte pravým tlačítkem myši na funkci a vyberte možnost **Spustit ke kurzoru** nebo stiskněte klávesovou **zkratku CTRL** + **F10**.
 
 Vizuální trasování zásobníku volání naleznete v tématu [metody mapy v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).
 
 ### <a name="run-to-a-cursor-location"></a>Spustit do umístění kurzoru
 
-Chcete-li spustit do umístění kurzoru, v okně zdrojový kód nebo **zásobník volání** vyberte řádek, u kterého chcete provést přerušení, klikněte pravým tlačítkem myši a vyberte možnost **Spustit ke kurzoru**nebo stiskněte klávesovou **zkratku CTRL** + **F10**. Výběr možnosti **Spustit na kurzor** je jako nastavení dočasné zarážky.
+Chcete-li spustit do umístění kurzoru, v okně zdrojový kód nebo **zásobník volání** vyberte řádek, u kterého chcete provést přerušení, klikněte pravým tlačítkem myši a vyberte možnost **Spustit ke kurzoru** nebo stiskněte klávesovou **zkratku CTRL** + **F10**. Výběr možnosti **Spustit na kurzor** je jako nastavení dočasné zarážky.
 
 ### <a name="run-to-click"></a>Běžet do kliknutí
 
@@ -136,7 +139,7 @@ Při pozastavení v ladicím programu můžete umístit ukazatel myši na přík
 
 ### <a name="manually-break-into-code"></a>Ručně přerušit do kódu
 
-Chcete-li přerušit následující dostupný řádek kódu ve spuštěné aplikaci, vyberte možnost **ladění**  >  **Zrušit vše**nebo stiskněte klávesu **CTRL** + **ALT** + **Break**.
+Chcete-li přerušit následující dostupný řádek kódu ve spuštěné aplikaci, vyberte možnost **ladění**  >  **Zrušit vše** nebo stiskněte klávesu **CTRL** + **ALT** + **Break**.
 
 ## <a name="move-the-pointer-to-change-the-execution-flow"></a><a name="BKMK_Set_the_next_statement_to_execute"></a> Přesunutím ukazatele myši změníte tok provádění.
 
@@ -163,7 +166,7 @@ Chcete-li změnit další příkaz, který má být spuštěn, ladicí program m
 
 Ve výchozím nastavení se ladicí program pokusí ladit pouze kód vaší aplikace povolením nastavení s názvem *pouze můj kód*. Další podrobnosti o tom, jak tato funkce funguje pro různé typy projektů a jazyky a jak je můžete přizpůsobit, najdete v tématu [pouze můj kód](../debugger/just-my-code.md).
 
-Chcete-li se podívat na kód architektury, kód knihovny třetí strany nebo systémové volání během ladění, můžete zakázat Pouze můj kód. V okně **nástroje** (nebo **ladění**) > **Možnosti**  >  **ladění**zrušte zaškrtnutí políčka **Povolit pouze můj kód** . Pokud je Pouze můj kód zakázaný, zobrazí se neuživatelský kód v oknech ladicího programu a ladicí program může Krokovat s neuživatelským kódem.
+Chcete-li se podívat na kód architektury, kód knihovny třetí strany nebo systémové volání během ladění, můžete zakázat Pouze můj kód. V okně **nástroje** (nebo **ladění**) > **Možnosti**  >  **ladění** zrušte zaškrtnutí políčka **Povolit pouze můj kód** . Pokud je Pouze můj kód zakázaný, zobrazí se neuživatelský kód v oknech ladicího programu a ladicí program může Krokovat s neuživatelským kódem.
 
 > [!NOTE]
 > Pouze můj kód není pro projekty zařízení podporováno.
@@ -176,12 +179,12 @@ Chcete-li načíst symboly společnosti Microsoft, přečtěte si téma [Konfigu
 
 **Načtení symbolů pro konkrétní systémovou komponentu:**
 
-1. Při ladění otevřete okno **moduly** výběrem možnosti **ladit**  >  **moduly systému Windows**  >  **Modules**nebo stisknutím **kombinace kláves CTRL** + **+** + **U**.
+1. Při ladění otevřete okno **moduly** výběrem možnosti **ladit**  >  **moduly systému Windows**  >  nebo stisknutím **kombinace kláves CTRL** + **+** + **U**.
 
 1. V okně **moduly** můžete určit, které moduly mají ve sloupci **stav symbolu** načtené symboly. Klikněte pravým tlačítkem na modul, pro který chcete načíst symboly, a vyberte **načíst symboly**.
 
 ## <a name="step-into-properties-and-operators-in-managed-code"></a><a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> Krok do vlastností a operátorů ve spravovaném kódu
- Ladicí program ve výchozím nastavení přesměruje vlastnosti a operátory ve spravovaném kódu. Ve většině případů to poskytuje lepší možnosti ladění. Chcete-li povolit krokování do vlastností nebo **Debug**operátorů, vyberte  >  **možnost**ladění. Na stránce **Debugging**  >  **Obecné** ladění zrušte zaškrtnutí políčka **Krokovat přes vlastnosti a operátory (pouze spravované)** .
+ Ladicí program ve výchozím nastavení přesměruje vlastnosti a operátory ve spravovaném kódu. Ve většině případů to poskytuje lepší možnosti ladění. Chcete-li povolit krokování do vlastností nebo operátorů, vyberte  >  **možnost** ladění. Na stránce   >  **Obecné** ladění zrušte zaškrtnutí políčka **Krokovat přes vlastnosti a operátory (pouze spravované)** .
 
 ## <a name="see-also"></a>Viz také
 - [Co je ladění?](../debugger/what-is-debugging.md)

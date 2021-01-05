@@ -1,6 +1,7 @@
 ---
 title: Ladění nainstalovaného balíčku aplikace pro UWP | Microsoft Docs
-ms.custom: ''
+description: Ladění nainstalovaného balíčku aplikace Univerzální platforma Windows (UWP) v aplikaci Visual Studio na počítačích s Windows 10, zařízení Xbox a Internet věcí (IoT).
+ms.custom: SEO-VS-2020
 ms.date: 11/07/2018
 ms.topic: how-to
 f1_keywords:
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: eabc694665bede7d193a360a01c42366568e33c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04ed043dbcb09c862fcdfc5f34d77fd938bd24dc
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350729"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728921"
 ---
 # <a name="debug-an-installed-uwp-app-package-in-visual-studio"></a>Ladění nainstalovaného balíčku aplikace pro UWP v aplikaci Visual Studio
 
@@ -40,13 +41,13 @@ Další informace o ladění aplikací pro UWP najdete v blogovém příspěvku 
 
 1. V aplikaci Visual Studio vyberte **ladit**  >  **Další cíle ladění**  >  **ladění nainstalovaného balíčku aplikace**.
 
-1. V dialogovém okně **ladění nainstalovaného balíčku aplikace** v části **Typ připojení**vyberte **místní počítač**.
+1. V dialogovém okně **ladění nainstalovaného balíčku aplikace** v části **Typ připojení** vyberte **místní počítač**.
 
-1. V části **nainstalované balíčky aplikací**vyberte aplikaci, kterou chcete ladit, nebo zadejte její název do vyhledávacího pole. Nespuštěné balíčky aplikací se zobrazují pod **nespuštěným**a běžící aplikace jsou **spuštěné**.
+1. V části **nainstalované balíčky aplikací** vyberte aplikaci, kterou chcete ladit, nebo zadejte její název do vyhledávacího pole. Nespuštěné balíčky aplikací se zobrazují pod **nespuštěným** a běžící aplikace jsou **spuštěné**.
 
    ![DebugInstalledAppPackage](../debugger/media/debug-installed-app-pkg.png "DebugInstalledAppPackage")
 
-1. V případě potřeby změňte typ kódu v části **ladit tento typ kódu**a vyberte další možnosti.
+1. V případě potřeby změňte typ kódu v části **ladit tento typ kódu** a vyberte další možnosti.
    - Vyberte možnost **nespouštět, ale ladit můj kód při** spuštění ladění při spuštění aplikace. Spuštění ladění, když se aplikace spustí, je účinný způsob, jak ladit cesty ovládacích prvků z [různých metod spuštění](/windows/uwp/xbox-apps/automate-launching-uwp-apps), jako je aktivace protokolu s vlastními parametry.
 
 1. Vyberte **Spustit**, nebo pokud je aplikace spuštěná, vyberte **připojit**.
@@ -64,13 +65,13 @@ Když Visual Studio poprvé ladit nainstalovanou aplikaci UWP na zařízení s W
 
 1. V počítači se systémem Visual Studio vyberte **ladit**  >  **Další cíle ladění**  >  **ladění nainstalovaného balíčku aplikace**.
 
-1. V dialogovém okně **ladění nainstalovaného balíčku aplikace** v části **Typ připojení**vyberte možnost **vzdálený počítač** nebo **zařízení**.
+1. V dialogovém okně **ladění nainstalovaného balíčku aplikace** v části **Typ připojení** vyberte možnost **vzdálený počítač** nebo **zařízení**.
 
    Pokud vyberete **zařízení**, musí být počítač fyzicky připojený k zařízení s Windows 10.
 
    Pokud se adresa počítače na vzdáleném počítači nezobrazí vedle pole **adresa**, vyberte **změnit**.
 
-   1. V dialogovém okně **vzdálené připojení** do pole **adresa**zadejte název nebo IP adresu počítače, ke kterému se chcete připojit.
+   1. V dialogovém okně **vzdálené připojení** do pole **adresa** zadejte název nebo IP adresu počítače, ke kterému se chcete připojit.
 
       ![ChooseRemoteComputer](../debugger/media/debug-remote-app-pkg.png "ChooseRemoteComputer")
 
@@ -80,9 +81,9 @@ Když Visual Studio poprvé ladit nainstalovanou aplikaci UWP na zařízení s W
       U většiny aplikací ponechte výchozí hodnotu **univerzální (nešifrovaný protokol)**.
    1. Vyberte **Vybrat**.
 
-1. V části **nainstalované balíčky aplikací**vyberte aplikaci, kterou chcete ladit, nebo zadejte její název do vyhledávacího pole. Nespuštěné balíčky aplikací se zobrazují pod **nespuštěným**a běžící aplikace jsou **spuštěné**.
+1. V části **nainstalované balíčky aplikací** vyberte aplikaci, kterou chcete ladit, nebo zadejte její název do vyhledávacího pole. Nespuštěné balíčky aplikací se zobrazují pod **nespuštěným** a běžící aplikace jsou **spuštěné**.
 
-1. V případě potřeby změňte typ kódu v části **ladit tento typ kódu**a vyberte další možnosti.
+1. V případě potřeby změňte typ kódu v části **ladit tento typ kódu** a vyberte další možnosti.
    - Vyberte možnost **nespouštět, ale ladit můj kód při** spuštění ladění při spuštění aplikace. Spuštění ladění, když se aplikace spustí, je účinný způsob, jak ladit cesty ovládacích prvků z [různých metod spuštění](/windows/uwp/xbox-apps/automate-launching-uwp-apps), jako je aktivace protokolu s vlastními parametry.
 
 1. Vyberte **Spustit**, nebo pokud je aplikace spuštěná, vyberte **připojit**.
@@ -99,6 +100,6 @@ Další informace o vzdáleném nasazení aplikací pro UWP najdete v tématu [n
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Vzdálené ladění](../debugger/remote-debugging.md)
-- [Konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
+- [Konfigurace brány firewall ve Windows pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Přiřazení portů vzdáleného ladicího programu](../debugger/remote-debugger-port-assignments.md)
-- [Chyby vzdáleného ladění a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Chyby při vzdáleném ladění a jejich řešení](../debugger/remote-debugging-errors-and-troubleshooting.md)

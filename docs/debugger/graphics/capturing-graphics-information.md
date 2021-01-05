@@ -1,5 +1,7 @@
 ---
 title: Zachytávání informací grafiky | Microsoft Docs
+description: Zachyťte informace grafiky z aplikace Direct3D, abyste mohli pomocí Analyzátor grafiky sady Visual Studio diagnostikovat problémy s vykreslováním a problémy s výkonem.
+ms.custom: SEO-VS-2020
 ms.date: 02/09/2017
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b38dd994eca30bfee071f00431f3b111c2ea444a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a11a5dc3a02959ff7bec4cfaac9aac2ca231b2ba
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72736180"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727921"
 ---
 # <a name="capturing-graphics-information"></a>Zaznamenání grafických informací
 Zachyťte informace grafiky z aplikace Direct3D, abyste mohli pomocí Analyzátor grafiky sady Visual Studio diagnostikovat problémy s vykreslováním a problémy s výkonem.
@@ -27,7 +29,7 @@ Zachyťte informace grafiky z aplikace Direct3D, abyste mohli pomocí Analyzáto
 
 ### <a name="to-run-your-app-under-graphics-diagnostics"></a>Spuštění aplikace v rámci Diagnostiky grafiky
 
-- Na panelu nabídek vyberte možnost **ladění**, **Grafika**a **Spustit ladění grafiky**. (Klávesnice: stiskněte klávesy Alt + F5)
+- Na panelu nabídek vyberte možnost **ladění**, **Grafika** a **Spustit ladění grafiky**. (Klávesnice: stiskněte klávesy Alt + F5)
 
 - Na panelu nástrojů **Grafika** klikněte na tlačítko **Spustit ladění grafiky** .
 

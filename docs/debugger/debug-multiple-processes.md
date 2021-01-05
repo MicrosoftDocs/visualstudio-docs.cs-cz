@@ -1,5 +1,7 @@
 ---
 title: Ladění více procesů | Microsoft Docs
+description: Ladění více procesů v aplikaci Visual Studio. Spuštění a přepínání mezi procesy, přerušení, pokračování, krokování zdroje a ukončení nebo odpojení od jednotlivých procesů.
+ms.custom: SEO-VS-2020
 ms.date: 11/20/2018
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94a61e0083b17fa095b419a2066a4f8b9c39dfb7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 214025c2d128443223594fdb00fcf730e5a8091a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350599"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728628"
 ---
 # <a name="debug-multiple-processes-c-visual-basic-c"></a>Ladění více procesů (C#, Visual Basic, C++)
 
@@ -34,7 +36,7 @@ Visual Studio může ladit řešení, které má několik procesů. Můžete spo
 
 V případě, že více než jeden projekt v řešení sady Visual Studio může běžet nezávisle, můžete vybrat projekt, který ladicí program spustí. Aktuální spouštěcí projekt se zobrazí tučně v **Průzkumník řešení**.
 
-Chcete-li změnit projekt po spuštění, klikněte v **Průzkumník řešení**pravým tlačítkem myši na jiný projekt a vyberte **nastavit jako spouštěný projekt**.
+Chcete-li změnit projekt po spuštění, klikněte v **Průzkumník řešení** pravým tlačítkem myši na jiný projekt a vyberte **nastavit jako spouštěný projekt**.
 
 Chcete-li spustit ladění projektu z **Průzkumník řešení** bez jeho spuštění, klikněte pravým tlačítkem myši na projekt a vyberte možnost **ladit**  >  **spustit novou instanci** nebo **Krok do nové instance**.
 
@@ -48,7 +50,7 @@ Chcete-li spustit ladění projektu z **Průzkumník řešení** bez jeho spušt
 
 1. Vyberte možnost **aktuální výběr**, **jeden spouštěný projekt** a soubor projektu nebo **více projektů po spuštění**.
 
-   Pokud vyberete **více projektů po spuštění**, můžete změnit pořadí spouštění a akci, která má být provedena pro každý projekt **: spustit**, **Spustit bez ladění**nebo **žádný**.
+   Pokud vyberete **více projektů po spuštění**, můžete změnit pořadí spouštění a akci, která má být provedena pro každý projekt **: spustit**, **Spustit bez ladění** nebo **žádný**.
 
 1. Chcete-li použít a zavřít dialogové okno, vyberte **použít**, nebo **OK** .
 
@@ -73,13 +75,13 @@ Další informace najdete v tématu [připojení ke spuštěným procesům](../d
 
 V některých případech může být nutné ladit spouštěcí kód aplikace, kterou spouští jiný proces. Příklady zahrnují služby a akce vlastního nastavení. Je možné, že se ladicí program spustí a automaticky se připojí k aplikaci.
 
-1. Spuštěním *regedit.exe*spusťte Editor registru Windows.
+1. Spuštěním *regedit.exe* spusťte Editor registru Windows.
 
-1. V editoru registru přejděte na **HKEY_LOCAL_MACHINE \Software\microsoft\windows Nt\currentversion\image File Execution soubor možnosti spuštění**.
+1. V editoru registru přejděte na **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options**.
 
 1. Vyberte složku aplikace, kterou chcete spustit v ladicím programu.
 
-   Pokud aplikace není uvedená jako podřízená složka, klikněte pravým tlačítkem myši na možnost **spuštění souboru bitové kopie**, vyberte možnost **Nový**  >  **klíč**a zadejte název aplikace. Nebo klikněte pravým tlačítkem na nový klíč ve stromu, vyberte **Přejmenovat**a pak zadejte název aplikace.
+   Pokud aplikace není uvedená jako podřízená složka, klikněte pravým tlačítkem myši na možnost **spuštění souboru bitové kopie**, vyberte možnost **Nový**  >  **klíč** a zadejte název aplikace. Nebo klikněte pravým tlačítkem na nový klíč ve stromu, vyberte **Přejmenovat** a pak zadejte název aplikace.
 
 1. Klikněte pravým tlačítkem na nový klíč ve stromu a vyberte možnost **Nová**  >  **hodnota řetězce**.
 
@@ -100,7 +102,7 @@ Při ladění aplikace s několika procesy ovlivní příkazy pro přerušení, 
 
 **Chcete-li změnit, zda jsou všechny procesy při přerušení jednoho procesu pozastaveny:**
 
-- V části **nástroje** (nebo **ladění**) > **Možnosti**  >  **ladění**  >  **obecně**zaškrtněte nebo zrušte zaškrtnutí políčka **přerušit všechny procesy při přerušení jednoho procesu** .
+- V části **nástroje** (nebo **ladění**) > **Možnosti**  >  **ladění**  >  **obecně** zaškrtněte nebo zrušte zaškrtnutí políčka **přerušit všechny procesy při přerušení jednoho procesu** .
 
 ### <a name="break-step-and-continue-commands"></a><a name="BKMK_Break__step__and_continue_commands"></a> Příkazy Break, Step a Continue
 
@@ -110,9 +112,9 @@ Následující tabulka popisuje chování příkazů ladění v případě, že 
 |-|-|-|
 |**Ladit**   >  **Přerušit vše**|Všechny procesy jsou přerušeny.|Všechny procesy jsou přerušeny.|
 |**Ladit**  >  **Pokračovat**|Obnoví se všechny procesy.|Obnoví se všechny pozastavené procesy.|
-|**Ladit**  >  **Krok dovnitř**, **krokování**nebo **krokování**|Všechny procesy jsou spuštěny během aktuálních kroků procesu. <br />Pak budou přerušeny všechny procesy.|Aktuální kroky procesu. <br />Pozastavené procesy budou obnoveny. <br />Spuštěné procesy pokračují.|
-|**Ladit**  >  **Krokovat do aktuálního procesu**, **Krokovat**s aktuálním procesem nebo **Krokovat aktuální proces**|–|Aktuální kroky procesu.<br />Jiné procesy udržují svůj stávající stav (pozastaveno nebo spuštěno).|
-|Zarážka **Breakpoint** zdrojového okna|Všechny procesy jsou přerušeny.|Je rozdělen pouze proces zdrojového okna.|
+|**Ladit**  >  **Krok dovnitř**, **krokování** nebo **krokování**|Všechny procesy jsou spuštěny během aktuálních kroků procesu. <br />Pak budou přerušeny všechny procesy.|Aktuální kroky procesu. <br />Pozastavené procesy budou obnoveny. <br />Spuštěné procesy pokračují.|
+|**Ladit**  >  **Krokovat do aktuálního procesu**, **Krokovat** s aktuálním procesem nebo **Krokovat aktuální proces**|–|Aktuální kroky procesu.<br />Jiné procesy udržují svůj stávající stav (pozastaveno nebo spuštěno).|
+|Zarážka  zdrojového okna|Všechny procesy jsou přerušeny.|Je rozdělen pouze proces zdrojového okna.|
 |Okno zdrojového kódu **se spustí se kurzorem**<br />Zdrojové okno musí být v aktuálním procesu.|Všechny procesy jsou spuštěny během spuštění procesu zdrojového okna do kurzoru a poté jsou přerozděleny.<br />Pak všechny ostatní procesy přeruší.|Proces zdrojového okna se spouští do kurzoru.<br />Jiné procesy udržují svůj stávající stav (pozastaveno nebo spuštěno).|
 |**Proces přerušení** okna > **procesů**|–|Přerušení vybraného procesu.<br />Jiné procesy udržují svůj stávající stav (pozastaveno nebo spuštěno).|
 |Okno **procesů** > **pokračovat v procesu**|–|Vybraný proces pokračuje.<br />Jiné procesy udržují svůj stávající stav (pozastaveno nebo spuštěno).|
@@ -136,7 +138,7 @@ Můžete se připojit k více procesům při ladění, ale v ladicím programu j
 
 **Nastavení aktuálního procesu z okna procesy:**
 
-1. Chcete-li otevřít okno **procesy** , při ladění vyberte možnost **ladit**  >  **procesy systému Windows**  >  **Processes**.
+1. Chcete-li otevřít okno **procesy** , při ladění vyberte možnost **ladit**  >  **procesy systému Windows**  >  .
 
 1. V okně **procesy** je aktuální proces označen žlutou šipkou. Dvakrát klikněte na proces, který chcete nastavit jako aktuální proces.
 

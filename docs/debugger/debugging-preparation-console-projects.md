@@ -1,6 +1,7 @@
 ---
 title: Příprava na ladění projektů konzoly | Microsoft Docs
-ms.custom: seodec18
+description: 'Získejte informace o přípravě na ladění projektů konzoly (C#, C++, Visual Basic, F #) v aplikaci Visual Studio.'
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e612228bf5440936c336d286962820a02d6bd071
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9de54feeb77f1bff31fc0b41e385e5a10393aba2
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916277"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728262"
 ---
 # <a name="debugging-preparation-console-projects-c-c-visual-basic-f"></a>Příprava ladění: projekty konzoly (C#, C++, Visual Basic, F #)
 
@@ -41,7 +42,7 @@ Příprava na ladění projektu konzoly je podobná přípravě ladění projekt
 
 Možná budete muset zadat argumenty příkazového řádku pro konzolovou aplikaci. Další informace naleznete v tématu [nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md), [nastavení projektu pro Visual Basic konfigurace ladění](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)nebo [nastavení projektu pro konfiguraci ladění jazyka C#](../debugger/project-settings-for-csharp-debug-configurations.md).
 
-Stejně jako všechny vlastnosti projektu jsou tyto argumenty trvalé mezi relacemi ladění a mezi relacemi sady Visual Studio. Proto pokud je Konzolová aplikace ta, kterou jste dříve laděni, pamatujte, že v dialogovém okně ** \<Project> stránky vlastností** mohou být zadány argumenty z předchozích relací.
+Stejně jako všechny vlastnosti projektu jsou tyto argumenty trvalé mezi relacemi ladění a mezi relacemi sady Visual Studio. Proto pokud je Konzolová aplikace ta, kterou jste dříve laděni, pamatujte, že v dialogovém okně **\<Project> stránky vlastností** mohou být zadány argumenty z předchozích relací.
 
 ## <a name="start-the-application"></a>Spuštění aplikace
 
@@ -49,7 +50,7 @@ Stejně jako všechny vlastnosti projektu jsou tyto argumenty trvalé mezi relac
 
 - Nastavte zarážku v kódu a spusťte aplikaci.
 
-- Spusťte aplikaci pomocí nástroje **F10** (**Debug**  >  **Krokovat krok za**laděním) nebo**Debug** **F11** (  >  **Krokovat krok dovnitř**) a pak procházením kódu pomocí dalších možností, jako je například **Run, klikněte na tlačítko spustit**.
+- Spusťte aplikaci pomocí nástroje **F10** (  >  **Krokovat krok za** laděním) nebo **F11** (  >  **Krokovat krok dovnitř**) a pak procházením kódu pomocí dalších možností, jako je například **Run, klikněte na tlačítko spustit**.
 
 - V editoru kódu klikněte pravým tlačítkem myši na řádek a vyberte možnost **Spustit ke kurzoru**.
 

@@ -18,12 +18,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7af24dbbb510fb1d5c9c62b40d5986ea5c74d35b
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: d935ee5c4341a2d625c6f85226cc649d696d6e6e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361648"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729389"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>Použití map kódu k ladění aplikací
 
@@ -62,9 +62,9 @@ Podrobnosti o příkazech a akcích, které můžete použít při práci s mapa
 ## <a name="navigate-and-examine-code-from-the-map"></a>Procházení a zkoumání kódu z mapy
  Chcete-li zobrazit definici kódu pro každé pole, dvakrát klikněte na pole na mapě nebo vyberte pole a stiskněte klávesu **F12**. Zelená šipka se přesune mezi položkami na mapě. Kurzor v editoru kódu se také přesune automaticky.
 
- ![Mapování kódu &#45; kontrole definice pole](../modeling/media/codemapstoryboardpaint5.png)
+ ![Snímek obrazovky okna Mapa kódu s vybraným polem historie a oknem editoru kódu, kde jsou zvýrazněny všechny instance historie.](../modeling/media/codemapstoryboardpaint5.png)
 
- ![Mapování kódu &#45; kontrole definice pole](../modeling/media/codemapstoryboardpaint5a.png)
+ ![Snímek obrazovky s oknem mapa kódu s vybraným polem paintObjects a oknem editoru kódu, kde jsou zvýrazněny všechny instance paintObjects.](../modeling/media/codemapstoryboardpaint5a.png)
 
 > [!TIP]
 > Zelenou šipku na mapě můžete také přesunout přesunutím kurzoru v editoru kódu.
@@ -81,24 +81,24 @@ Podrobnosti o příkazech a akcích, které můžete použít při práci s mapa
 
  Změňte rozložení a uspořádejte tak tok vztahů a usnadněte čtení z mapy. Položky kolem mapy lze také přesunout přetažením.
 
- ![Mapa kódu &#45; změnit rozložení](../modeling/media/codemapstoryboardpaint7a.png)
+ ![Snímek obrazovky s oknem mapa kódu s otevřenou nabídkou rozložení a vybraným příkazem vlevo k Rgiht](../modeling/media/codemapstoryboardpaint7a.png)
 
 > [!TIP]
 > Ve výchozím nastavení je **přírůstkové rozložení** zapnuté. To při přidání nových položek mění uspořádání mapy co nejméně. Chcete-li změnit uspořádání celé mapy při každém přidání nových položek, vypněte **přírůstkové rozložení**.
 
- ![Mapa kódu &#45; změnit rozložení](../modeling/media/codemapstoryboardpaint7.png)
+ ![Snímek obrazovky s oknem mapa kódu se šipkami relationshiop mezi poli směřujícími zleva doprava](../modeling/media/codemapstoryboardpaint7.png)
 
  Podívejme se na tyto metody. Na mapě poklikejte na metodu **PaintCanvas** , nebo vyberte tuto metodu a stiskněte klávesu **F12**. Zjistíte, že tato metoda vytváří `history` a `paintObjects` jako prázdné seznamy.
 
- ![Mapování kódu &#45; kontrole definice metody](../modeling/media/codemapstoryboardpaint8.png)
+ ![Snímek obrazovky okna Mapa kódu s vybraným PaintCanvas metodou a obrázkem fragmentu kódu ukazující název metody PainCanvas zvýrazněný](../modeling/media/codemapstoryboardpaint8.png)
 
  Nyní opakujte stejný postup, abyste prozkoumali `clear` definici metody. Naučíte se, že `clear` provádí některé úkoly s `paintObjects` a `history` . Pak zavolá `Repaint` metodu.
 
- ![Mapování kódu &#45; kontrole definice metody](../modeling/media/codemapstoryboardpaint9.png)
+ ![Snímek obrazovky s oknem mapa kódu s vybranou metodou Clear a obrázkem fragmentu kódu zobrazující kód pro metodu Clear](../modeling/media/codemapstoryboardpaint9.png)
 
  Teď si Projděte `addPaintObject` definici metody. Provádí také některé úlohy s `history` a `paintObjects` . Volá také `Repaint` .
 
- ![Mapování kódu &#45; kontrole definice metody](../modeling/media/codemapstoryboardpaint10.png)
+ ![Snímek obrazovky s oknem mapa kódu s vybraným addPaintObject metodou a obrázkem fragmentu kódu zobrazující kód pro metodu addPaintObject](../modeling/media/codemapstoryboardpaint10.png)
 
 ## <a name="find-the-problem-by-examining-the-map"></a>Nalezení příčiny problému prozkoumáním mapy
  Zdá se, že všechny metody, které mění `history` a `paintObjects` volají `Repaint` . `undo`Metoda sice ale nevolá `Repaint` , i když `undo` mění stejná pole. Proto si myslíte, že tento problém můžete vyřešit voláním `Repaint` z `undo` .
@@ -142,7 +142,7 @@ Podrobnosti o příkazech a akcích, které můžete použít při práci s mapa
 
  Nyní jste hotovi s vaším šetřením. Úspěšně jste našli a opravili problém pomocí mapování kódu. Máte k dispozici také mapu, která usnadňuje navigaci v rámci kódu, zapamatuje si, co jste se naučili, a zobrazí kroky, které jste provedli v zájmu vyřešení problému.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Mapování metod v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
 - [Vizualizace kódu](../modeling/visualize-code.md)

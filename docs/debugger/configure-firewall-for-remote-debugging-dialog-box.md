@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Konfigurace brány firewall pro vzdálené ladění | Microsoft Docs
+description: Přečtěte si informace o dialogovém okně Konfigurace brány firewall pro vzdálené ladění, které se zobrazí, když brána Windows Firewall zastaví příjem dat přes síť.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a2511fc2adfa63ff28f8459f48cbdf4b4623ff5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86a0cac2e42e1271e689f2b1880eef8ca6d14644
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745667"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728960"
 ---
 # <a name="configure-firewall-for-remote-debugging-dialog-box"></a>Dialogové okno Konfigurace brány firewall pro vzdálené ladění
 Toto dialogové okno se zobrazí, když brána Windows Firewall zablokuje ladicí program, aby přijímal informace prostřednictvím sítě. Chcete-li pokračovat ve vzdáleném ladění, je nutné otevřít díru v bráně firewall, aby ladicí program mohl získat informace.

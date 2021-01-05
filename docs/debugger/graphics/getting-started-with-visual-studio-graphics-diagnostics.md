@@ -1,6 +1,7 @@
 ---
 title: Začínáme s diagnostikou grafiky | Microsoft Docs
-ms.custom: seodec18
+description: Připravte se na použití Diagnostika grafiky poprvé a potom Zachyťte snímky z aplikace Direct3D a prověřte je v analyzátoru grafiky.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 06/08/2020
 ms.topic: how-to
 author: mikejo5000
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00a802c0083a9e67a145077ff8ec5842b30eb607
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 88b22364c92a17c7200ddb261d154c7896cd1696
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600090"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727861"
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Začínáme s diagnostikou grafiky sady Visual Studio
 V této části se budete připravit na použití Diagnostika grafiky poprvé, budete zachytit snímky z aplikace Direct3D a prozkoumávat je v analyzátoru grafiky.
@@ -63,10 +64,10 @@ Stáhněte si ukázku ze [hry Direct3D Sample](/samples/microsoft/windows-univer
 - [Ukázka Direct3D 12 UAP](https://code.msdn.microsoft.com/Direct3D-12-UAP-Sample-ecb1779f) pro Windows 10
 ::: moniker-end
 
-Ujistěte se, že aplikaci můžete sestavit a spustit před přechodem na. Vyberte **sestavit**sestavení  >  **řešení** a ujistěte se, že se sestaví bez chyb. Pak zvolte **ladit**  >  **Spustit bez ladění** (**CTRL + F5**) a ujistěte se, že funguje správně. V závislosti na tom, který počítač testujete pomocí nástroje, možná budete muset upravit platformu a cíl ladění pro ukázku. Chcete-li například testovat platformu x64 na hostitelském počítači sady Visual Studio, jako cíl ladění vyberte možnost **x64** jako platformu řešení a **místní počítač** . 
+Ujistěte se, že aplikaci můžete sestavit a spustit před přechodem na. Vyberte **sestavit** sestavení  >  **řešení** a ujistěte se, že se sestaví bez chyb. Pak zvolte **ladit**  >  **Spustit bez ladění** (**CTRL + F5**) a ujistěte se, že funguje správně. V závislosti na tom, který počítač testujete pomocí nástroje, možná budete muset upravit platformu a cíl ladění pro ukázku. Chcete-li například testovat platformu x64 na hostitelském počítači sady Visual Studio, jako cíl ladění vyberte možnost **x64** jako platformu řešení a **místní počítač** . 
 
 ### <a name="2---start-a-graphics-diagnostics-session"></a>2. spuštění relace Diagnostika grafiky
- Teď jste připraveni začít svoji první relaci diagnostiky grafiky. V aplikaci Visual Studio v hlavní nabídce zvolte možnost **ladění, grafika, spustit ladění grafiky**nebo stačí stisknout klávesy **ALT + F5**. Tím se aplikace spustí v rámci Diagnostika grafiky a zobrazí okna diagnostické relace v aplikaci Visual Studio.
+ Teď jste připraveni začít svoji první relaci diagnostiky grafiky. V aplikaci Visual Studio v hlavní nabídce zvolte možnost **ladění, grafika, spustit ladění grafiky** nebo stačí stisknout klávesy **ALT + F5**. Tím se aplikace spustí v rámci Diagnostika grafiky a zobrazí okna diagnostické relace v aplikaci Visual Studio.
 
 > [!IMPORTANT]
 > Pokud aplikaci spouštíte ve Windows 10 a ještě nemáte nainstalovanou funkci volitelné grafické nástroje, zobrazí se vám výzva k tomu, abyste to provedli nyní. Než budete moct použít Diagnostika grafiky ve Windows 10, musíte ho nainstalovat.

@@ -1,5 +1,7 @@
 ---
-title: Nástroj příkazového řádku pro zachycení | Microsoft Docs
+title: Nástroj pro zachycení Command-Line | Microsoft Docs
+description: Přečtěte si o DXCap.exe, nástroji příkazového řádku pro zachytávání a přehrávání grafiky, které podporuje Direct3D 10 přes Direct3D 12 na všech úrovních funkcí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: db75b3a7-80b2-4a74-91d2-fd6e0f73b45d
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4d88e62b1520677ddac3ff66a6891eb805af30d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3618c1d6e929d40108abd5fd0b0cc3a3361964bf
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64808447"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727874"
 ---
 # <a name="command-line-capture-tool"></a>Nástroj příkazového řádku pro zachytávání
 DXCap.exe je nástroj příkazového řádku pro zachytávání a přehrávání grafiky diagnostiky. Podporuje Direct3D 10 přes Direct3D 12 na všech úrovních funkcí.
@@ -137,7 +139,7 @@ DXCap.exe -e map
 
  Příkaz výše zobrazuje výčet aplikací pro UWP, které odpovídají mapě. Zde je výstup:
 
- **Balíček Microsoft. BingMaps ":** **InstallDirectory: C:\Program Files\WindowsApps\Microsoft. BingMaps_2.1.2914.1734_X64__8wekyb3d8bbwe** **FullName: Microsoft. BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe** **identifikátor UserSID: S-1-5-21-2127521184-1604012920-1887927527-5603533** **Název: Microsoft. BingMaps** **Publish: CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S = Washington, C = US** **verze: 2.1.2914.1734** **spouštěné aplikace:** **ID: AppexMaps** **exe: C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe** **IsWWA: No** **AppSpec (ke spuštění): DXCap.exe-C Microsoft. BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe, AppexMaps** poslední řádek výstupu pro každou aplikaci zobrazí příkaz, který můžete použít k zaznamenání grafické informace z ní.
+ **Balíček Microsoft. BingMaps ":** **InstallDirectory: C: \ Program Files \ WindowsApps \ Microsoft. BingMaps_2.1.2914.1734_X64__8wekyb3d8bbwe** **FullName: Microsoft. BingMaps_2.1.2914.1734 _x64__8wekyb3d8bbwe** **identifikátor UserSID: S-1-5-21-2127521184-1604012920-1887927527-5603533** **Název: Microsoft. BingMaps** **Publish: CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S = Washington, C = US** **verze: 2.1.2914.1734** **spouštěné aplikace:** **ID: AppexMaps** **exe: C: \ program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe** **IsWWA: No** **AppSpec (ke spuštění): DXCap.exe-C Microsoft. BingMaps_2.1.2914.1734 _x64__8wekyb3d8bbwe, AppexMaps** poslední řádek výstupu pro každou aplikaci zobrazí příkaz, který můžete použít k zaznamenání grafické informace z ní.
 
 ### <a name="capture-specific-frames-or-frames-between-specific-times"></a>Zachyťte určité snímky nebo snímky mezi určitými časy.
  Použijte `-frame` k určení snímků, které chcete zachytit pomocí čárky a rozsahů:

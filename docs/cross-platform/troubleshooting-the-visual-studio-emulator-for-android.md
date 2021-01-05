@@ -13,12 +13,12 @@ manager: crdun
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 24af3c279115322b0592faa3b9fa6049bc0c0b62
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 62c2b69edf6868d1559df2a861a85e286f8ffa15
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878914"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729207"
 ---
 # <a name="troubleshoot-the-visual-studio-emulator-for-android"></a>Poradce při potížích s emulátorem sady Visual Studio pro Android
 Toto téma obsahuje informace, které vám pomohou vyřešit problémy, se kterými se můžete setkat při použití emulátoru sady Visual Studio pro Android.
@@ -70,7 +70,7 @@ Toto téma obsahuje informace, které vám pomohou vyřešit problémy, se kter�
 ## <a name="emulator-fails-to-install"></a><a name="NoInstall"></a> Instalace emulátoru se nezdařila
  Pokud nemáte nainstalovanou technologii Hyper-V, při pokusu o instalaci emulátoru se zobrazí následující zpráva. Musíte mít počítač, který podporuje HyperV a musí být povolený.
 
- ![Android&#95;EMU&#95;instalaci&#95;problému](../cross-platform/media/android_emu_install_issue.png "Android_Emu_Install_Issue")
+ ![Snímek obrazovky sady Visual Studio oznamující, že je instalační program blokovaný pro Microsoft Visual Studio Emulator for Android, protože počítač suppert Hyper-V.](../cross-platform/media/android_emu_install_issue.png "Android_Emu_Install_Issue")
 
 > [!NOTE]
 > Tato zpráva se vztahuje na emulátor sady Visual Studio pro Android a emulátor Windows Phone. Windows 8.1 a Windows 10 podporují emulátor.
@@ -135,7 +135,7 @@ Toto téma obsahuje informace, které vám pomohou vyřešit problémy, se kter�
 
 - Ve Správci technologie Hyper-V otevřete Správce virtuálního přepínače a zkontrolujte, že máte dvě síťové přepínače. Ověřte, že první z nich je interní přepínač a druhá je externí.
 
-     ![Android&#95;EMU&#95;V&#95;přepínač&#95;muž](../cross-platform/media/android_emu_v_switch_man.png "Android_Emu_V_Switch_Man")
+     ![Snímek obrazovky Správce virtuálního přepínače ve Správci technologie Hyper-V. Nový virtuální přepínač je zvýrazněný a jeho vlastnosti ukazují, že se jedná o externí síťový přepínač.](../cross-platform/media/android_emu_v_switch_man.png "Android_Emu_V_Switch_Man")
 
      Pokud není instalace správná a používáte Windows 10, můžete se pokusit [znovu nainstalovat síťová zařízení pomocí příkazu netcfg-d](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues) (oddíl 6).
 
@@ -196,7 +196,7 @@ Toto téma obsahuje informace, které vám pomohou vyřešit problémy, se kter�
 
    Následující produkty mohou vyžadovat upgrade dodržování předpisů pro systém Windows 8: VirtualBox, Virtual PC 7, VMWare, někteří klienti VPN, brány firewall softwaru, některé verze klientů Cisco VPN a další virtualizační systémy. Spolupracujte s vývojářem problematického virtualizačního softwaru, který jim pomůžete upgradovat software tak, aby byl kompatibilní s Windows 8 a Hyper-V.
 
-   Jako *alternativní řešení*můžete zakázat všechny ovladače a aplikace třetích stran, které by mohly být v konfliktu s virtuální sítí, kterou používá emulátor ke komunikaci se sadou Visual Studio. Tyto aplikace můžou zahrnovat:
+   Jako *alternativní řešení* můžete zakázat všechny ovladače a aplikace třetích stran, které by mohly být v konfliktu s virtuální sítí, kterou používá emulátor ke komunikaci se sadou Visual Studio. Tyto aplikace můžou zahrnovat:
 
   - Antivirové aplikace (které se připojí k zásobníku sítě)
 
@@ -271,7 +271,7 @@ Toto téma obsahuje informace, které vám pomohou vyřešit problémy, se kter�
   Restartujte emulátor a teď byste měli mít přístup k emulátoru připojenému k ADB a souvisejícím nástrojům pro Android.
 
 ## <a name="emulator-stops-responding-because-it-couldnt-set-up-the-udp-port"></a><a name="XamarinPlayer"></a> Emulátor přestane reagovat, protože nedokázal nastavit port UDP.
- K tomuto problému může docházet z důvodu nekompatibility s Xamarin Playerem. Pokud se zdá, že emulátor přestane reagovat nebo se zobrazí tato chybová zpráva, "emulátor se nemůže připojit k operačnímu systému zařízení: Nepodařilo se nastavit port UDP.  Některé funkce můžou být zakázané, možná se vám tento problém vyskytl. Proveďte následující kroky.
+ K tomuto problému může docházet z důvodu nekompatibility s Xamarin Playerem. Pokud se zdá, že emulátor přestane reagovat nebo se zobrazí tato chybová zpráva, "emulátor se nemůže připojit k operačnímu systému zařízení: Nepodařilo se nastavit port UDP.  Některé funkce můžou být zakázané, možná se vám tento problém vyskytl. Proveďte následující kroky:
 
 1. Odinstalujte Xamarin Player.
 
@@ -303,7 +303,7 @@ Toto téma obsahuje informace, které vám pomohou vyřešit problémy, se kter�
  Emulátor používá ADB.exe k usnadnění přenosu souborů při přetahování souboru na obrazovku. Pokud dojde k chybě při pokusu o přetahování souboru, pravděpodobně to znamená, že emulátor není připojen k ADB.exe. Chcete-li problém vyřešit, postupujte podle kroků v [aplikaci Visual Studio, které se pokouší o nasazení aplikace do emulátoru, nebo se emulátor nezobrazí jako cíl ladění v jiném](#ADB)prostředí.
 
 ## <a name="resolution-of-screenshot-is-incorrect"></a><a name="Resolution"></a> Rozlišení obrazovky je nesprávné.
- Pokud naberete snímek obrazovky pomocí karty snímku obrazovky v **dalších oknech nástrojů** a výsledný obraz má neočekávanou velikost, možná budete muset před výběrem možnosti **zachytit**upravit úroveň přiblížení obrazovky. Emulátor přijme snímky obrazovky na rozlišení obrazovky na monitoru hostitelského počítače.
+ Pokud naberete snímek obrazovky pomocí karty snímku obrazovky v **dalších oknech nástrojů** a výsledný obraz má neočekávanou velikost, možná budete muset před výběrem možnosti **zachytit** upravit úroveň přiblížení obrazovky. Emulátor přijme snímky obrazovky na rozlišení obrazovky na monitoru hostitelského počítače.
 
 ## <a name="emulator-fails-to-render-opengl-content"></a><a name="OpenGL"></a> Emulátor nedokáže vykreslovat obsah OpenGL.
  Emulátor vykresluje obsah OpenGL pomocí GPU vašeho hostitelského počítače a používá k převodu těchto volání do a z rozhraní DirectX rozlomený projekt. Pokud se vaše aplikace správně vykresluje na zařízení, ale nesprávně v emulátoru, je pravděpodobný, aby zařízení zmírnilo nesprávné volání OpenGL (například pomocí proměnných shaderu, které se neshodují).

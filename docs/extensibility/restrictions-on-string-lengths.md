@@ -1,5 +1,7 @@
 ---
 title: Omezení délky řetězců | Microsoft Docs
+description: Přečtěte si o omezení délky řetězců používaných různými funkcemi, které jsou uložené v rozhraní API modulu plug-in správy zdrojového kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: df6e068ba612d5e8876e4fa01fbc0751759d5a80
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5412e930937d029f803f5c6c2b4ddc9d396d9485
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701477"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715519"
 ---
 # <a name="restrictions-on-string-lengths"></a>Omezení délky řetězců
 Rozhraní API modulu plug-in správy zdrojového kódu omezuje délky řetězců používané v různých funkcích.

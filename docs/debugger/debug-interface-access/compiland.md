@@ -1,5 +1,7 @@
 ---
 title: Kompilantu | Microsoft Docs
+description: Vyhledejte referenční informace o typu symbolu Kompilantu (SymTagCompiland) v rozhraní ladění sady Visual Studio pro přístup.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65c6a9460415112f9d86af6d5cf8766ad7d55f97
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 537b915269a6b7bcf345caf2545d38ca21337ecf
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462258"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728786"
 ---
 # <a name="compiland"></a>Kompilace
 `SymTagCompiland`Pro každý kompilantu propojený se souborem. exe je k dispozici jeden symbol. Informace kompilantu jsou rozděleny mezi symboly `SymTagCompiland` značkou, které lze načíst bez načtení dalších symbolů kompilantu a symboly se `SymTagCompilandDetails` značkou, která může vyžadovat načítání dalších symbolů.

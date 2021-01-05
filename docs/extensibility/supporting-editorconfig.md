@@ -1,5 +1,7 @@
 ---
 title: Rozšiřování jazykové služby na podporu EditorConfig
+description: Přečtěte si o změnách pro aktualizaci jazykové služby pro podporu souborů EditorConfig. Nahraďte globální možnost specifickou pro konkrétní jazyk pomocí kontextové možnosti.
+ms.custom: SEO-VS-2020
 ms.date: 11/22/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ddfe0e30904d000b4fd70c85371d29a2ee486932
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c635df2301822fc1bb982df44912527d53c9ef6
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699588"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97716104"
 ---
 # <a name="supporting-editorconfig-for-your-language-service"></a>Podpora EditorConfig pro vaši jazykovou službu
 

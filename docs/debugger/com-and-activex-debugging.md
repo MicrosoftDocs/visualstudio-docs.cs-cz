@@ -1,5 +1,7 @@
 ---
 title: Ladění modelu COM a ActiveX | Microsoft Docs
+description: Seznamte se s tipy pro ladění aplikací modelu COM a ovládacích prvků ActiveX v aplikaci Visual Studio. Přečtěte si informace o serveru COM a ladění kontejnerů. Najděte nástroje pro ladění modelu COM.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a818cfde2996b26bd9d5f31b128e41f2a9fe2e1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1df80e8486cb8f8667494137392fadb0a9754e8b
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188679"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728999"
 ---
 # <a name="com-and-activex-debugging"></a>Ladění modelů COM a prvků ActiveX
 V této části najdete tipy pro ladění aplikací modelu COM a ovládacích prvků ActiveX.

@@ -1,7 +1,8 @@
 ---
 title: Analyzátory Roslyn a knihovny kódu pro ImmutableArrays
-titleSuffix: ''
+description: Naučte se, jak vytvořit Real World Roslyn Analyzer k zachycení běžných chyb při použití balíčku System. Collections. unproměnlivá sada NuGet.
 ms.custom: SEO-VS-2020
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: db3ebbd289feb227506d8c188ade9261dfb53da2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 04b65ae8c81f381ee996da5f20ec15588b9180de
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037644"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715766"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Analyzátory Roslyn a knihovna pro kódování kódu pro ImmutableArrays
 
@@ -26,8 +27,8 @@ ms.locfileid: "90037644"
 K sestavení tohoto příkladu potřebujete následující:
 
 * Visual Studio 2015 (ne Express Edition) nebo novější verze. Můžete použít bezplatnou [edici Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/community/) .
-* [Sada Visual Studio SDK](../extensibility/visual-studio-sdk.md). Při instalaci sady Visual Studio můžete také zaškrtnout **Visual Studio Extensibility Tools** v části **společné nástroje** pro instalaci sady SDK ve stejnou dobu. Pokud jste již nainstalovali sadu Visual Studio, můžete tuto sadu SDK nainstalovat také tak, že v levém navigačním podokně kliknete **na příkaz Hlavní nabídka**  >  **New**  >  **Project**, vyberete **C#** a pak zvolíte **rozšiřitelnost**. Když vyberete šablonu projektu s popisem cesty "**nainstalovat Visual Studio Extensibility Tools**", zobrazí se výzva ke stažení a instalaci sady SDK.
-* [.NET Compiler Platform ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Tuto sadu SDK můžete nainstalovat také tak, že v **nabídce**  >  **New**  >  v levém navigačním podokně zadáte nový**projekt**, vyberete **C#** a pak zvolíte **rozšiřitelnost**. Když vyberete možnost stáhnout šablonu projektu s popisem cesty **.NET COMPILER Platform SDK**, zobrazí se výzva ke stažení a instalaci sady SDK. Tato sada SDK zahrnuje [Roslyn syntax visualizer](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Syntax-Visualizer.md). Tento užitečný nástroj vám pomůže zjistit, jaké typy modelů kódu byste měli v analyzátoru Hledat. Infrastruktura analyzátoru volá do vašeho kódu pro konkrétní typy modelu kódu, takže váš kód se v případě potřeby spustí pouze v případě potřeby a může se zaměřit pouze na analýzu relevantního kódu.
+* [Sada Visual Studio SDK](../extensibility/visual-studio-sdk.md). Při instalaci sady Visual Studio můžete také zaškrtnout **Visual Studio Extensibility Tools** v části **společné nástroje** pro instalaci sady SDK ve stejnou dobu. Pokud jste již nainstalovali sadu Visual Studio, můžete tuto sadu SDK nainstalovat také tak, že v levém navigačním podokně kliknete **na příkaz Hlavní nabídka**  >    >  , vyberete **C#** a pak zvolíte **rozšiřitelnost**. Když vyberete šablonu projektu s popisem cesty "**nainstalovat Visual Studio Extensibility Tools**", zobrazí se výzva ke stažení a instalaci sady SDK.
+* [.NET Compiler Platform ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Tuto sadu SDK můžete nainstalovat také tak, že v **nabídce**  >    >  v levém navigačním podokně zadáte nový **projekt**, vyberete **C#** a pak zvolíte **rozšiřitelnost**. Když vyberete možnost stáhnout šablonu projektu s popisem cesty **.NET COMPILER Platform SDK**, zobrazí se výzva ke stažení a instalaci sady SDK. Tato sada SDK zahrnuje [Roslyn syntax visualizer](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Syntax-Visualizer.md). Tento užitečný nástroj vám pomůže zjistit, jaké typy modelů kódu byste měli v analyzátoru Hledat. Infrastruktura analyzátoru volá do vašeho kódu pro konkrétní typy modelu kódu, takže váš kód se v případě potřeby spustí pouze v případě potřeby a může se zaměřit pouze na analýzu relevantního kódu.
 
 ## <a name="whats-the-problem"></a>Jaký je problém?
 
@@ -63,7 +64,7 @@ Umístěte blikající kurzor editoru na řádek, který deklaruje `b1` . Uvidí
 
 ## <a name="create-the-analyzer-project"></a>Vytvoření projektu analyzátoru
 
-V hlavní nabídce vyberte **soubor**  >  **Nový**  >  **projekt**. V dialogovém okně **Nový projekt** v části projekty **C#** v levém navigačním panelu vyberte možnost **rozšiřitelnost**a v pravém podokně vyberte položku **analyzátor s opravou kódu** projektu šablona. Zadejte název a potvrďte dialog.
+V hlavní nabídce vyberte **soubor**  >  **Nový**  >  **projekt**. V dialogovém okně **Nový projekt** v části projekty **C#** v levém navigačním panelu vyberte možnost **rozšiřitelnost** a v pravém podokně vyberte položku **analyzátor s opravou kódu** projektu šablona. Zadejte název a potvrďte dialog.
 
 Šablona otevře soubor *DiagnosticAnalyzer.cs* . Vyberte tuto kartu vyrovnávací paměti editoru. Tento soubor obsahuje třídu analyzátoru (vytvořenou z názvu, který jste přiřadili projektu), který je odvozený od `DiagnosticAnalyzer` (typ rozhraní Roslyn API). Vaše nová třída má `DiagnosticAnalyzerAttribute` deklaraci vašeho analyzátoru, který je relevantní pro jazyk C#, aby kompilátor vyhledá a načte váš analyzátor.
 
@@ -87,7 +88,7 @@ V této metodě otevřete nový řádek a zadejte "Context". zobrazí se seznam 
 
 Jako jiný příklad, `RegisterCompilationStartAction` volá zpět na váš kód na začátku kompilace, což je užitečné v případě, že potřebujete shromáždit stav v mnoha umístěních. Můžete vytvořit datovou strukturu, vyslovit ke shromáždění všech používaných symbolů a pokaždé, když je analyzátor volán zpět pro určitou syntaxi nebo symbol, můžete uložit informace o každém umístění v datové struktuře. Pokud jste volali zpět z důvodu ukončení kompilace, můžete analyzovat všechna umístění, která jste uložili, například k hlášení, které symboly používá kód z jednotlivých `using` příkazů.
 
-Pomocí **syntax visualizer**jste zjistili, že chcete volat, když kompilátor zpracovává ObjectCreationExpression. Tento kód použijete k nastavení zpětného volání:
+Pomocí **syntax visualizer** jste zjistili, že chcete volat, když kompilátor zpracovává ObjectCreationExpression. Tento kód použijete k nastavení zpětného volání:
 
 ```csharp
 context.RegisterSyntaxNodeAction(c => AnalyzeObjectCreation(c),
@@ -141,11 +142,11 @@ V části se pořád zobrazují červené vlnovky `ImmutableArray` , takže umí
 
 V první instanci sady Visual Studio nastavte zarážku na začátku vaší `AnalyzeObjectCreation` metody stisknutím klávesy **F9** se blikajícím kurzorem na prvním řádku.
 
-Znovu spusťte analyzátor pomocí klávesy **F5**a ve druhé instanci aplikace Visual Studio znovu otevřete konzolovou aplikaci, kterou jste vytvořili naposledy.
+Znovu spusťte analyzátor pomocí klávesy **F5** a ve druhé instanci aplikace Visual Studio znovu otevřete konzolovou aplikaci, kterou jste vytvořili naposledy.
 
 Vrátíte se k první instanci sady Visual Studio na zarážce, protože kompilátor Roslyn viděl výraz pro vytvoření objektu a volal do vašeho analyzátoru.
 
-**Získá uzel pro vytvoření objektu.** Krok za řádkem, který nastaví `objectCreation` proměnnou stisknutím klávesy **F10**a v **příkazovém podokně** se vyhodnotí výraz `"objectCreation.ToString()"` . Vidíte, že uzel syntaxe, na kterou proměnná odkazuje, je kód `"new ImmutableArray<int>()"` , přesně co hledáte.
+**Získá uzel pro vytvoření objektu.** Krok za řádkem, který nastaví `objectCreation` proměnnou stisknutím klávesy **F10** a v **příkazovém podokně** se vyhodnotí výraz `"objectCreation.ToString()"` . Vidíte, že uzel syntaxe, na kterou proměnná odkazuje, je kód `"new ImmutableArray<int>()"` , přesně co hledáte.
 
 **Získá objekt typu ImmutableArray<T \> .** Je nutné ověřit, zda je vytvořen typ ImmutableArray. Nejprve získáte objekt, který představuje tento typ. Zkontrolujte typy pomocí sémantického modelu, abyste měli jistotu, že máte přesně správný typ a řetězec neporovnat `ToString()` . Na konci funkce zadejte následující řádek kódu:
 
@@ -300,7 +301,7 @@ V dalším kroku metoda načte kořen dokumentu a protože to může zahrnovat l
 
 Nyní můžete stisknutím klávesy **F5** spustit Analyzátor ve druhé instanci aplikace Visual Studio. Otevřete projekt konzoly, který jste použili dříve. Nyní by se měla zobrazit žárovka, kde je nový výraz pro vytvoření objektu pro `ImmutableArray<int>` . Po stisknutí klávesy **CTRL** + **.** (tečka), zobrazí se oprava kódu a v uživatelském rozhraní žárovky se zobrazí automaticky vygenerovaný náhled rozdílů kódu. Roslyn to vytvoří za vás.
 
-**Tip pro:** Pokud spustíte druhou instanci aplikace Visual Studio a žárovku s opravou kódu nevidíte, možná budete muset vymazat mezipaměť komponent sady Visual Studio. Vymazání mezipaměti vynutí, aby aplikace Visual Studio znovu prozkoumala komponenty, takže Visual Studio by pak mělo vybrat nejnovější komponentu. Nejprve vypněte druhou instanci aplikace Visual Studio. Pak v **Průzkumníkovi Windows**přejděte na *%localappdata%\Microsoft\VisualStudio\16.0Roslyn \\ *. ("16,0" se změní z verze na verzi pomocí sady Visual Studio.) Odstraňte podadresář *ComponentModelCache*.
+**Tip pro:** Pokud spustíte druhou instanci aplikace Visual Studio a žárovku s opravou kódu nevidíte, možná budete muset vymazat mezipaměť komponent sady Visual Studio. Vymazání mezipaměti vynutí, aby aplikace Visual Studio znovu prozkoumala komponenty, takže Visual Studio by pak mělo vybrat nejnovější komponentu. Nejprve vypněte druhou instanci aplikace Visual Studio. Pak v **Průzkumníkovi Windows** přejděte na *%localappdata%\Microsoft\VisualStudio\16.0Roslyn \\*. ("16,0" se změní z verze na verzi pomocí sady Visual Studio.) Odstraňte podadresář *ComponentModelCache*.
 
 ## <a name="talk-video-and-finish-code-project"></a>Pohovořit video a dokončit projekt kódu
 

@@ -1,5 +1,7 @@
 ---
 title: Odeslat zprávy do okna výstup | Microsoft Docs
+description: Zápis zpráv za běhu do okna výstup v aplikaci Visual Studio pomocí třídy Debug nebo třídy trasování, která je součástí knihovny tříd System. Diagnostics.
+ms.custom: SEO-VS-2020
 ms.date: 11/08/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85d3c146775ac06b3118186738ee74932a4c452a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 345efabedca63187fd9f16b4ed9622de8e320e89
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350469"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728080"
 ---
 # <a name="send-messages-to-the-output-window"></a>Odesílání zpráv do okna výstupu
 

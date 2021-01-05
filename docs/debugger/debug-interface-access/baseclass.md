@@ -1,5 +1,7 @@
 ---
 title: BaseClass | Microsoft Docs
+description: Vyhledejte referenční informace o typu symbolu BaseClass. Základní třída pro uživatelem definované symboly typu (UDT) je identifikována podřízenou značkou SymTagBaseClass.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 48fcf4e7db87ecf8f0b1041dd013e4b1d8571533
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d813955c8b61965b41cd252aaa35cb7ca323234
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462300"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728886"
 ---
 # <a name="baseclass"></a>BaseClass
 Každá základní třída pro uživatelem definovaný typ (UDT) je identifikována podřízenou `SymTagBaseClass` značkou. Vlastnost [IDiaSymbol:: get_Type](../../debugger/debug-interface-access/idiasymbol-get-type.md) obsahuje symbol pro základní typ UDT a všechny vlastnosti základního typu UDT jsou k dispozici jako součást tohoto symbolu BaseClass.

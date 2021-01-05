@@ -1,5 +1,7 @@
 ---
 title: Nelze změnit hodnotu dialogového okna | Microsoft Docs
+description: Pokud se pokusíte změnit proměnnou na neplatnou hodnotu v okně ladicího programu nebo QuickWatch, přečtěte si dialogové okno nelze změnit hodnotu, které se zobrazí v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97f057edefefd590c37b49d709ecf8a6e029b905
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf4181d7ff56bd1a5cf3f195bcea5b02aa023629
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745745"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729051"
 ---
 # <a name="cannot-change-value-dialog-box"></a>Dialogové okno Nelze změnit hodnotu
 ## <a name="error"></a>Chyba

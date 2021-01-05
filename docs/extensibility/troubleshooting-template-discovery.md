@@ -1,5 +1,7 @@
 ---
 title: Řešení potíží se zjišťováním šablon v aplikaci Visual Studio | Microsoft Docs
+description: Naučte se, jak povolit diagnostické protokolování pro řešení potíží s nasazením vlastních projektů a šablon v sadě Visual Studio SDK.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: troubleshooting
 author: acangialosi
@@ -7,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 89ff5b9974f20841378f367c3cb631a8d4cf7787
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff864e1a244d058b2c5ec1de33d116cfdcfe22db
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235040"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97716043"
 ---
 # <a name="troubleshooting-template-installation"></a>Řešení potíží s instalací šablony
 

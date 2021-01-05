@@ -1,5 +1,7 @@
 ---
 title: Rozhraní API grafiky a statistiky paměti | Microsoft Docs
+description: Projděte si Přehled statistik rozhraní API grafiky a statistiky paměti, které zobrazují informace o využití rozhraní Direct3D API a spotřebě paměti GPU u různých prostředků.
+ms.custom: SEO-VS-2020
 ms.date: 03/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa808e76e6655c5d57108c923b19794d0398b80c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0e0ad2bc48e1e15e1b061cdb600ce65773523e70
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735578"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727887"
 ---
 # <a name="graphics-api-and-memory-statistics"></a>Grafické rozhraní API a statistika paměti
 <!-- VERSIONLESS -->

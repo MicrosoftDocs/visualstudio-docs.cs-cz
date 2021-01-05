@@ -1,6 +1,7 @@
 ---
 title: Nasazení aplikací pro UWP | Microsoft Docs
-ms.custom: seodec18
+description: Nasaďte aplikace Univerzální platforma Windows (UWP) ze sady Visual Studio. Zadejte místní nebo vzdálené cílové zařízení pro nasazení. Pochopení možností nasazení.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 01/16/2018
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 4c58dbb32ef0a476ac7e22a840e27e389c710f97
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 70b4d862b69eeb34028fb0f782cc5c8d6acbdbce
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188277"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728197"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Nasazení aplikací pro UPW ze sady Visual Studio
 
@@ -66,9 +67,9 @@ Nasazení používá síťový kanál vzdáleného ladícího programu k posíl�
 
 3. Pak zvolte uzel **ladění** v okně stránky vlastností.
 
-4. V případě **cílového zařízení**vyberte možnost **vzdálený počítač**.
+4. V případě **cílového zařízení** vyberte možnost **vzdálený počítač**.
 
-5. V části **vzdálený počítač**klikněte na **Najít**.
+5. V části **vzdálený počítač** klikněte na **Najít**.
 
 6. Můžete zadat název nebo IP adresu vzdáleného zařízení nebo můžete vybrat zařízení z dialogového okna **vzdálené připojení** .
 

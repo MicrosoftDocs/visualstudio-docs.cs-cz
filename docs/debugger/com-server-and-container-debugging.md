@@ -1,5 +1,7 @@
 ---
 title: Ladění serveru a kontejneru modelu COM | Microsoft Docs
+description: Přečtěte si informace o serveru COM a ladění kontejnerů. Ladění serveru a kontejneru modelu COM ve stejném řešení, serverové aplikace bez informací o kontejneru nebo aplikace SDI.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec5ed51c72ad7fd64bbdfd0135f53a13bb8c6e4b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b1d4ceecae385ac6e5444c60f6634b260f2e887
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745678"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728973"
 ---
 # <a name="com-server-and-container-debugging"></a>Ladění serveru a kontejneru modelu COM
 Aplikace modelu COM provádějí řadu úkolů mimo přímo ovládací prvek programátora. Komunikace mezi knihovnami DLL, počty využití objektů a operacemi ve schránce jsou pouze v několika oblastech, ve kterých se může narazit na neočekávané chování. Pokud k tomu dojde, je vaším prvním krokem sledování zdroje problému.
@@ -56,4 +58,4 @@ Aplikace modelu COM provádějí řadu úkolů mimo přímo ovládací prvek pro
 
 ## <a name="see-also"></a>Viz také
 
-- [Ladění modelů COM a prvků ActiveX](../debugger/com-and-activex-debugging.md)
+- [Ladění modelu COM a ActiveX](../debugger/com-and-activex-debugging.md)

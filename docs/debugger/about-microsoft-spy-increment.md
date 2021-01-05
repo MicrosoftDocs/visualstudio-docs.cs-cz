@@ -1,5 +1,7 @@
 ---
 title: O nástroji Microsoft Spy + + | Microsoft Docs
+description: V dialogovém okně o produktu Microsoft Spy + + v aplikaci Visual Studio můžete zobrazit Copyright, verzi, vlastnictví a další informace o ladicím nástroji nástroje Spy + +.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54877dfd5164cae2c256f21fc2886d779ecf64a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d3488e3eb21cdd564c17040e7d29868473575ac
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62564265"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729129"
 ---
 # <a name="about-microsoft-spy"></a>O nástroji Microsoft Spy++
 Pomocí tohoto dialogového okna můžete zobrazit informace o autorských právech, verzi, vlastnictví a dalších informacích o nástroji Spy + +.

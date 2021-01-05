@@ -7,18 +7,18 @@ ms.author: ghogen
 ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 0fa7d186623b69fd83c3ed7e4ab9cc12128847d2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 93f9d5ba8bd84341e1b314c1fabca07690114e39
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037208"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729285"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Kurz: Vytvoření aplikace s více kontejnery pomocí Docker Compose
 
 V tomto kurzu se naučíte spravovat více než jeden kontejner a při používání nástrojů kontejneru v aplikaci Visual Studio komunikovat mezi nimi.  Správa více kontejnerů vyžaduje *orchestraci kontejnerů* a vyžaduje produkt Orchestrator, například Docker Compose, Kubernetes nebo Service Fabric. Zde použijeme Docker Compose. Docker Compose je skvělé pro místní ladění a testování v průběhu vývojového cyklu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 ::: moniker range="vs-2017"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
@@ -46,11 +46,11 @@ Nevybírejte možnost **Povolit podporu Docker**. Podporu Docker přidáte pozd�
 
 ::: moniker range="vs-2019"
 
-![Snímek obrazovky s vytvořením webového projektu](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project1.png)
+![Snímek obrazovky konfigurovat novou obrazovku pro webovou aplikaci ASP.NET Core, pole název projektu a název řešení jsou nastavená na webendu.](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project1.png)
 
 Nevybírejte možnost **Povolit podporu Docker**. Podporu Docker přidáte později.
 
-![Snímek obrazovky s vytvořením webového projektu](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project.png)
+![Snímek obrazovky pro vytvoření nové webové aplikace ASP.NET Core s vybranými webovými aplikacemi Není vybraná možnost povolit podporu Docker.](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project.png)
 
 ::: moniker-end
 
@@ -153,7 +153,7 @@ Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ pro
 
    Podrobnosti o spuštěných příkazech najdete v části **nástroje kontejneru** v podokně výstup.  K nakonfigurování a vytvoření kontejnerů modulu runtime se používá nástroj příkazového řádku Docker – sestavení.
 
-1. V projektu webového rozhraní API znovu klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat**  >  **podporu kontejneru Orchestrator**. Zvolte **Docker Compose**a pak vyberte stejný cílový operační systém.  
+1. V projektu webového rozhraní API znovu klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat**  >  **podporu kontejneru Orchestrator**. Zvolte **Docker Compose** a pak vyberte stejný cílový operační systém.  
 
     > [!NOTE]
     > V tomto kroku bude Visual Studio nabízet vytvoření souboru Dockerfile. Pokud to uděláte na projektu, který už má podporu Docker, zobrazí se dotaz, jestli chcete přepsat existující souboru Dockerfile. Pokud jste v souboru Dockerfile udělali změny, které chcete zachovat, klikněte na ne.
@@ -179,7 +179,7 @@ Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ pro
 
 1. Nyní spusťte web místně (F5 nebo CTRL + F5) a ověřte, zda funguje podle očekávání. Pokud je všechno správně nakonfigurované pomocí verze .NET Core 2. x, zobrazí se zpráva Hello z webendu a WebApi (s hodnotou 1).  S .NET Core 3 vidíte data předpovědi počasí.
 
-   První projekt, který použijete při přidání orchestrace kontejnerů, je nastaven tak, aby se spustil při spuštění nebo ladění. Akci spuštění můžete nakonfigurovat ve **vlastnostech projektu** pro projekt Docker-pro vytváření.  V uzlu projekt Docker – sestavení klikněte pravým tlačítkem myši a otevřete místní nabídku a zvolte možnost **vlastnosti**nebo stiskněte klávesu ALT + ENTER.  Následující snímek obrazovky ukazuje vlastnosti, které chcete použít pro toto řešení.  Můžete například změnit stránku, která je načtena přizpůsobením vlastnosti **Adresa URL služby** .
+   První projekt, který použijete při přidání orchestrace kontejnerů, je nastaven tak, aby se spustil při spuštění nebo ladění. Akci spuštění můžete nakonfigurovat ve **vlastnostech projektu** pro projekt Docker-pro vytváření.  V uzlu projekt Docker – sestavení klikněte pravým tlačítkem myši a otevřete místní nabídku a zvolte možnost **vlastnosti** nebo stiskněte klávesu ALT + ENTER.  Následující snímek obrazovky ukazuje vlastnosti, které chcete použít pro toto řešení.  Můžete například změnit stránku, která je načtena přizpůsobením vlastnosti **Adresa URL služby** .
 
    ![Snímek obrazovky Docker – sestavení vlastností projektu](media/tutorial-multicontainer/launch-action.png)
 

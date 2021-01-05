@@ -1,5 +1,7 @@
 ---
 title: Háky přidělení a přidělení běhové paměti jazyka C
+description: Pochopení přidělujících háky a přidělení paměti za běhu v nástroji Visual Studio pro ladění. Funkce zavěšení přidělení musí explicitně ignorovat _CRT_BLOCK bloky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be75b4d3e83ed297f31e9015c7ba082c0611206d
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: f2c9225281952700b118f13b20a11f7619307b8e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851616"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729168"
 ---
 # <a name="allocation-hooks-and-c-run-time-memory-allocations"></a>Háky přidělení a přidělení běhové paměti jazyka C
 Velmi důležité omezení funkcí zavěšení přidělení je, že musí explicitně ignorovat `_CRT_BLOCK` bloky. Tyto bloky jsou přidělení paměti prováděná interně funkcemi běhové knihovny jazyka C, pokud provádějí jakékoli volání funkcí běhové knihovny jazyka C, které přidělují interní paměť. Bloky můžete ignorovat `_CRT_BLOCK` vložením následujícího kódu na začátek funkce Hooku přidělení:
@@ -40,4 +42,4 @@ Pokud váš Hook přidělení Neignoruje `_CRT_BLOCK` bloky, pak jakákoli funkc
 Pokud prohlížíte zdrojové soubory knihovny run-time, uvidíte, že výchozí funkce Hooku přidělení, **CrtDefaultAllocHook** (která jednoduše vrátí **hodnotu true**), je umístěna v samostatném souboru vlastní DBGHOOK. C. Chcete-li, aby byl zavěšení připojení volán i pro přidělení spouštěcího kódu modulu runtime, který je proveden před funkcí **Main** vaší aplikace, můžete tuto výchozí funkci nahradit jednou z vlastních funkcí namísto použití [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook).
 
 ## <a name="see-also"></a>Viz také
-- [Zápis funkce háku ladění](../debugger/debug-hook-function-writing.md)
+- [Zápis funkce zavěšení ladění](../debugger/debug-hook-function-writing.md)

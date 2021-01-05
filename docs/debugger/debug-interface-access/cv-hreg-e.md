@@ -1,5 +1,7 @@
 ---
 title: CV_HREG_e | Microsoft Docs
+description: Získejte referenční informace o typu výčtu CV_HREG_e, který určuje cílový registr v sadě SDK pro přístup k rozhraní ladění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee15d5b4d6a0959397d8d62753455c7a26f01f78
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f24476bc00293f204dfa28d57ca2d961c2d55d9d
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462105"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728553"
 ---
 # <a name="cv_hreg_e"></a>CV_HREG_e
 Určuje cílový registr.

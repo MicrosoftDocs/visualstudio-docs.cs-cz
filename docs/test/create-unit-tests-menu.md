@@ -11,20 +11,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8afbc73e8c778829a9a1ce5a59d30df6de2f0daa
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: c9bdbd545a3509927dd13a800e22b9aaaab2cb2b
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441856"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756627"
 ---
-# <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>Vytvořte zástupné procedury metody testování částí pomocí příkazu vytvořit testy jednotek.
+# <a name="create-unit-test-method-stubs-from-code"></a>Vytvořit z kódu zástupné procedury metody testování částí
 
 Příkaz **vytvořit testy jednotek** vytvoří zástupné procedury metody testování částí. Tato funkce umožňuje snadnou konfiguraci testovacího projektu, testovací třídy a zástupné procedury testovací metody v rámci ní.
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Příkaz nabídky **vytvořit testy jednotek** je k dispozici pouze pro kód jazyka C#, který cílí na .NET Framework (ale ne .NET Core).
+> Příkaz nabídky **vytvořit testy jednotek** je k dispozici pouze pro kód jazyka C#, který cílí na .NET Framework (ale ne .NET Core nebo .NET Standard).
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 > [!NOTE]
@@ -38,6 +38,8 @@ Příkaz nabídky **vytvořit testy jednotek** je rozšiřitelný a lze ho použ
 Chcete-li začít, vyberte metodu, typ nebo obor názvů v editoru kódu v projektu, který chcete otestovat, klikněte pravým tlačítkem myši a zvolte možnost **vytvořit testy jednotek**. Otevře se dialogové okno **vytvořit testy jednotek** , kde můžete nakonfigurovat, jak se mají testy vytvářet.
 
 ![Použití příkazu vytvořit testy jednotek](media/createunittestcommand.png)
+
+Pokud nevidíte možnosti testovacího rozhraní pro NUnit nebo xUnit, přečtěte si téma [použití rozhraní pro testování částí třetích stran](#use-third-party-unit-test-frameworks).
 
 ## <a name="set-unit-test-traits"></a>Nastavit vlastnosti testu jednotek
 

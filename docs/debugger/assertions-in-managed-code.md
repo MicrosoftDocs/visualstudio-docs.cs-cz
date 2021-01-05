@@ -1,5 +1,7 @@
 ---
 title: Kontrolní výrazy ve spravovaném kódu | Microsoft Docs
+description: 'Seznamte se s kontrolními výrazy jako ladicím nástrojem pro C#, Visual Basic nebo pro spravovaný kód F # v aplikaci Visual Studio.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 824c711fc0ebb26a78338a65808c6fdbed768919
-ms.sourcegitcommit: fed8782b2fb2ca18a90746b6e7e0b33f3fde10f1
+ms.openlocfilehash: 2d546beb45be7f1473992ab9c2afc5f02ced1a1b
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97646395"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729090"
 ---
 # <a name="assertions-in-managed-code"></a>Kontrolní výrazy ve spravovaném kódu
 Kontrolní příkaz – neboli příkaz `Assert` – testuje podmínku, kterou zadáte jako argument příkazu `Assert`. Pokud je tato podmínka vyhodnocena jako true, nedojde k žádné akci. Pokud je tato podmínka vyhodnocena jako false, kontrola selže. Pokud máte spuštěný build pro ladění, program přejde do režimu pozastavení.

@@ -1,5 +1,7 @@
 ---
 title: Poznámka | Microsoft Docs
+description: Vyhledejte referenční informace o typu symbolu poznámky (SymTagAnnotation) v sadě Visual Studio Debug Interface Access SDK.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e1adc922021d1e2bcc9b55de0b5986ee0c1766d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cadd93b935e102cee2108be5c6fd6274f5a29e15
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462377"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728900"
 ---
 # <a name="annotation"></a>Poznámka
 Kód programu umístění je možné opatřit poznámkami `SymTagAnnotation` symbolem.

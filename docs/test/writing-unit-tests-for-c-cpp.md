@@ -8,16 +8,16 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 0eaf41dc0bf3e21dfbf4018261844181d594f0d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cf6287ebdb4c2df6145a0e60e22ac1197a517fde
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649603"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729363"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Zápis testů jednotek pro C/C++ v aplikaci Visual Studio
 
-Můžete napsat a spustit testy jednotek jazyka C++ pomocí okna **Průzkumník testů** . Funguje stejně jako pro jiné jazyky. Další informace o použití **Průzkumníka testů**naleznete v tématu [Run Unit Tests with Test Explorer](run-unit-tests-with-test-explorer.md).
+Můžete napsat a spustit testy jednotek jazyka C++ pomocí okna **Průzkumník testů** . Funguje stejně jako pro jiné jazyky. Další informace o použití **Průzkumníka testů** naleznete v tématu [Run Unit Tests with Test Explorer](run-unit-tests-with-test-explorer.md).
 
 > [!NOTE]
 > Některé funkce, jako například Live Unit Testing, kódované testy uživatelského rozhraní a IntelliTest, nejsou podporovány pro jazyk C++.
@@ -37,7 +37,7 @@ Projekty testů jednotek C++ podporují [CodeLens](../ide/find-code-changes-and-
 
 **Visual Studio 2017 a novější (všechny edice)**
 
-- **Google test adaptér** je zahrnutý jako výchozí součást **vývoje desktopových aplikací v C++** . Má šablonu projektu, kterou můžete přidat do řešení. Pomocí nabídky **Přidat nový projekt** v uzlu řešení v **Průzkumník řešení** ho přidejte. Obsahuje také možnosti, které můžete konfigurovat prostřednictvím **Tools**  >  **možností**nástroje. Další informace naleznete v tématu [How to: Use Google test in Visual Studio](how-to-use-google-test-for-cpp.md).
+- **Google test adaptér** je zahrnutý jako výchozí součást **vývoje desktopových aplikací v C++** . Má šablonu projektu, kterou můžete přidat do řešení. Pomocí nabídky **Přidat nový projekt** v uzlu řešení v **Průzkumník řešení** ho přidejte. Obsahuje také možnosti, které můžete konfigurovat prostřednictvím   >  **možností** nástroje. Další informace naleznete v tématu [How to: Use Google test in Visual Studio](how-to-use-google-test-for-cpp.md).
 
 - Jako výchozí součást **vývoje desktopových aplikací v jazyce C++** je k dispozici funkce **zvyšování. test** . Je integrována s **průzkumníkem testů**, ale aktuálně nemá šablonu projektu. Je nutné ho nakonfigurovat ručně. Další informace naleznete v tématu [How to: use. test v aplikaci Visual Studio](how-to-use-boost-test-for-cpp.md).
 
@@ -85,9 +85,9 @@ Pokud kód testu neexportuje funkce, které chcete otestovat, můžete přidat v
 
 Dále v souboru Test jednotky *. cpp* přidejte `#include` direktivu pro všechny hlavičkové soubory, které deklaruje typy a funkce, které chcete testovat. Typ `#include "` a potom IntelliSense, který vám pomůže vybrat. Opakujte pro další hlavičky.
 
-![Přidat direktivy include](media/cpp-add-includes-test-project.png)
+![Snímek obrazovky Průzkumník řešení zobrazující direktivu #include, která se přidává pomocí technologie IntelliSense, která zvýrazňuje soubor hlaviček pro zahrnutí.](media/cpp-add-includes-test-project.png)
 
-Chcete-li se vyhnout nutnosti zadávat úplnou cestu do každého příkazu include ve zdrojovém souboru, můžete přidat požadované složky v části **Project**  >  **vlastnosti**projektu  >  **C/C++**  >  **Obecné**  >  **Další adresáře include**.
+Chcete-li se vyhnout nutnosti zadávat úplnou cestu do každého příkazu include ve zdrojovém souboru, můžete přidat požadované složky v části   >  **vlastnosti** projektu  >    >  **Obecné**  >  **Další adresáře include**.
 
 ### <a name="write-test-methods"></a>Zápis testovacích metod
 
@@ -96,7 +96,7 @@ Chcete-li se vyhnout nutnosti zadávat úplnou cestu do každého příkazu incl
 
 Soubor *. cpp* v testovacím projektu má zástupnou třídu a metodu definovanou pro vás. Ukazují příklad, jak napsat testovací kód. Signatury používají makra TEST_CLASS a TEST_METHOD, která umožňují zjistit metody z okna **Průzkumníka testů** .
 
-![Přidat direktivy include](media/cpp-write-test-methods.png)
+![Snímek obrazovky okna Průzkumníka testů, které zobrazuje soubor kódu UnitTest1. cpp obsahující zástupnou třídu a metodu pomocí makra TEST_CLASS a TEST_METHOD.](media/cpp-write-test-methods.png)
 
 TEST_CLASS a TEST_METHOD jsou součástí [nativního testovacího rozhraní společnosti Microsoft](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md). **Průzkumník testů** zjišťuje testovací metody v jiných podporovaných rozhraních podobným způsobem.
 
@@ -126,13 +126,13 @@ Můžete přidat *vlastnosti* do testovacích metod a zadat vlastníky testů, p
 
 1. Pokud nejsou všechny testy v okně viditelné, sestavte projekt testu kliknutím pravým tlačítkem myši na jeho uzel v **Průzkumník řešení** a výběrem možnosti **sestavit** nebo **znovu sestavit**.
 
-1. V **Průzkumníku testů**zvolte možnost **Spustit vše**nebo vyberte konkrétní testy, které chcete spustit. Klikněte pravým tlačítkem na test pro další možnosti, včetně spuštění v režimu ladění se zapnutými zarážkami. Po spuštění všech testů se v okně zobrazí, které testy byly úspěšné a které selhaly:
+1. V **Průzkumníku testů** zvolte možnost **Spustit vše** nebo vyberte konkrétní testy, které chcete spustit. Klikněte pravým tlačítkem na test pro další možnosti, včetně spuštění v režimu ladění se zapnutými zarážkami. Po spuštění všech testů se v okně zobrazí, které testy byly úspěšné a které selhaly:
 
 ![Průzkumník testů po spuštění testů](media/cpp-test-explorer-passed.png)
 
 U neúspěšných testů obsahuje zpráva podrobnosti, které vám pomůžou diagnostikovat příčinu. Klikněte pravým tlačítkem myši na test selhání pro místní nabídku. Vyberte možnost **ladit vybrané testy** pro krokování funkce, ve které došlo k chybě.
 
-Další informace o použití **Průzkumníka testů**naleznete v tématu [Run Unit Tests with Test Explorer](run-unit-tests-with-test-explorer.md).
+Další informace o použití **Průzkumníka testů** naleznete v tématu [Run Unit Tests with Test Explorer](run-unit-tests-with-test-explorer.md).
 
 Další informace související s testováním částí najdete v tématu [základy testování částí](unit-test-basics.md) .
 

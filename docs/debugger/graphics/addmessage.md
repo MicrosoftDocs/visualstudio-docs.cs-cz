@@ -1,5 +1,7 @@
 ---
 title: AddMessage | Microsoft Docs
+description: Pomocí metody AddMessage třídy VsgDbg přidejte vlastní zprávu do diagnostiky grafiky Head-Up zobrazení (HUD).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 102a0404-a00c-4566-93f3-01bc8df63280
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41a71a69c916bf2fff30b2dee8784d5d9997436b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: efd4b29e6a4875611603087a1a2c0942c3e571b3
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62896352"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727988"
 ---
 # <a name="addmessage"></a>AddMessage
 Přidá vlastní zprávu do *HUD* diagnostiky grafiky (zobrazení záhlaví).

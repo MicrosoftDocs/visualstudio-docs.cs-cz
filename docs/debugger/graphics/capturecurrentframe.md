@@ -1,5 +1,7 @@
 ---
 title: CaptureCurrentFrame | Microsoft Docs
+description: Pomocí metody CaptureCurrentFrame třídy VsgDbg Zachyťte zbytek aktuálního rámce do souboru protokolu grafiky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 4509311d-6fe2-4b65-9b4a-ff0522585d6a
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b9967d776845088e707035c7b1c56855ac80af82
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 793d86ac7d23fa209560222415dce50f4e5ac508
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72736139"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727941"
 ---
 # <a name="capturecurrentframe"></a>CaptureCurrentFrame
 Zachycuje zbytek aktuálního rámce do souboru protokolu grafiky.

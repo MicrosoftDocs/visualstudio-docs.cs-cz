@@ -1,5 +1,7 @@
 ---
 title: CV_call_e | Microsoft Docs
+description: Získejte referenční informace o typu výčtu CV_call_e, který určuje konvenci volání funkce v sadě SDK pro přístup k rozhraní ladění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: afab1aef58616bfa925fd9f37aacf195eb569c96
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 521d5640f001fa0bc190e1869a6568328e864f5a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462139"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728620"
 ---
 # <a name="cv_call_e"></a>CV_call_e
 Určuje konvenci volání funkce.

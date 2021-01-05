@@ -7,12 +7,12 @@ ms.date: 06/25/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
 ms.topic: troubleshooting
-ms.openlocfilehash: d2ba7f5d044b82c44d719b251a7d803212cf7b07
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: b9aa9b718ad4618502a58185c27333d689c74300
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860563"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729376"
 ---
 # <a name="connecting-to-team-foundation-version-control"></a>Připojování k Správa verzí Team Foundation
 
@@ -21,7 +21,7 @@ ms.locfileid: "91860563"
 >
 > Pokud jste dříve používali verzi Preview rozšíření TFVC pro Visual Studio pro Mac, při upgradu na sadu Visual Studio 2019 pro Mac už není podporována.
 
-Azure Repos poskytuje dva modely správy verzí: [Git](/azure/devops/repos/git/?view=azure-devops), distribuovaný systém správy verzí a [Správa verzí Team Foundation](/azure/devops/repos/tfvc/index?view=azure-devops) (TFVC), centralizovaný systém správy verzí.
+Azure Repos poskytuje dva modely správy verzí: [Git](/azure/devops/repos/git/?view=azure-devops&preserve-view=true), distribuovaný systém správy verzí a [Správa verzí Team Foundation](/azure/devops/repos/tfvc/index?view=azure-devops&preserve-view=true) (TFVC), centralizovaný systém správy verzí.
 
 Visual Studio pro Mac poskytuje úplnou podporu úložišť Git, ale vyžaduje některá alternativní řešení pro práci s TFVC. Pokud dnes používáte TFVC pro řízení verzí, tady je několik řešení, která můžete použít pro přístup ke zdrojovému kódu hostovanému v TFVC:
 
@@ -69,7 +69,7 @@ Nejjednodušším řešením je **použití HomeBrew**, což je správce balíč
 
 Po instalaci TEE-CLC můžete spustit příkaz `tf eula` a zobrazit a přijmout licenční smlouvu pro klienta.
 
-Nakonec, pokud chcete ověřit své prostředí TFS nebo Azure DevOps, musíte na serveru vytvořit osobní přístupový token. Přečtěte si další informace o [ověřování pomocí tokenů osobních přístupů](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops). Při vytváření osobního přístupového tokenu pro použití s TFVC se ujistěte, že při konfiguraci tokenu zadáte úplný přístup.
+Nakonec, pokud chcete ověřit své prostředí TFS nebo Azure DevOps, musíte na serveru vytvořit osobní přístupový token. Přečtěte si další informace o [ověřování pomocí tokenů osobních přístupů](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops&preserve-view=true). Při vytváření osobního přístupového tokenu pro použití s TFVC se ujistěte, že při konfiguraci tokenu zadáte úplný přístup.
 
 ### <a name="using-the-tee-clc-to-connect-to-your-repo"></a>Připojení k úložišti pomocí TEE-CLC
 
@@ -247,11 +247,11 @@ Pokud chcete použít základní ověřování, je nutné povolit **alternativn�
 
 2. Na panelu nástrojů organizace vyberte ikonu ozubeného kolečka a vyberte **zásady**:
 
-    ![Vybraná možnost nastavení zásad](media/tfvc-auth2.png)
+    ![Snímek panelu nástrojů organizace Azure DevOps se zvolenou ikonou ozubeného kolečka a vybranou zásadou v rozevírací nabídce](media/tfvc-auth2.png)
 
 3. Zkontrolujte nastavení připojení aplikace. Tato nastavení změňte na základě zásad zabezpečení:
 
-    ![Vybraná možnost nastavení zásad](media/tfvc-auth.png)
+    ![Snímek obrazovky s nastavením v Azure DevOps Services se zobrazením nastavení zásad připojení k aplikacím.](media/tfvc-auth.png)
 
 #### <a name="i-do-not-see-anything-in-tfvc"></a>V TFVC se mi nezobrazuje žádný
 

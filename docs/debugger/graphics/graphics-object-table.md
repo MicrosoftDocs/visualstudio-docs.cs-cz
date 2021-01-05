@@ -1,5 +1,7 @@
 ---
 title: Tabulka objektů grafiky | Microsoft Docs
+description: Přečtěte si o tabulce objekt grafiky, která v analýze grafiky sady Visual Studio pomáhá pochopit objekty Direct3D, které podporují rám hry nebo aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea80420b2146bd8c604a95d71012009dcb940ef5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7e746d37edaca87abfca42f315a65a470369e7e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735438"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727577"
 ---
 # <a name="graphics-object-table"></a>Tabulka grafických objektů
 Tabulka objekt grafiky v analýze grafiky sady Visual Studio pomáhá pochopit objekty Direct3D, které podporují rámec vaší hry nebo aplikace.
@@ -31,21 +33,21 @@ Tabulka objekt grafiky v analýze grafiky sady Visual Studio pomáhá pochopit o
 
  Tabulka objektů podporuje kopírování a vkládání, takže můžete použít jiný nástroj, například Microsoft Excel – k prohlédnutí jeho obsahu.
 
- Kromě toho můžete pomocí rozevíracího seznamu **typ** v levém horním rohu přepnout zobrazování objektů typu **vyrovnávací paměti**, **shaderů** nebo **textur**nebo všechny tyto položky najednou.  Můžete také použít vyhledávací pole v pravém horním rohu a vyhledat konkrétní řádky napříč všemi zobrazenými daty.  Můžete například vyhledat *D32_FLOAT* a najít všechny instance objektů tohoto formátu v seznamu.
+ Kromě toho můžete pomocí rozevíracího seznamu **typ** v levém horním rohu přepnout zobrazování objektů typu **vyrovnávací paměti**, **shaderů** nebo **textur** nebo všechny tyto položky najednou.  Můžete také použít vyhledávací pole v pravém horním rohu a vyhledat konkrétní řádky napříč všemi zobrazenými daty.  Můžete například vyhledat *D32_FLOAT* a najít všechny instance objektů tohoto formátu v seznamu.
 
 ### <a name="graphics-object-table-format"></a>Formát tabulky objektů grafiky
  Tabulka objektů zobrazuje objekty a prostředky Direct3D, které podporují rámec přidružený k vybrané události – například stavové objekty, vyrovnávací paměti, shadery, textury a další prostředky. Objekty, které byly vytvořeny v předchozím snímku, ale nejsou použity během zachyceného rámce, jsou vynechány v tabulce objektů. Objekty, které byly zničeny předchozími událostmi během zachyceného rámce, jsou v následných událostech vynechány. Objekty, které nejsou nastavené na D3D10Device nebo D3D11DeviceContext, se zobrazují jako šedý text. Objekty se zobrazí ve formátu tabulky.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Identifikátor**|ID objektu.|
-|**Name**|Informace specifické pro aplikaci, které byly nastaveny u objektu pomocí funkce Direct3D `SetPrivateData` – obvykle k poskytnutí dalších identifikačních informací o objektu.|
+|**RID**|ID objektu.|
+|**Název**|Informace specifické pro aplikaci, které byly nastaveny u objektu pomocí funkce Direct3D `SetPrivateData` – obvykle k poskytnutí dalších identifikačních informací o objektu.|
 |**Typ**|Typ objektu.|
 |**Aktivní**|Zobrazí "*" pro objekt, který byl nastaven na D3D10Device nebo D3D11DeviceContext během zachyceného snímku.<br /><br /> To odpovídá objektům, které se zobrazují jako šedý text, ale poskytuje položku sloupce, kterou můžete použít k tomu, abyste mohli seřadit tabulku objektů.|
 |**Velikost**|Velikost objektu v bajtech|
 |**Formát**|Formát objektu Například formát objektu textury nebo model shaderu objektu shader.|
-|**Width (Šířka)**|Šířka objektu textury. Nevztahuje se na jiné typy objektů.|
-|**Height (Výška)**|Výška objektu textury. Nevztahuje se na jiné typy objektů.|
+|**Délk**|Šířka objektu textury. Nevztahuje se na jiné typy objektů.|
+|**Výška**|Výška objektu textury. Nevztahuje se na jiné typy objektů.|
 |**Úrovní**|Hloubka 3D objektu textury. Pokud textura není 3-D, hodnota je 0. Nevztahuje se na jiné typy objektů.|
 |**MIPS**|Počet úrovní MIP, které má objekt textury. Nevztahuje se na jiné typy objektů.|
 |**ArraySize**|Počet textur v poli textury. Rozsah je od 1 do horní meze definované aktuální úrovní funkce. Pro mapu krychle je tato hodnota 6 časů počtu mapování krychle v poli.|

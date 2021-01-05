@@ -1,5 +1,7 @@
 ---
 title: Určení obslužných rutin souborů pro přípony názvů souborů | Microsoft Docs
+description: Zjistěte, jak určit, která aplikace zpracovává příponu souboru v sadě Visual Studio SDK pomocí OpenWithList a OpenWithProgids.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af195aea09c91696843c6be42c20053bb8c095a2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 421244cd88af43e7602298e7384a632c8aa51833
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699757"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715597"
 ---
 # <a name="specifying-file-handlers-for-file-name-extensions"></a>Určení popisovačů souborů pro přípony názvů souborů
 Existuje několik způsobů, jak určit aplikaci, která zpracovává soubor s konkrétní příponou souboru. Příkazy OpenWithList a OpenWithProgids jsou dva způsoby, jak určit obslužné rutiny souborů v položce registru pro příponu souboru.
@@ -34,7 +36,7 @@ HKEY_CLASSES_ROOT\
 ```
 
 > [!NOTE]
-> Klíče určující aplikace jsou ze seznamu v části HKEY_CLASSES_ROOT \Applications.
+> Klíče určující aplikace jsou ze seznamu v části HKEY_CLASSES_ROOT\Applications.
 
  Přidáním klíče OpenWithList deklarujete, že aplikace podporuje příponu souboru i v případě, že převezme vlastnictví rozšíření jiná aplikace. Může to být budoucí verze vaší aplikace nebo jiné aplikace.
 
@@ -52,7 +54,7 @@ HKEY_CLASSES_ROOT\
 > [!NOTE]
 > `OpenWithProgids`Klíč je podporován pouze v systému Windows XP. Protože jiné operační systémy tento klíč ignorují, nepoužívejte ho jako jedinou registraci obslužných rutin souborů. Tento klíč použijte k zajištění lepšího uživatelského prostředí v systému Windows XP.
 
- Přidejte požadované identifikátory ProgID jako hodnoty typu REG_NONE. Následující kód poskytuje příklad registrace identifikátorů ProgID pro příponu souboru (.* EXT*).
+ Přidejte požadované identifikátory ProgID jako hodnoty typu REG_NONE. Následující kód poskytuje příklad registrace identifikátorů ProgID pro příponu souboru (.*EXT*).
 
 ```
 HKEY_CLASSES_ROOT\
@@ -63,7 +65,7 @@ HKEY_CLASSES_ROOT\
          otherprogid   REG_NONE (zero-length binary value)
 ```
 
- Identifikátor ProgID zadaný jako výchozí hodnota pro příponu souboru je výchozí obslužná rutina souboru. Pokud změníte ProgID pro příponu souboru, která byla dodávána s předchozí verzí nástroje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nebo kterou lze převzít přes jiné aplikace, je nutné `OpenWithProgids` klíč zaregistrovat pro příponu souboru a zadat nový identifikátor ProgID v seznamu spolu se starými identifikátory ProgID, které podporujete. Příklad:
+ Identifikátor ProgID zadaný jako výchozí hodnota pro příponu souboru je výchozí obslužná rutina souboru. Pokud změníte ProgID pro příponu souboru, která byla dodávána s předchozí verzí nástroje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nebo kterou lze převzít přes jiné aplikace, je nutné `OpenWithProgids` klíč zaregistrovat pro příponu souboru a zadat nový identifikátor ProgID v seznamu spolu se starými identifikátory ProgID, které podporujete. Například:
 
 ```
 HKEY_CLASSES_ROOT\

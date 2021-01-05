@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 32f6535e92f41d8030b6e060960940339da91fc9
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: de7065ebdf5426077418e50d2c03118de9f9d68f
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92298218"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729298"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Ladění aplikací v místním kontejneru Docker
 
@@ -62,7 +62,7 @@ Chcete-li rychle iterovat změny, můžete aplikaci spustit v kontejneru. Pak m�
 
 1. Ujistěte se, že je Docker nastavený tak, aby používal typ kontejneru (Linux nebo Windows), který používáte. Pravým tlačítkem myši klikněte na ikonu Docker na hlavním panelu a vyberte možnost **Přepnout na kontejnery Linux** nebo podle potřeby **Přepnout na kontejnery Windows** .
 
-1. (Jenom .NET Core 3 a novější) Úprava kódu a aktualizace běžící lokality, jak je popsáno v této části, nejsou povoleny ve výchozích šablonách v rozhraní .NET Core >= 3,0. Pokud ho chcete povolit, přidejte balíček NuGet [Microsoft. AspNetCore. Mvc. Razor. RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/). V *Startup.cs*přidejte volání metody rozšíření `IMvcBuilder.AddRazorRuntimeCompilation` do kódu v `ConfigureServices` metodě. Tuto možnost potřebujete jenom v režimu ladění, proto ho zakódovat takto:
+1. (Jenom .NET Core 3 a novější) Úprava kódu a aktualizace běžící lokality, jak je popsáno v této části, nejsou povoleny ve výchozích šablonách v rozhraní .NET Core >= 3,0. Pokud ho chcete povolit, přidejte balíček NuGet [Microsoft. AspNetCore. Mvc. Razor. RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/). V *Startup.cs* přidejte volání metody rozšíření `IMvcBuilder.AddRazorRuntimeCompilation` do kódu v `ConfigureServices` metodě. Tuto možnost potřebujete jenom v režimu ladění, proto ho zakódovat takto:
 
     ```csharp
     public IWebHostEnvironment Env { get; set; }
@@ -120,7 +120,7 @@ Vaše změny byly provedeny!
 Změny se často vyžadují ještě další kontroly. Pro tuto úlohu můžete použít funkce ladění sady Visual Studio.
 
 1. V aplikaci Visual Studio otevřete *index.cshtml.cs*.
-2. Obsah metody nahraďte `OnGet` následujícím kódem:
+2. Obsah metody `OnGet` nahraďte následujícím kódem:
 
    ```csharp
        ViewData["Message"] = "Your application description page from within a container";
@@ -130,7 +130,7 @@ Změny se často vyžadují ještě další kontroly. Pro tuto úlohu můžete p
 4. Chcete-li spustit ladění a stisknout zarážku, stiskněte klávesu F5.
 5. Přepněte do sady Visual Studio, abyste zobrazili zarážku. Zkontrolujte hodnoty.
 
-   ![Bodu](media/edit-and-refresh/breakpoint.png)
+   ![Snímek obrazovky zobrazující část kódu pro Index.cshtml.cs v sadě Visual Studio se zarážkou nastavenou na levou stranu kódu, který je zvýrazněný žlutě.](media/edit-and-refresh/breakpoint.png)
 
 ## <a name="create-a-net-framework-console-app"></a>Vytvoření konzolové aplikace .NET Framework
 
@@ -142,7 +142,7 @@ Pokud používáte projekty konzolových aplikací .NET Framework, možnost při
 ### <a name="debug-with-breakpoints"></a>Ladění pomocí zarážek
 
 1. V Průzkumník řešení otevřete *program.cs*.
-2. Obsah metody nahraďte `Main` následujícím kódem:
+2. Obsah metody `Main` nahraďte následujícím kódem:
 
    ```csharp
        System.Console.WriteLine("Hello, world!");
@@ -152,7 +152,7 @@ Pokud používáte projekty konzolových aplikací .NET Framework, možnost při
 4. Stisknutím klávesy F5 spusťte ladění a stiskněte zarážku.
 5. Přepněte do sady Visual Studio, abyste viděli zarážku a zkontrolovali hodnoty.
 
-   ![Bodu](media/edit-and-refresh/breakpoint-console.png)
+   ![Snímek obrazovky okna Code pro Program.cs v sadě Visual Studio se zarážkou nastavenou nalevo od čárového kódu, který je zvýrazněný žlutě.](media/edit-and-refresh/breakpoint-console.png)
 
 ## <a name="container-reuse"></a>Opakované použití kontejneru
 

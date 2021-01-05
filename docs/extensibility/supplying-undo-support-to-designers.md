@@ -1,5 +1,7 @@
 ---
 title: Poskytnutí podpory pro vrácení zpět pro návrháře | Microsoft Docs
+description: Přečtěte si, jak poskytnout podporu pro vrácení zpět v návrhářích, a to buď automaticky, nebo pomocí funkcí v sadě Visual Studio SDK.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0580f974c362a71c3e400946f2ad34f565ad1232
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4108e259fb0a2e60c2719df8a7fb76f273634799
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699677"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715572"
 ---
 # <a name="supply-undo-support-to-designers"></a>Poskytnutí podpory pro vrácení zpět návrhářům
 
@@ -29,7 +31,7 @@ Implementace návrháře, které musí poskytovat podporu pro funkci vrácení z
 
 - Zadávejte trvalost a podporu CodeDOM pomocí implementace <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  <xref:System.ComponentModel.Design.IComponentChangeService> tříd a.
 
-Další informace o psaní návrháře pomocí .NET Framework najdete v tématu [prodloužení podpory v době návrhu](/previous-versions/37899azc(v=vs.140)).
+Další informace o psaní návrháře pomocí .NET Framework najdete v tématu věnovaném [podpoře podpory Design-Time](/previous-versions/37899azc(v=vs.140)).
 
 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]Poskytuje výchozí infrastrukturu pro vrácení zpět podle:
 
@@ -103,4 +105,4 @@ Návrháři implementující <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEn
 
 - <xref:System.ComponentModel.Design.UndoEngine>
 - <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>
-- [Prodloužená podpora při návrhu](/previous-versions/37899azc(v=vs.140))
+- [Rozšiřování podpory Design-Time](/previous-versions/37899azc(v=vs.140))

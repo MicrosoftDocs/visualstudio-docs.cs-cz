@@ -1,5 +1,7 @@
 ---
 title: Karta třída, dialogové okno Vlastnosti okna | Microsoft Docs
+description: Vyberte kartu třída v aplikaci Visual Studio, přesuňte fokus na okno zobrazení systému Windows, vyberte uzel okna a zvolte možnost Zobrazit > vlastnosti. zobrazí se dialogové okno Vlastnosti okna.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0917c9a038b42e6302ec1f1782f095ca397a92ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3bf37d9e5d672f0ecce262699fdd5d704cde9efe
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62565010"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729025"
 ---
 # <a name="class-tab-window-properties-dialog-box"></a>Karta Třída, dialogové okno vlastnosti okna
 Kartu **Třída** použijte k zobrazení informací o třídě vybraného okna. Chcete-li zobrazit [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md), přesuňte fokus do okna [zobrazení systému Windows](../debugger/windows-view.md) . Ve stromové struktuře vyberte libovolný uzel okna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .

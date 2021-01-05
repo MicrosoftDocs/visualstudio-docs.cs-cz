@@ -1,5 +1,7 @@
 ---
 title: 'Ladění ASP.NET: požadavky na systém | Microsoft Docs'
+description: Projděte si požadavky na software a zabezpečení pro ASP.NET místní ladění, ve kterém Visual Studio a webová aplikace běží na stejném počítači a vzdálené ladění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 78f947c7ab9fcc1031d457526240ecdd7e9119a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2002d6ccbbe8f2cd3e186c49aca7a846568eedb2
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745811"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729116"
 ---
 # <a name="aspnet-debugging-system-requirements"></a>ASP.NET Ladění: Systémové požadavky
 Toto téma popisuje požadavky na software a zabezpečení pro [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] scénáře ladění:
@@ -37,7 +39,7 @@ Toto téma popisuje požadavky na software a zabezpečení pro [!INCLUDE[vstecas
 ## <a name="security-requirements"></a>Požadavky na zabezpečení
  Pro vzdálené ladění musí být místní a vzdálené počítače v nastavení domény nebo v pracovní skupině.
 
- Chcete-li ladit [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces (hostovaný fondem aplikací), musíte mít oprávnění pro ladění tohoto procesu. Ve výchozím nastavení se [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace před IIS 6,0 spouštějí jako uživatel **ASPNET** . Ve službě IIS 6,0 a IIS 7,0 je výchozím účtem **síťové služby** . Pokud pracovní proces běží jako **ASPNET**nebo jako **Síťová služba**, musíte mít oprávnění správce, abyste ho mohli ladit.
+ Chcete-li ladit [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces (hostovaný fondem aplikací), musíte mít oprávnění pro ladění tohoto procesu. Ve výchozím nastavení se [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace před IIS 6,0 spouštějí jako uživatel **ASPNET** . Ve službě IIS 6,0 a IIS 7,0 je výchozím účtem **síťové služby** . Pokud pracovní proces běží jako **ASPNET** nebo jako **Síťová služba**, musíte mít oprávnění správce, abyste ho mohli ladit.
 
  > [!IMPORTANT]
  > Počínaje systémem Windows Server 2008 R2 doporučujeme použití [ApplicationPoolIdentity](/iis/manage/configuring-security/application-pool-identities) jako identity pro každý fond aplikací.

@@ -8,12 +8,12 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: f971237ecc829fcc4ab660263a1b66c701f86f62
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 5155c37a89f566841fc342bbd8213f5a38eb399d
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583954"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727564"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Instalace sady Visual Studio 2019 pro Mac
 
@@ -49,7 +49,7 @@ Pro sestavování aplikací Xamarin pro iOS nebo macOS budete také potřebovat:
 
 6. Zobrazí se seznam dostupných úloh. Vyberte komponenty, které chcete použít:
 
-    [![Zvolit volitelné funkce úlohy, které byste chtěli nainstalovat](media/install-selection.png)](media/install-selection.png#lightbox)
+    [![Snímek obrazovky s informacemi o tom, co chcete nainstalovat? "na obrazovce instalačního programu sady Visual Studio Mac se zobrazí seznam součástí, které jsou k dispozici pro instalaci.](media/install-selection.png)](media/install-selection.png#lightbox)
 
    Pokud nechcete instalovat všechny platformy, použijte Průvodce níže, který vám pomůže určit, které platformy se mají nainstalovat:
 
@@ -67,7 +67,7 @@ Pro sestavování aplikací Xamarin pro iOS nebo macOS budete také potřebovat:
 7. Po provedení výběru klikněte na tlačítko **nainstalovat** .
 8. Instalační program zobrazí průběh stahování a instalace Visual Studio pro Mac a vybraných úloh. Budete vyzváni k zadání hesla pro udělení oprávnění nutných k instalaci.:
 
-    [![Zvolit volitelné funkce úlohy, které byste chtěli nainstalovat](media/installation-progress.png)](media/installation-progress.png#lightbox)
+    [![Snímek obrazovky s instalačním programem sady Visual Studio pro Mac, který ukazuje obrazovku s průběhem instalace pro sadu .NET Developer Toolkit pro Mac.](media/installation-progress.png)](media/installation-progress.png#lightbox)
 
 9. Po nainstalování Visual Studio pro Mac vás vyzve k přizpůsobení instalace přihlášením a výběrem vazeb klíčů, které chcete použít:
 

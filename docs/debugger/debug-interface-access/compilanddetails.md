@@ -1,5 +1,7 @@
 ---
 title: CompilandDetails | Microsoft Docs
+description: Vyhledejte referenční informace o typu symbolu CompilandDetails (SymTagCompilandDetails) v rozhraní ladění sady Visual Studio pro přístup.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da102a8968bc3e29091f6b4b58ee6ef78c6c3fb3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04687eb58ecee2211f098c0f432afc28e0465305
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462251"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728779"
 ---
 # <a name="compilanddetails"></a>CompilandDetails
 Informace kompilantu jsou rozdělené mezi symboly `SymTagCompiland` značkou (nízká detail) a `SymTagCompilandDetails` značkou (s vysokou podrobnostcí). `SymTagCompilandDetails` poskytuje širokou informaci o kompilantu, která není k dispozici se `SymTagCompiland` symbolem.

@@ -10,18 +10,18 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.topic: how-to
-ms.openlocfilehash: 3280e63ae92a99cfa076b79e499a7b18952285c4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 30e9a62e8bf0364a76cbd43995cbb77c1a5bd0c4
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584032"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729415"
 ---
 # <a name="create-no-locblazor-web-apps"></a>Vytváření Blazor webových aplikací
 
 Tato příručka nabízí Úvod k vytvoření první Blazor webové aplikace. Podrobné pokyny najdete v tématu [Úvod do ASP.NET Core Blazor ](/aspnet/core/blazor/index).
 
-ASP.NET Core Blazor podporuje dvě různé možnosti hostování; Blazor WebAssembly (WASM) nebo Blazor Server. Visual Studio pro Mac podporuje oba modely hostování. Visual Studio pro Mac 8.4 + podporuje Blazor Server a Visual Studio pro Mac 8.6 a podporuje obě. Další informace o Blazor hostitelských modelech naleznete v tématu [ASP.NET Core Blazor modelech hostování ](/aspnet/core/blazor/hosting-models?view=aspnetcore-3.1). Podpora pro Blazor WebAssembly projekty ladění v Visual Studio pro Mac je k dispozici ve verzi Preview verze v 8.8 (k dispozici prostřednictvím kanálu aktualizace verze Preview v **aplikaci Visual Studio > vyhledat aktualizace...** ).
+ASP.NET Core Blazor podporuje dvě různé možnosti hostování; Blazor WebAssembly (WASM) nebo Blazor Server. Visual Studio pro Mac podporuje oba modely hostování. Visual Studio pro Mac 8.4 + podporuje Blazor Server a Visual Studio pro Mac 8.6 a podporuje obě. Další informace o Blazor hostitelských modelech naleznete v tématu [ASP.NET Core Blazor modelech hostování ](/aspnet/core/blazor/hosting-models?view=aspnetcore-3.1&preserve-view=true). Podpora pro Blazor WebAssembly projekty ladění v Visual Studio pro Mac je k dispozici ve verzi Preview verze v 8.8 (k dispozici prostřednictvím kanálu aktualizace verze Preview v **aplikaci Visual Studio > vyhledat aktualizace...** ).
 
 Co je to Blazor ? Blazor je rozhraní pro vytváření interaktivního webového uživatelského rozhraní na straně klienta s .NET, které nabízí následující výhody pro webové vývojáře:
 
@@ -33,11 +33,11 @@ Co je to Blazor ? Blazor je rozhraní pro vytváření interaktivního webového
 * Sestavte se na společné sadě jazyků, platforem a nástrojů, které jsou stabilní, funkce s bohatou funkcí a snadno použitelné.
 
 ## <a name="create-a-new-no-locblazor-webassembly-project"></a>Vytvořit nový Blazor WebAssembly projekt
-1. V **okně Start**vyberte **Nový** a vytvořte nový projekt:
+1. V **okně Start** vyberte **Nový** a vytvořte nový projekt:
 
    ![Visual Studio pro Mac okno Start s zvýrazněným novým výběrem](media/blazor-new-project.png)
 
-1. V dialogovém okně **Nový projekt** vyberte možnost aplikace **.NET Core** > **App** > ** Blazor WebAssembly ** a vyberte možnost **Další**: ![ Zvolte šablonu pro dialogové okno Nový projekt s příkazem::: No-Loc (Blazor)::: Server App Template Selected.](media/blazor-wasm-project-template.png)
+1. V dialogovém okně **Nový projekt** vyberte aplikace **.NET Core** > **App** > **Blazor WebAssembly** a pak klikněte na tlačítko **Další**: ![ snímek obrazovky dialogového okna Nový projekt s::: No-Loc (Blazor WebAssembly)::: aplikace zvýrazněná v podokně aplikace v části ASP.NET Core a tlačítkem Další.](media/blazor-wasm-project-template.png)
 
 1. Jako cílovou architekturu vyberte .NET Core 3,1 a pak vyberte **Další**. 
    ![Nakonfigurujte nové dialogové okno::: No-Loc (Blazor WebAssembly)::: App zobrazené s cílovým rozhraním, které je vybrané pro .NET Core 3,1.](media/blazor-wasm-select-target-framework.png)
@@ -47,7 +47,7 @@ Co je to Blazor ? Blazor je rozhraní pro vytváření interaktivního webového
 
    Visual Studio pro Mac otevře projekt v okně rozložení kódu.
 
-1. Pro spuštění aplikace vyberte **Spustit**spustit  >  **bez ladění** .
+1. Pro spuštění aplikace vyberte **Spustit** spustit  >  **bez ladění** .
 
    Visual Studio spustí [Kestrel](/aspnet/core/fundamentals/servers/kestrel), otevře prohlížeč `https://localhost:5001` a zobrazí vaši Blazor webovou aplikaci.
 
@@ -55,10 +55,10 @@ Co je to Blazor ? Blazor je rozhraní pro vytváření interaktivního webového
 
 ## <a name="creating-a-new-no-locblazor-server-project"></a>Vytvoření nového Blazor projektu serveru
 
-1. V **okně Start**vyberte **Nový** a vytvořte nový projekt:
+1. V **okně Start** vyberte **Nový** a vytvořte nový projekt:
 
    ![Visual Studio pro Mac okno Start s zvýrazněným novým výběrem](media/blazor-new-project.png)
-1. V dialogovém okně **Nový projekt** vyberte aplikace **.NET Core** > **App** > ** Blazor Server App** a vyberte **Další**: ![ Zvolte šablonu pro dialog Nový projekt::: No-Loc (Blazor)::: Server App Template Selected.](media/blazor-project-template.png)
+1. V dialogovém okně **Nový projekt** vyberte aplikace **.NET Core** > **App** > **Blazor Server App** a vyberte **Další**: ![ snímek obrazovky dialogového okna Nový projekt s::: No-Loc (Blazor)::: Serverová aplikace zvýrazněná v podokně aplikace v části ASP.NET Core a tlačítkem Další.](media/blazor-project-template.png)
 
 1. Jako cílovou architekturu vyberte .NET Core 3,1 a pak vyberte **Další**. 
    ![Nakonfigurujte nové dialogová okna aplikace::: No-Loc (Blazor)::: Serverová aplikace zobrazená s cílovým rozhraním, které je vybrané pro .NET Core 3,1.](media/blazor-select-target-framework.png)
@@ -67,7 +67,7 @@ Co je to Blazor ? Blazor je rozhraní pro vytváření interaktivního webového
    ![Při zadávání názvu projektu se zobrazí dialogové okno Nová aplikace::: No-Loc (Blazor)::: Server App.](media/blazor-name-project.png)
 
    Visual Studio pro Mac otevře projekt v okně rozložení kódu.
-1. Pro spuštění aplikace vyberte **Spustit**spustit  >  **bez ladění** .
+1. Pro spuštění aplikace vyberte **Spustit** spustit  >  **bez ladění** .
 
    Visual Studio spustí [Kestrel](/aspnet/core/fundamentals/servers/kestrel), otevře prohlížeč `https://localhost:5001` a zobrazí vaši Blazor webovou aplikaci.
 

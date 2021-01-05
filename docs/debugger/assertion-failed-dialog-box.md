@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno kontrolního seznamu se nezdařilo | Microsoft Docs
+description: Přečtěte si o neúspěšném dialogovém okně kontrolního výrazu, což je dialogové okno, se kterým se můžete setkat v uživatelském rozhraní ladění sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,19 +22,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb42067bb4c88777a6c25ace71f53b9d9b3aa36b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: acc8f5abaa0c839232bbcedc63d24387444bd749
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745771"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729077"
 ---
 # <a name="assertion-failed-dialog-box"></a>Dialogové okno Kontrolní výraz je neplatný
 Příkaz kontrolního výrazu Určuje podmínku, kterou očekáváte, že v určitém místě v programu bude platit hodnota true. Pokud tato podmínka nedrží hodnotu true, kontrolní výraz se nezdařil, provádění programu je přerušeno a toto dialogové okno se zobrazí.
 
 |Klikněte na|Záměr|
 |-----------|--------|
-|Retry|Ladit kontrolní výraz nebo získat nápovědu k kontrolním výrazům.|
+|Zkusit znovu|Ladit kontrolní výraz nebo získat nápovědu k kontrolním výrazům.|
 |Ignorovat|Ignorujte kontrolní výraz a pokračujte v běhu programu.|
 |Přerušení|Zastaví provádění programu a ukončí relaci ladění.|
 

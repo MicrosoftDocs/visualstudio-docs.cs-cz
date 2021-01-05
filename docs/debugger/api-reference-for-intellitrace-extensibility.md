@@ -1,5 +1,7 @@
 ---
 title: Reference k rozhraní API pro rozšiřitelnost IntelliTrace | Microsoft Docs
+description: Přečtěte si o rozhraních API pro rozšiřitelnost IntelliTrace v aplikaci Visual Studio, které můžete použít ke čtení a dekódování souborů. iTrace v aplikacích.
+ms.custom: SEO-VS-2020
 ms.date: 11/07/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fb5044059fa005c1d67b3b7055a294bb22e124e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 438fd02c91ab8aad6a6e6ce4214a655083911e61
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62564291"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729103"
 ---
 # <a name="api-reference-for-intellitrace-extensibility"></a>Reference k rozhraní API pro rozšiřitelnost IntelliTrace
 

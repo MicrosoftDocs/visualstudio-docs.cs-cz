@@ -1,5 +1,7 @@
 ---
 title: Dokument protokolu grafiky | Microsoft Docs
+description: Porozumět dokumentu protokolu grafiky v aplikaci Visual Studio, který zaznamenává události grafiky, k nimž došlo v době, kdy byla aplikace spuštěna v relaci diagnostiky grafiky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d9bdfdb23d199c50b8d7ec6520964043dee8aa6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38dc7452493ebcd39bee5ee55c59fc70e0a6493c
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735521"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727655"
 ---
 # <a name="graphics-log-document"></a>Dokument grafických protokolů
 Dokument protokolu grafiky je záznam událostí grafiky, ke kterým došlo v době, kdy byla aplikace spuštěna v relaci diagnostiky grafiky. Po nahrání můžete prostudovat Analyzátor grafiky sady Visual Studio přihlášení a diagnostikovat problémy s vykreslováním a výkonem.
@@ -33,7 +35,7 @@ Dokument protokolu grafiky je záznam událostí grafiky, ke kterým došlo v do
 
 #### <a name="to-inspect-a-frame"></a>Kontrola rámce
 
-- V **seznamu snímků**vyberte rámec, který chcete zkontrolovat. Výstup cíle vykreslování v horní části dokumentu protokolu grafiky je aktualizován tak, aby zobrazoval vybraný snímek.
+- V **seznamu snímků** vyberte rámec, který chcete zkontrolovat. Výstup cíle vykreslování v horní části dokumentu protokolu grafiky je aktualizován tak, aby zobrazoval vybraný snímek.
 
 #### <a name="to-inspect-a-pixel"></a>Kontrola pixelu
 
@@ -67,7 +69,7 @@ Dokument protokolu grafiky je záznam událostí grafiky, ke kterým došlo v do
 |**Zobrazit paměť**|Velikost paměti, která je nainstalovaná na grafickém adaptéru.|
 |**Driver Name**|Název ovladače grafického adaptéru.|
 |**Verze ovladače**|Verze ovladače grafického adaptéru.|
-|**Name**|Název grafického adaptéru.|
+|**Název**|Název grafického adaptéru.|
 
  **Experimentovat soubor** Obsahuje seznam informací o souboru experimentu, který je přidružen k relaci zachycení.
 
@@ -81,7 +83,7 @@ Dokument protokolu grafiky je záznam událostí grafiky, ke kterým došlo v do
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Paměť**|Velikost paměti, která je nainstalována v počítači.|
+|**Memory (Paměť)**|Velikost paměti, která je nainstalována v počítači.|
 |**Architektura operačního systému**|Cílová architektura procesoru operačního systému.|
 |**Verze operačního systému**|Verze operačního systému.|
 |**Procesor**|Procesor, který je nainstalován v počítači.|

@@ -1,5 +1,7 @@
 ---
 title: Basictype – | Microsoft Docs
+description: Vyhledejte referenční informace o výčtu Basictype –, který určuje základní typ symbolu v sadě Visual Studio Debug Interface Access SDK.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b7d9df59d5a3075bf63d619a03e8fe31da6991a1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 27fd166b094f74cfbf9b6a37a87804031dedcbc7
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462279"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728874"
 ---
 # <a name="basictype"></a>BasicType
 Určuje základní typ symbolu.

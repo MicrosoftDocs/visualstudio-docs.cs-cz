@@ -13,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96ef956980b08e688970ad0a00d7d1a0804da7c3
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: b84f638876270658be2f08a7e375540f0329a1d6
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363117"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729337"
 ---
 # <a name="customizing-element-creation-and-movement"></a>Přizpůsobení vytvoření a přesunutí elementu
 
@@ -40,7 +40,7 @@ I když se může stát, že se operace vytvoření liší od operací kopírov�
 
 Zodpovědnost za EMD je rozhodování o tom, jakým způsobem by měl být objekt nebo skupina objektů sloučen do konkrétního umístění v modelu. Konkrétně rozhoduje o tom, jaké relace by se měly vytvořit tak, aby sloučily skupinu do modelu. Můžete ho také přizpůsobit pro nastavení vlastností a vytváření dalších objektů.
 
-![EMD&#95;sloučení DSL&#45;](../modeling/media/dsl-emd_merge.png)
+![Diagram znázorňující před a po zobrazení stromové struktury prvků a jejich referenčních vztahů, pokud E M D Určuje, jak je přidán nový prvek.](../modeling/media/dsl-emd_merge.png)
 
 EMD se generuje automaticky při definování vztahu vložení. Tato výchozí EMD vytvoří instanci vztahu, když uživatelé přidají k nadřazenému objektu nové podřízené instance. Můžete upravit tyto výchozí EMDs, například přidáním vlastního kódu.
 
@@ -50,7 +50,7 @@ Do definice DSL můžete také přidat vlastní EMDs, aby uživatelé mohli pře
 
 Do doménových tříd, doménových vztahů, obrazců, konektorů a diagramů můžete přidat direktivy sloučení elementů. Můžete je přidat nebo najít v Průzkumníkovi DSL pod přijímající doménovou třídou. Přijímací třída je doménová třída elementu, který je již v modelu, a na který bude nový nebo zkopírovaný prvek sloučen.
 
-![Podrobnosti&#95;DSL&#45;EMD](../modeling/media/dsl-emd_details.png)
+![Snímek obrazovky s Průzkumníkem DSL ukazující možnost přidání E-M s ExampleElement vybranými jako indexovací třídu a zaškrtnuté políčko platí pro podtřídy.](../modeling/media/dsl-emd_details.png)
 
 **Třída indexování** je doménová třída prvků, kterou lze sloučit do členů přijímací třídy. Instance podtříd třídy indexování budou také sloučeny tímto EMD, pokud není nastavena hodnota **použít na podtřídy** na false.
 
@@ -232,7 +232,7 @@ V kódu vlastního sloučení můžete definovat, co se stane, když uživatel p
 
 5. Zkontrolujte obsah **Dsl\Generated Files\DomainClasses.cs**. Vyhledejte metody pojmenované `MergeRelate` a prověřte jejich obsah. To vám pomůže psát vlastní verze.
 
-6. V novém souboru kódu napište částečnou třídu pro přijímací třídu a přepište `MergeRelate` metodu. Nezapomeňte zavolat základní metodu. Příklad:
+6. V novém souboru kódu napište částečnou třídu pro přijímací třídu a přepište `MergeRelate` metodu. Nezapomeňte zavolat základní metodu. Například:
 
     ```csharp
     partial class ExampleModel
@@ -318,7 +318,7 @@ V řešení modelu komponenty můžete vytvořit direktivu pro přeposílání. 
 
      Neměl by se zobrazovat nedostupný ukazatel a měli byste být schopni vyřadit nový **vstupní port** na stávajícím. Vyberte nový **vstupní port** a přetáhněte jej na jiný bod **součásti**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Přizpůsobení nástrojů a panelu nástrojů](../modeling/customizing-tools-and-the-toolbox.md)

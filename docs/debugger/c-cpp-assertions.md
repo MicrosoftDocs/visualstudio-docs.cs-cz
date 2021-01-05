@@ -1,5 +1,7 @@
 ---
 title: Kontrolní výrazy jazyka C/C++ | Microsoft Docs
+description: Přečtěte si, jak fungují kontrolní výrazy jazyka C/C++ v ladění sady Visual Studio. Kontrolní výraz určuje podmínku, kterou očekáváte, že bude platit v bodě v programu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -28,12 +30,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abea0f45609c74e02cd95d6c21bbe8879d46eea1
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 0b585ce001692ab5b4451acc8d2938741bfacd78
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600212"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729064"
 ---
 # <a name="cc-assertions"></a>Kontrolní výrazy jazyka C/C++
 Příkaz kontrolního výrazu Určuje podmínku, kterou očekáváte, že bude platit v bodě programu. Pokud tato podmínka není pravdivá, kontrolní výraz se nezdařil, provádění programu je přerušeno a zobrazí se [dialogové okno kontrolní výraz selhal](../debugger/assertion-failed-dialog-box.md) .

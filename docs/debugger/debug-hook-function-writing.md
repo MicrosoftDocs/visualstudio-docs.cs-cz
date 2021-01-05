@@ -1,5 +1,7 @@
 ---
 title: Zápis funkce vidlice ladění | Microsoft Docs
+description: Přečtěte si o řadě vlastních funkcí ladicího programu, které můžete napsat, abyste mohli vložit svůj kód do předdefinovaných bodů uvnitř normálního zpracování ladicího programu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 038c976380ff1e1f0a1a7c4c150fc462f6b1d1db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5e2f05005d0b43d526936bfbc8018739cb1ed88
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350716"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728934"
 ---
 # <a name="debug-hook-function-writing"></a>Zápis funkce háku ladění
 Tato část popisuje počet vlastních funkcí ladicího programu, které můžete psát, a to tak, že vložíte kód do některých předdefinovaných bodů uvnitř normálního zpracování ladicího programu.
@@ -42,4 +44,4 @@ Tato část popisuje počet vlastních funkcí ladicího programu, které může
 
 ## <a name="related-sections"></a>Související oddíly
 
-- [Techniky ladění CRT](../debugger/crt-debugging-techniques.md) – odkazy na techniky ladění pro běhovou knihovnu jazyka C, včetně použití knihovny ladění CRT, maker pro vytváření sestav, rozdílů mezi `malloc` a `_malloc_dbg` , zápisem funkcí vidlice ladění a haldy ladění CRT.
+- [Techniky ladění CRT](../debugger/crt-debugging-techniques.md) – odkazy na techniky ladění pro knihovnu C Run-Time Library, včetně použití knihovny ladění CRT, maker pro vytváření sestav, rozdílů mezi `malloc` a `_malloc_dbg` , zápisem funkcí ladicího programu a haldy ladění CRT.

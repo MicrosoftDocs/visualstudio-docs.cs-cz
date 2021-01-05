@@ -11,12 +11,12 @@ ms.topic: troubleshooting
 ms.workload: multiple
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: 31b9d8649abed0f9901aa872ff3939c25e3025b8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9535a7d88cb375d97867092eddf969095c327329
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235105"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729242"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Řešení potíží při vývoji v sadě Visual Studio pomocí Dockeru
 
@@ -24,22 +24,15 @@ Při práci s nástroji kontejneru sady Visual Studio může při sestavování 
 
 ## <a name="volume-sharing-is-not-enabled-enable-volume-sharing-in-the-docker-ce-for-windows-settings--linux-containers-only"></a>Sdílení svazků není povoleno. Povolit sdílení svazků v nastaveních Docker CE for Windows (jenom kontejnery Linux)
 
-Řešení tohoto problému:
+Sdílení souborů je potřeba spravovat jenom v případě, že používáte Hyper-V s Docker. Pokud používáte WSL 2, následující kroky nejsou nutné a možnost sdílení souborů nebude viditelná. Řešení tohoto problému:
 
 1. V oznamovací oblasti klikněte pravým tlačítkem na **Docker for Windows** a pak vyberte **Nastavení**.
-1. Vyberte **sdílené jednotky** a nasdílejte systémovou jednotku společně s jednotkou, ve které se nachází projekt.
+1. Vyberte **prostředky**  >  **sdílení souborů** a nasdílejte složku, ke které je potřeba mít přístup. Sdílení celé systémové jednotky je možné, ale nedoporučuje se.
 
-> [!NOTE]
-> Pokud se soubory zobrazují jako sdílené, možná budete muset kliknout na resetovat přihlašovací údaje... odkaz ve spodní části dialogového okna, aby bylo možné sdílení svazků znovu povolit. Chcete-li pokračovat po resetování přihlašovacích údajů, bude pravděpodobně nutné restartovat aplikaci Visual Studio.
-
-![sdílené jednotky](media/troubleshooting-docker-errors/shareddrives.png)
+    ![sdílené jednotky](media/troubleshooting-docker-errors/docker-settings-image.png)
 
 > [!TIP]
-> Verze sady Visual Studio novější než Visual Studio 2017 verze 15,6 se zobrazí výzva, když nejsou nakonfigurovány **sdílené jednotky** .
-
-### <a name="container-type"></a>Typ kontejneru
-
-Když do projektu přidáte podporu Docker, zvolíte buď kontejner Windows, nebo Linux. Hostitel Docker musí používat stejný typ kontejneru. Chcete-li změnit typ kontejneru v běžící instanci Docker, klikněte pravým tlačítkem myši na ikonu Docker panelu systému a vyberte možnost **Přepnout na kontejnery Windows...** nebo **Přepnout na kontejnery platformy Linux..**..
+> Verze sady Visual Studio vyšší než Visual Studio 2017 verze 15,6 se zobrazí výzva, když nejsou nakonfigurovány **sdílené jednotky** .
 
 ## <a name="unable-to-start-debugging"></a>Nejde spustit ladění
 
@@ -54,7 +47,7 @@ Zkuste provést stažení skriptu z části [vyčistit síťové hostitele konte
 
 ## <a name="mounts-denied"></a>Připojení byla zamítnuta.
 
-Při použití Docker pro macOS se může zobrazit chyba odkazování na složku/usr/local/share/dotnet/sdk/NuGetFallbackFolder. Přidat složku na kartu Sdílení souborů v Docker
+Při použití Docker pro macOS se může zobrazit chyba odkazování na složku/usr/local/share/dotnet/sdk/NuGetFallbackFolder. Přidejte složku do karty sdílení souborů v Docker.
 
 ## <a name="docker-users-group"></a>Skupina uživatelů Docker
 
@@ -68,7 +61,7 @@ Add yourself to the 'docker-users' group and then log out of Windows.
 Abyste mohli mít oprávnění k práci s kontejnery Docker, musíte být členem skupiny Docker-Users.  Pokud se chcete do skupiny ve Windows 10 přidat sami, postupujte takto:
 
 1. V nabídce Start otevřete položku **Správa počítače**.
-1. Rozbalte položku **místní uživatelé a skupiny**a klikněte na možnost **skupiny**.
+1. Rozbalte položku **místní uživatelé a skupiny** a klikněte na možnost **skupiny**.
 1. Vyhledejte skupinu **Docker-Users** , klikněte pravým tlačítkem myši a vyberte **Přidat do skupiny**.
 1. Přidejte svůj uživatelský účet nebo účty.
 1. Odhlaste se a znovu se přihlaste, aby se tyto změny projevily.
@@ -83,15 +76,29 @@ V PowerShellu použijte funkci [Add-LocalGroupMember](/powershell/module/microso
 
 ## <a name="low-disk-space"></a>Nedostatek místa na disku
 
-Ve výchozím nastavení Docker ukládá obrázky do složky *% Složka ProgramData%/Docker/* , která se obvykle nachází na systémové jednotce * C:\ProgramData\Docker \* . Pokud nechcete, aby obrázky zabíraly cenné místo na systémové jednotce, můžete změnit umístění složky s obrázkem.  Z ikony Docker na panelu úloh otevřete nastavení Docker, klikněte na **démon**a přepněte ze **základního** na **Upřesnit**. V podokně úpravy přidejte `graph` nastavení vlastnosti s hodnotou požadovaného umístění pro Image Docker:
+Ve výchozím nastavení Docker ukládá obrázky do složky *% Složka ProgramData%/Docker/* , která se obvykle nachází na systémové jednotce * C:\ProgramData\Docker \* . Pokud nechcete, aby obrázky zabíraly cenné místo na systémové jednotce, můžete změnit umístění složky s obrázkem. Postupujte následovně:
+
+ 1. Klikněte pravým tlačítkem na ikonu Docker na hlavním panelu a vyberte **Nastavení**.
+ 1. Vyberte **modul Docker**. 
+ 1. V podokně úpravy přidejte `graph` nastavení vlastnosti s hodnotou požadovaného umístění pro Image Docker:
 
 ```json
     "graph": "D:\\mypath\\images"
 ```
 
-![Snímek obrazovky s nastavením umístění bitové kopie Docker](media/troubleshooting-docker-errors/docker-settings-image-location.png)
+![Snímek obrazovky s sdílením souborů Docker](media/troubleshooting-docker-errors/docker-daemon-settings.png)
 
-Klikněte na **použít** a restartujte Docker. Tyto kroky upraví konfigurační soubor v umístění *% Složka ProgramData% \docker\config\daemon.jsna*. Dříve sestavené obrázky nejsou přesunuty.
+Klikněte na **použít & restartovat**. Tyto kroky upraví konfigurační soubor v umístění *% Složka ProgramData% \docker\config\daemon.jsna*. Dříve sestavené obrázky nejsou přesunuty.
+
+## <a name="container-type-mismatch"></a>Neshoda typu kontejneru
+
+Když do projektu přidáte podporu Docker, zvolíte buď kontejner Windows, nebo Linux. Pokud hostitel serveru Docker není nakonfigurován tak, aby spouštěl stejný typ kontejneru jako cíl projektu, pravděpodobně se zobrazí chyba podobná té:
+
+![Snímek obrazovky hostitele Docker a projektu nesouhlasí](media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png)
+
+Řešení tohoto problému:
+
+- Na hlavním panelu systému klikněte pravým tlačítkem na ikonu Docker for Windows a vyberte **Přepnout na kontejnery Windows...** nebo **Přepnout na kontejnery platformy Linux..**..
 
 ## <a name="microsoftdockertools-github-repo"></a>Úložiště GitHub pro Microsoft/DockerTools
 

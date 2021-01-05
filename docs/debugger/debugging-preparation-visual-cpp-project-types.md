@@ -1,6 +1,7 @@
 ---
 title: Příprava na ladění projektů C++ | Microsoft Docs
-ms.custom: seodec18
+description: Získejte informace o přípravě na ladění základních typů projektů vytvořených pomocí šablon projektů Visual C++ v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc663115e98d7553e03a186874d59b75eb68cb90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e399b28d3ddce07cae263550b536c21ad1db028
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916310"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728301"
 ---
 # <a name="debugging-preparation-c-project-types"></a>Příprava ladění: typy projektů C++
 Tato část popisuje, jak ladit základní typy projektů vytvořené pomocí [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] šablon projektů.
@@ -80,13 +81,13 @@ Tato část popisuje, jak ladit základní typy projektů vytvořené pomocí [!
 
 2. Kliknutím na uzel **Vlastnosti konfigurace** ho otevřete, pokud ještě není.
 
-3. Vyberte **Obecné**a nastavte hodnotu **výstupního** řádku na **ladit**.
+3. Vyberte **Obecné** a nastavte hodnotu **výstupního** řádku na **ladit**.
 
 4. Otevřete uzel **C/C++** a vyberte **Obecné**.
 
     V řádku **ladění** zadejte typ ladicích informací, které mají být generovány kompilátorem. Hodnoty, které můžete zvolit zahrnout **databázi programu (/Zi)** nebo **databáze programu pro upravit & pokračovat (/Zi)**
 
-5. Vyberte možnost **optimalizace**a v řádku **optimalizace** v rozevíracím seznamu vyberte možnost **zakázáno (/0d)** .
+5. Vyberte možnost **optimalizace** a v řádku **optimalizace** v rozevíracím seznamu vyberte možnost **zakázáno (/0d)** .
 
     Optimalizovaný kód je těžší ladit, protože vygenerované pokyny neodpovídají přímo vašemu zdrojovému kódu. Pokud zjistíte, že váš program obsahuje chybu, která se zobrazí pouze v optimalizovaném kódu, můžete toto nastavení zapnout, ale mějte na paměti, že kód zobrazený v okně zpětný překlad je vygenerován z optimalizovaného zdroje, který se nemusí shodovat s tím, co vidíte ve vašich zdrojových oknech. Funkce, jako je například krokování, budou zřejmě zobrazovat zarážky a bod provádění nesprávně.
 
@@ -101,7 +102,7 @@ Tato část popisuje, jak ladit základní typy projektů vytvořené pomocí [!
 
  Ladění tohoto typu aplikace v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je podobné jako u spravovaných aplikací model Windows Forms.
 
- Při vytváření projektu model Windows Forms se šablonou projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky vytvoří požadované nastavení pro ladění a vydání. V případě potřeby můžete tato nastavení změnit v dialogovém okně ** \<project name> stránky vlastností** . Další informace najdete v tématu [Konfigurace ladění a vydání](../debugger/how-to-set-debug-and-release-configurations.md).
+ Při vytváření projektu model Windows Forms se šablonou projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky vytvoří požadované nastavení pro ladění a vydání. V případě potřeby můžete tato nastavení změnit v dialogovém okně **\<project name> stránky vlastností** . Další informace najdete v tématu [Konfigurace ladění a vydání](../debugger/how-to-set-debug-and-release-configurations.md).
 
  Další informace naleznete v tématu [nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).
 

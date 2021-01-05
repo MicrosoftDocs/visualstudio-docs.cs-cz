@@ -1,5 +1,7 @@
 ---
 title: Funkce zavěšení bloků klienta | Microsoft Docs
+description: Zapište funkci zavěšení bloku klienta pro ověření nebo nahlášení obsahu dat uložených v blocích _CLIENT_BLOCK.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 881809dda7e8254f9d337b68f0c317eccfd9093d
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 720087e3c109c6dec4db06d993d0357dc1eddcd4
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600197"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729012"
 ---
 # <a name="client-block-hook-functions"></a>Funkce háku bloku klienta
 Pokud chcete ověřit nebo ohlásit obsah dat uložených v `_CLIENT_BLOCK` blocích, můžete napsat funkci specificky pro tento účel. Funkce, kterou napíšete, musí mít prototyp podobný následujícímu, jak je definováno v souboru Crtdbg. Y
@@ -48,6 +50,6 @@ typedef void (__cdecl *_CRT_DUMP_CLIENT)
 
 ## <a name="see-also"></a>Viz také
 
-- [Zápis funkce háku ladění](../debugger/debug-hook-function-writing.md)
+- [Zápis funkce zavěšení ladění](../debugger/debug-hook-function-writing.md)
 - [Ukázka crt_dbg2](/previous-versions/b31tft51(v=vs.100))
 - [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype)

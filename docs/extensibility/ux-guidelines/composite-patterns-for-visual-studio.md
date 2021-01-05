@@ -1,5 +1,7 @@
 ---
 title: Složené vzory pro Visual Studio | Microsoft Docs
+description: Přečtěte si o důležitých složených vzorech pro konzistenci v aplikaci Visual Studio. Složené vzory kombinují interakce a prvky návrhu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ebc8f4f6c17af54f4dfdcfc0d0d05c5da9d2d88b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 719ce0ac88761599fbed7da90643fd8a9d79db69
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88114073"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715818"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Složené vzory pro Visual Studio
 Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích. Mezi nejdůležitější složené vzory v aplikaci Visual Studio s ohledem na konzistenci patří:
@@ -310,7 +312,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
  **Oblast (box) výběr v aplikaci Visual Studio**
 
 #### <a name="text-selection-appearance"></a>Vzhled výběru textu
- Barvy používané pro aktivní a neaktivní výběr v editoru lze přizpůsobit. Chcete-li přizpůsobit vizuální vzhled editoru, může uživatel přejít na **nástroje > možnosti**a potom hledat v části **prostředí > písma a barvy > textový editor**.
+ Barvy používané pro aktivní a neaktivní výběr v editoru lze přizpůsobit. Chcete-li přizpůsobit vizuální vzhled editoru, může uživatel přejít na **nástroje > možnosti** a potom hledat v části **prostředí > písma a barvy > textový editor**.
 
 ### <a name="graphical-selection"></a>Grafický výběr
 

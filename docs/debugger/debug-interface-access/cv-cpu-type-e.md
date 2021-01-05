@@ -1,5 +1,7 @@
 ---
 title: CV_CPU_TYPE_e | Microsoft Docs
+description: Získejte referenční informace o typu výčtu CV_CPU_TYPE_e, který určuje cílový procesor v sadě SDK pro přístup k rozhraní ladění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82a482b570d3ed22d1b9dfe2ca3c8248a0185911
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44b076caffe4bc92bb62b63aa9d5d5e3dc464786
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462112"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728567"
 ---
 # <a name="cv_cpu_type_e"></a>CV_CPU_TYPE_e
 Určuje cílový procesor.

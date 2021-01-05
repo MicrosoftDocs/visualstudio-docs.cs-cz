@@ -7,12 +7,12 @@ ms.topic: how-to
 ms.date: 01/20/2020
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: 626666fc912fcff85fcfcc49425d59018778d1f6
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: fd876e86cefcd0ce50aab02de8e7f4cf37d3ab51
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742786"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729220"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>Jak zobrazit a diagnostikovat kontejnery a obrázky v aplikaci Visual Studio
 
@@ -25,11 +25,11 @@ Můžete zobrazit, co se chystá v kontejnerech, které hostují vaši aplikaci 
 
 ## <a name="view-information-about-your-containers"></a>Zobrazit informace o kontejnerech
 
-Okno **kontejnery** se automaticky otevře při spuštění kontejnerového projektu .NET. Chcete-li zobrazit kontejnery v aplikaci Visual Studio kdykoli, použijte **kombinaci kláves CTRL** + **Q** k aktivaci vyhledávacího pole aplikace Visual Studio a zadejte `Containers` a vyberte první položku. Můžete také otevřít okno **kontejnery** z hlavní nabídky. Použijte cestu nabídky k **zobrazení**  >  **jiných**  >  **kontejnerů**Windows.  
+Okno **kontejnery** se automaticky otevře při spuštění kontejnerového projektu .NET. Chcete-li zobrazit kontejnery v aplikaci Visual Studio kdykoli, použijte **kombinaci kláves CTRL** + **Q** k aktivaci vyhledávacího pole aplikace Visual Studio a zadejte `Containers` a vyberte první položku. Můžete také otevřít okno **kontejnery** z hlavní nabídky. Použijte cestu nabídky k **zobrazení**  >  **jiných**  >  **kontejnerů** Windows.  
 
-![Snímek obrazovky s kartou prostředí v okně kontejnery](media/view-and-diagnose-containers/container-window.png)
+![Snímek obrazovky okna kontejnery v aplikaci Visual Studio s kontejnerem vybraným v levém podokně a kartou prostředí vybranou v pravém podokně.](media/view-and-diagnose-containers/container-window.png)
 
-Na levé straně se zobrazí seznam kontejnerů na místním počítači. Kontejnery spojené s vaším řešením jsou uvedené v části **kontejnery řešení**. Napravo se zobrazí podokno s kartami pro **prostředí**, **porty**, **protokoly**a **soubory**.
+Na levé straně se zobrazí seznam kontejnerů na místním počítači. Kontejnery spojené s vaším řešením jsou uvedené v části **kontejnery řešení**. Napravo se zobrazí podokno s kartami pro **prostředí**, **porty**, **protokoly** a **soubory**.
 
 > [!TIP]
 > V aplikaci Visual Studio můžete snadno přizpůsobit, kde je ukotveno okno nástrojů **kontejnery** . Viz [přizpůsobení rozložení oken v aplikaci Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md). Ve výchozím nastavení je okno **kontejnery** ukotveno v okně **kukátka** při spuštění ladicího programu.
@@ -38,7 +38,7 @@ Na levé straně se zobrazí seznam kontejnerů na místním počítači. Kontej
 
 Karta **prostředí** zobrazuje proměnné prostředí v kontejneru. Pro kontejner vaší aplikace můžete tyto proměnné nastavit mnoha způsoby, například v souboru Dockerfile, v souboru. env nebo pomocí možnosti-e při spuštění kontejneru pomocí příkazu Docker.
 
-![Snímek obrazovky s kartou prostředí v okně kontejnery](media/view-and-diagnose-containers/containers-environment-vars.png)
+![Snímek obrazovky okna kontejnery v aplikaci Visual Studio zobrazující proměnné prostředí pro WebApplication11 kontejneru](media/view-and-diagnose-containers/containers-environment-vars.png)
 
 > [!NOTE]
 > Jakékoli změny proměnných prostředí se neprojeví v reálném čase. Proměnné prostředí na této kartě jsou také proměnné prostředí systému v kontejneru a neodrážejí proměnné uživatelského prostředí, které jsou místní pro aplikaci.
@@ -108,7 +108,7 @@ Chcete-li odebrat obrázek, klikněte pravým tlačítkem myši na obrázek v ov
 
 Další informace o nástrojích kontejnerů, které jsou dostupné v aplikaci Visual Studio, najdete v tématu [Přehled nástrojů kontejnerů](overview.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vývoj kontejnerů v aplikaci Visual Studio](./index.yml)
 

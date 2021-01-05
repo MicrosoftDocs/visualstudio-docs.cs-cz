@@ -1,5 +1,7 @@
 ---
 title: Konstanty (Debug Interface Access SDK) | Microsoft Docs
+description: Podívejte se na seznam řetězcové konstanty, které lze použít k identifikaci různých oddílů souboru PDB (program Debug Database) prostřednictvím sady SDK přístup k rozhraní ladění (DIA).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fa6037253141df1111ef3bc57fac9c718d826dc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 806eb9207fa60b7147d1e0d7df75871b23f8850d
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462237"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728752"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>Konstanty (Přístup k rozhraní ladění SDK)
 Tyto řetězcové konstanty lze použít k identifikaci různých oddílů souboru PDB (program Debug Database) prostřednictvím DIA SDK.

@@ -1,5 +1,7 @@
 ---
 title: Ladění LINQ | Microsoft Docs
+description: Integrovaný dotaz jazyka ladění (LINQ) v aplikaci Visual Studio. Zobrazení výsledků LINQ Pochopení rozdílů v chování při krokování do kódu LINQ.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 146519b33be19da1103aed958e42ec5ffaee8bd0
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 903ffb5d3187da3bda961caca42cf7436a816b6d
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509767"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728358"
 ---
 # <a name="debugging-linq"></a>Ladění LINQ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] podporuje ladění kódu LINQ (Language Integrated Query) s některými omezeními. Většina funkcí ladění funguje s příkazy LINQ, včetně krokování, nastavení zarážek a zobrazení výsledků v oknech ladicího programu. Toto téma popisuje hlavní omezení pro ladění jazyka LINQ.

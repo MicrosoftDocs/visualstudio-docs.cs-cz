@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3f3a5e97153997908a0360bc123fd1b88fb5c009
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8716e980581ffe1103adddbc3c776def1166ff94
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596837"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756601"
 ---
 # <a name="live-unit-testing-overview"></a>Přehled Live Unit Testing
 
@@ -26,7 +26,7 @@ Live Unit Testing určuje, zda vaše testování jednotek vhodně pokrývá vá�
 Máte-li řešení, které obsahuje jeden nebo více projektů testování částí, můžete povolit Live Unit Testing výběrem možnosti **test**  >  **Live Unit Testing**  >  **začít** v panelu nabídek nejvyšší úrovně v aplikaci Visual Studio.
 
 > [!NOTE]
-> Live Unit Testing je k dispozici pouze v edici Visual Studio Enterprise.
+> Live Unit Testing je k dispozici pouze v edici Visual Studio Enterprise a je podporován pouze v rozhraní .NET.
 
 Další informace o Live Unit Testing:
 

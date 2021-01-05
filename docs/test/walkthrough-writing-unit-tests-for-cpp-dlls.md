@@ -9,12 +9,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 178fef548bc52346a78c7f9e4607aad7b1c56f65
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 2d145e1383e8f6c0d7c25ae72232fdbe2a8d703d
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598403"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727538"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>Postupy: zápis testů jednotek pro knihovny DLL C++
 
@@ -328,7 +328,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů pomocí ![ tlačítka ustit&#95;parallelicon&#45;malého ](../test/media/ute_parallelicon-small.png) přepínacího tlačítka na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
+> Pokud jednotlivé testy neobsahují žádné závislosti, které brání v jejich spuštění v libovolném pořadí, zapněte paralelní spuštění testu pomocí ![ snímku obrazovky s přepínačem paralelního spuštění testu na panelu nástrojů Průzkumníka testů. Pokud je vybráno toto tlačítko, testy budou spuštěny paralelně.](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
 
 ::: moniker-end
 

@@ -1,5 +1,7 @@
 ---
 title: Ladění nativního kódu | Microsoft Docs
+description: Přečtěte si o běžných potížích s laděním a technikám vysoké úrovně pro nativní aplikace v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 04/11/2017
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f98b99a31d9215d661879aa7fa52d4b671024496
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4fee3044e4eaa1e7dd3549923082f9b843951b28
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738158"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728314"
 ---
 # <a name="debugging-native-code"></a>Ladění nativního kódu
 Oddíl popisuje některé běžné problémy s laděním a techniky pro nativní aplikace. Techniky popsané v této části jsou techniky na vysoké úrovni. Informace o mechanismu používání ladicího programu sady Visual Studio naleznete v tématu [první pohled na ladicí program](../debugger/debugger-feature-tour.md).
@@ -41,7 +43,7 @@ Oddíl popisuje některé běžné problémy s laděním a techniky pro nativní
 
  [Techniky ladění MFC](../debugger/mfc-debugging-techniques.md) Odkazuje na techniky ladění pro programy MFC, včetně: afxDebugBreak, makro TRACE, detekce nevracení paměti v prostředí MFC, kontrolní výrazy MFC a omezení velikosti sestavení ladění knihovny MFC.
 
- [Techniky ladění CRT](../debugger/crt-debugging-techniques.md) Odkazuje na techniky ladění pro knihovnu run-time jazyka C, včetně použití knihovny ladění CRT, maker pro vytváření sestav, rozdílů mezi zapisováním a _malloc_dbg, psaní funkcí zavěšení ladění a haldy ladění CRT.
+ [Techniky ladění CRT](../debugger/crt-debugging-techniques.md) Odkazuje na techniky ladění pro knihovnu C Run-Time, včetně použití knihovny ladění CRT, maker pro vytváření sestav, rozdílů mezi zapisováním a _malloc_dbg, psaní funkcí zavěšení ladění a haldy ladění CRT.
 
  [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md) Poskytuje odpovědi na nejčastější dotazy týkající se ladění programů C++.
 

@@ -1,5 +1,7 @@
 ---
 title: Analýza grafických snímků | Microsoft Docs
+description: Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio můžete analyzovat a optimalizovat výkon vykreslování vaší hry nebo aplikace Direct3D.
+ms.custom: SEO-VS-2020
 ms.date: 02/09/2017
 ms.topic: conceptual
 f1_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 943436a64f50523905a03ed2a87e91508d1b7471
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f87686290842e0bbc3c575b5c72e3d1eeb24f351
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911485"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727720"
 ---
 # <a name="graphics-frame-analysis"></a>Analýza grafických snímků
 Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio můžete analyzovat a optimalizovat výkon vykreslování vaší hry nebo aplikace Direct3D.
@@ -62,7 +64,7 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
 
 - Pokud variace v poloviční/Čtvrtine znázorňuje výrazné zvýšení výkonu, vaše textury pravděpodobně zabírají příliš mnoho paměti, spotřebují příliš velkou šířku pásma nebo neefektivně používají mezipaměť textury. Pokud tato varianta ve výkonu nezobrazuje žádnou změnu, můžete pravděpodobně použít větší, podrobnější textury, aniž byste museli platit náklady na výkon.
 
-  Když jsou k dispozici hardwarové čítače, můžete je použít ke shromáždění velmi podrobných informací o tom, proč může být výkon vykreslování vaší aplikace nakažený. Všechna zařízení na úrovni funkcí 9,2 a vyšší podporují hloubkové dotazy překrytí (zastíněna počítadla**pixelů** ) a časová razítka. Další hardwarové čítače můžou být dostupné v závislosti na tom, jestli výrobce GPU implementoval hardwarové čítače a vystavuje ho v jeho ovladači. Tyto čítače lze použít k potvrzení přesné příčiny výsledků zobrazených v tabulce souhrn – například můžete určit, zda je překreslování faktor, prozkoumáním procenta pixelů, které byly zastíněna testem hloubky.
+  Když jsou k dispozici hardwarové čítače, můžete je použít ke shromáždění velmi podrobných informací o tom, proč může být výkon vykreslování vaší aplikace nakažený. Všechna zařízení na úrovni funkcí 9,2 a vyšší podporují hloubkové dotazy překrytí (zastíněna počítadla **pixelů** ) a časová razítka. Další hardwarové čítače můžou být dostupné v závislosti na tom, jestli výrobce GPU implementoval hardwarové čítače a vystavuje ho v jeho ovladači. Tyto čítače lze použít k potvrzení přesné příčiny výsledků zobrazených v tabulce souhrn – například můžete určit, zda je překreslování faktor, prozkoumáním procenta pixelů, které byly zastíněna testem hloubky.
 
 ### <a name="timeline-and-summary-table"></a>Časová osa a Souhrnná tabulka
  Ve výchozím nastavení se zobrazuje časová osa a tabulka souhrnů a ostatní oddíly jsou sbalené.

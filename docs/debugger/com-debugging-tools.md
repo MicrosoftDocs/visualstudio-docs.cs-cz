@@ -1,5 +1,7 @@
 ---
 title: Nástroje pro ladění modelu COM | Microsoft Docs
+description: Získejte popisy ladicích nástrojů, které vám můžou pomáhat při testování a kontrole programů modelu COM, jako je například prohlížeč objektů OLE/COM.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6a3c0961d541aaac1f2fd81fee7a0a8e06583dd
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 216d820e455ad9902f19fe3c48caa927b21a2f0f
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600173"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728986"
 ---
 # <a name="com-debugging-tools"></a>Nástroje pro ladění modelu COM
 
@@ -42,7 +44,7 @@ OCLIENT a SUPERPAD knihovny MFC jsou také k dispozici k otestování svých apl
 
 ### <a name="see-also"></a>Viz také
 
-- [Ladění modelů COM a prvků ActiveX](../debugger/com-and-activex-debugging.md)
+- [Ladění modelu COM a ActiveX](../debugger/com-and-activex-debugging.md)
 - [Nástroje pro ladění modelu COM](../debugger/com-debugging-tools.md)
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

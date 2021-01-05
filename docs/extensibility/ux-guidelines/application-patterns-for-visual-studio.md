@@ -1,5 +1,7 @@
 ---
 title: Vzory aplikací pro Visual Studio | Microsoft Docs
+description: Přečtěte si o rozdílech mezi okny dokumentu, okny nástrojů a nemodálními dialogy, včetně vzorců používání oken pro nové funkce sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 8ed68602-4e28-46fe-b39f-f41979b308a2
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 036c95951fe3dc9e65a0f3338f75ae9867d721c3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 709daa641e898f9d75f4bab340c8e5fd00d28a88
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698598"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97716117"
 ---
 # <a name="application-patterns-for-visual-studio"></a>Vzory aplikací pro Visual Studio
 ## <a name="window-interactions"></a><a name="BKMK_WindowInteractions"></a> Interakce oken
@@ -33,7 +35,7 @@ Pečlivě se zamyslete nad tím, který typ kontejneru potřebujete. Běžné po
 ||Okno dokumentu|Okno nástroje|Nemodální dialogové okno|
 |-|---------------------|-----------------|---------------------|
 | **Position** | Vždy umístěn v dokumentaci dokumentu a není ukotven kolem okrajů rozhraní IDE. Může být "vypnul", takže se z hlavního prostředí odpluje odděleně. | Obecně ukotvení karet kolem hran prostředí IDE, ale lze je přizpůsobit tak, aby bylo plovoucí, automaticky skryté (nepřipnutý), nebo ukotveno v dokumentaci dokumentu.|Velké plovoucí okno oddělené od rozhraní IDE. |
-| **Model potvrzení** | *Zpožděné potvrzení*<br /><br /> Aby bylo možné data uložit v dokumentu, musí uživatel vydat příkaz ** &gt; Uložit**, **Uložit jako**nebo **Uložit vše** . Okno dokumentu má koncept dat v rámci něj "změněných" a pak se potvrdí do jednoho z příkazů pro uložení. Při zavírání okna dokumentu se veškerý obsah buď uloží na disk, nebo se ztratí. | *Okamžité potvrzení*<br /><br /> Neexistuje žádný model uložení. Pro okna inspektora nástroje, která pomáhají při úpravách souboru, musí být soubor otevřen v aktivním editoru nebo Návrháři a editor nebo Návrhář vlastní uložení. | *Zpožděné nebo okamžité potvrzení*<br /><br /> Většinou velké dialogové okno s nemodálním dialogovým oknem vyžaduje akci potvrdit změny a umožňuje operaci zrušit, která vrátí všechny změny provedené v relaci dialogu.  To odlišuje nemodální dialogové okno z okna nástrojů v tom, že okna nástrojů mají vždy model okamžitého potvrzení. |
+| **Model potvrzení** | *Zpožděné potvrzení*<br /><br /> Aby bylo možné data uložit v dokumentu, musí uživatel vydat příkaz **&gt; Uložit**, **Uložit jako** nebo **Uložit vše** . Okno dokumentu má koncept dat v rámci něj "změněných" a pak se potvrdí do jednoho z příkazů pro uložení. Při zavírání okna dokumentu se veškerý obsah buď uloží na disk, nebo se ztratí. | *Okamžité potvrzení*<br /><br /> Neexistuje žádný model uložení. Pro okna inspektora nástroje, která pomáhají při úpravách souboru, musí být soubor otevřen v aktivním editoru nebo Návrháři a editor nebo Návrhář vlastní uložení. | *Zpožděné nebo okamžité potvrzení*<br /><br /> Většinou velké dialogové okno s nemodálním dialogovým oknem vyžaduje akci potvrdit změny a umožňuje operaci zrušit, která vrátí všechny změny provedené v relaci dialogu.  To odlišuje nemodální dialogové okno z okna nástrojů v tom, že okna nástrojů mají vždy model okamžitého potvrzení. |
 | **Přehlednost** | *Otevřít/vytvořit (soubor) a zavřít*<br /><br /> Otevírání oken dokumentu se provádí buď otevřením existujícího dokumentu, nebo pomocí šablony k vytvoření nového dokumentu. Není k dispozici žádný \<specific editor> příkaz "otevřít". | *Skrýt a zobrazit*<br /><br /> Okna nástrojů s jednou instancí se dají skrýt nebo zobrazit. Obsah a stavy v okně nástroje uchovávají, zda jsou zobrazeny nebo skryty. Okna nástrojů s více instancemi lze zavřít a také skrýt. Když je okno nástroje s více instancemi zavřené, obsah a stav v rámci okna nástroje jsou zahozeny. | *Spuštěno z příkazu*<br /><br /> Dialogová okna se spouští z příkazu založeného na úlohách. |
 | **Instance** | *Více instancí*<br /><br /> Několik editorů lze současně otevřít a upravovat různé soubory, zatímco některé editory také umožňují otevření stejného souboru ve více než jednom editoru (pomocí příkazu **okna &gt; nové okno** ).<br /><br /> Jeden editor může upravovat jeden nebo více souborů současně (Návrhář projektu). | *Jedna nebo více instancí*<br /><br /> Obsah se mění tak, aby odrážel kontext (jako v prohlížeči vlastností), nebo předávat fokus/kontext do jiných oken (Seznam úkolů Průzkumník řešení).<br /><br /> Okna s aktivním dokumentem by mělo být přidruženo k oknu s aktivním dokumentem, pokud neexistuje přesvědčivý důvod. | *Jedna instance* |
 | **Příklady** | Editory **textu**, jako je editor kódu<br /><br /> **Návrhové plochy**, jako je Návrhář formuláře nebo plocha modelování<br /><br /> **Rozložení ovládacích prvků podobně jako dialogová okna**, jako je například Návrhář manifestu | **Průzkumník řešení** poskytuje řešení a projekty obsažené v řešení.<br /><br /> **Průzkumník serveru** poskytuje hierarchické zobrazení serverů a datových připojení, která uživatel zvolí k otevření v okně. Otevření objektu z hierarchie databáze, jako je dotaz, otevře okno dokumentu a umožní uživateli upravit dotaz.<br /><br /> **Prohlížeč vlastností** zobrazuje vlastnosti objektu vybraného buď v okně dokumentu, nebo v jiném okně nástroje. Vlastnosti jsou uvedeny buď v hierarchickém zobrazení mřížky, nebo v komplexních ovládacích prvcích podobného dialogu a umožňují uživateli nastavit hodnoty těchto vlastností. | |
@@ -77,7 +79,7 @@ Okna nástrojů jsou buď jedna instance, nebo více instancí. K aktivnímu okn
 
 ![Okno nástroje, které povoluje příkaz ' nové okno ', když je aktivní instance okna](../../extensibility/ux-guidelines/media/0702-02_toolwindowenablingcommand.png "0702 – 02_ToolWindowEnablingCommand")<br />Okno nástroje, které povoluje příkaz ' nové okno ', když je aktivní instance okna
 
-Okna nástrojů s jednou instancí se dají skrýt nebo zobrazit, zatímco okna nástrojů s více instancemi se dají zavřít i skrýt. Všechna okna nástrojů mohou být ukotvena, karta propojená, plovoucí nebo nastavená jako podřízené okno rozhraní MDI (více dokumentů) (podobně jako okno dokumentu). Všechna okna nástrojů by měla reagovat na příslušné příkazy správy okna v nabídce okna:
+Okna nástrojů s jednou instancí se dají skrýt nebo zobrazit, zatímco okna nástrojů s více instancemi se dají zavřít i skrýt. Všechna okna nástrojů mohou být ukotvena, karta propojena, plovoucí nebo nastavená jako podřízené okno rozhraní Multiple-Document (MDI) (podobně jako okno dokumentu). Všechna okna nástrojů by měla reagovat na příslušné příkazy správy okna v nabídce okna:
 
 ![Příkazy správy oken v nabídce okna sady Visual Studio](../../extensibility/ux-guidelines/media/0702-03_windowmanagementcontrols.png "0702 – 03_WindowManagementControls")<br />Příkazy správy oken v nabídce okna sady Visual Studio
 
@@ -154,7 +156,7 @@ Příklady oken nástrojů seznamu naviguje jsou Průzkumník řešení a okno v
 | Výstup | Okno výstup lze použít vždy, když máte textové události nebo stav k deklaraci. |
 | Paměť ||
 | Zarážky ||
-| Spuštěný ||
+| Spuštěno ||
 | Dokumenty ||
 | Zásobník volání ||
 | Místní hodnoty ||
@@ -176,7 +178,7 @@ Příklady oken nástrojů seznamu naviguje jsou Průzkumník řešení a okno v
 
 - Aktualizuje související funkce v souvisejících oknech a nabídkách, když se otevře okno dokumentu.
 
-- Příkazy nabídky jsou vhodně integrované do běžných nabídek, jako jsou **Úpravy**, **formátování**a **zobrazení** nabídek. Pokud jsou k dispozici podstatné množství specializovaných příkazů, lze vytvořit novou nabídku. Tato nová nabídka by měla být viditelná pouze v případě, že dokument má fokus.
+- Příkazy nabídky jsou vhodně integrované do běžných nabídek, jako jsou **Úpravy**, **formátování** a **zobrazení** nabídek. Pokud jsou k dispozici podstatné množství specializovaných příkazů, lze vytvořit novou nabídku. Tato nová nabídka by měla být viditelná pouze v případě, že dokument má fokus.
 
 - Vložený panel nástrojů může být umístěn v horní části editoru. Je vhodnější mít samostatný panel nástrojů, který se zobrazí mimo editor.
 
@@ -398,7 +400,7 @@ Být konzistentní s existujícími konfiguracemi ovládacích prvků, které ma
   ![Specifikace zásad pro záhlaví v dialogových oknech sady Visual Studio](../../extensibility/ux-guidelines/media/0704-03_titlebarspecs.png "0704 – 03_TitleBarSpecs")<br />Specifikace zásad pro záhlaví v dialogových oknech sady Visual Studio
 
 #### <a name="control-buttons"></a>Řídicí tlačítka
-V pravém dolním rohu dialogového okna by se měla zobrazovat tlačítka v oblasti Obecné, **OK**, **Zrušit**a **pomáhat** vodorovně. Alternativní vertikální zásobník je povolený, pokud dialogové okno obsahuje několik dalších tlačítek v dolní části dialogového okna, které by představovalo vizuální nejasnost s ovládacími tlačítky.
+V pravém dolním rohu dialogového okna by se měla zobrazovat tlačítka v oblasti Obecné, **OK**, **Zrušit** a **pomáhat** vodorovně. Alternativní vertikální zásobník je povolený, pokud dialogové okno obsahuje několik dalších tlačítek v dolní části dialogového okna, které by představovalo vizuální nejasnost s ovládacími tlačítky.
 
 ![Přijatelné konfigurace pro řídicí tlačítka v dialogových oknech sady Visual Studio](../../extensibility/ux-guidelines/media/0704-04_controlbuttonconfig.png "0704 – 04_ControlButtonConfig")<br />Přijatelné konfigurace pro řídicí tlačítka v dialogových oknech sady Visual Studio
 
@@ -411,7 +413,7 @@ Dialogové okno musí obsahovat výchozí ovládací tlačítko. Pokud chcete ur
 Nevybírejte pro výchozí příkaz trvale destruktivní akci. Pokud je takový příkaz k dispozici, vyberte místo toho bezpečnější příkaz jako výchozí.
 
 #### <a name="access-keys"></a>Přístupové klíče
-Nepoužívejte přístupové klávesy pro tlačítka **OK**, **Zrušit**nebo **pomáhat** . Ve výchozím nastavení jsou tato tlačítka namapována na klávesové zkratky:
+Nepoužívejte přístupové klávesy pro tlačítka **OK**, **Zrušit** nebo **pomáhat** . Ve výchozím nastavení jsou tato tlačítka namapována na klávesové zkratky:
 
 | Název tlačítka | Klávesová zkratka |
 | --- | --- |
@@ -436,9 +438,9 @@ Existují výhody a nevýhody různých metod rozhraní vrstvení prostřednictv
 
 | Přepínání mechanismu | Výhody a vhodné použití | Nevýhody a nevhodné použití |
 | --- | --- | --- |
-| Ovládací prvek karta | Seskupení dialogových stránek logické skupiny do souvisejících sad<br /><br />Užitečné pro méně než pět (nebo počet karet, které odpovídají jednomu řádku v rámci dialogového okna) stránky souvisejících ovládacích prvků v dialogovém okně<br /><br />Popisky karet musí být krátké: jedno nebo dvě slova, která můžou snadno identifikovat obsah.<br /><br />Běžný styl dialogového okna systému<br /><br />Příklad: ** &gt; vlastnosti položky Průzkumníka souborů** | Vytváření popisných krátkých popisků může být obtížné.<br /><br />Obecně se v jednom dialogu neškáluje za pět karet.<br /><br />Nevhodné, pokud máte příliš mnoho karet pro jeden řádek (použijte jinou techniku vrstvení)<br /><br />Nerozšiřitelné |
+| Ovládací prvek karta | Seskupení dialogových stránek logické skupiny do souvisejících sad<br /><br />Užitečné pro méně než pět (nebo počet karet, které odpovídají jednomu řádku v rámci dialogového okna) stránky souvisejících ovládacích prvků v dialogovém okně<br /><br />Popisky karet musí být krátké: jedno nebo dvě slova, která můžou snadno identifikovat obsah.<br /><br />Běžný styl dialogového okna systému<br /><br />Příklad: **&gt; vlastnosti položky Průzkumníka souborů** | Vytváření popisných krátkých popisků může být obtížné.<br /><br />Obecně se v jednom dialogu neškáluje za pět karet.<br /><br />Nevhodné, pokud máte příliš mnoho karet pro jeden řádek (použijte jinou techniku vrstvení)<br /><br />Nerozšiřitelné |
 | Navigační panel | Jednoduché přepínání zařízení, které může obsahovat více kategorií než karet<br /><br />Plochý seznam kategorií (bez hierarchie)<br /><br />Rozšiřiteln<br /><br />Příklad: **přizpůsobení... &gt; Přidat příkaz** | Není dobré používat vodorovný prostor, pokud je méně než tři skupiny.<br /><br />Úloha může být vhodnější pro rozevírací seznam. |
-| Ovládací prvek strom | Umožňuje neomezený počet kategorií.<br /><br />Umožňuje seskupování a hierarchii kategorií.<br /><br />Rozšiřiteln<br /><br />Příklad: ** &gt; Možnosti nástrojů** | Silně vnořené hierarchie můžou způsobit nadměrné horizontální posouvání.<br /><br />Visual Studio má nadčetnost zobrazení stromové struktury. |
+| Ovládací prvek strom | Umožňuje neomezený počet kategorií.<br /><br />Umožňuje seskupování a hierarchii kategorií.<br /><br />Rozšiřiteln<br /><br />Příklad: **&gt; Možnosti nástrojů** | Silně vnořené hierarchie můžou způsobit nadměrné horizontální posouvání.<br /><br />Visual Studio má nadčetnost zobrazení stromové struktury. |
 | Tip | Pomáhá s dokončením úkolu tím, že uživatele odgeneruje pomocí sekvenčních kroků na základě úkolů: průvodce představuje úlohu vysoké úrovně a jednotlivé panely představují dílčí úkoly potřebné k provedení celkové úlohy.<br /><br />Užitečné v případě, že úloha přechází mezi hranicemi uživatelského rozhraní, jako by uživatel jinak musel použít více editorů a oken nástrojů k dokončení úkolu.<br /><br />Užitečné v případě, že úkol vyžaduje větvení<br /><br />Užitečné v případě, že úloha obsahuje závislosti mezi kroky<br /><br />Užitečné v případě, že se dá v jednom dialogu předložit několik podobných úloh s jedním rozhodovacím rozvětvem, aby se snížil počet různých podobných dialogových oken. | Nevhodné pro všechny úlohy, které nevyžadují sekvenční pracovní postup<br /><br />Průvodce může být zahlcený a zmatený průvodcem s příliš velkým počtem kroků<br /><br />Průvodci mají svou podstatu omezený přehled o obrazovkách. |
 
 ##### <a name="hallways-or-dashboards"></a>Předsálí nebo řídicí panely
@@ -485,7 +487,7 @@ Z perspektivy přetažení by měly být následující vlastnosti použity pro 
 
 - **Smíšený cílový projekt:** Z pohledu přetažení je chování tohoto typu projektu založeno na potažení položky (buď odkaz na položku v úložišti, nebo na samotnou položku). Správné chování pro odkazy a fyzické položky jsou popsány výše.
 
-Pokud v **Průzkumník řešení**existoval pouze jeden typ projektu, operace přetažení budou jednoduché. Vzhledem k tomu, že každý systém projektu má možnost definovat vlastní chování při přetahování, měly by být dodrženy určité pokyny (na základě chování při přetahování v Průzkumníkovi Windows), aby se zajistilo předvídatelné uživatelské prostředí:
+Pokud v **Průzkumník řešení** existoval pouze jeden typ projektu, operace přetažení budou jednoduché. Vzhledem k tomu, že každý systém projektu má možnost definovat vlastní chování při přetahování, měly by být dodrženy určité pokyny (na základě chování při přetahování v Průzkumníkovi Windows), aby se zajistilo předvídatelné uživatelské prostředí:
 
 - Nezměněná operace přetažení v **Průzkumník řešení** (pokud nejsou stisknuté klávesy CTRL ani Shift), měla by být výsledkem operace přesunutí.
 

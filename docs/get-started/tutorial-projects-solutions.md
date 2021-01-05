@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cdc30b34c85a799827519af3cd2bba2c9f1735a
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 3aa347b7f789e24e7cdd3baa19a6267f0ecdf2e5
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668804"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727512"
 ---
 # <a name="introduction-to-projects-and-solutions"></a>Seznámení s projekty a řešení
 
@@ -279,7 +279,17 @@ Použijeme nový projekt testování částí k otestování naší metody v pro
 
 ## <a name="next-steps"></a>Další kroky
 
+::: moniker range="vs-2017"
+
 Chcete-li zkontrolovat, zda je test jednotky funkční, vyberte možnost **test**  >  **Spustit**  >  **všechny testy** z řádku nabídek. Otevře se okno s názvem **Průzkumník testů** , které by mělo vidět, že test **TestGetCurrentDate** projde.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Chcete-li zkontrolovat, zda je test jednotky funkční, vyberte možnost **test**  >  **Spustit všechny testy** z řádku nabídek. Otevře se okno s názvem **Průzkumník testů** , které by mělo vidět, že test **TestGetCurrentDate** projde.
+
+::: moniker-end
 
 ![Průzkumník testů v aplikaci Visual Studio zobrazující prošlý test](media/tutorial-projects-test-explorer.png "Průzkumník testů v aplikaci Visual Studio zobrazující úspěšný test.")
 
