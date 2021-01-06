@@ -1,5 +1,7 @@
 ---
 title: Vytvoření vizuální mapy zásobníku volání | Microsoft Docs
+description: Vytvořte mapu kódu pro vizuální trasování zásobníku volání při ladění. Vytvořte poznámky na mapě, abyste mohli sledovat, co kód dělá, abyste se mohli soustředit na hledání chyb.
+ms.custom: SEO-VS-2020
 ms.date: 11/26/2018
 ms.topic: how-to
 f1_keywords:
@@ -29,12 +31,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2cf0cda942241ca77aa750624b6de25b5ae39391
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 965232f56fcd2bf0d459910e983fb10dcca7f96d
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348532"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903828"
 ---
 # <a name="create-a-visual-map-of-the-call-stack-while-debugging-c-visual-basic-c-javascript"></a>Vytvoření vizuální mapy zásobníku volání při ladění (C#, Visual Basic, C++, JavaScript)
 
@@ -55,7 +57,7 @@ Tady je rychlý pohled na mapu kódu:
 
 1. V projektu Visual Studio Enterprise C#, Visual Basic, C++ nebo JavaScript spusťte ladění výběrem možnosti **ladění**  >  **Spustit ladění** nebo stisknutím klávesy **F5**.
 
-1. Jakmile vaše aplikace přejde do režimu přerušení nebo přejdete do funkce, vyberte **Debug**  >  **Mapa kódu**ladění nebo stiskněte klávesy **CTRL** + **SHIFT** + **`** .
+1. Jakmile vaše aplikace přejde do režimu přerušení nebo přejdete do funkce, vyberte   >  **Mapa kódu** ladění nebo stiskněte klávesy **CTRL** + **SHIFT** + **`** .
 
    Aktuální aktuální zásobník volání se zobrazí oranžově na mapě nového kódu:
 
@@ -77,7 +79,7 @@ Ve výchozím nastavení se na mapě zobrazí pouze váš vlastní kód. Chcete-
 - V okně **zásobník volání** klikněte pravým tlačítkem myši a vyberte **Zobrazit externí kód**:
 
   ![Zobrazit externí kód pomocí okna zásobník volání](../debugger/media/debuggermap_callstackmenu.png "DebuggerMap_CallStackMenu")
-- Nebo zrušte zaškrtnutí políčka **Povolit pouze můj kód** v **nástroji** sady Visual Studio (nebo **ladění**) > **Options**  >  **ladění**možností:
+- Nebo zrušte zaškrtnutí políčka **Povolit pouze můj kód** v **nástroji** sady Visual Studio (nebo **ladění**) >   >  **ladění** možností:
 
   ![Zobrazit externí kód pomocí dialogu Možnosti](../debugger/media/debuggermap_debugoptions.png "DebuggerMap_DebugOptions")
 
@@ -97,7 +99,7 @@ V nabídce **rozložení** můžete:
 
 Můžete přidat komentáře pro sledování, co se děje v kódu.
 
-Komentář přidáte tak, že kliknete pravým tlačítkem na mapu kódu a vyberete **Upravit**  >  **Nový komentář**a pak zadáte komentář.
+Komentář přidáte tak, že kliknete pravým tlačítkem na mapu kódu a vyberete **Upravit**  >  **Nový komentář** a pak zadáte komentář.
 
 Chcete-li přidat nový řádek v komentáři, stiskněte klávesu **SHIFT** + **ENTER**.
 

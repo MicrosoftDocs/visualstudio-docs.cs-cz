@@ -1,5 +1,7 @@
 ---
 title: 'Návod: publikování rozšíření sady Visual Studio | Microsoft Docs'
+description: Naučte se publikovat rozšíření sady Visual Studio pro Visual Studio Marketplace, které vývojářům umožňuje vyhledat nová a aktualizovaná rozšíření.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6bd7a5d9622f7aea7382522dcf69ce660b61ae7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cbdd283c5d147c53e7d82843207b48d0dbf6e6e9
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904741"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877881"
 ---
 # <a name="walkthrough-publish-a-visual-studio-extension"></a>Návod: publikování rozšíření sady Visual Studio
 
@@ -58,7 +60,7 @@ Tento článek používá výchozí rozšíření VSPackage, ale postup je platn
 
 2. Ve webovém prohlížeči otevřete [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) Web.
 
-3. V pravém horním rohu klikněte na **Přihlásit**se.
+3. V pravém horním rohu klikněte na **Přihlásit** se.
 
 4. Přihlaste se pomocí svého účet Microsoft. Pokud nemáte účet Microsoft, můžete si ho v tomto okamžiku vytvořit.
 
@@ -68,7 +70,7 @@ Tento článek používá výchozí rozšíření VSPackage, ale postup je platn
 
 6. Vyberte vydavatele, který chcete použít k nahrání rozšíření. Vydavatele můžete změnit kliknutím na názvy vydavatelů, které jsou uvedeny na levé straně. Klikněte na **nové rozšíření** a vyberte **Visual Studio**.
 
-7. V **1: nahrání rozšíření**se můžete rozhodnout odeslat soubor VSIX přímo do Visual Studio Marketplace nebo stačí přidat odkaz na svůj vlastní web. V tomto příkladu je Nahráno rozšíření *TestPublish. vsix* . Přetáhněte rozšíření nebo **použijte odkaz pro** vyhledání souboru. Najděte své rozšíření ve složce \bin\Release projektu.  Klikněte na **Pokračovat**.
+7. V **1: nahrání rozšíření** se můžete rozhodnout odeslat soubor VSIX přímo do Visual Studio Marketplace nebo stačí přidat odkaz na svůj vlastní web. V tomto příkladu je Nahráno rozšíření *TestPublish. vsix* . Přetáhněte rozšíření nebo **použijte odkaz pro** vyhledání souboru. Najděte své rozšíření ve složce \bin\Release projektu.  Klikněte na **Pokračovat**.
 
 8. Ve **2: zadejte podrobnosti o rozšíření**, některá pole se automaticky vyplní ze souboru *source. extension. vsixmanifest* z vašeho rozšíření. Další podrobnosti najdete tady:
 
@@ -102,11 +104,11 @@ Tento článek používá výchozí rozšíření VSPackage, ale postup je platn
 
     * Možnost **Q&A pro vaše rozšíření** umožňuje uživatelům zanechat otázky na stránce s položkou rozšíření.
 
-9. Klikněte na **uložit & nahrát**. Tato možnost vrátí zpět na stránku pro správu vašeho vydavatele. Vaše rozšíření ještě není publikované. Pokud chcete své rozšíření publikovat, klikněte pravým tlačítkem na rozšíření a vyberte **nastavit jako veřejné**. Výběrem možnosti **Zobrazit rozšíření**můžete zobrazit, jak bude rozšíření vypadat na webu Marketplace. V případě čísel získání klikněte na **sestavy**. Chcete-li změnit rozšíření, klikněte na tlačítko **Upravit**.
+9. Klikněte na **uložit & nahrát**. Tato možnost vrátí zpět na stránku pro správu vašeho vydavatele. Vaše rozšíření ještě není publikované. Pokud chcete své rozšíření publikovat, klikněte pravým tlačítkem na rozšíření a vyberte **nastavit jako veřejné**. Výběrem možnosti **Zobrazit rozšíření** můžete zobrazit, jak bude rozšíření vypadat na webu Marketplace. V případě čísel získání klikněte na **sestavy**. Chcete-li změnit rozšíření, klikněte na tlačítko **Upravit**.
 
    ![Nabídka položky rozšíření](media/extension-entry-menu.png)
 
-10. Po kliknutí **na zveřejnit je**rozšíření teď veřejné. Vyhledejte Visual Studio Marketplace pro vaše rozšíření.
+10. Po kliknutí **na zveřejnit je** rozšíření teď veřejné. Vyhledejte Visual Studio Marketplace pro vaše rozšíření.
 
 ## <a name="add-additional-users-to-manage-your-publisher-account"></a>Přidat další uživatele pro správu účtu vydavatele
 
@@ -136,7 +138,7 @@ Teď, když je rozšíření publikované, nainstalujte ho v aplikaci Visual Stu
 
 2. Klikněte na **online** a vyhledejte **TestPublish**.
 
-3. Klikněte na tlačítko **Stáhnout**. Rozšíření je pak naplánováno pro instalaci.
+3. Klikněte na **Stáhnout**. Rozšíření je pak naplánováno pro instalaci.
 
 4. Chcete-li dokončit instalaci, zavřete všechny instance aplikace Visual Studio.
 

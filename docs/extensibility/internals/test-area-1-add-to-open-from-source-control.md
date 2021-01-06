@@ -1,5 +1,7 @@
 ---
-title: 'Testovací oblast 1: přidat k otevření ze správy zdrojového kódu | Microsoft Docs'
+title: 'Testovací oblast 1: Přidání To-Open ze správy zdrojového kódu | Microsoft Docs'
+description: Tato testovací oblast modulu plug-in zdrojového ovládacího prvku pokrývá umístění řešení nebo projektů pod správou zdrojových kódů a jejich načítání ze správy zdrojového kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,24 +13,24 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ac7b8e5a60fe25ac22272cc28fc3ed6f903b058
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 608d3489f657cf38d310e67a17bdd48a529de3e5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704684"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877738"
 ---
-# <a name="test-area-1-add-toopen-from-source-control"></a>Testovací oblast 1: přidat do nebo otevřít ze správy zdrojového kódu
+# <a name="test-area-1-add-toopen-from-source-control"></a>Testovací oblast 1: Přidání nebo otevření ze správy zdrojového kódu
 Tato testovací oblast modulu plug-in zdrojového ovládacího prvku pokrývá umístění řešení nebo projektů pod správou zdrojových kódů a jejich načítání ze správy zdrojového kódu.
 
 ## <a name="command-menu-access"></a>Přístup k nabídce příkazů
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]V testovacích případech se používají následující cesty nabídky integrovaného vývojového prostředí:
 
-- Pro [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] otevřete ze správy zdrojového kódu: **soubor**, **otevřít**, **Project** / **řešení**projektu; Podívejte se do [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] umístění.
+- Pro [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] otevřete ze správy zdrojového kódu: **soubor**, **otevřít**,  / **řešení** projektu; Podívejte se do [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] umístění.
 
 - Pro jiné moduly plug-in správy zdrojového kódu otevřete ze správy zdrojového kódu: **soubor**, Správa **zdrojového kódu**, **Otevřít ze správy zdrojového kódu**.
 
-- Přidat do správy zdrojového kódu: **soubor**, Správa **zdrojového kódu**, **Přidat řešení do souboru správy zdrojového**kódu, **Správa zdrojového kódu**, **Přidat vybrané projekty do správy zdrojových kódů**.
+- Přidat do správy zdrojového kódu: **soubor**, Správa **zdrojového kódu**, **Přidat řešení do souboru správy zdrojového** kódu, **Správa zdrojového kódu**, **Přidat vybrané projekty do správy zdrojových kódů**.
 
 - Místní nabídka (projekt/řešení), **Přidat řešení do správy zdrojového kódu**.
 

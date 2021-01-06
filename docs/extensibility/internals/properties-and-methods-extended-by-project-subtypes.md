@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti a metody rozšířené podtypy projektů | Microsoft Docs
+description: Přečtěte si o funkcích, které mohou podtypy projektů zvýšit nebo upravit, což vám umožní přizpůsobit chování projektových systémů sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9963f779055fcf1ed0efd8c47abbe1cce35631a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cff332d7b573bb2fdff886b4206ea1267c091c48
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706200"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878037"
 ---
 # <a name="properties-and-methods-extended-by-project-subtypes"></a>Vlastnosti a metody rozšířené prostřednictvím podtypů projektů
 Podtyp projektu má velký výkon pro ovlivnění chování projektu, protože je vytvořen jako agregátor základního projektu. V této části jsou shrnuty některé funkce, které mohou být rozšířeny nebo upraveny podtypy projektu.

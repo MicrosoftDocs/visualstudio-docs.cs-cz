@@ -1,5 +1,7 @@
 ---
 title: Zásady šablony a okno Vlastnosti | Microsoft Docs
+description: Přečtěte si o použití zásad šablony k nastavení výchozích hodnot pro vlastnosti, skrytí vlastností a přidání vlastností do okno Vlastnosti.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08ed6f416441d06767661e63b5e32454dbe07f93
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 105a90699689ff6eab6ea5bdfa3d4037e700ecb5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704663"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877712"
 ---
 # <a name="template-policy-and-the-properties-window"></a>Zásady šablon a okno Vlastnosti
 Pokud je projekt obsažen v projektu šablony organizace, může tento projekt šablony vynutilit zásady. Zásada šablony se stal omezeným systémem, který lze použít k nastavení výchozích hodnot pro vlastnosti, skrytí vlastností, přidání vlastností a tak dále.

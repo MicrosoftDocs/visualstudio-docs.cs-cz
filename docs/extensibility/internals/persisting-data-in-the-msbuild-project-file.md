@@ -1,5 +1,7 @@
 ---
 title: Trvalá data v souboru projektu MSBuild | Microsoft Docs
+description: Naučte se uchovávat data v souboru projektu a pomocí IPersistXMLFragment udržovat data v souboru projektu napříč úrovněmi agregace podtypu projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e83526007f676ae94ddce57936b627bcb4308c2a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20c6d79e6ea59b4993b4d6bfc5e165bdd952a3f9
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706687"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878076"
 ---
 # <a name="persisting-data-in-the-msbuild-project-file"></a>Trvalá data v souboru projektu nástroje MSBuild
 Podtyp projektu může být nutné pro pozdější použití uchovat data specifická pro konkrétní typ do souboru projektu. Podtyp projektu používá trvalost souborů projektu k splnění následujících požadavků:
@@ -24,7 +26,7 @@ Podtyp projektu může být nutné pro pozdější použití uchovat data specif
 
     1. Data nezávislá na konfiguraci. To znamená, že data uložená v prvcích MSBuild s prázdnými nebo chybějícími podmínkami.
 
-    2. Data závislá na konfiguraci. To znamená, že data uložená v prvcích MSBuild, která jsou podmíněně pro konkrétní konfiguraci projektu. Příklad:
+    2. Data závislá na konfiguraci. To znamená, že data uložená v prvcích MSBuild, která jsou podmíněně pro konkrétní konfiguraci projektu. Například:
 
         ```
         <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -36,7 +38,7 @@ Podtyp projektu může být nutné pro pozdější použití uchovat data specif
 
     2. Data závislá na konfiguraci.
 
-## <a name="persisting-build-related-information"></a>Uchování informací souvisejících s sestavením
+## <a name="persisting-build-related-information"></a>Uchovávání informací Build-Related
  Trvalá data užitečná pro sestavení projektu jsou zpracovávána prostřednictvím nástroje MSBuild. Systém MSBuild udržuje hlavní tabulku informací týkajících se sestavení. Podtypy projektu zodpovídají za přístup k těmto datům za účelem získání a nastavení hodnot vlastností. Podtypy projektů mohou také rozšířit tabulku dat související s sestavením přidáním dalších vlastností, které mají být zachovány, a odebráním vlastností, aby nebyly uchovány.
 
  Pro úpravu dat MSBuild je podtype projektu zodpovědný za načtení objektu vlastnosti MSBuild ze základního projektového systému prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> je rozhraní implementované v základním projektovém systému a pro něj probíhá agregace dotazů podtypu projektu spuštěním `QueryInterface` .

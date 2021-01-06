@@ -1,5 +1,7 @@
 ---
 title: Základy typu projektu | Microsoft Docs
+description: Přečtěte si informace o tom, kdy je nutné vytvořit typ projektu a když můžete roztáhnout existující typ projektu pomocí podtypů projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7634802899d72eb6abcb0aa837b8fb6a532b966
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: d55a4be044c44567f65e312d013ebdb61314ea00
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012058"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877790"
 ---
 # <a name="project-type-essentials"></a>Základy typů projektů
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] obsahuje několik typů projektů pro jazyky, jako jsou [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] nebo [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] také umožňuje vytvořit vlastní typy projektů.
@@ -64,5 +66,5 @@ ms.locfileid: "90012058"
 
 - Typy projektů mohou podporovat více konfigurací, jako je například ladění a vydání. Uživatelé mohou změnit různé konfigurace projektu pomocí stránek vlastností, které zadáte. Další informace najdete v tématu [Správa možností konfigurace](../../extensibility/internals/managing-configuration-options.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Nasazování typů projektů](../../extensibility/internals/deploying-project-types.md)

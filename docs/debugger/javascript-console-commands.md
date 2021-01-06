@@ -1,6 +1,7 @@
 ---
 title: Příkazy konzoly JavaScriptu | Microsoft Docs
-ms.custom: ''
+description: Použijte příkazy k posílání zpráv a provádění dalších úloh v okně konzoly JavaScriptu. Tento článek se týká Node.jsch aplikací, aplikací UWP a aplikací Apache Cordova.
+ms.custom: SEO-VS-2020
 ms.date: 10/17/2019
 ms.topic: reference
 helpviewer_keywords:
@@ -14,18 +15,18 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: 301461caa15321b5a77f42872c93f52f3ec2c9c1
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 2877b3ca9fb644ae4dae1af27e79e6ee52423b97
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211271"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903906"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Příkazy konzoly JavaScriptu v aplikaci Visual Studio
 
 Můžete použít příkazy k posílání zpráv a provádění dalších úloh v okně konzoly JavaScriptu sady Visual Studio. Příklady, které ukazují, jak používat toto okno, najdete v tématu [rychlý Start: ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017&preserve-view=true). Informace v tomto tématu se vztahují na Node.js aplikace, aplikace pro UWP a aplikace vytvořené pomocí Visual Studio Tools pro Apache Cordova.
 
-Pokud je okno konzoly JavaScriptu zavřené, můžete ho otevřít při ladění v aplikaci Visual Studio výběrem možnosti **ladit**  >  **Windows**  >  **konzolu Windows JavaScript**.
+Pokud je okno konzoly JavaScriptu zavřené, můžete ho otevřít při ladění v aplikaci Visual Studio výběrem možnosti **ladit**  >    >  **konzolu Windows JavaScript**.
 
 > [!NOTE]
 > Pokud okno není během ladicí relace k dispozici, ujistěte se, že typ ladicího programu je nastaven na **skript** ve vlastnostech ladění projektu.

@@ -1,5 +1,7 @@
 ---
 title: Colorizing syntaxe ve službě starší verze jazyka | Microsoft Docs
+description: Naučte se, jak podporovat barevné zvýrazňování syntaxe ve službě starší verze jazyka, zadáním analyzátoru nebo skeneru, který může identifikovat typy lexikálních prvků nebo tokenů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 02723a09254255b98291cb921ae5ec091d8b9859
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c51885e593fabffab80d11c930100f3cc719dff8
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704698"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877751"
 ---
 # <a name="syntax-colorizing-in-a-legacy-language-service"></a>Barevné zvýrazňování syntaxe ve službě starší verze jazyka
 Barevné zvýrazňování syntaxe je funkce, která způsobí zobrazení různých prvků programovacího jazyka ve zdrojovém souboru v různých barvách a stylech. Pro podporu této funkce je nutné zadat analyzátor nebo skener, který může identifikovat typy lexikálních prvků nebo tokenů v souboru. Mnoho jazyků rozlišuje klíčová slova, oddělovače (například kulaté závorky nebo složené závorky) a komentáře jejich Colorizing různými způsoby.

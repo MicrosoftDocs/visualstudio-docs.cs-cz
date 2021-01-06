@@ -1,6 +1,7 @@
 ---
 title: Ladění metody OnStart | Microsoft Docs
-description: Naučte se ladit metodu OnStart služby Windows v aplikaci Visual Studio spuštěním ladicího programu zevnitř metody.
+description: Naučte se ladit metodu OnStart služby Windows v aplikaci Visual Studio – spuštěním ladicího programu zevnitř metody.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27cb5a870166e1d8909c80dc617ca16690bf6619
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: 488fe471552256e8fad62bb6f831448811ca343f
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97761404"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903139"
 ---
 # <a name="how-to-debug-the-onstart-method"></a>Postupy: Ladění metody OnStart
 Službu systému Windows můžete ladit spuštěním služby a připojením ladicího programu k procesu služby. Další informace naleznete v tématu [How to: Debug Application Service Applications](/dotnet/framework/windows-services/how-to-debug-windows-service-applications). Chcete-li však ladit <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> metodu služby systému Windows, je nutné spustit ladicí program zevnitř metody.

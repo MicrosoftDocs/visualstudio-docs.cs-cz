@@ -1,5 +1,6 @@
 ---
 title: Propojení typu obsahu s příponou názvu souboru
+description: Naučte se, jak propojit vlastní typ obsahu s příponou názvu souboru pomocí editoru Managed Extensibility Framework rozšíření v tomto návodu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,24 +12,24 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d59ae0b5eb2411ff9e41466e8b87dbe20b835ba
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 478ecc6c2238703d1cacc8e649072d669a41c590
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90034660"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877907"
 ---
 # <a name="walkthrough-link-a-content-type-to-a-file-name-extension"></a>Návod: propojení typu obsahu s příponou názvu souboru
 Můžete definovat vlastní typ obsahu a propojit s ním příponu názvu souboru pomocí rozšíření Editor Managed Extensibility Framework (MEF). V některých případech je přípona názvu souboru již definovaná jazykovou službou. Chcete-li však použít s MEF, je nutné stále propojit s typem obsahu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>Vytvořit projekt MEF
 
-1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost**a potom **projekt VSIX**.) Pojmenujte řešení `ContentTypeTest` .
+1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost** a potom **projekt VSIX**.) Pojmenujte řešení `ContentTypeTest` .
 
-2. V souboru **source. extension. vsixmanifest** klikněte na kartu **aktiva** a nastavte pole **typ** na **Microsoft. VisualStudio. MefComponent**, **zdrojové** pole na **projekt v aktuálním řešení**a pole **projekt** na název projektu.
+2. V souboru **source. extension. vsixmanifest** klikněte na kartu **aktiva** a nastavte pole **typ** na **Microsoft. VisualStudio. MefComponent**, **zdrojové** pole na **projekt v aktuálním řešení** a pole **projekt** na název projektu.
 
 ## <a name="define-the-content-type"></a>Definovat typ obsahu
 

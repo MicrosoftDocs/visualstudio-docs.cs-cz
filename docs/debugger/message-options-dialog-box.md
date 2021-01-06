@@ -1,5 +1,6 @@
 ---
 title: Dialogové okno Možnosti zprávy | Microsoft Docs
+description: Zadejte v možnostech zprávy, které zprávy jsou uvedeny v zobrazení zprávy a jaká data zprávy se mají zobrazit.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97704675e1135959744e60724e4e3381bccf2b30
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f066dd687f4bfbb6b286667abe0bb67224a7b763
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62931315"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903581"
 ---
 # <a name="message-options-dialog-box"></a>Dialogové okno možností zpráv
 Pomocí tohoto dialogového okna můžete vybrat, které zprávy se [zobrazí v zobrazení zprávy](../debugger/messages-view.md). Chcete-li zobrazit toto dialogové okno, vyberte možnost **Protokolovat zprávy** z nabídky **Spy** .

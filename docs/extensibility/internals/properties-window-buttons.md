@@ -1,5 +1,7 @@
 ---
 title: Tlačítka okna vlastností | Microsoft Docs
+description: Přečtěte si o tlačítkách zobrazených ve výchozím nastavení na panelu nástrojů pro okno Vlastnosti a o implementaci tlačítek.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aaa4db159ccb0ecf3d0e9c9243e23fcd0dacc455
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e99c362904bc40a2937c030f1ee2bb1c4d32a113
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706177"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878011"
 ---
 # <a name="properties-window-buttons"></a>Tlačítka okna Vlastnosti
-V závislosti na jazyku vývoje a typu produktu se na panelu nástrojů v okně **vlastnosti** zobrazí určitá tlačítka. Ve všech případech se zobrazí tlačítka **kategorizované**, **Abecední**, **vlastnosti**a **stránky vlastností** . V jazyce Visual C# a Visual Basic se zobrazí také tlačítko **události** . V některých Visual C++ projektech se zobrazí **zprávy VC + +** a VC – tlačítka pro **přepsání** . Další tlačítka mohou být zobrazena pro jiné typy projektů. Další informace o tlačítkách v okně **vlastnosti** naleznete v [okně Vlastnosti](../../ide/reference/properties-window.md).
+V závislosti na jazyku vývoje a typu produktu se na panelu nástrojů v okně **vlastnosti** zobrazí určitá tlačítka. Ve všech případech se zobrazí tlačítka **kategorizované**, **Abecední**, **vlastnosti** a **stránky vlastností** . V jazyce Visual C# a Visual Basic se zobrazí také tlačítko **události** . V některých Visual C++ projektech se zobrazí **zprávy VC + +** a VC – tlačítka pro **přepsání** . Další tlačítka mohou být zobrazena pro jiné typy projektů. Další informace o tlačítkách v okně **vlastnosti** naleznete v [okně Vlastnosti](../../ide/reference/properties-window.md).
 
 ## <a name="implementation-of-properties-window-buttons"></a>Implementace tlačítek okna vlastností
  Když kliknete na tlačítko **kategorizovat** , Visual Studio zavolá <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> rozhraní objektu, který má fokus na řazení vlastností podle kategorie. <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> je implementován na `IDispatch` objektu, který je zobrazen v okně **vlastnosti** .

@@ -1,5 +1,7 @@
 ---
 title: Dokončování příkazů ve službě starší verze jazyka | Microsoft Docs
+description: Přečtěte si, jak funguje dokončování příkazů a jak je implementovat ve službě starší verze jazyka ve VSPackage.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbeb360cf5bc0f74d6b2d9b93086382dd35da988
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a1534c6ba029cf47cb637e958422efeecb970f35
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704933"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877764"
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>Dokončování příkazů ve službě starší verze jazyka
 Dokončování příkazů je proces, pomocí kterého služba jazyka pomáhá uživatelům dokončit klíčové slovo jazyka nebo element, které začali psát v základním editoru. Toto téma popisuje, jak funguje dokončování příkazů a jak ho implementovat ve vaší jazykové službě.

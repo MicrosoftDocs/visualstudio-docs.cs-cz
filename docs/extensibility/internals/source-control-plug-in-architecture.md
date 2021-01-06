@@ -1,5 +1,7 @@
 ---
 title: Architektura modulu plug-in správy zdrojových kódů | Microsoft Docs
+description: Přečtěte si, jak přidat podporu správy zdrojového kódu do integrovaného vývojového prostředí sady Visual Studio implementací a připojením modulu plug-in správy zdrojového kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f549ad2c4ee456860a08fbf20ccda813934a8582
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e154e91ce552df9e54d45ea9210a0679edae5f28
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705111"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878063"
 ---
 # <a name="source-control-plug-in-architecture"></a>Architektura modulu plug-in správy zdrojového kódu
-Můžete přidat podporu správy zdrojového kódu do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE) implementací a připojením modulu plug-in správy zdrojového kódu. Rozhraní IDE se připojí k modulu plug-in správy zdrojových kódů prostřednictvím dobře definovaného rozhraní API modulu plug-in správy zdrojového kódu. Rozhraní IDE zpřístupňuje funkce správy verzí systému správy zdrojového kódu tím, že poskytuje uživatelské rozhraní (UI), které se skládá z panelů nástrojů a příkazů nabídky. Modul plug-in správy zdrojových kódů implementuje funkce správy zdrojového kódu.
+Můžete přidat podporu správy zdrojového kódu do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE) implementací a připojením modulu plug-in správy zdrojového kódu. Rozhraní IDE se připojí k modulu plug-in správy zdrojového kódu prostřednictvím dobře definovaného rozhraní API správy zdrojového kódu Plug-In. Rozhraní IDE zpřístupňuje funkce správy verzí systému správy zdrojového kódu tím, že poskytuje uživatelské rozhraní (UI), které se skládá z panelů nástrojů a příkazů nabídky. Modul plug-in správy zdrojových kódů implementuje funkce správy zdrojového kódu.
 
 ## <a name="source-control-plug-in-resources"></a>Prostředky modulu plug-in správy zdrojového kódu
  Modul plug-in správy zdrojových kódů poskytuje prostředky, které vám pomůžou vytvořit a připojit vaši aplikaci pro správu verzí k [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE. Modul plug-in správy zdrojových kódů obsahuje specifikaci rozhraní API, kterou musí implementovat modul plug-in správy zdrojových kódů, aby bylo možné je integrovat do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE). Obsahuje také ukázku kódu (napsané v jazyce C++), která implementuje modul plug-in správy zdrojových kódů demonstrující implementaci základních funkcí, které jsou kompatibilní s rozhraním API modulu plug-in správy zdrojového kódu.

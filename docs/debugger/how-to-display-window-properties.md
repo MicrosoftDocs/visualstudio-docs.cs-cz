@@ -1,5 +1,7 @@
 ---
 title: Zobrazit vlastnosti okna | Microsoft Docs
+description: Zobrazení systému Windows zobrazuje strom všech aktivních oken systému. Naučte se, jak zobrazit vlastnosti okna, které se zobrazí v zobrazení Windows.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2eed4d85d01711fedd6235a45f5e8ea3a3340ca
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 55b4a40f1dae76f2fc0aa807b7099fdd7ac928f0
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852280"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903958"
 ---
 # <a name="how-to-display-window-properties"></a>Postupy: Zobrazení vlastností okna
 Chcete-li získat další informace o okně uvedeném v [zobrazení Windows](../debugger/windows-view.md), použijte [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md).

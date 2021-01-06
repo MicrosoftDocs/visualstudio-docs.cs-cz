@@ -1,5 +1,7 @@
 ---
 title: Publikování rozšíření pomocí příkazového řádku
+description: Naučte se používat příkazový řádek k publikování rozšíření Visual Studio Marketplace, které vývojářům umožňuje vyhledat nová a aktualizovaná rozšíření.
+ms.custom: SEO-VS-2020
 ms.date: 07/12/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5108f4afa382c00376424432d2086f0494e34a03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4132d878ff1ec7689be890446a1849577fafd30
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904668"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877920"
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>Návod: publikování rozšíření sady Visual Studio prostřednictvím příkazového řádku
 
@@ -266,7 +268,7 @@ Teď, když je rozšíření publikované, nainstalujte ho v aplikaci Visual Stu
 
 2. Klikněte na **online** a vyhledejte TestPublish.
 
-3. Klikněte na tlačítko **Stáhnout**. Rozšíření bude pak naplánováno na instalaci.
+3. Klikněte na **Stáhnout**. Rozšíření bude pak naplánováno na instalaci.
 
 4. Chcete-li dokončit instalaci, zavřete všechny instance aplikace Visual Studio.
 

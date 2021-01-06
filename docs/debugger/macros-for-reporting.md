@@ -1,5 +1,7 @@
 ---
 title: Makra pro vytváření sestav | Microsoft Docs
+description: Přečtěte si o makrech ladění _RPTn a _RPTFn poskytovaných v souboru Crtdbg. H a o vytváření vlastních ladicích maker.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,20 +24,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2129db98293cef678527fb331992c6c5960d8f9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1920b4eddcbffa5cd51d548ade9af3a3a2f208d0
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731392"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903789"
 ---
 # <a name="macros-for-reporting"></a>Makra pro vytváření sestav
-Pro ladění můžete použít makra **_RPTn** a **_RPTFn** , která jsou definována v souboru Crtdbg. H, chcete-li nahradit použití `printf` příkazů. Nemusíte je nastavovat v **#ifdef**s, protože v buildu pro vydání automaticky zmizí, pokud není definován **_DEBUG** .
+Pro ladění můžete použít makra **_RPTn** a **_RPTFn** , která jsou definována v souboru Crtdbg. H, chcete-li nahradit použití `printf` příkazů. Nemusíte je nastavovat v **#ifdef** s, protože v buildu pro vydání automaticky zmizí, pokud není definován **_DEBUG** .
 
 |Podokně|Popis|
 |-----------|-----------------|
-|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3** **_RPT4**|Vytvoří výstup řetězce zprávy a 0 až čtyř argumentů. Pro _RPT1 přes **_RPT4**řetězec zprávy slouží jako formátovací řetězec ve stylu printf pro argumenty.|
-|**_RPTF0**, **_RPTF1**, **_RPTF2** **_RPTF4**|Stejné jako **_RPTn**, ale tato makra také výstupují název souboru a číslo řádku, kde je makro umístěno.|
+|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3** **_RPT4**|Vytvoří výstup řetězce zprávy a 0 až čtyř argumentů. Pro **_RPT1** přes **_RPT4** řetězec zprávy slouží jako formátovací řetězec ve stylu printf pro argumenty.|
+|**_RPTF0**, **_RPTF1**, **_RPTF2**, **_RPTF3** **_RPTF4**|Stejné jako **_RPTn**, ale tato makra také výstupují název souboru a číslo řádku, kde je makro umístěno.|
 
  Uvažujte následující příklad:
 

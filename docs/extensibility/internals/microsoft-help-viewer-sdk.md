@@ -1,5 +1,7 @@
 ---
 title: Sada Microsoft Help Viewer SDK | Microsoft Docs
+description: Přečtěte si informace o úlohách aplikace Visual Studio Help Viewer, jako je vytvoření článku, vytvoření balíčku obsahu brandingu pro aplikaci Help Viewer a nasazení sady článků.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 901a5a5eea7835720ab9d5963f0ab1be36df3685
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 9e77d06900a17aca4c2630587a45a9b144accde2
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668856"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877842"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Help Viewer SDK
 
@@ -826,7 +828,7 @@ Chcete-li tento test otestovat, jako kdyby byl nasazen:
 
 12. V integrovaném vývojovém prostředí společnosti Contoso vyberte klávesu F1 pro otestování funkcí F1.
 
-## <a name="additional-resources"></a>Další zdroje informací
+## <a name="additional-resources"></a>Další zdroje
 
 Rozhraní API pro modul runtime najdete v tématu [rozhraní API pro Windows Help](/previous-versions/windows/desktop/helpapi/helpapi-portal).
 

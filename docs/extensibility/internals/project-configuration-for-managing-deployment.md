@@ -1,5 +1,7 @@
 ---
 title: Konfigurace projektu pro správu nasazení | Microsoft Docs
+description: Seznamte se s nasazením do očekávaného umístění pro ladění a instalaci a dvou způsobů, jak Visual Studio podporuje projekty, které podporují nasazení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 62f7bf6535a89e46799ade88fe8976974b3019c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c322e320e193acd25a011cc85173c1c80e2d29d
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706700"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877985"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>Konfigurace projektu pro správu nasazení
 Nasazení je činnost fyzického přesunu výstupních položek z procesu sestavení do očekávaného umístění pro ladění a instalaci. Například webová aplikace může být postavená na místním počítači a pak umístěna na server.

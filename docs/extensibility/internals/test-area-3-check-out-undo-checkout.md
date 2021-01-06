@@ -1,5 +1,7 @@
 ---
-title: 'Testovací oblast 3: rezervace vrácení se změnami | Microsoft Docs'
+title: 'Testovací oblast 3: Kontrola registrace Out-Undo | Microsoft Docs'
+description: Tato testovací oblast modulu plug-in zdrojového ovládacího prvku pokrývá úpravy a vrácení položek z úložiště verzí pomocí příkazů rezervovat a zrušit rezervaci.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +15,14 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5365da1e342df5aea9c1b1cd2ae5a446baea57f1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6292051e6ddf11e3ce4b56648574e0207bb5a41
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704609"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877686"
 ---
-# <a name="test-area-3-check-outundo-checkout"></a>Testovací oblast 3: rezervace/zrušení rezervace
+# <a name="test-area-3-check-outundo-checkout"></a>Testovací oblast 3: Rezervace a zrušení rezervace
 Tato testovací oblast modulu plug-in zdrojového ovládacího prvku pokrývá **Úpravy a vrácení** položek z úložiště verzí prostřednictvím příkazů rezervace a **zrušení rezervace** .
 
 **Rezervovat**: označí položku v úložišti verzí jako zarezervovánou, upraví místní kopii na čtení a zápis.
@@ -35,7 +37,7 @@ Tato testovací oblast modulu plug-in zdrojového ovládacího prvku pokrývá *
 
 - **Soubor**, **Správa zdrojového kódu**, **rezervace**.
 
-- **Soubor**, **Podívejte**se.
+- **Soubor**, **Podívejte** se.
 
 - Místní nabídka se **rezervuje**.
 
@@ -60,7 +62,7 @@ Tato část se zaměřuje na fungování příkazu k rezervaci.
 |Akce|Testovací kroky|Očekávané výsledky k ověření|
 |------------|----------------|--------------------------------|
 |Rezervovat exkluzivní (COE) projekt klienta|1. Vytvořte projekt klienta.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Prohlédněte si výhradně celý projekt (**soubor**, **rezervuje**).|K rezervaci dojde.|
-|Rezervovat exkluzivně (COE) systém souborů nebo místní webový projekt služby IIS|1. Nastavte připojení webového serveru ke sdílené složce v **nabídce nástroje**, **Možnosti**, **projekty**a **Nastavení webu**.<br />2. Vytvořte webový projekt.<br />3. Přidejte řešení do správy zdrojového kódu.<br />4. Prohlédněte si výhradně celý projekt (**soubor**, Správa **zdrojového kódu**, **rezervace**).|K rezervaci dojde.|
+|Rezervovat exkluzivně (COE) systém souborů nebo místní webový projekt služby IIS|1. Nastavte připojení webového serveru ke sdílené složce v **nabídce nástroje**, **Možnosti**, **projekty** a **Nastavení webu**.<br />2. Vytvořte webový projekt.<br />3. Přidejte řešení do správy zdrojového kódu.<br />4. Prohlédněte si výhradně celý projekt (**soubor**, Správa **zdrojového kódu**, **rezervace**).|K rezervaci dojde.|
 |Rezervovat položky řešení v řešení (nová metoda pro zpracování jiných souborů)|1. Vytvořte prázdné řešení.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Podívejte se na řešení.<br />4. Přidejte několik položek řešení.<br />5. proveďte kontrolu všech nově přidaných položek.<br />6. Vyberte více položek řešení.<br />7. Podívejte se na vybrané položky (místní nabídka, **rezervuje**).|Vybrané soubory jsou rezervovány.|
 |Rezervovat místní verzi (Pokud modul plug-in v rámci testu tuto funkci podporuje)|1. uživatel 1: Vytvořte projekt klienta.<br />2. uživatel 1: přidejte řešení do správy zdrojového kódu.<br />3. uživatel 2: Otevřete řešení ze správy zdrojového kódu do jiného umístění.<br />4. uživatel 2: Podívejte se na soubor.<br />5. uživatel 2: Upravte soubor.<br />6. uživatel 2: vrácení souboru se změnami.<br />7. uživatel 1: Podívejte se na místní verzi tohoto souboru (v dialogovém okně **rezervovat** zaškrtněte možnost Upřesnit **místní verzi** ).|Místní verze souboru je rezervovaná.<br /><br /> Změny podle uživatele 2 nejsou aplikovány na soubor uživatele 1.|
 
@@ -85,7 +87,7 @@ Když se uživatel znovu připojí k úložišti verzí, budou synchronizovány 
 |Když je odpojený, podívejte se na soubor a pak se připojte k synchronizaci.|1. Odpojte řízený projekt pomocí dialogového okna změnit správu zdrojového kódu (**soubor**, Správa **zdrojového kódu**, **změnit správu zdrojového kódu**).<br />2. soubor rezervovat.<br />3. v dialogovém okně upozornění klikněte na rezervovat (odpojeno).<br />4. Upravte soubor.<br />5. Připojte se pomocí dialogového okna změnit správu zdrojového kódu.<br />6. Stáhněte si nejnovější verzi upravovaného souboru.|Obvyklé očekávané chování|
 
 ### <a name="case-3c-query-editquery-save-qeqs"></a>Případ 3C: dotaz Edit/Query Save (QEQS)
- Položky pod správou zdrojových kódů jsou sledovány pro úpravy, změny a uložení, které uživatelům umožňují snadnou správu svých souborů. Když se upraví kontrolovaná položka, která je vrácená se změnami, QEQS zachytí pokusy o úpravu a požádá uživatele, pokud chce soubor rezervovat. V závislosti na **nástrojích**nastavení **možností** je uživatel buď nuceně soubor rezervovat, aby mohl upravit nebo Povolit úpravu kopie v paměti a vrátit se změnami později. Pokud se v dialogovém okně pro **uživatele, nastavení** **Možnosti** nezobrazuje dialogové okno rezervovat a stačí ho zkontrolovat, pak se soubor automaticky rezervuje, kdykoli je to možné.
+ Položky pod správou zdrojových kódů jsou sledovány pro úpravy, změny a uložení, které uživatelům umožňují snadnou správu svých souborů. Když se upraví kontrolovaná položka, která je vrácená se změnami, QEQS zachytí pokusy o úpravu a požádá uživatele, pokud chce soubor rezervovat. V závislosti na **nástrojích** nastavení **možností** je uživatel buď nuceně soubor rezervovat, aby mohl upravit nebo Povolit úpravu kopie v paměti a vrátit se změnami později. Pokud se v dialogovém okně pro **uživatele, nastavení** **Možnosti** nezobrazuje dialogové okno rezervovat a stačí ho zkontrolovat, pak se soubor automaticky rezervuje, kdykoli je to možné.
 
 #### <a name="expected-behavior"></a>Očekávané chování
 
@@ -99,12 +101,12 @@ Když se uživatel znovu připojí k úložišti verzí, budou synchronizovány 
 
 |Akce|Testovací kroky|Očekávané výsledky k ověření|
 |------------|----------------|--------------------------------|
-|Upravit textový soubor, který je vrácen se změnami|1. Vytvořte nový projekt obsahující textový soubor.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Nastavte **nástroje**, **Možnosti**, Správa **zdrojového kódu**a **povolte úpravy souborů, když se na disku jen pro čtení** nekontrolují.<br />4. Nastavte **nástroje**, **Možnosti**, Správa **zdrojového kódu**a **vyzvat k rezervaci** v poli se seznamem **při kontrole souborů zaškrtnutoy** .<br />5. Nastavte **nástroje**, **Možnosti**, **Správa zdrojového kódu**, dotázat se na **rezervaci** v poli se seznamem **při uložení souborů se změnami** .<br />6. Otevřete textový soubor v editoru a pokuste se zadat nový text do souboru. V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />7. v dialogovém okně **rezervovat pro úpravy** klikněte na **Zrušit** . V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />8. nastavení **nástrojů**, **možností**, **správy zdrojů**, **povolených úprav souborů na disku jen pro čtení na** kontrolovaném disku.<br />9. Otevřete soubor projektu v editoru a pokuste se zadat nový text v souboru. V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />10. v dialogovém okně **rezervovat pro úpravy** klikněte na **Upravit** . V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />11. upravte textový soubor a pokuste se ho uložit.|`Result of step 6:`<br /><br /> Zobrazí se dialogové okno rezervovat pro úpravy.<br /><br /> `Result of step 7:`<br /><br /> Soubor je beze změny.<br /><br /> `Result of step 9:`<br /><br /> Zobrazí se dialogové okno rezervovat pro úpravy.<br /><br /> `Result of step 10:`<br /><br /> Soubor projektu můžete upravit v paměti.<br /><br /> `Result of step 11:`<br /><br /> Při uložení se zobrazí dialogové okno rezervovat při uložení.|
+|Upravit textový soubor, který je vrácen se změnami|1. Vytvořte nový projekt obsahující textový soubor.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Nastavte **nástroje**, **Možnosti**, Správa **zdrojového kódu** a **povolte úpravy souborů, když se na disku jen pro čtení** nekontrolují.<br />4. Nastavte **nástroje**, **Možnosti**, Správa **zdrojového kódu** a **vyzvat k rezervaci** v poli se seznamem **při kontrole souborů zaškrtnutoy** .<br />5. Nastavte **nástroje**, **Možnosti**, **Správa zdrojového kódu**, dotázat se na **rezervaci** v poli se seznamem **při uložení souborů se změnami** .<br />6. Otevřete textový soubor v editoru a pokuste se zadat nový text do souboru. V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />7. v dialogovém okně **rezervovat pro úpravy** klikněte na **Zrušit** . V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />8. nastavení **nástrojů**, **možností**, **správy zdrojů**, **povolených úprav souborů na disku jen pro čtení na** kontrolovaném disku.<br />9. Otevřete soubor projektu v editoru a pokuste se zadat nový text v souboru. V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />10. v dialogovém okně **rezervovat pro úpravy** klikněte na **Upravit** . V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />11. upravte textový soubor a pokuste se ho uložit.|`Result of step 6:`<br /><br /> Zobrazí se dialogové okno rezervovat pro úpravy.<br /><br /> `Result of step 7:`<br /><br /> Soubor je beze změny.<br /><br /> `Result of step 9:`<br /><br /> Zobrazí se dialogové okno rezervovat pro úpravy.<br /><br /> `Result of step 10:`<br /><br /> Soubor projektu můžete upravit v paměti.<br /><br /> `Result of step 11:`<br /><br /> Při uložení se zobrazí dialogové okno rezervovat při uložení.|
 |Upravit soubor řešení, který je vrácen se změnami|Opakujte kroky popsané v předchozím testu, ale místo úprav textového souboru upravte řešení změnou vlastností řešení.|Stejné jako předchozí test|
 |Upravit soubor projektu, který je vrácen se změnami|Opakujte kroky popsané v předchozím testu, ale místo úprav textového souboru upravte projekt změnou vlastností projektu.|Stejné jako předchozí test.|
 
 ### <a name="case-3d-silent-check-out"></a>Případ 3D: tichá rezervace
- Tato podoblast pokrývá scénáře, ve kterých se dialogové okno **rezervace** nezobrazí pro jednotlivé **nástroje**uživatele, **Možnosti**, **Nastavení správy zdrojového kódu**.
+ Tato podoblast pokrývá scénáře, ve kterých se dialogové okno **rezervace** nezobrazí pro jednotlivé **nástroje** uživatele, **Možnosti**, **Nastavení správy zdrojového kódu**.
 
 #### <a name="expected-behavior"></a>Očekávané chování
 

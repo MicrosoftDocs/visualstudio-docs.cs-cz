@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Vlastnosti zprávy | Microsoft Docs
+description: Další informace o zprávě, která se zobrazuje v zobrazení zprávy, najdete ve vlastnostech zprávy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f590f40e4e3361f4dbeb46a3a9b8758b8ab5075
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f58ad7344c7de9a9486fcb3ccefbf263688926f
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62846112"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903061"
 ---
 # <a name="message-properties-dialog-box"></a>Dialogové okno vlastností zpráv
 Pomocí tohoto dialogového okna můžete získat další informace o konkrétní zprávě. Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno [zobrazení zpráv](../debugger/messages-view.md) . Ve stromové struktuře vyberte libovolný uzel zprávy a potom v nabídce **zobrazení** zvolte možnost **vlastnosti** .

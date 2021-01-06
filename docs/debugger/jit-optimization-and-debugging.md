@@ -1,5 +1,7 @@
 ---
 title: Optimalizace a ladění JIT | Microsoft Docs
+description: Kód, který je optimalizován, je obtížnější ladit než kód, který není. Přečtěte si o optimalizaci JIT a o tom, kdy a jak ji potlačit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae11860aaa64448cd4d23b5602cf4c2da1575ce3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 66f63c7232b52ebe849722147e007ab70527c311
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916229"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903919"
 ---
 # <a name="jit-optimization-and-debugging"></a>Optimalizace a ladění JIT
 Pokud se pokoušíte ladit kód, je snazší, **Pokud není tento kód optimalizován.** Když je kód optimalizován, kompilátor a modul runtime provádí změny ve vygenerovaném kódu procesoru, aby běžely rychleji, ale má méně přímé mapování na původní zdrojový kód. Pokud mapování je méně přímé, ladicí program často nemůže sdělit hodnotu místních proměnných a krokování kódu a zarážky nemusí fungovat podle očekávání.
@@ -37,7 +39,7 @@ V ekosystému .NET se kód přepíná ze zdroje na PROCESORové instrukce v proc
 ## <a name="the-suppress-jit-optimization-on-module-load-managed-only-option"></a>Možnost potlačit optimalizaci JIT při načtení modulu (pouze spravované)
 Ladicí program zpřístupňuje možnost, která určuje, co se stane, když je knihovna DLL, která je zkompilována s povolenými optimalizacemi, načtena uvnitř cílového procesu. Pokud tato možnost není zaškrtnuta (výchozí stav), pak pokud modul runtime .NET zkompiluje kód jazyka MSIL do kódu procesoru, ponechá optimalizace zapnuté. Pokud je tato možnost zaškrtnutá, ladicí program požaduje, aby byly optimalizace zakázané.
 
-Chcete-li najít možnost **potlačit optimalizaci JIT při načtení modulu (pouze spravované)** , vyberte **Tools**  >  **Možnosti**nástrojů a pak vyberte stránku **Obecné** pod uzlem **ladění** .
+Chcete-li najít možnost **potlačit optimalizaci JIT při načtení modulu (pouze spravované)** , vyberte   >  **Možnosti** nástrojů a pak vyberte stránku **Obecné** pod uzlem **ladění** .
 
 ![Potlačit optimalizaci JIT](../debugger/media/suppress-jit-tool-options.png "Potlačit optimalizaci JIT")
 
@@ -59,8 +61,8 @@ Při zapnutí této možnosti **nebudou fungovat dvě** situace:
     > Pokud cílíte .NET Framework nebo starší verze .NET Core (2. x nebo nižší), přidejte taky proměnnou prostředí COMPlus_ZapDisable a nastavte ji na 1.
 
     **Nastavení proměnné prostředí pro projekt .NET Core v sadě Visual Studio:**
-    1. V **Průzkumník řešení**klikněte **pravým tlačítkem myši na** soubor projektu a vyberte možnost **vlastnosti**.
-    2. Přejděte na kartu **ladění** a v části **proměnné prostředí**klikněte na tlačítko **Přidat** .
+    1. V **Průzkumník řešení** klikněte **pravým tlačítkem myši na** soubor projektu a vyberte možnost **vlastnosti**.
+    2. Přejděte na kartu **ladění** a v části **proměnné prostředí** klikněte na tlačítko **Přidat** .
     3. Nastavte název (klíč) na **COMPlus_ReadyToRun** a nastavte hodnotu na **0**.
 
     ![Nastavit COMPlus_ReadyToRun proměnnou prostředí](../debugger/media/environment-variables-debug-menu.png "Nastavit COMPlus_ReadyToRun proměnnou prostředí")

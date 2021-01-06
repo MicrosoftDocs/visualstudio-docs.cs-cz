@@ -1,5 +1,7 @@
 ---
 title: Zobrazení mřížky vlastností | Microsoft Docs
+description: Zjistěte, kde se v mřížce v okno Vlastnosti nachází pole názvy vlastností a hodnoty vlastností a jak pracovat s mřížkou v části rozšíření vlastností.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d094c32ba8a64fc636f3fb6dfb2944dc3955628a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 418501ada340614d084e9796a59a46f8612aa743
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706192"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878024"
 ---
 # <a name="properties-display-grid"></a>Zobrazit mřížku vlastností
 
@@ -29,7 +31,7 @@ Seznam se dvěma sloupci zobrazuje vlastnosti nezávislé na konfiguraci, které
 
 2. Nastavte `pfHide` parametr v <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> na `TRUE` .
 
-Chcete-li odeslat informace do okna **vlastnosti** , rozhraní IDE používá <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> . <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> je volána rozhraními VSPackage pro každé okno, které obsahuje objekty, které lze vybrat, aby se zobrazily v okně **vlastnosti** . **Průzkumník řešení**implementace <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> volání `GetProperty` pomocí [__VSHPROPID. VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) v hierarchii projektu získat objekty, které lze procházet v hierarchii.
+Chcete-li odeslat informace do okna **vlastnosti** , rozhraní IDE používá <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> . <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> je volána rozhraními VSPackage pro každé okno, které obsahuje objekty, které lze vybrat, aby se zobrazily v okně **vlastnosti** . **Průzkumník řešení** implementace <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> volání `GetProperty` pomocí [__VSHPROPID. VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) v hierarchii projektu získat objekty, které lze procházet v hierarchii.
 
 Pokud VSPackage nepodporuje [__VSHPROPID. VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>)se IDE pokusí použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> hodnotu [__VSHPROPID. VSHPROPID_SelContainer](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_SelContainer>) , že položka hierarchie nebo položky jsou dodávány.
 

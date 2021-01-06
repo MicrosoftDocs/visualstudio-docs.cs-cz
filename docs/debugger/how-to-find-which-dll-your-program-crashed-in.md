@@ -1,5 +1,7 @@
 ---
 title: Najít knihovnu DLL, ve které došlo k chybě programu | Microsoft Docs
+description: Pomocí okna moduly určete, která externí knihovna DLL byla aktivní, když došlo k chybě vaší aplikace. Můžete to provést pro systémovou knihovnu DLL nebo pro kód někoho jiného.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4432378e10590c2ba930edf0920b9146e450f96
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 6eacc8865b3f531df8651ad77d99b319278e6cd1
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852071"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903387"
 ---
 # <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Postupy: hledání knihovny DLL, ve které došlo k chybě programu (C#, C++, Visual Basic, F #)
 
@@ -39,7 +41,7 @@ ms.locfileid: "90852071"
 
     Pokud adresa není zobrazená v chybové zprávě, možná budete muset použít alternativní metody k identifikaci knihovny DLL. Pokud se domníváte, že systémová knihovna DLL, můžete při ladění [načíst symboly](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) ze serverů symbolů společnosti Microsoft. V opačném případě možná budete muset místo toho [vytvořit soubor s výpisem paměti](../debugger/using-dump-files.md) s informacemi o haldě. K dispozici jsou různé [nástroje](https://blogs.msdn.microsoft.com/andrehal/2009/12/31/what-is-a-dump-and-how-do-i-create-one/) pro vytváření souborů s výpisem paměti.
 
-2. V nabídce **ladění** vyberte možnost **Windows**a klikněte na **moduly**.
+2. V nabídce **ladění** vyberte možnost **Windows** a klikněte na **moduly**.
 
 3. V okně **moduly** Najděte sloupec **adresa** . Možná budete muset použít posuvník, abyste ho viděli.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Návod: zobrazení návrhů na žárovku | Microsoft Docs'
+description: Naučte se, jak vytvořit žárovku v editoru sady Visual Studio, který se zobrazí na aktuálním slově a má dvě navrhované akce pomocí tohoto návodu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
@@ -8,17 +10,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 86412b82b291ee395b35d654d3cde6d326e956f0
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 8d8d498c1d9a5e5142672bcd561ac0749bbf8d75
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508948"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877959"
 ---
 # <a name="walkthrough-display-light-bulb-suggestions"></a>Návod: zobrazení návrhů žárovky
 Žárovky jsou ikony v editoru sady Visual Studio, které se rozbalí k zobrazení sady akcí, například opravy pro problémy identifikované vestavěnými analyzátory kódu nebo refaktoringu kódu.
 
- V editorech Visual C# a Visual Basic můžete také pomocí .NET Compiler Platform ("Roslyn") zapisovat a zabalit vlastní analyzátory kódu s akcemi, které automaticky zobrazují žárovky. Další informace naleznete v tématu:
+ V editorech Visual C# a Visual Basic můžete také pomocí .NET Compiler Platform ("Roslyn") zapisovat a zabalit vlastní analyzátory kódu s akcemi, které automaticky zobrazují žárovky. Další informace najdete tady:
 
 - [Postupy: zápis diagnostiky kódu a opravy kódu v jazyce C#](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix.md)
 
@@ -41,7 +43,7 @@ ms.locfileid: "89508948"
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Vytvořit projekt Managed Extensibility Framework (MEF)
 
-1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost**a potom **projekt VSIX**.) Pojmenujte řešení `LightBulbTest` .
+1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost** a potom **projekt VSIX**.) Pojmenujte řešení `LightBulbTest` .
 
 2. Přidejte do projektu šablonu položky **klasifikátoru editoru** . Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 
@@ -222,8 +224,8 @@ ms.locfileid: "89508948"
 2. Vytvořte dvě třídy, první pojmenovaný `UpperCaseSuggestedAction` a druhý s názvem `LowerCaseSuggestedAction` . Obě třídy implementují <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> .
 
     ```csharp
-    internal class UpperCaseSuggestedAction : ISuggestedAction
-    internal class LowerCaseSuggestedAction : ISuggestedAction
+    internal class UpperCaseSuggestedAction : ISuggestedAction
+    internal class LowerCaseSuggestedAction : ISuggestedAction
     ```
 
      Obě třídy jsou podobné s tím rozdílem, že jedno volání <xref:System.String.ToUpper%2A> a další volání <xref:System.String.ToLower%2A> . Následující postup pokrývá pouze velké třídy akcí, ale je nutné implementovat obě třídy. Použijte postup pro implementaci velkých a malých písmen jako vzor pro implementaci akce s malými písmeny.
@@ -243,8 +245,8 @@ ms.locfileid: "89508948"
 
     ```csharp
     private ITrackingSpan m_span;
-    private string m_upper;
-    private string m_display;
+    private string m_upper;
+    private string m_display;
     private ITextSnapshot m_snapshot;
     ```
 
@@ -288,7 +290,7 @@ ms.locfileid: "89508948"
     {
         get { return false; }
     }
-    public string DisplayText
+    public string DisplayText
     {
         get { return m_display; }
     }
@@ -319,7 +321,7 @@ ms.locfileid: "89508948"
 9. Implementujte <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A> metodu tak, že nahradíte text v rozpětí velkými ekvivalenty.
 
     ```csharp
-    public void Invoke(CancellationToken cancellationToken)
+    public void Invoke(CancellationToken cancellationToken)
     {
         m_span.TextBuffer.Replace(m_span.GetSpan(m_snapshot), m_upper);
     }

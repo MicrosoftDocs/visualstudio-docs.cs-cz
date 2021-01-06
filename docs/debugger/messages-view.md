@@ -1,5 +1,7 @@
 ---
 title: Zobrazení zpráv | Microsoft Docs
+description: Každé okno, vlákno a proces má přidružený datový proud zpráv, který lze zobrazit v okně zobrazení zpráv. Naučte se, jak otevřít a řídit zobrazení zpráv.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b20ed28518c9156e82c6fe75ecceda74c66615d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 692902b2d2b612c71c2d1dc0f936c7550f430847
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62845846"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903400"
 ---
 # <a name="messages-view"></a>Zobrazení zpráv
 Každé okno má přidružený datový proud zprávy. Tento datový proud zpráv se zobrazí v okně zobrazení zpráv. Zobrazí se popisovač okna, kód zprávy a zpráva. Můžete také vytvořit zobrazení zpráv pro vlákno nebo proces. To vám umožní zobrazit zprávy odesílané do všech oken vlastněných konkrétním procesem nebo vláknem, což je zvláště užitečné při zachytávání inicializačních zpráv oken.

@@ -13,12 +13,12 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: ba95e15be083e0bb1274e01a986f4139d9443240
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 1f8cbe1629aab6a177a46888fe25cf8e3565d91d
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94341635"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903750"
 ---
 # <a name="get-started-with-visual-studio-and-unity"></a>Začínáme se sadou Visual Studio a Unity
 
@@ -34,7 +34,7 @@ Visual Studio Tools for Unity je bezplatné rozšíření, které poskytuje podp
 > [!NOTE]
 > Tato instalační příručka je určena pro Visual Studio. Pokud používáte Visual Studio Code, navštivte prosím [vývoj Unity s vs Code dokumentaci](https://code.visualstudio.com/docs/other/unity).
 
-1. [Stáhněte si instalační program sady Visual Studio](/docs/install/install-visual-studio.md)nebo ho spusťte, pokud už je nainstalovaný.
+1. [Stáhněte si instalační program sady Visual Studio](/visualstudio/docs/install/install-visual-studio.md)nebo ho spusťte, pokud už je nainstalovaný.
 2. Klikněte na **Upravit** (Pokud je už nainstalovaný) nebo **nainstalujte** (pro nové instalace) pro požadovanou verzi sady Visual Studio.
 3. Na kartě **úlohy** přejděte do části **hry** a vyberte úlohu **vývoj her pomocí Unity** .
 

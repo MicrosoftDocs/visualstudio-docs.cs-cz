@@ -1,5 +1,7 @@
 ---
 title: Just-in-time, ladění, dialogové okno možností | Microsoft Docs
+description: Ladění za běhu umožňuje ladit programy, které se spouštějí mimo aplikaci Visual Studio. Naučte se povolit ladění za běhu pro různé typy programů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c27ec66c8165995c6877b9a9e65802813140c7f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b346cfdae8671f8f647d41065d5793184fefd3fb
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731613"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903867"
 ---
 # <a name="just-in-time-debugging-options-dialog-box"></a>Za běhu, ladění, dialogové okno Možnosti
 Chcete-li získat přístup **ke stránce za běhu,** přejděte do nabídky **nástroje** a klikněte na **Možnosti**. V dialogovém okně **Možnosti** rozbalte uzel **ladění** a vyberte možnost **za běhu**. Tato stránka umožňuje povolit ladění za běhu pro spravovaný kód, nativní kód a skript. Další informace naleznete v tématu [ladění za běhu](../debugger/just-in-time-debugging-in-visual-studio.md).

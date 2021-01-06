@@ -1,5 +1,7 @@
 ---
 title: 'Testovací oblast 2: získat ze správy zdrojového kódu | Microsoft Docs'
+description: Tato testovací oblast pokrývá testovací případy pro načítání položek z úložiště verzí s get. Tyto testovací případy lze použít pro místní i pro webové projekty.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c213e2774730596db8b8e4f2d0691472495222e7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98ed765f78a9e7330e5e1d3864c8a91b63239a3f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704602"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877699"
 ---
 # <a name="test-area-2-get-from-source-control"></a>Testovací oblast 2: Získání ze správy zdrojového kódu
 Tato testovací oblast pokrývá testovací případy pro načítání položek z úložiště verzí pomocí příkazu Get. Tyto testovací případy lze použít pro místní i pro webové projekty.

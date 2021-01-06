@@ -1,5 +1,7 @@
 ---
 title: Karta paměť, dialogové okno vlastností procesu | Microsoft Docs
+description: Pomocí karty paměť ve vlastnostech procesu můžete zobrazit, jak proces používá paměť. K dispozici jsou informace o využitém prostoru, sdíleném prostoru a virtuálním prostoru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bdfc2740094c807818922f09ca3fef0a21c9e1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 10fd47127abfd9cc476ed7029edd0dbbeb5501de
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62931282"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903724"
 ---
 # <a name="memory-tab-process-properties-dialog-box"></a>Karta Paměť, dialogové okno vlastností procesu
 Pomocí karty **paměť** můžete zobrazit, jak proces používá paměť. Chcete-li zobrazit [dialogové okno Vlastnosti procesu](../debugger/process-properties-dialog-box.md), přesuňte fokus do okna [zobrazení procesů](../debugger/processes-view.md) . Ve stromové struktuře vyberte libovolný uzel procesu a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .

@@ -1,5 +1,7 @@
 ---
 title: Kódy zpráv | Microsoft Docs
+description: Naučte se význam kódů zpráv zobrazených na jednotlivých řádcích zpráv v zobrazení zpráv.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c09245056bf7e947985bfa55dc9cc4a3a96b8cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4b836a5d4c1faad6b4c0375e2ec51d759816889
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62846270"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903607"
 ---
 # <a name="message-codes"></a>Kódy zpráv
 Každá čára zprávy zobrazená v [zobrazení zprávy](../debugger/messages-view.md) obsahuje kód P, 's, ', ' nebo R '. Tyto kódy mají následující význam:

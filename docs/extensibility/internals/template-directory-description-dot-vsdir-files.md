@@ -1,5 +1,7 @@
 ---
 title: Popis adresáře šablon (. Soubory VSDIR) | Microsoft Docs
+description: Přečtěte si, jak soubor popisu adresáře šablon umožňuje prostředí Visual Studio IDE zobrazovat složky, soubory. vsz a šablony, které jsou přidružené k vašemu projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16ba609d5b05d565a12b38bd19e9a777851ced5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: edc4b4bcfe1ac1a85524517ba467e207a792e3cd
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704692"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877725"
 ---
 # <a name="template-directory-description-vsdir-files"></a>Soubory popisu adresáře šablon (.Vsdir)
 Soubor popisu adresáře šablon (. vsdir) je textový soubor, který umožňuje integrované vývojové prostředí (IDE) zobrazovat složky, soubory s příponou. vsz a soubory šablon přidružené k vašemu projektu v dialogových oknech. Obsah zahrnuje jeden záznam na soubor nebo složku. Všechny soubory. vsdir v odkazovaném umístění jsou sloučeny, i když je obecně k dispozici pouze jeden soubor. vsdir, který popisuje více složek, průvodců nebo souborů šablon.

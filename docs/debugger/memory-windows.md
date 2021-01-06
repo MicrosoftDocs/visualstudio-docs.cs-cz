@@ -1,6 +1,7 @@
 ---
 title: Zobrazit paměť pro proměnné v ladicím programu | Microsoft Docs
-ms.custom: ''
+description: Naučte se při ladění používat paměťová okna, abyste viděli místo v paměti, které vaše aplikace používá. Ostatní okna zobrazují proměnné a místa, kde se nacházejí v paměti.
+ms.custom: SEO-VS-2020
 ms.date: 10/04/2018
 ms.topic: how-to
 f1_keywords:
@@ -24,18 +25,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51070e06f684c2e873ded76ec8797ed7587745ff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c39024e32c899310b88c1b0583d5b292b063937
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348317"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903104"
 ---
 # <a name="use-the-memory-windows-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Použít paměťová okna v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F #)
 
 Během ladění zobrazuje okno **paměť** místo v paměti, které vaše aplikace používá.
 
-Okna ladicího programu, jako jsou **kukátko**, **Automatické**hodnoty, **místní**hodnoty a dialog **QuickWatch** , zobrazují proměnné, které jsou uloženy v určitých umístěních v paměti. V okně **paměť** se zobrazí celkový obrázek. Zobrazení paměti je výhodné pro zkoumání velkých částí dat (například vyrovnávacích pamětí nebo velkých řetězců), které se v ostatních oknech nezobrazují dobře.
+Okna ladicího programu, jako jsou **kukátko**, **Automatické** hodnoty, **místní** hodnoty a dialog **QuickWatch** , zobrazují proměnné, které jsou uloženy v určitých umístěních v paměti. V okně **paměť** se zobrazí celkový obrázek. Zobrazení paměti je výhodné pro zkoumání velkých částí dat (například vyrovnávacích pamětí nebo velkých řetězců), které se v ostatních oknech nezobrazují dobře.
 
 Okno **paměti** není omezené na zobrazení dat. Zobrazuje vše v paměťovém prostoru, včetně dat, kódu a náhodných bitů paměti v nepřiřazené paměti.
 
@@ -46,15 +47,15 @@ Okno **paměti** není k dispozici pro ladění skriptů nebo SQL. Tyto jazyky n
 Stejně jako ostatní okna ladicího programu jsou **paměťová** okna dostupná pouze během relace ladění.
 
 >[!IMPORTANT]
->Chcete-li povolit okna **paměti** , **Povolte ladění na úrovni adres** , které je **Tools**nutné vybrat v  >  **možnostech** nástrojů (nebo **Debug**  >  **Možnosti**ladění) > **Debugging**  >  **Obecné**ladění.
+>Chcete-li povolit okna **paměti** , **Povolte ladění na úrovni adres** , které je nutné vybrat v  >  **možnostech** nástrojů (nebo   >  **Možnosti** ladění) >   >  **Obecné** ladění.
 
 **Otevření okna paměti**
 
-1. Ujistěte se, že je vybrána možnost **Povolit ladění na úrovni adresy** v **Tools**  >  **možnostech** nástrojů (nebo **Debug**  >  **Možnosti**ladění) > **Debugging**  >  **Obecné**ladění.
+1. Ujistěte se, že je vybrána možnost **Povolit ladění na úrovni adresy** v   >  **možnostech** nástrojů (nebo   >  **Možnosti** ladění) >   >  **Obecné** ladění.
 
 1. Spusťte ladění tak, že vyberete zelenou šipku, stisknete klávesu **F5** **nebo vyberete ladění**  >  **Spustit ladění**.
 
-2. V části **ladit**  >  **Windows**  >  **paměť**Windows vyberte **paměť 1**, **paměť 2**, **paměť 3**nebo **paměť 4**. (Některé edice [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nabídky nabízí jenom jedno okno **paměti** .)
+2. V části **ladit**  >    >  **paměť** Windows vyberte **paměť 1**, **paměť 2**, **paměť 3** nebo **paměť 4**. (Některé edice [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nabídky nabízí jenom jedno okno **paměti** .)
 
 ## <a name="move-around-in-the-memory-window"></a>Pohyb v okně paměti
 
@@ -76,7 +77,7 @@ Ve výchozím nastavení okno **paměti** zpracovává výrazy **adres** jako ž
 
 **Pokud se chcete přesunout do umístění paměti tím, že ho zadáte do pole Adresa:**
 
-- Zadejte nebo vložte adresu nebo výraz do pole **adresa** a stiskněte klávesu **ENTER**nebo vyberte v rozevíracím seznamu v poli **adresa** . Okno **paměť** se upraví tak, aby se zobrazila adresa v horní části.
+- Zadejte nebo vložte adresu nebo výraz do pole **adresa** a stiskněte klávesu **ENTER** nebo vyberte v rozevíracím seznamu v poli **adresa** . Okno **paměť** se upraví tak, aby se zobrazila adresa v horní části.
 
 ## <a name="customize-the-memory-window"></a>Přizpůsobení okna paměti
 

@@ -1,5 +1,6 @@
 ---
 title: Použití příkazu shell s rozšířením editoru
+description: Naučte se, jak přidat Doplňky do zobrazení textu v editoru vyvoláním příkazu nabídky. Z VSPackage můžete přidat funkce, jako jsou příkazy nabídky, do editoru.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,19 +12,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33886b170a8e0138a199f5d7cb51467875c8c3c5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 38d855ebe34c54d06159ecd958a8b1d31ae0131f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037468"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877816"
 ---
 # <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>Návod: použití příkazu shell s rozšířením editoru
 Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabídky. Tento návod ukazuje, jak přidat Doplňky do zobrazení textu v editoru vyvoláním příkazu nabídky.
 
  Tento návod ukazuje použití VSPackage společně s částí komponenty Managed Extensibility Framework (MEF). K registraci příkazu nabídky v prostředí sady Visual Studio je nutné použít VSPackage. A můžete použít příkaz pro přístup k části komponenty MEF.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-an-extension-with-a-menu-command"></a>Vytvoření rozšíření pomocí příkazu nabídky
@@ -39,7 +40,7 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 
 ## <a name="add-a-mef-extension-to-the-command-extension"></a>Přidat rozšíření MEF do rozšíření příkazu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení, klikněte na položku **Přidat**a poté klikněte na možnost **Nový projekt**. V dialogovém okně **Přidat nový projekt** klikněte na **rozšiřitelnost** v části **Visual C#** a pak na **projekt VSIX**. Pojmenujte projekt `CommentAdornmentTest` .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel řešení, klikněte na položku **Přidat** a poté klikněte na možnost **Nový projekt**. V dialogovém okně **Přidat nový projekt** klikněte na **rozšiřitelnost** v části **Visual C#** a pak na **projekt VSIX**. Pojmenujte projekt `CommentAdornmentTest` .
 
 2. Vzhledem k tomu, že tento projekt bude pracovat se sestavením VSPackage se silným názvem, je nutné sestavení podepsat. Můžete znovu použít soubor klíče, který již byl vytvořen pro sestavení VSPackage.
 
@@ -47,7 +48,7 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 
     2. Vyberte **podepsat sestavení**.
 
-    3. V části **zvolit soubor klíče se silným názvem**vyberte soubor *Key. snk* , který byl vygenerován pro sestavení MenuCommandTest.
+    3. V části **zvolit soubor klíče se silným názvem** vyberte soubor *Key. snk* , který byl vygenerován pro sestavení MenuCommandTest.
 
 ## <a name="refer-to-the-mef-extension-in-the-vspackage-project"></a>Odkaz na rozšíření MEF v projektu VSPackage
  Vzhledem k tomu, že přidáváte komponentu MEF do balíčku VSPackage, je nutné v manifestu zadat oba druhy prostředků.
@@ -71,7 +72,7 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 
 7. Ujistěte se, že projekt MenuCommandTest má odkaz na projekt CommentAdornmentTest.
 
-8. V projektu CommentAdornmentTest nastavte projekt tak, aby vytvořil sestavení. V **Průzkumník řešení**vyberte projekt a v okně **vlastnosti** vyhledejte vlastnost **Kopírovat výstup sestavení do vlastnosti OutputDirectory** a nastavte ji na **hodnotu true**.
+8. V projektu CommentAdornmentTest nastavte projekt tak, aby vytvořil sestavení. V **Průzkumník řešení** vyberte projekt a v okně **vlastnosti** vyhledejte vlastnost **Kopírovat výstup sestavení do vlastnosti OutputDirectory** a nastavte ji na **hodnotu true**.
 
 ## <a name="define-a-comment-adornment"></a>Definování přívylepšení komentářů
  Vlastní označení komentáře se skládá z objektu <xref:Microsoft.VisualStudio.Text.ITrackingSpan> , který sleduje vybraný text, a některých řetězců, které reprezentují autor a popis textu.
@@ -109,7 +110,7 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 4. Soubor by měl obsahovat třídu s názvem `CommentAdornment` .
 
     ```csharp
-    internal class CommentAdornment
+    internal class CommentAdornment
     ```
 
 5. Přidejte tři pole do `CommentAdornment` třídy pro <xref:Microsoft.VisualStudio.Text.ITrackingSpan> , autora a popis.
@@ -162,9 +163,9 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
     ```csharp
     private Geometry textGeometry;
     private Grid commentGrid;
-    private static Brush brush;
-    private static Pen solidPen;
-    private static Pen dashPen;
+    private static Brush brush;
+    private static Pen solidPen;
+    private static Pen dashPen;
     ```
 
 5. Přidejte konstruktor definující dodatečnou hodnotu komentáře a přidejte příslušný text.
@@ -239,7 +240,7 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 6. Také implementujte <xref:System.Windows.Controls.Panel.OnRender%2A> obslužnou rutinu události, která kreslí doplňky.
 
     ```csharp
-    protected override void OnRender(DrawingContext dc)
+    protected override void OnRender(DrawingContext dc)
     {
         base.OnRender(dc);
         if (this.textGeometry != null)
@@ -276,7 +277,7 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 4. Implementujte <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> metodu tak, aby volala statickou `Create()` událost `CommentAdornmentManager` .
 
     ```csharp
-    public void TextViewCreated(IWpfTextView textView)
+    public void TextViewCreated(IWpfTextView textView)
     {
         CommentAdornmentManager.Create(textView);
     }
@@ -285,16 +286,16 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 5. Přidejte metodu, kterou můžete použít ke spuštění příkazu.
 
     ```csharp
-    static public void Execute(IWpfTextViewHost host)
+    static public void Execute(IWpfTextViewHost host)
     {
         IWpfTextView view = host.TextView;
-        //Add a comment on the selected text. 
+        //Add a comment on the selected text. 
         if (!view.Selection.IsEmpty)
         {
             //Get the provider for the comment adornments in the property bag of the view.
             CommentAdornmentProvider provider = view.Properties.GetProperty<CommentAdornmentProvider>(typeof(CommentAdornmentProvider));
 
-            //Add some arbitrary author and comment text. 
+            //Add some arbitrary author and comment text. 
             string author = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             string comment = "Four score....";
 
@@ -356,7 +357,7 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
     private CommentAdornmentProvider(ITextBuffer buffer)
     {
         this.buffer = buffer;
-        //listen to the Changed event so we can react to deletions. 
+        //listen to the Changed event so we can react to deletions. 
         this.buffer.Changed += OnBufferChanged;
     }
 
@@ -365,9 +366,9 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 6. Přidejte `Create()` metodu.
 
     ```csharp
-    public static CommentAdornmentProvider Create(IWpfTextView view)
+    public static CommentAdornmentProvider Create(IWpfTextView view)
     {
-        return view.Properties.GetOrCreateSingletonProperty<CommentAdornmentProvider>(delegate { return new CommentAdornmentProvider(view.TextBuffer); });
+        return view.Properties.GetOrCreateSingletonProperty<CommentAdornmentProvider>(delegate { return new CommentAdornmentProvider(view.TextBuffer); });
     }
 
     ```
@@ -375,11 +376,11 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 7. Přidejte `Detach()` metodu.
 
     ```csharp
-    public void Detach()
+    public void Detach()
     {
         if (this.buffer != null)
         {
-            //remove the Changed listener 
+            //remove the Changed listener 
             this.buffer.Changed -= OnBufferChanged;
             this.buffer = null;
         }
@@ -394,25 +395,25 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 9. Přidejte deklaraci pro `CommentsChanged` událost.
 
     ```csharp
-    public event EventHandler<CommentsChangedEventArgs> CommentsChanged;
+    public event EventHandler<CommentsChangedEventArgs> CommentsChanged;
     ```
 
 10. Vytvořte `Add()` metodu pro přidání vylepšení.
 
     ```csharp
-    public void Add(SnapshotSpan span, string author, string text)
+    public void Add(SnapshotSpan span, string author, string text)
     {
         if (span.Length == 0)
-            throw new ArgumentOutOfRangeException("span");
+            throw new ArgumentOutOfRangeException("span");
         if (author == null)
-            throw new ArgumentNullException("author");
+            throw new ArgumentNullException("author");
         if (text == null)
-            throw new ArgumentNullException("text");
+            throw new ArgumentNullException("text");
 
         //Create a comment adornment given the span, author and text.
         CommentAdornment comment = new CommentAdornment(span, author, text);
 
-        //Add it to the list of comments. 
+        //Add it to the list of comments. 
         this.comments.Add(comment);
 
         //Raise the changed event.
@@ -426,19 +427,19 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 11. Přidejte `RemoveComments()` metodu.
 
     ```csharp
-    public void RemoveComments(SnapshotSpan span)
+    public void RemoveComments(SnapshotSpan span)
     {
         EventHandler<CommentsChangedEventArgs> commentsChanged = this.CommentsChanged;
 
         //Get a list of all the comments that are being kept
         IList<CommentAdornment> keptComments = new List<CommentAdornment>(this.comments.Count);
 
-        foreach (CommentAdornment comment in this.comments)
+        foreach (CommentAdornment comment in this.comments)
         {
-            //find out if the given span overlaps with the comment text span. If two spans are adjacent, they do not overlap. To consider adjacent spans, use IntersectsWith. 
+            //find out if the given span overlaps with the comment text span. If two spans are adjacent, they do not overlap. To consider adjacent spans, use IntersectsWith. 
             if (comment.Span.GetSpan(span.Snapshot).OverlapsWith(span))
             {
-                //Raise the change event to delete this comment. 
+                //Raise the change event to delete this comment. 
                 if (commentsChanged != null)
                     commentsChanged(this, new CommentsChangedEventArgs(null, comment));
             }
@@ -456,24 +457,24 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
     public Collection<CommentAdornment> GetComments(SnapshotSpan span)
     {
         IList<CommentAdornment> overlappingComments = new List<CommentAdornment>();
-        foreach (CommentAdornment comment in this.comments)
+        foreach (CommentAdornment comment in this.comments)
         {
             if (comment.Span.GetSpan(span.Snapshot).OverlapsWith(span))
                 overlappingComments.Add(comment);
         }
 
-        return new Collection<CommentAdornment>(overlappingComments);
+        return new Collection<CommentAdornment>(overlappingComments);
     }
     ```
 
 13. Následujícím způsobem přidejte třídu s názvem `CommentsChangedEventArgs` .
 
     ```csharp
-    internal class CommentsChangedEventArgs : EventArgs
+    internal class CommentsChangedEventArgs : EventArgs
     {
-        public readonly CommentAdornment CommentAdded;
+        public readonly CommentAdornment CommentAdded;
 
-        public readonly CommentAdornment CommentRemoved;
+        public readonly CommentAdornment CommentRemoved;
 
         public CommentsChangedEventArgs(CommentAdornment added, CommentAdornment removed)
         {
@@ -510,9 +511,9 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 4. Přidejte některá soukromá pole.
 
     ```csharp
-    private readonly IWpfTextView view;
-    private readonly IAdornmentLayer layer;
-    private readonly CommentAdornmentProvider provider;
+    private readonly IWpfTextView view;
+    private readonly IAdornmentLayer layer;
+    private readonly CommentAdornmentProvider provider;
     ```
 
 5. Přidejte konstruktor, který přihlašuje správce k <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> <xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed> událostem a, a také k `CommentsChanged` události. Konstruktor je privátní, protože má správce vytvořenou statickou `Create()` metodou.
@@ -534,22 +535,22 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 6. Přidejte `Create()` metodu, která získá zprostředkovatele, nebo ho v případě potřeby vytvořte.
 
     ```csharp
-    public static CommentAdornmentManager Create(IWpfTextView view)
+    public static CommentAdornmentManager Create(IWpfTextView view)
     {
-        return view.Properties.GetOrCreateSingletonProperty<CommentAdornmentManager>(delegate { return new CommentAdornmentManager(view); });
+        return view.Properties.GetOrCreateSingletonProperty<CommentAdornmentManager>(delegate { return new CommentAdornmentManager(view); });
     }
     ```
 
 7. Přidejte `CommentsChanged` obslužnou rutinu.
 
     ```csharp
-    private void OnCommentsChanged(object sender, CommentsChangedEventArgs e)
+    private void OnCommentsChanged(object sender, CommentsChangedEventArgs e)
     {
-        //Remove the comment (when the adornment was added, the comment adornment was used as the tag). 
+        //Remove the comment (when the adornment was added, the comment adornment was used as the tag). 
         if (e.CommentRemoved != null)
             this.layer.RemoveAdornmentsByTag(e.CommentRemoved);
 
-        //Draw the newly added comment (this will appear immediately: the view does not need to do a layout). 
+        //Draw the newly added comment (this will appear immediately: the view does not need to do a layout). 
         if (e.CommentAdded != null)
             this.DrawComment(e.CommentAdded);
     }
@@ -558,7 +559,7 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 8. Přidejte <xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed> obslužnou rutinu.
 
     ```csharp
-    private void OnClosed(object sender, EventArgs e)
+    private void OnClosed(object sender, EventArgs e)
     {
         this.provider.Detach();
         this.view.LayoutChanged -= OnLayoutChanged;
@@ -569,19 +570,19 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 9. Přidejte <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> obslužnou rutinu.
 
     ```csharp
-    private void OnLayoutChanged(object sender, TextViewLayoutChangedEventArgs e)
+    private void OnLayoutChanged(object sender, TextViewLayoutChangedEventArgs e)
     {
         //Get all of the comments that intersect any of the new or reformatted lines of text.
         List<CommentAdornment> newComments = new List<CommentAdornment>();
 
-        //The event args contain a list of modified lines and a NormalizedSpanCollection of the spans of the modified lines.  
-        //Use the latter to find the comments that intersect the new or reformatted lines of text. 
+        //The event args contain a list of modified lines and a NormalizedSpanCollection of the spans of the modified lines.  
+        //Use the latter to find the comments that intersect the new or reformatted lines of text. 
         foreach (Span span in e.NewOrReformattedSpans)
         {
             newComments.AddRange(this.provider.GetComments(new SnapshotSpan(this.view.TextSnapshot, span)));
         }
 
-        //It is possible to get duplicates in this list if a comment spanned 3 lines, and the first and last lines were modified but the middle line was not. 
+        //It is possible to get duplicates in this list if a comment spanned 3 lines, and the first and last lines were modified but the middle line was not. 
         //Sort the list and skip duplicates.
         newComments.Sort(delegate(CommentAdornment a, CommentAdornment b) { return a.GetHashCode().CompareTo(b.GetHashCode()); });
 

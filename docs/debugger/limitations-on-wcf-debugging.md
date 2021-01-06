@@ -1,5 +1,7 @@
 ---
 title: Omezení ladění WCF | Microsoft Docs
+description: Naučte se, jak začít ladit službu WCF, požadované podmínky a omezení ladění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8612bd2423849c61f21a5c184a3e1d39da0302b
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 30ca43483c352a4f102ab196dc5ea8e8650cdf81
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407741"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903844"
 ---
 # <a name="limitations-on-wcf-debugging"></a>Omezení ladění WCF
 Existují tři způsoby, jak můžete začít s laděním služby WCF:
@@ -32,7 +34,7 @@ Existují tři způsoby, jak můžete začít s laděním služby WCF:
 
 - Pomocí **připojit k procesu** se připojíte ke službě, která je aktuálně spuštěná. Ladění začíná v rámci služby.
 
-  V tomto tématu jsou popsána omezení těchto scénářů.
+V tomto tématu jsou popsána omezení těchto scénářů.
 
 ## <a name="limitations-on-stepping-into-a-service"></a>Omezení krokování na službu
  Pro krokování služby z klientských aplikací, které ladíte, musí být splněny následující podmínky:

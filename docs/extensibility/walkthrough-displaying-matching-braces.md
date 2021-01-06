@@ -1,5 +1,7 @@
 ---
 title: 'Návod: zobrazení vyhovujících složených závorek | Microsoft Docs'
+description: V tomto návodu se dozvíte, jak definovat složené závorky v kontextu jazyka, s použitím složených závorek s typem obsahu textu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65a0bc2c53d5d6e970b4aaa956170bc06c24e7c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce40f5673a8aba4ab3f7714a3aafdc3de4697cc4
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904846"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877946"
 ---
 # <a name="walkthrough-display-matching-braces"></a>Návod: zobrazení vyhovujících složených závorek
 Implementujte jazykové funkce, jako je například párování složených závorek, definováním složených závorek, které mají být shodné, a přidáním značky textové značky do odpovídajících složených závorek, pokud je blikající kurzor v jedné z složených závorek. Složené závorky lze definovat v kontextu jazyka, definovat vlastní příponu názvu souboru a typ obsahu a použít značky pouze pro tento typ nebo použít značky pro existující typ obsahu (například "text"). Následující návod ukazuje, jak použít Tagy pro spárování složených závorek s typem obsahu text.

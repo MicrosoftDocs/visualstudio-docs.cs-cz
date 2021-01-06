@@ -1,6 +1,7 @@
 ---
 title: Povolit nebo zakázat úpravy a pokračování | Microsoft Docs
-ms.custom: seodec18
+description: Přečtěte si, jak zakázat a povolit možnost upravit a pokračovat v možnostech sady Visual Studio v době návrhu. Funkce upravit a pokračovat funguje pouze v sestavení ladění.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/04/2018
 ms.topic: how-to
 dev_langs:
@@ -26,12 +27,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: ce531a0f7f9d6e26db38b5cf041f06d42209261a
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 02356a407acc97b60f05641359c32305323f162e
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851395"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903529"
 ---
 # <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>Postupy: povolení a zákaz funkce upravit a pokračovat (C#, VB, C++)
 
@@ -43,7 +44,7 @@ Pro nativní C++ vyžaduje příkaz **Upravit a pokračovat** použití `/INCREM
 
 1. Pokud se nacházíte v relaci ladění, zastavte ladění (**ladění**  >  **zastaví ladění** nebo **SHIFT** + **F5**).
 
-1. V **nabídce**  >  **Možnosti** nástrojů > ( **Debug**nebo  >  **Možnosti**ladění) > **ladění**  >  **všeobecně**vyberte v pravém podokně možnost **Upravit a pokračovat** .
+1. V **nabídce**  >  **Možnosti** nástrojů > ( nebo  >  **Možnosti** ladění) > **ladění**  >  **všeobecně** vyberte v pravém podokně možnost **Upravit a pokračovat** .
 
     > [!NOTE]
     > Pokud je povolená možnost IntelliTrace a shromáždíte obě události IntelliTrace a informace o volání, možnost upravit a pokračovat je zakázaná. Další informace najdete v tématu [IntelliTrace](../debugger/intellitrace.md).
