@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b47b59c8d45d76fae1e61584510ae39fe5a91784
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 6e6a37301477b43063169143456fc21a3c783968
+ms.sourcegitcommit: 4976419fae731860295dbcd072e6778832f7255d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94973811"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97917920"
 ---
 # <a name="profile-python-code"></a>Profil kódu Pythonu
 
@@ -32,7 +32,7 @@ Když vyberete **OK**, Profiler se spustí a otevře se sestava o výkonu, pomoc
 ![Sestava o výkonu profilace](media/profiling-results.png)
 
 > [!Note]
-> V současné době aplikace Visual Studio podporuje pouze tuto úroveň profilování kompletních aplikací, ale určitě chceme slyšet váš názor na budoucí možnosti. V dolní části této stránky použijte tlačítko **Zpětná vazba produktu** .
+> Když si profilete aplikaci v Pythonu, Visual Studio shromáždí data po dobu života procesu. V současné době není možné profilaci pozastavit. Chceme slyšet váš názor na budoucí možnosti. V dolní části této stránky použijte tlačítko **Zpětná vazba produktu** .
 
 ## <a name="profiling-for-ironpython"></a>Profilace pro Ironpythonu
 
