@@ -1,5 +1,7 @@
 ---
 title: Modelování projektu | Microsoft Docs
+description: Přečtěte si o standardních objektech projektu, které jsou nutné k vytvoření automatizace pro svůj nový typ projektu, a na cestě, kterou automatizace projektu sleduje.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c1ac89baf5bc7582d3430532938a5e5a0c35a4c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7a481e731f01230139ec4342231479606c49bd11
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706545"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877413"
 ---
 # <a name="project-modeling"></a>Modelování projektu
 Dalším krokem poskytnutí automatizace pro váš projekt je implementace standardních objektů projektu: <xref:EnvDTE.Projects> `ProjectItems` kolekce a, `Project` objekty a a <xref:EnvDTE.ProjectItem> zbývající objekty, které jsou pro vaši implementaci jedinečné. Tyto standardní objekty jsou definovány v souboru Dteinternal. h. V ukázce BscPrj je k dispozici implementace standardních objektů. Tyto třídy můžete použít jako modely k vytvoření vlastních objektů projektu, které jsou umístěny souběžně s objekty projektu z jiných typů projektů.

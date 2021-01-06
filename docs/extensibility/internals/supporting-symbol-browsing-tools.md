@@ -1,5 +1,7 @@
 ---
-title: Podpůrné nástroje pro procházení symbolů | Microsoft Docs
+title: Podpůrné nástroje Symbol-Browsing | Microsoft Docs
+description: Visual Studio poskytuje možnosti procházení symbolů v aplikaci Visual Studio. Naučte se, jak tyto možnosti rozšíříte pomocí knihoven pro symboly ve vašich komponentách.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,17 +20,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4998e47ccd6f99df2710833c18975d57e3bb92f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0adf586831e21c2448931215d4ef4a89d16a63f8
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704769"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876438"
 ---
 # <a name="supporting-symbol-browsing-tools"></a>Podpůrné nástroje procházení symbolů
 Nástroje výsledků hledání symbolů **Prohlížeč objektů**, **zobrazení tříd**, **prohlížeč volání** a **hledání symbolů** poskytují možnosti procházení symbolů v aplikaci Visual Studio. Tyto nástroje zobrazují hierarchické stromové zobrazení symbolů a zobrazují vztahy mezi symboly ve stromové struktuře. Symboly mohou představovat obory názvů, objekty, třídy, členy třídy a další prvky jazyka obsažené v různých součástech. Součástí jsou projekty aplikace Visual Studio, externí .NET Framework komponenty a knihovny typů (. tlb). Další informace naleznete v tématu [zobrazení struktury kódu](../../ide/viewing-the-structure-of-code.md).
 
-## <a name="symbol-browsing-libraries"></a>Knihovny procházení symbolů
+## <a name="symbol-browsing-libraries"></a>Knihovny Symbol-Browsing
  Jako implementátor jazyka můžete roztáhnout možnosti procházení symbolů sady Visual Studio tak, že vytvoříte knihovny, které sledují symboly ve vašich komponentách, a poskytnete seznamy symbolů pro správce objektů sady Visual Studio prostřednictvím sady rozhraní. Knihovna je popsána v <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2> rozhraní. Správce objektů sady Visual Studio reaguje na požadavky na nová data z nástrojů pro procházení symbolů tím, že získá data z knihoven a organizuje je. Následně naplní nebo aktualizuje nástroje s požadovanými daty. Chcete-li získat odkaz na správce objektů aplikace Visual Studio, <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> předejte <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> ID služby `GetService` metodě.
 
  Každá knihovna se musí zaregistrovat pomocí Správce objektů sady Visual Studio, který shromažďuje informace o všech knihovnách. Chcete-li zaregistrovat knihovnu, zavolejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> metodu. V závislosti na tom, který nástroj iniciuje požadavek, vyhledá správce objektů sady Visual Studio příslušnou knihovnu a požadavky na data. Přenášená data mezi knihovnami a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] správcem objektů v seznamech symbolů popsaných v <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> rozhraní.

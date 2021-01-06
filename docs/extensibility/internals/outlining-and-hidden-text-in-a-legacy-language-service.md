@@ -1,5 +1,7 @@
 ---
 title: Sbalení a skrytý text ve službě starší verze jazyka | Microsoft Docs
+description: Tento článek odkazuje na prostředky pro implementaci osnovy a skrytého textu ve službě starší verze jazyka.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b1f05d42de0201a7556046d19baf55830fa62c22
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1bd0b48292a448d70b266e598df561fdff2e8ab4
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706828"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877400"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>Osnova a skrytý text ve službě starší verze jazyka
 Osnova umožňuje sbalit sekvenci textových čar na jeden řádek. Například v jazyce C++ mohou být všechny metody sbaleny do jediného řádku, který zobrazuje pouze signaturu metody. Skrytý text je posloupnost textových řádků, které lze zobrazit nebo skrýt.

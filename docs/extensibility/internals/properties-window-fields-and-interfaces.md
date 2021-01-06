@@ -1,5 +1,7 @@
 ---
 title: Pole a rozhraní okna vlastností | Microsoft Docs
+description: Přečtěte si o výběru, který určuje, jaké informace se zobrazí v okno Vlastnosti na základě okna, které má fokus v integrovaném vývojovém prostředí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +12,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9529708c781e7fdb04c3b4c5ee143b7605857e84
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21bc3a7f1d46a1afe579a67afa09097fd04458ff
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706162"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875762"
 ---
 # <a name="properties-window-fields-and-interfaces"></a>Pole a rozhraní okna Vlastnosti
 Model pro výběr, který určuje, jaké informace se zobrazí v okně **vlastnosti** , je založen na okně, které se zaměřuje na integrované vývojové prostředí (IDE). Každé okno a objekt v rámci vybraného okna může mít svůj kontextový objekt výběru vložen do kontextu globálního výběru. Prostředí aktualizuje kontext globálního výběru hodnotami z rámce okna, když má toto okno fokus. V případě změny fokusu provede kontext výběru.
 
 ## <a name="tracking-selection-in-the-ide"></a>Sledování výběru v integrovaném vývojovém prostředí
- V rámci rámce okna nebo webu, který vlastní rozhraní IDE, je volána služba <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> . Následující kroky ukazují, jak se změna výběru vyvolala v případě, že uživatel změní fokus na jiné otevřené okno nebo když v **Průzkumník řešení**vyberete jinou položku projektu, je implementováno pro změnu obsahu zobrazeného v okně **vlastnosti** .
+ V rámci rámce okna nebo webu, který vlastní rozhraní IDE, je volána služba <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> . Následující kroky ukazují, jak se změna výběru vyvolala v případě, že uživatel změní fokus na jiné otevřené okno nebo když v **Průzkumník řešení** vyberete jinou položku projektu, je implementováno pro změnu obsahu zobrazeného v okně **vlastnosti** .
 
 1. Objekt vytvořený rozhraním VSPackage, který je umístěn ve vybraném okně, volá volání metody <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> Invoke <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> .
 

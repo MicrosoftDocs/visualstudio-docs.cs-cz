@@ -1,5 +1,7 @@
 ---
 title: Pracovní prostory a jazykové služby v aplikaci Visual Studio | Microsoft Docs
+description: Přečtěte si, jak můžou jazykové služby poskytnout uživatelům otevřené složky stejné bohatě jazykové funkce, které se používají při práci s řešeními a projekty.
+ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -7,12 +9,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2893ae2bcd70ff317ba799fea6cfd2751c685731
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 815cfb9e17fed38b519719010acd997f7fdc5242
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62952693"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877036"
 ---
 # <a name="workspaces-and-language-services"></a>Pracovní prostory a jazykové služby
 

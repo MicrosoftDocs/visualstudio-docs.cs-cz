@@ -1,5 +1,7 @@
 ---
 title: Funkce balíčku VSPackage správy zdrojového kódu | Microsoft Docs
+description: Přečtěte si o funkcích balíčku VSPackage správy zdrojového kódu, včetně podrobností o registraci/výběru a o některých hlavních funkcích souvisejících se správou zdrojových kódů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a01b9d8fbf5f8d0645b5245d21b05aba9e7dacea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8dd887488adc5813ad51c9fa2a25648e25ab4876
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705021"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876217"
 ---
 # <a name="source-control-vspackage-features"></a>Funkce balíčku VSPackage správy zdrojového kódu
-Tato část popisuje různé funkce balíčku VSPackage správy zdrojového kódu. Popisuje údaje o registraci a výběru pro takovou sadu VSPackage a zabývá se třemi hlavními funkcemi souvisejícími se správou zdrojového kódu: zpracování událostí dotazů a úprav dotazů (QEQS), nahrazení glyfů a vlastní uživatelské rozhraní (UI) pro funkce správy zdrojového kódu.
+Tato část popisuje různé funkce balíčku VSPackage správy zdrojového kódu. Popisuje údaje o registraci a výběru pro takovou sadu VSPackage a zabývá se třemi hlavními funkcemi souvisejícími se správou zdrojového kódu: zpracování událostí Query-Editch Query-Save (QEQS), nahrazení glyfů a vlastní uživatelské rozhraní (UI) pro funkce správy zdrojového kódu.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Registrace a výběr](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)
@@ -27,7 +29,7 @@ Tato část popisuje různé funkce balíčku VSPackage správy zdrojového kód
 
 - [Události QEQS (Query Edit Query Save)](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)
 
- Vysvětluje roli v dotazech a úpravách dotazů – ukládající události a jejich zpracování pomocí balíčku VSPackage správy zdrojového kódu.
+ Vysvětluje roli Query-Edit události Query-Save a jejich zpracování nástrojem VSPackage správy zdrojového kódu.
 
 - [Správa piktogramů](../../extensibility/internals/glyph-control-source-control-vspackage.md)
 

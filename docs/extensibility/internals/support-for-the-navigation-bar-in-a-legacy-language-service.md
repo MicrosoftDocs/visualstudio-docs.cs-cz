@@ -1,5 +1,6 @@
 ---
 title: Podpora navigačního panelu ve službě starší verze jazyka
+description: Naučte se, jak podporovat navigační panel ve službě starší verze jazyka. Navigační panel v zobrazení editoru zobrazuje typy a členy v souboru.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0011e9dac5438715571d1df76ba379fb9ed122df
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 325789c3b7210c87d5c1b0414434af27c266c31c
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036558"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876540"
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>Podpora navigačního panelu ve službě starší verze jazyka
 Navigační panel v horní části zobrazení editoru zobrazuje typy a členy v souboru. Typy jsou zobrazeny v levém rozevíracím seznamu a členové jsou zobrazeni v rozevíracím seznamu vpravo. Když uživatel vybere typ, kurzor se umístí na první řádek typu. Když uživatel vybere člena, kurzor se umístí na definici člena. Rozevírací seznamy jsou aktualizovány tak, aby odrážely aktuální umístění blikajícího kurzoru.

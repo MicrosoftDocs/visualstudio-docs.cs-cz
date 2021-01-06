@@ -1,6 +1,7 @@
 ---
 title: Související služby a rozhraní (balíček VSPackage správy zdrojového kódu)
 titleSuffix: ''
+description: Přečtěte si o rozhraních týkajících se správy zdrojového kódu v sadě Visual Studio SDK. Balíček implementuje některá rozhraní a používá jiné pro správu zdrojového kódu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af08c8e0ea15751f5d8e6c0a1a01549fdb9227c3
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: af5c971b804e1c288bf710f6627c0e769e790ee1
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90034790"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876334"
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>Související služby a rozhraní (balíček VSPackage správy zdrojového kódu)
 
@@ -53,7 +54,7 @@ V této části jsou uvedena všechna rozhraní týkající se správy zdrojové
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccEnlistmentPathTranslation> | Toto rozhraní poskytuje podporu správy zařazení pro webové projekty. | VSPackage správy zdrojového kódu | Doporučeno |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManagerTooltip> | Toto rozhraní se používá k načtení popisů tlačítek pro soubory se spravovanými zdroji v projektech. | VSPackage správy zdrojového kódu | Volitelné |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccOpenFromSourceControl> | Toto rozhraní poskytuje podporu rozšíření oboru názvů. | VSPackage správy zdrojového kódu | Volitelné |
-| <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccControlNewSolution> | VSPackage používá toto rozhraní k integraci rozšíření oboru názvů do dialogových oken **Nová**, **otevřít**nebo **Uložit** . V důsledku toho mohou být projekty automaticky přidány do správy zdrojového kódu při vytváření nebo přidány do správy zdrojového kódu, když je platná operace uložení. | VSPackage správy zdrojového kódu | Volitelné |
+| <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccControlNewSolution> | VSPackage používá toto rozhraní k integraci rozšíření oboru názvů do dialogových oken **Nová**, **otevřít** nebo **Uložit** . V důsledku toho mohou být projekty automaticky přidány do správy zdrojového kódu při vytváření nebo přidány do správy zdrojového kódu, když je platná operace uložení. | VSPackage správy zdrojového kódu | Volitelné |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs> | VSPackage používá toto rozhraní k definování dalších glyfů jako glyfy správy zdrojového kódu pro uzly v **Průzkumník řešení**. | VSPackage správy zdrojového kódu | Volitelné |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccAddWebProjectFromSourceControl> | Toto rozhraní používá dialogové okno **Přidat** pro webové projekty. Poskytuje metody pro procházení umístění správy zdrojových kódů a pro otevření webového projektu, který byl dříve přidán do úložiště správy zdrojového kódu v tomto umístění. | VSPackage správy zdrojového kódu | Doporučeno |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsAsynchOpenFromScc> | Toto rozhraní poskytuje podporu pro asynchronní (Background) načítání projektů ze správy zdrojového kódu. | VSPackage správy zdrojového kódu | Volitelné |

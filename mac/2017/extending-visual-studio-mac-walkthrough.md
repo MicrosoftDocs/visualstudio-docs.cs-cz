@@ -1,22 +1,24 @@
 ---
 title: Rozšíření Visual Studio pro Macho návodu
+description: Naučte se vytvořit jednoduchý balíček rozšíření pro Visual Studio pro Mac, který vytvoří nový příkaz v nabídce Upravit.
+ms.custom: SEO-VS-2020
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: 7D00512B-9688-4D8D-87A7-F04F207E3D02
-ms.openlocfilehash: c5b3b759b32acfc86b4b584b3f3d52298c138a2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9274f86e8ade5b49b5db0c7f4773cf6fd57ea353
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74985036"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876191"
 ---
 # <a name="extending-visual-studio-for-mac-walkthrough"></a>Rozšíření Visual Studio pro Macho návodu
 
 Toto téma vás provede vytvořením [jednoduchého balíčku rozšíření](https://github.com/mjh4/AddIns/tree/master/DateInserter). Balíček rozšíření vytvoří nový příkaz v nabídce úprav Visual Studio pro Mac, která umožňuje uživateli vložit aktuální datum a čas do otevřeného textového dokumentu.
 
-Tento příklad používá tvůrce doplňku. Tvůrce doplňku vytvoří novou šablonu projektu a naplní ji požadovanými soubory pro náš vlastní balíček rozšíření.
+Tento příklad používá tvůrce doplňku. Add-In tvůrce vytvoří novou šablonu projektu a naplní ji požadovanými soubory pro náš vlastní balíček rozšíření.
 
 1. Začněte spuštěním Visual Studio pro Mac, pokud už není otevřený:
 
@@ -32,7 +34,7 @@ Tento příklad používá tvůrce doplňku. Tvůrce doplňku vytvoří novou š
 
 4. Teď, když je doplněk AddIn maker nainstalovaný, můžete začít sestavovat balíček rozšíření. Začněte vytvořením nového řešení.
 
-5. V **dialogovém okně nové řešení**vyberte **další > různé > obecné > Xamarin Studio Template >** a na následující obrazovce zadejte nové řešení `DateInserter` :
+5. V **dialogovém okně nové řešení** vyberte **další > různé > obecné > Xamarin Studio Template >** a na následující obrazovce zadejte nové řešení `DateInserter` :
 
    ![Vytváření nového řešení](media/extending-visual-studio-mac-addin7New.png)
 
@@ -57,7 +59,7 @@ Tento příklad používá tvůrce doplňku. Tvůrce doplňku vytvoří novou š
       </ExtensionModel>
    ```
 
-8. Nyní je třeba nastavit soubory, které budou nakonec zpracovávat data a čas do textového editoru. Klikněte pravým tlačítkem myši na uzel projektu a přidejte nový soubor. Vyberte **obecné > prázdnou třídu** a pojmenujte nový soubor *InsertDateHandler*:
+8. Nyní je třeba nastavit soubory, které budou nakonec zpracovávat data a čas do textového editoru. Right-Click na uzlu projektu a přidejte nový soubor. Vyberte **obecné > prázdnou třídu** a pojmenujte nový soubor *InsertDateHandler*:
 
    ![Obslužná rutina data vložení](media/extending-visual-studio-mac-addin9.png)
 
@@ -88,7 +90,7 @@ Tento příklad používá tvůrce doplňku. Tvůrce doplňku vytvoří novou š
 
    Tyto dvě zástupné metody rozšíříme později.
 
-10. Klikněte pravým tlačítkem na projekt **DateInserter** a vyberte **Přidat > nový soubor**. Vyberte **obecné > prázdný výčet**a potom zadejte název nového souboru *DateInserterCommands*:
+10. Klikněte pravým tlačítkem na projekt **DateInserter** a vyberte **Přidat > nový soubor**. Vyberte **obecné > prázdný výčet** a potom zadejte název nového souboru *DateInserterCommands*:
 
     ![DateInserterCommands](media/extending-visual-studio-mac-addin10.png)
 

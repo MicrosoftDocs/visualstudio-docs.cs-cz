@@ -1,5 +1,7 @@
 ---
 title: Podpora uživatelských nastavení | Microsoft Docs
+description: Naučte se, jak povolit trvalost kategorií nastavení pomocí rozhraní API pro nastavení v sadě Visual Studio SDK.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 02bb2450196de76917e9cffc2f5f5acc6c8ee7b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b9f6ee52e9ba87eb2f570a6e388dc98c050989c9
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704781"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876516"
 ---
 # <a name="support-for-user-settings"></a>Podpora pro uživatelská nastavení
 VSPackage může definovat jednu nebo více kategorií nastavení, což jsou skupiny proměnných stavu, které jsou trvalé, když uživatel zvolí příkaz **Import/Export nastavení** v nabídce **nástroje** . Pro povolení této trvalosti použijete rozhraní API nastavení v [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .
@@ -34,7 +36,7 @@ VSPackage může definovat jednu nebo více kategorií nastavení, což jsou sku
  Body vlastního nastavení jsou vytvořeny v položce registru v následujícím umístění: HKLM\Software\Microsoft\VisualStudio \\ *\<Version>* \UserSettings \\ `<CSPName>` , kde `<CSPName>` je název vlastního bodu nastavení, který VSPackage podporuje, a *\<Version>* je verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , například 8,0.
 
 > [!NOTE]
-> Kořenovou cestu HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ *\<Version>* lze přepsat alternativním kořenem při [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] inicializaci integrovaného vývojového prostředí (IDE). Další informace najdete v tématu [přepínače příkazového řádku](../../extensibility/command-line-switches-visual-studio-sdk.md).
+> Kořenovou cestu HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *\<Version>* lze přepsat alternativním kořenem při [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] inicializaci integrovaného vývojového prostředí (IDE). Další informace najdete v tématu [přepínače příkazového řádku](../../extensibility/command-line-switches-visual-studio-sdk.md).
 
  Struktura položky registru je znázorněna níže:
 

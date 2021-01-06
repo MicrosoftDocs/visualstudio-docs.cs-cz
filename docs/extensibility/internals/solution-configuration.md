@@ -1,5 +1,7 @@
 ---
 title: Konfigurace řešení | Microsoft Docs
+description: Naučte se implementovat konfigurace řešení podporované vaším typem projektu, které nasměrují chování klíče Start (F5) a příkazu sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c96b73747ef8b136a74a7256cde7fef8d1c42de
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ad298a44eedea0681a554add74bd67ed22cad41
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705381"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876025"
 ---
 # <a name="solution-configuration"></a>Konfigurace řešení
 Konfigurace řešení ukládají vlastnosti na úrovni řešení. Nasměrují chování klávesy **Spustit** (F5) a příkazu **sestavení** . Ve výchozím nastavení tyto příkazy sestaví a spustí konfiguraci ladění. Oba příkazy jsou spouštěny v kontextu konfigurace řešení. To znamená, že uživatel může očekávat, že F5 spustí a sestaví jakékoli aktivní řešení, které se nakonfiguruje prostřednictvím nastavení. Prostředí je navrženo pro optimalizaci pro řešení spíše než při sestavování a spouštění.
@@ -49,7 +51,7 @@ Konfigurace řešení ukládají vlastnosti na úrovni řešení. Nasměrují ch
 
    Určuje, jestli je projekt sestavený aktuální konfigurací řešení nebo ne. Nevybrané projekty nejsou sestaveny, když jsou příkazy sestavení na úrovni řešení vyvolány bez ohledu na závislosti projektu, které obsahují. Projekty, které nejsou vybrány pro sestavení, jsou stále zahrnuty do ladění, spuštění, balení a nasazení řešení.
 
-- Nasazení
+- Nasadit
 
    Určuje, zda bude projekt nasazen, pokud jsou použity příkazy spustit nebo nasadit s vybranou konfigurací sestavení řešení. Zaškrtávací políčko pro toto pole bude k dispozici, pokud projekt podporuje nasazení implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> objektu.
 

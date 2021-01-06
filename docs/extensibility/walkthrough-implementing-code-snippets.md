@@ -1,5 +1,7 @@
 ---
 title: 'Návod: implementace fragmentů kódu | Microsoft Docs'
+description: Můžete vytvořit fragmenty kódu a zahrnout je do rozšíření editoru. Naučte se vytvářet a registrovat fragmenty kódu pomocí tohoto návodu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: adbc5382-d170-441c-9fd0-80faa1816478
@@ -11,17 +13,17 @@ dev_langs:
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: e06e97acc77b4701e02b0ca54de589830a768669
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a36590c0e56f1e1a2c01f8e084f0b95442607a5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904711"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877114"
 ---
 # <a name="walkthrough-implement-code-snippets"></a>Návod: implementace fragmentů kódu
 Můžete vytvořit fragmenty kódu a zahrnout je do rozšíření editoru, aby je uživatelé rozšíření mohli přidat ke svému vlastnímu kódu.
 
- Fragment kódu je fragment kódu nebo jiného textu, který lze začlenit do souboru. Chcete-li zobrazit všechny fragmenty, které byly zaregistrovány pro konkrétní programovací jazyky, v nabídce **nástroje** klikněte na **Správce fragmentů kódu**. Chcete-li vložit fragment do souboru, klikněte pravým tlačítkem na místo, kde chcete fragment kódu, klikněte na možnost Vložit fragment nebo **Obklopte**se, Najděte požadovaný fragment a pak na něj dvakrát klikněte. Stisknutím klávesy **TAB** nebo **SHIFT** + **Tab** upravíte příslušné části fragmentu a stisknutím klávesy **ENTER** nebo **ESC** ji přijměte. Další informace naleznete v tématu [fragmenty kódu](../ide/code-snippets.md).
+ Fragment kódu je fragment kódu nebo jiného textu, který lze začlenit do souboru. Chcete-li zobrazit všechny fragmenty, které byly zaregistrovány pro konkrétní programovací jazyky, v nabídce **nástroje** klikněte na **Správce fragmentů kódu**. Chcete-li vložit fragment do souboru, klikněte pravým tlačítkem na místo, kde chcete fragment kódu, klikněte na možnost Vložit fragment nebo **Obklopte** se, Najděte požadovaný fragment a pak na něj dvakrát klikněte. Stisknutím klávesy **TAB** nebo **SHIFT** +  upravíte příslušné části fragmentu a stisknutím klávesy **ENTER** nebo **ESC** ji přijměte. Další informace naleznete v tématu [fragmenty kódu](../ide/code-snippets.md).
 
  Fragment kódu je obsažen v souboru XML, který má příponu názvu souboru. fragment *. Fragment může obsahovat pole, která jsou zvýrazněna po vložení fragmentu, aby ho uživatel mohl najít a změnit. Soubor fragmentů také poskytuje informace pro **Správce fragmentů kódu** , aby mohl zobrazit název fragmentu ve správné kategorii. Informace o schématu fragmentu kódu naleznete v [referenčních informacích o schématu fragmentů kódu](../ide/code-snippets-schema-reference.md).
 
@@ -198,7 +200,7 @@ Můžete vytvořit fragmenty kódu a zahrnout je do rozšíření editoru, aby j
      [!code-csharp[VSSDKCompletionTest#31](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_10.cs)]
      [!code-vb[VSSDKCompletionTest#31](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_10.vb)]
 
-7. Pokud má fragment kódu pole, která lze procházet, zůstane relace rozšíření otevřená, dokud není rozšíření explicitně přijato; Pokud fragment kódu neobsahuje žádná pole, relace je zavřena a je vrácena jako `null` <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.InvokeInsertionUI%2A> metoda. V <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> metodě po kódu uživatelského rozhraní pro výběr fragmentu, který jste přidali v předchozím kroku, přidejte následující kód pro zpracování navigace fragmentem (když uživatel stiskne **kartu** nebo klávesu **SHIFT** + **Tab** po vložení fragmentu kódu).
+7. Pokud má fragment kódu pole, která lze procházet, zůstane relace rozšíření otevřená, dokud není rozšíření explicitně přijato; Pokud fragment kódu neobsahuje žádná pole, relace je zavřena a je vrácena jako `null` <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.InvokeInsertionUI%2A> metoda. V <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> metodě po kódu uživatelského rozhraní pro výběr fragmentu, který jste přidali v předchozím kroku, přidejte následující kód pro zpracování navigace fragmentem (když uživatel stiskne **kartu** nebo klávesu **SHIFT** +  po vložení fragmentu kódu).
 
      [!code-csharp[VSSDKCompletionTest#32](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_11.cs)]
      [!code-vb[VSSDKCompletionTest#32](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_11.vb)]
@@ -243,7 +245,7 @@ Můžete vytvořit fragmenty kódu a zahrnout je do rozšíření editoru, aby j
 
      Nestiskněte klávesu **ENTER** nebo **ESC**.
 
-5. Stisknutím **tabulátoru** a **klávesy SHIFT** + **Tab** přepnete mezi "First" a "Second".
+5. Stisknutím **tabulátoru** a **klávesy SHIFT** +  přepnete mezi "First" a "Second".
 
 6. Přijměte vložení stisknutím klávesy **ENTER** nebo **ESC**.
 

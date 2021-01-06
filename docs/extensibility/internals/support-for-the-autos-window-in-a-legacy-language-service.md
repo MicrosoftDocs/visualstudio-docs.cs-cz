@@ -1,5 +1,6 @@
 ---
 title: Podpora okna Automatické hodnoty ve službě starší verze jazyka
+description: Naučte se implementovat podporu pro okno Automatické hodnoty, ve kterém se zobrazí výrazy, které jsou v oboru, když je program laděný, pozastaven.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5eb4a7201888dc52dfe2f801ebc446786ec3274
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: c97ab4db9b71c91689abe0afb85230e5b0242962
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038293"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876503"
 ---
 # <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>Podpora pro okno Automatické hodnoty ve službě starší verze jazyka
 

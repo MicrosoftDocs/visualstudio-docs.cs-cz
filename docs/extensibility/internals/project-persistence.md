@@ -1,5 +1,7 @@
 ---
 title: Trvalost projektu | Microsoft Docs
+description: Přečtěte si o persistenci v návrhu projektu, včetně použití IPersistFileFormat k uchovávání souborů i souborů projektů, které nejsou založené na souboru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10a9cde91c0181fbfefbaa353c7c3702f4b36819
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6ffa60508eba02a4442bacb63b05abb39202ab9
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706463"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877439"
 ---
 # <a name="project-persistence"></a>Trvalost projektu
 Trvalost je klíčovým aspektem návrhu projektu. Většina projektů používá položky projektu, které reprezentují soubory; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje také projekty, jejichž data nejsou založená na souborech. Oba soubory vlastněné projektem a soubor projektu musí být trvalé. Rozhraní IDE instruuje projekt, aby uložil sám sebe nebo položku projektu.

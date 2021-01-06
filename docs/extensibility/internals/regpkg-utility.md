@@ -1,5 +1,7 @@
 ---
 title: Nástroj RegPkg | Microsoft Docs
+description: Přečtěte si, jak nástroj RegPkg.exe registruje VSPackage pomocí sady Visual Studio a připraví ho k nasazení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cebfd7a9782a2760eb33f7e56bfe16b126fc6251
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad66f963250dfc272506096f8932442a35d11dc7
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705640"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877322"
 ---
 # <a name="regpkg-utility"></a>Nástroj RegPkg
 > [!NOTE]

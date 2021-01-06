@@ -1,5 +1,7 @@
 ---
 title: Přehled integrace správy zdrojového kódu | Microsoft Docs
+description: 'Přečtěte si o rozdílech mezi dvěma způsoby, jak integrovat správu zdrojového kódu do sady Visual Studio: modul plug-in správy zdrojových kódů a VSPackage.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d80363286f5f0cac9a5ceb2e8ac9d20345df9e6f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6bbd385c7089504949d2437091b0a2ea002fafdd
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705114"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876009"
 ---
 # <a name="source-control-integration-overview"></a>Přehled integrace správy zdrojového kódu
 Tato část Porovnává dva způsoby, jak integrovat do správy zdrojového kódu sady Visual Studio. Modul plug-in správy zdrojových kódů a VSPackage, který poskytuje řešení správy zdrojového kódu a zvýrazňuje nové funkce správy zdrojového kódu. Visual Studio umožňuje ruční přepínání mezi prvky VSPackage správy zdrojového kódu a moduly plug-in správy zdrojových kódů a také automatickým přepínáním na základě řešení.

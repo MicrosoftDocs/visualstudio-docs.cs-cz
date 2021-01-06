@@ -1,5 +1,7 @@
 ---
 title: Uživatelské rozhraní vlastnosti projektu | Microsoft Docs
+description: Přečtěte si, jak mohou podtypy projektů upravovat dialogové okno stránky vlastností projektu, jak je zadáno v základním projektu.
+ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f15895a7dab5c57d8312787b1276acac89c28796
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 2c9bba8b163b7fd21cfa829bb26e06cf37b887bd
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011850"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877387"
 ---
 # <a name="project-property-user-interface"></a>Uživatelské rozhraní vlastností projektu
 
@@ -57,7 +59,7 @@ Vzhledem k tomu, že podtyp projektu agreguje <xref:Microsoft.VisualStudio.Shell
 
 Nové stránky vlastností přidané podtypu projektu jsou předány objektem pro procházení konfigurace projektu ze základní implementace projektu. Tento objekt pro procházení konfigurace projektu podporuje rozšířené služby automatizace. Další informace o AutomationExtenders najdete v tématu [implementace a používání zařízení s rozšířenými automatizace](/previous-versions/0y92k2w2(v=vs.140)). Stránky vlastností implementované voláním podtypu projektu <xref:EnvDTE.Project.Extender%2A> pro načtení vlastního objektu pro procházení konfigurace podtypu projektu, který rozšiřuje objekt procházení Konfigurace základního projektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:EnvDTE.IFilterProperties>
 - [Dialogové okno stránky vlastností](/previous-versions/visualstudio/visual-studio-2010/as5chysf(v=vs.100))

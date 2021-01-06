@@ -1,5 +1,7 @@
 ---
 title: Vnořování projektů | Microsoft Docs
+description: Seznamte se s vnořením projektů, což umožňuje vývojářům aplikací, kteří používají VSPackage, seskupovat podobné typy projektů dohromady v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 814780fa8e7e57a022a75b2e09115cfa55a1b8be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 464538d7f7be68737715cb6fd10fda4017a5556a
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707035"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876659"
 ---
 # <a name="nesting-projects"></a>Vnoření projektů
 Vývojáři podnikových aplikací, kteří používají váš balíček VS, mohou pohodlně seskupit podobné typy projektů dohromady [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pomocí *vnoření projektu*. Například projekt šablony organizace používá vnořené projekty k seskupení projektů do kategorií. Projekty obchodní fasády, projekty webového uživatelského rozhraní a tak dále jsou seskupeny do jedné kategorie.

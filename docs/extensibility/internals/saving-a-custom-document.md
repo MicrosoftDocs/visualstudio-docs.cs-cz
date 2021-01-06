@@ -1,5 +1,7 @@
 ---
 title: Ukládání vlastního dokumentu | Microsoft Docs
+description: Přečtěte si o procesu, ke kterému dochází pro vlastní dokument pro typ projektu, který přidáte do integrovaného vývojového prostředí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +14,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f04d588b4becfa778407269849032ea8ec56fb3f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d2d2aa249d6944e33ab9556000c483efdec78f20
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705618"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875676"
 ---
 # <a name="saving-a-custom-document"></a>Uložení vlastního dokumentu
-Prostředí zpracuje příkazy **Uložit**, **Uložit jako**a **Uložit všechny** . Když uživatel klikne na **Uložit**, **Uložit jako** **nebo Uložit vše** v nabídce **soubor** nebo zavře řešení a výsledkem je uložení všech, dojde k následujícímu procesu.
+Prostředí zpracuje příkazy **Uložit**, **Uložit jako** a **Uložit všechny** . Když uživatel klikne na **Uložit**, **Uložit jako** **nebo Uložit vše** v nabídce **soubor** nebo zavře řešení a výsledkem je uložení všech, dojde k následujícímu procesu.
 
- ![Editor zákazníka – uložení](../../extensibility/internals/media/private.gif "Soukromá") Ukládat, ukládat jako a ukládat všechny zpracování příkazů pro vlastní editor
+ ![Editor zákazníka – uložení](../../extensibility/internals/media/private.gif "Privátní") Ukládat, ukládat jako a ukládat všechny zpracování příkazů pro vlastní editor
 
  Tento postup je podrobně popsán v následujících krocích:
 

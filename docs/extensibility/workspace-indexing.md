@@ -1,5 +1,7 @@
 ---
 title: Indexování pracovních prostorů v aplikaci Visual Studio | Microsoft Docs
+description: Seznamte se s indexováním pracovních prostorů, což je kolekce a trvalé úložiště dat pro podporu bohatých funkcí IDE pro pracovní prostor otevřené složky.
+ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -7,12 +9,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9bf7df777d27003fa5763debc772a8804ec28ef5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6b5c069ce3ae993f2d2371bffae3ac58b286fa70
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62952697"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877049"
 ---
 # <a name="workspace-indexing"></a>Indexování pracovního prostoru
 
@@ -24,7 +26,7 @@ Existují tři druhy dat, která jsou indexována. Všimněte si, že typ oček�
 
 |Data|Typ skeneru souborů|Typ výsledku dotazu na index|Související typy|
 |--|--|--|--|
-|Odkazy|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfo>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfoType>|
+|Reference|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfo>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfoType>|
 |Symboly|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinition>|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinitionSearchResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.ISymbolService> by měl být použit místo `IIndexWorkspaceService` pro dotazy|
 |Hodnoty dat|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileDataValue>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileDataResult`1>||
 

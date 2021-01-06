@@ -1,5 +1,7 @@
 ---
 title: Správa zdrojového kódu | Microsoft Docs
+description: Tyto články popisují možnosti implementace správy zdrojového kódu jako integrované funkce sady Visual Studio, a to buď pomocí modulu plug-in, nebo VSPackage.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ff7904e9abc3df8ed36f8c196ce4c1175b4d9af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33437994770ee78327d130f288d9d2e9689774fe
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704984"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876100"
 ---
 # <a name="source-control"></a>Správa zdrojového kódu
 Tato část popisuje možnosti pro implementaci správy zdrojového kódu jako integrované funkce nástroje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , buď prostřednictvím modulu plug-in správy zdrojových kódů, nebo balíčku VSPackage správy zdrojového kódu.

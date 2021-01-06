@@ -1,5 +1,7 @@
 ---
 title: Sbalení ve službě starší verze jazyka | Microsoft Docs
+description: Naučte se, jak podporovat sbalení prostřednictvím implementace skrytých oblastí ve službě starší verze jazyka.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: be485a0e7406d49c4dcce77958c720e0b62504b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ca457c32751fb1f9179a9c09b624c444efab627d
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706815"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876828"
 ---
 # <a name="outlining-in-a-legacy-language-service"></a>Osnova ve službě starší verze jazyka
 Díky osnově je možné sbalit složitý program na přehled nebo osnovu. Například v jazyce C# mohou být všechny metody sbaleny do jediného řádku, který zobrazuje pouze signaturu metody. Kromě toho mohou být struktury a třídy sbaleny, aby zobrazovaly pouze názvy struktur a tříd. V rámci jediné metody může být komplexní logika sbalena k zobrazení celkového toku zobrazením pouze prvního řádku příkazů, jako jsou `foreach` , `if` a `while` .

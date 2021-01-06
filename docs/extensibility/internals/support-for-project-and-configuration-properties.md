@@ -1,5 +1,7 @@
 ---
 title: Podpora vlastností projektu a konfigurace | Microsoft Docs
+description: Naučte se, jak poskytnout stránku vlastností pro vlastní typ projektu v integrovaném vývojovém prostředí sady Visual Studio, které může zobrazit rozšířené vlastnosti projektu a konfigurace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: be9d9a6e0976ab1ff336fc6754fa44d26c031378
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: fd5f15f16894faf6d47700e34db4d99a1fa3cb5a
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012019"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876594"
 ---
 # <a name="support-for-project-and-configuration-properties"></a>Podpora vlastností projektu a konfigurace
 Okno **vlastnosti** v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí (IDE) může zobrazit vlastnosti projektu a konfigurace. Můžete zadat stránku vlastností pro vlastní typ projektu, aby uživatel mohl nastavit vlastnosti pro vaši aplikaci.
@@ -75,7 +77,7 @@ Okno **vlastnosti** v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md
 
  VSPackage, ke kterému je atribut připojen, je neimportovaná. Je-li VSPackage zaregistrován s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , identifikátor třídy (CLSID) libovolného objektu, který lze vytvořit, je registrován tak, aby bylo volání <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry.CreateInstance%2A> možné ho vytvořit.
 
- Cesta registru objektu, který lze vytvořit, je určena kombinací <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> , slovem, identifikátorem CLSID a identifikátorem GUID typu objektu. Pokud `MyProjectPropertyPage` má třída identifikátor GUID {3c693da2-5bca-49b3-bd95-ffe0a39dd723} a UserRegistryRoot je HKEY_CURRENT_USER \software\microsoft\visualstudio\8.0Exp, cesta k registru by byla HKEY_CURRENT_USER \software\microsoft\visualstudio\8.0exp\clsid \\ {3c693da2-5bca-49b3-bd95-ffe0a39dd723}.
+ Cesta registru objektu, který lze vytvořit, je určena kombinací <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> , slovem, identifikátorem CLSID a identifikátorem GUID typu objektu. Pokud `MyProjectPropertyPage` má třída identifikátor GUID {3c693da2-5bca-49b3-bd95-ffe0a39dd723} a UserRegistryRoot je HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp, cesta k registru by byla HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp\CLSID\\ {3c693da2-5bca-49b3-bd95-ffe0a39dd723}.
 
 ## <a name="project-and-configuration-property-attributes-and-layout"></a>Atributy a rozložení vlastností projektu a konfigurace
  <xref:System.ComponentModel.CategoryAttribute>Atributy, <xref:System.ComponentModel.DisplayNameAttribute> a <xref:System.ComponentModel.DescriptionAttribute> určují rozložení, popisky a popis vlastností projektu a konfigurace na stránce Obecné vlastnosti. Tyto atributy určují kategorii, zobrazovaný název a Popis možnosti v uvedeném pořadí.
@@ -88,9 +90,9 @@ Okno **vlastnosti** v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md
  [!code-vb[VSSDKSupportProjectConfigurationProperties#2](../../extensibility/internals/codesnippet/VisualBasic/support-for-project-and-configuration-properties_2.vb)]
  [!code-csharp[VSSDKSupportProjectConfigurationProperties#2](../../extensibility/internals/codesnippet/CSharp/support-for-project-and-configuration-properties_2.cs)]
 
- `MyConfigProp`Vlastnost Configuration se zobrazí na stránce vlastností konfigurace jako **vlastnost moje** konfigurace v kategorii kategorie, **Moje kategorie**. Pokud je vybraná možnost, popis, zobrazí se **Popis, který**se zobrazí na panelu Popis.
+ `MyConfigProp`Vlastnost Configuration se zobrazí na stránce vlastností konfigurace jako **vlastnost moje** konfigurace v kategorii kategorie, **Moje kategorie**. Pokud je vybraná možnost, popis, zobrazí se **Popis, který** se zobrazí na panelu Popis.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přidávání a odebírání stránek vlastností](../../extensibility/adding-and-removing-property-pages.md)
 - [Projekty](../../extensibility/internals/projects.md)
 - [Soubory popisu adresáře šablon (.Vsdir)](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)

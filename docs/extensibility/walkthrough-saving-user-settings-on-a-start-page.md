@@ -1,5 +1,7 @@
 ---
 title: 'Návod: ukládání uživatelských nastavení na úvodní stránce | Microsoft Docs'
+description: V tomto návodu se dozvíte, jak zachovat uživatelská nastavení pro úvodní stránku tím, že uložíte nastavení do registru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 754b9bf3-8681-4c77-b0a4-09146a4e1d2d
@@ -9,18 +11,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 8dd20513defd1db8848cf6a80a29e04c127c9dd4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17dfb844733a15b1607d2daa2ce24a8f6e0be420
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903166"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876178"
 ---
 # <a name="walkthrough-save-user-settings-on-a-start-page"></a>Návod: uložení uživatelských nastavení na úvodní stránce
 
 Můžete zachovat nastavení uživatele pro úvodní stránku. Pomocí tohoto návodu můžete vytvořit ovládací prvek, který uloží nastavení do registru, když uživatel klikne na tlačítko, a pak toto nastavení načte při každém načtení úvodní stránky. Vzhledem k tomu, že šablona projektu úvodní stránka obsahuje přizpůsobitelný uživatelský ovládací prvek a výchozí úvodní stránka XAML volá tento ovládací prvek, nemusíte upravovat úvodní stránku.
 
-Úložiště nastavení, které je vytvořena v tomto návodu, je instancí <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> rozhraní, které čte a zapisuje do následujícího umístění registru, když je voláno: **HKCU\Software\Microsoft\VisualStudio\14.0 \\ \<CollectionName> **
+Úložiště nastavení, které je vytvořena v tomto návodu, je instancí <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> rozhraní, které čte a zapisuje do následujícího umístění registru, když je voláno: **HKCU\Software\Microsoft\VisualStudio\14.0 \\ \<CollectionName>**
 
 Když je spuštěn v experimentální instanci aplikace Visual Studio, uloží nastavení čtení a zápisy do **HKCU\Software\Microsoft\VisualStudio\14.0Exp \\ \<CollectionName> .**
 
@@ -37,7 +39,7 @@ Další informace o tom, jak zachovat nastavení, najdete v tématu [rozšířen
 
 1. Vytvořte projekt úvodní stránky, jak je popsáno v tématu [Vytvoření vlastní úvodní stránky](creating-a-custom-start-page.md). Pojmenujte projekt **SaveMySettings**.
 
-2. V **Průzkumník řešení**přidejte do projektu StartPageControl následující odkazy na sestavení:
+2. V **Průzkumník řešení** přidejte do projektu StartPageControl následující odkazy na sestavení:
 
     - EnvDTE
 
@@ -59,7 +61,7 @@ Další informace o tom, jak zachovat nastavení, najdete v tématu [rozšířen
 
      Tento krok odstraní <xref:System.Windows.Controls.Border> prvek a vše v něm a opustí pouze element nejvyšší úrovně <xref:System.Windows.Controls.Grid> .
 
-6. Z **panelu nástrojů**přetáhněte <xref:System.Windows.Controls.StackPanel> ovládací prvek do mřížky.
+6. Z **panelu nástrojů** přetáhněte <xref:System.Windows.Controls.StackPanel> ovládací prvek do mřížky.
 
 7. Nyní přetáhněte <xref:System.Windows.Controls.TextBlock> tlačítko, a <xref:System.Windows.Controls.TextBox> a na <xref:System.Windows.Controls.StackPanel> .
 
@@ -77,7 +79,7 @@ Další informace o tom, jak zachovat nastavení, najdete v tématu [rozšířen
 
 1. V podokně XAML klikněte pravým tlačítkem na `Click` atribut <xref:System.Windows.Controls.Button> prvku a pak klikněte na **Přejít k obslužné rutině události**.
 
-     Tento krok otevře *MyControl.XAML.cs*a vytvoří obslužnou rutinu zástupných procedur pro `Button_Click` událost.
+     Tento krok otevře *MyControl.XAML.cs* a vytvoří obslužnou rutinu zástupných procedur pro `Button_Click` událost.
 
 2. `using`Na začátek souboru přidejte následující direktivy.
 
@@ -150,7 +152,7 @@ Další informace o tom, jak zachovat nastavení, najdete v tématu [rozšířen
 
 6. Sestavte uživatelský ovládací prvek.
 
-7. V **Průzkumník řešení**otevřete *source. extension. vsixmanifest*.
+7. V **Průzkumník řešení** otevřete *source. extension. vsixmanifest*.
 
 8. V editoru manifestu nastavte **název produktu** na **Uložit úvodní stránku nastavení**.
 
@@ -166,7 +168,7 @@ Další informace o tom, jak zachovat nastavení, najdete v tématu [rozšířen
 
 2. V experimentální instanci v nabídce **nástroje** klikněte na **Možnosti**.
 
-3. V uzlu **prostředí** klikněte na **spouštění**a potom v seznamu **Přizpůsobit úvodní stránku** vyberte **[nainstalované rozšíření] Úvodní stránka pro uložení nastavení**.
+3. V uzlu **prostředí** klikněte na **spouštění** a potom v seznamu **Přizpůsobit úvodní stránku** vyberte **[nainstalované rozšíření] Úvodní stránka pro uložení nastavení**.
 
      Klikněte na **OK**.
 
@@ -174,7 +176,7 @@ Další informace o tom, jak zachovat nastavení, najdete v tématu [rozšířen
 
 5. Na úvodní stránce klikněte na kartu **MyControl** .
 
-6. Do textového pole zadejte **Cat**a pak klikněte na **Uložit moje nastavení**.
+6. Do textového pole zadejte **Cat** a pak klikněte na **Uložit moje nastavení**.
 
 7. Zavřete úvodní stránku a znovu ji otevřete.
 

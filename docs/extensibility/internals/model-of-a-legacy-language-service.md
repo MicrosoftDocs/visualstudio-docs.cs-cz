@@ -1,5 +1,7 @@
 ---
 title: Model služby starší verze jazyka | Microsoft Docs
+description: Použijte tento model minimální jazykové služby pro základní editor sady Visual Studio jako vodítko pro vytvoření vlastní jazykové služby.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f024a02641902843f673ce3ff8583a4bce3b135
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2928d3c09a54ea8e9548f7751381279f153643e5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707038"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876737"
 ---
 # <a name="model-of-a-legacy-language-service"></a>Model služby starší verze jazyka
 Jazyková služba definuje prvky a funkce pro určitý jazyk a slouží k tomu, aby Editor poskytoval informace, které jsou specifické pro daný jazyk. Editor například potřebuje znát prvky a klíčová slova jazyka, aby bylo možné podporovat barevné zvýrazňování syntaxe.
@@ -39,7 +41,7 @@ Jazyková služba definuje prvky a funkce pro určitý jazyk a slouží k tomu, 
 
   Následující tabulka poskytuje přehled objektů v modelu.
 
-| Součást | Objekt | Funkce |
+| Komponenta | Objekt | Funkce |
 |------------------| - | - |
 | Vyrovnávací paměť textu | <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> | Textový Stream pro čtení a zápis v kódování Unicode. Je možné, že text bude používat jiné kódování. |
 | Okno kódu | <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> | Okno dokumentu, které obsahuje jedno nebo více textových zobrazení. Když [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je v režimu MDI (Multiple Document Interface), je okno Code podřízenou položkou MDI. |

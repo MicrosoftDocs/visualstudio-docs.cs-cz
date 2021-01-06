@@ -1,5 +1,6 @@
 ---
 title: Použití klávesových zkratek s rozšířením editoru
+description: Naučte se, jak přidat doplňky zobrazení k textovému zobrazení pomocí klávesových zkratek. Tento návod je založen na šabloně editoru doplňků zobrazení.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,22 +12,22 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78bbf84f6b11451c8b1a09e6883ba76b19cec757
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 4c939328e1ef8e517821db8622e7383cab90c384
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037455"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875840"
 ---
 # <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>Návod: použití klávesových zkratek s rozšířením editoru
 Můžete reagovat na klávesové zkratky v rozšíření editoru. Následující návod ukazuje, jak přidat doplňky zobrazení do textového zobrazení pomocí klávesových zkratek. Tento návod je založen na šabloně editoru doplňků zobrazení a umožňuje přidat doplňky pomocí znaku +.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Vytvořit projekt Managed Extensibility Framework (MEF)
 
-1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost**a potom **projekt VSIX**.) Pojmenujte řešení `KeyBindingTest` .
+1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost** a potom **projekt VSIX**.) Pojmenujte řešení `KeyBindingTest` .
 
 2. Přidejte do projektu šablonu položky vylepšení textu editoru a pojmenujte ji `KeyBindingTest` . Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 
@@ -78,7 +79,7 @@ Před vydáním sady Visual Studio 2017 verze 15,6 jediným způsobem, jak zprac
 3. Třída s názvem KeyBindingCommandFilter by měla dědit z <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> .
 
     ```csharp
-    internal class KeyBindingCommandFilter : IOleCommandTarget
+    internal class KeyBindingCommandFilter : IOleCommandTarget
     ```
 
 4. Přidejte soukromá pole pro textové zobrazení, další příkaz v řetězu příkazů a příznak, který představuje, zda byl filtr příkazů již přidán.
@@ -86,8 +87,8 @@ Před vydáním sady Visual Studio 2017 verze 15,6 jediným způsobem, jak zprac
     ```csharp
     private IWpfTextView m_textView;
     internal IOleCommandTarget m_nextTarget;
-    internal bool m_added;
-    internal bool m_adorned;
+    internal bool m_added;
+    internal bool m_adorned;
     ```
 
 5. Přidejte konstruktor, který nastaví textové zobrazení.
@@ -198,7 +199,7 @@ Nejdřív aktualizujte odkazy NuGet projektu tak, aby odkazovaly na nejnovějš�
 
 1. Klikněte pravým tlačítkem na projekt a vyberte **Spravovat balíčky NuGet**.
 
-2. Ve **Správci balíčků NuGet**vyberte kartu **aktualizace** , zaškrtněte políčko **Vybrat všechny balíčky** a pak vyberte **aktualizovat**.
+2. Ve **Správci balíčků NuGet** vyberte kartu **aktualizace** , zaškrtněte políčko **Vybrat všechny balíčky** a pak vyberte **aktualizovat**.
 
 Obslužná rutina příkazu je implementace <xref:Microsoft.VisualStudio.Commanding.ICommandHandler%601> , která zpracovává příkaz vytvořením doplňku.
 

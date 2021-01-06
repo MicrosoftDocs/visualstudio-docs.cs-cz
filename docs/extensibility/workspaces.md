@@ -1,5 +1,7 @@
 ---
 title: Pracovní prostory v aplikaci Visual Studio | Microsoft Docs
+description: Přečtěte si, jak Visual Studio používá pracovní prostor k reprezentaci kolekce souborů v otevřené složce, včetně poskytovatelů pracovních prostorů a služeb.
+ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -7,12 +9,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 011781b434c4d005e473c5f97c60a9269dc5d034
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ed660a5f52aba548d087b28f7caea4d1966fe45
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62952760"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876945"
 ---
 # <a name="workspaces"></a>Pracovní prostory
 
@@ -59,7 +61,7 @@ Výkon nastavení pracovního prostoru se pohybuje v oblasti "obory", které jso
 1. Všechny další nadřazené adresáře až do kořene pracovního prostoru a včetně.
 1. Globální nastavení, která se nachází v adresáři uživatele.
 
-Výsledkem je instance <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings> . Tento objekt obsahuje nastavení pro konkrétní typ a lze k němu zadat dotaz pro nastavení názvů klíčů uložených jako `string` . <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings.GetProperty%2A>Metody a <xref:Microsoft.VisualStudio.Workspace.Settings.WorkspaceSettingsExtensions> metody rozšíření očekávají, že volající bude znát typ požadované hodnoty nastavení. Jelikož jsou soubory s _příponou. JSON_ trvale zachované, mnoho volání bude používat,, `string` `bool` `int` a pole těchto typů. Jsou podporovány také typy objektů. V těchto případech můžete použít `IWorkspaceSettings` sebe sama jako argument typu. Příklad:
+Výsledkem je instance <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings> . Tento objekt obsahuje nastavení pro konkrétní typ a lze k němu zadat dotaz pro nastavení názvů klíčů uložených jako `string` . <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings.GetProperty%2A>Metody a <xref:Microsoft.VisualStudio.Workspace.Settings.WorkspaceSettingsExtensions> metody rozšíření očekávají, že volající bude znát typ požadované hodnoty nastavení. Jelikož jsou soubory s _příponou. JSON_ trvale zachované, mnoho volání bude používat,, `string` `bool` `int` a pole těchto typů. Jsou podporovány také typy objektů. V těchto případech můžete použít `IWorkspaceSettings` sebe sama jako argument typu. Například:
 
 ```json
 {
@@ -171,7 +173,7 @@ Načtené balíčky mohou implementovat `IVsSolutionEvents7` a vyvolat `IVsSolut
 
 Kontext uživatelského rozhraní lze použít k automatickému načtení balíčku. Hodnota je `4646B819-1AE0-4E79-97F4-8A8176FDD664`.
 
-## <a name="troubleshooting"></a>Odstraňování potíží
+## <a name="troubleshooting"></a>Řešení potíží
 
 ### <a name="the-sourceexplorerpackage-package-did-not-load-correctly"></a>Balíček SourceExplorerPackage se nenačetl správně.
 
@@ -179,13 +181,13 @@ Rozšiřitelnost pracovního prostoru je silně založená na rozhraní MEF a ch
 
 ::: moniker range="vs-2017"
 
-Podrobnosti o chybě najdete v _%localappdata%\microsoft\visualstudio\15.0_id \componentmodelcache\microsoft.VisualStudio.default.err_. Vyřešte všechny chyby pro typy implementované vaším rozšířením.
+Podrobnosti o chybě najdete v _%localappdata%\microsoft\visualstudio\ 15.0_Id \componentmodelcache\microsoft.VisualStudio.default.err_. Vyřešte všechny chyby pro typy implementované vaším rozšířením.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Podrobnosti o chybě najdete v _%localappdata%\microsoft\visualstudio\16.0_id \componentmodelcache\microsoft.VisualStudio.default.err_. Vyřešte všechny chyby pro typy implementované vaším rozšířením.
+Podrobnosti o chybě najdete v _%localappdata%\microsoft\visualstudio\ 16.0_Id \componentmodelcache\microsoft.VisualStudio.default.err_. Vyřešte všechny chyby pro typy implementované vaším rozšířením.
 
 ::: moniker-end
 

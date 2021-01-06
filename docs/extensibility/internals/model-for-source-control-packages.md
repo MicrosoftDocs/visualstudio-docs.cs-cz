@@ -1,5 +1,7 @@
 ---
 title: Model pro balíčky správy zdrojového kódu | Microsoft Docs
+description: Tento model představuje implementaci správy zdrojového kódu. Článek ukazuje názvy tříd, aby bylo snazší zjistit, jak se provádí Správa zdrojového kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 46845be1bc22a67d6703af12933945bdfcfa7f4b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9ece2a7df1aeb2ec44f7b21075d2945a93d51838
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707073"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876686"
 ---
 # <a name="model-for-source-control-packages"></a>Model pro balíčky správy zdrojového kódu
 Následující model představuje příklad implementace správy zdrojového kódu. V modelu vidíte rozhraní, která je nutné implementovat, a služby prostředí, které je třeba volat. Stejně jako všechny služby skutečně voláte metody konkrétního rozhraní, které obdržíte prostřednictvím služby. Názvy tříd jsou identifikovány, aby bylo snazší zjistit, jak se provádí Správa zdrojového kódu.

@@ -1,5 +1,7 @@
 ---
 title: Otevírání a ukládání položek projektu | Microsoft Docs
+description: Přečtěte si o různých přístupech k otevírání a ukládání souborů pro nový typ projektu v integrovaném vývojovém prostředí sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbb89d99e401be6bae7d8ee9be8ee33fa7574723
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 971fef7939c91bdcdea9098da530c7ecb2daf9ec
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706968"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877634"
 ---
 # <a name="opening-and-saving-project-items"></a>Otevření a uložení položek projektu
 Když přidáte nový typ projektu, musíte spravovat otevírání a ukládání souborů projektů v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí (IDE). Následující témata popisují různé přístupy k otevírání a ukládání souborů.
@@ -45,11 +47,11 @@ Když přidáte nový typ projektu, musíte spravovat otevírání a ukládání
 
 - [Uložení standardního dokumentu](../../extensibility/internals/saving-a-standard-document.md)
 
- Poskytuje podrobné vysvětlení způsobu, jakým rozhraní IDE zpracovává příkazy **Uložit**, **Uložit jako**a **Uložit všechny** příkazy pro dokument otevřený ve standardním editoru.
+ Poskytuje podrobné vysvětlení způsobu, jakým rozhraní IDE zpracovává příkazy **Uložit**, **Uložit jako** a **Uložit všechny** příkazy pro dokument otevřený ve standardním editoru.
 
 - [Uložení vlastního dokumentu](../../extensibility/internals/saving-a-custom-document.md)
 
- Poskytuje diagram a podrobné vysvětlení způsobu, jakým integrované vývojové prostředí (IDE) zpracovává **ukládání**, **ukládání**a **ukládání všech** příkazů pro dokumenty otevřené ve vlastním editoru.
+ Poskytuje diagram a podrobné vysvětlení způsobu, jakým integrované vývojové prostředí (IDE) zpracovává **ukládání**, **ukládání** a **ukládání všech** příkazů pro dokumenty otevřené ve vlastním editoru.
 
 - [Určení editoru, který otevře soubor v projektu](../../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)
 

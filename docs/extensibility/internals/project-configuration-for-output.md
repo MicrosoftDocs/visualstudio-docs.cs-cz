@@ -1,5 +1,7 @@
 ---
 title: Konfigurace projektu pro výstup | Microsoft Docs
+description: Přečtěte si o procesech sestavení, které může každá konfigurace podporovat, a o rozhraních a metodách, pomocí kterých lze zpřístupnit výstupní položky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78b95457af4c5d806fdfcc20f49ac4e82df36488
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffe5cb6477808f892b8d36aa5fd616a5a0ea7969
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706671"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876321"
 ---
 # <a name="project-configuration-for-output"></a>Konfigurace projektu pro výstup
 Každá konfigurace může podporovat sadu procesů sestavení, které vytvářejí výstupní položky, jako jsou spustitelné soubory nebo soubory prostředků. Tyto výstupní položky jsou pro uživatele soukromé a lze je umístit do skupin, které odkazují na související typy výstupu, jako jsou spustitelné soubory (. exe,. dll,. lib) a zdrojové soubory (. idl,. h soubory).

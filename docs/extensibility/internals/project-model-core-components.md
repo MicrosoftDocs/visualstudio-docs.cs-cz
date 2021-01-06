@@ -1,5 +1,7 @@
 ---
 title: Základní komponenty modelu projektu | Microsoft Docs
+description: Tento článek obsahuje popisy rozhraní a služeb identifikovaných v jádru modelu projektu a rozhraní a služby přidružené k objektům.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e29a9d40531b32f127054fe02f61c72738e508e
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: c6aeb24b2aee5b0abb3e5d803004ba97725bb707
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012409"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876893"
 ---
 # <a name="project-model-core-components"></a>Základní komponenty modelu projektu
 Následující tabulky se rozšiřují v modelu projektu. Tabulky obsahují stručný popis rozhraní a služeb identifikovaných v modelu a rozhraní a služby přidružené ke konkrétním objektům. Kromě toho tabulky obsahují podrobnosti o dalších rozhraních, která jsou volitelná v vytváření a údržbě projektu v závislosti na požadavcích vašeho konkrétního typu projektu.
 
- Další informace najdete v tématu [Podpora nástrojů pro procházení symbolů](../../extensibility/internals/supporting-symbol-browsing-tools.md).
+ Další informace najdete v tématu [podpora Symbol-Browsingch nástrojů](../../extensibility/internals/supporting-symbol-browsing-tools.md).
 
 ### <a name="package-object"></a>Objekt balíčku
 
@@ -99,7 +101,7 @@ Následující tabulky se rozšiřují v modelu projektu. Tabulky obsahují stru
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibility3>|Slouží k implementaci modelu automatizace. V modelu projektu vrátíte objekt Properties, který umožňuje vytvořit instanci tohoto objektu.|
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIHierWinClipboardHelper>|Slouží k implementaci událostí schránky pro objekt projektu v hierarchii. `SVsUIHierWinClipboardHelper` umožňuje správně zpracovat operace vyjmutí, kopírování a vložení.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>
 - [Kontrolní seznam: Vytvoření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [Není v sestavení: použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](/previous-versions/bb166212(v=vs.100))

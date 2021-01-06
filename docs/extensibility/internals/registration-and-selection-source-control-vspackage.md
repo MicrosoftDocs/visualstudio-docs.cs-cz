@@ -1,5 +1,7 @@
 ---
 title: Registrace a výběr (VSPackage správy zdrojového kódu) | Microsoft Docs
+description: Naučte se, jak zaregistrovat sadu VSPackage správy zdrojového kódu pomocí sady Visual Studio a jak vybrat balíček, který se má načíst z více registrovaných balíčků správy zdrojových kódů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 973eb19916a737dfa775fe79ee62cb3d11fe0123
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76f0bd737eff52706cf73c9a1105b79e08c556f0
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705724"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877348"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>Registrace a výběr (balíček VSPackage správy zdrojového kódu)
 Aby bylo možné zpřístupnit rozhraní VSPackage správy zdrojového kódu, musí být zaregistrováno [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Pokud je registrováno více než jeden prvek VSPackage správy zdrojového kódu, může uživatel vybrat, který VSPackage se má načíst v odpovídajících časech. Další informace o VSPackage a o tom, jak je zaregistrovat, najdete v tématu [VSPackage](../../extensibility/internals/vspackages.md) .
@@ -24,7 +26,7 @@ Aby bylo možné zpřístupnit rozhraní VSPackage správy zdrojového kódu, mu
 ## <a name="registering-a-source-control-package"></a>Registrace balíčku správy zdrojového kódu
  Balíček správy zdrojového kódu je zaregistrován, aby [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ho prostředí mohl najít a dotaz na jeho podporované funkce. Je v souladu se schématem pro opožděné načítání, ve kterém se vytvoří instance balíčku pouze v případě, že jsou funkce nebo příkazy požadovány nebo jsou požadovány explicitně.
 
- Sady VSPackage umístí informace do klíče registru specifického pro verzi HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ *X. Y*, kde *X* je číslo hlavní verze a *Y* je číslo vedlejší verze. Tento postup nabízí možnost podporovat souběžnou instalaci více verzí nástroje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+ VSPackage umístí informace do klíče registru specifického pro verzi HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *X. Y*, kde *x* je hlavní číslo verze a *Y* je číslo dílčí verze. Tento postup nabízí možnost podporovat souběžnou instalaci více verzí nástroje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Uživatelské rozhraní (UI) podporuje výběr z více instalovaných modulů plug-in pro správu zdrojového kódu (prostřednictvím balíčku pro správu zdrojového kódu) i správy zdrojového kódu. V jednom okamžiku může být pouze jeden modul plug-in nebo VSPackage aktivního ovládacího prvku zdrojového kódu. Jak je popsáno níže, integrované vývojové prostředí (IDE) umožňuje přepínání mezi moduly plug-in správy zdrojového kódu a VSPackage prostřednictvím automatického mechanismu výměny balíčků, který je založený na řešení. Pro povolení tohoto mechanismu výběru existují některé požadavky na součást balíčku VSPackage správy zdrojového kódu.
 

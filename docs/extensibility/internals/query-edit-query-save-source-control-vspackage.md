@@ -1,5 +1,7 @@
 ---
 title: Uložení dotazu na úpravu dotazu (VSPackage správy zdrojového kódu) | Microsoft Docs
+description: Přečtěte si o roli Query-Edit události Query-Save a o tom, jak jsou zpracovávány pomocí sady VSPackage správy zdrojového kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c09ac0cb4f51b8f2484b95d403ff6d0445631479
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed1bb5d1f805f81ba4f124f425fbd93f706eb830
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705963"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875879"
 ---
 # <a name="query-edit-query-save-source-control-vspackage"></a>Události QEQS (Query Edit Query Save) (balíček VSPackage správy zdrojového kódu)
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] editory můžou vysílat události pro úpravu dotazů QEQS (Query Query Save). [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Zástupný kód správy zdrojového kódu implementuje službu QEQS, aby byla příjemcem událostí QEQS. Tyto události jsou následně delegovány na aktuálně aktivní správu zdrojového kódu VSPackage. Prvek VSPackage aktivního správy zdrojového kódu implementuje rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> a jeho metody. Metody `IVsQueryEditQuerySave2` rozhraní jsou obvykle volány bezprostředně před první úpravou dokumentu a bezprostředně před uložením dokumentu.
