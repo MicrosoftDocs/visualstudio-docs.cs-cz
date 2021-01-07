@@ -4,17 +4,19 @@
   items:
     - name: První seznámení s testovacími nástroji
       href: improve-code-quality.md
-- name: Testování jednotek
-  items:
-    - name: Přehled nástrojů pro testy jednotek
+    - name: Nástroje pro testy jednotek a související úlohy
       href: unit-test-your-code.md
+- name: Kurzy
+  items:
     - name: Začínáme
       href: getting-started-with-unit-testing.md
+- name: Testování jednotek
+  items:
     - name: Základní informace o testování částí
       href: unit-test-basics.md
     - name: Vytvoření projektu testování částí
       href: create-a-unit-test-project.md
-    - name: Vytvoření příkazu pro testování částí
+    - name: Vytváření testů jednotek z kódu
       href: create-unit-tests-menu.md
     - name: IntelliTest
       items:

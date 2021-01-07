@@ -6,8 +6,6 @@
       href: what-is-debugging.md
     - name: Techniky ladění a související nástroje
       href: write-better-code-with-visual-studio.md
-    - name: Nalezení úlohy ladění
-      href: find-your-debugging-task.md
 - name: Rychlý start
   items:
     - name: První seznámení s ladicím programem
@@ -944,5 +942,7 @@
                   href: copyright-notice-for-spy-increment-help.md
 - name: Prostředky
   items:
+    - name: Nejčastější dotazy – vyhledání funkce ladění
+      href: find-your-debugging-task.md
     - name: Novinky v ladicím programu sady Visual Studio
       href: what-s-new-for-the-debugger-in-visual-studio.md

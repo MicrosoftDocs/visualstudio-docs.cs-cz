@@ -34,6 +34,8 @@
       href: perftips.md
     - name: .NET Async
       href: analyze-async.md
+    - name: Čítače .NET
+      href: dotnet-counters-tool.md
     - name: Databáze
       href: analyze-database.md
     - name: Prohlížeč událostí

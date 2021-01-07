@@ -33,6 +33,8 @@
       href: azure-sql-database-add-connected-service.md
     - name: Přidání služby Azure Storage
       href: vs-azure-tools-connected-services-storage.md
+    - name: Přidání služby Azure App Configuration
+      href: vs-azure-tools-connected-services-app-configuration.md
 - name: Vývoj pro Azure Cloud Services
   expanded: false
   items:
