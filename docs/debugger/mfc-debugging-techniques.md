@@ -1,5 +1,7 @@
 ---
 title: Techniky ladění MFC | Microsoft Docs
+description: 'Naučte se naučit ladit programy MFC, včetně: kódované zarážky, trasování, detekce nevracení paměti, výpisů paměti objektů a zmenšení velikosti programu.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -25,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06b42dbf31a8b5f4cb66de047bc1e08a4f840353
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 5cf00191aff408b1133c281e10eea17e3a923215
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600241"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975118"
 ---
 # <a name="mfc-debugging-techniques"></a>Techniky ladění MFC
 Při ladění programu knihovny MFC mohou být tyto techniky ladění užitečné.
@@ -430,7 +432,7 @@ Sestavování vybraných modulů pomocí ladicích knihoven knihovny MFC vám um
 
 3. Nejprve vytvoříte novou konfiguraci projektu.
 
-   1. V dialogovém okně ** \<Project> stránky vlastností** klikněte na tlačítko **Configuration Manager** .
+   1. V dialogovém okně **\<Project> stránky vlastností** klikněte na tlačítko **Configuration Manager** .
 
    2. V [dialogovém okně Configuration Manager](/previous-versions/visualstudio/visual-studio-2010/t1hy4dhz(v=vs.100))vyhledejte v mřížce svůj projekt. Ve sloupci **Konfigurace** vyberte **\<New...>** .
 
@@ -448,7 +450,7 @@ Sestavování vybraných modulů pomocí ladicích knihoven knihovny MFC vám um
 
    2. V mřížce nastavení projektu rozbalte položku **výchozí hodnoty projektu** (v případě potřeby).
 
-   3. V části **výchozí nastavení projektu**Najděte **použití knihovny MFC**. Aktuální nastavení se zobrazí v pravém sloupci mřížky. Klikněte na aktuální nastavení a změňte jej tak, aby **používalo knihovnu MFC ve statické knihovně**.
+   3. V části **výchozí nastavení projektu** Najděte **použití knihovny MFC**. Aktuální nastavení se zobrazí v pravém sloupci mřížky. Klikněte na aktuální nastavení a změňte jej tak, aby **používalo knihovnu MFC ve statické knihovně**.
 
    4. V levém podokně dialogového okna **stránky vlastností** otevřete složku **C/C++** a vyberte **preprocesor**. V mřížce Properties (vlastnosti) Najděte **Definice preprocesoru** a nahraďte "NDEBUG" pomocí "_DEBUG".
 
@@ -472,7 +474,7 @@ Sestavování vybraných modulů pomocí ladicích knihoven knihovny MFC vám um
 
    6. Klikněte na nastavení **formátu ladicí informace** a vyberte požadovanou možnost (obvykle **/Zi**) pro informace o ladění.
 
-   7. Pokud používáte aplikaci generovanou průvodcem aplikací nebo pokud mají předkompilované hlavičky, je nutné před kompilací dalších modulů vypnout předkompilovaných hlaviček nebo je znovu zkompilovat. V opačném případě se zobrazí upozornění C4650 a chybová zpráva C2855. Předkompilované hlavičky můžete vypnout tak, že změníte nastavení **předkompilovanách hlaviček vytvořit/použít** v dialogovém okně ** \<Project> vlastnosti** (složka**Vlastnosti konfigurace** , podsložka **C/C++** , kategorie **předkompilovaných hlaviček** ).
+   7. Pokud používáte aplikaci generovanou průvodcem aplikací nebo pokud mají předkompilované hlavičky, je nutné před kompilací dalších modulů vypnout předkompilovaných hlaviček nebo je znovu zkompilovat. V opačném případě se zobrazí upozornění C4650 a chybová zpráva C2855. Předkompilované hlavičky můžete vypnout tak, že změníte nastavení **předkompilovanách hlaviček vytvořit/použít** v dialogovém okně **\<Project> vlastnosti** (složka **Vlastnosti konfigurace** , podsložka **C/C++** , kategorie **předkompilovaných hlaviček** ).
 
 7. V nabídce **sestavení** vyberte **sestavení** a znovu sestavte soubory projektu, které nejsou aktuální.
 

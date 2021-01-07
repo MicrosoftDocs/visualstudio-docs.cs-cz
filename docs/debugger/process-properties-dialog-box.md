@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Vlastnosti procesu | Microsoft Docs
+description: 'Použijte vlastnosti procesu a zjistěte další informace o procesu, který jste vybrali v zobrazení procesy. Existují čtyři karty: Obecné, paměť, stránkovací soubor a mezera.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2448659a8725c7e284e12a99d52478144ebec1b9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: abf4e8c6d1e61441459b0b48adfda4fa8728f44a
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62903753"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975105"
 ---
 # <a name="process-properties-dialog-box"></a>Dialogové okno vlastností procesů
 Pomocí tohoto dialogového okna můžete zjistit další informace o konkrétním procesu. Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno [zobrazení procesů](../debugger/processes-view.md) . Ve stromové struktuře vyberte libovolný uzel procesu a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .

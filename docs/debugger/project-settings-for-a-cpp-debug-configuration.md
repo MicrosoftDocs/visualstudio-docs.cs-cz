@@ -1,6 +1,7 @@
 ---
 title: Nastavení projektu pro konfiguraci ladění jazyka C++
-ms.custom: seodec18
+description: Konfigurace ladění v jazyce C a C++ na stránkách vlastností. Tento článek popisuje nastavení a oznamuje vám jejich kategorii.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/26/2018
 ms.topic: reference
 f1_keywords:
@@ -112,12 +113,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bca39b97f6363d8b8fefcfd691b69baf85c32170
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6130b49beecb3411c275fc5d2005b7aabee262fd
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72450372"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975287"
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>Nastavení projektu pro konfiguraci ladění jazyka C++
 Můžete změnit nastavení projektu pro konfiguraci ladění jazyka C nebo C++ v dialogovém okně **stránky vlastností** , jak je popsáno v tématu [Postupy: nastavení ladění a konfigurací vydání](../debugger/how-to-set-debug-and-release-configurations.md). Následující tabulky ukazují, kde najít nastavení související s ladicím programem v dialogovém okně **stránky vlastností** .
@@ -181,7 +182,7 @@ Můžete změnit nastavení projektu pro konfiguraci ladění jazyka C nebo C++ 
 
 ## <a name="other-project-settings"></a>Další nastavení projektu
 
-Chcete-li ladit typy projektů, jako jsou statické knihovny a knihovny DLL, váš projekt aplikace Visual Studio musí být schopný najít správné soubory. Když je zdrojový kód k dispozici, můžete přidat statické knihovny a knihovny DLL jako samostatné projekty do stejného řešení, aby bylo ladění snazší. Informace o vytváření těchto typů projektů naleznete v tématu [Vytvoření a použití dynamické knihovny (DLL)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp) a [vytvoření pomocí statické knihovny](/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp). Pokud je k dispozici zdrojový kód, můžete také vytvořit nový projekt sady Visual Studio **File**tak, že  >  **New**  >  **v existujícím kódu**kliknete na soubor nový projekt.
+Chcete-li ladit typy projektů, jako jsou statické knihovny a knihovny DLL, váš projekt aplikace Visual Studio musí být schopný najít správné soubory. Když je zdrojový kód k dispozici, můžete přidat statické knihovny a knihovny DLL jako samostatné projekty do stejného řešení, aby bylo ladění snazší. Informace o vytváření těchto typů projektů naleznete v tématu [Vytvoření a použití dynamické knihovny (DLL)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp) a [vytvoření pomocí statické knihovny](/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp). Pokud je k dispozici zdrojový kód, můžete také vytvořit nový projekt sady Visual Studio tak, že  >    >  **v existujícím kódu** kliknete na soubor nový projekt.
 
 Chcete-li ladit knihovny DLL, které jsou pro váš projekt externí, přečtěte si téma [ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md#vxtskdebuggingdllprojectsexternal). Pokud potřebujete ladit vlastní projekt knihovny DLL, ale nemáte přístup k projektu volající aplikace, přečtěte si téma [jak ladit z projektu knihovny DLL](../debugger/how-to-debug-from-a-dll-project.md).
 

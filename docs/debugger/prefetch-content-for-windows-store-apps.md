@@ -1,5 +1,7 @@
 ---
 title: Ladění pomocí předběžného načteného obsahu v aplikacích pro UWP | Microsoft Docs
+description: Pokud chcete, aby aplikace UWP lépe reagovala, použijte ContentPrefetcher a vyžádejte si systém Windows, aby využíval webový obsah.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 65b889452a23bb970cbee4c65455679a3473abab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33eb7aa0559fc7a6170da658ccc9f00653968bb6
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348064"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975027"
 ---
 # <a name="debug-uwp-apps-using-prefetched-content-in-visual-studio"></a>Ladění aplikací pro UWP pomocí předběžného načteného obsahu v aplikaci Visual Studio
 

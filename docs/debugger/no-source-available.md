@@ -1,5 +1,7 @@
 ---
 title: Není k dispozici žádný zdroj | Microsoft Docs
+description: Přečtěte si, co můžete dělat, když projekt nemá zdrojový kód pro kód, který chcete zobrazit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f08ed499e61e54ffbc6508bc8353ea955d9a20c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8cf7bf067602586d90271eab1f9289a3b6b884ce
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72730863"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975183"
 ---
 # <a name="no-source-available"></a>Žádný zdroj není k dispozici.
 Projekt neobsahuje zdrojový kód pro kód, který se pokoušíte zobrazit. Obvyklou příčinou je dvojité kliknutí na modul, který nemá zdrojový kód v okně **zásobník volání** nebo v **okně vlákna**. Můžete pokračovat v ladění, ale nemůžete použít zdrojové okno k nastavování zarážek a provádění dalších akcí v tomto umístění. Pokud potřebujete nastavit zarážku, použijte místo toho okno zpětného **překladu** .
@@ -36,6 +38,6 @@ Projekt neobsahuje zdrojový kód pro kód, který se pokoušíte zobrazit. Obvy
  **Vždy zobrazit zpětný překlad pro chybějící zdrojové soubory** Tuto možnost vyberte, pokud chcete automaticky zobrazit **okno zpětný překlad** , když není k dispozici žádný zdroj. Toto nastavení lze také změnit v dialogovém okně **Možnosti** , kategorie **ladění** , **Obecné** , výběrem nebo zrušením zaškrtnutí **Zobrazit zpětný překlad, pokud není k dispozici zdroj**.
 
 ## <a name="see-also"></a>Viz také
-- [Ladění zdrojových souborů, společná nastavení, dialogové okno stránek vlastností řešení](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)
+- [Ladit zdrojové soubory, společné vlastnosti, stránky vlastností řešení – dialogové okno](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)
 - [Zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [SOS.dll (rozšíření ladění SOS)](/dotnet/framework/tools/sos-dll-sos-debugging-extension)

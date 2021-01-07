@@ -1,5 +1,7 @@
 ---
 title: Zobrazení procesů | Microsoft Docs
+description: Zobrazení procesy zobrazuje strom všech aktivních procesů v systému. Přečtěte si o jeho obsahu a používání a použijte odkazy na Další informace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99ba60021410f1965e05f7c5479231013d53cb71
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a52da28d01eac4f04081497888fbbfccaf4495e2
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62904223"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975131"
 ---
 # <a name="processes-view"></a>Zobrazení procesů
 Zobrazení procesy zobrazuje strom všech aktivních procesů v systému. Zobrazí se ID procesu a název modulu. Použijte zobrazení procesy, pokud chcete prošetřit konkrétní systémový proces, který obvykle odpovídá spuštěnému programu. Procesy se identifikují podle názvů modulů nebo jsou určené "systémové procesy".

@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: f1473c731dbf9413cf695e1b2331039c3880b8d7
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 4f8c1c265f49b600880cd1278b51095fda9cfb1d
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91829870"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975144"
 ---
 # <a name="container-tools-in-visual-studio"></a>Nástroje kontejneru v sadě Visual Studio
 
@@ -19,7 +19,7 @@ Nástroje zahrnuté v aplikaci Visual Studio pro vývoj s kontejnery se snadno p
 
 ::: moniker range="vs-2017"
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) s nainstalovanou úlohou **vývoje pro web**, úlohy **nástrojů Azure** a/nebo **.NET Core pro vývoj pro různé platformy**
@@ -40,7 +40,7 @@ V rámci sady Visual Studio 2017 můžete použít Docker Compose a Service Fabr
 
 ::: moniker range=">=vs-2019"
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) s nainstalovanou úlohou **vývoje pro web**, úlohy **nástrojů Azure** a/nebo **.NET Core pro vývoj pro různé platformy**
@@ -103,7 +103,7 @@ Toto řešení po přidání podpory Docker vypadá takto:
 
 Pokud chcete vytvořit řešení s více kontejnery pomocí Docker Compose, přidejte do svých projektů podporu orchestrace kontejnerů. To umožňuje spustit a ladit skupinu kontejnerů (celé řešení nebo skupiny projektů), pokud jsou definovány ve stejném souboru *Docker-Compose. yml* .
 
-Chcete-li přidat podporu orchestrace kontejnerů pomocí Docker Compose, klikněte pravým tlačítkem myši na uzel řešení nebo projektu v **Průzkumník řešení**a vyberte možnost **Přidat > podporu orchestrace kontejnerů**. Pak zvolte **Docker Compose** pro správu kontejnerů.
+Chcete-li přidat podporu orchestrace kontejnerů pomocí Docker Compose, klikněte pravým tlačítkem myši na uzel řešení nebo projektu v **Průzkumník řešení** a vyberte možnost **Přidat > podporu orchestrace kontejnerů**. Pak zvolte **Docker Compose** pro správu kontejnerů.
 
 Po přidání podpory orchestrace kontejnerů do projektu se zobrazí *souboru Dockerfile* do projektu (Pokud ještě neexistuje) a složka **Docker-Docker** , která je přidána do řešení v **Průzkumník řešení**, jak je znázorněno zde:
 
@@ -119,9 +119,9 @@ Opakujte tento postup s ostatními projekty, které chcete řídit pomocí Docke
 Pokud chcete přidat podporu Kubernetes, nainstalujte [Visual Studio Tools for Kubernetes](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes).
 ::: moniker-end
 
-Díky podpoře Kubernetes můžete povolit připojení mezi místním projektem a clusterem Kubernetes běžícím ve [službě Azure Kubernetes Service (AKS)](/azure/aks)a tím upravit a ladit vaše služby běžící v AKS pomocí sady Visual Studio.  Tuto službu poskytuje [Azure dev Spaces](/azure/dev-spaces/quickstart-netcore-visualstudio). Azure Dev Spaces taky umožňuje nastavit samostatné pobočky vašich služeb Kubernetes s názvem *vývojové prostory* pro účely vývoje, takže můžete efektivně izolovat produkční služby od pracovních verzí ve vývoji a udržovat jedinečné změny čistě oddělené od sebe navzájem.
+Díky podpoře Kubernetes můžete povolit připojení mezi místním projektem a clusterem Kubernetes běžícím ve [službě Azure Kubernetes Service (AKS)](/azure/aks)a tím upravit a ladit vaše služby spuštěné pomocí sady Visual Studio.  Tuto službu poskytuje [most pro Kubernetes](overview-bridge-to-kubernetes.md). Most do Kubernetes také umožňuje nastavit samostatné větve služeb Kubernetes pro účely vývoje, takže můžete efektivně izolovat produkční služby od pracovních verzí ve vývoji a udržovat jedinečné změny čistě oddělené od sebe navzájem.
 
-Pokud chcete přidat podporu Kubernetes do projektů, vyberte **Kubernetes/Helm** , když přidáte podporu orchestrace kontejnerů. Do projektu se přidalo několik souborů, včetně *azds. yaml*, které konfiguruje Azure dev Spaces a Helm grafy, které popisují strukturu vašich služeb Kubernetes.
+Pokud chcete přidat podporu Kubernetes do projektů, vyberte **Kubernetes/Helm** , když přidáte podporu orchestrace kontejnerů. Do projektu se přidá několik souborů, včetně Helm grafů popisujících strukturu vašich služeb Kubernetes. Pokud chcete začít s přemostěním na Kubernetes, přečtěte si téma [použití mostu na Kubernetes](bridge-to-kubernetes.md).
 
 ## <a name="service-fabric-support"></a>Podpora Service Fabric
 

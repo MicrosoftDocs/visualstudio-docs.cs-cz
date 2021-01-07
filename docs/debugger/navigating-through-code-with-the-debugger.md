@@ -1,6 +1,7 @@
 ---
 title: Navigace v kódu pomocí ladicího programu | Microsoft Docs
-ms.custom: seodec18
+description: 'Naučte se používat ladicí program sady Visual Studio k řešení potíží s kódem. Témata zahrnují: načtení do režimu přerušení, krokování kódu a spuštění do cíle.'
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/12/2018
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cd7bb050204d65bb78a597c1ae3c7eea36ac184
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 0ffe163ab567de98161f185ba2f3d2522c505095
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729350"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975209"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Procházení kódu pomocí ladicího programu sady Visual Studio
 

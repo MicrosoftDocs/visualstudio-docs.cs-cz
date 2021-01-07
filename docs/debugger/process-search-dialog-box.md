@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno pro hledání procesů | Microsoft Docs
+description: Pomocí hledání procesů vyhledejte a vyberte uzel pro konkrétní proces v zobrazení procesy. Můžete zadat ID procesu, řetězec modulu a směr hledání.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 190ec35d014e6b443a9f80bf79433ac14b8fb8ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 889c6bac2f00041af6578d31bc0c6e036d82afe1
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62903766"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975092"
 ---
 # <a name="process-search-dialog-box"></a>Dialogové okno hledání procesů
 Pomocí tohoto dialogového okna můžete vyhledat a vybrat uzel pro konkrétní proces v [zobrazení procesy](../debugger/processes-view.md). Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno zobrazení **procesů** . Pak v nabídce **hledání** zvolte **Najít proces** .

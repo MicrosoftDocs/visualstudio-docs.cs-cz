@@ -1,5 +1,7 @@
 ---
 title: Karta výstup, dialogové okno Možnosti zprávy | Microsoft Docs
+description: Pomocí karty výstup z možností zprávy určete, jaká data zprávy se zobrazí v zobrazení zprávy. Tento článek popisuje dostupná nastavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63268fdbc320e78a697c181112dbeaaf8ad161ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4d965b92a30d8d8a5b998a27bea9651f8669c8f
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62905072"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975079"
 ---
 # <a name="output-tab-message-options-dialog-box"></a>Karta Výstup, dialogové okno možností zpráv
 Kartu **výstup** použijte k určení toho, jaká data z každé zprávy mají být v [zobrazení zprávy](../debugger/messages-view.md). Chcete-li zobrazit [dialogové okno Možnosti zprávy](../debugger/message-options-dialog-box.md), vyberte možnost **Protokolovat zprávy** z nabídky **Spy** .

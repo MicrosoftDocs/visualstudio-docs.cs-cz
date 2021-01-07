@@ -1,5 +1,7 @@
 ---
-title: Přizpůsobení nativních kontrol za běhu | Microsoft Docs
+title: Nativní Run-Time kontroluje vlastní nastavení | Microsoft Docs
+description: 'Naučte se, jak přizpůsobit kontrolu za běhu, včetně: určení cíle zprávy, zápis funkce zasílání zpráv o chybách a dotazování na informace o chybě.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7cc513c4c96a8b60cc6471280bb837a7b9a248
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b5f5aa55ac9d8c13da605a09986569c534a30bf
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72730894"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975196"
 ---
 # <a name="native-run-time-checks-customization"></a>Přizpůsobení nativních kontrol za běhu
 Pokud kompilujete pomocí **/RTC** (kontroly za běhu) nebo použijete `runtime_checks` direktivu pragma, knihovna run-time jazyka C poskytuje nativní kontroly za běhu. V některých případech může být vhodné přizpůsobit kontrolu za běhu:
@@ -40,7 +42,7 @@ Pokud kompilujete pomocí **/RTC** (kontroly za běhu) nebo použijete `runtime_
 
   Chcete-li přizpůsobit kontrolu chyb v době běhu, můžete:
 
-- Zápis funkce zasílání zpráv o chybách za běhu Další informace naleznete v tématu [Postupy: zápis funkce zasílání zpráv o chybách za běhu](../debugger/how-to-write-a-run-time-error-reporting-function.md).
+- Zápis funkce zasílání zpráv o chybách za běhu Další informace naleznete v tématu [How to: Write a Run-Time funkce zasílání zpráv o chybách](../debugger/how-to-write-a-run-time-error-reporting-function.md).
 
 - Přizpůsobte cíl chybové zprávy.
 
@@ -51,10 +53,10 @@ Pokud kompilujete pomocí **/RTC** (kontroly za běhu) nebo použijete `runtime_
 
  Pokud používáte vlastní funkci vytváření sestav, použijte `_RTC_SetErrorType` k přidružení chyby k typu sestavy.
 
-## <a name="query-for-information-about-run-time-checks"></a>Dotaz na informace o kontrolách běhu
+## <a name="query-for-information-about-run-time-checks"></a>Dotaz na informace o kontrolách Run-Time
  `_RTC_NumErrors` Vrátí počet typů chyb zjištěných při kontrolách běhových chyb. Chcete-li získat stručný popis každé chyby, můžete provést smyčku z 0 na návratovou hodnotu `_RTC_NumErrors` a předáním hodnoty iterace do `_RTC_GetErrDesc` každé smyčky. Další informace najdete v tématu [_RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors) a [_RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc).
 
 ## <a name="see-also"></a>Viz také
-- [Postupy: použití nativních kontrol za běhu](../debugger/how-to-use-native-run-time-checks.md)
+- [Postupy: použití nativních kontrol Run-Time](../debugger/how-to-use-native-run-time-checks.md)
 - [runtime_checks](/cpp/preprocessor/runtime-checks)
 - [_CrtDbgReport, _CrtDbgReportW](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw)

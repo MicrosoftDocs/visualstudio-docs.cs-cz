@@ -1,5 +1,7 @@
 ---
 title: Ladění ve smíšeném režimu pro procesy x64 je podporováno, pouze pokud používáte rozhraní Microsoft .NET Framework 4 nebo vyšší
+description: Verze .NET Framework starší než 4 neposkytují podporu pro ladění ve smíšeném režimu pro procesy x64. Alternativní řešení najdete v tomto článku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2256d5cfde8ea5ff02e4255c3534e87d8ba92f79
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 039f97fc102e98ba0b6809c4aae402c0f26c5cc1
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807895"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975222"
 ---
 # <a name="mixed-mode-debugging-for-x64-processes-is-only-supported-when-using-microsoftnet-framework-4-or-greater"></a>Ladění ve smíšeném režimu pro procesy x64 je podporováno, pouze pokud používáte rozhraní Microsoft .NET Framework 4 nebo vyšší
 Verze .NET Framework starší než 4 neposkytují podporu pro ladění ve smíšeném režimu pro procesy x64. To znamená, že nemůžete krokovat ze spravovaného kódu do nativního kódu nebo z nativního kódu do spravovaného kódu při ladění.
@@ -39,7 +41,7 @@ Verze .NET Framework starší než 4 neposkytují podporu pro ladění ve smíš
 
 ### <a name="to-change-the-platform-to-32-bit-visual-basic-or-c"></a>Změna platformy na 32-bit (Visual Basic nebo C#)
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a pak klikněte na **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt a pak klikněte na **vlastnosti**.
 
 2. Na stránkách vlastností klikněte na kartu **kompilovat** nebo **ladění** .
 
@@ -49,7 +51,7 @@ Verze .NET Framework starší než 4 neposkytují podporu pro ladění ve smíš
 
 ### <a name="to-change-the-platform-to-32-bit-cc"></a>Změna platformy na 32-bit (C/C++)
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a pak klikněte na **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt a pak klikněte na **vlastnosti**.
 
 2. Na stránkách vlastností klikněte na možnost **platforma** a v seznamu platforem vyberte položku Win32.
 
@@ -58,4 +60,4 @@ Verze .NET Framework starší než 4 neposkytují podporu pro ladění ve smíš
 - Viz [nastavení ladění SQL](/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100)).
 
 ## <a name="see-also"></a>Viz také
-- [Ladění 64bitových aplikací](../debugger/debug-64-bit-applications.md)
+- [Ladění 64 aplikací](../debugger/debug-64-bit-applications.md)
