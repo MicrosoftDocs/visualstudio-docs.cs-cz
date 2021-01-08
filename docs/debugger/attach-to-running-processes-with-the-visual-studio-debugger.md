@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fd1ff5ff0f8c7510185236c425ddd870f8b500f
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: 6fb2fde5d5629b84ccd0e136c132a200b154ea71
+ms.sourcegitcommit: dc71e9030ff35bb26916572b431d4d9e78df3d6f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97760923"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98031039"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Připojení ladicího programu sady Visual Studio ke spuštěným procesům
 
@@ -199,7 +199,7 @@ Chcete-li rychle vybrat běžící proces, ke kterému se chcete připojit, v ap
 |Ladění aplikace v C#, Visual Basic nebo C++ na místním počítači|Použít buď standardní ladění (**F5**), nebo **připojit k procesu**|*\<appname>soubor. exe*|Ve většině scénářů použijte standardní ladění a **Nepřipojujte se k procesu**.|
 |Vzdálené ladění desktopové aplikace pro Windows|Vzdálené nástroje|–| Viz téma [vzdálené ladění aplikace v C# nebo Visual Basic](../debugger/remote-debugging-csharp.md) nebo [vzdálené ladění aplikace C++](../debugger/remote-debugging-cpp.md) .|
 |Ladění .NET Core v Linuxu|Použít **připojit k procesu**|*dotnet.exe* nebo jedinečný název procesu|Pokud chcete použít SSH, přečtěte si téma [vzdálené ladění .NET Core běžící na Linux pomocí SSH](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md). Pro kontejnerové aplikace najdete informace v tématu [připojení k procesu běžícímu v kontejneru Docker](../debugger/attach-to-process-running-in-docker-container.md#attach-to-a-process-running-on-a-linux-docker-container).|
-|Ladění kontejnerové aplikace|*dotnet.exe* nebo jedinečný název procesu|Viz [připojení k procesu běžícímu v kontejneru Docker](../debugger/attach-to-process-running-in-docker-container.md) .|
+|Ladění kontejnerové aplikace|Použít **připojit k procesu**|*dotnet.exe* nebo jedinečný název procesu|Viz [připojení k procesu běžícímu v kontejneru Docker](../debugger/attach-to-process-running-in-docker-container.md) .|
 |Vzdálené ladění Pythonu v systému Linux|Použít **připojit k procesu**|*debugpy*|Viz téma [připojit se vzdáleně od nástrojů Pythonu](../python/debugging-python-code-on-remote-linux-machines.md#attach-remotely-from-python-tools) .|
 |Ladění aplikace v ASP.NET v místním počítači po spuštění aplikace bez ladicího programu|Použít **připojit k procesu**|*iiexpress.exe*|To může být užitečné při rychlejším načítání aplikace, například (například) při profilaci. |
 |Ladění dalších podporovaných typů aplikací v procesu serveru|Pokud je server vzdálený, použijte nástroje Remote Tools a **Připojte se k procesu** .|*chrome.exe*, *iexplore.exe* nebo jiné procesy|V případě potřeby použijte Sledování prostředků k usnadnění identifikace procesu. Viz téma [vzdálené ladění](../debugger/remote-debugging.md).|
