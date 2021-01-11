@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c72e53266eae11fb060ac117c4a6dc0a1c37e2e
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 631ce51df5d985e02e8ccabca258c0ef1c1318f4
+ms.sourcegitcommit: b1f7e7d7a0550d5c6f46adff3bddd44bc1d6ee1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434789"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98069471"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Postupy: generování dat metrik kódu
 
@@ -39,15 +39,10 @@ Analyzátory kvality kódu .NET obsahují několik pravidel [analyzátoru](rosly
 - [CA1505](/dotnet/fundamentals/code-analysis/quality-rules/ca1505)
 - [CA1506](/dotnet/fundamentals/code-analysis/quality-rules/ca1506)
 
-Tato pravidla jsou ve výchozím nastavení zakázaná, ale můžete je povolit z [**Průzkumník řešení**](use-roslyn-analyzers.md#set-rule-severity-from-solution-explorer) nebo v souboru [sady pravidel](using-rule-sets-to-group-code-analysis-rules.md) . Například pokud chcete, aby se pravidlo CA1502 jako upozornění, váš soubor. ruleset by obsahoval následující položku:
+Tato pravidla jsou ve výchozím nastavení zakázaná, ale můžete je povolit z [**Průzkumník řešení**](use-roslyn-analyzers.md#set-rule-severity-from-solution-explorer) nebo v souboru [EditorConfig](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file) . Například pokud chcete, aby se pravidlo CA1502 jako upozornění, soubor EditorConfig by obsahoval následující položku:
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="Rules" Description="Rules" ToolsVersion="16.0">
-  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers">
-    <Rule Id="CA1502" Action="Warning" />
-  </Rules>
-</RuleSet>
+```cs
+dotnet_diagnostic.CA1502.severity = warning
 ```
 
 ### <a name="configuration"></a>Konfigurace
@@ -64,7 +59,7 @@ Můžete nakonfigurovat prahové hodnoty, při kterých se pravidla metrik kódu
 
    V tomto příkladu je [CA1502](/dotnet/fundamentals/code-analysis/quality-rules/ca1502) pravidla nastavená tak, aby se aktivovalo, když je cyklomatickáá složitost větší než 10.
 
-3. V okně **vlastnosti** aplikace Visual Studio nebo v souboru projektu označte akci sestavení konfiguračního souboru jako [**AdditionalFiles**](../ide/build-actions.md#build-action-values). Příklad:
+3. V okně **vlastnosti** aplikace Visual Studio nebo v souboru projektu označte akci sestavení konfiguračního souboru jako [**AdditionalFiles**](../ide/build-actions.md#build-action-values). Například:
 
    ```xml
    <ItemGroup>
@@ -113,7 +108,7 @@ Data metriky kódu můžete vygenerovat z příkazového řádku pro projekty v 
 
 ### <a name="microsoftcodeanalysismetrics-nuget-package"></a>Balíček NuGet Microsoft. CodeAnalysis. Metrics
 
-Nejjednodušší způsob, jak generovat data metrik kódu z příkazového řádku, je instalace balíčku NuGet [Microsoft. CodeAnalysis. Metrics](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) . Po instalaci balíčku spusťte `msbuild /t:Metrics` z adresáře, který obsahuje soubor projektu. Příklad:
+Nejjednodušší způsob, jak generovat data metrik kódu z příkazového řádku, je instalace balíčku NuGet [Microsoft. CodeAnalysis. Metrics](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) . Po instalaci balíčku spusťte `msbuild /t:Metrics` z adresáře, který obsahuje soubor projektu. Například:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics
@@ -136,7 +131,7 @@ Build succeeded.
     0 Error(s)
 ```
 
-Název výstupního souboru můžete přepsat zadáním `/p:MetricsOutputFile=<filename>` . Data metriky kódu [starší verze](#previous-versions) můžete získat také zadáním `/p:LEGACY_CODE_METRICS_MODE=true` . Příklad:
+Název výstupního souboru můžete přepsat zadáním `/p:MetricsOutputFile=<filename>` . Data metriky kódu [starší verze](#previous-versions) můžete získat také zadáním `/p:LEGACY_CODE_METRICS_MODE=true` . Například:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics /p:LEGACY_CODE_METRICS_MODE=true /p:MetricsOutputFile="Legacy.xml"
@@ -295,7 +290,7 @@ Pokud balíček NuGet nechcete instalovat, můžete *Metrics.exe* spustitelný s
 
 #### <a name="metricsexe-usage"></a>Využití Metrics.exe
 
-Chcete-li spustit *Metrics.exe* , zadejte projekt nebo řešení a výstupní soubor XML jako argumenty. Příklad:
+Chcete-li spustit *Metrics.exe*, zadejte projekt nebo řešení a výstupní soubor XML jako argumenty. Například:
 
 ```shell
 C:\>Metrics.exe /project:ConsoleApp20.csproj /out:report.xml
@@ -336,7 +331,7 @@ Počínaje verzí Visual Studio 2019, 16,4 a Microsoft. CodeAnalysis. metics (2.
 `LinesOfCode`Metrika je přesnější a spolehlivá v novém nástroji příkazového řádku pro metriky kódu. Nezávisí na žádných rozdílech CODEGEN a nemění se, když se změní sada nástrojů nebo modul runtime. Nový nástroj počítá skutečné řádky kódu, včetně prázdných řádků a komentářů.
 ::: moniker-end
 
-Jiné metriky, jako je například, `CyclomaticComplexity` a `MaintainabilityIndex` používají stejné vzorce jako předchozí verze *Metrics.exe* , ale nový nástroj počítá `IOperations` místo instrukcí jazyka Il (Intermediate Language) počet (instrukce logických zdrojů). Čísla budou mírně odlišná na ta, která jsou vygenerována v integrovaném vývojovém prostředí sady Visual Studio a v předchozích verzích *Metrics.exe*.
+Jiné metriky, jako je například, `CyclomaticComplexity` a `MaintainabilityIndex` používají stejné vzorce jako předchozí verze *Metrics.exe*, ale nový nástroj počítá `IOperations` místo instrukcí jazyka Il (Intermediate Language) počet (instrukce logických zdrojů). Čísla budou mírně odlišná na ta, která jsou vygenerována v integrovaném vývojovém prostředí sady Visual Studio a v předchozích verzích *Metrics.exe*.
 
 ## <a name="see-also"></a>Viz také
 

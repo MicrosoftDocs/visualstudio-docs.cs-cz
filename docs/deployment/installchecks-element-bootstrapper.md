@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 660fc893eb22d0c40805a8bf7b2efc86fd83c3b1
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: cf02fda50678d9de4eb01dc28b4825844e33063e
+ms.sourcegitcommit: b1f7e7d7a0550d5c6f46adff3bddd44bc1d6ee1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350865"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98069497"
 ---
 # <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;InstallChecks – &gt; element (zaváděcí nástroj)
 `InstallChecks`Prvek podporuje spuštění různých testů pro místní počítač, aby bylo zajištěno, že byly nainstalovány všechny odpovídající požadavky na aplikaci.
@@ -158,7 +158,7 @@ ms.locfileid: "94350865"
 ## <a name="installconditions"></a>InstallConditions
  Když `InstallChecks` jsou vyhodnocovány, vyvolávají vlastnosti. Vlastnosti se pak používají `InstallConditions` k určení, jestli se má balíček nainstalovat, vynechat nebo selhat. Následující tabulka uvádí `InstallConditions` :
 
-|Stav|Popis|
+|Podmínka|Description|
 |-|-|
 |`FailIf`|Pokud se nějaká `FailIf` Podmínka vyhodnotí jako true, balíček se nepodaří. Zbývající podmínky nebudou vyhodnoceny.|
 |`BypassIf`|Pokud se kterákoli `BypassIf` Podmínka vyhodnotí jako true, balíček se obejít. Zbývající podmínky nebudou vyhodnoceny.|
@@ -177,9 +177,19 @@ ms.locfileid: "94350865"
  Chcete-li například zablokovat instalaci na počítači se systémem Windows 95, použijte následující kód:
 
 ```xml
-<!-- Block install on Windows 95 -->
+    <!-- Block install on Windows 95 -->
     <FailIf Property="Version9X" Compare="VersionLessThan" Value="4.10" String="InvalidPlatform"/>
 ```
+
+ Pokud chcete přeskočit běžící instalační kontroly, pokud je splněna podmínka FailIf nebo BypassIf, použijte atribut BeforeInstallChecks.  Například:
+
+```xml
+    <!-- Block install and do not evaluate install checks if user does not have admin privileges -->
+    <FailIf Property="AdminUser" Compare="ValueEqualTo" Value="false" String="AdminRequired" BeforeInstallChecks="true"/>
+```
+
+>[!NOTE]
+>`BeforeInstallChecks`Atribut je podporován počínaje verzí Visual Studio 2019 Update 9.
 
 ## <a name="see-also"></a>Viz také
 - [\<Commands> objekt](../deployment/commands-element-bootstrapper.md)

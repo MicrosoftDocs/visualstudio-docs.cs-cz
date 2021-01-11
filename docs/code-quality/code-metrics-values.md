@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5e7ee628f5a48f573afed9753f4fad17f85e33a
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 6f843df01059adef3a94bb46501e4e75bd67d5a7
+ms.sourcegitcommit: b1f7e7d7a0550d5c6f46adff3bddd44bc1d6ee1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348642"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98069484"
 ---
 # <a name="code-metrics-values"></a>Hodnoty metrik kódu
 
@@ -36,19 +36,19 @@ Informace o tom, jak generovat data metrik kódu v aplikaci Visual Studio, nalez
 
 V následujícím seznamu jsou uvedeny výsledky metrik kódu, které Visual Studio vypočítá:
 
-- **Index udržovatelnosti** – vypočítá hodnotu indexu mezi 0 a 100, která představuje relativní snadné udržování kódu. Vysoká hodnota znamená lepší udržovatelnost. Barevná hodnocení lze použít k rychlé identifikaci problémů v kódu. Zelené hodnocení je mezi 20 a 100 a indikuje, že kód má dobrou udržovatelnost. Žluté hodnocení je mezi 10 a 19 a označuje, že je kód moderovanější. Červené hodnocení je hodnocení mezi 0 a 9 a označuje nízkou udržovatelnost. Další informace najdete v tématu [Rozsah indexu udržovatelnosti a význam](/archive/blogs/codeanalysis/maintainability-index-range-and-meaning) příspěvku na blogu.
+- **Index udržovatelnosti** – vypočítá hodnotu indexu mezi 0 a 100, která představuje relativní snadné udržování kódu. Vysoká hodnota znamená lepší udržovatelnost. Barevná hodnocení lze použít k rychlé identifikaci problémů v kódu. Zelené hodnocení je mezi 20 a 100 a indikuje, že kód má dobrou udržovatelnost. Žluté hodnocení je mezi 10 a 19 a označuje, že je kód moderovanější. Červené hodnocení je hodnocení mezi 0 a 9 a označuje nízkou udržovatelnost. Další informace najdete v tématu [Rozsah indexů údržby a význam](code-metrics-maintainability-index-range-and-meaning.md).
 
 - **Cyklomatická složitosti** – měří strukturální složitost kódu. Vytvoří se tak, že se vypočítává počet různých cest kódu v toku programu. Program, který má složitý tok řízení, vyžaduje více testů pro dosažení dobrého pokrytí kódu a je méně udržovatelný. Další informace najdete v [záznamu Wikipedii pro Cyklomatická složitost](https://wikipedia.org/wiki/Cyclomatic_complexity).
 
 - **Hloubka dědičnosti** – určuje počet různých tříd, které dědí od sebe, až po zpět k základní třídě. Hloubka dědičnosti je podobná párování tříd v tom, že změna základní třídy může ovlivnit jakoukoli z jeho zděděných tříd. Čím vyšší je toto číslo, tím hlubší je dědění a čím vyšší je potenciál u úprav základní třídy za následek zásadní změnu. Pro hloubku dědičnosti je nízká hodnota dobrá a vysoká hodnota je špatná.
 
-- **Párování tříd** – měří připojení k jedinečným třídám prostřednictvím parametrů, místních proměnných, návratových typů, volání metod, obecných nebo šablonových instancí, základních tříd, implementací rozhraní, polí definovaných pro externí typy a dekorace atributů. Dobrý návrh softwaru určuje, že typy a metody by měly mít vysokou soudržnost a malý spoj. Vysoké propojení indikuje návrh, který je obtížné znovu použít a udržovat z důvodu jeho mnoha vzájemných závislostí na jiných typech. Další informace najdete v příspěvku na blogu ke [třídě](/archive/blogs/zainnab/code-metrics-class-coupling) .
+- **Párování tříd** – měří připojení k jedinečným třídám prostřednictvím parametrů, místních proměnných, návratových typů, volání metod, obecných nebo šablonových instancí, základních tříd, implementací rozhraní, polí definovaných pro externí typy a dekorace atributů. Dobrý návrh softwaru určuje, že typy a metody by měly mít vysokou soudržnost a malý spoj. Vysoké propojení indikuje návrh, který je obtížné znovu použít a udržovat z důvodu jeho mnoha vzájemných závislostí na jiných typech. Další informace najdete v tématu [párování tříd](code-metrics-class-coupling.md).
 
 ::: moniker range=">=vs-2019"
 
 - **Řádky zdrojového kódu** – označuje přesný počet řádků zdrojového kódu, které jsou přítomny ve zdrojovém souboru, včetně prázdných řádků. Tato metrika je k dispozici počínaje verzí Visual Studio 2019 verze 16,4 a Microsoft. CodeAnalysis. Metrics (2.9.5).
 
-- **Řádky spustitelného kódu** – označuje přibližný počet spustitelných řádků kódu nebo operací. Toto je počet operací ve spustitelném kódu. Tato metrika je k dispozici počínaje verzí Visual Studio 2019 verze 16,4 a Microsoft. CodeAnalysis. Metrics (2.9.5). Hodnota je obvykle blízkou shodu s předchozí metrikou, **řádky kódu** , což je metrika založená na INSTRUKCÍCH jazyka MSIL použitá v režimu starší verze.
+- **Řádky spustitelného kódu** – označuje přibližný počet spustitelných řádků kódu nebo operací. Toto je počet operací ve spustitelném kódu. Tato metrika je k dispozici počínaje verzí Visual Studio 2019 verze 16,4 a Microsoft. CodeAnalysis. Metrics (2.9.5). Hodnota je obvykle blízkou shodu s předchozí metrikou, **řádky kódu**, což je metrika založená na INSTRUKCÍCH jazyka MSIL použitá v režimu starší verze.
 ::: moniker-end
 ::: moniker range="vs-2017"
 
