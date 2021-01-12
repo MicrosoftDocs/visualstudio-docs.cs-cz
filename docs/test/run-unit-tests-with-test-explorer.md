@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b934c6cb7c2a6ba98113a5e68091ab53f54b1423
-ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
+ms.openlocfilehash: 1bb738e0e12598fd31c51c6b3cf2fa684badae40
+ms.sourcegitcommit: fdc21fc21d4a05d9ad8627b06aab7f072bfeb0a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833361"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113594"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
@@ -88,7 +88,7 @@ Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sad
 
 ### <a name="run-tests-after-every-build"></a>Spustit testy po každém sestavení
 ::: moniker range="vs-2017"
-|Tlačítko|Popis|
+|Tlačítko|Description|
 |-|-|
 |![Spustit po sestavení](../test/media/ute_runafterbuild_btn.png)|Chcete-li spustit testy jednotek po každém místním sestavení, zvolte možnost **test** v nabídce Standard a pak zvolte možnost **Spustit testy po sestavení** na panelu nástrojů **Průzkumníka testů** .|
 
@@ -167,7 +167,7 @@ Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak
 |Skupina|Popis|
 |-|-----------------|
 |**Doba trvání**|Seskupí testy podle doby spuštění: **rychlá**, **střední** a **pomalá**.|
-|**Státech**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné** .|
+|**Stav**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné** .|
 |**Cílová architektura** | Seskupí testy podle cíle v rámci svých projektů. |
 |**Obor názvů**|Seskupí testy podle obsahujícího oboru názvů.|
 |**Projekt**|Seskupí testy podle obsahujícího projektu.|
@@ -182,7 +182,7 @@ Vlastnost je obvykle dvojice název/hodnota kategorie, ale může to být také 
 
 V rozhraní Microsoft pro testování částí pro spravované aplikace definujete v atributu dvojici název/hodnota vlastnosti  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> . Testovací rozhraní obsahuje také tyto předdefinované vlastnosti:
 
-|Znak|Popis|
+|Znak|Description|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>|Kategorie vlastník je definována v rámci testovacího rozhraní jednotky a vyžaduje zadání řetězcové hodnoty vlastníka.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute>|Kategorie priority je definována v rámci testovacího rozhraní jednotky a vyžaduje, abyste zadali celočíselnou hodnotu priority.|
@@ -305,7 +305,7 @@ Filtrování podle různých kritérií:
 > V hledání jsou rozlišována malá a velká písmena a odpovídají zadanému řetězci všem částem hodnoty kritérií.
 
 ::: moniker range="vs-2017"
-|Kvalifikátor|Popis|
+|Kvalifikátor|Description|
 |-|-----------------|
 |**Znak**|Vyhledá shody v kategorii a hodnotě vlastností. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
 |**Projekt**|Vyhledá shody v názvech projektů testů.|
@@ -316,9 +316,9 @@ Filtrování podle různých kritérií:
 |**Zaznamenaný**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-|Kvalifikátor|Popis|
+|Kvalifikátor|Description|
 |-|-----------------|
-|**Státech**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
+|**Stav**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Traits**|Vyhledá shody v kategorii a hodnotě vlastností. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
 |**Plně kvalifikovaný název**|Vyhledá plně kvalifikovaný název testovacích oborů názvů, tříd a metod pro shody.|
 |**Projekt**|Vyhledá shody v názvech projektů testů.|
@@ -376,6 +376,14 @@ Testy lze spustit z Průzkumníka testů kliknutím pravým tlačítkem myši v 
 
 > [!NOTE]
 > Nemůžete spustit test v abstraktní třídě, protože testy jsou definovány pouze v abstraktních třídách a nikoli v instanci. Chcete-li spustit testy v abstraktních třídách, vytvořte třídu, která je odvozena z abstraktní třídy.
+
+## <a name="test-audio-cue"></a>Test zvukové hromádky
+Průzkumník testů může přehrát zvuk při dokončení testovacího běhu. Existují dva zvuky: jeden zvuk pro indikaci, že testovací běh byl úspěšný, a druhý zvuk k indikaci, že testovací běh byl dokončen s alespoň jedním neúspěšným testem. Tyto zvuky můžete nastavit v dialogovém okně výchozí zvuk Windows 10. Tato funkce je k dispozici počínaje verzí Visual Studio 2019 Update 16,9 Preview 3.
+
+1. Otevřete výchozí dialogové okno zvuk systému Windows 10.
+2. Přejděte na kartu **zvuky** .
+3. Najděte kategorii **Microsoft Visual Studio** . Zvolte, že **testovací běh byl úspěšný** nebo že **testovací běh neuspěl** pro výběr přednastavených zvuků nebo procházení na vlastní zvukový soubor.  
+![Dialogové okno zvuk Windows 10](../test/media/default-windows-10-sound-dialog.png)
 
 ## <a name="see-also"></a>Viz také
 
