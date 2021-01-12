@@ -1,6 +1,6 @@
 ---
 title: Extrahování lokálních funkcí
-description: Zapněte fragment kódu do své vlastní metody, a to tak, že vyberete kód a zadáte CTRL + R, CTRL + M.
+description: Zapněte fragment kódu do své vlastní funkce, a to tak, že vyberete kód a zadáte CTRL + R, CTRL + M.
 ms.date: 02/19/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +10,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 031fbe22ec61837d489df7a6af923ef0cd2454c7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e007246b85671a0f4606bbdb3d1e9c4e0dc83541
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77515328"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98129455"
 ---
 # <a name="extract-local-function-refactoring"></a>Extrahovat refaktoring lokální funkce
 
@@ -37,7 +37,7 @@ Tento refaktoring platí pro:
 
 3. Vyberte **Extrahovat lokální funkci**.
 
-    ![Extrahování lokálních funkcí](media/extract-local-function.png)
+    ![Snímek obrazovky okna Visual Studio Code se zvýrazněným řádkem Nabídka rychlé akce a refaktoring je otevřená a je vybraná možnost extrahovat místní funkci.](media/extract-local-function.png)
 
 ## <a name="see-also"></a>Viz také
 

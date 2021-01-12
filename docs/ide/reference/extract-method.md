@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50f14cc2a7eafe5d65e0c6a6af54bafa2ebb5a1f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21f6ac868268c40ea6df837596546f86fd9a3a44
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569696"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98129468"
 ---
 # <a name="extract-a-method-refactoring"></a>Extrakce refaktoringu metody
 
@@ -40,16 +40,16 @@ Tento refaktoring platí pro:
 
    - C#:
 
-       ![Zvýrazněný kód-C #](media/extractmethod-highlight-cs.png)
+       ! Snímek obrazovky zobrazující kód C# pro třídu programu V hlavní funkci této třídy byl zvýrazněn řádek kódu.] (Media/extractmethod-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Zvýrazněný kód – Visual Basic](media/extractmethod-highlight-vb.png)
+       ![Snímek obrazovky zobrazující kód Visual Basic pro hlavní sub V tomto sub je zvýrazněna řádka kódu.](media/extractmethod-highlight-vb.png)
 
 2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **kombinaci kláves CTRL + R**a potom **CTRL + M**. (Všimněte si, že se vaše klávesová zkratka může lišit v závislosti na vybraném profilu.)
+      - Stiskněte **kombinaci kláves CTRL + R** a potom **CTRL + M**. (Všimněte si, že se vaše klávesová zkratka může lišit v závislosti na vybraném profilu.)
       - Stiskněte klávesu **CTRL** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoring** a vybrat možnost **Extrahovat metodu** z místní nabídky okna náhledu.
    - **Myš**
       - Vyberte **upravit > refaktorovat > metoda extrahování**.
@@ -63,11 +63,11 @@ Tento refaktoring platí pro:
 
    - C#:
 
-      ![Přejmenovat metodu-C #](media/extractmethod-rename-cs.png)
+      ![Snímek obrazovky zobrazující kód C# pro třídu programu Název metody je zvýrazněn a automaticky otevírané okno pro přejmenování je otevřené.](media/extractmethod-rename-cs.png)
 
    - Visual Basic:
 
-      ![Přejmenovat metodu – Visual Basic](media/extractmethod-rename-vb.png)
+      ![Snímek obrazovky zobrazující kód Visual Basic pro hlavní sub Název metody je zvýrazněn a automaticky otevírané okno pro přejmenování je otevřené.](media/extractmethod-rename-vb.png)
 
 3. Až budete s změnou spokojeni, zvolte tlačítko **použít** nebo stiskněte klávesu **ENTER** . změny budou potvrzeny.
 
