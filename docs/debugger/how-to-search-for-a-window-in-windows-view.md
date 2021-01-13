@@ -1,5 +1,7 @@
 ---
 title: Hledání okna v zobrazení Windows | Microsoft Docs
+description: Vyhledejte konkrétní okno v zobrazení Windows nástroje Spy + + pomocí jeho popisovače, titulku, třídy nebo kombinace jeho titulku a třídy v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 880f6ec3ea0882d92f5376859ed629e23781f5f9
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 3449abf5ff1b9bdb4d4873a0cf3beb0b184734fc
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851967"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148504"
 ---
 # <a name="how-to-search-for-a-window-in-windows-view"></a>Postupy: Hledání okna v zobrazení oken
 Můžete vyhledat konkrétní okno v zobrazení Windows pomocí jeho popisovače, titulku, třídy nebo kombinace jeho titulku a třídy jako kritéria hledání. Můžete také zadat počáteční směr hledání. Pole v dialogovém okně zobrazí atributy vybraného okna ve stromu okna.
@@ -31,7 +33,7 @@ Můžete vyhledat konkrétní okno v zobrazení Windows pomocí jeho popisovače
     Otevře se [dialogové okno hledání okna](../debugger/window-search-dialog-box.md) .
 
    > [!TIP]
-   > Pokud chcete omezit přehlednost obrazovky, vyberte možnost **Skrýt Spy** . Tato možnost skrývá hlavní okno nástroje Spy + + a v horní části ostatních aplikací zůstane viditelné pouze dialogové okno pro **hledání okna** . Po kliknutí na tlačítko **OK** nebo **Zrušit**dojde k obnovení hlavního okna nástroje Spy + +, nebo když zrušíte zaškrtnutí políčka **Skrýt Spy + +** .
+   > Pokud chcete omezit přehlednost obrazovky, vyberte možnost **Skrýt Spy** . Tato možnost skrývá hlavní okno nástroje Spy + + a v horní části ostatních aplikací zůstane viditelné pouze dialogové okno pro **hledání okna** . Po kliknutí na tlačítko **OK** nebo **Zrušit** dojde k obnovení hlavního okna nástroje Spy + +, nebo když zrušíte zaškrtnutí políčka **Skrýt Spy + +** .
 
 3. Přetáhněte **Nástroj hledání** přes cílové okno. Při přetahování nástroje se v dialogovém okně **hledání okna** zobrazí podrobnosti o vybraném okně.
 

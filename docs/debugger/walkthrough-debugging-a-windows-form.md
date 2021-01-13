@@ -1,6 +1,7 @@
 ---
 title: Ladění formuláře Windows | Microsoft Docs
-ms.custom: seodec18
+description: 'Postup při vytváření a ladění formuláře Windows, společné spravované aplikace, najdete v návodu. Můžete použít C#, Visual Basic, C++ nebo F #.'
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cec7b9bc2c56e16d1a5d59701d0953797ae00f4
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 31c1bc9e65eb63877d8f8a42902d8ec47a61fd22
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599475"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148088"
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>Návod: Ladění formuláře systému Windows
 Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikací. Model Windows Form vytvoří standardní aplikaci systému Windows. Tuto rekapitulaci lze dokončit pomocí jazyků Visual Basic, C# nebo C++.
@@ -112,7 +113,7 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
      Zobrazí se červená tečka a text řádku se zvýrazní červeně. Tato červená tečka představuje zarážku. Další informace naleznete v tématu [zarážky](/previous-versions/ktf38f66(v=vs.100)). Při spuštění aplikace pomocí ladicího programu v tomto místě ladicí program přeruší provádění, když je tento řádek kódu dosažen. Poté lze zobrazit stav aplikace a ladit ji.
 
     > [!NOTE]
-    > Můžete také kliknout pravým tlačítkem na libovolný řádek kódu, nasměrovat na **zarážku**a potom kliknout na **Vložit zarážku** a přidat zarážku na tento řádek.
+    > Můžete také kliknout pravým tlačítkem na libovolný řádek kódu, nasměrovat na **zarážku** a potom kliknout na **Vložit zarážku** a přidat zarážku na tento řádek.
 
 2. V nabídce **ladit** klikněte na tlačítko **Spustit**.
 
@@ -122,7 +123,7 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
 
      To vás v systému Visual Studio přenese na stránku kódu k řádku, na který jste nastavili zarážku. Tento řádek by měl být zvýrazněn žlutou barvou. Nyní lze zobrazit proměnné aplikace a řídit její spuštění. Aplikace nyní zastavila provádění a čeká na vaši akci.
 
-4. V nabídce **ladění** zvolte možnost **Windows**, pak **Sledujte**a klikněte na **Watch1**.
+4. V nabídce **ladění** zvolte možnost **Windows**, pak **Sledujte** a klikněte na **Watch1**.
 
 5. V okně **Watch1** klikněte na prázdný řádek. Do sloupce **název** zadejte `textBox1.Text` (Pokud používáte Visual Basic nebo Visual C#) nebo `textBox1->Text` (Pokud používáte jazyk C++), a potom stiskněte klávesu ENTER.
 
@@ -130,7 +131,7 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
 
     `""`
 
-6. V nabídce **ladění** vyberte možnost **Krokovat**s vnořením.
+6. V nabídce **ladění** vyberte možnost **Krokovat** s vnořením.
 
      Hodnota textBox1. text se mění v okně **Watch1** na:
 

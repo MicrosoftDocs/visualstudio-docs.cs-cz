@@ -1,5 +1,7 @@
 ---
 title: Použití Microsoft Monitoring Agent | Microsoft Docs
+description: Pomocí Microsoft Monitoring Agent můžete monitorovat webové aplikace v ASP.NET a aplikace SharePoint 2010 a 2013, a to kvůli chybám, problémům s výkonem a dalším problémům.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd0a86b9-015d-408e-aa58-59a0a97826ac
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f110af9aab6ae2ea01137043c834d38b29c4d1f9
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 16c0655cdd55a1825f0a872ef013392bc9e5db79
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600002"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150103"
 ---
 # <a name="using-the-microsoft-monitoring-agent-c-visual-basic"></a>Použití Microsoft Monitoring Agent (C#, Visual Basic)
 
@@ -77,7 +79,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
 3. Nejnovější obsah obsahu můžete získat na [webu TechNet](/previous-versions/system-center/developer/cc817313(v=msdn.10)) .
 
 #### <a name="q-how-do-i-set-up-permissions-for-the-application-pool"></a><a name="FullPermissionsITLog"></a> Otázka: Návody nastavit oprávnění pro fond aplikací?
- **A:** Použijte příkaz Windows **Icacls** nebo použijte Průzkumníka Windows (nebo Průzkumníka souborů). Například:
+ **A:** Použijte příkaz Windows **Icacls** nebo použijte Průzkumníka Windows (nebo Průzkumníka souborů). Příklad:
 
 - Nastavení oprávnění pomocí příkazu Windows **Icacls** :
 
@@ -118,7 +120,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
 
      Tady je krátká syntaxe:
 
-     **Start-WebApplicationMonitoring** *" \<appName> "* *\<monitoringMode>* *" \<outputPath> * " " *\<UInt32>* * \<collectionPlanPathAndFileName> *
+     **Start-WebApplicationMonitoring** *" \<appName> "* *\<monitoringMode>* *" \<outputPath>* " " *\<UInt32>* *\<collectionPlanPathAndFileName>*
 
      Tady je příklad, který používá pouze název webové aplikace a režim zjednodušeného **monitorování** :
 
@@ -132,15 +134,15 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
 
      ![Spustit monitorování s potvrzením MMA](../debugger/media/ffr_powershellstartmonitoringconfirmation.png "FFR_PowerShellStartMonitoringConfirmation")
 
-    |Název|Popis|
+    |Název|Description|
     |-|-|
-    |*"\<appName>"*|Zadejte cestu k webovému serveru a názvu webové aplikace ve službě IIS. Pokud budete chtít, můžete také zahrnout cestu služby IIS.<br /><br /> *" \<IISWebsiteName> \\<IISWebAppName \> "*<br /><br /> -nebo-<br /><br /> **"IIS: \ sites** * \\<IISWebsiteName \> \\<IISWebAppName \> "*<br /><br /> Tuto cestu najdete ve Správci služby IIS. Například:<br /><br /> ![Cesta k webu služby IIS a webové aplikaci](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> Můžete také použít příkazy [Get-web](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee807832(v=technet.10)) a [získat webové aplikace](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee790554(v=technet.10)) .|
+    |*"\<appName>"*|Zadejte cestu k webovému serveru a názvu webové aplikace ve službě IIS. Pokud budete chtít, můžete také zahrnout cestu služby IIS.<br /><br /> *" \<IISWebsiteName> \\<IISWebAppName \> "*<br /><br /> -nebo-<br /><br /> **"IIS: \ sites** *\\<IISWebsiteName \> \\<IISWebAppName \> "*<br /><br /> Tuto cestu najdete ve Správci služby IIS. Příklad:<br /><br /> ![Cesta k webu služby IIS a webové aplikaci](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> Můžete také použít příkazy [Get-web](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee807832(v=technet.10)) a [získat webové aplikace](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee790554(v=technet.10)) .|
     |*\<monitoringMode>*|Zadejte režim monitorování:<br /><br /> <ul><li>**Monitorování**: zaznamenejte minimální podrobnosti o událostech výjimek a událostech souvisejících s výkonem. Tento režim používá výchozí plán shromažďování dat.</li><li>**Trasování**: zaznamená podrobnosti na úrovni funkce nebo monitoruje aplikace SharePoint 2010 a sharepointu 2013 pomocí zadaného plánu shromažďování dat. V tomto režimu může být aplikace spuštěná pomaleji.<br /><br /> <ul><li>[Otázka: Návody nastavit oprávnění pro fond aplikací?](#FullPermissionsITLog)</li><li>[Otázka: Návody získat většinu dat bez zpomalení aplikace?](#Minimizing)</li></ul><br />     Tento příklad zaznamenává události pro aplikaci služby SharePoint hostované na webu služby SharePoint:<br /><br />     **Start-WebApplicationMonitoring "FabrikamSharePointSite\FabrikamSharePointApp" trasování "C:\Program Files\Microsoft monitoring Agent\Agent\IntelliTraceCollector\collection_plan.ASP.NET.default.xml" "C:\IntelliTraceLogs"**</li><li>**Vlastní**: Zaznamenejte si vlastní podrobnosti pomocí zadaného plánu vlastní kolekce. Pokud upravíte plán shromažďování po spuštění monitorování, bude nutné restartovat monitorování.</li></ul>|
     |*"\<outputPath>"*|Zadejte úplnou cestu k adresáři, kam se mají ukládat protokoly IntelliTrace. Než začnete s monitorováním, nezapomeňte vytvořit tento adresář.|
     |*\<UInt32>*|Zadejte maximální velikost protokolu IntelliTrace. Výchozí maximální velikost protokolu IntelliTrace je 250 MB.<br /><br /> Když protokol dosáhne tohoto limitu, Agent přepíše nejstarší položky, aby bylo možné místo pro další položky. Pokud chcete tento limit změnit, použijte možnost **-MaximumFileSizeInMegabytes** nebo upravte `MaximumLogFileSize` atribut v plánu shromažďování dat.|
     |*"\<collectionPlanPathAndFileName>"*|Zadejte úplnou cestu nebo relativní cestu a název souboru plánu kolekce. Tento plán je soubor. XML, který konfiguruje nastavení pro agenta.<br /><br /> Tyto plány jsou součástí agenta a pracují s webovými aplikacemi a aplikacemi SharePoint:<br /><br /> -   **collection_plan.ASP.NET.default.xml**<br />     Shromažďuje pouze události, jako jsou výjimky, události výkonu, volání databáze a požadavky webového serveru.<br />-   **collection_plan.ASP.NET.trace.xml**<br />     Shromažďuje volání na úrovni funkcí a všechna data ve výchozím plánu shromažďování dat. Tento plán je vhodný pro podrobnou analýzu, ale může zpomalit vaši aplikaci.<br /><br /> Lokalizované verze těchto plánů můžete najít v podsložkách agenta. Můžete také [přizpůsobit tyto plány nebo vytvořit vlastní plány](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) , abyste se vyhnuli zpomalení aplikace. Jakékoli vlastní plány umístěte do stejného zabezpečeného umístění jako agenta.<br /><br /> [Otázka: Návody získat většinu dat bez zpomalení aplikace?](#Minimizing)|
 
-     Další informace o úplné syntaxi a dalších příkladech získáte spuštěním příkazu **Get-Help Start-WebApplicationMonitoring-detailed** a příkazu **Get-Help Start-WebApplicationMonitoring-Examples** .
+     Další informace o úplné syntaxi a dalších příkladech získáte spuštěním příkazu **get-help Start-WebApplicationMonitoring-Details** nebo příkazu **get-help Start-WebApplicationMonitoring-Examples** .
 
 3. Pokud chcete zjistit stav všech monitorovaných webových aplikací, spusťte příkaz [Get-WebApplicationMonitoringStatus](/previous-versions/system-center/powershell/system-center-2012-r2/dn472751(v=sc.20)) .
 
@@ -159,7 +161,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
 
    Pokud `enabled` atribut neexistuje, událost je povolena.
 
-   Například:
+   Příklad:
 
   - Zakáže události Windows workflowu pro aplikace, které nepoužívají pracovní postup Windows.
 
@@ -242,9 +244,9 @@ Agent zaznamenává hodnoty pro `id` , `Employee.Id` `Employee.Name` a `Employee
 
     \- ani
 
-    **Checkpoint-WebApplicationMonitoring "IIS: \ sites** * \\<IISWebsiteName \> \\<IISWebAppName \> "*
+    **Checkpoint-WebApplicationMonitoring "IIS: \ sites** *\\<IISWebsiteName \> \\<IISWebAppName \> "*
 
-    Například:
+    Příklad:
 
     **PS C: \\>Checkpoint-WebApplicationMonitoring "Fabrikam\FabrikamFiber.Web"**
 
@@ -252,7 +254,7 @@ Agent zaznamenává hodnoty pro `id` , `Employee.Id` `Employee.Name` a `Employee
 
     **PS C: >Checkpoint-WebApplicationMonitoring "IIS: sitesFabrikamFabrikamFiber. Web"**
 
-    Další informace získáte spuštěním příkazu **Get-Help Checkpoint-WebApplicationMonitoring-detailed** a příkazu **Get-Help Checkpoint-WebApplicationMonitoring-Examples** .
+    Další informace získáte spuštěním příkazu **get-help Checkpoint-WebApplicationMonitoring-Details** nebo příkazu **get-help Checkpoint-WebApplicationMonitoring-Examples** .
 
 3. Zkopírujte protokol do zabezpečené sdílené složky a pak otevřete protokol z počítače, který má Visual Studio Enterprise (ale ne edice Professional nebo Community).
 
@@ -272,13 +274,13 @@ Agent zaznamenává hodnoty pro `id` , `Employee.Id` `Employee.Name` a `Employee
 
     \- ani
 
-    **Stop-WebApplicationMonitoring "IIS: \ sites** * \\<IISWebsiteName \> \\<IISWebAppName \> "*
+    **Stop-WebApplicationMonitoring "IIS: \ sites** *\\<IISWebsiteName \> \\<IISWebAppName \> "*
 
     Nebo pokud chcete zastavit monitorování všech webových aplikací:
 
     **Stop-WebApplicationMonitoring – vše**
 
-    Například:
+    Příklad:
 
     **PS C: \\>Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**
 
@@ -286,7 +288,7 @@ Agent zaznamenává hodnoty pro `id` , `Employee.Id` `Employee.Name` a `Employee
 
     **PS C: \\>Stop-WebApplicationMonitoring "IIS: \ sites\Fabrikam\FabrikamFiber.Web"**
 
-    Další informace získáte spuštěním příkazu **Get-Help Stop-WebApplicationMonitoring-detailed** a příkazu **Get-Help Stop-WebApplicationMonitoring-Examples** .
+    Další informace získáte spuštěním příkazu **get-help Stop-WebApplicationMonitoring-Details** nebo příkazu **get-help Stop-WebApplicationMonitoring-Examples** .
 
 3. Zkopírujte protokol do zabezpečené sdílené složky a pak otevřete protokol z počítače, ve kterém je Visual Studio Enterprise.
 

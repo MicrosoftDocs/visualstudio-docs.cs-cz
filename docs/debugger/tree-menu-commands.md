@@ -1,5 +1,7 @@
 ---
 title: Příkazy nabídky stromu | Microsoft Docs
+description: Nabídka Spy + + Tree nabízí příkazy pro rozbalení nebo sbalení zobrazení. Podívejte se na seznam příkazů nabídky stromu se stručným popisem každého z nich.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bc840ac19e48f6a0a6a597ec667a4bc799070e59
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d93dec46c99c5a4385f254b797a522925d4b945f
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62901826"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148725"
 ---
 # <a name="tree-menu-commands"></a>Příkazy nabídky stromu
 Nabídka **stromu** nabízí příkazy pro rozbalení nebo sbalení zobrazení.

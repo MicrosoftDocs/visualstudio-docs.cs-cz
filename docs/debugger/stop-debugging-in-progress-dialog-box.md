@@ -1,5 +1,7 @@
 ---
 title: Ukončit probíhající ladění – dialogové okno | Microsoft Docs
+description: Prozkoumejte dialog zastavit probíhající ladění, který se zobrazí, když se ladicí program pokusí zastavit relaci ladění, ale zastavení relace bude trvat déle.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3beefe16f8883eb64d7d0a2641cabf9eb1f702fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c3ff46a8cd9b8e5a4ab80b0af1296348ca788d9
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72729660"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150220"
 ---
 # <a name="stop-debugging-in-progress-dialog-box"></a>Dialogové okno Ukončit probíhající ladění
 Toto dialogové okno se zobrazí, když se ladicí program pokouší zastavit relaci ladění, ale zastavení relace bude nějakou dobu trvat. Zastavení relace ladění je obvykle velmi rychlé a toto dialogové okno se nezobrazí. V některých případech ale může trvat i déle, než se odpojí všechny procesy, které jsou laděny. Pokud zastavování relace trvá déle než několik sekund (nebo dojde k chybě odpojení), zobrazí se toto dialogové okno. Pokud k tomu dochází často, může to být způsobeno interním problémem a možná budete chtít kontaktovat služby technické podpory.

@@ -1,5 +1,7 @@
 ---
 title: Posouzení zabezpečení Vizualizér | Microsoft Docs
+description: Vizualizér pro ladicí program sady Visual Studio musí běžet s úplným vztahem důvěryhodnosti. Při psaní můžete znát možné bezpečnostní hrozby a přijmout vhodná opatření.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1c18ec84a6a62da6cd564c69ef4b83ea76bcfd6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2db18a1443b0c4faaa288a887a22d935d243f678
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73187144"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149739"
 ---
 # <a name="visualizer-security-considerations"></a>Hlediska zabezpečení vizualizéru
 Zápis Vizualizér zahrnuje možné bezpečnostní hrozby. Pro tyto potenciální hrozby aktuálně neexistuje žádný známý zneužitcí software, ale vývojáři je musí znát a přijmout vhodná bezpečnostní opatření, jak je popsáno zde, abyste se mohli chránit před neoprávněným zneužitím.
@@ -38,7 +40,7 @@ Zápis Vizualizér zahrnuje možné bezpečnostní hrozby. Pro tyto potenciáln�
  Chcete-li zmírnit tuto chybu zabezpečení, je třeba mít na vědomí rozhraní vystavená vaším Vizualizér.
 
 ## <a name="see-also"></a>Viz také
-- [Architektura vizualizéru](../debugger/visualizer-architecture.md)
+- [Architektura Vizualizátoru](../debugger/visualizer-architecture.md)
 - [Postupy: Zápis vizualizéru](create-custom-visualizers-of-data.md)
 - [Vytváření vlastních vizualizérů](../debugger/create-custom-visualizers-of-data.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)

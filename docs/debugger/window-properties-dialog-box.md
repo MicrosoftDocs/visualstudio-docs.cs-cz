@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Vlastnosti okna | Microsoft Docs
+description: Naučte se, jak zobrazit vlastnosti okna, které je uvedené v zobrazení Windows. Tento článek obsahuje odkazy na jiné články, které obsahují dokumentaci k vlastnostem.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c27f10298f3a5621bc68e31bc2b150663955d6c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5bd6c8a7f3b07cdd0667ae8d2c33aeb96d6d7679
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929218"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149219"
 ---
 # <a name="window-properties-dialog-box"></a>Dialogové okno vlastností oken
 Pomocí tohoto dialogového okna můžete zjistit více o konkrétním okně. Chcete-li zobrazit toto dialogové okno, přesuňte fokus do okna [zobrazení systému Windows](../debugger/windows-view.md) . Ve stromové struktuře vyberte libovolný uzel okna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .

@@ -1,5 +1,7 @@
 ---
 title: Příkazy nabídky Spy | Microsoft Docs
+description: Prozkoumejte nabídku Spy, která nabízí příkazy pro práci s okny a zobrazeními nástroje Spy + +. K dostupným příkazům patří Windows, procesy, vlákna, zprávy protokolu a okno Najít.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 036a99fc0f25f2302c82d043fa20cf6e35687668
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c737bef539e541d1dc1e130eb0c9dedb3e00f2c4
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929759"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148127"
 ---
 # <a name="spy-menu-commands"></a>Příkazy nabídky nástroje Spy
 Nabídka **Spy** nabízí příkazy pro práci s okny a zobrazeními nástroje Spy.

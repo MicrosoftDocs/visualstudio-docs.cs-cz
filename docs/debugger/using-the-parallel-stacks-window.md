@@ -1,5 +1,7 @@
 ---
 title: Zobrazit vlákna v okně paralelní zásobníky | Microsoft Docs
+description: Pomocí paralelních zásobníků můžete ladit vícevláknové aplikace. Můžete zobrazit informace o zásobníku pro všechna vlákna a informace o zásobníku volání na základě úloh.
+ms.custom: SEO-VS-2020
 ms.date: 11/20/2018
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9728346bc4c6d805bb0febd3a0d5bef0ed809a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55a004e65a39f4a2b7bbf972cec36d689bf88d97
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62902292"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150168"
 ---
 # <a name="view-threads-and-tasks-in-the-parallel-stacks-window-c-visual-basic-c"></a>Zobrazení vláken a úloh v okně paralelní zásobníky (C#, Visual Basic, C++)
 
@@ -38,7 +40,7 @@ Okno **paralelní zásobníky** je užitečné pro ladění aplikací s více vl
 
 ## <a name="use-the-parallel-stacks-window"></a>Použití okna Paralelní zásobníky
 
-Chcete-li otevřít okno **paralelní zásobníky** , musíte být v relaci ladění. Vyberte **ladit**  >  **Windows**  >  **paralelní zásobníky**Windows.
+Chcete-li otevřít okno **paralelní zásobníky** , musíte být v relaci ladění. Vyberte **ladit**  >    >  **paralelní zásobníky** Windows.
 
 ### <a name="toolbar-controls"></a>Ovládací prvky panelu nástrojů
 
@@ -46,18 +48,18 @@ Okno **paralelní zásobníky** má následující ovládací prvky panelu nást
 
 ![Panel nástrojů v okně paralelní zásobníky](../debugger/media/parallel_stackstoolbar.png "Panel nástrojů paralelní zásobníky")
 
-|Ikona|Řízení|Popis|
+|Ikona|Řízení|Description|
 |-|-|-|
 |![Pole se seznamem vláken/úloh](media/parallel_toolbar1.png "Pole se seznamem vláken/úloh")|**Vlákna** / Pole se seznamem **úloh**|Přepíná zobrazení mezi zásobníky volání vláken a zásobníků volání úkolů. Další informace najdete v tématu [zobrazení úkolů](#tasks-view) a [zobrazení vláken](#threads-view).|
 |![Zobrazit pouze ikonu s příznakem](media/parallel_toolbar2.png "Zobrazit pouze ikonu s příznakem")|Zobrazit pouze označené příznakem|Zobrazuje zásobníky volání pouze pro vlákna, která jsou označena v jiných oknech ladicího programu, například okno **vlákna GPU** a okno **paralelní kukátko** .|
 |![Přepnout ikonu zobrazení metody](media/parallel_toolbar3.png "Přepnout ikonu zobrazení metody")|Přepnout **zobrazení metody**|Přepíná mezi zobrazeními zásobníku volání a **zobrazením metody**. Další informace naleznete v tématu [zobrazení metod](#method-view).|
 |![Automaticky přejít na aktuální ikonu](media/parallel_toolbar4.png "Automaticky přejít na aktuální ikonu")|Automaticky přejít na aktuální rámec zásobníku|Automaticky posune graf tak, aby byl aktuální rámec zásobníku zobrazen. Tato funkce je užitečná v případě, že změníte aktuální rámec zásobníku z jiných oken nebo když ve velkém grafu narazíte na novou zarážku.|
-|![Přepnout ikonu lupy](media/parallel_toolbar5.png "Přepnout ikonu lupy")|Přepnout ovládací prvek Lupa|Zobrazí nebo skryje ovládací prvek zvětšení v levé části okna. <br /><br />Bez ohledu na viditelnost ovládacího prvku Lupa můžete také zvětšit zobrazením klávesy **CTRL** a zapnutím kolečka myši nebo stisknutím **kombinace kláves CTRL** + **SHIFT** , + **+** **Ctrl** + **Shift** + **-** abyste se přiblížili. |
+|![Přepnout ikonu lupy](media/parallel_toolbar5.png "Přepnout ikonu lupy")|Přepnout ovládací prvek Lupa|Zobrazí nebo skryje ovládací prvek zvětšení v levé části okna. <br /><br />Bez ohledu na viditelnost ovládacího prvku Lupa můžete také zvětšit zobrazením klávesy **CTRL** a zapnutím kolečka myši nebo stisknutím **kombinace kláves CTRL** + **SHIFT** , + **+**  +  + **-** abyste se přiblížili. |
 
 ### <a name="stack-frame-icons"></a>Ikony rámce zásobníku
 Následující ikony obsahují informace o aktivním a aktuálním snímku zásobníku ve všech zobrazeních:
 
-|Ikona|Popis|
+|Ikona|Description|
 |-|-|
 |![Žlutá šipka](media/icon_parallelyellowarrow.gif)|Označuje aktuální umístění (aktivní rámec zásobníku) aktuálního vlákna.|
 |![Ikona vláken](media/icon_parallelthreads.gif)|Označuje aktuální umístění (aktivní rámec zásobníku) neaktuálního vlákna.|
@@ -68,7 +70,7 @@ Následující položky místní nabídky jsou k dispozici, když kliknete prav�
 
 ![Místní nabídka v okně paralelní zásobníky](../debugger/media/parallel_contmenu.png "Místní nabídka v okně paralelní zásobníky")
 
-|Položka nabídky|Popis|
+|Položka nabídky|Description|
 |-|-|
 |**Příznak**|Označí vybranou položku jako příznak.|
 |**Odznačit**|Odoznačí vybranou položku.|

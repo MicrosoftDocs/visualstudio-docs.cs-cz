@@ -1,5 +1,7 @@
 ---
 title: Použití okna úlohy | Microsoft Docs
+description: Úlohy jsou asynchronní operace, které mohou běžet souběžně. Ve stejném vlákně lze spustit více úkolů. Pomocí úloh můžete zobrazit informace o objektu Task a WinJS. promise.
+ms.custom: SEO-VS-2020
 ms.date: 03/18/2018
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b32dc6372a6ce4983e9bd11e05a4a662d0ad44ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7df43a02dbda1fbcbe93decb58721032cd84d657
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62901578"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150064"
 ---
 # <a name="using-the-tasks-window-c-visual-basic-c"></a>Použití okna úlohy (C#, Visual Basic, C++)
 
@@ -45,7 +47,7 @@ Můžete použít okno **úlohy** při každém přerušení do ladicího progra
 
 Sloupce v okně **úlohy** obsahují následující informace.
 
-|Název sloupce|Popis|
+|Název sloupce|Description|
 |-----------------|-----------------|
 |**Flag**|Zobrazuje, které úkoly jsou označené příznakem, a umožňuje označit nebo zrušit označení úlohy.|
 |**Ikony**|Žlutá šipka indikuje aktuální úlohu. Aktuální úloha je nejvyšším úkolem v aktuálním vlákně.<br /><br /> Bílá šipka označuje úlohu, která je v aktuálním okamžiku, kdy byl ladicí program vyvolán.<br /><br /> Ikona pozastavit označuje úlohu, která byla zmrazena uživatelem. Úkol můžete zablokovat a uvolnit tak, že na něj kliknete pravým tlačítkem myši v seznamu.|
@@ -76,7 +78,7 @@ Sloupce v okně **úlohy** obsahují následující informace.
  ![Seskupený režim v okně úlohy](../debugger/media/parallel_tasks_groupedmode.png "Parallel_Tasks_GroupedMode")
 
 ## <a name="parent-child-view"></a>Nadřazené podřízené zobrazení
- (Toto zobrazení je k dispozici pouze pro spravovaný kód.) Kliknutím pravým tlačítkem myši na záhlaví sloupce **stav** a potom kliknutím na možnost **Seskupit podle**  >  **nadřazené položky**můžete změnit seznam úkolů na hierarchické zobrazení, ve kterém je každá podřízená úloha poduzlem, který lze zobrazit nebo skrýt pod svým nadřazeným prvkem.
+ (Toto zobrazení je k dispozici pouze pro spravovaný kód.) Kliknutím pravým tlačítkem myši na záhlaví sloupce **stav** a potom kliknutím na možnost **Seskupit podle**  >  **nadřazené položky** můžete změnit seznam úkolů na hierarchické zobrazení, ve kterém je každá podřízená úloha poduzlem, který lze zobrazit nebo skrýt pod svým nadřazeným prvkem.
 
 ## <a name="flagging-tasks"></a>Označování úkolů
  Můžete označit vlákno úlohou, na které je úloha spuštěná, a to tak, že vyberete položku seznamu úkolů a potom v kontextové nabídce kliknete na ikonu **přidělené vlákno** , nebo kliknutím na ikonu příznaku v prvním sloupci. Pokud označíte několik úkolů, můžete řadit podle sloupce příznak a přenést tak všechny úkoly označené příznakem do horní části, abyste se mohli zaměřit jenom na ty. Okno **paralelní zásobníky** můžete použít také k zobrazení pouze úkolů označených příznakem. To vám umožní vyfiltrovat úkoly, které vás zajímají pro ladění. Mezi relacemi ladění nejsou zachovány příznaky.

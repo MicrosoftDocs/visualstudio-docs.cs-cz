@@ -1,5 +1,7 @@
 ---
 title: Příkazy stop v Visual Basic | Microsoft Docs
+description: Přečtěte si příkaz Visual Basic stop, který poskytuje programovou alternativu k nastavení zarážky v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f9ab4ef453a921371ab7ef4f272cd0e38f4108a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b36f00f628d9551d8e45075d790d8e5d2de294dc
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71322538"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149427"
 ---
 # <a name="stop-statements-in-visual-basic"></a>Příkazy Stop v jazyce Visual Basic
 

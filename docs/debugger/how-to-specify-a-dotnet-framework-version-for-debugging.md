@@ -1,6 +1,7 @@
 ---
 title: Zadejte verzi .NET Framework pro ladění | Microsoft Docs
-ms.custom: seodec18
+description: Zadejte starší verzi .NET Framework pro ladění. Ladicí program sady Visual Studio podporuje ladění starších verzí .NET Framework a také aktuální verzi.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3ae48670fceb78ff85f395852f0a31414f37e8cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6b536cbfbd1019fc9b55a0113525f37030493f8
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349065"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149414"
 ---
 # <a name="specify-an-older-net-framework-version-for-debugging-c-visual-basic-f"></a>Určení starší verze .NET Framework pro ladění (C#, Visual Basic, F #)
 
@@ -44,15 +45,15 @@ Ve výjimečných případech, kdy se zobrazí tato chyba, můžete nastavit kl�
 
 2. Spusťte **Editor registru** (Regedit).
 
-3. V **Editoru registru**otevřete složku HKEY_LOCAL_MACHINE.
+3. V **Editoru registru** otevřete složku HKEY_LOCAL_MACHINE.
 
-4. Přejít na: HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine \\ {449EC4CC-30D2-4032-9256-EE18EB41B62B}
+4. Přejít na: HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine\\ {449EC4CC-30D2-4032-9256-EE18EB41B62B}
 
-    Pokud klíč neexistuje, klikněte pravým tlačítkem HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine a klikněte na **nový klíč**. Pojmenujte nový klíč `{449EC4CC-30D2-4032-9256-EE18EB41B62B}` .
+    Pokud klíč neexistuje, klikněte pravým tlačítkem na HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine a pak klikněte na **nový klíč**. Pojmenujte nový klíč `{449EC4CC-30D2-4032-9256-EE18EB41B62B}` .
 
 5. Po přechodu na {449EC4CC-30D2-4032-9256-EE18EB41B62B} se podívejte do sloupce **název** a vyhledejte klíč CLRVersionForDebugging.
 
-   1. Pokud klíč neexistuje, klikněte pravým tlačítkem na {449EC4CC-30D2-4032-9256-EE18EB41B62B} a pak klikněte na **Nová hodnota řetězce**. Pak klikněte pravým tlačítkem na novou řetězcovou hodnotu, klikněte na **Přejmenovat**a zadejte `CLRVersionForDebugging` .
+   1. Pokud klíč neexistuje, klikněte pravým tlačítkem na {449EC4CC-30D2-4032-9256-EE18EB41B62B} a pak klikněte na **Nová hodnota řetězce**. Pak klikněte pravým tlačítkem na novou řetězcovou hodnotu, klikněte na **Přejmenovat** a zadejte `CLRVersionForDebugging` .
 
 6. Dvakrát klikněte na **CLRVersionForDebugging**.
 

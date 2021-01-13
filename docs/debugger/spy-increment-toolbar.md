@@ -1,5 +1,7 @@
 ---
 title: Panel nástrojů Spy + + | Microsoft Docs
+description: Seznamte se s prvky uživatelského rozhraní na panelu nástrojů Spy + +, který se zobrazí pod řádkem nabídek. Chcete-li zobrazit nebo skrýt panel nástrojů, klikněte v nabídce zobrazení na příkaz panel nástrojů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fa1dfe0917fece3c814678295c5abd6013b426b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9dc2564a69c291055d53e358c084e7dd9c4d0506
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72729741"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148192"
 ---
 # <a name="spy-toolbar"></a>Panel nástrojů nástroje Spy++
 Panel nástrojů se zobrazí v panelu nabídek v nástroji Spy + +. Chcete-li zobrazit nebo skrýt panel nástrojů, klikněte v nabídce **zobrazení** na příkaz **panel nástrojů**.
@@ -24,7 +26,7 @@ Panel nástrojů se zobrazí v panelu nabídek v nástroji Spy + +. Chcete-li zo
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
-|Tlačítko|Efekt|
+|Tlačítko|Účinek|
 |------------|------------|
 |![Tlačítko Spy&#43;&#43; Windows](../debugger/media/icon_spy--_windows.gif "_Windows Icon_Spy + +")|Zobrazí stromové zobrazení oken a ovládacích prvků v systému. Další informace najdete v tématu [zobrazení oken](../debugger/windows-view.md).|
 |![Tlačítko Spy&#43;&#43; procesy](../debugger/media/icon_spy--_processes.gif "_Processes Icon_Spy + +")|Zobrazí stromové zobrazení procesů v systému. Další informace najdete v tématu [zobrazení procesů](../debugger/processes-view.md).|

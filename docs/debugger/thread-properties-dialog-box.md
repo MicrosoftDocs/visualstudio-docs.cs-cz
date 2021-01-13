@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno vlastnosti vlákna | Microsoft Docs
+description: Seznamte se s dialogovým oknem vlastností vlákna v ladicím nástroji Spy + +. Pomocí tohoto dialogového okna můžete zjistit více o konkrétním vlákně.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 371314bff934fdceeb301f61e976224034333559
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 377357345516d210b30dd4db278dd672a8b6b469
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929718"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149128"
 ---
 # <a name="thread-properties-dialog-box"></a>Dialogové okno vlastností vláken
 Pomocí tohoto dialogového okna najdete další informace o konkrétním vlákně. Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno [zobrazení vlákna](../debugger/threads-view.md) nebo otevřete [zobrazení zprávy](../debugger/messages-view.md) a rozbalte zprávu. Ve stromové struktuře vyberte libovolný uzel vlákna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .

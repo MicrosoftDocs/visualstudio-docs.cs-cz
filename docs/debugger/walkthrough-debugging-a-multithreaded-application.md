@@ -1,5 +1,7 @@
 ---
 title: Zobrazit vlákna v ladicím programu | Microsoft Docs
+description: K prohlédnutí a řízení vláken použijte vlákna. Můžete seskupovat, řadit, označovat, zablokovat, rozmrazit a hledat vlákna, vybírat sloupce a zobrazovat zásobníky volání.
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f65bd7a904f30f132f654b6dd718532d9d0e66e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b02d980292eaed40c7c1598c772b52f695bf23e2
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67821590"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149700"
 ---
 # <a name="view-threads-in-the-visual-studio-debugger-by-using-the-threads-window-c-visual-basic-c"></a>Zobrazení vláken v ladicím programu sady Visual Studio pomocí okna vlákna (C#, Visual Basic, C++)
 V okně **vlákna** můžete prozkoumávat a pracovat s vlákny v aplikaci, kterou ladíte. Podrobné pokyny týkající se použití okna **vlákna** naleznete v tématu [Návod: ladění pomocí okna vlákna](../debugger/how-to-use-the-threads-window.md).
@@ -64,7 +66,7 @@ V okně **vlákna** můžete prozkoumávat a pracovat s vlákny v aplikaci, kter
 
 ### <a name="to-display-the-threads-window-in-break-mode-or-run-mode"></a>Zobrazení okna vlákna v režimu pozastavení nebo režimu spuštění
 
-- Když je Visual Studio v režimu ladění, vyberte nabídku **ladění** , přejděte na **Windows**a pak vyberte **vlákna**.
+- Když je Visual Studio v režimu ladění, vyberte nabídku **ladění** , přejděte na **Windows** a pak vyberte **vlákna**.
 
 ### <a name="to-display-or-hide-a-column"></a>Zobrazení nebo skrytí sloupce
 
@@ -106,7 +108,7 @@ V okně **vlákna** můžete prozkoumávat a pracovat s vlákny v aplikaci, kter
   - Klikněte pravým tlačítkem na vlákno a vyberte **Přepnout do vlákna**.
 
 ## <a name="group-and-sort-threads"></a>Seskupit a seřadit vlákna
- Při seskupování vláken se v tabulce zobrazí záhlaví pro každou skupinu. Nadpis obsahuje popis skupiny, například **pracovní vlákno** nebo **neoznačená vlákna**a ovládací prvek stromu. Členská vlákna každé skupiny se zobrazí pod záhlavím skupiny. Chcete-li skrýt členské vlákna pro skupinu, použijte ovládací prvek strom pro sbalení skupiny.
+ Při seskupování vláken se v tabulce zobrazí záhlaví pro každou skupinu. Nadpis obsahuje popis skupiny, například **pracovní vlákno** nebo **neoznačená vlákna** a ovládací prvek stromu. Členská vlákna každé skupiny se zobrazí pod záhlavím skupiny. Chcete-li skrýt členské vlákna pro skupinu, použijte ovládací prvek strom pro sbalení skupiny.
 
  Vzhledem k tomu, že seskupování mají přednost před řazením, můžete seskupit vlákna podle kategorií, například a seřadit je podle ID v rámci každé kategorie.
 

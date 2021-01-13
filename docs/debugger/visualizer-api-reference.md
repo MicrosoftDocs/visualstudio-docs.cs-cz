@@ -1,5 +1,7 @@
 ---
 title: Reference k rozhraní Vizualizátor API | Microsoft Docs
+description: Vizualizér zobrazuje konkrétní typ datového prvku a může také umožňovat úpravy. Pokud ho chcete vytvořit, použijte rozhraní API pro Vizualizér popsané v této části.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8479343634ca8afc647edde61eb8b1106954c83
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 37346c77b1488bb89ac071a0290f7b5219731591
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73187208"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149765"
 ---
 # <a name="visualizer-api-reference"></a>Referenční dokumentace rozhraní API vizualizéru
 

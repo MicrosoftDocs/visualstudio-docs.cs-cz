@@ -1,5 +1,7 @@
 ---
 title: Obnovení skrytých příkazů ladicího programu | Microsoft Docs
+description: Naučte se obnovit skryté příkazy ladicího programu v aplikaci Visual Studio. Výchozí nastavení IDE pro některé jazyky mohou skrýt určité příkazy ladicího programu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 295d04aa33f7f6602d536a69baafae9105a51fe5
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: e761a9bcbbf2f35555ae30065cd239f4d7587ff4
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852019"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148595"
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>Postupy: Obnovení skrytých příkazů ladicího programu
 Při nastavování aplikace Visual Studio budete požádáni o výběr sady výchozích nastavení IDE pro primární programovací jazyk. Výchozí nastavení IDE pro některé jazyky mohou skrýt určité příkazy ladicího programu.
@@ -56,7 +58,7 @@ Při nastavování aplikace Visual Studio budete požádáni o výběr sady výc
 
 1. V nabídce **nástroje** klikněte na položku **Nastavení importu a exportu**.
 
-2. Na stránce **Vítá vás Průvodce importem a exportem nastavení** klikněte na **Importovat vybrané nastavení prostředí**a pak klikněte na **Další**.
+2. Na stránce **Vítá vás Průvodce importem a exportem nastavení** klikněte na **Importovat vybrané nastavení prostředí** a pak klikněte na **Další**.
 
 3. Na stránce **Uložit aktuální nastavení** rozhodněte, zda chcete uložit existující nastavení, a poté klikněte na tlačítko **Další**.
 
@@ -64,7 +66,7 @@ Při nastavování aplikace Visual Studio budete požádáni o výběr sady výc
 
 5. Klikněte na **Next** (Další).
 
-6. Na stránce **zvolit nastavení pro import** v části **Možnosti**zkontrolujte, zda je vybráno **ladění** . Pokud tato nastavení nechcete importovat, zrušte zaškrtnutí těchto políček.
+6. Na stránce **zvolit nastavení pro import** v části **Možnosti** zkontrolujte, zda je vybráno **ladění** . Pokud tato nastavení nechcete importovat, zrušte zaškrtnutí těchto políček.
 
 7. Klikněte na **Finish** (Dokončit).
 

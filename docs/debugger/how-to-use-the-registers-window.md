@@ -1,6 +1,7 @@
 ---
 title: Zobrazení hodnot registru v ladicím programu | Microsoft Docs
-ms.custom: seodec18
+description: Zobrazit hodnoty registru v okně Registry v aplikaci Visual Studio. Během ladění zaregistruje změny hodnot, jako se ve vaší aplikaci spustí kód.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/19/2018
 ms.topic: how-to
 f1_keywords:
@@ -24,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed60b21d7c8e90e18b389a29c3343713ac8ece3d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8422738b5c46b5482ac65cd24ccc903acdb4506e
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348571"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148036"
 ---
 # <a name="view-register-values-in-the-registers-window-c-c-visual-basic-f"></a>Zobrazení hodnot registru v okně Registry (C#, C++, Visual Basic, F #)
 
@@ -48,9 +49,9 @@ Hodnoty registru můžete upravovat. Další informace najdete v tématu [Postup
 
 **Otevření okna Registry**
 
-1. Povolte ladění na úrovni adres výběrem možnosti **Povolit ladění na úrovni adresy** v **nástrojích** (nebo **ladění**) > **Options**  >  **ladění**možností.
+1. Povolte ladění na úrovni adres výběrem možnosti **Povolit ladění na úrovni adresy** v **nástrojích** (nebo **ladění**) >   >  **ladění** možností.
 
-1. Když je ladění spuštěno nebo na zarážce, vyberte **ladit**  >  **Registry systému Windows**  >  **Registers**nebo stiskněte **ALT** + **5**.
+1. Když je ladění spuštěno nebo na zarážce, vyberte **ladit**  >  **Registry systému Windows**  >  nebo stiskněte **ALT** + **5**.
 
 >[!NOTE]
 >Dialogová okna a příkazy nabídek se mohou lišit v závislosti na vaší edici nebo nastavení sady Visual Studio. Chcete-li změnit nastavení, zvolte **Nastavení importu a exportu** v nabídce **nástroje** sady Visual Studio. Další informace najdete v tématu [resetování nastavení](../ide/environment-settings.md#reset-settings).

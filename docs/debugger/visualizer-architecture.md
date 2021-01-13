@@ -1,5 +1,7 @@
 ---
 title: Architektura Vizualizér | Microsoft Docs
+description: Vizualizér zobrazuje konkrétní typ datového prvku a může také umožňovat úpravy. Seznamte se s architekturou Vizualizér.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a6dfbc8c57ff2e78bf0c6ebbd4e9899c372d7084
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9166cc3c98f72e43042a26c0787d1cbf45223a74
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73187168"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149752"
 ---
 # <a name="visualizer-architecture"></a>Architektura vizualizéru
 Architektura Vizualizér ladicího programu má dvě části:
@@ -90,4 +92,4 @@ Architektura Vizualizér ladicího programu má dvě části:
 - [Návod: Zápis vizualizéru v jazyce C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
 - [Návod: Zápis vizualizéru v jazyce Visual Basic](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)
 - [Návod: Zápis vizualizéru v jazyce Visual Basic](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)
-- [Hlediska zabezpečení vizualizéru](../debugger/visualizer-security-considerations.md)
+- [Předpoklady zabezpečení Vizualizátoru](../debugger/visualizer-security-considerations.md)

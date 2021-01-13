@@ -1,6 +1,7 @@
 ---
 title: Spuštění pracovního procesu v rámci uživatelského účtu | Microsoft Docs
-ms.custom: seodec18
+description: Nastavte počítač tak, aby bylo možné spustit pracovní proces ASP.NET (aspnet_wp.exe nebo w3wp.exe) v rámci uživatelského účtu v sadě Visual Studio.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ac5bee0ffa05aa275782c57fc9b7b1c369bf65d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 24dc3be78534610492dfada954f74a883808b40b
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349403"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148686"
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>Postupy: Spuštění pracovního procesu v rámci uživatelského účtu
 Chcete-li nastavit počítač tak, aby bylo možné spustit [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces (aspnet_wp.exe nebo w3wp.exe) v rámci uživatelského účtu, postupujte podle následujících kroků.
@@ -80,7 +81,7 @@ Chcete-li nastavit počítač tak, aby bylo možné spustit [!INCLUDE[vstecasp](
 
 10. Do pole **Zadejte název objektu k výběru** zadejte uživatelské jméno a pak klikněte na **OK**. Uživatelské jméno musí být v následujícím formátu: DomainName\UserName.
 
-11. V dialogovém okně **Položka oprávnění pro dočasné soubory ASP.NET** Udělte uživateli **úplný ovládací prvek**a kliknutím na tlačítko **OK** zavřete dialogové okno **záznam dočasných souborů ASP.NET** .
+11. V dialogovém okně **Položka oprávnění pro dočasné soubory ASP.NET** Udělte uživateli **úplný ovládací prvek** a kliknutím na tlačítko **OK** zavřete dialogové okno **záznam dočasných souborů ASP.NET** .
 
 12. Zobrazí se dialogové okno **zabezpečení** a zobrazí se dotaz, jestli opravdu chcete změnit oprávnění pro systémovou složku. Klikněte na **Ano**.
 

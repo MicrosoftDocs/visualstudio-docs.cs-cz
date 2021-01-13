@@ -1,5 +1,6 @@
 ---
 title: 'Příkazový řádek profileru: shromažďování statistik samostatné aplikace'
+description: Shromažďování statistik aplikace pro samostatné aplikace pomocí příkazového řádku profileru v aplikaci Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 150a1a010a33a3b4fcfe0954ec70db2ff4de7816
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 6567b0116227bf259eb3591bc6880a6841252869
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808913"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148298"
 ---
 # <a name="collect-application-statistics-for-stand-alone-applications-by-using-the-profiler-command-line"></a>Shromažďování statistik aplikace pro samostatné aplikace pomocí příkazového řádku profileru
 Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu pro aplikaci klienta (samostatné) pomocí metody vzorkování z příkazového řádku.
@@ -28,7 +29,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**Spuštění aplikace pomocí profilace**|-   [Postupy: spuštění samostatné aplikace a shromažďování statistik aplikace](../profiling/how-to-launch-a-stand-alone-app-and-collect-application-statistics.md)|
 |**Připojení profileru k běžící .NET Framework aplikaci**|-   [Postupy: Připojení profileru k aplikaci .NET Framework a shromáždění statistik aplikace](../profiling/how-to-attach-the-profiler-to-a-dotnet-app-and-collect-application-statistics.md)|
@@ -39,7 +40,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ### <a name="profile-stand-alone-applications"></a>Profilovat samostatné aplikace
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**Instrumentace aplikace**|-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md)|
 |**Shromažďovat data o přidělování paměti .NET a shromažďování paměti**|-   [Shromažďování dat .NET Framework paměti](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|
@@ -47,7 +48,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ### <a name="profile-by-using-the-sampling-method"></a>Profilování pomocí metody vzorkování
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**ASP.NET webové aplikace Profile**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|
 |**Profilovací služby**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md). V této části najdete popis postupu shromažďování statistik výkonu ze služeb systému Windows pomocí metody vzorkování.|

@@ -1,5 +1,7 @@
 ---
-title: Zobrazení volaný volající – data instrumentace paměti sítě | Microsoft Docs
+title: Zobrazení Caller-Callee – data instrumentace paměti sítě | Microsoft Docs
+description: Projděte si zobrazení volající/volaný data profilace paměti .NET, které zobrazuje data přidělení a časování pro vybranou funkci a nadřazené a podřízené funkce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c51f4bc1e823f565670bf1f6df77553ff4658d6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3fa4928f9da81b2141eec76e54bce7887f50a074
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779724"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148075"
 ---
 # <a name="callercallee-view---net-memory-instrumentation-data"></a>Zobrazení Volající/Volaný – data instrumentace paměti .NET
 Zobrazení volající/volaný pro data profilace paměti .NET, která byla shromážděna pomocí metody instrumentace, zobrazuje data přidělení a časování pro vybranou funkci a nadřazené a podřízené funkce této vybrané funkce. Zobrazení volající/volaný obsahuje tři mřížky.
@@ -94,7 +96,7 @@ Zobrazení volající/volaný pro data profilace paměti .NET, která byla shrom
 |**Minimální celková doba aplikace**|Minimální doba trvání volání této funkce v tomto kontextu (včetně celkového počtu aplikací).|
 
 ## <a name="application-exclusive-values"></a>Exkluzivní hodnoty aplikací
- Hodnoty exkluzivní pro aplikace označují čas strávený ve funkci bez času stráveného v podřízených funkcích. Uvedený čas také vyloučí čas, který vyvolal volání do operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.
+ Hodnoty exkluzivní pro aplikace označují čas strávený ve funkci bez času stráveného v podřízených funkcích. Uvedený čas také vyloučí čas, který byl stráven v voláních k operačnímu systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.
 
 |Sloupec|Popis|
 |------------|-----------------|

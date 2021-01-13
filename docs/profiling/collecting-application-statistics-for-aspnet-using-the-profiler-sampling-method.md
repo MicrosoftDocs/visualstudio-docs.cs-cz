@@ -1,5 +1,7 @@
 ---
 title: Shromažďovat statistiky pro webové aplikace v ASP.NET
+description: Projděte si postupy a možnosti pro shromažďování statistik výkonu pro webové aplikace v ASP.NET pomocí nástroje VSPerfASPNETCmd a VSPerfCmd a metody profilování vzorkování.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 017195cc86e958c70204a588de7678a5f15e6e09
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ef1f4ef1c50db1234425ab164f377dab5ff12ea6
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808926"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149531"
 ---
 # <a name="collect-statistics-for-aspnet-web-apps"></a>Shromažďovat statistiky pro webové aplikace v ASP.NET
 
@@ -31,7 +33,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**Připojení profileru k aplikaci ASP.NET**|-   [Postupy: Připojení profileru k webové aplikaci ASP.NET ke shromažďování statistik aplikace](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line.md)|
 
@@ -39,7 +41,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ### <a name="profile-aspnet-web-applications"></a>ASP.NET webové aplikace Profile
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**Profilování pomocí metody instrumentace**|-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
 |**Přidělení paměti profilu a uvolňování paměti**|-   [Shromáždit data paměti](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|
@@ -47,7 +49,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ### <a name="sample-method"></a>Sample – metoda
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**Samostatné (klientské) aplikace profilu**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
 |-   **Profilovací služby**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|

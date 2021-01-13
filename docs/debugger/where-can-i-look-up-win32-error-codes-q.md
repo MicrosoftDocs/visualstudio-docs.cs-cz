@@ -1,5 +1,7 @@
 ---
 title: Kde najdu kódy chyb systému Win32? | Dokumentace Microsoftu
+description: Kód chyby Win32 vyhledáte tak, že ho zadáte do kukátka nebo QuickWatch. Například "0x80000004, HR". Definice kódů chyb jsou v INCLUDE\WINERROR.H..
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a8e3dda1b728cd631efe8a84913af3d5c475138d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44a006be3b6ecad3ef723c00154354cb35df0049
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72728038"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149284"
 ---
 # <a name="where-can-i-look-up-win32-error-codes"></a>Kde najdu kódy chyb systému Win32?
 Winerror. H v adresáři INCLUDE výchozí instalace systému obsahuje definice chybových kódů pro funkce Win32 API.

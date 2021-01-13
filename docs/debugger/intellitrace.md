@@ -1,5 +1,7 @@
 ---
 title: IntelliTrace | Microsoft Docs
+description: Pomocí IntelliTrace můžete zaznamenávat a trasovat historii spouštění kódu v aplikaci Visual Studio. Zaznamenávat konkrétní události, kontrolovat související kód a ladit chyby.
+ms.custom: SEO-VS-2020
 ms.date: 09/19/2018
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 878c2481164bc87d4af5e79a0a978e822e7baafe
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 518043a38f3a0f6945840a36a1f7fcade5a313d7
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600249"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148998"
 ---
 # <a name="intellitrace-for-visual-studio-enterprise-c-visual-basic-c"></a>IntelliTrace pro Visual Studio Enterprise (C#, Visual Basic, C++)
 
@@ -39,7 +41,7 @@ IntelliTrace můžete použít v edici Visual Studio Enterprise (ale ne v edicí
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-|Scénář|Nadpis|
+|Scenario|Nadpis|
 |-|-|
 |**Ladit moje aplikace pomocí IntelliTrace:**<br /><br /> -Zobrazit minulé události.<br />-Zobrazit informace o volání s minulými událostmi.<br />-Uložit moji relaci IntelliTrace.<br />– Řízení dat, která IntelliTrace shromažďuje.|- [Kontrola předchozích stavů aplikace pomocí IntelliTrace](../debugger/view-historical-application-state.md)<br />- [Návod: použití IntelliTrace](../debugger/walkthrough-using-intellitrace.md)<br />- [Funkce IntelliTrace](../debugger/intellitrace-features.md)<br />- [Historické ladění](../debugger/historical-debugging.md)|
 |**Shromažďovat data IntelliTrace z nasazených aplikací**|- [Použití samostatného kolektoru IntelliTrace](../debugger/using-the-intellitrace-stand-alone-collector.md)|
@@ -106,7 +108,7 @@ Ve výchozím nastavení IntelliTrace zaznamenává pouze události IntelliTrace
 
   - Hodnoty v Datových tipech, které se zobrazují při přesunutí ukazatele myši nad proměnnou v okně zdroje s cílem zobrazit její hodnotu. Nástroj IntelliTrace neshromažďuje hodnoty v připnutých Datových tipech.
 
-    Když je povolený IntelliTrace událost a režim snímků, IntelliTrace pořídí snímek procesu aplikace v každé **zarážce** ladicího programu a událost **kroku** . Tato akce zaznamená hodnoty v oknech **místní**hodnoty, **Automatické**hodnoty a **kukátka** bez ohledu na to, zda jsou okna otevřená nebo nikoli. Budou se shromažďovat i hodnoty v jakýchkoli připnutých popisech dat.
+    Když je povolený IntelliTrace událost a režim snímků, IntelliTrace pořídí snímek procesu aplikace v každé **zarážce** ladicího programu a událost **kroku** . Tato akce zaznamená hodnoty v oknech **místní** hodnoty, **Automatické** hodnoty a **kukátka** bez ohledu na to, zda jsou okna otevřená nebo nikoli. Budou se shromažďovat i hodnoty v jakýchkoli připnutých popisech dat.
 
 - **Výjimky**
 

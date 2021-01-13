@@ -1,5 +1,7 @@
 ---
 title: Nastavení konfigurace ladění a vydaných verzí | Microsoft Docs
+description: Nastavení konfigurace ladění a vydání v sadě Visual Studio. Sestavíte ladicí verzi pro ladění a verzi Release pro konečnou distribuci vydaných verzí.
+ms.custom: SEO-VS-2020
 ms.date: 10/05/2018
 ms.topic: how-to
 f1_keywords:
@@ -31,12 +33,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e85f7c67f8dc25bb69f7de07a19286b5c63e938a
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 51237a9b73825620c77c7f2a10ad1efe367cdd37
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599900"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149544"
 ---
 # <a name="set-debug-and-release-configurations-in-visual-studio"></a>Nastavení konfigurace ladění a vydaných verzí v sadě Visual Studio
 
@@ -54,7 +56,7 @@ Můžete změnit konfiguraci sestavení z nabídky **sestavit** , z panelu nást
 
 Chcete-li změnit konfiguraci sestavení, proveďte jednu z těchto akcí:
 
-* V nabídce **sestavení** vyberte **Configuration Manager**a pak vyberte **ladit** nebo **vydat**.
+* V nabídce **sestavení** vyberte **Configuration Manager** a pak vyberte **ladit** nebo **vydat**.
 
 nebo
 
@@ -85,7 +87,7 @@ Podrobné informace o nastavení projektu pro konfiguraci ladění v jazyce C# n
 
 5. Vyberte tlačítko **Upřesnit** (nebo tlačítko **Upřesnit možnosti kompilace** v Visual Basic).
 
-6. V seznamu **ladicích informací** (nebo v seznamu **vygenerovat informace o ladění** v Visual Basic) vyberte **úplné**, **pouze PDB**nebo **přenosné**.
+6. V seznamu **ladicích informací** (nebo v seznamu **vygenerovat informace o ladění** v Visual Basic) vyberte **úplné**, **pouze PDB** nebo **přenosné**.
 
    Přenosný formát je nejnovější formát pro více platforem pro .NET Core. Další informace o možnostech najdete v tématu [dialogové okno Upřesnit nastavení sestavení (C#)](../ide/reference/advanced-build-settings-dialog-box-csharp.md).
 
@@ -103,7 +105,7 @@ Podrobné informace o nastavení projektu pro konfiguraci ladění v jazyce C# n
 
 3. V seznamu **Konfigurace** vyberte možnost **ladění** nebo **vydání**.
 
-4. V bočním podokně zvolte **Linker > ladění**a pak vyberte možnosti pro **vygenerování informací o ladění**.
+4. V bočním podokně zvolte **Linker > ladění** a pak vyberte možnosti pro **vygenerování informací o ladění**.
 
    Podrobné informace o nastavení projektu pro konfiguraci ladění v jazyce C++ naleznete v tématu [nastavení projektu pro konfiguraci ladění jazyka c++](../debugger/project-settings-for-a-cpp-debug-configuration.md).
 
@@ -123,5 +125,5 @@ Podrobné informace o nastavení projektu pro konfiguraci ladění v jazyce C# n
 - [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)<br/>
 - [Nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)<br/>
 - [Nastavení projektu pro konfiguraci ladění v jazyce C#](../debugger/project-settings-for-csharp-debug-configurations.md)<br/>
-- [Nastavení projektu pro konfiguraci Visual Basicho ladění](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)<br/>
+- [Nastavení projektu pro konfiguraci ladění jazyka Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)<br/>
 - [Postupy: vytváření a úpravy konfigurací](../ide/how-to-create-and-edit-configurations.md)

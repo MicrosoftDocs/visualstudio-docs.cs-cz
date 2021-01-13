@@ -1,5 +1,7 @@
 ---
 title: Tipy pro ladění vláken v nativním kódu | Microsoft Docs
+description: Pokud ladíte vícevláknové aplikace v aplikaci Visual Studio, přečtěte si seznam tipů pro ladění vláken v nativním kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dde94e28f378f0630a78f32ae5e58533729ce0f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9249e1527a7dd2ae720ab575b1d443c10b85376e
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72728996"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150051"
 ---
 # <a name="tips-for-debugging-threads-in-native-code"></a>Tipy k ladění vláken v nativním kódu
 Tady je několik tipů, které můžete použít při ladění vláken v nativním kódu:
@@ -30,7 +32,7 @@ Tady je několik tipů, které můžete použít při ladění vláken v nativn�
 
 - Můžete zobrazit poslední kód chyby pro aktuální vlákno zadáním `@Err` v okně **kukátka** nebo dialogovém okně **QuickWatch** .
 
-- Funkce běhové knihovny jazyka C (CRT) mohou být užitečné pro ladění vícevláknové aplikace. Další informace najdete v tématu [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg).
+- Funkce knihovny jazyka C Run-Time (CRT) mohou být užitečné pro ladění vícevláknové aplikace. Další informace najdete v tématu [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg).
 
 ## <a name="see-also"></a>Viz také
 - [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)

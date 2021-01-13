@@ -1,5 +1,7 @@
 ---
 title: Okno hledání oken | Microsoft Docs
+description: Pomocí okna hledání můžete vyhledat a vybrat uzel pro konkrétní okno uvedené v zobrazení Windows. Popis nastavení najdete v tomto článku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ca04cadbfce26319a9ed72b85071d7ab139a85a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f83469d6bd97e493a704282aa1fca1fbec96962d
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900920"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148985"
 ---
 # <a name="window-search-dialog-box"></a>Dialogové okno hledání oken
 Pomocí tohoto dialogového okna můžete vyhledat a vybrat uzel pro konkrétní okno v [zobrazení Windows](../debugger/windows-view.md). Chcete-li zobrazit toto dialogové okno, přesuňte fokus do okna zobrazení systému Windows. Pak v nabídce **hledání** zvolte **Najít okno** .

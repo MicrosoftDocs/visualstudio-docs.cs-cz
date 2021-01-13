@@ -1,6 +1,7 @@
 ---
 title: Řešení potíží se zarážkami v ladicím programu | Microsoft Docs
-ms.custom: seodec18
+description: Pokud je zarážka zakázaná nebo se nedá nastavit, zobrazí se jako prázdný kruh. Podívejte se na informace o problémech, ke kterým může dojít při nastavování zarážek.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 01/23/2018
 ms.topic: troubleshooting
 author: mikejo5000
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c11741cb9bb9a0b0c64b9452b54daa6ac226b92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a07f92eccd7884ea3cc3871d04285a82cb5cb62e
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72535926"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148049"
 ---
 # <a name="troubleshoot-breakpoints-in-the-visual-studio-debugger"></a>Řešení potíží se zarážkami v ladicím programu sady Visual Studio
 
@@ -25,7 +26,7 @@ V následujících dvou oddílech jsou popsána výrazné upozornění a jejich 
 
 ### <a name="no-symbols-have-been-loaded-for-this-document"></a>Pro tento dokument se načetly žádné symboly.
 
-Přejít do okna **moduly** (**ladit**  >  moduly**systému Windows**  >  **Modules**) a ověřit, zda je modul načten.
+Přejít do okna **moduly** (**ladit**  >  moduly **systému Windows**  >  ) a ověřit, zda je modul načten.
 * Pokud je váš modul načtený, zkontrolujte sloupec **stav symbolu** , abyste viděli, zda byly symboly načteny.
   * Pokud symboly nejsou načteny, zkontrolujte stav symbolu a Diagnostikujte problém. V kontextové nabídce v modulu v okně **moduly** klikněte na možnost **informace o načtení symbolů...** a zjistěte, kde se ladicí program pokusil vyzkoušet a načíst symboly. Další informace o načítání symbolů naleznete v tématu [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
   * Pokud jsou symboly načteny, soubor PDB neobsahuje informace o zdrojových souborech. Jedná se o několik možných příčin:
@@ -35,7 +36,7 @@ Přejít do okna **moduly** (**ladit**  >  moduly**systému Windows**  >  **Modu
 
 * Pokud váš modul není načtený, zjistěte příčinu příčiny následujícím způsobem:
   * Potvrďte, že ladíte správný proces.
-  * Zkontrolujte, že ladíte správný druh kódu. Můžete zjistit, jaký typ kódu ladicí program je nakonfigurován pro ladění v okně **procesy** (**ladění**  >  **procesů systému Windows**  >  **Processes**). Například pokud se pokoušíte ladit kód v jazyce C#, zkontrolujte, zda je váš ladicí program nakonfigurován pro příslušný typ a verzi rozhraní .NET (například spravované (v4 \* ) vs. Managed (v2 \* /V3 \* ) versus Managed (CoreCLR)).
+  * Zkontrolujte, že ladíte správný druh kódu. Můžete zjistit, jaký typ kódu ladicí program je nakonfigurován pro ladění v okně **procesy** (**ladění**  >  **procesů systému Windows**  >  ). Například pokud se pokoušíte ladit kód v jazyce C#, zkontrolujte, zda je váš ladicí program nakonfigurován pro příslušný typ a verzi rozhraní .NET (například spravované (v4 \* ) vs. Managed (v2 \* /V3 \* ) versus Managed (CoreCLR)).
 
 ### <a name="-the-current-source-code-is-different-from-the-version-built-into"></a>"… aktuální zdrojový kód se liší od verze integrované do... "
 

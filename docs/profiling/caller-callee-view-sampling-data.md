@@ -1,5 +1,7 @@
 ---
 title: Zobrazení Volající/Volaný – data vzorkování | Microsoft Docs
+description: Přečtěte si, jak zobrazení volající/volaný zobrazuje informace o profilování vybrané funkce a jejích nadřazených a podřízených funkcí v Prohlížeč výkonu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 008aa6bd9402cde760ffc61a613aba778c8ec96f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5f01d2b9fbff4864c8e3fa4d96dccdda54da7e0
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74773267"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148348"
 ---
 # <a name="callercallee-view---sampling-data"></a>Zobrazení Volající/Volaný – data vzorkování
 Zobrazení volající/volaný zobrazí informace o profilování vybrané funkce a jejích nadřazených a podřízených funkcí. Zobrazení volající/volaný obsahuje tři mřížky.

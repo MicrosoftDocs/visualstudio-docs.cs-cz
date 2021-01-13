@@ -1,5 +1,7 @@
 ---
 title: Help nástroje Spy + + | Microsoft Docs
+description: Prohlédněte si odkazy na zobrazení nástroje Spy + + a Spy + +. Viz Referenční odkazy, které obsahují podrobné informace o jednotlivých dostupných příkazech a dialogovém okně nabídky nástroje Spy + +.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 118096d536b9a4db50568ab138cd4695e1f3dcbe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f5e9caecb6d5ae2023bce9c1ef2ea0d73c66be3
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929794"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148023"
 ---
 # <a name="spy-help"></a>Nápověda nástroje Spy++
 Dokumentace k nástroji Spy + + obsahuje dvě skupiny obecných témat o používání nástrojů Spy + + a v zobrazeních nástroje Spy + +. Tyto jsou následovány odkazem nástroje Spy + +, který poskytuje další podrobnosti o všech dostupných příkazech nabídky a dialogovém okně.

@@ -1,6 +1,7 @@
 ---
 title: Zobrazení hodnot proměnných v datatipůch | Microsoft Docs
-ms.custom: seodec18
+description: Pomocí datových tipů můžete pohodlně zobrazovat informace o proměnných, včetně polí a struktur, při ladění. Můžete také upravit hodnoty.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/21/2018
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bf5eda8205dbe0629d0b2801473de83c2f91257e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 432fd50d30347972d7b1fc8222a430fc90a9e590
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75404270"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149960"
 ---
 # <a name="view-data-values-in-datatips-in-the-code-editor"></a>Zobrazení hodnot dat v datových tipech v editoru kódu
 
@@ -75,7 +76,7 @@ Chcete-li zavřít všechny tipy, vyberte v nabídce **ladit** možnost **Vymaza
 
 ### <a name="close-all-datatips-for-a-specific-file"></a>Zavřít všechny vlastnosti datatipů pro určitý soubor
 
-Chcete-li zavřít všechny vlastnosti datatipů pro určitý soubor, v nabídce **ladění** vyberte možnost **Vymazat všechny popisy, které \<Filename> jsou připnuté na **.
+Chcete-li zavřít všechny vlastnosti datatipů pro určitý soubor, v nabídce **ladění** vyberte možnost **Vymazat všechny popisy, které \<Filename> jsou připnuté na**.
 
 ## <a name="expand-and-edit-information"></a>Rozbalit a upravit informace
 Můžete použít datové tipy k rozšíření pole, struktury nebo objektu k zobrazení členů. Můžete také upravit hodnotu proměnné z DataTip.

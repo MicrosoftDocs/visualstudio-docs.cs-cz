@@ -1,5 +1,6 @@
 ---
 title: Shromáždit statistiky pro služby systému Windows – Metoda vzorkování profileru
+description: Projděte si postupy a možnosti pro shromažďování statistik výkonu pro služby systému Windows pomocí metody vzorkování profilace z příkazového řádku.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 28b614868ad8080f9b4cbe5359a54c814022089c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f4c686de4128d655b5b8146925529e6a280bb754
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809960"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148335"
 ---
 # <a name="collect-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>Shromažďování statistik aplikace pro služby pomocí metody vzorkování profileru
 Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu pro služby systému Windows pomocí metody vzorkování z příkazového řádku.
@@ -25,7 +26,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**Připojení profileru ke službě .NET**|-   [Postupy: Připojení profileru ke službě .NET ke shromažďování statistik aplikace](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-application-statistics-by-using-the-command-line.md)|
 |**Přidat data interakce vrstev**|-   [Shromáždit data interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md)|
@@ -35,7 +36,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ### <a name="profile-windows-services"></a>Profilace služeb systému Windows
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**Profilování pomocí metody instrumentace**|-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|
 |**Profilové přidělení paměti .NET a uvolňování paměti**|-   [Shromažďovat data paměti .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|
@@ -43,7 +44,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ### <a name="profile-by-using-the-sampling-method"></a>Profilování pomocí metody vzorkování
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**Samostatné (klientské) aplikace profilu**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
 |**ASP.NET webové aplikace Profile**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|

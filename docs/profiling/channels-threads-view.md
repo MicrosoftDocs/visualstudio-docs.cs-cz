@@ -1,5 +1,7 @@
 ---
 title: Kanály (zobrazení vláken) | Microsoft Docs
+description: Přečtěte si o zobrazení vláken při použití kanálů v Vizualizátor souběžnosti sady Visual Studio. Zobrazení kanálů vláken, kanálů disků, kanálů značek a kanálů GPU
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f18a636d83210b2329d103b1babdf47e697fd5c7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a4ed0a82ad7ddb67cacde2a09f595d0c9250710
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537082"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148608"
 ---
 # <a name="channels-threads-view"></a>Kanály (zobrazení vláken)
 Vizualizátor souběžnosti zobrazuje čtyři druhy kanálů: kanály vláken, kanály disku, kanály značek a grafické kanály GPU.
@@ -25,7 +27,7 @@ Vizualizátor souběžnosti zobrazuje čtyři druhy kanálů: kanály vláken, k
 ## <a name="thread-channels"></a>Kanály vláken
  Kanál vlákna zobrazuje stav vlákna podle barvy pro pouze jedno vlákno. Když na název kanálu pozastavíte, zobrazí se funkce spuštění daného vlákna. Vizualizátor souběžnosti detekuje několik druhů vláken. Nejběžnější druhy jsou uvedeny v následující tabulce.
 
-|Thread|Popis|
+|Thread|Description|
 |-|-|
 |Hlavní vlákno|Vlákno, které aplikaci spustilo.|
 |Pracovní vlákno|Vlákno, které bylo vytvořeno hlavním vláknem aplikace.|

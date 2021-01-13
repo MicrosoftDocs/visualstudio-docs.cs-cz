@@ -1,6 +1,7 @@
 ---
 title: Zápis Vizualizér v jazyce C# | Microsoft Docs
-ms.custom: seodec18
+description: Postupujte podle návodu a vytvořte jednoduchý Vizualizér v jazyce C#. Zobrazuje kroky požadované jak s, tak i bez použití šablony položky Vizualizér.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 05/27/2020
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b3b8a67d1b01d7f3a3ada7b391423676b9294e8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8caf1be3c10c0d89ce8780213c0914944ae87842
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286300"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149713"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>Návod: zápis Vizualizér v jazyce C\#
 
@@ -39,10 +40,10 @@ Pomocí níže uvedených úloh vytvořte Vizualizér.
 1. Vytvořte nový projekt knihovny tříd.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **knihovny tříd**, zvolte **šablony**a pak zvolte **vytvořit novou knihovnu tříd (.NET Framework)**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **knihovny tříd**, zvolte **šablony** a pak zvolte **vytvořit novou knihovnu tříd (.NET Framework)**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte možnost **.NET Framework**a potom v prostředním podokně zvolte možnost **Knihovna tříd (.NET Framework)**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte možnost **.NET Framework** a potom v prostředním podokně zvolte možnost **Knihovna tříd (.NET Framework)**.
     ::: moniker-end
 
 2. Zadejte vhodný název knihovny tříd, například `MyFirstVisualizer` , a pak klikněte na tlačítko **vytvořit** nebo **OK**.
@@ -51,18 +52,18 @@ Pomocí níže uvedených úloh vytvořte Vizualizér.
 
 ### <a name="to-rename-class1cs-and-add-microsoftvisualstudiodebuggervisualizers"></a>Přejmenování Class1.cs a přidání Microsoft. VisualStudio. DebuggerVisualizers
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na Class1.cs a v místní nabídce vyberte **Přejmenovat** .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na Class1.cs a v místní nabídce vyberte **Přejmenovat** .
 
 2. Změňte název z Class1.cs na něco smysluplného, například DebuggerSide.cs.
 
    > [!NOTE]
    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky změní deklaraci třídy v DebuggerSide.cs tak, aby odpovídala novému názvu souboru.
 
-3. V **Průzkumník řešení**klikněte pravým tlačítkem na **odkazy** a v místní nabídce vyberte **Přidat odkaz** .
+3. V **Průzkumník řešení** klikněte pravým tlačítkem na **odkazy** a v místní nabídce vyberte **Přidat odkaz** .
 
 4. V dialogovém okně **Přidat odkaz** na kartě **Procházet** vyberte možnost **Procházet** a vyhledejte Microsoft.VisualStudio.DebuggerVisualizers.DLL.
 
-    Knihovnu DLL můžete najít v podadresáři * \<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* instalačního adresáře sady Visual Studio.
+    Knihovnu DLL můžete najít v podadresáři *\<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* instalačního adresáře sady Visual Studio.
 
 5. Klikněte na **OK**.
 
@@ -104,9 +105,9 @@ Pomocí níže uvedených úloh vytvořte Vizualizér.
 
 ### <a name="to-add-systemwindowsforms"></a>Přidání System. Windows. Forms
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **odkazy** a v místní nabídce vyberte **Přidat odkaz** .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **odkazy** a v místní nabídce vyberte **Přidat odkaz** .
 
-2. V dialogovém okně **Přidat odkaz** na kartě **Procházet** vyberte možnost **Procházet**a vyhledejte System.Windows.Forms.DLL.
+2. V dialogovém okně **Přidat odkaz** na kartě **Procházet** vyberte možnost **Procházet** a vyhledejte System.Windows.Forms.DLL.
 
     Knihovnu DLL můžete najít v *C:\Windows\Microsoft.NET\Framework\v4.0.30319*.
 
@@ -170,13 +171,13 @@ V kódu na straně ladicího programu určíte typ pro vizualizaci (zdroj objekt
 
 ### <a name="to-add-a-console-application-project-to-the-solution"></a>Přidání projektu konzolové aplikace do řešení
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na řešení, vyberte možnost **Přidat**a poté klikněte na možnost **Nový projekt**.
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na řešení, vyberte možnost **Přidat** a poté klikněte na možnost **Nový projekt**.
 
     ::: moniker range=">=vs-2019"
-    Do vyhledávacího pole zadejte **Konzolová aplikace**, zvolte **šablony**a pak zvolte **vytvořit novou konzolovou aplikaci (.NET Framework)**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    Do vyhledávacího pole zadejte **Konzolová aplikace**, zvolte **šablony** a pak zvolte **vytvořit novou konzolovou aplikaci (.NET Framework)**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte možnost **plocha systému Windows** a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)**.
     ::: moniker-end
 
 2. Zadejte vhodný název knihovny tříd, například `MyTestConsole` , a pak klikněte na tlačítko **vytvořit** nebo **OK**.
@@ -185,7 +186,7 @@ V kódu na straně ladicího programu určíte typ pro vizualizaci (zdroj objekt
 
 ### <a name="to-add-necessary-references-to-mytestconsole"></a>Přidání nezbytných odkazů na MyTestConsole
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na **MyTestConsole** a v místní nabídce vyberte **Přidat odkaz** .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **MyTestConsole** a v místní nabídce vyberte **Přidat odkaz** .
 
 2. V dialogovém okně **Přidat odkaz** klikněte na kartu **Procházet** a vyberte možnost Microsoft.VisualStudio.DebuggerVisualizers.DLL.
 
@@ -201,7 +202,7 @@ V kódu na straně ladicího programu určíte typ pro vizualizaci (zdroj objekt
 
 ### <a name="to-add-code-to-mytestconsole"></a>Přidání kódu do MyTestConsole
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na program.cs a v místní nabídce vyberte **Přejmenovat** .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na program.cs a v místní nabídce vyberte **Přejmenovat** .
 
 2. Upravte název z Program.cs na smysluplnější, například TestConsole.cs.
 
@@ -225,7 +226,7 @@ V kódu na straně ladicího programu určíte typ pro vizualizaci (zdroj objekt
 
 ### <a name="to-test-the-visualizer"></a>Otestování Vizualizér
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **MyTestConsole** a v místní nabídce vyberte **nastavit jako spouštěný projekt** .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **MyTestConsole** a v místní nabídce vyberte **nastavit jako spouštěný projekt** .
 
 2. V nabídce **ladit** klikněte na tlačítko **Spustit**.
 
@@ -259,7 +260,7 @@ Nejprve je třeba vytvořit nový projekt knihovny tříd.
 
 ### <a name="to-add-a-visualizer-item"></a>Přidání položky Vizualizátoru
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na MySecondVisualizer.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na MySecondVisualizer.
 
 2. V místní nabídce vyberte možnost **Přidat** a poté klikněte na položku **Nová položka**.
 
@@ -274,6 +275,6 @@ Nejprve je třeba vytvořit nový projekt knihovny tříd.
 
 ## <a name="see-also"></a>Viz také
 
-- [Architektura vizualizéru](../debugger/visualizer-architecture.md)
+- [Architektura Vizualizátoru](../debugger/visualizer-architecture.md)
 - [Postupy: instalace Vizualizátoru](../debugger/how-to-install-a-visualizer.md)
 - [Vytváření vlastních vizualizérů](../debugger/create-custom-visualizers-of-data.md)

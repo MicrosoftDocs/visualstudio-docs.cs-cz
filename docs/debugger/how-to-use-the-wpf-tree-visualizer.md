@@ -1,5 +1,7 @@
 ---
 title: Použití Vizualizátoru stromu WPF | Microsoft Docs
+description: Použijte Vizualizér Windows Presentation Foundation (WPF) k prozkoumání vizuálního stromu objektu WPF a k zobrazení vlastností závislosti WPF v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,17 +18,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ebe49365d5854a363b49ba0bde6431ae2121ebd
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 83b11ec1c091d2a63ed89cd3089bc3b507b0db8f
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851057"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149024"
 ---
 # <a name="how-to-use-the-wpf-tree-visualizer"></a>Postupy: Použití vizualizéru stromu WPF
 Můžete použít Vizualizér stromu WPF k prozkoumání vizuálního stromu objektu WPF a k zobrazení vlastností závislosti WPF pro objekty, které jsou obsaženy v tomto stromu. Další informace o vizuálních stromech naleznete [v tématu stromy v](/dotnet/framework/wpf/advanced/trees-in-wpf)subsystému WPF. Další informace o vlastnostech závislosti najdete v tématu [Přehled vlastností závislosti](/dotnet/framework/wpf/advanced/dependency-properties-overview).
 
- Když otevřete Vizualizér stromu WPF, zobrazí se dvě podokna: **vizuální strom** na levé straně a **vlastnosti** _název_**:**_typ_ na pravé straně. V podokně **vizuálního stromu** vyberte libovolný objekt a **vlastnosti** _název_**:** podokno_typ_ je automaticky aktualizováno, aby se zobrazily vlastnosti daného objektu.
+ Když otevřete Vizualizér stromu WPF, zobrazí se dvě podokna: **vizuální strom** na levé straně a **vlastnosti** _název_**:**_typ_ na pravé straně. V podokně **vizuálního stromu** vyberte libovolný objekt a **vlastnosti** _název_**:** podokno _typ_ je automaticky aktualizováno, aby se zobrazily vlastnosti daného objektu.
 
  > [!NOTE]
  > Můžete také použít [živý vizuální strom a živý Průzkumník vlastností](../xaml-tools/inspect-xaml-properties-while-debugging.md) k prohlédnutí vizuálního stromu objektů WPF. Vizualizér stromu WPF je starší funkce a není v aktivním vývoji.

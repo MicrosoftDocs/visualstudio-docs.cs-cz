@@ -1,5 +1,7 @@
 ---
 title: Hledání vlákna v zobrazení vláken | Microsoft Docs
+description: Vyhledejte konkrétní vlákno v zobrazení vláken nástroje Spy + + pomocí jeho ID vlákna nebo řetězce modulu jako kritéria vyhledávání při ladění v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99a2b4fe491939b6cf4224c211dcd03ec609be27
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 92864c9d3c66a7547ef52a2694f6307d57a43304
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851980"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148530"
 ---
 # <a name="how-to-search-for-a-thread-in-threads-view"></a>Postupy: Hledání vlákna v zobrazení vláken
 Konkrétní vlákno můžete vyhledat v zobrazení vlákna pomocí jeho ID vlákna nebo řetězce modulu jako kritéria vyhledávání. Můžete také zadat počáteční směr hledání. Pole v dialogovém okně zobrazí atributy vybraného vlákna ve stromu vláken.

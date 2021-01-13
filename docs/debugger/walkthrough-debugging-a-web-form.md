@@ -1,6 +1,7 @@
 ---
 title: Ladění webového formuláře | Microsoft Docs
-ms.custom: seodec18
+description: Postupujte podle pokynů a podívejte se, jak ladit webovou aplikaci v ASP.NET (webový formulář), včetně postupu nastavení zarážek a kontrola proměnných.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa2632e7d9b8103b5a89c49e5f44464a658fadc3
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 007a63ea16ab044292f451d8d9c427f4358e3f13
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599490"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148218"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>Návod: Ladění webového formuláře
 Kroky v tomto návodu ukazují, jak ladit [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webovou aplikaci, označovanou také jako webový formulář. Ukazuje, jak spustit a zastavit provádění, nastavit zarážky a kontrolovat proměnné v okně **kukátko** .
@@ -42,7 +43,7 @@ Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch p
 
 1. Pokud už máte řešení otevřené, zavřete ho.
 
-2. V nabídce **soubor** klikněte na příkaz **Nový**a pak klikněte na **Web**.
+2. V nabídce **soubor** klikněte na příkaz **Nový** a pak klikněte na **Web**.
 
     Zobrazí se dialogové okno **Nový web** .
 
@@ -62,9 +63,9 @@ Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch p
 
     Otevře se **panel nástrojů** .
 
-9. V sadě **nástrojů**klikněte na ovládací prvek **tlačítko** a přidejte ho na hlavní návrhovou plochu default. aspx.
+9. V sadě **nástrojů** klikněte na ovládací prvek **tlačítko** a přidejte ho na hlavní návrhovou plochu default. aspx.
 
-10. V sadě **nástrojů**klikněte na ovládací prvek **TextBox** a přetáhněte ovládací prvek na hlavní návrhovou plochu default. aspx.
+10. V sadě **nástrojů** klikněte na ovládací prvek **TextBox** a přetáhněte ovládací prvek na hlavní návrhovou plochu default. aspx.
 
 11. Dvakrát klikněte na ovládací prvek tlačítko, který jste zrušili.
 
@@ -110,7 +111,7 @@ Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch p
 
     V nástroji [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vás přesměruje na řádek, kde jste nastavili zarážku na znakové stránce Default.aspx.cs nebo default. aspx. vb. Tento řádek by měl být zvýrazněn žlutou barvou. Nyní lze zobrazit proměnné aplikace a řídit její spuštění. Vaše aplikace zastaví provádění a čeká na příkaz od vás.
 
-5. V nabídce **ladění** klikněte na **Windows**, pak na **sledování**a potom na **Watch1**.
+5. V nabídce **ladění** klikněte na **Windows**, pak na **sledování** a potom na **Watch1**.
 
 6. V okně **kukátko** zadejte **text TextBox1. text**.
 

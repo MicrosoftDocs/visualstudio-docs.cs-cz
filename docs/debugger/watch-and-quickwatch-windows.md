@@ -1,6 +1,7 @@
 ---
 title: Nastavení sledování proměnných | Microsoft Docs
-ms.custom: seodec18
+description: Když ladíte, přečtěte si téma proměnné a výrazy v Watch a QuickWatch. Watch může zobrazit několik proměnných, QuickWatch pouze jeden a pouze v případě, že je v přerušení.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/11/2018
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d7e2a05fe84b023a60ef75f0cb262a08fc02587a
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: d13ee6163ebe8cf0f706cbe95e7451c2ebc7c411
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727421"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149479"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>Sledujte proměnné pomocí oken kukátka a QuickWatch
 

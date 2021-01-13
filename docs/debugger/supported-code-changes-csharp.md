@@ -1,5 +1,7 @@
 ---
 title: Podporované změny kódu (C# a Visual Basic) | Microsoft Docs
+description: Informace o tom, jaké změny kódu jsou podporovány při použití funkce upravit a pokračovat při ladění projektu v jazyce C# nebo Visual Basic v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 10/11/2018
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c480fad064cad602ea3fd19153d53f0276815d30
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 267d9097ebe53b4074bed6c5caf4077006c946eb
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509416"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149206"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>Podporované změny kódu (C# a Visual Basic)
 Upravit a pokračovat zpracovává většinu typů změn kódu v rámci těla metody. Většina změn mimo tělo metody a několik změn v rámci těla metod nelze použít během ladění. Chcete-li použít tyto nepodporované změny, je nutné zastavit ladění a restartovat s novou verzí kódu.
@@ -56,7 +58,7 @@ V následující tabulce jsou uvedeny změny, které mohou být provedeny v C# a
 |Jazykové prvky/funkce|Nepodporovaná operace Edit|
 |-|-|
 |Všechny elementy kódu|Měníte|
-|Jmenné prostory|Přidat|
+|Obory názvů|Přidání|
 |Obory názvů, typy, členy|Odstranit|
 |Obecné typy|Přidat nebo upravit|
 |Rozhraní|Modify|
@@ -74,7 +76,7 @@ V následující tabulce jsou uvedeny změny, které mohou být provedeny v C# a
 |Operátory nebo indexery|Úprava parametru typu, základního typu, typu delegáta nebo návratového typu |
 |catch – bloky|Upravit, když obsahuje aktivní příkaz|
 |bloky try-catch-finally|Upravit, když obsahuje aktivní příkaz|
-|using – příkazy|Přidat|
+|using – příkazy|Přidání|
 |asynchronní metody/výrazy lambda|Úprava asynchronní metody nebo výrazu lambda v projektu cílících na .NET Framework 4 a nižší (viz [Podrobnosti](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md))|
 |Iterátory|Úprava iterátoru v projektu cílící na .NET Framework 4 a nižší (viz [Podrobnosti](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md))|
 

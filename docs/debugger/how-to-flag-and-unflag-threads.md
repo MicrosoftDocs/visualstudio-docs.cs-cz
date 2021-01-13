@@ -1,5 +1,7 @@
 ---
 title: Označit a zrušit označení vláken | Microsoft Docs
+description: Naučte se označit nebo zrušit označení vláken v aplikaci Visual Studio. Označit nebo zrušit označení vlákna, několik vláken nebo všech vláken. Označení pouze kódu nebo těch, které jsou přidruženy k modulu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,23 +17,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e381faac8a8e4ae6f45f1fde6e2e20dd9f127a97
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: e9b7ce5db863987d530fe9e68d026a94474fc13c
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852058"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149492"
 ---
 # <a name="how-to-flag-and-unflag-threads-c-visual-basic-c"></a>Postupy: označení a odoznačení vláken vlákna (C#, Visual Basic, C++)
 
-Můžete označit vlákno, které chcete poskytnout zvláštní pozornost, a to tak, že ho označíte ikonou v podoknech **vlákna**, **paralelní zásobníky** (zobrazení vlákna), **paralelní kukátko**a **vlákna GPU** . Tato ikona vám může pomáhat a jiným odlišit vlákna označená příznakem z jiných vláken.
+Můžete označit vlákno, které chcete poskytnout zvláštní pozornost, a to tak, že ho označíte ikonou v podoknech **vlákna**, **paralelní zásobníky** (zobrazení vlákna), **paralelní kukátko** a **vlákna GPU** . Tato ikona vám může pomáhat a jiným odlišit vlákna označená příznakem z jiných vláken.
 
 Vlákna označená příznakem také dostanou zvláštní zpracování v seznamu **vláken** na panelu nástrojů **umístění ladění** a v ostatních oknech s více vlákny pro ladění. Můžete zobrazit všechna vlákna nebo pouze vlákna označená příznakem v seznamu **vláken** nebo v jiných oknech.
 
 ### <a name="to-flag-or-unflag-a-thread"></a>Označení nebo odoznačení vlákna vláknem
 
 - V okně **vlákna** nebo **paralelní sledování** Najděte vlákno, které vás zajímá, a kliknutím na ikonu příznak vyberte nebo zrušte zaškrtnutí tohoto příznaku.
-- V okně **paralelní zásobníky** klikněte pravým tlačítkem na vlákno nebo skupinu vláken a vyberte **příznak \<thread> /** nebo zrušit **příznak/ \<thread> **.
+- V okně **paralelní zásobníky** klikněte pravým tlačítkem na vlákno nebo skupinu vláken a vyberte **příznak \<thread> /** nebo zrušit **příznak/ \<thread>**.
 
 ### <a name="to-unflag-all-threads"></a>Chcete-li zrušit označení všech vláken
 

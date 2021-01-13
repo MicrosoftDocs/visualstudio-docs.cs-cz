@@ -1,5 +1,7 @@
 ---
 title: Protokolovat informace pomocí trasováním | Microsoft Docs
+description: Nastavte trasováním na protokolování informací do výstupu bez úprav nebo zastavení kódu. V nastavení zarážky stačí zadat výstupní řetězec pod zaškrtávacím políčkem akce.
+ms.custom: SEO-VS-2020
 ms.date: 10/28/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 33b471122318038ab66bc4f73e437209c6da2ffe
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 144f83b1be0c3a21aa5cb244f8498f61e3ef380a
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "89561335"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150090"
 ---
 # <a name="log-info-to-the-output-window-using-tracepoints-in-visual-studio"></a>Protokolování informací do okna výstup pomocí trasováním v aplikaci Visual Studio
 
@@ -53,7 +55,7 @@ Trasováním můžete nastavit zadáním výstupního řetězce v okně **Nastav
 
    ![Políčko zaškrtnuté podmínky](../debugger/media/checkedconditionsbox.png "Políčko zaškrtnuté podmínky")
 
-   Máte tři možnosti pro podmínky: **podmíněný výraz** , **Filtr** a **Počet volání** .
+   Máte tři možnosti pro podmínky: **podmíněný výraz**, **Filtr** a **Počet volání**.
 
 ## <a name="actions-menu"></a>Nabídka akce
 
@@ -63,7 +65,7 @@ Pokud například chcete zobrazit hodnotu `counter` proměnné v konzole výstup
 
 ![Výstupní zpráva čítače](../debugger/media/counteroutputmessage.png "Výstupní zpráva čítače")
 
-Pokud kliknete na **Zavřít** a pak na ladit program ( **F5** ), zobrazí se následující výstup v okně výstup.
+Pokud kliknete na **Zavřít** a pak na ladit program (**F5**), zobrazí se následující výstup v okně výstup.
 
 ![Zpráva akcí v okno Výstup](../debugger/media/actionsmessageinoutputwindow.png "Zpráva akcí v okno Výstup")
 

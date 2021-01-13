@@ -1,6 +1,7 @@
 ---
 title: Vrátit se zpět k funkci, která se nazývá MFC, pokud je zastavená | Microsoft Docs
-ms.custom: seodec18
+description: Přečtěte si, jak se vrátit k funkci, která se nazývá MFC, pokud je spuštění zastaveno v ladicím programu sady Visual Studio.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -24,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b05e703958fe7a1c630b542522f1f33b0fe5981
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 751688b72a7603e76733906775c594cd28e78c28
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600282"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148946"
 ---
 # <a name="how-to-get-back-to-the-function-that-called-mfc-if-halted"></a>Postupy: Přechod zpět na funkci, která volala MFC při zastavení.
 

@@ -1,5 +1,7 @@
 ---
 title: Karta prostor, dialogové okno vlastností procesu | Microsoft Docs
+description: Naučte se zobrazovat dialogové okno vlastností procesu v nástroji Spy + + při ladění. Zkontrolujte nastavení, která jsou k dispozici na kartě prostor.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,19 +12,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 563d54c39b4d9ce3bb2d76a9e531161c2c4ee5b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe168f34baf65b00eab59e94afb30e07dfe89b50
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929812"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149076"
 ---
 # <a name="space-tab-process-properties-dialog-box"></a>Karta Prostor, dialogové okno vlastností procesu
 Kartu **prostor** použijte k prohlédnutí adresního prostoru procesu. Chcete-li zobrazit [dialogové okno Vlastnosti procesu](../debugger/process-properties-dialog-box.md), přesuňte fokus do okna [zobrazení procesů](../debugger/processes-view.md) . Ve stromové struktuře vyberte libovolný uzel procesu a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .
 
  Na kartě **prostor** jsou k dispozici následující nastavení:
 
-|Entry|Popis|
+|Entry|Description|
 |-----------|-----------------|
 |**Zobrazit pro prostor označený jako**|Pomocí tohoto seznamu můžete vybrat kategorii prostoru (obrázek, mapovaný, rezervovaný nebo nepřiřazený).|
 |**Spustitelné bajty**|Pro vybranou kategorii součet veškerého adresního prostoru, který tento proces používá. Spustitelná paměť je paměť, kterou můžou spouštět programy, ale nemusí se číst ani zapisovat.|

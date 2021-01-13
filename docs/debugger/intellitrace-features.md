@@ -1,5 +1,7 @@
 ---
 title: Funkce IntelliTrace | Microsoft Docs
+description: Přečtěte si o funkcích IntelliTrace v aplikaci Visual Studio. Pomocí IntelliTrace zaznamenejte události a volání metod ve vaší aplikaci.
+ms.custom: SEO-VS-2020
 ms.date: 09/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ac7ca0e59a479aff3386486d2ceaf061038db68
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2f5d4603e052cd5968055304290559b8a8d5a56a
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536575"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148634"
 ---
 # <a name="intellitrace-features-c-visual-basic-c"></a>Funkce IntelliTrace (C#, Visual Basic, C++)
 
@@ -48,13 +50,13 @@ Pokud ladíte, zastavte ladění. V **nabídce nástroje > možnosti > události
 
 ## <a name="collect-snapshots-c-visual-basic-c"></a><a name="Snapshots"></a> Shromáždit snímky (C#, Visual Basic, C++)
 
-Tato možnost není ve výchozím nastavení povolená, ale IntelliTrace může zachytit snímky vaší aplikace při každé události zarážky a kroku ladicího programu a tyto snímky můžete zobrazit v historické relaci ladění. Snímek vám poskytne přehled o celém stavu aplikace. Pokud chcete povolit zachytávání snímků, v nabídce **nástroje > možnosti > IntelliTrace > obecné**a vyberte **snímky IntelliTrace (spravované a nativní)**. Další informace najdete v tématu [Kontrola předchozích stavů aplikace pomocí IntelliTrace](../debugger/view-historical-application-state.md).
+Tato možnost není ve výchozím nastavení povolená, ale IntelliTrace může zachytit snímky vaší aplikace při každé události zarážky a kroku ladicího programu a tyto snímky můžete zobrazit v historické relaci ladění. Snímek vám poskytne přehled o celém stavu aplikace. Pokud chcete povolit zachytávání snímků, v nabídce **nástroje > možnosti > IntelliTrace > obecné** a vyberte **snímky IntelliTrace (spravované a nativní)**. Další informace najdete v tématu [Kontrola předchozích stavů aplikace pomocí IntelliTrace](../debugger/view-historical-application-state.md).
 
 Snímky jsou k dispozici v Visual Studio Enterprise 2017 verze 15,5 a vyšší a vyžaduje aktualizaci Windows 10 pro výročí nebo novější.  Pro aplikace .NET Core a ASP.NET Core se vyžaduje Visual Studio Enterprise 2017 verze 15,7. Pro nativní aplikace cílené na Windows se vyžaduje Visual Studio Enterprise 2017 verze 15,9 Preview 2.
 
 ## <a name="collect-intellitrace-events-and-call-information-c-visual-basic"></a><a name="GoingFurther"></a> Shromažďovat události IntelliTrace a informace o volání (C#, Visual Basic)
 
-Tato možnost není ve výchozím nastavení povolená, ale IntelliTrace může zaznamenat volání metod spolu s událostmi. Chcete-li povolit shromažďování volání metody, přečtěte si **nástroje > možnosti > IntelliTrace > obecné**a vyberte **události IntelliTrace a informace o volání (pouze spravované)**.
+Tato možnost není ve výchozím nastavení povolená, ale IntelliTrace může zaznamenat volání metod spolu s událostmi. Chcete-li povolit shromažďování volání metody, přečtěte si **nástroje > možnosti > IntelliTrace > obecné** a vyberte **události IntelliTrace a informace o volání (pouze spravované)**.
 
 Informace o voláních nejsou aktuálně k dispozici pro aplikace .NET Core a ASP.NET Core.
 
@@ -67,7 +69,7 @@ To vám umožní zobrazit historii zásobníku volání a krokovat zpět a vpře
 
 ### <a name="use-the-navigation-gutter"></a>Použití navigačních hřbetů
 
-Můžete použít navigační hřbet, který se zobrazí nalevo od okna Code (kód). Pokud se navigační hřbet nezobrazuje, přejděte do části **nástroje > možnosti > IntelliTrace > Upřesnit**a **v režimu ladění vyberte Zobrazit navigační**okraj.
+Můžete použít navigační hřbet, který se zobrazí nalevo od okna Code (kód). Pokud se navigační hřbet nezobrazuje, přejděte do části **nástroje > možnosti > IntelliTrace > Upřesnit** a **v režimu ladění vyberte Zobrazit navigační** okraj.
 
 Navigační hřbet umožňuje přesunout vpřed a zpět prostřednictvím volání metod a událostí v historickém režimu ladění. Další informace o historických ladění naleznete v tématu [historická ladění](../debugger/historical-debugging.md). Má několik příkazů:
 
@@ -86,7 +88,7 @@ Metody můžete hledat pouze v případě, že byly povoleny informace o volán�
 
 ### <a name="control-how-much-call-information-intellitrace-records"></a><a name="ControlCallData"></a> Určit, kolik informací o volání IntelliTrace záznamy
 
-Ve výchozím nastavení IntelliTrace zaznamenává informace pro všechny moduly, které vaše řešení používá. Můžete nastavit IntelliTrace na záznam informací o volání pouze pro moduly, které vás zajímají. V části **nástroje > možnosti > IntelliTrace > moduly**můžete určit moduly, které mají být zahrnuty, nebo moduly, které mají být vyloučeny z IntelliTrace. IntelliTrace shromáždí pouze události, které pocházejí z určených modulů, a volání metody, k nimž došlo v rámci modulů, které vás zajímají.
+Ve výchozím nastavení IntelliTrace zaznamenává informace pro všechny moduly, které vaše řešení používá. Můžete nastavit IntelliTrace na záznam informací o volání pouze pro moduly, které vás zajímají. V části **nástroje > možnosti > IntelliTrace > moduly** můžete určit moduly, které mají být zahrnuty, nebo moduly, které mají být vyloučeny z IntelliTrace. IntelliTrace shromáždí pouze události, které pocházejí z určených modulů, a volání metody, k nimž došlo v rámci modulů, které vás zajímají.
 
 Chcete-li přidat více modulů, použijte zástupný znak * na začátku nebo konci řetězce. V případě názvů modulů použijte názvy souborů, nikoli názvy sestavení. Není možné použít cesty k souborům.
 

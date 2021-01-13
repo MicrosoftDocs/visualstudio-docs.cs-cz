@@ -1,5 +1,7 @@
 ---
 title: Představení nástroje Spy + + | Microsoft Docs
+description: Přečtěte si o ladicím nástroji Spy + +. Zobrazení grafického stromu vztahů systémových objektů. Získá vlastnosti pro vybraná okna, vlákna, procesy nebo zprávy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d04b2e9e04e1f2b952baadbdf0cca32cc3b301b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb8debef874dd32f52994d0edd4a27d81b340834
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731821"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148790"
 ---
 # <a name="introducing-spy"></a>Představení nástroje Spy++
 Spy + + umožňuje provádět následující úlohy:

@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno při volání zarážky | Microsoft Docs
+description: Použijte, pokud je dosaženo zarážky k určení akce při přerušení. Můžete určit, že se má zpráva vytisknout, a toto spuštění bude pokračovat.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53b19f4dd0d4b0cb97bb33e4895f36c4dc8f670c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a528709769f599219a7b3df2b8157b0ee3a605b1
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72728147"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149310"
 ---
 # <a name="when-breakpoint-is-hit-dialog-box"></a>Dialogové okno Když je volána zarážka
 Pomocí tohoto dialogového okna můžete přizpůsobit akci, ke které dojde, když je dosaženo zarážky.

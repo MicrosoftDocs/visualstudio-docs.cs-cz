@@ -1,6 +1,8 @@
 ---
 title: Co je nového pro ladicí program v aplikaci Visual Studio 2017 | Microsoft Docs
 titleSuffix: ''
+description: 'Podívejte se na nové funkce v ladicím programu verze 15,5. Zahrnuté jsou: snímky vybraného kódu v produkčních aplikacích a Intellitraceý krok zpět.'
+ms.custom: SEO-VS-2020
 ms.date: 01/22/2018
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 523867a8f9aa074e9122c74deb8bcd91cddd8bee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 986ebf20cd49569bfcaf471b9bef994dfe774437
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75944220"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149401"
 ---
 # <a name="whats-new-for-the-debugger-in-visual-studio-2017"></a>Novinky v ladicím programu v aplikaci Visual Studio 2017
 

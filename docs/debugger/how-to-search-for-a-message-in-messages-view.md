@@ -1,5 +1,7 @@
 ---
 title: Hledání zprávy v zobrazení zprávy | Microsoft Docs
+description: Vyhledejte konkrétní zprávu v zobrazení zprávy nástroje Spy + + pomocí jejího popisovače, typu nebo ID zprávy jako kritéria vyhledávání při ladění v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c4b597870d7a87b396b4c6e828da814c49f9bfb
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: c351eacc6fc3793065bcd11eb5456eebdc1864f3
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852006"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148582"
 ---
 # <a name="how-to-search-for-a-message-in-messages-view"></a>Postupy: Hledání zprávy v zobrazení zpráv
 Konkrétní zprávu můžete v zobrazení zprávy vyhledat pomocí jejího popisovače, typu nebo ID zprávy jako kritéria vyhledávání. Kterákoli z nich, nebo kombinace, budou platná vyhledávací kritéria. Lze také zadat počáteční směr hledání. Pole v dialogovém okně jsou předem načtena s atributy aktuálně vybrané zprávy.
@@ -43,7 +45,7 @@ Konkrétní zprávu můžete v zobrazení zprávy vyhledat pomocí jejího popis
 4. Vymažte všechna pole, pro která nechcete zadávat hodnoty.
 
    > [!TIP]
-   > Pokud chcete omezit přehlednost obrazovky, vyberte možnost **Skrýt Spy** . Tato možnost zachová hlavní okno nástroje Spy + + a v horní části ostatních aplikací se zobrazí pouze dialogové okno **Najít okno** . Po kliknutí na tlačítko **OK** nebo **Zrušit**dojde k obnovení hlavního okna nástroje Spy + +, nebo když zrušíte zaškrtnutí políčka **Skrýt Spy + +** .
+   > Pokud chcete omezit přehlednost obrazovky, vyberte možnost **Skrýt Spy** . Tato možnost zachová hlavní okno nástroje Spy + + a v horní části ostatních aplikací se zobrazí pouze dialogové okno **Najít okno** . Po kliknutí na tlačítko **OK** nebo **Zrušit** dojde k obnovení hlavního okna nástroje Spy + +, nebo když zrušíte zaškrtnutí políčka **Skrýt Spy + +** .
 
 5. Pro počáteční směr hledání vyberte **nahoru** nebo **dolů** .
 
