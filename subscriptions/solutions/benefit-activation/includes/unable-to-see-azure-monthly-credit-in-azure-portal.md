@@ -10,12 +10,12 @@ user.type: subscriber
 tags: benefit, azure
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: f12da1b45520de87bfd94f5b4597d10820968a11
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 48f52f1381bb890942e6f5ed3f1772c0735b1fb8
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916254"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147511"
 ---
 ## <a name="im-unable-to-see-my-azure-monthly-credit-in-the-azure-portal"></a>V Azure Portal se mi nedá zobrazit měsíční kredit Azure.
 
@@ -29,10 +29,12 @@ K vašemu předplatnému sady Visual Studio můžete také přidružit [alternat
 
 K [Azure Portal](https://portal.azure.com/) se budete muset přihlásit pomocí e-mailu, pomocí kterého účet nastavíte. Pokud jste například svůj měsíční kredit aktivovali pomocí svého alternativního účtu, musíte se k tomuto e-mailu přihlásit k předplatnému Azure. 
 
-## <a name="azure-directories"></a>Adresáře Azure 
+## <a name="azure-directories"></a>Adresáře Azure
+ 
 V rámci vašeho předplatného Azure můžete mít více adresářů. Ujistěte se, že používáte adresář, ve kterém jste nastavili předplatné Azure. Kliknutím na ikonu účtu v pravém horním rohu Azure Portal můžete zobrazit a přepnout adresáře. 
 
-## <a name="how-to-activate"></a>Postup aktivace
+## <a name="how-to-activate-your-azure-monthly-credit"></a>Jak aktivovat měsíční kredit Azure
+
 1. Přihlášení k [portálu předplatných](https://my.visualstudio.com/benefits)  
 1. Přejděte na dlaždici jednotlivé kredity Azure pro vývoj/testování v části nástroje na stránce výhody a klikněte na odkaz aktivovat v dolní části dlaždice výhody. Pokud nemůžete najít dlaždici měsíčního kreditu Azure, použijte [stránku porovnání výhod](https://visualstudio.microsoft.com/vs/benefits/#azure?cat=visual-studio-enterprise-subscription) a ověřte, že vaše předplatné zahrnuje měsíční kredit. 
 1. Pokud nemáte existující předplatné Azure, budete požádáni o vyplnění požadovaných osobních údajů, abyste si ho vytvořili.  
@@ -42,7 +44,7 @@ V rámci vašeho předplatného Azure můžete mít více adresářů. Ujistěte
 
 Předplatná Azure vytvořená prostřednictvím zvýhodnění předplatných sady Visual Studio můžou být ovlivněná omezeními, která nejsou uvalená na placené předplatné. V některých oblastech možná nebude možné vytvářet virtuální počítače a služby Azure a určité typy služeb nemusí být k dispozici. Výchozí kvóta může být nižší než u placených předplatných. 
 
-## <a name="more-information"></a>Další informace 
+## <a name="more-information-about-azure-monthly-credits"></a>Další informace o měsíčních kreditech Azure
 
 [Přečtěte si další](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure) informace o aktivaci, nároku a dalších prostředcích podpory.  
 

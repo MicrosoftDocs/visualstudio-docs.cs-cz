@@ -10,12 +10,12 @@ user.type: subscriber
 tags: download, activate
 subscription.type: vl, cloud, retail, partner
 sap.id: 53a7a6d4-7755-352a-5a65-715d78af84bf
-ms.openlocfilehash: c862de5bc5006abc60650a26132453f260a51a89
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: e4d24412ab4e3aee22a9184d23ddbefb6ceb35fa
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916264"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147441"
 ---
 ## <a name="im-unable-to-locate-the-product-i-need-to-download"></a>Nedaří se nám najít produkt, který potřebuji stáhnout.
 
@@ -30,8 +30,8 @@ Můžete [si stáhnout rozsáhlý seznam](https://download.microsoft.com/downloa
 1. Tady budete moct zobrazit seznam oblíbených položek ke stažení nebo vyhledat konkrétní produkt. Poznámka: Pokud máte ke stejné přihlašovací adrese více než jedno předplatné, zobrazí se soubory ke stažení zahrnuté v předplatném nejvyšší úrovně bez ohledu na to, jaké Předplatné si prohlížíte.
 1. Kliknutím na získat klíč zobrazíte všechny klíče, které jsou k dispozici pro produkt, který chcete stáhnout. Pak kliknutím na klíč deklarace identity vyžádejte kód Product Key, pokud ke stažení potřebujete klíč, aby bylo možné začít. 
 
-## <a name="product-keys-page"></a>Stránka kódy Product Key 
+## <a name="find-available-product-keys"></a>Najít dostupné kódy Product Key
 Můžete také navštívit stránku [kódy Product Key](https://my.visualstudio.com/productkeys)   , kde jsou všechny klíče k dispozici v agregaci. Můžete upravit sloupec poznámky pro určení, kdy a proč jste si klíč vyžádali. 
 
-## <a name="more-information"></a>Další informace 
+## <a name="more-information-about-product-keys"></a>Další informace o klíčích Product Key
 [Další informace](https://docs.microsoft.com/visualstudio/subscriptions/find-keys) najdete v tématu Vyhledání a nárokování kódů Product Key a stažení.  

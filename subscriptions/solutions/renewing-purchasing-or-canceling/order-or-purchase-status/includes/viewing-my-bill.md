@@ -10,19 +10,19 @@ user.type: subscriber
 tags: billing
 subscription.type: vl, cloud, retail, partner
 sap.id: 2db8f927-5814-835b-cc9d-daab30a7a09e
-ms.openlocfilehash: a7121ac942b074b0414c00ee791ccf37bf8320bd
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: fa95610b98d8731b486392d927452b8d42576f28
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916262"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147561"
 ---
 ## <a name="how-do-i-view-my-bill"></a>Návody se zobrazí moje vyúčtování?
 
 Vaše faktura za Azure může zahrnovat platby za služby Azure a některé typy předplatných sady Visual Studio.
 
 ## <a name="to-view-your-bill"></a>Zobrazení faktury
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).  
+1. Přihlaste se na web [Azure Portal](https://portal.azure.com).  
 2. V nabídce klikněte na okno Cost Management + fakturace a vyhledejte přehled, seznam předplatných a faktury.  
 
 ## <a name="visual-studio-subscriptions"></a>Předplatná sady Visual Studio 
@@ -34,5 +34,5 @@ Funkce limit útraty v Azure umožňuje nastavit limit útraty, kde se služby v
 
 Pokud jste odstranili limit útraty ve vašem předplatném Azure, které jsou převedené na průběžné platby, využijte ceny Enterprise pro vývoj/testování dostupné jenom pro předplatitele sady Visual Studio nebo chcete využívat služby mimo ty, které se používají pro vývoj a testování, na které se vztahuje měsíční kredit, bude se vám účtovat měsíčně za služby.  
 
-## <a name="more-information"></a>Další informace 
+## <a name="more-information-about-billing"></a>Další informace o fakturaci
 Získejte odpovědi na běžné otázky týkající se vašeho využití a poplatků. Přejděte na [Časté otázky](https://docs.microsoft.com/azure/cost-management-billing/manage/getting-started)týkající se fakturace. 

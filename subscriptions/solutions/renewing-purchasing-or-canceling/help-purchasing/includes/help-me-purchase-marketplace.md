@@ -10,18 +10,18 @@ user.type: subscriber, admin
 tags: purchasing
 subscription.type: vl, cloud, retail, partner
 sap.id: c374762c-640b-8b2c-d049-bda9545e903c
-ms.openlocfilehash: 21555c11df2671a86d97d6f6c855756cd7e2d3b4
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 2cb74dda511efbed7a204ef11a163097efc2f54b
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916273"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147680"
 ---
 ## <a name="purchase-monthly-subscriptions-through-visual-studio-marketplace"></a>Nákup měsíčních předplatných prostřednictvím Visual Studio Marketplace 
 
 Pomocí měsíčních předplatných cloudu si můžete zapůjčit Visual Studio a Azure DevOps bez dlouhodobé smlouvy. Tyto odběry si můžete koupit prostřednictvím [Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions).  
 
-## <a name="visual-studio-marketplace"></a>Visual Studio Marketplace 
+## <a name="billing-in-the-visual-studio-marketplace"></a>Fakturace v Visual Studio Marketplace 
 
 Vyúčtování bude probíhat prostřednictvím vašeho předplatného Microsoft Azure. Pokud ještě nemáte předplatné Azure, můžete si ho zřídit zdarma – a to i v rámci prvního nákupu.  
 
@@ -30,7 +30,7 @@ Vyúčtování bude probíhat prostřednictvím vašeho předplatného Microsoft
 
 [Přečtěte si další](https://docs.microsoft.com/visualstudio/subscriptions/vscloud-billing-faq) informace o měsíčních předplatných sady Visual Studio pro Azure. 
 
-## <a name="more-information"></a>Další informace 
+## <a name="more-information-about-subscription-benefits"></a>Další informace o výhodách předplatného
 
 [Porovnejte si výhody a ceny](https://visualstudio.microsoft.com/vs/pricing/) jednotlivých předplatných sady Visual Studio. 
 

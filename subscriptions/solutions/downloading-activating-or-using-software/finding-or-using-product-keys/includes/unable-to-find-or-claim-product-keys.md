@@ -10,23 +10,23 @@ user.type: subscriber
 tags: download, activate, product-key
 subscription.type: vl, cloud, retail, partner
 sap.id: 631f9455-a027-34d0-12c8-c2b37d2c42cb
-ms.openlocfilehash: b7cff2d89fca78a61b6eeec57a3d6cf324d455b3
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 88ecaf869f7cd593876dacaa21926913e192dc14
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916301"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147515"
 ---
 ## <a name="im-unable-to-find-or-claim-a-product-key"></a>Nepovedlo se nám najít nebo vyžádat kód Product Key.
 
 Kódy Product Key, které jsou k dispozici, závisí na předplatném sady Visual Studio, které používáte.  
 
-## <a name="product-keys-page"></a>Stránka kódy Product Key 
+## <a name="view-a-list-of-available-product-keys"></a>Zobrazit seznam dostupných kódů Product Key 
 
 Stránka [kódy Product Key](https://my.visualstudio.com/productkeys)   obsahuje seznam všech klíčů, které jsou k dispozici v agregaci. Můžete upravit sloupec poznámky pro určení, kdy a proč jste si klíč vyžádali. V závislosti na produktu existují různé typy klíčů. Některé klíče, které budete potřebovat k deklaraci identity, a další budou viditelné hned. 
 
 Pokud nevidíte klíč nebo produkt, je možné, že produkt není dostupný pro vaši úroveň předplatného. Můžete [si stáhnout rozsáhlý seznam](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx) dostupných softwarových titulů pro všechny typy předplatného. Chcete-li zjistit, jaké typy jsou přiřazeny, zobrazte si předplatná na [portálu předplatných](https://my.visualstudio.com/subscriptions).  
 
-## <a name="more-information"></a>Další informace 
+## <a name="more-information-on-product-key-types"></a>Další informace o typech kódu Product Key
 
 [Přečtěte si další](https://docs.microsoft.com/visualstudio/subscriptions/find-keys) informace o typech kódů Product Key a o deklaracích Product Key.  

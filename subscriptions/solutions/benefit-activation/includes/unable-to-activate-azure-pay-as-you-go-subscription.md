@@ -10,12 +10,12 @@ user.type: subscriber
 tags: benefit, azure, dev-test
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: 25065465cee2239e9f4b5e7febafcf2a01eefc50
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 2a6e02721512d9780cd94d2d9601fe7099eac956
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916302"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147413"
 ---
 ## <a name="im-unable-to-activate-my-azure-dev--test-pay-as-you-go-subscription"></a>Nedaří se mi aktivovat předplatné Azure dev/test s průběžnými platbami podle aktuálního využití.
 
@@ -27,5 +27,6 @@ Jako předplatitelé sady Visual Studio získáte exkluzivní zlevněné hodinov
 1. Na stránce registrace Microsoft Azure máte možnost nastavit nabídku Průběžné platby dle aktuálního využití pro vývoj/testování (PAYG) nebo upgradovat na nabídku Visual Studio Enterprise. Pokud nechcete upgradovat, klikněte na pokračovat s aktuální nabídkou (Průběžné platby dle aktuálního využití pro vývoj/testování). 
 1. Přidejte způsob platby, přijměte smlouvu o předplatném a jste připraveni přejít. V budoucnu získáte přístup k předplatnému Azure na adrese [Portal.Azure.com](https://portal.azure.com/). 
 
-## <a name="more-information"></a>Další informace 
+## <a name="more-information-about-subscriptions"></a>Další informace o předplatných
+ 
 [Přečtěte si další informace o předplatných Azure pro vývoj/testování](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure-payg)s průběžnými platbami.

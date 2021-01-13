@@ -10,12 +10,12 @@ user.type: subscriber, admin
 tags: purchasing
 subscription.type: vl, cloud, retail, partner
 sap.id: c374762c-640b-8b2c-d049-bda9545e903c
-ms.openlocfilehash: b16123ef691036c027ac6046616699624e53b10a
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 90c56d7be8e4f3e687ff602619b5eda80807b030
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916272"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147669"
 ---
 ## <a name="purchase-subscriptions-through-microsoft-store"></a>Nákup předplatných prostřednictvím Microsoft Store 
 
@@ -37,7 +37,7 @@ Každé z těchto předplatných nabízí možnost provést počáteční nákup
 1. Klikněte na Stáhnout nové a přidejte ho do košíku. Poznámka: v některých případech bude ve výchozím nastavení zobrazená cena za obnovení, nezapomeňte si prosím koupit nové předplatné. Store neověřuje, jestli máte aktuální předplatné, a přitom zakoupíte cenu obnovení. Obnovení nebudete moct aktivovat bez aktuálního odpovídajícího předplatného.
 1. Mrkni se. Na stránce potvrzení budete mít kód Product Key, který budete muset použít k aktivaci předplatného. Viz níže uvedené pokyny. 
 
-## <a name="how-to-activate"></a>Postup aktivace  
+## <a name="how-to-activate-your-subscription"></a>Jak aktivovat předplatné 
 
 Po zakoupení předplatného sady Visual Studio prostřednictvím Microsoft Store můžete zahájit proces aktivace na stránce potvrzení platby nebo e-mailu s potvrzením, který jste obdrželi po nákupu. 
 
@@ -47,7 +47,7 @@ Po zakoupení předplatného sady Visual Studio prostřednictvím Microsoft Stor
 
 Předplatné by teď mělo být zobrazené na [stránce Předplatná](https://my.visualstudio.com/subscriptions) a měli byste mít přístup ke všem výhodám předplatného. 
 
-## <a name="more-information"></a>Další informace 
+## <a name="compare-subscription-benefits"></a>Porovnání výhod předplatného
 
 [Porovnejte si výhody a ceny](https://visualstudio.microsoft.com/vs/pricing/) jednotlivých předplatných sady Visual Studio. 
 

@@ -10,21 +10,21 @@ user.type: subscriber
 tags: download, activate
 subscription.type: vl, cloud, retail, partner
 sap.id: 53a7a6d4-7755-352a-5a65-715d78af84bf
-ms.openlocfilehash: e005b1ad616ed125f0df8ea09d9a41cc0b6721d0
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 81c9013c59ffa8fc503e71202941b044f90b139a
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916293"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147677"
 ---
 ## <a name="im-unable-to-download-or-activate-software-excluding-visual-studio-family"></a>Nedaří se mi stáhnout ani aktivovat software (kromě řady Visual Studio)
 
 Software ke stažení, který je k dispozici, závisí na předplatném sady Visual Studio, které používáte. Soubory ke stažení a kódy Product Key můžete najít několika různými způsoby.  
 
-## <a name="excel-list-of-available-software"></a>Seznam dostupného softwaru v Excelu 
+## <a name="download-a-list-of-available-software"></a>Stáhnout seznam dostupného softwaru 
 Můžete [si stáhnout rozsáhlý seznam](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx)   dostupných softwarových titulů pro všechny typy předplatného. Chcete-li zjistit, jaké typy jsou přiřazeny, zobrazte si předplatná na [portálu předplatných](https://my.visualstudio.com/subscriptions).  
 
-## <a name="find-software-downloads"></a>Najít software ke stažení 
+## <a name="how-to-find-software-downloads"></a>Postup při hledání softwaru ke stažení 
 1. Přihlaste se na [portál předplatných](https://my.visualstudio.com/benefits).  
 1. Přejít na [stránku Doporučené stažené soubory](https://my.visualstudio.com/downloads/featured).  
 1. Tady budete moct zobrazit seznam oblíbených položek ke stažení nebo vyhledat konkrétní produkt. Poznámka: Pokud máte ke stejné přihlašovací adrese více než jedno předplatné, zobrazí se soubory ke stažení zahrnuté v předplatném nejvyšší úrovně bez ohledu na to, jaké Předplatné si prohlížíte.  
@@ -33,5 +33,5 @@ Můžete [si stáhnout rozsáhlý seznam](https://download.microsoft.com/downloa
 ## <a name="product-keys-page"></a>Stránka kódy Product Key 
 Můžete také navštívit stránku [kódy Product Key](https://my.visualstudio.com/productkeys)   , kde jsou všechny klíče k dispozici v agregaci. Můžete upravit sloupec poznámky pro určení, kdy a proč jste si klíč vyžádali. 
 
-## <a name="more-information"></a>Další informace 
+## <a name="more-information-about-downloads"></a>Další informace o souborech ke stažení 
 [Další informace](https://docs.microsoft.com/visualstudio/subscriptions/find-keys) najdete v tématu Vyhledání a nárokování kódů Product Key a stažení.  

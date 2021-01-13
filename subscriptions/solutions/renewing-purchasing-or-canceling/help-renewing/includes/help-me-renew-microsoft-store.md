@@ -10,12 +10,12 @@ user.type: subscriber
 tags: renewing
 subscription.type: retail
 sap.id: b324c31f-5d44-4cc2-537a-9c354bc5fbfc
-ms.openlocfilehash: c888f89c7fa6a02a18539493e2fda5afc5298712
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: f518f4458181d39a140ee5652b08ea861f2130ee
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916270"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147533"
 ---
 ## <a name="renewing-subscriptions-through-microsoft-store"></a>Obnovování předplatných prostřednictvím Microsoft Store 
 
@@ -23,7 +23,7 @@ Vaše předplatné by se mělo prodloužit před datem vypršení platnosti, aby
 
 Pokud vašemu předplatnému nevypršela platnost, najdete datum vypršení platnosti zobrazením předplatných na [portálu předplatných](https://my.visualstudio.com/subscriptions). 
 
-## <a name="subscriptions-available"></a>Dostupná předplatná 
+## <a name="subscriptions-available-for-renewal"></a>Odběry k dispozici pro obnovení
 
 K dispozici jsou předplatná sady Visual Studio pro obnovení prostřednictvím Microsoft Store zahrnují: 
 
