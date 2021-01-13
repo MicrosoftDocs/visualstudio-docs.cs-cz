@@ -1,5 +1,7 @@
 ---
 title: Použít úpravy a pokračování (C#) | Microsoft Docs
+description: Pomocí příkazu Upravit a pokračovat můžete provést a použít změny v kódu v režimu přerušení během ladění bez zastavení a restartování ladicí relace v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 10/04/2018
 ms.topic: how-to
 dev_langs:
@@ -15,17 +17,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 18d11f552d486fd9ebd7a95323e327324de14108
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: a0f8126689c0874c984a679da9b6debcb66a3075
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851850"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150649"
 ---
 # <a name="how-to-use-edit-and-continue-c"></a>Postupy: Použití operace Upravit a pokračovat (C#)
 Pomocí příkaz Upravit a pokračovat můžete provést a použít změny kódu v režimu pozastavení během ladění, aniž by bylo nutné zastavit a znovu spustit ladicí relaci.
 
-Příkaz Upravit a pokračovat pro jazyk C# proběhne automaticky, když provedete změny kódu v režimu pozastavení, potom budete pokračovat v ladění pomocí příkazu **pokračovat**, **Krokovat**nebo **nastavit další příkaz**nebo vyhodnotit funkci v okně ladicího programu.
+Příkaz Upravit a pokračovat pro jazyk C# proběhne automaticky, když provedete změny kódu v režimu pozastavení, potom budete pokračovat v ladění pomocí příkazu **pokračovat**, **Krokovat** nebo **nastavit další příkaz** nebo vyhodnotit funkci v okně ladicího programu.
 
 Další informace naleznete v tématu [Upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-csharp.md).
 
@@ -36,7 +38,7 @@ Další informace naleznete v tématu [Upravit a pokračovat (Visual C#)](../deb
 
 1. Pokud se nacházíte v relaci ladění, zastavte ladění (**ladění**  >  **zastaví ladění** nebo **SHIFT** + **F5**).
 
-1. V **Tools**  >  **možnostech** nástrojů (nebo **Debug**  >  **Možnosti**ladění) > **Debugging**  >  **Obecné**ladění zaškrtněte nebo zrušte zaškrtnutí políčka **Povolit úpravy a pokračování** .
+1. V   >  **možnostech** nástrojů (nebo   >  **Možnosti** ladění) >   >  **Obecné** ladění zaškrtněte nebo zrušte zaškrtnutí políčka **Povolit úpravy a pokračování** .
 
 Nastavení se projeví při spuštění nebo opětovném spuštění relace ladění.
 
@@ -44,7 +46,7 @@ Nastavení se projeví při spuštění nebo opětovném spuštění relace lad�
 
 1. Během ladění v režimu pozastavení proveďte změnu zdrojového kódu.
 
-1. V nabídce **ladění** klikněte na možnost **pokračovat**, **Krok**, nebo **nastavit další příkaz**nebo vyhodnoťte funkci v okně ladicího programu.
+1. V nabídce **ladění** klikněte na možnost **pokračovat**, **Krok**, nebo **nastavit další příkaz** nebo vyhodnoťte funkci v okně ladicího programu.
 
    Ladění pokračuje s novým kompilovaným kódem.
 

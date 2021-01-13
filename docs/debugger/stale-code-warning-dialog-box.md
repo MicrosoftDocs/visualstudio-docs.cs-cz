@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno upozornění na starý kód | Microsoft Docs
+description: Přečtěte si o dialogovém okně upozornění na zastaralé kódy, které se zobrazí, když jste udělali změny v nativním kódu, který upravit a pokračovat nelze okamžitě použít.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dba38e5b5d9f7a2be710cad58d6f2297dd03a412
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5bb2666b3b57c8f84c81e181355f096674543445
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72729546"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150324"
 ---
 # <a name="stale-code-warning-dialog-box"></a>Dialogové okno Upozornění na starý kód
 

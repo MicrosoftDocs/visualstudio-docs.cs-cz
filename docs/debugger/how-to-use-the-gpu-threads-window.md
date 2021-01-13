@@ -1,5 +1,7 @@
 ---
 title: Zobrazení vláken GPU v ladicím programu | Microsoft Docs
+description: Použijte okno vlákna GPU k prohlédnutí a práci s vlákny, které jsou spuštěny na GPU v aplikaci, kterou ladíte v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbbb49a1017fb0bc65300f3c16050db4954e1103
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5919ac657d828e87e48b8cfb3f4f643e1187f701
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348714"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150584"
 ---
 # <a name="how-to-use-the-gpu-threads-window-c"></a>Postupy: použití okna vláken GPU (C++)
 V okně vlákna GPU můžete prozkoumat a pracovat s vlákny, které jsou spuštěny na GPU v aplikaci, kterou ladíte. Další informace o aplikacích, které běží na GPU, najdete v tématu [C++ amp Overview](/cpp/parallel/amp/cpp-amp-overview).
@@ -52,9 +54,9 @@ V okně vlákna GPU můžete prozkoumat a pracovat s vlákny, které jsou spušt
 
 ### <a name="to-display-the-gpu-threads-window"></a>Zobrazení okna vláken GPU
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **vlastnosti**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro projekt a poté zvolte možnost **vlastnosti**.
 
-2. V okně **stránky vlastností** projektu klikněte v části **Vlastnosti konfigurace**na možnost **ladění**.
+2. V okně **stránky vlastností** projektu klikněte v části **Vlastnosti konfigurace** na možnost **ladění**.
 
 3. V seznamu **Spustit ladicí program** vyberte **místní ladicí program systému Windows**. V seznamu **Typ ladicího programu** vyberte **pouze GPU**. Je nutné zvolit tento ladicí program pro přerušení u zarážek v kódu, který běží na GPU.
 
@@ -80,7 +82,7 @@ V okně vlákna GPU můžete prozkoumat a pracovat s vlákny, které jsou spušt
 
 ### <a name="to-display-or-hide-a-column"></a>Zobrazení nebo skrytí sloupce
 
-- Otevřete místní nabídku okna vlákna GPU, zvolte **sloupce**a potom zvolte sloupec, který chcete zobrazit nebo skrýt.
+- Otevřete místní nabídku okna vlákna GPU, zvolte **sloupce** a potom zvolte sloupec, který chcete zobrazit nebo skrýt.
 
 ### <a name="to-sort-by-a-column"></a>Řazení podle sloupce
 
@@ -88,7 +90,7 @@ V okně vlákna GPU můžete prozkoumat a pracovat s vlákny, které jsou spušt
 
 ### <a name="to-group-threads"></a>Seskupení vláken
 
-- Otevřete místní nabídku okna vlákna GPU, zvolte možnost **Seskupit podle**a potom zvolte jeden ze zobrazených názvů sloupců. Pokud chcete zrušit seskupení vláken, vyberte **none** .
+- Otevřete místní nabídku okna vlákna GPU, zvolte možnost **Seskupit podle** a potom zvolte jeden ze zobrazených názvů sloupců. Pokud chcete zrušit seskupení vláken, vyberte **none** .
 
 ### <a name="to-freeze-or-thaw-a-row-of-threads"></a>Zablokování nebo odmrazení řádku vláken
 

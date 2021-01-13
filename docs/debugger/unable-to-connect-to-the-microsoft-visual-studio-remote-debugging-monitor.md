@@ -1,5 +1,7 @@
 ---
 title: Nepodařilo se připojit ke sledování Microsoft Visual Studio Remote Debugging Monitor.
+description: Podívejte se na význam "nelze se připojit k Microsoft Visual Studio Sledování vzdáleného ladění", možné příčiny a řešení.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 04/14/2020
 ms.topic: reference
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1863caeaa3d3b0457d89913186337fa74ad5d8de
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: dc34a5f58f8bc3c47526cc8ba8516311e94f0631
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852241"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150831"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Nepodařilo se připojit ke sledování Microsoft Visual Studio Remote Debugging Monitor.
 Tato zpráva může být způsobena tím, že sledování vzdáleného ladění není správně nastaveno na vzdáleném počítači nebo je vzdálený počítač nepřístupný z důvodu problémů se sítí nebo přítomnosti brány firewall.
@@ -153,7 +155,7 @@ Můžete to vyřešit jedním z následujících způsobů:
     > [!NOTE]
     > Pokud používáte vzdálený ladicí program na vzdáleném serveru, klikněte pravým tlačítkem na aplikaci vzdáleného ladicího programu a vyberte **Spustit jako správce** (nebo můžete spustit vzdálený ladicí program jako službu). Pokud ho nepoužíváte na vzdáleném serveru, stačí ho spustit normálně.
 
-- Vzdálený ladicí program můžete spustit z příkazového řádku s parametrem **/Allow \<username> ** : `msvsmon /allow <username@computer>` .
+- Vzdálený ladicí program můžete spustit z příkazového řádku s parametrem **/Allow \<username>** : `msvsmon /allow <username@computer>` .
 
 - Případně můžete všem uživatelům povolit vzdálené ladění. V okně vzdáleného ladicího programu přejdete do dialogového okna **Možnosti nástrojů >** . Vyberete-li možnost   **bez ověřování**, můžete zaškrtnout políčko **umožňuje všem uživatelům ladit**. Tuto možnost byste však měli vyzkoušet pouze v případě, že ostatní možnosti selžou, nebo pokud jste v privátní síti.
 

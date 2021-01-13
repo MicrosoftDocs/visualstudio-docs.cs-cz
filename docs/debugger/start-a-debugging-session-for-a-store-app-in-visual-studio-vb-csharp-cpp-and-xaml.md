@@ -1,6 +1,7 @@
 ---
 title: Spuštění ladicí relace pro aplikaci pro UWP | Microsoft Docs
-ms.custom: seodec18
+description: Spusťte ladicí relaci sady Visual Studio pro aplikaci Univerzální platforma Windows (UWP). Nakonfigurujte relaci ladění a vyberte způsob, jakým má být aplikace spuštěna.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/20/2018
 ms.topic: how-to
 f1_keywords:
@@ -35,12 +36,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: c4e025603fef11e278aee21b3c44f8d35d7cd34b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 003eaa7eefffaab9ff2b3c8c25a5ce5c0d41d43b
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536549"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150363"
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app"></a>Spuštění ladicí relace aplikace pro UPW
 
@@ -66,7 +67,7 @@ Nejjednodušší způsob, jak nakonfigurovat a spustit ladění, je ze standardn
 
 1. Z rozevíracího seznamu vedle zelené šipky vyberte cíl ladění. Můžete zvolit místní počítač, zařízení s přímým připojením, místní simulátor sady Visual Studio, vzdálené zařízení nebo emulátor.
 
-1. Chcete-li spustit ladění, vyberte zelenou šipku **Start** na panelu nástrojů nebo vyberte možnost **ladění**  >  **Spustit ladění**nebo stiskněte klávesu **F5**.
+1. Chcete-li spustit ladění, vyberte zelenou šipku **Start** na panelu nástrojů nebo vyberte možnost **ladění**  >  **Spustit ladění** nebo stiskněte klávesu **F5**.
 
    Visual Studio vytvoří a spustí aplikaci pomocí připojeného ladicího programu.
 
@@ -76,7 +77,7 @@ Ladění pokračuje, dokud není dosaženo zarážky, ručním zastavením spuš
 
 Můžete nastavit cíl ladění na panelu nástrojů sady Visual Studio nebo na stránce vlastností ladění projektu. Vyberte jednu z následujících možností:
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Místní počítač**|Ladit aplikaci v aktuální relaci na místním počítači.|
 |**Simulátor**|Ladit aplikaci v simulátoru sady Visual Studio pro aplikace pro UWP Simulátor je okno plochy, které simuluje funkce zařízení, jako jsou dotyková gesta a rotace zařízení, které na místním počítači pravděpodobně neexistují. Možnost simulátoru je dostupná jenom v případě, že je **Minimální verze cílové platformy** vaší aplikace menší než nebo se rovná operačnímu systému v místním počítači. Další informace najdete v tématu [spouštění aplikací pro UWP v simulátoru](../debugger/run-windows-store-apps-in-the-simulator.md).|
@@ -90,7 +91,7 @@ Chcete-li nakonfigurovat další možnosti ladění, použijte stránku vlastnos
 
 **Chcete-li otevřít vlastnosti ladění:**
 
-1. V **Průzkumník řešení**vyberte projekt a pak vyberte ikonu **vlastnosti** , nebo klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**.
+1. V **Průzkumník řešení** vyberte projekt a pak vyberte ikonu **vlastnosti** , nebo klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**.
 
 1. Na levé straně podokna **vlastnosti** :
 
@@ -114,12 +115,12 @@ V aplikacích C++ aplikace Visual Studio ve výchozím nastavení ladí nativní
 
 - V případě aplikací pro C++ vyberte v rozevíracím seznamu **Typ ladicího programu** na stránce vlastností **ladění** jeden z následujících ladicích programů.
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Jenom spravovaná**|Ladění spravovaného kódu ve vaší aplikaci. Kód JavaScriptu a nativní kód jazyka C/C++ jsou ignorovány.|
 |**Pouze nativní**|Ladění nativního kódu C/C++ ve vaší aplikaci. Spravovaný kód a kód jazyka JavaScript jsou ignorovány.|
 |**Smíšený (spravovaný a nativní)**|Ladění nativního kódu C/C++ a spravovaného kódu ve vaší aplikaci. JavaScriptový kód se ignoruje. V projektech C++ je tato možnost označována jako **spravovaná a nativní**.|
-|**Skript**|Ladění kódu JavaScriptu ve vaší aplikaci. Spravovaný kód a nativní kód jsou ignorovány.|
+|**Pravidel**|Ladění kódu JavaScriptu ve vaší aplikaci. Spravovaný kód a nativní kód jsou ignorovány.|
 |**Nativní se skriptem**|Ladění nativního kódu C/C++ a kódu JavaScriptu ve vaší aplikaci. Spravovaný kód se ignoruje. K dispozici v projektech C++ nebo pouze v úlohách na pozadí.|
 |**Pouze GPU (C++ AMP)**|Ladit nativní kód jazyka C++, který je spuštěn na grafické jednotce procesoru (GPU). K dispozici pouze v projektech C++.|
 
@@ -144,9 +145,9 @@ Ve výchozím nastavení je nutné zadat přihlašovací údaje systému Windows
 
 **Postup změny metody ověřování:**
 
-- Pro C# a Visual Basic aplikace na stránce vlastností **ladění** vyberte jako **cílové zařízení**možnost **vzdálený počítač** . Potom pro **režim ověřování**vyberte možnost **žádný** nebo **univerzální (nešifrovaný protokol)** .
+- Pro C# a Visual Basic aplikace na stránce vlastností **ladění** vyberte jako **cílové zařízení** možnost **vzdálený počítač** . Potom pro **režim ověřování** vyberte možnost **žádný** nebo **univerzální (nešifrovaný protokol)** .
 
-- V případě aplikací C++ vyberte na stránce vlastností **ladění** možnost **vzdálený počítač** v části **ladicí program** . Pak pro **typ ověřování**vyberte možnost **bez ověřování** nebo **univerzální (nešifrovaný protokol)** .
+- V případě aplikací C++ vyberte na stránce vlastností **ladění** možnost **vzdálený počítač** v části **ladicí program** . Pak pro **typ ověřování** vyberte možnost **bez ověřování** nebo **univerzální (nešifrovaný protokol)** .
 
 > [!CAUTION]
 > Při spuštění vzdáleného ladicího programu v režimu **žádného** nebo **univerzálního (nešifrovaného protokolu)** nedochází k zabezpečení sítě. Tyto režimy vyberte pouze v důvěryhodných sítích, u kterých jste si jisti, že nehrozí riziko škodlivého kódu nebo nepřátelských přenosů.
@@ -201,7 +202,7 @@ Chcete-li připojit ladicí program k [!INCLUDE[win8_appname_long](../debugger/i
 
 1. V dialogovém okně **Vybrat typ kódu** vyberte jednu z těchto akcí:
    - **Automaticky určit typ kódu pro ladění**, nebo
-   - Proveďte **ladění těchto typů kódu**a potom v seznamu vyberte jeden nebo více typů kódu.
+   - Proveďte **ladění těchto typů kódu** a potom v seznamu vyberte jeden nebo více typů kódu.
 
 1. V seznamu **procesy k dispozici**  vyberte proces aplikace, který se má ladit.
 
@@ -213,7 +214,7 @@ Chcete-li připojit ladicí program k [!INCLUDE[win8_appname_long](../debugger/i
 > [!NOTE]
 > Aplikace JavaScriptu běží v instanci procesu *wwahost.exe* . Pokud je spuštěná víc než jedna aplikace JavaScriptu, budete muset znát číselný identifikátor procesu (PID) *wwahost.exe* procesu vaší aplikace, abyste se k němu připojili.
 >
-> Nejjednodušší způsob, jak se připojit k aplikaci JavaScriptu, je zavřít všechny ostatní aplikace JavaScriptu. Můžete si také všimnout, že se PID spouštění *wwahost.exech * procesů ve Správci úloh systému Windows před zahájením aplikace poznamenat. Po spuštění aplikace se *wwahost.exe* PID liší od těch, které jste si poznamenali dříve.
+> Nejjednodušší způsob, jak se připojit k aplikaci JavaScriptu, je zavřít všechny ostatní aplikace JavaScriptu. Můžete si také všimnout, že se PID spouštění *wwahost.exech* procesů ve Správci úloh systému Windows před zahájením aplikace poznamenat. Po spuštění aplikace se *wwahost.exe* PID liší od těch, které jste si poznamenali dříve.
 ::: moniker-end
 
 ## <a name="see-also"></a>Viz také

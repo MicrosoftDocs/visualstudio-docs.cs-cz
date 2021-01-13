@@ -1,5 +1,7 @@
 ---
 title: Zobrazit dokumenty skriptu | Microsoft Docs
+description: Pochopte, jak zobrazit dokumenty skriptů JavaScriptu na straně serveru v aplikaci Visual Studio pomocí Průzkumník řešení.
+ms.custom: SEO-VS-2020
 ms.date: 11/05/2019
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f6d60d11737cde2beebdaeeccae8e547df78853
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 91c2e1c0438ebf8fad69f985f62a976ff6710a81
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851031"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150480"
 ---
 # <a name="how-to-view-script-documents-javascript"></a>Postupy: zobrazení dokumentů skriptu (JavaScript)
 
@@ -33,7 +35,7 @@ U některých typů aplikací, které dynamicky generují stránky, je snazší 
 
 ### <a name="to-view-a-server-side-script-document"></a>Zobrazení dokumentu skriptu na straně serveru
 
-1. V **Průzkumník řešení**otevřete **\<Website Pathname>** uzel.
+1. V **Průzkumník řešení** otevřete **\<Website Pathname>** uzel.
 
 2. Dvakrát klikněte na soubor skriptu, který chcete zobrazit.
 
@@ -41,7 +43,7 @@ U některých typů aplikací, které dynamicky generují stránky, je snazší 
 
 ### <a name="to-view-a-client-side-script-document"></a>Zobrazení dokumentu skriptu na straně klienta
 
-1. V **Průzkumník řešení**otevřete uzel **dokumenty skriptu** .
+1. V **Průzkumník řešení** otevřete uzel **dokumenty skriptu** .
 
 2. Dvakrát klikněte na soubor skriptu, který chcete zobrazit.
 

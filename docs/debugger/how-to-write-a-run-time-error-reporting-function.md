@@ -1,6 +1,7 @@
 ---
 title: Zápis funkce zasílání zpráv o chybách za běhu | Microsoft Docs
-ms.custom: seodec18
+description: Podívejte se na příklady psaní vlastních funkcí zasílání zpráv o chybách za běhu v aplikaci Visual Studio. Musí mít stejnou deklaraci jako _CrtDbgReportW a vracet hodnotu 1.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22445868cca1533cad3d7e395452a6b19e102952
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 046384e664ab4aa9c031b76a1ecd6285a9de5502
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407637"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150467"
 ---
 # <a name="how-to-write-a-run-time-error-reporting-function-c"></a>Postupy: zápis funkce zasílání zpráv o chybách Run-Time (C++)
 Vlastní funkce vytváření sestav pro běhové chyby musí mít stejnou deklaraci jako `_CrtDbgReportW` . Měl by vrátit hodnotu 1 ladicímu programu.
@@ -123,4 +124,4 @@ int main()
 ```
 
 ## <a name="see-also"></a>Viz také
-[Přizpůsobení nativních kontrol za běhu](../debugger/native-run-time-checks-customization.md)
+[Nativní Run-Time kontroluje přizpůsobení.](../debugger/native-run-time-checks-customization.md)

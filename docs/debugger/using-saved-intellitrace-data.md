@@ -1,5 +1,7 @@
 ---
 title: Používání uložených dat IntelliTrace | Microsoft Docs
+description: Použijte soubor IntelliTrace (. iTrace) pro spuštění ladění v určitém bodě provádění. Soubor obsahuje informace, které IntelliTrace zaznamenané od spuštění vaší aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb79e2f1a9ffd84f48910637deaff85329c3d91e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 42f355a0a8d04e48a2b9d14d0d62edf2cd949a87
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911330"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150935"
 ---
 # <a name="using-saved-intellitrace-data-c-visual-basic-c"></a>Použití uložených dat IntelliTrace (C#, Visual Basic, C++)
 
@@ -56,11 +58,11 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
 
 - Pokud je soubor. iTrace připojen k pracovní položce Team Foundation Server, postupujte podle těchto kroků v pracovní položce:
 
-  - V části **všechny odkazy**vyhledejte soubor. iTrace. Otevřete ji.
+  - V části **všechny odkazy** vyhledejte soubor. iTrace. Otevřete ji.
 
     \- ani
 
-  - V části **reprodukci kroky**klikněte na odkaz **IntelliTrace** .
+  - V části **reprodukci kroky** klikněte na odkaz **IntelliTrace** .
 
 > [!TIP]
 > Pokud jste soubor IntelliTrace zavřeli během ladění, můžete ho snadno otevřít. Přejděte do nabídky **ladění** , vyberte **IntelliTrace**, **Zobrazit souhrn protokolu**. V okně **IntelliTrace** můžete také zvolit **Zobrazit souhrn protokolu** . Toto je k dispozici pouze při ladění pomocí IntelliTrace.
@@ -95,7 +97,7 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
 
 ##### <a name="to-start-debugging-from-a-performance-event"></a>Spuštění ladění z události výkonu
 
-1. V části **narušení výkonu**Zkontrolujte zaznamenané události výkonu, jejich celkové časy spuštění a další informace o událostech. Pak přejděte hlouběji do metod, které byly volány během konkrétní události výkonu.
+1. V části **narušení výkonu** Zkontrolujte zaznamenané události výkonu, jejich celkové časy spuštění a další informace o událostech. Pak přejděte hlouběji do metod, které byly volány během konkrétní události výkonu.
 
      ![Zobrazit podrobnosti události výkonu](../debugger/media/ffr_itsummarypageperformance.png "FFR_ITSummaryPagePerformance")
 
@@ -126,7 +128,7 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
 
 ##### <a name="to-start-debugging-from-an-exception"></a>Spuštění ladění z výjimky
 
-1. V části **data výjimky**Zkontrolujte zaznamenané události výjimky, jejich typy, zprávy a případy, kdy došlo k výjimkám. Pokud se chcete dostat hlouběji do kódu, spusťte ladění od poslední události ve skupině výjimek.
+1. V části **data výjimky** Zkontrolujte zaznamenané události výjimky, jejich typy, zprávy a případy, kdy došlo k výjimkám. Pokud se chcete dostat hlouběji do kódu, spusťte ladění od poslední události ve skupině výjimek.
 
      ![Spustit ladění z události výjimky](../debugger/media/ffr_itsummarypageexception.png "FFR_ITSummaryPageException")
 
@@ -166,7 +168,7 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
 
     ![&#45; protokolu IntelliTrace zadejte ID korelace SharePointu.](../debugger/media/entersharepointcorrelationid.png "EnterSharePointCorrelationID")
 
-3. V části **události žádosti**prověřte události. Od začátku se události zobrazí v pořadí, v jakém byly provedeny.
+3. V části **události žádosti** prověřte události. Od začátku se události zobrazí v pořadí, v jakém byly provedeny.
 
    1. Kliknutím na událost zobrazíte její podrobnosti.
 
@@ -190,7 +192,7 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
     |**Obsah**|**Obsah**|
     |**ID kategorie**|**ID kategorie**|
     |**Kategorie**|**Kategorie**|
-    |**Oblast**|**Product** (Produkt)|
+    |**Plošný**|**Product** (Produkt)|
     |**Výstup**|**Zpráva**|
     |**ID korelace**|**ID korelace**|
 
@@ -211,9 +213,9 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
 
 ##### <a name="to-start-debugging-from-a-specific-thread"></a>Spuštění ladění z konkrétního vlákna
 
-1. V **seznamu vlákna**vyberte vlákno.
+1. V **seznamu vlákna** vyberte vlákno.
 
-2. V dolní části **seznamu vláken**vyberte možnost **Spustit ladění**. Můžete také dvakrát kliknout na vlákno.
+2. V dolní části **seznamu vláken** vyberte možnost **Spustit ladění**. Můžete také dvakrát kliknout na vlákno.
 
     Chcete-li spustit ladění z místa, kde aplikace začíná, dvakrát klikněte na **hlavní vlákno**. Viz [funkce IntelliTrace](../debugger/intellitrace-features.md).
 
@@ -222,7 +224,7 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
 |**Sloupec**|**Zobrazuje**|
 |----------------|-------------------|
 |**ID**|Číslo ID vlákna|
-|**Name**|Název vlákna. Nepojmenovaná vlákna se zobrazí jako " \<No Name> ".|
+|**Název**|Název vlákna. Nepojmenovaná vlákna se zobrazí jako " \<No Name> ".|
 |**Čas spuštění**|Čas vytvoření vlákna|
 |**Čas ukončení**|Čas, kdy bylo vlákno dokončeno|
 
@@ -230,7 +232,7 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
 
 1. Rozbalte **mřížku testovacích kroků**. Vyberte krok testu.
 
-2. V dolní části **mřížky testovacích kroků**vyberte možnost **Spustit ladění**. Můžete také dvakrát kliknout na testovací krok.
+2. V dolní části **mřížky testovacích kroků** vyberte možnost **Spustit ladění**. Můžete také dvakrát kliknout na testovací krok.
 
      Tím se spustí ladění z první platné události IntelliTrace po vybraném kroku testu.
 
@@ -266,5 +268,5 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
 #### <a name="forums"></a>Fóra
  [Visual Studio – ladicí program](https://social.msdn.microsoft.com/Forums/en-US/home)
 
-#### <a name="guidance"></a>Doprovodné materiály
+#### <a name="guidance"></a>Pokyny
  [Testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 6: testovací sada nástrojů](/previous-versions/msp-n-p/jj159337(v=pandp.10))

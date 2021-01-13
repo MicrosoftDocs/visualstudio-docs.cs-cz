@@ -1,5 +1,7 @@
 ---
 title: Podporované změny kódu (C++) | Microsoft Docs
+description: Informace o tom, jaké změny kódu jsou podporovány při použití funkce upravit a pokračovat při ladění projektu C++ v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 02/18/2020
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6c0d88dd230bee768641905e200f1f47749d77
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d693753cbcc9844ff602ab4d20e90fdc6de7dae5
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77629583"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150493"
 ---
 # <a name="supported-code-changes-c"></a>Podporované změny kódu (C++)
 Upravit a pokračovat pro projekty v jazyce C++ zpracovává většinu typů změn kódu. V průběhu provádění programu však nelze některé změny použít. Chcete-li tyto změny použít, je nutné zastavit provádění a vytvořit novou verzi kódu.
@@ -109,17 +111,17 @@ Upravit a pokračovat pro projekty v jazyce C++ zpracovává většinu typů zm�
 
 - FASTBuild sestavovací systém. FASTBuild není aktuálně kompatibilní s přepínačem Enable minimálního opětovného sestavení ( `/Gm` ), takže možnost upravit a pokračovat není podporována.
 
-- Starší verze architektury/sady nástrojů VC. Pomocí sady nástrojů VC 140 podporuje výchozí ladicí program úpravy a pokračování v aplikacích pro x86 i x64. Starší sady nástrojů podporují pouze aplikace x86. Sady nástrojů starší než VC 120 by měly používat starší verzi ladicího programu, a to zaškrtnutím_možnosti ladění > > obecné >_ použít nativní režim kompatibility, aby bylo možné použít příkaz Upravit a pokračovat.
+- Starší verze architektury/sady nástrojů VC. Pomocí sady nástrojů VC 140 podporuje výchozí ladicí program úpravy a pokračování v aplikacích pro x86 i x64. Starší sady nástrojů podporují pouze aplikace x86. Sady nástrojů starší než VC 120 by měly používat starší verzi ladicího programu, a to zaškrtnutím _možnosti ladění > > obecné >_ použít nativní režim kompatibility, aby bylo možné použít příkaz Upravit a pokračovat.
 
 ## <a name="linking-limitations"></a><a name="BKMK_Linking_limitations"></a> Omezení propojení
 
 ### <a name="linker-options-that-disable-edit-and-continue"></a><a name="BKMK_Linker_options_that_disable_Edit_and_Continue"></a> Možnosti linkeru, které zakazují úpravu a pokračování
  Následující možnosti linkeru zakazují možnost upravit a pokračovat:
 
-- Nastavení **/OPT: ref**, **/OPT: ICF**nebo **/incremental: žádné** zakáže příkaz Upravit a pokračovat s následujícím upozorněním:  
+- Nastavení **/OPT: ref**, **/OPT: ICF** nebo **/incremental: žádné** zakáže příkaz Upravit a pokračovat s následujícím upozorněním:  
      `LINK : warning LNK4075: ignoring /EDITANDCONTINUE due to /OPT specification`
 
-- Nastavení **/Order**, **/release**nebo **/Force** zakáže příkaz Upravit a pokračovat s následujícím upozorněním:  
+- Nastavení **/Order**, **/release** nebo **/Force** zakáže příkaz Upravit a pokračovat s následujícím upozorněním:  
      `LINK : warning LNK4075: ignoring /INCREMENTAL due to /option specification`
 
 - Nastavení jakékoli možnosti, která znemožňuje vytvoření souboru databáze programu (PDB), zakáže příkaz Upravit a pokračovat bez konkrétního upozornění.
@@ -161,7 +163,7 @@ Upravit a pokračovat pro projekty v jazyce C++ zpracovává většinu typů zm�
  2. Spusťte následující příkaz:  
      `VsRegEdit.exe set “C:\Program Files (x86)\Microsoft Visual Studio\[Version]\[YOUR EDITION]” HKCU Debugger NativeEncDiagnosticLoggingLevel DWORD 1`
 
- Nastavením této hodnoty na začátku relace ladění dojde k tomu, že různé součásti příkazu Upravit a pokračovat Spew podrobné protokolování do **Output Window**  >  podokna**ladění** okno výstup.
+ Nastavením této hodnoty na začátku relace ladění dojde k tomu, že různé součásti příkazu Upravit a pokračovat Spew podrobné protokolování do   >  podokna **ladění** okno výstup.
 
 ## <a name="see-also"></a>Viz také
 - [Upravit a pokračovat (C++)](../debugger/edit-and-continue-visual-cpp.md)

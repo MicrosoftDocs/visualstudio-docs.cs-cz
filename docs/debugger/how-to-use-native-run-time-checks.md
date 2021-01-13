@@ -1,5 +1,7 @@
 ---
-title: Použití nativních kontrol za běhu | Microsoft Docs
+title: Použít nativní kontroly Run-Time | Microsoft Docs
+description: Pomocí nativních kontrol za běhu v sadě Visual Studio můžete zachytit běžné chyby za běhu, například poškození ukazatele zásobníku, přetečení místních polí a poškození zásobníku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -37,12 +39,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 586f43f14a8638ab9c3c67f8ffef52ef52a70c53
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 7e46e2253c5664fff9cf456250d375993a0a0c9a
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852664"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150636"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>Postupy: Použití nativních kontrol za běhu
 V projektu Visual Studio C++ můžete použít nativní [runtime_checks](/cpp/preprocessor/runtime-checks) k zachycení běžných chyb za běhu, jako například:
@@ -65,9 +67,9 @@ V projektu Visual Studio C++ můžete použít nativní [runtime_checks](/cpp/pr
 
   Další témata v této části poskytují informace o:
 
-- [Přizpůsobení kontrol za běhu pomocí knihovny run-time jazyka C](../debugger/native-run-time-checks-customization.md)
+- [Přizpůsobení Run-Timech kontrol pomocí knihovny C Run-Time](../debugger/native-run-time-checks-customization.md)
 
-- [Použití kontrol za běhu bez běhové knihovny jazyka C](../debugger/using-run-time-checks-without-the-c-run-time-library.md)
+- [Použití Run-Timech kontrol bez knihovny jazyka C Run-Time](../debugger/using-run-time-checks-without-the-c-run-time-library.md)
 
 ### <a name="to-enable-native-run-time-checks-in-a-debug-build"></a>Povolení nativních kontrol za běhu v sestavení ladění
 

@@ -1,5 +1,7 @@
 ---
 title: Použití nástroje Finder | Microsoft Docs
+description: Pomocí nástroje Finder v dialogovém okně Najít okno nástroje Spy + + můžete zobrazit vlastnosti okna nebo zprávy během relace ladění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e92223359c6bc78b2a98c234c03ee139c052f86
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 41ca277962f81b3cd1c35ebcf8a940e8168a6803
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851837"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150597"
 ---
 # <a name="how-to-use-the-finder-tool"></a>Postupy: Používání vyhledávacího nástroje
 Pomocí nástroje Finder v dialogovém okně **Najít okno** můžete zobrazit vlastnosti nebo zprávy okna. Nástroj hledání může také najít zakázaná podřízená okna a nerozlišuje, které okno se má zvýraznit, pokud se zakázaná podřízená okna překrývají.
@@ -41,9 +43,9 @@ Pomocí nástroje Finder v dialogovém okně **Najít okno** můžete zobrazit v
      Pokud máte popisovač okna, které chcete prošetřit (například zkopírované z ladicího programu), zadejte ho do textového pole **popisovač** .
 
    > [!TIP]
-   > Pokud chcete omezit přehlednost obrazovky, vyberte možnost **Skrýt Spy** . Tato možnost zachová hlavní okno nástroje Spy + + a v horní části ostatních aplikací se zobrazí pouze dialogové okno **Najít okno** . Po kliknutí na tlačítko **OK** nebo **Zrušit**dojde k obnovení hlavního okna nástroje Spy + +, nebo když zrušíte zaškrtnutí políčka **Skrýt Spy + +** .
+   > Pokud chcete omezit přehlednost obrazovky, vyberte možnost **Skrýt Spy** . Tato možnost zachová hlavní okno nástroje Spy + + a v horní části ostatních aplikací se zobrazí pouze dialogové okno **Najít okno** . Po kliknutí na tlačítko **OK** nebo **Zrušit** dojde k obnovení hlavního okna nástroje Spy + +, nebo když zrušíte zaškrtnutí políčka **Skrýt Spy + +** .
 
-4. V části **Zobrazit**vyberte buď **vlastnosti** , nebo **zprávy**.
+4. V části **Zobrazit** vyberte buď **vlastnosti** , nebo **zprávy**.
 
 5. Stiskněte **OK**.
 

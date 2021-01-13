@@ -1,5 +1,7 @@
 ---
 title: Aktivovat události pozastavení/obnovení/pozadí při ladění UWP
+description: Přečtěte si, jak aktivovat události pozastavení, obnovení a na pozadí při ladění aplikací Univerzální platforma Windows (UWP) v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 01/16/2018
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 5cbdfb443d07b01f4de6f43fb98103339566cde2
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 87b2718b6cd9db5b66635ca165253bd1e93f17d5
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808191"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150675"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>Jak aktivovat události pozastavení, obnovení a na pozadí při ladění aplikací pro UWP v aplikaci Visual Studio
 
@@ -74,7 +76,7 @@ Další informace o správě životního cyklu procesu a úlohách na pozadí na
 
      V případě projektů v jazyce C++ rozbalte položku **Vlastnosti konfigurace** a pak zvolte možnost **ladění**.
 
-3. Proveďte jednu z následujících akcí:
+3. Proveďte některou z následujících akcí:
 
     - V případě projektů v jazyce Visual C# a Visual Basic vyberte možnost **nespouštět, ale ladit můj kód při spuštění**
 

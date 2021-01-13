@@ -1,5 +1,7 @@
 ---
 title: Ověření nastavení vlastnosti služby IIS | Microsoft Docs
+description: Naučte se ověřit nastavení vlastností IIS, která jste nastavili pro webovou aplikaci pomocí nástroje pro správu služby IIS.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c883257abf48601f5131bdae239df61ea64ba77
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: b627fbd3d4875699faa28f551d68f5a99bd63340
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851044"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150545"
 ---
 # <a name="how-to-verify-iis-property-settings"></a>Postupy: Ověření nastavení vlastnosti služby IIS
 
@@ -35,7 +37,7 @@ Můžete nastavit vlastnosti webové aplikace pomocí nástroje pro správu slu�
 
 ## <a name="to-check-iis-settings-for-the-web-application"></a>Postup kontroly nastavení služby IIS pro webovou aplikaci
 
-1. Otevřete okno **Nástroje pro správu** : v nabídce **Start** přejděte na **programy**a potom klikněte na **Nástroje pro správu**. Pokud se **Nástroje pro správu** nezobrazí v nabídce **programy** , pak je vyhledejte v **Ovládacích panelech**.
+1. Otevřete okno **Nástroje pro správu** : v nabídce **Start** přejděte na **programy** a potom klikněte na **Nástroje pro správu**. Pokud se **Nástroje pro správu** nezobrazí v nabídce **programy** , pak je vyhledejte v **Ovládacích panelech**.
 
    - V systému Windows 2000 vyberte možnost **Správce služeb Internetu**.
 
@@ -43,7 +45,7 @@ Můžete nastavit vlastnosti webové aplikace pomocí nástroje pro správu slu�
 
    - V systému Windows Server 2003 poklikejte na **Správa serveru**.
 
-        Otevře se okno **Správa serveru** . V části **aplikační server**klikněte na **Spravovat tento aplikační server**.
+        Otevře se okno **Správa serveru** . V části **aplikační server** klikněte na **Spravovat tento aplikační server**.
 
         Otevře se okno **aplikační server** . V levém podokně otevřete uzel **správce Internetová informační služba (IIS)** .
 
@@ -67,7 +69,7 @@ Můžete nastavit vlastnosti webové aplikace pomocí nástroje pro správu slu�
 
    2. Ověřte, že název v **místní cestě** odpovídá názvu adresáře, ve kterém byla aplikace skutečně nasazena.
 
-   3. V části **nastavení aplikace**zadejte název kořenového adresáře, který obsahuje aplikaci.
+   3. V části **nastavení aplikace** zadejte název kořenového adresáře, který obsahuje aplikaci.
 
    4. Kliknutím na tlačítko **OK** zavřete dialogové okno **vlastnosti** .
 
@@ -75,7 +77,7 @@ Můžete nastavit vlastnosti webové aplikace pomocí nástroje pro správu slu�
 
 8. Kliknutím na tlačítko **OK** zavřete dialogové okno **vlastnosti** .
 
-9. Kliknutím na tlačítko **OK** zavřete dialogové okno **Internetová informační služba (Správce služby IIS)**, **Správce služeb Internetu**nebo **Internetová informační služba** .
+9. Kliknutím na tlačítko **OK** zavřete dialogové okno **Internetová informační služba (Správce služby IIS)**, **Správce služeb Internetu** nebo **Internetová informační služba** .
 
 ## <a name="see-also"></a>Viz také
 

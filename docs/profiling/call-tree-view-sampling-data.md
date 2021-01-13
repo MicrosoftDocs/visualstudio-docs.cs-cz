@@ -1,5 +1,7 @@
 ---
 title: Zobrazení stromu volání – data vzorkování | Microsoft Docs
+description: Přečtěte si, jak zobrazení stromové struktury volání zobrazuje data vzorkování pro cesty provádění funkce, které byly provázány v profilované aplikaci v Prohlížeč výkonu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 558cef408ceca48a55563ae31f2399da0e951b8e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1fc7493d20d09ebd606e3a6ec8e5271981fb6f62
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779750"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150519"
 ---
 # <a name="call-tree-view---sampling-data"></a>Zobrazení stromu volání – vzorkování dat
 Zobrazení stromu volání zobrazuje cesty provádění funkce, které byly provázány v profilované aplikaci.

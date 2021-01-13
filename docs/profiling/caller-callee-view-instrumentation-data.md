@@ -1,5 +1,7 @@
 ---
-title: Zobrazení volaný volající – data instrumentace | Microsoft Docs
+title: Caller-Callee zobrazení – data instrumentace | Microsoft Docs
+description: Přečtěte si, jak zobrazení volající/volaný zobrazuje informace o instrumentaci ve stromu volání v Prohlížeč výkonu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 551c183dd9c368b1af16c1fe52b36762f4e71504
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3cd9f65fbce6f0326fab89acfef601652c9bc7b9
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74773293"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150883"
 ---
 # <a name="callercallee-view---instrumentation-data"></a>Zobrazení Volající/Volaný – data instrumentace
 Zobrazení volající/volaný zobrazí informace o profilování vybrané funkce a jejích nadřazených a podřízených funkcí ve stromu volání. Zobrazení volající/volaný obsahuje tři mřížky.

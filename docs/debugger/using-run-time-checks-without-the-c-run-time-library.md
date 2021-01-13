@@ -1,5 +1,7 @@
 ---
-title: Použití kontrol za běhu bez běhové knihovny jazyka C | Microsoft Docs
+title: Použití Run-Timech kontrol bez knihovny jazyka C Run-Time | Microsoft Docs
+description: Program můžete propojit bez běhové knihovny jazyka C pomocí/NODEFAULTLIB. Pokud to uděláte a chcete použít kontroly za běhu, musíte propojit s RunTmChk. lib.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,15 +25,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 029aafa634ba0e6837cdc7d4304d0419420dd912
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bfa83533b1ae929bf443dd6c3eb7f7dc3e7db165
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72728667"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150857"
 ---
 # <a name="using-run-time-checks-without-the-c-run-time-library"></a>Použití kontrol za běhu bez běhové knihovny jazyka C
-Pokud propojíte program bez běhové knihovny jazyka C, pomocí **/NODEFAULTLIB**a chcete použít kontroly za běhu, musíte propojit s RunTmChk. lib.
+Pokud propojíte program bez běhové knihovny jazyka C, pomocí **/NODEFAULTLIB** a chcete použít kontroly za běhu, musíte propojit s RunTmChk. lib.
 
 `_RTC_Initialize` Inicializuje program pro kontroly za běhu. Pokud neprovedete propojení s knihovnou run-time jazyka C, je nutné zkontrolovat, zda je program kompilován před voláním pomocí kontroly chyb za běhu `_RTC_Initialize` , a to následujícím způsobem:
 
@@ -64,4 +66,4 @@ extern "C" _RTC_error_fnW __cdecl _CRT_RTC_INITW(
 Po instalaci výchozí funkce zasílání zpráv o chybách můžete pomocí nástroje nainstalovat další funkce zasílání zpráv o chybách `_RTC_SetErrorFuncW` . Další informace najdete v tématu [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw).
 
 ## <a name="see-also"></a>Viz také
-[Postupy: použití nativních kontrol za běhu](../debugger/how-to-use-native-run-time-checks.md)
+[Postupy: použití nativních kontrol Run-Time](../debugger/how-to-use-native-run-time-checks.md)

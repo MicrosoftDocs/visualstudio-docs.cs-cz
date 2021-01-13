@@ -1,5 +1,7 @@
 ---
 title: Zobrazit vlastní informace pomocí DebuggerDisplay | Microsoft Docs
+description: Použijte instanci DebuggerDisplayAttribute – k řízení toho, jak se objekt, vlastnost nebo pole zobrazí v oknech proměnných ladicího programu.
+ms.custom: SEO-VS-2020
 ms.date: 01/09/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2387c5e9a920f0811a65ca400d8da48aa81dccd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1d846fd5e423ed17f7754260f169e32dbef5486b
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418779"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150753"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Sdělte ladicímu programu, co se má zobrazit pomocí atributu DebuggerDisplay (C#, Visual Basic, F #, C++/CLI).
 
@@ -96,7 +98,7 @@ Přípona ", NQ" oznamuje vyhodnocení výrazu, aby při zobrazení konečné ho
 ## <a name="example"></a>Příklad
 Následující příklad kódu ukazuje, jak použít `DebuggerDisplay` spolu s `DebuggerBrowseable` a `DebuggerTypeProxy` . Při zobrazení v okně proměnných ladicího programu, jako je například okno **kukátka** , vytvoří rozšíření, které vypadá takto:
 
-|**Name**|**Hodnota**|**Typ**|
+|**Název**|**Hodnota**|**Typ**|
 |--------------|---------------|--------------|
 |Klíč|3|objekt {String}|
 |Hodnota|3|objekt {int}|
@@ -183,5 +185,5 @@ class MyHashtable
 
 - [Používání atributu DebuggerTypeProxy](../debugger/using-debuggertypeproxy-attribute.md)
 - [Vytváření vlastních zobrazení spravovaných objektů](../debugger/create-custom-views-of-managed-objects.md)
-- [Specifikátory formátu v jazyce C #](../debugger/format-specifiers-in-csharp.md)
+- [Specifikátory formátu v jazyce C#](../debugger/format-specifiers-in-csharp.md)
 - [Rozšíření ladění pomocí atributů zobrazení ladicího programu](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

@@ -1,5 +1,7 @@
 ---
 title: Zobrazení stromu volání – data kolizí | Microsoft Docs
+description: Prohlédněte si zobrazení stromové struktury volání, které zobrazuje data kolizí pro cesty spouštění funkcí procházejí v profilované aplikaci.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e91e231f72b006d2020c8b4d5d96c7e24fa1dd9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 974eeccbb1f4691c00fafad65fadef7c909a7ed2
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779776"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150415"
 ---
 # <a name="call-tree-view---contention-data"></a>Zobrazení stromu volání – data kolizí
 Zobrazení stromu volání zobrazuje cesty provádění funkce, které byly provázány v profilované aplikaci. Kořen stromu je vstupní bod do aplikace nebo komponenty. Každý uzel funkce obsahuje seznam všech funkcí, které volá, počet zablokování funkce a dobu, po kterou byla funkce zablokovaná, protože se jednalo o prostředek s jinými vlákny nebo procesy.
@@ -26,7 +28,7 @@ Zobrazení stromu volání zobrazuje cesty provádění funkce, které byly prov
 ## <a name="highlight-the-execution-hot-path"></a>Zvýraznit cestu k vykonání za běhu
  Zobrazení stromu volání může rozšiřovat a zvýrazňovat cestu spuštění procesu nebo funkce, která vytvořila většinu sporů.
 
-- Chcete-li zobrazit nejvíce aktivních cest, klikněte pravým tlačítkem myši na proces nebo funkci a potom klikněte na **položku Rozbalit**kritickou cestu.
+- Chcete-li zobrazit nejvíce aktivních cest, klikněte pravým tlačítkem myši na proces nebo funkci a potom klikněte na **položku Rozbalit** kritickou cestu.
 
 ## <a name="set-the-call-tree-root-node"></a>Nastavit kořenový uzel stromu volání
  Každý proces v průběhu profilace se zobrazuje jako kořenový uzel. Chcete-li nastavit počáteční uzel zobrazení stromu volání, klikněte pravým tlačítkem myši na uzel, který chcete nastavit jako spouštěcí uzel, a poté klikněte na možnost **Nastavit kořen**.

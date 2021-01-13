@@ -1,5 +1,7 @@
 ---
 title: Krokovat se službami WCF | Microsoft Docs
+description: Proveďte krok do služby Windows Communication Foundation (WCF). Pokud je ve stejném řešení sady Visual Studio jako klient, volání ve službě WCF se zarážkami.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25ca1e4d2b7e0349ea5a41c6fc66726226ecab4f
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 428f5576b595797605abff2ebc5f4669e2927389
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851889"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150727"
 ---
 # <a name="how-to-step-into-wcf-services"></a>Postupy: Krokování s vnořením služeb WCF
 V aplikaci [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] můžete vstoupit do služby WCF. Pokud je služba WCF ve stejném [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] řešení jako klient, můžete ve službě WCF narazit zarážky.
@@ -42,5 +44,5 @@ V aplikaci [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]
 
 ## <a name="see-also"></a>Viz také
 - [Ladění služeb WCF](../debugger/debugging-wcf-services.md)
-- [Omezení ladění WCF](../debugger/limitations-on-wcf-debugging.md)
+- [Omezení pro ladění WCF](../debugger/limitations-on-wcf-debugging.md)
 - [Postupy: Ladění služby WCF s vlastním hostováním](../debugger/how-to-debug-a-self-hosted-wcf-service.md)

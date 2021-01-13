@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bb738e0e12598fd31c51c6b3cf2fa684badae40
-ms.sourcegitcommit: fdc21fc21d4a05d9ad8627b06aab7f072bfeb0a6
+ms.openlocfilehash: c992a1a4fca536f219a69b9ab629f6f602b4dfb0
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98113594"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150506"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
@@ -377,6 +377,7 @@ Testy lze spustit z Průzkumníka testů kliknutím pravým tlačítkem myši v 
 > [!NOTE]
 > Nemůžete spustit test v abstraktní třídě, protože testy jsou definovány pouze v abstraktních třídách a nikoli v instanci. Chcete-li spustit testy v abstraktních třídách, vytvořte třídu, která je odvozena z abstraktní třídy.
 
+::: moniker range=">=vs-2019"
 ## <a name="test-audio-cue"></a>Test zvukové hromádky
 Průzkumník testů může přehrát zvuk při dokončení testovacího běhu. Existují dva zvuky: jeden zvuk pro indikaci, že testovací běh byl úspěšný, a druhý zvuk k indikaci, že testovací běh byl dokončen s alespoň jedním neúspěšným testem. Tyto zvuky můžete nastavit v dialogovém okně výchozí zvuk Windows 10. Tato funkce je k dispozici počínaje verzí Visual Studio 2019 Update 16,9 Preview 3.
 
@@ -385,6 +386,7 @@ Průzkumník testů může přehrát zvuk při dokončení testovacího běhu. E
 3. Najděte kategorii **Microsoft Visual Studio** . Zvolte, že **testovací běh byl úspěšný** nebo že **testovací běh neuspěl** pro výběr přednastavených zvuků nebo procházení na vlastní zvukový soubor.  
 ![Dialogové okno zvuk Windows 10](../test/media/default-windows-10-sound-dialog.png)
 
+::: moniker-end
 ## <a name="see-also"></a>Viz také
 
 - [Testování částí kódu](../test/unit-test-your-code.md)

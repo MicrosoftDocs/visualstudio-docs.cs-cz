@@ -1,6 +1,7 @@
 ---
 title: Zobrazit zásobník volání v ladicím programu | Microsoft Docs
-ms.custom: seodec18
+description: Použijte okno zásobník volání k zobrazení volání funkce nebo procedury, která jsou aktuálně v zásobníku v sadě Visual Studio.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/29/2018
 ms.topic: how-to
 f1_keywords:
@@ -29,12 +30,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa91807459ea5c2d8f576891d0eafc35336347bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 206c79a47ec59e02206332d80d1afe935fb72bdc
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348740"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150623"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-debugger"></a>Zobrazení zásobníku volání a použití okna zásobník volání v ladicím programu
 
@@ -56,7 +57,7 @@ Pokud nejsou [symboly ladění](#bkmk_symbols) k dispozici pro část zásobník
 
   ![Okno zásobníku volání](../debugger/media/dbg_basics_callstack_window.png "CallStackWindow")
 
-Žlutá šipka identifikuje rámec zásobníku, kde se aktuálně nachází ukazatel provádění. Ve výchozím nastavení se tyto informace rámce zásobníku zobrazí v oknech zdroj, **místní**hodnoty, **Automatické**hodnoty, **kukátko**a **zpětný překlad** . Chcete-li změnit kontext ladicího programu na jiný rámec v zásobníku, [přepněte na jiný rámec zásobníku](#bkmk_switch).
+Žlutá šipka identifikuje rámec zásobníku, kde se aktuálně nachází ukazatel provádění. Ve výchozím nastavení se tyto informace rámce zásobníku zobrazí v oknech zdroj, **místní** hodnoty, **Automatické** hodnoty, **kukátko** a **zpětný překlad** . Chcete-li změnit kontext ladicího programu na jiný rámec v zásobníku, [přepněte na jiný rámec zásobníku](#bkmk_switch).
 
 ## <a name="display-non-user-code-in-the-call-stack-window"></a>Zobrazit neuživatelský kód v okně zásobník volání
 
@@ -108,7 +109,7 @@ V Visual Studio Enterprise (pouze) můžete zobrazit mapy kódu pro zásobník v
 
 ## <a name="change-the-optional-information-displayed"></a>Změna zobrazených volitelných informací
 
-- V okně **zásobník volání** klikněte pravým tlačítkem myši a nastavte nebo zrušte zaškrtnutí **Zobrazit \<**_the information that you want_**> **.
+- V okně **zásobník volání** klikněte pravým tlačítkem myši a nastavte nebo zrušte zaškrtnutí **Zobrazit \<**_the information that you want_**>**.
 
 ## <a name="load-symbols-for-a-module-c-c-visual-basic-f"></a><a name="bkmk_symbols"></a> Načtení symbolů pro modul (C#, C++, Visual Basic, F #)
 
@@ -140,7 +141,7 @@ Viz [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol
 
 ## <a name="see-also"></a>Viz také
 
-- [Smíšený kód a chybějící informace v okně zásobník volání](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)
+- [Smíšený kód a chybějící informace v okně Zásobník volání](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)
 - [Zadat symbol (PDB) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [Použití zarážek](../debugger/using-breakpoints.md)

@@ -1,5 +1,7 @@
 ---
 title: Nastavte kukátko pro proměnné v paralelních vláknech | Microsoft Docs
+description: Nastavte kukátko pro proměnné v paralelních vláknech v sadě Visual Studio. Současně zobrazí hodnoty, které jeden výraz obsahuje ve více vláknech.
+ms.custom: SEO-VS-2020
 ms.date: 04/25/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fb0d5ac60ea5ab89b02a624488b5df4f8a7164b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28aeffb629a44c296fb9a349e165c7ce88f70b0c
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348623"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150571"
 ---
 # <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Nastavení kukátka pro proměnné v paralelních vláknech v sadě Visual Studio (C#, Visual Basic, C++)
 V paralelním okno Kukátko lze současně zobrazit hodnoty, které jeden výraz obsahuje ve více vláknech. Každý řádek představuje vlákno, které běží v aplikaci, ale vlákno může být reprezentované ve více řádcích. Přesněji řečeno, každý řádek představuje volání funkce, jejíž signatura funkce odpovídá funkci v aktuálním bloku zásobníku. Položky, které jsou ve sloupcích, můžete řadit, přeřadit, odebírat a seskupovat. Vlákna můžete označit, zrušit jeho příznak, zablokovat (pozastavit) a uvolnit (pokračovat). V okně **paralelní sledování** se zobrazí následující sloupce:
@@ -46,7 +48,7 @@ V paralelním okno Kukátko lze současně zobrazit hodnoty, které jeden výraz
 
 2. Na řádku nabídek klikněte na položku **ladit**, **Spustit ladění**. Počkejte, než aplikace dorazí na zarážku.
 
-3. V panelu nabídek zvolte položku **ladit**, **okna**, **paralelní kukátko**a pak zvolte okno kukátka. Můžete otevřít až čtyři okna.
+3. V panelu nabídek zvolte položku **ladit**, **okna**, **paralelní kukátko** a pak zvolte okno kukátka. Můžete otevřít až čtyři okna.
 
 ### <a name="to-add-a-watch-expression"></a>Přidání výrazu kukátka
 
@@ -70,7 +72,7 @@ V paralelním okno Kukátko lze současně zobrazit hodnoty, které jeden výraz
 
 ### <a name="to-group-threads"></a>Seskupení vláken
 
-- Otevřete místní nabídku pro paralelní okno Kukátko, zvolte možnost **Seskupit podle**a pak zvolte příslušnou položku v podnabídce.
+- Otevřete místní nabídku pro paralelní okno Kukátko, zvolte možnost **Seskupit podle** a pak zvolte příslušnou položku v podnabídce.
 
 ### <a name="to-freeze-or-thaw-threads"></a>Zablokování nebo odmrazení vláken
 

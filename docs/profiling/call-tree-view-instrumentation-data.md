@@ -1,5 +1,7 @@
 ---
 title: Zobrazení stromu volání – data instrumentace | Microsoft Docs
+description: Přečtěte si, jak zobrazení stromu volání zobrazuje informace o instrumentaci ve stromu volání v Prohlížeč výkonu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7497f455ad3868f53758555aa28d305b6068e30d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9c846910da4dec636c073446ae63cffb7cb2a682
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74773508"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150792"
 ---
 # <a name="call-tree-view---instrumentation-data"></a>Zobrazení stromu volání – data instrumentace
 Hodnoty pro funkci ve stromu volání označují čas pro instance funkce, které byly volány nadřazenou funkcí ve stromu volání. Procentuální hodnoty se vypočtou porovnáním hodnoty instancí funkcí s celkovým celkovým počtem uplynulých úplných funkcí v průběhu profilace.

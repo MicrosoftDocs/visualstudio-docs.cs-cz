@@ -1,6 +1,7 @@
 ---
 title: Zobrazit zpětný překlad kódu v ladicím programu | Microsoft Docs
-ms.custom: seodec18
+description: Pomocí okna zpětný překlad v aplikaci Visual Studio zobrazte kód sestavení odpovídající pokynům vytvořeným kompilátorem.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/30/2018
 ms.topic: how-to
 f1_keywords:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23f297aa3fc549714a9b6327232a8a0b69c6138f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 733eb439808d6cab2d290615751cf44ccd711022
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808165"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150610"
 ---
 # <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Zobrazení zpětného překladu kódu v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F #)
 
@@ -50,7 +51,7 @@ Kromě pokynů k sestavení může okno **zpětný překlad** zobrazit následuj
 
 - Čísla řádků odpovídající zdrojovému kódu.
 
-Pokyny pro *sestavení a jazyk sestávají z*klávesových zkratek, které jsou zkratkami pro názvy instrukcí a *symboly* pro proměnné, Registry a konstanty. Jednotlivé instrukce v jazyce počítače jsou reprezentovány jedním jazykem sestavení, volitelně následovaným jedním nebo více symboly.
+Pokyny pro *sestavení a jazyk sestávají z* klávesových zkratek, které jsou zkratkami pro názvy instrukcí a *symboly* pro proměnné, Registry a konstanty. Jednotlivé instrukce v jazyce počítače jsou reprezentovány jedním jazykem sestavení, volitelně následovaným jedním nebo více symboly.
 
 Kód sestavení závisí silně na registrech procesorů nebo pro spravovaný kód. Registry modulu CLR (Common Language Runtime). Můžete použít okno zpětného **překladu** spolu s oknem **Registry** , které vám umožní kontrolovat obsah registru.
 
@@ -58,7 +59,7 @@ Chcete-li zobrazit instrukce strojového kódu v jejich nezpracovaném číseln�
 
 ## <a name="use-the-disassembly-window"></a>Použití okna zpětný překlad
 
-Chcete-li povolit okno **zpětný překlad** , v části **nástroje**  >  **Options**  >  **ladění**možností vyberte možnost **Povolit ladění na úrovni adresy**.
+Chcete-li povolit okno **zpětný překlad** , v části **nástroje**  >    >  **ladění** možností vyberte možnost **Povolit ladění na úrovni adresy**.
 
 Chcete-li otevřít okno zpětného **překladu** během ladění, vyberte možnost **Windows**  >  **zpětný překlad** nebo stiskněte klávesu **ALT** + **8**.
 

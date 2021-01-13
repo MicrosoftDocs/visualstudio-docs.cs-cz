@@ -1,6 +1,7 @@
 ---
 title: Použití souborů výpisu paměti v ladicím programu | Microsoft Docs
-ms.custom: seodec18
+description: Soubor výpisu paměti je snímek spuštěné aplikace a načtené moduly. Zvažte vytvoření souboru s výpisem paměti pro situace, kdy nemáte přístup k ladění aplikace.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/05/2018
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dbfd8ac877fce4b1808a76e3bb2a66ac595693de
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 8bcd225bb64096d8a8e58e3cffd15e7bc94bf5cc
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970618"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150870"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Soubory s výpisem paměti v ladicím programu sady Visual Studio
 

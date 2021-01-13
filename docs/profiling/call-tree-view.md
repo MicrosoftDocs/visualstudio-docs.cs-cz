@@ -1,5 +1,7 @@
 ---
 title: Zobrazení stromu volání | Microsoft Docs
+description: Seznamte se se stromovým zobrazením volání, které zobrazuje cesty provádění funkce, které byly provázány v profilované aplikaci.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b932d5f9e4a178c94f3e490c66cec64648ce4f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 386f8e85c02fe73eab9801b3edf79ec0d0b178fc
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74773332"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150779"
 ---
 # <a name="call-tree-view"></a>zobrazení stromu volání
 Zobrazení stromu volání zobrazuje cesty provádění funkce, které byly provázány v profilované aplikaci. Kořen stromu je vstupní bod do aplikace nebo komponenty. Každý uzel funkce obsahuje seznam všech funkcí, které volaly, a údaje o výkonu těchto volání funkcí.
@@ -32,7 +34,7 @@ Zobrazení stromu volání zobrazuje cesty provádění funkce, které byly prov
 
  Když nastavíte kořenový uzel, eliminují se všechny ostatní záznamy z zobrazení kromě podstromu vybraného uzlu. Kořenový uzel můžete obnovit zpátky na uzel, který jste si prohlíželi. V okně zobrazení stromu volání klikněte pravým tlačítkem myši a vyberte možnost **resetovat kořen**.
 
- Zobrazení stromu volání lze přizpůsobit přidáním nebo odebráním sloupců. Klikněte pravým tlačítkem myši na **záhlaví názvu sloupce**a pak vyberte **Přidat nebo odebrat sloupce**.
+ Zobrazení stromu volání lze přizpůsobit přidáním nebo odebráním sloupců. Klikněte pravým tlačítkem myši na **záhlaví názvu sloupce** a pak vyberte **Přidat nebo odebrat sloupce**.
 
  Zobrazení stromu volání lze nakonfigurovat pro redukci hluku tím, že omezíte množství dat, která jsou zobrazena. Díky omezení šumu jsou problémy s výkonem výraznější v zobrazení. Pokud je snazší rozlišovat problémy s výkonem, je analýza jednodušší. Další informace najdete v tématu [Postupy: Konfigurace snížení šumu v zobrazeních sestav](../profiling/how-to-configure-noise-reduction-in-report-views.md).
 

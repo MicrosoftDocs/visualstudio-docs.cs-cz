@@ -1,5 +1,7 @@
 ---
 title: Zadat nastavení ladicího programu | Microsoft Docs
+description: Určete různá nastavení pro chování ladicího programu v sadě Visual Studio, jako je například zobrazení proměnných, informace o tom, jaká upozornění jsou zobrazena a jak nastavit zarážky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b831ae0329adc218ba76fc27206e1f47d0ac8f9c
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: a5034fe887ba221106055a928e67e11076167286
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851941"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150766"
 ---
 # <a name="how-to-specify-debugger-settings"></a>Postupy: Určení nastavení ladicího programu
 V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] můžete zadat různá nastavení pro chování ladicího programu, včetně způsobu zobrazení proměnných, určení, zda jsou zobrazována určitá upozornění, jak jsou nastavena zarážky a jak má vliv na spuštěné programy. Nastavení ladicího programu určíte v dialogovém okně **Možnosti** .
