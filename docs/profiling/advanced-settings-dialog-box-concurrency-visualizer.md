@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Upřesnit nastavení (Vizualizér souběžnosti) | Microsoft Docs
+description: Pro řízení obsahu trasování použijte Rozšířená nastavení v Vizualizátor souběžnosti. Pro symboly, Pouze můj kód, ukládání do vyrovnávací paměti a další jsou k dispozici karty.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa9d6658ae14c4b84aae9361f73e4701e758f975
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc7d3464fd05b1fe99fcbfa8773e64bca4cb95e7
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911226"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205499"
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>Dialogové okno Upřesnit nastavení (Vizualizér souběžnosti)
 Pomocí dialogového okna **Upřesnit nastavení** v Vizualizátor souběžnosti můžete řídit, jak se budou shromažďovat trasování.  Dialogové okno obsahuje karty pro symboly, Pouze můj kód, ukládání do vyrovnávací paměti, filtrování, události CLR, značky, zprostředkovatele a soubory.
@@ -31,7 +33,7 @@ Pomocí dialogového okna **Upřesnit nastavení** v Vizualizátor souběžnosti
 ## <a name="buffering"></a>Do vyrovnávací paměti
  Vizualizátor souběžnosti používá trasování událostí pro Windows (ETW) při shromažďování trasování.  ETW používá k ukládání událostí různé vyrovnávací paměti.  Výchozí nastavení vyrovnávací paměti ETW nemusí být optimální ve všech případech a v některých případech může způsobit problémy, jako například ztracené události.  Pomocí karty vyrovnávací paměti můžete nakonfigurovat nastavení vyrovnávací paměti ETW. Další informace najdete v tématu [trasování událostí](/windows/win32/etw/event-tracing-portal) a  [EVENT_TRACE_PROPERTIES struktura](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties).
 
-## <a name="filter"></a>Filtr
+## <a name="filter"></a>Filtrovat
  Na kartě Filtr můžete vybrat sadu událostí, které shromažďuje Vizualizátor souběžnosti. Výběr podmnožiny událostí omezuje typy dat zobrazených v sestavách, snižuje velikost každého trasování a zkracuje čas potřebný ke zpracování trasování.
 
 ### <a name="clr-events"></a>CLR – události

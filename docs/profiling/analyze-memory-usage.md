@@ -1,6 +1,7 @@
 ---
 title: Analýza využití paměti
-ms.custom: seodec18
+description: Seznamte se s nástroji, které můžete použít k vyhledání nevrácené paměti a neefektivního využití paměti, nástrojů, jako je například nástroj využití paměti a nástroj pro přidělování objektů rozhraní .NET.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/12/2020
 ms.topic: conceptual
 author: mikejo5000
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53d8e33555530eacf482f3f99752ea4c42f8d827
-ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
+ms.openlocfilehash: 675636b7abca10fb2f9f1898d753155235830f86
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918094"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205720"
 ---
 # <a name="analyze-memory-usage"></a>Analýza využití paměti
 
@@ -31,7 +32,7 @@ Vývojáři C++ můžou použít nástroj pro využití paměti integrované lad
 - [Analýza využití paměti pomocí ladicího programu](../profiling/memory-usage.md)
 - [Analýza využití paměti bez ladicího programu](../profiling/memory-usage-without-debugging2.md)
 
-Nástroje pro profilaci bez ladicího programu můžete používat se systémem Windows 7 nebo novějším. Pro spuštění nástrojů pro profilaci pomocí ladicího programu ( **diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
+Nástroje pro profilaci bez ladicího programu můžete používat se systémem Windows 7 nebo novějším. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
 
 ## <a name="blogs-and-videos"></a>Blogy a videa
 

@@ -1,5 +1,7 @@
 ---
-title: Ladění .NET Core v systému Linux
+title: Ladění .NET Core v Linuxu
+description: K ladění .NET Core v systému Linux použijte Secure Shell (SSH) připojením k procesu. Připravte aplikaci pro ladění. Sestavte a nasaďte aplikaci. Připojte ladicí program.
+ms.custom: SEO-VS-2020
 ms.date: 02/26/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39b77d68e7f8876f7e0d038166f4b2a6517bb3cb
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: bde5bb8722e0f95a10991019bdc9cba9c8a48ec3
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671503"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204888"
 ---
 # <a name="debug-net-core-on-linux-using-ssh-by-attaching-to-a-process"></a>Ladění .NET Core v systému Linux pomocí SSH připojením k procesu
 
@@ -38,7 +40,7 @@ Od sady Visual Studio 2017 se můžete připojit k procesům .NET Core běžíc�
 
 Příprava aplikace pro ladění:
 
-- Zvažte použití konfigurace ladění při sestavování aplikace. Je mnohem obtížnější ladit kód kompilovaný v maloobchodě (konfigurace vydané verze) než ladicí kód kompilovaný. Pokud potřebujete použít konfiguraci vydané verze, nejdřív zakažte Pouze můj kód. Chcete-li toto nastavení zakázat, zvolte možnost **nástroje**  >  **Options**  >  **ladění** a potom zrušte zaškrtnutí možnosti **Povolit pouze můj kód**.
+- Zvažte použití konfigurace ladění při sestavování aplikace. Je mnohem obtížnější ladit kód kompilovaný v maloobchodě (konfigurace vydané verze) než ladicí kód kompilovaný. Pokud potřebujete použít konfiguraci vydané verze, nejdřív zakažte Pouze můj kód. Chcete-li toto nastavení zakázat, zvolte možnost **nástroje**  >    >  **ladění** a potom zrušte zaškrtnutí možnosti **Povolit pouze můj kód**.
 
 - Ujistěte se, že je projekt nakonfigurován tak, aby vytvořil [přenosné soubory PDB](https://github.com/OmniSharp/omnisharp-vscode/wiki/Portable-PDBs) (což je výchozí nastavení), a ujistěte se, že je soubory PDB ve stejném umístění jako knihovna DLL. Pokud chcete tuto možnost nakonfigurovat v aplikaci Visual Studio, klikněte pravým tlačítkem na projekt a pak zvolte **vlastnosti**  >  **sestavit**  >  **Pokročilé**  >  **ladicí informace**.
 

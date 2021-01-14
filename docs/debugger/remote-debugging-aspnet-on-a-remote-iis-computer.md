@@ -1,6 +1,7 @@
 ---
 title: Vzdálené ladění ASP.NET Core na vzdáleném počítači IIS | Microsoft Docs
-ms.custom: remotedebugging
+description: Ladění aplikace ASP.NET Core nasazené do počítače vzdáleného Internetová informační služba (IIS) pomocí programu Visual Studio Remote Debugger.
+ms.custom: remotedebugging, SEO-VS-2020
 ms.date: 05/06/2020
 ms.topic: conceptual
 ms.assetid: 573a3fc5-6901-41f1-bc87-557aa45d8858
@@ -10,12 +11,12 @@ manager: jillfra
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 389fe1491a92cacecd772244c2a0facd0d12c887
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: bc746d5139b897d51d4d038f077906f56aa5d552
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "92298762"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205811"
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>Vzdálené ladění ASP.NET Core na vzdáleném počítači IIS v aplikaci Visual Studio
 
@@ -25,7 +26,7 @@ Chcete-li ladit aplikaci ASP.NET Core nasazenou do služby IIS, nainstalujte a s
 
 Tato příručka vysvětluje, jak nastavit a nakonfigurovat sadu Visual Studio ASP.NET Core, jak ji nasadit do služby IIS a jak připojit vzdálený ladicí program ze sady Visual Studio. Vzdálené ladění ASP.NET 4.5.2 najdete v tématu [vzdálené ladění ASP.NET na počítači se službou IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md). Službu IIS můžete také nasadit a ladit pomocí Azure. Pro Azure App Service můžete snadno nasadit a ladit v předkonfigurovaných instancích služby IIS a vzdáleném ladícím programu pomocí [Snapshot Debugger](../debugger/debug-live-azure-applications.md) nebo [připojením ladicího programu z Průzkumník serveru](../debugger/remote-debugging-azure.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 ::: moniker range=">=vs-2019"
 K provedení kroků uvedených v tomto článku se vyžaduje Visual Studio 2019.
@@ -56,7 +57,7 @@ Tento článek obsahuje kroky pro nastavení základní konfigurace služby IIS 
 1. Vytvořte novou ASP.NET Core webovou aplikaci.
 
     ::: moniker range=">=vs-2019"
-    V aplikaci Visual Studio 2019 zadejte **CTRL + Q** pro otevření vyhledávacího pole, zadejte **ASP.NET**, zvolte **šablony**a pak zvolte **vytvořit novou ASP.NET Core webovou aplikaci**. V dialogovém okně, které se zobrazí, pojmenujte projekt **MyASPApp**a pak zvolte **vytvořit**. Dále zvolte možnost **Webová aplikace (model-zobrazení-kontroler)** a pak zvolte možnost **vytvořit**.
+    V aplikaci Visual Studio 2019 zadejte **CTRL + Q** pro otevření vyhledávacího pole, zadejte **ASP.NET**, zvolte **šablony** a pak zvolte **vytvořit novou ASP.NET Core webovou aplikaci**. V dialogovém okně, které se zobrazí, pojmenujte projekt **MyASPApp** a pak zvolte **vytvořit**. Dále zvolte možnost **Webová aplikace (model-zobrazení-kontroler)** a pak zvolte možnost **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
     V aplikaci Visual Studio 2017 zvolte **soubor > nový > projekt**, a pak vyberte **Visual C# > webová aplikace Web > ASP.NET Core**. V části šablony ASP.NET Core vyberte možnost **Webová aplikace (model-zobrazení-kontroler)**. Ujistěte se, že je vybrána možnost ASP.NET Core 2,1, možnost **Povolit podporu Docker** není vybrána a toto **ověřování** je nastaveno na **bez ověřování**. Pojmenujte projekt **MyASPApp**.
@@ -108,7 +109,7 @@ Tuto možnost můžete použít k vytvoření souboru nastavení publikování a
 
 ### <a name="configure-the-aspnet-core-web-site"></a>Nakonfigurovat ASP.NET Core Web
 
-1. Ve Správci služby IIS klikněte v levém podokně v části **připojení**na položku **fondy aplikací**. Otevřete **DefaultAppPool** a nastavte **verzi .NET CLR** na **žádný spravovaný kód**. To je nutné pro ASP.NET Core. Výchozí web používá rozhraní DefaultAppPool.
+1. Ve Správci služby IIS klikněte v levém podokně v části **připojení** na položku **fondy aplikací**. Otevřete **DefaultAppPool** a nastavte **verzi .NET CLR** na **žádný spravovaný kód**. To je nutné pro ASP.NET Core. Výchozí web používá rozhraní DefaultAppPool.
 
 2. Zastavte a restartujte službu DefaultAppPool.
 
@@ -145,15 +146,15 @@ Tuto možnost můžete použít k nasazení aplikace, pokud chcete zkopírovat a
 
 3. V části **připojení** v levém podokně přejdete na **lokality**.
 
-4. Vyberte **výchozí web**, zvolte **základní nastavení**a nastavte **fyzickou cestu** na **C:\Publish**.
+4. Vyberte **výchozí web**, zvolte **základní nastavení** a nastavte **fyzickou cestu** na **C:\Publish**.
 
 4. Klikněte pravým tlačítkem myši na uzel **výchozí web** a vyberte **Přidat aplikaci**.
 
 5. Nastavte pole **alias** na **MyASPApp**, přijměte výchozí fond aplikací (**DefaultAppPool**) a nastavte **fyzickou cestu** na **C:\Publish**.
 
-6. V části **připojení**vyberte **fondy aplikací**. Otevřete **DefaultAppPool** a nastavte pole fond aplikací na **žádný spravovaný kód**.
+6. V části **připojení** vyberte **fondy aplikací**. Otevřete **DefaultAppPool** a nastavte pole fond aplikací na **žádný spravovaný kód**.
 
-7. Pravým tlačítkem myši klikněte na novou lokalitu ve Správci služby IIS, vyberte možnost **Upravit oprávnění**a ujistěte se, že je IUSR, IIS_IUSRS nebo uživatel nakonfigurovaný pro přístup k webové aplikaci autorizovaný uživatel s oprávněním ke čtení & ke spuštění.
+7. Pravým tlačítkem myši klikněte na novou lokalitu ve Správci služby IIS, vyberte možnost **Upravit oprávnění** a ujistěte se, že je IUSR, IIS_IUSRS nebo uživatel nakonfigurovaný pro přístup k webové aplikaci autorizovaný uživatel s oprávněním ke čtení & ke spuštění.
 
     Pokud nevidíte některého z těchto uživatelů s přístupem, Projděte kroky pro přidání IUSR jako uživatele s právy ke čtení &.
 
@@ -188,13 +189,13 @@ Informace o spuštění vzdáleného ladícího programu jako služby najdete v 
 
 3. Nastavte pole Kvalifikátor na **\<remote computer name>** a stiskněte klávesu **ENTER**.
 
-    Ověřte, že Visual Studio přidá požadovaný port do názvu počítače, který se zobrazí ve formátu: ** \<remote computer name> :p** .
+    Ověřte, že Visual Studio přidá požadovaný port do názvu počítače, který se zobrazí ve formátu: **\<remote computer name> :p** .
 
     ::: moniker range=">=vs-2019"
-    V aplikaci Visual Studio 2019 byste měli vidět ** \<remote computer name> : 4024**
+    V aplikaci Visual Studio 2019 byste měli vidět **\<remote computer name> : 4024**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V aplikaci Visual Studio 2017 byste měli vidět ** \<remote computer name> : 4022**
+    V aplikaci Visual Studio 2017 byste měli vidět **\<remote computer name> : 4022**
     ::: moniker-end
     Port je povinný. Pokud se číslo portu nezobrazuje, přidejte ho ručně.
 
@@ -224,7 +225,7 @@ Informace o spuštění vzdáleného ladícího programu jako služby najdete v 
 
 7. Klikněte na **připojit**.
 
-8. Otevřete web vzdáleného počítače. V prohlížeči, navštivte **http:// \<remote computer name> **.
+8. Otevřete web vzdáleného počítače. V prohlížeči, navštivte **http:// \<remote computer name>**.
 
     Měla by se zobrazit webová stránka ASP.NET.
 
@@ -252,16 +253,16 @@ Požadované porty:
 
 1. Chcete-li otevřít port na Windows serveru, otevřete nabídku **Start** a vyhledejte **bránu Windows Firewall s pokročilým zabezpečením**.
 
-2. Pak zvolte **příchozí pravidla > nové pravidlo > port**a pak klikněte na **Další**. (Pro UDP 3702 místo toho vyberte **odchozí pravidla** .)
+2. Pak zvolte **příchozí pravidla > nové pravidlo > port** a pak klikněte na **Další**. (Pro UDP 3702 místo toho vyberte **odchozí pravidla** .)
 
-3. V části **konkrétní místní porty**zadejte číslo portu a klikněte na **Další**.
+3. V části **konkrétní místní porty** zadejte číslo portu a klikněte na **Další**.
 
 4. Klikněte na možnost **Povolení připojení**, klikněte na tlačítko **Další**.
 
 5. Vyberte jeden nebo více typů sítí, které chcete pro port povolit, a klikněte na tlačítko **Další**.
 
     Typ, který vyberete, musí zahrnovat síť, ke které je připojený vzdálený počítač.
-6. Pro příchozí pravidlo přidejte název (například **IIS**, **nasazení webu**nebo **msvsmon**) a klikněte na **Dokončit**.
+6. Pro příchozí pravidlo přidejte název (například **IIS**, **nasazení webu** nebo **msvsmon**) a klikněte na **Dokončit**.
 
     V seznamu příchozí pravidla nebo odchozí pravidla by se mělo zobrazit nové pravidlo.
 

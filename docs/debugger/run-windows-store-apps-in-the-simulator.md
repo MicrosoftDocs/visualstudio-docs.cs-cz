@@ -1,5 +1,7 @@
 ---
 title: Spouštění aplikací pro UWP v simulátoru | Microsoft Docs
+description: Pochopte, jak spouštět aplikace Univerzální platforma Windows (UWP) v simulátoru sady Visual Studio, což je aplikace klasické pracovní plochy, která simuluje aplikaci pro UWP.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 9b46abc4d22ddfdc551669d3bcd4cba5acf7cce4
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 12d2fed62e1a4762c9b92304ff1acfe8374ab976
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599525"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205629"
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>Spouštění aplikací pro UPW na simulátoru
 
@@ -96,7 +98,7 @@ Tlačítko pro **otočení dotykového ovládání** nastaví režim interakce k
 ## <a name="change-the-simulated-screen-size-and-resolution"></a><a name="BKMK_Change_the_simulated_screen_size_and_resolution"></a> Změna velikosti simulované obrazovky a jejich rozlišení
  Chcete-li změnit simulovanou velikost a rozlišení obrazovky, vyberte v paletě tlačítko **rozlišení změn** a v seznamu vyberte novou velikost a rozlišení.
 
- Velikost obrazovky a rozlišení jsou uvedeny jako *Šířka obrazovky, Šířka pixelů X pixelů*. Všimněte si, že velikost obrazovky i rozlišení jsou simulované. Poloha souřadnice na simulátoru se převede na vybrané velikosti a rozlišení zařízení.
+ Velikost obrazovky a rozlišení jsou uvedeny jako *Šířka obrazovky, Šířka pixelů X pixelů*. Všimněte si, že velikost obrazovky i rozlišení jsou simulované. Souřadnice umístění simulátoru jsou přeloženy na zvolené velikosti a rozlišení zařízení.
 
 > [!NOTE]
 > V aplikaci můžete ukládat verze rastrových obrázků s horizontálním škálováním a systém Windows načte správnou image pro aktuální měřítko. Další informace najdete v tématu [Návrh a úvodní uživatelské rozhraní](/windows/uwp/layout/design-and-ui-intro). Pokud však změníte rozlišení simulátoru, takže systém Windows vybere jiný obrázek, aby odpovídal rozlišení, je nutné zastavit a znovu spustit ladicí relaci, aby zobrazila nový obrázek.

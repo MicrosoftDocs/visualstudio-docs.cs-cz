@@ -1,5 +1,7 @@
 ---
 title: Správa možností konfigurace | Microsoft Docs
+description: Naučte se spravovat nastavení konfigurace projektů a řešení v aplikaci Visual Studio, abyste mohli řídit, jak se projekt sestaví, zabalí, nasadí a spustí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e18c308d74f8c20267c286c47d0e89bf82cd2850
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a34f772b780cda825861e11e6816d1d88405f74e
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707301"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204524"
 ---
 # <a name="managing-configuration-options"></a>Správa možností konfigurace
 Když vytváříte nový typ projektu, musíte spravovat nastavení konfigurace projektu a řešení, které určuje, jak bude projekt sestaven, zabalen, nasazen a spuštěn. Následující témata popisují konfiguraci projektů a řešení.

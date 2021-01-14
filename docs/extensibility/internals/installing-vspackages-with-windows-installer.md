@@ -1,5 +1,7 @@
 ---
 title: Instalace VSPackage pomocí Instalační služba systému Windows | Microsoft Docs
+description: Naučte se používat Microsoft Instalační služba systému Windows k instalaci VSPackage a jeho závislých souborů a jejich registraci a integraci do sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a7ace9203cd8f21a9e9ab5dc525bf604aeff678
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: ec49e5184071e0640d671ba0baaad8ac049fea25
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012201"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205227"
 ---
 # <a name="installing-vspackages-with-windows-installer"></a>Instalace balíčků VSPackage pomocí Instalační služby systému Windows
 Integrace sady VSPackage do systému [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vyžaduje více než pouze kopírování souborů do počítače uživatele. Instalační program VSPackage musí nainstalovat rozhraní VSPackage a jeho závislé soubory a zaregistrovat je a integrovat je do nástroje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Rozhraní VSPackage může využít výhod integračních funkcí, jako je například zobrazení ikony na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] úvodní obrazovce a dialogového okna o aplikaci.

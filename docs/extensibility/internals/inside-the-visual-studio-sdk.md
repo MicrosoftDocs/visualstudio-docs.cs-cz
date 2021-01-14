@@ -1,5 +1,7 @@
 ---
 title: V sadě Visual Studio SDK | Microsoft Docs
+description: Seznamte se s rozšířeními v sadě Visual Studio SDK, včetně architektury sady Visual Studio, komponent, služeb, schémat a nástrojů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e72020795bc3181e11f0f90eff580a2365d4000
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 73bbb1beb30677711b8b517262b48465e7529585
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707572"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205330"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>Práce se sadou Visual Studio SDK
 
@@ -47,7 +49,7 @@ V této části najdete podrobné informace o rozšířeních sady Visual Studio
  Další informace najdete v tématech [příkazy, nabídky a panely nástrojů](../../extensibility/internals/commands-menus-and-toolbars.md).
 
 ## <a name="menus-and-toolbars"></a>Nabídky a panely nástrojů
- Nabídky a panely nástrojů poskytují uživatelům způsob, jak vyvolat příkazy. Nabídky jsou řádky nebo sloupce příkazů, které se obvykle zobrazují jako jednotlivé textové položky v horní části okna nástroje. Podnabídky jsou sekundárními nabídkami, které se zobrazí, když uživatel klikne na příkazy, které obsahují malou šipku. Kontextové nabídky se zobrazí, když uživatel klikne pravým tlačítkem myši na určité prvky uživatelského rozhraní. Mezi běžné názvy nabídek patří **soubor**, **Úpravy**, **zobrazení**a **okno**. Další informace najdete v tématu [rozšíření nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).
+ Nabídky a panely nástrojů poskytují uživatelům způsob, jak vyvolat příkazy. Nabídky jsou řádky nebo sloupce příkazů, které se obvykle zobrazují jako jednotlivé textové položky v horní části okna nástroje. Podnabídky jsou sekundárními nabídkami, které se zobrazí, když uživatel klikne na příkazy, které obsahují malou šipku. Kontextové nabídky se zobrazí, když uživatel klikne pravým tlačítkem myši na určité prvky uživatelského rozhraní. Mezi běžné názvy nabídek patří **soubor**, **Úpravy**, **zobrazení** a **okno**. Další informace najdete v tématu [rozšíření nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).
 
  Panely nástrojů jsou řádky nebo sloupce tlačítek a další ovládací prvky, například pole se seznamem, seznamy a textová pole. Tlačítka panelu nástrojů mají obvykle obrázky ikon, například ikonu složky pro příkaz **otevřít soubor** nebo tiskárnu pro příkaz **Tisk** . Všechny prvky panelu nástrojů jsou přidruženy k příkazům. Po kliknutí na tlačítko na panelu nástrojů se jeho přidružený příkaz spustí. V případě ovládacího prvku rozevíracího seznamu je každá položka v rozevíracím seznamu přidružena k jinému příkazu. Některé ovládací prvky panelu nástrojů, jako je například ovládací prvek rozdělovače, jsou hybrids. Jedna strana ovládacího prvku je tlačítko panelu nástrojů a druhá strana má šipku dolů, která při kliknutí zobrazuje několik příkazů.
 

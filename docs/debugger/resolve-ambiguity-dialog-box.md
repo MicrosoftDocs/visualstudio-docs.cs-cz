@@ -1,5 +1,7 @@
 ---
 title: Vyřešit nejednoznačnosti – dialogové okno | Microsoft Docs
+description: Zkontrolujte dialogové okno vyřešit nejednoznačnosti sady Visual Studio, které se zobrazí, když ladicí program nemůže zvolit umístění, které se má zobrazit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4257fd213d6401de381e25c74c126b8468b76057
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c6f7156a43bc8c5c60415680b4380600e9e695cc
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72729846"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205603"
 ---
 # <a name="resolve-ambiguity-dialog-box"></a>Dialogové okno Vyřešit nejednoznačnosti
 `Resolve Ambiguity`Dialogové okno se zobrazí, pokud ladicí program nemůže zvolit umístění, které se má zobrazit. Například pokud používáte šablony jazyka C++, můžete vytvořit více funkcí z jedné šablony funkce. Pokud se ladicí program zastaví na zdrojovém umístění v šabloně a Vy zvolíte `Go To Disassembly` , má ladicí program více možností. Každá funkce vytvořená v šabloně má svůj vlastní kód zpětného překladu a ladicí program neví, který kód chcete zobrazit. `Resolve Ambiguity`Dialogové okno umožňuje vybrat umístění, které chcete, ze seznamu všech odpovídajících umístění.

@@ -1,5 +1,7 @@
 ---
 title: Ladění JavaScriptu pomocí konzoly | Microsoft Docs
+description: Pomocí okna konzoly JavaScriptu v aplikaci Visual Studio můžete pracovat s aplikacemi a ladit aplikace Univerzální platforma Windows (UWP) sestavené pomocí JavaScriptu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: aca36c56bfeed4fd5d8b240cce6bea5b55b75d85
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 8a2b2e82e664abea1a53112776dc0ec3ec5f1259
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211073"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205005"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>Ladění JavaScriptu pomocí konzoly v aplikaci Visual Studio
 
@@ -42,7 +44,7 @@ Okno konzoly JavaScriptu vám umožní:
 - Proveďte další úkoly, jako je vymazání obrazovky. Úplný seznam příkazů najdete v tématu [příkazy konzoly JavaScriptu](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true) .
 
 > [!TIP]
-> Pokud je okno konzoly JavaScriptu zavřené, otevřete ho tak, že kliknete na **ladit** >  **Windows**  >  **konzolu Windows JavaScript** . Okno se zobrazí pouze během relace ladění skriptu.
+> Pokud je okno konzoly JavaScriptu zavřené, otevřete ho tak, že kliknete na **ladit** >    >  **konzolu Windows JavaScript** . Okno se zobrazí pouze během relace ladění skriptu.
 
 Pomocí okna konzoly JavaScriptu můžete pracovat s aplikací bez zastavení a restartování ladicího programu. Další informace najdete v tématu [aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md). Informace o dalších funkcích ladění JavaScriptu, jako je použití Průzkumníka modelu DOM a nastavení zarážek, najdete v tématu [rychlý Start: ladění HTML a CSS](../debugger/quickstart-debug-html-and-css.md) a [ladění aplikací v aplikaci Visual Studio](debugging-windows-store-and-windows-universal-apps.md).
 
@@ -56,7 +58,7 @@ Následující postup vytvoří `FlipView` aplikaci a ukáže, jak interaktivně
 
 1. Vytvořte nové řešení v aplikaci Visual Studio tak, že kliknete na **soubor**  >  **Nový projekt**.
 
-2. Zvolte **JavaScript**  >  **Windows Universal**a pak zvolte **aplikace WinJS**.
+2. Zvolte **JavaScript**  >  **Windows Universal** a pak zvolte **aplikace WinJS**.
 
 3. Zadejte název projektu, například `FlipViewApp` , a kliknutím na **tlačítko OK** vytvořte aplikaci.
 
@@ -199,11 +201,11 @@ Když je program v režimu pozastavení, můžete použít okno konzoly JavaScri
 
 #### <a name="to-set-a-breakpoint-and-debug-the-app"></a>Nastavení zarážky a ladění aplikace
 
-1. V souboru default.html `FlipView` aplikace, kterou jste vytvořili dříve, otevřete místní nabídku pro `updateImages()` funkci a pak zvolte **zarážka**  >  **Vložit**zarážku.
+1. V souboru default.html `FlipView` aplikace, kterou jste vytvořili dříve, otevřete místní nabídku pro `updateImages()` funkci a pak zvolte **zarážka**  >  **Vložit** zarážku.
 
 2. V rozevíracím seznamu vedle tlačítka **Spustit ladění** na panelu nástrojů **ladění** vyberte **místní počítač** .
 
-3. Zvolte **ladění**  >  **Spustit ladění**nebo stiskněte klávesu F5.
+3. Zvolte **ladění**  >  **Spustit ladění** nebo stiskněte klávesu F5.
 
     Aplikace přejde do režimu přerušení, pokud provádění dosáhne `updateImages()` funkce a aktuální řádek provádění programu je zvýrazněn žlutě.
 

@@ -1,5 +1,7 @@
 ---
 title: Zobrazení oken | Microsoft Docs
+description: Zobrazení systému Windows zobrazuje strom všech oken a ovládacích prvků. Použijte ho jako výchozí bod, abyste získali informace o systému Windows, které vás zajímají.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fef652cbaa83fde61f098fb8fcef9558473fe19a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 717c0f18d5443f712151a2f8318c56a8e738f6d7
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900853"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205369"
 ---
 # <a name="windows-view"></a>Zobrazení oken
 Při prvním otevření nástroje Spy + + zobrazí Windows zobrazení strom všech oken a ovládacích prvků v systému. Zobrazí se popisovač okna a název třídy. Aktuální okno plochy je v horní části stromu. Všechny ostatní okna jsou podřízené počítači a jsou uvedeny v závislosti na standardní hierarchii oken. Okna na stejné úrovni se zobrazí v seznamech expansible odsazených pod svými rodičemi.

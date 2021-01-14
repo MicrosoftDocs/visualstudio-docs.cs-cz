@@ -1,6 +1,7 @@
 ---
 title: Průvodce vzorkováním procesoru pro začátečníky
-ms.custom: seodec18
+description: Přečtěte si, jak nástroje pro profilaci sady Visual Studio odhalí, kolik času je používáno funkcemi ve vaší aplikaci, a umožňuje vám tak zrychlit aplikaci.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 02/27/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a58803747e0da411012226325c390352edf4e919
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c61d407247910131deee9585d19a921f8cf76cca
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330596"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205356"
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>Průvodce vzorkováním procesoru pro začátečníky
 Nástroje pro profilaci v sadě Visual Studio můžete použít k analýze problémů s výkonem aplikace. Tento postup vám ukáže, jak používat data **Vzorkování**.

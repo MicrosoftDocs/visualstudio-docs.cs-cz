@@ -1,5 +1,7 @@
 ---
 title: Průměrné využití procesoru | Microsoft Docs
+description: Průměrné využití procesoru v zobrazení využití je průměrné využití logických jader systému v průběhu po dobu trvání procesu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01557fb378f03ffd033495ca42024c1143e67187
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4028dc413bd6ae6b9e9861c339faddf1550d4530
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62776995"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205681"
 ---
 # <a name="average-cpu-utilization"></a>Průměrné využití procesoru
 Zobrazuje průměrné využití logických jader systému v rámci daného procesu po dobu trvání procesu. Graf nezobrazuje, které konkrétní jádro je v určitou dobu aktivní. Pokud je například každý z nich spuštěný v 50% kapacitě za dané časové období, zobrazí se v tomto zobrazení jeden logický základ, který je využíván.

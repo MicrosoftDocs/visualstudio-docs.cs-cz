@@ -1,6 +1,7 @@
 ---
 title: Nastavení projektu pro konfiguraci ladění jazyka C# | Microsoft Docs
-ms.custom: seodec18
+description: Zjistěte, jak změnit nastavení projektu pro konfiguraci ladění v jazyce C# v aplikaci Visual Studio pomocí karty ladění a karty sestavení stránky vlastností projektu.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/21/2018
 ms.topic: reference
 dev_langs:
@@ -21,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a5108e195e5df245c72436752316e8ee91781e7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 262e46436f1391ae21df0ccdd3ca308eecb347da
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62903954"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205564"
 ---
 # <a name="project-settings-for--c-debug-configurations"></a>Nastavení projektu pro konfiguraci ladění jazyka C#
 
@@ -43,7 +44,7 @@ Další informace najdete v tématu [Konfigurace ladění a vydání](how-to-set
 
 |Nastavení|Popis|
 |-------------------------------------| - |
-| **Konfigurace** | Nastaví režim pro sestavování aplikace. V rozevíracím seznamu vyberte **aktivní (ladění)**, **ladění**, **vydání**nebo **všechny konfigurace** . |
+| **Konfigurace** | Nastaví režim pro sestavování aplikace. V rozevíracím seznamu vyberte **aktivní (ladění)**, **ladění**, **vydání** nebo **všechny konfigurace** . |
 | **Spustit akci** | Určuje akci, když v konfiguraci ladění vyberete **Spustit** .<br />- **Spustit projekt** je výchozí a spustí spouštěný projekt pro ladění. Další informace najdete v tématu [Výběr spouštěného projektu](/previous-versions/visualstudio/visual-studio-2010/0s590bew(v=vs.100)).<br />- Spustí se **spuštění externího programu** a připojí se k aplikaci, která není součástí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projektu. Další informace najdete v tématu [připojení ke spuštěným procesům pomocí ladicího programu](attach-to-running-processes-with-the-visual-studio-debugger.md).<br />- **Spustit prohlížeč s adresou URL** vám umožní ladit webovou aplikaci. |
 | **Možnosti spuštění**  >  **Argumenty příkazového řádku** | Určuje argumenty příkazového řádku pro laděnou aplikaci. Název příkazu je název aplikace zadaný v části **spustit externí program**. |
 | **Možnosti spuštění**  >  **Pracovní adresář** | Určuje pracovní adresář laděné aplikace. V jazyce C# je pracovní adresář ve výchozím nastavení *\bin\debug* .

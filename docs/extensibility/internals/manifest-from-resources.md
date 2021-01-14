@@ -1,5 +1,7 @@
 ---
 title: Manifest from Resources | Microsoft Docs
+description: Naučte se používat Nástroj Manifest from Resources k přidávání souborů. png nebo. XAML do souboru. imagemanifest pro použití s imagí služby Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ea5931c77e267bc6065693be1ae144c250ce6df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52eee4fa826d92e7de389627a3d7a2afddcc9156
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536225"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204498"
 ---
 # <a name="manifest-from-resources"></a>Manifest z prostředků
 Nástroj Manifest from Resources je Konzolová aplikace, která přebírá seznam prostředků obrázků (soubory. png nebo. XAML) a generuje soubor. imagemanifest, který umožňuje použití těchto imagí ve službě image sady Visual Studio. Kromě toho lze pomocí tohoto nástroje Přidat obrázky do existujícího. imagemanifest. Tento nástroj je užitečný pro přidání vysokého rozlišení DPI a podpory pro obrázky do rozšíření sady Visual Studio. Vygenerovaný soubor. imagemanifest by měl být součástí a nasazen jako součást rozšíření sady Visual Studio (. vsix).
@@ -23,7 +25,7 @@ Nástroj Manifest from Resources je Konzolová aplikace, která přebírá sezna
 
  ManifestFromResources/Resources: \<Dir1> ; \<Img1> /Assembly je: \<AssemblyName>\<Optional Args>
 
- **Arguments**
+ **Argumenty**
 
 |**Název přepínače**|**Poznámky**|**Povinné nebo volitelné**|
 |-|-|-|

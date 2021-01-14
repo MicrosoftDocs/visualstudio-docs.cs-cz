@@ -1,5 +1,7 @@
 ---
 title: Přidání dat interakce vrstev z příkazového řádku | Microsoft Docs
+description: U vícevrstvých aplikací, které komunikují s jednou nebo více databázemi, použijte Profilování interakce vrstev pro informace o době provádění synchronních volání.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 20b8438243382b28cccb510894d1674aa5872946
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5e3dc7fc3ebbb3d06e85f7322237ecb72b22b0e
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779867"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205538"
 ---
 # <a name="add-tier-interaction-data-from-the-command-line"></a>Přidání dat interakce vrstev z příkazového řádku
 
@@ -32,7 +34,7 @@ Profilace interakce vrstev se dá shromáždit pomocí libovolné edice sady Vis
 
 **Shromažďovat data tipu na vzdáleném počítači**
 
-Chcete-li shromáždit data interakce vrstev na vzdáleném počítači, je nutné zkopírovat soubor ** \_ vs_profiler** _\<Platform>_ **\_** _\<Language>_ **. exe** ze složky _% VSINSTALLDIR%_**\Team Tools\Performance Tools\Setups** počítače aplikace Visual Studio do vzdáleného počítače a nainstalovat jej. Nástroje pro profilaci nelze použít v balíčku pro stažení [vzdáleného ladění](../debugger/remote-debugging.md) .
+Chcete-li shromáždit data interakce vrstev na vzdáleném počítači, je nutné zkopírovat soubor **\_ vs_profiler** _\<Platform>_ **\_** _\<Language>_ **. exe** ze složky _% VSINSTALLDIR%_**\Team Tools\Performance Tools\Setups** počítače aplikace Visual Studio do vzdáleného počítače a nainstalovat jej. Nástroje pro profilaci nelze použít v balíčku pro stažení [vzdáleného ladění](../debugger/remote-debugging.md) .
 
 **Sestavy tipů**
 
@@ -50,7 +52,7 @@ V následujícím příkladu je aplikace klasické pracovní plochy systému Win
 
 ### <a name="profile-a-windows-desktop-application-example"></a>Příklad profilování desktopové aplikace pro Windows
 
-1. Otevřete okno příkazového řádku s oprávněními správce. Klikněte na tlačítko **Start**, přejděte na příkaz **všechny programy**a pak na položku **příslušenství**. Klikněte pravým tlačítkem myši na **příkazový řádek**a pak klikněte na **Spustit jako správce**.
+1. Otevřete okno příkazového řádku s oprávněními správce. Klikněte na tlačítko **Start**, přejděte na příkaz **všechny programy** a pak na položku **příslušenství**. Klikněte pravým tlačítkem myši na **příkazový řádek** a pak klikněte na **Spustit jako správce**.
 
 2. Inicializujte profilaci .NET a proměnné prostředí TIP. Zadejte následující příkazy:
 
@@ -93,7 +95,7 @@ V následujícím příkladu je služba systému Windows profilovaná pomocí me
 
 1. V případě potřeby nainstalujte službu.
 
-2. Otevřete okno příkazového řádku s oprávněními správce. Klikněte na tlačítko **Start**, přejděte na příkaz **všechny programy**a pak na položku **příslušenství**. Klikněte pravým tlačítkem myši na **příkazový řádek**a pak klikněte na **Spustit jako správce**.
+2. Otevřete okno příkazového řádku s oprávněními správce. Klikněte na tlačítko **Start**, přejděte na příkaz **všechny programy** a pak na položku **příslušenství**. Klikněte pravým tlačítkem myši na **příkazový řádek** a pak klikněte na **Spustit jako správce**.
 
 3. Inicializujte proměnné prostředí pro profilování .NET. Zadejte následující příkaz:
 

@@ -1,5 +1,7 @@
 ---
 title: Stránka Ladění, návrhář projektu
+description: Chcete-li nastavit vlastnosti ladění v projektu Visual Basic nebo C#, použijte stránku ladit Návrháře projektu. Popis nastavení najdete v tomto článku.
+ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.technology: vs-ide-debug
 ms.topic: reference
@@ -14,18 +16,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 406b3ecdc0e4e3f0d45c22fc9201bd37c6031152
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8567b762e9858205e3ca8d6aafa8a3dba17a90fe
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418740"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205772"
 ---
 # <a name="debug-page-project-designer"></a>Stránka Ladění, návrhář projektu
 
 Pomocí stránky **ladění** v **Návrháři projektu** můžete nastavit vlastnosti pro chování ladění v projektu Visual Basic nebo C#.
 
-Chcete-li získat přístup ke stránce **ladění** , vyberte uzel projektu v **Průzkumník řešení**. V nabídce **projekt** klikněte na příkaz ** \<ProjectName> vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **ladění** .
+Chcete-li získat přístup ke stránce **ladění** , vyberte uzel projektu v **Průzkumník řešení**. V nabídce **projekt** klikněte na příkaz **\<ProjectName> vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **ladění** .
 
 > [!NOTE]
 > Toto téma se nevztahuje na aplikace pro UWP. Viz [zahájit ladicí relaci (VB, C#, C++ a XAML)](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md) pro aplikace pro UWP.
@@ -36,11 +38,11 @@ Následující možnosti umožňují vybrat konfiguraci a platformu pro zobrazen
 
 **Konfigurace**
 
-Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastavení lze **ladit** (výchozí), **vydávat**nebo **všechny konfigurace**.
+Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastavení lze **ladit** (výchozí), **vydávat** nebo **všechny konfigurace**.
 
 **Platforma**
 
-Určuje, která nastavení platformy se mají zobrazit nebo upravit. Volby můžou zahrnovat **jakýkoli procesor** (výchozí), **x64**a **x86**.
+Určuje, která nastavení platformy se mají zobrazit nebo upravit. Volby můžou zahrnovat **jakýkoli procesor** (výchozí), **x64** a **x86**.
 
 ## <a name="start-action"></a>Spustit akci
 
@@ -85,7 +87,7 @@ Zaškrtnutím nebo zrušením zaškrtnutí tohoto políčka povolíte nebo zaká
 ## <a name="see-also"></a>Viz také
 
 - [První seznámení s ladicím programem](../../debugger/debugger-feature-tour.md)
-- [Nastavení projektu pro konfiguraci ladění jazyka C#](../../debugger/project-settings-for-csharp-debug-configurations.md)
-- [Nastavení projektu pro konfiguraci ladění jazyka Visual Basic](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
+- [Nastavení projektu pro konfiguraci ladění v jazyce C#](../../debugger/project-settings-for-csharp-debug-configurations.md)
+- [Nastavení projektu pro konfiguraci Visual Basicho ladění](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
 - [Zabezpečení aplikací ClickOnce](../../deployment/securing-clickonce-applications.md)
 - [Postupy: Vytvoření a úprava konfigurací](../../ide/how-to-create-and-edit-configurations.md)

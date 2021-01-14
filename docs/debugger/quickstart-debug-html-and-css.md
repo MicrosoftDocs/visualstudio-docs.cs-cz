@@ -1,5 +1,7 @@
 ---
 title: Ladění HTML a CSS v aplikacích pro UWP | Microsoft Docs
+description: Zjistěte, jak ladit HTML a CSS v aplikacích Univerzální platforma Windows (UWP) v aplikaci Visual Studio. Funkce ladění JavaScriptu se podporují pro aplikace pro UWP.
+ms.custom: SEO-VS-2020
 ms.date: 07/17/2018
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 5e270956fc6c8f1d7432cb65e1eaf37fdc58907c
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: fafab7a2cbf660987de0365549aaa823a4e3445d
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211086"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205473"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Ladění HTML a CSS v aplikacích pro UWP v aplikaci Visual Studio
 
@@ -60,7 +62,7 @@ V následujícím postupu projdeme proces interaktivního ladění aplikace pomo
 
 1. Vytvořte nové řešení v aplikaci Visual Studio tak, že kliknete na **soubor**  >  **Nový projekt**.
 
-2. Zvolte **JavaScript**  >  **Windows Universal**a pak zvolte **aplikace WinJS**.
+2. Zvolte **JavaScript**  >  **Windows Universal** a pak zvolte **aplikace WinJS**.
 
 3. Zadejte název projektu, například `FlipViewApp` , a kliknutím na **tlačítko OK** vytvořte aplikaci.
 
@@ -149,7 +151,7 @@ V následujícím postupu projdeme proces interaktivního ladění aplikace pomo
 
     ![Vybrat cílový seznam pro ladění](../debugger/media/js_select_target.png "JS_Select_Target")
 
-8. Zvolte **ladění**  >  **Spustit ladění**nebo stiskněte klávesu F5 a spusťte aplikaci v režimu ladění.
+8. Zvolte **ladění**  >  **Spustit ladění** nebo stiskněte klávesu F5 a spusťte aplikaci v režimu ladění.
 
     Tím se aplikace spustí, ale zobrazí se většinou prázdná obrazovka, protože tento styl obsahuje několik chyb. První `FlipView` Obrázek se zobrazí v malém čtverečku uprostřed obrazovky.
 
@@ -182,7 +184,7 @@ V následujícím postupu projdeme proces interaktivního ladění aplikace pomo
 14. V hlavním okně klikněte dvakrát na tlačítko `width: 100px;height: 100px;` , stiskněte klávesu **Delete** a potom stiskněte klávesu **ENTER**. Po stisknutí klávesy ENTER se nové hodnoty v aplikaci okamžitě projeví, i když jste nezastavili relaci ladění.
 
     > [!IMPORTANT]
-    > Jak můžete aktualizovat atributy v okně Průzkumníka modelu DOM, můžete také aktualizovat hodnoty, které se zobrazí na kartách **styly**, **vypočítané**a **rozložení** .
+    > Jak můžete aktualizovat atributy v okně Průzkumníka modelu DOM, můžete také aktualizovat hodnoty, které se zobrazí na kartách **styly**, **vypočítané** a **rozložení** .
 
 15. Přepněte na aplikaci tak, že ji vyberete nebo použijete ALT + TAB.
 

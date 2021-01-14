@@ -1,5 +1,7 @@
 ---
 title: Pseudoproměnné | Microsoft Docs
+description: Přečtěte si Pseudoproměnné v ladicím programu sady Visual Studio. Pseudoproměnné jsou výrazy používané k zobrazení určitých dat v okně proměnných nebo v dialogovém okně QuickWatch.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5b0369a30e69fc69782bbc4a0f5b0c4518cac07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c5a76bf799eabd29b778c2dec867cc7e50aa45ee
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75776090"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205525"
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Pseudoproměnné v ladicím programu sady Visual Studio
 Pseudoproměnné jsou výrazy používané k zobrazení určitých informací v okně proměnných nebo v dialogovém okně **QuickWatch** . Pseudoproměnnou můžete zadat stejným způsobem, jako byste zadali normální proměnnou. Pseudoproměnné nejsou proměnné, ale neodpovídají názvům proměnných v programu.
@@ -64,7 +66,7 @@ Pseudoproměnné jsou výrazy používané k zobrazení určitých informací v 
 |`$exception`|Zobrazí informace o poslední výjimce. Pokud nedojde k žádné výjimce, vyhodnotí se `$exception` zobrazí chybová zpráva.|
 |`$delete` nebo `$$delete`|Odstraní implicitní proměnnou, která byla vytvořena v **příkazovém** okně. Syntaxe je `$delete,` *Proměnná* nebo `$delete,` *Proměnná* .`.`|
 |`$objectids` nebo `$listobjectids`|Zobrazí všechna aktivní ID objektů jako podřízené objekty určeného výrazu. Syntaxe je `$objectid,` *výraz* nebo `$listobjectids,` *výraz* .`.`|
-|`$` *N* `#`|Zobrazí objekt s ID objektu větším než *N*.|
+|`$`*N*`#`|Zobrazí objekt s ID objektu větším než *N*.|
 |`$dynamic`|Zobrazí speciální uzel **dynamického zobrazení** pro objekt, který implementuje rozhraní `IDynamicMetaObjectProvider` . Prostředí. Syntaxe je `$dynamic,` *Object*. Tato funkce se vztahuje pouze na kód, který používá .NET Framework verze 4 nebo novější.|
 
 ## <a name="see-also"></a>Viz také

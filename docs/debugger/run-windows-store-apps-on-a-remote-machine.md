@@ -1,5 +1,7 @@
 ---
 title: Ladění aplikací pro UWP na vzdálených počítačích | Microsoft Docs
+description: Přečtěte si, jak používat Visual Studio ke vzdálenému spuštění, ladění, profilování a otestování aplikace Univerzální platforma Windows (UWP) na jiném počítači nebo zařízení.
+ms.custom: SEO-VS-2020
 ms.date: 10/05/2018
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: c8e8305cb454bfc9f0fb0be4b9964ac1a7e4fe96
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: a28769237f0c1b0078e9c9c117695e68e5b521ac
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "92298715"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204953"
 ---
 # <a name="debug-uwp-apps-on-remote-machines-from-visual-studio"></a>Ladění aplikací pro UWP na vzdálených počítačích ze sady Visual Studio
 
@@ -41,15 +43,15 @@ Ladění aplikace UWP na vzdáleném zařízení ze sady Visual Studio:
 > [!CAUTION]
 > Ve výchozím nastavení stránka vlastností nastaví **univerzální (nešifrovaný protokol)** jako **typ ověřování** pro vzdálená připojení Windows 10. Možná budete muset nastavit **žádné ověřování** pro připojení ke vzdálenému ladicímu programu. **Univerzální (nešifrovaný protokol)** a **žádné ověřovací** protokoly neobsahují zabezpečení sítě, takže data předaná mezi vývojem a vzdálenými počítači jsou zranitelná. Tyto typy ověřování vyberte jenom pro důvěryhodné sítě, které jste si jisti, že nehrozí riziko škodlivých nebo nepřátelských přenosů.
 >
->Pokud pro **typ ověřování**zvolíte **ověřování systému Windows** , bude nutné se přihlásit ke vzdálenému počítači při ladění. Vzdálený ladicí program musí být spuštěný v režimu **ověřování systému Windows** se stejným uživatelským účtem jako na počítači sady Visual Studio.
+>Pokud pro **typ ověřování** zvolíte **ověřování systému Windows** , bude nutné se přihlásit ke vzdálenému počítači při ladění. Vzdálený ladicí program musí být spuštěný v režimu **ověřování systému Windows** se stejným uživatelským účtem jako na počítači sady Visual Studio.
 
 ### <a name="configure-a-c-or-visual-basic-project-for-remote-debugging"></a><a name="BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects"></a> Konfigurace projektu v jazyce C# nebo Visual Basic pro vzdálené ladění
 
-1. V aplikaci Visual Studio vyberte projekt C# nebo Visual Basic **Průzkumník řešení** a vyberte ikonu **vlastnosti** , stiskněte klávesu **ALT** + **ENTER**nebo klikněte pravým tlačítkem myši a zvolte možnost **vlastnosti**.
+1. V aplikaci Visual Studio vyberte projekt C# nebo Visual Basic **Průzkumník řešení** a vyberte ikonu **vlastnosti** , stiskněte klávesu **ALT** + **ENTER** nebo klikněte pravým tlačítkem myši a zvolte možnost **vlastnosti**.
 
 1. Vyberte kartu **ladit** .
 
-1. V části **cílové zařízení**vyberte **vzdálený** počítač pro vzdálený počítač nebo **zařízení** pro zařízení s Windows Mobile 10 připojené přímo.
+1. V části **cílové zařízení** vyberte **vzdálený** počítač pro vzdálený počítač nebo **zařízení** pro zařízení s Windows Mobile 10 připojené přímo.
 
 1. U vzdáleného počítače zadejte do pole **vzdálený počítač** název sítě nebo IP adresu, nebo vyberte **Najít** pro vyhledání zařízení v [dialogovém okně vzdálené připojení](#remote-connections).
 
@@ -57,7 +59,7 @@ Ladění aplikace UWP na vzdáleném zařízení ze sady Visual Studio:
 
 ### <a name="configure-a-c-project-for-remote-debugging"></a><a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a> Konfigurace projektu C++ pro vzdálené ladění
 
-1. Vyberte projekt C++ v aplikaci Visual Studio **Průzkumník řešení** a vyberte ikonu **vlastnosti** , stiskněte klávesu **ALT** + **ENTER**nebo klikněte pravým tlačítkem myši a zvolte možnost **vlastnosti**.
+1. Vyberte projekt C++ v aplikaci Visual Studio **Průzkumník řešení** a vyberte ikonu **vlastnosti** , stiskněte klávesu **ALT** + **ENTER** nebo klikněte pravým tlačítkem myši a zvolte možnost **vlastnosti**.
 
 1. Vyberte kartu **ladění** .
 
@@ -100,7 +102,7 @@ Vzdálené ladění funguje stejně jako místní ladění.
 
 1. V počítači se systémem Visual Studio se ujistěte, že je na panelu nástrojů vedle zelené šipky zobrazen správný cíl ladění (**vzdálený počítač** nebo **zařízení**).
 
-1. Spusťte ladění tak, že vyberete **ladění**  >  **Spustit ladění**, stisknete klávesu **F5**nebo vyberete zelenou šipku na panelu nástrojů.
+1. Spusťte ladění tak, že vyberete **ladění**  >  **Spustit ladění**, stisknete klávesu **F5** nebo vyberete zelenou šipku na panelu nástrojů.
 
    Projekt se překompiluje a pak se nasadí a spustí na vzdáleném zařízení. Ladicí program pozastaví provádění na zarážekch a můžete krokovat s kódem.
 

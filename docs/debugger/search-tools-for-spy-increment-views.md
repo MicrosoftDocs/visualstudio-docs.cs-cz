@@ -1,5 +1,7 @@
 ---
 title: Vyhledávací nástroje pro zobrazení nástroje Spy + + | Microsoft Docs
+description: Zobrazí se dialogová okna, která určují, jaká data se zobrazí v okně zobrazení nástroje Spy + +. Dialogová okna zahrnují okno najít, hledání v oknech, hledání zpráv, hledání procesů a hledání vláken.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7df3b27164eab0b78cdce72a8f938cb6e9743bcf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e302e9d5e9cc90a03afa5b7f0f6cc6e800287c7
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62902645"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204843"
 ---
 # <a name="search-tools-for-spy-views"></a>Vyhledávací nástroje pro zobrazení nástroje Spy++
 Tato dialogová okna slouží k určení dat, která se zobrazí v okně zobrazení nástroje Spy + +:

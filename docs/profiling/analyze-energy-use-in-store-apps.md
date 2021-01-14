@@ -1,5 +1,7 @@
 ---
 title: Analýza využití energie v aplikacích pro UWP | Microsoft Docs
+description: Pomocí profileru spotřeby v programu Visual Studio můžete analyzovat požadavky na energii a výkon aplikací pro UWP běžících na zařízeních s bateriemi.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ manager: jillfra
 ms.workload:
 - uwp
 monikerRange: vs-2017
-ms.openlocfilehash: 2945ef9879e83567f37ebe410ba9f265bfd64760
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: cf55035ba5a05917334b2192067a3273f4930775
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075454"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205785"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>Analýza spotřeby energie v aplikacích pro UWP
 
@@ -40,7 +42,7 @@ Profiler spotřeby energie používá tyto definice *energie* a *energie*:
 
    Všimněte si, že výkon má směr (množství práce se v čase může zvýšit nebo snížit) a rychlost (velikost zvýšení nebo snížení množství práce).
 
-- *Energie* měří celkové množství energie, buď jako kapacitu nebo potenciál, jako v rámci kapacity baterie, nebo jako celkové množství energie vynaložené v časovém intervalu. Jednotkou energie je watthodina, tedy výkon jednoho wattu konstantně působící po jednu hodinu. V **souhrnu energie**se jednotky zobrazují jako miliwatthodinách-hodiny **MW-h**.
+- *Energie* měří celkové množství energie, buď jako kapacitu nebo potenciál, jako v rámci kapacity baterie, nebo jako celkové množství energie vynaložené v časovém intervalu. Jednotkou energie je watthodina, tedy výkon jednoho wattu konstantně působící po jednu hodinu. V **souhrnu energie** se jednotky zobrazují jako miliwatthodinách-hodiny **MW-h**.
 
 ![Kapacita energie, využité napájení, celkové využití energie](../profiling/media/energyprof_capcitypowerused.png)
 
@@ -126,7 +128,7 @@ if (performance && performance.mark) {
 
 |Image|Popis|
 |-|-|
-|![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Soubor sestavy má název Report*RRRRMMDD-hhmm*. diagsession. Pokud se rozhodnete sestavu uložit, můžete název změnit.|
+|![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Soubor sestavy má název Report *RRRRMMDD-hhmm*. diagsession. Pokud se rozhodnete sestavu uložit, můžete název změnit.|
 |![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Časová osa ukazuje délku relace profilace, aktivační události životního cyklu aplikace a uživatelské značky.|
 |![Krok 3](../profiling/media/procguid_3.png "ProcGuid_3")|Přetažením modrých panelů můžete vybrat určitou oblast časové osy a omezit tak sestavu jen na tuto část časové osy.|
 |![Krok 4](../profiling/media/procguid_4.png "ProcGuid_4")|Graf **využití napájení** je víceřádkový graf, který zobrazuje změnu ve výstupu napájení způsobenou prostředkem zařízení během relace profilování. Profiler Spotřeba energie sleduje výkon využívaný procesorem, síťovou aktivitou a displejem.|

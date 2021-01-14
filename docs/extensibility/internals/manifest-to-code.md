@@ -1,5 +1,7 @@
 ---
 title: Manifest to Code | Microsoft Docs
+description: Naučte se používat manifest z nástroje Code, který přebírá soubor. imagemanifest pro použití s imagí služby Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e21f266cc0dea39cfbaba660ef3557af6023c104
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ca43ac07bbdcec98cd204cb2720ac9f2cdef1f1
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536120"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204550"
 ---
 # <a name="manifest-to-code"></a>Manifest do kódu
 Nástroj Manifest to Code je Konzolová aplikace, která přebírá soubor. imagemanifest pro službu image sady Visual Studio a generuje soubor obálky nebo soubory pro odkazování na hodnoty manifestu obrázků v souborech C++, C#, VB nebo. vsct pro rozšíření sady Visual Studio. Tento nástroj generuje obálky soubory, které lze použít pro vyžádání imagí z aplikace Visual Studio Image Service přímo, nebo pro předání hodnot manifestu prostřednictvím rozhraní API, pokud kód nezpracovává žádné vlastní uživatelské rozhraní a vykreslování.
@@ -23,7 +25,7 @@ Nástroj Manifest to Code je Konzolová aplikace, která přebírá soubor. imag
 
  ManifestToCode/manifest: \<Image Manifest file> /Language: \<Code Language>\<Optional Args>
 
- **Arguments**
+ **Argumenty**
 
 |**Název přepínače**|**Poznámky**|**Povinné nebo volitelné**|
 |-|-|-|

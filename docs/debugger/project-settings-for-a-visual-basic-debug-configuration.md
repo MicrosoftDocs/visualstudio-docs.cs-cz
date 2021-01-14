@@ -1,6 +1,7 @@
 ---
 title: Nastavení projektu pro konfiguraci ladění VB | Microsoft Docs
-ms.custom: seodec18
+description: Naučte se, jak změnit nastavení projektu pro Visual Basic konfiguraci ladění v okně stránky vlastností sady Visual Studio.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bcac88c2faf1af7378ce25597789700df61648a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 277d78b225afae13d73e091c1228e181df30e532
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72730607"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205590"
 ---
 # <a name="project-settings-for-a-visual-basic-debug-configuration"></a>Nastavení projektu pro konfiguraci ladění jazyka Visual Basic
 Můžete změnit nastavení projektu pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] konfiguraci ladění v okně **stránky vlastností** , jak je popsáno v tématu [Konfigurace ladění a vydání](../debugger/how-to-set-debug-and-release-configurations.md). Následující tabulky ukazují, kde najít nastavení související s ladicím programem v okně **stránky vlastností** .
@@ -40,7 +41,7 @@ Můžete změnit nastavení projektu pro [!INCLUDE[vbprvb](../code-quality/inclu
 
 | Nastavení | Popis |
 |------------------------------| - |
-| **Konfigurace** | Nastaví režim pro kompilaci aplikace. Výběr mezi **aktivními (ladění)**, **laděním**, **vydáním**a **všemi konfiguracemi**. |
+| **Konfigurace** | Nastaví režim pro kompilaci aplikace. Výběr mezi **aktivními (ladění)**, **laděním**, **vydáním** a **všemi konfiguracemi**. |
 | **Spustit akci** | Tato skupina ovládacích prvků Určuje akci, ke které dojde při zvolení možnosti spustit v nabídce ladění.<br /><br /> -   **Spustit projekt** je výchozí a spustí spouštěný projekt pro ladění. <br />-   **Spustit externí program** umožňuje spustit program a připojit se k programu, který není součástí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projektu. Další informace najdete v tématu [připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).<br />-   Možnost **spustit prohlížeč v adrese URL** vám umožní ladit webovou aplikaci. |
 | **Argumenty příkazového řádku** | Určuje argumenty příkazového řádku pro program, který se má ladit. Název příkazu je název programu zadaný v části spustit externí program. Pokud je počáteční akce nastavená na počáteční adresu URL, argumenty příkazového řádku se ignorují. |
 | **Pracovní adresář** | Určuje pracovní adresář programu, který se má ladit. V nástroji [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] je pracovním adresářem adresář, ze kterého se aplikace spouští. Výchozí pracovní adresář je \bin\Debug nebo \bin\Release, v závislosti na aktuální konfiguraci. |

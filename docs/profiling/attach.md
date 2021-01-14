@@ -1,5 +1,7 @@
 ---
 title: Připojit | Microsoft Docs
+description: Pomocí možnosti připojit VSPerfCmd.exe spustíte profilování spuštěného procesu určeného ID procesu (PID).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 79614283-6733-4592-a53a-d428052271ad
@@ -9,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 482b3e80bce796910860cb7eab1e5a0066854238
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c97dee50d58b49092d9b23a497192b29746e0c22
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329863"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205694"
 ---
 # <a name="attach"></a>Připojit
 Možnost *VSPerfCmd.exe* **připojit** spustí ukázku profilace spuštěného procesu určeného ID procesu (PID).

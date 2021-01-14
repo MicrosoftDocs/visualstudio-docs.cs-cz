@@ -1,5 +1,7 @@
 ---
 title: Chyby vzdáleného ladění a řešení potíží | Microsoft Docs
+description: Umožňuje zobrazit odkazy na běžné chyby vzdáleného ladění v aplikaci Visual Studio. Přečtěte si, jak spustit vzdálený ladicí program jako správce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b413ce193e6761d515de5bc5ef30fae8e18a3a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0260f939c8f6b7e5bed77ec42a4720adf0a4c720
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316134"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205655"
 ---
 # <a name="remote-debugging-errors-and-troubleshooting"></a>Chyby a řešení potíží se vzdáleným laděním
 
@@ -35,7 +37,7 @@ Při pokusu o ladění vzdáleně může docházet k následujícím chybám.
 
 - [Chyba: Zdá se, že sledování vzdáleného ladění sady Microsoft Visual Studio (MSVSMON.EXE) na vzdáleném počítači neběží.](error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running.md)
 
-- [Nepodařilo se připojit ke sledování Microsoft Visual Studio Remote Debugging Monitor.](../debugger/unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md)
+- [Nelze se připojit k Microsoft Visual Studio Sledování vzdáleného ladění](../debugger/unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md)
 
 - [Chyba: Vzdálený počítač se nezobrazuje v dialogovém okně Vzdálená připojení](../debugger/error-remote-machine-does-not-appear-in-a-remote-connections-dialog.md)
 
@@ -71,7 +73,7 @@ Chcete spustit vzdálený ladicí program jako správce v několika scénáříc
 
 - Pokoušíte se spustit jiný proces a proces, který chcete spustit, je správce.
 
-Nechcete spustit jako správce, pokud chcete spouštět procesy a proces, který chcete spustit, **by neměl být** správcem. **not**
+Nechcete spustit jako správce, pokud chcete spouštět procesy a proces, který chcete spustit, **by neměl být** správcem. 
 
 ## <a name="see-also"></a>Viz také
 - [Vzdálené ladění](../debugger/remote-debugging.md)

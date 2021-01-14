@@ -1,5 +1,7 @@
 ---
 title: Rozhraní služby starší verze jazyka | Microsoft Docs
+description: Přečtěte si o rozhraních dostupných v sadě Visual Studio SDK, která poskytují funkce služby starší verze jazyka.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 89d80d6961f5eaf91721567ccb0efa73bbe31406
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cb694389bbf6f913db084dca29f7787c6283d3ad
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707386"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205018"
 ---
 # <a name="legacy-language-service-interfaces"></a>Rozhraní služby starší verze jazyka
 V případě libovolného konkrétního programovacího jazyka může být v jednu chvíli dostupná jenom jedna instance jazykové služby. Jedna služba jazyka ale může obsluhovat více než jeden editor.

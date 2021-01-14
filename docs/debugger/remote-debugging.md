@@ -1,8 +1,10 @@
 ---
 title: Vzdálené ladění | Microsoft Docs
+description: Ladění aplikace sady Visual Studio, která byla nasazena v jiném počítači pomocí vzdáleného ladicího programu sady Visual Studio.
 ms.custom:
 - remotedebugging
 - seodec18
+- SEO-VS-2020
 ms.date: 07/02/2018
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8051b83e0022361e4cb1cb61602dfcf8991062e
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: e97fd8979235f8ea89b43c6466b3119debe5b3ca
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "92298686"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205668"
 ---
 # <a name="remote-debugging"></a>Vzdálené ladění
 Můžete ladit aplikaci Visual Studio, která byla nasazena v jiném počítači. K tomu je potřeba použít Visual Studio Remote Debugger.
@@ -93,7 +95,7 @@ Po prvním spuštění můžete změnit některé aspekty konfigurace vzdálené
      > [!IMPORTANT]
      > Vzdálený ladicí program lze spustit pod uživatelským účtem, který se liší od uživatelského účtu, který používáte v počítači se systémem Visual Studio, ale je nutné přidat jiný uživatelský účet do oprávnění vzdáleného ladicího programu.
 
-     Alternativně můžete spustit vzdálený ladicí program z příkazového řádku s parametrem **/Allow \<username> ** : **msvsmon/Allow \<username@computer> **.
+     Alternativně můžete spustit vzdálený ladicí program z příkazového řádku s parametrem **/Allow \<username>** : **msvsmon/Allow \<username@computer>**.
 
 - Pokud potřebujete změnit režim ověřování nebo číslo portu nebo zadat hodnotu časového limitu pro nástroje Remote Tools: zvolte **nástroje > možnosti**.
 
@@ -115,7 +117,7 @@ Pro ladění v ASP.NET a dalších serverových prostředích musíte buď spust
 
 4. Přidejte název uživatelského účtu a hesla.
 
-    K tomuto účtu možná budete muset přidat uživatelské právo **Přihlásit se jako služba** **(na** **úvodní** stránce nebo v okně zadejte příkaz **secpol** na příkazovém řádku). Po zobrazení okna poklikejte na **přiřazení uživatelských práv**a pak v pravém podokně vyhledejte možnost **Přihlásit se jako služba** . Poklikejte na ni. Přidejte uživatelský účet do okna **vlastnosti** a klikněte na tlačítko **OK**). Klikněte na **Next** (Další).
+    K tomuto účtu možná budete muset přidat uživatelské právo **Přihlásit se jako služba** **(na** **úvodní** stránce nebo v okně zadejte příkaz **secpol** na příkazovém řádku). Po zobrazení okna poklikejte na **přiřazení uživatelských práv** a pak v pravém podokně vyhledejte možnost **Přihlásit se jako služba** . Poklikejte na ni. Přidejte uživatelský účet do okna **vlastnosti** a klikněte na tlačítko **OK**). Klikněte na **Next** (Další).
 
 5. Vyberte typ sítě, se kterou mají nástroje Remote Tools komunikovat. Musí být vybrán alespoň jeden typ sítě. Pokud jsou počítače připojené přes doménu, měli byste zvolit první položku. Pokud jsou počítače připojené přes pracovní skupinu nebo domácí skupinu, měli byste zvolit druhou nebo třetí položku. Klikněte na **Next** (Další).
 
@@ -134,7 +136,7 @@ Pro ladění v ASP.NET a dalších serverových prostředích musíte buď spust
 ## <a name="see-also"></a>Viz také
 
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
-- [Konfigurace brány firewall ve Windows pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
+- [Konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Přiřazení portů vzdáleného ladicího programu](../debugger/remote-debugger-port-assignments.md)
 - [Vzdálené ladění ASP.NET Core na vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)
-- [Chyby a řešení potíží se vzdáleným laděním](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Chyby vzdáleného ladění a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)

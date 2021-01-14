@@ -1,5 +1,7 @@
 ---
 title: Features1 služby starší verze jazyka | Microsoft Docs
+description: Seznamte se s funkcemi sady Visual Studio, které jsou podporovány ve službě Managed Package Framework (MPF) Language.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c1f2a4010529d3d9727ceb76d6a34f2cbc41b959
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6e099798ff5fcc96e798742b16ba88e522a4bc0b
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238476"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205057"
 ---
 # <a name="legacy-language-service-features-1"></a>Funkce služby starší verze jazyka 1
 Služba jazyka Managed Package Framework (MPF) může podporovat jednu nebo více funkcí, jako je například [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zvýrazňování syntaxe, technologie IntelliSense a ověřování zarážek. Jednotlivé funkce je možné implementovat nezávisle na ostatních, ale všechny vyžadují analyzátor a skener s výjimkou zvýrazňování syntaxe, který vyžaduje jenom skener.

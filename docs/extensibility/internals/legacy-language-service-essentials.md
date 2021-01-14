@@ -1,5 +1,7 @@
 ---
 title: Základy služby starší verze jazyka | Microsoft Docs
+description: Přečtěte si o základních funkcích dostupných ve starších jazykových službách, které umožňují integrovat programovací jazyk do sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 501bccf755293e86e8a9dc23fce125a10c882376
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffa21b619ef17be3fa649732a2b6e3bcd700dda6
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707427"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205135"
 ---
 # <a name="legacy-language-service-essentials"></a>Základy služby starší verze jazyka
 Je nutné zadat jazykovou službu pro integraci programovacího jazyka do sady Visual Studio. V tomto tématu najdete vysvětlení funkcí dostupných ve starších jazykových službách.
@@ -45,4 +47,4 @@ Je nutné zadat jazykovou službu pro integraci programovacího jazyka do sady V
 | Funkce | Popis |
 |-----------------------| - |
 | Vyhodnocovací filtry výrazů | Podporuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladicí program pomocí ověřování zarážek a zadání seznamu výrazů, které se mají zobrazit v okně **Automatické** ladění.<br /><br /> Další informace najdete v tématu [Podpora jazykové služby pro ladění](../../extensibility/internals/language-service-support-for-debugging.md). |
-| Nástroje pro procházení symbolů | Podporuje **Prohlížeč objektů**, **zobrazení tříd**, **prohlížeč volání**a **výsledky hledání symbolů**. |
+| Nástroje pro procházení symbolů | Podporuje **Prohlížeč objektů**, **zobrazení tříd**, **prohlížeč volání** a **výsledky hledání symbolů**. |

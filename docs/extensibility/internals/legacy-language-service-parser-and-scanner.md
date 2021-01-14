@@ -1,5 +1,7 @@
 ---
 title: Analyzátor a skener služby starší verze jazyka | Microsoft Docs
+description: Seznamte se s analyzátorem a skenerem služby starší verze jazyka, který vybírá informace o zobrazeném kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c87f447a4b8bca804d27aae4967f4adaf389c627
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20c8c58a98887e5509026641ba0295fc167435e3
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707316"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204602"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>Analyzátor a skener služby starší verze jazyka
 Analyzátor je srdcem jazykové služby. Třídy jazyka Managed Package Framework (MPF) vyžadují analyzátor jazyka pro výběr informací o zobrazeném kódu. Analyzátor odděluje text na lexikální tokeny a pak tyto tokeny identifikuje podle typu a funkce.
@@ -43,7 +45,7 @@ namespace MyNamespace
 |----------------|----------------|
 |obor názvů, třída, veřejný, void, int|klíčové slovo|
 |=|operátor|
-|{ } ( ) ;|delimiter|
+|{ } ( ) ;|Oddělovač|
 |MyNamespace, MyClass, MyFunction, arg1, var1|identifikátor|
 |MyNamespace|namespace|
 |MyClass|třída|
@@ -68,7 +70,7 @@ namespace MyNamespace
 > [!CAUTION]
 > <xref:Microsoft.VisualStudio.Package.ParseRequest>Struktura obsahuje odkaz na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> objekt. Tento <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> objekt nelze použít ve vlákně na pozadí. Ve skutečnosti nelze mnoho základních tříd MPF použít ve vlákně na pozadí. Patří mezi ně třídy <xref:Microsoft.VisualStudio.Package.Source> , <xref:Microsoft.VisualStudio.Package.ViewFilter> , <xref:Microsoft.VisualStudio.Package.CodeWindowManager> a další třídy, které přímo nebo nepřímo komunikují se zobrazením.
 
- Tento analyzátor obvykle analyzuje celý zdrojový soubor při prvním volání nebo v případě, že hodnota důvod analýzy <xref:Microsoft.VisualStudio.Package.ParseReason> je uvedena. Následná volání <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metody zpracovávají malou část analyzovaného kódu a lze provést mnohem rychleji pomocí výsledků předchozí operace analýzy. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Metoda komunikuje výsledky operace analýzy prostřednictvím <xref:Microsoft.VisualStudio.Package.AuthoringSink> <xref:Microsoft.VisualStudio.Package.AuthoringScope> objektů a. <xref:Microsoft.VisualStudio.Package.AuthoringSink>Objekt se používá ke shromažďování informací pro konkrétní důvod analýzy, například informace o zarovnávání odpovídající závorky nebo signatury metod, které mají seznamy parametrů. <xref:Microsoft.VisualStudio.Package.AuthoringScope>Poskytuje kolekce deklarací a signatur metod a také podporu pro možnost přejít na pokročilou úpravu (Přejít na**definici**, **Přejít k deklaraci**, **Přejít na odkaz**).
+ Tento analyzátor obvykle analyzuje celý zdrojový soubor při prvním volání nebo v případě, že hodnota důvod analýzy <xref:Microsoft.VisualStudio.Package.ParseReason> je uvedena. Následná volání <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metody zpracovávají malou část analyzovaného kódu a lze provést mnohem rychleji pomocí výsledků předchozí operace analýzy. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Metoda komunikuje výsledky operace analýzy prostřednictvím <xref:Microsoft.VisualStudio.Package.AuthoringSink> <xref:Microsoft.VisualStudio.Package.AuthoringScope> objektů a. <xref:Microsoft.VisualStudio.Package.AuthoringSink>Objekt se používá ke shromažďování informací pro konkrétní důvod analýzy, například informace o zarovnávání odpovídající závorky nebo signatury metod, které mají seznamy parametrů. <xref:Microsoft.VisualStudio.Package.AuthoringScope>Poskytuje kolekce deklarací a signatur metod a také podporu pro možnost přejít na pokročilou úpravu (Přejít na **definici**, **Přejít k deklaraci**, **Přejít na odkaz**).
 
 ### <a name="the-iscanner-scanner"></a>IScanner skener
  Musíte taky implementovat skener, který implementuje <xref:Microsoft.VisualStudio.Package.IScanner> . Vzhledem k tomu, že tento skener pracuje na řádku po jednotlivých řádcích prostřednictvím <xref:Microsoft.VisualStudio.Package.Colorizer> třídy, je obvykle jednodušší implementovat. Na začátku každého řádku poskytne <xref:Microsoft.VisualStudio.Package.Colorizer> hodnota MPF hodnotu třídy, kterou chcete použít jako stavovou proměnnou, která je předána skeneru. Na konci každého řádku skener vrátí aktualizovanou stavovou proměnnou. Soubor MPF ukládá tyto informace o stavu pro každý řádek, aby mohl skener začít analyzovat z libovolného řádku, aniž by bylo nutné začít na začátku zdrojového souboru. Tato rychlá kontrola jediného řádku umožňuje editoru poskytnout uživateli rychlou zpětnou vazbu.
