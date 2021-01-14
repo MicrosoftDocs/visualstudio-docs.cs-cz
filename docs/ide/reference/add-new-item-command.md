@@ -4,8 +4,6 @@ description: Naučte se používat příkaz Přidat novou položku pro přidán�
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- project.addnewitem
 helpviewer_keywords:
 - Add New Item command
 - File.AddNewItem command
@@ -15,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac07b374ef08a963426b9bfd44f101a8863f04c8
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: d9045f9874c966ec0b9780b3ba2876912e433fbf
+ms.sourcegitcommit: 208f75ad89ad91b994701bb5cbc0a251fbaa3604
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95871285"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98166820"
 ---
 # <a name="add-new-item-command"></a>Přidat novou položku – příkaz
 Přidá novou položku řešení, jako je například. htm,. CSS,. txt nebo FRAMESET, do aktuálního řešení a otevře se.
@@ -35,7 +33,7 @@ File.AddNewItem [filename] [/t:templatename] [/e:editorname]
 `filename`\
 Nepovinný parametr. Cesta a název souboru položky, která se má přidat do řešení
 
-## <a name="switches"></a>Přepínače
+## <a name="switches"></a>přepínače,
 parametr `templatename`\
 Nepovinný parametr. Určuje typ souboru, který se má vytvořit. Pokud není zadán žádný název šablony, je ve výchozím nastavení vytvořen textový soubor.
 
@@ -65,7 +63,7 @@ Tento příklad přidá novou položku řešení MyHTMLpg do aktuálního řeše
 >File.AddNewItem MyHTMLpg /t:"General\HTML Page"
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
