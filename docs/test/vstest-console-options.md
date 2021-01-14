@@ -12,12 +12,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98d58b745b35870d287b6e81aa0a14fcdaeac921
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 0dc266b43d9a4634fe8cfbc05a3a070ae72cdaa9
+ms.sourcegitcommit: 1ceb58e3a1afa80a3211911ada4e5adaa1b1d439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598520"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192860"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe – možnosti příkazového řádku
 
@@ -44,7 +44,7 @@ V následující tabulce jsou uvedeny všechny možnosti pro *VSTest.Console.exe
 |**/Inisolation.**|Spustí testy v izolovaném procesu.<br />Díky této izolaci se *vstest.console.exe* proces méně pravděpodobně zastavil při chybě v testech, ale testy mohou běžet pomaleji.|
 |**/UseVsixExtensions**|Tato možnost umožňuje procesu *vstest.console.exe* použít nebo přeskočit nainstalovaná rozšíření VSIX (pokud existují) v testovacím běhu.<br />Tato možnost je zastaralá. Od další hlavní verze sady Visual Studio může být tato možnost odebrána. Přejděte k využití rozšíření, která jsou zpřístupněna jako balíček NuGet.<br />Příklad: `/UseVsixExtensions:true`|
 |**/TestAdapterPath: [*cesta*]**|Vynutí, aby proces *vstest.console.exe* používal vlastní testovací adaptéry ze zadané cesty (pokud existuje) v testovacím běhu.<br />Příklad: `/TestAdapterPath:[pathToCustomAdapters]`|
-|**/Platform: [*typ platformy*]**|Cílová architektura platformy, která se má použít pro spuštění testu.<br />Platné hodnoty jsou x86, x64 a ARM.|
+|**/Platform: [*typ platformy*]**|Vynutí použití dané platformy místo platformy zjištěné z aktuálního modulu runtime. Tato možnost je schopná vynutit jenom platformy x86 a x64 ve Windows. Možnost ARM je poškozená a výsledkem bude x64 ve většině systémů.<br />Nezadávejte tuto možnost, pokud chcete spustit v modulech runtime, které nejsou v seznamu platných hodnot, jako je ARM64.<br />Platné hodnoty jsou x86, x64 a ARM.<br /> 
 |**/Framework: [*Framework – verze*]**|Cílová verze rozhraní .NET, která se má použít pro spuštění testu.<br />Příklady hodnot jsou `Framework35` , `Framework40` , `Framework45` , `FrameworkUap10` , `.NETCoreApp,Version=v1.1` .<br />TargetFrameworkAttribute slouží k automatické detekci této možnosti ze sestavení a výchozím nastavením, `Framework40` Pokud atribut není přítomen. Tuto možnost je nutné zadat explicitně, pokud chcete odebrat [TargetFrameworkAttribute](/dotnet/api/system.runtime.versioning.targetframeworkattribute) ze sestavení .NET Core.<br />Je-li cílové rozhraní určeno jako **Framework35**, testy jsou spouštěny v modulu CLR 4,0 "režim kompatibility".<br />Příklad: `/Framework:framework40`|
 |**/TestCaseFilter: [*výraz*]**|Spustí testy, které odpovídají danému výrazu.<br />Výraz <\> má formát <vlastnost \> =<hodnota \> [ \|<ový výraz \> ].<br />Příklad: `/TestCaseFilter:"Priority=1"`<br />Příklad: `/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />Možnost příkazového řádku **/TestCaseFilter** nelze použít s parametrem příkazového řádku **/Tests** . <br />Informace o vytváření a používání výrazů najdete v tématu [testovací případ Filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).|
 |**/?**|Zobrazí informace o použití.|
