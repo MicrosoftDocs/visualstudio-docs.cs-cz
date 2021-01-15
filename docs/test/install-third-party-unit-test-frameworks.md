@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e6433d665157c186a390e2963ef7ad1447b2f982
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 9a5fbd9f396dfe0ed92c0590712f9fddb84c27a0
+ms.sourcegitcommit: 993fca11dc373a10150751bc2a045a9701a9db2f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329975"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240306"
 ---
 # <a name="install-unit-test-frameworks"></a>Nainstalovat rozhraní pro testování částí
 
@@ -23,7 +23,7 @@ Průzkumník testů sady Visual Studio může spouštět testy z libovolného ro
 Řešení sady Visual Studio může obsahovat projekty testování částí, které používají různá rozhraní a cílí na různé jazyky.
 
 ::: moniker range=">=vs-2019"
-Pro .NET, [MSTest, nunit a xUnit](getting-started-with-unit-testing.md) jsou testovací architektury poskytované aplikací Visual Studio, které jsou nainstalovány ve výchozím nastavení.
+Pro .NET, [MSTest, nunit a xUnit](getting-started-with-unit-testing.md) jsou testovací architektury poskytované aplikací Visual Studio, které jsou nainstalovány ve výchozím nastavení. Pro jazyk C++ jsou k dispozici různé sady testovacích rozhraní, například CTest.
 ::: moniker-end
 ::: moniker range="vs-2017"
 [MSTest](getting-started-with-unit-testing.md) je testovací rozhraní, které poskytuje Visual Studio a ve výchozím nastavení je nainstalované.
@@ -55,6 +55,6 @@ Aktualizujte na nejnovější stabilní testovací adaptér a vyzkoušejte si le
 
    ![Upgrade testovacího adaptéru](media/install-adapter-upgrade.png)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Testování částí kódu](../test/unit-test-your-code.md)

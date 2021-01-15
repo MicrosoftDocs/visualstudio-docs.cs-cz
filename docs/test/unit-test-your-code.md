@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: ba3db5b74a415d3736c37f54fdb708fde3436d92
-ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
+ms.openlocfilehash: dc82d72d7c0a333fc28146746a473ed359857490
+ms.sourcegitcommit: 993fca11dc373a10150751bc2a045a9701a9db2f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97756588"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240280"
 ---
-# <a name="unit-test-tools-and-tasks"></a>Nástroje a úlohy testování částí
+# <a name="unit-test-tools-and-tasks"></a>Nástroje pro testy jednotek a související úlohy
 
 Testy jednotek poskytují vývojářům a testerům rychlý způsob vyhledávání logických chyb v rámci metod tříd v projektech C#, Visual Basic a C++.
 
@@ -36,7 +36,7 @@ Nástroje testování částí zahrnují:
 
 * Rozhraní pro izolaci **falešného od Microsoftu** &mdash; Rozhraní pro izolaci falešné od společnosti Microsoft může vytvořit náhradní třídy a metody pro produkční a systémový kód .NET, které vytvářejí závislosti v testovaném kódu. Implementací napodobenin delegátů pro funkci je možné kontrolovat chování a výstup závislého objektu.
 
-Pomocí [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) můžete také prozkoumat kód .NET a vygenerovat testovací data a sadu testů jednotek. Pro každý příkaz v kódu se generuje zkušební vstup, který tento příkaz spustí.  Pro každou podmíněnou větev v kódu se provede případová analýza. 
+Pro .NET můžete použít také [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) k prozkoumávání kódu a generování testovacích dat a sady testů jednotek. Pro každý příkaz v kódu se generuje zkušební vstup, který tento příkaz spustí.  Pro každou podmíněnou větev v kódu se provede případová analýza. 
 
 ## <a name="key-tasks"></a>Klíčové úkoly
 
@@ -58,6 +58,6 @@ Následující články vám pomůžou pochopit a vytvářet testy jednotek:
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting> Popisuje obor názvů UnitTesting, který poskytuje atributy, výjimky, kontrolní výrazy a další třídy, které podporují testování částí.
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Web> Popisuje obor názvů UnitTesting. Web, který rozšiřuje obor názvů UnitTesting tím, že poskytuje podporu pro ASP.NET a testování částí webové služby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Zlepšení kvality kódu](../test/improve-code-quality.md)

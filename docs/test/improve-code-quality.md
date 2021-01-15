@@ -12,19 +12,19 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 0029321ddfc3ff12bb9c40dac9de64a9eb067a95
-ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
+ms.openlocfilehash: cc5a1a7b72dcbdba8b874958bbef47ac4b98e936
+ms.sourcegitcommit: 993fca11dc373a10150751bc2a045a9701a9db2f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97756640"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240319"
 ---
 # <a name="first-look-at-testing-tools-in-visual-studio"></a>První pohled na testovací nástroje v aplikaci Visual Studio
 
 Testovací nástroje sady Visual Studio můžou vám a vašemu týmu pomoct s vývojem a udržováním vysoké úrovně kvality kódu.
 
 > [!NOTE]
-> Testování částí je k dispozici ve všech edicích sady Visual Studio. Další testovací nástroje, například Live Unit Testing, IntelliTest a programový test uživatelského rozhraní, jsou k dispozici pouze v edici Visual Studio Enterprise. Další informace o edicích najdete v tématu [porovnání prostředí Visual Studio](https://visualstudio.microsoft.com/vs/compare/)s více procesory.
+> Testování částí je k dispozici ve všech edicích sady Visual Studio. Další testovací nástroje, například Live Unit Testing a IntelliTest, jsou k dispozici pouze v edici Visual Studio Enterprise. Další informace o edicích najdete v tématu [porovnání prostředí Visual Studio](https://visualstudio.microsoft.com/vs/compare/)s více procesory.
 
 ## <a name="test-explorer"></a>Průzkumník testů
 

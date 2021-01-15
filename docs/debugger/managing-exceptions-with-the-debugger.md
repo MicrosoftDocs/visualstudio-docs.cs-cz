@@ -34,12 +34,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 210f2b2fc3e037f58fed19031d7ae9762185a640
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: 58a701e6297cb81ce84c164b3b6791a6e73c76f8
+ms.sourcegitcommit: 993fca11dc373a10150751bc2a045a9701a9db2f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97903845"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240267"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Správa výjimek pomocí ladicího programu v aplikaci Visual Studio
 
@@ -221,10 +221,9 @@ Postup přidání podmíněných výjimek:
 
 4. Pokud potřebujete podmínku odstranit, klikněte na konci řádku podmínky na _ *X** *.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Pokračování v provádění po výjimce](../debugger/continuing-execution-after-an-exception.md)<br/>
 - [Postupy: Kontrola systémového kódu po výjimce](../debugger/how-to-examine-system-code-after-an-exception.md)<br/>
 - [Postupy: Použití nativních kontrol za běhu](../debugger/how-to-use-native-run-time-checks.md)<br/>
-- [Použití kontrol za běhu bez běhové knihovny jazyka C](../debugger/using-run-time-checks-without-the-c-run-time-library.md)<br/>
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
