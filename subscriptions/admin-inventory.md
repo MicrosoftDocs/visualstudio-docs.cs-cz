@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7d74e113-8fb2-490e-8502-48cce7b1327a
-ms.date: 10/22/2020
+ms.date: 01/14/2021
 ms.topic: conceptual
 description: Seznamte se s zodpovědností správců za účelem provádění předprodukčních inventářů.
-ms.openlocfilehash: b464a7d9cfa8c802cd2367c5c7d0e76141583f3a
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: abcb3c8c1213885b5e543b05cf912c418acaa3f5
+ms.sourcegitcommit: 4ee20054afe7bcf5c0aed504dec01e18059fbbd0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467424"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98226484"
 ---
 # <a name="inventory-of-pre-production-environment"></a>Inventář předprodukčního prostředí
 Předplatná sady Visual Studio zjednodušují správu prostředků, a to pomocí počítání uživatelů místo zařízení.
@@ -25,6 +25,9 @@ Tady je několik způsobů, jak zjednodušit inventarizaci předprodukčního pr
 - Pro inventarizaci systémů použijte automatizované nástroje. Je také možné, že budete muset použít nástroj inventáře softwaru, který vám umožní spravovat softwarové prostředky a rozlišovat předprodukční prostředí z produkčních prostředí. Mnoho zákazníků s Microsoft System Center vytvoří konvence pro pojmenování, které vám pomůžou automatizovat tuto část procesu inventarizace.
 - Získejte nápovědu k ručnímu odsouhlasení. Zařadíte své zaměstnance, který vám umožní sjednotit vývoj a testování uživatelů pomocí vývojového a testovacího prostředí.
 
+> [!NOTE]
+> Software předplatných sady Visual Studio není licencován pro produkční prostředí, včetně jakéhokoli prostředí, ke kterému mají koncoví uživatelé k dispozici více než testování přijetí nebo zpětnou vazbu, prostředí připojující se k provozní databázi, podporu zotavení po havárii nebo zálohování v provozu nebo využité pro produkční prostředí během období špičky aktivity. Mezi tyto výjimky patří konkrétní výhody pro určité úrovně předplatného, které jsou uvedené v [dokumentu White Paper licencování sady Visual Studio](https://aka.ms/vslicensing).  
+
 ## <a name="resources"></a>Prostředky
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
@@ -32,7 +35,7 @@ Tady je několik způsobů, jak zjednodušit inventarizaci předprodukčního pr
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 
