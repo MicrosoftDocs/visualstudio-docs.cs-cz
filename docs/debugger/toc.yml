@@ -180,8 +180,6 @@
                   href: native-run-time-checks-customization.md
                 - name: Zápis funkce zasílání zpráv o chybách za běhu
                   href: how-to-write-a-run-time-error-reporting-function.md
-                - name: Použití kontrol za běhu bez knihovny run-time jazyka C
-                  href: using-run-time-checks-without-the-c-run-time-library.md
         - name: Zadání symbolu (.pdb) a zdrojových souborů v ladicím programu
           href: specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md
         - name: Ladění uživatelského kódu
