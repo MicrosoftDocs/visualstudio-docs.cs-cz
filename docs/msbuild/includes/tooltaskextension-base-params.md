@@ -3,12 +3,12 @@ author: ghogen
 ms.author: ghogen
 ms.topic: include
 ms.date: 4/23/2020
-ms.openlocfilehash: 6fd0fc6fd4f2e54c0d15f649139b649797f8336f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7d4027c53f599b4a17d267d5ebf72eee1ed296b
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89043071"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98535299"
 ---
 ### <a name="tooltaskextension-parameters"></a>Parametry ToolTaskExtension –
 
@@ -19,9 +19,8 @@ Následující tabulka popisuje parametry základních tříd:
 | Parametr | Popis |
 | - | - |
 | <xref:Microsoft.Build.Utilities.ToolTask.EchoOff%2A> | Volitelný `bool` parametr.<br /><br /> Když je `true` Tato úloha nastavena na, projde tento úkol **/q** do *cmd.exe* příkazového řádku, aby se příkazový řádek nezkopíroval do STDOUT. |
-| <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A> | Volitelný `String` parametr pole.<br /><br /> Pole definic proměnných prostředí, které jsou odděleny středníky. Každá definice by měla určovat název a hodnotu proměnné prostředí oddělené symbolem rovná se. Tyto proměnné jsou předány do vytvořeného spustitelného souboru v kombinaci s běžným nebo selektivním přepsáním normálního bloku prostředí. Například, `Variable1=Value1;Variable2=Value2`. |
+| <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A> | Volitelný `String` parametr pole.<br /><br /> Pole definic proměnných prostředí, které jsou odděleny středníky. Každá definice by měla určovat název a hodnotu proměnné prostředí oddělené symbolem rovná se. Tyto proměnné jsou předány do vytvořeného spustitelného souboru v kombinaci s běžným nebo selektivním přepsáním normálního bloku prostředí. Například `Variable1=Value1;Variable2=Value2`. |
 | <xref:Microsoft.Build.Utilities.ToolTask.ExitCode%2A> | Volitelný `Int32` výstup – parametr jen pro čtení.<br /><br /> Určuje ukončovací kód, který je poskytnut spuštěným příkazem. Pokud úloha nahlásila chyby, ale proces měl ukončovací kód 0 (úspěch), je nastaven na hodnotu-1. |
-| <xref:Microsoft.Build.Utilities.ToolTask.LogStandardErrorAsError%2A> | `bool`Parametr možnosti.<br /><br /> Pokud `true` jsou všechny zprávy přijaté ve standardním datovém proudu chyb protokolovány jako chyby. |
 | <xref:Microsoft.Build.Utilities.ToolTask.LogStandardErrorAsError%2A> | Volitelný `bool` parametr.<br /><br /> Pokud `true` jsou všechny zprávy přijaté ve standardním datovém proudu chyb protokolovány jako chyby. |
 | <xref:Microsoft.Build.Utilities.ToolTask.StandardErrorImportance%2A> | Volitelný `String` parametr.<br /><br /> Důležitost, se kterou chcete protokolovat text z standardního výstupního proudu. |
 | <xref:Microsoft.Build.Utilities.ToolTask.StandardOutputImportance%2A> | Volitelný `String` parametr.<br /><br /> Důležitost, se kterou chcete protokolovat text z standardního výstupního proudu. |
