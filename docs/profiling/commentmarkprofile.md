@@ -1,5 +1,7 @@
 ---
 title: CommentMarkProfile | Microsoft Docs
+description: Pomocí funkce CommentMarkProfile vložte číselnou značku a textový řetězec do souboru *. vsp* .
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +14,15 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2972f9d470bebe3a65b7d525aa2b358d68ad5f1c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e943be08ffd586347ab5de54cb803bcedc8c24d7
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546585"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533586"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
-`CommentMarkProfile`Funkce vloží číselnou značku a textový řetězec do.* soubor VSP* . Pro značku a komentář, které mají být vloženy, musí být profilování vlákna, které obsahuje `CommentMarkProfile` funkci, Zapnuto.
+`CommentMarkProfile`Funkce vloží číselnou značku a textový řetězec do souboru *. vsp* . Pro značku a komentář, které mají být vloženy, musí být profilování vlákna, které obsahuje `CommentMarkProfile` funkci, Zapnuto.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,7 +57,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 ## <a name="remarks"></a>Poznámky
  Stav profilace vlákna obsahujícího profil značky musí být zapnutý, pokud jsou značky a komentáře vložené pomocí příkazu VSInstr Mark nebo with Functions (CommentMarkAtProfile, CommentMarkProfile nebo MarkProfile).
 
- Značky profilu jsou v oboru globální. Například značka Profile vložená v jednom vlákně může být použita k označení začátku nebo konce datového segmentu v jakémkoli vlákně v. soubor *VSP* .
+ Značky profilu jsou v oboru globální. Například značka Profile vložená v jednom vlákně může být použita k označení začátku nebo konce datového segmentu v jakémkoli vlákně v souboru *. vsp* .
 
 > [!IMPORTANT]
 > Metodu CommentMarkProfile lze použít pouze s instrumentací.
@@ -67,9 +69,9 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 
 |Položka|Hodnota|
 |-|-|
-|**Hlaviček**|Zahrnout VSPerf. h|
+|**Hlavička**|Zahrnout VSPerf. h|
 |**Knihovna**|Použití VSPerf. lib|
-|**Unicode**|Implementováno jako `CommentMarkProfileW` (Unicode) a `CommentMarkProfileA` (ANSI).|
+|**Kódování Unicode**|Implementováno jako `CommentMarkProfileW` (Unicode) a `CommentMarkProfileA` (ANSI).|
 
 ## <a name="example"></a>Příklad
  Následující kód ilustruje volání funkce CommentMarkProfile. Příklad předpokládá použití maker řetězců Win32 a nastavení kompilátoru Unicode k určení, zda kód volá [!INCLUDE[vcpransi](../profiling/includes/vcpransi_md.md)] volání funkce.
@@ -110,5 +112,5 @@ void ExerciseCommentMarkProfile()
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)

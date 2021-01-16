@@ -1,5 +1,7 @@
 ---
 title: Shromažďují se data interakce vrstev | Microsoft Docs
+description: Naučte se shromažďovat informace o profilování vrstev pro vícevrstvé aplikace, které komunikují s databázemi prostřednictvím služeb ADO.NET Services.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f7b2a2bb5efd86d052247825a29a06c7f5ad109
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 768cb173bca578c440e3209fe7b7a1df60fab1be
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331602"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533677"
 ---
 # <a name="collect-tier-interaction-data"></a>Shromažďování dat interakce vrstev
 
@@ -46,6 +48,6 @@ Z důvodu chyby v průvodci výkonem je nutné přidat možnost shromažďován�
 
 3. V Prohlížeč výkonu vyberte uzel **cíle** a pak určete projekt, spustitelný soubor nebo web, který chcete profilovat.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zobrazení interakcí vrstev](../profiling/tier-interactions-view.md)

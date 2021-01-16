@@ -1,5 +1,6 @@
 ---
 title: Shromažďování statistik výkonu pomocí vzorkování
+description: Pomocí metody vzorkování Nástroje pro profilaci můžete najít problémy s využitím procesoru. Je to navrhovaná metoda pro spuštění většiny šetření výkonu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9729bf46b58a9591df7b6470acde0c54ef23f531
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e5a58ec02fa6bff0dd06ce08b933a381bca37a80
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810728"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533729"
 ---
 # <a name="collect-performance-statistics-by-using-sampling"></a>Shromažďování statistik výkonu pomocí vzorkování
 
@@ -34,18 +35,18 @@ Metodu vzorkování můžete zadat pomocí jednoho z následujících postupů:
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
-Další možnosti můžete zadat v dialogovém okně**stránky vlastností** _relace výkonu_v relaci výkonu. Chcete-li otevřít toto dialogové okno:
+Další možnosti můžete zadat v dialogovém okně **stránky vlastností** _relace výkonu_ v relaci výkonu. Chcete-li otevřít toto dialogové okno:
 
-- V **prohlížeč výkonu**klikněte pravým tlačítkem myši na název relace výkonu a pak klikněte na **vlastnosti**.
+- V **prohlížeč výkonu** klikněte pravým tlačítkem myši na název relace výkonu a pak klikněte na **vlastnosti**.
 
-  Úlohy v následující tabulce popisují možnosti, které můžete zadat v dialogovém okně**stránky vlastností** _relace výkonu_při profilování pomocí metody vzorkování.
+  Úlohy v následující tabulce popisují možnosti, které můžete zadat v dialogovém okně **stránky vlastností** _relace výkonu_ při profilování pomocí metody vzorkování.
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |Na stránce **Obecné** přidejte kolekci data alokace a životnosti paměti .NET a zadejte podrobnosti o pojmenování pro vygenerovaný soubor dat profilování (. vsp).|- [Shromažďování dat o alokaci paměti a době platnosti .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />- [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|
 |Na stránce **vzorkování** změňte vzorkovací frekvenci, změňte událost vzorkování na časový cyklus procesoru na jiný čítač výkonu procesoru nebo změňte obě.|- [Postupy: výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md)|
 |Na stránce **spuštění** zadejte aplikaci, kterou chcete spustit, a v případě, že máte více projektů. exe ve vašem řešení kódu.|- [Shromažďování dat interakce vrstev](../profiling/collecting-tier-interaction-data.md)|
-|Na stránce **interakce vrstev** přidejte informace o volání ADO.NET do dat shromažďovaných v theprofiling běhu.|- [Shromažďování dat interakce vrstev](../profiling/collecting-tier-interaction-data.md)|
+|Na stránce **interakce vrstev** přidejte informace o volání ADO.NET do dat shromažďovaných při spuštění profilace.|- [Shromažďování dat interakce vrstev](../profiling/collecting-tier-interaction-data.md)|
 |Na stránce **události systému Windows** zadejte jednu nebo více událostí trasování událostí pro Windows (ETW), které se mají shromažďovat s daty vzorkování.|- [Postupy: shromažďování dat trasování událostí pro Windows (ETW)](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|
 |Na stránce **čítače systému Windows** zadejte jeden nebo více čítačů výkonu operačního systému, které mají být přidány do dat profilování jako značky.|- [Postupy: shromažďování dat čítače Windows](../profiling/how-to-collect-windows-counter-data.md)|
 |Na stránce **Upřesnit** určete verzi modulu runtime .NET Framework, který se má profilovat, pokud vaše aplikační moduly používají více verzí. Ve výchozím nastavení je první načtená verze profilovaná.|- [Postupy: určení modulu runtime .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|

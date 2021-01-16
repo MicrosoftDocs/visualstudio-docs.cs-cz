@@ -1,6 +1,6 @@
 ---
 title: Běžné vzory pro vícevláknové aplikace s nevhodným chováním
-description: Seznamte se s běžnými vzory pro vícevláknové aplikace, které jsou součástí nástroje Vizualizátor souběžnosti sady Visual Studio.
+description: Vizualizátor souběžnosti poskytuje grafy pro vícevláknové aplikace a galerii běžných vzorů, které se nesprávně chovají.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 36e14640da4d66134ca961607f66f6a355f6b9d9
-ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
+ms.openlocfilehash: f6d5139a0327af05f67c2a7429b1055fa80c2175
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "97815786"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533547"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Obecné vzory pro vícevláknové aplikace s nevhodným chováním
 
@@ -70,6 +70,6 @@ Vyvýšení nebo zneužití vstupně-výstupních operací je běžné příčin
 
 K uzamčení convoys dojde v případě, že aplikace získá zámky v rámci prvního přihlášeného, prvního dodávaného pořadí a když je míra doručení na zámek vyšší než sazba pořízení. Kombinace těchto dvou podmínek způsobí, že požadavky na zámek zahájí zálohování. Jedním ze způsobů, jak tento problém vyřešit, je použití "nenekalých" zámků, nebo zámků, které poskytují přístup k prvnímu vláknu, aby je bylo možné v odemčených stavech. Předchozí obrázek znázorňuje toto chování convoy. Chcete-li tento problém vyřešit, zkuste snížit kolizí pro synchronizační objekty a zkuste použít nekalé zámky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

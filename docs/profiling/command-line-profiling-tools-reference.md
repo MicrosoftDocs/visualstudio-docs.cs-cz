@@ -1,5 +1,7 @@
 ---
-title: Referenční informace pro Nástroje pro profilaci příkazového řádku | Microsoft Docs
+title: Odkaz na Nástroje pro profilaci Command-Line | Microsoft Docs
+description: Nástroje pro sledování výkonu z příkazového řádku umožňují programátorům profilovat své aplikace na příkazovém řádku. Podívejte se na Přehled nástrojů s odkazy na podrobnosti.
+ms.custom: SEO-VS-2020.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a34ba40e-01b1-4386-90b1-c8e628a8c527
@@ -9,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 65eabb7a95afa04542bc4f2202b71ccc5aa71648
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c0bffb825b06b6fd807f08542e2c591aa87ad07
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772750"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533508"
 ---
 # <a name="command-line-profiling-tools-reference"></a>Referenční dokumentace nástrojů příkazového řádku pro profilaci
 Nástroje pro sledování výkonu z příkazového řádku umožňují programátorům profilovat své aplikace na příkazovém řádku. Následující nástroje příkazového řádku pro profilaci umožňují profilovat kód na příkazovém řádku.

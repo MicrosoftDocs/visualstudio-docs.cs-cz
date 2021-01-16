@@ -17,22 +17,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 638f67575a7214047cdb917c994179ac144e60b2
-ms.sourcegitcommit: 49c959911128a733ed2858db7c0e3b565f934b1a
+ms.openlocfilehash: ea072cf3e9a236fdc6a4ad66b1c0cf7ddcda1550
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238620"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533442"
 ---
 # <a name="common-msbuild-project-items"></a>Společné položky projektu nástroje MSBuild
 
-V nástroji MSBuild je položka pojmenovaný odkaz na jeden nebo více souborů. Položky obsahují metadata, jako jsou názvy souborů, cesty a čísla verzí. Všechny typy projektů v aplikaci Visual Studio mají několik položek společné. Tyto položky jsou definovány v souboru *Microsoft. Build. CommonTypes. xsd* .
+V nástroji MSBuild je položka pojmenovaný odkaz na jeden nebo více souborů. Položky obsahují metadata, jako jsou názvy souborů, cesty a čísla verzí. Všechny typy projektů v aplikaci Visual Studio mají několik položek společné. Tyto položky jsou definovány v souboru *Microsoft. Build. CommonTypes. xsd*.
 
 ## <a name="common-items"></a>Společné položky
 
 Níže je seznam všech běžných položek projektu.
 
-### <a name="reference"></a>Odkaz
+### <a name="reference"></a>Reference
 
 Představuje odkaz sestavení (spravovaného) v projektu.
 
@@ -120,7 +120,7 @@ Představuje prostředky, které mají být vloženy do generovaného sestavení
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
 | Logický operátor | Povinný řetězec. Logický název vloženého prostředku. |
 
-### <a name="content"></a>Obsah
+### <a name="content"></a>Content
 
 Představuje soubory, které nejsou zkompilovány do projektu, ale mohou být vloženy nebo publikovány společně s ní.
 
@@ -189,5 +189,4 @@ Představuje sestavení, jejichž obory názvů by měly být importovány Visua
 ## <a name="see-also"></a>Viz také:
 
 - [Obecné vlastnosti projektu nástroje MSBuild](../msbuild/common-msbuild-project-properties.md)
-- [Vlastnosti nástroje MSBuild pro projekty .NET Core SDK](/dotnet/core/project-sdk/msbuild-props)
 - [Společná metadata položky MSBuild](common-msbuild-item-metadata.md)

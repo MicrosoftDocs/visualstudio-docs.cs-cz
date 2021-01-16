@@ -1,5 +1,7 @@
 ---
 title: Concurrency – obor názvů (Vizualizátor souběžnosti) | Microsoft Docs
+description: Pro zápis souběžných programů v jazyce C++ použijte obor názvů Concurrency, který poskytuje přístup k Concurrency Runtime, rozhraní Concurrency pro jazyk C++.
+custom.ms: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 258cb5964946d5dbf136463538905d970346b8df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdb9f2cee62c126f7a8b91fb7be57f558c9a7e5c
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63001077"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533430"
 ---
 # <a name="concurrency-namespace-concurrency-visualizer"></a>Concurrency – obor názvů (Vizualizátor souběžnosti)
 `Concurrency`Obor názvů poskytuje třídy a funkce, které vám umožní přístup k Concurrency Runtime, souběžně programovací rozhraní pro C++. Další informace najdete v tématu [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime).
@@ -39,5 +41,5 @@ namespace Concurrency;
 ## <a name="requirements"></a>Požadavky
  **Záhlaví:** cvmarkersobj. h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Referenční dokumentace knihovny jazyka C](../profiling/c-library-reference.md)

@@ -1,5 +1,6 @@
 ---
 title: Profiler příkazového řádku – získání dat paměti webové aplikace v ASP.NET
+description: Naučte se používat nástroj příkazového řádku VSPerfCmd ke shromáždění přidělení paměti a data životnosti objektu pro webovou aplikaci ASP.NET.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 690b3cd03d245281b488f2bb2b77ebdebedd00c2
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b2cb0e199e543152b9d11da4b4de014c9465c1b7
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809411"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533768"
 ---
 # <a name="collect-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line"></a>Shromažďování dat paměti z webové aplikace ASP.NET pomocí příkazového řádku profileru
 Tato část popisuje postupy a možnosti pro shromažďování přidělení paměti a dat o životnosti objektů pro webovou aplikaci v ASP.NET pomocí nástroje příkazového řádku **VSPerfCmd** .
@@ -28,7 +29,7 @@ Tato část popisuje postupy a možnosti pro shromažďování přidělení pam�
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**Připojení profileru k běžící aplikaci ASP.NET**|-   [Postupy: Připojení profileru k webové aplikaci ASP.NET ke shromažďování dat paměti](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line.md)|
 |**Instrumentace staticky kompilovaných binárních souborů**|-   [Postupy: Instrumentace staticky kompilované aplikace ASP.NET a shromažďování dat paměti](../profiling/how-to-instrument-a-statically-compiled-aspnet-app-and-collect-memory-data.md)|
@@ -38,7 +39,7 @@ Tato část popisuje postupy a možnosti pro shromažďování přidělení pam�
 
 ### <a name="profile-aspnet-web-applications"></a>ASP.NET webové aplikace Profile
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**Profilování pomocí metody vzorkování**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|
 |**Profilování pomocí metody instrumentace**|-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
@@ -46,7 +47,7 @@ Tato část popisuje postupy a možnosti pro shromažďování přidělení pam�
 
 ### <a name="profile-net-framework-memory-data"></a>Profilovat data .NET Framework paměti
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |**Samostatné (klientské) aplikace profilu**|-   [Shromažďování dat .NET Framework paměti](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|
 |**Profilovací služby**|-   [Shromažďovat data paměti .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|
@@ -54,5 +55,5 @@ Tato část popisuje postupy a možnosti pro shromažďování přidělení pam�
 ### <a name="analyze-net-memory-data-views-and-reports"></a>Analýza zobrazení a sestav dat paměti .NET
 - [Zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md)
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
 - [Referenční dokumentace nástrojů příkazového řádku pro profilaci](../profiling/command-line-profiling-tools-reference.md)

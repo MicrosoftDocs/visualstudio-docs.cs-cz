@@ -1,5 +1,7 @@
 ---
-title: Profilace webových aplikací ASP.NET v příkazovém řádku | Microsoft Docs
+title: Command-Line profilování webových aplikací ASP.NET | Microsoft Docs
+description: Naučte se, jak pomocí Nástroje pro profilaci z příkazového řádku shromažďovat údaje o výkonu pro webové aplikace v ASP.NET.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: aa184667e5d569bc2662052a29b25bfea6e470a7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4c95890ae4022b854b76d2e4857fc2a27ce97e5
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779568"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533690"
 ---
 # <a name="command-line-profiling-of-aspnet-web-applications"></a>Profilace webových aplikací ASP.NET z příkazového řádku
 Tato část popisuje postupy a možnosti pro shromažďování údajů o výkonu [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webových aplikací pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci z příkazového řádku.

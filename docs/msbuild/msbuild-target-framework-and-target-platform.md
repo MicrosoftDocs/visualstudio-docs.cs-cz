@@ -10,16 +10,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d29c4e4659e8e6a5564e3fb41f54615bf29171d2
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 958f33a39126f8f48cf29bad1c25c7d962513ed0
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049098"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533859"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>Cílová architektura a cílová platforma nástroje MSBuild
 
-Projekt může být sestaven pro spuštění na *cílovém rozhraní* , což je konkrétní verze .NET Framework a *cílovou platformu* , která je konkrétní softwarovou architekturou.  Můžete například cílit na aplikaci tak, aby běžela na .NET Framework 2,0 na 32 platformě, která je kompatibilní s řadou procesorů 80x86 (x86). Kombinace cílového rozhraní a cílové platformy je označována jako *cílový kontext* .
+Projekt může být sestaven pro spuštění na *cílovém rozhraní*, což je konkrétní verze .NET Framework a *cílovou platformu*, která je konkrétní softwarovou architekturou.  Můžete například cílit na aplikaci tak, aby běžela na .NET Framework 2,0 na 32 platformě, která je kompatibilní s řadou procesorů 80x86 (x86). Kombinace cílového rozhraní a cílové platformy je označována jako *cílový kontext*.
 
 > [!IMPORTANT]
 > Tento článek ukazuje starý způsob, jak zadat cílovou architekturu. Projekty ve stylu sady SDK umožňují různé TargetFramework, jako je netstandard. Další informace naleznete v tématu [cílová rozhraní](/dotnet/standard/frameworks).
@@ -74,11 +74,11 @@ Cílová architektura je určena ve `TargetFrameworkVersion` vlastnosti v soubor
 
 ## <a name="target-platform"></a>Cílová platforma
 
- *Platforma* je kombinací hardwaru a softwaru, který definuje konkrétní běhové prostředí. Příklad:
+ *Platforma* je kombinací hardwaru a softwaru, který definuje konkrétní běhové prostředí. Třeba
 
 - `x86` Určuje 32 operační systém Windows, který běží na procesoru Intel 80x86 nebo jeho ekvivalent.
 
-- `x64` Určuje 64 operační systém Windows, který běží na procesoru Intel x64 nebo který je ekvivalentní.
+- `x64` označuje 64 operační systém Windows, který běží na procesoru Intel x64 nebo jeho ekvivalent.
 
 - `Xbox` označuje platformu Microsoft Xbox 360.
 
@@ -91,7 +91,7 @@ Cílová architektura je určena ve `TargetFrameworkVersion` vlastnosti v soubor
 
 ```
 
-*Cílová konfigurace* je podmnožinou cílové platformy. Například `x86` `Debug` konfigurace nezahrnuje většinu optimalizací kódu. Cílová konfigurace je určena ve `Configuration` vlastnosti Build v souboru projektu. Cílovou konfiguraci můžete změnit pomocí stránky vlastností projektu nebo **Configuration Manager** .
+*Cílová konfigurace* je podmnožinou cílové platformy. Například `x86` `Debug` konfigurace nezahrnuje většinu optimalizací kódu. Cílová konfigurace je určena ve `Configuration` vlastnosti Build v souboru projektu. Cílovou konfiguraci můžete změnit pomocí stránky vlastností projektu nebo **Configuration Manager**.
 
 ```xml
 <PropertyGroup>
@@ -101,6 +101,6 @@ Cílová architektura je určena ve `TargetFrameworkVersion` vlastnosti v soubor
 
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Cílení na více verzí](../msbuild/msbuild-multitargeting-overview.md)

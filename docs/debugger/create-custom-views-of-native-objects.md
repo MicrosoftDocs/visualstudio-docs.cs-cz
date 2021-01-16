@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37bfd1ab57fd0e37f32a55d5bfc3787cb0c0cbd2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60d817c3600eaa82eb7f67489d5dadadaba3932f
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88248054"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533963"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Vytváření vlastních zobrazení objektů C++ v ladicím programu pomocí architektury Natvis
 
@@ -72,21 +72,21 @@ Soubor *. Natvis* můžete přidat do jakéhokoli projektu jazyka C++.
 
 **Postup přidání nového souboru *Natvis* :**
 
-1. Vyberte uzel projektu C++ v **Průzkumník řešení**, vyberte **projekt**  >  **Přidat novou položku**nebo klikněte pravým tlačítkem myši na projekt a vyberte možnost **Přidat**  >  **novou položku**.
+1. Vyberte uzel projektu C++ v **Průzkumník řešení**, vyberte **projekt**  >  **Přidat novou položku** nebo klikněte pravým tlačítkem myši na projekt a vyberte možnost **Přidat**  >  **novou položku**.
 
-1. V dialogovém okně **Přidat novou položku** vyberte **Visual C++**  >  **Utility**  >  **soubor vizualizace ladicího programu nástroje Visual C++ Utility (. Natvis)**.
+1. V dialogovém okně **Přidat novou položku** vyberte   >    >  **soubor vizualizace ladicího programu nástroje Visual C++ Utility (. Natvis)**.
 
 1. Zadejte název souboru a vyberte **Přidat**.
 
-   Nový soubor se přidá do **Průzkumník řešení**a otevře se v podokně dokumentu sady Visual Studio.
+   Nový soubor se přidá do **Průzkumník řešení** a otevře se v podokně dokumentu sady Visual Studio.
 
 Ladicí program sady Visual Studio načte soubory *. Natvis* v projektech C++ automaticky a ve výchozím nastavení je také zahrne do souboru *. pdb* při sestavení projektu. Pokud ladíte sestavenou aplikaci, ladicí program načte soubor *. Natvis* ze souboru *. pdb* , i když projekt ještě nemáte otevřený. Pokud nechcete, aby soubor *. Natvis* byl součástí souboru. *PDB*, můžete ho vyloučit z vytvořeného souboru *. pdb* .
 
 **Vyloučení souboru *. Natvis* z *PDB*:**
 
-1. V **Průzkumník řešení**vyberte soubor *. Natvis* a vyberte ikonu **vlastnosti** , nebo klikněte pravým tlačítkem na soubor a vyberte **vlastnosti**.
+1. V **Průzkumník řešení** vyberte soubor *. Natvis* a vyberte ikonu **vlastnosti** , nebo klikněte pravým tlačítkem na soubor a vyberte **vlastnosti**.
 
-1. Přetáhněte šipku vedle seznamu **vyloučené ze sestavení** a vyberte možnost **Ano**a pak vyberte **OK**.
+1. Přetáhněte šipku vedle seznamu **vyloučené ze sestavení** a vyberte možnost **Ano** a pak vyberte **OK**.
 
 >[!NOTE]
 >Pro ladění spustitelných projektů použijte položky řešení k přidání jakýchkoli souborů *. Natvis* , které nejsou v souboru *. pdb*, protože není k dispozici žádný projekt C++.
@@ -167,6 +167,12 @@ Vizualizace Natvis používají výrazy jazyka C++ k určení datových položek
 
 - Chcete-li určit, jak se výraz zobrazí, můžete použít libovolný specifikátor formátu popsaný v tématu [specifikátory formátu v jazyce C++](format-specifiers-in-cpp.md#BKMK_Visual_Studio_2012_format_specifiers). Specifikátory formátu jsou ignorovány, pokud je položka používána interně pomocí Natvis, jako je například `Size` výraz v [rozšíření ArrayItems](../debugger/create-custom-views-of-native-objects.md#BKMK_ArrayItems_expansion).
 
+>[!NOTE]
+> Vzhledem k tomu, že dokument natvis je XML, nemohou vaše výrazy přímo používat operátory ampersand, větší než, menší než nebo Shift. Tyto znaky je nutné vystavit v těle položky i v příkazech podmínky. Příklad:<br>
+> \<Item Name="HiByte"\>bytové (_flags \& gt; \& gt 24), x\</Item\><br>
+> \<Item Name="HiByteStatus" Condition="(_flags \&amp; 0xFF000000) == 0"\>NTato\</Item\><br>
+> \<Item Name="HiByteStatus" Condition="(_flags \&amp; 0xFF000000) != 0"\>Nějaký\</Item\>
+
 ## <a name="natvis-views"></a>Zobrazení Natvis
 
 Můžete definovat různá zobrazení Natvis pro zobrazení typů různými způsoby. Například zde je vizualizace `std::vector` , která definuje zjednodušené zobrazení s názvem `simple` . `DisplayString`Prvky a se `ArrayItems` zobrazí ve výchozím zobrazení a `simple` zobrazení, zatímco `[size]` položky a se `[capacity]` nezobrazují v `simple` zobrazení.
@@ -195,7 +201,7 @@ Když ladicí program narazí na chyby v položce vizualizace, ignoruje je. Buď
 
 **Zapnutí diagnostiky Natvis:**
 
-- V **Tools**nabídce  >  **Možnosti** nástrojů (nebo **Debug**  >  **Možnosti**ladění) **Debugging**>  >  **okno výstup**ladění nastavte chyby a **diagnostické zprávy Natvis (jenom C++)** na **Error**, **Warning**nebo **verbose**a pak vyberte **OK**.
+- V nabídce  >  **Možnosti** nástrojů (nebo   >  **Možnosti** ladění) >  >  **okno výstup** ladění nastavte chyby a **diagnostické zprávy Natvis (jenom C++)** na **Error**, **Warning** nebo **verbose** a pak vyberte **OK**.
 
 Chyby se zobrazí v okně **výstup** .
 
@@ -400,7 +406,7 @@ Během ladění můžete vybrat ikonu lupy vedle proměnné a pak vybrat **Vizua
 
  ![Data CStringt pomocí Vizualizér StringView](../debugger/media/dbg_natvis_stringview_cstringt.png "Data CStringt pomocí Vizualizér StringView")
 
-Výraz `{m_pszData,su}` obsahuje specifikátor formátu v jazyce C++ **su**pro zobrazení hodnoty jako řetězce Unicode. Další informace naleznete v tématu [specifikátory formátu v jazyce C++](../debugger/format-specifiers-in-cpp.md).
+Výraz `{m_pszData,su}` obsahuje specifikátor formátu v jazyce C++ pro zobrazení hodnoty jako řetězce Unicode. Další informace naleznete v tématu [specifikátory formátu v jazyce C++](../debugger/format-specifiers-in-cpp.md).
 
 ### <a name="expand-element"></a><a name="BKMK_Expand"></a> Rozbalit element
 

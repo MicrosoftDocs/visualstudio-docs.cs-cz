@@ -1,5 +1,6 @@
 ---
 title: Shromažďovat data souběžnosti procesu & procesů
+description: K shromažďování dat o každé události synchronizace, která způsobí, že funkce čeká na přístup k prostředkům, použijte metodu profilace Nástroje pro profilaci Concurrency.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f44b7785306fc486c8f550c41bcac199825b8ed
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c1f6d0dbc8c10c972957e2bcf8092d145bb3651c
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810715"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533742"
 ---
 # <a name="collect-thread-and-process-concurrency-data"></a>Shromažďování dat o souběžnosti vláken a procesů
 
@@ -31,13 +32,13 @@ Metodu profilace souběžnosti můžete zadat pomocí jednoho z následujících
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
-Další možnosti můžete zadat v dialogovém okně**stránky vlastností** _relace výkonu_v relaci výkonu. Chcete-li otevřít toto dialogové okno:
+Další možnosti můžete zadat v dialogovém okně **stránky vlastností** _relace výkonu_ v relaci výkonu. Chcete-li otevřít toto dialogové okno:
 
-- V **prohlížeč výkonu**klikněte pravým tlačítkem myši na název relace výkonu a pak klikněte na **vlastnosti**.
+- V **prohlížeč výkonu** klikněte pravým tlačítkem myši na název relace výkonu a pak klikněte na **vlastnosti**.
 
-Úkoly v následující tabulce popisují možnosti, které můžete zadat v dialogovém okně**stránky vlastností** _relace výkonu_při profilaci pomocí metody souběžnosti.
+Úkoly v následující tabulce popisují možnosti, které můžete zadat v dialogovém okně **stránky vlastností** _relace výkonu_ při profilaci pomocí metody souběžnosti.
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |Na stránce **Obecné** zadejte podrobnosti o pojmenování generovaného souboru dat profilování (. vsp).|- [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|
 |Na stránce **spuštění** určete aplikaci, která má být spuštěna, pokud máte více projektů. exe v rámci vašeho řešení kódu.|- [Postupy: Určení binárního souboru ke spuštění](../profiling/how-to-specify-the-binary-to-start.md)|

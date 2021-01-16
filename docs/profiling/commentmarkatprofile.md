@@ -1,5 +1,7 @@
 ---
 title: CommentMarkAtProfile | Microsoft Docs
+description: Použijte metodu CommentMarkAtProfile k vložení hodnoty časového razítka, číselné značky a řetězce komentáře do souboru. vsp.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,20 +14,20 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ee9eb5353109bcf5df6903e7e607a11b8bfd0536
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43e8f9806c724da414940c92b6609846486a49c0
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545610"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533521"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
-`CommentMarkAtProfile`Metoda vloží hodnotu časového razítka, číselnou značku a řetězec komentáře v.* soubor VSP* . Hodnota časového razítka se dá použít k synchronizaci externích událostí. Pro vložení značky a komentáře musí být profilace vlákna obsahující funkci CommentMarkAtProfile ZAPNUTá.
+`CommentMarkAtProfile`Metoda vloží hodnotu časového razítka, číselnou značku a řetězec komentáře do souboru *. vsp* . Hodnota časového razítka se dá použít k synchronizaci externích událostí. Pro vložení značky a komentáře musí být profilace vlákna obsahující funkci CommentMarkAtProfile ZAPNUTá.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
+PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
                                    __int64 dnTimestamp,
                                    long lMarker,
                                    LPCTSTR szComment);
@@ -70,9 +72,9 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 
 |Položka|Hodnota|
 |-|-|
-|**Hlaviček**|Zahrnout *VSPerf. h*|
+|**Hlavička**|Zahrnout *VSPerf. h*|
 |**Knihovna**|Použití *VSPerf. lib*|
-|**Unicode**|Implementováno jako CommentMarkAtProfileW (Unicode) a CommentMarkAtProfileA (ANSI).|
+|**Kódování Unicode**|Implementováno jako CommentMarkAtProfileW (Unicode) a CommentMarkAtProfileA (ANSI).|
 
 ## <a name="example"></a>Příklad
  Následující kód ilustruje použití volání obecné funkce CommentMarkAtProfile. Příklad předpokládá použití maker řetězců Win32 a nastavení kompilátoru pro ANSI k určení, zda kód volá funkci s povoleným kódováním ANSI.
@@ -115,5 +117,5 @@ void ExerciseCommentMarkAtProfile(void)
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)

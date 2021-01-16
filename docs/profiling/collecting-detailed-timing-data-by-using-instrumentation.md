@@ -1,5 +1,6 @@
 ---
 title: Shromažďování podrobných dat časování pomocí instrumentace
+description: Použijte metodu instrumentace Nástroje pro profilaci pro podrobné informace o časování oddílu kódu a pochopení dopadu vstupně-výstupních operací.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b5082066de22bee3954b297f30eebb7d89ec607
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 17c569a9f5a50b769af0881d47fe810afe18058e
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810767"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533846"
 ---
 # <a name="collect-detailed-timing-data-by-using-instrumentation"></a>Shromažďování podrobných dat časování pomocí instrumentace
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Metoda instrumentace nástroje pro profilaci vloží kód profilace do kopie modulu. Kód zaznamenává každé zadání, ukončení a volání funkce v modulu během běhu profilace. Metoda instrumentace je užitečná pro shromažďování podrobných informací o časování oddílu kódu a pro porozumění dopadu vstupních a výstupních operací na výkon aplikace.
@@ -32,13 +33,13 @@ ms.locfileid: "90810767"
 - Na stránce **Obecné** v dialogovém okně Vlastnosti pro relaci výkonu vyberte **instrumentace**.
 
 ## <a name="common-tasks"></a>Běžné úkoly
- Další možnosti můžete zadat v dialogovém okně**stránky vlastností** _relace výkonu_v relaci výkonu. Chcete-li otevřít toto dialogové okno:
+ Další možnosti můžete zadat v dialogovém okně **stránky vlastností** _relace výkonu_ v relaci výkonu. Chcete-li otevřít toto dialogové okno:
 
-- V **prohlížeč výkonu**klikněte pravým tlačítkem myši na název relace výkonu a pak klikněte na **vlastnosti**.
+- V **prohlížeč výkonu** klikněte pravým tlačítkem myši na název relace výkonu a pak klikněte na **vlastnosti**.
 
-  Úlohy v následující tabulce popisují možnosti, které můžete zadat v dialogovém okně**stránky vlastností** _relace výkonu_při profilaci pomocí metody instrumentace.
+  Úlohy v následující tabulce popisují možnosti, které můžete zadat v dialogovém okně **stránky vlastností** _relace výkonu_ při profilaci pomocí metody instrumentace.
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |Na stránce **Obecné** přidejte data o přidělování paměti .NET a životnosti a zadejte podrobnosti o pojmenování generovaného souboru dat profilování (. vsp).|-   [Shromažďování dat o alokaci paměti a době života .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />-   [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|
 |Pokud máte v řešení více projektů. exe, na **spouštěcí** stránce. Zadejte aplikaci, kterou chcete spustit, a jejich počáteční pořadí.|-   [Postupy: Určení binárního souboru ke spuštění](../profiling/how-to-specify-the-binary-to-start.md)|

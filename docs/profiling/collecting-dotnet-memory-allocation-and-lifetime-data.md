@@ -1,5 +1,6 @@
 ---
 title: Shromažďovat data o době života & pro přidělení paměti .NET
+description: Chcete-li zjistit problémy s výkonem související s pamětí v aplikaci .NET, použijte Nástroje pro profilaci ke shromáždění dat o přidělování paměti a životnosti objektů.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1354fb95b543e73a67d19204871f3b79aec9ece9
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: a9321ce83f65d5a7cac95d793d5f635651bef0e7
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809424"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533794"
 ---
 # <a name="collect-net-framework-memory-allocation-and-lifetime-data"></a>Shromažďovat data o přidělení a době životnosti .NET Framework paměti
 
@@ -45,7 +46,7 @@ Informace o tom, jak shromažďovat data paměti .NET pomocí Nástroje pro prof
 
 ## <a name="to-collect-net-memory-data"></a>Shromažďování dat paměti .NET
 
-1. V **prohlížeč výkonu**klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
+1. V **prohlížeč výkonu** klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
 
 2. V dialogovém okně **stránky vlastností** *relace výkonu* klikněte na kartu **Obecné** a zaškrtněte políčko **shromáždit informace o přidělení objektů .NET** .
 
@@ -53,13 +54,13 @@ Informace o tom, jak shromažďovat data paměti .NET pomocí Nástroje pro prof
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
-Další možnosti můžete zadat v dialogovém okně**stránky vlastností** _relace výkonu_v relaci výkonu. Chcete-li otevřít toto dialogové okno:
+Další možnosti můžete zadat v dialogovém okně **stránky vlastností** _relace výkonu_ v relaci výkonu. Chcete-li otevřít toto dialogové okno:
 
-- V **prohlížeč výkonu**klikněte pravým tlačítkem myši na název relace výkonu a pak klikněte na **vlastnosti**.
+- V **prohlížeč výkonu** klikněte pravým tlačítkem myši na název relace výkonu a pak klikněte na **vlastnosti**.
 
-Úlohy v následující tabulce popisují možnosti, které můžete zadat v dialogovém okně**stránky vlastností** _relace výkonu_při shromažďování dat paměti .NET.
+Úlohy v následující tabulce popisují možnosti, které můžete zadat v dialogovém okně **stránky vlastností** _relace výkonu_ při shromažďování dat paměti .NET.
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |Na stránce **Obecné** zadejte podrobnosti o pojmenování generovaného souboru dat profilování (. vsp).|- [Shromažďování dat o alokaci paměti a době života .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />- [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|
 |Na stránce **spuštění** vyberte aplikaci, kterou chcete spustit, pokud máte více projektů. exe v rámci vašeho řešení kódu.|- [Shromáždit data interakce vrstev](../profiling/collecting-tier-interaction-data.md)|
@@ -72,14 +73,14 @@ Další možnosti můžete zadat v dialogovém okně**stránky vlastností** _re
 
 Úlohy v následující tabulce jsou možnosti v dialogovém okně **stránky vlastností** , které jsou specifické pro profilaci s metodou instrumentace.
 
-|Úloha|Související obsah|
+|Úkol|Související obsah|
 |----------|---------------------|
 |Na stránce **binární soubory** zadejte umístění pro instrumentované kopie modulů. Ve výchozím nastavení jsou původní binární soubory přesunuty do zálohovací složky.|- [Postupy: přemístění Instrumentních binárních souborů](../profiling/how-to-relocate-instrumented-binaries.md)|
 |Na stránce **instrumentace** vylučte z profilace malé funkce, aby se snížila režie profilace, kód javascriptu v ASP.NET webové stránky a aby se příkazy spouštěly na příkazovém řádku před a po procesu instrumentace.|- [Postupy: vyloučení nebo zahrnutí krátkých funkcí z instrumentace](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)<br />- [Postupy: profilování kódu JavaScriptu na webových stránkách](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />- [Postupy: určení příkazů před a po instrumentaci](../profiling/how-to-specify-pre-and-post-instrument-commands.md)|
 |Na stránce **čítače CPU** zadejte jeden nebo více čítačů výkonu procesoru, které chcete přidat k datům profilace.|- [Postupy: shromažďování dat čítačů procesoru](../profiling/how-to-collect-cpu-counter-data.md)|
 |Na stránce **Upřesnit** určete další požadované možnosti VSInstr.exe, například možnosti pro zahrnutí nebo vyloučení určitých funkcí. Další informace o možnostech VSInstr najdete v tématu [VSInstr](../profiling/vsinstr.md) .|- [Postupy: určení dalších možností instrumentace](../profiling/how-to-specify-additional-instrumentation-options.md)<br />- [Postupy: omezení instrumentace na konkrétní funkce](../profiling/how-to-limit-instrumentation-to-specific-functions.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Konfigurace relací výkonu](../profiling/configuring-performance-sessions.md) 
  [Postupy: výběr metod shromažďování](../profiling/how-to-choose-collection-methods.md) 
