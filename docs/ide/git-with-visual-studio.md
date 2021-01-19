@@ -8,12 +8,12 @@ ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 7eed02ffda47de9c6a788d186d41dcc087852e64
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 6092b02f5f8f94b3c87b68afe344fffba96c1a7d
+ms.sourcegitcommit: 987ed5f5adf85771d77c0efafc36d939fb9a356f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524091"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98571983"
 ---
 # <a name="git-experience-in-visual-studio"></a>Prostředí Git v aplikaci Visual Studio
 
@@ -92,7 +92,7 @@ Při práci aplikace Visual Studio sleduje změny souborů v projektu v části 
 
 Až budete připraveni na změny fáze, klikněte na tlačítko **+** (plus) na každém souboru, který chcete připravit, nebo klikněte pravým tlačítkem na soubor a vyberte možnost **fáze**. Můžete také všechny změněné soubory připravit jediným kliknutím na tlačítko fáze vše **+** (plus) v horní části oddílu **změny** .
 
-Když změníte přípravu, Visual Studio vytvoří oddíl **dvoufázové změny** . Do dalšího potvrzení změn se přidají jenom změny v oddílu **dvoufázové změny** , které můžete udělat tak, že vyberete **Potvrdit přípravu**. Změny lze také zrušit v případě, že kliknete na tlačítko **–** (mínus). Ekvivalentní příkaz pro tuto akci je `git commit -m "Your commit message"` .
+Když změníte přípravu, Visual Studio vytvoří oddíl **dvoufázové změny** . Do dalšího potvrzení změn se přidají jenom změny v oddílu **dvoufázové změny** , které můžete udělat tak, že vyberete **Potvrdit přípravu**. Ekvivalentní příkaz pro tuto akci je `git commit -m "Your commit message"` . Změny lze také zrušit kliknutím na tlačítko **–** (mínus). Ekvivalentním příkazem pro tuto akci je zrušit `git reset <file_path>` přípravu jednoho souboru nebo zrušit `git reset <directory_path>` přípravu všech souborů v adresáři.
 
 Úpravou pracovní oblasti můžete také zvolit, že vaše upravené soubory nechcete připravit. V tomto případě vám Visual Studio umožňuje přímo potvrdit změny, aniž by bylo nutné je připravit. Stačí zadat zprávu potvrzení a pak vybrat **potvrdit vše**. Ekvivalentní příkaz pro tuto akci je `git commit -a` .
 
