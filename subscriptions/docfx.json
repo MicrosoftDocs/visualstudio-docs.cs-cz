@@ -33,8 +33,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/visualstudio-docs.cs-cz",
+      "feedback_system": "None",
       "feedback_product_url": "https://developercommunity2.visualstudio.com/search?space=8",
       "breadcrumb_path": "/visualstudio/subscriptions/_breadcrumb/toc.json",
       "bilingual_type": "hover over",
@@ -43,12 +42,6 @@
       "ms.topic": "conceptual",
       "ms.prod": "visual-studio-family",
       "ms.technology": "vs-subscriptions",
-      "disable_contribution_on_translation_quality": [
-        "MT",
-        "MTE75",
-        "MTE95",
-        "Blank"
-      ],
       "searchScope": [
         "VS Subscriptions"
       ]
