@@ -69,6 +69,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "bilingual_type": "hover over",
       "uhfHeaderId": "MSDocsHeader-VisualStudioMac",
       "feedback_system": "None",
       "feedback_product_url": "https://aka.ms/feedback/report?space=41",
