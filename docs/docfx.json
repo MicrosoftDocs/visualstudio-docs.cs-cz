@@ -88,12 +88,6 @@
         "enable_uhf_ppe"
       ],
       "archive_url": "/previous-versions/visualstudio",
-      "disable_contribution_on_translation_quality": [
-        "MT",
-        "MTE75",
-        "MTE95",
-        "Blank"
-      ]
     },
     "fileMetadata": {
       "open_to_public_contributors": {
