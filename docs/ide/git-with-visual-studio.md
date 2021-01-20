@@ -2,18 +2,18 @@
 title: Prostředí Git v aplikaci Visual Studio
 titleSuffix: ''
 description: Přečtěte si, jak vám nové integrované prostředí Git v rámci sady Visual Studio 2019 může přispět k vyšší produktivitě.
-ms.date: 11/16/2020
+ms.date: 01/15/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 6092b02f5f8f94b3c87b68afe344fffba96c1a7d
-ms.sourcegitcommit: 987ed5f5adf85771d77c0efafc36d939fb9a356f
+ms.openlocfilehash: 5f93d8c29bcf7e85df04dd364868e65f70482b72
+ms.sourcegitcommit: 59b63039982bb5894eb35d8b544657688731614f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98571983"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597415"
 ---
 # <a name="git-experience-in-visual-studio"></a>Prostředí Git v aplikaci Visual Studio
 
