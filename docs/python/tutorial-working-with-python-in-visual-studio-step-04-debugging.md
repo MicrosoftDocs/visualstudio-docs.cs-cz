@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d7fe5a8b2275248c0fc68f9237e9e259973c567b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8cb9143057bf0cfda85c835131204c6641199b48
+ms.sourcegitcommit: 10cb0b68f8cef219ea08eff9bc5f0afe1545c825
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801721"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699327"
 ---
 # <a name="step-4-run-code-in-the-debugger"></a>Krok 4: spuštění kódu v ladicím programu
 
@@ -32,7 +32,7 @@ Kromě správy projektů, poskytování bohatých možností úprav a **interakt
     # Create a string with spaces proportional to a cosine of x in degrees
     def make_dot_string(x):
         rad = radians(x)                             # cos works with radians
-        numspaces = int(20 * cos(radians(x)) + 20)   # scale to 0-40 spaces
+        numspaces = int(20 * cos(rad) + 20)          # scale to 0-40 spaces
         st = ' ' * numspaces + 'o'                   # place 'o' after the spaces
         return st
 
@@ -44,10 +44,10 @@ Kromě správy projektů, poskytování bohatých možností úprav a **interakt
     main()
     ```
 
-1. Stiskněte klávesu **F5** a vyberte **Debug**  >  příkaz nabídky**Spustit ladění** pro ladění, zda kód správně funguje. Tento příkaz spustí kód v ladicím programu, ale vzhledem k tomu, že jste neudělali žádnou akci, abyste program zastavili, když je spuštěný, pouze vytiskne vzorek Wave pro několik iterací. Stisknutím libovolné klávesy zavřete okno výstup.
+1. Stiskněte klávesu **F5** a vyberte   >  příkaz nabídky **Spustit ladění** pro ladění, zda kód správně funguje. Tento příkaz spustí kód v ladicím programu, ale vzhledem k tomu, že jste neudělali žádnou akci, abyste program zastavili, když je spuštěný, pouze vytiskne vzorek Wave pro několik iterací. Stisknutím libovolné klávesy zavřete okno výstup.
 
     > [!Tip]
-    > Chcete-li po dokončení programu zavřít okno výstup automaticky, vyberte **Tools**  >  příkaz nabídky**Možnosti** nástrojů, rozbalte uzel **Python** , vyberte možnost **ladění**a potom zrušte zaškrtnutí políčka **při normálním ukončení procesu počkat na vstup**:
+    > Chcete-li po dokončení programu zavřít okno výstup automaticky, vyberte   >  příkaz nabídky **Možnosti** nástrojů, rozbalte uzel **Python** , vyberte možnost **ladění** a potom zrušte zaškrtnutí políčka **při normálním ukončení procesu počkat na vstup**:
     >
     > ![Možnost ladění Pythonu pro zavření okna výstupu při normálním ukončení programu](media/vs-getting-started-python-22-debugging5.png)
 
@@ -85,7 +85,7 @@ Kromě správy projektů, poskytování bohatých možností úprav a **interakt
 
 1. Pokračujte v krokování s **krokem do** a Všimněte si, že když se dostanete ke konci `make_dot_string` , další krok se vrátí do `for` smyčky s novou návratovou hodnotou v `s` proměnné. Až se znovu pokusíte o `print` příkaz, Všimněte si, že **Krok dovnitř** v aplikaci `print` nevstoupí do této funkce. Důvodem je to `print` , že není napsaný v Pythonu, ale je nativní kód uvnitř modulu runtime Pythonu.
 
-1. Dál používejte **Krok do** , dokud se znovu nezablokuje do `make_dot_string` . Pak použijte **Krok ven** a Všimněte si, že se vrátíte do `for` smyčky. V **kroku out**ladicí program spustí zbytek funkce a pak automaticky pozastaví volání v kódu volajícího. To je velmi užitečné, pokud jste procházeli částmi zdlouhavé funkce, kterou chcete ladit, ale nemusíte procházet celým a nechcete nastavit explicitní zarážku v kódu volajícího.
+1. Dál používejte **Krok do** , dokud se znovu nezablokuje do `make_dot_string` . Pak použijte **Krok ven** a Všimněte si, že se vrátíte do `for` smyčky. V **kroku out** ladicí program spustí zbytek funkce a pak automaticky pozastaví volání v kódu volajícího. To je velmi užitečné, pokud jste procházeli částmi zdlouhavé funkce, kterou chcete ladit, ale nemusíte procházet celým a nechcete nastavit explicitní zarážku v kódu volajícího.
 
 1. Chcete-li pokračovat v používání programu až do další zarážky, použijte **pokračovat** (**F5**). Vzhledem k tomu, že ve smyčce máte zarážku `for` , přerušíte u další iterace.
 
