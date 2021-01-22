@@ -1,5 +1,7 @@
 ---
 title: Aktuální karta | Microsoft Docs
+description: Vyberte aktuální kartu zobrazení vlákna, chcete-li zobrazit zásobník volání pro segment vlákna procesoru nebo blokující segment. K dispozici jsou také informace o segmentech rozhraní DirectX.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f48ba44d41286f1cf5eda6ececb68d21d39abd14
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65261d6304ead5ade7c28f40495fa68afb0c2171
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62552785"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686211"
 ---
 # <a name="current-tab"></a>Aktuální karta
 Kliknutím na **aktuální** kartu zobrazíte zásobník volání (je-li k dispozici), který je nejblíže aktuálnímu bodu výběru na časové ose, pokud je vybrán segment vlákna procesoru.  V takovém případě je bod výběru reprezentován černou šipkou nebo blikajícím kurzorem nad časovou osou. Když je vybrán blokující segment, není blikající kurzor zobrazen, protože nebylo spuštěno. Segment je však stále zvýrazněn a zobrazí se zásobník volání.

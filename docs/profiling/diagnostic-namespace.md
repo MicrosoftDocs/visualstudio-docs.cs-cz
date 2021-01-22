@@ -1,5 +1,7 @@
 ---
 title: Obor názvů diagnostiky | Microsoft Docs
+description: Použijte obor názvů diagnostiky k vygenerování značek Vizualizátor souběžnosti. Obor názvů diagnostiky je členem souběžného oboru názvů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 680d304a8e4d21365d82f654265ae2f34582b636
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20b25e2974f4b0e4a6bbf6cf02c411fde3f3de1a
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330261"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686542"
 ---
 # <a name="diagnostic-namespace"></a>obor názvů diagnostiky
 `diagnostics`Obor názvů poskytuje funkce pro generování značek Vizualizátor souběžnosti.
@@ -32,14 +34,14 @@ namespace diagnostic;
 
 ### <a name="classes"></a>Třídy
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |[marker_series – třída](../profiling/marker-series-class.md)|Představuje sériový kanál událostí generovaných jedním zprostředkovatelem.|
 |[span – třída](../profiling/span-class.md)|Definuje fázi aplikace.|
 
 ### <a name="enumerations"></a>Výčty
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |[marker_importance – výčet](../profiling/marker-importance-enumeration.md)|Představuje úroveň důležitosti značky Vizualizátor souběžnosti.|
 

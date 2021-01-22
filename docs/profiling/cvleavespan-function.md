@@ -1,5 +1,7 @@
 ---
 title: Funkce Cvleavespan – | Microsoft Docs
+description: Podívejte se na referenční informace o funkci Vizualizátor souběžnosti sady SDK Cvleavespan – (knihovna C).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 113d6aafbd09f6b726613405a8c1eb82f9e202e5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d1dcd98a8233f8080d03650c3989805ee9ec7289
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330035"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686581"
 ---
 # <a name="cvleavespan-function"></a>Cvleavespan – – funkce
 Označuje konec rozsahu.

@@ -1,5 +1,7 @@
 ---
 title: Funkce CvReleaseMarkerSeries – | Microsoft Docs
+description: Podívejte se na referenční informace o funkci Vizualizátor souběžnosti sady SDK CvReleaseMarkerSeries – (knihovna C).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84db5dac77fbbc51c9f1c0e24173dcc8ca1d68c1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a69f60a991b9d88e6969992edbfe8eabdb7bd116
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85332189"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686451"
 ---
 # <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries – – funkce
 Vydává řady značek. Nepoužívejte objekt řady značek po uvolnění v opačném případě může dojít k chybě aplikace. Neúspěšné vydání řady značek způsobuje nevracení paměti.

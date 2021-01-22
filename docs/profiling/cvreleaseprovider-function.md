@@ -1,5 +1,7 @@
 ---
 title: Funkce Cvreleaseprovider – | Microsoft Docs
+description: Podívejte se na referenční informace o funkci Vizualizátor souběžnosti sady SDK Cvreleaseprovider – (knihovna C).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0347d3e2345defb13a67e0e0d730e010be618a21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5175f7f649dad3feed9f93a6e34ae5986ecda11b
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85332178"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686412"
 ---
 # <a name="cvreleaseprovider-function"></a>Cvreleaseprovider – – funkce
 Vydává poskytovatele značek. Uvolnění poskytovatele značek nebude mít vliv na dříve vytvořenou řadu označení tohoto poskytovatele. Řady značek musí být vydány samostatně voláním CvReleaseMarkerSeries –. Selhání poskytovatele Release způsobuje nevracení paměti.

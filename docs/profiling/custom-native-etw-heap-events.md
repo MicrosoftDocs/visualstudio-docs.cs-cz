@@ -1,5 +1,7 @@
 ---
 title: Vlastní nativní události haldy ETW | Microsoft Docs
+description: Naučte se používat vlastní haldu k omezení režijních nákladů na přidělení, ale ještě poskytují informace o přidělení do profileru paměti pro účely analýzy přidělení.
+ms.custom: SEO-VS-2020
 ms.date: 02/24/2017
 ms.topic: conceptual
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
@@ -10,12 +12,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb6f906cbfb715d67f6e10ddcecf094bc25821f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 61005bf108d0dab16ec419e942e3da97e02cdc7f
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62552937"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686321"
 ---
 # <a name="custom-native-etw-heap-events"></a>Vlastní nativní události haldy Trasování událostí pro Windows
 
@@ -49,7 +51,7 @@ Snímek z nástroje [využití paměti](../profiling/memory-usage.md) bez vlastn
 
 ![Přidělení haldy Windows](media/heap-example-windows-heap.png)
 
-Provedením následujících kroků můžeme použít stejný nástroj ke sledování usgae paměti v naší vlastní haldě.
+Provedením následujících kroků můžeme použít stejný nástroj ke sledování využití paměti v naší vlastní haldě.
 
 ## <a name="how-to-use"></a>Způsob použití
 
@@ -61,7 +63,7 @@ Tuto knihovnu lze snadno použít v jazyce C a C++.
    #include <VSCustomNativeHeapEtwProvider.h>
    ```
 
-1. Přidejte `__declspec(allocator)` dekoratér do libovolné funkce ve Správci vlastního haldy, která vrací ukazatel na nově přidělenou paměť haldy.  Tento dekoratér umožňuje nástroji správně identifikovat typ vracené paměti.  Příklad:
+1. Přidejte `__declspec(allocator)` dekoratér do libovolné funkce ve Správci vlastního haldy, která vrací ukazatel na nově přidělenou paměť haldy.  Tento dekoratér umožňuje nástroji správně identifikovat typ vracené paměti.  Například:
 
    ```cpp
    __declspec(allocator) void *MyMalloc(size_t size);
@@ -153,7 +155,7 @@ Výchozí halda *haldy NT* vypadá stejně jako dříve s přidáním našeho `C
 Stejně jako u standardní haldy systému Windows můžete také pomocí tohoto nástroje porovnat snímky a vyhledat nevracení a poškození ve vlastní haldě, které je popsáno v dokumentaci o využití hlavní [paměti](../profiling/memory-usage.md) .
 
 > [!TIP]
-> Sada Visual Studio obsahuje také nástroj **využití paměti** v sadě nástrojů pro **profilaci výkonu** , která je povolena v **Debug**  >  Možnosti nabídky**Profiler ladění výkonu** nebo kombinace kláves **ALT** + **F2** .  Tato funkce nezahrnuje sledování haldy a nezobrazí vlastní haldu, jak je popsáno zde.  Tato funkce obsahuje jenom okno **diagnostické nástroje** , které se dá povolit v nabídce **ladit**  >  **Windows**  >  **Zobrazit diagnostické nástroje** nebo kombinaci kláves **CTRL** + **+** + **F2** .
+> Sada Visual Studio obsahuje také nástroj **využití paměti** v sadě nástrojů pro **profilaci výkonu** , která je povolena v   >  Možnosti nabídky **Profiler ladění výkonu** nebo kombinace kláves **ALT** + **F2** .  Tato funkce nezahrnuje sledování haldy a nezobrazí vlastní haldu, jak je popsáno zde.  Tato funkce obsahuje jenom okno **diagnostické nástroje** , které se dá povolit v nabídce **ladit**  >  **Windows**  >  **Zobrazit diagnostické nástroje** nebo kombinaci kláves **CTRL** + **+** + **F2** .
 
 ## <a name="see-also"></a>Viz také
 [První pohled na nástroje](../profiling/profiling-feature-tour.md) 

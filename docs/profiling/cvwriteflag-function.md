@@ -1,5 +1,7 @@
 ---
 title: Funkce Cvwriteflag – | Microsoft Docs
+description: Podívejte se na referenční informace o funkci Vizualizátor souběžnosti sady SDK Cvwriteflag – (knihovna C).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 396edc736f61ae76aab7263bcd15bb0bfad13204
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b3c82a84e9a6523a0a969639f26b28d64cdfc9e
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85332150"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686464"
 ---
 # <a name="cvwriteflag-function"></a>Cvwriteflag – – funkce
 Zapíše příznak do trasovacího souboru Vizualizátor souběžnosti.

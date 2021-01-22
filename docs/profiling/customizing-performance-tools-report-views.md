@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení zobrazení sestav nástrojů pro výkon | Microsoft Docs
+description: V této části najdete způsoby přizpůsobení sestav vygenerovaných pomocí sady Visual Studio Nástroje pro profilaci.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9479c0dc2af592271bc7f21db1cec0c71cc7e71d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57a3dddbefcf0b5a0220da282674fa781f102030
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74777761"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686191"
 ---
 # <a name="customize-performance-tools-report-views"></a>Přizpůsobení zobrazení sestav nástrojů pro výkon
 Tato část obsahuje informace o tom, jak přizpůsobit sestavy, které jsou vygenerovány pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci.
