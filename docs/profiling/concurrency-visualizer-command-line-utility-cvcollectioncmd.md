@@ -1,5 +1,6 @@
 ---
 title: Nástroj příkazového řádku Vizualizátor souběžnosti
+description: Použijte nástroj příkazového řádku CVCollectionCmd.exe ke shromáždění trasování, která lze zobrazit v Vizualizátor souběžnosti. Není nutné mít nainstalovanou aplikaci Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 762a3563e64a3437c34b9e12e372f5d578e0c7ac
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 6970c582b6f3ac254f5bbb60f0324128dac63cfe
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808900"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721044"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd)
 Nástroj příkazového řádku Vizualizátor souběžnosti (*CVCollectionCmd.exe*) můžete použít ke shromáždění trasování z příkazového řádku, abyste je mohli zobrazit v Vizualizátor souběžnosti pro Visual Studio. Nástroje lze použít na počítačích, ve kterých není nainstalována aplikace Visual Studio.
@@ -72,9 +73,9 @@ Nástroj příkazového řádku Vizualizátor souběžnosti (*CVCollectionCmd.ex
 | SymbolPath | Určuje cestu k serveru symbolů. Další informace najdete v tématu [použití symbolového serveru Microsoftu k získání souborů se symboly ladění](/windows/win32/dxtecharts/debugging-with-symbols). | Název nebo adresa URL adresáře. |
 | Značky | Obsahuje seznam poskytovatelů značek. | Může obsahovat nula nebo více elementů MarkerProvider. |
 | MarkerProvider | Určuje jednoho zprostředkovatele značek. | Musí obsahovat tyto prvky:<br /><br /> -Úroveň<br />– GUID<br />– Název<br /><br /> Může obsahovat tyto prvky:<br /><br /> – Kategorie<br />-Povoleno |
-| Úroveň | Nastaví úroveň důležitosti MarkerProvider. | – Nízká<br />– Normální<br />-Vysoká<br />– Kritické<br />– Vše |
+| Level | Nastaví úroveň důležitosti MarkerProvider. | – Nízká<br />– Normální<br />-Vysoká<br />– Kritické<br />– Vše |
 | Identifikátor GUID | Globálně jedinečný identifikátor zprostředkovatele značek ETW. | IDENTIFIKÁTOR GUID. |
-| Název | Určuje popis poskytovatele značek. | Řetězec. |
+| Name | Určuje popis poskytovatele značek. | Řetězec. |
 | Kategorie | Určuje kategorie shromážděné pro poskytovatele značek. | Řetězec čísel nebo rozsahů čísel oddělených čárkami. |
 | IsEnabled | Nastaví hodnotu, která určuje, zda je zprostředkovatel značek povolen pro kolekci. | – True<br />– False |
 | FilterConfig | Určuje seznam možností konfigurace událostí ETW, které jsou filtrovány z kolekce. | Může obsahovat tyto prvky:<br /><br /> - CollectClrEvents<br />- ClrCollectionOptions<br />- CollectSampleEvents<br />- CollectGpuEvents<br />- CollectFileIO |

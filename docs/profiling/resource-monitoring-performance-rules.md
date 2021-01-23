@@ -1,5 +1,6 @@
 ---
 title: Pravidla výkonu monitorování prostředků | Microsoft Docs
+description: Zjistěte, jak zprávy o výkonu v kategorii monitorování prostředků poskytují další údaje o výkonu aplikace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f0f77faf-0a05-4718-a2c5-47934be40868
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 39df18811a47dfb41c17333121cd9a23d8f46940
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96cad46cd8a42346ab6199bca664cdc885bfc3cd
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544531"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720264"
 ---
 # <a name="resource-monitoring-performance-rules"></a>Pravidla výkonu sledování prostředků
 Zprávy o výkonu v kategorii monitorování prostředků poskytují další údaje o výkonu aplikace. Tato data můžete použít k analýze problémů s výkonem. Tato pravidla jsou informativní a nahlášené při každém spuštění profilace.

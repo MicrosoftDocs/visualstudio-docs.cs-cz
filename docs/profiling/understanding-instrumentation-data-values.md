@@ -1,5 +1,6 @@
 ---
 title: Porozumění hodnotám dat instrumentace | Microsoft Docs
+description: Přečtěte si, jak metoda profilace instrumentace zaznamenává podrobné informace o časování pro volání funkce, řádky a pokyny v profilované aplikaci.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3dace7b13816c63664ccb4dabfed52d1c5fb7523
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2f049ccb40d2d34c22fddbf841e36bd513db80f
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778073"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722344"
 ---
 # <a name="understand-instrumentation-data-values"></a>Porozumění hodnotám dat instrumentace
 
@@ -36,7 +37,7 @@ Pro každou funkci v zásobníku volání, když byl interval zaznamenán, analy
 
 - Určuje, zda došlo k události operačního systému v intervalu.
 
-Hodnoty dat pro interval funkce nebo rozsahu dat se nazývají *uplynulé včetně*, *uplynulé: exkluzivní*, *aplikace včetně*a *exkluzivní aplikace*:
+Hodnoty dat pro interval funkce nebo rozsahu dat se nazývají *uplynulé včetně*, *uplynulé: exkluzivní*, *aplikace včetně* a *exkluzivní aplikace*:
 
 - Všechny intervaly funkce jsou přidány do hodnoty uplynulá celková data.
 

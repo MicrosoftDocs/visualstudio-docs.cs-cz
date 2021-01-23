@@ -1,5 +1,6 @@
 ---
 title: Zobrazení procesu – data kolizí | Microsoft Docs
+description: Přečtěte si, jak zobrazení procesu zobrazuje data kolizí pro procesy a vlákna, které byly provedeny během procesu profilace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 30c938088538bcecc71e3a7e37d5ae403dd476e1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f3eb95c5ba8bb9f519623d4b43bc80d37919305d
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778398"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719465"
 ---
 # <a name="process-view---contention-data"></a>Zobrazení procesu – data kolizí
 Zobrazení procesu zobrazuje data kolizí pro procesy a vlákna, které byly provedeny během procesu profilace.
@@ -36,7 +37,7 @@ Zobrazení procesu zobrazuje data kolizí pro procesy a vlákna, které byly pro
 |**ID**|Systémem generovaný identifikátor procesu nebo vlákna.|
 |**Doba života**|Počet milisekund nebo procesorů od začátku procesu nebo vlákna na konec procesu nebo vlákna nebo konec profilace.|
 |**Typ**|Typ řádku, buď proces, nebo vlákno.<br /><br /> Pouze v sestavách příkazového řádku **VSReport** . Další informace najdete v tématu [VSPerfReport](../profiling/vsperfreport.md).|
-|**Name**|Název procesu nebo vlákna.|
+|**Název**|Název procesu nebo vlákna.|
 |**Jedinečné ID**|Identifikátor generovaný profilerem, který je jedinečný pro proces nebo vlákno.|
 
 ## <a name="see-also"></a>Viz také

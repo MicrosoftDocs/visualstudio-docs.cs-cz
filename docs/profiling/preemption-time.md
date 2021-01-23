@@ -1,5 +1,6 @@
 ---
 title: Čas přerušení | Microsoft Docs
+description: Přečtěte si o Premption čase a o tom, že tyto segmenty na časové ose jsou přidružené k době blokování, která je zařazená do kategorie jako předem ztracený.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de7a02f7247e09876bc4598d44fc1c395161ebc2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a102b11fdc7608b94b97105b061e28860f41a9a1
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62935890"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719510"
 ---
 # <a name="preemption-time"></a>Čas přerušení
 Tyto segmenty na časové ose jsou přidruženy k době blokování, která je zařazena do kategorie jako předem ztracený. Tato kategorie předpokládá, že je vlákno přepnuto z jednoho z těchto důvodů:

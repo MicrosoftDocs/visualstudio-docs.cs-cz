@@ -1,6 +1,7 @@
 ---
 title: Upozornění VSInstr | Microsoft Docs
 ms.date: 11/04/2016
+description: Přečtěte si informace o upozorněních vydaných nástrojem VSInstr.exe a o tom, jak můžete použít možnost neupozorňovat spolu s čísly upozornění k potlačení zobrazení upozornění.
 ms.topic: reference
 helpviewer_keywords:
 - instrumentation, VSInstr tool
@@ -15,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3af98372102da49e7553d2f2992f3804cf0a619e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5510c475ab566e65d2bd152136535fde62f257b
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330536"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723124"
 ---
 # <a name="vsinstr-warnings"></a>Upozornění VSInstr
 V následující tabulce jsou uvedena upozornění vydaná nástrojem *VSInstr.exe* . Pomocí možnosti neupozorňovat spolu s čísly upozornění můžete potlačit zobrazování upozornění.

@@ -1,5 +1,6 @@
 ---
 title: Zobrazení dat metody instrumentace | Microsoft Docs
+description: Přečtěte si o referenčních informacích o zobrazeních a sestavách datových souborů profileru, které byly generovány pomocí metody instrumentace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 18cc473f517e1f2eb03b657a365a33e4e37ff23f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 18d7d2266ec21a3eee983474e433d72245658c43
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74774160"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721538"
 ---
 # <a name="instrumentation-method-data-views"></a>Zobrazení dat metody instrumentace
 Tato část obsahuje referenční informace o zobrazeních a sestavách datových souborů profileru, které byly generovány pomocí metody instrumentace.
@@ -43,14 +44,14 @@ Tato část obsahuje referenční informace o zobrazeních a sestavách datovýc
 
  Vypíše data profilování podle funkcí.
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
 - [Zobrazení podrobností funkce](../profiling/function-details-view.md)
 
  Zobrazí grafický graf vztahu mezi vybranou funkcí a funkcemi, které volal a byly volány vybranou funkcí.
 
 - [Zobrazení procesů](../profiling/process-view.md)
 
- Uvádí dobu zahájení, ukončení a životnosti pro všechny procesy, které byly profilovány.
+ Vypíše dobu zahájení a ukončení procesu a dobu života pro všechny procesy, které byly profilované.
 
 ## <a name="related-sections"></a>Související oddíly
 - [Zobrazení dat metody vzorkování](../profiling/profiler-sampling-method-data-views.md)

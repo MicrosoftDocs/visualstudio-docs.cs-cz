@@ -1,5 +1,6 @@
 ---
 title: Souhrnné zobrazení – data vzorkování | Microsoft Docs
+description: Přečtěte si, jak souhrnné zobrazení zobrazuje informace o nejdůležitějších funkcích náročných na výkon při spuštění profilace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 649d0e9e5b32c124cfa962f45e4d128e4a32210f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5d75574e29118beacb6312d2dd013a19894a176
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778203"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98718951"
 ---
 # <a name="summary-view---sampling-data"></a>Souhrnné zobrazení – vzorkování dat
 V souhrnném zobrazení se zobrazí informace o nejdražších funkcích, které je náročné při spuštění profilace. Další informace, včetně popisu odkazů na oznámení a seznamů sestav, najdete v tématu [souhrnné zobrazení](../profiling/summary-view.md).
@@ -35,7 +36,7 @@ V souhrnném zobrazení se zobrazí informace o nejdražších funkcích, které
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|Název funkce|
+|**Název**|Název funkce|
 |**% Včetně vzorků**|Procento všech vzorků, k nimž došlo při provádění této funkce nebo funkce volané touto funkcí|
 |**% Exkluzivních vzorků**|Procentuální podíl všech vzorků, k nimž došlo v případě, že funkce prováděla kód v těle funkce. Vzorky shromážděné ve funkcích volaných touto funkcí nejsou zahrnuty.|
 
@@ -48,7 +49,7 @@ V souhrnném zobrazení se zobrazí informace o nejdražších funkcích, které
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|Název funkce|
+|**Název**|Název funkce|
 |**% Exkluzivních vzorků**|Procentuální podíl všech vzorků v běhu profilování, které byly shromážděny v případě, že funkce prováděla kód v těle funkce. Procento vyloučí vzorky, které byly shromážděny v případě, že byly spuštěny funkce, které tato funkce volala.|
 
 ## <a name="see-also"></a>Viz také

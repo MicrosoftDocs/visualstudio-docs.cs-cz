@@ -1,5 +1,6 @@
 ---
 title: Zobrazení řádků – data kolizí | Microsoft Docs
+description: Přečtěte si, jak zobrazení řádků dat o kolizí obsahuje údaje o výkonu pro příkazy, které byly spuštěny, když byly vzorky shromážděny při spuštění profilace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1dfcdf67c897c0c1565e536a69cc940b9df83390
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50a314d5ba0a5dd907da3a915835f1410894ee7a
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778593"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721343"
 ---
 # <a name="lines-view---contention-data"></a>Zobrazení řádků – data kolizí
 Zobrazení řádky data kolizí obsahuje údaje o výkonu pro příkazy, které byly spuštěny, když byly vzorky shromážděny při spuštění profilace. Ve zdrojovém souboru může příkaz v rámci zdrojového souboru zabírat více než jeden řádek a jeden řádek může obsahovat více než jeden příkaz.

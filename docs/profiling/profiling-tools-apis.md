@@ -1,5 +1,6 @@
 ---
 title: Rozhraní API pro Nástroje pro profilaci | Microsoft Docs
+description: Přečtěte si, jak můžete vložit spravované nebo nativní metody rozhraní API sady Visual Studio Nástroje pro profilaci pro řízení shromažďování dat při spuštění profilace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: bd9ca972-e5bf-45a6-9a5d-ac30a4d9ee02
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ed4fef32c04d68f37df71101447a4e24f39eecba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0b62f88903cab7ce3fcf9117e7159256d7adaf5
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772074"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720498"
 ---
 # <a name="profiling-tools-apis"></a>Rozhraní API nástrojů pro profilaci
 

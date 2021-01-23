@@ -1,5 +1,6 @@
 ---
 title: Nástroje pro sledování výkonu v aplikacích pro Windows 8 & WS 2012
+description: Přečtěte si, jak rozšířené funkce zabezpečení ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým nástroj pro výkon sady Visual Studio shromažďuje data.
 ms.custom: SEO-VS-2020
 ms.date: 06/19/2017
 ms.topic: conceptual
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cc44eddc2af2e2d85f7c4bb9c876d336ccd1b546
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ce83684b77d4546915cdcf5980e68be0b6c6a125
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807830"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719588"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Nástroje pro výkon v aplikacích pro Windows 8 a Windows Server 2012
 
@@ -111,7 +112,7 @@ Je nutné přidat možnost shromažďování dat interakce vrstev ke spuštění
 
 **Shromažďování dat s tipem na vzdáleném počítači**
 
-Pokud chcete shromažďovat data interakce vrstev na vzdáleném počítači, musíte zkopírovat soubor **vs \_ Profiler \_ ** _\<Platform>_ **\_** _\<Language>_ **. exe** ze složky *%VSINSTALLDIR%\Team Tools\Performance Tools\Setups* počítače sady Visual Studio do vzdáleného počítače a nainstalovat ho. Nástroje pro profilaci nelze použít v balíčku pro stažení [vzdáleného ladění](../debugger/remote-debugging.md) .
+Pokud chcete shromažďovat data interakce vrstev na vzdáleném počítači, musíte zkopírovat soubor **vs \_ Profiler \_** _\<Platform>_ **\_** _\<Language>_ **. exe** ze složky *%VSINSTALLDIR%\Team Tools\Performance Tools\Setups* počítače sady Visual Studio do vzdáleného počítače a nainstalovat ho. Nástroje pro profilaci nelze použít v balíčku pro stažení [vzdáleného ladění](../debugger/remote-debugging.md) .
 
 K shromažďování dat profilace můžete použít [VSPerfCmd](../profiling/vsperfcmd.md) nebo [VSPerfASPNETCmd](../profiling/vsperfaspnetcmd.md) .
 

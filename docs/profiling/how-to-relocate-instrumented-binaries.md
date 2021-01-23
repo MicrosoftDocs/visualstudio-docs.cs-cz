@@ -1,5 +1,6 @@
 ---
 title: Přemístit instrumentované binární soubory | Microsoft Docs
+description: Zjistěte, jak jsou sondy vloženy do binárního souboru pro měření výkonu aplikace během instrumentace.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 13fa5c3413e620e43a695e205a0523dce23e90b4
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ee94737f59f5c29aac47d686f68ade06131d0379
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851343"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720615"
 ---
 # <a name="how-to-relocate-instrumented-binaries"></a>Postupy: přemístění instrumentních binárních souborů
 
@@ -28,9 +29,9 @@ Během instrumentace jsou testy vloženy do binárního souboru pro měření v�
 
 ## <a name="to-relocate-instrumented-binary"></a>Přemístění instrumentované binární
 
-1. V **prohlížeč výkonu**klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
+1. V **prohlížeč výkonu** klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
 
-2. Na **stránkách vlastností**klikněte na **binární** vlastnosti.
+2. Na **stránkách vlastností** klikněte na **binární** vlastnosti.
 
 3. Zaškrtněte políčko **přemístit instrumentované binární soubory** .
 

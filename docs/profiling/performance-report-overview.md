@@ -1,5 +1,6 @@
 ---
 title: Přehled sestavy výkonu | Microsoft Docs
+description: Prohlédněte si data profilace v okně Sestava výkonu integrovaného vývojového prostředí Visual Studio Team System Development Edition.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 517156677a6d3711fa5dc2e4a15629a55229cfe2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95fbb51cbcc4d2467b9d1636c7e9f61232791d62
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772229"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722760"
 ---
 # <a name="performance-report-overview"></a>Přehled sestavy výkonu
 Data profilování relace výkonu můžete zobrazit v okně **Sestava výkonu** v integrovaném vývojovém prostředí (IDE) sady Visual Studio Team System Development Edition. Data profilování se ukládají do souborů. vsp a. vsps. Okna zobrazení sestav umožňují zobrazit a analyzovat problémy s výkonem aplikací.
@@ -26,7 +27,7 @@ Data profilování relace výkonu můžete zobrazit v okně **Sestava výkonu** 
 > [!CAUTION]
 > Soubor dat profilování obsahuje citlivé informace, jako je název počítače, verze operačního systému, cesty k souborům, informace o paměti a další informace o nastavení počítače. Měli byste udržovat přísnou kontrolu nad distribucí dat, a to v nativním režimu. formát *VSP* a při jeho exportu do. *sdílený svazek clusteru* nebo. soubor *XML* .
 >
-> Pokud se data trasování událostí shromažďují jako součást relace výkonu, můžou se v protokolu trasování událostí zobrazit další informace.* ETL*). Tyto informace zahrnují vaši doménu a uživatelské jméno; Proto byste měli udržovat přísnou kontrolu nad distribucí souboru protokolu.
+> Pokud se data trasování událostí shromažďují jako součást relace výkonu, můžou se v protokolu trasování událostí zobrazit další informace.*ETL*). Tyto informace zahrnují vaši doménu a uživatelské jméno; Proto byste měli udržovat přísnou kontrolu nad distribucí souboru protokolu.
 
 ## <a name="performance-report-window"></a>Okno sestavy výkonu
  Okno Sestava výkonu je okno nástroje, které slouží k zobrazení, správě a filtrování údajů o výkonu a obsahuje přizpůsobitelný ovládací prvek dotazu.

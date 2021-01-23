@@ -1,5 +1,6 @@
 ---
 title: Časovač | Microsoft Docs
+description: Přečtěte si, jak možnost časovače VSPerfCmd.exe nastaví událost profilování, která je Navzorkovaná na časové cykly procesoru.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1971868e-89fa-4452-8ee7-76e4daf31b66
@@ -9,19 +10,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e1bed2715421948385a5b7eb1ddbbac064f3288b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 908685b49a08b3084c31e768675e64bc087bc727
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778112"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722435"
 ---
 # <a name="timer"></a>Časovač
-Možnost *VSPerfCmd.exe* **časovače**VSPerfCmd.exenastaví událost profilování, která je Navzorkovaná na časové cykly procesoru, a volitelně změní počet cyklů v intervalu vzorkování z výchozí hodnoty 10 000 000. Na procesorech frekvencí 1 GHz (jeden GHz) je 10 000 000 hodinových cyklů přibližně 100 vzorků za sekundu. Minimální počet cyklů, které lze zadat, je 50 000.
+Možnost  **časovače** VSPerfCmd.exenastaví událost profilování, která je Navzorkovaná na časové cykly procesoru, a volitelně změní počet cyklů v intervalu vzorkování z výchozí hodnoty 10 000 000. Na procesorech frekvencí 1 GHz (jeden GHz) je 10 000 000 hodinových cyklů přibližně 100 vzorků za sekundu. Minimální počet cyklů, které lze zadat, je 50 000.
 
  **Časovač** se dá použít jenom v případě, že použijete metodu profilování vzorkování a dá se použít jenom v příkazovém řádku, který obsahuje taky možnost **Spustit** nebo **připojit** .
 
- Ve výchozím nastavení je událost vzorkování profileru nastavená na taktové cykly procesoru a interval vzorkování je nastaven na 10 000 000. Možnosti **časovač**, **PF**, **sys**a **čítač** umožňují nastavit událost vzorkování a interval vzorkování. Možnost **GC** shromažďuje data paměti .NET při každé události přidělení a uvolňování paměti. V příkazovém řádku lze zadat pouze jednu z těchto možností.
+ Ve výchozím nastavení je událost vzorkování profileru nastavená na taktové cykly procesoru a interval vzorkování je nastaven na 10 000 000. Možnosti **časovač**, **PF**, **sys** a **čítač** umožňují nastavit událost vzorkování a interval vzorkování. Možnost **GC** shromažďuje data paměti .NET při každé události přidělení a uvolňování paměti. V příkazovém řádku lze zadat pouze jednu z těchto možností.
 
  Událost vzorkování a interval vzorkování lze nastavit pouze v prvním příkazovém řádku, který obsahuje možnost **Spustit** nebo **připojit** .
 

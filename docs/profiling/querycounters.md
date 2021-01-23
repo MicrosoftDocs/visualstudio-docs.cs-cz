@@ -1,5 +1,6 @@
 ---
 title: QueryCounters | Microsoft Docs
+description: Přečtěte si, jak možnost QueryCounters vypisuje čítače výkonu procesoru (hardware), které jsou k dispozici v počítači.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8059d4b2-af61-4a47-a6c2-8da5c0741c74
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 24379a720ccaa3405cbe5c127f3b8abaf12e49aa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d33b6fe42f786218bf78825a356a25edff2b31ae
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74771906"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720433"
 ---
 # <a name="querycounters"></a>QueryCounters
 Možnost **QueryCounters** vypisuje čítače výkonu procesoru (hardware), které jsou k dispozici v počítači.

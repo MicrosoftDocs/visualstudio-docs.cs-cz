@@ -1,5 +1,6 @@
 ---
 title: Zobrazení vláken v Vizualizátor souběžnosti | Microsoft Docs
+description: Seznamte se s tím, že v zobrazení vláken můžete určit, která vlákna spouští kód během spouštěcího segmentu.
 ms.date: 11/04/2018
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4382a21a68848a758f3d4cd37a8528722927691c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 619e76b3db67314119782ebc3010465ac7fa622f
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62973748"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722721"
 ---
 # <a name="threads-view-in-the-concurrency-visualizer"></a>Zobrazení vláken v Vizualizátor souběžnosti
 
@@ -47,7 +48,7 @@ Zobrazení **vláken** můžete použít k těmto akcím:
 
 ## <a name="use-threads-view"></a>Použít zobrazení vláken
 
-Chcete-li spustit Vizualizér souběžnosti, vyberte možnost **analyzovat**  >  **Vizualizátor souběžnosti**a pak vyberte některou z možností, jako je například **spuštění nového procesu**.
+Chcete-li spustit Vizualizér souběžnosti, vyberte možnost **analyzovat**  >  **Vizualizátor souběžnosti** a pak vyberte některou z možností, jako je například **spuštění nového procesu**.
 
 Vizualizátor souběžnosti spustí aplikaci a shromáždí trasování, dokud nevyberete **Zastavit shromažďování**. Vizualizér potom analyzuje trasování a zobrazí výsledky na stránce sestavy trasování.
 
@@ -99,7 +100,7 @@ Vizualizátor souběžnosti zobrazuje závislosti mezi vlákny, takže můžete 
 Chcete-li určit, které vlákno odblokuje jiné vlákno, vyberte blokující segment na časové ose. Pokud Vizualizér souběžnosti může určit vlákno odblokování, nakreslí čáru mezi podprocesem odblokování a zpracovávaným segmentem, který následuje po blokujícím segmentu. Vyberte kartu **Zásobník odblokování** v dolním podokně, abyste viděli příslušný zásobník volání.
 
 ## <a name="profile-reports"></a>Sestavy profilů
-Pod grafem časová osa je podokno se **sestavou sestavy profilu**, **aktuální**a **odblokování** karet sestavy zásobníku. Sestavy se automaticky aktualizují, když změníte časovou osu a výběry vláken. V případě rozsáhlých trasování může být podokno sestavy během výpočtu aktualizací dočasně nedostupné.
+Pod grafem časová osa je podokno se **sestavou sestavy profilu**, **aktuální** a **odblokování** karet sestavy zásobníku. Sestavy se automaticky aktualizují, když změníte časovou osu a výběry vláken. V případě rozsáhlých trasování může být podokno sestavy během výpočtu aktualizací dočasně nedostupné.
 
 ### <a name="profile-report-tab"></a>Karta sestava profilu
 

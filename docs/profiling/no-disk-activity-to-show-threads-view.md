@@ -1,5 +1,6 @@
 ---
 title: Žádná disková aktivita k zobrazení (zobrazení vláken) | Microsoft Docs
+description: Přečtěte si, že se nedají zobrazit aktivity disku pro aktuální časový rozsah ve vstupně-výstupních kanálech disku. Pokud se zmenšíte nebo posuňte, může se zobrazit aktivita disku.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a88679d5423fc0ed2340638e5e1634bb3c81a20c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25ef8fd7d149a489458f28a7e276476c8fa09776
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62794452"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722890"
 ---
 # <a name="no-disk-activity-to-show-threads-view"></a>Žádná disková aktivita k zobrazení (zobrazení vláken)
 Nelze zobrazit aktivitu disku pro aktuální časový rozsah ve vstupně-výstupních kanálech disku. Pokud se zmenšíte nebo posuňte, může se zobrazit aktivita disku. Také se ujistěte, že nejsou žádné diskové kanály skryté.

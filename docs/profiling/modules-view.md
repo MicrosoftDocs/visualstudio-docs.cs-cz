@@ -1,5 +1,6 @@
 ---
 title: Zobrazení modulů | Microsoft Docs
+description: Přečtěte si, jak se v modulech zobrazuje seznam modulů dat profilování. Každý modul je kořenovým uzlem hierarchického stromu.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 89d9146b3f724b4883f21a43689a495eef252777
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d0ff17c128af78c1772ad85597153332a0848062
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778515"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722942"
 ---
 # <a name="modules-view"></a>Zobrazení modulů
 V zobrazení modulů jsou uvedeny moduly dat profilování. Každý modul je kořenovým uzlem hierarchického stromu. Profilované funkce modulu jsou uvedeny pod uzlem modulu. Pokud byla data profilace shromážděna pomocí metody vzorkování, jsou informace o řádku uvedeny pod uzlem funkce a data ukazatele instrukcí jsou uvedena pod uzlem line.

@@ -1,5 +1,6 @@
 ---
 title: WinCounter | Microsoft Docs
+description: Přečtěte si o možnosti WinCounter, konkrétně o tom, že určuje čítač výkonu systému Windows nebo aplikace, který se bude shromažďovat v nastavených intervalech během spuštění profilu.
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: ff319ffc-f249-4c3f-9eb2-06e392e3ae80
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 672d472d4e592782f7ae06920c518b154fba6cba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 595a8003992c92871a8476743288d3072aff63c8
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329876"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723046"
 ---
 # <a name="wincounter"></a>WinCounter
 Možnost **WinCounter** určuje čítač výkonu systému Windows nebo aplikace, který se má shromáždit v nastavených intervalech během spuštění profilu. Čítače výkonu pro systém Windows a aplikace jsou uvedeny jako značky v souboru dat profilování. Můžete zadat více čítačů výkonu ke shromáždění v samostatných možnostech.

@@ -1,5 +1,7 @@
 ---
 title: Značky Vizualizátor souběžnosti | Microsoft Docs
+description: 'Přečtěte si o značkách v Vizualizátor souběžnosti. Značky jsou ikony, které představují události generované aplikací. Existují tři typy: příznaky, zprávy a rozsahy.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab5e4b65db5c3d96b16a68a7b8e21a2786b9110b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fab8108e15f3cbaf81130c2ce8533d00f2a23c7e
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63001054"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720992"
 ---
 # <a name="concurrency-visualizer-markers"></a>Značky Vizualizátor souběžnosti
 Ve Vizualizátor souběžnosti jsou značky označení ikony, které představují události v aplikaci.  Obvykle aplikace generuje tyto události pro určení fází nebo výskytů v aplikaci.  Události může generovat aplikace nebo knihovny a moduly runtime, které aplikace používá.
@@ -45,7 +47,7 @@ Ve Vizualizátor souběžnosti jsou značky označení ikony, které představuj
 
 - [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)
 
-- [Toku dat](/dotnet/standard/parallel-programming/dataflow-task-parallel-library)
+- [Tok dat](/dotnet/standard/parallel-programming/dataflow-task-parallel-library)
 
 - [Paralelní LINQ (PLINQ)](/dotnet/standard/parallel-programming/parallel-linq-plinq)
 

@@ -1,5 +1,6 @@
 ---
 title: Profil viditelné časové osy | Microsoft Docs
+description: Přečtěte si, že profil viditelné časové osy pro zobrazení blokující vlákno poskytuje statistické informace a odkazy na sestavy.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 352651be28f178272caaad9a01070dc9d7357d79
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b4b8725a6336218bdac413b12a20ff201dd0c287
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62823462"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723163"
 ---
 # <a name="visible-timeline-profile"></a>Profil viditelné časové osy
 Viditelný profil časové osy pro zobrazení blokování vláken poskytuje statistické informace a odkazy na sestavy. Při přiblížení, zmenšení, zmenšení nebo posunutí vodorovně, skrytí kanálů nebo zobrazení kanálů se čísla aktivní legendy mění tak, aby odrážela to, co se aktuálně zobrazuje. Chcete-li zobrazit sestavu o položce v legendě, klikněte na položku.

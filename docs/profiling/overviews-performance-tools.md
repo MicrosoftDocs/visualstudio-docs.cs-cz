@@ -1,5 +1,6 @@
 ---
 title: Přehledy (nástroje pro sledování výkonu) | Microsoft Docs
+description: Seznamte se s koncepty a terminologií pro Visual Studio Nástroje pro profilaci. Použijte informace k měření vlastností výkonu aplikace ve vývoji.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b877802d-c736-4047-821a-bd7733fff6de
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d284ffc6b850a9746cf1442f35400a18045bbe18
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d27f777b660b2ffc94c4b9b6f0b6ba55816d626b
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772664"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722825"
 ---
 # <a name="overviews-performance-tools"></a>Přehledy (nástroje pro měření výkonu)
 Tato část obsahuje koncepční a terminologické přehledy pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci, které můžete použít k měření vlastností výkonu aplikace ve vývoji.

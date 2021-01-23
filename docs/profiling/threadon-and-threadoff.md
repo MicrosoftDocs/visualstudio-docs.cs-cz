@@ -1,5 +1,6 @@
 ---
 title: ThreadOn a ThreadOff | Microsoft Docs
+description: Přečtěte si, jak jsou dílčí příkazy VSPerfCmd.exe ThreadOff a ThreadOn dostupné jenom v relacích profilování příkazového řádku, které používají metodu instrumentace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 5cd5a695-0a14-484a-8952-ed47e13d8e92
@@ -9,17 +10,17 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 906629eb24f6be097f3e24dfca3e6a231f42357f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8b2e51857fc799c7b60f7650b823b77c9c6a283
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778151"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98718769"
 ---
 # <a name="threadon-and-threadoff"></a>ThreadOn a ThreadOff
 Dílčí příkazy *VSPerfCmd.exe* **ThreadOff** a **ThreadOn** jsou k dispozici pouze v relacích profilování příkazového řádku, které používají metodu instrumentace. **ThreadOff** a **ThreadOn** pozastavení a obnovení profilování pro zadané vlákno. **ThreadOff** zastaví profilaci vlákna a **ThreadOn** spustí profilaci vlákna.
 
- Ve většině případů zadáte **ThreadOn** nebo **ThreadOff** jako jedinou možnost v příkazovém řádku *VSPerfCmd.exe* , ale lze je kombinovat i s dílčími příkazy **GlobalOn**, **globaloff**, **ProcessOn**a **ProcessOff** .
+ Ve většině případů zadáte **ThreadOn** nebo **ThreadOff** jako jedinou možnost v příkazovém řádku *VSPerfCmd.exe* , ale lze je kombinovat i s dílčími příkazy **GlobalOn**, **globaloff**, **ProcessOn** a **ProcessOff** .
 
  Podpříkazy **ThreadOn** a **ThreadOff** komunikují s dílčími příkazy **GlobalOn** a **globaloff** , které řídí shromažďování dat pro všechny procesy v relaci profilace příkazového řádku, a dílčí příkazy **ProcessOn** a **ProcessOff** , které řídí shromažďování dat pro zadaný proces.
 

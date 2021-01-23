@@ -1,5 +1,6 @@
 ---
 title: Zobrazení modulů – data instrumentace | Microsoft Docs
+description: Zjistěte, jak zobrazení modulů zobrazuje údaje o výkonu, které jsou seskupeny podle modulů, které byly v datech profilace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f6449ad30edf11d3d315532cc33db2a79c14f90b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7012f2deffa2e01057fd79f52ec2fcac3674f7eb
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778528"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722968"
 ---
 # <a name="modules-view---instrumentation-data"></a>Zobrazení modulů – data instrumentace
 Zobrazení modulů zobrazuje údaje o výkonu, které jsou seskupeny podle modulů, které byly v datech profilace. Funkce modulu jsou uvedeny pod uzlem modulu.
@@ -26,7 +27,7 @@ Zobrazení modulů zobrazuje údaje o výkonu, které jsou seskupeny podle modul
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|Název funkce nebo modulu.|
+|**Název**|Název funkce nebo modulu.|
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|
 |**Number of Calls**|Celkový počet volání, která byla provedena v této funkci nebo modulu.|
 |**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|

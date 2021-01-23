@@ -1,5 +1,6 @@
 ---
 title: Uživatel (VSPerfCmd) | Microsoft Docs
+description: Zjistěte, jak možnost uživatel Určuje doménu a uživatelské jméno účtu, který vlastní profilace procesu.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ee1a478e-374d-4f30-ae28-d260b9d4723a
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7dbb1a155e8e0ffd2690b5850299b8075a63ea3d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbb5490ff9281a7379d74209da15a3a39595bc09
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779958"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721161"
 ---
 # <a name="user-vsperfcmd"></a>Uživatel (VSPerfCmd)
 Možnost **uživatel** určuje doménu a uživatelské jméno účtu, který vlastní profilace procesu. Tato možnost je vyžadována, pouze pokud je proces spuštěn jako jiný uživatel než přihlášený uživatel. Vlastník procesu je uveden ve sloupci uživatelské jméno na kartě **procesy** ve Správci úloh systému Windows.

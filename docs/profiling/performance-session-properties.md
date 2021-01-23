@@ -1,5 +1,6 @@
 ---
 title: Vlastnosti výkonnostní relace | Microsoft Docs
+description: Přečtěte si, jak vám relace výkonu umožní nakonfigurovat nastavení, která určují, jak má být aplikace profilovaná.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b3bafa976c8e57f468a3f3f59a3b6b19308fd1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 02ddf15251cf40dd340465563068b114940f9318
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772199"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721226"
 ---
 # <a name="performance-session-properties"></a>Vlastnosti výkonnostní relace
 

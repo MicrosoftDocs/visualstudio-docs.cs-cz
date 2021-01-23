@@ -1,5 +1,6 @@
 ---
 title: Zobrazení podrobností o vláknu – data kolizí | Microsoft Docs
+description: Přečtěte si, jak zobrazení podrobností o vlákně prezentuje graf časové osy blokujících událostí ve vybraném vláknu procesu profilace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 679fd9fd039fa903f5df5a479fa4f0e119bb7a9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d1cf1d9d7afeef8962026739116f75d4289d6283
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778164"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98718795"
 ---
 # <a name="thread-details-view---contention-data"></a>Zobrazení podrobností o vláknu – data kolizí
 Zobrazení podrobností o vlákně prezentuje graf časové osy blokujících událostí ve vybraném vláknu procesu profilace, které byly způsobeny kolizími přes prostředky. K blokující události dojde, když je vlákno nuceno pozastavit provádění, protože jiné vlákno má zamčený přístup k prostředku.

@@ -1,5 +1,6 @@
 ---
 title: Odblokování zásobníku | Microsoft Docs
+description: Přečtěte si, jak se zásobník volání pro vlákno, který se odblokuje, zobrazuje na kartě po odblokování jiným vláknem v aktuálním procesu.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23e790f37ba88498d5ac0ae03dd9ce7ae074f451
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 30b4da23ef89f8bdde61bbf1eebb63bb4d239b7b
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63004420"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722357"
 ---
 # <a name="unblock-stack"></a>Odblokovat zásobník
 Pokud aktuálně vybraný prvek vlákna představuje blokovaný segment, který byl později zahájen po odblokování jiným vláknem v aktuálním procesu, zásobník volání pro vlákno, které bylo odblokování, je na této kartě zobrazen.

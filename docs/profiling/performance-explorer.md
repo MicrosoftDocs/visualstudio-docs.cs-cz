@@ -1,5 +1,6 @@
 ---
 title: Prohlížeč výkonu | Microsoft Docs
+description: Přečtěte si, jak Visual Studio Nástroje pro profilaci umožnit vývojářům měřit, vyhodnocovat a cílit na problémy související s výkonem ve svém kódu.
 ms.date: 06/19/2017
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 89399d49909e1c9067723e75a1adbaa123865758
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7a796ee0791fd96edf1e54954df47f2983df3ee4
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778476"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722773"
 ---
 # <a name="performance-explorer"></a>Prohlížeč výkonu
 

@@ -1,5 +1,6 @@
 ---
 title: Analýza odezvy uživatelského rozhraní HTML v aplikacích pro UWP | Microsoft Docs
+description: Naučte se izolovat problémy s výkonem v aplikacích pomocí profileru odezvy uživatelského rozhraní, který je k dispozici pro univerzální aplikace pro Windows.
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 9fdc2b7fc459d655748444759913cab903dfe782
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6545fb206096c7b74a7016b506ae3bcade7f136c
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331409"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721876"
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>Analýza odezvy uživatelského rozhraní HTML v univerzálních aplikacích pro Windows
 Toto téma popisuje, jak izolovat problémy s výkonem v aplikacích pomocí profileru odezvy uživatelského rozhraní, který je k dispozici pro univerzální aplikace pro Windows.
@@ -58,7 +59,7 @@ Toto téma popisuje, jak izolovat problémy s výkonem v aplikacích pomocí pro
 
          Tuto možnost můžete použít k analýze výkonu aplikací, které jste nainstalovali v počítači, když nemáte přístup ke zdrojovému kódu. Tato možnost může být užitečná také v případě, že chcete pouze analyzovat výkon jakékoli aplikace mimo vlastní vývoj aplikací.
 
-3. Z **dostupných nástrojů**vyberte možnost **odezva uživatelského rozhraní HTML**a pak zvolte možnost **Spustit**.
+3. Z **dostupných nástrojů** vyberte možnost **odezva uživatelského rozhraní HTML** a pak zvolte možnost **Spustit**.
 
 4. Když spustíte Profiler odezvy uživatelského rozhraní, může okno Řízení uživatelských účtů požádat o vaše oprávnění ke spuštění Collector.exeu ETW sady Visual Studio. Vyberte **Ano**.
 
@@ -80,7 +81,7 @@ Toto téma popisuje, jak izolovat problémy s výkonem v aplikacích pomocí pro
 
      Pokud narazíte na problém, pokračujte v testování a pokuste se zúžit časový rámec, ve kterém k problému dojde, nebo se pokuste identifikovat triggery, které způsobují chování.
 
-3. Přepněte do sady Visual Studio (stiskněte klávesu **ALT** + **Tab**) a zastavte aplikaci (**SHIFT** + **F5**).
+3. Přepněte do sady Visual Studio (stiskněte klávesu **ALT** + ) a zastavte aplikaci (**SHIFT** + **F5**).
 
 4. Volitelně můžete do kódu přidat značky uživatelů pomocí [značky Code pro analýzu](#ProfileMark).
 
@@ -188,7 +189,7 @@ if (performance.mark && performance.measure) {
 - Navigační událost, která nastane, když přejdete na jinou stránku. Popis události zobrazuje adresu URL cílové stránky.
 
 ### <a name="view-cpu-utilization"></a><a name="CPUUtilization"></a> Zobrazení využití procesoru
- Graf využití procesoru vám umožňuje identifikovat časová období, ve kterých se nachází nadměrné aktivity CPU. Poskytuje informace o průměrném využití procesoru aplikace v časovém intervalu. Informace jsou barevně kódované, aby představovaly následující konkrétní kategorie: **načítání**, **skriptování**, uvolňování paměti (**GC**), **stylování**, **vykreslování**a **dekódování obrázku**. Další informace o těchto kategoriích najdete v části [referenční informace k události profileru](#profiler-event-reference) dále v tomto tématu.
+ Graf využití procesoru vám umožňuje identifikovat časová období, ve kterých se nachází nadměrné aktivity CPU. Poskytuje informace o průměrném využití procesoru aplikace v časovém intervalu. Informace jsou barevně kódované, aby představovaly následující konkrétní kategorie: **načítání**, **skriptování**, uvolňování paměti (**GC**), **stylování**, **vykreslování** a **dekódování obrázku**. Další informace o těchto kategoriích najdete v části [referenční informace k události profileru](#profiler-event-reference) dále v tomto tématu.
 
  Graf využití procesoru zobrazuje množství času stráveného ve všech vláknech aplikací a kombinaci hodnot využití procesoru pro jeden nebo více procesorů do jedné procentuální hodnoty. Hodnota využití CPU může překročit 100%, pokud se používá více než jeden procesor.
 
@@ -327,10 +328,10 @@ if (performance.mark && performance.measure) {
 
 |Událost|Kategorie události|Vyvolá se v případě, že|
 |-----------|--------------------|-----------------|
-|Analýza šablon stylů CSS|Načítá|Byl zjištěn nový obsah CSS a byl proveden pokus o analýzu obsahu CSS.|
-|Analýza kódu HTML|Načítá|Byl nalezen nový obsah HTML a byl proveden pokus o analýzu obsahu na uzly a vložení obsahu do stromu modelu DOM.|
-|Požadavek HTTP|Načítá|V modelu DOM se našel vzdálený prostředek nebo se vytvořil objekt XMLHttpRequest, který způsobil požadavek HTTP.|
-|Spekulativní stahování|Načítá|V obsahu HTML stránky se vyhledaly požadované prostředky, aby bylo možné rychle naplánovat následné požadavky HTTP pro prostředky.|
+|Analýza šablon stylů CSS|Načítá se|Byl zjištěn nový obsah CSS a byl proveden pokus o analýzu obsahu CSS.|
+|Analýza kódu HTML|Načítá se|Byl nalezen nový obsah HTML a byl proveden pokus o analýzu obsahu na uzly a vložení obsahu do stromu modelu DOM.|
+|Požadavek HTTP|Načítá se|V modelu DOM se našel vzdálený prostředek nebo se vytvořil objekt XMLHttpRequest, který způsobil požadavek HTTP.|
+|Spekulativní stahování|Načítá se|V obsahu HTML stránky se vyhledaly požadované prostředky, aby bylo možné rychle naplánovat následné požadavky HTTP pro prostředky.|
 |Funkce zpětného volání snímku animace|Skriptování|V prohlížeči se vykreslil další snímek, který aktivoval funkci zpětného volání poskytnutou aplikací.|
 |Událost modelu DOM|Skriptování|Došlo k události modelu DOM a byla provedena.<br /><br /> `context`Vlastnost pro událost modelu DOM, například `DOMContentLoaded` nebo `click` , je uvedena v závorkách.|
 |Naslouchací proces událostí|Skriptování|Byl volán a proveden naslouchací proces událostí.|

@@ -1,5 +1,7 @@
 ---
 title: Čítače procesoru a systému Windows | Microsoft Docs
+description: Čítače CPU (hardware) a Windows (software) poskytují data o výkonu. Naučte se, jak je zobrazit a jak shromažďovat data z nich.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9accd3d0ab5ff1f7a3084d5973cace08e66396b9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c3657f3558a688232424b868d0e93b8c056467c
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779546"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719159"
 ---
 # <a name="cpu-and-windows-counters"></a>Čítače procesoru a systému Windows
 
@@ -90,15 +92,15 @@ Chcete-li zobrazit seznam dostupných čítačů v počítači v integrovaném v
 
 1. V Prohlížeč výkonu klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
 
-2. Proveďte jednu z následujících akcí:
+2. Proveďte některou z následujících akcí:
 
-   - Klikněte na **vzorkování**a potom v seznamu **vzorových** událostí vyberte **čítač výkonu** . Čítače CPU jsou uvedeny v části **Dostupné čítače výkonu**.
+   - Klikněte na **vzorkování** a potom v seznamu **vzorových** událostí vyberte **čítač výkonu** . Čítače CPU jsou uvedeny v části **Dostupné čítače výkonu**.
 
       **Poznámka:** Kliknutím na tlačítko **Storno** se vrátíte k předchozí konfiguraci vzorkování.
 
      -nebo-
 
-   - Vyberte **čítače procesoru**a pak vyberte **shromáždit čítače procesoru**. Čítače CPU jsou uvedeny v části **Dostupné čítače**.
+   - Vyberte **čítače procesoru** a pak vyberte **shromáždit čítače procesoru**. Čítače CPU jsou uvedeny v části **Dostupné čítače**.
 
       **Poznámka:** Kliknutím na tlačítko **Storno** se vrátíte k předchozí konfiguraci shromažďování čítačů.
 
@@ -130,7 +132,7 @@ Pomocí nástroje příkazového řádku [VSPerfCmd](../profiling/vsperfcmd.md) 
 
 ## <a name="see-also"></a>Viz také
 
-[Přehledy](../profiling/overviews-performance-tools.md) 
- [Postupy: výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md) 
- [Postupy: shromažďování dat](../profiling/how-to-collect-cpu-counter-data.md) 
- čítačů procesoru [Postupy: shromažďování dat čítače Windows](../profiling/how-to-collect-windows-counter-data.md)
+- [Přehledy](../profiling/overviews-performance-tools.md)
+- [Postupy: výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md)
+- [Postupy: Shromažďování dat čítačů procesoru](../profiling/how-to-collect-cpu-counter-data.md)
+- [Postupy: shromažďování dat čítače Windows](../profiling/how-to-collect-windows-counter-data.md)

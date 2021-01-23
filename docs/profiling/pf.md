@@ -1,5 +1,6 @@
 ---
 title: PF | Microsoft Docs
+description: Přečtěte si, jak možnost VSPerfCmd.exe PF nastaví událost profilování, která je Navzorkovaná na chyby stránkování, a mění počet chyb stránky v intervalu vzorkování.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: cdc0a094-a986-4629-bd1c-dd5fdca323dc
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 07ec6d636ec087386fdc9462ae09db55400957a9
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: b920b641a7bfc4583af7b0ec5a9692a25c19adb5
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "74778411"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719549"
 ---
 # <a name="pf"></a>PF
 Možnost *VSPerfCmd.exe* **PF** nastaví událost profilování, která je Navzorkovaná na chyby stránkování, a volitelně změní počet chyb stránek v intervalu vzorkování, od výchozí hodnoty 10.
@@ -24,7 +25,7 @@ Možnost *VSPerfCmd.exe* **PF** nastaví událost profilování, která je Navzo
 
 **PF** se dá použít jenom v příkazovém řádku, který obsahuje taky možnost **Spustit** nebo **připojit** .
 
- Ve výchozím nastavení je událost vzorkování nastavená na nezastavené časové cykly procesoru a interval vzorkování je nastaven na 10 000 000. Možnosti **časovač**, **PF**, **sys**a **čítač** umožňují nastavit ukázkovou událost a interval vzorkování. Možnost **GC** shromažďuje data paměti .NET při každé události přidělení a uvolňování paměti. V příkazovém řádku lze zadat pouze jednu z těchto možností.
+ Ve výchozím nastavení je událost vzorkování nastavená na nezastavené časové cykly procesoru a interval vzorkování je nastaven na 10 000 000. Možnosti **časovač**, **PF**, **sys** a **čítač** umožňují nastavit ukázkovou událost a interval vzorkování. Možnost **GC** shromažďuje data paměti .NET při každé události přidělení a uvolňování paměti. V příkazovém řádku lze zadat pouze jednu z těchto možností.
 
  Událost vzorkování a interval vzorkování lze nastavit pouze v prvním příkazovém řádku, který obsahuje možnost **Spustit** nebo **připojit** .
 

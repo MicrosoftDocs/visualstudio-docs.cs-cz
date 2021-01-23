@@ -1,5 +1,6 @@
 ---
 title: VSPerfReport | Microsoft Docs
+description: Přečtěte si, že nástroj příkazového řádku VSPerfReport slouží k vytváření sestav pomocí souborů dat profilování sady Visual Studio Nástroje pro profilaci.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 54d5de2395c0ce95bc0c20c3ae7810b2762122fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed3ba5453976e3f3976aba43bc296c040a86b7a5
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329962"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719770"
 ---
 # <a name="vsperfreport"></a>VSPerfReport
 Nástroj příkazového řádku VSPerfReport slouží k vytváření sestav pomocí  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci datových souborů profilování. Výchozí formát sestavy je. soubor *CSV* .
@@ -32,7 +33,7 @@ Nástroj příkazového řádku VSPerfReport slouží k vytváření sestav pomo
 VSPerfReport [/U] vspfilename [/options]
 ```
 
- Všimněte si, že `filename` musí být platná.* VSP* nebo. soubor *vsps*
+ Všimněte si, že `filename` musí být platná.*VSP* nebo. soubor *vsps*
 
  Nástroj příkazového řádku VSPerfReport se používá také k porovnání. *VSP* nebo. soubory *vsps* . Pokud chcete vygenerovat sestavu rozdílů (rozdílové), použijte tuto syntaxi:
 
@@ -50,14 +51,14 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 
 |Možnosti|Popis|
 |-------------|-----------------|
-|**U**|Výstup sestavy a přesměrované výstupy konzoly jsou zapsané jako Unicode. Musí se jednat o první zadanou možnost.|
+|**H**|Výstup sestavy a přesměrované výstupy konzoly jsou zapsané jako Unicode. Musí se jednat o první zadanou možnost.|
 |**Shrnutí:**[*typy*]|Vytvoří jeden nebo více typů sestav.<br /><br /> -   `All` -jsou generovány všechny typy sestav.<br />-   `CallerCallee` – Vztahy nadřazenosti a podřízenosti mezi funkcemi.<br />-   `Function` -funkce, které jsou volány.<br />-   `CallTree` -hierarchie volání funkcí.<br />-   `Counter` – všechny značky společně s hodnotami čítače výkonu systému Windows.<br />-   `Ip` – pokyny profilování.<br />-   `Life` – doba života přidělených objektů (k dispozici, když se shromažďují data přidělení)<br />-   `Line` data profilu čáry zdrojového kódu.<br />-   `Header` -Sestava obsahuje informace o záhlaví souboru.<br />-   `Mark` všechny značky.<br />-   `Module` -moduly profilované.<br />-   `Process` -procesy profilace.<br />-   `Thread` – vlákna profilace.<br />-   `Type` -přidělené typy.<br />-   `Contention` – spory prostředků.<br />-   `RuleWarnings` – problémy s pravidlem výkonu<br />-   `ETW` – všechny události trasování událostí pro Windows (ETW) shromážděné při spuštění profilace. Datový soubor. ETL musí být v původním umístění nebo v adresáři, který obsahuje soubor. vsp nebo. vsps.|
 |**XML**|Výstupní sestava ve formátu XML.|
 |**CallTrace**|Vytvoří seznam vstupů a výstupů funkcí, událostí ETW a značek.|
 |**ClearPackedSymbols**|Odebere dříve vložené symboly z datového souboru profileru. Spusťte tento příkaz před dalším spuštěním PackSymbols.|
 |**SymbolPath:**`path`|Určuje jednu nebo více cest hledání nebo serverů symbolů, které obsahují symboly pro datový soubor profileru.|
 |**DebugSymPath**|Vypíše umístění, ve kterých jsou vyhledávány symboly a zda jsou nalezeny. Tato možnost je užitečná pro řešení problémů s překladem symbolů.|
-|**PackSymbols**|Uloží symboly do souboru dat profilování (. vsp), takže symbol (.* soubory PDB*nejsou pro analýzu požadovány.|
+|**PackSymbols**|Uloží symboly do souboru dat profilování (. vsp), takže symbol (.*soubory PDB* nejsou pro analýzu požadovány.|
 |**Výstup:** *cesta*&#124;*název_souboru*|Určuje alternativní umístění pro vygenerované soubory sestav. Ve výchozím nastavení se sestavy vytvářejí v aktuálním adresáři.|
 |**SummaryFile**|Analyzujte a uložte analyzované informace v souboru souhrnu. vsps.|
 |**PrintMarks**|Zobrazí názvy a časová razítka pro všechny značky v zadaném souboru sestavy.|
@@ -84,7 +85,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 
 |Možnosti|Popis|
 |-------------|-----------------|
-|**Diff**  `vspfile1 vspfile2`|Porovnejte dva soubory sestav (.* VSP* nebo. *vsps*) spis. Možnosti souhrnu budou ignorovány pomocí možnosti diff.|
+|**Diff**  `vspfile1 vspfile2`|Porovnejte dva soubory sestav (.*VSP* nebo. *vsps*) spis. Možnosti souhrnu budou ignorovány pomocí možnosti diff.|
 |**Rozdíl:**[*hodnota*]|Pod touto prahovou hodnotou se bude ignorovat rozdíl mezi dvěma hodnotami. Také se nezobrazí nová data s hodnotami pod touto prahovou hodnotou.|
 |**Diff:**[*TableName*]|Tato konkrétní tabulka slouží k porovnání souborů. Výchozím nastavením je tabulka Functions (funkce).|
 |**DiffColumn:**[*ColumnName*]|Použijte tento konkrétní sloupec hodnoty porovnání. Ve výchozím nastavení je ve sloupci výhradní vzorky procento.|

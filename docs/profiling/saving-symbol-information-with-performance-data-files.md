@@ -1,5 +1,6 @@
 ---
 title: Ukládání informací o symbolech pomocí datových souborů výkonu | Microsoft Docs
+description: Přečtěte si, jak můžete nastavit nastavení projektu výkonu pro ukládání nebo serializaci symbolů v souboru sestavy.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 74137752900d082c545dd5e5271b7700ec81fa01
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 142e73a65fa9ffd2210719d84f18a25068762acb
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778294"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720212"
 ---
 # <a name="saving-symbol-information-with-performance-data-files"></a>Ukládání informací o symbolech se soubory s údaji o výkonu
 
@@ -28,7 +29,7 @@ Pokud používáte Visual Studio IDE k analýze souborů a plánujete přesunout
 
 Můžete serializovat symboly z integrovaného vývojového prostředí (IDE) sady Visual Studio nebo z příkazového řádku:
 
-- Chcete-li serializovat symboly v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí, přejděte na panel nabídek **nástroje** a potom klikněte na tlačítko **Možnosti**. V okně **Možnosti** vyberte nástroje pro **sledování výkonu**a pak zaškrtněte políčko **automaticky serializovat informace o symbolech** .
+- Chcete-li serializovat symboly v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí, přejděte na panel nabídek **nástroje** a potom klikněte na tlačítko **Možnosti**. V okně **Možnosti** vyberte nástroje pro **sledování výkonu** a pak zaškrtněte políčko **automaticky serializovat informace o symbolech** .
 
 - PACKSYMBOLS je ekvivalentní možnost příkazového řádku při ukládání souborů sestav. K serializaci symbolů zadejte **VSPerfReport/Summary: ALL/packsymbols filename. vsp**.
 

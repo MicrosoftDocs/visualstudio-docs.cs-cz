@@ -1,5 +1,6 @@
 ---
 title: Analýza využití sítě v aplikacích pro UWP
+description: Přečtěte si, jak nástroj Diagnostika sítě sady Visual Studio shromažďuje data o síťových operacích provedených pomocí rozhraní API Windows. Web. http.
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 00fd0c03bf460cd8b72a10d15501994d7a2aa10a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 429bc6c8c2d82e3c18c75132f71e60231b10f10d
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541710"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722903"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>Analýza využití sítě v aplikacích pro UWP
 Nástroj Diagnostika **sítě** sady Visual Studio shromažďuje data o síťových operacích provedených pomocí [rozhraní API Windows. Web. http](/uwp/api/windows.web.http). Analýza dat vám může pomáhat vyřešit problémy, jako jsou problémy s přístupem a ověřováním, nesprávná použití mezipaměti a nízký výkon při zobrazení a stažení.
@@ -30,7 +31,7 @@ Nástroj Diagnostika **sítě** sady Visual Studio shromažďuje data o síťov�
 
 1. Otevřete projekt v sadě Visual Studio.
 
-2. V nabídce klikněte na **ladit/profilování výkonu**. Zvolte **síť**a pak zvolte **Spustit**.
+2. V nabídce klikněte na **ladit/profilování výkonu**. Zvolte **síť** a pak zvolte **Spustit**.
 
 3. Nástroj sítě zahájí shromažďování přenosů HTTP vaší aplikace.
 

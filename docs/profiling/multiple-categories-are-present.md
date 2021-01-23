@@ -1,5 +1,6 @@
 ---
 title: Je k dispozici více kategorií | Microsoft Docs
+description: Přečtěte si, že když se zobrazí oddíl, který obsahuje více než jeden druh aktivity pro daný časový rozsah, zobrazí se dvě barvy, jedna svislá a druhá.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69b3de3a7f1554bc3ad95874a58b75b809d610a2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 36b120d4433bafb5f248a268b140d940b3c6e2da
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62794659"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722929"
 ---
 # <a name="multiple-categories-are-present"></a>Existuje více kategorií.
 Je vybrán oddíl, který obsahuje více než jeden druh aktivity pro daný časový rozsah. Všimněte si, že se zobrazují dvě barvy, jedna vertikálně navrstvená. Tyto barvy znázorňují v daném časovém intervalu jenom nejčastější dvě nejčastější aktivity. Frekvence těchto dvou aktivit se zobrazují relativně k druhému nebo polovičnímu svislému pruhu. Chcete-li zobrazit více podrobností, zkuste se přiblížit v této části zobrazení vlákna.

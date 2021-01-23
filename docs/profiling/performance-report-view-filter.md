@@ -1,5 +1,6 @@
 ---
 title: Filtr zobrazení sestav výkonu | Microsoft Docs
+description: Přečtěte si, jak se okno filtru zobrazení sestavy profileru nachází v horní části okna sestavy výkonu.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a5642a8e153a4dfc7705d91d933397b6f8acb37
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 79fb4b7cf7a5df4b2077a2145172d24acdbf86cb
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778451"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722734"
 ---
 # <a name="performance-report-view-filter"></a>Filtr zobrazení sestav výkonu
 Okno **filtru zobrazení sestav profileru** se nachází v horní části okna **sestavy výkonu** . Pokud ho nevidíte, klikněte na tlačítko **Zobrazit filtr** .

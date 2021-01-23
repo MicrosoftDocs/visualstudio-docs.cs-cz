@@ -1,5 +1,6 @@
 ---
 title: Zobrazení modulů – vzorkování dat | Microsoft Docs
+description: Zjistěte, jak se v modulech zobrazení dat vzorkování zobrazují data o výkonu seskupená podle modulů, které byly v datech profilování vzorků.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ead219ddf482af5917842118d386c6fefe67973
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0de246e5ecdc51ff6471eeed242d638fee261c8c
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772711"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722955"
 ---
 # <a name="modules-view---sampling-data"></a>Zobrazení modulů – vzorkování dat
 Zobrazení modulů dat vzorkování zobrazuje údaje o výkonu, které jsou seskupeny podle modulů, které byly v datech profilace odebrány. Každý modul je kořenovým adresářem hierarchického stromu. Ukázkové funkce modulu jsou uvedeny pod uzlem modulu.
@@ -29,7 +30,7 @@ Zobrazení modulů dat vzorkování zobrazuje údaje o výkonu, které jsou sesk
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|Název modulu, funkce, čísla řádku nebo adresy ukazatele na instrukci.|
+|**Název**|Název modulu, funkce, čísla řádku nebo adresy ukazatele na instrukci.|
 |**ID procesu**|ID procesu (PID) pro spuštění profilace.|
 |**Název procesu**|Název procesu|
 |**Název modulu**|Název modulu, který obsahuje funkci, řádek nebo ukazatel na instrukci.|

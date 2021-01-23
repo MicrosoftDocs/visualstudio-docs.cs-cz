@@ -1,5 +1,6 @@
 ---
 title: Zobrazení ukazatelů na instrukce (IP) – vzorkování dat | Microsoft Docs
+description: Přečtěte si, jak zobrazení IP adres pro vzorkování dat uvádí údaje o výkonu pro pokyny k sestavení, které byly přímo spouštěny při shromáždění vzorků.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 42398e044bfc06e41249b15ac9baeebcaebd19f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f08821516ca25ed4e1746e13e506b9c0094b0227
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74774253"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721551"
 ---
 # <a name="instruction-pointers-ips-view---sampling-data"></a>Zobrazení ukazatelů na instrukce (IP) – vzorkování dat
 Zobrazení IP adres dat vzorkování obsahuje údaje o výkonu pro pokyny k sestavení, které byly přímo spouštěny, když byly vzorky shromážděny při spuštění profilace.

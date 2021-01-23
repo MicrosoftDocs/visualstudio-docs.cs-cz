@@ -1,5 +1,6 @@
 ---
 title: Zobrazení modulů – data instrumentace paměti .NET | Microsoft Docs
+description: Přečtěte si, jak se v modulech zobrazení dat přidělení paměti .NET shromažďovaných pomocí metody instrumentace seskupují data paměti a časování podle modulu.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 521c884a0a25d7fa975a4039e6ec3e36ff4dc020
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6a0a42fdc83891b96bb3fe036ebf7515e3d6a42
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778541"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723306"
 ---
 # <a name="modules-view---net-memory-instrumentation-data"></a>Zobrazení modulů – data instrumentace paměti .NET
 Moduly zobrazení dat přidělení paměti .NET shromážděných pomocí metody instrumentace seskupují data paměti a časování moduly, které byly spuštěny při spuštění profilace. Data profilování pro funkce modulu jsou uvedena pod uzlem modulu.
@@ -25,7 +26,7 @@ Moduly zobrazení dat přidělení paměti .NET shromážděných pomocí metody
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|Název funkce nebo modulu.|
+|**Název**|Název funkce nebo modulu.|
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|
 |**Number of Calls**|Celkový počet volání, která byla provedena v této funkci nebo modulu.|
 |**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|

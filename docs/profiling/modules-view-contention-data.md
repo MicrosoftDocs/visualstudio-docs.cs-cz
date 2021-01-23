@@ -1,5 +1,6 @@
 ---
 title: Zobrazení modulů – data kolizí | Microsoft Docs
+description: Seznamte se s tím, jak se v modulech zobrazení dat kolizí zobrazují data souběžnosti seskupená podle modulů, které byly ve vzorku v datech profilace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2de844867e9c0a8d95abdaa13f860a6487254bfe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0640bc238bc300868d42aedc8905da8ffc97f65e
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74780010"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723319"
 ---
 # <a name="modules-view---contention-data"></a>Zobrazení modulů – data kolizí
 Zobrazení modulů dat o kolizí zobrazuje data souběžnosti seskupená podle modulů, které byly v datech profilování vzorků. Každý modul je kořenovým adresářem hierarchického stromu. Funkce modulu, ve kterém došlo k událostem sporů, jsou uvedeny pod uzlem modulu.
@@ -38,7 +39,7 @@ Zobrazení modulů dat o kolizí zobrazuje data souběžnosti seskupená podle m
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|
 |**Název modulu**|Název modulu, který obsahuje funkci, řádek nebo ukazatel na instrukci.|
 |**Cesta k modulu**|Cesta modulu obsahujícího ukazatel modulu, funkce, řádku nebo instrukce.|
-|**Name**|Název modulu nebo funkce.|
+|**Název**|Název modulu nebo funkce.|
 |**ID procesu**|ID procesu (PID) pro spuštění profilace.|
 |**Název procesu**|Název procesu|
 |**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|

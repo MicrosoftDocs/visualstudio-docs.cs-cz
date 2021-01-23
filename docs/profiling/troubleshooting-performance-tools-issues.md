@@ -1,5 +1,6 @@
 ---
 title: Řešení potíží s nástroji pro výkon | Microsoft Docs
+description: Seznamte se s různými informacemi, které se mohou vyskytnout při odstraňování potíží s nástroji pro zvýšení výkonu, například když nejsou shromažďována žádná data pomocí nástrojů pro profilaci.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0b61cdf7-75b7-4abd-aff2-7bd997717626
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 514b910f2c19822dc821b8c9a52ae96b8aac80f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d079c2fbd41f6a3eff881a544e8b88c50938e3bf
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778099"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722409"
 ---
 # <a name="troubleshoot-performance-tools-issues"></a>Řešení potíží s nástroji pro výkon
 Při použití Nástroje pro profilaci se může vyskytnout některý z následujících problémů:
@@ -24,7 +25,7 @@ Při použití Nástroje pro profilaci se může vyskytnout některý z následu
 - [Zobrazení výkonu a sestavy zobrazují čísla pro názvy funkcí](#performance-views-and-reports-display-numbers-for-function-names)
 
 ## <a name="no-data-is-collected-by-the-profiling-tools"></a>Nástroje pro profilaci neshromažďují žádná data.
- Po vytvoření profilu aplikace se data profilace (.* soubor VSP*) není vytvořen a v okně **výstup** nebo v příkazovém okně se zobrazí následující upozornění:
+ Po vytvoření profilu aplikace se data profilace (.*soubor VSP*) není vytvořen a v okně **výstup** nebo v příkazovém okně se zobrazí následující upozornění:
 
  PRF0025: nebyla shromážděna žádná data.
 
@@ -43,7 +44,7 @@ Při použití Nástroje pro profilaci se může vyskytnout některý z následu
 
 - Vyhledejte. soubory *PDB* a umístí je do stejného adresáře jako soubory aplikace.
 
-- Vložte informace o symbolech do dat profilace (.* VSP*) soubor. Další informace najdete v tématu [ukládání informací o symbolech pomocí datových souborů výkonu](../profiling/saving-symbol-information-with-performance-data-files.md).
+- Vložte informace o symbolech do dat profilace (.*VSP*) soubor. Další informace najdete v tématu [ukládání informací o symbolech pomocí datových souborů výkonu](../profiling/saving-symbol-information-with-performance-data-files.md).
 
 > [!NOTE]
 > Analytický modul vyžaduje, aby. soubor *PDB* má stejnou verzi jako kompilovaný soubor aplikace. Určitého. soubor *PDB* z dřívějšího nebo pozdějšího sestavení souboru aplikace nebude fungovat.

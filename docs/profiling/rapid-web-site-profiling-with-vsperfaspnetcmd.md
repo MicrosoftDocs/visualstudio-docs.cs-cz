@@ -1,5 +1,6 @@
 ---
 title: Profilování rychlých webů pomocí VSPerfASPNETCmd | Microsoft Docs
+description: Přečtěte si, jak nástroj příkazového řádku VSPerfASPNETCmd umožňuje snadno profilovat webové aplikace v ASP.NET.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fff2486c4197cbbe28c3b5deb0099e264805e12b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a08604b95f49f55a5fea254447046d305d8feff9
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74771689"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720420"
 ---
 # <a name="rapid-web-site-profiling-with-vsperfaspnetcmd"></a>Rychlé profilování webu pomocí VSPerfASPNETCmd
 
@@ -103,5 +104,5 @@ K příkazům uvedeným dříve v této části můžete přidat kteroukoli z n�
 
 |Možnost|Popis|
 |------------|-----------------|
-|**/Output:**`VspFile`|Ve výchozím nastavení jsou data profilace (.* *v aktuálním adresáři se vytvoří soubor VSP s názvem souboru **PerformanceReport. vsp**. Pomocí možnosti/Output zadejte jiné umístění, název souboru nebo obojí.|
+|**/Output:**`VspFile`|Ve výchozím nastavení jsou data profilace (.** v aktuálním adresáři se vytvoří soubor VSP s názvem souboru **PerformanceReport. vsp**. Pomocí možnosti/Output zadejte jiné umístění, název souboru nebo obojí.|
 |**/PackSymbols: vypnuto**|Ve výchozím nastavení VsPerfASPNETCmd vloží symboly (funkce a názvy parametrů atd.) do. soubor *VSP* . Vložení symbolů může vytvořit soubor dat profilace velmi velký. Pokud budete mít přístup k. soubory *PDB* , které obsahují symboly při analýze dat, pomocí možnosti/packsymbols: off zakažte vkládání symbolů.|

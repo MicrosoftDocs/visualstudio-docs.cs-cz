@@ -1,5 +1,6 @@
 ---
 title: Nastavení možností názvu datového souboru výkonu | Microsoft Docs
+description: Přečtěte si, jak můžete změnit libovolný parametr pojmenování na stránce Obecné dialogového okna vlastnosti pro relaci výkonu.
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d7a8d6b9-ab23-46fb-98ed-774781157860
@@ -9,16 +10,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bba5677c491e77e6f1c2758e64cec1b598c9b627
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 6dce666121214bef7d844bae2735a284589463ee
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851564"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722045"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>Postupy: Nastavení možností názvu datového souboru výkonu
 
-Ve výchozím nastavení uložíte data profilování (.* VSP*) soubor pomocí následující syntaxe:
+Ve výchozím nastavení uložíte data profilování (.*VSP*) soubor pomocí následující syntaxe:
 
 *Path\VSP-File\YYMMDD (N)* **. vsp**
 
@@ -33,11 +34,11 @@ Libovolný parametr pojmenování můžete změnit na stránce **Obecné** dialo
 
 ## <a name="to-change-the-naming-syntax-of-the-profiling-data-files-of-a-performance-session"></a>Změna syntaxe názvů datových souborů profilování relace výkonu
 
-1. V **prohlížeč výkonu**klikněte pravým tlačítkem na název relace výkonu a pak klikněte na **vlastnosti**.
+1. V **prohlížeč výkonu** klikněte pravým tlačítkem na název relace výkonu a pak klikněte na **vlastnosti**.
 
 2. Klikněte na **Obecné**.
 
-3. V části **Sestava**změňte kterékoli z následujících nastavení:
+3. V části **Sestava** změňte kterékoli z následujících nastavení:
 
     |Název|Popis|
     |-|-|

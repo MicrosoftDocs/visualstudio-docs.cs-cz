@@ -1,5 +1,6 @@
 ---
 title: Ovládací prvek Lupa (zobrazení vláken) | Microsoft Docs
+description: Přečtěte si, že ovládací prvek Lupa je posuvník, který vám pomůže se přiblížit a oddálit na časové ose, abyste se mohli zaměřit na oblasti konkrétního zájmu.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb1521623880712211ea04e5c572c7cf4bd85133
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00cf79b23de47c1ac808b9287f387a16b51e5c3e
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62960157"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719120"
 ---
 # <a name="zoom-control-threads-view"></a>Ovládací prvek Lupa (zobrazení vláken)
 Ovládací prvek přiblížení je posuvník, který vám pomůže se přiblížit a oddálit na časové ose, abyste se mohli zaměřit na oblasti konkrétního zájmu. Vzhledem k tomu, že se tento ovládací prvek přiblíží ke středu zobrazení časové osy, prostředte si oblast zájmu před přiblížením.

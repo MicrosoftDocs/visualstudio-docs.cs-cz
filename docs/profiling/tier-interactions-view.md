@@ -1,5 +1,6 @@
 ---
 title: Zobrazení interakcí vrstev | Microsoft Docs
+description: Přečtěte si, jak Profilování interakce vrstev poskytuje informace o časech spuštění ve funkcích vícevrstvých aplikací, které komunikují s databázemi.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d188d6c3268c8ee9f066eba1b6a57e469f34a78e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9021f814f093151c6d65beaececc0fa99a662d44
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778138"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722513"
 ---
 # <a name="tier-interactions-view"></a>Zobrazení interakcí vrstev
 
@@ -33,13 +34,13 @@ Zobrazení interakcí zobrazuje data interakce vrstev ve dvou podoknech:
 
 - Po kliknutí na uzel volání databáze v podokně předloha se v podokně podrobností zobrazí data instance volání databáze.
 
-  Čas se zobrazuje jako počet milisekund nebo počet taktů procesoru. Chcete-li změnit zobrazenou časovou jednotku, klikněte na nabídku **nástroje** , klikněte na položku **Možnosti**a potom zvolte jednu z **hodnot zobrazit čas jako** možnosti.
+  Čas se zobrazuje jako počet milisekund nebo počet taktů procesoru. Chcete-li změnit zobrazenou časovou jednotku, klikněte na nabídku **nástroje** , klikněte na položku **Možnosti** a potom zvolte jednu z **hodnot zobrazit čas jako** možnosti.
 
 ## <a name="master-pane"></a>Podokno předlohy
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|– Pro řádek nejvyšší úrovně, název profilované procesu nebo webové stránky.<br />– Pro řádek připojení databáze název serveru, který je hostitelem databáze.|
+|**Název**|– Pro řádek nejvyšší úrovně, název profilované procesu nebo webové stránky.<br />– Pro řádek připojení databáze název serveru, který je hostitelem databáze.|
 |**Databáze**|Název databáze (pouze řádky připojení databáze).|
 |**Výpočtu**|Celkový počet požadavků, které jsou generovány procesem, webovou stránkou nebo připojením k databázi.|
 |**Celkový uplynulý čas**|Celkový čas strávený prováděním jedné žádosti z procesu, webové stránky nebo připojení k databázi.|

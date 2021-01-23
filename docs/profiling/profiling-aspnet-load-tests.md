@@ -1,5 +1,6 @@
 ---
 title: Profilace zátěžových testů ASP.NET | Microsoft Docs
+description: Zjistěte, jak můžete shromažďovat data profilování z automatizovaných Microsoft Test Manager webových testů, které spouštíte v projektech webů ASP.NET.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c3f5c363-be79-40b5-bfa7-db8d21378d8d
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 455ca0d2032e1f30fc5f70eaac9518b2774b03c7
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 7ade0fc4b83832145132d925fe43feb6b3b0ef10
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038397"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723254"
 ---
 # <a name="profile-aspnet-load-tests"></a>Profily zátěžových testů ASP.NET
 Data profilace lze shromažďovat z automatizovaných [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] webových testů, které jsou spouštěny v projektech webů ASP.NET. Můžete shromažďovat data interakce vzorkování a vrstev. Další informace najdete v následujících tématech:

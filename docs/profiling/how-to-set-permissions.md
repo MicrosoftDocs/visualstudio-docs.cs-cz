@@ -1,5 +1,6 @@
 ---
 title: Nastavit oprávnění | Microsoft Docs
+description: Přečtěte si, jak správce počítače udělí oprávnění zabezpečení potřebná k profilaci uživateli nebo skupině, která nemá oprávnění správce.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f0a55e5e18829856b913ad01df6f831a2df42863
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 2ab51b317164b8f2e828e0327021fb595574583c
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851824"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721993"
 ---
 # <a name="how-to-set-permissions"></a>Postupy: nastavení oprávnění
 
@@ -64,13 +65,13 @@ Základní princip zabezpečení uvádí, že aplikace by měly běžet bez víc
 
 2. Klikněte pravým tlačítkem na složku a pak klikněte na **vlastnosti**.
 
-     Zobrazí se dialogové okno ** \<folder name> vlastnosti** .
+     Zobrazí se dialogové okno **\<folder name> vlastnosti** .
 
 3. Klikněte na kartu **Zabezpečení**.
 
 4. Klikněte na název účtu uživatele v poli **název skupiny nebo jméno uživatele** .
 
-5. Zaškrtněte políčko pro **Úplné řízení**v poli **oprávnění pro \<user name> ** .
+5. Zaškrtněte políčko pro **Úplné řízení** v poli **oprávnění pro \<user name>** .
 
 6. Klikněte na **OK**.
 

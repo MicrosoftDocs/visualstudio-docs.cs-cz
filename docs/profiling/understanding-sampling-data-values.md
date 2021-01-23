@@ -1,5 +1,6 @@
 ---
 title: Porozumění hodnotám dat vzorkování | Microsoft Docs
+description: Přečtěte si, jak metoda profilace vzorkování sady Visual Studio Nástroje pro profilaci přerušuje procesor počítače v nastavených intervalech a shromáždí zásobník volání funkce.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 289f92deaceca32a44249ed77c17187743a34fa4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81efd0f20ba971555ec8c1333dfc322112f13e17
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778047"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722162"
 ---
 # <a name="understand-sampling-data-values"></a>Porozumění hodnotám dat vzorkování
 

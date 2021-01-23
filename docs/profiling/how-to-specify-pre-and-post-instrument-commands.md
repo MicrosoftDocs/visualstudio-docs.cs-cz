@@ -1,5 +1,6 @@
 ---
 title: Zadat příkazy před a po instrumentaci | Microsoft Docs
+description: Přečtěte si, jak můžete zadat příkazy, které se spouštějí před nebo po binárních souborech v relaci výkonu.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 904a5086af4fbbd9c1ef174cae63013cb8c96ad9
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 172ca7a478dcc34443d2edf15186d9c040a04837
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851798"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721889"
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>Postupy: určení příkazů před a po instrumentaci
 
@@ -36,13 +37,13 @@ Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení 
 
 1. Proveďte jeden z následujících kroků:
 
-    - Chcete-li určit příkazy před instrumentací pro všechny binární soubory v relaci výkonu, vyberte uzel relace výkonu v **prohlížeč výkonu**a potom klikněte pravým tlačítkem myši a vyberte možnost **vlastnosti**.
+    - Chcete-li určit příkazy před instrumentací pro všechny binární soubory v relaci výkonu, vyberte uzel relace výkonu v **prohlížeč výkonu** a potom klikněte pravým tlačítkem myši a vyberte možnost **vlastnosti**.
 
     - Chcete-li určit příkazy před instrumentací pro konkrétní binární soubor, klikněte pravým tlačítkem myši na název binárního souboru v seznamu **cílů** relace výkonu a poté vyberte možnost **vlastnosti**.
 
-2. Na **stránkách vlastností**klikněte na **instrumentace**.
+2. Na **stránkách vlastností** klikněte na **instrumentace**.
 
-3. Do textového pole **příkazový řádek** v části **události před instrumentací**zadejte příkaz.
+3. Do textového pole **příkazový řádek** v části **události před instrumentací** zadejte příkaz.
 
     > [!NOTE]
     > Můžete kliknout na tlačítko se třemi tečkami **(...)** sousedící s polem **příkazového řádku** a vyhledat a vybrat odpovídající soubor. exe,. cmd nebo. bat.
@@ -55,11 +56,11 @@ Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení 
 
 1. Proveďte jeden z následujících kroků:
 
-    - Chcete-li určit příkazy po instrumentaci pro všechny binární soubory v relaci výkonu, vyberte uzel relace výkonu v **prohlížeč výkonu**a potom klikněte pravým tlačítkem myši a vyberte možnost **vlastnosti**.
+    - Chcete-li určit příkazy po instrumentaci pro všechny binární soubory v relaci výkonu, vyberte uzel relace výkonu v **prohlížeč výkonu** a potom klikněte pravým tlačítkem myši a vyberte možnost **vlastnosti**.
 
     - Chcete-li určit příkazy po instrumentaci pro konkrétní binární soubor, klikněte pravým tlačítkem myši na název binárního souboru v seznamu **cílů** relace výkonu a poté vyberte možnost **vlastnosti**.
 
-2. Na **stránkách vlastností**klikněte na **instrumentace**.
+2. Na **stránkách vlastností** klikněte na **instrumentace**.
 
 3. Do textového pole **příkazový řádek** zadejte příkaz v části **události po instrumentaci**.
 

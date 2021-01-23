@@ -1,5 +1,6 @@
 ---
 title: Vizualizace událostí EventSource jako značek | Microsoft Docs
+description: Seznamte se s tím, že Vizualizátor souběžnosti může zobrazit události EventSource jako značky a vy můžete určit, jak se budou značky zobrazovat.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3a10022a-5c37-48b1-a833-dd35902176b6
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd6339b3f55b4a4c9a1e2c90ff3183a36f16c178
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f8fadf9ef97717983c96226d81d43efada65e89
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64811544"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723137"
 ---
 # <a name="visualize-eventsource-events-as-markers"></a>Vizualizace událostí EventSource jako značek
 Vizualizátor souběžnosti může zobrazit události EventSource jako značky a můžete určit, jak se budou značky zobrazovat. Chcete-li zobrazit značky EventSource, zaregistrujte identifikátor GUID zprostředkovatele ETW pomocí dialogového okna [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) . Vizualizátor souběžnosti má výchozí konvence pro reprezentaci událostí EventSource jako [značek příznaků](../profiling/flag-markers.md), [značek span](../profiling/span-markers.md)a [značek zpráv](../profiling/message-markers.md). Můžete přizpůsobit způsob zobrazení událostí EventSource přidáním vlastních polí do událostí. Další informace o značkách naleznete v tématu [značky Vizualizátor souběžnosti](../profiling/concurrency-visualizer-markers.md). Další informace o událostech EventSource naleznete v tématu <xref:System.Diagnostics.Tracing> .
@@ -37,7 +38,7 @@ Vizualizátor souběžnosti může zobrazit události EventSource jako značky a
 |Win: LogAlways|Normální|
 |výher: kritické|Kritické|
 |Win: Chyba|Kritické|
-|výher: upozornění|Vysoké|
+|výher: upozornění|Vysoká|
 |Win: informativní|Normální|
 |Win: verbose|Nízká|
 |Větší než Win: verbose|Nízká|
@@ -72,8 +73,8 @@ Vizualizátor souběžnosti může zobrazit události EventSource jako značky a
 |------------------------|---------------------------------------|
 |0|Normální|
 |1|Kritické|
-|2|Vysoké|
-|3|Vysoké|
+|2|Vysoká|
+|3|Vysoká|
 |4|Normální|
 |5|Nízká|
 |Všechny ostatní hodnoty|Nízká|

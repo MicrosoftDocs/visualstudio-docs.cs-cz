@@ -1,5 +1,6 @@
 ---
 title: Zobrazení využití | Microsoft Docs
+description: Přečtěte si, že zobrazení využití zobrazuje informace o procesoru, GPU a dalších systémových prostředcích, které používá aktuální proces.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 926c67261f91aa8787d9be4a33dadbd3a890c568
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 047c9ef9d5bb03546eb88372ae43a51c7c8e4d32
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62823518"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723202"
 ---
 # <a name="utilization-view"></a>Zobrazení využití
 **Zobrazení využití** zobrazuje informace o procesoru, GPU a dalších systémových prostředcích, které jsou používány aktuálním procesem (výběr možnosti **analyzovat**  >  **Vizualizátor souběžnosti** pro spuštění Vizualizátor souběžnosti). Zobrazuje průměrné využití jádra analyzovaným procesem, nečinného procesu, systémového procesu a dalších procesů, které v systému běží v průběhu času. Nezobrazuje, které konkrétní jádro je v určitou dobu aktivní. Například pokud jsou dvě jádra spuštěny na úrovni 50% kapacity za dané časové období, pak toto zobrazení ukazuje, že je využíváno jedno logické jádro. Zobrazení je vygenerováno vydělením času profilace na krátké časové segmenty. Pro každý segment graf znázorňuje průměrný počet vláken procesů, které jsou během daného intervalu spuštěny na logických jádrech.
@@ -46,7 +47,7 @@ ms.locfileid: "62823518"
  Pokud používáte GPU pomocí C++ AMP nebo DirectX, může vás zajímat, jak zjistit počet používaných motorů GPU nebo v oblastech, ve kterých je GPU neočekávaně nečinný.
 
 ## <a name="zoom"></a>Zoom
- Pokud se chcete přiblížit do grafu využití procesoru nebo grafu aktivity GPU, vyberte oddíl nebo použijte nástroj Lupa nad grafem. Nastavení přiblížení zůstává při přepínání na další zobrazení. K opětovnému přiblížení použijte nástroj Lupa posuvníku. Můžete také zvětšit zobrazení pomocí **klávesy CTRL** + **scroll**.
+ Pokud se chcete přiblížit do grafu využití procesoru nebo grafu aktivity GPU, vyberte oddíl nebo použijte nástroj Lupa nad grafem. Nastavení přiblížení zůstává při přepínání na další zobrazení. K opětovnému přiblížení použijte nástroj Lupa posuvníku. Můžete také zvětšit zobrazení pomocí **klávesy CTRL** + .
 
 ## <a name="see-also"></a>Viz také
 - [Vizualizér souběžnosti](../profiling/concurrency-visualizer.md)

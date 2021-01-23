@@ -1,5 +1,6 @@
 ---
 title: Analýza využití paměti JavaScriptu v aplikacích pro UWP | Microsoft Docs
+description: Přečtěte si, jak je k dispozici analyzátor paměti JavaScriptu, který vám pomůže pochopit využití paměti a najít nevracení paměti ve vašich aplikacích pro UWP sestavených pro Windows pomocí JavaScriptu.
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,12 +21,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 86a1b857639d8a58ffc7686569ad8e103674f136
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a29d12a4ca2e6a7a620c5197f76c0ad35ac33a40
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037481"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721681"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>Analýza využití paměti JavaScriptu v aplikacích pro UWP
 Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který vám pomůže pochopit využití paměti a najít nevracení paměti ve vašich aplikacích pro UWP sestavených pro Windows pomocí JavaScriptu. Mezi podporované aplikace patří aplikace pro univerzální aplikace pro Windows.
@@ -69,7 +70,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který 
 
          Tuto možnost použijte k analýze využití paměti aplikací, které jste nainstalovali v počítači, když nemáte přístup ke zdrojovému kódu. Tato možnost může být užitečná také v případě, že chcete pouze analyzovat využití paměti jakékoli aplikace mimo vlastní vývoj aplikací.
 
-4. Z **dostupných nástrojů**zaškrtněte políčko **paměť JavaScriptu** a pak zvolte **Spustit**.
+4. Z **dostupných nástrojů** zaškrtněte políčko **paměť JavaScriptu** a pak zvolte **Spustit**.
 
 5. Po spuštění analyzátoru paměti může okno Řízení uživatelských účtů požádat o vaše oprávnění ke spuštění Collector.exeu ETW sady Visual Studio. Vyberte **Ano**.
 
@@ -193,11 +194,11 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který 
 
 - Velikost haldy. Toto číslo zahrnuje prvky modelu DOM a objekty, které modul runtime jazyka JavaScript přidá do haldy jazyka JavaScript. Velikost haldy odkazuje na zobrazení typů snímku.
 
-- Velikost rozdílové haldy Tato hodnota zobrazuje rozdíl mezi velikostí haldy aktuálního snímku a velikostí haldy předchozího snímku. Hodnota je následována červenou šipkou nahoru, pokud dojde k zmenšení paměti nebo zelenou šipku dolů. Pokud se velikost haldy mezi snímky nezměnila, zobrazí se místo čísla text **žádná změna** . Pro první snímek uvidíte **základní**text. Rozdílová velikost haldy odkazuje na zobrazení typů rozdílu snímku.
+- Velikost rozdílové haldy Tato hodnota zobrazuje rozdíl mezi velikostí haldy aktuálního snímku a velikostí haldy předchozího snímku. Hodnota je následována červenou šipkou nahoru, pokud dojde k zmenšení paměti nebo zelenou šipku dolů. Pokud se velikost haldy mezi snímky nezměnila, zobrazí se místo čísla text **žádná změna** . Pro první snímek uvidíte **základní** text. Rozdílová velikost haldy odkazuje na zobrazení typů rozdílu snímku.
 
 - Počet objektů. Tento počet zobrazuje pouze objekty vytvořené ve vaší aplikaci a filtruje předdefinované objekty vytvořené modulem runtime jazyka JavaScript. Počet objektů odkazuje na zobrazení typů podrobností snímku.
 
-- Počet rozdílových objektů Zobrazí se dvě hodnoty: první hodnota je počet nových objektů přidaných od předchozího snímku; a druhá hodnota je počet objektů odebraných od předchozího snímku. Například ilustrace ukazuje, že byly přidány objekty 1 859 a byly od #1 snímku odebrány objekty 1 733. Tyto informace jsou následovány červenou šipkou nahoru, pokud je celkový počet objektů zvětšený nebo zelená šipka dolů, pokud se snížila. Pokud se počet objektů nezměnil, zobrazí se místo čísla text **žádná změna** . Pro první snímek uvidíte **základní**text. Počet rozdílových objektů odkazuje na zobrazení typů rozdílu snímku.
+- Počet rozdílových objektů Zobrazí se dvě hodnoty: první hodnota je počet nových objektů přidaných od předchozího snímku; a druhá hodnota je počet objektů odebraných od předchozího snímku. Například ilustrace ukazuje, že byly přidány objekty 1 859 a byly od #1 snímku odebrány objekty 1 733. Tyto informace jsou následovány červenou šipkou nahoru, pokud je celkový počet objektů zvětšený nebo zelená šipka dolů, pokud se snížila. Pokud se počet objektů nezměnil, zobrazí se místo čísla text **žádná změna** . Pro první snímek uvidíte **základní** text. Počet rozdílových objektů odkazuje na zobrazení typů rozdílu snímku.
 
 - Snímek obrazovky obrazovky v době pořízení snímku.
 
@@ -219,7 +220,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který 
 
 - **Kořeny**. Zobrazuje hierarchické zobrazení objektů z kořenových objektů prostřednictvím podřízených odkazů. Ve výchozím nastavení jsou podřízené uzly seřazené podle sloupce zachovaná velikost, přičemž největší v horní části.
 
-- **Dominantní**objekty. Zobrazuje seznam objektů na haldě, které mají exkluzivní odkazy na jiné objekty. Dominantní objekty jsou seřazené podle zachované velikosti.
+- **Dominantní** objekty. Zobrazuje seznam objektů na haldě, které mají exkluzivní odkazy na jiné objekty. Dominantní objekty jsou seřazené podle zachované velikosti.
 
   > [!TIP]
   > Při odebrání dominantního objektu z paměti dojde k uvolnění veškeré paměti, kterou objekt uchovává. Pro několik aplikací může zobrazení dominantních objektů pomáhat objasnit uchovávané velikosti paměti, protože můžete prozkoumat úplný řetěz odkazů na objekty.
@@ -230,7 +231,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který 
 
 - **Zadejte**. Typ objektu (například element odkazu HTML nebo element div).
 
-- **Velikost:** Velikost objektu, nezahrnuje velikost žádné odkazované objekty.
+- **Velikost**. Velikost objektu, nezahrnuje velikost žádné odkazované objekty.
 
 - **Velikost zachovaná**. Velikost objektu a velikost všech podřízených objektů, které nemají jiné nadřazené objekty. Pro praktické účely se jedná o množství paměti uchovávané objektem, takže pokud odstraníte objekt, který uvolní určenou velikost paměti.
 
@@ -255,14 +256,14 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který 
 
   Chcete-li filtrovat rozdílové informace mezi snímky, vyberte jeden z filtrů **oboru** v horní části rozdílového zobrazení.
 
-- **Objekty zbývající ze snímku č \<number> **. Tento filtr znázorňuje rozdíl mezi objekty přidanými do haldy a odebranými z haldy v porovnání s snímkem standardních hodnot a předchozím snímkem. Pokud například Souhrn snímku v počtu objektů zobrazuje + 205/-195, tento filtr vám zobrazí deset objektů, které byly přidány, ale nebyly odebrány.
+- **Objekty zbývající ze snímku č \<number>**. Tento filtr znázorňuje rozdíl mezi objekty přidanými do haldy a odebranými z haldy v porovnání s snímkem standardních hodnot a předchozím snímkem. Pokud například Souhrn snímku v počtu objektů zobrazuje + 205/-195, tento filtr vám zobrazí deset objektů, které byly přidány, ale nebyly odebrány.
 
   > [!TIP]
   > Chcete-li zobrazit nejužitečnější informace v tomto filtru, postupujte podle kroků popsaných v části [izolování nevracení paměti](#isolate-a-memory-leak).
 
-- **Objekty přidané mezi snímky # \<number> a # \<number> **. Tento filtr zobrazuje všechny objekty přidané do haldy z předchozího snímku.
+- **Objekty přidané mezi snímky # \<number> a # \<number>**. Tento filtr zobrazuje všechny objekty přidané do haldy z předchozího snímku.
 
-- **Všechny objekty ve snímku č \<number> **. Toto nastavení filtru nevyfiltruje žádné objekty v haldě.
+- **Všechny objekty ve snímku č \<number>**. Toto nastavení filtru nevyfiltruje žádné objekty v haldě.
 
   Chcete-li zobrazit odkazy na objekty, které se neshodují s aktuálním filtrem **oboru** , vyberte možnost **Zobrazit neshodné odkazy** v ![Nastavení seznamu&#45;rozevírací seznam v analyzátoru paměti](../profiling/media/js_mem_settings.png "JS_Mem_Settings") v pravém horním rohu podokna. Pokud povolíte toto nastavení, zobrazí se neshodné odkazy s šedým textem.
 
@@ -302,7 +303,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který 
  Chcete-li zobrazit tyto objekty, v pravém horním rohu podokna vyberte možnost **Zobrazit předdefinované** v nastavení seznamu nastavení ![&#45;rozevírací seznam v nástroji analyzátor paměti](../profiling/media/js_mem_settings.png "JS_Mem_Settings") .
 
 ## <a name="save-diagnostic-session-files"></a>Uložit soubory diagnostické relace
- Souhrny snímků diagnostiky a jejich přidružené zobrazení podrobností jsou uloženy jako. soubory *diagsession* . **Průzkumník řešení** zobrazuje předchozí diagnostické relace ve složce relace diagnostiky. V **Průzkumník řešení**můžete otevřít předchozí relace nebo soubory odebrat nebo přejmenovat.
+ Souhrny snímků diagnostiky a jejich přidružené zobrazení podrobností jsou uloženy jako. soubory *diagsession* . **Průzkumník řešení** zobrazuje předchozí diagnostické relace ve složce relace diagnostiky. V **Průzkumník řešení** můžete otevřít předchozí relace nebo soubory odebrat nebo přejmenovat.
 
 ## <a name="associate-source-code-with-memory-usage-data"></a>Přidružit zdrojový kód k datům využití paměti
  Pro snazší izolaci oddílu kódu, který má problém s pamětí, použijte následující metody:
@@ -347,7 +348,7 @@ if (performance && performance.mark) {
 
 ## <a name="tips-to-identify-memory-issues"></a>Tipy k identifikaci problémů s pamětí
 
-- Sledujte pracovní postup, který je popsaný v části [izolování nevracení paměti](#isolate-a-memory-leak) , a používejte objekty, které **zůstaly ve filtru Snapshot # \<number> ** Filter, k identifikaci pravděpodobných kandidátů na nevracení paměti.
+- Sledujte pracovní postup, který je popsaný v části [izolování nevracení paměti](#isolate-a-memory-leak) , a používejte objekty, které **zůstaly ve filtru Snapshot # \<number>** Filter, k identifikaci pravděpodobných kandidátů na nevracení paměti.
 
 - Chcete-li zjistit, kde je objekt v hierarchii paměti odkazován, použijte [hledání objektu ve stromu objektů](#find-an-object-in-the-object-tree) . Zobrazení kořenových adresářů ukazuje, jak je objekt rootem globálního objektu, což by zabránilo uvolňování paměti.
 

@@ -1,5 +1,6 @@
 ---
 title: Vysvětlení metod shromažďování výkonu profileru
+description: Seznamte se s metodami shromažďování dat, které využívají nástroje v profileru výkonu sady Visual Studio.
 ms.date: 4/30/2020
 ms.topic: conceptual
 f1_keywords: ''
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: '>= vs-2017'
 ms.workload:
 - multiple
-ms.openlocfilehash: f0e24f3fc33ea456ad02bf9797b934a1a56d4492
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e34fd78d7ff44aeffc4ca4d61c84a0a9af6747a5
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238579"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722266"
 ---
 # <a name="understand-profiler-performance-collection-methods"></a>Vysvětlení metod shromažďování výkonu profileru
 

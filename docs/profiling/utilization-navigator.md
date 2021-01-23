@@ -1,5 +1,6 @@
 ---
 title: Navigátor využití | Microsoft Docs
+description: Přečtěte si, jak můžete použít Navigátor využití v Vizualizátor souběžnosti k výběru časového intervalu v trasování.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,19 +11,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94e2562e86af36d935679916c2bfb9669be1758d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9f209098200333e91f0e5baf9c7a2b73b4a3202f
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62823479"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723215"
 ---
 # <a name="utilization-navigator"></a>Navigátor využití
 Můžete použít Navigátor využití v Vizualizátor souběžnosti k výběru časového intervalu v trasování. Vizualizátor souběžnosti zobrazuje využití PROCESORových jader cílovým procesem v průběhu času. Díky tomu je snazší vyšetřit vzory využití procesoru a zároveň také porovnat data o využití a data v jiných zobrazeních. Navigátor využití se zobrazí v horní části každého zobrazení ve Vizualizátor souběžnosti. Následující ilustrace znázorňuje navigátor využití.
 
  ![Navigátor využití znázorňující vybraný časový rámec](../profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator") Navigátor využití a vybraný časový rámec
 
- Na obrázku je vybraný interval definován červeným obdélníkem *, který je*známý jako jezdec.
+ Na obrázku je vybraný interval definován červeným obdélníkem *, který je* známý jako jezdec.
 
  Tady je postup, jak můžete pomocí Navigátoru využití manipulovat se zobrazeným časovým rozsahem:
 

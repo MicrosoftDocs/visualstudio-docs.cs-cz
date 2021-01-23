@@ -1,5 +1,6 @@
 ---
 title: VSInstr | Microsoft Docs
+description: Přečtěte si, jak se nástroj VSInstr používá k instrumentaci binárních souborů a dalších různých možností nástroje VSInstr.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +19,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fc68ad7da06a1710e3c34ddb601155fc3d0b1182
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 576e83e5440607b06aca1b80171f8ca30d716e24
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330505"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723111"
 ---
 # <a name="vsinstr"></a>VSInstr
 Nástroj VSInstr slouží k instrumentaci binárních souborů. Je vyvolána pomocí následující syntaxe:
@@ -37,7 +38,7 @@ VSInstr [/U] filename [/options]
 |Možnosti|Popis|
 |-------------|-----------------|
 |**Pomáhat** nebo **?**|Zobrazí pomocníka.|
-|**U**|Zapíše výstup přesměrované konzoly jako Unicode. Je nutné zadat první možnost.|
+|**H**|Zapíše výstup přesměrované konzoly jako Unicode. Je nutné zadat první možnost.|
 |`@filename`|Určuje název souboru odpovědí, který obsahuje jednu možnost příkazu na řádek.  Nepoužívejte uvozovky.|
 |**OutputPath**`:path`|Určuje cílový adresář pro instrumentované bitové kopie. Pokud není zadána výstupní cesta, původní binární soubor byl přejmenován připojením "orig" k názvu souboru ve stejném adresáři a kopie binárního souboru je instrumentovaná.|
 |**Vyloučit:**`funcspec`|Určuje specifikaci funkce, která se má vyloučit z instrumentace pomocí sond. To je užitečné v případě, že při vkládání testu sondy do funkce dojde k nepředvídatelným nebo nežádoucím výsledkům.<br /><br /> Nepoužívejte možnosti **Exclude** a **include** , které odkazují na funkce ve stejném binárním souboru.<br /><br /> Můžete zadat více specifikací funkcí s oddělenými možnostmi **vyloučení** .<br /><br /> `funcspec` je definován jako:<br /><br /> [obor názvů \<separator1> ] [třída \<separator2> ] slouží<br /><br /> \<separator1> je určena `::` pro nativní kód a `.` pro spravovaný kód.<br /><br /> \<separator2> je vždycky `::`.<br /><br /> **Vyloučení** je podporováno s pokrytím kódu.<br /><br /> Zástupný znak \* je podporován. Například pro vyloučení všech funkcí v oboru názvů použijte:<br /><br /> MyNamespace::\*<br /><br /> K vypsání úplných názvů funkcí v zadaném binárním souboru můžete použít **VSInstr/DumpFuncs** .|
@@ -45,7 +46,7 @@ VSInstr [/U] filename [/options]
 |**DumpFuncs**|Zobrazí seznam funkcí v rámci zadaného obrázku. Není prováděna žádná instrumentace.|
 |**ExcludeSmallFuncs**|Vyloučí malé funkce, což jsou krátké funkce, které nedělají žádná volání funkcí, od instrumentace. Možnost **ExcludeSmallFuncs** poskytuje méně zátěže instrumentace a tím zvýšila rychlost instrumentace.<br /><br /> Vyloučení malých funkcí také snižuje. velikost souboru *VSP* a čas potřebný k analýze.|
 |**Označit:**{**before** \| **po** \| **horní** \| **části**}`,funcname,markid`|Vloží značku profilu (identifikátor používaný k vymezení dat v sestavách), které můžete použít k identifikaci počátečního nebo koncového rozsahu dat v souboru sestavy. vsp.<br /><br /> **Před** – bezprostředně před cílovou položkou funkce.<br /><br /> **After** hned po ukončení cílové funkce.<br /><br /> **Nahoru** a hned za cílovou položkou funkce.<br /><br /> **Zdola** – těsně před každým návratem v cílové funkci.<br /><br /> `funcname` – Název cílové funkce<br /><br /> `Markid` – Kladné celé číslo (Long), které se použije jako identifikátor značky Profile.|
-|**Pokrytí**|Provede instrumentaci pokrytí. Dá se použít jenom s následujícími možnostmi: **verbose**, **OutputPath**, **Exclude**a **logfile**..|
+|**Pokrytí**|Provede instrumentaci pokrytí. Dá se použít jenom s následujícími možnostmi: **verbose**, **OutputPath**, **Exclude** a **logfile**..|
 |**Podrobné**|Možnost **verbose** se používá k zobrazení podrobných informací o procesu instrumentace.|
 |**Upozornit**`[:[Message Number[;Message Number]]]`|Potlačí všechna nebo konkrétní upozornění.<br /><br /> `Message Number` – číslo upozornění. Pokud `Message Number` je tento parametr vynechán, budou potlačena všechna upozornění.<br /><br /> Další informace naleznete v tématu [VSInstr Warnings](../profiling/vsinstr-warnings.md).|
 |**Ovládací prvek:** `{` **Podproces** \| **Zpracování** \| **Globální**`}`|Určuje úroveň profilace následujících možností řízení sběru dat VSInstr:<br /><br /> **Zahájení**<br /><br /> **StartOnly**<br /><br /> **Suspend**<br /><br /> **StopOnly**<br /><br /> **SuspendOnly**<br /><br /> **ResumeOnly**<br /><br /> **Thread** – určuje funkce ovládacího prvku shromažďování dat na úrovni vlákna. Profilace je spuštěná nebo zastavená jenom pro aktuální vlákno. Stav profilace jiných vláken není ovlivněn. Výchozím nastavením je vlákno.<br /><br /> **Proces** – určuje funkce ovládacího prvku shromažďování dat profilování na úrovni procesu. Profilace se spouští nebo zastavuje pro všechna vlákna v aktuálním procesu. Stav profilace jiných procesů není ovlivněn.<br /><br /> **Global** – určuje funkce ovládacího prvku shromažďování dat globální úrovně (mezi procesy).<br /><br /> Pokud nezadáte úroveň profilace, dojde k chybě.|

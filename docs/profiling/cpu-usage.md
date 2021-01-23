@@ -1,5 +1,7 @@
 ---
 title: Analýza využití procesoru v profileru výkonu
+description: Seznamte se s využitím nástroje výkon procesoru, který ukazuje čas procesoru a procento strávené prováděním kódu v aplikacích C++, C#, Visual Basic a JavaScriptu.
+ms.custom: SEO-VS-2020
 ms.date: 04/02/2020
 ms.topic: how-to
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 706ffa8d17974894403c22a559edad4c2e4b4ef8
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: 902974c195cabf09abf5f29334a1e28316da54e5
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007099"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719354"
 ---
 # <a name="analyze-cpu-usage-without-debugging-in-the-performance-profiler"></a>Analýza využití procesoru bez ladění v profileru výkonu
 
@@ -36,7 +38,7 @@ Obvykle místní počítač nejlépe replikuje nainstalovaná aplikace. Pokud ch
 
 1. Vyberte **ladit**  >  **výkon profileru**.
 
-1. V části **dostupné nástroje**vyberte **využití CPU**a pak vyberte **Spustit**.
+1. V části **dostupné nástroje** vyberte **využití CPU** a pak vyberte **Spustit**.
 
     ![Vybrat využití CPU](../profiling/media/cpuuse_lib_choosecpuusage.png "Vybrat využití CPU")
 
@@ -50,7 +52,7 @@ Obvykle místní počítač nejlépe replikuje nainstalovaná aplikace. Pokud ch
 
 ## <a name="analyze-the-cpu-usage-report"></a>Analýza sestavy využití CPU
 
-Diagnostická sestava je seřazená podle **celkového využití CPU**od nejvyšších po nejnižší. Výběrem záhlaví sloupců změňte pořadí řazení nebo sloupec řazení. Pomocí rozevíracího seznamu **Filtr** vyberte nebo zrušte výběr zobrazovaného vlákna a pomocí **vyhledávacího** pole vyhledejte konkrétní vlákno nebo uzel.
+Diagnostická sestava je seřazená podle **celkového využití CPU** od nejvyšších po nejnižší. Výběrem záhlaví sloupců změňte pořadí řazení nebo sloupec řazení. Pomocí rozevíracího seznamu **Filtr** vyberte nebo zrušte výběr zobrazovaného vlákna a pomocí **vyhledávacího** pole vyhledejte konkrétní vlákno nebo uzel.
 
 ::: moniker range=">=vs-2019"
 Počínaje verzí Visual Studio 2019 můžete kliknout na tlačítko **Rozbalit cestu k Hotu** a zobrazit kritickou **cestu** a zobrazit tak volání funkcí, která používají nejvyšší procento procesoru v zobrazení stromu volání.
@@ -77,7 +79,7 @@ Chcete-li zobrazit strom volání, vyberte v sestavě nadřazený uzel. Stránka
 ![Stromová struktura volání](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "Stromová struktura volání")
 ::: moniker-end
 
-|Image|Description|
+|Image|Popis|
 |-|-|
 |![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Uzel nejvyšší úrovně ve stromech volání využití CPU je pseudo uzel.|
 |![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Pokud je v aplikaci většina aplikací zakázaná možnost **Zobrazit externí kód** , je uzel druhé úrovně uzlem **[externí kód]** . Uzel obsahuje kód systému a rozhraní, který spustí a zastaví aplikaci, nakreslí uživatelské rozhraní, řídí plánování vláken a poskytuje aplikaci další služby nižší úrovně.|

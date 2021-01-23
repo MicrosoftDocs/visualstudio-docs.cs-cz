@@ -1,5 +1,6 @@
 ---
 title: Profilace v clusterech HPC (High Performance Computing) | Microsoft Docs
+description: Přečtěte si, jak můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windows pomocí metody vzorkování sady Visual Studio Nástroje pro profilaci.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +21,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f2d3949194dedab6d7e7ea2faa1aea304d889bc4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06a160adda25debe21d8262d9064c23849011dc9
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772117"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720524"
 ---
 # <a name="profile-on-hpc-high-performance-computing-clusters"></a>Profilování v clusterech HPC (High Performance Computing)
 
@@ -75,13 +76,13 @@ Relace profilování se konfiguruje pomocí Průvodce výkonem HPC k určení cl
 
 5. Na třetí stránce průvodce:
 
-    - Pokud profilovat spustitelný soubor, který není v otevřeném projektu, zadejte cestu k binárnímu souboru v poli **Jaká je úplná cesta ke spustitelnému**souboru.
+    - Pokud profilovat spustitelný soubor, který není v otevřeném projektu, zadejte cestu k binárnímu souboru v poli **Jaká je úplná cesta ke spustitelnému** souboru.
 
     - Pokud profilovat spustitelný soubor, který není v otevřeném projektu, můžete zadat argumenty příkazového řádku, které se mají předat procesu v **argumentech příkazového řádku**.
 
-    - Ve **vzdáleném pracovním adresáři**zadejte cestu ke složce, kterou používají instance procesů na jednotlivých výpočetních uzlech.
+    - Ve **vzdáleném pracovním adresáři** zadejte cestu ke složce, kterou používají instance procesů na jednotlivých výpočetních uzlech.
 
-    - V části **umístění nasazení**zadejte cestu k adresáři, který server HPC používá k přípravě imagí pro nasazení.
+    - V části **umístění nasazení** zadejte cestu k adresáři, který server HPC používá k přípravě imagí pro nasazení.
 
 6. Klikněte na **Next** (Další).
 

@@ -1,5 +1,6 @@
 ---
 title: Ukládají se a exportují data nástrojů výkonu | Microsoft Docs
+description: Přečtěte si, jak můžete ukládat filtrovaná nebo nefiltrované zobrazení souborů dat profilování (. vsp) jako soubory analyzovaných sestav (. vsps).
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,22 +12,22 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 729dc2e28446420dd2590e132b7ec8a5444fcb9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0b340abd81cef7183c2ba25af58ae432d8c80e6a
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74773896"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720149"
 ---
 # <a name="save-and-export-performance-tools-data"></a>Uložení a export dat nástrojů pro měření výkonu
 Tento článek popisuje, jak uložit a exportovat soubory s daty o výkonu.
 
 ## <a name="how-to-save-performance-data-files-as-analyzed-report-files"></a>Postupy: ukládání souborů dat výkonu jako analyzovaných souborů sestav
- Můžete uložit filtrovaná nebo nefiltrovaná zobrazení dat profilace (.* VSP*) soubory jako analyzovaná sestava (.* vsps*) soubory. Analyzovaný soubor sestavy lze zobrazit v okně zobrazení sestavy a je výrazně menší než původní. soubor *VSP* . Nemůžete však použít filtr na data. soubor *vsps* Můžete vytvořit analyzovaný soubor sestavy z Prohlížeč výkonu bez otevření souboru v integrovaném vývojovém prostředí (IDE), nebo můžete otevřít a filtrovat. soubor *VSP* a pak výsledky uložte.
+ Můžete uložit filtrovaná nebo nefiltrovaná zobrazení dat profilace (.*VSP*) soubory jako analyzovaná sestava (.*vsps*) soubory. Analyzovaný soubor sestavy lze zobrazit v okně zobrazení sestavy a je výrazně menší než původní. soubor *VSP* . Nemůžete však použít filtr na data. soubor *vsps* Můžete vytvořit analyzovaný soubor sestavy z Prohlížeč výkonu bez otevření souboru v integrovaném vývojovém prostředí (IDE), nebo můžete otevřít a filtrovat. soubor *VSP* a pak výsledky uložte.
 
 #### <a name="to-save-an-analyzed-performance-report-from-the-performance-explorer"></a>Uložení analyzovaných sestav výkonu z Prohlížeč výkonu
 
-1. V části **sestavy**klikněte pravým tlačítkem na soubor dat profilace, který chcete analyzovat, a pak klikněte na **Uložit analyzované**.
+1. V části **sestavy** klikněte pravým tlačítkem na soubor dat profilace, který chcete analyzovat, a pak klikněte na **Uložit analyzované**.
 
 2. V dialogovém okně **Uložit Analyzovaná data** zadejte adresář a potom zadejte název souboru.
 
@@ -34,7 +35,7 @@ Tento článek popisuje, jak uložit a exportovat soubory s daty o výkonu.
 
 #### <a name="to-save-an-analyzed-performance-report-from-the-report-view-window"></a>Uložení sestavy analýz výkonu z okna zobrazení sestavy
 
-1. Otevřete data profilace (.* VSP*) v okně zobrazení sestavy.
+1. Otevřete data profilace (.*VSP*) v okně zobrazení sestavy.
 
 2. Volitelné Použijte filtr na data. Další informace najdete v tématu [Filtr zobrazení sestav výkonu](../profiling/performance-report-view-filter.md).
 
@@ -52,17 +53,17 @@ Tento článek popisuje, jak uložit a exportovat soubory s daty o výkonu.
 
 #### <a name="to-export-performance-reports-from-the-performance-explorer-window"></a>Export sestav výkonu z okna Prohlížeč výkonu
 
-1. V **prohlížeč výkonu**vyberte sestavu, klikněte pravým tlačítkem a vyberte **exportovat**.
+1. V **prohlížeč výkonu** vyberte sestavu, klikněte pravým tlačítkem a vyberte **exportovat**.
 
      Zobrazí se dialogové okno **exportovat sestavu** .
 
 2. Vyberte zobrazení sestav, která chcete exportovat.
 
-3. V části **Sestava předpona s**zadejte předponu, kterou chcete přidat do názvu sestavy.
+3. V části **Sestava předpona s** zadejte předponu, kterou chcete přidat do názvu sestavy.
 
-4. V části **umístění exportované sestavy**zadejte adresář.
+4. V části **umístění exportované sestavy** zadejte adresář.
 
-5. V části **exportovaný formát sestavy**vyberte (textový soubor s oddělovači) ( \* . csv \) nebo data XML ( \* . XML) \) .
+5. V části **exportovaný formát sestavy** vyberte (textový soubor s oddělovači) ( \* . csv \) nebo data XML ( \* . XML) \) .
 
 6. Klikněte na **Exportovat**.
 
@@ -78,11 +79,11 @@ Tento článek popisuje, jak uložit a exportovat soubory s daty o výkonu.
 
 4. Vyberte zobrazení sestav, která chcete exportovat.
 
-5. V části **Sestava předpona s**zadejte předponu, kterou chcete přidat do názvu sestavy.
+5. V části **Sestava předpona s** zadejte předponu, kterou chcete přidat do názvu sestavy.
 
-6. V části **umístění exportované sestavy**zadejte adresář.
+6. V části **umístění exportované sestavy** zadejte adresář.
 
-7. V části **exportovaný formát sestavy**vyberte (textový soubor s oddělovači) ( \* . csv) nebo data XML ( \* . XML).
+7. V části **exportovaný formát sestavy** vyberte (textový soubor s oddělovači) ( \* . csv) nebo data XML ( \* . XML).
 
 8. Klikněte na **Exportovat**.
 

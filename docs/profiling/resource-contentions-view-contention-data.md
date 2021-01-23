@@ -1,5 +1,6 @@
 ---
 title: Zobrazení sporů prostředků – data kolizí | Microsoft Docs
+description: Přečtěte si, jak zobrazení kolizí prostředků vypisuje data kolizí pro prostředky, které byly zdrojem událostí sporu.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1607e594b6456d4da4396069d589160230b39680
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc8e6c39efea24ac8a4a493099f3bcdb39dc4fe6
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778333"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720342"
 ---
 # <a name="resource-contentions-view---contention-data"></a>Zobrazení kolizí prostředku – data kolizí
 Zobrazení sporu prostředků uvádí data kolizí pro prostředky, které byly zdrojem událostí sporu. K události sporu dojde, když je funkce ve vlákně vynucena čekat na přístup k prostředku, protože funkce v jiném vlákně získala výhradní přístup k prostředku. Každý prostředek je kořenovým uzlem stromu volání, který zobrazuje cesty provádění funkce, jejichž výsledkem jsou události sporů.
@@ -42,7 +43,7 @@ Zobrazení sporu prostředků uvádí data kolizí pro prostředky, které byly 
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|Název prostředku nebo funkce.|
+|**Název**|Název prostředku nebo funkce.|
 |**Výhradní čas zablokování**|– Pro prostředek je celkový čas, kdy byl přístup k prostředku zablokován a způsobil, že vlákno čeká.<br />– Pro funkci, čas, kdy byly tyto instance funkce zablokovány přístupu k nadřazenému prostředku, pokud funkce prováděla kód v těle funkce. Čas zablokování ve funkcích, které byly volány funkcí, není zahrnutý.|
 |**% Výhradního času zablokování**|– U prostředku je procento veškerého času zablokování v datech profilace, která byla zablokovaná čas tohoto prostředku.<br />– Pro funkci je procento veškerého času zablokování v datech profilace, která byla exkluzivně zablokovaná během těchto instancí funkcí.|
 |**Exkluzivní spory**|– Pro prostředek je to celkový počet zablokovaných přístup k prostředku a způsobil, že vlákno čeká.<br />– Pro funkci, kolikrát byly tyto instance funkce zablokované přístupu k nadřazenému prostředku, pokud funkce prováděla kód v těle funkce. Blokování událostí ve funkcích, které byly volány funkcí, není zahrnuto.|

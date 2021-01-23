@@ -12,12 +12,12 @@ author: mikejo5000
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: aa1f0505d37059ce65da80fcf483473610cf2f6d
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: ba3baa1ff06da6497ddc663f888e7c93292d5b98
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329533"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719653"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>Izolace testovaného kódu pomocí Napodobenin Microsoft
 
@@ -255,11 +255,11 @@ Můžete také vytvořit překrytí pro konkrétní instance, konstruktory a vla
 ## <a name="using-microsoft-fakes-in-the-ci"></a>Používání napodobenin společnosti Microsoft v CI
 
 ### <a name="microsoft-fakes-assembly-generation"></a>Generování sestavení napodobenin společnosti Microsoft
-Vzhledem k tomu, že Microsoft napodobenin vyžaduje Visual Studio Enterprise, generování napodobenin sestavení vyžaduje, abyste vytvořili projekt pomocí [úlohy sestavení sady Visual Studio](/azure/devops/pipelines/tasks/build/visual-studio-build?view=azure-devops).
+Vzhledem k tomu, že Microsoft napodobenin vyžaduje Visual Studio Enterprise, generování napodobenin sestavení vyžaduje, abyste vytvořili projekt pomocí [úlohy sestavení sady Visual Studio](/azure/devops/pipelines/tasks/build/visual-studio-build?view=azure-devops&preserve-view=true).
 
 ::: moniker range=">=vs-2019"
 > [!NOTE]
-> Alternativou k tomu je ověřit, zda jsou sestavení napodobenina do CI a používat [úlohu MSBuild](../msbuild/msbuild-task.md?view=vs-2019). Když to uděláte, musíte se ujistit, že máte odkaz na sestavení generovaného sestavení napodobeniny v testovacím projektu, podobně jako následující fragment kódu:
+> Alternativou k tomu je ověřit, zda jsou sestavení napodobenina do CI a používat [úlohu MSBuild](../msbuild/msbuild-task.md?view=vs-2019&preserve-view=true). Když to uděláte, musíte se ujistit, že máte odkaz na sestavení generovaného sestavení napodobeniny v testovacím projektu, podobně jako následující fragment kódu:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -273,10 +273,10 @@ Tento odkaz je nutný k přidání do ručně konkrétně projektů ve stylu sad
 ::: moniker-end
 
 ### <a name="running-microsoft-fakes-tests"></a>Spuštění testů napodobenin společnosti Microsoft
-Pokud jsou sestavení napodobeniny od společnosti Microsoft přítomna v nakonfigurovaném `FakesAssemblies` adresáři (ve výchozím nastavení `$(ProjectDir)FakesAssemblies` ), můžete spustit testy pomocí [úlohy VSTest](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops).
+Pokud jsou sestavení napodobeniny od společnosti Microsoft přítomna v nakonfigurovaném `FakesAssemblies` adresáři (ve výchozím nastavení `$(ProjectDir)FakesAssemblies` ), můžete spustit testy pomocí [úlohy VSTest](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops&preserve-view=true).
 
 ::: moniker range=">=vs-2019"
-Distribuované testování pomocí projektů [VSTest](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops) .NET Core s využitím Microsoft napodobenin vyžaduje Visual Studio 2019 Update 9 Preview `20201020-06` a vyšší.
+Distribuované testování pomocí projektů [VSTest](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops&preserve-view=true) .NET Core s využitím Microsoft napodobenin vyžaduje Visual Studio 2019 Update 9 Preview `20201020-06` a vyšší.
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"

@@ -1,5 +1,6 @@
 ---
 title: Zobrazení modulů – data vzorkování paměti .NET | Microsoft Docs
+description: Přečtěte si o zobrazeních dat o přidělování paměti .NET, která se shromažďují pomocí metody vzorkování.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d0d9b7ab681a266115673b48f2c2604c5ff869c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e05a3e1d915853689c436b192de9e266e86b13d
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772724"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723293"
 ---
 # <a name="modules-view---net-memory-sampling-data"></a>Zobrazení modulů – data vzorkování paměti .NET
 Moduly zobrazení dat alokace paměti .NET shromažďovaných pomocí metody vzorkování seskupují data paměti moduly, které byly spuštěny při spuštění profilace. Každý modul je kořenovým adresářem hierarchického stromu. Funkce modulu jsou uvedeny pod uzlem modulu.
@@ -25,7 +26,7 @@ Moduly zobrazení dat alokace paměti .NET shromažďovaných pomocí metody vzo
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|Název modulu, funkce, čísla řádku nebo adresy instrukcí.|
+|**Název**|Název modulu, funkce, čísla řádku nebo adresy instrukcí.|
 |**ID procesu**|ID procesu (PID) pro spuštění profilace.|
 |**Název procesu**|Název procesu|
 |**Název modulu**|Název modulu, který obsahuje funkci.|

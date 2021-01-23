@@ -1,5 +1,6 @@
 ---
 title: VSPerfCmd | Microsoft Docs
+description: Přečtěte si, jak se nástroj VSPerfCmd.exe používá ke spuštění a zastavení shromažďování dat výkonu. Seznamte se také s různými možnostmi nástrojů VSPerfCmd.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: caf145213c41215d518cf42d0a69975c8580e817
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 90d263052c543cbf7e0f3207d9980bd04c13e990
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330013"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719185"
 ---
 # <a name="vsperfcmd"></a>VSPerfCmd
 Nástroj *VSPerfCmd.exe* slouží ke spuštění a zastavení shromažďování dat výkonu. Používá následující syntaxi:
@@ -33,17 +34,17 @@ VSPerfCmd [/U] [/options]
 
 |Možnost|Popis|
 |------------|-----------------|
-|**U**|Přesměrovaný výstup konzoly je zapsaný jako Unicode. Musí se jednat o první zadanou možnost.|
+|**H**|Přesměrovaný výstup konzoly je zapsaný jako Unicode. Musí se jednat o první zadanou možnost.|
 |[Začátek](../profiling/start.md) **:**`mode`|Spustí službu profilace v zadaném režimu.|
 |[Výstup](../profiling/output.md) **:**`filename`|Určuje název výstupního souboru. Použijte pouze v **nabídce Start**.|
 |[CrossSession&#124;CS](../profiling/crosssession.md)|Povoluje profilování v relacích systému Windows. Používejte pouze v **nabídce Start**, **připojit** **nebo spustit**.|
 |[Uživatel](../profiling/user-vsperfcmd.md) **:**[ `domain\` ]`username`|Povolí přístup zadaného účtu ke službě profileru. Použijte pouze v **nabídce Start**.|
 |[WaitStart](../profiling/waitstart.md)[**:** `n` ]|Čeká na inicializaci protokolovacího nástroje pro shromažďování dat. `n`Je-li parametr zadán, bude **VSPerfCmd** čekat maximálně `n` sekund. Pokud `n` parametr není zadán, bude **VSPerfCmd** čekat na neomezenou dobu. To usnadňuje použití **VSPerfCmd** jako součást dávkového procesu.|
-|[Čítač](../profiling/counter.md) **:**`cfg`|Když se použije metoda profilace vzorku, určí čítač CPU a počet událostí, které se mají použít jako interval vzorkování. Můžete vzorkovat jenom jednu hodnotu čítače.<br /><br /> Když se použije metoda profilace instrumentace, určí čítač procesoru, který se má shromáždit v každém bodu instrumentace. Používejte pouze v **nabídce Start:** `Trace` , **Attach**nebo **Launch**.|
+|[Čítač](../profiling/counter.md) **:**`cfg`|Když se použije metoda profilace vzorku, určí čítač CPU a počet událostí, které se mají použít jako interval vzorkování. Můžete vzorkovat jenom jednu hodnotu čítače.<br /><br /> Když se použije metoda profilace instrumentace, určí čítač procesoru, který se má shromáždit v každém bodu instrumentace. Používejte pouze v **nabídce Start:** `Trace` , **Attach** nebo **Launch**.|
 |[QueryCounters](../profiling/querycounters.md)|Zobrazí seznam platných čítačů CPU pro aktuální počítač.|
 |[WinCounter](../profiling/wincounter.md) **:** *cesta*|Určuje událost čítače výkonu systému Windows, která se má zahrnout do dat značek Profile. Použijte pouze v **nabídce Start**.|
 |[AutoMark](../profiling/automark.md) **:** *n*|Určuje časový interval (v milisekundách) mezi událostmi shromažďování dat čítače výkonu systému Windows. Použijte s **WinCounter**.|
-|[Události](../profiling/events-vsperfcmd.md) **:**`option`|Řídí kolekci zadaných událostí trasování událostí pro Windows (ETW). Data ETW se shromažďují do. *ITL* soubor, který neobsahuje data profilování (.* VSP*) soubor.|
+|[Události](../profiling/events-vsperfcmd.md) **:**`option`|Řídí kolekci zadaných událostí trasování událostí pro Windows (ETW). Data ETW se shromažďují do. *ITL* soubor, který neobsahuje data profilování (.*VSP*) soubor.|
 |[Stav](../profiling/status.md)|Zobrazuje stav profileru, informace o procesech, které jsou aktuálně profilované, a účty, které mají oprávnění k řízení profileru.|
 |[Vypnutí](../profiling/shutdown.md)[**:** `n` ]|Zavře soubor dat profilování a vypne Profiler.|
 |[GlobalOn](../profiling/globalon-and-globaloff.md)|Obnoví shromažďování dat po volání **VSPerfCmdGlobalOff**.|
@@ -64,7 +65,7 @@ VSPerfCmd [/U] [/options]
 |[Konzola](../profiling/console.md)|Spustí zadaný příkaz v novém okně příkazového řádku.|
 |[Připojit](../profiling/attach.md) **:** *PID*[**,**_PID_]|Spustí profilování zadaných procesů. Procesy lze identifikovat pomocí ID procesu nebo pomocí názvu procesu.|
 |[Detach](../profiling/detach.md)[**:**_PID_[;_PID_]]|Zastaví profilování zadaných procesů. Procesy lze identifikovat pomocí ID procesu nebo pomocí názvu procesu. Pokud není zadán žádný proces, profilování se zastaví pro všechny procesy.|
-|[GC](../profiling/gc-vsperfcmd.md)[**:**{**Allocation** `&#124;` **disdoba**přidělení}]|Shromažďuje data o přidělování paměti .NET a o životnosti objektů. Používejte pouze s možností **VSPerfCmdLaunch** .|
+|[GC](../profiling/gc-vsperfcmd.md)[**:**{ `&#124;` **disdoba** přidělení}]|Shromažďuje data o přidělování paměti .NET a o životnosti objektů. Používejte pouze s možností **VSPerfCmdLaunch** .|
 
 ### <a name="sample-interval-options"></a>Možnosti intervalu vzorkování
  Následující možnosti určují typ a dobu trvání vzorkovacích intervalů. Výchozí hodnota je **Timer**. Čítače procesoru můžete zadat také jako interval pomocí možnosti **čítač** . Tyto možnosti lze zadat pouze pomocí možnosti **Spustit** nebo s prvním **připojením** relace profilování.

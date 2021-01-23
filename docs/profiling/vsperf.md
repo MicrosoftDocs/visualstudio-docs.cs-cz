@@ -1,5 +1,6 @@
 ---
 title: VSPerf | Microsoft Docs
+description: Naučte se používat nástroj příkazového řádku VsPerf k profilování aplikací pro UWP z příkazového řádku, když v zařízení není nainstalovaná aplikace Visual Studio.
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b5854e62-279e-4850-bfeb-0c6ef82f4805
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c58033e89742650dc097a7469cbf62d7b6168509
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4b3d95422d3b4232d7a628f2054c7db2aa94dd6b
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520364"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723072"
 ---
 # <a name="vsperf"></a>VSPerf
 Nástroj příkazového řádku **VsPerf** použijte k těmto akcím:

@@ -1,5 +1,6 @@
 ---
 title: Sestava na základě viditelného časového rozsahu | Microsoft Docs
+description: Přečtěte si, jak zobrazení Profile zobrazuje sestavy založené na aktuálně viditelném časovém rozsahu a kanálech.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd4758f5484089e58f50462300f48f76f1538381
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 02dc0e009702b25c2204f0a1302931fe941b5f59
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63002343"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720368"
 ---
 # <a name="report-based-on-visible-time-range"></a>Sestava na základě viditelného časového rozsahu
 Zobrazení Profile zobrazuje sestavy, které jsou založené na aktuálně viditelném časovém rozsahu a kanálech. Chcete-li zobrazit podrobnosti o různých podmnožinách dat, klikněte na položky v legendě.

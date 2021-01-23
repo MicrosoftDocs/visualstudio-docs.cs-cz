@@ -8,17 +8,17 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: c494f8d8543e0aa51b0c2be0ee52c0cb80aba982
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: be799764c3d6913cd2a13c6d631fc3450f8875a0
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862438"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719913"
 ---
 # <a name="install-visual-studio-2017-for-mac"></a>Instalace sady Visual Studio 2017 pro Mac
 
 > [!NOTE]
-> Visual Studio 2019 pro Mac je [teď k dispozici](installation.md?view=vsmac-2019). Starší verze Visual Studio pro Mac najdete na [stránce soubory ke stažení](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202017%20for%20Mac)pro Visual Studio.
+> Visual Studio 2019 pro Mac je [teď k dispozici](installation.md?view=vsmac-2019&preserve-view=true). Starší verze Visual Studio pro Mac najdete na [stránce soubory ke stažení](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202017%20for%20Mac)pro Visual Studio.
 
 ## <a name="downgrading-from-visual-studio-2019-for-mac"></a>Downgrading ze sady Visual Studio 2019 for Mac?
 
@@ -65,7 +65,7 @@ Pro práci se systémem iOS v aplikaci Visual Studio potřebujete následující
       - jenom iOS – vyberte platformu **iOS** (Všimněte si, že budete muset nainstalovat [**Xcode**](https://developer.apple.com/xcode/)).
       - Jenom Android – vyberte platformu **Android** (Všimněte si, že byste také měli vybrat relevantní závislosti).
       - Jenom Mac – vyberte platformu **MacOS** (Všimněte si, že budete muset nainstalovat [**Xcode**](https://developer.apple.com/xcode/)).
-      - Aplikace Xamarin pro více platforem – vyberte platformy **Android**, **iOS**a **MacOS** .
+      - Aplikace Xamarin pro více platforem – vyberte platformy **Android**, **iOS** a **MacOS** .
    * **Aplikace .NET Core** – vyberte platformu **.NET Core** .
    * **ASP.NET Core webové aplikace** – vyberte platformu **.NET Core** .
    * **Vývoj her v Unity pro různé platformy** – nemusíte instalovat žádné další platformy nad rámec Visual Studio pro Mac. Další informace o instalaci rozšíření Unity najdete v [Průvodci nastavením Unity](./setup-vsmac-tools-unity.md) .

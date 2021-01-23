@@ -1,5 +1,6 @@
 ---
 title: Zobrazení řádků – data vzorkování paměti .NET | Microsoft Docs
+description: Přečtěte si, jak data profilování přidělení paměti .NET zobrazují příkazy, které přidělené paměti během profilace běhu.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 503b3753f4f4fdc98f39804ec767277d7685d0d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0033b3d50531bebe087f43930324db0431dee03f
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74774077"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721330"
 ---
 # <a name="lines-view---net-memory-sampling-data"></a>Zobrazení řádků – data vzorkování paměti .NET
 Zobrazení řádků pro data profilování alokace paměti .NET, která používají metodu vzorkování, vypisuje příkazy, které přidělené paměti během profilování běhu. Sloupce také obsahují velikost a počet přidělení.

@@ -1,5 +1,6 @@
 ---
 title: Ovládací prvek Lupa (zobrazení využití) | Microsoft Docs
+description: Přečtěte si, jak ovládání lupy pomáhá přiblížit graf využití procesoru, abyste se mohli zaměřit na oblasti konkrétního zájmu.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c7f50a3117daeee0ec1727adbcdcc5ca710be36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f28a0f8bd60ad169715ba72b6fab957e7699a5b
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62960104"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723020"
 ---
 # <a name="zoom-control-utilization-view"></a>Ovládací prvek Lupa (zobrazení využití)
 Ovládací prvek přiblížení pomáhá přiblížit graf využití procesoru, aby bylo možné se zaměřit na oblasti konkrétního zájmu. Tento ovládací prvek se přiblíží ke středu zobrazení. Proto byste měli vycentrovat oblast zájmu ještě předtím, než se přiblížíte.

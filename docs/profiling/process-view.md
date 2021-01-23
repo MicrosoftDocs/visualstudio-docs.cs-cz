@@ -1,5 +1,6 @@
 ---
 title: Zobrazení procesů | Microsoft Docs
+description: Přečtěte si, jak zobrazení procesu zobrazuje data profilace pro procesy a vlákna, které byly provedeny během procesu profilace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: da3097c276557238e6f5b521f6f7d3231434cd10
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd4dfd4657d6ca2f42c234f576e362ffacb9e693
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772173"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719459"
 ---
 # <a name="process-view"></a>Zobrazení procesů
 Zobrazení procesu zobrazuje data profilování pro procesy a vlákna, které byly provedeny během procesu profilace.
@@ -37,7 +38,7 @@ Zobrazení procesu zobrazuje data profilování pro procesy a vlákna, které by
 |------------|-----------------|
 |**Jedinečné ID**|Identifikátor generovaný profilerem, který je jedinečný pro proces nebo vlákno.|
 |**ID**|Systémem generovaný identifikátor procesu nebo vlákna.|
-|**Name**|Název procesu nebo vlákna.|
+|**Název**|Název procesu nebo vlákna.|
 |**Čas zahájení**|Počet milisekund nebo procesorů od začátku profilace po začátek procesu nebo vlákna.|
 |**Čas ukončení**|Počet milisekund nebo procesorů od začátku profilace po konec procesu nebo vlákna.|
 
