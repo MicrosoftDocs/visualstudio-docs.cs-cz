@@ -1,5 +1,6 @@
 ---
 title: VSPerfCLREnv | Microsoft Docs
+description: Přečtěte si, jak se Nástroj VSPerfCLREnv používá k nastavení proměnných prostředí, které jsou nutné k profilování .NET Framework aplikace.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 828768b59e4ab465e4723d399d406b994fa8c8ce
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1aa0d4a476c64ec20f0a378398cfb95e364a07e3
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330427"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719211"
 ---
 # <a name="vsperfclrenv"></a>VSPerfCLREnv
 

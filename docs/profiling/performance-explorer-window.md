@@ -1,5 +1,6 @@
 ---
 title: Prohlížeč výkonu okno | Microsoft Docs
+description: Přečtěte si, jak Prohlížeč výkonu okno v integrovaném vývojovém prostředí sady Visual Studio umožňuje konfigurovat relace výkonu pomocí Nástroje pro profilaci sady Visual Studio.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a365892f606da90c608e43b7ccce73b902ec0e98
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06d2b7e2ad5d5df4022dc78aa06315545d56c0ee
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772436"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722812"
 ---
 # <a name="performance-explorer-window"></a>Okno Prohlížeč výkonu
 

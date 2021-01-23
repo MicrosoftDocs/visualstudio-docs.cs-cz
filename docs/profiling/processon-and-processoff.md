@@ -1,5 +1,6 @@
 ---
 title: ProcessOn a ProcessOff | Microsoft Docs
+description: Přečtěte si, jak VSPerfCmd.exe ProcessOff a ProcessOn dílčí příkazy pozastaví a obnoví profilování pro zadaný proces v relaci profilace z příkazového řádku.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d3dc6a7e-bc0f-48a6-a4ec-f386348bb296
@@ -9,17 +10,17 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 62c16c2d578a38187b4a58958466597a5e4d297d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae4b5e95636894ddc2d0c4799308afb057145747
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778385"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719445"
 ---
 # <a name="processon-and-processoff"></a>ProcessOn a ProcessOff
 Dílčí příkazy VSPerfCmd.exe **ProcessOff** a **ProcessOn** pozastaví a obnoví profilování pro zadaný proces v relaci profilace z příkazového řádku. **ProcessOff** zastaví profilování procesu a **ProcessOn** spustí profilování procesu.
 
- Ve většině případů zadáte **ProcessOn** nebo **ProcessOff** jako jedinou možnost v příkazovém řádku VSPerfCmd.exe, ale lze je kombinovat i s dílčími příkazy **GlobalOn**, **globaloff**, **ThreadOn**a **ThreadOff** .
+ Ve většině případů zadáte **ProcessOn** nebo **ProcessOff** jako jedinou možnost v příkazovém řádku VSPerfCmd.exe, ale lze je kombinovat i s dílčími příkazy **GlobalOn**, **globaloff**, **ThreadOn** a **ThreadOff** .
 
  Podpříkazy **ProcessOn** a **ProcessOff** komunikují s dílčími příkazy **GlobalOn** a **globaloff** , které řídí shromažďování dat pro všechny procesy v relaci profilace příkazového řádku, a dílčí příkazy **ThreadOn** a **ThreadOff** , které řídí shromažďování dat pro zadané vlákno.
 

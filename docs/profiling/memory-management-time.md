@@ -1,5 +1,6 @@
 ---
 title: Čas správy paměti | Microsoft Docs
+description: Zjistěte, jak tento scénář znamená, že vlákno je blokováno událostí, která je přidružena k operaci správy paměti, jako je například stránkování.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 442973edb18e75bafda8a9397eac799286c69dfa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 23e1dd2868f5b29a12f3f54f46e5cb5833d270af
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62963778"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721200"
 ---
 # <a name="memory-management-time"></a>Čas správy paměti
 Tyto segmenty na časové ose jsou přidruženy k době blokování, které jsou zařazeny do kategorie Správa paměti. Tento scénář znamená, že vlákno je blokováno událostí, která je přidružena k operaci správy paměti, jako je například stránkování. Během této doby bylo vlákno blokované v rozhraní API nebo ve stavu jádra, že Vizualizátor souběžnosti se počítá jako správa paměti. Mezi ně patří události jako stránkování a přidělení paměti.

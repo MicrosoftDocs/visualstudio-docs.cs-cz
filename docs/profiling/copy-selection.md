@@ -1,5 +1,7 @@
 ---
 title: Kopírovat výběr | Microsoft Docs
+description: Chcete-li zkopírovat celý zásobník volání z karty sestava, klikněte na tlačítko Kopírovat. Pak můžete vložit zásobník volání do libovolného programu, který tuto akci podporuje.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea96fe521afe713b1eafd59390047bfdb427f6fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: da16256579f414d33434295fc355f368597d868d
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62553224"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720862"
 ---
 # <a name="copy-selection"></a>Kopírovat výběr
 Chcete-li zkopírovat celý zásobník volání z karty sestava, klikněte na tlačítko **Kopírovat**. Pak můžete vložit zásobník volání do libovolného programu, který tuto akci podporuje.

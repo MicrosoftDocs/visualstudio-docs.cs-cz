@@ -1,5 +1,6 @@
 ---
 title: WaitStart | Microsoft Docs
+description: Přečtěte si, že možnost WaitStart způsobí, že VSPerfCmd.exe spustit dílčí příkaz, který se vrátí jenom v případě, že se Profiler inicializoval nebo když uplyne zadaný počet sekund.
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 6c737177-2dfb-4150-963e-a49ac9aaa591
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b42936d9d87ad80b48b7fdc71cdf0fd3fa965af2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b8218b04b0c67f2b3b2ebf7ae2fe1209d76461aa
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329894"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98718756"
 ---
 # <a name="waitstart"></a>WaitStart
 Možnost WaitStart způsobí, že *VSPerfCmd.exe* spustit dílčí příkaz, který se vrátí pouze v případě, že byl Profiler inicializován nebo když uplynul zadaný počet sekund. Ve výchozím nastavení se příkaz Start vrátí hned. Pokud se spustí dílčí příkaz bez inicializace profileru, vrátí se chyba. Pokud není zadaný počet sekund, příkaz Start počká na neomezenou dobu.

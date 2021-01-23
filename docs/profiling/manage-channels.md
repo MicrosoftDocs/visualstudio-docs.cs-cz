@@ -1,5 +1,6 @@
 ---
 title: Správa kanálů | Microsoft Docs
+description: Přečtěte si, jak můžete organizovat kanály pro svůj proces, abyste mohli kontrolovat konkrétní vzory v zobrazení vláken v Vizualizátor souběžnosti.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b1480bab2f52383a8ca3a5b0ac22fd56acb5e01
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0dd8643f63a7a3e67400f09f00b999fff33f09e
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64779252"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721265"
 ---
 # <a name="manage-channels"></a>Správa kanálů
 V **zobrazení vláken** v Vizualizátor souběžnosti můžete uspořádat kanály pro svůj proces, abyste mohli kontrolovat konkrétní vzory. Kanály můžete seřadit, přesunout je nahoru a dolů a skrýt nebo zobrazit.

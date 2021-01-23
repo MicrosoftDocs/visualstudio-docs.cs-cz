@@ -1,5 +1,6 @@
 ---
 title: Zadejte binární soubor, který se má spustit. | Microsoft Docs
+description: Přečtěte si, jak je nutné zadat informace v <Target> dialogovém okně stránky vlastností, abyste mohli profilovat binární soubory, jako jsou knihovny DLL.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,18 +15,18 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b3aec9448c6493350683dc9f0bec0cc2d60fa82
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 715c92a26ae33a4e909ec737c866be1cdc15251e
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851330"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721837"
 ---
 # <a name="how-to-specify-the-binary-to-start"></a>Postupy: Určení binárního souboru ke spuštění
 
-Chcete-li profilovat binární soubory, jako jsou knihovny DLL, je nutné zadat informace v dialogovém okně ** \<Target> stránky vlastností** . Tyto informace označují, kde projekt knihovny DLL může najít volající aplikaci.
+Chcete-li profilovat binární soubory, jako jsou knihovny DLL, je nutné zadat informace v dialogovém okně **\<Target> stránky vlastností** . Tyto informace označují, kde projekt knihovny DLL může najít volající aplikaci.
 
-1. V **prohlížeč výkonu**klikněte pravým tlačítkem myši na cílový binární soubor a pak klikněte na **vlastnosti**.
+1. V **prohlížeč výkonu** klikněte pravým tlačítkem myši na cílový binární soubor a pak klikněte na **vlastnosti**.
 
 2. V dialogovém okně **stránky vlastností** klikněte na vlastnosti **spuštění** .
 

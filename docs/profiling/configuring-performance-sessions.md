@@ -1,5 +1,7 @@
 ---
 title: Konfigurace relací výkonu | Microsoft Docs
+description: Naučte se, jak nakonfigurovat Nástroje pro profilaci sady Visual Studio tak, aby shromáždila požadovaná data výkonu. Tento článek obsahuje seznam běžných úloh a obsahuje odkazy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +16,15 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bdf1c372ffcb3ad3a0ebf102827565853947e2b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52e2575e034dbabe5e380857edd95e4bc46f56d2
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74777865"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721005"
 ---
 # <a name="configure-performance-sessions"></a>Konfigurace výkonnostních relací
-Pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci můžete shromažďovat širokou škálu údajů o výkonu pro velký počet typů aplikací. V této části se dozvíte, jak pomocí vlastností Wizardand výkonu a cílového binárního souboru nakonfigurovat Nástroje pro profilaci ke shromáždění dat, která vás zajímají. Vlastnosti konfigurace Nástroje pro profilaci lze také použít k řízení množství dat, která jsou shromažďována při spuštění profilace. Další informace najdete v tématu [řízení sběru dat](../profiling/controlling-data-collection.md).
+Pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci můžete shromažďovat širokou škálu údajů o výkonu pro velký počet typů aplikací. V této části se dozvíte, jak pomocí Průvodce výkonem a vlastností relace výkonu a cílového binárního souboru nakonfigurovat Nástroje pro profilaci pro shromažďování dat, která vás zajímají. Vlastnosti konfigurace Nástroje pro profilaci lze také použít k řízení množství dat, která jsou shromažďována při spuštění profilace. Další informace najdete v tématu [řízení sběru dat](../profiling/controlling-data-collection.md).
 
 > [!NOTE]
 > V mnoha případech je používání výchozích vlastností Průvodce výkonem účinným způsobem shromažďování dat profilace. Další informace najdete v tématu [Příručka pro začátečníky k profilaci výkonu](../profiling/beginners-guide-to-performance-profiling.md) a [Začínáme](../profiling/getting-started-with-performance-tools.md).

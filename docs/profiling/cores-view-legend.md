@@ -1,5 +1,7 @@
 ---
 title: Legenda zobrazení jader | Microsoft Docs
+description: Přečtěte si o legendě zobrazení jader, která poskytuje tabulkový kontext přepínače a data pro výběr vláken. Seznamte se také s přepínači a výkonem kontextu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ea3184fbcd3561b88521f7dbdf4bf44c925150d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 043f056587856b5c5774a3a15b3542437e0d4eb7
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62553160"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720823"
 ---
 # <a name="cores-view-legend"></a>Legenda zobrazení jader
 Legenda zobrazení jádra identifikuje jednotlivá vlákna podle barvy a názvu. Obsahuje sloupce, které zobrazují počty pro přepnutí kontextu mezi jádry, celkový počet přepínačů kontextu a procento přepínačů kontextu, které kříží jádro. Řádky v legendě jsou seřazené podle počtu přepínačů kontextu křížového jádra v klesajícím pořadí.

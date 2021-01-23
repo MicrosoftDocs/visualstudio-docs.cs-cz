@@ -1,5 +1,6 @@
 ---
 title: Sestava značek | Microsoft Docs
+description: Přečtěte si, jak sestava značek zobrazuje seznam značek v zobrazeném časovém intervalu a jakým způsobem může zobrazení nebo přiblížení značek způsobit zobrazení nebo zmizení značek.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9502d2cf0081985cfbee2283af820c06d681ad9f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e95cf3b14f804c481ff03ec6fbf72b360efedc7
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64808269"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722110"
 ---
 # <a name="markers-report"></a>Sestava značek
 Sestava značek obsahuje seznam značek v zobrazeném časovém rámci.  Posouvání nebo přiblížení nebo skrývání drah může způsobit zobrazení značek nebo zmizení. Sestava obsahuje tyto informace o každé značce:

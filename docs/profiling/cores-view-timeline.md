@@ -1,5 +1,7 @@
 ---
 title: Časová osa zobrazení jader | Microsoft Docs
+description: 'Seznamte se se základy časové osy: jak určit, ve kterém vlákně je jádro v jakémkoli okamžiku, a jak se přiblížit nebo oddálit.'
+custom.ms: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ae006788f2704459de7ef32f01385e196e28c04
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64012be03c08f3737f4e57a05217bf46082daeb6
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62553107"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720745"
 ---
 # <a name="cores-view-timeline"></a>Časová osa zobrazení jader
 Každý řádek časové osy představuje jádro logického procesoru v profilované soustavě. U každého řádku zobrazuje vodorovná osa, které vlákno bylo spuštěno v logickém jádru v daném časovém okamžiku. Najeďte myší na barvu zájmu na časové ose, abyste vrátili popis, který identifikuje vlákno. Pro usnadnění identifikace vlákna, legenda v dolní části okna ukazuje, co každá barva představuje. Přiblížení a oddálení pomocí nástroje Lupa můžete kliknutím a přetažením nebo stisknutím klávesy CTRL a přesunutím kolečka myši. Konzistence lupy se udržuje při přepínání mezi zobrazením jader a zobrazením vláken.

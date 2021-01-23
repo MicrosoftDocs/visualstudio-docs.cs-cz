@@ -1,5 +1,6 @@
 ---
 title: Zobrazení dat metod vzorkování profileru | Microsoft Docs
+description: Přečtěte si o zobrazeních a sestavách datových souborů profileru, které byly generovány pomocí metody vzorkování.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d845d84d421ca44f5b936df0a7138fefa848d8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b88abc935ca9eaef0a22230d427817756629bcb
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772156"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719432"
 ---
 # <a name="profiler-sampling-method-data-views"></a>Zobrazení dat metod vzorkování profileru
 Tato část obsahuje referenční informace o zobrazeních a sestavách datových souborů profileru, které byly generovány pomocí metody vzorkování.
@@ -54,7 +55,7 @@ Tato část obsahuje referenční informace o zobrazeních a sestavách datovýc
 
  Vypíše řádky zdrojového kódu, které byly spuštěny při shromáždění vzorků.
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
 - [Zobrazení procesu](../profiling/process-view.md)
 
  Zobrazí seznam procesů a časů spuštění a ukončení vlákna.

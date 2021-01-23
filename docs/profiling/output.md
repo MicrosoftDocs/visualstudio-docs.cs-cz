@@ -1,5 +1,6 @@
 ---
 title: Výstup | Microsoft Docs
+description: Přečtěte si, jak možnost Output Určuje název souboru dat profilování pro relaci výkonu. Výstup musí být použit s možností Start.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 5e286e61-4548-42cf-a635-e608c5edbe2b
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ab01f67d44e8c6e0cc13eaf9b0046695a0132e65
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6067e13e33875be778ff59739f5511c4116937ed
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778502"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722799"
 ---
 # <a name="output"></a>Výstup
 Možnost **výstup** Určuje název souboru dat profilování pro relaci výkonu. **Výstup** musí být použit s možností **Start** .

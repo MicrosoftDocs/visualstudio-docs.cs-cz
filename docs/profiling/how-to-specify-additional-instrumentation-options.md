@@ -1,5 +1,6 @@
 ---
 title: Zadat další možnosti instrumentace | Microsoft Docs
+description: Přečtěte si, jak můžete instrumentovat binární soubory pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio nebo pomocí nástrojů příkazového řádku.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 42c5500d03e815bad1666da7b52918479715e861
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: aaa6a222ca320ff9e8e3d117c2218e170d67d683
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851811"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721850"
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>Postupy: Určení dalších možností instrumentace
 
@@ -30,9 +31,9 @@ Binární soubory můžete instrumentovat pomocí integrovaného vývojového pr
 
 ## <a name="to-specify-additional-instrumentation-option"></a>Určení dalších možností instrumentace
 
-1. V **prohlížeč výkonu**vyberte **relaci výkonu** , klikněte na ni pravým tlačítkem a vyberte **vlastnosti**.
+1. V **prohlížeč výkonu** vyberte **relaci výkonu** , klikněte na ni pravým tlačítkem a vyberte **vlastnosti**.
 
-2. Na **stránkách vlastnosti**klikněte na **Upřesnit** vlastnosti.
+2. Na **stránkách vlastnosti** klikněte na **Upřesnit** vlastnosti.
 
 3. Možnosti typu v poli **Další možnosti instrumentace** .
 

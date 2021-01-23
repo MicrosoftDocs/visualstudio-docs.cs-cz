@@ -1,5 +1,6 @@
 ---
 title: Souhrnné zobrazení – data paměti .NET | Microsoft Docs
+description: Přečtěte si, jak souhrnné zobrazení zobrazuje informace o funkcích a typech .NET, které přidělují nejvíc paměti.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: a67902af99eaee6c75f92f86c2481dfc2afd744e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 590705e7fb55315176d5533a9cd009784430ea4d
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74771553"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722669"
 ---
 # <a name="summary-view---net-memory-data"></a>Souhrnné zobrazení – data paměti .NET
 V souhrnném zobrazení se zobrazí informace o funkcích a typech .NET, které přidělují nejvíc paměti, a typy, které byly vytvořeny ve většině případů při spuštění profilace. Další informace, včetně popisu odkazů na oznámení a seznamů sestav, najdete v tématu [souhrnné zobrazení](../profiling/summary-view.md).
@@ -29,7 +30,7 @@ V souhrnném zobrazení se zobrazí informace o funkcích a typech .NET, které 
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|Název funkce|
+|**Název**|Název funkce|
 |**Psaný**|Procento všech přidělených bajtů v běhu profilace, které byly přiděleny touto funkcí nebo podřízenou funkcí volanou touto funkcí.|
 
 ## <a name="types-with-most-memory-allocated"></a>Typy s největším množstvím přidělené paměti
@@ -37,7 +38,7 @@ V souhrnném zobrazení se zobrazí informace o funkcích a typech .NET, které 
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|Název typu|
+|**Název**|Název typu|
 |**Psaný**|Procento všech přidělených bajtů v běhu profilace, které byly přiděleny pro tento typ.|
 
 ## <a name="types-with-most-instances"></a>Typy s největší instancí
@@ -45,7 +46,7 @@ V souhrnném zobrazení se zobrazí informace o funkcích a typech .NET, které 
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|Název typu|
+|**Název**|Název typu|
 |**Instance**|Procentuální podíl celkového počtu objektů of.NET vytvořených při spuštění profilace, které byly instancemi tohoto typu.|
 
 ## <a name="see-also"></a>Viz také

@@ -1,5 +1,7 @@
 ---
 title: Řízení shromažďování dat | Microsoft Docs
+description: Naučte se spouštět a zastavovat Nástroje pro profilaci shromažďování dat a jak omezit objekty, pro které se shromažďují data profilace. Tento článek je přehled.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 48c7047bdd321943074221c9f09193970d42a247
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b846db263c95f20c6ea4cb6a418973830a5dd8ee
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74777800"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720927"
 ---
 # <a name="control-data-collection"></a>Řízení shromažďování dat
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci vám umožní řídit, kdy se data profilace shromažďují během relace výkonu, a určit funkce, které jsou profilované. Tato část popisuje, jak spustit a zastavit shromažďování dat z oken **prohlížeč výkonu** a **kolekce dat** a jak omezit objekty, pro které se shromažďují data profilace.

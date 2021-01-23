@@ -1,5 +1,6 @@
 ---
 title: Zobrazení dat kolizí prostředků | Microsoft Docs
+description: Přečtěte si o referenčních informacích o zobrazeních a sestavách datových souborů profileru, které obsahují data profilování kolize vláken.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e30589a7c58a756a981ed8a690afe4b052aeaf0b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25dc334819c4b32bf74822e46dd3251919f621bf
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74771527"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720329"
 ---
 # <a name="resource-contention-data-views"></a>Zobrazení dat kolizí prostředku
 Tato část obsahuje referenční informace o zobrazeních a sestavách datových souborů profileru, které obsahují data profilování kolize vláken.
@@ -67,7 +68,7 @@ Tato část obsahuje referenční informace o zobrazeních a sestavách datovýc
 
  Vypisuje spory prostředků podle procesu a vlákna.
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
 - [Zobrazení podrobností funkce](../profiling/function-details-view.md)
 
  Zobrazí grafický graf vztahu mezi vybranou funkcí a funkcemi, které volal a byly volány vybranou funkcí.

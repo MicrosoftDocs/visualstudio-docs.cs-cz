@@ -1,5 +1,6 @@
 ---
 title: Sestava souhrnu jednotlivých vláken | Microsoft Docs
+description: Zobrazení pruhového grafu zobrazuje poměr času každého neskrytého vlákna v každé kategorii aktivity během aktuálně viditelného časového rozsahu.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ab5e88db9f539dd79482044ab3834b27a6b1747
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03797190097d3495a315fd0e0343fa9999100147
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62794323"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722786"
 ---
 # <a name="per-thread-summary-report"></a>Sestava souhrnu podle vláken
 Tento pruhový graf znázorňuje podíl času každého neskrytého vlákna v každé kategorii aktivity během aktuálně viditelného časového rozsahu. "Provádění" znamená, že vlákno je prováděno; všechny ostatní kategorie znamenají, že vlákno čeká na nějakou akci.

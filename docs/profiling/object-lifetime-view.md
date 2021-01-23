@@ -1,5 +1,6 @@
 ---
 title: Zobrazení doby života objektu | Microsoft Docs
+description: Přečtěte si, jak je k dispozici zobrazení životnosti objektů, když se na stránkách vlastností výkonnostní relace kontroluje také data o životnosti objektů .NET.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d4ea486930d0ea9f266b4ee57b69a50f7c570651
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9405b66c7412d65402a5572dcb5c71b232341b22
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772621"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722864"
 ---
 # <a name="object-lifetime-view"></a>Zobrazení doby života objektu
 Zobrazení životnosti objektů je k dispozici, když je také zaškrtnuto políčko **shromažďovat data o životnosti objektů .NET** na stránkách vlastností **výkonnostní relace** .

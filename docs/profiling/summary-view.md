@@ -1,5 +1,6 @@
 ---
 title: Souhrnné zobrazení | Microsoft Docs
+description: Přečtěte si, jak souhrnné zobrazení zobrazuje informace o nejdražších funkcích nebo objektech, které jsou náročné na výkon při spuštění profilace.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a12989004b5bed8601bdda1ec0719eda789ff822
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 154f168044e5395a534b4a79ea44d9eafe6293f6
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546884"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719276"
 ---
 # <a name="summary-view"></a>Souhrnné zobrazení
 V souhrnném zobrazení se zobrazí informace o nejdražších funkcích nebo objektech, které jsou v rámci profilování výkonné. Toto zobrazení obsahuje graf časové osy a dva nebo více seznamů nejdražších funkcí nebo objektů na základě metrik výkonu metody profilace. Data v tomto zobrazení závisí na metodě profilování, která byla použita (vzorkování, instrumentace nebo souběžnost) a na tom, zda bylo shromážděno přidělení paměti .NET.
@@ -32,7 +33,7 @@ V souhrnném zobrazení se zobrazí informace o nejdražších funkcích nebo ob
 
 - Kliknutím na funkci v seznamu souhrnných zobrazení můžete otevřít zobrazení podrobností funkce pro funkci. Můžete také kliknout pravým tlačítkem na funkci pro další možnosti zobrazení.
 
-- Chcete-li upravit počet položek, které se zobrazí v seznamu souhrnných zobrazení, otevřete nabídku **nástroje** , přejděte na **možnost možnosti**a klikněte na položku **Nástroje pro sledování výkonu**. V části **Obecná nastavení**upravte nastavení **počet funkcí v souhrnném zobrazení** .
+- Chcete-li upravit počet položek, které se zobrazí v seznamu souhrnných zobrazení, otevřete nabídku **nástroje** , přejděte na **možnost možnosti** a klikněte na položku **Nástroje pro sledování výkonu**. V části **Obecná nastavení** upravte nastavení **počet funkcí v souhrnném zobrazení** .
 
 ## <a name="notifications-links"></a>Odkazy na oznámení
  Kliknutím na odkazy v seznamu oznámení můžete nastavit možnosti zobrazení sestavy. Seznam je napravo od grafu časové osy.

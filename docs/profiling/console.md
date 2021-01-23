@@ -1,5 +1,7 @@
 ---
 title: Konzola | Microsoft Docs
+description: Pomocí možnosti konzoly VSPerfCmd.exe spusťte zadanou aplikaci v novém okně příkazového řádku. Je nutné ji použít s možností spuštění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: e825ba66-1383-46ad-8712-396bc9c14036
@@ -9,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b70c44f72d8f9d8fb25eb1c459946797cfb97913
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93c39bfb503bec9858e33b7acf04e0f0433264b9
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331572"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720901"
 ---
 # <a name="console"></a>Konzola
 Možnost **konzoly** VSPerfCmd.exe spustí zadanou aplikaci v novém okně příkazového řádku. **Konzolu** lze použít pouze s možností **spuštění** VSPerfCmd. Pokud aplikace není aplikace příkazového řádku, **Konzola** nemá žádný vliv.

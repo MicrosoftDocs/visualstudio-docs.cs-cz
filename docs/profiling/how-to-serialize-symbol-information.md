@@ -1,5 +1,6 @@
 ---
 title: Informace o serializaci symbolů | Microsoft Docs
+description: Naučte se, jak můžete serializovat symboly, které musíte mít k analýze vaší aplikace, a způsob, jakým serializace symbolů přidává do souboru. vsp symboly.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d644960153a8e342f6442f3750420ea68a61b38f
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 0b7cdfa6e64380c966b62d6691f73719a3034e2d
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851590"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722084"
 ---
 # <a name="how-to-serialize-symbol-information"></a>Postupy: serializace informací o symbolu
 Můžete serializovat symboly, které musíte mít k analýze aplikace. Serializace symbolů přidá symboly do. soubor *VSP* . Přidáním informací o symbolech do. soubor *VSP* , ostatní mohou analyzovat sestavu o výkonu bez přístupu k původním symbolům. Pokud symboly nejsou serializovány, musíte mít původní instrumentaci. *exe* a. soubory *PDB* k analýze. soubor *VSP* .
@@ -32,7 +33,7 @@ Můžete serializovat symboly, které musíte mít k analýze aplikace. Serializ
 
 2. Klikněte na **Nástroje pro sledování výkonu**.
 
-3. V části **Obecné nastavení**vyberte možnost **automaticky serializovat informace o symbolech**.
+3. V části **Obecné nastavení** vyberte možnost **automaticky serializovat informace o symbolech**.
 
 ## <a name="see-also"></a>Viz také
 - [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)
