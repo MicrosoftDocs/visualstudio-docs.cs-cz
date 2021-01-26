@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b34d96f49370a71a63e986a79584caffbc00adf
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: a2a64b613ca19632a7827686ab0552e6e23620c1
+ms.sourcegitcommit: 3922edfe67063e1ede418cdbf6aa6293117c4855
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847037"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98773333"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -102,10 +102,13 @@ Panel nástrojů v horní části **Průzkumník řešení** obsahuje tlačítka
 
 Řada příkazů nabídky je k dispozici v kontextové nabídce pravého tlačítka myši na různých položkách v **Průzkumník řešení**. Mezi tyto příkazy patří sestavení projektu, Správa balíčků NuGet, přidání odkazu, přejmenování souboru a spuštění testů, stačí jenom pár název.
 
-> [!TIP]
-> Pokud jste Průzkumník řešení zavřeli a chcete ho znovu otevřít, v řádku nabídek vyberte **okno**  >  **obnovit rozložení okna** .
-
 U ASP.NET Core projektů můžete přizpůsobit, jak jsou soubory vnořené v **Průzkumník řešení**. Další informace najdete v tématu [přizpůsobení vnořování souborů v Průzkumník řešení](file-nesting-solution-explorer.md).
+
+> [!TIP]
+> Pokud jste Průzkumník řešení zavřeli a chcete ho znovu otevřít, zvolte **Zobrazit**  >  **Průzkumník řešení** na řádku nabídek nebo stiskněte klávesovou **zkratku CTRL** + **+** + **L**. A pokud jste uzavřeli vedlejší karty a chcete je obnovit do jejich výchozích umístění **, vyberte**  >  z panelu nabídek možnost **rozložení okna obnovit okno** .
+
+> [!NOTE]
+> Chcete-li zobrazit obrázky a ikony aplikace, které se zobrazí v aplikaci Visual Studio, Stáhněte si [**knihovnu imagí sady Visual Studio**](https://www.microsoft.com/download/details.aspx?id=35825).
 
 ## <a name="see-also"></a>Viz také
 

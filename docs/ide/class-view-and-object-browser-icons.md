@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8c0cf21d6d9055f183d15728fb63118ffb87e9c
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 9e0348c1f6c51f0a82328814be671d8f44e3d4a7
+ms.sourcegitcommit: 3922edfe67063e1ede418cdbf6aa6293117c4855
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903998"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98773343"
 ---
 # <a name="class-view-and-object-browser-icons"></a>Ikony zobrazení tříd a prohlížeče objektů
 
@@ -65,6 +65,9 @@ Následující ikony signálu se vztahují na všechny předchozí ikony a ozna�
 
 > [!NOTE]
 > Pokud je váš projekt součástí databáze správy zdrojového kódu, mohou být zobrazeny další ikony signálu, které označují stav správy zdrojového kódu, například vráceno nebo rezervováno.
+
+> [!TIP]
+> Chcete-li zobrazit více obrázků a ikon aplikace, které se zobrazí v aplikaci Visual Studio, Stáhněte si [**knihovnu imagí sady Visual Studio**](https://www.microsoft.com/download/details.aspx?id=35825).
 
 ## <a name="see-also"></a>Viz také
 
