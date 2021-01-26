@@ -1,5 +1,7 @@
 ---
-title: Shromažďování údajů o výkonu pro web | Microsoft Docs
+title: Shromažďování údajů o výkonu pro web | Microsoft
+description: Naučte se, jak pomocí Průvodce výkonem shromažďovat data o výkonu pro webovou aplikaci v ASP.NET. Aplikace běží na vašem místním počítači a je možné ji otevřít v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -18,12 +20,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ea4e3309fc003a4fc4fc73377e8b2bbe12cd567
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 92e70ff7c6d10ad060086230955c27b781dd73be
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851473"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801058"
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>Postupy: shromažďování údajů o výkonu webu
 
@@ -46,7 +48,7 @@ K shromažďování údajů o výkonu webové aplikace můžete použít **Prův
 
 1. Otevřete [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webový projekt v aplikaci Visual Studio.
 
-2. V nabídce **analyzovat** vyberte **Profiler výkonnosti**, vyberte **prohlížeč výkonu**a pak vyberte **Spustit**.
+2. V nabídce **analyzovat** vyberte **Profiler výkonnosti**, vyberte **prohlížeč výkonu** a pak vyberte **Spustit**.
 
 3. Na první stránce průvodce vyberte metodu profilace a potom klikněte na tlačítko **Další**. Další informace o metodách profilování naleznete v tématu [vysvětlení metod shromažďování výkonu](../profiling/understanding-performance-collection-methods.md). Všimněte si, že metoda profilování Vizualizátor souběžnosti není k dispozici pro webové aplikace.
 
@@ -70,7 +72,7 @@ K shromažďování údajů o výkonu webové aplikace můžete použít **Prův
 
 1. Otevřete sadu Visual Studio.
 
-2. V nabídce **analyzovat** vyberte **Profiler výkonnosti**, vyberte **prohlížeč výkonu**a pak vyberte **Spustit**.
+2. V nabídce **analyzovat** vyberte **Profiler výkonnosti**, vyberte **prohlížeč výkonu** a pak vyberte **Spustit**.
 
 3. Na první stránce průvodce vyberte metodu profilace a potom klikněte na tlačítko **Další**. Další informace najdete v tématu [principy metod shromažďování výkonu](../profiling/understanding-performance-collection-methods.md).
 

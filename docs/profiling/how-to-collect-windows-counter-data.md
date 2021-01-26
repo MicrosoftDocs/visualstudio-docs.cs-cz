@@ -1,5 +1,7 @@
 ---
 title: Shromáždit data čítače Windows | Microsoft Docs
+description: Čítače systému Windows se používají při profilaci instrumentace. Naučte se shromažďovat data čítače Windows a omezovat analýzu do jednoho intervalu shromažďování.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 79ab9869f71fa8630b070c03d21ea4f9a6113622
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ccbdf9afb843c8bdac2d904dc22375a4a69e733a
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852638"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801047"
 ---
 # <a name="how-to-collect-windows-counter-data"></a>Postupy: shromažďování dat čítače Windows
 
@@ -33,7 +35,7 @@ ms.locfileid: "90852638"
 
 1. V Prohlížeč výkonu klikněte pravým tlačítkem na relaci, pro kterou chcete nakonfigurovat čítače Windows, a vyberte **vlastnosti**.
 
-2. Na **stránkách vlastností**klikněte na **čítače systému Windows**.
+2. Na **stránkách vlastností** klikněte na **čítače systému Windows**.
 
 3. Zaškrtněte políčko **shromáždit čítače systému Windows** .
 

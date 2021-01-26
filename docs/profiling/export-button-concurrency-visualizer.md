@@ -1,5 +1,7 @@
 ---
 title: Tlačítko Exportovat (Vizualizér souběžnosti) | Microsoft Docs
+description: Přečtěte si tlačítko Exportovat v Vizualizátor souběžnosti. Tlačítko Exportovat umožňuje exportovat zásobník volání jako soubor. CSV pro vaše vlastní záznamy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50c5aed4f12cc5bef9bc50c2a41009de4e6ad811
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec5395dccaf3d97d7b2b517cbecfec12826594e2
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62969898"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801457"
 ---
 # <a name="export-button-concurrency-visualizer"></a>Tlačítko Exportovat (Vizualizér souběžnosti)
 Tlačítko **exportovat** umožňuje exportovat zásobník volání jako. soubor *CSV* pro vlastní záznamy nebo pro použití s jiným nástrojem, jako je Microsoft Excel.

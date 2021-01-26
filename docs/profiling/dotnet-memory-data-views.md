@@ -1,5 +1,7 @@
 ---
 title: Zobrazení dat paměti .NET | Microsoft Docs
+description: Viz odkazy na referenční informace o zobrazeních a sestavách datových souborů profileru, které obsahují data profilace paměti .NET.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e74027512eba0d64593133a3bbe758570cbf567
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a4a6143127a2e55bf5c13cf6606bfe00de5cd9e
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779269"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801281"
 ---
 # <a name="net-memory-data-views"></a>Zobrazení dat paměti .NET
 Tato část obsahuje referenční informace o zobrazeních a sestavách datových souborů profileru, které obsahují data profilace paměti .NET.
@@ -75,7 +77,7 @@ Tato část obsahuje referenční informace o zobrazeních a sestavách datovýc
 
  Zobrazuje údaje o přidělování paměti pro instrumentované funkce při spuštění profilace.
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
 - [Zobrazení podrobností funkce](../profiling/function-details-view.md)
 
  Zobrazí grafický graf vztahu mezi vybranou funkcí a funkcemi, které volal a byly volány vybranou funkcí.

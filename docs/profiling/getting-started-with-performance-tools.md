@@ -1,5 +1,7 @@
 ---
 title: Začínáme s nástroji pro výkon | Microsoft Docs
+description: Seznamte se s různými způsoby, kterými aplikace Visual Studio nabízí shromažďování, zobrazování a analýzu dat o výkonu kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: faba7a6d2e698e919c0f0adca6fa574838b8b3c4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4f168c4c88ba12ff1f1c9bd0543e9d2b74ae095c
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779204"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801509"
 ---
 # <a name="getting-started-with-performance-tools"></a>Začínáme s nástroji pro sledování výkonu
 
@@ -27,7 +29,7 @@ Visual Studio nabízí několik způsobů, jak shromažďovat, zobrazovat a anal
 
 - Sestavy o výkonu poskytují zobrazení na různých úrovních struktury vaší aplikace, řádků zdrojového kódu a procesů. Sestavy o výkonu zobrazují data o spuštění aplikace od volajících a volaných funkcí konkrétní funkce do stromu volání celé aplikace.
 
-Chcete-li rychle vytvořit profil projektu, aplikace nebo webu ASP.NET, vyberte možnost **ladění**  >  **profileru výkonu**a vyberte **Průvodce výkonem**. Podrobné pokyny najdete v tématu [Příručka pro začátečníky k profilaci výkonu](../profiling/beginners-guide-to-cpu-sampling.md) a [Postupy: shromažďování dat o výkonu pro web](../profiling/how-to-collect-performance-data-for-a-web-site.md).
+Chcete-li rychle vytvořit profil projektu, aplikace nebo webu ASP.NET, vyberte možnost **ladění**  >  **profileru výkonu** a vyberte **Průvodce výkonem**. Podrobné pokyny najdete v tématu [Příručka pro začátečníky k profilaci výkonu](../profiling/beginners-guide-to-cpu-sampling.md) a [Postupy: shromažďování dat o výkonu pro web](../profiling/how-to-collect-performance-data-for-a-web-site.md).
 
 Pokud chcete ručně zadat a nakonfigurovat relaci profilace výkonu, vyberte **ladit**  >  **Profiler**  >  **prohlížeč výkonu**. Ke konfiguraci relací použijte složku **cíle** a stránky **vlastností** v **prohlížeč výkonu** . Pokyny najdete v tématu [Postup: Ruční vytvoření relací výkonu](../profiling/how-to-manually-create-performance-sessions.md).
 

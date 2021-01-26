@@ -1,5 +1,7 @@
 ---
 title: Sestava profilu spuštění | Microsoft Docs
+description: Přečtěte si o sestavě profilu spuštění, což je tradiční profil vzorkování v rozšíření Vizualizátor souběžnosti pro Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25886ad4f7c31ea02c8dab2d45d8709a362a5a69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98361f9abad40e447d7198265d21ef193bb9ddf5
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62969989"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801385"
 ---
 # <a name="execution-profile-report"></a>Sestava profilu spuštění
 Sestava profilu spuštění je tradiční profil vzorkování. Během období, kdy je vlákno spuštěno v logickém jádru, jsou vzorky vytvářeny přibližně každých milisekund a Vizualizér souběžnosti sestaví typický strom volání pomocí kompletování nahromaděné sady vzorových zásobníků. Data v této tabulce mohou být ovlivněna aktuálním časovým rozsahem a skrytými vlákny a těmito filtry, které mohou být aplikovány:

@@ -1,5 +1,7 @@
 ---
 title: Prázdný segment časové osy | Microsoft Docs
+description: V Vizualizátor souběžnosti sady Visual Studio je třeba pochopit důvody, proč může být sekce časové osy prázdná (má bílé pozadí) pro druh kanálu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a96cdc7ae4edc7ea7193d5b95dfc73fa1747c1fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 15dc4526ce101e21c00fe083b85f81db92bcd609
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62970106"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801437"
 ---
 # <a name="empty-timeline-segment"></a>Prázdný segment časové osy
 V Vizualizátor souběžnosti je důvodem, že část časové osy je prázdná (má bílé pozadí), závisí na typu kanálu.

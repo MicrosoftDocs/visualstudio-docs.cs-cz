@@ -1,5 +1,7 @@
 ---
 title: Zvolit události vzorkování | Microsoft Docs
+description: Naučte se, jak nastavit událost vzorku tak, aby vyhovovala vašim potřebám, a nastavit počet cyklů mezi ukázkami. K dostupným událostem patří časové cykly a chyby stránek.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +21,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f28859b1c17c735be405c6c56ebabcbe43903170
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ed97fd205ffc0c969d0cad39d962cd8cdeb4e2eb
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851291"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801574"
 ---
 # <a name="how-to-choose-sampling-events"></a>Postupy: výběr událostí vzorkování
 Ve výchozím nastavení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci shromažďuje údaje o výkonu v intervalu, který je zadán jako počet cyklů procesoru používaných profilací procesu. Výchozí počet cyklů v intervalu je 10 000 000, což je přibližně 0,01 sekund na 1 GH počítači. Můžete změnit počet cyklů v intervalu a můžete změnit ukázkovou událost. K dispozici jsou následující ukázkové události:
@@ -42,9 +44,9 @@ Ve výchozím nastavení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md
 
 ### <a name="to-select-a-sample-event"></a>Výběr události vzorku
 
-1. V **prohlížeč výkonu**klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
+1. V **prohlížeč výkonu** klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
 
-2. Na **stránkách vlastností**klikněte na vlastnosti **vzorkování** .
+2. Na **stránkách vlastností** klikněte na vlastnosti **vzorkování** .
 
 3. V rozevíracím seznamu **událost vzorku** vyberte událost vzorku, kterou chcete použít k profilování aplikace.
 

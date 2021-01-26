@@ -1,5 +1,7 @@
 ---
 title: Zobrazení funkcí – data instrumentace paměti .NET | Microsoft Docs
+description: Získejte informace o zobrazení dat profilace přidělení paměti .NET, která byla shromážděna pomocí metody instrumentace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: eba1f0d1434d253aaca698d3ae582e3c507c2d23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a245ebffc0aa0efaec8df1ec0c5b93b2d99228d
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779230"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801539"
 ---
 # <a name="functions-view---net-memory-instrumentation-data"></a>Zobrazení funkcí – data instrumentace paměti .NET
 Zobrazení funkcí dat profilování alokace paměti .NET, která byla shromážděna pomocí metody instrumentace, uvádí funkce, které přidělené paměti při spuštění profilace. Řádek funkce sestaví velikost a počet přidělení a data časování pro funkci.

@@ -1,5 +1,7 @@
 ---
 title: Zvolit metody kolekce | Microsoft Docs
+description: Visual Studio Nástroje pro profilaci podporuje tři metody shromažďování údajů o výkonu. Naučte se, jak vybrat tu, kterou potřebujete pro svou aplikaci.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b66df2f302790f579891c337b217e76202e79ac
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 3fe102c7ebd8ed551a0da4e92c66dfac8acb78ec
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851304"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801588"
 ---
 # <a name="how-to-choose-collection-methods"></a>Postupy: výběr metod shromažďování
 
@@ -50,13 +52,13 @@ Vlastnost **Metoda** relace výkonu můžete použít k určení nejvhodnější
 
 ### <a name="to-select-the-sampling-or-instrumentation-method-using-performance-session-properties"></a>Výběr metody vzorkování nebo instrumentace pomocí vlastností výkonnostní relace
 
-1. V **prohlížeč výkonu**vyberte relaci výkonu.
+1. V **prohlížeč výkonu** vyberte relaci výkonu.
 
      Název souboru výkonnostní relace má. rozšíření *psess* .
 
 2. Klikněte pravým tlačítkem na výkonnostní relaci a pak klikněte na **vlastnosti**.
 
-3. Na **stránkách vlastností**klikněte na **Obecné**.
+3. Na **stránkách vlastností** klikněte na **Obecné**.
 
 4. Klikněte na metodu shromažďování, kterou dáváte přednost.
 
@@ -66,13 +68,13 @@ Vlastnost **Metoda** relace výkonu můžete použít k určení nejvhodnější
 
 ### <a name="to-select-net-memory-data-collection-by-using-performance-session-properties"></a>Výběr shromažďování dat paměti .NET pomocí vlastností výkonnostní relace
 
-1. V **prohlížeč výkonu**vyberte relaci výkonu.
+1. V **prohlížeč výkonu** vyberte relaci výkonu.
 
      Název souboru relace výkonu má příponu. psess.
 
 2. Klikněte pravým tlačítkem na výkonnostní relaci a pak klikněte na **vlastnosti**.
 
-3. Na **stránkách vlastností**klikněte na **Obecné**.
+3. Na **stránkách vlastností** klikněte na **Obecné**.
 
 4. Klikněte na **vzorkování** nebo **instrumentace**.
 
@@ -84,9 +86,9 @@ Vlastnost **Metoda** relace výkonu můžete použít k určení nejvhodnější
 
 ### <a name="to-select-concurrency-data-collection-by-using-performance-session-properties"></a>Výběr shromažďování dat souběžnosti pomocí vlastností výkonnostní relace
 
-1. V **prohlížeč výkonu**klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
+1. V **prohlížeč výkonu** klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
 
-2. Na **stránkách vlastností**klikněte na **Obecné**.
+2. Na **stránkách vlastností** klikněte na **Obecné**.
 
 3. Klikněte na **souběžnost**.
 

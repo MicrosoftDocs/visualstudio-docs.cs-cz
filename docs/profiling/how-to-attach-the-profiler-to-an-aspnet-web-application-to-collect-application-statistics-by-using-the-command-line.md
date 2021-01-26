@@ -1,5 +1,6 @@
 ---
 title: Připojit profiler k ASP.NET a získat statistiku aplikace
+description: Pomocí nástrojů příkazového řádku sady Visual Studio Nástroje pro profilaci Připojte profiler k webové aplikaci ASP.NET a získejte statistiku výkonu pomocí metody vzorkování.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 753213060ea3aaf1269509e65de8c70a71aec3a2
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f79591c58865631b20aecb3554e9502a22f6c7b9
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807856"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801621"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line"></a>Postupy: Připojení profileru k webové aplikaci ASP.NET ke shromažďování statistik aplikace pomocí příkazového řádku
 Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástrojů příkazového řádku připojit profiler k webové aplikaci ASP.NET a shromažďovat statistiku výkonu pomocí metody vzorkování.
@@ -96,7 +97,7 @@ Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/
     |Možnost|Popis|
     |------------|-----------------|
     |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Spustí (**/GlobalOn**) nebo zastaví shromažďování dat (**/globaloff**) pro všechny procesy.|
-    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` **/ProcessOff:**`PID`|Spustí (**/ProcessOn**) nebo zastaví sběr **/processoff**dat pro proces, který je určen v `PID` .|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` **/ProcessOff:**`PID`|Spustí (**/ProcessOn**) nebo zastaví sběrdat pro proces, který je určen v `PID` .|
     |[/Attach](../profiling/attach.md) **:**{ `PID`&#124;`ProcName` } [/detach](../profiling/detach.md)[**:**{ `PID`&#124;`ProcName` }]|**/Attach** spustí shromažďování dat pro proces určený `PID` názvem procesu nebo (ProcName). **/detach** zastaví sběr dat pro zadaný proces nebo pro všechny procesy, pokud není zadán konkrétní proces.|
 
 ## <a name="end-the-profiling-session"></a>Ukončení relace profilování

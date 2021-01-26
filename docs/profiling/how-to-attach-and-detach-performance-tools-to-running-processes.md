@@ -1,6 +1,7 @@
 ---
 title: Připojení nástrojů pro sledování výkonu ke spuštěným procesům
-ms.custom: seodec18
+description: Naučte se používat profiler sady Visual Studio k připojení nebo odpojení od spuštěného procesu, abyste mohli provádět vzorkování a shromažďování dat o výkonu.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -18,12 +19,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 58bbf5fa291d71b26cd303a7d43719fde8605c0a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9cccad7f47a26396612264280926b7b26e431879
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331139"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801159"
 ---
 # <a name="how-to-attach-and-detach-performance-tools-to-running-processes"></a>Postupy: Připojení nástrojů pro měření výkonu ke spuštěným procesům a jejich odpojení
 Profiler se dá použít k připojení k běžícímu procesu nebo k jeho odpojení a k usnadnění vzorkování a shromažďování dat o výkonu. Tuto metodu můžete použít k profilování procesu, pokud se chcete vyhnout shromažďování dat o době načítání aplikace, nebo ke sledování výkonu procesu po dosažení určitého stavu.
@@ -43,7 +44,7 @@ Profiler se dá použít k připojení k běžícímu procesu nebo k jeho odpoje
 
 ### <a name="to-attach-to-a-running-process"></a>Připojení ke spuštěnému procesu
 
-1. V nabídce **ladění** přejděte na **Profiler**a pak **prohlížeč výkonu**a pak klikněte na **připojit**.
+1. V nabídce **ladění** přejděte na **Profiler** a pak **prohlížeč výkonu** a pak klikněte na **připojit**.
 
      Zobrazí se dialogové okno **Připojit profiler k procesu** .
 
@@ -53,7 +54,7 @@ Profiler se dá použít k připojení k běžícímu procesu nebo k jeho odpoje
 
 ### <a name="to-detach-from-a-running-process"></a>Odpojení od běžícího procesu
 
-1. v nabídce **ladění** přejděte na **Profiler**a pak **prohlížeč výkonu**a potom klikněte na **Odpojit**.
+1. v nabídce **ladění** přejděte na **Profiler** a pak **prohlížeč výkonu** a potom klikněte na **Odpojit**.
 
      Zobrazí se dialogové okno **Připojit profiler k procesu** .
 

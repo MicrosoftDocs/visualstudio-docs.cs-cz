@@ -1,5 +1,7 @@
 ---
-title: Shromáždit data vzorkování na úrovni řádků | Microsoft Docs
+title: Shromažďovat data vzorkování Line-Level | Microsoft Docs
+description: Přečtěte si, jak může vzorkování na úrovni řádků profileru odhalit kód, který používá velké množství času procesoru. Funguje s spravovaným i nativním kódem.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4653cf4b8c921a0c464dcb148963d3ab33506c25
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 3a760980b16fab17fed7180b0bc74e0271c61e1d
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851252"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801062"
 ---
 # <a name="how-to-collect-line-level-sampling-data"></a>Postupy: shromažďování dat vzorkování na úrovni řádků
 Vzorkování na úrovni řádků je schopnost profileru určit, kde v kódu funkce náročné na procesor, jako je například funkce, která má vysoce exkluzivní ukázky, musí procesor strávit nejvíc času.
@@ -54,7 +56,7 @@ Vzorkování na úrovni řádků je schopnost profileru určit, kde v kódu funk
 
      ani
 
-- Při spouštění aplikace zadejte **VSPerfCmd/LineOff \<other arguments> **.
+- Při spouštění aplikace zadejte **VSPerfCmd/LineOff \<other arguments>**.
 
 ## <a name="see-also"></a>Viz také
 - [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)

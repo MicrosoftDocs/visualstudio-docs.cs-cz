@@ -1,5 +1,7 @@
 ---
 title: Aktivita GPU (Tento proces) | Microsoft Docs
+description: Přečtěte si o segmentech aktivity GPU (Tento proces) v zobrazení vláken Vizualizátor souběžnosti.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68e85fc44977a3d9756965de12e25d13d62dbb89
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fcfc96f9b29b8fae3bf9a97273ed6c675d1655fb
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62969535"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801168"
 ---
 # <a name="gpu-activity-this-process"></a>Aktivita GPU (tento proces)
 Segmenty **aktivity GPU (Tento proces)** v zobrazení vlákna ve Vizualizér souběžnosti reprezentují čas, kdy procesor zpracovával požadavky jménem aktuálního procesu. Tyto požadavky jsou odesílány do GPU jako paketů přímého přístupu do paměti (DMA). Délka segmentu představuje čas, po který procesor GPU zpracovává paket DMA jménem aktuálního procesu.

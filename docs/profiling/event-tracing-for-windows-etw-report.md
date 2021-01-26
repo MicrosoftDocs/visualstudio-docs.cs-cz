@@ -1,5 +1,7 @@
 ---
 title: Sestava trasování událostí pro Windows (ETW) | Microsoft Docs
+description: Přečtěte si o sestavě trasování událostí pro Windows (ETW), která obsahuje události ETW, které byly zaznamenány v relaci výkonu sady Visual Studio Nástroje pro profilaci.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +14,15 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 19412d184377637c29f34b2fe3ffd033f176b97c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e7167f2fb5c78a6fa8c3d83fb56c2c2eba217516
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779295"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801415"
 ---
 # <a name="event-tracing-for-windows-etw-report"></a>Sestava trasování událostí pro Windows (ETW)
-Sestava trasování událostí pro Windows (ETW) zobrazuje události ETW, které byly zaznamenány v relaci výkonu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci. Data ETW se shromažďují v binárním souboru (.* ETL*).
+Sestava trasování událostí pro Windows (ETW) zobrazuje události ETW, které byly zaznamenány v relaci výkonu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci. Data ETW se shromažďují v binárním souboru (.*ETL*).
 
 > [!NOTE]
 > V rozhraní nemůžete zobrazit sestavy ETW [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
@@ -33,7 +35,7 @@ Sestava trasování událostí pro Windows (ETW) zobrazuje události ETW, které
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Timestamp**|Určuje, kdy došlo k události.|
+|**Časové razítko**|Určuje, kdy došlo k události.|
 |**ID procesu**|Určuje proces, který vygeneroval událost.|
 |**ID vlákna**|Identifikuje vlákno, které událost vygenerovalo.|
 |**Popis**|Identifikuje poskytovatele událostí.|

@@ -1,5 +1,7 @@
 ---
 title: Doba spuštění (zobrazení vláken) | Microsoft Docs
+description: Zkontrolujte dobu spuštění v zobrazení vláken Vizualizátor souběžnosti. Čas spuštění je reprezentován segmenty, které ukazují, kdy vlákno aktivně pracuje na logickém jádru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac0cf2a60fd194176b7cd9091f4e7dc7a758006f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f26df8f724d4a17f55ea54c3e7c61e5e1630e635
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62969911"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801488"
 ---
 # <a name="execution-time-threads-view"></a>Doba spuštění (zobrazení vláken)
 Tyto segmenty v časové ose zobrazení vlákna reprezentují dobu provádění, když vlákno aktivně pracuje na logickém jádru v systému.

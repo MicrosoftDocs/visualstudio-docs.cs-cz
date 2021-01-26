@@ -1,5 +1,7 @@
 ---
 title: Přizpůsobení sloupců zobrazení sestavy | Microsoft Docs
+description: Můžete přidat, odebrat a změnit uspořádání sloupců v zobrazeních nástrojů pro výkon sady Visual Studio – například v zobrazení funkcí, zobrazení procesů a zobrazení volající/volaný.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: edc58c74daf3cdd1e80256f9915936f4cef6d3fa
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 23b12ca396a91fad440dc057b67e258194732236
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851174"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98800447"
 ---
 # <a name="how-to-customize-report-view-columns"></a>Postupy: přizpůsobení sloupců zobrazení sestavy
 Nástroje pro sledování výkonu v nástroji Visual Studio Team System Development Edition jsou plně integrované do integrovaného vývojového prostředí (IDE), aby poskytovaly bezproblémové uživatelské prostředí. Následující seznam představuje zástupce zobrazení, která lze přizpůsobit přidáním, odebráním a změnou uspořádání sloupců:

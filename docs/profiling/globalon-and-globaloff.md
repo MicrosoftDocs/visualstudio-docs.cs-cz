@@ -1,5 +1,7 @@
 ---
 title: GlobalOn a GlobalOff | Microsoft Docs
+description: Projděte si možnosti GlobalOn a GlobalOff v části VSPerfCmd.exe. Tyto možnosti pozastaví a obnoví profilování pro procesy a vlákna v relaci profilace z příkazového řádku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 24b0ed68-d19e-473e-9af3-252c11d82bcf
@@ -9,19 +11,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 518f41557809cdeaaae9f9e1ac79e3797a854395
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eaeac096c6bdff77368508bd34276d66530fa739
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74776963"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801336"
 ---
 # <a name="globalon-and-globaloff"></a>GlobalOn a GlobalOff
 Možnosti *VSPerfCmd.exe* **globaloff** a **GlobalOn** pozastaví a obnoví profilování pro všechny procesy a vlákna v relaci profilace z příkazového řádku.
 
- Můžete zadat **GlobalOn** a **globaloff** jako jedinou možnost v příkazovém řádku *VSPerfCmd.exe* , nebo je můžete zahrnout do příkazových řádků, které také obsahují možnosti **Spustit**, **Spustit**nebo **připojit** .
+ Můžete zadat **GlobalOn** a **globaloff** jako jedinou možnost v příkazovém řádku *VSPerfCmd.exe* , nebo je můžete zahrnout do příkazových řádků, které také obsahují možnosti **Spustit**, **Spustit** nebo **připojit** .
 
- **GlobalOn** a **globaloff** lze také kombinovat s možnostmi **ProcessOn**, **ProcessOff**, **ThreadOn**a **ThreadOff** .
+ **GlobalOn** a **globaloff** lze také kombinovat s možnostmi **ProcessOn**, **ProcessOff**, **ThreadOn** a **ThreadOff** .
 
  Možnosti **GlobalOn** a **globaloff** pracují s možnostmi **ProcessOn** a **ProcessOff** , které řídí shromažďování dat pro zadaný proces, a s možnostmi **ThreadOn** a **ThreadOff** , které řídí shromažďování dat pro zadané vlákno.
 

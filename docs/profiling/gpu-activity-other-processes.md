@@ -1,5 +1,7 @@
 ---
 title: Aktivita GPU (jiné procesy) | Microsoft Docs
+description: Přečtěte si o segmentech aktivity GPU (jiné procesy) v zobrazení vláken Vizualizátor souběžnosti.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a502590c20fce1455d9259ae681178d9cd48e33
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 71ecb1587545120aef8e18ce847d5e957f3e3cdd
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62969499"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801316"
 ---
 # <a name="gpu-activity-other-processes"></a>Aktivita GPU (jiné procesy)
 Segment **aktivity GPU (jiné procesy)** v zobrazení vláken Vizualizátor souběžnosti představuje čas, kdy GPU zpracovával požadavky jménem jiných procesů v systému. Tyto požadavky odesílají GPU jako pakety přímého přístupu do paměti (DMA).  Délka segmentu představuje dobu, po kterou byl paket zpracován grafickým procesorem.

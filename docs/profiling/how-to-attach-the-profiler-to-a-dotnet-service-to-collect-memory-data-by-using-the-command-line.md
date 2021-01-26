@@ -1,5 +1,6 @@
 ---
 title: Připojení profileru ke službě .NET ke shromažďování dat paměti
+description: Pomocí nástrojů příkazového řádku sady Visual Studio Nástroje pro profilaci připojit profiler ke službě .NET Framework a shromažďovat data o paměti.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50a77d3cc8d2bb3df73542b273ec3697e0a9ccd9
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e31404c07fb7093bb2bd1114340cdb87d3c8558a
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811068"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98800590"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-service-to-collect-memory-data-by-using-the-command-line"></a>Postupy: Připojení profileru ke službě .NET Framework ke shromáždění dat paměti pomocí příkazového řádku
 Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástrojů příkazového řádku připojit profiler ke službě .NET Framework a shromažďovat data paměti. Můžete shromažďovat data o počtu a velikosti přidělení paměti a můžete také shromažďovat data o životnosti paměťových objektů.

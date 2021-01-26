@@ -1,5 +1,7 @@
 ---
 title: Zobrazení alokace paměti .NET | Microsoft Docs
+description: Seznamte se s zobrazením přidělení paměti .NET, které obsahuje typy, které byly vytvořeny během profilace spuštění.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ce16f65947fd69b5a54e564ba6bec061bc68e328
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f52a30eef50c783ea96d403c25837f9bf2515a52
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74777374"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801283"
 ---
 # <a name="net-memory-allocations-view"></a>Přidělení paměti .NET – zobrazení
 Zobrazení přidělení zobrazuje seznam typů, které byly vytvořeny během profilace. Každý typ je kořenový uzel stromu volání, který zobrazuje cesty provádění funkce, jejichž výsledkem je přidělení typu.
@@ -37,11 +39,11 @@ Zobrazení přidělení zobrazuje seznam typů, které byly vytvořeny během pr
 ## <a name="highlight-the-execution-hot-path"></a>Zvýraznit cestu k vykonání za běhu
  Můžete najít cestu spuštění stromu volání, která vytvořila většinu objektů nadřazeného typu.
 
-- Chcete-li zobrazit nejvíce aktivních cest, klikněte pravým tlačítkem myši na typ nebo funkci a potom klikněte na **položku Rozbalit**kritickou cestu.
+- Chcete-li zobrazit nejvíce aktivních cest, klikněte pravým tlačítkem myši na typ nebo funkci a potom klikněte na **položku Rozbalit** kritickou cestu.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Name**|Název přiděleného typu nebo funkce.|
+|**Název**|Název přiděleného typu nebo funkce.|
 |**ID procesu**|ID procesu (PID) pro spuštění profilace.|
 |**Název procesu**|Název procesu|
 |**Název modulu**|Název modulu obsahujícího typ nebo funkci.|

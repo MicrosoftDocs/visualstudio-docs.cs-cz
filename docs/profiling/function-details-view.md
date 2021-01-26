@@ -1,5 +1,7 @@
 ---
 title: Zobrazení podrobností funkce | Microsoft Docs
+description: V Prohlížeč výkonu se seznamte s oknem zobrazení podrobností funkce, pruhový graf rozdělení nákladů, tabulka podrobností výkonu funkce a okno zobrazení kódu funkce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fa53ba1d2e805f744d6a817c65b77428d757a25
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6e812f0fdef46d0ac5ef42788c2f854922a7375c
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536991"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801267"
 ---
 # <a name="function-details-view"></a>Zobrazení podrobností funkce
 V okně **zobrazení podrobností funkce** se zobrazí následující informace:
@@ -94,21 +96,21 @@ V okně **zobrazení podrobností funkce** se zobrazí následující informace:
 
 |Hodnota|Popis|
 |-|-|
-|**Uplynulý celkový čas (uplynulý čas)**|Uplynulý čas zahrnuje čas strávený v voláních k operačnímu systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br /><br /> – Pro **volání funkce**je to množství uplynulého času, který strávil provádění instancí vybrané funkce, které byly volány funkcí. Součástí je čas strávený ve funkcích, které vyvolala vybraná funkce.<br />– Pro **tělo funkce**celková hodnota uplynulého času stráveného prováděním kódu vybrané funkce. Čas strávený volanými funkcemi není zahrnutý.<br />– Pro volanou funkci, čas strávený prováděním instancí funkce, které byly volány vybranou funkcí. Celkový součet zahrnuje čas strávený ve funkcích, které funkce volala. Součástí je čas strávený ve funkcích, které vyvolala vybraná funkce.|
-|**Celková doba aplikace (doba použití)**|Čas aplikace neobsahuje čas strávený voláním operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br /><br /> – Pro **volání funkce**, množství času aplikace strávené prováděním instancí vybrané funkce, které byly volány funkcí. Součástí je čas strávený ve funkcích, které vyvolala vybraná funkce.<br />– Pro **tělo funkce**celková doba trvání aplikace strávená spouštěním kódu vybrané funkce. Čas strávený volanými funkcemi není zahrnutý.<br />– Pro volanou funkci se jednalo o množství času aplikace stráveného prováděním instancí funkce, které byly volány vybranou funkcí. Celkový součet zahrnuje čas strávený ve funkcích, které funkce volala.|
+|**Uplynulý celkový čas (uplynulý čas)**|Uplynulý čas zahrnuje čas strávený v voláních k operačnímu systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br /><br /> – Pro **volání funkce** je to množství uplynulého času, který strávil provádění instancí vybrané funkce, které byly volány funkcí. Součástí je čas strávený ve funkcích, které vyvolala vybraná funkce.<br />– Pro **tělo funkce** celková hodnota uplynulého času stráveného prováděním kódu vybrané funkce. Čas strávený volanými funkcemi není zahrnutý.<br />– Pro volanou funkci, čas strávený prováděním instancí funkce, které byly volány vybranou funkcí. Celkový součet zahrnuje čas strávený ve funkcích, které funkce volala. Součástí je čas strávený ve funkcích, které vyvolala vybraná funkce.|
+|**Celková doba aplikace (doba použití)**|Čas aplikace neobsahuje čas strávený voláním operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br /><br /> – Pro **volání funkce**, množství času aplikace strávené prováděním instancí vybrané funkce, které byly volány funkcí. Součástí je čas strávený ve funkcích, které vyvolala vybraná funkce.<br />– Pro **tělo funkce** celková doba trvání aplikace strávená spouštěním kódu vybrané funkce. Čas strávený volanými funkcemi není zahrnutý.<br />– Pro volanou funkci se jednalo o množství času aplikace stráveného prováděním instancí funkce, které byly volány vybranou funkcí. Celkový součet zahrnuje čas strávený ve funkcích, které funkce volala.|
 
 ### <a name="net-memory"></a>Paměť .NET
  Následující tabulka vysvětluje hodnoty v seznamu metrik výkonu pro data profilování, která byla shromážděna pomocí metody profilace paměti .NET.
 
 |Hodnota|Popis|
 |-|-|
-|**Celkové přidělení (přidělení)**|– Pro **volání funkce**počet objektů, které byly přiděleny instancemi vybrané funkce, kterou funkce volala. Toto číslo zahrnuje objekty, které byly přiděleny funkcemi, které vyvolala vybraná funkce.<br />– Pro **tělo funkce**počet objektů, které byly přiděleny pomocí vybrané funkce při provádění vlastního kódu. Objekty přidělené ve funkcích volaných vybranou funkcí nejsou zahrnuté.<br />– Pro volanou funkci počet objektů, které byly přiděleny instancemi funkce, které byly volány vybranou funkcí. Číslo zahrnuje objekty, které byly přiděleny funkcemi, které volala funkce.|
-|**Včetně bajtů (v bajtech)**|– Pro **volání funkce**počet bajtů, které byly přiděleny instancemi vybrané funkce, kterou funkce volala. Toto číslo zahrnuje bajty, které byly přiděleny funkcemi, které vyvolala vybraná funkce.<br />– Pro **tělo funkce**celkový počet bajtů, které byly přiděleny vybranou funkcí při provádění vlastního kódu. Bajty přidělené ve funkcích volaných vybranou funkcí nejsou zahrnuté.<br />– Pro volanou funkci počet bajtů, které byly přiděleny instancemi funkce, které byly volány vybranou funkcí. Toto číslo zahrnuje bajty, které byly přiděleny funkcemi, které volala funkce.|
+|**Celkové přidělení (přidělení)**|– Pro **volání funkce** počet objektů, které byly přiděleny instancemi vybrané funkce, kterou funkce volala. Toto číslo zahrnuje objekty, které byly přiděleny funkcemi, které vyvolala vybraná funkce.<br />– Pro **tělo funkce** počet objektů, které byly přiděleny pomocí vybrané funkce při provádění vlastního kódu. Objekty přidělené ve funkcích volaných vybranou funkcí nejsou zahrnuté.<br />– Pro volanou funkci počet objektů, které byly přiděleny instancemi funkce, které byly volány vybranou funkcí. Číslo zahrnuje objekty, které byly přiděleny funkcemi, které volala funkce.|
+|**Včetně bajtů (v bajtech)**|– Pro **volání funkce** počet bajtů, které byly přiděleny instancemi vybrané funkce, kterou funkce volala. Toto číslo zahrnuje bajty, které byly přiděleny funkcemi, které vyvolala vybraná funkce.<br />– Pro **tělo funkce** celkový počet bajtů, které byly přiděleny vybranou funkcí při provádění vlastního kódu. Bajty přidělené ve funkcích volaných vybranou funkcí nejsou zahrnuté.<br />– Pro volanou funkci počet bajtů, které byly přiděleny instancemi funkce, které byly volány vybranou funkcí. Toto číslo zahrnuje bajty, které byly přiděleny funkcemi, které volala funkce.|
 
 ### <a name="concurrency"></a>Souběžnost
  Následující tabulka vysvětluje hodnoty v seznamu metrik výkonu pro data profilace, která byla shromážděna pomocí metody souběžnosti.
 
 |Hodnota|Popis|
 |-|-|
-|**Celkové spory (spory)**|– Pro **volání funkce**počet událostí kolizí prostředků, ke kterým došlo v instancích vybrané funkce, kterou funkce volala. Toto číslo zahrnuje události kolizí ve funkcích, které vyvolala vybraná funkce.<br />– Pro **tělo funkce**celkový počet událostí kolizí, k nimž došlo, když funkce prováděla vlastní kód. Spory vyskytující se ve funkcích, které byly volány pomocí vybrané funkce, nejsou zahrnuty.<br />– Pro volanou funkci počet událostí kolizí, ke kterým došlo v instancích funkce, které byly volány vybranou funkcí. Toto číslo zahrnuje události kolizí, k nimž došlo ve funkcích, které volá Function.|
-|**Celkový čas zablokování (čas zablokování)**|– Pro volání funkce, čas strávený v událostech kolizí prostředků pro instance vybrané funkce, která je volána funkcí. Čas zahrnuje čas zablokování ve funkcích, které vybrala funkce s názvem.<br />– Pro **tělo funkce**celkový čas strávený v událostech kolizí, k nimž došlo, když funkce prováděla vlastní kód. Spory vyskytující se ve funkcích, které vybraná funkce volá, nejsou zahrnuté.<br />– Pro volanou funkci čas strávený v událostech kolizí prostředků pro instance funkce, kterou vyvolala vybraná funkce. Čas zahrnuje čas zablokování, ke kterému došlo ve funkcích, které funkce volala.|
+|**Celkové spory (spory)**|– Pro **volání funkce** počet událostí kolizí prostředků, ke kterým došlo v instancích vybrané funkce, kterou funkce volala. Toto číslo zahrnuje události kolizí ve funkcích, které vyvolala vybraná funkce.<br />– Pro **tělo funkce** celkový počet událostí kolizí, k nimž došlo, když funkce prováděla vlastní kód. Spory vyskytující se ve funkcích, které byly volány pomocí vybrané funkce, nejsou zahrnuty.<br />– Pro volanou funkci počet událostí kolizí, ke kterým došlo v instancích funkce, které byly volány vybranou funkcí. Toto číslo zahrnuje události kolizí, k nimž došlo ve funkcích, které volá Function.|
+|**Celkový čas zablokování (čas zablokování)**|– Pro volání funkce, čas strávený v událostech kolizí prostředků pro instance vybrané funkce, která je volána funkcí. Čas zahrnuje čas zablokování ve funkcích, které vybrala funkce s názvem.<br />– Pro **tělo funkce** celkový čas strávený v událostech kolizí, k nimž došlo, když funkce prováděla vlastní kód. Spory vyskytující se ve funkcích, které vybraná funkce volá, nejsou zahrnuté.<br />– Pro volanou funkci čas strávený v událostech kolizí prostředků pro instance funkce, kterou vyvolala vybraná funkce. Čas zahrnuje čas zablokování, ke kterému došlo ve funkcích, které funkce volala.|

@@ -1,5 +1,7 @@
 ---
 title: Značky příznaků | Microsoft Docs
+description: Další informace o značkách příznaků najdete v Vizualizér souběžnosti sady Visual Studio. Značka praporku představuje něco, co v aplikaci nastalo v čase.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccc0c7aa3386e906ad13331a596953db70240701
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc7b128915b7fc961b44aa7d70a24a813d432ddf
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62969940"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801465"
 ---
 # <a name="flag-markers"></a>Značky příznaků
 Značka praporku představuje něco, co v aplikaci nastalo v čase. Příznak může představovat mnoho typů událostí aplikace. Příznak může například zobrazit, kdy byla určitá pracovní položka naplánována nebo byla vyvolána výjimka. Moduly runtime, jako je například Task Parallel Library, mohou také generovat příznaky.

@@ -1,5 +1,7 @@
 ---
 title: Pravidla výkonu .NET Framework využití | Microsoft Docs
+description: Pochopte pravidla výkonu v kategorii použití .NET Framework. Identifikujte konkrétní metody, které je možné optimalizovat a Identifikujte obecnější vzory využití.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ab573755-6370-48aa-853d-a7321c424c79
@@ -9,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ac78ffb3455940cf2379af44ff5c2bc5870dc684
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cb6bb10f948e7aa9d97491949222c3cb0d15ba66
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531999"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801302"
 ---
 # <a name="net-framework-usage-performance-rules"></a>Pravidla výkonu použití rozhraní .NET Framework
 Pravidla výkonu v kategorii použití the.NET Framework identifikují konkrétní metody, které je možné optimalizovat, a také identifikují obecnější vzory použití, jako je uvolňování paměti a kolize, které je možné prozkoumat kvůli problémům s výkonem.

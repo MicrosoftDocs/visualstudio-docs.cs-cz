@@ -1,5 +1,7 @@
 ---
 title: Porovnání datových souborů výkonu | Microsoft Docs
+description: Přečtěte si, jak porovnat výsledky dvou různých datových souborů profileru (. vsp nebo. vsps), abyste zjistili rozdíly, regrese výkonu a vylepšení výkonu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,15 +16,15 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f42ceaa251b59eae426bfbe52c29b21ae5075077
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 40988d23dd8e9b848ea410aa75f4d4c1f45d524d
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851239"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98800457"
 ---
 # <a name="how-to-compare-performance-data-files"></a>Postupy: Porovnání datových souborů výkonu
-Můžete porovnat výsledky dvou různých datových souborů profileru (.* VSP* nebo. *vsps*) vytvořením sestavy nebo zobrazením porovnání (diff). Porovnání znázorňuje rozdíly, regrese výkonu a vylepšení, k nimž došlo z jedné relace profilování do druhé.
+Můžete porovnat výsledky dvou různých datových souborů profileru (.*VSP* nebo. *vsps*) vytvořením sestavy nebo zobrazením porovnání (diff). Porovnání znázorňuje rozdíly, regrese výkonu a vylepšení, k nimž došlo z jedné relace profilování do druhé.
 
  Sestava rozdílů představuje zobrazení tabulky dat. V tabulce se zobrazí rozdílová hodnota nebo se změní ze směrného plánu. To se počítá pomocí určení rozdílu mezi starou hodnotou, základní hodnotou a výsledné hodnoty z nové analýzy.
 
@@ -32,7 +34,7 @@ Můžete porovnat výsledky dvou různých datových souborů profileru (.* VSP*
 
 ### <a name="to-create-comparison-file-view-for-a-project-in-performance-explorer"></a>Chcete-li vytvořit zobrazení srovnávacího souboru pro projekt v Prohlížeč výkonu
 
-1. V **prohlížeč výkonu**v části **sestavy**vyberte. *VSP* nebo. soubor sestavy *vsps* , který chcete použít jako hodnoty směrného plánu pro porovnání.
+1. V **prohlížeč výkonu** v části **sestavy** vyberte. *VSP* nebo. soubor sestavy *vsps* , který chcete použít jako hodnoty směrného plánu pro porovnání.
 
 2. Vyberte. *VSP* nebo. *vsps* soubory sestav, které chcete porovnat.
 
@@ -46,7 +48,7 @@ Můžete porovnat výsledky dvou různých datových souborů profileru (.* VSP*
 
 3. V rozevíracím seznamu **sloupec** vyberte hodnotu, kterou chcete porovnat.
 
-4. volitelné Zadejte hodnotu **prahové**hodnoty.
+4. volitelné Zadejte hodnotu **prahové** hodnoty.
 
 5. Klikněte na **Použít**.
 
@@ -54,6 +56,6 @@ Můžete porovnat výsledky dvou různých datových souborů profileru (.* VSP*
 
 1. V nabídce **analyzovat** vyberte **Porovnat sestavy výkonu**.
 
-2. V okně **Vybrat soubory analýzy pro porovnání** vyhledejte a vyberte soubor analýzy **souborů standardních hodnot** (.* VSP* nebo. *vsps*) a **soubor porovnání** (.* VSP* nebo. *vsps*).
+2. V okně **Vybrat soubory analýzy pro porovnání** vyhledejte a vyberte soubor analýzy **souborů standardních hodnot** (.*VSP* nebo. *vsps*) a **soubor porovnání** (.*VSP* nebo. *vsps*).
 
 3. Klikněte na **OK**.

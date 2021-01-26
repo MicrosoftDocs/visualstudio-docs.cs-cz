@@ -1,5 +1,7 @@
 ---
 title: Shromažďovat data trasování událostí pro Windows (ETW) | Microsoft Docs
+description: Naučte se používat trasování událostí pro Windows (ETW) k určení, kde dochází k problémům s výkonem v aplikaci. Data se zobrazují pomocí VSPerfReport.exe.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fc5f1877ff6530dbe0bbc888824a6ae60215eca1
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 853e27c51b626ef63a7e0924d4c0164a6386cda2
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851265"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801542"
 ---
 # <a name="how-to-collect-event-tracing-for-windows-etw-data"></a>Postupy: shromažďování dat trasování událostí pro Windows (ETW)
 
@@ -30,9 +32,9 @@ Trasování událostí pro Windows (ETW) je výkonné zařízení pro trasován�
 
 ## <a name="to-enable-event-trace-providers"></a>Povolení zprostředkovatelů trasování událostí
 
-1. V **prohlížeč výkonu**klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
+1. V **prohlížeč výkonu** klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
 
-2. Na **stránkách vlastností**klikněte na vlastnosti **událostí systému Windows** .
+2. Na **stránkách vlastností** klikněte na vlastnosti **událostí systému Windows** .
 
 3. V seznamu **Vyberte poskytovatele trasování událostí pro shromáždění dat** vyberte poskytovatele událostí, které chcete použít k profilování aplikace.
 

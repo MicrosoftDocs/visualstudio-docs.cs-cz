@@ -1,5 +1,7 @@
 ---
 title: Analýza využití paměti pro objekty .NET | Microsoft Docs
+description: Podívejte se, kolik paměti vaše aplikace používá a jaké cesty kódu přidělují nejvíc paměti pomocí nástroje pro přidělování objektů .NET.
+ms.custom: SEO-VS-2020
 ms.date: 12/9/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 563531b6dfbf59e33b63dcb4561612d86cd39acc
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 4c0d8b02f867797317ff762e7a23bec042f93318
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970233"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801497"
 ---
 # <a name="analyze-memory-usage-by-using-the-net-object-allocation-tool"></a>Analýza využití paměti pomocí nástroje pro přidělování objektů .NET
 
@@ -109,7 +111,7 @@ Zobrazení **stromu volání** ukazuje cesty provádění funkce, které obsahuj
 - Tlačítko **Rozbalit cestu k Hotu zvýrazní cestu** spuštění funkce, která obsahuje mnoho objektů, které přiděluje paměť. Algoritmus se spustí na uzlu, který vyberete, a zvýrazní cestu největší alokace a provede vás při šetření.
 - Tlačítko **Zobrazit horkou cestu** zobrazí nebo skryje plamenové symboly, které označují, které uzly jsou součástí cesty k Hot.
 
-### <a name="functions"></a>Funkce
+### <a name="functions"></a>Functions
 
 ![Zobrazení funkcí](../profiling/media/functionslight.png "Zobrazení funkcí")
 

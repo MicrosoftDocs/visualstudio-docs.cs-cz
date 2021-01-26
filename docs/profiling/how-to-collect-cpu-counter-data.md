@@ -1,5 +1,7 @@
 ---
 title: Shromáždit data čítače procesoru | Microsoft Docs
+description: Naučte se používat čítače událostí procesoru (hardware) ke shromažďování dat o výkonu specifických pro hardware. Tento článek obsahuje seznam různých typů událostí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -13,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 96934250bc00b02630b60e83d50ed4b274db0323
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: e59214640ab3048f94b2801ad6b6b2d7e12d2e25
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851278"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801565"
 ---
 # <a name="how-to-collect-cpu-counter-data"></a>Postupy: Shromažďování dat čítačů procesoru
 
@@ -30,9 +32,9 @@ Vyskytují se dva typy událostí čítače CPU:
 
 - Události platformy – události procesoru, které jsou spojeny s konkrétním PROCESORem.
 
-  Přenosné události zahrnují obecné události, jako jsou vyřazení pokynů a nezastavené cykly, události vyrovnávací paměti procesoru, větvení události a události mezipaměti L2. Dostupné čítače událostí platformy určují výrobce procesoru.
+Přenosné události zahrnují obecné události, jako jsou vyřazení pokynů a nezastavené cykly, události vyrovnávací paměti procesoru, větvení události a události mezipaměti L2. Dostupné čítače událostí platformy určují výrobce procesoru.
 
-  Kategorie událostí lze sdílet mezi přenosnými a čítači platforem. Například následující kategorie dat jsou často běžné pro oba typy:
+Kategorie událostí lze sdílet mezi přenosnými a čítači platforem. Například následující kategorie dat jsou často běžné pro oba typy:
 
 - Události paměti.
 
@@ -40,7 +42,7 @@ Vyskytují se dva typy událostí čítače CPU:
 
 - Události větve.
 
-  Data čítače výkonu můžete shromažďovat dvěma způsoby v profileru:
+Data čítače výkonu můžete shromažďovat dvěma způsoby v profileru:
 
 - Shromažďování dat z jednoho nebo více čítačů při profilaci instrumentace.
 
@@ -48,7 +50,7 @@ Vyskytují se dva typy událostí čítače CPU:
 
 ## <a name="to-collect-cpu-performance-counter-data-when-you-profile-by-instrumentation"></a>Shromažďování dat čítače výkonu procesoru při profilaci pomocí instrumentace
 
-1. Na **stránce vlastností**výkonnostní relace klikněte na **čítače procesoru.**
+1. Na **stránce vlastností** výkonnostní relace klikněte na **čítače procesoru.**
 
 2. Zaškrtněte políčko **shromáždit čítače procesoru** .
 

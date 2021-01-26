@@ -1,5 +1,7 @@
 ---
 title: Prohlížeč událostí | Microsoft Docs
+description: Seznamte se s obecným prohlížečem událostí, který vám pomůže lépe diagnostikovat, jak vaše aplikace funguje v profileru sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 4/30/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 0be00f2333a2e732d9ba4472004c383b132c0bf2
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 6aef8e72f416923aa647a8b3a412ee701ece18dd
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075062"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801411"
 ---
 # <a name="events-viewer"></a>Prohlížeč událostí
 
@@ -42,7 +44,7 @@ Další informace o tom, jak nástroj zvýšit efektivitu, najdete v tématu [op
 
 |Název sloupce|Popis|
 |----------|---------------------|
-|Název zprostředkovatele|Zdroj události|
+|Název poskytovatele|Zdroj události|
 |Název události|Událost zadaná poskytovatelem|
 |Text|Popisy zprostředkovatele, názvu události a ID události|
 |Časové razítko (MS)|Čas, kdy došlo k události|

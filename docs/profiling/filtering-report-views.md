@@ -1,5 +1,7 @@
 ---
 title: Filtrování zobrazení sestav | Microsoft Docs
+description: V aplikaci Visual Studio použijte filtry na soubory dat profilování, abyste omezili data profilování zobrazená v zobrazeních sestav výkonu a exportovali do souborů sestav.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: acdfe8f96d30ad881d8c9c0f0a9ff48c3353afee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6ba3e207b180b26ea4b53765926b16fb2e85d48
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779243"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801449"
 ---
 # <a name="filter-report-views"></a>Filtrovat zobrazení sestav
 Můžete použít filtry na soubory dat profilování a omezit tak data profilování, která se zobrazují v zobrazeních sestavy výkonu a exportována do souborů sestav. Sestavu můžete omezit na data mezi hodnotami časových razítek a data můžete omezit na konkrétní procesy a vlákna. Filtry můžete uložit do souboru a pak vytvořit filtr v jiném datovém souboru profilování importováním uloženého filtru.

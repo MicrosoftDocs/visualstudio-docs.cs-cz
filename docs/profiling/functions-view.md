@@ -1,5 +1,7 @@
 ---
 title: Zobrazení funkcí | Microsoft Docs
+description: Získejte informace o zobrazení funkcí v Prohlížeč výkonu sady Visual Studio. Zobrazení funkcí obsahuje seznam funkcí, které jsou volány během profilace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f066d6c9476f0a44a23e59ff2b715a6df9975ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f85e8ddf17e220ff9235fd3d405a61b2efec16e5
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779191"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801236"
 ---
 # <a name="functions-view"></a>Zobrazení funkcí
 Zobrazení funkcí obsahuje seznam funkcí, které jsou volány během profilace.
