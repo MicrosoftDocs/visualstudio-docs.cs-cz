@@ -1,5 +1,7 @@
 ---
 title: Profiler příkazového řádku – instrumentace dynamické aplikace ASP.NET, získání dat paměti
+description: Naučte se, jak pomocí nástrojů příkazového řádku sady Visual Studio Nástroje pro profilaci shromažďovat podrobná data o aktivitách pro dynamicky kompilovaná aplikace ASP.NET.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 2cdd9903-39db-47e8-93dd-5e6a21bc3435
@@ -9,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 7c1fafd3b21dd40da1215e7864c6d66090589d03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c26342fb956aa5043f316015f05e18ef70d20559
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328075"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883589"
 ---
 # <a name="how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>Postupy: instrumentace dynamicky kompilované webové aplikace ASP.NET a shromažďování dat paměti pomocí příkazového řádku profileru
 Toto téma popisuje, jak používat [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástroje příkazového řádku ke shromažďování podrobných dat o přidělování paměti .NET a o životnosti objektů pro dynamicky kompilované [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webové aplikace pomocí metody profilace instrumentace.
@@ -60,7 +62,7 @@ Toto téma popisuje, jak používat [!INCLUDE[vsprvs](../code-quality/includes/v
 
    - Možnost **/Start: Trace** inicializuje Profiler.
 
-   - Parametr **/output:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile` Určuje název a umístění dat profilování (.* VSP*) soubor.
+   - Parametr **/output:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile` Určuje název a umístění dat profilování (.*VSP*) soubor.
 
      Pomocí možnosti **/Start: Trace** můžete použít kteroukoli z následujících možností.
 
@@ -75,7 +77,7 @@ Toto téma popisuje, jak používat [!INCLUDE[vsprvs](../code-quality/includes/v
    | [/Counter](../profiling/counter.md) **:**`Config` | Shromažďuje informace z čítače výkonu procesoru určeného v `Config` . Informace čítače jsou přidány do shromažďovaných dat v každé události profilace. |
    | [/WinCounter](../profiling/wincounter.md) **:**`WinCounterPath` | Určuje čítač výkonu systému Windows, který má být shromážděn během profilace. |
    | [/AutoMark](../profiling/automark.md) **:**`Interval` | Používejte pouze s **/WinCounter** . Určuje počet milisekund mezi událostmi shromažďování čítačů výkonu systému Windows. Výchozí hodnota je 500 ms. |
-   | [/events](../profiling/events-vsperfcmd.md) **:**`Config` | Určuje událost trasování událostí pro Windows (ETW), která se má shromáždit během profilace. Události ETW jsou shromažďovány samostatně (.* ETL*). |
+   | [/events](../profiling/events-vsperfcmd.md) **:**`Config` | Určuje událost trasování událostí pro Windows (ETW), která se má shromáždit během profilace. Události ETW jsou shromažďovány samostatně (.*ETL*). |
 
 2. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]Obvyklým způsobem spusťte webovou aplikaci.
 

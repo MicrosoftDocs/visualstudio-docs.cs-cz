@@ -1,5 +1,7 @@
 ---
 title: Omezení instrumentace na konkrétní knihovny DLL | Microsoft Docs
+description: Naučte se používat metodu profilace instrumentace k omezení shromažďování dat profilování na jednu nebo více knihoven DLL v aplikaci.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a3584498854e7518e93c4ba00dc019d804b0e8d8
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 7bd781f2c62a313a8e0c0b044103ca5da28021f8
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851018"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883368"
 ---
 # <a name="how-to-limit-instrumentation-to-specific-dlls"></a>Postupy: Omezení instrumentace na konkrétní knihovny DLL
 
@@ -51,9 +53,9 @@ Pomocí metody profilace instrumentace můžete omezit shromažďování dat pro
 
 4. Na druhé stránce průvodce proveďte následující kroky:
 
-    - Zadejte cestu a název souboru. soubor *DLL* , který chcete profilovat v **cestě knihovny DLL**. Můžete také kliknout na tlačítko se třemi tečkami (...) a vyhledat soubor v dialogovém okně **Knihovna dynamického propojení do profilu** . Všimněte si, že je nutné zadat kopii. soubor *DLL* , který bude spuštěn spustitelným souborem (.* soubor exe*), který vyberete další.
+    - Zadejte cestu a název souboru. soubor *DLL* , který chcete profilovat v **cestě knihovny DLL**. Můžete také kliknout na tlačítko se třemi tečkami (...) a vyhledat soubor v dialogovém okně **Knihovna dynamického propojení do profilu** . Všimněte si, že je nutné zadat kopii. soubor *DLL* , který bude spuštěn spustitelným souborem (.*soubor exe*), který vyberete další.
 
-    - Zadejte cestu a název souboru spustitelného souboru (.* exe*), který bude vyvolávat. *Knihovna DLL* v **cestě ke spustitelnému souboru**. Můžete také kliknout na tlačítko se třemi tečkami (...) a vyhledat soubor v dialogovém okně **spustitelného souboru, který se má spustit** .
+    - Zadejte cestu a název souboru spustitelného souboru (.*exe*), který bude vyvolávat. *Knihovna DLL* v **cestě ke spustitelnému souboru**. Můžete také kliknout na tlačítko se třemi tečkami (...) a vyhledat soubor v dialogovém okně **spustitelného souboru, který se má spustit** .
 
     - Nepovinný parametr. Zadejte argumenty příkazového řádku, které chcete předat spustitelnému souboru v **argumentech příkazového řádku**. V případě potřeby zadejte pracovní adresář pro aplikaci v **pracovním adresáři**.
 
@@ -66,7 +68,7 @@ Pomocí metody profilace instrumentace můžete omezit shromažďování dat pro
 7. Nepovinný parametr. Pro přidání dalších. soubory *DLL* , klikněte pravým tlačítkem na **cíle** a pak vyberte **Přidat cílový binární soubor**. Vyberte soubory z dialogového okna **Přidat cílový binární soubor** .
 
     > [!NOTE]
-    > Nezadávejte spustitelný soubor (.* exe*) soubor, který vykonává knihovny DLL.
+    > Nezadávejte spustitelný soubor (.*exe*) soubor, který vykonává knihovny DLL.
 
 ## <a name="see-also"></a>Viz také
 

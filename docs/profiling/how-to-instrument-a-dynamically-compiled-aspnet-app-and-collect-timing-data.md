@@ -1,5 +1,7 @@
 ---
 title: Profiler příkazového řádku – instrumentace dynamické aplikace ASP.NET, získání dat časování
+description: Naučte se používat nástroje příkazového řádku sady Visual Studio Nástroje pro profilaci ke shromažďování podrobných dat časování pro dynamicky kompilovaná aplikace ASP.NET.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: mikejo5000
@@ -8,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: f510878c3952cb98bcbee3bfecedf05b87b2658f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 318728a78e6f15d8858aa2f037b890a3bfe8aeca
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85327973"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883628"
 ---
 # <a name="how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line"></a>Postupy: instrumentace dynamicky kompilované webové aplikace ASP.NET a shromažďování podrobných dat časování s použitím profileru pomocí příkazového řádku
 
@@ -50,7 +52,7 @@ Spusťte profiler a pak spusťte cílovou aplikaci. I když je profiler připoje
 
    - Možnost **/Start: Trace** inicializuje Profiler.
 
-   - Parametr **/output:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile` Určuje název a umístění dat profilování (.* VSP*) soubor.
+   - Parametr **/output:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile` Určuje název a umístění dat profilování (.*VSP*) soubor.
 
      Pomocí možnosti **/Start: Trace** můžete použít kteroukoli z následujících možností.
 
@@ -65,7 +67,7 @@ Spusťte profiler a pak spusťte cílovou aplikaci. I když je profiler připoje
      | [/Counter](../profiling/counter.md) **:**`Config` | Shromažďuje informace z čítače výkonu procesoru, který je určen v `Config` . Informace čítače jsou přidány do dat, která jsou shromažďována při každé události profilace. |
      | [/WinCounter](../profiling/wincounter.md) **:**`WinCounterPath` | Určuje čítač výkonu systému Windows, který má být shromážděn během profilace. |
      | [/AutoMark](../profiling/automark.md) **:**`Interval` | Používejte pouze s **/WinCounter** . Určuje počet milisekund mezi událostmi shromažďování čítačů výkonu systému Windows. Výchozí hodnota je 500 ms. |
-     | [/events](../profiling/events-vsperfcmd.md) **:**`Config` | Určuje událost trasování událostí pro Windows (ETW), která se má shromáždit během profilace. Události ETW jsou shromažďovány samostatně (.* ETL*). |
+     | [/events](../profiling/events-vsperfcmd.md) **:**`Config` | Určuje událost trasování událostí pro Windows (ETW), která se má shromáždit během profilace. Události ETW jsou shromažďovány samostatně (.*ETL*). |
 
 3. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]Obvyklým způsobem spusťte webovou aplikaci.
 

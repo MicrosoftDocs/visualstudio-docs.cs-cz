@@ -1,5 +1,7 @@
 ---
 title: Příkazový řádek profileru – otevřít nativní klientskou aplikaci, získat data souběžnosti
+description: Naučte se používat Nástroje pro profilaci nástroje příkazového řádku sady Visual Studio ke spuštění nativní samostatné klientské aplikace a shromažďování dat o souběžnosti procesů a vláken.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: e5aed651-afed-4b70-9a7e-1a6032cc614f
@@ -9,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0aeebe82e3c7b574b65ab463a7bfd986d43d46ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce8c16c3c895c0538f91bdb27af08e003b1450cf
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85327654"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883454"
 ---
 # <a name="how-to-launch-a-stand-alone-native-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>Postupy: Spuštění samostatné nativní aplikace s profilerem za účelem shromáždění dat souběžnosti pomocí příkazového řádku
 Toto téma popisuje, jak použít [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástroje příkazového řádku ke spuštění nativní samostatné (klientské) aplikace a shromáždění dat procesu a souběžnosti vláken.

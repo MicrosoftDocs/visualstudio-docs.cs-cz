@@ -1,5 +1,6 @@
 ---
 title: Web.Config dynamické aplikace ASP.NET pro & profilování souborů
+description: Naučte se používat Nástroje pro profilaci sady Visual Studio ke shromažďování dat o aktivitách časování a paměti pro dynamicky kompilované webové aplikace ASP.NET.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 9682fe820e34e8e30a3c57670f5e5fbc7eae2153
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e08732689d11cd7de70df1e93d1d1110a35baa6d
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809593"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883451"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>Postupy: Změna web.config souborů pro instrumentaci a profilování dynamicky kompilovaných webových aplikací ASP.NET
 Pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] metody instrumentace nástroje pro profilaci můžete shromažďovat podrobná data časování, data o přidělování paměti .NET a data o životnosti objektů .NET z dynamicky kompilovaných [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webových aplikací.
@@ -141,7 +142,7 @@ Pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] metody instrum
    | Název atributu | Hodnota atributu |
    |----------------| - |
    | **zkrat** | **Microsoft. VisualStudio. Enterprise. AspNetHelper. VsInstrLocation** |
-   | **osa** | `PerformanceToolsFolder`**\VSInstr.Exe** |
+   | **value** | `PerformanceToolsFolder`**\VSInstr.Exe** |
 
 4. Přidejte další element **Add** jako podřízený prvek **appSettings** .
 
@@ -150,7 +151,7 @@ Pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] metody instrum
    |Název atributu|Hodnota atributu|
    |--------------------|---------------------|
    |**zkrat**|**Microsoft. VisualStudio. Enterprise. AspNetHelper. VsInstrTools**|
-   |**osa**|`PerformanceToolsFolder`|
+   |**value**|`PerformanceToolsFolder`|
 
     `PerformanceToolsFolder` je cesta ke spustitelným souborům profileru. Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
 

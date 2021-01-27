@@ -1,5 +1,7 @@
 ---
-title: Instalace samostatného profileru | Microsoft Docs
+title: Instalace Stand-Alone profileru | Microsoft Docs
+description: Přečtěte si, jak nainstalovat samostatný Profiler, který se dá spustit bez nainstalované sady Visual Studio. Existují situace, kdy by se neměl instalovat Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4005a7af5af1582f31b6c706be150a504355f3d2
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 8f13edc60a2c05d50e2118e24344bf9d475e3f5f
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851148"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883615"
 ---
 # <a name="how-to-install-the-stand-alone-profiler"></a>Postupy: Instalace samostatného profileru
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] poskytuje samostatný Profiler založený na příkazovém řádku, který se dá spustit bez instalace [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE). K této situaci dochází, když počítač není nebo nemůže mít nainstalované vývojové prostředí. Například byste neměli instalovat vývojové prostředí na provozním webovém serveru.
@@ -41,7 +43,7 @@ ms.locfileid: "90851148"
    > [!NOTE]
    > Pokud se zobrazí informace o použití vsinstr.exe, vše se nastaví správně. Pokud se zobrazí chyba, že stav vsinstr.exe nebo jedna z jejích závislostí nebyla nalezena, ujistěte se, že máte správně nastavené cesty, jak je popsáno v kroku 2.
 
-4. Nastavení serveru symbolů nastavením proměnné **_NT_SYMBOL_PATH** na **Symsrv \*symsrv.dll\* c:\localcache \* https://msdl.microsoft.com/download/symbols **
+4. Nastavení serveru symbolů nastavením proměnné **_NT_SYMBOL_PATH** na **Symsrv \*symsrv.dll\* c:\localcache \* https://msdl.microsoft.com/download/symbols**
 
 5. Po nastavení serveru symbolů pomocí proměnných prostředí systému spusťte nástroje profileru příkazového řádku na novém příkazovém řádku. To umožňuje, aby se nové proměnné prostředí projevily. V okně příkazového řádku zadejte následující příkaz:
 

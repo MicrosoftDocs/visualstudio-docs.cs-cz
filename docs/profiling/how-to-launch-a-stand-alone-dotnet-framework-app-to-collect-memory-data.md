@@ -1,5 +1,7 @@
 ---
 title: Příkazový řádek profileru – otevření klientské .NET Framework aplikace, získání dat paměti
+description: Naučte se používat Nástroje pro profilaci nástroje příkazového řádku sady Visual Studio ke spuštění .NET Framework samostatné aplikace a shromažďování dat o aktivitách paměti.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 3bc53041-91b7-4ad0-8413-f8bf2c4b3f5e
@@ -9,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6378ea021d089027c19d28e927d5772ef5f35e0f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a0df21a4d34d3d3f889442046b594ff63f01bcb6
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85327693"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883450"
 ---
 # <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-memory-data-by-using-the-command-line"></a>Postupy: spuštění samostatné .NET Framework aplikace s profilerem za účelem shromáždění dat paměti pomocí příkazového řádku
 Toto téma popisuje, jak použít [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástroje příkazového řádku ke spuštění .NET Framework samostatné (klientské) aplikace a shromažďování dat paměti.
@@ -58,11 +60,11 @@ Toto téma popisuje, jak použít [!INCLUDE[vsprvs](../code-quality/includes/vsp
 
     **VSPerfCmd**  [/Lauch](../profiling/launch.md) **:** `appName` **/GC:**{**alokace**&#124;**Doba života**} [ `Options` ]
 
-   - [/gc](../profiling/gc-vsperfcmd.md)**:** `Keyword` Pro shromažďování dat .NET Framework paměti se vyžaduje možnost/GC:. Parametr klíčového slova určuje, zda shromažďovat data o přidělování paměti nebo shromažďovat data o životnosti objektů.
+   - [](../profiling/gc-vsperfcmd.md) `Keyword` Pro shromažďování dat .NET Framework paměti se vyžaduje možnost/GC:. Parametr klíčového slova určuje, zda shromažďovat data o přidělování paměti nebo shromažďovat data o životnosti objektů.
 
      |Klíčové slovo|Popis|
      |-------------|-----------------|
-     |**přidělování**|Shromažďovat pouze data o přidělování paměti.|
+     |**vyhrazen**|Shromažďovat pouze data o přidělování paměti.|
      |**platné**|Shromážděte jak přidělování paměti, tak data o životnosti objektů.|
 
      S možností **/Lauch** můžete použít kteroukoli z následujících možností.
@@ -84,7 +86,7 @@ Toto téma popisuje, jak použít [!INCLUDE[vsprvs](../code-quality/includes/vsp
     |Možnost|Popis|
     |------------|-----------------|
     |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Spustí (**/GlobalOn**) nebo zastaví shromažďování dat (**/globaloff**) pro všechny procesy.|
-    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|Spustí (**/ProcessOn**) nebo zastaví sběr **/processoff**dat pro proces určený identifikátorem procesu ( `PID` ).|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|Spustí (**/ProcessOn**) nebo zastaví sběrdat pro proces určený identifikátorem procesu ( `PID` ).|
     |[/Attach](../profiling/attach.md) **:** `PID` [/detach](../profiling/detach.md)|**/Attach** začne shromažďovat data pro proces, který je určen `PID` (ID procesu). **/detach** zastaví sběr dat pro všechny procesy.|
 
 - K vložení značky profilování do datového souboru můžete použít také možnost **VSPerfCmd.exe** [/Mark](../profiling/mark.md) . Příkaz **/Mark** Přidá identifikátor, časové razítko a volitelný uživatelsky definovaný textový řetězec. Značky lze použít k filtrování dat.

@@ -1,5 +1,7 @@
 ---
 title: Omezení instrumentace na konkrétní funkce | Microsoft Docs
+description: Přečtěte si, jak omezit instrumentaci a shromažďování dat na jednu nebo více funkcí, a to nastavením možností na stránce Upřesnit nebo v cílových binárních vlastnostech stránky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b2316c0c3fe0b74bbd7b3e80324284f37dff0e64
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 92825f77b1c94a7545b399dbc1cb35ecefb8218d
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90850992"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883329"
 ---
 # <a name="how-to-limit-instrumentation-to-specific-functions"></a>Postupy: omezení instrumentace na konkrétní funkce
 Instrumentaci a shromažďování dat můžete omezit na jednu nebo více funkcí tak, že nastavíte možnosti na stránce **Upřesnit** v části **relace výkonu** nebo cílové binární vlastnosti:
@@ -32,7 +34,7 @@ Instrumentaci a shromažďování dat můžete omezit na jednu nebo více funkc�
 
 ### <a name="to-limit-instrumentation-to-specific-functions-in-a-performance-session"></a>Omezení instrumentace na konkrétní funkce v relaci výkonu
 
-1. V **prohlížeč výkonu**klikněte pravým tlačítkem na název relace a pak klikněte na **vlastnosti**.
+1. V **prohlížeč výkonu** klikněte pravým tlačítkem na název relace a pak klikněte na **vlastnosti**.
 
     Zobrazí se dialogové okno **Stránky vlastností**.
 
@@ -42,14 +44,14 @@ Instrumentaci a shromažďování dat můžete omezit na jednu nebo více funkc�
 
     **/include:** `FuncSpec` **[;** `FuncSpec` **]**`...`
 
-    `FuncSpec` je název oboru názvů a funkce. Má formát `Namespace` **::** `FunctionName` . K oddělení více funkcí použijte středník. Pomocí hvězdičky ( \* ) zadejte zástupný znak pro jeden nebo více znaků. Například **/include: MyNS:: \\ *** určuje všechny funkce v oboru názvů MyNS.
+    `FuncSpec` je název oboru názvů a funkce. Má formát `Namespace` **::** `FunctionName` . K oddělení více funkcí použijte středník. Pomocí hvězdičky ( \* ) zadejte zástupný znak pro jeden nebo více znaků. Například **/include: MyNS:: \\** _ určuje všechny funkce v oboru názvů MyNS.
 
    > [!NOTE]
-   > Pokud chcete zobrazit seznam funkcí v binárním souboru, otevřete okno příkazového řádku v instalačním adresáři Nástroje pro profilaci (podívejte se na téma [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) a pak zadejte **VSInstr/DumpFuncs** .
+   > Pokud chcete zobrazit seznam funkcí v binárním souboru, otevřete okno příkazového řádku v instalačním adresáři Nástroje pro profilaci (podívejte se na téma [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) a pak zadejte _ *VSInstr/DumpFuncs* .*
 
 ### <a name="to-limit-instrumentation-to-specific-functions-in-a-binary"></a>Omezení instrumentace na konkrétní funkce v binárním souboru
 
-1. V **prohlížeč výkonu**vyhledejte binární název v uzlu **cíle** relace výkonu.
+1. V **prohlížeč výkonu** vyhledejte binární název v uzlu **cíle** relace výkonu.
 
 2. Klikněte pravým tlačítkem na název binárního souboru a pak klikněte na **vlastnosti**.
 
@@ -61,10 +63,10 @@ Instrumentaci a shromažďování dat můžete omezit na jednu nebo více funkc�
 
     **/include:** `FuncSpec` **[;** `FuncSpec` **]**`...`
 
-    `FuncSpec` je název oboru názvů a funkce. Má formát `Namespace` **::** `FunctionName` . K oddělení více funkcí použijte středník. Pomocí hvězdičky ( \* ) zadejte zástupný znak pro jeden nebo více znaků. Například **/include: MyNS:: \\ *** určuje všechny funkce v oboru názvů MyNS.
+    `FuncSpec` je název oboru názvů a funkce. Má formát `Namespace` **::** `FunctionName` . K oddělení více funkcí použijte středník. Pomocí hvězdičky ( \* ) zadejte zástupný znak pro jeden nebo více znaků. Například **/include: MyNS:: \\** _ určuje všechny funkce v oboru názvů MyNS.
 
    > [!NOTE]
-   > Pokud chcete zobrazit seznam funkcí v binárním souboru, otevřete okno příkazového řádku v instalačním adresáři Nástroje pro profilaci (podívejte se na téma [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) a pak zadejte **VSInstr/DumpFuncs** .
+   > Pokud chcete zobrazit seznam funkcí v binárním souboru, otevřete okno příkazového řádku v instalačním adresáři Nástroje pro profilaci (podívejte se na téma [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) a pak zadejte _ *VSInstr/DumpFuncs* .*
 
 ## <a name="see-also"></a>Viz také
 - [Řízení shromažďování dat](../profiling/controlling-data-collection.md)
