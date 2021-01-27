@@ -2,7 +2,7 @@
 title: Začínáme s Visual Studio Tools for Unity | Microsoft Docs
 description: Naučte se instalovat a nastavovat Visual Studio pro vývoj Unity.
 ms.custom: ''
-ms.date: 07/13/2020
+ms.date: 01/27/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: how-to
@@ -13,17 +13,17 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: 1f8cbe1629aab6a177a46888fe25cf8e3565d91d
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: e05a94ecf9cf690f46299684c82f2b3961a783c8
+ms.sourcegitcommit: 585547ea7363ab1b6bb9d41f6d008cbe478d1a3b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97903750"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98912565"
 ---
 # <a name="get-started-with-visual-studio-and-unity"></a>Začínáme se sadou Visual Studio a Unity
 
 > [!NOTE]
-> V tomto průvodci se předpokládá, že už máte nainstalovanou Unity pomocí programu centrum Unity. Pokud s Unity začínáte, doporučujeme, abyste se seznámili s Unity a nejdřív jste dokončili [Začínáme s využitím kurzu Unity](https://learn.unity.com/course/getting-started-with-unity) .
+> V tomto průvodci se předpokládá, že už máte nainstalovanou Unity pomocí programu centrum Unity. Pokud s Unity začínáte, doporučujeme, abyste se seznámili s Unity a nejprve dokončili [výukovou cestu Unity Essentials](https://learn.unity.com/pathway/unity-essentials) .
 
 ## <a name="install-unity-support-for-visual-studio"></a>Instalace podpory Unity pro Visual Studio
 
