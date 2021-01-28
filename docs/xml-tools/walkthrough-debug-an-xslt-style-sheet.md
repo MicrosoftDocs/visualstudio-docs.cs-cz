@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c69f93aca88cb8e83417a370de7113640d3ae38c
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 3a6f1efc85366bc74206dc8637c992f249c4eb44
+ms.sourcegitcommit: e443866e3468f838bc3655ad56a83a552013ceed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351333"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98925884"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>Návod: Ladění šablony stylů XSLT
 
@@ -24,7 +24,7 @@ Kroky v tomto návodu ukazují, jak používat ladicí program XSLT. Postup zahr
 Pro přípravu k tomuto návodu nejdřív zkopírujte dva [ukázkové soubory](#sample-files) do místního počítače. Jedna je předloha se styly a jedna je soubor XML, který použijeme jako vstup do šablon stylů. V tomto návodu se v šabloně stylů používá vyhledáváme všechny knihy, jejichž cena je nižší než průměrná cena za knihu.
 
 > [!NOTE]
-> Ladicí program XSLT je k dispozici pouze v edici Enterprise sady Visual Studio.
+> Ladicí program XSLT je k dispozici pouze v edicích Professional a Enterprise sady Visual Studio.
 
 ## <a name="start-debugging"></a>Spustit ladění
 
@@ -34,7 +34,7 @@ Pro přípravu k tomuto návodu nejdřív zkopírujte dva [ukázkové soubory](#
 
    Šablona stylů se otevře v editoru XML.
 
-3. Klikněte na tlačítko pro procházení ( **...** ) v poli **input** okna vlastností dokumentu. (Pokud se okno **vlastnosti** nezobrazí, klikněte pravým tlačítkem myši kamkoli na otevřený soubor v editoru a pak zvolte **vlastnosti**.)
+3. Klikněte na tlačítko pro procházení (**...**) v poli **input** okna vlastností dokumentu. (Pokud se okno **vlastnosti** nezobrazí, klikněte pravým tlačítkem myši kamkoli na otevřený soubor v editoru a pak zvolte **vlastnosti**.)
 
 4. Vyhledejte soubor *books.xml* a pak zvolte možnost **otevřít**.
 
@@ -50,7 +50,7 @@ Pro přípravu k tomuto návodu nejdřív zkopírujte dva [ukázkové soubory](#
 
       ![Vložit zarážku v souboru XSL v aplikaci Visual Studio](media/insert-breakpoint.PNG)
 
-6. Na panelu nabídek vyberte **XML**  >  **Spustit ladění XSLT** (nebo stiskněte klávesu **ALT** + **F5** ).
+6. Na panelu nabídek vyberte **XML**  >  **Spustit ladění XSLT** (nebo stiskněte klávesu **ALT** + **F5**).
 
    Spustí se proces ladění.
 
@@ -62,7 +62,7 @@ Pro přípravu k tomuto návodu nejdřív zkopírujte dva [ukázkové soubory](#
 
 Do okna **kukátko 1** přidáte dvě proměnné, abychom mohli analyzovat jejich hodnoty, když se zpracuje vstupní soubor. (Můžete také použít okno **místní** hodnoty k prohlédnutí hodnot, pokud proměnné, které chcete sledovat, již existují.)
 
-1. V nabídce **ladění** vyberte možnost sledování **kukátko**  >  **Watch**  >  **1**.
+1. V nabídce **ladění** vyberte možnost sledování **kukátko**  >    >  **1**.
 
    Okno **kukátko 1** se zobrazí.
 
