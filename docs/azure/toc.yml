@@ -40,8 +40,8 @@
   items:
     - name: Práce s projekty cloudových služeb
       items:
-        - name: Přístup k privátním cloudům Azure
-          href: vs-azure-tools-access-private-azure-clouds-with-visual-studio.md
+        - name: Použít Cloud Services (Rozšířená podpora) (Preview)
+          href: cloud-services-extended-support.md
         - name: Vytvoření projektu cloudové služby Azure
           href: vs-azure-tools-azure-project-create.md
         - name: Správa rolí v cloudových službách Azure
@@ -60,6 +60,8 @@
           href: vs-azure-tools-multiple-services-project-configurations.md
         - name: Postup upgradu projektů na aktuální verzi nástrojů Azure
           href: vs-azure-tools-upgrade-projects-to-the-current-version-of-the-azure-tools.md
+        - name: Přístup k privátním cloudům Azure
+          href: vs-azure-tools-access-private-azure-clouds-with-visual-studio.md
     - name: Testování a ladění cloudové služby
       items:
         - name: Ladění cloudové služby nebo virtuálního počítače Azure v sadě Visual Studio
