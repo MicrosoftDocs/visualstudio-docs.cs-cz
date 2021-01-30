@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cfec7d31e6fc2c120ef42dc9de2a5a7eea4132e0
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 909e15a3acdc6725556c8d5121a363d1754a74be
+ms.sourcegitcommit: cfeffe2364275a347db0ba2dce36d8e80001c081
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597090"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99104276"
 ---
 # <a name="how-to-save-and-open-files-with-encoding"></a>Postupy: ukládání a otevírání souborů s kódováním
 
@@ -39,6 +39,9 @@ Můžete ukládat soubory s konkrétním kódováním znaků pro podporu obousm�
      Tato možnost je užitečná, pokud máte v úmyslu vyměňovat si soubor s uživateli s jiným operačním systémem.
 
      Chcete-li pracovat se souborem, který znáte, je kódován určitým způsobem, můžete aplikaci Visual Studio sdělit, aby při otevírání souboru používala toto kódování. Použitá metoda závisí na tom, zda je soubor součástí projektu.
+
+> [!NOTE]
+> Pokud chcete uložit soubor projektu s kódováním, možnost **Uložit soubor jako** není povolena, dokud neuvolníte projekt.
 
 ## <a name="to-open-an-encoded-file-that-is-part-of-a-project"></a>Otevření kódovaného souboru, který je součástí projektu
 

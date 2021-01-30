@@ -188,7 +188,9 @@
           href: ide/create-new-project.md
         - name: Práce s řešeními a projekty
           href: ide/creating-solutions-and-projects.md
-        - name: Otevření projektu z úložiště
+        - name: Otevření projektu z úložiště v aplikaci Visual Studio 2017
+          href: get-started/tutorial-open-project-from-repo-visual-studio-2017.md
+        - name: Otevření projektu z úložiště v aplikaci Visual Studio
           href: get-started/tutorial-open-project-from-repo.md
         - name: 'Přenos, migrace a upgrade projektů'
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
