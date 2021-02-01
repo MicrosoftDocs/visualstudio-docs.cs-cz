@@ -338,8 +338,6 @@
       items:
         - name: Připojení ladicího programu ke spuštěným procesům
           href: attach-to-running-processes-with-the-visual-studio-debugger.md
-        - name: Ladění .NET Core v Linuxu
-          href: remote-debugging-dotnet-core-linux-with-ssh.md
         - name: Připojení k procesu spuštěnému v kontejneru Dockeru
           href: attach-to-process-running-in-docker-container.md
     - name: Ladění vícevláknové aplikace
@@ -422,6 +420,14 @@
           href: debug-live-azure-apps-troubleshooting.md
         - name: Ladění živé aplikace na virtuálním počítači Azure s pohybem v čase
           href: debug-live-azure-virtual-machines-time-travel-debugging.md
+    - name: Ladění pro Linux
+      items:
+        - name: Ladění aplikací .NET Core v WSL 2
+          href: debug-dotnet-core-in-wsl-2.md
+        - name: Ladění .NET Core v systému Linux pomocí SSH
+          href: remote-debugging-dotnet-core-linux-with-ssh.md
+        - name: Ladění pomocí nástrojů kontejneru >>
+          href: ../containers/edit-and-refresh.md
     - name: Typy aplikací
       items:
         - name: Ladění určitých typů aplikací

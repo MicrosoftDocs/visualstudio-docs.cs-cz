@@ -11,16 +11,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bde5bb8722e0f95a10991019bdc9cba9c8a48ec3
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 599ebe86867e78d17029b2787b9f35b6755c3040
+ms.sourcegitcommit: 586369f5aa61d4a0330802f718f0ceaa55d7e9c7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98204888"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99224350"
 ---
 # <a name="debug-net-core-on-linux-using-ssh-by-attaching-to-a-process"></a>Ladění .NET Core v systému Linux pomocí SSH připojením k procesu
 
-Od sady Visual Studio 2017 se můžete připojit k procesům .NET Core běžícím na místním nebo vzdáleném nasazení Linux přes SSH. Tento článek popisuje, jak nastavit ladění a jak ladit. Pro scénáře ladění pomocí kontejnerů Docker použijte místo toho příkaz [připojit k procesu spuštěnému v kontejneru Docker](../debugger/attach-to-process-running-in-docker-container.md) .
+Od sady Visual Studio 2017 se můžete připojit k procesům .NET Core běžícím na místním nebo vzdáleném nasazení Linux přes SSH. Tento článek popisuje, jak nastavit ladění a jak ladit. Pro scénáře ladění s využitím kontejnerů Docker použijte místo toho příkaz [připojit k procesu spuštěnému v kontejneru Docker](../debugger/attach-to-process-running-in-docker-container.md) a [nástrojích pro kontejnery](../containers/edit-and-refresh.md) . Pokud chcete ladit Linux na WSL 2 ze sady Visual Studio (bez připojení k procesu), přečtěte si téma [ladění aplikací .NET Core v WSL 2 se sadou Visual Studio](../debugger/debug-dotnet-core-in-wsl-2.md).
 
 ## <a name="prerequisites"></a>Požadavky
 
