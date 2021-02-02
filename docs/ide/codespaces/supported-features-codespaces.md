@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 20d42b45cc98a64d86306b81f14d781becb8b7a6
-ms.sourcegitcommit: 52742b678233eed1de7a249cf990d072f9758149
+ms.openlocfilehash: 994ac7b759b943a2076c4e8f401d757258e782ab
+ms.sourcegitcommit: 0e91210421974ad08189919495a7327e60be93bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99049477"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251437"
 ---
 # <a name="supported-visual-studio-features-preview"></a>Podporované funkce sady Visual Studio (Preview)
 
@@ -109,7 +109,7 @@ Ještě není k dispozici:
 
 Při práci se sadou Visual Studio připojenými k codespace získáte stejné funkce usnadnění jako při práci místně.
 
-* Správa zdrojového kódu – kompletní podpora Gitu prostřednictvím nového [integrovaného prostředí Git](../git-with-visual-studio.md).
+* Správa zdrojového kódu – kompletní podpora Gitu prostřednictvím nového [integrovaného prostředí Git](../git-with-visual-studio.md). Aby byly podmoduly Git klonovány ve codespace, může být nutné spustit `git submodule update` z terminálu.
 * Usnadnění – existuje jeden známý problém s asistenční technologií, která nemá přístup k appcastingi laděné aplikace. Kromě tohoto omezení nevěříme, že existují žádné jiné problémy s kompatibilitou, které ještě neexistují v místním prostředí sady Visual Studio. Dejte nám prosím jistotu, jestli zjistíte chyby tím, že napíšete problém na [komunitě vývojářů](https://aka.ms/feedback/report?space=8).
 * Publikování – podporuje publikování do Azure prostřednictvím akcí GitHubu.
 * Připojené služby – podpora pro App Insights, Trezor klíčů, úložiště, SQL, Redis, Cosmos, openAPI a gRPC se podporují částečně.
