@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
-ms.date: 10/22/2020
+ms.date: 02/02/2021
 ms.topic: conceptual
 description: Přečtěte si o rolích správce superuživatele a správců a postup přiřazení správců.
-ms.openlocfilehash: 491a8de27477f68b4344ad17b860b80b4ca96aa9
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 2d9abf5a3079320011cb979a8109278c878321e3
+ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92467372"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99511329"
 ---
 # <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Služby Super Admins a Admins pro Visual Studio – smlouvy o předplatném
 
@@ -28,8 +28,8 @@ Podívejte se na ukázku správy správců.
 ## <a name="assigning-admins"></a>Přiřazování správců
 Přiřazení nových správců (správcům):
 1. Přihlaste se k https://manage.visualstudio.com používání e-mailové adresy, která je přiřazená jako nadsprávce na smlouvě, jejímž prostřednictvím bylo předplatné zakoupilo.
-2. Klikněte na kartu s názvem **Správa správců** .
-3. Klikněte na **Přidat** .
+2. Klikněte na kartu s názvem **Správa správců**.
+3. Klikněte na **Přidat**.
    > [!div class="mx-imgBorder"]
    > ![Přidat správce](_img/admin-roles/add-admins.png "Klikněte na okno spravovat správce a pak kliknutím na Přidat přiřaďte nové správce.")
 4. Vyplňte formulář s informacemi o novém Správci.  
@@ -41,14 +41,15 @@ Přiřazení nových správců (správcům):
 
 5. Když kliknete na **Přidat** a přiřadíte nového správce, obdrží jim e-mail, aby se přihlásil k portálu.  
 
-## <a name="resources"></a>Zdroje a prostředky
-- [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
+## <a name="resources"></a>Zdroje informací
+- [Podpora správy a předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
+
 
 
 ## <a name="next-steps"></a>Další kroky

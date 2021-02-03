@@ -7,12 +7,12 @@ ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
 ms.date: 10/22/2020
 ms.topic: conceptual
 description: Přečtěte si informace o přístupu k GitHub Enterprise jako součást předplatných sady Visual Studio.
-ms.openlocfilehash: 59b665b1da7d46732f1f4e967ae2a98ec54875ff
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 7ad60b1c1a177353cad13e3dbcbc50c67b5500ac
+ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537900"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99511355"
 ---
 # <a name="visual-studio-subscriptions-with-github-enterprise"></a>Předplatná sady Visual Studio s GitHubem Enterprise 
 
@@ -85,11 +85,11 @@ Odpověď: společně s GitHubem Enterprise obdržíte všechny výhody standard
 - Odpovědi na otázky k nejrůznějším tématům GitHubu najdete v [nápovědě k GitHubu](https://help.github.com).
 - Potřebujete další pomoc?  Kontaktujte [podporu GitHubu](https://support.github.com/)
 - Získejte pomoc od dalších uživatelů GitHubu ve [fóru komunity GitHubu](https://github.community/).
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://visualstudio.microsoft.com/subscriptions/support/)
+- Pomoc s prodejem, předplatnými, účty a fakturací po předplatných sady Visual Studio najdete na naší stránce s [přehledem](https://my.visualstudio.com/GetHelp) o podpoře.
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 - Získejte [technickou podporu](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) pro GitHub Enterprise.   
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
