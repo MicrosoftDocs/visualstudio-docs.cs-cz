@@ -2,17 +2,17 @@
 title: Identity pro předplatitele sady Visual Studio
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 86f2856c-8adf-4085-9962-f4136679e5ed
-ms.date: 10/21/2019
+ms.date: 02/02/2021
 ms.topic: conceptual
 description: Jak přidat alternativní identitu pro předplatné sady Visual Studio, která se má použít pro Azure DevOps a Azure
-ms.openlocfilehash: d7820707758cd06209a412b2a860de81cb08c054
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 200f299ba4e487e40572e54f1066ed6ac079e7d1
+ms.sourcegitcommit: b0ecf9bb0d887bc0a900578089bf41ab8dddbb78
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353172"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99488662"
 ---
 # <a name="identities-for-visual-studio-subscribers"></a>Identity pro předplatitele sady Visual Studio
 Při aktivaci předplatného sady Visual Studio propojíme identitu (nebo přihlášení), kterou jste použili během aktivace v rámci předplatného sady Visual Studio. Tímto způsobem můžeme na [portálu pro předplatitele Visual studia](https://my.visualstudio.com?wt.mc_id=o~msft~docs), v Azure DevOps a v Azure.
@@ -25,9 +25,10 @@ V Azure zkontrolujeme stav předplatného sady Visual Studio, když aktivujete s
 V rámci [portálu pro předplatitele sady Visual Studio](https://my.visualstudio.com?wt.mc_id=o~msft~docs)můžete přidat **alternativní identitu** – kromě identity, kterou jste použili během aktivace. Umožňuje přidat alternativní identitu, pokud jste použili účet Microsoft k aktivaci svého předplatného. Tímto způsobem můžete také přidat pracovní nebo školní účet (který použijete při přihlašování do sady Visual Studio, Microsoft 365 nebo firemní nebo školní síť), což vám umožní přístup k Azure DevOps pomocí vašeho osobního účtu i vašeho pracovního nebo školního účtu.
 
 ## <a name="add-an-alternate-account-to-your-subscription"></a>Přidání alternativního účtu do předplatného
-Přidáním alternativního účtu k předplatnému sady Visual Studio získáte přístup k výhodám předplatného, jako jsou Azure DevOps a Azure, pomocí jiné identity, než ke které je předplatné přiřazené. Tato funkce byla v minulosti k dispozici pouze v případě, že vaše předplatné sady Visual Studio (VS) bylo přiřazeno k účtu Microsoft (MSA). Rozšířili jsme tuto funkci pro pracovní nebo školní účty v Azure Active Directory (Azure AD).
+Přidání alternativního účtu do předplatného sady Visual Studio vám umožní získat přístup k určitým výhodám předplatného, jako je Azure DevOps a Azure, nebo se přihlásit k integrovanému vývojovému prostředí sady Visual Studio s jinou identitou, než ke které je předplatné přiřazeno. Tato funkce byla v minulosti k dispozici pouze v případě, že vaše předplatné sady Visual Studio (VS) bylo přiřazeno k účtu Microsoft (MSA). Rozšířili jsme tuto funkci pro pracovní nebo školní účty v Azure Active Directory (Azure AD).
 
-Neposkytne jim to kopii předplatného pro druhý účet; ale jenom možnost přístupu k oběma výhodám pomocí alternativního účtu.
+> [!NOTE]
+> Alternativní ID umožňuje použít toto druhé ID jenom k aktivaci kreditů Azure a Azure DevOps a k přihlášení k integrovanému vývojovému prostředí (IDE) sady Visual Studio.  Nedá se použít k přihlášení k portálu předplatného na <https://my.visualstudio.com> .  Pro přihlášení k portálu je stále nutné použít ID, ke kterému je předplatné přiřazeno. 
 
 U všech předplatných můžete přidat pracovní nebo školní účet, abyste mohli použít tento účet s výhodami, které vyžadují přihlášení (IDE, Azure DevOps a Azure).
 
@@ -43,7 +44,7 @@ U všech předplatných můžete přidat pracovní nebo školní účet, abyste 
 
 Váš alternativní účet se přidá do předplatného sady Visual Studio, což umožňuje, aby obě identity využily výhod předplatného, které vyžaduje, abyste se přihlásili pomocí alternativního účtu (IDE, Azure DevOps a Azure).
 
-## <a name="faq"></a>Nejčastější dotazy
+## <a name="faq"></a>Časté otázky
 
 ### <a name="q--why-doesnt-azure-devops-recognize-me-as-a-visual-studio-subscriber"></a>Otázka: Proč Azure DevOps nerozpozná mě jako předplatitel sady Visual Studio?
 
@@ -59,7 +60,7 @@ Pokud Azure DevOps ještě nerozpozná vaše předplatné, obraťte se na [podpo
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 
