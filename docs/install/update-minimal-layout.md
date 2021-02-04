@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2b9c86c17b89258145613e867ba6a91b2219fe0d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 27a9c0de35bb6f9944015391c5f933bef28f4b9d
+ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88168746"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99533562"
 ---
 # <a name="update-visual-studio-using-a-minimal-offline-layout"></a>Aktualizace sady Visual Studio s minimálním offline rozložením
 
@@ -69,7 +69,7 @@ Tento nástroj vytvoří rozložení aktualizací pro Visual Studio 2017 (15,9) 
 
 #### <a name="options"></a>Možnosti 
 
-|Možnosti    |Popis    |Požadováno/volitelné |Příklad |
+|Možnosti    |Description    |Požadováno/volitelné |Příklad |
 |:----------|:-----------|:------------|:--------------|
 |--targetLocation &lt; adresář&gt; |Určuje adresář, ve kterém má být vytvořeno minimální rozložení offline.       |Vyžadováno        |--targetLocation c:\VSLayout\ |
 |-- &lt; verze baseVersion&gt;|Od této verze se vygeneruje minimální rozložení offline.   |Vyžadováno|--baseVersion 16.4.0 |
@@ -91,6 +91,8 @@ Vytvořte minimální rozložení pomocí příkazu **Generovat** pro zadaný ro
 Před vytvořením rozložení můžete zjistit celkovou velikost staženého a počtu balíčků obsažených pomocí příkazu **Preview** . Tento příkaz má stejné možnosti jako příkaz **Generate** a podrobnosti se zapisují do konzoly.
 
 Pojďme si projít několik příkladů, jak zobrazit náhled, vygenerovat a znovu vygenerovat minimální rozložení:
+
+::: moniker range="vs-2019"
 
 - Tady je příklad, jak zobrazit náhled rozložení pro Visual Studio Enterprise verze 16.4.0 na 16.4.4 jenom pro angličtinu.
 
@@ -123,6 +125,44 @@ Několik dalších příkladů pomocí příkazu **Generovat** :
     ```cmd
     MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US fr-FR
     ```
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+- Tady je příklad, jak zobrazit náhled rozložení pro Visual Studio Enterprise verze 15.0.0 na 15.9.31 jenom pro angličtinu.
+
+    ```cmd
+    MinimalLayout.exe preview --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --languages en-US
+    ```
+
+- Tady je postup, jak vygenerovat stejné rozložení s jedním úlohou.
+
+    ```cmd
+    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US
+    ```
+
+- A tady je postup, jak znovu vygenerovat minimální rozložení offline pomocí existujícího souboru odpovědí. 
+
+    ```cmd
+    MinimalLayout.exe regenerate -filepath c:\VSLayout\MinimalLayout.json
+    ```
+
+Několik dalších příkladů pomocí příkazu **Generovat** :
+
+- Tady je postup, jak přidat další úlohu a zahrnout jenom Doporučené balíčky. 
+
+    ```cmd
+    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Professional --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb;includeRecommended --languages en-US
+    ```
+
+- A konečně, tady je postup, jak do minimálního rozložení zahrnout více jazyků. 
+
+    ```cmd
+    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productId Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US fr-FR
+    ```
+
+::: moniker-end
 
 ### <a name="how-to-maintain-a-minimal-layout"></a>Jak udržovat minimální rozložení
 
