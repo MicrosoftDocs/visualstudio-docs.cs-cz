@@ -1,5 +1,5 @@
 ---
-title: Nedaří se mi aktivovat Pluralsight výhodu.
+title: Nepovedlo se aktivovat zvýhodnění Pluralsight
 description: Nedaří se mi aktivovat Pluralsight výhodu, která je součástí mého předplatného sady Visual Studio?
 ms.topic: include
 ms.assetid: 7e5d8886-538c-4e29-9c4c-8989cf4e09dd
@@ -10,12 +10,12 @@ user.type: subscriber
 tags: benefit, pluralsight
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: d68ff15483241d5c6d1364aaa974031f4e1abe52
-ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
+ms.openlocfilehash: 1ab283581d029d69b507271863420da71257d967
+ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98147638"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99540987"
 ---
 ## <a name="im-unable-to-activate-my-pluralsight-benefit"></a>Nedaří se mi aktivovat Pluralsight výhodu.
 
@@ -30,4 +30,4 @@ V závislosti na tom, jaké Předplatné nebo předplatné sady Visual Studio m�
 
 ## <a name="more-information-about-the-pluralsight-benefit"></a>Další informace o výhodách Pluralsight
 
-[Přečtěte si další](https://docs.microsoft.com/visualstudio/subscriptions/vs-pluralsight) informace o aktivaci, nároku a nejčastějších dotazech ohledně zvýhodnění Pluralsight.  
+Přečtěte si další [informace o aktivaci, nároku a nejčastějších dotazech ohledně zvýhodnění Pluralsight](https://docs.microsoft.com/visualstudio/subscriptions/vs-pluralsight).  

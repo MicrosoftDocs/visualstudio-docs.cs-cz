@@ -10,12 +10,12 @@ user.type: subscriber
 tags: renewing
 subscription.type: retail
 sap.id: b324c31f-5d44-4cc2-537a-9c354bc5fbfc
-ms.openlocfilehash: f518f4458181d39a140ee5652b08ea861f2130ee
-ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
+ms.openlocfilehash: e337fc3df5b930dc09f9d3b13be3f64efc7dd749
+ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98147533"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99541186"
 ---
 ## <a name="renewing-subscriptions-through-microsoft-store"></a>Obnovování předplatných prostřednictvím Microsoft Store 
 

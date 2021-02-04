@@ -10,12 +10,12 @@ user.type: subscriber
 tags: benefit, azure
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: ae31e9d40dd0d399a4272eeb3ec28692d01a99b3
-ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
+ms.openlocfilehash: a5ec356513122752486a197fbe5bb420d6f4a6c9
+ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98147645"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99541260"
 ---
 ## <a name="how-do-i-activate-my-monthly-azure-devtest-individual-credit"></a>Návody aktivovat měsíční kredit Azure pro vývoj/testování? 
 
@@ -33,6 +33,6 @@ Nemáte žádné náklady na použití individuálního kreditu Azure pro vývoj
 Předplatná Azure vytvořená prostřednictvím zvýhodnění předplatných sady Visual Studio můžou být ovlivněná omezeními, která nejsou uvalená na placené předplatné. V některých oblastech možná nebude možné vytvářet virtuální počítače a služby Azure a určité typy služeb nemusí být k dispozici. Výchozí kvóta může být nižší než u placených předplatných.  
 
 ## <a name="more-information-about-azure-credits"></a>Další informace o kreditech Azure
-[Přečtěte si další](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure) informace o aktivaci, nároku a dalších prostředcích podpory.  
+Přečtěte si další [informace o aktivaci, nároku a dalších prostředcích podpory](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure).  
 
-[Naučte](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/#azure-credits) se používat kredity Azure, které jsou součástí vašeho předplatného sady Visual Studio.  
+[Naučte se používat kredity Azure](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/#azure-credits) , které jsou součástí vašeho předplatného sady Visual Studio.  

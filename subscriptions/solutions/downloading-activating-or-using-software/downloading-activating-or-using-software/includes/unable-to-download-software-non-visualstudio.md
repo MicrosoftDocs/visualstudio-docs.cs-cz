@@ -1,5 +1,5 @@
 ---
-title: Nedaří se mi stáhnout ani aktivovat software (kromě řady Visual Studio)
+title: Nelze stáhnout nebo aktivovat software (kromě řady Visual Studio).
 description: Nedaří se mi stáhnout ani aktivovat software (kromě řady Visual Studio), který je součástí mého předplatného sady Visual Studio.
 ms.topic: include
 ms.assetid: 4e67a935-40f9-4c26-b836-e06aa8582bad
@@ -10,12 +10,12 @@ user.type: subscriber
 tags: download, activate
 subscription.type: vl, cloud, retail, partner
 sap.id: 53a7a6d4-7755-352a-5a65-715d78af84bf
-ms.openlocfilehash: 81c9013c59ffa8fc503e71202941b044f90b139a
-ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
+ms.openlocfilehash: 477753ab93205aa838389313a0ad2c96487aacc3
+ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98147677"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99541024"
 ---
 ## <a name="im-unable-to-download-or-activate-software-excluding-visual-studio-family"></a>Nedaří se mi stáhnout ani aktivovat software (kromě řady Visual Studio)
 
@@ -34,4 +34,4 @@ Můžete [si stáhnout rozsáhlý seznam](https://download.microsoft.com/downloa
 Můžete také navštívit stránku [kódy Product Key](https://my.visualstudio.com/productkeys)   , kde jsou všechny klíče k dispozici v agregaci. Můžete upravit sloupec poznámky pro určení, kdy a proč jste si klíč vyžádali. 
 
 ## <a name="more-information-about-downloads"></a>Další informace o souborech ke stažení 
-[Další informace](https://docs.microsoft.com/visualstudio/subscriptions/find-keys) najdete v tématu Vyhledání a nárokování kódů Product Key a stažení.  
+Další informace najdete v tématu [vyhledání a nárokování kódů Product Key a stažení](https://docs.microsoft.com/visualstudio/subscriptions/find-keys).  
