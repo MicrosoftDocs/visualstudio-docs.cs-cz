@@ -2,7 +2,7 @@
 title: 'Dokumentace k Visual Studiu: historie novinek '
 titleSuffix: ''
 description: Historie novinek v dokumentaci k sadě Visual Studio
-ms.date: 01/11/2021
+ms.date: 02/01/2021
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,16 +15,80 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 49c8d18a35cbe4a64585efa9bc16fd8afd250404
-ms.sourcegitcommit: fdc21fc21d4a05d9ad8627b06aab7f072bfeb0a6
+ms.openlocfilehash: 899334e6ac4a952ea2d33f01d95ecfbe0a972653
+ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98113577"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572964"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Historie novinek v dokumentaci k sadě Visual Studio
 
-Vítejte v historii novinek v dokumentaci sady Visual Studio. Tento článek obsahuje hlavní změny v dokumentaci před 2020. prosince (od července 2020). Nejnovější novinky najdete v tématu [dokumentace k Visual Studiu: co je nového v dokumentaci](whats-new-visual-studio-docs.md).
+Vítejte v historii novinek v dokumentaci sady Visual Studio. Tento článek obsahuje hlavní změny v dokumentaci před lednem 2021 (od července 2020). Nejnovější novinky najdete v tématu [dokumentace k Visual Studiu: co je nového v dokumentaci](whats-new-visual-studio-docs.md).
+
+## <a name="december-2020"></a>Prosinec 2020
+### <a name="azure"></a>Azure
+
+**Nové články**
+
+- [Přidání konfigurace aplikace Azure pomocí připojených služeb sady Visual Studio](../azure/vs-azure-tools-connected-services-app-configuration.md) – kurz pro připojené služby konfigurace aplikace
+
+### <a name="code-quality"></a>Kvalita kódu
+
+**Aktualizované články**
+
+- [Přehled](../code-quality/use-roslyn-analyzers.md) – sestavování z příkazového řádku pomocí editorconfig
+- [Povolit nebo nainstalovat analyzátory .NET First stran](../code-quality/install-net-analyzers.md)
+  - Přidání větší srozumitelnosti do migračních dokumentů pro FxCopAnalyzers do NetAnalyzers
+  - Znovu uspořádat obsah pro analyzátory .NET
+- [Migrace z analyzátorů FxCop na analyzátory .NET](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) – přidání větší srozumitelnosti do migračních dokumentů pro FxCopAnalyzers a NetAnalyzers
+
+### <a name="containers"></a>Kontejnery
+
+**Aktualizované články**
+
+- [Řešení potíží s vývojem pro Visual Studio pomocí Docker](../containers/troubleshooting-docker-errors.md) – aktualizace Docker pro Visual Studio – příručka pro odstraňování potíží
+
+### <a name="debugger"></a>Ladicí program
+
+**Aktualizované články**
+
+- [Nejčastější dotazy – funkce ladění, kterou potřebujete, najdete v tématu Visual Studio](../debugger/find-your-debugging-task.md) – zjišťování práce pro hledání úlohy ladění a témata s přehledem.
+
+### <a name="get-started"></a>Začínáme
+
+**Aktualizované články**
+
+- [Kurz: Vytvoření jednoduché konzolové aplikace v jazyce c# v sadě Visual Studio](../get-started/csharp/tutorial-console.md) – kurz konzoly C#: část 2 se vztahuje pouze na vs 2019
+
+### <a name="ide"></a>IDE – integrované vývojové prostředí
+
+**Aktualizované články**
+
+- Témata [řešení a projekty v aplikaci Visual Studio](./solutions-and-projects-in-visual-studio.md) – aktualizace řešení & projekty
+- [Vytvoření nového projektu v aplikaci Visual Studio](./create-new-project.md)
+  - upřesnění ALT-text pro snímky obrazovky a diagramy
+  - témata týkající se dalších aktualizací řešení & projektů
+- [Prostředky pro řešení potíží s chybami IDE](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md) – revize zastaralých prostředků fóra
+- [Práce s řešeními a projekty](./creating-solutions-and-projects.md) – další aktualizace řešení & témata o projektech
+- [Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio](./how-to-report-a-problem-with-visual-studio.md)
+  - Snímek obrazovky se aktualizoval
+  - Změny komunity vývojářů
+- [Tipy a triky pro výkon sady Visual Studio](./visual-studio-performance-tips-and-tricks.md) – aktualizace oddílu zakázat diagnostické nástroje
+- [Seznámení s projekty a řešení](../get-started/tutorial-projects-solutions.md)
+  - témata týkající se aktualizací řešení & projekty
+  - Aktualizovat tutorial-projects-solutions.md
+  - chybí možnost nabídky
+
+### <a name="test"></a>Test
+
+**Aktualizované články**
+
+- [Začínáme s testováním částí](../test/getting-started-with-unit-testing.md) – zjišťování práce a další vylepšení testovacích nástrojů
+- [První pohled na testovací nástroje v aplikaci Visual Studio](../test/improve-code-quality.md) – zjišťování práce a další vylepšení testovacích nástrojů
+- [Jsou vyžadovány testovací nástroje v aplikaci Visual Studio #; nadpis stránky zobrazený ve výsledcích hledání Uveďte značku. < znaků 60.](../test/index.yml) – Zjišťování práce a další vylepšení pro testovací nástroje
+- [Spuštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md) – přidat dynamický seznam testů XML pro rozdílové architektury
+
 ## <a name="november-2020"></a>Listopad 2020
 ### <a name="code-quality"></a>Kvalita kódu
 

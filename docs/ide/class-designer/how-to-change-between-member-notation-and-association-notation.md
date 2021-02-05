@@ -15,19 +15,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f96fe04ee84be50bd241db6bf9f73280c40dec02
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 8b95325cd1819dc881ab516656dbf14a5001db88
+ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96933567"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572977"
 ---
 # <a name="how-to-change-between-member-notation-and-association-notation-in-class-designer"></a>Postupy: Změna mezi zápisem člena a zápisem přidružení v Návrhář tříd
 
 V **Návrhář tříd** můžete změnit způsob, jakým diagram tříd představuje vztah přidružení mezi dvěma typy ze zápisu členů na notaci přidružení a naopak. Členy zobrazené jako řádky přidružení často poskytují užitečnou vizualizaci způsobu, jakým jsou typy spojeny.
 
 > [!NOTE]
-> Vztahy přidružení mohou být reprezentovány jako vlastnost nebo pole člena. Chcete-li změnit zápis členů na zápis přidružení, jeden typ musí mít člena jiného typu. Chcete-li změnit notaci přidružení na zápis členů, musí být tyto dva typy propojeny asociační linkou. Další informace naleznete v tématu [How to: Create Associations bBetween Types](how-to-create-associations-between-types.md). Pokud projekt obsahuje více diagramů tříd, změny provedené v diagramu způsob zobrazení vztahů přidružení ovlivňují pouze tento diagram. Chcete-li změnit způsob, jakým jiný diagram zobrazuje vztahy přidružení, otevřete nebo zobrazte tento diagram a proveďte tyto kroky.
+> Vztahy přidružení mohou být reprezentovány jako vlastnost nebo pole člena. Chcete-li změnit zápis členů na zápis přidružení, jeden typ musí mít člena jiného typu. Chcete-li změnit notaci přidružení na zápis členů, musí být tyto dva typy propojeny asociační linkou. Další informace naleznete v tématu [How to: Create Associations Between Types](how-to-create-associations-between-types.md). Pokud projekt obsahuje více diagramů tříd, změny provedené v diagramu způsob zobrazení vztahů přidružení ovlivňují pouze tento diagram. Chcete-li změnit způsob, jakým jiný diagram zobrazuje vztahy přidružení, otevřete nebo zobrazte tento diagram a proveďte tyto kroky.
 
 ## <a name="to-change-member-notation-to-association-notation"></a>Změna zápisu členů na notaci přidružení
 

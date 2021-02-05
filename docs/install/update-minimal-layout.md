@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 27a9c0de35bb6f9944015391c5f933bef28f4b9d
-ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
+ms.openlocfilehash: bd2e8c94bbfc24b731a40b2d4d4c298a528c622d
+ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99533562"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572951"
 ---
 # <a name="update-visual-studio-using-a-minimal-offline-layout"></a>Aktualizace sady Visual Studio s minimálním offline rozložením
 
@@ -67,6 +67,8 @@ Tento nástroj vytvoří rozložení aktualizací pro Visual Studio 2017 (15,9) 
 * **Ověřit**: pomocí tohoto příkazu určete, zda je složka rozložení poškozena.
 * **Oprava**: Tento příkaz použijte k opravě poškozené složky rozložení, včetně nahrazení všech chybějících balíčků ze složky rozložení.
 
+::: moniker range="vs-2019"
+
 #### <a name="options"></a>Možnosti 
 
 |Možnosti    |Description    |Požadováno/volitelné |Příklad |
@@ -80,6 +82,26 @@ Tento nástroj vytvoří rozložení aktualizací pro Visual Studio 2017 (15,9) 
 |--Přidat &lt; jednu nebo více úloh nebo ID součástí&gt;    |Určuje jedno nebo více úloh nebo ID součástí, které chcete přidat. Další součásti lze globálně přidat pomocí--includeRecommended a/nebo <br> –-includeOptional. Je možné zadat více úloh nebo ID komponent oddělené mezerou.    |Volitelné    |--Přidejte Microsoft. VisualStudio. úlohu. ManagedDesktop Microsoft. VisualStudio. reNetWeb Component. GitHub. VisualStudio. |
 |--includeRecommended    |Zahrnuje Doporučené součásti pro všechny nainstalované úlohy, ale ne volitelné součásti.    |Volitelné    |Pro konkrétní zatížení: <br> --přidat Microsoft. VisualStudio. úlohu. ManagedDesktop;includeRecommended <br><br> Použití na všechny úlohy:--includeRecommended |
 |--includeOptional |Zahrnuje volitelné komponenty pro všechny nainstalované úlohy, včetně doporučených komponent.    |Volitelné    |Pro konkrétní zatížení: <br>--přidat Microsoft. VisualStudio. úlohu. ManagedDesktop;includeOptional <br><br> Použití na všechny úlohy:--includeOptional |
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+#### <a name="options"></a>Možnosti 
+
+|Možnosti    |Description    |Požadováno/volitelné |Příklad |
+|:----------|:-----------|:------------|:--------------|
+|--targetLocation &lt; adresář&gt; |Určuje adresář, ve kterém má být vytvořeno minimální rozložení offline.       |Vyžadováno        |--targetLocation c:\VSLayout\ |
+|-- &lt; verze baseVersion&gt;|Od této verze se vygeneruje minimální rozložení offline.   |Vyžadováno|--baseVersion 15.0.0 |
+|-- &lt; verze targetVersion&gt;|Minimální rozložení offline se vygeneruje až do této verze, včetně této.|Vyžadováno|--targetVersion 15.9.31|
+|--jazyky    |Určuje jazyky, které mají být zahrnuty do minimálního offline rozložení. Je možné zadat více hodnot oddělených mezerami.    |Vyžadováno    |--jazyky en-US fr-FR |
+|-- &lt; ID ProductID&gt;    |ID produktu, z něhož bude vygenerováno minimální rozložení offline <br> <ul><li>Microsoft. VisualStudio. Product. Enterprise</li><li>Microsoft. VisualStudio. Product. Professional</li><li>Microsoft. VisualStudio. Product. BuildTools</li><li>Microsoft. VisualStudio. Product. TestAgent</li><li>Microsoft. VisualStudio. Product. TestController</li><li>Microsoft. VisualStudio. Product. TeamExplorer</li></ul>|Vyžadováno|--productId Microsoft. VisualStudio. Product. Enterprise |
+|--filePath    |Cesta k souboru MinimalLayout.jsv souboru z již vytvořeného rozložení. Tato možnost se používá jenom s příkazem znovu vygenerovat.     |Vyžadováno pro příkaz pro opětovné vygenerování    |--filePath C:\VSLayout\minimalLayout.jsv <br><br> **Všimněte si, že příkaz znovu vygenerovat má pouze možnost--filePath.** |
+|--Přidat &lt; jednu nebo více úloh nebo ID součástí&gt;    |Určuje jedno nebo více úloh nebo ID součástí, které chcete přidat. Další součásti lze globálně přidat pomocí--includeRecommended a/nebo <br> –-includeOptional. Je možné zadat více úloh nebo ID komponent oddělené mezerou.    |Volitelné    |--Přidejte Microsoft. VisualStudio. úlohu. ManagedDesktop Microsoft. VisualStudio. reNetWeb Component. GitHub. VisualStudio. |
+|--includeRecommended    |Zahrnuje Doporučené součásti pro všechny nainstalované úlohy, ale ne volitelné součásti.    |Volitelné    |Pro konkrétní zatížení: <br> --přidat Microsoft. VisualStudio. úlohu. ManagedDesktop;includeRecommended <br><br> Použití na všechny úlohy:--includeRecommended |
+|--includeOptional |Zahrnuje volitelné komponenty pro všechny nainstalované úlohy, včetně doporučených komponent.    |Volitelné    |Pro konkrétní zatížení: <br>--přidat Microsoft. VisualStudio. úlohu. ManagedDesktop;includeOptional <br><br> Použití na všechny úlohy:--includeOptional |
+
+::: moniker-end
 
 ### <a name="generating-a-minimal-layout"></a>Generování minimálního rozložení
 

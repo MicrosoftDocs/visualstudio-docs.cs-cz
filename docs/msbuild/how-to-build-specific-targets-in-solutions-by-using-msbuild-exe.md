@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a8d774ace7744c90d0cf092faa2786110ed7309
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 94fcd9e1ed16b86caf65b9c7fab44ba4f93b7a7a
+ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436435"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572899"
 ---
 # <a name="how-to-build-specific-targets-in-solutions-by-using-msbuildexe"></a>Postupy: sestavování specifických cílů v řešení pomocí MSBuild.exe
 
@@ -41,9 +41,9 @@ msbuild SlnFolders.sln -target:NotInSlnfolder:Rebuild;NewFolder\InSolutionFolder
 
 ## <a name="troubleshooting"></a>Řešení potíží
 
-Pokud chcete prostudovat možnosti, které máte k dispozici, můžete k tomu použít možnost ladění poskytovanou nástrojem MSBuild. Nastavte proměnnou prostředí `MSBUILDEMITSOLUTION=1` a sestavte řešení. Tím se vytvoří soubor MSBuild s názvem * \<SolutionName> . sln. metaproj* , který ukazuje interní pohled nástroje MSBuild o řešení v čase sestavení. Můžete zkontrolovat toto zobrazení, abyste zjistili, jaké cíle jsou k dispozici pro sestavení.
+Pokud chcete prostudovat možnosti, které máte k dispozici, můžete k tomu použít možnost ladění poskytovanou nástrojem MSBuild. Nastavte proměnnou prostředí `MSBUILDEMITSOLUTION=1` a sestavte řešení. Tím se vytvoří soubor MSBuild s názvem *\<SolutionName> . sln. metaproj* , který ukazuje interní pohled nástroje MSBuild o řešení v čase sestavení. Můžete zkontrolovat toto zobrazení, abyste zjistili, jaké cíle jsou k dispozici pro sestavení.
 
-Nevytvářejte s touto sadou proměnných prostředí, pokud nepotřebujete toto interní zobrazení. Toto nastavení může způsobit problémy při vytváření projektů ve vašem řešení.
+Nevytvářejte s touto sadou proměnných prostředí, pokud nepotřebujete toto interní zobrazení. Toto nastavení může způsobit problémy při vytváření projektů ve vašem řešení. Místo toho hledejte v [binárním protokolu](obtaining-build-logs-with-msbuild.md#save-a-binary-log) .
 
 ## <a name="see-also"></a>Viz také
 

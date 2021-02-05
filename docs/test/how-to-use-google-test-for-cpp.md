@@ -8,12 +8,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: bf4db1c01fc79d32f7e498c265b74dec34f67e48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6cf29d16432b677c6e83ba4cbaedb39f0a8d1ed2
+ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287243"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572990"
 ---
 # <a name="how-to-use-google-test-for-c-in-visual-studio"></a>Použití Google Test pro jazyk C++ v aplikaci Visual Studio
 
@@ -25,7 +25,7 @@ V aplikaci Visual Studio 2017 a novějších jsou Google Test integrovány do in
 
 ## <a name="add-a-google-test-project-in-visual-studio-2019"></a>Přidání projektu Google Test v aplikaci Visual Studio 2019
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení a vyberte možnost **Přidat** > **Nový projekt**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel řešení a vyberte možnost **Přidat** > **Nový projekt**.
 2. Do vyhledávacího pole nastavte **jazyk** na **C++** a zadejte **test** . V seznamu výsledků vyberte možnost **Google test projekt**.
 3. Zadejte název testovacího projektu a klikněte na tlačítko **OK**.
 
@@ -37,7 +37,7 @@ V aplikaci Visual Studio 2017 a novějších jsou Google Test integrovány do in
 
 ## <a name="add-a-google-test-project-in-visual-studio-2017"></a>Přidání projektu Google Test v aplikaci Visual Studio 2017
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení a vyberte možnost **Přidat** > **Nový projekt**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel řešení a vyberte možnost **Přidat** > **Nový projekt**.
 2. V levém podokně zvolte **Visual C++** > **test** a pak zvolte **Google test projekt** v prostředním podokně.
 3. Zadejte název testovacího projektu a klikněte na tlačítko **OK**.
 
@@ -53,7 +53,7 @@ V dialogovém okně **konfigurace projektu testu** , které se zobrazí, můžet
 
 ## <a name="set-additional-options"></a>Nastavit další možnosti
 
-V hlavní nabídce vyberte možnosti **nástrojů**  >  **Options**  >  **testovací adaptér pro Google test** a nastavte další možnosti. Další informace o těchto nastaveních najdete v dokumentaci k Google Test.
+V hlavní nabídce vyberte možnosti **nástrojů**  >    >  **testovací adaptér pro Google test** a nastavte další možnosti. Další informace o těchto nastaveních najdete v dokumentaci k Google Test.
 
 ![Nastavení projektu Google Test](media/cpp-gtest-settings.png)
 
@@ -63,9 +63,9 @@ V souboru Test *. cpp* přidejte všechny potřebné `#include` direktivy, aby b
 
 ![Přidat direktivy #include](media/cpp-gtest-includes.png)
 
-## <a name="write-and-run-tests"></a>Zápis a spouštění testů
+## <a name="write-and-run-tests"></a>Vytvoření a spouštění testování
 
-Nyní jste připraveni zapsat a spustit testy Google. Informace o testovacích makrech najdete v části [Google test Úvod](https://github.com/google/googletest/blob/master/googletest/docs/primer.md) . Informace o zjišťování, spouštění a seskupování testů pomocí **Průzkumníka testů**naleznete v tématu [spuštění testů jednotek pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md) .
+Nyní jste připraveni zapsat a spustit testy Google. Informace o testovacích makrech najdete v části [Google test Úvod](https://github.com/google/googletest/blob/master/docs/primer.md) . Informace o zjišťování, spouštění a seskupování testů pomocí **Průzkumníka testů** naleznete v tématu [spuštění testů jednotek pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md) .
 
 ## <a name="see-also"></a>Viz také
 
