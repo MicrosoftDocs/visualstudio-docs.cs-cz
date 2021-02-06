@@ -29,16 +29,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fb2fde5d5629b84ccd0e136c132a200b154ea71
-ms.sourcegitcommit: dc71e9030ff35bb26916572b431d4d9e78df3d6f
+ms.openlocfilehash: 3250eff2b5691ab344e2fedde80054415ec8ffcd
+ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98031039"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99627964"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Připojení ladicího programu sady Visual Studio ke spuštěným procesům
 
-Ladicí program sady Visual Studio můžete připojit ke spuštěnému procesu na místním nebo vzdáleném počítači. Po spuštění procesu vyberte **ladit**  >  **připojit k procesu** nebo stiskněte **klávesovou zkratku CTRL** + **+** + **P** v aplikaci Visual Studio a připojte ladicí program k procesu pomocí dialogového okna **připojit k procesu** .
+Ladicí program sady Visual Studio můžete připojit ke spuštěnému procesu na místním nebo vzdáleném počítači. Po spuštění procesu vyberte **ladit**  >  **připojit k procesu** nebo stiskněte **klávesovou zkratku CTRL** + **+** + **p** v aplikaci Visual Studio a připojte ladicí program k procesu pomocí dialogového okna **připojit k procesu** .
 
 Pomocí příkazu **připojit k procesu** můžete ladit spuštěné aplikace v místních nebo vzdálených počítačích, ladit současně více procesů, ladit aplikace, které nebyly vytvořeny v aplikaci Visual Studio, nebo ladit jakoukoli aplikaci, kterou jste nespustili ze sady Visual Studio, pomocí připojeného ladicího programu. Například pokud spouštíte aplikaci bez ladicího programu a narazíte na výjimku, můžete připojit ladicí program k procesu, na kterém aplikace běží, a zahájit ladění.
 
@@ -191,7 +191,7 @@ Pro ladění skriptů na straně klienta musí být ladění skriptů povoleno v
 
 Chcete-li rychle vybrat běžící proces, ke kterému se chcete připojit, v aplikaci Visual Studio zadejte **klávesovou zkratku CTRL** + **+** + **P** a zadejte první písmeno názvu procesu.
 
-|Scénář|Debug – metoda|Název procesu|Poznámky a odkazy|
+|Scenario|Debug – metoda|Název procesu|Poznámky a odkazy|
 |-|-|-|-|
 |Vzdálené ladění ASP.NET 4 nebo 4,5 na serveru služby IIS|Použití vzdálených nástrojů a **připojení k procesu**|*w3wp.exe*|Viz [vzdálené ladění ASP.NET ve vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) .|
 |Vzdálené ladění ASP.NET Core na serveru služby IIS|Použití vzdálených nástrojů a **připojení k procesu**|*w3wp.exe* nebo *dotnet.exe*|Počínaje rozhraním .NET Core 3 se *w3wp.exe* proces používá pro výchozí [model hostování v aplikaci](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1&preserve-view=true#hosting-models). Nasazení aplikací najdete v tématu [publikování do služby IIS](/aspnet/core/host-and-deploy/iis/). Podrobnější informace najdete v tématu [vzdálené ladění ASP.NET Core na vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md#BKMK_attach) .|

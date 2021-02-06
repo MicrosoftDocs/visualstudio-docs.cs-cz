@@ -35,12 +35,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c8487482b1d87ba87dfc3a8b1e07be1360227a2f
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 3fba148b409d8e2b5b9cbc3b629f9f7116509c74
+ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150441"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99627990"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Použití zarážek v ladicím programu sady Visual Studio
 
@@ -85,7 +85,7 @@ Můžete určit, kdy a kde se zarážka spustí, nastavením podmínek. Podmínk
 
 **Nastavení podmínky zarážky:**
 
-1. Klikněte pravým tlačítkem na symbol zarážky a vyberte **podmínky**. Nebo najeďte myší na symbol zarážky, vyberte ikonu **Nastavení** a pak v okně **Nastavení zarážky** vyberte **podmínky** .
+1. Klikněte pravým tlačítkem myši na symbol zarážky a vyberte **podmínky** (nebo stiskněte **ALT**  +  **F9**, **C**). Nebo najeďte myší na symbol zarážky, vyberte ikonu **Nastavení** a pak v okně **Nastavení zarážky** vyberte **podmínky** .
 
    V okně **zarážky** můžete také nastavit podmínky tak, že kliknete pravým tlačítkem myši na zarážku a vyberete **Nastavení** a pak vyberete **podmínky**.
 
@@ -124,7 +124,7 @@ Pokud nastavíte podmínku zarážky s neplatnou syntaxí, zobrazí se varovná 
 
 1. Nastavte zarážku v kódu na místo, kde je objekt vytvořen.
 
-2. Spustit ladění a když se spuštění pozastaví na zarážce, vyberte možnost **ladění**  >    >  **místních** oken nebo **ALT** + **4** pro otevření okna **místní** hodnoty.
+2. Spustit ladění a když se spuštění pozastaví na zarážce, vyberte možnost **ladění**  >  **místních oken systému Windows**  >   (nebo stiskněte klávesovou **zkratku CTRL**  +  **+**  +  **V**, **L**), čímž otevřete okno **místní** hodnoty.
 
    V okně **místní** hodnoty Najděte konkrétní instanci objektu, klikněte na ni pravým tlačítkem myši a vyberte **vytvořit ID objektu**.
 
@@ -169,7 +169,7 @@ Můžete přerušit provádění při volání funkce. To je užitečné, např�
 
 **Nastavení zarážky funkce:**
 
-1. Vyberte **ladit** novou zarážku funkce zarážky  >    >  nebo stiskněte **ALT** + **F9**  >  **CTRL** + **B**.
+1. Vyberte možnost **ladit** novou zarážku funkce zarážky  >    >  nebo stiskněte klávesy **CTRL**  +  **K**, **B**.
 
      >  V okně **zarážky** můžete také vybrat novou **zarážku funkce** .
 
@@ -206,7 +206,7 @@ Můžete přerušit provádění při volání funkce. To je užitečné, např�
 
 2. Vyhledejte adresu instance (například `0xcccccccc` ).
 
-3. Vyberte **ladit** novou zarážku funkce zarážky  >    >  nebo stiskněte **ALT** + **F9**  >  **CTRL** + **B**.
+3. Vyberte možnost **ladit** novou zarážku funkce zarážky  >    >  nebo stiskněte klávesy **CTRL**  +  **K**, **B**.
 
 4. Do pole **název funkce** přidejte následující a vyberte jazyk **C++** .
 
@@ -243,7 +243,7 @@ Datové zarážky v .NET Core nebudou fungovat pro:
 
 **Nastavení datové zarážky:**
 
-1. V projektu C++ spusťte ladění a počkejte na dosažení zarážky. V nabídce **ladění** vyberte Nová zarážka data **zarážky**  >   .
+1. V projektu C++ spusťte ladění a počkejte na dosažení zarážky. V nabídce **ladění** vyberte možnost Nová zarážka dat **zarážky**  >  .
 
     Můžete také vybrat možnost **Nová**  >  **zarážka dat** v **okně zarážky** nebo kliknout pravým tlačítkem myši na položku v okně **Automatické** hodnoty, **kukátko** nebo **místních** hodnot a vybrat možnost **přerušit při změně hodnoty** v místní nabídce.
 
@@ -268,7 +268,7 @@ Datové zarážky nefungují za následujících podmínek:
 
 V okně **zarážky** můžete vyhledat, seřadit, filtrovat, povolit nebo zakázat nebo odstranit zarážky. Můžete také nastavit podmínky a akce nebo přidat novou funkci nebo datovou zarážku.
 
-Chcete-li otevřít okno **zarážky** , vyberte možnost **ladění**  >    >  **zarážek** se systémem Windows nebo stiskněte klávesy **ALT** + **F9** nebo **CTRL** + **ALT** + **B**.
+Chcete-li otevřít okno **zarážky** , vyberte možnost **ladění**  >    >  **zarážek** se systémem Windows nebo stiskněte klávesovou **zkratku CTRL** + **+** + **B**.
 
 ![Zarážky – okno](../debugger/media/breakpointswindow.png "Zarážky – okno")
 
@@ -314,7 +314,7 @@ Chcete-li vizuálně sledovat zarážky během provádění kódu, viz [metody m
 
 ### <a name="set-a-breakpoint-in-the-disassembly-window"></a>Nastavení zarážky v okně zpětný překlad
 
-1. Chcete-li otevřít okno **zpětný překlad** , je nutné pozastavit během ladění. Vyberte **ladit**  >    >  **zpětný překlad** Windows, nebo stiskněte **ALT +** + .
+1. Chcete-li otevřít okno **zpětný překlad** , je nutné pozastavit během ladění. Vyberte **ladit**  >    >  **zpětný překlad** oken nebo stiskněte klávesovou **zkratku CTRL** + **ALT** + **D**.
 
 2. V okně **zpětný překlad** klikněte na levý okraj instrukce, na kterou chcete přerušit. Můžete ji také vybrat a stisknout klávesu **F9** nebo kliknout pravým tlačítkem a vybrat **zarážku**  >  **Vložit** zarážku.
 

@@ -15,12 +15,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: ed2e7f11a6e36c797bb6c506c19b0fff11fb5ad1
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: f734435f93c60ab0b66bd258417d90541575e398
+ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99627977"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>Návod: Vytváření a spouštění testů jednotek pro spravovaný kód
 
@@ -138,11 +138,11 @@ Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady 
 
 6. Přejmenujte soubor na *BankAccount.cs* tak, že kliknete pravým tlačítkem a zvolíte **Přejmenovat** v **Průzkumník řešení**.
 
-7. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
+7. V nabídce **sestavení** klikněte na **Sestavit řešení** (nebo stiskněte klávesy **CTRL**  +  **SHIFT**  +  **B**).
 
 Nyní máte projekt s metodami, které můžete testovat. V tomto článku se testy zaměřují na `Debit` metodu. `Debit`Metoda je volána, když je peníze odebráno z účtu.
 
-## <a name="create-a-unit-test-project"></a>Vytvoření projektu testování částí
+## <a name="create-a-unit-test-project"></a>Vytvoření projektu testů jednotek
 
 1. V nabídce **soubor** vyberte **Přidat**  >  **Nový projekt**.
 
@@ -187,7 +187,7 @@ Vytvořte testovací třídu pro ověření `BankAccount` třídy. Můžete pou�
 
 ### <a name="rename-a-file-and-class"></a>Přejmenovat soubor a třídu
 
-1. Chcete-li přejmenovat soubor, v **Průzkumník řešení** vyberte soubor *UnitTest1.cs* v projektu BankTests. V nabídce klikněte pravým tlačítkem myši na položku **Přejmenovat** a potom přejmenujte soubor na *BankAccountTests.cs*.
+1. Chcete-li přejmenovat soubor, v **Průzkumník řešení** vyberte soubor *UnitTest1.cs* v projektu BankTests. V nabídce klikněte pravým tlačítkem myši na položku **Přejmenovat** (nebo stiskněte **F2**) a pak soubor přejmenujte na *BankAccountTests.cs*.
 
 ::: moniker range="vs-2017"
 
@@ -197,7 +197,7 @@ Vytvořte testovací třídu pro ověření `BankAccount` třídy. Můžete pou�
 
 ::: moniker range=">=vs-2019"
 
-2. Chcete-li přejmenovat třídu, umístěte kurzor na pozici `UnitTest1` v editoru kódu, klikněte pravým tlačítkem myši a pak zvolte možnost **Přejmenovat**. Zadejte **BankAccountTests** a potom stiskněte klávesu **ENTER**.
+2. Chcete-li přejmenovat třídu, umístěte kurzor na pozici `UnitTest1` v editoru kódu, klikněte pravým tlačítkem myši a zvolte možnost **Přejmenovat** (nebo stiskněte **F2**). Zadejte **BankAccountTests** a potom stiskněte klávesu **ENTER**.
 
 ::: moniker-end
 
@@ -289,11 +289,11 @@ Testovací metoda musí splňovat následující požadavky:
 
 ## <a name="build-and-run-the-test"></a>Sestavit a spustit test
 
-1. V nabídce **sestavení** klikněte na příkaz **Sestavit řešení**.
+1. V nabídce **sestavení** klikněte na příkaz **Sestavit řešení** (nebo stiskněte klávesy **CTRL**  +  **SHIFT**  +  **B**).
 
-2. Pokud **Průzkumník testů** není otevřený, otevřete ho výběrem příkazu **test**  >  **Windows**  >  **Průzkumník testů** z horního řádku nabídek.
+2. Pokud není **Průzkumník testů** otevřený, otevřete ho výběrem příkazu **test**  >    >  **Průzkumník testů** z horního řádku nabídky (nebo stiskněte klávesu **CTRL +**  +  , **T**).
 
-3. Kliknutím na možnost **Spustit vše** spusťte test.
+3. Kliknutím na možnost **Spustit vše** spusťte test (nebo stiskněte klávesovou **zkratku CTRL**  +  **R**, **V**).
 
    Při běhu testu je stavový řádek v horní části okna **Průzkumník testů** animovaný. Na konci testovacího běhu se pruh změní na zelený, pokud jsou všechny testovací metody úspěšné, nebo červené, pokud některý z testů selže.
 
@@ -323,7 +323,7 @@ m_balance -= amount;
 
 ### <a name="rerun-the-test"></a>Znovu spustit test
 
-V **Průzkumníku testů** vyberte **Spustit vše** a spusťte test znovu. Červený/zelený pruh se změní na zelenou, aby označoval, že test proběhl úspěšně.
+V **Průzkumníku testů** kliknutím na možnost **Spustit vše** spusťte test znovu (nebo stiskněte klávesu **CTRL**  +  **R**, **V**). Červený/zelený pruh se změní na zelenou, aby označoval, že test proběhl úspěšně.
 
 ![Průzkumník testů v aplikaci Visual Studio 2019 zobrazující úspěšný test](media/test-explorer-banktests-passed.png)
 

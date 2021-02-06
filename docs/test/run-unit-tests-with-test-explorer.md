@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c992a1a4fca536f219a69b9ab629f6f602b4dfb0
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 52a910bddd2f75c631f130dddee22f8b2e05510b
+ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150506"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99628042"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
@@ -34,7 +34,7 @@ Visual Studio obsahuje rozhraní pro testování částí společnosti Microsoft
 
 ## <a name="run-tests-in-test-explorer"></a>Spustit testy v Průzkumníku testů
 
-Při sestavování testovacího projektu se testy zobrazí v Průzkumníku testů. Pokud není Průzkumník testů viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **Windows** a pak zvolte možnost **Průzkumník testů**.
+Při sestavování testovacího projektu se testy zobrazí v Průzkumníku testů. Pokud není Průzkumník testů viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **okna** a zvolte možnost **Průzkumník testů** (nebo stiskněte klávesovou **zkratku CTRL**  +  **E**, **T**).
 
 ::: moniker range="vs-2017"
 ![Průzkumník testů jednotek](../test/media/ute_failedpassednotrunsummary.png)
@@ -64,11 +64,11 @@ Na panelu nástrojů **Průzkumníka testů** můžete provádět spoustu práce
 ::: moniker range="vs-2017"
 Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte některou z následujících akcí:
 
-- Chcete-li spustit všechny testy v řešení, vyberte možnost **Spustit vše**.
+- Chcete-li spustit všechny testy v řešení, zvolte možnost **Spustit vše** (nebo stiskněte klávesovou **zkratku CTRL** + **R**, **V**).
 
 - Chcete-li spustit všechny testy ve výchozí skupině, zvolte možnost **Spustit** a poté vyberte skupinu v nabídce.
 
-- Vyberte jednotlivé testy, které chcete spustit, otevřete nabídku kliknutím pravým tlačítkem pro vybraný test a pak zvolte možnost **Spustit vybrané testy**.
+- Vyberte jednotlivé testy, které chcete spustit, otevřete nabídku kliknutím pravým tlačítkem pro vybraný test a pak zvolte možnost **Spustit vybrané testy** (nebo stiskněte klávesovou **zkratku CTRL** + **R**, **T**).
 
 - Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![Snímek obrazovky s přepínačem paralelního spuštění testu na panelu nástrojů Visual Studio Test Explorer. Pokud je vybráno toto tlačítko, testy budou spuštěny paralelně.](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
 
@@ -77,11 +77,11 @@ V horní části okna **Průzkumníka testů** je animovaný **řádek Pass/selh
 ::: moniker range=">=vs-2019"
 Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte některou z následujících akcí:
 
-- Chcete-li spustit všechny testy v řešení, vyberte ikonu **Spustit vše** .
+- Chcete-li spustit všechny testy v řešení, zvolte ikonu **Spustit vše** (nebo stiskněte klávesu **CTRL** + **R**, **V**).
 
 - Chcete-li spustit všechny testy ve výchozí skupině, zvolte ikonu **spuštění** a pak zvolte skupinu v nabídce.
 
-- Vyberte jednotlivé testy, které chcete spustit, otevřete nabídku kliknutím pravým tlačítkem pro vybraný test a pak zvolte možnost **Spustit vybrané testy**.
+- Vyberte jednotlivé testy, které chcete spustit, otevřete nabídku kliknutím pravým tlačítkem pro vybraný test a pak zvolte možnost **Spustit vybrané testy** (nebo stiskněte klávesovou **zkratku CTRL** + **R**, **T**).
 
 - Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní spuštění testů v nabídce nastavení na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
 ::: moniker-end
@@ -130,7 +130,7 @@ Pokud se test nezdařil, podokno podrobností také obsahuje:
 
 ### <a name="view-the-source-code-of-a-test-method"></a>Zobrazit zdrojový kód testovací metody
 
-Chcete-li zobrazit zdrojový kód testovací metody v editoru sady Visual Studio, vyberte test a pak zvolte možnost **Otevřít test** v místní nabídce kliknutím pravým tlačítkem myši (klávesnice: **F12**).
+Chcete-li zobrazit zdrojový kód testovací metody v editoru sady Visual Studio, vyberte test a pak zvolte možnost **Otevřít test** v nabídce klepněte pravým tlačítkem myši (nebo stiskněte klávesu **F12**).
 
 ## <a name="group-and-filter-the-test-list"></a>Seskupení a filtrování seznamu testů
 
@@ -167,7 +167,7 @@ Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak
 |Skupina|Popis|
 |-|-----------------|
 |**Doba trvání**|Seskupí testy podle doby spuštění: **rychlá**, **střední** a **pomalá**.|
-|**Stav**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné** .|
+|**State**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné** .|
 |**Cílová architektura** | Seskupí testy podle cíle v rámci svých projektů. |
 |**Obor názvů**|Seskupí testy podle obsahujícího oboru názvů.|
 |**Projekt**|Seskupí testy podle obsahujícího projektu.|
@@ -318,7 +318,7 @@ Filtrování podle různých kritérií:
 ::: moniker range=">=vs-2019"
 |Kvalifikátor|Description|
 |-|-----------------|
-|**Stav**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
+|**State**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Traits**|Vyhledá shody v kategorii a hodnotě vlastností. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
 |**Plně kvalifikovaný název**|Vyhledá plně kvalifikovaný název testovacích oborů názvů, tříd a metod pro shody.|
 |**Projekt**|Vyhledá shody v názvech projektů testů.|

@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31314a669815d38ed408a28e033e4943df0f75d3
-ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
+ms.openlocfilehash: 328f7540846f923fe186a76c4dcc03347f9c3214
+ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97756653"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99628016"
 ---
 # <a name="get-started-with-unit-testing"></a>Začínáme s testováním jednotek
 
@@ -181,13 +181,13 @@ Tato část popisuje, jak vytvořit projekt testování částí.
 1. Otevřete [Průzkumník testů](../test/run-unit-tests-with-test-explorer.md).
 
    ::: moniker range=">=vs-2019"
-   Chcete-li otevřít Průzkumníka testů  , v > horním řádku nabídek vyberte test **Test Explorer** .
+   Chcete-li otevřít Průzkumníka testů, zvolte možnost **testovat** > **Průzkumníka** testů v horním řádku nabídky (nebo stiskněte klávesy **CTRL +** + , **T**).
    ::: moniker-end
    ::: moniker range="vs-2017"
    Chcete-li otevřít Průzkumníka testů  , v > horním řádku nabídek vyberte test  > **Průzkumník testů** systému Windows.
    ::: moniker-end
 
-1. Spusťte testy jednotek kliknutím na **Spustit vše**.
+1. Spusťte testy jednotek kliknutím na tlačítko **Spustit vše** (nebo stiskněte klávesovou **zkratku CTRL**  +  **R**, **V**).
 
    ![Spouštění testů jednotek v Průzkumníku testů](media/vs-2019/test-explorer-run-all.png)
 
@@ -275,7 +275,7 @@ Postup přidání projektu testu jednotek:
 
    ![Přidat kód do souboru kódu testu jednotek](media/vs-2019/unit-test-method.png)
 
-6. Spusťte test z **Průzkumníka testů** nebo kliknutím pravým tlačítkem na testovací kód a výběrem možnosti **Spustit testy**.
+6. Spusťte test z **Průzkumníka testů** nebo kliknutím pravým tlačítkem na testovací kód a zvolením možnosti **Spustit testy** (nebo **CTRL**  +  **R**, **T**).
 
 ## <a name="next-steps"></a>Další kroky
 

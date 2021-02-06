@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6d451735042374f0e3c6fb2154cd54520a069fc
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: 0e136339ae5f34a7e65c19cf14c9ff840c620b25
+ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97761430"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99628055"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>První pohled na ladicí program sady Visual Studio
 
@@ -93,7 +93,7 @@ Tento příkaz obnoví spuštění aplikace (a ladicí program posune), dokud ak
 
 ## <a name="run-to-cursor"></a>Spustit ke kurzoru
 
-Pokud upravujete kód (místo pozastavení v ladicím programu), klikněte pravým tlačítkem myši na řádek kódu v aplikaci a vyberte možnost **Spustit ke kurzoru**. Tento příkaz spustí ladění a nastaví dočasnou zarážku na aktuálním řádku kódu.
+Pokud upravujete kód (místo pozastavení v ladicím programu), klikněte pravým tlačítkem myši na řádek kódu ve vaší aplikaci a zvolte možnost **Spustit na kurzor** (nebo stiskněte klávesu **CTRL** pro **F10**). Tento příkaz spustí ladění a nastaví dočasnou zarážku na aktuálním řádku kódu.
 
 ![Spustit ke kurzoru](../debugger/media/dbg-tour-run-to-cursor.png "Spustit ke kurzoru")
 
@@ -108,7 +108,7 @@ Tento příkaz je užitečný při úpravách kódu a chcete rychle nastavit do�
 
 ## <a name="restart-your-app-quickly"></a>Rychlé restartování aplikace
 
-Klikněte na tlačítko **restartovat** ![aplikaci](../debugger/media/dbg-tour-restart.png "Restartovat aplikaci") na panelu nástrojů ladění (**CTRL + SHIFT + F5**).
+Klikněte na tlačítko **restartovat** ![aplikaci](../debugger/media/dbg-tour-restart.png "Restartovat aplikaci") na panelu nástrojů ladění (nebo stiskněte klávesy **CTRL + SHIFT + F5**).
 
 Po stisknutí tlačítka **restartovat** ušetří čas oproti zastavování aplikace a restartování ladicího programu. Ladicí program se pozastaví na první zarážce, která je dosaženo spuštěním kódu.
 

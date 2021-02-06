@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5660d67ac2c8c3bff589c34dd4303d36a3e20cff
-ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
+ms.openlocfilehash: 5efed99b9934ed91b2194b5a38c99134d6d4b5e5
+ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833309"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99628029"
 ---
 # <a name="unit-test-basics"></a>Základní informace o testování částí
 
@@ -236,7 +236,7 @@ public void My_Test ()
 
 ## <a name="run-tests-in-test-explorer"></a>Spustit testy v Průzkumníku testů
 
-Při sestavování testovacího projektu se testy zobrazí v **Průzkumníku testů**. Pokud není **Průzkumník testů** viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **Windows** a pak zvolte možnost **Průzkumník testů**.
+Při sestavování testovacího projektu se testy zobrazí v **Průzkumníku testů**. Pokud není **Průzkumník testů** viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **okna** a zvolte možnost **Průzkumník testů** (nebo stiskněte klávesovou **zkratku CTRL**  +  **E**, **T**).
 
 ::: moniker range="vs-2017"
 ![Průzkumník testů jednotek](../test/media/ute_failedpassednotrunsummary.png)
@@ -260,7 +260,7 @@ Panel nástrojů **Průzkumník testů** vám pomůže zjistit, uspořádat a sp
 ![Spustit testy z panelu nástrojů Průzkumníka testů](../test/media/vs-2019/test-explorer-toolbar-diagram-16-2.png)
 ::: moniker-end
 
-Výběrem možnosti **Spustit vše** můžete spustit všechny testy, nebo výběrem možnosti **Spustit** vyberte podmnožinu testů, které chcete spustit. Vyberte test, chcete-li zobrazit podrobnosti o testu v podokně podrobností testu. Zvolením možnosti **Otevřít test** z místní nabídky (klávesnice: **F12**) zobrazte zdrojový kód pro vybraný test.
+Výběrem možnosti **Spustit vše** můžete spustit všechny testy (nebo stisknout **CTRL**  +  **r**, **V**) nebo zvolit **Spustit** pro výběr podmnožiny testů, které chcete spustit (**CTRL**  +  **r**, **T**). Vyberte test, chcete-li zobrazit podrobnosti o testu v podokně podrobností testu. Zvolením možnosti **Otevřít test** z místní nabídky (klávesnice: **F12**) zobrazte zdrojový kód pro vybraný test.
 
 ::: moniker range="vs-2017"
 
@@ -278,7 +278,7 @@ Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v j
 
 ::: moniker range="vs-2017"
 
-|Tlačítko|Popis|
+|Tlačítko|Description|
 |-|-|
 |![Spustit po sestavení](../test/media/ute_runafterbuild_btn.png)|Chcete-li spustit testy jednotek po každém místním sestavení, zvolte možnost **test** v nabídce Standard a pak zvolte možnost **Spustit testy po sestavení** na panelu nástrojů **Průzkumníka testů** .|
 
@@ -304,7 +304,7 @@ Pokud máte velký počet testů, můžete zadat do vyhledávacího pole **Průz
 ![Kategorie vyhledávacích filtrů](../test/media/vs-2019/test-explorer-search-filter-16-2.png)
 ::: moniker-end
 
-|Tlačítko|Popis|
+|Tlačítko|Description|
 |-|-|
 |![Tlačítko skupiny Průzkumníka testů](../test/media/ute_groupby_btn.png)|Chcete-li seskupit testy podle kategorie, klikněte na tlačítko **Seskupit podle** .|
 
