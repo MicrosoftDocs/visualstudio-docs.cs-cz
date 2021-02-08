@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1969146d-46bf-422d-8d46-0e9493925003
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2576a56bf223fd1b3a1ba4903595cc25144011ec
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 6a9c2cc5d8827f6419472e5fd84add4d9c9f5228
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903741"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99837174"
 ---
 # <a name="references-element-visual-studio-templates"></a>References – element (šablony sady Visual Studio)
 Seskupí sestavení odkazuje na to, že šablona přičítá k projektům.
@@ -29,7 +29,7 @@ Seskupí sestavení odkazuje na to, že šablona přičítá k projektům.
  \<VSTemplate> \<TemplateContent>
  \<References>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <References>

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: eea69f03-349c-44bb-bd4f-4925c0dc3e55
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b67ffab5935b0e52ee6c403f2e38e7bbafab2d06
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: c6a759f0cef7329d14d7d1472d38f662c0206448
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205187"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839791"
 ---
 # <a name="intercepting-legacy-language-service-commands"></a>Příkazy zachytávání služby starší verze jazyka
 Pomocí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] můžete mít službu jazyka k zachycení příkazů, které by jinak zpracovávala zobrazení textu. To je užitečné pro chování specifické pro konkrétní jazyk, které nespravuje textové zobrazení. Tyto příkazy můžete zachytit přidáním jednoho nebo více filtrů příkazů do textového zobrazení z vaší jazykové služby.

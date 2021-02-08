@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: e458cd02-2370-4435-8953-17d7a60ce152
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f015c21f71f064f2302660ebc75ef00a245348c3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d45d8d93f26ef01fb184811a87b4f4fcc4483340
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80724437"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840233"
 ---
 # <a name="idebugportsupplier3"></a>IDebugPortSupplier3
 Toto rozhraní umožňuje volajícímu určit, jestli dodavatel portu může chránit porty (jejich zápisem na disk) mezi voláními ladicího programu a následným získáním seznamu těchto zachovaných portů.
@@ -32,7 +32,7 @@ IDebugPortSupplier3 : IDebugPortSupplier2
  Vlastní dodavatel portu implementuje toto rozhraní pro podporu trvalého nebo ukládání informací o portech na disk. Toto rozhraní musí být implementováno na stejném objektu jako rozhraní [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- [QueryInterface](/cpp/atl/queryinterface) `IDebugPortSupplier2` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface.
+ [](/cpp/atl/queryinterface) `IDebugPortSupplier2` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface.
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
  Kromě metod zděděných z rozhraní [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) toto rozhraní podporuje následující:

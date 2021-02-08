@@ -7,15 +7,15 @@ f1_keywords:
 - vs.unittesting.testexplorer.overview
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 52a910bddd2f75c631f130dddee22f8b2e05510b
-ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
+ms.openlocfilehash: 05a850b0c88a39366805ff892fb698f637b3bbe1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99628042"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836329"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 

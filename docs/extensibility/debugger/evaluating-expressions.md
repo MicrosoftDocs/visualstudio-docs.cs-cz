@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5ccfcc80-dea5-48a1-8bae-6a26f8d3bc56
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b43fc91de129407f2fd01e12951cffee4028186f
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 4a9b8db832207eff93e08f123db57b4beef4eb7f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914592"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840597"
 ---
 # <a name="evaluate-expressions"></a>Výrazy vyhodnocení
 Výrazy jsou vytvořeny z řetězců předaných z **automatických**, **sledovacích**, **QuickWatch** nebo **okamžitých** oken. Při vyhodnocování výrazu vygeneruje tisknutelné řetězec, který obsahuje název a typ proměnné nebo argumentu a jeho hodnotu. Tento řetězec se zobrazí v odpovídajícím okně IDE.

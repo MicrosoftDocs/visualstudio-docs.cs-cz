@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 7b2be4b9-e3fe-4412-874f-ae72ebc84c4b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d99b1b0f5ba0f80af3aadcff0404357b57fbe265
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 4466a180923c85461ede59102b346caf70fd064b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994599"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99842188"
 ---
 # <a name="extend-menus-and-commands"></a>Rozšiřování nabídek a příkazů
 Příkazy představují způsob, jakým přidáváte akce a procesy do sady Visual Studio. Ve většině případů se příkazy zobrazují v nabídkách nebo na panelech nástrojů. Šablona projektu VSPackage ukazuje, jak implementovat velmi základní příkaz. Pro poněkud déle, ale i i pro základní implementaci, přečtěte si téma [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).

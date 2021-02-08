@@ -9,15 +9,15 @@ f1_keywords:
 - fs.ProjectPropertiesDebug
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: c0ce6e68fa36f3b13474306ddd1d8304d640c0ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a97bd1010a9c739c253f9b5f0a536800fd1f8b69
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87507973"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99838614"
 ---
 # <a name="develop-with-visual-f-in-visual-studio"></a>Vývoj pomocí Visual F# v aplikaci Visual Studio
 
@@ -60,7 +60,7 @@ Následující tabulka shrnuje funkce v Project Properties pro F #:
 
 **Návrhář projektu** se skládá z několika stránek vlastností projektu seskupených podle souvisejících funkcí. Stránky, které jsou k dispozici pro projekty F #, jsou většinou podmnožinou dostupných pro jiné jazyky a jsou popsány v následující tabulce. Odkazy jsou k dispozici pro odpovídající stránku **Návrháře projektu** C#.
 
-|Stránka Návrháře projektu|Související odkazy|Popis|
+|Stránka Návrháře projektu|Související odkazy|Description|
 | - |-------------|-----------|
 |Aplikace|[Stránka aplikace, Návrhář projektu](reference/application-page-project-designer-csharp.md)|Umožňuje zadat nastavení a vlastnosti na úrovni aplikace, například zda vytváříte knihovnu nebo spustitelný soubor, jakou verzi rozhraní .NET aplikace cílí, a informace o tom, kde jsou uloženy soubory prostředků, které aplikace používá.|
 |Sestavení|[Stránka sestavení, Návrhář projektu](reference/build-page-project-designer-csharp.md)|Umožňuje řídit způsob kompilování kódu.|
@@ -120,7 +120,7 @@ Následující tabulka shrnuje funkce technologie IntelliSense podporované a ne
 |Automaticky implementovat rozhraní|Generuje zástupné kódy kódu pro metody rozhraní.|Ano|
 |Fragmenty kódu|Vloží kód z knihovny běžných kódových konstrukcí do témat.|Ne|
 |Dokončit slovo|Ukládá text tak, že při psaní dokončí slova a jména.|Ano|
-|Automatické dokončování|Když je tato možnost povolená, způsobí, že při psaní se při psaní slova vybere první shoda, a ne čekání na výběr jednoho nebo více kláves **CTRL** + **Space**.|Ano|
+|Automatické dokončování|Když je tato možnost povolená, způsobí, že při psaní se při psaní slova vybere první shoda, a ne čekání na výběr jednoho nebo více kláves **CTRL** + .|Ano|
 |Nabídka dokončování symbolů v neotevřených oborech názvů|Při automatickém dokončení je navržen odpovídající symbol, který je umístěn v neotevřeném oboru názvů, nabídka k dokončení s odpovídajícím `open` příkazem, pokud je vybrána možnost.|Ano|
 |Generovat elementy kódu|Umožňuje generovat kód zástupné procedury pro nejrůznější konstrukce.|Ne|
 |Vypsat členy|Když zadáte operátor přístupu ke členu (.), zobrazí se členové pro typ.|Ano|

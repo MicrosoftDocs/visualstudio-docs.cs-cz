@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Call Hierarchy
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 75c330855d3fca1187f88171adb893c3f77c4ccd
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: e7384376b604f2097d68bf8bac06b2af0158e09b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95871402"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836472"
 ---
 # <a name="view-call-hierarchy"></a>Zobrazit hierarchii volání
 
@@ -65,7 +65,7 @@ Když vyberete podřízeného člena v podokně zobrazení stromu **hierarchie v
 
 Následující tabulka popisuje několik možností místní nabídky, které jsou k dispozici po kliknutí pravým tlačítkem myši na uzel v podokně stromového zobrazení.
 
-|Položka kontextové nabídky|Popis|
+|Položka kontextové nabídky|Description|
 | - |-----------------|
 |**Přidat jako nový kořen**|Přidá vybraný uzel do podokna zobrazení stromu jako nový kořenový uzel. To vám umožní zaměřit se na pozornost konkrétního podstromu.|
 |**Odebrat kořen**|Odebere vybraný kořenový uzel z podokna zobrazení stromu. Tato možnost je k dispozici pouze z kořenového uzlu.<br /><br /> K odebrání vybraného kořenového uzlu můžete použít také tlačítko **Odebrat kořenový** panel nástrojů.|

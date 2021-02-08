@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5a3600a1-dc20-4e55-b2a4-809736a6ae65
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e19d9090126a13b657f53c20d7ec44a793d5376
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 22ce6497b820e1dcd37315f9d74cb97de4cc34e0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913890"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99837733"
 ---
 # <a name="attach-after-a-launch"></a>Připojit po spuštění
 Po spuštění programu je relace ladění připravena připojit ladicí modul (DE) k uvedenému programu.

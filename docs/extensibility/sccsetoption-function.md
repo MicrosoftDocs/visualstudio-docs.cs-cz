@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4b5e6666-c24c-438a-a9df-9c52f58f8175
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1adcbb47e9fce7037fe8942326e8836ade51e3eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33ef775f33194a616d93478aecfdcceec446ebe8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700312"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836693"
 ---
 # <a name="sccsetoption-function"></a>SccSetOption – funkce
 Tato funkce nastavuje možnosti, které řídí chování modulu plug-in správy zdrojových kódů.
@@ -59,7 +59,7 @@ pro Nastavení pro možnost.
 
  Souhrn možností a jejich hodnot:
 
-|`nOption`|`dwValue`|Popis|
+|`nOption`|`dwValue`|Description|
 |---------------|---------------|-----------------|
 |`SCC_OPT_EVENTQUEUE`|`SCC_OPT_EQ_DISABLE`<br /><br /> `SCC_OPT_EQ_ENABLE`|Povolí nebo zakáže řízení front událostí na pozadí.|
 |`SCC_OPT_USERDATA`|Libovolná hodnota|Určuje hodnotu uživatele, která má být předána funkci zpětného volání [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md) .|

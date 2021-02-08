@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 008a20c7-1b27-4013-bf96-d6a3f510da02
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a021d5dfdff5058211f5bafdfd7854611f977c27
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 0957a204a83ab72aabe14fe4a70d8e758e83a08f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914514"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840584"
 ---
 # <a name="evaluation-context"></a>Kontext vyhodnocení
 > [!IMPORTANT]
@@ -26,7 +26,7 @@ ms.locfileid: "96914514"
 
  Když ladicí stroj (DE) volá vyhodnocovací filtr výrazů (EE), tři argumenty předané do [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) určují kontext pro hledání a vyhodnocení symbolů, jak je znázorněno v následující tabulce.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
 |Argument|Description|
 |--------------|-----------------|

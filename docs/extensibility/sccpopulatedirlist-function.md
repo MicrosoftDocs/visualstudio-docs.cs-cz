@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: dfff634b-b155-498b-a356-6eb252ac4fad
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4ac1c51ac694acadd2efb0cd7d1c5a3f1d66ebc1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eac3973bf28a14340b720a51fc291b914822f3d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700558"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836914"
 ---
 # <a name="sccpopulatedirlist-function"></a>SccPopulateDirList – funkce
 Tato funkce určuje, které adresáře a (volitelně) soubory jsou uloženy ve správě zdrojového kódu s uvedením seznamu adresářů k prohlédnutí.
@@ -25,7 +25,7 @@ Tato funkce určuje, které adresáře a (volitelně) soubory jsou uloženy ve s
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-SCCRTN SccPopulateDirList(
+SCCRTN SccPopulateDirList(
    LPVOID        pContext,
    LONG          nDirs,
    LPCSTR*       lpDirPaths,

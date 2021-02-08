@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 79dcbb9b-c7f8-40fc-8a00-f37fe1934f51
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b71a78dcee62f89dee4c54b53c1026f42895793
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: d41f9e3f88f28dbbb83e9c7e00fe8b8afd434c26
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913786"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99837746"
 ---
 # <a name="attaching-and-detaching-to-a-program"></a>Připojení k programu a jeho odpojení
 Připojení ladicího programu vyžaduje odeslání správné posloupnosti metod a událostí se správnými atributy.

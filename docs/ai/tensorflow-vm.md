@@ -4,19 +4,19 @@ description: spuštění modelu tensorflow ve virtuálním počítači Azure s h
 keywords: AI, Visual Studio, virtuální počítač s hloubkovým učením
 author: jillre
 ms.author: jillfra
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: tutorial
 ms.devlang: python
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cd833a687591ba4f49e785746381f9a5d738f5e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f6aef2d0cf8fe727036dda91256ac0330e15d37
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80638757"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841312"
 ---
 # <a name="train-a-tensorflow-model-in-the-cloud"></a>Trénování modelu platformy TensorFlow v cloudu
 
@@ -24,7 +24,7 @@ V tomto kurzu provedeme model TensorFlow s využitím [datové sady mnist ručn�
 
 Databáze MNIST ručně zapsaných má školicí sadu 60 000 příkladů a sadu testů 10 000 příkladů rukou psaných číslic.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 Než začnete, ujistěte se, že máte nainstalované a nakonfigurované následující:
 
 ### <a name="setup-azure-deep-learning-virtual-machine"></a>Nastavit virtuální počítač Azure s hloubkovým učením

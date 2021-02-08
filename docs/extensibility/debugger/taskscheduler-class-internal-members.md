@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 87f1c969-0217-4464-8907-7609c1bf61d3
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10528e57137f8605e7f140d4ab8d4a3399029a5f
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: d0ed72efb383e216d5998c2231a472b8d29f9ec4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996003"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99837447"
 ---
 # <a name="taskscheduler-class---internal-members"></a>TaskScheduler třída – interní členy
 Tento článek popisuje interní členy <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> třídy, které vám pomůžou implementovat vlastní ladicí program. Obecné informace o této třídě naleznete v <xref:System.Threading.Tasks.TaskScheduler> referenčním článku.
@@ -29,7 +29,7 @@ Tento článek popisuje interní členy <xref:System.Threading.Tasks.TaskSchedul
 
  Vzhledem k tomu, že nemůžete získat přístup k těmto interním členům z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .class public abstract auto ansi beforefieldinit System.Threading.Tasks.TaskScheduler
@@ -40,7 +40,7 @@ Tento článek popisuje interní členy <xref:System.Threading.Tasks.TaskSchedul
 
 ### <a name="methods"></a>Metody
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |[GetScheduledTasksForDebugger](../../extensibility/debugger/getscheduledtasksfordebugger-method.md)|Načte pole všech naplánovaných úloh.|
 |[GetTaskSchedulersForDebugger](../../extensibility/debugger/gettaskschedulersfordebugger-method.md)|Načte pole všech <xref:System.Threading.Tasks.TaskScheduler> objektů, které jsou aktuálně aktivní.|

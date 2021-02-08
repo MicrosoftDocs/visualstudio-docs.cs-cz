@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 76ffa394-ee89-4629-aba9-1a62b72e6cc1
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7928c03e52e4a72fb354bd7202e041ec2264fcd6
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 2032a10d24f0d5cf2488f33d83d444df8d5135bc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560951"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836225"
 ---
 # <a name="visual-studio-commands"></a>Příkazy sady Visual Studio
 
 Příkazy sady Visual Studio můžete zadat v **příkazovém** okně, **příkazovém** okně, nebo v poli **Najít/příkaz** . V každém případě symbol větší než ( `>` ) označuje, že příkaz místo operace hledání nebo ladění následuje.
 
-Úplný seznam příkazů a jejich syntaxi najdete na stránce **klávesnice** v **Tools**  >  **Options**  >  **prostředí** možností nástroje.
+Úplný seznam příkazů a jejich syntaxi najdete na stránce **klávesnice** v   >    >  **prostředí** možností nástroje.
 
 V lokalizovaných verzích rozhraní IDE lze názvy příkazů zadat v nativním jazyce integrovaného vývojového prostředí (IDE) nebo v angličtině. Můžete například zadat buď `File.NewFile` nebo `Fichier.NouveauFichier` ve francouzštině integrovaného vývojového prostředí, a spustit tak stejný příkaz.
 
@@ -45,7 +45,7 @@ Blikající kurzor funguje stejně, bez ohledu na to, zda se nachází uvnitř n
 
 Následující příkazy přebírají argumenty nebo přepínače:
 
-| Název příkazu | Popis |
+| Název příkazu | Description |
 | - | - |
 | [Přidat existující položku](../../ide/reference/add-existing-item-command.md) | Přidá existující soubor do aktuálního řešení a otevře ho. |
 | [Přidat existující projekt](../../ide/reference/add-existing-project-command.md) | Přidá existující projekt k aktuálnímu řešení. |
@@ -80,7 +80,7 @@ Následující příkazy přebírají argumenty nebo přepínače:
 | [Přepnout zarážku](../../ide/reference/toggle-breakpoint-command.md) | Zapne nebo vypne zarážku v závislosti na jejím aktuálním stavu, a to v aktuálním umístění v souboru. |
 | [Kukátko – příkaz](../../ide/reference/watch-command.md) | Vytvoří a otevře zadanou instanci okna **kukátka** . |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Okno Příkaz](../../ide/reference/command-window.md)
 - [Pole Najít/příkaz](../../ide/find-command-box.md)

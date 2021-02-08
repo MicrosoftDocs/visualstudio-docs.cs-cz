@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f657f8c3-5e68-4308-9971-e81e3099ba29
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea784eae808cbab3a5991651961d3b150b641c04
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 86173253c947be5de8600e15b68a6f08504803a5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98204706"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839843"
 ---
 # <a name="initialization-sequence-of-project-subtypes"></a>Inicializační sekvence podtypů projektů
 Prostředí vytvoří projekt voláním základní implementace výroby projektu systému <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A> . Konstrukce podtypu projektu začíná, když prostředí určí, že seznam identifikátorů GUID typu projektu pro rozšíření souboru projektu není prázdný. Přípona souboru projektu a GUID projektu určují, zda je projekt [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] typu projektu nebo. Například rozšíření. vbproj a {F184B08F-C81C-45F6-A57F-5ABD9991F28F} identifikují [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] projekt.

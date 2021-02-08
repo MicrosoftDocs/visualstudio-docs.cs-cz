@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 8d7ebfc6-7478-4888-b3b0-b14f296096af
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f1fde6dabb372bfa20f55335008ce91e8de2481a
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 234e6c2d0349cf610d9ba22d53ce59e3768ad64e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433580"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99838006"
 ---
 # <a name="transactionscope-activity-designer"></a>Návrhář aktivity TransactionScope
 
@@ -37,11 +37,11 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.Transac
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Volitelný popisný název <xref:System.Activities.Statements.TransactionScope> aktivity. Výchozím nastavením je objekt TransactionScope. I když není <xref:System.Activities.Activity.DisplayName%2A> hodnota striktně nutná, je osvědčeným postupem použití jednoho.|
-|<xref:System.Activities.Statements.TransactionScope.Body%2A>|Pravda|Určuje aktivitu, která má být spuštěna v rámci jedné transakce. Chcete-li přidat <xref:System.Activities.Statements.TransactionScope.Body%2A> aktivitu, přetáhněte aktivitu ze **sady nástrojů** do pole **text** v Návrháři aktivity **TransactionScope** s nápovědou text "Sem přetáhněte aktivitu".|
-|<xref:System.Activities.Statements.TransactionScope.IsolationLevel%2A>|Pravda|Určuje <xref:System.Transactions.IsolationLevel> pro tuto <xref:System.Activities.Statements.TransactionScope> .|
-|<xref:System.Activities.Statements.TransactionScope.Timeout%2A>|Nepravda|Určuje časový interval (formátovaný jako 00:00:00, který označuje hodiny: minuty: sekundy), po kterou musí být transakce dokončena. Výchozí hodnota je 1 minuta (00:01:00).|
-|<xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure*>|Pravda|Určuje hodnotu, která určuje, zda má být pracovní postup přerušen v případě přerušení transakce.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Volitelný popisný název <xref:System.Activities.Statements.TransactionScope> aktivity. Výchozím nastavením je objekt TransactionScope. I když není <xref:System.Activities.Activity.DisplayName%2A> hodnota striktně nutná, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.TransactionScope.Body%2A>|Ano|Určuje aktivitu, která má být spuštěna v rámci jedné transakce. Chcete-li přidat <xref:System.Activities.Statements.TransactionScope.Body%2A> aktivitu, přetáhněte aktivitu ze **sady nástrojů** do pole **text** v Návrháři aktivity **TransactionScope** s nápovědou text "Sem přetáhněte aktivitu".|
+|<xref:System.Activities.Statements.TransactionScope.IsolationLevel%2A>|Ano|Určuje <xref:System.Transactions.IsolationLevel> pro tuto <xref:System.Activities.Statements.TransactionScope> .|
+|<xref:System.Activities.Statements.TransactionScope.Timeout%2A>|Ne|Určuje časový interval (formátovaný jako 00:00:00, který označuje hodiny: minuty: sekundy), po kterou musí být transakce dokončena. Výchozí hodnota je 1 minuta (00:01:00).|
+|<xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure*>|Ano|Určuje hodnotu, která určuje, zda má být pracovní postup přerušen v případě přerušení transakce.|
 
 ## <a name="see-also"></a>Viz také
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - reference [Office development in Visual Studio], user interface
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: dc58e106a24b857f4702876085a8ab986b6c5c92
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 19bbf3b0a2f58cbb410c695cfbb869469a7421c2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526538"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99838253"
 ---
 # <a name="user-interface-reference-office-development-in-visual-studio"></a>Odkaz uživatelského rozhraní (vývoj pro Office v sadě Visual Studio)
   Následující prvky uživatelského rozhraní jsou součástí projektů Office v sadě Visual Studio.

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 1ac3de27-a23b-438d-9593-389e45839cfa
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 20c8c58a98887e5509026641ba0295fc167435e3
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: c4c9ee6cfec35804d7e60675342f3961dfb90c6c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98204602"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839557"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>Analyzátor a skener služby starší verze jazyka
 Analyzátor je srdcem jazykové služby. Třídy jazyka Managed Package Framework (MPF) vyžadují analyzátor jazyka pro výběr informací o zobrazeném kódu. Analyzátor odděluje text na lexikální tokeny a pak tyto tokeny identifikuje podle typu a funkce.
@@ -48,7 +48,7 @@ namespace MyNamespace
 |{ } ( ) ;|Oddělovač|
 |MyNamespace, MyClass, MyFunction, arg1, var1|identifikátor|
 |MyNamespace|namespace|
-|MyClass|třída|
+|MyClass|class|
 |Funkci|method|
 |arg1|parameter|
 |var1|lokální proměnná|
@@ -114,7 +114,7 @@ namespace MyNamespace
 
 12. Hotovo.
 
-### <a name="summary"></a>Shrnutí
+### <a name="summary"></a>Souhrn
  Operace párování složených závorek je obvykle omezena na jednoduché páry jazykových prvků. Složitější prvky, jako jsou například párové tři (" `if(...)` ", " `{` " a " `}` " nebo " `else` ", "" `{` a " `}` "), mohou být zvýrazněny jako součást operace dokončování slov. Například když je slovo "else" dokončeno, je `if` možné zvýraznit příkaz "". Pokud existovala řada `if` / `else if` příkazů, může být vše zvýrazněno pomocí stejného mechanismu jako u shod složených závorek. <xref:Microsoft.VisualStudio.Package.Source>Tato základní třída již podporuje následujícím způsobem: skener musí vracet hodnotu triggeru tokenu v <xref:Microsoft.VisualStudio.Package.TokenTriggers> kombinaci s hodnotou triggeru <xref:Microsoft.VisualStudio.Package.TokenTriggers> pro token, který je před pozicí kurzoru.
 
  Další informace najdete v tématu [spárování složených závorek ve službě starší verze jazyka](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md).

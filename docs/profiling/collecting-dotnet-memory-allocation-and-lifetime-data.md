@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Profiling Tools,.NET memory method
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: a9321ce83f65d5a7cac95d793d5f635651bef0e7
-ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
+ms.openlocfilehash: 00a8b7c7e92153fcbc323349f30adc458cf973fc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98533794"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839280"
 ---
 # <a name="collect-net-framework-memory-allocation-and-lifetime-data"></a>Shromažďovat data o přidělení a době životnosti .NET Framework paměti
 
@@ -80,7 +80,7 @@ Další možnosti můžete zadat v dialogovém okně **stránky vlastností** _r
 |Na stránce **čítače CPU** zadejte jeden nebo více čítačů výkonu procesoru, které chcete přidat k datům profilace.|- [Postupy: shromažďování dat čítačů procesoru](../profiling/how-to-collect-cpu-counter-data.md)|
 |Na stránce **Upřesnit** určete další požadované možnosti VSInstr.exe, například možnosti pro zahrnutí nebo vyloučení určitých funkcí. Další informace o možnostech VSInstr najdete v tématu [VSInstr](../profiling/vsinstr.md) .|- [Postupy: určení dalších možností instrumentace](../profiling/how-to-specify-additional-instrumentation-options.md)<br />- [Postupy: omezení instrumentace na konkrétní funkce](../profiling/how-to-limit-instrumentation-to-specific-functions.md)|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Konfigurace relací výkonu](../profiling/configuring-performance-sessions.md) 
  [Postupy: výběr metod shromažďování](../profiling/how-to-choose-collection-methods.md) 

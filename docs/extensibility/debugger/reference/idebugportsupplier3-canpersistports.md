@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 4127760c-e602-4e86-9232-457e382a52c7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2bf436d788b517300bee9a13b66b0ca3747bcc43
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2914d56f2d74629a30bc63bad281bb0cdcdc0de8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80724458"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840337"
 ---
 # <a name="idebugportsupplier3canpersistports"></a>IDebugPortSupplier3::CanPersistPorts
 Tato metoda určuje, zda dodavatel portu může zachovat porty (jejich zápisem na disk) mezi voláními ladicího programu.
@@ -28,11 +28,11 @@ Tato metoda určuje, zda dodavatel portu může zachovat porty (jejich zápisem 
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT CanPersistPorts();
+HRESULT CanPersistPorts();
 ```
 
 ```csharp
-int CanPersistPorts();
+int CanPersistPorts();
 ```
 
 ## <a name="parameters"></a>Parametry

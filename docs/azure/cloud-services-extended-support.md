@@ -2,19 +2,19 @@
 title: Použít Cloud Services (Rozšířená podpora) (Preview)
 description: Naučte se vytvářet a nasazovat Cloud Services (Rozšířená podpora) pomocí Azure Resource Manager se sadou Visual Studio.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 01/25/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: ff45cf05a6811c02881c26f76193d4c1f5a5e735
-ms.sourcegitcommit: 7d34ab111614ae6bde5fb3c2bb91dd79e29a0a78
+ms.openlocfilehash: 39a76f4c76afb2ed0c738adfc477807eebfdbc61
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98750287"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841130"
 ---
 # <a name="create-and-deploy-to-cloud-services-extended-support-in-visual-studio-preview"></a>Vytvoření a nasazení do Cloud Services (Rozšířená podpora) v aplikaci Visual Studio (Preview)
 

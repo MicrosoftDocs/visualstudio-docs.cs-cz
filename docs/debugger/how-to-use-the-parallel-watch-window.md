@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 28004d9b-420c-48f7-b80e-ab1519802558
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 28aeffb629a44c296fb9a349e165c7ce88f70b0c
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: cea9fb1733e479f413368f0f4c5c9fccfc523f6b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150571"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840948"
 ---
 # <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Nastavení kukátka pro proměnné v paralelních vláknech v sadě Visual Studio (C#, Visual Basic, C++)
 V paralelním okno Kukátko lze současně zobrazit hodnoty, které jeden výraz obsahuje ve více vláknech. Každý řádek představuje vlákno, které běží v aplikaci, ale vlákno může být reprezentované ve více řádcích. Přesněji řečeno, každý řádek představuje volání funkce, jejíž signatura funkce odpovídá funkci v aktuálním bloku zásobníku. Položky, které jsou ve sloupcích, můžete řadit, přeřadit, odebírat a seskupovat. Vlákna můžete označit, zrušit jeho příznak, zablokovat (pozastavit) a uvolnit (pokračovat). V okně **paralelní sledování** se zobrazí následující sloupce:

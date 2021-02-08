@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: d55d5055-7386-4037-bf22-4c3e434a99ca
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: be3f53c12b5562377cd79267d6e216a1435859a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a194797f5959f4a41ec36bc95690c4f677df717
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80724665"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840402"
 ---
 # <a name="idebugportsupplier2getport"></a>IDebugPortSupplier2::GetPort
 Získá port od dodavatele portu.
@@ -28,14 +28,14 @@ Získá port od dodavatele portu.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetPort( 
+HRESULT GetPort( 
    REFGUID       guidPort,
    IDebugPort2** ppPort
 );
 ```
 
 ```csharp
-int GetPort( 
+int GetPort( 
    ref Guid        guidPort,
    out IDebugPort2 ppPort
 );

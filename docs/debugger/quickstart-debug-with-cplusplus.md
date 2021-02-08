@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 639e430b-6d2d-46bd-b738-8c60dfb384f1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b619b2b6c93da8be399b2fc35d81ffe226f408ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8735ecd409eca2801b42b11bd3928a00e5191bf8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "65679405"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840896"
 ---
 # <a name="quickstart-debug-with-c-using-the-visual-studio-debugger"></a>Rychlý Start: ladění pomocí jazyka C++ pomocí ladicího programu sady Visual Studio
 
@@ -28,10 +28,10 @@ Ladicí program sady Visual Studio poskytuje mnoho výkonných funkcí, které v
 1. Otevřete Visual Studio a vytvořte projekt.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **C++**, zvolte **šablony**a pak zvolte **vytvořit nový projekt konzolové aplikace**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **C++**, zvolte **šablony** a pak zvolte **vytvořit nový projekt konzolové aplikace**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C++** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte možnost **Konzolová aplikace systému Windows**. Pak zadejte název jako **MyDbgApp** a klikněte na **OK**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C++** zvolte možnost **plocha systému Windows** a potom v prostředním podokně zvolte možnost **Konzolová aplikace systému Windows**. Pak zadejte název jako **MyDbgApp** a klikněte na **OK**.
     ::: moniker-end
 
     Pokud nevidíte šablonu projektu **Konzolová aplikace systému Windows** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, čímž otevřete instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací pomocí C++** a pak zvolte **Upravit**.
@@ -125,7 +125,7 @@ Pokud identifikujete změnu, kterou chcete testovat ve vašem kódu během relac
 
 1. Klikněte na druhou instanci `c2.front()` a změňte `c2.front()` na `c2.back()` .
 
-2. Stisknutím klávesy **F10** (nebo **ladění > Step over) několikrát zajděte**ladicí program a spusťte upravený kód.
+2. Stisknutím klávesy **F10** (nebo **ladění > Step over) několikrát zajděte** ladicí program a spusťte upravený kód.
 
     ![Upravit a pokračovat](../debugger/media/dbg-qs-edit-and-continue.gif "Upravit a pokračovat")
 

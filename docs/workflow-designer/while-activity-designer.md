@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: ea008091-2e4c-4f64-bfa5-afb919552446
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e78d4f2e6aa332c9dfd5faebf834e4f5015c454
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9447d32f17283e7123e2f99490acc49c1613360d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433697"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99837993"
 ---
 # <a name="while-activity-designer"></a>Návrhář aktivity While
 
@@ -29,9 +29,9 @@ Následující tabulka uvádí nejužitečnější <xref:System.Activities.State
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje popisný název <xref:System.Activities.Statements.While> návrháře aktivit v hlavičce. Výchozí hodnota je while. Hodnotu lze upravit v okně **vlastnosti** nebo přímo v hlavičce návrháře aktivit.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
-|<xref:System.Activities.Statements.While.Body%2A>|Nepravda|Obsahuje aktivitu, která se má provést, když se <xref:System.Activities.Statements.While.Condition%2A> vyhodnotí jako **true**.|
-|<xref:System.Activities.Statements.While.Condition%2A>|Pravda|Obsahuje výraz Visual Basic, který je vyhodnocován pro určení, zda má být provedena aktivita v rámci <xref:System.Activities.Statements.While.Body%2A> .|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje popisný název <xref:System.Activities.Statements.While> návrháře aktivit v hlavičce. Výchozí hodnota je while. Hodnotu lze upravit v okně **vlastnosti** nebo přímo v hlavičce návrháře aktivit.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.While.Body%2A>|Ne|Obsahuje aktivitu, která se má provést, když se <xref:System.Activities.Statements.While.Condition%2A> vyhodnotí jako **true**.|
+|<xref:System.Activities.Statements.While.Condition%2A>|Ano|Obsahuje výraz Visual Basic, který je vyhodnocován pro určení, zda má být provedena aktivita v rámci <xref:System.Activities.Statements.While.Body%2A> .|
 
 ## <a name="see-also"></a>Viz také
 

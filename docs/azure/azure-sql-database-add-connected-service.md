@@ -2,18 +2,18 @@
 title: Přidat připojení k Azure SQL Database | Microsoft Docs
 description: Přidání připojení Azure SQL Database k aplikaci pomocí připojených služeb sady Visual Studio
 author: AngelosP
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 4d720c51d7245d60d40c286c71976132a119a56f
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 9e4a695a26e17e20fbd19081b863d9f108fc16b6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902867"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841195"
 ---
 # <a name="add-a-connection-to-azure-sql-database"></a>Přidání připojení k Azure SQL Database
 
@@ -33,7 +33,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
 > [!NOTE]
 > Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [připojené služby v Visual Studio pro Mac](/visualstudio/mac/connected-services).
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Visual Studio s nainstalovanou úlohou Azure
 - Projekt jednoho z podporovaných typů
@@ -80,7 +80,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
    Pokud se zobrazí výzva k nastavení pravidel brány firewall, vyberte **Ano**.
 
-   ![Pravidla brány firewall](./media/azure-sql-database-add-connected-service/firewall-rules.png)
+   ![Pravidla firewallu](./media/azure-sql-database-add-connected-service/firewall-rules.png)
 
 1. Připojení se zobrazí v části **závislosti služby** na kartě **připojené služby** .
 

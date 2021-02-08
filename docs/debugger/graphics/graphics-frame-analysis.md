@@ -8,15 +8,15 @@ f1_keywords:
 - vs.graphics.frameanalysis
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f87686290842e0bbc3c575b5c72e3d1eeb24f351
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 4e97d0c840f6dfd49a0fb94f8f881ed690ef57c4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727720"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841117"
 ---
 # <a name="graphics-frame-analysis"></a>Analýza grafických snímků
 Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio můžete analyzovat a optimalizovat výkon vykreslování vaší hry nebo aplikace Direct3D.
@@ -175,7 +175,7 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
 ## <a name="variants"></a><a name="Variants"></a> Typy
  Každá změna, kterou analýza snímků provede, způsobem, jakým je snímek vykreslen během přehrávání, je označována jako *varianta*. Varianty, které analyzuje rámec, jsou v souladu se společnými, poměrně jednoduchými změnami, které můžete udělat pro zlepšení výkonu vykreslování nebo vizuální kvality vaší aplikace, například zmenšení velikosti textur, použití komprese textury nebo povolení různých druhů vyhlazení. Varianty přepíšou obvyklý kontext vykreslování a parametry vaší aplikace. Tady je přehled:
 
-|Variantní|Popis|
+|Variantní|Description|
 |-------------|-----------------|
 |**Velikost zobrazení 1x1**|Zmenší rozměry zobrazení na všech cílech vykreslování na 1x1 pixelů.<br /><br /> Další informace najdete v tématu [varianta velikosti zobrazení 1x1](1x1-viewport-size-variant.md) .|
 |**0x MSAA**|Zakáže multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](0x-2x-4x-msaa-variants.md) .|

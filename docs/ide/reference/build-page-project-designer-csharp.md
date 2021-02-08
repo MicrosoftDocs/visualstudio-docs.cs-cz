@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 77ff1bfc-d633-4634-ba29-9afdb6d7e362
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: f8c3409c7ba62f1deb628645b624a40de4cbeaff
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 95404beb5c2be5363c9ef91e770237b453970429
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136872"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836446"
 ---
 # <a name="build-page-project-designer-c"></a>Stránka Sestavení, návrhář projektu (C#)
 
@@ -40,7 +40,7 @@ Následující možnosti umožňují vybrat konfiguraci a platformu pro zobrazen
 
 **Konfigurace**
 
-Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastavení může být **aktivní (ladění)** (Toto je výchozí nastavení), **ladění**, **vydání**nebo **všechny konfigurace**.
+Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastavení může být **aktivní (ladění)** (Toto je výchozí nastavení), **ladění**, **vydání** nebo **všechny konfigurace**.
 
 **Platforma**
 
@@ -82,11 +82,11 @@ Pokud aplikaci spouštíte jako 64ovou aplikaci, je velikost ukazatele Dvojitá 
 
 Toto zaškrtávací políčko je k dispozici pouze v případě, že jsou splněné všechny následující podmínky:
 
-- Na **stránce sestavení**je seznam **cílů platformy** nastavený na **Libovolný procesor**.
+- Na **stránce sestavení** je seznam **cílů platformy** nastavený na **Libovolný procesor**.
 
-- Na **stránce aplikace**se v seznamu **Typ výstupu** určuje, že projekt je aplikace.
+- Na **stránce aplikace** se v seznamu **Typ výstupu** určuje, že projekt je aplikace.
 
-- Na **stránce aplikace**se v seznamu **cílový rámec** určuje .NET Framework 4,5.
+- Na **stránce aplikace** se v seznamu **cílový rámec** určuje .NET Framework 4,5.
 
 **Povolení nezabezpečeného kódu**
 
@@ -143,7 +143,7 @@ Označuje, že vaše spravovaná aplikace bude vystavovat objekt COM (obálka s 
 
 Určuje, zda kompilátor použije XML Serializer Generator Tool (Sgen.exe) k vytvoření sestavení serializace XML. Sestavení serializace mohou zlepšit výkon při spuštění v <xref:System.Xml.Serialization.XmlSerializer> případě, že jste tuto třídu použili k serializaci typů ve vašem kódu. Ve výchozím nastavení je tato možnost nastavena na hodnotu **auto**, která určuje, že sestavení serializace budou generována pouze v případě, že jste použili <xref:System.Xml.Serialization.XmlSerializer> ke kódování typů v kódu do XML. **Off** určuje, že sestavení serializace nikdy nebyla vygenerována bez ohledu na to, zda váš kód používá <xref:System.Xml.Serialization.XmlSerializer> . **V** určuje, zda mají být sestavení serializace vždy vygenerována. Sestavení serializace jsou pojmenována `TypeName`.XmlSerializers.dll. Další informace najdete v tématu [XML Serializer Generator Tool (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).
 
-**Upřesnit**
+**Pokročilý**
 
 Kliknutím zobrazíte dialogové okno [Upřesnit nastavení sestavení (C#)](../../ide/reference/advanced-build-settings-dialog-box-csharp.md) .
 

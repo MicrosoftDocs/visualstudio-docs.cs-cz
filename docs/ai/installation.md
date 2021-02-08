@@ -4,18 +4,18 @@ description: Popisuje instalaci nástrojů AI pro Visual Studio.
 keywords: AI, Visual Studio
 author: jillre
 ms.author: jillfra
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: ffa8c7634c0d97dd24ff69814ae73ad5ff12928b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cdbabcc9288a2f878b4c8cd86dbba97922f471c6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800200"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841442"
 ---
 # <a name="installation"></a>Instalace
 
@@ -27,7 +27,7 @@ Toto rozšíření spolupracuje s Visual Studiem 2015 a sadou Visual Studio 2017
 
 Nástroje si můžete stáhnout z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vstoolsai-vs2017)nebo z aplikace Visual Studio:
 
-1. Vyberte **Tools**  >  **rozšíření nástrojů a aktualizace**.
+1. Vyberte   >  **rozšíření nástrojů a aktualizace**.
 
    ![Nabídka rozšíření a aktualizace v aplikaci Visual Studio](media/installation/extensions.png)
 

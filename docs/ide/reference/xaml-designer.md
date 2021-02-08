@@ -9,15 +9,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.XAML_Designer.General
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 0955a6644e8f1dc1d42a1b22b15399a6d1ca452d
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 15bfae190ba2960c291dca635bfff1188ac64ab5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560977"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836186"
 ---
 # <a name="xaml-designer-options-page"></a>Stránka možností Návrhář XAML
 
@@ -36,7 +36,7 @@ Následující nastavení platí pouze v případě, že je povolena Návrhář 
 
 Toto nastavení použijte k určení, zda zobrazení Návrh se zobrazí při načtení dokumentů XAML.
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Zobrazení zdroje**|Určuje, zda se v zobrazení XAML zobrazuje pouze zdroj XAML. To je užitečné při načítání rozsáhlých dokumentů.|
 |**Zobrazení návrhu**|Určuje, zda se v zobrazení XAML zobrazí pouze vizuální Návrhář XAML.|
@@ -46,7 +46,7 @@ Toto nastavení použijte k určení, zda zobrazení Návrh se zobrazí při na�
 
 Toto nastavení použijte k určení, kdy a jak se Návrhář XAML zobrazí při úpravě dokumentu XAML. Tato nastavení platí pouze v případě, že je **výchozí zobrazení dokumentu** nastaveno na **rozdělené zobrazení**.
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Svisle**|Zdroj XAML se zobrazí na levé straně zobrazení XAML a Návrhář XAML se zobrazí na druhé straně.|
 |**Horizontální**|Návrhář XAML se zobrazí v horní části zobrazení XAML a zdroj XAML se zobrazí pod ním.|
@@ -56,7 +56,7 @@ Toto nastavení použijte k určení, kdy a jak se Návrhář XAML zobrazí při
 
 Pomocí tohoto nastavení můžete určit, jak přiblížení funguje při úpravách dokumentu XAML.
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Kolečko myši**|Přiblížením myši Návrhář XAML posouváním kolečka myši.|
 |**CTRL + kolečko myši**|Přiblížení Návrhář XAML tím, že stisknete klávesu **CTRL** a posunete kolečko myši.|
@@ -64,7 +64,7 @@ Pomocí tohoto nastavení můžete určit, jak přiblížení funguje při úpra
 
 Tato nastavení určují chování návrháře při úpravách dokumentu XAML.
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Automaticky pojmenovat interaktivní prvky při vytváření**|Určuje, zda je pro nový interaktivní prvek při přidání do návrháře zadán výchozí název.|
 |**Automaticky vkládat vlastnosti rozložení při vytváření elementu**|Určuje, zda jsou vlastnosti rozložení poskytnuty pro nový prvek při přidání do návrháře. Vlastnosti rozložení jsou ty, které mají vliv na rozložení ovládacího prvku, například okraje a VerticalAlignment. Následující kód XAML ukazuje, jak se vytvoří tlačítko s touto možností a bez této možnosti:<br />`<Button Content="Button" HorizontalAlignment="Left" Margin="245,56,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>`<br />`<Button Content="Button" Grid.Row="1"/>`|
@@ -75,7 +75,7 @@ Tato nastavení určují chování návrháře při úpravách dokumentu XAML.
 
 Pomocí těchto možností lze určit nastavení při úpravách souborů XAML pomocí nástroje Blend.
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Přiblížit pomocí**|Přiblížení Návrhář XAML posunutím kolečka myši nebo stiskem klávesy **CTRL** nebo **ALT** při posouvání kolečkem myši.|
 |**Jednotky typu**|Určuje, zda jsou měření v Návrháři založena na bodech nebo pixelech. Vzhledem k tomu, že univerzální aplikace pro Windows nepodporují body, jednotky se automaticky převedou na pixely, pokud je vybraná možnost **body** .|
@@ -86,7 +86,7 @@ Pomocí těchto nastavení můžete určit chování Návrhář XAML při úprav
 
 ### <a name="snapping"></a>Přichycení
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Zobrazit mřížku přichycení**|Pokud je vybrána tato možnost, mřížka se zobrazí v návrháři, aby vám pomohla Zarovnat ovládací prvky. Ovládací prvky přidávané do návrháře přichycené k těmto mřížkám, když je vybraná možnost **Přichytit k mřížce** .|
 |**Přichycení k mřížce**|Když jsou ovládací prvky přidány nebo přesunuty kolem návrháře, přichyceny k mřížce.|
@@ -103,12 +103,12 @@ Toto nastavení použijte k určení, zda se zobrazí upozornění, pokud jsou v
 
 Pomocí těchto nastavení můžete určit, zda jsou při úpravách souborů XAML v Návrhář XAML pomocí Blendu vykresleny efekty.
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Vykreslení efektů**|Určuje, zda se při úpravách souborů XAML v Návrhář XAML pomocí nástroje Blend vykreslí efekty.|
 |**Prahová hodnota přiblížení**|Určuje procento přiblížení, ve kterém se při výběru zaškrtávacího políčka **efekty vykreslování** vykreslují efekty. Pokud toto nastavení zvětšíte, efekty se už nevykreslují v Návrhář XAML.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [XAML ve WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [Návod: Moje první desktopová aplikace WPF](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: bbe7c931-b17a-4779-9cf6-59e5f9f0c172
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d012908e59be8b82e34ff68cdab1945c5bd2de8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 10c04daf8ffea8266c874dfb0fb805e551942bc9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700399"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836758"
 ---
 # <a name="sccrunscc-function"></a>SccRunScc – funkce
 Tato funkce vyvolá nástroj pro správu správy zdrojového kódu.
@@ -68,7 +68,7 @@ pro Pole vybraných názvů souborů.
 
  Tato funkce se volá s počtem a polem názvů souborů pro aktuálně vybrané soubory. Pokud nástroj pro správu tuto podporu podporuje, je možné použít seznam souborů pro předvolbu souborů v rozhraní pro správu. v opačném případě lze seznam ignorovat.
 
- Tato funkce se obvykle vyvolá, když uživatel vybere **spuštění \<Source Control Server> ** z nabídky **File**  ->  **Správa zdrojového kódu** souboru. Tato možnost nabídky **Spustit** může být vždy zakázána nebo dokonce skrytá nastavením položky registru. Podrobnosti najdete v tématu [Postup: Instalace modulu plug-in správy zdrojových kódů](../extensibility/internals/how-to-install-a-source-control-plug-in.md) . Tato funkce se volá jenom v případě, že [SccInitialize](../extensibility/sccinitialize-function.md) vrátí `SCC_CAP_RUNSCC` bit schopností (podrobnosti o této a další službě BITS najdete v části [příznaky schopností](../extensibility/capability-flags.md) ).
+ Tato funkce se obvykle vyvolá, když uživatel vybere **spuštění \<Source Control Server>** z nabídky   ->  **Správa zdrojového kódu** souboru. Tato možnost nabídky **Spustit** může být vždy zakázána nebo dokonce skrytá nastavením položky registru. Podrobnosti najdete v tématu [Postup: Instalace modulu plug-in správy zdrojových kódů](../extensibility/internals/how-to-install-a-source-control-plug-in.md) . Tato funkce se volá jenom v případě, že [SccInitialize](../extensibility/sccinitialize-function.md) vrátí `SCC_CAP_RUNSCC` bit schopností (podrobnosti o této a další službě BITS najdete v části [příznaky schopností](../extensibility/capability-flags.md) ).
 
 ## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

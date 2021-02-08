@@ -12,15 +12,15 @@ helpviewer_keywords:
 - managed code extensions [Office development in Visual Studio], VBA compared to
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4d07975061a7b2f5f655bf7f4339671f28fe14c9
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: a07711fd854bd0dc035cab776f713701d5d85200
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526409"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99838110"
 ---
 # <a name="vba-and-office-solutions-in-visual-studio-compared"></a>Srovnání řešení VBA a Office v sadě Visual Studio
   Microsoft jazyk Visual Basic for Application (VBA) používá nespravovaný kód, který je úzce integrovaný s aplikacemi Office. Systém Microsoft Office projekty vytvořené pomocí sady Visual Studio umožňují využívat nástroje pro návrh .NET Framework a sady Visual Studio.

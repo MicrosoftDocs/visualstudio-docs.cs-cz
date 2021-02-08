@@ -12,21 +12,21 @@ helpviewer_keywords:
 - Application page in Project Designer
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 675c3fbaaf1a3e49648befebca4927299649b057
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 986179e66335403cda85ba48d1652ac95b9f8171
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95871415"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836524"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Stránka Aplikace, návrhář projektu (Visual Basic)
 
 Použijte stránku **aplikace** Návrháře projektu k určení nastavení aplikace a vlastností projektu.
 
-Pro přístup ke stránce **aplikace** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte **Project**  >  **vlastnosti** projektu na řádku nabídek. Když se zobrazí **Návrhář projektu** , vyberte kartu **aplikace** .
+Pro přístup ke stránce **aplikace** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte   >  **vlastnosti** projektu na řádku nabídek. Když se zobrazí **Návrhář projektu** , vyberte kartu **aplikace** .
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -104,7 +104,7 @@ Kliknutím na toto tlačítko zobrazíte [dialogové okno informace o sestavení
 
 ### <a name="enable-application-framework"></a>Povolit aplikační architekturu
 
-Určuje, zda projekt bude používat aplikační rozhraní. Nastavení této možnosti má vliv na možnosti dostupné při spuštění **Startup form** / **spouštěcího objektu** formuláře.
+Určuje, zda projekt bude používat aplikační rozhraní. Nastavení této možnosti má vliv na možnosti dostupné při spuštění  / **spouštěcího objektu** formuláře.
 
 Pokud je toto políčko zaškrtnuté, vaše aplikace používá standard `Sub Main` . Zaškrtnutí tohoto políčka povolí funkce v části **Vlastnosti rozhraní Windows Application Framework** a také vyžaduje, abyste vybrali úvodní formulář.
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 03b2d507-f463-417e-bc22-bdac68eeda52
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb694389bbf6f913db084dca29f7787c6283d3ad
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 8f6010ffdf6873073eded63c75475115391a3964
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205018"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839596"
 ---
 # <a name="legacy-language-service-interfaces"></a>Rozhraní služby starší verze jazyka
 V případě libovolného konkrétního programovacího jazyka může být v jednu chvíli dostupná jenom jedna instance jazykové služby. Jedna služba jazyka ale může obsluhovat více než jeden editor.
@@ -43,7 +43,7 @@ V případě libovolného konkrétního programovacího jazyka může být v jed
 ## <a name="additional-language-service-interfaces"></a>Další rozhraní služby jazyka
  K dispozici jsou další rozhraní s vaší jazykovou službou. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] požádá o samostatnou instanci těchto rozhraní pro každou instanci textové vyrovnávací paměti. Proto byste měli implementovat každé z těchto rozhraní na svém vlastním objektu. V následující tabulce jsou uvedena rozhraní, která vyžadují jednu instanci každé instance vyrovnávací paměti textu.
 
-|Rozhraní|Popis|
+|Rozhraní|Description|
 |---------------|-----------------|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Spravuje doplňky okna kódu, například rozevírací panel. Toto rozhraní lze získat pomocí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> metody. V <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> každém okně kódu je jeden.|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>|Vybarvuje klíčová slova a oddělovače jazyka. Toto rozhraní lze získat pomocí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> metody. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> se volá v době vykreslování. Vyhněte se práci náročné na výpočetní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> výkon uvnitř nebo výkonu.|

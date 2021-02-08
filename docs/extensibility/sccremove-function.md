@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 20830fdc-c0e9-4a5f-bf60-33f28874442f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 17889d50dbdcf68dd4cca161d6703b8b6d69ad47
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 67b0691c3f58ad859051f0018e7b32a5a4e087da
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700459"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836706"
 ---
 # <a name="sccremove-function"></a>SccRemove – funkce
 Tato funkce odstraní soubory ze systému správy zdrojů.

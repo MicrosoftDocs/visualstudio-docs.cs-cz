@@ -13,15 +13,15 @@ helpviewer_keywords:
 - local data [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1a3166a88080eaee1042187c171c4938d236058a
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 857038700a29f423250f006e743152bceea43c14
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526558"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99838227"
 ---
 # <a name="use-local-database-files-in-office-solutions-overview"></a>Přehled použití místních souborů databáze v řešeních pro systém Office
   Do svého řešení Office můžete zahrnout soubor databáze, jako je například soubor SQL Server Express (*. mdf*) nebo soubor systém Microsoft Office Access (*. mdb*). To umožňuje koncovým uživatelům udržovat místní databázi v situacích, kdy není nutné spravovat centralizovanou databázi, například v řešení místního inventáře, které se používá pouze v jednom počítači.

@@ -4,19 +4,19 @@ description: Spuštění modelu tensorflow místně v nástrojích AI pro Visual
 keywords: AI, Visual Studio, tensorflow, místní
 author: jillre
 ms.author: jillfra
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: quickstart
 ms.devlang: python
 ms.workload:
 - multiple
-ms.openlocfilehash: eca02b74154eab5468adeabdb84efdf2839fc92e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0ceb21701958630c8b783d5b6850c5e0a0ab229a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80638746"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841377"
 ---
 # <a name="train-a-tensorflow-model-locally"></a>Místní výuka modelu TensorFlow
 
@@ -24,7 +24,7 @@ V tomto rychlém startu vytvoříme TensorFlow model s datovou sadou [mnist ruč
 
 Databáze MNIST ručně zapsaných má školicí sadu 60 000 příkladů a sadu testů 10 000 příkladů rukou psaných číslic.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Než začnete, ujistěte se, že máte nainstalované následující:
 
@@ -52,7 +52,7 @@ Stáhněte si toto [úložiště GitHub](https://github.com/Microsoft/samples-fo
 
    ![Otevřít řešení](media/tensorflow-local/open-solution.png)
 
-- V **Průzkumník řešení**Najděte projekt mnist ručně zapsaných, klikněte pravým tlačítkem a vyberte **nastavit jako spouštěný projekt**.
+- V **Průzkumník řešení** Najděte projekt mnist ručně zapsaných, klikněte pravým tlačítkem a vyberte **nastavit jako spouštěný projekt**.
 
 - Klikněte na tlačítko **Start**.
 

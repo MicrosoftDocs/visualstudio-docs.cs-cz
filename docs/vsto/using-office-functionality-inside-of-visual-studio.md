@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Office functionality inside Visual Studio
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c93994b233990e2362c62445909adb66a0eeeb9b
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 258ea4529a558c91eb115b82b35def4ca4ab6561
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528406"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99838236"
 ---
 # <a name="use-office-functionality-inside-of-visual-studio"></a>Použití funkcí Office v sadě Visual Studio
   Při vytváření projektu na úrovni dokumentu jsou dokument a přidružená aplikace hostovány v rámci sady Visual Studio, takže můžete navrhovat a pracovat přímo s dokumentem. Když máte aplikaci systém Microsoft Office otevřenou v sadě Visual Studio, obecně funguje podle očekávání. Některé funkce aplikace jsou však odlišné nebo nedostupné.
