@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 5c07cc52-6d2d-42df-9d76-9f1f769641db
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7be649a5d65f88d8263bbe8950fda1a157855ed2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 808c2f57d0fdf8f5f629b21d3c02507eecd49bd6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80732533"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99842417"
 ---
 # <a name="idebugcustomattributequery2iscustomattributedefined"></a>IDebugCustomAttributeQuery2::IsCustomAttributeDefined
 Určuje, zda vlastní atribut existuje podle názvu.
@@ -28,7 +28,7 @@ Určuje, zda vlastní atribut existuje podle názvu.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT IsCustomAttributeDefined( 
+HRESULT IsCustomAttributeDefined( 
    LPCOLESTR pszCustomAttributeName
 );
 ```

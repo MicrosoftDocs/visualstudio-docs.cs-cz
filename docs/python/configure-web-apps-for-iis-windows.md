@@ -5,18 +5,18 @@ ms.date: 12/06/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 3c756f3d9a89294ecce054650037be3f7b26c291
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40411f47e7deda48b04ac4efb9bb9bc18688989a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85540930"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839107"
 ---
 # <a name="configure-python-web-apps-for-iis"></a>Konfigurace webových aplikací v Pythonu pro službu IIS
 
@@ -86,7 +86,7 @@ Dále upravte soubor *web.config* vaší aplikace tak, aby obsahoval úplné ces
     </system.webServer>
     ```
 
-1. V `<appSettings>` části *web.config*přidejte klíče pro `WSGI_HANDLER` , `WSGI_LOG` (volitelné) a `PYTHONPATH` :
+1. V `<appSettings>` části *web.config* přidejte klíče pro `WSGI_HANDLER` , `WSGI_LOG` (volitelné) a `PYTHONPATH` :
 
     ```xml
     <appSettings>
@@ -141,8 +141,8 @@ Dále upravte soubor *web.config* vaší aplikace tak, aby obsahoval úplné ces
 
     Nepovedlo se přidat vaši adresu URL do pole, výsledkem je chyba **DisallowedHost na/neplatné hlavičce HTTP_HOST: ' \<site URL\> '. Je možné, že budete muset přidat ' \<site URL\> ' do ALLOWED_HOSTS.**
 
-    Všimněte si, že pokud je pole prázdné, Django automaticky povoluje "localhost" a "127.0.0.1", ale přidání vaší produkční adresy URL tyto možnosti odebere. Z tohoto důvodu můžete chtít udržovat samostatné vývojové a produkční kopie *Settings.py*nebo použít proměnné prostředí k řízení hodnot doby běhu.
+    Všimněte si, že pokud je pole prázdné, Django automaticky povoluje "localhost" a "127.0.0.1", ale přidání vaší produkční adresy URL tyto možnosti odebere. Z tohoto důvodu můžete chtít udržovat samostatné vývojové a produkční kopie *Settings.py* nebo použít proměnné prostředí k řízení hodnot doby běhu.
 
 ## <a name="deploy-to-iis-or-a-windows-vm"></a>Nasazení do služby IIS nebo virtuálního počítače s Windows
 
-Se správným souborem *web.config* v projektu můžete publikovat do počítače se službou IIS pomocí příkazu **publikovat** v místní nabídce projektu v **Průzkumník řešení**a vybrat možnost, **IIS, FTP atd.**. V tomto případě Visual Studio jednoduše zkopíruje soubory projektu na server; Zodpovídáte za všechny konfigurace na straně serveru.
+Se správným souborem *web.config* v projektu můžete publikovat do počítače se službou IIS pomocí příkazu **publikovat** v místní nabídce projektu v **Průzkumník řešení** a vybrat možnost, **IIS, FTP atd.**. V tomto případě Visual Studio jednoduše zkopíruje soubory projektu na server; Zodpovídáte za všechny konfigurace na straně serveru.

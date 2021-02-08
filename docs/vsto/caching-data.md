@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data caching [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: db22378477daffd4562a9d60c6b30bc7b96e58e2
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: f31556e64ee93a73fb09c27edd095bcd2653dfdc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847868"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836160"
 ---
 # <a name="cache-data"></a>Data mezipaměti
   Datové objekty můžete ukládat do mezipaměti v přizpůsobení na úrovni dokumentu, aby k datům bylo možné přejít offline nebo bez nutnosti otevírat systém Microsoft Office Word nebo systém Microsoft Office Excelu. Chcete-li objekt ukládat do mezipaměti, musí mít objekt datový typ, který splňuje určité požadavky. Mnoho běžných datových typů v .NET Framework splňuje tyto požadavky, včetně <xref:System.String> , <xref:System.Data.DataSet> a <xref:System.Data.DataTable> .

@@ -2,17 +2,17 @@
 title: Nastavení přihlašovacích údajů s názvem ověřování | Microsoft Docs
 description: Naučte se, jak zadat přihlašovací údaje, které může Visual Studio použít k ověřování požadavků do Azure, takže můžete publikovat aplikaci do Azure ze sady Visual Studio nebo monitorovat stávající cloudovou službu.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 059ac654f13ed833e80464e74e18a6cb8b0f8132
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: bd4c1864539d915e34b286debb3f6b2f739049d5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901996"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99843797"
 ---
 # <a name="set-up-named-authentication-credentials"></a>Nastavení pojmenovaných přihlašovacích údajů pro ověřování
 

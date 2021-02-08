@@ -5,18 +5,18 @@ ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 95558da015462899d0388870fce95d19030fc291
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: f24ccfbe66075cdb5b9f0fb257e401b611862044
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442096"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99842664"
 ---
 # <a name="require-mssql"></a>require-mssql
 
@@ -53,7 +53,7 @@ Výchozím chováním `require-mssql` nástroje je instalace systému SQL Server
 
 `require-mssql`Nástroj nastaví řadu argumentů příkazového řádku instalačního programu, aby bylo zajištěno, že instalační program může běžet bez periferních zařízení. Níže jsou uvedené argumenty a dokumentace k nim najdete v [dokumentaci k instalaci SQL](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-ver15&preserve-view=true).
 
-| Název                                                               | Popis |
+| Název                                                               | Description |
 |--------------------------------------------------------------------|-------------|
 | /q                                                                 |             |
 | Za akci = instalovat                                                    |             |

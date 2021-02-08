@@ -2,18 +2,18 @@
 title: Ladění cloudové služby Azure nebo virtuálního počítače
 description: Ladění cloudové služby nebo virtuálního počítače v aplikaci Visual Studio
 author: mikejo5000
-manager: jillfra
+manager: jmartens
 ms.topic: how-to
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: c6e03bb4048b077bb4e1faa8b0382a3f4dbaf856
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: c7a95c43435cf78f169ce363b3e8fe301e9d0cbe
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902556"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844330"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Ladění cloudové služby Azure nebo virtuálního počítače v aplikaci Visual Studio
 
@@ -77,7 +77,7 @@ Pokud povolíte vzdálené ladění pro cloudovou službu, neprojeví se tím sn
 
     ![Dialog Vybrat typ kódu – dialogové okno](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-4. Chcete-li identifikovat procesy, ke kterým je připojen ladicí program, vyberte v řádku nabídek možnost **ladit**  >  **procesy systému Windows**  >  **Processes** a otevřete dialogové okno **procesy** . (Klávesnice: CTRL + ALT + Z) Chcete-li odpojit určitý proces, otevřete místní nabídku a vyberte možnost **Odpojit proces**. Nebo vyhledejte uzel instance v Průzkumník serveru, najděte proces, otevřete místní nabídku a pak vyberte **Odpojit proces**.
+4. Chcete-li identifikovat procesy, ke kterým je připojen ladicí program, vyberte v řádku nabídek možnost **ladit**  >  **procesy systému Windows**  >  a otevřete dialogové okno **procesy** . (Klávesnice: CTRL + ALT + Z) Chcete-li odpojit určitý proces, otevřete místní nabídku a vyberte možnost **Odpojit proces**. Nebo vyhledejte uzel instance v Průzkumník serveru, najděte proces, otevřete místní nabídku a pak vyberte **Odpojit proces**.
 
     ![Ladění procesů](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC690787.gif)
 

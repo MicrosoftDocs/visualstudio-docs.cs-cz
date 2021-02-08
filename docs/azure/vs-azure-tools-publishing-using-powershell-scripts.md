@@ -3,17 +3,17 @@ title: Použití PowerShellu k publikování do vývojových a testovacích pros
 description: Naučte se používat skripty prostředí Windows PowerShell ze sady Visual Studio k publikování do vývojových a testovacích prostředí.
 ms.custom: SEO-VS-2020
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 97c337adabc5ce22ce92c720a3a4d776eaecf867
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: e0486e3a13b1c6b6ba421c5c0a97788f514413e1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902140"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99843953"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Použití skriptů PowerShellu k publikování do vývojových a testovacích prostředí
 
@@ -21,7 +21,7 @@ Při vytváření webové aplikace v aplikaci Visual Studio můžete vygenerovat
 
 Pomocí těchto skriptů můžete zřídit přizpůsobené verze (označované taky jako vývojová a testovací prostředí) vašeho webu pro dočasné použití. Můžete například nastavit konkrétní verzi webu na virtuálním počítači Azure nebo na přípravném slotu na webu, abyste spustili testovací sadu, reprodukovali chybu, otestovali opravu chyby, vyzkoušeli navrhovanou změnu nebo si pro ukázku nebo prezentaci nastavili vlastní prostředí. Po vytvoření skriptu, který publikuje projekt, můžete znovu vytvořit identická prostředí tím, že skript znovu spustíte znovu, nebo spustíte skript s vlastním sestavením webové aplikace, abyste vytvořili vlastní prostředí pro testování.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * Visual Studio 2015 nebo novější s nainstalovanou **úlohou Azure** nebo Visual Studio 2013 a Azure SDK 2,3 nebo novější. Viz [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads). (Nepotřebujete, aby sada Azure SDK generovala skripty pro webové projekty. Tato funkce je určena pro webové projekty, nikoli pro webové role v Cloud Services.)
 * Azure PowerShell 0.7.4 nebo novější. Viz téma [Instalace a konfigurace prostředí Azure PowerShell](/powershell/azure/overview).
@@ -309,7 +309,7 @@ Nápovědu k funkcím, které můžete použít na příkazovém řádku prostř
 
 **AzureWebAppPublishModule**
 
-| Název funkce | Popis |
+| Název funkce | Description |
 | --- | --- |
 | Add-AzureSQLDatabase |Vytvoří novou databázi SQL Azure. |
 | Add-AzureSQLDatabases |Vytvoří databáze Azure SQL z hodnot v konfiguračním souboru JSON, který generuje aplikace Visual Studio. |
@@ -338,7 +338,7 @@ Nápovědu k funkcím, které můžete použít na příkazovém řádku prostř
 
 **Publikování – WebApplication**
 
-| Název funkce | Popis |
+| Název funkce | Description |
 | --- | --- |
 | New-AzureWebApplicationEnvironment |Vytvoří prostředky Azure, jako je například web nebo virtuální počítač. |
 | New-WebDeployPackage |Tato funkce není implementovaná. Můžete přidat příkazy v této funkci pro sestavení projektu. |

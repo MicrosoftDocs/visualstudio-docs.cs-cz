@@ -2,17 +2,17 @@
 title: Publish-WebApplicationVM | Microsoft Docs
 description: Přečtěte si, jak nasadit webovou aplikaci na virtuální počítač. Tento skript vytvoří požadované prostředky v předplatném Azure, pokud už neexistují.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 61055a21e3360419639494ee6dcd47f88440f94e
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 6bd9659adec2d1d88a7a02c7985fc0f823c5d811
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902178"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844005"
 ---
 # <a name="publish-webapplicationvm-windows-powershell-script"></a>Publish-WebApplicationVM (skript Windows PowerShellu)
 Nasadí webovou aplikaci na virtuální počítač. Skript vytvoří požadované prostředky v předplatném Azure, pokud už neexistují.

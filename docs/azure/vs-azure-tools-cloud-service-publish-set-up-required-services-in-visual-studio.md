@@ -2,17 +2,17 @@
 title: Příprava na publikování nebo nasazení cloudové služby
 description: Naučte se postup nastavení služeb cloudu a účtu úložiště a konfiguraci aplikace Azure.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: c048968ca97484812b7423a16e4a1834e1c8a66b
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 06157f1476762af5bfe24ce950e29e80ac60e6b1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902497"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844421"
 ---
 # <a name="prepare-to-publish-or-deploy-a-cloud-service-from-visual-studio"></a>Příprava na publikování nebo nasazení cloudové služby v sadě Visual Studio
 
@@ -39,7 +39,7 @@ Cloudová služba spouští vaše role v prostředí Azure. Cloudovou službu m�
 1. Vyberte **+ Přidat** a zadejte požadované informace (název DNS, předplatné, skupina prostředků a umístění). V tomto okamžiku není nutné nahrávat balíček, protože to provedete později v aplikaci Visual Studio.
 1. Pro dokončení procesu vyberte **vytvořit** .
 
-## <a name="create-a-storage-account"></a>vytvořit účet úložiště
+## <a name="create-a-storage-account"></a>Vytvoření účtu úložiště
 
 Účet úložiště poskytuje přístup ke službám blob, Queue a Table. Účet úložiště můžete vytvořit pomocí sady Visual Studio nebo [Azure Portal](https://portal.azure.com/).
 

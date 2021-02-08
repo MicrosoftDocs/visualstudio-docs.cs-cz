@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae9090604a16196c43b80140395eb3401215d665
-ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
+ms.openlocfilehash: dc0acd64a61acac2cb30b9251bcb4e528c08f227
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761268"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840116"
 ---
 # <a name="image-library-viewer"></a>Prohlížeč knihovny obrázků
 Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vyhledat manifesty obrázků a umožnit tak uživateli manipulovat stejným způsobem jako v aplikaci Visual Studio. Uživatel může měnit pozadí, velikosti, DPI, vysoký kontrast a další nastavení. Nástroj také zobrazí informace o načítání pro každý manifest obrázku a zobrazí informace o zdroji pro každý obrázek v manifestu obrázku. Tento nástroj je užitečný pro:
@@ -70,7 +70,7 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
 </Symbols>
 ```
 
-|**Dílčí element**|**Definice**|
+|**Dílčí element**|**Definition**|
 |-|-|
 |Import|Importuje symboly daného souboru manifestu pro použití v aktuálním manifestu.|
 |Identifikátor GUID|Symbol představuje identifikátor GUID a musí odpovídat formátování identifikátoru GUID.|
@@ -110,7 +110,7 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
 </Image>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Identifikátor GUID|Požadovanou Část GUID monikeru image|
 |ID|Požadovanou Část ID monikeru bitové kopie|
@@ -126,14 +126,14 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
  </Source>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
-|Identifikátor URI|Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může to být jedna z následujících:<br /><br /> – [Identifikátor URI balíčku](/dotnet/framework/wpf/app-development/pack-uris-in-wpf) pomocí autority Application:///<br /><br /> – Odkaz na prostředek absolutní součásti<br /><br /> – Cesta k souboru, který obsahuje nativní prostředek|
-|Pozadí|Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může to být jedna z následujících:<br /><br /> - *Světlý*: zdroj lze použít na světlém pozadí.<br /><br /> - *Tmavě*: zdroj lze použít na tmavém pozadí.<br /><br /> - *HighContrast*: zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> - *HighContrastLight*: zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> -*HighContrastDark*: zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut **Background** vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud **Background** je pozadí *světlé*, *tmavé*, *HighContrastLight* nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je **pozadí** vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku.|
+|Identifikátor URI|Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může se zobrazit některý z následujících:<br /><br /> – [Identifikátor URI balíčku](/dotnet/framework/wpf/app-development/pack-uris-in-wpf) pomocí autority Application:///<br /><br /> – Odkaz na prostředek absolutní součásti<br /><br /> – Cesta k souboru, který obsahuje nativní prostředek|
+|Pozadí|Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může se zobrazit některý z následujících:<br /><br /> - *Světlý*: zdroj lze použít na světlém pozadí.<br /><br /> - *Tmavě*: zdroj lze použít na tmavém pozadí.<br /><br /> - *HighContrast*: zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> - *HighContrastLight*: zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> -*HighContrastDark*: zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut **Background** vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud  je pozadí *světlé*, *tmavé*, *HighContrastLight* nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je **pozadí** vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku.|
 
  \<Source>Element může mít přesně jeden z následujících volitelných dílčích elementů:
 
-|**Objekt**|**Atributy (všechny povinné)**|**Definice**|
+|**Prvek**|**Atributy (všechny povinné)**|**Definition**|
 |-|-|-|
 |\<Size>|Hodnota|Zdroj se použije pro obrázky dané velikosti (v jednotkách zařízení). Obrázek bude čtvercový.|
 |\<SizeRange>|MinSize, MaxSize|Zdroj bude použit pro obrázky z MinSize do MaxSize (v jednotkách zařízení) včetně. Obrázek bude čtvercový.|
@@ -146,7 +146,7 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
 <NativeResource Type="type" ID="int" />
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Typ|Požadovanou Typ nativního prostředku, buď XAML, nebo PNG|
 |ID|Požadovanou Část celého čísla ID nativního prostředku|
@@ -162,7 +162,7 @@ Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vy
  </ImageList>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Identifikátor GUID|Požadovanou Část GUID monikeru image|
 |ID|Požadovanou Část ID monikeru bitové kopie|

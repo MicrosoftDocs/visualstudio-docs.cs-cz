@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: f366f7c9-358d-46c8-993f-32ff86539833
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e05677122b7d4e4eb025a9382ede1509374de894
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1f1149e9522803a199034395697e5c88bd988840
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80717917"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99842186"
 ---
 # <a name="ieevisualizerserviceprovidercreatevisualizerservice"></a>IEEVisualizerServiceProvider::CreateVisualizerService
 Tato metoda vytvoří službu Vizualizátoru.
@@ -28,22 +28,22 @@ Tato metoda vytvoří službu Vizualizátoru.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT CreateVisualizerService(
-   IDebugBinder*              binder,
-   IDebugSymbolProvider*      pSymProv,
-   IDebugAddress*             pAddress,
-   IEEVisualizerDataProvider* dataProvider,
-   IEEVisualizerService**     ppService
+HRESULT CreateVisualizerService(
+   IDebugBinder*              binder,
+   IDebugSymbolProvider*      pSymProv,
+   IDebugAddress*             pAddress,
+   IEEVisualizerDataProvider* dataProvider,
+   IEEVisualizerService**     ppService
 );
 ```
 
 ```csharp
-int CreateVisualizerService(
-   IDebugBinder binder,
-   IDebugSymbolProvider      pSymProv,
-   IDebugAddress             pAddress,
-   IEEVisualizerDataProvider dataProvider,
-   out IEEVisualizerService  ppService
+int CreateVisualizerService(
+   IDebugBinder binder,
+   IDebugSymbolProvider      pSymProv,
+   IDebugAddress             pAddress,
+   IEEVisualizerDataProvider dataProvider,
+   out IEEVisualizerService  ppService
 );
 ```
 

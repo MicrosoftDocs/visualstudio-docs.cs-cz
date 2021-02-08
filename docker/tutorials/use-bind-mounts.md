@@ -4,23 +4,23 @@ description: Popisuje způsob použití připojení BIND k řízení přípojné
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 6474179a0714f2407ac37e724b997139206a91fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57cb56d0d9a93d0f11e4047f6e25b64841c47e93
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178238"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841676"
 ---
 # <a name="use-bind-mounts"></a>Použít připojení vazeb
 
 V předchozí kapitole jste se dozvěděli o a použili jste **pojmenovaný svazek** pro zachování dat ve vaší databázi. Pojmenované svazky jsou skvělé, pokud chcete jenom ukládat data, protože se nemusíte starat o *to, kde* se data ukládají.
 
-S **připojením k vazbám**řídíte přesnou přípojný bod na hostiteli. Tuto možnost můžete použít k uchovávání dat, ale často se používá k poskytnutí dalších dat do kontejnerů. Při práci na aplikaci můžete použít připojení BIND pro připojení zdrojového kódu do kontejneru, aby viděli změny kódu, odpověděli a umožnili vám zobrazit změny hned.
+S **připojením k vazbám** řídíte přesnou přípojný bod na hostiteli. Tuto možnost můžete použít k uchovávání dat, ale často se používá k poskytnutí dalších dat do kontejnerů. Při práci na aplikaci můžete použít připojení BIND pro připojení zdrojového kódu do kontejneru, aby viděli změny kódu, odpověděli a umožnili vám zobrazit změny hned.
 
 Pro aplikace založené na uzlech je [nodemon](https://npmjs.com/package/nodemon) skvělým nástrojem ke sledování změn souborů a následnému restartování aplikace. Pro většinu ostatních jazyků a platforem existují ekvivalentní nástroje.
 

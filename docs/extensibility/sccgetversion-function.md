@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a6e786bf-744e-4272-9e21-0be44d23b1a1
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a563a7d1d65dc4c6564abd4e337242eea1aa9924
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 91daeca1df76f6b624d0eddf9d28222369b2cc4a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700678"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844538"
 ---
 # <a name="sccgetversion-function"></a>SccGetVersion – funkce
 Tato funkce získá číslo verze rozhraní API modulu plug-in správy zdrojového kódu podporovaného modulem plug-in správy zdrojových kódů.
@@ -34,7 +34,7 @@ LONG SccGetVersion(void);
 ## <a name="return-value"></a>Návratová hodnota
  `LONG`Datový typ, který obsahuje číslo verze podporovaného rozhraní API modulu plug-in správy zdrojových kódů:
 
-|WORD|Popis|
+|WORD|Description|
 |----------|-----------------|
 |HIWORD|Hlavní verze|
 |LOWORD|Podverze|

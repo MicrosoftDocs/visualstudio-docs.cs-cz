@@ -3,17 +3,17 @@ title: Procházení a Správa prostředků úložiště
 description: Procházení a Správa prostředků úložiště pomocí Průzkumník serveru
 ms.custom: SEO-VS-2020
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: ae45fafb562387720b652e0921624bc859ea5920
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 70656b71df09f5635ebfb5d4532256e8f0d3dd35
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902217"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99843849"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Procházení a správa prostředků úložiště pomocí Průzkumníka serveru
 
@@ -213,10 +213,10 @@ Pokud používáte Tvůrce dotazů, můžete přizpůsobit sadu entit, které se
     Zobrazí se dialogové okno **Tvůrce dotazů** . Následující ilustrace znázorňuje dotaz, který je sestaven v Tvůrci dotazů.
 
     ![Tvůrce dotazů](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC652231.png)
-1. Až budete hotovi s vytvářením dotazu, zavřete dialogové okno. Výsledný text formuláře dotazu se zobrazí v textovém poli jako filtr WCF Data Services.
+1. Až budete hotovi s vytvářením dotazu, zavřete dialogové okno. Výsledný text formuláře dotazu se zobrazí v textovém poli jako filtr Datové služby WCF.
 1. Chcete-li spustit dotaz, vyberte ikonu zeleného trojúhelníku.
 
-Můžete také filtrovat data entity, která se zobrazí v Návrháři tabulky, pokud zadáte řetězec filtru WCF Data Services přímo do textového pole Filtr. Tento druh řetězce je podobný klauzuli WHERE SQL, ale pošle se na server jako požadavek HTTP. Informace o tom, jak vytvořit řetězce filtru, naleznete v tématu [konstrukce řetězců filtru pro návrháře tabulky](vs-azure-tools-table-designer-construct-filter-strings.md).
+Můžete také filtrovat data entity, která se zobrazí v Návrháři tabulky, pokud zadáte řetězec filtru Datové služby WCF přímo do textového pole Filtr. Tento druh řetězce je podobný klauzuli WHERE SQL, ale pošle se na server jako požadavek HTTP. Informace o tom, jak vytvořit řetězce filtru, naleznete v tématu [konstrukce řetězců filtru pro návrháře tabulky](vs-azure-tools-table-designer-construct-filter-strings.md).
 
 Následující ilustrace znázorňuje příklad platného řetězce filtru:
 

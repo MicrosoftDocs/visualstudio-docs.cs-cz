@@ -5,16 +5,16 @@ ms.date: 02/28/2019
 ms.topic: overview
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 44906d70be05891fe52096adec2f61f2261b5db5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de86c2021a2abf3cd5346c684199e8f59e2d314e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70154882"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839185"
 ---
 # <a name="install-data-science-support-in-visual-studio"></a>Instalace podpory pro datové vědy v aplikaci Visual Studio
 
@@ -88,7 +88,7 @@ Pomocí kódu, ve kterém vaše data už žijí, můžete využívat následují
 
 - **Bohaté rozšíření**: můžete nainstalovat a spustit kterýkoli z nejnovějších balíčků open source v nástroji SQL Server k vytváření aplikací pro hloubkové učení a AI pro velké objemy dat v SQL Server. Instalace balíčku v SQL Server je stejně jednoduchá jako instalace balíčku do místního počítače.
 
-- **Bezplatná dostupnost bez dalších**poplatků: jazykové integrace jsou k dispozici ve všech edicích SQL Server 2017 a novějších, včetně edice Express.
+- **Bezplatná dostupnost bez dalších** poplatků: jazykové integrace jsou k dispozici ve všech edicích SQL Server 2017 a novějších, včetně edice Express.
 
 Pokud chcete plně využít výhod SQL Server integrace, pomocí instalačního programu sady Visual Studio nainstalujte úlohu **ukládání a zpracování dat** pomocí možnosti **nástroje SQL Server Data Tools** . Druhá možnost umožňuje technologii SQL IntelliSense, zvýrazňování syntaxe a nasazení.
 

@@ -2,17 +2,17 @@
 title: Optimalizace kódu Azure
 description: Přečtěte si, jak nástroje pro optimalizaci kódu Azure v aplikaci Visual Studio pomůžou zajistit robustnější a lepší výkon kódu.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 5ae141c4ecdf5cfe1819ba2f47aac45f1763fa34
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: b7a20b4ae57ee5cf1127441bc43dea021c170188
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902295"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844031"
 ---
 # <a name="optimizing-your-azure-code"></a>Optimalizace kódu Azure
 Při programování aplikací, které používají Microsoft Azure, je třeba dodržovat některé postupy kódování, které vám pomohou zabránit problémům s škálovatelností aplikace, chováním a výkonem v cloudovém prostředí. Microsoft poskytuje nástroj pro analýzu kódu Azure, který rozpozná a identifikuje několik těchto běžně zjištěných problémů a pomůže vám je vyřešit. Nástroj si můžete stáhnout v aplikaci Visual Studio prostřednictvím NuGet.
@@ -24,7 +24,7 @@ Nástroj Analýza kódu Azure používá následující pravidla k automatickém
 ### <a name="id"></a>ID
 AP0000
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Pokud pro cloudové aplikace použijete výchozí režim stavu relace (v rámci procesu), můžete ztratit stav relace.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
@@ -41,7 +41,7 @@ Jedním z doporučených řešení je uložení stavu relace ve spravované slu�
 ### <a name="id"></a>ID
 AP1000
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Vytvořte asynchronní metody (například [await](/dotnet/csharp/language-reference/operators/await)) mimo metodu [Run ()](/previous-versions/azure/reference/ee772746(v=azure.100)) a potom zavolejte asynchronní metody z rutiny [Run ()](/previous-versions/azure/reference/ee772746(v=azure.100)). Deklarace metody [[Run ()](/previous-versions/azure/reference/ee772746(v=azure.100))](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) jako Async způsobí, že role pracovního procesu vstoupí do smyčky restart.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
@@ -86,7 +86,7 @@ public async Task RunAsync()
 ### <a name="id"></a>ID
 AP2000
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Pro ověřování použijte sdílený přístupový podpis (SAS). Access Control Service (ACS) se pro ověřování Service Bus nepoužívá.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
@@ -112,7 +112,7 @@ Další informace najdete v následujících tématech.
 ### <a name="id"></a>ID
 AP2002
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Aby nedocházelo k tomu **, že volání metody "** Receive", je lepším řešením pro příjem zpráv než volání metody **Receive** . Pokud však musíte použít metodu **Receive** a zadáte nevýchozí dobu čekání serveru, ujistěte se, že doba čekání serveru je delší než jedna minuta.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
@@ -216,7 +216,7 @@ while (true)
 ### <a name="id"></a>ID
 AP2003
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Pomocí asynchronních Service Bus metod můžete zlepšit výkon pomocí zprostředkovaných zpráv.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
@@ -233,7 +233,7 @@ Pokud chcete zlepšit výkon infrastruktury zasílání zpráv Azure, přečtět
 ### <a name="id"></a>ID
 AP2004
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Rozdělení Service Bus front a témat na oddíly pro lepší výkon pomocí Service Bus zasílání zpráv.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
@@ -258,7 +258,7 @@ Další informace najdete v tématu [dělené a neService Bus fronty a témata |
 ### <a name="id"></a>ID
 AP3001
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Nepoužívejte SharedAccessStartTimeset k aktuálnímu času pro okamžité spuštění zásad sdíleného přístupu. Tuto vlastnost musíte nastavit jenom v případě, že chcete zásady sdíleného přístupu spustit později.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
@@ -290,7 +290,7 @@ blobPermissions.SharedAccessPolicies.Add("mypolicy", new SharedAccessBlobPolicy(
 ### <a name="id"></a>ID
 AP3002
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Mezi datovými centry v datových centrech v různých umístěních může být až pět minut, protože podmínka se označuje jako "hodinový posun". Pokud chcete zabránit vypršení platnosti tokenu zásad SAS před tím, než bylo plánováno, nastavte čas vypršení platnosti na více než pět minut.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
@@ -340,7 +340,7 @@ Další informace najdete v tématu [Konfigurace anonymního veřejného příst
 ### <a name="id"></a>ID
 AP4000
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Použití třídy [ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) pro projekty, jako je například web Azure a Azure Mobile Services, nezavádí běhové problémy. Jako osvědčený postup je ale vhodné použít cloudové[ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) jako jednotný způsob správy konfigurací pro všechny cloudové aplikace Azure.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
@@ -377,7 +377,7 @@ Tady je příklad, jak uložit nastavení konfigurace do souboru App.config nebo
 ### <a name="id"></a>ID
 AP4001
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Pokud používáte pevně zakódované připojovací řetězce a potřebujete je aktualizovat později, budete muset provést změny zdrojového kódu a aplikaci znovu zkompilovat. Pokud však vaše připojovací řetězce ukládáte do konfiguračního souboru, můžete je později změnit, stačí aktualizovat konfigurační soubor.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
@@ -398,7 +398,7 @@ Informace o použití konfiguračních souborů, jako jsou web.config nebo app.c
 ### <a name="id"></a>ID
 AP5000
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Namísto konfigurace nastavení diagnostiky ve vašem kódu, jako je například pomocí programovacího rozhraní API Microsoft. WindowsAzure. Diagnostics, byste měli v souboru Diagnostics. wadcfg nakonfigurovat nastavení diagnostiky. (Nebo, Diagnostics. wadcfgx, pokud používáte sadu Azure SDK 2,5). Tímto způsobem můžete změnit nastavení diagnostiky, aniž by bylo nutné znovu kompilovat kód.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
@@ -423,7 +423,7 @@ Pomocí návrháře konfigurace diagnostiky přesuňte nastavení diagnostiky do
 ### <a name="id"></a>ID
 AP6000
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 Chcete-li ušetřit paměť, vyhněte se deklaraci objektů DBContext jako statických.
 
 Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).

@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: a70785f2-5997-40ec-a90f-80a52449768b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 10fd47127abfd9cc476ed7029edd0dbbeb5501de
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: 4a1bf0409dacdd6cb2f7de65462f637124a5cecd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97903724"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99845019"
 ---
 # <a name="memory-tab-process-properties-dialog-box"></a>Karta Paměť, dialogové okno vlastností procesu
 Pomocí karty **paměť** můžete zobrazit, jak proces používá paměť. Chcete-li zobrazit [dialogové okno Vlastnosti procesu](../debugger/process-properties-dialog-box.md), přesuňte fokus do okna [zobrazení procesů](../debugger/processes-view.md) . Ve stromové struktuře vyberte libovolný uzel procesu a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .
 
  Na kartě **paměť** jsou k dispozici následující nastavení:
 
-|Entry|Popis|
+|Entry|Description|
 |-----------|-----------------|
 |**Virtuální bajty**|Aktuální velikost (v bajtech) virtuálního adresního prostoru používaného procesem. Použití virtuálního adresního prostoru nemusí nutně znamenat odpovídající použití na disku nebo hlavní paměťové stránky. Virtuální prostor je však konečný a použití příliš mnoho může omezit schopnost procesu načíst knihovny.|
 |**Virtuální bajty ve špičce**|Maximální počet bajtů virtuálního adresního prostoru, který proces v jednom okamžiku použil.|

@@ -3,17 +3,17 @@ title: Diagnostika – Azure Cloud Services & virtuálních počítačů
 ms.custom: SEO-VS-2020
 description: Naučte se, jak nastavit diagnostiku pro ladění cloudových služeb Azure a virtuálních počítačů v sadě Visual Studio.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: ababbbfcfa71f3083a292103f4fa4f1ba481faae
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: e98d335d53edb7e8771db3314944a11c534d046b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902601"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844304"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Nastavení diagnostiky pro službu Azure Cloud Services a virtuální počítače
 Pokud potřebujete řešit potíže s cloudovou službou Azure nebo virtuálním počítačem, můžete pomocí sady Visual Studio snadněji nastavit Azure Diagnostics. Diagnostika zaznamenává systémová data a data protokolování do virtuálních počítačů a instancí virtuálních počítačů, které spouštějí vaši cloudovou službu. Diagnostická data se přenesou na účet úložiště, který zvolíte. Další informace o protokolování diagnostiky v Azure najdete v tématu [Povolení protokolování diagnostiky pro Web Apps v Azure App Service](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -216,7 +216,7 @@ Jakmile shromáždíte diagnostická data pro cloudovou službu nebo virtuální
     V Průzkumníku cloudu nebo Průzkumník serveru otevřete účet úložiště, který je přidružený k nasazení.
 3. Otevřete diagnostické tabulky v prohlížeči tabulky a potom zkontrolujte shromážděná data. Pro protokoly služby IIS a vlastní protokoly můžete otevřít kontejner objektů BLOB. V následující tabulce jsou uvedeny tabulky nebo kontejnery objektů blob, které obsahují data pro různé soubory protokolu. Kromě dat pro tento soubor protokolu obsahují položky tabulky **EventTickCount**, **DeploymentID**, **role** a **RoleInstance**, které vám pomůžou zjistit, který virtuální počítač a role vygenerovala data a kdy.
 
-   | Diagnostická data | Popis | Umístění |
+   | Diagnostická data | Description | Umístění |
    | --- | --- | --- |
    | Protokoly aplikací |Protokoluje, že váš kód generuje voláním metod třídy **System. Diagnostics. Trace** . |WADLogsTable |
    | Protokoly událostí |Data z protokolů událostí systému Windows na virtuálních počítačích. Systém Windows ukládá informace v těchto protokolech, ale aplikace a služby používají protokoly k nahlášení chyb nebo informací o protokolu. |WADWindowsEventLogsTable |
