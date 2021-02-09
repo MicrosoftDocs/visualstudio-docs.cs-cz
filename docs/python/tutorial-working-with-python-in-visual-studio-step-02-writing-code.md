@@ -6,17 +6,17 @@ ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: fda68b9e5bffbd1afab3389a0d8d624312a8de3f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ca28446377c2e04766f70c9146e09dc47b8f089
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62430029"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882775"
 ---
 # <a name="step-2-write-and-run-code"></a>Krok 2: zápis a spuštění kódu
 
@@ -45,7 +45,7 @@ I když **Průzkumník řešení** je místo, kde spravujete soubory projektu, o
     ![Barevné zvýrazňování syntaxe IntelliSense a zvýrazňování chyb](media/vs-getting-started-python-06-IntelliSense3b.png)
 
     > [!Tip]
-    > Vzhledem k tomu, že je vývojové prostředí s jedním z nich velmi osobní, nabízí Visual Studio plnou kontrolu nad zobrazením a chováním sady Visual Studio. Vyberte **Tools**  >  příkaz nabídky**Možnosti** nástrojů a prozkoumejte nastavení pod kartami **prostředí** a **textový editor** . Ve výchozím nastavení vidíte pouze omezený počet možností; Chcete-li zobrazit všechny možnosti pro všechny programovací jazyky, vyberte možnost **Zobrazit všechna nastavení** v dolní části dialogového okna.
+    > Vzhledem k tomu, že je vývojové prostředí s jedním z nich velmi osobní, nabízí Visual Studio plnou kontrolu nad zobrazením a chováním sady Visual Studio. Vyberte   >  příkaz nabídky **Možnosti** nástrojů a prozkoumejte nastavení pod kartami **prostředí** a **textový editor** . Ve výchozím nastavení vidíte pouze omezený počet možností; Chcete-li zobrazit všechny možnosti pro všechny programovací jazyky, vyberte možnost **Zobrazit všechna nastavení** v dolní části dialogového okna.
 
 1. Spuštěním kódu, který jste napsali do tohoto bodu, stiskněte **klávesu CTRL** + **F5** nebo vyberte **ladit**  >  **Spustit bez ladění** položky nabídky. Visual Studio vás upozorní, pokud stále máte chyby ve vašem kódu.
 

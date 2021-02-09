@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Visual Studio Tools for Office runtime, assemblies
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 86c3c2b77b6bbea1e609bbea092b44bd1dee1dd4
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 600408231e5085009e5edc546535ca8e5110fc6e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848295"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882554"
 ---
 # <a name="assemblies-in-the-visual-studio-tools-for-office-runtime"></a>Sestavení v modulu runtime Visual Studio Tools for Office
   Při vytváření projektu sady Office sada Visual Studio automaticky přidá odkazy na [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)] sestavení, která jsou použita pro typ projektu a cílovou .NET Framework projektu. Existují různá sestavení v rozšířeních sady Office pro .NET Framework 3,5, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] a [!INCLUDE[net_v45](includes/net-v45-md.md)] . Další informace o rozšířeních Office najdete v tématu [Visual Studio Tools for Office runtime – přehled](visual-studio-tools-for-office-runtime-overview.md).
@@ -28,7 +28,7 @@ ms.locfileid: "96848295"
 ## <a name="assemblies-in-the-office-extensions-for-the-net-framework-4-and-the-net_v45"></a>Sestavení v rozšířeních sady Office pro .NET Framework 4 a [!INCLUDE[net_v45](includes/net-v45-md.md)]
  Následující tabulka uvádí sestavení, která jsou obsažena v rozšířeních sady Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] a [!INCLUDE[net_v45](includes/net-v45-md.md)] . Dokumentaci k oborům názvů a typům v těchto sestaveních naleznete v tématu [Managed reference &#40;vývoj pro Office v sadě Visual Studio&#41;](managed-reference-office-development-in-visual-studio.md).
 
-|Název sestavení|Popis|
+|Název sestavení|Description|
 |-------------------|-----------------|
 |Microsoft.Office.Tools.Common.dll|Poskytuje následující typy:<br /><br /> -Typy pro vytváření přizpůsobení pásu karet a inteligentních značek. **Poznámka:**      Inteligentní značky jsou zastaralé v [!INCLUDE[Excel_14_short](includes/excel-14-short-md.md)] a [!INCLUDE[Word_14_short](includes/word-14-short-md.md)] .<br />-Typy pro vytváření podoken akcí v přizpůsobení na úrovni dokumentu a vlastních podoknech úloh v Doplňkech VSTO.|
 |Microsoft.Office.Tools.Excel.dll|Poskytuje rozhraní, která představují hostitelské položky a hostitelské ovládací prvky pro excelové projekty a podpůrné typy. Další informace najdete v tématu [Automatizace Excelu pomocí rozšířených objektů](automating-excel-by-using-extended-objects.md).|
@@ -41,7 +41,7 @@ ms.locfileid: "96848295"
 
  Projekty, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](includes/net-v45-md.md)] také odkazují na následující sestavení. Tato sestavení nejsou součástí [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)] redistribuovatelného rozhraní. Místo toho jsou závislá sestavení, která musí být nasazena s vaším řešením. Ve výchozím nastavení jsou zkopírovány do výstupní složky sestavení pro váš projekt ( **kopie lokální** vlastnosti pro tato sestavení je nastavena na **hodnotu true**). Pokud nasadíte projekt pomocí technologie ClickOnce, jsou tato sestavení součástí vygenerovaného balíčku.
 
-|Název sestavení|Popis|
+|Název sestavení|Description|
 |-------------------|-----------------|
 |Microsoft.Office.Tools.Common.v4.0.Utilities.dll|Poskytuje základní třídy pro generovanou `ThisAddIn` třídu v projektech VSTO Add-In a vygenerovanou třídu pásu karet ve všech projektech.|
 |Microsoft.Office.Tools.Excel.v4.0.Utilities.dll|Poskytuje následující typy:<br /><br /> – Základní třídy pro vygenerované `ThisWorkbook` `Sheet` třídy a v projektech na úrovni dokumentu pro Excel.<br />-Model Windows Forms ovládací prvky, které lze použít na listech v projektech aplikace Excel.|
@@ -51,7 +51,7 @@ ms.locfileid: "96848295"
 ## <a name="assemblies-in-the-office-extensions-for-the-net-framework-35"></a>Sestavení v rozšířeních sady Office pro .NET Framework 3,5
  V následující tabulce jsou uvedena sestavení, která jsou součástí rozšíření Office pro .NET Framework 3,5. Dokumentaci o oborech názvů a třídách v těchto sestaveních naleznete v následující referenční části v dokumentaci k sadě Visual Studio 2008: [http://go.microsoft.com/fwlink/?LinkId=160658](managed-reference-office-development-in-visual-studio.md) .
 
-|Název sestavení|Popis|
+|Název sestavení|Description|
 |-------------------|-----------------|
 |Microsoft.Office.Tools.Common.v9.0.dll|Poskytuje následující typy:<br /><br /> – Základní třída Microsoft. Office. Tools. AddIn pro doplňky VSTO.<br />-Třídy pro vytváření přizpůsobení a inteligentních značek pásu karet. **Poznámka:**      Inteligentní značky jsou zastaralé v [!INCLUDE[Excel_14_short](includes/excel-14-short-md.md)] a [!INCLUDE[Word_14_short](includes/word-14-short-md.md)] .<br />-Třídy pro vytváření podoken akcí v přizpůsobení na úrovni dokumentu a vlastních podoknech úloh v Doplňkech VSTO.|
 |Microsoft.Office.Tools.Excel.v9.0.dll|Poskytuje hostitelské položky a hostitelské ovládací prvky pro řešení aplikace Excel. Další informace najdete v tématu [Automatizace Excelu pomocí rozšířených objektů](automating-excel-by-using-extended-objects.md).|

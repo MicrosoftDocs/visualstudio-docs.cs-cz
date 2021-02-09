@@ -19,15 +19,15 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], Excel host controls
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 912385950721de1d1e0b98c1b6582552210aa04a
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: e20251d695f36940fec3831d3fa78fd995a058e9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846958"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882489"
 ---
 # <a name="automate-excel-by-using-extended-objects"></a>Automatizace Excelu pomocí rozšířených objektů
   Při vývoji řešení v aplikaci Excel v aplikaci Visual Studio můžete použít *hostitelské položky* a *hostitelské řízení* s ve vašich řešeních. Jedná se o objekty, které rozšířily určité běžně používané objekty v objektovém modelu aplikace Excel (tj. objektový model, který je zveřejněn v rámci primárního definičního sestavení pro aplikaci Excel), jako jsou například <xref:Microsoft.Office.Interop.Excel.Worksheet> <xref:Microsoft.Office.Interop.Excel.Range> objekty a. Rozšířené objekty se chovají jako objekty aplikace Excel, na kterých jsou založeny, ale přidávají další funkce, jako jsou například nové události a funkce vazby dat do objektů.

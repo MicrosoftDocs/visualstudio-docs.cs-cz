@@ -5,17 +5,17 @@ ms.date: 03/13/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d410fd7575b6f71f272f6924d15249f89aa6ebcc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 97336bf028a02c6c1f90262754dc0c89aa81e1cf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85540098"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882801"
 ---
 # <a name="use-pylint-to-check-python-code"></a>Použití PyLint ke kontrole kódu Pythonu
 
@@ -23,7 +23,7 @@ ms.locfileid: "85540098"
 
 ## <a name="run-pylint"></a>Spustit PyLint
 
-Stačí kliknout pravým tlačítkem na projekt Pythonu v **Průzkumník řešení** a vybrat Pylint spustit v **Pythonu**  >  **Run PyLint**:
+Stačí kliknout pravým tlačítkem na projekt Pythonu v **Průzkumník řešení** a vybrat Pylint spustit v **Pythonu**  >  :
 
 ![Příkaz PyLint v kontextové nabídce pro projekty v Pythonu](media/code-pylint-command.png)
 

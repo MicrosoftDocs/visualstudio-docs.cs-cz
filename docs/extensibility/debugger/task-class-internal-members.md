@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 28e47c3b-9323-424a-80ac-6cc3bf19e09b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f18de66a524fbc652b8153c5b34b4464cda60f5
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 10fbc46ad66ec6265bac0a3f2fc7c9b2994915d9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996016"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883620"
 ---
 # <a name="task-class---internal-members"></a>Třída Task – interní členy
 Tento článek popisuje interní členy <xref:System.Threading.Tasks.Task?displayProperty=fullName> třídy, které vám pomůžou implementovat vlastní ladicí program. Obecné informace o této třídě naleznete v <xref:System.Threading.Tasks.Task> referenčním článku.
@@ -29,7 +29,7 @@ Tento článek popisuje interní členy <xref:System.Threading.Tasks.Task?displa
 
  Vzhledem k tomu, že nemůžete získat přístup k těmto interním členům z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .class public auto ansi System.Threading.Tasks.Task
@@ -44,14 +44,14 @@ Tento článek popisuje interní členy <xref:System.Threading.Tasks.Task?displa
 
 ### <a name="methods"></a>Metody
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |[SetNotificationForWaitCompletion – metoda](../../extensibility/debugger/setnotificationforwaitcompletion-method.md)|Nastaví nebo vymaže bit stavu TASK_STATE_WAIT_COMPLETION_NOTIFICATION.|
 |[NotifyDebuggerOfWaitCompletion – metoda](../../extensibility/debugger/notifydebuggerofwaitcompletion-method.md)|Zástupná metoda použitá jako cíl zarážky v ladicím programu.|
 
 ### <a name="fields"></a>Pole
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |[m_action](../../extensibility/debugger/m-action-field.md)|Delegát, který představuje kód, který má být spuštěn v <xref:System.Threading.Tasks.Task> objektu.|
 |[m_contingentProperties](../../extensibility/debugger/m-contingentproperties-field.md)|Ukládá další vlastnosti <xref:System.Threading.Tasks.Task> objektu.|

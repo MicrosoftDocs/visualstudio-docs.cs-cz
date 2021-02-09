@@ -9,15 +9,15 @@ helpviewer_keywords:
 - models, versions of Visual Studio
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ffbf39421f507338d14a6b05a667ec4301375067
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: a8049471e9e172496381df016c6155410f3bc244
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360686"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882931"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Čtení modelů a diagramů v jiných edicích sady Visual Studio
 
@@ -57,7 +57,7 @@ Pokud otevřete model a jeho diagramy ve verzi sady Visual Studio, která nepodp
 
 Tyto změny můžete uložit. Pokud chcete, aby se změny projevily ostatním uživatelům, musíte aspoň odeslat aktualizované soubory **. Layout** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)

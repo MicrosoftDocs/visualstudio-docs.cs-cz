@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8d096de3-33b4-427a-a122-4aeff8a72da0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4e3a128f0f2873ad1946788b34761aadd1e7021
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: aef66be9797967b8c551ad4d1674c0b7be7aad81
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994768"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883477"
 ---
 # <a name="editor-imports"></a>Importy editoru
 Můžete importovat řadu služeb editoru, továrn a zprostředkovatelů, které poskytují vaše rozšíření s různými druhy přístupu k základnímu editoru. Například můžete importovat <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> a poskytnout vám <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> pro daný typ obsahu. (Tento navigátor umožňuje provádět různé druhy hledání v textové vyrovnávací paměti.)

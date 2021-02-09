@@ -5,18 +5,18 @@ ms.date: 01/07/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: f96e9123f613cf50eebbedd393f5bce9cfa633d2
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: b76bc008c30efdee0185e6f122abaff8457acef6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91830677"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882788"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Jak nastavit prostředí Pythonu v Azure App Service (Windows)
 
@@ -33,7 +33,7 @@ Přizpůsobitelná podpora Pythonu pro Azure App Service je k dispozici jako sad
 ## <a name="choose-a-python-version-through-the-azure-portal"></a>Vyberte verzi Pythonu pomocí Azure Portal
 
 1. Vytvořte App Service pro vaši webovou aplikaci na Azure Portal.
-1. Na stránce App Service přejděte do části **vývojové nástroje** , vyberte **rozšíření**a pak vyberte **+ Přidat**.
+1. Na stránce App Service přejděte do části **vývojové nástroje** , vyberte **rozšíření** a pak vyberte **+ Přidat**.
 1. Posuňte se dolů v seznamu k rozšíření obsahujícímu požadovanou verzi Pythonu:
 
     ![Azure Portal zobrazení rozšíření Pythonu](media/python-on-azure-extensions.png)
@@ -78,11 +78,11 @@ Například po přidání odkazu na `python361x64` (Python 3.6.1 x64) může ša
 
 Po instalaci rozšíření lokality (prostřednictvím portálu nebo šablony Azure Resource Manager) budete dál nasměrovat soubor *web.config* aplikace na interpret Pythonu. *web.config* soubor dává pokyn webovému serveru služby IIS (7 +) běžícímu na App Service o tom, jak by měl zpracovávat požadavky Pythonu prostřednictvím HttpPlatform (doporučeno) nebo FastCGI.
 
-Začněte tím, že vyhledáte úplnou cestu k *python.exe*rozšíření lokality a pak vytvoříte a upravíte příslušný *web.config* soubor.
+Začněte tím, že vyhledáte úplnou cestu k *python.exe* rozšíření lokality a pak vytvoříte a upravíte příslušný *web.config* soubor.
 
 ### <a name="find-the-path-to-pythonexe"></a>Najděte cestu k python.exe
 
-Rozšíření webu Python je nainstalováno na serveru v části *d:\home* ve složce, která je vhodná pro verzi a architekturu Pythonu (kromě případu, kdy se jedná o několik starších verzí). Například Python 3.6.1 x64 je nainstalován v *d:\home\python361x64*. Pak se *d:\home\python361x64\python.exe*úplná cesta k interpretu Pythonu.
+Rozšíření webu Python je nainstalováno na serveru v části *d:\home* ve složce, která je vhodná pro verzi a architekturu Pythonu (kromě případu, kdy se jedná o několik starších verzí). Například Python 3.6.1 x64 je nainstalován v *d:\home\python361x64*. Pak se *d:\home\python361x64\python.exe* úplná cesta k interpretu Pythonu.
 
 Chcete-li zobrazit konkrétní cestu v App Service, vyberte **rozšíření** na stránce App Service a pak vyberte rozšíření v seznamu.
 
@@ -94,7 +94,7 @@ Tato akce otevře stránku s popisem rozšíření obsahující cestu:
 
 Pokud se vám nedaří zobrazit cestu k rozšíření, můžete ji najít ručně pomocí konzoly:
 
-1. Na stránce App Service vyberte **Development Tools**  >  **konzolu**vývojové nástroje.
+1. Na stránce App Service vyberte   >  **konzolu** vývojové nástroje.
 1. Zadejte příkaz `ls ../home` nebo `dir ..\home` Zobrazte složky rozšíření nejvyšší úrovně, například *Python361x64*.
 1. Zadejte příkaz, například `ls ../home/python361x64` nebo `dir ..\home\python361x64` , aby bylo možné ověřit, zda obsahuje *python.exe* a jiné soubory interpretu.
 
@@ -173,7 +173,7 @@ Chcete-li nainstalovat balíčky přímo v prostředí serveru, použijte jednu 
 
 [Konzola Kudu](https://github.com/projectkudu/kudu/wiki/Kudu-console) poskytuje přímý přístup k serveru App Service a jeho systému souborů prostřednictvím příkazového řádku se zvýšeným oprávněním. Jedná se o hodnotný nástroj pro ladění a umožňuje operace CLI, jako je instalace balíčků.
 
-1. Otevřete Kudu ze stránky App Service na Azure Portal tak, že vyberete **vývojové nástroje**  >  **Pokročilé nástroje**a pak vyberete **Přejít**. Tato akce přejde na adresu URL, která je stejná jako základní adresa URL App Service, s výjimkou `.scm` vloženého. Například pokud je vaše základní adresa URL, `https://vspython-test.azurewebsites.net/` pak Kudu je zapnuto `https://vspython-test.scm.azurewebsites.net/` (kterou můžete založit do záložky):
+1. Otevřete Kudu ze stránky App Service na Azure Portal tak, že vyberete **vývojové nástroje**  >  **Pokročilé nástroje** a pak vyberete **Přejít**. Tato akce přejde na adresu URL, která je stejná jako základní adresa URL App Service, s výjimkou `.scm` vloženého. Například pokud je vaše základní adresa URL, `https://vspython-test.azurewebsites.net/` pak Kudu je zapnuto `https://vspython-test.scm.azurewebsites.net/` (kterou můžete založit do záložky):
 
     ![Konzola Kudu pro Azure App Service](media/python-on-azure-console01.png)
 

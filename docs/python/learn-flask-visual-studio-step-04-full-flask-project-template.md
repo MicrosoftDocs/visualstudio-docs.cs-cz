@@ -6,17 +6,17 @@ ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: fa59197e584c6c8062c13354178f883b60b36442
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ef9154a34ddd08e7e0a4b9434f7f748b2603aef4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250567"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882866"
 ---
 # <a name="step-4-use-the-full-flask-web-project-template"></a>Krok 4: použití šablony webového projektu na celé baňce
 
@@ -39,7 +39,7 @@ Tento článek se vztahuje také na šablonu "webový projekt v baňce/Jade", kt
 
 1. V dialogovém okně Nový projekt vyhledejte a vyberte šablonu **webového projektu baňky** , zavolejte projekt "FlaskWeb" a vyberte **OK**.
 
-1. Vzhledem k tomu, že šablona znovu obsahuje soubor *requirements.txt* , Visual Studio zobrazí výzvu k instalaci těchto závislostí. Zvolte možnost, **nainstalujte ji do virtuálního prostředí**a v dialogovém okně **Přidat virtuální prostředí** vyberte **vytvořit** a přijměte výchozí hodnoty.
+1. Vzhledem k tomu, že šablona znovu obsahuje soubor *requirements.txt* , Visual Studio zobrazí výzvu k instalaci těchto závislostí. Zvolte možnost, **nainstalujte ji do virtuálního prostředí** a v dialogovém okně **Přidat virtuální prostředí** vyberte **vytvořit** a přijměte výchozí hodnoty.
 
 1. Jakmile sada Visual Studio dokončí nastavení virtuálního prostředí, nastavte projekt **FlaskWeb** jako výchozí pro řešení sady Visual Studio tak, že kliknete pravým tlačítkem na projekt v **Průzkumník řešení** a vyberete **nastavit jako spouštěný projekt**. Spouštěný projekt, který je zobrazen tučně, je spuštěn při spuštění ladicího programu.
 
@@ -69,10 +69,10 @@ Tento článek se vztahuje také na šablonu "webový projekt v baňce/Jade", kt
   - *runserver.py*, skript pro spuštění aplikace na vývojovém serveru.
   - *requirements.txt* , který obsahuje závislost na baňce 0. x.
 - Složka *FlaskWeb* obsahuje všechny soubory aplikace:
-  - init.py označí kód aplikace jako modul Pythonu, vytvoří objekt v baňce a naimportuje zobrazení aplikace. * \_ \_ \_ \_ *
+  - init.py označí kód aplikace jako modul Pythonu, vytvoří objekt v baňce a naimportuje zobrazení aplikace. *\_ \_ \_ \_*
   - *views.py* obsahuje kód pro vykreslení stránek.
   - *Statická* složka obsahuje podsložky s názvem *Content* (soubory CSS), *písma* (soubory písem) a *skripty* (soubory JavaScriptu).
-  - Složka *šablony* obsahuje základní šablonu *layout.html* spolu s *about.html*, *contact.html*a *index.html* pro konkrétní stránky, které každá rozšiřuje *layout.html*.
+  - Složka *šablony* obsahuje základní šablonu *layout.html* spolu s *about.html*, *contact.html* a *index.html* pro konkrétní stránky, které každá rozšiřuje *layout.html*.
 
 ### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>Otázka: je možné sdílet virtuální prostředí mezi projekty sady Visual Studio?
 
@@ -81,7 +81,7 @@ Odpověď: Ano, ale udělejte to s vědomím, že různé projekty nejspíš v p
 Chcete-li však použít stávající virtuální prostředí, postupujte následovně:
 
 1. Až se zobrazí výzva k instalaci závislostí v aplikaci Visual Studio, vyberte možnost **instalovat** vlastní.
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte **Přidat existující virtuální prostředí**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte **Přidat existující virtuální prostředí**.
 1. Přejděte na složku obsahující virtuální prostředí a vyberte ji a pak vyberte **OK**.
 
 ## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>Krok 4-2: porozumění zobrazením a šablonám stránek vytvořeným šablonou projektu
@@ -141,7 +141,7 @@ def about():
 </html>
 ```
 
-Jednotlivé šablony stránky, *about.html*, *contact.html*a *index.html*, každý rozšiřuje základní šablonu *layout.html*. *about.html* je nejjednodušší a ukazuje `{% extends %}` `{% block content %}` značky a:
+Jednotlivé šablony stránky, *about.html*, *contact.html* a *index.html*, každý rozšiřuje základní šablonu *layout.html*. *about.html* je nejjednodušší a ukazuje `{% extends %}` `{% block content %}` značky a:
 
 ```html
 {% extends "app/layout.html" %}
@@ -164,7 +164,7 @@ Jak je uvedeno na začátku tohoto článku, Visual Studio poskytuje šablonu pr
 
 Aby bylo možné povolit Jade, šablona projektu nejprve zahrnuje balíček pyjade v *requirements.txt*.
 
-Soubor * \_ \_ init \_ \_ . py* aplikace obsahuje řádek pro
+Soubor *\_ \_ init \_ \_ . py* aplikace obsahuje řádek pro
 
 ```python
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')

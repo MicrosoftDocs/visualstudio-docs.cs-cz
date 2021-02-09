@@ -6,17 +6,17 @@ ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c9adda5eb9edba5e1ba62097d55c033be6c85d2e
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 611bad608d3619e020994ad7325ad7a678fe1e24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099359"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882827"
 ---
 # <a name="step-5-use-the-polls-flask-web-project-template"></a>Krok 5: použití šablony webového projektu v baňce k dotazování
 
@@ -40,7 +40,7 @@ Visual Studio také poskytuje šablonu "webový projekt pro cyklické dotazy neb
 
 1. V dialogovém okně Nový projekt vyhledejte a vyberte šablonu **webového projektu baňky dotazů** , zavolejte na projekt "FlaskPolls" a vyberte **OK**.
 
-1. Podobně jako u jiných šablon projektů v aplikaci Visual Studio šablona "webový projekt s předplatným dotazování" obsahuje soubor *requirements.txt* , Visual Studio zobrazí výzvu k instalaci těchto závislostí. Zvolte možnost, **nainstalujte ji do virtuálního prostředí**a v dialogovém okně **Přidat virtuální prostředí** vyberte **vytvořit** a přijměte výchozí hodnoty. (Tato šablona vyžaduje baňce a balíčky Azure-Storage a pymongo; "dotazování na baňky/Jade webového projektu" také vyžaduje pyjade.)
+1. Podobně jako u jiných šablon projektů v aplikaci Visual Studio šablona "webový projekt s předplatným dotazování" obsahuje soubor *requirements.txt* , Visual Studio zobrazí výzvu k instalaci těchto závislostí. Zvolte možnost, **nainstalujte ji do virtuálního prostředí** a v dialogovém okně **Přidat virtuální prostředí** vyberte **vytvořit** a přijměte výchozí hodnoty. (Tato šablona vyžaduje baňce a balíčky Azure-Storage a pymongo; "dotazování na baňky/Jade webového projektu" také vyžaduje pyjade.)
 
 1. Nastavte projekt **FlaskPolls** jako výchozí pro řešení sady Visual Studio tak, že kliknete pravým tlačítkem na projekt v **Průzkumník řešení** a vyberete **nastavit jako spouštěný projekt**. Spouštěný projekt, který je zobrazen tučně, je spuštěn při spuštění ladicího programu.
 
@@ -145,7 +145,7 @@ Mechanismus úložiště dat funguje takto:
         raise ValueError('Unknown repository.')
     ```
 
-1. V *views.py*aplikace volá metodu Factory pro inicializaci `Repository` objektu pomocí názvu a nastavení úložiště dat:
+1. V *views.py* aplikace volá metodu Factory pro inicializaci `Repository` objektu pomocí názvu a nastavení úložiště dat:
 
     ```python
     from FlaskPolls.models import PollNotFound
@@ -174,7 +174,7 @@ Mechanismus úložiště dat funguje takto:
         return Repository(settings)
     ```
 
-1. Implementace `Repository` třídy, které jsou specifické pro každé úložiště dat, lze nalézt v *models\azuretablestorage.py*, *models\mongodb.py*a *models\memory.py*. Implementace Azure Storage používá balíček Azure-Storage. implementace Mongo DB používá balíček pymongo. Jak je uvedeno v kroku 5-1, jsou oba balíčky zahrnuty do souboru *requirements.txt* šablony projektu. Zkoumání podrobností je ponecháno jako cvičení pro čtenáře.
+1. Implementace `Repository` třídy, které jsou specifické pro každé úložiště dat, lze nalézt v *models\azuretablestorage.py*, *models\mongodb.py* a *models\memory.py*. Implementace Azure Storage používá balíček Azure-Storage. implementace Mongo DB používá balíček pymongo. Jak je uvedeno v kroku 5-1, jsou oba balíčky zahrnuty do souboru *requirements.txt* šablony projektu. Zkoumání podrobností je ponecháno jako cvičení pro čtenáře.
 
 V krátké `Repository` době třída obsahuje specifické údaje úložiště dat a aplikace používá proměnné prostředí za běhu k výběru a konfiguraci, které ze tří implementací použít.
 

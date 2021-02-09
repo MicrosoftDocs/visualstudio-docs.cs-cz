@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: b9b3e6e8-1e30-4c89-9862-330265dcf38c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d446e731c08b85c2c903c2414528ac2a7370c26
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: dd7d1ce463377daa2800d5c3e635adc71935d9d0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97875528"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883165"
 ---
 # <a name="property-pages"></a>Stránky vlastností
 Uživatelé mohou zobrazit a změnit konfiguraci projektu závislé a nezávislé vlastnosti pomocí stránek vlastností. Tlačítko **stránky vlastností** je povoleno v okně **vlastnosti** nebo na panelu nástrojů Průzkumník řešení pro objekty, které poskytují zobrazení stránky vlastností vybraného objektu. Stránky vlastností jsou vytvořeny prostředím a jsou k dispozici pro řešení a projekty. Mohou však být zpřístupněny také pro položky projektu, které využívají vlastnosti závislé na konfiguraci. Tato funkce může být použita, pokud soubory v projektu vyžadují pro správné sestavení jiné nastavení přepínače kompilátoru.

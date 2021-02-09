@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], get an entity
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a02e88b0168a6aa4b1a69af3ee14150a71e76037
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 237cd28bffece4517e80b979602ac8d2ed357aa2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849725"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882684"
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>Postupy: Přidání konkrétní vyhledávací metody
   Jednu instanci entity můžete vrátit vytvořením *konkrétní vyhledávací* metody. Služba BDC (Business Data Connectivity) spouští konkrétní vyhledávací metodu, když uživatel zvolí entitu ve webové části nebo v externím seznamu obchodních dat. Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).

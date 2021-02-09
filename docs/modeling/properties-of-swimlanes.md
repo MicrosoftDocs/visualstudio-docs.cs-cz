@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Domain-Specific Language, swimlane
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fef3b2115be499197030a4ce7fd49b1dd849de12
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 61994a25b5fa862a2014e2dd5b57a0c47130e6ba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363065"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882983"
 ---
 # <a name="properties-of-swimlanes"></a>Vlastnosti drah
 Do diagramu můžete přidat plavecké dráhy. Plavecké dráhy rozdělí diagram na svislé nebo vodorovné oblasti. Můžete definovat další obrazce, které se mají zobrazit v rámci plaveckých drah. Další informace najdete v tématu [definování Domain-Specificho jazyka](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak tyto vlastnosti použít, najdete v tématu [přizpůsobení a rozšíření Domain-Specificho jazyka](../modeling/customizing-and-extending-a-domain-specific-language.md).
@@ -47,11 +47,11 @@ Do diagramu můžete přidat plavecké dráhy. Plavecké dráhy rozdělí diagra
 |Počáteční výška|Počáteční výška této plavecké dráhy v palcích Platí pouze pro horizontální plavecké dráhy.|0|
 |Počáteční Šířka|Počáteční šířka této plavecké dráhy v palcích Platí pouze pro vertikální plavecké dráhy.|0|
 |Zpřístupňuje barvu textu|Pokud `True` uživatel může nastavit barvu plavecké dráhy ve vygenerovaném návrháři. Pokud to chcete nastavit, klikněte pravým tlačítkem myši na obrazec plavecká dráha a klikněte na **Přidat vystavené**.|Ne|
-|Popis|Slouží k dokumentování vygenerovaného návrháře.|\<none>|
+|Description|Slouží k dokumentování vygenerovaného návrháře.|\<none>|
 |Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři, aby odkazoval na tuto třídu plavecké dráhy.|\<none>|
 |Pevný text popisu|Text, který se používá pro pevný popis.|\<none>|
 |Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tuto plaveckou dráhu.|\<none>|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

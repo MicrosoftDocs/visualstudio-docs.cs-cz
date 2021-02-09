@@ -17,15 +17,15 @@ helpviewer_keywords:
 - controls, data binding
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9be201899f0e2ff4f685343d58a859d8a9157068
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 459c50b5f8135756f85de852a62de44b3878148d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844423"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882476"
 ---
 # <a name="bind-data-to-controls-in-office-solutions"></a>Vázání dat k ovládacím prvkům v řešeních pro systém Office
   Ovládací prvky model Windows Forms a *hostitelské ovládací prvky* lze vytvořit pomocí systém Microsoft Office dokumentu aplikace Word nebo systém Microsoft Office listu aplikace Excel na zdroj dat, aby ovládací prvky automaticky zobrazily data. Data lze navazovat na ovládací prvky v projektech na úrovni aplikace i na úrovni dokumentu.

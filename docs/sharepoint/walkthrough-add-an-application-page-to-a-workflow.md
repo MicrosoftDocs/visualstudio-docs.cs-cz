@@ -14,15 +14,15 @@ helpviewer_keywords:
 - application page [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c862c1de3b0630b3a5144f821e6266c34a88a5db
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: d07b5272a31a0c649e12f353aefaa7c63c335eb5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915658"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882658"
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>Návod: Přidání stránky aplikace do pracovního postupu
   Tento návod ukazuje, jak přidat stránku aplikace, která zobrazuje data odvozená z pracovního postupu do projektu pracovního postupu. Sestaví se na projektu popsaném v tématu [Názorný postup: vytvoření pracovního postupu pomocí formulářů přidružení a inicializace](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md).
@@ -37,7 +37,7 @@ ms.locfileid: "96915658"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.

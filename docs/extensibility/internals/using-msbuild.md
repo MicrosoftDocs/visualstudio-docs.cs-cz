@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9d38c388-1f64-430e-8f6c-e88bc99a4260
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d5168d739e49ebfc78054ea695f8b73a3e06fbc
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: 92c423254c2e2e0a605ab3f7ff2238db41f4b45a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97487670"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883126"
 ---
 # <a name="using-msbuild"></a>Použití nástroje MSBuild
 Nástroj MSBuild poskytuje dobře definovaný rozšiřitelný formát XML pro vytváření souborů projektu, které plně popisují položky projektu, které mají být sestaveny, úkoly sestavení a konfigurace sestavení.
@@ -27,7 +27,7 @@ Nástroj MSBuild poskytuje dobře definovaný rozšiřitelný formát XML pro vy
 ## <a name="general-msbuild-considerations"></a>Obecné předpoklady pro MSBuild
  Soubory projektu MSBuild, například [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] soubory. csproj a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . vbproj, obsahují data, která se používají v době sestavování, ale mohou obsahovat také data, která se používají v době návrhu. Data při sestavení se ukládají pomocí primitiv MSBuild, včetně [prvku Item (MSBuild)](../../msbuild/item-element-msbuild.md) a [elementu Property (MSBuild)](../../msbuild/property-element-msbuild.md). Data v době návrhu, která jsou specifická pro typ projektu a všechny související podtypy projektu, jsou uložena v souboru XML, který je pro něj vyhrazený.
 
- Nástroj MSBuild nemá nativní podporu pro objekty konfigurace, ale poskytuje podmíněné atributy pro zadávání dat specifických pro konfiguraci. Například:
+ Nástroj MSBuild nemá nativní podporu pro objekty konfigurace, ale poskytuje podmíněné atributy pro zadávání dat specifických pro konfiguraci. Příklad:
 
 ```xml
 <OutputDir Condition="'$(Configuration)'=="release'">Bin\MyReleaseConfig</OutputDir>
@@ -57,5 +57,5 @@ Nástroj MSBuild poskytuje dobře definovaný rozšiřitelný formát XML pro vy
 
 ## <a name="see-also"></a>Viz také
 - [Referenční dokumentace nástroje MSBuild](../../msbuild/msbuild-reference.md)
-- [Nástroji](../../msbuild/msbuild.md)
+- [MSBuild](../../msbuild/msbuild.md)
 - [Vlastní nástroje](../../extensibility/internals/custom-tools.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a12d10d8-af49-482a-af77-e084fd07a47d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 463219218994c9ec1e0f8a5be6e43a0bfd3f5d49
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: d909e70f38800bdbeb873ad3fd9bff1d55132825
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671256"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883425"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>Enablelocationbrowsebutton – – element (šablony sady Visual Studio)
 Určuje, zda je v dialogovém okně **Nový projekt** k dispozici tlačítko **Procházet** , aby uživatelé mohli snadno upravit výchozí adresář, do kterého je uložen nový projekt.

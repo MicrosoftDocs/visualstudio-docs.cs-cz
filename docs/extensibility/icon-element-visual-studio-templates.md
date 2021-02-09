@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ec01d903-f4c2-4ca2-9cbc-e939ec84016c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 059105b9d188c0e7a81252172aa2d1bf7002420c
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: fced03b190ab46885c5d786b8374a05c3bd043b1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672688"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883295"
 ---
 # <a name="icon-element-visual-studio-templates"></a>Icon – element (šablony sady Visual Studio)
 Určuje cestu a název souboru obrázku, který slouží jako ikona, která se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** pro šablonu.
