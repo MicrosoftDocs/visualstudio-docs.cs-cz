@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 1b0d2bbd-0729-4aa5-8308-70c5bf1468c5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c29e240d4be2f66fb0684bf5372d59fe5d4d825a
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: a8eff8a088823bc46363d2e5ea7b40b3e2b8478e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96995054"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890432"
 ---
 # <a name="walkthrough-missing-objects-due-to-device-state"></a>Návod: Chybějící objekty z důvodu stavu zařízení
 Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Diagnostika grafiky k prozkoumání objektu, který chybí kvůli nesprávně nakonfigurovanému stavu zařízení.
@@ -30,7 +30,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 - Zkontrolujte stav zařízení a vyhledejte možné problémy nebo chyby konfigurace.
 
-## <a name="scenario"></a>Scénář
+## <a name="scenario"></a>Scenario
  Jeden z důvodů, proč se objekty nemusí zobrazit tam, kde jsou očekávány v 3D aplikaci, je chybná konfigurace grafického zařízení, které způsobuje, že objekty budou vyloučeny z vykreslování – například v případě, že pořadí vinutí způsobuje odstranění trojúhelníků v chybě nebo když funkce hloubkového testu způsobí, že všechny pixely v objektu budou odmítnuty.
 
  Ve scénáři, který je popsaný v tomto návodu, jste právě dosáhli prvního milníku ve vývoji vaší 3D aplikace a jste připraveni ho otestovat poprvé. Při spuštění aplikace se ale na obrazovku vykresluje jenom uživatelské rozhraní. Pomocí Diagnostika grafiky zachytíte problém do souboru protokolu grafiky, abyste mohli aplikaci ladit. Problém v této aplikaci vypadá následovně:

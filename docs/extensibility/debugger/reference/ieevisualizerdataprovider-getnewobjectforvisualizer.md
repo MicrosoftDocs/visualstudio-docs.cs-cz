@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: a898d549-4898-4fde-aad1-e8bb89129652
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c478ca3fc913f5ab79f37a957b05ff1d665f8aa5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98566507b3fdc3f519cc645991807c1d437bbcfe
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80718111"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890965"
 ---
 # <a name="ieevisualizerdataprovidergetnewobjectforvisualizer"></a>IEEVisualizerDataProvider::GetNewObjectForVisualizer
 Tato metoda získá nový objekt pro Vizualizér. Tato metoda vždy vytvoří nový objekt z existujícího objektu.
@@ -28,14 +28,14 @@ Tato metoda získá nový objekt pro Vizualizér. Tato metoda vždy vytvoří no
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetNewObjectForVisualizer(
-   IDebugObject** ppObject
+HRESULT GetNewObjectForVisualizer(
+   IDebugObject** ppObject
 );
 ```
 
 ```csharp
-int GetNewObjectForVisualizer(
-   out IDebugObject ppObject
+int GetNewObjectForVisualizer(
+   out IDebugObject ppObject
 );
 ```
 

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, replaceable parameters
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload: office
-ms.openlocfilehash: 1cd44b3edfaeae376e5a4a9698d138bd75c03bf8
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 3eb6e737a1f939e05e6a6be7f2c9ba950fc411d6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95970251"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889496"
 ---
 # <a name="replaceable-parameters"></a>Nahraditelné parametry
   Nahraditelné parametry nebo *tokeny* lze použít uvnitř projektových souborů k poskytnutí hodnot pro položky řešení služby SharePoint, jejichž skutečné hodnoty nejsou v době návrhu známy. Jsou obdobou funkcí pro standardní [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] tokeny šablon. Další informace najdete v tématu [parametry šablony](../ide/template-parameters.md).

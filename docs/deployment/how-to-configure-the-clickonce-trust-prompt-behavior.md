@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: cc04fa75-012b-47c9-9347-f4216be23cf2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 68d39bed64ff1392c83d6fc2be0de936ac1b00d2
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 8cb23eeee53990113d779e241adb8dcf1ab0cf16
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350059"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890302"
 ---
 # <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>Postupy: Konfigurace chování výzvy důvěryhodnosti ClickOnce
 Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která určuje, jestli mají koncoví uživatelé možnost instalovat aplikace ClickOnce, například model Windows Forms aplikace, Windows Presentation Foundation aplikace, konzolové aplikace, aplikace pro prohlížeč WPF a řešení pro Office. Výzvu pro důvěryhodnost konfigurujete nastavením klíčů registru pro jednotlivé počítače koncového uživatele.
 
  V následující tabulce jsou uvedeny možnosti konfigurace, které lze použít pro každou z pěti zón (Internet, UntrustedSites, MyComputer, LocalIntranet a TrustedSites).
 
-|Možnost|Hodnota nastavení registru|Popis|
+|Možnost|Hodnota nastavení registru|Description|
 |------------|----------------------------|-----------------|
 |Povolte dotaz Trust.|`Enabled`|Zobrazí se výzva vztahu důvěryhodnosti ClickOnce, aby koncoví uživatelé mohli udělovat důvěru aplikacím ClickOnce.|
 |Omezení výzvy vztahu důvěryhodnosti.|`AuthenticodeRequired`|Výzva k zobrazení výzvy důvěryhodnosti ClickOnce se zobrazí pouze v případě, že jsou aplikace ClickOnce podepsány certifikátem, který identifikuje vydavatele.|
@@ -55,7 +55,7 @@ Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která ur�
 
 #### <a name="to-enable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Povolení výzvy vztahu důvěryhodnosti ClickOnce pomocí Editoru registru
 
-1. Otevřete editor registru: .
+1. Otevřete Editor registru:
 
     1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 
@@ -67,7 +67,7 @@ Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která ur�
 
      Pokud klíč neexistuje, vytvořte ho.
 
-3. Přidejte následující podklíče jako **řetězcovou hodnotu** , pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
+3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
 
     |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|
@@ -114,7 +114,7 @@ Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která ur�
 
 #### <a name="to-restrict-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Omezení výzvy vztahu důvěryhodnosti ClickOnce pomocí Editoru registru
 
-1. Otevřete editor registru: .
+1. Otevřete Editor registru:
 
     1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 
@@ -126,7 +126,7 @@ Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která ur�
 
      Pokud klíč neexistuje, vytvořte ho.
 
-3. Přidejte následující podklíče jako **řetězcovou hodnotu** , pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
+3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
 
     |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|
@@ -171,7 +171,7 @@ Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která ur�
 
 #### <a name="to-disable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Zakázání výzvy vztahu důvěryhodnosti ClickOnce pomocí Editoru registru
 
-1. Otevřete editor registru: .
+1. Otevřete Editor registru:
 
     1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 
@@ -183,7 +183,7 @@ Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která ur�
 
      Pokud klíč neexistuje, vytvořte ho.
 
-3. Přidejte následující podklíče jako **řetězcovou hodnotu** , pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
+3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
 
     |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|

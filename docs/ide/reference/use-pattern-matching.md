@@ -1,22 +1,22 @@
 ---
-title: Použít porovnávání vzorů
+title: Použití porovnávání vzorů
 ms.date: 11/03/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8cafcb7e4e108258ddfb274ba957024b92fadb01
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 89369eeb07594a9dcac3f0687a6b957adaddec09
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93402283"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889795"
 ---
-# <a name="use-pattern-matching"></a>Použít porovnávání vzorů
+# <a name="use-pattern-matching"></a>Použití porovnávání vzorů
 
 Tento refaktoring platí pro:
 
@@ -36,7 +36,7 @@ Tento refaktoring platí pro:
 
 3. Vyberte **Použít porovnávání vzorů**.
 
-    ![Nastavit abstraktní třídu](media/use-pattern-matching-not-syntax.png)
+    ![Nastavení třídy jako abstraktní](media/use-pattern-matching-not-syntax.png)
 
 ## <a name="see-also"></a>Viz také
 

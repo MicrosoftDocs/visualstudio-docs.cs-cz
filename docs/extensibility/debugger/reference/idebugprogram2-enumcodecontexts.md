@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 478e06a2-07bb-4841-8887-deab0f42ebd0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c22a5ce398e76ee97b2f0448900fd4e38f996615
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2971eba711682781f509757c3986bb76f2e37703
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80723047"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99891030"
 ---
 # <a name="idebugprogram2enumcodecontexts"></a>IDebugProgram2::EnumCodeContexts
 Načte seznam kontextů kódu pro danou pozici ve zdrojovém souboru.
@@ -28,14 +28,14 @@ Načte seznam kontextů kódu pro danou pozici ve zdrojovém souboru.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT EnumCodeContexts( 
+HRESULT EnumCodeContexts( 
    IDebugDocumentPosition2*  pDocPos,
    IEnumDebugCodeContexts2** ppEnum
 );
 ```
 
 ```csharp
-int EnumCodeContexts( 
+int EnumCodeContexts( 
    IDebugDocumentPosition2     pDocPos,
    out IEnumDebugCodeContexts2 ppEnum
 );

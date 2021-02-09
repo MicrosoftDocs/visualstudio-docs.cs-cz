@@ -14,15 +14,15 @@ helpviewer_keywords:
 - events [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f87889c13021a7c0a43b58564210db34301abdf4
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: b2aed6102b6aed5938ecfab826363e62dcfac48a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846698"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889418"
 ---
 # <a name="how-to-create-event-handlers-in-office-projects"></a>Postupy: vytváření obslužných rutin událostí v projektech pro systém Office
   Existuje několik způsobů, jak vytvořit obslužné rutiny událostí v Visual Basic a C#. V zobrazení Návrh můžete vytvořit výchozí obslužné rutiny událostí pro ovládací prvky Poklikáním na ovládací prvek nebo pomocí podokna události v okně **vlastnosti** vytvořit obslužné rutiny pro libovolnou událost ovládacího prvku. Nicméně pokud jste v zobrazení kódu, možná nebudete chtít přepnout na zobrazení Návrh a vytvořit obslužnou rutinu události.
@@ -44,7 +44,7 @@ ms.locfileid: "96846698"
 
 ### <a name="to-create-an-event-handler-in-c"></a>Vytvoření obslužné rutiny události v jazyce C\#
 
-1. Vytvořte delegáta události ve **spouštěcí** události třídy zadáním kvalifikovaného názvu události následovaného mezerou a potom zadejte **+=** bez mezer. Například:
+1. Vytvořte delegáta události ve **spouštěcí** události třídy zadáním kvalifikovaného názvu události následovaného mezerou a potom zadejte **+=** bez mezer. Příklad:
 
      `this.<object name>.<event name> +=`
 

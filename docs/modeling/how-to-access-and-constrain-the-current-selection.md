@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, accessing the current selection
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ba656793b630dd55fc2ebc7242e5d45484b0f8e
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 83903c8ff911fdd1d4900714137a7f6976513dad
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363390"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890562"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>Postupy: Přístup k aktuálnímu výběru a jeho omezení
 
@@ -32,7 +32,7 @@ V závislosti na příkazu může obslužná rutina příkazu potřebovat výbě
 
 1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>Třída definuje následující členy, které lze použít pro přístup k aktuálnímu výběru.
 
-    |Člen|Popis|
+    |Člen|Description|
     |-|-|
     |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A>|Vrátí, `true` zda kterýkoli prvek vybraný v Návrháři modelů je tvar oddílu, jinak `false` .|
     |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A>|Vrátí `true` , zda je diagram vybrán v Návrháři modelů; v opačném případě `false` .|
@@ -211,7 +211,7 @@ namespace CompanyName.ProductName.GroupingDsl
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>
 - <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage>

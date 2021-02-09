@@ -6,17 +6,17 @@ ms.date: 06/05/2019
 ms.topic: overview
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a913fa6abdcf59a64d8514f17656b8f8531d476d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0283cb4332e9137550b74a85c38d7963f3c77a70
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315262"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890471"
 ---
 # <a name="work-with-python-in-visual-studio-on-windows"></a>Práce s Pythonem v aplikaci Visual Studio ve Windows
 
@@ -63,7 +63,7 @@ Další informace najdete tady:
 
 ## <a name="rich-editing-intellisense-and-code-comprehension"></a>Bohatá úprava, IntelliSense a porozumění kódu
 
-Visual Studio poskytuje prvotřídní Editor Pythonu, včetně barevného zbarvení, automatického dokončování všech vašich kódů a knihoven, formátování kódu, nápovědy k podpisům, refaktoringu, linting a pomocných parametrů typu. Visual Studio také poskytuje jedinečné funkce, jako je zobrazení tříd, **Přejít na definici**, **Najít všechny odkazy**a fragmenty kódu. Přímá integrace s [interaktivním oknem](#interactive-window) vám pomůže rychle vyvíjet kód v Pythonu, který je už uložený v souboru.
+Visual Studio poskytuje prvotřídní Editor Pythonu, včetně barevného zbarvení, automatického dokončování všech vašich kódů a knihoven, formátování kódu, nápovědy k podpisům, refaktoringu, linting a pomocných parametrů typu. Visual Studio také poskytuje jedinečné funkce, jako je zobrazení tříd, **Přejít na definici**, **Najít všechny odkazy** a fragmenty kódu. Přímá integrace s [interaktivním oknem](#interactive-window) vám pomůže rychle vyvíjet kód v Pythonu, který je už uložený v souboru.
 
 ![Dokončování kódu pro kód Pythonu v aplikaci Visual Studio](media/code-editing-completions-simple.png)
 
@@ -144,7 +144,7 @@ Další informace najdete tady:
 
 ## <a name="unit-testing-tools"></a>Nástroje testování částí
 
-Můžete zjišťovat, spouštět a spravovat testy v **Průzkumníku testů**sady Visual Studio a snadno ladit testy jednotek.
+Můžete zjišťovat, spouštět a spravovat testy v **Průzkumníku testů** sady Visual Studio a snadno ladit testy jednotek.
 
 ![Ladění testu jednotek Pythonu v aplikaci Visual Studio](media/unit-test-debugging.png)
 
@@ -213,7 +213,7 @@ Visual Studio 2015 a starší jsou k dispozici na adrese [VisualStudio.Microsoft
 
 <br/>
 
-|           Probíhají úpravy            |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop | Web 2013 | 2013 pro + | 2012 pro + | 2010 SP1 pro + |
+|           Úprava            |   2017 +   |   2015   | 2013 komunikace | 2013 Desktop | Web 2013 | 2013 pro + | 2012 pro + | 2010 SP1 pro + |
 |------------------------------|----------|----------|-----------|--------------|----------|-----------|-----------|---------------|
 |     Zvýrazňování syntaxe      | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |        Automatické dokončování         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |

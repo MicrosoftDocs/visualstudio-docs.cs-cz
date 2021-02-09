@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packaging
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 16305ed63f48d9f14e35aeb8d37e35f23f40be25
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 8be6adfedeabaea236e4dcb2cd969e6023a7f3ec
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96304235"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889561"
 ---
 # <a name="merge-xml-in-feature-and-package-manifests"></a>Sloučit XML v manifestech funkcí a balíčků
   Funkce a balíčky jsou definovány [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] soubory manifestu. Tyto zabalené manifesty jsou kombinací dat generovaných návrháři a vlastními [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] zadanými v šabloně manifestu uživateli. V době vytváření balíčku [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sloučí vlastní [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] příkazy s návrhářem – je k dispozici [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] pro vytvoření balíčku [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] souboru manifestu. Podobné prvky s výjimkami zaznamenanými později v případě výjimek sloučení jsou sloučeny, aby nedocházelo k [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] chybám ověřování po nasazení souborů do služby SharePoint a aby soubory manifestu byly menší a efektivnější.
@@ -53,8 +53,8 @@ ms.locfileid: "96304235"
 |ElementFile|Umístění|
 |ElementManifests/ElementManifest|Umístění|
 |Vlastnosti/vlastnost|Klíč|
-|CustomUpgradeAction|Name|
-|CustomUpgradeActionParameter|Name|
+|CustomUpgradeAction|Název|
+|CustomUpgradeActionParameter|Název|
 
 > [!NOTE]
 > Vzhledem k tomu, že jediný způsob, jak upravit element CustomUpgradeAction je ve vlastním [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] editoru, není k dispozici žádný efekt sloučení.

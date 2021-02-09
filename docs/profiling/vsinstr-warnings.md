@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 47512bc9-a8e9-4628-883a-d9888edab786
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d5510c475ab566e65d2bd152136535fde62f257b
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: ed42588f7135b4664b7f65dfcd8c0d979a523aeb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98723124"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890484"
 ---
 # <a name="vsinstr-warnings"></a>Upozornění VSInstr
 V následující tabulce jsou uvedena upozornění vydaná nástrojem *VSInstr.exe* . Pomocí možnosti neupozorňovat spolu s čísly upozornění můžete potlačit zobrazování upozornění.
 
-|Číslo upozornění|Popis|
+|Číslo upozornění|Description|
 |--------------------|-----------------|
 |**VSP1026**|Pokrytí není podporováno u knihoven, které neodkazují na MSCorLib. To je často případ pro přenosné knihovny.<br /><br />Možnost příkazového řádku [/EnableCodeCoverage](../test/vstest-console-options.md) se vyžaduje pro .NET Core.|
 |**VSP2000**|Vnitřní chyba Nelze získat název souboru modulu pro tento spustitelný soubor.|

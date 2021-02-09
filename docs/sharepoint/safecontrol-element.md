@@ -11,20 +11,20 @@ helpviewer_keywords:
 - SafeControl element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 36a8b0ed45fbdb8d2dfe8e93a027a47adf407587
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: f08046666ff00d4a0e5489bc78c0c70967774f08
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440620"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889470"
 ---
 # <a name="safecontrol-element"></a>SafeControl – element
   Představuje ovládací prvek ASPX nebo webovou část, která je označena jako zabezpečená pro všechny uživatele, kteří mají přístup k libovolné stránce ASPX na webu služby SharePoint.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <SafeControl Assembly = "Name of assembly that contains the safe control"
@@ -46,7 +46,7 @@ ms.locfileid: "95440620"
 |**Zabezpečení**|Volitelný atribut **xs: Boolean** .<br /><br /> Určuje, zda je ovládací prvek ASPX nebo webová část zabezpečena pro nedůvěryhodné uživatele, aby k nim měli přístup.|
 |**IsSafeAgainstScript**|Volitelný atribut **xs: Boolean** .<br /><br /> Určuje, zda nedůvěryhodní uživatelé mohou zobrazit nebo upravit vlastnosti ovládacího prvku ASPX nebo webové části.|
 |**Název**|Volitelný atribut **xs: String** .<br /><br /> Název této položky bezpečného řízení v kolekci.|
-|**Hosting**|Volitelný atribut **xs: String** .<br /><br /> Obor názvů ovládacího prvku ASPX nebo webové části.|
+|**Obor názvů**|Volitelný atribut **xs: String** .<br /><br /> Obor názvů ovládacího prvku ASPX nebo webové části.|
 |**Popisuje**|Volitelný atribut **xs: String** .<br /><br /> Název typu ovládacího prvku ASPX nebo webové části.|
 
 ### <a name="child-elements"></a>Podřízené prvky
@@ -65,7 +65,7 @@ ms.locfileid: "95440620"
 
 |Vlastnost|Hodnota|
 |-|-|
-|**Hosting**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - Domain-Specific Language, namespace
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: a7b0de26fdc1a7982347a12c283a6aa73e9aad12
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 29835e993d287c981ad1c4014af3dc276891af5d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809437"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890497"
 ---
 # <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>Postupy: Změna oboru názvů jazyka specifického pro doménu
 
-Můžete změnit obor názvů jazyka specifického pro doménu. Proveďte změnu v **Průzkumníkovi DSL**ve vlastnostech projektu balíčku DSL a v informacích o sestavení.
+Můžete změnit obor názvů jazyka specifického pro doménu. Proveďte změnu v **Průzkumníkovi DSL** ve vlastnostech projektu balíčku DSL a v informacích o sestavení.
 
 ## <a name="to-change-the-namespace-of-a-domain-specific-language"></a>Změna oboru názvů jazyka specifického pro doménu
 
-1. V **Průzkumníku DSL**vyberte uzel **DSL** .
+1. V **Průzkumníku DSL** vyberte uzel **DSL** .
 
 2. V okně **vlastnosti** změňte vlastnost **Namespace** .
 

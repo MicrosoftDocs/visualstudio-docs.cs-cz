@@ -8,15 +8,15 @@ helpviewer_keywords:
 - xaml hot reload, troubleshooting
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 03c5dca96b4e20e36bc6c69b907423f27ac4af71
-ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
+ms.openlocfilehash: 4e13fd71c9d53ef49d7f7372986bfabc29c62747
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833218"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890445"
 ---
 # <a name="troubleshooting-xaml-hot-reload"></a>Řešení potíží s opětovným načítáním XAML za provozu
 
@@ -51,7 +51,7 @@ Kódování XAML Hot reload vyžaduje, aby byla proměnná prostředí v `ENABLE
 
 ## <a name="verify-that-your-msbuild-properties-are-correct"></a>Ověřte správnost vlastností MSBuild.
 
-Ve výchozím nastavení jsou informace o zdroji zahrnuty v konfiguraci ladění. Řídí se vlastnostmi MSBuild ve vašich souborech projektu (například *. csproj). Pro WPF je vlastnost `XamlDebuggingInformation` , která musí být nastavena na `True` . U UWP je vlastnost `DisableXbfLineInfo` , která musí být nastavena na `False` . Například:
+Ve výchozím nastavení jsou informace o zdroji zahrnuty v konfiguraci ladění. Řídí se vlastnostmi MSBuild ve vašich souborech projektu (například *. csproj). Pro WPF je vlastnost `XamlDebuggingInformation` , která musí být nastavena na `True` . U UWP je vlastnost `DisableXbfLineInfo` , která musí být nastavena na `False` . Příklad:
 
 SUBSYSTÉM
 

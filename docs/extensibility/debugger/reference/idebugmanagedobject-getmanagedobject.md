@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 6abe1402-6aad-41e6-8ec1-ae12d5945992
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b7080760b174c51d62c44cd2757944948e0104ca
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 18cb56b083386c3ac8358a101c1d52fb14cb39ba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80727746"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890237"
 ---
 # <a name="idebugmanagedobjectgetmanagedobject"></a>IDebugManagedObject::GetManagedObject
 Vrátí rozhraní, které představuje spravovaný objekt.
@@ -28,7 +28,7 @@ Vrátí rozhraní, které představuje spravovaný objekt.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetManagedObject( 
+HRESULT GetManagedObject( 
    IUnknown** ppManagedObject
 );
 ```
