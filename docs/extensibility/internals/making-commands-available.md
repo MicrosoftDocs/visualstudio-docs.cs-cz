@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3ffc4312-c6db-4759-a946-a4bb85f4a17a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d17fd0b63438183b10b1ecb0e5eb6abb9f5d7f46
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 4bb44fbb263bb12aba04c06f1248ae25aa9d546f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98204533"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839542"
 ---
 # <a name="making-commands-available"></a>Zpřístupnění příkazů
 
@@ -57,7 +57,7 @@ Můžete programovat příkazy VSPackage, aby byly viditelné nebo skryté v zá
 
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] monitoruje změny, které jsou výsledkem akcí uživatele, jako je například načítání projektu nebo úpravy při sestavování. Když dojde ke změnám, vzhled IDE se automaticky upraví. V následující tabulce jsou uvedeny čtyři hlavní kontexty pro změnu IDE, které [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] monitorují.
 
-| Typ kontextu | Popis |
+| Typ kontextu | Description |
 |-------------------------| - |
 | Typ aktivního projektu | Pro většinu typů projektů je tato `GUID` hodnota shodná s identifikátorem GUID VSPackage, který implementuje projekt. Projekty však [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] jako hodnotu používají typ projektu `GUID` . |
 | Aktivní okno | Obvykle se jedná o poslední okno aktivního dokumentu, které vytváří aktuální kontext uživatelského rozhraní pro klíčové vazby. Může to být také okno nástroje, které má tabulku vazby klíčů, která se podobá internímu webovému prohlížeči. U oken dokumentů s více kartami, jako je editor HTML, má každá karta jiný kontext příkazů `GUID` . |
