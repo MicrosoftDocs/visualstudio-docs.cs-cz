@@ -12,15 +12,15 @@ helpviewer_keywords:
 - application pages [SharePoint development in Visual Studio], creating
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: df52ca75ef99fe98158cb5f874e59fe4ee0c47b4
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 74e7aab4cbc012afbf045672dbf4af248ada4c61
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849854"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925630"
 ---
 # <a name="how-to-create-an-application-page"></a>Postupy: Vytvoření stránky aplikace
   Pro jeden nebo více webů služby SharePoint můžete vytvořit webovou stránku ASP.NET. V SharePointu se tyto stránky nazývají stránky aplikace. Na rozdíl od stránky webu obsahuje stránka aplikace kód, který se spouští za stránkou. Další informace najdete v tématu [Vytvoření stránek aplikace pro službu SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).

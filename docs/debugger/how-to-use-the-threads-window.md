@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: adfbe002-3d7b-42a9-b42a-5ac0903dfc25
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 33375a8970638765d02a94e6e3e9cd8afc1a0fe7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbac3de879937435e9f2e1dc5ab4fad0e7358fc9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348649"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925393"
 ---
 # <a name="walkthrough-debug-a-multithreaded-app-using-the-threads-window-c-visual-basic-c"></a>Návod: Ladění vícevláknové aplikace pomocí okna vlákna (C#, Visual Basic, C++)
 
@@ -55,7 +55,7 @@ Vytvořte následující projekt s více vlákny pro použití v tomto kurzu:
    ::: moniker range="vs-2017"
    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** vyberte následující:
 
-   - V případě aplikace v jazyce C# v části **Visual C#** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte možnost **aplikace konzoly (.NET Framework)**.
+   - V případě aplikace v jazyce C# v části **Visual C#** zvolte možnost **plocha systému Windows** a potom v prostředním podokně zvolte možnost **aplikace konzoly (.NET Framework)**.
    - V aplikaci C++ klikněte v části **Visual C++** na **plocha Windows**, a pak zvolte **Konzolová aplikace Windows**.
 
    Pokud se nezobrazuje **Konzolová aplikace (.NET Core)** nebo, pro C++, šablona projektu **Konzolová aplikace** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
@@ -65,7 +65,7 @@ Vytvořte následující projekt s více vlákny pro použití v tomto kurzu:
    Vyberte **OK**.
    ::: moniker-end
 
-   Zobrazí se nový projekt konzoly. Po vytvoření projektu se zobrazí zdrojový soubor. V závislosti na zvoleném jazyce se může zdrojový soubor jmenovat *program.cs*, *MyThreadWalkthroughApp. cpp*nebo *Module1. vb*.
+   Zobrazí se nový projekt konzoly. Po vytvoření projektu se zobrazí zdrojový soubor. V závislosti na zvoleném jazyce se může zdrojový soubor jmenovat *program.cs*, *MyThreadWalkthroughApp. cpp* nebo *Module1. vb*.
 
 1. Nahraďte kód ve zdrojovém souboru ukázkovým kódem C# nebo C++ z [tématu Začínáme s laděním vícevláknových aplikací](../debugger/get-started-debugging-multithreaded-apps.md).
 
@@ -89,11 +89,11 @@ Vytvořte následující projekt s více vlákny pro použití v tomto kurzu:
 
    Zarážka se zobrazuje jako červený kroužek v levém hřbetu vedle řádku kódu.
 
-1. Vyberte **ladění**  >  **Spustit ladění**nebo stiskněte klávesu **F5**.
+1. Vyberte **ladění**  >  **Spustit ladění** nebo stiskněte klávesu **F5**.
 
    Aplikace se spustí v režimu ladění a zastaví se na zarážce.
 
-1. V režimu pozastavení otevřete okno **vlákna** výběrem možnosti **ladit**  >  **vlákna systému Windows**  >  **Threads**. Chcete-li otevřít nebo zobrazit **vlákna** a další okna ladění, musíte být v relaci ladění.
+1. V režimu pozastavení otevřete okno **vlákna** výběrem možnosti **ladit**  >  **vlákna systému Windows**  >  . Chcete-li otevřít nebo zobrazit **vlákna** a další okna ladění, musíte být v relaci ladění.
 
 ## <a name="examine-thread-markers"></a>Kontrola značek vláken
 
@@ -120,11 +120,11 @@ Označte a odznačit vlákna z editoru zdrojového kódu nebo z okna **vlákna**
 
 1. Otevřete panel nástrojů **umístění ladění** výběrem možnosti **Zobrazit**  >  **panely nástrojů**  >  **umístění ladění**. Můžete také kliknout pravým tlačítkem myši v oblasti panelu nástrojů a vybrat **umístění ladění**.
 
-1. Panel nástrojů **umístění ladění** má tři pole: **proces**, **vlákno**a **blok zásobníku**. Vyřaďte seznam **vláken** a Všimněte si, kolik vláken existuje. V seznamu **vláken** je aktuálně spuštěné vlákno označeno **>** symbolem.
+1. Panel nástrojů **umístění ladění** má tři pole: **proces**, **vlákno** a **blok zásobníku**. Vyřaďte seznam **vláken** a Všimněte si, kolik vláken existuje. V seznamu **vláken** je aktuálně spuštěné vlákno označeno **>** symbolem.
 
 1. V okně zdrojový kód umístěte ukazatel myši na ikonu značky vlákna na hřbetu a vyberte ikonu příznaku (nebo jednu z ikon prázdný příznak) v DataTip. Ikona příznaku se změní na červenou.
 
-   Můžete také kliknout pravým tlačítkem myši na ikonu značky vlákna, Ukázat na **příznak**a pak vybrat vlákno, které chcete označit z místní nabídky.
+   Můžete také kliknout pravým tlačítkem myši na ikonu značky vlákna, Ukázat na **příznak** a pak vybrat vlákno, které chcete označit z místní nabídky.
 
 1. Na panelu nástrojů **umístění ladění** zaškrtněte ikonu **Zobrazit pouze vlákna označená příznakem** ![Zobrazit vlákna označená](../debugger/media/dbg-threads-show-flagged.png "Zobrazit vlákna označená příznakem")příznakem a napravo od pole **vlákna** . Ikona je zobrazena šedě, pokud není označeno jedno nebo více podprocesů.
 
@@ -145,7 +145,7 @@ V okně **vláken** mají vlákna s příznakem vedle sebe ikony červeného ozn
 
 Vyberte ikonu příznaku pro změnu stavu vlákna na příznak nebo bez příznaku v závislosti na jeho aktuálním stavu.
 
-Můžete také kliknout pravým tlačítkem na řádek a vybrat **příznak**, zrušit **příznak**nebo zrušit **označení všech vláken** z místní nabídky.
+Můžete také kliknout pravým tlačítkem na řádek a vybrat **příznak**, zrušit **příznak** nebo zrušit **označení všech vláken** z místní nabídky.
 
 Panel nástrojů okna **vlákna** má také tlačítko **Zobrazit pouze vlákna označená příznakem** , což je righthand jedna ze dvou ikon příznaků. Funguje stejně jako tlačítko na panelu nástrojů **umístění ladění** a buď tlačítko ovládá zobrazení v obou umístěních.
 
@@ -158,12 +158,12 @@ Druhý sloupec okna **vlákna** (bez záhlaví) je **aktuální sloupec vlákna*
 Sloupec **umístění** zobrazuje, kde se každé vlákno zobrazuje ve zdrojovém kódu. Vyberte šipku rozbalení vedle položky **umístění** nebo najeďte myší na položku a zobrazte pro toto vlákno částečný zásobník volání.
 
 >[!TIP]
->Pro grafické zobrazení zásobníků volání pro vlákna použijte okno [paralelní zásobníky](../debugger/using-the-parallel-stacks-window.md) . Chcete-li otevřít okno, při ladění vyberte možnost **ladit** >  **Windows**  >  **paralelní zásobníky**systému Windows.
+>Pro grafické zobrazení zásobníků volání pro vlákna použijte okno [paralelní zásobníky](../debugger/using-the-parallel-stacks-window.md) . Chcete-li otevřít okno, při ladění vyberte možnost **ladit** >    >  **paralelní zásobníky** systému Windows.
 
-Kromě **příznaku**, **odznačit a**zrušit **označení všech vláken**má místní nabídka pro položky okna **vlákna** po kliknutí pravým tlačítkem myši:
+Kromě **příznaku**, **odznačit a** zrušit **označení všech vláken** má místní nabídka pro položky okna **vlákna** po kliknutí pravým tlačítkem myši:
 
 - Tlačítko **Zobrazit vlákna ve zdroji**
-- **Hexadecimální zobrazení**, které změní **ID vlákna**v okně **vlákna** z desítkového na šestnáctkového formátu.
+- **Hexadecimální zobrazení**, které změní **ID vlákna** v okně **vlákna** z desítkového na šestnáctkového formátu.
 - [Přepněte do vlákna](#switch-to-another-thread), které okamžitě přepne spuštění do tohoto vlákna.
 - **Přejmenování**, které umožňuje změnit název vlákna.
 - [Zablokování a rozmrazení](#bkmk_freeze) příkazů.
@@ -201,7 +201,7 @@ Při pokusu o přepnutí na jiné vlákno se může zobrazit **aplikace v okně 
 
 1. Na panelu nástrojů **umístění ladění** vyberte jiné vlákno ze seznamu **vláken** . Všimněte si, že aktuální vlákno se změní také v dalších dvou umístěních.
 
-1. V editoru zdrojového kódu klikněte pravým tlačítkem myši na značku vlákna, přejděte na příkaz **Přepnout do vlákna**a v seznamu vyberte jiné vlákno. Pozor, aby se aktuální vlákno změnilo ve všech třech umístěních.
+1. V editoru zdrojového kódu klikněte pravým tlačítkem myši na značku vlákna, přejděte na příkaz **Přepnout do vlákna** a v seznamu vyberte jiné vlákno. Pozor, aby se aktuální vlákno změnilo ve všech třech umístěních.
 
 Se značkou vlákna ve zdrojovém kódu můžete přepínat pouze na vlákna, která jsou v tomto umístění zastavena. Pomocí okna **vlákna** a panelu nástrojů **umístění ladění** můžete přepnout do libovolného vlákna.
 

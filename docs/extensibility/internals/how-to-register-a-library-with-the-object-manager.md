@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f124dd05-cb0f-44ad-bb2a-7c0b34ef4038
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8036a0f4fe073473891805766ea8e3bb941951f8
-ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
+ms.openlocfilehash: a5f4e9805eec8fd5d0089f1b8348253523d9056f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761379"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925011"
 ---
 # <a name="how-to-register-a-library-with-the-object-manager"></a>Postupy: registrace knihovny pomocí Správce objektů
 Nástroje pro procházení symbolů, jako je **zobrazení tříd**, **Prohlížeč objektů**, **prohlížeč volání** a **hledání výsledků symbolů**, umožňují zobrazit symboly v projektu nebo externích součástech. Mezi symboly patří obory názvů, třídy, rozhraní, metody a další prvky jazyka. Knihovny sledují tyto symboly a zpřístupňují je [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] správci objektů, který tyto nástroje naplní daty.

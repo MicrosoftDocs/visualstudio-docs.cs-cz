@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3bc45af0-3ba6-4fa3-a336-be8e9ae95107
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 74cfeb0b93b1819b4491b18b8e455b3c8d49be4d
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 7f5bdf15b220560562ccc2ae5c99100b5285b025
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98204576"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925605"
 ---
 # <a name="blocking-time-profile-report"></a>Sestava profil času blokování
 Sestavy profilu poskytují agregovaná data o době blokování pro zásobníky volání, která jsou specifická pro jednotlivé kategorie blokování (například I/O nebo synchronizace). Sestava přerušení obsahuje seznam procesů, které přecházely aktuální proces spolu s počtem instancí přerušení. Chcete-li vytvořit sestavu blokující profil, nástroj shromáždí blokování volání rozhraní API a shromáždí je do stromu zásobníků volání. Data zobrazená v těchto sestavách se liší podle aktuálního časového rozsahu, skrytého vlákna a pomocí následujících dvou filtrů, které mohou být aplikovány:

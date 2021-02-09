@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d1f31e5b-c6e2-4e02-8959-b3e86041b29c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fcdec19c4667356edaf9e057c86ddc24baf747b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3cf4f418cf02f08f95d0192e99c0b02d0f74e3ad
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80735968"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925117"
 ---
 # <a name="idebugbinder"></a>IDebugBinder
 > [!IMPORTANT]

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data caching [Office development in Visual Studio], Master/Detail Relation
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: de7bf3ba34a2a7dd3e7db9ff549e4a839800d524
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 843718ea49ae7df7d34775283ce8120f077b0a0f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524862"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925505"
 ---
 # <a name="walkthrough-create-a-master-detail-relation-using-a-cached-dataset"></a>Návod: Vytvoření vztahu hlavní podrobnosti pomocí datové sady uložené v mezipaměti
   Tento návod ukazuje vytvoření vztahu hlavní/podrobnosti na listu a ukládání dat do mezipaměti, aby bylo možné řešení použít offline.
@@ -40,7 +40,7 @@ ms.locfileid: "97524862"
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

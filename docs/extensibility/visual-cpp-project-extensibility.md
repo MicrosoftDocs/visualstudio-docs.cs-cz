@@ -7,15 +7,15 @@ dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ba78ff7d38d993394072aa9dd18a7a8fa8cbb9d
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 1c699c835c6a53ec346dadb8bbbbf787aacc9206
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668700"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926029"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Rozšiřitelnost systému projektů Visual Studio C++ a integrace sady nástrojů
 
@@ -556,7 +556,7 @@ Služba ladění v aplikaci Visual Studio podporuje rozšiřitelnost ladicího s
 
 Chcete-li určit moduly ladění a další vlastnosti pro relaci ladění, je nutné implementovat komponentu MEF pro [spouštěč ladění](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDebugLaunchProvider.md) a přidat `debugger` pravidlo. Příklad najdete v `$(VCTargetsPath)` \\ \\ souboru s ladicím programem 1033 pro \_ místní \_windows.xml.
 
-### <a name="deploy"></a>Nasazení
+### <a name="deploy"></a>Nasadit
 
 projekty vcxproj používají rozšiřitelnost systému projektů sady Visual Studio pro [nasazení zprostředkovatelů](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDeployProvider.md).
 

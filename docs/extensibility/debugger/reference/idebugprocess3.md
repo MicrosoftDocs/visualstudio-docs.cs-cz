@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 7bd6b952-cf34-4e66-b8f6-d472dac3748f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b423ee2cb95ad55296c452cfdc4b891ee4cd26a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6199c959a7186a1c10d6efdc30bb0763941c347a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80723540"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926117"
 ---
 # <a name="idebugprocess3"></a>IDebugProcess3
 Toto rozhraní představuje běžící proces a jeho programy. Toto rozhraní existuje jako náhrada pro několik metod v rozhraní [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) . Poskytuje kontrolu nad všemi programy v procesu.
@@ -45,7 +45,7 @@ IDebugProcess3 : IDebugProcess2
 |Metoda|Popis|
 |------------|-----------------|
 |[Pokračovat](../../../extensibility/debugger/reference/idebugprocess3-continue.md)|Pokračuje v provádění nebo krokování prostřednictvím procesu.|
-|[Spuštění](../../../extensibility/debugger/reference/idebugprocess3-execute.md)|Zahájí provádění procesu.|
+|[Spuštěním](../../../extensibility/debugger/reference/idebugprocess3-execute.md)|Zahájí provádění procesu.|
 |[Krok](../../../extensibility/debugger/reference/idebugprocess3-step.md)|Postup předejte jednu instrukci nebo příkaz v procesu.|
 |[GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)|Získá důvod, proč byl proces spuštěn pro ladění.|
 |[SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)|Nastaví jazyk hostování tak, aby ladicí stroj mohl načíst příslušný vyhodnocovací filtr výrazů.|

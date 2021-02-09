@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 989bf312-5038-44f3-805f-39a34d18760e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 046384e664ab4aa9c031b76a1ecd6285a9de5502
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 23f5234cb0184de14f7506fd540004a200a65a4a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150467"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925353"
 ---
 # <a name="how-to-write-a-run-time-error-reporting-function-c"></a>Postupy: zápis funkce zasílání zpráv o chybách Run-Time (C++)
 Vlastní funkce vytváření sestav pro běhové chyby musí mít stejnou deklaraci jako `_CrtDbgReportW` . Měl by vrátit hodnotu 1 ladicímu programu.
