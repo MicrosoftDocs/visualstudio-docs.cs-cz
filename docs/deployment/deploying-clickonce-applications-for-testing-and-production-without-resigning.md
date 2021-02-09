@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1218a98d-1ad5-4eef-95dd-0e0b3c44168c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b5644a890a8705c68852cb5f67e4d998e12338dc
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 4d5d7244f70852dee29813834fc427c888df9c1c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382933"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912151"
 ---
 # <a name="deploy-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>Nasazení aplikací ClickOnce pro testovací a produkční servery bez opětovného podepsání
 Tento článek popisuje funkci ClickOnce představenou ve verzi .NET Framework 3,5, která umožňuje nasazení aplikací ClickOnce z více síťových umístění bez opětovného podepsání nebo změny manifestů ClickOnce.

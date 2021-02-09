@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: f9e9f895-57bb-41e8-8bd1-cdaa738ec220
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b594141d6209c8ede9171df880e7523b81a34775
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 1d886284a130d9c103d2f0d8a6bc24d2ebd69b6e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719224"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99911619"
 ---
 # <a name="vsperfaspnetcmd"></a>VSPerfASPNetCmd
 Nástroj příkazového řádku **VSPerfASPNetCmd.exe** umožňuje profilovat weby ASP.NET, aniž byste museli nastavovat proměnné prostředí nebo restartovat počítač. Když vytváříte profilování ASP.NET websites, můžete místo [VSPerfCmd](../profiling/vsperfcmd.md) použít **VSPerfASPNetCmd.exe** a nepotřebujete další funkce, které poskytuje **VSPerfCmd**. Další informace o **VSPerfASPNETCmd** najdete v tématu [rychlé profilování webu pomocí VSPerfASPNETCmd](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md). **VSPerfASPNETCmd** je preferovaný nástroj příkazového řádku, který se použije při použití samostatného profileru k profilování webu ASP.NET.

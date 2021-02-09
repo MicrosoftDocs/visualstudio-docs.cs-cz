@@ -5,27 +5,27 @@ ms.date: 02/11/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9608f273683865be767a44dd8f1d66106b97b7e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f34ee9e852c1210425407f80788aa1b9d5c33c1e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85533546"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912278"
 ---
 # <a name="work-with-the-python-interactive-window"></a>Práce s interaktivním oknem Pythonu
 
-Visual Studio poskytuje interaktivní okno pro čtení a vyhodnocení-tisk smyčky (REPL) pro každé prostředí Pythonu, které se zlepšuje na REPL, které získáte pomocí *python.exe* na příkazovém řádku. **Interaktivní** okno (otevřené pomocí příkazu **Zobrazit**  >  jiné**Other Windows**  >  ** &lt; &gt; interaktivní nabídky prostředí** systému Windows) umožňuje zadat libovolný kód Pythonu a zobrazit okamžité výsledky. Tento způsob psaní kódu pomáhá naučit a experimentovat s rozhraními API a knihovnami a interaktivně vyvíjet pracovní kód pro zahrnutí do vašich projektů.
+Visual Studio poskytuje interaktivní okno pro čtení a vyhodnocení-tisk smyčky (REPL) pro každé prostředí Pythonu, které se zlepšuje na REPL, které získáte pomocí *python.exe* na příkazovém řádku. **Interaktivní** okno (otevřené pomocí příkazu **Zobrazit**  >  jiné  >  **&lt; &gt; interaktivní nabídky prostředí** systému Windows) umožňuje zadat libovolný kód Pythonu a zobrazit okamžité výsledky. Tento způsob psaní kódu pomáhá naučit a experimentovat s rozhraními API a knihovnami a interaktivně vyvíjet pracovní kód pro zahrnutí do vašich projektů.
 
 ![Interaktivní okno Pythonu](media/interactive-window.png)
 
 Visual Studio má řadu REPL režimů Pythonu, ze kterých si můžete vybrat:
 
-| REPL | Popis | Probíhají úpravy | Ladění | Image |
+| REPL | Description | Úprava | Ladění | Obrázky |
 | --- | --- | --- | --- | --- |
 | Standard | Výchozí REPL, přednášky přímo v Pythonu | Standardní úpravy (víceřádkové atd.). | Ano, přes `$attach` | Ne |
 | Ladění | Výchozí REPL, přednášky k ladění procesu v Pythonu | Standardní úpravy | Pouze ladění | Ne |
@@ -56,7 +56,7 @@ Nakonec můžete vybrat kód v souboru a použít [příkaz **Odeslat do interak
 
 ## <a name="interactive-window-options"></a>Možnosti interaktivního okna
 
-Můžete ovládat různé aspekty **interaktivního** okna prostřednictvím **nástrojů**  >  **Možnosti**  >  interaktivní okna**Pythonu**  >  **Interactive Windows** (viz [Možnosti](python-support-options-and-settings-in-visual-studio.md)):
+Můžete ovládat různé aspekty **interaktivního** okna prostřednictvím **nástrojů**  >  **Možnosti**  >  interaktivní okna **Pythonu**  >   (viz [Možnosti](python-support-options-and-settings-in-visual-studio.md)):
 
 ![Možnosti interaktivního okna Pythonu](media/options-interactive-windows.png)
 
@@ -73,7 +73,7 @@ Výjimkou je, když je nutné další řádky kódu pro vytvoření příkazu Co
 
 <a name="meta-commands"></a>**Interaktivní** okno také podporuje několik meta příkazů. Všechny meta-příkazy začínají `$` na a můžete zadat a `$help` získat tak seznam meta příkazů a `$help <command>` získat podrobnosti o využití určitého příkazu.
 
-| Meta – příkaz | Popis |
+| Meta – příkaz | Description |
 | --- | --- |
 | `$$` | Vloží komentář, který je užitečný pro komentáře kódu v rámci vaší relace. |
 | `$attach` | Připojí ladicí program sady Visual Studio k procesu okna REPL pro povolení ladění. |
@@ -107,7 +107,7 @@ Kromě možnosti pracovat přímo v **interaktivním** okně můžete vybrat kó
 Tento příkaz je vhodný pro iterativní nebo Evolutionary vývoj kódu, včetně testování kódu při jeho vývoji. Například po odeslání části kódu do **interaktivního** okna a zobrazení jeho výstupu můžete stisknutím šipky nahoru zobrazit kód znovu, upravit ho a rychle ho otestovat stisknutím **klávesy CTRL** + **ENTER**. (Stisknutím klávesy **ENTER** na konci vstupu se spustí, ale stisknutím klávesy **ENTER** uprostřed vstupu vložíte nový řádek.) Jakmile budete mít kód, který budete chtít, můžete ho snadno zkopírovat zpátky do souboru projektu.
 
 > [!Tip]
-> Ve výchozím nastavení Visual Studio odebere **>>>** a **...** REPL vyzve k vložení kódu z **interaktivního** okna do editoru. Toto chování můžete změnit na kartě možnosti **nástrojů**  >  **Options**  >  **textový editor**  >  **Python**  >  **Upřesnit** pomocí možnosti **vložení odebrat REPL výzvy** . Viz [Možnosti – různé možnosti](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options).
+> Ve výchozím nastavení Visual Studio odebere **>>>** a **...** REPL vyzve k vložení kódu z **interaktivního** okna do editoru. Toto chování můžete změnit na kartě možnosti **nástrojů**  >    >  **textový editor**  >  **Python**  >  **Upřesnit** pomocí možnosti **vložení odebrat REPL výzvy** . Viz [Možnosti – různé možnosti](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options).
 
 <!-- After 15.3 is released, you can also press **Undo** after pasting to restore prompts. Press **Undo** a second time to remove the pasted code entirely. -->
 
@@ -125,4 +125,4 @@ Visual Studio také detekuje buňky kódu počínaje komentáři `# In[1]:` , ja
 
 **Interaktivní** okno obsahuje technologii IntelliSense na základě živých objektů na rozdíl od editoru kódu, ve kterém je technologie IntelliSense založena pouze na analýze zdrojového kódu. Tyto návrhy jsou v **interaktivním** okně lépe správné, zejména pomocí dynamicky generovaného kódu. Nevýhodou je, že funkce s vedlejšími účinky (například protokolování zpráv) můžou mít vliv na vývojové prostředí.
 
-Pokud se jedná o problém, změňte nastavení **v nabídce**  >  **Možnosti možností**  >  **Python**  >  **interaktivní okna** Pythonu ve skupině **režim dokončení** , jak je popsáno v možnosti [interaktivní možnosti Windows](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options).
+Pokud se jedná o problém, změňte nastavení **v nabídce**  >  **Možnosti možností**  >    >  **interaktivní okna** Pythonu ve skupině **režim dokončení** , jak je popsáno v možnosti [interaktivní možnosti Windows](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options).

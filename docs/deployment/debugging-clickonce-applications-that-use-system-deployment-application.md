@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 86f31948-2ca8-47c0-8e8b-c2b817bbf79f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e79b6a64eff9eab92a05624f6ca71ae7a242ad2
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: d6a014afff6c26b8cfe8f4f7fae508f78ef5905f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382985"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912248"
 ---
 # <a name="debug-clickonce-applications-that-use-systemdeploymentapplication"></a>Ladění aplikací ClickOnce používajících System. Deployment. Application
 V [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] nástroji [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení umožňuje konfigurovat způsob aktualizace aplikace. Pokud ale potřebujete použít a přizpůsobit pokročilé [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] funkce nasazení, budete potřebovat přístup k objektovému modelu nasazení, který poskytuje <xref:System.Deployment.Application> . Rozhraní API můžete použít <xref:System.Deployment.Application> pro pokročilé úlohy, jako například:
@@ -49,7 +49,7 @@ V [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 
 
 4. Přidejte archivované zdrojové umístění do vlastností pro toto nové řešení. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel řešení a pak klikněte na **vlastnosti**. V dialogovém okně **stránky vlastností** vyberte **Ladit zdrojové soubory** a pak přidejte adresář archivovaného zdrojového kódu. V opačném případě ladicí program nalezne zastaralé zdrojové soubory, protože cesty ke zdrojovým souborům jsou zaznamenány v souboru. pdb. Pokud ladicí program používá zastaralé zdrojové soubory, zobrazí se zpráva oznamující, že se zdroj neshoduje.
 
-5. Ujistěte se, že ladicí program může najít soubory *. pdb* . Pokud jste je nasadili s vaší aplikací, ladicí program je automaticky vyhledá. Vždy se nejprve vedle daného sestavení vyhledá. Jinak budete muset přidat cestu archivu do **umístění souborů symbolů (. pdb)** (pro přístup k této možnosti klikněte v nabídce **nástroje** na **Možnosti** , pak otevřete uzel **ladění** a klikněte na **symboly** ).
+5. Ujistěte se, že ladicí program může najít soubory *. pdb* . Pokud jste je nasadili s vaší aplikací, ladicí program je automaticky vyhledá. Vždy se nejprve vedle daného sestavení vyhledá. Jinak budete muset přidat cestu archivu do **umístění souborů symbolů (. pdb)** (pro přístup k této možnosti klikněte v nabídce **nástroje** na **Možnosti**, pak otevřete uzel **ladění** a klikněte na **symboly**).
 
 6. Ladění, co se děje `CheckForUpdate` mezi `Download` / `Update` voláními metody a.
 

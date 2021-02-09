@@ -13,15 +13,15 @@ helpviewer_keywords:
 - entryPointsCollection element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ffa3c76f0f1afa0c9c445cfaf6f5f92484a73ba7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6e7c7d7c32c538345adb246369b791cd6b2b41b3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543556"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910431"
 ---
 # <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection – &gt; element (vývoj pro Office v sadě Visual Studio)
   `entryPointsCollection`Element `vstav3` oboru názvů obsahuje všechny `entryPoints` prvky přidružené k řešením pro systém Office.
@@ -53,7 +53,7 @@ ms.locfileid: "85543556"
 
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
  Následující příklad kódu ukazuje `entryPointsCollection` prvek v manifestu aplikace pro řešení na úrovni dokumentu nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
@@ -99,7 +99,7 @@ ms.locfileid: "85543556"
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
  Následující příklad kódu ukazuje `entryPointsCollection` prvek v manifestu aplikace pro řešení na úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
@@ -121,7 +121,7 @@ ms.locfileid: "85543556"
 
 ## <a name="multi-project-deployment-example"></a>Příklad nasazení s více projekty
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
  Následující příklad kódu ukazuje `entryPointsCollection` prvek v manifestu aplikace pro nasazení více projektů se dvěma řešeními pro systém Office. Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

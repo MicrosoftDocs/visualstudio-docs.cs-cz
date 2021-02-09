@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9d383e2c-eee1-4996-973a-0652d4c5951c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7ce5d9fa8e1c3cfc3eaedb55d69ca382e937e45
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: 8abe32abcb79fada541124f50a750fb4c1edde58
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97864016"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910869"
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
 Toto je funkce zpětného volání, kterou používá operace [SccQueryChanges](../extensibility/sccquerychanges-function.md) k vytvoření výčtu kolekce názvů souborů a určení stavu jednotlivých souborů.
@@ -83,7 +83,7 @@ struct QUERYCHANGESDATA_W
 
  dwChangeType kód označující stav souboru:
 
-|Kód|Popis|
+|Kód|Description|
 |----------|-----------------|
 |`SCC_CHANGE_UNKNOWN`|Nelze zjistit, co se změnilo.|
 |`SCC_CHANGE_UNCHANGED`|Pro tento soubor se nezměnily žádné názvy.|

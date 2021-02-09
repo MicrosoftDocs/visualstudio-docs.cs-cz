@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: e713ad63-b948-46f3-8db9-59b30922ebe5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b846db263c95f20c6ea4cb6a418973830a5dd8ee
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 1ca23b5477cee37154f1334328745a5d2b066b39
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98720927"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910739"
 ---
 # <a name="control-data-collection"></a>Řízení shromažďování dat
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci vám umožní řídit, kdy se data profilace shromažďují během relace výkonu, a určit funkce, které jsou profilované. Tato část popisuje, jak spustit a zastavit shromažďování dat z oken **prohlížeč výkonu** a **kolekce dat** a jak omezit objekty, pro které se shromažďují data profilace.

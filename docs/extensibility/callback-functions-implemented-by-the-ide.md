@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 4a8833f0-6ac0-4ea7-9400-8275aa991468
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9dfb7e8b7e046c9587f591aec96a6a7fbd270865
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 42d7c02f2beb24aa92c0a3319c44cce3c8b325b6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974454"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99911259"
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>Funkce zpětného volání implementované rozhraním IDE
 Pro zajištění bezproblémové integrace s integrovaným vývojovým prostředím (IDE) a zajištěním jednotného prostředí koncového uživatele může modul plug-in správy zdrojových kódů používat funkce zpětného volání, které jsou implementovány rozhraním IDE. Modul plug-in může zavolat tyto funkce v příslušné době během operace správy zdrojových kódů, aby předávala informace prostředí IDE. rozhraní IDE pak může tyto informace zobrazit jako vložené prvky v jeho nativním uživatelském rozhraní. V tomto scénáři má uživatel méně fragmentovaných prostředí, než kdyby byl modul plug-in zaměstnán vlastním uživatelským rozhraním.

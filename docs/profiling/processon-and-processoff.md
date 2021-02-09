@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.assetid: d3dc6a7e-bc0f-48a6-a4ec-f386348bb296
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ae4b5e95636894ddc2d0c4799308afb057145747
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 82a976700137255a5c6adb074058b33b15fb7c5f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719445"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910686"
 ---
 # <a name="processon-and-processoff"></a>ProcessOn a ProcessOff
 Dílčí příkazy VSPerfCmd.exe **ProcessOff** a **ProcessOn** pozastaví a obnoví profilování pro zadaný proces v relaci profilace z příkazového řádku. **ProcessOff** zastaví profilování procesu a **ProcessOn** spustí profilování procesu.

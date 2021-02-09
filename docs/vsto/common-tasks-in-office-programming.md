@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Office development in Visual Studio, frequently asked questions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4f6fae2b7d446035a08e3fcb77bcffaaed6de3a9
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 67b09d3881dcde1d404b7ff0c1096ced1ecb50ea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846295"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910612"
 ---
 # <a name="common-tasks-in-office-programming"></a>Běžné úlohy při programování pro systém Office
   Toto téma je navrženo tak, aby vám pomohlo najít odpovědi na následující kategorie běžných otázek týkajících se programování řešení Office pomocí sady Visual Studio.

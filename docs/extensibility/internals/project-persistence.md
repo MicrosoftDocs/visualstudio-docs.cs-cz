@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 42907bcf-4e27-46bd-a8cb-01c2ccd2bde5
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b6ffa60508eba02a4442bacb63b05abb39202ab9
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 1009df1ce71e5ab46c0e9d100a79562f77460c0f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877439"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99911777"
 ---
 # <a name="project-persistence"></a>Trvalost projektu
 Trvalost je klíčovým aspektem návrhu projektu. Většina projektů používá položky projektu, které reprezentují soubory; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje také projekty, jejichž data nejsou založená na souborech. Oba soubory vlastněné projektem a soubor projektu musí být trvalé. Rozhraní IDE instruuje projekt, aby uložil sám sebe nebo položku projektu.

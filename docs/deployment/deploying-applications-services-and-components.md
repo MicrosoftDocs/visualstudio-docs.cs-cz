@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 63fcdd5b-2e54-4210-9038-65bc23167725
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2be42b3a66f6bd874568945081972b220e7a7830
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 8933127940cd8155bbf0854fd19c559022bceecb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006559"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912162"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>První pohled na nasazení v aplikaci Visual Studio
 
@@ -131,7 +131,7 @@ K povolení průběžného nasazování aplikace můžete použít Azure Pipelin
 
 - [Změna cílové platformy a publikování databázového projektu (SQL Server Data Tools (SSDT))](/sql/ssdt/how-to-change-target-platform-and-publish-a-database-project)
 - [Nasazení Analysis Servicesho projektu (SSAS)](/sql/analysis-services/multidimensional-tutorial/lesson-2-5-deploying-an-analysis-services-project)
-- [Nasazení projektů a balíčků integračních služeb (SSIS)](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)
+- [Nasazení projektů a balíčků služby SSIS (Integration Services)](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)
 - [Sestavení a nasazení do místní databáze](/sql/ssdt/how-to-build-and-deploy-to-a-local-database)
 
 ## <a name="deployment-for-other-app-types"></a>Nasazení pro jiné typy aplikací
@@ -139,7 +139,7 @@ K povolení průběžného nasazování aplikace můžete použít Azure Pipelin
 | Typ aplikace | Scénář nasazení | Odkaz |
 | --- | --- | --- |
 | **Aplikace Office** | Doplněk pro Office můžete publikovat ze sady Visual Studio. | [Nasazení a publikování doplňku pro Office](https://dev.office.com/docs/add-ins/publish/publish) |
-| **WCF nebo služba OData** | Jiné aplikace mohou používat služby WCF RIA, které nasadíte na webový server. | [Vývoj a nasazení WCF Data Services](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
+| **WCF nebo služba OData** | Jiné aplikace mohou používat služby WCF RIA, které nasadíte na webový server. | [Vývoj a nasazení Datové služby WCF](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
 | **LightSwitch** | LightSwitch již není v sadě Visual Studio 2017 podporován, ale lze jej stále nasadit ze sady Visual Studio 2015 a starší. | [Nasazení aplikací LightSwitch](/previous-versions/ff872288(v=vs.140)) |
 
 ## <a name="next-steps"></a>Další kroky

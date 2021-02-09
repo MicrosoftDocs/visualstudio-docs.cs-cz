@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 82879fbe-7756-42cd-9a07-c10edf5b4673
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf2d41fe83b440e2a3b4bfebd4fac6f5d06094a4
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 3e0cf60b260204ac3b97a222591946765cf8bb80
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671321"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910977"
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem – element (šablony projektů sady Visual Studio)
 Určuje soubor, který je součástí šablony projektu.

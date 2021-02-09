@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: dbfd8d91-4430-4b82-81b9-97ac61412a6c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ed3ba5453976e3f3976aba43bc296c040a86b7a5
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 507ea5a90aa17ba252a95714f488f5ea22dff4f3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719770"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99911498"
 ---
 # <a name="vsperfreport"></a>VSPerfReport
 Nástroj příkazového řádku VSPerfReport slouží k vytváření sestav pomocí  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci datových souborů profilování. Výchozí formát sestavy je. soubor *CSV* .
@@ -49,7 +49,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 ## <a name="general-report-options"></a>Obecné možnosti sestavy
  Následující tabulka popisuje obecné možnosti formátování sestavy a možnosti, které vyberou data k nahlášení.
 
-|Možnosti|Popis|
+|Možnosti|Description|
 |-------------|-----------------|
 |**H**|Výstup sestavy a přesměrované výstupy konzoly jsou zapsané jako Unicode. Musí se jednat o první zadanou možnost.|
 |**Shrnutí:**[*typy*]|Vytvoří jeden nebo více typů sestav.<br /><br /> -   `All` -jsou generovány všechny typy sestav.<br />-   `CallerCallee` – Vztahy nadřazenosti a podřízenosti mezi funkcemi.<br />-   `Function` -funkce, které jsou volány.<br />-   `CallTree` -hierarchie volání funkcí.<br />-   `Counter` – všechny značky společně s hodnotami čítače výkonu systému Windows.<br />-   `Ip` – pokyny profilování.<br />-   `Life` – doba života přidělených objektů (k dispozici, když se shromažďují data přidělení)<br />-   `Line` data profilu čáry zdrojového kódu.<br />-   `Header` -Sestava obsahuje informace o záhlaví souboru.<br />-   `Mark` všechny značky.<br />-   `Module` -moduly profilované.<br />-   `Process` -procesy profilace.<br />-   `Thread` – vlákna profilace.<br />-   `Type` -přidělené typy.<br />-   `Contention` – spory prostředků.<br />-   `RuleWarnings` – problémy s pravidlem výkonu<br />-   `ETW` – všechny události trasování událostí pro Windows (ETW) shromážděné při spuštění profilace. Datový soubor. ETL musí být v původním umístění nebo v adresáři, který obsahuje soubor. vsp nebo. vsps.|
@@ -69,7 +69,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 ## <a name="filter-options"></a>Možnosti filtru
  Následující tabulka popisuje možnosti, jak filtrovat data, která jsou k dispozici.
 
-|Možnosti|Popis|
+|Možnosti|Description|
 |-------------|-----------------|
 |**JustMyCode**[**:**[ `caller` ] [] `callee` ]|Zobrazit pouze volání funkcí aplikace uživatele; Skryjte systémová volání.<br /><br /> -Žádné parametry – skryje všechny systémové funkce.<br />-   `caller` -Zobrazí jednu úroveň systémových funkcí, které volají funkce aplikace.<br />-   `callee` -Zobrazit jednu úroveň systémových funkcí, které jsou volány funkcemi uživatelské aplikace.|
 |**Čas_spuštění:**[*hodnota*]|Zobrazit pouze data shromážděná po hodnotě (v milisekundách)|
@@ -83,7 +83,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 ## <a name="difference-report-options"></a>Rozdíly – možnosti sestavy
  Následující tabulka popisuje možnosti pro porovnávání souborů sestav.
 
-|Možnosti|Popis|
+|Možnosti|Description|
 |-------------|-----------------|
 |**Diff**  `vspfile1 vspfile2`|Porovnejte dva soubory sestav (.*VSP* nebo. *vsps*) spis. Možnosti souhrnu budou ignorovány pomocí možnosti diff.|
 |**Rozdíl:**[*hodnota*]|Pod touto prahovou hodnotou se bude ignorovat rozdíl mezi dvěma hodnotami. Také se nezobrazí nová data s hodnotami pod touto prahovou hodnotou.|

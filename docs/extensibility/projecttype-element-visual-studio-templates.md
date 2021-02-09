@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ccf9d83f-c7f3-49c7-a31f-e1f22bec004c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2bd457bfb639ff0def2662476e60c8736e14b3ce
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: a90c8de2fca62ef303ce8055993d8e2f6d230493
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903816"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910887"
 ---
 # <a name="projecttype-element-visual-studio-templates"></a>ProjectType – element (šablony sady Visual Studio)
 Kategorizuje šablonu projektu tak, aby se zobrazila pod určenou skupinou v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .
@@ -31,7 +31,7 @@ Kategorizuje šablonu projektu tak, aby se zobrazila pod určenou skupinou v dia
  \<VSTemplate> \<TemplateData>
  \<ProjectType>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectType> CSharp/VisualBasic/VC/Web </ProjectType>

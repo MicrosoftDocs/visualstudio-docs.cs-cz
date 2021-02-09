@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f22cfc75-3e31-4e0d-88a9-3ca99539203b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5ad298a44eedea0681a554add74bd67ed22cad41
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 99a0de44d5e7ac240187c929a8134ab47c7de55c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876025"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910985"
 ---
 # <a name="solution-configuration"></a>Konfigurace řešení
 Konfigurace řešení ukládají vlastnosti na úrovni řešení. Nasměrují chování klávesy **Spustit** (F5) a příkazu **sestavení** . Ve výchozím nastavení tyto příkazy sestaví a spustí konfiguraci ladění. Oba příkazy jsou spouštěny v kontextu konfigurace řešení. To znamená, že uživatel může očekávat, že F5 spustí a sestaví jakékoli aktivní řešení, které se nakonfiguruje prostřednictvím nastavení. Prostředí je navrženo pro optimalizaci pro řešení spíše než při sestavování a spouštění.
