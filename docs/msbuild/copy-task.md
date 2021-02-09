@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a46ba9da-3e4e-4890-b4ea-09a099b6bc40
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 00544b6d1e797a1fd8a7a197197480cae5620f10
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: b83541a98e995a55a38a5d736c97620f15076ead
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796223"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901505"
 ---
 # <a name="copy-task"></a>Copy – úloha
 
@@ -78,7 +78,7 @@ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microso
 
 ## <a name="example-1"></a>Příklad 1
 
-Následující příklad zkopíruje položky v `MySourceFiles` kolekci Item do složky *c:\MyProject\Destination* .
+Následující příklad zkopíruje položky v `MySourceFiles` kolekci Item do složky *c:\MyProject\Destination*.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

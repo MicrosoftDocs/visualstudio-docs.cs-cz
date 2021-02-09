@@ -12,16 +12,16 @@ dev_langs:
 ms.assetid: 96d06843-b97e-45a8-8126-07478a40bfc4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
 monikerRange: vs-2017
-ms.openlocfilehash: cf55035ba5a05917334b2192067a3273f4930775
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: af27524b9b057e1a7dc852bd10d7acd23cf8bd04
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205785"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901245"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>Analýza spotřeby energie v aplikacích pro UWP
 
@@ -126,7 +126,7 @@ if (performance && performance.mark) {
 
  ![Stránka sestavy profilace energie](../profiling/media/energyprof_all.png "ENERGYPROF_All")
 
-|Image|Popis|
+|Image|Description|
 |-|-|
 |![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Soubor sestavy má název Report *RRRRMMDD-hhmm*. diagsession. Pokud se rozhodnete sestavu uložit, můžete název změnit.|
 |![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Časová osa ukazuje délku relace profilace, aktivační události životního cyklu aplikace a uživatelské značky.|
