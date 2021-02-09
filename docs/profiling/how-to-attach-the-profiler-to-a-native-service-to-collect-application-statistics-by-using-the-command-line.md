@@ -7,16 +7,16 @@ ms.topic: how-to
 ms.assetid: f783817f-77a0-4eb8-985b-ec3b77eadc42
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fa6b1733d7c3d31d32294c3e08b29a072d37730
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: 27c3c0f71f883c85718abbbfee5d54dd625381d2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98801098"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99886337"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-service-to-collect-application-statistics-by-using-the-command-line-vsperfcmd"></a>Postupy: Připojení profileru k nativní službě ke shromažďování statistik aplikace pomocí příkazového řádku (VSPerfCmd)
 Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojů příkazového řádku nástroje pro profilaci připojit profiler k nativní službě a shromažďovat statistiku výkonu pomocí metody vzorkování.
@@ -68,7 +68,7 @@ Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/
 
     Ve výchozím nastavení jsou data o výkonu Navzorkovaná každých 10 000 000 hodinových cyklů procesoru. To je přibližně jednou za 10 sekund na frekvencí 1 GHz procesoru. Můžete určit jednu z následujících možností pro změnu intervalu hodinových cyklů nebo zadat jinou událost vzorkování.
 
-   |Událost vzorku|Popis|
+   |Událost vzorku|Description|
    |------------------|-----------------|
    |[/Timer](../profiling/timer.md) **:**`Interval`|Změní interval vzorkování na počet nepřerušených hodinových cyklů určených parametrem `Interval`.|
    |[/PF](../profiling/pf.md)[**:** `Interval` ]|Změní událost vzorkování na chyby stránkování. Pokud `Interval` je zadaný, nastaví počet chyb stránek mezi ukázkami. Výchozí hodnota je 10.|

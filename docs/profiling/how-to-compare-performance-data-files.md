@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1905b45d-c6b3-43c8-87b1-1aee734f37f9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 40988d23dd8e9b848ea410aa75f4d4c1f45d524d
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: d47f51b5c46538bdeeb50db0627c5bd0840bcc14
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98800457"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99886142"
 ---
 # <a name="how-to-compare-performance-data-files"></a>Postupy: Porovnání datových souborů výkonu
 Můžete porovnat výsledky dvou různých datových souborů profileru (.*VSP* nebo. *vsps*) vytvořením sestavy nebo zobrazením porovnání (diff). Porovnání znázorňuje rozdíly, regrese výkonu a vylepšení, k nimž došlo z jedné relace profilování do druhé.

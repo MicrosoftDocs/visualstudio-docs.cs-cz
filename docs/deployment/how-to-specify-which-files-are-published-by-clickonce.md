@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 579c134a-d50f-4e0c-8e05-2a4ff654896a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dca403e2b4b7ac9b572e73db397433b1fae1b1ae
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: d093438dc30bee08abbc45c6cf3c2555fbe208c6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350891"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887481"
 ---
 # <a name="how-to-specify-which-files-are-published-by-clickonce"></a>Postupy: určení souborů, které jsou publikovány pomocí technologie ClickOnce
 Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace jsou do aplikace nasazeny i všechny soubory neobsahující kód v projektu. V některých případech možná nebudete chtít ani potřebovat publikovat určité soubory nebo můžete chtít nainstalovat určité soubory na základě podmínek. Visual Studio poskytuje možnosti pro vyloučení souborů, označování souborů jako datových souborů nebo požadavků a vytváření skupin souborů pro podmíněnou instalaci.
@@ -37,9 +37,9 @@ Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.
 
  Soubory s vlastností **Akce sestavení** nastavenou na **obsah** jsou označeny jako soubory aplikace a budou označeny jako zahrnuté ve výchozím nastavení. Můžou být zahrnuté, vyloučené nebo označené jako datové soubory. Výjimky jsou následující:
 
-- Datové soubory, například SQL Database ( *. mdf* a *. mdb* ) a soubory XML, budou ve výchozím nastavení označeny jako datové soubory.
+- Datové soubory, například SQL Database (*. mdf* a *. mdb*) a soubory XML, budou ve výchozím nastavení označeny jako datové soubory.
 
-- Odkazy na sestavení (soubory *. dll* ) jsou označeny následujícím způsobem při přidání odkazu: je-li **místní kopírování** **NEPRAVDA** , je označení standardně označeno jako požadované sestavení ( **předpoklad (auto)** ), které musí být přítomno v globální mezipaměti sestavení (GAC) před instalací aplikace. Pokud je **kopie Local** nastavená na **true** , sestavení je označeno jako sestavení aplikace ( **include (auto)** ) a zkopíruje se do složky aplikace při instalaci. Odkaz COM se zobrazí v dialogovém okně **soubory aplikace** (jako soubor *. ocx* ) pouze v případě, že je jeho vlastnost **Isolated** nastavena na **hodnotu true**. Ve výchozím nastavení bude součástí.
+- Odkazy na sestavení (soubory *. dll* ) jsou označeny následujícím způsobem při přidání odkazu: je-li **místní kopírování** **NEPRAVDA**, je označení standardně označeno jako požadované sestavení (**předpoklad (auto)**), které musí být přítomno v globální mezipaměti sestavení (GAC) před instalací aplikace. Pokud je **kopie Local** nastavená na **true**, sestavení je označeno jako sestavení aplikace (**include (auto)**) a zkopíruje se do složky aplikace při instalaci. Odkaz COM se zobrazí v dialogovém okně **soubory aplikace** (jako soubor *. ocx* ) pouze v případě, že je jeho vlastnost **Isolated** nastavena na **hodnotu true**. Ve výchozím nastavení bude součástí.
 
 ### <a name="to-add-files-to-the-application-files-dialog-box"></a>Přidání souborů do dialogového okna soubory aplikace
 

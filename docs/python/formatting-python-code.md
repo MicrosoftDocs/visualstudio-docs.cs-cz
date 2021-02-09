@@ -5,17 +5,17 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6e95d05c3fbc0dd46d235c7480bd4a9caa48947e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b03e99a70edd587c9dfe2a43d326a64d14b9193
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62957529"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887884"
 ---
 # <a name="format-python-code"></a>Formátování kódu Pythonu
 
@@ -24,13 +24,13 @@ Visual Studio umožňuje rychle přeformátovat kód tak, aby odpovídal předem
 - Formátování výběru: vyberte **Upravit**  >  **Rozšířené**  >  **Výběr formátu** nebo stiskněte **CTRL** + **E**  >  **F**.
 - Chcete-li naformátovat celý soubor: vyberte **Upravit**  >  **Rozšířené**  >  **formátování dokumentu** nebo stiskněte klávesovou **zkratku CTRL** + **E**  >  **D**.
 
-Možnosti jsou nastaveny prostřednictvím **Tools**  >  **možností**nástroje  >  **textový editor**  >  **Python**  >  **formátování** a jeho vnořené karty. Musíte vybrat **Zobrazit všechna nastavení** , která se zobrazí pro tyto možnosti:
+Možnosti jsou nastaveny prostřednictvím   >  **možností** nástroje  >  **textový editor**  >  **Python**  >  **formátování** a jeho vnořené karty. Musíte vybrat **Zobrazit všechna nastavení** , která se zobrazí pro tyto možnosti:
 
 ![Možnosti formátování Pythonu v aplikaci Visual Studio](media/options-editor-formatting.png)
 
 Možnosti formátování ve výchozím nastavení jsou nastavené tak, aby odpovídaly nadmnožině [Průvodce stylem PEP 8](https://www.python.org/dev/peps/pep-0008/). Karta **Obecné** určuje, kdy se používá formátování; nastavení dalších tří karet jsou popsána v tomto článku.
 
-[Podpora Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md) také přidá do nabídky **Upravit**upřesnění užitečný příkaz k [**zadání komentáře k vyplňování**](#fill-comment-paragraph-command)  >  **Advanced** , jak je popsáno v další části.
+[Podpora Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md) také přidá do nabídky **Upravit** upřesnění užitečný příkaz k [**zadání komentáře k vyplňování**](#fill-comment-paragraph-command)  >   , jak je popsáno v další části.
 
 ## <a name="spacing"></a>Mezery
 
@@ -109,7 +109,7 @@ Při **zalamování** lze nastavit **maximální šířku komentáře** (výchoz
 
 ## <a name="fill-comment-paragraph-command"></a>Vyplnit komentář – příkaz odstavce
 
-**Upravit**  >  **Rozšířené možnosti**  >  **Vyplní odstavec komentáře** (**CTRL +** + **E**  >  **P**) přetéká a formátuje text komentáře, kombinuje krátké řádky dohromady a rozbalí dlouhé.
+**Upravit**  >  **Rozšířené možnosti**  >  **Vyplní odstavec komentáře** (**CTRL +** +   >  **P**) přetéká a formátuje text komentáře, kombinuje krátké řádky dohromady a rozbalí dlouhé.
 
 Příklad:
 

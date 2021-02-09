@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 882a10fa-bb1c-4b01-943a-7a3c155286dd
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c202aa9e76f568db9394625485282345ea3222c1
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: a1b21ef736e69c962db389a7bb1a3eb284ebdd0a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974527"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887364"
 ---
 # <a name="create-a-basic-project-system-part-1"></a>Vytvoření základního projektového systému, část 1
 V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používají k uspořádání souborů zdrojového kódu a dalších prostředků. Projekty se zobrazí jako podřízené položky řešení v **Průzkumník řešení**. Projekty umožňují organizovat, sestavovat, ladit a nasazovat zdrojový kód a vytvářet odkazy na webové služby, databáze a další prostředky.
@@ -63,7 +63,7 @@ V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používaj
  Také je nutné stáhnout zdrojový kód pro [spravované balíčky architektury pro projekty](https://github.com/tunnelvisionlabs/MPFProj10). Extrahujte soubor do umístění, které je přístupné pro řešení, které budete vytvářet.
 
 ## <a name="create-a-basic-project-type"></a>Vytvoření základního typu projektu
- Vytvořte projekt VSIX v jazyce C# s názvem **SimpleProject**. (**Soubor**  >  **Nové**  >  **Projekt** a pak **Visual C#**  >  **rozšiřitelný**  >  **projekt VSIX** v jazyce Visual C#). Přidejte šablonu položky projektu balíčku sady Visual Studio (na **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat**  >  **novou položku** a pak přejděte na **rozšíření** sady  >  **Visual Studio – balíček**). Název souboru *SimpleProjectPackage*.
+ Vytvořte projekt VSIX v jazyce C# s názvem **SimpleProject**. (**Soubor**  >  **Nové**  >  **Projekt** a pak   >  **rozšiřitelný**  >  **projekt VSIX** v jazyce Visual C#). Přidejte šablonu položky projektu balíčku sady Visual Studio (na **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat**  >  **novou položku** a pak přejděte na **rozšíření** sady  >  **Visual Studio – balíček**). Název souboru *SimpleProjectPackage*.
 
 ## <a name="creating-a-basic-project-template"></a>Vytvoření základní šablony projektu
  Nyní můžete upravit tento základní VSPackage pro implementaci nového typu projektu *. myproj* . Chcete-li vytvořit projekt, který je založen na typu projektu *. myproj* , aplikace Visual Studio musí zjistit, které soubory, prostředky a odkazy mají být přidány do nového projektu. Chcete-li poskytnout tyto informace, umístěte soubory projektu do složky šablony projektu. Když uživatel použije projekt *. myproj* k vytvoření projektu, soubory se zkopírují do nového projektu.
@@ -105,7 +105,7 @@ V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používaj
    > [!IMPORTANT]
    > Nejedná se o konečnou formu *program.cs* kódu; parametry nahrazení budou řešeny v pozdějším kroku. Může dojít k chybám při kompilaci, ale pokud je **BuildAction** souboru **obsahu**, měli byste být schopni sestavit a spustit projekt obvyklým způsobem.
 
-7. Uložte soubor.
+7. Soubor uložte.
 
 8. Zkopírujte soubor *AssemblyInfo.cs* ze složky *Properties* do složky *Projects\SimpleProject* .
 
@@ -154,7 +154,7 @@ V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používaj
     </Project>
     ```
 
-11. Uložte soubor.
+11. Soubor uložte.
 
 12. V okně **vlastnosti** nastavte **akci sestavení** pro *AssemblyInfo.cs*, *program.cs*, *SimpleProject. ico* a *SIMPLEPROJECT. myproj* na **obsah** a nastavte jejich **zahrnutí do vlastností VSIX** na **hodnotu true**.
 

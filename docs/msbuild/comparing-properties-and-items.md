@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: b9da45ae-d6a6-4399-8628-397deed31486
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f00de870986cf020e91ff992dabb2681469ae5b
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 226b86d621de2faee5a71d9fdb3fea39f20b984e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796768"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888118"
 ---
 # <a name="compare-properties-and-items"></a>Porovnat vlastnosti a položky
 
@@ -29,7 +29,7 @@ Vlastnosti a položky nástroje MSBuild se používají k předávání informac
 
 ## <a name="scalars-and-vectors"></a>Skalární a vektory
 
-Vzhledem k tomu, že vlastnosti MSBuild jsou páry název-hodnota, které mají pouze jednu řetězcovou hodnotu, jsou často popsány jako *skalární* . Vzhledem k tomu, že typy položek MSBuild jsou seznamy položek, jsou často popsány jako *vektor* . V praxi však vlastnosti mohou představovat více hodnot a typy položek mohou mít 0 nebo jednu položku.
+Vzhledem k tomu, že vlastnosti MSBuild jsou páry název-hodnota, které mají pouze jednu řetězcovou hodnotu, jsou často popsány jako *skalární*. Vzhledem k tomu, že typy položek MSBuild jsou seznamy položek, jsou často popsány jako *vektor*. V praxi však vlastnosti mohou představovat více hodnot a typy položek mohou mít 0 nebo jednu položku.
 
 ### <a name="target-dependency-injection"></a>Vkládání závislostí cíle
 
@@ -45,7 +45,7 @@ Chcete-li zjistit, jak vlastnosti mohou představovat více hodnot, zvažte spol
 </PropertyGroup>
 ```
 
-`BuildDependsOn`Vlastnost se obvykle používá jako argument cílového `DependsOnTargets` atributu a efektivně ho převádí na seznam položek. Tato vlastnost může být přepsána, pokud chcete přidat cíl nebo změnit pořadí spuštění cíle. Příklad:
+`BuildDependsOn`Vlastnost se obvykle používá jako argument cílového `DependsOnTargets` atributu a efektivně ho převádí na seznam položek. Tato vlastnost může být přepsána, pokud chcete přidat cíl nebo změnit pořadí spuštění cíle. Třeba
 
 ```xml
 <PropertyGroup>

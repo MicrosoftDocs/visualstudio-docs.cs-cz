@@ -11,15 +11,15 @@ f1_keywords:
 ms.assetid: f48f62d9-16ff-4a2e-8c01-5cbe99513788
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b7e746d37edaca87abfca42f315a65a470369e7e
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 095828e711f860662432edd767b19493b73c56c0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727577"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887572"
 ---
 # <a name="graphics-object-table"></a>Tabulka grafických objektů
 Tabulka objekt grafiky v analýze grafiky sady Visual Studio pomáhá pochopit objekty Direct3D, které podporují rámec vaší hry nebo aplikace.
@@ -40,14 +40,14 @@ Tabulka objekt grafiky v analýze grafiky sady Visual Studio pomáhá pochopit o
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**RID**|ID objektu.|
+|**Identifikátor**|ID objektu.|
 |**Název**|Informace specifické pro aplikaci, které byly nastaveny u objektu pomocí funkce Direct3D `SetPrivateData` – obvykle k poskytnutí dalších identifikačních informací o objektu.|
 |**Typ**|Typ objektu.|
 |**Aktivní**|Zobrazí "*" pro objekt, který byl nastaven na D3D10Device nebo D3D11DeviceContext během zachyceného snímku.<br /><br /> To odpovídá objektům, které se zobrazují jako šedý text, ale poskytuje položku sloupce, kterou můžete použít k tomu, abyste mohli seřadit tabulku objektů.|
 |**Velikost**|Velikost objektu v bajtech|
 |**Formát**|Formát objektu Například formát objektu textury nebo model shaderu objektu shader.|
-|**Délk**|Šířka objektu textury. Nevztahuje se na jiné typy objektů.|
-|**Výška**|Výška objektu textury. Nevztahuje se na jiné typy objektů.|
+|**Width (Šířka)**|Šířka objektu textury. Nevztahuje se na jiné typy objektů.|
+|**Height (Výška)**|Výška objektu textury. Nevztahuje se na jiné typy objektů.|
 |**Úrovní**|Hloubka 3D objektu textury. Pokud textura není 3-D, hodnota je 0. Nevztahuje se na jiné typy objektů.|
 |**MIPS**|Počet úrovní MIP, které má objekt textury. Nevztahuje se na jiné typy objektů.|
 |**ArraySize**|Počet textur v poli textury. Rozsah je od 1 do horní meze definované aktuální úrovní funkce. Pro mapu krychle je tato hodnota 6 časů počtu mapování krychle v poli.|
@@ -80,7 +80,7 @@ Tabulka objekt grafiky v analýze grafiky sady Visual Studio pomáhá pochopit o
 
  Můžete také přepnout zaškrtávací políčko **Zobrazit posunutí** pro skrytí nebo zobrazení posunutí jednotlivých prvků ve vyrovnávací paměti.
 
-|Typ|Popis|
+|Typ|Description|
 |----------|-----------------|
 |**float**|Hodnota 32-bit s plovoucí desetinnou čárkou.|
 |**float2**|Vektor, který obsahuje 2 32 hodnot s plovoucí desetinnou čárkou.|

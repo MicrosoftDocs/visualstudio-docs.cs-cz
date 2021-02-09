@@ -7,16 +7,16 @@ ms.topic: how-to
 ms.assetid: 3725ddbe-ce91-4469-991e-8c5ed048c618
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: f79591c58865631b20aecb3554e9502a22f6c7b9
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: acf625bc5762dbc90265ffc81ab0920ea778f010
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98801621"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887975"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line"></a>Postupy: Připojení profileru k webové aplikaci ASP.NET ke shromažďování statistik aplikace pomocí příkazového řádku
 Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástrojů příkazového řádku připojit profiler k webové aplikaci ASP.NET a shromažďovat statistiku výkonu pomocí metody vzorkování.
@@ -77,7 +77,7 @@ Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/
 
    - Ve výchozím nastavení jsou data o výkonu Navzorkovaná každých 10 000 000 hodinových cyklů procesoru. To je přibližně 100 časů za sekundu na frekvencí 1 GHz procesoru. Můžete zadat jednu z následujících možností **VSPerfCmd** pro změnu intervalu hodinových cyklů nebo zadání jiné události vzorkování.
 
-   |Ukázková událost|Popis|
+   |Ukázková událost|Description|
    |------------------|-----------------|
    |[/Timer](../profiling/timer.md) **:**`Interval`|Změní interval vzorkování na počet nepřerušených hodinových cyklů, které jsou určeny pomocí `Interval` .|
    |[/PF](../profiling/pf.md)[**:** `Interval` ]|Změní událost vzorkování na chyby stránkování. Pokud `Interval` je zadaný, nastaví počet chyb stránek mezi ukázkami. Výchozí hodnota je 10.|

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: ce0560f3-b4c9-4ab2-a99c-d4e10f37b9e0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f20e05c50bf208490edd237299653a3caa6b559f
-ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
+ms.openlocfilehash: 6a55b96e3947d8ca0605778ab927b4028b1a3ecd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97616072"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99886805"
 ---
 # <a name="menu-element"></a>Element menu
 Definuje jednu položku nabídky. Jedná se o šest druhů nabídek: kontext, nabídka, MenuController, MenuControllerLatched, panel nástrojů a ToolWindowToolbar.

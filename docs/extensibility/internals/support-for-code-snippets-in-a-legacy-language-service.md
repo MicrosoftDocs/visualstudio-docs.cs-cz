@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 7490325b-acee-4c2d-ac56-1cd5db1a1083
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 781633a995027ee9938a0c579af32373c06207c2
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 16f0df8a21621b93655935b3cfa27a4b62df63ce
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876607"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888144"
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>Podpora pro fragmenty kódu ve službě starší verze jazyka
 Fragment kódu je část kódu, která je vložena do zdrojového souboru. Samotný fragment kódu je šablona založená na jazyce XML se sadou polí. Tato pole jsou zvýrazněna po vložení fragmentu kódu a mohou mít různé hodnoty v závislosti na kontextu, ve kterém je vložený fragment. Ihned po vložení fragmentu kódu může služba jazyka tento fragment kódu naformátovat.

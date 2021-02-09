@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 9e3b0d74-a2dd-4eaa-bd95-21b2f9c79409
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1ff1da2f2a2d24b958a613e6fe5cb58c0081ed3e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5fcb5f1f43aa9be16a1b2fe00bdec4eb3dd6014
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80730042"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888352"
 ---
 # <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
 Vrátí informace, které umožňují konstrukci chybové zprávy čitelné člověkem.
@@ -28,24 +28,24 @@ Vrátí informace, které umožňují konstrukci chybové zprávy čitelné člo
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetErrorMessage(
-   MESSAGETYPE* pMessageType,
-   BSTR*        pbstrErrorFormat,
-   HRESULT*     hrErrorReason,
-   DWORD*       pdwType,
-   BSTR*        pbstrHelpFileName,
-   DWORD*       pdwHelpId
+HRESULT GetErrorMessage(
+   MESSAGETYPE* pMessageType,
+   BSTR*        pbstrErrorFormat,
+   HRESULT*     hrErrorReason,
+   DWORD*       pdwType,
+   BSTR*        pbstrHelpFileName,
+   DWORD*       pdwHelpId
 );
 ```
 
 ```csharp
 int GetErrorMessage(
-   out enum_MESSAGETYPE   pMessageType,
-   out string             pbstrErrorFormat,
-   out int                phrErrorReason,
-   out uint               pdwType,
-   out string             pbstrHelpFileName,
-   out uint               pdwHelpId
+   out enum_MESSAGETYPE   pMessageType,
+   out string             pbstrErrorFormat,
+   out int                phrErrorReason,
+   out uint               pdwType,
+   out string             pbstrHelpFileName,
+   out uint               pdwHelpId
 );
 ```
 

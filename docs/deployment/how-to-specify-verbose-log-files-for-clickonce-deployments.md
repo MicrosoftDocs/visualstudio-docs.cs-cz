@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0807a28d-2e40-4a51-ab10-308d808ded6b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0da285cfef49bd495fbecf39131e49cacd0476a5
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 7adb711c77f4bb2dead3190d40065e148760b034
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350917"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887468"
 ---
 # <a name="how-to-specify-verbose-log-files-for-clickonce-deployments"></a>Postupy: určení podrobných souborů protokolu pro ClickOnce nasazení
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] udržuje soubory protokolu aktivit pro všechna nasazení. Tyto protokoly dokumentují informace týkající se instalace, inicializace, aktualizace a odinstalace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení. Chcete-li zvýšit podrobnosti, které [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] zapisuje do těchto souborů protokolu, použijte Editor registru ( *regedit.exe* ) a určete úroveň podrobností.
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] udržuje soubory protokolu aktivit pro všechna nasazení. Tyto protokoly dokumentují informace týkající se instalace, inicializace, aktualizace a odinstalace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení. Chcete-li zvýšit podrobnosti, které [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] zapisuje do těchto souborů protokolu, použijte Editor registru (*regedit.exe*) a určete úroveň podrobností.
 
 > [!CAUTION]
 > Pokud používáte Editor registru nesprávně, může dojít k vážným problémům, které mohou vyžadovat přeinstalaci operačního systému. Editor registru použijte na vlastní riziko.

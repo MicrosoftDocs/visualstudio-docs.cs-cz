@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 97e7757e-c372-4626-8149-99a81367a0e1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: de8f3c356cfe05aade3e4f2197b3f7429967a259
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: c6f909d7e250be193bb446d25cd4182d4f062ebe
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994007"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888599"
 ---
 # <a name="graphics-state"></a>Stav grafiky
 Okno stav v nástroji Diagnostika grafiky sady Visual Studio pomáhá pochopit stav grafiky, která je aktivní v době aktuální události, jako je například volání metody Draw.
@@ -28,7 +28,7 @@ Okno stav v nástroji Diagnostika grafiky sady Visual Studio pomáhá pochopit s
 ### <a name="state-views"></a>Zobrazení stavu
  Tabulku stavů můžete zobrazit několika různými způsoby:
 
-|Zobrazit|Popis|
+|Zobrazení|Description|
 |----------|-----------------|
 |Zobrazení stavu vstupu rozhraní API|Toto zobrazení prezentuje stav v podobném rozložení pro objekty Direct3D, které tvoří stav.|
 |Zobrazení stavu logického vstupu|Toto zobrazení prezentuje stav v logickém zobrazení, které nezrcadlí rozložení objektů Direct3D, které tvoří stav.|

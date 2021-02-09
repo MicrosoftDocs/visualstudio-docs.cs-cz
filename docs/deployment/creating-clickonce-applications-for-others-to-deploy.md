@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d20766c7-4ef3-45ab-8aa0-3f15b61eccaa
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7379038d1c2bf203f7787e69408ddd9b2e30f372
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 9554cad786669ae4aa3b9aa84ecd6b996ee196f3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382998"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888469"
 ---
 # <a name="create-clickonce-applications-for-others-to-deploy"></a>Vytváření aplikací ClickOnce k nasazení dalšími osobami
 Ne všichni vývojáři, kteří vytvářejí nasazení ClickOnce, naplánují nasazení samotných aplikací. Mnohé z nich pouze zabalí své aplikace pomocí ClickOnce a pak je předají do zákazníka, jako je například velká společnost. Zákazník se bude zodpovědná za hostování aplikace v příslušné síti. Toto téma popisuje některé problémy, které jsou součástí těchto nasazení ve verzích .NET Framework před verzí 3,5. Pak popisuje nové řešení, které je k dispozici, pomocí nové funkce použít manifest pro vztah důvěryhodnosti v .NET Framework 3,5. Nakonec se dokončí s doporučenými strategiemi pro vytváření nasazení ClickOnce pro zákazníky, kteří stále používají starší verze .NET Framework.
@@ -52,7 +52,7 @@ Ne všichni vývojáři, kteří vytvářejí nasazení ClickOnce, naplánují n
  I v případě, že vývojář a zákazník souhlasí, že by měl podepsat manifest aplikace tím, že má za to, že má za to, že se bude vztahovat i na nasazení důvěryhodné aplikace, vyvolá další problémy, které obklopují identitu aplikace. (Další informace o této funkci najdete v tématu [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md).) Řekněme, že Adventure Works chce nakonfigurovat své klientské počítače tak, aby každá aplikace, kterou jim poskytuje Microsoft Corporation, běžela s úplným vztahem důvěryhodnosti. Pokud Adventure Works podepíše manifest nasazení, pak ClickOnce použije bezpečnostní podpis společnosti Adventure Worker k určení úrovně důvěryhodnosti aplikace.
 
 ## <a name="create-customer-deployments-by-using-application-manifest-for-trust"></a>Vytváření zákaznických nasazení pomocí manifestu aplikace pro vztah důvěryhodnosti
- ClickOnce v .NET Framework 3,5 obsahuje novou funkci, která vývojářům a zákazníkům poskytuje nové řešení do scénáře, jak by měly být manifesty podepsány. Manifest aplikace ClickOnce podporuje nový element s názvem `<useManifestForTrust>` , který vývojářům umožňuje označit, že digitální podpis manifestu aplikace je vhodné použít k rozhodování o důvěryhodnosti. Vývojář používá nástroje pro vytváření balíčků ClickOnce, jako je *Mage.exe* , *MageUI.exe* a Visual Studio – pro zahrnutí tohoto prvku do manifestu aplikace a také pro vložení názvu vydavatele a názvu aplikace do manifestu.
+ ClickOnce v .NET Framework 3,5 obsahuje novou funkci, která vývojářům a zákazníkům poskytuje nové řešení do scénáře, jak by měly být manifesty podepsány. Manifest aplikace ClickOnce podporuje nový element s názvem `<useManifestForTrust>` , který vývojářům umožňuje označit, že digitální podpis manifestu aplikace je vhodné použít k rozhodování o důvěryhodnosti. Vývojář používá nástroje pro vytváření balíčků ClickOnce, jako je *Mage.exe*, *MageUI.exe* a Visual Studio – pro zahrnutí tohoto prvku do manifestu aplikace a také pro vložení názvu vydavatele a názvu aplikace do manifestu.
 
  Při použití nástroje `<useManifestForTrust>` nemusí být manifest nasazení podepsán certifikátem Authenticode vydaným certifikační autoritou. Místo toho je možné ho podepsat pomocí certifikátu podepsaného svým držitelem. Certifikát podepsaný svým držitelem je vygenerovaný zákazníkem nebo vývojářem pomocí standardních nástrojů .NET Framework SDK a pak se aplikuje na manifest nasazení pomocí standardních nástrojů pro nasazení ClickOnce. Další informace najdete v tématu [Makecert](/windows/desktop/SecCrypto/makecert).
 

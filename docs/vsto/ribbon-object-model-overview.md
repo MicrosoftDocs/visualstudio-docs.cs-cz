@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], object model
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f97bbbab4b867f503e5b5befff27844df8a4b4bc
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 6306b13cc40d8b93de734168fe1e6df92c256d21
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527985"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888690"
 ---
 # <a name="ribbon-object-model-overview"></a>Přehled modelu objektů pásu karet
   [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Zpřístupňuje model objektu silného typu, který můžete použít k získání a nastavení vlastností ovládacích prvků pásu karet za běhu. Můžete například dynamicky naplnit ovládací prvky nabídky nebo zobrazit a skrýt ovládací prvky kontextové. Na pás karet můžete také přidat karty, skupiny a ovládací prvky, ale pouze před tím, než se pás karet načte do aplikace Office. Informace najdete v tématu [Nastavení vlastností, které jsou jen pro čtení](#SettingReadOnlyProperties).
@@ -36,7 +36,7 @@ ms.locfileid: "97527985"
 ## <a name="ribbon-events"></a><a name="RibbonEvents"></a> Události pásu karet
  Třída **pásu karet** obsahuje následující tři události:
 
-|Událost|Popis|
+|Událost|Description|
 |-----------|-----------------|
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>|Vyvolá se, když aplikace Office načte přizpůsobení pásu karet. <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>Obslužná rutina události je automaticky přidána do souboru kódu pásu karet. Tuto obslužnou rutinu události použijte ke spuštění vlastního kódu při načtení pásu karet.|
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>|Umožňuje ukládat obrázky do mezipaměti při vlastním nastavení pásu karet. Pokud píšete kód pro ukládání imagí pásu karet do mezipaměti v této obslužné rutině, můžete získat mírné zvýšení výkonu. Další informace naleznete v tématu <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>.|
@@ -52,9 +52,9 @@ ms.locfileid: "97527985"
 |**Box**|<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>|
 |**Tlačítko**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>|
 |**ButtonGroup**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup>|
-|**Zaškrtávací políčko**|<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox>|
+|**CheckBox**|<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox>|
 |**ComboBox**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>|
-|**DropDown**|<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>|
+|**Rozevírací**|<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>|
 |**EditBox**|<xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|
 |**Galerie**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
 |**Skupina**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>|
@@ -170,7 +170,7 @@ ms.locfileid: "97527985"
 ## <a name="ribbon-control-events"></a>Události ovládacího prvku pásu karet
  Každá třída ovládacího prvku obsahuje jednu nebo více událostí. Tyto události jsou popsány v následující tabulce.
 
-|Událost|Popis|
+|Událost|Description|
 |-----------|-----------------|
 |Klikněte na|Vyvolá se při kliknutí na ovládací prvek.|
 |TextChanged|Vyvolá se v případě, že dojde ke změně textu pole pro úpravy nebo pole se seznamem.|

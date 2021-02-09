@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f36dff9a-49ef-46ce-8c9a-76246458c0d0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 46a93ca2a1f3d2f8c1abd35e5e1ad0e2463431b1
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 5fe9b432c2006038ba87ff92d8b84ed0bb4d743d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205577"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887494"
 ---
 # <a name="search-menu-commands"></a>Příkazy nabídky vyhledávání
 V nabídce **Hledat** jsou k dispozici příkazy pro hledání konkrétních oken.

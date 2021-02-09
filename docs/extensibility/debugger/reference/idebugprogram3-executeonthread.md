@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 2f5211e3-7a3f-47bf-9595-dfc8b4895d0d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 201c08352bc5b616298349c52197529ef3f1a7d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8df69c02fb7e78dbb107db906de59d8b7e5881b4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80722657"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887065"
 ---
 # <a name="idebugprogram3executeonthread"></a>IDebugProgram3::ExecuteOnThread
 Spustí ladicí program. Vlákno je vráceno, aby poskytovalo ladicí informace o tom, ve kterém vlákně se uživatel zobrazuje při provádění programu.
@@ -55,5 +55,5 @@ pro Objekt [IDebugThread2](../../../extensibility/debugger/reference/idebugthrea
   Vlákno předané do `ExecuteOnThread` je užitečné při rozhodování, který krok chcete zrušit. Pokud vlákno neznáte, spuštění příkazu provést zruší všechny kroky. Ve znalostech vlákna stačí krok zrušit pouze v aktivním vlákně.
 
 ## <a name="see-also"></a>Viz také
-- [Spuštění](../../../extensibility/debugger/reference/idebugprogram2-execute.md)
+- [Spuštěním](../../../extensibility/debugger/reference/idebugprogram2-execute.md)
 - [IDebugProgram3](../../../extensibility/debugger/reference/idebugprogram3.md)

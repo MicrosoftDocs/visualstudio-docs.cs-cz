@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 68e2cbd4-861c-453f-8c9f-4ab6afc80e67
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 721f45ebe83e0edb7bf7a182ea71b2181593ad6e
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: b9a777bf11f388873978f450184f1455236e9ff9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479530"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887078"
 ---
 # <a name="extend-properties"></a>Rozšířené vlastnosti
 Okno [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **vlastnosti** je univerzální prohlížeč vlastností pro součásti COM a com+ a podporuje všechny [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] produkty. Okno **vlastnosti** pracuje s `ITypeInfo` informacemi o typu a metadaty modelu COM+ k vypsání vlastností doby návrhu pro aktuálně vybraný objekt v jakémkoli jiném okně v integrovaném vývojovém prostředí (IDE).

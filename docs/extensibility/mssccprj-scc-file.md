@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 6f2e39d6-b79d-407e-976f-b62a3cedd378
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 253482f840350ae1d3cf7ee83e03a88ace15a6cd
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: f55e99d9df10ef2f96761a9436597d227cf0cd93
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863469"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99886688"
 ---
 # <a name="mssccprjscc-file"></a>MSSCCPRJ. Soubor SCC
 Při umístění řešení nebo projektu sady Visual Studio pod správu zdrojového kódu pomocí integrovaného vývojového prostředí (IDE) obdrží dva klíčové části informací. Informace pocházejí z modulu plug-in správy zdrojových kódů ve formě řetězců. Tyto řetězce "AuxPath" a "ProjName" jsou neprůhledné na integrované vývojové prostředí (IDE), ale jsou používány modulem plug-in k vyhledání řešení nebo projektu ve správě verzí. Rozhraní IDE obvykle tyto řetězce načítá při volání [SccGetProjPath](../extensibility/sccgetprojpath-function.md)a pak je uloží do souboru řešení nebo projektu pro budoucí volání [SccOpenProject](../extensibility/sccopenproject-function.md). Při vložení do souborů řešení a projektu se řetězce "AuxPath" a "ProjName" automaticky neaktualizují, pokud je uživatel větví, rozvětvení nebo kopíruje řešení a soubory projektu, které jsou ve správě verzí. Chcete-li zajistit, aby soubory řešení a projektu odkazovaly na správné místo v řízení verze, uživatelé musí ručně aktualizovat řetězce. Vzhledem k tomu, že jsou řetězce určeny jako neprůhledné, nemusí vždy být jasné, jak by se měly aktualizovat.

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a7a32ad4-3a0a-4eb8-a6ac-491c42885639
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 43d1e1dca1860faa44d6bb5bc256bb8f0465e8b2
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: c36552c3a10f4ddbf50a7a28978acf27118bbd34
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479522"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887091"
 ---
 # <a name="expose-types-to-visual-designers"></a>Vystavení typů pro vizuální návrháře
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pro zobrazení vizuálního návrháře musí mít přístup k třídám a definicím typu v době návrhu. Třídy jsou načteny z předdefinované sady sestavení, které zahrnují kompletní sadu závislostí aktuálního projektu (odkazy plus jejich závislosti). Může být také nutné, aby vizuální návrháři mohli přistupovat ke třídám a typům, které jsou definovány v souborech generovaných vlastními nástroji.

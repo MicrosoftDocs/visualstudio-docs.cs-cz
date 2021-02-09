@@ -5,17 +5,17 @@ ms.date: 11/12/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6e9e7fe418528bb888672b1b73d421d811b9e69e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43270ee1ec956f45b76d23a6b649ad2d870638c5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86386982"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887923"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>Definovat vlastní příkazy pro projekty v Pythonu
 
@@ -46,9 +46,9 @@ Chcete-li se seznámit s vlastními příkazy, Tato část vás provede jednoduc
 
 1. Pomocí šablony **aplikace Python** vytvořte nový projekt s názvem Python-CustomCommands. (Další informace najdete v tématu [rychlý Start: vytvoření projektu v Pythonu ze šablony](quickstart-02-python-in-visual-studio-project-from-template.md) pro pokyny, pokud už tento proces neznáte.)
 
-1. Do *Python_CustomCommands. py*přidejte kód `print("Hello custom commands")` .
+1. Do *Python_CustomCommands. py* přidejte kód `print("Hello custom commands")` .
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt, vyberte **Python**a Všimněte si, že jediný příkaz, který se zobrazí v podnabídce, se **spustí Pylint**. Vlastní příkazy se zobrazí v této stejné podnabídce.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt, vyberte **Python** a Všimněte si, že jediný příkaz, který se zobrazí v podnabídce, se **spustí Pylint**. Vlastní příkazy se zobrazí v této stejné podnabídce.
 
 1. Jak je navrženo v úvodu, otevřete *Python-CustomCommands. pyproj* v samostatném textovém editoru. Pak na konec souboru přidejte následující řádky, které jsou právě uvnitř zavření `</Project>` a soubor uložte.
 
@@ -145,7 +145,7 @@ U všech hodnot atributů se nerozlišují velká a malá písmena.
 | --- | --- | --- |
 | TargetType | Ano | Určuje, jaký cílový atribut obsahuje a jak se používá společně s atributem arguments:<ul><li>**spustitelný soubor**: Spusťte spustitelný soubor s názvem v cíli a připojením hodnoty v argumentech jako při zadání přímo na příkazovém řádku. Hodnota musí obsahovat pouze název programu bez argumentů.</li><li>**skript**: Spusťte *python.exe* s názvem souboru v cíli a potom s hodnotou v argumentech.</li><li>**modul**: spustit `python -m` následovaný názvem modulu v cíli a následovaný hodnotou v argumentech.</li><li>**kód**: Spusťte vložený kód obsažený v cíli. Hodnota argumentů je ignorována.</li><li>**PIP**: Spusťte `pip` příkaz s příkazem v cíli, následovaný argumenty. ExecuteIn je nastavená na "Output", ale příkaz PIP předpokládá `install` příkaz a jako název balíčku používá cíl.</li></ul> |
 | Cíl | Ano | Název souboru, název modulu, kód nebo PIP, který se má použít, v závislosti na TargetType. |
-| Arguments | Volitelné | Určuje řetězec argumentů (pokud existuje), který se má poskytnout cíli. Všimněte si, že pokud je TargetType `script` , argumenty jsou předány programu Python, nikoli *python.exe*. Ignorováno pro `code` TargetType. |
+| Argumenty | Volitelné | Určuje řetězec argumentů (pokud existuje), který se má poskytnout cíli. Všimněte si, že pokud je TargetType `script` , argumenty jsou předány programu Python, nikoli *python.exe*. Ignorováno pro `code` TargetType. |
 | ExecuteIn | Ano | Určuje prostředí, ve kterém se má příkaz spustit:<ul><li>**Konzola**: (výchozí) spustí cíl a argumenty, jako by byly zadány přímo na příkazovém řádku. Příkazové okno se zobrazí, když je cíl spuštěný, a pak se automaticky zavře.</li><li>**consolepause**: totéž jako konzola, ale před zavřením okna počká na stisknutí klávesy.</li><li>**výstup**: spustí cíl a zobrazí jeho výsledky v okně **výstup** v aplikaci Visual Studio. Pokud TargetType je "PIP", sada Visual Studio používá jako název balíčku cíl a připojuje argumenty.</li><li>**REPL**: cíl spuštění v [interaktivním okně Pythonu](python-interactive-repl-in-visual-studio.md) ; volitelné zobrazované jméno se používá pro název okna.</li><li>**žádné**: chová se stejně jako konzola.</li></ul>|
 | WorkingDirectory | Volitelné | Složka, ve které se má příkaz Spustit |
 | ErrorRegex<br>WarningRegEx | Volitelné | Používá se pouze v případě, že je ExecuteIn `output` . Obě hodnoty určují regulární výraz, se kterým Visual Studio analyzuje výstup příkazu, aby se zobrazily chyby a upozornění v okně **Seznam chyb** . Pokud není zadán, příkaz nemá vliv na okno **Seznam chyb** . Další informace o tom, co Visual Studio očekává, najdete v tématu [pojmenované skupiny zachycení](#named-capture-groups-for-regular-expressions). |

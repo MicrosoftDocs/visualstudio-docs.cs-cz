@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 556e610d-7c4b-44a8-965a-76a9d02b601a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 163718fda344ba5f3f44ef630b4eba3e5613dc61
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44e0bc66d9f385a41f0f43af7217738e40e69126
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80724795"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887117"
 ---
 # <a name="idebugportrequest2"></a>IDebugPortRequest2
 Toto rozhraní popisuje port. Tento popis slouží k přidání portu na dodavatele portu.

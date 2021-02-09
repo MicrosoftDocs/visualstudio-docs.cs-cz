@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Live Unit Testing
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: ce2376f2dc3cb6abeb11b328452defb891949558
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: ea87135b1f60c7ae65a8bc25399604151ab2fcee
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329494"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887806"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Začínáme s funkcí Live Unit Testing
 
@@ -36,7 +36,7 @@ Začněte vytvořením řešení sady Visual Studio s názvem UtilityLibraries, 
 
 Řešení je pouze kontejner pro jeden nebo více projektů. Chcete-li vytvořit prázdné řešení, otevřete aplikaci Visual Studio a proveďte následující kroky:
 
-1. **File**  >  **New**  >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte soubor nový **projekt** .
+1.   >    >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte soubor nový **projekt** .
 
 1. Do vyhledávacího pole šablony zadejte **řešení** a pak vyberte šablonu **prázdného řešení** . Pojmenujte projekt **UtilityLibraries**.
 
@@ -92,7 +92,7 @@ Teď, když jste vytvořili řešení, vytvoříte knihovnu tříd s názvem Str
 
    - `HasEmbeddedSpaces` Vrátí, `true` zda řetězec obsahuje vložený prázdný znak. v opačném případě vrátí `false` .
 
-6. **Build**  >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte **řešení** sestavení Build. Sestavení by mělo být úspěšné.
+6.   >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte **řešení** sestavení Build. Sestavení by mělo být úspěšné.
 
 ## <a name="create-the-test-project"></a>Vytvoření testovacího projektu
 
@@ -158,7 +158,7 @@ Zatím i když jste napsali testy pro knihovnu tříd StringLibrary, neudělali 
 
 1. Volitelně můžete vybrat okno editoru kódu, které obsahuje kód pro StringLibrary. Toto je buď *Class1.cs* pro projekt C# nebo *Class1. vb* pro projekt Visual Basic. (Tento krok vám umožní vizuální kontrolu výsledku testů a rozsahu pokrytí kódu, když povolíte Live Unit Testing.)
 
-1. **Test**  >  **Live Unit Testing**  >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte test Live Unit Testing **Spustit** .
+1.   >    >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte test Live Unit Testing **Spustit** .
 
 1. Visual Studio spustí živý test jednotek, který automaticky spustí všechny testy.
 
@@ -262,7 +262,7 @@ V této části se seznámíte s tím, jak můžete pomocí Live Unit Testing id
 
    Všimněte si, že v okně **Automatické** hodnoty `phrase` je hodnota proměnné "Name\tDescription", což je druhý prvek pole. Testovací metoda očekává `HasEmbeddedSpaces` , že se vrátí, `true` když je tento řetězec předán, namísto toho vrátí `false` . Zjevně nerozpozná "\t", znak tabulátoru jako vložené místo.
 
-1. Vyberte **Debug**  >  **pokračovat** v ladění, stiskněte klávesu **F5** nebo klikněte na tlačítko **pokračovat** na panelu nástrojů a pokračujte v provádění testovacího programu. Protože došlo k neošetřené výjimce, test skončí.
+1. Vyberte   >  **pokračovat** v ladění, stiskněte klávesu **F5** nebo klikněte na tlačítko **pokračovat** na panelu nástrojů a pokračujte v provádění testovacího programu. Protože došlo k neošetřené výjimce, test skončí.
 To poskytuje dostatek informací pro předběžné šetření chyby. Buď `TestHasEmbeddedSpaces` (testovací rutina) vytvořil nesprávný předpoklad, nebo `HasEmbeddedSpaces` nerozpozná správně všechny vložené mezery.
 
 1. Chcete-li problém diagnostikovat a opravit, začněte `StringLibrary.HasEmbeddedSpaces` metodou. Podívejte se na porovnání v `HasEmbeddedSpaces` metodě. Považuje se za vložené místo U + 0020. Standard Unicode ale obsahuje řadu dalších znakových mezer. To naznačuje, že kód knihovny byl nesprávně testován pro prázdný znak.

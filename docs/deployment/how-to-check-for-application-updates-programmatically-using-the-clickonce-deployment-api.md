@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1a886310-67c8-44e5-a382-c2f0454f887d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f00bd8aaa5db8ab72e6b6286763fd89fc900599f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 6e7168b78303f93ccf89fad324992dd580481ac2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351255"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888443"
 ---
 # <a name="how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api"></a>Postupy: vyhledání aktualizací aplikace programově pomocí rozhraní API nasazení ClickOnce
 ClickOnce poskytuje dva způsoby, jak aplikaci aktualizovat po nasazení. V první metodě můžete nakonfigurovat nasazení ClickOnce tak, aby v určitých intervalech automaticky kontrolovala aktualizace. Ve druhé metodě můžete napsat kód, který používá <xref:System.Deployment.Application.ApplicationDeployment> třídu ke kontrole aktualizací na základě události, jako je například požadavek uživatele.

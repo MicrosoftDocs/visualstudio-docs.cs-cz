@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8d73df73-cfff-4b8b-b426-d6051edb1939
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 150746197be4945b012717bef08e18ea57168177
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9c262f123e56bf9ed9751ad8b9e7d91770cbd2df
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80722720"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887104"
 ---
 # <a name="idebugprogram2"></a>IDebugProgram2
 Toto rozhraní představuje program, který je spuštěn v procesu.
@@ -48,7 +48,7 @@ IDebugProgram2 : IUnknown
 |[Odpojit](../../../extensibility/debugger/reference/idebugprogram2-detach.md)|Odpojí ladicí program od tohoto programu.|
 |[GetProgramId](../../../extensibility/debugger/reference/idebugprogram2-getprogramid.md)|Získá globálně jedinečný identifikátor pro tento program.|
 |[GetDebugProperty](../../../extensibility/debugger/reference/idebugprogram2-getdebugproperty.md)|Získá vlastnosti programu.|
-|[Spuštění](../../../extensibility/debugger/reference/idebugprogram2-execute.md)|Pokračuje v běhu tohoto programu ze stavu Zastaveno. Jakýkoli předchozí stav spuštění je vymazán.|
+|[Spuštěním](../../../extensibility/debugger/reference/idebugprogram2-execute.md)|Pokračuje v běhu tohoto programu ze stavu Zastaveno. Jakýkoli předchozí stav spuštění je vymazán.|
 |[Pokračovat](../../../extensibility/debugger/reference/idebugprogram2-continue.md)|Pokračuje v běhu tohoto programu ze stavu Zastaveno. Veškerý předchozí stav spuštění se zachová.|
 |[Krok](../../../extensibility/debugger/reference/idebugprogram2-step.md)|Provede krok.|
 |[CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)|Požaduje, aby tento program zastavil provádění při příštím spuštění kódu v jednom z jeho vláken.|

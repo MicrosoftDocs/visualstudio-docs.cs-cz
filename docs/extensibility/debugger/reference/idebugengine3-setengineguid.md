@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 8bdfa05d-feb7-4d98-abac-77825a04c50f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ae151484a7c2fd5828888a8a551b710c6fda44c8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2aaf50076978d5a6d4562eddf54de4651b3c6410
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80730751"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887208"
 ---
 # <a name="idebugengine3setengineguid"></a>IDebugEngine3::SetEngineGuid
 Tato metoda nastaví ladicí modul (DE) `GUID` .
@@ -28,8 +28,8 @@ Tato metoda nastaví ladicí modul (DE) `GUID` .
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT SetEngineGuid(
-   GUID* guidEngine
+HRESULT SetEngineGuid(
+   GUID* guidEngine
 );
 ```
 

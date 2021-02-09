@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d9c0329f-4b0b-4fda-8061-cce69f2f502d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6afdbff1e844f45cac56b68909e1327a190f7a74
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: 6b248556c8980c63422c20c160241af42fc6918b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97487878"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99886857"
 ---
 # <a name="web-projects"></a>Webové projekty
 Systém webového projektu je systém projektu, který vytváří webové projekty. Webové projekty v nástroji zase vytvářejí webové aplikace. Můžete programovat webovou stránku pomocí tradičních programovacích jazyků, například [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] nebo [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] , pro shromažďování a zpracování informací od uživatele, jejich uložení v databázi a tak dále. Webové stránky s přidruženým kódem se nazývají inteligentní webové stránky.

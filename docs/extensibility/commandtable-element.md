@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 15c38159-660a-4ef4-9643-aa6fcfca82a9
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 24e6792bb6199606f1d993492527d39c3f0f7f8b
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 79441880091088cf1d953c8925273e801dc0860d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974524"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887351"
 ---
 # <a name="commandtable-element"></a>Element v příkazu
 Příkaz je kořenovým prvkem souboru *. vsct* . Jedná se o soubor, který definuje skutečné rozložení a typ příkazů, které rozhraní VSPackage poskytuje rozhraní IDE. Příkazy mohou zahrnovat položky nabídky, nabídky, panely nástrojů a pole se seznamem. Další informace naleznete v tématu [soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema" >
@@ -67,7 +67,7 @@ Příkaz je kořenovým prvkem souboru *. vsct* . Jedná se o soubor, který def
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Element|Popis|
+|Element|Description|
 |-------------|-----------------|
 |Žádná||
 

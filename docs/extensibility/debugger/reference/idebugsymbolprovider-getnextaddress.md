@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 704eeb94-cb13-49d1-82b6-7d83ed0f19c0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9b314ab7006d6bbe65136451aeee6c5200cf7980
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a370cf4591146a31627b80f6358a3d3f9202e306
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80719205"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888222"
 ---
 # <a name="idebugsymbolprovidergetnextaddress"></a>IDebugSymbolProvider::GetNextAddress
 Získá adresu pro ladění, která následuje po dané adrese ladění v metodě.
@@ -28,7 +28,7 @@ Získá adresu pro ladění, která následuje po dané adrese ladění v metod�
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetNextAddress( 
+HRESULT GetNextAddress( 
    IDebugAddress*  pAddress,
    BOOL            fStatementOnly,
    IDebugAddress** ppAddress
@@ -36,7 +36,7 @@ HRESULT GetNextAddress( 
 ```
 
 ```csharp
-int GetNextAddress( 
+int GetNextAddress( 
    IDebugAddress     pAddress,
    bool              fStatementOnly,
    out IDebugAddress ppAddress
