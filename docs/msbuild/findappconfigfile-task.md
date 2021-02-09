@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e292de3e-7482-4426-83ce-d921061808bf
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d186a72bcc7af18671c279ff392de066b6fd9fee
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: ff26ee3505671d29df610278d701803b816d30f9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435674"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877132"
 ---
 # <a name="findappconfigfile-task"></a>FindAppConfigFile – úloha
 

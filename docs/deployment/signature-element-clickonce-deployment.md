@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c99b07ad-e8ba-43f2-b0d6-3745e7a7c8b3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b7a86236087bdbff8cf82ca4821573f9f799d019
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 5d95398285d9106719f3c2444d54202b81cfee4a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349279"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877496"
 ---
 # <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;Signature – &gt; element (nasazení ClickOnce)
 Obsahuje nezbytné informace pro Digitální podepsání tohoto manifestu nasazení.

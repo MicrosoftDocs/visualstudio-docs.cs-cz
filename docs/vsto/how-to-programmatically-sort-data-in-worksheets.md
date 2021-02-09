@@ -14,15 +14,15 @@ helpviewer_keywords:
 - sorting data, in worksheets
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f09fed7f1caff68a485d9d0d98789555ec30889c
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: c01dfb8af04d94453065a79c8f183bee355d8ab4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97523686"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877756"
 ---
 # <a name="how-to-programmatically-sort-data-in-worksheets"></a>Postupy: řazení dat v listech prostřednictvím kódu programu
   Data, která jsou obsažena v oblasti a v seznamech, můžete řadit v době běhu. Následující kód seřadí rozsah více sloupců s názvem `Fruits` daty v prvním sloupci a následně data ve druhém sloupci.

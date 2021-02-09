@@ -8,15 +8,15 @@ ms.topic: how-to
 ms.assetid: 17a837ca-5db9-46cd-b5a7-b14ad1d2c47d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b0e164c24770048495d16da852523b3dd50a43a
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: aaa36e7089be12cb0775b3300a134eb77b2eb618
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136898"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878666"
 ---
 # <a name="how-to-exclude-projects-from-a-build"></a>Postupy: vyloučení projektů ze sestavení
 

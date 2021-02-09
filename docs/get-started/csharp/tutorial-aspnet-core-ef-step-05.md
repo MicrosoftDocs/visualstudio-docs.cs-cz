@@ -10,18 +10,18 @@ ms.topic: tutorial
 ms.devlang: CSharp
 author: ardalis
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: fc0729eccc6f1392561959dcdac0cf13dfc8e04a
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: d2fdd255e35d23b337ce5eaa9f8de6b856e23b25
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189755"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878783"
 ---
 # <a name="step-5-deploy-your-aspnet-core-app-to-azure"></a>Krok 5: nasazení aplikace ASP.NET Core do Azure
 
@@ -89,7 +89,7 @@ Můžete si prohlédnout možnosti pro horizontální navýšení kapacity aplik
 
 Další výhodou pro hostování naší aplikace pomocí Azure je zabezpečení a dodržování předpisů. Azure App Service poskytuje kompatibilitu s normou ISO, SOC a PCI. Můžeme se rozhodnout pro ověřování uživatelů pomocí Azure Active Directory nebo sociálních přihlášení, jako je Twitter, Facebook, Google nebo Microsoft. Můžeme vytvořit omezení IP adres, spravovat identity služeb, přidávat vlastní domény a podporovat protokol SSL pro aplikaci a také konfigurovat zálohy s obnovitelné archivními kopiemi obsahu, konfigurace a databáze aplikace. Tyto funkce jsou k dispozici v možnostech nabídky pro ověřování, autorizaci, identitu, zálohování a nastavení SSL.
 
-### <a name="deployment-slots"></a>Nasazovací sloty
+### <a name="deployment-slots"></a>Sloty nasazení
 
 Při nasazení aplikace se často během restartování aplikace vyskytnou krátké výpadky. Sloty nasazení Vyhněte tomuto problému tím, že vám umožní nasadit na samostatnou pracovní instanci nebo sadu instancí a začlenit je před jejich odchodem do produkčního prostředí. Swap je jenom okamžité a bezproblémové přesměrování provozu. Pokud po prohození dojde k nějakým potížím v produkčním prostředí, můžete se kdykoli vrátit zpátky k poslednímu známému funkčnímu stavu výroby.
 

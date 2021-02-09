@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3144b27-a426-4259-b8ae-5f7991b202b6
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 58e247dc242fcacd7ea94f9f078af05dd56299e0
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: f26c3c1b8256597c795fa8bcd815fd605f895fa5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049072"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878380"
 ---
 # <a name="msbuild-task-reference"></a>Referenční dokumentace úlohy nástroje MSBuild
 
@@ -33,7 +33,7 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 | Parametr | Popis |
 |-------------------| - |
 | `Condition` | Volitelný `String` parametr.<br /><br /> `Boolean`Výraz, který modul MSBuild používá k určení, zda bude tato úloha provedena. Informace o podmínkách podporovaných nástrojem MSBuild naleznete v tématu [podmínky](../msbuild/msbuild-conditions.md). |
-| `ContinueOnError` | Volitelný parametr. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true** . Pokud se úloha nezdařila, následné úkoly v [cílovém](../msbuild/target-element-msbuild.md) elementu a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za upozornění.<br />-   **ErrorAndContinue** . Pokud se úloha nezdařila, následné úkoly v `Target` elementu a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Pokud se úloha nepovede, zbývající úkoly v `Target` elementu a sestavení se nezpracují a celý `Target` element a sestavení se považuje za neúspěšné.<br /><br /> Verze .NET Framework před 4,5 podporovaly pouze `true` `false` hodnoty a.<br /><br /> Další informace najdete v tématu [Postupy: ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md). |
+| `ContinueOnError` | Volitelný parametr. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Pokud se úloha nezdařila, následné úkoly v [cílovém](../msbuild/target-element-msbuild.md) elementu a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za upozornění.<br />-   **ErrorAndContinue**. Pokud se úloha nezdařila, následné úkoly v `Target` elementu a sestavení se budou dále spouštět a všechny chyby z tohoto úkolu jsou považovány za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Pokud se úloha nepovede, zbývající úkoly v `Target` elementu a sestavení se nezpracují a celý `Target` element a sestavení se považuje za neúspěšné.<br /><br /> Verze .NET Framework před 4,5 podporovaly pouze `true` `false` hodnoty a.<br /><br /> Další informace najdete v tématu [Postupy: ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md). |
 
 ## <a name="in-this-section"></a>V této části
 
@@ -55,7 +55,7 @@ Kromě parametrů uvedených v tématech v této části má každá úloha tak�
 
 - [AspNetCompiler – úloha](../msbuild/aspnetcompiler-task.md)
 
- Zalomí *aspnet_compiler.exe* , nástroj pro předkompilování aplikací ASP.NET.
+ Zalomí *aspnet_compiler.exe*, nástroj pro předkompilování aplikací ASP.NET.
 
 - [AssignCulture – úloha](../msbuild/assignculture-task.md)
 

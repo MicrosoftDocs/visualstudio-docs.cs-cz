@@ -6,16 +6,16 @@ ms.topic: conceptual
 description: Naučte se používat Visual Studio s účty, které vyžadují službu Multi-Factor Authentication.
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: ebacdd78cbb72bbd1cb90a0b5c719d0c753a95ca
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 6b85d64d3f84bce34f2a9b30d9caf01127149abc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90093342"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878484"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>Jak používat Visual Studio s účty, které vyžadují Multi-Factor Authentication
 

@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: 5881afde-3f24-4eb9-bff8-6cb3fc8aade7
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ee6abff7accf5e1990792b52f1fdf6a013edd0f9
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 39a988ed4742f34fa2a3e6e2680d5eec8ccd2b07
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93045999"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879303"
 ---
 # <a name="graph-view"></a>Zobrazení grafu
 
@@ -103,16 +103,16 @@ Následující tlačítka panelu nástrojů XSD jsou povolena, když je aktivní
 
 |Možnost|Popis|
 |-|-----------------|
-|**Zobrazit úvodní zobrazení**|Přepne do [zobrazení začátek](../xml-tools/start-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **1** .|
-|**Zobrazit zobrazení modelu obsahu**|Přepne do [zobrazení modelu obsahu](../xml-tools/content-model-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **2** .|
-|**Zobrazit zobrazení grafu**|Přepne do [zobrazení grafu](../xml-tools/graph-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **3** .|
+|**Zobrazit úvodní zobrazení**|Přepne do [zobrazení začátek](../xml-tools/start-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **1**.|
+|**Zobrazit zobrazení modelu obsahu**|Přepne do [zobrazení modelu obsahu](../xml-tools/content-model-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **2**.|
+|**Zobrazit zobrazení grafu**|Přepne do [zobrazení grafu](../xml-tools/graph-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **3**.|
 |**Vymazat pracovní prostor**|Vymaže pracovní prostor a návrhovou plochu.|
 |**Odebrat z pracovního prostoru**|Odebere vybrané uzly z pracovního prostoru a na návrhovou plochu.|
 |**Odebrat všechny kromě výběry z pracovního prostoru**|Odebere uzly, které nejsou vybrané z pracovního prostoru a na návrhové ploše. Tato možnost je povolená v zobrazení modelu obsahu a v zobrazení grafu.|
-|**Zleva doprava**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů na základě zleva doprava. K této možnosti lze přistupovat pomocí klávesových zkratek: **Alt** + **šipka vpravo** ALT.|
-|**Zprava doleva**|Změní rozložení v zobrazení grafu na hierarchické reprezentace uzlů v rámci pravého na levé. K této možnosti lze přistupovat pomocí klávesových zkratek: **ALT +** + **šipka vlevo** .|
-|**Shora dolů**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů v horní části. K této možnosti lze přistupovat pomocí klávesových zkratek: **ALT +** + **šipka dolů** .|
-|**Zdola nahoru**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů na úrovni zdola. K této možnosti lze přistupovat pomocí klávesových zkratek: **ALT +** + **šipka nahoru** .|
+|**Zleva doprava**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů na základě zleva doprava. K této možnosti lze přistupovat pomocí klávesových zkratek:  + **šipka vpravo** ALT.|
+|**Zprava doleva**|Změní rozložení v zobrazení grafu na hierarchické reprezentace uzlů v rámci pravého na levé. K této možnosti lze přistupovat pomocí klávesových zkratek: **ALT +** + **šipka vlevo**.|
+|**Shora dolů**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů v horní části. K této možnosti lze přistupovat pomocí klávesových zkratek: **ALT +** + **šipka dolů**.|
+|**Zdola nahoru**|Změní rozložení v zobrazení grafu na hierarchické znázornění uzlů na úrovni zdola. K této možnosti lze přistupovat pomocí klávesových zkratek: **ALT +** + **šipka nahoru**.|
 
 ## <a name="panscroll"></a>Posun/posun
 

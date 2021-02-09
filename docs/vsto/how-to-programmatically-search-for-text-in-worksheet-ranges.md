@@ -14,15 +14,15 @@ helpviewer_keywords:
 - text searches, worksheets
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 01ce01e76aa56a834f4f63cd2bd0f6f16c4ab03a
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 3cf3894a2fb6d34678786686fe3c229d2e16a9a2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524554"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877886"
 ---
 # <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>Postupy: hledání textu v oblastech listů prostřednictvím kódu programu
   <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>Metoda <xref:Microsoft.Office.Interop.Excel.Range> objektu umožňuje vyhledávat text v rámci rozsahu. Tento text může také obsahovat libovolný z chybových řetězců, které se mohou objevit v buňce listu, jako je například `#NULL!` nebo `#VALUE!` . Další informace o chybových řetězcích najdete v tématu [hodnoty chyb buněk](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values).

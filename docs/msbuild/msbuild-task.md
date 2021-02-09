@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76577f6c-7669-44ad-a840-363e37a04d34
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a4d1f9fe79ae5092992ff66ddaf5e10729e8b19a
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: f8241188b484447f94c60aa0e0c9bf05e477dd39
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049065"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878276"
 ---
 # <a name="msbuild-task"></a>MSBuild – úloha
 

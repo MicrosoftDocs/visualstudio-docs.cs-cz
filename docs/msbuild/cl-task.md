@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 651ba971-b755-4f03-a549-4816beb3cc0d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d930ed8d918a08503a6eaa6b60848abeec7683a
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 542d84f4c0279c1f76fa1ea29a244e78c53b394d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796833"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878432"
 ---
 # <a name="cl-task"></a>CL – úloha
 
-Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří spustitelné soubory ( *. exe* ), soubory dynamické knihovny ( *. dll* ) nebo soubory modulu kódu ( *. netmodule* ). Další informace naleznete v tématu [Možnosti kompilátoru](/cpp/build/reference/compiler-options) a [použití nástroje MSBuild z příkazového řádku](/cpp/build/msbuild-visual-cpp) a [použití sady nástrojů Microsoft C++ z příkazového řádku](/cpp/build/building-on-the-command-line).
+Zabalí nástroj kompilátoru Microsoft C++, *cl.exe*. Kompilátor vytváří spustitelné soubory (*. exe*), soubory dynamické knihovny (*. dll*) nebo soubory modulu kódu (*. netmodule*). Další informace naleznete v tématu [Možnosti kompilátoru](/cpp/build/reference/compiler-options) a [použití nástroje MSBuild z příkazového řádku](/cpp/build/msbuild-visual-cpp) a [použití sady nástrojů Microsoft C++ z příkazového řádku](/cpp/build/building-on-the-command-line).
 
 ## <a name="parameters"></a>Parametry
 
@@ -66,7 +66,7 @@ Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří s
 
    Volitelný řetězcový parametr.
 
-   Řetězec, který je vždy generován na příkazovém řádku. Výchozí hodnota je " **/c** ".
+   Řetězec, který je vždy generován na příkazovém řádku. Výchozí hodnota je "**/c**".
 
 - **AssemblerListingLocation**
 
@@ -92,7 +92,7 @@ Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří s
 
   - **Vše**  -  **/FAcs**
 
-    Další informace najdete v tématu možnosti **/Fa** , **/FAc** , **/FAS** a **/FAcs** v [/FA,/FA (soubor výpisu)](/cpp/build/reference/fa-fa-listing-file).
+    Další informace najdete v tématu možnosti **/Fa**, **/FAc**, **/FAS** a **/FAcs** v [/FA,/FA (soubor výpisu)](/cpp/build/reference/fa-fa-listing-file).
 
 - **BasicRuntimeChecks**
 
@@ -198,7 +198,7 @@ Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří s
 
    Volitelný logický parametr.
 
-   Pokud `true` aplikace, instruuje kompilátor, aby připravil obrázek pro *Hot patching* . Tento parametr zajišťuje, že první instrukce každé funkce jsou dvě bajty, které jsou požadovány pro Hot patching.
+   Pokud `true` aplikace, instruuje kompilátor, aby připravil obrázek pro *Hot patching*. Tento parametr zajišťuje, že první instrukce každé funkce jsou dvě bajty, které jsou požadovány pro Hot patching.
 
    Další informace najdete v tématu [/hotpatch (Create opravitelnou za provozu image)](/cpp/build/reference/hotpatch-create-hotpatchable-image).
 
@@ -206,7 +206,7 @@ Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří s
 
    Volitelný řetězcový parametr.
 
-   Vybere typ ladicích informací vytvořených pro program a zda jsou tyto informace uloženy v souborech objektů ( *. obj* ) nebo v databázi programu (PDB).
+   Vybere typ ladicích informací vytvořených pro program a zda jsou tyto informace uloženy v souborech objektů (*. obj*) nebo v databázi programu (PDB).
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
@@ -222,7 +222,7 @@ Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří s
 
    Volitelný logický parametr.
 
-   Pokud je **true** , instruuje kompilátor, aby vygeneroval chybu pro jazykové konstrukce, které nejsou kompatibilní se standardem ANSI C nebo ANSI C++.
+   Pokud je **true**, instruuje kompilátor, aby vygeneroval chybu pro jazykové konstrukce, které nejsou kompatibilní se standardem ANSI C nebo ANSI C++.
 
    Další informace najdete v možnosti **/za** v [/za,/ze (zakázání jazykových rozšíření)](/cpp/build/reference/za-ze-disable-language-extensions).
 
@@ -268,7 +268,7 @@ Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří s
 
    Volitelný řetězcový parametr.
 
-   Umožňuje poskytnout informace o vnitřní chybě kompilátoru (ICE) přímo společnosti Microsoft. Ve výchozím nastavení je nastavení v rozhraní IDE **vyzváné** a nastavení v sestavení příkazového řádku je **Queue** .
+   Umožňuje poskytnout informace o vnitřní chybě kompilátoru (ICE) přímo společnosti Microsoft. Ve výchozím nastavení je nastavení v rozhraní IDE **vyzváné** a nastavení v sestavení příkazového řádku je **Queue**.
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
@@ -330,7 +330,7 @@ Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří s
 
    `true`V případě, umožňuje spolehlivý model výjimek s plovoucí desetinnou čárkou. Výjimky budou vyvolány okamžitě po aktivaci.
 
-   Další informace naleznete v tématu/ **FP: except** – možnost v [/FP (určení chování s plovoucí](/cpp/build/reference/fp-specify-floating-point-behavior)desetinnou čárkou).
+   Další informace naleznete v tématu/**FP: except** – možnost v [/FP (určení chování s plovoucí](/cpp/build/reference/fp-specify-floating-point-behavior)desetinnou čárkou).
 
 - **FloatingPointModel**
 
@@ -456,7 +456,7 @@ Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří s
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true` , vynechá výchozí název běhové knihovny jazyka C ze souboru objektu ( *. obj* ). Ve výchozím nastavení kompilátor umístí do souboru *. obj* název knihovny a nasměruje linker do správné knihovny.
+   Pokud `true` , vynechá výchozí název běhové knihovny jazyka C ze souboru objektu (*. obj*). Ve výchozím nastavení kompilátor umístí do souboru *. obj* název knihovny a nasměruje linker do správné knihovny.
 
    Další informace najdete v tématu [/zl (vynechání názvu výchozí knihovny)](/cpp/build/reference/zl-omit-default-library-name).
 
@@ -498,7 +498,7 @@ Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří s
 
    Volitelný **řetězcový** parametr.
 
-   Během sestavování vytvořte nebo použijte soubor předkompilované hlavičky ( *. pch* ).
+   Během sestavování vytvořte nebo použijte soubor předkompilované hlavičky (*. pch*).
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
@@ -628,7 +628,7 @@ Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří s
 
    Další informace naleznete v možnosti **/RTCc** v [/RTC (kontrola chyb za běhu)](/cpp/build/reference/rtc-run-time-error-checks).
 
-- **Prostředky**
+- **zdroje**
 
    Požadovaný parametr `ITaskItem[]`.
 
@@ -784,17 +784,17 @@ Zabalí nástroj kompilátoru Microsoft C++, *cl.exe* . Kompilátor vytváří s
 
    Volitelný `ITaskItem[]` parametr.
 
-   Určuje pole položek, které reprezentují *protokoly sledování čtecího souboru* .
+   Určuje pole položek, které reprezentují *protokoly sledování čtecího souboru*.
 
-   Protokol sledování souboru Readme ( *. tlog* ) obsahuje názvy vstupních souborů, které jsou čteny úlohou a které používá systém sestavení projektu pro podporu přírůstkových sestavení. Další informace najdete v tématu parametry **TrackerLogDirectory** a **TrackFileAccess** v této tabulce.
+   Protokol sledování souboru Readme (*. tlog*) obsahuje názvy vstupních souborů, které jsou čteny úlohou a které používá systém sestavení projektu pro podporu přírůstkových sestavení. Další informace najdete v tématu parametry **TrackerLogDirectory** a **TrackFileAccess** v této tabulce.
 
 - **TLogWriteFiles**
 
    Volitelný `ITaskItem[]` parametr.
 
-   Určuje pole položek, které reprezentují *protokoly sledování souborů* .
+   Určuje pole položek, které reprezentují *protokoly sledování souborů*.
 
-   Protokol sledování zápisu souboru ( *. tlog* ) obsahuje názvy výstupních souborů, které jsou zapsány úlohou a které používá systém sestavení projektu pro podporu přírůstkových sestavení. Další informace najdete v tématu parametry **TrackerLogDirectory** a **TrackFileAccess** v této tabulce.
+   Protokol sledování zápisu souboru (*. tlog*) obsahuje názvy výstupních souborů, které jsou zapsány úlohou a které používá systém sestavení projektu pro podporu přírůstkových sestavení. Další informace najdete v tématu parametry **TrackerLogDirectory** a **TrackFileAccess** v této tabulce.
 
 - **TrackFileAccess**
 

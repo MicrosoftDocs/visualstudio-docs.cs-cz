@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 19be121c-148e-4ece-bbfc-d20b08cfc3f7
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 635fc18965361967269b7260b6abaab279ffb52d
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 636fbabbede90d9a1c686a2252aef712b4789c18
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136820"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878718"
 ---
 # <a name="how-to-create-and-edit-configurations"></a>Postupy: vytváření a úpravy konfigurací
 
@@ -39,10 +39,10 @@ Můžete vytvořit několik konfigurací sestavení pro řešení. Můžete nap�
 
 Pomocí dialogového okna **Configuration Manager** můžete vybrat nebo změnit existující konfigurace sestavení nebo vytvořit nové.
 
-Chcete-li otevřít dialogové okno **Configuration Manager** , v **Průzkumník řešení**otevřete místní nabídku řešení a zvolte možnost **Configuration Manager**.
+Chcete-li otevřít dialogové okno **Configuration Manager** , v **Průzkumník řešení** otevřete místní nabídku řešení a zvolte možnost **Configuration Manager**.
 
 > [!NOTE]
-> Pokud se příkaz **Configuration Manager** v místní nabídce nezobrazí, podívejte se do nabídky **sestavení** na řádku nabídek. Pokud se buď nezobrazí, na panelu nabídek zvolte **Tools**  >  **Možnosti**nástroje a pak v levém podokně dialogového okna **Možnosti** rozbalte **projekty a řešení**  >  **Obecné**a v pravém podokně zaškrtněte políčko **Zobrazit pokročilé konfigurace sestavení** .
+> Pokud se příkaz **Configuration Manager** v místní nabídce nezobrazí, podívejte se do nabídky **sestavení** na řádku nabídek. Pokud se buď nezobrazí, na panelu nabídek zvolte   >  **Možnosti** nástroje a pak v levém podokně dialogového okna **Možnosti** rozbalte **projekty a řešení**  >  **Obecné** a v pravém podokně zaškrtněte políčko **Zobrazit pokročilé konfigurace sestavení** .
 
 V dialogovém okně **Configuration Manager** můžete použít rozevírací seznam **Konfigurace aktivního řešení** k výběru konfigurace sestavení pro celé řešení, úpravě existujícího nebo vytvoření nové konfigurace. Pomocí rozevíracího seznamu **Aktivní platforma řešení** můžete vybrat platformu, kterou konfigurace cílí, upravit existující nebo přidat novou platformu. Podokno **kontexty projektu** obsahuje seznam projektů v řešení. Pro každý projekt můžete vybrat konfiguraci a platformu specifickou pro konkrétní projekt, upravit existující nebo vytvořit novou konfiguraci nebo přidat novou platformu. Můžete také zaškrtnout políčka, která určují, zda je každý projekt zahrnut při použití konfigurace pro sestavení nebo nasazení řešení v rámci řešení.
 
@@ -50,7 +50,7 @@ Po nastavení požadovaných konfigurací můžete nastavit vlastnosti projektu,
 
 ### <a name="set-properties-based-on-configurations"></a>Nastavení vlastností na základě konfigurací
 
-Chcete-li nastavit vlastnosti založené na konfiguracích, v **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **vlastnosti**. Můžete nastavit vlastnosti pro vaše konfigurace. Například pro konfiguraci vydané verze můžete určit, že kód je optimalizován při sestavení řešení a pro konfiguraci ladění, můžete určit, že `DEBUG` je zahrnut symbol podmíněné kompilace.
+Chcete-li nastavit vlastnosti založené na konfiguracích, v **Průzkumník řešení** otevřete místní nabídku pro projekt a poté zvolte možnost **vlastnosti**. Můžete nastavit vlastnosti pro vaše konfigurace. Například pro konfiguraci vydané verze můžete určit, že kód je optimalizován při sestavení řešení a pro konfiguraci ladění, můžete určit, že `DEBUG` je zahrnut symbol podmíněné kompilace.
 
 Další informace o nastavení stránky vlastností naleznete v tématu [Správa vlastností projektu a řešení](../ide/managing-project-and-solution-properties.md).
 
@@ -82,7 +82,7 @@ Další informace o nastavení stránky vlastností naleznete v tématu [Správa
 
 4. Vyberte název konfigurace projektu, který chcete změnit.
 
-5. Vyberte **Přejmenovat**a pak zadejte nový název.
+5. Vyberte **Přejmenovat** a pak zadejte nový název.
 
 ## <a name="create-and-modify-solution-wide-build-configurations"></a>Vytváření a úpravy konfigurací sestavení v úrovni řešení
 
@@ -110,7 +110,7 @@ Další informace o nastavení stránky vlastností naleznete v tématu [Správa
 
 3. Vyberte název konfigurace řešení, který chcete změnit.
 
-4. Vyberte **Přejmenovat**a pak zadejte nový název.
+4. Vyberte **Přejmenovat** a pak zadejte nový název.
 
 ### <a name="to-modify-a-solution-wide-build-configuration"></a>Úprava konfigurace sestavení v rámci řešení
 

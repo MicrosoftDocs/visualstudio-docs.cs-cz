@@ -10,15 +10,15 @@ f1_keywords:
 ms.assetid: 95284ac5-3492-4f7b-a79f-7d2840a07679
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2bdf1fcffad90155baba8f92d11e31d1b316710b
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: 4467d2a885f4076461110fe288b4e80169158ede
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98801183"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877093"
 ---
 # <a name="gpu-activity-paging"></a>Aktivita GPU (stránkování)
 Segmenty **aktivity GPU (stránkování)** na kartě **vlákna** UDÁVAJÍ čas, kdy GPU zpracovával požadavky na stránkování.  Délka segmentu představuje dobu, po kterou GPU zpracovala stránkovací paket přímého přístupu do paměti (DMA). Obvykle jsou stránkovací pakety přidruženy k přenosu paměti mezi CPU a GPU.

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ClickOnce deployment [Office development in Visual Studio], deploying solutions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d808348528a64cc184c7a6c50359c057b2325a75
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: da527da4504d4c2d9375aee0209b0e261fe5fd0a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845645"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877929"
 ---
 # <a name="deploy-an-office-solution-by-using-clickonce"></a>Nasazení řešení Office pomocí technologie ClickOnce
   Pokud používáte ClickOnce, můžete řešení pro Office nasadit v méně krocích. Když publikujete aktualizace, vaše řešení je automaticky rozpozná a nainstaluje. Technologie ClickOnce ale vyžaduje, aby bylo řešení nainstalováno zvlášť pro každého uživatele počítače. Proto byste měli zvážit použití Instalační služba systému Windows (*. msi*), pokud vaše řešení bude spouštět více než jeden uživatel ve stejném počítači.
@@ -153,11 +153,11 @@ ms.locfileid: "96845645"
 
 ##### <a name="to-add-the-vsto-mime-type-to-iis-60"></a>Přidání typu MIME .vsto do služby IIS 6.0
 
-1. Na serveru, na kterém je spuštěná služba IIS 6,0, vyberte **Spustit**  >  **všechny programy**  >  **Administrative Tools**  >   **správce Internetová informační služba (IIS)**.
+1. Na serveru, na kterém je spuštěná služba IIS 6,0, vyberte **Spustit**  >  **všechny programy**  >    >   **správce Internetová informační služba (IIS)**.
 
 2. Vyberte název počítače, složku **webů** nebo web, který konfigurujete.
 
-3. Na řádku nabídek klikněte na vlastnosti **Akce**  >  **Properties**.
+3. Na řádku nabídek klikněte na vlastnosti **Akce**  >  .
 
 4. Na kartě **hlavičky protokolu HTTP** klikněte na tlačítko **typy MIME** .
 
@@ -284,7 +284,7 @@ ms.locfileid: "96845645"
 
 1. Ve složce **%UserProfile%\Documents\Visual Studio 2013 \ Projects\ExcelWorkbook\ExcelWorkbook** zkopírujte soubor certifikátu **ExcelWorkbook_TemporaryKey. pfx** a vložte ho do složky *PublishFolder* **\Application Files\ExcelWorkbook** \_ _MostRecentPublishedVersion_ .
 
-2. Otevřete příkazový řádek sady Visual Studio a potom změňte adresáře na složku MostRecentPublishedVersion **Files\ExcelWorkbook pro c:\publish\Application** \_ _MostRecentPublishedVersion_ (například **soubory c:\publish\Application \ ExcelWorkbook_1_0_0_4**).
+2. Otevřete příkazový řádek sady Visual Studio a potom změňte adresáře na složku MostRecentPublishedVersion **Files\ExcelWorkbook pro c:\publish\Application** \_  (například **soubory c:\publish\Application \ ExcelWorkbook_1_0_0_4**).
 
 3. Podepište upravený manifest aplikace spuštěním následujícího příkazu:
 
@@ -426,7 +426,7 @@ ms.locfileid: "96845645"
 
      Pole **hodnota** obsahuje identifikátor manifestu nasazení.
 
-4. Před identifikátorem zadejte plně kvalifikovanou cestu k dokumentu následovaný pruhem v poli *Path* | *identifikátor* cesty formátu (například *File://servername/FolderName/filename|74744e4b-e4d6-41eb-84f7-ad20346fe2d9*.
+4. Před identifikátorem zadejte plně kvalifikovanou cestu k dokumentu následovaný pruhem v poli  | *identifikátor* cesty formátu (například *File://servername/FolderName/filename|74744e4b-e4d6-41eb-84f7-ad20346fe2d9*.
 
      Další informace o tom, jak tento identifikátor naformátovat, najdete v tématu [Přehled vlastností vlastního dokumentu](../vsto/custom-document-properties-overview.md).
 

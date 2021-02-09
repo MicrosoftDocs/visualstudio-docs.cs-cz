@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 5b7997db-af6f-4fa9-a128-bceb42bddaf1
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: fa812b477f88b03b8f0d4bdcba6c69f009ec2894
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 735e77868b85bdd8f85fb27957602d6759b5b097
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597545"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879173"
 ---
 # <a name="add-user-control-to-the-start-page"></a>Přidání uživatelského ovládacího prvku na úvodní stránku
 
@@ -185,7 +185,7 @@ Chcete-li zpřístupnit tento ovládací prvek projektu úvodní stránky, v sou
 
 3. Na příkazovém řádku sady Visual Studio zadejte **devenv/rootsuffix exp** a otevřete experimentální instanci sady Visual Studio.
 
-4. V experimentální instanci přejdete na **Tools**  >  **Options**  >  **Environment**  >  **spouštěcí** stránku prostředí možnosti nástrojů a v rozevíracím seznamu **Přizpůsobit úvodní stránku** vyberete svůj soubor XAML.
+4. V experimentální instanci přejdete na   >    >    >  **spouštěcí** stránku prostředí možnosti nástrojů a v rozevíracím seznamu **Přizpůsobit úvodní stránku** vyberete svůj soubor XAML.
 
 5. V nabídce **zobrazení** klikněte na možnost **Úvodní stránka**.
 

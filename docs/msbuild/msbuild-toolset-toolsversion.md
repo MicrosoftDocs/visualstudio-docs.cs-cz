@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 40040ee7-4620-4043-a6d8-ccba921421d1
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e0b27a1914d85f5fde8ef6c5c467d73197c084ce
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: b146913365583d49f1d70ebd5ca316f54ca89049
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049019"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878224"
 ---
 # <a name="msbuild-toolset-toolsversion"></a>Sada nástrojů MSBuild (atribut ToolsVersion)
 
-Nástroj MSBuild používá sadu nástrojů úkolů, cílů a nástrojů k sestavení aplikace. Sada nástrojů MSBuild obvykle obsahuje soubor *Microsoft. Common. Tasks* , soubor *Microsoft. Common. targets* a kompilátory, jako je například *csc.exe* a *vbc.exe* . Většinu sad nástrojů lze použít ke kompilaci aplikací na více než jednu verzi .NET Framework a více než jedné systémové platformě. Sada nástrojů MSBuild 2,0 se ale dá použít jenom k cílení na .NET Framework 2,0.
+Nástroj MSBuild používá sadu nástrojů úkolů, cílů a nástrojů k sestavení aplikace. Sada nástrojů MSBuild obvykle obsahuje soubor *Microsoft. Common. Tasks* , soubor *Microsoft. Common. targets* a kompilátory, jako je například *csc.exe* a *vbc.exe*. Většinu sad nástrojů lze použít ke kompilaci aplikací na více než jednu verzi .NET Framework a více než jedné systémové platformě. Sada nástrojů MSBuild 2,0 se ale dá použít jenom k cílení na .NET Framework 2,0.
 
 ## <a name="toolsversion-attribute"></a>ToolsVersion – atribut
 
@@ -65,7 +65,7 @@ Nástroj MSBuild používá sadu nástrojů úkolů, cílů a nástrojů k sesta
 
  Můžete upravit hodnotu `MSBuildToolsPath` definováním vlastní sady nástrojů. Další informace najdete v tématu [standardní a vlastní konfigurace sady nástrojů](../msbuild/standard-and-custom-toolset-configurations.md).
 
- Když na příkazovém řádku sestavíte řešení a určíte `ToolsVersion` pro *msbuild.exe* , všechny projekty a jejich závislosti typu projekt-projekt jsou sestaveny podle toho `ToolsVersion` , i když každý projekt v řešení určí svou vlastní `ToolsVersion` . Chcete-li definovat `ToolsVersion` hodnotu na základě jednotlivých projektů, přečtěte si téma [přepisování nastavení ToolsVersion](../msbuild/overriding-toolsversion-settings.md).
+ Když na příkazovém řádku sestavíte řešení a určíte `ToolsVersion` pro *msbuild.exe*, všechny projekty a jejich závislosti typu projekt-projekt jsou sestaveny podle toho `ToolsVersion` , i když každý projekt v řešení určí svou vlastní `ToolsVersion` . Chcete-li definovat `ToolsVersion` hodnotu na základě jednotlivých projektů, přečtěte si téma [přepisování nastavení ToolsVersion](../msbuild/overriding-toolsversion-settings.md).
 
  `ToolsVersion`Atribut se používá také pro migraci projektu. Například pokud otevřete projekt sady Visual Studio 2008 v aplikaci Visual Studio 2010, soubor projektu je aktualizován tak, aby zahrnoval ToolsVersion = "4.0". Pokud se pokusíte tento projekt otevřít v sadě Visual Studio 2008, nerozpozná upgradovaný, `ToolsVersion` a proto projekt sestaví, jako by byl atribut stále nastaven na hodnotu 3,5.
 
@@ -81,7 +81,7 @@ Nástroj MSBuild používá sadu nástrojů úkolů, cílů a nástrojů k sesta
 
 - Další spravované nástroje.
 
-  Mezi spravované nástroje patří *ResGen.exe* a *TlbImp.exe* .
+  Mezi spravované nástroje patří *ResGen.exe* a *TlbImp.exe*.
 
 Nástroj MSBuild nabízí dva způsoby, jak získat přístup ke sadě nástrojů:
 
@@ -89,7 +89,7 @@ Nástroj MSBuild nabízí dva způsoby, jak získat přístup ke sadě nástroj�
 
 - Pomocí <xref:Microsoft.Build.Utilities.ToolLocationHelper> metod
 
-Vlastnosti sady nástrojů určují cesty nástrojů. Od sady Visual Studio 2017, MSBuild již obsahuje pevné umístění. Ve výchozím nastavení se nachází ve složce *MSBuild\15.0\Bin* relativně k umístění instalace sady Visual Studio. V dřívějších verzích nástroj MSBuild používá hodnotu `ToolsVersion` atributu v souboru projektu k vyhledání odpovídajícího klíče registru a poté používá informace v klíči registru pro nastavení vlastností sady nástrojů. Například pokud `ToolsVersion` má hodnotu `12.0` , MSBuild nastaví vlastnosti sady nástrojů podle tohoto klíče registru: **HKLM\Software\Microsoft\MSBuild\ToolsVersions\12.0** .
+Vlastnosti sady nástrojů určují cesty nástrojů. Od sady Visual Studio 2017, MSBuild již obsahuje pevné umístění. Ve výchozím nastavení se nachází ve složce *MSBuild\15.0\Bin* relativně k umístění instalace sady Visual Studio. V dřívějších verzích nástroj MSBuild používá hodnotu `ToolsVersion` atributu v souboru projektu k vyhledání odpovídajícího klíče registru a poté používá informace v klíči registru pro nastavení vlastností sady nástrojů. Například pokud `ToolsVersion` má hodnotu `12.0` , MSBuild nastaví vlastnosti sady nástrojů podle tohoto klíče registru: **HKLM\Software\Microsoft\MSBuild\ToolsVersions\12.0**.
 
  Jedná se o vlastnosti sady nástrojů:
 

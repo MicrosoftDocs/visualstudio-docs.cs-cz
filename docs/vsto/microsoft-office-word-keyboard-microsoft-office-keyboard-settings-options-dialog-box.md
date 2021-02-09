@@ -16,15 +16,15 @@ helpviewer_keywords:
 - keyboard shortcuts, Office development in Visual Studio
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bf4cfbaf23ad9c1e545af25614722cd52c493df7
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 0138fcd73ddf07202a9111ec2b3d17dcc0fb7a0e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528439"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879420"
 ---
 # <a name="microsoft-office-word-keyboard-settings-options-dialog-box"></a>Systém Microsoft Office klávesnice Word, nastavení, dialogové okno Možnosti
   Systém Microsoft Office Word a Visual Studio oba zpracovávají klávesové zkratky. Stejná kombinace klávesových zkratek může být pro různé příkazy ve Wordu a v aplikaci Visual Studio. Když je Word otevřený v projektu na úrovni dokumentu v aplikaci Visual Studio, obdrží příkazy klávesových zkratek jenom jedna aplikace současně. Ve výchozím nastavení Visual Studio přijímá všechny příkazy klávesových zkratek, ale můžete je nechat přijmout, když se dokument soustředí na výběr **dynamického schématu klávesnice**.

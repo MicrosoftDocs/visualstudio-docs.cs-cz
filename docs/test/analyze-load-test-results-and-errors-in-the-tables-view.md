@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 0a84bda3-6051-45eb-9c7f-d57419e1f97d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: 7787b3b0afaed0bc3592b458646b97151e309905
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+manager: jmartens
+ms.openlocfilehash: 5b501cef5360be08f1b283e9064617b649a33da9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442505"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878016"
 ---
 # <a name="analyze-load-test-results-and-errors-in-the-tables-view-of-the-load-test-analyzer"></a>Analýza výsledků zátěžových testů a chyb v zobrazení tabulky analyzátoru zátěžového testu
 
@@ -52,7 +52,7 @@ Většinu tabulek můžete seřadit tak, že vyberete název sloupce, který chc
 
 V následující tabulce jsou uvedeny tabulky, které jsou k dispozici pro analýzu spuštění zátěžového testu.
 
-|Název tabulky|Popis|
+|Název tabulky|Description|
 |-|-|
 |Chyby|Zobrazí seznam chyb, ke kterým došlo během běhu zátěžového testu. Další informace naleznete v [tabulce Errors](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-errors-table) v tomto tématu a v tématu [Analýza výsledků zátěžového testu](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|
 |Stránky|Zobrazí seznam stránek, které byly během běhu zátěžového testu k dispozici. Některá data v této tabulce jsou k dispozici až po dokončení zátěžového testu. Další informace najdete v tématu [Postup: zobrazení odpovědi na webovou stránku](../test/how-to-view-web-page-response-time-in-a-load-test.md).|
@@ -208,7 +208,7 @@ Pokud je povoleno trasování SQL, vytvoří se soubor během spuštění zátě
 
     - **TextData**
 
-    - **Spuštění**
+    - **StartTime**
 
     - **EndTime**
 

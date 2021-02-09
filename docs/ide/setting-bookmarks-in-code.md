@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: a752ed5f-5cf9-4bf2-865a-2131ca600ed5
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ded48fcea0630bf07311cbb92ed2e258cdf4afb1
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 7158e9cf6e25463dd16cf15886b499cd9e6a3f1a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560860"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878510"
 ---
 # <a name="set-bookmarks-in-code"></a>Nastavení záložek v kódu
 
@@ -29,7 +29,7 @@ Můžete použít záložky k označení řádků v kódu, abyste se mohli rychl
 
 ## <a name="manage-bookmarks"></a>Spravovat záložky
 
-Chcete-li přidat záložku, umístěte kurzor na řádek, který chcete vložit do záložky. Zvolte tlačítko **Přepnout záložku** nebo stiskněte klávesy **CTRL** + **k**, **CTRL** + **k**. Tím se přidá záložka. Pokud zvolíte tlačítko **přepínací záložka** (nebo stisknete klávesovou zkratku **CTRL** + **K** **k** + **K**) znovu, záložka se odebere.
+Chcete-li přidat záložku, umístěte kurzor na řádek, který chcete vložit do záložky. Zvolte tlačítko **Přepnout záložku** nebo stiskněte klávesy **CTRL** + **k**, **CTRL** + **k**. Tím se přidá záložka. Pokud zvolíte tlačítko **přepínací záložka** (nebo stisknete klávesovou zkratku **CTRL** +  **k** + ) znovu, záložka se odebere.
 
 Chcete-li zjistit, co je konkrétní Záložka pro, můžete ji přejmenovat v **okně záložek** kliknutím pravým tlačítkem nebo v místní nabídce. Záložky můžete odstranit kliknutím na tlačítko **Odstranit** v okně záložky.
 
@@ -42,6 +42,6 @@ Záložky můžete uspořádat do virtuálních složek výběrem možnosti **No
 
 Záložky můžete vypnout (bez jejich odebrání) tak, že v okně záložky vyberete tlačítko **Zakázat všechny záložky** . Můžete je znovu povolit výběrem stejného tlačítka (které se nyní označuje jako **Povolit všechny záložky**).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)

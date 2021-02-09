@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9b7525a-b1c9-40fc-8bce-77a5b8f960d8
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 99475ac316112f29a73a85b8ff92249a13867852
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 785d1bcfb8fdce5b09e749dcca17ff476a5d3f48
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436736"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877158"
 ---
 # <a name="exec-task"></a>Exec – úloha
 
@@ -37,7 +37,7 @@ Následující tabulka popisuje parametry pro `Exec` úlohu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Command`|Požadovaný parametr `String`.<br /><br /> Příkazy, které mají být spuštěny. Může se jednat o systémové příkazy, jako je například attrib nebo spustitelný soubor, například *program.exe*, *runprogram.bat*nebo *setup.msi*.<br /><br /> Tento parametr může obsahovat více řádků příkazů. Alternativně můžete do dávkového souboru vložit několik příkazů a spustit ho pomocí tohoto parametru.|
+|`Command`|Požadovaný parametr `String`.<br /><br /> Příkazy, které mají být spuštěny. Může se jednat o systémové příkazy, jako je například attrib nebo spustitelný soubor, například *program.exe*, *runprogram.bat* nebo *setup.msi*.<br /><br /> Tento parametr může obsahovat více řádků příkazů. Alternativně můžete do dávkového souboru vložit několik příkazů a spustit ho pomocí tohoto parametru.|
 |`ConsoleOutput`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Výstup každé položky je řádek ze standardního výstupního nebo standardního chybového datového proudu vygenerovaného nástrojem. Je zachycena pouze v případě `ConsoleToMsBuild` , že je nastavena na `true` .|
 |`ConsoleToMsBuild`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true` bude úloha zachytit standardní chybu a standardní výstup nástroje a zpřístupní je v `ConsoleOutput` parametru Output.<br /><br />Výchozí: `false`.|
 |`CustomErrorRegularExpression`|Volitelný `String` parametr.<br /><br /> Určuje regulární výraz, který se používá k zaznamenání chybových řádků ve výstupu nástroje. To je užitečné pro nástroje, které vytváří neobvykle formátovaný výstup.<br /><br />Výchozí: `null` (žádné vlastní zpracování).|

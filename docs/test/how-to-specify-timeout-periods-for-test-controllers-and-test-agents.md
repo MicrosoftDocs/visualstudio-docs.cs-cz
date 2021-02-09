@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: 9dc661999eb12bb679aa3622f0f14adc3ffc661a
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+manager: jmartens
+ms.openlocfilehash: 3cca59fc165871e24269723635a1393d2f859178
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330001"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879563"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>Postupy: určení období časového limitu pro testovací kontroléry a testovací agenty
 
@@ -30,7 +30,7 @@ Chcete-li upravit nastavení časového limitu testovacího kontroléru nebo tes
 
 - Kontroler testů: *QTController.exe.config*
 
-    |Název klíče|Popis|Hodnota|
+    |Název klíče|Description|Hodnota|
     |-|-----------------|-|
     |AgentConnectionTimeoutInSeconds|Počet sekund, po které se má počkat, než se připojení považuje za ztracené.|"n" sekund.|
     |AgentSyncTimeoutInSeconds|Když zahájíte synchronizaci testovacího běhu, počet sekund, po které se bude čekat na synchronizaci všech agentů před přerušením spuštění.|"n" sekund.|
@@ -39,7 +39,7 @@ Chcete-li upravit nastavení časového limitu testovacího kontroléru nebo tes
 
 - Testovací agent: *QTAgentService.exe.config*
 
-    |Název klíče|Popis|Hodnota|
+    |Název klíče|Description|Hodnota|
     |-|-----------------|-|
     |ControllerConnectionPeriodInSeconds|Počet sekund mezi pokusy o připojení k řadiči.|"n" sekund. Výchozí hodnota: "30" (třicet sekund).|
     |RemotingTimeoutSeconds|Maximální doba, po kterou může volání vzdálené komunikace trvat v sekundách.|"n" sekund. Výchozí hodnota: "600" (deset minut).|

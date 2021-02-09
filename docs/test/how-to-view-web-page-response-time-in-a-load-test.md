@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: e61c49f3-3161-45b1-9220-08b5459065a2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: a20e8dc21e2ff5d76ea582b6ea3a9a0e36f7ed74
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+manager: jmartens
+ms.openlocfilehash: 540dad5ba6629095c5901b123ebdc4ecb7fb5770
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328649"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879524"
 ---
 # <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>Postupy: zobrazení doby odezvy webové stránky v rámci zátěžového testu pomocí analyzátoru zátěžového testu
 
@@ -45,7 +45,7 @@ Pokud spustíte test výkonnosti webu při zatížení zátěžového testu, bud
 
 3. Data pro jednotlivé stránky se zobrazí v mřížce. Obvykle se zobrazují následující sloupce.
 
-   |Záhlaví sloupce|Popis|
+   |Záhlaví sloupce|Description|
    |-|-|
    |**Stránka**|Název webové stránky.|
    |**Scénář**|Název scénáře. Důležité, pokud máte více než jeden scénář v testu výkonnosti webu.|
@@ -57,7 +57,7 @@ Pokud spustíte test výkonnosti webu při zatížení zátěžového testu, bud
    |**Svisl**|Čas odezvy stránky mediánu<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu** pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
    |**90%**|90. percentil pro dobu odezvy. To znamená, že 90% stran reagovalo rychleji než toto číslo a 10% stránek reagovalo pomaleji.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu** pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
    |**95 %**|95. percentil pro dobu odezvy. To znamená, že 95% stran reagovalo rychleji než toto číslo a 5% stránek reagovalo pomaleji.|
-   |**99 %**|99 percentil pro dobu odezvy. To znamená, že 99% stran reagovalo rychleji než toto číslo a 1% stránky reagovaly pomaleji.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu** pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
+   |**99%**|99 percentil pro dobu odezvy. To znamená, že 99% stran reagovalo rychleji než toto číslo a 1% stránky reagovaly pomaleji.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu** pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
    |**Počet**|Maximální doba odezvy stránky.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu** pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
    |**STD dev**|Ve výchozím nastavení nejsou shromažďována standardní data odchylky. Chcete-li shromáždit tato data, v **Editor zátěžového testu** pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
    |**Čas stránky**|Průměrná doba odezvy všech požadavků, které byly provedeny pro webovou stránku.|

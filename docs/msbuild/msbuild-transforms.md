@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: d0bcfc3c-14fa-455e-805c-63ccffa4a3bf
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4eb35554c61c532e0d004e5c974345564e17d4ae
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: ba6a71373026a5a41905efc7c91520a9f6b7c5c3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049003"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878204"
 ---
 # <a name="msbuild-transforms"></a>Transformace nástroje MSBuild
 
@@ -34,7 +34,7 @@ V následujícím příkladu se seznam souborů *. resx* transformuje na seznam 
 @(RESXFile->'%(filename).resources')
 ```
 
-Například pokud položky v seznamu @ (RESXFile) jsou *Form1. resx* , *Form2. resx* a *Form3. resx* , budou výstupy v seznamu transformovaných položek *Form1. Resources* , *Form2. Resources* a *Form3. Resources* .
+Například pokud položky v seznamu @ (RESXFile) jsou *Form1. resx*, *Form2. resx* a *Form3. resx*, budou výstupy v seznamu transformovaných položek *Form1. Resources*, *Form2. Resources* a *Form3. Resources*.
 
 > [!NOTE]
 > Můžete zadat vlastní oddělovač pro seznam transformovaných položek stejným způsobem jako oddělovač pro seznam položek Standard. Chcete-li například oddělit seznam transformovaných položek pomocí čárky (,) namísto výchozího středníku (;), použijte následující kód XML: `@(RESXFile->'Toolset\%(filename)%(extension)', ',')`
@@ -47,7 +47,7 @@ Například pokud položky v seznamu @ (RESXFile) jsou *Form1. resx* , *Form2. r
 @(RESXFile->'Toolset\%(filename)%(extension)')
 ```
 
- Například pokud jsou položky, které jsou obsaženy v `RESXFile` seznamu položek, *Project1\Form1.resx* , *Project1\Form2.resx* a *Project1\Form3.text* , budou výstupy v seznamu transformované *Toolset\Form1.resx* , *Toolset\Form2.resx* a *Toolset\Form3.text* .
+ Například pokud jsou položky, které jsou obsaženy v `RESXFile` seznamu položek, *Project1\Form1.resx*, *Project1\Form2.resx* a *Project1\Form3.text*, budou výstupy v seznamu transformované *Toolset\Form1.resx*, *Toolset\Form2.resx* a *Toolset\Form3.text*.
 
 ## <a name="dependency-analysis"></a>Analýza závislostí
 
@@ -71,7 +71,7 @@ Například pokud položky v seznamu @ (RESXFile) jsou *Form1. resx* , *Form2. r
 
 ### <a name="description"></a>Description
 
- Následující příklad ukazuje soubor projektu MSBuild, který používá transformace. V tomto příkladu se předpokládá, že v adresáři *c:\sub0\sub1\sub2\sub3* je pouze jeden soubor *. xsd* a že pracovní adresář je *c:\sub0* .
+ Následující příklad ukazuje soubor projektu MSBuild, který používá transformace. V tomto příkladu se předpokládá, že v adresáři *c:\sub0\sub1\sub2\sub3* je pouze jeden soubor *. xsd* a že pracovní adresář je *c:\sub0*.
 
 ### <a name="code"></a>Kód
 

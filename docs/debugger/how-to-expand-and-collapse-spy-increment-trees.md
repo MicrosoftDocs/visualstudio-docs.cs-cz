@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 22993182-7026-4155-8046-b84fd99f803c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c4939a77fffdd5701cf1b9b4ac50995ce6995bb2
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: 852eaf8dad8160566656d20189ada99378b63a0d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97903425"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877665"
 ---
 # <a name="how-to-expand-and-collapse-spy-trees"></a>Postupy: Rozbalení a sbalení stromů nástroje Spy++
 Zobrazení oken, procesů a vláken můžete rozbalit a sbalit pomocí dvou metod: kliknutím na ikony v okně nebo pomocí nabídky **strom** . Ikony + a-ve stromu fungují jako v okně projektu C++.
 
  Nabídka **stromu** obsahuje čtyři příkazy:
 
-|Příkaz nabídky|Popis|
+|Příkaz nabídky|Description|
 |------------------|-----------------|
 |**Rozbalit jednu úroveň**|Rozšíří aktuálně vybranou položku na další úroveň.|
 |**Rozbalit větev**|Úplně rozšíří aktuálně vybranou položku.|
