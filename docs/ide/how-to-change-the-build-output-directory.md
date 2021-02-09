@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: a8333c89-afb2-4b1d-b2e2-9146da852402
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2512836781b0bf8c269f296066b25722b58be1fb
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 792175d7d2c168f75d20bce86675a1fcd8c47899
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136885"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875533"
 ---
 # <a name="how-to-change-the-build-output-directory"></a>Postupy: Změna výstupního adresáře sestavení
 
@@ -34,7 +34,7 @@ Můžete určit umístění výstupu generovaného vaším projektem podle konfi
    - Pro Visual Basic vyberte kartu **kompilovat** .
    - V případě C++ nebo JavaScript vyberte kartu **Obecné** .
 
-3. V rozevíracím seznamu konfigurace v horní části vyberte konfiguraci, jejíž umístění výstupního souboru chcete změnit (**ladění**, **vydání**nebo **všechny konfigurace**).
+3. V rozevíracím seznamu konfigurace v horní části vyberte konfiguraci, jejíž umístění výstupního souboru chcete změnit (**ladění**, **vydání** nebo **všechny konfigurace**).
 
 4. Najít položku výstupní cesty na stránce, která &mdash; se liší v závislosti na typu projektu:
 
@@ -47,7 +47,7 @@ Můžete určit umístění výstupu generovaného vaším projektem podle konfi
    ![Vlastnost výstupní cesty pro projekt C# v jazyce Visual Studio](media/output-path.png)
    
    > [!NOTE]
-   > Některé projekty budou standardně zahrnovat rozhraní a modul runtime v cestě sestavení. Pokud to chcete změnit, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení**, vyberte **Upravit soubor projektu**a přidejte následující:
+   > Některé projekty budou standardně zahrnovat rozhraní a modul runtime v cestě sestavení. Pokud to chcete změnit, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení**, vyberte **Upravit soubor projektu** a přidejte následující:
    > ```xml
    > <PropertyGroup>
    >   <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>

@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dc79d40c2cb363b79c2064bd71fb23dece04e143
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 330dbdfb6d6db8d33a2b8ea3caa7e1a840d84dd0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350241"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874896"
 ---
 # <a name="xml-editor-intellisense-features"></a>Funkce IntelliSense editoru XML
 
@@ -89,7 +89,7 @@ Například pokud vyberete `e:Book` prvek ze seznamu technologie IntelliSense, k
 
 ## <a name="brace-matching"></a>Spárování složených závorek
 
-Editor XML nabízí zvýraznění složených závorek, které poskytuje okamžitou zpětnou vazbu na prvky, které jste právě zavřeli. Můžete také použít klávesovou zkratku ( **CTRL** + **]** ) a přeskočit jednu složenou závorku k párové závorce.
+Editor XML nabízí zvýraznění složených závorek, které poskytuje okamžitou zpětnou vazbu na prvky, které jste právě zavřeli. Můžete také použít klávesovou zkratku (**CTRL** + **]**) a přeskočit jednu složenou závorku k párové závorce.
 
 Editor XML provede následující položky:
 
@@ -109,11 +109,11 @@ Editor XML provede následující položky:
 
 ## <a name="modify-the-intellisense-options"></a>Úprava možností IntelliSense
 
-Funkce IntelliSense a automatické dokončování jsou ve výchozím nastavení povoleny. Můžete to však změnit úpravou **Tools**  >  nastavení **možností** nástroje.
+Funkce IntelliSense a automatické dokončování jsou ve výchozím nastavení povoleny. Můžete to však změnit úpravou   >  nastavení **možností** nástroje.
 
 Část **Automatické vložení** stránky **různé** určuje následující chování:
 
-|Název|Popis|
+|Název|Description|
 |-|-----------------|
 |Zavřít značky|Vloží uzavírací značky pro nové prvky.|
 |Uvozovky atributů|Vloží uvozovky hodnot atributů při zadání nového názvu atributu.|
@@ -123,7 +123,7 @@ Funkce IntelliSense a automatické dokončování jsou ve výchozím nastavení 
 
 1. V nabídce **nástroje** vyberte **možnost možnosti** .
 
-2. Rozbalte položku **textový editor** , rozbalte položku **XML** a vyberte možnost **různé**.
+2. Rozbalte položku **textový editor**, rozbalte položku **XML** a vyberte možnost **různé**.
 
 3. Proveďte jakékoli změny v části **Automatické vložení** a klikněte na tlačítko **OK**.
 

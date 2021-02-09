@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], MSI
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c001b3ce308c9e991cee747bdcab3ad646b226ab
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: ef515ce323322dee667dab5690b85b29af97c07d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847114"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875416"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Nasazení řešení Office pomocí Instalační služba systému Windows
 
@@ -218,7 +218,7 @@ Stránka **distribuovatelné** obsahuje položku s názvem **Microsoft VSTO 2010
    </properties>
    ```
 
-5. Na panelu nabídek v programu Poznámkový **File** blok klikněte na  >  **Uložit** soubor.
+5. Na panelu nabídek v programu Poznámkový blok klikněte na  >  **Uložit** soubor.
 
 6. V dialogovém okně **Uložit jako** vyhledejte složku **plocha** .
 
@@ -500,7 +500,7 @@ Chcete-li upravit vlastní vlastnosti, vytvořte program, který odebere přizp�
 
 8. V tabulce **kontexty projektu** ve sloupci **Konfigurace** projektu **OfficeAddInSetup** zvolte možnost **možnost SingleImage** a poté klikněte na tlačítko **Zavřít** .
 
-9. Na panelu nabídek vyberte sestavení sestavení **Build**  >  **OfficeAddInSetup**.
+9. Na panelu nabídek vyberte sestavení sestavení   >  **OfficeAddInSetup**.
 
    Po dokončení sestavení můžete najít soubor *setup.exe* projektu **OfficeAddInSetup** v následujícím umístění: <em>OfficeAddInSetupProjectRoot</em>**\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1 \\**
 

@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: ea8dc357-2e66-455a-aec2-7ccaccfc9adf
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f8aa7daef6e427b7355eb7676db0728a4af4ca42
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 45d0bb8b47162966974499fed20c826b52dcfaa4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351476"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875078"
 ---
 # <a name="walkthrough-use-xml-editor-features"></a>Návod: Použití funkcí editoru XML
 
@@ -32,7 +32,7 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
      V editoru se otevře nový soubor. Soubor obsahuje výchozí deklaraci XML, `<?xml version="1.0" encoding="utf-8">` .
 
-3. V okně Vlastnosti dokumentu klikněte na tlačítko pro procházení ( **...** ) v poli **schémata** .
+3. V okně Vlastnosti dokumentu klikněte na tlačítko pro procházení (**...**) v poli **schémata** .
 
      Zobrazí se dialogové okno **schémata XSD** .
 
@@ -98,7 +98,7 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
 ## <a name="to-format-the-xml-document"></a>Formátování dokumentu XML
 
-- Na panelu nástrojů editoru XML vyberte tlačítko **formátovat dokument** nebo stiskněte klávesy **CTRL** + **E** , **D**.
+- Na panelu nástrojů editoru XML vyberte tlačítko **formátovat dokument** nebo stiskněte klávesy **CTRL** + **E**,**D**.
 
    ![Tlačítko formátování dokumentu XML v aplikaci Visual Studio](media/format-xml-document.png)
 

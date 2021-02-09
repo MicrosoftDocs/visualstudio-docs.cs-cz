@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: affa2392-7aed-45ac-9ffa-1d8e0496d590
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ce4dfbf2808071d47e1f84eef660d936181227f3
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 3255af161bd37d16eefeb6d41115cf0114059e81
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136703"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875429"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Postupy: konfigurace projektů k cílení na více platforem
 
@@ -31,7 +31,7 @@ Dialogové okno **Configuration Manager** umožňuje vytvářet a nastavovat kon
 
 1. V nabídce **Sestavení** (Build) klikněte na **Správce konfigurace**.
 
-2. V **poli Aktivní platforma řešení**vyberte platformu, pro kterou chcete své řešení cílit, nebo vyberte, pokud chcete **\<New>** vytvořit novou platformu. Sada Visual Studio zkompiluje vaši aplikaci a určí cílovou platformu, která je nastavena jako aktivní platforma v dialogovém okně **Configuration Manager** .
+2. V **poli Aktivní platforma řešení** vyberte platformu, pro kterou chcete své řešení cílit, nebo vyberte, pokud chcete **\<New>** vytvořit novou platformu. Sada Visual Studio zkompiluje vaši aplikaci a určí cílovou platformu, která je nastavena jako aktivní platforma v dialogovém okně **Configuration Manager** .
 
 ## <a name="remove-a-platform"></a>Odebrání platformy
 
@@ -39,7 +39,7 @@ Pokud si myslíte, že nemáte potřebnou platformu, můžete ji odebrat pomocí
 
 1. V nabídce **Sestavení** (Build) klikněte na **Správce konfigurace**.
 
-2. V **poli Aktivní platforma řešení**vyberte **\<Edit>** . Otevře se dialogové okno **Upravit platformy řešení** .
+2. V **poli Aktivní platforma řešení** vyberte **\<Edit>** . Otevře se dialogové okno **Upravit platformy řešení** .
 
 3. Klikněte na platformu, kterou chcete odebrat, a klikněte na **Odebrat**.
 

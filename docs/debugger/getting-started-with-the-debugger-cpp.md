@@ -11,15 +11,15 @@ helpviewer_keywords:
 - debugger
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cc5d0b85ac1406f214784976ca23467a0e0eb6c
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: af974731fac6842c38f2a0e4ccbc9f32748e29b2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847098"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874792"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Naučte se ladit kód C++ pomocí sady Visual Studio
 
@@ -35,7 +35,7 @@ V tomto kurzu:
 > * Kontrola proměnných v tipech k datům a v oknech ladicího programu
 > * Kontrola zásobníku volání
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 ::: moniker range=">=vs-2019"
 

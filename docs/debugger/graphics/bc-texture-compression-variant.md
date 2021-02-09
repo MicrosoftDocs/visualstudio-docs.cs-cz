@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 2d0f5305-585b-4b01-bc9a-7a32d6e991da
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e767268073f896de590386854a0d2c9ce2803073
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 144065c5ee04c75582307440b4cee6242b48bc01
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726446"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874610"
 ---
 # <a name="bc-texture-compression-variant"></a>Varianta komprese textur BC
 Povoluje kompresi bloků na texturách, které mají formát pixel, který je variantou B8G8R8X8, B8G8R8A8 nebo R8G8B8A8.
@@ -56,7 +56,7 @@ Povoluje kompresi bloků na texturách, které mají formát pixel, který je va
 
  Pokud vaše textura má formát, který není uveden, textura se neupraví.
 
-## <a name="restrictions-and-limitations"></a>Omezení a omezení
+## <a name="restrictions-and-limitations"></a>Omezení a limity
  Někdy textury, které jsou vytvořeny pomocí variace formátů obrázků B8G8R8A8 nebo R8G8B8A8, ve skutečnosti nepoužívají alfa kanál, ale neexistuje žádný způsob, jak variantu zjistit, zda se používá nebo ne. Aby se zachovala správná velikost pro případ, že se používá alfa kanál, tato varianta tyto formáty vždy zakóduje do méně efektivního formátu BC3. Můžete pomoci Analýza grafických snímků lépe porozumět možnému výkonu vykreslování vaší aplikace pomocí této varianty pomocí variace formátu obrázku B8G8R8X8, pokud nepoužíváte kanál alfa, aby varianta mohla používat efektivnější formát BC1.
 
 ## <a name="example"></a>Příklad

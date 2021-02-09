@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 079d95ac-2eaf-4ae1-9cd3-2c81a961a942
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c8bbed6a70316e92e2c79aaa6cabc20930f10e7
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: ad3bb4024c4545dfaae7cdb9faa5d6484a66cd3e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351463"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875026"
 ---
 # <a name="walkthrough-using-xslt-intellisense"></a>Návod: Používání IntelliSense XSLT
 

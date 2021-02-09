@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 24b22ad9-5ad0-4161-809a-9b518eb924bf
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: aa73637244469d781ac77acba362886b5656f8d8
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 6d0f43e2b004272b6882ff4a19e62fa99c998e53
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728041"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874623"
 ---
 # <a name="16-bpp-render-target-format-variant"></a>16 BPP cílů vykreslování cílového formátu
 Nastaví formát pixelu na DXGI_FORMAT_B5G6R5_UNORM pro všechny cíle vykreslování a zpětnou vyrovnávací paměť.
@@ -56,7 +56,7 @@ Aplikace, které jsou součástí řetězce přepnutí, mají formát back-buffe
 
 - Člen použití je nastaven na D3D11_USAGE_DEFAULT.
 
-## <a name="restrictions-and-limitations"></a>Omezení a omezení
+## <a name="restrictions-and-limitations"></a>Omezení a limity
  Vzhledem k tomu, že formát B5G6R5 nemá alfa kanál, neuchová se v této variantě obsah alfa. Pokud vykreslování vaší aplikace vyžaduje alfa kanál v cíli vykreslování, nemůžete jednoduše přepnout na formát B5G6R5.
 
 ## <a name="example"></a>Příklad

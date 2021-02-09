@@ -10,13 +10,13 @@ helpviewer_keywords:
 - item templates, creating multi-file item templates
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: a947d23bd7094e003bae3cfe880299bb3698d92e
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+manager: jmartens
+ms.openlocfilehash: b375cf54dfe35928a35f991190c94b3d08685827
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597259"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875377"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>Postupy: vytváření šablon položek s více soubory
 
@@ -38,7 +38,7 @@ ms.locfileid: "95597259"
 
 1. Vytvořte šablonu položky, protože byste mohli ručně vytvořit šablonu položky s jedním souborem, ale zahrnout každý soubor, který tvoří položku s více soubory.
 
-1. V souboru XML *. vstemplate* přidejte `ProjectItem` element pro každý jednotlivý soubor a přidejte do `TargetFileName` tohoto prvku atribut. Nastavte hodnotu `TargetFileName` atributu na *$fileinputname $. Přípona* souboru, kde *přípona* souboru je přípona souboru, který je součástí šablony. Například:
+1. V souboru XML *. vstemplate* přidejte `ProjectItem` element pro každý jednotlivý soubor a přidejte do `TargetFileName` tohoto prvku atribut. Nastavte hodnotu `TargetFileName` atributu na *$fileinputname $. Přípona* souboru, kde *přípona* souboru je přípona souboru, který je součástí šablony. Příklad:
 
     ```xml
     <ProjectItem TargetFileName="$fileinputname$.vb">

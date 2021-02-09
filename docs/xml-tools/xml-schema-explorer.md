@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 2fc39e98-b194-456b-a452-cfafb0a52d66
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 31edea44741249c5d75a53e291c766824dc3b8ea
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: c4b16c1baa039a2f1e812d35e7a4994ffc0d5e5c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351294"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874883"
 ---
 # <a name="xml-schema-explorer"></a>Průzkumník schémat XML
 
@@ -45,7 +45,7 @@ ms.locfileid: "94351294"
 
 - V nabídce **zobrazení** můžete také vybrat **Průzkumníka schémat XML** .
 
-- K **Průzkumníku schémat XML** můžete přistupovat ze souboru *. vb* , který má Visual Basic literál XML přidružený k souboru *. xsd* . Chcete-li zobrazit sadu schémat v **Průzkumníku schémat XML** , klikněte pravým tlačítkem myši na uzel XML v literálu XML nebo na import oboru názvů XML a vyberte příkaz **Zobrazit v Průzkumníku schémat** . Další informace naleznete v tématu [integrace literálů XML pomocí Průzkumníka schémat XML](../xml-tools/integration-of-xml-literals-with-xml-schema-explorer.md).
+- K **Průzkumníku schémat XML** můžete přistupovat ze souboru *. vb* , který má Visual Basic literál XML přidružený k souboru *. xsd* . Chcete-li zobrazit sadu schémat v **Průzkumníku schémat XML**, klikněte pravým tlačítkem myši na uzel XML v literálu XML nebo na import oboru názvů XML a vyberte příkaz **Zobrazit v Průzkumníku schémat** . Další informace naleznete v tématu [integrace literálů XML pomocí Průzkumníka schémat XML](../xml-tools/integration-of-xml-literals-with-xml-schema-explorer.md).
 
 ## <a name="tree-view"></a>Stromové zobrazení
 **Průzkumník schémat XML** zobrazuje předem zkompilované informace sady schémat ve stromové struktuře. Stromová struktura je uspořádána takto:

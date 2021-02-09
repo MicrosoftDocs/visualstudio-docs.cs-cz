@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 1b5f29a8-b7fd-477e-949e-2f689cae3c96
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 03aedaf522924266b0951ec189e96fb3f83c142c
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 7cb4806949b21a6c92548b91623e63306f2a7722
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433658"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875104"
 ---
 # <a name="writeline-activity-designer"></a>Návrhář aktivity WriteLine
 
@@ -37,9 +37,9 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.WriteLi
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Popisný název <xref:System.Activities.Statements.WriteLine> aktivity Výchozí hodnota je WriteLine. I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je vhodné použít jeden.|
-|<xref:System.Activities.Statements.WriteLine.Text%2A>|Nepravda|Text, který se má zapsat Chcete-li nastavit vlastnost, zadejte výraz Visual Basic do **textového** pole v Návrháři aktivity **WriteLine** nebo v mřížce vlastností.|
-|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|Nepravda|<xref:System.IO.TextWriter>Do které <xref:System.Activities.Statements.WriteLine> zapisuje <xref:System.Activities.Statements.WriteLine.Text%2A> . Výchozím nastavením je konzola.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Popisný název <xref:System.Activities.Statements.WriteLine> aktivity Výchozí hodnota je WriteLine. I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je vhodné použít jeden.|
+|<xref:System.Activities.Statements.WriteLine.Text%2A>|Ne|Text, který se má zapsat Chcete-li nastavit vlastnost, zadejte výraz Visual Basic do **textového** pole v Návrháři aktivity **WriteLine** nebo v mřížce vlastností.|
+|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|Ne|<xref:System.IO.TextWriter>Do které <xref:System.Activities.Statements.WriteLine> zapisuje <xref:System.Activities.Statements.WriteLine.Text%2A> . Výchozím nastavením je konzola.|
 
 ## <a name="see-also"></a>Viz také
 

@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 0271fa26-2205-49bd-96e0-ae1441571808
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 26703b821d2748612f461a35591a831488807dbb
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 1c91e97d0508ab85893409386ddd3ab9dded7f45
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351398"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874831"
 ---
 # <a name="xml-schemas-dialog-box"></a>Dialogové okno Schémata XML
 
@@ -27,11 +27,11 @@ Můžete otevřít dialogové okno **schémata XML** kliknutím na tlačítko **
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
-**Použije**
+**Použití**
 
 Vyberte způsob použití schématu XML.
 
-- **Automaticky**. Toto schéma není používáno aktuálním dokumentem, ale je k dispozici pro automatické přidružení. Pokud dokument XML deklaruje obor názvů, který odpovídá `targetNamespace` tomuto schématu, schéma bude automaticky přidruženo a je zahrnuto do sady schémat.
+- **Automatický:** Toto schéma není používáno aktuálním dokumentem, ale je k dispozici pro automatické přidružení. Pokud dokument XML deklaruje obor názvů, který odpovídá `targetNamespace` tomuto schématu, schéma bude automaticky přidruženo a je zahrnuto do sady schémat.
 
 - **Použijte toto schéma**. Toto schéma je používáno aktuálním dokumentem. Uživatel explicitně požadoval, aby se toto schéma používalo kliknutím na tento sloupec, nebo jestli se schéma automaticky přidružil na základě odpovídajícího typu `targetNamespace` .
 

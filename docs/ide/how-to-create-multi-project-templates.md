@@ -10,13 +10,13 @@ helpviewer_keywords:
 - multi-project templates
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: efd0808342e38627d0b79b097f36f86a1881dafe
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+manager: jmartens
+ms.openlocfilehash: c4cfc7f51999056379acd73ec7ec3933c1f31a51
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597221"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875403"
 ---
 # <a name="how-to-create-multi-project-templates"></a>Postupy: vytváření šablon více projektů
 
@@ -48,14 +48,14 @@ Například soubor *. zip* šablony pro více projektů, který má dva projekty
 
 Kořenový soubor *vstemplate* pro šablonu s více projekty se liší od šablony jednoho projektu následujícími způsoby:
 
-- Atribut **Type** elementu **vstemplate** má hodnotu typu **projekt** namísto **projektu**. Například:
+- Atribut **Type** elementu **vstemplate** má hodnotu typu **projekt** namísto **projektu**. Příklad:
 
     ```xml
     <VSTemplate Version="2.0.0" Type="ProjectGroup"
         xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     ```
 
-- Element **TemplateContent** obsahuje prvek **ProjectCollection** , který obsahuje jeden nebo více **ProjectTemplateLink** prvků, které definují cesty k souborům *vstemplate* zahrnutých projektů. Například:
+- Element **TemplateContent** obsahuje prvek **ProjectCollection** , který obsahuje jeden nebo více **ProjectTemplateLink** prvků, které definují cesty k souborům *vstemplate* zahrnutých projektů. Příklad:
 
     ```xml
     <TemplateContent>
@@ -71,7 +71,7 @@ Kořenový soubor *vstemplate* pro šablonu s více projekty se liší od šablo
     ```
 
 > [!TIP]
-> Pokud chcete, aby se šablona více projektů zobrazila v dialogovém okně Nový projekt, nikoli v jednotlivých projektech, které obsahuje, označte vnitřní šablony jako [skryté](../extensibility/hidden-element-visual-studio-templates.md). Například:
+> Pokud chcete, aby se šablona více projektů zobrazila v dialogovém okně Nový projekt, nikoli v jednotlivých projektech, které obsahuje, označte vnitřní šablony jako [skryté](../extensibility/hidden-element-visual-studio-templates.md). Příklad:
 >
 > ```xml
 > <VSTemplate Type="Project" ... >

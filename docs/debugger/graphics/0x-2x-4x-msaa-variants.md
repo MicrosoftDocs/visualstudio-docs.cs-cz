@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d4de52fb135e465e7adc938bb29c571bfcc1973
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 661aa4ade7df8279e31e2291dfbbdfc5f6df6e1c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726550"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874740"
 ---
 # <a name="0x2x4x-msaa-variants"></a>Varianty 0x/2x/4x MSAA
 Přepíše nastavení rozhraní MSAA (multi-Sample anti-aliasing) na všech cílech vykreslování a prohozených řetězcích.
@@ -51,7 +51,7 @@ Přepíše nastavení rozhraní MSAA (multi-Sample anti-aliasing) na všech cíl
 
   Čistým účinkem těchto změn je, že všechny vykreslování jsou provedeny v cíli vykreslování sady MSAA, ale pokud vaše aplikace používá jeden z těchto cílů vykreslování nebo vyrovnávací paměti pro odkládací řetěz jako zobrazení prostředků shaderu nebo neuspořádané zobrazení přístupu, jsou data z vyřešené kopie, která není v rozhraní MSAA, vyvzorkovaná.
 
-## <a name="restrictions-and-limitations"></a>Omezení a omezení
+## <a name="restrictions-and-limitations"></a>Omezení a limity
  V Direct3D11 jsou textury MSAA více omezené než rozhraní MSAA. Například nemůžete volat `ID3D11DeviceContext::UpdateSubresource` texturu MSAA a volání `ID3D11DeviceContext::CopySubresourceRegion` selžou, pokud se počet vzorků a kvalita vzorku zdrojového prostředku a cílového prostředku neshodují, což může nastat, pokud tato varianta přepisuje nastavení rozhraní MSAA jednoho prostředku, ale ne druhý.
 
  Když přehrávání detekuje tyto druhy konfliktů, je vhodné replikovat zamýšlené chování, ale nemusí být možné přesně porovnat jeho výsledky. I když je to Neběžné, aby to ovlivnilo výkon těchto variant způsobem, který nepředstavuje jejich dopad, je možné – například když je řízení toku v pixel shaderu určeno přesným obsahem textury, protože replikovaná textura nemusí mít stejný obsah.

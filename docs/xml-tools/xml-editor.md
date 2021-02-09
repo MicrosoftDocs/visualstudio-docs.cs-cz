@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: overview
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bd1cac1c688bf2efc0a4c08797d72eabf0133e2
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: de79063eeef5056bd850d8fa1fe76d6698c7e082
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351437"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874843"
 ---
 # <a name="xml-editor"></a>Editor XML
 
@@ -42,7 +42,7 @@ Editor XML obsahuje následující funkce:
 
 - Integrace s [průzkumníkem schémat XML](../xml-tools/xml-schema-explorer.md). To poskytuje hierarchická zobrazení schémat XML.
 
-Je vyvolán editor XML pro dobře známé přípony souborů, například *. XML* , *. xsd* , *. xsl* a *. config*. Je také vyvolána na jakékoli neznámé příponě souboru, pokud soubor obsahuje XML.
+Je vyvolán editor XML pro dobře známé přípony souborů, například *. XML*, *. xsd*, *. xsl* a *. config*. Je také vyvolána na jakékoli neznámé příponě souboru, pokud soubor obsahuje XML.
 
 ## <a name="xslt-intellisense"></a>IntelliSense pro XSLT
 
