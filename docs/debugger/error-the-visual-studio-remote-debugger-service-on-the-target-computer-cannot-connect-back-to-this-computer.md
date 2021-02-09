@@ -13,29 +13,29 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e879fdc1be2eba309258dd64b3c9d83639eb05f7
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ef556e19946789abb5805727ccc42c1a9230d9af
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851070"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871257"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Chyba: Služba vzdáleného ladicího programu sady Visual Studio na cílovém počítači se nemůže připojit zpět k tomuto počítači.
 Tato chyba znamená, že je služba vzdáleného ladicího programu spuštěna pod uživatelským účtem, který nelze ověřit při pokusu o připojení k počítači, ze kterého provádíte ladění. K této chybě může dojít při vzdáleném ladění pomocí staršího ladicího stroje a vzdálený ladicí program je spuštěn jako služba.
 
  Následující tabulka ukazuje, jaké účty mají přístup k počítači:
 
-|Scénář|Účet LocalSystem|Účet domény|Místní účty, které mají stejné uživatelské jméno a heslo v obou počítačích|
+|Scenario|Účet LocalSystem|Účet domény|Místní účty, které mají stejné uživatelské jméno a heslo v obou počítačích|
 |-|-|-|-|
 |Oba počítače ve stejné doméně|Ano|Ano|Ano|
 |Oba počítače v doménách s obousměrným vztahem důvěryhodnosti|Ne|Ne|Ano|
 |Jeden nebo oba počítače v pracovní skupině|Ne|Ne|Ano|
 |Počítače v různých doménách|Ne|Ne|Ano|
 
- Další vylepšení:
+ Dále musí být splněny všechny tyto podmínky:
 
 - Účet, pod kterým spustíte službu Visual Studio Remote Debugger, se musí nacházet jako správce na vzdáleném počítači, aby mohl ladit jakýkoli proces.
 
@@ -74,5 +74,5 @@ Tato chyba znamená, že je služba vzdáleného ladicího programu spuštěna p
 - Spusťte Sledování vzdáleného ladění jako aplikaci namísto služby.
 
 ## <a name="see-also"></a>Viz také
-- [Chyby a řešení potíží se vzdáleným laděním](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Chyby vzdáleného ladění a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)
 - [Vzdálené ladění](../debugger/remote-debugging.md)

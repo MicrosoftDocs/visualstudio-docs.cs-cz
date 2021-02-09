@@ -6,15 +6,15 @@ f1_keywords:
 - vs.debug.error.process_exit_during_func_eval
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 97751ae2cbc44429bc1c0fb363366faa830beb68
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 07891e5bcbcab35a4ec5652676a014b87dd32d43
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852729"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871634"
 ---
 # <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>Chyba: cílový proces se ukončil s kódem &#39;kódem&#39; při vyhodnocování funkce &#39;funkce&#39;
 
@@ -28,7 +28,7 @@ Jednou z běžných příčin tohoto problému je, že když ladicí program vyh
 
 Existují dvě možná řešení tohoto problému.
 
-### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Řešení #1: zabrání ladicímu programu volat vlastnost getter nebo metodu ToString. 
+### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Řešení #1: zabrání ladicímu programu volat vlastnost getter nebo metodu ToString. 
 
 Chybová zpráva vám sdělí název funkce, kterou ladicí program pokusil zavolat. S názvem funkce můžete zkusit znovu vyhodnotit tuto funkci z příkazového **okna pro** ladění vyhodnocení. Ladění je možné při vyhodnocování z **příkazového okna,** protože na rozdíl od implicitních hodnocení z oken automatické hodnoty, místní hodnoty a **kukátko** se ladicí program ukončí na neošetřených výjimkách.
 
@@ -44,4 +44,4 @@ Pokud tuto metodu nemůžete změnit, je možné, že cílový proces bude možn
 
 ### <a name="solution-2-disable-all-implicit-evaluation"></a>Řešení #2: Zakázat všechna implicitní vyhodnocení
 
-Pokud předchozí řešení problém nevyřeší, pokračujte na **Tools**  >  **Možnosti**nástroje a zrušte zaškrtněte nastavení **ladění**  >  **Obecné**  >  **Povolit vyhodnocení vlastností a další implicitní volání funkcí**. Tato akce zakáže většinu implicitních vyhodnocení funkcí a tento problém by měl vyřešit.
+Pokud předchozí řešení problém nevyřeší, pokračujte na   >  **Možnosti** nástroje a zrušte zaškrtněte nastavení **ladění**  >  **Obecné**  >  **Povolit vyhodnocení vlastností a další implicitní volání funkcí**. Tato akce zakáže většinu implicitních vyhodnocení funkcí a tento problém by měl vyřešit.

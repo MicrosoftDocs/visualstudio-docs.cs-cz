@@ -12,15 +12,15 @@ dev_langs:
 - SQL
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 50c8b6c2385879e4cf41c8cc2aea57715050b5e2
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 67d7602357a39cbdce0c96b494f4c02758533e73
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851785"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871387"
 ---
 # <a name="error-sql-can39t-find-ssdebugps"></a>Chyba: SQL může&#39;najít SSDEBUGPS.
 
@@ -38,7 +38,7 @@ Zkopírování SSDEBUGPS.dll do počítače s SQL Server 2005:
 
 1. Zkopírujte soubor do adresáře se stejným názvem a cestou v [!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)] počítači.
 
-2. Zaregistrujte ho tak, že otevřete **příkazový řádek**a spustíte tento příkaz:
+2. Zaregistrujte ho tak, že otevřete **příkazový řádek** a spustíte tento příkaz:
 
     ```cmd
     regsvr32 ssdebugps.dll

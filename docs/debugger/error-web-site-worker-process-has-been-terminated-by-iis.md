@@ -11,15 +11,15 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f5991bf0b14cf4952303dba599ad47e4c8fd27a9
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: cf7832d71ab86c6dab973a07dbc46217274cb83b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852410"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870893"
 ---
 # <a name="error-web-site-worker-process-has-been-terminated-by-iis"></a>Chyba: Pracovní proces webu byl ukončen službou IIS.
 Ladicí program zastavil provádění kódu na webu. To způsobilo Internetová informační služba (IIS), aby se předpokládalo, že pracovní proces přestal reagovat. Proto služba IIS ukončila pracovní proces.
@@ -30,9 +30,9 @@ Ladicí program zastavil provádění kódu na webu. To způsobilo Internetová 
 
 1. Otevřete okno **Nástroje pro správu** .
 
-   1. Klikněte na tlačítko **Start**a poté na příkaz **Ovládací panely**.
+   1. Klikněte na tlačítko **Start** a poté na příkaz **Ovládací panely**.
 
-   2. V **Ovládacích panelech**zvolte **přepínač přepnout do klasického zobrazení**, v případě potřeby a dvakrát klikněte na položku **Nástroje pro správu**.
+   2. V **Ovládacích panelech** zvolte **přepínač přepnout do klasického zobrazení**, v případě potřeby a dvakrát klikněte na položku **Nástroje pro správu**.
 
 2. V okně **Nástroje pro správu** poklikejte na **Správce služby Internetová informační služba (IIS)**.
 
@@ -57,4 +57,4 @@ Ladicí program zastavil provádění kódu na webu. To způsobilo Internetová 
 8. Zavřete Správce služby IIS a okno **Nástroje pro správu** .
 
 ## <a name="see-also"></a>Viz také
-- [Chyby a řešení potíží se vzdáleným laděním](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Chyby vzdáleného ladění a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)

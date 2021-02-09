@@ -13,15 +13,15 @@ helpviewer_keywords:
 - DCOM, unable to connect error
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d1ab43773b4aa9d2535eb6ac157ec39333907731
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: dcf52a258a46f44afaf6e890531496f57b11fc24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852508"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871062"
 ---
 # <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Chyba: Nelze se připojit k názvu počítače &lt; &gt; . Počítač se v síti nepodařilo najít.
 K tomuto chování dochází, pokud je splněna jedna z následujících podmínek:

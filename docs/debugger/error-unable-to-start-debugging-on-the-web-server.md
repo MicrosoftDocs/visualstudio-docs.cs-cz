@@ -23,15 +23,15 @@ helpviewer_keywords:
 - remote debugging, errors
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a0aa657abefa0638e62039cae8b6d15a33fdf51
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 94dcfdc05f2d852e1a433067b0a574444632195d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851421"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870880"
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>Chyba: Nepodařilo se zahájit ladění na webovém serveru.
 
@@ -58,7 +58,7 @@ K této chybě dochází často, protože došlo k chybě nebo změně konfigura
 
 - Restartujte aplikaci Visual Studio jako správce a opakujte ladění. (Některé scénáře ladění ASP.NET vyžadují zvýšená oprávnění.)
 
-    Aplikaci Visual Studio můžete nakonfigurovat tak, aby se vždy spouštěla jako správce, a to tak, že kliknete pravým tlačítkem na ikonu zástupce Visual studia, zvolíte **vlastnosti > Upřesnit**a pak zvolíte, že se má vždycky spustit jako správce.
+    Aplikaci Visual Studio můžete nakonfigurovat tak, aby se vždy spouštěla jako správce, a to tak, že kliknete pravým tlačítkem na ikonu zástupce Visual studia, zvolíte **vlastnosti > Upřesnit** a pak zvolíte, že se má vždycky spustit jako správce.
 
 ## <a name="the-web-server-is-not-configured-correctly"></a><a name="web_server_config"></a> Webový server není správně nakonfigurován.
 
@@ -77,14 +77,14 @@ K této chybě dochází často, protože došlo k chybě nebo změně konfigura
 ## <a name="the-microsoft-visual-studio-remote-debugging-monitormsvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a><a name="msvsmon"></a> Sledování vzdáleného ladění sady Microsoft Visual Studio (msvsmon.exe) se na vzdáleném počítači nepoužívá.
 
 - Pokud provádíte ladění na vzdáleném počítači, ujistěte se, že jste [nainstalovali a spouštíte vzdálený ladicí program](../debugger/remote-debugging.md). Pokud se zpráva zmiňuje o bráně firewall, ujistěte se, že jsou otevřené [správné porty brány firewall](../debugger/remote-debugger-port-assignments.md) , zejména pokud používáte bránu firewall jiného výrobce.
-- Pokud používáte soubor hostitelů, ujistěte se, že je správně nakonfigurovaný. Například pokud ladění pomocí **F5** (místo **připojení procesu**), musí soubor hostitelů zahrnovat stejnou adresu URL projektu jako ve vlastnostech projektu, **vlastnosti > serverech webových >** nebo **vlastnosti > ladění**v závislosti na typu projektu.
+- Pokud používáte soubor hostitelů, ujistěte se, že je správně nakonfigurovaný. Například pokud ladění pomocí **F5** (místo **připojení procesu**), musí soubor hostitelů zahrnovat stejnou adresu URL projektu jako ve vlastnostech projektu, **vlastnosti > serverech webových >** nebo **vlastnosti > ladění** v závislosti na typu projektu.
 
 ## <a name="the-remote-server-returned-an-error"></a><a name="server_error"></a> Vzdálený server vrátil chybu.
 
 V [souboru protokolu služby IIS](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0) vyhledejte chybové podkódy a další informace a tento [příspěvek blogu](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)služby IIS 7.
 
 Tady jsou některé běžné kódy chyb a několik návrhů.
-- 403 Zakázáno. Tato chyba obsahuje mnoho možných příčin, proto si prohlédněte soubor protokolu a nastavení zabezpečení služby IIS pro web. Ujistěte se, že web.config serveru obsahuje `debug=true` v elementu compilation. Přesvědčte se, zda má složka webové aplikace správná oprávnění a zda je konfigurace fondu aplikací správná (heslo bylo pravděpodobně změněno). Podívejte [se na téma ověření konfigurace služby IIS](#vxtbshttpservererrorsthingstocheck). Pokud jsou tato nastavení již správná a probíhá ladění místně, ověřte také, že se připojujete ke správnému typu serveru a adrese URL (v části **vlastnosti > webové > servery** nebo **vlastnosti > ladění**v závislosti na typu projektu).
+- 403 Zakázáno. Tato chyba obsahuje mnoho možných příčin, proto si prohlédněte soubor protokolu a nastavení zabezpečení služby IIS pro web. Ujistěte se, že web.config serveru obsahuje `debug=true` v elementu compilation. Přesvědčte se, zda má složka webové aplikace správná oprávnění a zda je konfigurace fondu aplikací správná (heslo bylo pravděpodobně změněno). Podívejte [se na téma ověření konfigurace služby IIS](#vxtbshttpservererrorsthingstocheck). Pokud jsou tato nastavení již správná a probíhá ladění místně, ověřte také, že se připojujete ke správnému typu serveru a adrese URL (v části **vlastnosti > webové > servery** nebo **vlastnosti > ladění** v závislosti na typu projektu).
 - (503) Server není k dispozici. Fond aplikací byl pravděpodobně zastaven z důvodu chyby nebo změny konfigurace. Restartujte fond aplikací.
 - (404) Nenalezeno. Ujistěte se, že je fond aplikací nakonfigurovaný pro správnou verzi ASP.NET.
 
@@ -99,7 +99,7 @@ Pokud provádíte ladění lokálně, otevřete vlastnosti projektu v aplikaci V
 
 K této chybě může dojít při ladění místně, protože Visual Studio je 32 aplikace, takže používá 64 verzi vzdáleného ladicího programu k ladění 64 bitů aplikací. Zkontrolujte fond aplikací ve službě IIS a ujistěte se, že je **možnost povolit 32-bitové aplikace** nastavená na `true` , restartovat IIS a zkuste to znovu.
 
-Také Pokud používáte soubor hostitelů, ujistěte se, že je správně nakonfigurován. Například soubor hostitelů musí zahrnovat stejnou adresu URL projektu jako ve vlastnostech projektu, **vlastnosti > serverech webového >** nebo **vlastnosti > ladění**v závislosti na typu projektu.
+Také Pokud používáte soubor hostitelů, ujistěte se, že je správně nakonfigurován. Například soubor hostitelů musí zahrnovat stejnou adresu URL projektu jako ve vlastnostech projektu, **vlastnosti > serverech webového >** nebo **vlastnosti > ladění** v závislosti na typu projektu.
 
 ## <a name="see-help-for-common-configuration-errors-running-the-webpage-outside-of-the-debugger-may-provide-further-information"></a><a name="see_help"></a> Běžné chyby konfigurace najdete v nápovědě. Spuštění webové stránky mimo ladicí program může poskytovat další informace.
 
@@ -152,7 +152,7 @@ Pokud konfigurace služby IIS problém nezpůsobuje, zkuste provést následují
 
 - Pokud používáte soubor hostitelů s místními adresami, zkuste místo IP adresy počítače použít adresu zpětné smyčky.
 
-    Pokud nepoužíváte místní adresy, ujistěte se, že váš soubor hostitelů obsahuje stejnou adresu URL projektu jako ve vlastnostech projektu, **vlastnosti > serverech webového >** nebo **vlastnosti > ladění**v závislosti na typu projektu.
+    Pokud nepoužíváte místní adresy, ujistěte se, že váš soubor hostitelů obsahuje stejnou adresu URL projektu jako ve vlastnostech projektu, **vlastnosti > serverech webového >** nebo **vlastnosti > ladění** v závislosti na typu projektu.
 
 ## <a name="more-troubleshooting-steps"></a>Další kroky pro řešení potíží
 

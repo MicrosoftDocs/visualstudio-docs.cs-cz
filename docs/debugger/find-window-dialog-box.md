@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: ee733077-d17a-4439-8a49-bc2f5dbc60d0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 571cee3b1e3a391a8dc328fcc76a0ca0d06ed14f
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: 58812616e36a52668af908ec1af287579a1ca83f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96863020"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870737"
 ---
 # <a name="find-window-dialog-box"></a>Dialogové okno vyhledávacího okna
 Pomocí tohoto dialogového okna můžete vybrat okno a zobrazit jeho vlastnosti nebo zprávy. Chcete-li zobrazit toto dialogové okno, vyberte z nabídky **Spy** možnost **Najít okno** .

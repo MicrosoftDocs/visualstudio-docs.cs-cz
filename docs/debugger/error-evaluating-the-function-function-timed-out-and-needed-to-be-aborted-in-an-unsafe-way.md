@@ -6,15 +6,15 @@ f1_keywords:
 - vs.debug.error.unsafe_func_eval_abort
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 256b7858ed5714d716b31fa28c8cd463b96dbb8a
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 1f6cae3ffb692161deb0b162a6432efe90f12bf3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852742"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871647"
 ---
 # <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Chyba: vyhodnocování funkce &#39;funkce&#39; vypršel časový limit a bylo nutné je přerušit nebezpečným způsobem.
 
@@ -44,8 +44,8 @@ Chybová zpráva vám sdělí název funkce, kterou se ladicí program pokusil z
 
 ### <a name="solution-3-disable-all-implicit-evaluation"></a>Řešení #3: Zakázat všechna implicitní vyhodnocení
 
-Pokud předchozí řešení problém nevyřeší, pokračujte na **Tools**  >  **Možnosti**nástroje a zrušte zaškrtněte nastavení **ladění**  >  **Obecné**  >  **Povolit vyhodnocení vlastností a další implicitní volání funkcí**. Tato akce zakáže většinu implicitních vyhodnocení funkcí a tento problém by měl vyřešit.
+Pokud předchozí řešení problém nevyřeší, pokračujte na   >  **Možnosti** nástroje a zrušte zaškrtněte nastavení **ladění**  >  **Obecné**  >  **Povolit vyhodnocení vlastností a další implicitní volání funkcí**. Tato akce zakáže většinu implicitních vyhodnocení funkcí a tento problém by měl vyřešit.
 
 ### <a name="solution-4-enable-managed-compatibility-mode"></a>#4 řešení: Povolit spravovaný režim kompatibility
 
-Pokud přepnete na starší verzi ladicího modulu, možná budete moct tuto chybu eliminovat. V **nabídce nástroje**  >  klikněte na**Možnosti**a vyberte nastavení **ladění**  >  **Obecné**  >  **použití spravovaného režimu kompatibility**. Další informace najdete v tématu [Obecné možnosti ladění](../debugger/general-debugging-options-dialog-box.md).
+Pokud přepnete na starší verzi ladicího modulu, možná budete moct tuto chybu eliminovat. V **nabídce nástroje**  >  klikněte na **Možnosti** a vyberte nastavení **ladění**  >  **Obecné**  >  **použití spravovaného režimu kompatibility**. Další informace najdete v tématu [Obecné možnosti ladění](../debugger/general-debugging-options-dialog-box.md).

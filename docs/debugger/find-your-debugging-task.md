@@ -1,5 +1,5 @@
 ---
-title: Nejčastější dotazy – Vyhledání funkce ladění
+title: Nejčastější dotazy – vyhledání funkce ladění
 description: Nejčastější dotazy, které vám pomůžou identifikovat funkci ladicího programu, která vám pomůže s laděním aplikace
 ms.custom: ''
 ms.date: 10/01/2019
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - debugging [Visual Studio], find your feature
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a34aa926fca081a498173cd5fcc439a6b3886ba7
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 3c215b232c64b97c57285618056ee4675587b48e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728028"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870711"
 ---
 # <a name="faq---find-the-debugging-feature-you-need-in-visual-studio"></a>Nejčastější dotazy – v aplikaci Visual Studio najdete funkci ladění, kterou potřebujete.
 

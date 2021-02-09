@@ -9,15 +9,15 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 90cd775f18dd505d2f734a8d337daadfd9f0dd7b
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 6903cba8d048d5ed2969d5aa7436fc6eca17561e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851499"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870804"
 ---
 # <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>Chyba: nemáte oprávnění kontrolovat identitu procesu&#39;s.
 Nemáte oprávnění kontrolovat identitu procesu. Příčinou může být konfigurace vašeho systému.
@@ -34,7 +34,7 @@ Nemáte oprávnění kontrolovat identitu procesu. Příčinou může být konfi
 
 4. V okně Správa počítače rozbalte uzel **služby a aplikace** .
 
-5. V části **služby a aplikace**klikněte na možnost **služby**.
+5. V části **služby a aplikace** klikněte na možnost **služby**.
 
      V pravém podokně se zobrazí seznam služeb.
 
@@ -58,9 +58,9 @@ Nemáte oprávnění kontrolovat identitu procesu. Příčinou může být konfi
 
 3. Klikněte na **vzdálené**.
 
-4. V části **Vzdálená plocha**vyberte možnost **dovolit uživatelům vzdálené připojení k tomuto počítači**.
+4. V části **Vzdálená plocha** vyberte možnost **dovolit uživatelům vzdálené připojení k tomuto počítači**.
 
 5. Klikněte na **OK**.
 
 ## <a name="see-also"></a>Viz také
-- [Chyby a řešení potíží se vzdáleným laděním](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Chyby vzdáleného ladění a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)
