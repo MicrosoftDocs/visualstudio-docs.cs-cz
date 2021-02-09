@@ -9,15 +9,15 @@ f1_keywords:
 - Blend.Start.Dev12
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: affef27dae9fe569c0cacbbd3725b9bf76edb94c
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 9fdc3fc2241807cd1b36ec64d620c7b46a498918
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796339"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889262"
 ---
 # <a name="blend-for-visual-studio-overview"></a>Přehled Blend pro Visual Studio
 
@@ -64,7 +64,7 @@ Přejděte do okna assets (prostředky) a zobrazte naposledy použitý prostřed
 
 ## <a name="assets-window"></a>Okno prostředků
 
-Okno **assets (prostředky** ) obsahuje všechny dostupné ovládací prvky a je podobné jako **Sada nástrojů v sadě** Visual Studio. Kromě ovládacích prvků najdete vše, co můžete přidat na návrhovou plochu v okně **assety** , včetně stylů, médií, chování a efektů. Chcete-li otevřít okno **assety** , zvolte možnost **Zobrazit**  >  **okno assety** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X** .
+Okno **assets (prostředky** ) obsahuje všechny dostupné ovládací prvky a je podobné jako **Sada nástrojů v sadě** Visual Studio. Kromě ovládacích prvků najdete vše, co můžete přidat na návrhovou plochu v okně **assety** , včetně stylů, médií, chování a efektů. Chcete-li otevřít okno **assety** , zvolte možnost **Zobrazit**  >  **okno assety** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
 
 ![Okno prostředků v Blend pro Visual Studio](media/blend-assets-window.png)
 
@@ -73,7 +73,7 @@ Okno **assets (prostředky** ) obsahuje všechny dostupné ovládací prvky a je
 
 ## <a name="objects-and-timeline-window"></a>Objekty a časová osa okno
 
-Toto okno slouží k uspořádání objektů na návrhové ploše a v případě, že je chcete animovat. Chcete-li otevřít okno **objekty a časová osa** , vyberte možnost **Zobrazit**  >  **osnovu dokumentu** . Kromě funkcí, které jsou k dispozici v [okně Osnova dokumentu](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window) v aplikaci Visual Studio, má okno Objekty a časová osa v Blend pro Visual Studio oblast kompozice časové osy na pravé straně. Použijte časovou osu při vytváření a úpravách animací.
+Toto okno slouží k uspořádání objektů na návrhové ploše a v případě, že je chcete animovat. Chcete-li otevřít okno **objekty a časová osa** , vyberte možnost **Zobrazit**  >  **osnovu dokumentu**. Kromě funkcí, které jsou k dispozici v [okně Osnova dokumentu](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window) v aplikaci Visual Studio, má okno Objekty a časová osa v Blend pro Visual Studio oblast kompozice časové osy na pravé straně. Použijte časovou osu při vytváření a úpravách animací.
 
 ![Okno objekt a časová osa v režimu animace](media/storyboard-timeline.png)
 

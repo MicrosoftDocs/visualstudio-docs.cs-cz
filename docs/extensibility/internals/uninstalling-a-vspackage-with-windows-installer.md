@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: c4575ac7-82da-4af8-a375-ea756a101fbf
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f78f27a3b2b2607f04a61352b543774f8b59e88c
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: 89a3ed681f51b392e076cff0fcb06b2f868c0aa5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97488151"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888989"
 ---
 # <a name="uninstalling-a-vspackage-with-windows-installer"></a>Odinstalace balíčku VSPackage pomocí Instalační služby systému Windows
 Ve většině případů Instalační služba systému Windows může odinstalovat VSPackage pouhým "zrušením", co bylo nutné k instalaci sady VSPackage. Vlastní akce popsané v [příkazech, které musí být spuštěny po instalaci,](../../extensibility/internals/commands-that-must-be-run-after-installation.md) musí být spuštěny i po odinstalaci. Vzhledem k tomu, že volání devenv.exe nastávají těsně před standardní akcí volán InstallFinalize pro instalaci i odinstalaci, poskytují položky tabulky CustomAction a InstallExecuteSequence v obou případech.

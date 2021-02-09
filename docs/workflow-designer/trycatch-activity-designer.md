@@ -10,15 +10,15 @@ f1_keywords:
 ms.assetid: 02a326c2-4009-442f-b7cb-e42121fd2992
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f1396a60cda1e4e1ad372a73b9c2130d450d746
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 23d9f1b0037600c6612a413cce7b089f6adbc7aa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433567"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889301"
 ---
 # <a name="trycatch-activity-designer"></a>Návrhář aktivity TryCatch
 
@@ -33,7 +33,7 @@ Přístup k Návrháři aktivity **TryCatch** v kategorii **zpracování chyb** 
 
 Návrhář aktivity **TryCatch** lze přetáhnout ze **sady nástrojů** a přetáhnout na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity, například dovnitř <xref:System.Activities.Statements.Sequence> . Tím se vytvoří <xref:System.Activities.Statements.TryCatch> aktivita s výchozím nastavením <xref:System.Activities.Activity.DisplayName%2A> TryCatch. <xref:System.Activities.Activity.DisplayName%2A>Hodnotu lze upravit v záhlaví návrháře aktivity **TryCatch** nebo v poli **DisplayName** v mřížce vlastností. Ostatní vlastnosti musí být upraveny na povrchu návrháře aktivity **TryCatch** .
 
-Kliknutím na tlačítko Rozbalit v pravém horním rohu návrháře **TryCatch** se v rozbaleném zobrazení zobrazí pole **Try** , **catch** a **finally** . Pokud chcete přidat catch, klikněte na tlačítko **Přidat nové catch** v **TryCatch** designeru. Tlačítko se změní na pole se seznamem typu. Vyberte typ výjimky a stisknutím klávesy ENTER přidejte catch. Po přidání **catch** se oblast catch rozbalí a aktivita může být vyřazena do catch pro definování logiky spuštění pro catch. Všimněte si, že na pravé straně rozbalené oblasti catch je textové pole. Proměnnou výjimky můžete pojmenovat pomocí tohoto textového pole. Proměnnou výjimky lze použít pouze pro aktivity v rámci stejného **catch**.
+Kliknutím na tlačítko Rozbalit v pravém horním rohu návrháře **TryCatch** se v rozbaleném zobrazení zobrazí pole **Try**, **catch** a **finally** . Pokud chcete přidat catch, klikněte na tlačítko **Přidat nové catch** v **TryCatch** designeru. Tlačítko se změní na pole se seznamem typu. Vyberte typ výjimky a stisknutím klávesy ENTER přidejte catch. Po přidání **catch** se oblast catch rozbalí a aktivita může být vyřazena do catch pro definování logiky spuštění pro catch. Všimněte si, že na pravé straně rozbalené oblasti catch je textové pole. Proměnnou výjimky můžete pojmenovat pomocí tohoto textového pole. Proměnnou výjimky lze použít pouze pro aktivity v rámci stejného **catch**.
 
 Návrhář **TryCatch** nepodporuje úpravy **catch**. Pokud chcete změnit typ výjimky, je nutné odstranit **catch** a přidat nový. **Catch** se dá odstranit tak, že ho vyberete a odstraníte, nebo výběrem možnosti **Odstranit** v kontextové nabídce, ke které se přistupovalo kliknutím pravým tlačítkem.
 
@@ -43,10 +43,10 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.TryCatc
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje nepovinný popisný název <xref:System.Activities.Statements.TryCatch> aktivity. Výchozí hodnota je TryCatch.|
-|<xref:System.Activities.Statements.TryCatch.Try%2A>|Nepravda|Aktivita se poprvé spustila, když se <xref:System.Activities.Statements.TryCatch> spustí.|
-|<xref:System.Activities.Statements.TryCatch.Catches%2A>|Nepravda|Kolekce elementů **catch** , které mají být zkontrolovány, pokud <xref:System.Activities.Statements.TryCatch.Try%2A> Aktivita vyvolá výjimku.<br /><br /> V bloku potřebujete alespoň přidat jednu aktivitu <xref:System.Activities.Statements.TryCatch.Catches%2A> nebo aktivitu <xref:System.Activities.Statements.TryCatch.Finally%2A> .|
-|<xref:System.Activities.Statements.TryCatch.Finally%2A>|Nepravda|Aktivita, která má být provedena v případě, že jsou <xref:System.Activities.Statements.TryCatch.Try%2A> dokončeny všechny potřebné aktivity v <xref:System.Activities.Statements.TryCatch.Catches%2A> kolekci.<br /><br /> V bloku potřebujete alespoň přidat jednu aktivitu <xref:System.Activities.Statements.TryCatch.Catches%2A> nebo aktivitu <xref:System.Activities.Statements.TryCatch.Finally%2A> .|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje nepovinný popisný název <xref:System.Activities.Statements.TryCatch> aktivity. Výchozí hodnota je TryCatch.|
+|<xref:System.Activities.Statements.TryCatch.Try%2A>|Ne|Aktivita se poprvé spustila, když se <xref:System.Activities.Statements.TryCatch> spustí.|
+|<xref:System.Activities.Statements.TryCatch.Catches%2A>|Ne|Kolekce elementů **catch** , které mají být zkontrolovány, pokud <xref:System.Activities.Statements.TryCatch.Try%2A> Aktivita vyvolá výjimku.<br /><br /> V bloku potřebujete alespoň přidat jednu aktivitu <xref:System.Activities.Statements.TryCatch.Catches%2A> nebo aktivitu <xref:System.Activities.Statements.TryCatch.Finally%2A> .|
+|<xref:System.Activities.Statements.TryCatch.Finally%2A>|Ne|Aktivita, která má být provedena v případě, že jsou <xref:System.Activities.Statements.TryCatch.Try%2A> dokončeny všechny potřebné aktivity v <xref:System.Activities.Statements.TryCatch.Catches%2A> kolekci.<br /><br /> V bloku potřebujete alespoň přidat jednu aktivitu <xref:System.Activities.Statements.TryCatch.Catches%2A> nebo aktivitu <xref:System.Activities.Statements.TryCatch.Finally%2A> .|
 
 ## <a name="see-also"></a>Viz také
 

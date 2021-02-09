@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Excel [Office development in Visual Studio], opening workbooks
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f7de4072df177bd9a7c6ae23bf59e44e50d56e32
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 5bca39b5536d5717da994808f23ee541856264ba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97523892"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888729"
 ---
 # <a name="how-to-programmatically-open-workbooks"></a>Postupy: otevírání sešitů prostřednictvím kódu programu
   Tato <xref:Microsoft.Office.Interop.Excel.Workbooks> kolekce v aplikaci systém Microsoft Office Excel umožňuje pracovat se všemi otevřenými sešity a otevírat sešity.

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - e-mail [Office development in Visual Studio], custom actions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 22dbd3ae72ac8c269de603ce22bbfebef669be08
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: d0909b94f00b344383c2b042ec1e143f9294ee8d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97523876"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888703"
 ---
 # <a name="how-to-programmatically-perform-actions-when-an-email-message-is-received"></a>Postupy: provádění akcí po přijetí e-mailové zprávy prostřednictvím kódu programu
   Tento příklad provádí vlastní akce, když uživatel obdrží e-mailovou zprávu.

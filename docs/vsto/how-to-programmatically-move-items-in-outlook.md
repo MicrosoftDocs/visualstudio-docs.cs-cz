@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Outlook folders [Office development in Visual Studio], moving items
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7b247df68827767a53d8d066f4750dfa9da52ac7
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 770f056dc681e1ee2cd6704f9bd1d42afae4957b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525571"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888859"
 ---
 # <a name="how-to-programmatically-move-items-in-outlook"></a>Postupy: přesouvání položek v aplikaci Outlook prostřednictvím kódu programu
   Tento příklad přesune nepřečtené e-mailové zprávy z **doručené pošty** do složky s názvem **test**. V příkladu se do pole přesune pouze zprávy, které mají slovo **test** `Subject` .

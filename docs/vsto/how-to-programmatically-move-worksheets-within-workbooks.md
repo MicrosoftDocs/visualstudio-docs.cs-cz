@@ -13,15 +13,15 @@ helpviewer_keywords:
 - workbooks, moving worksheets in
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 165ac8f440b33d68dc70530731a5528ae23726b0
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 427f3f47e141d9c3ae17bab4b253389c68d4dc1a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525577"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888781"
 ---
 # <a name="how-to-programmatically-move-worksheets-within-workbooks"></a>Postupy: přesouvání listů v sešitech prostřednictvím kódu programu
   Můžete programově měnit pozici listů relativně k ostatním listům v sešitu. Pokud nezadáte umístění pro přesunutý list, aplikace Excel vytvoří nový sešit, který bude obsahovat.

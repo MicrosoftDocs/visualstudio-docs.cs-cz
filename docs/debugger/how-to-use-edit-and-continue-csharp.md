@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 40e136d8-a08c-43bd-b313-fb821c55eb3c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0f8126689c0874c984a679da9b6debcb66a3075
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: ed538c49aeb1257b165d7cfecab0352dd0deb488
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150649"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889171"
 ---
 # <a name="how-to-use-edit-and-continue-c"></a>Postupy: Použití operace Upravit a pokračovat (C#)
 Pomocí příkaz Upravit a pokračovat můžete provést a použít změny kódu v režimu pozastavení během ladění, aniž by bylo nutné zastavit a znovu spustit ladicí relaci.
