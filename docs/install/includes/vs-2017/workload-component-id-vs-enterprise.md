@@ -5,17 +5,17 @@ description: Použití zatížení a ID komponent k instalaci sady Visual Studio
 keywords: ''
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.date: 2/12/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 6006689e67e41c774030ccf646658ca31a1e214f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d250a1b00c65c24d38a47f7a9a2791f9ef7a2e82
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76159497"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881832"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-enterprise-2017"></a>Základní editor sady Visual Studio (zahrnutý v Visual Studio Enterprise 2017)
 
@@ -500,10 +500,10 @@ Komponenta. Android. NDK. R15C | Android NDK (R15C) | 15.2.1 | Doporučeno
 Component. ANT | Apache Ant (1.9.3) | 1.9.3.8 | Doporučeno
 Component. MDD. Android | Vývojové nástroje C++ pro Android | 15.0.26606.0 | Doporučeno
 Komponenta. Android. NDK. R12B | Android NDK (R12B) | 12.1.10 | Volitelné
-Komponenta. Android. NDK. R12B_3264 | Android NDK (R12B) (32 bitů) | 12.1.11 | Volitelné
+Component.Android.NDK.R12B_3264 | Android NDK (R12B) (32 bitů) | 12.1.11 | Volitelné
 Komponenta. Android. NDK. R13B | Android NDK (R13B) | 13.1.7 | Volitelné
-Komponenta. Android. NDK. R13B_3264 | Android NDK (R13B) (32 bitů) | 13.1.8 | Volitelné
-Komponenta. Android. NDK. R15C_3264 | Android NDK (R15C) (32 bitů) | 15.2.1 | Volitelné
+Component.Android.NDK.R13B_3264 | Android NDK (R13B) (32 bitů) | 13.1.8 | Volitelné
+Component.Android.NDK.R15C_3264 | Android NDK (R15C) (32 bitů) | 15.2.1 | Volitelné
 Component. Google. Android. emulátor. API23. Private | Google Android Emulator (úroveň rozhraní API 23) (místní instalace) | 15.6.27413.0 | Volitelné
 Component. modul HAXM. Private | Intel Hardware Accelerated Execution Manager (modul HAXM) (místní instalace) | 15.9.28307.421 | Volitelné
 Component. IncrediBuild | IncrediBuild – zrychlení sestavení | 15.7.27617.1 | Volitelné
@@ -1066,7 +1066,7 @@ ID součásti | Název | Verze
 --- | --- | ---
 Component. Android. emulátor | Emulátor sady Visual Studio pro Android | 15.6.27413.0
 Komponenta. Android. NDK. R11C | Android NDK (R11C) | 11.3.14
-Komponenta. Android. NDK. R11C_3264 | Android NDK (R11C) (32 bitů) | 11.3.16
+Component.Android.NDK.R11C_3264 | Android NDK (R11C) (32 bitů) | 11.3.16
 Komponenta. Android. SDK23 | Instalace Android SDK (úroveň rozhraní API 23) (globální instalace) | 15.9.28107.0
 Komponenta. Android. SDK25 | Instalace Android SDK (úroveň rozhraní API 25) | 15.9.28107.0
 Komponenta. GitHub. VisualStudio | Rozšíření GitHub pro Visual Studio | 2.5.2.2500

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e61d5787-fe1f-4ebf-b0cf-0d7909be7ffb
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 65c63d52290962d8c9878edf025bbc05487103da
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 0f53ca683e40be8e3cc428d013d2b8d3c8c5773e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383050"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881227"
 ---
 # <a name="ltcommandsgt-element-bootstrapper"></a>&lt;Commands – &gt; element (zaváděcí nástroj)
 `Commands`Element implementuje testy popsané prvky pod `InstallChecks` prvkem a deklaruje, který balíček [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] by měl zaváděcí nástroj nainstalovat, pokud se test nezdařil.

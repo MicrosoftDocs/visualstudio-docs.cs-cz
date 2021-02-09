@@ -10,15 +10,15 @@ helpviewer_keywords:
 - build environment, MSBuild
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c8fa7756763a668f6e97d90d8a405c660519189
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 3ae0e5f2516dd1f78aea880289f549ca3a44f3bb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136950"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881955"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>Návod: Vytvoření prostředí pro sestavení s použitím více počítačů
 
@@ -44,7 +44,7 @@ Prostředí s více počítači se nedá použít k sestavování těchto typů 
 - Aplikace pro UWP Chcete-li vytvářet aplikace UWP, je nutné nainstalovat aplikaci Visual Studio do počítače sestavení.
 - Aplikace klasické pracovní plochy, které cílí na .NET Framework 4 nebo starší. Chcete-li vytvořit tyto typy aplikací, je nutné nainstalovat aplikaci Visual Studio nebo referenční sestavení a nástroje .NET (ze sady Windows 7,1 SDK) na počítač sestavení.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Visual Studio s nainstalovanou úlohou **vývoj desktopových aplikací .NET**
 
@@ -327,7 +327,7 @@ Můžete vytvořit sestavovací prostředí, které lze nasadit do různých po�
 > [!NOTE]
 > Je nutné zakázat přírůstkové sestavování, aby *tracker.exe* při sestavování nevyvolaly chybu. Chcete-li zakázat přírůstkové sestavování, nastavte tento parametr sestavení:
 >
-> **msbuild** *řešení MSBuild. sln* **/p: TrackFileAccess = false**
+>  *řešení MSBuild. sln* **/p: TrackFileAccess = false**
 
 1. Vytvořte adresář *skladu* v hostitelském počítači.
 

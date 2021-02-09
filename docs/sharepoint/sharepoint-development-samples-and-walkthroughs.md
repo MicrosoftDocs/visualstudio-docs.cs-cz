@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, walkthroughs
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0a5703958db5d981391c11ae0baceaf83231d3c7
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 7e32bc03728916d7990938e36faa8bb7533357bf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440633"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881526"
 ---
 # <a name="sharepoint-development-samples-and-walkthroughs"></a>Ukázky a návody vývoje pro SharePoint
   Tato část obsahuje ukázkové aplikace, ukázkový kód a podrobné návody, které ilustrují syntaxi, strukturu a techniky, které slouží k sestavování řešení SharePoint.
@@ -29,7 +29,7 @@ ms.locfileid: "95440633"
 
 ## <a name="in-this-section"></a>V této části
 
-|Téma|Popis|
+|Téma|Description|
 |-----------|-----------------|
 |[Ukázky vývoje pro SharePoint](../sharepoint/sharepoint-development-samples.md)|Popisuje ukázkové aplikace, které ukazují, jak používat vývojové nástroje pro SharePoint v aplikaci Visual Studio.|
 |[Návody pro vývoj pro SharePoint](../sharepoint/sharepoint-development-walkthroughs.md)|Obsahuje podrobné návody, které poskytují Úvod k vývojářským nástrojům služby SharePoint v aplikaci Visual Studio.|

@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 52246c1e-a371-40a0-b756-a435cc51876f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 44f7df253951d90a29c459bf28e6ff1c2279ee54
-ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
+ms.openlocfilehash: 2ec174a03e62cb8cb033be0b92db679fb19f0180
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98533365"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881253"
 ---
 # <a name="security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process"></a>Upozornění zabezpečení: Připojení k procesu, jehož vlastníkem je nedůvěryhodný uživatel, může být nebezpečné. Pokud následující údaje vypadají podezřele nebo si nejste jistí, k tomuto procesu se nepřipojujte.
 
@@ -54,6 +54,6 @@ Pro potlačení tohoto upozornění při ladění legitimního scénáře:
 
  Nepřipojeno k procesu nepřipojujte
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)

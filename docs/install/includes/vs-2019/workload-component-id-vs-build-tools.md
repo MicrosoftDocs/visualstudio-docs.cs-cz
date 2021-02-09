@@ -5,17 +5,17 @@ description: Použití úloh sady Visual Studio a ID komponent k vytváření kl
 keywords: ''
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.date: 11/10/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 8b99b3e92ace96fcf87f7fb5a4e575cb0ca15ee5
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: fcf85223bbec03594fc64e221b23b5f99c704abf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437410"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881924"
 ---
 ## <a name="azure-development-build-tools"></a>Nástroje pro sestavení pro vývoj pro Azure
 
@@ -25,7 +25,7 @@ ms.locfileid: "94437410"
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.8.30509.167 | Vyžadováno
 Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Vyžadováno
@@ -70,7 +70,7 @@ Microsoft. NetCore. Component. SDK | .NET SDK | 16.8.30703.189 | Volitelné
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft.Net. Component. 4.5.1. TargetingPack | Sada .NET Framework 4.5.1 targeting pack | 16.0.28517.75 | Doporučeno
 Microsoft.Net. Component. 4.5.2. TargetingPack | Sada .NET Framework 4.5.2 targeting pack | 16.0.28517.75 | Doporučeno
@@ -90,7 +90,7 @@ Microsoft. VisualStudio. Component. SQL. SSDTBuildSku | Nástroje pro SQL Server
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
 Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Vyžadováno
@@ -130,7 +130,7 @@ Microsoft. VisualStudio. Component. FSharp. MSBuild | kompilátor jazyka F# | 16
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
 Microsoft. VisualStudio. Component. CoreBuildTools | Visual Studio Build Tools jádro | 16.8.30509.167 | Vyžadováno
@@ -144,7 +144,7 @@ Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual 
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. NetCore. BuildTools. Component | Nástroje pro sestavení .NET Core | 16.3.29102.218 | Vyžadováno
 Microsoft. NetCore. Component. Runtime. 3.1 | Runtime .NET Core 3,1 (LTS) | 16.8.30703.189 | Vyžadováno
@@ -161,7 +161,7 @@ Microsoft. NET. Core. Component. SDK. 2.1 | Runtime .NET Core 2,1 (LTS) | 16.8.3
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. Node. Build | Node.js podporu nástroje MSBuild | 16.0.28517.75 | Vyžadováno
 Microsoft. VisualStudio. Component. TypeScript. 4.0 | Sada TypeScript 4,0 SDK | 16.0.30509.167 | Vyžadováno
@@ -174,7 +174,7 @@ Microsoft. VisualStudio. Component. TypeScript. 4.0 | Sada TypeScript 4,0 SDK | 
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. ClickOnce. MSBuild | Nástroje pro vytváření ClickOnce | 16.0.28625.61 | Vyžadováno
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
@@ -212,7 +212,7 @@ Microsoft.Net. Component.. 4,8. DeveloperTools | Vývojové nástroje .NET Frame
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
 Microsoft. Component. NetFX. Native | .NET Native | 16.5.29515.121 | Vyžadováno
@@ -247,7 +247,7 @@ Microsoft. VisualStudio. Component. UWP. VC. v141. BuildTools | Univerzální pl
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
 Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Vyžadováno
@@ -286,7 +286,7 @@ Microsoft. VisualStudio. Component. NativeDesktop. LLVM. Clang | C++ Clang Tools
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
 Microsoft.Net. Component. 4.6. TargetingPack | Sada targeting pack .NET Framework 4,6 | 16.0.28517.75 | Vyžadováno
@@ -311,7 +311,7 @@ Microsoft. VisualStudio. Component. VC. Tools. x86. x64 | MSVC V142-VS 2019 C++ 
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.8.30509.167 | Vyžadováno
 Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Vyžadováno
@@ -355,7 +355,7 @@ Microsoft.Net. Component.. 4,8. DeveloperTools | Vývojové nástroje .NET Frame
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
 Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Vyžadováno
@@ -369,7 +369,7 @@ Component. OpenJDK | OpenJDK (distribuce Microsoft) | 16.1.28811.260 | Voliteln�
 
 Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé komponenty.
 
-ID součásti | Name (Název) | Verze
+ID součásti | Název | Verze
 --- | --- | ---
 Microsoft. NET. Core. Component. SDK. 2.2 | .NET Core 2,2 runtime (mimo podporu) | 16.8.30509.167
 Microsoft. NET. Core. Component. SDK. 3.0 | .NET Core 3,0 Runtime (mimo podporu) | 16.8.30703.189

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], Finder method
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b7e2bb74278194878ed4496c12c918707cdc1e6e
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: e4eade25f53bfd58f920a8d2a046d7d09ee98ac8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915086"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879680"
 ---
 # <a name="how-to-add-a-finder-method"></a>Postupy: Přidání vyhledávací metody
   Chcete-li povolit službě BDC (Business Data Connectivity) zobrazit seznam entit ve webové části nebo seznamu, je nutné vytvořit *vyhledávací* metodu. Vyhledávací metoda je speciální metoda, která vrací kolekci instancí entit. Další informace najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).

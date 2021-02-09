@@ -4,17 +4,17 @@ titleSuffix: ''
 description: Použití úloh sady Visual Studio a ID komponent k vytváření klasických aplikací založených na Windows
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.date: 2/12/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 2f2092143a79dae17c5c0138e51c10fc5d164cbd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d38a5dac5ae23b048e9faf4142cec630b77f9be
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76159407"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881923"
 ---
 ## <a name="azure-development-build-tools"></a>Nástroje pro sestavení pro vývoj pro Azure
 

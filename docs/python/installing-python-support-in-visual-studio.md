@@ -5,17 +5,17 @@ ms.date: 03/13/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 910b3b5491660cbcd6132aff68ebeabafaeea0d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e0c1cf29c7579978d5992de46b14c01fee0799c5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85540644"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881643"
 ---
 # <a name="how-to-install-python-support-in-visual-studio-on-windows"></a>Jak nainstalovat podporu Pythonu v aplikaci Visual Studio ve Windows
 
@@ -103,7 +103,7 @@ Pokud narazíte na problémy s instalací nebo spuštěním Pythonu v aplikaci V
 - Použijte možnost [**opravit**](../install/repair-visual-studio.md) v instalačním programu sady Visual Studio.
 - Opravte nebo přeinstalujte Python prostřednictvím **Nastavení**  >  **aplikace & funkce** v systému Windows.
 
-**Příklad chyby**: Nepodařilo se spustit interaktivní proces: System. ComponentModel. Win32Exception (0x80004005): Neznámá chyba (0xc0000135) v Microsoft. PythonTools. REPL. PythonInteractiveEvaluator. D__43. MoveNext ().
+**Příklad chyby**: Nepodařilo se spustit interaktivní proces: System. ComponentModel. Win32Exception (0x80004005): Neznámá chyba (0xc0000135) v Microsoft.PythonTools.REPL.PythonInteractiveEvaluator.d__43. MoveNext ().
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 
@@ -121,7 +121,7 @@ Pokud narazíte na problémy s instalací nebo spuštěním Pythonu v aplikaci V
 
 1. Nainstalujte odpovídající verzi Python Tools for Visual Studio pro vaši verzi sady Visual Studio:
 
-    - Visual Studio 2013: [PTVS 2.2.2 pro Visual Studio 2013](https://github.com/Microsoft/PTVS/releases/v2.2.2). **File**  >  Dialogové okno**Nový projekt** v Visual Studio 2013 poskytuje zástupce pro tento proces.
+    - Visual Studio 2013: [PTVS 2.2.2 pro Visual Studio 2013](https://github.com/Microsoft/PTVS/releases/v2.2.2).   >  Dialogové okno **Nový projekt** v Visual Studio 2013 poskytuje zástupce pro tento proces.
     - Visual Studio 2010 a 2012: [PTVS 2.1.1 pro Visual Studio 2010 a 2012](https://github.com/Microsoft/PTVS/releases/v2.1.1)
 
 1. [Nainstalujte interpret Python podle svého výběru](installing-python-interpreters.md). Pokud již je překladač nainstalován a aplikace Visual Studio jej nerozpozná automaticky, přečtěte si téma [Ruční identifikace stávajícího prostředí](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment).
@@ -136,10 +136,10 @@ Pro Visual Studio 2015 a starší jsou instalační cesty následující:
 
 - 32-bit:
   - Cesta: *% Program Files (x86)% \ Microsoft Visual Studio \<VS_ver> \Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio \\<PTVS_ver>*
-  - Umístění registru cesty: **HKEY_LOCAL_MACHINE \software\microsoft\pythontools \\<VS_ver> \installdir**
+  - Umístění registru cesty: **HKEY_LOCAL_MACHINE\Software\Microsoft\PythonTools\\<VS_ver> \installdir**
 - 64-bit:
   - Cesta: *% Program Files%\Microsoft Visual Studio \<VS_ver> \Common7\IDE\Extensions\Microsoft\Python Tools for visual studio \\<PTVS_ver>*
-  - Umístění registru cesty: **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\pythontools \\<VS_ver> \installdir**
+  - Umístění registru cesty: **HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\PythonTools\\<VS_ver> \installdir**
 
 kde:
 

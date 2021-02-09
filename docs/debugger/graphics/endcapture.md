@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 06084c3b-e065-49b6-968e-d578762fb871
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bbdc8f2dc4fa3ad25be8674b9a46bf02179aa1d
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 3f7733eb9bed86bc450e4438ce34054312b13db5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727828"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99880278"
 ---
 # <a name="endcapture"></a>EndCapture
 Ukončí interval zachycení, který byl spuštěn s `BeginCapture` .

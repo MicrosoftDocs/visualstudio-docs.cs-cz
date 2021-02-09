@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: 4e3ccf1b-cd68-4db6-9470-710c911b47fc
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 28b0e7920aca2ae8b789a37fad25509dbb8b4d7a
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 9ed6833bd60854cf2e3bcfbab76d57c7010f7863
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305485"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882131"
 ---
 # <a name="options-dialog-box-environment--documents"></a>Dialogové okno Možnosti: \> dokumenty prostředí
 
-Pomocí této stránky dialogového okna **Možnosti** můžete řídit zobrazení dokumentů v integrovaném vývojovém prostředí (IDE) a spravovat externí změny dokumentů a souborů. K tomuto dialogovému oknu se dostanete tak, že v nabídce **nástroje** kliknete na **Možnosti** a pak vyberete **Environment**  >  **dokumenty** prostředí.
+Pomocí této stránky dialogového okna **Možnosti** můžete řídit zobrazení dokumentů v integrovaném vývojovém prostředí (IDE) a spravovat externí změny dokumentů a souborů. K tomuto dialogovému oknu se dostanete tak, že v nabídce **nástroje** kliknete na **Možnosti** a pak vyberete   >  **dokumenty** prostředí.
 
 **Rozpoznat, kdy se soubor změnil mimo prostředí**
 

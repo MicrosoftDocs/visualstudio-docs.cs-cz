@@ -5,17 +5,17 @@ description: Použití zatížení a ID komponent k instalaci sady Visual Studio
 keywords: ''
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.date: 11/10/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 1612245ed8c0f8d49beefc2012a50bd7c414cba7
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: efda248f78cb606c57175b3c164960f2a78fa8c7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94482758"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881689"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-professional-2019"></a>Základní editor sady Visual Studio (zahrnutý v Visual Studio Professional 2019)
 
@@ -25,7 +25,7 @@ ms.locfileid: "94482758"
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. CoreEditor | Základní editor sady Visual Studio | 16.1.28811.260 | Vyžadováno
 Microsoft. VisualStudio. Component. StartPageExperiment. cpp | Úvodní stránka sady Visual Studio pro uživatele C++ | 16.0.28315.86 | Volitelné
@@ -38,7 +38,7 @@ Microsoft. VisualStudio. Component. StartPageExperiment. cpp | Úvodní stránka
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Vyžadováno
 Součást. Microsoft. VisualStudio. Web. AzureFunctions | Nástroje Azure WebJobs | 16.0.28714.129 | Vyžadováno
@@ -124,7 +124,7 @@ Microsoft. VisualStudio. Component. WCF. Tools | Windows Communication Foundatio
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Doporučeno
 Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Doporučeno
@@ -181,7 +181,7 @@ Microsoft. VisualStudio. Component. FSharp. Desktop | Podpora jazyka F # pro Des
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. PythonTools | Podpora jazyka Python | 16.5.29515.121 | Doporučeno
 Microsoft. Component. PythonTools. Minicondax64 | Python miniconda | 16.2.29003.222 | Doporučeno
@@ -212,7 +212,7 @@ Microsoft. VisualStudio. Component. Windows10SDK. 18362 | Windows 10 SDK (10.0.1
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
 Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.8.30509.167 | Vyžadováno
@@ -287,7 +287,7 @@ Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a we
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft.Net. Component. 3.5. DeveloperTools | Vývojové nástroje .NET Framework 3,5 | 16.0.28517.75 | Vyžadováno
 Microsoft.Net. Component. 4.7.1. TargetingPack | Sada targeting pack .NET Framework 4.7.1 | 16.8.30509.167 | Vyžadováno
@@ -306,7 +306,7 @@ Component. UnityEngine. x86 | Editor bitových procesorů Unity 5,6 32 | 16.1.28
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Component. MDD. Linux | C++ pro vývoj pro Linux | 16.5.29515.121 | Vyžadováno
 Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.3 | Vyžadováno
@@ -323,7 +323,7 @@ Component. MDD. Linux. RSZ. ARM | Nástroje pro vývoj integrovaných a IoT | 16
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
 Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.3 | Vyžadováno
@@ -371,7 +371,7 @@ Microsoft. VisualStudio. Component. NativeDesktop. LLVM. Clang | C++ Clang Tools
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.3 | Vyžadováno
 Microsoft. VisualStudio. Component. VC. CoreIde | Základní funkce C++ | 16.8.30509.167 | Vyžadováno
@@ -417,7 +417,7 @@ Microsoft. VisualStudio. Component. Windows10SDK. 17763 | Windows 10 SDK (10.0.1
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Component. Android. SDK25. Private | Instalace Android SDK (úroveň rozhraní API 25) (místní instalace pro vývoj pro mobilní zařízení pomocí C++) | 16.0.28625.61 | Vyžadováno
 Component. OpenJDK | OpenJDK (distribuce Microsoft) | 16.1.28811.260 | Vyžadováno
@@ -441,7 +441,7 @@ Component. MDD. IOS | Vývojové nástroje C++ pro iOS | 16.0.28517.75 | Volitel
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Vyžadováno
 Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Vyžadováno
@@ -508,7 +508,7 @@ Microsoft.VisualStudio.ComponentGroup.MSIX. balení | Nástroje pro vytváření
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Component. OpenJDK | OpenJDK (distribuce Microsoft) | 16.1.28811.260 | Vyžadováno
 Komponenta. Xamarin | Xamarin | 16.8.30509.167 | Vyžadováno
@@ -541,7 +541,7 @@ Komponenta. Android. SDK28 | Instalace Android SDK (úroveň rozhraní API 28) |
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Vyžadováno
 Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Vyžadováno
@@ -623,7 +623,7 @@ Microsoft. VisualStudio. Component. IISDevelopment | Podpora služby IIS při v�
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. JavaScript. Diagnostics | Diagnostika JavaScriptu | 16.0.28517.75 | Vyžadováno
 Microsoft. VisualStudio. Component. JavaScript. TypeScript | Podpora jazyků JavaScript a TypeScript | 16.8.30509.167 | Vyžadováno
@@ -646,7 +646,7 @@ Microsoft. VisualStudio. Component. VC. Tools. x86. x64 | MSVC V142-VS 2019 C++ 
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Vyžadováno
 Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Vyžadováno
@@ -709,7 +709,7 @@ Microsoft. VisualStudio. Component. SharePoint. WIF | Windows Identity Foundatio
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. PythonTools | Podpora jazyka Python | 16.5.29515.121 | Vyžadováno
 Component. CPython3. x64 | Python 3 64 – bit (3.7.8) | 3.7.8 | Doporučeno
@@ -774,7 +774,7 @@ Microsoft. VisualStudio. Component. Web | Požadavky na ASP.NET a vývojové ná
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. NetFX. Native | .NET Native | 16.5.29515.121 | Vyžadováno
 Microsoft. Components. Blend | Blend for Visual Studio | 16.0.28315.86 | Vyžadováno
@@ -821,7 +821,7 @@ Microsoft. VisualStudio. Component. UWP. VC. v141 | Univerzální platforma Wind
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
 Microsoft.Net. Component. 4.6. TargetingPack | Sada targeting pack .NET Framework 4,6 | 16.0.28517.75 | Vyžadováno
@@ -844,7 +844,7 @@ Microsoft. VisualStudio. Component. DslTools | Sada SDK pro modelování | 16.0.
 
 Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé komponenty.
 
-ID součásti | Name (Název) | Verze
+ID součásti | Název | Verze
 --- | --- | ---
 Komponenta. GitHub. VisualStudio | Rozšíření GitHub pro Visual Studio | 2.5.9.5485
 Komponenta. Xamarin. Profiler | Xamarin Profiler | 16.0.28315.86

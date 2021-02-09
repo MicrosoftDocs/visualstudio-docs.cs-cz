@@ -14,15 +14,15 @@ helpviewer_keywords:
 - workbooks, running calculations
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e9f385e7c58972844c30320c680f42d8394580d8
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 761f58027171ccaa667aa26569e41c3b4a8b75a0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524705"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99880473"
 ---
 # <a name="how-to-programmatically-run-excel-calculations"></a>Postupy: spouštění výpočtů v aplikaci Excel prostřednictvím kódu programu
   Podobný proces můžete použít ke spuštění výpočtů v <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacím prvku nebo v nativním objektu oblasti aplikace Excel.

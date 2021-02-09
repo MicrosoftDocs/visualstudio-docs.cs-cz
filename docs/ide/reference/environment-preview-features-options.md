@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Preview Features Options dialog box
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a0eb0627c073c09f23d8690dba2fd4f9af8b482
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 5cd7fd3ef7441a656ea8d640ac88283e7a32a49f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305450"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882020"
 ---
 # <a name="options-dialog-box-environment--preview-features"></a>Dialogové okno Možnosti: funkce v prostředí \> Preview
 
@@ -26,4 +26,4 @@ Tato stránka dialogového okna **Možnosti** slouží k povolení nebo zakázá
 
 ![Stránka možnosti funkcí Preview v aplikaci Visual Studio 2019](media/environment-preview-features-page.png)
 
-K tomuto dialogovému oknu získáte přístup kliknutím na **Možnosti** v nabídce **nástroje** a následným výběrem **Environment**  >  stránky **funkce ve verzi Preview** prostředí. Případně můžete do **vyhledávacího** pole sady Visual Studio zadat **funkce verze Preview** (stisknutím klávesy **CTRL** + **Q** a přesunete fokus do pole **hledání** ).
+K tomuto dialogovému oknu získáte přístup kliknutím na **Možnosti** v nabídce **nástroje** a následným výběrem   >  stránky **funkce ve verzi Preview** prostředí. Případně můžete do **vyhledávacího** pole sady Visual Studio zadat **funkce verze Preview** (stisknutím klávesy **CTRL** +  a přesunete fokus do pole **hledání** ).

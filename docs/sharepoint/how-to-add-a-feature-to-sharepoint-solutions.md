@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, features
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5b31c650beff880340090b7548a18962fa276e36
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: b8418b63b2397da109a11f287bd21321fd2468ed
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915112"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879706"
 ---
 # <a name="how-to-add-a-feature-to-sharepoint-solutions"></a>Postupy: Přidání funkce do řešení služby SharePoint
   Při vytváření řešení služby SharePoint se do řešení přidá jedna funkce a jeden balíček. Můžete přidat další položky funkcí pro uspořádání různých typů souborů služby SharePoint.

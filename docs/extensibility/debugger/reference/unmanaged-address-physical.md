@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: fed09686-caa6-4efc-851e-a0432019e9d0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9070fcfbf79fb96ecff87a793c221f3e7a65c2ae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 736ef56a67247bac53f1f27f84c994a1bf117b9e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713278"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99880070"
 ---
 # <a name="unmanaged_address_physical"></a>UNMANAGED_ADDRESS_PHYSICAL
 Tato struktura představuje fyzickou adresu.

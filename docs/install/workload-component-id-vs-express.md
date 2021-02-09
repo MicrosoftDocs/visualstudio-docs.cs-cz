@@ -5,7 +5,7 @@ description: Použití zatížení a ID komponent k instalaci sady Visual Studio
 keywords: ''
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.date: 11/13/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: vs-2017
 open_to_public_contributors: false
-ms.openlocfilehash: 1e24f90f24921bee9a6132ccc047c0b9da37fc90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21735c82a318623758f1980a1865a543adde121e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81276289"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881799"
 ---
 # <a name="visual-studio-desktop-express-component-directory"></a>Adresář komponenty Visual Studio Desktop Express
 
@@ -37,7 +37,7 @@ Všimněte si také následujících informací o stránce:
 
 Při nastavování závislostí v manifestu VSIX je nutné zadat pouze ID součástí. Pomocí tabulek na této stránce můžete určit minimální závislosti součástí. V některých scénářích to může znamenat, že zadáváte jenom jednu komponentu z úlohy. V jiných scénářích to může znamenat, že zadáváte více komponent z jedné úlohy nebo z více komponent z více úloh. Další informace naleznete v tématu [Postupy: migrace projektů rozšíření na stránku sady Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) .
 
-Další informace o použití těchto identifikátorů najdete v tématu věnovaném [použití parametrů příkazového řádku k instalaci stránky sady Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) . Seznam úloh a ID komponent pro jiné produkty najdete na stránce [Visual Studio 2017 – úlohy a ID komponent](workload-and-component-ids.md) .
+Další informace o použití těchto identifikátorů najdete v tématu věnovaném [použití Command-Linech parametrů k instalaci stránky sady Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) . Seznam úloh a ID komponent pro jiné produkty najdete na stránce [Visual Studio 2017 – úlohy a ID komponent](workload-and-component-ids.md) .
 
 ## <a name="express-for-windows-desktop"></a>Express for Windows Desktop
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Office documents [Office development in Visual Studio, restricted permissions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fc300ac83674b8faf2bd4c0fc6128f60c28ee92b
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 8fc6a37a327c26ec46777575c3976c227e2d1de9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97523049"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881487"
 ---
 # <a name="information-rights-management-and-managed-code-extensions-overview"></a>Přehled správy přístupových práv k informacím a rozšíření spravovaného kódu
   Systém Microsoft Office Word a systém Microsoft Office Excel poskytují informace Rights Management (IRM), což je funkce, která vám umožní zabránit neoprávněným osobám v prohlížení a změnách citlivých informací. Podrobnosti o tom, jak Rights Management informace fungují, najdete v nápovědě v konkrétní aplikaci Office.
