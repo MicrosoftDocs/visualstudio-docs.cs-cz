@@ -6,18 +6,18 @@ ms.date: 04/25/2019
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Code_Style.General
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 9172fff2dde1528c5ea382aea996d316e0738ea0
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 0aafcb1740f0e17234d2e4da38630c1416c44e9c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189742"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841938"
 ---
 # <a name="code-style-preferences"></a>Předvolby stylu kódu
 
@@ -32,7 +32,7 @@ Můžete definovat nastavení stylu kódu pro jednotlivé projekty pomocí [soub
 
 ::: moniker range=">=vs-2019"
 
-Můžete ručně naplnit soubor EditorConfig nebo můžete soubor automaticky vygenerovat na základě nastavení stylu kódu, které jste zvolili v dialogovém okně **Možnosti** sady Visual Studio. Tato stránka možností je k dispozici v **nabídce nástroje**–  >  **Options**  >  **textový editor** > [**C#** nebo **Basic**] > **styl kódu**  >  **Obecné**. Klikněte na **Generovat soubor. editorconfig z nastavení** a automaticky vygenerujte soubor *. editorconfig* stylu kódování na základě nastavení na této stránce **Možnosti** .
+Můžete ručně naplnit soubor EditorConfig nebo můžete soubor automaticky vygenerovat na základě nastavení stylu kódu, které jste zvolili v dialogovém okně **Možnosti** sady Visual Studio. Tato stránka možností je k dispozici v **nabídce nástroje**–  >    >  **textový editor** > [**C#** nebo **Basic**] > **styl kódu**  >  **Obecné**. Klikněte na **Generovat soubor. editorconfig z nastavení** a automaticky vygenerujte soubor *. editorconfig* stylu kódování na základě nastavení na této stránce **Možnosti** .
 
 ![Generování souboru editorconfig z nastavení v aplikaci Visual Studio 2019](media/vs-2019/generate-editorconfig-file-small.png)
 
@@ -60,7 +60,7 @@ Možnosti nastavené v tomto okně se vztahují na váš účet přizpůsobení 
 
 ### <a name="preference-and-severity"></a>Preference a závažnost
 
-U každého nastavení stylu kódu na této stránce můžete nastavit hodnoty **předvoleb** a **závažnosti** pomocí rozevíracích seznamu na každém řádku. Závažnost se dá nastavit jenom na **refaktoring**, **Návrh**, **varování** nebo **chybu**. Pokud chcete povolit [rychlé akce](../ide/quick-actions.md) pro styl kódu, zajistěte, aby bylo nastavení **závažnosti** nastaveno na jinou hodnotu než **refaktoring**. V **Quick Actions** případě, že :::image type="icon" source="media/light-bulb-dropdown.png"::: :::image type="icon" source="media/error-bulb.png"::: :::image type="icon" source="media/screwdriver.png"::: se používá nepreferovaný styl, se v případě použití nepreferovaného stylu zobrazí žárovka s rychlými akcemi, chybová žárovka nebo ikona Screwdriver a můžete vybrat možnost v seznamu **rychlé akce** a automaticky přepisovat kód na preferovaný styl.
+U každého nastavení stylu kódu na této stránce můžete nastavit hodnoty **předvoleb** a **závažnosti** pomocí rozevíracích seznamu na každém řádku. Závažnost se dá nastavit jenom na **refaktoring**, **Návrh**, **varování** nebo **chybu**. Pokud chcete povolit [rychlé akce](../ide/quick-actions.md) pro styl kódu, zajistěte, aby bylo nastavení **závažnosti** nastaveno na jinou hodnotu než **refaktoring**. V  případě, že :::image type="icon" source="media/light-bulb-dropdown.png"::: :::image type="icon" source="media/error-bulb.png"::: :::image type="icon" source="media/screwdriver.png"::: se používá nepreferovaný styl, se v případě použití nepreferovaného stylu zobrazí žárovka s rychlými akcemi, chybová žárovka nebo ikona Screwdriver a můžete vybrat možnost v seznamu **rychlé akce** a automaticky přepisovat kód na preferovaný styl.
 
 ::: moniker range=">=vs-2019"
 

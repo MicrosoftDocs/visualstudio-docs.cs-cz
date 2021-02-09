@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 35a7fcad-f3bf-4a96-9008-4306e7276223
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d3eaab4379d744bae0032e51995e5bc1b8e76423
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 3562b7238f9721c4153af02cce594bfb9e134b0c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351372"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841886"
 ---
 # <a name="schema-cache"></a>Mezipaměť schémat
 
@@ -25,7 +25,7 @@ Editor XML může také vyhledat schémata nacházející se v řešení, schém
 
 Následující tabulka popisuje schémata, která jsou nainstalována s editorem XML.
 
-| Bitmap | Popis |
+| Bitmap | Description |
 |-| - |
 | *Catalog. xsd* | Schéma pro soubory katalogu schématu editoru XML Informace o katalozích schématu najdete níže. |
 | *Soubor DotNetConfig. xsd* | Schéma pro soubory Web.Config, `http://schemas.microsoft.com/.NETConfiguration/v2.0` . |
@@ -114,7 +114,7 @@ Umístění mezipaměti schématu můžete přizpůsobit pomocí stránky **růz
 
 1. V nabídce **nástroje** vyberte možnost **Možnosti**.
 
-2. Rozbalte položku **textový editor** , rozbalte položku **XML** a potom klikněte na možnost **různé**.
+2. Rozbalte položku **textový editor**, rozbalte položku **XML** a potom klikněte na možnost **různé**.
 
 3. Klikněte na tlačítko **Procházet** v poli **schémata** .
 
