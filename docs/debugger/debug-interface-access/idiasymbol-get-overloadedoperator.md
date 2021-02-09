@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 257a9894-e980-47ae-bdc0-c5e2293ea734
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2be214ee5a2e566ae8e79989279ea3f8a52164d6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b42c1c6a5a05d18ec4846b950bce46f4fa26787
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462593"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862834"
 ---
 # <a name="idiasymbolget_overloadedoperator"></a>IDiaSymbol::get_overloadedOperator
 Načte příznak, který určuje, zda uživatelsky definovaný datový typ má přetížené operátory.
@@ -25,7 +25,7 @@ Načte příznak, který určuje, zda uživatelsky definovaný datový typ má p
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_overloadedOperator ( 
+HRESULT get_overloadedOperator ( 
    BOOL* pRetVal
 );
 ```

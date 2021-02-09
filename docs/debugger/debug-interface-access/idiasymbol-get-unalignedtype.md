@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: fdcb38fb-490e-4d15-b4e5-3770043a366c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b42ec7b0026c19ab9ef9545a821179273bbb72c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 92c088660b4ae5cca67a5a90d840611046691a76
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461614"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862554"
 ---
 # <a name="idiasymbolget_unalignedtype"></a>IDiaSymbol::get_unalignedType
 Načte příznak, který určuje, zda není zarovnaný uživatelsky definovaný datový typ.
@@ -25,7 +25,7 @@ Načte příznak, který určuje, zda není zarovnaný uživatelsky definovaný 
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_unalignedType ( 
+HRESULT get_unalignedType ( 
    BOOL* pRetVal
 );
 ```

@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: cf3eb110-d07f-4995-b68b-08290aa67d6f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b59ab4057d56e37f88e585999d4187159700c78
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a7c083d41bce916c9ab7745a25d2fbf0450688c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462719"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862862"
 ---
 # <a name="idiasymbolget_numberofrows"></a>IDiaSymbol::get_numberOfRows
 Načte počet řádků v matici.

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5166e647-fde5-4efe-92bf-77f8ae3fbc9b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 36bf189b8137c5a1a632dffd0b5a5d1641a9c24c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31cff55617e21c8ed750800fec982f2b1492d977
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461690"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862568"
 ---
 # <a name="idiasymbolget_typeids"></a>IDiaSymbol::get_typeIds
 Načte pole hodnot identifikátoru specifického pro kompilátor pro tento symbol.
@@ -25,7 +25,7 @@ Načte pole hodnot identifikátoru specifického pro kompilátor pro tento symbo
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_typeIds ( 
+HRESULT get_typeIds ( 
    DWORD  cTypeIds,
    DWORD* pcTypeIds,
    DWORD  typeIds[]
