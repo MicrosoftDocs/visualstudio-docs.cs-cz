@@ -17,16 +17,16 @@ helpviewer_keywords:
 - memory analyzer, JavaScript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a29d12a4ca2e6a7a620c5197f76c0ad35ac33a40
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: f6fb446890c1485b6af249fd593cc9065bdba5aa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98721681"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918120"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>Analýza využití paměti JavaScriptu v aplikacích pro UWP
 Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který vám pomůže pochopit využití paměti a najít nevracení paměti ve vašich aplikacích pro UWP sestavených pro Windows pomocí JavaScriptu. Mezi podporované aplikace patří aplikace pro univerzální aplikace pro Windows.
@@ -354,7 +354,7 @@ if (performance && performance.mark) {
 
 - V případě obtížné identifikace příčiny problému s pamětí použijte různá zobrazení (například dominantní objekty a typy) k vyhledání commonalities, zejména k identifikaci jednoho objektu (nebo několika objektů), který může obsahovat odkazy na mnoho ostatních objektů, které se zobrazují v zobrazení.
 
-- Hledejte objekty, které se nechtěně uchovávají v paměti, poté, co uživatel přejde na novou stránku, což je běžná příčina problémů s pamětí. Například:
+- Hledejte objekty, které se nechtěně uchovávají v paměti, poté, co uživatel přejde na novou stránku, což je běžná příčina problémů s pamětí. Příklad:
 
   - Nesprávné použití [adresy URL. ](https://developer.mozilla.org/docs/Web/API/URL/createObjectURL) Tato chyba může být způsobena funkcí CreateObjectUrl.
 

@@ -33,15 +33,15 @@ helpviewer_keywords:
 ms.assetid: d49b2c57-24bf-4fb2-8351-5c4b6cca938f
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 538b6c0dc3a163936e04a85b374a239d43e46e8e
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 20f8afa9dc9946644b935c34b98616d96a5fa875
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136807"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918312"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Dialogové okno Příkazový řádek události před sestavením/po sestavení
 
@@ -75,7 +75,7 @@ Vloží do příkazového řádku textové pole makro vybrané v tabulce maker.
 
 Pomocí kterékoli z těchto maker můžete určit umístění souborů nebo získat skutečný název vstupního souboru v případě vícenásobného výběru. U těchto maker nejsou rozlišována velká a malá písmena.
 
-|Podokně|Popis|
+|Podokně|Description|
 |-----------|-----------------|
 |`$(ConfigurationName)`|Název aktuální konfigurace projektu, například "ladit".|
 |`$(OutDir)`|Cesta k adresáři výstupního souboru, relativní vzhledem k adresáři projektu. Tím se přeloží hodnota vlastnosti výstupní adresář. Obsahuje koncové zpětné lomítko ' \\ '.|

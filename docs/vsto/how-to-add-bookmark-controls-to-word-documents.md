@@ -14,15 +14,15 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], adding to documents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a6ccf3f5a355cdad682026453691a4203c95a814
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: c5330d4419c065d7209900bfd4fa404663be185d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847465"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917477"
 ---
 # <a name="how-to-add-bookmark-controls-to-word-documents"></a>Postupy: Přidání ovládacích prvků záložek do dokumentů aplikace Word
   V projektech na úrovni dokumentu můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do dokumentu v projektu v době návrhu nebo v době běhu. V projektech doplňku VSTO můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do libovolného otevřeného dokumentu v době běhu.

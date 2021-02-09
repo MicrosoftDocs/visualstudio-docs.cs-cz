@@ -5,17 +5,17 @@ ms.date: 06/05/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: fb1c657789e232307672d494710f330758780a67
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e2c4cd4c110b55837009ea9d081a95180727d331
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85540722"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99916520"
 ---
 # <a name="install-python-interpreters"></a>Instalace interpretů Pythonu
 
@@ -32,15 +32,15 @@ Můžete také ručně nainstalovat kterýkoli z překladačů uvedených v nás
 > Visual Studio podporuje Python verze 2,7 a také verze 3,5 a vyšší. I když je možné použít sadu Visual Studio k úpravám kódu napsaného v jiných verzích Pythonu, tyto verze se oficiálně nepodporují a funkce, jako je například IntelliSense a ladění, nemusí fungovat.
 ::: moniker-end
 
-V případě sady **Visual Studio 2015 a starších**verzí je nutné ručně nainstalovat jeden z překladačů.
+V případě sady **Visual Studio 2015 a starších** verzí je nutné ručně nainstalovat jeden z překladačů.
 
-Visual Studio (všechny verze) automaticky detekuje všechny nainstalované interprety Pythonu a jeho prostředí kontrolou registru v závislosti na [PEP 514-registraci Pythonu v registru Windows](https://www.python.org/dev/peps/pep-0514/). Instalace Pythonu se obvykle nacházejí v části **HKEY_LOCAL_MACHINE \software\python** (32 bitů) a **HKEY_LOCAL_MACHINE \software\wow6432node\python** (64-bit) a pak v uzlech pro distribuci, jako je **PythonCore** (CPython) a **ContinuumAnalytics** (Anaconda).
+Visual Studio (všechny verze) automaticky detekuje všechny nainstalované interprety Pythonu a jeho prostředí kontrolou registru v závislosti na [PEP 514-registraci Pythonu v registru Windows](https://www.python.org/dev/peps/pep-0514/). Instalace Pythonu se obvykle nacházejí v části **HKEY_LOCAL_MACHINE\SOFTWARE\Python** (32 bitů) a **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Python** (64 bitů), a to v uzlech pro distribuci, jako je **PythonCore** (CPython) a **ContinuumAnalytics** (Anaconda).
 
 Pokud Visual Studio nedetekuje nainstalované prostředí, přečtěte si téma [Ruční identifikace stávajícího prostředí](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment).
 
 Visual Studio zobrazí všechna známá prostředí v okně [**prostředí Pythonu**](managing-python-environments-in-visual-studio.md#the-python-environments-window) a automaticky detekuje aktualizace stávajících překladačů.
 
-| Interpret | Popis |
+| Interpret | Description |
 | --- | --- |
 | [CPython](https://www.python.org/) | "Nativní" a nejčastěji používaný překladač, k dispozici v 32 bitů a 64 verze (doporučeno 32). Zahrnuje nejnovější funkce jazyků, maximální kompatibilitu balíčků Pythonu, úplnou podporu ladění a spolupráci s [IPython](https://ipython.org/). Viz také: Mám [použít Python 2 nebo Python 3?](https://wiki.python.org/moin/Python2orPython3). Všimněte si, že Visual Studio 2015 a starší nepodporují Python 3.6 + a můžou poskytovat chyby, jako je **Nepodporovaná verze pythonu 3,6**. Místo toho použijte Python 3,5 nebo starší. |
 | [Ironpythonu](https://github.com/IronLanguages/ironpython2) | Implementace jazyka Python v rozhraní .NET, která je k dispozici v 32 a 64 bitových verzí, poskytuje C#/F # webový Basic Interop, přístup k rozhraním API .NET, standardní ladění v Pythonu (ale ne ladění v kombinovaném režimu C++) a smíšené ladění Ironpythonu/C#. Ironpythonu ale nepodporuje virtuální prostředí. |

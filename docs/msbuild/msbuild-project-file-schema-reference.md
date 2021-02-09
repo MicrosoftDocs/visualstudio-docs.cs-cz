@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d9a68146-1f43-4621-ac78-2c8c3f400936
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f861fd9e5c10946c2bfee0235632c005822cbf1
-ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
+ms.openlocfilehash: b3451101d6ab2483960731281763167c0cd1629c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99572938"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918984"
 ---
 # <a name="msbuild-project-file-schema-reference"></a>Referenční dokumentace schématu souboru projektu nástroje MSBuild
 
@@ -54,8 +54,8 @@ Odkaz na schéma v souboru projektu MSBuild není vyžadován v aplikaci Visual 
 |[ProjectExtensions – – element (MSBuild)](../msbuild/projectextensions-element-msbuild.md)|--|--|
 |[Property – element (MSBuild)](../msbuild/property-element-msbuild.md)|--|Podmínka|
 |[Property – element (MSBuild)](../msbuild/propertygroup-element-msbuild.md)|*Vlastnost*|Podmínka|
-|[Element sady SDK (MSBuild)](../msbuild/sdk-element-msbuild.md)|--|Name<br /><br /> Verze|
-|[Target – element (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *Úkol*|AfterTargets<br /><br /> BeforeTargets<br /><br /> Podmínka<br /><br /> DependsOnTargets<br /><br /> Vstupy<br /><br /> KeepDuplicateOutputs<br /><br /> Name<br /><br /> Výstupy<br /><br /> Návraty|
+|[Element sady SDK (MSBuild)](../msbuild/sdk-element-msbuild.md)|--|Název<br /><br /> Verze|
+|[Target – element (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *Úkol*|AfterTargets<br /><br /> BeforeTargets<br /><br /> Podmínka<br /><br /> DependsOnTargets<br /><br /> Vstupy<br /><br /> KeepDuplicateOutputs<br /><br /> Název<br /><br /> Výstupy<br /><br /> Návraty|
 |[Element Task cíle (MSBuild)](../msbuild/task-element-msbuild.md)|Výstup|Podmínka<br /><br /> ContinueOnError<br /><br /> *Parametr*|
 |[Element Task pro UsingTask (MSBuild)](../msbuild/taskbody-element-msbuild.md)|*Data*|Vyhodnotit|
 |[UsingTask – element (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup –<br /><br /> Úkol|AssemblyFile<br /><br /> Doplňk<br /><br /> Podmínka<br /><br /> TaskFactory<br /><br /> /TN|

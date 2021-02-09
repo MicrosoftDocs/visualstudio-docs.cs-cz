@@ -6,16 +6,16 @@ ms.topic: reference
 ms.assetid: 1d72cef3-bb09-4bbb-8864-6ea0ab623ff9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4554a994fe790d5e0ec46762e830576181b312dd
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 33a343be010a5bf9cc0d9ba3e4251d92fd720656
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722136"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917815"
 ---
 # <a name="mark"></a>Označení
 Možnost *VSPerfCmd.exe* **značka** vloží zadané informace do souboru dat profilování. Značka může být uvedena v samostatné sestavě VSPerfReport nebo v zobrazení zprávy pro uživatelské rozhraní profileru. **Značku** lze použít k určení počátečních a koncových bodů v filtrech sestav a zobrazení.

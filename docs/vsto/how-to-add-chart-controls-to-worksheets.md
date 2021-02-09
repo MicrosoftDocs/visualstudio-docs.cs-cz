@@ -12,15 +12,15 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], adding to worksheets
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7e48b8cfbcf4ee1c7340aef4cd59e09698f89412
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 4fd82cf9d8d5cb15215bf7ecbfa51c735ef52a0f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845463"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917395"
 ---
 # <a name="how-to-add-chart-controls-to-worksheets"></a>Postupy: Přidání ovládacích prvků grafu do listů
   <xref:Microsoft.Office.Tools.Excel.Chart>Ovládací prvky můžete přidat do listu aplikace systém Microsoft Office Excel v době návrhu a v době běhu v přizpůsobení na úrovni dokumentu. Můžete také přidat <xref:Microsoft.Office.Tools.Excel.Chart> ovládací prvky v době běhu v doplňkech VSTO.

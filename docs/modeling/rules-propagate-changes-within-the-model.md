@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Domain-Specific Language, rules
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c4ff2273c8c71582c3ef634eeb398b12e29401d0
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 7062feddf00194e4633435655b5e11f5fefd38ee
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363949"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99916957"
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>Pravidla šířící změny v modelu
 Můžete vytvořit pravidlo obchodu a rozšířit změnu z jednoho prvku na jiný v rámci vizualizace a modelování SDK (VMSDK). Když dojde ke změně jakéhokoli prvku v úložišti, pravidla se naplánují na spouštění, obvykle v případě, kdy je nejvzdálenější transakce potvrzena. Existují různé typy pravidel pro různé druhy událostí, jako je například přidání prvku nebo jeho odstranění. Můžete připojit pravidla ke konkrétním typům prvků, tvarů nebo diagramů. Mnoho vestavěných funkcí je definovaných pravidly: například pravidla zajišťují, že se diagram při změně modelu aktualizuje. Jazyk specifický pro doménu můžete přizpůsobit přidáním vlastních pravidel.
@@ -209,6 +209,6 @@ namespace Company.TaskRuleExample
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Obslužné rutiny události šířící změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md)

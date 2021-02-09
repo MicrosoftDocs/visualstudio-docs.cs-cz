@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fb222cc5-8aeb-4b94-8c49-b93e342f5f69
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 08b4adbaa7e7e25041f90628695de729aaff0d0d
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 748d9f5932f93261bc991f0d8af43728b8e5ce02
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349201"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917283"
 ---
 # <a name="walkthrough-create-a-custom-installer-for-a-clickonce-application"></a>Návod: Vytvoření vlastního instalačního programu pro aplikaci ClickOnce
 Jakoukoli aplikaci ClickOnce založenou na souboru *. exe* lze tiše nainstalovat a aktualizovat pomocí vlastního instalačního programu. Vlastní instalační program může implementovat vlastní uživatelské prostředí během instalace, včetně vlastních dialogových oken pro operace zabezpečení a údržby. K provedení operací instalace používá vlastní instalační program <xref:System.Deployment.Application.InPlaceHostingManager> třídu. Tento návod ukazuje, jak vytvořit vlastní instalační program, který tiše nainstaluje aplikaci ClickOnce.

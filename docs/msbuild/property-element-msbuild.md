@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69ab08ab-3e76-41dd-a01b-49aa1d2e0cac
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c17906467579e8fc532372371df8be76b40e7f0
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 617a6d3712b137d76334d4063f36a1b8dde1d101
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93048832"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918852"
 ---
 # <a name="property-element-msbuild"></a>Property – element (MSBuild)
 
@@ -67,7 +67,7 @@ Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost
 
 ## <a name="remarks"></a>Poznámky
 
- Názvy vlastností jsou omezeny pouze na znaky ASCII. Hodnoty vlastností jsou odkazovány v projektu umístěním názvu vlastnosti mezi " `$(` " a " `)` ". Například by se `$(builddir)\classes` přeložila na *build\classes* , pokud `builddir` vlastnost měla hodnotu `build` . Další informace o vlastnostech naleznete v tématu [vlastnosti MSBuild](../msbuild/msbuild-properties.md).
+ Názvy vlastností jsou omezeny pouze na znaky ASCII. Hodnoty vlastností jsou odkazovány v projektu umístěním názvu vlastnosti mezi " `$(` " a " `)` ". Například by se `$(builddir)\classes` přeložila na *build\classes*, pokud `builddir` vlastnost měla hodnotu `build` . Další informace o vlastnostech naleznete v tématu [vlastnosti MSBuild](../msbuild/msbuild-properties.md).
 
 ## <a name="example"></a>Příklad
 

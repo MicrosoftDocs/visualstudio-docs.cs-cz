@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: cf79f666-65d1-417c-af7c-9271bac9a267
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d6d3908c469b489eb16e4662f7515ea624825e3b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 68880945d7534985e1788ae3b1f1e3755f79eeda
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80721520"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99916167"
 ---
 # <a name="idebugproperty2enumchildren"></a>IDebugProperty2::EnumChildren
 Načte seznam podřízených objektů vlastnosti.
@@ -28,7 +28,7 @@ Načte seznam podřízených objektů vlastnosti.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT EnumChildren ( 
+HRESULT EnumChildren ( 
    DEBUGPROP_INFO_FLAGS      dwFields,
    DWORD                     dwRadix,
    REFGUID                   guidFilter,
@@ -40,7 +40,7 @@ HRESULT EnumChildren ( 
 ```
 
 ```csharp
-int EnumChildren ( 
+int EnumChildren ( 
    enum_DEBUGPROP_INFO_FLAGS   dwFields,
    uint                        dwRadix,
    ref Guid                    guidFilter,

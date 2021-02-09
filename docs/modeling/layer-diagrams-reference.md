@@ -19,15 +19,15 @@ helpviewer_keywords:
 - constraints, architectural
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 265bb31dd95aa3a84bdb497a3306278acfd8838e
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: f173e27588538c806d075e0a6b010fbd848f2690
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360569"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917002"
 ---
 # <a name="dependency-diagrams-reference"></a>Diagramy závislostí: Referenční dokumentace
 
@@ -58,7 +58,7 @@ Toto téma popisuje prvky, které lze použít v diagramu závislostí. Podrobn�
 
 Následující tabulka popisuje prvky, které můžete použít v diagramu závislostí.
 
-|**Obrazec**|**Objekt**|**Popis**|
+|**Automatického**|**Prvek**|**Popis**|
 |-|-|-|
 |1|**Vrstva**|Logická skupina fyzických artefaktů ve vašem systému. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále.<br /><br /> Chcete-li zobrazit artefakty, které jsou propojeny s vrstvou, otevřete místní nabídku pro vrstvu a pak zvolte možnost **Zobrazit odkazy** a otevřete **Průzkumníka vrstev**.<br /><br /> Další informace naleznete v tématu [Průzkumník vrstev](#Explorer).<br /><br /> -   **Zakázané závislosti oboru názvů** – určuje, že artefakty přidružené k této vrstvě nemůžou záviset na zadaných oborech názvů.<br />-   **Zakázané obory názvů** – určuje, že artefakty přidružené k této vrstvě nesmí patřit do zadaných oborů názvů.<br />-   **Povinné obory názvů** – určuje, že artefakty přidružené k této vrstvě musí patřit do jednoho ze zadaných oborů názvů.|
 |2|**Závislost**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **Direction** – určuje směr závislosti.|
@@ -98,6 +98,6 @@ V diagramu závislostí otevřete místní nabídku pro jednu nebo více vrstev 
 |**Podporuje ověřování**|Je-li **nastavena hodnota true**, proces ověření vrstvy může ověřit, zda projekt odpovídá závislostem na nebo z tohoto prvku.<br /><br /> Je-li nastavena **hodnota false**, odkaz se neúčastní procesu ověřování vrstvy.<br /><br /> Další informace najdete v tématu [diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md).|
 |**Identifikátor**|Odkaz na propojený artefakt|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)

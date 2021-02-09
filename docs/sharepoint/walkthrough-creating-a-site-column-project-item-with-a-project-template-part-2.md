@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e6e5c9a0bb461f6b81b9cb7e1aa5f0134a7bdcbd
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: bc664a50fc307c59d5c168b26c8af1bc6181ebad
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915138"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918714"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2
   Po definování vlastního typu položky projektu služby SharePoint a jejich přidružení k šabloně projektu v aplikaci Visual Studio můžete také pro šablonu poskytnout průvodce. Průvodce můžete použít ke shromáždění informací z uživatelů při použití šablony k vytvoření nového projektu, který obsahuje položku projektu. Informace, které shromáždíte, lze použít k inicializaci položky projektu.
@@ -43,7 +43,7 @@ ms.locfileid: "96915138"
 > [!NOTE]
 > Řadu ukázkových pracovních postupů najdete v tématu [ukázky pracovních postupů služby SharePoint](/sharepoint/dev/general-development/sharepoint-workflow-samples).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Chcete-li provést tento návod, je nutné nejprve vytvořit řešení SiteColumnProjectItem, a to dokončením [návodu: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md).
 
  K dokončení tohoto Názorného postupu potřebujete také následující komponenty na vývojovém počítači:
@@ -464,7 +464,7 @@ ms.locfileid: "96915138"
 
 9. V seznamu **projekt** vyberte projekt **SharePointCommands** a pak klikněte na tlačítko **OK** .
 
-10. V panelu nabídek zvolte sestavení sestavení **Build**  >  **sestavení** a pak se ujistěte, že řešení je sestavení bez chyb.
+10. V panelu nabídek zvolte sestavení sestavení   >  **sestavení** a pak se ujistěte, že řešení je sestavení bez chyb.
 
 ## <a name="test-the-wizard"></a>Otestování Průvodce
  Nyní jste připraveni otestovat Průvodce. Nejdřív začněte ladit řešení SiteColumnProjectItem v experimentální instanci sady Visual Studio. Pak otestujte průvodce pro projekt sloupce webu v experimentální instanci aplikace Visual Studio. Nakonec sestavte a spusťte projekt, abyste ověřili, že sloupec web funguje podle očekávání.

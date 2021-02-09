@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: d762eff4-c92a-4b5f-a944-1ca30aa22319
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a28823a1a492cb1e8d5f434f98248fecc5d84e47
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: d4bfc58c9be578514598fce2d447ef921d091177
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904497"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919070"
 ---
 # <a name="msbuild-items"></a>Položky nástroje MSBuild
 
@@ -35,7 +35,7 @@ Položky nástroje MSBuild jsou vstupy do systému sestavení a obvykle předsta
 </ItemGroup>
 ```
 
- Položka *File2.cs* nenahrazuje položku *FILE1.cs* ; místo toho se název souboru připojí k seznamu hodnot pro daný `Compile` typ položky.
+ Položka *File2.cs* nenahrazuje položku *FILE1.cs*; místo toho se název souboru připojí k seznamu hodnot pro daný `Compile` typ položky.
 
  Následující kód XML vytvoří stejný typ položky deklarováním obou souborů v jednom `Include` atributu. Všimněte si, že názvy souborů jsou oddělené středníkem.
 
@@ -97,7 +97,7 @@ Další informace o zástupných znacích naleznete v tématu [How to: vyberte s
 </ItemGroup>
 ```
 
- `Exclude`Atribut ovlivňuje pouze položky, které jsou přidány `Include` atributem v prvku Item, který je obsahuje obě. Následující příklad nevylučuje soubor *Form1.cs* , který byl přidán do předchozí položky elementu.
+ `Exclude`Atribut ovlivňuje pouze položky, které jsou přidány `Include` atributem v prvku Item, který je obsahuje obě. Následující příklad nevylučuje soubor *Form1.cs*, který byl přidán do předchozí položky elementu.
 
 ```xml
 <Compile Include="*.cs" />

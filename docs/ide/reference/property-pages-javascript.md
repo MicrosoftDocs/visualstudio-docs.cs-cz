@@ -16,15 +16,15 @@ f1_keywords:
 ms.assetid: a05ab01f-3d5d-4675-a845-eab51807d3a3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cf6c984715f5cd35f08bb75526346b68c11dbeb9
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: 30c16e1c76e6f4e12d822f68f2a9530290c15de5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947801"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919458"
 ---
 # <a name="property-pages-javascript"></a>Stránky vlastností, JavaScript
 
@@ -34,7 +34,7 @@ Chcete-li získat přístup k vlastnostem projektu, vyberte uzel projektu v **Pr
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
-Na **stránkách vlastností**se zobrazí následující stránky a možnosti.
+Na **stránkách vlastností** se zobrazí následující stránky a možnosti.
 
 ## <a name="configuration-and-platform-page"></a>Stránka konfigurace a platforma
 
@@ -42,11 +42,11 @@ Pomocí následujících možností vyberte konfiguraci a platformu, které chce
 
  **Konfigurace**
 
-Určuje nastavení konfigurace, která se mají zobrazit nebo upravit. Nastavení jsou **ladění** (výchozí), **vydaná verze**, **všechny konfigurace**nebo uživatelsky definovaná konfigurace. Další informace naleznete v tématu [How to: set Debug and Release Configurations in Visual Studio](../../debugger/how-to-set-debug-and-release-configurations.md).
+Určuje nastavení konfigurace, která se mají zobrazit nebo upravit. Nastavení jsou **ladění** (výchozí), **vydaná verze**, **všechny konfigurace** nebo uživatelsky definovaná konfigurace. Další informace naleznete v tématu [How to: set Debug and Release Configurations in Visual Studio](../../debugger/how-to-set-debug-and-release-configurations.md).
 
  **Platforma**
 
-Určuje nastavení platformy, která se mají zobrazit nebo upravit. Nastavení jsou **všechny procesory** (výchozí pro [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] aplikace), **x64**, **ARM**, **x86**nebo uživatelsky definované platformy. Další informace naleznete v tématu [How to: set Debug and Release Configurations in Visual Studio](../../debugger/how-to-set-debug-and-release-configurations.md).
+Určuje nastavení platformy, která se mají zobrazit nebo upravit. Nastavení jsou **všechny procesory** (výchozí pro [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] aplikace), **x64**, **ARM**, **x86** nebo uživatelsky definované platformy. Další informace naleznete v tématu [How to: set Debug and Release Configurations in Visual Studio](../../debugger/how-to-set-debug-and-release-configurations.md).
 
 ## <a name="general-page"></a>Stránka Obecné
 
@@ -59,7 +59,7 @@ Pomocí následujících možností nastavte obecné vlastnosti projektu.
 
 Určuje umístění výstupních souborů pro konfiguraci projektu. Cesta je relativní; Pokud zadáte absolutní cestu, absolutní cesta je uložena v projektu. Výchozí cesta je bin\Debug.
 
-Použijete-li zjednodušené konfigurace sestavení, systém projektu určí, zda má být vytvořena verze ladění nebo vydání. Po kliknutí na **ladění**  >  **Spustit ladění** (nebo stisknutím klávesy **F5**) je sestavení vloženo do umístění ladění bez ohledu na **výstupní cestu** , kterou zadáte. Příkaz **Sestavit řešení** v nabídce **sestavení** však vloží do umístění, které zadáte. Chcete-li povolit pokročilé konfigurace sestavení, na panelu nabídek vyberte možnost **nástroje**  >  **Možnosti**. V dialogovém okně **Možnosti** rozbalte položku **projekty a řešení**, vyberte možnost **Obecné**a zrušte zaškrtnutí políčka **Zobrazit pokročilé konfigurace sestavení** . Tím získáte ruční kontrolu nad všemi konfiguračními hodnotami a zda je vytvořena verze ladění nebo vydání.
+Použijete-li zjednodušené konfigurace sestavení, systém projektu určí, zda má být vytvořena verze ladění nebo vydání. Po kliknutí na **ladění**  >  **Spustit ladění** (nebo stisknutím klávesy **F5**) je sestavení vloženo do umístění ladění bez ohledu na **výstupní cestu** , kterou zadáte. Příkaz **Sestavit řešení** v nabídce **sestavení** však vloží do umístění, které zadáte. Chcete-li povolit pokročilé konfigurace sestavení, na panelu nabídek vyberte možnost **nástroje**  >  **Možnosti**. V dialogovém okně **Možnosti** rozbalte položku **projekty a řešení**, vyberte možnost **Obecné** a zrušte zaškrtnutí políčka **Zobrazit pokročilé konfigurace sestavení** . Tím získáte ruční kontrolu nad všemi konfiguračními hodnotami a zda je vytvořena verze ladění nebo vydání.
 
  **Výchozí jazyk**
 

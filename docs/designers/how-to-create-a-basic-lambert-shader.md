@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: ec5c10fb-9600-4240-8280-d59451ea1d68
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f1677de15006dcf3bbe2f7a6b925be247518f752
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 2aa4f3676708a99abba0a4706ecb524f1c14b212
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134521"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917023"
 ---
 # <a name="how-to-create-a-basic-lambert-shader"></a>Postupy: Vytvoření základního Lambertova shaderu
 
@@ -29,7 +29,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 1. Vytvořte DGSL shader, který bude fungovat. Informace o tom, jak přidat DGSL shader do projektu, naleznete v části Začínáme v [Návrháři shaderu](../designers/shader-designer.md).
 
-2. Odpojí uzel **Barva bodu** od **finálního uzlu barvy** . Zvolte terminál **RGB** pro uzel **Barva bodu** a pak zvolte možnost **přerušení propojení** . Nechejte terminál **Alpha** připojený.
+2. Odpojí uzel **Barva bodu** od **finálního uzlu barvy** . Zvolte terminál **RGB** pro uzel **Barva bodu** a pak zvolte možnost **přerušení propojení**. Nechejte terminál **Alpha** připojený.
 
 3. Přidejte uzel **Lambert** do grafu. V **panelu nástrojů** vyberte v části **Nástroj** možnost **Lambert** a přesuňte ji na návrhovou plochu. Uzel Lambert vypočítá celkový podíl barvy difúze v pixelech na základě parametrů okolí a rozptýlené osvětlení.
 

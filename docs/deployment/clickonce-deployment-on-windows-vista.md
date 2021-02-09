@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b21a0ebc-0ff6-4f49-8993-7d1ad3f8cac2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c2e09225339a87c55c31d27d26b129e199385e99
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: ccac1cd234a0f83810ff2596e1763209d95a8325
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383076"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918443"
 ---
 # <a name="clickonce-deployment-on-windows-vista"></a>Nasazení ClickOnce v systému Windows Vista
 

@@ -5,17 +5,17 @@ ms.date: 05/12/2020
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5307684bde56955f2a4ed77d2ac66b6b30cb1c1d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dcc5d9746a556af54ea206528fcb9a402e25d700
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541066"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99916612"
 ---
 Visual Studio může spouštět a ladit aplikace v Pythonu místně a vzdáleně na počítači s Windows (viz [vzdálené ladění](../../../debugger/remote-debugging.md)). Můžete ho také vzdáleně ladit na jiném operačním systému, zařízení nebo implementaci Pythonu než CPython pomocí [knihovny debugpy](https://pypi.org/project/debugpy/).
 
@@ -159,7 +159,7 @@ Ve výchozím nastavení je připojení ke vzdálenému ladicímu serveru ptvsd 
 
     1. Zkopírujte soubor certifikátu ze vzdáleného počítače do místního počítače.
     1. Otevřete **Ovládací panely** a přejděte na **Nástroje pro správu**  >  **Správa certifikátů počítačů**.
-    1. V okně, které se zobrazí, rozbalte položku **Důvěryhodné kořenové certifikační autority** na levé straně, klikněte pravým tlačítkem na položku **certifikáty**a vyberte možnost **všechny úkoly**  >  **importovat**.
+    1. V okně, které se zobrazí, rozbalte položku **Důvěryhodné kořenové certifikační autority** na levé straně, klikněte pravým tlačítkem na položku **certifikáty** a vyberte možnost **všechny úkoly**  >  **importovat**.
     1. Přejděte na a vyberte soubor *. cer* zkopírovaný ze vzdáleného počítače a potom kliknutím na dialogová okna dokončete import.
 
 1. Opakujte proces připojení v aplikaci Visual Studio, jak je popsáno dříve, a teď použijte `tcps://` jako protokol pro **cíl připojení** (nebo **kvalifikátor**).

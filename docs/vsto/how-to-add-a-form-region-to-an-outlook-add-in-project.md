@@ -16,15 +16,15 @@ helpviewer_keywords:
 - form regions [Office development in Visual Studio], adding
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f137dbe88b8b3ecf51f17e0f19f61368359087fa
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 9f50475f52ca2ec08894a3c1c0375e78d2b5620b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845060"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917531"
 ---
 # <a name="how-to-add-a-form-region-to-an-outlook-add-in-project"></a>Postupy: Přidání oblasti formuláře do projektu doplňku aplikace Outlook
   Vytvořte oblast formuláře pro rozšiřování standardního nebo vlastního systém Microsoft Officeho formuláře Outlooku pomocí Průvodce vytvořením **nové oblasti formuláře Outlooku** . Můžete vytvořit novou oblast formuláře a navrhnout uživatelské rozhraní v aplikaci Visual Studio nebo můžete importovat oblast formuláře, která byla navržena v aplikaci Outlook a přidat Visual Basic nebo kód jazyka C#.

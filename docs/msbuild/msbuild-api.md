@@ -6,21 +6,21 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 34628f08c8860771b07d8e2544c79ad23eba18cf
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: b376f1cb1d6b473c0ea37bb33f6ae2b60789fa24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903570"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919307"
 ---
 # <a name="use-the-msbuild-api"></a>Použití rozhraní API pro MSBuild
 
 Nástroj MSBuild poskytuje veřejnou plochu rozhraní API, aby mohl program provádět sestavení a kontrolovat projekty. Poslední verze rozhraní API nástroje MSBuild najdete v následujících balíčcích NuGet:
 
-| Název balíčku | Popis |
+| Název balíčku | Description |
 | ------------ | ----------- |
 | [Microsoft. Build](https://www.nuget.org/packages/Microsoft.Build) | Obsahuje sestavení Microsoft. Build, které slouží k vytváření, úpravám a vyhodnocení projektů MSBuild.|
 | [Microsoft. Build. Framework](https://www.nuget.org/packages/Microsoft.Build.Framework)| Obsahuje společné sestavení rozhraní MSBuild používané jinými sestaveními nástroje MSBuild. |
@@ -35,7 +35,7 @@ Existuje několik různých verzí rozhraní API nástroje MSBuild a pro verze 1
 Dokumentaci k rozhraní MSBuild API najdete v [prohlížeči rozhraní .NET API](/dotnet/api), nebo procházením oborů názvů v následujícím seznamu.
 
 ::: moniker range="vs-2017"
-| Obor názvů | Platí pro | Popis |
+| Obor názvů | Platí pro | Description |
 |-----------| -----------| ----------- |
 | [Microsoft. Build. konstrukcí](/dotnet/api/Microsoft.Build.Construction?view=msbuild-15&preserve-view=true) | Vše |  Obsahuje typy, které model objektu MSBuild používá pro konstrukci kořenů projektu s vyhodnocenými hodnotami. Každý kořen projektu odpovídá souboru projektu nebo cíle. |
 | [Microsoft. Build. definition](/dotnet/api/Microsoft.Build.Definition?view=msbuild-15&preserve-view=true) | Vše | Obsahuje `ProjectOptions` třídu, která podporuje vytváření projektu. |
@@ -59,7 +59,7 @@ Dokumentaci k rozhraní MSBuild API najdete v [prohlížeči rozhraní .NET API]
 | [Microsoft. Build. Utilities](/dotnet/api/Microsoft.Build.Utilities?view=msbuild-15&preserve-view=true) | Vše | Obsahuje pomocné třídy, které lze použít k vytvoření vlastních protokolovacích nástrojů a úloh nástroje MSBuild.|
 :::moniker-end
 :::moniker range=">=vs-2019"
-| Obor názvů | Platí pro | Popis |
+| Obor názvů | Platí pro | Description |
 |-----------| -----------| ----------- |
 | [Microsoft. Build. konstrukcí](/dotnet/api/Microsoft.Build.Construction?view=msbuild-16&preserve-view=true) | Vše |  Obsahuje typy, které model objektu MSBuild používá pro konstrukci kořenů projektu s vyhodnocenými hodnotami. Každý kořen projektu odpovídá souboru projektu nebo cíle. |
 | [Microsoft. Build. definition](/dotnet/api/Microsoft.Build.Definition?view=msbuild-16&preserve-view=true) | Vše | Obsahuje `ProjectOptions` třídu, která podporuje vytváření projektu. |

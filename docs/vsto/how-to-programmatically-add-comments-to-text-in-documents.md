@@ -13,15 +13,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], adding comments
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2a39c02cfb7b170fd923e8e7409a0f4215d67583
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: f5f0fba5169be71718993fbc271faf64fdac9fb1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844592"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918490"
 ---
 # <a name="how-to-programmatically-add-comments-to-text-in-documents"></a>Postupy: přidávání komentářů k textu v dokumentech prostřednictvím kódu programu
   Vlastnost Comments třídy Document přidá komentář k oblasti textu v dokumentu aplikace systém Microsoft Office Word.

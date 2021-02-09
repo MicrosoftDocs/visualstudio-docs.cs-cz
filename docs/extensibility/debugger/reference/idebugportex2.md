@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 144724d0-38ee-4c9b-87ca-8a504371182b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5789681b0da70f46dadac1e29d0d6bb9dc905d1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b2ff055f730d193b5294b98129e073a21428f8ee
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80724999"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919905"
 ---
 # <a name="idebugportex2"></a>IDebugPortEx2
 Toto rozhraní umožňuje správci ladění relace (SDM) řídit programy a procesy spuštěné na portu.

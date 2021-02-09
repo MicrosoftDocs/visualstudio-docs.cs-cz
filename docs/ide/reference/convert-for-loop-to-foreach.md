@@ -6,18 +6,18 @@ ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70c2b17f00c1f5e72ce0e913c360b4655b18df12
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 6a435824d3186cee7a32db9966cfde3db9b093bf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040820"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919708"
 ---
 # <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>Refaktoring pro převod mezi smyčkou for a příkazem foreach
 
@@ -85,7 +85,7 @@ Důvody, které byste mohli chtít převést příkaz [foreach](/dotnet/csharp/l
 1. Vzhledem k tomu, že refaktoring zavádí novou proměnnou počtu iterací, zobrazí se pole **Přejmenovat** v pravém horním rohu editoru. Chcete-li pro proměnnou zvolit jiný název, zadejte ji do pole a potom stiskněte klávesu **ENTER** nebo zvolte možnost **použít** v poli **Přejmenovat** . Pokud nechcete zvolit nový název, stiskněte klávesu **ESC** nebo vyberte **použít** k zavření pole **Přejmenovat** .
 
 > [!NOTE]
-> V jazyce C# kód vygenerovaný těmito refaktoringy používá explicitní typ nebo [var](/dotnet/csharp/language-reference/keywords/var) pro typ položek v kolekci. Typ v generovaném kódu, explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v rozsahu. Tato konkrétní nastavení stylu kódu jsou konfigurována na úrovni počítače v nabídce **nástroje**  >  **Možnosti**  >  **textový editor**  >  **C#**  >  **Code Style**  >  **General**  >  **\' Předvolby obecné var** nebo na úrovni řešení v souboru [EditorConfig](/dotnet/fundamentals/code-analysis/style-rules/language-rules#implicit-and-explicit-types) . Pokud změníte nastavení stylu kódu v **možnostech**, znovu otevřete soubor kódu, aby se změny projevily.
+> V jazyce C# kód vygenerovaný těmito refaktoringy používá explicitní typ nebo [var](/dotnet/csharp/language-reference/keywords/var) pro typ položek v kolekci. Typ v generovaném kódu, explicitní nebo implicitní, závisí na nastavení stylu kódu, které jsou v rozsahu. Tato konkrétní nastavení stylu kódu jsou konfigurována na úrovni počítače v nabídce **nástroje**  >  **Možnosti**  >  **textový editor**  >  **C#**  >    >    >  **\' Předvolby obecné var** nebo na úrovni řešení v souboru [EditorConfig](/dotnet/fundamentals/code-analysis/style-rules/language-rules#implicit-and-explicit-types) . Pokud změníte nastavení stylu kódu v **možnostech**, znovu otevřete soubor kódu, aby se změny projevily.
 
 ## <a name="see-also"></a>Viz také
 

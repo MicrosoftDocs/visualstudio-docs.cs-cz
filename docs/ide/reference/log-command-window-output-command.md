@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d4ecec35-5af4-4954-8d60-2cd24583fbb4
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cab4f102832e8dfa6ce51b61abed8e3bfd672c40
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 36f0ece9ed1e29c414fbb6bf6e5f7ab2fa514734
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305277"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919410"
 ---
 # <a name="log-command-window-output-command"></a>Okno výstupu příkazů protokolu – příkaz
 
@@ -40,7 +40,7 @@ Nepovinný parametr. Název souboru protokolu. Ve výchozím nastavení se soubo
 > [!TIP]
 > Pokud chcete změnit umístění, kam se soubor protokolu uloží, zadejte úplnou cestu k souboru, která je ohraničená uvozovkami, pokud cesta obsahuje mezery.
 
-## <a name="switches"></a>Přepínače
+## <a name="switches"></a>přepínače,
 
 parametry/on
 Nepovinný parametr. Spustí protokol pro **příkazové** okno v zadaném souboru a připojí soubor s novými informacemi.

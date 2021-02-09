@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 87d31b6c-4607-4121-bb7d-cfc80390ab93
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 927779e6d58de9eeaacd43b6b03f837dbc3281e2
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 7b8025f7212d28d2cfce482f67ef672a472993bf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796677"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920106"
 ---
 # <a name="display-data-in-blend-for-visual-studio"></a>Zobrazit data v Blend pro Visual Studio
 
@@ -27,13 +27,13 @@ Ukázková data můžete zobrazit v návrháři při přizpůsobování rozlože
 
 ## <a name="generate-sample-data"></a>Generování ukázkových dat
 
-Chcete-li generovat ukázková data, otevřete dokument XAML. Na panelu **data** klikněte na tlačítko **Vytvořit Ukázková** data ![ Vytvořit Ukázková data ](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) a pak zvolte **Nová ukázková data** .
+Chcete-li generovat ukázková data, otevřete dokument XAML. Na panelu **data** klikněte na tlačítko **Vytvořit Ukázková** data ![ Vytvořit Ukázková data ](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) a pak zvolte **Nová ukázková data**.
 
 Na panelu **data** definujte strukturu vašich dat a potom ji navažte na prvky uživatelského rozhraní na libovolné stránce.
 
 ![Panel data](../designers/media/496d7ebc-fe46-42f6-95a8-57b0e5be5d49.png)
 
-Pokud chcete, aby se vaše ukázková data zobrazovala na stránkách, když aplikaci spouštíte, zvolte možnost **zdroj** dat ![ Ikona Možnosti zdroje dat ](../designers/media/ae1fd260-4f84-420d-b196-45fde357d81d.png) a pak zvolte **Povolit při spuštění aplikace** .
+Pokud chcete, aby se vaše ukázková data zobrazovala na stránkách, když aplikaci spouštíte, zvolte možnost **zdroj** dat ![ Ikona Možnosti zdroje dat ](../designers/media/ae1fd260-4f84-420d-b196-45fde357d81d.png) a pak zvolte **Povolit při spuštění aplikace**.
 
 ![Povolit při spuštění položky nabídky aplikace](../designers/media/05d5356d-91bb-4e6b-b3f7-29b76852c4b3.png)
 
@@ -43,7 +43,7 @@ Pokud chcete, aby se vaše ukázková data zobrazovala na stránkách, když apl
 
 Pokud jste již vytvořili třídy, které popisují strukturu vašich dat, můžete z nich vygenerovat ukázková data.
 
-Chcete-li generovat ukázková data z třídy, otevřete dokument XAML a poté na panelu **data** klikněte na tlačítko **Vytvořit Ukázková** data ![ Vytvořit Ukázková data ](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) a potom klikněte na možnost **Vytvořit Ukázková data z třídy** .
+Chcete-li generovat ukázková data z třídy, otevřete dokument XAML a poté na panelu **data** klikněte na tlačítko **Vytvořit Ukázková** data ![ Vytvořit Ukázková data ](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) a potom klikněte na možnost **Vytvořit Ukázková data z třídy**.
 
 **Podívejte se na krátké video:** ![ Ikona přehrát ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [se smíchá s několika vazbami dat pomocí Blendu](https://www.youtube.com/watch?v=LSwPB6CAvjg).
 

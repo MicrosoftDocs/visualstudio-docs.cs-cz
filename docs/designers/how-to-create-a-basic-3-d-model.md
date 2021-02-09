@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: a0d97966-2df8-449b-a8cf-5a19684dc773
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 924b990e1626842778c0b3577ddb25a53a4eb910
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 5c60c30c593e67f47a620062e2b2f4958120a1a1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134600"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917110"
 ---
 # <a name="how-to-create-a-basic-3d-model"></a>Postupy: Vytvoření základního 3D modelu
 
@@ -46,13 +46,13 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 2. Přidejte do scény datovou krychli. V okně **sady nástrojů** v části **tvary** vyberte **krychle** a potom ji přesuňte na návrhovou plochu.
 
-3. Přepněte na výběr obličeje. Na panelu nástrojů editoru modelů zvolte **možnost vybrat obličej** .
+3. Přepněte na výběr obličeje. Na panelu nástrojů editoru modelů zvolte **možnost vybrat obličej**.
 
-4. Rozdělte horní část datové krychle. V režimu výběru plochy Zvolte datovou krychli jednou, abyste ji aktivovali pro výběr, a pak zvolte horní stranu datové krychle a vyberte horní plochu. Na panelu nástrojů editoru modelů vyberte **rozdělit plochu** . Tím se do horní části datové krychle přidá nové vrcholy, které se rozdělí do čtyř oddílů se stejnou velikostí.
+4. Rozdělte horní část datové krychle. V režimu výběru plochy Zvolte datovou krychli jednou, abyste ji aktivovali pro výběr, a pak zvolte horní stranu datové krychle a vyberte horní plochu. Na panelu nástrojů editoru modelů vyberte **rozdělit plochu**. Tím se do horní části datové krychle přidá nové vrcholy, které se rozdělí do čtyř oddílů se stejnou velikostí.
 
     ![Horní část datové krychle byla rozdělena](../designers/media/gfx_model_demo_house_subdiv.png)
 
-5. Vytlačení dvou sousedních stran krychle, například přední a pravé strany datové krychle. V režimu výběru plochy vyberte datovou krychli jednou, abyste ji aktivovali pro výběr, a pak zvolte jednu stranu datové krychle. Stiskněte a podržte klávesu **CTRL** , zvolte jinou stranu datové krychle, která sousedí se stranou, kterou jste vybrali jako první, a pak na panelu nástrojů editoru modelů zvolte možnost **tlačení obličeje** .
+5. Vytlačení dvou sousedních stran krychle, například přední a pravé strany datové krychle. V režimu výběru plochy vyberte datovou krychli jednou, abyste ji aktivovali pro výběr, a pak zvolte jednu stranu datové krychle. Stiskněte a podržte klávesu **CTRL** , zvolte jinou stranu datové krychle, která sousedí se stranou, kterou jste vybrali jako první, a pak na panelu nástrojů editoru modelů zvolte možnost **tlačení obličeje**.
 
     ![Strany krychle byly vytlačeny.](../designers/media/gfx_model_demo_house_extrude.png)
 
@@ -60,7 +60,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
     ![Jedna strana datové krychle byla dále vytlačena.](../designers/media/gfx_model_demo_house_extend.png)
 
-7. Triangulovat model. Na panelu nástrojů editoru modelů vyberte možnost **Rozšířené**  >  **nástroje**  >  **triangulovat** .
+7. Triangulovat model. Na panelu nástrojů editoru modelů vyberte možnost **Rozšířené**  >  **nástroje**  >  **triangulovat**.
 
 8. Vytvořte střechu domu. Přepněte do režimu výběru okrajů tak, že na panelu nástrojů editoru modelů kliknete na **Vybrat Edge** a potom ho aktivujete kliknutím na datovou krychli. Stisknutím a podržením klávesy **CTRL** můžete vybrat hrany, které jsou zde zobrazeny:
 

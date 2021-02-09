@@ -9,16 +9,16 @@ f1_keywords:
 ms.assetid: 9047a494-eaaf-4679-b422-c64e8bde77a4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b6717f524f6a2d3f9f09290ac9bfbd8f02fc23fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58a871925d4cde24675bd7d5c7f777b909ea633d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544544"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918089"
 ---
 # <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503: Průměrná pracovní sada v bajtech pro proces profilace
 

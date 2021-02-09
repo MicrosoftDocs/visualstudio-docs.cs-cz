@@ -7,16 +7,16 @@ ms.topic: how-to
 helpviewer_keywords:
 - automated testing, lab management, test lab
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: bd1ab445093a91875c8e9c20febe37ade3921800
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 33a2669420a3497b17e3ea1b9e5f3ed3d5b78859
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329300"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99916446"
 ---
 # <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>Použití Azure Test Plans místo Lab Management pro automatizované testování
 
@@ -31,7 +31,7 @@ Microsoft Test Manager a Lab Management se spoléhají na definici sestavení XA
 
 | Postup | Pomocí sestavení XAML | V sestavení nebo vydané verzi |
 |-------|----------------------|-----------------|
-| Identifikujte počítače, do kterých chcete nasadit sestavení, a spusťte testy. | Pomocí těchto počítačů vytvořte standardní laboratorní prostředí v Microsoft Test Manager. | neuvedeno |
+| Identifikujte počítače, do kterých chcete nasadit sestavení, a spusťte testy. | Pomocí těchto počítačů vytvořte standardní laboratorní prostředí v Microsoft Test Manager. | Není k dispozici |
 | Identifikujte testy, které mají být spuštěny. | Vytvořte testovací sadu v Microsoft Test Manager, vytvořte testovací případy a přidružte automatizaci ke každému testovacímu případu. Vytvořte nastavení testu v Microsoft Test Manager identifikaci role počítačů v testovacím prostředí, ve kterém mají být testy spuštěny. | Pokud plánujete spravovat testování prostřednictvím testovacích plánů, vytvořte sadu automatických testů v Microsoft Test Manager stejným způsobem. Případně můžete přeskočit tuto možnost, pokud chcete spustit testy přímo z testovacích binárních souborů vytvořených sestavením. V obou případech není nutné vytvářet nastavení testu. |
 | Automatizujte nasazení a testování. | Vytvořte definici sestavení XAML pomocí LabDefaultTemplate. *. XAML. Určete sestavení, testovací sady a testovací prostředí v definici sestavení. | Vytvořte [kanál sestavení nebo vydání](/azure/devops/pipelines/index?view=vsts&preserve-view=true) s jedním prostředím. Spusťte stejný skript nasazení (z definice sestavení XAML) pomocí úlohy příkazového řádku a spusťte automatizované testy pomocí úlohy testovacího agenta nasazení a spusťte úkoly funkčních testů. Zadejte seznam počítačů a jejich přihlašovací údaje jako vstupy pro tyto úlohy. |
 

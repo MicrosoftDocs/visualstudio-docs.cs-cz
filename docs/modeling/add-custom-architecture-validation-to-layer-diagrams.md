@@ -8,16 +8,16 @@ helpviewer_keywords:
 - dependency diagrams, adding custom validation
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: ea168744427469d1d08dd78bc1a23d79d577604f
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: bd5f17e7e8c12da1d4e01738c26650a3df4760fa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100523"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919316"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Přidání vlastního ověřování architektury do diagramů závislostí
 
@@ -82,9 +82,9 @@ Pokud chcete vytvořit jeden VSIX, který obsahuje validátory vrstvy, příkazy
 
 2. Najděte nebo vytvořte **projekt VSIX** ve vašem řešení. Projekt VSIX obsahuje soubor s názvem **source. extension. vsixmanifest**.
 
-3. V **Průzkumník řešení**v nabídce kliknutím pravým tlačítkem v projektu VSIX vyberte **nastavit jako projekt po spuštění**.
+3. V **Průzkumník řešení** v nabídce kliknutím pravým tlačítkem v projektu VSIX vyberte **nastavit jako projekt po spuštění**.
 
-4. V části **source. extension. vsixmanifest**v části **assets (prostředky**) přidejte projekt ověření vrstvy jako komponentu MEF:
+4. V části **source. extension. vsixmanifest** v části **assets (prostředky**) přidejte projekt ověření vrstvy jako komponentu MEF:
 
     1. Zvolte **Nové**.
 

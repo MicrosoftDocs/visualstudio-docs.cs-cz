@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: ccee6551-a1b9-4ca2-8845-9c1cf4ac2560
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9767820889548f134c018df28ee3180088f5dc01
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: d1555a7ef1f942e4be0b7cf929e0e1730f99d1d7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349245"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917282"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application"></a>Návod: Ruční nasazení aplikace ClickOnce
-Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace nebo potřebujete použít pokročilé funkce nasazení, jako je například nasazení důvěryhodné aplikace, měli byste použít nástroj příkazového řádku *Mage.exe* k vytvoření [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestů. Tento návod popisuje, jak vytvořit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení pomocí buď verze příkazového řádku ( *Mage.exe* ), nebo grafické verze ( *MageUI.exe* ) Manifest Generation and Editing Tool.
+Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace nebo potřebujete použít pokročilé funkce nasazení, jako je například nasazení důvěryhodné aplikace, měli byste použít nástroj příkazového řádku *Mage.exe* k vytvoření [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestů. Tento návod popisuje, jak vytvořit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení pomocí buď verze příkazového řádku (*Mage.exe*), nebo grafické verze (*MageUI.exe*) Manifest Generation and Editing Tool.
 
 ## <a name="prerequisites"></a>Požadavky
  Tento návod obsahuje některé předpoklady a možnosti, které je třeba vybrat před sestavením nasazení.
@@ -66,7 +66,7 @@ Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../de
 
 - Určete, jestli aplikace vyžaduje požadavky na klientském počítači.
 
-   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace nasazené ze sady Visual Studio můžou do svého nasazení zahrnout nezbytný zaváděcí nástroj pro instalaci ( *setup.exe* ). Tento návod vytvoří dva manifesty, které jsou požadovány pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení. Potřebný zaváděcí nástroj můžete vytvořit pomocí [úlohy GenerateBootstrapper –](../msbuild/generatebootstrapper-task.md).
+   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace nasazené ze sady Visual Studio můžou do svého nasazení zahrnout nezbytný zaváděcí nástroj pro instalaci (*setup.exe*). Tento návod vytvoří dva manifesty, které jsou požadovány pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení. Potřebný zaváděcí nástroj můžete vytvořit pomocí [úlohy GenerateBootstrapper –](../msbuild/generatebootstrapper-task.md).
 
 ### <a name="to-deploy-an-application-with-the-mageexe-command-line-tool"></a>Nasazení aplikace pomocí nástroje příkazového řádku Mage.exe
 
@@ -133,11 +133,11 @@ Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../de
    MageUI.exe
    ```
 
-5. Vytvořte nový manifest aplikace výběrem položky **soubor** , **Nový** a **manifest aplikace** z nabídky.
+5. Vytvořte nový manifest aplikace výběrem položky **soubor**, **Nový** a **manifest aplikace** z nabídky.
 
 6. Na kartě výchozí **název** zadejte název a číslo verze tohoto nasazení. Zadejte také **procesor** , pro který je aplikace sestavená, například x86.
 
-7. Vyberte kartu **soubory** a potom klikněte na tlačítko se třemi tečkami ( **...** ) vedle textového pole **adresář aplikace** . Zobrazí se dialogové okno **Vyhledat složku** .
+7. Vyberte kartu **soubory** a potom klikněte na tlačítko se třemi tečkami (**...**) vedle textového pole **adresář aplikace** . Zobrazí se dialogové okno **Vyhledat složku** .
 
 8. Vyberte podadresář verze obsahující soubory aplikace a pak vyberte **OK**.
 
@@ -145,11 +145,11 @@ Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../de
 
 10. Chcete-li přidat všechny soubory aplikace do seznamu souborů, použijte tlačítko **naplnit** . Pokud vaše aplikace obsahuje více než jeden spustitelný soubor, označte hlavní spustitelný soubor pro toto nasazení jako spouštěcí aplikaci tak, že vyberete **vstupní bod** v rozevíracím seznamu **typ souboru** . (Pokud vaše aplikace obsahuje jenom jeden spustitelný soubor, *MageUI.exe* bude označovat za vás.)
 
-11. Vyberte kartu **požadovaná oprávnění** a vyberte úroveň důvěryhodnosti, kterou budete potřebovat k vyhodnocení vaší aplikace. Výchozí hodnota je **FullTrust** , která bude vhodná pro většinu aplikací.
+11. Vyberte kartu **požadovaná oprávnění** a vyberte úroveň důvěryhodnosti, kterou budete potřebovat k vyhodnocení vaší aplikace. Výchozí hodnota je **FullTrust**, která bude vhodná pro většinu aplikací.
 
-12. V nabídce vyberte **soubor** , **Uložit jako** . Zobrazí se dialogové okno možnosti podepisování, které vás vyzve k podepsání manifestu aplikace.
+12. V nabídce vyberte **soubor**, **Uložit jako** . Zobrazí se dialogové okno možnosti podepisování, které vás vyzve k podepsání manifestu aplikace.
 
-13. Pokud máte certifikát uložený jako soubor v systému souborů, použijte možnost **podepsat se souborem certifikátu** a vyberte certifikát ze systému souborů pomocí tlačítka se třemi tečkami ( **...** ). Pak zadejte heslo certifikátu.
+13. Pokud máte certifikát uložený jako soubor v systému souborů, použijte možnost **podepsat se souborem certifikátu** a vyberte certifikát ze systému souborů pomocí tlačítka se třemi tečkami (**...**). Pak zadejte heslo certifikátu.
 
      -nebo-
 
@@ -159,11 +159,11 @@ Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../de
 
 15. V dialogovém okně **Uložit jako** zadejte adresář verze a pak vyberte **Uložit**.
 
-16. V nabídce vyberte **soubor** , **Nový** , **manifest nasazení** a vytvořte svůj manifest nasazení.
+16. V nabídce vyberte **soubor**, **Nový**, **manifest nasazení** a vytvořte svůj manifest nasazení.
 
-17. Na kartě **název** zadejte název a číslo verze pro toto nasazení ( **1.0.0.0** v tomto příkladu). Zadejte také **procesor** , pro který je aplikace sestavená, například x86.
+17. Na kartě **název** zadejte název a číslo verze pro toto nasazení (**1.0.0.0** v tomto příkladu). Zadejte také **procesor** , pro který je aplikace sestavená, například x86.
 
-18. Vyberte kartu **Popis** a zadejte hodnoty pro **vydavatele** a **produkt**. ( **Produkt** je název daný vaší aplikaci v nabídce Start systému Windows, když se vaše aplikace nainstaluje na klientský počítač pro použití v režimu offline.)
+18. Vyberte kartu **Popis** a zadejte hodnoty pro **vydavatele** a **produkt**. (**Produkt** je název daný vaší aplikaci v nabídce Start systému Windows, když se vaše aplikace nainstaluje na klientský počítač pro použití v režimu offline.)
 
 19. Vyberte kartu **Možnosti nasazení** a v textovém poli **Začátek umístění** zadejte umístění manifestu aplikace na webovém serveru nebo sdílené složce. Například *\\ \myServer\myShare\AppToDeploy.Application*.
 
@@ -175,9 +175,9 @@ Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../de
 
 23. Vyberte manifest aplikace, který jste vytvořili dříve, a pak vyberte **otevřít**.
 
-24. V nabídce vyberte **soubor** , **Uložit jako** . Zobrazí se dialogové okno **možnosti podepisování** , které vás vyzve k podepsání manifestu nasazení.
+24. V nabídce vyberte **soubor**, **Uložit jako** . Zobrazí se dialogové okno **možnosti podepisování** , které vás vyzve k podepsání manifestu nasazení.
 
-25. Pokud máte certifikát uložený jako soubor v systému souborů, použijte možnost **podepsat se souborem certifikátu** a vyberte certifikát ze systému souborů pomocí tlačítka se třemi tečkami ( **...** ). Pak zadejte heslo certifikátu.
+25. Pokud máte certifikát uložený jako soubor v systému souborů, použijte možnost **podepsat se souborem certifikátu** a vyberte certifikát ze systému souborů pomocí tlačítka se třemi tečkami (**...**). Pak zadejte heslo certifikátu.
 
      -nebo-
 
@@ -192,7 +192,7 @@ Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../de
 29. Poskytněte uživatelům adresu URL, cestu UNC nebo fyzické médium potřebné k instalaci vaší aplikace. Pokud zadáte adresu URL nebo cestu UNC, musíte uživatelům poskytnout úplnou cestu k manifestu nasazení. Pokud je například AppToDeploy nasazen http://webserver01/ v adresáři AppToDeploy, bude úplná cesta URL http://webserver01/AppToDeploy/AppToDeploy.application .
 
 ## <a name="next-steps"></a>Další kroky
- Pokud potřebujete nasadit novou verzi aplikace, vytvořte nový adresář s názvem po nové verzi (třeba 1.0.0.1) a zkopírujte nové soubory aplikace do nového adresáře. Dále je nutné postupovat podle předchozích kroků k vytvoření a podepsání nového manifestu aplikace a aktualizaci a podepsání manifestu nasazení. Buďte opatrní, abyste zadali stejnou vyšší verzi v *Mage.exe* `-New` i `-Update` voláních, a to jenom v případě, že [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aktualizujete novější verze s nejnižším celým číslem, které je nejvíce vlevo. Pokud jste použili *MageUI.exe* , můžete manifest nasazení aktualizovat otevřením, výběrem karty **odkaz na aplikaci** , přechodem na tlačítko **Vybrat manifest** a následným výběrem aktualizovaného manifestu aplikace.
+ Pokud potřebujete nasadit novou verzi aplikace, vytvořte nový adresář s názvem po nové verzi (třeba 1.0.0.1) a zkopírujte nové soubory aplikace do nového adresáře. Dále je nutné postupovat podle předchozích kroků k vytvoření a podepsání nového manifestu aplikace a aktualizaci a podepsání manifestu nasazení. Buďte opatrní, abyste zadali stejnou vyšší verzi v *Mage.exe* `-New` i `-Update` voláních, a to jenom v případě, že [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aktualizujete novější verze s nejnižším celým číslem, které je nejvíce vlevo. Pokud jste použili *MageUI.exe*, můžete manifest nasazení aktualizovat otevřením, výběrem karty **odkaz na aplikaci** , přechodem na tlačítko **Vybrat manifest** a následným výběrem aktualizovaného manifestu aplikace.
 
 ## <a name="see-also"></a>Viz také
 - [Mage.exe (Manifest Generation and Editing Tool)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)

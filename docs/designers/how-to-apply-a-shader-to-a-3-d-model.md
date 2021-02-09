@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: a3877bd6-abd8-4a9d-842c-6848b6c2f335
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b31e9002a97decf699ffbd589a1e0e656e3e403
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: bdaf4b86bfc773df678c03875a9ec260cd72084f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134116"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917075"
 ---
 # <a name="how-to-apply-a-shader-to-a-3d-model"></a>Postupy: Použití shaderu na 3D model
 
@@ -35,7 +35,7 @@ Zde je model, který má použit základní barevný efekt:
 
 ![3&#45;D scény, která zobrazuje základní barevný efekt](../designers/media/digit-3d-model-effect.png)
 
-Po použití shaderu na model jej můžete otevřít v Návrháři shaderu, a to tak, že vyberete model a potom v okně **vlastnosti** ve vlastnosti **(rozšířené)** skupiny vlastností **efekt** zvolíte tlačítko se třemi tečkami ( **...** ).
+Po použití shaderu na model jej můžete otevřít v Návrháři shaderu, a to tak, že vyberete model a potom v okně **vlastnosti** ve vlastnosti **(rozšířené)** skupiny vlastností **efekt** zvolíte tlačítko se třemi tečkami (**...**).
 
 ## <a name="see-also"></a>Viz také
 

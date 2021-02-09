@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint projects, extending
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b815f8ea4656cc5a144f8cf12396391e55123ece
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 378e839ea5f4223873fbbeec8d7b401ae0b16fc0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914865"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918765"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>Návod: Vytvoření rozšíření projektu služby SharePoint
   Tento návod ukazuje, jak vytvořit rozšíření pro projekty služby SharePoint. Můžete použít rozšíření projektu pro reakci na události na úrovni projektu, jako je například přidání, odstranění nebo přejmenování projektu. Můžete také přidat vlastní vlastnosti nebo reagovat při změně hodnoty vlastnosti. Na rozdíl od rozšíření položek projektu nelze rozšíření projektu přidružit ke konkrétnímu typu projektu služby SharePoint. Při vytváření rozšíření projektu rozšíření načte, když je otevřen libovolný druh projektu služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -42,7 +42,7 @@ ms.locfileid: "96914865"
 
 - Ladění a testování vlastnosti projektu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] , SharePoint a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .

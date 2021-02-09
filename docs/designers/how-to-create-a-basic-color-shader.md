@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: c301328a-079a-49e8-b688-4749c01657c0
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d966a8fdc565eae5254d21dba4ab9dfaa440de94
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 0b3c90496050754cc79c8bd774c0faa246e21512
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134103"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917044"
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>Postupy: Vytvoření shaderu základní barvy
 
@@ -29,7 +29,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 1. Vytvořte shader DGSL, se kterým chcete pracovat. Informace o tom, jak přidat DGSL shader do projektu, naleznete v části Začínáme v [Návrháři shaderu](../designers/shader-designer.md).
 
-2. Odstraňte uzel **Barva bodu** . Pomocí nástroje pro **Výběr** vyberte uzel **Barva bodu** a pak na panelu nabídek zvolte možnost **Upravit**  >  **odstranění** .
+2. Odstraňte uzel **Barva bodu** . Pomocí nástroje pro **Výběr** vyberte uzel **Barva bodu** a pak na panelu nabídek zvolte možnost **Upravit**  >  **odstranění**.
 
 3. Přidejte do grafu uzel **barevné konstanty** . V **sadě nástrojů** v části **konstanty** vyberte **barevný konstanta** a přesuňte ji na plochu návrhu.
 

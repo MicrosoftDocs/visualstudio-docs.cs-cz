@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fdaa553f-a27e-44eb-a4e2-08c122105a87
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 54deb51714183497173c7df4e346bb65613366a2
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 59c468e28321c01993cd2f4b119218fb29bc6020
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349292"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917315"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>Návod: Stahování satelitních sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce
 Model Windows Forms aplikace lze nakonfigurovat pro více jazykových verzí prostřednictvím použití satelitních sestavení. *Satelitní sestavení* je sestavení, které obsahuje prostředky aplikace pro jinou jazykovou verzi, než je výchozí jazyková verze aplikace.
@@ -56,7 +56,7 @@ Model Windows Forms aplikace lze nakonfigurovat pro více jazykových verzí pro
 
 4. Klikněte na kartu **soubory** .
 
-5. Klikněte na tlačítko se **třemi tečkami** ( **...** ) a vyberte adresář obsahující všechna sestavení a soubory vaší aplikace, včetně satelitních sestavení, které jste vygenerovali pomocí *Resgen.exe*. (Satelitní sestavení bude mít název ve tvaru *\<isoCode>\ApplicationName.resources.dll* , kde \<isoCode> je identifikátor jazyka ve formátu RFC 1766.)
+5. Klikněte na tlačítko se **třemi tečkami** (**...**) a vyberte adresář obsahující všechna sestavení a soubory vaší aplikace, včetně satelitních sestavení, které jste vygenerovali pomocí *Resgen.exe*. (Satelitní sestavení bude mít název ve tvaru *\<isoCode>\ApplicationName.resources.dll*, kde \<isoCode> je identifikátor jazyka ve formátu RFC 1766.)
 
 6. Kliknutím na tlačítko **naplnit** přidejte soubory do nasazení.
 

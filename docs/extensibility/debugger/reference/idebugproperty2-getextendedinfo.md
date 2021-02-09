@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 0c9c0b2b-7540-4424-adb5-fce7aa37a026
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 34d6cd880ccae520bf000ad01b52223857f4f10f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1bb9fe21b1dc004d5a124a1146e6f7610fbe8699
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80721484"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99916057"
 ---
 # <a name="idebugproperty2getextendedinfo"></a>IDebugProperty2::GetExtendedInfo
 Získá Rozšířené informace o vlastnosti.
@@ -28,14 +28,14 @@ Získá Rozšířené informace o vlastnosti.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetExtendedInfo ( 
+HRESULT GetExtendedInfo ( 
    REFGUID* guidExtendedInfo,
    VARIANT* pExtendedInfo
 );
 ```
 
 ```csharp
-int GetExtendedInfo ( 
+int GetExtendedInfo ( 
    ref Guid guidExtendedInfo,
    out object pExtendedInfo
 );
@@ -56,7 +56,7 @@ mimo Vrátí `VARIANT` kód (C++) nebo objekt (C#), který lze použít k načte
 
  Následující identifikátory GUID jsou obvykle rozpoznávány touto metodou (hodnoty GUID jsou zadány pro jazyk C#, protože název není k dispozici v žádném sestavení). Pro interní použití lze vytvořit další identifikátory GUID.
 
-|Název|Identifikátor GUID|Popis|
+|Název|Identifikátor GUID|Description|
 |----------|----------|-----------------|
 |guidDocument|{3f98de84-fee9-11d0-b47f-00a0244a1dd2}|Vrátí `IUnknown` rozhraní k dokumentu. Rozhraní [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) se obvykle dá získat z tohoto `IUnknown` rozhraní.|
 |guidCodeContext|{e2fc65e-56ce-11d1-b528-00aax004a8797}|Vrátí `IUnknown` rozhraní do kontextu dokumentu. Rozhraní [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) se obvykle dá získat z tohoto `IUnknown` rozhraní.|

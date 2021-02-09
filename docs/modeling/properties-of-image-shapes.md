@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Domain-Specific Language, image shape
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 50785a4f37b4f3e9e6eaae1bb2a58dcf206af672
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 8bbd2fff30ab59d14c8aa2762d8cca942063bd79
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361911"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918344"
 ---
 # <a name="properties-of-image-shapes"></a>Vlastnosti obrazových obrazců
 
@@ -67,12 +67,12 @@ Obrazce obrázků mají vlastnosti, které jsou uvedeny v následující tabulce
 |Počáteční výška|Počáteční výška tohoto obrazce v palcích|1|
 |Počáteční Šířka|Počáteční šířka tohoto obrazce v palcích|1.5|
 |Vystavená Barva výplně jako vlastnost<br /><br /> Zpřístupněný režim přechodu výplně<br /><br /> Vystavená barva obrysu jako vlastnost<br /><br /> Vykrytý styl přerušované čáry jako vlastnost<br /><br /> Vystavená tloušťka obrysu jako vlastnost<br /><br /> Zpřístupňuje barvu textu|Pokud `True` může uživatel nastavit uvedenou vlastnost tvaru. Pokud to chcete nastavit, klikněte pravým tlačítkem na definici obrazce a klikněte na **Přidat vystavené**.|Ne|
-|Popis|Slouží k dokumentování vygenerovaného návrháře.|\<none>|
+|Description|Slouží k dokumentování vygenerovaného návrháře.|\<none>|
 |Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři pro tento obrazec.|\<none>|
 |Pevný text popisu|Text, který se používá pro pevný popis.|\<none>|
 |Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tento element.|\<none>|
 |Image|Cesta k souboru obrázku, který se používá pro tento obrazec.|\<none>|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

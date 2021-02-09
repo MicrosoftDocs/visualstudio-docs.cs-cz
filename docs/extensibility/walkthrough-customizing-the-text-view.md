@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 32d32ac8-22ff-4de7-af69-bd46ec4ad9bf
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 057e2a68e1d9a130f69441d8aec4b6a7fe0249e9
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: f967235eed7e563b01b96cd9ed19d0aa5975b1fa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97862963"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99916986"
 ---
 # <a name="walkthrough-customize-the-text-view"></a>Návod: přizpůsobení zobrazení textu
 Změnou kterékoli z následujících vlastností v její mapě formátu editoru můžete upravit zobrazení textu:
@@ -34,7 +34,7 @@ Změnou kterékoli z následujících vlastností v její mapě formátu editoru
 
 - Viditelné prázdné znaky
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>Vytvořit projekt MEF

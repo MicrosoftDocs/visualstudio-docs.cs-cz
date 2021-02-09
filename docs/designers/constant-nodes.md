@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: 2c798a50-a2d7-459b-9879-ad4ad8290c9b
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: eb7297a5486764127efda72ea37c5c97acc05245
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 79fd16f42629bdf242d70432065d077efd5883eb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134214"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917209"
 ---
 # <a name="constant-nodes"></a>Uzly konstanty
 
@@ -23,13 +23,13 @@ V Návrháři shaderu konstantní uzly reprezentují hodnoty literálu a interpo
 
 ## <a name="vertex-attribute-interpolation"></a>Interpolace atributu vrcholu
 
-Obrázek 3D scény ve hře nebo aplikaci vytváří matematicky transformující počet objektů, které jsou definovány vrcholy, atributy vrcholů a primitivní definice – do pixelů na obrazovce. Všechny informace, které jsou vyžadovány k přidělení pixelu jeho jedinečného vzhledu, jsou dodány prostřednictvím atributů vrcholu, které jsou kombinovány podle blízkosti obrazového bodu s různými vrcholy, které tvoří *primitivní* . Primitivum je základní element vykreslování; To znamená jednoduchý tvar, jako je například bod, čára nebo trojúhelník. Pixel, který je blízko pouze jednoho z vrcholů, přijímá konstanty, které jsou téměř totožné s tímto vrcholem, ale pixel, který je rovnoměrně rozložen mezi všechny vrcholy primitivních hodnot, přijímá konstanty, které jsou průměrem těchto vrcholů. V programování grafiky jsou konstanty, které pixely obdrží, označeny jako *interpolované* . Poskytnutí konstantních dat na pixely tímto způsobem vytváří velmi dobrou vizuální kvalitu a zároveň omezuje nároky na paměť a požadavky na šířku pásma.
+Obrázek 3D scény ve hře nebo aplikaci vytváří matematicky transformující počet objektů, které jsou definovány vrcholy, atributy vrcholů a primitivní definice – do pixelů na obrazovce. Všechny informace, které jsou vyžadovány k přidělení pixelu jeho jedinečného vzhledu, jsou dodány prostřednictvím atributů vrcholu, které jsou kombinovány podle blízkosti obrazového bodu s různými vrcholy, které tvoří *primitivní*. Primitivum je základní element vykreslování; To znamená jednoduchý tvar, jako je například bod, čára nebo trojúhelník. Pixel, který je blízko pouze jednoho z vrcholů, přijímá konstanty, které jsou téměř totožné s tímto vrcholem, ale pixel, který je rovnoměrně rozložen mezi všechny vrcholy primitivních hodnot, přijímá konstanty, které jsou průměrem těchto vrcholů. V programování grafiky jsou konstanty, které pixely obdrží, označeny jako *interpolované*. Poskytnutí konstantních dat na pixely tímto způsobem vytváří velmi dobrou vizuální kvalitu a zároveň omezuje nároky na paměť a požadavky na šířku pásma.
 
 I když každá instance pixel-shaderu přijímá jenom jednu sadu konstantních hodnot a nemůže tyto hodnoty změnit, jiné instance pixel shaderu obdrží různé sady konstantních dat. Tento návrh umožňuje programu shaderu vytvořit jiný barevný výstup pro každý pixel v primitivu.
 
 ## <a name="constant-node-reference"></a>Odkaz na konstantní uzel
 
-|Node|Podrobnosti|Vlastnosti|
+|Uzel|Podrobnosti|Vlastnosti|
 |----------|-------------|----------------|
 |**Vektor kamery**|Vektor, který se od aktuálního pixelu rozšíří do kamery v prostoru světa.<br /><br /> Tuto možnost můžete použít k výpočtu odrazů v prostoru světa.<br /><br /> **Výstup**<br /><br /> `Output`: `float3`<br /> Vektor z aktuálního pixelu do kamery.|Žádné|
 |**Barevná konstanta**|Hodnota konstantní barvy.<br /><br /> **Výstup**<br /><br /> `Output`: `float4`<br /> Hodnota barvy.|**Výstup**<br /> Hodnota barvy.|

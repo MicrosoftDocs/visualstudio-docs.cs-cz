@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 59a0dd5f-1cab-4f2f-b780-0ab7399905d5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 597f633c1f92b09add06909b8cb626262de1156f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 0c2ced89c73d39fecb6b6cee80a8fddb0a8c2391
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350345"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917326"
 ---
 # <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>Návod: stažení sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce pomocí návrháře
 Ve výchozím nastavení jsou všechna sestavení zahrnutá v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci stažena při prvním spuštění aplikace. Mohou však existovat části aplikace, které jsou používány malou sadou uživatelů. V tomto případě chcete stáhnout sestavení pouze při vytvoření některého z jeho typů. Následující návod ukazuje, jak označit určitá sestavení v aplikaci jako "volitelné" a jak je stáhnout pomocí tříd v <xref:System.Deployment.Application> oboru názvů, pokud je aplikace Common Language Runtime vyžaduje.

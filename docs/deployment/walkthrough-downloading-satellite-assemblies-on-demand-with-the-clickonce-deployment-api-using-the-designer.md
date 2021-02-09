@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 82b85a47-b223-4221-a17c-38a52c3fb6e2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b6b57faf01878dc5aff708f0aca47707bf6e48c
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 74e6641eff7fcaecfab300afe4747bb2ab7b75b2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350332"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917306"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>Návod: Stahování satelitních sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce pomocí návrháře
 Model Windows Forms aplikace lze nakonfigurovat pro více jazykových verzí prostřednictvím použití satelitních sestavení. *Satelitní sestavení* je sestavení, které obsahuje prostředky aplikace pro jinou jazykovou verzi, než je výchozí jazyková verze aplikace.
@@ -49,7 +49,7 @@ Model Windows Forms aplikace lze nakonfigurovat pro více jazykových verzí pro
 
 4. Zaškrtněte políčko **Zobrazit všechny soubory** , chcete-li zobrazit satelitní sestavení. Ve výchozím nastavení budou všechna satelitní sestavení obsažena v nasazení a budou viditelná v tomto dialogovém okně.
 
-     Satelitní sestavení bude mít název ve tvaru *\<isoCode>\ApplicationName.resources.dll* , kde \<isoCode> je identifikátor jazyka ve formátu RFC 1766.
+     Satelitní sestavení bude mít název ve tvaru *\<isoCode>\ApplicationName.resources.dll*, kde \<isoCode> je identifikátor jazyka ve formátu RFC 1766.
 
 5. V seznamu skupin pro **stažení** jednotlivých identifikátorů jazyka klikněte na **Nový** . Po zobrazení výzvy k zadání názvu skupiny pro stahování zadejte identifikátor jazyka. Například pro japonské satelitní sestavení byste měli zadat název skupiny pro stahování `ja-JP` .
 

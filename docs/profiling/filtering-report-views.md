@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 820cf192-7fd6-4bee-9a51-aa69154aca85
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f6ba3e207b180b26ea4b53765926b16fb2e85d48
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: a6f4ea9b713cf582a13ce2105bcc5bfd32754d3b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98801449"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99916732"
 ---
 # <a name="filter-report-views"></a>Filtrovat zobrazení sestav
 Můžete použít filtry na soubory dat profilování a omezit tak data profilování, která se zobrazují v zobrazeních sestavy výkonu a exportována do souborů sestav. Sestavu můžete omezit na data mezi hodnotami časových razítek a data můžete omezit na konkrétní procesy a vlákna. Filtry můžete uložit do souboru a pak vytvořit filtr v jiném datovém souboru profilování importováním uloženého filtru.
@@ -37,7 +37,7 @@ Můžete použít filtry na soubory dat profilování a omezit tak data profilov
 
 2. U každé klauzule, kterou chcete přidat do filtru, vyberte nebo zadejte hodnoty v následujících polích řádku.
 
-    |Pole|Popis|
+    |Pole|Description|
     |-----------|-----------------|
     |**A/nebo**|Vyberte **a** Pokud má tato klauzule a další klauzule hodnotu true, aby odpovídaly výsledku. Vyberte **nebo** Pokud má tato klauzule nebo další klauzule hodnotu true, aby odpovídaly výsledku.|
     |**Pole**|Vyberte pole sestavy, které chcete použít v klauzuli Filter ze zobrazeného seznamu datových polí.|

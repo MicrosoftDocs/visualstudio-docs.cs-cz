@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 32f56f282dc5755b8162c4f19a9c036dc2e9cc5f
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: b9ccf478a084b8dedabc6f470a333e3fe4b54eb7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915211"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918730"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1
   Projekty služby SharePoint jsou kontejnery pro jednu nebo více položek projektu služby SharePoint. Systém projektu služby SharePoint v aplikaci Visual Studio můžete roztáhnout tak, že vytvoříte vlastní typy položek projektu SharePoint a pak je přidružíte k šabloně projektu. V tomto návodu definujete typ položky projektu pro vytvoření sloupce web a potom vytvoříte šablonu projektu, kterou lze použít k vytvoření nového projektu, který obsahuje položku projektu sloupce webu.
@@ -43,7 +43,7 @@ ms.locfileid: "96915211"
 > [!NOTE]
 > Řadu ukázkových pracovních postupů najdete v tématu [ukázky pracovních postupů služby SharePoint](/sharepoint/dev/general-development/sharepoint-workflow-samples).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Microsoft Windows, SharePointu a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
