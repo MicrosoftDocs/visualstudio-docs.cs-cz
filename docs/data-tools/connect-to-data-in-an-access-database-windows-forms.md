@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 156acfd56789ec13201738e72c6df283e257e94f
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: eeaafdca1a3a4d6fb73ca275c4fc97ce67094d8e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436859"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867266"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Připojení k datům v accessové databázi
 
 Pomocí sady Visual Studio se můžete připojit k databázi aplikace Access (soubor *. mdb* nebo soubor *. accdb* ). Po definování připojení se data zobrazí v okně **zdroje dat** . Odtud můžete přetáhnout tabulky nebo zobrazení na návrhovou plochu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Chcete-li použít tyto postupy, potřebujete projekt model Windows Forms nebo WPF a buď databázi aplikace Access (soubor *. accdb* ), nebo databázi Access 2000-2003 (soubor *. mdb* ). Postupujte podle kroků odpovídajících vašemu typu souboru.
 
@@ -51,7 +51,7 @@ Pomocí následujícího postupu se připojte k databázím vytvořeným pomocí
 
    Otevře se dialogové okno **Přidat připojení** .
 
-7. Pokud **zdroj dat** není nastaven na **soubor databáze aplikace Microsoft Access** , vyberte tlačítko **změnit** .
+7. Pokud **zdroj dat** není nastaven na **soubor databáze aplikace Microsoft Access**, vyberte tlačítko **změnit** .
 
    Otevře se dialogové okno **změnit zdroj dat** . V seznamu zdrojů dat vyberte **soubor databáze aplikace Microsoft Access**. V rozevíracím seznamu **Zprostředkovatel dat** vyberte **pro OLE DB možnost .NET Framework Zprostředkovatel dat** a pak zvolte **OK**.
 
@@ -91,7 +91,7 @@ Pomocí následujícího postupu se připojte k databázím vytvořeným pomocí
 
 6. Na stránce **Vyberte datové připojení** vyberte **nové připojení** a nakonfigurujte nové datové připojení.
 
-7. Pokud zdroj dat není **soubor databáze Microsoft Access (OLE DB)** , vyberte **změnit** , aby se otevřelo dialogové okno **změnit zdroj dat** , vyberte **soubor databáze Microsoft Access** a pak vyberte **OK**.
+7. Pokud zdroj dat není **soubor databáze Microsoft Access (OLE DB)**, vyberte **změnit** , aby se otevřelo dialogové okno **změnit zdroj dat** , vyberte **soubor databáze Microsoft Access** a pak vyberte **OK**.
 
 8. Do pole **název databázového souboru** zadejte cestu a název souboru *. mdb* , ke kterému se chcete připojit, a pak vyberte **OK**.
 

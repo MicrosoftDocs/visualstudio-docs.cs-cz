@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 243338ef-41af-4cc5-aff7-1e830236f0ec
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: ee50a01093ff83faba17ec6fd59f4ddc1101012a
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: 3da0c4e9835c9b6f6498aa28b82f2e631d1717ba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518645"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867409"
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio
 
@@ -69,7 +69,7 @@ Můžete také přetáhnout položky z okna **zdroje dat** do ovládacích prvk�
 
 ## <a name="bind-to-data-in-individual-controls"></a>Vazba na data v jednotlivých ovládacích prvcích
 
-Když svážete zdroj dat s **podrobnostmi** , je každý sloupec v datové sadě svázán s samostatným ovládacím prvkem.
+Když svážete zdroj dat s **podrobnostmi**, je každý sloupec v datové sadě svázán s samostatným ovládacím prvkem.
 
 ![Vazba zdroje dat k podrobnostem](../data-tools/media/raddata-bind-data-source-to-details.png)
 
@@ -82,7 +82,7 @@ Následující ilustrace znázorňuje výchozí ovládací prvky vázané na dat
 
 Všimněte si také, že každý ovládací prvek má inteligentní značku. Tato značka povoluje vlastní nastavení, která se vztahují pouze na tento ovládací prvek.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vázání ovládacích prvků k datům v aplikaci Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)
 - [Datová vazba v model Windows Forms (.NET Framework)](/dotnet/framework/winforms/windows-forms-data-binding)

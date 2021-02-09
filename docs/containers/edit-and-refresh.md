@@ -3,18 +3,18 @@ title: Ladění aplikací v místním kontejneru Docker | Microsoft Docs
 description: Naučte se, jak upravit aplikaci, která běží v místním kontejneru Docker, aktualizujte kontejner pomocí možností upravit a aktualizovat a pak nastavte zarážky ladění.
 ms.author: ghogen
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.assetid: 480e3062-aae7-48ef-9701-e4f9ea041382
 ms.topic: how-to
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: de7065ebdf5426077418e50d2c03118de9f9d68f
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 3eafb6f3ef345da4316fdbe5d6b96a25d7dc90a9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729298"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867630"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Ladění aplikací v místním kontejneru Docker
 
@@ -25,7 +25,7 @@ Tento článek ukazuje, jak pomocí sady Visual Studio spustit aplikaci v místn
 
 Pokud již máte projekt podporovaného typu, Visual Studio může vytvořit souboru Dockerfile a nakonfigurovat projekt tak, aby běžel v kontejneru. Viz [nástroje kontejneru v aplikaci Visual Studio](overview.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Chcete-li ladit aplikace v místním kontejneru Docker, musí být nainstalovány následující nástroje:
 

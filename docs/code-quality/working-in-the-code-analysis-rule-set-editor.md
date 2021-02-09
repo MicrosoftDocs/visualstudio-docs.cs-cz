@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 370c97bf-bb29-4b2f-b9ae-ba125bce7b2d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d2703972658aace438ab235d469eed3e0644c06
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: ba8ecdd3a1aae382d1b74d75e26e614ba07e6a66
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436820"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867604"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Použití editoru sad pravidel pro analýzu kódu
 
@@ -25,7 +25,7 @@ Editor sady pravidel nástroje Analýza kódu umožňuje zadat pravidla, která 
 
 V následující tabulce jsou uvedeny možnosti závažnosti:
 
-|Akce (závažnost)|Popis|
+|Akce (závažnost)|Description|
 |-|-|
 |Upozornění|Vygeneruje upozornění v **Seznam chyb** a také v čase sestavení.|
 |Chyba|Vygeneruje chybu v **Seznam chyb** a také v čase sestavení.|
@@ -50,7 +50,7 @@ Panel nástrojů editoru sady pravidel můžete použít k seskupení, filtrová
 
 Následující tabulka popisuje ovládací prvky na panelu nástrojů editoru sady pravidel.
 
-|Ovládací prvek Toolbar|Popis|
+|Ovládací prvek Toolbar|Description|
 |---------------------|-----------------|
 |**Rozbalit vše**|Zobrazuje pravidla ve všech skupinách.|
 |**Sbalit vše**|Skryje pravidla ve všech skupinách.|
@@ -69,12 +69,12 @@ Pole sady pravidel zobrazují informace o sadě pravidel a lze je použít k řa
 
 V následující tabulce jsou popsána pole sady pravidel:
 
-|Pole|Popis|
+|Pole|Description|
 |-----------|-----------------|
-|**ÚČET**|Identifikátor pravidla|
+|**ID**|Identifikátor pravidla|
 |**Kategorie**|Kromě jejich členství v sadách pravidel se pravidla analýzy kódu také seskupují podle kategorií. Další informace najdete v tématu [upozornění analýzy kódu](/dotnet/fundamentals/code-analysis/quality-rules/index).|
 |**Název**|Název pravidla|
-|**Hosting**|Obor názvů pravidla|
+|**Obor názvů**|Obor názvů pravidla|
 |**Cílový typ**|Označuje, zda je pravidlo pro nativní, spravovaný nebo databázový kód.|
 |**Akce**|Akce provedená v případě porušení pravidla při spuštění analýzy kódu. Můžete upravit pole **Akce** .|
 |**Zdrojové sady pravidel**|Sada pravidel, která obsahuje pravidlo|

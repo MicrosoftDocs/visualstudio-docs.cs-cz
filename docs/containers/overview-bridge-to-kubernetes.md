@@ -6,15 +6,15 @@ ms.topic: conceptual
 description: Popisuje procesy pro připojení vašeho vývojového počítače ke clusteru Kubernetes pomocí mostu pro Kubernetes.
 keywords: Most do Kubernetes, Docker, Kubernetes, Azure, kontejnery
 monikerRange: '>=vs-2019'
-manager: jillfra
+manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: c6a85faf2d1451dcab9bc822fcdf228513b90dca
-ms.sourcegitcommit: ab60fd7b4a8219e378d100df1386e1b038ecdafc
+ms.openlocfilehash: 253b50ff4778458b28375b06b7fb7f24f4d85054
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96595263"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867565"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Jak funguje Přemostění na Kubernetes
 

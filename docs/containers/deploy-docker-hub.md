@@ -2,19 +2,19 @@
 title: Nasazení kontejneru Docker ASP.NET Core do Docker Hub | Microsoft Docs
 description: Naučte se používat nástroje sady Visual Studio Container k nasazení webové aplikace ASP.NET Core do Docker Hub.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.technology: vs-azure
 ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 07/23/2019
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 5bbdbffa9de9ac7789495249d3e7bfb0a8d65377
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: e51088d135d0d2cdcc5d1bcca71f72fed8b73fd2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91829899"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867656"
 ---
 # <a name="deploy-to-docker-hub"></a>Nasazení do Docker Hubu
 
@@ -32,7 +32,7 @@ Pokud nemáte úložiště Docker Hub, vytvořte ho v [Dock hub](https://hub.doc
 
    ![Snímek obrazovky s možnostmi nasazení](media/container-tools/vs-2019/docker-container-registry.png)
 
-1. Zvolte **docker Container Registry**a pak zvolte **Docker Hub**.
+1. Zvolte **docker Container Registry** a pak zvolte **Docker Hub**.
 
    ![Snímek obrazovky dialogového okna pro publikování – výběr centra Docker](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
 
