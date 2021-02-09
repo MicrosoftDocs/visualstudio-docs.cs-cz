@@ -17,15 +17,15 @@ helpviewer_keywords:
 - task panes [Office development in Visual Studio], automating applications
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7bb53d56a83c74a0ab1719f62377e2da426a83fd
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: ed0d2ae6bf66e8f7375bde72aaec085463b9ca18
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522802"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906615"
 ---
 # <a name="walkthrough-automate-an-application-from-a-custom-task-pane"></a>Návod: automatizace aplikace z vlastního podokna úloh
   Tento návod ukazuje, jak vytvořit vlastní podokno úloh, které automatizuje PowerPoint. Vlastní podokno úloh vloží data do snímku, když uživatel klikne <xref:System.Windows.Forms.MonthCalendar> na ovládací prvek, který se nachází v podokně vlastní úlohy.
@@ -45,7 +45,7 @@ ms.locfileid: "97522802"
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

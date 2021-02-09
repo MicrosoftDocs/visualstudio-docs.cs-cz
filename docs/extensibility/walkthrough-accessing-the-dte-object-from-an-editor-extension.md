@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: c1f40bab-c6ec-45b0-8333-ea5ceb02a39d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a0ee789590bd411fe7955cf739683d016164f49
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: 7228165d49c7f11c15d12086933c473699ef6bc8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863707"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905587"
 ---
 # <a name="walkthrough-access-the-dte-object-from-an-editor-extension"></a>Návod: přístup k objektu DTE z rozšíření editoru
 
 V rozhraních VSPackage můžete získat objekt DTE voláním <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> metody s typem objektu DTE. V rozšíření Managed Extensibility Framework (MEF) můžete importovat <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> a následně volat <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> metodu s typem <xref:EnvDTE.DTE> .
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 

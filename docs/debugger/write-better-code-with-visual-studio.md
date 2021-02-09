@@ -10,15 +10,15 @@ helpviewer_keywords:
 - debugger
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ac595098d793e44d65312a09fc8857225f150ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c69fe13821f595a137c07d545a4ccfb10fc89b34
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89311388"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99904955"
 ---
 # <a name="debugging-techniques-and-tools-to-help-you-write-better-code"></a>Techniky a nástroje ladění, které vám pomůžou psát lepší kód
 
@@ -44,7 +44,7 @@ Vytvoření aplikace:
 
 1. Musíte mít nainstalovanou aplikaci Visual Studio a nainstalovanou aplikaci **.NET Core pro vývoj pro různé platformy** nebo **desktopové vývojové prostředí .NET** v závislosti na typu aplikace, kterou chcete vytvořit.
 
-    Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/)   a nainstalujte si ji zdarma.
+    Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) a nainstalujte si ji zdarma.
 
     Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, klikněte na **nástroje**  >  **získat nástroje a funkce**. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoj pro různé platformy .NET Core** nebo **vývoj desktopových aplikací .NET** a pak zvolte **Upravit**.
 
@@ -54,7 +54,7 @@ Vytvoření aplikace:
     V okně Start vyberte možnost **vytvořit nový projekt**. Do vyhledávacího pole zadejte **Console** a pak zvolte buď **Konzolová aplikace (.NET Core)** , nebo **aplikace konzoly (.NET Framework)**. Zvolte **Další**. Zadejte název projektu, například **Console_Parse_JSON** a klikněte na **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte **Konzolová aplikace**a pak v prostředním podokně zvolte buď **Konzolová aplikace (.net Core)** nebo **aplikace konzoly (.NET Framework)**. Zadejte název, například **Console_Parse_JSON** a klikněte na tlačítko **OK**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte **Konzolová aplikace** a pak v prostředním podokně zvolte buď **Konzolová aplikace (.net Core)** nebo **aplikace konzoly (.NET Framework)**. Zadejte název, například **Console_Parse_JSON** a klikněte na tlačítko **OK**.
     ::: moniker-end
 
     Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** nebo **aplikace konzoly (.NET Framework)** , přejděte do části **nástroje**  >  **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Zvolte buď možnost **vývoj pro různé platformy .NET Core** , nebo **desktopový vývoj** pro platformu .NET a pak zvolte možnost **Upravit**.
@@ -413,7 +413,7 @@ Zjistili jsme pomocníka s výjimkou ladicího programu, ale ladicí program je 
 
 Informace o tom, jak používat základní funkce ladicího programu, najdete v tématu [ladění pro absolutní začátečníky](../debugger/debugging-absolute-beginners.md).
 
-## <a name="fix-performance-issues"></a>Vyřešit problémy s výkonem
+## <a name="fix-performance-issues"></a>Řešení problémů s výkonem
 
 Chyby jiného druhu zahrnují neefektivní kód, který způsobí, že vaše aplikace běží pomalu nebo má příliš mnoho paměti. Obecně platí, že optimalizace výkonu je něco, co budete dělat později ve vývoji aplikací. K problémům s výkonem ale můžete v brzkém provozu (například vidíte, že některá část aplikace je spuštěná pomalu) a možná budete muset otestovat aplikaci pomocí nástrojů pro profilaci na začátku. Další informace o nástrojích pro profilaci, jako je nástroj využití CPU a analyzátor paměti, najdete v tématu [první pohled na nástroje pro profilaci](../profiling/profiling-feature-tour.md).
 

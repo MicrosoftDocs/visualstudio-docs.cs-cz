@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: e39f13f7-1e1d-4435-95ca-0c222bca071c
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d7e42452d8ee59142c4f906d928378d1fb44bf67
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: dbf938e61cc1567beb682847821595f5ca6cc026
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904518"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905470"
 ---
 # <a name="msbuild"></a>MSBuild
 
 Microsoft Build Engine je platforma pro vytváření aplikací. Tento modul, který je také známý jako MSBuild, poskytuje schéma XML pro soubor projektu, který určuje, jak platforma sestavení zpracovává a sestavuje software. Visual Studio používá MSBuild, ale nástroj MSBuild nezávisí na aplikaci Visual Studio. Vyvoláním *msbuild.exe* v souboru projektu nebo řešení můžete orchestrovat a sestavovat produkty v prostředích, kde není nainstalována aplikace Visual Studio.
 
- Visual Studio používá MSBuild k načtení a sestavení spravovaných projektů. Soubory projektu v aplikaci Visual Studio ( *. csproj* , *vbproj* , *. vcxproj* a jiné) obsahují kód XML nástroje MSBuild, který se spouští při vytváření projektu pomocí integrovaného vývojového prostředí (IDE). Projekty sady Visual Studio importují veškerá potřebná nastavení a procesy sestavení pro provádění typických vývojových prací, ale můžete je roztáhnout nebo upravit v rámci sady Visual Studio nebo pomocí editoru XML.
+ Visual Studio používá MSBuild k načtení a sestavení spravovaných projektů. Soubory projektu v aplikaci Visual Studio (*. csproj*, *vbproj*, *. vcxproj* a jiné) obsahují kód XML nástroje MSBuild, který se spouští při vytváření projektu pomocí integrovaného vývojového prostředí (IDE). Projekty sady Visual Studio importují veškerá potřebná nastavení a procesy sestavení pro provádění typických vývojových prací, ale můžete je roztáhnout nebo upravit v rámci sady Visual Studio nebo pomocí editoru XML.
 
  Informace o nástroji MSBuild pro jazyk C++ naleznete v tématu [MSBuild (C++)](/cpp/build/msbuild-visual-cpp).
 
@@ -170,7 +170,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
 - Můžete cílit na jiné architektury než .NET Framework, například na Silverlight.
 
-- Můžete cílit na *profil rozhraní* , což je předdefinovaná podmnožina cílové architektury.
+- Můžete cílit na *profil rozhraní*, což je předdefinovaná podmnožina cílové architektury.
 
 - Pokud se uvolní aktualizace Service Pack pro aktuální verzi .NET Framework, můžete na ni cílit.
 
@@ -195,7 +195,7 @@ Další informace najdete v tématu [cílení](../msbuild/msbuild-multitargeting
 | [Jak MSBuild sestavuje projekty](build-process-overview.md) | Popisuje interní proces sestavení používaný v rámci nástroje MSBuild. |
 | [Další materiály](https://social.msdn.microsoft.com/forums/vstudio/home?forum=msbuild) | Obsahuje seznam prostředků komunity a podpory, kde najdete další informace o nástroji MSBuild. |
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
 
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)\
  Obsahuje odkazy na témata, která obsahují referenční informace.

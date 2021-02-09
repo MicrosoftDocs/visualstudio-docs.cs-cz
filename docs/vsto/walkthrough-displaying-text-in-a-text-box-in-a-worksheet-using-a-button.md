@@ -14,15 +14,15 @@ helpviewer_keywords:
 - text [Office development in Visual Studio], text boxes
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c499800efa783ce252dbf925f307bc64e814420f
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 270754005704d91569f014ed2e0be382bc2dd707
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522645"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906476"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-worksheet-using-a-button"></a>Návod: zobrazení textu v textovém poli na listu s použitím tlačítka
   Tento názorný postup ukazuje základy používání tlačítek a textových polí v systém Microsoft Office excelových listů a vytváření projektů aplikace Excel pomocí nástrojů pro vývoj pro Office v sadě Visual Studio. Chcete-li zobrazit výsledek jako dokončený vzorek, přečtěte si ukázku ovládací prvky aplikace Excel v [ukázkách vývoje pro Office a návody](../vsto/office-development-samples-and-walkthroughs.md).
@@ -40,7 +40,7 @@ ms.locfileid: "97522645"
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

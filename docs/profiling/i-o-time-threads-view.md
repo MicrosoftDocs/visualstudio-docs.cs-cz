@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0c4ec14d-d8dd-49c1-999c-dcbf4e8e1dc8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 915ab6aef595fba7e13321d4e23c08bdd2eadaf3
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: e147d97616f846339dc12e3941f6944f277d8318
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98721629"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906864"
 ---
 # <a name="io-time-threads-view"></a>čas I/O (zobrazení vláken)
 Tyto segmenty na časové ose jsou přidruženy k době blokování, které jsou zařazeny do kategorií v/v. To znamená, že vlákno čeká na dokončení vstupně-výstupních operací. Vlákno mohlo být zablokované v rozhraní API nebo jádro související s/O čeká na to, že Vizualizátor souběžnosti se počítá jako vstup a výstup. `CreateFile()` `ReadFile()` Do této skupiny patří rozhraní API, jako je, a `WSARecv()` .

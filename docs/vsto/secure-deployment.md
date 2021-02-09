@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ClickOnce deployment [Office development in Visual Studio], security
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b47a18aa3e791d446abc2a57b6aad1f139924ebf
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: c778ed98a3f5d17007acccd2f16208ece3237037
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528470"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906745"
 ---
 # <a name="secure-deployment"></a>Zabezpečené nasazení
   Při vytváření řešení pro systém Office je váš vývojový počítač automaticky aktualizován, aby bylo možné spustit kód v projektu. Pokud však nasazujete řešení, je nutné poskytnout legitimaci, na které se má založit rozhodnutí o vztahu důvěryhodnosti, podepsáním řešení pomocí certifikátu nebo pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] klíče pro výzvu vztahu důvěryhodnosti. Další informace najdete v tématu [udělení vztahu důvěryhodnosti řešením pro systém Office](../vsto/granting-trust-to-office-solutions.md).

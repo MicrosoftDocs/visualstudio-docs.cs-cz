@@ -33,15 +33,15 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 003eaa7eefffaab9ff2b3c8c25a5ce5c0d41d43b
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: e90a6466a4bff0f3299e3f47bce7e0b54d540fcf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150363"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905025"
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app"></a>Spuštění ladicí relace aplikace pro UPW
 
@@ -120,7 +120,7 @@ V aplikacích C++ aplikace Visual Studio ve výchozím nastavení ladí nativní
 |**Jenom spravovaná**|Ladění spravovaného kódu ve vaší aplikaci. Kód JavaScriptu a nativní kód jazyka C/C++ jsou ignorovány.|
 |**Pouze nativní**|Ladění nativního kódu C/C++ ve vaší aplikaci. Spravovaný kód a kód jazyka JavaScript jsou ignorovány.|
 |**Smíšený (spravovaný a nativní)**|Ladění nativního kódu C/C++ a spravovaného kódu ve vaší aplikaci. JavaScriptový kód se ignoruje. V projektech C++ je tato možnost označována jako **spravovaná a nativní**.|
-|**Pravidel**|Ladění kódu JavaScriptu ve vaší aplikaci. Spravovaný kód a nativní kód jsou ignorovány.|
+|**Skript**|Ladění kódu JavaScriptu ve vaší aplikaci. Spravovaný kód a nativní kód jsou ignorovány.|
 |**Nativní se skriptem**|Ladění nativního kódu C/C++ a kódu JavaScriptu ve vaší aplikaci. Spravovaný kód se ignoruje. K dispozici v projektech C++ nebo pouze v úlohách na pozadí.|
 |**Pouze GPU (C++ AMP)**|Ladit nativní kód jazyka C++, který je spuštěn na grafické jednotce procesoru (GPU). K dispozici pouze v projektech C++.|
 

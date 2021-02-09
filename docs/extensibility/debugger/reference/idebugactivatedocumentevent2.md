@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 6f37edd7-a48c-4b41-b160-dff9be63a284
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f601027ce9e71dff6687bcd6aa1b08f13f5ce0cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ec3168a7e104e20bbb53607b4bd7a6acd8e79e7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80736616"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99904656"
 ---
 # <a name="idebugactivatedocumentevent2"></a>IDebugActivateDocumentEvent2
 Ladicí stroj (DE) používá toto rozhraní k vyžádání dokumentu, který má být načten.
@@ -37,7 +37,7 @@ IDebugActivateDocumentEvent2 : IUnknown
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
  V následující tabulce jsou uvedeny metody `IDebugActivateDocumentEvent2` .
 
-|Metody|Popis|
+|Metody|Description|
 |-------------|-----------------|
 |[GetDocument](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocument.md)|Načte dokument, který se má aktivovat.|
 |[GetDocumentContext](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocumentcontext.md)|Získá kontext dokumentu, který popisuje pozici v dokumentu.|

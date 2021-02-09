@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: cc8c17a6-b190-4856-b001-0c1104f104b2
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2693d25e0b175a075bcc644077895076b75b7578
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 48f88f48f62818882dd15889cdfa1bd2a48d9808
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97875723"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905822"
 ---
 # <a name="resources-in-vspackages"></a>Prostředky v balíčcích VSPackage
 Lokalizované prostředky můžete vkládat do nativních knihoven DLL satelitního uživatelského rozhraní, spravovaných satelitních knihoven DLL nebo ve spravovaném VSPackage.

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - smart documents [Office development in Visual Studio], data binding
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 76dffda9b332b9b76d6c0e0a423073959bcc7a56
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 7599348b0c44b7239305bb5af49ee2f5c51d882b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526213"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906582"
 ---
 # <a name="walkthrough-bind-data-to-controls-on-a-word-actions-pane"></a>Návod: svázání dat s ovládacími prvky v podokně akcí aplikace Word
   Tento návod ukazuje datovou vazbu k ovládacím prvkům v podokně akce ve Wordu. Ovládací prvky ukazují relaci hlavního/podrobností mezi tabulkami v SQL Server databázi.
@@ -43,7 +43,7 @@ ms.locfileid: "97526213"
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

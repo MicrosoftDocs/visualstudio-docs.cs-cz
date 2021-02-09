@@ -19,15 +19,15 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], calling code
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6016dbf53413f6e55c88edfe930af677472bdaf5
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: bcb13ec0e26b1668a397d56982d049bf9ebcceb0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527382"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906545"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-basic-project"></a>Návod: volání kódu z jazyka VBA v projektu Visual Basic
   Tento návod ukazuje, jak volat metodu v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word z kódu jazyk Visual Basic for Application (VBA) v dokumentu. Postup zahrnuje tři základní kroky: Přidání metody do `ThisDocument` třídy hostitelské položky, vystavení metody pro kód VBA a následné volání metody z kódu VBA v dokumentu.
@@ -51,7 +51,7 @@ ms.locfileid: "97527382"
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

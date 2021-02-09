@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Domain-Specific Language, compartment shape
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 54b6e42a46fc60dd981d9a103a4303b44fb0f909
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: eb97f6b218655266afeaeec6198ea52d35c76c52
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360491"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905497"
 ---
 # <a name="properties-of-compartment-shapes"></a>Vlastnosti obrazců prostoru
 Obrazce oddílu jsou jedním z tvarů, které můžete použít k zobrazení doménové třídy v jazyce specifickém pro doménu. Můžete rozbalit a sbalit oddíly.
@@ -52,11 +52,11 @@ Obrazce oddílu jsou jedním z tvarů, které můžete použít k zobrazení dom
 |Počáteční výška|Počáteční výška tohoto obrazce v palcích U obrazců oddílu se jedná o výšku pouze oddílu záhlaví a nelze ji změnit.|1|
 |Počáteční Šířka|Počáteční šířka tohoto obrazce v palcích|1.5|
 |Vystavená Barva výplně jako vlastnost<br /><br /> Zpřístupněný režim přechodu výplně<br /><br /> Vystavená barva obrysu jako vlastnost<br /><br /> Vykrytý styl přerušované čáry jako vlastnost<br /><br /> Vystavená tloušťka obrysu jako vlastnost<br /><br /> Zpřístupňuje barvu textu|Pokud `True` může uživatel nastavit uvedenou vlastnost tvaru. Pokud to chcete nastavit, klikněte pravým tlačítkem na definici obrazce a klikněte na **Přidat vystavené**.|Ne|
-|Popis|Slouží k dokumentování vygenerovaného návrháře.|\<none>|
+|Description|Slouží k dokumentování vygenerovaného návrháře.|\<none>|
 |Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři pro tento obrazec.|\<none>|
 |Pevný text popisu|Text, který se používá pro pevný popis.|\<none>|
 |Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tento tvar.|\<none>|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: c7f647bb-c5a3-4708-9f9d-33c0fd6e2e96
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f08821516ca25ed4e1746e13e506b9c0094b0227
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: ee8ae3082dc4dd19bb67c9374766b0d8f702fc9b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98721551"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906816"
 ---
 # <a name="instruction-pointers-ips-view---sampling-data"></a>Zobrazení ukazatelů na instrukce (IP) – vzorkování dat
 Zobrazení IP adres dat vzorkování obsahuje údaje o výkonu pro pokyny k sestavení, které byly přímo spouštěny, když byly vzorky shromážděny při spuštění profilace.

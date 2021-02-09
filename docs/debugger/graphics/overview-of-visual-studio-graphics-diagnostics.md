@@ -6,15 +6,15 @@ ms.date: 02/09/2017
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ccf3b77c9b1f4dee7183aac32e8810417ba69c5
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: ae7969a3eb0e33b46755cdb3fa92cc2bcbe19c8a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996133"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905181"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Přehled diagnostiky grafiky sady Visual Studio
 Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a analýzu problémů s výkonem a výkonem v aplikacích Direct3D. Diagnostika grafiky lze použít pro aplikace, které jsou spuštěny místně na počítači s Windows nebo na vzdáleném počítači nebo zařízení.

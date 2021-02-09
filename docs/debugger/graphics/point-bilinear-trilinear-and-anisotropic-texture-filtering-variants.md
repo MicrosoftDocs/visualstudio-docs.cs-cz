@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 57d14fc9-b5f7-45ee-9717-48086886742d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c38869b4c8daa4cb4433f9f6a64afcc7398c9a9c
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 7de150064ee493795bdeed579715dbf1370573a2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996081"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905069"
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Varianty bodového, bilineárního, trilineárního a anisotropního filtrování textur
 Přepíše režim filtrování na příslušných vzorkovačích textury.
@@ -60,7 +60,7 @@ Přepíše režim filtrování na příslušných vzorkovačích textury.
 
   V variantě **filtrování Anisotropního textury** je režim filtrování poskytovaný aplikací nahrazen hodnotou `D3D11_FILTER_ANISOTROPIC` a maximální Anisotropy je nastaven na 16.
 
-## <a name="restrictions-and-limitations"></a>Omezení a omezení
+## <a name="restrictions-and-limitations"></a>Omezení a limity
  V rozhraní Direct3D úroveň funkce 9,1 určuje maximální anisotropy hodnotu 2x. Vzhledem k tomu, že se varianta **Anisotropního textur filtrování** pokusí použít výhradně 16x anisotropy, přehrávání se nezdařilo, když je analýza snímků spuštěna na zařízení 9,1 na úrovni funkce. Mezi moderní zařízení ovlivněná tímto omezením patří zařízení s platformou RT a Surface 2 pro tablety na bázi ARM. Starší grafické procesory, které by se mohly v některých počítačích pořád najít, můžou mít vliv i na zastaralé a pořád stále neobvyklá.
 
 ## <a name="example-1"></a>Příklad 1

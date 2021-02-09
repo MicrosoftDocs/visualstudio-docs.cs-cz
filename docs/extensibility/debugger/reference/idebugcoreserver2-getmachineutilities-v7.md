@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 64c1f08f-853b-4498-9810-29791581ef2f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 79eba6889583f1dfa482dab107ad31eaaacdbcc2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3572390f6e047d0e06b645b6a364971fe4557ea8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80733148"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99904051"
 ---
 # <a name="idebugcoreserver2getmachineutilities_v7"></a>IDebugCoreServer2::GetMachineUtilities_V7
 Tato metoda načte nástroje počítače pro server.
@@ -31,14 +31,14 @@ Tato metoda načte nástroje počítače pro server.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetMachineUtilities_V7(
-   IDebugMDMUtil2_V7** ppUtil
+HRESULT GetMachineUtilities_V7(
+   IDebugMDMUtil2_V7** ppUtil
 );
 ```
 
 ```csharp
-int GetMachineUtilities_V7(
-   out IDebugMDMUtil2_V7 ppUtil
+int GetMachineUtilities_V7(
+   out IDebugMDMUtil2_V7 ppUtil
 );
 ```
 

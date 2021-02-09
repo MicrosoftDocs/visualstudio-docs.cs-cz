@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 8b73b341-a33a-4ab5-9390-178c9e563d2d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 905d81d49706c3ae5348d71c03189d6e036dd3e5
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 823d46453ac6ad4a1a5a42c1f7d18a079b39d12d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189989"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905857"
 ---
 # <a name="checklist-create-a-legacy-language-service"></a>Kontrolní seznam: vytvoření služby starší verze jazyka
 Následující kontrolní seznam shrnuje základní kroky, které je třeba provést, aby bylo možné vytvořit službu jazyka pro [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] základní editor. Chcete-li integrovat službu jazyka do nástroje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , je nutné vytvořit vyhodnocovací filtr výrazů ladění. Další informace naleznete v tématu [Write a vyhodnocovací filtr výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) v [rozšíření ladicího programu sady Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md).

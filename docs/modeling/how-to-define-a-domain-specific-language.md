@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Domain-Specific Language, domain properties
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 40dcba1cb83e695f2b02468bdd83a5faa8c25a38
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 440d2f42fb7967ebbcb97433c3faa55e2d91ca0e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363312"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903934"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Jak se definuje jazyk specifický pro doménu
 Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešení sady Visual Studio ze šablony. Klíčovou součástí řešení je diagram definice DSL, který je uložený v DslDefinition. DSL. Definice DSL definuje třídy a tvary DSL. Po úpravě a přidání na tyto prvky můžete přidat programový kód pro přizpůsobení DSL.
@@ -622,7 +622,7 @@ Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové řešen
 | Sada nástrojů moje DSL se po změně názvů sestavení nezobrazí. | Prohlédněte si a aktualizujte **DslPackage\GeneratedCode\Package.TT** , kde najdete další informace, viz [Postupy: změna oboru názvů Domain-Specificho jazyka](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md). |
 | Sada nástrojů mého DSL se nezobrazí, ale nezměnili jste název sestavení.<br /><br /> Nebo se zobrazí okno se zprávou, která hlásí selhání načtení rozšíření. | Obnovte experimentální instanci a znovu sestavte řešení.<br /><br /> 1. v nabídce Start systému Windows v části **všechny programy** rozbalte [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] a pak **nástroje** a potom klikněte na **resetovat Microsoft Visual Studio experimentální instanci**.<br />2. v nabídce **sestavení** klikněte na **znovu sestavit řešení**. |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Začínáme s jazyky specifickými pro doménu](../modeling/getting-started-with-domain-specific-languages.md)
 - [Vytvoření jazyka specifického pro doménu založeného na modelu Windows Forms](../modeling/creating-a-windows-forms-based-domain-specific-language.md)

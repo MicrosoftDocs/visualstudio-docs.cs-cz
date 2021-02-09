@@ -24,15 +24,15 @@ helpviewer_keywords:
 - XML documentation comments [JavaScript]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b4f86d904d98235ee98c54045789751c829b28c
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: 5a4120a6038949f172b96bec599f2329b69abcac
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947827"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903967"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 

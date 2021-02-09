@@ -5,18 +5,18 @@ ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 586f503569f7218e78cda79e7a40e33f7ec30ff6
-ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
+ms.openlocfilehash: 386b41dd7f1b19d223703570b0423de0855e983a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97696529"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99904800"
 ---
 # <a name="choco-install"></a>choco-install
 
@@ -29,7 +29,7 @@ Pokud `input` `additionalOptions` jsou vlastnosti i vynechány nebo jsou prázdn
 | Název                                             | Typ   | Vyžadováno  | Hodnota                                                                                                          |
 |--------------------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------|
 | **vyjádření**                                     | řetězec | No        | Volitelná vlastnost komentářů Nepoužívá se.                                                                          |
-| [**vstup**](#input)                              | řetězec | Yes       | Balíček, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .                                                 |
+| [**vstup**](#input)                              | řetězec | Ano       | Balíček, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .                                                 |
 | [**additionalOptions**](#additional-options)     | řetězec | No        | Další možnosti, které se mají předat nástroji Podrobnosti najdete níže v části [Další možnosti](#additional-options) .       |
 
 ### <a name="input"></a>Vstup
@@ -47,7 +47,7 @@ Pokud chcete přidat nový informační kanál k čokoládě, podobně jako `cho
 
 `choco-install`Nástroj nastaví řadu `choco` argumentů příkazového řádku, aby bylo zajištěno, že `choco` může běžet bez periferních zařízení. Níže jsou uvedené argumenty a dokumentace k nim najdete v [dokumentaci k čokoládě](https://chocolatey.org/docs/).
 
-| Název                  | Popis                                                                                        |
+| Název                  | Description                                                                                        |
 |-----------------------|----------------------------------------------------------------------------------------------------|
 | **--Ano**             | Potvrdit všechny výzvy – vybere kladnou odpověď místo výzvy. To `--accept-license.` |
 | **--No-Progress**     | Nezobrazovat průběh – procento průběhu nebude zobrazeno.                                         |

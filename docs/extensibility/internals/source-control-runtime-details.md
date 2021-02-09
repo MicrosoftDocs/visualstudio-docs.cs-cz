@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1acd30e0-f98c-4bde-b9cd-4076845887df
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbe1e0e915a28412fcfd411e72b6d622e065b8f8
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 213b0096f2bea541fa55840f8f1ea78e8f195cd8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877972"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905760"
 ---
 # <a name="source-control-runtime-details"></a>Podrobnosti modulu CLR správy zdrojového kódu
 Projekt je přidán do správy zdrojového kódu, když uživatel přidá soubor do správy zdrojového kódu nebo prostřednictvím kontroleru automatizace, jako je například Průvodce. Projekt není určen pro sebe samé, že se nachází pod správou zdrojového kódu; podporuje správu zdrojového kódu, ale je nutné do něj přidat ručně.

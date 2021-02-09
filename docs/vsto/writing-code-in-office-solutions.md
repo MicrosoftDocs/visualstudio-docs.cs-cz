@@ -32,15 +32,15 @@ helpviewer_keywords:
 - managed code extensions [Office development in Visual Studio], writing code
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 40ea589cb4406a383876b1f16721f18fc48ebadd
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: b0f72e859e0847b5035e99146ef6c0435ef299d6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526021"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99904447"
 ---
 # <a name="write-code-in-office-solutions"></a>Psaní kódu v řešeních pro systém Office
   Existují některé aspekty psaní kódu v projektech pro systém Office, které se liší od jiných typů projektů v sadě Visual Studio. Mnohé z těchto rozdílů se týkají způsobu, jakým jsou modely objektů Office vystaveny spravovanému kódu. Další rozdíly se týkají návrhu projektů Office.

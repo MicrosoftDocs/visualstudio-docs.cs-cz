@@ -5,18 +5,18 @@ ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 27a29584a4cf3cd688abe36f625c2e68967c39c0
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: fab2a3f2893ba79874b6909b3d19ccf939f8b14a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440487"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906319"
 ---
 # <a name="choco-upgrade"></a>choco-upgrade
 
@@ -44,7 +44,7 @@ Další možnosti konfigurace mohou být předány jako hodnota `additionalOptio
 
 `choco-upgrade`Nástroj nastaví řadu `choco` argumentů příkazového řádku, aby bylo zajištěno, že `choco` může běžet bez periferních zařízení. Níže jsou uvedené argumenty a dokumentace k nim najdete v [dokumentaci k čokoládě](https://chocolatey.org/docs/).
 
-| Název                  | Popis                                                                                        |
+| Název                  | Description                                                                                        |
 |-----------------------|----------------------------------------------------------------------------------------------------|
 | **--Ano**             | Potvrdit všechny výzvy – vybere kladnou odpověď místo výzvy. Implikuje `--accept-license` . |
 | **--No-Progress**     | Nezobrazovat průběh – procento průběhu nebude zobrazeno.                                         |

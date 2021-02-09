@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 78272ddc-9718-4c65-a94e-a44a2e8d54f4
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9d7309e05c3763794deb344a978dd188dbfddd79
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: 8c80f224170d085347ff962bc88301aa0ab3c9f9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863812"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905628"
 ---
 # <a name="vstextview-object"></a>Objekt VSTextView
 
@@ -28,7 +28,7 @@ Textové zobrazení je okno, které umožňuje uživatelům zobrazit a upravit t
 
 V následující tabulce jsou uvedena rozhraní v <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> objektu.
 
-|Rozhraní|Popis|
+|Rozhraní|Description|
 |---------------|-----------------|
 |[IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource)|Standardní rozhraní OLE.|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IDropTarget>|Standardní rozhraní OLE.|

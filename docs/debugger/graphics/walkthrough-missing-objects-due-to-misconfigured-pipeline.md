@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: ed8ac02d-b38f-4055-82fb-67757c2ccbb9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e099d94479183e795a2ad3c8fc8db03fa969111c
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 1b2ce885969ec8b9e382f453eddf388a850e8ac7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994990"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906492"
 ---
 # <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>Návod: Chybějící objekty z důvodu nesprávné konfigurace kanálu
 Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nástroje Diagnostika grafiky k prozkoumání objektu, který chybí z důvodu nenastavené funkce pixel shader.
@@ -30,7 +30,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 - Pomocí okna **fáze zřetězení grafiky** spolu s **zásobníkem volání událostí grafiky** můžete najít zdroj nenastavené funkce pixel shader.
 
-## <a name="scenario"></a>Scénář
+## <a name="scenario"></a>Scenario
  V případě, že v 3D aplikaci chybí objekt, je někdy v případě, že jedna z fází shaderu není nastavena před vykreslením objektu. V aplikacích, které mají jednoduché vykreslování, se zdrojem této chyby obvykle nachází někde v zásobníku volání volání vykreslování objektu. V rámci optimalizace ale některé aplikace dávkují objekty, které mají programy shaderů, textury nebo jiná data, společná pro minimalizaci nákladů na změnu stavu. V těchto aplikacích může být zdroj chyby ukryto v systému dávkování, nikoli v zásobníku volání volání metody Draw. Scénář v tomto návodu ukazuje aplikaci, která má jednoduché vykreslování, takže zdroj chyby lze nalézt v zásobníku volání.
 
  V tomto scénáři se při spuštění aplikace pro otestování pozadí vykreslí podle očekávání, ale jeden z objektů se nezobrazí. Pomocí Diagnostika grafiky zachytíte problém do protokolu grafiky, abyste mohli aplikaci ladit. Problém v této aplikaci vypadá následovně:
