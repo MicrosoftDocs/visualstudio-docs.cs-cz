@@ -7,19 +7,19 @@ ms.topic: conceptual
 ms.assetid: 29a37182-2a2c-47e4-a4a9-2d5412738fed
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 91d1df06d991669b023ede60b8b384ea75af651a
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: e4ba5678d91779f0955147dbc87fd3b57cbe387c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796716"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876403"
 ---
 # <a name="debug-xaml-in-blend"></a>Ladění kódu XAML v programu Blend
 
-Pomocí nástrojů v Blend pro Visual Studio můžete ladit XAML ve vaší aplikaci. Při sestavování projektu jsou všechny chyby zobrazeny na panelu **výsledků** . Dvojím kliknutím na chybu vyhledejte značku týkající se chyby. Pokud potřebujete více místa pro práci, můžete panel **výsledků** skrýt stisknutím klávesy **F12** .
+Pomocí nástrojů v Blend pro Visual Studio můžete ladit XAML ve vaší aplikaci. Při sestavování projektu jsou všechny chyby zobrazeny na panelu **výsledků** . Dvojím kliknutím na chybu vyhledejte značku týkající se chyby. Pokud potřebujete více místa pro práci, můžete panel **výsledků** skrýt stisknutím klávesy **F12**.
 
 ## <a name="syntax-errors"></a>Chyby syntaxe
 
@@ -48,13 +48,13 @@ Následující příklad vás provede jednoduchou ladicí relací XAML v Blendu.
 
 #### <a name="to-create-a-project"></a>Vytvoření projektu
 
-1. V Blendu otevřete nabídku **soubor** a pak klikněte na **Nový projekt** .
+1. V Blendu otevřete nabídku **soubor** a pak klikněte na **Nový projekt**.
 
     V dialogovém okně **Nový projekt** se zobrazí seznam typů projektu na levé straně. Když kliknete na typ projektu, šablony projektu, které jsou k němu přidruženy, se zobrazí na pravé straně.
 
-2. V seznamu typů projektů klikněte na možnost **univerzální pro Windows** .
+2. V seznamu typů projektů klikněte na možnost **univerzální pro Windows**.
 
-3. V seznamu šablon projektů klikněte na **prázdná aplikace (univerzální pro Windows)** .
+3. V seznamu šablon projektů klikněte na **prázdná aplikace (univerzální pro Windows)**.
 
 4. Do textového pole **název** zadejte `DebuggingSample` .
 
@@ -118,7 +118,7 @@ Když jsou zjištěny chyby XAML, návrhová plocha zobrazí výstrahu, že proj
 
 ## <a name="debug-in-visual-studio"></a>Ladění v sadě Visual Studio
 
-Projekty Blendu v aplikaci Visual Studio můžete otevřít pro snazší ladění kódu v aplikaci. Chcete-li otevřít projekt Blend v aplikaci Visual Studio, klikněte pravým tlačítkem myši na projekt na panelu **projekty** a potom klikněte na možnost **Upravit v aplikaci Visual Studio** . Po dokončení ladění relace v aplikaci Visual Studio stiskněte kombinaci kláves CTRL + SHIFT + S a uložte všechny změny a pak přepněte zpět do Blendu. Zobrazí se výzva k opětovnému načtení projektu. Pokud chcete pokračovat v práci v Blendu, klikněte na **Ano** .
+Projekty Blendu v aplikaci Visual Studio můžete otevřít pro snazší ladění kódu v aplikaci. Chcete-li otevřít projekt Blend v aplikaci Visual Studio, klikněte pravým tlačítkem myši na projekt na panelu **projekty** a potom klikněte na možnost **Upravit v aplikaci Visual Studio**. Po dokončení ladění relace v aplikaci Visual Studio stiskněte kombinaci kláves CTRL + SHIFT + S a uložte všechny změny a pak přepněte zpět do Blendu. Zobrazí se výzva k opětovnému načtení projektu. Pokud chcete pokračovat v práci v Blendu, klikněte na **Ano** .
 
 Další informace o ladění aplikace naleznete v tématu [ladění aplikací pro UWP v aplikaci Visual Studio](../debugger/debugging-windows-store-and-windows-universal-apps.md).
 

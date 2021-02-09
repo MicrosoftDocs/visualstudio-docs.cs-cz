@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 67097b3a-fcf5-4a72-beb1-2c7784151a86
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fd81377ca24dfbeaf4a25f2af00fb69f4821d73
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: d4c594e613d1160794e8310695d61bcc97902caa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437980"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876456"
 ---
 # <a name="foreachlttgt-activity-designer"></a>&lt; &gt; Návrhář aktivity ForEach T
 
@@ -29,9 +29,9 @@ Následující tabulka uvádí nejužitečnější <xref:System.Activities.State
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Popisný název <xref:System.Activities.Statements.ForEach%601> aktivity Výchozí hodnota je ForEach<Int32 \> . I když není <xref:System.Activities.Activity.DisplayName%2A> hodnota striktně nutná, je osvědčeným postupem použití jednoho.|
-|<xref:System.Activities.Statements.ForEach%601.Values%2A>|Pravda|Kolekce položek, které se mají iterovat Chcete-li nastavit <xref:System.Activities.Statements.ForEach%601.Values%2A> , zadejte výraz Visual Basic do pole **hodnoty** v návrháři aktivity **foreach<T \>** nebo v mřížce vlastností.|
-|*Pro TypeArgument*|Pravda|Typ položek v <xref:System.Activities.Statements.ForEach%601.Values%2A> kolekci určené obecným parametrem *T*. Ve výchozím nastavení je *pro TypeArgument* nastaveno na hodnotu **Int32**. Chcete-li změnit typ, změňte hodnotu pole se seznamem *pro TypeArgument* v mřížce vlastností.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Popisný název <xref:System.Activities.Statements.ForEach%601> aktivity Výchozí hodnota je ForEach<Int32 \> . I když není <xref:System.Activities.Activity.DisplayName%2A> hodnota striktně nutná, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.ForEach%601.Values%2A>|Ano|Kolekce položek, které se mají iterovat Chcete-li nastavit <xref:System.Activities.Statements.ForEach%601.Values%2A> , zadejte výraz Visual Basic do pole **hodnoty** v návrháři aktivity **foreach<T \>** nebo v mřížce vlastností.|
+|*Pro TypeArgument*|Ano|Typ položek v <xref:System.Activities.Statements.ForEach%601.Values%2A> kolekci určené obecným parametrem *T*. Ve výchozím nastavení je *pro TypeArgument* nastaveno na hodnotu **Int32**. Chcete-li změnit typ, změňte hodnotu pole se seznamem *pro TypeArgument* v mřížce vlastností.|
 
 Ve výchozím nastavení je iterátor smyčky pojmenovaný **Item**. V Návrháři aktivit můžete změnit název proměnné iterátoru <xref:System.Activities.Statements.ForEach%601> . Iterátor smyčky lze použít ve výrazech v podřízených objektech <xref:System.Activities.Statements.ForEach%601> aktivity.
 

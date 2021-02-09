@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: d7e43183-444c-4417-af19-82e28229f83a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6fc3e89adbf47bc8a430693694dbc45fe2ff9c0a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c041a9dca28dfbd0b1138e45809143e87d0809db
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80720981"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876066"
 ---
 # <a name="idebugpropertycreateevent2getdebugproperty"></a>IDebugPropertyCreateEvent2::GetDebugProperty
 Získá novou vlastnost.
@@ -28,13 +28,13 @@ Získá novou vlastnost.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetDebugProperty ( 
+HRESULT GetDebugProperty ( 
    IDebugProperty2** ppProperty
 );
 ```
 
 ```csharp
-int GetDebugProperty ( 
+int GetDebugProperty ( 
    out IDebugProperty2 ppProperty
 );
 ```

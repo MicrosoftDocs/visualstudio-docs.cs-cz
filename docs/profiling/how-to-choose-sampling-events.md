@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ce7cb734-80ac-4930-a4ef-e24395e1cc07
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ed97fd205ffc0c969d0cad39d962cd8cdeb4e2eb
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: dd1ac2bbd111783b9e5730e9aab06b2a4268ff05
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98801574"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876963"
 ---
 # <a name="how-to-choose-sampling-events"></a>Postupy: výběr událostí vzorkování
 Ve výchozím nastavení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci shromažďuje údaje o výkonu v intervalu, který je zadán jako počet cyklů procesoru používaných profilací procesu. Výchozí počet cyklů v intervalu je 10 000 000, což je přibližně 0,01 sekund na 1 GH počítači. Můžete změnit počet cyklů v intervalu a můžete změnit ukázkovou událost. K dispozici jsou následující ukázkové události:

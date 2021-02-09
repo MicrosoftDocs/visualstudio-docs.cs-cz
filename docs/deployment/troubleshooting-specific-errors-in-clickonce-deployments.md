@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 22dfe8f1-8271-4708-9c25-6bbb13920ac8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: af462178cf18d57afa6b51aedaba0004615ebb6f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 4697aa4869535d63c522ae25c978dd89bfe51697
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349258"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876170"
 ---
 # <a name="troubleshoot-specific-errors-in-clickonce-deployments"></a>Řešení konkrétních chyb v nasazeních ClickOnce
 V tomto článku jsou uvedené běžné chyby, ke kterým může dojít při nasazování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace a popisuje kroky k vyřešení jednotlivých problémů.
@@ -124,7 +124,7 @@ V tomto článku jsou uvedené běžné chyby, ke kterým může dojít při nas
 ## <a name="additional-errors"></a>Další chyby
  V následující tabulce jsou uvedeny některé běžné chybové zprávy, které uživatel klientského počítače může obdržet, když uživatel nainstaluje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci. Každá chybová zpráva je uvedena vedle popisu nejpravděpodobnější příčiny chyby.
 
-| Chybová zpráva | Popis |
+| Chybová zpráva | Description |
 | - | - |
 | Aplikaci nelze spustit. Obraťte se na vydavatele aplikace.<br /><br /> Aplikaci nelze spustit. Požádejte o pomoc dodavatele aplikace. | Jedná se o obecné chybové zprávy, ke kterým dochází, když aplikaci nelze spustit a žádný jiný důvod není možné najít. Často to znamená, že aplikace je nějakým způsobem poškozená nebo že [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je úložiště poškozené. |
 | Nelze pokračovat. Aplikace je nesprávně naformátovaná. Kontaktujte vydavatele aplikace a požádejte ho o pomoc.<br /><br /> Ověření aplikace nebylo úspěšné. Nelze pokračovat.<br /><br /> Soubory aplikace nelze načíst. Soubory poškozené v nasazení. | Jeden ze souborů manifestu v nasazení není syntakticky platný nebo obsahuje hodnotu hash, která nemůže být odsouhlasena s odpovídajícím souborem. Tato chyba může také znamenat, že manifest vložený do sestavení je poškozen. Znovu vytvořte nasazení a znovu zkompilujte aplikaci nebo Najděte a opravte chyby ručně v manifestech. |

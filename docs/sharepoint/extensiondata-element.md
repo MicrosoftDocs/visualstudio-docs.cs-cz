@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ExtensionData element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3131aca3664e37198b0a32bdc0ade0499c12a1e6
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: cd82aaec96eff3cf3d20fd9d0607ac5aae6b3472
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672532"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876833"
 ---
 # <a name="extensiondata-element"></a>ExtensionData – element
   Představuje kolekci vlastních datových položek, které jsou přidruženy k položce projektu služby SharePoint.
@@ -60,7 +60,7 @@ ms.locfileid: "94672532"
 |**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
-|**Může být prázdné**|No|
+|**Může být prázdné**|Ne|
 
 ## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)

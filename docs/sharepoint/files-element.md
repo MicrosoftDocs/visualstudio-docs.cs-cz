@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Files element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 03473f40bb78c866f3d93dea11a20b8747afad7b
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 653e48a2e9b6a68db94fd66660da85f4dec20927
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672805"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876644"
 ---
 # <a name="files-element"></a>Files – element
   Určuje soubory, které mají být nasazeny s položkou projektu služby SharePoint, jako jsou například soubory prvků funkce a výstup závislých projektů mimo službu SharePoint.
@@ -62,7 +62,7 @@ ms.locfileid: "94672805"
 |**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
-|**Může být prázdné**|No|
+|**Může být prázdné**|Ne|
 
 ## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)

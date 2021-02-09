@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0893596157078de62e33034a9ab6566637642176
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 96269f67b11def6fa34ddd1fc7540f9a0462a73e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850491"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876872"
 ---
 # <a name="create-sharepoint-solutions"></a>Vytváření řešení pro SharePoint
   Můžete vytvářet aplikace SharePoint v aplikaci Visual Studio jako alternativu k jejich vytváření v Návrháři služby SharePoint. Visual Studio podporuje rychlý vývoj pro SharePoint poskytnutím takových funkcí jako pokročilých ladicích nástrojů, IntelliSense, dokončování příkazů a šablon projektů. Visual Studio také využívá výhod rozšířených nástrojů a jazyků založených na .NET Framework. Projekty služby SharePoint můžete vyvíjet pomocí Visual Basic nebo Visual C# a můžete vyvíjet aplikace pro projekty služby SharePoint pomocí JavaScriptu.

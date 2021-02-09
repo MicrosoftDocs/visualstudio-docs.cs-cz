@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 33b3082b-a42e-488a-a1e4-dadf506f922c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84d8fcb4375f29820b51752ac3fdebbd04f06f80
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08ef46275d9c7365cfcc837b8e4dfc73f0b48b41
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80720927"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876053"
 ---
 # <a name="idebugpropertycreateevent2"></a>IDebugPropertyCreateEvent2
 Toto rozhraní se odesílá ladicím modulem (DE) do Správce ladění relace (SDM), když vytvoří vlastnost, která je přidružena k určitému dokumentu.
@@ -29,7 +29,7 @@ IDebugPropertyCreateEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- DE implementuje toto rozhraní, aby nahlásilo, že byla vytvořena vlastnost. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` . Toto rozhraní je implementováno, pokud DE vytvořila vlastnost přidruženou ke skriptu, který byl načten nebo vytvořen a v případě, že se tento skript musí objevit v integrovaném vývojovém prostředí.
+ DE implementuje toto rozhraní, aby nahlásilo, že byla vytvořena vlastnost. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` . Toto rozhraní je implementováno, pokud DE vytvořila vlastnost přidruženou ke skriptu, který byl načten nebo vytvořen a v případě, že se tento skript musí objevit v integrovaném vývojovém prostředí.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
  Vlastnost DE vytvoří a pošle tento objekt události k vytvoření sestavy vlastnosti. Událost se odesílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojená k laděnému programu.

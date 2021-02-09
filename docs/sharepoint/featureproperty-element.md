@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FeatureProperty element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8e6010ac45d0b760325c73c4bd754fbb0b422a77
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 070866b9dd14d974eb976b22bf7a79907e2c5d9e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672753"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876664"
 ---
 # <a name="featureproperty-element"></a>FeatureProperty – element
   Představuje vlastní vlastnost, která je součástí funkce při nasazení do služby SharePoint. Po nasazení funkce můžete získat přístup k vlastnosti v kódu.
@@ -60,7 +60,7 @@ ms.locfileid: "94672753"
 |**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
-|**Může být prázdné**|No|
+|**Může být prázdné**|Ne|
 
 ## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)

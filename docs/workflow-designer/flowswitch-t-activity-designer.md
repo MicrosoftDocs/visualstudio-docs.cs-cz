@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 5b9c5afe-7499-4ee8-8c33-28aff14bde07
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4eff69f1da5d2bc8c5f397b0cc6d21492a0a8d20
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 6f61dd3f14ba527e9f5be0e009825902e683fb1d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435792"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876560"
 ---
 # <a name="flowswitcht-activity-designer"></a>Návrhář aktivity FlowSwitch\<T>
 
@@ -32,7 +32,7 @@ ms.locfileid: "94435792"
 
 ### <a name="using-the-flowswitcht-activity-designer"></a>Pomocí \<T> Návrháře aktivity FlowSwitch
 
-Návrhář **aktivity \<T> FlowSwitch** lze najít v kategorii **vývojové diagramy** na **panelu nástrojů** , ke které se dostanete kliknutím na kartu **panelu nástrojů** na levé straně Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
+Návrhář **aktivity \<T> FlowSwitch** lze najít v kategorii **vývojové diagramy** na **panelu nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** na levé straně Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
 
 Návrhář **aktivity \<T> FlowSwitch** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu v Návrháři aktivity **vývojového diagramu** . Použijte okno **vybrat typy** , které se zobrazí, chcete-li určit typ (přidružený v kódu pomocí <xref:System.Activities.Statements.FlowSwitch%601> jeho obecného parametru) získaného z vyhodnocení <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> . Tento postup vytvoří <xref:System.Activities.Statements.FlowSwitch%601> aktivitu označenou **přepínačem** v rámci <xref:System.Activities.Statements.Flowchart> aktivity. Typ <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> lze zadat v poli **výrazu** v okně **vlastnosti** kliknutím na místo, kde text nápovědy říká "zadejte výraz VB".
 
@@ -44,9 +44,9 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.FlowSwi
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>|Pravda|Určuje výraz, který je vyhodnocován pro určení, který z <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> přepínačů má být v cestě k provedení přepnut.|
-|<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|Nepravda|Určuje jedinečné mapování z možných výsledků získaných z vyhodnocení <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> do sady <xref:System.Activities.Statements.FlowNode> objektů.|
-|<xref:System.Activities.Statements.FlowSwitch%601.Default%2A>|Pravda|Určuje mapování, pokud vyhodnocení neodpovídá <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> jedné z hodnot obsažených v <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> objektu.|
+|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>|Ano|Určuje výraz, který je vyhodnocován pro určení, který z <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> přepínačů má být v cestě k provedení přepnut.|
+|<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|Ne|Určuje jedinečné mapování z možných výsledků získaných z vyhodnocení <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> do sady <xref:System.Activities.Statements.FlowNode> objektů.|
+|<xref:System.Activities.Statements.FlowSwitch%601.Default%2A>|Ano|Určuje mapování, pokud vyhodnocení neodpovídá <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> jedné z hodnot obsažených v <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> objektu.|
 
 ## <a name="see-also"></a>Viz také
 

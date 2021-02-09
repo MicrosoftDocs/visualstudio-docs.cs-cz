@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 590742c3-a286-4160-aa75-7a441bb2207b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: af912503ddc1e87f14756a1041e9fa4d8aac505b
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 585ea1a558b91ac733670ad94a9a3e0be33f1348
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350943"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876313"
 ---
 # <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>Postupy: určení adresy URL pro podporu pro jednotlivé předpoklady v nasazení ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Nasazení může otestovat určitý počet požadavků, které musí být v klientském počítači k dispozici, aby bylo možné [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci spustit. Tyto závislosti zahrnují požadovanou minimální verzi .NET Framework, verzi operačního systému a všechna sestavení, která musí být předinstalována v globální mezipaměti sestavení (GAC). [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ale nemůže nainstalovat žádné z těchto nezbytných součástí. Pokud se požadovaná součást nenajde, jednoduše zastaví instalaci a zobrazí dialogové okno s vysvětlením, proč se instalace nezdařila.

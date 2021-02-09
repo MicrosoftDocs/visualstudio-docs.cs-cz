@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending tools
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a921f45ea151ce7ee3313dba47e81a5acc86063d
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: c074e62b47b926351948e94d78621a8a41c9c3e5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672623"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876846"
 ---
 # <a name="extend-the-sharepoint-tools-in-visual-studio"></a>Rozšiřování nástrojů služby SharePoint v aplikaci Visual Studio
   Nástroje služby SharePoint v aplikaci Visual Studio splňují požadavky mnoha scénářů vývoje aplikací. Můžete však zjistit případy, kdy neposkytují funkce, které požadujete vy nebo ostatní vývojáři. V těchto případech můžete nástroje služby SharePoint rozšíříte tak, aby se vytvořila funkčnost, kterou potřebujete.
