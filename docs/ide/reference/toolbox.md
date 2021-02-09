@@ -12,15 +12,15 @@ helpviewer_keywords:
 - custom controls [Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 905288d4a580f5633196273666fbea3954d1767c
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 52b7eeefd157e99fc5214f29c220d94fd6e19772
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560275"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841891"
 ---
 # <a name="toolbox"></a>Sada nástrojů
 
@@ -35,7 +35,7 @@ Sada nástrojů se zobrazí ve spojení se zobrazeními návrháře, jako je nap
 > [!NOTE]
 > U některých typů projektů nemusí **Sada nástrojů** zobrazit žádné položky.
 
-Verze rozhraní .NET, na kterou projekt cílí, také ovlivňuje sadu ovládacích prvků viditelných v sadě nástrojů. V případě potřeby můžete změnit cílovou verzi rozhraní .NET Framework ze stránek vlastností projektu. Vyberte uzel projektu v **Průzkumník řešení** a pak na panelu nabídek zvolte vlastnosti **projektu projektu**  >  **projectname Properties**. Na kartě **aplikace** použijte rozevírací seznam **cílové rozhraní** .
+Verze rozhraní .NET, na kterou projekt cílí, také ovlivňuje sadu ovládacích prvků viditelných v sadě nástrojů. V případě potřeby můžete změnit cílovou verzi rozhraní .NET Framework ze stránek vlastností projektu. Vyberte uzel projektu v **Průzkumník řešení** a pak na panelu nabídek zvolte vlastnosti **projektu projektu**  >  . Na kartě **aplikace** použijte rozevírací seznam **cílové rozhraní** .
 
 ::: moniker range="vs-2019"
 
@@ -82,6 +82,6 @@ Peru následující odkazy na Další informace o dostupných kartách **sady n�
 - [Sada nástrojů, karta Součásti](../../ide/reference/toolbox-components-tab.md)
 - [Sada nástrojů, karta HTML](../../ide/reference/toolbox-html-tab.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Výběr položek sady nástrojů, součásti WPF](choose-toolbox-items-wpf-components.md)

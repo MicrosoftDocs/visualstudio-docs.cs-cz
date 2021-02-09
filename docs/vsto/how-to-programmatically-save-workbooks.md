@@ -13,15 +13,15 @@ helpviewer_keywords:
 - workbooks, saving backup copies
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: dbc228a703d6c9224fda545a93132ccb45c94b0f
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 3a4f46a679e04c921aafd9a7774949d56c0925f2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524627"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99842004"
 ---
 # <a name="how-to-programmatically-save-workbooks"></a>Postupy: ukládání sešitů prostřednictvím kódu programu
   Existuje několik způsobů, jak sešit uložit. Sešit můžete uložit beze změny cesty. Pokud sešit ještě nebyl uložen, uložte ho zadáním cesty. Bez explicitní cesty systém Microsoft Office Excel uloží soubor do aktuální složky s názvem, který jste zadali při jeho vytvoření. Můžete také uložit kopii sešitu beze změny otevřeného sešitu v paměti.

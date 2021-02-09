@@ -14,15 +14,15 @@ helpviewer_keywords:
 - add-ins [Office development in Visual Studio], getting started
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: be4e129de68d2a7f7690ba24acc92fb09400cfb2
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: d7e6f891f8485d4e08734e59a11db8018eaa07b1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845112"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860632"
 ---
 # <a name="get-started-programming-vsto-add-ins"></a>Začínáme s programováním doplňků VSTO
   Doplňky VSTO můžete použít k automatizaci systém Microsoft Office aplikací, k rozšiřování funkcí aplikace a k přizpůsobení uživatelského rozhraní (UI) aplikace. Informace o tom, jak se doplňky VSTO rovnají jiným typům řešení pro Office, které můžete vytvořit pomocí sady Visual Studio, najdete v tématu [Přehled vývoje řešení pro systém office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).

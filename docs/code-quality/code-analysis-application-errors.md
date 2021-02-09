@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d8fd9475-ac9b-4085-b5a3-b0c807922cac
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4dccefdb0325cfd96024923c77d03565f904ea49
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 0f5c217e8d043d0363b66a63c84c78829f640065
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348499"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860578"
 ---
 # <a name="code-analysis-application-errors"></a>Chyby aplikace analýzy kódu
 
@@ -28,7 +28,7 @@ Tato část je odkazem na chybové zprávy, které jsou generovány nástrojem p
 
 ## <a name="in-this-section"></a>V této části
 
-|Kód|Popis|
+|Kód|Description|
 |-|-|
 |[CA0001](ca0001.md)|V nástroji pro analýzu spravovaného kódu se vyvolala výjimka, která neindikuje očekávanou chybovou podmínku.|
 |[CA0051](ca0051.md)|Nebyla vybrána žádná pravidla.|
@@ -41,12 +41,12 @@ Tato část je odkazem na chybové zprávy, které jsou generovány nástrojem p
 |[CA0058](ca0058.md)|Nelze načíst sestavení, na které odkazuje.|
 |[CA0059](ca0059.md)|Chyba přepínače příkazového řádku.|
 |[CA0060](ca0060.md)|Nelze načíst sestavení, která jsou odkazována nepřímo.|
-|[CA0061](ca0061.md)|Pravidlo ' *RuleId* ' nebylo nalezeno.|
-|[CA0062](ca0062.md)|Pravidlo ' *RuleId* ' odkazované v sadě pravidel ' *RuleSetName* ' nebylo nalezeno.|
+|[CA0061](ca0061.md)|Pravidlo '*RuleId*' nebylo nalezeno.|
+|[CA0062](ca0062.md)|Pravidlo '*RuleId*' odkazované v sadě pravidel '*RuleSetName*' nebylo nalezeno.|
 |[CA0063](ca0063.md)|Nepovedlo se načíst soubor sady pravidel nebo jeden z jeho závislých souborů sady pravidel.|
 |[CA0064](ca0064.md)|Nebyla provedena žádná analýza, protože zadaná sada pravidel neobsahuje žádná pravidla FxCop.|
-|[CA0065](ca0065.md)|Nepodporovaná konstrukce metadat: typ *TypeName* obsahuje vlastnost i pole se stejným názvem ' *PropertyFieldName* '.|
-|[CA0066](ca0066.md)|Hodnota ' *VersionID* ' poskytnutá **/TargetFrameworkVersion** není rozpoznaná verze.|
+|[CA0065](ca0065.md)|Nepodporovaná konstrukce metadat: typ *TypeName* obsahuje vlastnost i pole se stejným názvem '*PropertyFieldName*'.|
+|[CA0066](ca0066.md)|Hodnota '*VersionID*' poskytnutá **/TargetFrameworkVersion** není rozpoznaná verze.|
 |[CA0067](ca0067.md)|Adresář nebyl nalezen.|
 |[CA0068](ca0068.md)|Pro cílové sestavení *' AssemblyName '* nebyly nalezeny informace o ladění.|
 |[CA0069](ca0069.md)|Použití alternativní platformy. *FrameworkVersion1* se nepovedlo najít. Místo toho použijte *FrameworkVersion2* . Pro dosažení co nejlepších výsledků analýz se ujistěte, že je nainstalovaná správná verze rozhraní.|

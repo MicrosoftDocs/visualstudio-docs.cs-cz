@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fe283da2c2a81827ca70414315278cebd775873a
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: bc1474d1c7aeabb9b3e9ecbbe6b42931d44c59c7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915203"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839081"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 2
   Po definování vlastního typu položky projektu služby SharePoint a jejich přidružení k šabloně položky v aplikaci Visual Studio můžete také pro šablonu poskytnout průvodce. Průvodce můžete použít ke shromáždění informací z uživatelů při použití šablony k přidání nové instance položky projektu do projektu. Informace, které shromáždíte, lze použít k inicializaci položky projektu.
@@ -39,7 +39,7 @@ ms.locfileid: "96915203"
 > [!NOTE]
 > Ukázku si můžete stáhnout z [GitHubu](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities) , kde se dozvíte, jak vytvořit vlastní aktivity pro pracovní postup.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Chcete-li provést tento návod, je nutné nejprve vytvořit řešení CustomActionProjectItem dokončením [návodu: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md).
 
  K dokončení tohoto Názorného postupu potřebujete také následující komponenty na vývojovém počítači:

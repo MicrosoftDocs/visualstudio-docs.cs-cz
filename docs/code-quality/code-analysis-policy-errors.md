@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: d1f221cd-68c0-4277-9397-b76ad0dbae77
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 43dae5ec9ca68c746b914ad0a75b792f2a6e6b43
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 5fdd14b394bca495b38f408be94b46a4b9a68c01
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349097"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860552"
 ---
 # <a name="code-analysis-policy-errors"></a>Chyby zásad Analýzy kódu
 
@@ -31,7 +31,7 @@ Pro jeden nebo více projektů kódu nebyl splněn požadavek na analýzu kódu 
 
 - Analýza kódu není v sestavení povolena pro všechny projekty v řešení.
 
-- Místní sada pravidel pro projekt v sadě Visual Studio má méně omezující nastavení **Akce** než sada pravidel projektu, například pravidlo, které je nastaveno na **Action** = **chybu** akce na serveru, má svou **akci** nastavenou na hodnotu **varování** nebo **žádné** v sadě pravidel, která je spuštěna v aplikaci Visual Studio).
+- Místní sada pravidel pro projekt v sadě Visual Studio má méně omezující nastavení **Akce** než sada pravidel projektu, například pravidlo, které je nastaveno na  = **chybu** akce na serveru, má svou **akci** nastavenou na hodnotu **varování** nebo **žádné** v sadě pravidel, která je spuštěna v aplikaci Visual Studio).
 
 - Sada pravidel zadaná v sadě Visual Studio neobsahuje všechna pravidla, která jsou uvedena v sadě pravidel zadané v zásadě pro vrácení se změnami analýzy kódu pro projekt.
 

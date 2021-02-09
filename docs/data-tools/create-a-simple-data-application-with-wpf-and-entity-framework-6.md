@@ -8,19 +8,19 @@ dev_langs:
 - CSharp
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7aad99392db33256e991e731770266c1a53dec50
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 52c9d8ca4af6467c6db21be64083b5bf64af0b6a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435490"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859187"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>Vytvoření jednoduché datové aplikace pomocí WPF a Entity Framework 6
 
-Tento návod ukazuje, jak vytvořit základní aplikaci "Forms over data" v aplikaci Visual Studio. Aplikace používá SQL Server LocalDB, databázi Northwind Entity Framework 6 (není Entity Framework Core) a Windows Presentation Foundation pro .NET Framework (ne .NET Core). Ukazuje, jak provést základní datovou vazbu pomocí zobrazení hlavní-podrobnosti a má také vlastní navigátor vazby s tlačítky pro přesunutí na **Další** , **přesunout předchozí** , **přesunout na začátek** , **přesunout na konec** , **aktualizovat** a **Odstranit**.
+Tento návod ukazuje, jak vytvořit základní aplikaci "Forms over data" v aplikaci Visual Studio. Aplikace používá SQL Server LocalDB, databázi Northwind Entity Framework 6 (není Entity Framework Core) a Windows Presentation Foundation pro .NET Framework (ne .NET Core). Ukazuje, jak provést základní datovou vazbu pomocí zobrazení hlavní-podrobnosti a má také vlastní navigátor vazby s tlačítky pro přesunutí na **Další**, **přesunout předchozí**, **přesunout na začátek**, **přesunout na konec**, **aktualizovat** a **Odstranit**.
 
 Tento článek se zaměřuje na použití datových nástrojů v aplikaci Visual Studio a nepokouší se vysvětlovat základní technologie v jakékoli hloubce. Předpokládá, že máte základní znalosti v jazyce XAML, Entity Framework a SQL. Tento příklad také neukazuje architekturu Model-View-ViewModel (MVVM), která je standardem pro aplikace WPF. Tento kód však můžete zkopírovat do vlastní aplikace MVVM s malým počtem úprav.
 
@@ -32,7 +32,7 @@ V tomto příkladu se používá SQL Server Express LocalDB a ukázková databá
 
 2. Nainstalujte ukázkovou databázi Northwind pomocí následujících kroků:
 
-    1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . ( **Průzkumník objektů systému SQL Server** je nainstalován v rámci úlohy **úložiště dat a zpracování** v **instalační program pro Visual Studio**.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
+    1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (**Průzkumník objektů systému SQL Server** je nainstalován v rámci úlohy **úložiště dat a zpracování** v **instalační program pro Visual Studio**.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
        Otevře se okno editoru dotazů.
 
@@ -70,7 +70,7 @@ V tomto příkladu se používá SQL Server Express LocalDB a ukázková databá
 
 3. Na další obrazovce zadejte nebo zvolte připojení Northwind LocalDB (například (LocalDB) \MSSQLLocalDB), zadejte databázi Northwind a klikněte na **Další**.
 
-4. Na další stránce průvodce vyberte, které tabulky, uložené procedury a další databázové objekty se mají zahrnout do modelu Entity Framework. Rozbalte uzel dbo ve stromovém zobrazení a vyberte podrobnosti o **zákaznících** , **objednávkách** a **objednávkách**. Ponechte vybrané výchozí hodnoty a klikněte na **Dokončit**.
+4. Na další stránce průvodce vyberte, které tabulky, uložené procedury a další databázové objekty se mají zahrnout do modelu Entity Framework. Rozbalte uzel dbo ve stromovém zobrazení a vyberte podrobnosti o **zákaznících**, **objednávkách** a **objednávkách**. Ponechte vybrané výchozí hodnoty a klikněte na **Dokončit**.
 
     ![Výběr databázových objektů pro model](../data-tools/media/raddata-choose-ef-objects.png)
 
@@ -116,11 +116,11 @@ Je možné napsat vlastní kód datové vazby, ale je mnohem jednodušší, aby 
         </Grid.RowDefinitions>
     ```
 
-5. Nyní otevřete *MainWindow. XAML* , abyste si ho prohlíželi v návrháři. To způsobí, že se okno **zdroje dat** zobrazí jako možnost v okraji okna aplikace Visual Studio vedle panelu **nástrojů**. Kliknutím na kartu otevřete okno, nebo stiskněte klávesu **SHIFT** + **ALT +** + **D** nebo zvolte možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat** Windows. Všechny vlastnosti ve třídě Customers (zákazníci) se zobrazí v samostatném textovém poli. Nejdřív klikněte na šipku v poli se seznamem **Customers (zákazníci** ) a vyberte **Podrobnosti**. Pak přetáhněte uzel do střední části návrhové plochy, aby Návrhář věděl, že má přejít na prostřední řádek. Pokud k tomu dojde, můžete řádek zadat později v jazyce XAML. Ve výchozím nastavení jsou ovládací prvky umístěny vertikálně v prvku mřížky, ale v tomto okamžiku je můžete uspořádat tak, jak chcete, například na formuláři. Může být například vhodné umístit textové pole **název** nahoře nad adresu. Ukázková aplikace pro tento článek mění pořadí polí a mění jejich uspořádání do dvou sloupců.
+5. Nyní otevřete *MainWindow. XAML* , abyste si ho prohlíželi v návrháři. To způsobí, že se okno **zdroje dat** zobrazí jako možnost v okraji okna aplikace Visual Studio vedle panelu **nástrojů**. Kliknutím na kartu otevřete okno, nebo stiskněte klávesu **SHIFT** + **ALT +** +  nebo zvolte možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat** Windows. Všechny vlastnosti ve třídě Customers (zákazníci) se zobrazí v samostatném textovém poli. Nejdřív klikněte na šipku v poli se seznamem **Customers (zákazníci** ) a vyberte **Podrobnosti**. Pak přetáhněte uzel do střední části návrhové plochy, aby Návrhář věděl, že má přejít na prostřední řádek. Pokud k tomu dojde, můžete řádek zadat později v jazyce XAML. Ve výchozím nastavení jsou ovládací prvky umístěny vertikálně v prvku mřížky, ale v tomto okamžiku je můžete uspořádat tak, jak chcete, například na formuláři. Může být například vhodné umístit textové pole **název** nahoře nad adresu. Ukázková aplikace pro tento článek mění pořadí polí a mění jejich uspořádání do dvou sloupců.
 
      ![Vazba zdroje dat zákazníků na jednotlivé ovládací prvky](../data-tools/media/raddata-customers-data-source-binding-to-individual-controls.png)
 
-     V zobrazení kódu teď můžete zobrazit nový `Grid` prvek v řádku 1 (prostřední řádek) nadřazené mřížky. Nadřazená mřížka má `DataContext` atribut, který odkazuje na CollectionViewSource, který byl přidán do `Windows.Resources` elementu. Vzhledem k tomuto kontextu dat, když se první textové pole váže na **adresu** , je tento název namapován na `Address` vlastnost v aktuálním `Customer` objektu v CollectionViewSource.
+     V zobrazení kódu teď můžete zobrazit nový `Grid` prvek v řádku 1 (prostřední řádek) nadřazené mřížky. Nadřazená mřížka má `DataContext` atribut, který odkazuje na CollectionViewSource, který byl přidán do `Windows.Resources` elementu. Vzhledem k tomuto kontextu dat, když se první textové pole váže na **adresu**, je tento název namapován na `Address` vlastnost v aktuálním `Customer` objektu v CollectionViewSource.
 
     ```xaml
     <Grid DataContext="{StaticResource customerViewSource}">
@@ -150,7 +150,7 @@ Je možné napsat vlastní kód datové vazby, ale je mnohem jednodušší, aby 
 
 Výchozí uspořádání vytvořené aplikací Visual Studio není ideální pro vaši aplikaci, proto poskytneme sem konečný kód XAML, který bude zkopírován do kódu. K tomu, aby uživatel mohl přidat nového zákazníka nebo objednávku, potřebujete také některé "formy" (které jsou ve skutečnosti Gridy). Aby bylo možné přidat nového zákazníka a objednávku, potřebujete samostatnou sadu textových polí, která nejsou vázaná na data na `CollectionViewSource` . Nastavením vlastnosti Visible v metodách obslužné rutiny určíte, která mřížka se uživateli v daném čase uvidí. Nakonec přidáte tlačítko Odstranit do každého řádku v mřížce objednávky, aby uživatel mohl odstranit individuální objednávku.
 
-Nejprve přidejte tyto styly do `Windows.Resources` prvku v souboru *MainWindow. XAML* :
+Nejprve přidejte tyto styly do `Windows.Resources` prvku v souboru *MainWindow. XAML*:
 
 ```xaml
 <Style x:Key="Label" TargetType="{x:Type Label}" BasedOn="{x:Null}">

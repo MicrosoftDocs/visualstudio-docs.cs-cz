@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 5086d228-f92e-4515-9708-c5b89b9e9a03
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2eb4beff76d602bb4ce6182fab6091c7cd2a0096
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 997fc6f6ecb8ffbd8c48e2352dcc9ae2f6092211
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348720"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860019"
 ---
 # <a name="run-code-analysis-manually-for-net"></a>Ruční spuštění analýzy kódu pro .NET
 Ve výchozím nastavení analyzátory .NET Compiler Platform ("Roslyn") analyzují kód C# nebo Visual Basic při psaní pomocí živé analýzy a také při sestavování. Proto byste normálně nemuseli aktivovat analýzu kódu ručně. Existují však situace, kdy lze chtít ručně aktivovat analýzu kódu:

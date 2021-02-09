@@ -6,13 +6,13 @@ ms.custom: SEO-VS-2020
 ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: 582d0e0d86909b266bbb18f83745b1b2261f0d10
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+manager: jmartens
+ms.openlocfilehash: c10aa602c2c9af3c51812073d62d5bd9bff06664
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348746"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860071"
 ---
 # <a name="how-to-enable-and-disable-binary-code-analysis-for-managed-code"></a>Postupy: povolení a zákaz analýzy binárního kódu pro spravovaný kód
 

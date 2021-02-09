@@ -10,15 +10,15 @@ helpviewer_keywords:
 - code metrics [Visual Studio]
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 631ce51df5d985e02e8ccabca258c0ef1c1318f4
-ms.sourcegitcommit: b1f7e7d7a0550d5c6f46adff3bddd44bc1d6ee1c
+ms.openlocfilehash: 0387542487b2c24baa129fbb0163dee0140cb413
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98069471"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860035"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Postupy: generování dat metrik kódu
 
@@ -59,7 +59,7 @@ Můžete nakonfigurovat prahové hodnoty, při kterých se pravidla metrik kódu
 
    V tomto příkladu je [CA1502](/dotnet/fundamentals/code-analysis/quality-rules/ca1502) pravidla nastavená tak, aby se aktivovalo, když je cyklomatickáá složitost větší než 10.
 
-3. V okně **vlastnosti** aplikace Visual Studio nebo v souboru projektu označte akci sestavení konfiguračního souboru jako [**AdditionalFiles**](../ide/build-actions.md#build-action-values). Například:
+3. V okně **vlastnosti** aplikace Visual Studio nebo v souboru projektu označte akci sestavení konfiguračního souboru jako [**AdditionalFiles**](../ide/build-actions.md#build-action-values). Příklad:
 
    ```xml
    <ItemGroup>
@@ -108,7 +108,7 @@ Data metriky kódu můžete vygenerovat z příkazového řádku pro projekty v 
 
 ### <a name="microsoftcodeanalysismetrics-nuget-package"></a>Balíček NuGet Microsoft. CodeAnalysis. Metrics
 
-Nejjednodušší způsob, jak generovat data metrik kódu z příkazového řádku, je instalace balíčku NuGet [Microsoft. CodeAnalysis. Metrics](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) . Po instalaci balíčku spusťte `msbuild /t:Metrics` z adresáře, který obsahuje soubor projektu. Například:
+Nejjednodušší způsob, jak generovat data metrik kódu z příkazového řádku, je instalace balíčku NuGet [Microsoft. CodeAnalysis. Metrics](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) . Po instalaci balíčku spusťte `msbuild /t:Metrics` z adresáře, který obsahuje soubor projektu. Příklad:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics
@@ -131,7 +131,7 @@ Build succeeded.
     0 Error(s)
 ```
 
-Název výstupního souboru můžete přepsat zadáním `/p:MetricsOutputFile=<filename>` . Data metriky kódu [starší verze](#previous-versions) můžete získat také zadáním `/p:LEGACY_CODE_METRICS_MODE=true` . Například:
+Název výstupního souboru můžete přepsat zadáním `/p:MetricsOutputFile=<filename>` . Data metriky kódu [starší verze](#previous-versions) můžete získat také zadáním `/p:LEGACY_CODE_METRICS_MODE=true` . Příklad:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics /p:LEGACY_CODE_METRICS_MODE=true /p:MetricsOutputFile="Legacy.xml"
@@ -290,7 +290,7 @@ Pokud balíček NuGet nechcete instalovat, můžete *Metrics.exe* spustitelný s
 
 #### <a name="metricsexe-usage"></a>Využití Metrics.exe
 
-Chcete-li spustit *Metrics.exe*, zadejte projekt nebo řešení a výstupní soubor XML jako argumenty. Například:
+Chcete-li spustit *Metrics.exe*, zadejte projekt nebo řešení a výstupní soubor XML jako argumenty. Příklad:
 
 ```shell
 C:\>Metrics.exe /project:ConsoleApp20.csproj /out:report.xml

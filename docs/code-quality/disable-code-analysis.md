@@ -9,13 +9,13 @@ helpviewer_keywords:
 - disable code analysis
 author: mikadumont
 ms.author: midumont
-manager: jillfra
-ms.openlocfilehash: e808cb623fa47c9971e1cdceb15a02b5bf46e901
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+manager: jmartens
+ms.openlocfilehash: 6a1f1466caa921d46ce4701f5074b98f3d5ba051
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348551"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860383"
 ---
 # <a name="disable-source-code-analysis-for-net"></a>Zakázat analýzu zdrojového kódu pro .NET
 
@@ -49,7 +49,7 @@ Chcete-li otevřít tuto stránku, klikněte pravým tlačítkem myši na uzel p
 
 Chcete-li vypnout analýzu zdrojového kódu pro analyzátory, přidejte do [souboru projektu](../ide/solutions-and-projects-in-visual-studio.md#project-file)jednu nebo více následujících vlastností nástroje MSBuild.
 
-| Vlastnost MSBuild | Popis | Výchozí |
+| Vlastnost MSBuild | Description | Výchozí |
 | - | - | - |
 | `RunAnalyzersDuringBuild` | Určuje, zda jsou analyzátory spouštěny v době sestavení. | `true` |
 | `RunAnalyzersDuringLiveAnalysis` | Určuje, zda analyzátory analyzují kód v době návrhu za provozu. | `true` |
@@ -69,7 +69,7 @@ Příklady:
 
 ## <a name="source-analysis"></a>Zdrojová analýza
 
-Nemůžete vypnout [analýzu zdrojů](roslyn-analyzers-overview.md) v aplikaci Visual Studio 2017. Pokud chcete vymazat chyby analyzátoru z **Seznam chyb** , můžete potlačit všechna aktuální porušení výběrem možnosti **analyzovat**  >  **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek. Další informace najdete v tématu [potlačení porušení](use-roslyn-analyzers.md#suppress-violations).
+Nemůžete vypnout [analýzu zdrojů](roslyn-analyzers-overview.md) v aplikaci Visual Studio 2017. Pokud chcete vymazat chyby analyzátoru z **Seznam chyb**, můžete potlačit všechna aktuální porušení výběrem možnosti **analyzovat**  >  **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek. Další informace najdete v tématu [potlačení porušení](use-roslyn-analyzers.md#suppress-violations).
 
 Počínaje verzí Visual Studio 2019 verze 16,3 můžete vypnout analýzu zdrojového kódu nebo ji spustit na vyžádání. Zvažte upgrade na Visual Studio 2019.
 

@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: 5b181f5b-6c7a-4e46-a783-360e1da427a0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6aa97d246ac767cc3c88c845298e2db61edcd35f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: a70a0315d596e4490d40db1846d7be0b6f3bf448
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348993"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860370"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>Sada pravidel Rozšířená pravidla správnosti pro spravovaný kód
 
@@ -25,7 +25,7 @@ Sada pravidel Rozšířená pravidla správnosti společnosti Microsoft zahrnuje
 
 V následující tabulce jsou popsána všechna pravidla v sadě pravidel Rozšířená pravidla správnosti společnosti Microsoft.
 
-|Pravidlo|Popis|
+|Pravidlo|Description|
 |----------|-----------------|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
 |[CA1009](../code-quality/ca1009.md)|Deklarujte správně obslužné rutiny událostí|

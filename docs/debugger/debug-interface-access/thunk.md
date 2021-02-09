@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 01abb95f-d89a-465c-a4eb-8e8509598c95
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 90eeaefd8784be3e381c72dd452a23c56e0df47d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3a5cb3051c2facd23fa92e7edf911fa6fbc44b9e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461033"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853161"
 ---
 # <a name="thunk"></a>Převod
 Každá `thunk` je identifikována `SymTagThunk` značkou.

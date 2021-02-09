@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending deployment
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ea8e6a09c512ed5edb6098183c66361e96537f54
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 8d42726cddb0565af66e161b41c16c94cfe2cb2b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914930"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839133"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>Návod: Vytvoření vlastního kroku nasazení pro projekty SharePoint
   Když nasadíte projekt služby SharePoint, sada Visual Studio provede řadu kroků nasazení v určitém pořadí. Visual Studio obsahuje mnoho vestavěných kroků nasazení, ale můžete si také vytvořit vlastní.
@@ -41,7 +41,7 @@ ms.locfileid: "96914930"
 
 - Testování nového kroku nasazení.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Windows, SharePointu a sady Visual Studio.

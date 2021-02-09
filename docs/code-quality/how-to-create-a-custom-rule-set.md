@@ -10,15 +10,15 @@ helpviewer_keywords:
 - rule sets
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 69af1534740ddec2c804f0b7dafec61d985a4b24
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: dda89e9822e361438346300a2f60c05bcfd64d6f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97667881"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860149"
 ---
 # <a name="customize-a-rule-set"></a>Přizpůsobení sady pravidel
 

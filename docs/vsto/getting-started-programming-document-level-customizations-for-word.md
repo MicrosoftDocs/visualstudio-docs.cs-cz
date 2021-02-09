@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Word projects [Office development in Visual Studio], getting started
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e9420ab02b5f402dd39e5ca1713b911a10932dfb
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: ff19fd84b66b9d31ed806589044775e006ef7096
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845177"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860656"
 ---
 # <a name="get-started-programming-document-level-customizations-for-word"></a>Začínáme programovat přizpůsobení na úrovni dokumentu pro Word
   Pokud jste právě začali vytvářet přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word pomocí sady Visual Studio, je zde potřeba znát.

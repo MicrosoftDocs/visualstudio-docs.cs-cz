@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 64b772ad-4392-42e9-a237-5137f0384bf0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32af7033eb29d223a5ecfafaccb0a3123ab88d06
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 95bc250219c59d4db21fcb086cdf43e0ba7800e3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877127"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99838627"
 ---
 # <a name="walkthrough-highlight-text"></a>Návod: zvýraznění textu
 Můžete přidat různé vizuální efekty do editoru vytvořením částí komponenty Managed Extensibility Framework (MEF). Tento návod ukazuje, jak zvýraznit všechny výskyty aktuálního slova v textovém souboru. Pokud se v textovém souboru vyskytne slovo více než jednou, a umístíte blikající kurzor do jednoho výskytu, zvýrazní se všechny výskyty.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>Vytvořit projekt MEF
