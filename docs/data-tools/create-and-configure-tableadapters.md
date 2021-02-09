@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 08630d69-0d6c-4e8f-b42d-2922f45f8415
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6c976f06f105969f1eaa91022607d61251a56008
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: a9ab54b358125e45cfb0d6a4df30989cf679ab2d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436755"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867136"
 ---
 # <a name="create-and-configure-tableadapters"></a>Vytvoření a konfigurace objektů TableAdapter
 
@@ -51,7 +51,7 @@ Pokud přetáhnete novou TableAdapter ze sady nástrojů, když je **Návrhář 
 
 - Pokud máte správná oprávnění pro databázi, máte možnost vytvořit novou uloženou proceduru v podkladové databázi. Pokud tato oprávnění nemáte, nebude to možnost.
 
-- Můžete se také rozhodnout spouštět existující uložené procedury pro příkazy **Select** , **INSERT** , **Update** a **Delete** v TableAdapter. Uloženou proceduru, která je přiřazena k příkazu **Update** , je například spuštěna při `TableAdapter.Update()` volání metody.
+- Můžete se také rozhodnout spouštět existující uložené procedury pro příkazy **Select**, **INSERT**, **Update** a **Delete** v TableAdapter. Uloženou proceduru, která je přiřazena k příkazu **Update** , je například spuštěna při `TableAdapter.Update()` volání metody.
 
 Namapujte parametry z vybrané uložené procedury do odpovídajících sloupců v tabulce dat. Například pokud uložená procedura akceptuje parametr s názvem `@CompanyName` , který předává do `CompanyName` sloupce v tabulce, nastavte **zdrojový sloupec** `@CompanyName` parametru na `CompanyName` .
 
@@ -84,7 +84,7 @@ Následující příklad ukazuje, jak zavolat další dotaz s názvem `FillByCit
 
 1. Otevřete datovou sadu v **Návrhář datových sad**.
 
-2. Pokud vytváříte nový dotaz, přetáhněte objekt **dotazu** z karty **datová sada** na **panelu nástrojů** na <xref:System.Data.DataTable> , nebo vyberte možnost **Přidat dotaz** z místní nabídky TableAdapter. Objekt **dotazu** lze také přetáhnout do prázdné oblasti **Návrhář datových sad** , čímž se vytvoří TableAdapter bez přidruženého objektu <xref:System.Data.DataTable> . Tyto dotazy mohou vracet pouze jednotlivé (skalární) hodnoty nebo příkazy pro aktualizaci, vložení nebo odstranění v databázi.
+2. Pokud vytváříte nový dotaz, přetáhněte objekt **dotazu** z karty **datová sada** na **panelu nástrojů** na <xref:System.Data.DataTable> , nebo vyberte možnost **Přidat dotaz** z místní nabídky TableAdapter. Objekt **dotazu** lze také přetáhnout do prázdné oblasti **Návrhář datových sad**, čímž se vytvoří TableAdapter bez přidruženého objektu <xref:System.Data.DataTable> . Tyto dotazy mohou vracet pouze jednotlivé (skalární) hodnoty nebo příkazy pro aktualizaci, vložení nebo odstranění v databázi.
 
 3. Na obrazovce **Vybrat datové připojení** vyberte nebo vytvořte připojení, které bude dotaz používat.
 

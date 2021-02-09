@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: 0ccd6990-4654-44cd-a6f3-bdd82fe90f6c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 36f97702f41f72efab970617da2a40a70f339e2a
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: c33b6852935bbe02c75b0814fd2f77095d283c15
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728793"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865573"
 ---
 # <a name="class-hierarchy-of-symbol-types"></a>Hierarchie tříd typů symbolů
 Následující tabulka popisuje typy symbolů v hierarchii tříd.
 
 ## <a name="symbol-types"></a>Typy symbolů
 
-|Typ symbolu|Popis|
+|Typ symbolu|Description|
 |-----------------|-----------------|
 |[UDT](../../debugger/debug-interface-access/udt.md)|Symbol, který se používá k reprezentaci každé třídy, struktury a sjednocení.|
 |[Výčet (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/enum-debug-interface-access-sdk.md)|Symbol pro výčtové typy|

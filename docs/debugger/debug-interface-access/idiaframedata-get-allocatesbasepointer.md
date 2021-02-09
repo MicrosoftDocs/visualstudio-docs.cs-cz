@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8a33db5d-008c-4fe5-b64f-210c9b77f686
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a8c51b335e0d13752ee2f3c6c68c17b5f2b76a9d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d89ec42b689f4217c0b6f727662c3ccc46632e20
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467426"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865004"
 ---
 # <a name="idiaframedataget_allocatesbasepointer"></a>IDiaFrameData::get_allocatesBasePointer
 Načte příznak, který označuje, zda je základní ukazatel přidělen pro kód v tomto rozsahu adres. Tato metoda je zastaralá.
@@ -25,7 +25,7 @@ Načte příznak, který označuje, zda je základní ukazatel přidělen pro k�
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_allocatesBasePointer ( 
+HRESULT get_allocatesBasePointer ( 
    BOOL* pRetVal
 );
 ```

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: eb9f759b-98a5-45fc-b085-91f1f2666e72
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cadd93b935e102cee2108be5c6fd6274f5a29e15
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: e985f2ae94e0da631aed731d9cb26472f4481303
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728900"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865594"
 ---
 # <a name="annotation"></a>Poznámka
 Kód programu umístění je možné opatřit poznámkami `SymTagAnnotation` symbolem.

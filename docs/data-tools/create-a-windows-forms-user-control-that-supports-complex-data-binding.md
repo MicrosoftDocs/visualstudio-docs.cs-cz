@@ -13,15 +13,15 @@ helpviewer_keywords:
 - user controls [Visual Studio], complex data binding
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 465636b2b5bbf1a47752b4f0917258e264172abd
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 25bdda6a1b62f47c752a2975fa3acfd1379a470c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436781"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867144"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>Vytvoření uživatelského ovládacího prvku modelu Windows Forms, který podporuje složitou datovou vazbu
 
@@ -53,7 +53,7 @@ V tomto návodu se dozvíte, jak:
 
 - Přidejte nový ovládací prvek přetažením z okna **zdroje dat** do formuláře **Form1**.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
@@ -77,7 +77,7 @@ Prvním krokem je vytvoření projektu **aplikace model Windows Forms** pro C# n
 
 ## <a name="add-a-user-control-to-the-project"></a>Přidat uživatelský ovládací prvek do projektu
 
-Vzhledem k tomu, že tento návod vytvoří komplexní ovládací prvek s datovou vazbou z **uživatelského ovládacího prvku** , přidejte do projektu položku **uživatelského ovládacího prvku** :
+Vzhledem k tomu, že tento návod vytvoří komplexní ovládací prvek s datovou vazbou z **uživatelského ovládacího prvku**, přidejte do projektu položku **uživatelského ovládacího prvku** :
 
 1. V nabídce **projekt** vyberte možnost **Přidat uživatelský ovládací prvek**.
 

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c24c006f-f2ac-429f-89db-677fc0c6e1ea
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c39fae399cd735d09218699f10c1eaead8e40ee
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 7f3d9a907d0857e918069fc4542d59d87242d609
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560678"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865836"
 ---
 # <a name="create-custom-data-visualizers"></a>Vytváření vlastních vizualizací dat
 
@@ -95,7 +95,7 @@ V kódu na straně laděného procesu:
 
    Toto jsou jediné podporované TFM.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: Zápis vizualizéru v jazyce C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
 - [Návod: Zápis vizualizéru v jazyce Visual Basic](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)

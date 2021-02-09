@@ -8,16 +8,16 @@ dev_langs:
 - CPP
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: 36b1fe83cb20aee6d6fc95984a254c9ac9d212bd
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: 4cf316e0d892e8c6ba229a7a46ee0439797d032f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94998093"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866343"
 ---
 # <a name="visual-studio-data-tools-for-c"></a>Datové nástroje sady Visual Studio pro C++
 
@@ -43,7 +43,7 @@ Pokud chcete využít vlastní funkce v SQL Server 2005 a novějších, použijt
 
 4. Stáhněte si ukázku Windows SDK ODBC a rozbalte ji do nového umístění. Tato ukázka zobrazuje základní příkazy ODBC, které slouží k připojení k databázi a vydávání dotazů a příkazů. Další informace o těchto funkcích najdete v části [Microsoft Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc). Při prvním načtení řešení (je ve složce C++) bude Visual Studio nabízet upgrade řešení na aktuální verzi sady Visual Studio. Klikněte na **Ano**.
 
-5. Chcete-li použít nativního klienta, budete potřebovat soubor *hlaviček* a soubor *lib* . Tyto soubory obsahují funkce a definice, které jsou specifické pro SQL Server, nad rámec funkcí rozhraní ODBC definovaných v SQL. h. V **Project**  >  okně **vlastnosti** projektu  >  **VC + +** přidejte následující adresář include:
+5. Chcete-li použít nativního klienta, budete potřebovat soubor *hlaviček* a soubor *lib* . Tyto soubory obsahují funkce a definice, které jsou specifické pro SQL Server, nad rámec funkcí rozhraní ODBC definovaných v SQL. h. V   >  okně **vlastnosti** projektu  >  **VC + +** přidejte následující adresář include:
 
    **%ProgramFiles%\Microsoft SQL Server\110\SDK\Include**
 
@@ -60,7 +60,7 @@ Pokud chcete využít vlastní funkce v SQL Server 2005 a novějších, použijt
 
     Všimněte si, že vzorek ve skutečnosti nepoužívá žádnou z nativních funkcí klienta, takže předchozí kroky není nutné, aby je bylo možné zkompilovat a spustit. Ale projekt je teď nakonfigurovaný, abyste mohli tuto funkci používat. Další informace najdete v tématu [SQL Server Native Client programování](/sql/relational-databases/native-client/sql-server-native-client).
 
-7. Určete, který ovladač se má použít v subsystému rozhraní ODBC. Ukázka předá atribut připojovacího řetězce ovladače v podobě argumentu příkazového řádku. V **Project**  >  **Možnosti**  >  **ladění** vlastností projektu přidejte tento argument příkazu:
+7. Určete, který ovladač se má použít v subsystému rozhraní ODBC. Ukázka předá atribut připojovacího řetězce ovladače v podobě argumentu příkazového řádku. V   >  **Možnosti**  >  **ladění** vlastností projektu přidejte tento argument příkazu:
 
    ```cpp
    DRIVER="SQL Server Native Client 11.0"

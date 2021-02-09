@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 6260ac76-4f9d-4144-ba22-32f8620b32c2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c9f8730fb864a70e7f649d5e8b4920d916c07c11
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2bee496e8386185a3eb9393934b83da89286d0ff
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468488"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865221"
 ---
 # <a name="idiadatasource"></a>IDiaDataSource
 Inicializuje přístup ke zdroji ladicích symbolů.
@@ -25,7 +25,7 @@ Inicializuje přístup ke zdroji ladicích symbolů.
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaDataSource : IUnknown
+IDiaDataSource : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable

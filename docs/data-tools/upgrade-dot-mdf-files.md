@@ -13,15 +13,15 @@ helpviewer_keywords:
 - upgrading to LocalDB
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: babc82469d32540f1a003b629c9d83887ca91595
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: cbea7761ed5f36265464f2afe9a64550ddc5e62a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94998041"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866304"
 ---
 # <a name="upgrade-mdf-files"></a>Upgrade souborů .mdf
 
@@ -103,7 +103,7 @@ SQL Server Express připojení můžete také upravit tak, aby používalo Local
 
 ### <a name="to-make-sql-server-express-the-default-database-engine"></a>Zpřístupnění SQL Server Express výchozím databázovým strojem
 
-1. Na panelu nabídek vyberte **Tools**  >  **Možnosti** nástroje.
+1. Na panelu nabídek vyberte   >  **Možnosti** nástroje.
 
 2. V dialogovém okně **Možnosti** rozbalte možnosti **nástroje databáze** a pak vyberte **datová připojení**.
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: f66a3940-6227-46af-a930-9177f425f4fd
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: f039dc445acd9032a5fe6862e78e5c28ec67bf5d
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9463fe0371ee3184fd78684e7fe0565820ab3bf0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436000"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866538"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>Rozdělování datových sad a objektů TableAdapter do různých projektů
 Typové datové sady byly vylepšeny, takže třídy [objekty TableAdapter](create-and-configure-tableadapters.md) a DataSet lze generovat do samostatných projektů. Díky tomu můžete rychle oddělit aplikační vrstvy a generovat n-vrstvou datovou aplikaci.
@@ -54,7 +54,7 @@ Když oddělíte kód datové sady z TableAdapter kódu, projekt, který obsahuj
 
      Kód datové sady je vygenerován do vybraného projektu ve vlastnosti **projektu DataSet** a kód **TableAdapter** je vygenerován do aktuálního projektu.
 
-Ve výchozím nastavení platí, že po oddělení datové sady a kódu TableAdapter je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem *DataSet. Designer. vb* (nebo *DatasetName.Designer.cs* ), který obsahuje kód TableAdapter. Projekt, který je určen vlastností **projektu DataSet** , má soubor pojmenovaný *DataSet. DataSet. Designer. vb* (nebo *DatasetName.DataSet.Designer.cs* ), který obsahuje kód datové sady.
+Ve výchozím nastavení platí, že po oddělení datové sady a kódu TableAdapter je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem *DataSet. Designer. vb* (nebo *DatasetName.Designer.cs*), který obsahuje kód TableAdapter. Projekt, který je určen vlastností **projektu DataSet** , má soubor pojmenovaný *DataSet. DataSet. Designer. vb* (nebo *DatasetName.DataSet.Designer.cs*), který obsahuje kód datové sady.
 
 > [!NOTE]
 > Chcete-li zobrazit vygenerovaný soubor třídy, vyberte projekt DataSet nebo TableAdapter. Pak v **Průzkumník řešení** vyberte možnost **Zobrazit všechny soubory**.

@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: e88224ab-ff61-4a3a-b6b8-6f3694546cac
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5915de290a84429878eccb4eae17821f8ac27f70
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: f0b7ab161a252e1d3a89ef856325963bddffdc56
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436410"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866850"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>Postupy: Přiřazení uložených procedur za účelem aktualizací, vkládání a odstraňování (Návrhář relací objektů)
 
@@ -45,7 +45,7 @@ Ve výchozím nastavení logika aktualizace databáze (vložení, aktualizace a 
 
 4. Vyberte třídu entity, pro kterou chcete použít uloženou proceduru pro provádění aktualizací.
 
-5. V okně **vlastnosti** vyberte příkaz, který chcete přepsat ( **Vložit** , **aktualizovat** nebo **Odstranit** ).
+5. V okně **vlastnosti** vyberte příkaz, který chcete přepsat (**Vložit**, **aktualizovat** nebo **Odstranit**).
 
 6. Klikněte na tlačítko se třemi tečkami (...) vedle slov **použít modul runtime** k otevření dialogového okna **Konfigurovat chování** .
 
@@ -61,9 +61,9 @@ Ve výchozím nastavení logika aktualizace databáze (vložení, aktualizace a 
 10. Klikněte na tlačítko **OK** nebo **použít**.
 
     > [!NOTE]
-    > Můžete pokračovat v konfiguraci chování pro každou kombinaci třídy a chování, pokud kliknete na **použít** po provedení každé změny. Pokud změníte třídu nebo chování předtím, než kliknete na **použít** , zobrazí se dialogové okno s upozorněním a nabídne vám možnost použít změny.
+    > Můžete pokračovat v konfiguraci chování pro každou kombinaci třídy a chování, pokud kliknete na **použít** po provedení každé změny. Pokud změníte třídu nebo chování předtím, než kliknete na **použít**, zobrazí se dialogové okno s upozorněním a nabídne vám možnost použít změny.
 
-Chcete-li se vrátit k používání výchozí logiky modulu runtime pro aktualizace, klikněte na tři tečky vedle příkazu **Vložit** , **aktualizovat** nebo **Odstranit** v okně **vlastnosti** a pak v dialogovém okně **Konfigurovat chování** vyberte **použít modul runtime** .
+Chcete-li se vrátit k používání výchozí logiky modulu runtime pro aktualizace, klikněte na tři tečky vedle příkazu **Vložit**, **aktualizovat** nebo **Odstranit** v okně **vlastnosti** a pak v dialogovém okně **Konfigurovat chování** vyberte **použít modul runtime** .
 
 ## <a name="see-also"></a>Viz také
 

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: ddc7d794-c622-4c63-b2a6-72f8b2d0022a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 04687eb58ecee2211f098c0f432afc28e0465305
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: e217294eeec332a7b629ae39715b6973f7ebb2a9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728779"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865540"
 ---
 # <a name="compilanddetails"></a>CompilandDetails
 Informace kompilantu jsou rozdělené mezi symboly `SymTagCompiland` značkou (nízká detail) a `SymTagCompilandDetails` značkou (s vysokou podrobnostcí). `SymTagCompilandDetails` poskytuje širokou informaci o kompilantu, která není k dispozici se `SymTagCompiland` symbolem.

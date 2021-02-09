@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5147a170-41ce-4727-8ace-c318e8d11647
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e410b453b9fac97a96e31c4d62fb9d7cccc41d4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b895555ce1334fa306b64fe213787bdf5dc827e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468642"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865382"
 ---
 # <a name="friend-debug-interface-access-sdk"></a>Přítel (Přístup k rozhraní ladění SDK)
 Třídy Friend a Friend Functions jsou identifikovány pomocí `SymTagFriend` symbolů. Jsou podřízené pro nadřazené uživatelsky definované typy (UDT) a mají vlastnost [IDiaSymbol:: get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md) .

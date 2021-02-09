@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 55f3bfbe-db78-4486-add3-c62f49e6b9a0
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: e6a10eb996acbdbf5411688860ce2ec8b00da1f6
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 8037b8d19bad19485e9ed8f7926e6a3e45b8fef1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436456"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866902"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>Vyplnění datových sad pomocí objektů TableAdapter
 
@@ -37,7 +37,7 @@ Komponenta TableAdapter vyplní datovou sadu daty z databáze na základě jedno
 
 Podrobné informace o operacích TableAdapter můžete přeskočit přímo na jedno z následujících témat:
 
-|Téma|Popis|
+|Téma|Description|
 |-----------|-----------------|
 |[Vytvoření a konfigurace objektů TableAdapter](../data-tools/create-and-configure-tableadapters.md)|Jak používat návrháře k vytváření a konfiguraci objekty TableAdapter|
 |[Vytvoření parametrizovaných dotazů TableAdapter](../data-tools/create-parameterized-tableadapter-queries.md)|Jak povolit uživatelům dodávat argumenty TableAdapter procedurám nebo dotazům|
@@ -54,7 +54,7 @@ Objekty TableAdapter jsou komponenty generované návrhářem, které se připoj
 
 ![Tok dat v klientské aplikaci](../data-tools/media/clientdatadiagram.gif)
 
-I když jsou objekty TableAdapter navrhovány pomocí **Návrhář datových sad** , třídy TableAdapter nejsou generovány jako vnořené třídy  <xref:System.Data.DataSet> . Jsou umístěny v samostatných oborech názvů, které jsou specifické pro každou datovou sadu. Například pokud máte datovou sadu s názvem `NorthwindDataSet` , objekty TableAdapter, která jsou asociována s  <xref:System.Data.DataTable> s s, `NorthwindDataSet` by měla být v `NorthwindDataSetTableAdapters` oboru názvů. Pro programový přístup k určitému typu TableAdapter musíte deklarovat novou instanci typu TableAdapter. Příklad:
+I když jsou objekty TableAdapter navrhovány pomocí **Návrhář datových sad**, třídy TableAdapter nejsou generovány jako vnořené třídy  <xref:System.Data.DataSet> . Jsou umístěny v samostatných oborech názvů, které jsou specifické pro každou datovou sadu. Například pokud máte datovou sadu s názvem `NorthwindDataSet` , objekty TableAdapter, která jsou asociována s  <xref:System.Data.DataTable> s s, `NorthwindDataSet` by měla být v `NorthwindDataSetTableAdapters` oboru názvů. Pro programový přístup k určitému typu TableAdapter musíte deklarovat novou instanci typu TableAdapter. Příklad:
 
 [!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
 [!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]
@@ -91,7 +91,7 @@ Třída TableAdapter není typu .NET. To znamená, že ho nemůžete najít v do
 
 Níže jsou uvedené běžně používané metody a vlastnosti objekty TableAdapter:
 
-|Člen|Popis|
+|Člen|Description|
 |------------|-----------------|
 |`TableAdapter.Fill`|Naplní tabulku dat přidruženého k TableAdapter výsledky `SELECT` příkazu TableAdapter.|
 |`TableAdapter.Update`|Odešle změny zpět do databáze a vrátí celé číslo představující počet řádků ovlivněných aktualizací. Další informace najdete v tématu [aktualizace dat pomocí TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md).|
@@ -128,7 +128,7 @@ Třída TableAdapterManager není typu .NET. Proto je nemůžete v dokumentaci v
 
 Následující jsou často používané metody a vlastnosti `TableAdapterManager` třídy:
 
-|Člen|Popis|
+|Člen|Description|
 |------------|-----------------|
 |Metoda `UpdateAll`|Uloží všechna data ze všech tabulek dat.|
 |`BackUpDataSetBeforeUpdate` majetek|Určuje, zda má být před provedením metody vytvořena záložní kopie datové sady `TableAdapterManager.UpdateAll` . Datového.|

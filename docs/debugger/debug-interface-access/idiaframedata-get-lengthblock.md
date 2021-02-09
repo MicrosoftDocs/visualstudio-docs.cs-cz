@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2e54deb7-7744-428e-913c-1d47a2aa89b0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 82f09b454b167fbba9ff267ed4293100162af237
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c92c21ecd278810fd65c9d624564c992225ca20
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467321"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864976"
 ---
 # <a name="idiaframedataget_lengthblock"></a>IDiaFrameData::get_lengthBlock
 Načte délku bloku kódu popsaného rámcem v bajtech.
@@ -25,7 +25,7 @@ Načte délku bloku kódu popsaného rámcem v bajtech.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_lengthBlock ( 
+HRESULT get_lengthBlock ( 
    DWORD* pRetVal
 );
 ```

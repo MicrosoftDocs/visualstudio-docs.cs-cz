@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1020581d-eaaa-41a2-aca4-bf4c212895f6
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: ea1ab222868df6ff1b22eee7827e1edd3978a88e
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: c4a25cc340216e3410e0ca4b6cfabec77a73662e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436208"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866681"
 ---
 # <a name="n-tier-data-applications-overview"></a>Přehled vícevrstvých datových aplikací
 *N-vrstvé* datové aplikace jsou datové aplikace, které jsou rozdělené do několika *vrstev*. Také označované jako "distribuované aplikace" a "vícevrstvé aplikace", n-vrstvé aplikace oddělují zpracování do diskrétních vrstev distribuovaných mezi klientem a serverem. Při vývoji aplikací s přístupem k datům by mělo být cíleno na rozdělení mezi různými úrovněmi, které aplikaci tvoří.
@@ -42,7 +42,7 @@ Aplikace Visual Studio obsahuje několik funkcí, které usnadní vývojářům 
 
 - Reprezentace objektu dat, například [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) třídy entit pro použití v prezentační vrstvě.
 
-Prezentační vrstva obvykle přistupuje k prostřední vrstvě pomocí odkazu na službu (například [Windows Communication Foundation služby a WCF Data Services v aplikaci Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) ). Prezentační vrstva obvykle nepřistupuje přímo k datové vrstvě. Prezentační vrstva komunikuje s datovou vrstvou prostřednictvím součásti datového přístupu v rámci střední vrstvy.
+Prezentační vrstva obvykle přistupuje k prostřední vrstvě pomocí odkazu na službu (například [Windows Communication Foundation služby a datové služby WCF v aplikaci Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) ). Prezentační vrstva obvykle nepřistupuje přímo k datové vrstvě. Prezentační vrstva komunikuje s datovou vrstvou prostřednictvím součásti datového přístupu v rámci střední vrstvy.
 
 ## <a name="middle-tier"></a>Střední vrstva
 *Střední vrstva* je vrstva, kterou prezentační vrstva a Datová vrstva používá ke vzájemné komunikaci. Mezi typické komponenty střední vrstvy patří:

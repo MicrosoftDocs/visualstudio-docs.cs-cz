@@ -10,15 +10,15 @@ dev_langs:
 ms.assetid: 7b1a91cf-8b5a-4fc0-ac36-0dc2d336fa1b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8ccf228b147301eb9fccf41da98f8cc5204971a9
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 4342af681f8e2cc38855bec6041e8b4cd83dcf5d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436065"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866616"
 ---
 # <a name="query-datasets"></a>Datové sady dotazů
 Chcete-li vyhledat konkrétní záznamy v datové sadě, použijte `FindBy` metodu v objektu DataTable, zapište vlastní příkaz foreach k zacyklení nad kolekcí řádků tabulky nebo použijte [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset).

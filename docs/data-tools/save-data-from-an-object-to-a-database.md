@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: efd6135a-40cf-4b0d-8f8b-41a5aaea7057
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7ee06ef21be4076a1a0dee6319155144c468bafd
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 52bd4f95160165ee67c0a35816d094238786bc38
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436015"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866564"
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>Uložení dat z objektu do databáze
 
@@ -35,7 +35,7 @@ Ve výchozím nastavení `DBDirect` jsou metody vytvořeny na TableAdapter, kter
 > [!NOTE]
 > Při konfiguraci TableAdapter musí hlavní dotaz poskytnout dostatek informací, aby `DBDirect` bylo možné metody vytvořit. Pokud je například TableAdapter nakonfigurovaný na dotazování dat z tabulky, která nemá definovaný sloupec primárního klíče, negeneruje `DBDirect` metody.
 
-|TableAdapter DBDirect – metoda|Popis|
+|TableAdapter DBDirect – metoda|Description|
 | - |-----------------|
 |`TableAdapter.Insert`|Přidá nové záznamy do databáze a umožňuje předat hodnoty jednotlivých sloupců jako parametry metody.|
 |`TableAdapter.Update`|Aktualizuje existující záznamy v databázi. `Update`Metoda přijímá původní a nové hodnoty sloupce jako parametry metody. Původní hodnoty se používají k vyhledání původního záznamu a k aktualizaci tohoto záznamu se použijí nové hodnoty.<br /><br /> `TableAdapter.Update`Metoda je také použita pro sjednocení změn v datové sadě zpět do databáze převzetím,, <xref:System.Data.DataSet> <xref:System.Data.DataTable> <xref:System.Data.DataRow> nebo polem <xref:System.Data.DataRow> s jako parametry metody.|

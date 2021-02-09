@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: e601fbc9-b10b-41c7-8180-959e57efabe8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fea037e4e99cc5c8822987c30a94adf37ebe276e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d2ec6c696268e069e26eeaf55139debbeac47054
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467706"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865151"
 ---
 # <a name="idiaenumsymbolsskip"></a>IDiaEnumSymbols::Skip
 Přeskočí zadaný počet symbolů v sekvenci výčtu.
@@ -25,7 +25,7 @@ Přeskočí zadaný počet symbolů v sekvenci výčtu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT Skip ( 
+HRESULT Skip ( 
    ULONG celt
 );
 ```

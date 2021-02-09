@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: f8ef3a2c-029c-423b-9d9e-a4f1add4f640
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 18d1da27faed67b90658ea4479f1e2e9a11ead4a
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 1707bbdd458ba6fc57ea3f6897af40e4cb9b4f03
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436286"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866733"
 ---
 # <a name="how-to-save-and-edit-connection-strings"></a>Postupy: ukládání a úpravy připojovacích řetězců
 Připojovací řetězce v aplikacích sady Visual Studio se ukládají do konfiguračního souboru aplikace (také označovaného jako nastavení aplikace) nebo pevně zakódované přímo v aplikaci. Ukládání připojovacích řetězců do konfiguračního souboru aplikace zjednodušuje úlohu správy aplikace. Pokud je třeba připojovací řetězec změnit, můžete ho aktualizovat v souboru nastavení aplikace (na rozdíl od změny ve zdrojovém kódu a znovu kompilovat aplikaci).
@@ -32,7 +32,7 @@ V **Průvodci konfigurací zdroje dat** vyberte možnost Uložit připojení na 
 1. V **Průzkumník řešení** dvakrát klikněte na ikonu **můj projekt** (Visual Basic) nebo na ikonu **vlastnosti** (C#) a otevřete **Návrháře projektu**.
 1. Vyberte kartu **Settings** (Nastavení).
 1. Zadejte **název** připojovacího řetězce. Při přístupu k připojovacímu řetězci v kódu se podívejte na tento název.
-1. Nastavte **typ** na ( **připojovací řetězec** ).
+1. Nastavte **typ** na (**připojovací řetězec**).
 1. Ponechte **Rozsah** nastavený na **aplikace**.
 1. Do pole **hodnota** zadejte připojovací řetězec nebo klikněte na tlačítko se **třemi tečkami** (...) v poli **hodnota** . tím otevřete dialogové okno **Vlastnosti připojení** , ve kterém můžete vytvořit připojovací řetězec.
 

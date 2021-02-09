@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 56a1fbff-c7e8-4187-a1c1-ffd17024bc1b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 293f04ca111fe88c905a288885f7e4763ec1cdc3
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: cc390642155d33f75bf5c4a69236945658845639
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436690"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867097"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>Vytváření vyhledávacích tabulek v aplikacích WPF
 
-*Vyhledávací tabulka* termínů (někdy označované jako *vyhledávací vazba* ) popisuje ovládací prvek, který zobrazuje informace z jedné tabulky dat na základě hodnoty pole cizího klíče v jiné tabulce. Vyhledávací tabulku lze vytvořit přetažením hlavního uzlu nadřazené tabulky nebo objektu v okně **zdroje dat** do ovládacího prvku, který je již svázán se sloupcem nebo vlastností v související podřízené tabulce.
+*Vyhledávací tabulka* termínů (někdy označované jako *vyhledávací vazba*) popisuje ovládací prvek, který zobrazuje informace z jedné tabulky dat na základě hodnoty pole cizího klíče v jiné tabulce. Vyhledávací tabulku lze vytvořit přetažením hlavního uzlu nadřazené tabulky nebo objektu v okně **zdroje dat** do ovládacího prvku, který je již svázán se sloupcem nebo vlastností v související podřízené tabulce.
 
 Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` tabulce obsahuje položku `CustomerID` , která označuje zákazníka, který objednávku zadal. `CustomerID`Je cizí klíč, který odkazuje na záznam zákazníka v `Customers` tabulce. Když zobrazíte seznam objednávek z `Orders` tabulky, možná budete chtít zobrazit skutečný název zákazníka namísto `CustomerID` . Vzhledem k tomu, že je název zákazníka v `Customers` tabulce, je nutné vytvořit vyhledávací tabulku pro zobrazení názvu zákazníka. Vyhledávací tabulka používá `CustomerID` `Orders` k navigaci vztahu hodnotu v záznamu a vrací jméno zákazníka.
 

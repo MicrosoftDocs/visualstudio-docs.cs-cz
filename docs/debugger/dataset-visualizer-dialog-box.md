@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dfbede03-805b-4f88-a645-b479450e6cb0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f57247d23a318da6bf492534c1ff060bb4116bb
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: ca676ec343588d3e473da2ddbf37dd814e29b73d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560470"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865719"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>Dialogové okno Vizualizér DataSetu
 Vizualizér DataSet umožňuje zobrazit obsah objektu DataSet, DataTable, DataView nebo objektu DataViewManager. K tomuto Vizualizér máte přístup kliknutím na ikonu lupy, která se zobrazí vedle hodnoty pro jeden z těchto objektů v okně proměnné ladicího programu nebo v DataTip.
@@ -36,7 +36,7 @@ Vizualizér DataSet umožňuje zobrazit obsah objektu DataSet, DataTable, DataVi
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
  Tabulka: pomocí tohoto rozevíracího seznamu můžete vybrat tabulku v rámci datové sady, kterou chcete vizualizovat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Vytváření vlastních vizualizérů](../debugger/create-custom-visualizers-of-data.md)

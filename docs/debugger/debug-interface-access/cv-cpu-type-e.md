@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: df470a7e-1d04-448e-b920-c731189514fa
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 44b076caffe4bc92bb62b63aa9d5d5e3dc464786
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: e0574814d15f981647283afa0d42320088652532
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728567"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865445"
 ---
 # <a name="cv_cpu_type_e"></a>CV_CPU_TYPE_e
 Určuje cílový procesor.

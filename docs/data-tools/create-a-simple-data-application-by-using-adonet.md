@@ -10,15 +10,15 @@ dev_langs:
 ms.assetid: 2222841f-e443-4a3d-8c70-4506aa905193
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 44205f7f8f12d453a7c1d93ec8fee6ed1a3c1765
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 71e6c03c4ed0319b45c5b6ef0b79f65abbfc9f73
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436794"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867188"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>Vytvoření jednoduché datové aplikace pomocí ADO.NET
 
@@ -29,7 +29,7 @@ Tento článek ukazuje jednoduchý způsob, jak rychle získat data z databáze.
 > [!IMPORTANT]
 > Aby byl kód jednoduchý, nezahrnuje zpracování výjimek připravené pro produkční prostředí.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Chcete-li vytvořit aplikaci, budete potřebovat:
 
@@ -124,10 +124,10 @@ Vytvořte ukázkovou databázi pomocí následujících kroků:
 ## <a name="store-the-connection-string"></a>Uložení připojovacího řetězce
 Když se aplikace pokusí otevřít připojení k databázi, aplikace musí mít přístup k připojovacímu řetězci. Chcete-li se vyhnout zadávání řetězce ručně na každém formuláři, uložte řetězec do souboru *App.config* v projektu a vytvořte metodu, která vrátí řetězec, pokud je metoda volána z libovolného formuláře v aplikaci.
 
-Připojovací řetězec můžete najít tak, že kliknete pravým tlačítkem na připojení k datům **prodeje** v **Průzkumník serveru** a zvolíte **vlastnosti**. Vyhledejte vlastnost **ConnectionString** a pak pomocí **kombinace kláves CTRL** + **a** , **CTRL** + **C** vyberte a zkopírujte řetězec do schránky.
+Připojovací řetězec můžete najít tak, že kliknete pravým tlačítkem na připojení k datům **prodeje** v **Průzkumník serveru** a zvolíte **vlastnosti**. Vyhledejte vlastnost **ConnectionString** a pak pomocí **kombinace kláves CTRL** + **a**, **CTRL** + **C** vyberte a zkopírujte řetězec do schránky.
 
 1. Pokud používáte jazyk C#, v **Průzkumník řešení** rozbalte uzel **vlastnosti** v projektu a pak otevřete soubor **Settings. Settings** .
-    Pokud používáte Visual Basic, klikněte v **Průzkumník řešení** na **Zobrazit všechny soubory** , rozbalte uzel **můj projekt** a pak otevřete soubor **Settings. Settings** .
+    Pokud používáte Visual Basic, klikněte v **Průzkumník řešení** na **Zobrazit všechny soubory**, rozbalte uzel **můj projekt** a pak otevřete soubor **Settings. Settings** .
 
 2. Do sloupce **název** zadejte `connString` .
 

@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 56133e65-81f3-44c3-bc28-ffdd0671a0d2
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 96932dca3d7f8799c316e05dc36c3f38a0e8110f
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: a4a13de7c6d9f9627332852be26356f26109c92d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436317"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866837"
 ---
 # <a name="how-to-create-an-association-between-linq-to-sql-classes-or-designer"></a>Postupy: vytvoření přidružení mezi třídami LINQ to SQL (Návrhář O/R)
 Přidružení mezi třídami entit v [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] jsou podobná vztahům mezi tabulkami v databázi. Přidružení mezi třídami entit můžete vytvořit pomocí dialogového okna **Editor přidružení** .
@@ -23,18 +23,18 @@ Přidružení mezi třídami entit v [!INCLUDE[vbtecdlinq](../data-tools/include
 Je nutné vybrat nadřazenou třídu a podřízenou třídu při použití dialogového okna **Editor přidružení** k vytvoření přidružení. Nadřazená třída je třída entity, která obsahuje primární klíč; podřízená třída je třída entity, která obsahuje cizí klíč. Například pokud byly vytvořeny třídy entit, které jsou namapovány `Northwind Customers` na `Orders` tabulky a, `Customer` třída bude nadřazenou třídou a `Order` třída by byla podřízenou třídou.
 
 > [!NOTE]
-> Když přetáhnete tabulky z **Průzkumník serveru** nebo **průzkumníka databáze** do **Návrhář relací objektů** ( **O/R Designer** ), vytvoří se přidružení automaticky na základě stávajících vztahů cizího klíče v databázi.
+> Když přetáhnete tabulky z **Průzkumník serveru** nebo **průzkumníka databáze** do **Návrhář relací objektů** (**O/R Designer**), vytvoří se přidružení automaticky na základě stávajících vztahů cizího klíče v databázi.
 
 ## <a name="association-properties"></a>Vlastnosti přidružení
-Když při vytváření přidružení vyberete přidružení v **Návrháři pro/R** , v okně **vlastnosti** jsou některé konfigurovatelné vlastnosti. (Přidružení je čára mezi souvisejícími třídami.) Následující tabulka uvádí popisy vlastností přidružení.
+Když při vytváření přidružení vyberete přidružení v **Návrháři pro/R**, v okně **vlastnosti** jsou některé konfigurovatelné vlastnosti. (Přidružení je čára mezi souvisejícími třídami.) Následující tabulka uvádí popisy vlastností přidružení.
 
 |Vlastnost|Popis|
 |--------------|-----------------|
 |**Kardinalita**|Určuje, zda je přidružení typu 1: n nebo 1:1.|
-|**Podřízená vlastnost**|Určuje, zda se má vytvořit vlastnost u nadřazené položky, která je kolekcí nebo odkazem na podřízené záznamy na straně cizího klíče asociace. Například v přidružení mezi `Customer` a `Order` , pokud je **Podřízená vlastnost** nastavena na **hodnotu true** , je vytvořena vlastnost s názvem `Orders` v nadřazené třídě.|
+|**Podřízená vlastnost**|Určuje, zda se má vytvořit vlastnost u nadřazené položky, která je kolekcí nebo odkazem na podřízené záznamy na straně cizího klíče asociace. Například v přidružení mezi `Customer` a `Order` , pokud je **Podřízená vlastnost** nastavena na **hodnotu true**, je vytvořena vlastnost s názvem `Orders` v nadřazené třídě.|
 |**Nadřazená vlastnost**|Vlastnost u podřízené třídy, která odkazuje na přidruženou nadřazenou třídu. Například při přidružení mezi `Customer` a `Order` je vlastnost s názvem `Customer` , která odkazuje na přidruženého zákazníka pro objednávku, vytvořena na `Order` třídě.|
 |**Zúčastněné vlastnosti**|Zobrazí vlastnosti přidružení a poskytne tlačítko se **třemi tečkami** (...), které znovu otevře dialogové okno **Editor přidružení** .|
-|**Jedinečná**|Určuje, zda mají sloupce cizího cíle omezení jedinečnosti.|
+|**Jedinečné**|Určuje, zda mají sloupce cizího cíle omezení jedinečnosti.|
 
 ## <a name="to-create-an-association-between-entity-classes"></a>Vytvoření přidružení mezi třídami entit
 

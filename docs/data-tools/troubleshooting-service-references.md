@@ -1,6 +1,6 @@
 ---
 title: Řešení potíží s odkazy na služby
-description: Projděte si běžné problémy, ke kterým může dojít při práci s Windows Communication Foundation (WCF) nebo WCF Data Services odkazy v aplikaci Visual Studio.
+description: Projděte si běžné problémy, ke kterým může dojít při práci s Windows Communication Foundation (WCF) nebo Datové služby WCF odkazy v aplikaci Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3b531120-1325-4734-90c6-6e6113bd12ac
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7d1a1f0efc21f1f612d85725358555fcb0cb8245
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: 909291e3f9762593a58df93a9ccc7fe2e82b7952
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94998067"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866356"
 ---
 # <a name="troubleshoot-service-references"></a>Řešení potíží s odkazy na služby
 
-Toto téma obsahuje seznam běžných problémů, ke kterým může dojít při práci s Windows Communication Foundation (WCF) nebo WCF Data Services odkazy v aplikaci Visual Studio.
+Toto téma obsahuje seznam běžných problémů, ke kterým může dojít při práci s Windows Communication Foundation (WCF) nebo Datové služby WCF odkazy v aplikaci Visual Studio.
 
 ## <a name="error-returning-data-from-a-service"></a>Chyba při vracení dat ze služby
 
@@ -90,7 +90,7 @@ Chcete-li tuto chybu opravit, je nutné ručně znovu sestavit projekt služby:
 
 7. V nabídce **sestavení** klikněte na znovu **sestavit** a znovu sestavte projekt služby WCF.
 
-## <a name="wcf-data-services-do-not-display-in-the-browser"></a>WCF Data Services se nezobrazují v prohlížeči
+## <a name="wcf-data-services-do-not-display-in-the-browser"></a>Datové služby WCF se nezobrazují v prohlížeči
 
 Když se pokusí zobrazit XML reprezentace dat v aplikaci [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] , Internet Explorer může data interpretovat jako informační kanál RSS. Ujistěte se, že je zakázaná možnost Zobrazit kanály RSS.
 

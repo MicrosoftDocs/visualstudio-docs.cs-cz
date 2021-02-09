@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: afe6cb8a-dc6a-428b-b07b-903ac02c890b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 77f6a837fcc88c7154978e8031b17febaa0fcd39
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: bdbfba867fd1fa898ff376d3d1e60f33f58c32a0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436052"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866590"
 ---
 # <a name="save-data-back-to-the-database"></a>Ukládání dat zpět do databáze
 
@@ -43,7 +43,7 @@ Když vytvoříte datovou datovou vazbu tabulek pro ovládací prvky na stránce
 
 Pokud jste obeznámeni s objekty TableAdapter, můžete přejít přímo na jedno z následujících témat:
 
-|Téma|Popis|
+|Téma|Description|
 |-----------|-----------------|
 |[Vkládání nových záznamů do databáze](../data-tools/insert-new-records-into-a-database.md)|Jak provádět aktualizace a vkládat pomocí objektů objekty TableAdapter nebo Command|
 |[Aktualizace dat pomocí objektu TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md)|Jak provádět aktualizace pomocí objekty TableAdapter|
@@ -74,21 +74,21 @@ Při slučování datových sad můžete předat logický argument ( `preserveCh
 
 |DataRowVersion|Cílová datová sada|Zdrojová datová sada|
 | - | - | - |
-|Původně|James Wilson|James C. Wilson|
+|Původní|James Wilson|James C. Wilson|
 |Current|Jim Wilson|James C. Wilson|
 
 Volání <xref:System.Data.DataSet.Merge%2A> metody v předchozí tabulce má za `preserveChanges=false targetDataset.Merge(sourceDataset)` následek následující data:
 
 |DataRowVersion|Cílová datová sada|Zdrojová datová sada|
 | - | - | - |
-|Původně|James C. Wilson|James C. Wilson|
+|Původní|James C. Wilson|James C. Wilson|
 |Current|James C. Wilson|James C. Wilson|
 
 Volání <xref:System.Data.DataSet.Merge%2A> metody s `preserveChanges = true targetDataset.Merge(sourceDataset, true)` výsledkem těchto dat:
 
 |DataRowVersion|Cílová datová sada|Zdrojová datová sada|
 | - | - | - |
-|Původně|James C. Wilson|James C. Wilson|
+|Původní|James C. Wilson|James C. Wilson|
 |Current|Jim Wilson|James C. Wilson|
 
 > [!CAUTION]
@@ -127,7 +127,7 @@ Informace o změnách v datové sadě jsou uchovávány dvěma způsoby: pomocí
 
 Následující tabulka popisuje možné hodnoty <xref:System.Data.DataRowState> výčtu:
 
-|Hodnota nezměněnou DataRowState|Popis|
+|Hodnota nezměněnou DataRowState|Description|
 | - |-----------------|
 |<xref:System.Data.DataRowState.Added>|Řádek byl přidán jako položka do <xref:System.Data.DataRowCollection> . (Řádek v tomto stavu nemá odpovídající původní verzi, protože neexistovala při <xref:System.Data.DataRow.AcceptChanges%2A> volání poslední metody).|
 |<xref:System.Data.DataRowState.Deleted>|Řádek byl odstraněn pomocí <xref:System.Data.DataRow.Delete%2A> <xref:System.Data.DataRow> objektu.|
@@ -141,7 +141,7 @@ Datové sady uchovávají více verzí záznamů. <xref:System.Data.DataRowVersi
 
 Následující tabulka popisuje možné hodnoty <xref:System.Data.DataRowVersion> výčtu:
 
-|Hodnota DataRowVersion|Popis|
+|Hodnota DataRowVersion|Description|
 | - |-----------------|
 |<xref:System.Data.DataRowVersion.Current>|Aktuální verze záznamu obsahuje všechny změny, které byly provedeny u záznamu od posledního <xref:System.Data.DataRow.AcceptChanges%2A> volání. Pokud byl řádek odstraněn, není k dispozici žádná aktuální verze.|
 |<xref:System.Data.DataRowVersion.Default>|Výchozí hodnota záznamu definovaná schématem DataSet nebo zdrojem dat.|

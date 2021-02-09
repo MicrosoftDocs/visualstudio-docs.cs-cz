@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 0fb78bbc-7a78-4ab4-b32f-85ece912e660
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 79e5c529c1aefb4777e174489fc8fd1ca95a4111
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: b440e8c47afdec6e0b04b5f48a35e15fe48e1875
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436343"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866798"
 ---
 # <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>Postupy: Vytvoření tříd LINQ to SQL namapovaných na tabulky a zobrazení (Návrhář relací objektů)
 

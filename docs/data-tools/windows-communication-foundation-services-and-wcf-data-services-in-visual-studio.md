@@ -1,6 +1,6 @@
 ---
-title: Windows Communication Foundation a WCF Data Services
-description: Prozkoumejte služby Windows Communication Foundation (WCF) a WCF Data Services v aplikaci Visual Studio, abyste mohli vytvářet distribuované aplikace.
+title: Windows Communication Foundation a Datové služby WCF
+description: Prozkoumejte služby Windows Communication Foundation (WCF) a Datové služby WCF v aplikaci Visual Studio, abyste mohli vytvářet distribuované aplikace.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
@@ -34,27 +34,27 @@ helpviewer_keywords:
 ms.assetid: d56f12cb-e139-4fec-b3e4-488383356642
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 983ff598003a4f966b5173dc9ae78dd9aaa16580
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: fb5ace269d7770d0e7d360734268d3e7adfda319
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94997898"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866122"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio
 
-Visual Studio poskytuje nástroje pro práci s Windows Communication Foundation (WCF) a WCF Data Services technologie Microsoftu pro vytváření distribuovaných aplikací. Toto téma poskytuje Úvod ke službám z perspektivy sady Visual Studio. Úplnou dokumentaci najdete v tématu [WCF Data Services 4,5](/dotnet/framework/data/wcf/index).
+Visual Studio poskytuje nástroje pro práci s Windows Communication Foundation (WCF) a Datové služby WCF technologie Microsoftu pro vytváření distribuovaných aplikací. Toto téma poskytuje Úvod ke službám z perspektivy sady Visual Studio. Úplnou dokumentaci najdete v tématu [Datové služby WCF 4,5](/dotnet/framework/data/wcf/index).
 
 ## <a name="what-is-wcf"></a>Co je WCF?
 
 Windows Communication Foundation (WCF) je sjednocený rámec pro vytváření zabezpečených, spolehlivých, transakčních a interoperabilních distribuovaných aplikací. Nahrazuje starší technologie pro komunikaci mezi procesy, jako jsou webové služby na ASMX, Vzdálená komunikace .NET, podnikové služby (DCOM) a služba MSMQ. WCF přináší funkce všech těchto technologií v rámci jednotného programovacího modelu. To zjednodušuje prostředí vývoje distribuovaných aplikací.
 
-### <a name="what-are-wcf-data-services"></a>Co jsou WCF Data Services
+### <a name="what-are-wcf-data-services"></a>Co jsou Datové služby WCF
 
-WCF Data Services je implementace standardu protokolu OData (Open data).  WCF Data Services umožňuje vystavit tabulková data jako sadu rozhraní REST API, což vám umožní vracet data pomocí standardních příkazů HTTP, jako je GET, POST, PUT nebo DELETE. Na straně serveru WCF Data Services pro vytváření nových služeb OData nahrazuje [webový rozhraní API ASP.NET](https://dotnet.microsoft.com/apps/aspnet/apis) . Klientská knihovna WCF Data Services je nadále vhodnou volbou pro využívání služeb OData v aplikaci .NET ze sady Visual Studio (**projekt**  >  **Přidat odkaz na službu**). Další informace najdete v tématu [WCF Data Services 4,5](/dotnet/framework/data/wcf).
+Datové služby WCF je implementace standardu protokolu OData (Open data).  Datové služby WCF umožňuje vystavit tabulková data jako sadu rozhraní REST API, což vám umožní vracet data pomocí standardních příkazů HTTP, jako je GET, POST, PUT nebo DELETE. Na straně serveru Datové služby WCF pro vytváření nových služeb OData nahrazuje [webový rozhraní API ASP.NET](https://dotnet.microsoft.com/apps/aspnet/apis) . Klientská knihovna datové služby WCF je nadále vhodnou volbou pro využívání služeb OData v aplikaci .NET ze sady Visual Studio (**projekt**  >  **Přidat odkaz na službu**). Další informace najdete v tématu [Datové služby WCF 4,5](/dotnet/framework/data/wcf).
 
 ### <a name="wcf-programming-model"></a>Programovací model WCF
 
@@ -257,7 +257,7 @@ Chcete-li se tomuto problému vyhnout, jsou typy v odkazovaných sestaveních sd
 | Nadpis | Popis |
 | - | - |
 | [Návod: Vytvoření jednoduché služby WCF v modelu Windows Forms](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md) | Poskytuje podrobné ukázky vytváření a používání služeb WCF v aplikaci Visual Studio. |
-| [Návod: vytvoření datové služby WCF pomocí WPF a Entity Framework](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md) | Poskytuje podrobné informace o tom, jak vytvořit a používat WCF Data Services v aplikaci Visual Studio. |
+| [Návod: vytvoření datové služby WCF pomocí WPF a Entity Framework](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md) | Poskytuje podrobné informace o tom, jak vytvořit a používat Datové služby WCF v aplikaci Visual Studio. |
 | [Používání vývojářských nástrojů WCF](/dotnet/framework/wcf/using-the-wcf-development-tools) | Popisuje, jak vytvářet a testovat služby WCF v aplikaci Visual Studio. |
 | | [Postupy: Přidání, aktualizace nebo odebrání odkazu na službu WCF Data Service](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md) |
 | [Řešení potíží s odkazy na služby](../data-tools/troubleshooting-service-references.md) | Představuje některé běžné chyby, ke kterým může dojít s odkazy na služby a jak je zabránit. |
@@ -265,7 +265,7 @@ Chcete-li se tomuto problému vyhnout, jsou typy v odkazovaných sestaveních sd
 | [Návod: Vytvoření n-vrstvých datových aplikací](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | Poskytuje podrobné pokyny pro vytvoření typové datové sady a oddělení kódu TableAdapter a datové sady do více projektů. |
 | [Dialogové okno Konfigurovat odkaz na službu](../data-tools/configure-service-reference-dialog-box.md) | Popisuje prvky uživatelského rozhraní dialogového okna **Konfigurovat odkaz na službu** . |
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
 
 - <xref:System.ServiceModel>
 - <xref:System.Data.Services>

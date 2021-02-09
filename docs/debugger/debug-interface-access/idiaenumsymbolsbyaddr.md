@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 37d3dcdf-e4fa-4354-b5e1-8843566b52ac
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 92062883ea97fdc6251ffa600e31230fb448f73b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 479534179d1dc54c84ebb2c53647272112dea77b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467580"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865102"
 ---
 # <a name="idiaenumsymbolsbyaddr"></a>IDiaEnumSymbolsByAddr
 Provede výčet podle adres různých symbolů obsažených ve zdroji dat.
@@ -25,7 +25,7 @@ Provede výčet podle adres různých symbolů obsažených ve zdroji dat.
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaEnumSymbolsByAddr : IUnknown
+IDiaEnumSymbolsByAddr : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable

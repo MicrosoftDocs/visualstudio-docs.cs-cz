@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1b66bc0a-7979-416f-bf7f-e5df91584c91
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c2a202cbf9f315dce647e8ccbdfdde0fd5a01cc5
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 6912567ac7dedc6885d990dd96f21c41a1867292
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728713"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865480"
 ---
 # <a name="customtype"></a>CustomType
 Typy definované dodavatelem (typy specifické pro kompilátor) jsou označeny `SymTagCustomType` symbolem.

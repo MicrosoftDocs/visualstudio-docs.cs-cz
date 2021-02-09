@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 464de16b-4215-4787-9bfa-921aaff9d9f4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d145ccd8764e488a5d1270985050b29bcd8987d
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: fe50082f8ff62c4a19b7725facc18f43d672e353
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560561"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865706"
 ---
 # <a name="crt-debug-library-use"></a>Použití knihovny ladění CRT
 Knihovna run-time jazyka C poskytuje rozsáhlou podporu ladění. Chcete-li použít jednu z knihoven ladění CRT, je nutné propojit s [/Debug](/cpp/build/reference/debug-generate-debug-info) a kompilovat pomocí **/MDD**, **/MTD** nebo **/LDD**.
@@ -47,7 +47,7 @@ Knihovna run-time jazyka C poskytuje rozsáhlou podporu ladění. Chcete-li pou�
 
  Další informace o různých knihovnách modulu runtime, které můžete použít, najdete v tématu [knihovny Run-Time C](/cpp/c-runtime-library/crt-library-features).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Techniky ladění CRT](../debugger/crt-debugging-techniques.md)
 - [/MD,/MT,/LD (použití knihovny Run-Time)](/cpp/build/reference/md-mt-ld-use-run-time-library)

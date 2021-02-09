@@ -7,18 +7,18 @@ ms.topic: how-to
 ms.assetid: e594af12-e777-434a-bc08-7dd2dac84cdc
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4bc36bca3cc5bd13b3dcfad5ebed66eca7eeb019
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: fee2c42e6ec84280f4090a8ae1dfea83a81ee369
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436330"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866824"
 ---
 # <a name="how-to-configure-inheritance-by-using-the-or-designer"></a>Postupy: Konfigurace dědičnosti pomocí Návrháře relací objektů
-**Návrhář relací objektů** ( **O/R Designer** ) podporuje koncept dědičnosti s jednou tabulkou, protože je často implementován v relačních systémech. V případě dědičnosti s jednou tabulkou existuje jedna databázová tabulka, která obsahuje pole pro nadřazené informace i podřízené informace. U relačních dat obsahuje sloupec diskriminátor hodnotu, která určuje, do které třídy patří libovolný záznam.
+**Návrhář relací objektů** (**O/R Designer**) podporuje koncept dědičnosti s jednou tabulkou, protože je často implementován v relačních systémech. V případě dědičnosti s jednou tabulkou existuje jedna databázová tabulka, která obsahuje pole pro nadřazené informace i podřízené informace. U relačních dat obsahuje sloupec diskriminátor hodnotu, která určuje, do které třídy patří libovolný záznam.
 
 Představte si třeba `Persons` tabulku, která obsahuje každého zaměstnaného společností. Někteří lidé jsou zaměstnanci a někteří lidé jsou manažeři. `Persons`Tabulka obsahuje sloupec s názvem `EmployeeType` , který má hodnotu 1 pro manažery a hodnotu 2 pro zaměstnance. Toto je sloupec diskriminátor. V tomto scénáři můžete vytvořit podtřídu zaměstnanců a naplnit třídu pouze záznamy, které mají `EmployeeType` hodnotu 2. Můžete také odebrat sloupce, které se nevztahují na jednotlivé třídy.
 

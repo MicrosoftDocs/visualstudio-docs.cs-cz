@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1cc1aa43945ceee19b70a037b1c865c67539fb61
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: ee4bb5e56c5ae9ffb5f5266c8ef80804c8e96597
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436638"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866980"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Entity Framework Tools v aplikaci Visual Studio
 
@@ -32,7 +32,7 @@ Nástroje Entity Framework jsou nainstalovány v rámci úlohy **ukládání a z
 
 Jedná se o konkrétní nástroje, které tvoří Entity Framework nástrojů v aplikaci Visual Studio:
 
-- [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)]K vizuálnímu vytváření a úpravám entit, přidružení, mapování a vztahů dědičnosti můžete použít **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Návrháře** ( **Entity Designer** ). **Entity Designer** také generuje [!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)] [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kód objektové vrstvy.
+- [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)]K vizuálnímu vytváření a úpravám entit, přidružení, mapování a vztahů dědičnosti můžete použít **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Návrháře** (**Entity Designer**). **Entity Designer** také generuje [!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)] [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kód objektové vrstvy.
 
 - **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Průvodce** můžete použít ke generování koncepčního modelu z existující databáze a přidání informací o připojení databáze do aplikace.
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d94a1068-f53f-44b5-b6fb-00dec361a7f2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ed61f8ffc95d0004213483d5b5d507c45ef2647
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0cd56e200ffe382cf8803598d9a1006403aeb393
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468516"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865256"
 ---
 # <a name="idiadatasourceloaddataforexe"></a>IDiaDataSource::loadDataForExe
 Otevře a připraví ladicí data přidružená k souboru. exe/. dll.

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: de137bee-132f-4aae-a067-9578b7a3e6d4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6103553b5a83c31ba7018efadd520bc907788759
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba343def1405609139bd2288b93bc1d43e11630c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467188"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864927"
 ---
 # <a name="idiaframedataget_virtualaddress"></a>IDiaFrameData::get_virtualAddress
 Načte virtuální adresu (VA) kódu pro daný rámec.
@@ -25,7 +25,7 @@ Načte virtuální adresu (VA) kódu pro daný rámec.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_virtualAddress ( 
+HRESULT get_virtualAddress ( 
    ULONGLONG* pRetVal
 );
 ```

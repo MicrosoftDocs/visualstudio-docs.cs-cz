@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: bfe5fe27-6a84-4392-910f-e325146d7552
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 110cacc241a733289b8cdce60c2d64c6fdf298e2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 788bbacdca0cdf03ed1a96a4c19c43ed38b9ec42
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467727"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865144"
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
 Načte zadaný počet symbolů v sekvenci výčtu.
@@ -25,7 +25,7 @@ Načte zadaný počet symbolů v sekvenci výčtu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT Next ( 
+HRESULT Next ( 
    ULONG        celt,
    IDiaSymbol** rgelt,
    ULONG*       pceltFetched

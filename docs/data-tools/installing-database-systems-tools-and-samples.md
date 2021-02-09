@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 821de34b-eaa9-40af-b9aa-b8305de16899
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 598d48d560db58a40b04e9d7684e98df22291a6a
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 41cf31c6cae310eb151969df0776788d6ea5b1e1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434850"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866694"
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Kompatibilní databázové systémy pro Visual Studio
 
@@ -41,15 +41,15 @@ Můžete si stáhnout placené nebo bezplatné edice databáze Oracle ze stránk
 
 ## <a name="mysql"></a>MySQL
 
-MySQL je oblíbený Open Source databázový systém, který se široce používá v podnicích a webech. Soubory ke stažení pro MySQL, MySQL pro Visual Studio a související produkty jsou k dispozici v [MySQL ve Windows](https://www.mysql.com/why-mysql/windows/). Třetí strany nabízejí různá rozšíření aplikace Visual Studio a samostatné aplikace pro správu pro MySQL. Nabídky můžete procházet ve Správci balíčků NuGet ( **nástroje**  >  **Správce balíčků NuGet**  >  **Správa balíčků NuGet pro řešení** ).
+MySQL je oblíbený Open Source databázový systém, který se široce používá v podnicích a webech. Soubory ke stažení pro MySQL, MySQL pro Visual Studio a související produkty jsou k dispozici v [MySQL ve Windows](https://www.mysql.com/why-mysql/windows/). Třetí strany nabízejí různá rozšíření aplikace Visual Studio a samostatné aplikace pro správu pro MySQL. Nabídky můžete procházet ve Správci balíčků NuGet (**nástroje**  >  **Správce balíčků NuGet**  >  **Správa balíčků NuGet pro řešení**).
 
 ## <a name="postgresql"></a>PostgreSQL
 
-PostgreSQL je bezplatný Open Source objekt relační databázový systém. Pokud ho chcete nainstalovat ve Windows, můžete si ho stáhnout ze [stránky pro stažení PostgreSQL](https://www.postgresql.org/download/windows/). Můžete také vytvořit PostgreSQL ze zdrojového kódu. Základní systém PostgreSQL obsahuje rozhraní jazyka C. Mnohé třetí strany poskytují balíčky NuGet pro použití PostgreSQL z aplikací .NET. Nabídky můžete procházet ve Správci balíčků NuGet ( **nástroje**  >  **Správce balíčků NuGet**  >  **Správa balíčků NuGet pro řešení** ). Nejoblíbenější balíček je možná [npgsql.org](http://www.npgsql.org).
+PostgreSQL je bezplatný Open Source objekt relační databázový systém. Pokud ho chcete nainstalovat ve Windows, můžete si ho stáhnout ze [stránky pro stažení PostgreSQL](https://www.postgresql.org/download/windows/). Můžete také vytvořit PostgreSQL ze zdrojového kódu. Základní systém PostgreSQL obsahuje rozhraní jazyka C. Mnohé třetí strany poskytují balíčky NuGet pro použití PostgreSQL z aplikací .NET. Nabídky můžete procházet ve Správci balíčků NuGet (**nástroje**  >  **Správce balíčků NuGet**  >  **Správa balíčků NuGet pro řešení**). Nejoblíbenější balíček je možná [npgsql.org](http://www.npgsql.org).
 
 ## <a name="sqlite"></a>SQLite
 
-SQLite je vložený modul SQL Database, který běží ve vlastním procesu aplikace. Můžete si ho stáhnout ze [stránky pro stažení SQLite](https://www.sqlite.org/download.html). K dispozici je také řada balíčků NuGet třetích stran pro SQLite. Nabídky můžete procházet ve Správci balíčků NuGet ( **nástroje**  >  **Správce balíčků NuGet**  >  **Správa balíčků NuGet pro řešení** ).
+SQLite je vložený modul SQL Database, který běží ve vlastním procesu aplikace. Můžete si ho stáhnout ze [stránky pro stažení SQLite](https://www.sqlite.org/download.html). K dispozici je také řada balíčků NuGet třetích stran pro SQLite. Nabídky můžete procházet ve Správci balíčků NuGet (**nástroje**  >  **Správce balíčků NuGet**  >  **Správa balíčků NuGet pro řešení**).
 
 ## <a name="firebird"></a>Firebird
 

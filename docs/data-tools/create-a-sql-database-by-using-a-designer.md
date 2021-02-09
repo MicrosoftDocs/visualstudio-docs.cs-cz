@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 99c2b06f-47aa-414e-8057-a3453712fd23
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: e31be90ff24f110fda66449187d3372976f269a7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed0df13f1dd281fcf56056809419af5d7ed6d3dc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282719"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867201"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>Vytvoření databáze a přidání tabulek v aplikaci Visual Studio
 
 Můžete použít Visual Studio k vytvoření a aktualizaci místního databázového souboru v SQL Server Express LocalDB. Databázi můžete vytvořit také spuštěním příkazů jazyka Transact-SQL v okně nástroje **Průzkumník objektů systému SQL Server** v aplikaci Visual Studio. V tomto tématu vytvoříme soubor *. mdf* a přidáte tabulky a klíče pomocí Návrháře tabulky.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 K dokončení tohoto Názorného postupu budete potřebovat úlohy pro **vývoj desktopových** aplikací pro .NET a **ukládání a zpracování dat,** které jsou nainstalované v aplikaci Visual Studio. Pokud je chcete nainstalovat, otevřete **instalační program pro Visual Studio** a vyberte možnost **Upravit** (nebo **Další**  >  **Upravit**) vedle verze sady Visual Studio, kterou chcete upravit.
 
@@ -41,7 +41,7 @@ K dokončení tohoto Názorného postupu budete potřebovat úlohy pro **vývoj 
 
    ![Šablony položek – dialogové okno](../data-tools/media/raddata-vsitemtemplates.png)
 
-4. Pojmenujte databázi **SampleDatabase**a pak klikněte na **Přidat**.
+4. Pojmenujte databázi **SampleDatabase** a pak klikněte na **Přidat**.
 
 ### <a name="add-a-data-source"></a>Přidání zdroje dat
 
@@ -67,12 +67,12 @@ K dokončení tohoto Názorného postupu budete potřebovat úlohy pro **vývoj 
 
 Připojovací řetězec pro soubor *SampleDatabase. mdf* můžete zobrazit otevřením okno Vlastnosti datového připojení:
 
-- Vyberte **zobrazení**  >  **Průzkumník objektů systému SQL Server** a otevřete **Průzkumník objektů systému SQL Server** okno. Rozbalte **(LocalDB) \MSSQLLocalDB**  >  **databáze**a potom klikněte pravým tlačítkem na *SampleDatabase. mdf* a vyberte **vlastnosti**.
+- Vyberte **zobrazení**  >  **Průzkumník objektů systému SQL Server** a otevřete **Průzkumník objektů systému SQL Server** okno. Rozbalte **(LocalDB) \MSSQLLocalDB**  >  **databáze** a potom klikněte pravým tlačítkem na *SampleDatabase. mdf* a vyberte **vlastnosti**.
 
-- Případně můžete vybrat možnost **Zobrazit**  >  **Průzkumník serveru**, pokud už toto okno není otevřené. Otevřete okno Vlastnosti rozbalením uzlu **datová připojení** , kliknutím pravým tlačítkem myši na *SampleDatabase. mdf*a následným výběrem **vlastností**.
+- Případně můžete vybrat možnost **Zobrazit**  >  **Průzkumník serveru**, pokud už toto okno není otevřené. Otevřete okno Vlastnosti rozbalením uzlu **datová připojení** , kliknutím pravým tlačítkem myši na *SampleDatabase. mdf* a následným výběrem **vlastností**.
 
   > [!TIP]
-  > Pokud nemůžete rozšířit uzel datová připojení, nebo není uvedené připojení SampleDatabase. mdf, vyberte na panelu nástrojů Průzkumník serveru tlačítko **připojit k databázi** . V dialogovém okně **Přidat připojení** se ujistěte, že je v části **zdroj dat**vybraná možnost **Microsoft SQL Server databázový soubor** , a pak vyhledejte a vyberte soubor SampleDatabase. mdf. Kliknutím na **tlačítko OK**dokončete přidání připojení.
+  > Pokud nemůžete rozšířit uzel datová připojení, nebo není uvedené připojení SampleDatabase. mdf, vyberte na panelu nástrojů Průzkumník serveru tlačítko **připojit k databázi** . V dialogovém okně **Přidat připojení** se ujistěte, že je v části **zdroj dat** vybraná možnost **Microsoft SQL Server databázový soubor** , a pak vyhledejte a vyberte soubor SampleDatabase. mdf. Kliknutím na **tlačítko OK** dokončete přidání připojení.
 
 ## <a name="create-tables-and-keys-by-using-table-designer"></a>Vytváření tabulek a klíčů pomocí Návrháře tabulky
 
@@ -80,9 +80,9 @@ V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a 
 
 ### <a name="create-the-customers-table"></a>Vytvoření tabulky Customers
 
-1. V **Průzkumník serveru**rozbalte uzel **datová připojení** a poté rozbalte uzel **SampleDatabase. mdf** .
+1. V **Průzkumník serveru** rozbalte uzel **datová připojení** a poté rozbalte uzel **SampleDatabase. mdf** .
 
-   Pokud nemůžete rozšířit uzel datová připojení, nebo není uvedené připojení SampleDatabase. mdf, vyberte na panelu nástrojů Průzkumník serveru tlačítko **připojit k databázi** . V dialogovém okně **Přidat připojení** se ujistěte, že je v části **zdroj dat**vybraná možnost **Microsoft SQL Server databázový soubor** , a pak vyhledejte a vyberte soubor SampleDatabase. mdf. Kliknutím na **tlačítko OK**dokončete přidání připojení.
+   Pokud nemůžete rozšířit uzel datová připojení, nebo není uvedené připojení SampleDatabase. mdf, vyberte na panelu nástrojů Průzkumník serveru tlačítko **připojit k databázi** . V dialogovém okně **Přidat připojení** se ujistěte, že je v části **zdroj dat** vybraná možnost **Microsoft SQL Server databázový soubor** , a pak vyhledejte a vyberte soubor SampleDatabase. mdf. Kliknutím na **tlačítko OK** dokončete přidání připojení.
 
 2. Klikněte pravým tlačítkem na **tabulky** a vyberte **Přidat novou tabulku**.
 
@@ -111,7 +111,7 @@ V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a 
 
    ![Návrhář tabulky](../data-tools/media/table-designer.png)
 
-7. V levém horním rohu **Návrháře tabulky**vyberte **aktualizovat**.
+7. V levém horním rohu **Návrháře tabulky** vyberte **aktualizovat**.
 
 8. V dialogovém okně **Náhled aktualizací databáze** vyberte **aktualizovat databázi**.
 
@@ -136,7 +136,7 @@ V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a 
    CREATE TABLE [dbo].[Orders]
    ```
 
-4. V levém horním rohu **Návrháře tabulky**vyberte **aktualizovat**.
+4. V levém horním rohu **Návrháře tabulky** vyberte **aktualizovat**.
 
 5. V dialogovém okně **Náhled aktualizací databáze** vyberte **aktualizovat databázi**.
 
@@ -150,7 +150,7 @@ V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a 
 
    ![Přidání cizího klíče v Návrháři tabulky v aplikaci Visual Studio](../data-tools/media/add-foreign-key.png)
 
-2. Do textového pole, které se zobrazí, nahraďte **ToTable** text ToTable **zákazníky**.
+2. Do textového pole, které se zobrazí, nahraďte  text ToTable **zákazníky**.
 
 3. V podokně T-SQL aktualizujte poslední řádek tak, aby odpovídal následující ukázce:
 
@@ -158,7 +158,7 @@ V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a 
    CONSTRAINT [FK_Orders_Customers] FOREIGN KEY ([CustomerID]) REFERENCES [Customers]([CustomerID])
    ```
 
-4. V levém horním rohu **Návrháře tabulky**vyberte **aktualizovat**.
+4. V levém horním rohu **Návrháře tabulky** vyberte **aktualizovat**.
 
 5. V dialogovém okně **Náhled aktualizací databáze** vyberte **aktualizovat databázi**.
 
@@ -166,9 +166,9 @@ V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a 
 
 ## <a name="populate-the-tables-with-data"></a>Naplnění tabulek daty
 
-1. V **Průzkumník serveru** nebo **Průzkumník objektů systému SQL Server**rozbalte uzel pro ukázkovou databázi.
+1. V **Průzkumník serveru** nebo **Průzkumník objektů systému SQL Server** rozbalte uzel pro ukázkovou databázi.
 
-2. Otevřete místní nabídku pro uzel **tabulky** , vyberte **aktualizovat**a potom rozbalte uzel **tabulky** .
+2. Otevřete místní nabídku pro uzel **tabulky** , vyberte **aktualizovat** a potom rozbalte uzel **tabulky** .
 
 3. Otevřete místní nabídku tabulky Customers a potom vyberte možnost **Zobrazit data tabulky**.
 

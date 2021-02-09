@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: d15e4d31-2839-48d9-9e0e-2e73404d82a2
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 76bf07e99f9965e88804c51663bcc37053bf74d6
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: ed395c60ec16eeff6a5aac88a99698193e8bacbd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94998080"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866148"
 ---
 # <a name="walkthrough-create-an-n-tier-data-application"></a>Návod: Vytvoření n-vrstvých datových aplikací
 *N-vrstvé* datové aplikace jsou aplikace, které přistupují k datům a jsou rozdělené do několika logických vrstev nebo *vrstev*. Oddělení součástí aplikace do diskrétních vrstev zvyšuje udržovatelnost a škálovatelnost aplikace. Je to díky tomu, že umožňuje snazší přijímání nových technologií, které se dají použít na jednu vrstvu, aniž byste museli přenavrhovat celé řešení. N-vrstvá architektura zahrnuje prezentační vrstvu, střední vrstvu a datovou vrstvu. Střední vrstva obvykle zahrnuje vrstvu přístupu k datům, vrstvu obchodní logiky a sdílené komponenty, jako je ověřování a ověřování. Datová vrstva zahrnuje relační databázi. N-vrstvé aplikace obvykle ukládají citlivé informace do vrstvy přístupu k datům střední vrstvy, aby zachovaly izolaci od koncových uživatelů, kteří přistupují k prezentační vrstvě. Další informace najdete v tématu [N-vrstvých datových aplikací – přehled](../data-tools/n-tier-data-applications-overview.md).
 
 Jedním ze způsobů, jak rozdělit různé úrovně v n-vrstvé aplikaci, je vytvořit diskrétní projekty pro každou vrstvu, kterou chcete do aplikace zahrnout. Typové datové sady obsahují `DataSet Project` vlastnost, která určuje, do kterých projektů se má vygenerovaná datová sada a `TableAdapter` kód přejít.
 
-Tento návod ukazuje, jak oddělit datovou sadu a `TableAdapter` kód do diskrétních projektů knihoven tříd pomocí **Návrhář datových sad**. Po oddělení datové sady a kódu TableAdapter vytvoříte [služby Windows Communication Foundation Services a WCF Data Services ve službě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) Service pro volání do úrovně přístupu k datům. Nakonec vytvoříte aplikaci model Windows Forms jako prezentační vrstvu. Tato vrstva přistupuje k datům z datové služby.
+Tento návod ukazuje, jak oddělit datovou sadu a `TableAdapter` kód do diskrétních projektů knihoven tříd pomocí **Návrhář datových sad**. Po oddělení datové sady a kódu TableAdapter vytvoříte [služby Windows Communication Foundation Services a datové služby WCF ve službě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) Service pro volání do úrovně přístupu k datům. Nakonec vytvoříte aplikaci model Windows Forms jako prezentační vrstvu. Tato vrstva přistupuje k datům z datové služby.
 
 Během tohoto Názorného postupu provedete následující kroky:
 

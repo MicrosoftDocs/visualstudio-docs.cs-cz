@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 1cbc6ca5-87d0-4c30-a39e-0a9dc62ce1a9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e9ea7a24708595eff7b4299964dd2a159c1c5836
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6847f75a3e6a2869e70665fbcf55ee5a8ba2f863
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468628"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865361"
 ---
 # <a name="funcdebugstart"></a>FuncDebugStart
 Pokud má funkce definovaný bod, na kterém je zahájeno ladění, je tento bod identifikován symbolem `SymTagFuncDebugStart` značky.

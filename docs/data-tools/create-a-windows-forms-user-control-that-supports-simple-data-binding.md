@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: b1488366-6dfb-454e-9751-f42fd3f3ddfb
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4ba2010b33b1defa6ef7dcb601fde9417fa47f70
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 30f6d338b4e27677c14dfa4e5ff8793e67f4c6ea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436742"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867110"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>Vytvoření uživatelského ovládacího prvku modelu Windows Forms, který podporuje jednoduchou datovou vazbu
 
-Při zobrazování dat ve formulářích v aplikacích systému Windows můžete zvolit existující ovládací prvky z **panelu nástrojů** , nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou k dispozici ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje rozhraní <xref:System.ComponentModel.DefaultBindingPropertyAttribute> . Ovládací prvky, které implementují, <xref:System.ComponentModel.DefaultBindingPropertyAttribute> mohou obsahovat jednu vlastnost, která může být svázána s daty. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.TextBox> nebo <xref:System.Windows.Forms.CheckBox> .
+Při zobrazování dat ve formulářích v aplikacích systému Windows můžete zvolit existující ovládací prvky z **panelu nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou k dispozici ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje rozhraní <xref:System.ComponentModel.DefaultBindingPropertyAttribute> . Ovládací prvky, které implementují, <xref:System.ComponentModel.DefaultBindingPropertyAttribute> mohou obsahovat jednu vlastnost, která může být svázána s daty. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.TextBox> nebo <xref:System.Windows.Forms.CheckBox> .
 
 Další informace o vytváření ovládacích prvků naleznete v tématu [vývoj model Windows Formsch ovládacích prvků v době návrhu](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).
 
@@ -55,7 +55,7 @@ V tomto návodu se naučíte:
 
 - Vytvořte formulář pro zobrazení dat v novém ovládacím prvku.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
@@ -75,7 +75,7 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
 ## <a name="create-a-windows-forms-application"></a>Vytvoření aplikace model Windows Forms
 
-Prvním krokem je vytvoření **model Windows Forms aplikace** :
+Prvním krokem je vytvoření **model Windows Forms aplikace**:
 
 1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  >  **projekt**.
 

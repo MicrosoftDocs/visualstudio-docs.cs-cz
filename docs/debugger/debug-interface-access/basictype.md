@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 19ae53ba-cd6e-47b6-9f94-27ae663ce955
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 27fd166b094f74cfbf9b6a37a87804031dedcbc7
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: a86a25d02b1aa51e49d80b71dbd37b2aa4c2d103
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728874"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865587"
 ---
 # <a name="basictype"></a>BasicType
 Určuje základní typ symbolu.

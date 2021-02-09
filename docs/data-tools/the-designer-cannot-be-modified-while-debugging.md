@@ -7,15 +7,15 @@ ms.topic: error-reference
 ms.assetid: 487dafe4-d57c-4be1-9e3a-bb0a8699b2fa
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: f83462328897a8a02b068507d0fa6903bad49367
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 244fbcc21c062c50b2f61940a1b43cf17c22761f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434828"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866434"
 ---
 # <a name="the-designer-cannot-be-modified-while-debugging"></a>Návrháře nemůžete změnit během ladění.
 

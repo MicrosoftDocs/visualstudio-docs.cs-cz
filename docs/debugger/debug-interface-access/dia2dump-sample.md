@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 492c0893-7043-452f-a020-890a47230d20
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 17fe6d65e70399ccac5b9ef4e2f1234ef4e3698e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fee6f04b3ee0aefe0aac99f8079e2f31733ce08b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468684"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865417"
 ---
 # <a name="dia2dump-sample"></a>Dia2dump – ukázka
 
@@ -40,11 +40,11 @@ Ve výchozím nastavení je instalační adresář chráněný adresářem. To z
 
 1. V aplikaci Visual Studio otevřete soubor Dia2dump –. sln. Pokud jste řešení nezkopírovali do jiného adresáře, může se zobrazit výzva k restartování sady Visual Studio se zvýšenými oprávněními.
 
-1. V **Průzkumník řešení**vyberte projekt Dia2dump – (ne řešení).
+1. V **Průzkumník řešení** vyberte projekt Dia2dump – (ne řešení).
 
 1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti naleznete v tématu [práce s vlastnostmi projektu](/cpp/build/working-with-project-properties).
 
-1. Otevřete stránku **vlastností**  >  Obecné vlastnost konfigurace**C/C++**  >  **General** .
+1. Otevřete stránku **vlastností**  >  Obecné vlastnost konfigurace **C/C++**  >   .
 
 1. Ve vlastnosti **Další adresáře pro zahrnutí** zvolte ovládací prvek rozevírací seznam a pak zvolte možnost **Upravit**.
 
@@ -64,13 +64,13 @@ Ve výchozím nastavení je instalační adresář chráněný adresářem. To z
 
 ## <a name="run-the-dia2dump-sample"></a>Spuštění ukázky Dia2dump –
 
-Dia2Dump.exe spoléhá na server s rozhraním COM MSDIA*verze*. dll, aby poskytoval své služby. Počínaje verzí Visual Studio 2015 je verze msdia140.dll. Pokud není inicializován Server MSDIA*verze*. dll modelu COM, je nutné jej zaregistrovat, aby mohla aplikace dia2dump.exe fungovat. Adresář DIA SDK obsahuje podadresář bin, který obsahuje verzi x86 knihovny DLL. Verze pro počítače s architekturou x64 je v bin\amd64 a verze pro ARM je v bin\arm.. Pokud chcete knihovnu DLL zaregistrovat, otevřete okno příkazového řádku pro vývojáře se zvýšenými oprávněními a přejděte do adresáře, který obsahuje verzi vaší architektury počítače. Zadejte příkaz `regsvr32 msdia140.dll` pro registraci serveru com.
+Dia2Dump.exe spoléhá na server s rozhraním COM MSDIA *verze*. dll, aby poskytoval své služby. Počínaje verzí Visual Studio 2015 je verze msdia140.dll. Pokud není inicializován Server MSDIA *verze*. dll modelu COM, je nutné jej zaregistrovat, aby mohla aplikace dia2dump.exe fungovat. Adresář DIA SDK obsahuje podadresář bin, který obsahuje verzi x86 knihovny DLL. Verze pro počítače s architekturou x64 je v bin\amd64 a verze pro ARM je v bin\arm.. Pokud chcete knihovnu DLL zaregistrovat, otevřete okno příkazového řádku pro vývojáře se zvýšenými oprávněními a přejděte do adresáře, který obsahuje verzi vaší architektury počítače. Zadejte příkaz `regsvr32 msdia140.dll` pro registraci serveru com.
 
 ### <a name="to-run-the-sample"></a>Chcete-li spustit ukázku
 
 1. Otevřete příkazový řádek a přejděte do adresáře, který obsahuje dia2dump.exe, který jste vytvořili.
 
-1. Zadejte příkaz `dia2dump filename` , kde *filename* je název souboru PDB k prohlédnutí. Pokud je soubor PDB v jiném adresáři, použijte úplnou cestu k souboru jako *název*souboru. Tento příkaz vypíše všechna data v souboru PDB.
+1. Zadejte příkaz `dia2dump filename` , kde *filename* je název souboru PDB k prohlédnutí. Pokud je soubor PDB v jiném adresáři, použijte úplnou cestu k souboru jako *název* souboru. Tento příkaz vypíše všechna data v souboru PDB.
 
 1. Dia2dump – má další možnosti, jak zobrazit pouze vybrané informace. Pomocí `dia2dump -?` příkazu můžete zobrazit seznam všech dostupných možností.
 

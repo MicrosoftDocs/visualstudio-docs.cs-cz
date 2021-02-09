@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9969e9b2-9008-4729-8a14-0d6deaa61576
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: c2248a361837f664b0f78acfe61f6d7588f5258b
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: c054d3bcfbb06d0093f04190ab8b4825b5cbf20f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560210"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865797"
 ---
 # <a name="create-custom-views-of-managed-objects-c-visual-basic-f-ccli"></a>Vytváření vlastních zobrazení spravovaných objektů (C#, Visual Basic, F #, C++/CLI)
 Můžete přizpůsobit způsob, jakým aplikace Visual Studio zobrazuje datové typy v oknech proměnných ladicího programu.
@@ -48,7 +48,7 @@ Můžete napsat Vizualizér pro zobrazení libovolného spravovaného datového 
 > [!NOTE]
 > Pro kód jazyka C++ můžete přidat rozšíření vlastních datových typů pomocí architektury Natvis, jak je popsáno v tématu [Vytvoření vlastních zobrazení objektů C++ v ladicím programu](create-custom-views-of-native-objects.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Řekněte ladicímu programu, co se má zobrazit pomocí atributu DebuggerDisplay.](../debugger/using-the-debuggerdisplay-attribute.md)
 - [Sdělte ladicímu programu, jaký typ se má zobrazit s použitím atributu používání DebuggerTypeProxy.](../debugger/using-debuggertypeproxy-attribute.md)
