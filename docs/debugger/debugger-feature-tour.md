@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: c763d706-3213-494f-b4d2-990b6e1ec456
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e136339ae5f34a7e65c19cf14c9ff840c620b25
-ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
+ms.openlocfilehash: 5bfa190f3bbc2a4f8b34d42d62b0ccc9b293674a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99628055"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873129"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>První pohled na ladicí program sady Visual Studio
 

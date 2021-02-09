@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 5c37876b-c83c-4ca1-837b-57cd465a879a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0093e3a79a5a9caf9846c4b418226568e37828f0
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 981e4e4561db7bc7fb8a9f0ce92522d34e4b34fa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994482"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874045"
 ---
 # <a name="file-status-code-enumerator"></a>Výčet stavových kódů souborů
 `SccStatus`Enumerátor obsahuje pojmenované konstantní hodnoty, které určují stav souboru v systému správy zdrojového kódu. Tento výčet používá [SccQueryInfo](../extensibility/sccqueryinfo-function.md) a `POPLISTFUNC` funkci zpětného volání (podrobnosti viz [POPLISTFUNC](../extensibility/poplistfunc.md) ).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 enum SccStatus {

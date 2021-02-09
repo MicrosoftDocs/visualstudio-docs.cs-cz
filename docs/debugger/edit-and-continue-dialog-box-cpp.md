@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 624d9649-5946-4298-a138-70773b72e810
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc1e7a27624cede9ca20295d3dc890f172e35889
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: 99180c941f82a33db0432e12414a061fc29a7f35
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96862981"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872024"
 ---
 # <a name="edit-and-continue-dialog-box-c"></a>Dialogové okno Upravit a pokračovat (C++)
 V části Upravit a pokračovat nelze použít změny, které jste provedli v nativním kódu. Může se jednat o dočasnou podmínku. Někdy upravit a pokračovat nemůže okamžitě použít změny nativního kódu, ale lze je použít později během ladicí relace (například po dokončení aktuálního volání procedury). Další informace najdete v tématu [Úpravy a pokračování](../debugger/edit-and-continue.md).

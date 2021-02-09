@@ -9,16 +9,16 @@ f1_keywords:
 - System.Activities.Statements.StateMachine.UI
 ms.assetid: 474d5fb3-1049-4b3f-bc6b-7524dbbe1672
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: dacb6dfa5c30ce174c64accfedf82f1c288c734d
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 7fe26f8d0ea127189d115692bd01fa538bf8fb33
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433944"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873499"
 ---
 # <a name="statemachine-activity-designer"></a>Návrhář aktivity StateMachine
 
@@ -34,7 +34,7 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.StateMa
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje popisný název <xref:System.Activities.Statements.StateMachine> návrháře aktivit v hlavičce. Výchozí hodnota je **StateMachine**. Hodnotu lze upravit v mřížce vlastností nebo přímo v záhlaví návrháře aktivit. <xref:System.Activities.Activity.DisplayName%2A>Používá se v navigaci s popisem cesty, které se zobrazí v horní části návrháře pracovních postupů.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje popisný název <xref:System.Activities.Statements.StateMachine> návrháře aktivit v hlavičce. Výchozí hodnota je **StateMachine**. Hodnotu lze upravit v mřížce vlastností nebo přímo v záhlaví návrháře aktivit. <xref:System.Activities.Activity.DisplayName%2A>Používá se v navigaci s popisem cesty, které se zobrazí v horní části návrháře pracovních postupů.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
 
 ## <a name="see-also"></a>Viz také
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending project items
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6ad0befdfc656233373e8c79d14495aa3f7fa21e
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 0f55eb3ba06f2541bf1f4777c24927993444c6b1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850647"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873603"
 ---
 # <a name="how-to-create-a-sharepoint-project-item-extension"></a>Postupy: Vytvoření rozšíření položky projektu služby SharePoint
   Vytvořte rozšíření položky projektu, pokud chcete přidat funkce do položky projektu služby SharePoint, která je již nainstalována v aplikaci Visual Studio. Další informace najdete v tématu věnovaném [rozšiřování položek projektu služby SharePoint](../sharepoint/extending-sharepoint-project-items.md).

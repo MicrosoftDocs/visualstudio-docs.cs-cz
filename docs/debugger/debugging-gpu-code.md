@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: c7e77a5a-cb57-4b11-9187-ecc89acc8775
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 36359f8d5f2044c97e3479981290aff07d3f2e31
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 19191d8d46e17da52b13f692db605168b06b38d9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727031"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872674"
 ---
 # <a name="debugging-gpu-code"></a>Ladění kódu GPU
 Můžete ladit kód jazyka C++, který je spuštěn na grafické jednotce procesoru (GPU). Podpora ladění GPU v aplikaci Visual Studio zahrnuje detekci časování, spouštění procesů a připojování k nim a integraci do ladicích oken.
@@ -49,7 +49,7 @@ Můžete ladit kód jazyka C++, který je spuštěn na grafické jednotce proces
 2. Příkaz **Spustit aktuální dlaždici ke kurzoru** spustí vaši aplikaci, dokud všechna vlákna v aktuální dlaždici nedosáhne kurzoru a potom se přeruší.
 
 ## <a name="debugging-windows"></a>Okna ladění
- Pomocí některých oken ladění můžete prozkoumat, opatřit příznakem a zablokovat vlákna GPU. Další informace najdete tady:
+ Pomocí některých oken ladění můžete prozkoumat, opatřit příznakem a zablokovat vlákna GPU. Další informace naleznete v tématu:
 
 - [Použití okna Paralelní zásobníky](../debugger/using-the-parallel-stacks-window.md)
 

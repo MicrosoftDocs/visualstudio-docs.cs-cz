@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c8974d0-2c15-4d9f-a7f3-cabd4b204cda
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6381a00216e0eabe97277d8c04b71f6377634497
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 0e4326f881b91788384b990a9bce81de344d23e4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728184"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872349"
 ---
 # <a name="debugging-wcf-services"></a>Ladění služeb WCF
 ## <a name="in-this-section"></a>V tomto oddílu

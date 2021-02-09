@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7092ee7f-8378-4def-aef8-1695bd97cf14
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ccb195d6c4a35e4ca3b89c5505ab14c45a5d555
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: f370fc0e3f97d53fb63bfdabb637edff90960442
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726810"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872399"
 ---
 # <a name="debugging-preparation-windows-forms-applications"></a>Příprava na ladění: Formulářová aplikace Windows
 Šablona projektu model Windows Forms vytvoří aplikaci model Windows Forms. Ladění tohoto typu aplikace v nástroji [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je jednoduché. Další informace naleznete v tématu [Vytvoření projektu aplikace pro systém Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100)).

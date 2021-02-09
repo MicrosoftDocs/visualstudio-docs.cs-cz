@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 40ec77bb-07e3-4b58-9254-ae015009441c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 33d1e8379e71c41e42cbf761ccdfe740342ee642
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: a686cf91a515d2b7b59d87d7b3ca8e92d4e54c59
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96863085"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871985"
 ---
 # <a name="edit-and-continue-not-supported-for-f"></a>Operace Upravit a pokračovat není podporována pro F#. #
 Při ladění kódu F # není podporována úprava a pokračování. Úpravy kódu F # jsou možné během relace ladění, ale je třeba se jim vyhnout. Změny kódu se během ladicí relace nepoužívají. Proto jakékoli úpravy provedené v kódu F # při ladění způsobí, že se zdrojový kód neshoduje s laděným kódem.

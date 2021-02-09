@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5262d8b1-2648-429e-85d5-90fcaadfb362
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bf8d6df020694bb10fe4f3f051551056549d5673
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5b934c0e9532bd3bc1f53d9b00d1cc8273f4120
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315054"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872986"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Přečtěte si tipy a triky k produktivitě pro ladicí program v aplikaci Visual Studio.
 
@@ -33,7 +33,7 @@ Pokud při ladění často najedete na tipy k datům, možná budete chtít při
 
 ## <a name="edit-your-code-and-continue-debugging-c-vb-c"></a>Úprava kódu a pokračování v ladění (C#, VB, C++)
 
-Ve většině jazyků podporovaných v rámci sady Visual Studio můžete upravit kód uprostřed relace ladění a pokračovat v ladění. Chcete-li použít tuto funkci, klikněte na svůj kód v průběhu pozastaveného ladicího programu, proveďte úpravy a stisknutím klávesy **F5**, **F10**nebo **F11** pokračujte v ladění.
+Ve většině jazyků podporovaných v rámci sady Visual Studio můžete upravit kód uprostřed relace ladění a pokračovat v ladění. Chcete-li použít tuto funkci, klikněte na svůj kód v průběhu pozastaveného ladicího programu, proveďte úpravy a stisknutím klávesy **F5**, **F10** nebo **F11** pokračujte v ladění.
 
 ![Upravit a pokračovat v ladění](../debugger/media/dbg-tips-edit-and-continue.gif "EditAndContinue")
 
@@ -143,7 +143,7 @@ Pokud potřebujete ladit druhy problémů, které jsou společné pro vícevlák
 ::: moniker range="vs-2017"
 ## <a name="examine-payloads-for-web-services-and-network-resources-uwp"></a>Kontrola datových částí pro webové služby a síťové prostředky (UWP)
 
-V aplikacích pro UWP můžete analyzovat síťové operace prováděné pomocí `Windows.Web.Http` rozhraní API. Pomocí tohoto nástroje můžete ladit webové služby a síťové prostředky. Chcete-li použít nástroj, vyberte možnost **ladit > Performance Profiler**. Vyberte **síť**a pak zvolte **Spustit**. Ve své aplikaci Projděte scénář, který používá `Windows.Web.Http` , a pak zvolte možnost **Zastavit shromažďování** pro vygenerování sestavy.
+V aplikacích pro UWP můžete analyzovat síťové operace prováděné pomocí `Windows.Web.Http` rozhraní API. Pomocí tohoto nástroje můžete ladit webové služby a síťové prostředky. Chcete-li použít nástroj, vyberte možnost **ladit > Performance Profiler**. Vyberte **síť** a pak zvolte **Spustit**. Ve své aplikaci Projděte scénář, který používá `Windows.Web.Http` , a pak zvolte možnost **Zastavit shromažďování** pro vygenerování sestavy.
 
 ![Nástroj pro profilaci využití sítě](../profiling/media/prof-tour-network-usage.png "NetworkUsageProfTool")
 

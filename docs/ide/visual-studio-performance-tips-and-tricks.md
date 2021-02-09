@@ -6,15 +6,15 @@ ms.date: 12/14/2020
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b3655407ce94395f74ebe5362e7006075ef1e790
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: e53a2e3b1a65e496b4ead3d3bca0e8b0254c39e0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97488177"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873863"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Tipy a triky pro výkon sady Visual Studio
 

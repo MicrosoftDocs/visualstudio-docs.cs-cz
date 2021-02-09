@@ -7,15 +7,15 @@ ms.technology: vs-ide-compile
 ms.topic: conceptual
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 76a281b90b3dabe2b1d91c43a27ee5f9c858f96c
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: f7fe40f78b8a8447c1ae784e33a25e905e368118
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136612"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873824"
 ---
 # <a name="walkthrough-build-an-application"></a>Návod: Vytvoření aplikace
 
@@ -45,7 +45,7 @@ Konfigurace a nastavení platformy můžete změnit nebo vytvořit pomocí dialo
 
 1. V seznamu **Aktivní platforma řešení** vyberte **\<New...\>** .
 
-1. V dialogovém okně **Nová platforma řešení** vyberte **x64**a nekopírujte nastavení z platformy x86.
+1. V dialogovém okně **Nová platforma řešení** vyberte **x64** a nekopírujte nastavení z platformy x86.
 
    ![Dialogové okno Nová platforma řešení](../ide/media/buildwalk_newsolutionplatform.png)
 
@@ -67,7 +67,7 @@ V dalším kroku sestavíte řešení s vlastní konfigurací sestavení.
 
 ### <a name="build-the-solution"></a>Sestavení řešení
 
-- V panelu nabídek zvolte **sestavení**  >  **řešení sestavení**nebo stiskněte klávesy **CTRL** + **SHIFT** + **B**.
+- V panelu nabídek zvolte **sestavení**  >  **řešení sestavení** nebo stiskněte klávesy **CTRL** + **SHIFT** + **B**.
 
     V okně **výstup** se zobrazí výsledky sestavení. Sestavení bylo úspěšné.
 
@@ -93,7 +93,7 @@ Můžete dočasně skrýt určité varovné zprávy během sestavování, ale ne
 
 ### <a name="hide-a-specific-c-warning"></a>Skrytí konkrétního upozornění jazyka C#
 
-1. V **Průzkumník řešení**vyberte uzel projektu nejvyšší úrovně.
+1. V **Průzkumník řešení** vyberte uzel projektu nejvyšší úrovně.
 
 1. Na panelu nabídek vyberte možnost **Zobrazit**  >  **stránky vlastností**.
 
@@ -113,7 +113,7 @@ Můžete dočasně skrýt určité varovné zprávy během sestavování, ale ne
 
 ### <a name="suppress-all-visual-basic-build-warnings"></a>Potlačit všechna upozornění sestavení Visual Basic
 
-1. V **Průzkumník řešení**vyberte uzel projektu nejvyšší úrovně.
+1. V **Průzkumník řešení** vyberte uzel projektu nejvyšší úrovně.
 
 2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **stránky vlastností**.
 
@@ -148,7 +148,7 @@ Můžete změnit, kolik informací o procesu sestavení se zobrazí v okně **v�
 
 1. Zvolte kategorii **projekty a řešení** a potom zvolte stránku **sestavení a spuštění** .
 
-1. V seznamu **podrobností výstupu sestavení projektu nástroje MSBuild** zvolte možnost **normální**a pak klikněte na tlačítko **OK** .
+1. V seznamu **podrobností výstupu sestavení projektu nástroje MSBuild** zvolte možnost **normální** a pak klikněte na tlačítko **OK** .
 
 1. Na řádku nabídek klikněte na příkaz **sestavit**  >  **Vyčištění řešení**.
 
@@ -161,7 +161,7 @@ Můžete změnit, kolik informací o procesu sestavení se zobrazí v okně **v�
      V sestavách Visual Basic [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) neobsahuje specifická upozornění, která se mají vyloučit, takže se nezobrazí žádná upozornění.
 
     > [!TIP]
-    > Pokud zobrazíte dialogové okno **Najít** kliknutím na klávesovou zkratku **CTRL**F, můžete vyhledat obsah okna **výstup** + **F** .
+    > Pokud zobrazíte dialogové okno **Najít** kliknutím na klávesovou zkratku **CTRL** F, můžete vyhledat obsah okna **výstup** +  .
 
 Další informace najdete v tématu [Postup: zobrazení, uložení a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md).
 
@@ -213,7 +213,7 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
     > [!IMPORTANT]
     > Může se zobrazit okno se zprávou s upozorněním, že sdílená síťová složka, kterou jste zadali, nemusí být důvěryhodné umístění. Pokud důvěřujete umístění, které jste zadali, klikněte na tlačítko **OK** v okně se zprávou.
 
-1. Na **standardním panelu nástrojů**nastavte Konfigurace řešení na **release** a platformy řešení na **x86**.
+1. Na **standardním panelu nástrojů** nastavte Konfigurace řešení na **release** a platformy řešení na **x86**.
 
 1. Sestavte aplikaci.
 
@@ -221,7 +221,7 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
 
    Spustitelný soubor je zkopírován do síťové cesty, kterou jste zadali. Jeho cesta by byla `\\myserver\builds\\FileName.exe` .
 
-Blahopřejeme! Úspěšně jste dokončili tento návod.
+Gratulujeme! Úspěšně jste dokončili tento návod.
 
 ## <a name="see-also"></a>Viz také
 

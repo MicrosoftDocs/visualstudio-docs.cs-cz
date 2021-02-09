@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, decorators
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ef863d0d3dab394c2ca427a27d039c19e5921a51
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: e29dcda43fdbb7b60567ff0aa0627b41ca3ca299
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360830"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873785"
 ---
 # <a name="properties-of-decorators"></a>Vlastnosti dekorátorů
 Dekoratéry jsou ikony, text nebo rozbalit/sbalit šipky, které se mohou objevit na tvarech nebo spojnicích v diagramu. V následujících tabulkách jsou uvedeny vlastnosti pro tři druhy dekoratér. Některé vlastnosti se zobrazí pouze u obrazce dekoratéry nebo pouze na dekoratéry konektoru.
@@ -66,6 +66,6 @@ Dekoratéry jsou ikony, text nebo rozbalit/sbalit šipky, které se mohou objevi
 |OffsetFromShape|Posun dekoratér od tvaru vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
 |Pozice|Výchozí pozice dekoratéru|TargetBottom|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

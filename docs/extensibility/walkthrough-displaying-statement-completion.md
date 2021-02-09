@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: f3152c4e-7673-4047-a079-2326941d1c83
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: d05d33074f48e59e365792fda63897b1d38cd585
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 95c797de1e68b275fa1a36ec8fa1f97f665cfd18
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877153"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873915"
 ---
 # <a name="walkthrough-display-statement-completion"></a>Návod: dokončování příkazů zobrazení
 Doplňování příkazů založeného na jazyce můžete implementovat definováním identifikátorů, pro které chcete poskytnout dokončení, a následnou aktivací relace dokončení. Můžete definovat dokončování příkazů v kontextu jazykové služby, definovat vlastní příponu názvu souboru a typ obsahu a pak zobrazit dokončování pouze pro tento typ. Nebo můžete aktivovat dokončování pro existující typ obsahu, například "prostý text". Tento návod ukazuje, jak aktivovat dokončování příkazů pro typ obsahu "prostý text", což je typ obsahu textových souborů. Typ obsahu "text" je nadřazeným prvkem všech dalších typů obsahu, včetně kódu a souborů XML.
@@ -29,7 +29,7 @@ Doplňování příkazů založeného na jazyce můžete implementovat definová
 
  Tento návod ukazuje, jak implementovat dokončování příkazů pro pevně zakódovanou sadu identifikátorů. V úplných implementacích zodpovídá služba jazyka a jazykovou dokumentaci za poskytnutí tohoto obsahu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>Vytvořit projekt MEF

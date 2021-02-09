@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e1b2a30-d2db-49e8-aba3-2d3a190eea80
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a3a5ba7a1e215fddd5b1127859948496e9b4e1d
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: a3f517e54ba96ecf81b1ac533cf734f2b0a0eb5f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96561029"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873038"
 ---
 # <a name="debugger-project-settings"></a>Nastavení projektu ladicího programu
 Určité nastavení projektu má vliv také na ladění. Tato nastavení určují, co se v adresářích ladicí program zobrazuje, argumenty příkazu a příkazu používané k spuštění programu a typ informací o ladění vytvořených pro program. Tato nastavení můžete změnit v dialogovém okně **stránky vlastností** .
@@ -50,5 +50,5 @@ Určité nastavení projektu má vliv také na ladění. Tato nastavení určuj�
 
  [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md) Popisuje nastavení vlastností související s ladicím programem a přípravu potřebné k ladění programu pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicího programu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)

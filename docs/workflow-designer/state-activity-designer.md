@@ -8,16 +8,16 @@ f1_keywords:
 - System.Activities.Statements.State.UI
 ms.assetid: 9455ab37-93a0-4c46-9eb8-b6611ca23167
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: d5dbe0a14b007ad8e916aa9b2d8d765402dbe66b
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: abf4e81ecd258668c93b674410f029e6be0f5bf1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433983"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873512"
 ---
 # <a name="state-activity-designer"></a>Návrhář aktivity State
 
@@ -33,10 +33,10 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.State> 
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Statements.State.DisplayName%2A>|Nepravda|Určuje popisný název <xref:System.Activities.Statements.State> návrháře aktivit v hlavičce. Výchozí hodnota je **State (stav** ). Hodnotu lze upravit v mřížce vlastností nebo přímo v záhlaví návrháře aktivit. <xref:System.Activities.Statements.State.DisplayName%2A>Používá se v navigaci s popisem cesty, které se zobrazí v horní části návrháře pracovních postupů.<br /><br /> I když <xref:System.Activities.Statements.State.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
-|<xref:System.Activities.Statements.State.Entry%2A>|Nepravda|Určuje akci, která nastane, když je tento stav převeden na. Když <xref:System.Activities.Statements.State> se aktivita rozbalí, tato hodnota se dá nastavit tak, že ji přetáhnete ze **sady nástrojů** a přetáhnete ji do oddílu pro **zadávání** .|
-|<xref:System.Activities.Statements.State.Exit%2A>|Nepravda|Určuje akci, která nastane, když je tento stav přepnut z. Když <xref:System.Activities.Statements.State> je aktivita rozbalená, tato hodnota se dá nastavit tak, že ji přetáhnete z **panelu nástrojů** a přetáhnete ji do **ukončovacího** oddílu daného stavu.|
-|<xref:System.Activities.Statements.State.Transitions%2A>|Nepravda|Zobrazuje seznam možných přechodů pocházejících z <xref:System.Activities.Statements.State> . Každá položka v seznamu má odkaz na přidružený <xref:System.Activities.Statements.Transition> a cíl <xref:System.Activities.Statements.State> . Po kliknutí na odkaz dojde k přepnutí návrháře na rozšířené zobrazení <xref:System.Activities.Statements.Transition> nebo <xref:System.Activities.Statements.State> .|
+|<xref:System.Activities.Statements.State.DisplayName%2A>|Ne|Určuje popisný název <xref:System.Activities.Statements.State> návrháře aktivit v hlavičce. Výchozí hodnota je **State (stav**). Hodnotu lze upravit v mřížce vlastností nebo přímo v záhlaví návrháře aktivit. <xref:System.Activities.Statements.State.DisplayName%2A>Používá se v navigaci s popisem cesty, které se zobrazí v horní části návrháře pracovních postupů.<br /><br /> I když <xref:System.Activities.Statements.State.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.State.Entry%2A>|Ne|Určuje akci, která nastane, když je tento stav převeden na. Když <xref:System.Activities.Statements.State> se aktivita rozbalí, tato hodnota se dá nastavit tak, že ji přetáhnete ze **sady nástrojů** a přetáhnete ji do oddílu pro **zadávání** .|
+|<xref:System.Activities.Statements.State.Exit%2A>|Ne|Určuje akci, která nastane, když je tento stav přepnut z. Když <xref:System.Activities.Statements.State> je aktivita rozbalená, tato hodnota se dá nastavit tak, že ji přetáhnete z **panelu nástrojů** a přetáhnete ji do **ukončovacího** oddílu daného stavu.|
+|<xref:System.Activities.Statements.State.Transitions%2A>|Ne|Zobrazuje seznam možných přechodů pocházejících z <xref:System.Activities.Statements.State> . Každá položka v seznamu má odkaz na přidružený <xref:System.Activities.Statements.Transition> a cíl <xref:System.Activities.Statements.State> . Po kliknutí na odkaz dojde k přepnutí návrháře na rozšířené zobrazení <xref:System.Activities.Statements.Transition> nebo <xref:System.Activities.Statements.State> .|
 
 ## <a name="see-also"></a>Viz také
 

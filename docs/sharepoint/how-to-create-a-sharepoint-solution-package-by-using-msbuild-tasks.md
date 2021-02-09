@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packages
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f2979073414434d2b8f5be9d070b6b505c09ee14
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: f4c1d2e986b6a810cc568efd9577be87a38fdefb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903725"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873538"
 ---
 # <a name="how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks"></a>Postupy: vytvoření balíčku řešení služby SharePoint pomocí úloh nástroje MSBuild
   Můžete sestavit, vyčistit a ověřit balíček služby SharePoint (*. wsp*) pomocí úloh nástroje MSBuild příkazového řádku ve vývojovém počítači. Tyto příkazy lze použít také k automatizaci procesu sestavení pomocí Team Foundation Server v počítači sestavení.
@@ -28,7 +28,7 @@ ms.locfileid: "94903725"
 
 #### <a name="to-build-a-sharepoint-package"></a>Sestavení balíčku služby SharePoint
 
-1. V nabídce **Start** systému Windows vyberte položku **všechny programy**  >  **Accessories**  >  **příkazový řádek**.
+1. V nabídce **Start** systému Windows vyberte položku **všechny programy**  >    >  **příkazový řádek**.
 
 2. Přejděte do adresáře, kde se nachází váš projekt služby SharePoint.
 

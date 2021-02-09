@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 01fbbb5b-f747-446c-afe0-2a081626a945
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cfb7f339ca9832db8fdfea47a5bc1aa940534823
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: ea697e6e445eeae117bb6bf1d1603220ec0c0675
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189976"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874071"
 ---
 # <a name="choose-the-installation-directory-for-a-vspackage"></a>Volba instalačního adresáře pro VSPackage
 VSPackage a jeho podpůrné soubory musí být v systému souborů uživatele. Umístění závisí na tom, jestli je VSPackage spravované nebo nespravované, vaše souběžné schéma správy verzí a volba uživatele.

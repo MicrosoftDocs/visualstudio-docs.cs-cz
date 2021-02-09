@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 73baaf39-3026-48c9-be48-8b9ba0063cde
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 73432c1693db1543095643a998396967b7aa2bdf
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 837facbc35a9fbb6e7c40ff39d8a4300c8120b6d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726979"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872687"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Ladění chyb a dialogových oken s upozorněním
 Níže jsou uvedená dialogová okna chyby a varování, se kterými se můžete setkat při ladění aplikace.

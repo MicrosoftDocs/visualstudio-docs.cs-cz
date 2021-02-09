@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d4fc3c43-e844-419c-8dbb-551cc2a9b09e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f6d0c09a7f54157bd2ace9a6be09a357eb436ceb
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 9d204f99dd955609dcc082d5d9bd607cfad75bb1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96559742"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873049"
 ---
 # <a name="debugger-security"></a>Zabezpečení ladicího programu
 Možnost ladit jiný proces vám poskytne velmi široké pravomoci, které byste jinak neměli mít, zejména při vzdáleném ladění. Škodlivý ladicí program může způsobit rozšířenou škodu v laděném počítači.
@@ -79,7 +79,7 @@ Možnost ladit jiný proces vám poskytne velmi široké pravomoci, které byste
 
   Viz [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Upozornění zabezpečení: připojení k procesu, jehož vlastníkem je nedůvěryhodný uživatel, může být nebezpečné. Pokud tyto informace vypadají podezřele nebo si nejste jistí, nepřipojujte se k tomuto procesu.](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - debugger
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 3393328999793a7e34fb3af9f7abea7430838f76
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: 53a7d00548e6d273e2afa2da48669b3d1f3cf827
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97846981"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873321"
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>Ladění živých ASP.NET aplikací Azure pomocí Snapshot Debugger
 
@@ -33,7 +33,7 @@ V tomto kurzu:
 > * Nastavení snímkovací bod a zobrazení snímku
 > * Nastavení protokolovací bod
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * Snapshot Debugger je k dispozici pouze počínaje verzí Visual Studio 2017 Enterprise verze 15,5 nebo vyšší s **úlohou vývoj pro Azure**. (Na kartě **jednotlivé součásti** najdete v části **ladění a testování**  >  **Ladicí program snímků**.)
 

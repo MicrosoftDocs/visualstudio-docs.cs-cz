@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 276e2254-7274-435e-ba4d-67fcef4f33bc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a2ead92108d66b54342019fc19702e7a6e53575
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: c0a8941fbda263ce3a2345a135594d2f9eec87e9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96862930"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871894"
 ---
 # <a name="enabling-debug-features-in-c-projects-d_debug"></a>Povolení funkcí ladění v projektech C++ (/D_DEBUG)
 V nástroji [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] jsou funkce ladění, jako jsou kontrolní výrazy, povoleny při kompilování programu s definovaným symbolem **_DEBUG** . **_DEBUG** můžete definovat jedním ze dvou způsobů:

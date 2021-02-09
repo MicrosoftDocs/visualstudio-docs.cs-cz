@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d94eee90-7e0d-4cac-88c1-9831030daa5e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fee3044e4eaa1e7dd3549923082f9b843951b28
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 8f65cb1a373bdff95e068f78137edf5237ec2905
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728314"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872544"
 ---
 # <a name="debugging-native-code"></a>Ladění nativního kódu
 Oddíl popisuje některé běžné problémy s laděním a techniky pro nativní aplikace. Techniky popsané v této části jsou techniky na vysoké úrovni. Informace o mechanismu používání ladicího programu sady Visual Studio naleznete v tématu [první pohled na ladicí program](../debugger/debugger-feature-tour.md).

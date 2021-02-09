@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0f0b9a6-2a6e-463d-b6ea-9518ee727933
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b6f2650da6a83d936869d01fdc661bc9ddf8fc0
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 750b210ce04850e0cb6370094cdcc835f577b587
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560691"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872869"
 ---
 # <a name="debugging-and-the-hosting-process"></a>Ladění a proces hostování
 Proces hostování sady Visual Studio vylepšuje výkon ladicího programu a umožňuje nové funkce ladicího programu, jako je například ladění částečného vztahu důvěryhodnosti a vyhodnocení výrazu v době návrhu. V případě potřeby můžete hostitelský proces zakázat. Následující části popisují některé rozdíly mezi laděním s a bez hostujícího procesu.
@@ -43,6 +43,6 @@ Proces hostování sady Visual Studio vylepšuje výkon ladicího programu a umo
 ## <a name="assemblygetcallingassemblyfullname-differences"></a>Assembly. GetCallingAssembly (). Nafullname rozdíly
  `Assembly.GetCallingAssembly().FullName` vrátí různé výsledky v závislosti na tom, zda je povolen hostitelský proces. Pokud zavoláte `Assembly.GetCallingAssembly().FullName` s povoleným hostitelským procesem, vrátí se `mscorlib` . Pokud zavoláte `Assembly.GetCallingAssembly().FullName` se zakázaným hostitelským procesem, vrátí název aplikace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Ladění aplikace s částečnou důvěryhodností](debugger-security.md)

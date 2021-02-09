@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ASP.NET, installation error messages
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: 1c4138b1f3d102e235bb03ebcfd5a80808d8762c
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 2388e59ae760e28c8f778ab8ccb15265414174b7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852794"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871751"
 ---
 # <a name="error-aspnet-not-installed"></a>Chyba: Prostředí ASP.NET není nainstalováno.
 K této chybě dochází, pokud [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] není správně nainstalován na počítači, který se pokoušíte ladit. To může znamenat, že [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] nebyla nikdy nainstalována nebo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] byla nainstalována dříve a služba IIS byla nainstalována později.

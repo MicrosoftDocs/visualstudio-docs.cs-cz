@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9f0c8505-b6b2-452b-adfd-076db14d8115
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 51917065e8764f7edbebbdb3bfcc7a03cc9723d4
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 7d3b2bc8a0a9011c04642070125c247a8dceed66
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727148"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873181"
 ---
 # <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Nástroje pro ladění vláken a procesů v aplikaci Visual Studio
 *Vlákna* a *procesy* jsou související koncepty v oblasti počítačové vědy. Obě reprezentují sekvence instrukcí, které se musí provést v určitém pořadí. Pokyny v samostatných vláknech nebo procesech ale mohou být spouštěny paralelně.

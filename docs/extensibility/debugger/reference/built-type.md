@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: cc02c32c-0f65-4210-ad25-a9b1899066e8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 885f17b0841a39672c87be5bc7c947b2e0d9c7e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 35ae5661127c0e19e87c96a47a2985161beae7c5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80737695"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874379"
 ---
 # <a name="built_type"></a>BUILT_TYPE
 Tato struktura určuje informace o typu pole pořízených z metadat.

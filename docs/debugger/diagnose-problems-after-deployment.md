@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: a3463eab-a352-4d17-8551-adbaad526db0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9be00d1ad040f6daca52417e4ab6dfa93f0f44cf
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 300aec5fc2b9fb31c848e92f212f7df466111263
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726823"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872089"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace-c-visual-basic"></a>Diagnostikujte problémy po nasazení pomocí IntelliTrace (C#, Visual Basic)
 
@@ -265,7 +265,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
 - **Názevprojektu**
 
-   Název projektu v aplikaci Visual Studio. Například:
+   Název projektu v aplikaci Visual Studio. Příklad:
 
   ```xml
   <ProjectName>FabrikamFiber.Extranet.Web</ProjectName>
@@ -283,7 +283,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
     - **ProjectVersionSpec**: verze projektu
 
-      Například:
+      Příklad:
 
     ```xml
     <SourceControl type="TFS">
@@ -305,7 +305,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
     - **CommitId**: ID pro potvrzení
 
-      Například:
+      Příklad:
 
     ```xml
     <SourceControl type="Git">
@@ -331,7 +331,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
   - **BuiltSolution**: cesta k souboru řešení, který aplikace Visual Studio používá k vyhledání a otevření odpovídajícího řešení. Toto je obsah vlastnosti **SolutionPath** MSBuild.
 
-    Například:
+    Příklad:
 
   - **TFS**
 

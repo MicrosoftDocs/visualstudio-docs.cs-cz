@@ -7,15 +7,15 @@ helpviewer_keywords:
 - debugger
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6202fa019aed8e6fc9eb9ff93bdb390bf22f2911
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: fbb99d2b41a8a354ec450e99dab13efb6ec60248
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97761248"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872921"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>Postup ladění pro absolutní začátečníky
 
@@ -308,7 +308,7 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
 
     Dokončete aplikaci stisknutím libovolné klávesy.
 
-## <a name="summary"></a>Shrnutí
+## <a name="summary"></a>Souhrn
 
 Po zobrazení problému použijte příkazy ladicího programu a [Krok](../debugger/navigating-through-code-with-the-debugger.md) , jako je například **F10** a **F11** , a Najděte oblast kódu s problémem.
 

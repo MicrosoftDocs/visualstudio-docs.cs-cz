@@ -7,21 +7,21 @@ f1_keywords:
 - vs.toolsoptionspages.text_editor.r.lint
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: aecf9d95fb8a3b2cda659e2694bff145424e150b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c32bffbd25a39ff2053dea22930365860ed04a7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62970732"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873655"
 ---
 # <a name="lint-r-code-in-visual-studio"></a>Lint R kód v aplikaci Visual Studio
 
 Linter analyzuje kód k odhalení potenciálních chyb, formátování problémů a dalšího hluku kódu, jako je například spurious prázdné znaky. Použití linter také pomáhá povzbudit některé konvence kódování, například jak se pojmenují identifikátory. Tyto konvence jsou užitečné v rámci týmů a dalších situacích spolupráce.
 
-Nástroje R pro Visual Studio (RTVS) poskytuje integrovaný linter pro jazyk R, chování, které se řídí různými možnostmi popsanými v tomto článku. Tyto možnosti jsou k dispozici v možnosti **nástroje**  >  **Options**  >  **textový editor**  >  **R**  >  **Lint**.
+Nástroje R pro Visual Studio (RTVS) poskytuje integrovaný linter pro jazyk R, chování, které se řídí různými možnostmi popsanými v tomto článku. Tyto možnosti jsou k dispozici v možnosti **nástroje**  >    >  **textový editor**  >  **R**  >  **Lint**.
 
 Lint je ve výchozím nastavení zakázáno. Pokud chcete Lint povolit, nastavte možnost **všechny**  >  **Povolit Lint** na **hodnotu true**.
 
@@ -59,7 +59,7 @@ Tyto možnosti, které jsou ve výchozím nastavení nastaveny na **hodnotu true
 
 | Možnost | Výchozí hodnota | Lint efekt |
 | --- | --- | --- |
-| **Několik** | **True** | Určuje, kdy je více příkazů na stejném řádku. |
+| **Několikrát** | **True** | Určuje, kdy je více příkazů na stejném řádku. |
 | **Středníky** | **True** | Identifikuje použití středníků. |
 
 ## <a name="text-group"></a>Textová skupina
