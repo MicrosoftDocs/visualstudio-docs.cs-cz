@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 69dab9bf-2c68-4f70-9678-3b50fba3e6fa
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e7fb8c5336a14180b3742fa02a91e6532b6e5831
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 12337385d2ac9b586176c47d8579ec8ee7a5bd29
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465347"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864031"
 ---
 # <a name="idiasession"></a>IDiaSession
 Poskytuje kontext dotazu pro symboly ladění.
@@ -25,7 +25,7 @@ Poskytuje kontext dotazu pro symboly ladění.
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaSession : IUnknown
+IDiaSession : IUnknown
 ```
 
 ## <a name="methods"></a>Metody

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 45005ad0-8b29-4cde-9d33-6bef72f6e463
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dbeff220bdb0f3c97b8e6588ff42c31b31b97ceb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6448b30f94924d24358409715af0dec673e31d87
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463944"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863436"
 ---
 # <a name="idiasymbolget_datakind"></a>IDiaSymbol::get_dataKind
 Načte klasifikaci proměnných pro datový symbol.
@@ -25,7 +25,7 @@ Načte klasifikaci proměnných pro datový symbol.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_dataKind ( 
+HRESULT get_dataKind ( 
    DWORD* pRetVal
 );
 ```

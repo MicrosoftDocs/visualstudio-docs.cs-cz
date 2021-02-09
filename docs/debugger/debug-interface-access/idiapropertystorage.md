@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d3197a38-5973-4e56-873e-4f1b84c3f674
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ba4cdb5f74cedf13cfb74b5aff6d43d24534eab9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc38d92dc20d1eea368c07e45237508dd5f85585
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466481"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864563"
 ---
 # <a name="idiapropertystorage"></a>IDiaPropertyStorage
 Umožňuje číst trvalé vlastnosti sady vlastností DIA.
@@ -25,7 +25,7 @@ Umožňuje číst trvalé vlastnosti sady vlastností DIA.
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaPropertyStorage : IUnknown
+IDiaPropertyStorage : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
@@ -63,7 +63,7 @@ Získejte toto rozhraní voláním `QueryInterface` metody na jiném rozhraní. 
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje funkci, která zobrazí všechny vlastnosti vystavené `IDiaPropertyStorage` objektem. Příklad toho [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) , jak `IDiaPropertyStorage` se rozhraní získává z rozhraní [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) , naleznete v rozhraní IDiaEnumInjectedSources.
+Tento příklad ukazuje funkci, která zobrazí všechny vlastnosti vystavené `IDiaPropertyStorage` objektem. Příklad toho [](../../debugger/debug-interface-access/idiaenuminjectedsources.md) , jak `IDiaPropertyStorage` se rozhraní získává z rozhraní [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) , naleznete v rozhraní IDiaEnumInjectedSources.
 
 ```C++
 void PrintPropertyStorage(IDiaPropertyStorage* pPropertyStorage)

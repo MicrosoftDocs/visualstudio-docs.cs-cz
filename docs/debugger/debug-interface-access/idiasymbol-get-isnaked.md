@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: b16629dc-8e17-476b-9c7b-58e7277c61ed
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ff263ace06e529c625d78daaa7055dbf70bd0fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c9e905cc68bb612d9a59bb1780d08561716abca8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463307"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863142"
 ---
 # <a name="idiasymbolget_isnaked"></a>IDiaSymbol::get_isNaked
 Načte příznak, který určuje, zda má funkce atribut [holé](/cpp/cpp/naked-cpp) (to znamená, že funkce neobsahuje žádný kód prologu nebo epilogu, který je přidán kompilátorem).

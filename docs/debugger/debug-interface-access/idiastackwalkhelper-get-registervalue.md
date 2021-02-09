@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 46ac5eee-73a3-44a1-8635-6c58ba193cb6
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fb78b4cbdfa2130731e3847b1a3325ab4cb3eac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f5df55043c1a29a95cd0f8883c2a6546e8153320
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464721"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863814"
 ---
 # <a name="idiastackwalkhelperget_registervalue"></a>IDiaStackWalkHelper::get_registerValue
 Načte hodnotu registru.
@@ -25,7 +25,7 @@ Načte hodnotu registru.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_registerValue ( 
+HRESULT get_registerValue ( 
    DWORD      index,
    ULONGLONG* pRetVal
 );

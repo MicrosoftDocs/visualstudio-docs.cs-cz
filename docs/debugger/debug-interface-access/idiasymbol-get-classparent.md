@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 99db875a-caae-4d60-ae70-64bc8a9f6fba
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d8b20552d29f5d649ddf669187632814986a388b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44b556529a0cf4a30cd84f83700947cb52c671de
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464105"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863527"
 ---
 # <a name="idiasymbolget_classparent"></a>IDiaSymbol::get_classParent
 Načte odkaz na nadřazenou třídu symbolu.
@@ -25,7 +25,7 @@ Načte odkaz na nadřazenou třídu symbolu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_classParent ( 
+HRESULT get_classParent ( 
    IDiaSymbol** pRetVal
 );
 ```

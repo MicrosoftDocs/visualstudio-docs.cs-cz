@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 101afe4a-4c57-45de-87b4-330394c6de10
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b48f91dcb68f44f070e596d674461367dcf22966
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5099eb9d8ba1f56419cd1cf0138e29a79e2c28f6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463517"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863261"
 ---
 # <a name="idiasymbolget_intro"></a>IDiaSymbol::get_intro
 Načte příznak, který určuje, zda je funkce Představujeme virtuální funkci.
@@ -25,7 +25,7 @@ Načte příznak, který určuje, zda je funkce Představujeme virtuální funkc
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_intro ( 
+HRESULT get_intro ( 
     BOOL* pRetVal
 );
 ```

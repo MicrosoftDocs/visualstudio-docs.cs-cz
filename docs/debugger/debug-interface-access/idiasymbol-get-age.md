@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 60d05654-e832-4a2e-a4a7-fe9922c459fe
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b8fc198573123c24a3c48068b50161d0aa7f3b60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d9d7ebaaafa1e01ef081aa96d64170ac59922dc8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464343"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863590"
 ---
 # <a name="idiasymbolget_age"></a>IDiaSymbol::get_age
 Načte hodnotu stáří souboru. pdb.
@@ -25,7 +25,7 @@ Načte hodnotu stáří souboru. pdb.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_age ( 
+HRESULT get_age ( 
    DWORD* pRetVal
 );
 ```

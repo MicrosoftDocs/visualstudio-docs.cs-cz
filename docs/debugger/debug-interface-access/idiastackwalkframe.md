@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 42d82845-d6f6-4846-9ecd-9dd169216077
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ee80b9bbb6d16f2aa4264491593d1864bdade690
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 05db065b047629e1eaac49e5f6aeeb05eed4307e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464805"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863821"
 ---
 # <a name="idiastackwalkframe"></a>IDiaStackWalkFrame
 Udržuje kontext zásobníku mezi voláními metody [IDiaFrameData:: Execute](../../debugger/debug-interface-access/idiaframedata-execute.md) .
@@ -25,7 +25,7 @@ Udržuje kontext zásobníku mezi voláními metody [IDiaFrameData:: Execute](..
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaStackWalkFrame : IUnknown
+IDiaStackWalkFrame : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable

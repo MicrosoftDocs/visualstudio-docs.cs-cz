@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: c130abc5-4d0a-4d2d-8286-94fde36ddd4a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fddf38af6f6294fd3a6fa8e129d395a66f1aa80
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5624bc6e5a4dc895f46534b8512a9c759ee78329
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465571"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864143"
 ---
 # <a name="idiasessionfindsymbolbyaddr"></a>IDiaSession::findSymbolByAddr
 Načte zadaný typ symbolu, který obsahuje nebo je nejblíže zadané adrese.
@@ -25,7 +25,7 @@ Načte zadaný typ symbolu, který obsahuje nebo je nejblíže zadané adrese.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT findSymbolByAddr ( 
+HRESULT findSymbolByAddr ( 
    DWORD        isect,
    DWORD        offset,
    SymTagEnum   symtag,

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9665da6c-4cc0-41d7-b2e2-0d9e50174cf8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3173eb31ec10b812f6ca300d1e95a3c938fa1368
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f0981f103d9914e9d8d13f02449187fdfef0ff61
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463559"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863268"
 ---
 # <a name="idiasymbolget_interruptreturn"></a>IDiaSymbol::get_interruptReturn
 Načte příznak, který určuje, zda funkce obsahuje návrat z instrukce pro přerušení (například kód sestavení x86 `iret` ).

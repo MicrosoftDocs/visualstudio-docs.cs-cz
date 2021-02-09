@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1a709ded-22c8-464c-97be-eba5e464210c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e0f9e7b1dc2fb5a338dc2cd2edbf3cf9d0eb2441
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0689490e855508314835a21e44e6cb9a02736ef4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463664"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863303"
 ---
 # <a name="idiasymbolget_hasseh"></a>IDiaSymbol::get_hasSEH
 Načte příznak, který určuje, zda funkce obsahuje jakékoli [strukturované zpracování výjimek (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) (například bloky __try/ \_ _except).

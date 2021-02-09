@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1a8306bd-10dd-40a9-81fc-01f71c348484
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fe569737440cc9d974196eaa2a73c2fab5b7e143
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 117bbed95e4adf79270072888c8ac1ac71215433
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463678"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863310"
 ---
 # <a name="idiasymbolget_hasnestedtypes"></a>IDiaSymbol::get_hasNestedTypes
 Načte příznak, který určuje, zda uživatelsky definovaný datový typ obsahuje definice vnořeného typu.
@@ -25,7 +25,7 @@ Načte příznak, který určuje, zda uživatelsky definovaný datový typ obsah
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_hasNestedTypes ( 
+HRESULT get_hasNestedTypes ( 
    BOOL* pRetVal
 );
 ```

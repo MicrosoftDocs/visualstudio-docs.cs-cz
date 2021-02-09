@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 30870b10-6f32-45c6-a0d7-020dea707710
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 29bdfbab41c5382661e022d38a190d3bd19c38c3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd903d49ed036533195f2fcb8dc61eef9176ba42
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462915"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862981"
 ---
 # <a name="idiasymbolget_machinetype"></a>IDiaSymbol::get_machineType
 Načte typ cílového procesoru.
@@ -25,7 +25,7 @@ Načte typ cílového procesoru.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_machineType ( 
+HRESULT get_machineType ( 
    DWORD* pRetVal
 );
 ```

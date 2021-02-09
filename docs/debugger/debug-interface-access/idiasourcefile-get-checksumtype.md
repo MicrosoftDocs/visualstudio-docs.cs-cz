@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4c363e61-a6a9-409a-9cc0-d06eb2bee645
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 88a192c9328d37447f12226a3d564ecae58fe41f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 27c23c6d7f4711260d0218ae97efd4450ccf12a3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465319"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864017"
 ---
 # <a name="idiasourcefileget_checksumtype"></a>IDiaSourceFile::get_checksumType
 Načte typ kontrolního součtu.
@@ -25,7 +25,7 @@ Načte typ kontrolního součtu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_checksumType ( 
+HRESULT get_checksumType ( 
    DWORD* pRetVal
 );
 ```

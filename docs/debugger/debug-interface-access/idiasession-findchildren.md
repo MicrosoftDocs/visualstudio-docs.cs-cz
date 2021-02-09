@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5d19046f-f668-4aa9-8788-95cda9a98997
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dcc62ed0b4a1f0a9ddd43ef692f748db4d9b6f10
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 498831197f5480314695a68d3b5a76a4595a21a6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465837"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864269"
 ---
 # <a name="idiasessionfindchildren"></a>IDiaSession::findChildren
 Načte všechny podřízené položky zadaného nadřazeného identifikátoru, který se shoduje s názvem a typem symbolu.
@@ -25,7 +25,7 @@ Načte všechny podřízené položky zadaného nadřazeného identifikátoru, k
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT findChildren ( 
+HRESULT findChildren ( 
    IDiaSymbol*       parent,
    SymTagEnum        symtag,
    LPCOLESTR         name,

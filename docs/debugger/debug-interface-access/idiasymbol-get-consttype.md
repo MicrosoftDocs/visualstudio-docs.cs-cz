@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: cb43605e-fa39-4f83-b047-f936a8019d03
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d38dbd2755276d08aa34e01ff2320ae129e747fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13a2b81f307e2b925037dfa2075446d0a9c837a1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464035"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863450"
 ---
 # <a name="idiasymbolget_consttype"></a>IDiaSymbol::get_constType
 Načte příznak, který určuje, zda je uživatelsky definovaný datový typ konstantní.
@@ -25,7 +25,7 @@ Načte příznak, který určuje, zda je uživatelsky definovaný datový typ ko
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_constType ( 
+HRESULT get_constType ( 
    BOOL* pRetVal
 );
 ```

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d66e5c84-565d-494e-8486-f91db9a34548
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bdf2f54c585a8a5406a0772dc1c580112036671d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b84661f5cd51da17cf20577490b2fe458e71ef71
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464623"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863737"
 ---
 # <a name="idiastackwalkhelper"></a>IDiaStackWalkHelper
 Usnadňuje procházení zásobníku pomocí souboru ladicí databáze programu (PDB).

@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: cf32ae7c-a0c8-4800-bc8f-d64fdd15fb06
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ac7f2299dcfbef53c510c9e9689f92cde2132974
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8fb0748028a18ad2572dca2181d11937fbb6138c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465795"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864241"
 ---
 # <a name="idiasessionfindinlineelinesbylinenum"></a>IDiaSession::findInlineeLinesByLinenum
 Načte výčet, který umožňuje klientovi iterovat informace o číslech řádků všech funkcí, které jsou vloženy přímo nebo nepřímo v zadaném zdrojovém souboru a čísle řádku.
@@ -23,7 +23,7 @@ Načte výčet, který umožňuje klientovi iterovat informace o číslech řád
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT findInlineeLinesByVA ( 
+HRESULT findInlineeLinesByVA ( 
    IDiaSymbol*           compiland,
    IDiaSourceFile*       file,
    DWORD                 linenum,

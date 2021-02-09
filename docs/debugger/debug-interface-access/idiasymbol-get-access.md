@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 908976ae-95c4-4020-89c9-de137f727f98
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e14a713772a183100753212effcb696e5d5f1f05
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a25d2eb12529461a9787deadf3f3babff6b6cbe
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464389"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863667"
 ---
 # <a name="idiasymbolget_access"></a>IDiaSymbol::get_access
 Načte modifikátor přístupu člena třídy.
@@ -25,7 +25,7 @@ Načte modifikátor přístupu člena třídy.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_access ( 
+HRESULT get_access ( 
    DWORD* pRetVal
 );
 ```

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 84cd2b67-0d83-4589-9ecb-a4bcbeed55f5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c7c158d15f7d60000bfd022e8cab10c3f2bc060c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8914c0eae31e7faac8cea523f4c558a9f00749a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463769"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863387"
 ---
 # <a name="idiasymbolget_hasdebuginfo"></a>IDiaSymbol::get_hasDebugInfo
 Načte příznak, který určuje, zda [kompilantu](../../debugger/debug-interface-access/compiland.md) obsahuje ladicí informace.
