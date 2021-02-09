@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: 19142c60-9b32-46ba-a556-b62fd77568c1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 125420655af4fb021e264c3885a739fc90cfff59
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: 1aa19ad99629f5106ee89876f347dfafd7520d26
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96862747"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870503"
 ---
 # <a name="general-tab-window-properties-dialog-box"></a>Karta Obecné, dialogové okno vlastnosti okna
 Na kartě **Obecné** můžete zobrazit informace o vybraném okně. Chcete-li zobrazit [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md), přesuňte fokus do okna [zobrazení systému Windows](../debugger/windows-view.md) . Ve stromové struktuře vyberte libovolný uzel okna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .
 
  Na kartě **Obecné** jsou k dispozici následující nastavení:
 
-|Entry|Popis|
+|Entry|Description|
 |-----------|-----------------|
 |**Titulek okna**|Text v záhlaví okna nebo text obsažený v okně, pokud se jedná o ovládací prvek.|
 |**Popisovač okna**|Jedinečné ID tohoto okna Znovu se používají čísla popisovačů oken; identifikují okno pouze za dobu života tohoto okna.|

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - tutorials, multithreaded debugging
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 30fd29357ab8b42ea6a8baa6412f9ccf7eafed28
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28f9ab13cca4f1d31973f9526063eaa56574dcf4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350508"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870516"
 ---
 # <a name="get-started-debugging-multithreaded-applications-c-visual-basic-c"></a>Začínáme s laděním vícevláknových aplikací (C#, Visual Basic, C++)
 
@@ -59,8 +59,8 @@ Nejdříve budete potřebovat aplikační projekt s více vlákny. Následuje p�
    ::: moniker range="vs-2017"
    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** vyberte následující:
 
-   - V případě aplikace v jazyce C# v části **Visual C#** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte možnost **aplikace konzoly (.NET Framework)**.
-   - V případě aplikace Visual Basic vyberte v části **Visual Basic**možnost **plocha Windows**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)**.
+   - V případě aplikace v jazyce C# v části **Visual C#** zvolte možnost **plocha systému Windows** a potom v prostředním podokně zvolte možnost **aplikace konzoly (.NET Framework)**.
+   - V případě aplikace Visual Basic vyberte v části **Visual Basic** možnost **plocha Windows** a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)**.
    - V aplikaci C++ klikněte v části **Visual C++** na **plocha Windows**, a pak zvolte **Konzolová aplikace Windows**.
 
    Pokud se nezobrazuje **Konzolová aplikace (.NET Core)** nebo, pro C++, šablona projektu **Konzolová aplikace** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
@@ -70,7 +70,7 @@ Nejdříve budete potřebovat aplikační projekt s více vlákny. Následuje p�
    Vyberte **OK**.
    ::: moniker-end
 
-   Zobrazí se nový projekt konzoly. Po vytvoření projektu se zobrazí zdrojový soubor. V závislosti na zvoleném jazyce se může zdrojový soubor jmenovat *program.cs*, *MyThreadWalkthroughApp. cpp*nebo *Module1. vb*.
+   Zobrazí se nový projekt konzoly. Po vytvoření projektu se zobrazí zdrojový soubor. V závislosti na zvoleném jazyce se může zdrojový soubor jmenovat *program.cs*, *MyThreadWalkthroughApp. cpp* nebo *Module1. vb*.
 
 1. Odstraňte kód, který se zobrazí ve zdrojovém souboru, a nahraďte ho příslušným ukázkovým kódem uvedeným níže.
 
@@ -242,7 +242,7 @@ Nejdříve budete potřebovat aplikační projekt s více vlákny. Následuje p�
 
 3. V editoru zdrojového kódu vyhledejte řádek, který obsahuje zarážku.
 
-### <a name="discover-the-thread-marker"></a><a name="ShowThreadsInSource"></a>Zjistit značku vlákna  
+### <a name="discover-the-thread-marker"></a><a name="ShowThreadsInSource"></a>Zjistit značku vlákna  
 
 1. Na panelu nástrojů ladění vyberte tlačítko **Zobrazit vlákna ve zdroji** ![Zobrazit vlákna ve zdroji](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker").
 
@@ -260,7 +260,7 @@ Nejdříve budete potřebovat aplikační projekt s více vlákny. Následuje p�
 
 V okně **paralelní zásobníky** můžete přepínat mezi zobrazením vlákna a (pro programování na základě úloh) zobrazení úkolů a můžete zobrazit informace o zásobníku volání pro každé vlákno. V této aplikaci můžeme použít zobrazení vláken.
 
-1. Otevřete okno **paralelní zásobníky** výběrem možnosti **ladit**  >  **Windows**  >  **paralelní zásobníky**Windows. Měl by se zobrazit něco podobného jako následující. Přesné informace se budou lišit v závislosti na aktuálním umístění každého vlákna, hardwaru a programovacího jazyka.
+1. Otevřete okno **paralelní zásobníky** výběrem možnosti **ladit**  >    >  **paralelní zásobníky** Windows. Měl by se zobrazit něco podobného jako následující. Přesné informace se budou lišit v závislosti na aktuálním umístění každého vlákna, hardwaru a programovacího jazyka.
 
     ![Okno paralelní zásobníky](../debugger/media/dbg-multithreaded-parallel-stacks.png "ParallelStacksWindow")
 
@@ -345,7 +345,7 @@ Můžete nastavit zarážky pro různé podmínky, například název vlákna ne
     ![Podmíněná zarážka](../debugger/media/dbg-multithreaded-conditional-breakpoint.png "ConditionalBreakpoint")
 
     > [!TIP]
-    > Pokud máte více zajímat konkrétní vlákno, použijte pro podmínku název vlákna nebo ID vlákna. Pokud to chcete provést v okně **Nastavení zarážky** , vyberte **Filtr** místo **podmíněného výrazu**a postupujte podle tipů pro filtry. Můžete chtít pojmenovat vlákna v kódu aplikace, protože ID vláken se mění po restartování ladicího programu.
+    > Pokud máte více zajímat konkrétní vlákno, použijte pro podmínku název vlákna nebo ID vlákna. Pokud to chcete provést v okně **Nastavení zarážky** , vyberte **Filtr** místo **podmíněného výrazu** a postupujte podle tipů pro filtry. Můžete chtít pojmenovat vlákna v kódu aplikace, protože ID vláken se mění po restartování ladicího programu.
 
 3. Zavřete okno **Nastavení zarážky** .
 

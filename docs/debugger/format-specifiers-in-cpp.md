@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 0f6f3b7c-ce2c-4b4d-b14f-7589dbed5444
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74b6b6b6a8f7a9f5f234a9b46c799e6e0580536f
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: 97c0730b2c1fd8d534fed232846dcca76c58ce2e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97761326"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870633"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Specifikátory formátu pro C++ v ladicím programu sady Visual Studio
 Můžete změnit formát, ve kterém se hodnota zobrazuje v oknech **kukátko**, **Automatické** hodnoty a **místní** hodnoty pomocí specifikátorů formátu.
@@ -73,7 +73,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |d|desítkové celé číslo|0x00000066|102|
 |o|osmičkové celé číslo bez znaménka|0x00000066|000000000146|
 |x<br /><br /> **h**|šestnáctkové celé číslo|102|0xcccccccc|
-|X<br /><br /> **Y**|šestnáctkové celé číslo|102|0xCCCCCCCC|
+|×<br /><br /> **Y**|šestnáctkové celé číslo|102|0xCCCCCCCC|
 |XB<br /><br /> **nejenom**|šestnáctkové celé číslo (bez úvodní 0x)|102|cccccccc|
 |XB<br /><br /> **Nejenom**|šestnáctkové celé číslo (bez úvodní 0x)|102|CCCCCCCC|
 |b|binární celé číslo bez znaménka|25|0b00000000000000000000000000011001|
@@ -111,7 +111,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |d|desítkové celé číslo|0x00000066|102|
 |o|osmičkové celé číslo bez znaménka|0x00000066|000000000146|
 |x<br /><br /> **h**|šestnáctkové celé číslo|102|0xcccccccc|
-|X<br /><br /> **Y**|šestnáctkové celé číslo|102|0xCCCCCCCC|
+|×<br /><br /> **Y**|šestnáctkové celé číslo|102|0xCCCCCCCC|
 |c|jeden znak|0x0065, c|101 "e"|
 |s|const char * String (s uvozovkami)|\<location> Hello World|Hello World|
 |**SB**|const char * String (žádné uvozovky)|\<location> Hello World|Ahoj světe|
@@ -154,7 +154,7 @@ Specifikátory **tučným písmem** jsou podporovány pouze pro ladění nativn�
 |**d**<br /><br />**i**|desítkové celé číslo se znaménkem|0xF000F065|-268373915|
 |**h**|desítkové celé číslo bez znaménka|0x0065|101|
 |o|osmičkové celé číslo bez znaménka|0xF065|0170145|
-|x<br /><br />X|Šestnáctkové celé číslo|61541|0x0000f065|
+|x<br /><br />×|Šestnáctkové celé číslo|61541|0x0000f065|
 |**l**<br /><br />**h**|dlouhá nebo krátká předpona pro: d, i, u, o, x, X|00406042|0x0c22|
 |**FJ**|přihlášený plovoucí bod|(3./2.), f|1,500000|
 |**cerebrální**|podepsaný vědecký zápis|(3.0/2.0)|1.500000 e + 000|

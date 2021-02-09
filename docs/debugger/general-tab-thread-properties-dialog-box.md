@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 46b6c668-6786-456e-97dc-337bcac0d812
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dd4c2bf24058ce8a69f05d8d2cee17a18ff9505d
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: 02ba7d14dad8e4755170ffca7853aa9cc6c85a19
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96862994"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870542"
 ---
 # <a name="general-tab-thread-properties-dialog-box"></a>Karta Obecné, dialogové okno vlastností vlákna
 Pomocí tohoto dialogového okna můžete zjistit více o konkrétním vlákně. Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno [zobrazení vlákna](../debugger/threads-view.md) nebo otevřete [zobrazení zprávy](../debugger/messages-view.md) a rozbalte zprávu. Ve stromové struktuře vyberte libovolný uzel vlákna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .
 
  Dialogové okno **vlastnosti vlákna** obsahuje jedno podokno, kartu **Obecné** . K dispozici jsou následující nastavení:
 
-|Entry|Popis|
+|Entry|Description|
 |-----------|-----------------|
 |**Název modulu**|Název modulu.|
 |**ID vlákna**|Jedinečné ID tohoto vlákna. Všimněte si, že se znovu používají čísla ID vlákna; identifikují vlákno pouze po dobu života tohoto vlákna.|
