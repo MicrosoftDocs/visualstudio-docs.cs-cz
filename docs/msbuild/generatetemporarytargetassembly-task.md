@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92b6539c-6897-45e0-8989-0c234bbfe782
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a100ad8a3be57288e49a858d6f87851269df303
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: f4a41a5cbecea69d4843cbd70479a604f91b2218
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436759"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914747"
 ---
 # <a name="generatetemporarytargetassembly-task"></a>GenerateTemporaryTargetAssembly – úloha
 

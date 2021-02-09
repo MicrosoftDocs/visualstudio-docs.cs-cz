@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a494102b-0cb2-4755-8e2a-d2c0f39fac1d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c4752e4b736a6ba2f8b4a209824b22f94d8036c2
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 2af490f27ab1cdecfe57da9253aff6c4247c7223
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436558"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914886"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest – úloha
 
@@ -78,7 +78,7 @@ Vstupy pro závislosti a soubory mohou být dále upraveny pomocí metadat polo�
 
 ## <a name="item-metadata"></a>Metadata položky
 
-|Název metadat|Popis|
+|Název metadat|Description|
 |-------------------|-----------------|
 |`DependencyType`|Určuje, zda je závislost publikována a instalována s aplikací nebo součástí. Tato metadata jsou platná pro všechny závislosti, ale nepoužívají se pro soubory. Dostupné hodnoty pro tato metadata jsou:<br /><br /> -   `Install`<br />-   `Prerequisite`<br /><br /> Instalace je výchozí hodnota.|
 |`AssemblyType`|Označuje, zda je závislost spravovaná, nebo nativním sestavením. Tato metadata jsou platná pro všechny závislosti, ale nepoužívají se pro soubory. Dostupné hodnoty pro tato metadata jsou:<br /><br /> -   `Managed`<br />-   `Native`<br />-   `Unspecified`<br /><br /> `Unspecified` je výchozí hodnota, která označuje, že generátor manifestu určí typ sestavení automaticky.|

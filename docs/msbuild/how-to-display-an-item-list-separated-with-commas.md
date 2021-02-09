@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 3cae844c-7c6d-4144-82dc-efad10ba458f
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: da2a38041a8fa4092e0167e60b00e35a7187866b
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 3ac0295b2d6f4300fa29c893d61616977ad44b87
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436418"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914415"
 ---
 # <a name="how-to-display-an-item-list-separated-with-commas"></a>Postupy: zobrazení seznamu položek oddělených čárkami
 
@@ -30,7 +30,7 @@ Ve výchozím nastavení nástroj MSBuild používá k oddělení položek v sez
 
 `<Message Text="This is my list of TXT files: @(TXTFile)"/>`
 
-Když `@(TXTFile)` seznam položek obsahuje položky *App1.txt*, *App2.txt*a *App3.txt*, zpráva:
+Když `@(TXTFile)` seznam položek obsahuje položky *App1.txt*, *App2.txt* a *App3.txt*, zpráva:
 
 `This is my list of TXT files: App1.txt;App2.txt;App3.txt`
 

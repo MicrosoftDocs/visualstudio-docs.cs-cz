@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c0aff32f-f2cc-46f6-9c3e-a5c9f8f912b1
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 124e5dcc3666698dd71927e15c3686038233c317
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 810cbd4987277416b5be545603908d9818bff890
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436874"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914760"
 ---
 # <a name="generateresource-task"></a>GenerateResource – úloha
 
@@ -43,7 +43,7 @@ Následující tabulka popisuje parametry `GenerateResource` úkolu.
 |`ExecuteAsTool`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true` je spuštěna *tlbimp.exe* a *aximp.exe* z příslušného cílového rozhraní out-of-proc pro generování potřebných sestavení obálky. Tento parametr umožňuje cílení na více verzí `ResolveComReferences` .|
 |`FilesWritten`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje názvy všech souborů zapsaných na disk. To zahrnuje soubor mezipaměti, pokud existuje. Tento parametr je vhodný pro implementace čištění.|
 |`MinimalRebuildFromTracking`|Volitelný `Boolean` parametr.<br /><br /> Získá nebo nastaví přepínač, který určuje, zda bude použito sledované přírůstkové sestavení. `true`V případě, že je zapnuto přírůstkové sestavení. v opačném případě bude vynuceno opětovné sestavení.|
-|`NeverLockTypeAssemblies`|Volitelný `Boolean` parametr.<br /><br /> Získá nebo nastaví logickou hodnotu, která určuje, zda má být vytvořena nová [doména](/dotnet/api/system.appdomain) aplikace pro vyhodnocení souborů*prostředků (true) nebo*pro vytvoření nové [domény](/dotnet/api/system.appdomain) aplikace pouze v případě, že soubory prostředků odkazují na sestavení uživatele (false).|
+|`NeverLockTypeAssemblies`|Volitelný `Boolean` parametr.<br /><br /> Získá nebo nastaví logickou hodnotu, která určuje, zda má být vytvořena nová [doména](/dotnet/api/system.appdomain) aplikace pro vyhodnocení souborů *prostředků (true) nebo* pro vytvoření nové [domény](/dotnet/api/system.appdomain) aplikace pouze v případě, že soubory prostředků odkazují na sestavení uživatele (false).|
 |`OutputResources`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje název generovaných souborů, například soubory *. Resources* . Pokud název nezadáte, použije se název odpovídajícího vstupního souboru a soubor *. Resources* , který je vytvořen, je umístěn v adresáři, který obsahuje vstupní soubor.|
 |`PublicClass`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true` , vytvoří třídu prostředků silného typu jako veřejnou třídu.|
 |`References`|Volitelný `String[]` parametr.<br /><br /> Odkazy na typy načítání v souborech *. resx* z. datové prvky souboru *. resx* mohou mít typ .NET. Při čtení souboru *. resx* je nutné ho vyřešit. Obvykle se vyřeší úspěšně pomocí standardních pravidel načítání typu. Pokud zadáte sestavení v `References` , budou mít přednost.<br /><br /> Tento parametr není vyžadován pro prostředky silného typu.|

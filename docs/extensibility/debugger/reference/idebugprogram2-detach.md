@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 5e8d88b0-a8d4-4746-88c0-ad332ee73f33
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e177b1347981e420223ecafad18eedcf9de30234
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3ba312ce18dd0a3ee2bbf65d83390a2af9f4ac3d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80723054"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912936"
 ---
 # <a name="idebugprogram2detach"></a>IDebugProgram2::Detach
 Odpojí ladicí stroj od programu.
@@ -28,8 +28,8 @@ Odpojí ladicí stroj od programu.
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-HRESULT Detach( 
-   void 
+HRESULT Detach( 
+   void 
 );
 ```
 

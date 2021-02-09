@@ -12,15 +12,15 @@ helpviewer_keywords:
 - modules [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 381cb529db3f4116a9c42041c26e0e1e242073df
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: e83a1474c7dfe6385c36cc13646bfe40fc897640
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305410"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913620"
 ---
 # <a name="how-to-include-files-by-using-a-module"></a>Postupy: zahrnutí souborů pomocí modulu
   *Moduly* (nezaměňovat s [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] moduly) jsou kontejnery, které umožňují nasadit soubory, jako jsou hlavní stránky ASPX, textové soubory nebo obrázky, do SharePointu.

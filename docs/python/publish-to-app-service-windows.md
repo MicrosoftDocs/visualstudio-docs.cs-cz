@@ -5,18 +5,18 @@ ms.date: 01/07/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 9a3aee5dc1c2d1272c3814fa6cfb2561f6cb4564
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af3e7c2d74a9d7b3a95ae24bba37981822247728
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801305"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912552"
 ---
 # <a name="publishing-to-azure-app-service-on-windows"></a>Publikování do Azure App Service ve Windows
 
@@ -30,7 +30,7 @@ Proces publikování se mezi Visual Studio 2017 a novějším a Visual Studio 20
 > [!Note]
 > Další informace o změnách mezi Visual Studio 2015 a Visual Studio 2017 a novějším najdete v blogovém příspěvku [publikování do Azure v aplikaci Visual studio 2017](https://devblogs.microsoft.com/python/publish-to-azure-in-vs-2017/).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Pro tento návod potřebujete projekt webové aplikace založený na láhvi, baňce nebo Djangoch architekturách. Pokud projekt ještě nemáte a chcete vyzkoušet proces publikování, vytvořte jednoduchý testovací projekt následujícím způsobem:
 
@@ -54,10 +54,10 @@ Pokud ještě nemáte předplatné, začněte s [bezplatným úplným účtem Az
 S aktivním předplatným Azure vytvořte App Service s prázdnou webovou aplikací, a to následujícím způsobem:
 
 1. Přihlaste se na [Portal.Azure.com](https://portal.azure.com).
-1. Vyberte **+ Nový**a pak **web a mobilní zařízení** a potom vyberte **Webová aplikace**.
+1. Vyberte **+ Nový** a pak **web a mobilní zařízení** a potom vyberte **Webová aplikace**.
 1. Zadejte název webové aplikace, ponechte **skupinu prostředků** na vytvořit novou a jako operační systém zvolte **Windows** .
-1. Vyberte **plán/umístění služby App Service**, vyberte **vytvořit novou**a zadejte název a umístění. Pak vyberte **cenovou úroveň**, přejděte dolů k a vyberte plán **zdarma F1** , stiskněte **Vybrat**, potom klikněte na **OK** a pak na **vytvořit**.
-1. Volitelné Po vytvoření App Service přejděte na ni, vyberte **získat profil publikování**a uložte soubor místně.
+1. Vyberte **plán/umístění služby App Service**, vyberte **vytvořit novou** a zadejte název a umístění. Pak vyberte **cenovou úroveň**, přejděte dolů k a vyberte plán **zdarma F1** , stiskněte **Vybrat**, potom klikněte na **OK** a pak na **vytvořit**.
+1. Volitelné Po vytvoření App Service přejděte na ni, vyberte **získat profil publikování** a uložte soubor místně.
 
 ### <a name="using-a-temporary-app-service"></a>Použití dočasné App Service
 
@@ -65,7 +65,7 @@ Vytvořte dočasné App Service, aniž byste potřebovali předplatné Azure, a 
 
 1. Otevřete prohlížeč na [https://azure.microsoft.com/try/app-service/web/](https://azure.microsoft.com/try/app-service/web/) .
 1. Jako typ aplikace vyberte **Webová aplikace** a pak vyberte **Další**.
-1. Vyberte **prázdné pracoviště**a potom **vytvořit**.
+1. Vyberte **prázdné pracoviště** a potom **vytvořit**.
 1. Přihlaste se přes sociální přihlášení podle vašeho výběru a po krátké době, kdy je lokalita připravena na zobrazené adrese URL.
 1. Vyberte **Stáhnout profil publikování** a uložte `.publishsettings` soubor, který použijete později.
 
@@ -79,7 +79,7 @@ V případě potřeby můžete balíček nainstalovat také `bottle` pomocí pro
 
 Publikování do Azure App Service ze sady Visual Studio 2017 a novější zkopíruje pouze soubory v projektu na server. Proto je nutné vytvořit potřebné soubory pro konfiguraci prostředí serveru.
 
-1. V aplikaci Visual Studio **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a vyberte **Přidat > nová položka...**. V zobrazeném dialogovém okně vyberte šablonu "Azure web.config (Fast CGI)" a vyberte OK. Tím se v kořenovém adresáři vašeho projektu vytvoří soubor `web.config`.
+1. V aplikaci Visual Studio **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt a vyberte **Přidat > nová položka...**. V zobrazeném dialogovém okně vyberte šablonu "Azure web.config (Fast CGI)" a vyberte OK. Tím se v kořenovém adresáři vašeho projektu vytvoří soubor `web.config`.
 
 1. Upravte `PythonHandler` položku v `web.config` , aby cesta odpovídala instalaci Pythonu na serveru (podrobné informace najdete v tématu Referenční dokumentace ke [konfiguraci služby IIS](https://www.iis.net/configreference) (IIS.NET)). Například pro Python 3.6.1 x64 by se měla položka zobrazit takto:
 
@@ -133,15 +133,15 @@ Publikování do Azure App Service ze sady Visual Studio 2017 a novější zkop�
 
     Všimněte si, že pokud je pole prázdné, Django automaticky povoluje "localhost", ale přidání vaší produkční adresy URL tyto možnosti odebere. Z tohoto důvodu můžete chtít zachovat samostatné vývojové a produkční kopie `settings.py` nebo použít proměnné prostředí k řízení hodnot doby běhu.
 
-1. V **Průzkumník řešení**rozbalte složku s názvem stejné jako váš projekt, klikněte pravým tlačítkem na `static` složku, vyberte **Přidat > nová položka...**, vyberte šablonu "Azure static Files web.config" a vyberte **OK**. Tato akce ve složce `static` vytvoří další soubor `web.config`, který pro tuto složku zakáže zpracování Pythonu. Tato konfigurace odesílá požadavky na statické soubory na výchozí webový server, a ne do aplikace Python.
+1. V **Průzkumník řešení** rozbalte složku s názvem stejné jako váš projekt, klikněte pravým tlačítkem na `static` složku, vyberte **Přidat > nová položka...**, vyberte šablonu "Azure static Files web.config" a vyberte **OK**. Tato akce ve složce `static` vytvoří další soubor `web.config`, který pro tuto složku zakáže zpracování Pythonu. Tato konfigurace odesílá požadavky na statické soubory na výchozí webový server, a ne do aplikace Python.
 
-1. Uložte projekt, potom v aplikaci Visual Studio **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a vyberte **publikovat**.
+1. Uložte projekt, potom v aplikaci Visual Studio **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt a vyberte **publikovat**.
 
     ![Příkaz publikovat v místní nabídce projektu](media/template-web-publish-command.png)
 
 1. Na kartě **publikovat** , která se zobrazí, vyberte cíl publikování:
 
-    a. Vaše vlastní předplatné Azure: vyberte **Microsoft Azure App Service**a pak **Vyberte existující** a potom **publikovat**. Zobrazí se dialogové okno, ve kterém můžete vybrat příslušné předplatné a službu App Service. Pokud se App Service nezobrazí, použijte stažený profil publikování, jak je popsáno níže v tématu dočasná služba APp Service.
+    a. Vaše vlastní předplatné Azure: vyberte **Microsoft Azure App Service** a pak **Vyberte existující** a potom **publikovat**. Zobrazí se dialogové okno, ve kterém můžete vybrat příslušné předplatné a službu App Service. Pokud se App Service nezobrazí, použijte stažený profil publikování, jak je popsáno níže v tématu dočasná služba APp Service.
 
     ![Publikování do Azure Step 1, Visual Studio 2017 a novější, existující předplatná](media/tutorials-common-publish-1a-2017.png)
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 9e2e01d9-7beb-42b2-99b2-86995578afda
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2496de5d1139d66e4ae9072b551ada990cf856dd
-ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
+ms.openlocfilehash: ad5b77176d05c28b3ba938a1255de6e10fcd7094
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761215"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912746"
 ---
 # <a name="how-to-install-a-source-control-plug-in"></a>Postupy: Instalace modulu plug-in správy zdrojových kódů
 Vytvoření modulu plug-in pro správu zdrojového kódu zahrnuje tři kroky:
@@ -37,7 +37,7 @@ Vytvoření modulu plug-in pro správu zdrojového kódu zahrnuje tři kroky:
 
 #### <a name="to-register-the-source-control-plug-in-dll"></a>Registrace knihovny DLL modulu plug-in správy zdrojových kódů
 
-1. Do klíčového podklíče v **HKEY_LOCAL_MACHINE** části **software** zadejte dvě položky, které určují podklíč názvu vaší společnosti a podklíč názvu produktu. Vzor je **\\ \<company name> \\HKEY_LOCAL_MACHINE\SOFTWARE\<product name> \\ hodnota \<entry>**  =  *value*. Dvě položky jsou vždy označovány jako **SCCServerName** a **SccServerPath**. Každý je pravidelný řetězec.
+1. Do klíčového podklíče v **HKEY_LOCAL_MACHINE** části **software** zadejte dvě položky, které určují podklíč názvu vaší společnosti a podklíč názvu produktu. Vzor je **\\ \<company name> \\HKEY_LOCAL_MACHINE\SOFTWARE\<product name> \\ hodnota \<entry>**  =  . Dvě položky jsou vždy označovány jako **SCCServerName** a **SccServerPath**. Každý je pravidelný řetězec.
 
     Pokud je například název vaší společnosti Microsoft a váš produkt pro správu zdrojového kódu má název SourceSafe, bude tato cesta registru **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe**. V tomto podklíči je první položkou, **SCCServerName**, uživatelsky čitelný řetězec pro pojmenovávání vašeho produktu. Druhá položka, **SccServerPath**, je úplná cesta ke knihovně DLL modulu plug-in správy zdrojového kódu, ke které by se mělo integrované vývojové prostředí (IDE) připojit. Následující příklad uvádí vzorové položky registru:
 
@@ -55,7 +55,7 @@ Vytvoření modulu plug-in pro správu zdrojového kódu zahrnuje tři kroky:
 
       **HideInVisualStudio** je hodnota DWORD a je nastavena na hodnotu *1* pro skrytí modulu plug-in nebo *0* pro zobrazení modulu plug-in. Pokud se položka registru nezobrazí, výchozí chování je zobrazit modul plug-in.
 
-   - Položku registru **DisableSccManager** lze použít k zakázání nebo skrytí možnosti nabídky **Spustit \<Source Control Server>** , která se obvykle zobrazuje v podnabídce **File**  >  **Správa zdrojového kódu** souboru. Výběrem této možnosti nabídky zavoláte funkci [SccRunScc](../../extensibility/sccrunscc-function.md) . Váš modul plug-in správy zdrojových kódů pravděpodobně nepodporuje externí program, a proto může být vhodné zakázat nebo dokonce skrýt možnost nabídky **Spustit** .
+   - Položku registru **DisableSccManager** lze použít k zakázání nebo skrytí možnosti nabídky **Spustit \<Source Control Server>** , která se obvykle zobrazuje v podnabídce   >  **Správa zdrojového kódu** souboru. Výběrem této možnosti nabídky zavoláte funkci [SccRunScc](../../extensibility/sccrunscc-function.md) . Váš modul plug-in správy zdrojových kódů pravděpodobně nepodporuje externí program, a proto může být vhodné zakázat nebo dokonce skrýt možnost nabídky **Spustit** .
 
       **DisableSccManager** je hodnota DWORD a je nastavená na *0* , aby se povolila možnost nabídky **Spustit \<Source Control Server>** , nastavte na hodnotu *1* , která zakáže možnost nabídky, a nastavte na *2* pro skrytí možnosti nabídky. Pokud se tato položka registru nezobrazí, výchozí chování je zobrazit možnost nabídky.
 
@@ -81,7 +81,7 @@ Vytvoření modulu plug-in pro správu zdrojového kódu zahrnuje tři kroky:
 
     Název této položky je uživatelsky čitelný název poskytovatele (stejný jako hodnota zadaná pro položku SCCServerName) a hodnota je znovu, který byl vytvořen v kroku 1. Vzor je **HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\\<zobrazované jméno \>**  =  *\\<název společnosti \> \\<název \> produktu*.
 
-    Například:
+    Příklad:
 
    |Ukázkový záznam registru|Ukázková hodnota|
    |---------------------------|------------------|

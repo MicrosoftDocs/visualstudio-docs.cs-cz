@@ -9,17 +9,17 @@ ms.topic: tutorial
 ms.devlang: vb
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 279bfb00a2466120d21c5c868c0987ec19202acc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a08e955d8446ebcd376f81773b5996146241486e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579933"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915029"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Kurz: Začínáme s Visual Basic v aplikaci Visual Studio
 
@@ -47,7 +47,7 @@ Nejprve vytvoříme projekt aplikace Visual Basic. Typ projektu se dodává se v
 
 2. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
 
-3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic**a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte projekt *WhatIsYourName*.
+3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte projekt *WhatIsYourName*.
 
    ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém prostředí sady Visual Studio](media/new-project-vb-dotnetcore-whatisyourname-console-app.png)
 
@@ -111,7 +111,7 @@ Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete
 
 ## <a name="create-a-what-is-your-name-application"></a>Vytvoření aplikace "Co je vaše jméno"
 
-Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobrazí se spolu s datem a časem. Zde je uveden postup:
+Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobrazí se spolu s datem a časem. Jak na to:
 
  ::: moniker range="vs-2017"
 
@@ -175,7 +175,7 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
 
 1. Otevřete Visual Studio 2017 a potom v horním panelu nabídek zvolte **soubor** > **Nový** > **projekt**.
 
-1. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic**a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak název souboru *CalculateThis*.
+1. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak název souboru *CalculateThis*.
 
 1. Mezi `Module Program` řádek a řádek zadejte následující kód `End Module` :
 

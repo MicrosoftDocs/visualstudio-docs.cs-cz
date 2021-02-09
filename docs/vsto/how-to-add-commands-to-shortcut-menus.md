@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Office development in Visual Studio, context menus
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 95cc6a9dc773c9a0cb07eff518566af9dcc49e96
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 2f5c244d78ab5a6b5d98550b11c280159f285db7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845489"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913457"
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>Postupy: přidávání příkazů do místních nabídek
   Toto téma ukazuje, jak přidat příkazy do místní nabídky v aplikaci Office pomocí doplňku VSTO.

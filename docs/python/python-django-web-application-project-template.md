@@ -5,21 +5,21 @@ ms.date: 11/12/2018
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 136c03ef11071e5d548e36e45a6a541cffce1469
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0193256edb4a55285e8017a56fe7249ef5d60362
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62784840"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912402"
 ---
 # <a name="django-web-project-template"></a>Šablona webového projektu Django
 
-[Django](https://www.djangoproject.com/) je špičková architektura Pythonu navržená pro rychlý, zabezpečený a škálovatelný webový vývoj. Podpora Pythonu v sadě Visual Studio poskytuje několik šablon projektů pro nastavení struktury webové aplikace založené na Django. Chcete-li použít šablonu v aplikaci Visual Studio, vyberte **soubor**  >  **Nový**  >  **projekt**, vyhledejte "Django" a vyberte možnost z **prázdného webového projektu Django**, **Django webového projektu**a **hlasování Django šablony webového projektu** . Návod pro všechny šablony najdete v [kurzu učení Django](learn-django-in-visual-studio-step-01-project-and-solution.md) .
+[Django](https://www.djangoproject.com/) je špičková architektura Pythonu navržená pro rychlý, zabezpečený a škálovatelný webový vývoj. Podpora Pythonu v sadě Visual Studio poskytuje několik šablon projektů pro nastavení struktury webové aplikace založené na Django. Chcete-li použít šablonu v aplikaci Visual Studio, vyberte **soubor**  >  **Nový**  >  **projekt**, vyhledejte "Django" a vyberte možnost z **prázdného webového projektu Django**, **Django webového projektu** a **hlasování Django šablony webového projektu** . Návod pro všechny šablony najdete v [kurzu učení Django](learn-django-in-visual-studio-step-01-project-and-solution.md) .
 
 Visual Studio poskytuje kompletní technologii IntelliSense pro projekty Django:
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: db476af4a9d3be9cab2109fb3489d0767765075f
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: ab301f11ffdae03564f05388dfbba55a90d12391
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903569"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913692"
 ---
 # <a name="how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server"></a>Postupy: nasazení, publikování a upgrade řešení služby SharePoint na vzdáleném serveru
   Kromě nasazení řešení služby SharePoint do místního systému můžete publikovat řešení služby SharePoint v izolovaném prostoru na vzdálené weby nebo místní weby služby SharePoint. Proces vzdáleného publikování kopíruje soubor *. wsp* na server SharePoint, nainstaluje řešení a pak vám umožní toto řešení aktivovat. Můžete také upgradovat vzdálenou instalaci řešení SharePoint po provedení změn.

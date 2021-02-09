@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d78c43ee-4ef2-42e5-984e-d137de4e7e92
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bf84f4e48b9f070b3cebed4c2e17e5fc07992e3
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: d5e78f632cdfe3e207e7ce71530d06c2a3b3fc6c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903894"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914976"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>Přidat podporu editoru sady Visual Studio pro jiné jazyky
 
@@ -62,7 +62,7 @@ Visual Studio aktuálně poskytuje barevné zvýrazňování syntaxe a podporu d
 - Python
 - SQL
 - VBNet
-- CSS
+- Šablony stylů CSS
 - INI
 - LUA
 - R
@@ -105,7 +105,7 @@ Přidejte všechny nové gramatiky TextMate pro Visual Studio do následující 
 
 V rámci této základní cesty přidejte následující složky, pokud se vztahují na vaši situaci:
 
-|Název složky|Popis|
+|Název složky|Description|
 |-----------------|-----------------|
 |\\*\<language name>*|Složka jazyka Nahraďte *\<language name>* názvem jazyka. Například *\Matlab*.|
 |*\Syntaxes*|Složka gramatiky. Obsahuje soubory gramatiky *. JSON* pro jazyk, například *Matlab.js*.|

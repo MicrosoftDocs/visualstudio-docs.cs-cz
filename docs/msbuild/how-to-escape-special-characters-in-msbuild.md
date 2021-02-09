@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1aa3669c-1647-4960-b770-752e2532102f
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 923c517653c42dd0362b398c420c99454ccf4034
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 44e4e713bf8f796f31fcca69a9451a77d120bcfc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436410"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914357"
 ---
 # <a name="how-to-escape-special-characters-in-msbuild"></a>Postupy: sekvence speciálních znaků v nástroji MSBuild
 

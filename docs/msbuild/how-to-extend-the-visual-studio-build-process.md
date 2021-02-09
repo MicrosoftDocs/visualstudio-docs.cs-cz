@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: cb077613-4a59-41b7-96ec-d8516689163c
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 07f0312892d9f4f4073cf6fb2c9537ffa52a6267
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 67b2eff1ca7c1871eacad7608b56b6916e3cc8e3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970074"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914358"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>Postupy: rozšiřování procesu sestavení sady Visual Studio
 
@@ -41,7 +41,7 @@ Společné cíle obsahují sadu předdefinovaných prázdných cílů, které js
 
 1. Identifikujte předdefinovaný cíl v rámci běžných cílů, které chcete přepsat. Úplný seznam cílů, které můžete bez obav přepsat, najdete v následující tabulce.
 
-2. Definujte cíl nebo cíle na konci souboru projektu, bezprostředně před `</Project>` značku. Například:
+2. Definujte cíl nebo cíle na konci souboru projektu, bezprostředně před `</Project>` značku. Příklad:
 
     ```xml
     <Project>
@@ -130,7 +130,7 @@ Tato část XML značí, že před `Build` spuštěním cíle se musí nejdřív
 </PropertyGroup>
 ```
 
-Tuto hodnotu vlastnosti lze přepsat deklarováním jiné vlastnosti pojmenované `BuildDependsOn` na konci souboru projektu. Zahrnutím předchozí `BuildDependsOn` vlastnosti do nové vlastnosti můžete přidat nové cíle na začátek a konec cílového seznamu. Například:
+Tuto hodnotu vlastnosti lze přepsat deklarováním jiné vlastnosti pojmenované `BuildDependsOn` na konci souboru projektu. Zahrnutím předchozí `BuildDependsOn` vlastnosti do nové vlastnosti můžete přidat nové cíle na začátek a konec cílového seznamu. Příklad:
 
 ```xml
 <PropertyGroup>

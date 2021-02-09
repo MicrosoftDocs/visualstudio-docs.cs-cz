@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 852772ea-c324-42e9-8c8a-6d565414a109
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dcb713a62ebc9a0c3e4daf5aa16f36779b1a1fdc
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 5c000a8d11f958daa1c7c8717dc4f18365e0a147
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903764"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914983"
 ---
 # <a name="reference-element-visual-studio-templates"></a>Reference – element (šablony sady Visual Studio)
 Určuje odkaz na sestavení, který se má přidat při přidání položky do projektu.
@@ -30,7 +30,7 @@ Určuje odkaz na sestavení, který se má přidat při přidání položky do p
  \<References>
  \<Reference>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Reference>

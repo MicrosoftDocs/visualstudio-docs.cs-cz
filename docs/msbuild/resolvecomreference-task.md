@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9bf5fcf-6453-40ea-b50f-a212adc3e9b5
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e98d0d64a8df1dac29127ffcf76fe8b6cc39a43
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 0384ee6cbfa749589e15ab073cc31ffebb53985e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93048621"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912534"
 ---
 # <a name="resolvecomreference-task"></a>ResolveComReference – úloha
 
@@ -50,7 +50,7 @@ Převezme seznam jednoho nebo více názvů knihoven typů nebo souborů *. tlb*
 |`SdkToolsPath`|Volitelný <xref:System.String?displayProperty=fullName> parametr.<br /><br /> Pokud `ExecuteAsTool` má `true` parametr hodnotu, musí být tento parametr nastaven na cestu nástrojů sady SDK pro cílovou verzi rozhraní.|
 |`StateFile`|Volitelný `String` parametr.<br /><br /> Určuje soubor mezipaměti pro časová razítka komponenty modelu COM. Pokud tato akce není k dispozici, budou všechny obálky znovu vygenerovány při každém spuštění.|
 |`TargetFrameworkVersion`|Volitelný `String` parametr.<br /><br /> Určuje verzi cílového rozhraní projektu.<br /><br /> Výchozí formát je `String.Empty`. To znamená, že neexistuje žádné filtrování pro odkaz na základě cílové architektury.|
-|`TargetProcessorArchitecture`|Volitelný `String` parametr.<br /><br /> Určuje preferovanou cílovou architekturu procesoru. Po překladu předává příznak *tlbimp.exe* /Machine.<br /><br /> Hodnota parametru by měla být členem <xref:Microsoft.Build.Utilities.ProcessorArchitecture> .|
+|`TargetProcessorArchitecture`|Volitelný `String` parametr.<br /><br /> Určuje preferovanou cílovou architekturu procesoru. Po překladu předává příznak *tlbimp.exe*/Machine.<br /><br /> Hodnota parametru by měla být členem <xref:Microsoft.Build.Utilities.ProcessorArchitecture> .|
 |`TypeLibFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje cestu k souboru knihovny typů pro odkazy COM. Položky zahrnuté v tomto parametru můžou obsahovat metadata položky. Další informace najdete v části [TypeLibFiles Item metadata](#typelibfiles-item-metadata) níže.|
 |`TypeLibNames`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje názvy knihoven typů, které se mají přeložit. Položky zahrnuté v tomto parametru musí obsahovat některá metadata položky. Další informace najdete v části [TypeLibNames Item metadata](#typelibnames-item-metadata) níže.|
 |`WrapperOutputDirectory`|Volitelný `String` parametr.<br /><br /> Umístění na disku, kde je umístěno vygenerované sestavení vzájemné spolupráce. Pokud tato metadata položky nejsou zadána, úloha používá absolutní cestu adresáře, ve kterém je umístěn soubor projektu.|

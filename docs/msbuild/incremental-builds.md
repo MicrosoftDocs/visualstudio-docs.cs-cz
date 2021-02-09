@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 325e28c7-4838-4e3f-b672-4586adc7500c
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4beb6c676fbd66d7e0d11e4ca1fe2a3fa8188bfe
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: f1237128852cec39ff49204e1c269f10153b42ab
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904599"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914072"
 ---
 # <a name="incremental-builds"></a>Přírůstková sestavení
 
@@ -26,7 +26,7 @@ Přírůstková sestavení jsou sestavení, která jsou optimalizována tak, aby
 > [!NOTE]
 > Když MSBuild vyhodnotí vstupní soubory, bude se brát v úvahu jenom obsah seznamu v aktuálním spuštění. Změny v seznamu od posledního sestavení automaticky nedělají cíl v aktuálním stavu.
 
-Jsou-li všechny výstupní položky aktuální, je cíl nástrojem MSBuild vynechán. Toto *přírůstkové sestavení* cíle může významně zlepšit rychlost sestavení. Jsou-li aktuální jen některé soubory, nástroj MSBuild spustí cíl, ale vynechá aktuální položky a tím změní všechny položky na aktuální. Tento proces se označuje jako *částečné přírůstkové sestavení* .
+Jsou-li všechny výstupní položky aktuální, je cíl nástrojem MSBuild vynechán. Toto *přírůstkové sestavení* cíle může významně zlepšit rychlost sestavení. Jsou-li aktuální jen některé soubory, nástroj MSBuild spustí cíl, ale vynechá aktuální položky a tím změní všechny položky na aktuální. Tento proces se označuje jako *částečné přírůstkové sestavení*.
 
 Mapování 1 : 1 jsou obvykle tvořena transformací položek. Další informace najdete v tématu [transformace](../msbuild/msbuild-transforms.md).
 
@@ -44,7 +44,7 @@ Sada souborů reprezentovaných `Compile` typem položky je zkopírována do zá
 
 ## <a name="output-inference"></a>Odvození výstupu
 
-Nástroj MSBuild porovnává cílové atributy `Inputs` a `Outputs`, aby určil, zda bude cíl proveden. V ideálním případě nedojde po dokončení přírůstkového sestavení ke změně existující sady souborů bez ohledu na spuštění přidružených cílů. Vzhledem k tomu, že vlastnosti a položky vytvořené nebo upravené pomocí úkolů mohou ovlivnit sestavení, musí nástroj MSBuild odvodit jejich hodnoty i v případě vynechání cíle, který je ovlivňuje. Tento proces se označuje jako *odvození výstupu* .
+Nástroj MSBuild porovnává cílové atributy `Inputs` a `Outputs`, aby určil, zda bude cíl proveden. V ideálním případě nedojde po dokončení přírůstkového sestavení ke změně existující sady souborů bez ohledu na spuštění přidružených cílů. Vzhledem k tomu, že vlastnosti a položky vytvořené nebo upravené pomocí úkolů mohou ovlivnit sestavení, musí nástroj MSBuild odvodit jejich hodnoty i v případě vynechání cíle, který je ovlivňuje. Tento proces se označuje jako *odvození výstupu*.
 
 Existují tři případy:
 

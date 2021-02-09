@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 65683544f345a2378fdec559f582985ffec7bc43
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 22fe46e2876b14551637dd97712e1728816b020e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903582"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913700"
 ---
 # <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>Postupy: nasazení a publikování řešení služby SharePoint na místní web služby SharePoint
   Řešení služby SharePoint můžete nasadit nebo publikovat na místním SharePointovém serveru na svém vývojovém počítači. Proces nasazení zkopíruje soubor *. wsp* na server SharePoint, nainstaluje řešení a potom tyto funkce aktivuje. Proces publikování kopíruje pouze soubor *. wsp* na server SharePoint a nainstaluje jej. Pokud ho chcete povolit v SharePointu, musíte ho ručně aktivovat.

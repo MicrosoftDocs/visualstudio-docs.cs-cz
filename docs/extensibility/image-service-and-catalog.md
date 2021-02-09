@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41adcbe97f9d0779fbad465bac673a3f7cf086c7
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 77fdc39ccccb7728749edd55527741c15bb1bcb0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96993533"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912740"
 ---
 # <a name="image-service-and-catalog"></a>Služba a katalog imagí
 Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přijetí služby image a katalogu imagí sady Visual Studio představené v aplikaci Visual Studio 2015.
@@ -103,7 +103,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 </Symbols>
 ```
 
-|**Dílčí element**|**Definice**|
+|**Dílčí element**|**Definition**|
 |-|-|
 |Import|Importuje symboly daného souboru manifestu pro použití v aktuálním manifestu.|
 |Identifikátor GUID|Symbol představuje GUID a musí odpovídat formátování identifikátoru GUID.|
@@ -143,7 +143,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 </Image>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Identifikátor GUID|Požadovanou Část GUID monikeru image|
 |ID|Požadovanou Část ID monikeru bitové kopie|
@@ -159,14 +159,14 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
  </Source>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
-|Identifikátor URI|Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může to být jedna z následujících:<br /><br /> – [Identifikátor URI balíčku](/dotnet/framework/wpf/app-development/pack-uris-in-wpf) pomocí autority Application:///<br />– Odkaz na prostředek absolutní součásti<br />– Cesta k souboru, který obsahuje nativní prostředek|
-|Pozadí|Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může to být jedna z následujících:<br /><br /> *Světlá:* Zdroj lze použít na světlém pozadí.<br /><br /> *Tmavě tmavá:* Zdroj lze použít na tmavém pozadí.<br /><br /> *HighContrast:* Zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastLight:* Zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastDark:* Zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut Background vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud je pozadí *světlé*, *tmavé*, *HighContrastLight* nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je pozadí vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku.|
+|Identifikátor URI|Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může se zobrazit některý z následujících:<br /><br /> – [Identifikátor URI balíčku](/dotnet/framework/wpf/app-development/pack-uris-in-wpf) pomocí autority Application:///<br />– Odkaz na prostředek absolutní součásti<br />– Cesta k souboru, který obsahuje nativní prostředek|
+|Pozadí|Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může se zobrazit některý z následujících:<br /><br /> *Světlá:* Zdroj lze použít na světlém pozadí.<br /><br /> *Tmavě tmavá:* Zdroj lze použít na tmavém pozadí.<br /><br /> *HighContrast:* Zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastLight:* Zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastDark:* Zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut Background vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud je pozadí *světlé*, *tmavé*, *HighContrastLight* nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je pozadí vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku.|
 
 \<Source>Element může mít přesně jeden z následujících volitelných dílčích elementů:
 
-|**Objekt**|**Atributy (všechny povinné)**|**Definice**|
+|**Prvek**|**Atributy (všechny povinné)**|**Definition**|
 |-|-|-|
 |\<Size>|Hodnota|Zdroj se použije pro obrázky dané velikosti (v jednotkách zařízení). Obrázek bude čtvercový.|
 |\<SizeRange>|MinSize, MaxSize|Zdroj bude použit pro obrázky z MinSize do MaxSize (v jednotkách zařízení) včetně. Obrázek bude čtvercový.|
@@ -179,7 +179,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 <NativeResource Type="type" ID="int" />
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Typ|Požadovanou Typ nativního prostředku, buď XAML, nebo PNG|
 |ID|Požadovanou Část celého čísla ID nativního prostředku|
@@ -195,7 +195,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
  </ImageList>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Identifikátor GUID|Požadovanou Část GUID monikeru image|
 |ID|Požadovanou Část ID monikeru bitové kopie|
@@ -716,7 +716,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 ## <a name="testing-your-images"></a>Testování imagí
  Pomocí nástroje Prohlížeč knihovny obrázků můžete testovat manifesty imagí, abyste měli jistotu, že všechno je správně vytvořené. Tento nástroj najdete v [sadě Visual Studio 2015 SDK](visual-studio-sdk.md). Dokumentaci k tomuto nástroji a dalším uživatelům najdete [tady](./internals/vssdk-utilities.md?view=vs-2015&preserve-view=true).
 
-## <a name="additional-resources"></a>Další zdroje
+## <a name="additional-resources"></a>Další zdroje informací
 
 ### <a name="samples"></a>ukázky
  Několik ukázek sady Visual Studio na GitHubu bylo aktualizováno, aby ukázaly, jak používat službu Image jako součást různých bodů rozšiřitelnosti sady Visual Studio.
@@ -738,7 +738,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
  Nástroj Prohlížeč knihovny obrázků může načíst manifesty obrázků a umožňuje uživatelům manipulovat stejným způsobem, jako by se v aplikaci Visual Studio zajistilo správné vytváření manifestu. Uživatel může změnit nastavení pozadí, velikosti, DPI, Vysoký kontrast a dalších nastavení. Zobrazuje také informace o načítání pro hledání chyb v manifestech a zobrazuje zdrojové informace pro každý obrázek v manifestu.
 
-## <a name="faq"></a>Nejčastější dotazy
+## <a name="faq"></a>Časté otázky
 
 - Existují nějaké závislosti, které je potřeba zahrnout při načítání \<Reference Include="Microsoft.VisualStudio.*.Interop.14.0.DesignTime" /> ?
 
@@ -1011,7 +1011,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphGroupJSharpInterface|GlyphItemShortcut|InterfaceShortcut|
     |GlyphGroupError||StatusError|
     |GlyphBscFile||ClassFile|
-    |GlyphAssembly||Referenční informace|
+    |GlyphAssembly||Reference|
     |GlyphLibrary||Knihovna|
     |GlyphVBProject||VBProjectNode|
     |GlyphCoolProject||CSProjectNode|

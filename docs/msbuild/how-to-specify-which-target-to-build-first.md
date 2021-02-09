@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a580ba5b-2919-42d2-ae38-1af991e0205a
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a9ce8f17e70344445f95e8b4742838e40a92fe88
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: f41c9fec5b5ce9b6e4716c83edf9cd9f43e0eb94
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436191"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914214"
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>Postupy: určení prvního cíle sestavení
 

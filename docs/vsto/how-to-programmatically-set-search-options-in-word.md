@@ -14,15 +14,15 @@ helpviewer_keywords:
 - searching, Word options
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 45af6a801a146838919402c31be502cf4825e718
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: e583b7deb9fbe37f40e582d2c8a946332dd00ffa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528556"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913464"
 ---
 # <a name="how-to-programmatically-set-search-options-in-word"></a>Postupy: nastavování možností hledání v aplikaci Word prostřednictvím kódu programu
   Existují dva způsoby, jak nastavit možnosti hledání pro výběry v systém Microsoft Office dokumentů aplikace Word:

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 163734bd-1bfd-4093-a730-7741fc21742d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d81328ecf17117500a5f686a45f934e451bb5809
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 5c351b7f676dec678bd4f070a1f8fb9af97c5d28
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436061"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914111"
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Postupy: použití stejného cíle ve více souborech projektu
 
@@ -38,7 +38,7 @@ Pokud jste vytvořili několik souborů projektu MSBuild, možná jste zjistili,
 
 3. Po `Import` elementu definujte všechny vlastnosti a položky, které musí přepsat výchozí definice vlastností a položek v importovaném projektu.
 
-## <a name="order-of-evaluation"></a>Pořadí vyhodnocení
+## <a name="order-of-evaluation"></a>Pořadí vyhodnocování
 
  Když nástroj MSBuild dosáhne `Import` prvku, importovaný projekt je efektivně vložen do importu projektu v umístění `Import` elementu. Proto umístění `Import` elementu může ovlivnit hodnoty vlastností a položek. Je důležité porozumět vlastnostem a položkám, které jsou nastaveny v importovaném projektu, a vlastnosti a položky, které používá importovaný projekt.
 

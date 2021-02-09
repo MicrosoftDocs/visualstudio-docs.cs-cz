@@ -8,15 +8,15 @@ helpviewer_keywords:
 - MSBuild, SDKs, SDK
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bddf5e46fe066a79beb64570d6bf6ec1fedda68c
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: e6303efce016a9e678e4c9e8aa62c91aa116e44f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436125"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914216"
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>Postupy: použití sad SDK projektů MSBuild
 

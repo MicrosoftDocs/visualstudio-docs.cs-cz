@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dcef5f91-0613-4bfc-8ee9-d7004bb6d3a9
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 51ecf68cacf0edca90893931642cd7fb6064f972
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 59a0660bb78e966150a6ef8d17dc24512a901a26
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904644"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913951"
 ---
 # <a name="item-element-msbuild"></a>Item – Element (MSBuild)
 
@@ -101,7 +101,7 @@ Teď ale můžete `Version` metadata předat jako atribut, například v násled
 
 Použití notace @ ( \<myType> ) umožňuje rozšířit kolekci položek typu \<myType> na seznam řetězců oddělených středníkem a předat parametru. Pokud je parametr typu `string` , pak hodnota parametru je seznam elementů, které jsou odděleny středníky. Pokud je parametr pole řetězců ( `string[]` ), pak je každý element vložen do pole na základě umístění středníků. Pokud je parametr úlohy typu <xref:Microsoft.Build.Framework.ITaskItem> `[]` , pak je hodnota obsahem kolekce položek společně s připojenými metadaty. K vymezení každé položky pomocí jiného znaku než středníku použijte syntaxi @ ( \<myType> , ' \<separator> ').
 
-Modul MSBuild může vyhodnotit zástupné znaky, jako jsou `*` a `?` a rekurzivní zástupné znaky, jako je například */ \* \* / \* . cs* . Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
+Modul MSBuild může vyhodnotit zástupné znaky, jako jsou `*` a `?` a rekurzivní zástupné znaky, jako je například */ \* \* / \* . cs*. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
 
 ## <a name="examples"></a>Příklady
 

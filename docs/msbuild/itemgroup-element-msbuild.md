@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aac894e3-a9f1-4bbc-a796-6ef07001f35b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f4397415e684b9603dd662e409590e88e86034b
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: eff27467aeea5068f3ec086b490ca9c735861549
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903617"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913838"
 ---
 # <a name="itemgroup-element-msbuild"></a>Item – Element (MSBuild)
 
@@ -66,7 +66,7 @@ Následující části popisují atributy, podřízené prvky a nadřazené prvk
 | Element | Popis |
 | - | - |
 | [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
-| [Cílové](../msbuild/target-element-msbuild.md) | Počínaje .NET Framework 3,5 se `ItemGroup` element může objevit uvnitř `Target` elementu. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md). |
+| [Cíl](../msbuild/target-element-msbuild.md) | Počínaje .NET Framework 3,5 se `ItemGroup` element může objevit uvnitř `Target` elementu. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md). |
 
 ## <a name="example"></a>Příklad
 

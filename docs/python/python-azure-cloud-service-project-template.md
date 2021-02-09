@@ -5,18 +5,18 @@ ms.date: 11/12/2018
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 4d205ee2bbc0a6e9c44c34f3b0487abb4f22283e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a40745b19bde57f7f0ca52e04a11a89ad1ca69ea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72983666"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912429"
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Projekty cloudových služeb Azure pro Python
 
@@ -45,7 +45,7 @@ Tento článek obsahuje podrobné informace o šabloně projektu a další podpo
 
     ![Podpůrné soubory role pracovního procesu](media/template-azure-cloud-service-worker-role-support-files.png)
 
-    Chcete-li přidat tyto konfigurační skripty do nového projektu, klikněte pravým tlačítkem myši na projekt, vyberte možnost **Přidat**  >  **novou položku**a vyberte možnost soubory **podpory webové role** nebo **podpůrné soubory role pracovního procesu**.
+    Chcete-li přidat tyto konfigurační skripty do nového projektu, klikněte pravým tlačítkem myši na projekt, vyberte možnost **Přidat**  >  **novou položku** a vyberte možnost soubory **podpory webové role** nebo **podpůrné soubory role pracovního procesu**.
 
 ## <a name="configure-role-deployment"></a>Konfigurace nasazení role
 
@@ -87,7 +87,7 @@ Pro Cloud Services skript *ConfigureCloudService.ps1* používá `pip` k instala
 
 Všimněte si, že instance cloudové služby neobsahují kompilátory jazyka C, takže všechny knihovny s rozšířeními jazyka C musí poskytovat předem zkompilované binární soubory.
 
-PIP a jeho závislosti a balíčky v *requirements.txt*se automaticky stahují a můžou se počítat jako Fakturovatelné využití šířky pásma. Podrobnosti o správě *requirements.txt* souborů najdete v tématu [Správa požadovaných balíčků](managing-required-packages-with-requirements-txt.md) .
+PIP a jeho závislosti a balíčky v *requirements.txt* se automaticky stahují a můžou se počítat jako Fakturovatelné využití šířky pásma. Podrobnosti o správě *requirements.txt* souborů najdete v tématu [Správa požadovaných balíčků](managing-required-packages-with-requirements-txt.md) .
 
 ## <a name="troubleshooting"></a>Řešení potíží
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e64f805496d03b42ca70489bab1302ecf58b33bc
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 59354537f0c1f22534395da1e0ed3db3929a14a9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903556"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913649"
 ---
 # <a name="how-to-edit-a-sharepoint-deployment-configuration"></a>Postupy: Úprava konfigurace nasazení služby SharePoint
   Můžete vytvořit konfiguraci nasazení nebo upravit existující konfiguraci nasazení. Můžete například spustit jeden krok nebo změnit pořadí kroků v procesu nasazení. Konfigurace nasazení možná budete chtít vytvořit nebo upravit, protože předdefinované a programově přidané konfigurace nelze změnit.
@@ -47,7 +47,7 @@ ms.locfileid: "94903556"
 
 #### <a name="to-change-the-active-deployment-configuration"></a>Změna aktivního nastavení nasazení
 
-1. V **Průzkumník řešení** zvolte projekt služby SharePoint a poté v panelu nabídky zvolte možnost **Project**  >  **\<*ProjectName*> vlastnosti** projektu.
+1. V **Průzkumník řešení** zvolte projekt služby SharePoint a poté v panelu nabídky zvolte možnost   >  **\<*ProjectName*> vlastnosti** projektu.
 
 2. Vyberte kartu **služby SharePoint** .
 

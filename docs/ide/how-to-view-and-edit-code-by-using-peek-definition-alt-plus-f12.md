@@ -6,15 +6,15 @@ ms.date: 01/10/2018
 ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b706e730767c7c79fbeebc11291ecd11f4635b6
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 9c296aca79e6f334c93d8a9974d4a718ccd39d97
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95596921"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915004"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>Postupy: zobrazení a úpravy kódu pomocí funkce Náhled definice (Alt + F12)
 
@@ -77,7 +77,7 @@ Tyto klávesové zkratky můžete použít v okně **Náhled definice** :
 |Otevřít okno definice|**ALT** + **F12**|
 |Zavřít okno definice|**Esc**|
 |Povýšit okno definice na běžnou kartu dokumentu|**CTRL** + **ALT** + **Domovská stránka**|
-|Navigace mezi okny definice|**CTRL** + **Alt** + ALT **-** a **CTRL** + **+ ALT**+**=**|
+|Navigace mezi okny definice|**CTRL** +  + ALT **-** a **CTRL** + **+ ALT**+**=**|
 |Navigace mezi několika výsledky|**F8** a **SHIFT** + **F8**|
 |Přepnout mezi oknem editoru kódu a oknem definice|**Posun** + **Klávesa ESC**|
 
