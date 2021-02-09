@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: d71308cf-d464-4536-8711-0d0a8eadb255
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 45219da52cdd1ff87b7243c3cc742bb4c97a74e7
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 0acc0cb0a37543b1462a4d5241eb63706868d372
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435857"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894332"
 ---
 # <a name="debug-workflows-with-the-workflow-designer"></a>Ladění pracovních postupů pomocí Návrhář postupu provádění
 
@@ -43,8 +43,8 @@ Obecně je potřeba ladit pracovní postupy stejně jako při ladění programů
 
 - **Krok ven:** Krok ven z aktivity stisknutím klávesy **SHIFT** + **F11**. Krokování mimo aktivitu spustí aktuální aktivitu a všechny její aktivity na stejné úrovni jako dokončené. Ladicí program se pak rozdělí na nadřazený objekt aktuální aktivity. Při rozkrokování z obslužné rutiny kódu se ladicí program ukončí u aktivity, ke které je přidružena obslužná rutina.
 
-- **Krok za** : krok po aktivitě stisknutím klávesy **F10**. Při krokování nad složenou aktivitou se ladicí program ukončí u prvního spustitelného prvku složené aktivity. Při rozkrokování mimo nesložené, jako je <xref:System.Activities.Statements.Assign> aktivita, provede ladicí program aktivitu a její přidružené obslužné rutiny a přeruší se na další aktivitu. Pokud je spuštěná aktivita poslední podřízená aktivita v složené aktivitě, potom po provedení dojde k přerušení ladicího programu u nadřazené aktivity.
+- **Krok za**: krok po aktivitě stisknutím klávesy **F10**. Při krokování nad složenou aktivitou se ladicí program ukončí u prvního spustitelného prvku složené aktivity. Při rozkrokování mimo nesložené, jako je <xref:System.Activities.Statements.Assign> aktivita, provede ladicí program aktivitu a její přidružené obslužné rutiny a přeruší se na další aktivitu. Pokud je spuštěná aktivita poslední podřízená aktivita v složené aktivitě, potom po provedení dojde k přerušení ladicího programu u nadřazené aktivity.
 
 ## <a name="debug-with-f5"></a>Ladění pomocí F5
 
-Pokud vytváříte konzolovou aplikaci pracovního postupu, stačí stisknout klávesu **F5** a zahájit tak ladění aplikace a pracovního postupu. Pokud vytváříte knihovnu aktivit sami, musíte jako spouštěný projekt zadat spustitelnou aplikaci hostitele. Chcete-li nastavit projekt po spuštění v **Průzkumník řešení** , klikněte pravým tlačítkem myši na název projektu hostitele a vyberte **nastavit jako spouštěný projekt**.
+Pokud vytváříte konzolovou aplikaci pracovního postupu, stačí stisknout klávesu **F5** a zahájit tak ladění aplikace a pracovního postupu. Pokud vytváříte knihovnu aktivit sami, musíte jako spouštěný projekt zadat spustitelnou aplikaci hostitele. Chcete-li nastavit projekt po spuštění v **Průzkumník řešení**, klikněte pravým tlačítkem myši na název projektu hostitele a vyberte **nastavit jako spouštěný projekt**.

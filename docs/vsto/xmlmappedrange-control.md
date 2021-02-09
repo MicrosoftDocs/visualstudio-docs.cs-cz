@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XMLMappedRange control, events
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f3b3fd140787d44cdd8364ce77d5292dfcd83f54
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 2849b815c38555be6b149544bb9d9953fe85ec4b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525890"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894397"
 ---
 # <a name="xmlmappedrange-control"></a>Ovládací prvek XmlMappedRange –
   <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>Ovládací prvek je rozsah, který je vytvořen pouze v případě, že je prvek neopakujícího se schématu mapován na buňku v aplikaci systém Microsoft Office Excel. Například, pokud se `maxOccurs` atribut elementu schématu rovná 1. Poté, co aplikace Visual Studio vytvoří rozsah mapovaného kódu XML, lze naprogramovat přímo bez nutnosti procházení objektového modelu aplikace Excel. Ovládací prvek lze odstranit pouze <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> v aplikaci Excel, pokud je odebráno mapování elementu.

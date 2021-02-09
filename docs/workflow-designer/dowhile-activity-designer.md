@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 948deb35-d72f-462b-bea6-4b119c10a148
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8385fe376f56738d76e066dc172e7b6b516f9a08
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 6e117fcbea0488c4b6a42125971984b86cf78251
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438058"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894254"
 ---
 # <a name="dowhile-activity-designer"></a>Návrhář aktivity DoWhile
 
@@ -29,8 +29,8 @@ Následující tabulka uvádí nejužitečnější <xref:System.Activities.State
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Statements.DoWhile.Body%2A>|Nepravda|Aktivita, která se má provést, když je podmínka **pravdivá** Chcete-li přidat <xref:System.Activities.Statements.DoWhile.Body%2A> aktivitu, přetáhněte aktivitu ze sady nástrojů do pole **text** v Návrháři aktivity **DoWhile** s textem nápovědy "Sem přetáhněte aktivitu".|
-|<xref:System.Activities.Statements.DoWhile.Condition%2A>|Pravda|Podmínka, která má být vyhodnocena po každé iteraci smyčky. Chcete-li nastavit <xref:System.Activities.Statements.DoWhile.Condition%2A> , zadejte výraz Visual Basic do pole **Podmínka** v Návrháři aktivity **DoWhile** nebo v mřížce vlastností.|
+|<xref:System.Activities.Statements.DoWhile.Body%2A>|Ne|Aktivita, která se má provést, když je podmínka **pravdivá** Chcete-li přidat <xref:System.Activities.Statements.DoWhile.Body%2A> aktivitu, přetáhněte aktivitu ze sady nástrojů do pole **text** v Návrháři aktivity **DoWhile** s textem nápovědy "Sem přetáhněte aktivitu".|
+|<xref:System.Activities.Statements.DoWhile.Condition%2A>|Ano|Podmínka, která má být vyhodnocena po každé iteraci smyčky. Chcete-li nastavit <xref:System.Activities.Statements.DoWhile.Condition%2A> , zadejte výraz Visual Basic do pole **Podmínka** v Návrháři aktivity **DoWhile** nebo v mřížce vlastností.|
 
 ## <a name="see-also"></a>Viz také
 

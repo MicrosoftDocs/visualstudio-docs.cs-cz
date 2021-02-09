@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 372d97ce-12e4-46a9-9863-da508adba68f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: 6668e669fdc26db9d81c7176aeee16e5af42987b
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+manager: jmartens
+ms.openlocfilehash: a123a147d038a41f799c2fdf9d4fb26eaa4f3490
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330183"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894488"
 ---
 # <a name="test-controller-and-test-agent-requirements-for-load-testing"></a>Testovací kontrolér a požadavky testovacího agenta pro zátěžové testování
 
@@ -34,8 +34,8 @@ V následující tabulce jsou uvedeny doporučené hardwarové požadavky pro na
 
 |**Konfigurace**|**Komponenta**|**Procesor**|**REŽIM**|**Memory (Paměť)**|
 |-|-------------------|-|------------|-|
-|Virtuální uživatelé < 500|Testovací agent|2,6 GHz|10 GB|2 GB|
-|Virtuální uživatelé < 1000|Testovací agent|Dvoujádrový procesor 2,6 GHz|10 GB|2 GB|
+|Virtuální uživatelé < 500|Testovací agent|2,6 GHz|10 GB|2 GB|
+|Virtuální uživatelé < 1000|Testovací agent|Dvoujádrový procesor 2,6 GHz|10 GB|2 GB|
 |Virtuální uživatelé N x 1000|Testovací agent|Horizontální navýšení kapacity na N agentů s duální 2,6 GHz|OVLADAČ|GB|
 |\< 30 počítačů v testovacím prostředí. To zahrnuje agenty a testované servery.|Test Controller|2,6 GHz|||
 |N x 30 počítačů v testovacím prostředí. To zahrnuje agenty a testované servery.|Test Controller|Procesory N 2,6 GHz|||
