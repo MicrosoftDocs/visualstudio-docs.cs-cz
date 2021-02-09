@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d7647575-0e06-4190-88f5-ca40b82209a4
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56cb234e2295c5c9c08c2a2e9271e1c173524875
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d9d4ee145d900a79a48db44f95a125e87bd10f67
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80727503"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851241"
 ---
 # <a name="idebugmemorybytes2"></a>IDebugMemoryBytes2
 Toto rozhraní představuje bajty paměti.
@@ -41,7 +41,7 @@ IDebugMemoryBytes2 : IUnknown
 |------------|-----------------|
 |[ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md)|Přečte sekvenci bajtů počínaje daným umístěním.|
 |[WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md)|Zapisuje `dwCount` bajty počínaje `pStartContext` .|
-|[GetSize](../../../extensibility/debugger/reference/idebugmemorybytes2-getsize.md)|Získá velikost paměti reprezentované tímto rozhraním (v bajtech).|
+|[GetSize –](../../../extensibility/debugger/reference/idebugmemorybytes2-getsize.md)|Získá velikost paměti reprezentované tímto rozhraním (v bajtech).|
 
 ## <a name="remarks"></a>Poznámky
  V případě vlastností rozhraní [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) představující pole poskytuje `IDebugMemoryBytes2` rozhraní pro přístup k hodnotám v tomto poli.

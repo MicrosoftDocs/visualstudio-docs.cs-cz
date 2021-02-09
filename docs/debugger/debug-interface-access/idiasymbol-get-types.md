@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5f056e0c-e15b-4e00-8f78-aadc8574f7ea
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d947eed08ba28cfdd68e2cd7d34998412fc8bc3a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb8ee1519dd2613ec823aa2d13e60f296baa4415
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461683"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853462"
 ---
 # <a name="idiasymbolget_types"></a>IDiaSymbol::get_types
 Načte pole typů určených pro kompilátor pro tento symbol.
@@ -25,7 +25,7 @@ Načte pole typů určených pro kompilátor pro tento symbol.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_types ( 
+HRESULT get_types ( 
    DWORD       cTypes,
    DWORD*      pcTypes,
    IDiaSymbol* types[]

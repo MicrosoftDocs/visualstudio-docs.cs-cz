@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, troubleshooting
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 240913e93dc1945846613ac1ecc8d0141368f7b3
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 5ce41bdf53ee55bfcbcec0cc2a2271ba9914aed8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850426"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851735"
 ---
 # <a name="additional-information-for-sharepoint-errors"></a>Další informace o chybách služby SharePoint
   Pomoc při řešení [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] chyb a upozornění nástrojů služby SharePoint najdete v tématech věnovaných řešení potíží a veřejných fórech.
@@ -40,7 +40,7 @@ ms.locfileid: "94850426"
 ## <a name="other-resources"></a>Další prostředky
  Následující tabulka obsahuje seznam [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] fór nástrojů služby SharePoint a dalších dostupných zdrojů.
 
-|Pojem|Definice|
+|Označení|Definice|
 |----------|----------------|
 |[Vývoj pro SharePoint](https://social.msdn.microsoft.com/Forums/office/home?forum=sharepointdevelopmentprevious)|Poskytuje fórum pro otázky týkající se vývoje služby SharePoint v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[Fóra sady Visual Studio](https://social.msdn.microsoft.com/Forums/vstudio/home?category=visualstudio)|Poskytuje fórum pro otázky týkající se [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|

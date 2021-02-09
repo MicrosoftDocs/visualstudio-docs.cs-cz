@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: c51b5128-848e-4d8e-b2e9-1161339763c3
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4b2551f8554d96186b90a1eed97a5a48ec5f0405
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e54a2bf7cd37b411dbc2d18d23a3466a4b47ce0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80727488"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851202"
 ---
 # <a name="idebugmemorycontext2compare"></a>IDebugMemoryContext2::Compare
 Porovná kontext paměti s každým kontextem v daném poli způsobem uvedeným pomocí porovnání příznaků a vrátí index prvního kontextu, který odpovídá.
@@ -29,7 +29,7 @@ Porovná kontext paměti s každým kontextem v daném poli způsobem uvedeným 
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT Compare( 
+HRESULT Compare( 
    CONTEXT_COMPARE        compare,
    IDebugMemoryContext2** rgpMemoryContextSet,
    DWORD                  dwMemoryContextSetLen,

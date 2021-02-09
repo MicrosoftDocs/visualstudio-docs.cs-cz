@@ -6,15 +6,15 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 ms.reviewer: karthiknadig
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 8c5b4278ab50aac96703f03e74c014d29831f22e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 01048bc9b21287eb62693096b34a1ea8305e0ee9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62810141"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851865"
 ---
 # <a name="use-docker-containers-with-r-tools-for-visual-studio"></a>Použití kontejnerů Docker s Nástroje R pro Visual Studio
 
@@ -22,7 +22,7 @@ Nástroje R pro Visual Studio (RTVS) verze 1.3 + společně s instalací [Docker
 
 ## <a name="create-a-container"></a>Vytvoření kontejneru
 
-1. Vyberte tlačítko **kontejnery** v pravém horním rohu okna **pracovní prostory** (**nástroje R**  >  **Windows**  >  **pracovní prostory**Windows). Okno vás informuje, pokud nemáte nainstalovaný Docker for Windows a obsahuje odkaz na stažení. Instalace Docker může vyžadovat restart počítače.
+1. Vyberte tlačítko **kontejnery** v pravém horním rohu okna **pracovní prostory** (**nástroje R**  >    >  **pracovní prostory** Windows). Okno vás informuje, pokud nemáte nainstalovaný Docker for Windows a obsahuje odkaz na stažení. Instalace Docker může vyžadovat restart počítače.
 
     ![Okno pracovních prostorů v Nástroje R pro Visual Studio (VS2017) pomocí příkazu Containers](media/container-workspaces-window.png)
 

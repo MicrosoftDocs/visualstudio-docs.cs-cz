@@ -22,15 +22,15 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], designer
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b6e78b6809d3136c0db1f558d175706dc0ecd75b
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: b398d9c00caf3a4fa2ca58bafa3273673a305859
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850309"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851683"
 ---
 # <a name="bdc-model-design-tools-overview"></a>Přehled nástrojů pro návrh modelu služby BDC
   Model služby připojení obchodních dat (BDC) můžete navrhovat pomocí návrháře služby BDC, okna **Podrobnosti metody služby BDC** a **Průzkumníka služby BDC**.

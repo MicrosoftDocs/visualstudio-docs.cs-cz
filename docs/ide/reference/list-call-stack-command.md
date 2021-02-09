@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: a8b20bf2-81d2-4069-aea8-23e6b15b4347
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 845d48f6a0fcc2b844777870bd7c9551f4a4d471
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: ccb55b1c00621f6e97c8f1297e2cedf2abebe73b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305347"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99852099"
 ---
 # <a name="list-call-stack-command"></a>Listovat zásobník volání – příkaz
 Zobrazí aktuální zásobník volání.
@@ -40,7 +40,7 @@ Debug.ListCallStack [/Count:number] [/ShowTypes:yes|no]
 `index`\
 Nepovinný parametr. Nastaví aktuální rámec zásobníku a nezobrazí žádný výstup.
 
-## <a name="switches"></a>Přepínače
+## <a name="switches"></a>přepínače,
 Každý přepínač lze vyvolat buď pomocí jeho úplného formátu, nebo krátkého tvaru.
 
 /Count: `number` [nebo]/c:`number`

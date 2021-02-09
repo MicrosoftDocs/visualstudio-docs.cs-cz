@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 79e8d3dbc1dab865b2ab9048cea8d13c478f2a12
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: b188d95e6478e488fc896b0622fb8d145ef2a741
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849828"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851605"
 ---
 # <a name="browse-sharepoint-connections-by-using-server-explorer"></a>Procházení připojení služby SharePoint pomocí Průzkumník serveru
   Nyní můžete procházet místní připojení služby SharePoint v **Průzkumník serveru**. Pomocí této techniky můžete procházet komponenty webu služby SharePoint ve vašem systému. Komponenty SharePointového webu, jako jsou definice seznamů a typy obsahu, se zobrazí v uzlu s názvem **připojení služby SharePoint** ve stromovém zobrazení **Průzkumník serveru**. Chcete-li zobrazit **Průzkumník serveru**, na panelu nabídek vyberte možnost **Zobrazit**  >  **Průzkumník serveru**. Kromě zobrazení součástí webu služby SharePoint můžete odebrat položky, zobrazit jejich vlastnosti nebo aktualizovat stromové zobrazení pomocí příkazů v místní nabídce.
@@ -37,7 +37,7 @@ ms.locfileid: "94849828"
 ## <a name="node-shortcut-menu-commands"></a>Příkazy místní nabídky uzlu
  Každý uzel má místní nabídku, ke které máte přístup, kliknutím pravým tlačítkem myši na uzel nebo jeho výběrem a kliknutím na klávesy **SHIFT** + **F10** . Příkazy uzlu mohou zahrnovat následující:
 
-|Název příkazu|Popis|
+|Název příkazu|Description|
 |------------------|-----------------|
 |Aktualizovat|Aktualizuje stromové zobrazení tak, aby odrážel všechny změny, k nimž mohlo dojít od posledního zobrazení uzlu.|
 |Odstranit|Odebere vybraný uzel ze stromového zobrazení. **Poznámka:**  Tento příkaz je povolen pouze v připojeních služby SharePoint uvedených v uzlu **připojení služby SharePoint** .|

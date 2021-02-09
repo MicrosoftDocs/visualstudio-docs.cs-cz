@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5a16d0f438d06cbfa48538bb3e370ed9b334ad16
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: b3fbea6df2b66a108a048332e28a623bdaa95786
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847920"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839025"
 ---
 # <a name="application-manifests-for-office-solutions"></a>Manifesty aplikace pro řešení Office
   Manifest aplikace je soubor XML, který popisuje sestavení, která jsou načtena do řešení systém Microsoft Office. Vývojové nástroje systém Microsoft Office v aplikaci Visual Studio používají [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] schéma manifestu aplikace definované v referenčních informacích k [manifestu aplikace ClickOnce](../deployment/clickonce-application-manifest.md) .

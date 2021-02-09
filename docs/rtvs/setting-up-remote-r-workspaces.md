@@ -5,15 +5,15 @@ ms.date: 12/04/2017
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 686f98aaaade035f1632139d255ccff8b37eddf3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96078d1b2fdb5a54c912cbf214024726ce102e4e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75850055"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851839"
 ---
 # <a name="set-up-remote-workspaces"></a>Nastavení vzdálených pracovních prostorů
 
@@ -67,7 +67,7 @@ Základní informace najdete v tématu [certifikáty podepsané svým držitelem
 
 ### <a name="install-the-certificate"></a>Instalace certifikátu
 
-Chcete-li nainstalovat certifikát na vzdáleném počítači, spusťte *Certlm. msc* (Správce certifikátů) z příkazového řádku. Klikněte pravým tlačítkem na **osobní** složku a vyberte příkaz pro import **všech úkolů**  >  **Import** :
+Chcete-li nainstalovat certifikát na vzdáleném počítači, spusťte *Certlm. msc* (Správce certifikátů) z příkazového řádku. Klikněte pravým tlačítkem na **osobní** složku a vyberte příkaz pro import **všech úkolů**  >   :
 
 ![Import certifikátu – příkaz](media/workspaces-remote-certificate-import.png)
 
@@ -145,7 +145,7 @@ Aby bylo možné spustit kód R, musí mít vzdálený počítač nainstalovanou
 
 2. Po zobrazení výzvy spusťte [instalační program služby R](https://github.com/Microsoft/RTVS/blob/master/doc/rtvsd/rtvs-remote-downloads.md) a restartujte ho. Instalační program provede následující akce:
 
-    - Vytvořte složku v *%ProgramFiles%\r Tools for Visual Studio\1.0 \\ * a zkopírujte všechny požadované binární soubory.
+    - Vytvořte složku v *%ProgramFiles%\r Tools for Visual Studio\1.0 \\* a zkopírujte všechny požadované binární soubory.
     - Nainstalujte `RHostBrokerService` a `RUserProfileService` nakonfigurujte, aby se spouštěla automaticky.
     - Nakonfigurujte `seclogon` službu tak, aby se spouštěla automaticky.
     - Přidejte *Microsoft.R.Host.exe* a *Microsoft.R.Host.Broker.exe* příchozím pravidlům brány firewall na výchozí port 5444.

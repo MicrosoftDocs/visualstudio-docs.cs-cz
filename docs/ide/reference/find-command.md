@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f0c705dc-2b97-423d-abbf-5584d4827208
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 886695cea38909a8efa74797391adb1b6dd97d19
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: e28062f54426e2810acf29bdd64955998ea088cd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305398"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99852541"
 ---
 # <a name="find-command"></a>Najít – příkaz
 Vyhledá soubory pomocí podmnožiny možností dostupných na kartě **najít v souborech** okna **Najít a nahradit** .
@@ -35,7 +35,7 @@ Edit.Find findwhat [/case] [/doc | /proc | /open | /sel]
 ## <a name="arguments"></a>Argumenty
 `findwhat` Požadovanou. Text, který se má shodovat.
 
-## <a name="switches"></a>Přepínače
+## <a name="switches"></a>přepínače,
 /Case nebo/c\
 Nepovinný parametr. Shody se objeví pouze v případě, že velká a malá písmena přesně odpovídají znakům zadaným v `findwhat` argumentu.
 

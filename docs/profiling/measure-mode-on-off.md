@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: fbd99736-9ea8-47d2-af51-7e3a4e9c29c1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dbe8ea27f16dc8b120380989c15b1838ea9260d0
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 3b6aa7fd52845ca59c237350bdf264108015a0bc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98718990"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851943"
 ---
 # <a name="measure-mode-onoff"></a>Zapnout nebo vypnout režim míry
 Pomocí tohoto nástroje můžete přesně změřit dobu trvání časové osy. Chcete-li povolit režim měření, klikněte na tlačítko míra (s ikonou pravítka) a pak na časovou osu přetáhněte. Při přetahování si všimněte, že je oblast pod ukazatelem zvýrazněna žlutou a zobrazený čas se zobrazí na panelu nástrojů napravo od tlačítka. Tato hodnota je počítána dynamicky při přetahování, takže můžete okamžitě zjistit, jak dlouho určitá událost trvá. Po uvolnění tlačítka myši zůstane časová hodnota viditelná.

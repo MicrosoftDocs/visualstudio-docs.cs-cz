@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9857505d-ae15-42f1-936d-6cd7fb9dd276
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 548116fc3c9b360a866f14e32074111dfdc872d9
-ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
+ms.openlocfilehash: 2622c5e86a22b4dc7ef9bf1fa3c426a588f40bab
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98533872"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851995"
 ---
 # <a name="common-msbuild-project-properties"></a>Obecné vlastnosti projektu nástroje MSBuild
 
@@ -35,7 +35,7 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 
 ## <a name="list-of-common-properties-and-parameters"></a>Seznam společných vlastností a parametrů
 
-| Název vlastnosti nebo parametru | Typy projektů | Popis |
+| Název vlastnosti nebo parametru | Typy projektů | Description |
 |------------------------------------| - | - |
 | AdditionalLibPaths | .NET | Určuje další složky, ve kterých mají kompilátory Hledat referenční sestavení. |
 | AddModules | .NET | Způsobí, že kompilátor zpřístupní všechny informace o typech ze zadaných souborů pro projekt, který kompilujete. Tato vlastnost je ekvivalentní `/addModules` přepínači kompilátoru. |
@@ -136,7 +136,7 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 | Win32Manifest | .NET | Název souboru manifestu, který má být vložen do konečného sestavení. Tento parametr je ekvivalentní `/win32Manifest` přepínači kompilátoru. |
 | Win32Resource | .NET | Název souboru prostředku Win32, který se má vložit do konečného sestavení Tento parametr je ekvivalentní `/win32resource` přepínači kompilátoru. |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)
 - [Společná metadata položky MSBuild](common-msbuild-item-metadata.md)

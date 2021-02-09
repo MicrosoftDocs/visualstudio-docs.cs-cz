@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: edd3f2ff-ca32-4465-8ace-4330493b67bb
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e586470208989dce070c92963fc215f1053559a4
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 24a9b8dfa8036603c035a9112eb29688eab7ff25
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877647"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99852606"
 ---
 # <a name="source-control-vspackage-design-elements"></a>Prvky návrhu balíčku VSPackage správy zdrojového kódu
 Témata v této části popisují strukturu, kterou musí VSPackage správy zdrojového kódu implementovat pro rozsáhlou integraci. Obsahuje také seznam rozhraní a služeb, které může model VSPackage správy zdrojového kódu implementovat, a rozhraní a služby, které může VSPackage správy zdrojového kódu využít z jiných [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] komponent k podpoře modelu a funkčnosti správy zdrojového kódu.

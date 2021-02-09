@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 1a062dcb-8a8f-40dd-bea9-3d10f9448966
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 654ebf68efebaa44766079c172e87396134805e3
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 72d2c6ded39564b91ba4f7b74fe2985aab14a7ce
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96304715"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99852619"
 ---
 # <a name="context-parameters"></a>Kontextové parametry
 V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí (IDE) můžete přidat průvodce do dialogového okna **Nový projekt**, **Přidat novou položku** nebo **Přidat dílčí projekt** . Přidaní průvodci jsou k dispozici v nabídce **soubor** nebo kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení**. Rozhraní IDE předá parametry kontextu implementaci průvodce. Kontextové parametry definují stav projektu, když rozhraní IDE zavolá průvodce.

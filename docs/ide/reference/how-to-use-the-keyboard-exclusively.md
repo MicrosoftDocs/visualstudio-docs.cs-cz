@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d71a4cc1-d352-4164-8538-3f9fa070a331
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 52d6bda98ee01dad4faf4a51412e810e1f5e4fa7
-ms.sourcegitcommit: 4eb8fe6eb7f1dc639f1d213db05a7a3007e8087e
+ms.openlocfilehash: 7daa0bfc6f67bd0dc9fee0775ba8dce591ce8148
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92156558"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99852528"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>Jak používat výhradně klávesnici
 
@@ -55,7 +55,7 @@ Chcete-li přidat ovládací prvek na sadu nástrojů do formuláře nebo návrh
 
 Přesun mezi možnostmi v dialogovém okně a změna nastavení možností pouze pomocí klávesnice:
 
-1. Pomocí **tabulátoru nebo** **klávesy SHIFT** + **Tab** se můžete pohybovat nahoru a dolů přes ovládací prvky v dialogovém okně.
+1. Pomocí **tabulátoru nebo** **klávesy SHIFT** +  se můžete pohybovat nahoru a dolů přes ovládací prvky v dialogovém okně.
 
 2. Změna nastavení možností:
 
@@ -71,7 +71,7 @@ Přesun mezi možnostmi v dialogovém okně a změna nastavení možností pouze
 
 ## <a name="navigate-between-windows-and-files"></a>Navigace mezi okny a soubory
 
-- Chcete-li přecházet mezi soubory v editoru nebo v návrháři, použijte klávesovou zkratku **klávesy CTRL** + **Tab** k zobrazení seznamu integrovaných souborů (IDE) s vybranými **aktivními soubory** . Kliknutím na klávesu **ENTER** přejdete na zvýrazněný soubor.
+- Chcete-li přecházet mezi soubory v editoru nebo v návrháři, použijte klávesovou zkratku **klávesy CTRL** +  k zobrazení seznamu integrovaných souborů (IDE) s vybranými **aktivními soubory** . Kliknutím na klávesu **ENTER** přejdete na zvýrazněný soubor.
 
 - Chcete-li přecházet mezi ukotvenými okny nástrojů, použijte klávesovou zkratku **ALT** + **F7** k zobrazení okna navigátor IDE s vybraným **aktivním nástrojem** . Kliknutím na klávesu **ENTER** přejdete do zvýrazněného okna.
 
@@ -81,7 +81,7 @@ Přesun mezi možnostmi v dialogovém okně a změna nastavení možností pouze
 
 2. V nabídce **okno** vyberte možnost **ukotvit** .
 
-3. Stiskněte **ALT** + **MEZERNÍK**a pak vyberte **přesunout**.
+3. Stiskněte **ALT** + **MEZERNÍK** a pak vyberte **přesunout**.
 
    Zobrazí se kosočtverec s pokyny k dokovacímu zařízení.
 

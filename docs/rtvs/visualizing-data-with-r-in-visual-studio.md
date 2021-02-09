@@ -5,15 +5,15 @@ ms.date: 06/29/2017
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: dbb3984385e0042c669f8aad1d5bb4a2f64de917
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64b5ac36edf6c5f506628f9af88ba36bd62c71c8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801617"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851826"
 ---
 # <a name="create-visual-data-plots-with-r"></a>Vytváření vizuálních dat pomocí jazyka R
 
@@ -48,7 +48,7 @@ Změna velikosti okna vykreslení vždy znovu vykreslí vykreslení, aby poskyto
 
 ## <a name="plot-window-commands"></a>Příkazy okna grafu
 
-Panel nástrojů grafu obsahuje příslušné příkazy, většina z nich je také k dispozici v nabídce **Nástroje jazyka R**  >  **Plots** .
+Panel nástrojů grafu obsahuje příslušné příkazy, většina z nich je také k dispozici v nabídce **Nástroje jazyka R**  >   .
 
 | Tlačítko | Příkaz | Popis |
 | --- | --- | --- |
@@ -67,17 +67,17 @@ Panel nástrojů grafu obsahuje příslušné příkazy, většina z nich je tak
 
 Vzhledem k tomu, že odborníci na data často pracují s mnoha sestavami z mnoha různých datových sad, umožňuje RTVS vytvořit tolik nezávislých oken vykreslení. Tato okna pak můžete uspořádat, například v rámci rámce sady Visual Studio nebo mimo tento rámec. (Viz [přizpůsobení rozložení oken v aplikaci Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md) pro obecné informace o dokování a změně velikosti oken.)
 
-Nové okno vykreslení vytvoříte pomocí tlačítka panelu nástrojů nebo **nástrojů R**, které  >  **vykresluje**  >  **nové okno vykreslení**. Nové okno vykreslení se zobrazí jako *aktivní* okno, kde se vykreslují nové ovládací okno. Chcete-li změnit aktivní okno, přepněte na něj a vyberte tlačítko **aktivovat okno** panelu nástrojů nebo **nástroje R**zobrazit  >  **Plots**  >  **okno aktivovat**.
+Nové okno vykreslení vytvoříte pomocí tlačítka panelu nástrojů nebo **nástrojů R**, které  >  **vykresluje**  >  **nové okno vykreslení**. Nové okno vykreslení se zobrazí jako *aktivní* okno, kde se vykreslují nové ovládací okno. Chcete-li změnit aktivní okno, přepněte na něj a vyberte tlačítko **aktivovat okno** panelu nástrojů nebo **nástroje R** zobrazit  >    >  **okno aktivovat**.
 
-Jsou to také nezávislé objekty, což znamená, že je můžete kopírovat nebo přesouvat mezi okny vykreslování pomocí myši nebo pomocí myši nebo pomocí příkazů **kopírování**, **vyjmutí**a **vložení** v kontextu a **úpravách** v nabídce klikněte pravým tlačítkem myši.
+Jsou to také nezávislé objekty, což znamená, že je můžete kopírovat nebo přesouvat mezi okny vykreslování pomocí myši nebo pomocí myši nebo pomocí příkazů **kopírování**, **vyjmutí** a **vložení** v kontextu a **úpravách** v nabídce klikněte pravým tlačítkem myši.
 
 Výchozí chování při přetahování je kopií; Pokud se chcete pohybovat, přetáhnutím klávesy **SHIFT** můžete přetahovat myší.
 
 ## <a name="plot-history"></a>Historie grafu
 
-Příkazy vykreslení jsou uchovávány v historii diagramu pro každé okno, což zajišťuje zachování všech vykreslení v rámci relace. Pokud chcete přejít k historii, použijte tlačítka se šipkami na panelu nástrojů okna výkresu nebo **CTRL** + **+** + **F11** a **CTRL** + **+** + **F12**. Pomocí tlačítek na panelu nástrojů nebo příkazů v nabídce **Nástroje jazyka R**můžete také odebrat jednotlivá vykreslení nebo zrušit zaškrtnutí všech zkusných panelů  >  **Plots** .
+Příkazy vykreslení jsou uchovávány v historii diagramu pro každé okno, což zajišťuje zachování všech vykreslení v rámci relace. Pokud chcete přejít k historii, použijte tlačítka se šipkami na panelu nástrojů okna výkresu nebo **CTRL** + **+** + **F11** a **CTRL** + **+** + **F12**. Pomocí tlačítek na panelu nástrojů nebo příkazů v nabídce **Nástroje jazyka R** můžete také odebrat jednotlivá vykreslení nebo zrušit zaškrtnutí všech zkusných panelů  >   .
 
-Chcete-li zobrazit celou kolekci ploch, otevřete okno historie vykreslení pomocí tlačítka panelu nástrojů nebo **nástrojů R**  >  **Plots**  >  **okna s historií grafu**.
+Chcete-li zobrazit celou kolekci ploch, otevřete okno historie vykreslení pomocí tlačítka panelu nástrojů nebo **nástrojů R**  >    >  **okna s historií grafu**.
 Historie nabízí seznam miniatur pro zobrazení zobrazené v tomto okně seskupené podle různých oken vykreslení (nebo zařízení). Použití tlačítek zvětšení na panelu nástrojů změní velikost miniatur.
 
 ![Okno historie grafu](media/plotting-plot-history-window.png)

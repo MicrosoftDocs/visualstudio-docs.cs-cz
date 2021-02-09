@@ -6,15 +6,15 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 ms.reviewer: karthiknadig
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: c4d65388db0ef90f807ec85b8c9216d717c2b571
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 586f3038ff4bb091fb99160d7965ad927eda070a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62809554"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851813"
 ---
 # <a name="remote-r-service-for-linux"></a>Vzdálená služba R pro Linux
 
@@ -22,7 +22,7 @@ Vzdálená služba R pro Linux je aktuálně zabalená jako RTVS-démon. Démon 
 
 Po nakonfigurování vzdáleného počítače připojí následující postup Nástroje R pro Visual Studio (RTVS) k této službě:
 
-1. Vyberte **nástroje R**  >  **Windows**  >  **pracovní prostory** Windows pro otevření okna **pracovní prostory** .
+1. Vyberte **nástroje R**  >    >  **pracovní prostory** Windows pro otevření okna **pracovní prostory** .
 1. Vyberte **Přidat připojení**.
 1. Zadejte název připojení a zadejte jeho adresu URL, například `https://localhost:5444` (subsystém Windows pro Linux) nebo `https://public-ip:5444` (kontejner Azure). Po dokončení vyberte **Uložit** .
 1. Vyberte ikonu připojení nebo dvakrát klikněte na položku připojení.
@@ -87,7 +87,7 @@ V každém případě musí mít vzdálený počítač nainstalovanou jednu z n�
 
 #### <a name="create-a-vm"></a>Vytvoření virtuálního počítače
 
-1. Přihlaste se na web [Azure Portal](https://portal.azure.com).
+1. Přihlaste se na [Azure Portal](https://portal.azure.com).
 1. Přejděte na Virtual Machines a pak vyberte **Přidat**.
 1. V seznamu dostupných imagí virtuálních počítačů vyhledejte a vyberte jednu z následujících možností:
     - Ubuntu Server: `Ubuntu Server 16.04 LTS`

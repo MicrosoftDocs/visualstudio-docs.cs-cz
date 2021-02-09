@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 912da653-ddfe-45a4-84aa-64281283739a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b003fcbd1b38eb5dc919b7f4f361e0b56b585f08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d1c9284637be43ab30d35d3e0cb4aea937c0a224
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461222"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853252"
 ---
 # <a name="lexical-hierarchy-of-symbol-types"></a>Lexikální hierarchie typů symbolů
 V následující tabulce jsou uvedeny typy symbolů v lexikální hierarchii.
 
 ## <a name="symbol-types"></a>Typy symbolů
 
-|Typ symbolu|Popis|
+|Typ symbolu|Description|
 |-----------------|-----------------|
 |[Poznámka](../../debugger/debug-interface-access/annotation.md)|Určuje umístění s poznámkami v kódu programu.|
 |[Blok](../../debugger/debug-interface-access/block.md)|Určuje vnořené obory ve funkcích.|

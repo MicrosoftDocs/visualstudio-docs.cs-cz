@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 54dac8c8-c8ee-4023-af27-b25466e3a6ec
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ecf676c58d8850834ec0c3333196dfb7144f885e
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: b4e66049ec5547913dad8df7256f2db3d2395fa0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98718860"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851956"
 ---
 # <a name="markprofile"></a>MarkProfile
 `MarkProfile`Metoda vloží značku profilu do.*soubor VSP* . `MarkProfile`Pro vložení značky musí být profilace vlákna obsahující funkci zapnutá.
@@ -36,7 +36,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI MarkProfile( long lMarker );
 ## <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
  Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jedna z následujících:
 
-|Čítače|Popis|
+|Čítače|Description|
 |----------------|-----------------|
 |MARK_ERROR_MARKER_RESERVED|Parametr je menší nebo roven 0. Tyto hodnoty jsou rezervované. Značka a komentář nejsou zaznamenávány.|
 |MARK_ERROR_MODE_NEVER|Režim profilace byl nastaven na hodnotu nikdy při volání funkce. Značka a komentář nejsou zaznamenávány.|

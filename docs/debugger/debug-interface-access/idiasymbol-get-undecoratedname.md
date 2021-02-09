@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: e49edf25-a51d-4787-bd5b-2bf5af827c8c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: eeb6fa8a2ed90325c061e0e0633e991ebd318917
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eafc08533d062b817e0ce9da4c8a398e26dbd70a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461607"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853441"
 ---
 # <a name="idiasymbolget_undecoratedname"></a>IDiaSymbol::get_undecoratedName
 Načte nedekorovaný název pro upravený nebo propojený, název v jazyce C++.
@@ -25,7 +25,7 @@ Načte nedekorovaný název pro upravený nebo propojený, název v jazyce C++.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_undecoratedName ( 
+HRESULT get_undecoratedName ( 
    BSTR* pRetVal
 );
 ```

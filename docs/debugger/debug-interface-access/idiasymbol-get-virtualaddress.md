@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: dc20c7c0-15a6-4b78-a5c9-2e0b94cac522
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dbcf11f95260d8e58916de9fcc40d9a44a14a27d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c933bd98a4745bdd4f8198993b476945120ed51
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461481"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853378"
 ---
 # <a name="idiasymbolget_virtualaddress"></a>IDiaSymbol::get_virtualAddress
 Načte virtuální adresu (VA) umístění. Použijte v případě, že je [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md) nastaven na hodnotu `LocIsStatic` .
@@ -25,7 +25,7 @@ Načte virtuální adresu (VA) umístění. Použijte v případě, že je [vý�
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_virtualAddress ( 
+HRESULT get_virtualAddress ( 
    ULONGLONG* pRetVal
 );
 ```

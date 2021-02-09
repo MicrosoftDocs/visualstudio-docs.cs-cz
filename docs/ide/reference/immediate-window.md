@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: d33e7937-73f3-4c69-9df0-777a8713c6f2
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 342a2a34528134ed1174058b6701c77c9217fc63
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: 73d3d2cc42e958c59ef058a1f69921145ea18475
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96617016"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99852476"
 ---
 # <a name="immediate-window"></a>Příkazové podokno
 
 Použijte **příkazové** okno pro ladění a vyhodnocení výrazů, příkazů Execute a tisku hodnot proměnných. **Příkazové** okno vyhodnotí výrazy sestavením a použitím aktuálně vybraného projektu.
 
-Chcete-li zobrazit okno **okamžité** , otevřete projekt pro úpravy a pak zvolte možnost **okamžitě ladit**  >  **Windows**  >  **Immediate** nebo stiskněte klávesu **CTRL** + **ALT +** + **I**. Můžete také zadat **Debug. Immediate** v **příkazovém** okně.
+Chcete-li zobrazit okno **okamžité** , otevřete projekt pro úpravy a pak zvolte možnost **okamžitě ladit**  >  **Windows**  >   nebo stiskněte klávesu **CTRL** + **ALT +** + . Můžete také zadat **Debug. Immediate** v **příkazovém** okně.
 
 **Příkazové** okno podporuje technologii IntelliSense.
 
@@ -92,7 +92,7 @@ Při vytváření kontextu pro vyhodnocení výrazu v době návrhu aplikace Vis
 
 Při vydávání příkazů sady Visual Studio v **příkazovém** okně zadejte symbol větší než (>). Pomocí šipek **nahoru** a **dolů** můžete procházet dříve použité příkazy.
 
-|Úloha|Řešení|Příklad|
+|Úkol|Řešení|Příklad|
 |----------|--------------|-------------|
 |Vyhodnotit výraz.|Předtvářte výraz otazníkem (?).|`? a+b`|
 |Dočasné zadání režimu příkazů v přímém režimu (pro spuštění jednoho příkazu).|Zadejte příkaz s znakem větším než (>).|`>alias`|

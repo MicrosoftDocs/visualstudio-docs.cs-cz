@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9cc34db9-b0d1-4951-a02f-7537fbbb51ad
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6dbe9ed00223fa549420537579d39a4c88cf37cb
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 9b401baf1605a869772ba41ce83ad906061f8144
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94973977"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851436"
 ---
 # <a name="create-a-wpf-toolbox-control"></a>Vytvoření ovládacího prvku sady nástrojů WPF
 
@@ -33,7 +33,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. Vytvořte projekt VSIX s názvem `MyToolboxControl` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Po otevření projektu přidejte šablonu položky **ovládacího prvku sady nástrojů WPF** s názvem `MyToolboxControl` . V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na rozšiřitelnost v jazyce **Visual C#**  >  **Extensibility** a vyberete **ovládací prvek sada nástrojů WPF**. V poli **název** v dolní části okna změňte název souboru příkazů na *MyToolboxControl.cs*.
+2. Po otevření projektu přidejte šablonu položky **ovládacího prvku sady nástrojů WPF** s názvem `MyToolboxControl` . V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na rozšiřitelnost v jazyce **Visual C#**  >   a vyberete **ovládací prvek sada nástrojů WPF**. V poli **název** v dolní části okna změňte název souboru příkazů na *MyToolboxControl.cs*.
 
     Řešení nyní obsahuje uživatelský ovládací prvek, `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> který přidá ovládací prvek do **panelu nástrojů** a položku prostředku **Microsoft. VISUALSTUDIO. ToolboxControl** v manifestu VSIX pro nasazení.
 

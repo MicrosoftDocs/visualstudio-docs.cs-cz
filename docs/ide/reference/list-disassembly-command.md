@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: eb363e35-e86a-4121-966f-991210c27e2a
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 15e9016551b178b0a29656e615d029ddaf0ca279
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 0de7becc46205e5fb8865a0419102bf65afde14e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305342"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99852086"
 ---
 # <a name="list-disassembly-command"></a>Zobrazit zpětný překlad – příkaz
 Zahájí proces ladění a umožňuje určit, jak se mají chyby zpracovávat.
@@ -33,7 +33,7 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 [/linenumbers:yes|no]
 ```
 
-## <a name="switches"></a>Přepínače
+## <a name="switches"></a>přepínače,
 Každý přepínač lze vyvolat buď pomocí jeho úplného formátu, nebo krátkého tvaru.
 
 /Count: `number` [nebo]/c: `number` [nebo]/length: `number` [nebo]/l: `number`

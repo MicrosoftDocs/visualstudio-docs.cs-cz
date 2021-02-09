@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1854f078-3b49-42c2-b65b-33e3b506fd63
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbbe047c08f8e91264163d028c1b40d94cde97fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6e3771545d4a5fe545382344d17ed5ea929999d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715090"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99852775"
 ---
 # <a name="ienumdebugthreads2"></a>IEnumDebugThreads2
 Toto rozhraní vytvoří výčet vláken spuštěných v aktuální relaci ladění.
@@ -42,7 +42,7 @@ IEnumDebugThreads2 : IUnknown
 |[Další](../../../extensibility/debugger/reference/ienumdebugthreads2-next.md)|Načte zadaný počet vláken v sekvenci výčtu.|
 |[Přeskočit](../../../extensibility/debugger/reference/ienumdebugthreads2-skip.md)|Přeskočí zadaný počet vláken v sekvenci výčtu.|
 |[Reset](../../../extensibility/debugger/reference/ienumdebugthreads2-reset.md)|Obnoví posloupnost výčtu na začátek.|
-|[Klonování](../../../extensibility/debugger/reference/ienumdebugthreads2-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální.|
+|[Klonovat](../../../extensibility/debugger/reference/ienumdebugthreads2-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugthreads2-getcount.md)|Získá počet vláken v enumerátoru.|
 
 ## <a name="remarks"></a>Poznámky
@@ -61,4 +61,4 @@ IEnumDebugThreads2 : IUnknown
 - [EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)
 - [Krok](../../../extensibility/debugger/reference/idebugprocess3-step.md)
 - [Pokračovat](../../../extensibility/debugger/reference/idebugprocess3-continue.md)
-- [Spuštění](../../../extensibility/debugger/reference/idebugprocess3-execute.md)
+- [Spuštěním](../../../extensibility/debugger/reference/idebugprocess3-execute.md)

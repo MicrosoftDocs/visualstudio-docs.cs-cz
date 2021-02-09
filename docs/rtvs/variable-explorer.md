@@ -5,19 +5,19 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 799b7f2789898e0d02d9588f9a3ad7d1e8098a00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f69e5b61e80d3a00522307dd7481f74418407d99
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62809796"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851800"
 ---
 # <a name="variable-explorer"></a>Průzkumník proměnných
 
-Okno **Průzkumník proměnných** otevřené pomocí **nástrojů r**  >  **Windows**  >  **Průzkumník proměnných** Windows (nebo **CTRL +** + **8** Pokud jste použili **nástroje r**  >  **nastavení pro datové vědy**), zobrazí všechny proměnné v daném oboru v aktuální relaci jazyka R. Pokud například otevřete **Průzkumník proměnných** a do [interaktivního okna](interactive-repl-for-r-in-visual-studio.md)zadejte následující řádky:
+Okno **Průzkumník proměnných** otevřené pomocí **nástrojů r**  >    >  **Průzkumník proměnných** Windows (nebo **CTRL +** +  Pokud jste použili **nástroje r**  >  **nastavení pro datové vědy**), zobrazí všechny proměnné v daném oboru v aktuální relaci jazyka R. Pokud například otevřete **Průzkumník proměnných** a do [interaktivního okna](interactive-repl-for-r-in-visual-studio.md)zadejte následující řádky:
 
 ```R
 x <- 42
@@ -45,7 +45,7 @@ Vzhledem k tomu, že data jsou často tabulková, můžete libovolný komplexní
 
 Kliknutím na záhlaví sloupce seřadíte data podle sloupce (střídavě mezi vzestupně a sestupně). Když podržíte **klávesu SHIFT** a kliknete na další sloupce, přidají se tyto sloupce taky do řazení. Kliknutím na sloupec bez příkazu **SHIFT** vrátíte do řazení s jedním sloupcem.
 
-Pořadí, ve kterém kliknete na záhlaví sloupců, určuje pořadí, ve kterém se provádí řazení. Například můžete **Posunout** + **kliknutím** na sloupec **Cyl** a potom **stisknutím klávesy SHIFT** + dvakrát**kliknout** na sloupec **MPG** , čímž seřadíte seznam pro vzestupné válce a sestupné kilometry na galon:
+Pořadí, ve kterém kliknete na záhlaví sloupců, určuje pořadí, ve kterém se provádí řazení. Například můžete **Posunout** + **kliknutím** na sloupec **Cyl** a potom **stisknutím klávesy SHIFT** + dvakrát **kliknout** na sloupec **MPG** , čímž seřadíte seznam pro vzestupné válce a sestupné kilometry na galon:
 
 ![Zobrazení tabulky pro řazení dat podle dvou sloupců](media/variable-explorer-table-view-sorting.png)
 
@@ -69,7 +69,7 @@ Můžete také přepnout na rozsah funkce při zastavení na zarážce v ladicí
 
 ## <a name="import-data-into-variable-explorer"></a>Importovat data do Průzkumník proměnných
 
-Dva příkazy na panelu nástrojů **Průzkumník proměnných** , které jsou dostupné taky prostřednictvím nabídky data nástrojů jazyka **r**  >  **Data** , naimportují do relace jazyka r externí datové sady CSV: **importovat datovou sadu do relace jazyka r z webové adresy URL** a **importovat datovou sadu do relace jazyka r z textového souboru**.
+Dva příkazy na panelu nástrojů **Průzkumník proměnných** , které jsou dostupné taky prostřednictvím nabídky data nástrojů jazyka **r**  >   , naimportují do relace jazyka r externí datové sady CSV: **importovat datovou sadu do relace jazyka r z webové adresy URL** a **importovat datovou sadu do relace jazyka r z textového souboru**.
 
 Jakmile identifikujete soubor CSV pro import, sada Visual Studio zobrazí dialog **importovat datovou sadu** , ve kterém máte možnosti pro řízení způsobu, jakým se tento datový soubor analyzuje (tj. co je oddělovač polí a jak se mají zpracovat uvozovky). Můžete také zobrazit náhled importovaného datového rámce a původního datového souboru:
 

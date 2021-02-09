@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, feature event receivers
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 98b85222fca4da6dfca653ad74e1315801798d83
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: c9d50de6630a813a9c8c7a075af6f921608fcd93
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915593"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851527"
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>Návod: Přidání přijímačů událostí funkce
 Přijímače událostí funkcí jsou metody, které se spustí, když se v SharePointu vyskytne jedna z následujících událostí souvisejících s funkcemi:
@@ -46,7 +46,7 @@ Tento návod ukazuje, jak přidat přijímač událostí do funkce v projektu sl
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice Microsoft Windows a SharePointu.

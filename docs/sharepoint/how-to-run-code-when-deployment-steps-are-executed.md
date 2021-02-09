@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending deployment
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 00b921d8500c95ebbb771b5c0b5817db87b7c6ca
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 0b3037c0ec983b9f496947feba41938111fafc38
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96304454"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851579"
 ---
 # <a name="how-to-run-code-when-deployment-steps-are-executed"></a>Postupy: spuštění kódu při spuštění kroků nasazení
   Chcete-li provést další úkoly pro krok nasazení v projektu služby SharePoint, můžete zpracovávat události, které jsou vyvolány položkami projektu služby SharePoint před a poté, co aplikace Visual Studio provede jednotlivé kroky nasazení. Další informace najdete v tématu [rozšíření balení a nasazení služby SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md).

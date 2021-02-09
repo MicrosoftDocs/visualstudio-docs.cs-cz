@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 81b7f139-d24e-4040-9adc-d664d77563ba
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 81c697c3b2121cb5cc59ebcd51f92f9a15cdc4b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0ac9726874a34049c511616f63a7670035c5637a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715209"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99852853"
 ---
 # <a name="ienumdebugthreads2getcount"></a>IEnumDebugThreads2::GetCount
 Vrátí počet prvků ve výčtu.

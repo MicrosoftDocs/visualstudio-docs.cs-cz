@@ -5,15 +5,15 @@ ms.date: 11/16/2017
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 2cfad81c44822e59abb704e5e830357bfd32067d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e74966e71a7d440aed918e8aa609eeb8e68c355
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801552"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851878"
 ---
 # <a name="create-r-markdown-documents"></a>Vytváření dokumentů R Markdown
 
@@ -68,6 +68,6 @@ Nástroje R pro Visual Studio (RTVS) poskytuje šablonu R Markdown položky, edi
 
 Visual Studio 2017 verze 15,5 a novější automaticky poskytuje živý náhled pro R Markdown. Chcete-li zapnout automatickou synchronizaci mezi editorem a verzí Preview, vyberte možnost **R nástroje**  >  **Markdownu**  >  **Automatická synchronizace** (**CTRL** + **SHIFT** + **Y**). Pokud nepoužíváte automatickou synchronizaci, můžete aktualizovat verzi Preview pomocí **nástrojů R**  >  **Markdownu**  >  **znovu načíst R Markdown Preview**.
 
-Můžete také zobrazit náhled souboru ve formátech HTML, PDF a Microsoft Word tak, že kliknete pravým tlačítkem myši na Editor a vyberete jeden z příkazů ve **verzi Preview** . Stejné příkazy jsou také k dispozici v nabídce Markdownu **nástrojů jazyka R**  >  **Markdown** . (V dřívějších verzích sady Visual Studio tyto příkazy najdete v **nástrojích**  >  jazyka R Nabídka **publikovat** .)
+Můžete také zobrazit náhled souboru ve formátech HTML, PDF a Microsoft Word tak, že kliknete pravým tlačítkem myši na Editor a vyberete jeden z příkazů ve **verzi Preview** . Stejné příkazy jsou také k dispozici v nabídce Markdownu **nástrojů jazyka R**  >   . (V dřívějších verzích sady Visual Studio tyto příkazy najdete v **nástrojích**  >  jazyka R Nabídka **publikovat** .)
 
 ![RMarkdown Live Preview a další příkazy nabídky Preview](media/rmarkdown-live-preview.png)

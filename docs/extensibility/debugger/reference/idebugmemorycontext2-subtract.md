@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 63df14c7-8d7e-47c1-afa7-5a1ab5d8eaba
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c858beb8c3f9f587633dbae8b3b1fe73fd789663
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 71e3191384a0ee45778cb7ee37b7e55e5f673578
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80727445"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851085"
 ---
 # <a name="idebugmemorycontext2subtract"></a>IDebugMemoryContext2::Subtract
 Odečte zadanou hodnotu od aktuálního kontextu a vrátí nový kontext.
@@ -29,7 +29,7 @@ Odečte zadanou hodnotu od aktuálního kontextu a vrátí nový kontext.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT Subtract( 
+HRESULT Subtract( 
    UINT64                 dwCount,
    IDebugMemoryContext2** ppMemCxt
 );
