@@ -9,19 +9,19 @@ helpviewer_keywords:
 - code analysis, source suppression
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: b7a0820404047d123350a27950c5aee254af306f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: c61803c21832367ede01817029b8d0318ac741a4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348694"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859902"
 ---
 # <a name="suppress-code-analysis-violations"></a>Potlačení porušení analýzy kódu
 
@@ -52,7 +52,7 @@ V jazyce C++/CLI použijte \_ \_ \_ \_ k přidání atributu v hlavičkovém sou
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage – atribut
 
-Když vyberete možnost **potlačit** z kontextu nebo v místní nabídce upozornění analýzy kódu v **Seznam chyb** , přidá se do <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> kódu nebo do globálního souboru potlačení projektu atribut.
+Když vyberete možnost **potlačit** z kontextu nebo v místní nabídce upozornění analýzy kódu v **Seznam chyb**, přidá se do <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> kódu nebo do globálního souboru potlačení projektu atribut.
 
 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>Atribut má následující formát:
 

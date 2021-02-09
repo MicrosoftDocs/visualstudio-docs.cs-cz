@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da66ad1b-a25d-485c-af13-2d18f0422e3d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: c8c9ced0b589b28f1cd21de4a862c6f11dc6e03e
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: 54699947588e29da7312c0574833a13bbc3c8cfd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94998262"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858186"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>Návod: Vytvoření datové služby WCF pomocí WPF a Entity Framework
 Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] hostovaný ve [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webové aplikaci a pak k němu přistupovat z aplikace model Windows Forms.
@@ -106,7 +106,7 @@ V dalším kroku vytvoříte [!INCLUDE[adonet_edm](../data-tools/includes/adonet
 7. Na stránce **Zvolte verzi** zvolte možnost **Entity Framework 5,0** a potom klikněte na tlačítko **Další** .
 
     > [!NOTE]
-    > Aby bylo možné používat nejnovější verzi Entity Framework 6 se službami WCF, bude nutné nainstalovat balíček NuGet poskytovatele WCF Data Services Entity Framework. Viz [použití WCF Data Services 5.6.0 s Entity Framework 6 +](https://devblogs.microsoft.com/odata/using-wcf-data-services-5-6-0-with-entity-framework-6/).
+    > Aby bylo možné používat nejnovější verzi Entity Framework 6 se službami WCF, bude nutné nainstalovat balíček NuGet poskytovatele Datové služby WCF Entity Framework. Viz [použití datové služby WCF 5.6.0 s Entity Framework 6 +](https://devblogs.microsoft.com/odata/using-wcf-data-services-5-6-0-with-entity-framework-6/).
 
 8. Na stránce **Zvolte vaše databázové objekty** rozbalte uzel **tabulky** , zaškrtněte políčko **zákazníci** a pak klikněte na tlačítko **Dokončit** .
 

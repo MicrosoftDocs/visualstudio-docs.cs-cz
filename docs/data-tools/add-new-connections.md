@@ -6,19 +6,19 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 32fbd3462f6a496d681f76480c3eb4451f325b35
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: ddcc5dd06a4e71d445c94c860b2a3ab92429ab2e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518710"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859382"
 ---
 # <a name="add-new-connections"></a>Přidání nových připojení
 
-Můžete testovat připojení k databázi nebo službě a prozkoumat obsah databáze a schémata pomocí **Průzkumník serveru** , **Průzkumníka cloudu** nebo **Průzkumník objektů systému SQL Server**. Funkčnost těchto oken se překrývá do určitého rozsahu. Základní rozdíly:
+Můžete testovat připojení k databázi nebo službě a prozkoumat obsah databáze a schémata pomocí **Průzkumník serveru**, **Průzkumníka cloudu** nebo **Průzkumník objektů systému SQL Server**. Funkčnost těchto oken se překrývá do určitého rozsahu. Základní rozdíly:
 
 - Průzkumník serveru
 
@@ -54,8 +54,8 @@ Po výběru zdroje dat klikněte na tlačítko **Test připojení**. Pokud to ne
 
 ![Testovat připojení](../data-tools/media/raddata-test-connection.png)
 
-Pokud je test úspěšný, jste připraveni vytvořit *zdroj dat* , což je Visual Studio Term, který se skutečně označuje jako *datový model* založený na podkladové databázi nebo službě.
+Pokud je test úspěšný, jste připraveni vytvořit *zdroj dat*, což je Visual Studio Term, který se skutečně označuje jako *datový model* založený na podkladové databázi nebo službě.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Visual Studio Data Tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - results window, code metrics
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d29109811c3dd5f354b510d046b33b0ba31d60e5
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: c02f5a3b5175be4517a51a6dc477d6e59b38a762
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436807"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859564"
 ---
 # <a name="use-the-code-metrics-results-window"></a>Použití okna výsledků metrik kódu
 
@@ -32,9 +32,9 @@ Okno **Výsledky metrik kódu** se zobrazí automaticky při generování výsle
 
 Můžete zobrazit okno výsledků metrik kódu pomocí jedné z následujících sekvencí nabídky:
 
-- V nabídce **analyzovat** vyberte **Windows**  >  **Výsledky metrik kódu** Windows.
+- V nabídce **analyzovat** vyberte   >  **Výsledky metrik kódu** Windows.
 
-- V nabídce **Zobrazit** klikněte na položku **Other Windows**  >  **výsledky jiné metriky kódu** Windows.
+- V nabídce **Zobrazit** klikněte na položku   >  **výsledky jiné metriky kódu** Windows.
 
 Otevře se okno **výsledků metrik kódu** , a to i v případě, že neobsahuje žádné výsledky.
 
@@ -54,7 +54,7 @@ Rozevírací seznam **filtru** obsahuje názvy sloupců výsledků. Když je def
 
 2. V poli **min** zadejte minimální hodnotu, která se má zobrazit.
 
-3. V poli **Max** (maximální) zadejte maximální hodnotu, která se má zobrazit.
+3. V poli **Max**(maximální) zadejte maximální hodnotu, která se má zobrazit.
 
 4. Klikněte na tlačítko **použít filtr** .
 
@@ -92,7 +92,7 @@ Další informace o Azure Boards pracovních položek naleznete v tématu [work 
 
 1. Klikněte pravým tlačítkem na výsledek.
 
-2. Přejděte na **vytvořit pracovní položku** a potom klikněte na typ pracovní položky, kterou chcete vytvořit ( **Chyba** , **úkol** a tak dále).
+2. Přejděte na **vytvořit pracovní položku** a potom klikněte na typ pracovní položky, kterou chcete vytvořit (**Chyba**, **úkol** a tak dále).
 
 3. Vyplňte formulář pracovní položky vyplněním všech povinných polí.
 

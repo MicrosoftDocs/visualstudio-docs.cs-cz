@@ -10,15 +10,15 @@ helpviewer_keywords:
 - code analysis, rule sets
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 49d17e8321aa6567a6ae0936291a73d5cb854b5c
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 980c77067ac237dba13c8c888c358a0adeab6d1f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436885"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859655"
 ---
 # <a name="use-rule-sets-to-group-code-analysis-rules"></a>Použití sad pravidel k seskupení pravidel analýzy kódu
 
@@ -30,7 +30,7 @@ Sady pravidel jsou k dispozici pro [analýzu spravovaného kódu](/dotnet/fundam
 
 ## <a name="rule-set-format"></a>Formát sady pravidel
 
-Sada pravidel je určena ve formátu XML v souboru *. ruleset* . Pravidla, která se skládají z ID a *Akce* , jsou seskupena podle ID analyzátoru a oboru názvů v souboru.
+Sada pravidel je určena ve formátu XML v souboru *. ruleset* . Pravidla, která se skládají z ID a *Akce*, jsou seskupena podle ID analyzátoru a oboru názvů v souboru.
 
 Obsah souboru *. ruleset* vypadá podobně jako tento kód XML:
 

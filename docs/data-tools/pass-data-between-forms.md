@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 78bf038b-9296-4fbf-b0e8-d881d1aff0df
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: e740483a855bbfd736810dd4d41e3f4d01b7dd60
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9aad1bff0b70f87ff271f6d09cc7f8d34179136d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434672"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858563"
 ---
 # <a name="pass-data-between-forms"></a>Předávání dat mezi formuláři
 
@@ -49,7 +49,7 @@ Tento návod poskytuje podrobné pokyny pro předávání dat z jednoho formulá
 
 - Předávání dat mezi formuláři.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
@@ -141,7 +141,7 @@ Přidejte dotaz TableAdapter k Form2 pro načtení objednávek pro vybraného z�
 
 3. Ponechte výchozí možnost **použít příkazy SQL** a pak klikněte na **Další**.
 
-4. Ponechte výchozí možnost **vybrat, která vrátí řádky** , a pak klikněte na **Další**.
+4. Ponechte výchozí možnost **vybrat, která vrátí řádky**, a pak klikněte na **Další**.
 
 5. Přidejte do dotazu klauzuli WHERE, která se má vrátit na `Orders` základě `CustomerID` . Dotaz by měl vypadat přibližně takto:
 
@@ -179,7 +179,7 @@ Přidejte dotaz TableAdapter k Form2 pro načtení objednávek pro vybraného z�
 
 3. Dvakrát klikněte na událost **CellDoubleClick** .
 
-     Zobrazí se Editor kódu.
+     Zobrazí se editor kódu.
 
 4. Aktualizujte definici metody tak, aby odpovídala následující ukázce:
 

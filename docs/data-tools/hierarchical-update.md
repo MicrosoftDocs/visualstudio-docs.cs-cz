@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 68bae3f6-ec9b-45ee-a33a-69395029f54c
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: bfc0c1ca96f5bf6ce58a1b7df9ad0ea10f283e1e
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 05575e6cc75468a85a3dd410ea59bebca79eee0f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435153"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858836"
 ---
 # <a name="hierarchical-update"></a>Hierarchická aktualizace
 
@@ -40,7 +40,7 @@ Ve výchozím nastavení datová sada zpracovává související tabulky jako "j
 
 ## <a name="enable-hierarchical-update-in-a-dataset"></a>Povolit hierarchickou aktualizaci v datové sadě
 
-Ve výchozím nastavení je hierarchická aktualizace povolena pro všechny nové datové sady, které jsou přidány nebo vytvořeny v projektu. Zapnutí nebo vypnutí hierarchické aktualizace nastavením vlastnosti **hierarchické aktualizace** typované datové sady v datové sadě na **hodnotu true** nebo **false** :
+Ve výchozím nastavení je hierarchická aktualizace povolena pro všechny nové datové sady, které jsou přidány nebo vytvořeny v projektu. Zapnutí nebo vypnutí hierarchické aktualizace nastavením vlastnosti **hierarchické aktualizace** typované datové sady v datové sadě na **hodnotu true** nebo **false**:
 
 ![Nastavení hierarchické aktualizace](../data-tools/media/hierarchical-update-setting.png)
 
@@ -120,7 +120,7 @@ Ve výchozím nastavení `TableAdapterManager` je třída generována při vytvo
 
 Následující jsou často používané metody a vlastnosti `TableAdapterManager` třídy:
 
-|Člen|Popis|
+|Člen|Description|
 |------------|-----------------|
 |Metoda `UpdateAll`|Uloží všechna data ze všech tabulek dat.|
 |`BackUpDataSetBeforeUpdate` majetek|Určuje, zda má být před provedením metody vytvořena záložní kopie datové sady `TableAdapterManager.UpdateAll` . Datového.|

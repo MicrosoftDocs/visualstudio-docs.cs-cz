@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e05a1e0c-5082-479d-bbc9-d395b0bc6580
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: e35171a116272700de676cb03d116210753c599f
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: 137d8970ebfc70dcf102fa70d7bcf18d81677535
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518606"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859265"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků WPF k datům v sadě Visual Studio
 
@@ -54,10 +54,10 @@ V následující tabulce je uveden [!INCLUDE[TLA#tla_titlexaml](../data-tools/in
 
 | Zdroj dat | Generování souboru XAML, který váže ovládací prvek na zdroj dat | Generování kódu, který vyplní daty zdroj dat |
 | - | - | - |
-| Datová sada | Yes | Yes |
-| [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | Yes | Yes |
-| Služba | Yes | Ne |
-| Objekt | Yes | Ne |
+| Datová sada | Ano | Ano |
+| [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | Ano | Ano |
+| Služba | Ano | Ne |
+| Objekt | Ano | Ne |
 
 ### <a name="datasets"></a>Datové sady
 
@@ -108,6 +108,6 @@ Aplikace Visual Studio vygeneruje [!INCLUDE[TLA#tla_titlexaml](../data-tools/inc
 
 - Vytvoří datové vazby pro ovládací prvek. Pokud přetáhnete položku na existující ovládací prvek v návrháři, XAML naváže ovládací prvek na položku. Pokud přetáhnete položku do kontejneru, XAML vytvoří ovládací prvek, který byl vybrán pro přetaženou položku, a naváže ovládací prvek na položku. Ovládací prvek je vytvořen uvnitř nového <xref:System.Windows.Controls.Grid> .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 74a6773b-37e1-4d96-a39c-63ee0abf49b1
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5d79b2081e2d30d77ae3507884b44421f0f14bae
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 00f508163dc039d5c29013538a78fa7dab6091fd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434568"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858446"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>Ukládání dat pomocí metod TableAdapter DBDirect
 
@@ -41,7 +41,7 @@ V tomto návodu se naučíte:
 
 - Přidejte metody pro přímý přístup k databázi a provádění vložení, aktualizace a odstranění.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
@@ -115,11 +115,11 @@ Chcete-li vytvořit ovládací prvky vázané na data ve formuláři Windows, p�
 
 ### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Chcete-li přidat tlačítka, která budou volat jednotlivé metody DbDirect TableAdapter
 
-1. Přetáhněte tři <xref:System.Windows.Forms.Button> ovládací prvky z **panelu nástrojů** na **Form1** (pod **RegionDataGridView** ).
+1. Přetáhněte tři <xref:System.Windows.Forms.Button> ovládací prvky z **panelu nástrojů** na **Form1** (pod **RegionDataGridView**).
 
 2. Pro každé tlačítko nastavte následující vlastnosti **názvu** a **textu** .
 
-    |Name (Název)|Text|
+    |Název|Text|
     |----------|----------|
     |`InsertButton`|**Insert**|
     |`UpdateButton`|**Aktualizace**|

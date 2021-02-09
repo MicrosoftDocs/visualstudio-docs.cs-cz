@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: c48b4d75-ccfc-4950-8b14-ff8adbfe4208
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: de89839dd85f0f330356e1ade7d4658428ea3d3e
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 0eeb3e768370066bf93afc766d4d7f67d8d39a1d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435271"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859070"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-lookup-data-binding"></a>Vytvoření uživatelského ovládacího prvku modelu Windows Forms, který podporuje vazbu vyhledávacích dat
 
-Při zobrazování dat v model Windows Forms můžete zvolit existující ovládací prvky z **panelu nástrojů** , nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou dostupné ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje rozhraní <xref:System.ComponentModel.LookupBindingPropertiesAttribute> . Ovládací prvky, které implementují, <xref:System.ComponentModel.LookupBindingPropertiesAttribute> mohou obsahovat tři vlastnosti, které mohou být vázány na data. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.ComboBox> .
+Při zobrazování dat v model Windows Forms můžete zvolit existující ovládací prvky z **panelu nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou dostupné ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje rozhraní <xref:System.ComponentModel.LookupBindingPropertiesAttribute> . Ovládací prvky, které implementují, <xref:System.ComponentModel.LookupBindingPropertiesAttribute> mohou obsahovat tři vlastnosti, které mohou být vázány na data. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.ComboBox> .
 
 Další informace o vytváření ovládacích prvků naleznete v tématu [vývoj model Windows Formsch ovládacích prvků v době návrhu](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).
 
@@ -56,7 +56,7 @@ V tomto návodu se dozvíte, jak:
 
 - Vytvořte formulář pro zobrazení dat v novém ovládacím prvku.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
@@ -90,7 +90,7 @@ Prvním krokem je vytvoření projektu **aplikace model Windows Forms** .
 
 ## <a name="add-a-user-control-to-the-project"></a>Přidat uživatelský ovládací prvek do projektu
 
-Tento návod vytvoří ovládací prvek vyhledávání z **uživatelského ovládacího prvku** , takže přidejte položku **uživatelského ovládacího prvku** do projektu **LookupControlWalkthrough** .
+Tento návod vytvoří ovládací prvek vyhledávání z **uživatelského ovládacího prvku**, takže přidejte položku **uživatelského ovládacího prvku** do projektu **LookupControlWalkthrough** .
 
 1. V nabídce **projekt** vyberte možnost **Přidat uživatelský ovládací prvek**.
 

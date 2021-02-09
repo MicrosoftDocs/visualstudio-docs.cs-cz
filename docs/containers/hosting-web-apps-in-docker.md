@@ -2,19 +2,19 @@
 title: Nasazení kontejneru Docker ASP.NET do registru ACR
 description: Naučte se používat nástroje sady Visual Studio Container k nasazení webové aplikace ASP.NET nebo ASP.NET Core do registru kontejneru.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.assetid: e5e81c5e-dd18-4d5a-a24d-a932036e78b9
 ms.devlang: dotnet
 ms.topic: how-to
 ms.technology: vs-azure
 ms.date: 03/14/2019
 ms.author: ghogen
-ms.openlocfilehash: 4626b64f5e733fec049d56dfe53407cc0fe31566
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 74a74e17dcc909b529a0afad1d66959000c80455
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88168687"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859538"
 ---
 # <a name="deploy-an-aspnet-container-to-a-container-registry-using-visual-studio"></a>Nasazení kontejneru ASP.NET do registru kontejneru pomocí sady Visual Studio
 
@@ -23,9 +23,9 @@ ms.locfileid: "88168687"
 Docker je odlehčený modul kontejnerů, podobně jako některé z různých způsobů virtuálního počítače, který můžete použít k hostování aplikací a služeb.
 V tomto kurzu se seznámíte s použitím sady Visual Studio k publikování vašich kontejnerových aplikací na [Azure Container Registry](https://azure.microsoft.com/services/container-registry).
 
-Pokud ještě předplatné Azure nemáte, vytvořte si napřed [bezplatný účet](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs).
+Pokud ještě nemáte předplatné Azure, vytvořte si napřed [bezplatný účet](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Pro absolvování tohoto kurzu potřebujete:
 
@@ -55,14 +55,14 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
 1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **publikovat**.
 2. V dialogovém okně **Publikovat cíl** vyberte možnost **Container Registry**.
 3. Vyberte **nový Azure Container Registry** a klikněte na **publikovat**.
-4. Do pole **vytvořit nový Azure Container Registry**zadejte požadované hodnoty.
+4. Do pole **vytvořit nový Azure Container Registry** zadejte požadované hodnoty.
 
     | Nastavení      | Navrhovaná hodnota  | Popis                                |
     | ------------ |  ------- | -------------------------------------------------- |
     | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
     | **Předplatné** | Zvolte vaše předplatné. | Předplatné Azure, které se má použít. |
     | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, zvolte **Nová**.|
-    | **[Skladová jednotka (SKU)](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
+    | **[SKU](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
     | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
 
     ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio](media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog.png)
@@ -88,12 +88,12 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
     | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
     | **Předplatné** | Zvolte vaše předplatné. | Předplatné Azure, které se má použít. |
     | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, zvolte **Nová**.|
-    | **[Skladová jednotka (SKU)](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
+    | **[SKU](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
     | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
 
     ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio](media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog-2019.png)
 
-5. Klikněte na možnost **Vytvořit**.
+5. Klikněte na **Vytvořit**.
 
 6. Kliknutím na **Dokončit** proces dokončete.
 ::: moniker-end

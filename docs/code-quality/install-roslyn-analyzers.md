@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Roslyn analyzers
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93cd01c0a90f2864843549c3ce11e066a16a8843
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 3d4833ba922ddde1a1770cfd75cf446f210e2c79
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040378"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859850"
 ---
 # <a name="install-third-party-analyzers"></a>Instalace analyzátorů jiných výrobců
 
@@ -35,13 +35,13 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
    > [!NOTE]
    > Stránka www.nuget.org pro každý balíček analyzátoru zobrazuje příkaz pro vložení do **konzoly Správce balíčků**. Je k dispozici i praktické tlačítko ke zkopírování textu do schránky.
 
-   Sestavení analyzátoru jsou nainstalována a zobrazí se v **Průzkumník řešení** v části **References**  >  **analyzátory** odkazů.
+   Sestavení analyzátoru jsou nainstalována a zobrazí se v **Průzkumník řešení** v části   >  **analyzátory** odkazů.
 
 ## <a name="to-install-vsix-analyzers"></a>Instalace analyzátorů VSIX
 
 ::: moniker range="vs-2017"
 
-1. V aplikaci Visual Studio vyberte **Tools** > **rozšíření nástrojů a aktualizace**.
+1. V aplikaci Visual Studio vyberte  > **rozšíření nástrojů a aktualizace**.
 
    Otevře se dialogové okno **rozšíření a aktualizace** .
 
@@ -83,7 +83,7 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
 
 ::: moniker range="vs-2017"
 
-Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **Tools** možnost  >  **rozšíření a aktualizace** nástroje. V dialogovém okně **rozšíření a aktualizace** vyberte **nainstalovanou** kategorii na levé straně a potom vyhledejte rozšíření podle názvu.
+Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte možnost  >  **rozšíření a aktualizace** nástroje. V dialogovém okně **rozšíření a aktualizace** vyberte **nainstalovanou** kategorii na levé straně a potom vyhledejte rozšíření podle názvu.
 
 ::: moniker-end
 
@@ -101,4 +101,4 @@ Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **rozšíření
 ## <a name="see-also"></a>Viz také
 
 - [Přehled analyzátorů kódu v aplikaci Visual Studio](../code-quality/roslyn-analyzers-overview.md)
-- [Nainstalovat analyzátory .NET](../code-quality/install-net-analyzers.md)
+- [Instalace analyzátorů .NET](../code-quality/install-net-analyzers.md)

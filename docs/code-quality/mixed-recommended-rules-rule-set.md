@@ -6,15 +6,15 @@ ms.custom: SEO-VS-2020
 ms.topic: reference
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bc30012dc025c5fc92f6d589c8e40740d689a86b
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 7897799e631aad1005d4300e811f8209adb8281d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437067"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859772"
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>Sada pravidel Smíšená doporučená pravidla
 
@@ -22,7 +22,7 @@ Doporučená pravidla společnosti Microsoft se zaměřují na nejběžnější 
 
 Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoříte pro projekty C++, které podporují modul CLR (Common Language Runtime).
 
-|Pravidlo|Popis|
+|Pravidlo|Description|
 |----------|-----------------|
 |[C6001](/cpp/code-quality/c6001)|Použití neinicializované paměti|
 |[C6011](/cpp/code-quality/c6011)|Přesměrování ukazatele null|

@@ -7,18 +7,18 @@ ms.topic: how-to
 ms.assetid: c5b66bff-6dbb-43c0-bffa-317133ca5b9e
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 20ff0e4764acf4f2f0f8dea77ed815a9aa430abe
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 4226be60f91fb1b9d55e279be2a697861c3f9566
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435049"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858797"
 ---
 # <a name="how-to-change-the-return-type-of-a-datacontext-method-or-designer"></a>Postupy: Změna návratového typu metody DataContext (Návrhář relací objektů)
-Návratový typ <xref:System.Data.Linq.DataContext> metody (vytvořené na základě uložené procedury nebo funkce) se liší v závislosti na tom, kde jste vyřadíte uloženou proceduru nebo funkci v **Návrháři o/R**. Pokud přetáhnete položku přímo na existující třídu entity, vytvoří se <xref:System.Data.Linq.DataContext> metoda, která má návratový typ třídy entity (Pokud schéma dat vrácených uloženou procedurou nebo funkcí odpovídá tvaru třídy entity). Pokud přetáhnete položku do prázdné oblasti **návrháře o/R** , <xref:System.Data.Linq.DataContext> vytvoří se metoda, která vrací automaticky generovaný typ. Návratový typ metody lze změnit <xref:System.Data.Linq.DataContext> poté, co ji přidáte do podokna metody. Chcete-li zkontrolovat nebo změnit návratový typ <xref:System.Data.Linq.DataContext> metody, vyberte ji a klikněte na vlastnost **návratový typ** v okně **vlastnosti** .
+Návratový typ <xref:System.Data.Linq.DataContext> metody (vytvořené na základě uložené procedury nebo funkce) se liší v závislosti na tom, kde jste vyřadíte uloženou proceduru nebo funkci v **Návrháři o/R**. Pokud přetáhnete položku přímo na existující třídu entity, vytvoří se <xref:System.Data.Linq.DataContext> metoda, která má návratový typ třídy entity (Pokud schéma dat vrácených uloženou procedurou nebo funkcí odpovídá tvaru třídy entity). Pokud přetáhnete položku do prázdné oblasti **návrháře o/R**, <xref:System.Data.Linq.DataContext> vytvoří se metoda, která vrací automaticky generovaný typ. Návratový typ metody lze změnit <xref:System.Data.Linq.DataContext> poté, co ji přidáte do podokna metody. Chcete-li zkontrolovat nebo změnit návratový typ <xref:System.Data.Linq.DataContext> metody, vyberte ji a klikněte na vlastnost **návratový typ** v okně **vlastnosti** .
 
 > [!NOTE]
 > Nemůžete vrátit <xref:System.Data.Linq.DataContext> metody, které mají návratový typ nastaven na třídu entity pro návrat automaticky generovaného typu pomocí okna **vlastnosti** . Chcete-li vrátit <xref:System.Data.Linq.DataContext> metodu pro vrácení automaticky generovaného typu, je nutné znovu přetáhnout původní databázový objekt do **návrháře o/R** .

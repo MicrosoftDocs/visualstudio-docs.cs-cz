@@ -8,16 +8,16 @@ helpviewer_keywords:
 - debugging, Docker container
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: f6e2b851057d924353e6e1e9a211fcbb294353c8
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: 4f39d4ecd69b726c1d549d723fadd324b1edd722
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97761261"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857926"
 ---
 # <a name="attach-to-a-process-running-on-a-docker-container"></a>Připojení k procesu běžícímu na kontejneru Docker 
 
@@ -52,13 +52,13 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
     > [!NOTE]
     > Existují dvě možnosti, jak se vzdáleně připojit ke spuštěnému procesu v kontejneru Docker. První možnost použití SSH je ideální, pokud na místním počítači nemáte nainstalované nástroje Docker.  Pokud máte nástroje Docker nainstalované místně a máte démona Docker, který je nakonfigurovaný tak, aby přijímal vzdálené požadavky, zkuste druhou možnost s použitím démona Docker.
 
-    1. **_Připojení ke vzdálenému počítači přes SSH:_* _
-        1. Vyberte _ *Přidat...* * pro připojení ke vzdálenému systému.<br/>
+    1. ***Připojení ke vzdálenému počítači přes SSH:***
+        1. Vyberte **Přidat...** a připojte se ke vzdálenému systému.<br/>
         ![Připojit ke vzdálenému systému](../debugger/media/connect-remote-system.png "Připojit ke vzdálenému systému")
         1. Vyberte běžící kontejner, ke kterému se připojíte po úspěšném připojení k SSH nebo procesu démona, a pak stiskněte **OK**.
 
-    1. **_Nastavení cíle na vzdálený kontejner, na kterém je spuštěný proces prostřednictvím [démona Docker](https://docs.docker.com/engine/reference/commandline/dockerd/)_* _
-        1. Zadejte adresu démona (tj. přes TCP, IP adresu atd.) v části _ *hostitele Docker (volitelné)** a klikněte na odkaz aktualizovat.
+    1. ***Nastavení cíle ke vzdálenému kontejneru se spuštěným procesem prostřednictvím [démona Docker](https://docs.docker.com/engine/reference/commandline/dockerd/)***
+        1. Zadejte adresu démona (tj. přes TCP, IP adresu atd.) v části **hostitel Docker (volitelné)** a klikněte na odkaz aktualizovat.
         1. Vyberte běžící kontejner, ke kterému se připojíte po úspěšném připojení k procesu démona, a pak stiskněte **OK**.
 
 4. Zvolte odpovídající proces kontejneru ze seznamu **dostupných procesů** a vyberte **připojit** a spusťte ladění procesu kontejneru C# v aplikaci Visual Studio!
@@ -86,8 +86,8 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
 
    Nastavení cíle na vzdálený kontejner prostřednictvím protokolu SSH není aktuálně dostupné a lze jej provést pouze pomocí démona Docker.
 
-    **_Nastavení cíle na vzdálený kontejner, na kterém je spuštěný proces prostřednictvím [démona Docker](https://docs.docker.com/engine/reference/commandline/dockerd/)_* _
-    1. Zadejte adresu démona (tj. přes TCP, IP adresu atd.) v části _ *hostitele Docker (volitelné)** a klikněte na odkaz aktualizovat.
+    ***Nastavení cíle ke vzdálenému kontejneru se spuštěným procesem prostřednictvím [démona Docker](https://docs.docker.com/engine/reference/commandline/dockerd/)***
+    1. Zadejte adresu démona (tj. přes TCP, IP adresu atd.) v části **hostitel Docker (volitelné)** a klikněte na odkaz aktualizovat.
 
     1. Vyberte běžící kontejner, ke kterému se připojíte po úspěšném připojení k procesu démona, a zvolte OK.
 

@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 80260118-08bc-4b37-bfe5-9422ee7a1e4e
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1bb0262139e2096cf55ae7581ef854a57c67d22a
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 62175e33949b2c6311fba8e9255b237cd8b43e01
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434542"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858472"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>Návod: Uložení dat do transakce
 
 Tento návod ukazuje, jak uložit data v transakci pomocí <xref:System.Transactions> oboru názvů. V tomto návodu vytvoříte aplikaci model Windows Forms. Pomocí Průvodce konfigurací zdroje dat vytvoříte datovou sadu pro dvě tabulky v ukázkové databázi Northwind. Přidáte ovládací prvky vázané na data do formuláře Windows a upravíte kód pro tlačítko Save objektu BindingNavigator, aby se aktualizovala databáze v objektu TransactionScope.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 

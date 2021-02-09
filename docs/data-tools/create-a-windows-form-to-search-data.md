@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 65ca79a9-7458-466c-af55-978cd24c549e
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 00b492c7aec41d30e972df93206f9e597ea82eb3
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: eb6e5a1ba304627c08828b6ad7bff7f6accd3980
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435284"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859109"
 ---
 # <a name="create-a-windows-form-to-search-data"></a>Vytvoření formuláře Windows k vyhledávání dat
 
@@ -45,7 +45,7 @@ Můžete přidat parametrizované dotazy do libovolného TableAdapter (a ovláda
 
 - Zadáním parametrů do formuláře a spuštěním parametrizovaného dotazu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 

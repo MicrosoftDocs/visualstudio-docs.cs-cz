@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ADO.NET, data access
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: a5458ffca549026c99c8faedc8f47d3f3285a7ca
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: b5e3d8b8cf0b2c74a5b5a862539bbf3b201b4ffd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518736"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859434"
 ---
 # <a name="work-with-data-in-visual-studio"></a>Práce s daty v sadě Visual Studio
 
@@ -40,7 +40,7 @@ Většina ostatních databázových produktů SQL a NoSQL, které jsou tady uved
 
 **Microsoft Azure**
 
-- SQL Database
+- Databáze SQL
 - Azure Cosmos DB
 - Storage (objekty blob, tabulky, fronty, soubory)
 - SQL Data Warehouse
@@ -72,13 +72,13 @@ Většina ostatních databázových produktů SQL a NoSQL, které jsou tady uved
 
 ::: moniker range="vs-2017"
 
-Mnoho dodavatelů databází a třetích stran podporuje integraci sady Visual Studio pomocí balíčků NuGet. Nabídky můžete prozkoumat v NuGet.org nebo pomocí Správce balíčků NuGet v aplikaci Visual Studio ( **nástroje**  >  **Správce balíčků NuGet**  >  **Správa balíčků NuGet pro řešení** ). Další databázové produkty jsou integrovány se sadou Visual Studio jako rozšíření. Můžete procházet tyto nabídky v [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo přejít na rozšíření **nástrojů**  >  **a aktualizace** a pak vybrat **online** v levém podokně dialogového okna. Další informace najdete v tématu [kompatibilní databázové systémy pro Visual Studio](../data-tools/installing-database-systems-tools-and-samples.md).
+Mnoho dodavatelů databází a třetích stran podporuje integraci sady Visual Studio pomocí balíčků NuGet. Nabídky můžete prozkoumat v NuGet.org nebo pomocí Správce balíčků NuGet v aplikaci Visual Studio (**nástroje**  >  **Správce balíčků NuGet**  >  **Správa balíčků NuGet pro řešení**). Další databázové produkty jsou integrovány se sadou Visual Studio jako rozšíření. Můžete procházet tyto nabídky v [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo přejít na rozšíření **nástrojů**  >  **a aktualizace** a pak vybrat **online** v levém podokně dialogového okna. Další informace najdete v tématu [kompatibilní databázové systémy pro Visual Studio](../data-tools/installing-database-systems-tools-and-samples.md).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Mnoho dodavatelů databází a třetích stran podporuje integraci sady Visual Studio pomocí balíčků NuGet. Nabídky můžete prozkoumat v NuGet.org nebo pomocí Správce balíčků NuGet v aplikaci Visual Studio ( **nástroje**  >  **Správce balíčků NuGet**  >  **Správa balíčků NuGet pro řešení** ). Další databázové produkty jsou integrovány se sadou Visual Studio jako rozšíření. Tyto nabídky můžete procházet v [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo pomocí navigace do **rozšíření** pro  >  **správu rozšíření** a pak výběrem možnosti **online** v levém podokně dialogového okna. Další informace najdete v tématu [kompatibilní databázové systémy pro Visual Studio](../data-tools/installing-database-systems-tools-and-samples.md).
+Mnoho dodavatelů databází a třetích stran podporuje integraci sady Visual Studio pomocí balíčků NuGet. Nabídky můžete prozkoumat v NuGet.org nebo pomocí Správce balíčků NuGet v aplikaci Visual Studio (**nástroje**  >  **Správce balíčků NuGet**  >  **Správa balíčků NuGet pro řešení**). Další databázové produkty jsou integrovány se sadou Visual Studio jako rozšíření. Tyto nabídky můžete procházet v [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo pomocí navigace do **rozšíření** pro  >  **správu rozšíření** a pak výběrem možnosti **online** v levém podokně dialogového okna. Další informace najdete v tématu [kompatibilní databázové systémy pro Visual Studio](../data-tools/installing-database-systems-tools-and-samples.md).
 
 ::: moniker-end
 
@@ -151,7 +151,7 @@ Nástroje pro SQL Server [dat](/sql/ssdt/download-sql-server-data-tools-ssdt) &m
 
 [ADO.NET Entity Framework](/ef/ef6/) &mdash; V této části najdete popis postupu vytváření datových aplikací, které vývojářům umožňují programovat v koncepčním modelu místo přímého používání relační databáze.
 
-[WCF Data Services 4,5](/dotnet/framework/data/wcf/index) &mdash; Popisuje, jak používat nástroj [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] k nasazení datových služeb na webu nebo v intranetu, který implementuje [protokol OData (Open Data Protocol)](https://www.odata.org/).
+[Datové služby WCF 4,5](/dotnet/framework/data/wcf/index) &mdash; Popisuje, jak používat nástroj [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] k nasazení datových služeb na webu nebo v intranetu, který implementuje [protokol OData (Open Data Protocol)](https://www.odata.org/).
 
 [Data v řešeních](../vsto/data-in-office-solutions.md) &mdash; pro systém Office Obsahuje odkazy na témata, která vysvětlují, jak fungují data v řešeních pro systém Office. To zahrnuje informace o programování orientovaném na schéma, ukládání dat do mezipaměti a přístupu k datům na straně serveru.
 

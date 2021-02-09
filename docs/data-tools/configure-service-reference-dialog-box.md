@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 25e4c36b-2db6-4e71-9010-b7068255d09d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1dc1d82b0267e5e0655f3ebef8eb08806ad319a8
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: 9ce4057378db357345869d10e933929ae31ee573
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518723"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859213"
 ---
 # <a name="configure-service-reference-dialog-box"></a>Nastavit odkaz na službu – dialogové okno
 
@@ -93,7 +93,7 @@ Když je toto políčko zaškrtnuté, znovu se použijí jenom vybrané typy v *
 
 **Seznam odkazovaných sestavení**
 
-Obsahuje seznam odkazovaných sestavení pro projekt nebo Web. Když vyberete možnost **znovu použít typy v zadaných odkazovaných sestaveních** , můžete vybrat nebo vymazat jednotlivá sestavení.
+Obsahuje seznam odkazovaných sestavení pro projekt nebo Web. Když vyberete možnost **znovu použít typy v zadaných odkazovaných sestaveních**, můžete vybrat nebo vymazat jednotlivá sestavení.
 
 **Přidat webový odkaz**
 
@@ -105,7 +105,7 @@ Zobrazí dialogové okno **Přidat webový odkaz** .
 > [!NOTE]
 > Tlačítko **Přidat webový odkaz** je dostupné jenom v případě, že se v **dialogovém okně Přidat odkaz na službu** zobrazuje dialogové okno **Konfigurovat odkaz na službu** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Přidání odkazu na webovou službu](how-to-add-update-or-remove-a-wcf-data-service-reference.md)
 - [Služby Windows Communication Foundation a služby WCF Data Services](../data-tools/configure-service-reference-dialog-box.md)

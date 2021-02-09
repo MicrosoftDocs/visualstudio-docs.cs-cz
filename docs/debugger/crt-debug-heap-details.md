@@ -72,15 +72,15 @@ helpviewer_keywords:
 ms.assetid: bf78ace6-28e4-4a04-97c6-39e0cdd00ba4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 774c6c03d0485664eb01e1a7967003ef2f5bd2bc
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 984253f6c4ccb9d64fc1cefb34b2b5d7962e3eb5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560613"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857659"
 ---
 # <a name="crt-debug-heap-details"></a>Podrobnosti haldy ladění CRT
 Toto téma poskytuje podrobný přehled o haldě ladění CRT.
@@ -103,7 +103,7 @@ Toto téma poskytuje podrobný přehled o haldě ladění CRT.
 ## <a name="find-buffer-overruns-with-debug-heap"></a><a name="BKMK_Find_buffer_overruns_with_debug_heap"></a> Najít přetečení vyrovnávací paměti s haldou ladění
 Dva nejběžnější a neodstranitelné problémy, ke kterým programátoři narazí, přepíší konec přidělené vyrovnávací paměti a nevrácené paměti (nedaří se jim uvolnit přidělení po jejich nepotřebě). Halda ladění poskytuje výkonné nástroje pro řešení problémů s přidělením paměti tohoto druhu.
 
-Ladicí verze funkcí haldy volají standardní nebo základní verze používané v sestaveních vydaných verzí. Když vyžádáte blok paměti, Správce haldy ladění přidělí z základní haldy mírně větší blok paměti, než je požadováno, a vrátí ukazatel na vaši část tohoto bloku. Předpokládejme například, že vaše aplikace obsahuje volání: `malloc( 10 )` . V buildu pro vydání [malloc](/cpp/c-runtime-library/reference/malloc) vyvolala objekt sestavil základní rutinu přidělení haldy požadující přidělení 10 bajtů. V sestavení pro ladění `malloc` by však volala [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg), která by pak volala základní rutinu přidělení haldy požadující přidělení 10 bajtů a přibližně 36 bajtů další paměti. Všechny výsledné bloky paměti v haldě ladění jsou propojeny v jednom propojeném seznamu, seřazené podle toho, kdy byly přiděleny.
+Ladicí verze funkcí haldy volají standardní nebo základní verze používané v sestaveních vydaných verzí. Když vyžádáte blok paměti, Správce haldy ladění přidělí z základní haldy mírně větší blok paměti, než je požadováno, a vrátí ukazatel na vaši část tohoto bloku. Předpokládejme například, že vaše aplikace obsahuje volání: `malloc( 10 )` . V buildu pro vydání [](/cpp/c-runtime-library/reference/malloc) vyvolala objekt sestavil základní rutinu přidělení haldy požadující přidělení 10 bajtů. V sestavení pro ladění `malloc` by však volala [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg), která by pak volala základní rutinu přidělení haldy požadující přidělení 10 bajtů a přibližně 36 bajtů další paměti. Všechny výsledné bloky paměti v haldě ladění jsou propojeny v jednom propojeném seznamu, seřazené podle toho, kdy byly přiděleny.
 
 Další paměť přidělená rutinami haldy ladění se používá pro informace o účetnictví, pro ukazatele, které propojuje bloky paměti ladění společně, a pro malé vyrovnávací paměti na obou stranách vašich dat, aby zachytával přepsání přidělené oblasti.
 
@@ -140,12 +140,12 @@ Uvolněné bloky (0xDD) uvolněné nepoužívané bloky v propojeném seznamu ha
 
 Nové objekty (0xCD) nové objekty jsou vyplněny 0xCD při jejich přidělení.
 
-![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
+![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
 ## <a name="types-of-blocks-on-the-debug-heap"></a><a name="BKMK_Types_of_blocks_on_the_debug_heap"></a> Typy bloků na haldě ladění
 Každý blok paměti v haldě ladění je přiřazen k jednomu z pěti typů alokace. Tyto typy jsou sledovány a hlášeny jinak pro účely zjišťování nevracení a vytváření sestav stavu. Typ bloku můžete určit přidělením pomocí přímého volání jedné z funkcí alokace haldy ladění, jako je například [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg). Pět typů paměťových bloků v haldě ladění (nastavené v **nBlockUse** členu struktury **_CrtMemBlockHeader** ) jsou následující:
 
-**_NORMAL_BLOCK** Volání metody calloc [a](/cpp/c-runtime-library/reference/malloc) vytvoří [calloc](/cpp/c-runtime-library/reference/calloc) normální blok. Pokud máte v úmyslu používat pouze normální bloky a nepotřebují klientské bloky, je vhodné definovat [_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc), což způsobí, že všechna volání přidělení haldy mají být mapována na jejich ekvivalenty ladění v sestaveních ladění. To umožní uložit informace o názvu souboru a číslu řádku pro každé volání přidělení do odpovídající hlavičky bloku.
+**_NORMAL_BLOCK** Volání metody calloc [a](/cpp/c-runtime-library/reference/malloc) vytvoří [](/cpp/c-runtime-library/reference/calloc) normální blok. Pokud máte v úmyslu používat pouze normální bloky a nepotřebují klientské bloky, je vhodné definovat [_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc), což způsobí, že všechna volání přidělení haldy mají být mapována na jejich ekvivalenty ladění v sestaveních ladění. To umožní uložit informace o názvu souboru a číslu řádku pro každé volání přidělení do odpovídající hlavičky bloku.
 
 `_CRT_BLOCK` Bloky paměti, které jsou přiděleny interně mnoha funkcím knihovny run-time, jsou označeny jako bloky CRT, aby mohly být zpracovány samostatně. V důsledku toho nemusí být detekce nevracení a jiné operace ovlivněny. Přidělení nesmí nikdy přidělit, znovu přidělit nebo uvolnit libovolný blok typu CRT.
 
@@ -169,7 +169,7 @@ Chcete-li určit typ a podtyp daného bloku, použijte funkci [_CrtReportBlockTy
 #define _BLOCK_SUBTYPE(block)       (block >> 16 & 0xFFFF)
 ```
 
-![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
+![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
 ## <a name="check-for-heap-integrity-and-memory-leaks"></a><a name="BKMK_Check_for_heap_integrity_and_memory_leaks"></a> Kontrola integrity haldy a nevracení paměti
 Mnohé z funkcí haldy ladění musí být dostupné v rámci vašeho kódu. V následující části jsou popsány některé funkce a jejich použití.
@@ -180,7 +180,7 @@ Mnohé z funkcí haldy ladění musí být dostupné v rámci vašeho kódu. V n
 
 Příznak **_crtDbgFlag** obsahuje následující bitová pole:
 
-|Bitové pole|Výchozí<br /><br /> value|Popis|
+|Bitové pole|Výchozí<br /><br /> hodnota|Description|
 |---------------|-----------------------|-----------------|
 |**_CRTDBG_ALLOC_MEM_DF**|Zapnout|Zapne alokaci ladění. Když je tento bit vypnutý, přidělení zůstane zřetězené společně, ale jeho typ bloku je **_IGNORE_BLOCK**.|
 |**_CRTDBG_DELAY_FREE_MEM_DF**|Vypnout|Zabraňuje ve skutečném uvolnění paměti, jako při simulaci podmínek s nízkou pamětí. Pokud je tento bit zapnutý, uvolněné bloky jsou uchovávány v propojeném seznamu haldy ladění, ale jsou označeny jako **_FREE_BLOCK** a jsou vyplněny speciální bajtovou hodnotou.|
@@ -188,7 +188,7 @@ Příznak **_crtDbgFlag** obsahuje následující bitová pole:
 |**_CRTDBG_CHECK_CRT_DF**|Vypnout|Způsobí, že bloky označené jako Type **_CRT_BLOCK** mají být zahrnuty do operací detekce nevracení a rozdíl stavu. Pokud je tento bit vypnutý, paměť používaná interně knihovnou runtime se během takových operací ignoruje.|
 |**_CRTDBG_LEAK_CHECK_DF**|Vypnout|Způsobuje kontrolu nevracení při ukončení programu prostřednictvím volání **_CrtDumpMemoryLeaks**. Pokud aplikace nedokázala uvolnit veškerou přidělenou paměť, bude vygenerována zpráva o chybách.|
 
-![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
+![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
 ## <a name="configure-the-debug-heap"></a><a name="BKMK_Configure_the_debug_heap"></a> Konfigurace haldy ladění
 Všechna volání funkcí haldy, jako například,,,, `malloc` `free` `calloc` `realloc` `new` a `delete` jsou přeložena pro ladicí verze těchto funkcí, které fungují v haldě ladění. Když uvolníte blok paměti, halda ladění automaticky kontroluje integritu vyrovnávací paměti na obou stranách vaší přidělené oblasti a při přepisování vydá zprávu o chybě.
@@ -223,7 +223,7 @@ tmpFlag &= ~_CRTDBG_CHECK_CRT_DF;
 _CrtSetDbgFlag( tmpFlag );
 ```
 
-![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
+![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
 ## <a name="new-delete-and-_client_blocks-in-the-c-debug-heap"></a><a name="BKMK_new__delete__and__CLIENT_BLOCKs_in_the_C___debug_heap"></a> nové, odstranit a \_ klientské \_ bloky v haldě ladění C++
 Ladicí verze běhové knihovny jazyka C obsahují ladicí verze jazyka C++ `new` a `delete` operátorů. Použijete-li `_CLIENT_BLOCK` Typ přidělení, je nutné zavolat ladicí verzi `new` operátoru přímo nebo vytvořit makra, která nahradí `new` operátor v režimu ladění, jak je znázorněno v následujícím příkladu:
@@ -261,7 +261,7 @@ int main( )   {
 
 Ladicí verze `delete` operátoru funguje se všemi typy bloku a při kompilaci verze vydání nevyžaduje žádné změny v programu.
 
-![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
+![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
 ## <a name="heap-state-reporting-functions"></a><a name="BKMK_Heap_State_Reporting_Functions"></a> Funkce vytváření sestav o stavu haldy
  **_CrtMemState**
@@ -290,7 +290,7 @@ Tato struktura uloží ukazatel na první blok (poslední přidělený) v propoj
 
 Následující funkce vykazují stav a obsah haldy a využívají tyto informace k detekci nevracení paměti a dalších problémů.
 
-|Funkce|Popis|
+|Funkce|Description|
 |--------------|-----------------|
 |[_CrtMemCheckpoint](/cpp/c-runtime-library/reference/crtmemcheckpoint)|Uloží snímek haldy ve **_CrtMemState** struktuře dodávané aplikací.|
 |[_CrtMemDifference](/cpp/c-runtime-library/reference/crtmemdifference)|Porovná dvě struktury stavu paměti, uloží rozdíl mezi nimi ve třetí struktuře stavu a vrátí hodnotu TRUE, pokud jsou dva stavy odlišné.|
@@ -298,7 +298,7 @@ Následující funkce vykazují stav a obsah haldy a využívají tyto informace
 |[_CrtMemDumpAllObjectsSince](/cpp/c-runtime-library/reference/crtmemdumpallobjectssince)|Vypíše informace o všech objektech přidělených vzhledem k tomu, že daný snímek byl získán z haldy nebo od začátku provádění. Pokaždé, když vypíše blok **_CLIENT_BLOCK** , volá funkci připojení poskytnutou aplikací, pokud byla jedna nainstalována pomocí **_CrtSetDumpClient**.|
 |[_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks)|Určuje, zda došlo k nevrácení paměti od spuštění programu, a pokud ano, vypíše všechny přidělené objekty. Pokaždé, když **_CrtDumpMemoryLeaks** vypíše blok **_CLIENT_BLOCK** , volá funkci připojení poskytnutou aplikací, pokud byla jedna nainstalována pomocí **_CrtSetDumpClient**.|
 
-![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
+![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
 ## <a name="track-heap-allocation-requests"></a><a name="BKMK_Track_Heap_Allocation_Requests"></a> Sledovat žádosti o přidělení haldy
 I když se podíváme na název zdrojového souboru a číslo řádku, ve kterém se spouští kontrolní výraz nebo makro vytváření sestav, je často velmi užitečné při hledání příčiny problému, totéž není, protože by to mohlo být pravda pro funkce přidělení haldy. I když mohou být makra vložena v mnoha vhodných bodech ve stromové struktuře aplikace, přidělení je často ukryto ve speciální rutině, která je volána z mnoha různých míst v mnoha různých časech. Otázka většinou není tím, který řádek kódu vedl k chybnému přidělení, ale místo toho, aby jedna z tisíců přidělení provedených tímto řádkem kódu byla chybná a proč.
@@ -353,7 +353,7 @@ int addNewRecord(struct RecStruct *prevRecord,
 
 Nyní se název zdrojového souboru a číslo řádku, kde `addNewRecord` byla volána, budou uloženy do každého výsledného bloku přiděleného v haldě ladění a budou hlášeny při zkoumání tohoto bloku.
 
-![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
+![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [](#BKMK_Contents)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 [Ladění nativního kódu](../debugger/debugging-native-code.md)

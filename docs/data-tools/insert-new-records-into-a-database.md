@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ea118fff-69b1-4675-b79a-e33374377f04
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3586cf45e152cd8a0149140556916b11544a00bb
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 8b5228d463bebf7ed57c68cbcf16a1d767d94917
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436273"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858667"
 ---
 # <a name="insert-new-records-into-a-database"></a>Vkládání nových záznamů do databáze
 

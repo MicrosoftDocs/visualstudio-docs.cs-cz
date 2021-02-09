@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3c565f7238edf9126dd651fa567de82aed7b8d21
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: d8e3692f376a502a2cd924fa9604eddab445333f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435010"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858758"
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>Postupy: připojení k datům ve službě
 

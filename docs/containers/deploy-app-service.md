@@ -3,18 +3,18 @@ title: Nasazení kontejneru ASP.NET Core do Azure App Service
 description: Naučte se používat nástroje sady Visual Studio Container k nasazení ASP.NET Core webové aplikace v kontejneru Docker pro Azure App Service
 ms.custom: SEO-VS-2020
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.technology: vs-azure
 ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: c0f45f14bc8b363a0c7c4e298effa67c5fccde18
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 2e23658cfde1154f5b4df7ae7dade71b1569e35c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036337"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859642"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Nasazení kontejneru ASP.NET Core pro Azure App Service pomocí sady Visual Studio
 
@@ -49,7 +49,7 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
 ::: moniker-end
 ::: moniker range=">= vs-2019"
 1. V okně Start sady Visual Studio vyberte možnost **vytvořit nový projekt**.
-1. Vyberte **ASP.NET Core webová aplikace**a klikněte na tlačítko **Další**.
+1. Vyberte **ASP.NET Core webová aplikace** a klikněte na tlačítko **Další**.
 1. Dejte nové aplikaci název (nebo pojmenujte výchozí) a vyberte **vytvořit**.
 1. Vyberte možnost **Webová aplikace**.
 1. Určete, jestli chcete, aby podpora SSL používala zaškrtávací políčko **Konfigurovat pro protokol HTTPS** .
@@ -63,11 +63,11 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
 
 1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **publikovat**.
 1. V dialogovém okně Publikovat cíl vyberte možnost **App Service Linux** nebo **App Service**. Toto je operační systém, který bude hostitelem webového serveru.
-1. Můžete publikovat pouze pro App Service, nebo můžete publikovat do App Service a Azure Container Registry (ACR). Chcete-li publikovat kontejner v Azure Container Registry (ACR), vyberte možnost **vytvořit novou App Service pro kontejnery**a klikněte na tlačítko **publikovat**.
+1. Můžete publikovat pouze pro App Service, nebo můžete publikovat do App Service a Azure Container Registry (ACR). Chcete-li publikovat kontejner v Azure Container Registry (ACR), vyberte možnost **vytvořit novou App Service pro kontejnery** a klikněte na tlačítko **publikovat**.
 
    ![Snímek obrazovky s dialogovým oknem pro publikování](media/deploy-app-service/publish-app-service-linux.PNG)
 
-   Chcete-li publikovat pouze do Azure App Service bez použití Azure Container Registry, vyberte možnost **vytvořit nový**a klikněte na tlačítko **publikovat**.
+   Chcete-li publikovat pouze do Azure App Service bez použití Azure Container Registry, vyberte možnost **vytvořit nový** a klikněte na tlačítko **publikovat**.
 
 1. Ověřte, že jste přihlášeni pomocí účtu, který je přidružený k vašemu předplatnému Azure, a vyberte jedinečný název, předplatné, skupinu prostředků, plán hostování a registr kontejnerů (Pokud je k dispozici) nebo přijměte výchozí hodnoty.
 
@@ -136,7 +136,7 @@ Odtud můžete zobrazit informace o kontejneru, zobrazit nebo stáhnout protokol
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 
-Pokud chcete odebrat všechny prostředky Azure přidružené k tomuto kurzu, odstraňte skupinu prostředků pomocí [Azure Portal](https://portal.azure.com). Chcete-li najít skupinu prostředků přidruženou k publikované webové aplikaci, zvolte možnost **Zobrazit**  >  **Další**  >  **webovou aktivitu publikování**systému Windows a pak zvolte ikonu ozubeného kolečka. Otevře se karta **publikovat** , která obsahuje skupinu prostředků.
+Pokud chcete odebrat všechny prostředky Azure přidružené k tomuto kurzu, odstraňte skupinu prostředků pomocí [Azure Portal](https://portal.azure.com). Chcete-li najít skupinu prostředků přidruženou k publikované webové aplikaci, zvolte možnost **Zobrazit**  >  **Další**  >  **webovou aktivitu publikování** systému Windows a pak zvolte ikonu ozubeného kolečka. Otevře se karta **publikovat** , která obsahuje skupinu prostředků.
 
 V Azure Portal zvolte **skupiny prostředků**, vyberte skupinu prostředků a otevřete její stránku s podrobnostmi. Ověřte, zda se jedná o správnou skupinu prostředků, zvolte možnost **Odebrat skupinu prostředků**, zadejte název a zvolte možnost **Odstranit**.
 

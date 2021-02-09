@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed743ce6-73af-45e5-a8ff-045eddaccc86
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: ad8b5f502953912e2de7383afa4a86ff749c5724
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: b9446fa0edb9302d4032f19f23c8adb8747d9cc8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518591"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859304"
 ---
 # <a name="bind-objects-as-data-sources-in-visual-studio"></a>Vázání objektů jako datových zdrojů v aplikaci Visual Studio
 
@@ -136,7 +136,7 @@ Uložte data zpět do databáze předáním hodnot z vašeho objektu do TableAda
 
 Visual Studio vytvoří metody DBDirect, které lze spustit přímo proti databázi. Tyto metody nevyžadují objekty DataSet nebo DataTable.
 
-|TableAdapter DBDirect – metoda|Popis|
+|TableAdapter DBDirect – metoda|Description|
 | - |-----------------|
 |`TableAdapter.Insert`|Přidá nové záznamy do databáze a umožní předat do jednotlivých hodnot sloupců jako parametry metody.|
 |`TableAdapter.Update`|Aktualizuje existující záznamy v databázi. Metoda aktualizace přijímá původní a nové hodnoty sloupce jako parametry metody. Původní hodnoty se používají k vyhledání původního záznamu a k aktualizaci tohoto záznamu se použijí nové hodnoty.<br /><br /> `TableAdapter.Update`Metoda je také použita pro sjednocení změn v datové sadě zpět do databáze pomocí přebírání <xref:System.Data.DataSet> , <xref:System.Data.DataTable> , <xref:System.Data.DataRow> nebo pole <xref:System.Data.DataRow> s jako parametrů metody.|
@@ -149,6 +149,6 @@ Následující příklad ukazuje, jak použít `TableAdapter.Insert` metodu DBDi
 [!code-csharp[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_6.cs)]
 [!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_6.vb)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)

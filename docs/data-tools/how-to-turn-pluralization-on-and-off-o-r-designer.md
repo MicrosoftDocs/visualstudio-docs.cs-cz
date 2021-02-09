@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 9b693bc3-303a-40a9-97ee-9cef5ca3ae81
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6ea872d96e59365f3dbef5dc3568641c30e51606
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 609af4ef71a6ed73bd1d9599d76d8eb64073efd8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434893"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858693"
 ---
 # <a name="how-to-turn-pluralization-on-and-off-or-designer"></a>Postupy: Zapnutí a vypnutí pluralizace (Návrhář relací objektů)
 Ve výchozím nastavení, když přetáhnete databázové objekty, které mají názvy končící na s nebo z **Průzkumník serveru** nebo **Průzkumník databáze** na [nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md), názvy generovaných tříd entit se změní z hodnoty plural na číslo na jednotné číslo. To je přesnější reprezentace faktu, že třída entity s vytvořenými instancemi je mapována na jeden záznam dat. Například přidání `Customers` tabulky do **návrháře o/R** má za následek třídu entity s názvem, `Customer` protože třída bude obsahovat data pouze pro jednoho zákazníka.
@@ -36,7 +36,7 @@ Ve výchozím nastavení, když přetáhnete databázové objekty, které mají 
 
 3. Klikněte na tlačítko **O/R Designer**.
 
-4. Nastavte **pluralitu názvů** na hodnotu **povoleno** ,  =  **False** Pokud chcete nastavit **Návrháře relací výstupů** tak, aby se nezměnily názvy tříd.
+4. Nastavte **pluralitu názvů** na hodnotu **povoleno**,  =   Pokud chcete nastavit **Návrháře relací výstupů** tak, aby se nezměnily názvy tříd.
 
 5. Nastavte **pluralitu názvů** **na**  =  **hodnotu true** , chcete-li použít pravidla pro zámnožování na názvy tříd objektů přidaných do **návrháře o/R**.
 

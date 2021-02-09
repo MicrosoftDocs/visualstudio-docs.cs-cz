@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0edd5385-c381-4b17-9096-74e2778db9d5
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3d6ec8860d2c163d16e29d229203bb77abcdf65f
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 57190afba118468b4533ef1ecd30957eb25b08e3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435192"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859045"
 ---
 # <a name="create-lookup-tables-in-windows-forms-applications"></a>Vytváření vyhledávacích tabulek v aplikacích modelu Windows Forms
 

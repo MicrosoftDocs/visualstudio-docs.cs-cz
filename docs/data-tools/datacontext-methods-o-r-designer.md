@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: c149f4e5-3b61-4c33-892e-3e26d47f3eeb
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 30091a5bfd613ba9bd3738731e23153565ec4c8e
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 64b5643704024ee689a011f5285b41be818dc5cb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436586"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858966"
 ---
 # <a name="datacontext-methods-or-designer"></a>Metody DataContext (Návrhář relací objektů)
 
@@ -44,7 +44,7 @@ Metody DataContext jsou metody, které jsou mapovány na uložené procedury a f
 
 ## <a name="return-types-of-datacontext-methods"></a>Návratové typy metod DataContext
 
-Když přetáhnete uložené procedury a funkce z **Průzkumník serveru** nebo **Průzkumníka databáze** do **návrháře o/R** , návratový typ vygenerované <xref:System.Data.Linq.DataContext> metody se liší v závislosti na tom, kde položku vyřadíte. Vyřazení položek přímo na existující třídu entity vytvoří <xref:System.Data.Linq.DataContext> metodu s návratovým typem třídy entity; vyřazení položek do prázdné oblasti **Návrháře O/R** (v obou podoknech) vytvoří <xref:System.Data.Linq.DataContext> metodu, která vrátí automaticky generovaný typ. Automaticky generovaný typ má název, který se shoduje s uloženou procedurou nebo názvem funkce a vlastnostmi, které jsou mapovány na pole vracené uloženou procedurou nebo funkcí.
+Když přetáhnete uložené procedury a funkce z **Průzkumník serveru** nebo **Průzkumníka databáze** do **návrháře o/R**, návratový typ vygenerované <xref:System.Data.Linq.DataContext> metody se liší v závislosti na tom, kde položku vyřadíte. Vyřazení položek přímo na existující třídu entity vytvoří <xref:System.Data.Linq.DataContext> metodu s návratovým typem třídy entity; vyřazení položek do prázdné oblasti **Návrháře O/R** (v obou podoknech) vytvoří <xref:System.Data.Linq.DataContext> metodu, která vrátí automaticky generovaný typ. Automaticky generovaný typ má název, který se shoduje s uloženou procedurou nebo názvem funkce a vlastnostmi, které jsou mapovány na pole vracené uloženou procedurou nebo funkcí.
 
 > [!NOTE]
 > Návratový typ metody lze změnit <xref:System.Data.Linq.DataContext> poté, co ji přidáte do podokna metody. Chcete-li zkontrolovat nebo změnit návratový typ <xref:System.Data.Linq.DataContext> metody, vyberte ji a v okně **vlastnosti** Zkontrolujte vlastnost **návratový typ** . Další informace naleznete v tématu [Postupy: Změna návratového typu metody DataContext (O/R Designer)](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md).

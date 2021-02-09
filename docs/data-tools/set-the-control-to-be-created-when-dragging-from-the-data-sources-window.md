@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 20597ff8-0c98-43ec-8fb1-05376804ba48
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8a81ecb35c37dbef6d48227c27ed877c64e6e26f
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 6b4d1782a82a1eb2147d540b1799f5152c4f2308
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434464"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858433"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>Nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdrojů dat
 

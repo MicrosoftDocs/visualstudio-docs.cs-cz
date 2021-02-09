@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 104d1d19-b5a9-4071-b81e-1b3af08e9c7b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: e6eb2f6e1358c91a1103615aca67ede4a3561fae
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 373e062ad7f2d8600fd28f098cbc0cae1c8d5a65
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436664"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859005"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>Vytvoření parametrizovaných dotazů TableAdapter
 
@@ -96,7 +96,7 @@ Povolení dotazu pro příjem hodnot null:
 
 1. V **Návrhář datových sad** vyberte dotaz TableAdapter, který musí přijmout hodnoty parametrů s hodnotou null.
 
-2. V okně **vlastnosti** vyberte možnost **parametry** a potom klikněte na tlačítko se třemi tečkami ( **...** ) a otevřete tak **Editor kolekce Parameters**.
+2. V okně **vlastnosti** vyberte možnost **parametry** a potom klikněte na tlačítko se třemi tečkami (**...**) a otevřete tak **Editor kolekce Parameters**.
 
 3. Vyberte parametr, který povoluje hodnoty null, a nastavte vlastnost **AllowDBNull** na hodnotu `true` .
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 177420b9-568b-4dad-9d16-1b0e98a24d71
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: de0a155d675f85e10cdf38969dd6eb59a3762770
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: 2ebfc2071bdf9f9e9dc40b36744bb34d4a68ac04
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518516"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859278"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Vytvoření vazby ovládacích prvků WPF k datové sadě
 
@@ -124,7 +124,7 @@ Chcete-li datovou sadu vyplnit daty, použijte `Fill` metodu `ProductTableAdapte
 
      Otevře se Návrhář DataSet.
 
-2. V návrháři klikněte pravým tlačítkem myši na příkaz **Fill** , **GetData ()** a vyberte možnost **Konfigurovat**.
+2. V návrháři klikněte pravým tlačítkem myši na příkaz **Fill**, **GetData ()** a vyberte možnost **Konfigurovat**.
 
      Otevře se průvodce **konfigurací TableAdapter** .
 
@@ -166,7 +166,7 @@ Vytvořte ovládací prvky, které zobrazují záznamy o zákaznících, přeta�
 
 2. Rozbalte uzel **produkt** .
 
-3. V tomto příkladu se některá pole nezobrazují, takže klikněte na rozevírací nabídku vedle následujících uzlů a vyberte **žádná** :
+3. V tomto příkladu se některá pole nezobrazují, takže klikněte na rozevírací nabídku vedle následujících uzlů a vyberte **žádná**:
 
     - ProductCategoryID
 
@@ -260,7 +260,7 @@ Po dokončení tohoto postupu můžete vyzkoušet následující související �
 
 - Naučte se používat okno **zdroje dat** v aplikaci Visual Studio k zobrazení souvisejících dat (tj. data v relaci nadřazený-podřízený) v ovládacích prvcích WPF. Další informace najdete v tématu [Návod: zobrazení souvisejících dat v aplikaci WPF](../data-tools/display-related-data-in-wpf-applications.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření vazby ovládacích prvků WPF k datům v sadě Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [Nástroje datových sad v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)

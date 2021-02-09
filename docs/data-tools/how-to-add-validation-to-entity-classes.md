@@ -10,15 +10,15 @@ dev_langs:
 ms.assetid: 61107da9-7fa3-4dba-b101-ae46536f52c4
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4f367cf799dd00b8b442870554e499e5405865cb
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 08d60b254867c02c7cc406709a95117a11d669c4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435101"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858810"
 ---
 # <a name="how-to-add-validation-to-entity-classes"></a>Postupy: Přidání ověřování do tříd entit
 *Ověřování* tříd entit je proces potvrzení, že hodnoty zadané do datových objektů vyhovují omezením ve schématu objektu a také k pravidlům stanoveným pro aplikaci. Ověřování dat před odesláním aktualizací do podkladové databáze je dobrým zvykem, který snižuje chyby. Také snižuje potenciální počet výměn mezi aplikací a databází.
