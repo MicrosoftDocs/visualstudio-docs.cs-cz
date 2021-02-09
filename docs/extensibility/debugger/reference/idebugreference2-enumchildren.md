@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 35b3c2f3-69f4-4013-b555-f847221f62e8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 96b2fec782ce88dfb2200df35f56b35b304beda5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d142f6c3715e2c3888c7ce60f349c50e84f7f16b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80720635"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909703"
 ---
 # <a name="idebugreference2enumchildren"></a>IDebugReference2::EnumChildren
 Získá seznam vybraných podřízených objektů odkazu. Vyhrazeno pro budoucí použití.
@@ -28,7 +28,7 @@ Získá seznam vybraných podřízených objektů odkazu. Vyhrazeno pro budoucí
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT EnumChildren ( 
+HRESULT EnumChildren ( 
    DEBUGREF_INFO_FLAGS        dwFields,
    DWORD                      dwRadix,
    DBG_ATTRIB_FLAGS           dwAttribFilter,
@@ -39,7 +39,7 @@ HRESULT EnumChildren ( 
 ```
 
 ```csharp
-int EnumChildren ( 
+int EnumChildren ( 
    enum_DEBUGREF_INFO_FLAGS     dwFields,
    uint                         dwRadix,
    enum_DBG_ATTRIB_FLAGS        dwAttribFilter,

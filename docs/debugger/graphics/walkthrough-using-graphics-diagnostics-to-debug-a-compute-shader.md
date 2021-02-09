@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 69287456-644b-4aff-bd03-b1bbb2abb82a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 939b1906a32c48aa1ad32f2fb03372a74afc43ec
-ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
+ms.openlocfilehash: 184e009c870e6a15ce61ed14dcb8b6916e293728
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97398711"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908517"
 ---
 # <a name="walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader"></a>Návod: Použití diagnostiky grafiky k ladění výpočetního shaderu
 Tento návod ukazuje, jak použít nástroje sady Visual Studio Diagnostika grafiky k prozkoumání výpočetního shaderu, který generuje nesprávné výsledky.
@@ -28,7 +28,7 @@ Tento návod ukazuje, jak použít nástroje sady Visual Studio Diagnostika graf
 
 - Pomocí okna **fáze zřetězení grafiky** a ladicího programu HLSL prověřte výpočetní shader, který je zdrojem problému.
 
-## <a name="scenario"></a>Scénář
+## <a name="scenario"></a>Scenario
  V tomto scénáři jste napsali simulaci kapalinového dynamiky, která využívá DirectCompute k provádění většiny částí aktualizace simulace náročné na výpočetní výkon. Když je aplikace spuštěna, vykreslování datové sady a uživatelského rozhraní vypadá správně, ale simulace se nechová podle očekávání. Pomocí Diagnostika grafiky můžete zachytit problém do protokolu grafiky, abyste mohli aplikaci ladit. Problém v této aplikaci vypadá následovně:
 
  ![Simulovaná kapalina se chová nesprávně.](media/gfx_diag_demo_compute_shader_fluid_problem.png "gfx_diag_demo_compute_shader_fluid_problem")

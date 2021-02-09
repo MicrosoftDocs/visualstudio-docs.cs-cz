@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f4cea2e1-08dc-47ac-aba2-3b8c338e607f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: bbe3d23301f0853626a930855acf4b595c6a2923
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 882a192a96764356e90d78498ef5ed5ccd29ce25
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75847877"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908345"
 ---
 # <a name="quickstart-debug-aspnet-core-with-the-visual-studio-debugger"></a>Rychlý Start: ladění ASP.NET Core pomocí ladicího programu sady Visual Studio
 
@@ -28,10 +28,10 @@ Ladicí program sady Visual Studio poskytuje mnoho výkonných funkcí, které v
 1. Otevřete sadu Visual Studio.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **ASP.NET**, zvolte **šablony**a pak zvolte **vytvořit novou ASP.NET Core webovou aplikaci**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **ASP.NET**, zvolte **šablony** a pak zvolte **vytvořit novou ASP.NET Core webovou aplikaci**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte možnost **Web**a potom v prostředním podokně zvolte **ASP.NET Core webová aplikace**. Zadejte název jako **MyDbgApp** a klikněte na **OK**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte možnost **Web** a potom v prostředním podokně zvolte **ASP.NET Core webová aplikace**. Zadejte název jako **MyDbgApp** a klikněte na **OK**.
 
     V dialogovém okně, které se zobrazí, zvolte možnost **Webová aplikace** v prostředním podokně a pak klikněte na tlačítko **OK**.
 
@@ -125,7 +125,7 @@ Pokud identifikujete změnu, kterou chcete testovat ve vašem kódu během relac
 
 1. V `OnGet` metodě klikněte na druhou instanci `result.First.Value` a změňte `result.First.Value` na `result.Last.Value` .
 
-1. Stisknutím klávesy **F10** (nebo **ladění > Step over) několikrát zajděte**ladicí program a spusťte upravený kód.
+1. Stisknutím klávesy **F10** (nebo **ladění > Step over) několikrát zajděte** ladicí program a spusťte upravený kód.
 
     ![Upravit a pokračovat](../debugger/media/dbg-qs-edit-and-continue-aspnet.png "Upravit a pokračovat")
 

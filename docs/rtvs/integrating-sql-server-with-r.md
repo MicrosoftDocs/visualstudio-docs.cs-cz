@@ -5,15 +5,15 @@ ms.date: 06/25/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 2d1eb4cc53b6123acbba9741d33d3401d44cf6d7
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: c0aedbccdb82bd91fe201a23b6201a3cdd7db283
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011876"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908677"
 ---
 # <a name="work-with-sql-server-and-r"></a>Práce s SQL Server a R
 
@@ -37,11 +37,11 @@ Vynikající podpora pro SQL Server v rámci sady Visual Studio pomáhá datový
 
 RTVS podporuje přidávání dotazů SQL do projektů jazyka R, což vám umožní iterativní vývoj dotazů SQL v samostatném kontextu, dokud nedosáhnete výsledků, které hledáte.
 
-Chcete-li přidat soubor dotazu SQL, klikněte pravým tlačítkem myši na projekt v Průzkumník řešení, vyberte možnost **Přidat**  >  **novou položku**a vyberte typ souboru **dotazu SQL** :
+Chcete-li přidat soubor dotazu SQL, klikněte pravým tlačítkem myši na projekt v Průzkumník řešení, vyberte možnost **Přidat**  >  **novou položku** a vyberte typ souboru **dotazu SQL** :
 
 ![Přidat položku dotazu SQL do projektu](media/sql-add-item.png)
 
-Tento příkaz otevře soubor v editoru jazyka Transact-SQL sady Visual Studio, který poskytuje úplnou technologii IntelliSense pro SQL a možnost spouštět dotazy. Aby tyto funkce fungovaly, musíte se připojit k databázi pomocí tlačítka připojit na panelu nástrojů editoru nebo se pokusit spustit dotaz (**CTRL** + **+ SHIFT +** + **E**, který funguje i pro výběr). V obou případech se otevře dialogové okno připojení:
+Tento příkaz otevře soubor v editoru jazyka Transact-SQL sady Visual Studio, který poskytuje úplnou technologii IntelliSense pro SQL a možnost spouštět dotazy. Aby tyto funkce fungovaly, musíte se připojit k databázi pomocí tlačítka připojit na panelu nástrojů editoru nebo se pokusit spustit dotaz (**CTRL** + **+ SHIFT +** + , který funguje i pro výběr). V obou případech se otevře dialogové okno připojení:
 
 ![Dialogové okno připojení SQL](media/sql-connection-dialog.png)
 
@@ -89,7 +89,7 @@ RTVS vytvoří pro uloženou proceduru tři soubory: *. Soubor r* pro kód r, a 
 
 ![Průzkumník řešení rozšířené zobrazení uložené procedury SQL pomocí jazyka R](media/sql-solution-explorer-expanded.png)
 
-Rozhraní *. Soubor r* (příklad*StoredProcedure. R* ) je místo, kam píšete kód r. Výchozí obsah:
+Rozhraní *. Soubor r* (příklad *StoredProcedure. R* ) je místo, kam píšete kód r. Výchozí obsah:
 
 ```R
 # @InputDataSet: input data frame, result of SQL query execution
@@ -154,11 +154,11 @@ WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 ### <a name="publish-a-sql-stored-procedure"></a>Publikování uložené procedury SQL
 
 1. Vyberte příkaz **nástroje R**  >  **data**  >  **publikování pomocí** příkazu nabídky možnosti.
-1. V dialogovém okně, které se zobrazí, změňte položku **publikovat na:** na **databázi**, zadejte cíl, vyberte **publikovat**a RTVS sestavení a publikujte uloženou proceduru:
+1. V dialogovém okně, které se zobrazí, změňte položku **publikovat na:** na **databázi**, zadejte cíl, vyberte **publikovat** a RTVS sestavení a publikujte uloženou proceduru:
 
     ![Dialog publikovat uloženou proceduru](media/sql-publish-with-options.png)
 
-1. Chcete-li publikovat všechny uložené procedury v projektu, můžete použít příkaz **R Tools**pro  >  **Data**  >  **publikování uložených procedur** pomocí nástrojů jazyka R, který je také k dispozici, když kliknete pravým tlačítkem myši na projekt v Průzkumník řešení.
+1. Chcete-li publikovat všechny uložené procedury v projektu, můžete použít příkaz pro  >    >  **publikování uložených procedur** pomocí nástrojů jazyka R, který je také k dispozici, když kliknete pravým tlačítkem myši na projekt v Průzkumník řešení.
 
 > [!Tip]
-> Pokud máte Průzkumník objektů systému SQL Server otevřít v aplikaci Visual Studio, vaše publikovaná uložená procedura se zobrazí ve **Programmability**  >  složce**uložené procedury** pro programovatelnost databáze. Můžete ho také spustit z Průzkumník objektů tak, že kliknete pravým tlačítkem a vyberete možnost **Spustit**nebo když ho zavoláte interaktivně z okna dotazu *. SQL* .
+> Pokud máte Průzkumník objektů systému SQL Server otevřít v aplikaci Visual Studio, vaše publikovaná uložená procedura se zobrazí ve   >  složce **uložené procedury** pro programovatelnost databáze. Můžete ho také spustit z Průzkumník objektů tak, že kliknete pravým tlačítkem a vyberete možnost **Spustit** nebo když ho zavoláte interaktivně z okna dotazu *. SQL* .

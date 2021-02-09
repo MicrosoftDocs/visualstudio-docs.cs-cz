@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 9cb339b5-3caf-4755-aad1-4a5da54b2a23
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: 8a3520220da15ef771c8cecbd7962e4448727910
-ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
+ms.openlocfilehash: 854d3e23252e63d6330abd9f1704890d3b90ae36
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "97815708"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908303"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>Vzdálené ladění ASP.NET na vzdáleném počítači IIS
 Chcete-li ladit aplikaci ASP.NET, která byla nasazena do služby IIS, nainstalujte a spusťte nástroje Remote Tools v počítači, kde jste nasadili aplikaci, a pak se připojte k spuštěné aplikaci ze sady Visual Studio.
@@ -29,7 +29,7 @@ Tato příručka vysvětluje, jak nastavit a nakonfigurovat aplikaci Visual Stud
 > [!NOTE]
 > Pro vzdálené ladění ASP.NET Core místo toho si přečtěte téma [vzdálené ladění ASP.NET Core na počítači se službou IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md). Pro Azure App Service můžete snadno nasadit a ladit v předkonfigurovaných instancích služby IIS pomocí [Snapshot Debugger](../debugger/debug-live-azure-applications.md) (vyžaduje se .NET 4.6.1) nebo [připojením ladicího programu z Průzkumník serveru](../debugger/remote-debugging-azure.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 ::: moniker range=">=vs-2019"
 K provedení kroků uvedených v tomto článku se vyžaduje Visual Studio 2019.

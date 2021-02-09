@@ -12,15 +12,15 @@ helpviewer_keywords:
 - error messages, Office development in Visual Studio
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9d5844c2422c9591e447e0511890d6a4941ebf73
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 1aa0e42b873d6e186b66dd624340443041afbc9d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846087"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910414"
 ---
 # <a name="error-messages-office-development-in-visual-studio"></a>Chybové zprávy (vývoj pro Office v sadě Visual Studio)
   V části každé chybové zprávy najdete informace o možných příčinách chyby a potenciálních řešeních nebo řešeních, která by mohl problém vyřešit.

@@ -5,16 +5,16 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
 monikerRange: vs-2017
-ms.openlocfilehash: 5a09b3f78b929fd60764be36f56c0b580c7a42d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fa5346d65a94646a0fa5e922f3b0055d8cdb6c0d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75843727"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908655"
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>Postup instalace Nástroje R pro Visual Studio
 
@@ -44,7 +44,7 @@ RTVS se neinstaluje, pokud máte pouze prostředí sady Visual Studio, které je
 
     ![Úlohy pro datové vědy a analytické aplikace v VS2017](media/installation-data-science-workload.png)
 
-1. Nastavte další možnosti na pravé straně pod stejným názvem úlohy. Ve výchozím nastavení tato úloha zahrnuje podporu F # a Pythonu. Pro R je minimální požadavky **Podpora jazyka r**, **Podpora modulu runtime pro vývoj**v jazyce r a **Microsoft R Client**.
+1. Nastavte další možnosti na pravé straně pod stejným názvem úlohy. Ve výchozím nastavení tato úloha zahrnuje podporu F # a Pythonu. Pro R je minimální požadavky **Podpora jazyka r**, **Podpora modulu runtime pro vývoj** v jazyce r a **Microsoft R Client**.
 
 RTVS je nainstalován v: *% ProgramFiles (x86)% \ Microsoft Visual Studio \<version> \<edition> Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio* , kde *\<version>* je obvykle `2017` a *\<edition>* je `Community` , `Professional` nebo `Enterprise` .
 

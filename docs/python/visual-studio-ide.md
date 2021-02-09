@@ -5,18 +5,18 @@ ms.date: 03/13/2019
 ms.topic: overview
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 dev_langs:
 - Python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9d744e7495323c6e0ce565f33e2cfca95feb0a51
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: d90ee69b8ee7f264a48d6ae01f77ea65e5d1c1b9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928681"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908789"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio | Python
 
@@ -58,7 +58,7 @@ Některé z oblíbených funkcí v aplikaci Visual Studio, které vám pomůžou
 
 - [Refactoring](refactoring-python-code.md)
 
-   Po kliknutí pravým tlačítkem na část kódu a výběru **rychlých akcí a refaktoringu**vám Visual Studio poskytne operace, jako je například inteligentní přejmenování proměnných, extrakce jednoho nebo více řádků kódu do nové metody, změna pořadí parametrů metody a další.
+   Po kliknutí pravým tlačítkem na část kódu a výběru **rychlých akcí a refaktoringu** vám Visual Studio poskytne operace, jako je například inteligentní přejmenování proměnných, extrakce jednoho nebo více řádků kódu do nové metody, změna pořadí parametrů metody a další.
 
    ![Refaktoring v sadě Visual Studio](media/tour-ide-refactor-extract-method.png)
 
@@ -106,7 +106,7 @@ Některé z oblíbených funkcí v aplikaci Visual Studio, které vám pomůžou
 
 - [Ladění](debugging-python-in-visual-studio.md)
 
-    Sada Visual Studio poskytuje komplexní ladicí prostředí pro Python, včetně připojení ke spuštěným procesům, vyhodnocování výrazů v okně **kukátko** a **bezprostředních** oknech, kontrolu místních proměnných, zarážek, krokování/převzetí/převzetí příkazů, **nastavení dalšího příkazu**a další. Můžete také ladit vzdálený kód Pythonu běžící na počítačích se systémem Linux.
+    Sada Visual Studio poskytuje komplexní ladicí prostředí pro Python, včetně připojení ke spuštěným procesům, vyhodnocování výrazů v okně **kukátko** a **bezprostředních** oknech, kontrolu místních proměnných, zarážek, krokování/převzetí/převzetí příkazů, **nastavení dalšího příkazu** a další. Můžete také ladit vzdálený kód Pythonu běžící na počítačích se systémem Linux.
 
     ![Ladění Pythonu v aplikaci Visual Studio](media/remote-debugging-breakpoint-hit.png)
 

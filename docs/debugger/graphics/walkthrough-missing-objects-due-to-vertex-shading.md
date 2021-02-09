@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: e42b54a0-8092-455c-945b-9ecafb129d93
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a7e4c01a990ce4d3fff6769ba016c168b190687f
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 5d07020e3e5b80325daa254f8d8c612a92b9dfb6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994994"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908537"
 ---
 # <a name="walkthrough-missing-objects-due-to-vertex-shading"></a>Návod: Chybějící objekty z důvodu použití vertex shaderu
 Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nástroje Diagnostika grafiky k prozkoumání objektu, který chybí z důvodu chyby, ke které dojde během fáze vertex shader.
@@ -30,7 +30,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 - Použití **zásobníku volání událostí grafiky** k získání zdroje nesprávné HLSL konstanty.
 
-## <a name="scenario"></a>Scénář
+## <a name="scenario"></a>Scenario
  Jeden z běžných příčin chybějícího objektu v 3D aplikaci nastává, když clona vrcholu transformuje vrcholy objektu nesprávnému nebo neočekávanému způsobu, například objekt může být zvětšen na velmi malou velikost nebo transformovat tak, aby se zobrazil za fotoaparátem, nikoli před ním.
 
  V tomto scénáři se při spuštění aplikace pro otestování pozadí vykreslí podle očekávání, ale jeden z objektů se nezobrazí. Pomocí Diagnostika grafiky zachytíte problém do protokolu grafiky, abyste mohli aplikaci ladit. Problém v této aplikaci vypadá následovně:

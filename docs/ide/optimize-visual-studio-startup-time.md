@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: d1508121-8499-4084-8eb5-fa89fa7b17d3
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: c409ad35b3d9c09a5dbe574d00a24d1f2bcb8370
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 6d00979ff1672376c5d22da5ef55e5ad3bdf344a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479950"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909093"
 ---
 # <a name="optimize-visual-studio-startup-time"></a>Optimalizace doby spuštění sady Visual Studio
 
@@ -41,7 +41,7 @@ Dialogové okno obsahuje seznam oken rozšíření a nástroje, které mají vli
 
 1. Otevřete dialogové okno **spravovat výkon sady Visual Studio** výběrem možnosti **help**  >  **spravovat výkon sady Visual Studio** z řádku nabídek.
 
-    Pokud rozšíření zpomaluje spuštění sady Visual Studio, načítání řešení nebo psaní, toto rozšíření se zobrazí v dialogovém okně **spravovat výkon sady Visual Studio** v části spuštění **rozšíření**  >  **Startup** (nebo **načtení** nebo **zadání** řešení).
+    Pokud rozšíření zpomaluje spuštění sady Visual Studio, načítání řešení nebo psaní, toto rozšíření se zobrazí v dialogovém okně **spravovat výkon sady Visual Studio** v části spuštění **rozšíření**  >   (nebo **načtení** nebo **zadání** řešení).
 
     ![Správa zobrazení výkon – zobrazení rozšíření pro Visual Studio](../ide/media/vside_perfdialog_extensions.png)
 
@@ -53,7 +53,7 @@ Rozšíření pro budoucí relace můžete kdykoli znovu povolit pomocí **Sprá
 
 1. Otevřete dialogové okno **spravovat výkon sady Visual Studio** výběrem možnosti **help**  >  **spravovat výkon sady Visual Studio** z řádku nabídek.
 
-    Pokud okno nástroje zpomaluje spuštění sady Visual Studio, okno nástroje se zobrazí v dialogovém okně **spravovat výkon sady Visual Studio** v části **Nástroj spuštění systému Windows**  >  **Startup**.
+    Pokud okno nástroje zpomaluje spuštění sady Visual Studio, okno nástroje se zobrazí v dialogovém okně **spravovat výkon sady Visual Studio** v části **Nástroj spuštění systému Windows**  >  .
 
 2. Vyberte okno nástroje, pro které chcete změnit chování.
 

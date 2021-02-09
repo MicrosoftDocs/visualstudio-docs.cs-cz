@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 76f36bae-f6ab-413c-a8a9-8808bfeba05b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2346bb76fe604265a309a51f48b734fc6f2ab8d0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b76c37d767ae38a33d537a96f9ad8f7087503ed2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80733015"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909953"
 ---
 # <a name="idebugcoreserver3createinstanceinserver"></a>IDebugCoreServer3::CreateInstanceInServer
 Vytvoří instanci ladicího stroje na serveru.
@@ -28,12 +28,12 @@ Vytvoří instanci ladicího stroje na serveru.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT CreateInstanceInServer(
-   LPCWSTR  szDll,
-   WORD     wLangId,
-   REFCLSID clsidObject,
-   REFIID   riid,
-   void**   ppvObject
+HRESULT CreateInstanceInServer(
+   LPCWSTR  szDll,
+   WORD     wLangId,
+   REFCLSID clsidObject,
+   REFIID   riid,
+   void**   ppvObject
 );
 ```
 

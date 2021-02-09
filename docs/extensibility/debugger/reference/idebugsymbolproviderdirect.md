@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 872b04a8-70de-4ab5-aceb-684c81828545
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd1201007b27d3c7c51b5b0d862b36ba0549429b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29f0e7e3d2fefe0f47dc971ebff273bf2745a5ef
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80718899"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909422"
 ---
 # <a name="idebugsymbolproviderdirect"></a>IDebugSymbolProviderDirect
 Představuje poskytovatele symbolu, který má přímý přístup k rozhraním metadat a základních symbolů.

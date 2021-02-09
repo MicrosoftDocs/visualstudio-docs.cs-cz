@@ -9,17 +9,17 @@ ms.topic: tutorial
 ms.devlang: CSharp
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c1f541c94804f8f5f454f6299a116a8bd1386e7
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 342fb2ba0d094299b41707b93b52f3b28a3afdce
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037273"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909258"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>Kurz: Vytvoření první aplikace Univerzální platforma Windows v aplikaci Visual Studio s použitím jazyka XAML a jazyka C&#35;
 
@@ -66,7 +66,7 @@ Nejprve vytvořte projekt Univerzální platforma Windows. Typ projektu se dodá
    > [!NOTE]
    > Pokud nevidíte šablonu projektu **prázdná aplikace (univerzální pro Windows)** , klikněte na odkaz **instalovat další nástroje a funkce** .<br><br>![Klikněte na odkaz instalovat další nástroje a funkce.](media/vs-2019/uwp-not-finding.png)<br><br>Spustí se instalační program pro Visual Studio. Zvolte **Univerzální platforma Windows úlohy vývoje** a pak zvolte **Upravit**.<br><br>![Univerzální platforma Windows úlohy vývoje v Instalační program pro Visual Studio](media/uwp-dev-workload.png)
 
-1. Dejte projektu název, _HelloWorld_a klikněte na **vytvořit**.
+1. Dejte projektu název, _HelloWorld_ a klikněte na **vytvořit**.
 
    ![Obrazovka konfigurace projektu](media/vs-2019/uwp-configure-your-project.png)
 
@@ -76,7 +76,7 @@ Nejprve vytvořte projekt Univerzální platforma Windows. Typ projektu se dodá
 ::: moniker-end
 
    > [!NOTE]
-   > Pokud jste aplikaci Visual Studio poprvé použili k vytvoření aplikace pro UWP, může se zobrazit dialogové okno **Nastavení** . Zvolte **režim vývojář**a pak zvolte **Ano**.<br><br>
+   > Pokud jste aplikaci Visual Studio poprvé použili k vytvoření aplikace pro UWP, může se zobrazit dialogové okno **Nastavení** . Zvolte **režim vývojář** a pak zvolte **Ano**.<br><br>
    > ![Povolení režimu vývojářů v dialogovém okně nastavení UWP](media/enable-developer-mode.png)<br><br>Sada Visual Studio nainstaluje další balíček vývojářského režimu za vás. Po dokončení instalace balíčku zavřete dialogové okno **Nastavení** .
 
 ## <a name="create-the-application"></a>Vytvoření aplikace
@@ -85,7 +85,7 @@ Je čas začít vyvíjet. Přidáte ovládací prvek tlačítko, přidáte pro n
 
 ### <a name="add-a-button-to-the-design-canvas"></a>Přidání tlačítka na plátno návrhu
 
-1. V **Průzkumník řešení**dvakrát klikněte na *MainPage. XAML* a otevřete rozdělené zobrazení.
+1. V **Průzkumník řešení** dvakrát klikněte na *MainPage. XAML* a otevřete rozdělené zobrazení.
 
    ::: moniker range="vs-2017"
    ![Otevřete MainPage. XAML z Průzkumník řešení ](media/uwp-solution-explorer-MainPage-xaml.png)
@@ -102,7 +102,7 @@ Je čas začít vyvíjet. Přidáte ovládací prvek tlačítko, přidáte pro n
 
    ![Kliknutím na panel nástrojů otevřete okno s časovým obdobím panelu nástrojů.](media/uwp-toolbox.png)
 
-   (Pokud nevidíte možnost **panelu nástrojů** , můžete ji otevřít z řádku nabídek. Provedete to tak **View**, že kliknete na  >  **panel nástrojů**zobrazení. Nebo stiskněte klávesu **CTRL** + **ALT** + **X**.)
+   (Pokud nevidíte možnost **panelu nástrojů** , můžete ji otevřít z řádku nabídek. Provedete to tak , že kliknete na  >  **panel nástrojů** zobrazení. Nebo stiskněte klávesu **CTRL** + **ALT** + **X**.)
 
 1. Kliknutím na ikonu **připnutí** můžete ukotvit okno panelu nástrojů.
 
@@ -118,7 +118,7 @@ Je čas začít vyvíjet. Přidáte ovládací prvek tlačítko, přidáte pro n
 
 ### <a name="add-a-label-to-the-button"></a>Přidání popisku na tlačítko
 
-1. V **editoru XAML**změňte hodnotu obsahu tlačítka z "tlačítko" na "Hello World!"
+1. V **editoru XAML** změňte hodnotu obsahu tlačítka z "tlačítko" na "Hello World!"
 
    ![Změňte hodnotu obsahu tlačítka na Hello World](media/uwp-change-button-text-in-xaml-code-window.png)
 
@@ -164,7 +164,7 @@ Kód používá některá rozhraní API systému Windows k vytvoření objektu s
 ::: moniker range="vs-2017"
 Je čas sestavování, nasazování a spuštění aplikace "Hello World", která zobrazuje vzhled a zvuky jako. Jak na to:
 
-1. K spuštění aplikace v místním počítači použijte tlačítko Přehrát ( **místní počítač**obsahuje text).
+1. K spuštění aplikace v místním počítači použijte tlačítko Přehrát ( **místní počítač** obsahuje text).
 
    ![Kliknutím na místní počítač spustíte a naladíte aplikaci UWP.](media/uwp-start-or-debug.png)
 
@@ -184,7 +184,7 @@ Je čas sestavování, nasazování a spuštění aplikace "Hello World", která
 ::: moniker range=">=vs-2019"
 Je čas sestavování, nasazování a spuštění aplikace "Hello World", která zobrazuje vzhled a zvuky jako. Jak na to:
 
-1. K spuštění aplikace v místním počítači použijte tlačítko Přehrát ( **místní počítač**obsahuje text).
+1. K spuštění aplikace v místním počítači použijte tlačítko Přehrát ( **místní počítač** obsahuje text).
 
    ![Kliknutím na místní počítač spustíte a naladíte aplikaci UWP.](media/uwp-start-or-debug.png)
 

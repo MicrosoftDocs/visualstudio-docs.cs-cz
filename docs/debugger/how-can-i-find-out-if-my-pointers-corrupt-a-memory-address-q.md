@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a147c939-4fb1-415c-8410-cf303781e9e8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 310ec0b881c3b4a299a3d933511e54db0e288ddf
-ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
+ms.openlocfilehash: 3a1857d349f339a537748f11154b43f7d30c7bdb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97398361"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910029"
 ---
 # <a name="how-can-i-find-out-if-my-pointers-corrupt-a-memory-address"></a>Jak zjistím, že moje ukazatele poškodily adresu paměti?
 ## <a name="problem-description"></a>Popis problému

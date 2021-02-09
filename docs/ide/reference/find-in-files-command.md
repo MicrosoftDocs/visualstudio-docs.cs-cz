@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2fc78bfe-b339-4599-97f9-4cafd8a194d9
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: aa0a907332b3ce0164573b809ee9c4b2ac2addda
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 6fc824a7166e3bbaba84bd49e89f1fdf30b65761
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305393"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908960"
 ---
 # <a name="find-in-files-command"></a>Najít v souborech – příkaz
 Vyhledejte soubory pomocí podmnožiny možností dostupných na kartě **najít v souborech** okna **Najít a nahradit** .
@@ -38,7 +38,7 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 `findwhat`\
 Povinná hodnota. Text, který se má shodovat.
 
-## <a name="switches"></a>Přepínače
+## <a name="switches"></a>přepínače,
 /Case nebo/c\
 Nepovinný parametr. Shody se objeví pouze v případě, že velká a malá písmena přesně odpovídají znakům zadaným v `findwhat` argumentu.
 

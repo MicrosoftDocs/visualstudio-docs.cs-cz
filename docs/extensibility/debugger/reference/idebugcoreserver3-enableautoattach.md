@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 06aa633b-263b-4e08-8844-9a52d5120b94
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d529bb80f79a3f2972e9349a2679bb528cc10463
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7873480c979bba4f52203c02864d24aa88cf06cb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80732909"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99907993"
 ---
 # <a name="idebugcoreserver3enableautoattach"></a>IDebugCoreServer3::EnableAutoAttach
 Povolí automatické připojení pro zadané moduly ladění.
@@ -28,20 +28,20 @@ Povolí automatické připojení pro zadané moduly ladění.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT EnableAutoAttach(
-   GUID*     rgguidSpecificEngines,
-   DWORD     celtSpecificEngines,
-   LPCOLESTR pszStartPageUrl,
-   BSTR*     pbstrSessionId
+HRESULT EnableAutoAttach(
+   GUID*     rgguidSpecificEngines,
+   DWORD     celtSpecificEngines,
+   LPCOLESTR pszStartPageUrl,
+   BSTR*     pbstrSessionId
 );
 ```
 
 ```csharp
-int EnableAutoAttach(
-   Guid[]     rgguidSpecificEngines,
-   uint       celtSpecificEngines,
-   string     pszStartPageUrl,
-   out string pbstrSessionId
+int EnableAutoAttach(
+   Guid[]     rgguidSpecificEngines,
+   uint       celtSpecificEngines,
+   string     pszStartPageUrl,
+   out string pbstrSessionId
 );
 ```
 

@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: 238bb4ec-bb00-4c2b-986e-18ac278f3959
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 40081f276dc9649cf448bf00e80d11fc80f58f47
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: d7552ab67b70b3af8cfd1603462089e4fe2a209e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98204823"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908210"
 ---
 # <a name="remote-debugger-port-assignments"></a>Přiřazení portů vzdáleného ladicího programu
 Visual Studio Remote Debugger může běžet jako aplikace nebo jako služba na pozadí. Když je aplikace spuštěna jako aplikace, používá port, který je přiřazen ve výchozím nastavení následujícím způsobem:

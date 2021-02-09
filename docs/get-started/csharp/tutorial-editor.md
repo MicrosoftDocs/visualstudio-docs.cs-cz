@@ -7,17 +7,17 @@ ms.technology: vs-ide-general
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8122f42fb5d2ec4c31ec553407b644e59e9f4418
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8724fcb717953f3897bab092eb3895e228e10c60
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88248292"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909224"
 ---
 # <a name="learn-to-use-the-code-editor-with-c"></a>Naučte se používat editor kódu s C.\#
 
@@ -58,7 +58,7 @@ Začněte vytvořením nového souboru a přidáním nějakého kódu do něj.
 
 ::: moniker-end
 
-2. V nabídce **soubor** v řádku nabídek zvolte možnost **Nový**  >  **soubor**nebo stiskněte klávesu **CTRL** + **N**.
+2. V nabídce **soubor** v řádku nabídek zvolte možnost **Nový**  >  **soubor** nebo stiskněte klávesu **CTRL** + **N**.
 
 3. V dialogovém okně **nový soubor** v kategorii **Obecné** zvolte položku **Třída Visual C#** a pak zvolte možnost **otevřít**.
 
@@ -80,7 +80,7 @@ Visual Studio poskytuje užitečné *fragmenty kódu* , které můžete použít
 
    Uvidíte, že `static void Main()` signatura metody se přidá do souboru. Metoda [Main ()](/dotnet/csharp/programming-guide/main-and-command-args/) je vstupním bodem pro aplikace v jazyce C#.
 
-Dostupné fragmenty kódu se liší v různých programovacích jazycích. Můžete se podívat na dostupné fragmenty kódu pro váš jazyk, a to tak, že vyberete **Upravit**  >  **IntelliSense**  >  **Vložit fragment** nebo stisknout **CTRL** + **K**, **CTRL** + **X**a pak zvolíte složku vašeho jazyka. V jazyce C# seznam vypadá takto:
+Dostupné fragmenty kódu se liší v různých programovacích jazycích. Můžete se podívat na dostupné fragmenty kódu pro váš jazyk, a to tak, že vyberete **Upravit**  >  **IntelliSense**  >  **Vložit fragment** nebo stisknout **CTRL** + **K**, **CTRL** + **X** a pak zvolíte složku vašeho jazyka. V jazyce C# seznam vypadá takto:
 
 ![Seznam fragmentů kódu v jazyce C#](../media/tutorial-code-snippet-list.png)
 
@@ -175,7 +175,7 @@ Nikdo nezíská kód napravo poprvé a jedna z věcí, kterou je třeba změnit,
 
    Automaticky otevíraná okna pro **přejmenování** se zobrazí v pravém horním rohu editoru.
 
-1. Zadejte požadovaná **slova**názvu. Všimněte si, že odkaz na `words` v dotazu je také automaticky přejmenován. Než stisknete klávesu **ENTER**, zaškrtněte políčko **zahrnout komentáře** v automaticky otevíraném okně pro **přejmenování** .
+1. Zadejte požadovaná **slova** názvu. Všimněte si, že odkaz na `words` v dotazu je také automaticky přejmenován. Než stisknete klávesu **ENTER**, zaškrtněte políčko **zahrnout komentáře** v automaticky otevíraném okně pro **přejmenování** .
 
    ![přejmenování dialogového okna](../media/tutorial-rename.png)
 

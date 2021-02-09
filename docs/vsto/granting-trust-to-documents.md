@@ -14,15 +14,15 @@ helpviewer_keywords:
 - granting trust [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9d91a86f8596e0ed7a04ae68099c7c9ab6099a40
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: e2871741d7297b6efabf53bb6f258355c41cac49
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847738"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910250"
 ---
 # <a name="grant-trust-to-documents"></a>Udělení důvěryhodnosti k dokumentům
   Projekt na úrovni dokumentu má stejné požadavky na zabezpečení jako projekty na úrovni aplikace: podepisování manifestů pomocí certifikátu nebo kliknutí na výzvu vztahu důvěryhodnosti. Kromě toho musí být dokument nebo sešit umístěn v adresáři, který je určen jako důvěryhodné umístění.

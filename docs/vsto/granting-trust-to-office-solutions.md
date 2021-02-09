@@ -14,15 +14,15 @@ helpviewer_keywords:
 - granting trust [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f0b81c034ed0f8934da378dc214191d3be1f4506
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: f98f3154a0708ce7a01603968f0f5774dd86f40e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848323"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910231"
 ---
 # <a name="grant-trust-to-office-solutions"></a>Udělení vztahu důvěryhodnosti řešením pro systém Office
   Udělení vztahu důvěryhodnosti řešením pro systém Office znamená úpravu zásad zabezpečení pro každý cílový počítač pro důvěřování sestavení řešení, manifestu aplikace, manifestu nasazení a dokumentu. K řešení pro Office můžete udělit přístup buď vy, nebo koncovým uživatelem.

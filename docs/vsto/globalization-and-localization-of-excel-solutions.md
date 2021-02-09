@@ -11,15 +11,15 @@ helpviewer_keywords:
 - globalization [Office development in Visual Studio], configuring
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 51e4a2cc4fb74309c44b8068152253de92eed0df
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: fc61f66b2aefaf0e43b1b5af819e0e244feec114
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847751"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910308"
 ---
 # <a name="globalization-and-localization-of-excel-solutions"></a>Globalizace a lokalizace řešení pro Excel
   Tato část obsahuje informace o speciálních faktorech pro systém Microsoft Office excelových řešení, která se spustí v počítačích, které mají nastavení jiné než anglické verze systému Windows. Většina aspektů globalizace a lokalizace systém Microsoft Office řešení se shoduje s tím, jak se setkáte při vytváření jiných druhů řešení pomocí sady Visual Studio. Obecné informace najdete v tématu [globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md).
@@ -79,7 +79,7 @@ Application.ActiveCell.Value2 = "05/12/04"
 
  Stejný kód, při použití v řešení vytvořeném pomocí vývojářských nástrojů Office v sadě Visual Studio a předaných do aplikace Excel prostřednictvím zprostředkovatele komunikace s objekty COM, vytváří stejné výsledky, pokud je datum formátováno ve stylu en-US.
 
- Například:
+ Příklad:
 
  [!code-vb[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#6)]
  [!code-csharp[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#6)]

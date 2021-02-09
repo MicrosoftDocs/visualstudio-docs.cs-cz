@@ -14,15 +14,15 @@ helpviewer_keywords:
 - outlining code
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e45d7192c35ed60442fadf1a3eb302997fbaf381
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 04a2156723bc33e25a658814b9348655f7ba86d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136664"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909061"
 ---
 # <a name="outlining"></a>Sbalování
 
@@ -35,14 +35,14 @@ Oblasti v okraji osnovy jsou zvýrazněny také při přesunutí ukazatele myši
 
 Když pracujete v předčárovém kódu, můžete rozbalit oddíly, na kterých chcete pracovat, sbalit je po dokončení a pak přejít na jiné oddíly. Pokud nechcete, aby se zobrazovalo sbalení, můžete pomocí příkazu **zastavit sbalení** odebrat informace o přehledu, aniž byste narušili váš podkladový kód.
 
-Tyto akce mají vliv na příkazy **zpět** a **znovu** v nabídce **Upravit** . Operace **kopírování**, **vyjmutí**, **vložení**a přetažení uchovávají informace o sbalení, ale ne stav sbalitelné oblasti. Když například kopírujete sbalenou oblast, operace **vložení** Vloží zkopírovaný text jako rozbalenou oblast.
+Tyto akce mají vliv na příkazy **zpět** a **znovu** v nabídce **Upravit** . Operace **kopírování**, **vyjmutí**, **vložení** a přetažení uchovávají informace o sbalení, ale ne stav sbalitelné oblasti. Když například kopírujete sbalenou oblast, operace **vložení** Vloží zkopírovaný text jako rozbalenou oblast.
 
 > [!CAUTION]
 > Když změníte oblast s přířádkou, může dojít ke ztrátě osnovy. Například odstranění nebo **vyhledání a nahrazení** operací může vymazat konec oblasti.
 
 Následující příkazy lze najít v podnabídce **Upravit**  >  **sbalení** .
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |Skrýt výběr|(**CTRL** + **M**, **CTRL** + **H**) – Sbalí vybraný blok kódu, který by normálně nebyl dostupný pro sbalení, například `if` blok. Pokud chcete odebrat vlastní oblast, použijte **zastavit skrývání současného** (nebo **CTRL** + **M**, **CTRL** + **U**). Není k dispozici v Visual Basic.|
 |Přepnout rozšíření osnovy| (**CTRL** + **M**, **CTRL** + **m**) – vrátí aktuální skrytý nebo rozbalený stav nejvnitřnější sekce sbalení, pokud kurzor leží ve vloženém sbaleném oddílu.|

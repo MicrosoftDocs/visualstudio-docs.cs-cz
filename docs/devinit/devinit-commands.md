@@ -5,18 +5,18 @@ ms.date: 08/28/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 153864a293ca25fdcf30f23b96f686737411c965
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9cd9fef6cebdefc190d37c067616e51c6d3e372f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435784"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908129"
 ---
 # <a name="devinit-commands"></a>příkazy devinit
 
@@ -34,10 +34,10 @@ Volitelné možnosti pro `devinit init` příkaz
 
 | Argument             | Povinné | Popis                                                               |
 |----------------------|----------|---------------------------------------------------------------------------|
-| -f,--soubor            | No       | Cesta k `.devinit.json` souboru                                         |
-| --Error-Action       | No       | Určuje, jak se mají zpracovávat chyby. Možnosti: zastavit, ignorovat, pokračovat (výchozí).|
-| -v,--verbose         | No       | Vygeneruje podrobný výstup.                                                      |
-| -n,--suchého běhu         | No       | Suché spuštění.                                                                  |
+| -f,--soubor            | Ne       | Cesta k `.devinit.json` souboru                                         |
+| --Error-Action       | Ne       | Určuje, jak se mají zpracovávat chyby. Možnosti: zastavit, ignorovat, pokračovat (výchozí).|
+| -v,--verbose         | Ne       | Vygeneruje podrobný výstup.                                                      |
+| -n,--suchého běhu         | Ne       | Suché spuštění.                                                                  |
 
 #### <a name="--file-argument"></a>--argument souboru
 
@@ -81,18 +81,18 @@ Možnosti `devinit run` příkazu
 
 | Argument                                      | Povinné | Popis                                                                          |
 |-----------------------------------------------|----------|--------------------------------------------------------------------------------------|
-| -t,--nástroj                                     | Yes      | Povinná hodnota. Název nástroje.                                                             |
-| -i,--vstup                                    | No       | Vstupní hodnota nástroje Například název souboru, balíček nebo název.                     |
-| --Error-Action                                | No       | Určuje způsob zpracování chyb nástrojů: zastavit, ignorovat, pokračovat. Výchozím nastavením je zastavit. |
-| -v,--verbose                                  | No       | Vygeneruje podrobný výstup.                                                                 |
-| -n,--suchého běhu                                  | No       | Suché spuštění.                                                                             |
-| --&lt;arg1 &gt; &lt; arg2 &gt; ... &lt; argN&gt;  | No       | Další argumenty příkazového řádku nástroje.                                       |
+| -t,--nástroj                                     | Ano      | Povinná hodnota. Název nástroje.                                                             |
+| -i,--vstup                                    | Ne       | Vstupní hodnota nástroje Například název souboru, balíček nebo název.                     |
+| --Error-Action                                | Ne       | Určuje způsob zpracování chyb nástrojů: zastavit, ignorovat, pokračovat. Výchozím nastavením je zastavit. |
+| -v,--verbose                                  | Ne       | Vygeneruje podrobný výstup.                                                                 |
+| -n,--suchého běhu                                  | Ne       | Suché spuštění.                                                                             |
+| --&lt;arg1 &gt; &lt; arg2 &gt; ... &lt; argN&gt;  | Ne       | Další argumenty příkazového řádku nástroje.                                       |
 
 #### <a name="--error-action-argument"></a>--error – argument akce
 
 Určuje akci, která má být provedena, pokud nástroj vrátí nenulový ukončovací kód. Platné hodnoty jsou:
 
-| Argument | Popis                                                                                                                                                                                                                                                                           |
+| Argument | Description                                                                                                                                                                                                                                                                           |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | continue | Pokračovat v zpracovávání jiných nástrojů po vygenerování chyby se standardní chybou Ukončovací kód devinit.exe je nenulový (selhání). Toto chování je podobné akci zastavení chyby, ale zpracování pokračuje. `continue` je výchozí chyba – akce příkazu init.              |
 | ignorovat   | Pokračujte v zpracovávání jiných nástrojů po vygenerování upozornění na standardní výstup. Ukončovací kód procesu DevInit by měl vždy být nula (úspěch). `ignore`Nastavení ignoruje všechny chyby.                                                                                                      |
@@ -140,7 +140,7 @@ devinit show -t <toolname>
 
 | Argument       | Povinné | Popis                                                                          |
 |----------------|----------|--------------------------------------------------------------------------------------|
-| -t,--nástroj      | Yes      | Povinná hodnota. Název nástroje.                                                             |
+| -t,--nástroj      | Ano      | Povinná hodnota. Název nástroje.                                                             |
 
 Vytiskne informace o nápovědě pro daný nástroj.
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f0bca1cc-afbe-44cf-b5aa-d078aa685d24
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 815a945f6fb591960ebf0bf4b4fcd9d842ffefd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e11472c2c883705c36ab71a37b1af10eb1cb5b10
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80720679"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909808"
 ---
 # <a name="idebugproviderprogramnode2"></a>IDebugProviderProgramNode2
 Toto rozhraní zařazování rozhraní souvisejících s programy napříč hranicemi procesů.
@@ -32,7 +32,7 @@ IDebugProviderProgramNode2 : IUnknown
  Ladicí stroj (DE) implementuje toto rozhraní na stejném objektu, který implementuje [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) pro podporu zařazování rozhraní napříč hranicemi procesů.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- [QueryInterface](/cpp/atl/queryinterface) `IDebugProgramNode2` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface. Pokud toto rozhraní nelze získat, DE nepodporuje zařazování rozhraní.
+ [](/cpp/atl/queryinterface) `IDebugProgramNode2` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface. Pokud toto rozhraní nelze získat, DE nepodporuje zařazování rozhraní.
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
  Toto rozhraní implementuje následující metodu:

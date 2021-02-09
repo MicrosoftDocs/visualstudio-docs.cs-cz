@@ -9,18 +9,18 @@ ms.topic: tutorial
 ms.devlang: CSharp
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 484cb82a3659e306bd4c6bd14a3133c4677160db
-ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
+ms.openlocfilehash: ff5e23a92409a3169add19c8810bec44fa4db9ad
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833335"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909360"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Kurz: Vytvoření jednoduché konzolové aplikace v jazyce C# v aplikaci Visual Studio
 
@@ -49,13 +49,13 @@ Začněte tím, že vytvoříte projekt aplikace v jazyce C#. Typ projektu se do
 2. V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
    (Případně stiskněte klávesu **CTRL** + **Posun** + **N**).
 
-3. V levém podokně dialogového okna **Nový projekt** rozbalte položku **C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte soubor **_Kalkulačka_* _.
+3. V levém podokně dialogového okna **Nový projekt** rozbalte položku **C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte **_kalkulačku_** souborů.
 
    ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém prostředí sady Visual Studio](./media/new-project-csharp-calculator-console-app.png)
 
 ### <a name="add-a-workload-optional"></a>Přidat úlohu (volitelné)
 
-Pokud nevidíte šablonu projektu _ *Konzolová aplikace (.NET Core)**, můžete ji získat přidáním úlohy **vývoje .NET Core pro různé platformy** . Jak na to:
+Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete ji získat přidáním úlohy **vývoje .NET Core pro různé platformy** . Jak na to:
 
 #### <a name="option-1-use-the-new-project-dialog-box"></a>Možnost 1: použití dialogového okna Nový projekt
 

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fae84f68-2138-4144-9bd4-c9e271b6182a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c5a76bf799eabd29b778c2dec867cc7e50aa45ee
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 88880110ca00141382d7038ec001f3cc4159f2b3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205525"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908331"
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Pseudoproměnné v ladicím programu sady Visual Studio
 Pseudoproměnné jsou výrazy používané k zobrazení určitých informací v okně proměnných nebo v dialogovém okně **QuickWatch** . Pseudoproměnnou můžete zadat stejným způsobem, jako byste zadali normální proměnnou. Pseudoproměnné nejsou proměnné, ale neodpovídají názvům proměnných v programu.
