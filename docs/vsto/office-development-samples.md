@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Office development in Visual Studio, samples
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d80598033c834e8567ab58368da73350b3cd9ff3
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: caf3178355697b8dba997dbcb66dfa8ef5569e36
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525170"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926570"
 ---
 # <a name="office-development-samples"></a>Ukázky vývoje pro Office
   Sada Visual Studio obsahuje ukázkové aplikace, které demonstrují použití nástrojů systém Microsoft Office Developer Tools k vytváření řešení pro systém Office. Kód v těchto ukázkách ukazuje syntaxi, strukturu a techniky, které slouží k sestavování řešení pro systém Office.

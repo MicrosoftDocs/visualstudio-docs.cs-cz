@@ -13,15 +13,15 @@ helpviewer_keywords:
 - signing manifests [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7451630570e6d557dc5d2b635d149ebc07cfb388
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 3135962c8476fdb6970fc137e689c638299f8f81
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528112"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927636"
 ---
 # <a name="how-to-sign-office-solutions"></a>Postupy: podepisování řešení pro systém Office
   Pokud podepíšete řešení, můžete k řešení důvěřovat pomocí certifikátu jako legitimace. Stejný certifikát můžete použít pro více řešení a všechna řešení budou důvěryhodná bez dalších aktualizací zásad zabezpečení.

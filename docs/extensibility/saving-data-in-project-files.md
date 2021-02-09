@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a3d4b15b-a91e-41ba-b235-e62632d11bc5
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4746ebb4a92d5c2688063336cb3772de8d72ee1b
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: 0c18923a7866f2bb141371c4c703377e298c1e61
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715688"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926908"
 ---
 # <a name="save-data-in-project-files"></a>Uložení dat v souborech projektu
 Podtyp projektu může uložit a načíst data specifická pro podtypy v souboru projektu. Sada Managed Package Framework (MPF) poskytuje dvě rozhraní k provedení této úlohy:

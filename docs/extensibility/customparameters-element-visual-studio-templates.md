@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: cf3efc91-1532-4022-bbb8-a18658424fee
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c78c8a038df33d9b548229966402d0058f53144
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: a899790890bd299dcb77558d31499b0a61bcefe4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671476"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927129"
 ---
 # <a name="customparameters-element-visual-studio-templates"></a>CustomParameters – – element (šablony sady Visual Studio)
 Seskupí vlastní parametry, které mají být předány Průvodci šablonou, když průvodce provede nahrazení parametru.

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 66a1bc7e-6540-4164-963d-557196a69d8a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4858a9efdad747293a94563196108d895c40880b
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 9eb06c54caceb2e9329347fb1dd0114749975e7d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351242"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927584"
 ---
 # <a name="how-to-create-a-localized-bootstrapper-package"></a>Postupy: Vytvoření lokalizovaného balíčku bootstrapperu
-Po vytvoření balíčku zaváděcího nástroje můžete vytvořit lokalizované verze balíčku zaváděcího nástroje, a to vytvořením dalších dalších souborů pro každé národní prostředí: souboru licenčních podmínek softwaru (například *EULA. RTF* ) a manifestu balíčku ( *package.xml* ).
+Po vytvoření balíčku zaváděcího nástroje můžete vytvořit lokalizované verze balíčku zaváděcího nástroje, a to vytvořením dalších dalších souborů pro každé národní prostředí: souboru licenčních podmínek softwaru (například *EULA. RTF*) a manifestu balíčku (*package.xml*).
 
  Ve výchozím nastavení Visual Studio 2010 obsahuje lokalizované balíčky zaváděcího nástroje jenom pro .NET Framework 4, .NET Framework 4 Client Profiles, F # runtime 2,0 a F # runtime 4,0. Pomocí tří kroků můžete vytvořit lokalizované balíčky pro další zaváděcí nástroje.
 
@@ -30,7 +30,7 @@ Po vytvoření balíčku zaváděcího nástroje můžete vytvořit lokalizovan�
 
 2. Vytvořte soubor, který obsahuje licenční smlouvy k softwaru pro balíček zaváděcího nástroje, a vložte ho do nové složky.
 
-3. Vytvořte manifest balíčku s názvem *package.xml* , aktualizujte řetězce a jazykovou verzi a vložte soubor do nové složky. Pokud jste již vytvořili zaváděcí nástroj sady Visual Studio v cílovém jazyce, můžete zkopírovat soubor *package.xml* sady Visual Studio a upravit ho v tomto kroku.
+3. Vytvořte manifest balíčku s názvem *package.xml*, aktualizujte řetězce a jazykovou verzi a vložte soubor do nové složky. Pokud jste již vytvořili zaváděcí nástroj sady Visual Studio v cílovém jazyce, můžete zkopírovat soubor *package.xml* sady Visual Studio a upravit ho v tomto kroku.
 
 > [!NOTE]
 > Pokud k nasazení aplikací používáte projekt instalace, můžete aplikaci lokalizovat změnou vlastnosti **Localization** .

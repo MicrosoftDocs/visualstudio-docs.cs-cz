@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data binding [Office development in Visual Studio], multiple columns
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 988394595e8aa4710a22e1fedf22a921481c7396
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 2dc5708da09074c7d973336958c9e89c16bf9da6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527118"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927662"
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>Návod: komplexní datové vazby v projektech na úrovni dokumentu
   Tento názorný postup ukazuje základy komplexních datových vazeb v projektech na úrovni dokumentu. V systém Microsoft Officeovém listu aplikace Excel můžete navazovat více buněk na pole v databázi Northwind SQL Server.
@@ -40,7 +40,7 @@ ms.locfileid: "97527118"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "97527118"
 
 1. Vyberte buňku v rámci objektu list.
 
-    V dolní části seznamu se zobrazí nový řádek s hvězdičkou (* *\** _) v první buňce nového řádku.
+    Na konci seznamu se zobrazí nový řádek s hvězdičkou ( **\*** ) v první buňce nového řádku.
 
 2. Do prázdného řádku přidejte následující informace.
 
@@ -187,7 +187,7 @@ ms.locfileid: "97527118"
 
 ### <a name="to-delete-rows"></a>Odstranění řádků
 
-- Pravým tlačítkem myši klikněte na číslo 16 (řádek 16) na levé straně listu a pak klikněte na _ * odstranit * *.
+- Pravým tlačítkem myši klikněte na číslo 16 (řádek 16) na levé straně listu a pak klikněte na **Odstranit**.
 
 ### <a name="to-sort-the-rows-in-the-list"></a>Řazení řádků v seznamu
 

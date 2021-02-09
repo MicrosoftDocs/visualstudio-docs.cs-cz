@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: e42f33ed-f29c-4e45-92ce-ab504b72d77c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a16f2c39fa2d53ffc4d113666ef7630557e61861
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b65d8a3171de6ac33526bafadbe04254ce58855
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80723564"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926265"
 ---
 # <a name="idebugprocess3sethostingprocesslanguage"></a>IDebugProcess3::SetHostingProcessLanguage
 Tato metoda nastaví jazyk, pod kterým bude proces hostovaný. Tento jazyk je pak možné použít ladicím modulem (DE) k načtení příslušného vyhodnocovacího filtru výrazů.
@@ -28,8 +28,8 @@ Tato metoda nastaví jazyk, pod kterým bude proces hostovaný. Tento jazyk je p
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT SetHostingProcessLanguage(
-   REFGUID guidLang
+HRESULT SetHostingProcessLanguage(
+   REFGUID guidLang
 );
 ```
 

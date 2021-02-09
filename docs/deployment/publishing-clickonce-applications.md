@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: eb6dfe79-f54c-4331-8e36-073688e70973
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 737e1092d88c48227183a32072502cb833ebcd37
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: fa9e94bf124888d05b6393a4821b5db61181871c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349487"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927571"
 ---
 # <a name="publish-clickonce-applications"></a>Publikování aplikací ClickOnce
 Při prvním publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace lze vlastnosti publikování nastavit pomocí Průvodce publikováním. V průvodci jsou k dispozici pouze některé vlastnosti. všechny ostatní vlastnosti jsou nastaveny na výchozí hodnoty.

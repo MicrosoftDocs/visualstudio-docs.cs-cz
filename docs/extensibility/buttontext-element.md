@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 56aba884-0356-4894-ae4e-32d3938f6865
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2db20bb3298a7b849e8bc4a261987c5314a29841
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: b03b5fce58795488f6c379fcf93e5f7fea074e13
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974468"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927168"
 ---
 # <a name="buttontext-element"></a>Element ButtonText
 Toto pole umožňuje určit text, který se zobrazí v různých nabídkách. Ve výchozím nastavení se `ButtonText` prvek zobrazuje v řadičích nabídek. `ButtonText`Element se také stal výchozím nastavením, pokud jsou ostatní textová pole prázdná. `ButtonText`Element nemůže být prázdný, i když jsou uvedena další textová pole.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ButtonText>My Command</ButtonText>

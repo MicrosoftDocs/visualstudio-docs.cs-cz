@@ -7,15 +7,15 @@ ms.topic: overview
 ms.assetid: f5192fbd-c78f-40a8-a4d4-443209610268
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bac48316e60422b9561535d67c14aeadbd416f4
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 6d228b340631404b7ac2af964535874144491724
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134227"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926379"
 ---
 # <a name="shader-designer-nodes"></a>Uzly návrháře shaderu
 Články v této části dokumentace obsahují informace o různých uzlech návrháře shaderů, které lze použít k vytvoření grafických efektů.

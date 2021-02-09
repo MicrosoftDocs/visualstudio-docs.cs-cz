@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 54d5af60-0b44-4ae1-aa57-45aa03f89f3d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3121189b1d73543d2a01bbf0b149c6a98eab6909
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: e8c6febd609695be49fe868041faea25af70fed5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94973753"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927376"
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Změny v rozšíření sady Visual Studio 2017
 
@@ -72,7 +72,7 @@ Většina základních sestavení sady Visual Studio již není nainstalována d
   * Kopie v mezipaměti GAC byla odebrána z instalačního programu.
   * Byl přidán soubor *. pkgdef* , který určuje základní položku kódu pro sestavení.
 
-    Například:
+    Příklad:
 
     ```
     [$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{UniqueGUID}]

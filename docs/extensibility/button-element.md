@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 96dccf51-2b00-4700-9d28-924b34c21ecd
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8da92f721f0f4333ffb32ac5cb080d87e4fc0543
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 51b202db9210fa5c1f3d5b26b5177cc0b5e1e0a2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974492"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927311"
 ---
 # <a name="button-element"></a>Element Button
 Definuje prvek, se kterým může uživatel pracovat. Tlačítka mohou mít různé druhy: Button, MenuButton a SplitDropDown.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <Button guid="guidMyCommandSet" id="MyCommand" priority="0x102" type="button">
@@ -45,7 +45,7 @@ Definuje prvek, se kterým může uživatel pracovat. Tlačítka mohou mít růz
 |id|Povinná hodnota. ID identifikátoru příkazu GUID/ID|
 |upřednostněn|Nepovinný parametr. Číselná hodnota, která určuje prioritu.|
 |typ|Nepovinný parametr. Hodnota výčtu, která určuje druh tlačítka.<br /><br /> Pokud není zadaný, použije se tlačítko.<br /><br /> Tlačítko<br /> Standardní příkaz, který se zobrazí na panelech nástrojů (obvykle jako tlačítko ikonickým), v nabídkách a místních nabídkách.<br /><br /> MenuButton<br /> Položka nabídky, která nespustí příkaz, ale vytvoří jinou nabídku.<br /><br /> SplitDropDown<br /> Ovládací prvky, jako jsou tlačítka zpět a znovu na standardním panelu nástrojů v aplikaci Microsoft Word.|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené elementy
 

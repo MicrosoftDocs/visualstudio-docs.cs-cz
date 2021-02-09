@@ -14,15 +14,15 @@ helpviewer_keywords:
 - casting, object to specific type
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 201b850d8a577f8cc76aff97e2370998b6f885ed
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 455816b2e23a25ad5ef83c726b2a78e4245ed99a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97523564"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927649"
 ---
 # <a name="late-binding-in-office-solutions"></a>Pozdní vazba v řešeních pro systém Office
   Některé typy v objektových modelech aplikace Office poskytují funkce, které jsou k dispozici prostřednictvím funkcí s pozdní vazbou. Například některé metody a vlastnosti mohou vracet různé typy objektů v závislosti na kontextu aplikace sady Office a některé typy mohou vystavovat různé metody nebo vlastnosti v různých kontextech.

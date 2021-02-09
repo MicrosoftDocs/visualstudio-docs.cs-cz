@@ -19,15 +19,15 @@ helpviewer_keywords:
 - examples [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5b5b1c34ef295558c42d181032dcf3dd7c456289
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 1762fcd07e42c8af5d51d31e9ab1f455d6f5d6bb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527725"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926583"
 ---
 # <a name="office-development-samples-and-walkthroughs"></a>Ukázky a návody pro vývoj pro Office
   Tato část obsahuje ukázkové aplikace, ukázkový kód a podrobné návody, které ilustrují syntaxi, strukturu a techniky, které slouží k sestavování systém Microsoft Office řešení.
@@ -40,7 +40,7 @@ ms.locfileid: "97527725"
 
 ## <a name="in-this-section"></a>V této části
 
-|Téma|Popis|
+|Téma|Description|
 |-----------|-----------------|
 |[Ukázky vývoje pro Office](../vsto/office-development-samples.md)|Obsahuje odkazy na ukázkové aplikace, které ilustrují použití vývoje pro Office a SharePoint v sadě Visual Studio.|
 |[Návody pomocí aplikace Word](../vsto/walkthroughs-using-word.md)|Obsahuje podrobné návody, které poskytují Úvod k vývojářským nástrojům pro Office v sadě Visual Studio a k ilustraci, jak můžete integrovat Word do Office Business Applications.|
@@ -51,7 +51,7 @@ ms.locfileid: "97527725"
 
 ## <a name="related-sections"></a>Související oddíly
 
-|Téma|Popis|
+|Téma|Description|
 |-----------|-----------------|
 |[Začněte &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)|Obsahuje odkazy na informace o nastavení, šablonách projektů, sestaveních primární spolupráce pro Office a novinkách při vývoji pro Office.|
 |[Architektura řešení pro systém Office v sadě Visual Studio](../vsto/architecture-of-office-solutions-in-visual-studio.md)|Vysvětluje, jak spravovaný kód Office funguje z perspektivy vývojáře a koncového uživatele, a obsahuje informace o tom, jak spravovaný kód funguje s dokumenty a aplikacemi Office.|

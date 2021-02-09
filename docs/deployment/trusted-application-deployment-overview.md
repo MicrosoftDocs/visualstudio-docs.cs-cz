@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b24a1702-8fbe-45b1-87a0-9618a0708f1d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 96dfb98b468782f771d866b33b94b2c18de6276f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 76f8aec5cec1d06b3c6162524e02ae1bb2faefc0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350488"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927402"
 ---
 # <a name="trusted-application-deployment-overview"></a>Přehled nasazení důvěryhodných aplikací
 Toto téma poskytuje přehled o tom, jak nasadit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace se zvýšenými oprávněními pomocí technologie nasazení důvěryhodných aplikací.
@@ -36,7 +36,7 @@ Toto téma poskytuje přehled o tom, jak nasadit [!INCLUDE[ndptecclick](../deplo
 ## <a name="trusted-application-deployment-basics"></a>Základy nasazení důvěryhodných aplikací
  V následující tabulce jsou uvedeny objekty a role, které jsou součástí nasazení důvěryhodné aplikace.
 
-|Objekt nebo role|Popis|
+|Objekt nebo role|Description|
 |--------------------|-----------------|
 |správce|Organizační entita zodpovědná za aktualizace a údržbu klientských počítačů|
 |správce vztahu důvěryhodnosti|Podsystém v rámci modulu CLR (Common Language Runtime), který je zodpovědný za vynucování zabezpečení klientských aplikací.|
@@ -79,7 +79,7 @@ Chcete-li využít výhod nasazení důvěryhodných aplikací, je nutné postup
 
 - <xref:System.Security.Cryptography?displayProperty=fullName>Obor názvů.
 
-- *CertMgr.exe* , která je součástí aplikace Internet Explorer a je proto v systému Windows 98 a všech novějších verzích. Další informace najdete v tématu [Certmgr.exe (nástroj Správce certifikátů)](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool).
+- *CertMgr.exe*, která je součástí aplikace Internet Explorer a je proto v systému Windows 98 a všech novějších verzích. Další informace najdete v tématu [Certmgr.exe (nástroj Správce certifikátů)](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool).
 
 ### <a name="create-a-clickonce-application"></a>Vytvoření aplikace ClickOnce
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Aplikace je klientská aplikace .NET Framework v kombinaci se soubory manifestu, které popisují aplikaci a poskytují parametry instalace. Program můžete převést do [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace pomocí příkazu **publikovat** v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Případně můžete vygenerovat všechny soubory potřebné pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení pomocí nástrojů, které jsou součástí nástroje [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] . Podrobné pokyny k [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení najdete v tématu [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).
