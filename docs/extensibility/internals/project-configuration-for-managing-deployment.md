@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: bd5940d9-d94d-4944-beda-4ec1ab2bbde5
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c322e320e193acd25a011cc85173c1c80e2d29d
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: ebdc1dc529e73e17ba55a0b4766f11dced4addcb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877985"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893643"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>Konfigurace projektu pro správu nasazení
 Nasazení je činnost fyzického přesunu výstupních položek z procesu sestavení do očekávaného umístění pro ladění a instalaci. Například webová aplikace může být postavená na místním počítači a pak umístěna na server.

@@ -10,15 +10,15 @@ f1_keywords:
 ms.assetid: 64813fd5-1ea1-499a-98b4-ab2a44b7ee5e
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: aca39eaf94e5dca3159a9f3740dae0f87257d9c1
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9b97368a942747046aa7641771f84a9f2ed41e11
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437863"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894098"
 ---
 # <a name="how-to-use-the-argument-designer"></a>Postupy: Používání návrháře argumentů
 

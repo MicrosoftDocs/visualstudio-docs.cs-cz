@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 0f0df097-bbaf-46ad-9ad1-ef5f40435079
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c902147bd1b7761bb6fdab1bc577af6a1990bed
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: 9d4ea8bb6a1d03d3b61ab5be51992a7b51f661d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97903880"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893253"
 ---
 # <a name="debug-only-user-code-with-just-my-code"></a>Ladit pouze uživatelský kód pomocí Pouze můj kód
 
@@ -145,7 +145,7 @@ Soubor *. natjmc* je soubor XML s touto syntaxí:
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Name`|Povinná hodnota. Úplná cesta modulu nebo modulů. Můžete použít zástupné znaky systému Windows `?` (nula nebo jeden znak) a `*` (nula nebo více znaků). Příklad:<br /><br /> `<Module Name="?:\3rdParty\UtilLibs\*" />`<br /><br /> Říká ladicímu programu, aby považoval všechny moduly v *\3rdParty\UtilLibs* na jakékoli jednotce jako externí kód.|
+|`Name`|Povinná hodnota. Úplná cesta modulu nebo modulů. Můžete použít zástupné znaky systému Windows `?` (nula nebo jeden znak) a `*` (nula nebo více znaků). Třeba<br /><br /> `<Module Name="?:\3rdParty\UtilLibs\*" />`<br /><br /> Říká ladicímu programu, aby považoval všechny moduly v *\3rdParty\UtilLibs* na jakékoli jednotce jako externí kód.|
 |`Company`|Nepovinný parametr. Název společnosti, která publikuje modul, který je vložený ve spustitelném souboru. Pomocí tohoto atributu lze odstranit nejednoznačnost modulů.|
 
  **Atributy elementu souboru**
@@ -190,7 +190,7 @@ Soubor *. natstepfilter* je soubor XML s touto syntaxí:
 |Element|Popis|
 |-------------|-----------------|
 |`Function`|Povinná hodnota. Určuje jednu nebo více funkcí jako neuživatelské funkce.|
-|`Name`|Povinná hodnota. Formátovaný regulární výraz ECMA-262 určující úplný název funkce, který se má shodovat. Například:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> oznamuje ladicímu programu, že všechny metody v `MyNS::MyClass` mají být považovány za neuživatelský kód. Porovnávání rozlišuje velká a malá písmena.|
+|`Name`|Povinná hodnota. Formátovaný regulární výraz ECMA-262 určující úplný název funkce, který se má shodovat. Příklad:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> oznamuje ladicímu programu, že všechny metody v `MyNS::MyClass` mají být považovány za neuživatelský kód. Porovnávání rozlišuje velká a malá písmena.|
 |`Module`|Nepovinný parametr. Formátovaný regulární výraz ECMA-262 určující úplnou cestu k modulu, který obsahuje funkci. U porovnávání se nerozlišují malá a velká písmena.|
 |`Action`|Povinná hodnota. Jedna z těchto hodnot citlivých na velká a malá písmena:<br /><br /> `NoStepInto`  – instruuje ladicí program, aby převzal funkci.<br /> `StepInto`  – instruuje ladicí program, aby se přepsal do funkce a přepsaly se jiné `NoStepInto` pro odpovídající funkci.|
 
@@ -281,7 +281,7 @@ Specifikace v tomto souboru přepisují výchozí klasifikace a *mycode.default.
 
 Páry hodnot klíčů **Eval**, **Function** a **ScriptBlock** určují způsob klasifikace dynamicky generovaného kódu:
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Eval**|Skript, který je spuštěn předáním řetězce do funkce poskytnuté hostitelem `eval` . Ve výchozím nastavení je skript Eval klasifikován jako **myCode**.|
 |**Funkce**|Skript, který je spuštěn předáním řetězce `Function` konstruktoru. Ve výchozím nastavení je skript funkcí klasifikován jako **LibraryCode**.|
@@ -297,7 +297,7 @@ Můžete změnit hodnotu na jedno z těchto klíčových slov:
 
 Páry klíč-hodnota **myCode**, **knihovny** a **nesouvisející** hodnoty klíčů určují adresy URL nebo soubory, které chcete zahrnout do klasifikace:
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**MyCode**|Pole adres URL nebo souborů, které jsou klasifikovány jako **myCode**.|
 |**Knihovny**|Pole adres URL nebo souborů, které jsou klasifikovány jako **LibraryCode**.|

@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 61328ab6-9b66-4e12-8630-22e30ee8c9d1
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bdf33227263e8158f956fa8c6509d93e8116e9b
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: fd736c01843d746ee43a82e6bb6f5239da1c660e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437837"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894046"
 ---
 # <a name="how-to-use-the-imports-designer"></a>Postupy: Používání návrháře importů
 

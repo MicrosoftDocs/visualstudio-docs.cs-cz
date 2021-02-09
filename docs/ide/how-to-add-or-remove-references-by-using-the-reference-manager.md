@@ -20,15 +20,15 @@ helpviewer_keywords:
 - referencing components, assemblies not listed
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4884fdc857abd524fa62bb126e7a74af48e9ca88
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 82300d90d890cf632693fe07b5873423a29da0ed
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597311"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893357"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Postupy: Přidání nebo odebrání odkazů pomocí Správce odkazů
 
@@ -210,7 +210,7 @@ Při odkazování na soubor winmd je očekávané rozložení, že soubory *\<Fi
 
 **Sestavení**, **com**, **Windows** a **procházení** jednotlivých **podporovaných karet,** které vyčíslují seznam komponent, které byly nedávno přidány do projektů.
 
-## <a name="search"></a>Search
+## <a name="search"></a>Hledat
 
 Panel hledání v dialogovém okně Správce odkazů funguje na kartě, která je zaostření. Pokud například uživatel zadá na panelu hledání text "System", zatímco je karta **řešení** aktivní, hledání nevrátí žádné výsledky, pokud se toto řešení neskládá z názvu projektu, který obsahuje "System".
 

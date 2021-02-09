@@ -21,20 +21,20 @@ helpviewer_keywords:
 ms.assetid: f2085314-a3a8-4caf-a5a4-2af9ad5aad05
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1920b4eddcbffa5cd51d548ade9af3a3a2f208d0
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: 0356f05c3f0dac636813d1632f628dd02dd28923
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97903789"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893123"
 ---
 # <a name="macros-for-reporting"></a>Makra pro vytváření sestav
 Pro ladění můžete použít makra **_RPTn** a **_RPTFn** , která jsou definována v souboru Crtdbg. H, chcete-li nahradit použití `printf` příkazů. Nemusíte je nastavovat v **#ifdef** s, protože v buildu pro vydání automaticky zmizí, pokud není definován **_DEBUG** .
 
-|Podokně|Popis|
+|Podokně|Description|
 |-----------|-----------------|
 |**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3** **_RPT4**|Vytvoří výstup řetězce zprávy a 0 až čtyř argumentů. Pro **_RPT1** přes **_RPT4** řetězec zprávy slouží jako formátovací řetězec ve stylu printf pro argumenty.|
 |**_RPTF0**, **_RPTF1**, **_RPTF2**, **_RPTF3** **_RPTF4**|Stejné jako **_RPTn**, ale tato makra také výstupují název souboru a číslo řádku, kde je makro umístěno.|

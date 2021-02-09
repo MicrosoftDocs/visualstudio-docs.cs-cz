@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1a4c7f4c-7a41-45f2-9af4-8b1666469b89
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fc6ef0e4d682f0f712eefc4c139895331c31688
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: e2285706f2d15c5497a83d27c95cd613191e0fe4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382920"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893968"
 ---
 # <a name="deploy-com-components-with-clickonce"></a>Nasazování komponent COM s ClickOnce
 Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty je potřeba globálně registrovat, takže můžou způsobit nežádoucí vedlejší účinky mezi překrývajícími se aplikacemi. Tato situace obvykle není problémem v aplikacích .NET Framework, protože komponenty jsou zcela izolované do aplikace nebo jsou souběžně kompatibilní. Visual Studio umožňuje nasadit izolované komponenty COM v operačním systému Windows XP nebo novějším.
@@ -37,7 +37,7 @@ Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty
 ## <a name="registration-free-com"></a>COM bez registrace
  COM bez registrace je nová technologie pro nasazení a aktivaci izolovaných komponent modelu COM. Funguje tak, že do souboru XML s názvem manifestu ukládá všechny informace o knihovně typů a registračních informací komponenty, které jsou obvykle nainstalovány do systémového registru, do souboru XML s názvem manifest uložený ve stejné složce jako aplikace.
 
- Izolování komponenty modelu COM vyžaduje, aby byla zaregistrována v počítači vývojáře, ale nemusí být registrována v počítači koncového uživatele. K izolaci komponenty modelu COM, stačí, když nastavíte vlastnost **Isolated** na její odkaz na **hodnotu true**. Ve výchozím nastavení je tato vlastnost nastavena na **hodnotu false (NEPRAVDA** ), která označuje, že by měla být považována za registrovaný odkaz com. Pokud má tato vlastnost **hodnotu true** , způsobí vygenerování manifestu pro tuto komponentu v čase sestavení. Také způsobí, že odpovídající soubory budou zkopírovány do složky aplikace během instalace.
+ Izolování komponenty modelu COM vyžaduje, aby byla zaregistrována v počítači vývojáře, ale nemusí být registrována v počítači koncového uživatele. K izolaci komponenty modelu COM, stačí, když nastavíte vlastnost **Isolated** na její odkaz na **hodnotu true**. Ve výchozím nastavení je tato vlastnost nastavena na **hodnotu false (NEPRAVDA**), která označuje, že by měla být považována za registrovaný odkaz com. Pokud má tato vlastnost **hodnotu true**, způsobí vygenerování manifestu pro tuto komponentu v čase sestavení. Také způsobí, že odpovídající soubory budou zkopírovány do složky aplikace během instalace.
 
  Když generátor manifestu narazí na izolovaný odkaz modelu COM, vytvoří výčet všech `CoClass` položek v knihovně typů komponenty, porovnává každou položku s odpovídajícími registračními daty a generuje definice manifestu pro všechny třídy com v souboru knihovny typů.
 
@@ -59,7 +59,7 @@ Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty
 
 ##### <a name="to-create-a-native-com-component"></a>Vytvoření nativní komponenty modelu COM
 
-1. Pomocí Visual Basic 6,0, v nabídce **soubor** klikněte na **Nový** a pak na **Project (projekt** ).
+1. Pomocí Visual Basic 6,0, v nabídce **soubor** klikněte na **Nový** a pak na **Project (projekt**).
 
 2. V dialogovém okně **Nový projekt** vyberte uzel **Visual Basic** a vyberte projekt **knihovny DLL ActiveX** . Do pole **Název** zadejte `VB6Hello`.
 
@@ -85,7 +85,7 @@ Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty
 
 ##### <a name="to-create-a-windows-based-application-using-a-com-component"></a>Vytvoření aplikace založené na systému Windows pomocí komponenty modelu COM
 
-1. Pomocí Visual Basic v nabídce **soubor** klikněte na **Nový** a pak na **Project (projekt** ).
+1. Pomocí Visual Basic v nabídce **soubor** klikněte na **Nový** a pak na **Project (projekt**).
 
 2. V dialogovém okně **Nový projekt** vyberte uzel **Visual Basic** a vyberte možnost **aplikace systému Windows**. Do pole **Název** zadejte `RegFreeComDemo`.
 
@@ -97,7 +97,7 @@ Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty
 
     Odkaz na **VB6Hello** se zobrazí v seznamu odkazy.
 
-6. Najeďte na **panel nástrojů** , vyberte ovládací prvek **tlačítko** a přetáhněte ho do formuláře **Form1** .
+6. Najeďte na **panel nástrojů**, vyberte ovládací prvek **tlačítko** a přetáhněte ho do formuláře **Form1** .
 
 7. V okně **vlastnosti** nastavte vlastnost **text** tlačítka na hodnotu **Hello**.
 

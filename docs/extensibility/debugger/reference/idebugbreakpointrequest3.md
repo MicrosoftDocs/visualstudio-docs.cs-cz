@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8a042beb-b319-48e3-b3c8-9c8336ab371b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 505b0c0b05fa0f14578d770abec6c43ed6b80b01
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d6e42111ca0c8b357a7f8841511cf935694a30b3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80734831"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893058"
 ---
 # <a name="idebugbreakpointrequest3"></a>IDebugBreakpointRequest3
 Toto rozhraní představuje informace potřebné k vytvoření a svázání libovolného typu zarážky. Jedná se o rozšíření [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md).

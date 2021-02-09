@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 10ad3083-10c1-4189-a870-9bba2eab244f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f509ade0103e390ea9cf53cbd5907116b99ddd39
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: d5c35d94001ae1e883e2bd76650f248d7e0364d2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382803"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893890"
 ---
 # <a name="ltentrypointgt-element-clickonce-application"></a>&lt;entryPoint – &gt; element (aplikace ClickOnce)
 Identifikuje sestavení, které se má provést při [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] spuštění této aplikace v klientském počítači.
