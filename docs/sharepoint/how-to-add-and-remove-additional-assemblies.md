@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packages
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 41b41ccd5eda2a44457adf23302a833574dade9e
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: cc672a8a0ff7edd66504b5ecbf48e622fad085ea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914969"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99923623"
 ---
 # <a name="how-to-add-and-remove-additional-assemblies"></a>Postupy: Přidání a odebrání dalších sestavení
   Pokud balíček služby SharePoint závisí na jiných sestaveních pro funkce nebo data, můžete přidat sestavení do balíčku řešení (. wsp). Tímto způsobem server SharePoint zajistí, že vlastní sestavení jsou nainstalována s balíčkem.

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8f9b3ffc-7b8d-44f4-87cb-dc29105be12d
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 889af1c0fd28224b2f31eb80bbeecad28346cd1c
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: e466439469db66e8e871115abc9828988f24b546
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006637"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924751"
 ---
 # <a name="encodings-and-line-endings"></a>Kódování a konce řádků
 
@@ -46,7 +46,7 @@ Když otevřete soubor, který obsahuje jiné znaky zalomení řádku, může se
 
 ## <a name="advanced-save-options"></a>Rozšířené možnosti uložení
 
-Pomocí **File**  >  dialogového okna **Upřesnit možnosti uložení** můžete určit typ znaků konce řádku, které chcete. Můžete také změnit kódování souboru se stejným nastavením.
+Pomocí   >  dialogového okna **Upřesnit možnosti uložení** můžete určit typ znaků konce řádku, které chcete. Můžete také změnit kódování souboru se stejným nastavením.
 
 ![Dialogové okno Upřesnit možnosti uložení](media/line_endings.png)
 

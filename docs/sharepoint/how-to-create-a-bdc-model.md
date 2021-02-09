@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], creating a model
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8f95533a5ad3955ee00829194bc4da1498baace0
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 77ffd8b6cd913b79249862a875b6267848a131af
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850673"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99923366"
 ---
 # <a name="how-to-create-a-bdc-model"></a>Postupy: vytvoření modelu služby BDC
   Můžete vytvořit model služby připojení obchodních dat (BDC) pomocí šablony pro daný druh položky a potom přidat model do libovolného projektu služby SharePoint. Další informace najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md). Další informace o návrhu modelu naleznete v tématu [design a model připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).

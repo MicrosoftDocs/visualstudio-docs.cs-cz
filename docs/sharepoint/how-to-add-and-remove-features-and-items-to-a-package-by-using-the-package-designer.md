@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packages
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 45c8da30a059599a291b18155dc48c4521d6d875
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 92503d8e29bac4f44df5376f3cecb24247b585d6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914943"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99923598"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>Postupy: Přidání a odebrání funkcí a položek do balíčku pomocí návrháře balíčků
   Když vytvoříte řešení služby SharePoint, sada Visual Studio přidá do balíčku v řešení výchozí funkce služby SharePoint. Před konečným nasazením můžete přidat a odebrat položky a funkce projektu služby SharePoint pro úpravu balíčku služby SharePoint.

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text templates, template code
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 11cc289f668a674707c584396998ea7abb9e7ea9
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: ff6d09cae433cab0a5411350970325c6ec659184
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363585"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924582"
 ---
 # <a name="text-template-control-blocks"></a>Řídicí bloky textových šablon
 Řídicí bloky umožňují psát kód v textové šabloně, aby se lišil výstup. Existují tři druhy řídicích bloků, které jsou rozlišené levou hranatou závorkou:

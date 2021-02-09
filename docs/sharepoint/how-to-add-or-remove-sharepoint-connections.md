@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b898dd0f9327c7589d0dac3436aec0299009221d
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 57ff132274ba7f720a845078b0424fe235d9c31e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850712"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99923454"
 ---
 # <a name="how-to-add-or-remove-sharepoint-connections"></a>Postupy: Přidání nebo odebrání připojení služby SharePoint
   Průzkumník serveru umožňuje procházet SharePointové weby i datová připojení. Než však budete moci procházet obsah webu služby SharePoint, je nutné jej přidat do uzlu **připojení služby SharePoint** .
@@ -36,7 +36,7 @@ ms.locfileid: "94850712"
 
 ### <a name="to-delete-a-sharepoint-site-from-the-sharepoint-connections-node"></a>Odstranění webu služby SharePoint z uzlu připojení služby SharePoint
 
-1. V řádku nabídek otevřete **Průzkumník serveru** výběrem **View** možnosti zobrazení **Průzkumník serveru** .
+1. V řádku nabídek otevřete **Průzkumník serveru** výběrem možnosti zobrazení **Průzkumník serveru** .
 
 2. Rozbalte uzel **připojení služby SharePoint** , aby bylo možné zobrazit web služby SharePoint, který chcete odstranit z **Průzkumník serveru**.
 

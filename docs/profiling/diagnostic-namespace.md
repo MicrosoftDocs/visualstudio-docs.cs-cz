@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: ad786b19-7c4c-46ee-bfb6-c4752b373a09
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 20b25e2974f4b0e4a6bbf6cf02c411fde3f3de1a
-ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
+ms.openlocfilehash: 22224e375c1d1f463f1c07d41ca5a03efa5cabdb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98686542"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99923744"
 ---
 # <a name="diagnostic-namespace"></a>obor názvů diagnostiky
 `diagnostics`Obor názvů poskytuje funkce pro generování značek Vizualizátor souběžnosti.

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - text templates, custom directive hosts
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: a98e432c7eb9508d32f52e51acc1447035b9058b
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: a815718f099b024708b86658e10fc0e85c087b4c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362493"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924129"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>Návod: Připojení hostitele k procesoru vygenerovaných direktiv
 
@@ -39,7 +39,7 @@ Tento návod zahrnuje následující úlohy:
 
 - Testování vlastního hostitele s vygenerovaným procesorem direktiv.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 K definování DSL musíte mít nainstalované následující součásti:
 
@@ -362,6 +362,6 @@ Chcete-li otestovat vlastního hostitele textových šablon, musíte nejprve nap
     Linked from: ExampleElement1
     ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: Vytvoření vlastního hostitele textových šablon](../modeling/walkthrough-creating-a-custom-text-template-host.md)

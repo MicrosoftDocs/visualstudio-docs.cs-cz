@@ -5,15 +5,15 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1025e7d35c20dc18c87942e23cf71b598d85637a
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 0f65ece27122949fec006d73858c8c89483441f1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361362"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924379"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>Použití prvku Visual Studio ModelBus v textové šabloně
 
@@ -296,7 +296,7 @@ Nyní máte k dispozici DSL, ke které mají prostřednictvím šablony textu pr
 
 4. Klikněte na jeden vzorový tvar a v okno Vlastnosti ve vlastnosti MBR klikněte na **[...]** . V dialogovém okně klikněte na tlačítko **Procházet** a vyberte `Sample.provide` . V okně elementy rozbalte úlohu typ a vyberte jeden z prvků.
 
-5. Uložte soubor. (Zatím nezavírejte experimentální instanci sady Visual Studio.)
+5. Soubor uložte. (Zatím nezavírejte experimentální instanci sady Visual Studio.)
 
    Vytvořili jste model, který obsahuje odkaz ModelBus na prvek v jiném modelu.
 
@@ -397,7 +397,7 @@ Nyní máte k dispozici DSL, ke které mají prostřednictvím šablony textu pr
 
     Pokud jste pro tento element nastavili MBR, otevře se odkazovaný model a je vybrán odkazový element.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Integrace modelů pomocí Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)
 - [Vytvoření kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)

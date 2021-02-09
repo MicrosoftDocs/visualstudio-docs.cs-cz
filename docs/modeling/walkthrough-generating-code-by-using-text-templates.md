@@ -9,15 +9,15 @@ helpviewer_keywords:
 - walkthroughs [text templates]
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a39630f8a12ad2c1d7d2bc89f6830fc694e89087
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 7e6b824d53c37ef922b8c9580c87a478aef93586
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360985"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924062"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>Návod: Vytvoření kódu pomocí textových šablon
 
@@ -146,7 +146,7 @@ Přidejte textový soubor šablony a nastavte rozšíření Output na *. cs*.
 
 4. V direktivě Output změňte atribut Extension na ". cs", aby šablona vygenerovala soubor C#. V Visual Basic projektu byste ho změnili na ". vb".
 
-5. Uložte soubor. V této fázi by soubor textové šablony měl obsahovat tyto řádky:
+5. Soubor uložte. V této fázi by soubor textové šablony měl obsahovat tyto řádky:
 
     ```
     <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -430,7 +430,7 @@ V tomto návodu je programový kód skutečně vygenerován z instance modelu, c
 
 Pokud jste viděli transformaci šablony nebo chyby kompilace v **Seznam chyb**, nebo pokud výstupní soubor nebyl vygenerován správně, můžete řešit problémy s textovou šablonou pomocí technik popsaných v tématu [generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 - [Tvorba textové šablony T4](../modeling/writing-a-t4-text-template.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, models
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d912e98d01448a378acbed79e2278f70f62436e7
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: da5817711c7131868c4bad22bbe93447119d19d8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362688"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924524"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Porozumění modelům, třídám a vztahům
 Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společně s jakýmkoli vlastním programovým kódem, který můžete napsat. Většina kódu programu v řešení DSL je vygenerována z tohoto souboru.
@@ -134,7 +134,7 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
 
  Nastavte násobnost role buď zadáním v diagramu, nebo úpravou `Multiplicity` vlastnosti v okně **vlastnosti** . Následující tabulka popisuje nastavení pro tuto vlastnost.
 
-|Typ násobnosti|Popis|
+|Typ násobnosti|Description|
 |-|-|
 |0.. * (nula až mnoho)|Každá instance doménové třídy může mít více instancí relace nebo žádné instance relace.|
 |0.. 1 (nula až jedna)|Každá instance doménové třídy nemůže mít více než jednu instanci relace nebo žádné instance relace.|
@@ -150,6 +150,6 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
 
  Odvozený vztah se specializuje na základní vztah. Třídy domény, na které odkazuje, by měly být odvozeny od nebo stejné jako třídy propojené základní relací. Je-li v modelu vytvořen odkaz odvozeného vztahu, jedná se o instanci odvozeného i základního vztahu. V programovém kódu můžete přejít na opačný konec odkazu pomocí vlastností generovaných buď základní třídou, nebo odvozenou třídou.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

@@ -21,13 +21,13 @@ description: Přečtěte si, jak nainstalovat bezplatnou kopii Dotfuscator komun
 ms.assetid: f2146651-e24a-4e24-ade8-8ddee8ff4e43
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: befa47e5718d3d2f5d492c49e173b22fc63310e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+manager: jmartens
+ms.openlocfilehash: 9f4ca634aa226437b6d8790837c9f95f778a00c0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769678"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924763"
 ---
 # <a name="install-dotfuscator-community"></a>Instalace Dotfuscatoru Community
 
@@ -47,13 +47,13 @@ Komunitu Dotfuscator můžete nainstalovat z integrovaného vývojového prostř
 1. Do **vyhledávacího pole** (CTRL + Q) zadejte `dotfuscator` . <br/> <br/> ![Vyhledávací pole](media/install_in_vs19_12.png) <br/> <br/>
 
 2. V zobrazených výsledcích hledání pod nadpisem *součásti* vyberte možnost **instalovat neDotfuscatorelné ochrany –**.
-   * Pokud se místo toho zobrazí, v části nabídky s názvem *Nabídka* s možností **přerušení ochrany – Dotfuscator komunita**je Dotfuscator komunita již nainstalována. [Začněte][get-started]tím, že tuto možnost vyberete.
+   * Pokud se místo toho zobrazí, v části nabídky s názvem *Nabídka* s možností **přerušení ochrany – Dotfuscator komunita** je Dotfuscator komunita již nainstalována. [Začněte][get-started]tím, že tuto možnost vyberete.
 
 3. Spustí se Instalační program pro Visual Studio okno, které je předem nakonfigurované pro instalaci komunity Dotfuscator.
    > [!NOTE]
    > Může být nutné zadat přihlašovací údaje správce, aby bylo možné pokračovat.
 
-4. V okně Instalační program pro Visual Studio klikněte na *nainstalovat*. <br/> <br/> ![Klikněte na nainstalovat.](media/install_in_vs19_34.png) <br/> <br/>
+4. V okně Instalační program pro Visual Studio klikněte na *nainstalovat*. <br/> <br/> ![Kliknutí na Nainstalovat](media/install_in_vs19_34.png) <br/> <br/>
 
 ::: moniker-end
 
@@ -70,7 +70,7 @@ Komunitu Dotfuscator můžete nainstalovat z integrovaného vývojového prostř
    > [!NOTE]
    > Může být nutné zadat přihlašovací údaje správce, aby bylo možné pokračovat.
 
-4. V okně Instalační program pro Visual Studio klikněte na *nainstalovat*. <br/> <br/> ![Klikněte na nainstalovat.](media/install_from_vs_345.png) <br/> <br/>
+4. V okně Instalační program pro Visual Studio klikněte na *nainstalovat*. <br/> <br/> ![Kliknutí na Nainstalovat](media/install_from_vs_345.png) <br/> <br/>
 
 ::: moniker-end
 
@@ -96,7 +96,7 @@ Po spuštění se zobrazí možnosti instalace pro vybranou edici sady Visual St
 Pak můžete nainstalovat komunitu Dotfuscator jako samostatnou součást sady Visual Studio:
 
 1. Vyberte kartu **jednotlivé součásti** .
-2. V části *nástroje kódu*ověřte položku *Dotfuscator s možností přerušení ochrany* .<br/> <br/> ![Jednotlivé komponenty](media/install_individually_12.png) <br/> <br/>
+2. V části *nástroje kódu* ověřte položku *Dotfuscator s možností přerušení ochrany* .<br/> <br/> ![Jednotlivé komponenty](media/install_individually_12.png) <br/> <br/>
 3. Panel *Souhrn* zobrazuje v části *jednotlivé komponenty* *Dotfuscator s možností přerušení ochrany* . <br/> <br/> ![Podokno souhrnu](media/install_individually_3.png) <br/> <br/>
 4. Nakonfigurujte všechna další nastavení instalace, jak je to vhodné pro vaše prostředí.
 5. Až budete připraveni k instalaci sady Visual Studio, klikněte na tlačítko *nainstalovat* .

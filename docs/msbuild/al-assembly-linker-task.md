@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 2ddefbf2-5662-4d55-99a6-ac383bf44560
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d59251240abc7ca39b3819adf2324bf5bb9cef0a
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 3d99c33a74512b380d7b5260d5b7e747c6a39e41
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353353"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99923869"
 ---
 # <a name="al-assembly-linker-task"></a>AL (linker sestavení) – úloha
 
-Úkol AL se zalomí *AL.exe*, nástroj, který je distribuován pomocí sady Windows Software Development Kit (SDK). Tento nástroj Assembly Linker slouží k vytvoření sestavení s manifestem z jednoho nebo více souborů, které jsou buď moduly, nebo soubory prostředků. Kompilátory a vývojová prostředí mohou již tyto možnosti poskytovat, takže často není nutné tuto úlohu používat přímo. Linker sestavení je nejužitečnější vývojářům, kteří potřebují vytvořit jedno sestavení z více souborů komponenty, jako jsou například ty, které mohou být vytvořeny z vývoje smíšeného jazyka. Tato úloha nespojuje moduly do jednoho souboru sestavení; aby se výsledné sestavení správně načetlo, musí být jednotlivé moduly stále distribuované a dostupné. Další informace o *AL.exe*naleznete v tématu [Al.exe (linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker).
+Úkol AL se zalomí *AL.exe*, nástroj, který je distribuován pomocí sady Windows Software Development Kit (SDK). Tento nástroj Assembly Linker slouží k vytvoření sestavení s manifestem z jednoho nebo více souborů, které jsou buď moduly, nebo soubory prostředků. Kompilátory a vývojová prostředí mohou již tyto možnosti poskytovat, takže často není nutné tuto úlohu používat přímo. Linker sestavení je nejužitečnější vývojářům, kteří potřebují vytvořit jedno sestavení z více souborů komponenty, jako jsou například ty, které mohou být vytvořeny z vývoje smíšeného jazyka. Tato úloha nespojuje moduly do jednoho souboru sestavení; aby se výsledné sestavení správně načetlo, musí být jednotlivé moduly stále distribuované a dostupné. Další informace o *AL.exe* naleznete v tématu [Al.exe (linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker).
 
 ## <a name="parameters"></a>Parametry
 

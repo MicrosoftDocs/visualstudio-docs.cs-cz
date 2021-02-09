@@ -5,16 +5,16 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: cb5065ed50afe3b9ee31b361be88c1b5c18138af
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 394fe7b1a368d3d4c6a47fd4350ac6644112aa57
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100784"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924121"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>Návod: Ladění textové šablony přistupující k modelu
 Když upravujete nebo přidáváte textové šablony v řešení jazyka specifického pro doménu, může dojít k chybám, když modul transformuje šablonu na zdrojový kód nebo když zkompiluje generovaný kód. Následující návod ukazuje některé z akcí, které můžete provést při ladění textové šablony.
@@ -22,7 +22,7 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
 > [!NOTE]
 > Další informace o šablonách textu obecně naleznete v tématu [generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md). Další informace o ladění textových šablon naleznete v tématu [Návod: ladění textové šablony](debugging-a-t4-text-template.md).
 
-## <a name="creating-a-domain-specific-language-solution"></a>Vytváření řešení jazyka specifického pro doménu
+## <a name="creating-a-domain-specific-language-solution"></a>Vytvoření řešení Domain-Specific jazyka
  V tomto postupu vytvoříte řešení jazyka specifického pro doménu, které má následující vlastnosti:
 
 - Název: DebuggingTestLanguage
@@ -33,14 +33,14 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
 
 - Název společnosti: Fabrikam
 
-  Další informace o vytváření řešení jazyka specifického pro doménu najdete v tématu [Postupy: vytvoření řešení jazyka specifického pro doménu](../modeling/how-to-create-a-domain-specific-language-solution.md).
+  Další informace o vytváření řešení jazyka specifického pro doménu naleznete v tématu [How to: Create a Domain-Specific Language Solution](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
 ## <a name="creating-a-text-template"></a>Vytvoření textové šablony
  Přidejte do svého řešení textovou šablonu.
 
 #### <a name="to-create-a-text-template"></a>Vytvoření textové šablony
 
-1. Sestavte řešení a začněte ho spouštět v ladicím programu. (V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení**a potom v nabídce **ladění** klikněte na příkaz **Spustit ladění**.) Nová instance aplikace Visual Studio otevře ladění projektu.
+1. Sestavte řešení a začněte ho spouštět v ladicím programu. (V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení** a potom v nabídce **ladění** klikněte na příkaz **Spustit ladění**.) Nová instance aplikace Visual Studio otevře ladění projektu.
 
 2. Přidejte textový soubor s názvem `DebugTest.tt` do projektu ladění.
 
@@ -89,7 +89,7 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
     #>
     ```
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem na DebugTest.TT a pak klikněte na **Spustit vlastní nástroj**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem na DebugTest.TT a pak klikněte na **Spustit vlastní nástroj**.
 
      Tato chyba se zobrazí v okně **Seznam chyb** :
 
@@ -111,7 +111,7 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=ExampleModel" #>
     ```
 
-5. V **Průzkumník řešení**klikněte pravým tlačítkem na DebugTest.TT a pak klikněte na **Spustit vlastní nástroj**.
+5. V **Průzkumník řešení** klikněte pravým tlačítkem na DebugTest.TT a pak klikněte na **Spustit vlastní nástroj**.
 
      Nyní systém transformuje textovou šablonu a generuje odpovídající výstupní soubor. V okně **Seznam chyb** se nezobrazí žádné chyby.
 
@@ -153,7 +153,7 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
     #>
     ```
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem na DebugTest.TT a pak klikněte na **Spustit vlastní nástroj**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem na DebugTest.TT a pak klikněte na **Spustit vlastní nástroj**.
 
      Zobrazí se okno **Seznam chyb** a zobrazí se jedna z následujících chyb:
 
@@ -208,6 +208,6 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
     #>
     ```
 
-5. V **Průzkumník řešení**klikněte pravým tlačítkem na DebugTest.TT a pak klikněte na **Spustit vlastní nástroj**.
+5. V **Průzkumník řešení** klikněte pravým tlačítkem na DebugTest.TT a pak klikněte na **Spustit vlastní nástroj**.
 
      Nyní systém transformuje textovou šablonu a generuje odpovídající výstupní soubor. V okně **Seznam chyb** se nezobrazí žádné chyby.

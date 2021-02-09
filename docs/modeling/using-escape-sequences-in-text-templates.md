@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text templates, escape sequences
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b007a9b5ccf41a27cda7d9833064eb60394c4dc
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 126fe3f4e42c9c6cf0b75bf740e1e7e2c4b269ea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361323"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924334"
 ---
 # <a name="use-escape-sequences-in-text-templates"></a>Použití řídicích sekvencí v textových šablonách
 
@@ -38,6 +38,6 @@ Pokud textový blok obsahuje řetězce, které slouží k řídicím značkám t
 
 - Pokud \\ se znak escape () nachází kdekoli jinde v jiné sekvenci, než kde řídí řídicí znak nebo uvozovky (pouze v jazyce C#), bude znak přímo výstup.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Generování šablon ze šablon pomocí řídicích sekvencí](../modeling/how-to-generate-templates-from-templates-by-using-escape-sequences.md)
