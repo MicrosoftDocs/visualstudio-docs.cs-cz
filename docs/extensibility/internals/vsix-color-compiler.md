@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e50cd1f1c8c3ff7f86cd00e4b384f548c7ec9d21
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: 7e6e4a07a023be398c4106984fe4dc33eddd2706
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97487995"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99929196"
 ---
 # <a name="vsix-color-compiler"></a>Kompilátor barev VSIX
 Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová aplikace, která přebírá soubor. XML reprezentující barvy pro existující motivy sady Visual Studio a převede ho na soubor. pkgdef tak, aby tyto barvy mohly být použity v aplikaci Visual Studio. Vzhledem k tomu, že je snadné porovnat rozdíly mezi soubory. XML, tento nástroj je užitečný pro správu vlastních barev ve správě zdrojového kódu. Dá se taky připojit do prostředí pro Build, aby výstup buildu byl platný soubor. pkgdef.
@@ -52,7 +52,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 </Theme>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Název|Požadovanou Název motivu|
 |Identifikátor GUID|Požadovanou Identifikátor GUID motivu (musí odpovídat formátování identifikátoru GUID)|
@@ -63,7 +63,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 |-|-|
 |Světlý|{de3dbbcd-f642-433c-8353-8f1df4370aba}|
 |Tmavý|{1ded0138-47ce-435e-84ef-9ec1f439b749}|
-|Modrý|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|
+|Blue|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|
 |Vysoký kontrast|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|
 
  **Kategorie**
@@ -76,12 +76,12 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
  </Category>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Název|Požadovanou Název kategorie|
 |Identifikátor GUID|Požadovanou Identifikátor GUID kategorie (musí odpovídat formátování identifikátoru GUID)|
 
- **Color**
+ **Barva**
 
  \<Color>Element definuje barvu pro komponentu nebo stav uživatelského rozhraní. Upřednostňované schéma pojmenovávání barev je [typ uživatelského rozhraní] [stav]. Nepoužívejte slovo "Color", protože je redundantní. Barva by měla jasně označovat typ prvku a situace nebo "stát", pro který bude použita barva. Barva nesmí být prázdná a musí obsahovat buď jeden nebo oba \<Background> \<Foreground> elementy a. Barevné prvky jsou definovány takto:
 
@@ -92,7 +92,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
  </Color>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Název|Požadovanou Název barvy|
 
@@ -105,9 +105,9 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 <Foreground Type="type" Source="int" />
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
-|Typ|Požadovanou Typ barvy. Může to být jedna z následujících:<br /><br /> *CT_INVALID:* Barva je neplatná nebo není nastavena.<br /><br /> *CT_RAW:* Nezpracovaná hodnota ARGB<br /><br /> *CT_COLORINDEX:* NEPOUŽÍVEJTE.<br /><br /> *CT_SYSCOLOR:* Systémová barva systému Windows z SysColor.<br /><br /> *CT_VSCOLOR:* Barva sady Visual Studio z __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* Automatická barva.<br /><br /> *CT_TRACK_FOREGROUND:* NEPOUŽÍVEJTE.<br /><br /> *CT_TRACK_BACKGROUND:* NEPOUŽÍVEJTE.|
+|Typ|Požadovanou Typ barvy. Může se zobrazit některý z následujících:<br /><br /> *CT_INVALID:* Barva je neplatná nebo není nastavena.<br /><br /> *CT_RAW:* Nezpracovaná hodnota ARGB<br /><br /> *CT_COLORINDEX:* NEPOUŽÍVEJTE.<br /><br /> *CT_SYSCOLOR:* Systémová barva systému Windows z SysColor.<br /><br /> *CT_VSCOLOR:* Barva sady Visual Studio z __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* Automatická barva.<br /><br /> *CT_TRACK_FOREGROUND:* NEPOUŽÍVEJTE.<br /><br /> *CT_TRACK_BACKGROUND:* NEPOUŽÍVEJTE.|
 |Zdroj|Požadovanou Hodnota barvy reprezentovaná v šestnáctkovém formátu|
 
  Všechny hodnoty podporované výčtem __VSCOLORTYPE jsou podporovány schématem v atributu type. Doporučujeme však, abyste používali pouze CT_RAW a CT_SYSCOLOR.
@@ -133,7 +133,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 
  VsixColorCompiler \<XML file> \<PkgDef file>\<Optional Args>
 
- **Arguments**
+ **Argumenty**
 
 |**Název přepínače**|**Poznámky**|**Povinné nebo volitelné**|
 |-|-|-|

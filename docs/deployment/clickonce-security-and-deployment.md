@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: abab6d34-c3c2-45c1-a8b6-43c7d3131e7a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b055928212dd4b094f4bd8987f6ce03960e932f1
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 8bb0bdeae09f22a2b45e3029fbc9097c00911d2a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382660"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930015"
 ---
 # <a name="clickonce-security-and-deployment"></a>Zabezpečení a nasazení ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je technologie nasazení, která umožňuje vytvářet samoobslužné aplikace pro Windows, které se dají nainstalovat a spustit s minimální interakcí uživatelů. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] poskytuje úplnou podporu pro publikování a aktualizaci aplikací nasazených pomocí technologie ClickOnce, pokud jste vytvořili projekty pomocí Visual Basic a Visual C#. Informace o nasazení Visual C++ch aplikací naleznete v tématu [nasazení ClickOnce pro Visual C++ aplikace](/cpp/windows/clickonce-deployment-for-visual-cpp-applications).
@@ -40,7 +40,7 @@ ms.locfileid: "94382660"
   V minulosti se tyto problémy někdy způsobily vývojářům, kteří se chtějí rozhodnout vytvořit webové aplikace namísto aplikací pro Windows a zmírnit tak bohatě uživatelské rozhraní pro usnadnění instalace. Pomocí aplikací, které jsou nasazené pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , můžete mít ty nejlepší z obou technologií.
 
 ## <a name="what-is-a-clickonce-application"></a>Co je aplikace ClickOnce?
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Aplikace je jakýkoli Windows Presentation Foundation ( *. XBAP* ), model Windows Forms ( *. exe* ), konzolová aplikace ( *. exe* ) nebo řešení Office ( *. dll* ) publikované pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] technologie. Aplikaci můžete publikovat [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] třemi různými způsoby: z webové stránky, ze sdílené síťové složky nebo z média, jako je například CD-ROM. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Aplikaci lze nainstalovat do počítače koncového uživatele a spustit místně i v případě, že je počítač v režimu offline nebo je možné jej spustit v režimu pouze online, aniž by bylo nutné trvale instalovat cokoli v počítači koncového uživatele. Další informace najdete v tématu [volba strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md).
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Aplikace je jakýkoli Windows Presentation Foundation (*. XBAP*), model Windows Forms (*. exe*), konzolová aplikace (*. exe*) nebo řešení Office (*. dll*) publikované pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] technologie. Aplikaci můžete publikovat [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] třemi různými způsoby: z webové stránky, ze sdílené síťové složky nebo z média, jako je například CD-ROM. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Aplikaci lze nainstalovat do počítače koncového uživatele a spustit místně i v případě, že je počítač v režimu offline nebo je možné jej spustit v režimu pouze online, aniž by bylo nutné trvale instalovat cokoli v počítači koncového uživatele. Další informace najdete v tématu [volba strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md).
 
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace může být samoobslužná aktualizace. můžou vyhledat novější verze, jakmile budou k dispozici, a automaticky nahradí všechny aktualizované soubory. Vývojář může určit chování aktualizace; Správce sítě může také řídit strategie aktualizace, například označit aktualizaci jako povinnou. Aktualizace je také možné vrátit zpět na předchozí verzi koncovým uživatelem nebo správcem. Další informace najdete v tématu [volba strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md).
 
@@ -62,7 +62,7 @@ ms.locfileid: "94382660"
  Základní [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] architektura nasazení vychází ze dvou souborů MANIFESTU XML: manifestu aplikace a manifestu nasazení. Soubory se používají k popisu, kde jsou aplikace ClickOnce nainstalovány, jak jsou aktualizovány a kdy jsou aktualizovány.
 
 ### <a name="publish-clickonce-applications"></a>Publikování aplikací ClickOnce
- Manifest aplikace popisuje samotnou aplikaci. To zahrnuje sestavení, závislosti a soubory, které tvoří aplikaci, požadovaná oprávnění a umístění, kde budou k dispozici aktualizace. Vývojář aplikace autoři manifestu aplikace pomocí Průvodce publikováním v aplikaci Visual Studio nebo Manifest Generation and Editing Tool ( *Mage.exe* ) v [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] . Další informace naleznete v tématu [How to: Publish a aplikace ClickOnce using the Publish Wizard](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).
+ Manifest aplikace popisuje samotnou aplikaci. To zahrnuje sestavení, závislosti a soubory, které tvoří aplikaci, požadovaná oprávnění a umístění, kde budou k dispozici aktualizace. Vývojář aplikace autoři manifestu aplikace pomocí Průvodce publikováním v aplikaci Visual Studio nebo Manifest Generation and Editing Tool (*Mage.exe*) v [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] . Další informace naleznete v tématu [How to: Publish a aplikace ClickOnce using the Publish Wizard](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).
 
  Manifest nasazení popisuje, jak je aplikace nasazena. To zahrnuje umístění manifestu aplikace a verzi aplikace, kterou by klienti měli spouštět.
 

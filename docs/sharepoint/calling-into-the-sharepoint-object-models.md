@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extensibility features
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 40cd7132888d8b19d8e2a2818ec9a299b465e786
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 14358b5cc84f63227fd5001731c261002a324492
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850049"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928936"
 ---
 # <a name="call-into-the-sharepoint-object-models"></a>Volání do objektových modelů služby SharePoint
   Při vytváření rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio může být nutné volat rozhraní API služby SharePoint k provedení určitých úkolů. Například pokud vytvoříte vlastní krok nasazení pro projekty služby SharePoint, může být nutné volat rozhraní API služby SharePoint, aby bylo možné provést některé úlohy pro nasazení řešení.

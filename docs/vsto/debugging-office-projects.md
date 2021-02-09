@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Outlook [Office development in Visual Studio], projects
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ea4874effcba4ee948f921ae9bf91f145b661f4f
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 1e21a876fd2af04523ae205882463b0f8e0e3f3b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845632"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928884"
 ---
 # <a name="debug-office-projects"></a>Ladění projektů Office
   Projekty systému Office můžete ladit pomocí stejných nástrojů společnosti Microsoft [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , které používáte pro jiné [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projekty. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] funkce ladicího programu, jako je možnost vložení zarážek a zobrazení proměnných v okně **místní** hodnoty, jsou také k dispozici při ladění projektů Office. Další informace o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nástrojích pro ladění naleznete [v tématu ladění v aplikaci Visual Studio](../debugger/debugger-feature-tour.md).

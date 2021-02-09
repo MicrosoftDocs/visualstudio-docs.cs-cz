@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a9ff3d00-e9ac-4cd6-bda9-584a4815aff8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 180162988cbb09f98b7fc2e8f33f6b5d0ed322ae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6796e2d4f3a7fa20e4bcab4088b6687866edf570
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80727357"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928260"
 ---
 # <a name="idebugmessageevent2"></a>IDebugMessageEvent2
 Toto rozhraní používá modul ladění (DE) k odeslání zprávy do aplikace Visual Studio, která vyžaduje odpověď od uživatele.
@@ -29,7 +29,7 @@ IDebugMessageEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- DE implementuje toto rozhraní k odeslání zprávy do aplikace Visual Studio, která vyžaduje reakci uživatele. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` .
+ DE implementuje toto rozhraní k odeslání zprávy do aplikace Visual Studio, která vyžaduje reakci uživatele. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` .
 
  Implementace tohoto rozhraní musí komunikovat se [SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md) voláním sady Visual Studio do de. To lze provést například pomocí zprávy zveřejněné ve vlákně zpracování zprávy DE nebo objekt implementující toto rozhraní může obsahovat odkaz na DE a volání zpět do DE s předanou odpovědí `IDebugMessageEvent2::SetResponse` .
 

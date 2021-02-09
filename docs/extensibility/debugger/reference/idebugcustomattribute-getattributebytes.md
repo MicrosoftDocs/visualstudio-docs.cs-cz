@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: cf34583b-6530-4dcc-89f8-eb27e4e8d594
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 621ebf3949a273e06053ced67209aa052c25bce0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe0db0267898b54837cd9d05e39b0ddce97d21cb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80732799"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928456"
 ---
 # <a name="idebugcustomattributegetattributebytes"></a>IDebugCustomAttribute::GetAttributeBytes
 Získá informace o atributu jako objekt BLOB bajtů.
@@ -28,7 +28,7 @@ Získá informace o atributu jako objekt BLOB bajtů.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetAttributeBytes( 
+HRESULT GetAttributeBytes( 
    BYTE*  ppBlob,
    DWORD* pdwLen
 );

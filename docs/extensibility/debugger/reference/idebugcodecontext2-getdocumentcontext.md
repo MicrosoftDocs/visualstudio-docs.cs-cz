@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: d552cc92-963f-43c1-949f-ae6b63a427b8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 46510ce794ea30fdd365a77007b962a1eafd5d31
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eaac527149d3224370f04d9dec46123b59568ac1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80734346"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928741"
 ---
 # <a name="idebugcodecontext2getdocumentcontext"></a>IDebugCodeContext2::GetDocumentContext
 Získá kontext dokumentu, který odpovídá tomuto kontextu kódu. Kontext dokumentu představuje pozici ve zdrojovém souboru, která odpovídá zdrojovému kódu, který tuto instrukci vygeneroval.
@@ -28,13 +28,13 @@ Získá kontext dokumentu, který odpovídá tomuto kontextu kódu. Kontext doku
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetDocumentContext( 
+HRESULT GetDocumentContext( 
    IDebugDocumentContext2** ppSrcCxt
 );
 ```
 
 ```csharp
-int GetDocumentContext( 
+int GetDocumentContext( 
    out IDebugDocumentContext2 ppSrcCxt
 );
 ```

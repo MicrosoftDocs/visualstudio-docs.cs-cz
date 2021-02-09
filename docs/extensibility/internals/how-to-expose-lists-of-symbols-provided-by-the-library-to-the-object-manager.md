@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 19757068-bdaa-4e7e-85d6-f8ce5026a859
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52bb2505e70d39e6cd861190db6eab9fa29e7aa7
-ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
+ms.openlocfilehash: cf1d717f423768f9dc53972c2a482e2eab913d81
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761345"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928208"
 ---
 # <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>Postupy: vystavení seznamů symbolů poskytovaných knihovnou správci objektů
 Nástroje pro procházení symbolů, **zobrazení tříd**, **Prohlížeč objektů**, **prohlížeč volání** a **hledání výsledků symbolů**, předejte požadavky na nová data do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Správce objektů. Správce objektů najde příslušné knihovny a vyžádá si nové seznamy symbolů. Knihovny reagují tím, že poskytují požadovaná data [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] správci objektů prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> rozhraní. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Správce objektů volá metody v <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> rozhraní pro získání dat a používá je k naplnění nebo aktualizaci zobrazení nástrojů pro procházení symbolů.

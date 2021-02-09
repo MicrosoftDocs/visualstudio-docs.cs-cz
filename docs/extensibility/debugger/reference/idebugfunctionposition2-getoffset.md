@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 60943782-aec7-4be2-b222-1984ed53a543
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: aaa5c13822322084c68aaf0453cb2707f79ddc05
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29f883af8f048a38320a49493257354ad3b60188
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80728360"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99929833"
 ---
 # <a name="idebugfunctionposition2getoffset"></a>IDebugFunctionPosition2::GetOffset
 Načte pozici funkce ve zdrojovém dokumentu.
@@ -28,7 +28,7 @@ Načte pozici funkce ve zdrojovém dokumentu.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetOffset( 
+HRESULT GetOffset( 
    TEXT_POSITION* pPosition
 );
 ```

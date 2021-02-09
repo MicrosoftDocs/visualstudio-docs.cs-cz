@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 4b0536dd-4f92-4ef2-9031-4548281f37aa
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 114862bb3358cc2a5400d6f40031deb030e4e4df
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: 8df7a4be9c8a270feebd7e27d25c006eb4dc5817
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715987"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927935"
 ---
 # <a name="source-control-plug-in-api-functions"></a>Funkce modulu plug-in správy zdrojového kódu v rozhraní API
 Rozhraní API modulu plug-in správy zdrojových kódů poskytuje následující funkce, které musí být implementovány modulem plug-in správy zdrojových kódů v souladu s tímto rozhraním API. Signatury každé funkce a sémantiky přidružené k bitovým příznakům a dalším parametrům jsou podrobněji popsány v tomto odkazu.
 
 ## <a name="initialization-and-housekeeping-functions"></a>Inicializační a údržbu funkce
 
-|Funkce|Popis|
+|Funkce|Description|
 |--------------|-----------------|
 |[SccCloseProject](../extensibility/scccloseproject-function.md)|Zavře projekt.|
 |[SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)|Vyzve uživatele k zadání pokročilých možností pro daný příkaz.|
@@ -36,7 +36,7 @@ Rozhraní API modulu plug-in správy zdrojových kódů poskytuje následující
 
 ## <a name="core-source-control-functions"></a>Základní funkce správy zdrojového kódu
 
-|Funkce|Popis|
+|Funkce|Description|
 |--------------|-----------------|
 |[SccAdd](../extensibility/sccadd-function.md)|Přidá pole souborů určené plně kvalifikovanými názvy cest do systému správy zdrojového kódu.|
 |[SccAddFromScc](../extensibility/sccaddfromscc-function.md)|Umožňuje uživateli vyhledat soubory, které jsou již v systému správy zdrojů, a poté tyto soubory zpřístupnit v rámci aktuálního projektu.|
@@ -58,7 +58,7 @@ Rozhraní API modulu plug-in správy zdrojových kódů poskytuje následující
 ## <a name="functions-that-support-additional-capability-version-12-of-the-source-control-plug-in-api"></a>Funkce, které podporují další možnosti (verze 1,2 rozhraní API modulu plug-in správy zdrojového kódu)
  Tato skupina funkcí definuje další funkce zahrnuté ve verzi 1,2 rozhraní API modulu plug-in správy zdrojového kódu. Poskytují přístup k pokročilejším funkcím a možnostem správy zdrojového kódu.
 
-|Funkce|Popis|
+|Funkce|Description|
 |--------------|-----------------|
 |[SccBeginBatch](../extensibility/sccbeginbatch-function.md)|Spustí dávkovou operaci.|
 |[SccCreateSubProject](../extensibility/scccreatesubproject-function.md)|Vytvoří dílčí projekt se zadaným názvem v rámci existujícího nadřazeného projektu.|
@@ -72,7 +72,7 @@ Rozhraní API modulu plug-in správy zdrojových kódů poskytuje následující
 ## <a name="functions-that-support-advanced-capability-version-13-of-the-source-control-plug-in-api"></a>Funkce, které podporují pokročilou funkci (verze 1,3 rozhraní API modulu plug-in správy zdrojového kódu)
  Tato skupina funkcí definuje další funkce zahrnuté ve verzi 1,3 rozhraní API modulu plug-in správy zdrojového kódu. Poskytují přístup k pokročilejším funkcím a možnostem správy zdrojového kódu.
 
-|Funkce|Popis|
+|Funkce|Description|
 |--------------|-----------------|
 |[SccAddFilesFromSCC](../extensibility/sccaddfilesfromscc-function.md)|Přidá do aktuálního projektu seznam souborů ze správy zdrojového kódu.|
 |[SccBackgroundGet](../extensibility/sccbackgroundget-function.md)|Načte seznam souborů ze správy zdrojového kódu bez uživatelského rozhraní.|

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f1292478-a57d-48ec-8c9e-88a23f04ffe5
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99aaf5070646bbbb95c6be98eb8ac2f7a5948ff2
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: f62e3a4f33193f36e76b1286ae3d35d26706b3ac
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715272"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928091"
 ---
 # <a name="simplified-embedding"></a>Zjednodušená vkládání
 Zjednodušené vkládání je povoleno v editoru, když je jeho objekt zobrazení dokumentu nadřazený (tj. vytvořený podřízený objekt) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> rozhraní je implementováno pro zpracování příkazů okna. Zjednodušené editory vkládání nemohou hostovat aktivní ovládací prvky. Na následujícím obrázku jsou uvedeny objekty, které slouží k vytvoření editoru s zjednodušeným vkládáním.
@@ -31,10 +31,10 @@ Zjednodušené vkládání je povoleno v editoru, když je jeho objekt zobrazen�
 
 |Rozhraní|Umístění rozhraní|Použití|
 |---------------|---------------------------|---------|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|Zobrazit|Poskytuje připojení k nadřazenému oknu.|
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Zobrazit|Zpracovává příkazy.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|Zobrazit|Povolí aktualizace stavového řádku.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|Zobrazit|Povolí položky **panelu nástrojů** .|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|Zobrazení|Poskytuje připojení k nadřazenému oknu.|
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Zobrazení|Zpracovává příkazy.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|Zobrazení|Povolí aktualizace stavového řádku.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|Zobrazení|Povolí položky **panelu nástrojů** .|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEvents>|Data|Odesílá oznámení při změně souboru.|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|Data|Povolí funkci Uložit jako pro typ souboru.|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>|Data|Povoluje stálost dokumentu.|
