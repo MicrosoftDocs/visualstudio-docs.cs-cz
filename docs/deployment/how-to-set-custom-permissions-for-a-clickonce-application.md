@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 660459ca-ef73-44a8-b323-610001f63b93
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d5d0348b882a3327c02fca6db0628822c0deffeb
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 2050f3534caba8aba12fa8550eb6e573a3d0db08
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350995"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885037"
 ---
 # <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>Postupy: nastavení vlastních oprávnění pro aplikaci ClickOnce
 Můžete nasadit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci, která používá výchozí oprávnění pro zóny Internet nebo místní intranet. Alternativně můžete vytvořit vlastní zónu pro konkrétní oprávnění, která aplikace potřebuje. To lze provést přizpůsobením oprávnění zabezpečení na stránce **zabezpečení** **Návrháře projektu**.

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Office object models
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 83ada85ba346e83e5bc5ebc01e91b11be0e844e1
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 316ead76be1f84fccc6f675b204587008e8a194a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528051"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885297"
 ---
 # <a name="outlook-object-model-overview"></a>Přehled modelu objektů aplikace Outlook
   Pro vývoj doplňků VSTO pro systém Microsoft Office Outlook můžete pracovat s objekty, které jsou k dispozici v objektovém modelu aplikace Outlook. Objektový model aplikace Outlook poskytuje třídy a rozhraní, které představují položky v uživatelském rozhraní. Například <xref:Microsoft.Office.Interop.Outlook.Application> objekt představuje celou aplikaci, <xref:Microsoft.Office.Interop.Outlook.Folder> objekt představuje složku, která obsahuje e-mailové zprávy nebo jiné položky, a <xref:Microsoft.Office.Interop.Outlook.MailItem> objekt představuje e-mailovou zprávu.

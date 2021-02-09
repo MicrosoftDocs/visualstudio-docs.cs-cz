@@ -5,15 +5,15 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: af6c6156b1d88c1d015f7700fc7bed061bbe9a76
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 551f929e4d42b208dd222f052b27720edb273761
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62950604"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885765"
 ---
 # <a name="help-in-r-tools-for-visual-studio"></a>Nástroje R pro Visual Studio nápovědě
 
@@ -24,7 +24,7 @@ Nápovědu pro jazyk R je integrována přímo do interaktivního okna v aplikac
 > [!Tip]
 > Okno Help, podobně jako všechny ostatní v aplikaci Visual Studio, lze uspořádat a ukotvit, například. Viz [přizpůsobení rozložení oken v aplikaci Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md).
 >
-> Chcete-li otevřít výsledky aplikace Help v prohlížeči, vyberte nabídku možnosti **nástrojů jazyka R**  >  **Options** a nastavte vlastnost **Nápověda pro R prohlížeče** na `External` . Viz [Možnosti](options-for-r-tools-in-visual-studio.md).
+> Chcete-li otevřít výsledky aplikace Help v prohlížeči, vyberte nabídku možnosti **nástrojů jazyka R**  >   a nastavte vlastnost **Nápověda pro R prohlížeče** na `External` . Viz [Možnosti](options-for-r-tools-in-visual-studio.md).
 
 Pokud chcete hledat v nápovědě, použijte `??` příkaz následovaný hledaným termínem. Pokud hledaný termín obsahuje mezery, použijte uvozovky:
 
@@ -48,7 +48,7 @@ Vývojáři často prohledají dokumentaci R, kde najdete nápovědu pro názvy 
     ![Vyvolání pomocníka při kliknutí pravým tlačítkem na místní nabídku](media/help-right-click.png)
 
 > [!Tip]
-> Chcete-li otevřít integrovanou nápovědu v prohlížeči, vyberte možnost možnosti **nástrojů R**  >  **Options** a nastavte možnost **F1 webový prohlížeč** na `External` . Viz [Možnosti](options-for-r-tools-in-visual-studio.md).
+> Chcete-li otevřít integrovanou nápovědu v prohlížeči, vyberte možnost možnosti **nástrojů R**  >   a nastavte možnost **F1 webový prohlížeč** na `External` . Viz [Možnosti](options-for-r-tools-in-visual-studio.md).
 
 ## <a name="integrated-stackoverflow-search"></a>Integrované hledání StackOverflow
 

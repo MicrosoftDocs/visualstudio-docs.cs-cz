@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b4f7ceab-3653-4069-bb74-c309aec62866
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 047c9ef9d5bb03546eb88372ae43a51c7c8e4d32
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 52dd5611e5a05de4bdb2d765bbdd2860e54f767e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98723202"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885895"
 ---
 # <a name="utilization-view"></a>Zobrazení využití
 **Zobrazení využití** zobrazuje informace o procesoru, GPU a dalších systémových prostředcích, které jsou používány aktuálním procesem (výběr možnosti **analyzovat**  >  **Vizualizátor souběžnosti** pro spuštění Vizualizátor souběžnosti). Zobrazuje průměrné využití jádra analyzovaným procesem, nečinného procesu, systémového procesu a dalších procesů, které v systému běží v průběhu času. Nezobrazuje, které konkrétní jádro je v určitou dobu aktivní. Například pokud jsou dvě jádra spuštěny na úrovni 50% kapacity za dané časové období, pak toto zobrazení ukazuje, že je využíváno jedno logické jádro. Zobrazení je vygenerováno vydělením času profilace na krátké časové segmenty. Pro každý segment graf znázorňuje průměrný počet vláken procesů, které jsou během daného intervalu spuštěny na logických jádrech.

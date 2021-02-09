@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: c9601f2e-2c6e-4da9-9a6e-e707319b39e2
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64eda9c95b9c469d8defc8ab0318031e9e43172a
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: deca5b39701fd073b3191cf7a24d83ccf1e08794
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305037"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884725"
 ---
 # <a name="commands-that-must-be-run-after-installation"></a>Příkazy, které se musí spustit po instalaci
 Pokud nasadíte rozšíření prostřednictvím souboru *. msi* , je nutné spustit nástroj **devenv/Setup** jako součást instalace, aby aplikace Visual Studio mohla zjistit vaše rozšíření.
@@ -76,7 +76,7 @@ Pokud nasadíte rozšíření prostřednictvím souboru *. msi* , je nutné spus
 
 ### <a name="installexecutesequence-table-to-schedule-the-devenvexe-custom-actions"></a>Tabulka InstallExecuteSequence k naplánování vlastních akcí devenv.exe
 
-|Akce|Stav|Sequence|
+|Akce|Podmínka|Sequence|
 |------------|---------------|--------------|
 |CA_RunDevenv2002|DEVENV_EXE_2002|6602|
 |CA_RunDevenv2003|DEVENV_EXE_2003|6603|

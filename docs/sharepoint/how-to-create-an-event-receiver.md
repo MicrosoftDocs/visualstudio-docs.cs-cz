@@ -16,15 +16,15 @@ helpviewer_keywords:
 - event receivers [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2e94bd1594f94f43c82eed5033d6ec2660905c18
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 1943bd8a652a88d218912ab0fc0f6227bf83bc95
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849880"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885700"
 ---
 # <a name="how-to-create-an-event-receiver"></a>Postupy: vytvoření přijímače událostí
   Vytvořením *přijímačů událostí* můžete reagovat, když uživatel komunikuje s položkami SharePointu, jako jsou seznamy nebo položky seznamu. Například kód v přijímači událostí může být aktivován, když uživatel změní kalendář nebo odstraní název ze seznamu kontaktů. V tomto tématu se dozvíte, jak přidat přijímač událostí do instance seznamu.

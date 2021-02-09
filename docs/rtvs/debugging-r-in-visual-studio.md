@@ -5,15 +5,15 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 5efa0a32f51e1f5060474a0d277bfca7f1e7d548
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3696cac00c726cffb76f29a1da2c503a15af2bd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189252"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885817"
 ---
 # <a name="debug-r-in-visual-studio"></a>Ladění R v aplikaci Visual Studio
 
@@ -35,7 +35,7 @@ Sourcing: c:\proj\rproject1\rproject1\Settings.R
 
 Všimněte si, že `rtvs::debug_source` funkce se používá ke zdroji skriptu. Tato funkce je povinná, protože RTVS potřebuje upravit kód v přípravě pro ladění. Při použití libovolného RTVS zdroje a připojeného ladicího programu Visual Studio automaticky používá `rtvs::debug_source` .
 
-Ladicí program můžete také ručně připojit z interaktivního okna přímo pomocí příkazu jazyka **R**  >  **Session**  >  **připojit ladicí program** k příkazu, příkaz **ladit**  >  **připojit k interaktivní R** nebo příkaz **připojit ladicí program** na panelu nástrojů interaktivního okna. Až to uděláte, je vaše zodpovědnost za zdroj souborů, které chcete ladit. Pokud chcete soubory vytvořit ručně, ujistěte se, že používáte `rtvs::debug_source` a ne běžný `source` příkaz v jazyce R.
+Ladicí program můžete také ručně připojit z interaktivního okna přímo pomocí příkazu jazyka **R**  >    >  **připojit ladicí program** k příkazu, příkaz **ladit**  >  **připojit k interaktivní R** nebo příkaz **připojit ladicí program** na panelu nástrojů interaktivního okna. Až to uděláte, je vaše zodpovědnost za zdroj souborů, které chcete ladit. Pokud chcete soubory vytvořit ručně, ujistěte se, že používáte `rtvs::debug_source` a ne běžný `source` příkaz v jazyce R.
 
 Toto připojení mezi ladicím programem a interaktivním oknem usnadňuje provádění akcí, jako je volání (a ladění) funkce s různými hodnotami parametrů. Předpokládejme například, že máte následující funkci ve zdrojovém souboru (to znamená, že je načten do relace):
 
@@ -60,7 +60,7 @@ Prohlížeč prostředí podporuje řadu speciálních příkazů:
 | f | dokončit: spustí zbytek aktuálního rozsahu funkcí a vrátí volajícímu (stejné jako krok ven). |
 | c, pokračování | pokračovat: spustí program na další zarážku. |
 | Q | konec: ukončí relaci ladění. |
-| where | Zobrazit zásobník: zobrazí zásobník volání v interaktivním okně. |
+| kde: | Zobrazit zásobník: zobrazí zásobník volání v interaktivním okně. |
 | Nápověda | Zobrazit Help: zobrazí dostupné příkazy v interaktivním okně. |
 | &lt;výrazu&gt; | vyhodnotit výraz *ve výrazu*. |
 

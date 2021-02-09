@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9f2cce86-345a-4e22-84ba-91542d81e67a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 070bcc04d79231d074e30d1e87d3ad512ce5dca1
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 2c81020b7c1933075f2faee026be17dd0fec4319
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98723033"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884439"
 ---
 # <a name="using-saved-intellitrace-data-c-visual-basic-c"></a>Použití uložených dat IntelliTrace (C#, Visual Basic, C++)
 
@@ -160,7 +160,7 @@ Když začnete ladit ze souboru protokolu IntelliTrace (. iTrace), přejdete ke 
 
 1. Zkopírujte ID korelace SharePoint z jeho zdroje.
 
-    Například:
+    Příklad:
 
     ![ID korelace &#45; IntelliTrace &#45; SharePointu](../debugger/media/sharepointerror_intellitrace.png "SharePointError_IntelliTrace")
 

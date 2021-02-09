@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: b5a853b7-221e-4d62-8948-07423089d75d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 019633b62d46f6a8ac68e6f5f4abc888e6986ab1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff7c28a30ccab43629636f7dcd9391a669a376ae
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80728193"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884790"
 ---
 # <a name="idebuggenericfielddefinition"></a>IDebugGenericFieldDefinition
 Představuje definici pole pro obecný typ spravovaného kódu.

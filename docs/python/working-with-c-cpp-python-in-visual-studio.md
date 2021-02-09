@@ -5,17 +5,17 @@ ms.date: 11/19/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d79c9d0d1b9c62d5afd78696ee2654c4eecdbe57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 461e68979de6c3b711c05cc4be3ef9d5bd761397
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86972358"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885934"
 ---
 # <a name="create-a-c-extension-for-python"></a>Vytvoření rozšíření C++ pro Python
 
@@ -36,7 +36,7 @@ Porovnání těchto a dalších prostředků najdete v části [alternativní p�
 
 Hotový vzorek z tohoto Názorného postupu najdete v [Pythonu-Samples-vs-cpp-Extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Visual Studio 2017 nebo novější s nainstalovanou možností **vývoj desktopových aplikací v C++** i v **Pythonu** s výchozími možnostmi
 - V úloze **vývoje pro Python** také zaškrtněte políčko na pravé straně pro **nativní vývojové nástroje Pythonu**. Tato možnost nastaví většinu konfigurací popsaných v tomto článku. (Tato možnost také obsahuje úlohy C++ automaticky.)
@@ -114,7 +114,7 @@ Podle pokynů v této části vytvořte dva identické projekty C++ s názvem "s
     > [!Important]
     > Soubor s příponou *. cpp* je nutný k zapnutí stránek vlastností C++ v následujících krocích.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt C++ a vyberte **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt C++ a vyberte **vlastnosti**.
 
 1. V horní části dialogového okna **stránky vlastností** , které se zobrazí, nastavte **konfiguraci** na **všechny konfigurace** a **platforma** na **Win32**.
 
@@ -131,10 +131,10 @@ Podle pokynů v této části vytvořte dva identické projekty C++ s názvem "s
     | **Linker**  >  **Obecné** | **Další adresáře knihoven** | Přidejte složku Python *knihovny* obsahující soubory *. lib* , jak je to vhodné pro vaši instalaci, například `c:\Python36\libs` . (Nezapomeňte odkazovat na složku *knihovny* , která obsahuje soubory *. lib* , a *ne* na složku *lib* , která obsahuje soubory *. py* .) |
 
     > [!Tip]
-    > Pokud nevidíte kartu C/C++ ve vlastnostech projektu, je to proto, že projekt neobsahuje žádné soubory, které identifikuje jako zdrojové soubory jazyka C/C++. K tomuto stavu může dojít, pokud vytvoříte zdrojový soubor bez přípony *. c* nebo *. cpp* . Pokud jste například omylem zadali `module.coo` místo `module.cpp` v dialogovém okně Nová položka dříve, pak sada Visual Studio vytvoří soubor, ale nenastaví typ souboru na "C/C + Code", což znamená, že aktivuje kartu vlastnosti jazyka c/C++. Taková identifikace zůstane případ i v případě, že soubor přejmenujete pomocí `.cpp` . Chcete-li správně nastavit typ souboru, klikněte pravým tlačítkem na soubor v **Průzkumník řešení**, vyberte **vlastnosti**a pak nastavte  **typ souboru** na **kód C/C++**.
+    > Pokud nevidíte kartu C/C++ ve vlastnostech projektu, je to proto, že projekt neobsahuje žádné soubory, které identifikuje jako zdrojové soubory jazyka C/C++. K tomuto stavu může dojít, pokud vytvoříte zdrojový soubor bez přípony *. c* nebo *. cpp* . Pokud jste například omylem zadali `module.coo` místo `module.cpp` v dialogovém okně Nová položka dříve, pak sada Visual Studio vytvoří soubor, ale nenastaví typ souboru na "C/C + Code", což znamená, že aktivuje kartu vlastnosti jazyka c/C++. Taková identifikace zůstane případ i v případě, že soubor přejmenujete pomocí `.cpp` . Chcete-li správně nastavit typ souboru, klikněte pravým tlačítkem na soubor v **Průzkumník řešení**, vyberte **vlastnosti** a pak nastavte  **typ souboru** na **kód C/C++**.
 
     > [!Warning]
-    > Vždy nastavte možnost **C/C++**  >  **Code Generation**  >  **knihovny modulu runtime** generování kódu C/C++ na **vícevláknovou knihovnu DLL (/MD)**, a to i v případě konfigurace ladění, protože toto nastavení je, aby byly vytvořeny neladitelné binární soubory Pythonu. Pokud se v CPython rozhodnete, že nastavíte možnost **/MDD (Multi-Threaded Debug DLL)** , vytvoří se při vytváření konfigurace **ladění** Chyba **C1189: Py_LIMITED_API není kompatibilní s Py_DEBUG, Py_TRACE_REFS a Py_REF_DEBUG**. Pokud kromě toho odeberete `Py_LIMITED_API` (což je vyžadováno u CPython, ale ne PyBind11), chcete-li se vyhnout chybě buildu, při pokusu o import modulu dojde k chybě Pythonu. (K selhání dojde v rámci volání knihovny DLL `PyModule_Create` , jak je popsáno dále, s výstupní zprávou **závažné chyby Pythonu: PyThreadState_Get: žádné aktuální vlákno**.)
+    > Vždy nastavte možnost   >    >  **knihovny modulu runtime** generování kódu C/C++ na **vícevláknovou knihovnu DLL (/MD)**, a to i v případě konfigurace ladění, protože toto nastavení je, aby byly vytvořeny neladitelné binární soubory Pythonu. Pokud se v CPython rozhodnete, že nastavíte možnost **/MDD (Multi-Threaded Debug DLL)** , vytvoří se při vytváření konfigurace **ladění** Chyba **C1189: Py_LIMITED_API není kompatibilní s Py_DEBUG, Py_TRACE_REFS a Py_REF_DEBUG**. Pokud kromě toho odeberete `Py_LIMITED_API` (což je vyžadováno u CPython, ale ne PyBind11), chcete-li se vyhnout chybě buildu, při pokusu o import modulu dojde k chybě Pythonu. (K selhání dojde v rámci volání knihovny DLL `PyModule_Create` , jak je popsáno dále, s výstupní zprávou **závažné chyby Pythonu: PyThreadState_Get: žádné aktuální vlákno**.)
     >
     > Možnost/MDd se používá k vytvoření binárních souborů ladění Pythonu (například *python_d.exe*), ale výběr pro rozšiřující knihovnu DLL stále způsobuje chybu sestavení s `Py_LIMITED_API` .
 
@@ -177,7 +177,7 @@ Informace o tom, co je uvedeno v této části pro Python 3. x, najdete v [Refer
 
 Pokud pracujete s Python 2,7, uveďte místo toho [rozšíření python 2,7 pomocí jazyka C nebo C++](https://docs.python.org/2.7/extending/extending.html) a [portování rozšíření na python 3](https://docs.python.org/2.7/howto/cporting.html) (Python.org).
 
-1. V horní části *modulu. cpp*zahrňte *Python. h*:
+1. V horní části *modulu. cpp* zahrňte *Python. h*:
 
     ```cpp
     #include <Python.h>
@@ -234,13 +234,13 @@ Pokud jste dokončili kroky v předchozí části, určitě jste si všimli, že
 
 1. Nainstalujte PyBind11 pomocí PIP: `pip install pybind11` nebo `py -m pip install pybind11` .
 
-1. V horní části *modulu. cpp*přidejte *pybind11. h*:
+1. V horní části *modulu. cpp* přidejte *pybind11. h*:
 
     ```cpp
     #include <pybind11/pybind11.h>
     ```
 
-1. V dolní části *modulu. cpp*použijte `PYBIND11_MODULE` makro k definování vstupního bodu pro funkci jazyka C++:
+1. V dolní části *modulu. cpp* použijte `PYBIND11_MODULE` makro k definování vstupního bodu pro funkci jazyka C++:
 
     ```cpp
     namespace py = pybind11;
@@ -264,7 +264,7 @@ Pokud jste dokončili kroky v předchozí části, určitě jste si všimli, že
 
 Modul C++ se nemusí podařit zkompilovat z následujících důvodů:
 
-- Nejde najít *Python. h* (**E1696: nejde otevřít zdrojový soubor "Python. h"** a/nebo **C1083: nejde otevřít soubor include: "Python. h": žádný takový soubor nebo adresář**): Ověřte, že cesta v obecných dalších adresářích **C/C++**  >  **General**  >  **obsahuje adresáře** *include* pro instalaci Pythonu. Viz krok 6 v části [Vytvoření základního projektu C++](#create-the-core-c-projects).
+- Nejde najít *Python. h* (**E1696: nejde otevřít zdrojový soubor "Python. h"** a/nebo **C1083: nejde otevřít soubor include: "Python. h": žádný takový soubor nebo adresář**): Ověřte, že cesta v obecných dalších adresářích **C/C++**  >    >  **obsahuje adresáře** *include* pro instalaci Pythonu. Viz krok 6 v části [Vytvoření základního projektu C++](#create-the-core-c-projects).
 
 - Nejde najít knihovny Pythonu: Ověřte, že cesta v **linkeru**  >  **Obecné**  >  **Další adresáře knihoven** ve vlastnostech projektu odkazuje na složku *knihovny* Instalace Pythonu. Viz krok 6 v části [Vytvoření základního projektu C++](#create-the-core-c-projects).
 
@@ -379,9 +379,9 @@ Visual Studio podporuje ladění kódu Python a C++ společně. Tato část vás
 1. Klikněte pravým tlačítkem myši na projekt v jazyce Python v **Průzkumník řešení**, vyberte možnost **vlastnosti**, vyberte kartu **ladění** a poté vyberte možnost **ladit**  >  **Povolit ladění nativního kódu** .
 
     > [!Tip]
-    > Pokud povolíte ladění nativního kódu, okno výstupu Pythonu se může okamžitě po dokončení programu zmizet, aniž by to mělo za normální **stisknutí klávesy pro pokračování** . Chcete-li vynutit pozastavení, přidejte `-i` možnost do **Run**  >  pole**argumenty Run interpretu** na kartě **ladění** , když povolíte ladění nativního kódu. Tento argument vloží interpret Pythonu do interaktivního režimu po dokončení kódu, a v takovém případě počká na stisknutí klávesy **CTRL** + **Z**klávesy  >  **ENTER** k ukončení. (Pokud si nejste vědomi změny kódu Pythonu, můžete `import os` `os.system("pause")` na konci programu přidat příkazy a. Tento kód duplikuje původní výzvu k pozastavení.)
+    > Pokud povolíte ladění nativního kódu, okno výstupu Pythonu se může okamžitě po dokončení programu zmizet, aniž by to mělo za normální **stisknutí klávesy pro pokračování** . Chcete-li vynutit pozastavení, přidejte `-i` možnost do   >  pole **argumenty Run interpretu** na kartě **ladění** , když povolíte ladění nativního kódu. Tento argument vloží interpret Pythonu do interaktivního režimu po dokončení kódu, a v takovém případě počká na stisknutí klávesy **CTRL** + **Z** klávesy  >  **ENTER** k ukončení. (Pokud si nejste vědomi změny kódu Pythonu, můžete `import os` `os.system("pause")` na konci programu přidat příkazy a. Tento kód duplikuje původní výzvu k pozastavení.)
 
-1. Výběrem **File**  >  **Uložit** soubor uložte změny vlastností.
+1. Výběrem   >  **Uložit** soubor uložte změny vlastností.
 
 1. Nastavte konfiguraci sestavení pro **ladění** na panelu nástrojů sady Visual Studio.
 

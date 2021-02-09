@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 9600d6f0-e2b6-4fe0-b935-fb32affb97a4
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 07205a8e15cd338fa1acf0d3b081301a083bba5d
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: d53117456318039837a371f68745b4688cbbd087
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96304995"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884699"
 ---
 # <a name="comment-code-in-a-legacy-language-service"></a>Kód komentáře ve službě starší verze jazyka
 Programovací jazyky obvykle poskytují způsob, jak opatřit poznámky nebo komentovat kód. Komentář je část textu, která poskytuje další informace o kódu, ale je ignorována během kompilace nebo výkladu.

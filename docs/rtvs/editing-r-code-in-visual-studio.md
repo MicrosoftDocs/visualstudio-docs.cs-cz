@@ -5,15 +5,15 @@ ms.date: 11/05/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 7ecfd8f1cf50e94991ce2fd94ad94ac9815c92ca
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4aea7f5371dc425a77e10b64a9389571b06f80b4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315093"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885856"
 ---
 # <a name="edit-r-code-in-visual-studio"></a>Úprava kódu R v aplikaci Visual Studio
 
@@ -27,7 +27,7 @@ Kromě vybarvení různých částí kódu, jako jsou například řetězce, kom
 
 ![Barevné zvýrazňování syntaxe kódu R](media/editing-syntax-colors.png)
 
-Chcete-li přizpůsobit písma a určité barvy zvýraznění, **Tools**vyberte  >  příkaz**Možnosti** nástrojů, přejděte do části **Environment**  >  **písma a barvy**prostředí a pak změňte nastavení položek souvisejících s R v poli **zobrazované položky** :
+Chcete-li přizpůsobit písma a určité barvy zvýraznění, vyberte  >  příkaz **Možnosti** nástrojů, přejděte do části   >  **písma a barvy** prostředí a pak změňte nastavení položek souvisejících s R v poli **zobrazované položky** :
 
 ![Písma a možnosti barev pro kód R](media/editing-syntax-colors-options.png)
 
@@ -61,7 +61,7 @@ Ve výchozím nastavení vloží Visual Studio po stisknutí klávesy **tabulát
 
 Navigace v kódu vám umožní rychlý přístup ke zdrojovému kódu vašeho programu R a jeho knihoven. Tyto funkce zabrání v toku práce, ale nemusíte ručně prohledávat kód.
 
-**Přejít k definici rychlé přechodu** na definici funkce nebo nastavování vloženého zkráceného editoru pro čtení zdrojového kódu funkce knihovny. Stačí kliknout pravým tlačítkem myši na funkci zájmu a vybrat **Přejít k definici**nebo umístit kurzor do funkce a stisknout klávesu **F12**.
+**Přejít k definici rychlé přechodu** na definici funkce nebo nastavování vloženého zkráceného editoru pro čtení zdrojového kódu funkce knihovny. Stačí kliknout pravým tlačítkem myši na funkci zájmu a vybrat **Přejít k definici** nebo umístit kurzor do funkce a stisknout klávesu **F12**.
 
 Tento příkaz otevře nové okno editoru obsahující zdrojový kód funkce. Kurzor je pohodlně umístěný na začátku definice funkce.
 
@@ -71,7 +71,7 @@ Tento příkaz otevře nové okno editoru obsahující zdrojový kód funkce. Ku
 
 ## <a name="send-code-to-the-interactive-window"></a>Odeslat kód do interaktivního okna
 
-Mnoho vývojářů chce napsat nějaký kód v editoru a potom tento kód odeslat do [interaktivního okna](interactive-repl-for-r-in-visual-studio.md) pro okamžité testování (označované také jako Read-Evaluate-Print-Loop nebo REPL). Stisknutí klávesy **CTRL** + **ENTER** v editoru R pošle aktuální řádek kódu do interaktivního okna a pak umístí kurzor na další řádek. Pomocí **klávesy CTRL** + **ENTER**a pak můžete efektivně krokovat kód z editoru.
+Mnoho vývojářů chce napsat nějaký kód v editoru a potom tento kód odeslat do [interaktivního okna](interactive-repl-for-r-in-visual-studio.md) pro okamžité testování (označované také jako Read-Evaluate-Print-Loop nebo REPL). Stisknutí klávesy **CTRL** + **ENTER** v editoru R pošle aktuální řádek kódu do interaktivního okna a pak umístí kurzor na další řádek. Pomocí **klávesy CTRL** + **ENTER** a pak můžete efektivně krokovat kód z editoru.
 
 Můžete také vybrat kód a stisknutím klávesy **CTRL** + **ENTER** použít celý výběr. Případně klikněte pravým tlačítkem myši na výběr a vyberte možnost **Spustit v Interactive**.
 
@@ -91,9 +91,9 @@ f <- function(a) { return(a + 1) }
 
 Chcete-li znovu zformátovat celý soubor kódu, vyberte možnost **Upravit**  >  **Rozšířené**  >  **formátování dokumentu** (**CTRL** + **E**,**D**).
 
-Automatické formátování je samostatná operace, kterou je možné vrátit zpět. Pokud například vložíte kód do editoru a použijete ho formátování, vyberte možnost **Upravit**  >  **zpět** nebo stisknout **klávesovou zkratku CTRL +**, + **Z** Jakmile se změní formátování; druhá **Akce** vrátí samotné vložení.
+Automatické formátování je samostatná operace, kterou je možné vrátit zpět. Pokud například vložíte kód do editoru a použijete ho formátování, vyberte možnost **Upravit**  >  **zpět** nebo stisknout **klávesovou zkratku CTRL +**, +  Jakmile se změní formátování; druhá **Akce** vrátí samotné vložení.
 
-Možnosti formátování (včetně vypnutí formátování) se nastavují **Tools**prostřednictvím  >  **možností** nástroje na kartě Upřesnit v **textovém editoru**  >  **R**  >  **Advanced** . Přímo na tuto stránku můžete přejít přímo pomocí **R Tools**  >  příkazu**Možnosti editoru** jazyka R nebo kliknutím pravým tlačítkem v editoru a výběrem **možností formátování**. Podrobnosti najdete v části [Možnosti editoru](#editor-options) .
+Možnosti formátování (včetně vypnutí formátování) se nastavují prostřednictvím  >  **možností** nástroje na kartě Upřesnit v **textovém editoru**  >  **R**  >   . Přímo na tuto stránku můžete přejít přímo pomocí   >  příkazu **Možnosti editoru** jazyka R nebo kliknutím pravým tlačítkem v editoru a výběrem **možností formátování**. Podrobnosti najdete v části [Možnosti editoru](#editor-options) .
 
 ## <a name="inserting-roxygen-comments"></a>Vkládání komentářů Roxygen
 
@@ -103,31 +103,31 @@ RTVS poskytuje zástupce pro generování komentářů [Roxygen](https://cran.r-
 
 ## <a name="editor-options"></a>Možnosti editoru
 
-Možnosti specifické pro Editor se nastavují **Tools**pomocí  >  příkazu**Možnosti** nástrojů, přechodem na **textový editor**  >  **r**nebo pomocí klávesových zkratek pro Editor nástrojů příkazu **R**  >  **Editor Options**.
+Možnosti specifické pro Editor se nastavují pomocí  >  příkazu **Možnosti** nástrojů, přechodem na **textový editor**  >  **r** nebo pomocí klávesových zkratek pro Editor nástrojů příkazu **R**  >  .
 
-Možnosti na kartách **Obecné**, **posuvníky**a **tabulátory** nejsou specifické pro jazyk R, ale místo toho jsou k dispozici obecná nastavení sady Visual Studio pro všechny jazyky, ale používá se na jednotlivých jazycích. Podrobnosti najdete v následujících článcích:
+Možnosti na kartách **Obecné**, **posuvníky** a **tabulátory** nejsou specifické pro jazyk R, ale místo toho jsou k dispozici obecná nastavení sady Visual Studio pro všechny jazyky, ale používá se na jednotlivých jazycích. Podrobnosti najdete v následujících článcích:
 
 - [Možnosti, textový editor, všechny jazyky](../ide/reference/options-text-editor-all-languages.md)
 - [Sledování kódu přizpůsobením posuvníku](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md)
 - [Možnosti, textový editor, karty](../ide/reference/options-text-editor-all-languages-tabs.md)
 
-Možnosti na kartě **R**  >  **Upřesnit** v R jsou specifické pro RTVS:
+Možnosti na kartě   >  **Upřesnit** v R jsou specifické pro RTVS:
 
-| Seskupení | Možnost | Výchozí | Popis |
+| Group (Skupina) | Možnost | Výchozí | Description |
 | --- | --- | --- | --- |
 | Formátování | Automatické formátování | Zapnout | Přeformátuje kód při psaní. Nemá vliv na příkazy pro **Výběr formátu** nebo **formátování dokumentu** . |
-| | Rozšířené složené závorky | Vypnuto | Umístí otevřené místo na nový řádek. |
+| | Rozšířené složené závorky | Vypnout | Umístí otevřené místo na nový řádek. |
 | | Formátovat při vložení | Zapnout | Použije formátování při vložení. |
 | | Rozsah formátu zapnuto} | Zapnout | Formátuje rozsah po zadání uzavíracího}. |
 | | Mezera za čárkou | Zapnout | Umístí mezeru za čárky. |
 | | Mezera za klíčovým slovem | Zapnout | Umístí mezeru za klíčová slova jako `if` , `while` a `repeat` . |
 | | Mezera před { | Zapnout | Umístí mezeru před a otevře se {. |
 | | Mezery kolem = | Zapnout | Umístí mezery kolem rovnítko. |
-| IntelliSense | Potvrdit při zadání klávesy ENTER | Vypnuto | Potvrdí výběr automatického dokončování při stisknutí klávesy **ENTER** . |
-| | Potvrdit na klíč místo | Vypnuto | Potvrdí výběr automatického dokončení při stisknutí **mezerníku** .|
-| | Seznam pro doplňování při prvním znaku | Zapnout | Zobrazuje seznam pro doplňování u prvních typů znaků. Pokud je vypnutý, zobrazí se seznam dokončení s **úpravami**  >  **IntelliSense**  >  **Členové seznamu** IntelliSense (**CTRL** + **J**). |
-| | Seznam pro doplňování na klávesu **TAB** | Vypnuto | Vyvolá seznam pro doplňování zadáním jednoho nebo více znaků a stisknutím klávesy **TAB**. |
-| | Porovnává částečně typy názvů argumentů | Vypnuto | Při zadávání názvů argumentů ve volání funkce Help help zobrazí popis argumentu, který je nejlepší shodou. |
-| Okno Interactive | Kontrolu syntaxe v konzole R | Vypnuto | Aplikuje kontrolu syntaxe v interaktivním okně. Kontrola syntaxe nemusí fungovat správně s víceřádkovými příkazy. |
+| IntelliSense | Potvrdit při zadání klávesy ENTER | Vypnout | Potvrdí výběr automatického dokončování při stisknutí klávesy **ENTER** . |
+| | Potvrdit na klíč místo | Vypnout | Potvrdí výběr automatického dokončení při stisknutí **mezerníku** .|
+| | Seznam pro doplňování při prvním znaku | Zapnout | Zobrazuje seznam pro doplňování u prvních typů znaků. Pokud je vypnutý, zobrazí se seznam dokončení s **úpravami**  >    >  **Členové seznamu** IntelliSense (**CTRL** + **J**). |
+| | Seznam pro doplňování na klávesu **TAB** | Vypnout | Vyvolá seznam pro doplňování zadáním jednoho nebo více znaků a stisknutím klávesy **TAB**. |
+| | Porovnává částečně typy názvů argumentů | Vypnout | Při zadávání názvů argumentů ve volání funkce Help help zobrazí popis argumentu, který je nejlepší shodou. |
+| Okno Interactive | Kontrolu syntaxe v konzole R | Vypnout | Aplikuje kontrolu syntaxe v interaktivním okně. Kontrola syntaxe nemusí fungovat správně s víceřádkovými příkazy. |
 | Sbalování | Osnova kódu | Zapnout | Automaticky vytvoří sbalitelné oblasti pro oblasti, jako jsou víceřádkové příkazy. |
 | Kontroly syntaxe | Zobrazit syntaktické chyby | Zapnout | Povolí automatickou kontrolu syntaxe kódu. |

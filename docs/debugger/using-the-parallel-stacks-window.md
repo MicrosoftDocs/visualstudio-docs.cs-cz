@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f50efb78-5206-4803-bb42-426ef8133f2f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 55a004e65a39f4a2b7bbf972cec36d689bf88d97
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 7b92f4e2faf2043c26c7119b6f9754edd3bdc990
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150168"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884387"
 ---
 # <a name="view-threads-and-tasks-in-the-parallel-stacks-window-c-visual-basic-c"></a>Zobrazení vláken a úloh v okně paralelní zásobníky (C#, Visual Basic, C++)
 

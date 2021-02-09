@@ -15,15 +15,15 @@ helpviewer_keywords:
 - paragraphs, controlling structure
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 57e6f6ed2a71c026589d56088f94c8bf1a523ea2
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 898eae77928908dfc077ddf80d2659328ec6475d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525768"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885479"
 ---
 # <a name="how-to-programmatically-exclude-paragraph-marks-when-creating-ranges"></a>Postupy: vyloučení značek odstavců při vytváření rozsahů prostřednictvím kódu programu
   Pokaždé, když vytvoříte <xref:Microsoft.Office.Interop.Word.Range> objekt na základě odstavce, budou do rozsahu zahrnuty všechny netisknutelné znaky, například značky odstavce. Je možné, že budete chtít vložit text ze zdrojového odstavce do cílového odstavce. Pokud nechcete rozdělit cílový odstavec na samostatné odstavce, musíte nejdřív ze zdrojového odstavce odebrat značku konce odstavce. Kromě toho, vzhledem k tomu, že informace o formátování odstavců jsou uloženy v rámci značky odstavce, nebudete chtít tyto údaje zahrnout, pokud rozsah vložíte do existujícího odstavce.

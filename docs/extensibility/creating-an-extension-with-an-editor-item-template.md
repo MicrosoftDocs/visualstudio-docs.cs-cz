@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: fa3b993b-ab95-47fa-a38b-b788f3a5b2d8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6264cb35e404d69900094513875fc7b79310a4d
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: c8bfdcd854cf35c392578d9851a7421bacc8cbfe
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94973737"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884985"
 ---
 # <a name="create-an-extension-with-an-editor-item-template"></a>Vytvoření rozšíření pomocí šablony položky editoru
 Šablony položek, které jsou součástí sady Visual Studio SDK, můžete použít k vytvoření základních rozšíření editoru, která přidávají do editoru třídění, doplňky a okraje. Šablony položek editoru jsou k dispozici pro projekty v jazyce Visual C# nebo Visual Basic VSIX.

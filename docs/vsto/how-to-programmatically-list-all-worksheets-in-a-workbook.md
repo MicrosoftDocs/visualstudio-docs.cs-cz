@@ -13,15 +13,15 @@ helpviewer_keywords:
 - worksheets, listing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 74ff02d6458e643e9a143a8132ad16f10899ec74
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 1446a4323ac190ede301e3a1cc55ccf1cae3b491
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525667"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885310"
 ---
 # <a name="how-to-programmatically-list-all-worksheets-in-a-workbook"></a>Postupy: zobrazení seznamu všech listů v sešitech prostřednictvím kódu programu
   <xref:Microsoft.Office.Interop.Excel.Workbook>Třída poskytuje <xref:Microsoft.Office.Interop.Excel.Worksheets> objekt. Tento objekt obsahuje kolekci všech <xref:Microsoft.Office.Interop.Excel.Worksheet> objektů v sešitu.

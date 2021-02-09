@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.assetid: ee1a478e-374d-4f30-ae28-d260b9d4723a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: dbb5490ff9281a7379d74209da15a3a39595bc09
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: b0240a4dcf0830dca6667bcbd055d677ef7bc204
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98721161"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885999"
 ---
 # <a name="user-vsperfcmd"></a>Uživatel (VSPerfCmd)
 Možnost **uživatel** určuje doménu a uživatelské jméno účtu, který vlastní profilace procesu. Tato možnost je vyžadována, pouze pokud je proces spuštěn jako jiný uživatel než přihlášený uživatel. Vlastník procesu je uveden ve sloupci uživatelské jméno na kartě **procesy** ve Správci úloh systému Windows.

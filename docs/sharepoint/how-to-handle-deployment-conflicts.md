@@ -8,15 +8,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending deployment
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 975fa69a503f5e2acd3e90defd9fa9895c70db00
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 7c163aa10bdcb3ee28de6d6950dd15f85df876bc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903504"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885609"
 ---
 # <a name="how-to-handle-deployment-conflicts"></a>Postupy: zpracování konfliktů nasazení
   Můžete zadat vlastní kód pro zpracování konfliktů nasazení pro položku projektu služby SharePoint. Například můžete určit, zda některé soubory v aktuální položce projektu již existují v umístění nasazení, a poté odstranit nasazené soubory před nasazením aktuální položky projektu. Další informace o konfliktech nasazení najdete v tématu [rozšíření balení a nasazení služby SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md).

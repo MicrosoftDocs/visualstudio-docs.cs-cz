@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2820ac4c-c893-4d87-8c62-83981d561493
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 84d43ede5fcca1ae76d155cb8799a61900926d7b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f46efe377cb01b7b78a9df2de2d1e6fc89826014
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183844"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884283"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>Návod: ladění paralelní aplikace v aplikaci Visual Studio (C#, Visual Basic, C++)
 
@@ -45,8 +45,8 @@ Tento návod ukazuje, jak použít **Paralelní úlohy** a okna **paralelních z
 
 - Způsob, jakým se Windows vypořádat se škálováním prostřednictvím seskupení, lupy a dalších souvisejících funkcí.
 
-## <a name="prerequisites"></a>Předpoklady
- Tento návod předpokládá, že je povolený **pouze můj kód** (ve výchozím nastavení je povolený v novějších verzích sady Visual Studio). V nabídce **nástroje** klikněte na položku **Možnosti**, rozbalte uzel **ladění** , vyberte možnost **Obecné**a poté vyberte možnost **Povolit pouze můj kód (pouze spravované)**. Pokud tuto funkci nenastavíte, můžete i nadále používat tento návod, ale výsledky se mohou lišit od ilustrací.
+## <a name="prerequisites"></a>Požadavky
+ Tento návod předpokládá, že je povolený **pouze můj kód** (ve výchozím nastavení je povolený v novějších verzích sady Visual Studio). V nabídce **nástroje** klikněte na položku **Možnosti**, rozbalte uzel **ladění** , vyberte možnost **Obecné** a poté vyberte možnost **Povolit pouze můj kód (pouze spravované)**. Pokud tuto funkci nenastavíte, můžete i nadále používat tento návod, ale výsledky se mohou lišit od ilustrací.
 
 ## <a name="c-sample"></a>Ukázka jazyka C#
  Použijete-li ukázku jazyka C#, tento návod také předpokládá, že je externí kód skrytý. Chcete-li přepnout, zda je zobrazen externí kód, klikněte pravým tlačítkem **myši na záhlaví tabulky v** okně **zásobník volání** a potom vyberte nebo zrušte zaškrtnutí **Zobrazit externí kód**. Pokud tuto funkci nenastavíte, můžete i nadále používat tento návod, ale výsledky se mohou lišit od ilustrací.
@@ -83,8 +83,8 @@ Tento návod ukazuje, jak použít **Paralelní úlohy** a okna **paralelních z
    ::: moniker range="vs-2017"
    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** vyberte následující:
 
-   - V případě aplikace v jazyce C# v části **Visual C#** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte možnost **aplikace konzoly (.NET Framework)**.
-   - V případě aplikace Visual Basic vyberte v části **Visual Basic**možnost **plocha Windows**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)**.
+   - V případě aplikace v jazyce C# v části **Visual C#** zvolte možnost **plocha systému Windows** a potom v prostředním podokně zvolte možnost **aplikace konzoly (.NET Framework)**.
+   - V případě aplikace Visual Basic vyberte v části **Visual Basic** možnost **plocha Windows** a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)**.
    - V aplikaci C++ klikněte v části **Visual C++** na **plocha Windows**, a pak zvolte **Konzolová aplikace Windows**.
 
    Pokud se nezobrazuje **Konzolová aplikace (.NET Core)** nebo, pro C++, šablona projektu **Konzolová aplikace** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
@@ -155,7 +155,7 @@ Tento návod ukazuje, jak použít **Paralelní úlohy** a okna **paralelních z
 
      V okně **vlákna** přepínejte mezi vlákny a sledujte, že zobrazení v okně **paralelní zásobníky** je aktualizováno.
 
-     Pomocí místní nabídky v okně **paralelní zásobníky** můžete přepnout do jiného vlákna nebo do jiného rámce jiného vlákna. Například klikněte pravým tlačítkem S. J, přejděte na **Přepnout na rámec**a potom klikněte na příkaz.
+     Pomocí místní nabídky v okně **paralelní zásobníky** můžete přepnout do jiného vlákna nebo do jiného rámce jiného vlákna. Například klikněte pravým tlačítkem S. J, přejděte na **Přepnout na rámec** a potom klikněte na příkaz.
 
      ![Cesta k paralelním zásobníkům pro spuštění](../debugger/media/pdb_walkthrough_2b.png "PDB_Walkthrough_2B")
 
@@ -219,7 +219,7 @@ Tento návod ukazuje, jak použít **Paralelní úlohy** a okna **paralelních z
 
      Chcete-li přiblížit nebo oddálit diagram, stiskněte a podržte klávesu CTRL při přesunu kolečka myši. Případně klikněte na tlačítko přiblížení na panelu nástrojů a pak použijte nástroj Lupa.
 
-     Můžete také zobrazit zásobníky v horním směrem dolů, a to tak, že kliknete na nabídku **nástroje** , kliknete na možnost **Možnosti**a pak vyberete nebo zrušíte zaškrtnutí políčka v uzlu **ladění** .
+     Můžete také zobrazit zásobníky v horním směrem dolů, a to tak, že kliknete na nabídku **nástroje** , kliknete na možnost **Možnosti** a pak vyberete nebo zrušíte zaškrtnutí políčka v uzlu **ladění** .
 
 2. Než budete pokračovat, v nabídce **ladění** klikněte na **Zastavit ladění** a ukončete provádění.
 
@@ -236,7 +236,7 @@ Tento návod ukazuje, jak použít **Paralelní úlohy** a okna **paralelních z
 
 4. Dvakrát klikněte na vlákno v okně **vlákna** , čímž se nastaví jako aktuální. Aktuální vlákna mají žlutou šipku. Když změníte aktuální vlákno, ostatní okna budou aktualizována. V dalším kroku prověříme úlohy.
 
-5. V nabídce **ladění** vyberte možnost **Windows**a potom klikněte na položku **úlohy**. Následující obrázek znázorňuje okno **úlohy** .
+5. V nabídce **ladění** vyberte možnost **Windows** a potom klikněte na položku **úlohy**. Následující obrázek znázorňuje okno **úlohy** .
 
      ![Čtyři spuštěné úlohy v okně úlohy](../debugger/media/pdb_walkthrough_6.png "PDW_Walkthrough_6")
 
@@ -316,11 +316,11 @@ Tento návod ukazuje, jak použít **Paralelní úlohy** a okna **paralelních z
 
      Poslední funkcí okna **úlohy** k prohlédnutí je místní nabídka, která se zobrazí po kliknutí pravým tlačítkem myši na úlohu.
 
-     Místní nabídka zobrazuje různé příkazy v závislosti na stavu úlohy. Příkazy mohou zahrnovat **kopírování**, **Výběr všech**, **hexadecimálního zobrazení**, **Přepnutí na úlohu**, **zablokování přiřazeného vlákna**, **zablokování všech vláken, ale toto**a **příznak**. **Thaw Assigned Thread**
+     Místní nabídka zobrazuje různé příkazy v závislosti na stavu úlohy. Příkazy mohou zahrnovat **kopírování**, **Výběr všech**, **hexadecimálního zobrazení**, **Přepnutí na úlohu**, **zablokování přiřazeného vlákna**, **zablokování všech vláken, ale toto** a **příznak**. 
 
      Můžete zablokovat základní vlákno úlohy nebo úlohy nebo můžete zablokovat všechna vlákna s výjimkou přiřazeného. Zmrazené vlákno je v okně **úlohy** reprezentováno, protože je v okně **vlákna** pomocí modré ikony *pauzy* .
 
-## <a name="summary"></a>Shrnutí
+## <a name="summary"></a>Souhrn
  Tento názorný postup ukázal okna **paralelních úkolů** a **paralelních zásobníků** pro ladicí program. Používejte tato okna na skutečných projektech, které používají vícevláknový kód. Můžete kontrolovat paralelní kód napsaný v jazyce C++, C# nebo Visual Basic.
 
 ## <a name="see-also"></a>Viz také

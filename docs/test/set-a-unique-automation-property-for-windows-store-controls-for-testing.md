@@ -5,16 +5,16 @@ ms.custom: SEO-VS-2020
 ms.date: 05/31/2018
 ms.topic: how-to
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
 author: mikejo5000
-ms.openlocfilehash: 5af4f9c70696144e0efb420ab27860a1969bddc6
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 1befcb77e0ade11a9a3be51a2750564fd316efcd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328325"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884491"
 ---
 # <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>Nastavení jedinečné vlastnosti automatizace pro ovládací prvky UWP pro testování
 
@@ -62,7 +62,7 @@ Chcete-li přiřadit jedinečné názvy existujícím ovládacím prvkům, vyber
 
 ![Pojmenování interaktivních prvků v Blend pro Visual Studio](../test/media/cuit_windowsstoreproperty_blend_1.png)
 
-Chcete-li automaticky zadat jedinečné názvy pro nové ovládací prvky, které **Tools** přidáte, vyberte možnost  >  **Možnosti** nástrojů a otevřete dialogové okno **Možnosti** . Vyberte **Návrhář XAML** a pak **při vytváření automaticky pojmenovat interaktivní prvky**. Kliknutím na **tlačítko OK** zavřete dialogové okno.
+Chcete-li automaticky zadat jedinečné názvy pro nové ovládací prvky, které přidáte, vyberte možnost  >  **Možnosti** nástrojů a otevřete dialogové okno **Možnosti** . Vyberte **Návrhář XAML** a pak **při vytváření automaticky pojmenovat interaktivní prvky**. Kliknutím na **tlačítko OK** zavřete dialogové okno.
 
 ## <a name="use-a-data-template"></a>Použití šablony dat
 

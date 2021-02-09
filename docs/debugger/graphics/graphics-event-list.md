@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: a1252e19-b27d-4dc7-a16b-fdac894c1f0e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d7f987d8dc6decf90e44eef0123f6ad4fc194805
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: c964cda5cbe2903cf9511659b9a8f9bfb9f4aad6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727760"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884517"
 ---
 # <a name="graphics-event-list"></a>Seznam událostí grafiky
 Pomocí seznamu událostí grafiky v Analyzátor grafiky sady Visual Studio můžete prozkoumat události Direct3D, které byly zaznamenány při vykreslování snímku vaší hry nebo aplikace.
@@ -34,7 +34,7 @@ Pomocí seznamu událostí grafiky v Analyzátor grafiky sady Visual Studio mů�
 ### <a name="color-coded-events-in-direct3d-12"></a>Barevně kódované události v Direct3D 12
  Direct3D 12 zveřejňuje více front, které odpovídají různým hardwarovým funkcím. Aby bylo možné identifikovat frontu, která je přidružená k určité události grafiky v Direct3D 12, jsou události v seznamu událostí podle jejich fronty barevně kódované, když pracujete se zachycením aplikace Direct3D 12.
 
-|Fronta Direct3D 12|Color|
+|Fronta Direct3D 12|Barva|
 |-----------------------|-----------|
 |Fronta vykreslování|Green|
 |Výpočetní fronta|Žlutý|

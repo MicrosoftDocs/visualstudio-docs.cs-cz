@@ -5,15 +5,15 @@ ms.date: 12/04/2017
 ms.topic: reference
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 8c89f1d59405fb7475e827cac9624c6623d7041e
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: ecb64f12783b99cd0f26c59ee4ee298c5fabde72
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189092"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885752"
 ---
 # <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
@@ -25,7 +25,7 @@ A. RTVS je předem postavená na Visual Studio, což je implementace jenom pro W
 
 **Č. Funguje RTVS s edicemi Visual Studio Express?**
 
-A. Ne.
+A. No.
 
 **Č. Můžu použít rozšíření sady Visual Studio s RTVS?**
 
@@ -39,7 +39,7 @@ Další informace najdete v [Visual Studio Marketplace](https://marketplace.visu
 
 **Č. Vzhledem k tomu, že RTVS je v aplikaci Visual Studio, znamená to, že R lze snadno použít s C#, C++ a dalšími jazyky společnosti Microsoft?**
 
-A. Ne. RTVS je nástroj pro vývoj kódu R a používá standardní nativní překladače R. Komunikace mezi R a dalšími jazyky není v současné době podporovaná.
+A. No. RTVS je nástroj pro vývoj kódu R a používá standardní nativní překladače R. Komunikace mezi R a dalšími jazyky není v současné době podporovaná.
 
 **Č. Pracuje RTVS se národním prostředím bez angličtiny?**
 
