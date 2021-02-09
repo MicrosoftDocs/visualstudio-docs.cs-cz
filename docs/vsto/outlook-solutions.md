@@ -17,15 +17,15 @@ helpviewer_keywords:
 - e-mail [Office development in Visual Studio], Outlook solutions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ded4652704a47252f0839aed151f0557ae5e6766
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 86fa849641894576f141ce9bc76eccaf72424d47
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527546"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882437"
 ---
 # <a name="outlook-solutions"></a>řešení pro aplikaci Outlook
   Visual Studio poskytuje šablony projektů, pomocí kterých můžete vytvářet doplňky VSTO pro systém Microsoft Office Outlook. Doplňky VSTO můžete použít k automatizaci Outlooku, rozšiřování funkcí Outlooku nebo k přizpůsobení uživatelského rozhraní Outlooku (UI). Další informace o doplňcích VSTO najdete v tématu [architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md).
@@ -57,7 +57,7 @@ ms.locfileid: "97527546"
 
 ## <a name="customize-the-user-interface-of-an-outlook-application"></a>Přizpůsobení uživatelského rozhraní aplikace Outlook
 
-|Úloha|Další informace|
+|Úkol|Další informace|
 |----------|--------------------------|
 |Přidejte vlastní karty na pás karet nástroje Outlook Inspector.|[Přehled pásu karet](../vsto/ribbon-overview.md)|
 |Přidejte vlastní skupiny do předdefinované karty v okně pro kontrolu aplikace Outlook.|[Postupy: Přizpůsobení předdefinované karty](../vsto/how-to-customize-a-built-in-tab.md)|

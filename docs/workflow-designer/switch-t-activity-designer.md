@@ -10,15 +10,15 @@ f1_keywords:
 ms.assetid: 18a6c96e-49a9-4356-ab61-fbd7e3ab44bb
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f6bdf05878c08b1c175b78ff2205b74c4ea5669b
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 35dcc390dcf58e02a2c7c1fa2dba62840d433785
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433931"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882307"
 ---
 # <a name="switcht-activity-designer"></a>Návrhář aktivity Switch\<T>
 
@@ -40,8 +40,8 @@ V následující tabulce jsou uvedeny nejužitečnější <xref:System.Activitie
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje popisný název <xref:System.Activities.Statements.Switch%601> návrháře aktivit. Výchozí hodnota je Switch<Int32 \> . Hodnotu lze upravit v okně **vlastnosti** nebo přímo v záhlaví návrháře.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
-|<xref:System.Activities.Statements.Switch%601.Expression%2A>|Pravda|Určuje výraz, který se použije k porovnání s klíči v kolekci Cases, aby se určilo, který případ se má provést.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje popisný název <xref:System.Activities.Statements.Switch%601> návrháře aktivit. Výchozí hodnota je Switch<Int32 \> . Hodnotu lze upravit v okně **vlastnosti** nebo přímo v záhlaví návrháře.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.Switch%601.Expression%2A>|Ano|Určuje výraz, který se použije k porovnání s klíči v kolekci Cases, aby se určilo, který případ se má provést.|
 |<xref:System.Activities.Statements.Switch%601.Default%2A>||Určuje prováděnou aktivitu, pokud nebyla nalezena žádná shoda. Kliknutím na tlačítko **Přidat aktivitu** v Návrháři otevřete **výchozí** pole, ve kterém lze aktivitu vyřadit.|
 |<xref:System.Activities.Statements.Switch%601.Cases%2A>||Určuje případy, které mají být vyhodnoceny. Chcete-li přidat případ, klikněte na tlačítko **Přidat nový případ** v dolní části **Návrháře \<T> přepínače** . Tlačítko se změní na textové pole (pole se seznamem, pokud je obecný typ vybraný při přidávání přepínače \<T> řetězec nebo výčet). Po přidání klíče do pole **hodnota případu** se oblast Case rozbalí a aktivita může být vynechána tam, kde text nápovědy "Sem přetáhněte aktivitu" pro definování logiky spuštění pro daný případ.|
 

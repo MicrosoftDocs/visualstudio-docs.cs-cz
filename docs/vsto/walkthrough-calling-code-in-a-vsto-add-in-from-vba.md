@@ -17,15 +17,15 @@ helpviewer_keywords:
 - calling code from VBA
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0cbf03ef234ea6cf4eab790d96082d23b7ed5199
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 61e729113ecfa988f424e2182662d506377d33e5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527289"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882385"
 ---
 # <a name="walkthrough-call-code-in-a-vsto-add-in-from-vba"></a>Návod: volání kódu v doplňku VSTO z jazyka VBA
   Tento názorný postup ukazuje, jak vystavit objekt v doplňku VSTO pro jiná systém Microsoft Office řešení, včetně jazyk Visual Basic for Application (VBA) a COM VSTO doplňky.
@@ -44,7 +44,7 @@ ms.locfileid: "97527289"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

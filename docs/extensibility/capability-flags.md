@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a3f6071c-eac8-4bcd-8ffd-8d0a2d24a252
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b80672b00bec95c740824ef7e29f1faba0e63cf4
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 2d626f2390138c7e4e6e2471d285bcda940d7f30
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974446"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882281"
 ---
 # <a name="capability-flags"></a>Příznaky schopností
 Příznaky SCC_CAP_ *xxx* jsou bitové příznaky používané k označení schopností modulu plug-in správy zdrojového kódu. Příznaky SCC_EXCAP_ *xxx* jsou přírůstkové příznaky, které označují rozšířené možnosti a jsou přeloženy na celočíselné hodnoty.

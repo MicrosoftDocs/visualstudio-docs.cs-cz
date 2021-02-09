@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], scrolling database records
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6b65308cfc0ba4dee33dd6b20d3fd4028e9ea22e
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: a420f89fda4afd710f652223a9be594caba32f0a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527484"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882398"
 ---
 # <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>Návod: vytvoření vazby na data ze služby v projektu doplňku VSTO
   Data můžete navazovat na hostitelské ovládací prvky v projektech doplňku VSTO. Tento návod ukazuje, jak přidat ovládací prvky do dokumentu aplikace systém Microsoft Office Word, navazovat ovládací prvky na data získaná ze služby obsahu MSDN a reagovat na události v době běhu.
@@ -38,7 +38,7 @@ ms.locfileid: "97527484"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
