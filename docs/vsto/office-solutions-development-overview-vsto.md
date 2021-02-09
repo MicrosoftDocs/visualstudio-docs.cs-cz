@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Office development in Visual Studio, about developing solutions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9bb964e90c44c4e0b41e0f09df8931665426dc70
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 03da1c8052140bbe23ce4d99c12d72baef18898f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527714"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99891953"
 ---
 # <a name="office-solutions-development-overview-vsto"></a>Přehled vývoje řešení pro systém Office (VSTO)
   Pomocí systém Microsoft Office jako front-endu pro řešení můžete využít výhod známých systém Microsoft Office uživatelských rozhraní a nástrojů, jako jsou funkce pro zpracování slov ve Wordu, funkce analýzy dat Excelu a funkce pro správu e-mailu v Outlooku. V sadě Visual Studio můžete vyvíjet řešení pro přizpůsobení aplikací Office a přidání specifických funkcí, které pro své obchodní procesy potřebujete. Můžete například změnit slovo na generátor smluv, který sestaví smlouvy mimo již existující části, které lze upravovat nebo nelze upravovat. V aplikaci Excel můžete vytvořit automatický sešit rozpočtu přizpůsobený pro různé projekty. Uživatelé mohou také řešení Office přijímat v režimu offline, což usnadňuje složitější řešení, než by se používala při použití webové architektury.

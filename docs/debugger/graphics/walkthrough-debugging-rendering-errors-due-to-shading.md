@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 01875b05-cc7b-4add-afba-f2b776f86974
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b42aa5638b668d90fa44335c2d532c9bcddddc2b
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 491a2c5ab0bcb923d9999bd55249150d33a650ae
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96995080"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99891862"
 ---
 # <a name="walkthrough-debugging-rendering-errors-due-to-shading"></a>Návod: Ladění chyb vykreslování způsobených stínováním
 Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Diagnostika grafiky k prozkoumání nesprávně barevného objektu z důvodu chyby shaderu.
@@ -28,7 +28,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 - Pomocí **ladicího programu HLSL** prověřte shadery v pixelech a vrcholu.
 
-## <a name="scenario"></a>Scénář
+## <a name="scenario"></a>Scenario
  Nesprávné zbarvení objektů obvykle probíhá, když vertex shader předává nesprávné nebo neúplné informace o pixel shaderu.
 
  V tomto scénáři jste nedávno přidali objekt do aplikace. Přidali jste také nové funkce vertex a pixel shaderů pro transformaci objektu a přidělení jedinečného vzhledu. Když aplikaci spustíte během testu, objekt se vykreslí jako sytá černá. Pomocí Diagnostika grafiky zachytíte problém do protokolu grafiky, abyste mohli aplikaci ladit. Problém vypadá jako tento obrázek v aplikaci:

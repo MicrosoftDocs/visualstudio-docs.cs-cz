@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, troubleshooting
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a9ef5e7d47f72b82e7a8fab52cc2f1f8716c83bf
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: c6b0e031e96d2543ae0bb109f243824125f431a3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95970270"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892291"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>Řešení potíží s řešeními služby SharePoint
   Při ladění řešení služby SharePoint pomocí ladicího programu mohou nastat následující problémy nebo výstrahy [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace najdete v tématu [ladění řešení pracovních postupů pro SharePoint 2007](/previous-versions/bb386166(v=vs.100)).
@@ -259,7 +259,7 @@ ms.locfileid: "95970270"
 ### <a name="resolution"></a>Řešení
  K tomu dochází, protože po zavření relace ladění řešení služby SharePoint, funkce automatického odčítání odvolá řešení. Odvolání odstraní definici seznamu ze SharePointu, ale neodstraní instanci tohoto seznamu. Základní definice seznamu je vyžadována instancí seznamu.
 
- Chcete-li vyřešit tento problém, nasaďte řešení pomocí nástroje, v řádku nabídek **Build** zvolte možnost  >  **nasazení** sestavení. (Neladit řešení volbou klávesy **F5** .) Pak odstraňte instanci seznamu na SharePointu.
+ Chcete-li vyřešit tento problém, nasaďte řešení pomocí nástroje, v řádku nabídek zvolte možnost  >  **nasazení** sestavení. (Neladit řešení volbou klávesy **F5** .) Pak odstraňte instanci seznamu na SharePointu.
 
 ## <a name="original-sharepoint-solution-is-replaced-by-an-exported-version"></a>Původní řešení služby SharePoint je nahrazeno exportovanou verzí.
  Pokud exportujete řešení služby SharePoint, importujte řešení do nástroje [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a pak řešení nasaďte zpátky na stejnou lokalitu, ze které byla exportována, původní řešení služby SharePoint bude nahrazeno. K tomuto problému nedojde, pokud řešení nasazujete na server, na kterém není aktivované původní řešení.

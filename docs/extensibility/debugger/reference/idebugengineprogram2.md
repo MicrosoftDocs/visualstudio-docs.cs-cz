@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 151003a9-2e4d-4acf-9f4d-365dfa6b9596
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e5ccf2327e660a983bcb3032363a92ac8a6f71d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f630614dbe49e87b5a9905ceabbf717269c98ea2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80730297"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892603"
 ---
 # <a name="idebugengineprogram2"></a>IDebugEngineProgram2
 Toto rozhraní poskytuje podporu s více vlákny pro ladění.
@@ -32,7 +32,7 @@ IDebugEngineProgram2 : IUnknown
  Ladicí modul implementuje toto rozhraní pro podporu současného ladění více vláken. Toto rozhraní je implementováno na stejném objektu, který implementuje rozhraní [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- K [QueryInterface](/cpp/atl/queryinterface) získání tohoto rozhraní z rozhraní použijte QueryInterface `IDebugProgram2` .
+ K [](/cpp/atl/queryinterface) získání tohoto rozhraní z rozhraní použijte QueryInterface `IDebugProgram2` .
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
  V následující tabulce jsou uvedeny metody `IDebugEngineProgram2` .

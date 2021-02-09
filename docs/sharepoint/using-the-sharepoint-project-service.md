@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extensibility features
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 635e4123d302cf5c3173ee298f0239f5fa1c95f3
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 5366be3ed60da9225eaf10b19f58ccd77bffbb90
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914540"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892187"
 ---
 # <a name="use-the-sharepoint-project-service"></a>Použití služby projektu SharePoint
   Systém projektu služby SharePoint zahrnuje službu projektu, kterou lze použít k provádění úloh souvisejících se systémem projektu. Služba projektu je <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objekt.
@@ -30,7 +30,7 @@ ms.locfileid: "96914540"
 ## <a name="project-service-features"></a>Funkce služby projektu
  V následující tabulce jsou uvedeny úlohy, které lze provést pomocí služby projektu služby SharePoint a <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> metody nebo vlastnosti, které mají být použity k provedení jednotlivých úkolů.
 
-|Úloha|Člen, který se má použít|
+|Úkol|Člen, který se má použít|
 |----------|-------------------|
 |Přístup k libovolnému projektu služby SharePoint, který je otevřen v aplikaci Visual Studio.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Projects%2A> majetek.|
 |Přístup ke všem typům položek projektu služby SharePoint, které jsou k dispozici (včetně předdefinovaných a vlastních typů položek projektu).|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ProjectItemTypes%2A> majetek.|

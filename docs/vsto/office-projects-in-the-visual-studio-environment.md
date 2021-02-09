@@ -40,15 +40,15 @@ helpviewer_keywords:
 - VST.Designer.ExcelVST.Designer.Word
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0e183d5aca3fa856f45f322c2b79a76524b28005
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 88abd7294a96b4fe4989630753253b16f036ab7c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525157"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892005"
 ---
 # <a name="office-projects-in-the-visual-studio-environment"></a>Projekty Office v prostředí Visual Studio
   Projekty pro Microsoft Office nabízejí vývojové prostředí, které se podobá jiným typům projektů v sadě Visual Studio, například projektům modelu Windows Forms. Při vytváření nebo otevírání projektu sady Office se položky projektu zobrazí v **Průzkumník řešení**. V případě projektů na úrovni dokumentu se dokument (tzn. dokument aplikace Word nebo sešit aplikace Excel) otevře v sadě Visual Studio a dokument se chová jako vizuální návrhář.

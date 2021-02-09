@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 814185db-24f9-417f-b3b1-7c5aabb42b45
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d8a2ac481ebf76fc2b34be841cd20d15b97fcfa9
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: a2a1857edb8032d12cd23da5e2686ad90f15b574
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863086"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892460"
 ---
 # <a name="walkthrough-create-a-margin-glyph"></a>Návod: vytvoření glyfu marže
 Vzhled okrajů editoru lze přizpůsobit pomocí rozšíření vlastních editorů. Tento návod vloží vlastní glyf na okraj indikátoru vždy, když se v komentáři k kódu zobrazí slovo todo.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>Vytvořit projekt MEF

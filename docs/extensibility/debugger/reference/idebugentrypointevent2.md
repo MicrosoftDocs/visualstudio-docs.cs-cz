@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a15d1cc3-97b7-438c-8d24-c23149708f42
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 531ff846f2488193ed7f3d9f200a1a4ea04df6f9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0373557b13ae6532a34235ff53e1dc38d2813597
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80730327"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892577"
 ---
 # <a name="idebugentrypointevent2"></a>IDebugEntryPointEvent2
 Ladicí stroj (DE) pošle toto rozhraní do Správce ladění relace (SDM), když se program chystá spustit první instrukci uživatelského kódu.
@@ -29,7 +29,7 @@ IDebugEntryPointEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- DE implementuje toto rozhraní jako součást běžných operací. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` .
+ DE implementuje toto rozhraní jako součást běžných operací. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
  DE vytvoří a pošle tento objekt události, když se ladicí program načetl a je připravený spustit první instrukci uživatelského kódu. Událost se odesílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojen k laděnému programu.

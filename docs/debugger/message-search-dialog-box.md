@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 44fb43b7-b006-46cc-a70c-036aac3cceec
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d100b36ff706752f1855939d4c45b5b7793ccfa
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: f4fadb932078358b550e1d2c72bea292684a1954
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97903048"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99891693"
 ---
 # <a name="message-search-dialog-box"></a>Dialogové okno hledání zpráv
 Pomocí tohoto dialogového okna můžete vyhledat a vybrat uzel pro konkrétní zprávu v [zobrazení zprávy](../debugger/messages-view.md). Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno zobrazení zpráv. Pak zvolte **najít zprávu** z nabídky **Hledat** .

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 567acde3-354e-4f39-8d99-0ef86c103396
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e722770ad1db4b85dbc2a5a8754d9158b6ee436
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 6923eb7a534a4cacf8062883d073ddddc9395e17
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876451"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892551"
 ---
 # <a name="supporting-source-control"></a>Podpora správy zdrojového kódu
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje rezervace souborů, vrácení se změnami a další operace správy zdrojového kódu pro váš projekt nebo editor. Jako klient správy zdrojového kódu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je navržený tak, aby spolupracoval se balíčkem správy zdrojového kódu, jako je například [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] , který zajišťuje archivaci, správu verzí a řízení pro dynamicky definovanou sadu souborů.
@@ -43,7 +43,7 @@ ms.locfileid: "97876451"
 
  Popisuje, jak zaregistrovat projekt, když ho uživatel přidá do systému správy zdrojového kódu.
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> Indikuje prostředí nebo balíček správy zdrojového kódu, že se chystá změnit soubor v paměti nebo Uložit.
 
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2> Umožňuje projektům a hierarchiím zaregistrovat se pomocí správy zdrojového kódu a získat informace o stavu správy zdrojového kódu.

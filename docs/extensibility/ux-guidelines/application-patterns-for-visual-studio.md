@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 8ed68602-4e28-46fe-b39f-f41979b308a2
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 709daa641e898f9d75f4bab340c8e5fd00d28a88
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: 1d647a1dbd3bc6bf99f9803870c7b58ead358b41
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97716117"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892590"
 ---
 # <a name="application-patterns-for-visual-studio"></a>Vzory aplikací pro Visual Studio
 ## <a name="window-interactions"></a><a name="BKMK_WindowInteractions"></a> Interakce oken
@@ -154,10 +154,10 @@ Příklady oken nástrojů seznamu naviguje jsou Průzkumník řešení a okno v
 | Automatické hodnoty ||
 | Projev ||
 | Výstup | Okno výstup lze použít vždy, když máte textové události nebo stav k deklaraci. |
-| Paměť ||
+| Memory (Paměť) ||
 | Zarážky ||
 | Spuštěno ||
-| Dokumenty ||
+| dokumenty. ||
 | Zásobník volání ||
 | Místní hodnoty ||
 | Sleduje ||

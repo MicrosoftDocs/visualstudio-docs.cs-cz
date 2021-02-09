@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 4a2df0a3-42da-4f7b-996f-ee16a35ac922
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2108abe89a47fa276da53a14439a52451d936eea
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: d9bf88212ccc6e00dfbca14912eb15e17d106a49
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863076"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892447"
 ---
 # <a name="walkthrough-create-a-view-adornment-commands-and-settings-column-guides"></a>Návod: vytvoření vylepšení zobrazení, příkazů a nastavení (vodítka sloupců)
 Můžete roztáhnout text nebo Editor kódu sady Visual Studio pomocí příkazů a zobrazení efektů. V tomto článku se dozvíte, jak začít s oblíbenými funkcemi rozšíření, vodítky sloupců. Vodítka sloupců jsou vizuálně světlé čáry vykreslené v zobrazení textový editor, které vám pomohou spravovat kód pro konkrétní šířku sloupců. Konkrétně formátovaný kód může být důležitý pro ukázky, které zahrnete do dokumentů, příspěvků na blogu nebo hlášení o chybách.

@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: fb9fa211-e82c-40a5-9e4b-ba8de07313c0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: de50e6fe997ce10266cbb51f2fd91c318ab2bd1f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c0a97a5b42e27c6db770e0c74a64e214561cea9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62905526"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99891602"
 ---
 # <a name="messages-tab-message-options-dialog-box"></a>Karta Zprávy, dialogové okno možností zpráv
 Karta **zprávy** slouží k výběru typů zpráv, které se mají [Zobrazit v zobrazení zprávy](../debugger/messages-view.md), a k určení kritérií vyhledávání zpráv. Chcete-li zobrazit [dialogové okno Možnosti zprávy](../debugger/message-options-dialog-box.md), vyberte možnost **Protokolovat zprávy** z nabídky **Spy** .
 
- Obvykle nejprve vyberete **skupiny zpráv**a potom vyladíte výběr výběrem jednotlivých **zpráv, které chcete zobrazit**. Tlačítko **vše** vybere všechny typy zpráv a tlačítko **žádné** zruší všechny typy.
+ Obvykle nejprve vyberete **skupiny zpráv** a potom vyladíte výběr výběrem jednotlivých **zpráv, které chcete zobrazit**. Tlačítko **vše** vybere všechny typy zpráv a tlačítko **žádné** zruší všechny typy.
 
  Na kartě **zprávy** jsou k dispozici následující nastavení:
 

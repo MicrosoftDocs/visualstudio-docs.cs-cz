@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], PowerPoint
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4e297b0d269d5ff0bff0deeadd6bd346de00a324
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 4033c3fbae9aaefdc094d94d3a4ba70b67d40bf5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528042"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99891901"
 ---
 # <a name="powerpoint-solutions"></a>Řešení aplikace PowerPoint
   Visual Studio poskytuje šablony projektů, pomocí kterých můžete vytvářet doplňky VSTO pro systém Microsoft Office PowerPointu. Doplňky VSTO můžete použít k automatizaci PowerPointu, rozšiřování funkcí PowerPointu nebo přizpůsobení uživatelského rozhraní (UI) PowerPointu.
@@ -64,7 +64,7 @@ ms.locfileid: "97528042"
 ## <a name="customize-the-user-interface-of-powerpoint"></a>Přizpůsobení uživatelského rozhraní aplikace PowerPoint
  Uživatelské rozhraní aplikace PowerPoint můžete upravit následujícími způsoby.
 
-|Úloha|Další informace|
+|Úkol|Další informace|
 |----------|--------------------------|
 |Vytvoří vlastní podokno úloh.|[Vlastní podokna úloh](custom-task-panes.md)|
 |Přidejte na pás karet vlastní karty.|[Přehled pásu karet](ribbon-overview.md)|

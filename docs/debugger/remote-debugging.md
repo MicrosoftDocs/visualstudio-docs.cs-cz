@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 5a94ad64-100d-43ca-9779-16cb5af86f97
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e97fd8979235f8ea89b43c6466b3119debe5b3ca
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: f67035dc2f7a33fb436c0c51ba2214272ab2cf79
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205668"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99891420"
 ---
 # <a name="remote-debugging"></a>Vzdálené ladění
 Můžete ladit aplikaci Visual Studio, která byla nasazena v jiném počítači. K tomu je potřeba použít Visual Studio Remote Debugger.
 
 Podrobné pokyny pro vzdálené ladění najdete v těchto tématech.
 
-|Scénář|Odkaz|
+|Scenario|Odkaz|
 |-|-|-|
 |Azure App Service|[Vzdálené ladění ASP.NET v Azure](../debugger/remote-debugging-azure.md) nebo pro Visual Studio Enterprise [Snapshot Debugger](../debugger/debug-live-azure-applications.md)|
 |Virtuální počítač Azure|[Vzdálené ladění ASP.NET ve službě Azure](../debugger/remote-debugging-azure.md)|

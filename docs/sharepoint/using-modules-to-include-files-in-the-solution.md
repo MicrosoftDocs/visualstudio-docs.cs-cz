@@ -13,15 +13,15 @@ helpviewer_keywords:
 - modules [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: aa0d6fe1855a1d60a0e1293e8422791f8148bd04
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 86aea9800d0eaad4c36d5598e52dd7a35f3a7534
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442518"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892174"
 ---
 # <a name="use-modules-to-include-files-in-the-solution"></a>Zahrnutí souborů do řešení pomocí modulů
   Mohou nastat situace, kdy můžete chtít nasadit soubory na server SharePoint bez ohledu na jejich typ souboru, například na nové stránky předlohy. K tomu můžete použít *moduly* (Nepleťe se s [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] moduly kódu). Moduly jsou kontejnery pro soubory v řešení služby SharePoint. Po nasazení řešení se soubory v modulu zkopírují do zadaných složek na SharePointovém serveru.
@@ -50,7 +50,7 @@ ms.locfileid: "95442518"
 
  *Elements.xml* soubor obsahuje následující prvky:
 
-|Název prvku|Popis|
+|Název prvku|Description|
 |------------------|-----------------|
 |Elementy|Obsahuje všechny prvky, které jsou definovány v modulu.|
 |Modul|Element Module má jeden atribut *Name*, který určuje název modulu ve formátu `<Module Name="Module1">` .<br /><br /> Všimněte si, že pokud změníte název modulu (nebo jeho vlastnosti *názvu složky* ), je nutné ručně aktualizovat název v elementu Module.<br /><br /> Pokud zadáte podadresář pro soubory v elementu modulu, [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] (WSS) automaticky vytvoří pro ně stejnou strukturu adresářů.|

@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: dc7b2f1e-5ff6-42e0-89b3-dc9dead83ee1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70f047fa84513821812a13f7dee3136d2d431d9a
-ms.sourcegitcommit: 993fca11dc373a10150751bc2a045a9701a9db2f
+ms.openlocfilehash: be6684ed1801bc825bcb0db236737f33fe3901af
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98240241"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99891797"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>Postupy: Použití nativních kontrol za běhu
 V projektu Visual Studio C++ můžete použít nativní [runtime_checks](/cpp/preprocessor/runtime-checks) k zachycení běžných chyb za běhu, jako například:
@@ -77,7 +77,7 @@ V projektu Visual Studio C++ můžete použít nativní [runtime_checks](/cpp/pr
 
 - Použijte `runtime_checks` direktivu pragma.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [runtime_checks](/cpp/preprocessor/runtime-checks)
