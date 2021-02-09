@@ -1,5 +1,5 @@
 ---
-title: AsyncTaskMethodBuilder &lt; TResult &gt; . m_task pole | Microsoft Docs
+title: AsyncTaskMethodBuilder &lt; TResult &gt; .m_task pole | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 649abf0e-0fec-49d9-93b2-8953521f7ba5
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 43822417a000a51b11c18e282860dc0dbfb08332
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f82acdcdd129ae9a5d72a71be04e9e8fa9b13b89
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739368"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915665"
 ---
-# <a name="asynctaskmethodbuilderlttresultgtm_task-field"></a>AsyncTaskMethodBuilder &lt; TResult &gt; . m_task pole
+# <a name="asynctaskmethodbuilderlttresultgtm_task-field"></a>AsyncTaskMethodBuilder &lt; TResult &gt; .m_task pole
 Představuje inicializovaný vytvořenou úlohu laxně vytvářená.
 
  **Obor názvů:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>

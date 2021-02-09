@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d54313c2-cf0c-420d-b151-99953a95f0bb
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e0177f199f0178e9fe0221a4cb6daa58d36a6f87
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: cdef39a0ab07d4cb9c9f42cf897bd7728934b88d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382664"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915742"
 ---
 # <a name="how-clickonce-performs-application-updates"></a>Jak ClickOnce provádí aktualizaci aplikací
 ClickOnce používá informace o verzi souboru, které jsou uvedeny v manifestu nasazení aplikace, k rozhodnutí, zda chcete aktualizovat soubory aplikace. Po zahájení aktualizace používá ClickOnce techniku s názvem *opravy souborů* , aby nedocházelo k redundantnímu stahování souborů aplikace.

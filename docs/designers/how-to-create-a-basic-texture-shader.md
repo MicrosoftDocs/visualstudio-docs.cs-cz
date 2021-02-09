@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 5af113fb-6415-4be0-8b23-10fddb10e80a
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 93696dfe9fbf3b8db1d4be137ced6798b3a60aae
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 832d8aac861163c0d1c6b56c340502e32b2f555b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134495"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915681"
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>Postupy: Vytvoření shaderu základní textury
 
@@ -29,7 +29,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 1. Vytvořte shader DGSL, se kterým chcete pracovat. Informace o tom, jak přidat DGSL shader do projektu, naleznete v části Začínáme v [Návrháři shaderu](../designers/shader-designer.md).
 
-2. Odstraňte uzel **Barva bodu** . V režimu **výběru** vyberte uzel **Barva bodu** a pak na panelu nabídek zvolte **Upravit**  >  **Odstranit** . Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
+2. Odstraňte uzel **Barva bodu** . V režimu **výběru** vyberte uzel **Barva bodu** a pak na panelu nabídek zvolte **Upravit**  >  **Odstranit**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
 
 3. Přidejte do grafu uzel s **ukázkovým texturou** . V **panelu nástrojů** v části **Textura** vyberte **Ukázka textury** a přesuňte ji na návrhovou plochu.
 
@@ -37,7 +37,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 5. Vyberte texturu, která se má použít. V režimu **výběru** vyberte uzel **Ukázka textury** a potom v okně **vlastnosti** zadejte texturu, kterou chcete použít, pomocí vlastnosti **filename** .
 
-6. Zpřístupněte texturu jako veřejně přístupný. Vyberte uzel **Ukázka textury** a potom v okně **vlastnosti** nastavte vlastnost **přístup** na **veřejné** . Nyní můžete nastavit texturu z jiného nástroje, jako je například **Editor modelů** .
+6. Zpřístupněte texturu jako veřejně přístupný. Vyberte uzel **Ukázka textury** a potom v okně **vlastnosti** nastavte vlastnost **přístup** na **veřejné**. Nyní můžete nastavit texturu z jiného nástroje, jako je například **Editor modelů**.
 
 7. Připojte souřadnice textury k ukázce textury. V režimu **výběru** přesuňte **výstupní** terminál uzlu **souřadnice textury** do **UV** terminálu uzlu **ukázky textury** . Toto připojení vzorkuje texturu na zadaných souřadnicích.
 

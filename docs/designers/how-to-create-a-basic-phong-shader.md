@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c158453421d9e4f899a7cfed7118be8e5871356c
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: b5319526da9aa59951729389749e53f3df65b643
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134129"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915710"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>Postupy: Vytvoření základního Phongova shaderu
 
@@ -31,7 +31,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 1. Vytvořte Lambert Shader, jak je popsáno v tématu [How to: Create a Basic Lambert Shader](../designers/how-to-create-a-basic-lambert-shader.md).
 
-2. Odpojte uzel **Lambert** z **posledního uzlu Color** . Zvolte terminál **RGB** uzlu **Lambert** a pak zvolte možnost **přerušení propojení** . Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
+2. Odpojte uzel **Lambert** z **posledního uzlu Color** . Zvolte terminál **RGB** uzlu **Lambert** a pak zvolte možnost **přerušení propojení**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
 
 3. Přidejte do grafu uzel **Přidat** . V **sadě nástrojů** v oblasti **matematika** vyberte možnost **Přidat** a přesunout ji na návrhovou plochu.
 

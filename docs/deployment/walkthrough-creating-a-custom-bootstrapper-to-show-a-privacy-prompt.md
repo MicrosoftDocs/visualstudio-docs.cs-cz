@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2f3edd6a-84d1-4864-a1ae-6a13c5732aae
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 06effb313dc2b8a247eeeab99290a289717bc960
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: b2f36ee884beb3b79244e4621ba305c06aafe8ff
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350462"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915755"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>Návod: Vytvoření vlastního bootstrapperu s dotazem souvisejícím se soukromím
 Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly, když budou k dispozici sestavení s novějšími verzemi souborů a verzemi sestavení. K tomu, abyste se ujistili, že vaši zákazníci souhlasí s tímto chováním, můžete pro ně zobrazit výzvu k zadání ochrany osobních údajů. Pak mohou zvolit, zda má být aplikaci uděleno oprávnění k automatické aktualizaci. Pokud se aplikaci nepovoluje aktualizovat automaticky, nenainstaluje se.
@@ -236,7 +236,7 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
 1. V **Průzkumník řešení** klikněte na název aplikace, kterou chcete nasadit.
 
-2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.
+2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* .
 
 3. Klikněte na stránku **publikovat** a pak klikněte na **předpoklady**.
 
@@ -254,7 +254,7 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
 1. V **Průzkumník řešení** klikněte na název aplikace, kterou chcete nasadit.
 
-2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.
+2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* .
 
 3. Klikněte na stránku **publikovat** a pak klikněte na **publikovat**.
 
@@ -280,7 +280,7 @@ Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly
 
 1. V **Průzkumník řešení** klikněte na název aplikace, kterou chcete nasadit.
 
-2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.
+2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* .
 
 3. Klikněte na stránku **publikovat** a pak klikněte na **publikovat**.
 

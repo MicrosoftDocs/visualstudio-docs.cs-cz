@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 288922be-ba3f-411e-af50-bba39c9529cc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 983c053ca6bd1370cf67cb04eeb2626c2b1217aa
-ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
+ms.openlocfilehash: 2edcf359bd54774647ff1a5957d741fec25b60a9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97398724"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915804"
 ---
 # <a name="how-to-debug-a-self-hosted-wcf-service"></a>Postupy: Ladění služby WCF s vlastním hostováním
 *Samoobslužná služba* je služba WCF, která neběží ve službě IIS, hostiteli služby WCF ani [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] vývojovém serveru. Nejjednodušší způsob, jak ladit technologii WCF v místním prostředí, je nakonfigurovat [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tak, aby spouštěla klienta i server, když zvolíte možnost **Spustit ladění** v nabídce **ladění** .
