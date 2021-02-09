@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 6722263c-ccef-40c7-a0ae-87a863fbab00
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4051a02de6a046621e62c21b4d2399b5a2703cb8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 67bce62612a85e0bcff5e51cd07d4c374e13b01e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62895189"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861397"
 ---
 # <a name="vsgdbg-class"></a>VsgDbg – třída
 Představuje rozhraní pro programové řízení komponenty v aplikaci diagnostiky grafiky.
@@ -29,14 +29,14 @@ class VsgDbg;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |[VsgDbg::VsgDbg (konstruktor)](vsgdbg-vsgdbg-constructor.md)|Vytvoří instanci `VsgDbg` třídy a volitelně připraví komponentu v aplikaci diagnostiky grafiky na aktivní zachycování a zaznamenávání informací grafiky.|
 |[VsgDbg::~VsgDbg (destruktor)](vsgdbg-tilde-vsgdbg-destructor.md)|Odstraní instanci `VsgDbg` třídy.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |[AddMessage](addmessage.md)|Přidá vlastní zprávu do HUD diagnostiky grafiky (zobrazení záhlaví).|
 |[BeginCapture](begincapture.md)|Zahájí interval zachycení, který skončí `EndCapture` .|

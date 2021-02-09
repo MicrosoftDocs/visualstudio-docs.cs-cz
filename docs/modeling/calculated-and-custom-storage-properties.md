@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, programming domain properties
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c50d205745917b3af7de638a17921f4bcdca509
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 3c0874302a7cae4b7a2a3c02edade3ef88fd402a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363546"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861839"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>Vypočtené a vlastní vlastnosti úložiště
 Všechny vlastnosti domény v jazyce DSL (Domain Specific Language) lze zobrazit uživateli v diagramu a ve vašem jazykovém Průzkumníku a lze k němu přistupovat prostřednictvím kódu programu. Vlastnosti se ale liší ve způsobu, jakým jsou uložené jejich hodnoty.
@@ -24,7 +24,7 @@ Všechny vlastnosti domény v jazyce DSL (Domain Specific Language) lze zobrazit
 ## <a name="kinds-of-domain-properties"></a>Typy doménových vlastností
  V definici DSL můžete nastavit **druh** doménové vlastnosti, jak je uvedeno v následující tabulce:
 
-|Druh doménové vlastnosti|Popis|
+|Druh doménové vlastnosti|Description|
 |-|-|
 |**Standardní** (výchozí)|Doménová vlastnost, která je uložena v *úložišti* a serializována do souboru.|
 |**Počítaný**|Vlastnost domény jen pro čtení, která není uložena v úložišti, ale je počítána z jiných hodnot.<br /><br /> Například `Person.Age` lze vypočítat z `Person.BirthDate` .<br /><br /> Je nutné zadat kód, který provede výpočet. Obvykle se počítá hodnota z jiných doménových vlastností. Můžete ale také použít externí prostředky.|
@@ -109,7 +109,7 @@ void SetAgeValue(int value)
 
  Další informace o transakcích naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Vlastnosti vlastností domény](../modeling/properties-of-domain-properties.md)

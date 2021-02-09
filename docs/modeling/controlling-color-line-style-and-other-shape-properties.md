@@ -5,16 +5,16 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: 759c7def23cf8ac0df33a75d25eb5bcbcf44b209
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 68eda84ec014dec2931e2c35a04dec1ed878e6c0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100424"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861657"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>Řízení barvy, stylu čáry a ostatních vlastností obrazce
 
@@ -23,7 +23,7 @@ Některé vlastnosti obrazce, jako je například Color, můžou být vystavené
 ## <a name="exposing-a-property"></a>Vystavení vlastnosti
  Některé vlastnosti obrazce, jako je například barva, mohou být propojeny s hodnotou doménové vlastnosti.
 
- V definici DSL vyberte třídu Shape, spojnice nebo diagram. V nabídce klepněte pravým tlačítkem myši na možnost **Přidat vystavené**a zvolte požadovanou vlastnost, například barva výplně.
+ V definici DSL vyberte třídu Shape, spojnice nebo diagram. V nabídce klepněte pravým tlačítkem myši na možnost **Přidat vystavené** a zvolte požadovanou vlastnost, například barva výplně.
 
  Tvar má nyní doménovou vlastnost, kterou můžete nastavit v programovém kódu nebo jako uživatel.
 

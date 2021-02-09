@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: df976c76-27ec-4f00-ab6d-a26a745dc6c7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cde3377582c3bac0c27371e25f28e5151d641db1
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: dfe2947d60ad5dde6e2f23b9bed59b09e6abe8ea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994560"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862119"
 ---
 # <a name="extend-the-solution-explorer-filter"></a>Rozšíří Průzkumník řešení filtr.
 Můžete roztáhnout funkce filtru **Průzkumník řešení** a zobrazit nebo skrýt jiné soubory. Můžete například vytvořit filtr, který v **Průzkumník řešení** zobrazí pouze soubory továrny tříd C#, jak ukazuje tento návod.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ### <a name="create-a-visual-studio-package-project"></a>Vytvoření projektu balíčku sady Visual Studio

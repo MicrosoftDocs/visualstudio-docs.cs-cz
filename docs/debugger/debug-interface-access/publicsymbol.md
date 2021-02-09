@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f8d33007-302d-4549-9dad-47fb33ea60b7
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f552aa8bc887d2b9bcaacdcf2947ac6781a7879c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c13674eb7aba147946f2dc8a75bcabbdb4b7147
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461110"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862295"
 ---
 # <a name="publicsymbol"></a>PublicSymbol
 Při vytvoření souboru. exe se každému veřejnému symbolu (minimálně každé globální funkce a symbol dat) zobrazí `SymTagPublicSymbol` značka.

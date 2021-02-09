@@ -6,17 +6,17 @@ ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ed4fdbfe7090a66d955461f2c3a394f6fb661c5a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 74259a6e15446d8ca0b07f3b694d0285427f8d9f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62430714"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861553"
 ---
 # <a name="tutorial-work-with-python-in-visual-studio"></a>Kurz: práce s Pythonem v aplikaci Visual Studio
 
@@ -42,7 +42,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím jeden prázdný so
 
 1. V aplikaci Visual Studio vyberte **soubor**  >  **Nový**  >  **projekt** (**CTRL** + **SHIFT** + **N**), které se zobrazí v dialogovém okně **Nový projekt** . Zde můžete procházet šablony v různých jazycích a pak vybrat jednu pro svůj projekt a určit, kde aplikace Visual Studio umístí soubory.
 
-1. Pokud chcete zobrazit šablony Pythonu **Installed**, vyberte  >  na levé straně nainstalované**Python** nebo vyhledejte Python. Použití hledání je skvělý způsob, jak najít šablonu, když si nepamatujete umístění ve stromu jazyků.
+1. Pokud chcete zobrazit šablony Pythonu , vyberte  >  na levé straně nainstalované **Python** nebo vyhledejte Python. Použití hledání je skvělý způsob, jak najít šablonu, když si nepamatujete umístění ve stromu jazyků.
 
     ![Dialogové okno Nový projekt se zobrazenými projekty Pythonu](media/vs-getting-started-python-01-new-project.png)
 

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dependency graphs, browsing
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ace2095e98bc7d7425f518249a754fcbed07a02
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: e579f62c24795ad99939fe10f68c42acaaa89b60
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363611"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861931"
 ---
 # <a name="browse-and-rearrange-code-maps"></a>Procházení a změna uspořádání map kódu
 
@@ -61,7 +61,7 @@ Po vygenerování mapy začněte s těmito tipy pro kontrolu vašeho kódu:
 
 ## <a name="change-the-map-layout"></a><a name="Selecting"></a> Změna rozložení mapy
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Do**|**Proveďte tyto kroky**|
 |-|-|
 |Uspořádat tok závislostí pro celou mapu v určitém směru. To vám může pomáhat při zobrazení vrstev architektury v kódu.|Na panelu nástrojů mapa zvolte **rozložení** a pak:<br /><br /> -   **Shora dolů** ![ Tlačítko shora dolů v grafu](../modeling/media/topbottomgraphbutton.gif)<br />-   **Zdola nahoru** ![ Tlačítko dolních horních a horních grafů](../modeling/media/bottomtopgraphbutton.gif)<br />-   **Zleva doprava** ![ Tlačítko pro rozložení zleva doprava](../modeling/media/leftrightgraphbutton.gif)<br />-   **Zprava doleva** ![ Tlačítko vlevo od levého grafu](../modeling/media/rightleftgraphbutton.gif)|
 |Seznamte se s clustery s přirozenými závislostmi v kódu s nejvíce závislými uzly uprostřed clusterů a nejméně závislými uzly mimo tyto clustery.|Na panelu nástrojů Mapa klikněte na tlačítko **rozložení** **a rychlé clustery** ![ rychlé clustery na panelu nástrojů grafu ](../modeling/media/quickclustersicon.gif) .|
@@ -72,7 +72,7 @@ Po vygenerování mapy začněte s těmito tipy pro kontrolu vašeho kódu:
 
 ## <a name="browse-the-map"></a><a name="Explore"></a> Procházet mapu
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Do**|**Proveďte tyto kroky**|
 |-|-|
 |Naskenujte mapu.|Přetáhněte mapu v libovolném směru pomocí myši.<br /><br /> - nebo -<br /><br /> Podržením **klávesy SHIFT** a otočením kolečka myši se posuňte vodorovně. Podržte stisknutou klávesu **SHIFT**  +   a otáčejte kolečkem myši, aby se posouvají vodorovně.|
 |Přiblížení nebo oddálení mapy.|Otočení kolečka myši<br /><br /> - nebo -<br /><br /> Použijte rozevírací seznam **Lupa** na panelu nástrojů mapa kódu.<br /><br /> - nebo -<br /><br /> Použijte klávesové zkratky. Přiblížíte se stisknutím **kombinace kláves CTRL + SHIFT +.** (tečka). Chcete-li zmenšit, stiskněte klávesy **CTRL + SHIFT +,** (čárka).|
@@ -84,7 +84,7 @@ Po vygenerování mapy začněte s těmito tipy pro kontrolu vašeho kódu:
 
 ## <a name="filter-nodes-and-links"></a><a name="FilterNodes"></a> Filtrování uzlů a propojení
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Do**|**Proveďte tyto kroky**|
 |-|-|
 |Umožňuje zobrazit nebo skrýt podokno filtry.|Klikněte na tlačítko **filtry** na panelu nástrojů mapa kódu. Podokno **filtry** se v **Průzkumník řešení** ve výchozím nastavení zobrazuje jako stránka s kartami.|
 |Filtrovat typy uzlů, které jsou zobrazeny na mapě.|Nastavte nebo zrušte zaškrtnutí políček v seznamu **prvky kódu** v podokně filtry.|
@@ -106,7 +106,7 @@ Mapy kódu ukazují tyto typy odkazů:
 > [!TIP]
 > Ve výchozím nastavení Mapa zobrazuje propojení mezi skupinami pouze pro vybrané uzly. Chcete-li toto chování změnit, aby se zobrazily nebo skryly agregované odkazy mezi skupinami, klikněte na tlačítko **rozložení** na panelu nástrojů mapa kódu a zvolte možnost **Upřesnit**, **Zobrazte všechny odkazy mezi skupinami** nebo **skryjte všechny odkazy mezi skupinami**. Další podrobnosti najdete v tématu [Skrytí nebo zobrazení uzlů a odkazů](#HidingShowing) .
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Do**|**Proveďte tyto kroky**|
 |-|-|
 |Zobrazit další informace o uzlu nebo odkazu.|Přesuňte ukazatel myši nad uzel nebo propojení, dokud se nezobrazí popisek.<br /><br /> Popis pro agregovaný odkaz obsahuje seznam jednotlivých závislostí, které představuje.<br /><br /> - nebo -<br /><br /> Otevřete místní nabídku pro uzel nebo odkaz. Vyberte možnost **Upravit**, **vlastnosti**.|
 |Umožňuje zobrazit nebo skrýt obsah skupiny.|– Chcete-li rozšířit skupinu, otevřete místní nabídku uzlu a vyberte možnost **Skupina**, **rozbalte položku**.<br />     - nebo -<br />     Přesuňte ukazatel myši nad uzel, dokud se nezobrazí tlačítko se šipkou (šipka dolů). Kliknutím na toto tlačítko skupinu rozbalíte. Klávesnice: Chcete-li rozbalit nebo sbalit vybranou skupinu, stiskněte klávesu **plus** ( **+** ) nebo **mínus** ( **-** ).<br />– Chcete-li sbalit skupinu, otevřete místní nabídku uzlu a vyberte možnost **Skupina**, **sbalit**.<br />     - nebo -<br />     Přesuňte ukazatel myši nad skupinu, dokud se nezobrazí tlačítko dvojité šipky (šipka nahoru). Kliknutím na toto tlačítko skupinu sbalíte.<br />– Chcete-li rozbalit všechny skupiny, stiskněte klávesu **CTRL**  +  **a** vyberte všechny uzly. Otevřete místní nabídku pro mapu a vyberte možnost **Skupina** a **Rozbalit**. **Poznámka:**      Tento příkaz není k dispozici, pokud rozšířením všech skupin vygenerujete nepoužitou mapu nebo problémy s pamětí. Doporučuje se rozšířit mapu jenom na úroveň podrobností, o které se zajímáte.<br />– Chcete-li sbalit všechny skupiny, otevřete místní nabídku pro uzel nebo pro mapu. Vyberte možnost **Skupina**, **Sbalit vše**.|
@@ -124,7 +124,7 @@ Skrytí uzlů umožňuje vynechat tyto uzly při použití algoritmů rozložen�
 
 ### <a name="to-hide-or-show-nodes"></a>Skrytí nebo zobrazení uzlů
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Do**|**Proveďte tyto kroky**|
 |-|-|
 |Skryje vybrané uzly.|1. Vyberte uzly, které chcete skrýt.<br />2. Otevřete místní nabídku pro vybrané uzly nebo pro mapu. Zvolte **Vybrat** a **Skrýt vybrané**.|
 |Skrýt nevybrané uzly.|1. Vyberte uzly, které chcete zůstat viditelné.<br />2. Otevřete místní nabídku pro vybrané uzly nebo pro mapu. Zvolte **Vybrat** a **Skrýt zrušit výběr**.|
@@ -132,7 +132,7 @@ Skrytí uzlů umožňuje vynechat tyto uzly při použití algoritmů rozložen�
 
 ### <a name="to-hide-or-show-links"></a>Skrytí nebo zobrazení odkazů
 
-|**Schopn**|**Na panelu nástrojů mapa zvolte rozložení, Upřesnit a pak zvolte**|
+|**Do**|**Na panelu nástrojů mapa zvolte rozložení, Upřesnit a pak zvolte**|
 |-|-|
 |Zobrazit propojení mezi skupinami za všech okolností.|**Zobrazit všechny odkazy mezi skupinami**. Tím budou skryta souhrnná propojení mezi skupinami.|
 |Nepřetržitě Skryjte propojení mezi skupinami.|**Skrýt všechny odkazy mezi skupinami**|
@@ -141,7 +141,7 @@ Skrytí uzlů umožňuje vynechat tyto uzly při použití algoritmů rozložen�
 
 ## <a name="group-nodes"></a><a name="OrganizeGroups"></a> Skupinové uzly
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Do**|**Proveďte tyto kroky**|
 |-|-|
 |Zobrazit uzly kontejneru jako uzly skupiny nebo uzly typu list.|Chcete-li zobrazit uzly kontejneru jako listové uzly: Vyberte uzly, otevřete místní nabídku pro svůj výběr a zvolte možnost **Skupina**, **převést na list**.<br /><br /> Chcete-li zobrazit uzly kontejneru jako uzly skupiny: Vyberte uzly, otevřete místní nabídku pro svůj výběr a zvolte možnost **Skupina**, **převést na skupinu**.|
 |Změna rozložení v rámci skupiny.|Vyberte skupinu, otevřete místní nabídku, zvolte možnost **rozložení** a vyberte požadovaný styl rozložení.<br /><br /> - nebo -<br /><br /> 1. Vyberte skupinu a ujistěte se, že je rozbalená.<br />2. klikněte znovu na záhlaví skupiny a zobrazí se panel nástrojů skupina.<br />     ![Panel nástrojů &#45; seskupení grafu závislostí](../modeling/media/dependencygraph_group.png)<br />3. Otevřete okno **změnit styl rozložení** ![ grafu závislosti seznamu skupin &#45; skupinu &#45; rozložení ](../modeling/media/dependencygraph_grouptoolbar.gif) a vyberte požadovaný styl rozložení.<br /><br /> **Zobrazení seznamu** změní uspořádání členů skupiny na seznam. **Graph – výchozí** obnoví rozložení skupiny na výchozí rozložení mapy. Další možnosti najdete v tématu [Změna rozložení mapy](#Selecting).|
@@ -160,7 +160,7 @@ Můžete zobrazit více nebo méně položek na mapě, aby bylo možné přejít
 
 ### <a name="add-a-node-for-a-code-element"></a>Přidat uzel pro prvek kódu
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Do**|**Proveďte tyto kroky**|
 |-|-|
 |Přidá nový obecný uzel v aktuálním umístění ukazatele myši.|1. přesuňte ukazatel myši na místo na mapě, kam chcete vložit nový prvek kódu, a stiskněte **Vložit**.<br />     - nebo -<br />     Otevřete místní nabídku pro mapu a vyberte možnost **Upravit**, **Přidat**, **obecný uzel**.<br />2. Zadejte název nového uzlu a stiskněte tlačítko **vrátit**.|
 |Přidat konkrétní typ uzlu prvku kódu v aktuálním umístění ukazatele myši.|1. přesuňte ukazatel myši na místo na mapě, kam chcete vložit nový prvek kódu, a otevřete místní nabídku pro mapu.<br />2. Zvolte **Upravit**, **Přidat** a vyberte typ uzlu, který chcete.<br />3. Zadejte název nového uzlu a stiskněte tlačítko **vrátit**.|
@@ -280,7 +280,7 @@ Můžete změnit ikony prvků kódu a barvy prvků kódu a odkazy pomocí předd
 
 5. Pro výběr stylu, který chcete změnit, použijte následující tabulku:
 
-    |**Chcete-li změnit**|**Pomocí volby**|
+    |**Chcete-li změnit**|**Výběrem**|
     |-|-|
     |Barva pozadí|**Pozadí**|
     |Barva obrysu|**Tažen**|
@@ -307,7 +307,7 @@ V poli **Legenda** můžete styly znovu uspořádat, odstranit nebo dočasně de
 
 2. Proveďte některou z následujících úloh:
 
-    |**Schopn**|**Pomocí volby**|
+    |**Do**|**Výběrem**|
     |-|-|
     |Deaktivovat prvek kódu|**Zakázat**|
     |Odstranit prvek kódu|**Odstranit**|
@@ -328,7 +328,7 @@ Mapy můžete sloučit kopírováním a vložením prvků kódu mezi mapami. Pok
 
 Alternativně můžete tato sestavení nebo binární soubory přetáhnout na stejnou mapu z této složky.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 - [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: ee89bba8-5d5c-4a0b-aa0d-1aad56baa380
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 00586a85312b90a7cb6590adb3cdd41b465411d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81c7694c02ea570880b60b2588ba1e97e1ad8609
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461313"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862407"
 ---
 # <a name="idiatableget__newenum"></a>IDiaTable::get__NewEnum
 Načte <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> verzi tohoto enumerátoru.
@@ -25,7 +25,7 @@ Načte <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> verzi tohoto 
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get__NewEnum ( 
+HRESULT get__NewEnum ( 
    IUnknown** pRetVal
 );
 ```

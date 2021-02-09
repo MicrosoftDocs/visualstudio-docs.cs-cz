@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Excel projects [Office development in Visual Studio], getting started
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1fb048fd015126e5438a007be1950cddffbac9e1
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: de5d7529e0bd8bc99eb4f375a31dab9ea9520234
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846035"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860721"
 ---
 # <a name="get-started-programming-document-level-customizations-for-excel"></a>Začínáme s programováním přizpůsobení na úrovni dokumentu pro Excel
   Pokud jste právě začali vytvářet přizpůsobení na úrovni dokumentu pro systém Microsoft Office Excel pomocí sady Visual Studio, je zde potřeba znát.

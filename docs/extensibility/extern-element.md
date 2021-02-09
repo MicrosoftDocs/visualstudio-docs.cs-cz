@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: db6c3ddd-a1ba-450a-897a-bb568a5377fc
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e975c3f721d65b64fc7994824406b0c9af13022
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 8892de377d2383e5aed3ec7824616d626bc5164f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994521"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862093"
 ---
 # <a name="extern-element"></a>Extern – element
 Element extern odkazuje na všechny soubory externích hlaviček (*. h*), které se mají sloučit se souborem *. vsct* v době kompilace. Soubory, které mají být sloučeny, musí být v cestě include zadané kompilátoru VSCT nebo odkazované [elementem include](../extensibility/include-element.md). Soubory mohou být jiné soubory *. vsct* nebo soubory hlaviček jazyka C++.
@@ -29,7 +29,7 @@ Element extern odkazuje na všechny soubory externích hlaviček (*. h*), které
 
  Element příkazu extern – element
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Extern href="stdidcmd.h" />

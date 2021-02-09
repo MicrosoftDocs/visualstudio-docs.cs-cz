@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2d316aaa-8bc0-4ce5-90ab-23b3eac0b5dd
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ab7156635914d46dfc1849717d29ac0416e2d9fa
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 40a620023dad754e3de4fedb9bc4fdbe7b7835a5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351216"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861228"
 ---
 # <a name="how-to-create-a-product-manifest"></a>Postupy: Vytvoření manifestu produktu
 K nasazení požadavků pro aplikaci můžete vytvořit balíček zaváděcího nástroje. Balíček zaváděcího nástroje obsahuje jeden soubor manifestu produktu, ale manifest balíčku pro každé národní prostředí. Manifest balíčku obsahuje aspekty balíčku specifické pro lokalizaci. Patří sem řetězce, licenční smlouvy s koncovým uživatelem a jazykové sady.
@@ -66,7 +66,7 @@ K nasazení požadavků pro aplikaci můžete vytvořit balíček zaváděcího 
 
 6. Zkopírujte nebo přesuňte soubor *CorePackage.msi* do složky *C:\package* .
 
-7. Přidejte XML pro instalaci balíčku pomocí příkazů zaváděcího nástroje. Zaváděcí nástroj automaticky přidá příznak **/qn** do souboru *. msi* , který se nainstaluje tiše. Pokud je soubor *. exe* , zaváděcí nástroj spustí soubor *. exe* pomocí prostředí. Následující kód XML ukazuje žádné argumenty pro *CorePackage.msi* , ale do atributu lze vložit argument příkazového řádku `Arguments` .
+7. Přidejte XML pro instalaci balíčku pomocí příkazů zaváděcího nástroje. Zaváděcí nástroj automaticky přidá příznak **/qn** do souboru *. msi* , který se nainstaluje tiše. Pokud je soubor *. exe*, zaváděcí nástroj spustí soubor *. exe* pomocí prostředí. Následující kód XML ukazuje žádné argumenty pro *CorePackage.msi*, ale do atributu lze vložit argument příkazového řádku `Arguments` .
 
     ```xml
     <Commands>

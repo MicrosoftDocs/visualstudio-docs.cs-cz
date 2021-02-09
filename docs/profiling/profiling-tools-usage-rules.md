@@ -6,21 +6,21 @@ ms.topic: conceptual
 ms.assetid: afa7db3b-8c1d-473a-81ac-24ede112a17f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8eba05a40e108d2fd1ba5107160088c5c30da299
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 2514d6893c205a1c48c76983c859528be6ad938b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98720472"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861618"
 ---
 # <a name="profiling-tools-usage-rules"></a>Pravidla používání nástrojů pro profilaci
 Pravidla výkonu v kategorii použití Nástroje pro profilaci poskytují pokyny pro použití profileru pro efektivní shromažďování dat.
 
-| Pravidlo | Popis |
+| Pravidlo | Description |
 | - | - |
 | [DA0002: Chybí knihovna VSPerfCorProf.dll](../profiling/da0002-vsperfcorprof-dll-is-missing.md) | Profilace příkazového řádku může obsahovat nekompletní data pro .NET Framework binárních souborů. To může být způsobeno tím, že nenastavuje správné proměnné prostředí. |
 | [DA0003: Velký počet vzorků jádra](../profiling/da0003-many-kernel-samples.md) | Bylo zaznamenáno mnoho ukázek profilace, k nimž došlo mimo provádění cílového binárního souboru. Chcete-li shromáždit přesnější data, zvažte použití metody instrumentace. |

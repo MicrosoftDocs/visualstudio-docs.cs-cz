@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: db648e5f-6375-4e2d-aa98-eb7261958927
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 29deb50bb57f018d3031ed1065145b6a39abab67
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 18ea2ade8ed87bfc58280bf5b2dc45c633eb2055
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560444"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857594"
 ---
 # <a name="debug-64-bit-applications"></a>Ladění 64bitových aplikací
 Můžete ladit 64 aplikaci, která běží na místním počítači nebo na vzdáleném počítači.
@@ -54,7 +54,7 @@ Můžete ladit 64 aplikaci, která běží na místním počítači nebo na vzd�
 
 - Máte potíže s tím, že aplikace Visual Studio přestane reagovat nebo se jedná o jiný problém s výkonem. Pokud k problému dochází pravidelně, můžete shromáždit výpisy sady Visual Studio (devenv.exe) a pracovní proces (msvsmon.exe) a odeslat je do Microsoftu. Informace o tom, jak nahlásit problém, najdete v tématu [postup nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [64bitové aplikace](/dotnet/framework/64-bit-apps)
 - [Konfigurace programů pro 64. bit](/cpp/build/configuring-programs-for-64-bit-visual-cpp)

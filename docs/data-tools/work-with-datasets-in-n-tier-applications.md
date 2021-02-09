@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: d450bb60bdb604f658f73d0b5df4b9bd739cf923
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: 93a221640ff7383b39bfdec73cbaa9659156e33f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94998184"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858069"
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>Práce s datovými sadami ve vícevrstvých aplikacích
 
@@ -36,7 +36,7 @@ Typové datové sady byly vylepšeny, takže třídy objekty TableAdapter a Data
 
 N-vrstvá podpora v typových datových sadách umožňuje iterativní vývoj architektury aplikace až na n-vrstvý návrh. Také odebere požadavek na ruční oddělení kódu do více než jednoho projektu. Začněte navrhovat datovou vrstvu pomocí **Návrhář datových sad**. Až budete připraveni přenést architekturu aplikace do n-vrstveného návrhu, nastavte vlastnost **projektu DataSet** objektu DataSet tak, aby generovala třídu DataSet do samostatného projektu.
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.TypedTableBase%601>

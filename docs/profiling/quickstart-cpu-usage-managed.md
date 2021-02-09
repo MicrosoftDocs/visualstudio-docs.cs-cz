@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Diagnostics Tools, CPU Usage
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d3cdb022dce8a9f4b7037e3770cb0ae46c6863c
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 582a412dbcac043e4a77c1508d385cc8caa4c64c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074888"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861643"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c-visual-basic"></a>Rychlý Start: Analýza dat využití procesoru v aplikaci Visual Studio (C#, Visual Basic)
 
@@ -34,7 +34,7 @@ Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnosti
    ::: moniker range="vs-2017"
    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
 
-   V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **C#** nebo **Visual Basic**a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte projekt *MyProfilerApp*.
+   V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **C#** nebo **Visual Basic** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte projekt *MyProfilerApp*.
 
    Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , vyberte odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** . Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
    ::: moniker-end
@@ -175,7 +175,7 @@ Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnosti
     ```
 
     > [!NOTE]
-    > V Visual Basic se ujistěte, že je spouštěcí objekt nastavený na `Sub Main` (**vlastnosti**  >  **Application**  >  **spouštěcí objekt**aplikace).
+    > V Visual Basic se ujistěte, že je spouštěcí objekt nastavený na `Sub Main` (**vlastnosti**  >    >  **spouštěcí objekt** aplikace).
 
 ## <a name="step-1-collect-profiling-data"></a>1. krok: Shromáždění profilačních dat
 
@@ -201,7 +201,7 @@ Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnosti
 
      Po dokončení načítání aplikace se zobrazí **souhrnné** zobrazení diagnostických nástrojů.
 
-5. I když je ladicí program pozastaven, povolte shromažďování dat o využití procesoru výběrem možnosti **zaznamenat profil procesoru**a pak otevřete kartu **využití CPU** .
+5. I když je ladicí program pozastaven, povolte shromažďování dat o využití procesoru výběrem možnosti **zaznamenat profil procesoru** a pak otevřete kartu **využití CPU** .
 
      ![Diagnostické nástroje povolují profilaci procesoru](../profiling/media/quickstart-cpu-usage-summary.png "Diagnostické nástroje povolují profilaci procesoru")
 

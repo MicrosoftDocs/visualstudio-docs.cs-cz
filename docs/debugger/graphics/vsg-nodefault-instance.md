@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 19c95b0d-9a4d-441f-9ed7-3acb39e67521
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 304576391b2287aee7567b3ccc2e4514ce5cb2e8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed60fb5262a6af07966ff974b8535ae299f3fc51
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62848459"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861410"
 ---
 # <a name="vsg_nodefault_instance"></a>VSG_NODEFAULT_INSTANCE
 Definuje podle své přítomnosti, jestli je dodána výchozí instance třídy [VsgDbg třídy](vsgdbg-class.md) , která poskytuje rozhraní pro programové zachycení.

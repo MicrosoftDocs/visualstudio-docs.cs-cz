@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 474eddc6-bf16-4731-9145-6db2f2a0b4fd
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 859a8d7696cf1b1ebc3932f41713a988558efd96
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd6c2b08915c83d041d11cc9b65c1e35c725e56c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461460"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862456"
 ---
 # <a name="idiasymbolget_virtualbaseclass"></a>IDiaSymbol::get_virtualBaseClass
 Načte příznak, který určuje, zda je uživatelsky definovaný datový typ virtuální základní (Base) třída.
@@ -25,7 +25,7 @@ Načte příznak, který určuje, zda je uživatelsky definovaný datový typ vi
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_virtualBaseClass ( 
+HRESULT get_virtualBaseClass ( 
    BOOL* pRetVal
 );
 ```

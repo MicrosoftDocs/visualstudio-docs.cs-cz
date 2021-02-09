@@ -6,15 +6,15 @@ ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.custom: SEO-VS-2020
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b33e9400926dd7d1f7a2dc5a66a33ec2fb244b1b
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 9c2aa1e49c0465fcf75917f0d9bd134962794c74
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100437"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861748"
 ---
 # <a name="code-maps-for-c-projects"></a>Mapy kódu pro projekty v jazyce C++
 
@@ -40,7 +40,7 @@ Tyto položky nejsou podporovány pro kód jazyka C a C++:
 
 Tyto problémy mohou nastat při vytváření map kódu pro kód jazyka C a C++:
 
-|**Problém**|**Možná příčina**|**Řešení**|
+|**Chybu**|**Možná příčina**|**Řešení**|
 |-|-|-|
 |Nepovedlo se vygenerovat mapu kódu.|V řešení nebyly úspěšně sestaveny žádné projekty.|Opravte chyby sestavení, k nimž došlo, a potom znovu vygenerujte mapu.|
 |Pokud se pokusíte vygenerovat mapu kódu z nabídky **Architektura** , Visual Studio přestane reagovat.|Soubor databáze programů (.pdb) může být poškozen.<br /><br /> Soubor .pdb ukládá informace o ladění, jako je typ, metoda a informace zdrojového souboru.|Znovu sestavte řešení a potom akci opakujte.|

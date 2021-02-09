@@ -16,15 +16,15 @@ helpviewer_keywords:
 - application modeling
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 71296b9ccb2e442d1bd9bc13865e0086821bf030
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 7364da54179b742dc3cbfcd94622308f5c13b483
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361154"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861908"
 ---
 # <a name="analyze-and-model-your-architecture"></a>Analýza a modelování vaší architektury
 
@@ -40,7 +40,7 @@ Viz [scénář: Změna návrhu pomocí vizualizace a modelování](../modeling/s
 
 ## <a name="article-reference"></a>Reference k článku
 
-|Scénář|Články|
+|Scenario|Články|
 |-|-|
 |**Vizualizovat kód**:<br /><br />– Podívejte se na organizaci a vztahy kódu vytvořením map kódu. Vizualizujte závislosti mezi sestaveními, obory názvů, třídami, metodami a tak dále.<br />– Podívejte se na strukturu třídy a členy pro konkrétní projekt vytvořením diagramů tříd z kódu.<br />– Vyhledejte konflikty mezi vaším kódem a jeho návrh vytvořením diagramů závislostí pro ověření kódu.|- [Vizualizovat kód](../modeling/visualize-code.md)<br />- [Práce s třídami a jinými typy (Návrhář tříd)](../ide/class-designer/designing-and-viewing-classes-and-types.md)<br />- [Video: Principy návrhu z kódu pomocí map kódu Visual Studio 2015](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />- [Video: ověření závislostí architektury v reálném čase](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
 |**Definovat architekturu**:<br /><br />– Definovat a vynutit omezení závislostí mezi komponentami vašeho kódu vytvořením diagramů závislostí.|- [Video: ověření závislostí architektury pomocí sady Visual Studio (kanál 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
@@ -95,7 +95,7 @@ DSL je zápis, který navrhujete pro určitý účel. V aplikaci Visual Studio j
 
 - [Sada Modeling SDK pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Co je nového pro modelování v aplikaci Visual Studio 2017](../modeling/what-s-new-for-design-in-visual-studio.md)
 - [DevOps a správa životního cyklu aplikací](/azure/devops/user-guide/devops-alm-overview)

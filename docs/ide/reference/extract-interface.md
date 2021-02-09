@@ -6,7 +6,7 @@ ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 f1_keywords:
 - vs.csharp.refactoring.extractinterface
 dev_langs:
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 13e9b684c81abf491b5836c96190c6a89bdc0643
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: 12db627bde45d11950e661d258c9891b8e935ba1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96617393"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861033"
 ---
 # <a name="extract-an-interface-refactoring"></a>Extrakce refaktoringu rozhraní
 
@@ -60,7 +60,7 @@ Tento refaktoring platí pro:
 
    ![extrahování rozhraní](media/extractinterface-dialog-same-file.png)
 
-   | Pole | Popis |
+   | Pole | Description |
    | - | - |
    | **Nový název rozhraní** | Název rozhraní, které se má vytvořit. Název bude ve výchozím nastavení nastaven na hodnotu *ClassName*, kde *ClassName* je název třídy, kterou jste vybrali výše. |
    | **Nový název souboru** | Název generovaného souboru, který bude obsahovat rozhraní. Stejně jako u názvu rozhraní bude tento název ve výchozím nastavení nastaven na hodnotu *ClassName*, kde *ClassName* je název třídy, kterou jste vybrali výše. Můžete také vybrat možnost, která se má **Přidat do aktuálního souboru**. |

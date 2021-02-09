@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8778c047-edeb-4495-8f9f-3f8bbb297099
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2cd255ab59c9d46676ba46baddd9cee7e3ef4cc2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a92cc41fd0e6898ad0d108204f5b472000b9b65c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461180"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862309"
 ---
 # <a name="memorytypeenum"></a>MemoryTypeEnum
 Určuje typ paměti, pro který má být přístup.

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: cbee9944-817a-4805-9c08-fac8e0da58b7
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e46a9188e4189359118eaf1ea4891c903c1f47a8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af945892bfc99e86e30457084481c8675804ffad
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461383"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862428"
 ---
 # <a name="idiasymbolget_virtualtableshapeid"></a>IDiaSymbol::get_virtualTableShapeId
 Načte identifikátor symbolu obrazce virtuální tabulky symbolu.
@@ -25,7 +25,7 @@ Načte identifikátor symbolu obrazce virtuální tabulky symbolu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_virtualTableShapeId ( 
+HRESULT get_virtualTableShapeId ( 
    DWORD* pRetVal
 );
 ```
