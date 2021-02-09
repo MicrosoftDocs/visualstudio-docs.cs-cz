@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: aa5ae9d0-561d-4ef8-b36b-258ce553d50a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 27298b03a03edf99a12a6d067a22ca8ba17faef0
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: dcc4cd3241c4d2fffdf2637790869dfc5ac524f5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722877"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99922440"
 ---
 # <a name="no-thread-activity-to-show-threads-view"></a>Žádná aktivita vláken k zobrazení (zobrazení vláken)
 Tato oblast zobrazuje data o neskrytých vláknech v aktuálně viditelném časovém rozsahu.

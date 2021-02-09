@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 3e5a06c5-fb30-4b8a-b2d5-4a0570fc80bd
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5628af4a6e5c4deae3de02340e882bd2605e22d3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95992d32df6b05c182b5b0ca505bc288294e282c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738044"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99923231"
 ---
 # <a name="bp_flags90"></a>BP_FLAGS90
 Vytvoří výčet platných hodnot pro volitelné příznaky. Volitelné příznaky lze použít k určení dalších informací při nastavení zarážky. Tento výčet rozšiřuje výčet [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) .

@@ -9,18 +9,18 @@ ms.topic: tutorial
 ms.devlang: CSharp
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ee28bde6de10006ccfdc5175cca629ad9d1590d0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bbebcec3f5b2de01bcbfa7839f68e6f7a3e2cc64
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649636"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99922845"
 ---
 # <a name="how-to-run-a-c-program-in-visual-studio"></a>Postupy: spuštění programu v jazyce C# v aplikaci Visual Studio
 
@@ -74,7 +74,7 @@ Pokud je kód, který chcete spustit, v GitHubu nebo v úložišti Azure DevOps,
 
 ## <a name="run-the-program"></a>Spuštění programu
 
-Chcete-li spustit program, stiskněte zelenou šipku (tlačítko**Start** ) na hlavním panelu nástrojů sady Visual Studio nebo stiskněte klávesu **F5** nebo **CTRL** + **F5** a program spusťte. Když použijete tlačítko **Start** , spustí se v ladicím programu.  Visual Studio se pokusí sestavit kód v projektu a spustit ho.  Pokud to bude úspěšné, Skvělé! Ale pokud ne, pokračujte v čtení některých nápadů, jak je získat na úspěšné sestavení.
+Chcete-li spustit program, stiskněte zelenou šipku (tlačítko **Start** ) na hlavním panelu nástrojů sady Visual Studio nebo stiskněte klávesu **F5** nebo **CTRL** + **F5** a program spusťte. Když použijete tlačítko **Start** , spustí se v ladicím programu.  Visual Studio se pokusí sestavit kód v projektu a spustit ho.  Pokud to bude úspěšné, Skvělé! Ale pokud ne, pokračujte v čtení některých nápadů, jak je získat na úspěšné sestavení.
 
 ## <a name="troubleshooting"></a>Řešení potíží
 
@@ -98,7 +98,7 @@ Například na následující obrazovce můžete přidat `using System;` na zač
 
 #### <a name="missing-assembly-reference"></a>Chybějící odkaz na sestavení
 
-Odkazy .NET můžou být ve formě sestavení nebo balíčků NuGet. Pokud například vyhledáte zdrojový kód, Vydavatel nebo autor vysvětlete, jaká sestavení jsou povinná a jaké balíčky závisí na kódu. Chcete-li přidat odkaz na projekt ručně, klikněte pravým tlačítkem myši na uzel **odkazy** v **Průzkumník řešení**, vyberte možnost **Přidat odkaz**a vyhledejte požadované sestavení.
+Odkazy .NET můžou být ve formě sestavení nebo balíčků NuGet. Pokud například vyhledáte zdrojový kód, Vydavatel nebo autor vysvětlete, jaká sestavení jsou povinná a jaké balíčky závisí na kódu. Chcete-li přidat odkaz na projekt ručně, klikněte pravým tlačítkem myši na uzel **odkazy** v **Průzkumník řešení**, vyberte možnost **Přidat odkaz** a vyhledejte požadované sestavení.
 
 ![Snímek obrazovky nabídky Přidat odkaz](media/add-reference.png)
 

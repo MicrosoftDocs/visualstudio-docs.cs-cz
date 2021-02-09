@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 147303f3-c7f1-438a-81b7-db891ea3d076
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e18a3e5004a86bb96ad77112f4c81ebca3e59cbf
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: e583c7e19fb6123da06d0ee525abe9c573d8d788
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863436"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99922865"
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
 Toto je funkce zpětného volání určená při volání metody [SccSetOption](../extensibility/sccsetoption-function.md) (using `SCC_OPT_NAMECHANGEPFN` ) a slouží ke sdělování změn názvů provedených modulem plug-in správy zdrojových kódů zpět do integrovaného vývojového prostředí (IDE).
