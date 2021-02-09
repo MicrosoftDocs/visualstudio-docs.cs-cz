@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9a44277d-cbed-4811-9bad-5a2aa0f09323
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 248e73d9a17ed8baab1bcaf583e71cf02f821bfe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0d58a109c3eb63bd3a1f59fb0009ba01809eca1a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466614"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855625"
 ---
 # <a name="idialoadcallback2"></a>IDiaLoadCallback2
 Přijímá zpětná volání z procesu hledání symbolů DIA, což umožňuje, aby bylo omezení uloženo na proces vyhledávání.

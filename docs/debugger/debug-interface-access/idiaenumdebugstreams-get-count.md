@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5c13fa9a-b35e-47b0-806f-1f53bfe1ba89
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bf04ddf455bbd9d3c006e8c17149412d5ed77cce
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f07b29c1b540a6c89086e51bf633b51114cf62a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468411"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856983"
 ---
 # <a name="idiaenumdebugstreamsget_count"></a>IDiaEnumDebugStreams::get_Count
 Načte počet streamů ladění.
@@ -25,7 +25,7 @@ Načte počet streamů ladění.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_Count( 
+HRESULT get_Count( 
    LONG* pRetVal
 );
 ```

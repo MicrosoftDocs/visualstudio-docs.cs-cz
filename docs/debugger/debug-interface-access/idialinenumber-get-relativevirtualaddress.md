@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: ba8142e3-5c77-43cc-bd33-c077dcc18cab
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 79d7c62c2b4b78149b7be4b9781f1123412220f7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4049956c3c7a606abb2dd32b2963b9c2965f070
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466866"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855716"
 ---
 # <a name="idialinenumberget_relativevirtualaddress"></a>IDiaLineNumber::get_relativeVirtualAddress
 Načte relativní virtuální adresu (RVA) bloku.
@@ -25,7 +25,7 @@ Načte relativní virtuální adresu (RVA) bloku.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_relativeVirtualAddress ( 
+HRESULT get_relativeVirtualAddress ( 
    DWORD* pRetVal
 );
 ```

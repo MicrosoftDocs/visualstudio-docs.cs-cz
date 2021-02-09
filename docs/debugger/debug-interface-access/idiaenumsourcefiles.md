@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5c0779a6-a2ea-408a-90da-ebdecf2b83c0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 810ccbfc47a7fabaefdca5a1f6c158b328c4509c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f17deb28c8412743513f41ae3cd1df81aba0de83
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467846"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856192"
 ---
 # <a name="idiaenumsourcefiles"></a>IDiaEnumSourceFiles
 Vytvoří výčet různých zdrojových souborů obsažených ve zdroji dat.
@@ -25,7 +25,7 @@ Vytvoří výčet různých zdrojových souborů obsažených ve zdroji dat.
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaEnumSourceFiles : IUnknown
+IDiaEnumSourceFiles : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable

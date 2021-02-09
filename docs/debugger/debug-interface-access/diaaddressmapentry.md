@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5d0ae226-981d-4541-a801-fc4993fe663b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cae8159c893229f02e9598e932d7bc19efc2f4a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 05475d2e6d48e7a8dacea834e5d7ca18c71d3260
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468677"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857305"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
 Popisuje položku v mapě adres.

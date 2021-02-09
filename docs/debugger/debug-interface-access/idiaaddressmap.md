@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: e6467529-508c-4328-85d7-89444ae4d1c1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ddf4b1c2a6a22170fb52da200bbd53c2b6b96e62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 975321d9710e9b448fa0b6b860f76c2f0b84d52e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468530"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857158"
 ---
 # <a name="idiaaddressmap"></a>IDiaAddressMap
 Poskytuje kontrolu nad tím, jak DIA SDK počítá virtuální a relativní virtuální adresy pro objekty ladění.
@@ -25,7 +25,7 @@ Poskytuje kontrolu nad tím, jak DIA SDK počítá virtuální a relativní virt
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaAddressMap : IUnknown
+IDiaAddressMap : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 09378a21-d5e3-4213-b7e2-10f04d85295f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 77d50a6c59ea376950d8cd4653f29ba7d04f36ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e96190e76d13f6934333b4d743a1d7d2e5ee2e80
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467839"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856185"
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
 Načte zadaný počet prvků rámce zásobníku z sekvence výčtu.
@@ -25,7 +25,7 @@ Načte zadaný počet prvků rámce zásobníku z sekvence výčtu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT Next( 
+HRESULT Next( 
    ULONG             celt,
    IDiaStackFrame**  rgelt,
    ULONG*            pceltFetched

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c798eb2b-664a-41ec-ae90-5e9d292507ca
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 537b915269a6b7bcf345caf2545d38ca21337ecf
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 50000a6cab9981d9450d1aa2b99b86649df04e6f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728786"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857415"
 ---
 # <a name="compiland"></a>Kompilace
 `SymTagCompiland`Pro každý kompilantu propojený se souborem. exe je k dispozici jeden symbol. Informace kompilantu jsou rozděleny mezi symboly `SymTagCompiland` značkou, které lze načíst bez načtení dalších symbolů kompilantu a symboly se `SymTagCompilandDetails` značkou, která může vyžadovat načítání dalších symbolů.

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - postActionData element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 85e1a02dbb85094cf84e1bba05e900d0e3f2c641
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 505b55b7513446a158adac66e7e0e38f401f0808
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583720"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847684"
 ---
 # <a name="ltpostactiondatagt-element-office-development"></a>&lt;postActionData – &gt; element (vývoj pro Office)
   `postActionData`Element `vstav3` oboru názvů Určuje data přidružená k jakékoli akci po nasazení, která se spustí po instalaci řešení Office.
@@ -41,7 +41,7 @@ ms.locfileid: "91583720"
 
 ## <a name="post-deployment-action-example"></a>Příklad akce po nasazení
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
  Následující příklad kódu ukazuje `postAction` prvek v manifestu aplikace pro řešení Office nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

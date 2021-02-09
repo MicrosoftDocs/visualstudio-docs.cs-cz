@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3f0622f7-6790-41d8-8778-227cbbf8a212
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f24476bc00293f204dfa28d57ca2d961c2d55d9d
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 9cbc24e8abe378a1a6c61680a797a6014efc5a91
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728553"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857340"
 ---
 # <a name="cv_hreg_e"></a>CV_HREG_e
 Určuje cílový registr.

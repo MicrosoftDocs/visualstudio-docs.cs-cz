@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0d6c0632-310f-4a99-8921-58149a1817e3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ebc0fe8391c6390d62cffbb591c4cef1ea52976f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4960dec3f12959355caeb7ff62c88bb18d8b63df
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468070"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856430"
 ---
 # <a name="idiaenumsectioncontribs"></a>IDiaEnumSectionContribs
 Vytvoří výčet různých příspěvků obsažených v části zdroje dat.
@@ -25,7 +25,7 @@ Vytvoří výčet různých příspěvků obsažených v části zdroje dat.
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaEnumSectionContribs : IUnknown
+IDiaEnumSectionContribs : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable

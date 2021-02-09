@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: eb8eae5a-be27-45f4-a7bd-6e4ef0652385
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e61e7c1d7d955c5586c19ec21a43fd4ab9abea5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f70b052746438516275b205676339b216eea70e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468390"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856962"
 ---
 # <a name="idiaenumdebugstreamsnext"></a>IDiaEnumDebugStreams::Next
 Načte zadaný počet streamů ladění v sekvenci výčtu.
@@ -25,7 +25,7 @@ Načte zadaný počet streamů ladění v sekvenci výčtu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT Next ( 
+HRESULT Next ( 
    ULONG                     celt,
    IDiaEnumDebugStreamData** rgelt,
    ULONG*                    pceltFetched

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: c777e2e6-88be-435b-b632-8d43f42b0b49
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 24d49493c67300299743c472c48ae37bf08106c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07342f4b67dd413296aad597b49426c15d619d75
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468663"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857298"
 ---
 # <a name="enum-debug-interface-access-sdk"></a>Výčet (Přístup k rozhraní ladění SDK)
 Výčty jsou identifikovány pomocí `SymTagEnum` symbolů. Každá hodnota výčtu se zobrazí jako podřízená třída se `SymTagConstant` značkou.

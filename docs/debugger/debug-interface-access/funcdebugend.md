@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 68f84fff-7cd3-4636-b929-7063a45009f8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5047bbc0b77686ab6e4d5d4530e9d1e07b8cabc9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 88a81f9a179ab573cdf370c1870378b993e4b6fd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468635"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857277"
 ---
 # <a name="funcdebugend"></a>FuncDebugEnd
 Pokud má funkce definovaný bod, na kterém je ladění ukončeno, je výchozí bod ladění identifikován symbolem se `SymTagFuncDebugEnd` značkou.

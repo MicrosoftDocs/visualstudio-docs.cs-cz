@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 854b142f-23a9-466c-bf7f-98e581d5abcd
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e32450e355d757081efaf66e7c5abaf179e7fd95
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 480a0949cd1d42c60b05c5efc89f42c3457ab602
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467020"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855779"
 ---
 # <a name="idiainjectedsourceget_sourcecompression"></a>IDiaInjectedSource::get_sourceCompression
 Načte indikátor použité zdrojové komprese.
@@ -25,7 +25,7 @@ Načte indikátor použité zdrojové komprese.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_sourceCompression ( 
+HRESULT get_sourceCompression ( 
    DWORD* pRetVal
 );
 ```
@@ -39,7 +39,7 @@ mimo Vrátí indikátor použité zdrojové komprese. Hodnota nula znamená, že
  V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Hodnota vrácená touto metodou je specifická pro použitý kompilátor. Kompilátor může například použít kódování Run-Length nebo Huffmanova kompresi.
+ Hodnota vrácená touto metodou je specifická pro použitý kompilátor. Kompilátor může například použít Run-Length kódování nebo komprese ve stylu Huffmanova.
 
 ## <a name="see-also"></a>Viz také
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

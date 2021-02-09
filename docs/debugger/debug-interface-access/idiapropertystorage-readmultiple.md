@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 6ccc9397-ce41-4f72-b261-72ac252cd4a5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8681032840f09bcc4a90df66b3a6f37d664739ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 45eaed0b3306ba0ab1c448d5e61657f0461a9474
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466572"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855548"
 ---
 # <a name="idiapropertystoragereadmultiple"></a>IDiaPropertyStorage::ReadMultiple
 Přečte zadané vlastnosti z aktuální sady vlastností.
@@ -25,7 +25,7 @@ Přečte zadané vlastnosti z aktuální sady vlastností.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT ReadMultiple( 
+HRESULT ReadMultiple( 
    ULONG          cpspec,
    PROPSPEC const rgpspec,
    PROPVARIANT    rgvar

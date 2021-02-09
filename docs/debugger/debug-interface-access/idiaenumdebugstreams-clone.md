@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: e85ec592-de97-4f95-a774-1623315ba415
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0787d9c47d409afee7683c1503b012419feda742
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 68a4925a8df181106d1aa902ce89462253a8d16f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468418"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857011"
 ---
 # <a name="idiaenumdebugstreamsclone"></a>IDiaEnumDebugStreams::Clone
 Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.
@@ -25,7 +25,7 @@ Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enum
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT Clone ( 
+HRESULT Clone ( 
    IDiaEnumDebugStreams** ppenum
 );
 ```

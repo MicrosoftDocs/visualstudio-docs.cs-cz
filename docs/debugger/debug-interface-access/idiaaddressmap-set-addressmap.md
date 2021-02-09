@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 81e82073-089b-43d5-af39-49d7a4907c7a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af506da822a7f8e38a8952d7c1d0d15fc1995d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c4a450522ea97ee5b0b11993e8e4b6474de4a9f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468551"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857172"
 ---
 # <a name="idiaaddressmapset_addressmap"></a>IDiaAddressMap::set_addressMap
 Poskytuje mapu adres pro podporu překladů rozložení obrázků.
@@ -25,7 +25,7 @@ Poskytuje mapu adres pro podporu překladů rozložení obrázků.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT set_addressMap ( 
+HRESULT set_addressMap ( 
    DWORD                     cbData,
    struct DiaAddressMapEntry data[],
    BOOL                      imagetoSymbols

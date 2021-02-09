@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 02fa56c1-87b6-405a-adee-3bb6bc62de2d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 26645878ffca7c8c6ea0c51e02aa24668764a757
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f2ea924ffd92b6e099302c1bb8e2857dab47479
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466925"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855758"
 ---
 # <a name="idialinenumberget_columnnumberend"></a>IDiaLineNumber::get_columnNumberEnd
 Načte číslo zdrojového sloupce s jedním základem, kde končí výraz nebo příkaz.
@@ -25,7 +25,7 @@ Načte číslo zdrojového sloupce s jedním základem, kde končí výraz nebo 
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_columnNumberEnd ( 
+HRESULT get_columnNumberEnd ( 
    DWORD* pRetVal
 );
 ```

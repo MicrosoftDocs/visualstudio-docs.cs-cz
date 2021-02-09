@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 3c19d7ed-0232-4b0e-9b10-f33ed9e0c93b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5175d38da97a0b3e64ad94692c62425ba6e9cc83
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 110ce322946d1712f75ad68963299455c7865a52
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467916"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856248"
 ---
 # <a name="idiaenumsourcefilesitem"></a>IDiaEnumSourceFiles::Item
 Načte zdrojový soubor prostřednictvím indexu.
@@ -25,7 +25,7 @@ Načte zdrojový soubor prostřednictvím indexu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT Item ( 
+HRESULT Item ( 
    DWORD            index,
    IDiaSourceFile** sourceFile
 );

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9048ef91-a59d-4ad8-90cb-4c13d0989241
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a459bb5537e757035b1d5d726c89a84d94565820
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e484186471cce6f286f291d992befe4a9fb3b2b6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466782"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855674"
 ---
 # <a name="idialinenumberget_virtualaddress"></a>IDiaLineNumber::get_virtualAddress
 Načte virtuální adresu (VA) bloku.
@@ -25,7 +25,7 @@ Načte virtuální adresu (VA) bloku.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_virtualAddress ( 
+HRESULT get_virtualAddress ( 
    ULONGLONG* pRetVal
 );
 ```

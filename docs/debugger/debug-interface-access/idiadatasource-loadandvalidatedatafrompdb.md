@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d66712dd-6c24-4192-919a-cce262066f0e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e3a4b73cbbfe16cb87108c5f157dada135e71ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57f903bde5121a9ece797f6eb97c29805a3290a1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468537"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857165"
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
 Otevře a ověří, že soubor databáze programu (PDB) odpovídá poskytnutým informacím o podpisu a připraví soubor. pdb jako zdroj dat pro ladění.
@@ -25,7 +25,7 @@ Otevře a ověří, že soubor databáze programu (PDB) odpovídá poskytnutým 
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT loadAndValidateDataFromPdb ( 
+HRESULT loadAndValidateDataFromPdb ( 
    LPCOLESTR pdbPath,
    GUID*     pcsig70,
    DWORD     sig,

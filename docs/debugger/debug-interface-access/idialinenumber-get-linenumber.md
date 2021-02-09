@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2dff3fd9-097d-4645-bc1b-cb65ecbc42a6
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 172ef1631dedc3caf90d3facf1d2061dc8590fa4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60fcb463b4705a13cbdcf9802fb8fcf74df32246
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466880"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855730"
 ---
 # <a name="idialinenumberget_linenumber"></a>IDiaLineNumber::get_lineNumber
 Načte číslo řádku ve zdrojovém souboru.
@@ -25,7 +25,7 @@ Načte číslo řádku ve zdrojovém souboru.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_lineNumber ( 
+HRESULT get_lineNumber ( 
    DWORD* pRetVal
 );
 ```

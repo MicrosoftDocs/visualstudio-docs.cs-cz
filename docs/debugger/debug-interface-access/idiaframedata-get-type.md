@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: efca38b5-c479-4d0a-a164-f903f25c5509
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2526fd4991677eca60b908d6ab1f4b3e6e8189af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76696529440d6ecce34f623c51e2909d0b2d7f00
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467195"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855884"
 ---
 # <a name="idiaframedataget_type"></a>IDiaFrameData::get_type
 Načte typ snímku specifický pro kompilátor.
@@ -25,7 +25,7 @@ Načte typ snímku specifický pro kompilátor.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_type ( 
+HRESULT get_type ( 
    DWORD* pRetVal
 );
 ```

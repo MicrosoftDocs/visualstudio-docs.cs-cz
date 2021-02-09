@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0b6f5a68-8402-4f29-8219-20576fda8166
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9750c57bc9a6cacc8d945b0acdd7723769e74e53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9453cb9cd703fd22d9dcff0f1606449dd0fe2cac
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467629"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856060"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyaddr"></a>IDiaEnumSymbolsByAddr::symbolByAddr
 Pozice čítače provede vyhledáváním podle čísla a posunu oddílu obrázku.
@@ -25,7 +25,7 @@ Pozice čítače provede vyhledáváním podle čísla a posunu oddílu obrázku
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT symbolByAddr ( 
+HRESULT symbolByAddr ( 
    DWORD**      isect,
    DWORD**      offsect,
    IDiaSymbol** ppsymbol

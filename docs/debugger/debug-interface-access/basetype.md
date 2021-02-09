@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2f9e22e6-8360-496a-ac6b-17a5a56b0c46
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ecbcc24e1558039490a17838cdef4d72e7e95e0
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 38ef0b8d8172bfba915da752526098144c2e40b2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728875"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857475"
 ---
 # <a name="basetype"></a>BaseType
 Základní typy jsou identifikovány pomocí `SymTagBaseType` symbolů.

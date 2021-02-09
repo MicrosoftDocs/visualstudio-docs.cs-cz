@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 114171dd-38fd-4bd7-a702-8ff887ffc99b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 117d16a9c010bbed2c14544f6cc94c4782701e34
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9eb951dd2362b93c61e835da78e5e02d6dc67069
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468446"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857039"
 ---
 # <a name="idiaenumdebugstreamdatanext"></a>IDiaEnumDebugStreamData::Next
 Načte zadaný počet záznamů ve výčtové sekvenci.
@@ -25,7 +25,7 @@ Načte zadaný počet záznamů ve výčtové sekvenci.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT Next ( 
+HRESULT Next ( 
    ULONG  celt,
    DWORD  cbData,
    DWORD* pcbData,

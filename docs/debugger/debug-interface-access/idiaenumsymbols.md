@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 649f7bfd-86ac-49a5-8533-aff77e1bc62e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6018558ead8ae8b5532253cfa32180491514b040
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d6710ebfec5f0c76bee217f9f75fb24c7efabd18
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467678"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856101"
 ---
 # <a name="idiaenumsymbols"></a>IDiaEnumSymbols
 Vytvoří výčet různých symbolů obsažených ve zdroji dat.
@@ -25,7 +25,7 @@ Vytvoří výčet různých symbolů obsažených ve zdroji dat.
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaEnumSymbols : IUnknown
+IDiaEnumSymbols : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable

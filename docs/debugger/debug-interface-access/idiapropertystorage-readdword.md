@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5f4c034e-a9d3-4560-94b5-ede524741439
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d654fdfdfeacc9071081a65f3ad94b2ad240ae5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b85c8095ca4d730dd74054c976d9a5bf217f1cc1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466586"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855576"
 ---
 # <a name="idiapropertystoragereaddword"></a>IDiaPropertyStorage::ReadDWORD
 Přečte `DWORD` hodnoty v sadě vlastností.
@@ -25,7 +25,7 @@ Přečte `DWORD` hodnoty v sadě vlastností.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT ReadDWORD ( 
+HRESULT ReadDWORD ( 
    PROPID id,
    DWORD* pValue
 );

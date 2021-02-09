@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5f042ff1-e74e-430a-be34-d2cf1b18eff2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9975446cb8c7691f46b6d320f59718d9d87c8440
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dece324f2da92c0b405bede4d7c2b3c1f2ad7789
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467307"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855912"
 ---
 # <a name="idiaframedataget_lengthprolog"></a>IDiaFrameData::get_lengthProlog
 Načte počet bajtů kódu prologu v bloku.
@@ -25,7 +25,7 @@ Načte počet bajtů kódu prologu v bloku.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_lengthProlog ( 
+HRESULT get_lengthProlog ( 
    DWORD* pRetVal
 );
 ```

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 6183dc5e-befa-4e5a-ae5a-f4aa24f3ed9e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e23f5752229ece7ecac02362c294bc661d109039
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 09d4507df7090e36f9436f2ca24b6f982d56f420
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468593"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857228"
 ---
 # <a name="idiaaddressmapget_addressmapenabled"></a>IDiaAddressMap::get_addressMapEnabled
 Označuje, zda bylo pro určitou relaci vytvořeno mapování adres.
@@ -25,7 +25,7 @@ Označuje, zda bylo pro určitou relaci vytvořeno mapování adres.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_addressMapEnabled ( 
+HRESULT get_addressMapEnabled ( 
    BOOL* pRetVal
 );
 ```
