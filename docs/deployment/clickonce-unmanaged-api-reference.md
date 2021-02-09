@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: ec002138-4054-456d-bcc1-79ac2f4a4fd7
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5ca8c18c0ed69080a14ba31d4da6d80fa9ae6d4
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 88d8147dded05c6bec54682e76c6a8c1826b43e0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382608"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900801"
 ---
 # <a name="clickonce-unmanaged-api-reference"></a>Reference nespravovaného rozhraní API ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Nespravovaná veřejná rozhraní API z dfshim.dll.

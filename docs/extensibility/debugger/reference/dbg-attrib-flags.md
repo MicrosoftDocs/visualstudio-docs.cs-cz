@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 2f13e601-dadc-476e-a8ec-01c4515082e7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1c8b3f52eff80c187d3c43b87cea804ace483169
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e1093ab5252aa14418bebf4129d0c7d050d0e11d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80737555"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99899155"
 ---
 # <a name="dbg_attrib_flags"></a>DBG_ATTRIB_FLAGS
 Popisuje různé atributy pro rozhraní [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nebo [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) . Člen struktury [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) .
@@ -290,7 +290,7 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  Označuje, že je tento objekt vnitřní třídou.
 
  `DBG_ATTRIB_MOSTDERIVED`\
- Označuje, že tento objekt je*nejvíc odvozený*. Termín "*nejvíc odvozené*" "označuje skutečný typ objektu, a nikoli typ jeho odkazu.
+ Označuje, že tento objekt je *nejvíc odvozený*. Termín "*nejvíc odvozené*" "označuje skutečný typ objektu, a nikoli typ jeho odkazu.
 
  `DBG_ATTRIB_CHILD_ALL`\
  Označuje masku `DBG_ATTRIB_DATA` `DBG_ATTRIB_MOSTDERIVED` .

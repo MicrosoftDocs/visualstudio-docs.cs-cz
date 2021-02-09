@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 744d76fd-2bcc-4917-a040-ce4cc714ef61
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 76834b3d4d61f0a58d7a0d2c36f8e30c444ddca2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ab2c0b27d8befa13e68e6b28c6aee1f763138cba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80720847"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900056"
 ---
 # <a name="idebugpropertyfieldgetpropertysetter"></a>IDebugPropertyField::GetPropertySetter
 Získá metodu, která nastaví vlastnost.
@@ -28,7 +28,7 @@ Získá metodu, která nastaví vlastnost.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetPropertySetter( 
+HRESULT GetPropertySetter( 
    IDebugMethodField** ppField
 );
 ```

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a3f23f05-e7f1-4620-b23c-2d68f9643684
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bc2fd7b9e58cac0b013c511e17a6a9744e87ca39
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 03b8b3899a90588ca747ca93c0ff6bd7279e1bec
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351177"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900556"
 ---
 # <a name="how-to-manage-updates-for-a-clickonce-application"></a>Postupy: Správa aktualizací pro aplikaci ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace mohou vyhledávat aktualizace automaticky nebo programově. Jako vývojář máte spoustu flexibility při určování, kdy a jak se provádějí kontroly aktualizací, jestli jsou aktualizace povinné a kde by měla aplikace vyhledávat aktualizace.
@@ -77,7 +77,7 @@ ms.locfileid: "94351177"
 
 4. V dialogovém okně **aktualizace aplikace** zkontrolujte, zda je zaškrtnuto políčko **aplikace by měla vyhledat aktualizace** .
 
-5. Zaškrtněte políčko **zadat minimální požadovanou verzi této aplikace** a potom zadejte čísla **hlavních** , **vedlejších** , **sestavení** a **Revize** pro aplikaci.
+5. Zaškrtněte políčko **zadat minimální požadovanou verzi této aplikace** a potom zadejte čísla **hlavních**, **vedlejších**, **sestavení** a **Revize** pro aplikaci.
 
 ### <a name="to-specify-a-different-update-location"></a>Určení jiného umístění aktualizace
 

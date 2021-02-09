@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2e4aa67c-4445-4f7b-9e03-9acb95829127
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 252d029e7e2e5b9b5dfe27b2fb1cd72e1c09b473
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 7591513bc52807b87e9df2f0fb65364d5aff2db8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349877"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900534"
 ---
 # <a name="how-to-publish-a-clickonce-application-using-the-publish-wizard"></a>Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním
 Chcete-li aplikaci ClickOnce zpřístupnit uživatelům, je nutné ji publikovat do sdílené složky nebo cesty, serveru FTP nebo na vyměnitelné médium. Aplikaci můžete publikovat pomocí Průvodce publikováním. Další vlastnosti týkající se publikování jsou k dispozici na stránce **publikovat** v **Návrháři projektu**. Další informace naleznete v tématu [publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md).

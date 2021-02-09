@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 418de18c-bee9-4f24-9cd9-0252d175070d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fbda4558622c2e244071a218d3d5e42196460113
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 0377bdc5fa38c814bb5cd6ff02d12dcec117266d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351203"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900792"
 ---
 # <a name="how-to-customize-the-default-web-page-for-a-clickonce-application"></a>Postupy: přizpůsobení výchozí webové stránky pro aplikaci ClickOnce
 Při publikování aplikace ClickOnce na web je automaticky generována a publikována webová stránka společně s aplikací. Výchozí stránka obsahuje název aplikace a odkazy na instalaci aplikace, instalaci požadovaných součástí nebo přístup k nápovědě na webu MSDN.
@@ -32,7 +32,7 @@ Při publikování aplikace ClickOnce na web je automaticky generována a publik
 > [!NOTE]
 > Skutečné odkazy zobrazené na stránce závisí na počítači, na kterém je stránka zobrazována, a na požadavcích, které máte, včetně.
 
- Výchozí název webové stránky je *Publish.htm* ; název můžete změnit v **Návrháři projektu**. Další informace naleznete v tématu [How to: určení stránky publikování pro aplikaci ClickOnce](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md).
+ Výchozí název webové stránky je *Publish.htm*; název můžete změnit v **Návrháři projektu**. Další informace naleznete v tématu [How to: určení stránky publikování pro aplikaci ClickOnce](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md).
 
  Webová stránka *Publish.htm* je publikována pouze v případě, že je zjištěna novější verze.
 

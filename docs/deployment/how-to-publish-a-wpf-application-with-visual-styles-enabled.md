@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 73b22b02-fc75-42aa-82d3-51fdcaf8e5c8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e372d3163dcef84d76d77e54c66cf9f7c788e213
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: f090729cdd0d08d39cf97cab9c3899f0b77c80eb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349851"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900477"
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Postupy: publikování aplikace WPF s povolenými vizuálními styly
 
@@ -51,7 +51,7 @@ Vizuální styly umožňují změnu vzhledu běžných ovládacích prvků na z�
 
     **Otevření souboru manifestu v Visual Basic projektu**
 
-    1. V panelu nabídek vyberte položku **projekt** , vlastnosti *ProjectName* **Properties** , kde *ProjectName* je název vašeho projektu WPF.
+    1. V panelu nabídek vyberte položku **projekt**, vlastnosti *ProjectName* , kde *ProjectName* je název vašeho projektu WPF.
 
          Zobrazí se stránky vlastností projektu WPF.
 
@@ -61,7 +61,7 @@ Vizuální styly umožňují změnu vzhledu běžných ovládacích prvků na z�
 
     **Otevření souboru manifestu v projektu C#**
 
-    1. V panelu nabídek vyberte položku **projekt** , vlastnosti *ProjectName* **Properties** , kde *ProjectName* je název vašeho projektu WPF.
+    1. V panelu nabídek vyberte položku **projekt**, vlastnosti *ProjectName* , kde *ProjectName* je název vašeho projektu WPF.
 
          Zobrazí se stránky vlastností projektu WPF.
 
@@ -112,7 +112,7 @@ Vizuální styly umožňují změnu vzhledu běžných ovládacích prvků na z�
 
 1. Otevřete **příkazový řádek sady Visual Studio**.
 
-    Další informace o tom, jak otevřít **příkazový řádek sady Visual Studio** , najdete v tématu [výzvy k zadání příkazu](/dotnet/framework/tools/developer-command-prompt-for-vs).
+    Další informace o tom, jak otevřít **příkazový řádek sady Visual Studio**, najdete v tématu [výzvy k zadání příkazu](/dotnet/framework/tools/developer-command-prompt-for-vs).
 
    > [!NOTE]
    > Zbývající kroky vedou k řešení následující předpoklady:

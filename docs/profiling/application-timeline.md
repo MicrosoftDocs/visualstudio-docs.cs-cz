@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: df7d854b-0a28-45a9-8a64-c015a4327701
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 8fc482e10ae1ca08230feb38eb2997d0c4dcab00
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 40fc899aecc3b8aea239703080d8db4efcfaec52
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205733"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901192"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Aktivita analýzy využití prostředků a vlákna uživatelského rozhraní (XAML)
 
@@ -101,7 +101,7 @@ V zobrazení podrobností je místo, kde strávíte většinu času analýzou se
 
 Podporují se tyto události:
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Analýze**|Čas strávený analýzou souborů XAML a vytváření objektů<br /><br /> Rozbalením uzlu **analýzy** v **podrobnostech časové osy** se zobrazí řetězec závislosti všech souborů XAML, které byly analyzovány z důvodu kořenové události. Tento tip vám umožní identifikovat nepotřebnou analýzu souborů a vytvoření objektu ve scénářích citlivých na výkon a optimalizovat.|
 |**Rozložení**|Ve velkých aplikacích lze na obrazovce zobrazit tisíce prvků současně. Tento displej může mít za následek tempo snímků uživatelského rozhraní a odpovídající nedostatečnou odezvu aplikace. Událost rozložení přesně určuje náklady na rozložení každého prvku (to znamená čas strávený při uspořádání, měření, ApplyTemplate, ArrangeOverride a MeasureOverride). Vytvoří také vizuální stromy, které byly součástí průchodu rozložení. Tuto vizualizaci můžete použít k určení, které logické stromy se mají vyřadit, nebo k vyhodnocení jiných mechanismů odložení pro optimalizaci úspěšnosti rozložení.|
@@ -117,7 +117,7 @@ Podporují se tyto události:
 
 Pomocí panelu nástrojů **Podrobnosti časové osy** můžete seřadit, filtrovat a zadat poznámky k **podrobnostem zobrazení na časové ose** .
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Seřadit podle**|Seřaďte data podle času zahájení nebo délky událostí.|
 |![Seskupit události podle rámce](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|Přidá nebo odebere kategorii **rámce** nejvyšší úrovně, která seskupuje události podle rámce.|

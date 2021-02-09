@@ -7,16 +7,16 @@ ms.topic: reference
 ms.assetid: 79614283-6733-4592-a53a-d428052271ad
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c97dee50d58b49092d9b23a497192b29746e0c22
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 0098ec24047e6e16efd27c6aec26943671743bb4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205694"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901093"
 ---
 # <a name="attach"></a>Připojit
 Možnost *VSPerfCmd.exe* **připojit** spustí ukázku profilace spuštěného procesu určeného ID procesu (PID).

@@ -6,15 +6,15 @@ ms.date: 05/16/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9898b720e51c2750b67054d1f095200372f426da
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 324f8fe7ee34f469d31ad1ce6cf6bd25ab97f225
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363767"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99899817"
 ---
 # <a name="share-code-maps"></a>Sdílení map kódu
 
@@ -59,6 +59,6 @@ Pokud exportujete mapu kódu jako soubor XPS, můžete ji zobrazit v prohlíže�
 
 3. Pojmenujte mapu kódu. Ujistěte se, že je pole **Uložit jako typ** nastaveno na **soubory XPS ( \* . XPS)**. Klikněte na tlačítko **Uložit**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Mapování závislostí pomocí map kódu](../modeling/map-dependencies-across-your-solutions.md)

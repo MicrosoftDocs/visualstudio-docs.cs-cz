@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, connectors
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d456f251c5c8af21113593469b019094207cbf2
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: b09ec4278dd78f797067c3acdf3152736fb395c3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360504"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99899842"
 ---
 # <a name="properties-of-connectors"></a>Vlastnosti konektorů
 Konektory reprezentují doménové vztahy ve vygenerovaném návrháři.
@@ -27,7 +27,7 @@ Konektory reprezentují doménové vztahy ve vygenerovaném návrháři.
 
 |Vlastnost|Popis|Výchozí|
 |-|-|-|
-|Color|Barva této spojnice|Black|
+|Barva|Barva této spojnice|Black|
 |Styl přerušovanosti|Styl přerušovanosti čáry pro tento konektor (Solid, pomlčka, tečka, čárka tečka, čárka tečka tečka nebo vlastní).|Plná|
 |Styl konce zdroje|Styl konce zdroje pro tento konektor (HollowArrow, EmptyArrow, FilledArrow, EmptyDiamond, FilledDiamond nebo žádný).|Žádné|
 |Styl konce cíle|Styl konce cíle pro tento konektor (HollowArrow, EmptyArrow, FilledArrow, EmptyDiamond, FilledDiamond nebo None).|Žádné|
@@ -45,11 +45,11 @@ Konektory reprezentují doménové vztahy ve vygenerovaném návrháři.
 |Poznámky|Neformální poznámky, které jsou přidruženy k tomuto konektoru.|\<none>|
 |Styl směrování|Styl použitý ke směrování konektoru `Rectilinear`Spojnice nastaví otočení vpravo podle potřeby; `Straight` konektor ne.|Osmicípá|
 |Vystavená barva jako vlastnost<br /><br /> Nevystavený čárkovaný styl jako vlastnost<br /><br /> Vystavená tloušťka jako vlastnost<br /><br /> Zpřístupňuje barvu textu|Pokud `True` může uživatel nastavit uvedenou vlastnost tvaru. Pokud to chcete nastavit, klikněte pravým tlačítkem na definici obrazce a klikněte na **Přidat vystavené**.|Ne|
-|Popis|Slouží k dokumentování vygenerovaného návrháře.|\<none>|
+|Description|Slouží k dokumentování vygenerovaného návrháře.|\<none>|
 |Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři pro tento konektor.|\<none>|
 |Pevný text popisu|Text, který se používá pro pevný popis.|\<none>|
 |Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tento element.|\<none>|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

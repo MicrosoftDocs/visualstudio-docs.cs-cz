@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.assetid: eb139327-4783-4f2a-874c-efad377a7be4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 614ac24e38966c1d09df91d6771cab2b3914454d
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: 1ec92cae275d9f73f24f983905bc0013950e9d37
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98801392"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99899556"
 ---
 # <a name="events-vsperfcmd"></a>Události (VSPerfCmd)
 Možnost  **události** VSPerfCmd.exeřídí protokolování událostí pro Windows (ETW). Data ETW se ukládají do souboru. ETL, který je oddělený od datového souboru profileru. Data je možné zobrazit v sestavě pomocí příkazu [VSPerfReport](../profiling/vsperfreport.md) /Summary: ETW.

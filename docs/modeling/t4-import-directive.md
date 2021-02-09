@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dbd42f42213e475452185475a69b1dd9fe5f8e0
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: d9eb50261b346d8751a76817d97d59a798d17236
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363689"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99899668"
 ---
 # <a name="t4-import-directive"></a>T4 – direktiva Import
 
@@ -51,6 +51,6 @@ The file contains: <#=  fileContent #>
 
 - Obor názvů vaší DSL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [T4 – direktiva Assembly](../modeling/t4-assembly-directive.md)

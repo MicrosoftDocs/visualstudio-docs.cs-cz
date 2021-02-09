@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: cad0893a-9c5f-45b7-952a-e2294f83e324
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 440e2517a0138ca84be87090d9636288a7a5d9af
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: 6bd335c5787f86fdbf6434cf3a8f78532c7a6d51
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97487943"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99899925"
 ---
 # <a name="vspackages"></a>Balíčky VSPackage
 VSPackage jsou softwarové moduly, které rozšíření [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE) poskytují prvky uživatelského rozhraní, služby, projekty, editory a návrháře.

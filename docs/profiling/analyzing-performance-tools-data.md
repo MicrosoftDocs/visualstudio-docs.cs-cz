@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: ae3e198a-b994-4ecb-a633-dec98bd4fd45
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f11873a3e101c0c37d327d6869ee63fe48f5f42
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 20718e0ef9351b055bbefa28eb751eac88a67b1b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205343"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901168"
 ---
 # <a name="analyze-performance-tools-data"></a>Analýza dat nástrojů pro měření výkonu
 Sestavy o výkonu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci umožňují zobrazit a analyzovat problémy s výkonem aplikací. V této části najdete přehled sestav výkonu a zobrazení, která lze použít k prohlédnutí údajů o výkonu.

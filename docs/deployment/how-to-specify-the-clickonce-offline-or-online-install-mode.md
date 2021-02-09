@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 0aee5fc1-e966-4bda-9b8f-d9997aeaa779
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5236d73bb965d4f25634ad9e61a52608c9030146
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 918cb7e60f4e3fed2beee024d51b94499b14b632
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350930"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900426"
 ---
 # <a name="how-to-specify-the-clickonce-offline-or-online-install-mode"></a>Postupy: určení offline nebo online režimu instalace ClickOnce
-Aplikace `Install Mode` pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci určuje, zda bude aplikace k dispozici offline nebo online. Pokud zvolíte, **že je aplikace dostupná jenom online** , musí mít uživatel přístup k [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] umístění publikování (buď webové stránce, nebo sdílené složce), aby bylo možné aplikaci spustit. Když vyberete aplikaci, která **je k dispozici v režimu offline** , aplikace přidá položky do nabídky **Start** a do dialogového okna **Přidat nebo odebrat programy** . uživatel může aplikaci spustit, když nejsou připojeni.
+Aplikace `Install Mode` pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci určuje, zda bude aplikace k dispozici offline nebo online. Pokud zvolíte, **že je aplikace dostupná jenom online**, musí mít uživatel přístup k [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] umístění publikování (buď webové stránce, nebo sdílené složce), aby bylo možné aplikaci spustit. Když vyberete aplikaci, která **je k dispozici v režimu offline**, aplikace přidá položky do nabídky **Start** a do dialogového okna **Přidat nebo odebrat programy** . uživatel může aplikaci spustit, když nejsou připojeni.
 
 `Install Mode`Lze nastavit na stránce **publikovat** v **Návrháři projektu**.
 

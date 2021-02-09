@@ -12,15 +12,15 @@ helpviewer_keywords:
 - canceling form region display
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f247bf82d51fda6d321b45c16f91b857300cc1e4
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: f6e6b00e8e26d261aac18dd48af1d912bd6ffad1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847673"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99899553"
 ---
 # <a name="how-to-prevent-outlook-from-displaying-a-form-region"></a>Postupy: zabránění zobrazení oblasti formuláře v aplikaci Outlook
   Můžou nastat situace, kdy nechcete, aby aplikace systém Microsoft Office Outlook zobrazovala oblast formuláře pro konkrétní položku. Pokud například položka kontaktu neobsahuje obchodní adresu, můžete zabránit oblasti formuláře, která zobrazuje umístění firmy na mapě.

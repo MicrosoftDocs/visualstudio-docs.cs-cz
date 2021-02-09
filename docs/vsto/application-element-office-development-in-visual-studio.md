@@ -12,15 +12,15 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <application> element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 37ab88939b6a5a753f67621697a63903c5a35eb2
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 895a695f1de56c3041ad1723f1b6b30356c839df
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847036"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900912"
 ---
 # <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;Application – &gt; element (vývoj pro Office v sadě Visual Studio)
   `application`Element `vstav3` oboru názvů obtéká popis řešení pro systém Office. Podřízené prvky jsou odlišné pro přizpůsobení na úrovni dokumentu a doplňky VSTO.
@@ -67,7 +67,7 @@ ms.locfileid: "96847036"
 
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
  Následující příklad kódu ukazuje `application` prvek v řešení Office na úrovni dokumentu nasazeném pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
@@ -86,7 +86,7 @@ ms.locfileid: "96847036"
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
  Následující příklad kódu ukazuje `application` prvek v řešení Office na úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

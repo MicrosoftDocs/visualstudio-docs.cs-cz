@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d53bceb9-4d3b-4c22-b909-8f370e7231fb
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a17902451c931bd37a92158a3b5c3838ed91ed4
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 0b4e4efee02ca1571f40ae33f9d69d8fbec0a1d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351125"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900438"
 ---
 # <a name="how-to-re-sign-application-and-deployment-manifests"></a>Postupy: Opětovné podepsání manifestů aplikace a nasazení
 Poté, co provedete změny vlastností nasazení v manifestu aplikace pro aplikace model Windows Forms, Windows Presentation Foundation aplikací (XBAP) nebo řešení pro systém Office, je nutné znovu podepsat manifesty aplikace a nasazení pomocí certifikátu. Tento proces pomáhá zajistit, aby v počítačích koncových uživatelů nebyly nainstalovány neoprávněné soubory.
@@ -33,7 +33,7 @@ Poté, co provedete změny vlastností nasazení v manifestu aplikace pro aplika
  Dalším scénářem, kdy je možné znovu podepsat manifesty, je, že zákazníci chtějí podepsat aplikace a manifesty nasazení s vlastním certifikátem.
 
 ## <a name="re-sign-the-application-and-deployment-manifests"></a>Opětovné podepsání manifestů aplikace a nasazení
- Tento postup předpokládá, že jste již provedli změny v souboru manifestu aplikace ( *. manifest* ). Další informace najdete v tématu [Postupy: Změna vlastností nasazení](/previous-versions/cc442869(v=vs.110)).
+ Tento postup předpokládá, že jste již provedli změny v souboru manifestu aplikace (*. manifest*). Další informace najdete v tématu [Postupy: Změna vlastností nasazení](/previous-versions/cc442869(v=vs.110)).
 
 #### <a name="to-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>Opětovné podepsání manifestů aplikace a nasazení pomocí Mage.exe
 
@@ -69,10 +69,10 @@ Poté, co provedete změny vlastností nasazení v manifestu aplikace pro aplika
     mage -update WpfBrowserApplication1.xbap -appmanifest WpfBrowserApplication1.exe.manifest -CertFile ..\WpfBrowserApplication1_TemporaryKey.pfx
     ```
 
-5. Volitelně můžete zkopírovat hlavní manifest nasazení ( *Publish \\ \<appname> . Application* ) do adresáře nasazení verze ( *soubory publish\Application \\ \<appname> _ \<version>* ).
+5. Volitelně můžete zkopírovat hlavní manifest nasazení (*Publish \\ \<appname> . Application*) do adresáře nasazení verze (*soubory publish\Application \\ \<appname> _ \<version>*).
 
 ## <a name="update-and-re-sign-the-application-and-deployment-manifests"></a>Aktualizace a opětovné podepsání manifestů aplikace a nasazení
- Tento postup předpokládá, že jste již provedli změny v souboru manifestu aplikace ( *. manifest* ), ale že existují i jiné soubory, které byly aktualizovány. Když se aktualizují soubory, musí se aktualizovat i hodnota hash, která představuje soubor.
+ Tento postup předpokládá, že jste již provedli změny v souboru manifestu aplikace (*. manifest*), ale že existují i jiné soubory, které byly aktualizovány. Když se aktualizují soubory, musí se aktualizovat i hodnota hash, která představuje soubor.
 
 #### <a name="to-update-and-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>Aktualizace a opětovné podepsání manifestů aplikace a nasazení pomocí Mage.exe
 
@@ -112,7 +112,7 @@ Poté, co provedete změny vlastností nasazení v manifestu aplikace pro aplika
 
 6. Přidejte příponu souboru *. deploy* zpátky do souborů s výjimkou souborů manifestu aplikace a nasazení.
 
-7. Volitelně můžete zkopírovat hlavní manifest nasazení ( *Publish \\ \<appname> . Application* ) do adresáře nasazení verze ( *soubory publish\Application \\ \<appname> _ \<version>* ).
+7. Volitelně můžete zkopírovat hlavní manifest nasazení (*Publish \\ \<appname> . Application*) do adresáře nasazení verze (*soubory publish\Application \\ \<appname> _ \<version>*).
 
 ## <a name="see-also"></a>Viz také
 - [Zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md)

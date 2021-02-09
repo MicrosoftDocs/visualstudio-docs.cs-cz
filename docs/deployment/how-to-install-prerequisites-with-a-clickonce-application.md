@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e964fca5-fdfd-47cf-a1c9-7fb96b1c88b5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e4a2f2b951881208d3995aeb1f5f1f655b80674f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 09337ee164c8b740e9aa8a044c4a9df385f01016
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349929"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900569"
 ---
 # <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>Postupy: Instalace předpokladů s aplikací ClickOnce
 Všechny [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace vyžadují, aby byla na počítači nainstalovaná správná verze .NET Framework, aby se mohla spustit; mnoho aplikací má taky další požadavky. Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace můžete zvolit sadu požadovaných součástí, které budou zabaleny spolu s vaší aplikací. V době instalace se pro jednotlivé požadavky provede kontrola, aby se zjistilo, jestli už existuje. Pokud není, nainstaluje se před instalací [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace.
@@ -40,7 +40,7 @@ Všechny [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplik
 
 ### <a name="to-specify-prerequisites-to-install-with-a-clickonce-application"></a>Určení požadavků pro instalaci s aplikací ClickOnce
 
-1. Když je vybrán projekt v **Průzkumník řešení** , v nabídce **projekt** klikněte na **vlastnosti**.
+1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Vyberte podokno **publikování** .
 
@@ -54,7 +54,7 @@ Všechny [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplik
 
 ### <a name="to-specify-a-different-download-location-for-prerequisites"></a>Určení jiného umístění pro stahování pro požadované součásti
 
-1. Když je vybrán projekt v **Průzkumník řešení** , v nabídce **projekt** klikněte na **vlastnosti**.
+1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Vyberte podokno **publikování** .
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 301b7a75-ecfa-46f1-9131-66cf3e4be147
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce15f389f22513e08b06c0d097cdac4aec3c35bf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b09fb8c644adb5464519f0f30bd8deff0be821ba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80720901"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900097"
 ---
 # <a name="idebugpropertydestroyevent2"></a>IDebugPropertyDestroyEvent2
 Toto rozhraní se odesílá ladicím modulem (DE) do Správce ladění relace (SDM), když se chystá zničení vlastnosti, která je přidružena k určitému dokumentu.
@@ -29,7 +29,7 @@ IDebugPropertyDestroyEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- DE implementuje toto rozhraní, aby nahlásilo, že byla vlastnost zničena. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` . Toto rozhraní je implementováno, pokud DE dříve vytvořil vlastnost přidruženou ke skriptu; zničením vlastnosti dojde k odebrání přidruženého skriptu z integrovaného vývojového prostředí (IDE).
+ DE implementuje toto rozhraní, aby nahlásilo, že byla vlastnost zničena. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` . Toto rozhraní je implementováno, pokud DE dříve vytvořil vlastnost přidruženou ke skriptu; zničením vlastnosti dojde k odebrání přidruženého skriptu z integrovaného vývojového prostředí (IDE).
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
  DE vytvoří a pošle tento objekt události, aby nahlásila vlastnost jako zničenou. Událost se odesílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojená k laděnému programu.

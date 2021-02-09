@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 7c4cd83a-f985-4c85-9022-fadb5dbd2b39
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cb63d217249cd24d6777fb4d87ae4fe4d00c755
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 4059d2d4b8a5d69c0c3433699c42c5e88bc6b668
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351138"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900521"
 ---
 # <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>Postupy: publikování projektu s konkrétním národním prostředím
 Není neobvyklé, že aplikace obsahuje komponenty, které mají různá národní prostředí. V tomto scénáři vytvoříte řešení, které má několik projektů, a pak publikujete samostatné projekty pro každé národní prostředí. Tento postup ukazuje, jak použít makro k publikování prvního projektu v řešení pomocí národního prostředí "en". Pokud chcete vyzkoušet tento postup s jiným národním prostředím než ' en ', nezapomeňte nastavit `localeString` v makru tak, aby odpovídalo národnímu prostředí, které používáte (například ' de ' nebo ' de-de ').
@@ -41,7 +41,7 @@ Není neobvyklé, že aplikace obsahuje komponenty, které mají různá národn
 
 2. Vytvoří nový modul maker. V Průzkumníku maker vyberte **MyMacros**. V nabídce **nástroje** přejděte na příkaz **makra** a pak klikněte na **Nový modul maker**. Pojmenujte modul **PublishSpecificCulture**.
 
-3. V Průzkumníku maker rozbalte uzel **MyMacros** a pak otevřete modul **PublishAllProjects** tak, že na něj dvakrát kliknete (nebo v nabídce **nástroje** přejděte na **makra** a pak klikněte na **makra IDE** ).
+3. V Průzkumníku maker rozbalte uzel **MyMacros** a pak otevřete modul **PublishAllProjects** tak, že na něj dvakrát kliknete (nebo v nabídce **nástroje** přejděte na **makra** a pak klikněte na **makra IDE**).
 
 4. V rozhraní IDE maker přidejte následující kód do modulu za `Import` příkazy:
 

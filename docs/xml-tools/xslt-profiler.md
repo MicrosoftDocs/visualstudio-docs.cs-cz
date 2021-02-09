@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.assetid: 87387c9a-2e89-4801-ad51-83740cd6ea25
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: f2214ab4d66dcad1ee92eda7d7acbb94b89e8eb6
-ms.sourcegitcommit: 83a39d48b00c6c351e5c1707942633b7f73aaad6
+ms.openlocfilehash: 9dc37ceddd87fa0b6c8029c0acb8ea195f9ce10b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94531885"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900808"
 ---
 # <a name="the-xslt-profiler"></a>Profiler XSLT
 
@@ -77,11 +77,11 @@ Profiler XSLT je součástí sady Visual Studio a je k dispozici v nabídce **XM
 
 V rozevíracím seznamu **aktuální zobrazení** vyberte zobrazení **volající/volaný** . Zobrazení **volající/volaný** má následující tři samostatné části:
 
-- **Funkce, které jsou volány** : všechny funkce, které se nazývají konkrétní funkce, jsou uvedeny v horní části zobrazení.
+- **Funkce, které jsou volány**: všechny funkce, které se nazývají konkrétní funkce, jsou uvedeny v horní části zobrazení.
 
-- **Aktuální funkce** : konkrétní funkce, která byla volána, je uvedena v prostřední části zobrazení.
+- **Aktuální funkce**: konkrétní funkce, která byla volána, je uvedena v prostřední části zobrazení.
 
-- **Funkce, které byly volány** : všechny funkce, které byly volány určitou funkcí, jsou uvedeny v dolní části zobrazení.
+- **Funkce, které byly volány**: všechny funkce, které byly volány určitou funkcí, jsou uvedeny v dolní části zobrazení.
 
 Pokud je funkce s názvem `SyncToNavigator` zobrazena v prostřední části zobrazení, všechny funkce, které se nazývají funkce, `SyncToNavigator` se zobrazí v horní části zobrazení a všechny funkce, které byly volány, `SyncToNavigator` se zobrazí v dolní části zobrazení.
 
@@ -97,18 +97,18 @@ Pokud je funkce s názvem `SyncToNavigator` zobrazena v prostřední části zob
 
 - V rozevíracím seznamu **aktuální zobrazení** vyberte možnost **značky** .
 
-   V profileru XSLT jsou značky, které se zobrazí v datovém proudu shromažďování dat s přidruženým komentářem. Značky jsou místo v kódu, který má čítače. Když oznámíte profileru XSLT shromažďování čítačů výkonu XSLT, čítače se shromažďují při každém spuštění některého z těchto značek. Data se zobrazí v tabulce, která obsahuje **ID značky** , **označení názvu** ( **spouštěcí program** , **koncový program** ) a **časové razítko**. Značky nejsou agregované a zobrazují se v chronologickém pořadí v **zobrazení značek** sestavy výkonu.
+   V profileru XSLT jsou značky, které se zobrazí v datovém proudu shromažďování dat s přidruženým komentářem. Značky jsou místo v kódu, který má čítače. Když oznámíte profileru XSLT shromažďování čítačů výkonu XSLT, čítače se shromažďují při každém spuštění některého z těchto značek. Data se zobrazí v tabulce, která obsahuje **ID značky**, **označení názvu** (**spouštěcí program**, **koncový program**) a **časové razítko**. Značky nejsou agregované a zobrazují se v chronologickém pořadí v **zobrazení značek** sestavy výkonu.
 
 ## <a name="select-modules-in-the-current-view"></a>Vybrat moduly v aktuálním zobrazení
 
 - V rozevíracím seznamu **aktuální zobrazení** vyberte **moduly** .
 
-   Zobrazení modulů je plochý seznam všech funkcí agregovaných na úroveň modulu. Rozbalte nebo sbalte název modulu pro zobrazení nebo zavření zobrazení dat výkonu modulu. Data můžete seřadit kliknutím na název sloupce. Ve výchozím nastavení jsou k dispozici jak absolutní hodnoty, tak procentuální čísla pro **uplynulý celkový čas** , **uplynulý výhradní čas** , **Application zahrnující čas** , **výhradní čas aplikace** a **Počet volání**.
+   Zobrazení modulů je plochý seznam všech funkcí agregovaných na úroveň modulu. Rozbalte nebo sbalte název modulu pro zobrazení nebo zavření zobrazení dat výkonu modulu. Data můžete seřadit kliknutím na název sloupce. Ve výchozím nastavení jsou k dispozici jak absolutní hodnoty, tak procentuální čísla pro **uplynulý celkový čas**, **uplynulý výhradní čas**, **Application zahrnující čas**, **výhradní čas aplikace** a **Počet volání**.
 
 - V rozevíracím seznamu **aktuální zobrazení** vyberte **proces** .
 
-   V zobrazení procesu se zobrazí tabulka, která obsahuje **ID procesu** , **název procesu** , **čas zahájení** a **čas ukončení**. Data je možné seřadit kliknutím na názvy sloupců.
+   V zobrazení procesu se zobrazí tabulka, která obsahuje **ID procesu**, **název procesu**, **čas zahájení** a **čas ukončení**. Data je možné seřadit kliknutím na názvy sloupců.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: použití hierarchie XSLT](../xml-tools/walkthrough-using-xslt-hierarchy.md)
