@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fb7c78351ccd03247d458ca403c81d379ec18d29
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: a7e3d7ba31778c5d5a94f77b52f13bfe8fff8473
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362207"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99897857"
 ---
 # <a name="navigate-and-update-a-model-in-program-code"></a>Procházení a aktualizace modelu v programovém kódu
 
@@ -329,7 +329,7 @@ using (Transaction t = targetDiagram.Store.
 |-|-|
 |Domain – třída|<xref:Microsoft.VisualStudio.Modeling.ModelElement>|
 |Doménový vztah|<xref:Microsoft.VisualStudio.Modeling.ElementLink>|
-|Obrazec|<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>|
+|Tvar|<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>|
 |Konektor|<xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>|
 |Diagram|<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>|
 
@@ -484,7 +484,7 @@ partial class MyDiagram
 ## <a name="store-partitions"></a>Ukládat oddíly
  Při načtení modelu se načte i doprovodný diagram. Model je obvykle načten do úložiště. DefaultPartition a obsah diagramu je načten do jiného oddílu. Obvykle se obsah každého oddílu načte a uloží do samostatného souboru.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:Microsoft.VisualStudio.Modeling.ModelElement>
 - [Ověřování v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md)

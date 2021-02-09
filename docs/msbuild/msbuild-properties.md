@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 962912ac-8931-49bf-a88c-0200b6e37362
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 61cff0bfa1db43b196d7f6403b5140f9af2947ba
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: a8f53613c71a51ab2e5bd8441cb4605da795e8a7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046131"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99897760"
 ---
 # <a name="msbuild-properties"></a>vlastnosti nástroje MSBuild
 
@@ -66,7 +66,7 @@ Vlastnosti jsou páry název-hodnota, které lze použít ke konfiguraci sestave
 
 ## <a name="registry-properties"></a>Vlastnosti registru
 
- Hodnoty systémového registru můžete číst pomocí následující syntaxe, kde `Hive` je podregistr registru (například **HKEY_LOCAL_MACHINE** ), `MyKey` je název klíče, `MySubKey` je název podklíče a `Value` je hodnota podklíče.
+ Hodnoty systémového registru můžete číst pomocí následující syntaxe, kde `Hive` je podregistr registru (například **HKEY_LOCAL_MACHINE**), `MyKey` je název klíče, `MySubKey` je název podklíče a `Value` je hodnota podklíče.
 
 ```xml
 $(registry:Hive\MyKey\MySubKey@Value)
@@ -90,7 +90,7 @@ $(registry:Hive\MyKey\MySubKey)
 
 ## <a name="global-properties"></a>Globální vlastnosti
 
- Nástroj MSBuild umožňuje nastavit vlastnosti v příkazovém řádku pomocí přepínače **-Property** (nebo **-p** ). Tyto hodnoty globálních vlastností přepisují hodnoty vlastností, které jsou nastaveny v souboru projektu. To zahrnuje vlastnosti prostředí, ale nezahrnuje rezervované vlastnosti, které nelze změnit.
+ Nástroj MSBuild umožňuje nastavit vlastnosti v příkazovém řádku pomocí přepínače **-Property** (nebo **-p**). Tyto hodnoty globálních vlastností přepisují hodnoty vlastností, které jsou nastaveny v souboru projektu. To zahrnuje vlastnosti prostředí, ale nezahrnuje rezervované vlastnosti, které nelze změnit.
 
  Následující příklad nastavuje globální vlastnost `Configuration` na `DEBUG`.
 

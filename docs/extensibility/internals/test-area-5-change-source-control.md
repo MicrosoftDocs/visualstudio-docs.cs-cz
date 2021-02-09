@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: fdf09e00-108c-4d51-bbd5-72452d52a490
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c4b0f33f0c898d4b9992acad6ed4035e350df2b
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 88dcc8e86da43f330c50ea478aaee572c1c3a060
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876269"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99898127"
 ---
 # <a name="test-area-5-change-source-control"></a>Testovací oblast 5: Změna správy zdrojového kódu
 Tato testovací oblast modulu plug-in zdrojového ovládacího prvku pokrývá změnu správy zdrojového kódu prostřednictvím příkazu **změnit správu zdrojového kódu** .

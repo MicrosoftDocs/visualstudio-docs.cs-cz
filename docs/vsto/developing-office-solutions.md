@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Office solutions [Office development in Visual Studio], developing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fbfe569e587c53aede6d550bc20527ad8d0fd328
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 012f08b4a4a8364d278322b7fe057231183fa233
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844995"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99897587"
 ---
 # <a name="develop-office-solutions"></a>Vývoj řešení pro systém Office
   Po návrhu projektu pomocí nástrojů Office Developer Tools v sadě Visual Studio a nastavení souborů projektu můžete začít soustředit na implementaci kódu a vlastního uživatelského rozhraní (UI).

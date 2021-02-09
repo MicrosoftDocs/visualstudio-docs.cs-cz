@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e88a6157e5c9db7914ac6f7470d793be11dfdfc8
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: dbae3a1b36e6a948766c7dc31d4a8ea8af6d70c9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362025"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99897769"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>Přehled Jazykových nástrojů specifických pro doménu
 Domain-Specific jazykové nástroje (nástroje DSL), které jsou hostované v aplikaci Visual Studio, vám umožní navrhnout jazyk specifický pro doménu a potom vygenerovat vše, co uživatelé musí mít, aby mohli vytvářet modely založené na jazyce.
@@ -76,7 +76,7 @@ Domain-Specific jazykové nástroje (nástroje DSL), které jsou hostované v ap
 
  Při sestavování a spouštění řešení DSL v aplikaci Visual Studio se v druhé instanci sady Visual Studio zobrazí informace o tom, jak váš jazyk specifický pro doménu vypadá uživateli tohoto jazyka. Jakmile ověříte, že vše funguje správně, můžete distribuovat `.vsix` soubor, který se nachází ve složce Build projektu DslPackage. Tento soubor se dá použít k instalaci DSL jako rozšíření sady Visual Studio v jiných počítačích.  Další informace najdete v tématu [nasazení Domain-Specific jazykových řešení](msi-and-vsix-deployment-of-a-dsl.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Experimentální instance](../extensibility/the-experimental-instance.md)
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

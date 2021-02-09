@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2c37b3aa-97a9-4665-8709-edd917f18cb1
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64db456e0c438f8665f122c3cd1b079c2ad1cea1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d0680e0a174716dc79a9819386901d8687422906
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80722221"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99898771"
 ---
 # <a name="idebugprogramhost2"></a>IDebugProgramHost2
 Toto rozhraní poskytuje informace o programu hostitele (procesu).
@@ -32,7 +32,7 @@ IDebugProgramHost2 : IUnknown
  Ladicí modul implementuje toto rozhraní na stejném objektu jako rozhraní [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) pro poskytnutí informací o hostitelském procesu. Toto je volitelné rozhraní.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- [QueryInterface](/cpp/atl/queryinterface) `IDebugProgram2` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface.
+ [](/cpp/atl/queryinterface) `IDebugProgram2` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface.
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
  V následující tabulce jsou uvedeny metody `IDebugProgramHost2` .
