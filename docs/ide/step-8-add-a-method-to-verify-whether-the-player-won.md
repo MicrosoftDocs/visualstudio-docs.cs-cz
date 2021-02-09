@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 6e317f6e-ba4c-4306-8924-300b0c2f65c6
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c53afebfd8c39e9c43f82916095d8eeef2ec8b11
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 68a4848f00153206b87dd3e5893bbaaeccf3b358
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479287"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868748"
 ---
 # <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>Krok 8: Přidání metody k ověření, jestli hráč vyhrál
 Vytvořili jste zábavnou hru, která však potřebuje ještě něco. Hra by měla skončit, když je přehrávač WINS, takže potřebujete přidat `CheckForWinner()` metodu pro ověření, zda hráč zvítězil.
@@ -45,10 +45,10 @@ Vytvořili jste zábavnou hru, která však potřebuje ještě něco. Hra by mě
 3. Program uložte a spusťte jej. Zahrajte si hru a spárujte všechny ikony. Když nahrajete, program zobrazí congratulatory **MessageBox** (jak je znázorněno na následujícím snímku obrazovky) a pak okno zavře.
 
      ![Porovnávací hra s ovládacím prvkem MessageBox](../ide/media/express_tut4step8.png)<br/>
-**_Porovnávací hra_* _ _s * ***MessageBox**_
+***Porovnávací hra** _ _With * ***MessageBox***
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si _ *[Krok 9: Vyzkoušejte další funkce](../ide/step-9-try-other-features.md)* *.
+- Pokud chcete přejít na další krok kurzu, přečtěte si **[článek krok 9: Vyzkoušejte si další funkce](../ide/step-9-try-other-features.md)**.
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si část [Krok 7: zůstat páry viditelné](../ide/step-7-keep-pairs-visible.md).

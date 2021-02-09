@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: d418350c-0396-494e-8149-71fa61b395c5
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 95a4286feb778e17b345f964b1b7ccca5343e461
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: a009f5667f2eb01b22c45c9439a582d2319e6df9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480561"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868969"
 ---
 # <a name="step-5-add-label-references"></a>Krok 5: Přidání odkazů popisků
 Program potřebuje sledovat, která jmenovka řídí, aby hráč zvolil. Nyní program zobrazí všechny popisky, které hráč zvolí. Ale to změníme. Po výběru prvního popisku by program měl zobrazit ikonu popisku. Po výběru druhého popisku by program měl krátce zobrazit obě ikony a pak je opět skrýt. Váš program teď bude sledovat, který ovládací prvek popisek je vybraný jako první a který se volí za druhým pomocí *referenčních proměnných*.

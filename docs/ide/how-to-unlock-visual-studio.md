@@ -6,17 +6,17 @@ ms.topic: conceptual
 ms.assetid: ffb580a1-8b5d-48f5-b811-87f8036f50ea
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 8e11d77a94c7c1d3d7b038ecea1a6c61646e371f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3dd2a688ef70064f44caccfd7c64150b7c649769
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77027570"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869125"
 ---
 # <a name="extend-a-trial-version-or-update-a-license"></a>Prodloužení zkušební verze nebo aktualizace licence
 
@@ -26,7 +26,7 @@ Pokud chcete Visual Studio po skončení zkušebního období dál používat, o
 
 ## <a name="use-an-online-subscription"></a>Použití online předplatného
 
-1. Zvolte tlačítko **Přihlásit** v pravém horním rohu integrovaného vývojového prostředí (nebo přejít na **File**  >  **Nastavení účtu** souboru a otevřete dialogové okno **Nastavení účtu** ) a pak klikněte na tlačítko **Přihlásit** se.
+1. Zvolte tlačítko **Přihlásit** v pravém horním rohu integrovaného vývojového prostředí (nebo přejít na   >  **Nastavení účtu** souboru a otevřete dialogové okno **Nastavení účtu** ) a pak klikněte na tlačítko **Přihlásit** se.
 
 1. Zadejte přihlašovací údaje pro účet Microsoft nebo pracovní nebo školní účet. Visual Studio najde předplatné sady Visual Studio nebo organizaci Azure DevOps, která je přidružená k vašemu účtu.
 
@@ -37,7 +37,7 @@ Další informace o předplatných sady Visual Studio a o tom, jak fungují, naj
 
 ## <a name="enter-a-product-key"></a>Zadání kódu Product Key
 
-1. Zvolením **File**  >  **Možnosti účet** souboru otevřete dialogové okno **Nastavení účtu** a pak vyberte **licenci s odkazem na kód Product Key** .
+1. Zvolením   >  **Možnosti účet** souboru otevřete dialogové okno **Nastavení účtu** a pak vyberte **licenci s odkazem na kód Product Key** .
 
 1. Zadejte kód Product Key v zadaném prostoru.
 
@@ -66,7 +66,7 @@ Pokud přihlašovací údaje nezadáte znovu, zahájí se platnost tokenu a dial
 
 ## <a name="update-an-expired-license"></a>Aktualizace licence s vypršenou platností
 
-Pokud vypršela platnost vašeho předplatného a už nemáte přístupová práva k aplikaci Visual Studio, musíte si obnovit předplatné nebo přidat další účet s předplatným. Pokud chcete zobrazit další informace o licenci, kterou používáte, přejděte na **File**  >  **Nastavení účtu** soubor a podívejte se na informace o licencích na pravé straně dialogového okna. Pokud máte k jinému účtu přidruženo jiné předplatné, přidejte tento účet do seznamu **všechny účty** na levé straně dialogového okna tak, že vyberete odkaz **Přidat účet** .
+Pokud vypršela platnost vašeho předplatného a už nemáte přístupová práva k aplikaci Visual Studio, musíte si obnovit předplatné nebo přidat další účet s předplatným. Pokud chcete zobrazit další informace o licenci, kterou používáte, přejděte na   >  **Nastavení účtu** soubor a podívejte se na informace o licencích na pravé straně dialogového okna. Pokud máte k jinému účtu přidruženo jiné předplatné, přidejte tento účet do seznamu **všechny účty** na levé straně dialogového okna tak, že vyberete odkaz **Přidat účet** .
 
 ## <a name="get-support"></a>Získání podpory
 

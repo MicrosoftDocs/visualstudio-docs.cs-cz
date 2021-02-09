@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b4ce1ad9-5215-4b6f-b6a2-798b249aa335
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7bac7b2b293cd508931304b1e6cdd237234001e3
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: e1ea031391b93d571b9f34ad820f1a6957dab242
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136937"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869242"
 ---
 # <a name="how-to-specify-build-events-c"></a>Postupy: určení událostí sestavení (C#)
 
@@ -32,7 +32,7 @@ Když je projekt sestaven, události před sestavením jsou přidány do souboru
 
 ## <a name="specify-a-build-event"></a>Zadat událost sestavení
 
-1. V **Průzkumník řešení**vyberte projekt, pro který chcete zadat událost sestavení.
+1. V **Průzkumník řešení** vyberte projekt, pro který chcete zadat událost sestavení.
 
 2. V nabídce **projekt** klikněte na příkaz **vlastnosti**.
 
@@ -74,7 +74,7 @@ Následující postup ukazuje, jak nastavit minimální verzi operačního syst�
 
 1. Vytvořte nový projekt **konzolové aplikace** pro příkaz. Pojmenujte projekt **ChangeOSVersionCS**.
 
-2. V *program.cs*přidejte následující řádek do dalších `using` direktiv v horní části souboru:
+2. V *program.cs* přidejte následující řádek do dalších `using` direktiv v horní části souboru:
 
    ```csharp
    using System.Xml;
@@ -144,13 +144,13 @@ Dále vyvolejte tento příkaz v události po sestavení pro úpravu manifestu a
 
 1. Vytvořte nový projekt **aplikace model Windows Forms** a pojmenujte ho **CSWinApp**.
 
-2. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** vyberte **vlastnosti**.
+2. S projektem vybraným v **Průzkumník řešení** v nabídce **projekt** vyberte **vlastnosti**.
 
-3. V **Návrháři projektu**Najděte stránku **publikování** a nastavte **umístění pro publikování** na *C:\Temp*.
+3. V **Návrháři projektu** Najděte stránku **publikování** a nastavte **umístění pro publikování** na *C:\Temp*.
 
 4. Publikujte projekt kliknutím na **Publikovat nyní**.
 
-   Soubor manifestu je sestaven a uložen do souboru *C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe. manifest*. Chcete-li zobrazit manifest, klikněte pravým tlačítkem myši na soubor, klikněte na možnost **otevřít**v aplikaci, vyberte **možnost vybrat program v seznamu**a pak klikněte na tlačítko **Poznámkový blok**.
+   Soubor manifestu je sestaven a uložen do souboru *C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe. manifest*. Chcete-li zobrazit manifest, klikněte pravým tlačítkem myši na soubor, klikněte na možnost **otevřít** v aplikaci, vyberte **možnost vybrat program v seznamu** a pak klikněte na tlačítko **Poznámkový blok**.
 
    Vyhledejte v souboru `<osVersionInfo>` element. Například verze může být:
 
@@ -158,7 +158,7 @@ Dále vyvolejte tento příkaz v události po sestavení pro úpravu manifestu a
    <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
    ```
 
-5. Zpět v **Návrháři projektu**klikněte na kartu **události sestavení** a pak klikněte na **Upravit po sestavení**.
+5. Zpět v **Návrháři projektu** klikněte na kartu **události sestavení** a pak klikněte na **Upravit po sestavení**.
 
 6. Do pole **příkazový řádek události po sestavení** zadejte následující příkaz:
 

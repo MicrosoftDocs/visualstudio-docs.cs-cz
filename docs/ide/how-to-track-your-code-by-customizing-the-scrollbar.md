@@ -6,15 +6,15 @@ ms.date: 03/20/2020
 ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c59ac152be9528ef3e01410f0a3b5f34dd882286
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 740a1b9385c53c87e8d52d2e80729586557f7ce0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95596934"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869151"
 ---
 # <a name="how-to-customize-the-scroll-bar"></a>Postupy: přizpůsobení posuvníku
 
@@ -24,7 +24,7 @@ Při práci s dlouhými soubory kódu může být obtížné sledovat, kde je v�
 
 Můžete vybrat, zda posuvník zobrazuje poznámky, jako jsou například změny kódu, zarážky, záložky, chyby a pozice blikajícího kurzoru.
 
-   1. Otevřete stránku možnosti **posuvníku** výběrem možnosti **nástroje**  >  **Options**  >  **textový editor**  >  **všechny jazyky**  >  **posuvníky**.
+   1. Otevřete stránku možnosti **posuvníku** výběrem možnosti **nástroje**  >    >  **textový editor**  >  **všechny jazyky**  >  **posuvníky**.
 
    2. Vyberte možnost **Zobrazit poznámky přes svislý posuvník** a pak vyberte poznámky, které chcete zobrazit. K dispozici jsou tyto poznámky:
 

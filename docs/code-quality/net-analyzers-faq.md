@@ -8,15 +8,15 @@ helpviewer_keywords:
 - code analysis FAQ
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: d581ef60ebfe9ff5aeceae4c16ee4294eae5d850
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 951e9b951f1d90077fe29506e9c288fb19f2d5ff
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96112226"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867760"
 ---
 # <a name="frequently-asked-questions-about-legacy-fxcop-and-net-analyzers"></a>Nejčastější dotazy týkající se starších verzí FxCop a analyzátorů .NET
 
@@ -38,7 +38,7 @@ Před vydáním sady Visual Studio 2019 16,5 vydaná při výběru **analyzovat*
 
 ## <a name="does-the-runcodeanalysis-msbuild-project-property-run-analyzers"></a>Spouští se v nástroji RunCodeAnalysis MSBuild rutiny analyzátorů?
 
-Ne. Vlastnost **RunCodeAnalysis** v souboru projektu (například *. csproj*) se používá pouze ke spuštění starší verze FxCop. Spustí úlohu MSBuild po sestavení, která vyvolá **FxCopCmd.exe**.
+No. Vlastnost **RunCodeAnalysis** v souboru projektu (například *. csproj*) se používá pouze ke spuštění starší verze FxCop. Spustí úlohu MSBuild po sestavení, která vyvolá **FxCopCmd.exe**.
 
 ## <a name="so-how-do-i-run-net-analyzers-then"></a>Jak tedy spustím analyzátory .NET?
 
@@ -64,4 +64,4 @@ Pokud váš projekt používá možnost sestavení k ponechání upozornění ja
 
 - [Přehled analyzátorů .NET Compiler Platform](roslyn-analyzers-overview.md)
 - [Migrace na analyzátory .NET](migrate-from-legacy-analysis-to-net-analyzers.md)
-- [Nainstalovat analyzátory .NET](install-net-analyzers.md)
+- [Instalace analyzátorů .NET](install-net-analyzers.md)

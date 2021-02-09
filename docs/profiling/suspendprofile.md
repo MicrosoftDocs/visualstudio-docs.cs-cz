@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 7c8de6e6-bb88-4353-92c3-ce7290310d61
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 728aa7c858f8321e3289f2d17e612284f8739f17
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 6be94fafb1e41390236977a7a06b59cf7ac71a84
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719263"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868202"
 ---
 # <a name="suspendprofile"></a>SuspendProfile
 `SuspendProfile`Metoda zvýší čítač pozastavení/obnovení pro zadanou úroveň profilace.
@@ -35,7 +35,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(
 
  Označuje úroveň profilu, na kterou lze použít shromažďování dat výkonu. Následující výčty **PROFILE_CONTROL_LEVEL** lze použít k označení jedné ze tří úrovní, na kterou lze použít shromažďování dat výkonu:
 
-|Čítače|Popis|
+|Čítače|Description|
 |----------------|-----------------|
 |PROFILE_GLOBALLEVEL|Nastavení globální úrovně má vliv na všechny procesy a vlákna v rámci procesu profilace.|
 |PROFILE_PROCESSLEVEL|Nastavení na úrovni procesu ovlivňuje všechna vlákna, která jsou součástí zadaného procesu.|
@@ -48,7 +48,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(
 ## <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
  Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jedna z následujících:
 
-|Čítače|Popis|
+|Čítače|Description|
 |----------------|-----------------|
 |PROFILE_ERROR_ID_NOEXIST|ID elementu profilace neexistuje.|
 |PROFILE_ERROR_LEVEL_NOEXIST|Zadaná úroveň profilace neexistuje.|

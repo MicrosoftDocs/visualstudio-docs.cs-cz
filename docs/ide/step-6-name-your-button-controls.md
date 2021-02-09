@@ -12,15 +12,15 @@ dev_langs:
 - VB
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bfa5b69cc106aeae18012a7116fd511263423b2c
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 0f6612806f8bf1453cf28f9d75c78588c2074bb0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480314"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868878"
 ---
 # <a name="step-6-name-your-button-controls"></a>Krok 6: Pojmenování tlačítkových ovládacích prvků
 
@@ -35,7 +35,7 @@ Ve formuláři jsou čtyři tlačítka a rozhraní IDE s názvem **Button1**, **
 
 1. Ve formuláři klikněte na tlačítko **Zavřít** . (Pokud máte stále vybraná všechna tlačítka, kliknutím na klávesu **ESC** výběr zrušte.) Posuňte se v okně **vlastnosti** , dokud se nezobrazí vlastnost **(název)** . (Vlastnost **(Name)** je blízko horní části, pokud jsou vlastnosti seřazené abecedně.) Změňte název na **closeButton**, jak je znázorněno na následujícím snímku obrazovky.
 
-    ![okno Vlastnosti s názvem closeButton](../ide/media/express_setnameproperty.png)<br>**_Properties_* _ _Window s * ***closeButton**_ _name *
+    ![okno Vlastnosti s názvem closeButton](../ide/media/express_setnameproperty.png)<br>***Properties** _ _Window s * ***closeButton**_ _name *
 
     > [!NOTE]
     > Zkuste změnit název tlačítka na **tlačítko Zavřít** s mezerou mezi slovy "Zavřít" a "tlačítko". Pokud tak učiníte, IDE zobrazí chybovou zprávu: "hodnota vlastnosti není platná." Mezery (a několik dalších znaků) nejsou povoleny v názvech ovládacích prvků.
@@ -48,7 +48,7 @@ Názvy můžete ověřit tak, že v okně **vlastnosti** zvolíte rozevírací s
    Tato karta zobrazuje soubor kódu za formulářem, jak je znázorněno na následujícím snímku obrazovky.
 
     ![Karta Form1.cs s kódem jazyka Visual C&#35;](../ide/media/express_showbuttoncode.png)<br>
-**_Form1.cs_* _ _tab s kódem C# *
+***Form1.cs** _ _tab s kódem C# *
 
     > [!NOTE]
     > Karta Form1.cs nebo Form1. vb může místo toho zobrazovat **showButton** jako **showButton** .
@@ -76,7 +76,7 @@ Názvy můžete ověřit tak, že v okně **vlastnosti** zvolíte rozevírací s
 1. Chcete-li přidat další metodu, otevřete soubor kódu pro ovládací prvek **CheckBox** v **Návrhář formulářů** , aby rozhraní IDE přidalo `checkBox1_CheckedChanged()` metodu. Tato metoda je volána vždy, když uživatel vybere nebo zruší zaškrtnutí políčka.
 
    > [!TIP]
-   > Při práci na aplikaci se často přesouváte mezi editorem kódu a **Návrhář formulářů**. Rozhraní IDE usnadňuje navigaci v projektu. Pomocí **Průzkumník řešení** otevřít **Návrhář formulářů** dvojím kliknutím na *Form1.cs* v jazyce C# nebo *Form1. vb* v Visual Basic nebo na panelu nabídek vyberte možnost **View**  >  **Návrhář** zobrazení.
+   > Při práci na aplikaci se často přesouváte mezi editorem kódu a **Návrhář formulářů**. Rozhraní IDE usnadňuje navigaci v projektu. Pomocí **Průzkumník řešení** otevřít **Návrhář formulářů** dvojím kliknutím na *Form1.cs* v jazyce C# nebo *Form1. vb* v Visual Basic nebo na panelu nabídek vyberte možnost   >  **Návrhář** zobrazení.
 
     Následující příklad ukazuje nový kód, který se zobrazí v editoru kódu.
 

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 58c8e9a5-4494-47c2-bddb-56f628da6a2d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7ad5aac997cf694a7cf8fa887ae63fbef54ca07f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 242caf91b8f25f8bea6ff9c17820ed84c5fc98f2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80725666"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869671"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
 Přepíná virtualizovaný stav této nedokončené zarážky. Pokud je vyřízená zarážka virtualizovaná, ladicí modul se pokusí vytvořit vazby pokaždé, když se do programu načte nový kód.

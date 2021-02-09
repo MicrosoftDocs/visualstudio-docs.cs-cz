@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Solution Explorer, file nesting
 author: angelosp
 ms.author: angelpe
-manager: jillfra
-ms.openlocfilehash: 5425c255e85a2785383f1e8e718340fc2049e0c4
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+manager: jmartens
+ms.openlocfilehash: aa3ca640fed4e32c19defd925a49369890219035
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006689"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869450"
 ---
 # <a name="file-nesting-in-solution-explorer"></a>Vnořování souborů v Průzkumníku řešení
 
@@ -162,7 +162,7 @@ Nastavení specifická pro konkrétní řešení a projekt můžete vytvořit po
 
 Nastavení specifická pro řešení a specifické pro projekt jsou kombinována s aktivním nastavením sady Visual Studio. Například je možné, že máte prázdný soubor nastavení specifický pro projekt, ale **Průzkumník řešení** stále vnořování souborů. Chování vnořování probíhá buď z nastavení specifického pro řešení, nebo z nastavení sady Visual Studio. Priorita pro sloučení nastavení vnořování souborů je: Visual Studio > řešení > projektu.
 
-Můžete říct, že Visual Studio bude ignorovat nastavení specifická pro řešení a projekt, i když soubory existují na disku, povolením možnosti **Ignorovat nastavení řešení a projektu** v části možnosti **nástrojů**  >  **Options**  >  **ASP.NET Core**  >  **vnořování souborů**.
+Můžete říct, že Visual Studio bude ignorovat nastavení specifická pro řešení a projekt, i když soubory existují na disku, povolením možnosti **Ignorovat nastavení řešení a projektu** v části možnosti **nástrojů**  >    >  **ASP.NET Core**  >  **vnořování souborů**.
 
 Můžete provést opak a sdělit aplikaci Visual Studio, aby používala *pouze* nastavení specifické pro řešení nebo projekt, nastavením **kořenového** uzlu na **hodnotu true**. Visual Studio ukončí slučování souborů na dané úrovni a nesloučí je se soubory vyššími než v hierarchii.
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8112aac8-a269-40e5-b92b-9b9a6ff5a542
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1847d5f0a0fa77b1dd0ddd0d74eeba84326d0205
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: a4938d90c3122d7aa42582e68aa087a9068a1ac4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901853"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869437"
 ---
 # <a name="supportscodeseparation-element-visual-studio-templates"></a>SupportsCodeSeparation – element (šablony sady Visual Studio)
 Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrtávací políčko **umístit kód do samostatného souboru** .
@@ -30,7 +30,7 @@ Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrt�
  \<VSTemplate> \<TemplateData>
  \<SupportsCodeSeparation>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <SupportsCodeSeparation> true/false </SupportsCodeSeparation>

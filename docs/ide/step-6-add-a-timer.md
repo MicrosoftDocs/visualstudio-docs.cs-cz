@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 09e7930b-cab6-4a22-9a6f-72e23f489585
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2684b197fc32b33081c8ecdfa8139b3c8f14e752
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 77daa47cdd6336849903202233392d3eecc33c1a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480548"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868891"
 ---
 # <a name="step-6-add-a-timer"></a>Krok 6: Přidání časovače
 Dále přidáte <xref:System.Windows.Forms.Timer> ovládací prvek do rozrovnávací hry. Časovač počká zadaný počet milisekund a potom vyvolá událost, která je označována jako *Tick*. To je užitečné při spuštění akce nebo opakování akce v pravidelných intervalech. V takovém případě můžete pomocí časovače povolit hráči zvolit dvě ikony a pokud se ikony neshodují, po krátké době tyto ikony opět skrýt.
@@ -30,12 +30,12 @@ Dále přidáte <xref:System.Windows.Forms.Timer> ovládací prvek do rozrovnáv
 1. Ze sady nástrojů v **Návrhář formulářů** zvolte možnost **časovač** (v kategorii **součásti** ) a poté stiskněte klávesu **ENTER** , nebo dvakrát klikněte na časovač a přidejte ovládací prvek časovače do formuláře. Ikona časovače s názvem **Timer1** by se měla objevit v prostoru pod formulářem, jak je znázorněno na následujícím obrázku.
 
      ![Časovač](../ide/media/express_timer.png)<br/>
-**_Časovač_* _
+***Časovač***
 
     > [!NOTE]
     > Pokud je panel nástrojů prázdný, je nutné před otevřením sady nástrojů vybrat nástroj Návrhář a nikoli kód formuláře.
 
-2. Zvolte ikonu _ *Timer1** a vyberte časovač. V okně **vlastnosti** přepněte ze zobrazení události na zobrazení vlastností. Potom nastavte vlastnost **interval** časovače na **750**, ale nechte vlastnost **Enabled** nastavenou na **hodnotu false**. Vlastnost **interval** určuje, jak dlouho se má čekat mezi *značkami* nebo když vyvolá <xref:System.Windows.Forms.Timer.Tick> událost. Hodnota 750 říká časovači, aby před vyvoláním události impulzu čekal tři čtvrtiny sekundy (750 milisekund). Zavoláte <xref:System.Windows.Forms.Timer.Start> metodu pro spuštění časovače až poté, co hráč zvolí druhý popisek.
+2. Zvolte ikonu **Timer1** a vyberte časovač. V okně **vlastnosti** přepněte ze zobrazení události na zobrazení vlastností. Potom nastavte vlastnost **interval** časovače na **750**, ale nechte vlastnost **Enabled** nastavenou na **hodnotu false**. Vlastnost **interval** určuje, jak dlouho se má čekat mezi *značkami* nebo když vyvolá <xref:System.Windows.Forms.Timer.Tick> událost. Hodnota 750 říká časovači, aby před vyvoláním události impulzu čekal tři čtvrtiny sekundy (750 milisekund). Zavoláte <xref:System.Windows.Forms.Timer.Start> metodu pro spuštění časovače až poté, co hráč zvolí druhý popisek.
 
 3. Zvolte ikonu řízení časovače v **Návrhář formulářů** a pak stiskněte klávesu **ENTER** , nebo poklikejte na časovač a přidejte prázdnou obslužnou rutinu události Tick. Nahraďte kód následujícím kódem, nebo ručně zadejte následující kód do obslužné rutiny události.
 

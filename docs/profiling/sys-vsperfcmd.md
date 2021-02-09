@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.assetid: 294a6f9e-b49f-4c83-b322-5ac5411b66fb
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e8090a39426455e0f6d877c26a7f0a50f00f10c
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 66815265544afdee263490ed5eec92301911e3cb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719757"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868163"
 ---
 # <a name="sys-vsperfcmd"></a>Sys (VSPerfCmd)
 Možnost *VSPerfCmd.exe* **sys** nastaví událost profilování, která je Navzorkovaná na události systémového volání (volání funkcí z profilované aplikace do operačního systému), a volitelně změní počet systémových volání v intervalu vzorkování z výchozí hodnoty 10.

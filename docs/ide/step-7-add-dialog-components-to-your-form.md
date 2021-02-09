@@ -9,15 +9,15 @@ ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 37cbd2ca1f0207eaf2a41f6a08248bcedcfbe5bb
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: a485433ef73ef853a186a5b441396f6d5a57f679
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479469"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868852"
 ---
 # <a name="step-7-add-dialog-components-to-your-form"></a>Krok 7: Přidání komponent dialogových oken do formuláře
 
@@ -34,7 +34,7 @@ Komponenta je jako ovládací prvek v některých způsobech. Pomocí **panelu n
 
 1. Chcete-li přidat komponentu s názvem **OpenFileDialog1** do formuláře, dvakrát klikněte na položku **OpenFileDialog**. Chcete-li do formuláře přidat komponentu s názvem **colorDialog1** , dvakrát klikněte na položku **ColorDialog** v sadě **nástrojů**. (Použijete ho v dalším kroku kurzu.) Měla by se zobrazit oblast v dolní části **Návrhář formulářů** (pod formulářem **prohlížeče obrázků** ), která má ikonu pro každou ze dvou součástí dialogových oken, které jste přidali, jak je znázorněno na následujícím obrázku.
 
-     ![Komponenty dialogového okna](../ide/media/express_dialogsadded.png)<br>**_Dialog_* _ _components *
+     ![Komponenty dialogového okna](../ide/media/express_dialogsadded.png)<br>***Dialog** _ _components *
 
 1. V oblasti v dolní části **Návrhář formulářů** vyberte ikonu **OpenFileDialog1** . Nastavte dvě vlastnosti:
 

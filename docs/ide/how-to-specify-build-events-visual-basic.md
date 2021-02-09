@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 40dc83bf-a7c5-4a14-816a-fa0980b6e4c3
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 00655d1f30d18da4170782384c634ff189b104ee
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 426b387603fbe7bca29f2ad4f507f2e517cac9bd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136924"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869255"
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>Postupy: určení událostí sestavení (Visual Basic)
 
@@ -37,7 +37,7 @@ Události sestavení jsou uvedeny v dialogovém okně **události sestavení** ,
 
 ### <a name="to-specify-a-build-event"></a>Určení události sestavení
 
-1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
+1. S projektem vybraným v **Průzkumník řešení** v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Klikněte na kartu **kompilovat** .
 
@@ -69,7 +69,7 @@ Následující postup ukazuje, jak nastavit minimální verzi operačního syst�
 
 2. V dialogovém okně **Nový projekt** , v uzlu **Visual Basic** vyberte možnost **Windows** a potom šablonu **Konzolová aplikace** . Pojmenujte projekt `ChangeOSVersionVB` .
 
-3. V *Module1. vb*přidejte k ostatním `Imports` příkazům v horní části souboru následující řádek:
+3. V *Module1. vb* přidejte k ostatním `Imports` příkazům v horní části souboru následující řádek:
 
    ```vb
    Imports System.Xml
@@ -118,7 +118,7 @@ Následující postup ukazuje, jak nastavit minimální verzi operačního syst�
    End Sub
    ```
 
-   Příkaz přijímá dva argumenty. První argument je cesta k manifestu aplikace (to je složka, ve které proces sestavení vytváří manifest, obvykle * \<ProjectName> publikování*). Druhým argumentem je nová verze operačního systému.
+   Příkaz přijímá dva argumenty. První argument je cesta k manifestu aplikace (to je složka, ve které proces sestavení vytváří manifest, obvykle *\<ProjectName> publikování*). Druhým argumentem je nová verze operačního systému.
 
 5. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
@@ -131,13 +131,13 @@ Následující postup ukazuje, jak nastavit minimální verzi operačního syst�
 1. Vytvořte aplikaci pro Windows pro projekt, který chcete publikovat. V nabídce **Soubor** klikněte na položku **Nový** a potom klikněte na položku **Projekt**.
 
 2. V dialogovém okně **Nový projekt** v uzlu **Visual Basic** vyberte možnost **Desktop Windows** a potom šablonu **model Windows Forms App** . Pojmenujte projekt `VBWinApp` .
-3. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
+3. S projektem vybraným v **Průzkumník řešení** v nabídce **projekt** klikněte na **vlastnosti**.
 
-4. V **Návrháři projektu**klikněte na stránku **publikovat** a nastavte **umístění pro publikování** na *C:\Temp*.
+4. V **Návrháři projektu** klikněte na stránku **publikovat** a nastavte **umístění pro publikování** na *C:\Temp*.
 
 5. Publikujte projekt kliknutím na **Publikovat nyní**.
 
-     Soubor manifestu bude sestaven a vložen do souboru *C:\TEMP\VBWinApp_1_0_0_0\VBWinApp.exe. manifest*. Chcete-li zobrazit manifest, klikněte na něj pravým tlačítkem myši a klikněte na příkaz **otevřít**v programu, potom klikněte na **možnost vybrat program v seznamu**a potom klikněte na tlačítko **Poznámkový blok**.
+     Soubor manifestu bude sestaven a vložen do souboru *C:\TEMP\VBWinApp_1_0_0_0\VBWinApp.exe. manifest*. Chcete-li zobrazit manifest, klikněte na něj pravým tlačítkem myši a klikněte na příkaz **otevřít** v programu, potom klikněte na **možnost vybrat program v seznamu** a potom klikněte na tlačítko **Poznámkový blok**.
 
      Vyhledejte v souboru `<osVersionInfo>` element. Například verze může být:
 
@@ -145,7 +145,7 @@ Následující postup ukazuje, jak nastavit minimální verzi operačního syst�
     <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
     ```
 
-6. V **Návrháři projektu**přejděte na kartu **kompilovat** a kliknutím na tlačítko **události sestavení** otevřete dialogové okno **události sestavení** .
+6. V **Návrháři projektu** přejděte na kartu **kompilovat** a kliknutím na tlačítko **události sestavení** otevřete dialogové okno **události sestavení** .
 
 7. Do pole **příkazový řádek události po sestavení** zadejte následující příkaz:
 
@@ -157,7 +157,7 @@ Následující postup ukazuje, jak nastavit minimální verzi operačního syst�
 
 8. Publikujte projekt znovu. Přejděte na stránku **publikovat** a klikněte na **publikovat**.
 
-     Zobrazte manifest znovu. Chcete-li zobrazit manifest, přejděte do adresáře Publish, klikněte pravým tlačítkem myši na soubor a klikněte na příkaz **otevřít** v programu a potom **vyberte požadovaný program v seznamu**a klikněte na tlačítko **Poznámkový blok**.
+     Zobrazte manifest znovu. Chcete-li zobrazit manifest, přejděte do adresáře Publish, klikněte pravým tlačítkem myši na soubor a klikněte na příkaz **otevřít** v programu a potom **vyberte požadovaný program v seznamu** a klikněte na tlačítko **Poznámkový blok**.
 
      Verze by teď měla číst:
 

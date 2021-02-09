@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 679fd7b1-765a-41a8-a046-63240c09a499
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9d6f3f78e165ba2f4453131b7b459e3061243ff6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eb185e098d76184d3a74df380eb8a5e66bc699df
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80736108"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869957"
 ---
 # <a name="idebugbeforesymbolsearchevent2"></a>IDebugBeforeSymbolSearchEvent2
 Ladicí stroj (DE) pošle toto rozhraní do Správce ladění relace (SDM), aby během načítání symbolů nastavil zprávu stavového řádku.

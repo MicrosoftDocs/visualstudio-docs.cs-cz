@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: 1d1160f8-4e51-4e70-99cd-82ad10ee7b32
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 30874b00f7bca4d66a60e359445c28be686d3269
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: e691e6dc48b33ff00f6824436b80e5f49721db98
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435362"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867903"
 ---
 # <a name="managed-recommended-rules-rule-set-for-managed-code"></a>Sada pravidel Spravovaná doporučená pravidla pro spravovaný kód
 
@@ -23,7 +23,7 @@ Použijte pravidlo spravovaná doporučená pravidla společnosti Microsoft pro 
 
 Zahrňte tuto sadu pravidel do jakékoli vlastní sady pravidel, kterou vytvoříte pro vaše projekty.
 
-|Pravidlo|Popis|
+|Pravidlo|Description|
 |----------|-----------------|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
 |[CA1009](../code-quality/ca1009.md)|Deklarujte správně obslužné rutiny událostí|

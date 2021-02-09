@@ -11,17 +11,17 @@ helpviewer_keywords:
 - command-line
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ecdda55bbe4e79af01f8fb9a9a2b77f775548b10
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d3fa063d82a9d0ba9f26e326961b1345b47151b8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115230"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868725"
 ---
 # <a name="how-to-define-settings-in-a-response-file"></a>Definování nastavení v souboru odpovědí
 

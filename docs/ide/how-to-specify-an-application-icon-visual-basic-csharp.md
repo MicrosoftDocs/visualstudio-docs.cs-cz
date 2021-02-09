@@ -10,15 +10,15 @@ helpviewer_keywords:
 - application icons [Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 34405fd52b49e89c2fa0fc95ec1268448bad3061
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 77be1eefb4ea4da139bb536e9d838afecddd7202
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95596908"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869294"
 ---
 # <a name="how-to-specify-an-application-icon-visual-basic-c"></a>Postupy: určení ikony aplikace (Visual Basic, C#)
 
@@ -33,7 +33,7 @@ ms.locfileid: "95596908"
 
 1. V **Průzkumník řešení** vyberte uzel projektu (ne uzel **řešení** ).
 
-1. Na panelu nabídek vyberte **Project**  >  **vlastnosti** projektu.
+1. Na panelu nabídek vyberte   >  **vlastnosti** projektu.
 
 1. Když se zobrazí **Návrhář projektu** , vyberte kartu **aplikace** .
 

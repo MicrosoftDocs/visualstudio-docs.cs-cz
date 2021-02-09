@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 29f2fc55-aaf7-4e18-a672-8815455fba73
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 1001e10d80b39df5072a6524f445c97418aa603b
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: c0eca3aa29795da4a2d1233f0cba1774641fc364
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205746"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868319"
 ---
 # <a name="collect-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method-from-the-command-line"></a>Shromažďování podrobných dat časování pro webovou aplikaci v ASP.NET pomocí metody instrumentace profileru z příkazového řádku
 Tato část popisuje postupy a možnosti pro shromažďování podrobných údajů o výkonu pro [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webovou aplikaci pomocí nástroje příkazového řádku **VSPerfCmd** a metody instrumentace.

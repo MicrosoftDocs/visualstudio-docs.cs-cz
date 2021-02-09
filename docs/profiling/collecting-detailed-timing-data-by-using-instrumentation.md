@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: e9deb370-c459-45ac-84d3-14d646590d05
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 17c569a9f5a50b769af0881d47fe810afe18058e
-ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
+ms.openlocfilehash: ecdbc5c3b94e83f0b8d38cec161f94a65e64fdf4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98533846"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868298"
 ---
 # <a name="collect-detailed-timing-data-by-using-instrumentation"></a>Shromažďování podrobných dat časování pomocí instrumentace
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Metoda instrumentace nástroje pro profilaci vloží kód profilace do kopie modulu. Kód zaznamenává každé zadání, ukončení a volání funkce v modulu během běhu profilace. Metoda instrumentace je užitečná pro shromažďování podrobných informací o časování oddílu kódu a pro porozumění dopadu vstupních a výstupních operací na výkon aplikace.

@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 35C7AB05-07D5-4B38-BCAC-AB88444E7368
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 8743f042c7c33da34895f93e5df3990f6e0b2ed2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffa088de8852b0d5884cd4d9db5e65e1c179164b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115312"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868540"
 ---
 # <a name="control-updates-to-network-based-visual-studio-deployments"></a>Řízení aktualizací pro nasazení sady Visual Studio založené na síti
 
@@ -30,7 +30,7 @@ Podnikoví správci často vytvářejí rozložení a hostují ho v síťové sd
 
 Ve výchozím nastavení Visual Studio nadále hledá aktualizace online i v případě, že byla instalace nasazena ze sdílené síťové složky. Pokud je aktualizace k dispozici, uživatel ji může nainstalovat. Aktualizovaný obsah, který se nenajde v offline rozložení, se stáhne z webu.
 
-Pokud chcete přímou kontrolu nad tím, kde aplikace Visual Studio hledá aktualizace, můžete změnit umístění, kde vypadá. Můžete také řídit verzi, na kterou se budou uživatelé aktualizovat. Postup je následující:
+Pokud chcete přímou kontrolu nad tím, kde aplikace Visual Studio hledá aktualizace, můžete změnit umístění, kde vypadá. Můžete také řídit verzi, na kterou se budou uživatelé aktualizovat. To můžete provést pomocí těchto kroků:
 
 1. Vytvořit offline rozložení:
 

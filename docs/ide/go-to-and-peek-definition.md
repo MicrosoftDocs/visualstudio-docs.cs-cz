@@ -12,15 +12,15 @@ helpviewer_keywords:
 - member definition [Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fab4bae999825d7d2fb11dd232d1e271b4f62d5
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 804c49c079f619a774cb1f99d54b2b2af5a3929d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597493"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869359"
 ---
 # <a name="view-type-and-member-definitions"></a>Zobrazení definic typů a členů
 
@@ -36,7 +36,7 @@ Funkce **Přejít k definici** přejde ke zdroji typu nebo členu a otevře výs
 
 ![Myš kliknutí na přejít k definici animace](../ide/media/click_gotodef.gif)
 
-Můžete změnit modifikační klávesu pro myš – klikněte na **Přejít k definici** tak, že přejdete do části **nástroje**  >  **Možnosti**  >  **textový editor**  >  **Obecné** a v **Ctrl** **Alt** + rozevíracím seznamu **použít klávesu pro použití modifikátoru** vyberte ALT nebo CTRL **ALT** . Můžete také zakázat myš – klikněte na **Přejít k definici** tím, že zrušíte zaškrtnutí políčka **Povolit možnost přejít k definici** .
+Můžete změnit modifikační klávesu pro myš – klikněte na **Přejít k definici** tak, že přejdete do části **nástroje**  >  **Možnosti**  >  **textový editor**  >  **Obecné** a v   + rozevíracím seznamu **použít klávesu pro použití modifikátoru** vyberte ALT nebo CTRL **ALT** . Můžete také zakázat myš – klikněte na **Přejít k definici** tím, že zrušíte zaškrtnutí políčka **Povolit možnost přejít k definici** .
 
 ![Povolení kliknutí myší na položku Přejít k definici](../ide/media/editor_options_mouse_click_gotodef.png)
 
@@ -44,7 +44,7 @@ Můžete změnit modifikační klávesu pro myš – klikněte na **Přejít k d
 
 Funkce **Náhled definice** umožňuje zobrazit náhled definice typu bez nutnosti opustit aktuální umístění v editoru. Pokud jste uživatel klávesnice, umístěte textový kurzor do pole typ nebo název členu a stiskněte klávesy **Alt + F12**. Pokud jste uživatelem myši, můžete v nabídce kliknutím pravým tlačítkem vybrat možnost **Náhled definice** .
 
-Chcete-li povolit funkce **stisknutí klávesy CTRL** + **click** , přejděte do možnosti **nástroje**  >  **Options**  >  **textový editor**  >  **Obecné**. **V zobrazení Náhled vyberte možnost otevřená definice** a kliknutím na tlačítko **OK** zavřete dialogové okno **Možnosti** .
+Chcete-li povolit funkce **stisknutí klávesy CTRL** +  , přejděte do možnosti **nástroje**  >    >  **textový editor**  >  **Obecné**. **V zobrazení Náhled vyberte možnost otevřená definice** a kliknutím na tlačítko **OK** zavřete dialogové okno **Možnosti** .
 
 ![Nastavení možnosti Náhled definice v nabídce myši](../ide/media/editor_options_peek_view.png)
 
@@ -71,7 +71,7 @@ Například pokud spustíte příkaz **Přejít na definici** pro <xref:System.C
 
 ### <a name="view-decompiled-source-definitions-instead-of-metadata-c"></a>Zobrazit dekompilované definice zdrojů namísto metadat (C#)
 
-Můžete nastavit možnost Zobrazit dekompilovaný zdrojový kód při zobrazení definice typu nebo členu jazyka C#, jehož zdrojový kód není k dispozici. Pokud chcete tuto funkci zapnout, na **Tools**  >  panelu nabídek vyberte **Možnosti** nástrojů. Pak rozbalte položku **textový editor**  >  **C#**  >  **Upřesnit** a vyberte možnost **Povolit navigaci na dekompilované zdroje**.
+Můžete nastavit možnost Zobrazit dekompilovaný zdrojový kód při zobrazení definice typu nebo členu jazyka C#, jehož zdrojový kód není k dispozici. Pokud chcete tuto funkci zapnout, na   >  panelu nabídek vyberte **Možnosti** nástrojů. Pak rozbalte položku **textový editor**  >  **C#**  >  **Upřesnit** a vyberte možnost **Povolit navigaci na dekompilované zdroje**.
 
 ![Zobrazení definice dekompilovaných](media/go-to-definition-decompiled-sources.png)
 

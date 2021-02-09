@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 497e479b-add8-4644-870a-917f15306b97
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f4ca1908fbd54c0e8d12212bed19fc77e1dff51
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: 4081c79b7492e369e19187a099bf975275cb371c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97487774"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869489"
 ---
 # <a name="windows-installer-basics"></a>Základní informace o Instalační službě systému Windows
 Instalační služba systému Windows nainstaluje a odinstaluje aplikace nebo softwarové produkty v počítači uživatele. tyto úlohy se provádějí v jednotkách nazývaných Instalační služba systému Windows součásti (někdy označované jako WICs nebo pouze komponenty). Identifikátor GUID identifikuje každou součást WIC, což je základní jednotka instalace a počítání odkazů pro nastavení pomocí Instalační služba systému Windows.
