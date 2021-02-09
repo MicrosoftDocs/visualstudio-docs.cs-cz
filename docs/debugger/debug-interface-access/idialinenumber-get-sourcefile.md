@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 86fc4411-375e-4b99-8f96-4da2c3f68190
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5242dec0f217f819c6a2ceb8ddaacbafe2de18a2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6e8d597682b88e30eefb6a1627ebc3e21a7fe7a2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466859"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864724"
 ---
 # <a name="idialinenumberget_sourcefile"></a>IDiaLineNumber::get_sourceFile
 Načte odkaz na zdrojový soubor.
@@ -25,7 +25,7 @@ Načte odkaz na zdrojový soubor.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_sourceFile ( 
+HRESULT get_sourceFile ( 
    IDiaSourceFile** pRetVal
 );
 ```

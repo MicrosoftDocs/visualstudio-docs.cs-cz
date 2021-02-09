@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1071f7d0-1f8c-4384-933f-c49c7eb930bd
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c5b1bafd47f4888d9fa352553c4337d0c6c932bd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 62552c6cce3c17da52de14669071bec43db548de
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466789"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864703"
 ---
 # <a name="idialinenumber"></a>IDiaLineNumber
 Přistupuje k informacím, které popisují proces mapování z bloku bajtů textu obrázku na číslo řádku zdrojového souboru.
@@ -25,7 +25,7 @@ Přistupuje k informacím, které popisují proces mapování z bloku bajtů tex
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaLineNumber : IUnknown
+IDiaLineNumber : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
