@@ -14,15 +14,15 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <customizations> element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cc1f33101346d334d08d2bd2d7795961ea33011e
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 27b20a13d96b8fc23fcde2dbb8f14d1f1f27ceea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844033"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99849928"
 ---
 # <a name="ltcustomizationsgt-element-office-development-in-visual-studio"></a>&lt;přizpůsobení – &gt; element (vývoj pro Office v sadě Visual Studio)
   `customizations`Element `vstov4` oboru názvů obsahuje všechny informace o instalaci a načítání jednotlivých řešení pro systém Office.
@@ -69,7 +69,7 @@ ms.locfileid: "96844033"
 
 ## <a name="example-of-a-document-level-customization"></a>Příklad přizpůsobení na úrovni dokumentu
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
  Následující příklad kódu ukazuje `customizations` prvek pro přizpůsobení na úrovni dokumentu.
 
 > [!NOTE]
@@ -89,7 +89,7 @@ ms.locfileid: "96844033"
 
 ## <a name="example-of-a-vsto-add-in"></a>Příklad doplňku VSTO
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
  Následující příklad kódu ukazuje `customizations` prvek doplňku VSTO. Toto je doplněk VSTO pro Outlook, který obsahuje oblasti formuláře. Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

@@ -7,15 +7,15 @@ ms.technology: vs-ide-compile
 ms.topic: reference
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8884eaa459fa3a2a7dd8d10f0ffeca5003398afd
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 86df6673608359dcc7158762c3ef9d86c184fff6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189716"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850478"
 ---
 # <a name="build-actions"></a>Akce sestavení
 
@@ -34,7 +34,7 @@ Chcete-li nastavit akci sestavení pro soubor, otevřete vlastnosti souboru v ok
 
 Některé z nejběžnějších akcí sestavení pro soubory projektu C# a Visual Basic jsou:
 
-|Akce sestavení | Typy projektů | Popis |
+|Akce sestavení | Typy projektů | Description |
 |-|-|
 | **AdditionalFiles** | C#, Visual Basic | Nezdrojový textový soubor, který se předává kompilátoru C# nebo Visual Basic jako vstup. Tato akce sestavení slouží hlavně k poskytnutí vstupů [analyzátorům](../code-quality/roslyn-analyzers-overview.md) , na které se odkazuje v projektu za účelem ověření kvality kódu. Další informace najdete v tématu [použití dalších souborů](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Using%20Additional%20Files.md).|
 | **ApplicationDefinition** | WPF | Soubor, který definuje vaši aplikaci. Při prvním vytvoření projektu se jedná o *App. XAML*. |

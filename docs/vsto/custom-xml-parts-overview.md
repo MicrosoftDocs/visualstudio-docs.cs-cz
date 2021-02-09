@@ -22,15 +22,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], custom XML parts
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d7998f2a47edd85a65b1e81dd45a046de80d0cdb
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: f6018f7e440eb0cc3cc0b7dcb113583aaf7fcd4e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844124"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850006"
 ---
 # <a name="custom-xml-parts-overview"></a>Přehled vlastních částí XML
   Data XML můžete vložit do dokumentů pro některé aplikace systém Microsoft Office. Při vložení dat XML do dokumentu se data nazývají *vlastní část XML*.

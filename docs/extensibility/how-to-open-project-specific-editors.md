@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 83e56d39-c97b-4c6b-86d6-3ffbec97e8d1
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4cbba1f4d6cf0a2a5a45dd2999afa5bbf3443fca
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 719460b36f926df19e76db1aab4e90b4d959fdc0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96993780"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850491"
 ---
 # <a name="how-to-open-project-specific-editors"></a>Postupy: otevření editorů specifických pro projekt
 Pokud je soubor položky, který je otevřen projektem, vnitřně svázán s konkrétním editorem pro daný projekt, projekt musí otevřít soubor pomocí editoru specifického pro projekt. Soubor nelze delegovat na mechanismus rozhraní IDE pro výběr editoru. Například namísto použití standardního editoru rastrového obrázku můžete použít tuto možnost editoru pro konkrétní projekt k určení konkrétního editoru rastrového obrázku, který rozpozná informace v souboru, který je jedinečný pro váš projekt.

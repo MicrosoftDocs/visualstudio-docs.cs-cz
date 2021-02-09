@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: d5ce10f9-047a-4b74-aa1d-295128898b89
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff03ed508fc11377861556bc27bdc33aaa1ec069
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 163d042ffb08a60d5673e64cf6bab94f7a2f1d63
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96993767"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850452"
 ---
 # <a name="how-to-open-standard-editors"></a>Postupy: otevření standardních editorů
 Otevřete-li standardní editor, rozhraní IDE určí standardní editor pro určený typ souboru namísto určení editoru specifického pro projekt pro daný soubor.

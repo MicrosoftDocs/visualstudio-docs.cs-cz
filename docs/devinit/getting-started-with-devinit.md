@@ -5,18 +5,18 @@ ms.date: 11/18/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: d071a49c9996c9f7f161faf676117704fbcbbdcd
-ms.sourcegitcommit: 3b9a8aec34c7e835069f4db5c133dd002028180c
+ms.openlocfilehash: 99daeeff40091bb3600b82b1f25cc9cf44c52cf9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94937693"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99848237"
 ---
 # <a name="getting-started-with-devinit"></a>Začínáme s devinit
 

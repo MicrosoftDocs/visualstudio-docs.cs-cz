@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: 7eb384f5-f961-400b-b151-115d92addc6a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: abf11966f029d6c4ec66ce295332889a9d74c359
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: bde7081f69a4f92092ac6f3c5b0e8b8059e17a1c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348402"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99849746"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>Sada pravidel Základní pravidla obecných zásad návrhu pro spravovaný kód
 
@@ -25,7 +25,7 @@ Základní pravidla obecných zásad návrhu zahrnují všechna pravidla uveden�
 
 V následující tabulce jsou popsána všechna pravidla v sadě pravidel základní pravidla návrhu Microsoft Basic.
 
-|Pravidlo|Popis|
+|Pravidlo|Description|
 |----------|-----------------|
 |[CA1000](/dotnet/fundamentals/code-analysis/quality-rules/ca1000)|Nedeklarujte statické členy v obecných typech|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|

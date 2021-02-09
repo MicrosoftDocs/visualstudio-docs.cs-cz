@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 4CABFD20-962E-482C-8A76-E4012052F701
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0b48f35a9467e1f69a0055ac0859083078f9cf3b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b572a6854d505704accd79cc4da2ac4e52c193d6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88992352"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850166"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Vytvoření síťové instalace sady Visual Studio
 
@@ -33,7 +33,7 @@ Provedli jsme to tak, aby klientské pracovní stanice mohli používat stejné 
 
 ## <a name="download-the-visual-studio-bootstrapper"></a>Stažení zaváděcího nástroje sady Visual Studio
 
-Stáhněte si soubor zaváděcího nástroje pro edici sady Visual Studio, kterou chcete. Nezapomeňte zvolit možnost **Uložit**a pak zvolte možnost **Otevřít složku**.
+Stáhněte si soubor zaváděcího nástroje pro edici sady Visual Studio, kterou chcete. Nezapomeňte zvolit možnost **Uložit** a pak zvolte možnost **Otevřít složku**.
 
 ::: moniker range="vs-2017"
 
@@ -47,7 +47,7 @@ Instalační program &mdash; nebo bude mít konkrétnější soubor, soubor zav�
 |Visual Studio Professional | **vs_professional.exe** |
 |Visual Studio Build Tools   | **vs_buildtools.exe** |
 
-Mezi další podporované zaváděcí nástroje patří **vs_feedbackclient.exe**, **vs_teamexplorer.exe**, **vs_testagent.exe**, **vs_testcontroller.exe**a **vs_testprofessional.exe**.
+Mezi další podporované zaváděcí nástroje patří **vs_feedbackclient.exe**, **vs_teamexplorer.exe**, **vs_testagent.exe**, **vs_testcontroller.exe** a **vs_testprofessional.exe**.
 
 ::: moniker-end
 

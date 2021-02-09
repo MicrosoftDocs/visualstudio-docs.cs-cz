@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 86b86442-4293-4cad-9fe2-876eef65f426
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d15d845f07310e3efcba6f05538a2207d9c416e4
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 09a24198d5b3c001f363f3a9eecf1dcd2760889f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994003"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850632"
 ---
 # <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>Postupy: Správa privátní Galerie pomocí nastavení registru
 Pokud jste správcem nebo vývojářem rozšíření izolovaného prostředí, můžete řídit přístup k ovládacím prvkům, šablonám a nástrojům v galerii sady Visual Studio, galerii ukázek nebo soukromých galeriích. Pokud chcete galerii zpřístupnit nebo není k dispozici, vytvořte soubor *. pkgdef* , který popisuje upravené klíče registru a jejich hodnoty.

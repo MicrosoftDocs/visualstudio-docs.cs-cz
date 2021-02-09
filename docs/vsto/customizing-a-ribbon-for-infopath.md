@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], InfoPath
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: baf5a7edbdd9452c4b7ce55e109eee9c79798b5e
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 0bc66a9266baf865e2efb87497361bc0c525e55a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844164"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99849889"
 ---
 # <a name="customize-a-ribbon-for-infopath"></a>Přizpůsobení pásu karet pro aplikaci InfoPath
   Při přizpůsobení pásu karet v aplikaci systém Microsoft Office InfoPath je nutné vzít v úvahu, kde se vlastní pás karet zobrazí v aplikaci. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] může zobrazit pás karet v následujících třech typech oken aplikace InfoPath:

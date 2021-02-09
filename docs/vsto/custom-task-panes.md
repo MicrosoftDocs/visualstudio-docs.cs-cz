@@ -24,15 +24,15 @@ helpviewer_keywords:
 - custom task panes [Office development in Visual Studio], about custom task panes
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b08e0e3bbc9f45b33ecd0248179011113db7a779
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 8ed86cb10f6521e5863562cdb67e768b1a2367d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844177"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850032"
 ---
 # <a name="custom-task-panes"></a>Vlastní podokna úloh
   Podokna úloh jsou panely uživatelského rozhraní, které jsou obvykle ukotveny na jednu stranu okna aplikace systém Microsoft Office. Vlastní podokna úloh poskytují způsob, jak vytvořit vlastní podokno úloh a poskytnout uživatelům známé rozhraní pro přístup k funkcím vašeho řešení. Rozhraní může například obsahovat ovládací prvky, které spouštějí kód pro úpravu dokumentů nebo zobrazení dat ze zdroje dat.
@@ -104,7 +104,7 @@ ms.locfileid: "96844177"
 
  V následující tabulce jsou uvedeny změny, které můžete provést ve vlastním podokně úloh pomocí <xref:Microsoft.Office.Tools.CustomTaskPane> vlastností.
 
-|Úloha|Vlastnost|
+|Úkol|Vlastnost|
 |----------|--------------|
 |Změna velikosti podokna úloh|<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A><br /><br /> <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>|
 |Změna umístění podokna úloh|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>|
@@ -116,7 +116,7 @@ ms.locfileid: "96844177"
 
  V následující tabulce jsou uvedeny události, které můžete zpracovat a reagovat tak na změny provedené uživatelem v podokně vlastní podokno úloh.
 
-|Úloha|Událost|
+|Úkol|Událost|
 |----------|-----------|
 |Chcete-li reagovat, když uživatel změní umístění podokna úloh.|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>|
 |Chcete-li reagovat, když uživatel skryje podokno úloh nebo je bude viditelný.|<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>|

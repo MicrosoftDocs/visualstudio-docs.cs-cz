@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], UI customization
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 289b055ab84dd9c2c440b55f3d64fe1fe39b8e1b
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: ed604b1bbbfcd5b217935b541325c121d521e878
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527579"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99849811"
 ---
 # <a name="office-ui-customization"></a>Přizpůsobení uživatelského rozhraní systému Office
   Můžete přizpůsobit uživatelské rozhraní (UI) systém Microsoft Office aplikací pomocí nástrojů Office Developer Tools v sadě Visual Studio. Toto téma popisuje funkce uživatelského rozhraní, které můžete přizpůsobit v následujících částech:
@@ -45,7 +45,7 @@ ms.locfileid: "97527579"
 ## <a name="comparison-of-ui-features"></a><a name="Comparison"></a> Porovnání funkcí uživatelského rozhraní
  Následující tabulka porovnává hlavní funkce uživatelského rozhraní, které můžete přizpůsobit v systém Microsoft Office projekty.
 
-|Příznak|Podporované typy projektů|Podporované aplikace systém Microsoft Office|
+|Funkce|Podporované typy projektů|Podporované aplikace systém Microsoft Office|
 |-------------|-----------------------------|---------------------------------------------|
 |Podokno akcí|Přizpůsobení na úrovni dokumentu|Excel<br /><br /> Word|
 |Vlastní podokna úloh|Doplňky VSTO|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word|

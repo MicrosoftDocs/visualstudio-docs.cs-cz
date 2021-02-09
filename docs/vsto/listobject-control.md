@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ListObject control, improving performance when bound to data
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1a80b56134f59975a39d24e824b6c83b2513b163
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: becc4ab189c0f871cc3ed1284bd26a0411b30184
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526594"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99849798"
 ---
 # <a name="listobject-control"></a>ListObject – ovládací prvek
   <xref:Microsoft.Office.Tools.Excel.ListObject>Ovládací prvek je seznam, který zpřístupňuje události a může být svázán s daty. Když přidáte seznam do listu, Visual Studio vytvoří <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek, který lze programovat přímo bez nutnosti procházet systém Microsoft Office objektový model aplikace Excel.

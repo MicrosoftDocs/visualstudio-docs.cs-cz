@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d2ab8a723b69f4c5930c91a10719a2107ad83003
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: ba53fefcc5d29cb47bd3a6912ad7af34dd8deabb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136794"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850383"
 ---
 # <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>Sestavování a čištění projektů a řešení v aplikaci Visual Studio
 
@@ -40,13 +40,13 @@ Pomocí postupů v tomto tématu můžete sestavit, znovu sestavit nebo vyčisti
 > Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [sestavování a čištění projektů a řešení v Visual Studio pro Mac](/visualstudio/mac/building-and-cleaning-projects-and-solutions).
 
 > [!NOTE]
-> Uživatelské rozhraní ve vaší edici sady Visual Studio se může lišit od toho, co toto téma popisuje, v závislosti na aktivním nastavení. Chcete-li změnit nastavení, například **Obecné** nebo **Visual C++** nastavení, zvolte **nástroje**  >  **Nastavení importu a exportu**a pak zvolte možnost **resetovat všechna nastavení**.
+> Uživatelské rozhraní ve vaší edici sady Visual Studio se může lišit od toho, co toto téma popisuje, v závislosti na aktivním nastavení. Chcete-li změnit nastavení, například **Obecné** nebo **Visual C++** nastavení, zvolte **nástroje**  >  **Nastavení importu a exportu** a pak zvolte možnost **resetovat všechna nastavení**.
 
 ## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Sestavení, opětovné sestavení nebo vyčištění celého řešení
 
-1. V **Průzkumník řešení**vyberte nebo otevřete řešení.
+1. V **Průzkumník řešení** vyberte nebo otevřete řešení.
 
-2. Na panelu nabídek zvolte možnost **sestavit**a pak zvolte jeden z následujících příkazů:
+2. Na panelu nabídek zvolte možnost **sestavit** a pak zvolte jeden z následujících příkazů:
 
     - Vyberte **sestavení** nebo **Sestavit řešení** pro zkompilování pouze těch souborů projektu a komponent, které se od posledního sestavení změnily.
 
@@ -59,9 +59,9 @@ Pomocí postupů v tomto tématu můžete sestavit, znovu sestavit nebo vyčisti
 
 ## <a name="to-build-or-rebuild-a-single-project"></a>Sestavení nebo opětovné sestavení jednoho projektu
 
-1. V **Průzkumník řešení**vyberte nebo otevřete projekt.
+1. V **Průzkumník řešení** vyberte nebo otevřete projekt.
 
-2. Na panelu nabídek zvolte možnost **sestavit**a pak zvolte možnost **sestavit** *ProjectName* nebo **znovu sestavit** *ProjectName*.
+2. Na panelu nabídek zvolte možnost **sestavit** a pak zvolte možnost **sestavit** *ProjectName* nebo **znovu sestavit** *ProjectName*.
 
     - Zvolením možnosti **sestavit** *ProjectName* sestavíte pouze součásti projektu, které se od posledního sestavení změnily.
 
@@ -69,7 +69,7 @@ Pomocí postupů v tomto tématu můžete sestavit, znovu sestavit nebo vyčisti
 
 ## <a name="to-build-only-the-startup-project-and-its-dependencies"></a>Sestavení pouze spouštěného projektu a jeho závislostí
 
-1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
+1. Na panelu nabídek vyberte   >  **Možnosti** nástroje.
 
 2. V dialogovém okně **Možnosti** rozbalte uzel **projekty a řešení** a potom zvolte stránku **sestavení a spuštění** .
 
@@ -79,7 +79,7 @@ Pomocí postupů v tomto tématu můžete sestavit, znovu sestavit nebo vyčisti
 
      Pokud je toto políčko zaškrtnuto, budou vytvořeny pouze aktuální spouštěné projekty a jejich závislosti, pokud provedete některý z následujících kroků:
 
-    - Na řádku nabídek klikněte na tlačítko **Debug**  >  **Spustit ladění Start** (**F5**).
+    - Na řádku nabídek klikněte na tlačítko   >  **Spustit ladění Start** (**F5**).
 
     - Na řádku nabídek klikněte na **sestavit**  >  **sestavení řešení** (**CTRL** + **SHIFT** + **B**).
 
@@ -87,7 +87,7 @@ Pomocí postupů v tomto tématu můžete sestavit, znovu sestavit nebo vyčisti
 
 ## <a name="to-build-only-the-selected-visual-c-project"></a>Chcete-li vytvořit pouze vybraný projekt Visual C++
 
-Zvolte [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projekt a pak na panelu nabídek zvolte pouze **sestavit**  >  **projekt**a jeden z následujících příkazů:
+Zvolte [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projekt a pak na panelu nabídek zvolte pouze **sestavit**  >  **projekt** a jeden z následujících příkazů:
 
 - **Sestavit pouze** *ProjectName*
 
@@ -101,7 +101,7 @@ Tyto příkazy se vztahují pouze na [!INCLUDE[vcprvc](../code-quality/includes/
 
 ## <a name="to-compile-multiple-c-project-items"></a>Kompilace více položek projektu C++
 
-V **Průzkumník řešení**zvolte více souborů, které mají být kompilovány akce, otevřete místní nabídku pro jeden z těchto souborů a pak zvolte možnost **kompilovat**.
+V **Průzkumník řešení** zvolte více souborů, které mají být kompilovány akce, otevřete místní nabídku pro jeden z těchto souborů a pak zvolte možnost **kompilovat**.
 
 Pokud jsou soubory závislé, budou soubory zkompilovány v pořadí závislostí. Operace kompilace se nezdaří, pokud soubory vyžadují předkompilovanou hlavičku, která není při kompilaci k dispozici. Operace kompilace používá aktuální aktivní konfiguraci řešení.
 
