@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 06a1368f-10f0-44eb-af61-e388c2327111
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b9fe0e96ade081e8da11b5e1c06c5b45279b10b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f59cdc9a257f853f70afe2566d7b06e39f8edc02
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715748"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99846657"
 ---
 # <a name="ienumdebugprocesses2"></a>IEnumDebugProcesses2
 Toto rozhraní vytváří výčet procesů spuštěných na portu ladění.
@@ -42,7 +42,7 @@ IEnumDebugProcesses : IUnknown
 |[Další](../../../extensibility/debugger/reference/ienumdebugprocesses2-next.md)|Načte zadaný počet procesů ve výčtové sekvenci.|
 |[Přeskočit](../../../extensibility/debugger/reference/ienumdebugprocesses2-skip.md)|Přeskočí zadaný počet procesů ve výčtové sekvenci.|
 |[Reset](../../../extensibility/debugger/reference/ienumdebugprocesses2-reset.md)|Obnoví posloupnost výčtu na začátek.|
-|[Klonování](../../../extensibility/debugger/reference/ienumdebugprocesses2-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|
+|[Klonovat](../../../extensibility/debugger/reference/ienumdebugprocesses2-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugprocesses2-getcount.md)|Získá počet procesů v enumerátoru.|
 
 ## <a name="remarks"></a>Poznámky

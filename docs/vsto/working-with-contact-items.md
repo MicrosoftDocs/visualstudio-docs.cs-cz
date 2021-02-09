@@ -14,20 +14,20 @@ helpviewer_keywords:
 - contacts [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b84d91f2a89a5cf648aaa13f18e404dab2ec138c
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: b336d00e2cd3a9d9eb6484564c3b3bd0a9b011dd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524776"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847567"
 ---
 # <a name="work-with-contact-items"></a>Práce s položkami kontaktů
   <xref:Microsoft.Office.Interop.Outlook.ContactItem>Třída obsahuje metody a vlastnosti, které slouží k provádění úkolů s kontakty.
 
-|Úloha|Postup|
+|Úkol|Postup|
 |----------|---------------|
 |Načte všechny kontakty, jejichž příjmení obsahuje zadaný řetězec.|[Postupy: přístup ke kontaktům aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-access-outlook-contacts.md)|
 |Vyhledejte kontakt podle jména a příjmení.|[Postupy: hledání konkrétního kontaktu prostřednictvím kódu programu](../vsto/how-to-programmatically-search-for-a-specific-contact.md)|

@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: e94a4fea-94df-488e-8560-9538413422bc
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c739dad7be8d2a000662eca478bc117699694c8a
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: d8477f252259f0ca436c4d4f34325c6dbb45565b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715870"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847970"
 ---
 # <a name="subscribing-to-an-event"></a>Přihlášení k odběru události
 Tento návod vysvětluje, jak vytvořit okno nástroje, které reaguje na události v běžící tabulce dokumentů (RDT). Okno nástroje je hostitelem uživatelského ovládacího prvku, který implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>Metoda připojuje rozhraní k událostem.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="subscribing-to-rdt-events"></a>Přihlášení k odběru událostí RDT

@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: be18aa36-7909-4dd6-a786-b46959675a58
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d4fdadcd58e0118ff66525b5b6141b8ea29f69b2
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 24e8ef89b6373808ac7eed0c7557e25968efcf3a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434087"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847307"
 ---
 # <a name="runtime-activity-designers"></a>Návrháři runtime aktivit
 Návrháři běhové aktivity se používají k uchování a ukončení aktivit pracovních postupů. Témata v této části poskytují pokyny k použití Návrhář postupu provádění návrháři aktivit.

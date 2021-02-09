@@ -2,28 +2,28 @@
 title: Vytváření řetězců filtru pro návrháře tabulky | Microsoft Docs
 description: Sestavování řetězců filtru pro návrháře tabulky
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
-ms.openlocfilehash: 288e4256a472eb7bbc692758ad81df68be507676
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: cdfcacf38239e896687a236624bb167573f4bd1f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901918"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99846202"
 ---
 # <a name="constructing-filter-strings-for-the-table-designer"></a>Vytváření filtračních řetězců pro Návrháře tabulky
 ## <a name="overview"></a>Přehled
-Chcete-li filtrovat data v tabulce Azure, která je zobrazena v **Návrháři tabulky** aplikace Visual Studio, sestavíte řetězec filtru a zadáte ho do pole Filter. Syntaxe řetězce filtru je definována WCF Data Services a je podobná klauzuli WHERE jazyka SQL, ale je odeslána do Table service prostřednictvím požadavku HTTP. **Návrhář tabulky** zpracovává správné kódování, takže Chcete-li filtrovat podle požadované hodnoty vlastnosti, je nutné zadat pouze název vlastnosti, operátor porovnání, hodnotu kritéria a volitelně logický operátor v poli Filter. Nemusíte zahrnovat možnost dotazu $filter, protože byste vytvořili adresu URL pro dotazování tabulky prostřednictvím [služby Storage REST API Reference](/rest/api/storageservices/).
+Chcete-li filtrovat data v tabulce Azure, která je zobrazena v **Návrháři tabulky** aplikace Visual Studio, sestavíte řetězec filtru a zadáte ho do pole Filter. Syntaxe řetězce filtru je definována Datové služby WCF a je podobná klauzuli WHERE jazyka SQL, ale je odeslána do Table service prostřednictvím požadavku HTTP. **Návrhář tabulky** zpracovává správné kódování, takže Chcete-li filtrovat podle požadované hodnoty vlastnosti, je nutné zadat pouze název vlastnosti, operátor porovnání, hodnotu kritéria a volitelně logický operátor v poli Filter. Nemusíte zahrnovat možnost dotazu $filter, protože byste vytvořili adresu URL pro dotazování tabulky prostřednictvím [služby Storage REST API Reference](/rest/api/storageservices/).
 
-WCF Data Services jsou založené na protokolu OData ( [Open Data Protocol](https://www.odata.org/) ). Podrobnosti o možnosti dotazu systému filtru (**$Filter**) najdete v tématu specifikace pro [konvenci identifikátorů URI OData](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
+Datové služby WCF jsou založené na protokolu OData ( [Open Data Protocol](https://www.odata.org/) ). Podrobnosti o možnosti dotazu systému filtru (**$Filter**) najdete v tématu specifikace pro [konvenci identifikátorů URI OData](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
 ## <a name="comparison-operators"></a>Operátory porovnání
 Následující logické operátory jsou podporovány pro všechny typy vlastností:
 
-| Logický operátor | Popis | Příklad řetězce filtru |
+| Logický operátor | Description | Příklad řetězce filtru |
 | --- | --- | --- |
 | eq |Je rovno |Město EQ – Redmond |
 | gt |Větší než |Cena gt 20 |

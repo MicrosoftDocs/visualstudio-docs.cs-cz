@@ -14,20 +14,20 @@ helpviewer_keywords:
 - workbooks, ranges
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 168774f031e992db62b4173bd8d27652aa21b82f
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: ce099c7cf531e4fa9acfe725959023e579577c8a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526908"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847437"
 ---
 # <a name="work-with-ranges"></a>Práce s rozsahy
   <xref:Microsoft.Office.Tools.Excel.NamedRange>Třídy a <xref:Microsoft.Office.Interop.Excel.Range> obsahují metody a vlastnosti, které slouží k provádění úkolů s rozsahy.
 
-|Úloha|Postup|
+|Úkol|Postup|
 |----------|---------------|
 |Přístup k rozsahu a nastavení hodnoty.|[Postupy: odkazování na oblasti listů v kódu prostřednictvím kódu programu](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)|
 |Vyplní rozsah na základě počáteční hodnoty.|[Postupy: Automatické vyplňování oblastí pomocí přírůstkových změn dat prostřednictvím kódu programu](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)|

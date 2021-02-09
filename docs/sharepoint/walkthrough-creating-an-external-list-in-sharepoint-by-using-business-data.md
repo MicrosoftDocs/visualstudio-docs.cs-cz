@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], external list
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a791f94e46e16369392465e075ade92a833e2868
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: dbf996a2d44f94e4571a332fa7a86d861d820d45
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915333"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847710"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>Návod: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat
 
@@ -42,7 +42,7 @@ Tento návod znázorňuje následující úlohy:
 - Přidání konkrétní vyhledávací metody
 - Testování projektu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 K dokončení tohoto návodu budete potřebovat následující komponenty:
 
@@ -128,7 +128,7 @@ Přidejte do modelu entitu. Do návrháře služby BDC můžete přidat entity z
 
      Nová entita se zobrazí v návrháři. Visual Studio přidá soubor s názvem *EntityService. vb* (v Visual Basic) nebo *EntityService.cs* (v jazyce C#) do projektu.
 
-3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **Properties**  >  **okno** vlastností.
+3. Na panelu nabídek vyberte možnost **Zobrazit**  >    >  **okno** vlastností.
 
 4. V okně **vlastnosti** nastavte vlastnost **název** na hodnotu **kontakt**.
 

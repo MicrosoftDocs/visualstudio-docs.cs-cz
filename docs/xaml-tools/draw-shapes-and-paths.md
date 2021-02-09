@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: d5378c59-e2e5-49f0-91f1-aa82d984a33c
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c29e2a4718a10193a4c86d1485549ded6ae2c0e
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 2e815b3e4959727dab282fcbe0fcd1f82890bf8b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796794"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847346"
 ---
 # <a name="draw-shapes-and-paths"></a>Kreslení tvarů a cest
 
@@ -88,7 +88,7 @@ Pomocí nástroje **Výběr** vyberte cestu. Pomocí nástroje **pero** kliknět
 
 ## <a name="convert-a-shape-to-a-path"></a>Převod tvaru na cestu
 
-Chcete-li upravit tvar stejným způsobem, jakým jste změnili cestu, převeďte tvar na cestu. Vyberte tvar a pak vyberte **Formát**  >  **Path**  >  **převést na cestu** cesta.
+Chcete-li upravit tvar stejným způsobem, jakým jste změnili cestu, převeďte tvar na cestu. Vyberte tvar a pak vyberte **Formát**  >    >  **převést na cestu** cesta.
 
 **Podívejte se na krátké video:** ![ Konfigurovat nainstalované funkce ](../designers/media/bldadminconsoleinitialconfigicon.png) [, které fungují s cestami: převést tvar na cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
 

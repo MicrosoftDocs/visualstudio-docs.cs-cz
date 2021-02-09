@@ -17,20 +17,20 @@ helpviewer_keywords:
 - e-mail [Office development in Visual Studio], calendars
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 38bf1aa02d72621bc1bcc7376a15ea975feb0860
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 0651b392563ff90cb349a3a8e737717bf375bea6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528307"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847580"
 ---
 # <a name="work-with-calendar-items"></a>Práce s položkami kalendáře
   <xref:Microsoft.Office.Interop.Outlook.AppointmentItem>Třída obsahuje metody a vlastnosti, které slouží k provádění úkolů s položkami kalendáře.
 
-|Úloha|Postup|
+|Úkol|Postup|
 |----------|---------------|
 |Vytvořte schůzku a přidejte příjemce.|[Postupy: vytváření událostí prostřednictvím kódu programu](../vsto/how-to-programmatically-create-appointments.md)|
 |Odstraní instanci opakované události.|[Postupy: odstraňování událostí prostřednictvím kódu programu](../vsto/how-to-programmatically-delete-appointments.md)|

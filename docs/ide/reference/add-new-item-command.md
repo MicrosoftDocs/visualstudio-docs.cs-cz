@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 63b7df32-db83-463b-bbe7-7ff011fe5298
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d9045f9874c966ec0b9780b3ba2876912e433fbf
-ms.sourcegitcommit: 208f75ad89ad91b994701bb5cbc0a251fbaa3604
+ms.openlocfilehash: 37742f1a9adda219e359d734b80f44679509ee03
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98166820"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99846332"
 ---
 # <a name="add-new-item-command"></a>Přidat novou položku – příkaz
 Přidá novou položku řešení, jako je například. htm,. CSS,. txt nebo FRAMESET, do aktuálního řešení a otevře se.
@@ -63,7 +63,7 @@ Tento příklad přidá novou položku řešení MyHTMLpg do aktuálního řeše
 >File.AddNewItem MyHTMLpg /t:"General\HTML Page"
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, workflow initiation forms
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 62501a23695b81ee0437d3210dced7c81f9b054e
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: cb759b155b119c29f20a39cdbf35338ec5a305b9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95970435"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847736"
 ---
 # <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>Návod: vytvoření pracovního postupu pomocí formulářů přidružení a inicializace
   Tento návod ukazuje, jak vytvořit základní sekvenční pracovní postup, který zahrnuje použití formulářů přidružení a inicializace. Jedná se o formuláře ASPX, které umožňují přidání parametrů do pracovního postupu, když jsou nejprve přidruženy správcem služby SharePoint (formulář přidružení), a pokud je pracovní postup spuštěn uživatelem (inicializační formulář).

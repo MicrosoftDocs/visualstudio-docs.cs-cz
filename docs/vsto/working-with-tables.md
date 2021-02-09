@@ -14,20 +14,20 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], tables
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 27fdc776589879af6757967b18a7cac47f9f66df
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 143b537c0d921d70206ce6f9128338e30351d080
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526857"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847450"
 ---
 # <a name="work-with-tables"></a>Práce s tabulkami
   Témata v této části poskytují podrobné postupy a příklady kódu pro použití objektového modelu aplikace systém Microsoft Office Word pro práci s tabulkami v projektech Office. V některých případech se způsoby provádění těchto úkolů v Doplňkech VSTO liší od způsobů, jak je provádíte v přizpůsobení na úrovni dokumentu.
 
-|Úloha|Postup|
+|Úkol|Postup|
 |----------|---------------|
 |Vytvoření tabulky, použití stylu a přístup k tabulce v kódu.|[Postupy: vytváření tabulek aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-create-word-tables.md)|
 |Vytvořte tabulku, naformátujte ji a vložte data do buněk.|[Postupy: naplnění tabulek Wordu pomocí vlastností dokumentu prostřednictvím kódu programu](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)|

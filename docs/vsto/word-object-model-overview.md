@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Office object models
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6d8ca92fdebb3504331ec38937dd79786fdb8b42
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 3d593185412db23fa985f7effea6e91f9b3faa6c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97523484"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847645"
 ---
 # <a name="word-object-model-overview"></a>Přehled modelu objektů aplikace Word
   Při vývoji řešení aplikace Word v aplikaci Visual Studio budete pracovat s modelem objektu aplikace Word. Tento objektový model se skládá z tříd a rozhraní, které jsou k dispozici v primárním sestavení vzájemné spolupráce pro Word, a jsou definovány v <xref:Microsoft.Office.Interop.Word> oboru názvů.

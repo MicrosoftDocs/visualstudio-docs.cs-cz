@@ -8,15 +8,15 @@ ms.topic: reference
 ms.assetid: c3ab14c6-a320-46db-a6b3-7fd1ca261587
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 104e52619a34f1f2fd5b7aedbac98eafd7fdc189
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 233ee9e4583e893d38700088d54e4b0e5eacffb6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049260"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99846267"
 ---
 # <a name="pen-tool-modifier-keys-in-blend-for-visual-studio"></a>Modifikační klávesy nástroje pero v Blend pro Visual Studio
 
