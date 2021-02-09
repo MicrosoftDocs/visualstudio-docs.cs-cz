@@ -5,17 +5,17 @@ ms.date: 01/28/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2d58462b90039e14ae98fe450812ca4cfdb6cbbd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08ae2e13f094535eae0447cc3b8d4acf4c806a99
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801578"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920615"
 ---
 # <a name="use-the-cookiecutter-extension"></a>Použití rozšíření Cookiecutter
 
@@ -82,7 +82,7 @@ Možnosti Cookiecutter jsou k dispozici prostřednictvím **nástrojů**  >  **M
 | Možnost | Popis |
 | --- | --- |
 | **Doporučená adresa URL kanálu** | Umístění doporučeného informačního kanálu šablon. Může to být adresa URL nebo cesta k místnímu souboru. Pokud chcete použít výchozí pomocného informačního kanálu Microsoftu, ponechte adresu URL prázdnou. Informační kanál poskytuje jednoduchý seznam umístění šablon odděleného newlines. Pokud chcete požádat o změny v spravovaném informačním kanálu, vytvořte žádost o přijetí změn proti [zdroji na GitHubu](https://github.com/Microsoft/PTVS/blob/master/Python/Product/Cookiecutter/CookiecutterFeed.txt). |
-| **Zobrazit Help** | Určuje viditelnost panelu s informacemi o nápovědě v horní části okna Cookiecutter. |
+| **Zobrazit nápovědu** | Určuje viditelnost panelu s informacemi o nápovědě v horní části okna Cookiecutter. |
 
 ## <a name="optimize-cookiecutter-templates-for-visual-studio"></a>Optimalizace šablon Cookiecutter pro Visual Studio
 
@@ -98,7 +98,7 @@ Toto vykreslování je možné vylepšit zadáním dalších metadat v *cookiecu
 | Vlastnost | Popis |
 | --- | --- |
 | Popisek | Určuje, co se zobrazí nad editorem proměnné namísto názvu proměnné. |
-| Popis | Určuje popisek, který se zobrazí v ovládacím prvku pro úpravy namísto výchozí hodnoty pro tuto proměnnou. |
+| Description | Určuje popisek, který se zobrazí v ovládacím prvku pro úpravy namísto výchozí hodnoty pro tuto proměnnou. |
 | URL | Změní popisek na hypertextový odkaz s popisem, který zobrazuje adresu URL. Výběrem hypertextového odkazu se otevře výchozí prohlížeč uživatele v této adrese URL. |
 | Volič | Umožňuje přizpůsobit editor pro proměnnou. V současné době jsou podporovány následující selektory:<ul><li>`string`: Standardní textové pole, výchozí pro řetězce.</li><li>`list`: Standardní pole se seznamem, výchozí pro seznamy.</li><li>`yesno`: Pole se seznamem pro výběr mezi `y` a `n` , pro řetězce.</li><li>`odbcConnection`: Textové pole s tlačítkem **...** , které vyvolá dialog připojení databáze.</li></ul> |
 
@@ -187,13 +187,13 @@ Použijte pole pro více argumentů. U přepínačů rozdělte přepínač a jeh
 
 Argumenty mohou odkazovat na jiné proměnné Cookiecutter. V předchozích příkladech `_output_folder_path` se interní proměnná používá k vytvoření absolutní cesty k vygenerovaným souborům.
 
-Všimněte si, že `Python.InstallProjectRequirements` příkaz funguje pouze při přidávání souborů do existujícího projektu. Toto omezení existuje, protože příkaz je zpracován projektem Pythonu v **Průzkumník řešení**a není k dispozici žádný projekt k přijetí zprávy v zobrazení **Průzkumník řešení**  -  **složky**. Doufáme, že odebereme omezení, aby vyhrál budoucí verzi (a obecně poskytovala lepší podporu **zobrazení složky** ).
+Všimněte si, že `Python.InstallProjectRequirements` příkaz funguje pouze při přidávání souborů do existujícího projektu. Toto omezení existuje, protože příkaz je zpracován projektem Pythonu v **Průzkumník řešení** a není k dispozici žádný projekt k přijetí zprávy v zobrazení **Průzkumník řešení**  -  **složky**. Doufáme, že odebereme omezení, aby vyhrál budoucí verzi (a obecně poskytovala lepší podporu **zobrazení složky** ).
 
 ## <a name="troubleshooting"></a>Řešení potíží
 
 ### <a name="error-loading-template"></a>Chyba při načítání šablony
 
-Některé šablony mohou v jejich *cookiecutter.js*použít neplatné datové typy, například Boolean. Nahlaste tyto instance autorovi šablony výběrem odkazu **problémy** v podokně informace o šabloně.
+Některé šablony mohou v jejich *cookiecutter.js* použít neplatné datové typy, například Boolean. Nahlaste tyto instance autorovi šablony výběrem odkazu **problémy** v podokně informace o šabloně.
 
 ### <a name="hook-script-failed"></a>Skript zavěšení selhal.
 

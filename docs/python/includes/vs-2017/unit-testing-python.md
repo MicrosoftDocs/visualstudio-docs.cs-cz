@@ -5,23 +5,23 @@ ms.date: 09/18/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 032732f19855b9ba5c97c2e5281e8385f9ace3be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 612d4bd7d66add8c3fe7c45e8f03ca3531b0b4c0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535322"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920664"
 ---
 ## <a name="discover-and-view-tests"></a>Zjišťování a zobrazení testů
 
 Podle konvence Visual Studio identifikuje testy jako metody, jejichž názvy začínají na `test` . Chcete-li toto chování zobrazit, postupujte následovně:
 
-1. Otevřete [projekt Python](../../managing-python-projects-in-visual-studio.md) načtený v aplikaci Visual Studio, klikněte pravým tlačítkem na projekt, vyberte možnost **Přidat**  >  **novou položku**a pak vyberte možnost **Test jednotky Pythonu** a potom klikněte na **Přidat**.
+1. Otevřete [projekt Python](../../managing-python-projects-in-visual-studio.md) načtený v aplikaci Visual Studio, klikněte pravým tlačítkem na projekt, vyberte možnost **Přidat**  >  **novou položku** a pak vyberte možnost **Test jednotky Pythonu** a potom klikněte na **Přidat**.
 
 1. Tato akce vytvoří soubor *test1.py* s kódem, který importuje standardní `unittest` modul, odvodí testovací třídu z `unittest.TestCase` a vyvolá, `unittest.main()` Pokud spouštíte skript přímo:
 
@@ -37,7 +37,7 @@ Podle konvence Visual Studio identifikuje testy jako metody, jejichž názvy za�
         unittest.main()
     ```
 
-1. V případě potřeby soubor uložte a pak spusťte **Průzkumníka testů** pomocí příkazu **test**Průzkumníka testů  >  **systému Windows**  >  **Test Explorer** .
+1. V případě potřeby soubor uložte a pak spusťte **Průzkumníka testů** pomocí příkazu **test** Průzkumníka testů  >  **systému Windows**  >   .
 
 1. **Průzkumník testů** vyhledá v projektu testy a zobrazí je, jak je znázorněno níže. Dvojím kliknutím na test se otevře jeho zdrojový soubor.
 

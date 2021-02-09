@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 35f89d86-4683-4db1-aa0c-ae0ce65fa524
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 79fb4b7cf7a5df4b2077a2145172d24acdbf86cb
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: da6501602c9ffd12750643e50d230ef15c0f922c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722734"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99922281"
 ---
 # <a name="performance-report-view-filter"></a>Filtr zobrazení sestav výkonu
 Okno **filtru zobrazení sestav profileru** se nachází v horní části okna **sestavy výkonu** . Pokud ho nevidíte, klikněte na tlačítko **Zobrazit filtr** .
 
  Pro upřesnění výsledků můžete upravit každou klauzuli filtru. V Tvůrci filtru jsou k dispozici následující sloupce.
 
-|Filtrovat položku|Popis|
+|Filtrovat položku|Description|
 |-----------------|-----------------|
 |A/nebo|Vyberte **a** Pokud má tato klauzule a další klauzule hodnotu true, aby odpovídaly výsledku. Vyberte **nebo** Pokud má tato klauzule nebo další klauzule hodnotu true, aby odpovídaly výsledku.|
 |Pole|Vyberte pole, které chcete použít v klauzuli Filter, ze seznamu datových polí, která jsou k dispozici v aktuálním souboru sestavy.|

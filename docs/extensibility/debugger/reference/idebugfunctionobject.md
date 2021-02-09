@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8d94e97c-a9d1-400c-8a98-a44b5385b33a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6433c1f2c540b040a3b3beccc264377e69592387
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ab1462c30f1012eb1002f692672fc470cac3b39a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80728500"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921012"
 ---
 # <a name="idebugfunctionobject"></a>IDebugFunctionObject
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "80728500"
 ## <a name="syntax"></a>Syntax
 
 ```
-IDebugFunctionObject : IDebugObject
+IDebugFunctionObject : IDebugObject
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory

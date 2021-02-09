@@ -6,17 +6,17 @@ ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d88d936a4b470f891f3b2bf2c353f4ef4e595c57
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c4ae447976798372e049df46552f8383389f7b3e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811042"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920778"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>Krok 3: použití interaktivního okna REPL
 

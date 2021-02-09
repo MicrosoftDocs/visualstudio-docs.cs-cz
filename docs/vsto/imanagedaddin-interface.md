@@ -9,15 +9,15 @@ helpviewer_keywords:
 - IManagedAddin interface
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b436d76164b1744cffe16593149f64d219d04bf1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 89e705296c6051b8bdec823e523f0a386ff7ff76
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541125"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920438"
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin – rozhraní
   Implementací rozhraní IManagedAddin – Vytvořte komponentu, která načte spravované doplňky VSTO. Toto rozhraní bylo přidáno v 2007 systém Microsoft Office systému.
@@ -43,7 +43,7 @@ interface IManagedAddin : IUnknown
 ## <a name="methods"></a>Metody
  V následující tabulce jsou uvedeny metody, které jsou definovány rozhraním IManagedAddin –.
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Volá se, když aplikace systém Microsoft Office načte spravovaný doplněk VSTO.|
 |[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Volá se těsně před tím, než aplikace systém Microsoft Office uvolní spravovaný doplněk VSTO.|
@@ -56,13 +56,13 @@ interface IManagedAddin : IUnknown
 
 1. Aplikace zjišťuje doplňky VSTO tím, že hledá položky v následujícím klíči registru:
 
-    **HKEY_CURRENT_USER \Software\Microsoft\Office \\ *\<application name>* \Addins\\**
+    **HKEY_CURRENT_USER\Software\Microsoft\Office\\ *\<application name>* \Addins\\**
 
     Každá položka v tomto klíči registru je jedinečné ID doplňku VSTO. Obvykle je to název sestavení doplňku VSTO.
 
 2. Aplikace vyhledá `Manifest` položku v položce pro každý doplněk VSTO.
 
-    Spravované doplňky VSTO můžou ukládat úplnou cestu k manifestu v `Manifest` položce **HKEY_CURRENT_USER \software\microsoft\office \\ _\<application name>_ \Addins \\ _\<add-in ID>_ **. Manifest je soubor (obvykle soubor XML), který poskytuje informace, které vám pomůžou při načítání doplňku VSTO.
+    Spravované doplňky VSTO můžou ukládat úplnou cestu k manifestu v `Manifest` položce **HKEY_CURRENT_USER\Software\Microsoft\Office\\ _\<application name>_ \Addins \\ _\<add-in ID>_**. Manifest je soubor (obvykle soubor XML), který poskytuje informace, které vám pomůžou při načítání doplňku VSTO.
 
 3. Pokud aplikace najde `Manifest` záznam, aplikace se pokusí načíst spravovanou komponentu zavaděče doplňku VSTO. Aplikace to provede tím, že se pokusí vytvořit objekt modelu COM, který implementuje rozhraní IManagedAddin –.
 

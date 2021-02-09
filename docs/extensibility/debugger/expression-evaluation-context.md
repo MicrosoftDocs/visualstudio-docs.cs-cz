@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a2fd3758-09bd-45ae-8ecc-2d276c0036ba
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26705b32628a9bd9ecc79489e2552f2d7e537273
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 127746b06ef09496ef8f50aa874ff32e2f983f65
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96559677"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921536"
 ---
 # <a name="expression-evaluation-context"></a>Kontext vyhodnocení výrazu
 V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění je **kontext vyhodnocení výrazu**:
@@ -30,6 +30,6 @@ V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění je **kon
 
      V případě `BSTR` rozhraní a rozhraní [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) může ladicí stroj (de) vytvořit rozhraní [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) pomocí analýzy výrazu. `IDebugExpression2`Rozhraní de může získat hodnotu prostřednictvím synchronního nebo asynchronního vyhodnocení výrazu. Tato hodnota, společně s názvem a typem proměnné nebo argumentu, se pošle na IDE pro zobrazení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní pro vyhodnocení výrazu](../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 - [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md)

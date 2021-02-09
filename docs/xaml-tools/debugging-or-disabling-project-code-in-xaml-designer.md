@@ -7,13 +7,13 @@ ms.topic: how-to
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: 8a5db556bfc9106bb18a6ef9d4d5e3e1aa893cc3
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+manager: jmartens
+ms.openlocfilehash: e03c33de81727c333db8f662232e669e37e78f59
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796742"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921758"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>Ladění nebo zakázání kódu projektu v Návrháři XAML
 
@@ -55,7 +55,7 @@ Když je kód projektu zakázán, Visual Studio zobrazí zástupné symboly. Nap
 
 5. Nastavte zarážku v kódu projektu.
 
-6. V nové instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **ladit**  >  **připojení k procesu** .
+6. V nové instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **ladit**  >  **připojení k procesu**.
 
 7. V dialogovém okně **připojit k procesu** vyberte v seznamu **procesy k dispozici** možnost **XDesProc.exe** a pak klikněte na tlačítko **připojit** .
 
@@ -63,7 +63,7 @@ Když je kód projektu zakázán, Visual Studio zobrazí zástupné symboly. Nap
 
      To je proces pro návrháře XAML v první instanci sady Visual Studio.
 
-8. V první instanci sady Visual Studio, na panelu nabídek vyberte **ladit**  >  **Spustit ladění** .
+8. V první instanci sady Visual Studio, na panelu nabídek vyberte **ladit**  >  **Spustit ladění**.
 
      Nyní můžete krokovat kód, který je spuštěn v návrháři.
 
@@ -92,11 +92,11 @@ Když je kód projektu zakázán, Visual Studio zobrazí zástupné symboly. Nap
 
 V Návrháři XAML můžete změnit možnosti zobrazení ovládacího prvku tak, aby zobrazovaly pouze ovládací prvky platformy z Windows SDK. To může zlepšit spolehlivost návrháře XAML.
 
-Chcete-li změnit možnosti zobrazení ovládacího prvku, klikněte na ikonu v levém dolním rohu okna návrháře a potom vyberte možnost v části **Možnosti zobrazení ovládacího prvku** :
+Chcete-li změnit možnosti zobrazení ovládacího prvku, klikněte na ikonu v levém dolním rohu okna návrháře a potom vyberte možnost v části **Možnosti zobrazení ovládacího prvku**:
 
 ![Možnosti zobrazení ovládacího prvku](media/control_display_options.png)
 
-Když vyberete **pouze ovládací prvky zobrazení platformy** , všechny vlastní ovládací prvky přicházející ze sady SDK, uživatelské ovládací prvky zákazníka a další nebudou vykresleny úplně. Místo toho jsou nahrazeni záložními ovládacími prvky, aby ukázaly velikost a polohu ovládacího prvku.
+Když vyberete **pouze ovládací prvky zobrazení platformy**, všechny vlastní ovládací prvky přicházející ze sady SDK, uživatelské ovládací prvky zákazníka a další nebudou vykresleny úplně. Místo toho jsou nahrazeni záložními ovládacími prvky, aby ukázaly velikost a polohu ovládacího prvku.
 
 ## <a name="see-also"></a>Viz také
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 17ebc340-8170-4aff-bf54-dc4548c83632
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c4f4da7070af09937af9e047ec83142584942e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41cb409495b28b7dc2bc796859da413a32b90d85
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739333"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921626"
 ---
 # <a name="asynctaskmethodbuilderlttresultgt-structure---internal-members"></a>AsyncTaskMethodBuilder &lt; TResult &gt; – Struktura – interní členové
 Toto téma popisuje interní členy <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> třídy. Obecné informace o této třídě naleznete v <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> referenčním tématu.
@@ -37,7 +37,7 @@ Toto téma popisuje interní členy <xref:System.Runtime.CompilerServices.AsyncT
 
 ## <a name="internal-members"></a>Interní členové
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |[Vlastnost ObjectIdForDebugger –](../../extensibility/debugger/asynctaskmethodbuilder-tresult-objectidfordebugger-property.md)|Získává objekt, který lze použít k jednoznačné identifikaci tohoto tvůrce do ladicího programu.|
 |[m_task pole](../../extensibility/debugger/asynctaskmethodbuilder-tresult-m-task-field.md)|Představuje inicializovaný vytvořenou úlohu laxně vytvářená.|

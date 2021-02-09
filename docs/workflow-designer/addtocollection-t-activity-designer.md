@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: f7fc0702-164e-4370-8946-bb2f9f9384b7
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d1592eab528f2312a9ad90dec02354814d6a81c3
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 18811199cce88c5d57332ced99763b4f6233da8d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96993247"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920183"
 ---
 # <a name="addtocollectiont-activity-designer"></a>Návrhář aktivity AddToCollection\<T>
 
@@ -46,7 +46,7 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.AddToCo
 
 ## <a name="see-also"></a>Viz také
 
-- [Collection (Kolekce)](../workflow-designer/collection-activity-designers.md)
+- [Kolekce](../workflow-designer/collection-activity-designers.md)
 - [\<T>Návrhář aktivity AddToCollection](../workflow-designer/addtocollection-t-activity-designer.md)
 - [ClearCollection\<T>](../workflow-designer/clearcollection-t-activity-designer.md)
 - [ExistsInCollection\<T>](../workflow-designer/existsincollection-t-activity-designer.md)

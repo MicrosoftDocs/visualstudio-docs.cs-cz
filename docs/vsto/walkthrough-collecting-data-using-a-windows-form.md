@@ -14,15 +14,15 @@ helpviewer_keywords:
 - worksheets [Office development in Visual Studio], collecting data
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 58d6f58f732d4a52aade6ff3678842900f1c29cd
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: e8c88bbf529da8e07976c012d40ca59e5f1e5626
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527167"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920373"
 ---
 # <a name="walkthrough-collect-data-by-using-a-windows-form"></a>Návod: shromáždění dat pomocí formuláře Windows
   Tento návod ukazuje, jak otevřít formulář Windows z přizpůsobení na úrovni dokumentu pro systém Microsoft Office Excel, shromažďovat informace od uživatele a zapisovat tyto informace do buňky listu.
@@ -31,7 +31,7 @@ ms.locfileid: "97527167"
 
  I když tento návod používá pro Excel konkrétně projekt na úrovni dokumentu, koncepce znázorněné v tomto návodu se vztahují na jiné projekty Office.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

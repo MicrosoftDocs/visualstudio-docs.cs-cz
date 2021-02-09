@@ -6,17 +6,17 @@ ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cd8ebd706d9228d23eb5d5ce3b1429063bae55e5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: db5a8857a6b6610fdc60b05158379ef69995ddf3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72289716"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920748"
 ---
 # <a name="step-6-work-with-git"></a>Krok 6: práce s Git
 
@@ -50,7 +50,7 @@ Tento článek obsahuje základní přehled o vytvoření místního úložišt�
 
 1. Výběr ovládacího prvku Git s názvem úložiště (**CosineWave** na předchozím obrázku) **Team Explorer** zobrazuje rozhraní **připojení** , se kterým můžete úplně rychle přepnout na jiné úložiště.
 
-1. Při použití místního úložiště přejde potvrzené změny přímo do úložiště. Pokud jste připojení ke vzdálenému úložišti, vyberte v **Team Explorer**záhlaví rozevíracího seznamu, zvolte **synchronizovat** , abyste přešli na oddíl **synchronizace** , a pracujte s uvedenými příkazy pro **vyžádání** a **načtení** .
+1. Při použití místního úložiště přejde potvrzené změny přímo do úložiště. Pokud jste připojení ke vzdálenému úložišti, vyberte v **Team Explorer** záhlaví rozevíracího seznamu, zvolte **synchronizovat** , abyste přešli na oddíl **synchronizace** , a pracujte s uvedenými příkazy pro **vyžádání** a **načtení** .
 
 ## <a name="go-deeper"></a>Přejít hlouběji
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0ddb05a3-8c6b-448b-8488-2751c1e5abcc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 63462aedfb1d7a2c03fe6ff5d59495358c52194e
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 809af327fc2bb608647a76575736bd0e2b00c5b2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722383"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99922037"
 ---
 # <a name="ui-processing-time"></a>Doba zpracování uživatelského rozhraní
 Tyto segmenty na časové ose jsou přidruženy k době blokování, které jsou zařazeny do kategorie jako zpracování uživatelského rozhraní. To znamená, že vlákno provádí pumpu zpráv systému Windows nebo jiné fungování uživatelského rozhraní (UI). Během této doby bylo vlákno zablokováno v rozhraní API, které se v nástroji Vizualizátor souběžnosti počítá jako zpracování uživatelského rozhraní. `GetMessage()`Do této skupiny patří rozhraní API, například a `MsgWaitForMultipleObjects()` .

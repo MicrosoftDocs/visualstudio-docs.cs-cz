@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c85d0968-9f22-4d69-87f4-acca2ae777b8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a713b6db074586898ff72cd8595c4cc0d20d99cf
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 024926123e8a9967947d11635558eb6ea06077cb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98149518"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921671"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>Postupy: Nastavení názvu vlákna v nativním kódu
 Pojmenování vlákna je možné v libovolné verzi sady Visual Studio. Pojmenovávání vláken je užitečné pro identifikaci podprocesů zájmu v okně **vlákna** při ladění spuštěného procesu. Rozpoznatelně pojmenovaná vlákna můžou být užitečná také při provádění ladění po porážce prostřednictvím kontroly výpisu stavu systému a při analýze zachycení výkonu pomocí různých nástrojů.

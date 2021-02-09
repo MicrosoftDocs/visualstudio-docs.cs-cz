@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 3e84e513-dc64-40bb-b385-03281f28b519
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 611c31027bd725d8a1a98e6cb2e76d544743c811
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: d40ce1ff5f66b2d04425d116d84dc7aa40571b08
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722747"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99922226"
 ---
 # <a name="performance-report-views"></a>Zobrazení sestav výkonu
 V této části najdete referenční informace k sestavám a zobrazením [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci. Zobrazení datových souborů profilování se zobrazí v [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] integrovaném vývojovém environmentIDE. Sestavy jsou generovány nástrojem příkazového řádku [VSPerfReport](../profiling/vsperfreport.md) .

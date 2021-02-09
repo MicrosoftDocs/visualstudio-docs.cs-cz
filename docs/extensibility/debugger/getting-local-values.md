@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a10b0764-65ac-476f-bf42-b4a9c38e20de
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4287bb726ca4b64bc939c12098ca0fc98948931
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 64b3d4876622aabc831c0142a041964aa8dfe807
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96559976"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921255"
 ---
 # <a name="get-local-values"></a>Získat místní hodnoty
 > [!IMPORTANT]
@@ -440,7 +440,7 @@ HRESULT FieldGetValue( in IDebugField* pfield, out VARIANT* pvarValue )
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ukázková implementace místních hodnot](../../extensibility/debugger/sample-implementation-of-locals.md)
 - [Získat místní vlastnosti](../../extensibility/debugger/getting-local-properties.md)
 - [Kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md)

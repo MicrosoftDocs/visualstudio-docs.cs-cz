@@ -5,17 +5,17 @@ ms.date: 09/18/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6b611657db104a4b74e784df8925627ff41f3c33
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd63d927e41a8b360eb7d934693bb3c83a30ea4f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535321"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920659"
 ---
 ## <a name="select-the-test-framework-for-a-python-project"></a>Výběr testovacího rozhraní pro projekt v Pythonu
 
@@ -76,7 +76,7 @@ Ve výchozím nastavení Visual Studio identifikuje **UnitTest** a **pytest** te
    > [!Note]
    > Pokud používáte pytest Framework, můžete zadat umístění testu a vzory názvů souborů pomocí standardního konfiguračního souboru pytest. ini. Ve výchozím nastavení se používá složka pracovního prostoru nebo projektu se vzorem `test_*py` a `*_test.py` . Další podrobnosti najdete v [referenční dokumentaci k pytest](https://docs.pytest.org/en/latest/reference.html#ini-options-ref) .
 
-1. Po výběru rozhraní klikněte znovu pravým tlačítkem na projekt a vyberte **Přidat**  >  **novou položku**a pak vyberte **Test jednotky Pythonu** a potom klikněte na **Přidat**.
+1. Po výběru rozhraní klikněte znovu pravým tlačítkem na projekt a vyberte **Přidat**  >  **novou položku** a pak vyberte **Test jednotky Pythonu** a potom klikněte na **Přidat**.
 
 1. Tato akce vytvoří soubor *test_1. py* s kódem, který importuje standardní `unittest` modul, odvodí testovací třídu z `unittest.TestCase` a vyvolá, `unittest.main()` Pokud spouštíte skript přímo:
 
@@ -130,7 +130,7 @@ Testy spuštěné na pozadí a **Průzkumník testů** aktualizují stav každé
 Vzhledem k tomu, že testy jednotek jsou části kódu, podléhají chybám stejně jako jakýkoli jiný kód a občas je nutné spustit v ladicím programu. V ladicím programu můžete nastavit zarážky, kontrolovat proměnné a krokovat kód. Visual Studio také poskytuje diagnostické nástroje pro testování částí.
 
 > [!Note]
-> Ve výchozím nastavení používá test ladění pro Visual Studio 2017 ladicí program ptvsd 4 (verze 15,8 a novější) a debugpy pro Visual Studio 2019 (verze 16,5 a novější). Pokud místo toho chcete použít ptvsd 3, můžete vybrat možnost **použít starší verzi ladicího programu** pro **nástroje**s  >  **možnostmi**  >  ladění v**Pythonu**  >  **Debugging**. 
+> Ve výchozím nastavení používá test ladění pro Visual Studio 2017 ladicí program ptvsd 4 (verze 15,8 a novější) a debugpy pro Visual Studio 2019 (verze 16,5 a novější). Pokud místo toho chcete použít ptvsd 3, můžete vybrat možnost **použít starší verzi ladicího programu** pro **nástroje** s  >  **možnostmi**  >  ladění v **Pythonu**  >  . 
 
 Chcete-li spustit ladění, nastavte počáteční zarážku v kódu, potom klikněte pravým tlačítkem na test (nebo na výběr) v **Průzkumníku testů** a vyberte možnost **ladit vybrané testy**. Visual Studio spustí ladicí program Pythonu jako kód aplikace.
 

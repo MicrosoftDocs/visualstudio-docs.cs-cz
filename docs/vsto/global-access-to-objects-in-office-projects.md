@@ -29,15 +29,15 @@ helpviewer_keywords:
 - ThisAddIn_Shutdown
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e2653f314edf07c4dcca6d3afc74af64c548af35
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 5786ea4bdd0dd6f4c92284aaf9cff2a3c95e4231
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846386"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920491"
 ---
 # <a name="global-access-to-objects-in-office-projects"></a>Globální přístup k objektům v projektech pro systém Office
   Při vytváření projektu sady Office sada Visual Studio automaticky generuje třídu s názvem `Globals` v projektu. Třídu můžete použít `Globals` pro přístup k několika různým projektovým položkám v době běhu z libovolného kódu v projektu.

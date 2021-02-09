@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Custom tab [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e81d20dc179df76b759223c1460ca13bfceb5706
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 569a3bea98095afebb243c521db02410879b0b59
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524885"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920353"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-ribbon-xml"></a>Návod: Vytvoření vlastní karty pomocí kódu XML pásu karet
   Tento návod ukazuje, jak vytvořit vlastní kartu pásu karet pomocí položky **pásu karet (XML)** .
@@ -40,7 +40,7 @@ ms.locfileid: "97524885"
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

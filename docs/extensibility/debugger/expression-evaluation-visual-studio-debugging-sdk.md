@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 5044ced5-c18c-4534-b0bf-cc3e50cd57ac
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c398d9eb79a6b5fcd1a6851596ab8913faf32fa
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 772d38b328eca1e0afb6ff48a5ad580d01939527
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560886"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921478"
 ---
 # <a name="expression-evaluation-visual-studio-debugging-sdk"></a>Vyhodnocení výrazu (sada SDK pro ladění sady Visual Studio)
 Během režimu přerušení musí IDE vyhodnotit jednoduché výrazy, které obsahují několik proměnných programu. Aby bylo možné provést vyhodnocení, musí modul ladění (DE) analyzovat a vyhodnocovat výraz, který je zadán v jednom z oken rozhraní IDE.
@@ -40,5 +40,5 @@ Během režimu přerušení musí IDE vyhodnotit jednoduché výrazy, které obs
 
  Synchronní a asynchronní vyhodnocení vyžaduje implementaci metody [IDebugProperty2:: GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) . Vyhodnocení asynchronního výrazu vyžaduje implementaci [IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Řízení provádění a vyhodnocení stavu](../../extensibility/debugger/execution-control-and-state-evaluation.md)

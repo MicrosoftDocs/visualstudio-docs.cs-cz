@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 7279dc16-db14-482c-86b8-7b3da5a581d2
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: af5dc1007a4624a24bef59dd822f6e9fe3861551
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: ed8db28a7196551e2f1c8236d71e0f2291fce934
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96559651"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921509"
 ---
 # <a name="exception-handling-visual-studio-sdk"></a>Zpracování výjimek (Visual Studio SDK)
 Následující článek popisuje proces, ke kterému dochází, když jsou vyvolány výjimky.
@@ -50,5 +50,5 @@ Následující článek popisuje proces, ke kterému dochází, když jsou vyvol
 
 10. Pokud metoda vrátí S_OK, volání `IDebugExceptionEvent2::PassToDebuggee` .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Události ladicího programu volání](../../extensibility/debugger/calling-debugger-events.md)

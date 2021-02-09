@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 1bccaeb3-8109-4128-ae79-16fd8fbbaaa2
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b936b465c3a7becbdcb3ea4f36a16b839260ad74
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: d7527c361a889d5aa1f19ec7a211f8aeb8dcbd15
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560145"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921390"
 ---
 # <a name="expression-evaluator-implementation-strategy"></a>Strategie implementace vyhodnocovacího filtru výrazů
 > [!IMPORTANT]
@@ -31,6 +31,6 @@ ms.locfileid: "96560145"
 
  Metoda [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) by měla být implementována jako další. Ladicí stroj (DE) volá tuto metodu, aby získal seznam místních proměnných a argumentů předáním `IDebugProperty2::EnumChildren` `guidFilter` argumentu `guidFilterLocalsPlusArgs` . `IDebugProperty2::EnumChildren` zavolá [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) a [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md)a zkombinuje výsledky do jednoho výčtu. Další podrobnosti najdete v tématu [zobrazení místních](../../extensibility/debugger/displaying-locals.md) hodnot.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Implementace vyhodnocovacího filtru výrazů](../../extensibility/debugger/implementing-an-expression-evaluator.md)
 - [Zobrazit místní hodnoty](../../extensibility/debugger/displaying-locals.md)

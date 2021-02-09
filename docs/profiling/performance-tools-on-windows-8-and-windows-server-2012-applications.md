@@ -6,16 +6,16 @@ ms.date: 06/19/2017
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ce83684b77d4546915cdcf5980e68be0b6c6a125
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: a6060b61f388b4db4e9284a96f5d924a84a76210
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719588"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99922057"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Nástroje pro výkon v aplikacích pro Windows 8 a Windows Server 2012
 
@@ -66,7 +66,7 @@ Tyto funkce profilování a možnosti se nepodporují při profilování aplikac
 
 K shromažďování dat profilování na zařízeních se systémem Windows 8 a Windows Server 2012 můžete použít dva nástroje příkazového řádku, včetně zařízení, která nemají instalaci sady Visual Studio:
 
-|Název nástroje|Popis|
+|Název nástroje|Description|
 |---------------|-----------------|
 |[VSPerf](../profiling/vsperf.md)|Shromažďuje data profilování z aplikací pro UWP a shromažďuje ukázková data profilování z aplikací pro stolní počítače s Windows 8 a aplikací Windows Server 2012.|
 |[VSPerfCmd](../profiling/vsperfcmd.md)|Shromažďuje data profilace, souběžnosti a interakce vrstev z aplikací, které běží v theWindows 8 Desktop nebo Windows Serveru 2012. Shromažďuje všechny typy dat profilování z předchozích verzí Windows.|
