@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: acfcabed-9f2f-436c-ad18-7ca2f45d631b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8d266bb97b6d3086a8f5b74100f5821a5cfca3af
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: fa9f244ec60e336e9a7596ff839842211d516b7d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914449"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930808"
 ---
 # <a name="breakpoints-visual-studio-sdk"></a>Zarážky (Visual Studio SDK)
 Existují tři typy zarážek: nevyřízené, vázané a chybové.

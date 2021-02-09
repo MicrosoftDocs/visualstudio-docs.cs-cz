@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Prerequisites dialog box
 author: Mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e7384bad2096f98a646487d5d97eed3d387c7de1
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 78d5f4f00a81fccf573e69797b9d528ee61ffdc5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349227"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932056"
 ---
 # <a name="prerequisites-dialog-box"></a>dialogové okno Požadavky
 
@@ -27,13 +27,13 @@ Dialogové okno **požadavky** určuje, které požadované součásti jsou nain
 
 ![Dialogové okno požadavky v aplikaci Visual Studio](media/prerequisites-dialog-box.png)
 
-Chcete-li získat přístup k dialogovému oknu, vyberte uzel projektu v **Průzkumník řešení** a **Project** pak vyberte  >  **vlastnosti** projektu. Když se zobrazí **Návrhář projektu** , vyberte kartu **publikovat** a pak vyberte **požadované součásti**. Pro projekty instalace klikněte v nabídce **projekt** na příkaz **vlastnosti**. Když se zobrazí dialogové okno **stránky vlastností** , klikněte na **požadavky**.
+Chcete-li získat přístup k dialogovému oknu, vyberte uzel projektu v **Průzkumník řešení** a pak vyberte  >  **vlastnosti** projektu. Když se zobrazí **Návrhář projektu** , vyberte kartu **publikovat** a pak vyberte **požadované součásti**. Pro projekty instalace klikněte v nabídce **projekt** na příkaz **vlastnosti**. Když se zobrazí dialogové okno **stránky vlastností** , klikněte na **požadavky**.
 
 ## <a name="uielement-list"></a>UIElement – seznam
 
 |Element|Popis|
 |-------------|-----------------|
-|**Vytvoření instalačního programu pro instalaci požadovaných součástí**|Zahrnuje požadované součásti v instalačním programu aplikace ( *Setup.exe* ) tak, aby byly nainstalovány před vaší aplikací v závislosti na závislosti. Tato možnost je vybrána ve výchozím nastavení. Pokud není vybráno, není vytvořena žádná *Setup.exe* .|
+|**Vytvoření instalačního programu pro instalaci požadovaných součástí**|Zahrnuje požadované součásti v instalačním programu aplikace (*Setup.exe*) tak, aby byly nainstalovány před vaší aplikací v závislosti na závislosti. Tato možnost je vybrána ve výchozím nastavení. Pokud není vybráno, není vytvořena žádná *Setup.exe* .|
 |**Vyberte požadavky pro instalaci.**|Určuje, jestli se mají nainstalovat komponenty, jako jsou .NET Framework a běhové knihovny C++.<br /><br />Například zaškrtnutím políčka vedle **SQL Server 2012 Express** zadáte, že instalační program musí ověřit, zda je tato součást nainstalována na cílovém počítači, a nainstalovat ji, pokud není.<br /><br />Podrobné informace o každém balíčku předpokladů najdete v tématu [informace o požadavcích](#prerequisites-information).|
 |**Stáhnout požadavky z webu dodavatele součásti**|Určuje, že požadované součásti budou nainstalovány z webu dodavatele. Toto je výchozí možnost.|
 |**Stáhnout požadavky ze stejného umístění jako moje aplikace**|Určuje, že požadované součásti budou nainstalovány ze stejného umístění jako aplikace. Tím se zkopírují všechny požadované balíčky do umístění pro publikování. Tato možnost bude fungovat, pouze pokud jsou balíčky požadovaných součástí ve vývojovém počítači.|

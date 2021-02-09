@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f3b2db8eb0bd2f85a052c9c172b33b179382d168
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 1d276711e07dfe08b0efda0142089b7807a5509c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437648"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931224"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>Klávesové zkratky v návrháři postupu provádění
 

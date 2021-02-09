@@ -5,33 +5,33 @@ ms.date: 11/12/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4a735c374216b1810b3abd99ffab89000cec8b8f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52eb7535430248f519654c09924541a6900336cc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85540917"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933086"
 ---
 # <a name="install-debugging-symbols-for-python-interpreters"></a>Nainstalovat symboly ladění pro překladače Pythonu
 
-Aby bylo možné zajistit úplné ladění, potřebuje [ladicí program Pythonu ve smíšeném režimu](debugging-mixed-mode-c-cpp-python-in-visual-studio.md) v aplikaci Visual Studio symboly ladění pro interpret Pythonu, který se používá k analýze mnoha vnitřních datových struktur. Pro *python27.dll*například odpovídající soubor symbolů je *python27. pdb*; pro *python36.dll*je soubor symbolů *python36. pdb*. Každá verze překladače také poskytuje soubory symbolů pro nejrůznější moduly.
+Aby bylo možné zajistit úplné ladění, potřebuje [ladicí program Pythonu ve smíšeném režimu](debugging-mixed-mode-c-cpp-python-in-visual-studio.md) v aplikaci Visual Studio symboly ladění pro interpret Pythonu, který se používá k analýze mnoha vnitřních datových struktur. Pro *python27.dll* například odpovídající soubor symbolů je *python27. pdb*; pro *python36.dll* je soubor symbolů *python36. pdb*. Každá verze překladače také poskytuje soubory symbolů pro nejrůznější moduly.
 
-V rámci sady Visual Studio 2017 nebo novější překladače Python 3 a Anaconda 3 automaticky instalují příslušné symboly a aplikace Visual Studio tyto symboly vyhledá automaticky. Pro Visual Studio 2015 a starší nebo při použití jiných překladačů je potřeba stáhnout symboly samostatně a pak na ně Ukázat Visual Studio pomocí **Tools**  >  dialogového okna**Možnosti** nástrojů na **Debugging**  >  kartě**symboly** ladění. Tyto kroky jsou podrobně popsané v následujících částech.
+V rámci sady Visual Studio 2017 nebo novější překladače Python 3 a Anaconda 3 automaticky instalují příslušné symboly a aplikace Visual Studio tyto symboly vyhledá automaticky. Pro Visual Studio 2015 a starší nebo při použití jiných překladačů je potřeba stáhnout symboly samostatně a pak na ně Ukázat Visual Studio pomocí   >  dialogového okna **Možnosti** nástrojů na   >  kartě **symboly** ladění. Tyto kroky jsou podrobně popsané v následujících částech.
 
 Visual Studio vás může vyzvat, když potřebuje symboly, obvykle při spuštění relace ladění ve smíšeném režimu. V takovém případě se zobrazí dialogové okno se dvěma možnostmi:
 
-- **Otevření dialogového okna nastavení symbolů** otevře dialogové okno **Možnosti** na **Debugging**  >  kartě**symboly** ladění.
-- **Stáhnout symboly pro interpreta** otevře tuto současnou stránku dokumentace. v takovém případě vyberte **Tools**  >  **Možnosti** nástrojů a přejděte na kartu **Debugging**  >  **symboly** ladění a pokračujte.
+- **Otevření dialogového okna nastavení symbolů** otevře dialogové okno **Možnosti** na   >  kartě **symboly** ladění.
+- **Stáhnout symboly pro interpreta** otevře tuto současnou stránku dokumentace. v takovém případě vyberte   >  **Možnosti** nástrojů a přejděte na kartu   >  **symboly** ladění a pokračujte.
 
     ![Výzva k zobrazení symbolů ladicího programu ve smíšeném režimu](media/mixed-mode-debugging-symbols-required.png)
 
 ## <a name="download-symbols"></a>Stáhnout symboly
 
-- Python 3,5 a novější: Získejte symboly ladění prostřednictvím instalačního programu Pythonu. Vyberte možnost **vlastní instalace**, pro získání **pokročilých možností**vyberte **Další** a potom zaškrtněte políčka **stáhnout symboly ladění** a **stáhnout binární soubory ladění**:
+- Python 3,5 a novější: Získejte symboly ladění prostřednictvím instalačního programu Pythonu. Vyberte možnost **vlastní instalace**, pro získání **pokročilých možností** vyberte **Další** a potom zaškrtněte políčka **stáhnout symboly ladění** a **stáhnout binární soubory ladění**:
 
     ![Instalační program Python 3. x včetně symbolů ladění](media/mixed-mode-debugging-symbols-installer35.png)
 
@@ -40,7 +40,7 @@ Visual Studio vás může vyzvat, když potřebuje symboly, obvykle při spušt�
 - Python 3.4. x a starší: symboly jsou k dispozici jako soubory ke stažení s *příponou. zip* z [oficiálních distribucí](#official-distributions) nebo [Enthought zápoje](#enthought-canopy). Po stažení souborů rozbalte soubory do místní složky, aby bylo možné pokračovat, jako je například složka *symbolů* ve složce Python.
 
     > [!Important]
-    > Symboly se liší mezi vedlejšími sestaveními Pythonu a mezi 32 a 64 sestaveními, takže chcete přesně odpovídat verzi. Chcete-li zjistit, který překladač se používá, rozbalte *uzel* **prostředí Pythonu** pod projektem v **Průzkumník řešení** a poznamenejte si název prostředí. Pak přepněte do okna **prostředí Pythonu** *window* a poznamenejte si umístění instalace. Pak otevřete příkazové okno v tomto umístění a spusťte *python.exe*, které zobrazuje přesnou verzi a zda je 32 nebo 64-bit.
+    > Symboly se liší mezi vedlejšími sestaveními Pythonu a mezi 32 a 64 sestaveními, takže chcete přesně odpovídat verzi. Chcete-li zjistit, který překladač se používá, rozbalte *uzel* **prostředí Pythonu** pod projektem v **Průzkumník řešení** a poznamenejte si název prostředí. Pak přepněte do okna **prostředí Pythonu**  a poznamenejte si umístění instalace. Pak otevřete příkazové okno v tomto umístění a spusťte *python.exe*, které zobrazuje přesnou verzi a zda je 32 nebo 64-bit.
 
 - Pro všechny ostatní distribuce Pythonu třetích stran, jako je ActiveState Python: kontaktujte autory této distribuce a požádejte je, aby vám poskytli symboly. WinPython v rámci své součásti zahrnuje standardní interpret Pythonu beze změn, takže pro odpovídající číslo verze použijte symboly z oficiální distribuce.
 
@@ -48,7 +48,7 @@ Visual Studio vás může vyzvat, když potřebuje symboly, obvykle při spušt�
 
 Pokud jste stáhli symboly samostatně, postupujte podle následujících kroků, abyste je měli v programu Visual Studio. Pokud jste nainstalovali symboly prostřednictvím instalačního programu Python 3,5 nebo novějšího, Visual Studio je automaticky najde.
 
-1. Vyberte nabídku **Tools**  >  **Možnosti** nástrojů a přejděte na symboly **ladění**  >  **Symbols**.
+1. Vyberte nabídku   >  **Možnosti** nástrojů a přejděte na symboly **ladění**  >  .
 
 1. Na panelu nástrojů vyberte tlačítko **Přidat** (viz níže), zadejte složku, do které jste rozšířili stažené symboly (kde se nachází soubor *Python. pdb* , například *c:\python34\Symbols*, viz níže), a vyberte **OK**.
 
@@ -61,7 +61,7 @@ Pokud jste stáhli symboly samostatně, postupujte podle následujících kroků
 
 ## <a name="official-distributions"></a>Oficiální distribuce
 
-| Verze Pythonu | Soubory ke stažení |
+| Python version (Verze Pythonu) | Soubory ke stažení |
 | --- | --- |
 | 3,5 a novější | Nainstalujte symboly prostřednictvím instalačního programu Pythonu. |
 | 3.4.4 | [32 – bit](https://www.python.org/ftp/python/3.4.4/python-3.4.4-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64-pdb.zip) |
@@ -72,7 +72,7 @@ Pokud jste stáhli symboly samostatně, postupujte podle následujících kroků
 | 3.3.5 | [32 – bit](https://www.python.org/ftp/python/3.3.5/python-3.3.5-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/3.3.5/python-3.3.5.amd64-pdb.zip) |
 | 3.3.4 | [32 – bit](https://www.python.org/ftp/python/3.3.4/python-3.3.4-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/3.3.4/python-3.3.4.amd64-pdb.zip) |
 | body | [32 – bit](https://www.python.org/ftp/python/3.3.3/python-3.3.3-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/3.3.3/python-3.3.3.amd64-pdb.zip) |
-| bodě | [32 – bit](https://www.python.org/ftp/python/3.3.2/python-3.3.2-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/3.3.2/python-3.3.2.amd64-pdb.zip) |
+| 3.3.2 | [32 – bit](https://www.python.org/ftp/python/3.3.2/python-3.3.2-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/3.3.2/python-3.3.2.amd64-pdb.zip) |
 | 3.3.1 | [32 – bit](https://www.python.org/ftp/python/3.3.1/python-3.3.1-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/3.3.1/python-3.3.1.amd64-pdb.zip) |
 | 3.3.0 | [32 – bit](https://www.python.org/ftp/python/3.3.0/python-3.3.0-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/3.3.0/python-3.3.0.amd64-pdb.zip) |
 | 2.7.15 | [32 – bit](https://www.python.org/ftp/python/2.7.15/python-2.7.15-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/2.7.15/python-2.7.15.amd64-pdb.zip) |

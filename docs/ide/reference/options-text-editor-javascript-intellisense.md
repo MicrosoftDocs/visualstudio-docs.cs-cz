@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: b4a9816d-cf87-4dc6-a8d4-1591d6a48103
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 41256882433bc95db7af380d27cc8dc63fbcd387
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: 051711a9d6dfe861f37e741ae9ecabfbf741012e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947723"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932355"
 ---
 # <a name="options-dialog-box-text-editor--javascript--intellisense"></a>Dialogové okno Možnosti: textový editor \> JavaScript \> IntelliSense
 
-Stránka **IntelliSense** v dialogovém okně **Možnosti** slouží k úpravě nastavení, která mají vliv na chování technologie IntelliSense pro JavaScript. Stránku **IntelliSense** můžete otevřít výběrem **Tools**  >  **možností** nástroje na panelu nabídek a následným rozbalením **textového editoru**  >  **JavaScript/TypeScript**  >  **IntelliSense.**
+Stránka **IntelliSense** v dialogovém okně **Možnosti** slouží k úpravě nastavení, která mají vliv na chování technologie IntelliSense pro JavaScript. Stránku **IntelliSense** můžete otevřít výběrem   >  **možností** nástroje na panelu nabídek a následným rozbalením **textového editoru**  >  **JavaScript/TypeScript**  >  **IntelliSense.**
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -40,7 +40,7 @@ Tyto možnosti slouží ke změně chování při doplňování výrazů technol
 
 Když zaškrtnete toto políčko, Editor kódu JavaScript připojí příkazy s položkami vybranými v seznamu pro doplňování až po výběru **karty** nebo klávesy **ENTER** . Když zrušíte zaškrtnutí tohoto políčka, ostatní znaky – například tečka, čárka, dvojtečka, Otevírací závorka a levá složená závorka ({) – mohou také připojit příkazy s vybranými položkami.
 
-## <a name="references"></a>Odkazy
+## <a name="references"></a>Reference
 
 Pomocí těchto možností lze určit typy souborů .js technologie IntelliSense, které jsou v oboru pro různé typy projektů jazyka JavaScript. Reference IntelliSense se zpravidla používají k zajištění podpory IntelliSense pro globální objekty. Tato stránka navíc umožňuje nastavit pořadí načítání skriptů, které musejí být načteny při spuštění, a přidat soubory s rozšířením IntelliSense.
 
@@ -62,7 +62,7 @@ Pomocí předdefinovaných referenčních skupin můžete určit, že konkrétn�
 
 **Zahrnuté soubory**
 
-Tato možnost určuje pořadí, v jakém se soubory načítají do kontextu jazykové služby. Pořadí můžete nakonfigurovat pomocí tlačítek **Odebrat**, **Přesunout nahoru**a **Přesunout dolů** . Aby technologie IntelliSense správně fungovala, musí se po určení souboru načíst soubor, který je na něm závislý.
+Tato možnost určuje pořadí, v jakém se soubory načítají do kontextu jazykové služby. Pořadí můžete nakonfigurovat pomocí tlačítek **Odebrat**, **Přesunout nahoru** a **Přesunout dolů** . Aby technologie IntelliSense správně fungovala, musí se po určení souboru načíst soubor, který je na něm závislý.
 
 > [!CAUTION]
 > Pokud je objekt definován nepodmíněně ve dvou nebo více implicitních odkazech, použije se k definování tohoto objektu poslední odkaz v tomto seznamu.

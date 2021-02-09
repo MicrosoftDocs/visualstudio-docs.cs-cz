@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: f64d4369-2307-4175-a39a-2e45506f7fa1
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b97b57adb6fd87fa539e9dae7c37d6c5c8f2ddd6
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: be95611d7d1c931e1b349e7a8c6dc0be75c7c832
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134443"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930977"
 ---
 # <a name="how-to-create-and-modify-mip-levels"></a>Postupy: vytváření a úprava úrovní MIP
 Tento dokument ukazuje, jak použít **Editor obrázků** k vygenerování a úpravám *úrovní MIP pro úroveň minimálního* prostoru na úrovni obrazu (LOD).
@@ -27,7 +27,7 @@ Tento dokument ukazuje, jak použít **Editor obrázků** k vygenerování a úp
 
 1. Začněte základní texturou, jak je popsáno v tématu [Postupy: Vytvoření základní textury](../designers/how-to-create-a-basic-texture.md). Nejlepších výsledků dosáhnete, když zadáte texturu, která má šířku a výšku, které mají velikost mocniny dvě, například 256, 512, 1024 a tak dále.
 
-2. Vygenerujte úrovně MIP. Na panelu nástrojů **režim editoru obrázků** vyberte **Rozšířené**  >  **nástroje**  >  **Generovat MIPS** .
+2. Vygenerujte úrovně MIP. Na panelu nástrojů **režim editoru obrázků** vyberte **Rozšířené**  >  **nástroje**  >  **Generovat MIPS**.
 
      Všimněte si, že tlačítka **Přejít na další úroveň MIP** a **Přejít na předchozí úroveň MIP** se teď zobrazují na panelu nástrojů **režim editoru obrázků** . Pokud se zobrazí okno **vlastnosti** , Všimněte si také, že vlastnosti **MIP úrovně MIP** a **počet úrovní MIP** se nyní zobrazí ve vlastnostech obrázku.
 

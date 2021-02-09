@@ -25,19 +25,19 @@ helpviewer_keywords:
 ms.assetid: 727efa8c-3336-40b8-8bef-ae6cbd77a422
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 884cecdcbdbef3320516dd67c43cedd72bc25076
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: a310cd4428232338ed46a8a54502d9956e73be15
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903853"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932007"
 ---
 # <a name="midl-task"></a>MIDL – úloha
 
-Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *midl.exe* . Další informace naleznete v tématu [Reference k příkazovému řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
+Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *midl.exe*. Další informace naleznete v tématu [Reference k příkazovému řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
 
 ## <a name="parameters"></a>Parametry
 
@@ -145,7 +145,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *m
 
      Pokud `true` aplikace kontroluje, zda jsou hodnoty výčtu v povoleném rozsahu.
 
-     Další informace najdete v tématu možnost **/Error enum** v příkazovém řádku Help ( **/?** ) pro *midl.exe* .
+     Další informace najdete v tématu možnost **/Error enum** v příkazovém řádku Help (**/?**) pro *midl.exe*.
 
 - **ErrorCheckRefPointers**
 
@@ -205,7 +205,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *m
 
      Volitelný **logický** parametr.
 
-     Pokud se `true` negeneruje soubor knihovny typů ( *. tlb* ).
+     Pokud se `true` negeneruje soubor knihovny typů (*. tlb*).
 
      Další informace naleznete v tématu možnost **/notlb** v [Referenční příručce příkazového řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
 
@@ -261,7 +261,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *m
 
      Parametr volitelného **řetězce []** .
 
-     Určuje jednu nebo více *definicí* ; To znamená, že název a volitelná hodnota, která má být předána preprocesoru jazyka C, jako by byla `#define` direktivou. Formát každé definice je, *název [= hodnota]* .
+     Určuje jednu nebo více *definicí*; To znamená, že název a volitelná hodnota, která má být předána preprocesoru jazyka C, jako by byla `#define` direktivou. Formát každé definice je, *název [= hodnota]*.
 
      Další informace naleznete v tématu **/d** možnost v [referenci příkazového řádku MIDL](/windows/desktop/Midl/midl-command-line-reference). Viz také parametr **UndefinePreprocessorDefinitions** v této tabulce.
 
@@ -299,7 +299,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *m
 
      Volitelný **řetězcový** parametr.
 
-     Určuje zarovnání ( *úroveň balení* ) struktur v cílovém systému.
+     Určuje zarovnání (*úroveň balení*) struktur v cílovém systému.
 
      Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
@@ -405,7 +405,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *m
 
      Volitelný **řetězcový** parametr.
 
-     Určuje závažnost ( *úroveň upozornění* ) upozornění, která se mají vygenerovat. Nevysílá se žádné upozornění na hodnotu 0. V opačném případě je vygenerováno upozornění, pokud je úroveň upozornění numericky menší nebo rovna zadané hodnotě.
+     Určuje závažnost (*úroveň upozornění*) upozornění, která se mají vygenerovat. Nevysílá se žádné upozornění na hodnotu 0. V opačném případě je vygenerováno upozornění, pokud je úroveň upozornění numericky menší nebo rovna zadané hodnotě.
 
      Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 

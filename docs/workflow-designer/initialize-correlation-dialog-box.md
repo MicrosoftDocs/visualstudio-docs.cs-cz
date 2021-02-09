@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 2a0a1cd3-7b9e-493e-9264-fcf85289ffcf
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a35911fef39315580f402e174b0f32d443a33cf
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: a41511f9bfb381eeb422cc9cf7ec015d55ceff70
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437798"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931510"
 ---
 # <a name="initialize-correlation-dialog-box"></a>Dialogové okno Inicializace korelace
 
@@ -25,7 +25,7 @@ Dialogové okno **inicializovat korelaci** se používá v Návrhář postupu pr
 
 Následující tabulka popisuje prvky uživatelského rozhraní (UI) v dialogovém okně **inicializace korelace** :
 
-|Prvek uživatelského rozhraní (UI)|Popis|
+|Prvek uživatelského rozhraní (UI)|Description|
 |-|-----------------|
 |**Korelace**|Korelace, <xref:System.ServiceModel.Activities.CorrelationHandle> která má být inicializována.|
 |**Inicializovat na**|Pár klíč/hodnota, který obsahuje data k inicializaci. Tato hodnota odpovídá <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> Vlastnosti. Příkladem platného páru klíč/hodnota je klíč pojmenovaný "ČísloObjednávky" spárovaný s proměnnou s názvem KódObjednávky.|

@@ -29,19 +29,19 @@ helpviewer_keywords:
 - multi-caret selection
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 475f0249bd6af8176fba3ecc79ad758cc6ceceb7
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 534d25c97977d058f0b4137955e44e3d544b3878
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006585"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932602"
 ---
 # <a name="find-and-replace-text"></a>Vyhledání a nahrazení textu
 
-Text v editoru sady Visual Studio můžete vyhledat a nahradit pomocí [Najít a nahradit](#find-and-replace-control) (CTRL +**Ctrl** + **F** nebo **CTRL** + **H**) nebo [Najít/nahradit v souborech](#find-in-files-and-replace-in-files) (**CTRL** + **SHIFT** + **F** nebo **CTRL** + **SHIFT** + **H**). Pomocí *[výběru více blikajících kurzorů](#multi-caret-selection)* můžete také vyhledat a nahradit pouze *některé* instance vzoru.
+Text v editoru sady Visual Studio můžete vyhledat a nahradit pomocí [Najít a nahradit](#find-and-replace-control) (CTRL + +  nebo **CTRL** + **H**) nebo [Najít/nahradit v souborech](#find-in-files-and-replace-in-files) (**CTRL** + **SHIFT** + **F** nebo **CTRL** + **SHIFT** + **H**). Pomocí *[výběru více blikajících kurzorů](#multi-caret-selection)* můžete také vyhledat a nahradit pouze *některé* instance vzoru.
 
 > [!TIP]
 > Pokud přejmenováváte symboly kódu, jako jsou proměnné a metody, je lepší je *[Refaktorovat](../ide/reference/rename.md)* , než použití hledání a nahrazení. Refaktoring je inteligentní a pochopení rozsahu, zatímco v rámci hledání a nahrazení jsou všechny instance.
@@ -56,7 +56,7 @@ Můžete určit rozsah hledání na aktuální dokument, aktuální řešení ne
 ## <a name="find-and-replace-control"></a>Najít a nahradit ovládací prvek
 
 - Stiskněte klávesu **CTRL** + **F** jako zástupce a *vyhledejte* řetězec v aktuálním souboru.
-- Stisknutím **Ctrl** + klávesové zkratky CTRL **H** *vyhledejte a nahraďte* řetězec v aktuálním souboru.
+- Stisknutím  + klávesové zkratky CTRL **H** *vyhledejte a nahraďte* řetězec v aktuálním souboru.
 
 Ovládací prvek **Najít a nahradit** se zobrazí v pravém horním rohu okna Editor kódu. Okamžitě zvýrazní všechny výskyty daného hledaného řetězce v aktuálním dokumentu. Můžete přecházet z jednoho výskytu na jiný kliknutím na tlačítko **Najít další** nebo tlačítko **Najít předchozí** v ovládacím prvku hledání.
 
@@ -112,7 +112,7 @@ Na následujícím snímku obrazovky `-0000` je vybráno ve třech umístěních
 Chcete-li vybrat více blikajících kurzorů, klikněte nebo proveďte jako obvykle první výběr textu a potom stiskněte klávesu **ALT** a klikněte nebo vyberte text v každém dalším umístění. Můžete také automaticky přidat shodný text jako další výběry nebo vybrat textové pole, které lze na každém řádku upravit stejným způsobem.
 
 > [!TIP]
-> Pokud jste vybrali možnost **ALT** jako modifikační klávesu pro možnost přejít k definici v **nabídce nástroje**  >  **Options**, je vícenásobný výběr zakázaný.
+> Pokud jste vybrali možnost **ALT** jako modifikační klávesu pro možnost přejít k definici v **nabídce nástroje**  >  , je vícenásobný výběr zakázaný.
 
 ### <a name="commands"></a>Příkazy
 

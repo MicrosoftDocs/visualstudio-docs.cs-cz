@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 2fd26c75-a056-4dda-9f7e-2f90d3748d88
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 94a1babf518a3579246903f6479f999d8912dfe5
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 7f00e0b5cd0575613add2698058ba6b1357aec0f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93048789"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931978"
 ---
 # <a name="rc-task"></a>RC – úloha
 
-Zabalí nástroj Microsoft Windows Resource Compiler *rc.exe* . Úloha **RC** kompiluje prostředky, jako jsou kurzory, ikony, bitmapy, dialogová okna a písma, do souboru prostředků ( *. res* ). Další informace najdete v tématu [kompilátor prostředků](/windows/desktop/menurc/resource-compiler).
+Zabalí nástroj Microsoft Windows Resource Compiler *rc.exe*. Úloha **RC** kompiluje prostředky, jako jsou kurzory, ikony, bitmapy, dialogová okna a písma, do souboru prostředků (*. res*). Další informace najdete v tématu [kompilátor prostředků](/windows/desktop/menurc/resource-compiler).
 
 ## <a name="parameters"></a>Parametry
 

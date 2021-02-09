@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 241c25fe-764e-4e1b-ad32-b1377dcbb605
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 502dcaec9aeb8fdb2f4b7a72b801f19d2d08dbc4
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 84fadd786e7a1bf978ec4df919b691031c316a4a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134391"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930951"
 ---
 # <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascript-apps"></a>Postupy: Export textury pro použití s aplikacemi Direct2D nebo JavaScript
 
@@ -53,16 +53,16 @@ Textury používané v kontextu Direct2D musí splňovat tyto konvence interníh
 
 1. Začněte základní texturou. Načtěte existující bitovou kopii nebo vytvořte novou, jak je popsáno v tématu [How to: Create a Basic Texture](../designers/how-to-create-a-basic-texture.md). Chcete-li podporovat blokovou kompresi ve formátu *. dds* , určete texturu, která má šířku a výšku, které jsou násobky čtyř velikosti, například 100x100, 128 × 128 nebo 256x192. Vzhledem k tomu, že mipmapping není podporován, textura nemusí být čtvercová a nemusí být mocninou velikosti dvou.
 
-2. Nakonfigurujte soubor textury tak, aby byl zpracován kanálem obsahu obrázku. V **Průzkumník řešení** otevřete místní nabídku pro soubor textury, který jste právě vytvořili, a pak zvolte **vlastnosti** . Na stránce **Vlastnosti konfigurace**  >  **Obecné** nastavte vlastnost **typ položky** na **kanál obsahu obrázku** . Ujistěte se, že vlastnost **Content** je nastavena na **hodnotu Ano** a možnost **vyloučit ze sestavení** je nastavena na hodnotu **ne** , a poté klikněte na tlačítko **použít** . Zobrazí se stránka vlastností konfigurace **kanálu obsahu obrázku** .
+2. Nakonfigurujte soubor textury tak, aby byl zpracován kanálem obsahu obrázku. V **Průzkumník řešení** otevřete místní nabídku pro soubor textury, který jste právě vytvořili, a pak zvolte **vlastnosti**. Na stránce **Vlastnosti konfigurace**  >  **Obecné** nastavte vlastnost **typ položky** na **kanál obsahu obrázku**. Ujistěte se, že vlastnost **Content** je nastavena na **hodnotu Ano** a možnost **vyloučit ze sestavení** je nastavena na hodnotu **ne**, a poté klikněte na tlačítko **použít** . Zobrazí se stránka vlastností konfigurace **kanálu obsahu obrázku** .
 
-3. Nastavte formát výstupu na jeden z formátů komprimovaných blokem. Na stránce **Vlastnosti konfigurace**  >  **Obrázek kanálu obsahu obrázek**  >  **General** nastavte vlastnost **compress** na hodnotu **BC3_UNORM Compression (/Compress: BC3_UNORM)** . V závislosti na vašich požadavcích můžete zvolit libovolný z dalších formátů BC1, BC2 nebo BC3. Direct2D v současné době nepodporuje textury BC4, BC5, BC6 nebo BC7. Další informace o různých formátech BC naleznete v tématu [Block Compression (Direct3D 10)](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression).
+3. Nastavte formát výstupu na jeden z formátů komprimovaných blokem. Na stránce **Vlastnosti konfigurace**  >  **Obrázek kanálu obsahu obrázek**  >   nastavte vlastnost **compress** na hodnotu **BC3_UNORM Compression (/Compress: BC3_UNORM)**. V závislosti na vašich požadavcích můžete zvolit libovolný z dalších formátů BC1, BC2 nebo BC3. Direct2D v současné době nepodporuje textury BC4, BC5, BC6 nebo BC7. Další informace o různých formátech BC naleznete v tématu [Block Compression (Direct3D 10)](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression).
 
    > [!NOTE]
-   > Formát komprese, který je určen, určuje formát souboru, který je vytvořen kanálem obsahu obrázku. To se liší od vlastnosti **Formát** zdrojového obrázku v editoru obrázků, který určuje formát zdrojového souboru bitové kopie, který je uložen na disku – to znamená *pracovní formát* . Obvykle nechcete mít komprimovaný pracovní formát.
+   > Formát komprese, který je určen, určuje formát souboru, který je vytvořen kanálem obsahu obrázku. To se liší od vlastnosti **Formát** zdrojového obrázku v editoru obrázků, který určuje formát zdrojového souboru bitové kopie, který je uložen na disku – to znamená *pracovní formát*. Obvykle nechcete mít komprimovaný pracovní formát.
 
-4. Nakonfigurujte kanál obsahu obrázku tak, aby vytvořil výstup, který používá předem vynásobený alfa. Na stránce **Vlastnosti konfigurace**  >  **Obrázek nastavení kanálu obsahu obrázek**  >  **General** nastavte vlastnost **převést na předem vynásobené alfa formát** na **Ano (/generatepremultipliedalpha)** .
+4. Nakonfigurujte kanál obsahu obrázku tak, aby vytvořil výstup, který používá předem vynásobený alfa. Na stránce **Vlastnosti konfigurace**  >  **Obrázek nastavení kanálu obsahu obrázek**  >   nastavte vlastnost **převést na předem vynásobené alfa formát** na **Ano (/generatepremultipliedalpha)**.
 
-5. Nakonfigurujte kanál obsahu obrázku tak, aby negeneroval mipmapy. Na stránce **Vlastnosti konfigurace**  >  **Obrázek nastavení kanálu obsahu**  >  **General** nastavte vlastnost **Generovat MIPS** na hodnotu **ne** .
+5. Nakonfigurujte kanál obsahu obrázku tak, aby negeneroval mipmapy. Na stránce **Vlastnosti konfigurace**  >  **Obrázek nastavení kanálu obsahu**  >   nastavte vlastnost **Generovat MIPS** na hodnotu **ne**.
 
 6. Klikněte na tlačítko **OK** .
 

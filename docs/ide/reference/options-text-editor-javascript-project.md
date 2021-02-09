@@ -12,19 +12,19 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.TypeScript.Project
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 86ee8f59a91cc772d6a86a9e29268b4465b2c639
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: 0b30aaec3087cece63e392cf7170ac85f6be0ad7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947697"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932329"
 ---
 # <a name="options-text-editor-javascript-project"></a>Možnosti, textový editor, JavaScript, projekt
 
-Pomocí stránky **projekt** v dialogovém okně **Možnosti** můžete určit možnosti projektu JavaScript a TypeScript v editoru kódu. Chcete-li získat přístup k této stránce, v řádku **Tools**nabídek zvolte  >  **možnost**nástroje a potom rozbalte projekt **textový editor**  >  **JavaScript/TypeScript**  >  **Project**.
+Pomocí stránky **projekt** v dialogovém okně **Možnosti** můžete určit možnosti projektu JavaScript a TypeScript v editoru kódu. Chcete-li získat přístup k této stránce, v řádku nabídek zvolte  >  **možnost** nástroje a potom rozbalte projekt **textový editor**  >  **JavaScript/TypeScript**  >  .
 
 ## <a name="project-analysis-options"></a>Možnosti analýzy projektu
 
@@ -56,7 +56,7 @@ Zaškrtněte políčko a pak zvolte typ generování kódu, který chcete použ�
 
 ## <a name="ecmascript-version-for-files-that-are-not-part-of-a-project"></a>Verze ECMAScript pro soubory, které nejsou součástí projektu
 
-Tyto možnosti umožňují vybrat verzi ECMAScript pro soubory, které nejsou součástí projektu. Můžete zvolit mezi **ECMAScript 3**, **ECMAScript 5**nebo **ECMAScript 6**.
+Tyto možnosti umožňují vybrat verzi ECMAScript pro soubory, které nejsou součástí projektu. Můžete zvolit mezi **ECMAScript 3**, **ECMAScript 5** nebo **ECMAScript 6**.
 
 ## <a name="jsx-emit-for-tsx-files-that-are-not-part-of-a-project"></a>JSX Emit pro soubory TSX, které nejsou součástí projektu
 

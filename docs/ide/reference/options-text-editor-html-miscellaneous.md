@@ -9,19 +9,19 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.Miscellaneous
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bf5495f60e92a38c0c43a0751054d41dc4de6970
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 0ff787db88292ded90c8dbdce3c86637ba2bdbd4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040768"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932524"
 ---
 # <a name="options-text-editor-html-web-forms-miscellaneous"></a>Možnosti, textový editor, HTML (webové formuláře), různé
 
-Pomocí stránky **různé** možnosti můžete nastavit předvolby pro způsob, jakým Editor HTML zpracovává prvky vložené do stránky. Chcete-li získat přístup k této stránce, v řádku **Tools** nabídek zvolte  >  **možnost** nástroje a poté rozbalte položku **textový editor**  >  **HTML (webové formuláře)**  >  **různé**.
+Pomocí stránky **různé** možnosti můžete nastavit předvolby pro způsob, jakým Editor HTML zpracovává prvky vložené do stránky. Chcete-li získat přístup k této stránce, v řádku nabídek zvolte  >  **možnost** nástroje a poté rozbalte položku **textový editor**  >  **HTML (webové formuláře)**  >  **různé**.
 
 ## <a name="miscellaneous-html-options"></a>Různé možnosti HTML
 

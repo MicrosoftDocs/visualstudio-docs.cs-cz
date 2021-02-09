@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 97071846-007e-450f-95a6-f072d0f5e61e
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 88adaad3092e084841c40b5e04d45f94985a2ee8
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: b00e0529c1d2ac7224881067628618251ba03898
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913877"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930509"
 ---
 # <a name="control-of-execution"></a>Řízení provádění
 Ladicí stroj (DE) obvykle odesílá jednu z následujících událostí jako poslední událost spuštění:
@@ -59,7 +59,7 @@ Ladicí stroj (DE) obvykle odesílá jednu z následujících událostí jako po
 
    Pokud ladicí balíček má ignorovat konkrétní událost zastavení, ladicí balíček volá SDM, který volá [IDebugProgram2:: Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md). Pokud byl program ve fázi, kdy nebo mimo funkci, když zjistil stav zastavení, pokračuje krok. To znamená, že program udržuje stav krokování, aby věděl, jak pokračovat.
 
-   Volání metody SDM provede, provede `Step` a **Execute** **pokračuje** , jsou asynchronní, což znamená, že model SDM očekává, že volání vrátí rychle. Pokud DE pošle událost zastavení SDM ve stejném vlákně před `Step` , **spustí** nebo **pokračuje** , model SDM přestane reagovat.
+   Volání metody SDM provede, provede `Step` a  **pokračuje** , jsou asynchronní, což znamená, že model SDM očekává, že volání vrátí rychle. Pokud DE pošle událost zastavení SDM ve stejném vlákně před `Step` , **spustí** nebo **pokračuje** , model SDM přestane reagovat.
 
 ## <a name="see-also"></a>Viz také
 - [Úlohy ladění](../../extensibility/debugger/debugging-tasks.md)

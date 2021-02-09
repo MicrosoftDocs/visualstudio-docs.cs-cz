@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 90458fdd-2d34-4f10-82dc-6d8f31b66d8b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b87d61586fb4acc360b5f5202b1219199c6a24b
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: e544e4cebaa4e2e1691f6c175dfa750a1f951abc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914293"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930691"
 ---
 # <a name="choose-a-debug-engine-implementation-strategy"></a>Zvolit strategii implementace ladicího modulu
 Pomocí architektury za běhu určete strategii implementace ladicího modulu (DE). Ladicí modul můžete vytvořit v procesu do programu, který ladíte. Vytvořte ladicí modul v procesu do programu Správce ladění relací sady Visual Studio (SDM). Nebo můžete vytvořit ladicí modul mimo proces pro oba. Následující pokyny vám pomohou vybrat si z těchto tří strategií.

@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: f779b1fd-82a9-4a11-8ab7-c1c9caabc883
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 54010c46d121fd4221500afb3038013626939a1b
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 969dd229d8d6cd6bdbe9d53eaabd63f1eedd6570
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134802"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930847"
 ---
 # <a name="how-to-model-3d-terrain"></a>Postupy: modelování 3D terénu
 
@@ -38,13 +38,13 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
     > [!TIP]
     > Chcete-li nastavit objekt roviny tak, aby lépe fungoval, můžete ho orámovat na návrhové ploše. V režimu **výběru** vyberte objekt rovina a pak na panelu nástrojů editoru modelů zvolte tlačítko **objekt rámce** .
 
-3. Zadejte režim výběru obličeje. Na panelu nástrojů editoru modelů zvolte **možnost vybrat obličej** .
+3. Zadejte režim výběru obličeje. Na panelu nástrojů editoru modelů zvolte **možnost vybrat obličej**.
 
-4. Rozdělit rovinu V režimu výběru plochy vyberte rovinu, která se má aktivovat pro výběr, a pak ji znovu vyberte, abyste vybrali jenom svoji plošku. Na panelu nástrojů editoru modelů vyberte **rozdělit plochu** . Tím přidáte nové vrcholy do roviny, které ji rozdělí do čtyř oddílů s rovnoměrné velikosti.
+4. Rozdělit rovinu V režimu výběru plochy vyberte rovinu, která se má aktivovat pro výběr, a pak ji znovu vyberte, abyste vybrali jenom svoji plošku. Na panelu nástrojů editoru modelů vyberte **rozdělit plochu**. Tím přidáte nové vrcholy do roviny, které ji rozdělí do čtyř oddílů s rovnoměrné velikosti.
 
 5. Vytvořte další dílčí dělení. Když je vybraná možnost nové plošky, klikněte na **rozdělit obličej** ještě dvakrát. Tím se vytvoří celkem 64 ploch. Vytvořením dalších dílčích dělení můžete přidělit terénu ještě více podrobností.
 
-6. Zadejte režim výběru bodu. Na panelu nástrojů editoru modelů zvolte **možnost vybrat bod** .
+6. Zadejte režim výběru bodu. Na panelu nástrojů editoru modelů zvolte **možnost vybrat bod**.
 
 7. Úpravou bodu vytvořte funkci terénu. V režimu výběru bodu vyberte jeden z bodů a pak na panelu nástrojů editoru modelů zvolte nástroj pro **Překlad** . Pole, které představuje bod, se zobrazí na návrhové ploše. Pomocí zelené šipky můžete přesunout pole a tím upravit výšku bodu. Opakujte tento krok pro různé body pro vytváření zajímavých funkcí terénu.
 

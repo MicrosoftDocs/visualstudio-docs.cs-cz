@@ -5,21 +5,21 @@ ms.date: 05/12/2020
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 094305e901624e13df147030899981f8fedb80d1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5a86f600f9145742f6447af54fccb10dbc302a3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387028"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931770"
 ---
 # <a name="debug-your-python-code"></a>Ladění kódu Pythonu
 
-Sada Visual Studio poskytuje komplexní ladicí prostředí pro Python, včetně připojení ke spuštěným procesům, vyhodnocování výrazů v okně **kukátko** a **bezprostředních** oknech, kontrolu místních proměnných, zarážek, krokování/převzetí/převzetí příkazů, **nastavení dalšího příkazu**a další.
+Sada Visual Studio poskytuje komplexní ladicí prostředí pro Python, včetně připojení ke spuštěným procesům, vyhodnocování výrazů v okně **kukátko** a **bezprostředních** oknech, kontrolu místních proměnných, zarážek, krokování/převzetí/převzetí příkazů, **nastavení dalšího příkazu** a další.
 
 Viz také následující články o ladění pro konkrétní scénář:
 
@@ -30,7 +30,7 @@ Viz také následující články o ladění pro konkrétní scénář:
 <a name="debugging-without-a-project"></a>
 
 > [!Tip]
-> Python v aplikaci Visual Studio podporuje ladění bez projektu. Po otevření samostatného souboru Pythonu klikněte v editoru pravým tlačítkem myši, vyberte **Spustit s laděním**a Visual Studio spustí skript s globálním výchozím prostředím (viz [prostředí Python](managing-python-environments-in-visual-studio.md)) a žádné argumenty. Od potom pak máte úplnou podporu ladění.
+> Python v aplikaci Visual Studio podporuje ladění bez projektu. Po otevření samostatného souboru Pythonu klikněte v editoru pravým tlačítkem myši, vyberte **Spustit s laděním** a Visual Studio spustí skript s globálním výchozím prostředím (viz [prostředí Python](managing-python-environments-in-visual-studio.md)) a žádné argumenty. Od potom pak máte úplnou podporu ladění.
 >
 > Chcete-li řídit prostředí a argumenty, vytvořte projekt pro kód, který lze snadno provést pomocí existující šablony projektu [kódu Pythonu](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) .
 
@@ -47,7 +47,7 @@ Relace ladění začíná příkazem **ladění**  >  **Spustit ladění** , tla
 
 ### <a name="breakpoints"></a>Zarážky
 
-Zarážky zastaví provádění kódu v označeném bodě, takže můžete zkontrolovat stav programu. Nastavte zarážky kliknutím na levý okraj editoru kódu nebo kliknutím pravým tlačítkem myši na řádek kódu a výběrem **zarážky**  >  **Vložit**zarážku. Na každém řádku se zarážkou se zobrazí červená tečka.
+Zarážky zastaví provádění kódu v označeném bodě, takže můžete zkontrolovat stav programu. Nastavte zarážky kliknutím na levý okraj editoru kódu nebo kliknutím pravým tlačítkem myši na řádek kódu a výběrem **zarážky**  >  **Vložit** zarážku. Na každém řádku se zarážkou se zobrazí červená tečka.
 
 ![Zarážky se zobrazují v aplikaci Visual Studio.](media/debugging-breakpoints.png)
 
@@ -56,7 +56,7 @@ Kliknutím na červenou tečku nebo kliknutím pravým tlačítkem myši na řá
 > [!Note]
 > Některé zarážky v Pythonu můžou být překvapivé pro vývojáře, kteří pracovali s jinými programovacími jazyky. V Pythonu je celý soubor spustitelný kód, takže Python spustí soubor, když je načten pro zpracování jakékoli definice třídy nebo funkce nejvyšší úrovně. Pokud byla zarážka nastavena, může být ladicí program s částečnou částí převedený prostřednictvím deklarace třídy. Toto chování je správné, i když se někdy překvapivé.
 
-Můžete přizpůsobit podmínky, za kterých je aktivována zarážka, jako je například rozdělení pouze v případě, že je proměnná nastavena na určitou hodnotu nebo rozsah hodnot. Pokud chcete nastavit podmínky, klikněte pravým tlačítkem myši na červenou tečku zarážky, vyberte **Podmínka**a pak vytvořte výrazy pomocí kódu Pythonu. Úplné podrobnosti o této funkci v aplikaci Visual Studio naleznete v tématu [podmínky zarážky](../debugger/using-breakpoints.md#breakpoint-conditions).
+Můžete přizpůsobit podmínky, za kterých je aktivována zarážka, jako je například rozdělení pouze v případě, že je proměnná nastavena na určitou hodnotu nebo rozsah hodnot. Pokud chcete nastavit podmínky, klikněte pravým tlačítkem myši na červenou tečku zarážky, vyberte **Podmínka** a pak vytvořte výrazy pomocí kódu Pythonu. Úplné podrobnosti o této funkci v aplikaci Visual Studio naleznete v tématu [podmínky zarážky](../debugger/using-breakpoints.md#breakpoint-conditions).
 
 Při nastavování podmínek můžete také nastavit **akci** a vytvořit zprávu pro protokolování do okna výstup, volitelně pokračovat v provádění automaticky. Protokolování zprávy vytvoří, co se říká *zarážka s trasováním* bez přidání kódu protokolování do aplikace přímo:
 
@@ -66,7 +66,7 @@ Při nastavování podmínek můžete také nastavit **akci** a vytvořit zpráv
 
 Po zastavení na zarážce máte různé způsoby, jak krokovat kód nebo spustit bloky kódu před opětovným přerozdělením. Tyto příkazy jsou k dispozici na mnoha místech, včetně panelu nástrojů pro ladění, nabídky **ladění** , v kontextové nabídce pravého tlačítka myši v editoru kódu a prostřednictvím klávesových zkratek (i když nejsou všechny příkazy umístěny na všech místech):
 
-| Příznak | Klávesnice | Popis |
+| Funkce | Klávesnice | Description |
 | --- | --- | --- |
 | **Pokračovat** | **F5** | Spustí kód, dokud není dosaženo další zarážce. |
 | **Krokovat s vnořením** | **Kláves** | Spustí další příkaz a zastaví se. Pokud je dalším příkazem volání funkce, ladicí program se zastaví na prvním řádku volané funkce. |
@@ -88,17 +88,17 @@ Okno **Automatické** hodnoty (**ladění**  >  **systému Windows**  >  **auto*
 
 ![Okno Automatické hodnoty v ladicím programu sady Visual Studio](media/debugging-autos-window.png)
 
-Okno **místní** hodnoty (**ladění**  >  místních hodnot**systému Windows**  >  **Locals**) zobrazí všechny proměnné, které jsou v aktuálním oboru, které lze znovu upravit:
+Okno **místní** hodnoty (**ladění**  >  místních hodnot **systému Windows**  >  ) zobrazí všechny proměnné, které jsou v aktuálním oboru, které lze znovu upravit:
 
 ![Okno místní hodnoty v ladicím programu sady Visual Studio](media/debugging-locals-window.png)
 
-Další informace o používání **automatických** funkcí a **místních**hodnot najdete v tématu [Kontrola proměnných v oknech automatické hodnoty a místní](../debugger/autos-and-locals-windows.md)hodnoty.
+Další informace o používání **automatických** funkcí a **místních** hodnot najdete v tématu [Kontrola proměnných v oknech automatické hodnoty a místní](../debugger/autos-and-locals-windows.md)hodnoty.
 
-Okna **kukátka** (**ladění**  >  **Windows**  >  **kukátka Windows Watch**  >  **1-4**) umožňují zadat libovolné výrazy Pythonu a zobrazit výsledky. Výrazy jsou znovu vyhodnoceny pro každý krok:
+Okna **kukátka** (**ladění**  >    >  **kukátka Windows Watch**  >  **1-4**) umožňují zadat libovolné výrazy Pythonu a zobrazit výsledky. Výrazy jsou znovu vyhodnoceny pro každý krok:
 
 ![okno Kukátko v ladicím programu sady Visual Studio](media/debugging-watch-window.png)
 
-Další informace o používání **sledování**najdete v tématu [Nastavení sledování proměnných pomocí oken kukátka a QuickWatch](../debugger/watch-and-quickwatch-windows.md).
+Další informace o používání **sledování** najdete v tématu [Nastavení sledování proměnných pomocí oken kukátka a QuickWatch](../debugger/watch-and-quickwatch-windows.md).
 
 Když kontrolujete řetězcovou hodnotu ( `str` , `unicode` , `bytes` a `bytearray` jsou pro tento účel považovány za řetězce), zobrazí se na pravé straně hodnoty ikona lupy. Kliknutím na ikonu se zobrazí hodnota řetězce bez uvozovek v automaticky otevíraném dialogovém okně s balením a posouváním, což je užitečné pro dlouhé řetězce. Kromě toho, když vyberete šipku rozevíracího seznamu na ikoně, můžete vybrat vizualizace prostého textu, HTML, XML a JSON:
 
@@ -114,7 +114,7 @@ Pokud během ladění dojde k chybě v programu, ale nemáte pro ni obslužnou r
 
 V tomto okamžiku můžete zkontrolovat stav programu, včetně zásobníku volání. Nicméně pokud se pokusíte krokovat kód, výjimka pokračuje vyvoláním, dokud není buď zpracována, nebo ukončení programu.
 
-Příkaz nabídky **ladit**  >  **Windows**  >  **Nastavení výjimek** v systému Windows přinese okno, ve kterém můžete rozbalit **výjimky Pythonu**:
+Příkaz nabídky **ladit**  >    >  **Nastavení výjimek** v systému Windows přinese okno, ve kterém můžete rozbalit **výjimky Pythonu**:
 
 ![Okno výjimky v ladicím programu sady Visual Studio](media/debugging-exception-settings.png)
 
@@ -126,7 +126,7 @@ Chcete-li konfigurovat výjimku, která se v tomto seznamu nezobrazí, klikněte
 
 ## <a name="project-debugging-options"></a>Možnosti ladění projektu
 
-Ve výchozím nastavení ladicí program spustí program se standardním spouštěčem Pythonu, bez argumentů příkazového řádku a žádné další speciální cesty ani podmínky. Možnosti spuštění jsou změněny prostřednictvím vlastností ladění projektu, které jsou k dispozici, kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení**, výběrem **vlastností**a výběrem karty **ladění** .
+Ve výchozím nastavení ladicí program spustí program se standardním spouštěčem Pythonu, bez argumentů příkazového řádku a žádné další speciální cesty ani podmínky. Možnosti spuštění jsou změněny prostřednictvím vlastností ladění projektu, které jsou k dispozici, kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení**, výběrem **vlastností** a výběrem karty **ladění** .
 
 ![Vlastnosti ladění projektu v ladicím programu sady Visual Studio](media/debugging-project-properties.png)
 
@@ -153,15 +153,15 @@ Ve výchozím nastavení ladicí program spustí program se standardním spoušt
 
 Existují dva interaktivní systémy Windows, které můžete použít během relace ladění: **standardní okno aplikace Visual Studio a** **interaktivní okno ladění Pythonu** .
 
-**Okamžité** okno (**ladění**  >  **systému Windows**  >  je**okamžité**) se používá pro rychlé vyhodnocení výrazů Pythonu a kontrolu nebo přiřazení proměnných v rámci běžícího programu. Podrobnosti najdete v článku o [okamžitém okně](../ide/reference/immediate-window.md) .
+**Okamžité** okno (**ladění**  >  **systému Windows**  >  je **okamžité**) se používá pro rychlé vyhodnocení výrazů Pythonu a kontrolu nebo přiřazení proměnných v rámci běžícího programu. Podrobnosti najdete v článku o [okamžitém okně](../ide/reference/immediate-window.md) .
 
-**Interaktivní okno ladění Pythonu** (**ladění**  >  **Windows**  >  **Pythonu**pro ladění interaktivní) je bohatší, protože zpřístupňuje kompletní [interaktivní REPL](python-interactive-repl-in-visual-studio.md) při ladění, včetně psaní a spouštění kódu. Automaticky se připojí k jakémukoli procesu spuštěnému v ladicím programu pomocí standardní spouštěče Pythonu (včetně procesů připojených prostřednictvím příkazu **ladit**  >  **připojení k procesu**). Není však k dispozici při použití ladění ve smíšeném režimu C/C++.
+**Interaktivní okno ladění Pythonu** (**ladění**  >  **Windows**  >  **Pythonu** pro ladění interaktivní) je bohatší, protože zpřístupňuje kompletní [interaktivní REPL](python-interactive-repl-in-visual-studio.md) při ladění, včetně psaní a spouštění kódu. Automaticky se připojí k jakémukoli procesu spuštěnému v ladicím programu pomocí standardní spouštěče Pythonu (včetně procesů připojených prostřednictvím příkazu **ladit**  >  **připojení k procesu**). Není však k dispozici při použití ladění ve smíšeném režimu C/C++.
 
 ![Interaktivní okno ladění Pythonu](media/debugging-interactive.png)
 
 **Interaktivní okno ladění** podporuje kromě [standardních příkazů REPL](python-interactive-repl-in-visual-studio.md#meta-commands)speciální meta příkazy:
 
-| Příkaz | Arguments | Popis |
+| Příkaz | Argumenty | Description |
 | --- | --- | --- |
 | `$continue`, `$cont`, `$c` | Spustí program spuštěný z aktuálního příkazu. |
 | `$down`, `$d` | Posune aktuální rámec v trasování zásobníku o jednu úroveň níž. |
@@ -180,7 +180,7 @@ Existují dva interaktivní systémy Windows, které můžete použít během re
 | `$up`, `$u` | | Posune aktuální rámec v trasování zásobníku o jednu úroveň výš. |
 | `$where`, `$w`, `$bt` | Vypíše rámce aktuálního vlákna. |
 
-Všimněte si, že standardní okna ladicího programu, například **procesy**, **vlákna**a **zásobník volání** , nejsou synchronizována s **interaktivním oknem ladění** . Změna aktivního procesu, vlákna nebo snímku v **interaktivním okně ladění** nemá vliv na ostatní okna ladicího programu. Podobně Změna aktivního procesu, vlákna nebo snímku v ostatních oknech ladicího programu nemá vliv na **interaktivní okno ladění** .
+Všimněte si, že standardní okna ladicího programu, například **procesy**, **vlákna** a **zásobník volání** , nejsou synchronizována s **interaktivním oknem ladění** . Změna aktivního procesu, vlákna nebo snímku v **interaktivním okně ladění** nemá vliv na ostatní okna ladicího programu. Podobně Změna aktivního procesu, vlákna nebo snímku v ostatních oknech ladicího programu nemá vliv na **interaktivní okno ladění** .
 
 <a name="use-the-experimental-debugger"></a>
 
@@ -190,7 +190,7 @@ Visual Studio 2017 verze 15,8 a novější používají ladicí program založen
 
 ![Ladicí program nepodporuje tuto chybu prostředí Python při použití ladicího programu.](media/debugging-experimental-incompatible-error.png)
 
-V těchto případech je nutné použít starší ladicí program (což je výchozí nastavení v aplikaci Visual Studio 2017 verze 15,7 a starší). Vyberte **Tools**  >  příkaz nabídky**Možnosti** nástrojů, přejděte na ladění **Pythonu**  >  **Debugging**a vyberte možnost **použít starší verzi ladicího programu** .
+V těchto případech je nutné použít starší ladicí program (což je výchozí nastavení v aplikaci Visual Studio 2017 verze 15,7 a starší). Vyberte   >  příkaz nabídky **Možnosti** nástrojů, přejděte na ladění **Pythonu**  >  a vyberte možnost **použít starší verzi ladicího programu** .
 
 Pokud jste nainstalovali starší verzi ptvsd do aktuálního prostředí (například starší verze 4.0. x nebo verzi 3. x, která je vyžadována pro vzdálené ladění), Visual Studio může zobrazit chybu nebo upozornění.
 

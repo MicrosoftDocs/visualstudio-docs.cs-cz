@@ -7,15 +7,15 @@ ms.topic: tutorial
 ms.assetid: 7c60d929-d993-49dc-9db3-43b30be9912b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 83d444cb5e3345d79ca6e1422982c0ecd37e4287
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1ab54ccb3820b3a03724c30d16f08b3e8a45493
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67825530"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933099"
 ---
 # <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio-visual-studio-enterprise"></a>Kontrola předchozích stavů aplikace pomocí IntelliTrace kroků zpět v aplikaci Visual Studio (Visual Studio Enterprise)
 
@@ -23,7 +23,7 @@ IntelliTraceý krok zpět automaticky provede snímek vaší aplikace při každ
 
 IntelliTrace step-back je k dispozici od verze Visual Studio Enterprise 2017 15,5 a vyšší a vyžaduje aktualizaci Windows 10 pro výročí nebo novější. Tato funkce se aktuálně podporuje pro ladění ASP.NET, WinForms, WPF, spravovaných konzolových aplikací a knihoven spravovaných tříd. Počínaje sadou Visual Studio 2017 Enterprise verze 15,7 je tato funkce také podporována pro ASP.NET Core a .NET Core. Počínaje verzí Visual Studio 2017 Enterprise verze 15,9 Preview 2 je tato funkce také podporována pro nativní aplikace cílené na Windows. Ladění aplikací pro UWP se momentálně nepodporuje.
 
-V tomto kurzu provedete následující:
+V tomto kurzu:
 
 > [!div class="checklist"]
 > * Povolit IntelliTrace události a snímky
@@ -34,13 +34,13 @@ V tomto kurzu provedete následující:
 
 1. Otevřete projekt v Visual Studio Enterprise.
 
-1. Otevřete **Tools**  >  **Možnosti**nástrojů  >  nastavení**IntelliTrace** a vyberte možnost **události a snímky IntelliTrace**.
+1. Otevřete   >  **Možnosti** nástrojů  >  nastavení **IntelliTrace** a vyberte možnost **události a snímky IntelliTrace**.
 
     Počínaje verzí Visual Studio 2017 Enterprise verze 15,9 Preview 2 je tato možnost **IntelliTrace snímky (spravované a nativní)**.
 
     ![Povolit IntelliTrace události a režim snímků](../debugger/media/intellitrace-enable-snapshots.png "Povolit IntelliTrace události a režim snímků")
 
-1. Pokud chcete konfigurovat možnosti pro zobrazování snímků při výjimkách, v **IntelliTrace**  >  dialogovém okně **Možnosti** vyberte IntelliTrace**Upřesnit** .
+1. Pokud chcete konfigurovat možnosti pro zobrazování snímků při výjimkách, v   >  dialogovém okně **Možnosti** vyberte IntelliTrace **Upřesnit** .
 
     Tyto možnosti jsou k dispozici počínaje verzí Visual Studio 2017 Enterprise verze 15,7.
 
@@ -71,7 +71,7 @@ V tomto kurzu provedete následující:
 
     Když přejdete zpět nebo předáte krok vzad, Visual Studio přejde do režimu historických ladění. V tomto režimu se kontext ladicího programu přepne na čas, kdy se vybraná událost nahrála. Visual Studio také přesune ukazatel na odpovídající řádek kódu v okně zdroje.
 
-    Z tohoto zobrazení můžete zkontrolovat hodnoty v oknech **zásobník volání**, **místní**hodnoty, **Automatické**hodnoty a **sledovat** . Můžete také umístit ukazatel myši na proměnné pro zobrazení datových tipů a vyhodnocení výrazu v **příkazovém** okně. Data, která vidíte, pochází ze snímku procesu aplikace v daném okamžiku.
+    Z tohoto zobrazení můžete zkontrolovat hodnoty v oknech **zásobník volání**, **místní** hodnoty, **Automatické** hodnoty a **sledovat** . Můžete také umístit ukazatel myši na proměnné pro zobrazení datových tipů a vyhodnocení výrazu v **příkazovém** okně. Data, která vidíte, pochází ze snímku procesu aplikace v daném okamžiku.
 
     Takže například pokud jste narazili na zarážku a provedli krok (**F10**), přesune tlačítko **krok zpět** do historického režimu na řádek kódu odpovídající zarážce.
 
@@ -95,9 +95,9 @@ V tomto kurzu provedete následující:
 
 IntelliTrace v režimu pouze události umožňuje aktivovat historické ladění pro kroky ladicího programu a zarážky. IntelliTrace ale zachytí pouze data v **místních** a **automatických** oknech, pokud jsou otevřená okna a zachytí pouze data, která jsou rozbalená a zobrazená. V režimu pouze události často nemusíte mít úplné zobrazení proměnných a složitých objektů. Vyhodnocování výrazů a zobrazování dat v okně **kukátko** navíc není podporováno.
 
-V režimu události a snímky IntelliTrace zachycuje celý snímek procesu aplikace, včetně složitých objektů. V jednom řádku kódu vidíte stejné informace, jako kdyby jste zastavili na zarážce (a nezáleží na tom, zda jste dříve rozšířili informace). Při prohlížení snímku se podporuje taky vyhodnocení výrazu.  
+V režimu události a snímky IntelliTrace zachycuje celý snímek procesu aplikace, včetně složitých objektů. V jednom řádku kódu vidíte stejné informace, jako kdyby jste zastavili na zarážce (a nezáleží na tom, zda jste dříve rozšířili informace). Při prohlížení snímku se podporuje taky vyhodnocení výrazu.  
 
-#### <a name="what-is-the-performance-impact-of-this-feature"></a>Jaký má dopad na výkon této funkce? 
+#### <a name="what-is-the-performance-impact-of-this-feature"></a>Jaký má dopad na výkon této funkce? 
 
 Dopad na celkový výkon krokování závisí na vaší aplikaci. Režie při pořizování snímku je okolo 30 ms. Při pořízení snímku se proces aplikace rozvětvení a pozastaví se rozvětvená kopie. Při zobrazení snímku se Visual Studio připojí k rozvětvené kopii procesu. Pro každý snímek sada Visual Studio zkopíruje pouze tabulku stránky a nastaví stránky na kopírování do zápisu. Pokud se objekty v haldě mění mezi kroky ladicího programu s přidruženými snímky, bude zkopírována příslušná tabulka stránky, což vede k minimálnímu množství paměti. Pokud aplikace Visual Studio zjistí, že není k dispozici dostatek paměti k pořízení snímku, nebere v úvahu žádnou z nich.
 

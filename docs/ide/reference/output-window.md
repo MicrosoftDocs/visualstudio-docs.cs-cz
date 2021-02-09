@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d8931d88-250e-4db4-963f-2c5b3e99b45f
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b8615fcdb7e6751087c499967478aaf63e68d624
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 0bdbaf79a3700a1ba1c0574e345093af25608e39
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560379"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932043"
 ---
 # <a name="output-window"></a>Výstup – okno
 
-V okně **výstup** se zobrazí stavové zprávy pro různé funkce v integrovaném vývojovém prostředí (IDE). Chcete-li otevřít okno **výstup** , v řádku nabídek zvolte možnost **Zobrazit**  >  **výstup** nebo stiskněte klávesovou zkratku **CTRL** + **Alt** + **O**.
+V okně **výstup** se zobrazí stavové zprávy pro různé funkce v integrovaném vývojovém prostředí (IDE). Chcete-li otevřít okno **výstup** , v řádku nabídek zvolte možnost **Zobrazit**  >  **výstup** nebo stiskněte klávesovou zkratku **CTRL** +  + **O**.
 
 ## <a name="toolbar"></a>Panel nástrojů
 
@@ -63,7 +63,7 @@ Podokno **výstup** vybrané v seznamu **Zobrazit výstup z** zobrazuje výstup 
 
 ## <a name="route-messages-to-the-output-window"></a>Směrovat zprávy do okna výstup
 
-Chcete-li zobrazit okno **výstup** vždy, když sestavíte projekt, v dialogovém okně **Možnosti** na stránce Obecné **projekty a řešení**  >  **General** vyberte možnost **při zahájení sestavování zobrazit okno výstup**. Pak se souborem kódu otevřeným pro úpravy zvolte **Přejít na další zpráva** a **Přejít na předchozí zprávu** na panelu nástrojů okna **výstup** a vyberte položky v podokně **výstup** . V takovém případě kurzor v editoru kódu přejde na řádek kódu, kde se vyskytuje vybraný problém.
+Chcete-li zobrazit okno **výstup** vždy, když sestavíte projekt, v dialogovém okně **Možnosti** na stránce Obecné **projekty a řešení**  >   vyberte možnost **při zahájení sestavování zobrazit okno výstup**. Pak se souborem kódu otevřeným pro úpravy zvolte **Přejít na další zpráva** a **Přejít na předchozí zprávu** na panelu nástrojů okna **výstup** a vyberte položky v podokně **výstup** . V takovém případě kurzor v editoru kódu přejde na řádek kódu, kde se vyskytuje vybraný problém.
 
 Některé funkce a příkazy rozhraní IDE vyvolané v [okno příkaz](../../ide/reference/command-window.md) doručí výstup do okna **výstup** . Výstup z externích nástrojů, jako jsou soubory *. bat* a *. com* , které jsou obvykle zobrazeny v příkazovém okně, je směrován do podokna **výstup** , když vyberete možnost **použít okno výstup** v části [spravovat externí nástroje](../../ide/managing-external-tools.md). V podoknech **výstup** lze také zobrazit mnoho dalších typů zpráv. Například v případě, že syntaxe Transact-SQL v uložené proceduře je kontrolována na cílovou databázi, výsledky se zobrazí v okně **výstup** .
 
@@ -75,7 +75,7 @@ V jazyce C++ můžete vytvořit vlastní kroky sestavení a události sestavení
 
 Použijete-li automatické posouvání v okně **výstup** a pak přejdete pomocí myši nebo kláves se šipkami, automatické posouvání se zastaví. Automatické posouvání obnovíte stisknutím klávesy **CTRL** + **End**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Diagnostické zprávy v okně výstup](../../debugger/diagnostic-messages-in-the-output-window.md)
 - [Postupy: řízení okna výstupu](/previous-versions/ht6z4e28(v=vs.140))

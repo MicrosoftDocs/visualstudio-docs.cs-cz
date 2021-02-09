@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Options dialog box, Windows Forms Designer, Data UI Customization
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: 2b43776d2218f6f2a6a120e139dcae9d540f6f10
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+manager: jmartens
+ms.openlocfilehash: 46834dea30f41ebf0eb8629fe4dde0525288e82d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040092"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932303"
 ---
 # <a name="options-dialog-box-windows-forms-designer--data-ui-customization"></a>Dialogové okno Možnosti: Návrhář formulářů > přizpůsobení uživatelského rozhraní dat
 
-Toto dialogové okno definuje, které ovládací prvky se zobrazí v seznamu dostupných ovládacích prvků pro položky v okně zdroje dat. Pokud ho chcete otevřít, **Tools** vyberte  >  **Možnosti** nástrojů a pak vyberte **Návrhář formulářů**  >  **přizpůsobení uživatelského rozhraní**.
+Toto dialogové okno definuje, které ovládací prvky se zobrazí v seznamu dostupných ovládacích prvků pro položky v okně zdroje dat. Pokud ho chcete otevřít, vyberte  >  **Možnosti** nástrojů a pak vyberte **Návrhář formulářů**  >  **přizpůsobení uživatelského rozhraní**.
 
 Můžete vybrat ovládací prvek z položky v okně zdroje dat před tím, než ho přetáhnete do formuláře v aplikaci model Windows Forms. Dostupné ovládací prvky jsou určeny datovým typem položky. Každý datový typ obsahuje seznam platných přidružených ovládacích prvků, které jsou definovány v tomto dialogovém okně, včetně výchozího ovládacího prvku. Když přetáhnete položku z okna zdroje dat do formuláře bez výběru ovládacího prvku, do formuláře se přidá výchozí ovládací prvek pro datový typ vybrané položky.
 

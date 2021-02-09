@@ -9,19 +9,19 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.TypeScript.Code_Validation.JavaScript_Errors
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a3335f4bc5d59b7b4aab3e7341d9f1574d095eeb
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: 0dc6fbde896a2f043040c93710ca48bc95193127
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947749"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932550"
 ---
 # <a name="options-dialog-box-text-editor--javascripttypescript--code-validation"></a>Dialogové okno Možnosti: textový editor \> JavaScript/TypeScript \> Code Validation
 
-Stránka **ověřování kódu** v dialogovém okně **Možnosti** slouží k úpravě nastavení, která ovlivňují způsob, jakým JavaScript zpracovává chyby. Na stránku **ověření kódu** lze získat přístup výběrem možností **nástroje**  >  **Options** na panelu nabídek a následným rozbalením kódu **Text Editor**  >  **JavaScript/TypeScript**  >  **ověřování kódu** v textovém editoru.
+Stránka **ověřování kódu** v dialogovém okně **Možnosti** slouží k úpravě nastavení, která ovlivňují způsob, jakým JavaScript zpracovává chyby. Na stránku **ověření kódu** lze získat přístup výběrem možností **nástroje**  >   na panelu nabídek a následným rozbalením kódu   >  **JavaScript/TypeScript**  >  **ověřování kódu** v textovém editoru.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -35,11 +35,11 @@ Pomocí těchto možností můžete nastavit předvolby toho, jak editor kódu J
 
 **Povolit chyby JavaScriptu**
 
-Při nastavení na **hodnotu true**zobrazí Editor kódu JavaScript chyby pro soubory JavaScript a JSX. V **Seznam chyb** se zobrazí chyby s předponou (js). Zobrazení těchto chyb je užitečné, pokud pracujete s kódem, který jste nenapsali, a nechcete opravit chyby syntaxe.
+Při nastavení na **hodnotu true** zobrazí Editor kódu JavaScript chyby pro soubory JavaScript a JSX. V **Seznam chyb** se zobrazí chyby s předponou (js). Zobrazení těchto chyb je užitečné, pokud pracujete s kódem, který jste nenapsali, a nechcete opravit chyby syntaxe.
 
 **Zobrazit chyby jako upozornění**
 
-Při nastavení na **hodnotu true**se chyby JavaScriptu zobrazují jako varování namísto chyb v **Seznam chyb**.
+Při nastavení na **hodnotu true** se chyby JavaScriptu zobrazují jako varování namísto chyb v **Seznam chyb**.
 
 ## <a name="see-also"></a>Viz také
 

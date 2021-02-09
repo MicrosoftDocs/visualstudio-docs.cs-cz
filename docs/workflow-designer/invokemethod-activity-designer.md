@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 15e6efdc-52ca-46d8-9c5e-063f7c8265a6
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 55162def18d2295e0767a3999ffde75d71e1233d
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 2ba7234ee0c5a4ab8096c020cb44345f17830540
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437733"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931211"
 ---
 # <a name="invokemethod-activity-designer"></a>Návrhář aktivity InvokeMethod
 
@@ -37,13 +37,13 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.InvokeM
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Popisný název <xref:System.Activities.Statements.InvokeMethod> aktivity Výchozí hodnota je InvokeMethod.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je vhodné použít jeden.|
-|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|Pravda|Název metody, která má být volána, když se aktivita spustí. Volaná metoda musí být deklarována jako **Public**. Tato vlastnost se dá upravovat na návrhové ploše a je povinná.|
-|<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|Nepravda|Kolekce parametrů volané metody Parametry musí být přidány do kolekce ve stejném pořadí, v jakém jsou uvedeny v signatuře metody. Chcete-li zobrazit dialogové okno **parametrů** , kde můžete nastavit tuto vlastnost, klikněte na tlačítko se třemi tečkami v poli **parametry** v mřížce vlastností. Chcete-li přidat parametry, klikněte na tlačítko **vytvořit argument** .|
-|<xref:System.Activities.Statements.InvokeMethod.Result%2A>|Nepravda|Návratová hodnota volání metody.|
-|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|Pravda|Určuje, zda je metoda volána asynchronně. Výchozí hodnota je **false (NEPRAVDA** ).|
-|<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>|Nepravda|Objekt, který obsahuje metodu, která má být volána. Tato vlastnost se dá upravit na návrhové ploše.<br /><br /> <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> Je nutné nastavit buď nebo.|
-|<xref:System.Activities.Statements.InvokeMethod.TargetType%2A>|Nepravda|Typ <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> . Tuto vlastnost lze upravit na návrhové ploše. Tato vlastnost musí být nastavena pouze v případě, že je metoda volána jako statická.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Popisný název <xref:System.Activities.Statements.InvokeMethod> aktivity Výchozí hodnota je InvokeMethod.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutné, je vhodné použít jeden.|
+|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|Ano|Název metody, která má být volána, když se aktivita spustí. Volaná metoda musí být deklarována jako **Public**. Tato vlastnost se dá upravovat na návrhové ploše a je povinná.|
+|<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|Ne|Kolekce parametrů volané metody Parametry musí být přidány do kolekce ve stejném pořadí, v jakém jsou uvedeny v signatuře metody. Chcete-li zobrazit dialogové okno **parametrů** , kde můžete nastavit tuto vlastnost, klikněte na tlačítko se třemi tečkami v poli **parametry** v mřížce vlastností. Chcete-li přidat parametry, klikněte na tlačítko **vytvořit argument** .|
+|<xref:System.Activities.Statements.InvokeMethod.Result%2A>|Ne|Návratová hodnota volání metody.|
+|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|Ano|Určuje, zda je metoda volána asynchronně. Výchozí hodnota je **false (NEPRAVDA**).|
+|<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>|Ne|Objekt, který obsahuje metodu, která má být volána. Tato vlastnost se dá upravit na návrhové ploše.<br /><br /> <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> Je nutné nastavit buď nebo.|
+|<xref:System.Activities.Statements.InvokeMethod.TargetType%2A>|Ne|Typ <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> . Tuto vlastnost lze upravit na návrhové ploše. Tato vlastnost musí být nastavena pouze v případě, že je metoda volána jako statická.|
 
 K předání parametrů jako **výstupní** parametr C# (například `Method1(out myParam))` , použití dílčího **argumentu** místo **InOutArgument**
 

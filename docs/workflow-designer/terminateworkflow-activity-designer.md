@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 08e632ed-0724-4fb4-9df1-f8d443eaf0ac
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fc52153ca71320ebe2ebc1e1a12780e37cac08e
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 3f37c862768dd0d72ba66d435478faed9bee8ef3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96995448"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931484"
 ---
 # <a name="terminateworkflow-activity-designer"></a>Návrhář aktivity TerminateWorkflow
 

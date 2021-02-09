@@ -7,15 +7,15 @@ dev_langs:
 - CSharp
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f5d88af6f24306b7b243359c9797a2cb7e7449bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 24fd5768a9eafa4a023aeabf21c862ea1a0d1891
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543504"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931523"
 ---
 # <a name="getautoinsertextensions-method"></a>Metoda Getautoinsertextensions –
   Načte informace o aplikacích pro Office, které se mají automaticky vkládat během ladění.
@@ -40,4 +40,4 @@ HRESULT GetAutoInsertExtensions(
  Hodnota HRESULT, která označuje, zda byla metoda úspěšně dokončena.
 
 ## <a name="remarks"></a>Poznámky
- Každá aplikace pro Office, která se má vložit, se vrátí jako název rozšíření aplikace Office, který odpovídá hodnotě **HKEY_CURRENT_USER \software\microsoft\office\wef\developer**. Hostitel musí vyhledat tyto hodnoty v registru a pak automaticky vkládat rozšíření.
+ Každá aplikace pro Office, která se má vložit, se vrátí jako název rozšíření aplikace Office, který odpovídá hodnotě **HKEY_CURRENT_USER\Software\Microsoft\Office\WEF\Developer**. Hostitel musí vyhledat tyto hodnoty v registru a pak automaticky vkládat rozšíření.
