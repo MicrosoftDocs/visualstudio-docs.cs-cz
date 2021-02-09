@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: cacb4b74-0f39-471c-af38-54b73f5b2868
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3dbe6d813b85865b0fdbc20296473684203a3f1e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e046dbad9329ae377cef6864b7bc71b2ea6a538b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80732383"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894943"
 ---
 # <a name="idebugdefaultport2getserver"></a>IDebugDefaultPort2::GetServer
 Tato metoda získá rozhraní serveru, na kterém je tento port zapnutý.
@@ -28,14 +28,14 @@ Tato metoda získá rozhraní serveru, na kterém je tento port zapnutý.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetServer(
-   IDebugCoreServer3** ppServer
+HRESULT GetServer(
+   IDebugCoreServer3** ppServer
 );
 ```
 
 ```csharp
-int GetServer(
-   out IDebugCoreServer3 ppServer
+int GetServer(
+   out IDebugCoreServer3 ppServer
 );
 ```
 

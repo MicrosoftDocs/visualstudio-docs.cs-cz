@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 6e9cc5ca-24cc-49cf-aa22-c89733828f8c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 320a31afcbe4d99518ce92002e8e2733fded9164
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: b076d2268719e894632ee13142e8388a93450810
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205408"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896432"
 ---
 # <a name="windows-tab-message-options-dialog-box"></a>Karta Okna, dialogové okno možností zpráv
 Pomocí karty **Windows** nastavte rozsah zpráv uvedených v [zobrazení zprávy](../debugger/messages-view.md). Chcete-li zobrazit [dialogové okno Možnosti zprávy](../debugger/message-options-dialog-box.md), vyberte možnost **Protokolovat zprávy** z nabídky **Spy** .

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ea172841-7fef-47bf-bd02-e7da4c3c7109
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a5034fe887ba221106055a928e67e11076167286
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: ee1970e46b9789b814029ef0fa7efe9bfbacc3a4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150766"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896692"
 ---
 # <a name="how-to-specify-debugger-settings"></a>Postupy: Určení nastavení ladicího programu
 V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] můžete zadat různá nastavení pro chování ladicího programu, včetně způsobu zobrazení proměnných, určení, zda jsou zobrazována určitá upozornění, jak jsou nastavena zarážky a jak má vliv na spuštěné programy. Nastavení ladicího programu určíte v dialogovém okně **Možnosti** .

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9c399598-b9fa-4da7-84b5-defbf82e9335
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7117845e4756f8b0e09a8fa603e66448e705b903
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: 38348661946be3894332d49177f972410563b716
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715220"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895204"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>Struktura souboru [Content_types].xml
 Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio používá soubor [Content_Types]. XML k instalaci balíčku, ale neinstaluje samotný soubor.
@@ -85,7 +85,7 @@ Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio použív
 
 ## <a name="example"></a>Příklad
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
  Následující soubor [Content_Types]. XML popisuje typický balíček VSIX.
 
 ### <a name="code"></a>Kód

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - projects and solutions, develop code without
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d706ccdc07abcc91e956878e1bc180be9c542223
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: fcff44b64045e85a06fdc7a8f15f8780c8453713
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006000"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894748"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>Vývoj kódu v sadě Visual Studio bez projektů nebo řešení
 
@@ -103,7 +103,7 @@ Pokud váš základ kódu používá vlastní nástroje sestavení, je nutné sd
 
 Pokud váš základ kódu obsahuje kód Python nebo JavaScript, nemusíte konfigurovat žádné soubory *. JSON* , ale musíte nainstalovat odpovídající úlohu. Také je nutné nakonfigurovat spouštěcí skript:
 
-1. Pomocí **nástrojů** [Python development](https://visualstudio.microsoft.com/vs/python/) [Node.js development](https://visualstudio.microsoft.com/vs/node-js/)  >  **získat nástroje a funkce** nebo zavřením sady Visual Studio a spuštěním instalační program pro Visual Studio nainstalujte úlohu vývoj pro vývojNode.js nebo Python.
+1. Pomocí **nástrojů** [](https://visualstudio.microsoft.com/vs/python/) [](https://visualstudio.microsoft.com/vs/node-js/)  >  **získat nástroje a funkce** nebo zavřením sady Visual Studio a spuštěním instalační program pro Visual Studio nainstalujte úlohu vývoj pro vývojNode.js nebo Python.
 
    ![Úlohy vývoje Node.js a Pythonu](media/python_nodejs_workloads.png)
 

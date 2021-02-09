@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7dfb2227-6e1d-4028-bce9-f8967456a993
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 491c35a1a99af9b3271e8b2036f7d0c6f8f57908
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: a9d6f8f0a21bcffb9c49404647bde2585c28ee2b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97487787"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894800"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-13"></a>Co&#39;s novým v rozhraní API modulu plug-in správy zdrojového kódu verze 1,3
 Rozhraní API pro modul plug-in správy zdrojového kódu verze 1,3 zavádí následující nové funkce, které poskytují pokročilejší kontrolu.

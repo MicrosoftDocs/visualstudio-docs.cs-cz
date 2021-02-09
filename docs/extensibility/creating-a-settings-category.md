@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 97c88693-05ff-499e-8c43-352ee073dcb7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 468b1a44fb4754f86b31992e2c6d96bf6380592d
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: bf089eeaf8c4408a0bc76d2f3982d311ac9c5979
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974548"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896257"
 ---
 # <a name="create-a-settings-category"></a>Vytvoření kategorie nastavení
 
@@ -39,7 +39,7 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
 
 2. Otevřete soubor *VSPackage. resx* a přidejte tyto tři řetězcové prostředky:
 
-    |Name|Hodnota|
+    |Název|Hodnota|
     |----------|-----------|
     |106|Moje kategorie|
     |107|Moje nastavení|
@@ -94,7 +94,7 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
 
 1. Spusťte projekt v režimu ladění stisknutím klávesy **F5**. Tím se spustí experimentální instance.
 
-2. Otevřete **Tools**  >  dialogové okno **Možnosti** nástrojů.
+2. Otevřete   >  dialogové okno **Možnosti** nástrojů.
 
 3. Ve stromovém zobrazení v levém podokně rozbalte **Moje kategorie** a potom klikněte na **stránku mřížka**.
 

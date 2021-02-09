@@ -14,15 +14,15 @@ helpviewer_keywords:
 - user controls [Office development in Visual Studio], actions panes
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5d03ba8968b08fb07eb2cc9c17839af57cf06eca
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 9579de6712b742dde1f9b399ca8a1e4598783679
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844826"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896764"
 ---
 # <a name="actions-pane-overview"></a>Přehled podokna akcí
   Podokno akcí je podokno úloh přizpůsobitelné **Akce dokumentu** , které je připojené k určitému systém Microsoft Office dokumentu aplikace Word nebo systém Microsoft Office excelovém sešitu. Podokno akce je hostováno v podokně úloh Office společně s dalšími vestavěnými podokny úloh, jako je podokno úloh **zdroj XML** v aplikaci Excel nebo podokno úloh **styly a formátování** ve Wordu. Můžete použít ovládací prvky model Windows Forms nebo ovládací prvky WPF pro návrh uživatelského rozhraní podokna akce.

@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 910d673b-c884-4eeb-9928-0e89f3d38cb6
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 11f031aa3e3767af3132e68f92c492dc7e3fae6f
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 8b622200832e42aa3900061125fe08271f5f3458
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134547"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896348"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>Práce s 3D prostředky pro hry a aplikace
 
@@ -37,7 +37,7 @@ Editor obrázků sady Visual Studio můžete použít pro práci s obrázky a te
 
 ### <a name="3d-models"></a>3D modely
 
-3D modely vytvářejí prostor a tvar v hrách a aplikacích. Modely kódují místo bodů v prostorovém prostoru, které jsou známé jako *vrcholy* , společně s indexovanými daty k definování řádků nebo trojúhelníků, které představují tvar modelu. K těmto vrcholům lze přidružit další data, například informace o barvách, normální vektory nebo atributy specifické pro aplikaci. Každý model může také definovat atributy v rámci objektu, například, který shader slouží k výpočtu vzhledu povrchu objektu nebo na který texturu, na kterou se aplikuje.
+3D modely vytvářejí prostor a tvar v hrách a aplikacích. Modely kódují místo bodů v prostorovém prostoru, které jsou známé jako *vrcholy*, společně s indexovanými daty k definování řádků nebo trojúhelníků, které představují tvar modelu. K těmto vrcholům lze přidružit další data, například informace o barvách, normální vektory nebo atributy specifické pro aplikaci. Každý model může také definovat atributy v rámci objektu, například, který shader slouží k výpočtu vzhledu povrchu objektu nebo na který texturu, na kterou se aplikuje.
 
 Editor modelů sady Visual Studio můžete použít pro práci s 3D modely v několika běžných formátech.
 

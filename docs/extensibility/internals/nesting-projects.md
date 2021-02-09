@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 12cce037-9840-4761-845e-5abd5fb317b0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 464538d7f7be68737715cb6fd10fda4017a5556a
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 306099f1fc65a211943e4fb25a5cd73ad6195ea2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876659"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895671"
 ---
 # <a name="nesting-projects"></a>Vnoření projektů
 Vývojáři podnikových aplikací, kteří používají váš balíček VS, mohou pohodlně seskupit podobné typy projektů dohromady [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pomocí *vnoření projektu*. Například projekt šablony organizace používá vnořené projekty k seskupení projektů do kategorií. Projekty obchodní fasády, projekty webového uživatelského rozhraní a tak dále jsou seskupeny do jedné kategorie.

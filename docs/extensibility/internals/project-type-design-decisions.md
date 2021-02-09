@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f68671fe-fd7a-4e56-a0b5-330b0f1fedb1
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab29fbe79b474aa7b640faf81de812b7571de861
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: d1b051abfede6ec90350878f669ed32e7e26b299
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877794"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896750"
 ---
 # <a name="project-type-design-decisions"></a>Rozhodnutí týkající se návrhu typu projektu
 Před vytvořením nového typu projektu je nutné provést několik rozhodnutí o návrhu týkajících se typu projektu. Musíte rozhodnout, jaké typy položek budou vaše projekty obsahovat, jak budou zachovány soubory projektu a jaký model závazku budete používat.

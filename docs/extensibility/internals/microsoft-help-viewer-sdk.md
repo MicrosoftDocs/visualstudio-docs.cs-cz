@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e77d06900a17aca4c2630587a45a9b144accde2
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 2e7b2c8d5f194287f0b654184ddd8716f248ca36
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877842"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895749"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Help Viewer SDK
 
@@ -362,7 +362,7 @@ V integrovaném vývojovém prostředí (IDE) v položce nabídky Help vyberte *
 
 V následující tabulce je libovolný řetězec, který se zobrazí mezi závorkami, zástupný symbol, který musí být nahrazen rozpoznanou hodnotou. Například v \<meta name="Microsoft.Help.Locale" content="[language code]" /> příkazu "[kód jazyka]" musí být nahrazen hodnotou, například "en-US".
 
-| – Vlastnost (reprezentace HTML) | Popis |
+| – Vlastnost (reprezentace HTML) | Description |
 | - | - |
 | \< meta name="Microsoft.Help.Locale" content="[language-code]" /> | Nastaví národní prostředí pro toto téma. Pokud je tato značka použita v tématu, musí být použita pouze jednou a musí být vložena nad jakoukoliv jinou značku nápovědy společnosti Microsoft. Pokud se tato značka nepoužívá, je hlavní text tématu indexován pomocí dělení slov, které je přidruženo k národnímu prostředí produktu, pokud je zadáno. v opačném případě se použije dělení slov en-US. Tato značka odpovídá ISOC RFC 4646. Chcete-li zajistit správnou funkci aplikace Microsoft Help, použijte tuto vlastnost namísto obecného atributu Language. |
 | \< meta name="Microsoft.Help.TopicLocale" content="[language-code]" /> | Nastaví národní prostředí pro toto téma, pokud se používají také jiné národní prostředí. Pokud je tato značka použita v tématu, musí být použita pouze jednou. Tuto značku použijte, pokud katalog obsahuje obsah ve více než jednom jazyce. Více témat v katalogu může mít stejné ID, ale každý musí určovat jedinečný TopicLocale. Téma, které určuje TopicLocale, které odpovídá národnímu prostředí katalogu, je téma, které se zobrazí v obsahu. Ve výsledcích hledání se ale zobrazí všechny jazykové verze tématu. |
@@ -451,12 +451,12 @@ Poznámka: proměnné zaznamenané "{n}" mají závislosti kódu – odebrání 
 | - | - |
 | Zapnut | **CollapsibleArea** |
 | Použije | Rozbalit sbalí text ovládacího prvku obsahu. |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | ExpandText | Rozbalit |
 | CollapseText | Sbalit |
 | Zapnut | **CodeSnippet** |
 | Použije | Text ovládacího prvku fragmentu kódu  Poznámka: obsah fragmentu kódu s "neprůlomovým" místem bude změněn na mezeru. |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | CopyToClipboard | Kopírovat do schránky |
 | ViewColorizedText | Zobrazit barevné barvy |
 | CombinedVBTabDisplayLanguage | Visual Basic (ukázka) |
@@ -464,7 +464,7 @@ Poznámka: proměnné zaznamenané "{n}" mají závislosti kódu – odebrání 
 | VBUsage | Využití |
 | Zapnut | **Zpětná vazba, zápatí a logo** |
 | Použije | Poskytněte řízení zpětné vazby zákazníkovi, aby vám poskytl zpětnou vazbu k aktuálnímu tématu prostřednictvím e-mailu.  Text copyrightu pro obsah  Definice loga. |
-| **Objekt** | **Hodnota (tyto řetězce lze upravit tak, aby splňovala požadavky na přijetí obsahu.)** |
+| **Prvek** | **Hodnota (tyto řetězce lze upravit tak, aby splňovala požadavky na přijetí obsahu.)** |
 | Úprava | © 2013 Microsoft Corporation. All rights reserved. |
 | SendFeedback | \<a href="{0}" {1}>Pošlete nám svůj názor \</a> na toto téma společnosti Microsoft. |
 | FeedbackLink | |
@@ -473,7 +473,7 @@ Poznámka: proměnné zaznamenané "{n}" mají závislosti kódu – odebrání 
 | LogoFileNameHC | vs_logo_wh.gif |
 | Zapnut | **Právní omezení** |
 | Použije | Sada omezení specifických pro velká a malá písmena pro Strojově přeložený obsah. |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | MT_Editable | Tento článek byl Strojově přeložený. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem. |
 | MT_NonEditable | Tento článek byl Strojově přeložený. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem. |
 | MT_QualityEditable | Tento článek byl přeložen ručně. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem. |
@@ -482,14 +482,14 @@ Poznámka: proměnné zaznamenané "{n}" mají závislosti kódu – odebrání 
 | MT_BetaRecycledContents | Tento článek byl ručně přeložen pro předběžnou verzi. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem. |
 | Zapnut | **Propojování** |
 | Použije | Podpora pro online odkazy na témata |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | LinkTableTitle | Propojit tabulku |
 | TopicEnuLinkText | Zobrazit anglickou verzi \</a> tohoto tématu, která je k dispozici ve vašem počítači. |
 | TopicOnlineLinkText | Zobrazit toto téma \<a href="{0}" {1}> online\</a> |
 | OnlineText | Online |
 | Zapnut | **Ovládací prvek zvuk videa** |
 | Použije | Zobrazit elementy a text pro obsah videa |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | MultiMediaNotSupported | Pro podporu obsahu je třeba nainstalovat aplikaci Internet Explorer 9 nebo vyšší {0} . |
 | VideoText | zobrazení videa |
 | AudioText | streamování zvuku |
@@ -497,25 +497,25 @@ Poznámka: proměnné zaznamenané "{n}" mají závislosti kódu – odebrání 
 | OnlineAudioLinkText | \<p>Pokud chcete naslouchat zvukovému programu přidruženému k tomuto tématu, klikněte {0} \<a href="{1}"> {2} sem \</a> .\</p> |
 | Zapnut | **Ovládací prvek nenainstalovaného obsahu** |
 | Použije | Textové prvky (řetězce) používané pro vykreslování contentnotinstalled.htm |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | ContentNotInstalledTitle | V počítači nebyl nalezen žádný obsah. |
 | ContentNotInstalledDownloadContentText | \<p>Chcete-li stáhnout obsah do vašeho počítače, \<a href="{0}" {1}> klikněte na kartu spravovat \</a> .\</p> |
 | ContentNotInstalledText | \<p>V počítači není nainstalován žádný obsah. Prohlédněte si správce pro místní instalaci obsahu aplikace.\</p> |
 | Zapnut | **Nebylo nalezeno řízení tématu.** |
 | Použije | Textové prvky (řetězce) používané pro vykreslování topicnotfound.htm |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | TopicNotFoundTitle | V počítači nelze najít požadované téma. |
 | TopicNotFoundViewOnlineText | \<p>Téma, které jste požadovali, nebylo v počítači nalezeno, ale můžete \<a href="{0}" {1}> Zobrazit téma online \</a> .\</p> |
 | TopicNotFoundDownloadContentText | \<p>V navigačním podokně najdete odkazy na podobná témata nebo \<a href="{0}" {1}> klikněte na kartu spravovat a \</a> Stáhněte obsah do svého počítače.\</p> |
 | TopicNotFoundText | \<p>Téma, které jste požadovali, nebylo v počítači nalezeno.\</p> |
 | Zapnut | **Téma má poškozený ovládací prvek.** |
 | Použije | Textové prvky (řetězce) používané pro vykreslování topiccorrupted.htm |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | TopicCorruptedTitle | Nelze zobrazit požadované téma. |
 | TopicCorruptedViewOnlineText | \<p>Nástroj Help Viewer nemůže zobrazit požadované téma. Může se jednat o chybu v obsahu tématu nebo o základní systémové závislosti.\</p> |
 | Zapnut | **Ovládací prvek domovské stránky** |
 | Použije | Text, který podporuje zobrazení obsahu uzlu nejvyšší úrovně aplikace Help Viewer. |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | HomePageTitle | Domovská stránka prohlížeče nápovědy |
 | HomePageIntroduction | \<p>Vítá vás Microsoft Help Viewer, což je důležitý zdroj informací pro všechny uživatele, kteří používají nástroje, produkty, technologie a služby společnosti Microsoft. V aplikaci Help Viewer získáte přístup k odkazům na postupy a referenční informace, vzorový kód, technické články a další. Pokud chcete najít potřebný obsah, Projděte si obsah, používejte fulltextové vyhledávání, nebo procházejte obsahem pomocí klíčového slova index.\</p> |
 | HomePageContentInstallText | \<p>\<br />Pomocí \<a href="{0}" {1}> karty spravovat obsah \</a> můžete provést následující akce: \<ul> \<li> Přidat obsah do počítače. \</li> \<li> Vyhledejte aktualizace místního obsahu. \</li> \<li> Odeberte obsah z počítače.\</li>\</ul>\</p> |
@@ -828,7 +828,7 @@ Chcete-li tento test otestovat, jako kdyby byl nasazen:
 
 12. V integrovaném vývojovém prostředí společnosti Contoso vyberte klávesu F1 pro otestování funkcí F1.
 
-## <a name="additional-resources"></a>Další zdroje
+## <a name="additional-resources"></a>Další zdroje informací
 
 Rozhraní API pro modul runtime najdete v tématu [rozhraní API pro Windows Help](/previous-versions/windows/desktop/helpapi/helpapi-portal).
 

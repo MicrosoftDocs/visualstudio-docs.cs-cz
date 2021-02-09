@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: eedda0a3-5e05-44fe-841d-a2f4866ac72d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b2b883611d5479f0febc169b32f7f378230be4c
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 0f44cb287945576d361d0318eaeafa42de99871d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96995977"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895905"
 ---
 # <a name="terminating-a-program"></a>Ukončení programu
 Následující část popisuje ukončení jednoho programu s jedním vláknem.

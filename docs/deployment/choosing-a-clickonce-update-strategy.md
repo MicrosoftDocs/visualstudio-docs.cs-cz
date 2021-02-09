@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d8b6e7bb-4ea0-47f3-91cd-48580bdceccc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f231f3426821b7f3148d3e6c268234f125f88f0
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: d546b48ffbbb4d44fb5f2ced11f41826370403e3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437601"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895073"
 ---
 # <a name="choose-a-clickonce-update-strategy"></a>Výběr strategie aktualizace ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] může poskytovat automatické aktualizace aplikací. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Aplikace pravidelně čte soubor manifestu nasazení a zjistí, zda jsou k dispozici aktualizace aplikace. Pokud je k dispozici nová verze aplikace, je stažena a spuštěna. Z důvodu efektivity budou staženy pouze soubory, které byly změněny.
@@ -82,7 +82,7 @@ ms.locfileid: "94437601"
 > [!NOTE]
 > I když můžete vyžadovat aktualizace pomocí dalších strategií aktualizace, kontrola před spuštěním **aplikace** je jediným způsobem, jak zaručit, že se starší verze nedá spustit. Pokud je při spuštění zjištěna povinná aktualizace, musí uživatel aktualizaci přijmout, nebo musí aplikaci ukončit.
 
- Chcete-li aktualizaci označit jako povinnou, klikněte v dialogovém okně **aktualizace aplikace** na možnost **zadat minimální požadovanou verzi této aplikace** a pak zadejte verzi publikování ( **hlavní** , **podverze,** **sestavení** , **Revize** ), která určuje nejnižší číslo verze aplikace, kterou lze nainstalovat.
+ Chcete-li aktualizaci označit jako povinnou, klikněte v dialogovém okně **aktualizace aplikace** na možnost **zadat minimální požadovanou verzi této aplikace** a pak zadejte verzi publikování (**hlavní**, **podverze,** **sestavení**, **Revize**), která určuje nejnižší číslo verze aplikace, kterou lze nainstalovat.
 
  To je stejné jako nastavení atributu **určovat minimumRequiredVersion** elementu **nasazení** v manifestu nasazení; například:
 

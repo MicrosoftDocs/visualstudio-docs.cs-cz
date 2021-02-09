@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: ca312aa3-f9f1-4572-8553-89bf3a724deb
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08b9e88440fcb7b488e479e4188279d82a526e4c
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: d08552683ce61892b0ee233173466a79326e4c6f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97875174"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894852"
 ---
 # <a name="registering-a-legacy-language-service-2"></a>Registrace služby starší verze jazyka 2
 V následujících částech najdete seznam položek registru pro různé možnosti jazykové služby, které jsou k dispozici v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
@@ -29,7 +29,7 @@ V následujících částech najdete seznam položek registru pro různé možno
 ## <a name="registry-entries-for-language-service-options"></a>Položky registru pro možnosti služby jazyka
  Klíč s názvem jazyka *a kořenovým adresářem sady vs reg*\Languages\Language Services \\  může obsahovat následující hodnoty.
 
-|Název|Typ|Rozsah|Popis|
+|Název|Typ|Rozsah|Description|
 |----------|----------|-----------|-----------------|
 |(Výchozí)|REG_SZ|*\<GUID>*|Identifikátor GUID jazykové služby|
 |LangResID|REG_DWORD|0x0 – 0xFFFF|Identifikátor prostředku řetězce (ResID) pro lokalizovaný textový název jazyka.|
@@ -66,7 +66,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-debugger-languages-options"></a>Položky registru pro možnosti jazyků ladicího programu
  Identifikátor GUID \Languages\Language jazyků sady *vs reg root* \\ \Debugger *languages* \\ *GUID*\ Key může obsahovat následující hodnoty.
 
-|Název|Typ|Rozsah|Popis|
+|Název|Typ|Rozsah|Description|
 |----------|----------|-----------|-----------------|
 |(Výchozí)|REG_SZ|text|Výchozí hodnota se dá použít k dokumentování názvu jazyka. Název tohoto klíče je identifikátor GUID vyhodnocovacího filtru výrazů, který má odpovídající položku v *\<VS Reg Root>* \AD7Metrics\Expression hodnotitele.|
 
@@ -85,7 +85,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-editor-tools-options"></a>Položky registru pro možnosti nástrojů editoru
  Klíče registru můžete přidat pod klíč EditorToolsOptions pro stránky vlastností a uzly vlastností. Tyto klíče a jejich hodnoty identifikují stránky vlastností v dialogovém okně **Možnosti** (v nabídce **nástroje** ), které se používají ke konfiguraci jazykové služby. V následujícím příkladu je *název stránky* název stránky vlastností a *název uzlu* je název uzlu ve stromové struktuře v dialogovém okně **Možnosti** . Položka stránky a položka uzlu musí být zadány samostatně.
 
-|Název|Typ|Rozsah|Popis|
+|Název|Typ|Rozsah|Description|
 |----------|----------|-----------|-----------------|
 |(Výchozí)|REG_SZ|ResID|Lokalizovaný zobrazovaný název této stránky možností. Název může být literální text nebo # `nnn` , kde `nnn` je ID prostředku řetězce v satelitní knihovně DLL zadaného rozhraní VSPackage.|
 |Balíček|REG_SZ|*HLAVNÍCH*|Identifikátor GUID balíčku VSPackage, který implementuje tuto stránku možností.|
@@ -119,7 +119,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-file-name-extension-options"></a>Položky registru pro možnosti přípony názvu souboru
  Položka pro příponu souboru by měla zahrnovat úvodní období, například ". myext".
 
-|Název|Typ|Rozsah|Popis|
+|Název|Typ|Rozsah|Description|
 |----------|----------|-----------|-----------------|
 |(Výchozí)|REG_SZ|*HLAVNÍCH*|Identifikátor GUID služby výchozí jazykové služby pro tento typ přípony názvu souboru.|
 
@@ -136,7 +136,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-editor-options"></a>Položky registru pro možnosti editoru
  Kořenový klíč \Editors sady *vs reg* může obsahovat následující hodnoty:
 
-|Název|Typ|Rozsah|Popis|
+|Název|Typ|Rozsah|Description|
 |----------|----------|-----------|-----------------|
 |(Výchozí)|REG_SZ|""|Nepoužívané sem můžete umístit své jméno pro dokumentaci.|
 |DefaultToolboxTab|REG_SZ|""|Název karty panelu nástrojů, která má být nastavena na výchozí hodnotu, je-li Editor aktivní|
@@ -161,7 +161,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-logical-view-options"></a>Položky registru pro možnosti logického zobrazení
  >klíč \LogicalViews pro Editor *vs reg root*\Editors \\ ** může obsahovat následující hodnoty.
 
-|Název|Typ|Rozsah|Popis|
+|Název|Typ|Rozsah|Description|
 |----------|----------|-----------|-----------------|
 |(Výchozí)|REG_SZ||Nepoužívá se.|
 |*\<GUID>*|REG_SZ|""|Klíč k podporovaným logickým zobrazením. Můžete mít tolik z nich, kolik potřebujete. Název položky registru je to důležité, nikoli hodnota, která je vždy prázdným řetězcem.|
@@ -183,7 +183,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-editor-extension-options"></a>Položky registru pro možnosti rozšíření editoru
  \Editors  \\ *identifikátor GUID \Extensions editoru* vs REG může obsahovat následující hodnoty. Přípona názvu souboru nezahrnuje úvodní období.
 
-|Název|Typ|Rozsah|Popis|
+|Název|Typ|Rozsah|Description|
 |----------|----------|-----------|-----------------|
 |(Výchozí)|REG_SZ||Nepoužívá se.|
 |*\<ext>*|REG_DWORD|0 – 0xFFFFFFFF|Relativní priorita rozšíření. Pokud dva nebo více jazyků sdílí stejné rozšíření, je zvolen jazyk s vyšší prioritou.|
@@ -209,7 +209,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0\
 
  Tyto položky registru jsou k dispozici prostřednictvím <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy.
 
-|Název|Typ|Rozsah|Popis|
+|Název|Typ|Rozsah|Description|
 |----------|----------|-----------|-----------------|
 |CodeSense|REG_DWORD|0-1|Podpora operací IntelliSense.|
 |MatchBraces|REG_DWORD|0-1|Podpora pro párové dvojice jazyků, jako jsou složené závorky, kulaté závorky a závorky.|

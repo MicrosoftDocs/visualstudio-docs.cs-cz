@@ -12,15 +12,15 @@ helpviewer_keywords:
 - keyboard shortcuts
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 06bbbb0124984530e92b0066044c71bfbe80ad2b
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 8a4901cecf36208f3ed2141e5baef15ecbe43a6e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006364"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894735"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Výchozí klávesové zkratky v aplikaci Visual Studio
 
@@ -50,7 +50,7 @@ Další informace o usnadnění přístupu v aplikaci Visual Studio naleznete v 
 - [Nápověda](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_help)
 - [Průzkumník řešení](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL)
 - [Zobrazení](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_view)
-- [Ladí](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)
+- [Ladění](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)
 - [Zátěžový test](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_loadtest)
 - [Team](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_team)
 - [Okno](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_window)
@@ -221,9 +221,9 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 |Edit.Replace|**Ctrl+H**|
 |Edit.ReplaceinFiles|**Ctrl+Shift+H**|
 |Edit.SelectAll|**Ctrl+A**|
-|Edit.SelectNextControl|**Rážky**|
+|Edit.SelectNextControl|**Tab**|
 |Edit.SelectPreviousControl|**Shift+Tab**|
-|Edit.ShowTileGrid|**Napište**|
+|Edit.ShowTileGrid|**Enter**|
 |Edit.SizeControlDown|**Ctrl + Shift + šipka dolů**|
 |Edit.SizeControlDownGrid|**Shift + šipka dolů**|
 |Edit.SizeControlLeft|**Ctrl + Shift + šipka doleva**|
@@ -488,7 +488,7 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 |Edit.ExpandCollapseBaseTypeList|**Shift+Alt+B**|
 |Edit.NavigateToLollipop|**Shift+Alt+L**|
 |Edit.RemovefromDiagram|**Odstranit**|
-|View.ViewCode|**Napište**|
+|View.ViewCode|**Enter**|
 
 ## <a name="coded-ui-test-editor"></a>Editor programového testu UI
 
@@ -544,8 +544,8 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 |--------------| - |
 |ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Add.AddNode|**Insert**|
 |ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.BothDependencies|**B**|
-|ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.IncomingDependencies|**I**|
-|ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.OutgoingDependencies|**O**|
+|ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.IncomingDependencies|**Došlo**|
+|ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.OutgoingDependencies|**Zápis**|
 |ArchitectureContextMenus.DirectedGraphContextMenu.NewComment|**Ctrl+Shift+K**<br /><br /> nebo<br /><br /> **Ctrl+E, C**|
 |ArchitectureContextMenus.DirectedGraphContextMenu.Remove|**Odstranit**|
 |ArchitectureContextMenus.DirectedGraphContextMenu.Rename|**F2**|
@@ -721,12 +721,12 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 
 |Příkazy|Klávesové zkratky|
 |--------------| - |
-|Edit.BreakLine|**Napište**|
+|Edit.BreakLine|**Enter**|
 |Edit.CharLeft|**Šipka doleva**|
 |Edit.CharLeftExtend|**Shift + šipka doleva**|
 |Edit.CharRight|**Šipka doprava**|
 |Edit.CharRightExtend|**Shift + šipka doprava**|
-|Edit.InsertTab|**Rážky**|
+|Edit.InsertTab|**Tab**|
 |Edit.LineDown|**Šipka dolů**|
 |Edit.LineDownExtend|**Shift + šipka dolů**|
 |Edit.LineUp|**Šipka nahoru**|
@@ -800,7 +800,7 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 
 | Příkazy | Klávesové zkratky |
 | - | - |
-| Edit.BreakLine | **Napište**<br /><br /> nebo<br /><br /> **Shift+Enter** |
+| Edit.BreakLine | **Enter**<br /><br /> nebo<br /><br /> **Shift+Enter** |
 | Edit.CharLeft | **Šipka doleva** |
 | Edit.CharLeftExtend | **Shift + šipka doleva** |
 | Edit.CharLeftExtendColumn | **Shift + Alt + šipka doleva** |
@@ -840,7 +840,7 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 | Edit.IncrementalSearch | **Ctrl+I** |
 | Upravit. InsertCaretsatAllMatching | **Shift + Alt +;** |
 | Upravit. InsertNextMatchingCaret | **Shift + Alt +.** |
-| Edit.InsertTab | **Rážky** |
+| Edit.InsertTab | **Tab** |
 | Edit.LineCut | **Ctrl+L** |
 | Edit.LineDelete | **Ctrl+Shift+L** |
 | Edit.LineDown | **Šipka dolů** |
@@ -1051,7 +1051,7 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 
 |Příkazy|Klávesové zkratky|
 |--------------| - |
-|Edit.BreakLine|**Napište**|
+|Edit.BreakLine|**Enter**|
 |Edit.CharLeft|**Šipka doleva**|
 |Edit.CharLeftExtend|**Shift + šipka doleva**|
 |Edit.CharRight|**Šipka doprava**|
@@ -1060,7 +1060,7 @@ Tyto klávesové zkratky jsou *globální*, což znamená, že je můžete použ
 |Edit.DocumentEndExtend|**Shift+End**|
 |Edit.DocumentStart|**Domů**|
 |Edit.DocumentStartExtend|**Shift+Home**|
-|Edit.InsertTab|**Rážky**|
+|Edit.InsertTab|**Tab**|
 |Edit.LineDown|**Šipka dolů**|
 |Edit.LineDownExtend|**Shift + šipka nahoru**|
 |Edit.LineUp|**Šipka nahoru**|

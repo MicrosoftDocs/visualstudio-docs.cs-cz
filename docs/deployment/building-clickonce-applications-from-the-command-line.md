@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9bc6212-c584-4f72-88c9-9a4b998c555e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b719f9609dfb2feb432f4692b31e820d806ff92
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 13b057f0a688c3a1ae855215ac226a4d31993ea1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437720"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895151"
 ---
 # <a name="build-clickonce-applications-from-the-command-line"></a>Vytváření aplikací ClickOnce z příkazového řádku
 
@@ -33,7 +33,7 @@ V nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_shor
 
  Když vyvoláte MSBuild/target: Publish na příkazovém řádku, sdělí systému MSBuild, aby projekt sestavil a vytvořil [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci ve složce pro publikování. Jedná se o ekvivalent výběru příkazu **publikovat** v integrovaném vývojovém prostředí (IDE).
 
- Tento příkaz provede *msbuild.exe* , který je v cestě v prostředí příkazového řádku sady Visual Studio.
+ Tento příkaz provede *msbuild.exe*, který je v cestě v prostředí příkazového řádku sady Visual Studio.
 
  "Target" je indikátorem pro MSBuild, jak zpracovat příkaz. Klíčové cíle jsou cíle "Build" a cíl "publikovat". Cíl sestavení je ekvivalentem výběru příkazu Build (nebo stisknutím klávesy F5) v integrovaném vývojovém prostředí (IDE). Pokud chcete projekt sestavit pouze, můžete to dosáhnout zadáním `msbuild` . Tento příkaz funguje, protože cíl sestavení je výchozí cíl pro všechny projekty generované [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] . To znamená, že nemusíte explicitně zadat cíl sestavení. Proto je psaní `msbuild` stejná operace jako při psaní `msbuild /target:build` .
 
@@ -77,7 +77,7 @@ V nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_shor
 
 5. Zadejte `msbuild /target:publish`.
 
-   Výše uvedené kroky vytvoří úplné [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace v podsložce projektu s názvem **Publish**. *CmdLineDemo. Application* je [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest nasazení. Složka *CmdLineDemo_1.0.0.0* obsahuje soubory *CmdLineDemo.exe* a *CmdLineDemo.exe. manifest* , [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace. *Setup.exe* je zaváděcí nástroj, který je ve výchozím nastavení nakonfigurován pro instalaci .NET Framework. Složka DotNetFX obsahuje distribuovatelné součásti pro .NET Framework. Toto je celá sada souborů, kterou potřebujete k nasazení aplikace přes web nebo přes UNC nebo CD/DVD.
+   Výše uvedené kroky vytvoří úplné [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace v podsložce projektu s názvem **Publish**. *CmdLineDemo. Application* je [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest nasazení. Složka *CmdLineDemo_1.0.0.0* obsahuje soubory *CmdLineDemo.exe* a *CmdLineDemo.exe. manifest*, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace. *Setup.exe* je zaváděcí nástroj, který je ve výchozím nastavení nakonfigurován pro instalaci .NET Framework. Složka DotNetFX obsahuje distribuovatelné součásti pro .NET Framework. Toto je celá sada souborů, kterou potřebujete k nasazení aplikace přes web nebo přes UNC nebo CD/DVD.
 
 > [!NOTE]
 > Systém MSBuild používá možnost **PublishDir** k určení umístění pro výstup, například `msbuild /t:publish /p:PublishDir="<specific location>"` .
@@ -99,7 +99,7 @@ Po vytvoření profilu publikování můžete zadat soubor pubxml jako vlastnost
 
  Při publikování aplikace ve výše uvedených postupech jsou následující vlastnosti vloženy do souboru projektu pomocí Průvodce publikováním nebo v souboru profilu publikování pro .NET Core 3,1 nebo novější. Tyto vlastnosti mají přímo vliv na to, jak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je aplikace vytvořená.
 
- V *CmdLineDemo. vbproj*  /  *CmdLineDemo. csproj* :
+ V *CmdLineDemo. vbproj*  /  *CmdLineDemo. csproj*:
 
 ```xml
 <AssemblyOriginatorKeyFile>WindowsApplication3.snk</AssemblyOriginatorKeyFile>
@@ -130,7 +130,7 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 ::: moniker range=">=vs-2019"
 Pro .NET Core 3,1 nebo novější projekty Tato nastavení jsou k dispozici v souboru pubxml.
 
- Vlastnosti publikování jsou ovládány [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] na stránkách **vlastností publikování** , **zabezpečení** a **podepisování** v **Návrháři projektu**. Níže je uveden popis vlastností publikování spolu s uvedením toho, jak jsou jednotlivé vlastnosti nastaveny na různých stránkách vlastností návrháře aplikace:
+ Vlastnosti publikování jsou ovládány [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] na stránkách **vlastností publikování**, **zabezpečení** a **podepisování** v **Návrháři projektu**. Níže je uveden popis vlastností publikování spolu s uvedením toho, jak jsou jednotlivé vlastnosti nastaveny na různých stránkách vlastností návrháře aplikace:
 
 > [!NOTE]
 > Pro desktopové projekty Windows .NET se tato nastavení nacházejí v Průvodci publikováním.
@@ -202,7 +202,7 @@ Pro aplikace .NET pro Windows zůstane toto nastavení v souboru projektu.
 
  V následující tabulce jsou uvedeny čtyři možnosti adresy URL pro nasazení ClickOnce.
 
-|Možnost adresy URL|Popis|
+|Možnost adresy URL|Description|
 |----------------|-----------------|
 |`PublishURL`|Vyžaduje se, pokud publikujete aplikaci ClickOnce na web.|
 |`InstallURL`|Nepovinný parametr. Tuto možnost adresy URL nastavte, pokud se instalační web liší od `PublishURL` . Můžete například nastavit `PublishURL` cestu k serveru FTP a nastavit na `InstallURL` adresu URL webu.|

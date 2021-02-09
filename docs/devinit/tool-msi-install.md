@@ -5,18 +5,18 @@ ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 8dfde12f58161dfcf86eeda2b9714f705685d39a
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 9b177d63ceabd8162c5ddd77e87c68d4a820b00a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440420"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896236"
 ---
 # <a name="msi-install"></a>msi-install
 
@@ -44,7 +44,7 @@ Další možnosti konfigurace je možné předat jako hodnotu additionalOptions.
 
 Nástroj pro instalaci MSI nastaví řadu `msiexec` argumentů příkazového řádku, aby mohla služba MSI běžet bez periferních zařízení. Níže jsou uvedené argumenty a dokumentace k nim najdete v `msiexec` [dokumentaci](https://docs.microsoft.com/windows-server/administration/windows-commands/msiexec).
 
-| Název          | Popis                                                                                                                                                                                   |
+| Název          | Description                                                                                                                                                                                   |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | /i            | Spustí normální instalaci.                                                                                                                                                                    |
 | /quiet        | Určuje tichý režim bez nutnosti zásahu uživatele.                                                                                                                                        |

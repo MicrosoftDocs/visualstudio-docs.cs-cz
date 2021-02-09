@@ -12,22 +12,22 @@ helpviewer_keywords:
 ms.assetid: db17ec9b-bfdf-46b1-bbe7-5ccc140056e2
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc0edf82421ba41198480e6c105dd56c02bd0f7e
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 423bcc7b3d902488f268b2d0706cb5126125f37d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903257"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895385"
 ---
 # <a name="templatedata-element-visual-studio-templates"></a>TemplateData – element (šablony sady Visual Studio)
 Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .
 
  \<VSTemplate> \<TemplateData>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <TemplateData>

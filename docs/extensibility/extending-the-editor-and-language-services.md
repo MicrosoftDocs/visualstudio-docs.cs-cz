@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8d04f8db-eda7-4b3e-b6eb-c06df104502a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49d4b76fe7feadb4458ef68acb351b81c6fa494c
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 81b1e46db4f38f37296798a645d6547cdd6f017f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96995743"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895723"
 ---
 # <a name="extend-the-editor-and-language-services"></a>Rozšiřování editoru a jazykových služeb
 Můžete přidat funkce jazykové služby (například IntelliSense) do vlastního editoru a zvětšit většinu funkcí editoru kódu sady Visual Studio.  Úplný seznam toho, co můžete rozšířit, najdete v tématu [jazykové služby a rozšiřovací body editoru](../extensibility/language-service-and-editor-extension-points.md).
@@ -55,7 +55,7 @@ Můžete přidat funkce jazykové služby (například IntelliSense) do vlastní
 |[Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)|Poskytuje informace o Managed Extensibility Framework (MEF).|
 |[Windows Presentation Foundation](/dotnet/framework/wpf/index)|Poskytuje informace o Windows Presentation Foundation (WPF).|
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
  Editor sady Visual Studio obsahuje následující obory názvů.
 
  <xref:Microsoft.VisualStudio.Language.Intellisense>

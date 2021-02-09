@@ -7,21 +7,21 @@ ms.topic: how-to
 ms.assetid: af8eb0f3-bf6a-4d1c-ab47-dcd88ab04efa
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 646522fe5c893508cbe60a0886ba704e6829252f
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: e5469825b8d81a210fdb699dc9afeb7c6689953b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134763"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896453"
 ---
 # <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>Návod: Vytvoření realistické trojrozměrné kulečníkové koule
 
 Tento návod ukazuje, jak vytvořit realistickou kuličku 3D kulečníkové pomocí Návrháře shaderu a editoru obrázků v aplikaci Visual Studio. 3D vzhled kuličky kulečníkové se dosahuje kombinací několika technik shaderu s příslušnými prostředky textury.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 K dokončení tohoto Názorného postupu potřebujete tyto komponenty a dovednosti:
 
@@ -121,7 +121,7 @@ Model osvětlení Phongova sestaví na modelu osvětlení Lambert, aby zahrnoval
 
     ![Graf shaderu s přidaným odleskem světla](../designers/media/gfx_shader_demo_billiard_step_3.png)
 
-2. Volitelně můžete upravit způsob, jakým se zrcadlové zvýrazňování chová, konfigurací zrcadlových vlastností ( **MaterialSpecular** a **MaterialSpecularPower** ) v grafu shaderu. Chcete-li získat přístup k vlastnostem grafu shader, zvolte prázdnou oblast návrhové plochy a poté v okně **vlastnosti** vyhledejte vlastnost, ke které chcete získat přístup.
+2. Volitelně můžete upravit způsob, jakým se zrcadlové zvýrazňování chová, konfigurací zrcadlových vlastností (**MaterialSpecular** a **MaterialSpecularPower**) v grafu shaderu. Chcete-li získat přístup k vlastnostem grafu shader, zvolte prázdnou oblast návrhové plochy a poté v okně **vlastnosti** vyhledejte vlastnost, ke které chcete získat přístup.
 
    Další informace o tom, jak použít odlesky v shaderu, naleznete v tématu [How to: Create a Basic Phongova shader](../designers/how-to-create-a-basic-phong-shader.md).
 
@@ -135,7 +135,7 @@ V případě, že se odlesky aplikují, vaše kulečníkovéová kulička vypad�
 
 Pokud prohlížíte skutečnou kulečníkovéou kuličku, uvidíte, že jeho lesklý povrch se neprojeví pouze odlesky, ale také nezřetelně odráží obrázek celého světa. Tento odraz můžete simulovat použitím obrázku prostředí jako textury a jeho kombinací s vlastní texturou modelu pro určení konečné barvy jednotlivých pixelů. V závislosti na typu požadovaného dokončení můžete kombinovat více nebo méně textur odrazu spolu se zbytkem shaderu. Například shader, který simuluje vysoce odrážetelné plochy, jako je například zrcadlo, může používat pouze texturu reflexe, ale shader, který simuluje jemnější odraz, jako ten, který se nachází na kulečníkové míč, může kombinovat pouze malou část hodnoty textury reflexe spolu se zbytkem výpočtu shaderu.
 
-Samozřejmě nemůžete pouze použít reflektující obraz na model stejným způsobem jako texturová mapa modelu. Pokud jste to dělali, odraz světa by se přesunul s kulečníkové kuličkou, jako kdyby k němu byl odraz připevněný. Vzhledem k tomu, že odraz může přijít z libovolného směru, potřebujete způsob, jak poskytnout hodnotu mapy reflexe pro libovolný úhel a způsob, jak udržet mapu odrazů orientované podle světa. Aby bylo možné tyto požadavky splnit, můžete použít speciální druh mapy textury, která se nazývá *mapa krychle* , která poskytuje šest textur uspořádaných pro vytvoření stran datové krychle. V rámci této krychle můžete Ukázat libovolným směrem, abyste našli hodnotu textury. Pokud textury na každé straně krychle obsahují obrázky prostředí, můžete simulovat jakýkoli odraz vzorkováním správného umístění na povrchu krychle. Udržováním krychle zarovnané na světě získáte přesný odraz prostředí. Chcete-li určit, kde by měla být datová krychle Navzorkovaná, stačí vypočítat odraz vektoru kamery mimo povrch objektu a pak ho použít jako 3D souřadnice textury. Použití map krychle tímto způsobem je běžnou technikou, která se označuje jako *mapování prostředí* .
+Samozřejmě nemůžete pouze použít reflektující obraz na model stejným způsobem jako texturová mapa modelu. Pokud jste to dělali, odraz světa by se přesunul s kulečníkové kuličkou, jako kdyby k němu byl odraz připevněný. Vzhledem k tomu, že odraz může přijít z libovolného směru, potřebujete způsob, jak poskytnout hodnotu mapy reflexe pro libovolný úhel a způsob, jak udržet mapu odrazů orientované podle světa. Aby bylo možné tyto požadavky splnit, můžete použít speciální druh mapy textury, která se nazývá *mapa krychle*, která poskytuje šest textur uspořádaných pro vytvoření stran datové krychle. V rámci této krychle můžete Ukázat libovolným směrem, abyste našli hodnotu textury. Pokud textury na každé straně krychle obsahují obrázky prostředí, můžete simulovat jakýkoli odraz vzorkováním správného umístění na povrchu krychle. Udržováním krychle zarovnané na světě získáte přesný odraz prostředí. Chcete-li určit, kde by měla být datová krychle Navzorkovaná, stačí vypočítat odraz vektoru kamery mimo povrch objektu a pak ho použít jako 3D souřadnice textury. Použití map krychle tímto způsobem je běžnou technikou, která se označuje jako *mapování prostředí*.
 
 Mapování prostředí poskytuje efektivní aproximaci skutečných odrazů, jak je popsáno v předchozích odstavcích. Odrazy namapované do prostředí můžete prolnout do svého shaderu, aby kulečníkové míč bylo simulované dokončení, které povede k většímu rozmístění kuličky kulečníkové na scéně.
 
@@ -163,15 +163,15 @@ Prvním krokem je vytvoření textury mapy krychle. V mnoha typech aplikací nem
 
 ### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>Sestavení mapy krychle pomocí nástroje DirectX textur Tool
 
-1. V nástroji pro texturu DirectX v hlavní nabídce vyberte možnost **soubor**  >  **Nová textura** . Zobrazí se dialogové okno **Nová textura** .
+1. V nástroji pro texturu DirectX v hlavní nabídce vyberte možnost **soubor**  >  **Nová textura**. Zobrazí se dialogové okno **Nová textura** .
 
-2. Ve skupině **Typ textury** vyberte **cubemap textura** .
+2. Ve skupině **Typ textury** vyberte **cubemap textura**.
 
-3. Ve skupině **dimenze** zadejte správnou hodnotu pro **šířku** a **výšku** a pak zvolte **OK** . Zobrazí se nový dokument textury. Ve výchozím nastavení textura zobrazená jako první v dokumentu textury odpovídá pozitivní ploše krychle **X** .
+3. Ve skupině **dimenze** zadejte správnou hodnotu pro **šířku** a **výšku** a pak zvolte **OK**. Zobrazí se nový dokument textury. Ve výchozím nastavení textura zobrazená jako první v dokumentu textury odpovídá pozitivní ploše krychle **X** .
 
-4. Načtěte texturu, kterou jste vytvořili pro stranu datové krychle textury, na plochu krychle. V hlavní nabídce zvolte **soubor**  >  **otevřít na tuto cubemap plochu** , vyberte texturu, kterou jste vytvořili pro stranu datové krychle, a pak zvolte **otevřít** .
+4. Načtěte texturu, kterou jste vytvořili pro stranu datové krychle textury, na plochu krychle. V hlavní nabídce zvolte **soubor**  >  **otevřít na tuto cubemap plochu**, vyberte texturu, kterou jste vytvořili pro stranu datové krychle, a pak zvolte **otevřít**.
 
-5. Opakujte krok 4 pro plošky krychlí **záporné X** , **kladné Z** a **záporné** . K tomu je třeba zobrazit plošku, kterou chcete načíst. Chcete-li zobrazit jinou plošku mapy krychle, zvolte v hlavní nabídce možnost **Zobrazit**  >  **mapu krychle** a potom vyberte plošku, kterou chcete zobrazit.
+5. Opakujte krok 4 pro plošky krychlí **záporné X**, **kladné Z** a **záporné** . K tomu je třeba zobrazit plošku, kterou chcete načíst. Chcete-li zobrazit jinou plošku mapy krychle, zvolte v hlavní nabídce možnost **Zobrazit**  >  **mapu krychle** a potom vyberte plošku, kterou chcete zobrazit.
 
 6. Pro plošku **pozitivní osy Y** načtěte texturu, kterou jste vytvořili pro začátek datové krychle textury.
 
