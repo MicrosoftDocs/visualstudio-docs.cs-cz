@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0d366188-f5e1-4226-b392-58c09539d097
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b62a848d70b59a1764220c806123b0edd03edf2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f2ae3ecac3e173d190f7393946dd07e4633b15b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464350"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854568"
 ---
 # <a name="idiasymbolget_addresstaken"></a>IDiaSymbol::get_addressTaken
 Načte příznak, který označuje, zda jiný symbol odkazuje na adresu tohoto symbolu.
@@ -25,7 +25,7 @@ Načte příznak, který označuje, zda jiný symbol odkazuje na adresu tohoto s
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_addressTaken ( 
+HRESULT get_addressTaken ( 
    BOOL* pRetVal
 );
 ```

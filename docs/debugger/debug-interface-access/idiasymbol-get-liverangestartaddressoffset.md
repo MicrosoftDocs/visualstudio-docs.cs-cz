@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f5b28914-0a14-4b22-8259-59d7f97ee610
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2563afe5c5323415c5d4c9d7f0b0fa89583f9736
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2d7c2e80ebbd7cef116b27d6c3b9a40ef21fd38d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463034"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853931"
 ---
 # <a name="idiasymbolget_liverangestartaddressoffset"></a>IDiaSymbol::get_liveRangeStartAddressOffset
 Vrátí odkládací část počáteční adresy rozsahu, ve kterém je místní symbol platný.
@@ -25,7 +25,7 @@ Vrátí odkládací část počáteční adresy rozsahu, ve kterém je místní 
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_liveRangeStartAddressOffset ( 
+HRESULT get_liveRangeStartAddressOffset ( 
    DWORD* offset
 );
 ```

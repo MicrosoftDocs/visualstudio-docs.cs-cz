@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: ff160cf6-003b-4ef5-a406-20a7b287b2bf
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c2bae3d054aa8e331db3a345743e4f0e9c20b49
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bbdeb9b4a5bf6f173cbb2a0bd593202317d62342
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463174"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853994"
 ---
 # <a name="idiasymbolget_issplitted"></a>IDiaSymbol::get_isSplitted
 Načte příznak, který určuje, zda byl datový symbol rozdělen do agregace nebo kolekce jiných symbolů; kompilátor zpracovává symboly jako samostatné entity, a to i v případě, že jsou ve skutečnosti součástí většího symbolu.

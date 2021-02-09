@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: e7a6d9cb-2726-4ac7-9f38-415ad215bf9c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f15a686c8539bf3668b880c8f506b20a5f9892a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 27cd45ba5dbcc54ecbaac6013d1d89d6f3bea4a5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464462"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854631"
 ---
 # <a name="idiasymbolfindinlineframesbyrva"></a>IDiaSymbol::findInlineFramesByRVA
 Načte výčet, který umožňuje klientovi iterovat všemi vloženými snímky na zadané relativní virtuální adrese (RVA).
@@ -23,7 +23,7 @@ Načte výčet, který umožňuje klientovi iterovat všemi vloženými snímky 
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT findInlineFramesByRVA (    DWORD             rva,
+HRESULT findInlineFramesByRVA (    DWORD             rva,
    IDiaEnumSymbols** ppResult
 );
 ```

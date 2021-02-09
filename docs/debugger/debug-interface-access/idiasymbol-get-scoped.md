@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 588163f7-958e-4072-bf66-db5c5f07d3cb
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ab42f39535dae2f6eb1e84e0c656dc4ff601f18
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f882a71e92056a7120eb9ea6ae3b96b6ee8ea69c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468719"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853644"
 ---
 # <a name="idiasymbolget_scoped"></a>IDiaSymbol::get_scoped
 Načte příznak, který určuje, zda se uživatelsky definovaný datový typ zobrazuje v neglobálním lexikálním oboru.
@@ -25,7 +25,7 @@ Načte příznak, který určuje, zda se uživatelsky definovaný datový typ zo
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_scoped ( 
+HRESULT get_scoped ( 
    BOOL* pRetVal
 );
 ```

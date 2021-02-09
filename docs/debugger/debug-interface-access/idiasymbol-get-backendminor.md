@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 37f38d19-6685-440d-a477-7127c4f8699e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e65b2af4654949cdfd7198f54eefea386b905cc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 72d7b5712c4ec0e2040d6e0f37a322e8b7b1dac0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464245"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854519"
 ---
 # <a name="idiasymbolget_backendminor"></a>IDiaSymbol::get_backEndMinor
 Načte číslo dílčí verze kompilátoru back-end.
@@ -25,7 +25,7 @@ Načte číslo dílčí verze kompilátoru back-end.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_backEndMinor ( 
+HRESULT get_backEndMinor ( 
    DWORD* pRetVal
 );
 ```

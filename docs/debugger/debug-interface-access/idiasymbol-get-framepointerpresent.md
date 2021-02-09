@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d036090a-1651-454d-9130-b798f58ba053
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e5ccc4c679c7bb20d5b419fe2c04ab5ea8dce904
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 591ed4888bd33040be87181c9dbfab8f1a02172c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463902"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854344"
 ---
 # <a name="idiasymbolget_framepointerpresent"></a>IDiaSymbol::get_framePointerPresent
 Načte příznak, který určuje, zda je k dispozici ukazatel na rámec. Použijte v případě, že je [výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) nastaven na hodnotu `SymTagFunction` .
@@ -25,7 +25,7 @@ Načte příznak, který určuje, zda je k dispozici ukazatel na rámec. Použij
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_framePointerPresent( 
+HRESULT get_framePointerPresent( 
    BOOL* pRetVal
 );
 ```

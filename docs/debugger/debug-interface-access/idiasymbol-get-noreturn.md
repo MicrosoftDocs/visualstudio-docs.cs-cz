@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 704c1cc0-5b84-4334-a02a-70f43aff39d5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ff5eb9baf0fa1eecdb1921d6281fd0a9400d7c2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 631cb2f9e6ebc9d0e88816bb862bf2c5429c7428
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462796"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853819"
 ---
 # <a name="idiasymbolget_noreturn"></a>IDiaSymbol::get_noReturn
 Načte příznak, který určuje, zda byla funkce označena jako nikdy Nenávratná s atributem [return](/cpp/cpp/noreturn) .

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0aa97951-f7e1-4fa5-a87f-2920460c122d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a3a76c0927efad18e667a786b1678262da6ac4d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df38f143eb3e0ab7fb7181b111c309e37e2ed4ba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463965"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854372"
 ---
 # <a name="idiasymbolget_customcallingconvention"></a>IDiaSymbol::get_customCallingConvention
 Načte příznak, který určuje, zda má funkce vlastní konvenci volání.

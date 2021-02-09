@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f8a067c5-3306-4fc5-bc20-8910a47ed504
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 14d69d617d76ffe033e3ab763cdf85dad871f1f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bec64aa467ffeb4780626f2296d9fddbea4d3f1f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463881"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854337"
 ---
 # <a name="idiasymbolget_frontendmajor"></a>IDiaSymbol::get_frontEndMajor
 Načte číslo hlavní verze front-endu.
@@ -25,7 +25,7 @@ Načte číslo hlavní verze front-endu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_frontEndMajor ( 
+HRESULT get_frontEndMajor ( 
    DWORD* pRetVal
 );
 ```

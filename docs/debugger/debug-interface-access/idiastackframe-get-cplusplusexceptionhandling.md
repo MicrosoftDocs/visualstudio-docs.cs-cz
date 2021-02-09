@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f2631820-c986-40ca-b61e-230d7a9c426c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ebc2e4042185b17d7e2f670456cf124c5ce079fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a4532d64b31f291262938e03b595795d0f1252fe
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465119"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854932"
 ---
 # <a name="idiastackframeget_cplusplusexceptionhandling"></a>IDiaStackFrame::get_cplusplusExceptionHandling
 Načte příznak označující, zda je zpracování výjimek jazyka C++ v platnosti.
@@ -25,7 +25,7 @@ Načte příznak označující, zda je zpracování výjimek jazyka C++ v platno
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_cplusplusExceptionHandling ( 
+HRESULT get_cplusplusExceptionHandling ( 
    BOOL* pRetVal
 );
 ```

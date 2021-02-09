@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8f02ce54-ef59-455f-8aa6-dc26761c7aff
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d6a2fd6c7fbca54593a547a1f014fbe7726c814c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7dd354553568ec517f6816f5b279ccbe214f101c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464700"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854757"
 ---
 # <a name="idiastackwalkhelperput_registervalue"></a>IDiaStackWalkHelper::put_registerValue
 Nastaví hodnotu registru.
@@ -25,7 +25,7 @@ Nastaví hodnotu registru.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT put_registerValue ( 
+HRESULT put_registerValue ( 
    DWORD     index,
    ULONGLONG NewVal
 );

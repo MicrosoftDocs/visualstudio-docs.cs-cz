@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: cd63b9ec-9694-406c-b37f-bde6bd5fcbf2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bbe3bd3525abd5ac7fccbae66b603ce8d2a6dbf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 225723fbc5eb40025a6dad1b52a5ab6c790f3fea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464308"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854554"
 ---
 # <a name="idiasymbolget_arrayindextype"></a>IDiaSymbol::get_arrayIndexType
 Načte rozhraní symbolu typu indexu pole symbolu.
@@ -25,7 +25,7 @@ Načte rozhraní symbolu typu indexu pole symbolu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_arrayIndexType ( 
+HRESULT get_arrayIndexType ( 
    IDiaSymbol** pRetVal
 );
 ```

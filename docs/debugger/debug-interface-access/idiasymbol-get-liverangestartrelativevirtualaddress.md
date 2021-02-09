@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1da52539-9872-4c20-8eaa-74b6cb5f3b02
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a594ad4db1d06e541da93a4efb1b6f30a000f51
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38b8d66146b840cabe457784a072d55459ffa646
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463020"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853924"
 ---
 # <a name="idiasymbolget_liverangestartrelativevirtualaddress"></a>IDiaSymbol::get_liveRangeStartRelativeVirtualAddress
 Vrátí začátek rozsahu adres, ve kterém je místní symbol platný.
@@ -25,7 +25,7 @@ Vrátí začátek rozsahu adres, ve kterém je místní symbol platný.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_liveRangeStartRelativeVirtualAddress ( 
+HRESULT get_liveRangeStartRelativeVirtualAddress ( 
    DWORD* address
 );
 ```

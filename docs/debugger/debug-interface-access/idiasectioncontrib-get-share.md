@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 05c4c896-4419-4166-8bb2-8d0934dc14b5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ad5babf2f345d19b4ade2608f92ae5264622809c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bfea906445396551144bccac509355af8be7d29b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466096"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855352"
 ---
 # <a name="idiasectioncontribget_share"></a>IDiaSectionContrib::get_share
 Načte příznak, který označuje, jestli se oddíl může sdílet v paměti.
@@ -25,7 +25,7 @@ Načte příznak, který označuje, jestli se oddíl může sdílet v paměti.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_share ( 
+HRESULT get_share ( 
    BOOL* pRetVal
 );
 ```

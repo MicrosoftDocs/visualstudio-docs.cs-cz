@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0efefa39-49a5-4282-9d41-e50832d927e0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f61ec7fafba66f241d737205de45153a46cec4c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a846c445ff15c626335accd077af8ffb8d16051e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461989"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853630"
 ---
 # <a name="idiasymbolget_signature"></a>IDiaSymbol::get_signature
 Načte hodnotu podpisu symbolu.
@@ -25,7 +25,7 @@ Načte hodnotu podpisu symbolu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_signature ( 
+HRESULT get_signature ( 
    DWORD* pRetVal
 );
 ```

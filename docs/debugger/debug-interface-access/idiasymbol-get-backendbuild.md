@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 423af497-9294-438e-92b4-456c6f56dc56
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 995f4139e0bf70f6d7b30719698aafa4d03eb87f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f35d1e74042a1416a7d5f7f6a05b24b423255991
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464294"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854526"
 ---
 # <a name="idiasymbolget_backendbuild"></a>IDiaSymbol::get_backEndBuild
 Načte číslo sestavení back-endu kompilátoru.
@@ -25,7 +25,7 @@ Načte číslo sestavení back-endu kompilátoru.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_backEndBuild ( 
+HRESULT get_backEndBuild ( 
    DWORD* pRetVal
 );
 ```

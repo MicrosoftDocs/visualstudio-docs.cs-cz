@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f11e3ccb-215d-418c-b8c3-e63159234915
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 65c4dc9d14808edbfef2076bf89478e4432c44ea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a965d04bf6cd41bcd19c2b5e987f610149f601c1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464098"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854484"
 ---
 # <a name="idiasymbolget_classparentid"></a>IDiaSymbol::get_classParentId
 Načte nadřazený identifikátor třídy pro symbol.
@@ -25,7 +25,7 @@ Načte nadřazený identifikátor třídy pro symbol.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_classParentId ( 
+HRESULT get_classParentId ( 
    DWORD* pRetVal
 );
 ```

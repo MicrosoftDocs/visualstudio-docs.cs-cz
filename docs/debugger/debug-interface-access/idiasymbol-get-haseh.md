@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9a4952d8-9fa7-4798-b48c-fe4357648276
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 178bc2744e74867c1954474a20e8c3640ade49c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d387d37103773e7352357ebef5f9134bcff85c59
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463755"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854246"
 ---
 # <a name="idiasymbolget_haseh"></a>IDiaSymbol::get_hasEH
 Načte příznak, který určuje, zda funkce obsahuje nějaké nespravované zpracování výjimek ve stylu C++ (například blok try/catch).

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: c472830f-c3eb-46ab-9498-cd637763d241
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ff4bc6cf8ca9c1b0a1d290e22cd96ef594144ee2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85638411f7ca1da965993ffb41d98cfdbfb4198a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462656"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853770"
 ---
 # <a name="idiasymbolget_oemid"></a>IDiaSymbol::get_oemId
 Načte hodnotu ID OEM (Original Equipment Manufacturer) daného symbolu.
@@ -25,7 +25,7 @@ Načte hodnotu ID OEM (Original Equipment Manufacturer) daného symbolu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_oemId ( 
+HRESULT get_oemId ( 
    DWORD* pRetVal
 );
 ```

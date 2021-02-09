@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: b7b6f490-1cf2-4a68-9237-b152dac84d3c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e29643f530667560d4979906152a174c6eddd1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9433743788663e9a3975f7bb2b402d930b0b4837
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463377"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854092"
 ---
 # <a name="idiasymbolget_ishotpatchable"></a>IDiaSymbol::get_isHotpatchable
 Načte příznak označující, zda byl modul zkompilován pomocí přepínače kompilátoru [/hotpatch (Create opravitelnou za provozu image)](/cpp/build/reference/hotpatch-create-hotpatchable-image) .

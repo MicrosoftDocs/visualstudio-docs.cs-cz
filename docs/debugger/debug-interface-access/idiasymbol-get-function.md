@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 48b3a318-3211-410f-8570-c02ee210f0a5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f806479aa04c568331a5463d8a67defe03fe459d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f340f4ba2202f6412d962d218e23369c9c6e3a4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463832"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854316"
 ---
 # <a name="idiasymbolget_function"></a>IDiaSymbol::get_function
 Načte příznak, který určuje, zda veřejný symbol odkazuje na funkci.
@@ -25,7 +25,7 @@ Načte příznak, který určuje, zda veřejný symbol odkazuje na funkci.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_function ( 
+HRESULT get_function ( 
    BOOL* pRetVal
 );
 ```

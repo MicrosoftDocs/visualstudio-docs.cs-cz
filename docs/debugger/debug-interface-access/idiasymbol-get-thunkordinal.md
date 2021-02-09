@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4b28d78a-1974-4d8a-8bb7-781bf630f2f4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b540efbd6c84994a278c36c9afd3204566d52859
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 276cb0ed42f884f2be3b10d82fd8561c6b9aa20c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461794"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853504"
 ---
 # <a name="idiasymbolget_thunkordinal"></a>IDiaSymbol::get_thunkOrdinal
 Načte typ převráceného kódu funkce.
@@ -25,7 +25,7 @@ Načte typ převráceného kódu funkce.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_thunkOrdinal ( 
+HRESULT get_thunkOrdinal ( 
    DWORD* pRetVal
 );
 ```

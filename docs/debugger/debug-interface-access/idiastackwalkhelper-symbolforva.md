@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8dd9455d-d44c-4dd6-a0aa-31131cbea2aa
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 90b157b0f5b09353ede1af1d344f1f9adf68debd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d6944e2736fb418581306fa25b4541471335488f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464630"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854708"
 ---
 # <a name="idiastackwalkhelpersymbolforva"></a>IDiaStackWalkHelper::symbolForVA
 Načte symbol, který obsahuje zadanou virtuální adresu.
@@ -25,7 +25,7 @@ Načte symbol, který obsahuje zadanou virtuální adresu.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT symbolForVA( 
+HRESULT symbolForVA( 
    ULONGLONG     va,
    IDiaSymbol**  ppSymbol
 );

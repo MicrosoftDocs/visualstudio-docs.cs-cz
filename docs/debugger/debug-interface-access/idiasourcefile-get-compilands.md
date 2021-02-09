@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 57deb50a-9c22-43ea-a80c-eab205997bc4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 89b3d85ab967185fb264491f57d6e6b59afad105
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 339097280cc3ddf88082f7c18c65693fd8e30702
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465298"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854981"
 ---
 # <a name="idiasourcefileget_compilands"></a>IDiaSourceFile::get_compilands
 Načte enumerátor compilands, který má čísla řádků odkazující na tento soubor.
@@ -25,7 +25,7 @@ Načte enumerátor compilands, který má čísla řádků odkazující na tento
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_compilands ( 
+HRESULT get_compilands ( 
    IDiaEnumSymbols** ppRetVal
 );
 ```

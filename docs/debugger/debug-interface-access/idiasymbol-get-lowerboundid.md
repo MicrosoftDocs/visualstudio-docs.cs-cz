@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 12ce98e9-a225-4947-88c9-5fda39dd67e4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a8adc32ab715ee81ce5a74c01431d452475c74e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1780a1ec3af3a066bae698d7e2b0db8b25c4e69b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462922"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853882"
 ---
 # <a name="idiasymbolget_lowerboundid"></a>IDiaSymbol::get_lowerBoundId
 Načte identifikátor symbolu dolní meze dimenze pole FORTRAN.
@@ -25,7 +25,7 @@ Načte identifikátor symbolu dolní meze dimenze pole FORTRAN.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_lowerBoundId ( 
+HRESULT get_lowerBoundId ( 
    DWORD* pRetVal
 );
 ```

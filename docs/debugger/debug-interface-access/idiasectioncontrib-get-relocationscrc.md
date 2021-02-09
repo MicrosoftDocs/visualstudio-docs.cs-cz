@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8c29c91a-062d-4566-a9b7-49251036a15a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 596656930e511d68f20916bd34044410aa706c75
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a0b746b639bceb49f576e6834ad0b86da75ebd5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466117"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855366"
 ---
 # <a name="idiasectioncontribget_relocationscrc"></a>IDiaSectionContrib::get_relocationsCrc
 Načte kontrolu cyklického redundance (CRC) informace o přemístění pro oddíl.
@@ -25,7 +25,7 @@ Načte kontrolu cyklického redundance (CRC) informace o přemístění pro odd�
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_relocationsCrc ( 
+HRESULT get_relocationsCrc ( 
    DWORD* pRetVal
 );
 ```

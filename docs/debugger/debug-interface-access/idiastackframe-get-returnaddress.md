@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0df91981-919f-48ed-9c70-4121567d645b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fdfe3e4d52bbbfdd686c3a0394dfb5699058a69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 87284db4bd4729a1260e5bb495a3dcd206edd731
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464973"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854876"
 ---
 # <a name="idiastackframeget_returnaddress"></a>IDiaStackFrame::get_returnAddress
 Načte návratovou adresu rámce.
@@ -25,7 +25,7 @@ Načte návratovou adresu rámce.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_returnAddress ( 
+HRESULT get_returnAddress ( 
    ULONGLONG* pRetVal
 );
 ```

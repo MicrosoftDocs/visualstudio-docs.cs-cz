@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d6e84916-fd55-457e-b057-57f97b51fe73
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a9867c3997a73f349ba7a9989cb8450f9bd2d3c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f2949eaca7e6f3a18a121e7b92ecb5db88a2156
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465676"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855156"
 ---
 # <a name="idiasessionfindlines"></a>IDiaSession::findLines
 Načte čísla řádků v rámci zadaných identifikátorů kompilantu a zdrojových souborů.
@@ -25,7 +25,7 @@ Načte čísla řádků v rámci zadaných identifikátorů kompilantu a zdrojov
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT findLines ( 
+HRESULT findLines ( 
    IDiaSymbol*           compiland,
    IDiaSourceFile*       file,
    IDiaEnumLineNumbers** ppResult

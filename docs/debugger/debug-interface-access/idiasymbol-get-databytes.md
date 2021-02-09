@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5eb37179-20d8-44ae-a72a-405c1b0435c4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 203732d2ac222f4b4b74fa2e4c90f05b05754b47
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a079f8c452951ae17b3bc0be07c06890bb76d5e0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463958"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854358"
 ---
 # <a name="idiasymbolget_databytes"></a>IDiaSymbol::get_dataBytes
 Načte datové bajty pro symbol OEM.
@@ -25,7 +25,7 @@ Načte datové bajty pro symbol OEM.
 ## <a name="syntax"></a>Syntaxe
 
 ```C++
-HRESULT get_dataBytes ( 
+HRESULT get_dataBytes ( 
    DWORD  cbData,
    DWORD* pcbData,
    BYTE   data[]

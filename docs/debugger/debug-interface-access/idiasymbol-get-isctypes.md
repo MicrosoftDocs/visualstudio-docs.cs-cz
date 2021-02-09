@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 00c73cf9-2933-472e-bc1d-d041f4d7e412
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 264e8dfb784af75a8138aa1b606e0f4a926f8d65
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c65b9e054f56c02c228c2e8b767c8c852f86d51f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463447"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854113"
 ---
 # <a name="idiasymbolget_isctypes"></a>IDiaSymbol::get_isCTypes
 Načte příznak označující, zda soubor symbolů obsahuje typy jazyka C.

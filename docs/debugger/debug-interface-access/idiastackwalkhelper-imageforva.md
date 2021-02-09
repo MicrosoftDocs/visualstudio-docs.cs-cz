@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8d4edabf-3c01-4fef-8b61-4779f3371067
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f28af62a4e5eaa89e92db533bf461dbecaf039d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f7f3ee8df56a0015e0ad0fc34b139a7bcaca29b3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464714"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854764"
 ---
 # <a name="idiastackwalkhelperimageforva"></a>IDiaStackWalkHelper::imageForVA
 Vrátí začátek image spustitelného souboru v paměti dané virtuální adresou v paměťovém prostoru spustitelného souboru.
