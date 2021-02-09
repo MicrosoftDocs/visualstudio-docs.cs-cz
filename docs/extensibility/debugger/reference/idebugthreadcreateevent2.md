@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: aee34a14-4f9c-4ad3-845f-c96ee938cefd
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1aaa25e719f17701344d821759a0dac06aa88698
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d39b7f1120f2ee4d0548e2c8a0b9a75f2fe0bd56
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80718536"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901607"
 ---
 # <a name="idebugthreadcreateevent2"></a>IDebugThreadCreateEvent2
 Toto rozhraní se odesílá ladicím modulem (DE) do nástroje Session Debug Manager (SDM), když je v laděném programu vytvořen podproces.
@@ -25,11 +25,11 @@ Toto rozhraní se odesílá ladicím modulem (DE) do nástroje Session Debug Man
 ## <a name="syntax"></a>Syntax
 
 ```
-IDebugThreadCreateEvent2 : IUnknown
+IDebugThreadCreateEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- DE implementuje toto rozhraní, aby nahlásilo, že bylo vytvořeno vlákno. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` .
+ DE implementuje toto rozhraní, aby nahlásilo, že bylo vytvořeno vlákno. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
  DE vytvoří a odešle tento objekt události, aby nahlásila, že bylo vlákno vytvořeno. Událost se odesílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojená k laděnému programu.

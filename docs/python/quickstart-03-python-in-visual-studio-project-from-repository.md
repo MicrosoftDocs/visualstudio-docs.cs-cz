@@ -5,17 +5,17 @@ ms.date: 12/06/2018
 ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5d0363626748588b6f4058e197f0d6796ece51ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55db74b2b2882aac12ac1587c4e972e31f7dfe10
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64543139"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902398"
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>Rychlý Start: klonování úložiště kódu Pythonu v aplikaci Visual Studio
 
@@ -33,14 +33,14 @@ Po [instalaci podpory Pythonu v aplikaci Visual Studio](installing-python-suppor
 
     ![Okno Průzkumníka týmových oken zobrazující Azure Repos, GitHub a klonování úložiště](media/team-explorer.png)
 
-1. V části **místní úložiště Git**vyberte příkaz **Clone** a potom `https://github.com/gregmalcolm/python_koans` do pole Adresa URL zadejte složku klonovaných souborů a vyberte tlačítko **klonování** .
+1. V části **místní úložiště Git** vyberte příkaz **Clone** a potom `https://github.com/gregmalcolm/python_koans` do pole Adresa URL zadejte složku klonovaných souborů a vyberte tlačítko **klonování** .
 
     > [!Tip]
     > Složka, kterou zadáte v **Team Explorer** , je přesná složka pro příjem klonovaných souborů. Na rozdíl od `git clone` příkazu vytvoření klonu v **Team Explorer** nevytvoří automaticky podsložku s názvem úložiště.
 
 1. Po dokončení klonování se název úložiště zobrazí v seznamu **místní úložiště Git** . Dvojím kliknutím na tento název přejdete na řídicí panel úložiště v **Team Explorer**.
 
-1. V části **řešení**vyberte **Nový**.
+1. V části **řešení** vyberte **Nový**.
 
     ![Okno Průzkumník týmových projektů, vytvoření nového projektu z klonu](media/team-explorer-new-project.png)
 
@@ -48,7 +48,7 @@ Po [instalaci podpory Pythonu v aplikaci Visual Studio](installing-python-suppor
 
 1. V nabídce vyberte **Zobrazit**  >  **Průzkumník řešení** .
 
-1. V **Průzkumník řešení**rozbalte uzel **python3** , klikněte pravým tlačítkem na **Contemplate_koans. py**a vyberte **nastavit jako spouštěcí soubor**. Tento krok informuje Visual Studio, který soubor má použít při spuštění projektu.
+1. V **Průzkumník řešení** rozbalte uzel **python3** , klikněte pravým tlačítkem na **Contemplate_koans. py** a vyberte **nastavit jako spouštěcí soubor**. Tento krok informuje Visual Studio, který soubor má použít při spuštění projektu.
 
 1. V nabídce vyberte vlastnosti **projektu**  >  **koans** , vyberte kartu **Obecné** a nastavte **pracovní adresář** na "python3". Tento krok je nezbytný, protože ve výchozím nastavení sada Visual Studio nastaví pracovní adresář na kořenový adresář projektu místo umístění spouštěcího souboru (*python3 \ contemplate_koans. py*, který můžete zobrazit také ve vlastnostech projektu). Programový kód vyhledá soubor *koans.txt* v pracovní složce, takže beze změny této hodnoty se zobrazí chyba za běhu.
 
@@ -60,7 +60,7 @@ Po [instalaci podpory Pythonu v aplikaci Visual Studio](installing-python-suppor
 
     ![První výstup z programu Python koans](media/koans-output.png)
 
-1. Otevřete *python3/koans/about_asserts. py* tak, že na ni přejdete v **Průzkumník řešení** a dvakrát kliknete na soubor. Všimněte si, že ve výchozím nastavení se v editoru nezobrazí čísla řádků. Pokud to chcete změnit, **Tools**vyberte  >  **Možnosti**nástroje, v dolní části dialogového okna vyberte **Zobrazit všechna nastavení** , přejděte na **text editoru**  >  **Python**  >  **Obecné** a vyberte **čísla řádků**:
+1. Otevřete *python3/koans/about_asserts. py* tak, že na ni přejdete v **Průzkumník řešení** a dvakrát kliknete na soubor. Všimněte si, že ve výchozím nastavení se v editoru nezobrazí čísla řádků. Pokud to chcete změnit, vyberte  >  **Možnosti** nástroje, v dolní části dialogového okna vyberte **Zobrazit všechna nastavení** , přejděte na **text editoru**  >  **Python**  >  **Obecné** a vyberte **čísla řádků**:
 
     ![Zapnutí čísla řádku pro soubory Pythonu](media/options-general-line-numbers.png)
 

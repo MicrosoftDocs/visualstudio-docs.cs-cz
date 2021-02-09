@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 0be6ffc1-8afd-4d02-9a5d-e27dde05fde6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b8dd62c01bad3ac50a57062729fe96588a7ef5be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4bb9505ab475da7919a39eb03e7c84b92857db4e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801864"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902188"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Vytvoření ovládacího prvku panelu nástrojů model Windows Forms
 
 Šablona položky ovládacího prvku sady nástrojů model Windows Forms, která je součástí Visual Studio Extensibility Tools (VS SDK), umožňuje vytvořit ovládací prvek **sady nástrojů** , který se automaticky přidá při instalaci rozšíření. Tento návod ukazuje, jak použít šablonu k vytvoření jednoduchého ovládacího prvku čítače, který můžete distribuovat dalším uživatelům.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
@@ -36,7 +36,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. Vytvořte projekt VSIX s názvem `MyWinFormsControl` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** , a to tak, že vyhledáte "VSIX".
 
-2. Po otevření projektu přidejte šablonu položky **ovládacího prvku panelu nástrojů model Windows Forms** s názvem `Counter` . V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejít na rozšiřitelnost **Visual C#**  >  **Extensibility** a vybrat **model Windows Forms ovládací prvek panelu nástrojů**
+2. Po otevření projektu přidejte šablonu položky **ovládacího prvku panelu nástrojů model Windows Forms** s názvem `Counter` . V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejít na rozšiřitelnost **Visual C#**  >   a vybrat **model Windows Forms ovládací prvek panelu nástrojů**
 
 3. Tím přidáte uživatelský ovládací prvek, který `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> umístí ovládací prvek do **panelu nástrojů**, a položku **Microsoft. VisualStudio. ToolboxControl** Asset v manifestu VSIX pro nasazení.
 
@@ -46,11 +46,11 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 #### <a name="to-build-the-user-interface"></a>Sestavení uživatelského rozhraní
 
-1. V **Průzkumník řešení**poklikejte na *Counter.cs* a otevře se v návrháři.
+1. V **Průzkumník řešení** poklikejte na *Counter.cs* a otevře se v návrháři.
 
 2. Odeberte **kliknutím sem.** tlačítko, které je součástí výchozího nastavení, když přidáte šablonu ovládacího prvku model Windows Forms panelu nástrojů.
 
-3. Z **panelu nástrojů**přetáhněte `Label` ovládací prvek a potom `Button` pod ním ovládací prvek na návrhovou plochu.
+3. Z **panelu nástrojů** přetáhněte `Label` ovládací prvek a potom `Button` pod ním ovládací prvek na návrhovou plochu.
 
 4. Změňte velikost celkového uživatelského ovládacího prvku na 150, 50 pixelů a změňte velikost ovládacího prvku tlačítko na 50, 20 pixelů.
 
@@ -59,7 +59,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
     |Řízení|Vlastnost|Hodnota|
     |-------------|--------------|-----------|
     |`Label1`|**Text**|""|
-    |`Button1`|**Name**|btnReset|
+    |`Button1`|**Název**|btnReset|
     |`Button1`|**Text**|Resetovat|
 
 ### <a name="code-the-user-control"></a>Kódování uživatelského ovládacího prvku
@@ -80,16 +80,16 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 3. Vytvořte následující deklarace veřejných vlastností.
 
     ```csharp
-    public int Value {
+    public int Value {
         get { return currentValue; }
     }
 
-    public string Message {
+    public string Message {
         get { return displayText; }
         set { displayText = value; }
     }
 
-    public bool ShowReset {
+    public bool ShowReset {
         get { return btnReset.Visible; }
         set { btnReset.Visible = value; }
     }
@@ -101,7 +101,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 4. Do `Load` události pro ovládací prvek vložte následující kód.
 
     ```csharp
-    private void Counter_Load(object sender, EventArgs e)
+    private void Counter_Load(object sender, EventArgs e)
     {
         currentValue = 0;
         label1.Text = Message + Value;
@@ -114,7 +114,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 5. Vytvořte následující veřejnou metodu, která zvýší čítač.
 
     ```csharp
-    public void Increment()
+    public void Increment()
     {
         currentValue++;
         label1.Text = displayText + Value;
@@ -126,7 +126,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 6. Přidejte do `Incremented` třídy ovládacího prvku deklaraci události.
 
     ```csharp
-    public event EventHandler Incremented;
+    public event EventHandler Incremented;
     ```
 
     Volající mohou přidat do této události obslužné rutiny, aby reagovaly na změny v hodnotě čítače.
@@ -134,7 +134,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 7. Vraťte se do návrhového zobrazení a dvakrát klikněte na tlačítko **obnovit** pro vygenerování `btnReset_Click` obslužné rutiny události. Pak ho vyplňte tak, jak je znázorněno v následujícím příkladu.
 
     ```csharp
-    private void btnReset_Click(object sender, EventArgs e)
+    private void btnReset_Click(object sender, EventArgs e)
     {
         currentValue = 0;
         label1.Text = displayText + Value;
@@ -148,7 +148,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
     ```csharp
     [ProvideToolboxControl("General", false)]
-    public partial class Counter : UserControl
+    public partial class Counter : UserControl
     ```
 
 ### <a name="test-the-control"></a>Testování ovládacího prvku
@@ -157,13 +157,13 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 #### <a name="to-test-the-control"></a>Testování ovládacího prvku
 
-1. Stisknutím **F5** klávesy F5 **Spusťte ladění**.
+1. Stisknutím  klávesy F5 **Spusťte ladění**.
 
     Tento příkaz sestaví projekt a otevře druhou experimentální instanci sady Visual Studio s nainstalovaným ovládacím prvkem.
 
 2. V experimentální instanci aplikace Visual Studio vytvořte projekt **aplikace model Windows Forms** .
 
-3. V **Průzkumník řešení**dvakrát klikněte na *Form1.cs* a otevřete ho v návrháři, pokud ještě není otevřený.
+3. V **Průzkumník řešení** dvakrát klikněte na *Form1.cs* a otevřete ho v návrháři, pokud ještě není otevřený.
 
 4. V sadě **nástrojů** `Counter` by měl být ovládací prvek zobrazen v části **Obecné** .
 
@@ -214,7 +214,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ## <a name="next-steps"></a>Další kroky
 
-Když sestavíte ovládací prvek **sady nástrojů** , sada Visual Studio vytvoří soubor s názvem *ProjectName. vsix* ve složce \bin\debug\ projektu. Ovládací prvek lze nasadit nahrajte tak, že nahrajete soubor *. vsix* do sítě nebo na web. Když uživatel otevře soubor *. vsix* , ovládací prvek se nainstaluje a přidá do **sady nástrojů** Visual Studio v počítači uživatele. Případně můžete odeslat soubor *. vsix* do [Visual Studio Marketplace](https://marketplace.visualstudio.com/) , aby ho uživatelé mohli najít v **Tools**  >  dialogovém okně**rozšíření a aktualizace** nástrojů.
+Když sestavíte ovládací prvek **sady nástrojů** , sada Visual Studio vytvoří soubor s názvem *ProjectName. vsix* ve složce \bin\debug\ projektu. Ovládací prvek lze nasadit nahrajte tak, že nahrajete soubor *. vsix* do sítě nebo na web. Když uživatel otevře soubor *. vsix* , ovládací prvek se nainstaluje a přidá do **sady nástrojů** Visual Studio v počítači uživatele. Případně můžete odeslat soubor *. vsix* do [Visual Studio Marketplace](https://marketplace.visualstudio.com/) , aby ho uživatelé mohli najít v   >  dialogovém okně **rozšíření a aktualizace** nástrojů.
 
 ## <a name="see-also"></a>Viz také
 

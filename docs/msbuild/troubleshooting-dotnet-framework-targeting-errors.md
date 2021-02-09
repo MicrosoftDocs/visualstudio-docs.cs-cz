@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 830e3e45-9a93-4279-a249-75b84599aefb
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98c3ba64454ca25b62dc5dbe0964db64b010a7ec
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 7b4e6f14eb5ba771ff83b0aa5fedc8ae261ca69d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046980"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902629"
 ---
 # <a name="troubleshoot-net-framework-targeting-errors"></a>Řešení potíží s cílením na rozhraní .NET Framework
 
@@ -38,7 +38,7 @@ Toto téma popisuje chyby nástroje MSBuild, ke kterým může dojít kvůli pro
 
  Pokud změníte cílovou verzi .NET Framework pro vaši aplikaci, Visual Studio změní některé odkazy, ale možná budete muset některé odkazy aktualizovat ručně. Například jedna z výše uvedených chyb může nastat, pokud změníte aplikaci na cílovou verzi .NET Framework 3,5 Service Pack 1 a tato aplikace obsahuje prostředky nebo nastavení, které jsou závislé na profilu klienta pro .NET Framework 4.
 
- Chcete-li pracovat s nastavením aplikace, otevřete **Průzkumník řešení** , zvolte možnost **Zobrazit všechny soubory** a pak upravte soubor *app.config* v editoru XML sady Visual Studio. Změňte verzi v nastavení tak, aby odpovídala příslušné verzi .NET Framework. Například můžete změnit nastavení verze z 4.0.0.0 na 2.0.0.0. Podobně pro aplikaci, která má přidané prostředky, otevřete **Průzkumník řešení** , zvolte tlačítko **Zobrazit všechny soubory** , rozbalte **můj projekt** (Visual Basic) nebo **vlastnosti** (C#) a pak upravte soubor *Resources. resx* v editoru XML aplikace Visual Studio. Změňte nastavení verze z 4.0.0.0 na 2.0.0.0.
+ Chcete-li pracovat s nastavením aplikace, otevřete **Průzkumník řešení**, zvolte možnost **Zobrazit všechny soubory** a pak upravte soubor *app.config* v editoru XML sady Visual Studio. Změňte verzi v nastavení tak, aby odpovídala příslušné verzi .NET Framework. Například můžete změnit nastavení verze z 4.0.0.0 na 2.0.0.0. Podobně pro aplikaci, která má přidané prostředky, otevřete **Průzkumník řešení**, zvolte tlačítko **Zobrazit všechny soubory** , rozbalte **můj projekt** (Visual Basic) nebo **vlastnosti** (C#) a pak upravte soubor *Resources. resx* v editoru XML aplikace Visual Studio. Změňte nastavení verze z 4.0.0.0 na 2.0.0.0.
 
  Pokud má vaše aplikace prostředky, jako jsou ikony nebo rastrové obrázky nebo nastavení, například řetězce datových připojení, můžete také vyřešit chybu odebráním všech položek na stránce **Nastavení** **Návrháře projektu** a pak znovu přidat požadovaná nastavení.
 

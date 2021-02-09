@@ -9,15 +9,15 @@ helpviewer_keywords:
 - TextTransform.exe
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d849439f3c7b8af310f1f82fc0af8f086139d12b
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 741e7625d301e250daa28a93f18a82193675e068
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363910"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902695"
 ---
 # <a name="generate-files-with-the-texttransform-utility"></a>Generování souborů pomocí nástroje TextTransform
 
@@ -72,7 +72,7 @@ TextTransform [<options>] <templateName>
 
 |**Možnost**|**Popis**|
 |-|-|
-|**-out** \<filename>|Soubor, na který je napsán výstup transformace.|
+|**-out**\<filename>|Soubor, na který je napsán výstup transformace.|
 |**-r**\<assembly>|Sestavení používané pro kompilaci a spouštění textové šablony.|
 |**-u**\<namespace>|Obor názvů, který se používá k kompilování šablony.|
 |**– I**\<includedirectory>|Adresář, který obsahuje textové šablony obsažené v zadané textové šabloně.|
@@ -83,7 +83,7 @@ TextTransform [<options>] <templateName>
 
 ## <a name="related-topics"></a>Související témata
 
-|Úloha|Téma|
+|Úkol|Téma|
 |-|-|
 |Generování souborů v řešení sady Visual Studio.|[Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
 |Zapište procesory direktiv pro transformaci vašich vlastních zdrojů dat.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|

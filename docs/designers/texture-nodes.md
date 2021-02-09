@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: b7df5ef3-dd4f-4964-9d96-34e0e180515e
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c3e45789358e49a0b224a6de3ea6e5dfea44bf01
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 0bf9ea986fde744ec384f68338eca0d2239a3e73
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93133959"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902270"
 ---
 # <a name="texture-nodes"></a>Uzly textury
 
@@ -23,7 +23,7 @@ V Návrháři shaderu jsou v uzlech textury ukázkové různé typy textur a geo
 
 ## <a name="texture-node-reference"></a>Odkaz na uzel textury
 
-|Node|Podrobnosti|Vlastnosti|
+|Uzel|Podrobnosti|Vlastnosti|
 |----------|-------------|----------------|
 |**Ukázka cubemap**|Provede vzorek barvy z cubemap na zadaných souřadnicích.<br /><br /> Můžete použít cubemap k poskytnutí detailů barvy pro efekt odrazu nebo pro použití u kulového objektu texturu, která má méně zkreslení než 2D textura.<br /><br /> **Vstup**<br /><br /> `UVW`: `float3`<br /> Vektor, který určuje umístění v datové krychli textury, kde je provedena ukázka. Vzorek je proveden tam, kde tento vektor protíná datovou krychli.<br /><br /> **Výkonem**<br /><br /> `Output`: `float4`<br /> Vzorek barvy.|**Textura**<br /> Registr textury, který je přidružen k vzorkovači.|
 |**Ukázka normálního mapování**|Vezme normální vzorek z 2D normálního mapování na zadaných souřadnicích.<br /><br /> Můžete použít normální mapu pro simulaci vzhledu dalších geometrických podrobností na povrchu objektu. Normální mapy obsahují zabalená data, která představují vektor jednotky namísto dat barev.<br /><br /> **Vstup**<br /><br /> `UV`: `float2`<br /> Souřadnice, ve kterých je ukázka provedena<br /><br /> **Výkonem**<br /><br /> `Output`: `float3`<br /> Normální vzorek.|**Úprava osy**<br /> Faktor, který slouží k úpravě uchopení pera normálního vzorku mapy.<br /><br /> **Textura**<br /> Registr textury, který je přidružen k vzorkovači.|

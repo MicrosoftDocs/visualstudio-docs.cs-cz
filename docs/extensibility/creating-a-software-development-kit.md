@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 8496afb4-1573-4585-ac67-c3d58b568a12
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3a793e3d7233eb1b6d0aaaa74fbe16d52cf6f43
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 74e31cb8fddb00e8a6771a6ad3065bce57cc8bc8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974328"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902246"
 ---
 # <a name="create-a-software-development-kit"></a>Vytvoření sady SDK (Software Development Kit)
 
@@ -52,7 +52,7 @@ Sady SDK platforem mají následující rozložení:
                         \[arch]
 ```
 
-| Node | Popis |
+| Uzel | Description |
 |------------------------| - |
 | *Odkazuje na* složku | Obsahuje binární soubory, které obsahují rozhraní API, se kterými se dá zakódovat. Ty můžou zahrnovat soubory Windows metadata (WinMD) nebo sestavení. |
 | *DesignTime* složka | Obsahuje soubory, které jsou potřeba pouze v době před spuštěním nebo ladění. Mezi ně můžou patřit dokumentace XML, knihovny, hlavičky, sady nástrojů pro vytváření binárních souborů v době návrhu, artefakty MSBuild a tak dále.<br /><br /> Dokumentace XML by v ideálním případě měla být umístěna do složky *\DesignTime* , ale dokumenty XML pro reference budou nadále umístěny společně s referenčním souborem v aplikaci Visual Studio. Například DOC XML pro referenci <em>\References \\ [config] \\ [arch] \sample.dll</em> bude *\References \\ [config] \\ [arch] \sample.xml* a lokalizovaná verze tohoto dokumentu bude *\References \\ [config] \\ [arch] \\ [locale] \sample.xml*. |

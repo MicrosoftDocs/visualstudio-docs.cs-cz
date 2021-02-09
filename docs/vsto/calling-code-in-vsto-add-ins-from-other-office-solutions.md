@@ -16,15 +16,15 @@ helpviewer_keywords:
 - calling code from VBA
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fad3f107487e4736ccd0a6aa59ea5a801b5f72e5
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: deb8fec9212c686bce670df6bab23ed56e51741f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847842"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903809"
 ---
 # <a name="call-code-in-vsto-add-ins-from-other-office-solutions"></a>Volání kódu v doplňcích VSTO z jiných řešení pro systém Office
   Objekt v doplňku VSTO můžete vystavit jiným řešením, včetně dalších systém Microsoft Office řešení. To je užitečné v případě, že doplněk VSTO poskytuje službu, kterou chcete povolit pro používání jiných řešení. Pokud máte například doplněk VSTO pro systém Microsoft Office Excel, který provádí výpočty s finančními daty z webové služby, další řešení mohou provádět tyto výpočty voláním do doplňku Excel VSTO v době běhu.

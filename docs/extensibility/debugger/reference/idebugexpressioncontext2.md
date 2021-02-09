@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 577fdaae-4b2d-4112-9839-ab899535fa6f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 344ae287b3784ceca87fbbab09ad2b2e0a304205
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 92e2561d28c3d4c7133208c78b9a492bc2614fd3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80729638"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901653"
 ---
 # <a name="idebugexpressioncontext2"></a>IDebugExpressionContext2
 Toto rozhraní představuje kontext pro vyhodnocení výrazu.

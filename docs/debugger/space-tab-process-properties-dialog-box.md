@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: c4de1866-7447-48f7-aa88-28ad92c0b930
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fe168f34baf65b00eab59e94afb30e07dfe89b50
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: cb1a33b1456e44b745b3b8992c0233634368952b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98149076"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903499"
 ---
 # <a name="space-tab-process-properties-dialog-box"></a>Karta Prostor, dialogové okno vlastností procesu
 Kartu **prostor** použijte k prohlédnutí adresního prostoru procesu. Chcete-li zobrazit [dialogové okno Vlastnosti procesu](../debugger/process-properties-dialog-box.md), přesuňte fokus do okna [zobrazení procesů](../debugger/processes-view.md) . Ve stromové struktuře vyberte libovolný uzel procesu a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .

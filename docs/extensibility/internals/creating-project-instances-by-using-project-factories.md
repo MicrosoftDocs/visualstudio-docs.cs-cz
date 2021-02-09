@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 94c90012-8669-459c-af8e-307ac242c8c4
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59ad41bda80337fd0adc65d4792adbbbb1cf38f1
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 5e90b12b12589fff89f4df1241eb73504e8bdb74
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328584"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903141"
 ---
 # <a name="create-project-instances-by-using-project-factories"></a>Vytváření instancí projektu pomocí továrnování projektu
 Typy projektů v aplikaci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] používají *objekt* pro vytváření projektů k vytvoření instancí objektů projektu. Objekt pro vytváření projektu je podobný jako objekt pro vytváření standardních tříd pro spoluvytvořitelné objekty COM. Objekty projektu však nelze vytvořit sami; lze je vytvořit pouze pomocí objektu pro vytváření projektu.

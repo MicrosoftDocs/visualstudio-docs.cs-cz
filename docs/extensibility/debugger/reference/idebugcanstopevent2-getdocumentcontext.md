@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 936a6c4e-30c5-4c7e-9ad5-910cc605a4b5
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e3dc5e4bd7144db7fa94425371488bfd8c0e57ed
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 477cc4d83b48e87d63f7ddff5cef53b53f0050ba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80734551"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903266"
 ---
 # <a name="idebugcanstopevent2getdocumentcontext"></a>IDebugCanStopEvent2::GetDocumentContext
 Získá kontext dokumentu, který popisuje umístění této události.
@@ -28,13 +28,13 @@ Získá kontext dokumentu, který popisuje umístění této události.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetDocumentContext ( 
+HRESULT GetDocumentContext ( 
    IDebugDocumentContext2** ppDocCxt
 );
 ```
 
 ```csharp
-int GetDocumentContext ( 
+int GetDocumentContext ( 
    out IDebugDocumentContext2 ppDocCxt
 );
 ```

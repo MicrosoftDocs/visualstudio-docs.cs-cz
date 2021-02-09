@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: d669f154-9b23-48b6-b9f6-7419c8dd61a6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ba8760ce53f222ebbe4626bde0d897d4d12c8a6
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 7fdadad602a256b4740b4c4204704ca73864d612
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329962"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903028"
 ---
 # <a name="custom-tools"></a>Vlastní nástroje
 *Vlastní nástroje* umožňují přidružit nástroj k položce v projektu a spustit tento nástroj pokaždé, když je soubor uložený. Některé vlastní nástroje, které se někdy označují jako *generátory tvořené jedním souborem*, se často používají k implementaci překladatelů, které generují kód z dat a naopak. Například generátory s jedním souborem vytvoří [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] zdrojový kód ze souborů *. Settings* a *. resx* . Generovaný zdrojový kód poskytuje přístup silného typu k datům v souborech *. Settings* a *. resx* . [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] Typy projektů a podporují vlastní nástroje; [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] typy projektů ne. Vlastní typy projektů mohou také podporovat vlastní nástroje.
@@ -45,7 +45,7 @@ ms.locfileid: "96329962"
 
  Ukazuje, jak zachovat vlastnost položky projektu, například autora zdrojového souboru v souboru projektu.
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> Poskytuje podrobnosti o <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> , který transformuje jeden vstupní soubor do jednoho výstupního souboru, který lze zkompilovat nebo přidat do projektu.
 
  <xref:EnvDTE.ProjectItem> Vysvětluje `ProjectItem` rozhraní, které představuje položku v projektu.

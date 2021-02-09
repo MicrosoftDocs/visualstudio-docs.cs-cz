@@ -5,18 +5,18 @@ ms.date: 11/04/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: b10d3cd72c52c2cabda0eb4d9b0da81366e4acb3
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 6cffc3641cf3b7c696b8c51c2cad57ecc2b2df18
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437092"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903390"
 ---
 # <a name="sample-list"></a>Seznam ukázek
 
@@ -30,4 +30,4 @@ Následující tabulka obsahuje seznam všech aktuálně dostupných příkladů
 | [**Otevřít CV**](sample-opencv.md)                   | Příklad přizpůsobení vyžadovaných projektem OpenCV                                                                |   |
 | [**.NET Core Runtime**](sample-dotnet-runtime.md) | Příklad přizpůsobení vyžadovaných projektem [dotnet/runtime](https://github.com/dotnet/runtime) .NET Core Runtime |   |
 | [**Aplikace .NET Core**](sample-dotnet-core.md)        | Příklad úložiště, které používá devinit k instalaci požadované .NET Core SDK.                                             |   |
-| [**Aplikace Node.js**](sample-nodejs.md)               | Příklad úložiště, které používá devinit k instalaci balíčků npm pro projekt Node.js Express.                             |   |
+| [**AplikaceNode.js**](sample-nodejs.md)               | Příklad úložiště, které používá devinit k instalaci balíčků npm pro projekt Node.js Express.                             |   |

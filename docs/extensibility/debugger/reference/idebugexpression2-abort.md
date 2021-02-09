@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 4fcb712e-1bdb-4b75-a440-35cc79ee147e
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5de2e34a8ae1e038c2109627099dacc5bd03a1ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 18e0e4b810e76bd5c5de7b0f8d77e7cd72ceb565
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80729772"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901696"
 ---
 # <a name="idebugexpression2abort"></a>IDebugExpression2::Abort
 Tato metoda zruší vyhodnocení asynchronního výrazu, jak bylo zahájeno voláním metody [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) .

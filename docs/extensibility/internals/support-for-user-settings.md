@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: ad9beac3-4f8d-4093-ad0e-6fb00444a709
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9f6ee52e9ba87eb2f570a6e388dc98c050989c9
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 06cd22ec933e72344ab743372fe30c1a3ddf5fbf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876516"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901589"
 ---
 # <a name="support-for-user-settings"></a>Podpora pro uživatelská nastavení
 VSPackage může definovat jednu nebo více kategorií nastavení, což jsou skupiny proměnných stavu, které jsou trvalé, když uživatel zvolí příkaz **Import/Export nastavení** v nabídce **nástroje** . Pro povolení této trvalosti použijete rozhraní API nastavení v [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .
@@ -52,7 +52,7 @@ VSPackage může definovat jednu nebo více kategorií nastavení, což jsou sku
 
  AlternateParent = CategoryName
 
-| Název | Typ | Data | Popis |
+| Název | Typ | Data | Description |
 |-----------------|--------| - | - |
 | (Výchozí) | REG_SZ | Název vlastního bodu nastavení | Název klíče, `<CSPName`>, je nemístní název vlastního bodu nastavení.<br /><br /> U implementací založených na klíči MPF je název klíče získán kombinací `categoryName` `objectName` argumentů a argumentů <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> konstruktoru do `categoryName_objectName` .<br /><br /> Klíč může být prázdný nebo může obsahovat ID odkazu na lokalizovaný řetězec v satelitní knihovně DLL. Tato hodnota je získána z `objectNameResourceID` argumentu <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> konstruktoru. |
 | Balíček | REG_SZ | Identifikátor GUID | Identifikátor GUID VSPackage, který implementuje vlastní bod nastavení.<br /><br /> Implementace založené na hodnotě MPF využívající <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> třídu použijte `objectType` <xref:System.Type> k získání této hodnoty argument konstruktoru obsahující VSPackage a reflexi. |

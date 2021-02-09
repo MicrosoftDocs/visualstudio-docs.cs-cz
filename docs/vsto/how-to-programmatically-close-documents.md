@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Word [Office development in Visual Studio], closing documents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 52914e60d0519eb923e5c4f327d58afdfa858c1c
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 96a18245e477000e1d4969a3e1e597443c6f3372
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848258"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903720"
 ---
 # <a name="how-to-programmatically-close-documents"></a>Postupy: zavírání dokumentů prostřednictvím kódu programu
   Můžete zavřít aktivní dokument nebo můžete zadat dokument, který chcete zavřít.

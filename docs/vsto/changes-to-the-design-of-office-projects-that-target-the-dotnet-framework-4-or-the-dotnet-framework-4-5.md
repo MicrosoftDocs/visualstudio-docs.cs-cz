@@ -13,15 +13,15 @@ helpviewer_keywords:
 - what's new [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 05f3662f1bc6379fa3401e98473971bcefc36ddd
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 2bb8f6064bd2c2df55c7d0cf8fea1e25c513da0f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847855"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903794"
 ---
 # <a name="changes-to-the-design-of-office-projects-that-target-the-net-framework-4-or-the-net-framework-45"></a>Změny v návrhu projektů Office cílených na .NET Framework 4 nebo .NET Framework 4,5
   Počínaje [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] verzí sada Visual Studio zavádí některé změny v návrhu projektů Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější. Pokud jste obeznámeni s projekty Office v předchozích verzích sady Visual Studio, měli byste si být vědomi těchto změn před vývojem projektů Office, které cílí na tyto verze .NET Framework 4,0 nebo novější. Ve výchozím nastavení všechny projekty, které vytvoříte pomocí Visual Studio 2013 nebo novější, cílí na .NET Framework 4,0 nebo novější.

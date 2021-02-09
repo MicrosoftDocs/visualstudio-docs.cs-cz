@@ -5,17 +5,17 @@ ms.date: 12/06/2018
 ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 089be3e6f28a939979f6bd97097ea7558824b493
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81f337cf3feca517f46632e7fe08a9f5a62cd707
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62429750"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902450"
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>Rychlý Start: vytvoření projektu v Pythonu ze šablony v aplikaci Visual Studio
 
@@ -23,7 +23,7 @@ Po [instalaci podpory Pythonu v aplikaci Visual Studio](installing-python-suppor
 
 1. Spusťte Visual Studio.
 
-1. V horním panelu nabídek zvolte **soubor**  >  **Nový**  >  **projekt**a potom v dialogovém okně **Nový projekt** vyhledejte "prázdná baňka", vyberte šablonu **webového projektu prázdné baňky** v prostředním seznamu, zadejte název projektu a vyberte **OK**:
+1. V horním panelu nabídek zvolte **soubor**  >  **Nový**  >  **projekt** a potom v dialogovém okně **Nový projekt** vyhledejte "prázdná baňka", vyberte šablonu **webového projektu prázdné baňky** v prostředním seznamu, zadejte název projektu a vyberte **OK**:
 
     ![Vytvoření nového projektu pomocí šablony webového projektu prázdné baňky](media/quickstart-python-06-blank-flask-template.png)
 
@@ -31,7 +31,7 @@ Po [instalaci podpory Pythonu v aplikaci Visual Studio](installing-python-suppor
 
     ![Instalace baňky do virtuálního prostředí](media/quickstart-python-07-install-into-virtual-environment.png)
 
-1. Visual Studio zobrazí dialogové okno **Přidat virtuální prostředí** . Přijměte výchozí nastavení a vyberte **vytvořit**a pak vyjádřete souhlas s případnými žádostmi o zvýšení oprávnění.
+1. Visual Studio zobrazí dialogové okno **Přidat virtuální prostředí** . Přijměte výchozí nastavení a vyberte **vytvořit** a pak vyjádřete souhlas s případnými žádostmi o zvýšení oprávnění.
 
     > [!Tip]
     > Když zahájíte projekt, důrazně doporučujeme vytvořit virtuální prostředí hned, protože se vám dá dělat většina šablon sady Visual Studio. Virtuální prostředí udržují přesné požadavky vašeho projektu v průběhu času při přidávání a odebírání knihoven. Pak můžete snadno vygenerovat *requirements.txt* soubor, který použijete k přeinstalaci těchto závislostí na jiné vývojové počítače (jako při použití správy zdrojového kódu) a při nasazení projektu na provozní server. Další informace o virtuálních prostředích a jejich výhodách najdete v tématu [použití virtuálních prostředí](../python/selecting-a-python-environment-for-a-project.md#use-virtual-environments) a [Správa požadovaných balíčků pomocí requirements.txt](../python/managing-required-packages-with-requirements-txt.md).
@@ -79,7 +79,7 @@ Po [instalaci podpory Pythonu v aplikaci Visual Studio](installing-python-suppor
 
 **Odpověď**: s nainstalovanou úlohou Pythonu nabízí Visual Studio celou řadu šablon projektů, včetně těch, které se týkají [láhve, Django webových architektur](../python/python-web-application-project-templates.md), Azure Cloud Services, různých scénářů strojového učení a dokonce i šablony pro vytvoření projektu z existující struktury složek obsahující aplikaci v Pythonu. Přístup k nim provedete pomocí dialogového okna **soubor**  >  **Nový**  >  **projekt** výběrem uzlu jazyk **Pythonu** a jeho podřízených uzlů.
 
-Sada Visual Studio také poskytuje celou řadu šablon souborů nebo *položek* k rychlému vytvoření třídy Pythonu, balíčku Pythonu, testu jednotek Pythonu, *web.config* souborů a dalších. Pokud máte otevřený projekt v jazyce Python, získáte přístup k šablonám položek **Project**pomocí  >  příkazu nabídky**Přidat novou položku** v projektu. Viz Referenční dokumentace k [šablonám položek](python-item-templates.md) .
+Sada Visual Studio také poskytuje celou řadu šablon souborů nebo *položek* k rychlému vytvoření třídy Pythonu, balíčku Pythonu, testu jednotek Pythonu, *web.config* souborů a dalších. Pokud máte otevřený projekt v jazyce Python, získáte přístup k šablonám položek pomocí  >  příkazu nabídky **Přidat novou položku** v projektu. Viz Referenční dokumentace k [šablonám položek](python-item-templates.md) .
 
 Použití šablon vám může ušetřit značný čas při spuštění projektu nebo při vytváření souboru a je to skvělý způsob, jak se dozvědět o různých typech aplikací a struktur kódu. Vytváření projektů a položek z různých šablon je užitečné, pokud si chcete seznámit s tím, co nabízejí.
 

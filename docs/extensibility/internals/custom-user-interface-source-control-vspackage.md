@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: f35ddb24-53bf-461e-b34f-7414f657c082
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1426b271ea8db4d486043c9fbe885a0f428b514
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 97c82254516c78a3aff9884e91e44adc45b95981
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328519"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902987"
 ---
 # <a name="custom-user-interface-source-control-vspackage"></a>Vlastní uživatelské rozhraní (VSPackage správy zdrojového kódu)
 VSPackage deklaruje své položky nabídky a jejich výchozí stavy prostřednictvím souboru tabulky příkazů sady Visual Studio (*. vsct*). [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Integrované vývojové prostředí (IDE) zobrazuje položky nabídky ve svých výchozích stavech, dokud není načteno VSPackage. Následně <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> je metoda volána k povolení nebo zakázání položek nabídky.
@@ -51,7 +51,7 @@ VSPackage deklaruje své položky nabídky a jejich výchozí stavy prostřednic
 
   Následující tabulka popisuje konkrétní podrobnosti o tom, jak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozhraní IDE skrývá jiné položky uživatelského rozhraní.
 
-| Položka uživatelského rozhraní | Popis |
+| Položka uživatelského rozhraní | Description |
 | - | - |
 | Nabídky a panely nástrojů | Balíček správy zdrojového kódu musí nastavit počáteční nabídku a stavy viditelnosti panelu nástrojů na ID balíčku správy zdrojového kódu v souboru *. vsct* v oddílu [VisibilityConstraints](../../extensibility/visibilityconstraints-element.md) . To umožňuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovanému vývojovém prostředí (IDE) nastavit stav položek nabídky odpovídajícím způsobem bez načtení VSPackage a volání implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metody. |
 | Okna nástrojů | Rozhraní VSPackage správy zdrojového kódu skryje všechna okna nástrojů, která vlastní, když se nestane neaktivní. |

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4fc7b5a5-11b0-46ca-9656-8c2a0b08d1fe
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 852b910de742676e1fe7dd0c85129640eb37a9ae
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 6287abee811d406ef7aafa5ce3cc3dc62624b0d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046935"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902622"
 ---
 # <a name="uidmanager-task"></a>UidManager – úloha
 
@@ -38,7 +38,7 @@ ms.locfileid: "93046935"
 |-------------------------| - |
 | `IntermediateDirectory` | Volitelný **řetězcový** parametr.<br /><br /> Určuje adresář, který se použije k zálohování zdrojových souborů XAML, které jsou určené parametrem **MarkupFiles** . |
 | `MarkupFiles` | Povinný parametr **ITaskItem []** .<br /><br /> Určuje zdrojové soubory XAML, které mají být zahrnuty pro kontrolu UID, aktualizaci nebo odebrání. |
-| `Task` | Povinný parametr **řetězce**<br /><br /> Určuje úlohu správy UID, kterou chcete provést. Platné možnosti jsou **check** , **Update** nebo **Remove** . |
+| `Task` | Povinný parametr **řetězce**<br /><br /> Určuje úlohu správy UID, kterou chcete provést. Platné možnosti jsou **check**, **Update** nebo **Remove**. |
 
 ## <a name="example"></a>Příklad
 

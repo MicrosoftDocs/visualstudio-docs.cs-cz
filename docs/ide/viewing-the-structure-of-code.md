@@ -24,15 +24,15 @@ helpviewer_keywords:
 - object browser
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e33a060718fc5fd8a3545baaa7e78b6b763ab78d
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 63344b28026579e4b3e99b513a99c99d14617a64
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96478936"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902771"
 ---
 # <a name="view-the-structure-of-code-by-using-different-tool-windows"></a>Zobrazení struktury kódu pomocí různých oken nástrojů
 
@@ -56,7 +56,7 @@ Pokud je váš projekt vrácen se změnami do správy zdrojového kódu, každý
 
 Panel nástrojů **zobrazení tříd** obsahuje následující příkazy:
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Nová složka**|Vytvoří virtuální složku nebo podsložku, ve které můžete uspořádat často používané prvky. Jsou uloženy v souboru aktivního řešení (*. suo*). Po přejmenování nebo odstranění elementu v kódu se může zobrazit ve virtuální složce jako chybový uzel. Chcete-li tento problém vyřešit, odstraňte chybový uzel. Pokud jste přejmenovali element, můžete jej přesunout z hierarchie projektu do složky znovu.|
 |**Zpět**|Přejde k dříve vybrané položce.|
@@ -67,7 +67,7 @@ Panel nástrojů **zobrazení tříd** obsahuje následující příkazy:
 
 Tlačítko **zobrazení tříd nastavení** na panelu nástrojů má následující nastavení:
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Zobrazit základní typy**|Zobrazí se základní typy.|
 |**Zobrazit odkazy projektu**|Zobrazí se odkazy na projekt.|
@@ -82,7 +82,7 @@ Tlačítko **zobrazení tříd nastavení** na panelu nástrojů má následují
 
 Místní nabídka (nebo kliknutí pravým tlačítkem myši) v **zobrazení tříd** může obsahovat následující příkazy v závislosti na zvoleném typu projektu:
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Přejít k definici**|Vyhledá definici prvku ve zdrojovém kódu nebo v **Prohlížeč objektů**, pokud element není definován v otevřeném projektu.|
 |**Procházet definici**|Zobrazí vybranou položku v **Prohlížeč objektů**.|
@@ -114,7 +114,7 @@ Okno **hierarchie volání** nenalezne odkazy na skupiny metod, které obsahují
 
 Místní nabídka v okně **hierarchie volání** obsahuje následující příkazy:
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Přidat jako nový kořen**|Přidá vybraný uzel jako nový kořenový uzel.|
 |**Odebrat kořen**|Odebere vybraný kořenový uzel z podokna zobrazení stromu.|
@@ -153,7 +153,7 @@ Můžete použít **Prohlížeč objektů** pro přidání odkazu na sestavení 
 
 Pomocí tlačítka **Prohlížeč objektů nastavení** na panelu nástrojů můžete zadat jedno z následujících zobrazení:
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Zobrazit obory názvů**|Zobrazuje obory názvů místo fyzických kontejnerů v levém podokně. Obory názvů uložené ve více fyzických kontejnerech jsou sloučeny.|
 |**Zobrazit kontejnery**|Zobrazí v levém podokně fyzické kontejnery, nikoli obory názvů. **Zobrazit obory názvů** a **kontejnery zobrazení** se vzájemně exkluzivním nastavením.|
@@ -170,7 +170,7 @@ Pomocí tlačítka **Prohlížeč objektů nastavení** na panelu nástrojů mů
 
 Místní nabídka (nebo kliknutí pravým tlačítkem myši) v **Prohlížeč objektů** může obsahovat následující příkazy v závislosti na zvoleném typu položky:
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Procházet definici**|Zobrazuje primární uzel pro vybranou položku.|
 |**Najít všechny odkazy**|Vyhledá aktuálně vybranou položku objektu a zobrazí výsledky v okně **hledání výsledků** .|
@@ -199,7 +199,7 @@ I když je toto okno jen pro čtení, můžete v něm nastavit zarážky nebo z�
 
 Místní nabídka (nebo kliknutí pravým tlačítkem myši) v okně **definice kódu** může obsahovat následující příkazy:
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Rychlé akce a refaktoringy**||
 |**Přejmenovat**||

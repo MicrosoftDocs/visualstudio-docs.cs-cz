@@ -5,17 +5,17 @@ ms.date: 03/13/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 10430c6eba57c97dd46a706d0ec2f532cd08d4f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43d24d38fcb9ba07d4cc8c58d7b544256171b049
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801162"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902375"
 ---
 # <a name="how-visual-studio-uses-python-search-paths"></a>Jak Visual Studio používá cesty hledání v Pythonu
 
@@ -29,7 +29,7 @@ Sada Visual Studio ignoruje proměnnou prostředí vyhledávacích cest, ale i k
 
 Visual Studio proto poskytuje způsob, jak určit cesty hledání přímo v prostředích a projektech. Kód spouštěný nebo ladění v aplikaci Visual Studio přijímá cesty hledání v hodnotě `PYTHONPATH` (a dalších ekvivalentních proměnných). Když přidáte cesty pro hledání, Visual Studio v těchto umístěních zkontroluje knihovny a v případě potřeby vytvoří databáze IntelliSense (Visual Studio 2017 verze 15,5 a starší). vytváření databáze může v závislosti na počtu knihoven trvat delší dobu.
 
-Chcete-li přidat cestu pro hledání, přejděte na **Průzkumník řešení**, rozbalte uzel projektu, klikněte pravým tlačítkem na **cesty pro hledání**a vyberte **Přidat složku do cesty pro hledání**:
+Chcete-li přidat cestu pro hledání, přejděte na **Průzkumník řešení**, rozbalte uzel projektu, klikněte pravým tlačítkem na **cesty pro hledání** a vyberte **Přidat složku do cesty pro hledání**:
 
 ::: moniker range="vs-2017"
 ![Přidat složku do cesty pro hledání na cestách pro hledání v Průzkumník řešení](media/search-paths-command.png)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Chart control [Office development in Visual Studio], data binding
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 45de5170ca8a8b7e8a71521e18523e73ebc24046
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 3530e0821d4569381f610f44ae541c04b484b469
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847820"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903780"
 ---
 # <a name="chart-control"></a>Ovládací prvek grafu
   <xref:Microsoft.Office.Tools.Excel.Chart>Ovládací prvek je objekt grafu, který zpřístupňuje události. Když přidáte graf na list, Visual Studio vytvoří <xref:Microsoft.Office.Tools.Excel.Chart> objekt, který lze naprogramovat přímo, aniž by bylo nutné procházet model systém Microsoft Office excelového objektu.

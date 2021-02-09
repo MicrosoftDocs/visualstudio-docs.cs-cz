@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad329c87-b0ad-4304-84de-ae9496514c42
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cf02fda50678d9de4eb01dc28b4825844e33063e
-ms.sourcegitcommit: b1f7e7d7a0550d5c6f46adff3bddd44bc1d6ee1c
+ms.openlocfilehash: 550baf52347c1128ef50509e7787861355c9428f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98069497"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903396"
 ---
 # <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;InstallChecks – &gt; element (zaváděcí nástroj)
 `InstallChecks`Prvek podporuje spuštění různých testů pro místní počítač, aby bylo zajištěno, že byly nainstalovány všechny odpovídající požadavky na aplikaci.
@@ -181,7 +181,7 @@ ms.locfileid: "98069497"
     <FailIf Property="Version9X" Compare="VersionLessThan" Value="4.10" String="InvalidPlatform"/>
 ```
 
- Pokud chcete přeskočit běžící instalační kontroly, pokud je splněna podmínka FailIf nebo BypassIf, použijte atribut BeforeInstallChecks.  Například:
+ Pokud chcete přeskočit běžící instalační kontroly, pokud je splněna podmínka FailIf nebo BypassIf, použijte atribut BeforeInstallChecks.  Příklad:
 
 ```xml
     <!-- Block install and do not evaluate install checks if user does not have admin privileges -->
