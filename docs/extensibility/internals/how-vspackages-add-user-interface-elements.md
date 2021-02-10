@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: abc5d9d9-b267-48a1-92ad-75fbf2f4c1b9
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e3e2fe51c365e3e6936a73aef9d4de9d52024d47
-ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
+ms.openlocfilehash: fc9e80f549a5bf8cbf151ee224a9f503470a90de
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761085"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934117"
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>Jak prvky VSPackage přidávají prvky uživatelského rozhraní
 VSPackage může přidat prvky uživatelského rozhraní (UI), například nabídky, panely nástrojů a okna nástrojů, do sady Visual Studio prostřednictvím souboru *. vsct* .
@@ -187,7 +187,7 @@ Následující pravidla určují, jak může položka zavolat jinou položku jak
 
 |Prvek|Definováno v této části tabulky příkazů|Může být obsažena (jako nadřazená nebo podle umístění v `CommandPlacements` části nebo obojí)|Může obsahovat (označované jako nadřazené)|
 |-------------| - | - | - |
-|Skupina|[Groups – element](../../extensibility/groups-element.md), IDE, jiné sady VSPackage|Nabídka, skupina, samotná položka|Nabídky, skupiny a příkazy|
+|Group (Skupina)|[Groups – element](../../extensibility/groups-element.md), IDE, jiné sady VSPackage|Nabídka, skupina, samotná položka|Nabídky, skupiny a příkazy|
 |Nabídka|[Menu – element](../../extensibility/menus-element.md), rozhraní IDE, jiné sady VSPackage|1 až *n* skupin|0 až *n* skupin|
 |Panel nástrojů|[Menu – element](../../extensibility/menus-element.md), rozhraní IDE, jiné sady VSPackage|Samotná položka|0 až *n* skupin|
 |Položka nabídky|[Buttons – Element](../../extensibility/buttons-element.md), rozhraní IDE, jiné sady VSPackage|1 až *n* skupin, samotná položka|-0 až *n* skupin|

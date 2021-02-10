@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: e85a3ff4-dedd-4ff4-9b22-3a1e94755362
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a81caf88798f1b02c212b6ee5a802e6ea824758
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: a010ce3ff090b50557bedb62b7a611705fb9638a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047533"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933763"
 ---
 # <a name="wpf-targets-files"></a>WPF – soubory .targets
 
-Windows Presentation Foundation (WPF) rozšiřuje MSBuild přidáním sady úkolů specifických pro WPF, které jsou zkombinovány do speciálního souboru *. targets* , *Microsoft. WinFX. targets* . Tento soubor kombinuje sadu úloh nástroje MSBuild, které jsou požadovány pro sestavení projektu MSBuild v subsystému WPF.
+Windows Presentation Foundation (WPF) rozšiřuje MSBuild přidáním sady úkolů specifických pro WPF, které jsou zkombinovány do speciálního souboru *. targets* , *Microsoft. WinFX. targets*. Tento soubor kombinuje sadu úloh nástroje MSBuild, které jsou požadovány pro sestavení projektu MSBuild v subsystému WPF.
 
 ## <a name="see-also"></a>Viz také
 

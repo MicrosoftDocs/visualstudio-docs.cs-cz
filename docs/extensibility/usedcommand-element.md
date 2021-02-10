@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 99cd05d3-644a-42ff-b289-8458cd1b20c0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d1dcef25413bddbb1eb5c35a47a9dc0d30f4a8f
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: 3c3f4a5f39e7cb999d9b3a86aa791464fca25645
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715961"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934100"
 ---
 # <a name="usedcommand-element"></a>UsedCommand – element
 Umožňuje VSPackage získat přístup k příkazu, který je definován v jiném souboru. vsct. Pokud například vaše VSPackage používá příkaz standardního **kopírování** , který je definován [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředím, můžete příkaz Přidat do nabídky nebo panelu nástrojů, aniž byste ho znovu implementovali.
@@ -42,7 +42,7 @@ Umožňuje VSPackage získat přístup k příkazu, který je definován v jiné
 
 ### <a name="child-elements"></a>Podřízené elementy
 
-|Element|Popis|
+|Element|Description|
 |-------------|-----------------|
 |Žádná||
 

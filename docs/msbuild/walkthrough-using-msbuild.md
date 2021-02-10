@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: b8a8b866-bb07-4abf-b9ec-0b40d281c310
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: adc1a191e8fe3869273df546191f7701956018dd
-ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
+ms.openlocfilehash: 3b214452a2eb7a85b4a9baea5e4b4e80a1a71e63
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97684020"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933853"
 ---
 # <a name="walkthrough-use-msbuild"></a>Návod: použití nástroje MSBuild
 
@@ -204,7 +204,7 @@ Spusťte MSBuild z **Developer Command Prompt** pro Visual Studio k sestavení c
 </PropertyGroup>
 ```
 
- Všechny vlastnosti jsou podřízené prvky prvků vlastností. Název vlastnosti je název podřízeného prvku a hodnota vlastnosti je textový prvek podřízeného prvku. Příklad:
+ Všechny vlastnosti jsou podřízené prvky prvků vlastností. Název vlastnosti je název podřízeného prvku a hodnota vlastnosti je textový prvek podřízeného prvku. Třeba
 
 ```xml
 <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -270,7 +270,7 @@ Tuto syntaxi použijte k prohlédnutí některých vlastností v souboru projekt
 
 ### <a name="conditional-properties"></a>Podmíněné vlastnosti
 
-Mnoho vlastností, jako `Configuration` jsou definovány, je podmíněně definováno, to znamená, že se `Condition` atribut zobrazí v elementu Property. Podmíněné vlastnosti jsou definovány nebo předefinovány pouze v případě, že je podmínka vyhodnocena jako "true". Všimněte si, že nedefinované vlastnosti jsou předány výchozí hodnotě prázdného řetězce. Příklad:
+Mnoho vlastností, jako `Configuration` jsou definovány, je podmíněně definováno, to znamená, že se `Condition` atribut zobrazí v elementu Property. Podmíněné vlastnosti jsou definovány nebo předefinovány pouze v případě, že je podmínka vyhodnocena jako "true". Všimněte si, že nedefinované vlastnosti jsou předány výchozí hodnotě prázdného řetězce. Třeba
 
 ```xml
 <Configuration   Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -342,7 +342,7 @@ Další informace najdete v tématu [speciální znaky nástroje MSBuild](../msb
 
 Položka je část informací, obvykle název souboru, která se používá jako vstup do systému sestavení. Například kolekce položek, které představují zdrojové soubory, mohou být předány úloze s názvem Compile pro jejich zkompilování do sestavení.
 
-Všechny položky jsou podřízené prvky prvků Item. Název položky je název podřízeného prvku a hodnota položky je hodnota atributu Include podřízeného prvku. Hodnoty položek se stejným názvem jsou shromažďovány do typů položek daného názvu.  Příklad:
+Všechny položky jsou podřízené prvky prvků Item. Název položky je název podřízeného prvku a hodnota položky je hodnota atributu Include podřízeného prvku. Hodnoty položek se stejným názvem jsou shromažďovány do typů položek daného názvu.  Třeba
 
 ```xml
 <ItemGroup>
@@ -439,7 +439,7 @@ Změňte úlohu zprávy na použití návratových znaků a kanálů řádků (%
 
 ### <a name="include-exclude-and-wildcards"></a>Zahrnutí, vyloučení a zástupné znaky
 
- K přidání položek do typu položky můžete použít zástupné znaky "*", " \* \* " a "?" s atributem include. Příklad:
+ K přidání položek do typu položky můžete použít zástupné znaky "*", " \* \* " a "?" s atributem include. Třeba
 
 ```xml
 <Photos Include="images\*.jpeg" />
@@ -453,7 +453,7 @@ Změňte úlohu zprávy na použití návratových znaků a kanálů řádků (%
 
  Přidá všechny soubory s příponou *. jpeg* ve složce *images* a všech jejích podsložkách na typ položky fotky. Další příklady naleznete v tématu [Postupy: výběr souborů pro sestavení](../msbuild/how-to-select-the-files-to-build.md).
 
- Všimněte si, že když jsou deklarovány položky, jsou přidány do typu položky. Příklad:
+ Všimněte si, že když jsou deklarovány položky, jsou přidány do typu položky. Třeba
 
 ```xml
 <Photos Include="images\*.jpeg" />
@@ -466,7 +466,7 @@ Změňte úlohu zprávy na použití návratových znaků a kanálů řádků (%
 <Photos Include="images\*.jpeg;images\*.gif" />
 ```
 
- Můžete vyloučit položku z typu položky s atributem Exclude. Příklad:
+ Můžete vyloučit položku z typu položky s atributem Exclude. Třeba
 
 ```xml
 <Compile Include="*.cs" Exclude="*Designer*">
@@ -474,7 +474,7 @@ Změňte úlohu zprávy na použití návratových znaků a kanálů řádků (%
 
  Přidá všechny soubory s příponou *. cs* na typ položky kompilace, s výjimkou souborů, jejichž názvy obsahují *Návrháře* řetězce. Další příklady naleznete v tématu [Postupy: vyloučení souborů ze sestavení](../msbuild/how-to-exclude-files-from-the-build.md).
 
-Atribut Exclude ovlivňuje pouze položky přidané atributem include v prvku položky, který je obsahuje obě. Příklad:
+Atribut Exclude ovlivňuje pouze položky přidané atributem include v prvku položky, který je obsahuje obě. Třeba
 
 ```xml
 <Compile Include="*.cs" />

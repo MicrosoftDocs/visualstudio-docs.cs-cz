@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: dcda4972-c32e-4693-a0e1-25d5c58b9782
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: caada8db1791d94e7a9632394cd4659bf8cec3a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4bb3c01b28f2d2c6e90616d389d9858d3346db72
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80730897"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933515"
 ---
 # <a name="idebugengine2setmetric"></a>IDebugEngine2::SetMetric
 Tato metoda nastaví hodnotu registru známou jako metrika.
@@ -28,9 +28,9 @@ Tato metoda nastaví hodnotu registru známou jako metrika.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT SetMetric(
-   LPCOLESTR pszMetric,
-   VARIANT   varValue
+HRESULT SetMetric(
+   LPCOLESTR pszMetric,
+   VARIANT   varValue
 );
 ```
 

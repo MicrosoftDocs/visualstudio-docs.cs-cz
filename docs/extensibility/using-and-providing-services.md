@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: c0b415ba-b825-4da0-9faf-8a60a663e302
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a7c1d9f3632d8b710ac238c372ed4456183a8d1
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: dbf04b5e4b032bc44040cf14f6bf23225696ee61
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715935"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934116"
 ---
 # <a name="using-and-providing-services"></a>Používání a poskytování služeb
 Služba je smlouva mezi dvěma VSPackage. Jedna sada VSPackage nabízí konkrétní sadu rozhraní, které se mají využít pro další VSPackage. Například [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nabízí <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> službu pro všechny rozhraní VSPackage, které načítá. Tato služba poskytuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> rozhraní, které lze použít k zápisu do protokolu aktivit. Další informace najdete v tématu [Postupy: použití protokolu aktivit](../extensibility/how-to-use-the-activity-log.md).
@@ -28,7 +28,7 @@ Služba je smlouva mezi dvěma VSPackage. Jedna sada VSPackage nabízí konkrét
 
  Visual Studio nabízí důležité služby, například následující:
 
-|Služba IDE|Popis|
+|Služba IDE|Description|
 |-----------------|-----------------|
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>|Poskytuje přístup ke službám IDE, které se týkají základních funkcí, sady VSPackage a registru.|
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>|Poskytuje základní okna a funkce související s uživatelským rozhraním v integrovaném vývojovém prostředí (IDE), jako je například schopnost vytvářet nástroje a okna dokumentů.|

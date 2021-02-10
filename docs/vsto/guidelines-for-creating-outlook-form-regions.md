@@ -12,15 +12,15 @@ helpviewer_keywords:
 - icons [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: aaf6b96548a9856833fcd1768764ed914da30a07
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: a3a2fab671d6302583f1207f5756118c548bd8a9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848089"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933606"
 ---
 # <a name="guidelines-to-create-outlook-form-regions"></a>Pokyny pro vytváření oblastí formulářů aplikace Outlook
   Následující informace vám můžou přispět k optimalizaci oblastí formuláře a vyhnout se potenciálním problémům:
@@ -42,7 +42,7 @@ ms.locfileid: "96848089"
 ## <a name="use-form-region-names"></a><a name="UsingFormRegions"></a> Použít názvy oblastí formuláře
  K popisu oblasti formuláře se používá několik názvů. Je důležité pochopit rozdíl mezi těmito názvy a jejich vlivem na oblast formuláře. Jednotlivé názvy jsou popsány v následující tabulce.
 
-|Název oblasti formuláře|Popis|
+|Název oblasti formuláře|Description|
 |----------------------|-----------------|
 |Název položky oblasti formuláře|Název, který zadáte pro položku **oblast formuláře Outlooku** v dialogovém okně **Přidat novou položku** . Toto je název souboru kódu oblasti formuláře, který se zobrazí v **Průzkumník řešení**.|
 |<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.FormRegionName%2A> majetek|Tento název zadáte do **popisného textu pro zadání a vyberete stránku předvolby zobrazení** v Průvodci vytvořením **nové oblasti formuláře Outlooku** . Tento název se zobrazí jako vlastnost **FormRegionName** v okně **vlastnosti** .<br /><br /> Vlastnost použijte <xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.FormRegionName%2A> k určení popisku, který identifikuje oblast formuláře v uživatelském rozhraní aplikace Outlook (UI). U samostatných oblastí formuláře se tento název zobrazí jako tlačítko na pásu karet položky Outlooku.<br /><br /> V případě sousedících oblastí formuláře se tento název zobrazuje jako text záhlaví nad oblastí formuláře.|
@@ -86,7 +86,7 @@ ms.locfileid: "96848089"
 
   Ikona **stránky** se zobrazí na pásu karet inspektora pro položky, které mají samostatné, nahrazující nebo nahrazené oblasti formuláře.
 
-  Ikona **okna** se zobrazí v oznamovací oblasti a v **Alt** + dialogovém okně **karta** Alt pro otevřené položky, které zobrazují náhradní nebo nahrazené oblasti formuláře.
+  Ikona **okna** se zobrazí v oznamovací oblasti a v  + dialogovém okně **karta** Alt pro otevřené položky, které zobrazují náhradní nebo nahrazené oblasti formuláře.
 
 ## <a name="see-also"></a>Viz také
 - [Přístup k oblasti formuláře v době běhu](../vsto/accessing-a-form-region-at-run-time.md)

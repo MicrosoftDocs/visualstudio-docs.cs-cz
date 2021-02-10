@@ -35,15 +35,15 @@ helpviewer_keywords:
 - host controls [Office development in Visual Studio], deleting
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: edc8939f2a9e5f41f81c8176d5268528c273a7ce
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: c58ad4dee128f7b2d0dcd91edb7b19c7f8f5a474
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845567"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933619"
 ---
 # <a name="host-items-and-host-controls-overview"></a>Přehled hostitelských položek a hostitelských ovládacích prvků
   Hostitelských položek a hostitelských ovládacích prvků jsou typy, které vám pomůžou poskytnout programovací model pro řešení Office vytvořená pomocí vývojářských nástrojů pro Office v sadě Visual Studio. Hostitelské položky a hostitelské ovládací prvky umožňují interakci s objektovými modely systém Microsoft Office Word a systém Microsoft Office Excel, které jsou založeny na modelu COM, podobně jako interakce se spravovanými objekty, jako jsou například ovládací prvky model Windows Forms.

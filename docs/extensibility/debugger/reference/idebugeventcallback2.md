@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2c935ee0-2e22-4be0-a852-73736f33c8c9
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a74825a955afdde03e63673c4b1b6afda5904953
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe81a7d8a07a80f38e771e2cfbac3ec23da54b62
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80729882"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933359"
 ---
 # <a name="idebugeventcallback2"></a>IDebugEventCallback2
 Toto rozhraní používá modul ladění (DE) k odesílání událostí ladění do Správce ladění relace (SDM).

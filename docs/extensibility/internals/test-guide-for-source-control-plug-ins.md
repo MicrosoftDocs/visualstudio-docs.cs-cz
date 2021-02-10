@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 13b74765-0b7c-418e-8cd9-5f2e8db51ae5
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a288beb618b0b539f53270928366349f47aee9e9
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: 951b83f425f1e7171c519fced3fa3a4644279621
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97487722"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934139"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>Testovací příručka pro moduly plug-in správy zdrojového kódu
 V této části najdete pokyny pro testování modulu plug-in správy zdrojového kódu pomocí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . K dispozici je rozsáhlý přehled nejběžnějších testovacích oblastí a také některé z komplikovaných oblastí, které mohou být problematické. Tento přehled není určen jako vyčerpávající seznam testovacích případů.

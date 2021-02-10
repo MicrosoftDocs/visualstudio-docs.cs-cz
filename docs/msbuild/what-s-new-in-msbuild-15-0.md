@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.assetid: 9976b6fd-d052-4017-b848-35b5bf4b2f66
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>=vs-2017'
-ms.openlocfilehash: 3ab22ac92cdf995c56d8244225a45fc350e9d360
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: a7bbf46a1677a31726bdd7f2749f5ef3006e34f5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047807"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933840"
 ---
 # <a name="whats-new-in-msbuild-15"></a>Co je nového v nástroji MSBuild 15
 
@@ -24,7 +24,7 @@ Nástroj MSBuild je nyní k dispozici jako součást [.NET Core SDK](https://www
 
 ## <a name="changed-path"></a>Změněná cesta
 
- Nástroj MSBuild je nyní nainstalován do složky v každé verzi sady Visual Studio. Například *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\MSBuild* . K vyhledání MSBuild: [vssetup. PowerShellu](https://github.com/Microsoft/vssetup.powershell)můžete použít taky následující modul PowerShellu.
+ Nástroj MSBuild je nyní nainstalován do složky v každé verzi sady Visual Studio. Například *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\MSBuild*. K vyhledání MSBuild: [vssetup. PowerShellu](https://github.com/Microsoft/vssetup.powershell)můžete použít taky následující modul PowerShellu.
 
  Nástroj MSBuild již není nainstalován v globální mezipaměti sestavení (GAC). K programovému odkazu na MSBuild použijte balíčky NuGet. Další informace najdete v tématu [aktualizace existující aplikace pro MSBuild 15,0](../msbuild/updating-an-existing-application.md).
 
@@ -44,7 +44,7 @@ Nástroj MSBuild je nyní k dispozici jako součást [.NET Core SDK](https://www
 
 - [Prvek projektu](../msbuild/project-element-msbuild.md) má nový `SDK` atribut. `Xmlns`Atribut je teď také volitelný. Další informace o `SDK` atributu naleznete v tématu [How to: use MSBuild Project SDK](../msbuild/how-to-use-project-sdk.md), [Packages, metabalíčky a Frameworks](/dotnet/core/packages) and doplňující [Formát csproj pro .NET Core](/dotnet/core/tools/csproj).
 - [Element Item](../msbuild/item-element-msbuild.md) mimo cíl má nový `Update` atribut. Také omezení u `Remove` atributu bylo eliminováno.
-- *Directory. Build. props* je uživatelsky definovaný soubor, který poskytuje přizpůsobení projektům v adresáři. Tento soubor je automaticky importován z *aplikace Microsoft. Common. props* , pokud vlastnost `ImportDirectoryBuildTargets` není nastavena na **hodnotu false** . *Directory. Build. targets* se importují pomocí *Microsoft. Common. targets* .
+- *Directory. Build. props* je uživatelsky definovaný soubor, který poskytuje přizpůsobení projektům v adresáři. Tento soubor je automaticky importován z *aplikace Microsoft. Common. props* , pokud vlastnost `ImportDirectoryBuildTargets` není nastavena na **hodnotu false**. *Directory. Build. targets* se importují pomocí *Microsoft. Common. targets*.
 - Všechna metadata s názvem, která nejsou v konfliktu s aktuálním seznamem atributů, mohou být volitelně vyjádřena jako atribut. Další informace naleznete v tématu [element Item](../msbuild/item-element-msbuild.md).
 
 ## <a name="new-property-functions"></a>Nové funkce vlastností
