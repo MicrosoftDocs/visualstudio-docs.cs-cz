@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, definition file
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 48771a61577c5c7ca910cc3b4f8496db37ada281
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: ef8f49e46c554efca89862c787fbfbe97c48c8f4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360517"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959113"
 ---
 # <a name="properties-of-a-dsl-definition"></a>Vlastnosti definice DSL
 Vlastnosti DslDefinition definují vlastnosti definice *jazyka specifického pro doménu* , jako je například číslování verzí. Vlastnosti DslDefinition se zobrazí v okně **vlastnosti** , když kliknete na otevřenou oblast diagramu v *Návrháři jazyka specifického pro doménu*.
@@ -36,7 +36,7 @@ Vlastnosti DslDefinition definují vlastnosti definice *jazyka specifického pro
 |Obor názvů balíčku|Obor názvů pro balíček sady Visual Studio vygenerovaný pro tento DSL|\<none>|
 |Název produktu|Název produktu, který se zaregistruje pro balíček sady Visual Studio vygenerovaný pro tento DSL|\<none>|
 |Poznámky|Poznámky přidružené k této doménové třídě|\<none>|
-|Popis|Popis této doménové třídy|\<none>|
+|Description|Popis této doménové třídy|\<none>|
 |Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři pro tuto doménovou třídu.|\<none>|
 |Klíčové slovo Help|Klíčové slovo Help přidružené k této doménové třídě|\<none>|
 |Sestavení|Číslo přírůstkového sestavení pro tuto definici jazyka specifického pro doménu.|0|
@@ -44,6 +44,6 @@ Vlastnosti DslDefinition definují vlastnosti definice *jazyka specifického pro
 |Podverze|Přírůstkové číslo sestavení pro tuto definici jazyka specifického pro doménu.|0|
 |Revize|Číslo buildu přírůstkové revize pro tuto definici jazyka specifického pro doménu.|0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

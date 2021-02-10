@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: b2a80230-906e-4e85-b3e0-fcd9c40426e1
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 60172d9e308e38967f5ab5a8d882057e78f083c8
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: c822b6e8cbce1279a14c5a947d70208fc7f5480a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136625"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99958372"
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>Stránka Kompilovat, návrhář projektu (Visual Basic)
 
@@ -45,11 +45,11 @@ Následující nastavení umožňují vybrat konfiguraci a platformu pro zobraze
 
 **Konfigurace**
 
-Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastavení jsou **ladění** (výchozí), **vydání**nebo **všechny konfigurace**. Další informace naleznete v tématu [Principy konfigurací sestavení](../../ide/understanding-build-configurations.md) a [Postupy: vytváření a úpravy konfigurací](../../ide/how-to-create-and-edit-configurations.md).
+Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastavení jsou **ladění** (výchozí), **vydání** nebo **všechny konfigurace**. Další informace naleznete v tématu [Principy konfigurací sestavení](../../ide/understanding-build-configurations.md) a [Postupy: vytváření a úpravy konfigurací](../../ide/how-to-create-and-edit-configurations.md).
 
 **Platforma**
 
-Určuje, která nastavení platformy se mají zobrazit nebo upravit. Můžete zadat **Libovolný procesor** (výchozí), **x64**nebo **x86**.
+Určuje, která nastavení platformy se mají zobrazit nebo upravit. Můžete zadat **Libovolný procesor** (výchozí), **x64** nebo **x86**.
 
 ## <a name="compiler-configuration-options"></a>Možnosti konfigurace kompilátoru
 
@@ -69,13 +69,13 @@ Toto nastavení odpovídá možnosti kompilátoru [/OptionExplicit](/dotnet/visu
 
 Pokud soubor zdrojového kódu obsahuje [příkaz Option Explicit](/dotnet/visual-basic/language-reference/statements/option-explicit-statement), `On` `Off` hodnota nebo v příkazu přepíše **možnost explicitní** nastavení na **stránce kompilovat**.
 
-Při vytváření nového projektu je **možnost explicitní** nastavení na **stránce kompilovat** nastavena na hodnotu **explicitní nastavení možnosti** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení**a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti Explicit** ve výchozím nastavení **VB** je **zapnuté**.
+Při vytváření nového projektu je **možnost explicitní** nastavení na **stránce kompilovat** nastavena na hodnotu **explicitní nastavení možnosti** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení** a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti Explicit** ve výchozím nastavení **VB** je **zapnuté**.
 
 **Možnost nastavení explicitní** na `Off` není obvykle dobrým zvykem. V jednom nebo více umístěních byste mohli nastavovat navýšení názvu proměnné, což způsobí, že při spuštění programu dojde k neočekávaným výsledkům.
 
 **Možnost Strict**
 
-Určuje, zda se má vynutila striktní Sémantika typu. Pokud je nastavená **možnost Strict** **, v následujících**podmínkách dojde k chybě při kompilaci:
+Určuje, zda se má vynutila striktní Sémantika typu. Pokud je nastavená **možnost Strict** **, v následujících** podmínkách dojde k chybě při kompilaci:
 
 - Implicitní zužující převody
 
@@ -93,7 +93,7 @@ K chybám implicitního typu objektu dojde v případě, že příslušný typ n
 
 Pokud soubor zdrojového kódu obsahuje [příkaz Option Strict](/dotnet/visual-basic/language-reference/statements/option-strict-statement), `On` `Off` hodnota nebo v příkazu přepisuje nastavení **Option Strict** na **stránce kompilovat**.
 
-Při vytváření projektu je **možnost striktní** nastavení na **stránce kompilovat** nastavena na hodnotu **Option Strict** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení**a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti Strict** ve **výchozích hodnotách VB** je **vypnuto**.
+Při vytváření projektu je **možnost striktní** nastavení na **stránce kompilovat** nastavena na hodnotu **Option Strict** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení** a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti Strict** ve **výchozích hodnotách VB** je **vypnuto**.
 
 **Možnost striktní jednotlivá upozornění**
 
@@ -107,7 +107,7 @@ Oddíl **Konfigurace upozornění** **stránky kompilace** obsahuje nastavení, 
 
 Pokud nastavíte **možnost Strict** na **zapnuto**, všechna tři tato nastavení konfigurace upozornění jsou nastavená na hodnotu **Chyba**. Pokud nastavíte **možnost Strict** na **vypnuto**, všechna tři nastavení budou nastavena na **hodnotu žádná**.
 
-Každé nastavení konfigurace upozornění můžete jednotlivě změnit na **žádné**, **varování**nebo **Chyba**. Pokud jsou všechna tři nastavení konfigurace upozornění nastavena na hodnotu **Chyba**, `On` zobrazí se v `Option strict` poli. Pokud jsou všechny tři nastaveny na **možnost žádné**, `Off` zobrazí se v tomto poli. Pro jakoukoli jinou kombinaci těchto nastavení se zobrazí **(vlastní)** .
+Každé nastavení konfigurace upozornění můžete jednotlivě změnit na **žádné**, **varování** nebo **Chyba**. Pokud jsou všechna tři nastavení konfigurace upozornění nastavena na hodnotu **Chyba**, `On` zobrazí se v `Option strict` poli. Pokud jsou všechny tři nastaveny na **možnost žádné**, `Off` zobrazí se v tomto poli. Pro jakoukoli jinou kombinaci těchto nastavení se zobrazí **(vlastní)** .
 
 **Možnost Compare**
 
@@ -117,7 +117,7 @@ Toto nastavení odpovídá možnosti kompilátoru [/OptionCompare](/dotnet/visua
 
 Pokud soubor zdrojového kódu obsahuje [příkaz Option Compare](/dotnet/visual-basic/language-reference/statements/option-compare-statement), `Binary` `Text` hodnota nebo v příkazu přepíše nastavení **Možnosti Compare** na **stránce kompilovat**.
 
-Při vytváření projektu je **možnost porovnat** nastavení na **stránce kompilovat** nastavena na hodnotu nastavení **Možnosti Compare** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení**a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti porovnat** ve výchozím nastavení **VB** je **binární**.
+Při vytváření projektu je **možnost porovnat** nastavení na **stránce kompilovat** nastavena na hodnotu nastavení **Možnosti Compare** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení** a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti porovnat** ve výchozím nastavení **VB** je **binární**.
 
 **Odvoditelné možnosti**
 
@@ -127,7 +127,7 @@ Toto nastavení odpovídá možnosti kompilátoru [/optioninfer](/dotnet/visual-
 
 Pokud soubor zdrojového kódu obsahuje [příkaz Option](/dotnet/visual-basic/language-reference/statements/option-infer-statement), `On` `Off` přepíše hodnota nebo v příkazu **možnost odvoditelné** nastavení na **stránce kompilovat**.
 
-Při vytváření projektu je **možnost odvodit** nastavení na **stránce kompilovat** nastavena na hodnotu nastavení **odvoditelné možnosti** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení**a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti odvozeno** ve **výchozím nastavení VB** je **zapnuto**.
+Při vytváření projektu je **možnost odvodit** nastavení na **stránce kompilovat** nastavena na hodnotu nastavení **odvoditelné možnosti** v dialogovém okně **Možnosti** . Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně, klikněte v nabídce **nástroje** na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte **projekty a řešení** a potom klikněte na **výchozí hodnoty VB**. Počáteční výchozí nastavení **Možnosti odvozeno** ve **výchozím nastavení VB** je **zapnuto**.
 
 **Cílový procesor**
 
@@ -143,15 +143,15 @@ Spuštění jako 64 aplikace zdvojnásobí velikost ukazatele a může způsobit
 
 Toto zaškrtávací políčko je k dispozici pouze v případě, že jsou splněné všechny následující podmínky:
 
-- Na **stránce kompilovat**je cílový seznam **procesorů** nastavený na **Libovolný procesor**.
+- Na **stránce kompilovat** je cílový seznam **procesorů** nastavený na **Libovolný procesor**.
 
-- Na **stránce aplikace**seznam **Typ aplikace** určuje, že projekt je aplikace.
+- Na **stránce aplikace** seznam **Typ aplikace** určuje, že projekt je aplikace.
 
-- Na **stránce aplikace**se v seznamu **cílový rámec** určuje .NET Framework 4,5.
+- Na **stránce aplikace** se v seznamu **cílový rámec** určuje .NET Framework 4,5.
 
 **Konfigurace upozornění**
 
-V této tabulce jsou uvedeny podmínky sestavení a odpovídající úroveň oznámení pro **každý z nich**, **Upozornění**nebo **Chyba** .
+V této tabulce jsou uvedeny podmínky sestavení a odpovídající úroveň oznámení pro **každý z nich**, **Upozornění** nebo **Chyba** .
 
 Ve výchozím nastavení jsou všechna upozornění kompilátoru přidána do Seznam úkolů během kompilace. Vyberte **Zakázat všechna upozornění** , aby kompilátor vydával upozornění nebo chyby. Vyberte možnost **považovat všechna upozornění za chyby** , pokud chcete, aby kompilátor považoval upozornění jako chyby, které je nutné opravit.
 

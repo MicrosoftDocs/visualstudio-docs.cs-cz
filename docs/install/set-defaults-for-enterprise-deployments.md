@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 9B7B4608-7A3F-4FF4-BDCE-42D9F7CE6DBA
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d03912eecd7b3cfa3563fc095453fee3ddf9b163
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8fd5e96246778e1a8fd4ec1d87221ff04e8647cd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114291"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959269"
 ---
 # <a name="set-defaults-for-enterprise-deployments-of-visual-studio"></a>Nastavení výchozích hodnot pro podniková nasazení sady Visual Studio
 
@@ -50,7 +50,7 @@ Některé hodnoty registru se nastaví automaticky při prvním použití, pokud
 
 Můžete nastavit následující hodnoty registru:
 
-| **Name** | **Typ** | **Výchozí** | **Popis** |
+| **Název** | **Typ** | **Výchozí** | **Popis** |
 | -------- | -------- | ----------- | --------------- |
 | `CachePath` | `REG_SZ` nebo `REG_EXPAND_SZ` | %ProgramData%\Microsoft\VisualStudio\Packages | Adresář, ve kterém jsou uloženy manifesty balíčku, volitelně i datové části. Další informace najdete na stránce [Zakázání nebo přesunutí mezipaměti balíčku](disable-or-move-the-package-cache.md) . |
 | `KeepDownloadedPayloads` | `REG_DWORD` | 1 | Udržujte datovou část balíčku i po jejich instalaci. Hodnotu můžete kdykoli změnit. Zakázáním této zásady odeberete všechny datové části balíčků v mezipaměti pro instanci, kterou opravíte nebo upravíte. Další informace najdete na stránce [Zakázání nebo přesunutí mezipaměti balíčku](disable-or-move-the-package-cache.md) . |

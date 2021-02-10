@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 85686707-14C0-4860-9B7A-66485D43D241
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d6e46c95584cb3732d6339a02f6098976f2bab85
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: efd4091407d228a15cc80971d759e5371bddd3ff
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115042"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959256"
 ---
 # <a name="tools-for-detecting-and-managing-visual-studio-instances"></a>Nástroje pro zjišťování a správu instancí sady Visual Studio
 
@@ -76,7 +76,7 @@ Jelikož tyto položky nejsou uloženy v globálním registru, existují zvláš
 Zobrazí se výzva k zadání názvu podregistru, který se změní na název izolovaného podregistru. Až to uděláte, měli byste být schopni procházet registr v izolovaném podregistru, který jste vytvořili.
 
 > [!IMPORTANT]
-> Před opětovným spuštěním sady Visual Studio je nutné uvolnit izolovaný podregistr, který jste vytvořili. Provedete to tak **File**,  >  že v hlavní nabídce nástroje Regedit vyberete příkaz**Uvolnit podregistr** . (Pokud to neuděláte, soubor zůstane uzamčen a Visual Studio nebude možné spustit.)
+> Před opětovným spuštěním sady Visual Studio je nutné uvolnit izolovaný podregistr, který jste vytvořili. Provedete to tak ,  >  že v hlavní nabídce nástroje Regedit vyberete příkaz **Uvolnit podregistr** . (Pokud to neuděláte, soubor zůstane uzamčen a Visual Studio nebude možné spustit.)
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

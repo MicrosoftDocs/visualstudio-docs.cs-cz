@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 040b36d6-1f0a-4579-971c-40fbb46ade1d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2d2aa249d6944e33ab9556000c483efdec78f20
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: a3be218565feb26d66f623a281fc9277b7fa8fb7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97875676"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99958515"
 ---
 # <a name="saving-a-custom-document"></a>Uložení vlastního dokumentu
 Prostředí zpracuje příkazy **Uložit**, **Uložit jako** a **Uložit všechny** . Když uživatel klikne na **Uložit**, **Uložit jako** **nebo Uložit vše** v nabídce **soubor** nebo zavře řešení a výsledkem je uložení všech, dojde k následujícímu procesu.

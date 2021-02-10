@@ -11,17 +11,17 @@ f1_keywords:
 ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: e924ead1b8796089242ef20c7f5a3070833b68ba
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: 7d7c4400d553d8244d3b9239f0b0a984d382c99a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007146"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959165"
 ---
 # <a name="uninstall-visual-studio"></a>Odinstalace sady Visual Studio
 
@@ -48,7 +48,7 @@ Tato stránka vás provede odinstalací sady Visual Studio, naší integrované 
    > [!NOTE]
    > V některých počítačích může být Instalační program pro Visual Studio uveden pod písmenem **"M"** jako **instalační program Microsoft Visual Studio**.<br/><br/> Případně můžete najít Instalační program pro Visual Studio v následujícím umístění: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-1. V instalačním programu vyhledejte edici sady Visual Studio, kterou jste nainstalovali. Potom zvolte možnost **Další**a pak zvolte možnost **odinstalovat**.
+1. V instalačním programu vyhledejte edici sady Visual Studio, kterou jste nainstalovali. Potom zvolte možnost **Další** a pak zvolte možnost **odinstalovat**.
 
      ![Odinstalace sady Visual Studio 2017](media/uninstall-visual-studio.png "Odinstalace sady Visual Studio 2017")
 
@@ -83,7 +83,7 @@ Pokud chcete úplně odebrat všechny instalace sady Visual Studio 2017 a Instal
 
     Než budete pokračovat, bude pravděpodobně nutné aktualizovat instalační program. Pokud ano, postupujte podle pokynů.
 
-1. V instalačním programu vyhledejte edici sady Visual Studio, kterou jste nainstalovali. Potom zvolte možnost **Další**a pak zvolte možnost **odinstalovat**.
+1. V instalačním programu vyhledejte edici sady Visual Studio, kterou jste nainstalovali. Potom zvolte možnost **Další** a pak zvolte možnost **odinstalovat**.
 
      ![Odinstalace sady Visual Studio 2019](media/vs-2019/vs-installer-uninstall.png "Odinstalace sady Visual Studio 2019")
 

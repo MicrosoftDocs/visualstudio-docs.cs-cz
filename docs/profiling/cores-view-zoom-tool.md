@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f7d48602-ba32-4487-b51a-89e596124108
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: df2ffebee150ae106003ed5113e4c7354458143c
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 9556e2e4551761c7fbf0cd81ff422f43dcdc2a12
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98720719"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959009"
 ---
 # <a name="cores-view-zoom-tool"></a>Nástroj Lupa zobrazení jader
 Ovládací prvek přiblížení je posuvník, který umožňuje přiblížení a oddálení na časové ose, takže se můžete soustředit na oblasti konkrétního zájmu. Tento ovládací prvek se zvětší na střed aktuálního zobrazení, proto ho před přiblížením upravte.

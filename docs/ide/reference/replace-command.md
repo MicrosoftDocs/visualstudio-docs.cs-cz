@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: a15767f1-5a3d-44f5-8c77-7b0f1157f340
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2db7b59c1982f706cc6d2b18039870871ffa1039
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 6c3149b55c2b5b3a5ca666fbd780e4efbd03ef22
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96304041"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99958060"
 ---
 # <a name="replace-command"></a>Nahradit – příkaz
 Nahradí text v souborech pomocí podmnožiny možností, které jsou k dispozici na kartě **nahradit v souborech** okna **Najít a nahradit** .
@@ -42,7 +42,7 @@ Povinná hodnota. Text, který se má shodovat.
 
 Povinná hodnota. Text, který má být nahrazen odpovídajícím textem
 
-## <a name="switches"></a>Přepínače
+## <a name="switches"></a>přepínače,
 /All nebo/a
 
 Nepovinný parametr. Nahradí všechny výskyty hledaného textu náhradním textem.
