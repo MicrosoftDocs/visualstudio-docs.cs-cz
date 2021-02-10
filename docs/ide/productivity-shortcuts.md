@@ -5,15 +5,15 @@ ms.date: 11/02/2018
 ms.topic: reference
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 71116fbc05eade8ffb89c38a922106f375b86021
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd11a05ed6b19fe5d6236bec2c6b4926bbcdefd3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585727"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951105"
 ---
 # <a name="shortcut-tips-for-visual-studio"></a>Tipy pro zástupce pro Visual Studio
 
@@ -39,12 +39,12 @@ Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto
 |Spustit novou instanci|**Výher** + **Posun** + **N**|
 |Přepínání mezi okny|**Výher** + **N**|
 
-## <a name="search"></a>Search
+## <a name="search"></a>Hledat
 
 |Úkol|Zástupce|
 |-|-|
 |Hledání Průzkumník řešení|**CTRL** + **;**|
-|Umístit fokus do vyhledávacího pole v jakémkoli okně nástroje (s výjimkou editoru)|**Alt** + ALT **`** Když má okno nástroje fokus|
+|Umístit fokus do vyhledávacího pole v jakémkoli okně nástroje (s výjimkou editoru)| + ALT **`** Když má okno nástroje fokus|
 |Hledat v aplikaci Visual Studio|**CTRL** + **Otázka**|
 |Filtr výsledků vyhledávacího pole|@opt – Možnosti<br />@cmd – Příkazy<br />@mru – Naposledy použité<br />@doc -Otevřít dokumenty|
 |Hledat v možnostech nástrojů|**CTRL** + **E**|
@@ -54,7 +54,7 @@ Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto
 |Úkol|Zástupce|
 |-|-|
 |Rychlé hledání|**CTRL** + **F**|
-|Rychle najít další výsledek|**Napište**|
+|Rychle najít další výsledek|**Enter**|
 |Rychle najít předchozí výsledek|**Posun** + **Zadejte**|
 |Rychlé hledání rozbalení rozevírací nabídky|**ALT** + **Šipka dolů**|
 |Zavřít hledání|**Esc**|
@@ -81,7 +81,7 @@ Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto
 |Zobrazit rychlé informace|**CTRL** + **K**,**I**|
 |Přejít na|**CTRL** + **,**|
 |Přejít na zvýrazněné odkazy|**CTRL** + **Posun** + **Nahoru** (předchozí)<br />**CTRL** + **Posun** + **Dolů** (další)|
-|Přiblížení editoru|**CTRL** + **Shift** + Posun **>** Pro<br />**CTRL** + **Shift** + Posun **<** Mimo|
+|Přiblížení editoru|**CTRL** +  + Posun **>** Pro<br />**CTRL** +  + Posun **<** Mimo|
 |Výběr bloku|Podržte klávesu **ALT** a přetáhněte myš.<br />**Posun** + **ALT** + **Klávesy se šipkami**|
 |Přesunutí řádku nahoru/dolů|**ALT** + **Šipka nahoru**  /  **ALT** + **Šipka dolů**|
 |Duplicitní řádek|**CTRL** + **E**,**V**|
@@ -92,7 +92,7 @@ Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto
 |Přejít na stack definice|**CTRL** + **Posun** + **8** (Back)<br />**CTRL** + **Posun** + **7** (předek)|
 |Zavřít okno Náhled definice|**Esc**|
 |Zvýšit úroveň okna Náhled definice na normální kartu dokumentu|**CTRL** + **ALT** + **Domovská stránka**|
-|Navigace mezi několika okny s náhledem definice|**CTRL** + **Alt** + ALT **-** a **CTRL** + **+ ALT**+**=**|
+|Navigace mezi několika okny s náhledem definice|**CTRL** +  + ALT **-** a **CTRL** + **+ ALT**+**=**|
 |Navigace mezi více náhledy výsledků|**F8** a **SHIFT** + **F8**|
 |Přepnout mezi oknem editoru kódu a oknem náhled definice|**Posun** + **Klávesa ESC**|
 |Přejít do ohraničujícího bloku|**CTRL** + **ALT** + **Šipka nahoru**|
@@ -106,7 +106,7 @@ Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto
 |Přidání tlačítek|Vyberte tlačítko přetečení panelu nástrojů.|
 |Najít pole se seznamem na standardním panelu nástrojů|**CTRL** + **D**|
 |Režim příkazu find TextBox|Textový **>**|
-|Vytvořit nový alias|** \<new alias> Alias \<command> ** typu v **příkazovém** okně|
+|Vytvořit nový alias|**\<new alias> Alias \<command>** typu v **příkazovém** okně|
 
 ## <a name="debugging"></a>Ladění
 

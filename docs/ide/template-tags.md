@@ -4,7 +4,7 @@ description: Naučte se přidávat nebo upravovat značky v šablonách projekt�
 ms.date: 04/30/2019
 author: minsa110
 ms.author: somin
-manager: jillfra
+manager: jmartens
 ms.topic: reference
 helpviewer_keywords:
 - item templates, updating
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - updating templates [Visual Studio]
 - template tagging, updating
 - template tags, updating
-ms.openlocfilehash: 37a1965712920420bdc4d784a003dbfbd2f2167a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5f8c3f6e96e8e593fe74fd58b3e8bafab0ad88e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285215"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950611"
 ---
 # <a name="add-tags-to-project-templates"></a>Přidání značek do šablon projektů
 
@@ -99,7 +99,7 @@ Následující seznam obsahuje předdefinované značky, které jsou k dispozici
 | C# ( `csharp` ) | Azure ( `azure` ) | Konzola ( `console` ) |
 | F # ( `fsharp` ) | iOS ( `ios` ) | Plocha ( `desktop` ) |
 | Java ( `java` ) | Linux ( `linux` ) | Rozšíření ( `extension` ) |
-| JavaScript ( `javascript` ) | macOS ( `macos` ) | Hry ( `games` ) |
+| JavaScript (`javascript`) | macOS ( `macos` ) | Hry ( `games` ) |
 | Python ( `python` ) | tvOS ( `tvos` ) | IoT ( `iot` ) |
 | Dotaz Languate ( `querylanguage` ) | Windows ( `windows` ) | Knihovna ( `library` ) |
 | TypeScript ( `typescript` ) | Xbox ( `xbox` ) | Machine Learning ( `machinelearning` ) |

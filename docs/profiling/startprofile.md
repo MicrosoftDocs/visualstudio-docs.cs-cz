@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 1761311d-c9d5-48f5-b1f8-b3605829940a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1522cdfadb5de20a2413f584c710baca15883f9c
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 6a2fee1e5c7a091af1ed996d374f4ed7e60b8f2f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719835"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949919"
 ---
 # <a name="startprofile"></a>StartProfile
 `StartProfile`Funkce nastaví čítač na 1 (zapnuto) pro zadanou úroveň profilace.
@@ -35,7 +35,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI StartProfile(
 
  Označuje úroveň profilu, na kterou lze použít shromažďování dat výkonu. Následující výčty **PROFILE_CONTROL_LEVEL** lze použít k označení jedné ze tří úrovní, na kterou lze použít shromažďování dat výkonu:
 
-|Čítače|Popis|
+|Čítače|Description|
 |----------------|-----------------|
 |PROFILE_GLOBALLEVEL|Nastavení globální úrovně má vliv na všechny procesy a vlákna v rámci procesu profilace.|
 |PROFILE_PROCESSLEVEL|Nastavení úrovně procesu ovlivňuje všechna vlákna, která jsou součástí zadaného procesu.|
@@ -48,7 +48,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI StartProfile(
 ## <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
  Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jedna z následujících:
 
-|Čítače|Popis|
+|Čítače|Description|
 |----------------|-----------------|
 |PROFILE_ERROR_ID_NOEXIST|ID elementu profilace neexistuje.|
 |PROFILE_ERROR_LEVEL_NOEXIST|Zadaná úroveň profilace neexistuje.|

@@ -9,15 +9,15 @@ ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ff3e132087b97339bc710555428ba7488fa2e06
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 58f46f80a90cce116b985def0377ef80f5a671c6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480574"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950663"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>Krok 5: Přidání ovládacích prvků do formuláře
 
@@ -45,7 +45,7 @@ V tomto kroku přidáte ovládací prvky, například <xref:System.Windows.Forms
 
 1. Zvolte **kontejner TableLayoutPanel** ve formuláři a poté přidejte ovládací prvek CheckBox do formuláře. Dvojitým kliknutím na položku **CheckBox** v **sadě nástrojů** přidáte nový ovládací prvek CheckBox do další volné buňky v tabulce. Vzhledem k tomu, že PictureBox zabírá první dvě buňky v kontejneru TableLayoutPanel, ovládací prvek CheckBox se přidá do levé dolní buňky. Vyberte vlastnost **text** a zadejte slovo **roztáhnout**, jak je znázorněno na následujícím obrázku.
 
-    ![Ovládací prvek TextBox s vlastností Stretch](../ide/media/express_pictureviewercheckbox.png)<br/>*Ovládací prvek *_TextBox_* _ _s * ***Stretch**_ _property *
+    ![Ovládací prvek TextBox s vlastností Stretch](../ide/media/express_pictureviewercheckbox.png)<br/>*Ovládací prvek **TextBox** _ _s * ***Stretch**_ _property *
 
 1. Zvolte **kontejner TableLayoutPanel** ve formuláři a potom přejděte do skupiny **kontejnery** v sadě **nástrojů** (kde jste získali svůj ovládací prvek TableLayoutPanel) a dvakrát klikněte na položku **FlowLayoutPanel** a přidejte do poslední buňky nový ovládací prvek (vpravo dole). Poté ukotvěte FlowLayoutPanel do kontejneru TableLayoutPanel. To lze provést buď výběrem možnosti **Dock v nadřazeném kontejneru** v seznamu úkolů černého trojúhelníku FlowLayoutPanel, nebo nastavením vlastnosti **Dock** prvku FlowLayoutPanel na hodnotu **Fill**.
 
@@ -76,7 +76,7 @@ V tomto kroku přidáte ovládací prvky, například <xref:System.Windows.Forms
 
    Tlačítka by měla být teď správně velikostná a musí být ve správném pořadí. (Pokud jsou vybrána všechna čtyři tlačítka, můžete změnit všechny čtyři vlastnosti **AutoSize** současně.) Následující obrázek znázorňuje čtyři tlačítka.
 
-    ![Prohlížeč obrázků se čtyřmi tlačítky](../ide/media/express_autosize.png)<br/>**_Prohlížeč obrázků_* _ _with čtyři tlačítka *
+    ![Prohlížeč obrázků se čtyřmi tlačítky](../ide/media/express_autosize.png)<br/>***Prohlížeč obrázků** _ _with čtyři tlačítka *
 
 1. Nyní spusťte program znovu, abyste viděli změny.
 

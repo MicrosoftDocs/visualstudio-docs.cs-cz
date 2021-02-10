@@ -9,15 +9,15 @@ ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f7ac5967d13aa6572b36989150561363555a9705
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 1a4488c212cabe95d73f75246fb297c17ce073b4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809195"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950897"
 ---
 # <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>Krok 11: spuštění aplikace pro prohlížeč obrázků a vyzkoušejte jiné funkce
 
@@ -25,12 +25,12 @@ Vaše aplikace pro prohlížení obrázků je dokončená a připravená ke spu�
 
 ## <a name="how-to-run-your-app-and-set-the-background-color"></a>Jak spustit aplikaci a nastavit barvu pozadí
 
-1. Vyberte **F5**nebo na panelu nabídek vyberte **ladit**  >  **Spustit ladění**.
+1. Vyberte **F5** nebo na panelu nabídek vyberte **ladit**  >  **Spustit ladění**.
 
 1. Než otevřete obrázek, klikněte na tlačítko **nastavit barvu pozadí** . Otevře se dialogové okno **Barva** .
 
      ![Dialogové okno barvy](../ide/media/express_colordialog.png)<br/>
-***Color*** *Dialogové okno* barvy
+***Color** _ _dialog box *
 
 1. Vyberte barvu pro nastavení barvy pozadí ovládacího prvku PictureBox. Prohlédněte si úzce na `backgroundButton_Click()` metodě (nebo `BackgroundButton_Click()` ), abyste pochopili, jak funguje.
 

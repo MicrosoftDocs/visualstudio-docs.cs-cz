@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: e3128ac3-2e92-48e9-87ab-3b6c9d80e8c9
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 725dd8368bd4db9509426fa1a98ce56ef85bc3c0
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 90acdde2c365effd189efe4437b5e41c39f494b0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974397"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949633"
 ---
 # <a name="choose-between-shared-and-versioned-vspackages"></a>Volba mezi Shared a VSPackage se správou verzí
 V jednom počítači mohou existovat různé verze sady Visual Studio. Sady VSPackage můžou podporovat jakoukoli kombinaci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] verzí.

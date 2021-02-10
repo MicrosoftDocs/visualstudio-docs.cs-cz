@@ -11,17 +11,17 @@ f1_keywords:
 ms.assetid: f8625d5e-f6ea-4db0-83c0-619b77fab3cf
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1c658d97ed678950869c9a011af04e04eeacf5b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e4a7e0f9335971bb026ccc1c6b977680d9e3121
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86156816"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949555"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Vytvoření offline instalace sady Visual Studio
 
@@ -192,7 +192,7 @@ Další příklady použití [parametrů příkazového řádku](use-command-lin
 | ----------------------- | --------------- |
 | cs-CZ | Čeština |
 | de-DE | Němčina |
-| cs-CZ | Angličtina |
+| en-US | Angličtina |
 | es-ES | Španělština |
 | fr-FR | Francouzština |
 | it-IT | Italština |

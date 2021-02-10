@@ -9,15 +9,15 @@ ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 76225685a9f68ca6f6cb05f902922f8fa208015d
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 04168d6f648a9219c40f81aa042cbc778429ca0e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480392"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951001"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>Krok 1: Vytvoření projektu aplikace modelu Windows Forms
 
@@ -29,7 +29,7 @@ Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu
 
 1. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. Dialogové okno by mělo vypadat podobně jako na následujícím snímku obrazovky.
 
-     ![Dialog Nový projekt](../ide/media/newprojectdialogcallouts.png)<br/>**_Nový projekt_* _ _dialog pole *
+     ![Dialog Nový projekt](../ide/media/newprojectdialogcallouts.png)<br/>***Nový projekt** _ _dialog pole *
 
 2. Na levé straně dialogového okna **Nový projekt** vyberte možnost **Visual C#** nebo **Visual Basic** a pak zvolte možnost **plocha systému Windows**.
 
@@ -107,7 +107,7 @@ Visual Studio vytvoří řešení pro vaši aplikaci. Řešení funguje jako kon
      Jako alternativu klikněte na tlačítko **Uložit vše** na panelu nástrojů, které ukazuje následující obrázek.
 
      ![Tlačítko Uložit vše na panelu nástrojů](../ide/media/express_iconsaveall.png)<br/>
-     **_Uložit vše_* _ _toolbar tlačítko *
+     ***Uložit vše** _ _toolbar tlačítko *
 
      Visual Studio automaticky vyplní název složky a název projektu a pak projekt uloží ve složce Projects.
 

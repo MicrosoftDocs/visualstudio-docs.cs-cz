@@ -6,21 +6,21 @@ ms.topic: conceptual
 ms.assetid: f0f77faf-0a05-4718-a2c5-47934be40868
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 96cad46cd8a42346ab6199bca664cdc885bfc3cd
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 1fc17bd86868a7b3e87c47ec44fd5caabf7a6cfd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98720264"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950140"
 ---
 # <a name="resource-monitoring-performance-rules"></a>Pravidla výkonu sledování prostředků
 Zprávy o výkonu v kategorii monitorování prostředků poskytují další údaje o výkonu aplikace. Tato data můžete použít k analýze problémů s výkonem. Tato pravidla jsou informativní a nahlášené při každém spuštění profilace.
 
-|Pravidlo|Popis|
+|Pravidlo|Description|
 |-|-|
 |[DA0501: Průměrná spotřeba procesoru procesem profilace.](../profiling/da0501-average-cpu-consumption-by-the-process-being-profiled.md)|Tato zpráva oznamuje procento času, po který procesor byl zaneprázdněn prováděním pokynů z aplikace. Vykazovaná hodnota je průměr ve všech intervalech měření, v nichž byl proces profilace aktivní.|
 |[DA0502: Maximální spotřeba procesoru profilovaným procesem](../profiling/da0502-maximum-cpu-consumption-by-the-process-being-profiled.md)|Tato zpráva oznamuje maximální procento času, po který procesor zaneprázdněn prováděním pokynů z aplikace. Vykazovaná hodnota je maximální hodnota hlášená mezi všemi měřicími intervaly, ve kterých je proces profilace aktivní.|

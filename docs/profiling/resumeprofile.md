@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 876f145b-ec07-4240-ade6-4f6e44baadce
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b700359977e13e4664067ef62af4913d41cbabb
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 5607efbf9e979ff427d772089731af01cdd71867
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98720238"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950153"
 ---
 # <a name="resumeprofile"></a>ResumeProfile
 `ResumeProfile`Metoda snižuje počítadlo pozastavení/obnovení pro zadanou úroveň profilace.
@@ -35,7 +35,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI ResumeProfile(
 
  Označuje úroveň profilu, na kterou lze použít shromažďování dat výkonu. Následující výčty **PROFILE_CONTROL_LEVEL** lze použít k označení jedné ze tří úrovní, na kterou lze použít shromažďování dat výkonu:
 
-|Čítače|Popis|
+|Čítače|Description|
 |----------------|-----------------|
 |PROFILE_GLOBALLEVEL|Nastavení globální úrovně má vliv na všechny procesy a vlákna v rámci procesu profilace.|
 |PROFILE_PROCESSLEVEL|Nastavení na úrovni procesu ovlivňuje všechna vlákna, která jsou součástí zadaného procesu.|
@@ -48,7 +48,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI ResumeProfile(
 ## <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
  Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jedna z následujících:
 
-|Čítače|Popis|
+|Čítače|Description|
 |----------------|-----------------|
 |PROFILE_ERROR_ID_NOEXIST|ID elementu profilace neexistuje.|
 |PROFILE_ERROR_LEVEL_NOEXIST|Zadaná úroveň profilace neexistuje.|

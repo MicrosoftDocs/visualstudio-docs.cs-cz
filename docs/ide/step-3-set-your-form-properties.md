@@ -9,15 +9,15 @@ ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b858ed302c7fe89049585edb7cc5c4391a4789b
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 10f021e8f8151216cd2728e1e9723b0edb9b3e1f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480613"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950728"
 ---
 # <a name="step-3-set-your-form-properties"></a>Krok 3: Nastavení vlastností formuláře
 
@@ -35,7 +35,7 @@ Dále pomocí okna **vlastnosti** změníte vzhled formuláře.
 1. Po výběru formuláře vyhledejte vlastnost **text** v okně **vlastnosti** . V závislosti na tom, jak je seznam seřazený, se možná budete muset posunout dolů. Zvolte **text**, zadejte **Prohlížeč obrázků** a pak zvolte **ENTER**.  Formulář by měl mít nyní v záhlaví text **Viewer** a okno **vlastnosti** by mělo vypadat podobně jako na následujícím snímku obrazovky.
 
     ![Vlastnosti – okno](../ide/media/express_edittextproperty.png)<br>
-   **_Vlastnosti_* _ _window *
+   ***Vlastnosti** _ _window *
 
    > [!NOTE]
    > Vlastnosti lze seřadit podle **kategorií** nebo zobrazení podle **abecedy** . Mezi těmito dvěma zobrazeními můžete přepínat pomocí tlačítek v okně **vlastnosti** . V tomto kurzu je snazší najít vlastnosti pomocí **abecedního** zobrazení.
@@ -58,7 +58,7 @@ Dále pomocí okna **vlastnosti** změníte vzhled formuláře.
    - Na panelu nástrojů klikněte na tlačítko **Spustit ladění** , které se zobrazí takto.
 
       ![Spustit ladění – tlačítko panelu nástrojů](../ide/media/express_icondebug.png)<br>
-     **_Spustit ladění_* _ _toolbar tlačítko *
+     ***Spustit ladění** _ _toolbar tlačítko *
 
      Stejně jako předtím, rozhraní IDE sestaví a spustí vaši aplikaci a zobrazí se okno.
 

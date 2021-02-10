@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 50234537-9e95-4b7e-9cb7-e5cf26d6e9d2
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e14d948bf5d4b637002ca1f2ec8be37b64dc22b
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: a35652c0eacf22a46eed3f3fc64c3bcc0d6d10ec
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597870"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951534"
 ---
 # <a name="add-a-shortcut-menu-in-a-tool-window"></a>Přidání místní nabídky v okně nástroje
 Tento návod vloží místní nabídku do okna nástroje. Místní nabídka je nabídka, která se zobrazí, když uživatel klikne pravým tlačítkem myši na tlačítko, textové pole nebo okno na pozadí. Příkazy v místní nabídce se chovají stejně jako příkazy v jiných nabídkách nebo panelech nástrojů. Chcete-li podporovat místní nabídku, zadejte ji v souboru *. vsct* a zobrazte ji v reakci na tlačítko myši pravým tlačítkem myši.
@@ -31,12 +31,12 @@ Tento návod ukazuje, jak vytvořit místní nabídku jako nabídku aplikace Vis
 
 Případně, pokud vaše místní nabídka nebude přistupovat k funkcím sady Visual Studio, můžete použít <xref:System.Windows.FrameworkElement.ContextMenu%2A> vlastnost prvku XAML v uživatelském ovládacím prvku. Další informace najdete [v tématu](/dotnet/framework/wpf/controls/contextmenu)věnovaném dopři.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-the-tool-window-shortcut-menu-package"></a>Vytvoření balíčku místní nabídky okna nástrojů
 
-1. Vytvořte projekt VSIX s názvem `TWShortcutMenu` a přidejte do něj šablonu okna nástrojů **ShortcutMenu** s názvem Outlook. Další informace o vytváření panelu nástrojů naleznete v tématu [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).
+1. Vytvořte projekt VSIX s názvem `TWShortcutMenu` a přidejte do něj šablonu okna nástrojů  s názvem Outlook. Další informace o vytváření panelu nástrojů naleznete v tématu [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).
 
 ## <a name="specifying-the-shortcut-menu"></a>Zadání místní nabídky
 Místní nabídka, například ta, která je znázorněna v tomto návodu, umožňuje uživateli vybrat ze seznamu barev, který se používá k vyplnění pozadí okna nástroje.

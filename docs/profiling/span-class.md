@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 527826a8-2590-43ad-b907-7bc0b7288e92
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ca1e674b13877ff8a8864c3b7447f15fd0307d7
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: fff7f91326cac47100f5b2b1b42e22b9c0fc1d9b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98720043"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949958"
 ---
 # <a name="span-class"></a>span – třída
 Definuje fázi aplikace.
@@ -33,7 +33,7 @@ class span;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |[span::span – konstruktor](../profiling/span-span-constructor.md)|Inicializuje novou instanci `span` třídy.|
 |[span::~span – destruktor](../profiling/span-tilde-span-destructor.md)|Odstraní `span` objekt a uvolní jeho prostředky.|

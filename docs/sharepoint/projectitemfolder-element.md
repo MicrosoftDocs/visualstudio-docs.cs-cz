@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ProjectItemFolder element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 99a27f8e255aa17e8b9fa604b504109976c5d36a
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: d1a5b5086ef90b9d8399a6f0f76bdee77c07288e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440789"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950572"
 ---
 # <a name="projectitemfolder-element"></a>ProjectItemFolder – element
   Představuje mapovanou složku.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectItemFolder Target = "Path of SharePoint folder the mapped folder corresponds to"
@@ -41,7 +41,7 @@ ms.locfileid: "95440789"
 
 |Atribut|Popis|
 |---------------|-----------------|
-|**Cílové**|Požadován atribut **xs: String** .<br /><br /> Cesta ke složce v instalaci služby SharePoint, která odpovídá mapované složce, vzhledem k kořenové složce nasazení. Kořenová složka nasazení je určena typem nasazení určeným atributem **Type** .<br /><br /> Další informace naleznete v popisech pro **cestu nasazení** a kořenové vlastnosti **nasazení** položek projektu služby SharePoint v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
+|**Cíl**|Požadován atribut **xs: String** .<br /><br /> Cesta ke složce v instalaci služby SharePoint, která odpovídá mapované složce, vzhledem k kořenové složce nasazení. Kořenová složka nasazení je určena typem nasazení určeným atributem **Type** .<br /><br /> Další informace naleznete v popisech pro **cestu nasazení** a kořenové vlastnosti **nasazení** položek projektu služby SharePoint v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
 |**Typ**|Požadován atribut **xs: String** .<br /><br /> Typ nasazení mapované složky. Další informace o možných hodnotách naleznete v popisu vlastnosti **typ nasazení** položek projektu služby SharePoint v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
@@ -60,7 +60,7 @@ ms.locfileid: "95440789"
 
 |Vlastnost|Hodnota|
 |-|-|
-|**Hosting**|http: \/ \/ schemas.Microsoft.com/VisualStudio/2010/<br>SharePointTools/SharePointProjectItemModel|
+|**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/2010/<br>SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|

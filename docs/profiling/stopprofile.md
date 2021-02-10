@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: be75b03c-7af5-4abe-a54a-6ee5479ad877
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f2cfffe78264f5721bbf3f3434199a542ec1ce14
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: ac62edc3830d60a99448e2faf4cb20949b7081e2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722682"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949906"
 ---
 # <a name="stopprofile"></a>StopProfile
 `StopProfile`Funkce nastaví čítač na hodnotu 0 (vypnuto) pro zadanou úroveň profilace.
@@ -35,7 +35,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
 
  Označuje úroveň profilu, na kterou lze použít shromažďování dat výkonu. Následující výčty **PROFILE_CONTROL_LEVEL** lze použít k označení jedné ze tří úrovní, na kterou lze použít shromažďování dat výkonu:
 
-|Čítače|Popis|
+|Čítače|Description|
 |----------------|-----------------|
 |PROFILE_GLOBALLEVEL|Nastavení globální úrovně má vliv na všechny procesy a vlákna v rámci procesu profilace.|
 |PROFILE_PROCESSLEVEL|Nastavení na úrovni procesu ovlivňuje všechna vlákna, která jsou součástí zadaného procesu.|
@@ -48,7 +48,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
 ## <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
  Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jedna z následujících:
 
-|Čítače|Popis|
+|Čítače|Description|
 |----------------|-----------------|
 |PROFILE_ERROR_ID_NOEXIST|ID elementu profilace neexistuje.|
 |PROFILE_ERROR_LEVEL_NOEXIST|Zadaná úroveň profilace neexistuje.|

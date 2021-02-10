@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: ec14c85d-7efb-441c-a46b-bee34a227e39
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 264917d515e25823f8d6c2cb522e85dcc9c47d84
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 24f13e61f783b041134dc38a4c9bc1690421b6cc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878953"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951131"
 ---
 # <a name="shortcut-keys-in-help-viewer"></a>Klávesové zkratky v programu Help Viewer
 
 V **Microsoft Help Viewer** můžete navigovat pomocí klávesových zkratek v následující tabulce:
 
-|Oblast|Klávesnice|Akce|
+|Plošný|Klávesnice|Akce|
 |----------|---------------|------------|
 |Obecná aplikace|**Space**|Místo **Zadejte** kdekoli s výjimkou v textových polích.|
 |Obecná aplikace|**F1**|Otevřete **nápovědu** o aktuálním prvku uživatelského rozhraní.|
@@ -49,7 +49,7 @@ V **Microsoft Help Viewer** můžete navigovat pomocí klávesových zkratek v n
 |Téma|**Page Up**|Posuňte se na začátek dokumentu po jednotlivých obrazovkách.|
 |Téma|**Page Down**|Posun ke konci dokumentu po jednotlivých obrazovkách.|
 |Téma|**Domů**|Přesune se na začátek dokumentu.|
-|Téma|**Účelu**|Přejděte na konec dokumentu.|
+|Téma|**End**|Přejděte na konec dokumentu.|
 |Téma|**CTRL** + **F**|Hledání textu na této stránce.|
 |Téma|**F5**|Aktualizuje aktuální stránku.|
 |Téma|**CTRL** + **P**|Vytiskne aktuální stránku.|
@@ -60,12 +60,12 @@ V **Microsoft Help Viewer** můžete navigovat pomocí klávesových zkratek v n
 |Téma|**CTRL** + **Karta**|Přepne mezi kartami zleva doprava.|
 |Téma|**CTRL** + **Posun** + **Karta**|Přepne mezi kartami zprava doleva.|
 |Téma|**CTRL** + **W**|Zavřít aktuální kartu|
-|Téma|**CTRL** + ** _Číslo_**|Přepne na konkrétní kartu, kde **_číslo_** je mezi 1 a 9 a označuje, která karta bude v sekvenci.|
+|Téma|**CTRL** + **_Číslo_**|Přepne na konkrétní kartu, kde **_číslo_** je mezi 1 a 9 a označuje, která karta bude v sekvenci.|
 |Téma|**CTRL** + **ALT** + **F4**|Zavřete ostatní karty obsahu.|
 |Téma|**CTRL** + **Posun** + Znaménko **plus**|Zvyšte zvětšení o 10%.|
 |Téma|**CTRL** + Symbol **mínus**|Zmenšete přiblížení o 10%.|
 |Téma|**CTRL** + **0** (nula)|Změňte zvětšení na 100%.|
-|Index|**Karta**|Přesune fokus z položky klíčového slova na seznam klíčových slov.|
+|Index|**Tab**|Přesune fokus z položky klíčového slova na seznam klíčových slov.|
 |Index|**CTRL** + **K**|Přepínání mezi zobrazením položek obsahujících klíčové slovo, které zadáte, a záznamů, které začínají klíčovým slovem, které zadáte.|
 |Oblíbené|**CTRL** + **Posun** + **Del**|Vymažte historii procházení.|
 |Oblíbené|**Del**|Odstraní zadanou položku.|
@@ -81,7 +81,7 @@ V **Microsoft Help Viewer** můžete navigovat pomocí klávesových zkratek v n
 |možnosti prohlížeče|**ALT** + **H**|Změňte fokus na seznam **maximálních uložených položek historie** .|
 |možnosti prohlížeče|**ALT** + **E**|Zaškrtněte nebo zrušte zaškrtnutí políčka **Zahrnout obsah v angličtině do všech navigačních karet a požadavků F1** , pokud je povolený.|
 |možnosti prohlížeče|**ALT** + **O**|Zaškrtněte nebo zrušte zaškrtnutí políčka **Přejít online a vyhledat aktualizace obsahu** .|
-|Vyhledávání|**Napište**|Změňte fokus na další položku.|
+|Vyhledávání|**Enter**|Změňte fokus na další položku.|
 |Vyhledávání|**Posun** + **Zadejte**|Změňte fokus na předchozí položku.|
 |Vyhledávání|**Esc**|Skryje textové pole **Najít** .|
 |Stavový řádek|**ALT** + **E**|Pokud na stavovém řádku vidíte, že došlo k chybě, otevřete dialogové okno **chyby** .|
@@ -102,14 +102,14 @@ V **Microsoft Help Viewer** můžete navigovat pomocí klávesových zkratek v n
 |-|-|
 |**ALT** + **D**|Změňte zdroj instalace na disk.|
 |**ALT** + **O**|Změňte zdroj instalace na online.|
-|**Karta**|Změňte fokus na textové pole pro **cestu k místnímu úložišti** .|
-|**Karta**|Změňte fokus na tlačítko **přesunout** .|
+|**Tab**|Změňte fokus na textové pole pro **cestu k místnímu úložišti** .|
+|**Tab**|Změňte fokus na tlačítko **přesunout** .|
 |**ALT** + **Verze V**|Otevřete dialogové okno **přesunout obsah** .|
 |**CTRL** + **ALT** + **F**|Změňte fokus na textové pole **dokumentace filtru** .|
-|**Karta**|Změňte fokus na seznam dokumentace.|
+|**Tab**|Změňte fokus na seznam dokumentace.|
 |Šipka **nahoru** a **šipka dolů**|Procházejte seznamem dokumentace.|
 |**Space**|Přidejte položku do seznamu **nedokončené změny** .|
-|**Karta**|Změňte fokus na seznam **probíhajících změn** .|
+|**Tab**|Změňte fokus na seznam **probíhajících změn** .|
 |Šipka **nahoru** a **šipka dolů**|Procházejte seznamem **nedokončené změny** .|
 |**Space**|Odebere položku ze seznamu **nedokončené změny** .|
 |**ALT** + **T**|Použít všechny nedokončené změny.|

@@ -9,15 +9,15 @@ ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ddc016df63a7bb6ffbe3923de72c4f23cb32739c
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 4939e7a307e39f0548a72feeed7537efdcbd7f2c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480652"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950845"
 ---
 # <a name="step-2-run-your-picture-viewer-app"></a>Krok 2: spuštění aplikace pro prohlížeč obrázků
 
@@ -34,12 +34,12 @@ Tady je postup, jak aplikaci spustit.
     - Na panelu nástrojů klikněte na tlačítko **Spustit ladění** , které se zobrazí takto:
 
       ![Spustit ladění – tlačítko panelu nástrojů](../ide/media/express_icondebug.png)<br>
-      **_Spustit ladění_* _ _toolbar tlačítko *
+      ***Spustit ladění** _ _toolbar tlačítko *
 
 1. Visual Studio spustí vaši aplikaci a zobrazí se okno s názvem **Form1** . Na následujícím snímku obrazovky vidíte aplikaci, kterou jste právě sestavili. Aplikace je spuštěná a později do ní přidáte.
 
      ![Spuštěná aplikace model Windows Forms](../ide/media/express_firstrun.png)<br>
-**_Model Windows Forms aplikace_* _ _running *
+***Model Windows Forms aplikace** _ _running *
 
 1. Vraťte se do integrovaného vývojového prostředí (IDE) sady Visual Studio a podívejte se na nový panel nástrojů. Další tlačítka se zobrazí na panelu nástrojů při spuštění aplikace. Tato tlačítka umožňují provádět akce, jako je zastavení a spuštění vaší aplikace, a umožňují vám sledovat případné chyby, které může mít. V tomto příkladu ho používáme ke spuštění a zastavení aplikace.
 

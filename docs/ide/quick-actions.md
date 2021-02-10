@@ -6,18 +6,18 @@ ms.date: 03/28/2018
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 967e73748b364e7e41b1773a7fab33831152ab18
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: e1d9c257bcf0e2a88a384c22010abb08894483ec
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95870778"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951092"
 ---
 # <a name="quick-actions"></a>Rychlé akce
 
@@ -52,7 +52,7 @@ Pro libovolný jazyk mohou třetí strany poskytovat vlastní diagnostiku a náv
 
 ## <a name="icons"></a>Ikony
 
-Ikona, která se zobrazí, když je rychlá akce k dispozici, poskytne označení typu opravit nebo Refaktoring, který je k dispozici. *screwdriver* ![ Ikona ikony Screwdriver Screwdriver ](media/screwdriver-icon.png) značí, že jsou k dispozici akce pro změnu kódu, ale neměli byste je nutně používat. *yellow light bulb* ![ Ikona ikony žárovky žluté žárovky ](media/light-bulb-icon.png) indikuje, že jsou k dispozici akce, které *byste měli* udělat pro zlepšení kódu. Ikona ikony žárovky chyby světlejší *žárovky* ![ ](media/error-light-bulb-icon.png) indikuje, že je k dispozici akce, která opravuje chybu ve vašem kódu.
+Ikona, která se zobrazí, když je rychlá akce k dispozici, poskytne označení typu opravit nebo Refaktoring, který je k dispozici.  ![ Ikona ikony Screwdriver Screwdriver ](media/screwdriver-icon.png) značí, že jsou k dispozici akce pro změnu kódu, ale neměli byste je nutně používat.  ![ Ikona ikony žárovky žluté žárovky ](media/light-bulb-icon.png) indikuje, že jsou k dispozici akce, které *byste měli* udělat pro zlepšení kódu. Ikona ikony žárovky chyby světlejší *žárovky* ![ ](media/error-light-bulb-icon.png) indikuje, že je k dispozici akce, která opravuje chybu ve vašem kódu.
 
 ## <a name="to-see-a-light-bulb-or-screwdriver"></a>Chcete-li zobrazit žárovku nebo Screwdriver
 

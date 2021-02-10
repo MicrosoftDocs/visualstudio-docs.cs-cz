@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ProjectItem element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3e211aa44b1402d6667fc3e02ca7e271a29c3ec7
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 2b94b44bfa442805c4c785a48c9f60f56eb8e002
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305055"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950585"
 ---
 # <a name="projectitem-element"></a>ProjectItem – element
   Představuje položku SharePointového projektu. Tento prvek vyžaduje kořenový prvek souboru *. spdata* .
@@ -75,7 +75,7 @@ ms.locfileid: "96305055"
 |**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
-|**Může být prázdné**|No|
+|**Může být prázdné**|Ne|
 
 ## <a name="see-also"></a>Viz také
 [Rseference schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)

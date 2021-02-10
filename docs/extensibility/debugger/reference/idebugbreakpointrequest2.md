@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 01ac4013-96f9-4235-b289-f55f9e99558f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f30f9698c9c81322edd6935b40c16cad6f46024c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d31b7cfe2480fa3b16a4d3c8c08185194fec6b79
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80734912"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951196"
 ---
 # <a name="idebugbreakpointrequest2"></a>IDebugBreakpointRequest2
 Toto rozhraní představuje informace potřebné k vytvoření a svázání libovolného typu zarážky.

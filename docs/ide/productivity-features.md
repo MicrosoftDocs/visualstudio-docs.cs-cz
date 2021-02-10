@@ -6,15 +6,15 @@ ms.date: 4/29/2020
 ms.topic: conceptual
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bee392ddc4e7a0d185bdcc2d0e31dbd17832c733
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 01367d821ffc74de0e9d087bfe52680508fad9e3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95870869"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951157"
 ---
 # <a name="productivity-guide-for-visual-studio"></a>Průvodce produktivitou pro Visual Studio
 
@@ -48,7 +48,7 @@ Vytvářejte kód rychleji pomocí následujících funkcí.
 
 - **Umožňuje změnit automatické vkládání možností IntelliSense při zadávání kódu**. Přepnutím technologie IntelliSense na režim návrhu můžete určit, zda jsou možnosti technologie IntelliSense vloženy pouze v případě, že je zvolíte explicitně.
 
-     Chcete-li povolit režim návrhu, **stiskněte klávesy CTRL** + **ALT +** + **MEZERNÍK** nebo na panelu nabídek vyberte možnost **Upravit**  >  **IntelliSense**  >  **režim dokončení přepínání** technologie IntelliSense.
+     Chcete-li povolit režim návrhu, **stiskněte klávesy CTRL** + **ALT +** + **MEZERNÍK** nebo na panelu nabídek vyberte možnost **Upravit**  >    >  **režim dokončení přepínání** technologie IntelliSense.
 
 - **Použijte fragmenty kódu**. Můžete použít předdefinované fragmenty nebo vytvořit vlastní fragmenty kódu.
 
