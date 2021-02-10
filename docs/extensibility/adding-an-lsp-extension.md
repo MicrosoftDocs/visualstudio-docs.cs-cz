@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 52f12785-1c51-4c2c-8228-c8e10316cd83
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26f78be8708e61370be3256c8cde481d5c61c89d
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: d86f57abdc96e4fc4f2abbb781e9437c74854a7c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598143"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939289"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>Přidání rozšíření protokolu LSP (Language Server Protocol)
 
@@ -109,7 +109,7 @@ textDocument/přejmenovat | ano
 
 Pokud chcete vytvořit rozšíření jazykové služby pomocí serveru založeného na LSP, nejdřív se ujistěte, že máte nainstalovanou úlohu **vývoj rozšíření sady Visual Studio** pro vaši instanci vs.
 
-Dále vytvořte nový projekt VSIX tak, že přejdete na **soubor**  >  **Nový projekt**  >  **Visual C#**  >  **rozšíření**  >  **VSIX** Visual C#:
+Dále vytvořte nový projekt VSIX tak, že přejdete na **soubor**  >  **Nový projekt**  >    >  **rozšíření**  >  **VSIX** Visual C#:
 
 ![vytvořit projekt VSIX](media/lsp-vsix-project.png)
 
@@ -294,7 +294,7 @@ K dispozici je podpora vlastního nastavení pro konkrétní jazyk a server, ale
 
 Pomocí následujících kroků přidejte podporu pro nastavení do rozšíření služby jazyka LSP:
 
-1. Přidejte soubor JSON (například *MockLanguageExtensionSettings.json*) do projektu, který obsahuje nastavení a jejich výchozí hodnoty. Například:
+1. Přidejte soubor JSON (například *MockLanguageExtensionSettings.json*) do projektu, který obsahuje nastavení a jejich výchozí hodnoty. Příklad:
 
     ```json
     {
@@ -344,7 +344,7 @@ Pomocí následujících kroků přidejte podporu pro nastavení do rozšířen�
 
 1. Uživatel otevře pracovní prostor obsahující soubory, které váš server vlastní.
 2. Uživatel přidá soubor do složky *. vs* s názvem *VSWorkspaceSettings.js*.
-3. Uživatel přidá řádek do *VSWorkspaceSettings.jsv* souboru pro nastavení serveru. Například:
+3. Uživatel přidá řádek do *VSWorkspaceSettings.jsv* souboru pro nastavení serveru. Příklad:
 
     ```json
     {
@@ -482,7 +482,7 @@ Funkce prostřední vrstvy je stále ve vývoji a ještě není vyčerpávajíc�
 
 Pokud chcete zobrazit zdrojový kód ukázkového rozšíření pomocí rozhraní API klienta LSP v aplikaci Visual Studio, přečtěte si ukázku VSSDK-rozšiřitelnost-Samples [LSP](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/LanguageServerProtocol).
 
-## <a name="faq"></a>Nejčastější dotazy
+## <a name="faq"></a>Časté otázky
 
 **Chci vytvořit vlastní systém projektu, který doplňuje svůj jazykový Server LSP, aby poskytoval širší podporu funkcí v aplikaci Visual Studio, jak se dá to udělat?**
 

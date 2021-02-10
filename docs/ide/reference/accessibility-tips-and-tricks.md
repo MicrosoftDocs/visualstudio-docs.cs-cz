@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 6b491d88-f79e-4686-8841-857624bdcfda
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5828fb114a4df559c46dd6ae7f64887ab48e7429
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59206c206f04aaf3506771ee2310daebd0af273a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68919526"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939744"
 ---
 # <a name="accessibility-tips-and-tricks-for-visual-studio"></a>Tipy a triky pro usnadnění pro Visual Studio
 
@@ -49,7 +49,7 @@ Integrované vývojové prostředí sady Visual Studio má panely nástrojů jak
 
 |Funkce|Popis|Klávesová zkratka|
 |-------------|-----------------| - |
-|Panely nástrojů IDE|Vyberte první tlačítko na standardním panelu nástrojů.|**ALT**, **Ctrl** + **TAB** CTRL|
+|Panely nástrojů IDE|Vyberte první tlačítko na standardním panelu nástrojů.|**ALT**,  + **TAB** CTRL|
 |Panely nástrojů okna nástrojů|Přesuňte fokus na panely nástrojů v okně nástroje. <br> <br> **Poznámka:** Tato funkce funguje pro většinu oken nástrojů, ale pouze v případě, že je fokus v okně nástroje. Také je nutné před klávesou ALT zvolit klávesu SHIFT. V některých oknech nástrojů, jako je například Team Explorer, je nutné před volbou klávesy ALT držet chvilku klávesu SHIFT.|**Posun** + **ALT**|
 |Panely nástrojů|Přejít na první položku na následujícím panelu nástrojů (Pokud má panel nástrojů fokus).|**CTRL** + **Karta**|
 
@@ -65,7 +65,7 @@ Mezi další užitečné klávesové zkratky patří následující.
 |Nabídky|Rychlý přístup k položce nabídky pomocí jeho klávesových zkratek Příkaz aktivujete tak, že v nabídce vyberete klávesu **ALT** následovanou podtrženými písmeny. Například pro zobrazení dialogového okna otevřít projekt v aplikaci Visual Studio byste si zvolili **ALT** + **F** + **O** + **P**.  <br><br> **Poznámka:** Standardní klávesové zkratky Windows|**ALT**  +  **[Letter]**|
 |Vyhledávací pole|Použijte funkci hledání v aplikaci Visual Studio.|**CTRL** + **Otázka**|
 |Okno panelu nástrojů|Přesun mezi kartami sady nástrojů|**CTRL** + **Šipka nahoru**<br /><br /> a<br /><br /> **CTRL** + **Šipka dolů**|
-|Okno panelu nástrojů|Přidejte ovládací prvek ze sady nástrojů do formuláře nebo návrháře.|**Napište**|
+|Okno panelu nástrojů|Přidejte ovládací prvek ze sady nástrojů do formuláře nebo návrháře.|**Enter**|
 |Dialogové okno Možnosti: prostředí > klávesnice|Odstraní kombinaci kláves zadaná v možnosti klávesových **zkratek** CTRL.|**Backspace**|
 |Okno nástroje oznámení|Otevřete okno nástroje oznámení pomocí dvou kombinací kláves klávesových zkratek, jednu následovaný druhým. Potom zobrazte oznámení pomocí kláves se šipkami a vyberte je.| **CTRL** + **&#92;**, **CTRL** + **N**|
 
@@ -93,7 +93,7 @@ Pomocí apletu zvuk v systému Windows můžete přiřadit zvuk k událostem pro
 * Sestavení selhalo
 * Sestavení bylo úspěšné.
 
-Zde je uveden postup:
+Jak na to:
 
 1. Do **vyhledávacího** pole na počítači s Windows 10 zadejte **změnit systémové zvuky**.
 
@@ -107,7 +107,7 @@ Zde je uveden postup:
 
 1. V dialogovém okně **zvuk** klikněte na kartu **zvuky** .
 
-1. V okně **události programu**přejděte na **Microsoft Visual Studio**a pak vyberte zvuky, které chcete použít pro vybrané události.
+1. V okně **události programu** přejděte na **Microsoft Visual Studio** a pak vyberte zvuky, které chcete použít pro vybrané události.
 
    ![Karta zvuky v apletu zvuk v systému Windows 10](media/sound-applet.png "Karta zvuky v apletu zvuk v systému Windows 10")
 

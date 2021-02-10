@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 52ecb289-9b86-455c-a52b-3dcd3f7255bf
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 895241a99131c31e2fab73b9799f6203db7259e0
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: afcbbcb1990f27a09ec74814b67dbdd77bc28ec9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98148751"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99940615"
 ---
 # <a name="thread-search-dialog-box"></a>Dialogové okno hledání vláken
 Pomocí tohoto dialogového okna můžete vyhledat a vybrat uzel pro konkrétní vlákno v [zobrazení vláken](../debugger/threads-view.md). Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno zobrazení **vláken** . Pak zvolte **Najít vlákno** z nabídky **Hledat** .

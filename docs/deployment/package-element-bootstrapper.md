@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ecd06658-ad02-4440-bccd-88437b7fb816
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7645731cf5b955601541a122f2fdb3fa3d794cc3
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 2ddb1feb3e5234b26e2ebceb9f899554d55b3015
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350735"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99940342"
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;Package – &gt; element (zaváděcí nástroj)
 `Package`Prvek je prvek XML nejvyšší úrovně uvnitř souboru balíčku.
@@ -149,7 +149,7 @@ ms.locfileid: "94350735"
 |--------------------| - |
 | `Culture` | Povinná hodnota. Definuje jazykovou verzi tohoto balíčku, která určuje jazyk, který se má použít. Tento atribut je klíč k `Strings` elementu, který uvádí řetězce pro názvy produktů a chybové zprávy, které jsou specifické pro jazykovou verzi, během instalace. |
 | `Name` | Povinná hodnota. Název balíčku zobrazený pro vývojáře v rámci nástroje, jako je například [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Tento atribut je klíč do `Strings` prvku, který by měl obsahovat `String` element s `Name` `Culture` vlastnostmi a nastavenými tak, aby odpovídaly `Name` `Culture` vlastnostem a `Package` . |
-| `LicenseAgreement` | Nepovinný parametr. Určuje název souboru v distribučním balíčku, který obsahuje licenční smlouvu End-User (EULA).  Tento soubor může být ve formátu prostého textu ( *. txt* ) nebo formátovaného textu. ( *. RTF* ) |
+| `LicenseAgreement` | Nepovinný parametr. Určuje název souboru v distribučním balíčku, který obsahuje licenční smlouvu End-User (EULA).  Tento soubor může být ve formátu prostého textu (*. txt*) nebo formátovaného textu. (*. RTF*) |
 
 ## <a name="example"></a>Příklad
  Následující příklad kódu ukazuje kompletní soubor balíčku pro redistribuci .NET Framework 2,0.

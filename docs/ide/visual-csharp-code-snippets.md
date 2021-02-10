@@ -11,21 +11,21 @@ helpviewer_keywords:
 - C#, code snippets
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 46b2d231f1fa9a0e90538c426f48c86e5fafecbe
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: e4656e0769075be26db5bd06108093a49fb5e2af
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96478754"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99941538"
 ---
 # <a name="c-code-snippets"></a>Fragmenty kódu v jazyce C#
 
 Fragmenty kódu jsou předem připravené fragmenty kódu, které můžete rychle vložit do kódu. Například `for` fragment kódu vytvoří prázdnou `for` smyčku. Některé fragmenty kódu jsou obklopeny – s fragmenty kódu, které umožňují vybrat řádky kódu a pak vybrat fragment kódu, který zahrnuje vybrané řádky kódu. Například když vyberete řádky kódu a pak aktivujete `for` fragment kódu, vytvoří `for` smyčku s těmito řádky kódu uvnitř bloku smyčky. Fragmenty kódu můžou urychlit psaní kódu programu, jednodušší a spolehlivější.
 
-Fragment kódu můžete vložit do umístění kurzoru nebo vložit obklopit s fragmentem kódu kolem aktuálně vybraného kódu. Fragment kódu Inserter je vyvolán prostřednictvím příkazu **Vložit fragment kódu** nebo **obklopit** příkazy v nabídce **IntelliSense** nebo pomocí klávesových zkratek **CTRL** + **K**,**X** nebo **CTRL** + **k**, v **S** tomto pořadí.
+Fragment kódu můžete vložit do umístění kurzoru nebo vložit obklopit s fragmentem kódu kolem aktuálně vybraného kódu. Fragment kódu Inserter je vyvolán prostřednictvím příkazu **Vložit fragment kódu** nebo **obklopit** příkazy v nabídce **IntelliSense** nebo pomocí klávesových zkratek **CTRL** + **K**,**X** nebo **CTRL** + **k**, v tomto pořadí.
 
 **Fragment kódu Inserter** zobrazí název fragmentu kódu pro všechny dostupné fragmenty kódu. Fragment kódu Inserter také obsahuje vstupní dialogové okno, kde můžete zadat název fragmentu kódu nebo část názvu fragmentu kódu. Fragment kódu Inserter zvýrazňuje nejbližší shodu s názvem fragmentu kódu. Stiskem klávesy **TAB** kdykoliv dojde k zavření fragmentu kódu Inserter a vložení aktuálně vybraného fragmentu kódu. Stisknutím klávesy **ESC** nebo kliknutím na myš v editoru kódu zavřete fragment kódu Inserter bez vložení fragmentu kódu.
 
@@ -33,17 +33,17 @@ Fragment kódu můžete vložit do umístění kurzoru nebo vložit obklopit s f
 
 Ve výchozím nastavení jsou součástí sady Visual Studio pro jazyk C# následující fragmenty kódu.
 
-|Název (nebo zástupce)|Popis|Platná umístění pro vložení fragmentu|
+|Název (nebo zástupce)|Description|Platná umístění pro vložení fragmentu|
 | - |-----------------| - |
 |#if – direktiva|Vytvoří direktivu [#if](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-if) a direktivu [#endif](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endif) .|Jakékoli.|
 |#region – direktiva|Vytvoří direktivu [#region](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region) a direktivu [#endregion](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endregion) .|Jakékoli.|
 |~|Vytvoří [finalizační metodu](/dotnet/csharp/programming-guide/classes-and-structs/destructors) (destruktor) pro třídu, která ji obsahuje.|Uvnitř třídy.|
 |– atribut|Vytvoří deklaraci pro třídu, která je odvozena z <xref:System.Attribute> .|V oboru názvů (včetně globálního oboru názvů), třídy nebo struktury.|
 |checked|Vytvoří [kontrolovaný](/dotnet/csharp/language-reference/keywords/checked) blok.|Uvnitř metody, indexeru, přistupujícího objektu vlastnosti nebo přístupového objektu události.|
-|třída|Vytvoří deklaraci třídy.|V oboru názvů (včetně globálního oboru názvů), třídy nebo struktury.|
+|class|Vytvoří deklaraci třídy.|V oboru názvů (včetně globálního oboru názvů), třídy nebo struktury.|
 |ctor|Vytvoří konstruktor pro třídu, která ji obsahuje.|Uvnitř třídy.|
 |Skupina|Vytvoří volání <xref:System.Console.WriteLine%2A> .|Uvnitř metody, indexeru, přistupujícího objektu vlastnosti nebo přístupového objektu události.|
-|do|Vytvoří [do](/dotnet/csharp/language-reference/keywords/do) `while` smyčku do.|Uvnitř metody, indexeru, přistupujícího objektu vlastnosti nebo přístupového objektu události.|
+|do|Vytvoří [](/dotnet/csharp/language-reference/keywords/do) `while` smyčku do.|Uvnitř metody, indexeru, přistupujícího objektu vlastnosti nebo přístupového objektu události.|
 |else|Vytvoří blok [Else](/dotnet/csharp/language-reference/keywords/if-else) .|Uvnitř metody, indexeru, přistupujícího objektu vlastnosti nebo přístupového objektu události.|
 |enum|Vytvoří deklaraci [výčtu](/dotnet/csharp/language-reference/keywords/enum) .|V oboru názvů (včetně globálního oboru názvů), třídy nebo struktury.|
 |equals|Vytvoří deklaraci metody, která přepíše <xref:System.Object.Equals%2A> metodu definovanou ve <xref:System.Object> třídě.|Uvnitř třídy nebo struktury.|

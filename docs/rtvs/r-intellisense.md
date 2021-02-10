@@ -5,15 +5,15 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 854f7d410e327ca92d0c5156d89bc21765e13cc7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de6a8ffbaa0fb10929d013a351ebffa8e3f4b529
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62999119"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939432"
 ---
 # <a name="intellisense"></a>IntelliSense
 
@@ -25,19 +25,19 @@ Když zadáte funkci nebo jiný příkaz, IntelliSense nabídne nabídku automat
 
 ![Nabídka automatického dokončování IntelliSense](media/intellisense-auto-complete-menu.png)
 
-Stisknutí klávesy **TAB** (nebo **zadání nebo zadání** **mezer**v závislosti na nastavení možností) vloží položku vybranou v rozevíracím seznamu. Výběr můžete změnit pomocí kláves se šipkami.
+Stisknutí klávesy **TAB** (nebo **zadání nebo zadání** **mezer** v závislosti na nastavení možností) vloží položku vybranou v rozevíracím seznamu. Výběr můžete změnit pomocí kláves se šipkami.
 
 Technologie IntelliSense také poskytuje návrhy pro členy objektů R:
 
 ![Návrhy IntelliSense pro členy objektů](media/intellisense-auto-complete-r-objects.png)
 
-Stisknutí klávesy **ESC** zavře nabídku úplně. Můžete ho přenést pomocí **kláves CTRL** + **Space**.
+Stisknutí klávesy **ESC** zavře nabídku úplně. Můžete ho přenést pomocí **kláves CTRL** + .
 
 Zadáním otevření `(` pro volání funkce vložíte `)` nápovědu k podpisu, jak je uvedeno výše:
 
 ![Nápovědu k podpisu IntelliSense pro funkci](media/intellisense-function-signature.png)
 
-Znovu **ESC** zavře automaticky otevírané okno. u signatur funkcí je můžete přenést znovu s **Ctrl** + **Shift** + **mezerou**CTRL + SHIFT.
+Znovu **ESC** zavře automaticky otevírané okno. u signatur funkcí je můžete přenést znovu s  +  + **mezerou** CTRL + SHIFT.
 
 > [!Tip]
 > Pokud v nápovědě k překrýváte text pod ním, stiskněte a podržte klávesu **CTRL** , aby text v nápovědě k parametru byl průhledný.

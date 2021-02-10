@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Office, development with Visual Studio
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: abd9d3aac289df702554790673cb6561a6e2488d
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: cebcb16708e42f8102e2dc235b52a81e16c588c7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525332"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99940901"
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Vývoj pro Office a SharePoint v sadě Visual Studio
   Systém Microsoft Office a SharePoint můžete roztáhnout vytvořením zjednodušené aplikace nebo doplňku, kterou uživatelé stahují z [Office Storu](https://store.office.com/) nebo z katalogu organizací, nebo vytvořením řešení založeného na .NET Framework, které uživatelé nainstalují do počítače.

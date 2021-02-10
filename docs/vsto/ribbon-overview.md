@@ -17,15 +17,15 @@ helpviewer_keywords:
 - custom Ribbon, multiple Ribbons
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ca7f7757cddf89b97f7a374385ea834728f0e975
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 2eff346425dca31cb88342e69701a229de2b80ea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527972"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99940862"
 ---
 # <a name="ribbon-overview"></a>Přehled pásu karet
   Pás karet je způsob, jak uspořádat související příkazy, aby bylo snazší je najít. Příkazy se zobrazí jako ovládací prvky na pásu karet. Ovládací prvky jsou uspořádány do *skupin* podél vodorovného pruhu v horním rohu okna aplikace. Související skupiny jsou uspořádány na kartách.

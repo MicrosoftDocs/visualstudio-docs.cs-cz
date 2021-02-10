@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 500aebee-545e-4831-a78b-b8671a008015
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c0f0a1c6bda564367497306a572f7e9f4012031
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 335f41abf0ca2914ca603f7adbce7dea98eee028
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349760"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99940485"
 ---
 # <a name="how-to-specify-a-link-for-technical-support"></a>Postupy: určení odkazu na technickou podporu
 Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace vlastnost **URL podpory** identifikuje webovou stránku nebo sdílenou složku, kde mohou uživatelé přejít k získání informací o aplikaci. Tato vlastnost je nepovinná; Pokud je tato adresa URL k dispozici, zobrazí se v dialogovém okně **Přidat nebo odebrat programy** v položce aplikace.

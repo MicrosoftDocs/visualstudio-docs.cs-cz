@@ -8,15 +8,15 @@ helpviewer_keywords:
 - MSBuild, build process overview
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4374e6763933e2da3e6a11c5609b76e3341e1050
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 8a7f8645cd34fe56d7d8d0f6a9efa6bf01bd13d8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353249"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939653"
 ---
 # <a name="how-msbuild-builds-projects"></a>Jak MSBuild sestavuje projekty
 
@@ -26,7 +26,7 @@ Celý proces sestavení se skládá z [počátečního spuštění](#startup), [
 
 ## <a name="startup"></a>Spuštění
 
-Nástroj MSBuild lze vyvolat z aplikace Visual Studio prostřednictvím modelu objektu MSBuild v *Microsoft.Build.dll*nebo vyvoláním spustitelného souboru přímo na příkazovém řádku nebo ve skriptu, například v systémech CI. V obou případech vstupy, které ovlivňují proces sestavení, zahrnují soubor projektu (nebo objekt Project Internal do sady Visual Studio), pravděpodobně soubor řešení, proměnné prostředí a přepínače příkazového řádku nebo jejich ekvivalenty objektového modelu. Během fáze spouštění se pro konfiguraci nastavení nástroje MSBuild, jako je třeba konfigurace protokolovacích nástrojů, používají možnosti příkazového řádku nebo ekvivalenty objektového modelu. Vlastnosti nastavené v příkazovém řádku pomocí `-property` přepínače nebo `-p` jsou nastaveny jako globální vlastnosti, které přepíšou všechny hodnoty, které by byly nastaveny v souborech projektu, i když jsou soubory projektu čteny později.
+Nástroj MSBuild lze vyvolat z aplikace Visual Studio prostřednictvím modelu objektu MSBuild v *Microsoft.Build.dll* nebo vyvoláním spustitelného souboru přímo na příkazovém řádku nebo ve skriptu, například v systémech CI. V obou případech vstupy, které ovlivňují proces sestavení, zahrnují soubor projektu (nebo objekt Project Internal do sady Visual Studio), pravděpodobně soubor řešení, proměnné prostředí a přepínače příkazového řádku nebo jejich ekvivalenty objektového modelu. Během fáze spouštění se pro konfiguraci nastavení nástroje MSBuild, jako je třeba konfigurace protokolovacích nástrojů, používají možnosti příkazového řádku nebo ekvivalenty objektového modelu. Vlastnosti nastavené v příkazovém řádku pomocí `-property` přepínače nebo `-p` jsou nastaveny jako globální vlastnosti, které přepíšou všechny hodnoty, které by byly nastaveny v souborech projektu, i když jsou soubory projektu čteny později.
 
 Další části se týkají vstupních souborů, jako jsou soubory řešení nebo soubory projektu.
 
@@ -40,7 +40,7 @@ Informace o tom, jak roztáhnout sestavení řešení, najdete v tématu [přizp
 
 Existují významné rozdíly mezi tím, kdy se projekty sestavují v sadě Visual Studio vs. při vyvolání nástroje MSBuild přímo, buď pomocí spustitelného souboru MSBuild, nebo při použití modelu objektu MSBuild ke spuštění sestavení. Visual Studio spravuje pořadí sestavení projektu pro sestavení sady Visual Studio; volá pouze nástroj MSBuild na úrovni jednotlivých projektů a v případě, že je, je nastavena jedna z logických vlastností ( `BuildingInsideVisualStudio` , `BuildProjectReferences` ), které významně ovlivňují, co nástroj MSBuild dělá. V každém projektu probíhá spuštění stejným způsobem jako při vyvolání prostřednictvím nástroje MSBuild, ale rozdíl vzniká v odkazovaných projektech. V nástroji MSBuild, pokud jsou vyžadovány odkazované projekty, sestavení skutečně probíhá; To znamená, že spouští úlohy a nástroje a generuje výstup. Když sestavení sady Visual Studio najde odkazovaný projekt, nástroj MSBuild vrátí pouze očekávané výstupy z odkazovaného projektu. umožňuje aplikaci Visual Studio řídit sestavování těchto dalších projektů. Visual Studio určuje pořadí sestavení a volání nástroje MSBuild samostatně (podle potřeby), zcela v rámci řízení sady Visual Studio.
 
-K dalšímu rozdílu dojde, když je nástroj MSBuild vyvolán pomocí souboru řešení, nástroj MSBuild analyzuje soubor řešení, vytvoří standardní vstupní soubor XML, vyhodnocuje ho a provede jej jako projekt. Sestavení řešení je spuštěno před jakýmkoli projektem. Při sestavování ze sady Visual Studio se žádná z těchto situací nestane. MSBuild nikdy nevidí soubor řešení. V důsledku toho je přizpůsobení sestavení řešení (pomocí *před). Řešení. sln. targets* a *After. Řešení. sln. targets*se vztahuje pouze na MSBuild.exe nebo objektový model řízený, nikoli na sestavení sady Visual Studio.
+K dalšímu rozdílu dojde, když je nástroj MSBuild vyvolán pomocí souboru řešení, nástroj MSBuild analyzuje soubor řešení, vytvoří standardní vstupní soubor XML, vyhodnocuje ho a provede jej jako projekt. Sestavení řešení je spuštěno před jakýmkoli projektem. Při sestavování ze sady Visual Studio se žádná z těchto situací nestane. MSBuild nikdy nevidí soubor řešení. V důsledku toho je přizpůsobení sestavení řešení (pomocí *před). Řešení. sln. targets* a *After. Řešení. sln. targets* se vztahuje pouze na MSBuild.exe nebo objektový model řízený, nikoli na sestavení sady Visual Studio.
 
 ### <a name="project-sdks"></a>Sady SDK projektu
 
@@ -195,7 +195,7 @@ V implementaci, *Microsoft. Common. targets* je tenká obálka, která importuje
 
 Následující tabulka popisuje tyto cíle: Některé cíle platí pouze pro určité typy projektů.
 
-| Cíl | Popis |
+| Cíl | Description |
 |--------|-------------|
 | BuildOnlySettings | Nastavení pouze pro reálné sestavení, nikoli pro při vyvolání MSBuild při načtení projektu aplikací Visual Studio. |
 | PrepareForBuild | Příprava požadavků pro sestavení |
@@ -242,4 +242,4 @@ Proces MSBuild má několik dalších rozšiřujících bodů než ty, které js
 
 ## <a name="see-also"></a>Viz také
 
-[Nástroji](msbuild.md)
+[MSBuild](msbuild.md)

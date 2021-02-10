@@ -5,17 +5,17 @@ ms.date: 01/28/2019
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 572e02d614f0c6b5f782d683ff7e42e954b54441
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.openlocfilehash: 1f6376978826afc2946cfac25ab635d0b7533dc4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352333"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939536"
 ---
 # <a name="python-web-application-project-templates"></a>Šablony projektů webové aplikace v Pythonu
 
@@ -27,7 +27,7 @@ Informace o nasazení webové aplikace v Pythonu do Azure najdete v tématu věn
 
 ## <a name="use-a-project-template"></a>Použití šablony projektu
 
-Vytvoříte projekt ze šablony pomocí **souboru**  >  **Nový**  >  **projekt**. Šablony pro webové projekty zobrazíte výběrem webu **Python**  >  **Web** na levé straně dialogového okna. Pak vyberte šablonu podle vlastního výběru, zadejte název projektu a řešení, nastavte možnosti pro adresář řešení a úložiště Git a vyberte **OK**.
+Vytvoříte projekt ze šablony pomocí **souboru**  >  **Nový**  >  **projekt**. Šablony pro webové projekty zobrazíte výběrem webu **Python**  >   na levé straně dialogového okna. Pak vyberte šablonu podle vlastního výběru, zadejte název projektu a řešení, nastavte možnosti pro adresář řešení a úložiště Git a vyberte **OK**.
 
 ![Dialog Nový projekt pro Web Apps](media/projects-new-project-dialog-web.png)
 
@@ -39,7 +39,7 @@ Všechny ostatní šablony jsou založené na láhvi, baňce nebo webových rozh
 
 Všechny šablony **prázdného \<framework> webového projektu** vytvoří projekt s více nebo méně standardními kódy a potřebnými závislostmi deklarovanými v souboru *requirements.txt* .
 
-| Šablona | Popis |
+| Template (Šablona) | Description |
 | --- | --- |
 | **Webový projekt ve volné láhvi** | Vygeneruje minimální aplikaci v *App.py* s domovskou stránkou `/` a `/hello/<name>` stránkou, která se `<name>` bude zobrazovat pomocí velmi krátké vložené šablony stránky. |
 | **Prázdný webový projekt v Django** | Vygeneruje projekt Django se základní strukturou lokality Django, ale bez aplikací Django. Další informace najdete v tématu [šablony Django](python-django-web-application-project-template.md) a [informace o Django kroku 1](learn-django-in-visual-studio-step-01-project-and-solution.md). |
@@ -47,20 +47,20 @@ Všechny šablony **prázdného \<framework> webového projektu** vytvoří proj
 
 ### <a name="web-group"></a>Webová skupina
 
-Všechny šablony ** \<Framework> webového projektu** vytvoří úvodní webovou aplikaci se stejným návrhem bez ohledu na zvolenou architekturu. Aplikace obsahuje stránky domů, o produktu a kontaktů spolu s návrhem navigačního panelu a s odpovídajícím návrhem pomocí Bootstrap. Každá aplikace je vhodně nakonfigurovaná tak, aby sloužila pro statické soubory (šablony stylů CSS, JavaScript a Font), a používá mechanismus šablony stránky vhodný pro rozhraní.
+Všechny šablony **\<Framework> webového projektu** vytvoří úvodní webovou aplikaci se stejným návrhem bez ohledu na zvolenou architekturu. Aplikace obsahuje stránky domů, o produktu a kontaktů spolu s návrhem navigačního panelu a s odpovídajícím návrhem pomocí Bootstrap. Každá aplikace je vhodně nakonfigurovaná tak, aby sloužila pro statické soubory (šablony stylů CSS, JavaScript a Font), a používá mechanismus šablony stránky vhodný pro rozhraní.
 
-| Šablona | Popis |
+| Template (Šablona) | Description |
 | --- | --- |
-| **Webový projekt na láhev** | Vygeneruje aplikaci, jejíž statické soubory jsou obsaženy ve *statické* složce a zpracovávány prostřednictvím kódu v *App.py*. Směrování pro jednotlivé stránky je obsaženo v *Routes.py*a složka *zobrazení* obsahuje šablony stránky.|
+| **Webový projekt na láhev** | Vygeneruje aplikaci, jejíž statické soubory jsou obsaženy ve *statické* složce a zpracovávány prostřednictvím kódu v *App.py*. Směrování pro jednotlivé stránky je obsaženo v *Routes.py* a složka *zobrazení* obsahuje šablony stránky.|
 | **Webový projekt v Django** | Vygeneruje projekt Django a aplikaci Django se třemi stránkami, podporou ověřování a databází SQLite (ale bez datových modelů). Další informace najdete v tématu [šablony Django](python-django-web-application-project-template.md) a [informace o Django kroku 4](learn-django-in-visual-studio-step-04-full-django-project-template.md). |
 | **Webový projekt v baňce** | Vygeneruje aplikaci, jejíž statické soubory jsou obsaženy ve *statické* složce. Kód v *views.py* zpracovává směrování s šablonami stránek pomocí modulu Jinja, který je součástí složky *Templates* . Soubor *runserver.py* poskytuje spouštěcí kód. Viz část [informace o baňce – krok 4](learn-flask-visual-studio-step-04-full-flask-project-template.md). |
 | **Webový projekt ve baňce/Jade** | Vygeneruje stejnou aplikaci jako s šablonou **webového projektu baňky** , ale s použitím rozšíření Jade pro modul Jinja šablonování. |
 
 ### <a name="polls-group"></a>Skupina dotazování
 
-Šablony ** \<framework> webového projektu cyklického dotazování** vytvoří úvodní webovou aplikaci, přes kterou můžou uživatelé hlasovat o různých dotazech na dotazy. Každá aplikace je vytvořena na základě struktury šablon **webového** projektu, aby používala databázi ke správě dotazů a odpovědí uživatelů. Aplikace zahrnují vhodné datové modely a speciální stránku aplikace (/seed), která načte dotazy z *samples.jsdo* souboru.
+Šablony **\<framework> webového projektu cyklického dotazování** vytvoří úvodní webovou aplikaci, přes kterou můžou uživatelé hlasovat o různých dotazech na dotazy. Každá aplikace je vytvořena na základě struktury šablon **webového** projektu, aby používala databázi ke správě dotazů a odpovědí uživatelů. Aplikace zahrnují vhodné datové modely a speciální stránku aplikace (/seed), která načte dotazy z *samples.jsdo* souboru.
 
-| Šablona | Popis |
+| Template (Šablona) | Description |
 | --- | --- |
 | **Webový projekt pro dotazování na láhev** | Vygeneruje aplikaci, která se dá spustit pro databázi v paměti, MongoDB nebo Azure Table Storage, která je nakonfigurovaná pomocí `REPOSITORY_NAME` proměnné prostředí. Datové modely a kód úložiště dat jsou obsaženy ve složce *modely* a soubor *Settings.py* obsahuje kód k určení, které úložiště dat je použito. |
 | **Dotaz na webový projekt Django** | Vygeneruje projekt Django a aplikaci Django se třemi stránkami a databází SQLite. Zahrnuje úpravy rozhraní pro správu Django, aby mohl ověřený správce vytvářet a spravovat dotazování. Další informace najdete v tématu [Django Templates](python-django-web-application-project-template.md) and [Django Step 6](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md). |
@@ -81,19 +81,19 @@ Microsoft Azure Cloud Services *podporuje* *requirements.txt* soubor. Podrobnost
 
 ## <a name="debugging"></a>Ladění
 
-Když je spuštěn webový projekt pro ladění, Visual Studio spustí místní webový server na náhodném portu a otevře výchozí prohlížeč pro tuto adresu a port. Chcete-li zadat další možnosti, klikněte pravým tlačítkem myši na projekt, vyberte možnost **vlastnosti**a vyberte kartu **webové spouštěče** :
+Když je spuštěn webový projekt pro ladění, Visual Studio spustí místní webový server na náhodném portu a otevře výchozí prohlížeč pro tuto adresu a port. Chcete-li zadat další možnosti, klikněte pravým tlačítkem myši na projekt, vyberte možnost **vlastnosti** a vyberte kartu **webové spouštěče** :
 
 ![Vlastnosti webového spouštěče pro šablonu obecného webu](media/template-web-launcher-properties.png)
 
 Ve skupině **ladění** :
 
-- **Cesty pro hledání**, **argumenty skriptu**, **argumenty interpretu**a **cesta k interpretu**: tyto možnosti jsou stejné jako pro [normální ladění](debugging-python-in-visual-studio.md).
+- **Cesty pro hledání**, **argumenty skriptu**, **argumenty interpretu** a **cesta k interpretu**: tyto možnosti jsou stejné jako pro [normální ladění](debugging-python-in-visual-studio.md).
 - **Adresa URL pro spuštění**: Určuje adresu URL, která se otevře v prohlížeči. Výchozí hodnota je `localhost` .
 - **Číslo portu**: port, který se má použít, pokud není v adrese URL zadaný žádný (ve výchozím nastavení Visual Studio vybere jednu možnost automaticky). Toto nastavení umožňuje přepsat výchozí hodnotu `SERVER_PORT` proměnné prostředí, která je používána šablonami ke konfiguraci portu, na kterém místní ladicí Server naslouchá.
 
 Vlastnosti v **příkazu spustit server** a skupin **příkazů serveru pro ladění** (ta je pod tím, co se zobrazuje na obrázku) určují, jak se webový server spouští. Vzhledem k tomu, že mnoho rozhraní vyžaduje použití skriptu mimo aktuální projekt, lze zde nakonfigurovat skript a název spouštěcího modulu lze předat jako parametr.
 
-- **Příkaz**: může to být skript Python (soubor* \* . py* ), název modulu (jako in, `python.exe -m module_name` ) nebo jeden řádek kódu (jako v, `python.exe -c "code"` ). Hodnota v rozevíracím seznamu označuje, který z těchto typů je určený.
+- **Příkaz**: může to být skript Python (soubor *\* . py* ), název modulu (jako in, `python.exe -m module_name` ) nebo jeden řádek kódu (jako v, `python.exe -c "code"` ). Hodnota v rozevíracím seznamu označuje, který z těchto typů je určený.
 - **Argumenty**: tyto argumenty jsou předány na příkazovém řádku za příkazem.
 - **Prostředí**: seznam dvojic s oddělovači, který \<NAME> = \<VALUE> Určuje proměnné prostředí. Tyto proměnné jsou nastaveny po všech vlastnostech, které mohou upravit prostředí, například číslo portu a cesty pro hledání, a proto mohou tyto hodnoty přepsat.
 
@@ -113,7 +113,7 @@ Vlastnost projektu nebo proměnnou prostředí lze zadat pomocí syntaxe nástro
 
 - Skupina **příkazů serveru pro ladění** :
   - **Příkaz**: `bottle` (Module)
-  - **Arguments** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
+  - **Argumenty** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
 `--reload`Možnost se nedoporučuje při použití sady Visual Studio pro ladění.
 

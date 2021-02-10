@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 476601be-1608-4014-af15-5aba6ccbed1c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6970c582b6f3ac254f5bbb60f0324128dac63cfe
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 47da8ae405dc24cad5bab4c98384ad5db5a97ef2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98721044"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99941174"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd)
 Nástroj příkazového řádku Vizualizátor souběžnosti (*CVCollectionCmd.exe*) můžete použít ke shromáždění trasování z příkazového řádku, abyste je mohli zobrazit v Vizualizátor souběžnosti pro Visual Studio. Nástroje lze použít na počítačích, ve kterých není nainstalována aplikace Visual Studio.
@@ -63,7 +63,7 @@ Nástroj příkazového řádku Vizualizátor souběžnosti (*CVCollectionCmd.ex
 ### <a name="configuration-file-tags"></a>Značky konfiguračního souboru
  Konfigurační soubor je založen na formátu XML. Tady jsou platné značky a hodnoty:
 
-| Značka | Popis | Hodnoty |
+| Značka | Description | Hodnoty |
 |-------------------------| - | - |
 | Config | Vymezí celkový konfigurační soubor. | Musí obsahovat tyto prvky:<br /><br /> – Podverze<br />– MajorVersion |
 | MajorVersion | Určuje hlavní verzi konfiguračního souboru. | Pro projekty musí být 1 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] . Pokud ne, nástroj nebude fungovat. |
@@ -75,7 +75,7 @@ Nástroj příkazového řádku Vizualizátor souběžnosti (*CVCollectionCmd.ex
 | MarkerProvider | Určuje jednoho zprostředkovatele značek. | Musí obsahovat tyto prvky:<br /><br /> -Úroveň<br />– GUID<br />– Název<br /><br /> Může obsahovat tyto prvky:<br /><br /> – Kategorie<br />-Povoleno |
 | Level | Nastaví úroveň důležitosti MarkerProvider. | – Nízká<br />– Normální<br />-Vysoká<br />– Kritické<br />– Vše |
 | Identifikátor GUID | Globálně jedinečný identifikátor zprostředkovatele značek ETW. | IDENTIFIKÁTOR GUID. |
-| Name | Určuje popis poskytovatele značek. | Řetězec. |
+| Název | Určuje popis poskytovatele značek. | Řetězec. |
 | Kategorie | Určuje kategorie shromážděné pro poskytovatele značek. | Řetězec čísel nebo rozsahů čísel oddělených čárkami. |
 | IsEnabled | Nastaví hodnotu, která určuje, zda je zprostředkovatel značek povolen pro kolekci. | – True<br />– False |
 | FilterConfig | Určuje seznam možností konfigurace událostí ETW, které jsou filtrovány z kolekce. | Může obsahovat tyto prvky:<br /><br /> - CollectClrEvents<br />- ClrCollectionOptions<br />- CollectSampleEvents<br />- CollectGpuEvents<br />- CollectFileIO |

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4b5183b2-2fd4-4433-9310-4a73bb12c4e3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 12a6ebce0ff3bb7c3040765c1a82f876d0055c4d
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: a9c9dee27ae78375dcb667bba5157ea84c046073
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349669"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99940433"
 ---
 # <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>Postupy: určení názvu nabídky Start pro aplikaci ClickOnce
 Když [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je aplikace nainstalována pro online i offline použití, přidá se do nabídky **Start** položka a seznam **Přidat nebo odebrat programy** . Ve výchozím nastavení je zobrazované jméno stejné jako název sestavení aplikace, ale můžete změnit název zobrazení nastavením **názvu produktu** v dialogovém okně **Možnosti publikování** .

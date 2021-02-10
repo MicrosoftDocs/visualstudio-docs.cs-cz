@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], MSI
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e49705c99801cd6e09f4bf6d9be3c411cc2c53e3
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 75c2d97e8cd30bb3cf5605d50e65a68513590647
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846542"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939367"
 ---
 # <a name="deploying-a-vsto-solution-using-windows-installer"></a>Nasazení řešení VSTO pomocí Instalační služba systému Windows
 
@@ -559,7 +559,7 @@ Posledním krokem je nakonfigurovat vlastní akci pro kroky **instalace** a **od
     **Obrázek 16: vlastní akce manifestu dokumentu**
 
 10. V editoru **vlastních akcí (ExcelWorkbookSetup)** klikněte pravým tlačítkem na **Kopírovat dokument do složky Dokumenty a připojte přizpůsobení** a klikněte na **okno Vlastnosti**.
-11. V okně **CustomActionData** **vlastnosti** CustomActionData zadejte umístění knihovny DLL přizpůsobení, manifestu nasazení a umístění dokumentu systém Microsoft Office. SolutionID je také potřeba.
+11. V okně  **vlastnosti** CustomActionData zadejte umístění knihovny DLL přizpůsobení, manifestu nasazení a umístění dokumentu systém Microsoft Office. SolutionID je také potřeba.
 12. Pokud chcete protokolovat chyby při instalaci do souboru, zahrňte parametr LogFile.
 s
     ``` text

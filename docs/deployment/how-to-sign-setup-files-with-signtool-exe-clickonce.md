@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 545a4005-d283-4110-9821-c78a9833c250
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d8907018c7f5b131747e802902d88a02ca95c2cc
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: fdfdabf66c48a875f3b4316ac22e1911c141275c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350969"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99940524"
 ---
 # <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>Postupy: Podepsání instalačních souborů pomocí SignTool.exe (ClickOnce)
-K podepsání instalačního programu ( *setup.exe* ) můžete použít *SignTool.exe* . Tento proces pomáhá zajistit, aby v počítačích koncových uživatelů nebyly nainstalovány neoprávněné soubory.
+K podepsání instalačního programu (*setup.exe*) můžete použít *SignTool.exe* . Tento proces pomáhá zajistit, aby v počítačích koncových uživatelů nebyly nainstalovány neoprávněné soubory.
 
  Ve výchozím nastavení má ClickOnce podepsané manifesty a program s podepsaným nastavením. Pokud však chcete později změnit parametry instalačního programu, je nutné program podepsat později. Pokud změníte parametry po podepsání instalačního programu, podpis bude poškozen.
 
@@ -40,7 +40,7 @@ K podepsání instalačního programu ( *setup.exe* ) můžete použít *SignToo
 
 2. Vyberte projekt v **Průzkumník řešení**.
 
-3. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.
+3. V nabídce **projekt** klikněte na vlastnosti *ProjectName* .
 
 4. Na stránce **podepisování** zrušte **podpis manifestů ClickOnce**.
 

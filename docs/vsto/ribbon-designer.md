@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], shortcut keys
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b72270da75d27ed2837540369f74e9c5e87b417b
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 06211bb22ae071132b4cfad67352daa46182d366
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528002"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99940914"
 ---
 # <a name="ribbon-designer"></a>Návrhář pásu karet
   Návrhář pásu karet je vizuální návrh plátna. Pomocí Návrháře pásu karet můžete do pásu karet aplikace systém Microsoft Office přidat vlastní karty, skupiny a ovládací prvky.
@@ -138,14 +138,14 @@ ms.locfileid: "97528002"
 ### <a name="add-controls-to-groups"></a><a name="AddControlsToGroups"></a> Přidat ovládací prvky do skupin
  Přidejte do skupiny jeden nebo více ovládacích prvků. V následující tabulce jsou popsány jednotlivé ovládací prvky.
 
-|Řízení|Popis|
+|Řízení|Description|
 |-------------|-----------------|
 |**Box**|Kontejner, který organizuje ovládací prvky ve skupině. Do pole můžete přidat libovolný ovládací prvek s výjimkou oddělovače, skupiny nebo karty. Pole může být vodorovné nebo svislé.|
 |**Tlačítko**|Tlačítko, které spustí akci. Tlačítko můžete přidat do skupiny, skupiny tlačítek, rozevíracího seznamu, galerie, nabídky nebo rozděleného tlačítka.|
 |**ButtonGroup**|Skupina, která obsahuje jeden nebo více tlačítek, přepínací tlačítka, nabídky, rozdělená tlačítka a galerie. Skupinu tlačítek můžete přidat do skupiny nebo nabídky.|
-|**Zaškrtávací políčko**|Pole, které je vybráno nebo vymazáno, chcete-li zapnout nebo vypnout možnost.|
+|**CheckBox**|Pole, které je vybráno nebo vymazáno, chcete-li zapnout nebo vypnout možnost.|
 |**ComboBox**|Pole pro úpravy s připojeným seznamem. Uživatelé můžou buď zadat nebo vybrat jejich výběr. V poli se zobrazí aktuální výběr. Použijte <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Items%2A> vlastnost k přidání a odebrání položek za běhu před nebo po načtení pásu karet do aplikace Office.|
-|**DropDown**|Seznam položek, které může uživatel vybrat. Uživatel nemůže v rozevíracím seznamu zadat novou položku.<br /><br /> K <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> Přidání položek do seznamu použijte vlastnost. Můžete přidávat a odebírat položky v době běhu.<br /><br /> K <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A> Přidání tlačítek do seznamu použijte vlastnost. Po načtení pásu karet do aplikace Office však nelze přidávat a odebírat tlačítka v době běhu.|
+|**Rozevírací**|Seznam položek, které může uživatel vybrat. Uživatel nemůže v rozevíracím seznamu zadat novou položku.<br /><br /> K <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A> Přidání položek do seznamu použijte vlastnost. Můžete přidávat a odebírat položky v době běhu.<br /><br /> K <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A> Přidání tlačítek do seznamu použijte vlastnost. Po načtení pásu karet do aplikace Office však nelze přidávat a odebírat tlačítka v době běhu.|
 |**EditBox**|Pole, ve kterém může uživatel zadat text.|
 |**Galerie**|Nabídka, která představuje pole nebo mřížku vizuálních voleb, ze kterých mohou uživatelé vybírat Můžete ovládat rozložení výběrů v nabídce. Pomocí <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ColumnCount%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.RowCount%2A> vlastností a zadejte počet řádků a sloupců, které zobrazí položky a tlačítka Galerie.|
 |**Popisek**|Text, který lze použít k identifikaci ovládacích prvků na pásu karet.|

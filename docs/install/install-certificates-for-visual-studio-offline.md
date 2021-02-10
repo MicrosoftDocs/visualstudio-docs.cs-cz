@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 9750A3F3-89C7-4A8F-BA75-B0B06BD772C2
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ae91cc1982fa41022981c940df5436c5ea5e8e5b
-ms.sourcegitcommit: 8efe6b45d65f9db23f5575c15155fe363fa12cdb
+ms.openlocfilehash: 54ab09809b99c18977125a124bc53d50d3d6c90c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92750179"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99941551"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Instalace certifikátů vyžadovaných pro instalaci sady Visual Studio offline
 
@@ -38,7 +38,7 @@ Existují tři možnosti instalace nebo aktualizace certifikátů v prostředí 
 
 Při vytváření rozložení sítě jsou potřebné certifikáty staženy do složky certifikáty. Certifikáty pak můžete ručně nainstalovat tak, že dvakrát kliknete na jednotlivé soubory certifikátů a potom kliknete na Průvodce správcem certifikátů. Pokud se zobrazí výzva k zadání hesla, ponechte prázdné.
 
-**Aktualizace** : pro Visual Studio 2017 verze 15,8 Preview 2 nebo novější můžete certifikáty nainstalovat ručně tak, že kliknete pravým tlačítkem na jednotlivé soubory certifikátů, vyberete nainstalovat certifikát a potom kliknete na Průvodce správcem certifikátů.
+**Aktualizace**: pro Visual Studio 2017 verze 15,8 Preview 2 nebo novější můžete certifikáty nainstalovat ručně tak, že kliknete pravým tlačítkem na jednotlivé soubory certifikátů, vyberete nainstalovat certifikát a potom kliknete na Průvodce správcem certifikátů.
 
 ::: moniker-end
 
@@ -76,7 +76,7 @@ Pokud provádíte skriptování nasazení sady Visual Studio v prostředí offli
    certmgr.exe -add -c certificates\vs_installer_opc.SignCertificates.p12 -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
    ```
 
-   **Aktualizace** : pro Visual Studio 2017 verze 15,8 Preview 2 nebo novější vytvořte dávkový soubor pomocí následujících příkazů:
+   **Aktualizace**: pro Visual Studio 2017 verze 15,8 Preview 2 nebo novější vytvořte dávkový soubor pomocí následujících příkazů:
 
    ```cmd
    certmgr.exe -add [layout path]\certificates\manifestRootCertificate.cer -n "Microsoft Root Certificate Authority 2011" -s -r LocalMachine root
@@ -136,12 +136,12 @@ Tři. Soubory P12 v této složce obsahují zprostředkující certifikát a ko�
 
 * **ManifestSignCertificates. p12** obsahuje:
   * Zprostředkující certifikát: **Microsoft Code Signing dps 2011**
-    * Nepožadováno. Pokud je k dispozici, vylepšuje v některých scénářích výkon.
+    * Nevyžadují se. Pokud je k dispozici, vylepšuje v některých scénářích výkon.
   * Kořenový certifikát: **Kořenová certifikační autorita společnosti Microsoft 2011**
     * Vyžaduje se v systémech Windows 7 Service Pack 1, které nemají nainstalované nejnovější aktualizace Windows.
 * **ManifestCounterSignCertificates. p12** obsahuje:
   * Zprostředkující certifikát: **Microsoft Time-Stamp dps 2010**
-    * Nepožadováno. Pokud je k dispozici, vylepšuje v některých scénářích výkon.
+    * Nevyžadují se. Pokud je k dispozici, vylepšuje v některých scénářích výkon.
   * Kořenový certifikát: **Kořenová certifikační autorita společnosti Microsoft 2010**
     * Vyžaduje se pro systémy Windows 7 Service Pack 1, které nemají nainstalované nejnovější aktualizace Windows.
 * **Vs_installer_opc. SignCertificates. p12** obsahuje:
@@ -150,7 +150,7 @@ Tři. Soubory P12 v této složce obsahují zprostředkující certifikát a ko�
   * Kořenový certifikát: certifikační **autorita od Microsoftu**
     * Povinná hodnota. Tento certifikát je dodáván se systémy se systémem Windows 7 nebo novějším.
 
-**Aktualizace** : pro Visual Studio 2017 verze 15,8 Preview 2 nebo novější instalační program pro Visual Studio vyžaduje, aby se v systému nainstalovaly jenom kořenové certifikáty. Tyto certifikáty jsou uloženy v souborech. cer místo. P12.
+**Aktualizace**: pro Visual Studio 2017 verze 15,8 Preview 2 nebo novější instalační program pro Visual Studio vyžaduje, aby se v systému nainstalovaly jenom kořenové certifikáty. Tyto certifikáty jsou uloženy v souborech. cer místo. P12.
 
 ::: moniker-end
 
@@ -178,21 +178,21 @@ Když je podpis ověřený v online prostředí, používají se k stažení a p
 
 Jedním ze způsobů, jak ověřit instalaci systému, je postup:
 
-1. Spusťte **mmc.exe** .<br/>
-  a. Klikněte na **soubor** a pak vyberte **Přidat nebo odebrat modul snap-in** .<br/>
-  b. Poklikejte na **certifikáty** , vyberte **účet počítače** a pak klikněte na **Další** .<br/>
-  c. Vyberte možnost **místní počítač** , klikněte na tlačítko **Dokončit** a pak klikněte na tlačítko **OK** .<br/>
-  d. Rozbalte položku **certifikáty (místní počítač)** .<br/>
-  e. Rozbalte položku **Důvěryhodné kořenové certifikační autority** a pak vyberte možnost **certifikáty** .<br/>
+1. Spusťte **mmc.exe**.<br/>
+  a. Klikněte na **soubor** a pak vyberte **Přidat nebo odebrat modul snap-in**.<br/>
+  b. Poklikejte na **certifikáty**, vyberte **účet počítače** a pak klikněte na **Další**.<br/>
+  c. Vyberte možnost **místní počítač**, klikněte na tlačítko **Dokončit** a pak klikněte na tlačítko **OK**.<br/>
+  d. Rozbalte položku **certifikáty (místní počítač)**.<br/>
+  e. Rozbalte položku **Důvěryhodné kořenové certifikační autority** a pak vyberte možnost **certifikáty**.<br/>
     * V tomto seznamu vyhledejte nezbytné kořenové certifikáty.<br/>
 
-   f. Rozbalte **zprostředkující certifikační autority** a pak vyberte **certifikáty** .<br/>
+   f. Rozbalte **zprostředkující certifikační autority** a pak vyberte **certifikáty**.<br/>
     * V tomto seznamu najdete požadované zprostředkující certifikáty.<br/>
 
-2. Klikněte na **soubor** a pak vyberte **Přidat nebo odebrat modul snap-in** .<br/>
-  a. Dvakrát klikněte na **certifikáty** , vyberte **Můj uživatelský účet** , klikněte na **Dokončit** a pak klikněte na **OK** .<br/>
-  b. Rozbalte položku **Certifikáty – aktuální uživatel** .<br/>
-  c. Rozbalte **zprostředkující certifikační autority** a pak vyberte **certifikáty** .<br/>
+2. Klikněte na **soubor** a pak vyberte **Přidat nebo odebrat modul snap-in**.<br/>
+  a. Dvakrát klikněte na **certifikáty**, vyberte **Můj uživatelský účet**, klikněte na **Dokončit** a pak klikněte na **OK**.<br/>
+  b. Rozbalte položku **Certifikáty – aktuální uživatel**.<br/>
+  c. Rozbalte **zprostředkující certifikační autority** a pak vyberte **certifikáty**.<br/>
     * V tomto seznamu najdete požadované zprostředkující certifikáty.<br/>
 
 Pokud názvy certifikátů nebyly ve sloupcích **vydaných** , musí být nainstalovány.  Pokud byl zprostředkující certifikát pouze v úložišti zprostředkujících certifikátů **aktuálního uživatele** , je k dispozici pouze pro uživatele, který je přihlášen. Je možné, že ho budete muset nainstalovat pro ostatní uživatele.

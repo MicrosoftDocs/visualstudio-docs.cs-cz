@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6dda8e7c5538b0517c181a451072c4f8a9544965
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 9edee5f8128933b2ecb36434a64d39c40d3d799f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362337"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99941304"
 ---
 # <a name="properties-of-domain-roles"></a>Vlastnosti rolí domény
 Vlastnosti v následující tabulce jsou spojeny s doménovou rolí. Informace o doménových rolích najdete v tématu [porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md). Další informace o tom, jak tyto vlastnosti použít, najdete v tématu [přizpůsobení a rozšíření Domain-Specificho jazyka](../modeling/customizing-and-extending-a-domain-specific-language.md).
@@ -35,7 +35,7 @@ Vlastnosti v následující tabulce jsou spojeny s doménovou rolí. Informace o
 |Aktér role|Doménová třída elementu, který může tuto roli v relaci přehrát. Tato vlastnost je jen ke čtení.|Doménová třída aktéra role pro tuto roli|
 |Poznámky|Neformální poznámky, které jsou spojeny s doménovou rolí.|<žádné\>|
 |Kategorie|Kategorie, pod kterou se vygenerovaná vlastnost zobrazuje v okně **vlastnosti** ve vygenerovaném návrháři. Pokud je tato vlastnost prázdná, zobrazí se v kategorii **různé** kategorie vygenerované vlastnosti.|<žádné\>|
-|Popis|Popis, který se používá k dokumentu kódu a který se používá v uživatelském rozhraní vygenerovaného návrháře.<br /><br /> Popis se zobrazí v popisku IntelliSense pro generovanou vlastnost třídy aktéra role.|`Description for`*úplný název role*|
+|Description|Popis, který se používá k dokumentu kódu a který se používá v uživatelském rozhraní vygenerovaného návrháře.<br /><br /> Popis se zobrazí v popisku IntelliSense pro generovanou vlastnost třídy aktéra role.|`Description for`*úplný název role*|
 |Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři pro doménovou roli.|Upravená hodnota vlastnosti Name|
 |Klíčové slovo Help|Volitelné klíčové slovo, které se používá k indexování Nápověda F1 pro doménovou roli.|\<none>|
 |Zobrazovaný název vlastnosti|Název, který se zobrazí ve vygenerovaném návrháři pro vlastnost vygenerované role.|Upravená hodnota vlastnosti názvu vlastnosti.|
@@ -43,6 +43,6 @@ Vlastnosti v následující tabulce jsou spojeny s doménovou rolí. Informace o
 > [!NOTE]
 > Výchozí hodnota zobrazovaného názvu je založena na přidružené hodnotě vlastnosti vložením mezer před jednotlivá velká písmena, která předchází znakům malých písmen a za kterými nenásleduje další znak velká písmena.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vlastnosti vztahů domény](../modeling/properties-of-domain-relationships.md)

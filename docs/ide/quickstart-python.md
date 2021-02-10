@@ -7,17 +7,17 @@ ms.technology: vs-python
 ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4318cd98de166210a8e8744840967942006b8ea6
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: dc47bdb2913e2d18998663967d4da3c0a7dcdd9f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100510"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939939"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>Rychlý Start: Vytvoření první webové aplikace v Pythonu pomocí sady Visual Studio
 
@@ -136,7 +136,7 @@ Nyní jste připraveni přidat bitovou kopii kódu Pythonu pro implementaci mini
 
 1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **Přidat > nová položka**.
 
-1. V dialogovém okně, které se zobrazí, vyberte **prázdný soubor Pythonu**, pojmenujte ho *App.py*a vyberte **Přidat**. Visual Studio automaticky otevře soubor v okně editoru.
+1. V dialogovém okně, které se zobrazí, vyberte **prázdný soubor Pythonu**, pojmenujte ho *App.py* a vyberte **Přidat**. Visual Studio automaticky otevře soubor v okně editoru.
 
 1. Zkopírujte následující kód a vložte ho do *App.py*:
 

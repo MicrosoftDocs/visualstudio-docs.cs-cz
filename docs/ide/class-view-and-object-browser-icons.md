@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Object Browser, icons in Class View
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e0348c1f6c51f0a82328814be671d8f44e3d4a7
-ms.sourcegitcommit: 3922edfe67063e1ede418cdbf6aa6293117c4855
+ms.openlocfilehash: 551033ce7dcd7b8755124b86734243470442b6e0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98773343"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939978"
 ---
 # <a name="class-view-and-object-browser-icons"></a>Ikony zobrazení tříd a prohlížeče objektů
 
 **Zobrazení tříd** a **Prohlížeč objektů** zobrazují ikony, které reprezentují entity kódu, například obory názvů, třídy, funkce a proměnné. Následující tabulka ukazuje a popisuje ikony.
 
-|Ikona|Popis|Ikona|Popis|
+|Ikona|Description|Ikona|Description|
 |----------|-----------------|----------|-----------------|
 |![Symbol oboru názvů](../ide/media/vxnamespace_icon.gif)|Obor názvů|![Symbol deklarace](../ide/media/vxmethod_icon.gif)|Metoda nebo funkce|
 |![Ikona třídy](../ide/media/vxclass_icon.gif)|Třída|![Symbol operátoru](../ide/media/vxoperator_icon.gif)|Operátor|
@@ -54,7 +54,7 @@ ms.locfileid: "98773343"
 
 Následující ikony signálu se vztahují na všechny předchozí ikony a označují přístupnost.
 
-|Ikona|Popis|
+|Ikona|Description|
 |----------|-----------------|
 |\<No Signal Icon>|Republik. Přístupné z libovolného místa v této součásti a ze všech komponent, které na ni odkazují.|
 |![Symbol Protected signálu](../ide/media/vxsignal_icon_key.gif)|Proti. Přístupné z obsahující třídy nebo typu nebo z těch, které jsou odvozeny z obsahující třídy nebo typu.|

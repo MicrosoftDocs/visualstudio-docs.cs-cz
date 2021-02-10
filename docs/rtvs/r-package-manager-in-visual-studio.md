@@ -5,19 +5,19 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: d35bfd45e862912ff78ae600eed01ce8dc002493
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6c543286951e50fb1f51e7496e166968b5d98e9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62998854"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939419"
 ---
 # <a name="package-manager"></a>Správce balíčků
 
-Správce balíčků Nástroje R pro Visual Studio (RTVS) je uživatelské rozhraní pro správu balíčků R. Chcete-li jej otevřít, vyberte možnost **nástroje R**  >  balíčky**systému Windows**  >  **Packages** nebo stiskněte **klávesu CTRL** + **7**.
+Správce balíčků Nástroje R pro Visual Studio (RTVS) je uživatelské rozhraní pro správu balíčků R. Chcete-li jej otevřít, vyberte možnost **nástroje R**  >  balíčky **systému Windows**  >   nebo stiskněte **klávesu CTRL** + **7**.
 
 Správce balíčků obsahuje tři karty. Na každé kartě se zobrazí seznam relevantních balíčků na levé straně a konkrétní podrobnosti pro vybraný balíček na pravé straně, včetně verze balíčku, popisu, licence, umístění instalace a odkazů na další relevantní informace. Vyhledávací pole v pravém horním rohu umožňuje filtrovat seznam.
 
