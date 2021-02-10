@@ -14,20 +14,20 @@ helpviewer_keywords:
 - mail items [Office development in Visual Studio], about mail items
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ce91f9773bf4fc212a47bf64d76c8f1131457c38
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 033dece28bad4471560646cdd086b342b3e1357b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526880"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939237"
 ---
 # <a name="work-with-mail-items"></a>Práce s položkami pošty
   <xref:Microsoft.Office.Interop.Outlook.MailItem>Třída obsahuje metody a vlastnosti, které slouží k provádění úloh s e-mailovými zprávami.
 
-|Úloha|Postup|
+|Úkol|Postup|
 |----------|---------------|
 |Vytvořte e-mailovou zprávu.|[Postupy: vytváření položek e-mailu prostřednictvím kódu programu](../vsto/how-to-programmatically-create-an-e-mail-item.md)|
 |Odešlete e-mailovou zprávu.|[Postupy: odesílání e-mailů prostřednictvím kódu programu](../vsto/how-to-programmatically-send-e-mail-programmatically.md)|

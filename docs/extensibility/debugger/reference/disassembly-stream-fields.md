@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: cfc9b4de-c756-4844-bea7-d9f186a51d1b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d10f2143cbefa86442e4087ac098020f5f2bd6ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 34836447af8277141c401302c5a838d5cbe351b9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80737365"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938951"
 ---
 # <a name="disassembly_stream_fields"></a>DISASSEMBLY_STREAM_FIELDS
 Určuje informace, které mají být načteny do pole zpětného překladu.
@@ -121,5 +121,5 @@ Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 ## <a name="see-also"></a>Viz také
 - [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)
-- [Číst](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
+- [Oprávnění](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
 - [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)

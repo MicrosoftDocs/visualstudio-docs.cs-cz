@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 4f8cfba8-0653-4ccc-a2da-acf064c83aa7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55e808e6f472c48dcd14aac2d81b4cd3f615397f
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 12fd6e336631eeabe1761276442df993d44affe8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597714"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939211"
 ---
 # <a name="add-commands-to-toolbars"></a>Přidat příkazy na panely nástrojů
 Panel nástrojů je vodorovný nebo svislý pruh, který obsahuje tlačítka vázaná na příkazy. Můžete přidat vlastní příkazy na panely nástrojů v mnoha různých oknech v aplikaci Visual Studio: hlavní okno aplikace Visual Studio, Průzkumník řešení a vlastní okna nástrojů.

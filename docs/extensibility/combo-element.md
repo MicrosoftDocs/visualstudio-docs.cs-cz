@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 392e3063-f0a0-4130-9583-23bd2aa3fa36
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e5c16db298edb0e1fe526190531df4cb638f8e3d
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: dc495727fd06bec0d20cab25a7cd8c4716bcc19e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974313"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938379"
 ---
 # <a name="combo-element"></a>Element Combo
 Definuje příkazy, které se zobrazí v poli se seznamem. Existují čtyři druhy polí se seznamem, a to takto: DropDownCombo, DynamicCombo, IndexCombo a MRUCombo.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <combo guid="guidMyCommandSet" id="MyCommand" defaultWidth="20" idCommandList="MyCommandListID" priority="0x102" type="DropDownCombo">
@@ -46,7 +46,7 @@ Definuje příkazy, které se zobrazí v poli se seznamem. Existují čtyři dru
 |idCommandList|Povinná hodnota. ID, které je odesláno do cíle aktivního příkazu pro načtení seznamu položek, které mají být zobrazeny v poli se seznamem. ID bude ve stejném oboru identifikátorů GUID jako ovládací prvek.|
 |upřednostněn|Nepovinný parametr. Číselná hodnota, která určuje prioritu.|
 |typ|Nepovinný parametr. Výčtová hodnota, která určuje typ tlačítka.<br /><br /> Pokud není zadaný, použije se tlačítko.<br /><br /> DropDownCombo<br /> VSPackage je zodpovědný za vyplnění obsahu pro toto pole se seznamem. Uživatel nemůže v textovém poli tohoto rozevíracího seznamu zadávat cokoli.<br /><br /> DynamicCombo<br /> VSPackage je zodpovědný za vyplnění obsahu tohoto pole se seznamem. Uživatel může tuto položku rozevírací seznam upravit a také vybrat položky v ní.<br /><br /> IndexCombo<br /> Stejné jako DynamicCombo s tím rozdílem, že vyvolává index položky namísto jejího textu.<br /><br /> MRUCombo<br /> Vyplněný integrovaným vývojovým prostředím (IDE) jménem VSPackage.  Uživatel může v tomto poli se seznamem upravit. Rozhraní IDE se zapamatuje až do posledních 16 položek na pole se seznamem.<br /><br /> Když uživatel vybere něco v poli se seznamem nebo vloží něco nového, IDE ho upozorní na příslušný VSPackage.|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 

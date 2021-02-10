@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 07b20866-e598-4783-9ecc-6aa8625c8804
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9d5b333b060fb49e71b803eb5744a57863e51581
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: e578c6d6bd197cbb121edf4cce554cedd91d47ce
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89738359"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939003"
 ---
 # <a name="idebuginterceptexceptioncompleteevent2getinterceptcookie"></a>IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie
 Volá se, když se dokončí zpracování zachycené výjimky.
@@ -50,6 +50,6 @@ mimo Jedinečná hodnota, která je přidružena k výjimce, která byla zachyce
 ## <a name="remarks"></a>Poznámky
  Poté, co metoda [InterceptCurrentException –](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) dokončí zpracování zachycené výjimky, pošle událost [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) . Obslužná rutina může použít `GetInterceptCookie` metodu k načtení jedinečné hodnoty přidružené k výjimce (stejná hodnota předaná `InterceptCurrentException` metodě).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)
 - [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)

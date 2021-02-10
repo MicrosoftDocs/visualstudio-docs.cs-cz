@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2a7d5704-5e8c-452c-9ef3-5e8ec5e952fe
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f852182baec22915f412a3753755b129053e0ad
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 6f71f042df1ef683ed48e2389e2c781dfb22bff1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383024"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939250"
 ---
 # <a name="clickonce-reference"></a>Odkaz na ClickOnce
 Následující stránky popisují strukturu souborů XML, které slouží k reprezentaci aplikací ClickOnce.
@@ -44,7 +44,7 @@ Následující stránky popisují strukturu souborů XML, které slouží k repr
 
  Vypíše nespravovaná veřejná rozhraní API z dfshim.dll.
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
 
 ## <a name="related-sections"></a>Související oddíly
  [Zabezpečení a nasazení ClickOnce](../deployment/clickonce-security-and-deployment.md)

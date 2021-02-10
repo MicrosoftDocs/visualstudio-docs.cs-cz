@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: ef48d2d2-0c47-4f93-8cfe-52026b6c463e
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: eba7b40a6e770c5076a4d1aa89bf6196f7ef8684
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 38383882005e3a19b1a31709fb5656caf2a7d788
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974251"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938366"
 ---
 # <a name="combos-element"></a>Element Combos
 Seskupuje prvky prvků [se seznamem](../extensibility/combo-element.md) .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <Combos>
@@ -39,7 +39,7 @@ Seskupuje prvky prvků [se seznamem](../extensibility/combo-element.md) .
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 

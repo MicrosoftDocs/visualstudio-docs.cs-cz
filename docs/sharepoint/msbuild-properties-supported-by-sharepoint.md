@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, MSBuild properties
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f1eab3832121f1e0c926257797ddbc79695546a5
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 20458cc7047e913e13f4594380d4b4946b44ec17
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305137"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938509"
 ---
 # <a name="msbuild-properties-supported-by-sharepoint"></a>Vlastnosti nástroje MsBuild podporované službou SharePoint
   Všechny [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] vlastnosti definované v souboru Microsoft. VisualStudio. SharePoint. targets, souboru projektu nebo uživatelském souboru projektu lze použít v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektech služby SharePoint. Kromě běžných [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] vlastností dodaných projektem definuje SharePoint další vlastnosti, které jsou specifické pro projekty služby SharePoint.

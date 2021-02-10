@@ -8,20 +8,20 @@ ms.topic: reference
 ms.assetid: 3a6b1f45-b5d6-418e-add1-87ee8f15033d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5b8f81ad86c98ab31e8f5d5dddf0efa1b2c89d85
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 1f2b8903c99e5bd2f62587b7921be855e4ed6323
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903985"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938769"
 ---
 # <a name="targetplatformname-element-visual-studio-templates"></a>TargetPlatformName – element (šablony sady Visual Studio)
 Určuje platformu, na kterou se šablona projektu zaměřuje. Tento prvek slouží k určení toho, že se šablona projektu používá k vytváření [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] aplikací.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <VSTemplate>

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c92b193b-054d-4923-834b-d4226a4c7a1a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 97c4fe8d72cc8e2216ee8f5057d032c071974bf3
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 8a8e1dea5fb3716d593ca9b28f52ca0cd59a054f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350814"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938496"
 ---
 # <a name="localize-clickonce-applications"></a>Lokalizace aplikací ClickOnce
 Lokalizace je proces zajištění vhodné aplikace pro konkrétní jazykovou verzi. Tento proces zahrnuje převod textu uživatelského rozhraní (UI) do jazyka specifického pro oblast, pomocí správného formátování data a měny, přizpůsobení velikosti ovládacích prvků ve formuláři a v případě potřeby zrcadlení ovládacích prvků v pravém rohu.
@@ -48,7 +48,7 @@ Lokalizace je proces zajištění vhodné aplikace pro konkrétní jazykovou ver
 
  Tato metoda je výchozím nastavením v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Chcete-li použít tuto metodu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , není nutné provádět žádnou další práci.
 
- Chcete-li použít tuto metodu s *MageUI.exe* , je nutné nastavit jazykovou verzi vaší aplikace jako **neutrální** v *MageUI.exe*. Dále musíte do svého nasazení ručně zahrnout všechna satelitní sestavení. V *MageUI.exe* můžete přidat satelitní sestavení pomocí tlačítka **naplnit** na kartě **soubory** manifestu aplikace.
+ Chcete-li použít tuto metodu s *MageUI.exe*, je nutné nastavit jazykovou verzi vaší aplikace jako **neutrální** v *MageUI.exe*. Dále musíte do svého nasazení ručně zahrnout všechna satelitní sestavení. V *MageUI.exe* můžete přidat satelitní sestavení pomocí tlačítka **naplnit** na kartě **soubory** manifestu aplikace.
 
  Výhodou tohoto přístupu je, že vytvoří jediné nasazení a zjednodušuje lokalizovaný scénář nasazení. V době běhu se použije příslušné satelitní sestavení v závislosti na výchozí jazykové verzi operačního systému Windows daného uživatele. Nevýhodou tohoto přístupu je, že stáhne všechna satelitní sestavení pokaždé, když je aplikace nainstalována nebo aktualizována v klientském počítači. Pokud má vaše aplikace velký počet řetězců nebo pokud vaši zákazníci mají pomalé připojení k síti, může tento proces ovlivnit výkon při aktualizaci aplikace.
 
