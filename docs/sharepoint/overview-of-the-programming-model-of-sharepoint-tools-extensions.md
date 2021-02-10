@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending tools
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 67e0f4ae5b06e96747a7257b2b9b444566235877
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: b823aecff4f05208094bd98b559a661c7f23fc5b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305129"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970527"
 ---
 # <a name="overview-of-the-programming-model-of-sharepoint-tools-extensions"></a>Přehled programovacího modelu rozšíření nástrojů služby SharePoint
   Při vytváření rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio začínáte implementací jednoho nebo více rozhraní rozšíření, která jsou zpřístupněna pomocí nástrojů služby SharePoint. Ve většině případů budete k implementaci funkcí v rozšíření používat také další typy poskytované nástroji SharePoint. V některých scénářích můžete také použít typy v jiných objektových modelech poskytovaných aplikací Visual Studio a SharePoint. Je nutné pochopit účel každého z těchto objektových modelů a zjistit, jak je lze vzájemně používat k vytváření rozšíření pro nástroje služby SharePoint.

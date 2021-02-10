@@ -9,15 +9,15 @@ helpviewer_keywords:
 - stories
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 40418b2d188ac5482a12dd4ffdddd221bf5d2f97
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: d55e549d2dccdc047cbf4449392cc090a569f85c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361960"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970579"
 ---
 # <a name="model-user-requirements"></a>Modelování uživatelských požadavků
 
@@ -98,7 +98,7 @@ Pokud restaurace odstraní položku nabídky, když zákazník seřazení moučk
 
 Podívejte se na téma [modelování architektury vaší aplikace](../modeling/model-your-app-s-architecture.md) a Naučte se vyvíjet kód, který dodržuje požadavky na kvalitu služeb.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)
 - [Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)

@@ -5,7 +5,7 @@ description: Přečtěte si, jak používat EditorConfig ke zformátování kód
 ms.date: 9/14/2020
 author: jureid
 ms.author: jureid
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CPP
 ms.prod: visual-studio-windows
@@ -14,12 +14,12 @@ ms.topic: reference
 ms.workload:
 - cplusplus
 monikerRange: vs-2019
-ms.openlocfilehash: f248ede6a4bb45a58d64a346489124462f304a86
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: 490a7b29d6e3d8a2dc63c27b9e9d7226b5d22662
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518541"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970878"
 ---
 # <a name="c-editorconfig-formatting-conventions"></a>Konvence formátování C++ EditorConfig
 
@@ -380,7 +380,7 @@ Zbývající část tohoto dokumentu obsahuje všechna nastavení formátování
   - `all_one_line_scopes` – Nezalamovat bloky kódu, ve kterých jsou levou a pravou závorku na dalším řádku.
   - `never` -Vždy použít nastavení nových řádků pro bloky.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [EditorConfig.org](https://editorconfig.org/)
 - [Podpora EditorConfig pro službu jazyka](../extensibility/supporting-editorconfig.md)

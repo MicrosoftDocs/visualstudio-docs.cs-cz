@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 1a9aa122-2d8f-4a09-b503-92975aa6b648
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0640bc238bc300868d42aedc8905da8ffc97f65e
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: b3a73cec5f05072f0a99940b82a362ccb8e1edde
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98723319"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969266"
 ---
 # <a name="modules-view---contention-data"></a>Zobrazení modulů – data kolizí
 Zobrazení modulů dat o kolizí zobrazuje data souběžnosti seskupená podle modulů, které byly v datech profilování vzorků. Každý modul je kořenovým adresářem hierarchického stromu. Funkce modulu, ve kterém došlo k událostem sporů, jsou uvedeny pod uzlem modulu.

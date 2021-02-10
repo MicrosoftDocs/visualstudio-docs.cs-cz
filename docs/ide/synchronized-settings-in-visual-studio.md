@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: a3d2ea29-be5d-4012-9820-44b06adbb7dd
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 310e716f890dcc2185d6ebf6e60411934a1761f4
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 396981533502f2687040f470ded9b490cab1ef7a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560912"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970631"
 ---
 # <a name="synchronize-visual-studio-settings-across-multiple-computers"></a>Synchronizace nastavení sady Visual Studio napříč více počítači
 
@@ -31,17 +31,17 @@ Ve výchozím nastavení se synchronizují následující nastavení:
 
 - Uživatelsky definované rozložení oken v **okně**  >  **Spravovat stránku rozložení oken** .
 
-- Na **Tools**  >  stránkách **Možnosti** nástrojů se nacházejí tyto možnosti:
+- Na   >  stránkách **Možnosti** nástrojů se nacházejí tyto možnosti:
 
-  - Motiv a nastavení velikosti písmen na panelu nabídek **Environment** na  >  stránce **Obecné** možnosti prostředí.
+  - Motiv a nastavení velikosti písmen na panelu nabídek na  >  stránce **Obecné** možnosti prostředí.
 
-  - Všechna nastavení na **Environment**  >  stránce možnosti **písma a barvy** prostředí.
+  - Všechna nastavení na   >  stránce možnosti **písma a barvy** prostředí.
 
-  - Všechny klávesové zkratky na **Environment**  >  stránce možností **klávesnice** prostředí.
+  - Všechny klávesové zkratky na   >  stránce možností **klávesnice** prostředí.
 
-  - Všechna nastavení na **Environment**  >  **kartách prostředí a** na stránce Možnosti systému Windows.
+  - Všechna nastavení na   >  **kartách prostředí a** na stránce Možnosti systému Windows.
 
-  - Všechna nastavení na **Environment**  >  stránce možnosti **spuštění** prostředí.
+  - Všechna nastavení na   >  stránce možnosti **spuštění** prostředí.
 
   - Všechna nastavení na stránkách možností **textového editoru** , například [Předvolby stylu kódu](code-styles-and-code-cleanup.md).
 
@@ -49,12 +49,12 @@ Ve výchozím nastavení se synchronizují následující nastavení:
 
 ## <a name="turn-off-synchronized-settings-on-a-particular-computer"></a>Vypnutí synchronizovaných nastavení na konkrétním počítači
 
-Synchronizovaná nastavení pro Visual Studio jsou ve výchozím nastavení zapnutá. Synchronizovaná nastavení v počítači můžete vypnout tak, že na stránce **nástroje** zobrazíte  >  **Options**  >  **Environment**  >  **účty** prostředí možnosti a v **případě přihlášení do sady Visual Studio zrušíte zaškrtnutí možnosti Synchronizovat nastavení v rámci zařízení**.
+Synchronizovaná nastavení pro Visual Studio jsou ve výchozím nastavení zapnutá. Synchronizovaná nastavení v počítači můžete vypnout tak, že na stránce **nástroje** zobrazíte  >    >    >  **účty** prostředí možnosti a v **případě přihlášení do sady Visual Studio zrušíte zaškrtnutí možnosti Synchronizovat nastavení v rámci zařízení**.
 
 Pokud se například rozhodnete, že nechcete synchronizovat nastavení v aplikaci Visual Studio v počítači "A", žádné změny nastavení provedené v počítači "A" se nezobrazí v počítači "B" nebo v počítači "C". Počítače "B" a "C" budou nadále synchronizovány navzájem, ale ne u počítače "A".
 
 > [!NOTE]
-> Pokud se rozhodnete nesynchronizovat nastavení tím, že zrušíte výběr možnosti na **Tools**  >  **Options**  >  **Environment**  >  stránce **účty** prostředí možnosti nástrojů, jiné verze nebo edice sady Visual Studio, které máte ve stejném počítači, nebudou ovlivněny. Tato Souběžná instalace sady Visual Studio bude pokračovat v synchronizaci jejich nastavení (Pokud nechcete zrušit možnost, že je to možné).
+> Pokud se rozhodnete nesynchronizovat nastavení tím, že zrušíte výběr možnosti na   >    >    >  stránce **účty** prostředí možnosti nástrojů, jiné verze nebo edice sady Visual Studio, které máte ve stejném počítači, nebudou ovlivněny. Tato Souběžná instalace sady Visual Studio bude pokračovat v synchronizaci jejich nastavení (Pokud nechcete zrušit možnost, že je to možné).
 
 ## <a name="synchronize-settings-across-visual-studio-ide-products-and-editions"></a>Synchronizace nastavení v rámci produktů a edicí IDE sady Visual Studio
 
@@ -91,7 +91,7 @@ Určitá nastavení, například rozložení okna nástroje, se nesdílí mezi r
 
 Pokud chcete resetovat všechna nastavení na jejich výchozí hodnoty, přihlaste se k Visual Studiu a pak výběrem možnosti **nástroje**  >  **importovat a exportovat nastavení** otevřete **Průvodce importem a exportem nastavení**. Vyberte **Obnovit všechna nastavení** a potom postupujte podle zbývajících kroků průvodce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přizpůsobení integrovaného vývojového prostředí](../ide/personalizing-the-visual-studio-ide.md)
 - [Nastavení prostředí](../ide/environment-settings.md)

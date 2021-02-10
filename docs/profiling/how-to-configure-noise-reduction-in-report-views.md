@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b07e0375-bb73-47e3-8d1d-b9b492fb16c9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 324c00c869e335fe6fc9504b461e6fc7f85bab98
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: 5037cf0184608829d5a86d736bead5b61f5172c5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98800424"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969331"
 ---
 # <a name="how-to-configure-noise-reduction-in-report-views"></a>Postupy: Konfigurace snížení šumu v zobrazeních sestav
 Sestavy výkonu lze nakonfigurovat pro redukci hluku tím, že omezíte množství dat, která se zobrazí ve stromovém zobrazení volání a v zobrazení přidělení. Díky omezení šumu jsou problémy s výkonem výraznější. To je užitečné při analýze sestav výkonu.

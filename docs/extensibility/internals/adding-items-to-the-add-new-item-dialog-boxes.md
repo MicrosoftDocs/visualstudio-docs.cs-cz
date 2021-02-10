@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2f70863b-425b-4e65-86b4-d6a898e29dc7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99377db0e835de8d84485d0254d84892a360f5f0
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 1dbdb2f04ad5038941eeb9790efa9e05781def3f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190158"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969006"
 ---
 # <a name="add-items-to-the-add-new-item-dialog-box"></a>Přidání položek do dialogového okna Přidat novou položku
 Proces přidávání položek do dialogového okna **Přidat novou položku** začíná klíči registru. Jak je znázorněno v následujících položkách registru, část **AddItemTemplates** obsahuje cestu a název adresáře, ve kterém jsou položky zpřístupněny v dialogovém okně **Přidat novou položku** .
@@ -33,11 +33,11 @@ Proces přidávání položek do dialogového okna **Přidat novou položku** za
 
  **@** = #6
 
- **TemplatesDir**  =  \\ TemplatesDir &lt; Instalační cesta k sadě Visual Studio SDK &gt; \\ VSIntegration \\ &lt; SomeFolder &gt; \\ &lt; SomePackage &gt; \\ &lt; SomeProject &gt; \\ &lt; SomeProjectItems&gt;
+   =  \\ TemplatesDir &lt; Instalační cesta k sadě Visual Studio SDK &gt; \\ VSIntegration \\ &lt; SomeFolder &gt; \\ &lt; SomePackage &gt; \\ &lt; SomeProject &gt; \\ &lt; SomeProjectItems&gt;
 
  **SortPriority** = DWORD: 00000064
 
-| Název | Typ | Data (ze souboru *. rgs* ) | Popis |
+| Název | Typ | Data (ze souboru *. rgs* ) | Description |
 |------------------|-----------| - | - |
 | @ (Výchozí) | REG_SZ | #% IDS_ADDITEM_TEMPLATES_ENTRY% | ID prostředku pro šablony pro **Přidání položek** |
 | Val TemplatesDir | REG_SZ | % TEMPLATE_PATH% \\ &lt; SomeProjectItems&gt; | Cesta k položkám projektu zobrazeným v dialogovém okně průvodce **přidáním nové položky** |

@@ -6,19 +6,19 @@ ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 96c067d4c55a5df4d9343e60360142466e8f218f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9767630fc7fee4eafce72e4eb99aa12db8469691
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62431284"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970540"
 ---
-# <a name="install-python-support-in-visual-studio"></a>Instalace podpory Pythonu v aplikaci Visual Studio
+# <a name="install-python-support-in-visual-studio"></a>Instalace podpory jazyka Python v sadě Visual Studio
 
 > [!Note]
 > Podpora Pythonu je v současnosti dostupná jenom v aplikaci Visual Studio pro Windows. v systémech Mac a Linux je podpora Pythonu dostupná prostřednictvím [Visual Studio Code](https://code.visualstudio.com/docs/python/python-tutorial).

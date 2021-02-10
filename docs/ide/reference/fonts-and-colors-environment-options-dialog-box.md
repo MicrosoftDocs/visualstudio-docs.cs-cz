@@ -24,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: c767d302-51ed-47a8-a527-c07bce2aa485
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dbbd42b0e4eae6d124fc59d68592155bf2c9bd49
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: ccc2309cf3ccc51c82796816f635908b55b81901
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96617523"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969747"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>Písma a barvy, prostředí, dialogové okno Možnosti
 
-Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvořit vlastní písmo a barevné schéma pro různé prvky uživatelského rozhraní v integrovaném vývojovém prostředí (IDE). Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na možnost **nástroje**  >  a pak vyberte **možnost** **Environment**  >  **písma a barvy** prostředí.
+Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvořit vlastní písmo a barevné schéma pro různé prvky uživatelského rozhraní v integrovaném vývojovém prostředí (IDE). Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na možnost **nástroje**  >  a pak vyberte **možnost**   >  **písma a barvy** prostředí.
 
 Změny barevného schématu se neprojeví během relace, ve které jste je provedli. Změny barev můžete vyhodnotit tak, že otevřete jinou instanci aplikace Visual Studio a vydáte podmínky, za kterých očekáváte, že se vaše změny použijí.
 
@@ -101,7 +101,7 @@ Obsahuje seznam položek, pro které lze změnit barvu popředí a pozadí.
 
 Mezi některé položky zobrazení patří:
 
-|Zobrazit položku|Popis|
+|Zobrazit položku|Description|
 |------------------|-----------------|
 |**Prostý text**|Text v editoru|
 |**Vybraný text**|Text, který je obsažen v aktuálním výběru, když má Editor fokus.|
@@ -245,7 +245,7 @@ Barva, která se zobrazí pro položku při prvním otevření sady Visual Studi
 
 Zobrazí dialogové okno barvy, které umožňuje nastavit vlastní barvu pro položku vybranou v seznamu zobrazit položky.
 
-**Tučný**
+**Bold**
 
 Tuto možnost vyberte, chcete-li zobrazit text vybraných **položek zobrazení** v tučném textu. V editoru je snadnější identifikovat tučný text.
 

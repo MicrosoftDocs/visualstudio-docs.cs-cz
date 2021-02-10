@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 84639d86-dd21-4b35-9988-6bb654162488
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0203c8b7028fb170ae2ba4d2cc9d6f1825414f64
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: bd2bdc047ddd5a568aca01ed99b6148b0f288faa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480405"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970267"
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Identifikátory GUID a ID nabídek sady Visual Studio
 V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skupin na řádku nabídek sady Visual Studio. Tyto hodnoty jsou definovány v souborech *. vsct* , které jsou nainstalovány jako součást sady Visual Studio SDK. Další informace naleznete v tématu [příkazy, nabídky a skupiny definované rozhraním IDE](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -34,7 +34,7 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 ## <a name="groups-on-the-visual-studio-menu-bar"></a>Skupiny na řádku nabídek sady Visual Studio
  Chcete-li přidat nabídku do řádku nabídek, nastavte jednu z těchto skupin jako nadřazenou.
 
-|Skupina|ID|
+|Group (Skupina)|ID|
 |-----------|--------|
 |Soubor/upravit/zobrazit|IDG_VS_MM_FILEEDITVIEW|
 |Refaktoring|IDG_VS_MM_REFACTORING:|
@@ -57,7 +57,7 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 |Project|IDM_VS_MENU_PROJECT|
 |Sestavení|IDM_VS_MENU_BUILD|
 |Formát|IDM_VS_MENU_FORMAT|
-|Nástroje|IDM_VS_MENU_TOOLS|
+|nástroje|IDM_VS_MENU_TOOLS|
 |Rozšíření|IDM_VS_MENU_EXTENSIONS|
 |Okno|IDM_VS_MENU_WINDOW|
 |Addins|IDM_VS_MENU_ADDINS|
@@ -69,7 +69,7 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 
 ### <a name="file-menu-groups"></a>Skupiny nabídek souborů
 
-|Skupina|ID|
+|Group (Skupina)|ID|
 |-----------|--------|
 |Nové/otevřené|IDG_VS_FILE_FILE|
 |Přidání|IDG_VS_FILE_ADD|
@@ -85,7 +85,7 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 
 ### <a name="edit-menu-groups"></a>Upravit skupiny nabídek
 
-|Skupina|ID|
+|Group (Skupina)|ID|
 |-----------|--------|
 |Vrátit zpět/znovu|IDG_VS_EDIT_UNDOREDO|
 |Vyjmout/kopírovat/vložit|IDG_VS_EDIT_CUTCOPY|
@@ -98,14 +98,14 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 
 ### <a name="refactor-menu-groups"></a>Refaktorovat skupiny nabídek
 
-|Skupina|ID|
+|Group (Skupina)|ID|
 |-----------|--------|
 |Společné|IDG_REFACTORING_COMMON|
 |Pokročilý|IDG_REFACTORING_ADVANCED|
 
 ### <a name="view-menu-groups"></a>Zobrazit skupiny nabídek
 
-|Skupina|ID|
+|Group (Skupina)|ID|
 |-----------|--------|
 |Kód formuláře|IDG_VS_VIEW_FORMCODE|
 |Prohlížeč|IDG_VS_VIEW_BROWSER|
@@ -126,19 +126,19 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 
 ### <a name="project-menu-groups"></a>Skupiny nabídek projektu
 
-|Skupina|ID|
+|Group (Skupina)|ID|
 |-----------|--------|
 |Různé přidání|IDG_VS_PROJ_MISCADD|
 |Přidání|IDG_VS_PROJ_ADD|
 |Složka|IDG_VS_PROJ_FOLDER|
 |Uvolnit nebo znovu načíst|IDG_VS_PROJ_UNLOADRELOAD|
-|Referenční informace|IDG_VS_PROJ_REFERENCE|
+|Reference|IDG_VS_PROJ_REFERENCE|
 |Možnosti|IDG_VS_PROJ_OPTIONS|
 |Nastavení|IDG_VS_PROJ_SETTINGS|
 
 ### <a name="build-menu-groups"></a>Skupiny nabídek sestavení
 
-|Skupina|ID|
+|Group (Skupina)|ID|
 |-----------|--------|
 |Řešení|IDG_VS_BUILD_SOLUTION|
 |Výběr|IDG_VS_BUILD_SELECTION|
@@ -148,7 +148,7 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 
 ### <a name="tools-menu-groups"></a>Skupiny nabídek nástrojů
 
-|Skupina|ID|
+|Group (Skupina)|ID|
 |-----------|--------|
 |Příkazový řádek|IDG_VS_TOOLS_CMDLINE|
 |Fragmenty kódu|IDG_VS_TOOLS_SNIPPETS|
@@ -160,7 +160,7 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 
 ### <a name="window-menu-groups"></a>Skupiny nabídek oken
 
-|Skupina|ID|
+|Group (Skupina)|ID|
 |-----------|--------|
 |Nová|IDG_VS_WINDOW_NEW|
 |Ukotvit/zavřít|IDG_VS_DOCKCLOSE|
@@ -171,7 +171,7 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 
 ### <a name="help-menu-groups"></a>Skupiny nabídek Help
 
-|Skupina|ID|
+|Group (Skupina)|ID|
 |-----------|--------|
 |ukázky|IDG_VS_HELP_SAMPLES|
 |Podpora|IDG_VS_HELP_SUPPORT|

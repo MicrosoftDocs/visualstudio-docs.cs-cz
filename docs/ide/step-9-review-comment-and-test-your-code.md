@@ -12,15 +12,15 @@ dev_langs:
 - VB
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f5be5d8c59d9ef402bd929bd386a7bdaaa9912e
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 0bcf879d2bb6fa592f77d4c94cb2f784d2c53f2b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479300"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969617"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>Krok 9: Kontrola, okomentování a otestování kódu
 
@@ -62,7 +62,7 @@ Právě jste vytvořili něco, co funguje, a i když ještě není hotové, mů�
 
      [!code-vb[VbExpressTutorial1Step9_10#1](../ide/codesnippet/VisualBasic/step-9-review-comment-and-test-your-code_1.vb)]
 
-    **showButton** <xref:System.Windows.Forms.Control.Click> Obslužná rutina události tlačítka showButton je teď dokončená a funguje. Začali jste psát kód, počínaje `if` příkazem. `if`Příkaz je způsob, jakým vaše aplikace poznáte, "Podívejte se na tuto jednu věc a pokud ano, udělejte tyto akce." V tomto případě určíte, aby aplikace otevřela dialogové okno **otevřít soubor** , a pokud uživatel vybere soubor a klikne na tlačítko **OK** , načte tento soubor do **ovládacího prvku PictureBox**.
+     <xref:System.Windows.Forms.Control.Click> Obslužná rutina události tlačítka showButton je teď dokončená a funguje. Začali jste psát kód, počínaje `if` příkazem. `if`Příkaz je způsob, jakým vaše aplikace poznáte, "Podívejte se na tuto jednu věc a pokud ano, udělejte tyto akce." V tomto případě určíte, aby aplikace otevřela dialogové okno **otevřít soubor** , a pokud uživatel vybere soubor a klikne na tlačítko **OK** , načte tento soubor do **ovládacího prvku PictureBox**.
 
     > [!TIP]
     > Rozhraní IDE je sestaveno tak, aby bylo snadné psát kód a *fragmenty kódu* jsou jedním ze způsobů, jak to provést. Fragment kódu je zástupce, který se rozšíří na malý blok kódu.
@@ -74,17 +74,17 @@ Právě jste vytvořili něco, co funguje, a i když ještě není hotové, mů�
 1. Před spuštěním aplikace uložte aplikaci tak, že kliknete na tlačítko **Uložit vše** na panelu nástrojů, které by mělo vypadat podobně jako na následujícím snímku obrazovky.
 
      ![Tlačítko Uložit vše na panelu nástrojů](../ide/media/express_iconsaveall.png)<br>
-**_Uložit všechny_* _ _button *
+***Uložit všechny** _ _button *
 
      Pokud chcete aplikaci uložit, zvolte **soubor**  >  **Uložit vše** z panelu nabídek (nebo stiskněte klávesy **CTRL** + **SHIFT** + **S**). Osvědčeným postupem je ukládat včas a často.
 
      Když je spuštěný, váš program by měl vypadat jako na následujícím obrázku.
 
-     ![Prohlížeč obrázků](../ide/media/express_pictureviewerdonerun.png)<br>**_Prohlížeč obrázků_* _
+     ![Prohlížeč obrázků](../ide/media/express_pictureviewerdonerun.png)<br>***Prohlížeč obrázků***
 
 ## <a name="to-test-your-app"></a>Testování aplikace
 
-1. Vyberte klávesu _ *F5** nebo klikněte na tlačítko **Spustit ladění** na panelu nástrojů.
+1. Klikněte na klávesu **F5** nebo vyberte tlačítko **Spustit ladění** na panelu nástrojů.
 
 1. Kliknutím na tlačítko **Zobrazit obrázek** spusťte kód, který jste právě napsali. Nejprve aplikace otevře dialogové okno **otevřít soubor** . Ověřte, že se filtry zobrazí v rozevíracím seznamu **soubory typu** v dolní části dialogového okna. Pak přejděte na obrázek a otevřete ho. Ukázkové obrázky, které se dodávají s operačním systémem Windows, můžete obvykle najít ve složce *dokumenty* ve složce *Moje Pictures\Sample obrázky* .
 

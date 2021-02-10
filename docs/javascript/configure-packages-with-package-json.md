@@ -6,17 +6,17 @@ ms.topic: conceptual
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 652ff7b0380fc03a3f9c8155a2f8696d9dfee5b9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 891822d0b79cbfd53cf14229f11e003bf740c660
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67692373"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969487"
 ---
 # <a name="packagejson-configuration"></a>Konfigurace package.json
 
@@ -71,6 +71,6 @@ Můžete také použít symbol stříšky (^), chcete-li určit, že npm může 
 
 Pomocí tohoto zápisu může npm aktualizovat reakce 16.4.2 na 16.5.0 (nebo 16.5.1, 16.6.0 atd.), ale nepřijme aktualizaci hlavní verze. Proto se 16.4.2 nebude aktualizovat na 17.0.0.
 
-Když npm aktualizuje balíčky, vygeneruje * v souborupackage-lock.js* , ve kterém jsou uvedené skutečné verze balíčků npm používané ve vaší aplikaci, včetně všech vnořených balíčků. I když *package.jsk* řízení přímých závislostí vaší aplikace, neřídí vnořené závislosti (jiné balíčky npm vyžadované konkrétním balíčkem npm). Pokud potřebujete zajistit, aby jiní vývojáři a testeri používali přesné balíčky, které používáte, včetně vnořených balíčků, můžete použít *package-lock.jsv* souboru ve vývojovém cyklu. Další informace najdete v tématu [package-lock.js](https://docs.npmjs.com/files/package-lock.json) v dokumentaci k npm.
+Když npm aktualizuje balíčky, vygeneruje *v souborupackage-lock.js* , ve kterém jsou uvedené skutečné verze balíčků npm používané ve vaší aplikaci, včetně všech vnořených balíčků. I když *package.jsk* řízení přímých závislostí vaší aplikace, neřídí vnořené závislosti (jiné balíčky npm vyžadované konkrétním balíčkem npm). Pokud potřebujete zajistit, aby jiní vývojáři a testeri používali přesné balíčky, které používáte, včetně vnořených balíčků, můžete použít *package-lock.jsv* souboru ve vývojovém cyklu. Další informace najdete v tématu [package-lock.js](https://docs.npmjs.com/files/package-lock.json) v dokumentaci k npm.
 
 V případě sady Visual Studio se *package-lock.js* souboru do projektu nepřidá, ale můžete ho najít ve složce projektu.

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 645d9bd3-0a17-4a09-9b25-b37ae3ff484a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: da16256579f414d33434295fc355f368597d868d
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 23f5a3bd275ecd3666ce1a6642b5c3a27072ac60
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98720862"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969357"
 ---
 # <a name="copy-selection"></a>Kopírovat výběr
 Chcete-li zkopírovat celý zásobník volání z karty sestava, klikněte na tlačítko **Kopírovat**. Pak můžete vložit zásobník volání do libovolného programu, který tuto akci podporuje.

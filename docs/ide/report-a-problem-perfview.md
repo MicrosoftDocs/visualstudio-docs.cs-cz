@@ -7,7 +7,7 @@ helpviewer_keywords:
 - ETL Trace
 author: corob-msft
 ms.author: corob
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Use perfview.exe to collect ETL traces for troubleshooting issues with Visual Studio
-ms.openlocfilehash: 9ac4d90a0da15fe2415ada02d6e8e1cdbe11af56
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f0696a24f04d2cba52994c86a3475f56d3e7947
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770810"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970709"
 ---
 # <a name="collect-an-etl-trace-with-perfview"></a>Shromažďování trasovacích protokolů ETL pomocí nástroje PerfView
 
@@ -34,7 +34,7 @@ Stáhněte si PerfView z [GitHubu](https://github.com/Microsoft/perfview/blob/ma
 
 1. V Průzkumníku Windows klikněte pravým tlačítkem na **PerfView.exe** a jako správce vyberte **Spustit jako správce** .
 1. V nabídce shromáždit klikněte na možnost **shromáždit** .
-1. Podívejte se na **zip**, **Merge**a **ThreadTime**.
+1. Podívejte se na **zip**, **Merge** a **ThreadTime**.
 1. Zvyšte **kruhové MB** na 1000.
 1. Změna **aktuálního adresáře** pro uložení trasování ETL do zadané složky a datového souboru, pokud se chystáte shromažďovat více než jednou.
 1. Chcete-li spustit zaznamenávání dat, klikněte na tlačítko **Spustit shromažďování** .

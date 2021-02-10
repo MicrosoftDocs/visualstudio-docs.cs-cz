@@ -5,17 +5,17 @@ ms.date: 03/18/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 46b0a8005ea76445a1d6205c8635963dbaedd0d4
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 6521df812d708744a617c0e3fe95285fdbfa0262
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90097031"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970605"
 ---
 # <a name="how-to-select-a-python-environment-for-a-project"></a>Jak vybrat prostředí Pythonu pro projekt
 
@@ -74,7 +74,7 @@ V aplikaci Visual Studio je možné aktivovat virtuální prostředí pro projek
 Jakmile se do projektu přidá virtuální prostředí, zobrazí se v okně **prostředí Pythonu** . Pak ho můžete aktivovat stejně jako jakékoli jiné prostředí a můžete spravovat jeho balíčky.
 
 ::: moniker range="vs-2017"
-### <a name="create-a-virtual-environment"></a>Vytvoření virtuálního prostředí
+### <a name="create-a-virtual-environment"></a>Vytvoříte virtuální prostředí.
 
 Nové virtuální prostředí můžete vytvořit přímo v aplikaci Visual Studio následujícím způsobem:
 
@@ -109,15 +109,15 @@ Pokud jste již vytvořili virtuální prostředí jinde, můžete jej aktivovat
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-### <a name="create-a-virtual-environment"></a>Vytvoření virtuálního prostředí
+### <a name="create-a-virtual-environment"></a>Vytvoříte virtuální prostředí.
 
 Nové virtuální prostředí můžete vytvořit přímo v aplikaci Visual Studio následujícím způsobem:
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem na **prostředí Pythonu** a vyberte **Přidat prostředí**nebo v rozevíracím seznamu prostředí na panelu nástrojů Python vyberte **Přidat prostředí** . V dialogovém okně **Přidat prostředí** , které se zobrazí, vyberte kartu **virtuální prostředí** :
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **prostředí Pythonu** a vyberte **Přidat prostředí** nebo v rozevíracím seznamu prostředí na panelu nástrojů Python vyberte **Přidat prostředí** . V dialogovém okně **Přidat prostředí** , které se zobrazí, vyberte kartu **virtuální prostředí** :
 
     ![Karta virtuální prostředí v dialogovém okně Přidat prostředí](media/environments/environments-add-virtual-1-2019.png)
 
-1. Zadejte název virtuálního prostředí, vyberte základní interpret a ověřte jeho umístění. V části **instalovat balíčky ze souboru**zadejte cestu k souboru *requirements.txt* v případě potřeby.
+1. Zadejte název virtuálního prostředí, vyberte základní interpret a ověřte jeho umístění. V části **instalovat balíčky ze souboru** zadejte cestu k souboru *requirements.txt* v případě potřeby.
 
 1. Projděte si další možnosti v dialogovém okně:
 
@@ -143,7 +143,7 @@ Pokud jste již vytvořili virtuální prostředí jinde, můžete jej aktivovat
 
 ### <a name="remove-a-virtual-environment"></a>Odebrání virtuálního prostředí
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na virtuální prostředí a vyberte **Odebrat**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na virtuální prostředí a vyberte **Odebrat**.
 
 1. Visual Studio se zeptá, jestli se má odebrat nebo odstranit virtuální prostředí. Výběr možnosti **Odebrat** zpřístupňuje projekt, ale ponechá ho v systému souborů. Výběr možnosti **Odstranit** odstraní prostředí z projektu a odstraní ho ze systému souborů. Základní překladač není ovlivněn.
 
@@ -169,7 +169,7 @@ Mějte na paměti, že zobrazené položky nemusí být vždy přesné a instala
 Všimněte si také, že Visual Studio předem neposílá podporu `conda` k instalaci balíčků do prostředí conda. `conda`Místo toho použijte příkaz z příkazového řádku.
 
 > [!Tip]
-> Běžným případem, kdy PIP nedokáže nainstalovat balíček, je, že balíček obsahuje zdrojový kód pro nativní komponenty v souborech * \* . PYD* . Bez nainstalované požadované verze sady Visual Studio nemůže PIP tyto součásti zkompilovat. Chybová zpráva zobrazená v této situaci je **Chyba: nepovedlo se najít vcvarsall.bat**. `easy_install` je často schopný stahovat předkompilované binární soubory a můžete si stáhnout vhodný kompilátor pro starší verze Pythonu [https://www.microsoft.com/download/details.aspx?id=44266](https://www.microsoft.com/download/details.aspx?id=44266) . Další podrobnosti najdete v článku [jak řešit potíže s "nelze nalézt vcvarsallbat"](https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/) na blogu týmu nástrojů Python Tools.
+> Běžným případem, kdy PIP nedokáže nainstalovat balíček, je, že balíček obsahuje zdrojový kód pro nativní komponenty v souborech *\* . PYD* . Bez nainstalované požadované verze sady Visual Studio nemůže PIP tyto součásti zkompilovat. Chybová zpráva zobrazená v této situaci je **Chyba: nepovedlo se najít vcvarsall.bat**. `easy_install` je často schopný stahovat předkompilované binární soubory a můžete si stáhnout vhodný kompilátor pro starší verze Pythonu [https://www.microsoft.com/download/details.aspx?id=44266](https://www.microsoft.com/download/details.aspx?id=44266) . Další podrobnosti najdete v článku [jak řešit potíže s "nelze nalézt vcvarsallbat"](https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/) na blogu týmu nástrojů Python Tools.
 
 ## <a name="see-also"></a>Viz také
 

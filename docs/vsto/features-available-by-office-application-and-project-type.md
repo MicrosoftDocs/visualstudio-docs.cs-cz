@@ -19,15 +19,15 @@ helpviewer_keywords:
 - form regions [Office development in Visual Studio], features available
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 24db499602642f6ec980628d290ec8b5dd07fed3
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 05a17b373f409e91f9360cbd3ba92f88bd3f48e8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847803"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970394"
 ---
 # <a name="features-available-by-office-application-and-project-type"></a>Dostupné funkce podle aplikace systému Office a typu projektu
   Visual Studio obsahuje několik typů šablon projektů, které podporují různé obchodní scénáře pro systém Microsoft Office aplikace, včetně těchto typů:
@@ -52,7 +52,7 @@ ms.locfileid: "96847803"
 ## <a name="features-available-in-different-project-types"></a>Funkce dostupné v různých typech projektů
  Následující tabulka uvádí, které typy projektů poskytují jednotlivé funkce.
 
-|Příznak|Typy projektů, které poskytují funkci|Další čtení|
+|Funkce|Typy projektů, které poskytují funkci|Další čtení|
 |-------------|--------------------------------------------|---------------------|
 |Podokno akcí.|Projekty na úrovni dokumentu.|[Přehled podokna akcí](../vsto/actions-pane-overview.md)|
 |Nasazení ClickOnce.|Projekty na úrovni VS a dokumentu.|[Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)|

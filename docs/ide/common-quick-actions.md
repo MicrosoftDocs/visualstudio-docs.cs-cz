@@ -5,18 +5,18 @@ ms.date: 03/28/2018
 ms.topic: reference
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: db7a3a550f6bfc1250679eeefa0ba3ec6291eef0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d24b03bc79c32c32c570d26b7607d1ba36c1c1df
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585519"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970904"
 ---
 # <a name="common-quick-actions"></a>Běžné rychlé akce
 
@@ -30,7 +30,7 @@ Rychlé akce v této části opravují chyby v kódu, které by způsobily selh�
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>Opravit nesprávně napsaný symbol nebo klíčové slovo
 
-Pokud nechtěně napíšete typ nebo klíčové slovo v aplikaci Visual Studio omylem, tato rychlá akce je automaticky opraví za vás. Tyto položky se zobrazí v nabídce žárovky jako **"Změna" \<misspelled word> na \<correct word> **"". Příklad:
+Pokud nechtěně napíšete typ nebo klíčové slovo v aplikaci Visual Studio omylem, tato rychlá akce je automaticky opraví za vás. Tyto položky se zobrazí v nabídce žárovky jako **"Změna" \<misspelled word> na \<correct word>**"". Příklad:
 
 ```csharp
 // Before
@@ -449,7 +449,7 @@ End Select
 
 ### <a name="convert-to-interpolated-string"></a>Převést na interpolované řetězce
 
-[Interpolované řetězce](/dotnet/csharp/language-reference/keywords/interpolated-strings) představují snadný způsob, jak vyjádřit řetězce pomocí vložených proměnných, podobně jako metoda **[String. Format](/dotnet/api/system.string.format#overloads)** .  Tato rychlá akce rozpoznává případy, kdy jsou zřetězeny řetězce, nebo pomocí **String. Format**a mění použití na interpolované řetězce.
+[Interpolované řetězce](/dotnet/csharp/language-reference/keywords/interpolated-strings) představují snadný způsob, jak vyjádřit řetězce pomocí vložených proměnných, podobně jako metoda **[String. Format](/dotnet/api/system.string.format#overloads)** .  Tato rychlá akce rozpoznává případy, kdy jsou zřetězeny řetězce, nebo pomocí **String. Format** a mění použití na interpolované řetězce.
 
 ```csharp
 // Before

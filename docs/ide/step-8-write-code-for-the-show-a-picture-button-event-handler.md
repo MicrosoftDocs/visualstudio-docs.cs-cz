@@ -12,15 +12,15 @@ dev_langs:
 - VB
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5718bd976952557d9ff5f92a0522a672757a54e8
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 9ed9e315bc4373fc2de9e31f0cbdd98ea274b404
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038657"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969669"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>Krok 8: Zapište kód pro obslužnou rutinu události zobrazit tlačítko obrázku
 
@@ -64,7 +64,7 @@ Dále pomocí technologie IntelliSense zadáte další kód pro otevření dialo
     > [!NOTE]
     > Okno **technologie IntelliSense** může zobrazit jak vlastnosti, tak metody. Chcete-li zjistit, co se zobrazuje, podívejte se na ikonu na levé straně každé položky v okně **IntelliSense** . Vedle každé z nich se zobrazí obrázek bloku a vedle každé vlastnosti se zobrazí obrázek klíče (nebo Spanner). Vedle každé události je také Ikona blesku. <br><br>Tady jsou ikony, které se zobrazí:<br><br>![Ikona metody](../ide/media/express_iconmethod.png)<br>![Ikona vlastnosti](../ide/media/express_iconproperty.png)<br>![Ikona události](../ide/media/express_iconevent.png)
 
- 1. Začátek psaní `ShowDialog` (velká a malá písmena neimportují IntelliSense). `ShowDialog()`Metoda zobrazí dialogové okno **otevřít soubor** . Po zvýraznění okna **ShowDialog**klikněte na klávesu **TAB** . Můžete také zvýraznit "ShowDialog" a vybrat klávesu **F1** pro získání pro pomoc.
+ 1. Začátek psaní `ShowDialog` (velká a malá písmena neimportují IntelliSense). `ShowDialog()`Metoda zobrazí dialogové okno **otevřít soubor** . Po zvýraznění okna **ShowDialog** klikněte na klávesu **TAB** . Můžete také zvýraznit "ShowDialog" a vybrat klávesu **F1** pro získání pro pomoc.
 
     Další informace o `ShowDialog()` metodě naleznete v tématu [Metoda ShowDialog](<xref:System.Windows.Forms.Form.ShowDialog%2A>).
 

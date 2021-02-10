@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 5f717abd-e167-47ae-818c-6b0bae100ceb
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 17f477fe2d02a43cef77358e862cfdf80a079ba5
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 65b60eb1156fe3d64081724e310a41a38b54af50
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597168"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969812"
 ---
 # <a name="how-to-distribute-code-snippets"></a>Postupy: distribuce fragmentů kódu
 
 Vašim přátelům můžete dát fragmenty kódu a nechat je instalovat na svých vlastních počítačích pomocí **Správce fragmentů kódů**. Nicméně pokud máte několik fragmentů kódu k distribuci nebo chcete více rozšířit, můžete zahrnout soubory fragmentů do rozšíření aplikace Visual Studio. Uživatelé sady Visual Studio si pak můžou nainstalovat rozšíření a získat fragmenty.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Nainstalujte úlohu **vývoj rozšíření sady Visual Studio** , abyste získali přístup k šablonám projektu **VSIX** .
 

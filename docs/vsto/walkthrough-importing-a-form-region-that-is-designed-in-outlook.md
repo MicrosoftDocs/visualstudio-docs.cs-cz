@@ -13,15 +13,15 @@ helpviewer_keywords:
 - form regions [Office development in Visual Studio], importing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9b65502bbf29f6e0df7435f6a27d3c51e8082e41
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 4b60060f8db2bf2bb1abf42803a8c80333ee5fc0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522672"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969149"
 ---
 # <a name="walkthrough-import-a-form-region-that-is-designed-in-outlook"></a>Návod: import oblasti formuláře navržené v aplikaci Outlook
   Tento názorný postup ukazuje návrh oblasti formuláře v aplikaci systém Microsoft Office Outlook a následné importování oblasti formuláře do projektu doplňku aplikace Outlook VSTO pomocí Průvodce vytvořením **nové oblasti formuláře** . Návrh oblasti formuláře v aplikaci Outlook umožňuje přidat nativní ovládací prvky aplikace Outlook do oblasti formuláře, která je vázána na data aplikace Outlook. Po importu oblasti formuláře můžete zpracovat události každého ovládacího prvku.
@@ -38,7 +38,7 @@ ms.locfileid: "97522672"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

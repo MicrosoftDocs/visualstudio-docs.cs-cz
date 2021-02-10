@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0328f0e5-2380-4a7a-a872-b547cb775050
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 21bc3a7f1d46a1afe579a67afa09097fd04458ff
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: eb1f0a0f78b935a3b61596e4dd0b595030640b00
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97875762"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970007"
 ---
 # <a name="properties-window-fields-and-interfaces"></a>Pole a rozhraní okna Vlastnosti
 Model pro výběr, který určuje, jaké informace se zobrazí v okně **vlastnosti** , je založen na okně, které se zaměřuje na integrované vývojové prostředí (IDE). Každé okno a objekt v rámci vybraného okna může mít svůj kontextový objekt výběru vložen do kontextu globálního výběru. Prostředí aktualizuje kontext globálního výběru hodnotami z rámce okna, když má toto okno fokus. V případě změny fokusu provede kontext výběru.

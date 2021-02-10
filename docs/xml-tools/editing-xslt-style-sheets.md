@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 080bed0f-0ca9-4be7-aecd-6bdaebc04007
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 31d961de62822bf036a898601ba0125db5a0dafc
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: df9bff28e68b373bb932f33ff8fb34439f0b4e7c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93045880"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969085"
 ---
 # <a name="edit-xslt-style-sheets"></a>Upravit šablony stylů XSLT
 

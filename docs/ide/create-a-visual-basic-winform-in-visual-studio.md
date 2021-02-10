@@ -8,17 +8,17 @@ ms.technology: vs-ide-general
 ms.devlang: vb
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 65c7c3e34778a1bad3eb833c073c530db72b7a36
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7a5ee86c98a7e66ac43cbcfb1abbcab6bf970b08
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809056"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970917"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Vytvoření aplikace model Windows Forms v aplikaci Visual Studio s Visual Basic
 
@@ -49,7 +49,7 @@ Nejprve vytvoříte projekt aplikace Visual Basic. Typ projektu se dodává se v
 
 1. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
 
-1. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic**a pak zvolte možnost **plocha systému Windows**. V prostředním podokně vyberte **model Windows Forms App (.NET Framework)**. Pak soubor pojmenujte `HelloWorld` .
+1. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic** a pak zvolte možnost **plocha systému Windows**. V prostředním podokně vyberte **model Windows Forms App (.NET Framework)**. Pak soubor pojmenujte `HelloWorld` .
 
      Pokud nevidíte šablonu projektu **model Windows Forms App (.NET Framework)** , zrušte z dialogového okna **Nový projekt** a v horním řádku nabídky vyberte **nástroje**  >  **získat nástroje a funkce**. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoj desktopových** aplikací pro .NET a pak zvolte **Upravit**.
 
@@ -133,9 +133,9 @@ Teď, když jsme přidali ovládací prvek tlačítko pro vytvoření akce, Poj�
 
 ### <a name="add-code-to-the-form"></a>Přidat kód do formuláře
 
-1. V okně **&#93;. vb &#91;návrhu ** dvakrát klikněte na tlačítko **kliknutím na toto** tlačítko otevřete okno **Form1. vb** .
+1. V okně **&#93;. vb &#91;návrhu** dvakrát klikněte na tlačítko **kliknutím na toto** tlačítko otevřete okno **Form1. vb** .
 
-      (Případně můžete rozbalit **Form1. vb** v **Průzkumník řešení**a potom kliknout na **Form1**.)
+      (Případně můžete rozbalit **Form1. vb** v **Průzkumník řešení** a potom kliknout na **Form1**.)
 
 1. V okně **Form1. vb** , mezi **soukromými** a **koncovými dílčími** řádky zadejte nebo zadejte, `lblHelloWorld.Text = "Hello World!"` jak je znázorněno na následujícím snímku obrazovky:
 
