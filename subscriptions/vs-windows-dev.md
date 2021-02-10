@@ -4,21 +4,24 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 12/02/2020
+ms.date: 02/09/2021
 ms.topic: how-to
 description: Seznamte se s vývojářským účtem Windows, který je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 4b8d2190792f942f808c1fda62a7020fefdca866
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: a988dabb5849d13733c72ebb5976be489f67dd95
+ms.sourcegitcommit: 0f3606917cf5451e8c4e0b2e0c3fbb9113429645
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537718"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100089590"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Vývojářský účet pro Windows v předplatných sady Visual Studio
 Váš účet pro vývojáře ve Windows, který je součástí vybraného předplatného sady Visual Studio, umožňuje odeslat bezplatné a placené aplikace pro Windows do Windows Storu.
 
 ## <a name="activation-steps"></a>Kroky aktivace
 Pokud chcete použít svůj účet vývojářů pro Windows, budete muset nastavit účet nebo se přihlásit pomocí existujícího účtu.
+
+> [!IMPORTANT]
+> Vytvoření účtu vývojáře pro Windows vyžaduje použití účtu Microsoft (MSA).  Používání účtů Azure Active Directory se nepodporuje.  
 
 Pro tento proces doporučujeme vytvořit okno prohlížeče "soukromé".  Například v Google Chrome vytvořte nové okno "anonymním".  V Internet Exploreru vytvořte nové okno InPrivate.
 
@@ -47,9 +50,9 @@ Pro tento proces doporučujeme vytvořit okno prohlížeče "soukromé".  Např�
 | Visual Studio Enterprise předplatné s GitHubem Enterprise   | VL  | Zahrnuje       |  Ano|
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Zahrnuje                                                            |Ano|
 | Visual Studio Professional předplatné s GitHubem Enterprise | VL                                        | Zahrnuje                                                            |Ano|
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  Není k dispozici|
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              |  Není k dispozici                                            |  Není k dispozici|
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  NA|
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              |  Není k dispozici                                            |  NA|
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NA|
 ||
 
 <sup>1</sup>  *zahrnuje: ne pro účely opětovného prodeje (NFR), ekvivalentu, Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, což je nejlepší odborník (MVP), regionální ředitel (RD). Vyloučení: Microsoft Partner Network (MPN), Představte si MCT software & Services.*
@@ -65,7 +68,7 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
