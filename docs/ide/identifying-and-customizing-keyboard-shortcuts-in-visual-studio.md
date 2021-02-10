@@ -14,15 +14,15 @@ helpviewer_keywords:
 - exporting shortcut keys [Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b551e3f980e962733d2797924331e4cd6dbefa5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 84d78a86c64cd85ea8738ec9038c5e64642ca950
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770858"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935947"
 ---
 # <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Identifikace a přizpůsobení klávesových zkratek v aplikaci Visual Studio
 
@@ -43,9 +43,9 @@ Pokud je zástupce přiřazen k příkazu v *globálním* kontextu a žádné ji
 
 ## <a name="identify-a-keyboard-shortcut"></a>Identifikace klávesové zkratky
 
-1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
+1. Na panelu nabídek vyberte   >  **Možnosti** nástroje.
 
-2. Rozbalte položku **prostředí**a pak zvolte možnost **klávesnice**.
+2. Rozbalte položku **prostředí** a pak zvolte možnost **klávesnice**.
 
    ![Zobrazení klávesových zkratek v dialogovém okně Možnosti](../ide/media/optionskeyboard.png)
 
@@ -63,9 +63,9 @@ Pokud je zástupce přiřazen k příkazu v *globálním* kontextu a žádné ji
 
 ## <a name="customize-a-keyboard-shortcut"></a>Přizpůsobení klávesové zkratky
 
-1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
+1. Na panelu nabídek vyberte   >  **Možnosti** nástroje.
 
-2. Rozbalte položku **prostředí**a pak zvolte možnost **klávesnice**.
+2. Rozbalte položku **prostředí** a pak zvolte možnost **klávesnice**.
 
 3. Volitelné: vyfiltrujte seznam příkazů zadáním celého názvu nebo části názvu příkazu bez mezer v poli **Zobrazit příkazy** , které obsahují.
 
@@ -76,7 +76,7 @@ Pokud je zástupce přiřazen k příkazu v *globálním* kontextu a žádné ji
    Můžete například zvolit **globální** , pokud chcete, aby zástupce pracoval ve všech kontextech. Můžete použít jakoukoli zkratku, která není namapována (jako globální) v jiném editoru. V opačném případě editor zkratku přepíše.
 
    > [!NOTE]
-   > Následující klíče nelze přiřadit jako součást klávesové zkratky v **globálním**formátu:
+   > Následující klíče nelze přiřadit jako součást klávesové zkratky v **globálním** formátu:
    >
    > - ENTER, TAB, CAPS LOCK
    > - Tisk SCRN/SYS RQ, SCROLL LOCK, pozastavení/přerušení
@@ -97,7 +97,7 @@ Pokud je zástupce přiřazen k příkazu v *globálním* kontextu a žádné ji
 7. Klikněte na tlačítko **přiřadit** .
 
     > [!NOTE]
-    > Pokud pro příkaz zadáte jiný zástupce, klikněte na **přiřadit**a potom kliknutím na **Storno** zavřete dialogové okno, ale zástupce, který jste přiřadili, se nevrátí.
+    > Pokud pro příkaz zadáte jiný zástupce, klikněte na **přiřadit** a potom kliknutím na **Storno** zavřete dialogové okno, ale zástupce, který jste přiřadili, se nevrátí.
 
 ## <a name="share-custom-keyboard-shortcuts"></a>Sdílení vlastních klávesových zkratek
 
@@ -107,7 +107,7 @@ Vlastní klávesové zkratky je možné sdílet exportováním do souboru a pře
 
 1. Na řádku nabídek klikněte na **nástroje**  >  **importovat a exportovat nastavení**.
 
-2. Zvolte možnost **Exportovat vybrané nastavení prostředí**a pak zvolte možnost **Další**.
+2. Zvolte možnost **Exportovat vybrané nastavení prostředí** a pak zvolte možnost **Další**.
 
 3. V části **Jaké nastavení chcete exportovat?** zrušte zaškrtnutí políčka **všechna nastavení** , rozbalte položku Možnosti a potom rozbalte **možnost** **prostředí**.
 
@@ -137,7 +137,7 @@ Ve výchozím nastavení se zástupci ukládají do souboru ve složce *%UserPro
 
 3. Klikněte na tlačítko **Ne, importovat nové nastavení, přepsat aktuální nastavení** a pak zvolte možnost **Další**.
 
-4. V části **Moje nastavení**vyberte soubor obsahující zástupce, které chcete importovat, nebo klikněte na tlačítko **Procházet** a vyhledejte správný soubor.
+4. V části **Moje nastavení** vyberte soubor obsahující zástupce, které chcete importovat, nebo klikněte na tlačítko **Procházet** a vyhledejte správný soubor.
 
 5. Zvolte **Další**.
 

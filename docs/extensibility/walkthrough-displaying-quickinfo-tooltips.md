@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 23fb8384-4f12-446f-977f-ce7910347947
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 34e1bb2c92cd387e979fdaa5746a34ea8d3995fc
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 3c07dd32b889a9d75222bc8ff5a245f516fab528
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877933"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935921"
 ---
 # <a name="walkthrough-display-quickinfo-tooltips"></a>Návod: zobrazení QuickInfoch popisků
 QuickInfo je funkce technologie IntelliSense, která zobrazuje signatury a popisy metod, když uživatel přesune ukazatel myši na název metody. Můžete implementovat funkce založené na jazyce, jako je například QuickInfo, definováním identifikátorů, pro které chcete zadat QuickInfo popisy, a následným vytvořením popisu, ve kterém chcete zobrazit obsah. QuickInfo můžete definovat v kontextu jazykové služby nebo můžete definovat vlastní příponu názvu souboru a typ obsahu a zobrazit QuickInfo pouze pro tento typ, nebo můžete zobrazit QuickInfo pro existující typ obsahu (například "text"). Tento návod ukazuje, jak zobrazit QuickInfo pro typ obsahu "text".
@@ -39,7 +39,7 @@ QuickInfo je funkce technologie IntelliSense, která zobrazuje signatury a popis
 
   V tomto příkladu používá zdroj QuickInfo pevně zakódovaný seznam názvů a popisů metod, ale v úplných implementacích je za poskytnutí tohoto obsahu zodpovědný jazyková služba a jazyková dokumentace.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 není nutné instalovat sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>Vytvořit projekt MEF

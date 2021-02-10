@@ -13,15 +13,15 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], updating documents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: df2996d99e752fbe0f7f36bcab537ee8c19d4f06
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 0db8cd113983231ee45252fec8fb47e3a7b75b7d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528397"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937326"
 ---
 # <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>Návod: aktualizace grafu v dokumentu pomocí přepínačů
   Tento návod ukazuje, jak pomocí přepínačů v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word dát uživatelům možnost vybrat styly grafů v dokumentu.
@@ -40,7 +40,7 @@ ms.locfileid: "97528397"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

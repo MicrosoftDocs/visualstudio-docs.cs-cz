@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], updating
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2246dcdca1e754c885dd610f98986306a256228c
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 181fafeb55720b5a97a635a4c2322cf7343643d3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526052"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937183"
 ---
 # <a name="walkthrough-update-the-controls-on-a-ribbon-at-run-time"></a>Návod: aktualizace ovládacích prvků na pásu karet v době běhu
 
@@ -48,7 +48,7 @@ Tento návod znázorňuje následující úlohy:
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 K dokončení tohoto návodu budete potřebovat následující komponenty:
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 80a52e93-4a04-4ab2-8adc-a7847c2dc20b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32d0dd7dbeee70b8c4eb566a07cf9a44d40d4f49
-ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
+ms.openlocfilehash: 7b98914d4e7fc2d63fd6cc9f79789c389e19b784
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96606538"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935999"
 ---
 # <a name="sdk-helpers-for-debugging"></a>Pomocníci sad SDK pro ladění
 Tyto funkce a deklarace jsou globální pomocné funkce pro implementaci modulů ladění, vyhodnocení výrazů a poskytovatele symbolů v jazyce C++.
@@ -123,7 +123,7 @@ HRESULT EnumMetricSections(
 
 ## <a name="expression-evaluator-functions"></a>Funkce vyhodnocovacího filtru výrazů
 
-|Funkce|Popis|
+|Funkce|Description|
 |--------------|-----------------|
 |GetEEMetric|Načte hodnotu metriky z registru.|
 |SetEEMetric|Nastaví zadanou hodnotu metriky v registru.|
@@ -132,7 +132,7 @@ HRESULT EnumMetricSections(
 
 ## <a name="exception-functions"></a>Funkce výjimky
 
-|Funkce|Popis|
+|Funkce|Description|
 |--------------|-----------------|
 |GetExceptionMetric|Načte hodnotu metriky z registru.|
 |SetExceptionMetric|Nastaví zadanou hodnotu metriky v registru.|
@@ -141,7 +141,7 @@ HRESULT EnumMetricSections(
 
 ## <a name="symbol-provider-functions"></a>Funkce poskytovatele symbolů
 
-|Funkce|Popis|
+|Funkce|Description|
 |--------------|-----------------|
 |GetSPMetric|Načte hodnotu metriky z registru.|
 |SetSPMetric|Nastaví zadanou hodnotu metriky v registru.|
@@ -149,7 +149,7 @@ HRESULT EnumMetricSections(
 
 ## <a name="enumeration-functions"></a>Funkce výčtu
 
-|Funkce|Popis|
+|Funkce|Description|
 |--------------|-----------------|
 |EnumMetricSections|Vytvoří výčet všech metrik pro zadaný typ metriky.|
 |EnumDebugEngine|Vytvoří výčet registrovaných ladicích modulů.|
@@ -166,7 +166,7 @@ HRESULT EnumMetricSections(
 |metrictypeException|Všechny metriky výjimek.|
 |metricttypeEEExtension|Všechna rozšíření vyhodnocovacího filtru výrazů.|
 
-|Vlastnosti ladicího stroje|Popis|
+|Vlastnosti ladicího stroje|Description|
 |-----------------------------|-----------------|
 |metricAddressBP|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro zarážky adres.|
 |metricAlwaysLoadLocal|Nastavte na nenulovou hodnotu, chcete-li vždy načíst modul ladění místně.|
@@ -202,13 +202,13 @@ HRESULT EnumMetricSections(
 |metricIncompatibleList|Klíč registru obsahující položky, které určují identifikátory GUID pro moduly ladění, které jsou nekompatibilní s tímto ladicím modulem.|
 |metricDisableJITOptimization|Nastavte na nenulovou hodnotu, chcete-li určit, že při ladění by měly být zakázány optimalizace za běhu (pro spravovaný kód).|
 
-|Vlastnosti vyhodnocovacího filtru výrazů|Popis|
+|Vlastnosti vyhodnocovacího filtru výrazů|Description|
 |-------------------------------------|-----------------|
 |metricEngine|Tím se udržuje počet ladicích modulů, které podporují vyhodnocení určeného výrazu.|
 |metricPreloadModules|Nastavte na nenulovou hodnotu, pokud chcete, aby se moduly při spuštění vyhodnocovacího filtru výrazů pro program vyčetly předem.|
 |metricThisObjectName|Nastavte na název objektu this.|
 
-|Vlastnosti rozšíření vyhodnocovacího filtru výrazů|Popis|
+|Vlastnosti rozšíření vyhodnocovacího filtru výrazů|Description|
 | - |-----------------|
 |metricExtensionDll|Název knihovny DLL, která podporuje toto rozšíření.|
 |metricExtensionRegistersSupported|Seznam podporovaných registrů.|
@@ -216,18 +216,18 @@ HRESULT EnumMetricSections(
 |metricExtensionTypesSupported|Seznam podporovaných typů.|
 |metricExtensionTypesEntryPoint|Vstupní bod pro přístup k typům|
 
-|Vlastnosti dodavatele portu|Popis|
+|Vlastnosti dodavatele portu|Description|
 |------------------------------|-----------------|
 |metricPortPickerCLSID|Identifikátor CLSID ovládacího prvku pro výběr portu (dialogové okno, které uživatel může použít k výběru portů a přidání portů pro ladění).|
 |metricDisallowUserEnteredPorts|Nenulová, pokud uživatelem zadané porty nelze přidat k dodavateli portů (tím je dialogové okno pro výběr portu v podstatě jen pro čtení).|
 |metricPidBase|Základní ID procesu používané dodavatelem portu při přidělování ID procesu.|
 
-|Předdefinované typy úložiště SP|Popis|
+|Předdefinované typy úložiště SP|Description|
 |-------------------------------|-----------------|
 |storetypeFile|Symboly jsou uloženy v samostatném souboru.|
 |storetypeMetadata|Symboly jsou uloženy jako metadata v sestavení.|
 
-|Různé vlastnosti|Popis|
+|Různé vlastnosti|Description|
 |------------------------------|-----------------|
 |metricShowNonUserCode|Nastavte na nenulovou hodnotu, chcete-li zobrazit neuživatelský kód.|
 |metricJustMyCodeStepping|Nastavte na nenulovou hodnotu, chcete-li indikovat, že krokování může probíhat pouze v uživatelském kódu.|
@@ -261,7 +261,7 @@ HRESULT EnumMetricSections(
 
  *[metrika] = [hodnota metriky]*
 
-|Zástupný symbol|Popis|
+|Zástupný symbol|Description|
 |-----------------|-----------------|
 |*[klíč registru]*|`HKEY_CURRENT_USER` nebo `HKEY_LOCAL_MACHINE`:|
 |*[kořen verze]*|Verze sady Visual Studio (například, `7.0` `7.1` nebo `8.0` ). Tuto kořenovou složku ale můžete také změnit pomocí přepínače **/rootsuffix** na **devenv.exe**. V případě VSIP je tento modifikátor obvykle **exp**, takže kořen verze by byl například 8.0 EXP.|
@@ -294,7 +294,7 @@ HRESULT EnumMetricSections(
 
  `1` = *[GUID dodavatele portu]*
 
-|Zástupný symbol|Popis|
+|Zástupný symbol|Description|
 |-----------------|-----------------|
 |*[GUID modulu]*|Identifikátor GUID ladicího stroje.|
 |*[GUID třídy]*|Identifikátor GUID třídy, která implementuje tento ladicí stroj.|
@@ -313,7 +313,7 @@ HRESULT EnumMetricSections(
 
  *[metrika] = [hodnota metriky]*
 
-|Zástupný symbol|Popis|
+|Zástupný symbol|Description|
 |-----------------|-----------------|
 |*[GUID dodavatele portu]*|Identifikátor GUID dodavatele portu|
 |*[GUID třídy]*|Identifikátor GUID třídy, která implementuje tohoto dodavatele portu|
@@ -341,7 +341,7 @@ HRESULT EnumMetricSections(
 
  *[metrika] = [hodnota metriky]*
 
-|Zástupný symbol|Popis|
+|Zástupný symbol|Description|
 |-----------------|-----------------|
 |*[identifikátor GUID poskytovatele symbolů]*|Identifikátor GUID poskytovatele symbolů|
 |*[GUID třídy]*|Identifikátor GUID třídy, která implementuje tohoto poskytovatele symbolů|
@@ -370,7 +370,7 @@ HRESULT EnumMetricSections(
 
  `1` = *[GUID modulu ladění]*
 
-|Zástupný symbol|Popis|
+|Zástupný symbol|Description|
 |-----------------|-----------------|
 |*[Language GUID]*|Identifikátor GUID jazyka|
 |*[GUID dodavatele]*|Identifikátor GUID dodavatele|
@@ -388,7 +388,7 @@ HRESULT EnumMetricSections(
 
  *[metrika] = [hodnota metriky]*
 
-|Zástupný symbol|Popis|
+|Zástupný symbol|Description|
 |-----------------|-----------------|
 |*[identifikátor GUID rozšíření]*|Identifikátor GUID rozšíření vyhodnocovacího filtru výrazů|
 
@@ -413,7 +413,7 @@ HRESULT EnumMetricSections(
 
  *[metrika] = [hodnota metriky]*
 
-|Zástupný symbol|Popis|
+|Zástupný symbol|Description|
 |-----------------|-----------------|
 |*[GUID modulu ladění]*|Identifikátor GUID ladicího stroje, který podporuje výjimky.|
 |*[typy výjimek]*|Obecný název podklíče identifikující třídu výjimek, které lze zpracovat. Typickými názvy jsou **výjimky jazyka C++**, výjimky **Win32**, **výjimky modulu CLR (Common Language Runtime)** a **Kontrola nativního Run-Time**. Tyto názvy slouží také k identifikaci konkrétní třídy výjimky pro uživatele.|

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, site workflows
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 86302a0b8eef4344a909ae3b8fb2c513c86c4ad6
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: f2b722ccef084286287b9825c43fa9069f64dcc4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913953"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937716"
 ---
 # <a name="walkthrough-create-a-custom-site-workflow-activity"></a>Návod: Vytvoření vlastní aktivity pracovního postupu webu
   Tento návod ukazuje, jak vytvořit vlastní aktivitu pro pracovní postup na úrovni webu pomocí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . (Pracovní postupy na úrovni webu platí pro celou lokalitu, ne jenom pro seznam na webu.) Vlastní aktivita vytvoří seznam oznámení o zálohování a potom do něj zkopíruje obsah seznamu oznámení.
@@ -42,7 +42,7 @@ ms.locfileid: "96913953"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.

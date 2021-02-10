@@ -15,15 +15,15 @@ helpviewer_keywords:
 - actions panes [Office development in Visual Studio], adding controls
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 44fd876dfad99e1a1320a5e5d743ea8e30dfdb98
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: c0f24c7270dc3c174be124506e1e36dafe7581f6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524163"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937378"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>Návod: vložení textu do dokumentu z podokna akcí
   Tento návod ukazuje, jak vytvořit podokno akcí v dokumentu aplikace systém Microsoft Office Word. Podokno akce obsahuje dva ovládací prvky, které shromažďují vstup a pak odesílají text do dokumentu.
@@ -39,7 +39,7 @@ ms.locfileid: "97524163"
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

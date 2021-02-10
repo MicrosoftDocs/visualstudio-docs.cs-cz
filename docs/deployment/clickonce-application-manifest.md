@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 29570cec-4e53-4660-a850-abc4fa150243
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 13b84a256bfc9d13f8c17b92385df2106dc0a47d
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: ccd8389859de3ffce7b04e2da648b2ac2e807a79
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383115"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99936181"
 ---
 # <a name="clickonce-application-manifest"></a>Manifest aplikace ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Manifest aplikace je soubor XML, který popisuje aplikaci, která je nasazena pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .

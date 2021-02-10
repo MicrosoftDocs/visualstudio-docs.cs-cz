@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 13cd263d-25f7-488e-9c1a-cff908caedb6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 812fc4f4e2f8dcf54876e2764f0c091f16348496
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: 5c1b5787eaecd6b3787d77c7ecab70acae689df8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97716000"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938093"
 ---
 # <a name="shipping-visual-studio-extensions"></a>Odesílání rozšíření sady Visual Studio
 Po dokončení vývoje rozšíření ho můžete nainstalovat na jiné počítače, sdílet ho s přáteli a spolupracovníky nebo ho publikovat na Visual Studio Marketplace. V této části vyvysvětlíme všechny věci, které potřebujete k tomu, abyste mohli publikovat a udržovat vaše rozšíření: práce se soubory VSIX, publikováním, lokalizací a aktualizací.

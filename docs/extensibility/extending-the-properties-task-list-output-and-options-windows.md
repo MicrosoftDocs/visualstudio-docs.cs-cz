@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 06990510-5424-44b8-9fd9-6481acec5c76
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 54b78197be71dca9fbabbfded90c4e07660a74db
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 2586618b16afa8f8bfd6b7aa529486adf1d9ce41
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96995795"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938132"
 ---
 # <a name="extend-the-properties-task-list-output-and-options-windows"></a>Rozšíříte okna vlastnosti, Seznam úkolů, výstup a možnosti.
 Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Studio. Tento návod ukazuje, jak integrovat informace o okně nástroje na novou stránku **možností** a nové nastavení na stránce **vlastnosti** a také jak zapisovat do oken **seznam úkolů** a **výstupu** .
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-an-extension-with-a-tool-window"></a>Vytvoření rozšíření s oknem nástrojů

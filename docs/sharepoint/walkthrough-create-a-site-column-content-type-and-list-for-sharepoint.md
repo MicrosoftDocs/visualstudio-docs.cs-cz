@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, content types
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b1670dfa3c7202e8ebbdb28396f161daeffac491
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: d205203797d8bd50c7b3132df86fbff9dbad1771
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914007"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937690"
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>Návod: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint
   Následující postupy ukazují, jak vytvořit vlastní sloupce webu služby SharePoint (nebo *pole*) a také typ obsahu, který používá sloupce lokality. Také ukazuje, jak vytvořit seznam, který používá nový typ obsahu.
@@ -44,7 +44,7 @@ ms.locfileid: "96914007"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice Windows a SharePointu.

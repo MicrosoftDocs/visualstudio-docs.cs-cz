@@ -16,15 +16,15 @@ helpviewer_keywords:
 - simple data binding [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 868a120baa8207d922d3dee55e10c8e903381e19
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 31084703a581999a1f25bfc82db6c36d9e2cbf6c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524102"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937405"
 ---
 # <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>Návod: jednoduché datové vazby v projektech na úrovni dokumentu
   Tento návod ukazuje základy datové vazby v projektu na úrovni dokumentu. Jedno datové pole v databázi SQL Server je svázáno s pojmenovaným rozsahem v systém Microsoft Office Excel. Návod také ukazuje, jak přidat ovládací prvky, které umožňují procházet všechny záznamy v tabulce.
@@ -41,7 +41,7 @@ ms.locfileid: "97524102"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

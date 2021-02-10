@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 1118c604-4b1b-4b21-a04e-45995b676fa8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: b8fa3b83fb9a92be0118f4222e92364767affcda
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+manager: jmartens
+ms.openlocfilehash: e2773165b37600eb214893de91f8fc8c4467c0d4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441075"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937625"
 ---
 # <a name="how-to-create-an-add-in-for-the-web-performance-test-results-viewer"></a>Postupy: vytvoření doplňku pro prohlížeč Výsledky testůho webového výkonu
 
@@ -100,7 +100,7 @@ Na konci tohoto článku budete používat **Správce doplňků** .
 
 **Průvodce doplňkem** automaticky vytvoří dvě kopie souborů *. AddIn* , a to následujícím způsobem:
 
-|**Umístění souboru. AddIn**|**Popis**|
+|**. Umístění souboru AddIn**|**Popis**|
 |-|----------------------------|-|
 |Kořenová složka projektu|Používá se pro nasazení projektu doplňku. Zahrnutí v projektu pro usnadnění úprav a má místní cestu pro nasazení ve stylu XCopy.|
 |Složka doplňků|Používá se pro spuštění doplňku v ladicím prostředí. Vždy odkazovat na výstupní cestu aktuální konfigurace sestavení.|

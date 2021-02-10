@@ -5,27 +5,27 @@ ms.date: 06/29/2017
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: bcdef95935c0522c8b93a972d7f44fbd7632c53b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 42cdc6e964d23b5aafdfe225c04d5d35b151cc08
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89312688"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99936402"
 ---
 # <a name="create-r-projects-in-visual-studio"></a>Vytváření projektů R v aplikaci Visual Studio
 
 Projekt R (soubor *. RXPROJ* ) identifikuje všechny zdrojové a obsahové soubory přidružené k vašemu projektu. Obsahuje také informace o sestavení pro každý soubor, uchovává informace pro integraci se systémy správy zdrojového kódu a pomáhá organizovat aplikace do logických komponent. Informace související s pracovním prostorem, jako je například seznam nainstalovaných balíčků, se ale uchovávají samostatně v samotném pracovním prostoru.
 
-Projekty jsou vždy spravovány v rámci *řešení*sady Visual Studio, které mohou obsahovat libovolný počet projektů, které mohou odkazovat na sebe navzájem. Viz [použití více typů projektů v aplikaci Visual Studio](#use-multiple-project-types-in-visual-studio).
+Projekty jsou vždy spravovány v rámci *řešení* sady Visual Studio, které mohou obsahovat libovolný počet projektů, které mohou odkazovat na sebe navzájem. Viz [použití více typů projektů v aplikaci Visual Studio](#use-multiple-project-types-in-visual-studio).
 
 ## <a name="creating-a-new-r-project"></a>Vytváří se nový projekt R.
 
 1. Otevřete sadu Visual Studio.
 1. Zvolit **soubor > nový > projekt** (**CTRL** + **SHIFT** + **N**)
-1. V části **šablony**R vyberte "projekt r"  >  **R**, zadejte název a umístění projektu a vyberte **OK**:
+1. V části **šablony** R vyberte "projekt r"  >  , zadejte název a umístění projektu a vyberte **OK**:
 
     ![Dialogové okno Nový projekt pro R v aplikaci Visual Studio (RTVS v VS2017)](media/getting-started-01-new-project.png)
 
@@ -33,13 +33,13 @@ Tento příkaz vytvoří projekt s prázdným *skriptem. Soubor R* otevřený v 
 
 ![Obsah projektu R vytvořeného z šablony](media/projects-template-results.png)
 
-Rozhraní *. Rhistory* zaznamenává jakékoli příkazy, které zadáte do okna [interaktivní R](interactive-repl-for-r-in-visual-studio.md) . Můžete otevřít vyhrazené okno historie pomocí příkazu **R**  >  **Historie systému Windows**nástroje  >  **History** . Toto okno má tlačítko panelu nástrojů a položky kontextové nabídky k vymazání obsahu historie.
+Rozhraní *. Rhistory* zaznamenává jakékoli příkazy, které zadáte do okna [interaktivní R](interactive-repl-for-r-in-visual-studio.md) . Můžete otevřít vyhrazené okno historie pomocí příkazu **R**  >  **Historie systému Windows** nástroje  >   . Toto okno má tlačítko panelu nástrojů a položky kontextové nabídky k vymazání obsahu historie.
 
 Soubor *rproject. rproj* uchovává určitá nastavení projektu specifická pro R, která nejsou jinak spravovaná pomocí sady Visual Studio:
 
 | Vlastnost | Výchozí | Popis |
 | --- | --- | --- |
-| Verze | 1,0 | Verze Nástroje R pro Visual Studio použitá k vytvoření projektu. |
+| Verze | 1.0 | Verze Nástroje R pro Visual Studio použitá k vytvoření projektu. |
 | RestoreWorkspace | Výchozí | Automaticky načte předchozí proměnné pracovního prostoru ze `.RData` souboru v adresáři projektu. |
 | SaveWorkspace | Výchozí | Uloží aktuální proměnné pracovního prostoru do `.RData` souboru v adresáři projektu při zavření projektu. |
 | AlwaysSaveHistory | Výchozí | Při zavírání projektu Uložit aktuální interaktivní historii okna do `.RHistory` souboru v adresáři projektu. |
@@ -56,7 +56,7 @@ Máte-li existující složku *. Soubory R* , které chcete spravovat v projektu
 
 1. V aplikaci Visual Studio vytvořte nový projekt jako v předchozí části.
 1. Zkopírujte soubory do složky projektu.
-1. V aplikaci Visual Studio Průzkumník řešení klikněte pravým tlačítkem myši na projekt, vyberte možnost **Přidat**  >  **existující položku**a vyhledejte soubory, které chcete přidat. Tyto soubory se zobrazí ve stromové struktuře projektu po výběru **OK**.
+1. V aplikaci Visual Studio Průzkumník řešení klikněte pravým tlačítkem myši na projekt, vyberte možnost **Přidat**  >  **existující položku** a vyhledejte soubory, které chcete přidat. Tyto soubory se zobrazí ve stromové struktuře projektu po výběru **OK**.
 1. Chcete-li uspořádat kód do podsložek, klikněte pravým tlačítkem myši na projekt, vyberte položku **Přidat**  >  **novou složku** a potom zkopírujte soubory do této složky a přidejte tyto existující položky v kroku 3.
 
 ## <a name="project-properties"></a>Vlastnosti projektu
@@ -65,7 +65,7 @@ Chcete-li otevřít stránky vlastností projektu, klikněte pravým tlačítkem
 
 | Karta | Vlastnost | Popis |
 | --- | --- | --- |
-| Spustit | Spouštěcí soubor | Název souboru, který se spouští s příkazem **zdrojového spouštěcího souboru** , **F5**, ladění **Debug**po  >  **spuštění**ladění nebo spuštění **ladění**  >  **bez ladění**. Kliknutím pravým tlačítkem myši na soubor v projektu a výběrem možnosti **nastavit jako spouštěcí skript R** se nastaví také jako spouštěcí soubor. |
+| Spustit | Spouštěcí soubor | Název souboru, který se spouští s příkazem **zdrojového spouštěcího souboru** , **F5**, ladění po  >  **spuštění** ladění nebo spuštění **ladění**  >  **bez ladění**. Kliknutím pravým tlačítkem myši na soubor v projektu a výběrem možnosti **nastavit jako spouštěcí skript R** se nastaví také jako spouštěcí soubor. |
 | | Resetovat Interaktivní R při spuštění | Vymaže všechny proměnné z pracovního prostoru interaktivního okna při spuštění projektu. Tím zajistíte, že nebudete mít k dispozici žádný reziduální obsah pracovního prostoru z zkontrolují. |
 | | Cesta ke vzdálenému projektu | Cesta ke vzdálenému pracovnímu prostoru. |
 | | Přenos souborů při spuštění | Označuje, zda jsou soubory projektu, které podléhají filtru v **souborech k přenosu**, zkopírovány do vzdáleného pracovního prostoru s každým spuštěním. |
@@ -86,12 +86,12 @@ Projekty sady Visual Studio podporují několik obecných příkazů prostředni
 
 ## <a name="r-specific-item-templates"></a>Šablony položek specifické pro R
 
-RTVS obsahuje několik šablon pro konkrétní typy souborů. Přistupujete k šablonám kliknutím pravým tlačítkem myši na projekt R a vybráním možnosti **Přidat**  >  **novou položku**, výběrem možnosti **projekt**  >  **Přidat novou položku**nebo pomocí **souboru**  >  **Nový**  >  **soubor** a výběrem karty **R** . Nejlepším způsobem, jak prozkoumat šablonu, je vytvořit nový projekt a vložit soubory každého typu.
+RTVS obsahuje několik šablon pro konkrétní typy souborů. Přistupujete k šablonám kliknutím pravým tlačítkem myši na projekt R a vybráním možnosti **Přidat**  >  **novou položku**, výběrem možnosti **projekt**  >  **Přidat novou položku** nebo pomocí **souboru**  >  **Nový**  >  **soubor** a výběrem karty **R** . Nejlepším způsobem, jak prozkoumat šablonu, je vytvořit nový projekt a vložit soubory každého typu.
 
 > [!Note]
 > Příkazy **Přidat**  >  **novou položku** zobrazí také obecné typy souborů, které nejsou uvedeny v tabulce; se **souborem**  >  **Nový**  >  **soubor** jsou tyto typy obsaženy na kartě **Obecné** .
 
-| Typ souboru | Popis |
+| Typ souboru | Description |
 | --- | --- |
 | Skript jazyka R | Textový soubor, který obsahuje stejné příkazy, které lze zadat na příkazovém řádku R. |
 | R Markdown | Soubor obsahující dokument [R Markdown](rmarkdown-with-r-in-visual-studio.md) . |

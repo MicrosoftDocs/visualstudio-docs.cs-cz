@@ -10,16 +10,16 @@ f1_keywords:
 ms.assetid: 2c4fb569-929e-4f1d-8c50-b590ee371351
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e0ac8d8558ee73903898e920ed8174c73ea66c4d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33acb2f21228a86b481e9d76ee26baa9bf3a77d6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85548171"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937638"
 ---
 # <a name="da0004-high-processor-usage"></a>DA0004: Vysoké využití procesoru
 

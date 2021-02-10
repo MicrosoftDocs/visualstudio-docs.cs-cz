@@ -26,15 +26,15 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], Windows Forms
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0309ea22444062b117d3684e32b56960585aa184
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: b2d221cdc3e66205ef9bf3d816b6f226be69ff51
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527050"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937170"
 ---
 # <a name="windows-forms-controls-on-office-documents-overview"></a>Přehled model Windows Formsch ovládacích prvků v dokumentech Office
   Ovládací prvky model Windows Forms jsou objekty, se kterými můžou uživatelé interaktivně zadávat data nebo pracovat s nimi. V projektech na úrovni dokumentu pro systém Microsoft Office Excel a systém Microsoft Office Word můžete přidat model Windows Forms ovládací prvky do dokumentu nebo sešitu v projektu v době návrhu nebo můžete programově přidat tyto ovládací prvky v době běhu. Tyto ovládací prvky můžete programově přidat do libovolného otevřeného dokumentu nebo listu v době běhu v doplňku VSTO pro Excel nebo Word.

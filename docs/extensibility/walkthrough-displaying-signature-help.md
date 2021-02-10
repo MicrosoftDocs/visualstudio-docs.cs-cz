@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4a6a884b-5730-4b54-9264-99684f5b523c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: be324ab48d42e859678ccf01d8c75faae6cea381
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 8933822ee5bb63b341ff51296ba2884fef2aeb75
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876243"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935908"
 ---
 # <a name="walkthrough-display-signature-help"></a>Návod: zobrazení podpisu – Help
 Nápověda k podpisu (označovaná také jako *informace o parametrech*) zobrazuje podpis metody v popisu tlačítka, když uživatel zadá spouštěcí znak seznamu parametrů (obvykle levou závorku). Jako parametr a oddělovač parametrů (obvykle čárka) se zadávají popisy pro zobrazení dalšího parametru tučným písmem. Nápovědu k podpisu můžete definovat následujícími způsoby: v kontextu jazykové služby definujte vlastní příponu názvu souboru a typ obsahu a nápovědu pro zobrazení podpisu pro daný typ, nebo zobrazte nápovědu k podpisu pro existující typ obsahu (například "text"). Tento návod ukazuje, jak zobrazit nápovědu k podpisu pro typ obsahu "text".
@@ -26,7 +26,7 @@ Nápověda k podpisu (označovaná také jako *informace o parametrech*) zobrazu
 
  Tento návod ukazuje, jak nastavit podpisovou nápovědu pro pevně zakódovanou sadu identifikátorů. V úplných implementacích je jazyk zodpovědný za poskytování obsahu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="creating-a-mef-project"></a>Vytvoření projektu MEF

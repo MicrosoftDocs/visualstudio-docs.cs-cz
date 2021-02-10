@@ -5,17 +5,17 @@ description: Použití úloh sady Visual Studio a ID komponent ke vzdálenému s
 keywords: ''
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.date: 11/10/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: e30ca3abfd2ebe2d937963547248d318a43f59e2
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 0e550d6577a141cbe33adcfdd6c526fc60d8abc3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437267"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937970"
 ---
 ## <a name="test-agent"></a>Test Agent
 
@@ -25,7 +25,7 @@ ms.locfileid: "94437267"
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Verze | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. TestTools. TestAgent | Základní funkce testovacího agenta | 16.0.28315.86 | Vyžadováno
 
@@ -33,6 +33,6 @@ Microsoft. VisualStudio. Component. TestTools. TestAgent | Základní funkce tes
 
 Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé komponenty.
 
-ID součásti | Name (Název) | Verze
+ID součásti | Název | Verze
 --- | --- | ---
-neuvedeno | neuvedeno | neuvedeno
+Není k dispozici | Není k dispozici | Není k dispozici

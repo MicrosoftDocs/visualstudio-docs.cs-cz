@@ -12,15 +12,15 @@ helpviewer_keywords:
 - site definitions [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0411f027b105622d806e123bd80f38c4b05281ca
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: def1ae862a7b9ba4def62cb590260c5a18758929
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913851"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937703"
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>Návod: Vytvoření základního projektu definice webu
   V tomto návodu se dozvíte, jak vytvořit základní definici webu obsahující vizuální webovou část s některými ovládacími prvky. Z důvodu srozumitelnosti má vizuální webová část, kterou vytvoříte, pouze několik ovládacích prvků. Můžete ale vytvořit pokročilejší definice webů SharePointu, které budou zahrnovat víc funkcí.
@@ -37,7 +37,7 @@ ms.locfileid: "96913851"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice Microsoft Windows a SharePointu. Další informace najdete v tématu požadavky pro vývoj řešení služby SharePoint.

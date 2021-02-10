@@ -13,15 +13,15 @@ helpviewer_keywords:
 - content controls [Office development in Visual Studio], adding to documents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2dd7e75048a84a4e235390b99d17d48dfad039ec
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 4bd636070a8375b6761cb2d3ab62d08be4302db4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524988"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937495"
 ---
 # <a name="walkthrough-create-a-template-by-using-content-controls"></a>Návod: Vytvoření šablony s použitím ovládacích prvků obsahu
   Tento návod ukazuje, jak vytvořit přizpůsobení na úrovni dokumentu, které používá ovládací prvky obsahu k vytvoření strukturovaného a opakovaně použitelného obsahu v šabloně systém Microsoft Office Wordu.
@@ -46,7 +46,7 @@ ms.locfileid: "97524988"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]

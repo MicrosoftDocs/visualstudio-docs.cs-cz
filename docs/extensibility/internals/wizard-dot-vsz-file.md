@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 72e1d0f3-eef1-455e-b803-96827f030f50
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5fe32028f271d02dd518509bb86906197e6acb4e
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: 5fa9b9e06ccb20e6a2859770c0637fc85422fd0a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97487735"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935856"
 ---
 # <a name="wizard-vsz-file"></a>Soubor průvodce (.Vsz)
 
@@ -38,7 +38,7 @@ Param="WIZARDUI = FALSE"
 
 Níže jsou uvedené části souboru. vsz.
 
-|Část|Popis|
+|Část|Description|
 |----------|-----------------|
 |VSWizard|První parametr v souboru je číslo verze formátu souboru šablony. Toto číslo verze musí být 6,0, 7,0, 7,1 nebo 8,0. Nelze spustit jiné počty a způsobit chybu neplatného formátu.|
 |Tip|Toto pole obsahuje identifikátor ProgID OLE průvodce nebo případně řetězcovou reprezentaci identifikátoru CLSID průvodce, který je vytvářen pomocí rozhraní IDE.|

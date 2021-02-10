@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Domain-Specific Language, events
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e44def032854e46b00638cff77c8bea91eb0f09
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 3a6066a40ea09698bec6caba38d5d55aa8b269e8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360609"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937937"
 ---
 # <a name="respond-to-and-propagate-changes"></a>Reagování na změny a šíření změn
 
 Při vytvoření, odstranění nebo aktualizaci prvku můžete napsat kód, který šíří změnu do jiných částí modelu, nebo do externích prostředků, jako jsou soubory, databáze nebo jiné komponenty.
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
 
 Jako vodítko zvažte tyto techniky v uvedeném pořadí:
 
@@ -54,7 +54,7 @@ Pomocí událostí úložiště můžete synchronizovat model s objekty mimo úl
 
 - **Předávání argumentů události pravidlům a událostem** Události a pravidla jsou předány `EventArgs` parametr, který obsahuje informace o tom, jak se model změnil.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Zachycení kliknutí na obrazec nebo dekorátor](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)
 - [Psaní kódu pro přizpůsobení Domain-Specificho jazyka](../modeling/writing-code-to-customise-a-domain-specific-language.md)

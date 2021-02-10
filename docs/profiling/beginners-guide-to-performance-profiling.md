@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: da2fbf8a-2d41-4654-a509-dd238532d25a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: caac02510d2fce95fa67340d2061341ed77ac13e
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: a18302067749e3b4fc70b08519056dc391d3dca4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075428"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99936883"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>Měření výkonu aplikace analýzou využití CPU
 
@@ -33,7 +33,7 @@ Po pozastavení ladicího programu Nástroj **využití CPU** v okně diagnostic
 > [!Important]
 > Diagnostické nástroje integrované v ladicím programu jsou podporované pro vývoj pro .NET v aplikaci Visual Studio, včetně ASP.NET, ASP.NET Core a pro vývoj nativních/C++. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
 
-V tomto kurzu provedete následující:
+V tomto kurzu:
 
 > [!div class="checklist"]
 > * Shromažďovat data o využití procesoru
@@ -51,7 +51,7 @@ Pokud **využití procesoru** vám neposkytuje data, která potřebujete, dalš�
 
 3. Okno **Diagnostické nástroje** se zobrazí automaticky (pokud jste ho nevypnuli). Chcete-li okno znovu zobrazit, klikněte na tlačítko **ladit**  >  **Windows**  >  **show diagnostické nástroje**.
 
-4. Na panelu nástrojů v nastavení **Vybrat nástroje** můžete vybrat, jestli chcete zobrazit [Využití procesoru](../profiling/Memory-Usage.md), **Využití paměti** nebo obojí. Pokud používáte Visual Studio Enterprise, můžete taky povolit nebo zakázat IntelliTrace v **nabídce**  >  **Možnosti**nástrojů  >  **IntelliTrace**.
+4. Na panelu nástrojů v nastavení **Vybrat nástroje** můžete vybrat, jestli chcete zobrazit [Využití procesoru](../profiling/Memory-Usage.md), **Využití paměti** nebo obojí. Pokud používáte Visual Studio Enterprise, můžete taky povolit nebo zakázat IntelliTrace v **nabídce**  >  **Možnosti** nástrojů  >  **IntelliTrace**.
 
      ![Zobrazit diagnostické nástroje](../profiling/media/diag-tools-select-tool.png "DiagToolsSelectTool")
 
@@ -111,7 +111,7 @@ Analýzu dat doporučujeme začít tím, že zkontrolujete seznam funkcí na kar
 
     ![Zobrazení volajícího volaných nástrojů pro diagnostiku](../profiling/media/diag-tools-caller-callee.png "DiagToolsCallerCallee")
 
-    V tomto zobrazení se vybraná funkce zobrazí v záhlaví i v poli **Aktuální funkce** (v tomto příkladu je to GetNumber). Funkce, která se nazývá aktuální funkce, je zobrazena vlevo pod položkou **volání funkce**a všechny funkce, které jsou volány aktuální funkcí, jsou zobrazeny v poli **nazvané funkce** na pravé straně. (Pokud chcete aktuální funkci změnit, vyberte libovolné pole.)
+    V tomto zobrazení se vybraná funkce zobrazí v záhlaví i v poli **Aktuální funkce** (v tomto příkladu je to GetNumber). Funkce, která se nazývá aktuální funkce, je zobrazena vlevo pod položkou **volání funkce** a všechny funkce, které jsou volány aktuální funkcí, jsou zobrazeny v poli **nazvané funkce** na pravé straně. (Pokud chcete aktuální funkci změnit, vyberte libovolné pole.)
 
     V tomto zobrazení vidíte celkový čas (ms) a procento z celkové doby spuštění aplikace, kterou funkce potřebovala k dokončení.
     **Tělo funkce** také zobrazuje celkovou dobu (a procento času) spotřebovanou tělem funkce, ale bez doby spotřebované volajícími a volanými funkcemi. (V tomto příkladu bylo vyčerpáno 2367 z 2389 MS v těle funkce a zbylé 22 MS bylo vyčerpáno v externím kódu, který tato funkce volá).
@@ -130,7 +130,7 @@ Analýzu dat doporučujeme začít tím, že zkontrolujete seznam funkcí na kar
     ![Strom volání diagnostických nástrojů](../profiling/media/diag-tools-call-tree.png "DiagToolsCallTree")
     ::: moniker-end
 
-    |Image|Popis|
+    |Image|Description|
     |-|-|
     |![Krok 1](../profiling/media/ProcGuid_1.png "ProcGuid_1")|Nejvyšší uzel ve stromech volání Využití procesoru je fiktivní.|
     |![Krok 2](../profiling/media/ProcGuid_2.png "ProcGuid_2")|Ve většině aplikací, ve kterých zakážete možnost [Zobrazit externí kód](#view-external-code), je v druhé úrovni uzel **[Externí kód]**, který obsahuje systémový kód a kód architektury, který spouští a zastavuje aplikaci, vykresluje uživatelské rozhraní, řídí plánování podprocesů a na nejnižší úrovni zajišťuje pro aplikaci další služby.|
