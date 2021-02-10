@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cb071e93-f297-459c-a6fa-8ae0dabc42a4
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 695bcabc195b97551b2943a557d591bdfb85c991
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 34eb02621c42282fdd5ec1656edcb175351a1f5e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91879018"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944221"
 ---
 # <a name="find-topics-by-using-the-help-viewer-index"></a>Hledání témat pomocí indexu aplikace Help Viewer
 

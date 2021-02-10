@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 151932c1-f08a-4f78-a8d0-bd2f32211a9c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f07c3b62d1412564fd74c420b31b2a9fed41d1fa
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 2a086f2ae678541ce28e9ede874c4198e349f438
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903748"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942916"
 ---
 # <a name="sortorder-element-visual-studio-templates"></a>SortOrder – element (šablony sady Visual Studio)
 Určuje hodnotu, která se používá k uspořádání šablony, mezi ostatními šablonami ve stejné kategorii, jak se zobrazuje v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .
@@ -29,7 +29,7 @@ Určuje hodnotu, která se používá k uspořádání šablony, mezi ostatními
  \<VSTemplate> \<TemplateData>
  \<SortOrder>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <SortOrder> ... </SortOrder>

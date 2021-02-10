@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 6a7d93c2-31ea-4bae-8b29-6988a567ddf2
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d642d1168cbd2a8bd7abadbcdbd7c1e2851b00e
-ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
+ms.openlocfilehash: 4f9a7766d4462ffbd74073448f49457215eb79a7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97616127"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943280"
 ---
 # <a name="language-server-protocol"></a>Protokol jazyka serveru
 
@@ -110,7 +110,7 @@ Když uživatel pracuje s různými jazyky, VS Code obvykle spouští jazykový 
 
 ![Java a Sass](media/lsp-java-and-sass.png)
 
-### <a name="capabilities"></a>Schopnosti
+### <a name="capabilities"></a>Možnosti
 
 Ne všechny jazykové servery můžou podporovat všechny funkce definované protokolem. Proto klient a server oznámí svou podporovanou sadu funkcí prostřednictvím možností možnosti. Například server oznamuje, že může zpracovat požadavek "textDocument/definition", ale nemusí zpracovávat požadavek ' pracovní prostor/symbol '. Obdobně můžou klienti oznámit, že budou moct před uložením dokumentu zadat oznámení o tom, že se mají ukládat. aby mohl server vypočítat textové úpravy pro automatické formátování upravovaného dokumentu.
 

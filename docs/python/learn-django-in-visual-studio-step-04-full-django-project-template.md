@@ -6,17 +6,17 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c778d830b20797962306700a5af938eb3a3bb142
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c0a0f0f4e009d689a69e840b31281e65bc5a0e2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62961676"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942552"
 ---
 # <a name="step-4-use-the-full-django-web-project-template"></a>Krok 4: použití úplné šablony webového projektu v Django
 
@@ -39,7 +39,7 @@ V tomto kroku teď:
 
 1. V dialogovém okně Nový projekt vyhledejte a vyberte šablonu **webového projektu Django** , zavolejte projekt "DjangoWeb" a vyberte **OK**.
 
-1. Vzhledem k tomu, že šablona znovu obsahuje soubor *requirements.txt* , Visual Studio zobrazí výzvu k instalaci těchto závislostí. Zvolte možnost, **nainstalujte ji do virtuálního prostředí**a v dialogovém okně **Přidat virtuální prostředí** vyberte **vytvořit** a přijměte výchozí hodnoty.
+1. Vzhledem k tomu, že šablona znovu obsahuje soubor *requirements.txt* , Visual Studio zobrazí výzvu k instalaci těchto závislostí. Zvolte možnost, **nainstalujte ji do virtuálního prostředí** a v dialogovém okně **Přidat virtuální prostředí** vyberte **vytvořit** a přijměte výchozí hodnoty.
 
 1. Jakmile Visual Studio dokončí nastavení virtuálního prostředí, postupujte podle pokynů v zobrazených *readme.html* a vytvořte uživatele Django superuživatele (tj. správce). Stačí kliknout pravým tlačítkem myši na projekt sady Visual Studio a vybrat příkaz **Python**  >  **Django Create-User** a pak postupovat podle pokynů. Při provádění funkcí ověřování aplikace nezapomeňte zaznamenat své uživatelské jméno a heslo při použití.
 
@@ -73,7 +73,7 @@ Na nejširší úrovni vytvoří šablona "webový projekt Django" následujíc�
   - *requirements.txt* obsahující závislost na Django 1. x.
   - *readme.html*, soubor, který se zobrazí v aplikaci Visual Studio po vytvoření projektu. Jak je uvedeno v předchozí části, postupujte podle pokynů uvedených tady a vytvořte pro aplikaci účet super uživatel (správce).
 - Složka *aplikace* obsahuje všechny soubory aplikací, včetně zobrazení, modelů, testů, formulářů, šablon a statických souborů (viz krok 4-2). Obvykle tuto složku přejmenujete, aby používala více různých názvů aplikací.
-- Složka *DjangoWeb* (projekt Django) obsahuje typické soubory projektu Django: * \_ \_ init \_ \_ . py*, *Settings.py*, *URLs.py*a *WSGI.py*. Když použijete šablonu projektu, *Settings.py* je už pro aplikaci a databázový soubor nakonfigurovaný a v *URLs.py* je už nakonfigurované směrování na všechny stránky aplikací, včetně přihlašovacího formuláře.
+- Složka *DjangoWeb* (projekt Django) obsahuje typické soubory projektu Django: *\_ \_ init \_ \_ . py*, *Settings.py*, *URLs.py* a *WSGI.py*. Když použijete šablonu projektu, *Settings.py* je už pro aplikaci a databázový soubor nakonfigurovaný a v *URLs.py* je už nakonfigurované směrování na všechny stránky aplikací, včetně přihlašovacího formuláře.
 
 ### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>Otázka: je možné sdílet virtuální prostředí mezi projekty sady Visual Studio?
 
@@ -82,7 +82,7 @@ Odpověď: Ano, ale udělejte to s vědomím, že různé projekty nejspíš v p
 Chcete-li však použít stávající virtuální prostředí, postupujte následovně:
 
 1. Až se zobrazí výzva k instalaci závislostí v aplikaci Visual Studio, vyberte možnost **instalovat** vlastní.
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte **Přidat existující virtuální prostředí**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte **Přidat existující virtuální prostředí**.
 1. Přejděte na složku obsahující virtuální prostředí a vyberte ji a pak vyberte **OK**.
 
 ## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>Krok 4-2: porozumění zobrazením a šablonám stránek vytvořeným šablonou projektu
@@ -144,7 +144,7 @@ def about(request):
 </html>
 ```
 
-Jednotlivé šablony stránky, *about.html*, *contact.html*a *index.html*, každý rozšiřuje základní šablonu *layout.html*. *about.html* je nejjednodušší a ukazuje `{% extends %}` `{% block content %}` značky a:
+Jednotlivé šablony stránky, *about.html*, *contact.html* a *index.html*, každý rozšiřuje základní šablonu *layout.html*. *about.html* je nejjednodušší a ukazuje `{% extends %}` `{% block content %}` značky a:
 
 ```html
 {% extends "app/layout.html" %}
@@ -161,7 +161,7 @@ Jednotlivé šablony stránky, *about.html*, *contact.html*a *index.html*, každ
 
 *index.html* a *contact.html* používají stejnou strukturu a poskytují lengthier obsah v bloku Content.
 
-Ve složce *Templates/App* je také Čtvrtá stránka *login.html*spolu s *loginpartial.html* , která se přenesla do *layout.html* pomocí `{% include %}` . Tyto soubory šablon jsou popsány v kroku 5 při ověřování.
+Ve složce *Templates/App* je také Čtvrtá stránka *login.html* spolu s *loginpartial.html* , která se přenesla do *layout.html* pomocí `{% include %}` . Tyto soubory šablon jsou popsány v kroku 5 při ověřování.
 
 ### <a name="question-can--block--and--endblock--be-indented-in-the-django-page-template"></a>Otázka: může být {% Block%} a {% endblock%} odsazený v šabloně stránky Django?
 

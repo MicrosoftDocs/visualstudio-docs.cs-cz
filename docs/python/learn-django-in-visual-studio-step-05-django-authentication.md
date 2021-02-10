@@ -6,23 +6,23 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: bdc76b0a7b9d3f74da77b317faf31dae83706f04
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ea708c1721d85468d99a0ccc327f378042579f85
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62957846"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942487"
 ---
 # <a name="step-5-authenticate-users-in-django"></a>Krok 5: ověření uživatelů v Django
 
 **Předchozí krok: [použití úplné šablony webového projektu Django](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
 
-Vzhledem k tomu, že ověřování je běžnou potřebou pro webové aplikace, zahrnuje šablona "webový projekt Django" tok základního ověřování. (Šablona "cyklické Djangos web Project" popsaná v kroku 6 tohoto kurzu obsahuje také stejný tok.) Při použití některé z šablon projektů Django zahrnuje Visual Studio všechny nezbytné moduly pro ověřování v *Settings.py*projektu Django.
+Vzhledem k tomu, že ověřování je běžnou potřebou pro webové aplikace, zahrnuje šablona "webový projekt Django" tok základního ověřování. (Šablona "cyklické Djangos web Project" popsaná v kroku 6 tohoto kurzu obsahuje také stejný tok.) Při použití některé z šablon projektů Django zahrnuje Visual Studio všechny nezbytné moduly pro ověřování v *Settings.py* projektu Django.
 
 V tomto kroku se naučíte:
 
@@ -154,7 +154,7 @@ Následující kroky uplatňují tok ověřování a popisují části projektu,
 
 1. Uživatel super nebo správce, konkrétně má oprávnění pro přístup k vestavěným Djangom rozhraním správce pomocí relativních adres URL "/admin/" a "/admin/doc/". Pokud chcete tato rozhraní povolit, udělejte toto:
 
-    1. Nainstalujte do svého prostředí balíček python Docutils. Skvělým způsobem, jak to provést, je přidat do souboru *requirements.txt* "Docutils", pak v **Průzkumník řešení**rozbalíte projekt, rozbalíte uzel **prostředí Pythonu** a potom kliknete pravým tlačítkem na prostředí, ve kterém jste vybrali **instalovat z requirements.txt**.
+    1. Nainstalujte do svého prostředí balíček python Docutils. Skvělým způsobem, jak to provést, je přidat do souboru *requirements.txt* "Docutils", pak v **Průzkumník řešení** rozbalíte projekt, rozbalíte uzel **prostředí Pythonu** a potom kliknete pravým tlačítkem na prostředí, ve kterém jste vybrali **instalovat z requirements.txt**.
 
     1. Otevřete *URLs.py* projektu Django a odeberte výchozí komentáře z následujících položek:
 

@@ -5,16 +5,16 @@ ms.custom: SEO-VS-2020
 ms.date: 07/24/2019
 ms.topic: conceptual
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 82cccbc47d26dd9ef74ee02931d6efb4bbfa0054
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 56bfe2b00efc4af71ca562672ad01423778edecd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329156"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943728"
 ---
 # <a name="walkthrough-test-driven-development-using-test-explorer"></a>Návod: Vývoj řízený testovacím prostředím pomocí Průzkumníka testů
 
@@ -62,7 +62,7 @@ Tento návod ukazuje, jak vyvíjet testovaný způsob v jazyce C# pomocí rozhra
 
 6. Spusťte test jednotky.
 
-   1. Chcete-li otevřít **Průzkumníka testů**, v nabídce **test** vyberte **Windows** možnost  >  **Průzkumník testů aplikace** Windows.
+   1. Chcete-li otevřít **Průzkumníka testů**, v nabídce **test** vyberte možnost  >  **Průzkumník testů aplikace** Windows.
 
    2. V **Průzkumníku testů** klikněte na tlačítko **Spustit vše** a spusťte test.
 

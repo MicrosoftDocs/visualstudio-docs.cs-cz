@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint commands [SharePoint development in Visual Studio], executing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2746704e30a61b0971db50a5083855b4a93560d4
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: b5a9ea96820aafe32ca119d7e6d08057b91206fd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903532"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943819"
 ---
 # <a name="how-to-execute-a-sharepoint-command"></a>Postupy: provedení příkazu SharePoint
   Pokud chcete použít objektový model serveru v rozšíření nástrojů služby SharePoint, je nutné vytvořit vlastní *příkaz SharePointu* pro volání rozhraní API. Po definování příkazu a jeho nasazení pomocí rozšíření nástrojů služby SharePoint může rozšíření spustit příkaz pro volání do objektového modelu serveru SharePoint. Chcete-li spustit příkaz, použijte jednu z metod ExecuteCommand <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> objektu.

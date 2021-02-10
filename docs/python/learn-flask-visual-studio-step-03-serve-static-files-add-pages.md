@@ -6,17 +6,17 @@ ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 69fd704976ee941cb053d75040a3d3ec7871a380
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d474236aca50a74b96689001a56e7d0701caae30
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238739"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942383"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance-with-flask-app"></a>Krok 3: obsluha statických souborů, přidávání stránek a použití dědičnosti šablon s aplikací v baňce
 
@@ -56,7 +56,7 @@ V obou případech můžete soubory uspořádat *staticky* , ale chcete je.
 
 ### <a name="use-a-static-file-in-a-template"></a>Použití statického souboru v šabloně
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku **HelloFlask** v projektu sady Visual Studio, vyberte **Přidat**  >  **novou složku**a pojmenujte složku `static` .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na složku **HelloFlask** v projektu sady Visual Studio, vyberte **Přidat**  >  **novou složku** a pojmenujte složku `static` .
 
 1. Klikněte pravým tlačítkem na **statickou** složku a vyberte **Přidat**  >  **novou položku**. V dialogovém okně, které se zobrazí, vyberte šablonu šablony **stylů** , pojmenujte soubor `site.css` a vyberte **OK**. Soubor **Web. CSS** se zobrazí v projektu a otevře se v editoru. Vaše struktura složky by měla vypadat podobně jako na následujícím obrázku:
 
@@ -91,7 +91,7 @@ V obou případech můžete soubory uspořádat *staticky* , ale chcete je.
 
 Baňka poskytuje funkci nazvanou `serve_static_file` , která může být volána z kódu pro odkazování na libovolný soubor v rámci *statické* složky projektu. Následující proces vytvoří jednoduchý koncový bod rozhraní API, který vrací statický datový soubor.
 
-1. Pokud jste to ještě neudělali, vytvořte *statickou* složku: v **Průzkumník řešení**klikněte pravým tlačítkem myši na složku **HelloFlask** v projektu sady Visual Studio, vyberte **Přidat**  >  **novou složku**a pojmenujte složku `static` .
+1. Pokud jste to ještě neudělali, vytvořte *statickou* složku: v **Průzkumník řešení** klikněte pravým tlačítkem myši na složku **HelloFlask** v projektu sady Visual Studio, vyberte **Přidat**  >  **novou složku** a pojmenujte složku `static` .
 
 1. Ve složce *static* vytvořte statický datový soubor JSON s názvem *data.js* s následujícím obsahem (což jsou nesmyslově vzorová data):
 
@@ -103,7 +103,7 @@ Baňka poskytuje funkci nazvanou `serve_static_file` , která může být volán
     }
     ```
 
-1. V *views.py*Přidejte funkci s/API/data trasy, která vrací statický datový soubor pomocí `send_static_file` metody:
+1. V *views.py* Přidejte funkci s/API/data trasy, která vrací statický datový soubor pomocí `send_static_file` metody:
 
     ```python
     @app.route('/api/data')
@@ -115,7 +115,7 @@ Baňka poskytuje funkci nazvanou `serve_static_file` , která může být volán
 
 ### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>Otázka: existují nějaké konvence pro uspořádávání statických souborů?
 
-Odpověď: v případě potřeby můžete do *statické* složky přidat další soubory CSS, JavaScript a HTML. Typický způsob, jak uspořádat statické soubory, je vytvořit podsložky s názvem *písma*, *skripty*a *obsah* (pro šablony stylů a jiné soubory).
+Odpověď: v případě potřeby můžete do *statické* složky přidat další soubory CSS, JavaScript a HTML. Typický způsob, jak uspořádat statické soubory, je vytvořit podsložky s názvem *písma*, *skripty* a *obsah* (pro šablony stylů a jiné soubory).
 
 ### <a name="question-how-do-i-handle-url-variables-and-query-parameters-in-an-api"></a>Otázka: Návody zpracovat proměnné adresy URL a parametry dotazu v rozhraní API?
 
@@ -131,7 +131,7 @@ Přidání další stránky do aplikace znamená následující:
 
 Následující postup přidá stránku "o" do projektu "HelloFlask" a odkazy na tuto stránku z domovské stránky:
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku **šablony** , vyberte možnost **Přidat**  >  **novou položku**, vyberte šablonu položky **stránky HTML** , zadejte název souboru `about.html` a vyberte možnost **OK**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na složku **šablony** , vyberte možnost **Přidat**  >  **novou položku**, vyberte šablonu položky **stránky HTML** , zadejte název souboru `about.html` a vyberte možnost **OK**.
 
     > [!Tip]
     > Pokud se příkaz **Nová položka** v nabídce **Přidat** nezobrazí, ujistěte se, že jste aplikaci zastavili, aby aplikace Visual Studio ukončila režim ladění.
@@ -192,7 +192,7 @@ Základní šablona vymezují *bloky* pomocí `{% block <block_name> %}` značek
 
 Následující kroky demonstrují dědičnost:
 
-1. Ve složce *šablony* aplikace vytvořte nový soubor HTML (pomocí místní nabídky **Přidat**  >  **novou položku** nebo **Přidat**  >  **stránku HTML**) s názvem *layout.html*a nahraďte jeho obsah následujícím kódem. Vidíte, že tato šablona obsahuje blok s názvem "content" (obsah), který obsahuje všechny odkazující stránky, které musí nahradit:
+1. Ve složce *šablony* aplikace vytvořte nový soubor HTML (pomocí místní nabídky **Přidat**  >  **novou položku** nebo **Přidat**  >  **stránku HTML**) s názvem *layout.html* a nahraďte jeho obsah následujícím kódem. Vidíte, že tato šablona obsahuje blok s názvem "content" (obsah), který obsahuje všechny odkazující stránky, které musí nahradit:
 
     ```html
     <!DOCTYPE html>

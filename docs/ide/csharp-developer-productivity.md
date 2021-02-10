@@ -3,19 +3,19 @@ title: Zvýšení produktivity pro vývoj pro .NET
 description: Přehled navigace, analýza kódu, testování částí a další funkce, které vám pomůžou psát lepší kód .NET rychleji.
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.date: 11/21/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 23b50221845cf2b02b963c98f912a218a60630c6
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 036c59e54ba2e2068cf1bfa7eb05b67059cdf855
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658409"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942942"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>Průvodce produktivitou sady Visual Studio pro vývojáře v jazyce C#
 
@@ -62,7 +62,7 @@ Níže jsou uvedené oblíbené zkratky pro Visual Studio:
 | **CTRL** + **Posun**+**/** | Přepnout komentář k bloku/zrušit komentář | Tento příkaz přidá nebo odebere komentáře blokování v závislosti na tom, co jste vybrali. |
 
 > [!NOTE]
-> Některá rozšíření odváže výchozí klávesové zkratky sady Visual Studio. Chcete-li použít výše uvedené příkazy, obnovte vazby klíčů na výchozí hodnoty sady Visual Studio, a to tak, že přepnete na možnosti **nástroje**pro  >  **Import a export nastavení**  >  **resetovat všechna nastavení** nebo **nástroje**  >  **Options**  >  **klávesnice**  >  **obnovit**.
+> Některá rozšíření odváže výchozí klávesové zkratky sady Visual Studio. Chcete-li použít výše uvedené příkazy, obnovte vazby klíčů na výchozí hodnoty sady Visual Studio, a to tak, že přepnete na možnosti **nástroje** pro  >  **Import a export nastavení**  >  **resetovat všechna nastavení** nebo **nástroje**  >    >  **klávesnice**  >  **obnovit**.
 
 Další informace o klávesových zkratkách a příkazech najdete v tématech [zástupci produktivity](../ide/productivity-shortcuts.md) a [Oblíbené klávesové zkratky](default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md).
 
@@ -111,7 +111,7 @@ Visual Studio poskytuje formátování souboru kódu, včetně předvoleb stylu 
 
 ![Tlačítko pro vyčištění kódu v aplikaci Visual Studio 2019](media/execute-code-cleanup.png)
 
-Můžete také spustit vyčištění kódu v celém projektu nebo řešení. Klikněte pravým tlačítkem myši na název projektu nebo řešení v **Průzkumník řešení**, vyberte **Analýza a vyčištění kódu**a pak vyberte **Spustit vyčištění kódu**.
+Můžete také spustit vyčištění kódu v celém projektu nebo řešení. Klikněte pravým tlačítkem myši na název projektu nebo řešení v **Průzkumník řešení**, vyberte **Analýza a vyčištění kódu** a pak vyberte **Spustit vyčištění kódu**.
 
 ![Spustit čištění kódu v celém projektu nebo řešení](media/run-code-cleanup-project-solution.png)
 
@@ -131,7 +131,7 @@ Mezi oblíbené rychlé opravy a refaktoringy patří:
 - Generovat konstruktor
 - Generate – metoda
 - Přesunout typ do souboru
-- Přidat kontrolu null
+- Přidat Null-Check
 - Přidat parametr
 - Odebrat nepotřebné direktivy using
 - Smyčka foreach do dotazu LINQ nebo na metodu LINQ
@@ -154,14 +154,14 @@ Několik členů komunity má napsaná bezplatná rozšíření, která přidáv
 
 Visual Studio obsahuje mnoho funkcí, které vám pomůžou vyhledávat a [Procházet váš kód](../ide/navigating-code.md).
 
-| Příznak | Zástupce | Podrobnosti a vylepšení |
+| Funkce | Zástupce | Podrobnosti a vylepšení |
 |- | - | -|
 | Najít všechny odkazy | **Posun** + **F12**| Výsledky jsou barevné a lze je seskupit podle typu projektu, definice a odkazu, jako je například čtení nebo zápis. Můžete také zamknout výsledky. |
 | Přejít k implementaci | **CTRL** + **F12** | Pomocí možnosti přejít k definici na `override` klíčovém slově můžete přejít k přepsanému členu. |
 | Přejít k definici | **F12** nebo **CTRL +** + **kliknutí**| Když kliknete na tlačítko Přejít na definici, stiskněte klávesu **CTRL** |
 | Náhled definice | **ALT** + **F12** | Vložené zobrazení definice |
 | Vizualizér struktury | Šedá, tečkované – čáry mezi závorkami | Zobrazení struktury kódu najeďte myší |
-| Navigace do dekompilovaných sestavení | **F12** nebo **CTRL +** + **kliknutí** | Povolením funkce přejít k externímu zdroji (dekompilaci pomocí ILSpy): **nástroje**  >  **Možnosti**nástrojů  >  **textový editor**  >  **C#**  >  **Upřesnit**  >  **Povolit navigaci na dekompilované zdroje**. |
+| Navigace do dekompilovaných sestavení | **F12** nebo **CTRL +** + **kliknutí** | Povolením funkce přejít k externímu zdroji (dekompilaci pomocí ILSpy): **nástroje**  >  **Možnosti** nástrojů  >  **textový editor**  >  **C#**  >  **Upřesnit**  >  **Povolit navigaci na dekompilované zdroje**. |
 
 ![Přejít na vše a najít všechny odkazy](../ide/media/VSIDE_Productivity_Navigation.png)
 
@@ -187,7 +187,7 @@ Mezi možnosti ladění v aplikaci Visual Studio patří:
 
 ::: moniker range=">=vs-2019"
 
-- Možnost Hledat řetězec v oknech **kukátka**, **Automatické**hodnoty a **místní** hodnoty.
+- Možnost Hledat řetězec v oknech **kukátka**, **Automatické** hodnoty a **místní** hodnoty.
 - *Klikněte na tlačítko*, které vám umožní umístit ukazatel myši na řádek kódu, zobrazit zelenou ikonu přehrávání a spustit program, dokud nedosáhne tohoto řádku.
 - **Pomocný Pomocník pro výjimky**, který do nejvyšší úrovně v dialogovém okně umístí nejdůležitější informace, například proměnná `null` v `NullReferenceException` .
 - [Krok zpět ladění](../debugger/view-historical-application-state.md)vám umožní přejít zpět na předchozí zarážky nebo kroky a zobrazit stav aplikace, stejně jako v minulosti.
@@ -226,7 +226,7 @@ Můžete použít Git nebo TFVC k uložení a aktualizaci kódu v aplikaci Visua
 
 Tady je seznam funkcí editoru a produktivity, které umožňují efektivnější psaní kódu. Je možné, že některé funkce budou potřeba povolit, protože jsou ve výchozím nastavení vypnuté (můžou na vašem počítači indexovat objekty, jsou kontroverzním nebo jsou aktuálně experimentální).
 
-| Příznak | Podrobnosti | Jak povolit |
+| Funkce | Podrobnosti | Jak povolit |
 |-|-|-|
 | Najít soubor v Průzkumník řešení | Zvýrazní aktivní soubor v **Průzkumník řešení** | **Nástroje**  >  **Možnosti**  >  **Projekty a řešení**  >  **Sledovat aktivní položku v Průzkumník řešení** |
 | Přidat použití pro typy v referenčních sestaveních a balíčcích NuGet | Zobrazuje žárovku chyby s opravou kódu pro instalaci balíčku NuGet pro neodkazový typ. | **Nástroje**  >  **Možnosti**  >  **Textový editor**  >  **Jazyk C#**  >  **Rozšířené možnosti**  >  **Navrhnout použití typů v referenčních sestaveních** a **navrhovat použití pro typy v balíčcích NuGet** |

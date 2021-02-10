@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9c0bc950-7323-4f0f-8de2-0b0af9a42b85
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 402aa5deaae6b082c8360b9867807516f11d935d
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 0421a5cdb93c64093ae5b428260c78da44e71e3c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91879031"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944196"
 ---
 # <a name="customize-the-help-viewer"></a>Přizpůsobení programu Help Viewer
 Můžete přizpůsobit rozložení oken aplikace Help Viewer a také další možnosti, jako je velikost písma, maximální počet výsledků a informace o tom, zda má být obsah v angličtině.

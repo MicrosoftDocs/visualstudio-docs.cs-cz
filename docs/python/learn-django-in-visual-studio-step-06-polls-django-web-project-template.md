@@ -6,17 +6,17 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1f81c665bc742daf7e2b0e34a849aad566362a28
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 5e524232eed7e4044454c57fc4fcaa30c6e2a8a0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099333"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942474"
 ---
 # <a name="step-6-use-the-polls-django-web-project-template"></a>Krok 6: použití šablony webového projektu Django pro cyklické dotazování
 
@@ -41,7 +41,7 @@ Projekt vytvořený pomocí této šablony se podobá tomu, co obdržíte při [
 
 1. V dialogovém okně Nový projekt vyhledejte a vyberte šablonu **webový projekt Django s dotazy** , zavolejte na projekt "DjangoPolls" a vyberte **OK**.
 
-1. Stejně jako ostatní šablony projektu v aplikaci Visual Studio šablona "dotazování Django webového projektu" obsahuje soubor *requirements.txt* , Visual Studio zobrazí výzvu k instalaci těchto závislostí. Zvolte možnost, **nainstalujte ji do virtuálního prostředí**a v dialogovém okně **Přidat virtuální prostředí** vyberte **vytvořit** a přijměte výchozí hodnoty.
+1. Stejně jako ostatní šablony projektu v aplikaci Visual Studio šablona "dotazování Django webového projektu" obsahuje soubor *requirements.txt* , Visual Studio zobrazí výzvu k instalaci těchto závislostí. Zvolte možnost, **nainstalujte ji do virtuálního prostředí** a v dialogovém okně **Přidat virtuální prostředí** vyberte **vytvořit** a přijměte výchozí hodnoty.
 
 1. Jakmile Python dokončí nastavení virtuálního prostředí, inicializujte databázi podle pokynů v zobrazených *readme.html* a vytvořte superuživatele Django (to znamená správce). Postup je nejprve kliknout pravým tlačítkem myši na projekt **DjangoPolls** v **Průzkumník řešení**, vyberte příkaz **Python**  >  **Django migrace** , potom klikněte pravým tlačítkem myši na projekt, vyberte příkaz **Python**  >  **Django Create** a postupujte podle pokynů. (Pokud se pokusíte nejdřív vytvořit super uživatele, zobrazí se chyba, protože databáze nebyla inicializovaná.)
 
@@ -183,7 +183,7 @@ Chcete-li zobrazit efekt změny modelu, zkuste provést následující kroky:
     ```
 
 1. Uložte soubor, potom klikněte pravým tlačítkem na projekt **DjangoPolls** v **Průzkumník řešení** a vyberte příkaz **Python**  >  **Django provést migrace** .
-1. Výběrem příkazu **projekt**  >  **Zobrazit všechny soubory** zobrazíte nově vygenerovaný skript ve složce **migrace** , jejíž název začíná na **002_auto_**. Pravým tlačítkem myši klikněte na tento soubor a vyberte možnost **zahrnout do projektu**. Pak můžete vybrat **projekt**  >  znovu**Zobrazit všechny soubory** a obnovit tak původní zobrazení. (Podrobnosti o tomto kroku najdete v druhé otázce níže.)
+1. Výběrem příkazu **projekt**  >  **Zobrazit všechny soubory** zobrazíte nově vygenerovaný skript ve složce **migrace** , jejíž název začíná na **002_auto_**. Pravým tlačítkem myši klikněte na tento soubor a vyberte možnost **zahrnout do projektu**. Pak můžete vybrat **projekt**  >  znovu **Zobrazit všechny soubory** a obnovit tak původní zobrazení. (Podrobnosti o tomto kroku najdete v druhé otázce níže.)
 1. V případě potřeby otevřete tento soubor a prověřte, jak Django skripty mění z předchozího stavu modelu do nového stavu.
 1. Znovu klikněte pravým tlačítkem na projekt sady Visual Studio a vyberte **Python**  >  **Django migrovat** , aby se změny projevily v databázi.
 1. V případě potřeby otevřete databázi v příslušném prohlížeči a potvrďte změnu.

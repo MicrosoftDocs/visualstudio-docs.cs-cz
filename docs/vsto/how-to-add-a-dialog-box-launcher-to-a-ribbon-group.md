@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], dialog box launcher
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 85b5d6f127c6f8b2b8140e778792aa1088efe05c
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: d8e04b7549d1b6a458f0993804946502f55f0165
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844930"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942279"
 ---
 # <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>Postupy: Přidání spouštěče dialogového okna do skupiny pásu karet
   Spouštěč dialogového okna můžete přidat do libovolné skupiny na pásu karet. Spouštěč dialogového okna je malá ikona, která se zobrazí ve skupině. Uživatelé kliknutím na tuto ikonu otevřou související dialogová okna nebo podokna úloh, která poskytují další možnosti vztahující se ke skupině.

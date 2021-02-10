@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 59d9a77f-ee80-474b-a14f-90f477ab717b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f367723a3c819635f2d7cf20ed812a36cda12830
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: 828a08cfe2841595e0ed3a9f1e3d79973a6e6756
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97487748"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943378"
 ---
 # <a name="wizards"></a>Průvodci
 Po vytvoření průvodce je obvykle vhodné ho přidat do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE), aby ho ostatní mohli používat. Přidaný průvodce se pak zobrazí v dialogových oknech **Přidat nový projekt** nebo **Přidat novou položku** . Chcete-li zobrazit dialogová okna **Přidat nový projekt** nebo **Přidat novou položku** , klikněte pravým tlačítkem myši na otevřené řešení v **Průzkumník řešení**, přejděte na **Přidat** a pak klikněte na **Nový projekt** nebo **Nová položka**.

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d49bc8c5-f631-4153-9d3c-feb3564da305
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9b68df68ce7fa4ad5cbc98db256204ddf8623d2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8ff2b2d5e5a0043cde17fecd2d59c084d2958e32
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701024"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943111"
 ---
 # <a name="sccdiff-function"></a>SccDiff – funkce
 Tato funkce zobrazuje rozdíl mezi aktuálním souborem (na místním disku) a jeho poslední verzí vrácenou se změnami v systému správy zdrojového kódu (nebo volitelně pouze kontroly).

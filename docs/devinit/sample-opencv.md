@@ -5,18 +5,18 @@ ms.date: 08/28/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: a2f284e1e464ab41391f60c546ce01d418ff377b
-ms.sourcegitcommit: 8efe6b45d65f9db23f5575c15155fe363fa12cdb
+ms.openlocfilehash: 6524cec090f20c475724f1ae8615c5dd24cfa2d7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92750125"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943503"
 ---
 # <a name="opencv"></a>OpenCV
 
@@ -28,10 +28,10 @@ Následující vlastní nastavení jsou již použita na rozvětvení [Microsoft
 
 `.devcontainer`Adresář musí obsahovat následující soubory:
 
-* devcontainer.jsna
+* devcontainer.json
 * devinit.jsna
 
-### <a name="devcontainerjson"></a>devcontainer.jsna
+### <a name="devcontainerjson"></a>devcontainer.json
 
 Následuje obsah _devcontainer.jsv_ souboru.
 
@@ -41,7 +41,7 @@ Následuje obsah _devcontainer.jsv_ souboru.
 }
 ```
 
-`postCreateCommand`Spustí nástroj [devinit](devinit-and-codespaces.md) , který spotřebovává _devinit.js_ .
+`postCreateCommand`Spustí nástroj [devinit](devinit-and-codespaces.md) , který spotřebovává _devinit.js_.
 
 ### <a name="devinitjson"></a>devinit.jsna
 
@@ -60,7 +60,7 @@ Následuje obsah [_devinit.jsv_](devinit-json.md) souboru.
 }
 ```
 
-_devinit.jsv_ je soubor spotřebovaný nástrojem [devinit](devinit-and-codespaces.md) a musí být ve stejném adresáři jako _devcontainer.jsv_ .
+_devinit.jsv_ je soubor spotřebovaný nástrojem [devinit](devinit-and-codespaces.md) a musí být ve stejném adresáři jako _devcontainer.jsv_.
 
 V této ukázce se nástroj [WSL-Install](tool-wsl-install.md) používá k vytvoření instance WSL se systémem Ubuntu 20,04 a jejím zřízení se základními nástroji pro vývoj v jazyce C++.
 ## <a name="targeting-windows-or-linux"></a>Cílení na systém Windows nebo Linux

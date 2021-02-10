@@ -6,15 +6,15 @@ ms.topic: conceptual
 ms.assetid: 95fe6396-276b-4ee5-b03d-faacec42765f
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 60f4e46d8c43c90759c964dbf01145d876a9f413
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: f9c9a950156f29bda68a134af2eb299b3431445f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91879057"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944287"
 ---
 # <a name="help-content-manager-overrides"></a>Přepsání v nápovědě pro Content Manager
 
@@ -57,9 +57,9 @@ V integrovaném vývojovém prostředí sady Visual Studio můžete změnit výc
 
 Následující dvě chování lze ovládat nastavením hodnot klíčů registru v editoru registru.
 
-|Úloha|Klíč registru|Hodnota|Data|
+|Úkol|Klíč registru|Hodnota|Data|
 |----------|-----|------|----|
-|Přepsat prioritu úlohy služby BITS|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64ovém počítači) \Microsoft\Help\v2.3|BITSPriority|**popředí**, **Vysoká**, **normální**nebo **Nízká**|
+|Přepsat prioritu úlohy služby BITS|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64ovém počítači) \Microsoft\Help\v2.3|BITSPriority|**popředí**, **Vysoká**, **normální** nebo **Nízká**|
 |Nasměrování na místní úložiště obsahu v síťové sdílené složce|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\ v 2.3 \ Catalogs\VisualStudio15|LocationPath|"*ContentStoreNetworkShare*"|
 
 ## <a name="see-also"></a>Viz také

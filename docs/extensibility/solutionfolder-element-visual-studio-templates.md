@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 963f0398-fb50-4d8e-879d-d48f8b7c6d80
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: be6cb773e2d822efe01f87b1102293898005cbc8
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 595e82538b15bdced811e55f028b6be2aaa214db
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903777"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942968"
 ---
 # <a name="solutionfolder-element-visual-studio-templates"></a>SolutionFolder – element (šablony sady Visual Studio)
 Seskupuje projekty do víceprojektových šablon.
@@ -30,7 +30,7 @@ Seskupuje projekty do víceprojektových šablon.
  \<ProjectCollection>
  \<SolutionFolder>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <SolutionFolder Name="DirectoryName">

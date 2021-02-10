@@ -9,19 +9,19 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.Format
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e3c8fe85b7bce856867802d43411816ae2df5d2c
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: fd8d7e6bd81e32858f990c70bbcdf0bf00049867
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040976"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943832"
 ---
 # <a name="options-text-editor-html-web-forms-formatting"></a>Možnosti, textový editor, HTML (webové formuláře), formátování
 
-Stránka možnosti **formátování** slouží k nastavení možností projektu HTML pro formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce, v řádku **Tools** nabídek zvolte  >  **možnost** nástroje a potom rozbalte formátování **textový editor**  >  **HTML (webové formuláře)**  >  **Formatting**.
+Stránka možnosti **formátování** slouží k nastavení možností projektu HTML pro formátování kódu v editoru kódu. Chcete-li získat přístup k této stránce, v řádku nabídek zvolte  >  **možnost** nástroje a potom rozbalte formátování **textový editor**  >  **HTML (webové formuláře)**  >  .
 
 ## <a name="capitalization"></a>Malá
 

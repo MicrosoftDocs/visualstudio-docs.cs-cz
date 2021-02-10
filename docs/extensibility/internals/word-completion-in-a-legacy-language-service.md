@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 0ace5ac3-f9e1-4e6d-add4-42967b1f96a6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 489b43c825e3512e1bd33bc732833de84aed54c3
-ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
+ms.openlocfilehash: b3625719987afc94deda314fa61d7a8cc2c1c843
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97616272"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943365"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>Dokončování slov ve službě starší verze jazyka
 Doplňování slov chybějících znaků u částečně zadaného slova. Pokud je k dispozici jenom jedno možné dokončení, slovo se po zadání znaku dokončení dokončí. Pokud se v částečném slově shoduje více než jedna možnost, zobrazí se seznam možných dokončení. Znak dokončení může být libovolný znak, který se nepoužívá pro identifikátory.

@@ -9,17 +9,17 @@ ms.custom:
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 990bff2832f290987ed29fd48b69f4d7a1a05bba
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 3d771fac2cf494e92cbc27fdbdca0b78af97b67e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189885"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944391"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio | Visual Basic
 
@@ -238,9 +238,9 @@ Postup pro změnu na **tmavý** motiv:
 
 ::: moniker-end
 
-2. V panelu nabídek **Tools**  >  otevřete dialogové okno **Možnosti** výběrem **Možnosti** nástroje.
+2. V panelu nabídek   >  otevřete dialogové okno **Možnosti** výběrem **Možnosti** nástroje.
 
-3. Na stránce **Environment**  >  **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavý** a pak zvolte **OK**.
+3. Na stránce   >  **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavý** a pak zvolte **OK**.
 
    ![Změnit barevný motiv na tmavý v aplikaci Visual Studio](media/change-color-theme.png)
 

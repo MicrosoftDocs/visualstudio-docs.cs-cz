@@ -6,23 +6,23 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8d91e587f354efe14db7cd669fa89a0f4658a538
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 9c8da2566be9b389b3ae36f2e6aa46686011ac0e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90097304"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942591"
 ---
 # <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>Krok 2: Vytvoření aplikace Django se zobrazeními a šablonami stránek
 
 **Předchozí krok: [Vytvoření projektu a řešení sady Visual Studio](learn-django-in-visual-studio-step-01-project-and-solution.md)**
 
-Co dosud máte v projektu sady Visual Studio, jsou pouze součásti na úrovni webu *projektu*Django, které mohou spustit jednu nebo více Django *aplikací*. Dalším krokem je vytvoření první aplikace s jednou stránkou.
+Co dosud máte v projektu sady Visual Studio, jsou pouze součásti na úrovni webu *projektu* Django, které mohou spustit jednu nebo více Django *aplikací*. Dalším krokem je vytvoření první aplikace s jednou stránkou.
 
 V tomto kroku se dozvíte, jak:
 
@@ -38,9 +38,9 @@ Aplikace Django je samostatný balíček Pythonu, který obsahuje sadu souvisej�
 
 Aplikace Django obvykle začíná standardní sadou souborů. Visual Studio poskytuje šablony položek pro inicializaci aplikace Django v rámci projektu Django spolu s integrovaným příkazem nabídky, který slouží ke stejnému účelu:
 
-- Šablony: v **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** vyberte šablonu **aplikace Django 1,9** , v poli **název** zadejte název aplikace a vyberte **OK**.
+- Šablony: v **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** vyberte šablonu **aplikace Django 1,9** , v poli **název** zadejte název aplikace a vyberte **OK**.
 
-- Integrovaný příkaz: v **Průzkumník řešení**klikněte pravým tlačítkem na projekt a vyberte **Přidat**  >  **aplikaci Django**. Tento příkaz vás vyzve k zadání názvu a vytvoří aplikaci Django 1,9.
+- Integrovaný příkaz: v **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **Přidat**  >  **aplikaci Django**. Tento příkaz vás vyzve k zadání názvu a vytvoří aplikaci Django 1,9.
 
     ![Příkaz nabídky pro přidání aplikace v Django](media/django/step02-add-django-app-command.png)
 
@@ -51,7 +51,7 @@ Pomocí obou metod vytvořte aplikaci s názvem "HelloDjangoApp". Výsledkem je 
 | Položka | Popis |
 | --- | --- |
 | **\_\_init \_ \_ . py** | Soubor, který identifikuje aplikaci jako balíček. |
-| **migrace** | Složka, ve které Django ukládá skripty, které aktualizují databázi, aby odpovídala změnám modelů. Nástroje pro migraci Django pak použijí potřebné změny v jakékoli předchozí verzi databáze tak, aby odpovídaly aktuálním modelům. Pomocí migrace se zachová vaše zaměření na vaše modely a umožní Django zpracování podkladového schématu databáze. Migrace jsou popsány v kroku 6; v současné době složka jednoduše obsahuje soubor * \_ \_ init \_ \_ . py* (což znamená, že složka definuje vlastní balíček python). |
+| **migrace** | Složka, ve které Django ukládá skripty, které aktualizují databázi, aby odpovídala změnám modelů. Nástroje pro migraci Django pak použijí potřebné změny v jakékoli předchozí verzi databáze tak, aby odpovídaly aktuálním modelům. Pomocí migrace se zachová vaše zaměření na vaše modely a umožní Django zpracování podkladového schématu databáze. Migrace jsou popsány v kroku 6; v současné době složka jednoduše obsahuje soubor *\_ \_ init \_ \_ . py* (což znamená, že složka definuje vlastní balíček python). |
 | **templates** | Složka pro šablony stránky Django obsahující jeden soubor *index.html* v rámci složky, která odpovídá názvu aplikace. (V aplikaci Visual Studio 2017 15,7 a starší se soubor nachází přímo v části *šablony* a krok 2-4 vás provede pokyny k vytvoření podsložky.) Šablony jsou bloky HTML, do kterých zobrazení mohou přidat informace pro dynamické vykreslování stránky. Šablona stránky "proměnné", například `{{ content }}` v *index.html*, jsou zástupné symboly pro dynamické hodnoty, jak je vysvětleno dále v tomto článku (krok 2). Aplikace Django obvykle vytvářejí obor názvů pro své šablony jejich umístěním do podsložky, která odpovídá názvu aplikace. |
 | **admin.py** | Soubor Pythonu, ve kterém rozšíříte rozhraní pro správu aplikace (viz krok 6), který se používá k osazení a úpravám dat v databázi. Zpočátku tento soubor obsahuje pouze příkaz, `from django.contrib import admin` . Ve výchozím nastavení zahrnuje Django standardní rozhraní pro správu prostřednictvím záznamů v souboru *Settings.py* projektu Django, který můžete zapnout zrušením komentáře k existujícím položkám v *URLs.py*. |
 | **apps.py** | Soubor Pythonu definující třídu konfigurace pro aplikaci (viz níže, za touto tabulkou). |
@@ -74,7 +74,7 @@ Odpověď: spuštění příkazu **Přidat**  >  **aplikaci Django** nebo použi
 
 ## <a name="step-2-2-run-the-app-from-the-django-project"></a>Krok 2-2: spuštění aplikace z projektu Django
 
-V tomto okamžiku, pokud znovu spustíte projekt v sadě Visual Studio (pomocí tlačítka panelu nástrojů nebo **ladění**  >  **spuštění**ladění), se stále zobrazuje výchozí stránka. Nezobrazuje se žádný obsah aplikace, protože potřebujete definovat stránku specifickou pro aplikaci a přidat aplikaci do projektu Django:
+V tomto okamžiku, pokud znovu spustíte projekt v sadě Visual Studio (pomocí tlačítka panelu nástrojů nebo **ladění**  >  **spuštění** ladění), se stále zobrazuje výchozí stránka. Nezobrazuje se žádný obsah aplikace, protože potřebujete definovat stránku specifickou pro aplikaci a přidat aplikaci do projektu Django:
 
 1. Ve složce *HelloDjangoApp* upravte *views.py* tak, aby odpovídal následujícímu kódu, který definuje zobrazení s názvem "index":
 
@@ -111,7 +111,7 @@ Vzhledem k tomu, že jste provedli změny kódu a úspěšně jste je otestovali
 
     ![Tlačítko změny správy zdrojového kódu na stavovém řádku sady Visual Studio](media/django/step02-source-control-changes-button.png)
 
-1. V **Team Explorer**zadejte potvrzovací zprávu, například "vytvořit počáteční Django aplikaci" a vyberte **potvrdit vše**. Po dokončení potvrzení se zobrazí **potvrzení vytvoření zprávy v \<hash> místním počítači. Synchronizace pro sdílení změn se serverem.** Pokud chcete doručovat změny do vzdáleného úložiště, vyberte **synchronizovat**a potom v části **odchozí potvrzení**vyberte možnost **push** . Před odesláním do vzdáleného úložiště můžete také shromáždit několik místních potvrzení.
+1. V **Team Explorer** zadejte potvrzovací zprávu, například "vytvořit počáteční Django aplikaci" a vyberte **potvrdit vše**. Po dokončení potvrzení se zobrazí **potvrzení vytvoření zprávy v \<hash> místním počítači. Synchronizace pro sdílení změn se serverem.** Pokud chcete doručovat změny do vzdáleného úložiště, vyberte **synchronizovat** a potom v části **odchozí potvrzení** vyberte možnost **push** . Před odesláním do vzdáleného úložiště můžete také shromáždit několik místních potvrzení.
 
     ![Vložení potvrzení do vzdáleného úložiště v Team Explorer](media/django/step02-source-control-push-to-remote.png)
 
@@ -146,7 +146,7 @@ def index(request):
     return HttpResponse(html_content)
 ```
 
-Spusťte projekt znovu, aby se zobrazila zpráva typu**Hello Django!** v pondělí, 16. dubna 2018 v 16:28:10 ". Aktualizujte stránku, aby se aktualizoval čas, a ověřte, že se obsah generuje s každým požadavkem. Až skončíte, zastavte Server.
+Spusťte projekt znovu, aby se zobrazila zpráva typu **Hello Django!** v pondělí, 16. dubna 2018 v 16:28:10 ". Aktualizujte stránku, aby se aktualizoval čas, a ověřte, že se obsah generuje s každým požadavkem. Až skončíte, zastavte Server.
 
 > [!Tip]
 > Zástupce k zastavení a restartu projektu je použití příkazu **ladit**  >  **restart** nabídky (**CTRL** + **SHIFT** + **F5**) nebo tlačítka **restartovat** na panelu nástrojů ladění:
@@ -170,7 +170,7 @@ Následující kroky ukazují použití šablon stránky:
     ]
     ```
 
-1. Také v *Settings.py*se ujistěte, že `TEMPLATES` objekt obsahuje následující řádek (ve výchozím nastavení je zahrnutý), který dává Django pokyn vyhledat šablony ve složce *šablon* nainstalované aplikace:
+1. Také v *Settings.py* se ujistěte, že `TEMPLATES` objekt obsahuje následující řádek (ve výchozím nastavení je zahrnutý), který dává Django pokyn vyhledat šablony ve složce *šablon* nainstalované aplikace:
 
     ```json
     'APP_DIRS': True,

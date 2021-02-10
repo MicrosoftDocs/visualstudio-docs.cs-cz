@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3466dedb-e5f4-424c-8dd8-e4941b2f4fc2
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8e727fad6d3cb15f70cf630b1077170d16d28b7f
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 9181961c1f30a96e5b03434f4ab686024992e29a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96039741"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944014"
 ---
 # <a name="options-text-editor-c-intellisense"></a>Možnosti, textový editor, C#, IntelliSense
 
-Stránka možnosti **technologie IntelliSense** slouží k úpravě nastavení, která mají vliv na chování technologie IntelliSense v jazyce C#. Chcete-li získat přístup k této **Tools** stránce Možnosti, zvolte  >  **možnost** nástroje a pak zvolte **textový editor**  >  **C#**  >  **IntelliSense**.
+Stránka možnosti **technologie IntelliSense** slouží k úpravě nastavení, která mají vliv na chování technologie IntelliSense v jazyce C#. Chcete-li získat přístup k této stránce Možnosti, zvolte  >  **možnost** nástroje a pak zvolte **textový editor**  >  **C#**  >  **IntelliSense**.
 
 Stránka možnosti **technologie IntelliSense** obsahuje následující možnosti:
 
@@ -35,7 +35,7 @@ Stránka možnosti **technologie IntelliSense** obsahuje následující možnost
 
 - Zobrazit seznam dokončení po zadání znaku *
 
-   Když je vybraná tato možnost, IntelliSense po zahájení psaní automaticky zobrazí seznam dokončení. Pokud tato možnost není vybrána, je dokončení technologie IntelliSense stále k dispozici v nabídce **technologie IntelliSense** nebo stisknutí klávesy **CTRL** + **Space**.
+   Když je vybraná tato možnost, IntelliSense po zahájení psaní automaticky zobrazí seznam dokončení. Pokud tato možnost není vybrána, je dokončení technologie IntelliSense stále k dispozici v nabídce **technologie IntelliSense** nebo stisknutí klávesy **CTRL** + .
 
 - Po odstranění znaku zobrazit seznam dokončení
 

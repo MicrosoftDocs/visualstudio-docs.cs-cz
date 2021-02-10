@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 08154aed-ae5c-463c-8694-745d0e332965
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 74354e05b16830f599dd706fbe48aadd75b11a18
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3ed763635d5629400c70c53497c7a798e0ac38f2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701042"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943124"
 ---
 # <a name="scccreatesubproject-function"></a>SccCreateSubProject – funkce
 Tato funkce vytvoří dílčí projekt se zadaným názvem v rámci existujícího nadřazeného projektu určeného `lpParentProjPath` argumentem.
@@ -92,7 +92,7 @@ pro Navrhovaný název dílčího projektu (až do SCC_PRJPATH_SIZE, včetně uk
 ## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>Technické poznámky k SccCreateSubProject a SccGetParentProjectPath
  Přidání řešení a projektů do správy zdrojových kódů bylo zjednodušeno v aplikaci Visual Studio, aby bylo možné minimalizovat počet výzev uživatele k výběru umístění v systému správy zdrojů. Tyto změny jsou aktivovány v aplikaci Visual Studio, pokud modul plug-in správy zdrojových kódů podporuje obě nové funkce `SccCreateSubProject` a `SccGetParentProjectPath` . Následující položku registru lze však použít k zakázání těchto změn a návratu na předchozí verzi sady Visual Studio (modul plug-in správy zdrojových kódů rozhraní API verze 1,1):
 
- **[HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl" = DWORD: 00000001**
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl" = DWORD: 00000001**
 
  Pokud tato položka registru neexistuje nebo je nastavená na DWORD: 00000000, Visual Studio se pokusí použít nové funkce `SccCreateSubProject` a `SccGetParentProjectPath` .
 

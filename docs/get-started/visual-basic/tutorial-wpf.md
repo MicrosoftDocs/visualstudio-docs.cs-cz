@@ -11,15 +11,15 @@ dev_langs:
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: bc57e3d104d7f8427e97eb6b3dd97ca3e89bc49e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00b8488682674b2531bac561e9f2536e616800fb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419208"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944365"
 ---
 # <a name="tutorial-create-a-simple-application-with-visual-basic"></a>Kurz: Vytvoření jednoduché aplikace pomocí Visual Basic
 
@@ -67,11 +67,11 @@ Při vytváření aplikace v systému Visual Studio je třeba nejprve vytvořit
 
      ![Na panelu nabídek vyberte možnosti soubor, nový, projekt.](../media/exploreide-filenewproject.png)
 
-2. V dialogovém okně **Nový projekt** vyberte kategorii **nainstalovaná**  >  **Visual Basic**  >  **Windows Desktop** a pak vyberte šablonu **aplikace WPF (.NET Framework)** . Pojmenujte projekt **HelloWPFApp**a vyberte **OK**.
+2. V dialogovém okně **Nový projekt** vyberte kategorii **nainstalovaná**  >  **Visual Basic**  >  **Windows Desktop** a pak vyberte šablonu **aplikace WPF (.NET Framework)** . Pojmenujte projekt **HelloWPFApp** a vyberte **OK**.
 
      ![Šablona aplikace WPF v dialogovém okně Nový projekt sady Visual Studio](media/exploreide-newproject-vb.png)
 
-Visual Studio vytvoří projekt a řešení HelloWPFApp a **Průzkumník řešení** zobrazí různé soubory. **Návrhář WPF** zobrazuje návrhové zobrazení a zobrazení XAML souboru *MainWindow. XAML* v rozděleném zobrazení. Posunutí příčky můžete zobrazit více nebo méně z obou zobrazení. Můžete zvolit, zda chcete zobrazit pouze vizuální zobrazení nebo pouze zobrazení XAML. V **Průzkumník řešení**se zobrazí následující položky:
+Visual Studio vytvoří projekt a řešení HelloWPFApp a **Průzkumník řešení** zobrazí různé soubory. **Návrhář WPF** zobrazuje návrhové zobrazení a zobrazení XAML souboru *MainWindow. XAML* v rozděleném zobrazení. Posunutí příčky můžete zobrazit více nebo méně z obou zobrazení. Můžete zvolit, zda chcete zobrazit pouze vizuální zobrazení nebo pouze zobrazení XAML. V **Průzkumník řešení** se zobrazí následující položky:
 
 ![Průzkumník řešení se načetly soubory HelloWPFApp](../media/exploreide-hellowpfappfiles.png)
 
@@ -85,9 +85,9 @@ Visual Studio vytvoří projekt a řešení HelloWPFApp a **Průzkumník řešen
 
    ![Šablona aplikace WPF v dialogovém okně Nový projekt sady Visual Studio](media/vs-2019/exploreide-newprojectvb-vs2019.png)
 
-3. Na další obrazovce zadejte název projektu, **HelloWPFApp**a klikněte na **vytvořit**.
+3. Na další obrazovce zadejte název projektu, **HelloWPFApp** a klikněte na **vytvořit**.
 
-Visual Studio vytvoří projekt a řešení HelloWPFApp a **Průzkumník řešení** zobrazí různé soubory. **Návrhář WPF** zobrazuje návrhové zobrazení a zobrazení XAML souboru *MainWindow. XAML* v rozděleném zobrazení. Posunutí příčky můžete zobrazit více nebo méně z obou zobrazení. Můžete zvolit, zda chcete zobrazit pouze vizuální zobrazení nebo pouze zobrazení XAML. V **Průzkumník řešení**se zobrazí následující položky:
+Visual Studio vytvoří projekt a řešení HelloWPFApp a **Průzkumník řešení** zobrazí různé soubory. **Návrhář WPF** zobrazuje návrhové zobrazení a zobrazení XAML souboru *MainWindow. XAML* v rozděleném zobrazení. Posunutí příčky můžete zobrazit více nebo méně z obou zobrazení. Můžete zvolit, zda chcete zobrazit pouze vizuální zobrazení nebo pouze zobrazení XAML. V **Průzkumník řešení** se zobrazí následující položky:
 
 ![Průzkumník řešení se načetly soubory HelloWPFApp](../media/vs-2019/exploreide-hellowpfappfiles.png)
 
@@ -100,11 +100,11 @@ Poté, co jste projekt vytvořili, jej můžete upravit. Pomocí okna **vlastnos
 
 ### <a name="change-the-name-of-mainwindowxaml"></a>Změna názvu souboru MainWindow. XAML
 
-Pojďme dát MainWindow konkrétnější název. V **Průzkumník řešení**klikněte pravým tlačítkem na *MainWindow. XAML* a vyberte **Přejmenovat**. Přejmenujte soubor na *Greetings. XAML*.
+Pojďme dát MainWindow konkrétnější název. V **Průzkumník řešení** klikněte pravým tlačítkem na *MainWindow. XAML* a vyberte **Přejmenovat**. Přejmenujte soubor na *Greetings. XAML*.
 
 ## <a name="design-the-user-interface-ui"></a>Návrh uživatelského rozhraní (UI)
 
-Pokud návrhář není otevřen, vyberte možnost *Greetings. XAML* v **Průzkumník řešení**a stisknutím klávesy **SHIFT** + **F7** Otevřete návrháře.
+Pokud návrhář není otevřen, vyberte možnost *Greetings. XAML* v **Průzkumník řešení** a stisknutím klávesy **SHIFT** + **F7** Otevřete návrháře.
 
 Do této aplikace přidáme tři typy ovládacích prvků: <xref:System.Windows.Controls.TextBlock> ovládací prvek, dva <xref:System.Windows.Controls.RadioButton> ovládací prvky a <xref:System.Windows.Controls.Button> ovládací prvek.
 
@@ -112,7 +112,7 @@ Do této aplikace přidáme tři typy ovládacích prvků: <xref:System.Windows.
 
 1. Stisknutím klávesy **CTRL** + **Q** aktivujte vyhledávací pole a zadejte **sadu nástrojů**. V seznamu výsledků vyberte možnost **zobrazit > sada nástrojů** .
 
-2. V **sadě nástrojů**rozbalte uzel **běžné ovládací prvky WPF** pro zobrazení ovládacího prvku TextBlock.
+2. V **sadě nástrojů** rozbalte uzel **běžné ovládací prvky WPF** pro zobrazení ovládacího prvku TextBlock.
 
      ![Sada nástrojů se zvýrazněným ovládacím prvkem TextBlock](../media/exploreide-textblocktoolbox.png)
 
@@ -142,7 +142,7 @@ Dále do formuláře přidejte dva ovládací prvky [RadioButton](/dotnet/framew
 
 ### <a name="add-radio-buttons"></a>Přidání tlačítek přepínače
 
-1. V **sadě nástrojů**Najděte ovládací prvek **RadioButton** .
+1. V **sadě nástrojů** Najděte ovládací prvek **RadioButton** .
 
      ![Okno panelu nástrojů s vybraným ovládacím prvkem RadioButton](../media/exploreide-radiobuttontoolbox.png)
 
@@ -186,7 +186,7 @@ Konečný prvek uživatelského rozhraní, který přidáte, je ovládací prvek
 
 ### <a name="add-the-button-control"></a>Přidání ovládacího prvku tlačítko
 
-1. V sadě **nástrojů**vyhledejte ovládací prvek **tlačítko** a poté jej přidejte do návrhové plochy v ovládacích prvcích RadioButton přetažením do formuláře v zobrazení Návrh. Pokud používáte Visual Studio 2019 nebo novější, vám červená čára pomůže zarovnat na střed ovládacího prvku.
+1. V sadě **nástrojů** vyhledejte ovládací prvek **tlačítko** a poté jej přidejte do návrhové plochy v ovládacích prvcích RadioButton přetažením do formuláře v zobrazení Návrh. Pokud používáte Visual Studio 2019 nebo novější, vám červená čára pomůže zarovnat na střed ovládacího prvku.
 
 2. V zobrazení XAML změňte hodnotu **obsahu** pro ovládací prvek tlačítko z `Content="Button"` na a `Content="Display"` poté změny uložte.
 
@@ -232,7 +232,7 @@ V tomto kroku zjistíte chybu, kterou jsme dříve způsobili změnou názvu sou
 
 #### <a name="start-debugging-and-find-the-error"></a>Spustit ladění a najít chybu
 
-1. Spusťte ladicí program stisknutím klávesy **F5** nebo výběrem možnosti **ladění**a potom **Spusťte ladění**.
+1. Spusťte ladicí program stisknutím klávesy **F5** nebo výběrem možnosti **ladění** a potom **Spusťte ladění**.
 
    Zobrazí se okno **režim přerušení** a okno **výstup** indikuje, že došlo k IOException: nelze najít prostředek ' MainWindow. XAML '.
 
@@ -244,7 +244,7 @@ Na začátku tohoto kurzu jsme přejmenovali *MainWindow.* XAML na *Greetings. X
 
 #### <a name="specify-greetingsxaml-as-the-startup-uri"></a>Jako spouštěcí identifikátor URI zadejte Greetings. XAML.
 
-1. V **Průzkumník řešení**otevřete soubor *Application. XAML* .
+1. V **Průzkumník řešení** otevřete soubor *Application. XAML* .
 
 2. Změňte `StartupUri="MainWindow.xaml"` na `StartupUri="Greetings.xaml"` a pak změny uložte.
 
@@ -261,13 +261,13 @@ Znovu spusťte ladicí program (stiskněte klávesu **F5**). Měli byste vidět 
 
 ### <a name="debug-with-breakpoints"></a>Ladění pomocí zarážek
 
-Můžete otestovat kód během ladění přidáním některých zarážek. Zarážky můžete **přidat kliknutím na**  >  levý okraj editoru vedle řádku kódu, kde**chcete,** aby došlo k přerušení, nebo stisknutím klávesy **F9**.
+Můžete otestovat kód během ladění přidáním některých zarážek. Zarážky můžete **přidat kliknutím na**  >  levý okraj editoru vedle řádku kódu, kde **chcete,** aby došlo k přerušení, nebo stisknutím klávesy **F9**.
 
 #### <a name="add-breakpoints"></a>Přidání zarážek
 
-1. Otevřete soubor *Greetings. XAML. vb*a vyberte následující řádek: `MessageBox.Show("Hello.")`
+1. Otevřete soubor *Greetings. XAML. vb* a vyberte následující řádek: `MessageBox.Show("Hello.")`
 
-2. Stisknutím klávesy **F9** nebo z nabídky přidejte zarážku tak, že vyberete **ladění**a potom **přepnete zarážku**.
+2. Stisknutím klávesy **F9** nebo z nabídky přidejte zarážku tak, že vyberete **ladění** a potom **přepnete zarážku**.
 
    Na levém okraji okna editoru se vedle řádku kódu zobrazí červený kruh.
 
@@ -311,7 +311,7 @@ Teď, když jste ověřili, že všechno funguje, můžete připravit sestavení
 
 2. Změňte konfiguraci sestavení pro HelloWPFApp z **Debug** na **release** pomocí ovládacího prvku rozevíracího seznamu na panelu nástrojů (aktuálně říká "ladit").
 
-3. Sestavte řešení kliknutím na **sestavit**sestavení  >  **řešení**.
+3. Sestavte řešení kliknutím na **sestavit** sestavení  >  **řešení**.
 
 Blahopřejeme k dokončení tohoto kurzu! Můžete najít soubor *. exe* , který jste vytvořili v rámci vašeho řešení a adresáře projektu (*. ..\HelloWPFApp\HelloWPFApp\bin\Release*).
 

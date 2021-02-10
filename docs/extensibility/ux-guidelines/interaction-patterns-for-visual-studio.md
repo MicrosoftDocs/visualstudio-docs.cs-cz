@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: a3643792-b0df-481c-bc35-576f948e04cf
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1cd618b66eed900c2436704d40de5325c1205e85
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: 13d111ea6e812de8290433c416a12dbd252662b5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863490"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942877"
 ---
 # <a name="interaction-patterns-for-visual-studio"></a>Vzory interakcí pro Visual Studio
 ## <a name="overview"></a>Přehled
@@ -25,7 +25,7 @@ ms.locfileid: "97863490"
 
 ### <a name="visual-studio-client-pattern-types"></a>Typy vzorů klientů sady Visual Studio
 
-|Typ vzorku|Popis|Příklady|
+|Typ vzorku|Description|Příklady|
 |------------------|-----------------|--------------|
 |**Vzory na úrovni aplikace**|Vzor vysoké úrovně společné pro aplikaci, určení nebo zobrazení kontextu aplikace a obsahující složené a řídicí vzory v nich|– Okna nástrojů<br />– Dokumentová okna|
 |**Složené vzory**|Běžné vzory, které mohou být rozloženy napříč vzorci aplikace, nebo rozpoznaný vzor vytvořený několika ovládacími prvky v odlišné konfiguraci|– Zobrazení přepínání<br />– Seznam tvůrců<br />-Zobrazení dat<br />– Oznámení<br />– Ověření<br />-Výběr modelů|

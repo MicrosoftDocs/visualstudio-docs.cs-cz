@@ -6,17 +6,17 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 748f941d5a8f257b3765b06651ff3244793e0123
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7aabfa91f7f6c6204919c4a06d2d3080b5174c5f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238527"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942578"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance-with-django-app"></a>Krok 3: obsluha statických souborů, přidávání stránek a použití dědičnosti šablon s aplikací Django
 
@@ -50,7 +50,7 @@ Odpověď: soubor projektu sady Visual Studio (*. pyproj*) obsahuje identifikát
 
 Ve webové aplikaci vytvořené pomocí Pythonu (pomocí libovolného rozhraní) se soubory Pythonu vždycky spouštějí na serveru webového hostitele a nikdy se nepřenáší do počítače uživatele. Jiné soubory, jako jsou například CSS a JavaScript, se používají výhradně v prohlížeči, takže hostitelský server je jednoduše přiřadí tak, jak jsou pokaždé požadovány. Tyto soubory jsou označovány jako "statické" soubory a Django je může doručovat automaticky, aniž byste museli psát kód.
 
-Projekt Django je ve výchozím nastavení nakonfigurovaný tak, aby sloužil statickým souborům ze *statické* složky aplikace. Díky těmto řádkům v *Settings.py*projektu Django:
+Projekt Django je ve výchozím nastavení nakonfigurovaný tak, aby sloužil statickým souborům ze *statické* složky aplikace. Díky těmto řádkům v *Settings.py* projektu Django:
 
 ```python
 # Static files (CSS, JavaScript, Images)
@@ -63,7 +63,7 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 Můžete uspořádat soubory pomocí libovolné struktury složek v rámci *statických* , které chcete, a pak pomocí relativních cest v rámci této složky odkazovat na soubory. Chcete-li předvést tento proces, následující kroky přidají do aplikace soubor CSS a pak tuto šablonu použijte v šabloně *index.html* :
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku **HelloDjangoApp** v projektu sady Visual Studio, vyberte **Přidat**  >  **novou složku**a pojmenujte složku `static` .
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na složku **HelloDjangoApp** v projektu sady Visual Studio, vyberte **Přidat**  >  **novou složku** a pojmenujte složku `static` .
 
 1. Klikněte pravým tlačítkem na **statickou** složku a vyberte **Přidat**  >  **novou položku**. V dialogovém okně, které se zobrazí, vyberte šablonu šablony **stylů** , pojmenujte soubor `site.css` a vyberte **OK**. Soubor **Web. CSS** se zobrazí v projektu a otevře se v editoru. Vaše struktura složky by měla vypadat podobně jako na následujícím obrázku:
 
@@ -101,7 +101,7 @@ Odpověď: `{% load staticfiles %}` řádek je vyžadován před odkazování na
 
 ### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>Otázka: existují nějaké konvence pro uspořádávání statických souborů?
 
-Odpověď: v případě potřeby můžete do *statické* složky přidat další soubory CSS, JavaScript a HTML. Typický způsob, jak uspořádat statické soubory, je vytvořit podsložky s názvem *písma*, *skripty*a *obsah* (pro šablony stylů a jiné soubory). V každém případě nezapomeňte zahrnout tyto složky do relativní cesty k souboru v `{% static %}` odkazech.
+Odpověď: v případě potřeby můžete do *statické* složky přidat další soubory CSS, JavaScript a HTML. Typický způsob, jak uspořádat statické soubory, je vytvořit podsložky s názvem *písma*, *skripty* a *obsah* (pro šablony stylů a jiné soubory). V každém případě nezapomeňte zahrnout tyto složky do relativní cesty k souboru v `{% static %}` odkazech.
 
 ### <a name="question-can-i-complete-the-same-task-without-using-the--load-staticfiles--tag"></a>Otázka: je možné dokončit stejnou úlohu bez použití značky {% Load staticfiles%}?
 
@@ -129,7 +129,7 @@ Přidání další stránky do aplikace znamená následující:
 
 Následující postup přidá stránku "o" do projektu "HelloDjangoApp" a odkazy na tuto stránku z domovské stránky:
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku **Templates/HelloDjangoApp** , vyberte možnost **Přidat**  >  **novou položku**, vyberte šablonu položky **stránky HTML** , zadejte název souboru `about.html` a vyberte **OK**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na složku **Templates/HelloDjangoApp** , vyberte možnost **Přidat**  >  **novou položku**, vyberte šablonu položky **stránky HTML** , zadejte název souboru `about.html` a vyberte **OK**.
 
     > [!Tip]
     > Pokud se příkaz **Nová položka** v nabídce **Přidat** nezobrazí, ujistěte se, že jste zastavili Server, aby aplikace Visual Studio ukončila režim ladění.
@@ -202,7 +202,7 @@ Základní šablona vymezují bloky pomocí `{% block <block_name> %}` značek a
 
 Následující kroky demonstrují dědičnost:
 
-1. Ve složce *Templates/HelloDjangoApp* aplikace vytvořte nový soubor HTML (pomocí místní nabídky **Přidat**  >  **novou položku** nebo **Přidat**  >  **stránku HTML**) s názvem *layout.html*a nahraďte jeho obsah následujícím kódem. Vidíte, že tato šablona obsahuje blok s názvem "content" (obsah), který obsahuje všechny odkazující stránky, které musí nahradit:
+1. Ve složce *Templates/HelloDjangoApp* aplikace vytvořte nový soubor HTML (pomocí místní nabídky **Přidat**  >  **novou položku** nebo **Přidat**  >  **stránku HTML**) s názvem *layout.html* a nahraďte jeho obsah následujícím kódem. Vidíte, že tato šablona obsahuje blok s názvem "content" (obsah), který obsahuje všechny odkazující stránky, které musí nahradit:
 
     ```html
     <!DOCTYPE html>

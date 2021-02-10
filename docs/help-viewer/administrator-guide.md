@@ -6,15 +6,15 @@ ms.topic: conceptual
 ms.assetid: 4340c69f-b96b-4932-bb82-38b16a5ab149
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 312b886ee0becc794f657ecaaba7fb028d4b3cf1
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: e52b03b01f53a8064dc6ec691f751c86266af6a4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878888"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944300"
 ---
 # <a name="help-viewer-administrator-guide"></a>Příručka pro správce prohlížeče nápovědy
 
@@ -107,7 +107,7 @@ Než budete moct vytvořit základní sadu obsahu, musíte nejdřív odinstalova
 
 1. V programu Help Viewer klikněte na kartu **Spravovat obsah** .
 
-2. V části **doporučená dokumentace** nebo **dostupná dokumentace**přejděte do sady dokumentace, které chcete stáhnout, a pak zvolte **Přidat**.
+2. V části **doporučená dokumentace** nebo **dostupná dokumentace** přejděte do sady dokumentace, které chcete stáhnout, a pak zvolte **Přidat**.
 
 3. Vyberte **aktualizovat**.
 
@@ -131,9 +131,9 @@ Dále je nutné zabalit obsah, aby jej bylo možné nasadit do klientských poč
 
 1. Vytvořte sdílenou síťovou složku a zkopírujte obsah vaší aplikace do tohoto umístění.
 
-     Zkopírujte například obsah v *C:\VSHelp* do * \\ \myserver\VSHelp*.
+     Zkopírujte například obsah v *C:\VSHelp* do *\\ \myserver\VSHelp*.
 
-2. Vytvořte soubor *. bat* , který bude obsahovat skript nasazení pro obsah aplikace Help. Vzhledem k tomu, že klient může mít zámek proti čtení u některého ze souborů, které se odstraňují jako součást nabízené instalace, měli byste klienta před vložením aktualizací vypnout. Například:
+2. Vytvořte soubor *. bat* , který bude obsahovat skript nasazení pro obsah aplikace Help. Vzhledem k tomu, že klient může mít zámek proti čtení u některého ze souborů, které se odstraňují jako součást nabízené instalace, měli byste klienta před vložením aktualizací vypnout. Příklad:
 
     ```cmd
     REM - copy pre-ripped content to ProgramData

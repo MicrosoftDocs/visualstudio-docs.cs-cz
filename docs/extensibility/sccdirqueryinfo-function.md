@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 459e2d99-573d-47c4-b834-6d82c5e14162
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 222b5d15a1e2bcd9bd3f27a5cd0e9904642d9786
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d15809623067d9612eb2648d593264d61f08f6e1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700953"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943085"
 ---
 # <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo – funkce
 Tato funkce prověřuje seznam plně kvalifikovaných adresářů pro jejich aktuální stav.

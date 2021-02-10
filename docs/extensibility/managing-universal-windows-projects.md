@@ -7,21 +7,21 @@ ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f86edd33e7719dc326aa2c5d252d11322509de64
-ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
+ms.openlocfilehash: 03d4fbd509cbbb408bdcd0465ba4460f8c3b1e9f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97615561"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943241"
 ---
 # <a name="manage-universal-windows-projects"></a>Správa univerzálních projektů pro Windows
 
 Univerzální aplikace pro Windows jsou aplikace, které cílí na Windows 8.1 i Windows Phone 8,1 a umožňují vývojářům používat kód a další prostředky na obou platformách. Sdílený kód a prostředky jsou uchovávány ve sdíleném projektu, zatímco kód specifický pro platformu a prostředky jsou uchovávány v samostatných projektech, jeden pro systém Windows a druhý pro Windows Phone. Další informace o univerzálních aplikacích pro Windows najdete v tématu [univerzální aplikace pro Windows](/windows/uwp/get-started/create-uwp-apps). Rozšíření sady Visual Studio, která spravují projekty, by měla vědět, že projekty univerzálních aplikací pro Windows mají strukturu, která se liší od aplikací pro jednotlivé platformy. Tento návod ukazuje, jak navigovat sdílený projekt a spravovat sdílené položky.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 

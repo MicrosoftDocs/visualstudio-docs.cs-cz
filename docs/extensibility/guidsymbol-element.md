@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 11fb3545-8974-4776-9a54-6b6e7739ae31
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98fd802021f29365b6f338610754214352a996d7
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 8f739135a9a4bed969163ce26911e5304a66822b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994235"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943391"
 ---
 # <a name="guidsymbol-element"></a>Element GuidSymbol
 `GuidSymbol`Element obsahuje identifikátor GUID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz. ID pochází z `IDSymbol` prvku v `GuidSymbol` elementu. `GuidSymbol`Element má `name` atribut, který poskytuje popisný název identifikátoru GUID, který je obsažen v `value` atributu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <GuidSymbol name="guidMyCommandSet" value="{xxxxxxxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx}">

@@ -8,19 +8,19 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.F%2523.Code_Fixes
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 73d66e4f8611a08d6dee3733c30b075d71f6712c
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: ca1b3816786ab611af8acb1cb99eea406ca6ad45
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96039598"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943949"
 ---
 # <a name="options-text-editor--f--code-fixes"></a>Možnosti: textový editor > F # > opravy kódu
 
-Pomocí stránky možnosti oprav kódu můžete určit nastavení, které může pomáhat identifikovat chyby kódu a nabízet řešení. Chcete-li získat přístup k této **Tools** stránce Možnosti, zvolte  >  **možnost** nástroje a pak zvolte **textový editor**  >  **F #**  >  **opravy kódu**.
+Pomocí stránky možnosti oprav kódu můžete určit nastavení, které může pomáhat identifikovat chyby kódu a nabízet řešení. Chcete-li získat přístup k této stránce Možnosti, zvolte  >  **možnost** nástroje a pak zvolte **textový editor**  >  **F #**  >  **opravy kódu**.
 
 ## <a name="code-fixes"></a>Opravy kódu
 

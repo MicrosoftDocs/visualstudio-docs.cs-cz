@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 740ca4ec-79fa-4b98-8f9a-2a137f9f7f98
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31b5885ad6e08bd9e22049033d6191c97fdc857b
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 43b16287027826eeacaadca747aff4a1f9cad17a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994287"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943404"
 ---
 # <a name="groups-element"></a>Groups – element
 Obsahuje položky, které definují skupiny příkazů VSPackage.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Groups>

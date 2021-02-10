@@ -1,22 +1,22 @@
 ---
-title: Vytvoření projektu testování částí
+title: Vytvoření projektu testů jednotek
 description: Naučte se vytvořit projekt testování částí. Testovací projekt může být ve stejném řešení jako produkční kód, nebo může být v samostatném řešení.
 ms.custom: SEO-VS-2020
 ms.date: 01/29/2019
 ms.topic: how-to
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f0d438c05d3c9608c11903c02119d7c3e267a48b
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 8ca3cbe82bf4253e660ce69960570e40702c5512
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441843"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942357"
 ---
-# <a name="create-a-unit-test-project"></a>Vytvoření projektu testování částí
+# <a name="create-a-unit-test-project"></a>Vytvoření projektu testů jednotek
 
 Testy jednotek často zrcadlí strukturu testovaného kódu. Například projekt testu jednotek by byl vytvořen pro každý projekt kódu v produktu. Testovací projekt může být ve stejném řešení jako produkční kód, nebo může být v samostatném řešení. V řešení můžete mít více projektů testování částí.
 

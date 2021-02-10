@@ -6,17 +6,17 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3b21268b488eb0061c5c329e0afcb57ef1ec6e3a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: afde24347237ed3fc87d7a00ebdf21787d78909c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809921"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942657"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>Kurz: Začínáme s webovým rozhraním Django v aplikaci Visual Studio
 
@@ -35,7 +35,7 @@ V tomto kurzu se naučíte:
 ## <a name="prerequisites"></a>Požadavky
 
 - Visual Studio 2017 nebo novější ve Windows s následujícími možnostmi:
-  - Úloha **vývoje Pythonu** (karta**zatížení** v instalačním programu). Pokyny najdete v tématu [Instalace podpory Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md).
+  - Úloha **vývoje Pythonu** (karta **zatížení** v instalačním programu). Pokyny najdete v tématu [Instalace podpory Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md).
   - **Git pro Windows** a **GitHub Extension pro Visual Studio** na kartě **jednotlivé komponenty** v části **nástroje kódu**.
 
 Šablony projektů Django jsou také zahrnuty ve všech dřívějších verzích Python Tools for Visual Studio, avšak podrobnosti se mohou lišit od toho, co je popsáno v tomto kurzu (zejména v případě starších verzí rozhraní Django Framework).
@@ -90,7 +90,7 @@ Vzhledem k tomu, že jste v dialogovém okně **Nový projekt** vybrali možnost
 
     ![Team Explorer okno na stránce změny](media/django/step01-team-explorer-changes.png)
 
-1. Na stavovém řádku sady Visual Studio vyberte tlačítko nevložená potvrzení (šipka nahoru se **dvěma**) a otevřete tak na **Team Explorer**stránku **synchronizace** . Vzhledem k tomu, že máte pouze místní úložiště, stránka poskytuje snadné možnosti pro publikování úložiště v různých vzdálených úložištích.
+1. Na stavovém řádku sady Visual Studio vyberte tlačítko nevložená potvrzení (šipka nahoru se **dvěma**) a otevřete tak na **Team Explorer** stránku **synchronizace** . Vzhledem k tomu, že máte pouze místní úložiště, stránka poskytuje snadné možnosti pro publikování úložiště v různých vzdálených úložištích.
 
     ![Okno Team Explorer zobrazující dostupné možnosti úložiště Git pro správu zdrojového kódu](media/django/step01-team-explorer.png)
 
@@ -115,13 +115,13 @@ Další diskuzi o správě zdrojového kódu jako Automation najdete v článku 
 
 ### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>Otázka: Mohu aplikaci Visual Studio zabránit v automatickém potvrzování nového projektu?
 
-Odpověď: Ano. Pokud chcete automatické potvrzení zakázat, na stránce **Nastavení** v **Team Explorer**vyberte **Git**  >  **globální nastavení**Gitu, ve výchozím nastavení zrušte zaškrtnutí políčka **po sloučení označit změny**a pak vyberte **aktualizovat**.
+Odpověď: Ano. Pokud chcete automatické potvrzení zakázat, na stránce **Nastavení** v **Team Explorer** vyberte   >  **globální nastavení** Gitu, ve výchozím nastavení zrušte zaškrtnutí políčka **po sloučení označit změny** a pak vyberte **aktualizovat**.
 
 ## <a name="step-1-3-create-the-virtual-environment-and-exclude-it-from-source-control"></a>Krok 1-3: Vytvoření virtuálního prostředí a jeho vyloučení ze správy zdrojového kódu
 
 Nyní, když jste nakonfigurovali správu zdrojového kódu pro váš projekt, můžete vytvořit virtuální prostředí, které obsahuje nezbytné balíčky Django pro projekt. Pak můžete použít **Team Explorer** k vyloučení složky prostředí ze správy zdrojového kódu.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte **Přidat virtuální prostředí**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte **Přidat virtuální prostředí**.
 
     ![Příkaz Přidat virtuální prostředí v Průzkumník řešení](media/django/step01-add-virtual-environment-command.png)
 
@@ -159,7 +159,7 @@ Za druhé Otevřete příkazové okno, přejděte do složky, jako je *BasicProj
 
 Po dokončení vytváření projektu si Projděte často používaný kód projektu Django (který je znovu stejný jako generovaný příkazem CLI `django-admin startproject <project_name>` ).
 
-1. V kořenovém adresáři projektu je *Manage.py*Nástroj pro správu příkazového řádku Django, který sada Visual Studio automaticky nastaví jako spouštěcí soubor projektu. Nástroj spustíte na příkazovém řádku pomocí příkazu `python manage.py <command> [options]` . Pro běžné úlohy Django poskytuje Visual Studio vhodné příkazy nabídky. Klikněte pravým tlačítkem na projekt v **Průzkumník řešení** a vyberte **Python** . zobrazí se seznam. V průběhu tohoto kurzu narazíte na některé z těchto příkazů.
+1. V kořenovém adresáři projektu je *Manage.py* Nástroj pro správu příkazového řádku Django, který sada Visual Studio automaticky nastaví jako spouštěcí soubor projektu. Nástroj spustíte na příkazovém řádku pomocí příkazu `python manage.py <command> [options]` . Pro běžné úlohy Django poskytuje Visual Studio vhodné příkazy nabídky. Klikněte pravým tlačítkem na projekt v **Průzkumník řešení** a vyberte **Python** . zobrazí se seznam. V průběhu tohoto kurzu narazíte na některé z těchto příkazů.
 
     ![Příkazy Django v kontextové nabídce projektu Pythonu](media/django/step01-django-commands-menu.png)
 
@@ -198,7 +198,7 @@ Odpověď: Ano a ne. Django má integrovaný webový server, který se použív�
 
 ### <a name="question-whats-the-difference-between-using-the-debug-menu-commands-and-the-server-commands-on-the-projects-python-submenu"></a>Otázka: Jaký je rozdíl mezi použitím příkazů nabídky ladění a příkazů serveru v podnabídce Python projektu?
 
-Odpověď: Kromě příkazů nabídky **ladění** a tlačítek na panelu nástrojů můžete také spustit server pomocí příkazů spustit server v **Pythonu**  >  **Run server** nebo **Python**  >  **Spustit ladicí Server** v místní nabídce projektu. Oba příkazy otevřou okno konzoly, ve kterém se zobrazí místní adresa URL (localhost: port) pro spuštěný Server. Je však nutné ručně otevřít prohlížeč s touto adresou URL a spustit ladicí server automaticky nespustí ladicí program sady Visual Studio. Ladicí program můžete ke spuštěnému procesu připojit později, pokud chcete, pomocí příkazu **ladit**  >  **připojit k procesu** .
+Odpověď: Kromě příkazů nabídky **ladění** a tlačítek na panelu nástrojů můžete také spustit server pomocí příkazů spustit server v **Pythonu**  >   nebo   >  **Spustit ladicí Server** v místní nabídce projektu. Oba příkazy otevřou okno konzoly, ve kterém se zobrazí místní adresa URL (localhost: port) pro spuštěný Server. Je však nutné ručně otevřít prohlížeč s touto adresou URL a spustit ladicí server automaticky nespustí ladicí program sady Visual Studio. Ladicí program můžete ke spuštěnému procesu připojit později, pokud chcete, pomocí příkazu **ladit**  >  **připojit k procesu** .
 
 ## <a name="next-steps"></a>Další kroky
 

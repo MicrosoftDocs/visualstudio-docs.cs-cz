@@ -18,15 +18,15 @@ helpviewer_keywords:
 - GroupContentControl
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 83052ca3c61fe931c3360a1092ca23740ddcff3f
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 1dc962e372f4406fffb5cf8a6357f3826f0c8845
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528240"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942253"
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>Postupy: Ochrana částí dokumentů pomocí ovládacích prvků obsahu
   Při ochraně části dokumentu zabráníte uživatelům měnit nebo odstraňovat obsah v této části dokumentu. Existuje několik způsobů, jak můžete chránit části dokumentu aplikace systém Microsoft Office Word pomocí ovládacích prvků obsahu:

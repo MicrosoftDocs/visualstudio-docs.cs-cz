@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: e55a1098-15df-42a9-9f87-e3a99cf437dd
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33b2c1638b41afbdae56e0c4374937e7230dfffe
-ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
+ms.openlocfilehash: 2ce96da36a8c6eff0fda71d8a5d077721876ab8b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97616114"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943345"
 ---
 # <a name="keybinding-element"></a>Element Binding elementu
 Element vazby klíčů určuje klávesové zkratky pro příkazy.

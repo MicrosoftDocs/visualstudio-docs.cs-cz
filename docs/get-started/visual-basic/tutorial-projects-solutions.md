@@ -9,17 +9,17 @@ ms.custom:
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0277379c44a7d0334798920759438dce52ae16f8
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 36aabdd07dd7fa966a31d8fc3844e68d816c59ae
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901268"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944521"
 ---
 # <a name="learn-about-projects-and-solutions-using-visual-basic"></a>Další informace o projektech a řešeních pomocí Visual Basic
 
@@ -130,7 +130,7 @@ Nyní do řešení přidáme náš první projekt. Začneme s prázdným projekt
 
 Máme prázdný projekt. Pojďme přidat soubor kódu.
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši nebo místní nabídky projektu **QuickDate** v části **Solution Explorer** vyberte možnost **Přidat**  >  **novou položku**.
+1. V Průzkumník řešení klikněte pravým tlačítkem myši nebo místní nabídky projektu **QuickDate** v části vyberte možnost **Přidat**  >  **novou položku**.
 
    Otevře se dialogové okno **Přidat novou položku** .
 

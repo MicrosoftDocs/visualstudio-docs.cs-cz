@@ -6,23 +6,23 @@ ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 018b9a6707ea46a9b1c46f820faf7bd47dac1ff9
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e77d4ea1d46914962f0791af91ad6c1efe21825c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809895"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942513"
 ---
 # <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>Kurz: Začínáme s webovým rozhraním v baňce v aplikaci Visual Studio
 
 [Baňka](https://palletsprojects.com/p/flask/) je odlehčená architektura Pythonu pro webové aplikace, která poskytuje základní informace o směrování adres URL a vykreslování stránky.
 
-Baňka se nazývá "mikro" architektura, protože přímo neposkytuje funkce, jako je ověřování formuláře, abstrakce databáze, ověřování atd. Tyto funkce jsou místo toho k dispozici speciálními balíčky Pythonu, které se nazývají *rozšíření*baněk. Rozšíření se hladce integrují s použitím baňky tak, aby se zobrazila jako součást samotné baňky. Například samotná baňka neposkytuje modul šablony stránky. Šablonování je poskytována rozšířeními, jako jsou Jinja a Jade, jak je znázorněno v tomto kurzu.
+Baňka se nazývá "mikro" architektura, protože přímo neposkytuje funkce, jako je ověřování formuláře, abstrakce databáze, ověřování atd. Tyto funkce jsou místo toho k dispozici speciálními balíčky Pythonu, které se nazývají *rozšíření* baněk. Rozšíření se hladce integrují s použitím baňky tak, aby se zobrazila jako součást samotné baňky. Například samotná baňka neposkytuje modul šablony stránky. Šablonování je poskytována rozšířeními, jako jsou Jinja a Jade, jak je znázorněno v tomto kurzu.
 
 V tomto kurzu se naučíte:
 
@@ -41,7 +41,7 @@ V průběhu těchto kroků vytvoříte jedno řešení sady Visual Studio, kter�
 ## <a name="prerequisites"></a>Požadavky
 
 - Visual Studio 2017 nebo novější ve Windows s následujícími možnostmi:
-  - Úloha **vývoje Pythonu** (karta**zatížení** v instalačním programu). Pokyny najdete v tématu [Instalace podpory Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md).
+  - Úloha **vývoje Pythonu** (karta **zatížení** v instalačním programu). Pokyny najdete v tématu [Instalace podpory Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md).
   - **Git pro Windows** a **GitHub Extension pro Visual Studio** na kartě **jednotlivé komponenty** v části **nástroje kódu**.
 
 Šablony projektů jsou součástí všech dřívějších verzí Python Tools for Visual Studio, ale podrobnosti se mohou lišit od toho, co je popsáno v tomto kurzu.
@@ -85,7 +85,7 @@ Vzhledem k tomu, že jste v dialogovém okně **Nový projekt** vybrali možnost
 
     ![Team Explorer okno na stránce změny](media/flask/step01-team-explorer-changes.png)
 
-1. Na stavovém řádku sady Visual Studio vyberte tlačítko nevložená potvrzení (šipka nahoru se **dvěma**) a otevřete tak na **Team Explorer**stránku **synchronizace** . Vzhledem k tomu, že máte pouze místní úložiště, stránka poskytuje snadné možnosti pro publikování úložiště v různých vzdálených úložištích.
+1. Na stavovém řádku sady Visual Studio vyberte tlačítko nevložená potvrzení (šipka nahoru se **dvěma**) a otevřete tak na **Team Explorer** stránku **synchronizace** . Vzhledem k tomu, že máte pouze místní úložiště, stránka poskytuje snadné možnosti pro publikování úložiště v různých vzdálených úložištích.
 
     ![Okno Team Explorer zobrazující dostupné možnosti úložiště Git pro správu zdrojového kódu](media/flask/step01-team-explorer.png)
 
@@ -110,13 +110,13 @@ Další diskuzi o správě zdrojového kódu jako Automation najdete v článku 
 
 ### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>Otázka: Mohu aplikaci Visual Studio zabránit v automatickém potvrzování nového projektu?
 
-Odpověď: Ano. Pokud chcete automatické potvrzení zakázat, na stránce **Nastavení** v **Team Explorer**vyberte **Git**  >  **globální nastavení**Gitu, ve výchozím nastavení zrušte zaškrtnutí políčka **po sloučení označit změny**a pak vyberte **aktualizovat**.
+Odpověď: Ano. Pokud chcete automatické potvrzení zakázat, na stránce **Nastavení** v **Team Explorer** vyberte   >  **globální nastavení** Gitu, ve výchozím nastavení zrušte zaškrtnutí políčka **po sloučení označit změny** a pak vyberte **aktualizovat**.
 
 ## <a name="step-1-3-create-the-virtual-environment-and-exclude-it-from-source-control"></a>Krok 1-3: Vytvoření virtuálního prostředí a jeho vyloučení ze správy zdrojového kódu
 
 Teď, když jste nakonfigurovali správu zdrojového kódu pro svůj projekt, můžete vytvořit virtuální prostředí, které bude vyžadovat, aby byly potřebné balíčky, které projekt vyžaduje. Pak můžete použít **Team Explorer** k vyloučení složky prostředí ze správy zdrojového kódu.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte **Přidat virtuální prostředí**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte **Přidat virtuální prostředí**.
 
     ![Příkaz Přidat virtuální prostředí v Průzkumník řešení](media/flask/step01-add-virtual-environment-command.png)
 
@@ -242,7 +242,7 @@ Odpověď: Ano. Rozbalte uzel **prostředí Pythonu** , klikněte pravým tlač�
 
 ### <a name="question-whats-the-difference-between-using-the-debug-menu-commands-and-the-server-commands-on-the-projects-python-submenu"></a>Otázka: Jaký je rozdíl mezi použitím příkazů nabídky ladění a příkazů serveru v podnabídce Python projektu?
 
-Odpověď: Kromě příkazů nabídky **ladění** a tlačítek na panelu nástrojů můžete také spustit server pomocí příkazů spustit server v **Pythonu**  >  **Run server** nebo **Python**  >  **Spustit ladicí Server** v místní nabídce projektu. Oba příkazy otevřou okno konzoly, ve kterém se zobrazí místní adresa URL (localhost: port) pro spuštěný Server. Je však nutné ručně otevřít prohlížeč s touto adresou URL a spustit ladicí server automaticky nespustí ladicí program sady Visual Studio. Ladicí program můžete ke spuštěnému procesu připojit později, pokud chcete, pomocí příkazu **ladit**  >  **připojit k procesu** .
+Odpověď: Kromě příkazů nabídky **ladění** a tlačítek na panelu nástrojů můžete také spustit server pomocí příkazů spustit server v **Pythonu**  >   nebo   >  **Spustit ladicí Server** v místní nabídce projektu. Oba příkazy otevřou okno konzoly, ve kterém se zobrazí místní adresa URL (localhost: port) pro spuštěný Server. Je však nutné ručně otevřít prohlížeč s touto adresou URL a spustit ladicí server automaticky nespustí ladicí program sady Visual Studio. Ladicí program můžete ke spuštěnému procesu připojit později, pokud chcete, pomocí příkazu **ladit**  >  **připojit k procesu** .
 
 ## <a name="next-steps"></a>Další kroky
 

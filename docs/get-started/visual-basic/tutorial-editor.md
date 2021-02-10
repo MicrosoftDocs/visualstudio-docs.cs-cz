@@ -7,17 +7,17 @@ ms.technology: vs-ide-general
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: c46120c369fa130e83620549ca0bc084a5075f7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 227d54fbc2734290954fc1c847a34846bb6dc5cf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235144"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944534"
 ---
 # <a name="learn-to-use-the-code-editor-with-visual-basic"></a>Naučte se používat editor kódu s Visual Basic
 
@@ -60,7 +60,7 @@ Začněte vytvořením nového souboru a přidáním nějakého kódu do něj.
 
 2. V nabídce **soubor** na řádku nabídek vyberte možnost **nový soubor**.
 
-3. V dialogovém okně **nový soubor** v kategorii **obecné** zvolte položku **Visual Basic třída**a pak zvolte možnost **otevřít**.
+3. V dialogovém okně **nový soubor** v kategorii **obecné** zvolte položku **Visual Basic třída** a pak zvolte možnost **otevřít**.
 
    V editoru se otevře nový soubor s kostrou Visual Basic třídy. (Už si můžete všimnout, že nemusíte vytvářet úplný projekt sady Visual Studio, abyste získali některé výhody, které Editor kódu nabízí, jako je například zvýrazňování syntaxe. Vše, co potřebujete, je soubor kódu!)
 
@@ -174,7 +174,7 @@ Nikdo nezíská kód napravo poprvé a jedna z věcí, kterou je třeba změnit,
 
    Automaticky otevíraná okna pro **přejmenování** se zobrazí v pravém horním rohu editoru.
 
-1. Když je proměnná `_words` stále vybraná, zadejte požadované názvy **slov**. Všimněte si, že odkaz na `words` v dotazu je také automaticky přejmenován. Před stisknutím klávesy **ENTER** nebo kliknutím na možnost **použít**zaškrtněte políčko **zahrnout komentáře** v automaticky otevíraném okně pro **přejmenování** .
+1. Když je proměnná `_words` stále vybraná, zadejte požadované názvy **slov**. Všimněte si, že odkaz na `words` v dotazu je také automaticky přejmenován. Před stisknutím klávesy **ENTER** nebo kliknutím na možnost **použít** zaškrtněte políčko **zahrnout komentáře** v automaticky otevíraném okně pro **přejmenování** .
 
    ![přejmenování dialogového okna](media/tutorial-rename.png)
 
