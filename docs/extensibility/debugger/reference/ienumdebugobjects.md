@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0950364c-6c8a-4b6c-ba37-c6aa359fa72c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c04409fb695613fea5d54b285946c04719fbe5b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b86d632d35063aa31e6be9e11adb266e5e36fa6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80716267"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957072"
 ---
 # <a name="ienumdebugobjects"></a>IEnumDebugObjects
 > [!IMPORTANT]
@@ -45,7 +45,7 @@ IEnumDebugObjects : IUnknown
 |[Další](../../../extensibility/debugger/reference/ienumdebugobjects-next.md)|Načte další sadu objektů [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) z výčtu.|
 |[Přeskočit](../../../extensibility/debugger/reference/ienumdebugobjects-skip.md)|Přeskočí zadaný počet položek.|
 |[Reset](../../../extensibility/debugger/reference/ienumdebugobjects-reset.md)|Obnoví výčet na první položku.|
-|[Klonování](../../../extensibility/debugger/reference/ienumdebugobjects-clone.md)|Načte kopii aktuálního výčtu.|
+|[Klonovat](../../../extensibility/debugger/reference/ienumdebugobjects-clone.md)|Načte kopii aktuálního výčtu.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugobjects-getcount.md)|Načte počet položek ve výčtu.|
 
 ## <a name="remarks"></a>Poznámky

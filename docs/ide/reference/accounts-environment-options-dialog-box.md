@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 3cfe09d2-1120-46e8-b882-f7056acb778b
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2cd9f08cb1358d788db661871f6d229d0579ddbd
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: b0c640b670802e3bb69a26d0b49bee6695955170
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95871142"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956773"
 ---
 # <a name="accounts-environment-options-dialog-box"></a>Účty, prostředí, dialogové okno Možnosti
 
@@ -31,7 +31,7 @@ Tuto možnost použijte, chcete-li určit, zda chcete synchronizovat nastavení 
 
 ### <a name="enable-device-code-flow"></a>Povolit tok kódu zařízení
 
-Pokud je vybrána tato možnost, chování aplikace Visual Studio se změní po výběru možnosti **Přidat účet** na **File**  >  stránce **Nastavení účtu** souboru. Namísto zobrazení na stránce **účtu** se zobrazí dialogové okno, které vám poskytne adresu URL a kód pro vložení do webového prohlížeče pro přihlášení. Tato možnost je užitečná v případech, kdy se nemůžete přihlásit k sadě Visual Studio běžným způsobem, například pokud používáte starší verzi Internet Exploreru nebo pokud brána firewall omezuje přístup. Další informace najdete v tématu [práce s několika uživatelskými účty](../work-with-multiple-user-accounts.md#add-an-account-using-device-code-flow).
+Pokud je vybrána tato možnost, chování aplikace Visual Studio se změní po výběru možnosti **Přidat účet** na   >  stránce **Nastavení účtu** souboru. Namísto zobrazení na stránce **účtu** se zobrazí dialogové okno, které vám poskytne adresu URL a kód pro vložení do webového prohlížeče pro přihlášení. Tato možnost je užitečná v případech, kdy se nemůžete přihlásit k sadě Visual Studio běžným způsobem, například pokud používáte starší verzi Internet Exploreru nebo pokud brána firewall omezuje přístup. Další informace najdete v tématu [práce s několika uživatelskými účty](../work-with-multiple-user-accounts.md#add-an-account-using-device-code-flow).
 
 ## <a name="registered-azure-clouds"></a>Registrované cloudy Azure
 

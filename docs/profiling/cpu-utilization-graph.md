@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5332fd38-622d-47a3-874f-8c2fd7a30f95
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b310510a87e450c0d6b83a457cd117267ce0c9b8
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 5ec57ac6601557bf644c818822fea70a296fd0c3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719016"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956006"
 ---
 # <a name="cpu-utilization-graph"></a>Graf využití procesoru
 Graf využití procesoru zobrazuje úroveň využití v aplikaci v průběhu času. Osa X představuje dobu trvání trasování a osa y představuje počet logických jader v systému. Graf nezobrazuje, které konkrétní jádro je v určitou dobu aktivní. Například pokud jsou dvě jádra spuštěny na úrovni 50% kapacity za dané časové období, pak toto zobrazení ukazuje, že je využíváno jedno logické jádro.

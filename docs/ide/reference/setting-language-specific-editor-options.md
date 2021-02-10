@@ -10,15 +10,15 @@ helpviewer_keywords:
 - editor settings
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1060abe1b16b9391eadb88be1499fa2231fb1859
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 5d83319ed679a08b8c940774b723ce3e919b4b94
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560743"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957657"
 ---
 # <a name="set-language-specific-editor-options"></a>Nastavení možností editoru pro konkrétní jazyk
 
@@ -47,7 +47,7 @@ Popisuje nastavení, která určují, jak se bude seznam dokončování technolo
 [Možnosti, textový editor, XAML, formátování](../../ide/reference/options-text-editor-xaml-formatting.md)\
 Popisuje nastavení pro uspořádání elementů a atributů v dokumentech XAML.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přizpůsobení editoru](../how-to-change-text-case-in-the-editor.md)
 - [Vytvoření přenosného nastavení vlastního editoru pomocí řešení EditorConfig](../../ide/create-portable-custom-editor-options.md)

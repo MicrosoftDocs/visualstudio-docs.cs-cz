@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Project Designer, Services page
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c286dbd632e09a9a9c2c2b62ac2002f2e48f283
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 50d9e564b6637feb19ef99c3d33c0ea5c1b7b1fd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560795"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957826"
 ---
 # <a name="services-page-project-designer"></a>Stránka Služby, návrhář projektu
 
@@ -75,7 +75,7 @@ Určuje umístění služby Profile (webové nastavení).
 
 Otevře [dialogové okno Upřesnit nastavení pro služby](../../ide/reference/advanced-settings-for-services-dialog-box.md), které můžete použít k přepsání výchozího chování. Toto dialogové okno můžete například použít k určení databáze pro úložiště offline místo použití místního systému souborů. Další informace najdete v tématu [Pokročilá nastavení pro služby v dialogovém okně](../../ide/reference/advanced-settings-for-services-dialog-box.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Klientské aplikační služby](/dotnet/framework/common-client-technologies/client-application-services)
 - [Dialogové okno Pokročilé nastavení služeb](../../ide/reference/advanced-settings-for-services-dialog-box.md)

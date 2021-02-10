@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 15a048c8-5ad3-448e-b6e9-e3c5d7147ed2
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b82eaf6ca52b04d39e9f776feca74f5bb223a0d5
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 70b0d85ea161a3f938013c01702dd2ccce73a31d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93048179"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956097"
 ---
 # <a name="standard-and-custom-toolset-configurations"></a>Standardní a vlastní konfigurace sady nástrojů
 
@@ -76,9 +76,9 @@ Visual Studio 2017 a novější verze nepoužívají klíč registru pro cestu k
 
 ## <a name="custom-toolset-definitions"></a>Vlastní definice sady nástrojů
 
- Pokud standardní sada nástrojů nesplňuje požadavky na sestavení, můžete vytvořit vlastní sadu nástrojů. Například můžete mít scénář testovacího prostředí, ve kterém musíte mít samostatný systém pro sestavování projektů v jazyce C++. Pomocí vlastní sady nástrojů můžete přiřadit k atributu vlastní hodnoty `ToolsVersion` při vytváření projektů nebo spuštění *MSBuild.exe* . Tímto způsobem můžete také použít `$(MSBuildToolsPath)` vlastnost pro import souborů *. targets* z tohoto adresáře a definovat vlastní vlastnosti sady nástrojů, které lze použít pro libovolný projekt, který tuto sadu nástrojů používá.
+ Pokud standardní sada nástrojů nesplňuje požadavky na sestavení, můžete vytvořit vlastní sadu nástrojů. Například můžete mít scénář testovacího prostředí, ve kterém musíte mít samostatný systém pro sestavování projektů v jazyce C++. Pomocí vlastní sady nástrojů můžete přiřadit k atributu vlastní hodnoty `ToolsVersion` při vytváření projektů nebo spuštění *MSBuild.exe*. Tímto způsobem můžete také použít `$(MSBuildToolsPath)` vlastnost pro import souborů *. targets* z tohoto adresáře a definovat vlastní vlastnosti sady nástrojů, které lze použít pro libovolný projekt, který tuto sadu nástrojů používá.
 
- Zadejte vlastní sadu nástrojů v konfiguračním souboru pro *MSBuild.exe* (nebo pro vlastní nástroj, který hostuje modul MSBuild, pokud to je to, co používáte). Konfigurační soubor pro *MSBuild.exe* může například zahrnovat následující definici sady nástrojů, pokud chcete definovat sadu nástrojů s názvem *MyCustomToolset* .
+ Zadejte vlastní sadu nástrojů v konfiguračním souboru pro *MSBuild.exe* (nebo pro vlastní nástroj, který hostuje modul MSBuild, pokud to je to, co používáte). Konfigurační soubor pro *MSBuild.exe* může například zahrnovat následující definici sady nástrojů, pokud chcete definovat sadu nástrojů s názvem *MyCustomToolset*.
 
 ```xml
 <msbuildToolsets default="MyCustomToolset">

@@ -6,17 +6,17 @@ ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: cdaff34c7eb2f9eba7c075127647c2eacbb736f9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e10f9b628d1d9fbbdb2911977fe7e63b1a7b6d57
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86033348"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957475"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Testování částí JavaScriptu a TypeScript v aplikaci Visual Studio
 
@@ -67,7 +67,7 @@ Pokud jste nenastavili možnosti testu jednotek ve vlastnostech projektu, je nut
 > [!Note]
 > Možnosti testu jednotek budou mít přednost před nastaveními pro jednotlivé soubory.
 
-Po otevření Průzkumníka testů (zvolit **test**  >  **Windows**  >  **Průzkumníka testů**systému Windows), Visual Studio zjistí a zobrazí testy. Pokud testy nejsou zpočátku zobrazeny, pak znovu sestavte projekt, aby se seznam aktualizoval.
+Po otevření Průzkumníka testů (zvolit **test**  >    >  **Průzkumníka testů** systému Windows), Visual Studio zjistí a zobrazí testy. Pokud testy nejsou zpočátku zobrazeny, pak znovu sestavte projekt, aby se seznam aktualizoval.
 
 ![Průzkumník testů](../javascript/media/UnitTestsDiscoveryMocha.png)
 
@@ -154,7 +154,7 @@ Zjišťování dostupných testovacích rozhraní probíhá při spuštění sad
 ## <a name="unit-tests-in-other-project-types"></a>Testování částí v jiných typech projektů
 Nejste omezeni na psaní testů jednotek pouze v projektech Node.js. Když přidáte vlastnosti TestFramework a TestRoot do jakéhokoli projektu C# nebo Visual Basic, tyto testy budou vyčísleny a lze je spustit pomocí okna Průzkumník testů.
 
-Pokud to chcete povolit, klikněte pravým tlačítkem myši na uzel projektu v Průzkumník řešení, zvolte **Uvolnit projekt**a pak zvolte **upravit projekt**. Poté v souboru projektu přidejte následující dva prvky do skupiny vlastností.
+Pokud to chcete povolit, klikněte pravým tlačítkem myši na uzel projektu v Průzkumník řešení, zvolte **Uvolnit projekt** a pak zvolte **upravit projekt**. Poté v souboru projektu přidejte následující dva prvky do skupiny vlastností.
 
 > [!NOTE]
 > Ujistěte se, že skupina vlastností, na kterou přidáváte prvky, nemá zadanou podmínku.

@@ -8,13 +8,13 @@ helpviewer_keywords:
 - editorconfig [Visual Studio]
 author: mikadumont
 ms.author: midumont
-manager: jillfra
-ms.openlocfilehash: a1f66368972614347df9eebe33af435987ea9cc8
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+manager: jmartens
+ms.openlocfilehash: 8ab90fda1f14521d59982ef7b5d20998cf61e505
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006494"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956838"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>Vytvoření přenosného nastavení vlastního editoru pomocí řešení EditorConfig
 
@@ -26,7 +26,7 @@ Nastavení EditorConfig jsou podporovaná mnoha editory kódu a prostředími ID
 
 Když do projektu přidáte soubor EditorConfig v aplikaci Visual Studio, nové řádky kódu jsou formátovány podle nastavení EditorConfig. Formátování stávajícího kódu se nemění, Pokud nespustíte některý z následujících příkazů:
 
- - [Vyčištění kódu](../ide/code-styles-and-code-cleanup.md) (**CTRL** + **K**, **CTRL +** + **E**), který aplikuje nastavení prázdných mezer, jako je styl odsazení a vybraná nastavení stylu kódu, jako je například způsob řazení `using` direktiv.
+ - [Vyčištění kódu](../ide/code-styles-and-code-cleanup.md) (**CTRL** + **K**, **CTRL +** + ), který aplikuje nastavení prázdných mezer, jako je styl odsazení a vybraná nastavení stylu kódu, jako je například způsob řazení `using` direktiv.
  - **Upravit** > **Rozšířené možnosti** > **Formátovat dokument** (nebo **CTRL +** + **k**, **CTRL** + **D** ve výchozím profilu), který aplikuje jenom nastavení mezer, jako je styl odsazení.
 
  ::: moniker-end
@@ -106,7 +106,7 @@ Existuje několik dalších způsobů, jak můžete přidat soubor EditorConfig 
 
 - [Funkce odvození kódu](/visualstudio/intellicode/code-style-inference) IntelliCode pro Visual Studio odvodí vaše styly kódu z existujícího kódu. Pak vytvoří neprázdný soubor EditorConfig s předem definovanými preferencemi stylu kódu.
 
-- Od sady Visual Studio 2019 můžete [vygenerovat soubor EditorConfig v závislosti na nastavení stylu kódu](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files) v **Tools**  >  **možnostech** nástrojů.
+- Od sady Visual Studio 2019 můžete [vygenerovat soubor EditorConfig v závislosti na nastavení stylu kódu](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files) v   >  **možnostech** nástrojů.
 
 ## <a name="file-hierarchy-and-precedence"></a>Hierarchie souborů a Priorita
 
@@ -168,7 +168,7 @@ Pokud je soubor EditorConfig kdekoli ve struktuře adresáře na umístění pro
 
    **"Předvolby uživatele pro tento typ souboru se přepsaly konvencemi psaní kódu tohoto projektu."**
 
-To znamená, že pokud se **v**  >  **Options**  >  souboru EditorConfig v projektu ve struktuře adresáře nebo nad projektem v rámci struktury v adresáři nachází všechna **nastavení editoru** (například velikost odsazení a styl, velikost tabulátoru nebo konvence kódování), nahradí konvence v souboru EditorConfig nastavení v **možnostech**. Toto chování můžete řídit přepnutím možnosti **konvence psaní kódu projektu** v části **nástroje**  >  **Options**  >  **textový editor**. Zrušením zaškrtnutí možnosti vypnete podporu EditorConfig pro Visual Studio.
+To znamená, že pokud se **v**  >    >  souboru EditorConfig v projektu ve struktuře adresáře nebo nad projektem v rámci struktury v adresáři nachází všechna **nastavení editoru** (například velikost odsazení a styl, velikost tabulátoru nebo konvence kódování), nahradí konvence v souboru EditorConfig nastavení v **možnostech**. Toto chování můžete řídit přepnutím možnosti **konvence psaní kódu projektu** v části **nástroje**  >    >  **textový editor**. Zrušením zaškrtnutí možnosti vypnete podporu EditorConfig pro Visual Studio.
 
 ![Možnosti nástrojů – Sledujte konvence psaní kódu projektu](media/coding_conventions_option.png)
 

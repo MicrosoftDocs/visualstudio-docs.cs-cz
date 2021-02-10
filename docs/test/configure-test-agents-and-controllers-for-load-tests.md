@@ -8,13 +8,13 @@ helpviewer_keywords:
 - load tests, test agents and controllers
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: e70c1f3783945fbea00816d961f8ae6518ff726b
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+manager: jmartens
+ms.openlocfilehash: 50356044b4463353f99ddf93ac41e08a572f3879
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442609"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957241"
 ---
 # <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>Přehled testovacích agentů a testovacích kontrolérů pro spouštění zátěžových testů
 
@@ -39,7 +39,7 @@ Tato architektura přináší následující výhody:
 
 - Možnost škálovat generování zátěže přidáváním dalších testovacích agentů k testovacímu kontroléru.
 
-- Pružnost při instalaci softwaru klientu, testovacího kontroléru a testovacího agentu na stejném počítači i různých počítačích. Například:
+- Pružnost při instalaci softwaru klientu, testovacího kontroléru a testovacího agentu na stejném počítači i různých počítačích. Příklad:
 
    **Místní konfigurace:**
 

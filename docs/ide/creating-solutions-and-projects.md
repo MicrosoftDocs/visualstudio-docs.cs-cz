@@ -13,15 +13,15 @@ helpviewer_keywords:
 - projects [Visual Studio], creating
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 88bbead675bcf8001e17fe731bc141ab90c42b98
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: 2f702908c60b08ac1eaae5aa1f941a2f56eaf8fd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847062"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956799"
 ---
 # <a name="work-with-solutions-and-projects"></a>Práce s řešeními a projekty
 

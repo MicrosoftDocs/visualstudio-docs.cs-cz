@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 737fda23-b852-45c4-a9fe-41cbce6ba70f
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a6197201ed35520ba8d362b6aa448fe625a2fe3a
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: 6b520d3bedf31bc09dc0cf48e86777872176e2e0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96616366"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957618"
 ---
 # <a name="shell-command"></a>Prostředí – příkaz
 Spustí spustitelné programy v rámci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
@@ -45,7 +45,7 @@ Povinná hodnota. Cesta a název souboru, který se má provést, nebo dokument,
 
 Nepovinný parametr. Všechny argumenty, které se mají předat vyvolanému programu.
 
-## <a name="switches"></a>Přepínače
+## <a name="switches"></a>přepínače,
 /CommandWindow [nebo]/Command [nebo]/c [or]/cmd
 
 Nepovinný parametr. Určuje, že výstup pro spustitelný soubor je zobrazen v **příkazovém** okně.

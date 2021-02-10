@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: dab3ba13-2f92-4827-92bd-1be3c35bc48b
 author: Mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e76be0482353ffe4740956ab16f24d6ce82f4da
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: f52d02407316fbc8f9a7b5e3db1c02a3566cda87
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348512"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957579"
 ---
 # <a name="signing-page-project-designer"></a>Stránka Podepisování, návrhář projektu (C#)
 
@@ -51,7 +51,7 @@ Umožňuje vybrat existující certifikát z osobního úložiště certifikát�
 
 Když kliknete na **vybrat ze Storu** , otevře se dialogové okno **Vybrat certifikát** , ve kterém najdete seznam certifikátů v osobním úložišti certifikátů, které jsou aktuálně platné (neprošlé), a které mají privátní klíče. Účel certifikátu, který vyberete, by měl zahrnovat podepisování kódu.
 
-Pokud kliknete na **Zobrazit vlastnosti certifikátu** , zobrazí se dialogové okno **Podrobnosti o certifikátu** . Toto dialogové okno obsahuje podrobné informace o certifikátu a obsahuje další možnosti. Kliknutím na Další informace **o certifikátech** můžete zobrazit další informace o nápovědě.
+Pokud kliknete na **Zobrazit vlastnosti certifikátu**, zobrazí se dialogové okno **Podrobnosti o certifikátu** . Toto dialogové okno obsahuje podrobné informace o certifikátu a obsahuje další možnosti. Kliknutím na Další informace **o certifikátech** můžete zobrazit další informace o nápovědě.
 
 **Vybrat ze souboru** – tlačítko
 

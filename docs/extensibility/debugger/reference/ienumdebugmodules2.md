@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4fe28074-a960-41ad-b74d-b57f04c0c0ad
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 612285aa4d5a249c0f922ccae88d98a7df83187b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dfcd594ab8764cedb8cbe2ea312675f884ae2338
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80716444"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957150"
 ---
 # <a name="ienumdebugmodules2"></a>IEnumDebugModules2
 Toto rozhraní vytváří seznam modulů.
@@ -42,7 +42,7 @@ IEnumDebugModules2 : IUnknown
 |[Další](../../../extensibility/debugger/reference/ienumdebugmodules2-next.md)|Načte zadaný počet modulů v sekvenci výčtu.|
 |[Přeskočit](../../../extensibility/debugger/reference/ienumdebugmodules2-skip.md)|Přeskočí zadaný počet modulů v sekvenci výčtu.|
 |[Reset](../../../extensibility/debugger/reference/ienumdebugmodules2-reset.md)|Obnoví posloupnost výčtu na začátek.|
-|[Klonování](../../../extensibility/debugger/reference/ienumdebugmodules2-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|
+|[Klonovat](../../../extensibility/debugger/reference/ienumdebugmodules2-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugmodules2-getcount.md)|Získá počet modulů.|
 
 ## <a name="remarks"></a>Poznámky

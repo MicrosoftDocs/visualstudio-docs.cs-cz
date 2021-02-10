@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Domain-Specific Language, diagram
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fe27eb7dcfb8a984fceaee0700e1df44b6de4ef1
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 943b634114c28f6f914926c74861a902c663523e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361947"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956162"
 ---
 # <a name="properties-of-diagrams"></a>Vlastnosti diagramů
 Můžete nastavit vlastnosti, které určují, jak se budou diagramy zobrazovat ve vygenerovaném návrháři. Můžete například zadat výchozí barvu textu v diagramu.
@@ -43,10 +43,10 @@ Můžete nastavit vlastnosti, které určují, jak se budou diagramy zobrazovat 
 |Poznámky|Neformální poznámky, které jsou spojeny s tímto elementem.|\<none>|
 |Zpřístupňuje barvu výplně jako vlastnost.|Pokud `True` uživatel může nastavit barvu výplně diagramu vygenerovaného návrháře. Tuto vlastnost nastavíte tak, že kliknete pravým tlačítkem myši na obrazec diagramu a kliknete na **Přidat vystaveno**.|Ne|
 |Zpřístupňuje barvu textu jako vlastnost|Pokud `True` uživatel může nastavit barvu textu diagramu ve vygenerovaném návrháři. Tuto vlastnost nastavíte tak, že kliknete pravým tlačítkem myši na obrazec diagramu a kliknete na **Přidat vystaveno**.|Ne|
-|Popis|Popis, který se používá k dokumentování vygenerovaného návrháře.|\<none>|
+|Description|Popis, který se používá k dokumentování vygenerovaného návrháře.|\<none>|
 |Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři pro tento diagram.|\<none>|
 |Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tento diagram.|\<none>|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Glosář nástrojů jazyka specifického pro doménu](/previous-versions/bb126564(v=vs.100))

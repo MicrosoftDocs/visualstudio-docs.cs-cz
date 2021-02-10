@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 403c2a51-3ba5-431f-a1dd-2f3b2046c00c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d577ff2f5848f2cb348bcaccf57875507018634b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cce45c926700779906881bc4a4607b05f0732be3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80716782"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956396"
 ---
 # <a name="ienumdebugfields"></a>IEnumDebugFields
 Toto rozhraní představuje kolekci objektů, které implementují rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) .
@@ -42,7 +42,7 @@ IEnumDebugFields : IUnknown
 |[Další](../../../extensibility/debugger/reference/ienumdebugfields-next.md)|Načte další sadu objektů [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) z výčtu.|
 |[Přeskočit](../../../extensibility/debugger/reference/ienumdebugfields-skip.md)|Přeskočí zadaný počet položek.|
 |[Reset](../../../extensibility/debugger/reference/ienumdebugfields-reset.md)|Obnoví výčet na první položku.|
-|[Klonování](../../../extensibility/debugger/reference/ienumdebugfields-clone.md)|Načte kopii aktuálního výčtu.|
+|[Klonovat](../../../extensibility/debugger/reference/ienumdebugfields-clone.md)|Načte kopii aktuálního výčtu.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md)|Načte počet položek ve výčtu.|
 
 ## <a name="remarks"></a>Poznámky
@@ -55,7 +55,7 @@ IEnumDebugFields : IUnknown
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Viz také
-- [Rozhraní poskytovatele symbolů ](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
+- [Rozhraní poskytovatele symbolů](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)
 - [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)
 - [GetNamespacesUsedAtAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnamespacesusedataddress.md)

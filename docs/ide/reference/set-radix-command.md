@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 6ffd1554-7530-4da4-b5f5-e276a5034f3b
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b47c30ed938a83a2b4c47f73f55b5f7ca1db6a62
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: 50d0097debbd7e91906202b85e8e9e6dab36a27d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96616405"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957683"
 ---
 # <a name="set-radix-command"></a>Nastavit základ – příkaz
 Nastaví nebo vrátí číselnou základnu použitou k zobrazení celočíselných hodnot.

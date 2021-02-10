@@ -11,15 +11,15 @@ helpviewer_keywords:
 - constraints, architectural
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bfef2f9397fbe8dfeceaa8789cf8d118315b26d
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 06f4baed4851681065f3f7ccafecd3af339398f9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363962"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957371"
 ---
 # <a name="dependency-diagrams-guidelines"></a>Diagramy závislostí: pokyny
 
@@ -104,7 +104,7 @@ Obvykle se zobrazí nějaké závislosti, které by neměly existovat. Tyto záv
 
 Chcete-li popsat změny, které plánujete udělat v systému nebo zamýšlené architektuře, použijte následující postup pro úpravu diagramu závislostí. Můžete také zvážit provedení některých změn refaktoringu pro zlepšení struktury kódu před jeho rozšířením. Viz [vylepšení struktury kódu](#Improving).
 
-|**Schopn**|**Proveďte tyto kroky**|
+|**Do**|**Proveďte tyto kroky**|
 |-|-|
 |Odstranit závislost, která neexistuje|Klikněte na závislost a potom stiskněte **Delete**.|
 |Změna nebo omezení směru závislosti|Nastavte vlastnost **Direction** .|
@@ -174,7 +174,7 @@ Během procesu vývoje můžete chtít potlačit některé vykázané konflikty 
 
 Chcete-li zajistit, aby budoucí změny v kódu odpovídaly diagramům závislostí, zahrňte ověřování vrstvy do procesu standardního sestavení vašeho řešení. Kdykoli ostatní členové týmu sestaví řešení, všechny rozdíly mezi závislostmi v kódu a diagramem závislostí budou hlášeny jako chyby sestavení. Další informace o tom, jak zahrnout ověřování vrstev v procesu sestavení, naleznete v tématu [ověření kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)
 - [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)

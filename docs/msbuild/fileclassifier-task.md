@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 14e03310-fcc0-4bb2-a84d-cda12be66367
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f4a57d60c6e1dae0c42e30dce856a147fda0226
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 0f030a240bf02b3261ce903803095b83555a4531
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436906"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957358"
 ---
 # <a name="fileclassifier-task"></a>FileClassifier – úloha
 
@@ -39,7 +39,7 @@ Tento <xref:Microsoft.Build.Tasks.Windows.FileClassifier> úkol klasifikuje sadu
 |`CLRSatelliteEmbeddedResource`|Nepoužívá se.|
 |`Culture`|Volitelný **řetězcový** parametr.<br /><br /> Určuje jazykovou verzi pro sestavení. Tato hodnota může být **null** , pokud sestavení není lokalizovatelné. Pokud je **null**, výchozí hodnota je malá hodnota, kterou vrací **CultureInfo. InvariantCulture** .|
 |`MainEmbeddedFiles`|Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Určuje nelokalizovatelné prostředky, které jsou vloženy do hlavního sestavení.|
-|`OutputType`|Povinný parametr **řetězce**<br /><br /> Určuje typ souboru, do kterého se mají vložit zadané zdrojové soubory. Platné hodnoty jsou **exe**, **winexe**nebo **Library**.|
+|`OutputType`|Povinný parametr **řetězce**<br /><br /> Určuje typ souboru, do kterého se mají vložit zadané zdrojové soubory. Platné hodnoty jsou **exe**, **winexe** nebo **Library**.|
 |`SatelliteEmbeddedFiles`|Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Určuje lokalizovatelné soubory, které jsou vloženy do satelitního sestavení pro jazykovou verzi určenou parametrem **jazykové verze** .|
 |`SourceFiles`|Povinný parametr **ITaskItem []** .<br /><br /> Určuje seznam souborů, které mají být klasifikovány.|
 

@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 46705c7a614cd67d81c9e55c03e937f72c29a2fe
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: f0c1d076edc09f7978dcc188b167ce953f631068
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360723"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957410"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>Integrace modelů pomocí Visual Studio Modelbus
 
@@ -516,7 +516,7 @@ Po kliknutí pravým tlačítkem na diagram definice DSL klikněte na **povolit 
 
 - V **DslPackage\source.extention.TT** `|ModelBusAdapter|` je přidána jako Komponenta MEF.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Otevření modelu ze souboru v kódu programu](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 - [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)

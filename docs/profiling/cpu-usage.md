@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 902974c195cabf09abf5f29334a1e28316da54e5
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: a223a2007d62b84f06191c71523b861f94efe3d0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719354"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956123"
 ---
 # <a name="analyze-cpu-usage-without-debugging-in-the-performance-profiler"></a>Analýza využití procesoru bez ladění v profileru výkonu
 
@@ -60,7 +60,7 @@ Počínaje verzí Visual Studio 2019 můžete kliknout na tlačítko **Rozbalit 
 
 ### <a name="cpu-usage-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a> Sloupce dat využití procesoru
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Celkový čas procesoru [jednotka,%]**|![Total% data Equation – rovnice](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> Hodnoty milisekund a CPU používané voláním funkce a funkce volané funkcí ve vybraném časovém rozsahu. To se liší od grafu časová osa **využití procesoru** , který porovnává celkovou dostupnou CPU v časovém rozsahu s celkovým DOSTUPNÝm procesorem.|
 |**Samotný procesor [jednotka,%]**|![% Rovnice sebe](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> Hodnoty milisekund a CPU využívané voláním funkce ve vybraném časovém rozsahu s výjimkou funkcí volaných funkcí.|
@@ -79,7 +79,7 @@ Chcete-li zobrazit strom volání, vyberte v sestavě nadřazený uzel. Stránka
 ![Stromová struktura volání](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "Stromová struktura volání")
 ::: moniker-end
 
-|Image|Popis|
+|Image|Description|
 |-|-|
 |![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Uzel nejvyšší úrovně ve stromech volání využití CPU je pseudo uzel.|
 |![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Pokud je v aplikaci většina aplikací zakázaná možnost **Zobrazit externí kód** , je uzel druhé úrovně uzlem **[externí kód]** . Uzel obsahuje kód systému a rozhraní, který spustí a zastaví aplikaci, nakreslí uživatelské rozhraní, řídí plánování vláken a poskytuje aplikaci další služby nižší úrovně.|

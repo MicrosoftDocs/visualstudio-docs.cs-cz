@@ -8,17 +8,17 @@ ms.technology: vs-ide-general
 ms.devlang: CSharp
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: a06a6885c3d0858f60c8de48dd61054534aad40f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 0fcc42b999039abe5d682394e378cb95f12b9283
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809043"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956929"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-c"></a>Vytvoření aplikace model Windows Forms v aplikaci Visual Studio pomocí jazyka C\#
 
@@ -135,7 +135,7 @@ Teď, když jsme přidali ovládací prvek tlačítko pro vytvoření akce, Poj�
 
 1. V okně **Form1.cs &#91;Design&#93;** dvakrát klikněte **na tlačítko,** čímž otevřete okno **Form1.cs** .
 
-      (Případně můžete rozbalit **Form1.cs** v **Průzkumník řešení**a pak vybrat **Form1**.)
+      (Případně můžete rozbalit **Form1.cs** v **Průzkumník řešení** a pak vybrat **Form1**.)
 
 1. V okně **Form1.cs** po **privátní řádce void** zadejte nebo zadejte, `lblHelloWorld.Text = "Hello World!";` jak je znázorněno na následujícím snímku obrazovky:
 

@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 2c748909-51dc-49b7-b193-19f96fca1138
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a1be0aaaf9e960b95deaa7c949993a950647ce89
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6843eee8e6de7ec3e8cfd52362ee4463dea7da4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80719426"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956422"
 ---
 # <a name="idebugsymbolprovidergetclasstypebyname"></a>IDebugSymbolProvider::GetClassTypeByName
 Tato metoda získá typ pole třídy představující plně kvalifikovaný název třídy.
@@ -28,7 +28,7 @@ Tato metoda získá typ pole třídy představující plně kvalifikovaný náze
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetClassTypeByName( 
+HRESULT GetClassTypeByName( 
    LPCOLESTR          pszClassName,
    NAME_MATCH         nameMatch,
    IDebugClassField** ppField

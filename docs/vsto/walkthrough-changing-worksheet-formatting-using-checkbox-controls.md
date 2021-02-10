@@ -13,15 +13,15 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], adding to worksheets
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 28b9f000c2e8517304387e2b203dfa7888b33d64
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 908660693abce2f2adf07d98e7f2a451a8f3c8e5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527221"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956591"
 ---
 # <a name="walkthrough-change-worksheet-formatting-using-checkbox-controls"></a>Návod: Změna formátování listů pomocí ovládacích prvků CheckBox
   Tento názorný postup ukazuje základy používání zaškrtávacích políček u systém Microsoft Office excelového listu ke změně formátování. Budete používat vývojové nástroje Office v sadě Visual Studio k vytvoření a přidání kódu do projektu. Chcete-li zobrazit výsledek jako dokončený vzorek, přečtěte si ukázku ovládací prvky aplikace Excel v [ukázkách vývoje pro Office a návody](../vsto/office-development-samples-and-walkthroughs.md).
@@ -39,7 +39,7 @@ ms.locfileid: "97527221"
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "97527221"
     |Vlastnost|Hodnota|
     |--------------|-----------|
     |**Název**|**applyBoldFont**|
-    |**Text**|**Tučný**|
+    |**Text**|**Bold**|
 
 5. Přetáhněte druhé zaškrtávací políčko na buňku **B4** nebo poblíž něj a změňte následující vlastnosti:
 

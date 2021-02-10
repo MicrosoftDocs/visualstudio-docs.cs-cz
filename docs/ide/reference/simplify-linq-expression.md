@@ -4,17 +4,17 @@ ms.date: 08/12/2020
 ms.topic: reference
 author: m-redding
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04485d6ce67c822fd0620bd63f3557851db6dbb9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 006fc0fe84b11573ece98019a4446d83de52d62c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88251301"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957553"
 ---
 # <a name="simplify-linq-expression"></a>Zjednodušení výrazu LINQ
 
