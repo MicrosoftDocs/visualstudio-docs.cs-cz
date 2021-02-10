@@ -5,18 +5,18 @@ ms.topic: how-to
 ms.date: 09/21/2020
 author: gregvanl
 ms.author: gregvanl
-manager: jillfra
+manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 9072676dfc96ffc6286f81785048eca8ec46b0b8
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 15efee817e41f928e5ca1162e9ace20276bd20d2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850504"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99971151"
 ---
 # <a name="how-to-customize-a-codespace-preview"></a>Přizpůsobení codespace (Preview)
 
@@ -190,7 +190,7 @@ Pokud používáte identitu Azure Active Directory k ověření vaší aplikace 
 > az login --use-device-code
 ```
 
-Další informace najdete v dokumentaci k `az login` rozhraní příkazového řádku Azure [documentation](/cli/azure/reference-index#az_login)CLI.
+Další informace najdete v dokumentaci k `az login` rozhraní příkazového řádku Azure [](/cli/azure/reference-index#az_login)CLI.
 
 ## <a name="see-also"></a>Viz také
 

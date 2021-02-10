@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 934c727d-3a22-429c-bd13-3552cecf2e24
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d8b61275e8197c90bfba85cb1b4be680f3c1f1a
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 3c6037bd6ed3b7899ff00bce202df7707356683a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136677"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99971398"
 ---
 # <a name="understand-build-configurations"></a>Vysvětlení konfigurací sestavení
 
@@ -59,9 +59,9 @@ Ve výchozím nastavení jsou konfigurace **ladění** a **vydání** zahrnuty v
 
 ## <a name="solution-configurations"></a>Konfigurace řešení
 
-Konfigurace řešení určuje, jak mají být projekty v řešení sestaveny a nasazeny. Chcete-li upravit konfiguraci řešení nebo definovat nový, v **Configuration Manager**v části **Konfigurace aktivního řešení**vyberte možnost **Upravit** nebo **Nový**.
+Konfigurace řešení určuje, jak mají být projekty v řešení sestaveny a nasazeny. Chcete-li upravit konfiguraci řešení nebo definovat nový, v **Configuration Manager** v části **Konfigurace aktivního řešení** vyberte možnost **Upravit** nebo **Nový**.
 
-Každá položka v poli **kontexty projektu** v konfiguraci řešení představuje projekt v řešení. Pro každou kombinaci **aktivní konfigurace řešení** a **platformy aktivního řešení**můžete nastavit, jak se má každý projekt používat. (Další informace o platformách řešení najdete v tématu [porozumění platformám sestavení](../ide/understanding-build-platforms.md).)
+Každá položka v poli **kontexty projektu** v konfiguraci řešení představuje projekt v řešení. Pro každou kombinaci **aktivní konfigurace řešení** a **platformy aktivního řešení** můžete nastavit, jak se má každý projekt používat. (Další informace o platformách řešení najdete v tématu [porozumění platformám sestavení](../ide/understanding-build-platforms.md).)
 
 Při definování nové konfigurace řešení a zaškrtnutí políčka **vytvořit nové konfigurace projektu** [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky přiřadí novou konfiguraci všem projektům. Podobně, při definování nové platformy řešení a zaškrtnutí políčka **vytvořit nové projektové platformy** [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky přiřadí novou platformu všem projektům. Také Pokud přidáte projekt, který cílí na novou platformu, Visual Studio přidá tuto platformu do seznamu platforem řešení a přiřadí je ke všem projektům. Můžete přesto upravit nastavení pro každý projekt.
 
@@ -69,7 +69,7 @@ Aktivní konfigurace řešení také poskytuje kontext rozhraní IDE. Napříkla
 
 ## <a name="project-configurations"></a>Konfigurace projektu
 
-Konfigurace a platforma, které cílí na projekt, se používají společně k určení nastavení sestavení a možností kompilátoru, které se použijí při sestavení. Projekt může mít různá nastavení pro každou kombinaci konfigurace a platformy. Chcete-li upravit vlastnosti projektu, otevřete místní nabídku projektu v **Průzkumník řešení**a zvolte možnost **vlastnosti**.  V horní části karty **sestavení** Návrháře projektu vyberte aktivní konfiguraci pro úpravu jeho nastavení sestavení.
+Konfigurace a platforma, které cílí na projekt, se používají společně k určení nastavení sestavení a možností kompilátoru, které se použijí při sestavení. Projekt může mít různá nastavení pro každou kombinaci konfigurace a platformy. Chcete-li upravit vlastnosti projektu, otevřete místní nabídku projektu v **Průzkumník řešení** a zvolte možnost **vlastnosti**.  V horní části karty **sestavení** Návrháře projektu vyberte aktivní konfiguraci pro úpravu jeho nastavení sestavení.
 
 ![Konfigurace Návrháře projektu](media/understanding-build-configurations/project-designer-configuration.png)
 
@@ -77,13 +77,13 @@ Konfigurace a platforma, které cílí na projekt, se používají společně k 
 
 Když vytvoříte řešení pomocí příkazu **sestavit**  >  **sestavení řešení** , Visual Studio vytvoří pouze aktivní konfiguraci. Všechny projekty, které jsou určeny v této konfiguraci řešení, a jedinou konfiguraci projektu, která je vytvořena, je ten, který je zadán v aktivní konfiguraci řešení a na aktivním řešení platformy, který je zobrazen na panelu nástrojů v sadě Visual Studio. Například **ladit** a **x86**. Další definované konfigurace a platformy nejsou sestavené.
 
-Pokud chcete sestavit více konfigurací a platforem **v rámci jedné**akce, můžete použít možnost sestavit  >  **dávku** sestavení v aplikaci Visual Studio. Pro přístup k této funkci stiskněte klávesu **CTRL** + **Q** a otevřete vyhledávací pole a zadejte `Batch build` . Dávkové sestavení není k dispozici pro všechny typy projektů. Viz [Postupy: sestavení více konfigurací současně](how-to-build-multiple-configurations-simultaneously.md).
+Pokud chcete sestavit více konfigurací a platforem **v rámci jedné** akce, můžete použít možnost sestavit  >  **dávku** sestavení v aplikaci Visual Studio. Pro přístup k této funkci stiskněte klávesu **CTRL** + **Q** a otevřete vyhledávací pole a zadejte `Batch build` . Dávkové sestavení není k dispozici pro všechny typy projektů. Viz [Postupy: sestavení více konfigurací současně](how-to-build-multiple-configurations-simultaneously.md).
 
 ## <a name="how-visual-studio-assigns-project-configurations"></a>Jak Visual Studio přiřadí konfigurace projektu
 
 Pokud definujete novou konfiguraci řešení a nekopírujete nastavení z existujícího projektu, Visual Studio použije následující kritéria k přiřazení výchozích konfigurací projektu. Kritéria jsou vyhodnocována v uvedeném pořadí.
 
-1. Pokud má projekt název konfigurace (* \<configuration name> \<platform name> *), který přesně odpovídá názvu nové konfigurace řešení, je tato konfigurace přiřazena. V názvech konfigurace se nerozlišují velká a malá písmena.
+1. Pokud má projekt název konfigurace (*\<configuration name> \<platform name>*), který přesně odpovídá názvu nové konfigurace řešení, je tato konfigurace přiřazena. V názvech konfigurace se nerozlišují velká a malá písmena.
 
 1. Pokud má projekt název konfigurace, ve kterém část konfigurace-název odpovídá nové konfiguraci řešení, je tato konfigurace přiřazena, ať už část platformy odpovídá nebo ne.
 
@@ -91,13 +91,13 @@ Pokud definujete novou konfiguraci řešení a nekopírujete nastavení z existu
 
 ## <a name="how-visual-studio-assigns-solution-configurations"></a>Jak Visual Studio přiřadí konfigurace řešení
 
-Při vytváření konfigurace projektu (v **Configuration Manager**kliknutím na možnost **Nový** v rozevírací nabídce ve sloupci **Konfigurace** tohoto projektu) a zaškrtnutím políčka **vytvořit nové konfigurace řešení** vyhledá aplikace Visual Studio konfiguraci řešení se stejným názvem a sestaví projekt na všech podporovaných platformách. V některých případech aplikace Visual Studio přejmenuje existující konfigurace řešení nebo definuje nové.
+Při vytváření konfigurace projektu (v **Configuration Manager** kliknutím na možnost **Nový** v rozevírací nabídce ve sloupci **Konfigurace** tohoto projektu) a zaškrtnutím políčka **vytvořit nové konfigurace řešení** vyhledá aplikace Visual Studio konfiguraci řešení se stejným názvem a sestaví projekt na všech podporovaných platformách. V některých případech aplikace Visual Studio přejmenuje existující konfigurace řešení nebo definuje nové.
 
 Visual Studio používá následující kritéria k přiřazení konfigurací řešení.
 
 - Pokud konfigurace projektu nespecifikuje platformu nebo určuje jenom jednu platformu, pak se v konfiguraci řešení, jejíž název shoduje s názvem nové konfigurace projektu, najde nebo přidá. Výchozí název této konfigurace řešení nezahrnuje název platformy; má formu *\<project configuration name>* .
 
-- Pokud projekt podporuje více platforem, je konfigurace řešení buď nalezena, nebo přidána pro každou podporovanou platformu. Název každé konfigurace řešení zahrnuje název konfigurace projektu i název platformy a má formu * \<project configuration name> \<platform name> *.
+- Pokud projekt podporuje více platforem, je konfigurace řešení buď nalezena, nebo přidána pro každou podporovanou platformu. Název každé konfigurace řešení zahrnuje název konfigurace projektu i název platformy a má formu *\<project configuration name> \<platform name>*.
 
 ## <a name="see-also"></a>Viz také
 

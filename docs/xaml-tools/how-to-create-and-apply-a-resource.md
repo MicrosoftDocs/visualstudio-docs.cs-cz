@@ -10,15 +10,15 @@ f1_keywords:
 ms.assetid: 3ff4006d-659d-4073-9a41-06ff85e6cfdf
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ac8502b3d5058294efe102564453bb23a3eb3b98
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: b6c6c243896370cc97b8a85d5de520c4c033d49b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049227"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99971606"
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>Postup vytvoření a použití prostředku
 
@@ -30,7 +30,7 @@ Při každém vytvoření nového prostředku z existující vlastnosti, [stylu]
 
 1. Se souborem XAML otevřeným v Návrhář XAML vytvořte prvek nebo vyberte prvek v okně Osnova dokumentu.
 
-2. V okně **vlastnosti** zvolte značku vlastnosti, která se zobrazí jako symbol pole napravo od hodnoty vlastnosti, a pak zvolte **převést na nový prostředek** . Symbol bílého pole označuje výchozí hodnotu a symbol černého pole obvykle indikuje, že byl použit místní prostředek.
+2. V okně **vlastnosti** zvolte značku vlastnosti, která se zobrazí jako symbol pole napravo od hodnoty vlastnosti, a pak zvolte **převést na nový prostředek**. Symbol bílého pole označuje výchozí hodnotu a symbol černého pole obvykle indikuje, že byl použit místní prostředek.
 
      Zobrazí se příslušné dialogové okno pro tvorbu prostředku. Toto dialogové okno se zobrazí při vytvoření prostředku z štětce:
 
@@ -40,13 +40,13 @@ Při každém vytvoření nového prostředku z existující vlastnosti, [stylu]
 
 4. V části **definovat v** vyberte možnost, která určuje, kde se má prostředek definovat:
 
-    - Chcete-li prostředek zpřístupnit pro libovolný dokument v aplikaci, vyberte možnost **aplikace** .
+    - Chcete-li prostředek zpřístupnit pro libovolný dokument v aplikaci, vyberte možnost **aplikace**.
 
-    - Chcete-li prostředek zpřístupnit pouze pro aktuální dokument, vyberte **Tento dokument** .
+    - Chcete-li prostředek zpřístupnit pouze pro aktuální dokument, vyberte **Tento dokument**.
 
-    - Chcete-li prostředek zpřístupnit pouze pro prvek, ze kterého jste vytvořili prostředek, nebo na jeho podřízené prvky, zvolte **Tento dokument** a v rozevíracím seznamu vyberte **element** : **název** .
+    - Chcete-li prostředek zpřístupnit pouze pro prvek, ze kterého jste vytvořili prostředek, nebo na jeho podřízené prvky, zvolte **Tento dokument** a v rozevíracím seznamu vyberte **element**: **název**.
 
-    - Chcete-li definovat prostředek v souboru [slovníku prostředků](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references) , který lze znovu použít v jiných projektech, klikněte na možnost **slovník prostředků** . Pak v rozevíracím seznamu vyberte existující soubor slovníku prostředků, například **StandardStyles. XAML** .
+    - Chcete-li definovat prostředek v souboru [slovníku prostředků](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references) , který lze znovu použít v jiných projektech, klikněte na možnost **slovník prostředků**. Pak v rozevíracím seznamu vyberte existující soubor slovníku prostředků, například **StandardStyles. XAML**.
 
 5. Klikněte na tlačítko **OK** a vytvořte prostředek a použijte ho pro element, ze kterého jste ho vytvořili.
 
@@ -60,7 +60,7 @@ Při každém vytvoření nového prostředku z existující vlastnosti, [stylu]
 
       Pokud nevidíte prostředek, který byste očekávali, může to být způsobeno tím, že typ prostředku neodpovídá typu vlastnosti.
 
-   - Použití prostředku stylu nebo šablony ovládacího prvku k ovládacímu prvku. Otevřete nabídku klikněte pravým tlačítkem myši (kontextová nabídka) pro ovládací prvek v okně Osnova dokumentu, zvolte možnost **Upravit šablonu** nebo **Upravit další šablony** , zvolte možnost **použít prostředek** a potom zvolte název šablony ovládacího prvku ze seznamu, který se zobrazí.
+   - Použití prostředku stylu nebo šablony ovládacího prvku k ovládacímu prvku. Otevřete nabídku klikněte pravým tlačítkem myši (kontextová nabídka) pro ovládací prvek v okně Osnova dokumentu, zvolte možnost **Upravit šablonu** nebo **Upravit další šablony**, zvolte možnost **použít prostředek** a potom zvolte název šablony ovládacího prvku ze seznamu, který se zobrazí.
 
      > [!NOTE]
      > **Úprava šablony** aplikuje šablony ovládacích prvků. **Úprava dalších šablon** aplikuje další typy šablon.

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - safe controls [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 024cd50fc36b84addca11dc3c0f23cdc64fa507d
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: bf7e2f2c5b0de59a5f1cac91f0df9cefbf15bda8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96304509"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964703"
 ---
 # <a name="how-to-mark-controls-as-safe-controls"></a>Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků
   Z důvodu zabezpečení rozlišuje SharePoint mezi webovými ovládacími prvky, které jsou chráněny proti vkládání skriptu a webovým ovládacím prvkům, které nejsou. K chráněným ovládacím prvkům nebo *bezpečným ovládacím prvkům* může mít přístup nedůvěryhodní uživatelé. Ovládací prvky lze označit jako bezpečné v vlastnosti položky projektu služby SharePoint nebo v **Návrháři balíčku** při přidání sestavení do balíčku. Další informace najdete v tématu
@@ -65,7 +65,7 @@ ms.locfileid: "96304509"
 
      Poznamenejte si obor názvů ovládacího prvku, protože je použit později.
 
-3. Na panelu nabídek vyberte sestavit sestavení **Build**  >  **řešení** a sestavte projekt.
+3. Na panelu nabídek vyberte sestavit sestavení   >  **řešení** a sestavte projekt.
 
 4. Vytvořte další řešení SharePoint.
 

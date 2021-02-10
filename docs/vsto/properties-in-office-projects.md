@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Value2 property
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cdc54de3935646e36f9d4f09727037de4c373c92
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 5f7a2ab04e1926a53c3d3aa05023103206c6aa01
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528029"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99971762"
 ---
 # <a name="properties-in-office-projects"></a>Vlastnosti v projektech pro systém Office
   Existuje několik důležitých vlastností, které jsou k dispozici pro projekty Office v sadě Visual Studio. Tyto vlastnosti jsou k dispozici v okně **vlastnosti** .

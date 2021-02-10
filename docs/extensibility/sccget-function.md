@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 09a18bd2-b788-411a-9da6-067d806e46f6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2d69308d2f569fc2e0d72dcf64c762687955d4d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50281ffdd233debd3c10672868e9debd4b1f395f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700889"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965210"
 ---
 # <a name="sccget-function"></a>SccGet – funkce
 Tato funkce načte kopii jednoho nebo více souborů pro zobrazení a kompilování, ale nikoli pro úpravy. Ve většině systémů jsou soubory označeny jako jen pro čtení.
@@ -100,7 +100,7 @@ pro Možnosti specifické pro modul plug-in správy zdrojového kódu.
 
     3. Zavolejte `SccGet` funkci pro *a.txt* i *b.txt*.
 
-    4. Vzhledem k tomu, že *a.txt* neexistuje v databázi správy zdrojových kódů, je mezipaměť místní verze vyprázdněna z informací o chybějících *a.txtch * verzích.
+    4. Vzhledem k tomu, že *a.txt* neexistuje v databázi správy zdrojových kódů, je mezipaměť místní verze vyprázdněna z informací o chybějících *a.txtch* verzích.
 
     5. Soubor *b.txt* , který je rezervován, je sloučen s obsahem místního souboru *b.txt* .
 

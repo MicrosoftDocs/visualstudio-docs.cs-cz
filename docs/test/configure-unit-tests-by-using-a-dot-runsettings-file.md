@@ -5,16 +5,16 @@ ms.custom: SEO-VS-2020
 ms.date: 07/15/2020
 ms.topic: conceptual
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: ca15e265f9e6f3188826c019a8c81d02a7668bcf
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 10bfed2a9a2a0ce466e1b3276a487695d40fb580
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442687"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964560"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
@@ -43,7 +43,7 @@ Soubory parametrů běhu jsou nepovinné. Pokud nepotřebujete žádnou speciál
 
 ::: moniker range="vs-2017"
 
-Pokud chcete vlastní nastavení vypnout a zapnout v integrovaném vývojovém prostředí, zrušte výběr nebo vyberte soubor v nabídce nastavení **testu testu** > **Test Settings** .
+Pokud chcete vlastní nastavení vypnout a zapnout v integrovaném vývojovém prostředí, zrušte výběr nebo vyberte soubor v nabídce nastavení **testu testu** >  .
 
 ![Nabídka nastavení testu se souborem vlastního nastavení v aplikaci Visual Studio 2017](../test/media/codecoverage-settingsfile.png)
 
@@ -180,7 +180,7 @@ Každá z elementů konfigurace je volitelná, protože má výchozí hodnotu.
 
 Element **RunConfiguration** může obsahovat následující prvky:
 
-|Node|Výchozí|Hodnoty|
+|Uzel|Výchozí|Hodnoty|
 |-|-|-|
 |**MaxCpuCount**|1|Toto nastavení řídí stupeň paralelního provádění testů při spuštění testů jednotek pomocí dostupných jader v počítači. Spouštěcí modul testů začíná v každém dostupném jádru jako odlišný proces a poskytuje každému jádru kontejner s testy ke spuštění. Kontejner může být sestavením, knihovnou DLL nebo relevantním artefaktem. Kontejner testů je jednotka plánování. V každém kontejneru jsou testy spouštěny podle testovacího rozhraní. Pokud existuje mnoho kontejnerů, poté, jak procesy dokončí testy v kontejneru, získají další dostupný kontejner.<br /><br />MaxCpuCount může být:<br /><br />n, kde 1 <= n <= počet jader: spustí se až n procesů.<br /><br />n, kde n = jakákoli jiná hodnota: počet spuštěných procesů může být až na počet dostupných jader. Nastavte například n = 0, aby platforma automaticky rozhodla optimální počet procesů, které se mají spustit na základě prostředí.|
 |**ResultsDirectory**||Adresář, ve kterém jsou umístěny výsledky testů. Cesta je relativní vzhledem k adresáři, který obsahuje soubor. runsettings.|
@@ -194,7 +194,7 @@ Element **RunConfiguration** může obsahovat následující prvky:
 
 ## <a name="datacollectors-element-diagnostic-data-adapters"></a>DataCollectors – element (adaptéry diagnostických dat)
 
-Prvek **DataCollectors** DataCollectors určuje nastavení adaptérů diagnostických dat. Adaptéry diagnostických dat shromažďují další informace o prostředí a testovaných aplikacích. Každý adaptér má výchozí nastavení a nastavení je nutné zadat pouze v případě, že nechcete použít výchozí hodnoty.
+Prvek  DataCollectors určuje nastavení adaptérů diagnostických dat. Adaptéry diagnostických dat shromažďují další informace o prostředí a testovaných aplikacích. Každý adaptér má výchozí nastavení a nastavení je nutné zadat pouze v případě, že nechcete použít výchozí hodnoty.
 
 ```xml
 <DataCollectionRunSettings>

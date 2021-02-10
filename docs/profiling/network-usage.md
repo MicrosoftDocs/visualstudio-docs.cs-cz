@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.assetid: 45fa397d-d7a1-4c4c-9c97-ede6c21643bd
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 429bc6c8c2d82e3c18c75132f71e60231b10f10d
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: c09b50a4f7089367a82a54f285cb4bf401360b03
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722903"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964716"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>Analýza využití sítě v aplikacích pro UWP
 Nástroj Diagnostika **sítě** sady Visual Studio shromažďuje data o síťových operacích provedených pomocí [rozhraní API Windows. Web. http](/uwp/api/windows.web.http). Analýza dat vám může pomáhat vyřešit problémy, jako jsou problémy s přístupem a ověřováním, nesprávná použití mezipaměti a nízký výkon při zobrazení a stažení.
@@ -54,7 +54,7 @@ Nástroj Diagnostika **sítě** sady Visual Studio shromažďuje data o síťov�
 
  ![Panel podrobností nástroje sítě](../profiling/media/network_detailsviewpane.png "NETWORK_DetailsViewPane")
 
-|Název|Popis|
+|Název|Description|
 |-|-|
 |**Hlavičky**|Informace o hlavičkách požadavku události.|
 |**Text**|Data datové části žádosti a odpovědi.|

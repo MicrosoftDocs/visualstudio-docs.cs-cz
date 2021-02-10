@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Application page [UWP project]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 826d408d8e1a6a2cb8bcad956ce930781a9155db
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 21dd08f81802661cae9d77ee3449f4e9369ca768
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95871363"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965080"
 ---
 # <a name="application-property-page-uwp-projects"></a>Stránka vlastností aplikace (projekty UWP)
 
@@ -26,7 +26,7 @@ Pomocí stránky vlastností **aplikace** zadejte sestavení a informace balíč
 
 ![Stránka vlastností aplikace](media/application-page-uwp.png)
 
-Chcete-li získat přístup ke stránce **aplikace** , vyberte uzel projektu v **Průzkumník řešení**. Pak zvolte **Project**  >  **vlastnosti** projektu na řádku nabídek. Stránky vlastností otevřené na kartě **aplikace**
+Chcete-li získat přístup ke stránce **aplikace** , vyberte uzel projektu v **Průzkumník řešení**. Pak zvolte   >  **vlastnosti** projektu na řádku nabídek. Stránky vlastností otevřené na kartě **aplikace**
 
 ## <a name="general-section"></a>Oddíl obecné
 

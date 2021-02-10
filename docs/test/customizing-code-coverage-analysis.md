@@ -5,16 +5,16 @@ ms.custom: SEO-VS-2020
 ms.date: 08/21/2019
 ms.topic: conceptual
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 99eb322e1eebe2d8845b355cd76a9e34a7516348
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 65044baf78e6f49e35f011a4853111063e82a192
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441825"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964404"
 ---
 # <a name="customize-code-coverage-analysis"></a>Přizpůsobení analýzy pokrytí kódu
 
@@ -53,7 +53,7 @@ Chcete-li přizpůsobit pokrytí kódu, postupujte podle následujících kroků
 
 ::: moniker range="vs-2017"
 
-Chcete-li vlastní nastavení vypnout a zapnout, zrušte výběr nebo vyberte soubor v nabídce **Test** > **Nastavení** testu testu.
+Chcete-li vlastní nastavení vypnout a zapnout, zrušte výběr nebo vyberte soubor v nabídce  > **Nastavení** testu testu.
 
 ![Nabídka nastavení testu se souborem vlastního nastavení v aplikaci Visual Studio 2017](../test/media/codecoverage-settingsfile.png)
 
@@ -120,9 +120,9 @@ Následující tabulka ukazuje různé způsoby, jak mohou být sestavení a čl
 
 Uzly include a Exclude používejte regulární výrazy, které nejsou stejné jako zástupné znaky. Ve shodách se nerozlišují velká a malá písmena. Tady je několik příkladů:
 
-- **.\** _ odpovídá řetězci libovolných znaků
+- **.\*** odpovídá řetězci libovolných znaků
 
-- _ *\\.* * odpovídá tečkě "."
+- **\\.** odpovídá tečkě "."
 
 - **\\ ( \\ )** odpovídá závorce "()"
 

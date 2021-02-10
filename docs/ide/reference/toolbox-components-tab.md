@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Toolbox, Components tab
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 40ba84712a343a071d6213dc9cd985727fc20ebf
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: adbc2611cf0d0e08ef356e91e25ed0c4854c4386
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560938"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965041"
 ---
 # <a name="toolbox-components-tab"></a>Panel nástrojů, karta součásti
 
@@ -89,7 +89,7 @@ Vytvoří <xref:System.Windows.Forms.Timer> instanci komponenty, kterou můžete
 > [!NOTE]
 > K dispozici je také systém založený <xref:System.Timers.Timer> na systému, který lze přidat do **sady nástrojů** <xref:System.Timers.Timer> , což je optimalizováno pro serverové aplikace a model Windows Forms <xref:System.Windows.Forms.Timer> je nejvhodnější pro použití v model Windows Forms.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Ovládací prvky pro použití na model Windows Forms](/dotnet/framework/winforms/controls/controls-to-use-on-windows-forms)
 - [Výběr položek sady nástrojů, součásti WPF](choose-toolbox-items-wpf-components.md)

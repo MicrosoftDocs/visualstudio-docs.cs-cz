@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: bbe4aa4e-b4b0-403e-b7a0-5dd6eb24e5a9
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: eeefa26422476ca40e782df3ff35eee9d429a149
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b1f465e6709932cd89794c5c0558d608fadd2a8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700824"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965197"
 ---
 # <a name="sccgetcommandoptions-function"></a>SccGetCommandOptions – funkce
 Tato funkce vyzve uživatele k upřesnění možností pro daný příkaz.
@@ -77,7 +77,7 @@ pro Struktura možnosti (může také být `NULL` ).
  Nakonec, pokud uživatel klikne na **tlačítko OK** v dialogovém okně **získat** rozhraní IDE, rozhraní IDE volá [SccGet](../extensibility/sccget-function.md), který předává strukturu vrácenou v `ppvOptions` , která obsahuje pokročilé možnosti.
 
 > [!NOTE]
-> Příkaz `SCC_COMMAND_OPTIONS` se používá, když rozhraní IDE zobrazí dialogové okno **Možnosti** , které umožňuje nastavit předvolby pro uživatele, které určují, jak integrace funguje. Pokud modul plug-in správy zdrojových kódů chce dodat dialogové okno vlastní předvolby, může jej zobrazit v dialogovém okně Předvolby **Advanced** rozhraní IDE. Modul plug-in je výhradně zodpovědný za získání a uchování těchto informací; rozhraní IDE je nepoužije ani ho nemění.
+> Příkaz `SCC_COMMAND_OPTIONS` se používá, když rozhraní IDE zobrazí dialogové okno **Možnosti** , které umožňuje nastavit předvolby pro uživatele, které určují, jak integrace funguje. Pokud modul plug-in správy zdrojových kódů chce dodat dialogové okno vlastní předvolby, může jej zobrazit v dialogovém okně Předvolby  rozhraní IDE. Modul plug-in je výhradně zodpovědný za získání a uchování těchto informací; rozhraní IDE je nepoužije ani ho nemění.
 
 ## <a name="see-also"></a>Viz také
 - [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)

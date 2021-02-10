@@ -12,15 +12,15 @@ helpviewer_keywords:
 - referencing components, troubleshooting
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c47f8c399c89df9bf91879abc7cf926eac925bc
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 75e4d04641d593d8ced0c696cdca1efffd95e48d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560236"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99971502"
 ---
 # <a name="troubleshoot-broken-references"></a>Řešení problémů s poškozenými odkazy
 
@@ -90,6 +90,6 @@ Může existovat celá řada možných příčin nepřístupných souborů: chyb
 
 Pokud uživatel přidal odkaz na komponentu COM a druhý uživatel se pokusí spustit kód v počítači, na kterém není tato součást nainstalována, obdrží druhý uživatel chybu, že odkaz je přerušen. Při instalaci komponenty na druhý počítač se chyba opraví. Další informace o tom, jak používat odkazy na komponenty modelu COM v projektech, naleznete v tématu [interoperabilita modelu COM v .NET Frameworkch aplikacích](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Stránka Odkazy, návrhář projektu (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)

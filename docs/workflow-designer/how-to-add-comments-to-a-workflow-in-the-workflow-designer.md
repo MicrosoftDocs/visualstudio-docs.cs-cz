@@ -9,16 +9,16 @@ f1_keywords:
 - Annotation
 ms.assetid: 9aa0e8d6-8129-4438-8389-d460611581a7
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: 0fe5b766c0c5545a1cc3839e29d71e3f3b7a1f39
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9417dd0084b381d8fc997a90b4690c49191f4785
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437954"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99971697"
 ---
 # <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>Postupy: Přidání komentářů do pracovního postupu v návrháři postupu provádění
 
@@ -41,7 +41,7 @@ Aby bylo možné vytvářet větší a složitější pracovní postupy, .NET Fr
 
 ## <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>Přidání poznámky k aktivitě v Návrháři
 
-1. V Návrháři pracovního postupu klikněte pravým tlačítkem myši na položku v Návrháři pracovních postupů a vyberte **poznámky** , **Přidat poznámku**.
+1. V Návrháři pracovního postupu klikněte pravým tlačítkem myši na položku v Návrháři pracovních postupů a vyberte **poznámky**, **Přidat poznámku**.
 
 1. Přidá text poznámky v zadaném prostoru.
 
@@ -61,21 +61,21 @@ Aby bylo možné vytvářet větší a složitější pracovní postupy, .NET Fr
 
 ## <a name="showing-or-hiding-all-annotations"></a>Zobrazení nebo skrytí všech poznámek
 
-1. Klikněte pravým tlačítkem na aktivitu, která má anotaci. Vyberte **poznámky** , **Zobrazit všechny poznámky**.
+1. Klikněte pravým tlačítkem na aktivitu, která má anotaci. Vyberte **poznámky**, **Zobrazit všechny poznámky**.
 
    Všechny poznámky se zobrazí v Návrháři aktivity.
 
-1. Chcete-li zobrazit všechny poznámky mimo návrháře aktivity, klikněte pravým tlačítkem myši na aktivitu a vyberte možnost **poznámky** , **Skrýt všechny poznámky**.
+1. Chcete-li zobrazit všechny poznámky mimo návrháře aktivity, klikněte pravým tlačítkem myši na aktivitu a vyberte možnost **poznámky**, **Skrýt všechny poznámky**.
 
 ## <a name="editing-or-deleting-an-annotation-for-an-activity"></a>Úprava nebo odstranění poznámky pro aktivitu
 
 1. Klikněte pravým tlačítkem na aktivitu, která má anotaci.
 
-1. Vyberte **poznámky** , **upravte poznámku** nebo **odstraňte anotaci**.
+1. Vyberte **poznámky**, **upravte poznámku** nebo **odstraňte anotaci**.
 
    Poznámka se otevře pro úpravy nebo odstranění.
 
-1. Pokud chcete odstranit všechny poznámky najednou, klikněte pravým tlačítkem myši na návrháře pracovních postupů a vyberte **Anotace** ( **Odstranit všechny poznámky** ).
+1. Pokud chcete odstranit všechny poznámky najednou, klikněte pravým tlačítkem myši na návrháře pracovních postupů a vyberte **Anotace**( **Odstranit všechny poznámky**).
 
 ## <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>Přidání, úpravy a odstranění poznámky pro proměnnou nebo argument
 

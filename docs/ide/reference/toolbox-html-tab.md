@@ -12,15 +12,15 @@ helpviewer_keywords:
 - HTML tab in Toolbox
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f91e832e33d6a65d9fc70ee594d0c0670242306e
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 02baf454fe53a27e875d53cf983fce81a2c86874
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560457"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965028"
 ---
 # <a name="toolbox-html-tab"></a>Panel nástrojů, karta HTML
 
@@ -232,6 +232,6 @@ Když přetáhnete **div** na zobrazení Návrh plochu, do dokumentu se vloží 
 <div ms_positioning="FlowLayout" style="width: 70px; position: relative; height: 15px">Label</div>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Sada nástrojů](../../ide/reference/toolbox.md)

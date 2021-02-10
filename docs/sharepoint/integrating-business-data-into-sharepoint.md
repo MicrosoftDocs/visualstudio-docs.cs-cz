@@ -18,15 +18,15 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], data
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f3156adc286222282ae63f70f70838bc6b7155a8
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 94162e2fca66fd86b2ac8b237c518e391d0a9908
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96304353"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964677"
 ---
 # <a name="integrate-business-data-into-sharepoint"></a>Integrace obchodních dat do služby SharePoint
   Obchodní data můžete integrovat do SharePointu. Obchodní data mohou pocházet z aplikací back-end serveru, jako jsou [!INCLUDE[TLA#tla_sqlsvr](../sharepoint/includes/tlasharptla-sqlsvr-md.md)] , Siebel a SAP nebo z webové služby. Uživatelé můžou obchodní data zobrazovat, přidávat, aktualizovat nebo odstraňovat pomocí externích seznamů nebo Webové části obchodních dat v SharePointu.  Uživatelé mají přístup k těmto datům také offline v aplikaci systém Microsoft Office, jako je například Microsoft Outlook. Další informace najdete v tématu [kde můžete zobrazit externí data](/previous-versions/office/developer/sharepoint-2010/ee558737(v=office.14)).

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - permissions
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d69d916b8b99d6f5b5b3421ae4aea073e24fa67
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 63787b394d9e8988759cd141540785e34324f8c6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96478949"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99971294"
 ---
 # <a name="user-permissions-and-visual-studio"></a>Uživatelská oprávnění a Visual Studio
 
@@ -29,7 +29,7 @@ Z důvodu zabezpečení byste měli sadu Visual Studio spustit jako typický už
 
 V integrovaném vývojovém prostředí sady Visual Studio můžete udělat skoro všechno. K dokončení následujících úloh potřebujete oprávnění správce:
 
-|Oblast|Úkol|Další informace|
+|Plošný|Úkol|Další informace|
 |----------|----------| - |
 |Instalace|Instalace nebo změna sady Visual Studio.|[Instalace sady Visual Studio](../install/install-visual-studio.md), [Změna sady Visual Studio](../install/modify-visual-studio.md)|
 ||Instalace, aktualizace nebo odebrání místního obsahu aplikace Help.|[Nainstalovat a spravovat místní obsah obsahu Help](../help-viewer/install-manage-local-content.md)|
