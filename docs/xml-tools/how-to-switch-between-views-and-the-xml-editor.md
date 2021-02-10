@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: cb69fbbd-d99c-439e-9498-5df9050f8df0
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ef64617591da0790a26e4728cd138d2224deed8e
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: e14947bfb31fbf6fcb2246223a2394194a45035e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400125"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970969"
 ---
 # <a name="how-to-switch-between-views-and-the-xml-editor"></a>Postupy: přepínání mezi zobrazeními a editorem XML
 
