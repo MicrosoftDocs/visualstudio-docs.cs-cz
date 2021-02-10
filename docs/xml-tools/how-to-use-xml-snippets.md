@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 3a27375b-81cc-48f6-a884-e1cb8c4f78f5
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bebca3a27d11015388e45ff6839f446506e716c
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 4ada7beb72c27594b637b2c090c96581d4a6eb49
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970607"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934569"
 ---
 # <a name="how-to-use-xml-snippets"></a>Postupy: používání fragmentů kódu XML
 
@@ -54,7 +54,7 @@ Následující postupy popisují, jak získat přístup k příkazu **Vložit fr
 
 1. Umístěte kurzor na místo, kam chcete vložit fragment kódu XML.
 
-2. Začněte psát fragment kódu XML, který chcete přidat do souboru. Je-li automatické dokončování zapnuté, zobrazí se seznam slov kompletních funkcí IntelliSense. Pokud se nezobrazí, stiskněte klávesu **CTRL** + **Space** a aktivujte ji.
+2. Začněte psát fragment kódu XML, který chcete přidat do souboru. Je-li automatické dokončování zapnuté, zobrazí se seznam slov kompletních funkcí IntelliSense. Pokud se nezobrazí, stiskněte klávesu **CTRL** +  a aktivujte ji.
 
 3. Vyberte fragment kódu XML ze seznamu kompletních slov.
 
@@ -104,7 +104,7 @@ Následující postupy popisují, jak získat přístup k příkazu **uzavřít 
 
 Po výběru fragmentu kódu XML je text fragmentu kódu vložen automaticky na pozici kurzoru. Všechna upravitelná pole ve fragmentu kódu jsou zvýrazněna a první upravitelná pole je vybráno automaticky. Aktuálně vybrané pole je zabaleno.
 
-Když je vybráno pole, můžete zadat novou hodnotu pole. Stisknutí klávesy **TAB** pomocí upravitelných polí fragmentu; stiskem klávesy **SHIFT** projdete + **Tab** je v opačném pořadí. Kliknutím na pole umístíte kurzor do pole a dvakrát kliknete na pole, které vyberete. Když je zvýrazněno pole, může se zobrazit popisek, který nabízí popis pole.
+Když je vybráno pole, můžete zadat novou hodnotu pole. Stisknutí klávesy **TAB** pomocí upravitelných polí fragmentu; stiskem klávesy **SHIFT** projdete +  je v opačném pořadí. Kliknutím na pole umístíte kurzor do pole a dvakrát kliknete na pole, které vyberete. Když je zvýrazněno pole, může se zobrazit popisek, který nabízí popis pole.
 
 Upravovat se dá jenom první instance daného pole. Když je toto pole zvýrazněno, ostatní instance tohoto pole jsou poznačené. Když změníte hodnotu upravitelného pole, toto pole se změní všude, kde se používá ve fragmentu.
 

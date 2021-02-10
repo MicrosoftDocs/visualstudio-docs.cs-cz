@@ -9,15 +9,15 @@ helpviewer_keywords:
 - text templates, debugging
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 26ad1545918a02fbcf530b439e801a656a425864
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: b197fd52972162acbc6e7d6882507f943b2a560c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361466"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935349"
 ---
 # <a name="debugging-a-t4-text-template"></a>Ladění textové šablony T4
 Můžete nastavit zarážky v textových šablonách. Chcete-li ladit textovou šablonu návrhu, uložte soubor textové šablony a zvolte možnost **ladit šablonu T4** v místní nabídce souboru v Průzkumník řešení. Chcete-li ladit textovou šablonu run-time, stačí ladit aplikaci, do které patří.
@@ -37,7 +37,7 @@ Můžete nastavit zarážky v textových šablonách. Chcete-li ladit textovou �
 ## <a name="common-errors-and-fixes"></a>Běžné chyby a opravy
  V následující tabulce jsou uvedeny nejběžnější chyby a jejich opravy.
 
-|Chybová zpráva|Popis|Řešení|
+|Chybová zpráva|Description|Řešení|
 |-|-|-|
 |Nepodařilo se načíst základní třídu, {0} ze které dědí třída transformace.|Nastane, pokud nemůžete najít základní třídu zadanou v `inherits` parametru v direktivě šablony. Zpráva poskytuje číslo řádku direktivy šablony.|Ujistěte se, že zadaná třída existuje a že sestavení, v němž existuje, je zadáno v direktivě Assembly.|
 |Nepovedlo se přeložit text zahrnutí pro soubor:{0}|Vyvolá se v případě, že nemůžete najít zahrnutou šablonu. Zpráva obsahuje název požadovaného souboru k zahrnutí.|Ujistěte se, že cesta k souboru je relativní vzhledem k původní cestě k šabloně, nebo že se soubor nachází v umístění, které je zaregistrované u hostitele, nebo jestli existuje úplná cesta k souboru.|
@@ -51,7 +51,7 @@ Můžete nastavit zarážky v textových šablonách. Chcete-li ladit textovou �
 ## <a name="warning-descriptions-and-fixes"></a>Popisy a opravy upozornění
  Následující tabulka uvádí nejběžnější upozornění společně s opravami, pokud jsou k dispozici.
 
-|Zpráva upozornění|Popis|Řešení|
+|Zpráva upozornění|Description|Řešení|
 |-|-|-|
 |Načtení souboru zahrnutí {0} vrátilo hodnotu null nebo prázdný řetězec.|Nastane, pokud je vložený textový soubor šablony prázdný. Zpráva obsahuje název souboru zahrnutého souboru.|Buď odeberte direktivu include, nebo se ujistěte, že soubor obsahuje nějaký obsah.|
 |Kompilace transformace:|Předá tento řetězec všem chybám nebo varováním, které pocházejí z kompilátoru při kompilování transformace. Tento řetězec znamená, že kompilátor vyvolal chybu nebo upozornění.|Pokud máte problém s hledáním knihovny DLL, může být nutné zadat úplnou cestu nebo plně kvalifikovaný silný název, pokud je knihovna DLL v mezipaměti GAC.|

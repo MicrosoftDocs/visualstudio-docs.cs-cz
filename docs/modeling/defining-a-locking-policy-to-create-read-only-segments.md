@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a76ae38b686e1c77acd9561e9c48fd3444565b0a
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: aa7590689b4d7acdb7a7ebe501584ed6a8bd41bf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363195"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935414"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>Definování zásady zamykání pro vytváření segmentů jen pro čtení
 Rozhraní neměnnosti API sady Visual Studio pro vizualizaci a modelování umožňuje programu uzamknout část nebo celý model DSL (Domain-Specific Language), aby jej bylo možné číst, ale nikoli měnit. Tuto možnost lze použít například k tomu, aby uživatel mohl požádat o přístup k modelu DSL a zkontrolovat ho, aby se v něm změnil originál.

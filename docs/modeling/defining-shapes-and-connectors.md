@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fd98e449f674d2841dd41aa88e320468698f4736
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 898bb0f3a923cfeac863b365e4746a63ccbc4c91
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363819"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935323"
 ---
 # <a name="define-shapes-and-connectors"></a>Definování obrazců a konektorů
 
@@ -36,7 +36,7 @@ Tyto vzory nejsou vynutily, ale jsou lépe podporovány. Při návrhu DSL je pot
 
 K dispozici jsou následující typy tvarů:
 
-|Typ obrazce|Popis|
+|Typ obrazce|Description|
 |-|-|
 |Obrazec geometrie|Pravoúhlý nebo eliptický tvar pro obecné účely Text a ikonu dekoratéry můžete zobrazit v konkrétních polohách vzhledem k hranicím obrazce. Obrazce lze také vnořit do obrazců geometrie.|
 |Obrazec oddílu|Obdélník obsahující záhlaví a oddíly, jako je třída UML. Každý oddíl může obsahovat seznam textových řádků.<br /><br /> Řádky typicky představují prvky vložené v rámci elementu reprezentovaného tvarem. Můžete například vytvořit DSL ze šablony řešení diagramy tříd.|

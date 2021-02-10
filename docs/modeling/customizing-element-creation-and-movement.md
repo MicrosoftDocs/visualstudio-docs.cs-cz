@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Domain-Specific Language, element merge directives
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b84f638876270658be2f08a7e375540f0329a1d6
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 01867bf4c5d3e9c60ad4a2ba0ed76c45eca055c1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729337"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935583"
 ---
 # <a name="customizing-element-creation-and-movement"></a>Přizpůsobení vytvoření a přesunutí elementu
 
@@ -232,7 +232,7 @@ V kódu vlastního sloučení můžete definovat, co se stane, když uživatel p
 
 5. Zkontrolujte obsah **Dsl\Generated Files\DomainClasses.cs**. Vyhledejte metody pojmenované `MergeRelate` a prověřte jejich obsah. To vám pomůže psát vlastní verze.
 
-6. V novém souboru kódu napište částečnou třídu pro přijímací třídu a přepište `MergeRelate` metodu. Nezapomeňte zavolat základní metodu. Například:
+6. V novém souboru kódu napište částečnou třídu pro přijímací třídu a přepište `MergeRelate` metodu. Nezapomeňte zavolat základní metodu. Příklad:
 
     ```csharp
     partial class ExampleModel

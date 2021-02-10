@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 3ae715ee-9886-4694-a52b-59bb3b27467a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 670dd128e6962c1e1d12f81eea03f9759fa56621
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26e269e37eddf37aafb87c9e479feb0047bfce70
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80732413"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934302"
 ---
 # <a name="idebugdefaultport2getportnotify"></a>IDebugDefaultPort2::GetPortNotify
 Tato metoda načte rozhraní [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) pro tento port.
@@ -28,14 +28,14 @@ Tato metoda načte rozhraní [IDebugPortNotify2](../../../extensibility/debugger
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetPortNotify(
-   IDebugPortNotify2** ppPortNotify
+HRESULT GetPortNotify(
+   IDebugPortNotify2** ppPortNotify
 );
 ```
 
 ```csharp
-int GetPortNotify(
-   out IDebugPortNotify2 ppPortNotify
+int GetPortNotify(
+   out IDebugPortNotify2 ppPortNotify
 );
 ```
 

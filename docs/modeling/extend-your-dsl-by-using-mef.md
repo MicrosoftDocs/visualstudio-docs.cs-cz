@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 20dc9b6ac1bd4e565fd10793889c611f9b039778
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 324037010e642ab4e96f6efea5da0f232c9bd530
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363169"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935063"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>Rozšíření vašeho DSL pomocí MEF
 
@@ -131,7 +131,7 @@ Máte-li přístup k DSL podporujícímu MEF, kterou vytvořila nebo někomu jin
 
    - Toto sestavení obvykle má název, který končí na ".Dsl.dll".
 
-   - Máte-li přístup k projektu DSL, můžete najít soubor sestavení v adresáři **DSL \\ bin \\ \** _
+   - Máte-li přístup k projektu DSL, můžete najít soubor sestavení v adresáři **DSL \\ \\ \*** .
 
    - Máte-li přístup k souboru VSIX DSL, můžete najít sestavení změnou přípony názvu souboru VSIX na ". zip". Dekomprimuje soubor. zip.
 
@@ -147,7 +147,7 @@ Máte-li přístup k DSL podporujícímu MEF, kterou vytvořila nebo někomu jin
 
    - System.Windows.Forms.dll
 
-4. Vytvořte nový _ *projekt VSIX** projekt.
+4. Vytvořte nový projekt **VSIX** projektu.
 
 5. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt VSIX a vyberte **nastavit jako spouštěný projekt**.
 
@@ -159,11 +159,11 @@ Máte-li přístup k DSL podporujícímu MEF, kterou vytvořila nebo někomu jin
 
    1. Ve **zdroji. extension. vsixmanifest** klikněte na **Přidat odkaz** .
 
-   2. V dialogovém okně klikněte na **Přidat datovou část** a pak vyhledejte soubor VSIX pro DSL. Soubor VSIX je sestaven v řešení DSL v **DslPackage \\ bin \\ \** _.
+   2. V dialogovém okně klikněte na **Přidat datovou část** a pak vyhledejte soubor VSIX pro DSL. Soubor VSIX je sestaven v řešení DSL v **DslPackage \\ bin \\ \***.
 
        To umožní uživatelům instalovat DSL a rozšíření ve stejnou dobu. Pokud uživatel už má nainstalovanou DSL, nainstaluje se jenom vaše rozšíření.
 
-9. Zkontrolujte a aktualizujte ostatní pole _ * source. extension. vsixmanifest * *. Klikněte na **Vybrat edice** a ověřte, jestli jsou nastavené správné edice sady Visual Studio.
+9. Zkontrolujte a aktualizujte ostatní pole **source. extension. vsixmanifest**. Klikněte na **Vybrat edice** a ověřte, jestli jsou nastavené správné edice sady Visual Studio.
 
 10. Přidejte kód do projektu knihovny tříd. Jako vodítko použijte příklady v následující části.
 
@@ -374,7 +374,7 @@ namespace MefExtension
 } } } }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Odesílání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md)
 - [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)

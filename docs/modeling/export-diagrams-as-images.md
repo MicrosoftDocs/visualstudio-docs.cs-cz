@@ -10,15 +10,15 @@ helpviewer_keywords:
 - UML diagrams, saving
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 12e0036377ed5b67e092ff0cf4588acc39c23525
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: df0ecb55e72683a09bb68ec61410271b8c6a8774
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361635"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935102"
 ---
 # <a name="export-diagrams-as-images"></a>Exportovat diagramy jako obrázky
 
@@ -42,7 +42,7 @@ Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, p�
 
 3. V dialogovém okně **Uložit soubor jako** uložte soubor jako soubor **dokumentu XPS ( \* . XPS)** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)
 - [Sdílení modelů a export diagramů](../modeling/share-models-and-exporting-diagrams.md)

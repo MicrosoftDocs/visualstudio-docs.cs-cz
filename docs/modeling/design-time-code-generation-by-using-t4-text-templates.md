@@ -14,15 +14,15 @@ helpviewer_keywords:
 - text templates, generating code for your application
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 698dde24cb66d27a12a0f8785c8ac97e4cfb0eb0
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 11c9384d03971f475abbe680f6731d2757cbb195
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363806"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935297"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>Vytvoření kódu v době návrhu pomocí textových šablon T4
 
@@ -62,7 +62,7 @@ Textová šablona obsahuje kombinaci textu, který chcete vygenerovat, a kód pr
    Hello, world!
    ```
 
-5. Uložte soubor.
+5. Soubor uložte.
 
     Může se zobrazit okno s **upozorněním zabezpečení** , které vás vyzve k potvrzení, že chcete šablonu spustit. Klikněte na **OK**.
 
@@ -368,7 +368,7 @@ Užitečnou funkcí šablon je, že vypadají velmi podobně jako soubory, kter�
 
     Nastavte `extension` atribut na příponu názvu souboru pro typ souboru, který chcete vygenerovat, například `.cs` `.resx` nebo `.xml` .
 
-6. Uložte soubor.
+6. Soubor uložte.
 
     Vytvoří se soubor pobočky se zadaným rozšířením. Jeho vlastnosti jsou správné pro typ souboru. Například vlastnost **Akce sestavení** souboru. cs by byla **zkompilována**.
 
@@ -390,6 +390,6 @@ Přečtěte si [pokyny pro psaní textových šablon T4](../modeling/guidelines-
 |Transformujte data ve formě jazyka specifického pro doménu.|[Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)|
 |Zapište procesory direktiv pro transformaci vašich vlastních zdrojů dat.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Pokyny pro zápis textových šablon T4](../modeling/guidelines-for-writing-t4-text-templates.md)

@@ -14,15 +14,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.ProductUpdates
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 01bc8fe18ff32d5da3f56eb39465b3fc696239b4
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: d087ed0a43296f77ca934671f63f716bf6ddfae8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007169"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935713"
 ---
 # <a name="update-visual-studio-to-the-most-recent-release"></a>Aktualizace sady Visual Studio na nejnovější verzi
 
@@ -94,7 +94,7 @@ Stejně jako v dřívějších verzích sady Visual Studio můžete použít Ins
 1. Spusťte instalační program. Instalační program pro Visual Studio může před pokračováním vyžadovat aktualizaci.
 
    > [!NOTE]
-   > V počítači s Windows 10 můžete instalační program najít pod písmenem **v** jako **instalační program pro Visual Studio**nebo pod písmenem **M** jako **instalační program Microsoft Visual Studio**.
+   > V počítači s Windows 10 můžete instalační program najít pod písmenem **v** jako **instalační program pro Visual Studio** nebo pod písmenem **M** jako **instalační program Microsoft Visual Studio**.
 
 1. Na stránce **produkt** v instalačním programu vyhledejte verzi sady Visual Studio, kterou jste předtím nainstalovali.
 
@@ -150,7 +150,7 @@ Pokud se rozhodnete ignorovat oznámení, Visual Studio ho přestane zobrazovat.
 1. Spusťte instalační program. Než budete pokračovat, možná budete muset instalační program aktualizovat. Pokud se jedná o tento případ, budete vyzváni k tomu.
 
    > [!NOTE]
-   > V počítači s Windows 10 můžete instalační program najít pod písmenem **v** jako **instalační program pro Visual Studio**nebo pod písmenem **M** jako **instalační program Microsoft Visual Studio**.
+   > V počítači s Windows 10 můžete instalační program najít pod písmenem **v** jako **instalační program pro Visual Studio** nebo pod písmenem **M** jako **instalační program Microsoft Visual Studio**.
 
 1. Na stránce **produkt** v instalačním programu vyhledejte verzi sady Visual Studio, která byla dříve nainstalována.
 
@@ -212,7 +212,7 @@ Aktualizaci můžete vyhledat a pak ji nainstalovat pomocí řádku nabídek neb
 
     ![Otevřete Visual Studio 2019](media/vs-2019/vs-installer-visual-studio-2019.png "Otevřete Visual Studio 2019 z Windows.")
 
-1. V části **Začínáme**vyberte libovolnou možnost a otevřete integrované vývojové prostředí (IDE).
+1. V části **Začínáme** vyberte libovolnou možnost a otevřete integrované vývojové prostředí (IDE).
 
     ![Otevřete Instalační program pro Visual Studio](media/vs2019-choose-option-from-get-started.png "Otevřete Instalační program pro Visual Studio")
 
@@ -232,7 +232,7 @@ Aktualizaci můžete vyhledat a pak ji nainstalovat pomocí řádku nabídek neb
 
 ### <a name="in-visual-studio"></a>V nástroji Visual Studio
 
-1. V řádku nabídek zvolte možnost **help**a pak možnost **Vyhledat aktualizace**.
+1. V řádku nabídek zvolte možnost **help** a pak možnost **Vyhledat aktualizace**.
 
      ![V nabídce nápovědu vyberte možnost vyhledat aktualizace.](media/vs-2019/vs-ide-check-updates-help-menu.png "V nabídce nápovědu vyberte možnost vyhledat aktualizace.")
 
@@ -253,7 +253,7 @@ Aktualizaci můžete vyhledat a pak ji nainstalovat pomocí řádku nabídek neb
 
    ![Ikona oznámení v integrovaném vývojovém prostředí sady Visual Studio](media/vs-2019/notification-bar.png "Ikona oznámení v integrovaném vývojovém prostředí sady Visual Studio")
 
-1. V **centru oznámení**zvolte aktualizaci, kterou chcete nainstalovat, a pak zvolte **Zobrazit podrobnosti**.
+1. V **centru oznámení** zvolte aktualizaci, kterou chcete nainstalovat, a pak zvolte **Zobrazit podrobnosti**.
 
      ![Centrum oznámení v aplikaci Visual Studio 2019](media/vs-2019/notification-hub-update.png "Centrum oznámení v aplikaci Visual Studio 2019")
 
@@ -277,9 +277,9 @@ Můžete také zvolit nastavení **automaticky stahovat aktualizace** , které u
 
 Jak na to:
 
-1. Na panelu nabídek vyberte **Tools** > **Možnosti**nástroje.
+1. Na panelu nabídek vyberte  > **Možnosti** nástroje.
 
-2. Rozbalte položku **prostředí**a pak zvolte možnost **aktualizace produktu**.
+2. Rozbalte položku **prostředí** a pak zvolte možnost **aktualizace produktu**.
 
     ![Aktualizuje nastavení v aplikaci Visual Studio.](media/vs-2019/update-settings-options.png)
 

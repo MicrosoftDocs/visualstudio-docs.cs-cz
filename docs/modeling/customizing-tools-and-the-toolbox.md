@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Domain-Specific Language, toolbox
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f02254cc1229ab069277b0fe46a6b825393f682f
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 40341a0c74b371c4c84429474e58c7d338bb8059
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361557"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935427"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>Přizpůsobení nástrojů a panelu nástrojů
 
@@ -234,7 +234,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  Pomocí vlastního kódu můžete použít omezení typu "Hard", ale měli byste zvážit, zda by uživatelé měli být schopni dočasně vytvořit neplatná připojení. Pokud by měly, můžete tato omezení upravit tak, aby se neověřilo, dokud se uživatelé nepokusí Uložit změny.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přizpůsobení vytvoření a přesunutí elementu](../modeling/customizing-element-creation-and-movement.md)
 - [Přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md)

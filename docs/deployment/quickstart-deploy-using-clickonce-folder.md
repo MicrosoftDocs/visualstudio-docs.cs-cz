@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: adb461c4-812a-4b8c-b2ab-96002379f6a9
 author: john-hart
 ms.author: JohnHart
-manager: jillfra
+manager: jmartens
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: f2d7b500caacf320df599843e45cc4e93b4f3e69
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 5a6f7c2c8d6c79270df94c100bbd4625856efa15
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441302"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934504"
 ---
 # <a name="deploy-a-net-windows-desktop-application-using-clickonce"></a>Nasazení desktopové aplikace Windows .NET pomocí technologie ClickOnce
 
@@ -27,7 +27,7 @@ Počínaje verzí Visual Studio 2019 verze 16,8 můžete použít nástroj **pub
 
 ## <a name="publishing-with-clickonce"></a>Publikování pomocí technologie ClickOnce
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte **publikovat** (nebo použijte **Build**  >  položku nabídky **publikovat** sestavení).
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte **publikovat** (nebo použijte   >  položku nabídky **publikovat** sestavení).
 
     ![Příkaz publikovat v místní nabídce projektu v Průzkumník řešení](../deployment/media/quickstart-clickonce-solution-explorer.png "Zvolit publikování")
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, Properties window
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f7d4ac76b8b10fde0c193e3eda73cec611c1441
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: b7ee201494ed849062458afdcd41c2aed1b83b42
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362871"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935388"
 ---
 # <a name="customize-the-properties-window"></a>Přizpůsobení okno Vlastnosti
 
@@ -28,7 +28,7 @@ V aplikaci Visual Studio můžete přizpůsobit vzhled a chování okna vlastnos
 
 Když nastavíte název vlastnosti v definici DSL, její zobrazovaný název se automaticky nastaví na kopii názvu. Pokud napíšete název Pascal použita, jako je například "FuelGauge", zobrazované jméno bude automaticky obsahovat mezeru: "měřič pohonu". Zobrazované jméno ale můžete nastavit explicitně na jinou hodnotu.
 
-**Popis**. Popis doménové vlastnosti se zobrazí na dvou místech:
+**Popis:** Popis doménové vlastnosti se zobrazí na dvou místech:
 
 - V dolní části okna vlastnosti, když uživatel vybere vlastnost. Můžete ji použít k vysvětlení uživateli, co vlastnost představuje.
 
@@ -321,6 +321,6 @@ public class MyTypeConverter : System.ComponentModel.TypeConverter
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)

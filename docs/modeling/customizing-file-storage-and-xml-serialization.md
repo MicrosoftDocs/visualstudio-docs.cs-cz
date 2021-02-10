@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Domain-Specific Language, serialization
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e889bb81b4c13d003beb15f733d053ef159b197f
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 019f77320e9118d5f3d31e647a59c71bb474d204
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362935"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935531"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>Přizpůsobení úložiště souborů a serializace XML
 
@@ -275,7 +275,7 @@ Tyto prvky se nacházejí v Průzkumníkovi DSL pod **daty serializace XML Behav
 |Domain – třída|Doménová třída, na kterou se vztahuje tento uzel dat třídy Jen pro čtení.|
 |Název prvku|Název uzlu XML pro prvky této třídy. Výchozí hodnota je nižší verze názvu doménové třídy.|
 |Název atributu monikeru|Název atributu použitého v elementech monikeru, který má obsahovat odkaz. Pokud je pole prázdné, použije se název vlastnosti klíče nebo ID.<br /><br /> V tomto příkladu je to "Name":  `<personMoniker name="/Mike Nash"/>`|
-|Název elementu monikeru|Název XML elementu, který se používá pro monikery, které odkazují na prvky této třídy.<br /><br /> Výchozí hodnota je malá verze názvu třídy s příponou "moniker". Například `personMoniker`.|
+|Název elementu monikeru|Název XML elementu, který se používá pro monikery, které odkazují na prvky této třídy.<br /><br /> Výchozí hodnota je malá verze názvu třídy s příponou "moniker". Například, `personMoniker`.|
 |Název typu monikeru|Název typu XSD vygenerovaného pro monikery v elementech této třídy XSD je ve **schématu Dsl\Generated Code \\ \* Schema. xsd.**|
 |ID serializace|Je-li nastavena hodnota true, je identifikátor GUID elementu obsažen v souboru. Tato hodnota musí být true, pokud neexistuje žádná vlastnost, která je označena **klíčovým** slovem MONIKER a DSL definuje referenční vztahy k této třídě.|
 |Název typu|Název typu XML vygenerovaného v XSD z určené doménové třídy|
@@ -306,7 +306,7 @@ Uzly dat role se nacházejí v uzlech zdrojové třídy.
 |Název elementu role|Určuje název elementu XML, který je odvozen ze zdrojové role. Výchozí hodnota je název vlastnosti role.|
 |Použít úplný formulář|Je-li nastavena hodnota true, je každý cílový element nebo moniker uzavřen v uzlu XML představujícím relaci. Tato hodnota by měla být nastavena na hodnotu true, pokud má vztah své vlastní doménové vlastnosti.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)

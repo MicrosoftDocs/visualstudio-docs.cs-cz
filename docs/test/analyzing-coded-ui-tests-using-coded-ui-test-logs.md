@@ -5,16 +5,16 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 3dcbb1bdfd89ae13df5174b6502dc6e89437a468
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 41863ccc845b0f74c300e927708e238193f223ec
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442492"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934855"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>Analýza programových testů uživatelského rozhraní pomocí protokolů kódovaného testu uživatelského rozhraní
 
@@ -40,7 +40,7 @@ V závislosti na vašem scénáři použijte k povolení protokolu jednu z násl
       <add name="EqtTraceLevel" value="4" />
       ```
 
-   3. Uložte soubor.
+   3. Soubor uložte.
 
 - Pokud je v testovacím projektu přítomen soubor *App.config* :
 
