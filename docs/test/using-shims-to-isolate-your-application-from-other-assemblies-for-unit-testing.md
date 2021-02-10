@@ -10,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 4bf43fa5dd3e95500b036d5ef5d65055b5d5870f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f15af6958c7f5855b5005fc0a6aa4c821346ccb5
+ms.sourcegitcommit: e262f4c2a147c3fa2d27de666aae3a0497317867
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946277"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100006402"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>Izolace vaší aplikace při testování částí pomocí překrytí
 
@@ -30,7 +30,7 @@ Přehled a pokyny pro rychlé spuštění najdete v tématu věnovaném [izolaci
 - Visual Studio Enterprise
 - .NET Framework projekt
 ::: moniker range=">=vs-2019"
-- V sadě Visual Studio 2019 Update 6 je podpora projektu .NET Core a sady SDK předem zobrazená a v Update 8 je ve výchozím nastavení povolená. Další informace najdete v tématu [Microsoft předstírá pro projekty ve stylu .NET Core a SDK](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
+- Podpora projektů pro .NET Core, .NET 5,0 a SDK je v sadě Visual Studio 2019 Update 6 předem zobrazená a ve výchozím nastavení je v Update 8 povolená. Další informace najdete v tématu [Microsoft předstírá pro projekty ve stylu .NET Core a SDK](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
 ::: moniker-end
 
 ## <a name="example-the-y2k-bug"></a>Příklad: Chyba Y2K
@@ -71,7 +71,7 @@ Nejprve přidejte napodobeniny sestavení:
 1. V **Průzkumník řešení** 
     - Pro starší projekt .NET Framework (jiný styl než SDK) rozbalte uzel **odkazy** projektu testování jednotek.
     ::: moniker range=">=vs-2019"
-    - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení**, **projektů** nebo **balíčků**.
+    - Pro projekt, který cílí na .NET Framework, .NET Core nebo .NET 5,0, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete v rámci **sestavení**, **projektů** nebo **balíčků** falešné.
     ::: moniker-end
     - Pokud pracujete v Visual Basic, vyberte **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** a zobrazte tak uzel **odkazy** .
 
@@ -524,7 +524,7 @@ System.Fakes.ShimEnvironment.GetCommandLineArgsGet = ...
 
 ## <a name="limitations"></a>Omezení
 
-Překrytí nelze použít pro všechny typy z knihovny tříd rozhraní .NET Base třídy **mscorlib** a **System** v .NET Framework a v **System. Runtime** v .NET Core.
+Překrytí nelze použít pro všechny typy z knihovny třídy Base rozhraní .NET **mscorlib** a **systém** v systému .NET Framework a v **System. Runtime** v rozhraní .NET Core nebo .NET 5,0.
 
 ## <a name="see-also"></a>Viz také
 

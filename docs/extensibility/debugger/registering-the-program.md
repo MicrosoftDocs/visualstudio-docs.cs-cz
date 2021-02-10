@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: d726a161-7db3-4ef4-b258-9f6a5be68418
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 80c3d13cc7319e43390a7e9e6f4eb42a5a87c780
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 8326bb2c3938ce76d777c73d0d0f24da145d8ef5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847093"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961063"
 ---
 # <a name="register-the-program"></a>Zaregistrovat program
 Poté, co ladicí stroj získá port, který je reprezentován rozhraním [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) , je dalším krokem k tomu, abyste mohli ladit program, zaregistrovat ho v portu. Po registraci je program k dispozici pro ladění jedním z následujících způsobů:

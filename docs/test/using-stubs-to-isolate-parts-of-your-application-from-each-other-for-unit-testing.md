@@ -12,12 +12,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 874695bed7044c92f43c6d3031842d94372a2c33
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d5e4d8fb598434bfaa2a8a699c546cdc84febb0
+ms.sourcegitcommit: e262f4c2a147c3fa2d27de666aae3a0497317867
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946225"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100006431"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Vzájemná izolace částí aplikace pomocí zástupných procedur za účelem testování částí
 
@@ -152,7 +152,7 @@ Chcete-li použít zástupné procedury, musíte nejdříve vygenerovat typy zá
 1. V **Průzkumník řešení** 
     - Pro starší projekt .NET Framework (jiný styl než SDK) rozbalte uzel **odkazy** projektu testování jednotek.
     ::: moniker range=">=vs-2019"
-    - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení**, **projektů** nebo **balíčků**.
+    - Pro projekt, který cílí na .NET Framework, .NET Core nebo .NET 5,0, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete v rámci **sestavení**, **projektů** nebo **balíčků** falešné.
     ::: moniker-end
     - Pokud pracujete v Visual Basic, vyberte **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** a zobrazte tak uzel **odkazy** .
 

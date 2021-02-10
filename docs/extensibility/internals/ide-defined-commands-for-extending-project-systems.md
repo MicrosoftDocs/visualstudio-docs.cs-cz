@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0e33b8e9-16fa-4400-a941-e92d56120e7e
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d5147f4e03b019b083613a77afe95b95e9e033a
-ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
+ms.openlocfilehash: 4a08d60a52ed970781ceafdb15d0d5c64440f0cd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761163"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968070"
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>Příkazy definované prostředím IDE pro rozšíření systémů projektů
 Chcete-li zvětšit systémy projektu, můžete použít příkazy a skupiny příkazů poskytované [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozhraním IDE.
@@ -28,7 +28,7 @@ Chcete-li zvětšit systémy projektu, můžete použít příkazy a skupiny př
 ## <a name="command-menus"></a>Nabídky příkazů
  V následující tabulce jsou uvedeny nabídky příkazů, které jsou užitečným umístěním, kde můžete umístit příkazy vysoké úrovně, které vyvolají zařízení s podporou projektu.
 
-|Nabídka příkazů|Popis|
+|Nabídka příkazů|Description|
 |------------------|-----------------|
 |IDM_VS_MENU_PROJECT|Nabídka na nejvyšší úrovni **projektu** .|
 |IDM_VS_TOOL_PROJWIN|Panel nástrojů **Průzkumník řešení** .|
@@ -36,7 +36,7 @@ Chcete-li zvětšit systémy projektu, můžete použít příkazy a skupiny př
 ## <a name="shortcut-menus"></a>Místní nabídky
  V následující tabulce jsou uvedeny místní nabídky, které se použijí, když je vybrán jeden uzel v **Průzkumník řešení**, nebo když v **Průzkumník řešení** existuje více homogenních výběrů, což znamená, že všechny vybrané uzly mají stejný typ.
 
-|Místní nabídka|Popis|
+|Místní nabídka|Description|
 |-------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_PROJNODE>|Platí v případě, že je vybrán uzel projektu.|
 |<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_ITEMNODE>|Použije se při výběru souboru.|
@@ -47,7 +47,7 @@ Chcete-li zvětšit systémy projektu, můžete použít příkazy a skupiny př
 
  V následující tabulce jsou uvedeny místní nabídky, které se použijí, pokud výběr v **Průzkumník řešení** zahrnuje více hierarchií,
 
-|Místní nabídka|Popis|
+|Místní nabídka|Description|
 |-------------------|-----------------|
 |IDM_VS_CTXT_XPROJ_SLNPROJ|Platí v případě, že aktuální výběr obsahuje uzel řešení a uzly kořenového projektu.|
 |IDM_VS_CTXT_XPROJ_SLNITEM|Platí, pokud aktuální výběr obsahuje uzel řešení a položky projektu.|
@@ -58,7 +58,7 @@ Chcete-li zvětšit systémy projektu, můžete použít příkazy a skupiny př
 ## <a name="command-groups"></a>Skupiny příkazů
  V následující tabulce jsou uvedeny skupiny příkazů, které lze použít při rozšiřování projektů a k přístupu prostřednictvím <xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_PROJNODE> místní nabídky.
 
-|Skupina příkazů|Popis|
+|Skupina příkazů|Description|
 |-------------------|-----------------|
 |IDG_VS_CTXT_PROJECT_BUILD|Příkazy pro sestavování, resestavení a nasazení projektu.|
 |IDG_VS_CTXT_COMPILELINK|Příkazy pro kompilaci a propojení projektu.|

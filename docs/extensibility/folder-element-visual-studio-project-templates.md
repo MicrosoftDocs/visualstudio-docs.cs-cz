@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 558e3d41-0db5-4c44-82bb-6bb87892b093
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba3f357f6c48280d12e4ddab6135245e699d0a44
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 9b655308760d64f97c168e8000972142f159ec3a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672714"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968226"
 ---
 # <a name="folder-element-visual-studio-project-templates"></a>Folder – element (šablony projektů sady Visual Studio)
 Určuje složku, která bude přidána do projektu.
@@ -66,7 +66,7 @@ Určuje složku, která bude přidána do projektu.
 
  K uspořádání položek projektu do složek v šabloně můžete použít kteroukoli z následujících metod:
 
-- Zahrňte složky do souboru template *. zip* a přidejte je do projektu v souboru *. vstemplate* zadáním cesty k souboru v `ProjectItem` prvcích bez `Folder` elementů. Toto je doporučená metoda. Například:
+- Zahrňte složky do souboru template *. zip* a přidejte je do projektu v souboru *. vstemplate* zadáním cesty k souboru v `ProjectItem` prvcích bez `Folder` elementů. Toto je doporučená metoda. Příklad:
 
      `...`
 
@@ -76,7 +76,7 @@ Určuje složku, která bude přidána do projektu.
 
      `...`
 
-- Zahrňte složky do souboru template *. zip* a přidejte je do projektu v souboru *. vstemplate* s `Folder` prvky. Například:
+- Zahrňte složky do souboru template *. zip* a přidejte je do projektu v souboru *. vstemplate* s `Folder` prvky. Příklad:
 
      `...`
 
@@ -90,7 +90,7 @@ Určuje složku, která bude přidána do projektu.
 
      `...`
 
-- Nezahrnujte složky do souboru template *. zip* , ale přidejte složky pomocí `TargetFileName` atributu `ProjectItem` elementu. Například:
+- Nezahrnujte složky do souboru template *. zip* , ale přidejte složky pomocí `TargetFileName` atributu `ProjectItem` elementu. Příklad:
 
      `...`
 

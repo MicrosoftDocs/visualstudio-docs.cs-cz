@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 00bec66b-bcee-46f5-91d9-f73a2b469744
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 69fb3d8b5e8af13ec8781e65e60bd060ad69d365
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 41ccdd8ef7285ba0e5fa211b6b9f76fead5a2f3c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362389"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960569"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -238,7 +238,7 @@ Proč odeslat zpětnou vazbu týmu sady Visual Studio? Vzhledem k tomu, že pove
 
 * Pokud dojde k problému, kdy aplikace Visual Studio přestane reagovat, dojde k selhání nebo k jinému problému s výkonem, můžete snadno sdílet reprodukci kroky a podpůrné soubory s námi pomocí nástroje [nahlásit problém](how-to-report-a-problem-with-visual-studio.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Novinky v dokumentaci k aplikaci Visual Studio](whats-new-visual-studio-docs.md)
 * [Zpráva k vydání verze pro Visual Studio 2019](/visualstudio/releases/2019/release-notes/)

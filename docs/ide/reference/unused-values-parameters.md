@@ -6,18 +6,18 @@ ms.date: 02/15/2019
 ms.topic: reference
 author: kendrahavens
 ms.author: kehavens
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8768992ce3ef9f40ab0adba1724d43b32e5bde5c
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: cd0b6e936f4478cb4b74a3f004e69d77dbad7fbc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560704"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960608"
 ---
 # <a name="unused-value-assignments-variables-and-parameters"></a>Přiřazení nepoužitých hodnot, proměnné a parametry
 
@@ -42,7 +42,7 @@ Tento refaktoring platí pro:
    ![ ](media/unused-value-assignment.png)
    ![ zahození hodnoty](media/unused-value-discard.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Refactoring](../refactoring-in-visual-studio.md)
 - [Tipy pro vývojáře na platformě .NET](../csharp-developer-productivity.md)

@@ -1,7 +1,7 @@
 ---
 title: Všechny nástroje
 description: Příklad použití všech nástrojů devinit
-ms.date: 08/28/2020
+ms.date: 02/08/2021
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: e81fa07581d457a9046c7ed51e76582bd429eda0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8827fae4c1032eeba910068c6f427de7d16766ae
+ms.sourcegitcommit: e262f4c2a147c3fa2d27de666aae3a0497317867
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943629"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100006383"
 ---
 # <a name="all-tools"></a>Všechny nástroje
 
@@ -26,7 +26,7 @@ V tomto příkladu je `devinit.json` , který nainstaluje všechny dostupné ná
 
 ```json
 {
-  "$schema": "./devinit.schema-3.0.json",
+  "$schema": "./devinit.schema-6.0.json",
   "comments": "A sample dot-devinit file",
   "run": [
     {
@@ -138,6 +138,10 @@ V tomto příkladu je `devinit.json` , který nainstaluje všechny dostupné ná
       "comments": "Imports .vsconfig file which is passed as input to Visual Studio."
     },
     {
+      "tool": "require-winget",
+      "comments": "Installs winget",
+    },
+    {
       "tool": "set-env",
       "input": "Foo=Bar",
       "comments": "Set-env can set, display or delete individual variables and can display all variables."
@@ -161,6 +165,11 @@ V tomto příkladu je `devinit.json` , který nainstaluje všechny dostupné ná
     {
       "comments": "Lists the state of all Windows features.",
       "tool": "windowsfeature-list"
+    },
+    {
+      "comments": "Installs the package defined in winget-manifest.yml.",
+      "tool": "winget-install",
+      "additionalOptions": "--manifest winget-manifest.yml"
     },
     {
       "tool": "wsl-install",

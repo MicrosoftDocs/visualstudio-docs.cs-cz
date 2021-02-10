@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 11aa768d-1852-44d6-9de3-17f9bafaded2
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f8b521432124267d3f0e179d3a889fb599fa99d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c3e4cfaf35c1fee655eedc49e8a3212c1355390
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80717129"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99967472"
 ---
 # <a name="ienumdebugcustomattributes"></a>IEnumDebugCustomAttributes
 Vytvoří výčet vlastních atributů.
@@ -42,7 +42,7 @@ IEnumCustomAttributes : IUnknown
 |[Další](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md)|Načte zadaný počet vlastních atributů v sekvenci výčtu.|
 |[Přeskočit](../../../extensibility/debugger/reference/ienumdebugcustomattributes-skip.md)|Přeskočí zadaný počet vlastních atributů v sekvenci výčtu.|
 |[Reset](../../../extensibility/debugger/reference/ienumdebugcustomattributes-reset.md)|Obnoví posloupnost výčtu na začátek.|
-|[Klonování](../../../extensibility/debugger/reference/ienumdebugcustomattributes-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|
+|[Klonovat](../../../extensibility/debugger/reference/ienumdebugcustomattributes-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugcustomattributes-getcount.md)|Získá počet vlastních atributů v enumerátoru.|
 
 ## <a name="requirements"></a>Požadavky
@@ -53,6 +53,6 @@ IEnumCustomAttributes : IUnknown
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Viz také
-- [Rozhraní poskytovatele symbolů ](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
+- [Rozhraní poskytovatele symbolů](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
 - [EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md)
 - [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

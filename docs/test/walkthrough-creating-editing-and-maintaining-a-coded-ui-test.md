@@ -5,16 +5,16 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f36704405776a790c3ec634856f54ee51bc23dc6
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: b2c14869fa8e4a14a209f8fe5ad440d3ae0e569b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598533"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99967953"
 ---
 # <a name="walkthrough-create-edit-and-maintain-a-coded-ui-test"></a>Návod: vytvoření, úprava a údržba kódovaného testu uživatelského rozhraní
 
@@ -83,7 +83,7 @@ V tomto návodu se dozvíte, jak vytvořit, upravit a udržovat programový test
     }
     ```
 
-10. Uložte soubor.
+10. Soubor uložte.
 
 ### <a name="run-the-wpf-app"></a>Spuštění aplikace WPF
 
@@ -335,7 +335,7 @@ V tomto návodu se dozvíte, jak vytvořit, upravit a udržovat programový test
 
 ![odkaz na video ](../data-tools/media/playvideo.gif) [Začínáme s kódovanými testy uživatelského rozhraní](https://onedrive.live.com/?id=2DB0E1EFE1C1D3B8%21110&cid=2DB0E1EFE1C1D3B8)
 
-## <a name="faq"></a>Nejčastější dotazy
+## <a name="faq"></a>Časté otázky
 
 [Nejčastější dotazy k programovým testům uživatelského rozhraní](https://social.msdn.microsoft.com/Forums/vsautotest/3a74dd2c-cef8-4923-abbf-7a91f489e6c4/faqs)
 

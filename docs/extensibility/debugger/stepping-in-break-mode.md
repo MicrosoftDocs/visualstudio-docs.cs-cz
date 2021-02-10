@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: b08dc8ee-6c63-4462-a097-6f525cfbb35a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 80273bf470a3ed0c342e781085de6e991508451c
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 4f284fecf32a94f7187ecd34798f9ac21f476804
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845190"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960673"
 ---
 # <a name="stepping-in-break-mode"></a>Krokování v režimu pozastavení
 V následující části je popsán proces, který nastane, když je ladicí program v režimu pozastavení a musí procházet kód:

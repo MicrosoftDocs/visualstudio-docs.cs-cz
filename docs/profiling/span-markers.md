@@ -8,15 +8,15 @@ f1_keywords:
 ms.assetid: 736b7765-9c71-44d7-85e5-79787d13d91c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 28fb9da2e838a17f5b014c3b1af4fc9ee5ab46d7
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 526d82194a4ed1463c802296cb97c95e0eb41d33
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98720108"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960140"
 ---
 # <a name="span-markers"></a>Značky span
 Značka rozsahu představuje smysluplnou fázi aplikace. Například můžete použít rozsah, který představuje časový interval, během kterého se zpracovává konkrétní pracovní položka. Jeho délka představuje dobu trvání odpovídající fáze aplikace. Tento obrázek ukazuje rozpětí v Vizualizátor souběžnosti:

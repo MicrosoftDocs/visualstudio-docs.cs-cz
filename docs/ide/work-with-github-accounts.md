@@ -6,16 +6,16 @@ ms.topic: conceptual
 description: Naučte se používat Visual Studio s účty GitHubu.
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 845b663a3a0828806766fa0609e45efafabec50a
-ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
+ms.openlocfilehash: 9da0f2c2df796f50530f19252c7236c2bb606a10
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94704018"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960478"
 ---
 # <a name="work-with-github-accounts-in-visual-studio"></a>Práce s účty GitHub v sadě Visual Studio
 
@@ -25,7 +25,7 @@ Pokud máte veřejný účet GitHubu nebo GitHub Enterprise, můžete ho přidat
 
 Svůj veřejný účet GitHub můžete přidat, pokud jste už přihlášení k aplikaci Visual Studio pomocí účet Microsoft nebo pracovního nebo školního účtu.
 
-1. Vyberte ikonu s vašimi iniciálami v pravém horním rohu prostředí sady Visual Studio. Pak vyberte **Nastavení účtu...** pro správu účtů. Můžete také otevřít dialogové okno nastavení účtu, a to tak **File**, že kliknete na  >  **Nastavení účtu** souboru.
+1. Vyberte ikonu s vašimi iniciálami v pravém horním rohu prostředí sady Visual Studio. Pak vyberte **Nastavení účtu...** pro správu účtů. Můžete také otevřít dialogové okno nastavení účtu, a to tak , že kliknete na  >  **Nastavení účtu** souboru.
 
     :::image type="content" source="../ide/media/account-picker.png" alt-text="Nastavení účtu":::
 
@@ -41,7 +41,7 @@ Svůj veřejný účet GitHub můžete přidat, pokud jste už přihlášení k 
 
     :::image type="content" source="../ide/media/show-both-accounts.png" alt-text="Oba účty ukazují":::
 
-Pokud ještě nejste přihlášení k aplikaci Visual Studio s jiným účtem, vyberte odkaz **Přihlásit** se v pravém horním rohu prostředí sady Visual Studio. Můžete také otevřít dialogové okno nastavení účtu, a to tak **File**, že kliknete na  >  **Nastavení účtu** souboru. Pak podle výše uvedených pokynů přidejte svůj účet GitHub.
+Pokud ještě nejste přihlášení k aplikaci Visual Studio s jiným účtem, vyberte odkaz **Přihlásit** se v pravém horním rohu prostředí sady Visual Studio. Můžete také otevřít dialogové okno nastavení účtu, a to tak , že kliknete na  >  **Nastavení účtu** souboru. Pak podle výše uvedených pokynů přidejte svůj účet GitHub.
 
 ![Přihlášený uživatel](../ide/media/vs2019_usernotsignedin.png)
 
@@ -49,7 +49,7 @@ Pokud ještě nejste přihlášení k aplikaci Visual Studio s jiným účtem, v
 
 Ve výchozím nastavení má Visual Studio povolené jenom veřejné účty GitHubu.
 
-1. Pokud chcete povolit účty na webu GitHub Enterprise **Tools**, klikněte na  >  **Možnosti** nástroje a vyhledejte možnosti **účtů** .
+1. Pokud chcete povolit účty na webu GitHub Enterprise , klikněte na  >  **Možnosti** nástroje a vyhledejte možnosti **účtů** .
 
     :::image type="content" source="../ide/media/accounts-options.png" alt-text="Nabídka možnosti účtů":::
 

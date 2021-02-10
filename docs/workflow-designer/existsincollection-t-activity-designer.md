@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 0acf9a13-caf5-4bb4-ba22-ec37d2b7267a
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9012bb936c2a9a8944639458d4165e08f5e7081e
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 971d6bd028315ae4a8b6f3a88164c97c6f95712b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96995405"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961323"
 ---
 # <a name="existsincollectiont-activity-designer"></a>Návrhář aktivity ExistsInCollection\<T>
 
@@ -47,7 +47,7 @@ Následující tabulka uvádí <xref:System.Activities.Statements.ExistsInCollec
 
 ## <a name="see-also"></a>Viz také
 
-- [Collection (Kolekce)](../workflow-designer/collection-activity-designers.md)
+- [Kolekce](../workflow-designer/collection-activity-designers.md)
 - [AddToCollection\<T>](../workflow-designer/addtocollection-t-activity-designer.md)
 - [ClearCollection\<T>](../workflow-designer/clearcollection-t-activity-designer.md)
 - [RemoveFromCollection\<T>](../workflow-designer/removefromcollection-t-activity-designer.md)

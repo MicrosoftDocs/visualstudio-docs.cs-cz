@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 1f4096a8-f7aa-4dfa-84e1-6d59263e70bb
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2574fe76faadf4284088c0d47592d0c5ba0d38f9
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: be0f746a849a8370b145a46f9fbf6340a1dc98fc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848336"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961076"
 ---
 # <a name="roadmap-for-extending-the-debugger"></a>Plán pro rozšíření ladicího programu
 Tato dokumentace poskytuje návod a referenční informace pro rozšíření [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] ladicího programu pomocí nástroje [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .
@@ -49,7 +49,7 @@ Tato dokumentace poskytuje návod a referenční informace pro rozšíření [!I
 
    [Implementace dodavatele portu](../../extensibility/debugger/implementing-a-port-supplier.md)
 
-   [Ukázky](../../extensibility/debugger/visual-studio-debugging-samples.md)
+   [ukázky](../../extensibility/debugger/visual-studio-debugging-samples.md)
 
 ## <a name="see-also"></a>Viz také
 - [Začínáme](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)

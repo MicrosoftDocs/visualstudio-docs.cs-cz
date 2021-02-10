@@ -6,15 +6,15 @@ ms.date: 11/16/2020
 ms.topic: conceptual
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 071c6061417e26b45e5f9e67bc6ac1001bf08530
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 169415537460dae94ca844c426bb3770449161b5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480340"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960452"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Práce s několika uživatelskými účty
 
@@ -85,13 +85,13 @@ Další informace najdete v tématu [připojení k projektům v Team Explorer](c
 
 Přidání dalšího účtu do sady Visual Studio:
 
-1. Vyberte **File**  >  **Nastavení účtu** souboru.
+1. Vyberte   >  **Nastavení účtu** souboru.
 
 1. V části **všechny účty** vyberte **Přidat účet**.
 
 1. Na stránce **Přihlásit se k účtu** vyberte účet nebo zvolte **použít jiný účet**. Postupujte podle výzev a zadejte nové přihlašovací údaje k účtu.
 
-Volitelné Nyní můžete přejít na **Průzkumník serveru** a zobrazit služby Azure přidružené k účtu, který jste právě přidali. V **Průzkumník serveru** klikněte pravým tlačítkem na uzel **Azure** a vyberte **Spravovat a filtrovat předplatná**. Kliknutím na šipku rozevíracího seznamu vedle aktuálního účtu zvolte nový účet a pak zvolte, která předplatná chcete zobrazit v **Průzkumník serveru**. Měly by se zobrazit všechny služby přidružené k zadanému předplatnému. I když jste se ještě přihlásili do sady Visual Studio s druhým účtem, jste přihlášeni ke službám a prostředkům tohoto účtu. Totéž platí pro **Project**  >  **Přidání připojené služby** a připojení **týmu**  >  **k Team Foundation Server do** projektu.
+Volitelné Nyní můžete přejít na **Průzkumník serveru** a zobrazit služby Azure přidružené k účtu, který jste právě přidali. V **Průzkumník serveru** klikněte pravým tlačítkem na uzel **Azure** a vyberte **Spravovat a filtrovat předplatná**. Kliknutím na šipku rozevíracího seznamu vedle aktuálního účtu zvolte nový účet a pak zvolte, která předplatná chcete zobrazit v **Průzkumník serveru**. Měly by se zobrazit všechny služby přidružené k zadanému předplatnému. I když jste se ještě přihlásili do sady Visual Studio s druhým účtem, jste přihlášeni ke službám a prostředkům tohoto účtu. Totéž platí pro   >  **Přidání připojené služby** a připojení **týmu**  >  **k Team Foundation Server do** projektu.
 
 ### <a name="add-an-account-using-device-code-flow"></a>Přidání účtu pomocí toku kódu zařízení
 
@@ -101,7 +101,7 @@ Přihlášení pomocí toku kódu zařízení:
 
 1. Otevřete stránku [**účty**](reference/accounts-environment-options-dialog-box.md) v nabídce **nástroje**  >  **Možnosti**  >  **prostředí** a pak **při přidávání nebo opětovném ověřování účtu vyberte Povolit tok kódu zařízení**. Kliknutím na **tlačítko OK** zavřete stránky možnosti.
 
-1. Zvolením **File**  >  **Možnosti účet** souboru otevřete stránku Správa účtů.
+1. Zvolením   >  **Možnosti účet** souboru otevřete stránku Správa účtů.
 
 1. V části **všechny účty** vyberte **Přidat účet** .
 

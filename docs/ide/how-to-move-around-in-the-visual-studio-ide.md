@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6c36b6eb-c93f-496b-af08-4199f7afd8bd
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b8f2e796ed122bc4dba0c1fb4cfca85c74065fb8
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 384a6252ef17709970f6e902dfdf83a157b0460a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597038"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968044"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>Postupy: pohyb v integrovaném vývojovém prostředí sady Visual Studio
 
@@ -65,7 +65,7 @@ Můžete také přepnout do konkrétního souboru otevřeného v editoru, bez oh
 
 ### <a name="to-switch-to-specific-files-in-the-editor"></a>Přepnutí na konkrétní soubory v editoru
 
-- Stisknutím **kombinace kláves CTRL** + **Tab** zobrazte **navigátor IDE**. Podržte stisknutou klávesu **CTRL** a stiskněte klávesu **tabulátor** opakovaně, dokud nevyberete soubor, na který chcete přepnout.
+- Stisknutím **kombinace kláves CTRL** +  zobrazte **navigátor IDE**. Podržte stisknutou klávesu **CTRL** a stiskněte klávesu **tabulátor** opakovaně, dokud nevyberete soubor, na který chcete přepnout.
 
     > [!TIP]
     > Chcete-li změnit pořadí, ve kterém procházíte seznamem **aktivních souborů** , podržte klávesu **CTRL** + **+ SHIFT** a stiskněte klávesu **TAB**.
@@ -76,7 +76,7 @@ Můžete také přepnout do konkrétního souboru otevřeného v editoru, bez oh
 
     \- ani
 
-- Na panelu nabídek vyberte **okna okna**  >  **Windows**.
+- Na panelu nabídek vyberte **okna okna**  >  .
 
 - V seznamu vyberte soubor, který chcete zobrazit, a pak zvolte **aktivovat**.
 

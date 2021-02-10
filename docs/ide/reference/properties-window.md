@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e6e0fa4f-75c4-4a52-af15-281cd61876ca
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d1be1d4fa9f1b088547bb21dfb64254209783d7e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3ff6435aa006de851a14f4f04570d086a86a5999
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565705"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99967979"
 ---
 # <a name="properties-window"></a>Vlastnosti – okno
 

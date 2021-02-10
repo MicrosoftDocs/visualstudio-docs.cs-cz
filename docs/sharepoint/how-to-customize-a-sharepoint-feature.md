@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, features
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b4846d79af7a031970e8870626f88450e8a3e647
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 0604b6497920e1e6df0a792ce758519f425ac155
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903660"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959945"
 ---
 # <a name="how-to-customize-a-sharepoint-feature"></a>Postupy: přizpůsobení funkce služby SharePoint
   Funkce služby SharePoint můžete vytvořit a přizpůsobit pomocí návrháře funkcí v aplikaci Visual Studio. Můžete například nastavit rozsah funkcí a přidat další funkce jako závislosti. Ve výchozím nastavení se Návrhář funkcí otevře při přidání nové funkce v Průzkumník řešení nebo v Průzkumníkovi balíčku služby SharePoint.

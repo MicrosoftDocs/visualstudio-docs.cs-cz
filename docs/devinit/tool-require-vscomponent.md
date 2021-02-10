@@ -1,7 +1,7 @@
 ---
 title: require-vscomponent
 description: devinit Tool vyžaduje – vscomponent.
-ms.date: 11/20/2020
+ms.date: 02/08/2021
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 0b58e80a03828bf486e6beb4d0014f6fe2267485
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 50172f96a49e2384553a372ded0c889b30a23fff
+ms.sourcegitcommit: e262f4c2a147c3fa2d27de666aae3a0497317867
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918359"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100006389"
 ---
 # <a name="require-vscomponent"></a>require-vscomponent
 
@@ -38,11 +38,17 @@ Tato `input` vlastnost slouží k určení úplné cesty k `.vsconfig` souboru. 
 
 ### <a name="additional-options"></a>Další možnosti
 
-Nepoužívá se.
+Další možnosti konfigurace mohou být předány jako hodnota `additionalOptions` . 
+
+| Název                      | Typ      | Vyžadováno | Hodnota                                                                                                                                                                                    |
+|---------------------------|-----------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --installPath             | řetězec    | No       | Instalační cesta instance sady Visual Studio, kterou chcete upravit.                                                                                                                       |
+
+Pokud není zadána žádná cesta pro instalaci, nástroj změní nejstarší nainstalovanou aplikaci Visual Studio na váš počítač, pokud je v počítači více instancí. 
 
 ### <a name="default-behavior"></a>Výchozí chování
 
-Výchozím chováním `require-vscomponent` nástroje je vyhledat `.vsconfig` soubor v aktuálním adresáři a spustit instalační program pro Visual Studio s těmito podrobnostmi v tichém režimu. `require-vscomponent` podporuje pouze úpravu stávající instalace sady Visual Studio.
+Výchozím chováním `require-vscomponent` nástroje je vyhledat `.vsconfig` soubor v aktuálním adresáři a spustit instalační program pro Visual Studio s těmito podrobnostmi v tichém režimu. `require-vscomponent` podporuje pouze úpravu stávající instalace sady Visual Studio. 
 
 ## <a name="example-usage"></a>Příklad použití
 Níže je uveden příklad, jak spustit `require-vscomponent` pomocí `.devinit.json` .
@@ -56,6 +62,21 @@ Níže je uveden příklad, jak spustit `require-vscomponent` pomocí `.devinit.
         {
             "tool": "require-vscomponent",
             "input": "C:\\.vsconfig"
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-import-the-configurations-of-a-given-vsconfig-file-path-to-the-visual-studio-instance-specified-via-an-install-path"></a>.devinit.js, která importuje konfiguraci dané cesty k souboru. vsconfig do instance sady Visual Studio zadané prostřednictvím instalační cesty:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "comments": "A sample dot-devinit file.",
+    "run": [
+        {
+            "tool": "require-vscomponent",
+            "input": "C:\\.vsconfig",
+            "additionalOptions": "--installPath 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise'"
         }
     ]
 }

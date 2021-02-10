@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 064231e7-59b5-4437-8240-a23c0a7ec2a9
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0262868ae442bfdd8b99c16f59e000f4ebfc35c5
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: eb86be560f45941b1ca5eb04f38087c23c431fda
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847907"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960855"
 ---
 # <a name="send-events"></a>Odesílání událostí
 Mechanismus pro komunikaci mezi ladicím programem a modulem ladění (DE) je model událostí založený na modelu DCOM. Události jsou odesílány jako objekty modelu COM a každá událost má parametry, které určují:

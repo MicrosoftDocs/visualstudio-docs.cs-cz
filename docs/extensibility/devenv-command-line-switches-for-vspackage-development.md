@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d65d2c04-dd84-42b0-b956-555b11f5a645
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b6e2784066c98f8fac696306e455e7cf26b65907
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 2c6b6260bad412127afe4dd9135ccf66d48e9e3e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996146"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968304"
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>Přepínače příkazového řádku nástroje devenv pro vývoj pro VSPackage
 
@@ -43,7 +43,7 @@ Visual Studio umožňuje vývojářům automatizovat úlohy z příkazového ř�
 
 Dokumentace k sadě Visual Studio popisuje `devenv` přepínače příkazového řádku na úrovni uživatele. Další informace najdete v tématu [přepínače příkazového řádku nástroje devenv](../ide/reference/devenv-command-line-switches.md). `devenv`Nástroj podporuje také další přepínače příkazového řádku, které jsou užitečné pro vývoj, nasazení a ladění pomocí sady VSPackage.
 
-| Přepínač příkazového řádku | Popis |
+| Přepínač příkazového řádku | Description |
 |---------------------| - |
 | `/ResetSkipPkgs` | Zruší všechny možnosti pro přeskočení načítání, které byly přidány uživateli, kteří se chtějí vyhnout načítání problematických VSPackage, a pak spustí aplikaci Visual Studio. Přítomnost značky SkipLoading zakáže načítání VSPackage. Vymazání značky znovu povolí načítání VSPackage.<br /><br /> Tento přepínač nepřijímá žádné argumenty. |
 | `/RootSuffix` | Spustí aplikaci Visual Studio pomocí alternativního umístění. Následující příkaz se spustí pomocí zástupce vytvořeného instalačním programem sady Visual Studio SDK:<br /><br /> `devenv /RootSuffix exp`<br /><br /> V takovém případě `exp` identifikuje umístění s konkrétní příponou (například `10.0Exp` místo `10.0` ). Experimentální instance umožňuje ladit VSPackage odděleně od instance aplikace Visual Studio, kterou používáte k psaní kódu.<br /><br /> Tento přepínač může přijmout libovolný řetězec, který určuje umístění, které jste vytvořili pomocí VSRegEx.exe. Další informace najdete v [experimentální instanci](../extensibility/the-experimental-instance.md). |

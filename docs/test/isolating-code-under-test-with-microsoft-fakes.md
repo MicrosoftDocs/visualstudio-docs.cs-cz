@@ -12,12 +12,12 @@ author: mikejo5000
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: e58a9c6477568843141a73ece002d1911280d7ab
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e7e7672ca93c47370f746358203c37826a1b3ad3
+ms.sourcegitcommit: e262f4c2a147c3fa2d27de666aae3a0497317867
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916457"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100006420"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>Izolace testovaného kódu pomocí Napodobenin Microsoft
 
@@ -36,7 +36,7 @@ Jsou dva typy napodobenin:
 - Visual Studio Enterprise
 - .NET Framework projekt
 ::: moniker range=">=vs-2019"
-- V sadě Visual Studio 2019 Update 6 je podpora projektu .NET Core a sady SDK předem zobrazená a v Update 8 je ve výchozím nastavení povolená. Další informace najdete v tématu [Microsoft předstírá pro projekty ve stylu .NET Core a SDK](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
+- Podpora projektů pro .NET Core, .NET 5,0 a SDK je v sadě Visual Studio 2019 Update 6 předem zobrazená a ve výchozím nastavení je v Update 8 povolená. Další informace najdete v tématu [Microsoft předstírá pro projekty ve stylu .NET Core a SDK](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
 ::: moniker-end
 
 > [!NOTE]
@@ -88,7 +88,7 @@ Podrobnější popis najdete v tématu použití zástupných [procedur k izolac
    1. V **Průzkumník řešení** 
        - Pro starší projekt .NET Framework (jiný styl než SDK) rozbalte uzel **odkazy** projektu testování jednotek.
        ::: moniker range=">=vs-2019"
-       - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení**, **projektů** nebo **balíčků**.
+       - Pro projekt, který cílí na .NET Framework, .NET Core nebo .NET 5,0, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete v rámci **sestavení**, **projektů** nebo **balíčků** falešné.
        ::: moniker-end
        - Pokud pracujete v Visual Basic, vyberte **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** a zobrazte tak uzel **odkazy** .
    2. Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete překrýt **data a času**, vyberte **System.dll**.
@@ -269,21 +269,21 @@ Vzhledem k tomu, že Microsoft napodobenin vyžaduje Visual Studio Enterprise, g
 </Project>
 ```
 
-Tento odkaz je nutný k přidání do ručně konkrétně projektů ve stylu sady SDK (.NET Core a .NET Framework), protože jsme přesunuli na implicitní přidávání odkazů na sestavení do testovacího projektu. Pokud použijete tuto metodu, musíte zajistit, aby bylo sestavení napodobenin Aktualizováno při změně nadřazeného sestavení.
+Tento odkaz se musí přidat do ručně konkrétně projektů ve stylu sady SDK (.NET Core, .NET 5,0 a .NET Framework), protože jsme přesunuli na implicitní přidávání odkazů na sestavení do testovacího projektu. Pokud použijete tuto metodu, musíte zajistit, aby bylo sestavení napodobenin Aktualizováno při změně nadřazeného sestavení.
 ::: moniker-end
 
 ### <a name="running-microsoft-fakes-tests"></a>Spuštění testů napodobenin společnosti Microsoft
 Pokud jsou sestavení napodobeniny od společnosti Microsoft přítomna v nakonfigurovaném `FakesAssemblies` adresáři (ve výchozím nastavení `$(ProjectDir)FakesAssemblies` ), můžete spustit testy pomocí [úlohy VSTest](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops&preserve-view=true).
 
 ::: moniker range=">=vs-2019"
-Distribuované testování pomocí projektů [VSTest](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops&preserve-view=true) .NET Core s využitím Microsoft napodobenin vyžaduje Visual Studio 2019 Update 9 Preview `20201020-06` a vyšší.
+Distribuované testování pomocí projektů [VSTest](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops&preserve-view=true) .NET Core a .NET 5,0, které využívají Microsoft napodobeniny, vyžaduje Visual Studio 2019 Update 9 Preview `20201020-06` a vyšší.
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-## <a name="transitioning-your-net-framework-test-projects-that-use-microsoft-fakes-to-sdk-style-net-framework-or-net-core-projects"></a>Přechod na .NET Framework testovacích projektů, které používají společnost Microsoft napodobeniny do projektů .NET Framework a .NET Core ve stylu sady SDK
-Budete potřebovat minimální změny v .NET Framework nastavené pro Microsoft napodobeniny k přechodu na .NET Core. Je třeba vzít v úvahu tyto případy:
+## <a name="transitioning-your-net-framework-test-projects-that-use-microsoft-fakes-to-sdk-style-net-framework-net-core-or-net-50-projects"></a>Přechod na .NET Framework testovacích projektů, které používají Microsoft napodobeniny k projektům .NET Framework, .NET Core nebo .NET 5,0 ve stylu sady SDK
+Budete potřebovat minimální změny v .NET Framework nastavené pro Microsoft napodobeniny k přechodu na rozhraní .NET Core nebo .NET 5,0. Je třeba vzít v úvahu tyto případy:
 - Pokud používáte vlastní šablonu projektu, je nutné zajistit, že se jedná o styl sady SDK a sestavení pro kompatibilní cílové rozhraní.
-- Některé typy existují v různých sestaveních v .NET Framework a .NET Core (například `System.DateTime` existují v nástroji `System` / `mscorlib` v .NET Framework a v `System.Runtime` rozhraní .NET Core) a v těchto scénářích je nutné změnit sestavení, které falešným.
+- Některé typy existují v různých sestaveních v .NET Framework a .NET Core/. NET 5,0 (například `System.DateTime` existují v nástroji `System` / `mscorlib` v .NET Framework a v `System.Runtime` rozhraní .NET Core a .NET 5,0) a v těchto scénářích potřebujete změnit sestavení, které falešným.
 - Pokud máte odkaz na sestavení pro sestavení napodobenin a testovací projekt, může se zobrazit upozornění sestavení o chybějícím odkazu, který se podobá:
   ```
   (ResolveAssemblyReferences target) ->
@@ -299,12 +299,12 @@ Budete potřebovat minimální změny v .NET Framework nastavené pro Microsoft 
 - Microsoft falešné testy můžou běžet se všemi dostupnými balíčky NuGet Microsoft. TestPlatform.
 - Pokrytí kódu je podporováno pro projekty testů, které používají Microsoft napodobeniny v Visual Studio Enterprise 2015 a vyšších.
 
-### <a name="microsoft-fakes-in-sdk-style-net-framework-and-net-core-projects"></a>Microsoft předstírá ve stylu sady SDK .NET Framework a v projektech .NET Core
+### <a name="microsoft-fakes-in-sdk-style-net-framework-net-core-and-net-50-projects"></a>Microsoft předstírá v projektech .NET Framework, .NET Core a .NET 5,0 ve stylu sady SDK
 - Generování sestavení společnosti Microsoft je ve výchozím nastavení v Visual Studio Enterprise 2019 Update 6 a ve výchozím nastavení povoleno v Update 8.
 - Microsoft předstírá testy pro projekty, které cílí na .NET Framework, můžou běžet se všemi dostupnými balíčky NuGet Microsoft. TestPlatform.
-- Microsoft předstírá testy pro projekty, které cílí na .NET Core, můžou běžet s balíčky NuGet Microsoft. TestPlatform s verzemi [16.8.0-Preview-20200921-01](https://www.nuget.org/packages/Microsoft.TestPlatform/16.8.0-preview-20200921-01) a vyšší.
+- Microsoft předstírá testy pro projekty, které cílí na .NET Core a .NET 5,0, můžou běžet s balíčky NuGet Microsoft. TestPlatform s verzemi [16.9.0-Preview-20210106-01](https://www.nuget.org/packages/Microsoft.TestPlatform/16.9.0-preview-20210106-01) a vyšší.
 - Pokrytí kódu je podporováno pro projekty testů, které cílí na .NET Framework pomocí napodobenin společnosti Microsoft v Visual Studio Enterprise verze 2015 a vyšší.
-- Podpora pokrytí kódu pro projekty testů cílené na .NET Core pomocí napodobeniny společnosti Microsoft je ve vývoji.
+- Podpora pokrytí kódu pro projekty testů cílené na .NET Core a .NET 5,0 s použitím napodobenin společnosti Microsoft je k dispozici v systému Visual Studio 2019 Update 9 a vyšších.
 
 
 ## <a name="in-this-section"></a>V této části

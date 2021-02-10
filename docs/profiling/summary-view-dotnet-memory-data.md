@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 0cb317c3-0ae6-4531-aaa8-447576eec037
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 590705e7fb55315176d5533a9cd009784430ea4d
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 6aa2daf8e03f61d529f0d07c8f78af49821fa92b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722669"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960010"
 ---
 # <a name="summary-view---net-memory-data"></a>Souhrnné zobrazení – data paměti .NET
 V souhrnném zobrazení se zobrazí informace o funkcích a typech .NET, které přidělují nejvíc paměti, a typy, které byly vytvořeny ve většině případů při spuštění profilace. Další informace, včetně popisu odkazů na oznámení a seznamů sestav, najdete v tématu [souhrnné zobrazení](../profiling/summary-view.md).

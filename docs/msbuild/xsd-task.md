@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 15c99f5c-7124-4bbc-bc03-70c7bcce8893
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5aef78460197796767ec1429179e5598d0f12dbc
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 7227fff5dd4c58e1bce81ef8cad5c32f854abf55
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047199"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960322"
 ---
 # <a name="xsd-task"></a>XSD – úloha
 
-Zabalí Nástroj definice schématu XML ( *xsd.exe* ), který generuje soubory schématu nebo třídy ze zdroje.
+Zabalí Nástroj definice schématu XML (*xsd.exe*), který generuje soubory schématu nebo třídy ze zdroje.
 
 > [!NOTE]
 > Od sady Visual Studio 2017 je podpora projektů C++ pro *xsd.exe* zastaralá. Rozhraní API **Microsoft. VisualC. CppCodeProvider** můžete dál používat ručním přidáním *CppCodeProvider.dll* do globální mezipaměti sestavení (GAC).
@@ -72,7 +72,7 @@ Zabalí Nástroj definice schématu XML ( *xsd.exe* ), který generuje soubory s
 
      Určuje runtime obor názvů pro generovaný typy.
 
-- **Prostředky**
+- **zdroje**
 
      Požadovaný parametr `ITaskItem[]`.
 

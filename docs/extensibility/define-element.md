@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 5aee74e3-de41-4dc6-9618-93e158af56dd
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a427371afe55b6ea4ee20f658e683b9dcdb8fbe2
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 2a2686abd8e8c703d8fb85009b3ba56070f166f0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996237"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968447"
 ---
 # <a name="define-element"></a>Definovat element
 Definuje dvojici názvu a hodnoty symbolu. Tento symbol lze vyhodnotit pomocí podmíněných atributů. Další informace najdete v tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md). Viz také [prvek symboly](../extensibility/symbols-element.md).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <Define name="Mode" value="Standard" />

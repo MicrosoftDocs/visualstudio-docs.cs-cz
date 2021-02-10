@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9984cd3d-d34f-4662-9ace-31766499abf5
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 01d7190bbf087bb60ac670341d82078e94c81c52
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 4581411a2601bf598762a7157f9df0e006995230
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847179"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961115"
 ---
 # <a name="register-a-custom-debug-engine"></a>Registrace vlastního ladicího stroje
 Ladicí modul se musí zaregistrovat jako objekt pro vytváření tříd, podle konvencí COM a také registrovat v aplikaci Visual Studio prostřednictvím podklíče registru sady Visual Studio.

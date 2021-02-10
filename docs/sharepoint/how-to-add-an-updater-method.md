@@ -16,15 +16,15 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], updating entity instances
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9d06737de7df40efa2bc6259cc0ea53bdda17b8c
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: fff7083305d4e19495b81525c8a67a42c5ff6c70
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915372"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99967498"
 ---
 # <a name="how-to-add-an-updater-method"></a>Postupy: Přidání aktualizační metody
   Můžete uživatelům umožnit aktualizovat obchodní data v externím seznamu služby SharePoint vytvořením *metody aktualizace* . Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).

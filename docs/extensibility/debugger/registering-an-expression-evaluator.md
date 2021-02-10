@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 236be234-e05f-4ad8-9200-24ce51768ecf
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f26eddf7191ee4393dd2ca986fe7a1d2c3af9e2
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 1074e8dea5dfdb05571d3b1aa04e5c411530bb1f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847140"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961102"
 ---
 # <a name="register-an-expression-evaluator"></a>Registrace vyhodnocovacího filtru výrazů
 > [!IMPORTANT]
@@ -112,7 +112,7 @@ namespace EEMC
 
 2. Volá pomocnou funkci `SetEEMetric` pro registraci v aplikaci Visual Studio metrika EE uvedená v následující tabulce. Funkce `SetEEMetric` a metriky, které jsou zadány takto, jsou součástí knihovny *dbgmetric. lib* . Podrobnosti najdete v tématech [pomocníka sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) .
 
-    |Metrika|Popis|
+    |Metric|Popis|
     |------------|-----------------|
     |`metricCLSID`|`CLSID` třídy et – objekt pro vytváření tříd|
     |`metricName`|Název EE jako zobrazitelný řetězec|

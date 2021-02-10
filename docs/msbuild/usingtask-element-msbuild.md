@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20247902-9446-4a1f-8253-5c7a17e4fe43
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d09f266f5bf51b870dbbbc0f80aa8282e91faa9
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 3adc3d648e73fc1f3596cc7a5c2cb2148a8f611b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046108"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960335"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask – element (MSBuild)
 
@@ -43,7 +43,7 @@ Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-elemen
 ```
 
 > [!NOTE]
-> Na rozdíl od vlastností a položek *first* `UsingTask` bude použit první prvek, který se vztahuje na a, `TaskName` aby bylo možné přepsat úkoly, které je nutné definovat `UsingTask` *před* existujícím.
+> Na rozdíl od vlastností a položek  `UsingTask` bude použit první prvek, který se vztahuje na a, `TaskName` aby bylo možné přepsat úkoly, které je nutné definovat `UsingTask` *před* existujícím.
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
 
@@ -66,7 +66,7 @@ Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-elemen
 |Element|Popis|
 |-------------|-----------------|
 |[ParameterGroup –](../msbuild/parametergroup-element.md)|Sada parametrů, která se zobrazí na úkolu vygenerovaného zadaným `TaskFactory` .|
-|[Úloha](../msbuild/task-element-msbuild.md)|Data předaná do `TaskFactory` pro vygenerování instance úkolu.|
+|[Úkol](../msbuild/task-element-msbuild.md)|Data předaná do `TaskFactory` pro vygenerování instance úkolu.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
