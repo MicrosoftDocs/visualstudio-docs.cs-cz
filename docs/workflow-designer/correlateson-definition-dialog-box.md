@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 8b2b627a-f236-4479-aa09-525df65e3413
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2be38ba9521762c38c629c2817a7c8e8ca5a709a
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: b4f371da2570d5573ce84c7e29393889202ae940
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438123"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955538"
 ---
 # <a name="correlateson-definition-dialog-box"></a>Dialogové okno Definice vlastnosti CorrelatesOn
 
@@ -27,7 +27,7 @@ Korelace mezi <xref:System.ServiceModel.Activities.Receive> aktivitami určuje, 
 
 Následující tabulka popisuje prvky uživatelského rozhraní (UI) v dialogovém okně **vlastnosti CorrelatesOn** .
 
-|Prvek uživatelského rozhraní (UI)|Popis|
+|Prvek uživatelského rozhraní (UI)|Description|
 |-|-----------------|
 |**Popisovač CorrelatesWith**|<xref:System.ServiceModel.Activities.CorrelationHandle>, Který se používá ke směrování zprávy do příslušné instance pracovního postupu.|
 |**Dotazy XPath**|Pár klíč/hodnota, který obsahuje dotazy použité k extrakci korelačních dat z příchozích zpráv. Tato hodnota odpovídá <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> Vlastnosti. Dotazy XPath jsou obsaženy v <xref:System.ServiceModel.MessageQuerySet> objektu.|

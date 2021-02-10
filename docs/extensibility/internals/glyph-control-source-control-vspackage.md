@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b9413b08-b3c3-4fc3-a6e0-3dc0db3652d7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: eaf7f40224e2f197627bb995dc6cccdf297b46e5
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 3ea9300c96cf63c932d88335c0ca0f9fd4542f72
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480470"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954771"
 ---
 # <a name="glyph-control-source-control-vspackage"></a>Ovládací prvek glyf (VSPackage správy zdrojového kódu)
 Součástí hluboké integrace dostupného pro sadu VSPackage správy zdrojového kódu je schopnost zobrazit vlastní glyfy, které označují stav položek pod správou zdrojového kódu.

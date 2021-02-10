@@ -6,15 +6,15 @@ ms.date: 09/18/2018
 ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d9a416dc64a9d49d14e367a04023f067c7b595c
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 88298cf9fecdb6ce3862ee289d63c4f31b748449
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329637"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955794"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>Správa kontrolerů testů a testovacích agentů
 
@@ -134,7 +134,7 @@ Stav agenta testu může mít jednu z následujících hodnot:
 |Spuštění testu|Spouštění testů|
 |Připraveno|K dispozici pro spuštění testů nebo shromažďování dat a diagnostiky|
 |Offline|K dispozici pro spuštění testů nebo shromažďování dat a diagnostiky|
-|Propojení|Testovací agent není spuštěný.|
+|Odpojeno|Testovací agent není spuštěný.|
 
 Můžete změnit stav a další nastavení testovacího agenta pomocí následujících postupů.
 
@@ -157,7 +157,7 @@ Můžete změnit stav a další nastavení testovacího agenta pomocí následuj
 
 1. Změňte následující vlastnosti testovacího agenta podle potřeby:
 
-|Vlastnost testovacího agenta|Popis|
+|Vlastnost testovacího agenta|Description|
 |-|-----------------|
 |**Váhu**|Používá se k distribuci zatížení při použití testovacích agentů s různými úrovněmi výkonu. Například testovací agent s vážením 100 obdrží dvakrát zatížení jako testovací agent s vážením 50.|
 |**Přepínání IP**|Slouží ke konfiguraci přepínání protokolu IP. Přepínání IP umožňuje testovacímu agentovi odesílat požadavky na server pomocí rozsahu IP adres. To simuluje volání, která pocházejí z různých klientských počítačů.<br /><br /> Přepínání IP je důležité, pokud zátěžový test přistupuje k webové farmě. Většina nástrojů pro vyrovnávání zatížení vytváří spřažení mezi klientem a konkrétním webovým serverem pomocí IP adresy klienta. Pokud se všechny požadavky zdají vypadat jako z jednoho klienta, nástroj pro vyrovnávání zatížení nebude zatížení vyrovnávat. Chcete-li dosáhnout správného vyrovnávání zatížení ve webové farmě, ujistěte se, že požadavky pocházejí z rozsahu IP adres. **Poznámka:**  Můžete určit síťový adaptér nebo použít **(všechny nepřiřazené)** k automatickému výběru toho, který aktuálně není používán. <br /><br /> Chcete-li použít funkci přepínání protokolu IP, musí být služba Visual Studio Test Agent spuštěna jako uživatel ve skupině Administrators pro daný počítač agenta. Tento uživatel je vybraný při instalaci agenta, ale můžete ho změnit úpravou vlastností služby a restartováním.<br /><br /> Chcete-li ověřit, zda funkce přepínání IP funguje správně, povolte protokolování služby IIS na webovém serveru, pomocí funkce protokolování služby IIS ověřte, zda požadavky pocházejí z IP adres, které jste nakonfigurovali.|

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], Windows Forms controls
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a8f073a72db1a18574dff6ab060b1ea069475fbb
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 8d2f8d54e791acd7d027350caa3ce88c8eea9959
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846776"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954147"
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>Postupy: Přidání ovládacích prvků model Windows Forms do dokumentů Office
   Můžete přidat model Windows Forms ovládací prvky pro systém Microsoft Office Excelu a systém Microsoft Office wordové dokumenty v době návrhu v projektech na úrovni dokumentu. V době běhu můžete přidat ovládací prvky v přizpůsobení na úrovni dokumentu a v Doplňkech VSTO. Můžete například přidat <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> ovládací prvek do listu, aby si uživatelé mohli vybrat ze seznamu možností.

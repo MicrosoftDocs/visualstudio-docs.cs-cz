@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ProjectItemFile element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 099f20926487b09240219f04d9bce4a79709f6e6
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: a7c6dd7fc46dc8616eddc164bcf2ec801657cb00
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440802"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955135"
 ---
 # <a name="projectitemfile-element"></a>ProjectItemFile – element
   Představuje soubor služby SharePoint, jako je například soubor prvků funkce, který se má zahrnout do položky projektu při nasazení do služby SharePoint.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectItemFile Source = "Name of the file"
@@ -43,7 +43,7 @@ ms.locfileid: "95440802"
 |Atribut|Popis|
 |---------------|-----------------|
 |**Zdroj**|Požadován atribut **xs: String** .<br /><br /> Název souboru, který má být nasazen s položkou projektu.|
-|**Cílové**|Volitelný atribut **xs: String** .<br /><br /> Cesta, kam se soubor nasadí na SharePointu, vzhledem k kořenové složce nasazení Kořenová složka nasazení je určena typem nasazení určeným atributem **Type** . Pokud **cílový** atribut není zadán, soubor bude nasazen do složky s názvem zadaným ve **zdrojovém** atributu.<br /><br /> Další informace naleznete v popisech pro **cestu nasazení** a kořenové vlastnosti **nasazení** položek projektu služby SharePoint v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
+|**Cíl**|Volitelný atribut **xs: String** .<br /><br /> Cesta, kam se soubor nasadí na SharePointu, vzhledem k kořenové složce nasazení Kořenová složka nasazení je určena typem nasazení určeným atributem **Type** . Pokud **cílový** atribut není zadán, soubor bude nasazen do složky s názvem zadaným ve **zdrojovém** atributu.<br /><br /> Další informace naleznete v popisech pro **cestu nasazení** a kořenové vlastnosti **nasazení** položek projektu služby SharePoint v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
 |**Typ**|Požadován atribut **xs: String** .<br /><br /> Typ nasazení souboru. Další informace o možných hodnotách naleznete v popisu vlastnosti **typ nasazení** položek projektu služby SharePoint v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
@@ -62,7 +62,7 @@ ms.locfileid: "95440802"
 
 |Vlastnost|Hodnota|
 |-|-|
-|**Hosting**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|

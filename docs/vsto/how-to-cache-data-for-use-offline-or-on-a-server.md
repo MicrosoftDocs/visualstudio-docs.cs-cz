@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data caching [Office development in Visual Studio], offline use
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cefd4cd132e75f8ff622c8e0d809d317242c10f5
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: ab53676d6c00fdda3bb7f4554321f0c0550e5748
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844319"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954043"
 ---
 # <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Postupy: ukládání dat do mezipaměti pro použití v režimu offline nebo na serveru
   Můžete označit datovou položku, která se uloží do mezipaměti v dokumentu, aby byla dostupná offline. To také umožňuje, aby data v dokumentu byla zpracována jiným kódem při uložení dokumentu na server.

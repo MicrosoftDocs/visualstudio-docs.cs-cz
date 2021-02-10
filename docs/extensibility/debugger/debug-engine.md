@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 148b1efc-ca07-4d8e-bdfc-c723a760c620
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c31d095a3e340bf7e8f7a61a8db5bcbed53f0d5f
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 9e278b83e69a063c88b4cb3ff48d919d2b07ea6a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914215"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955161"
 ---
 # <a name="debug-engine"></a>Ladicí stroj
 Ladicí stroj (DE) spolupracuje s překladačem nebo operačním systémem, aby poskytoval služby ladění, jako je například řízení spouštění, zarážky a vyhodnocení výrazu. DE je zodpovědná za monitorování stavu programu, který se právě ladí. K tomuto účelu DE použije jakékoli metody, které jsou k dispozici v podporovaném modulu runtime, ať už z procesoru, nebo z rozhraní API dodaných modulem runtime.

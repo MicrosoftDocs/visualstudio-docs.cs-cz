@@ -19,15 +19,15 @@ helpviewer_keywords:
 - events [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b25b921d29bee832ef37b943fd57edc38b7518db
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 12dc0823f1c7d1eb78867cb3529f955851f45b66
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97523222"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955733"
 ---
 # <a name="worksheet-host-item"></a>Položka hostitele listu
   <xref:Microsoft.Office.Tools.Excel.Worksheet>Položka hostitele je typ, který rozšiřuje <xref:Microsoft.Office.Interop.Excel.Worksheet> typ z primárního definičního sestavení pro Excel. <xref:Microsoft.Office.Tools.Excel.Worksheet>Položka hostitele poskytuje všechny stejné vlastnosti, metody a události jako <xref:Microsoft.Office.Interop.Excel.Worksheet> objekt, ale také zpřístupňuje další události a funguje jako kontejner pro ovládací prvky hostitele a model Windows Forms ovládací prvky.

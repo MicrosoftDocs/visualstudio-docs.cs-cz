@@ -8,17 +8,17 @@ ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 187ca5ea0d0232e0ca8b99165e77ee265b81e801
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9838cd39fe29f8233f82df00dda6a7392e3494cd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285085"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955486"
 ---
 # <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Vývoj kódu v jazyce JavaScript a TypeScript v aplikaci Visual Studio bez řešení nebo projektů
 
@@ -54,7 +54,7 @@ Pokud ve složce neexistuje žádná *tsconfig.js* , můžete kliknout pravým t
 > [!NOTE]
 > Při sestavování kódu TypeScript používáme nejnovější verzi nainstalovanou v `C:\Program Files (x86)\Microsoft SDKs\TypeScript` .
 
-Pokud se ve složce nachází *tsconfig.js* souboru, můžete kliknout pravým tlačítkem na soubor TypeScript a zobrazit příkaz nabídky pro ladění tohoto souboru TypeScript. Možnost se zobrazí pouze v případě, že `outFile` v *tsconfig.js*není určena. Pokud `outFile` je zadaný, můžete tento soubor ladit tak, že kliknete pravým tlačítkem *tsconfig.jsna* a vyberete správnou možnost. `tsconfig.json`Soubor také poskytuje možnost sestavení, která umožňuje zadat možnosti kompilátoru.
+Pokud se ve složce nachází *tsconfig.js* souboru, můžete kliknout pravým tlačítkem na soubor TypeScript a zobrazit příkaz nabídky pro ladění tohoto souboru TypeScript. Možnost se zobrazí pouze v případě, že `outFile` v *tsconfig.js* není určena. Pokud `outFile` je zadaný, můžete tento soubor ladit tak, že kliknete pravým tlačítkem *tsconfig.jsna* a vyberete správnou možnost. `tsconfig.json`Soubor také poskytuje možnost sestavení, která umožňuje zadat možnosti kompilátoru.
 
 > [!NOTE]
 > Další informace o *tsconfig.jsnajdete na* [ stráncetsconfig.jsna stránce příručka TypeScript](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
@@ -79,7 +79,7 @@ Pokud není rozpoznán žádný z podporovaných platforem, je Test Runner nasta
 * Páska ([GitHub.com/substack/Tape](https://github.com/substack/tape))
 * Jest ([jestjs.IO](https://jestjs.io/))
 
-Po otevření Průzkumníka testů (zvolit **test**  >  **Windows**  >  **Průzkumníka testů**systému Windows), Visual Studio zjistí a zobrazí testy.
+Po otevření Průzkumníka testů (zvolit **test**  >    >  **Průzkumníka testů** systému Windows), Visual Studio zjistí a zobrazí testy.
 
 > [!NOTE]
 > Test Runner bude vytvářet výčet pouze souborů JavaScriptu v kořenu testu, pokud je vaše aplikace napsána v TypeScript, je třeba nejprve vytvořit.

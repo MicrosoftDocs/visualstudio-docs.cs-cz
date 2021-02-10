@@ -7,21 +7,21 @@ ms.topic: conceptual
 ms.assetid: ab573755-6370-48aa-853d-a7321c424c79
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cb6bb10f948e7aa9d97491949222c3cb0d15ba66
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: f8ec2756353ac56b3b5d44e2a50c4d4f5b1c7ebf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98801302"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955382"
 ---
 # <a name="net-framework-usage-performance-rules"></a>Pravidla výkonu použití rozhraní .NET Framework
 Pravidla výkonu v kategorii použití the.NET Framework identifikují konkrétní metody, které je možné optimalizovat, a také identifikují obecnější vzory použití, jako je uvolňování paměti a kolize, které je možné prozkoumat kvůli problémům s výkonem.
 
-|Pravidlo|Popis|
+|Pravidlo|Description|
 |-|-|
 |[DA0001: Použití třídy StringBuilder ke zřetězení](../profiling/da0001-use-stringbuilder-for-concatenations.md)|Volání na <xref:System.String.Concat(System.String,System.String)?displayProperty=fullName> jsou významné poměry dat profilování. Zvažte použití <xref:System.Text.StringBuilder> třídy pro sestavování řetězců z více segmentů.|
 |[DA0005: Časté shromažďování GC2](../profiling/da0005-frequent-gc2-collections.md)|V uvolňování paměti 2. generace se uvolňuje poměrně vysoký počet objektů paměti .NET. Je-li příliš mnoho krátkodobých objektů po generaci 1 kolekce, náklady na správu paměti mohou být snadno velké.|

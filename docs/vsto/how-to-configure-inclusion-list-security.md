@@ -12,15 +12,15 @@ helpviewer_keywords:
 - inclusion lists [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1f9eca5150e019906805adf40e5c9b6af8a3c14e
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: ddbc74c00c1e1f74ce078586d624e2da4dbd8163
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846724"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954017"
 ---
 # <a name="how-to-configure-inclusion-list-security"></a>Postupy: Konfigurace zabezpečení seznamu zahrnutí
   Pokud máte oprávnění správce, můžete nakonfigurovat [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] výzvu vztahu důvěryhodnosti, abyste mohli řídit, jestli mají koncoví uživatelé možnost instalovat řešení Office, a to uložením rozhodnutí o důvěryhodnosti do seznamu povolených. Informace o seznamech zahrnutí najdete v tématu [důvěryhodná řešení Office pomocí seznamů zahrnutí](../vsto/trusting-office-solutions-by-using-inclusion-lists.md).
@@ -40,7 +40,7 @@ ms.locfileid: "96846724"
 
 ### <a name="to-enable-the-inclusion-list-by-using-the-registry-editor"></a>Povolení seznamu zahrnutí pomocí Editoru registru
 
-1. Otevřete editor registru: .
+1. Otevřete Editor registru:
 
     1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 
@@ -99,7 +99,7 @@ ms.locfileid: "96846724"
 
 ### <a name="to-restrict-the-inclusion-list"></a>Omezení seznamu zahrnutí
 
-1. Otevřete editor registru: .
+1. Otevřete Editor registru:
 
     1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 
@@ -158,7 +158,7 @@ ms.locfileid: "96846724"
 
 ### <a name="to-disable-the-inclusion-list"></a>Zakázání seznamu pro zahrnutí
 
-1. Otevřete editor registru: .
+1. Otevřete Editor registru:
 
     1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 

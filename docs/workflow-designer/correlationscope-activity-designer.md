@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 75f20664-9042-464d-8e2b-148d365a2286
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cc85dbb5c774f6afa956f51852ef15d4c7ccebc0
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: e9edd755465cf812c1572c62f1c6335fc5295281
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438110"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955515"
 ---
 # <a name="correlationscope-activity-designer"></a>Návrhář aktivity CorrelationScope
 
@@ -29,7 +29,7 @@ Návrhář aktivity **CorrelationScope** slouží k vytvoření a konfiguraci <x
 
 ### <a name="use-the-correlationscope-activity-designer"></a>Použití návrháře aktivity CorrelationScope
 
-Návrhář aktivity **CorrelationScope** se dá najít v kategorii **zasílání zpráv** na **panelu nástrojů** , ke které se dostanete kliknutím na kartu **panelu nástrojů** na levé straně Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
+Návrhář aktivity **CorrelationScope** se dá najít v kategorii **zasílání zpráv** na **panelu nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** na levé straně Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
 
 Návrhář aktivity **CorrelationScope** lze přetáhnout ze **sady nástrojů** a přetáhnout na Návrhář postupu provádění plochu. Tím se vytvoří <xref:System.ServiceModel.Activities.CorrelationScope> aktivita s výchozím **názvem DisplayName** CorrelationScope. <xref:System.Activities.Activity.DisplayName%2A>Lze upravit v hlavičce návrháře aktivity **CorrelationScope** nebo v poli **DisplayName** v okně **vlastnosti** .
 
@@ -43,9 +43,9 @@ V následující tabulce jsou uvedeny <xref:System.ServiceModel.Activities.Corre
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Volitelný popisný název <xref:System.ServiceModel.Activities.InitializeCorrelation> aktivity.|
-|<xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A>|Nepravda|Určuje, který se <xref:System.ServiceModel.Activities.CorrelationHandle> používá ke správě aktivit podřízeného zasílání zpráv. Pokud tuto vlastnost nenastavíte, <xref:System.ServiceModel.Activities.CorrelationScope> vytvoří implicitní automatické vytváření <xref:System.ServiceModel.Activities.CorrelationHandle> .|
-|<xref:System.ServiceModel.Activities.CorrelationScope.Body%2A>|Nepravda|Určuje aktivity v oboru korelace.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Volitelný popisný název <xref:System.ServiceModel.Activities.InitializeCorrelation> aktivity.|
+|<xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A>|Ne|Určuje, který se <xref:System.ServiceModel.Activities.CorrelationHandle> používá ke správě aktivit podřízeného zasílání zpráv. Pokud tuto vlastnost nenastavíte, <xref:System.ServiceModel.Activities.CorrelationScope> vytvoří implicitní automatické vytváření <xref:System.ServiceModel.Activities.CorrelationHandle> .|
+|<xref:System.ServiceModel.Activities.CorrelationScope.Body%2A>|Ne|Určuje aktivity v oboru korelace.|
 
 ## <a name="see-also"></a>Viz také
 

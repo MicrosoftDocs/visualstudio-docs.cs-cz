@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: c0a2bf21-8fa5-4457-9281-f599beb53e7d
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e6529f4f82f7a8a6862ae85adbf170d2fb6f8706
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: ce569dabca9e5d867310b8d510975331f5a9f046
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006507"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954433"
 ---
 # <a name="code-snippet-functions"></a>Funkce fragmentu kódu
 
@@ -29,7 +29,7 @@ Existují tři funkce, které lze použít s fragmenty kódu v jazyce C#. Funkce
 
 Následující tabulka popisuje funkce, které jsou k dispozici pro použití s `Function` elementem v fragmentech kódu.
 
-|Funkce|Popis|Jazyk|
+|Funkce|Description|Jazyk|
 |--------------|-----------------|--------------|
 |`GenerateSwitchCases(EnumerationLiteral)`|Vygeneruje příkaz switch a sadu příkazů Case pro členy výčtu určené `EnumerationLiteral` parametrem. `EnumerationLiteral`Parametr musí být buď odkaz na literál výčtu, nebo typ výčtu.|C#|
 |`ClassName()`|Vrátí název třídy, která obsahuje vložený fragment kódu.|C#|

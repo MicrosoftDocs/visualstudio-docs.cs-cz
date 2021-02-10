@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d8ae1c0c-ee3d-4937-a581-ee78d0499793
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2928d3c09a54ea8e9548f7751381279f153643e5
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 26b27bd6bef40a38e32e5b0d6d26e3d147659286
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876737"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954636"
 ---
 # <a name="model-of-a-legacy-language-service"></a>Model služby starší verze jazyka
 Jazyková služba definuje prvky a funkce pro určitý jazyk a slouží k tomu, aby Editor poskytoval informace, které jsou specifické pro daný jazyk. Editor například potřebuje znát prvky a klíčová slova jazyka, aby bylo možné podporovat barevné zvýrazňování syntaxe.
@@ -41,7 +41,7 @@ Jazyková služba definuje prvky a funkce pro určitý jazyk a slouží k tomu, 
 
   Následující tabulka poskytuje přehled objektů v modelu.
 
-| Komponenta | Objekt | Funkce |
+| Součást | Objekt | Funkce |
 |------------------| - | - |
 | Vyrovnávací paměť textu | <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> | Textový Stream pro čtení a zápis v kódování Unicode. Je možné, že text bude používat jiné kódování. |
 | Okno kódu | <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> | Okno dokumentu, které obsahuje jedno nebo více textových zobrazení. Když [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je v režimu MDI (Multiple Document Interface), je okno Code podřízenou položkou MDI. |

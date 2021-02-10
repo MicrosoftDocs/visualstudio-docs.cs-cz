@@ -12,15 +12,15 @@ helpviewer_keywords:
 - launch.vs.json file [Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 26f529fe8d9d8731375c4aa0783dde0dadb28a1d
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 1088cae031dc3498d2c5cdcd33db8d42f721b7d7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006455"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954420"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>Přizpůsobení úloh sestavení a ladění pro vývoj "otevřít složku"
 
@@ -203,7 +203,7 @@ V této části jsou popsány některé vlastnosti, které lze zadat v *tasks.vs
 
 Můžete vytvořit úkoly pro libovolný soubor nebo složku zadáním jejího názvu do `appliesTo` pole, například `"appliesTo": "hello.js"` . Následující masky souborů lze použít jako hodnoty:
 
-|Maska souboru|Popis|
+|Maska souboru|Description|
 |-|-|
 |`"*"`| úloha je dostupná pro všechny soubory a složky v pracovním prostoru.|
 |`"*/"`| úloha je dostupná pro všechny složky v pracovním prostoru.|
@@ -215,7 +215,7 @@ Můžete vytvořit úkoly pro libovolný soubor nebo složku zadáním jejího n
 
 #### <a name="macros-for-tasksvsjson"></a>Makra pro tasks.vs.jsv
 
-|Podokně|Popis|
+|Podokně|Description|
 |-|-|
 |`${env.<VARIABLE>}`| Určuje libovolnou proměnnou prostředí (například $ {env. CESTA}, $ {env. COMSPEC} atd.), která je nastavena pro příkazový řádek vývojáře. Další informace naleznete v tématu [Developer Command Prompt for Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
 |`${workspaceRoot}`| Úplná cesta ke složce pracovního prostoru (například *C:\sources\hello*)|

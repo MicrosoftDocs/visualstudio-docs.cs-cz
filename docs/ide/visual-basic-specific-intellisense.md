@@ -11,15 +11,15 @@ helpviewer_keywords:
 - IntelliSense [Visual Studio], Visual Basic
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 70cdcf9eb6d741fc579ce555ce0bfa3cdea0d774
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 1420165c8ca574c74efe6911bb9c5635e729a260
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96478819"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955551"
 ---
 # <a name="intellisense-for-visual-basic-code-files"></a>IntelliSense pro Visual Basic soubory kódu
 
@@ -41,7 +41,7 @@ V popisech syntaxe se zobrazuje syntaxe příkazu, který píšete. To je užite
 
 Dokončení může být vypnuto ve výchozím nastavení tím, že se na stránce **Obecné** vlastnosti ve složce **Visual Basic** odhlásí **Automatické seznam členů** .
 
-Doplňování můžete ručně vyvolat vyvoláním členů seznamu, kompletního slova nebo **Alt** + **šipky vpravo** v kombinaci kláves. Další informace najdete v tématu [použití technologie IntelliSense](../ide/using-intellisense.md).
+Doplňování můžete ručně vyvolat vyvoláním členů seznamu, kompletního slova nebo  + **šipky vpravo** v kombinaci kláves. Další informace najdete v tématu [použití technologie IntelliSense](../ide/using-intellisense.md).
 
 ## <a name="intellisense-in-zone"></a>IntelliSense v zóně
 

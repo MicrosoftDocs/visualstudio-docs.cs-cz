@@ -12,15 +12,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], managed code extensions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1929daaa82dbfec6f58513bf94eefe01f9520601
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 063b66af781ee412e7f7d2ab8014e009bc93bad9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844385"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954108"
 ---
 # <a name="how-to-attach-managed-code-extensions-to-documents"></a>Postupy: připojení rozšíření spravovaného kódu k dokumentům
   Sestavení vlastního nastavení můžete připojit k existujícímu systém Microsoft Office dokumentu aplikace Word nebo sešitu systém Microsoft Office aplikace Excel. Dokument nebo sešit může být ve formátu souboru, který je podporován systém Microsoft Office projekty a vývojové nástroje v aplikaci Visual Studio. Další informace najdete v tématu [Architektura přizpůsobení na úrovni dokumentu](../vsto/architecture-of-document-level-customizations.md).

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2c7b1ae5-3756-4795-bc59-f6bb113f2ba5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 65261d6304ead5ade7c28f40495fa68afb0c2171
-ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
+ms.openlocfilehash: 4125a40ea0be18cceb99e7f3a8118a10d26a5437
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98686211"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955863"
 ---
 # <a name="current-tab"></a>Aktuální karta
 Kliknutím na **aktuální** kartu zobrazíte zásobník volání (je-li k dispozici), který je nejblíže aktuálnímu bodu výběru na časové ose, pokud je vybrán segment vlákna procesoru.  V takovém případě je bod výběru reprezentován černou šipkou nebo blikajícím kurzorem nad časovou osou. Když je vybrán blokující segment, není blikající kurzor zobrazen, protože nebylo spuštěno. Segment je však stále zvýrazněn a zobrazí se zásobník volání.

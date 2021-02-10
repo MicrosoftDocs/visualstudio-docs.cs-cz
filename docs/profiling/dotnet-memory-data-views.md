@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 79184d8e-769b-4ace-be2b-521147772081
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a4a6143127a2e55bf5c13cf6606bfe00de5cd9e
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: 1a60b51571d33a619cdc04c534f6b77fafcb584f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98801281"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955278"
 ---
 # <a name="net-memory-data-views"></a>Zobrazení dat paměti .NET
 Tato část obsahuje referenční informace o zobrazeních a sestavách datových souborů profileru, které obsahují data profilace paměti .NET.

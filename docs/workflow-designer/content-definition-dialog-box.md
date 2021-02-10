@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 7e4237c3-90a1-4149-bd8a-3643d1dde0df
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2858c179d05645b3e47e6be27e386168392fcb48
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: a25d049b17381c49bfa1b4a5544972b6dc5fe499
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438162"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955642"
 ---
 # <a name="content-definition-dialog-box"></a>Dialogové okno Definice obsahu
 
@@ -25,12 +25,12 @@ Dialogové okno **definice obsahu** se používá v Návrhář postupu provádě
 
 Následující tabulka popisuje prvky uživatelského rozhraní (UI) v dialogovém okně **inicializace korelace** :
 
-|Prvek uživatelského rozhraní (UI)|Popis|
+|Prvek uživatelského rozhraní (UI)|Description|
 |-|-----------------|
 |**Zpráva**|Určuje obsah zprávy obsahující textové pole výrazu **data zprávy** a typ pomocí rozevíracího seznamu **typ zprávy** . Ve výchozím nastavení **definice obsahu** používá <xref:System.ServiceModel.Activities.ReceiveMessageContent> , který v <xref:System.ServiceModel.Channels.Message> definici služby pracovního postupu očekává nebo typ kontraktu zprávy.|
 |**Parametry**|Klikněte na přepínač **parametry** <xref:System.ServiceModel.Activities.ReceiveParametersContent> , který chcete použít, což očekává kontrakt dat. Datovou mřížku použijte k nastavení Obecné kolekce <xref:System.Activities.OutArgument> párů klíč/hodnota, jejichž hodnoty jsou přiřazeny parametrům proměnné v aktuálním pracovním postupu.|
 
-Dialogové okno **definice obsahu** se používá v návrhářích **Odeslat** , **přijmout** , **ReceiveAndSendReply** a **SendAndReceiveReply** . Přístup k nim je podobný v každém případě a k ilustraci tohoto postupu slouží případ přijetí.
+Dialogové okno **definice obsahu** se používá v návrhářích **Odeslat**, **přijmout**, **ReceiveAndSendReply** a **SendAndReceiveReply** . Přístup k nim je podobný v každém případě a k ilustraci tohoto postupu slouží případ přijetí.
 
 Návrhář aktivity **Receive** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity. Tím se vytvoří <xref:System.ServiceModel.Activities.Receive> aktivita s výchozím nastavením <xref:System.Activities.Activity.DisplayName%2A> Receive. Vyberte návrháře aktivity **Receive** a klikněte na tlačítko se třemi tečkami vedle textu (obsah) vlastnosti **Content** v mřížce vlastností dialogového okna **definice obsahu** , které se zobrazí.
 
