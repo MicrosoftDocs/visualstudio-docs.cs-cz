@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 759072ba-4aaa-447e-8e51-0dd1456fe896
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ffe163ab567de98161f185ba2f3d2522c505095
-ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
+ms.openlocfilehash: e6ad377ddb457018099256cd64b6b8382c69df81
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975209"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942071"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Procházení kódu pomocí ladicího programu sady Visual Studio
 
@@ -82,7 +82,7 @@ U vnořeného volání funkce **Krok do** nejhlouběji vnořené funkce. Napří
 
 Při ladění nemůžete zajímat funkci, nebo víte, že funguje, jako dobře testovaný kód knihovny. Pomocí následujících příkazů můžete přeskočit kód při krokování kódu. Funkce se pořád spustí, ale ladicí program je přeskočí.
 
-|Příkaz klávesnice|Příkaz nabídky Ladit|Popis|
+|Příkaz klávesnice|Příkaz nabídky Ladit|Description|
 |----------------------|------------------|-----------------|
 |**F10**|**Krokovat**|Pokud aktuální řádek obsahuje volání funkce, **Krok over** spustí kód a poté pozastaví provádění na prvním řádku kódu po návratu volané funkce.|
 |**Posun** + Klávesa **F11**|**Krok ven**|**Krok ven** pokračuje v běhu kódu a pozastaví provádění, když se vrátí aktuální funkce. Ladicí program přeskočí aktuální funkci.|

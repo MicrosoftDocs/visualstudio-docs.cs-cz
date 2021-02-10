@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: edcd7891-f4e7-416d-809d-5e2eed9f17e4
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd30cb2d09d042e70b5fc142ac220f2356962146
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: fe9002c3da63e9570819588035395780715e1d64
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974582"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99941863"
 ---
 # <a name="bitmap-element"></a>Rastrový element
 Definuje rastrový obrázek. Rastrový obrázek je načten buď z prostředku, nebo ze souboru.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <Bitmap guid="guidImages" href="images\MyImage.bmp" usedList="bmp1, bmp2, bmp3" />
@@ -40,7 +40,7 @@ Definuje rastrový obrázek. Rastrový obrázek je načten buď z prostředku, n
 |resID|ID identifikátoru příkazu GUID/ID Je požadován buď atribut resID, nebo atribut href.<br /><br /> Atribut resID je ID prostředku typu Integer, které určuje rastrový obrázek, který má být načten během slučování příkazových tabulek.  Při načítání tabulky příkazů se bitmapy zadané ID prostředku načtou z prostředku stejného modulu.|
 |usedList|Vyžaduje se, pokud je přítomen atribut resID. Vybere dostupné obrázky v rastrovém pruhu.|
 |odkaz|Cesta k rastrovému obrázku Je požadován buď atribut resID, nebo atribut href.<br /><br /> Je prohledána cesta include pro zadaný soubor obrázku, který je vložen ve výsledném binárním souboru.  Při sloučení tabulky příkazu se obrázek zkopíruje a nevyžaduje se žádné další vyhledávání nebo načítání prostředků.  Pokud není přítomen atribut usedList, jsou k dispozici všechny obrázky v pruhu. **Poznámka:**  Obrázky mohou být dodávány v jednom z několika formátů, které obsahují soubory *. bmp*, *. png* a *. gif*.  Starší verze kompilátoru nepodporovaly 32 bitové rastrové obrázky, které měly alfa informace pro částečnou průhlednost. Alternativním řešením pro tyto verze je použití formátu *. png* .|
-|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Podmínka|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
  Žádné

@@ -5,15 +5,15 @@ robots: noindex, nofollow
 ms.topic: reference
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cf2aba33089623dc98a90c23166291bb2d6e7123
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9f237f121d0bd0a5eaa57cd2b198024d22951622
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62905245"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99941993"
 ---
 # <a name="getting-started-with-the-snapshot-debugger"></a>Začínáme s Snapshot Debugger
 
@@ -69,6 +69,6 @@ Další informace o Snapshot Debugger najdete na [stránce docs](../debug-live-a
 
 ## <a name="dont-show-me-this-again"></a>Tento dialog už příště nezobrazovat
 
-Chcete-li nikdy po připojení Snapshot Debugger znovu zobrazit úvodní stránku Snapshot debugger, změňte možnost **Zobrazit stránku Začínáme při spuštění relace** v **nabídce**  >  **Možnosti**nástroje  >  **Snapshot Debugger**.
+Chcete-li nikdy po připojení Snapshot Debugger znovu zobrazit úvodní stránku Snapshot debugger, změňte možnost **Zobrazit stránku Začínáme při spuštění relace** v **nabídce**  >  **Možnosti** nástroje  >  **Snapshot Debugger**.
 
 ![Stránka možností nástroje Snapshot Debugger](../media/snapshot-startpage-tools-options.png)
