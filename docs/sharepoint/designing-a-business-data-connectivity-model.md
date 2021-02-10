@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], designing a model
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b574c52b9081cc6640c5611e0759b5559e7a4f6d
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 8fb1aa194688533855b7c5bd1d58a4e3b97ac749
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672649"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948839"
 ---
 # <a name="design-a-business-data-connectivity-model"></a>Návrh modelu připojení obchodních dat
   Můžete vyvíjet model pro službu připojení obchodních dat (BDC) přidáním entit a metod do souboru modelu. Entita popisuje kolekci datových polí. Entita může například představovat tabulku v databázi. Metoda provádí úlohu, jako je například přidání, odstranění nebo aktualizace dat reprezentovaných entitami. Další informace najdete v tématu [Integrace obchodních dat do služby SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md).
@@ -73,7 +73,7 @@ ms.locfileid: "94672649"
 ## <a name="validate-the-model"></a>Ověření modelu
  Během vývoje můžete model ověřit. Visual Studio identifikuje problémy, které můžou zabránit tomu, aby se model choval podle očekávání. Tyto problémy se zobrazí ve **Seznam chyb** sady Visual Studio.
 
- Model můžete ověřit tak, že otevřete místní nabídku pro návrháře služby BDC a pak zvolíte **ověřit**. Pokud model obsahuje nějaké chyby, zobrazí se v **Seznam chyb**. Kurzor můžete rychle přesunout do kódu, který obsahuje chybu, dvojitým kliknutím na chybu v seznamu. Jako alternativu můžete zvolit klávesy **F8** nebo **SHIFT** + **F8** opakovaně, abyste mohli procházet chyby v seznamu a předávat je dál.
+ Model můžete ověřit tak, že otevřete místní nabídku pro návrháře služby BDC a pak zvolíte **ověřit**. Pokud model obsahuje nějaké chyby, zobrazí se v **Seznam chyb**. Kurzor můžete rychle přesunout do kódu, který obsahuje chybu, dvojitým kliknutím na chybu v seznamu. Jako alternativu můžete zvolit klávesy **F8** nebo **SHIFT** +  opakovaně, abyste mohli procházet chyby v seznamu a předávat je dál.
 
  Chyby ověřování se můžou vyskytnout, když pravidla modelu porušují nějaký způsob. Pokud je například vlastnost **IsCollection** popisovače typu nastavená na **hodnotu true**, ale neexistují žádné deskriptory podřízeného typu, zobrazí se chyba ověřování. Možná budete muset odkazovat na pravidla modelu služby BDC, abyste porozuměli chybám, které se zobrazí v **Seznam chyb** sady Visual Studio. Další informace o pravidlech modelu služby BDC najdete v tématu [BDCMetadata Schema](/previous-versions/office/developer/sharepoint-2010/ee556387(v=office.14)).
 

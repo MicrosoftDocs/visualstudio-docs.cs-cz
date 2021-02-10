@@ -16,15 +16,15 @@ helpviewer_keywords:
 - page layouts[SharePoint development in Visual Studio], designing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 974ddb3c68d0c2ef297c884e75300a8507f436cc
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 702d2c4d5cafd6f4ff4ef2e4104da9f6cc02c5fb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850621"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949165"
 ---
 # <a name="create-pages-for-sharepoint"></a>Vytváření stránek pro SharePoint
   Můžete vytvářet stránky aplikace, stránky webu, stránky předlohy a rozložení stránek pro web služby SharePoint.
@@ -36,7 +36,7 @@ ms.locfileid: "94850621"
 ## <a name="types-of-sharepoint-pages"></a>Typy stránek SharePoint
  Následující tabulka popisuje čtyři hlavní typy stránek, které obsahuje web služby SharePoint.
 
-|Typ stránky|Popis|
+|Typ stránky|Description|
 |---------------|-----------------|
 |Stránky aplikace|Stránku aplikace vytvořte, pokud chcete, aby stránka obsahovala vlastní kód, nebo chcete, aby se stránka sdílela ve více lokalitách. V opačném případě může být nejlepší volbou stránka webu.|
 |Stránky webu|Stránku vytvořit web, pokud chcete provést některou z následujících úloh:<br /><br /> – Přidejte stránku do knihovny služby SharePoint.<br />– Povolí hostování funkcí této stránky, jako je například dynamická Webové části a zóny webových částí.<br />– Povolte uživatelům přizpůsobení stránky pomocí SharePoint designeru.<br /><br /> Nevytvářejte stránku webu, pokud chcete, aby stránka obsahovala vlastní kód. I když můžete přidat vlastní kód na stránku webu, kód se ukončí, když uživatel přizpůsobuje stránku pomocí SharePoint designeru.|

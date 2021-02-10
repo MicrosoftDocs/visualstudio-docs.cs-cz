@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ab97efc82575c31c8e05b73063c2b53a09691d2d
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: cd0dfa3a12c675463c46e93aa0d5b25e8b4bd4b2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672662"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948853"
 ---
 # <a name="deploy-publish-and-upgrade-sharepoint-solution-packages"></a>Nasazení, publikování a Upgrade balíčků řešení služby SharePoint
   Po vývoji řešení služby SharePoint v aplikaci Visual Studio můžete buď nasadit soubor balíčku (. wsp) na místní server SharePoint nebo ho publikovat na vzdáleném nebo místním serveru SharePoint. Pokud soubory nasadíte, můžete přizpůsobit způsob nasazení souborů balíčku (. wsp).
@@ -47,7 +47,7 @@ ms.locfileid: "94672662"
 ## <a name="customize-the-deployment-process"></a>Přizpůsobení procesu nasazení
  V následující tabulce jsou uvedeny dvě konfigurace nasazení, které můžete použít při ladění a nasazení řešení služby SharePoint.
 
-|Konfigurace nasazení|Popis|
+|Konfigurace nasazení|Description|
 |------------------------------|-----------------|
 |Výchozí|Výchozí konfigurace nasazení. Provádí se následující kroky nasazení:<br /><br /> 1. Spusťte příkaz před nasazením.<br />2. recykluje fond aplikací IIS.<br />3. Odvolejte řešení.<br />4. Přidejte řešení.<br />5. Aktivujte funkce.<br />6. Spusťte příkaz po nasazení.<br /><br /> Při odinstalaci balíčku se provede následující kroky odvolání.<br /><br /> 1. recyklovat fond aplikací IIS.<br />2. Odvolejte řešení.|
 |Bez aktivace|Tato konfigurace nasazení používá stejný postup jako výchozí konfigurace, ale přeskočí krok aktivace.|

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, debugging extensions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5ad95ce8b4ab9567f22748453ae59c258f24aa86
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 2b098ac007825745e13481592760be9d2badeb55
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671217"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948905"
 ---
 # <a name="debug-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Rozšíření ladění pro nástroje služby SharePoint v aplikaci Visual Studio
   Rozšíření nástrojů služby SharePoint můžete ladit v experimentální instanci nebo v běžné instanci aplikace Visual Studio. Pokud potřebujete řešit potíže s chováním rozšíření, můžete také změnit hodnoty registru a zobrazit tak další informace o chybě a nakonfigurovat, jak aplikace Visual Studio provede příkazy služby SharePoint.
@@ -53,7 +53,7 @@ ms.locfileid: "94671217"
 
 3. V dialogovém okně **instalační program rozšíření sady Visual Studio** zvolte edici sady Visual Studio, do které chcete rozšíření nainstalovat, a poté klikněte na tlačítko **instalovat** .
 
-     Visual Studio nainstaluje soubory rozšíření do%USERPROFILE%\AppData\Local\Microsoft\VisualStudio\11.0\Extensions \\ *author name* \\ *názvu přípony* názvu autora \\ *version*. Poslední tři složky v této cestě jsou sestaveny z `Author` prvků, `Name` a `Version` v souboru *extension. vsixmanifest* pro rozšíření.
+     Visual Studio nainstaluje soubory rozšíření do%USERPROFILE%\AppData\Local\Microsoft\VisualStudio\11.0\Extensions \\  \\ *názvu přípony* názvu autora \\ . Poslední tři složky v této cestě jsou sestaveny z `Author` prvků, `Name` a `Version` v souboru *extension. vsixmanifest* pro rozšíření.
 
 4. Poté, co Visual Studio nainstaluje rozšíření, klikněte na tlačítko **Zavřít** .
 

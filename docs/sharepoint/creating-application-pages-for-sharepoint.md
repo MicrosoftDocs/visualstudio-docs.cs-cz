@@ -15,15 +15,15 @@ helpviewer_keywords:
 - application pages [SharePoint development in Visual Studio], creating
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1228ef551235fd616803d6e05057ee50f0ea7ec4
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 9ecd6573573d76c3e47a2c87a4f455cb9890fb31
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850439"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949178"
 ---
 # <a name="create-application-pages-for-sharepoint"></a>Vytváření stránek aplikací pro službu SharePoint
   *Stránka aplikace* je webová stránka ASP.NET, která je navržena pro použití na webu služby SharePoint. Stránky aplikace jsou specializovaného typu stránky ASP.NET. Hlavním rozdílem mezi stránkou aplikace a standardní stránkou ASP.NET je, že stránka aplikace obsahuje obsah, který je sloučen se stránkou předlohy služby SharePoint. Stránka předlohy umožňuje stránkám aplikace sdílet stejný vzhled a chování jako ostatní stránky na webu.
@@ -43,14 +43,14 @@ ms.locfileid: "94850439"
 ## <a name="create-an-application-page"></a>Vytvoření stránky aplikace
  Chcete-li vytvořit stránku aplikace, přidejte položku **stránky aplikace** do projektu služby SharePoint. Když vytvoříte stránku aplikace, Visual Studio přidá do projektu následující složky:
 
-|Složka|Popis|
+|Složka|Description|
 |------------|-----------------|
 |Rozložení|Mapuje se na _layouts virtuální adresář systému souborů SharePoint.|
 |Podsložka rozložení|Obsahuje soubory, které tvoří stránku aplikace. Ve výchozím nastavení má tato složka stejný název jako projekt. Tuto složku můžete kdykoli přejmenovat. Při spuštění projektu aplikace Visual Studio nasadí tuto složku do _layouts virtuálního adresáře systému souborů SharePoint.|
 
  Visual Studio přidá do projektu následující soubory:
 
-|Soubor|Popis|
+|Soubor|Description|
 |----------|-----------------|
 |Stránkovací soubor ASP.NET (*. aspx*)|Obsahuje kód XML, který definuje stránku.|
 |Soubor kódu stránky aplikace|Obsahuje kód za stránkou aplikace. Přidejte kód, který zpracovává události do tohoto souboru.|

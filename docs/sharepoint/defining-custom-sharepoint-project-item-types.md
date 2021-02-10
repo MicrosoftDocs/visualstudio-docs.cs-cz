@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fc2e3670dd734b368795f270fa6c1d63c8c079e8
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 00ee9f41695078d8bea5daacf1c0ccfd392a64cc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672831"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948866"
 ---
 # <a name="define-custom-sharepoint-project-item-types"></a>Definování vlastních typů položek projektu služby SharePoint
   Definujte nový typ položky projektu služby SharePoint, pokud chcete vytvořit nový druh položky projektu služby SharePoint. Například Visual Studio nezahrnuje položky SharePointového projektu pro přidání polí nebo vlastních akcí do webu služby SharePoint. Můžete definovat vlastní typy položek projektu služby SharePoint pro vytváření polí, vlastní akce nebo jiné typy komponent služby SharePoint.

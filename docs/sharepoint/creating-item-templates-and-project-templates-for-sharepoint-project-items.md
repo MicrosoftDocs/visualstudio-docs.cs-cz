@@ -17,15 +17,15 @@ helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating custom templates
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 59710eb4651f363d669dc27b6190f8d224d9917f
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 538bc709ed3af1c7b1424b56c1bd843b127c6ab7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850634"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949152"
 ---
 # <a name="create-item-templates-and-project-templates-for-sharepoint-project-items"></a>Vytváření šablon položek a šablon projektů pro položky projektu služby SharePoint
 
@@ -40,7 +40,7 @@ Například Visual Studio nezahrnuje šablonu projektu nebo šablonu položky pr
 
  V následující tabulce jsou uvedeny požadované soubory pro vytvoření šablony položky pro položku projektu služby SharePoint.
 
-|Požadovaný soubor|Popis|
+|Požadovaný soubor|Description|
 |-------------------|-----------------|
 |Soubor *. spdata*|Tento soubor XML určuje obsah a výchozí chování položky projektu. Tento soubor musí být zahrnutý v šabloně položky. Další informace o obsahu souborů *. spdata* naleznete v tématu Referenční dokumentace [schématu položek projektu služby SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md).|
 |Soubor *. vstemplate* .|Tento soubor poskytuje aplikaci Visual Studio s informacemi požadovanými pro zobrazení šablony v dialogovém okně **Přidat novou položku** a vytvoření položky projektu ze šablony. Tento soubor musí být zahrnutý v šabloně položky. Další informace najdete v tématu [soubory metadat šablony sady Visual Studio](/previous-versions/visualstudio/visual-studio-2010/xsxc3ete\(v\=vs.100\)).|
@@ -48,7 +48,7 @@ Například Visual Studio nezahrnuje šablonu projektu nebo šablonu položky pr
 
  V následující tabulce jsou uvedeny některé nejběžnější volitelné soubory, které mohou být zahrnuty do šablony položky. Některé typy položek projektu mohou vyžadovat jiné soubory, které zde nejsou uvedeny.
 
-| Volitelný soubor | Popis |
+| Volitelný soubor | Description |
 |----------------------| - |
 | *Elements.xml* | Soubor *elementu funkce* . Tento soubor definuje uživatelské rozhraní a chování vlastního nastavení vytvořeného položkou projektu. Každý typ přizpůsobení, jako jsou například instance seznamů, typy obsahu nebo vlastní akce, má jiné schéma, které definuje obsah tohoto souboru. Další informace najdete v tématu [stavební blok: funkce](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)) a [schémata funkcí](/previous-versions/office/developer/sharepoint-2010/ms414322(v=office.14)). |
 | *Schema.xml* | Soubor schématu pro definice seznamu. Další informace naleznete v tématu [stavební blok: seznamy a knihovny dokumentů](/previous-versions/office/developer/sharepoint-2010/ee534985(v=office.14)) a [Schema.xml](/previous-versions/office/developer/sharepoint-2010/ms459356(v=office.14)). |
@@ -64,7 +64,7 @@ Například Visual Studio nezahrnuje šablonu projektu nebo šablonu položky pr
 
  V následující tabulce jsou uvedeny soubory, které musí být zahrnuty v šabloně projektu služby SharePoint.
 
-|Požadovaný soubor|Popis|
+|Požadovaný soubor|Description|
 |-------------------|-----------------|
 |Soubor *. vstemplate*|Tento soubor poskytuje aplikaci Visual Studio s informacemi požadovanými pro zobrazení šablony v dialogovém okně **Nový projekt** a vytvoření projektu ze šablony. Další informace najdete v tématu [soubory metadat šablony sady Visual Studio](/previous-versions/visualstudio/visual-studio-2010/xsxc3ete\(v\=vs.100\)).|
 |Soubor *. csproj* nebo *. vbproj*|Toto je soubor projektu. Definuje obsah a nastavení konfigurace projektu.|
@@ -73,7 +73,7 @@ Například Visual Studio nezahrnuje šablonu projektu nebo šablonu položky pr
 
  V následující tabulce jsou uvedeny volitelné soubory, které mohou být zahrnuty v šabloně projektu.
 
-|Volitelný soubor|Popis|
+|Volitelný soubor|Description|
 |-------------------|-----------------|
 |SharePoint – položky projektu|Můžete zahrnout jeden nebo více souborů. spdata, které definují typy položek projektu služby SharePoint. Každý soubor *. spdata* musí mít odpovídající <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> implementaci v sestavení rozšíření, které je součástí balíčku VSIX se šablonou projektu. Další informace naleznete v tématu [Create Item Templates](#create-item-templates).<br /><br /> Projekty SharePoint obvykle obsahují alespoň jednu položku SharePointového projektu. To však není vyžadováno.|
 |*\<featureName>. funkce*|Tento soubor definuje funkci SharePointu, která se používá k seskupení několika položek projektu pro nasazení. Při použití návrháře funkcí k přizpůsobení funkce v projektu aplikace Visual Studio ukládá data o funkci do tohoto souboru. Pokud chcete seskupit položky projektu do různých funkcí, můžete zahrnout více souborů *. Features* .<br /><br /> Když vytváříte vlastní šablonu projektu služby SharePoint, doporučujeme zahrnout do každého souboru *. Feature* pouze minimální požadovaný obsah a nakonfigurovat funkce pomocí rozhraní API v <xref:Microsoft.VisualStudio.SharePoint.Features> oboru názvů v rozšíření, které je přidruženo k šabloně projektu. Pokud to uděláte, šablona projektu je chráněna před budoucími změnami struktury souboru *. Feature* . Příklad, jak vytvořit soubor *. Feature* pouze s minimálním požadovaným obsahem, najdete v tématu [Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md).<br /><br /> Chcete-li upravit soubor *. Features* přímo, můžete ověřit obsah pomocí schématu v *% Program Files (x86)% \ Microsoft Visual Studio 11.0 \ Xml\Schemas\FeatureModelSchema.xsd*.|

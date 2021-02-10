@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], designing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bc9427d561817cb115473bddc71f2ba63475427e
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: ae28ab44b12c979f3c405bd7d853d7a2d196aae4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672792"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948931"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>Vytváření webových částí pro službu SharePoint
   Pomocí webových částí můžete upravit obsah, vzhled a chování stránek webu služby SharePoint pomocí prohlížeče. Webové části jsou ovládací prvky na straně serveru, které běží na stránce webové části: jsou to stavební kameny stránek, které se zobrazují na webu služby SharePoint. Viz [stavební blok: webové části](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
@@ -45,7 +45,7 @@ ms.locfileid: "94672792"
 ### <a name="web-part-item"></a>Položka webové části
  Položka **webové části** poskytuje soubory, které lze použít k návrhu webové části pro web služby SharePoint. Když přidáte položku **webové části** , aplikace Visual Studio vytvoří složku v projektu a potom do složky přidá několik souborů. V následující tabulce jsou popsány jednotlivé soubory.
 
-|Soubor|Popis|
+|Soubor|Description|
 |----------|-----------------|
 |*Elements.xml*|Obsahuje informace, které soubor definice funkce v projektu používá k nasazení webové části.|
 |soubor. WebPart|Poskytuje informace, které SharePoint potřebuje k zobrazení webové části v galerii webových částí.|
@@ -59,7 +59,7 @@ ms.locfileid: "94672792"
 ## <a name="sharepoint-controls"></a>Ovládací prvky SharePointu
  Visual Studio poskytuje některé ovládací prvky pro vytváření stránek SharePoint, jako jsou například stránky aplikace. Tyto ovládací prvky se zobrazí v **panelu nástrojů** v rámci **ovládacích prvků SharePoint**. Funkce pro tyto ovládací prvky je odvozena z oboru názvů [Microsoft. SharePoint. WebControls](/previous-versions/office/sharepoint-server/ms413880(v=office.15)) , který obsahuje ovládací prvky serveru ASP.NET, které se používají na stránkách webu a seznamu služby SharePoint.
 
-|Název ovládacího prvku|Popis|
+|Název ovládacího prvku|Description|
 |------------------|-----------------|
 |[AspMenu](/previous-versions/office/sharepoint-server/ms454108(v=office.15))|Vloží nabídku ASP. Další informace najdete v tématu [Přehled ovládacího prvku nabídky](/previous-versions/ecs0x9w5(v=vs.140)).|
 |[CssLink](/previous-versions/office/sharepoint-server/ms439048(v=office.15))|Vloží element **odkazu** do stránky *aspx* a použije jeden nebo více externích šablon stylů definovaných pomocí **CssRegistration**.|

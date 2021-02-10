@@ -5,17 +5,17 @@ ms.date: 11/12/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0b55a0bbeee7c5a8c38a0df61db0a1b17ae5e033
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85118cebfa862a1575762985d41df61ef76b5cc5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238657"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949321"
 ---
 # <a name="debug-python-and-c-together"></a>Ladění Pythonu a C++ společně
 
@@ -41,20 +41,20 @@ Mezi funkce ladění ve smíšeném režimu patří následující, jak je vysv�
 
 ## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Povolit ladění ve smíšeném režimu v projektu Pythonu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt Pythonu, vyberte **vlastnosti**, vyberte kartu **ladění** a pak vyberte **Povolit ladění nativního kódu**. Tato možnost povolí smíšený režim pro všechny relace ladění.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt Pythonu, vyberte **vlastnosti**, vyberte kartu **ladění** a pak vyberte **Povolit ladění nativního kódu**. Tato možnost povolí smíšený režim pro všechny relace ladění.
 
     ![Povolení ladění nativního kódu](media/mixed-mode-debugging-enable-native.png)
 
     > [!Tip]
-    > Pokud povolíte ladění nativního kódu, okno výstupu Pythonu se může okamžitě po dokončení programu zmizet, aniž by to mělo za normální **stisknutí klávesy pro pokračování** . Chcete-li vynutit pozastavení, přidejte `-i` možnost do **Run**  >  pole**argumenty Run interpretu** na kartě **ladění** , když povolíte ladění nativního kódu. Tento argument vloží interpret Pythonu do interaktivního režimu po dokončení kódu, a v takovém případě počká na stisknutí klávesy **CTRL** + **Z**klávesy  >  **ENTER** k ukončení.
+    > Pokud povolíte ladění nativního kódu, okno výstupu Pythonu se může okamžitě po dokončení programu zmizet, aniž by to mělo za normální **stisknutí klávesy pro pokračování** . Chcete-li vynutit pozastavení, přidejte `-i` možnost do   >  pole **argumenty Run interpretu** na kartě **ladění** , když povolíte ladění nativního kódu. Tento argument vloží interpret Pythonu do interaktivního režimu po dokončení kódu, a v takovém případě počká na stisknutí klávesy **CTRL** + **Z** klávesy  >  **ENTER** k ukončení.
 
-1. Při připojování ladicího programu smíšeného režimu ke stávajícímu**procesu (**  >  **připojit k procesu**) použijte tlačítko **Vybrat** a otevřete dialogové okno **Vybrat typ kódu** . Pak nastavte možnost **ladit tyto typy kódu** a v seznamu vyberte jak **nativní** , tak **Python** :
+1. Při připojování ladicího programu smíšeného režimu ke stávajícímu **procesu (**  >  **připojit k procesu**) použijte tlačítko **Vybrat** a otevřete dialogové okno **Vybrat typ kódu** . Pak nastavte možnost **ladit tyto typy kódu** a v seznamu vyberte jak **nativní** , tak **Python** :
 
     ![Výběr nativních typů kódu a kódů Pythonu](media/mixed-mode-debugging-code-type.png)
 
     Nastavení typu kódu jsou trvalá, takže pokud chcete zakázat ladění v kombinovaném režimu při pozdějším připojení k jinému procesu, vymažte typ kódu **Python** .
 
-    Je možné vybrat další typy kódu kromě, nebo namísto **nativního**. Například pokud spravovaná aplikace hostuje CPython, která zase používá nativní rozšiřující moduly, a chcete všechny tři ladit, můžete v rámci sjednoceného ladění, včetně kombinovaných zásobníků volání a rozkrokování mezi všemi třemi moduly runtime, zaškrtnout společné prostředí **Python**, **nativní**a **spravované** .
+    Je možné vybrat další typy kódu kromě, nebo namísto **nativního**. Například pokud spravovaná aplikace hostuje CPython, která zase používá nativní rozšiřující moduly, a chcete všechny tři ladit, můžete v rámci sjednoceného ladění, včetně kombinovaných zásobníků volání a rozkrokování mezi všemi třemi moduly runtime, zaškrtnout společné prostředí **Python**, **nativní** a **spravované** .
 
 1. Při prvním spuštění ladění ve smíšeném režimu se může zobrazit dialogové okno **požadované symboly Pythonu** (viz [symboly pro ladění ve smíšeném režimu](debugging-symbols-for-mixed-mode-c-cpp-python.md)). Pro každé dané prostředí Pythonu je třeba nainstalovat symboly pouze jednou. Symboly jsou automaticky zahrnuty, pokud nainstalujete podporu Pythonu prostřednictvím instalačního programu sady Visual Studio (Visual Studio 2017 a novější).
 
@@ -65,14 +65,14 @@ Mezi funkce ladění ve smíšeném režimu patří následující, jak je vysv�
 Visual Studio (2017 verze 15,5 a novější) podporuje ladění ve smíšeném režimu z projektu C/C++ (například při [vkládání Pythonu do jiné aplikace, jak je popsáno v Python.org](https://docs.python.org/3/extending/embedding.html)). Chcete-li povolit ladění ve smíšeném režimu, nakonfigurujte projekt C/C++ tak, aby spouštěl jazyk **Python/nativní ladění**:
 
 1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt C/C++ a vyberte **vlastnosti**.
-1. Vyberte kartu **ladění** , pro spuštění vyberte **Python/nativní ladění** z **ladicího programu**a vyberte **OK**.
+1. Vyberte kartu **ladění** , pro spuštění vyberte **Python/nativní ladění** z **ladicího programu** a vyberte **OK**.
 
     ![Výběr ladicího programu Python/nativní v projektu jazyka C/C++](media/mixed-mode-debugging-select-cpp-debugger.png)
 
 > [!Note]
 > Pokud nemáte možnost vybrat **ladění v Pythonu/nativní** , musíte nejdřív nainstalovat **nativní vývojové nástroje Pythonu** pomocí instalačního programu vs. Můžete ji najít jako možnost v rámci úlohy vývoje v Pythonu. Další informace najdete v tématu [Instalace podpory Pythonu v aplikaci Visual Studio ve Windows](installing-python-support-in-visual-studio.md).
 
-Pomocí této metody mějte na paměti, že nemůžete ladit samotnou spouštěcí službu *py.exe* , protože vytvoří podřízený proces *python.exe* , ke kterému ladicí program nebude připojen. Pokud chcete spustit *python.exe* přímo s argumenty, změňte možnost **příkazu** ve vlastnostech **ladění Python/Native** (zobrazené na předchozím obrázku) a zadejte úplnou cestu k *python.exe*a pak zadejte argumenty v **argumentech příkazů**.
+Pomocí této metody mějte na paměti, že nemůžete ladit samotnou spouštěcí službu *py.exe* , protože vytvoří podřízený proces *python.exe* , ke kterému ladicí program nebude připojen. Pokud chcete spustit *python.exe* přímo s argumenty, změňte možnost **příkazu** ve vlastnostech **ladění Python/Native** (zobrazené na předchozím obrázku) a zadejte úplnou cestu k *python.exe* a pak zadejte argumenty v **argumentech příkazů**.
 
 ### <a name="attaching-the-mixed-mode-debugger"></a>Připojuje se ladicí program smíšeného režimu.
 
@@ -99,7 +99,7 @@ Okno **zásobník volání** zobrazuje prokládaný rámec zásobníku zásobní
 
 ![Kombinovaný zásobník volání s laděním ve smíšeném režimu](media/mixed-mode-debugging-call-stack.png)
 
-Přechody se zobrazí jako **[externí kód]** bez určení směru přechodu, pokud **Tools**  >  **Options**  >  **Debugging**  >  je nastavena možnost nástroje ladění**Obecné**  >  **povolení pouze můj kód** .
+Přechody se zobrazí jako **[externí kód]** bez určení směru přechodu, pokud   >    >    >  je nastavena možnost nástroje ladění **Obecné**  >  **povolení pouze můj kód** .
 
 Dvojím kliknutím na libovolný rámec volání je aktivní a otevře se odpovídající zdrojový kód, pokud je to možné. Pokud není zdrojový kód k dispozici, je snímek stále aktivní a místní proměnné lze kontrolovat.
 
@@ -113,7 +113,7 @@ Když je aktivní rámec (C nebo C++) aktivní, jeho místní proměnné se zobr
 
 ![Zobrazení Pythonu v okně místních hodnot](media/mixed-mode-debugging-python-view.png)
 
-Chcete-li tuto funkci zakázat, klikněte pravým tlačítkem myši kdekoli v okně **místní** hodnoty **Python**a přepněte  >  možnost nabídky Zobrazit**uzly zobrazení** v Pythonu:
+Chcete-li tuto funkci zakázat, klikněte pravým tlačítkem myši kdekoli v okně **místní** hodnoty a přepněte  >  možnost nabídky Zobrazit **uzly zobrazení** v Pythonu:
 
 ![Povolení zobrazení v Pythonu v okně místních hodnot](media/mixed-mode-debugging-enable-python-view.png)
 
@@ -142,7 +142,7 @@ Alternativná (a lepší) možnost je sledovat [PEP 3123](https://www.python.org
 
 ### <a name="native-values-view-in-python-code"></a>Zobrazení nativních hodnot v kódu Pythonu
 
-Podobně jako v předchozí části můžete povolit **[zobrazení C++]** pro nativní hodnoty v okně **místních** hodnot, když je aktivní rámec Pythonu. Tato funkce není ve výchozím nastavení povolená, takže ji zapnete kliknutím pravým tlačítkem myši v okně **místní** hodnoty a přepnutím možnosti nabídky Zobrazit **Python**  >  **uzly zobrazení C++** v Pythonu.
+Podobně jako v předchozí části můžete povolit **[zobrazení C++]** pro nativní hodnoty v okně **místních** hodnot, když je aktivní rámec Pythonu. Tato funkce není ve výchozím nastavení povolená, takže ji zapnete kliknutím pravým tlačítkem myši v okně **místní** hodnoty a přepnutím možnosti nabídky Zobrazit   >  **uzly zobrazení C++** v Pythonu.
 
 ![Povolení zobrazení C++ v okně místních hodnot](media/mixed-mode-debugging-enable-cpp-view.png)
 

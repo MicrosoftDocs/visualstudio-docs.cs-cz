@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, user controls
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2e9d2f3a99e3e43ebf40208bf8dfc01d5ac92dca
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 01d8602971e2a89aef8cf8451d1273fa28c70f05
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850595"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949126"
 ---
 # <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>Vytváření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací
   V aplikaci Visual Studio můžete vytvořit vlastní, opakovaně použitelné ovládací prvky, které mohou být spotřebovány stránkami aplikace a Webové části, které běží na SharePointu. Tyto ovládací prvky se nazývají uživatelské ovládací prvky. Uživatelský ovládací prvek je druh složeného ovládacího prvku, který funguje podobně jako ASP.NET webová stránka – můžete přidat existující ovládací prvky webového serveru a značky k uživatelskému ovládacímu prvku a definovat vlastnosti a metody pro ovládací prvek. Pak je můžete vložit na ASP.NET webové stránky, kde se chovají jako jednotka.
@@ -31,7 +31,7 @@ ms.locfileid: "94850595"
 
  Když přidáte položku **uživatelského ovládacího prvku** , aplikace Visual Studio vytvoří složku v projektu a potom do složky přidá několik souborů. V následující tabulce jsou popsány jednotlivé soubory.
 
-|Soubor|Popis|
+|Soubor|Description|
 |----------|-----------------|
 |Soubor uživatelského ovládacího prvku|Definuje uživatelský ovládací prvek. Navrhněte uživatelský ovládací prvek přidáním ovládacích prvků a označením do tohoto souboru.|
 |Soubor s kódem|Obsahuje kód za uživatelským ovládacím prvkem. Přidejte kód, který bude zpracovávat události do tohoto souboru.|

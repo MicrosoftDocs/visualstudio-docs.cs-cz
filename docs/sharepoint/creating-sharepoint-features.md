@@ -12,15 +12,15 @@ helpviewer_keywords:
 - features [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 06a8fdef9c194e9b0f81768f93b675ade77d39ef
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 8fc572f6fc5c0444fda619af5af49c6c2e52ac5d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850582"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949113"
 ---
 # <a name="create-sharepoint-features"></a>Vytvoření funkcí služby SharePoint
   Funkci služby SharePoint můžete použít k seskupení souvisejících položek projektu služby SharePoint pro snazší nasazení. Pomocí návrháře funkcí služby SharePoint můžete vytvořit funkce, nastavit obory a označit jiné funkce jako závislosti. Návrhář také generuje manifest, což je soubor XML, který popisuje jednotlivé funkce.
@@ -43,8 +43,8 @@ ms.locfileid: "94850582"
 |Vlastnost|Popis|
 |--------------|-----------------|
 |Nadpis|Nepovinný parametr. Výchozí *název funkce je nastaven na* *vlastnost* název souboru.|
-|Popis|Nepovinný parametr. Popis funkce SharePointu|
-|Rozsah|Povinná hodnota. Pokud se funkce vytvoří pomocí **Průzkumník řešení**, obor je ve výchozím nastavení nastavený na web.<br /><br /> -Farma: Aktivujte funkci pro celou serverovou farmu.<br /><br /> -Site: aktivuje funkci pro všechny weby v kolekci webů.<br /><br /> -Web: aktivuje funkci pro určitý web.<br /><br /> -WebApplication: aktivuje funkci pro všechny weby ve webové aplikaci.|
+|Description|Nepovinný parametr. Popis funkce SharePointu|
+|Obor|Povinná hodnota. Pokud se funkce vytvoří pomocí **Průzkumník řešení**, obor je ve výchozím nastavení nastavený na web.<br /><br /> -Farma: Aktivujte funkci pro celou serverovou farmu.<br /><br /> -Site: aktivuje funkci pro všechny weby v kolekci webů.<br /><br /> -Web: aktivuje funkci pro určitý web.<br /><br /> -WebApplication: aktivuje funkci pro všechny weby ve webové aplikaci.|
 |Položky v řešení|Všechny položky SharePointu, které lze přidat do funkce.|
 |Položky v této funkci|Položky projektu služby SharePoint, které byly přidány do funkce.|
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - packages [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bbe458f6ab4de01ffb224ae4e493bf23e3fc6ceb
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 423fcaf54d1d46ddf92352f4ff8bdbb637bbe514
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850556"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949087"
 ---
 # <a name="create-sharepoint-solution-packages"></a>Vytváření balíčků řešení služby SharePoint
   Pomocí návrháře balíčků můžete vytvořit a přizpůsobit balíčky pro nasazení. Můžete například přidat položky a funkce projektu služby SharePoint, obnovit server služby IIS, nastavit obory aktivace funkcí a identifikovat závislosti funkcí. Návrhář také vygeneruje manifest, soubor XML, který popisuje jednotlivé balíčky.
@@ -37,7 +37,7 @@ ms.locfileid: "94850556"
 
 |Vlastnost návrháře balíčku|Popis výchozího nastavení|
 |-------------------------------|------------------------------------|
-|Name|Povinná hodnota. Výchozí název balíčku je nastaven na *ProjectName*.|
+|Název|Povinná hodnota. Výchozí název balíčku je nastaven na *ProjectName*.|
 |Resetování serveru|Nepovinný parametr. Tuto možnost vyberte, pokud chcete webový server restartovat po instalaci souboru *. wsp* na sharepointovém serveru.|
 |Typ serveru nasazení|Nepovinný parametr. Představuje typ serveru, který je hostitelem balíčku. Pokud tato hodnota není nastavená, nastaví se jako výchozí na front-endu.<br /><br /> ApplicationServer: popisuje Server, který hostuje služby.<br /><br /> Webfront-end: popisuje Server, který je hostitelem webů.|
 |Položky v řešení|Všechny položky a funkce projektu služby SharePoint, které lze přidat do balíčku.|
@@ -48,7 +48,7 @@ ms.locfileid: "94850556"
 
  V následující tabulce jsou uvedeny dva cíle nástroje MSBuild, které lze použít k přizpůsobení způsobu vytvoření souboru *. wsp* .
 
-|Cíl|Popis|
+|Cíl|Description|
 |------------|-----------------|
 |BeforeLayout|Cíl, který provádí úkoly hned předtím, než se soubory zkopírují do zprostředkujícího adresáře. Soubory můžete upravit před vytvořením souboru balíčku (*. wsp*).|
 |AfterLayout|Cíl, který provádí úkoly ihned po zkopírování souborů do zprostředkujícího adresáře.|

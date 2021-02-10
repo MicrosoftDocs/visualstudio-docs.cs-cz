@@ -20,15 +20,15 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], associate external content types
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6a5decf8ad803bea8b1d64c79410c319dbef0be9
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 7efd3d622e40c21574c0aa9e39263d53979706ec
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850543"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949191"
 ---
 # <a name="create-an-association-between-entities"></a>Vytvoření přidružení mezi entitami
   Vytvořením přidružení můžete definovat vztahy mezi entitami v modelu služby připojení obchodních dat. Visual Studio generuje metody, které poskytují uživatelům modelu informace o jednotlivých přidruženích. Tyto metody mohou být využívány webovými částmi, seznamy nebo vlastními aplikacemi služby SharePoint pro zobrazení relací dat v uživatelském rozhraní (UI).

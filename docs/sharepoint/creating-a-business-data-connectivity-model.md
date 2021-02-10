@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, Business Data Connectivity service
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0486ce6ac53850b1b607f9e7f859806cdc3ef8fe
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 8232847ce336ca559134aa1211a70057a1306faa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850465"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949256"
 ---
 # <a name="create-a-business-data-connectivity-model"></a>Vytvoření modelu připojení obchodních dat
   Můžete vytvořit model služby připojení obchodních dat (BDC) nebo upravit existující model služby BDC pomocí sady Visual Studio. Každý projekt služby SharePoint může obsahovat pouze jeden model. Další informace najdete v tématu [Integrace obchodních dat do služby SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md).
@@ -37,7 +37,7 @@ ms.locfileid: "94850465"
 
  Visual Studio přidá do nové složky následující soubory:
 
-|Soubor|Popis|
+|Soubor|Description|
 |----------|-----------------|
 |Definiční soubor modelu|Obsahuje kód XML, který definuje entity, metody, obchodní objekty LOB a další metadata, která popisují model.<br /><br /> Upravte metadata v tomto souboru pomocí návrháře služby BDC, okna **Průzkumníka služby BDC**, okna **Podrobnosti metody služby BDC** a okna **vlastností** .|
 |Soubor kódu entity Service|Obsahuje metody, které načítají, aktualizují a odstraňují instance výchozí entity.|
