@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: b9eb39ee-84af-4ace-9cfe-236b3d48aff5
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fd01785fee7ce65296bac940fb19819415139d53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2ba5456ba3beabb1d5418d739be2aa74838daa41
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80736476"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947174"
 ---
 # <a name="idebugaliasgeticordebugvalue"></a>IDebugAlias::GetICorDebugValue
 Načte spravované rozhraní kódu, které představuje hodnotu přidruženou k tomuto aliasu.
@@ -28,14 +28,14 @@ Načte spravované rozhraní kódu, které představuje hodnotu přidruženou k 
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetICorDebugValue(
-   IUnknown** ppUnk
+HRESULT GetICorDebugValue(
+   IUnknown** ppUnk
 );
 ```
 
 ```csharp
 int GetICorDebugValue(
-   out object ppUnk
+   out object ppUnk
 );
 ```
 

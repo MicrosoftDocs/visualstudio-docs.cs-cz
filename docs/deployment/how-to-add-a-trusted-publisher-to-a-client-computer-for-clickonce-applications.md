@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 35fe324c-45a1-4509-b7be-5c18b4b1b4ab
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cef5eb1df80c7fffcc4a938504e82cac2aa3ae46
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: c04b8d700d7739f0e4ef1fba259aab0595cea28c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382699"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947811"
 ---
 # <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Postupy: Přidání důvěryhodného vydavatele do klientského počítače pro aplikace ClickOnce
 Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské počítače tak, aby [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace běžely s vyšší úrovní důvěryhodnosti bez zobrazení výzvy uživateli. Následující postupy ukazují, jak pomocí nástroje příkazového řádku CertMgr.exe přidat certifikát vydavatele do úložiště důvěryhodných vydavatelů v klientském počítači.
@@ -40,7 +40,7 @@ Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské po�
 
 1. Získejte digitální certifikát od certifikační autority.
 
-2. Exportujte certifikát do formátu Base64 X. 509 ( *. cer* ). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Exportujte certifikát do formátu Base64 X. 509 (*. cer*). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
 
 3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:
 
@@ -50,7 +50,7 @@ Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské po�
 
 1. Získejte digitální certifikát od certifikační autority.
 
-2. Exportujte certifikát do formátu Base64 X. 509 ( *. cer* ). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Exportujte certifikát do formátu Base64 X. 509 (*. cer*). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
 
 3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:
 

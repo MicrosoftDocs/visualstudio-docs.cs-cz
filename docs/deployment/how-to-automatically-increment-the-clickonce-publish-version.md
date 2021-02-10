@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 686ab88a-6305-4914-a05b-fe269cc0ae1e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b4d39654134177f3936bd2fbe72b6786ca9cf03c
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: b84b0a8932bb9d8fd4738c2cd4924b61bb6faeb7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382621"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947772"
 ---
 # <a name="how-to-automatically-increment-the-clickonce-publish-version"></a>Postupy: automatické zvýšení verze publikování ClickOnce
 

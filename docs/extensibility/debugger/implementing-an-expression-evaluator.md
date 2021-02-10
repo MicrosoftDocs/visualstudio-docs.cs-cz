@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: e9ada7be-845e-4baa-bf8f-e4890e7ba490
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28989178ab726a9b274f66e0a9296f2bf49ead4a
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 121bd17e2343cfbba509e85d78ba37b57964f895
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96559963"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947668"
 ---
 # <a name="implement-an-expression-evaluator"></a>Implementace vyhodnocovacího filtru výrazů
 > [!IMPORTANT]
@@ -63,5 +63,5 @@ ms.locfileid: "96559963"
 ## <a name="in-this-section"></a>V této části
  [Strategie implementace vyhodnocovacího filtru výrazů](../../extensibility/debugger/expression-evaluator-implementation-strategy.md) Definuje proces tří kroků pro strategii pro implementaci vyhodnocovacího filtru výrazů (EE).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zápis vyhodnocovacího filtru výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
