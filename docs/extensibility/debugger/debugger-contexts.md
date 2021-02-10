@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 79808036-b680-4e4c-9c61-4ed43aa11323
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 355ca667f0f909ebedc6f404ded545b3f862a444
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 89d2da35fb7ffa81ec9f6a882e6b35d42fc8f00c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914683"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952431"
 ---
 # <a name="debugger-contexts"></a>Kontexty ladicího programu
 Ladicí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] stroj (de) v ladění funguje současně v několika různých kontextech, a to následujícím způsobem:

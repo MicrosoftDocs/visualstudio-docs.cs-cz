@@ -7,15 +7,15 @@ ms.date: 02/05/2019
 ms.topic: quickstart
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f80dd85e1cc8f93784ed938ef1788730b3c926e8
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: 2dd480bb214acf2529d271d085711f21effea23a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947814"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952925"
 ---
 # <a name="first-look-at-the-visual-studio-ide"></a>První seznámení s integrovaným vývojovým prostředím sady Visual Studio
 
@@ -53,7 +53,7 @@ Možnost **pokračovat bez kódu** jednoduše otevře vývojové prostředí sad
 
 ## <a name="start-page"></a>Úvodní stránka
 
-První věc, kterou se zobrazí po spuštění sady Visual Studio, je největší pravděpodobně **úvodní stránkou**. **Úvodní stránka** je navržena jako "centrum", která vám pomůžou najít příkazy a soubory projektu, které potřebujete rychleji. V části **Poslední** se zobrazují projekty a složky, které jste nedávno pracovali. V části **Nový projekt**můžete kliknout na odkaz pro otevření dialogového okna **Nový projekt** nebo v části **otevřít**můžete otevřít existující projekt kódu nebo složku. Napravo je informační kanál nejnovějších příspěvků pro vývojáře.
+První věc, kterou se zobrazí po spuštění sady Visual Studio, je největší pravděpodobně **úvodní stránkou**. **Úvodní stránka** je navržena jako "centrum", která vám pomůžou najít příkazy a soubory projektu, které potřebujete rychleji. V části **Poslední** se zobrazují projekty a složky, které jste nedávno pracovali. V části **Nový projekt** můžete kliknout na odkaz pro otevření dialogového okna **Nový projekt** nebo v části **otevřít** můžete otevřít existující projekt kódu nebo složku. Napravo je informační kanál nejnovějších příspěvků pro vývojáře.
 
 ![Úvodní stránka v aplikaci Visual Studio](media/start-page.png)
 
@@ -69,7 +69,7 @@ Abychom mohli pokračovat v prozkoumávání funkcí sady Visual Studio, vytvoř
 
 ::: moniker range=">=vs-2019"
 
-1. V okně Start vyberte možnost **vytvořit nový projekt**a potom do vyhledávacího pole zadejte **JavaScript** , aby se vyfiltroval seznam typů projektů, které v názvu nebo typu jazyka obsahují text "JavaScript".
+1. V okně Start vyberte možnost **vytvořit nový projekt** a potom do vyhledávacího pole zadejte **JavaScript** , aby se vyfiltroval seznam typů projektů, které v názvu nebo typu jazyka obsahují text "JavaScript".
 
    Visual Studio poskytuje různé druhy šablon projektů, které vám pomohou rychle začít kódovat. (Případně, pokud jste vývojář TypeScript, můžete vytvořit projekt v tomto jazyce. Uživatelské rozhraní, které budeme hledat, je podobné jako u všech programovacích jazyků.)
 
@@ -83,7 +83,7 @@ Abychom mohli pokračovat v prozkoumávání funkcí sady Visual Studio, vytvoř
 
 ::: moniker range="vs-2017"
 
-1. Na **úvodní stránce**zadejte do pole Hledat v části **Nový projekt**text v **jazyce JavaScript** , aby se seznam typů projektů vyfiltroval na ty, které v názvu nebo typu jazyka obsahují text "JavaScript".
+1. Na **úvodní stránce** zadejte do pole Hledat v části **Nový projekt** text v **jazyce JavaScript** , aby se seznam typů projektů vyfiltroval na ty, které v názvu nebo typu jazyka obsahují text "JavaScript".
 
    ![Hledat v šablonách projektů na úvodní stránce Visual studia](media/start-page-search-templates.png)
 
@@ -104,7 +104,7 @@ Abychom mohli pokračovat v prozkoumávání funkcí sady Visual Studio, vytvoř
 
 ## <a name="menus"></a>Nabídky
 
-Panel nabídek podél horního okraje příkazů skupiny sady Visual Studio do kategorií. Například nabídka **projekt** obsahuje příkazy týkající se projektu, ve kterém pracujete. V nabídce **nástroje** můžete přizpůsobit, jak se aplikace Visual Studio chová, výběrem **možností**nebo přidáním funkcí do instalace výběrem možnosti **získat nástroje a funkce**.
+Panel nabídek podél horního okraje příkazů skupiny sady Visual Studio do kategorií. Například nabídka **projekt** obsahuje příkazy týkající se projektu, ve kterém pracujete. V nabídce **nástroje** můžete přizpůsobit, jak se aplikace Visual Studio chová, výběrem **možností** nebo přidáním funkcí do instalace výběrem možnosti **získat nástroje a funkce**.
 
 ![Panel nabídek v aplikaci Visual Studio](media/quickstart-IDE-menu-bar.png)
 
@@ -134,7 +134,7 @@ Vyhledávací pole představuje rychlý a snadný způsob, jak v aplikaci Visual
 
    Dialogové okno **Možnosti** se otevře na stránce možnosti **sestavení a spuštění** .
 
-1. V části **Podrobnosti výstupu sestavení projektu nástroje MSBuild**zvolte možnost **normální**a pak klikněte na tlačítko **OK**.
+1. V části **Podrobnosti výstupu sestavení projektu nástroje MSBuild** zvolte možnost **normální** a pak klikněte na tlačítko **OK**.
 
 1. Sestavte projekt znovu tak, že kliknete pravým tlačítkem na projekt **NodejsWebApp1** v **Průzkumník řešení** a z kontextové nabídky zvolíte **znovu sestavit** .
 

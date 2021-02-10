@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: eec49aec-5474-48a7-889d-709045b9a475
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f76e34f0a806a524c1305796bddabebd155e680c
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 7e7174e15992ab6ae077847e5ee6e3467435d8ef
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560340"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952938"
 ---
 # <a name="project-properties-reference"></a>Reference k vlastnostem projektu
 
@@ -40,6 +40,6 @@ Přečtěte si další informace o tom, jak nakonfigurovat a přizpůsobit vlast
 | [Stránka Zabezpečení, návrhář projektu](../../ide/reference/security-page-project-designer.md) | Pomocí této stránky lze konfigurovat nastavení zabezpečení přístupu ke kódu pro aplikace, které jsou nasazeny pomocí [!INCLUDE[ndptecclick](../../deployment/includes/ndptecclick_md.md)] nasazení. |
 | [Stránka Podepisování, návrhář projektu (C#)](../../ide/reference/signing-page-project-designer.md) | Tato stránka slouží k podepsání manifestů aplikace a nasazení a podepsání sestavení. |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Řešení a projekty](../../ide/solutions-and-projects-in-visual-studio.md)

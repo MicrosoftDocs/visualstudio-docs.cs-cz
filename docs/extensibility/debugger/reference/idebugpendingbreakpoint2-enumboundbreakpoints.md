@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 179c7c54-8446-462d-b099-e0f9cf06dc52
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6655b65ec2505794f29f5c6ad9142c8690ea474b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b65e36552ccdf8bf30777f13761183eb38e6700
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80725862"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99953094"
 ---
 # <a name="idebugpendingbreakpoint2enumboundbreakpoints"></a>IDebugPendingBreakpoint2::EnumBoundBreakpoints
 Vytvoří výčet všech zarážek vázaných z této nedokončené zarážky.
@@ -29,13 +29,13 @@ Vytvoří výčet všech zarážek vázaných z této nedokončené zarážky.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT EnumBoundBreakpoints( 
+HRESULT EnumBoundBreakpoints( 
    IEnumDebugBoundBreakpoints2** ppEnum
 );
 ```
 
 ```csharp
-int EnumBoundBreakpoints( 
+int EnumBoundBreakpoints( 
    out IEnumDebugBoundBreakpoints2 ppEnum
 );
 ```

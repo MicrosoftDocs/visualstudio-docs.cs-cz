@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 097c89d0-f76a-4aaf-ada9-9a778bd179a0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 093db17990d538bf72ddeab9ba9da2b8db30d8f0
-ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
+ms.openlocfilehash: ca17eae2b4f21e9705788faa1a2371a066be6475
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97616354"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952158"
 ---
 # <a name="manage-project-loading-in-a-solution"></a>Správa načítání projektů v řešení
 Řešení sady Visual Studio můžou obsahovat velký počet projektů. Výchozím chováním sady Visual Studio je načíst všechny projekty v řešení v době, kdy je řešení otevřeno, a nedovolit uživateli přístup k jakémukoli z projektů, dokud se všechny z nich nedokončí. Pokud bude proces načítání projektu poslední více než dvě minuty, zobrazí se indikátor průběhu znázorňující počet načtených projektů a celkový počet projektů. Uživatel může uvolnit projekty při práci v řešení s více projekty, ale tento postup má některé nevýhody: Nenačtené projekty nejsou sestaveny jako součást příkazu znovu sestavit řešení a popisy IntelliSense typů a členů uzavřených projektů nejsou zobrazeny.

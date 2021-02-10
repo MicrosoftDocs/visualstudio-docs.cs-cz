@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 46b2892e-7b2b-4b3f-83a7-b884f1e114ee
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca7f6aa0c029cd3d85ba569aa93d6ae2087afd52
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: f9f17c16d051bdb42750d91971d2be0d3c09b47f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96995860"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99953081"
 ---
 # <a name="extend-and-customize-tool-windows"></a>Rozšiřování a přizpůsobení oken nástrojů
 Visual Studio poskytuje několik různých typů oken, například okna nástrojů, okna dokumentů a dialogová okna. Další okna, jako je okno **vlastnosti** , okno **výstup** a okno **seznam úkolů** , jsou typy oken nástrojů.

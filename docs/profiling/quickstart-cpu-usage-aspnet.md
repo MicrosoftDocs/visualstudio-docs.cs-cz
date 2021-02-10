@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Diagnostics Tools, CPU Usage
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: f79a9f5178959b9a1ec79dc3c22d8da9c0f6735e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7170983732ff1350061629e1e8aa4ec88fad3fa1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80411980"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952834"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet-core"></a>Rychlý Start: Analýza dat využití procesoru v aplikaci Visual Studio (ASP.NET Core)
 
@@ -149,7 +149,7 @@ Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnosti
     }
     ```
 
-1. V Průzkumník řešení otevřete *Controller/HomeControllers. cs*a nahraďte následující kód:
+1. V Průzkumník řešení otevřete *Controller/HomeControllers. cs* a nahraďte následující kód:
 
    ::: moniker range="vs-2017"
 
@@ -228,7 +228,7 @@ Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnosti
 
 1. Podívejte se na **souhrnné** zobrazení diagnostických nástrojů.
 
-1. I když je ladicí program pozastaven, povolte shromažďování dat o využití procesoru výběrem možnosti **zaznamenat profil procesoru**a pak otevřete kartu **využití CPU** .
+1. I když je ladicí program pozastaven, povolte shromažďování dat o využití procesoru výběrem možnosti **zaznamenat profil procesoru** a pak otevřete kartu **využití CPU** .
 
      ![Diagnostické nástroje povolují profilaci procesoru](../profiling/media/quickstart-cpu-usage-summary.png)
 

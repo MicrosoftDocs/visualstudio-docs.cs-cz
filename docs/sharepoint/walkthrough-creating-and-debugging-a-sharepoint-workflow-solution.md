@@ -15,15 +15,15 @@ helpviewer_keywords:
 - workflows [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3c8d5ca5b941a7ae6e6ebada21f1eafaef2b6f43
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 637d46eaa9ac9306d63befed1c011c278b46af24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915307"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952717"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>Návod: vytvoření a ladění řešení pracovního postupu služby SharePoint
   Tento návod ukazuje, jak vytvořit šablonu základní sekvenční pracovní postup. Pracovní postup zkontroluje vlastnost sdílené knihovny dokumentů a určí, zda byl dokument zkontrolován. Pokud byl dokument revidován, pracovní postup se dokončí.
@@ -41,7 +41,7 @@ ms.locfileid: "96915307"
 >
 > Kromě toho může počítač v následujících pokynech zobrazit jiné názvy nebo umístění pro některé prvky uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice Microsoft Windows a SharePointu.

@@ -6,15 +6,15 @@ ms.topic: overview
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f29fd0a69ceafa33c00593b67f6775a723780c26
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: f31ed0ccb09074798ddf56f601e9ad26facd505f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668648"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952535"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Obrázky a ikony pro Visual Studio
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a> Použití obrázku v aplikaci Visual Studio
@@ -327,7 +327,7 @@ ms.locfileid: "97668648"
 |ASP, HTML, WPF|ASP.NET HTML WPF – modrá|0095D7/0149 215|![0095D7 vzorníku](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|
 |C++|Fialová CPP|9B4F96/155, 79150|![9B4F96 vzorníku](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|
 |C#|CS zelená (akce VS zelená)|388A34/56138, 52|![388A34 vzorníku](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|
-|CSS|CSS – červená|BD1E2D/189, 30, 45|![BD1E2D vzorníku](../../extensibility/ux-guidelines/media/0405_bd1e2d.png "0405_BD1E2D")|
+|Šablony stylů CSS|CSS – červená|BD1E2D/189, 30, 45|![BD1E2D vzorníku](../../extensibility/ux-guidelines/media/0405_bd1e2d.png "0405_BD1E2D")|
 |F#|Nachová FS|672878/103, 40120|![Vzorník 672878](../../extensibility/ux-guidelines/media/0405_672878.png "0405_672878")|
 |JavaScript|JS – oranžová|F16421/241100, 33|![F16421 vzorníku](../../extensibility/ux-guidelines/media/0405_f16421.png "0405_F16421")|
 |VB|VB Blue (VS Action Blue)|00539C/0, 83156|![00539C vzorníku](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|
@@ -340,9 +340,9 @@ ms.locfileid: "97668648"
 |-|-|-|-|-|-|
 |![Ikona Visual Basic](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")|![Ikona&#35; v jazyce C](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")|![Ikona&#43;&#43; v jazyce C](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")|![Ikona F&#35;](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")|![Ikona JavaScriptu](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")|![Ikona Pythonu](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")|
 
-|HTML|WPF|ASP|CSS|TypeScript|
+|HTML|WPF|ASP|Šablony stylů CSS|TypeScript|
 |-|-|-|-|-|-|
-|![Ikona HTML](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![Ikona WPF](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![Ikona ASP](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![Ikona CSS](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![Ikona TypeScript](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript||
+|![Ikona HTML](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![Ikona WPF](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![Ikona ASP](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![Ikona CSS](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />Šablony stylů CSS|![Ikona TypeScript](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript||
 
 #### <a name="intellisense"></a>IntelliSense
  Ikony IntelliSense používají výhradní paletu barev. Tyto barvy slouží k usnadnění rozlišení mezi různými položkami v místním seznamu technologie IntelliSense.

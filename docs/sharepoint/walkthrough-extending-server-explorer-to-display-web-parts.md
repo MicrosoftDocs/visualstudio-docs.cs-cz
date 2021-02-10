@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio], creating a new node type
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 55950d8498b436d38d2145c2692556330718883e
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: aa190ea6d5376c00584cc5936d1074d245b9509e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95970210"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952665"
 ---
 # <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>Návod: roztažení Průzkumník serveru pro zobrazení webových částí
   V aplikaci Visual Studio můžete použít uzel **připojení služby sharepoint** **Průzkumník serveru** k zobrazení komponent na webech služby SharePoint. **Průzkumník serveru** ale ve výchozím nastavení nezobrazuje některé součásti. V tomto návodu rozšíříte **Průzkumník serveru** tak, aby se na všech připojených webech SharePointu zobrazila galerie webových částí.
@@ -362,7 +362,7 @@ ms.locfileid: "95970210"
 
 #### <a name="to-uninstall-the-extension"></a>Odinstalace rozšíření
 
-1. V experimentální instanci aplikace [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] na řádku nabídek vyberte možnost **Tools**  >  **rozšíření a aktualizace** nástrojů.
+1. V experimentální instanci aplikace [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] na řádku nabídek vyberte možnost   >  **rozšíření a aktualizace** nástrojů.
 
      Otevře se dialogové okno **rozšíření a aktualizace** .
 

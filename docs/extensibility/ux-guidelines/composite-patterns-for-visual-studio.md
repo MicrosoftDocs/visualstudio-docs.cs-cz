@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 719ce0ac88761599fbed7da90643fd8a9d79db69
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: c8ac314a2ec49b805fc87badf6b63a719b8511e8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715818"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952093"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Složené vzory pro Visual Studio
 Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích. Mezi nejdůležitější složené vzory v aplikaci Visual Studio s ohledem na konzistenci patří:
@@ -70,7 +70,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 
 ### <a name="other-charting-considerations"></a>Další otázky k vytváření grafů
 
-#### <a name="color"></a>Color
+#### <a name="color"></a>Barva
  K dispozici je určitá paleta barev grafů definovaných pro použití v aplikaci Visual Studio. Paleta je přístupná pro hlavní typy rolety barev a barvy lze odlišit i v případě, že se používají jako velmi úzké řezy barvy. Tyto barvy můžete v libovolné kombinaci použít pro libovolný typ grafu nebo grafu v uživatelském rozhraní. Pokud nepotřebujete mít spoustu různých barev, nemusíte používat všechny sedm barev. Tyto barvy nebyly navrženy pro použití s žádnými prvky popředí, takže neumísťujte text ani glyfy nad tyto barvy. Tyto odstíny by měly být pevně kódované a zpřístupněny vlastním úpravám uživatelů v nabídce **nástroje > možnosti** (viz vystavení [barev koncovým uživatelům](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)).
 
 |Barvu|Soustavy|RGB|
@@ -395,7 +395,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 #### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a> Vzhled výběru grafického objektu
  Popisovače výběru jsou čtverce vykreslené v obdélníkovém vzoru kolem ohraničujícího rámečku objektu. Následující graf ukazuje příklady různých stavů, které může grafický objekt mít s popisovačem, velikostí a místním zobrazením úprav. Velikost popisovačů by měla být svázaná s metrikami ohraničení a okraje okna pomocí rozhraní API **GetSystemMetrics** .
 
-| Stav | Příznaky | Podrobnosti vizuálu |
+| State | Příznaky | Podrobnosti vizuálu |
 |-------------------------|---------------| - |
 | **Nevybrané** | Výchozí | ![Výchozí stav tlačítka](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713 – 10_DefaultState") |
 | **Primární výběr** | Možností změny velikosti | ![Primární výběr s úchyty pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713 – 11_PrimaryResize") |

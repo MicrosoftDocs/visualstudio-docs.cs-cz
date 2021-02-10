@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 84a2b189-ccf1-467e-8fab-0c0da68f0b91
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 07625f7249092e2de3d3dccaaef31a2869755e36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 89781298dc9134f80f8f57cc0e008068fa47bad3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80725974"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99953198"
 ---
 # <a name="idebugpendingbreakpoint2canbind"></a>IDebugPendingBreakpoint2::CanBind
 Určuje, zda tato nedokončená zarážka může vytvořit vazby na umístění kódu.
@@ -29,13 +29,13 @@ Určuje, zda tato nedokončená zarážka může vytvořit vazby na umístění 
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT CanBind ( 
+HRESULT CanBind ( 
    IEnumDebugErrorBreakpoints2** ppErrorEnum
 );
 ```
 
 ```csharp
-int CanBind ( 
+int CanBind ( 
    out IEnumDebugErrorBreakpoints2 ppErrorEnum
 );
 ```

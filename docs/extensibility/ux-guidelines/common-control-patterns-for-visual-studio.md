@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 3e893949-6398-42f1-9eab-a8d8c2b7f02d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c1caccebf1dc14146bef214a4d33e1216243780
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: ab8f04ff885f4b57d24cb3bc0eb449859fca6271
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715883"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952184"
 ---
 # <a name="common-control-patterns-for-visual-studio"></a>Vzory běžných ovládacích prvků pro Visual Studio
 ## <a name="common-controls"></a><a name="BKMK_CommonControls"></a> Běžné ovládací prvky

@@ -25,21 +25,21 @@ f1_keywords:
 ms.assetid: 085913b8-a97b-45f7-85fa-bbb0902f3ee9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: efe1486cf8ac2b64965ed157abbb47dc2d8c7b6c
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: c54ce24025f9ec15bc03d02825e961f9a03f3715
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947788"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952951"
 ---
 # <a name="file-properties-javascript"></a>Vlastnosti souboru, JavaScript
 
 Pomocí vlastností souboru můžete určit, jaké akce má projektový systém provádět na souborech. Můžete například nastavit vlastnosti souboru a určit, jestli se má soubor přidat do balíčku jako soubor prostředků.
 
-Můžete vybrat libovolný soubor v Průzkumník řešení a potom prostudovat jeho vlastnosti v okno Vlastnosti. Soubory JavaScriptu mají čtyři vlastnosti: **Kopírovat do výstupního adresáře**, **Akce balíčku**, **název souboru**a **cestu k souboru**.
+Můžete vybrat libovolný soubor v Průzkumník řešení a potom prostudovat jeho vlastnosti v okno Vlastnosti. Soubory JavaScriptu mají čtyři vlastnosti: **Kopírovat do výstupního adresáře**, **Akce balíčku**, **název souboru** a **cestu k souboru**.
 
 ## <a name="file-properties"></a>Vlastnosti souboru
 Tato část popisuje vlastnosti společné pro soubory jazyka JavaScript.

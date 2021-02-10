@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ac857d961b1ae736645ba2cfda3f1ef5755d0fa1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4d7cc99747571feb5b443f10355d867da7c22f44
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770278"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952912"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>Postupy: nastavení možností dostupnosti IDE
 
@@ -46,7 +46,7 @@ Tady je postup, jak vypnout automaticky otevíraná okna:
 
 1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
 
-1. Vyberte **Text Editor**  >  **All Languages**  >  **Obecné**jazyky.
+1. Vyberte **Text Editor**  >    >  **Obecné** jazyky.
 
 1. Zrušte zaškrtnutí políček **Členové automatického seznamu** a **informace o parametrech** .
 
@@ -62,7 +62,7 @@ Můžete také změnit nastavení způsobu zobrazení textu v editoru. Jak na to
 
 1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
 
-1. Vyberte **Environment**možnost  >  **písma a barvy**prostředí.
+1. Vyberte možnost  >  **písma a barvy** prostředí.
 
 1. Vyberte možnost v rozevírací nabídce **Zobrazit nastavení pro** .
 
@@ -74,11 +74,11 @@ Můžete také změnit nastavení způsobu zobrazení textu v editoru. Jak na to
 
     Chcete-li změnit velikost písma textu v místních oknech dokončování příkazů, vyberte možnost **dokončování příkazů**.
 
-1. V **zobrazení položky**vyberte **prostý text**.
+1. V **zobrazení položky** vyberte **prostý text**.
 
-1. V **písma**vyberte nový typ písma.
+1. V **písma** vyberte nový typ písma.
 
-1. V rámečku **Velikost**vyberte novou velikost písma.
+1. V rámečku **Velikost** vyberte novou velikost písma.
 
     > [!TIP]
     > Chcete-li obnovit velikost textu textových oken a editorů založených na textu, vyberte možnost **použít výchozí**.
@@ -93,16 +93,16 @@ Můžete zvolit, že chcete změnit výchozí barvy pro text, indikátory okraj�
 
 1. Ve složce **prostředí** vyberte možnost **písma a barvy**.
 
-1. V **zobrazení zobrazit nastavení pro**vyberte **textový editor**.
+1. V **zobrazení zobrazit nastavení pro** vyberte **textový editor**.
 
-1. V položce **Zobrazit položky**vyberte položku, jejíž zobrazení potřebujete změnit, například **prostý text**, **okraj indikátoru**, **viditelné prázdné znaky**, **název atributu HTML**nebo **atribut XML**.
+1. V položce **Zobrazit položky** vyberte položku, jejíž zobrazení potřebujete změnit, například **prostý text**, **okraj indikátoru**, **viditelné prázdné znaky**, **název atributu HTML** nebo **atribut XML**.
 
-1. Vyberte nastavení zobrazení z následujících možností: **popředí položky**, **pozadí položky**a **tučné**.
+1. Vyberte nastavení zobrazení z následujících možností: **popředí položky**, **pozadí položky** a **tučné**.
 
 1. Vyberte **OK**.
 
 > [!TIP]
-> Chcete-li pro všechna okna aplikací v operačním systému použít barvy s vysokým kontrastem, stiskněte **levý ALT**levý klávesu + **SHIFT** + **Print Screen**. Pokud je Visual Studio otevřené, zavřete ho a znovu ho otevřete, abyste mohli plně implementovat barvy s vysokým kontrastem.
+> Chcete-li pro všechna okna aplikací v operačním systému použít barvy s vysokým kontrastem, stiskněte **levý ALT** levý klávesu + **SHIFT** + **Print Screen**. Pokud je Visual Studio otevřené, zavřete ho a znovu ho otevřete, abyste mohli plně implementovat barvy s vysokým kontrastem.
 
 ## <a name="toolbars"></a>Panely nástrojů
 
@@ -114,7 +114,7 @@ Pro zlepšení použitelnosti panelu nástrojů a usnadnění přístupu můžet
 
 1. V dialogovém okně **přizpůsobit** vyberte kartu **příkazy** .
 
-1. Vyberte **panel nástrojů**a potom zvolte název panelu nástrojů, který obsahuje tlačítko, pro které chcete zobrazit text.
+1. Vyberte **panel nástrojů** a potom zvolte název panelu nástrojů, který obsahuje tlačítko, pro které chcete zobrazit text.
 
 1. V seznamu vyberte příkaz, který máte v úmyslu změnit.
 
@@ -126,7 +126,7 @@ Pro zlepšení použitelnosti panelu nástrojů a usnadnění přístupu můžet
 
 1. Znovu vyberte **změnit výběr**.
 
-1. Vedle pole **název**zadejte pro vybrané tlačítko Nový titulek.
+1. Vedle pole **název** zadejte pro vybrané tlačítko Nový titulek.
 
 ## <a name="see-also"></a>Viz také
 

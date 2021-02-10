@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: f059f8e0-ad44-49ac-ba90-73576ada5e06
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1022f580a46051ca7dcbf33a4348ab44e6452d38
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d3b952fcd849132ea39dbeaef47ea32da3994ba3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80726033"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99953315"
 ---
 # <a name="idebugoutputstringevent2getstring"></a>IDebugOutputStringEvent2::GetString
 Načte zobrazitelnou zprávu.
@@ -28,13 +28,13 @@ Načte zobrazitelnou zprávu.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetString( 
+HRESULT GetString( 
    BSTR* pbstrString
 );
 ```
 
 ```csharp
-int GetString( 
+int GetString( 
    out string pbstrString
 );
 ```

@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 36ea793b-3832-41a1-b906-69e680ad5e1d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9cc65fe72ed631a4bb3c0b22efb74aae9160e1cb
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: f3f9b9efc625b435f304b192d3ca52f514e682e8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97862941"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951911"
 ---
 # <a name="walkthrough-create-an-sdk-using-c"></a>Návod: vytvoření sady SDK pomocí jazyka C++
 Tento návod ukazuje, jak vytvořit nativní sadu SDK pro C++ Math Library, zabalit sadu SDK jako rozšíření sady Visual Studio (VSIX) a pak ji použít k vytvoření aplikace. Tento návod je rozdělen do těchto kroků:
@@ -26,7 +26,7 @@ Tento návod ukazuje, jak vytvořit nativní sadu SDK pro C++ Math Library, zaba
 
 - [Vytvoření ukázkové aplikace, která používá knihovnu tříd](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createSample)
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
 ## <a name="to-create-the-native-and-windows-runtime-libraries"></a><a name="createClassLibrary"></a> Vytvoření nativní knihovny a knihovny prostředí Windows Runtime

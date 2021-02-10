@@ -12,15 +12,15 @@ helpviewer_keywords:
 - importing items [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7ceb69608a2d1770f082991f3d927d4e4639ae56
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 503ffc733a408787e7ecf188d893039759819c6d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95970152"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952574"
 ---
 # <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>Návod: import vlastní stránky předlohy a stránky webu s obrázkem
   Tento návod ukazuje, jak importovat vlastní stránku předlohy služby SharePoint a stránku webu, která obsahuje obrázek do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu služby SharePoint.

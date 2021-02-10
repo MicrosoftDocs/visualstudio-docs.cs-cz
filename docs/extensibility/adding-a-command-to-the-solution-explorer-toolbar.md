@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f6411557-2f4b-4e9f-b02e-fce12a6ac7e9
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d080791c94c77577f80a4b55db67febd3d48b56a
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 305966a4cd4ec67994ac3dbd6c7ba0e25a14172f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597506"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951690"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>Přidání příkazu na panel nástrojů Průzkumník řešení
 Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník řešení** .
@@ -31,7 +31,7 @@ Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník 
 > [!NOTE]
 > Použijte soubory tabulky příkazů XML (*. vsct*) místo souborů konfigurace příkazového řádku (*. ctc*), abyste definovali, jak se nabídky a příkazy zobrazí ve vašich VSPackage. Další informace naleznete v tématu [tabulka příkazů sady Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-an-extension-with-a-menu-command"></a>Vytvoření rozšíření pomocí příkazu nabídky

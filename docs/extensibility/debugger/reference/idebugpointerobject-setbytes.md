@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 8c578b38-38d7-46f3-bb2e-8a730fccd334
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dede3ee5291afbfbeab4d6e60dcbd56e205e4526
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57f1a077923a174ece5323256ad474dda3ec685f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80725510"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952275"
 ---
 # <a name="idebugpointerobjectsetbytes"></a>IDebugPointerObject::SetBytes
 Nastaví hodnotu, na kterou se odkazuje z řady po sobě jdoucích bajtů.
@@ -28,7 +28,7 @@ Nastaví hodnotu, na kterou se odkazuje z řady po sobě jdoucích bajtů.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT SetBytes( 
+HRESULT SetBytes( 
    DWORD  dwStart,
    DWORD  dwCount,
    BYTE*  pBytes,

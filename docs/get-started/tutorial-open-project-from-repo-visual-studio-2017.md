@@ -8,19 +8,19 @@ ms.prod: visual-studio-windows
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
 - dotnetcore
 monikerRange: vs-2017
-ms.openlocfilehash: 6989de1c5b4542998d048e5eadd47f48dc7e05b1
-ms.sourcegitcommit: cfeffe2364275a347db0ba2dce36d8e80001c081
+ms.openlocfilehash: 97bfe7178d3bd744d1e441f8428cd38e8241b721
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99181292"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951924"
 ---
 # <a name="tutorial-open-a-project-from-a-repo-in-visual-studio-2017"></a>Kurz: otevření projektu z úložiště v aplikaci Visual Studio 2017
 
@@ -43,7 +43,7 @@ V tomto kurzu použijete Visual Studio 2017 k prvnímu připojení k úložišti
 
     ![V části místní úložiště Git vyberte klonovat.](./media/open-proj-repo-local-git-repo-clone.png)
 
-1. Do pole **_Zadejte adresu URL úložiště Git, které se má klonovat_*, zadejte nebo vložte adresu URL pro své úložiště a potom stiskněte _* ENTER**. (Můžete obdržet výzvu k přihlášení do GitHubu. Pokud ano, udělejte to.)
+1. Do pole říkám ***Zadejte adresu URL úložiště Git, které se má klonovat**, zadejte nebo vložte adresu URL pro vaše úložiště a potom stiskněte _ * ENTER * *. (Můžete obdržet výzvu k přihlášení do GitHubu. Pokud ano, udělejte to.)
 
    Jakmile aplikace Visual Studio naklonuje vaše úložiště, Team Explorer se zavře a Průzkumník řešení otevře. Zobrazí se zpráva s informacemi *o tom, jak kliknout na řešení a složky výše, a zobrazit seznam řešení*. Vyberte **řešení a složky**.
 

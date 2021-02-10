@@ -8,13 +8,13 @@ ms.date: 08/04/2017
 ms.topic: conceptual
 ms.assetid: 694ffb31-132c-4d63-b930-8254e7c50c25
 ms.reviewer: Jamie.Young
-manager: jillfra
-ms.openlocfilehash: 0907b49aa3e16ba7ee4fb63f56758cf830dde68c
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+manager: jmartens
+ms.openlocfilehash: c3867bc6fd489642bfa856caed434312a9d2d571
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97761443"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99953146"
 ---
 # <a name="color-value-reference-for-visual-studio"></a>Odkaz na hodnotu barvy pro Visual Studio
 
@@ -551,7 +551,7 @@ Při použití tohoto referenčního průvodce si pamatujte:
 
 ## <a name="color-swatches-by-function"></a>Vzorník barev podle funkcí
 
-| Světlý | Tmavý | Modrý | Použito pro... |
+| Světlý | Tmavý | Blue | Použito pro... |
 | :---: | :---: | :---: | --- |
 | ![#FFC9DEF5 vzorníku](../../extensibility/ux-guidelines/media/C9DEF5.png "#FFC9DEF5 vzorníku")<br />`#FFC9DEF5` | ![#FF2D2D30 vzorníku](../../extensibility/ux-guidelines/media/2D2D30.png "#FF2D2D30 vzorníku")<br />`#FF2D2D30` | ![#FFFDF4BF vzorníku](../../extensibility/ux-guidelines/media/FDF4BF.png "#FFFDF4BF vzorníku")<br />`#FFFDF4BF` | Tlačítka akcí, položky pole se seznamem, tlačítka panelu příkazů, rozevírací tlačítka a položky nabídky: pozadí |
 | ![#FFCCCEDB vzorníku](../../extensibility/ux-guidelines/media/CCCEDB.png "#FFCCCEDB vzorníku")<br />`#FFCCCEDB` | ![#FF3F3F46 vzorníku](../../extensibility/ux-guidelines/media/3F3F46.png "#FF3F3F46 vzorníku")<br />`#FF3F3F46` | ![#FF465A7D vzorníku](../../extensibility/ux-guidelines/media/465A7D.png "#FF465A7D vzorníku")<br />`#FF465A7D` | Automaticky skrývat ohraničení tabulátoru |
