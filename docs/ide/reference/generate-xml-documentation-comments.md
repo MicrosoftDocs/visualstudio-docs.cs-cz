@@ -6,15 +6,15 @@ ms.date: 01/22/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 250e07994b04e03b015bf3893633ebce0f36a90d
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: 2c203d9a445d9426a8079801a856e20f7be82229
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96617471"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946563"
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>Postupy: vložení komentářů XML pro generování dokumentace
 
@@ -55,7 +55,7 @@ Můžete použít styly v komentářích XML, které budou vykresleny rychle inf
    ![Snímek obrazovky zobrazující dokončený komentář se značkami stylu pro kurzívu, tučné písmo, odrážky a odkaz na kliknutí](media/doc-style-cs.png) 
 
 > [!NOTE]
-> Po zadání [option](../../ide/reference/options-text-editor-csharp-advanced.md) `///` v jazyce C# nebo Visual Basic existuje možnost přepínat komentáře k dokumentaci XML `'''` . V řádku nabídek klikněte na možnost **Tools**  >  **Možnosti** nástrojů a otevřete dialogové okno **Možnosti** . Pak přejděte do **textového editoru**  >  **C#** nebo **Basic**  >  **Advanced**. V části **help editoru** vyhledejte možnost **Generovat dokumentační komentáře XML** .
+> Po zadání [](../../ide/reference/options-text-editor-csharp-advanced.md) `///` v jazyce C# nebo Visual Basic existuje možnost přepínat komentáře k dokumentaci XML `'''` . V řádku nabídek klikněte na možnost   >  **Možnosti** nástrojů a otevřete dialogové okno **Možnosti** . Pak přejděte do **textového editoru**  >  **C#** nebo **Basic**  >  **Advanced**. V části **help editoru** vyhledejte možnost **Generovat dokumentační komentáře XML** .
 
 ## <a name="see-also"></a>Viz také
 

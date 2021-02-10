@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 49fa36c9-8e14-44f5-8a2b-34146cf6807b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e6c523d21a194626805168d6fee3054e77586b19
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: c1560b40fe94af8dae5223981dd8e0c790320085
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047583"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946368"
 ---
 # <a name="use-multiple-processors-to-build-projects"></a>Použití více procesorů k sestavení projektů
 
@@ -38,7 +38,7 @@ Nástroj MSBuild může využívat výhod systémů s více procesory nebo proce
 
 ## <a name="c-project-vcxproj-and-solution-sln-files"></a>Soubory projektů C++ (. vcxproj) a řešení (. sln)
 
- Do [úlohy MSBuild](../msbuild/msbuild-task.md)lze předat jak projekty C++ ( *. vcxproj* ), tak soubory řešení ( *. sln* ). Pro projekty v jazyce C++ se zavolá VCWrapperProject a pak se vytvoří interní projekt MSBuild. Pro řešení C++ je vytvořen SolutionWrapperProject a pak se vytvoří interní projekt MSBuild. V obou případech je výsledný projekt zpracován stejně jako jakýkoli jiný projekt MSBuild.
+ Do [úlohy MSBuild](../msbuild/msbuild-task.md)lze předat jak projekty C++ (*. vcxproj*), tak soubory řešení (*. sln*). Pro projekty v jazyce C++ se zavolá VCWrapperProject a pak se vytvoří interní projekt MSBuild. Pro řešení C++ je vytvořen SolutionWrapperProject a pak se vytvoří interní projekt MSBuild. V obou případech je výsledný projekt zpracován stejně jako jakýkoli jiný projekt MSBuild.
 
 ## <a name="multi-process-execution"></a>Provádění více procesů
 

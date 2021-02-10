@@ -9,15 +9,15 @@ helpviewer_keywords:
 - find all references
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d5ee6a0792c5dbfa1661018e75806499d1aa1028
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 0cc7702ae07c83c5798945c4a9bb2ab787fc9cd3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006546"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945562"
 ---
 # <a name="find-references-in-your-code"></a>Hledání odkazů v kódu
 
@@ -42,7 +42,7 @@ K přechodu na odkazy v okně **odkazy** můžete použít následující metody
 - Stisknutím klávesy **F8** přejděte na další odkaz nebo stiskněte **Shift + F8** a přejděte na předchozí odkaz.
 - Stiskněte klávesu **ENTER** na odkaz, nebo na ni poklikejte, abyste na ni mohli přejít v kódu.
 - V nabídce kliknutím pravým tlačítkem (kontextová nabídka) pro odkaz vyberte příkaz **Přejít na předchozí umístění** nebo **Přejít na další umístění** .
-- Vyberte **šipky nahoru** a **dolů** (pokud jsou povolené v dialogovém okně **Možnosti** ). Pokud chcete tuto funkci povolit, na panelu nabídek zvolte možnosti **nástroje**  >  **Options**  >  **Environment**  >  **karty prostředí a Windows**  >  **Preview** a potom vyberte možnost **povolit otevírání nových souborů na kartě náhled** a **Zobrazit náhled vybraných souborů v polích výsledky hledání** .
+- Vyberte **šipky nahoru** a **dolů** (pokud jsou povolené v dialogovém okně **Možnosti** ). Pokud chcete tuto funkci povolit, na panelu nabídek zvolte možnosti **nástroje**  >    >    >  **karty prostředí a Windows**  >  **Preview** a potom vyberte možnost **povolit otevírání nových souborů na kartě náhled** a **Zobrazit náhled vybraných souborů v polích výsledky hledání** .
 
 ## <a name="change-reference-groupings"></a>Změnit seskupení odkazů
 Ve výchozím nastavení se odkazy seskupují podle projektu a pak podle definice. Toto pořadí seskupení ale můžete změnit změnou nastavení v rozevíracím seznamu **Seskupit podle:** na panelu nástrojů. Můžete ho například změnit z výchozího nastavení **projektu, pak definice** na **definice, projekt** i další nastavení.

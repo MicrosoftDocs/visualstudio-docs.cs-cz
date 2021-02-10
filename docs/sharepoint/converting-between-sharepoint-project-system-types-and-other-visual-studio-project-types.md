@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint project service
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 75f8a2072e81936c4c1c691261e301aae37b0191
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: cc0eca8005c4eee6e1eb89c410b50be5d0228ec6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850478"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946329"
 ---
 # <a name="convert-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>Převod mezi systémovými typy projektů SharePoint a jinými typy projektů Visual Studio
   V některých případech může být objekt v systému projektu služby SharePoint a chcete používat funkce odpovídajícího objektu v modelu automatizačních objektů sady Visual Studio nebo v modelu integračních objektů, nebo naopak. V těchto případech můžete použít <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> metodu služby projektu služby SharePoint k převedení objektu na jiný objektový model.

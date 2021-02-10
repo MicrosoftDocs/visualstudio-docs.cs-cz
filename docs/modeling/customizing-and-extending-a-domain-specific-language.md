@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, creating solutions
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 912c8fc9b5920411304310c44cdc264968472d4e
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 9cfa8a3cda3f6bb2f564efe745a11863cf4d0e8a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360712"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945302"
 ---
 # <a name="customize-and-extend-a-domain-specific-language"></a>Přizpůsobení a rozšiřování jazyka specifického pro doménu
 
@@ -70,7 +70,7 @@ Sada Visual Studio Modeling and vizualizace SDK (VMSDK) poskytuje několik úrov
 |Integrujte několik DSL, aby fungovaly jako součást jedné aplikace.|Viz [Integrace modelů pomocí sady Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).|
 |Umožněte, aby se vaše DSL rozšířila třetími stranami, a řídit rozšíření.|[Rozšíření vašeho DSL pomocí MEF](../modeling/extend-your-dsl-by-using-mef.md)<br /><br /> [Sdílení tříd mezi DSL pomocí knihovny DSL](../modeling/sharing-classes-between-dsls-by-using-a-dsl-library.md)<br /><br /> [Definování zásady zamykání pro vytváření segmentů jen pro čtení](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
 - [Psaní kódu pro přizpůsobení Domain-Specificho jazyka](../modeling/writing-code-to-customise-a-domain-specific-language.md)

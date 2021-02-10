@@ -6,17 +6,17 @@ ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: d75bb4f5274201b7cf745ff8c7c6f27b869855c3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c83516891a33a026399a6e5fcfc2458b5e03a0bd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81445009"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945432"
 ---
 # <a name="publish-a-nodejs-application-to-azure-linux-app-service"></a>Publikování aplikace Node.js do Azure (Linux App Service)
 
@@ -36,15 +36,15 @@ V tomto kurzu se naučíte:
 > * Vytvoření App Service pro Linux v Azure
 > * Nasazení na Linux
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node.js.
 
     ::: moniker range=">=vs-2019"
-    Pokud jste ještě nenainstalovali Visual Studio 2019, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/)   .
+    Pokud jste ještě nenainstalovali Visual Studio 2019, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) .
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Pokud jste ještě nenainstalovali Visual Studio 2017, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/)   .
+    Pokud jste ještě nenainstalovali Visual Studio 2017, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) .
     ::: moniker-end
 
     Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte úlohu **Vývoj aplikací Node.js** a pak zvolte **Změnit**.
@@ -62,14 +62,14 @@ V tomto kurzu se naučíte:
 1. Vytvořte novou aplikaci TypeScript Express.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **Node.js**a pak zvolte **vytvořit novou základní základní aplikaci Azure Node.js Express 4** (TypeScript). V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **Node.js** a pak zvolte **vytvořit novou základní základní aplikaci Azure Node.js Express 4** (TypeScript). V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte **TypeScript**a pak zvolte **Node.js**. V prostředním podokně zvolte **základní aplikace Azure Node.js Express 4**a pak zvolte **OK**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte **TypeScript** a pak zvolte **Node.js**. V prostředním podokně zvolte **základní aplikace Azure Node.js Express 4** a pak zvolte **OK**.
 
     ![Vytvoření nové aplikace TypeScript Express](../javascript/media/azure-ts-express-app.png)
     ::: moniker-end
-    Pokud nevidíte základní šablonu projektu **aplikace Azure Node.js Express 4** , je nutné přidat úlohu ** vývojeNode.js** . Podrobné pokyny najdete v části [požadavky](#prerequisites).
+    Pokud nevidíte základní šablonu projektu **aplikace Azure Node.js Express 4** , je nutné přidat úlohu **vývojeNode.js** . Podrobné pokyny najdete v části [požadavky](#prerequisites).
 
     Visual Studio vytvoří projekt a otevře ho v Průzkumník řešení (pravé podokno).
 
@@ -85,7 +85,7 @@ V tomto kurzu se naučíte:
 
 Nastavení GitHubu pro Visual Studio:
 
-1. Zajistěte, aby bylo [rozšíření GitHub pro Visual Studio](https://visualstudio.github.com/) nainstalované a povolené pomocí položek **Tools**nabídky  >  **rozšíření a aktualizace**nástroje.
+1. Zajistěte, aby bylo [rozšíření GitHub pro Visual Studio](https://visualstudio.github.com/) nainstalované a povolené pomocí položek nabídky  >  **rozšíření a aktualizace** nástroje.
 
 2. V nabídce vyberte **Zobrazit**  >  **Další Windows**  >  **GitHub**.
 
@@ -95,7 +95,7 @@ Nastavení GitHubu pro Visual Studio:
 
     ![Otevřít okno GitHubu](../javascript/media/azure-github-get-started.png)
 
-4. Klikněte na **Začínáme**.
+4. Klikněte **na Začínáme.**
 
     Pokud jste již připojeni k GitHubu, sada nástrojů vypadá podobně jako na následujícím obrázku.
 
@@ -109,7 +109,7 @@ Nastavení GitHubu pro Visual Studio:
 
 ## <a name="create-a-linux-app-service-in-azure"></a>Vytvoření App Service pro Linux v Azure
 
-1. Přihlaste se na web [Azure Portal](https://portal.azure.com).
+1. Přihlaste se na [Azure Portal](https://portal.azure.com).
 
 2. V seznamu služeb vlevo vyberte **App Services** a pak klikněte na **Přidat**.
 
@@ -130,13 +130,13 @@ Nastavení GitHubu pro Visual Studio:
     > [!WARNING]
     > Proces nasazení App Service používá sadu heuristik k určení typu aplikace, kterou chcete vyzkoušet a spustit. Pokud. v nasazeném obsahu se zjistil soubor *sln* , který bude předpokládat nasazení projektu založeného na MSBuild. Výše přidané nastavení přepíše tuto logiku a explicitně určí, že se jedná o Node.js aplikaci. Bez tohoto nastavení se aplikace Node.js nedaří nasadit, pokud. soubor *sln* je součástí úložiště nasazeného do App Service.
 
-7. V části **nastavení aplikace**přidejte další nastavení s názvem `WEBSITE_NODE_DEFAULT_VERSION` a hodnotou `8.9.0` .
+7. V části **nastavení aplikace** přidejte další nastavení s názvem `WEBSITE_NODE_DEFAULT_VERSION` a hodnotou `8.9.0` .
 
 8. Po nasazení otevřete App Service a vyberte **Možnosti nasazení**.
 
     ![Možnosti nasazení](../javascript/media/azure-deployment-options.png)
 
-9. Klikněte na **Zvolit zdroj**a pak zvolte **GitHub**a pak nakonfigurujte všechna požadovaná oprávnění.
+9. Klikněte na **Zvolit zdroj** a pak zvolte **GitHub** a pak nakonfigurujte všechna požadovaná oprávnění.
 
     ![Oprávnění GitHubu](../javascript/media/azure-choose-source.png)
 
@@ -175,7 +175,7 @@ Nastavení GitHubu pro Visual Studio:
 * Pokud proces node.exe zemře (to znamená, že dojde k neošetřené výjimce), kontejner se restartuje.
 * Po spuštění kontejneru se spustí různými heuristickými metodami, které vám pomůžou zjistit, jak spustit proces Node.js. Podrobnosti o implementaci se dají zobrazit na [generateStartupCommand.js](https://github.com/Azure/app-service-builtin-images/blob/master/node/8.9.4/startup/generateStartupCommand.js).
 * Ke spuštěnému kontejneru se můžete připojit přes SSH pro vyšetřování. To se dá snadno udělat pomocí Azure Portal. Vyberte App Service a posuňte se dolů na seznam nástrojů, dokud nedosáhnete **SSH** v části **vývojové nástroje** .
-* Pokud chcete pomoci při řešení potíží, přejděte do nastavení **diagnostické protokoly** pro App Service a změňte nastavení **protokolování kontejneru Docker** z možností **vypnuto** na **systém souborů**. Protokoly se vytvoří v kontejneru pod */home/LogFiles/*_docker. log * a přístup k nim se dá v poli použít přes SSH nebo FTP.
+* Pokud chcete pomoci při řešení potíží, přejděte do nastavení **diagnostické protokoly** pro App Service a změňte nastavení **protokolování kontejneru Docker** z možností **vypnuto** na **systém souborů**. Protokoly se vytvoří v kontejneru pod */home/LogFiles/* _docker. log * a přístup k nim se dá v poli použít přes SSH nebo FTP.
 * K lokalitě může být přiřazen vlastní název domény, nikoli adresa URL *. azurewebsites.net přiřazená ve výchozím nastavení. Další podrobnosti najdete v tématu [Mapování vlastní domény](/azure/app-service/app-service-web-tutorial-custom-domain).
 * Osvědčeným postupem je nasazení do přípravného webu pro další testování. Podrobnosti o tom, jak to nakonfigurovat, najdete v tématu [vytváření](/azure/app-service/web-sites-staged-publishing)přípravných prostředí.
 * Další Nejčastější dotazy najdete v tématu Nejčastější dotazy k [App Service v systému Linux](/azure/app-service/containers/app-service-linux-faq) .

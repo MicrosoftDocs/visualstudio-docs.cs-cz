@@ -8,15 +8,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.CodeLens
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 485287239a13f61d10ee39bad854a0f3bdae4f55
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 59df5a4b0b0c873de69c5e574ad5c2cccbc43567
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006702"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945874"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>Nalezení změn kódu a další historie pomocí CodeLensu
 
@@ -132,7 +132,7 @@ Váš tým může mít více větví, například hlavní větev a podřízenou 
 
 ![CodeLens: hledání změn v aktuální větvi](../ide/media/codelensfirstbranchconceptual.png)
 
-Stisknutím **kombinace kláves ALT** 6 zjistíte, kolik lidí změnilo váš kód a kolik změn bylo provedeno v hlavní větvi + **6**.
+Stisknutím **kombinace kláves ALT** 6 zjistíte, kolik lidí změnilo váš kód a kolik změn bylo provedeno v hlavní větvi + .
 
 ![CodeLens: najít počet změn ve větvi](../ide/media/codelens-branch-changes.png)
 
@@ -308,13 +308,13 @@ CodeLens nepodporuje nainstalovanou jinou verzi Lyncu nebo Skype. Nemusí být l
 
 ### <a name="q-how-do-i-change-the-font-and-color-for-codelens"></a>Otázka: Návody změnit písmo a barvu pro CodeLens?
 
-**A:** Přejít na **Tools**  >  **Možnosti nástroje Možnosti**  >  **prostředí**  >  **písma a barvy**.
+**A:** Přejít na   >  **Možnosti nástroje Možnosti**  >  **prostředí**  >  **písma a barvy**.
 
 ![CodeLens – Změna nastavení písma a barvy](../ide/media/codelensoptionsfontscolorssettings.png)
 
 Použití klávesnice:
 
-1. Stisknutím **kombinace kláves ALT +** + **r** + **O** otevřete dialogové okno **Možnosti** .
+1. Stisknutím **kombinace kláves ALT +** + **r** +  otevřete dialogové okno **Možnosti** .
 
 2. Stisknutím klávesy **šipka nahoru** nebo **šipka dolů** přejděte k uzlu **prostředí** a stisknutím klávesy **šipka vlevo** rozbalte uzel.
 

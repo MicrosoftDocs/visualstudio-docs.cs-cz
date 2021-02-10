@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 6857e9c6-e44a-468a-afa4-f7c4a0b77844
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0dce13e49eeadf4dc02fec07707bebcfe164ed9c
-ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
+ms.openlocfilehash: de29b012914ac9997a78674fd3215f2c15d43c6e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96606694"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945913"
 ---
 # <a name="launch-a-program"></a>Spustit program
 Uživatelé, kteří chtějí ladit program, mohou stisknout klávesu **F5** ke spuštění ladicího programu z integrovaného vývojového prostředí (IDE). Tím se spustí řada událostí, které nakonec mají za následek připojení rozhraní IDE k ladicímu stroji (DE), který je zase připojen nebo připojen k programu následujícím způsobem:

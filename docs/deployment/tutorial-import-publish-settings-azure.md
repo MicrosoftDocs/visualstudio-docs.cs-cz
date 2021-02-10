@@ -7,15 +7,15 @@ helpviewer_keywords:
 - deployment, publish settings
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d2c52d6db6ca3001712a692a1de059834c975ae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50a65d681693bd9c1421767d2cac47f65b685e6c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801708"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945042"
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>Publikování aplikace pro Azure App Service importem nastavení publikování v aplikaci Visual Studio
 
@@ -23,32 +23,32 @@ Pomocí nástroje **publikovat** můžete importovat nastavení publikování a 
 
 Tyto kroky platí pro aplikace ASP.NET, ASP.NET Core a .NET Core v aplikaci Visual Studio. Můžete také importovat nastavení publikování pro aplikace v [Pythonu](../python/publishing-python-web-applications-to-azure-from-visual-studio.md) .
 
-V tomto kurzu provedete následující:
+V tomto kurzu:
 
 > [!div class="checklist"]
 > * Vygenerujte soubor nastavení publikování z Azure App Service
 > * Import souboru nastavení publikování do sady Visual Studio
 > * Nasazení aplikace do Azure App Service
 
-Soubor nastavení publikování (* \* . publishsettings*) se liší od publikačního profilu (* \* . pubxml*) vytvořeného v aplikaci Visual Studio. Soubor nastavení publikování se vytvoří pomocí Azure App Service a pak ho můžete importovat do sady Visual Studio.
+Soubor nastavení publikování (*\* . publishsettings*) se liší od publikačního profilu (*\* . pubxml*) vytvořeného v aplikaci Visual Studio. Soubor nastavení publikování se vytvoří pomocí Azure App Service a pak ho můžete importovat do sady Visual Studio.
 
 > [!NOTE]
-> Pokud potřebujete kopírovat profil publikování sady Visual Studio (soubor* \* . pubxml* ) z jedné instalace sady Visual Studio na jiný, můžete najít profil publikování * \<profilename\> . pubxml*ve složce * \\<ProjectName \> \Properties\PublishProfiles* pro spravované typy projektů. Pro weby se podívejte do složky *\ App_Data* . Profily publikování jsou soubory XML MSBuild.
+> Pokud potřebujete kopírovat profil publikování sady Visual Studio (soubor *\* . pubxml* ) z jedné instalace sady Visual Studio na jiný, můžete najít profil publikování *\<profilename\> . pubxml* ve složce *\\<ProjectName \> \Properties\PublishProfiles* pro spravované typy projektů. Pro weby se podívejte do složky *\ App_Data* . Profily publikování jsou soubory XML MSBuild.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 ::: moniker range=">=vs-2019"
 
 * Musíte mít nainstalovanou aplikaci Visual Studio 2019 a úlohu **vývoje pro ASP.NET a web** .
 
-    Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/)   a nainstalujte si ji zdarma.
+    Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) a nainstalujte si ji zdarma.
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
 * Musíte mít nainstalovanou aplikaci Visual Studio 2017 a úlohu **vývoje pro ASP.NET a web** .
 
-    Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/)   a nainstalujte si ji zdarma.
+    Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) a nainstalujte si ji zdarma.
 ::: moniker-end
 
 * Vytvořte Azure App Service. Podrobné pokyny najdete v tématu [nasazení webové aplikace v ASP.NET Core do Azure pomocí sady Visual Studio](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs).
@@ -57,7 +57,7 @@ Soubor nastavení publikování (* \* . publishsettings*) se liší od publikač
 
 1. V počítači se sadou Visual Studio vytvořte nový projekt.
 
-    Vyberte správnou šablonu. V tomto příkladu zvolte buď **ASP.NET webová aplikace (.NET Framework)** , nebo (pouze pro C#) **ASP.NET Core webové aplikace**a pak vyberte **OK**.
+    Vyberte správnou šablonu. V tomto příkladu zvolte buď **ASP.NET webová aplikace (.NET Framework)** , nebo (pouze pro C#) **ASP.NET Core webové aplikace** a pak vyberte **OK**.
 
     Pokud se zadané šablony projektu nezobrazuje, přejděte na odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** . Spustí se instalační program pro Visual Studio. Nainstalujte úlohu **vývoje ASP.NET a webu** .
 

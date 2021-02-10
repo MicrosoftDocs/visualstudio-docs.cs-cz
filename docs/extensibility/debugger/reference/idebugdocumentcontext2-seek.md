@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 71501356-8a82-4d36-b354-6625bdd2baa0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 435bb2d5402be06a5fcb3ff9fc99a5c5cb8cb3ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5be12a180368e668e944e0df822d5be6189f6ae0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80731746"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946979"
 ---
 # <a name="idebugdocumentcontext2seek"></a>IDebugDocumentContext2::Seek
 Přesune kontext dokumentu podle zadaného počtu příkazů nebo řádků.
@@ -28,14 +28,14 @@ Přesune kontext dokumentu podle zadaného počtu příkazů nebo řádků.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT Seek( 
+HRESULT Seek( 
    int                      nCount,
    IDebugDocumentContext2** ppDocContext
 );
 ```
 
 ```cpp
-int Seek( 
+int Seek( 
    int                        nCount,
    out IDebugDocumentContext2 ppDocContext
 );

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4ca92d93-31b9-47ef-8109-4a429d9e2ca3
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c5d4cf36d722c260f52584b16557bcb8d7cda83c
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: bb088954833f42e35de6c8316e5553d0f9e3fc68
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006533"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945588"
 ---
 # <a name="manage-extensions-for-visual-studio"></a>Správa rozšíření pro Visual Studio
 
@@ -57,7 +57,7 @@ Rozšíření můžete nainstalovat z [Visual Studio Marketplace](https://market
 
 Instalace rozšíření z aplikace Visual Studio:
 
-1. V **Tools**  >  části **rozšíření a aktualizace** nástrojů Najděte rozšíření, které chcete nainstalovat. Pokud znáte název nebo část názvu rozšíření, můžete hledat v okně **hledání** .
+1. V   >  části **rozšíření a aktualizace** nástrojů Najděte rozšíření, které chcete nainstalovat. Pokud znáte název nebo část názvu rozšíření, můžete hledat v okně **hledání** .
 
 2. Vyberte **Stáhnout**.
 
@@ -67,7 +67,7 @@ Pokud se pokusíte nainstalovat rozšíření, která obsahuje závislosti, inst
 
 ### <a name="install-without-using-the-extensions-and-updates-dialog-box"></a>Instalace bez použití dialogového okna rozšíření a aktualizace
 
-Rozšíření, která byla zabalena v souborech *. vsix* , mohou být k dispozici v jiných umístěních než Visual Studio Marketplace. V **Tools**  >  dialogovém okně **rozšíření a aktualizace** nástrojů nelze tyto soubory rozpoznat, ale můžete nainstalovat soubor *. vsix* dvojitým kliknutím na soubor nebo vybráním souboru a stisknutím klávesy **ENTER**. Pak stačí postupovat podle pokynů. Po instalaci rozšíření můžete použít dialogové okno **rozšíření a aktualizace** k jeho povolení, jeho zakázání nebo odinstalaci.
+Rozšíření, která byla zabalena v souborech *. vsix* , mohou být k dispozici v jiných umístěních než Visual Studio Marketplace. V   >  dialogovém okně **rozšíření a aktualizace** nástrojů nelze tyto soubory rozpoznat, ale můžete nainstalovat soubor *. vsix* dvojitým kliknutím na soubor nebo vybráním souboru a stisknutím klávesy **ENTER**. Pak stačí postupovat podle pokynů. Po instalaci rozšíření můžete použít dialogové okno **rozšíření a aktualizace** k jeho povolení, jeho zakázání nebo odinstalaci.
 
 > [!NOTE]
 > - Visual Studio Marketplace obsahuje rozšíření VSIX i MSI. Dialogové okno rozšíření a aktualizace nemůže povolit ani zakázat rozšíření založená na MSI.
@@ -114,7 +114,7 @@ Chcete-li chránit systém proti rozšířením, která mohou obsahovat chyby ne
 
 Omezení načtení rozšíření pro jednotlivé uživatele:
 
-1. Otevřete stránku možnosti rozšíření (**nástroje**  >  **Možnosti**  >  **Environment**  >  **rozšíření** prostředí).
+1. Otevřete stránku možnosti rozšíření (**nástroje**  >  **Možnosti**  >    >  **rozšíření** prostředí).
 
 2. Zrušte zaškrtnutí políčka **načíst rozšíření pro jednotlivé uživatele při spuštění jako správce** .
 
@@ -128,7 +128,7 @@ Pokud chcete zakázat automatické aktualizace, můžete tuto funkci zakázat pr
 
 ::: moniker range="vs-2017"
 
-- Chcete-li zakázat automatické aktualizace pro všechna rozšíření, klikněte v **Tools** dialogovém okně rozšíření a aktualizace nástrojů na odkaz **změnit nastavení rozšíření a aktualizace**  >  **Extensions and Updates** . V dialogovém okně **Možnosti** zrušte možnost **automaticky aktualizovat rozšíření**.
+- Chcete-li zakázat automatické aktualizace pro všechna rozšíření, klikněte v dialogovém okně rozšíření a aktualizace nástrojů na odkaz **změnit nastavení rozšíření a aktualizace**  >   . V dialogovém okně **Možnosti** zrušte možnost **automaticky aktualizovat rozšíření**.
 
 - Chcete-li zakázat automatické aktualizace konkrétního rozšíření, zrušte v podokně podrobností rozšíření na pravé straně dialogového okna **rozšíření a aktualizace** možnost **automaticky aktualizovat tuto příponu** .
 
@@ -136,7 +136,7 @@ Pokud chcete zakázat automatické aktualizace, můžete tuto funkci zakázat pr
 
 ::: moniker range=">=vs-2019"
 
-- Chcete-li zakázat automatické aktualizace pro všechna rozšíření, klikněte na odkaz **změnit nastavení pro rozšíření** v **Extensions**  >  dialogovém okně rozšíření –**Spravovat rozšíření** . V dialogovém okně **Možnosti** zrušte možnost **automaticky aktualizovat rozšíření**.
+- Chcete-li zakázat automatické aktualizace pro všechna rozšíření, klikněte na odkaz **změnit nastavení pro rozšíření** v   >  dialogovém okně rozšíření –**Spravovat rozšíření** . V dialogovém okně **Možnosti** zrušte možnost **automaticky aktualizovat rozšíření**.
 
 - Chcete-li zakázat automatické aktualizace konkrétního rozšíření, zrušte v podokně podrobností rozšíření na pravé straně dialogového okna **Spravovat rozšíření** možnost **automaticky aktualizovat tuto příponu** .
 
@@ -152,7 +152,7 @@ Po zobrazení těchto oznámení můžete oznámení ignorovat nebo provést jed
 
 ::: moniker range="vs-2017"
 
-- Vyberte možnost **zakázat toto rozšíření**. Visual Studio zakáže rozšíření a umožní vám zjistit, jestli je potřeba restartovat systém, aby se zakazování projevilo. Pokud chcete, můžete rozšíření znovu povolit v **Tools**  >  dialogovém okně **rozšíření a aktualizace** nástrojů.
+- Vyberte možnost **zakázat toto rozšíření**. Visual Studio zakáže rozšíření a umožní vám zjistit, jestli je potřeba restartovat systém, aby se zakazování projevilo. Pokud chcete, můžete rozšíření znovu povolit v   >  dialogovém okně **rozšíření a aktualizace** nástrojů.
 
 ::: moniker-end
 
@@ -184,7 +184,7 @@ Při instalaci online ukázky je řešení uloženo na dvou místech:
 
 ::: moniker range="vs-2017"
 
-**Tools** > K provedení těchto úloh souvisejících s ukázkami můžete použít dialogové okno **rozšíření a aktualizace** nástroje:
+ > K provedení těchto úloh souvisejících s ukázkami můžete použít dialogové okno **rozšíření a aktualizace** nástroje:
 
 ::: moniker-end
 

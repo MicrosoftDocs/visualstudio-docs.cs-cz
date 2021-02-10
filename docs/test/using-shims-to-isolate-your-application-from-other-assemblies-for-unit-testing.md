@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 0ce89246d227d747fee2d3a02484855257f016f8
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 4bf43fa5dd3e95500b036d5ef5d65055b5d5870f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598208"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946277"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>Izolace vaší aplikace při testování částí pomocí překrytí
 
@@ -97,7 +97,7 @@ Je velmi důležité, aby každý kontext překrytí správně odstranil. Jako p
 
 ### <a name="write-a-test-with-shims"></a>Zápis testu s překrytím
 
-V testovacím kódu vložte pro metodu, kterou chcete naklonovat, *prohlídku* . Například:
+V testovacím kódu vložte pro metodu, kterou chcete naklonovat, *prohlídku* . Příklad:
 
 ```csharp
 [TestClass]

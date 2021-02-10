@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: d713635e-088f-465b-b26d-00ac971c9e86
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7cc194c43b0a95ad92e9421334be7af2cd6073b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fde4f0eea0d873a22bde5771bfce9afa247e524f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80731676"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946875"
 ---
 # <a name="idebugdocumentposition2getfilename"></a>IDebugDocumentPosition2::GetFileName
 Získá název souboru zdrojového souboru, který obsahuje umístění dokumentu.
@@ -28,13 +28,13 @@ Získá název souboru zdrojového souboru, který obsahuje umístění dokument
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetFileName( 
+HRESULT GetFileName( 
    BSTR* pbstrFileName
 );
 ```
 
 ```csharp
-int GetFileName( 
+int GetFileName( 
    out string pbstrFileName
 );
 ```

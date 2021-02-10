@@ -20,15 +20,15 @@ helpviewer_keywords:
 - software, modeling
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b79496e6762d798db14d7341e71129d5e510c1b0
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 9adf4445ca4b52e23fce91bb1f574e55fbab4f1d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363468"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945380"
 ---
 # <a name="create-models-for-your-app"></a>Vytváření modelů pro aplikaci
 
@@ -46,7 +46,7 @@ K vizualizaci architektury systému nebo existujícího kódu vytvořte následu
 
 ## <a name="related-tasks"></a>Související úlohy
 
-|**Téma**|**Úloha**|
+|**Téma**|**Úkol**|
 |-|-|
 |[Vizualizace kódu](../modeling/visualize-code.md)|Vytváření map kódu a diagramů závislostí pro lepší pochopení neznámého kódu.|
 |[Modelování uživatelských požadavků](../modeling/model-user-requirements.md)|Použijte modely k objasnění potřeb uživatelů a jejich sdělování.|

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Find/Command box
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 341362fe74d4d8a6edbf10afec1a0d49998e857d
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: e650acd4dabec3dd3c657a91e4258b1678918e61
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006598"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945666"
 ---
 # <a name="findcommand-box"></a>pole Najít/příkaz
 
@@ -36,7 +36,7 @@ Ve výchozím nastavení, když zadáte text do pole **Najít/příkaz** a pak z
 
 ## <a name="entering-commands"></a>Zadávání příkazů
 
-Chcete-li použít pole **Najít/příkaz** k vystavení jednoho [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] příkazu nebo aliasu místo hledání textu, představte příkaz symbolem větším než ( **>** ). Například:
+Chcete-li použít pole **Najít/příkaz** k vystavení jednoho [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] příkazu nebo aliasu místo hledání textu, představte příkaz symbolem větším než ( **>** ). Příklad:
 
 ```
 >File.NewFile c:\temp\MyFile /t:"General\Text File"
@@ -46,7 +46,7 @@ Alternativně můžete také použít okno **příkaz** k zadání a spuštění
 
 ## <a name="escape-characters"></a>Řídicí znaky
 
-Znak stříšky ( **^** ) v příkazu znamená, že znak bezprostředně za ním je interpretován doslova, nikoli jako řídicí znak. To lze použít k vložení přímých uvozovek (**"**), mezer, počátečních lomítek, znakových přepínačů nebo jiných literálových znaků v parametru nebo hodnotě přepínače s výjimkou názvů přepínačů. Například:
+Znak stříšky ( **^** ) v příkazu znamená, že znak bezprostředně za ním je interpretován doslova, nikoli jako řídicí znak. To lze použít k vložení přímých uvozovek (**"**), mezer, počátečních lomítek, znakových přepínačů nebo jiných literálových znaků v parametru nebo hodnotě přepínače s výjimkou názvů přepínačů. Příklad:
 
 ```
 >Edit.Find ^^t /regex

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f97104c8-2bcb-45c7-a3c9-85abeda8df98
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00afdc31e72e4b0336db19939955a0b2360a00a1
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 4ada5870bc06465b97bdf767eb64910f62e15f0a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974274"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944905"
 ---
 # <a name="create-an-extension-with-a-menu-command"></a>Vytvoření rozšíření pomocí příkazu nabídky
 
@@ -36,13 +36,13 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ::: moniker range="vs-2017"
 
-2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **FirstCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >  **Extensibility** a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstCommand.cs*.
+2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **FirstCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >   a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstCommand.cs*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **FirstCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na **Visual C#**  >  **rozšiřitelnost** jazyka Visual C# a vybrat **příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstCommand.cs*.
+2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **FirstCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na   >  **rozšiřitelnost** jazyka Visual C# a vybrat **příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstCommand.cs*.
 
 ::: moniker-end
 
@@ -52,7 +52,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ::: moniker range="vs-2017"
 
-4. V experimentální instanci otevřete **Tools**  >  okno **rozšíření a aktualizace** nástrojů. Tady byste měli vidět rozšíření **FirstMenuCommand** . (Pokud v pracovní instanci sady Visual Studio otevřete **rozšíření a aktualizace** , neuvidíte **FirstMenuCommand**).
+4. V experimentální instanci otevřete   >  okno **rozšíření a aktualizace** nástrojů. Tady byste měli vidět rozšíření **FirstMenuCommand** . (Pokud v pracovní instanci sady Visual Studio otevřete **rozšíření a aktualizace** , neuvidíte **FirstMenuCommand**).
 
 ::: moniker-end
 
@@ -131,7 +131,7 @@ Soubor *. vsix* pro toto rozšíření najdete v adresáři *FirstMenuCommand* b
 
 Chcete-li nainstalovat rozšíření, váš přítel potřebuje zavřít všechny otevřené instance aplikace Visual Studio a potom poklikejte na soubor *. vsix* , který spustí **instalační program VSIX**. Soubory se zkopírují do adresáře *\<version> \Extensions%localappdata%\Microsoft\VisualStudio* .
 
-Když váš přítel znovu vyvolá Visual Studio, nalezne rozšíření FirstMenuCommand v části **Tools**  >  **rozšíření a aktualizace** nástrojů. Můžou přejít na **rozšíření a aktualizace** pro odinstalaci nebo zakázání rozšíření.
+Když váš přítel znovu vyvolá Visual Studio, nalezne rozšíření FirstMenuCommand v části   >  **rozšíření a aktualizace** nástrojů. Můžou přejít na **rozšíření a aktualizace** pro odinstalaci nebo zakázání rozšíření.
 
 ## <a name="next-steps"></a>Další kroky
 

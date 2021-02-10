@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d3dac454-518a-44d7-a76e-ccb7b9c3a150
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d2e8b49f833b5dd91dc6379d2a015d41a9679afe
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 23174667827e63afb93d82679a51d65512731710
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349773"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946069"
 ---
 # <a name="how-to-set-a-security-zone-for-a-clickonce-application"></a>Postupy: nastavení zóny zabezpečení pro aplikaci ClickOnce
 Při nastavování oprávnění zabezpečení přístupu kódu pro aplikaci ClickOnce musíte začít se základní sadou oprávnění na stránce **zabezpečení** **Návrháře projektu**.
@@ -32,7 +32,7 @@ Při nastavování oprávnění zabezpečení přístupu kódu pro aplikaci Clic
 
 ### <a name="to-set-a-security-zone"></a>Nastavení zóny zabezpečení
 
-1. Když je vybrán projekt v **Průzkumník řešení** , v nabídce **projekt** klikněte na **vlastnosti**.
+1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Klikněte na kartu **Zabezpečení**.
 

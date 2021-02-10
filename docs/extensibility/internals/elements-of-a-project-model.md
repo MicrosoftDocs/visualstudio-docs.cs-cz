@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a1dbe0dc-68da-45d7-8704-5b43ff7e4fc4
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e366b2923d5903f00241db0a6b71017dc25f3dee
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: f786ae8e0725c7c1b6f0683a779a65f015ac2a75
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480041"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946745"
 ---
 # <a name="elements-of-a-project-model"></a>Prvky modelu projektu
 Rozhraní a implementace všech projektů v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rámci sdílí základní strukturu: projektový model pro typ projektu. V modelu projektu, který je VSPackage, který vyvíjíte, vytváříte objekty, které vyhovují vašim rozhodnutím o návrhu a pracují společně s globálními funkcemi poskytovanými IDE. I když máte kontrolu nad tím, jak je položka projektu trvalá, například neřídíte oznámení, že soubor musí být trvalý. Když uživatel umístí fokus na otevřenou položku projektu a klikne na tlačítko **Uložit** v nabídce **soubor** na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] řádku nabídek, kód typu projektu musí zachytit příkaz z integrovaného vývojového prostředí, zachovat soubor a odeslat oznámení zpět do integrovaného vývojového prostředí, že soubor již není změněn.

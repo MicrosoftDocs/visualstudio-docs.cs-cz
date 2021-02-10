@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Office development in Visual Studio, additional resources
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 828cd2c451e531eeecda7574b5750bc3bb7023b2
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: dd1b1862d3215698ee17ed152bba6d4d569667ce
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844813"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945068"
 ---
 # <a name="additional-resources-to-develop-office-solutions"></a>Další zdroje informací pro vývoj řešení pro systém Office
   Nástroje systém Microsoft Office Developer Tools v sadě Visual Studio představují pouze jeden z mnoha způsobů, jak aplikace Office rozšíří. Aplikace Office mají také některé integrované funkce, jako jsou Open XML formats, které nepokrývá sada Office Developer Tools v sadě Visual Studio ani tato dokumentace.

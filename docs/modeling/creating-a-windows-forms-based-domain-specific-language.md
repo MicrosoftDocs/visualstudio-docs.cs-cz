@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e4c712eed732830da4bc1b158c8ad53a65a45d8
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 41c3ba299df1e6f9ce0e2848f7ffad59e5b3fbea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100450"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945406"
 ---
-# <a name="create-a-windows-forms-based-domain-specific-language"></a>Vytvoření jazyka specifického pro doménu založeného na model Windows Forms
+# <a name="create-a-windows-forms-based-domain-specific-language"></a>Vytvoření jazyka Domain-Specific založeného na model Windows Forms
 
 Model Windows Forms můžete použít k zobrazení stavu modelu DSL (Domain-Specific Language) namísto použití diagramu DSL. Toto téma vás provede vazbou formuláře Windows na DSL pomocí vizualizace a modelování sady Visual Studio.
 
@@ -33,7 +33,7 @@ Následující obrázek ukazuje uživatelské rozhraní formuláře Windows a Pr
     V tomto návodu se předpokládají následující názvy:
 
     - Název řešení a DSL: `FarmApp`
-    - Hosting `Company.FarmApp`
+    - Obor názvů: `Company.FarmApp`
 
 2. Experimentujte s úvodním příkladem, který šablona poskytuje:
 
@@ -61,7 +61,7 @@ Následující obrázek ukazuje uživatelské rozhraní formuláře Windows a Pr
 
   - Model Windows Forms třídy s názvem `ModelViewControl` .
 
-  - Soubor s názvem `DataBinding.cs` , který obsahuje další částečnou definici `ModelViewControl` . Chcete-li zobrazit jeho obsah, v **Průzkumník řešení**otevřete místní nabídku souboru a vyberte možnost **Zobrazit kód**.
+  - Soubor s názvem `DataBinding.cs` , který obsahuje další částečnou definici `ModelViewControl` . Chcete-li zobrazit jeho obsah, v **Průzkumník řešení** otevřete místní nabídku souboru a vyberte možnost **Zobrazit kód**.
 
 ### <a name="about-the-ui-project"></a>O projektu uživatelského rozhraní
 
@@ -79,10 +79,10 @@ Následující obrázek je definice DSL použitá v tomto návodu.
 
 3. Přejmenujte doménovou třídu **ExampleModel** na `Farm` .
 
-     Poskytněte dodatečné doménové vlastnosti s názvem `Size` **Int32**a `IsOrganic` typu **Boolean**.
+     Poskytněte dodatečné doménové vlastnosti s názvem `Size` **Int32** a `IsOrganic` typu **Boolean**.
 
     > [!NOTE]
-    > Pokud odstraníte kořenovou třídu domény a pak vytvoříte nový kořenový adresář, budete muset resetovat vlastnost kořenové třídy editoru. V **Průzkumníku DSL**vyberte **Editor**. Poté v okno Vlastnosti nastavte **kořenovou třídu** na `Farm` .
+    > Pokud odstraníte kořenovou třídu domény a pak vytvoříte nový kořenový adresář, budete muset resetovat vlastnost kořenové třídy editoru. V **Průzkumníku DSL** vyberte **Editor**. Poté v okno Vlastnosti nastavte **kořenovou třídu** na `Farm` .
 
 4. Pomocí nástroje **pojmenované doménové třídy** vytvořte následující doménové třídy:
 
@@ -123,7 +123,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
 2. Vyberte **objekt**, **Další**.
 
-     Rozbalte **DSL**, **Company. FarmApp**a vyberte **farmu**, která je kořenovou třídou vašeho modelu. Klikněte na tlačítko **Dokončit**.
+     Rozbalte **DSL**, **Company. FarmApp** a vyberte **farmu**, která je kořenovou třídou vašeho modelu. Klikněte na tlačítko **Dokončit**.
 
      V Průzkumník řešení projekt **uživatelského rozhraní** nyní obsahuje **Properties\DataSources\Farm.DataSource**
 
@@ -137,7 +137,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
 2. Přidejte nový soubor **uživatelského ovládacího prvku** s názvem `FarmControl` do projektu **uživatelského rozhraní** .
 
-3. V okně **zdroje dat** vyberte v rozevírací nabídce v části **farma**možnost **Podrobnosti**.
+3. V okně **zdroje dat** vyberte v rozevírací nabídce v části **farma** možnost **Podrobnosti**.
 
     Pro ostatní vlastnosti ponechte výchozí nastavení.
 
@@ -149,14 +149,14 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
 5. Odstraňte **farmBindingNavigator**. To je také automaticky vygenerováno v `FarmControl` Návrháři, ale není vhodné pro tuto aplikaci.
 
-6. Pomocí panelu nástrojů vytvořte dvě instance **ovládacího prvku DataGridView**a pojmenujte `AnimalGridView` je `FieldGridView` a.
+6. Pomocí panelu nástrojů vytvořte dvě instance **ovládacího prvku DataGridView** a pojmenujte `AnimalGridView` je `FieldGridView` a.
 
    > [!NOTE]
    > Alternativním krokem je přetahování položek zvířat a polí z okna zdroje dat do ovládacího prvku. Tato akce automaticky vytvoří datovou mřížku a vazby mezi zobrazením mřížky a zdrojem dat. Tato vazba však pro DSL správně nefunguje. Proto je lepší vytvořit datovou mřížku a vazby ručně.
 
 7. Pokud sada nástrojů neobsahuje nástroj **ModelingBindingSource** , přidejte ji. V místní nabídce na kartě **data** vyberte **možnost zvolit položky**. V dialogovém okně **zvolit položky sady nástrojů** vyberte na kartě **.NET Framework** možnost **ModelingBindingSource** .
 
-8. Pomocí panelu nástrojů vytvořte dvě instance **ModelingBindingSource**a pojmenujte je `AnimalBinding` a `FieldBinding` .
+8. Pomocí panelu nástrojů vytvořte dvě instance **ModelingBindingSource** a pojmenujte je `AnimalBinding` a `FieldBinding` .
 
 9. Nastavte vlastnost **DataSource** každého **ModelingBindingSource** na **farmBindingSource**.
 
@@ -220,7 +220,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
 2. V experimentální instanci aplikace Visual Studio otevřete **vzorový** soubor.
 
-3. V **Průzkumníku FarmApp**otevřete místní nabídku na kořenovém uzlu **farmy** a vyberte možnost **Přidat novou kozy**.
+3. V **Průzkumníku FarmApp** otevřete místní nabídku na kořenovém uzlu **farmy** a vyberte možnost **Přidat novou kozy**.
 
      `Goat1` zobrazí se v zobrazení **zvířata** .
 
@@ -241,7 +241,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
 2. V okno Vlastnosti rozbalte položku **DataBindings** a otevřete **(rozšířené)**.
 
-     V dialogu **formátování a rozšířené vazby** klikněte v části **režim aktualizace zdroje dat**na možnost **přepropertychanged**.
+     V dialogu **formátování a rozšířené vazby** klikněte v části **režim aktualizace zdroje dat** na možnost **přepropertychanged**.
 
 3. Sestavte a spusťte řešení.
 
@@ -325,6 +325,6 @@ Proto doporučujeme použít <xref:Microsoft.VisualStudio.Modeling.ElementOperat
 
 ## <a name="see-also"></a>Viz také
 
-- [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
-- [Napsání kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [Definování Domain-Specific jazyka](../modeling/how-to-define-a-domain-specific-language.md)
+- [Napsání kódu pro přizpůsobení Domain-Specificho jazyka](../modeling/writing-code-to-customise-a-domain-specific-language.md)
 - [Sada Modeling SDK pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)

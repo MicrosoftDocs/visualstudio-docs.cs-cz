@@ -11,15 +11,15 @@ helpviewer_keywords:
 - go to
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e3e000224fc09810e15ba3cdbdc4be729139eaaa
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 257db632c095027d9fa4be667a30e809ecb2fff4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597532"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946615"
 ---
 # <a name="find-code-using-go-to-commands"></a>Vyhledání kódu pomocí příkazu Přejít
 
@@ -54,7 +54,7 @@ Ve výchozím nastavení je zadaná položka prohledána ve všech položkách �
 
 Chcete-li zúžit hledání na konkrétní typ prvku kódu, můžete buď zadat předponu do vyhledávacího pole, nebo vybrat jednu z pěti ikon filtru:
 
-Předpona | Ikona | Zástupce | Popis
+Předpona | Ikona | Zástupce | Description
 :-: | - | - | -
 :| ![Ikona čáry](media/gotoall-line-icon.png) | **CTRL** + **G** | Přejít na zadané číslo řádku
 f| ![Ikona souborů](media/gotoall-files-icon.png) | **CTRL** + **1**, **CTRL** + **F** | Přejít na zadaný soubor
@@ -67,7 +67,7 @@ m| ![Ikona členů](media/gotoall-members-icon.png) | **CTRL** + **1**, **CTRL**
 
 Chcete-li zúžit hledání na konkrétní umístění, vyberte jednu ze dvou ikon dokumentu:
 
-Ikona | Popis
+Ikona | Description
 ---- | ---
 ![Aktuální dokument](media/gotoall_currentdocument.png) | Hledat pouze aktuální dokument
 ![Externí dokumenty](media/gotoall_external.png) | Hledání externích dokumentů kromě těch, které se nacházejí v projektu nebo řešení
