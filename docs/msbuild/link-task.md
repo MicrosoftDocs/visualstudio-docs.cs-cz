@@ -29,19 +29,19 @@ helpviewer_keywords:
 ms.assetid: 0a61f168-3113-4fa7-83a3-d9142e2a33f8
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 160d4fa3a1058e0cb81e5d25720d9194d90fdc39
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 99e545cc4ae6a037816fd727d63fce16d3626484
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904065"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966315"
 ---
 # <a name="link-task"></a>odkaz – úloha
 
-Zabalí nástroj linkeru Microsoft C++, *link.exe* . Nástroj Linker propojuje soubory objektů a knihoven Common Object File Format (COFF) a vytvoří spustitelný soubor ( *. exe* ) nebo dynamickou knihovnu (DLL). Další informace naleznete v tématech [Možnosti linkeru](/cpp/build/reference/linker-options) a [použití nástroje MSBuild z příkazového řádku](/cpp/build/msbuild-visual-cpp) a [použití sady nástrojů Microsoft C++ z příkazového řádku](/cpp/build/building-on-the-command-line).
+Zabalí nástroj linkeru Microsoft C++, *link.exe*. Nástroj Linker propojuje soubory objektů a knihoven Common Object File Format (COFF) a vytvoří spustitelný soubor (*. exe*) nebo dynamickou knihovnu (DLL). Další informace naleznete v tématech [Možnosti linkeru](/cpp/build/reference/linker-options) a [použití nástroje MSBuild z příkazového řádku](/cpp/build/msbuild-visual-cpp) a [použití sady nástrojů Microsoft C++ z příkazového řádku](/cpp/build/building-on-the-command-line).
 
 ## <a name="parameters"></a>Parametry
 
@@ -245,7 +245,7 @@ Zabalí nástroj linkeru Microsoft C++, *link.exe* . Nástroj Linker propojuje s
 
   - **Ovladač**  -  **/Driver**
 
-  - Jen pro navýšení **UpOnly**  -  **/Driver: pouze NEjenom**
+  - Jen pro navýšení   -  **/Driver: pouze NEjenom**
 
   - **WDM**  -  **/Driver: WDM**
 
@@ -343,7 +343,7 @@ Zabalí nástroj linkeru Microsoft C++, *link.exe* . Nástroj Linker propojuje s
 
   Volitelný **logický** parametr.
 
-  Pokud `true` , vytvoří *soubor mapy* . Přípona názvu souboru souboru mapy je *. map* .
+  Pokud `true` , vytvoří *soubor mapy*. Přípona názvu souboru souboru mapy je *. map*.
 
   Další informace najdete v tématu [/map (Generate souboru mapování)](/cpp/build/reference/map-generate-mapfile).
 
@@ -607,7 +607,7 @@ Zabalí nástroj linkeru Microsoft C++, *link.exe* . Nástroj Linker propojuje s
 
   Volitelný **logický** parametr.
 
-  Pokud `true` je povolený výstup a je zapnutý, vynutí **HKEY_CLASSES_ROOT** k přesměrování zápisy registru do **HKEY_CURRENT_USER** .
+  Pokud `true` je povolený výstup a je zapnutý, vynutí **HKEY_CLASSES_ROOT** k přesměrování zápisy registru do **HKEY_CURRENT_USER**.
 
 - **PreprocessOutput**
 
@@ -701,7 +701,7 @@ Zabalí nástroj linkeru Microsoft C++, *link.exe* . Nástroj Linker propojuje s
 
   Další informace najdete v tématu [/verbose (Tisk zpráv o průběhu)](/cpp/build/reference/verbose-print-progress-messages).
 
-- **Prostředky**
+- **zdroje**
 
   Požadovaný parametr `ITaskItem[]`.
 

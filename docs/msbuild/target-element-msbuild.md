@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 350f6fc2-86b3-45f2-a31e-ece0e6bd4dca
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 16b8533bed128199a4eb0b6e7171ed9c674d62f4
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 231ffd185eaf06fb91a709631082c2b68db372ef
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93048049"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966120"
 ---
 # <a name="target-element-msbuild"></a>Target – element (MSBuild)
 
@@ -76,7 +76,7 @@ Obsahuje sadu úloh, které má nástroj MSBuild spustit sekvenčně.
 
 | Element | Popis |
 | - | - |
-| [Úloha](../msbuild/task-element-msbuild.md) | Vytvoří a spustí instanci úlohy MSBuild. V cíli může být nula nebo více úkolů. |
+| [Úkol](../msbuild/task-element-msbuild.md) | Vytvoří a spustí instanci úlohy MSBuild. V cíli může být nula nebo více úkolů. |
 | [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) | Obsahuje sadu uživatelsky definovaných `Property` prvků. Počínaje .NET Framework 3,5 `Target` prvek může obsahovat `PropertyGroup` elementy. |
 | [ItemGroup](../msbuild/itemgroup-element-msbuild.md) | Obsahuje sadu uživatelsky definovaných `Item` prvků. Počínaje .NET Framework 3,5 `Target` prvek může obsahovat `ItemGroup` elementy. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md). |
 | [OnError](../msbuild/onerror-element-msbuild.md) | Způsobí, že jeden nebo více cílů bude spuštěno, pokud `ContinueOnError` je atribut ErrorAndStop (nebo `false` ) pro neúspěšnou úlohu. V cíli může být nula nebo více `OnError` prvků. Pokud `OnError` jsou prvky přítomny, musí se jednat o poslední prvky v `Target` elementu.<br /><br /> Informace o atributu naleznete `ContinueOnError` v tématu [element Task (MSBuild)](../msbuild/task-element-msbuild.md). |

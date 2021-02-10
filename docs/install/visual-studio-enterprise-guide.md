@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 56a6142d7217d6afa7d48ea708c642a32d8cb3c8
-ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
+ms.openlocfilehash: e653d7ae5f2408fd8438cbdf69a28648c6bcc446
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90713435"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99967108"
 ---
 # <a name="visual-studio-enterprise-guide"></a>Příručka pro Visual Studio Enterprise
 Pokud chcete ušetřit čas během vaší společnosti, která běží na Visual Studiu, začněte tady. Tato podniková příručka obsahuje tipy, které vám pomohou při instalaci a aktualizaci sady Visual Studio v běžných podnikových scénářích, odblokování, pokud dojde k problémům, a Naučte se, jak ohlásit problém, pokud potřebujete další pomoc. 
@@ -61,7 +61,7 @@ Přečtěte si, jak úspěšně aktualizovat Visual Studio a opravit problémy s
 
 - **[Aktualizujte si Visual Studio pomocí minimálního offline rozložení](update-minimal-layout.md)**. Pro počítače, které nejsou připojené k Internetu, je vytvoření minimálního rozložení nejjednodušší a nejrychlejší způsob aktualizace offline instancí sady Visual Studio.
 
-- ** [Opravte Visual Studio](repair-visual-studio.md) a opravte problémy s aktualizací**. V některých případech se vaše instalace sady Visual Studio stane poškozená nebo poškozená. Oprava je užitečná pro opravy potíží při instalaci mezi všemi operacemi instalace, včetně aktualizací. 
+- **[Opravte Visual Studio](repair-visual-studio.md) a opravte problémy s aktualizací**. V některých případech se vaše instalace sady Visual Studio stane poškozená nebo poškozená. Oprava je užitečná pro opravy potíží při instalaci mezi všemi operacemi instalace, včetně aktualizací. 
 
 - **Sledujte [základní hodnoty zabezpečení systému Windows](/windows/security/threat-protection/windows-security-baselines)**. Společnost Microsoft se věnuje poskytování zabezpečených operačních systémů, jako jsou Windows 10 a Windows Server, a zabezpečené aplikace, jako je Microsoft Edge. Kromě bezpečnostní záruky svých produktů vám společnost Microsoft taky umožňuje mít přesnou kontrolu nad vašimi prostředími, a to díky různým možnostem konfigurace. 
 

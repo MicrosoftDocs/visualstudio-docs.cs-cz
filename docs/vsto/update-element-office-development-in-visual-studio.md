@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <update> element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 241bddb8c79a01bb1ba6921486a4dc46d99940cc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5712be9e12ede3338856955e00a34a7565d733ee
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537381"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968759"
 ---
 # <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;Update – &gt; element (vývoj pro Office v sadě Visual Studio)
   `update`Prvek určuje interval, ve kterém bude řešení vyhledávat aktualizace.
@@ -59,7 +59,7 @@ ms.locfileid: "85537381"
 
 ## <a name="example-of-always-checking-for-updates"></a>Příklad vždycky se zjišťováním aktualizací
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
  Následující příklad kódu ukazuje `update` prvek, který je nastaven tak, aby vždy kontroloval aktualizace v řešeních pro systém Office.
 
 ### <a name="code"></a>Kód
@@ -70,7 +70,7 @@ ms.locfileid: "85537381"
 
 ## <a name="example-of-setting-a-default-update-interval"></a>Příklad nastavení výchozího intervalu aktualizace
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
  Následující příklad kódu ukazuje `update` prvek v manifestu aplikace pro řešení Office. Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

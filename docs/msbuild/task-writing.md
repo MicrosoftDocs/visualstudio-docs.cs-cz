@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3ebc5f87-8f00-46fc-82a1-228f35a6823b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b614fd1705491e676bb89a9527c75cf86bdd36c
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 9f13d561cba0482e15f065e66200b51c8b77ddfd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047921"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966016"
 ---
 # <a name="task-writing"></a>Zápis úloh
 
@@ -102,7 +102,7 @@ namespace MyTasks
  Soubor MSBuild *Microsoft. Common. Tasks* je soubor projektu, který obsahuje seznam `UsingTask` prvků, které registrují všechny úkoly, které jsou součástí nástroje MSBuild. Tento soubor je automaticky zahrnut při sestavování všech projektů. Pokud úkol, který je zaregistrován v *Microsoft. Common. Tasks* , je zaregistrován také v aktuálním souboru projektu, aktuální soubor projektu má přednost. To znamená, že můžete přepsat výchozí úkol vlastní úlohou, která má stejný název.
 
 > [!TIP]
-> Seznam úkolů, které se dodávají s nástrojem MSBuild, můžete zobrazit zobrazením obsahu *Microsoft. Common. Tasks* .
+> Seznam úkolů, které se dodávají s nástrojem MSBuild, můžete zobrazit zobrazením obsahu *Microsoft. Common. Tasks*.
 
 ## <a name="raise-events-from-a-task"></a>Vyvolání událostí z úkolu
 

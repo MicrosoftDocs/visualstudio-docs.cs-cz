@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 65bde46ef959e0d005c9ab90ef8d2807ed240571
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: bd7f47466074536c9088840e726f768f62f9346b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047647"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965925"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>Aktualizace existující aplikace pro MSBuild 15
 
@@ -24,7 +24,7 @@ V rámci podpory rychlejší, menší a souběžné instalace sady Visual Studio
 
 ## <a name="use-msbuild-from-visual-studio"></a>Použití nástroje MSBuild ze sady Visual Studio
 
-Aby se programová sestavení z vaší aplikace shodovala s sestaveními provedenými v sadě Visual Studio nebo *MSBuild.exe* , načítat sestavení nástroje MSBuild ze sady Visual Studio a používat sady SDK dostupné v sadě Visual Studio. Tento proces zjednodušuje balíček NuGet Microsoft. Build. Locator.
+Aby se programová sestavení z vaší aplikace shodovala s sestaveními provedenými v sadě Visual Studio nebo *MSBuild.exe*, načítat sestavení nástroje MSBuild ze sady Visual Studio a používat sady SDK dostupné v sadě Visual Studio. Tento proces zjednodušuje balíček NuGet Microsoft. Build. Locator.
 
 ## <a name="use-microsoftbuildlocator"></a>Použití Microsoft. Build. Locator
 
@@ -71,7 +71,7 @@ Vytvořte odkaz na balíček Microsoft. Build. Locator, abyste zajistili, že va
 
 ### <a name="ensure-output-is-clean"></a>Zajistěte, aby byl výstup čistý.
 
-Sestavte projekt a zkontrolujte výstupní adresář, abyste se ujistili, že neobsahuje žádné *Microsoft. Build. \* .* v dalším kroku jsou přidána jiná sestavení knihovny DLL než *Microsoft.Build.Locator.dll* .
+Sestavte projekt a zkontrolujte výstupní adresář, abyste se ujistili, že neobsahuje žádné *Microsoft. Build. \* .* v dalším kroku jsou přidána jiná sestavení knihovny DLL než *Microsoft.Build.Locator.dll*.
 
 ### <a name="add-package-reference-for-microsoftbuildlocator"></a>Přidat odkaz na balíček pro Microsoft. Build. Locator
 

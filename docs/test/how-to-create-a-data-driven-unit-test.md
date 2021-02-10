@@ -12,16 +12,16 @@ helpviewer_keywords:
 - unit tests, data-driven
 - data-driven unit tests
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 31e1fb08d77992e6fb592e286553196928b13ad4
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 94dcc3aed8d41f9ece0f9b51410fc749330b01df
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441193"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966692"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>Postupy: vytvoření testu jednotek řízených daty
 
@@ -69,7 +69,7 @@ public int AddIntegers(int first, int second)
 
 Chcete-li otestovat `AddIntegers` metodu, vytvořte zdroj dat, který určuje rozsah hodnot pro parametry a součet, který chcete vrátit. V tomto příkladu vytvoříme databázi SQL Compact s názvem `MathsData` a tabulku s názvem `AddIntegersData` , která obsahuje následující názvy a hodnoty sloupců.
 
-|Prvníčíslo|Druhéčíslo|Součet|
+|Prvníčíslo|Druhéčíslo|Sum|
 |-|------------------|-|
 |0|1|1|
 |1|1|2|

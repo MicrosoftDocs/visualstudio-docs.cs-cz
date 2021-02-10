@@ -11,22 +11,22 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fc1da67206e5e5c9fde1b5c595424239d1685ac7
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 72938f316be22cd9b2eab2d7dab893c9370fb0ad
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96304394"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965847"
 ---
 # <a name="how-to-set-sharepoint-deployment-commands"></a>Postupy: nastavení příkazů nasazení služby SharePoint
   Proces nasazení můžete přizpůsobit nastavením příkazů před nasazením a po nasazení. Tyto příkazy se spouští před a po dalších akcích nasazení při ladění řešení služby SharePoint ze sady Visual Studio.
 
 ### <a name="to-add-a-pre-deployment-command"></a>Přidání příkazu před nasazením
 
-1. Na panelu nabídek vyberte **Project**  >  **\<*ProjectName*> vlastnosti** projektu.
+1. Na panelu nabídek vyberte   >  **\<*ProjectName*> vlastnosti** projektu.
 
 2. Vyberte kartu **služby SharePoint** .
 
@@ -36,7 +36,7 @@ ms.locfileid: "96304394"
 
 ### <a name="to-add-a-post-deployment-command"></a>Přidání příkazu po nasazení
 
-1. Na panelu nabídek vyberte **Project**  >  **\<*ProjectName*> vlastnosti** projektu.
+1. Na panelu nabídek vyberte   >  **\<*ProjectName*> vlastnosti** projektu.
 
 2. Vyberte kartu **služby SharePoint** .
 

@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 7028d440-d16d-4b08-9b94-eb8cc93b25fc
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 15efb14d2cee36e5f2a8559c3ffa3844251aa982
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 57a273d994e6b8a4b34a139ab98713cc8c6cd83b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994430"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968122"
 ---
 # <a name="get-service-information-from-the-settings-store"></a>Získat informace o službě z úložiště nastavení
 Úložiště nastavení můžete použít k vyhledání všech dostupných služeb nebo k určení, jestli je konkrétní služba nainstalovaná. Musíte znát typ třídy služby.

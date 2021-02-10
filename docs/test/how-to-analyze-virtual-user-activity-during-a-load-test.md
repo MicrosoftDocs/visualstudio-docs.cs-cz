@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 8bda19b3-91c1-4daf-b6c7-09108bddadff
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: 353a38c17cdcd3358376547155750914e406f4be
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+manager: jmartens
+ms.openlocfilehash: 33bb1d3ed7d2deb891556f2091c6c389bc1b03c5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442388"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966913"
 ---
 # <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>Postupy: Analýza činnosti virtuálních uživatelů během zátěžového testu pomocí grafu aktivity virtuálního uživatele
 
@@ -35,7 +35,7 @@ Níže uvedené postupy ukazují, jak zobrazit **graf aktivity virtuálního už
 
      Otevřete zobrazení grafů tak, že na panelu nástrojů vyberete tlačítko **grafy** . Klikněte pravým tlačítkem na graf a vyberte **Přejít k podrobnostem o uživateli**.
 
-     Pokud použijete tuto možnost, **graf aktivity virtuálního uživatele** se automaticky přiblíží k části testu, na kterou jste klepli pravým tlačítkem. Pokud je například ukazatel na pozici přibližně 30 sekund, zobrazí se v dolní části **grafu aktivity virtuálního uživatele** v zobrazení podrobností přibližně 30 sekundová značka. **Zoom to time period**
+     Pokud použijete tuto možnost, **graf aktivity virtuálního uživatele** se automaticky přiblíží k části testu, na kterou jste klepli pravým tlačítkem. Pokud je například ukazatel na pozici přibližně 30 sekund, zobrazí se v dolní části **grafu aktivity virtuálního uživatele** v zobrazení podrobností přibližně 30 sekundová značka. 
 
      Dále můžete v **grafu aktivity virtuálního uživatele** použít možnost prozkoumat podrobnosti o aktivitě konkrétního uživatele.
 

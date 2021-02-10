@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ProjectOutputFile element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ffe6f95bdfd7795c837aaaa25ec7ef2a35a7ae76
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: a3b5a0f6474231fdc8f7617040ec4aa57056d9c0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442025"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966952"
 ---
 # <a name="projectoutputfile-element"></a>ProjectOutputFile – element
   Představuje výstup samostatného projektu, který má být zahrnut do položky projektu při nasazení do služby SharePoint.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectOutputFile ProjectId = "GUID of the project"
@@ -45,7 +45,7 @@ ms.locfileid: "95442025"
 |---------------|-----------------|
 |**ProjectId.**|Požadován atribut **xs: String** .<br /><br /> Identifikátor GUID závislého projektu, který obsahuje výstup, který chcete zahrnout. To odpovídá prvku **ProjectGuid** v souboru závislého projektu.|
 |**ProjectPath**|Požadován atribut **xs: String** .<br /><br /> Relativní cesta, včetně názvu souboru projektu, závislého projektu, který má výstup, který chcete zahrnout. Tato cesta je relativní vzhledem ke kořenové složce projektu služby SharePoint, který obsahuje položku SharePointového projektu.|
-|**Cílové**|Volitelný atribut **xs: String** .<br /><br /> Cesta, kam má být na SharePointovém serveru nasazený výstup závislého projektu, je relativní vzhledem ke kořenové složce nasazení. Kořenová složka nasazení je určena typem nasazení určeným atributem **Type** .<br /><br /> Další informace naleznete v popisech pro **cestu nasazení** a kořenové vlastnosti **nasazení** položek projektu služby SharePoint v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
+|**Cíl**|Volitelný atribut **xs: String** .<br /><br /> Cesta, kam má být na SharePointovém serveru nasazený výstup závislého projektu, je relativní vzhledem ke kořenové složce nasazení. Kořenová složka nasazení je určena typem nasazení určeným atributem **Type** .<br /><br /> Další informace naleznete v popisech pro **cestu nasazení** a kořenové vlastnosti **nasazení** položek projektu služby SharePoint v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
 |**Typ**|Požadován atribut **xs: String** .<br /><br /> Typ nasazení, který má být použit pro výstup závislého projektu. Další informace o možných hodnotách naleznete v popisu vlastnosti **typ nasazení** položek projektu služby SharePoint v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
@@ -64,7 +64,7 @@ ms.locfileid: "95442025"
 
 |Vlastnost|Hodnota|
 |-|-|
-|**Hosting**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**Název schématu**|Schéma položek projektu služby SharePoint|
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|

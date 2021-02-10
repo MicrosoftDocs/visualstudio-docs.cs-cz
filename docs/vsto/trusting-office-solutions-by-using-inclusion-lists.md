@@ -14,15 +14,15 @@ helpviewer_keywords:
 - inclusion lists [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3bb5c111b4c75298ee55bc64dfbb2d0dd4b6c8b5
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 9a084ad152f178b4dd03e986eb06718b0fb47c98
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527465"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968798"
 ---
 # <a name="trust-office-solutions-by-using-inclusion-lists"></a>Důvěryhodná řešení pro Office pomocí seznamů zahrnutí
   Seznamy zahrnutí umožňují uživatelům udělit vztah důvěryhodnosti k řešením Office, která jsou podepsaná certifikátem, který identifikuje vydavatele. Seznamy zahrnutí jsou specifické pro uživatele a dají se použít pro přizpůsobení na úrovni dokumentu a doplňky VSTO.

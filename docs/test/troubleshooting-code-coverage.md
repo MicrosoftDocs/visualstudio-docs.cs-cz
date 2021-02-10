@@ -5,16 +5,16 @@ ms.custom: SEO-VS-2020
 ms.date: 03/31/2020
 ms.topic: troubleshooting
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 7e960e0729e7d13b27d0c4fbda9b3f8eca0ac57c
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: d99dcc3a141bc3734c5c356601d0e1e7474f06a7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330118"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99967966"
 ---
 # <a name="troubleshoot-code-coverage"></a>Řešení problémů s pokrytím kódu
 
@@ -65,7 +65,7 @@ Soubor *. pdb* musí být vygenerován ze stejného sestavení jako soubory *. d
 
 Řešení se &mdash; ujistěte, že vaše nastavení sestavení generuje soubor *. pdb* . Pokud se soubory *. pdb* po sestavení projektu neaktualizují, otevřete vlastnosti projektu, vyberte stránku **sestavení** , zvolte možnost **Upřesnit** a zkontrolujte **informace o ladění**.
 
-Pro projekty v jazyce C++ zajistěte, aby generované soubory. pdb měly úplné informace o ladění. Otevřete vlastnosti projektu a ověřte, že **ladění linkeru**  >  **Debugging**  >  **generovat informace o ladění** je nastaveno na **generovat ladicí informace optimalizované pro sdílení a publikování (/debug: Full)**.
+Pro projekty v jazyce C++ zajistěte, aby generované soubory. pdb měly úplné informace o ladění. Otevřete vlastnosti projektu a ověřte, že **ladění linkeru**  >    >  **generovat informace o ladění** je nastaveno na **generovat ladicí informace optimalizované pro sdílení a publikování (/debug: Full)**.
 
 Pokud jsou soubory *. pdb* a *. dll* nebo *. exe* na různých místech, zkopírujte soubor *. pdb* do stejného adresáře. Je také možné nakonfigurovat modul pokrytí kódu pro hledání souborů *. pdb* v jiném umístění. Další informace najdete v tématu [přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md).
 
