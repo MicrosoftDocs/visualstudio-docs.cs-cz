@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 52e9f7fc-6fe0-4d23-890b-5673dca8c3cb
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f71d993c7f99cade5b866e67298132a325986e3a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6082b06e6235a93b0e198d973b40efb728bd815
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80714798"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962129"
 ---
 # <a name="ipropertyproxyprovider"></a>IPropertyProxyProvider
 Toto rozhraní poskytuje proxy rozhraní pro zobrazení a změnu dat objektu.
@@ -32,7 +32,7 @@ IPropertyProxyProvider : IUnknown
  Vyhodnocení výrazu (EE) implementuje toto rozhraní u stejného objektu, který implementuje rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) , jako součást podpory typu vizualizuje v EE.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- [QueryInterface](/cpp/atl/queryinterface) `IDebugProperty3` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface.
+ [](/cpp/atl/queryinterface) `IDebugProperty3` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface.
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
  `IPropertyProxyProvider`Rozhraní implementuje následující metodu:

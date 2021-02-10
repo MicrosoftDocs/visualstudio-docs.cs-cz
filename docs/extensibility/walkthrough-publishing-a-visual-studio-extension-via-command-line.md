@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 6ff9efc4-919d-4071-a80d-6dbdd2ceb2f8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c4132d878ff1ec7689be890446a1849577fafd30
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 98c73da67e607346138d7d6fae124a86b7a34618
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877920"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961843"
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>Návod: publikování rozšíření sady Visual Studio prostřednictvím příkazového řádku
 
@@ -32,7 +32,7 @@ VsixPublisher.exe je nástroj příkazového řádku pro publikování rozšíř
 
 Publikuje rozšíření na webu Marketplace. Příponou může být VSIX, soubor exe/MSI nebo odkaz. Pokud rozšíření už existuje se stejnou verzí, toto rozšíření se přepíše. Pokud rozšíření ještě neexistuje, vytvoří se nové rozšíření.
 
-|Možnosti příkazu |Popis |
+|Možnosti příkazu |Description |
 |---------|---------|
 |datová část (povinné) | Buď cestu k datové části, která se má publikovat, nebo odkaz, který se má použít, jako adresa URL pro další informace. |
 |publishManifest (povinné) | Cesta k souboru manifestu publikování, který se má použít |
@@ -47,7 +47,7 @@ VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to v
 
 Vytvoří vydavatele na webu Marketplace. Také zaznamená vydavatele do počítače pro budoucí akce (například odstranění nebo publikování rozšíření).
 
-|Možnosti příkazu |Popis |
+|Možnosti příkazu |Description |
 |---------|---------|
 |DisplayName (povinné) | Zobrazovaný název vydavatele |
 |Vydavatel (povinné) | Název vydavatele (například identifikátor). |
@@ -63,7 +63,7 @@ VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName
 
 Odstraní vydavatele na webu Marketplace.
 
-|Možnosti příkazu |Popis |
+|Možnosti příkazu |Description |
 |---------|---------|
 |Vydavatel (povinné) | Název vydavatele (například identifikátor). |
 |personalAccessToken (povinné) | Osobní přístupový token, který se používá k ověření vydavatele. |
@@ -76,7 +76,7 @@ VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAcc
 
 Odstraní rozšíření z webu Marketplace.
 
-|Možnosti příkazu |Popis |
+|Možnosti příkazu |Description |
 |---------|---------|
 |Přípona (povinné) | Název rozšíření, které se má odstranit |
 |Vydavatel (povinné) | Název vydavatele (například identifikátor). |
@@ -90,7 +90,7 @@ VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherNa
 
 Zaznamená vydavatele do počítače.
 
-|Možnosti příkazu |Popis |
+|Možnosti příkazu |Description |
 |---------|---------|
 |personalAccessToken (povinné | Osobní přístupový token, který se používá k ověření vydavatele. |
 |Vydavatel (povinné) | Název vydavatele (například identifikátor). |
@@ -104,7 +104,7 @@ VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publishe
 
 Zaznamená vydavatele z počítače.
 
-|Možnosti příkazu |Popis |
+|Možnosti příkazu |Description |
 |---------|---------|
 |Vydavatel (povinné) | Název vydavatele (například identifikátor). |
 |ignoreMissingPublisher | Určuje, že by nástroj neměl být v případě, že zadaný Vydavatel ještě není přihlášený, nechybí. |
@@ -194,7 +194,7 @@ Aby bylo možné v předchozím příkladu vyřešit "image/testlogo.png", můž
 
 ## <a name="publishing-walkthrough"></a>Návod k publikování
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 
 Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 

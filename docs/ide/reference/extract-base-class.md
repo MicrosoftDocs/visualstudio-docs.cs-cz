@@ -1,23 +1,23 @@
 ---
-title: Extrahovat základní třídu
+title: Extrakce základní třídy
 ms.date: 11/03/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8eb87ff8e3acc141c49a495b155fb769e03fb89b
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 8c389ac6285b3f20dcdf05833f1ff3202d155c4f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93402256"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962805"
 ---
-# <a name="extract-base-class"></a>Extrahovat základní třídu
+# <a name="extract-base-class"></a>Extrakce základní třídy
 
 Tento refaktoring platí pro:
 
@@ -41,7 +41,7 @@ Tento refaktoring platí pro:
 
     ![Extrahovat dialog základní třídy](media/extract-base-class.png)
 
-Otevře se nové dialogové okno **Extrahovat základní třídu** , kde můžete zadat název základní třídy a její požadované umístění. Můžete vybrat členy, které chcete přenést do nové základní třídy, a zvolit, zda mají být členové abstrakcí, zaškrtnutím políčka ve sloupci vytvořit abstrakt.
+Otevře se nové dialogové okno **Extrahovat základní třídu**, kde můžete zadat název základní třídy a její požadované umístění. Můžete vybrat členy, které chcete přenést do nové základní třídy, a zvolit, zda mají být členové abstrakcí, zaškrtnutím políčka ve sloupci vytvořit abstrakt.
 
 ## <a name="see-also"></a>Viz také
 

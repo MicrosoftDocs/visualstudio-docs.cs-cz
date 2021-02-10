@@ -7,13 +7,13 @@ ms.topic: conceptual
 ms.assetid: a29690bf-f212-4ac6-a77a-adc53d14102e
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: 1af793ec7ecd741de1fc1b4bb1cb48dbf2ef32f3
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+manager: jmartens
+ms.openlocfilehash: ef09f181176bbab961b0caa97ccfb9910c5a281d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047129"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961245"
 ---
 # <a name="work-with-elements-in-xaml-designer"></a>Práce s elementy v Návrháři XAML
 
@@ -27,7 +27,7 @@ Ve výchozím nastavení `Grid` je panel použit jako kontejner rozložení nejv
 
 Chcete-li přidat prvek do rozložení v Návrhář XAML, proveďte jednu z následujících akcí:
 
-- Dvakrát klikněte na prvek v **sadě nástrojů** (nebo vyberte element v sadě nástrojů a stiskněte klávesu **ENTER** ).
+- Dvakrát klikněte na prvek v **sadě nástrojů** (nebo vyberte element v sadě nástrojů a stiskněte klávesu **ENTER**).
 
 - Přetáhněte element ze **sady nástrojů** na návrhovou plochu.
 
@@ -63,9 +63,9 @@ Zarovnání dvou nebo více prvků pomocí příkazů nabídky:
 
 1. Vyberte prvky, které chcete zarovnat. Stisknutím a podržením klávesy **CTRL** můžete vybrat více než jeden prvek a zároveň vybrat prvky.
 
-2. Vyberte jednu z následujících vlastností v části **HorizontalAlignment** v části **rozložení** okno Vlastnosti: **Left** , **Center** , **Right** nebo **Stretch** .
+2. Vyberte jednu z následujících vlastností v části **HorizontalAlignment** v části **rozložení** okno Vlastnosti: **Left**, **Center**, **Right** nebo **Stretch**.
 
-3. Vyberte jednu z následujících vlastností v části **VerticalAlignment** v části **rozložení** okno Vlastnosti: **nahoře** , **uprostřed** , **dole** nebo **Stretch** .
+3. Vyberte jednu z následujících vlastností v části **VerticalAlignment** v části **rozložení** okno Vlastnosti: **nahoře**, **uprostřed**, **dole** nebo **Stretch**.
 
 Chcete-li zarovnat dva nebo více prvků pomocí zarovnávacím čárám, v Návrhář XAML v rozložení, které obsahuje alespoň dva prvky, přetáhněte nebo změňte velikost jednoho z prvků tak, aby byl okraj zarovnán s jiným prvkem.
 
@@ -79,7 +79,7 @@ Změna okrajů prvku v okno Vlastnosti:
 
 1. Vyberte prvek, jehož okraje chcete změnit.
 
-2. V části **rozložení** v okno Vlastnosti změňte hodnotu (v pixelech nebo jednotkách nezávislých na zařízení, které jsou přibližně 1/96 palce) pro kteroukoli vlastnost **okraje** ( **nahoře** , **vlevo** , **vpravo** nebo **dole** ).
+2. V části **rozložení** v okno Vlastnosti změňte hodnotu (v pixelech nebo jednotkách nezávislých na zařízení, které jsou přibližně 1/96 palce) pro kteroukoli vlastnost **okraje** (**nahoře**, **vlevo**, **vpravo** nebo **dole**).
 
 Chcete-li změnit okraje prvku vzhledem k kontejneru rozložení prvku, klikněte na tlačítko *Doplňky okrajů* , které se zobrazí kolem prvku, když je vybrán prvek a je uvnitř kontejneru rozložení. Ilustrace znázorňující doplňky okrajů naleznete v tématu [Vytvoření uživatelského rozhraní pomocí Návrhář XAML](../xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).
 
@@ -103,13 +103,13 @@ Seskupení prvků do nového kontejneru rozložení:
     > [!TIP]
     > Pokud vyberete možnost [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [border](xref:Windows.UI.Xaml.Controls.Border)nebo [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer) k seskupení prvků, prvky jsou umístěny na novém panelu [mřížky](xref:Windows.UI.Xaml.Controls.Grid) v rámci [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [ohraničení](xref:Windows.UI.Xaml.Controls.Border)nebo [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer). Pokud zrušíte seskupení prvků v jednom z těchto kontejnerů rozložení, odstraní se pouze [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [border](xref:Windows.UI.Xaml.Controls.Border)nebo [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer) a panel [mřížky](xref:Windows.UI.Xaml.Controls.Grid) zůstane. Chcete-li `Grid` panel odstranit, oddělit prvky znovu.
 
-Chcete-li zrušit seskupení prvků a odstranit rozložení, klikněte pravým tlačítkem myši na skupinu, kterou chcete zrušit seskupení, a klikněte na příkaz **Zrušit seskupení** . Prvky můžete také seskupit nebo zrušit seskupení kliknutím pravým tlačítkem myši na vybrané položky v okně Osnova dokumentu a kliknutím na **seskupit do** nebo **oddělit** .
+Chcete-li zrušit seskupení prvků a odstranit rozložení, klikněte pravým tlačítkem myši na skupinu, kterou chcete zrušit seskupení, a klikněte na příkaz **Zrušit seskupení**. Prvky můžete také seskupit nebo zrušit seskupení kliknutím pravým tlačítkem myši na vybrané položky v okně Osnova dokumentu a kliknutím na **seskupit do** nebo **oddělit**.
 
 ## <a name="reset-the-element-layout"></a>Resetovat rozložení elementu
 
 Můžete obnovit výchozí hodnoty pro konkrétní vlastnosti rozložení prvku pomocí příkazů pro obnovení rozložení. Pomocí tohoto příkazu můžete obnovit okraj, zarovnání, šířku, výšku a velikost elementu, a to buď jednotlivě, nebo souhrnně.
 
-Chcete-li obnovit rozložení prvku, klikněte pravým tlačítkem myši na prvek v okně Osnova dokumentu nebo na návrhové ploše a pak zvolte možnost **rozložení**  >  **resetovat** *PropertyName* , kde *PropertyName* je vlastnost, kterou chcete obnovit (nebo zvolte **rozložení**  >  **Obnovit vše** pro resetování všech vlastností rozložení elementu).
+Chcete-li obnovit rozložení prvku, klikněte pravým tlačítkem myši na prvek v okně Osnova dokumentu nebo na návrhové ploše a pak zvolte možnost **rozložení**  >  **resetovat** *PropertyName*, kde *PropertyName* je vlastnost, kterou chcete obnovit (nebo zvolte **rozložení**  >  **Obnovit vše** pro resetování všech vlastností rozložení elementu).
 
 ## <a name="see-also"></a>Viz také
 

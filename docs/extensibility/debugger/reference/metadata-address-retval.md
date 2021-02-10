@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 5b0ec0fb-84b3-4ce7-8e24-becf3d881d7d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f2437d10078eb623e063b3292d96ef9bb4a9cf64
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec357bcc21cb3f7cd8f4f9eaa8318c4b0deb1d42
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80714278"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961895"
 ---
 # <a name="metadata_address_retval"></a>METADATA_ADDRESS_RETVAL
 Tato struktura představuje návratovou hodnotu z metody nebo funkce.

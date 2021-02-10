@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 17ec9f9e-dc06-4532-b5db-da52efcc8630
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 89c8cac9a7c2baa020002fe852330639d7081982
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 69a65488d38fe2562392be152e448369ff081915
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80717713"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962155"
 ---
 # <a name="ienumcodepaths2"></a>IEnumCodePaths2
 Toto rozhraní představuje seznam cest kódu.
@@ -42,7 +42,7 @@ IEnumCodePaths2 : IUnknown
 |[Další](../../../extensibility/debugger/reference/ienumcodepaths2-next.md)|Načte zadaný počet cest kódu v sekvenci výčtu.|
 |[Přeskočit](../../../extensibility/debugger/reference/ienumcodepaths2-skip.md)|Přeskočí zadaný počet cest kódu v sekvenci výčtu.|
 |[Reset](../../../extensibility/debugger/reference/ienumcodepaths2-reset.md)|Obnoví posloupnost výčtu na začátek.|
-|[Klonování](../../../extensibility/debugger/reference/ienumcodepaths2-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|
+|[Klonovat](../../../extensibility/debugger/reference/ienumcodepaths2-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|
 |[GetCount](../../../extensibility/debugger/reference/ienumcodepaths2-getcount.md)|Získá počet cest kódu v enumerátoru.|
 
 ## <a name="remarks"></a>Poznámky

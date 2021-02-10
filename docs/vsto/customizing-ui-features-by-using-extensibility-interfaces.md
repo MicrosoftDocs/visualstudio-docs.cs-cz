@@ -20,15 +20,15 @@ helpviewer_keywords:
 - extensibility interfaces [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 436f426eee6c90476997f416bab907c8e17f94cc
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: f84a694c9a18b6ec1c64204c8150ff721633278d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845619"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962467"
 ---
 # <a name="customize-ui-features-by-using-extensibility-interfaces"></a>Přizpůsobení funkcí uživatelského rozhraní pomocí rozhraní rozšiřitelnosti
   Vývojové nástroje pro Office v sadě Visual Studio poskytují třídy a návrháře, které zpracovávají mnoho podrobností implementace při jejich použití k vytváření vlastních podoken úloh, přizpůsobení pásu karet a oblastí formulářů Outlooku v doplňku VSTO. *Rozhraní rozšiřitelnosti* pro každou funkci však můžete implementovat sami, pokud máte zvláštní požadavky.
@@ -45,7 +45,7 @@ ms.locfileid: "96845619"
 ## <a name="extensibility-interfaces-you-can-implement-in-a-vsto-add-in"></a>Rozhraní rozšíření, která můžete implementovat v doplňku VSTO
  Následující tabulka uvádí rozhraní rozšíření, která můžete implementovat, a aplikace, které je podporují.
 
-|Rozhraní|Popis|Aplikace|
+|Rozhraní|Description|Aplikace|
 |---------------|-----------------|------------------|
 |<xref:Microsoft.Office.Core.IRibbonExtensibility>|Implementujte toto rozhraní pro přizpůsobení uživatelského rozhraní pásu karet. **Poznámka:**  Můžete přidat položku **pásu karet (XML)** do projektu a vygenerovat výchozí <xref:Microsoft.Office.Core.IRibbonExtensibility> implementaci v doplňku VSTO. Další informace najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> InfoPath 2010<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Visio<br /><br /> Word|
 |<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>|Implementací tohoto rozhraní vytvoříte vlastní podokno úloh.|Excel<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word|

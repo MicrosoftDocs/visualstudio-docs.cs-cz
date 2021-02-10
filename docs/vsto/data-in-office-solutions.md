@@ -13,15 +13,15 @@ helpviewer_keywords:
 - datasets [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4ce6d73a7c70101c0fe364ac5dafba8cbe47f5c8
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: c9f0f057873b6810b7616893646c3c770cc43331
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845545"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962402"
 ---
 # <a name="data-in-office-solutions"></a>Data v řešeních pro systém Office
   Mnoho řešení pro systém Office umožňuje uživatelům načíst nebo upravit data. Při vytváření řešení pro systém Office pomocí sady Visual Studio existuje několik různých způsobů, jak pracovat s daty.

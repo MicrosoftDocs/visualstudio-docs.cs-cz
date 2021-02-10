@@ -6,21 +6,21 @@ ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 8b2bbbdf478f27f936d4897f2ff773baa4cca1d6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9f13128bc552ffdb31b3f4a9315a3f9aa3543b0f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285001"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962688"
 ---
 # <a name="work-with-the-nodejs-interactive-window"></a>Práce s Node.js interaktivním oknem
 
-Nástroje pro Node.js pro Visual Studio obsahují interaktivní okno pro nainstalovanou Node.js modul runtime. Toto okno umožňuje zadat kód jazyka JavaScript a okamžitě zobrazit výsledky a spustit npm příkazy pro interakci s aktuálním projektem. Interaktivní okno se také označuje jako REPL (**R**ečíst/**E**Valuate/**P**isknout **L**OOP).
+Nástroje pro Node.js pro Visual Studio obsahují interaktivní okno pro nainstalovanou Node.js modul runtime. Toto okno umožňuje zadat kód jazyka JavaScript a okamžitě zobrazit výsledky a spustit npm příkazy pro interakci s aktuálním projektem. Interaktivní okno se také označuje jako REPL (**R** ečíst/**E** Valuate/**P** isknout **L** OOP).
 
 ## <a name="open-the-interactive-window"></a>Otevřít interaktivní okno
 

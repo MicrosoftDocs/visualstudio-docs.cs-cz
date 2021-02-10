@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.assetid: 1971868e-89fa-4452-8ee7-76e4daf31b66
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 908685b49a08b3084c31e768675e64bc087bc727
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 3aeffc3be3fee5d3460ddea340d8c4a216829e08
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722435"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963156"
 ---
 # <a name="timer"></a>Časovač
 Možnost  **časovače** VSPerfCmd.exenastaví událost profilování, která je Navzorkovaná na časové cykly procesoru, a volitelně změní počet cyklů v intervalu vzorkování z výchozí hodnoty 10 000 000. Na procesorech frekvencí 1 GHz (jeden GHz) je 10 000 000 hodinových cyklů přibližně 100 vzorků za sekundu. Minimální počet cyklů, které lze zadat, je 50 000.

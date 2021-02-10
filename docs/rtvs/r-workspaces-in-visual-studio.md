@@ -5,21 +5,21 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 97ce4f226c39a20ad41c5977f800aa178450c69c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3627a8944941fc77bb9b19fe3dd0a1549f41892a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89314937"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961583"
 ---
 # <a name="control-where-r-code-runs-with-workspaces"></a>Řízení, kde se kód R spouští s pracovními prostory
 
 Pracovní prostor v Nástroje R pro Visual Studio (RTVS) umožňuje nakonfigurovat, kde se relace R spustí, ke kterému může dojít na místních i vzdálených počítačích. Cílem je umožnit vám pracovat s srovnatelným uživatelským prostředím, které vám umožní využít potenciálně výkonnější cloudové počítače.
 
-Chcete-li otevřít okno **pracovní prostory** , použijte příkaz **nástroje R**  >  **Windows**  >  **pracovní prostory** systému Windows nebo stiskněte klávesu **CTRL** + **9**.
+Chcete-li otevřít okno **pracovní prostory** , použijte příkaz **nástroje R**  >    >  **pracovní prostory** systému Windows nebo stiskněte klávesu **CTRL** + **9**.
 
 ![Okno pracovních prostorů v Nástroje R pro Visual Studio (VS2017)](media/workspaces-window.png)
 
@@ -29,13 +29,13 @@ V tomto okně zelená značka zaškrtnutí označuje aktivní pracovní prostor,
 
 Ve výchozím nastavení RTVS při zavření a opětovném otevření projektu neukládá stav pracovního prostoru. Toto chování však můžete změnit prostřednictvím [možností pracovního prostoru](options-for-r-tools-in-visual-studio.md#workspace).
 
-Příkaz pro obnovení relace **nástrojů R**  >  **Session**  >  **Reset** a tlačítko obnovit v interaktivním okně také obnoví stav pracovního prostoru. Se vzdálenými pracovními prostory při obnovení dojde k odstranění profilu uživatele vytvořeného při prvním připojení ke vzdálenému serveru, který efektivně odstraní všechny soubory, které se tam nashromáždily.
+Příkaz pro obnovení relace **nástrojů R**  >    >   a tlačítko obnovit v interaktivním okně také obnoví stav pracovního prostoru. Se vzdálenými pracovními prostory při obnovení dojde k odstranění profilu uživatele vytvořeného při prvním připojení ke vzdálenému serveru, který efektivně odstraní všechny soubory, které se tam nashromáždily.
 
 ## <a name="local-workspaces"></a>Místní pracovní prostory
 
 Seznam místních pracovních prostorů zobrazuje všechny překladače R, které máte nainstalované v počítači.
 
-Po spuštění sady Visual Studio se pokusí automaticky zjistit všechny verze jazyka R, které jste nainstalovali, a to tak, že prohlížíte klíč registru **HKEY_LOCAL_MACHINE \software\r-Core \\ ** . Vzhledem k tomu, že se tato kontroly provádí pouze při spuštění, je nutné restartovat aplikaci Visual Studio, pokud instalujete nový překladač R.
+Po spuštění sady Visual Studio se pokusí automaticky zjistit všechny verze jazyka R, které jste nainstalovali, a to tak, že prohlížíte klíč registru **HKEY_LOCAL_MACHINE\Software\R-Core\\** . Vzhledem k tomu, že se tato kontroly provádí pouze při spuštění, je nutné restartovat aplikaci Visual Studio, pokud instalujete nový překladač R.
 
 RTVS nemusí detekovat Interpret R, který je nainstalovaný nestandardním způsobem (například při pouhém zkopírování souborů do složky namísto spuštění instalačního programu). V takovém případě ručně vytvořte nový místní pracovní prostor R následujícím způsobem:
 
@@ -77,7 +77,7 @@ RTVS je svázána pouze s jedním pracovním prostorem v jednom okamžiku. Váza
 Chcete-li změnit aktivní pracovní prostor, vyberte modrou šipku vedle požadovaného pracovního prostoru. Zobrazí se výzva k uložení vaší relace, ukončí aktuální pracovní prostor a pak přepne na nový.
 
 > [!Tip]
-> Pokud chcete zakázat výzvu k uložení, vyberte příkaz Možnosti **nástrojů R**  >  **Options** a **před přepnutím pracovních prostorů do možnosti pracovní prostory nastavte možnost zobrazit potvrzovací dialog** `No` . Viz [Možnosti pracovního prostoru](options-for-r-tools-in-visual-studio.md#workspace).
+> Pokud chcete zakázat výzvu k uložení, vyberte příkaz Možnosti **nástrojů R**  >   a **před přepnutím pracovních prostorů do možnosti pracovní prostory nastavte možnost zobrazit potvrzovací dialog** `No` . Viz [Možnosti pracovního prostoru](options-for-r-tools-in-visual-studio.md#workspace).
 
 Pokud se pokusíte přepnout na místní pracovní prostor, který se odinstaloval nebo ke vzdálenému pracovnímu prostoru, který není k dispozici, RTVS nemusí být vázán k žádnému pracovnímu prostoru. V důsledku toho se může zobrazit chyba při zadání kódu do interaktivního okna nebo pokusu o spuštění kódu v jiném.
 
@@ -99,7 +99,7 @@ Toto upozornění se ale zobrazí také v případě, že byl *certifikát podep
 
 ## <a name="directories-on-local-and-remote-computers"></a>Adresáře na místních a vzdálených počítačích
 
-Ve výchozím nastavení se při spuštění nového překladače R v místním pracovním prostoru v aktuálním pracovním adresáři *%USERPROFILE%\Documents*. Kdykoli můžete kdykoli změnit adresář pomocí příkazů **nástroje R**pro  >  **pracovní adresář** nebo kliknutím pravým tlačítkem myši na projekt v sadě Visual Studio Průzkumník řešení a výběrem příkazů, jako je například **nastavit pracovní adresář**.
+Ve výchozím nastavení se při spuštění nového překladače R v místním pracovním prostoru v aktuálním pracovním adresáři *%USERPROFILE%\Documents*. Kdykoli můžete kdykoli změnit adresář pomocí příkazů **nástroje R** pro  >  **pracovní adresář** nebo kliknutím pravým tlačítkem myši na projekt v sadě Visual Studio Průzkumník řešení a výběrem příkazů, jako je například **nastavit pracovní adresář**.
 
 Když se poprvé připojíte ke vzdálenému počítači, RTVS automaticky vytvoří profil uživatele na základě vašich přihlašovacích údajů, který nastaví pracovní adresář na složku *dokumenty* v tomto profilu. Tato složka se používá pro všechny následné vzdálené relace, které používají stejné přihlašovací údaje.
 
@@ -117,18 +117,18 @@ Soubory se zkopírují na vzdálený server následujícím způsobem:
 
 - Soubory můžete také zkopírovat tak, že v Průzkumník řešení vyberete a pak vyberete **zdroj vybraných souborů**. Tato akce je načte do interaktivního okna a spustí se tam. Pokud je relace připojena ke vzdálenému počítači, soubory jsou nejprve zkopírovány.
 
-- Když je RTVS vázán ke vzdálenému pracovnímu prostoru a stisknete klávesu **F5**, vyberte **ladění**  >  **Spustit ladění**nebo jinak spustit kód, RTVS ve výchozím nastavení automaticky zkopíruje soubor projektu do vzdáleného pracovního prostoru (viz níže pro řízení tohoto chování).
+- Když je RTVS vázán ke vzdálenému pracovnímu prostoru a stisknete klávesu **F5**, vyberte **ladění**  >  **Spustit ladění** nebo jinak spustit kód, RTVS ve výchozím nastavení automaticky zkopíruje soubor projektu do vzdáleného pracovního prostoru (viz níže pro řízení tohoto chování).
 
 - Všechny soubory, které již existují na serveru, budou přepsány.
 
 > [!Note]
-> Vzhledem k tomu, že RTVS nemůže spolehlivě zachytit všechna volání funkcí R, volání funkcí jako `source()` nebo `runApp()` (pro lesklé aplikace) v *not* rámci interaktivního okna nekopíruje soubory do vzdáleného pracovního prostoru.
+> Vzhledem k tomu, že RTVS nemůže spolehlivě zachytit všechna volání funkcí R, volání funkcí jako `source()` nebo `runApp()` (pro lesklé aplikace) v  rámci interaktivního okna nekopíruje soubory do vzdáleného pracovního prostoru.
 
-[Vlastnosti projektu](r-projects-in-visual-studio.md#project-properties) určují, zda RTVS kopíruje soubory při spuštění projektu a přesně které soubory jsou zkopírovány. Chcete-li otevřít tuto stránku, **Project**vyberte  >  příkaz nabídky**Vlastnosti projektu (název)** nebo klikněte pravým tlačítkem myši na projekt v Průzkumník řešení a vyberte možnost **vlastnosti**.
+[Vlastnosti projektu](r-projects-in-visual-studio.md#project-properties) určují, zda RTVS kopíruje soubory při spuštění projektu a přesně které soubory jsou zkopírovány. Chcete-li otevřít tuto stránku, vyberte  >  příkaz nabídky **Vlastnosti projektu (název)** nebo klikněte pravým tlačítkem myši na projekt v Průzkumník řešení a vyberte možnost **vlastnosti**.
 
 ![Karta pro spuštění vlastností projektu s nastavením přenosu souborů](media/workspaces-remote-file-transfer-filter-settings.png)
 
-Zde je vlastnost **přenos souborů při spuštění** určuje, zda RTVS kopíruje soubory projektu automaticky. Hodnota **soubory k přenosu** pak filtruje přesně to, které soubory se přenášejí. Ve výchozím nastavení je určena pouze pro kopírování *. R*, *. Soubory RMD*, *. SQL*, *. MD*a *. cpp* . Toto chování zabraňuje neúmyslnému kopírování velkých datových souborů na server při každém spuštění.
+Zde je vlastnost **přenos souborů při spuštění** určuje, zda RTVS kopíruje soubory projektu automaticky. Hodnota **soubory k přenosu** pak filtruje přesně to, které soubory se přenášejí. Ve výchozím nastavení je určena pouze pro kopírování *. R*, *. Soubory RMD*, *. SQL*, *. MD* a *. cpp* . Toto chování zabraňuje neúmyslnému kopírování velkých datových souborů na server při každém spuštění.
 
 ## <a name="copy-files-from-a-remote-workspace"></a>Kopírování souborů ze vzdáleného pracovního prostoru
 

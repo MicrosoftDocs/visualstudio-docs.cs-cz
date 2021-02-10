@@ -9,16 +9,16 @@ helpviewer_keywords:
 - unit tests, verifying code with
 - testing code, automated tests
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: dc82d72d7c0a333fc28146746a473ed359857490
-ms.sourcegitcommit: 993fca11dc373a10150751bc2a045a9701a9db2f
+ms.openlocfilehash: 718f5560176f287f237d54a89bd44c831c7f03ca
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98240280"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962610"
 ---
 # <a name="unit-test-tools-and-tasks"></a>Nástroje pro testy jednotek a související úlohy
 
@@ -58,6 +58,6 @@ Následující články vám pomůžou pochopit a vytvářet testy jednotek:
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting> Popisuje obor názvů UnitTesting, který poskytuje atributy, výjimky, kontrolní výrazy a další třídy, které podporují testování částí.
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Web> Popisuje obor názvů UnitTesting. Web, který rozšiřuje obor názvů UnitTesting tím, že poskytuje podporu pro ASP.NET a testování částí webové služby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Zlepšení kvality kódu](../test/improve-code-quality.md)

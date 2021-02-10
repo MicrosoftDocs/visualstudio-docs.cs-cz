@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1eba3721-cc12-4b80-9987-84923ede5e2e
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ea072cf3e9a236fdc6a4ad66b1c0cf7ddcda1550
-ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
+ms.openlocfilehash: cd43be13351309e0f4715ee889fb910f4f7e49a3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98533442"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963195"
 ---
 # <a name="common-msbuild-project-items"></a>Společné položky projektu nástroje MSBuild
 
@@ -36,7 +36,7 @@ Níže je seznam všech běžných položek projektu.
 
 Představuje odkaz sestavení (spravovaného) v projektu.
 
-|Název metadat položky|Popis|
+|Název metadat položky|Description|
 |---------------|-----------------|
 |Cestu|Volitelný řetězec. Relativní nebo absolutní cesta k sestavení|
 |Název|Volitelný řetězec. Zobrazovaný název sestavení, například "System. Windows. Forms."|
@@ -63,7 +63,7 @@ Představuje odkaz na komponentu modelu COM (nespravovaný) v projektu. Tato pol
 
 Představuje seznam knihoven typů, které jsou předány `TypeLibFiles` parametru cíle [ResolveComReference –](resolvecomreference-task.md) . Tato položka se vztahuje pouze na projekty .NET.
 
-|Název metadat položky|Popis|
+|Název metadat položky|Description|
 |---------------|-----------------|
 |WrapperTool|Volitelný řetězec. Název nástroje obálky, který se používá pro komponentu, například "Tlbimp".|
 
@@ -97,7 +97,7 @@ Představuje odkaz na jiný projekt. `ProjectReference` položky jsou transformo
 
 Představuje zdrojové soubory pro kompilátor.
 
-| Název metadat položky | Popis |
+| Název metadat položky | Description |
 |-----------------------| - |
 | DependentUpon | Volitelný řetězec. Určuje soubor, na kterém je tento soubor závislý, aby se správně zkompiluje. |
 | AutoGen | Volitelná logická hodnota. Určuje, zda byl soubor generován pro projekt pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio. |
@@ -109,7 +109,7 @@ Představuje zdrojové soubory pro kompilátor.
 
 Představuje prostředky, které mají být vloženy do generovaného sestavení.
 
-| Název metadat položky | Popis |
+| Název metadat položky | Description |
 |-----------------------| - |
 | DependentUpon | Volitelný řetězec. Určuje soubor, na kterém je tento soubor závislý, aby se správně zkompiluje. |
 | Generátor | Povinný řetězec. Název jakéhokoli generátoru souborů, který je spuštěn na této položce. |
@@ -124,7 +124,7 @@ Představuje prostředky, které mají být vloženy do generovaného sestavení
 
 Představuje soubory, které nejsou zkompilovány do projektu, ale mohou být vloženy nebo publikovány společně s ní.
 
-| Název metadat položky | Popis |
+| Název metadat položky | Description |
 |-----------------------| - |
 | DependentUpon | Volitelný řetězec. Určuje soubor, na kterém je tento soubor závislý, aby se správně zkompiluje. |
 | Generátor | Povinný řetězec. Název jakéhokoli generátoru souborů, který se na této položce spouští. |
@@ -140,7 +140,7 @@ Představuje soubory, které nejsou zkompilovány do projektu, ale mohou být vl
 
 Představuje soubory, které by neměly mít žádné role v procesu sestavení.
 
-| Název metadat položky | Popis |
+| Název metadat položky | Description |
 |-----------------------| - |
 | DependentUpon | Volitelný řetězec. Určuje soubor, na kterém je tento soubor závislý, aby se správně zkompiluje. |
 | Generátor | Povinný řetězec. Název jakéhokoli generátoru souborů, který je spuštěn na této položce. |
@@ -154,7 +154,7 @@ Představuje soubory, které by neměly mít žádné role v procesu sestavení.
 
 Představuje atributy sestavení, které mají být generovány jako `[AssemblyMetadata(key, value)]` .
 
-| Název metadat položky | Popis |
+| Název metadat položky | Description |
 |-----------------------| - |
 | Zařadit členy | Se bude první parametr (klíč) v `AssemblyMetadataAttribute` konstruktoru atributu. |
 | Hodnota | Povinný řetězec. Se bude druhým parametrem (hodnota) v `AssemblyMetadataAttribute` konstruktoru atributu. |
@@ -166,7 +166,7 @@ Představuje atributy sestavení, které mají být generovány jako `[AssemblyM
 
 Určuje sestavení, která mají být generována jako `[InternalsVisibleTo(..)]` atributy sestavení.
 
-| Název metadat položky | Popis |
+| Název metadat položky | Description |
 |-----------------------| - |
 | Zařadit členy | Název sestavení |
 | Klíč | Volitelný řetězec. Veřejný klíč sestavení. |
@@ -186,7 +186,7 @@ Představuje projekt FxCop, který se má importovat.
 
 Představuje sestavení, jejichž obory názvů by měly být importovány Visual Basic kompilátorem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Obecné vlastnosti projektu nástroje MSBuild](../msbuild/common-msbuild-project-properties.md)
 - [Společná metadata položky MSBuild](common-msbuild-item-metadata.md)

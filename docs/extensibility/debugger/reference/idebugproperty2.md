@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a7d5c70f-a1a5-4120-9f70-184e01c25bff
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b04abdac135143ccbbd1b8e5632bf85c974f29d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8c5cec0d93919058eae725a9e49198f1704d8bfc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80721223"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962194"
 ---
 # <a name="idebugproperty2"></a>IDebugProperty2
 Toto rozhraní představuje vlastnost rámce zásobníku, vlastnost dokumentu programu nebo jinou vlastnost. Vlastnost je obvykle výsledkem vyhodnocení výrazu.
@@ -58,7 +58,7 @@ IDebugProperty2 : IUnknown
 |[GetDerivedMostProperty](../../../extensibility/debugger/reference/idebugproperty2-getderivedmostproperty.md)|Vrátí vlastnost, která popisuje nejvíce odvozenou vlastnost vlastnosti.|
 |[GetMemoryBytes](../../../extensibility/debugger/reference/idebugproperty2-getmemorybytes.md)|Vrátí bajty paměti, které tvoří hodnotu vlastnosti.|
 |[GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md)|Vrátí kontext paměti pro hodnotu vlastnosti.|
-|[GetSize](../../../extensibility/debugger/reference/idebugproperty2-getsize.md)|Vrátí velikost hodnoty vlastnosti v bajtech.|
+|[GetSize –](../../../extensibility/debugger/reference/idebugproperty2-getsize.md)|Vrátí velikost hodnoty vlastnosti v bajtech.|
 |[GetReference](../../../extensibility/debugger/reference/idebugproperty2-getreference.md)|Vrátí odkaz na hodnotu této vlastnosti.|
 |[GetExtendedInfo](../../../extensibility/debugger/reference/idebugproperty2-getextendedinfo.md)|Vrátí rozšířené informace o vlastnosti.|
 

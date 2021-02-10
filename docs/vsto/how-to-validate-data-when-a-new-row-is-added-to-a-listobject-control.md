@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ListObject control, validating data
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e60f19da0d36c5a57f0151318d6d76b43a80de37
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: dbb6582f6211f851b4734f4e9a074ce5c0bd8d8a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528522"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961375"
 ---
 # <a name="how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control"></a>Postupy: ověření dat při přidání nového řádku do ovládacího prvku ListObject
   Uživatelé mohou přidat nové řádky do <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku vázaného na data. Před potvrzením změn ve zdroji dat můžete ověřit data uživatele.

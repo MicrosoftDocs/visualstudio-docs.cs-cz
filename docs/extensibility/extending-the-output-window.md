@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: b02fa88c-f92a-4ff6-ba5f-2eb4d48a643a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 39ee69f934a9962d2beefb83b1ada08b920ce53d
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 91c59737d269af4eb91df402f38346cf41e3146e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994651"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961765"
 ---
 # <a name="extend-the-output-window"></a>Rozšíří okno výstup.
 Okno **výstup** je sada textových podoken pro čtení a zápis. Visual Studio obsahuje tato Vestavěná podokna: **sestavení**, ve kterém projekty sdělují zprávy o sestaveních a **Obecné**, ve kterých [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] komunikuje se zprávami o integrovaném vývojovém prostředí (IDE). Projekty automaticky získávají odkaz na podokno **sestavení** prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> metod rozhraní a Visual Studio nabízí přímý přístup k podoknu **Obecné** prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> služby. Kromě integrovaných podoken můžete vytvářet a spravovat vlastní podokna.

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], InfoPath
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8d5e26614c7f06c803093cd7e19b7e9842b397fb
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: b3feab4a4b66ed2d6cf96fbccc8aaf1fb7de3bb6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527745"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962363"
 ---
 # <a name="infopath-solutions"></a>InfoPath – řešení
   Visual Studio poskytuje šablony projektů, pomocí kterých můžete vytvářet doplňky VSTO pro systém Microsoft Office InfoPath 2013 a InfoPath 2010. Aplikace InfoPath není v sadě Office 2016 k dispozici.
@@ -50,7 +50,7 @@ ms.locfileid: "97527745"
 ## <a name="customize-the-user-interface-of-infopath-by-using-an-add-in"></a>Přizpůsobení uživatelského rozhraní aplikace InfoPath pomocí doplňku
  Při vytváření doplňku VSTO pro InfoPath máte několik různých možností přizpůsobení uživatelského rozhraní. Některé z těchto možností jsou uvedené v následující tabulce.
 
-|Úloha|Další informace|
+|Úkol|Další informace|
 |----------|--------------------------|
 |Vytvoří vlastní podokno úloh.|[Vlastní podokna úloh](../vsto/custom-task-panes.md)|
 |Přidejte vlastní karty na pás karet v aplikaci InfoPath.|[Přizpůsobení pásu karet pro aplikaci InfoPath](../vsto/customizing-a-ribbon-for-infopath.md)|

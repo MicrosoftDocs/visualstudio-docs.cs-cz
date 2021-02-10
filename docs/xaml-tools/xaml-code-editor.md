@@ -6,13 +6,13 @@ ms.topic: overview
 monikerRange: vs-2019
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: 29fa854ab00764fc0166a53d8b48989f2c74f036
-ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
+manager: jmartens
+ms.openlocfilehash: df2c257caed24e85569ca41f3cc83dd9d47d5b03
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833296"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962311"
 ---
 # <a name="xaml-code-editor"></a>Editor kódu XAML
 
@@ -277,7 +277,7 @@ Můžete použít dialogové okno [Možnosti](../ide/reference/options-dialog-bo
 
 V dialogovém okně [Možnosti](../ide/reference/options-text-editor-xaml-formatting.md) pro jazyk XAML jsou následující první tři položky univerzální pro všechny programovací jazyky, které podporuje integrované vývojové prostředí (IDE) sady Visual Studio. Pokud chcete získat další informace o těchto možnostech a jejich použití, přejděte na propojené informace v následující tabulce.
 
-|Name  |Další informace  |
+|Název  |Další informace  |
 |---------|---------|
 |Obecné  | [Dialogové okno Možnosti: textový editor > všechny jazyky](../ide/reference/options-text-editor-all-languages.md) |
 |Posuvníky | [Možnosti, textový editor, všechny jazyky, posuvníky](../ide/reference/options-text-editor-all-languages-scroll-bars.md) |
@@ -287,7 +287,7 @@ V dialogovém okně [Možnosti](../ide/reference/options-text-editor-xaml-format
 
 Následující tabulka uvádí nastavení v dialogovém okně [Možnosti](../ide/reference/options-text-editor-xaml-formatting.md) , které může zlepšit možnosti úprav při vývoji aplikací založených na jazyce XAML. Další informace o těchto možnostech a jejich použití najdete v propojených informacích.
 
-|Name  |Další informace  |
+|Název  |Další informace  |
 |---------|---------|
 |Formátování | [Možnosti, Textový editor, XAML, Formátování](../ide/reference/options-text-editor-xaml-formatting.md) |
 |Různé |  [Možnosti, textový editor, XAML, různé](../ide/reference/options-text-editor-xaml-miscellaneous.md) |
