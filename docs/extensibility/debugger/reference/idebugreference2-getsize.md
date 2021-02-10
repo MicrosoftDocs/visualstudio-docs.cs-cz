@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: a404ddd9-d940-4513-97cd-f52b8ab6a560
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d7ea57467c6bcc716226ac7075976a0fb9daf5f8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d3cc4a24bec040ce146c3336d205ac7b11b6dfd3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80720375"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963689"
 ---
 # <a name="idebugreference2getsize"></a>IDebugReference2::GetSize
 Získá velikost hodnoty reference v bajtech. Vyhrazeno pro budoucí použití.
@@ -28,13 +28,13 @@ Získá velikost hodnoty reference v bajtech. Vyhrazeno pro budoucí použití.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetSize ( 
+HRESULT GetSize ( 
    DWORD* pdwSize
 );
 ```
 
 ```csharp
-int GetSize ( 
+int GetSize ( 
    out uint pdwSize
 );
 ```

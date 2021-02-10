@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2ae38b2a-29d2-461c-a67d-29dad274bf45
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 78a697ae8d9f3f551c8bb734c28c1f53551b1f81
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 1f27f2fb082c478aecff3d64f418ed0e864e15df
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96561081"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964976"
 ---
 # <a name="toolbox-data-tab"></a>Panel nástrojů, karta data
 
@@ -32,14 +32,14 @@ Zobrazí datové objekty, které lze přidat do formulářů a součástí. Kart
 
 Chcete-li přejít přímo na referenční stránku .NET pro komponentu, stiskněte klávesu **F1** u položky v **panelu nástrojů** nebo v položce komponenty v zásobníku návrháře.
 
-|Název|Popis|
+|Název|Description|
 |----------|-----------------|
 |<xref:System.Data.DataSet>|Přidá instanci typované nebo netypové datové sady do formuláře nebo součásti. Při přetažení tohoto objektu do návrháře se zobrazí dialogové okno, které umožňuje vybrat existující třídu typované datové sady nebo určit, že chcete vytvořit novou prázdnou netypovou datovou sadu. **Poznámka:**  Nepoužívejte <xref:System.Data.DataSet> objekt v **sadě nástrojů** k vytvoření nového schématu a třídy typované datové sady. Další informace najdete v tématu [Vytvoření a konfigurace datových sad](../../data-tools/create-and-configure-datasets-in-visual-studio.md).|
 |<xref:System.Windows.Forms.DataGridView>|Poskytuje výkonný a flexibilní způsob zobrazení dat v tabulkovém formátu.|
 |<xref:System.Windows.Forms.BindingSource>|Zjednodušuje proces vazby ovládacích prvků k základnímu zdroji dat.|
 |<xref:System.Windows.Forms.BindingNavigator>|Představuje navigační a manipulační uživatelské rozhraní (UI) pro ovládací prvky ve formuláři, které jsou svázané s daty.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přístup k datům v aplikaci Visual Studio](../../data-tools/accessing-data-in-visual-studio.md)
 - [Visual Studio Data Tools for .NET](../../data-tools/visual-studio-data-tools-for-dotnet.md)

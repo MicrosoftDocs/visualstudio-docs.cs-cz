@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0c0fcc99-673b-4ea0-a268-0475f66e5cb6
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: db91f8f5ccf86d67d01bb56a3a42b66757320500
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+manager: jmartens
+ms.openlocfilehash: 040ca84d5da9019da87f0dfddc89cfc6b1aa043e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442661"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964443"
 ---
 # <a name="create-custom-code-and-plug-ins-for-load-tests"></a>Vytvoření vlastního kódu a modulů plugin pro zátěžové testování
 
@@ -35,7 +35,7 @@ Vlastní modul plug-in používá kód, který píšete a připojujete k testu z
 |**Přidání funkcí uživatelského rozhraní do prohlížeče webového výkonu výsledky testů Viewer:** Pomocí doplňku sady Visual Studio můžete přidat další funkce uživatelského rozhraní do prohlížeče webového výkonu Výsledky testů Viewer.|-   [Postupy: vytvoření doplňku sady Visual Studio pro prohlížeč výsledků testu výkonnosti webu](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)|
 |**Vytvoření vlastního editoru těla protokolu http:** Můžete vytvořit vlastní editor pro úpravu binárních nebo řetězcových odpovědí HTTP XML z webové služby.|-   [Postupy: Vytvoření vlastního editoru těla protokolu HTTP pro Editor testu výkonnosti webu](../test/how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor.md)|
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Reference
 
 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin>
 

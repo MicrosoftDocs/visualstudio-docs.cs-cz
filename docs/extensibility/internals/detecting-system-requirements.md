@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 0ba94acf-bf0b-4bb3-8cca-aaac1b5d6737
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c4befcf3950c41beba2440e6f023983269137b1f
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 20287ba123c5736c9eb7077622623f4a739bde5c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329806"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963468"
 ---
 # <a name="detect-system-requirements"></a>Zjistit požadavky na systém
 VSPackage nemůže fungovat, pokud není nainstalována aplikace Visual Studio. Když použijete Microsoft Instalační služba systému Windows ke správě instalace VSPackage, můžete nakonfigurovat instalační program, aby zjistil, jestli je nainstalovaná aplikace Visual Studio. Můžete ji také nakonfigurovat tak, aby zkontrolovala, jestli v systému nejsou jiné požadavky, třeba na konkrétní verzi Windows nebo konkrétní velikost paměti RAM.
 
 ## <a name="detect-visual-studio-editions"></a>Zjistit edice sady Visual Studio
- Chcete-li zjistit, zda je nainstalována edice sady Visual Studio, ověřte, zda je **Install** hodnota klíč registru instalace *(REG_DWORD) 1* v příslušné složce, jak je uvedeno v následující tabulce. Všimněte si, že je v hierarchii edice sady Visual Studio:
+ Chcete-li zjistit, zda je nainstalována edice sady Visual Studio, ověřte, zda je  hodnota klíč registru instalace *(REG_DWORD) 1* v příslušné složce, jak je uvedeno v následující tabulce. Všimněte si, že je v hierarchii edice sady Visual Studio:
 
 1. Enterprise
 

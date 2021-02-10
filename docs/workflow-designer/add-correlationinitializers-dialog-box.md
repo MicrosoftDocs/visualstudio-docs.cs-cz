@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: c0517467-d54a-4ee6-aef0-c19b96b6f395
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e5822d1dc79835dd6fdcc3a70c3392dbd3d1aab
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: ca78cea409f559583507fd4b5b7c9fc43f9a5ffc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996354"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963728"
 ---
 # <a name="add-correlationinitializers-dialog-box"></a>Dialogové okno Přidat inicializátory korelace
 
@@ -32,7 +32,7 @@ Inicializátory korelace v kolekci určené pomocí tohoto dialogového okna mů
 
 Následující tabulka popisuje prvky uživatelského rozhraní (UI) v dialogovém okně **Přidat Inicializátory korelace** :
 
-|Prvek uživatelského rozhraní (UI)|Popis|
+|Prvek uživatelského rozhraní (UI)|Description|
 |-|-----------------|
 |**Přidat inicializátor**|Kliknutím na pole **přidat inicializaci** přidejte do kolekce další inicializátor.|
 |**Typ korelace**|Určuje typ inicializátoru korelace. Existují čtyři typy, ze kterých si můžete vybrat:<br /><br /> 1. inicializátor korelace zpětného volání pro určení <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer> .<br />2. inicializátor korelace kontextu pro určení <xref:System.ServiceModel.Activities.CorrelationInitializer> .<br />3. inicializátor korelace požadavek-odpověď pro určení <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> .<br />4. inicializátor korelace dotazu pro určení <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> .<br /><br /> Postup úpravy **CorrelationType**<br /><br /> 1. karta do konkrétního řádku v ovládacím prvku **Přidat inicializátor inicializátoru**<br />2. Pokud chcete nastavit fokus na **CorrelationTypeComboBox**, stiskněte **kombinaci kláves CTRL +** + **TAB**.<br />3. Kliknutím na tlačítko Alt + šipka dolů zobrazíte okno se **seznamem** a upravíte ho.|

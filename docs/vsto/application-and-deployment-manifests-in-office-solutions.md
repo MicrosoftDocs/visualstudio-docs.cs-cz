@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Office development in Visual Studio], updating
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9ca8cf2774b7a24ec3bef40418b6a2157bf0f992
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 584d2414235ca70bd8a8fbcb6d2b4e2a31a1828b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844709"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965743"
 ---
 # <a name="application-and-deployment-manifests-in-office-solutions"></a>Manifesty aplikací a nasazení v řešeních pro systém Office
   Manifest aplikace je soubor XML, který poskytuje informace používané řešením pro systém Office k vyhledání a aktualizaci jeho sestavení. Manifest aplikace lze použít s manifestem nasazení, což je soubor XML uložený na serveru, který poskytuje informace potřebné k vyhledání nejaktuálnější verze manifestu a sestavení aplikace.

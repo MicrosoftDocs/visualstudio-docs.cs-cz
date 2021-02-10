@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: bb87a322-bac4-4258-92bc-9a876f05d653
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a1ccab1eddf38e2f93cb00f1f5fdea6ce09f2f05
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 13722aa9968e21d4208ad5aa99fefe4c985ffb79
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328428"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963494"
 ---
 # <a name="design-xml-command-table-vsct-files"></a>Návrh souborů tabulek příkazů XML (. vsct)
 Soubor tabulky příkazů XML (*. vsct*) popisuje rozložení a vzhled položek příkazů pro VSPackage. Položky příkazů obsahují tlačítka, pole se seznamem, nabídky, panely nástrojů a skupiny položek příkazů. Tento článek popisuje soubory tabulek příkazů jazyka XML, jak ovlivňují položky příkazů a nabídky a jak je vytvořit.

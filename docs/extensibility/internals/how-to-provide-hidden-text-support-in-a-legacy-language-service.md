@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1c1dce9f-bbe2-4fc3-a736-5f78a237f4cc
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f51f8e0c5ca268c1171804f663e5d01bd7c2530
-ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
+ms.openlocfilehash: 0c4951e1f3fbaf63bf0638965a7dee2db7be8830
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761306"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965249"
 ---
 # <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>Postupy: poskytování podpory skrytého textu ve službě starší verze jazyka
 Kromě oblastí obrysů můžete vytvářet i skryté oblasti textu. Skryté textové oblasti mohou být řízeny klientem nebo editorem a používají se k úplnému skrytí oblasti textu. Editor zobrazuje skrytou oblast jako vodorovné čáry. Příkladem je zobrazení **pouze skriptu** v editoru HTML.

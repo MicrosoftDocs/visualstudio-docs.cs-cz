@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 1bb05441-c4ff-4323-9fef-f3924fba4430
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bd210f1d92245889be8d18156c43e0cad7ee3db
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 53d6dcc6cdc903f0050eeb326ebd3c5fa36252ae
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722916"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964742"
 ---
 # <a name="nameprofile"></a>NameProfile
 `NameProfile`Funkce přiřadí řetězec do zadaného procesu nebo vlákna.
@@ -51,7 +51,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 
   Označuje úroveň profilu, na kterou lze použít shromažďování dat výkonu. Následující hodnoty **PROFILE_CONTROL_LEVEL** lze použít k označení jedné ze tří úrovní, na které lze použít shromažďování dat výkonu:
 
-|Čítače|Popis|
+|Čítače|Description|
 |----------------|-----------------|
 |PROFILE_GLOBALLEVEL|Nastavení globální úrovně má vliv na všechny procesy a vlákna v rámci procesu profilace.|
 |PROFILE_PROCESSLEVEL|Nastavení na úrovni procesu ovlivňuje všechna vlákna, která jsou součástí zadaného procesu.|
@@ -64,7 +64,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 ## <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
  Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jedna z následujících:
 
-|Čítače|Popis|
+|Čítače|Description|
 |----------------|-----------------|
 |NAME_ERROR_ID_NOEXIST|Zadaný element profilace neexistuje.|
 |NAME_ERROR_INVALID_NAME|Název není platný.|

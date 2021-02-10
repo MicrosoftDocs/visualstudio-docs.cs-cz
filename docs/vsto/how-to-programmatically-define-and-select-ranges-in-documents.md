@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ranges, defining in documents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d1cc0475f7b25550b85018477d7c842f012445e2
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: e9c703f4d4e747934d1bab458b75a9d499f0d439
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528321"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963949"
 ---
 # <a name="how-to-programmatically-define-and-select-ranges-in-documents"></a>Postupy: definování a výběr oblastí v dokumentech prostřednictvím kódu programu
   Rozsah můžete definovat v systém Microsoft Office wordovém dokumentu pomocí <xref:Microsoft.Office.Interop.Word.Range> objektu. Celý dokument můžete vybrat několika různými způsoby, například pomocí <xref:Microsoft.Office.Interop.Word.Range.Select%2A> metody <xref:Microsoft.Office.Interop.Word.Range> objektu nebo pomocí vlastnosti Content <xref:Microsoft.Office.Tools.Word.Document> třídy (v přizpůsobení na úrovni dokumentu) nebo <xref:Microsoft.Office.Interop.Word.Document> třídy (v doplňku VSTO) (v doplňku VSTO).

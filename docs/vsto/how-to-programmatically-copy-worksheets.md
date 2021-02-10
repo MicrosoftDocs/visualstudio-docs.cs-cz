@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Excel [Office development in Visual Studio], copying worksheets
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d4b2f16cfc8855f2adff3a4614c38eb70fbe7db5
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 67bd9257e96b9c7e22dea2ca6af005ccc74637dc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524791"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964209"
 ---
 # <a name="how-to-programmatically-copy-worksheets"></a>Postupy: kopírování listů prostřednictvím kódu programu
   Můžete vytvořit kopii listu a vložit tento list před nebo za existující list v sešitu. Pokud nezadáte místo pro vložení listu, aplikace Excel vytvoří nový sešit, který bude obsahovat nový list.

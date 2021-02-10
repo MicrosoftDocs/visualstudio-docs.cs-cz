@@ -12,21 +12,21 @@ helpviewer_keywords:
 - Application page in Project Designer
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0b77ee4edca8f9cb8de2079e01d9c9997a24aeff
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 30f0951073214a70ec2865bce89426d0758b19cc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95871376"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965106"
 ---
 # <a name="application-page-project-designer-c"></a>Stránka Aplikace, návrhář projektu (C#)
 
 Použijte stránku **aplikace** **Návrháře projektu** k určení nastavení aplikace a vlastností projektu.
 
-Pro přístup ke stránce **aplikace** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte **Project**  >  **vlastnosti** projektu na řádku nabídek. Když se zobrazí **Návrhář projektu** , klikněte na kartu **aplikace** .
+Pro přístup ke stránce **aplikace** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte   >  **vlastnosti** projektu na řádku nabídek. Když se zobrazí **Návrhář projektu** , klikněte na kartu **aplikace** .
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
