@@ -18,15 +18,15 @@ helpviewer_keywords:
 - architecture [Office development in Visual Studio], document-level customizations
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a522446f9109d996088dff9389f267ef5ff39447
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: a101fa597764538c0a1c09e7b4e5de2c81606346
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845958"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948723"
 ---
 # <a name="architecture-of-document-level-customizations"></a>Architektura přizpůsobení na úrovni dokumentu
   [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] obsahuje projekty pro vytváření přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word a systém Microsoft Office Excel. Toto téma popisuje následující aspekty přizpůsobení na úrovni dokumentu:

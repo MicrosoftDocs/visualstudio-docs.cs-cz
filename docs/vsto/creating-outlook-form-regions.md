@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Outlook [Office development in Visual Studio], form regions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f3273c02416cac54dfd244ba4f163fb5d726413c
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: ba2c4412b344a37e1b1db74cdddea8c5b60b69d0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847959"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947890"
 ---
 # <a name="create-outlook-form-regions"></a>Vytvoření oblastí formuláře aplikace Outlook
   Oblasti formulářů můžete použít k přizpůsobení systém Microsoft Officech formulářů aplikace Outlook. Visual Studio poskytuje pokročilé nástroje, které usnadňují návrh, vývoj a ladění oblastí formuláře.
@@ -71,7 +71,7 @@ ms.locfileid: "96847959"
 
  Průvodce použijte k určení typu oblasti formuláře, kterou chcete vytvořit. Následující tabulka popisuje jednotlivé typy oblastí formuláře.
 
-|Typ oblasti|Popis|
+|Typ oblasti|Description|
 |-----------------|-----------------|
 |Jednotlivých|Přidá oblast formuláře jako novou stránku do formuláře aplikace Outlook.|
 |Přiléhající|Připojí oblast formuláře k dolnímu okraji výchozí stránky formuláře aplikace Outlook.|
@@ -153,7 +153,7 @@ ms.locfileid: "96847959"
 ### <a name="handle-form-region-events"></a><a name="HandlingFormRegionEvents"></a> Zpracování událostí oblasti formuláře
  Položka **oblasti formuláře aplikace Outlook** automaticky přidá následující tři obslužné rutiny události do souboru kódu oblasti formuláře.
 
-|Událost|Popis|
+|Událost|Description|
 |-----------|-----------------|
 |FormRegionInitializing|Vyvolá se před inicializací oblasti formuláře. Můžete kontrolovat podmínky v této obslužné rutině události a určit, zda má aplikace Outlook zobrazit oblast formuláře. Další informace najdete v tématu [Postup: zabránění zobrazení oblasti formuláře v aplikaci Outlook](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md).|
 |FormRegionShowing|Vyvolá se po vytvoření instance oblasti formuláře, ale před zobrazením této oblasti.|

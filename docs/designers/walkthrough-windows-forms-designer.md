@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Windows Forms Designer, get started
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: d4d3c0965d638c9e048cef29d7f1b535a54e54a5
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+manager: jmartens
+ms.openlocfilehash: 5803530290988affd6cfbb8342f3b1d545238985
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493475"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947843"
 ---
 # <a name="tutorial-get-started-with-windows-forms-designer"></a>Kurz: Začínáme s Návrhář formulářů
 
@@ -45,7 +45,7 @@ Prvním krokem je vytvoření projektu ovládacího prvku DemoCalculator.
 
    ::: moniker-end
 
-2. Chcete-li přejmenovat soubor, v **Průzkumník řešení** klikněte pravým tlačítkem myši na **UserControl1. vb** nebo **UserControl1.cs** , vyberte položku **Přejmenovat** a změňte název souboru na DemoCalculator. vb nebo DemoCalculator.cs. Pokud se zobrazí dotaz, zda chcete přejmenovat všechny odkazy na prvek kódu "UserControl1", vyberte možnost **Ano** .
+2. Chcete-li přejmenovat soubor, v **Průzkumník řešení** klikněte pravým tlačítkem myši na **UserControl1. vb** nebo **UserControl1.cs**, vyberte položku **Přejmenovat** a změňte název souboru na DemoCalculator. vb nebo DemoCalculator.cs. Pokud se zobrazí dotaz, zda chcete přejmenovat všechny odkazy na prvek kódu "UserControl1", vyberte možnost **Ano** .
 
 Návrhář formulářů zobrazuje plochu návrháře pro ovládací prvek DemoCalculator. V tomto zobrazení můžete graficky navrhovat vzhled ovládacího prvku výběrem ovládacích prvků a komponent z panelu nástrojů a jejich umístěním na plochu návrháře. Další informace o vlastních ovládacích prvcích naleznete v tématu [odrůdy vlastních ovládacích prvků](/dotnet/framework/winforms/controls/varieties-of-custom-controls).
 
@@ -221,9 +221,9 @@ Když se ovládací prvek nebo formulář naplní několika ovládacími prvky, 
 
    - Změňte vlastnost text ovládacího prvku sixButton na **6** .
 
-   - Změňte vlastnost text ovládacího prvku multiplicationButton na * *\** _ (hvězdička).
+   - Změnit vlastnost text ovládacího prvku multiplicationButton na **\*** (hvězdičku)
 
-   - Změňte vlastnost text ovládacího prvku oneButton na _ *1* .*
+   - Změňte vlastnost text ovládacího prvku oneButton na hodnotu **1** .
 
    - Změňte vlastnost text ovládacího prvku twoButton na **2** .
 

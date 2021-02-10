@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint projects, extending
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ae4c3c1e606fd436725ef9f54a4568b754b048af
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 8efeb704bb247e653af0ee062efcc71ad390c5ea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672636"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948658"
 ---
 # <a name="extend-sharepoint-projects"></a>Rozšiřování projektů SharePoint
   Vytvořte rozšíření projektu, pokud chcete upravit funkce na úrovni projektu v projektech SharePoint. Můžete například přidat vlastní vlastnosti projektu nebo reagovat na události na úrovni projektu, které jsou vyvolány, když uživatel vyvíjí řešení služby SharePoint v aplikaci Visual Studio.

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 24ba362e-5be1-481a-b071-e1ebd3cae6e8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7943addb4334710da3252a4d822330e45b6e0f80
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 149b3f4d474c0304fab26f9ff3f772440ae761ca
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80735307"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948332"
 ---
 # <a name="idebugbreakpointboundevent2"></a>IDebugBreakpointBoundEvent2
 Toto rozhraní oznamuje správci ladění relace (SDM), že nevyřízená zarážka byla úspěšně svázána s načteným programem.
