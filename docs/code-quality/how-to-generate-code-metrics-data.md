@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0387542487b2c24baa129fbb0163dee0140cb413
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aa0512e5d29cb1b5c5a39715e34667803b752795
+ms.sourcegitcommit: 04954be0c4373f82f79181e1a5e7812be4d3e1f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860035"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100496259"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Postupy: generování dat metrik kódu
 
@@ -279,7 +279,7 @@ Pokud balíček NuGet nechcete instalovat, můžete *Metrics.exe* spustitelný s
 1. Naklonujte úložiště [dotnet/Roslyn-analyzers](https://github.com/dotnet/roslyn-analyzers) .
 2. Otevřete Developer Command Prompt pro Visual Studio jako správce.
 3. Z kořenového adresáře úložiště **Roslyn-Analyzer** spusťte následující příkaz: `Restore.cmd`
-4. Změňte adresář na *src\Tools*.
+4. Změňte adresář na *src\Tools\Metrics*.
 5. Spuštěním následujícího příkazu Sestavte projekt **metriky. csproj** :
 
    ```shell
