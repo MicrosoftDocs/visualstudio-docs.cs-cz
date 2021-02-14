@@ -5,19 +5,19 @@ description: Seznam vydaných verzí a čísel sestavení pro sadu Visual Studio
 author: ornellaalt
 ms.author: ornella
 manager: jmartens
-ms.date: 2/9/2021
+ms.date: 2/10/2021
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: e79d14679d3e006a6e3d05fe03fbf98b18035317
-ms.sourcegitcommit: 0f3606917cf5451e8c4e0b2e0c3fbb9113429645
+ms.openlocfilehash: 21c74207df3026922d54837882c496f5f13f6530
+ms.sourcegitcommit: 15109ead7991f52092502518a6f4d9061cc22cd2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100089577"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100335241"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Čísla sestavení a data vydání sady Visual Studio
 
@@ -29,6 +29,8 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 | **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.4.19 | Vydat | 10. února 2021 | 16.4.31009.304 |
+| 16.7.12 | Vydat | 10. února 2021 | 16.7.31009.191 |
 | 16.8.5 | Vydat | 9. února 2021 | 16.8.31005.135 |
 | 16.9.0 | Preview 4 | 9. února 2021 | 16.9.31004.235 | 
 | 16.7.11 | Vydat | 9. února 2021 | 16.7.30928.143 |
@@ -208,6 +210,7 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 | **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.9.33 | Vydat | 10. února 2021 | 15.9.28307.1401 |
 | 15.9.32 | Vydat | 9. února 2021 | 15.9.28307.1382 |
 | 15.9.31 | Vydat | 12. ledna 2021 | 15.9.28307.1342 |
 | 15.9.30 | Vydat | 8\. prosince 2020 | 15.9.28307.1321 |

@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9915fdab1d4d0976a199a09a11c815e4966192a5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d7723a87471b8f76b9496fe8e7b01e56d1440ee2
+ms.sourcegitcommit: 15109ead7991f52092502518a6f4d9061cc22cd2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934647"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100335265"
 ---
 # <a name="remote-debugging-a-c-project-in-visual-studio"></a>Vzdálené ladění projektu C++ v aplikaci Visual Studio
 Chcete-li ladit aplikaci Visual Studio na jiném počítači, nainstalujte a spusťte nástroje Remote Tools v počítači, kde budete nasazovat aplikaci, nakonfigurujte projekt tak, aby se připojil ke vzdálenému počítači ze sady Visual Studio, a potom aplikaci nasaďte a spusťte.
@@ -99,7 +99,7 @@ Vzdálený ladicí program je podporován ve Windows 7 a novějších (ne v tele
     > [!TIP]
     > Případně můžete soubory nasadit jako samostatný krok. V **Průzkumník řešení** klikněte pravým tlačítkem na uzel **mymfc** a pak zvolte **nasadit**.
 
-    Pokud máte soubory bez kódu, které jsou vyžadovány aplikací, můžete je zadat v **dalších souborech k nasazení** na stránce **vzdáleného ladicího programu systému Windows** .
+    Pokud máte soubory bez kódu, které jsou vyžadovány aplikací, můžete je zadat v seznamu s **dalšími soubory, které mají být nasazeny** na stránce **vzdáleného ladicího programu systému Windows** .
 
     Alternativně můžete zahrnout soubory do projektu a nastavit vlastnost **obsah** na **hodnotu Ano** na stránce **vlastnosti** pro každý soubor. Tyto soubory jsou zkopírovány do **adresáře nasazení** zadaného na stránce **vzdáleného ladicího programu systému Windows** . Můžete také změnit **typ položky** na **Kopírovat soubor** a zadat další vlastnosti tam, kde potřebujete zkopírovat soubory do podsložky **adresáře nasazení**.
 
