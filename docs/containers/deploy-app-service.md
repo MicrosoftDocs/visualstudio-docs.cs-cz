@@ -7,14 +7,14 @@ manager: jmartens
 ms.technology: vs-azure
 ms.devlang: dotnet
 ms.topic: how-to
-ms.date: 01/27/2020
+ms.date: 02/21/2021
 ms.author: ghogen
-ms.openlocfilehash: 2e23658cfde1154f5b4df7ae7dade71b1569e35c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f9a4f26227d2cd3bd065fab88ba294f7341ea4ed
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859642"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684325"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Nasazení kontejneru ASP.NET Core pro Azure App Service pomocí sady Visual Studio
 
@@ -50,8 +50,8 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
 ::: moniker range=">= vs-2019"
 1. V okně Start sady Visual Studio vyberte možnost **vytvořit nový projekt**.
 1. Vyberte **ASP.NET Core webová aplikace** a klikněte na tlačítko **Další**.
-1. Dejte nové aplikaci název (nebo pojmenujte výchozí) a vyberte **vytvořit**.
-1. Vyberte možnost **Webová aplikace**.
+1. Dejte nové aplikaci název (nebo pojmenujte výchozí) a klikněte na tlačítko **Další**.
+1. Vyberte verzi rozhraní .NET, na kterou chcete cílit. Pokud si nejste jistí, vyberte verzi LTS (dlouhodobá podpora).
 1. Určete, jestli chcete, aby podpora SSL používala zaškrtávací políčko **Konfigurovat pro protokol HTTPS** .
 1. Zaškrtněte políčko **Povolit podporu Docker** .
 1. Vyberte typ kontejneru a klikněte na **vytvořit**.
@@ -65,13 +65,13 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
 1. V dialogovém okně Publikovat cíl vyberte možnost **App Service Linux** nebo **App Service**. Toto je operační systém, který bude hostitelem webového serveru.
 1. Můžete publikovat pouze pro App Service, nebo můžete publikovat do App Service a Azure Container Registry (ACR). Chcete-li publikovat kontejner v Azure Container Registry (ACR), vyberte možnost **vytvořit novou App Service pro kontejnery** a klikněte na tlačítko **publikovat**.
 
-   ![Snímek obrazovky s dialogovým oknem pro publikování](media/deploy-app-service/publish-app-service-linux.PNG)
+   ![Snímek obrazovky s dialogovým oknem pro publikování](media/deploy-app-service/publish-app-service-linux-1.png)
 
    Chcete-li publikovat pouze do Azure App Service bez použití Azure Container Registry, vyberte možnost **vytvořit nový** a klikněte na tlačítko **publikovat**.
 
 1. Ověřte, že jste přihlášeni pomocí účtu, který je přidružený k vašemu předplatnému Azure, a vyberte jedinečný název, předplatné, skupinu prostředků, plán hostování a registr kontejnerů (Pokud je k dispozici) nebo přijměte výchozí hodnoty.
 
-   ![Snímek obrazovky s nastavením publikování](media/deploy-app-service/publish-app-service-linux2.png)
+   ![Snímek obrazovky s nastavením publikování](media/deploy-app-service/publish-app-service-linux-2.png)
 
 1. Vyberte **vytvořit**. Váš kontejner se do Azure nasadí v rámci skupiny prostředků a registru kontejneru, který jste vybrali. Tento proces trvá trochu času. Po dokončení se na kartě **publikovat** zobrazí informace o tom, co bylo publikováno, včetně adresy URL webu.
 

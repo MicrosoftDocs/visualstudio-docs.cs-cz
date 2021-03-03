@@ -2,7 +2,7 @@
 title: Protokol změn (Visual Studio Tools for Unity, Windows) | Microsoft Docs
 description: Zobrazit protokol změn pro Visual Studio Tools for Unity, Windows. Viz změny od verze 1.0.0.0 až po 4.7.0.0 a vyšší.
 ms.custom: ''
-ms.date: 11/13/2020
+ms.date: 3/1/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,16 +12,76 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: e3b4b730608234b8d25b7ff4bf6b6fcfa25bec09
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 12a6e122d6193b7aa98cf27668dab201bbb86ce4
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671243"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683476"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>Protokol změn (Visual Studio Tools for Unity, Windows)
 
 Protokol změn Visual Studio Tools for Unity
+
+## <a name="4910"></a>4.9.1.0
+Vydáno 2. března 2021
+
+### <a name="new-features"></a>Nové funkce
+
+- **Hodnocení**
+
+  - Přidáno `Active Scene` do místních hodnot, kde se zobrazují kořenové herní objekty.
+
+  - Přidáno `this.gameObject` do místních hodnot, pokud je v nich široce používáme v projektech Unity.
+
+  - Přidány `Children` a `Components` seskupují všechny `GameObject` instance, abyste mohli snadno zobrazit celou hierarchii objektů.
+
+  - Přidáno `Scene Path` do všech `GameObject` instancí, aby se zobrazilo umístění ve scéně.
+
+  - Přidání podpory pro `JobEntityBatch` /Lambdas při použití entit se zdrojovými generátory
+
+  - Vylepšená podpora pro zobrazování velkých polí (pomocí kontejnerů indexů).
+  
+  - Pro rozhraní API 2019,4 se přidaly chybějící zprávy Unity.
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Spolupráci**
+
+  - Opravili jsme různé problémy uživatelského rozhraní pro jiné než CSYé jazyky.
+
+  - Pevné problémy se stabilitou s [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) diagnostikou.
+  
+- **Tém**
+
+  - Pevné problémy s odpojením virtuálního počítače při použití `Trace` metod.
+
+- **Hodnocení**
+
+  - Pevné Filtrování zastaralých vlastností vyvolává výjimky.
+
+## <a name="4900"></a>4.9.0.0
+Vydáno 20. ledna 2021
+
+### <a name="new-features"></a>Nové funkce
+
+- **Spolupráci**
+
+  - Přidání podpory pro `raytrace shaders` `UXML` soubory a `USS` .
+
+  - Byla přidána `.vsconfig` Podpora generování. Visual Studio by nyní mělo detekovat komponenty, které chybí, a zobrazí výzvu k jejich instalaci při použití projektů Unity.
+
+  - Aktualizované rozhraní API pro zprávy Unity (pro všechny metody používané jako korutiny).
+
+  - Bylo aktualizováno zjišťování Android SDK.
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Spolupráci**
+
+  - Při použití dialogového okna pro výběr instance se opravila aktualizace procesu.
+
+  - Opravená [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md) Diagnostika, která poskytuje chybná upozornění pro korutiny a `AssetPostprocessor.OnAssignMaterialModel` .
 
 ## <a name="4820"></a>4.8.2.0
 Vydáno 10. listopadu 2020

@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 582a412dbcac043e4a77c1508d385cc8caa4c64c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7fc8eeccdb020d07ff48965d9eb3d5df1dafa7da
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861643"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683549"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c-visual-basic"></a>Rychlý Start: Analýza dat využití procesoru v aplikaci Visual Studio (C#, Visual Basic)
 
@@ -45,12 +45,14 @@ Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnosti
 
    V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Dále v seznamu jazyk vyberte **C#** nebo **Visual Basic** a v seznamu platforma zvolte **Windows** .
 
-   Po použití filtrů jazyků a platforem zvolte šablonu **aplikace konzoly (.NET Core)** a pak zvolte možnost **Další**.
+   Až použijete filtry jazyka a platformy, zvolte šablonu **Konzolová aplikace** pro .NET Core a pak zvolte **Další**.
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **Konzolová aplikace (.NET Core)** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** . Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje .NET Core pro různé platformy** .
+   > Pokud nevidíte šablonu **konzolové aplikace** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** . Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje .NET Core pro různé platformy** .
 
-   V okně **Konfigurovat nový projekt** zadejte nebo zadejte *MyProfilerApp* do pole **název projektu** . Pak zvolte **vytvořit**.
+   V okně **Konfigurovat nový projekt** zadejte nebo zadejte *MyProfilerApp* do pole **název projektu** . Pak klikněte na tlačítko **Další**.
+
+   Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
 
    ::: moniker-end
 

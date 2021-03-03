@@ -15,12 +15,12 @@ manager: jmartens
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: 4b1d250ed5306ce101fd7482b740ad57514e4f0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4d001e89993b90f6e8b7b33f43a5c06a1ffd7cd1
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899424"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683321"
 ---
 # <a name="tutorial-debug-c-and-c-in-the-same-debugging-session"></a>Kurz: ladění C# a C++ ve stejné relaci ladění
 
@@ -126,9 +126,11 @@ Pokud máte nainstalovanou sadu Visual Studio, ale nemáte potřebné úlohy, vy
 1. Otevřete Visual Studio a vytvořte nový projekt.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte příkaz **Konzola**, zvolte **šablony** a pak zvolte **Konzolová aplikace (.net Core)** nebo **aplikace konzoly (.NET Framework)** pro C#. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte příkaz **Konzola**, zvolte **šablony** a pak zvolte **Konzolová aplikace** pro .NET Core nebo **konzolovou aplikaci (.NET Framework)** pro C#. V dialogovém okně, které se zobrazí, klikněte na tlačítko **Další**.
 
-    Pak zadejte název podobný **Mixed_Mode_Calling_App** a klikněte na **vytvořit**.
+    Pak zadejte název podobný **Mixed_Mode_Calling_App** a klikněte na tlačítko **Další** nebo **vytvořit**, podle toho, jaká možnost je k dispozici.
+
+    V případě .NET Core zvolte Doporučené cílové rozhraní (.NET Core 3,1) nebo .NET 5 a pak zvolte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
     V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte možnost **plocha systému Windows** a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)** nebo  **aplikace konzoly (.NET Core)**.
@@ -136,7 +138,7 @@ Pokud máte nainstalovanou sadu Visual Studio, ale nemáte potřebné úlohy, vy
     Pak zadejte název podobný **Mixed_Mode_Calling_App** a klikněte na **OK**.
     ::: moniker-end
 
-    Pokud nevidíte šablonu projektu **konzolové aplikace** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte úlohu **vývoj desktopových** aplikací pro .NET a pak zvolte **Upravit**.
+    Pokud nevidíte správnou šablonu projektu, přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. V závislosti na cílové architektuře zvolte úlohu pro **vývoj pro různé platformy .NET Core** nebo vývojové prostředí **.NET** , a pak zvolte **změnit**.
 
     > [!NOTE]
     > Můžete také přidat nový spravovaný projekt do stávajícího řešení jazyka C++. Vytváříme projekt v novém řešení, aby se úloha ladění v kombinovaném režimu obtížnější povedla.

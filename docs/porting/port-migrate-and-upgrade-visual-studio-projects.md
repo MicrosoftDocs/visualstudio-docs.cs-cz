@@ -1,7 +1,7 @@
 ---
 title: Přenos, migrace a upgrade projektů
 description: Odkaz na podporu projektů vytvořených v aktuální a dřívější verzi sady Visual Studio.
-ms.date: 11/26/2019
+ms.date: 03/02/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 8182f8982734bd0089d483c9acefc230c9baaa91
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 85d85b378de527f1ddbfab52f4a66ae475ee766a
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901321"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683392"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Referenční dokumentace k migraci a upgradu projektu pro Visual Studio
 
@@ -132,7 +132,7 @@ Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projd
 | Typ projektu | Podpora |
 | --- | --- |
 | Projekty .NET Core (xproj) | Projekty vytvořené pomocí sady Visual Studio 2015 používaly nástroje pro náhled, které obsahují soubor projektu xproj.<br/><br/>Visual Studio 2017: formát xproj není podporován jiným způsobem než pro migraci do formátu csproj. Když otevřete soubor xproj, budete vyzváni k migraci souboru do formátu sady SDK ve stylu csproj. (Záloha souboru xproj se provedla.) Projekty csproj ve stylu sady SDK nejsou podporovány v sadě Visual Studio 2015 a starších verzích. <br/><br/>Visual Studio 2019: ve verzi 16,3 a novější nelze načítat ani migrovat projekty xproj. Další informace naleznete v tématu [migrace projektů .NET Core do formátu csproj](/dotnet/core/migration/#visual-studio).|
-| Webová aplikace v ASP.NET a webová aplikace ASP.NET Core s povoleným Application Insights | Pro jednotlivé uživatele sady Visual Studio jsou informace o prostředcích uloženy v registru v rámci uživatelské instance. Tyto informace se používají, když uživatel nemá otevřený projekt a chce Hledat data v Azure Application Insights. Visual Studio 2015 používá jiné umístění registru než Visual Studio 2017 a Visual Studio 2019 a nekoliduje.<br/><br/>Jakmile uživatel vytvoří webovou aplikaci v ASP.NET nebo webovou aplikaci ASP.NET Core, prostředek je uložen v souboru. suo. Uživatel může projekt otevřít v aplikaci Visual Studio 2015, Visual Studio 2017 nebo Visual Studio 2019 a informace o prostředku se používají pro každý, pokud aplikace Visual Studio podporuje projekty a řešení používané v obou verzích. Uživatelé se musí jednou ověřit u každého produktu. Například pokud je projekt vytvořen pomocí sady Visual Studio 2017 a otevřen v aplikaci Visual Studio 2019, uživatel musí ověřovat v aplikaci Visual Studio 2019. |
+| ASP.NET Core webové aplikace a webová aplikace v ASP.NET Core s povoleným Application Insights | Pro jednotlivé uživatele sady Visual Studio jsou informace o prostředcích uloženy v registru v rámci uživatelské instance. Tyto informace se používají, když uživatel nemá otevřený projekt a chce Hledat data v Azure Application Insights. Visual Studio 2015 používá jiné umístění registru než Visual Studio 2017 a Visual Studio 2019 a nekoliduje.<br/><br/>Po vytvoření webové aplikace v ASP.NET, ASP.NET Core webové aplikace nebo ASP.NET Core webové aplikace je prostředek uložen v souboru. suo. Uživatel může projekt otevřít v aplikaci Visual Studio 2015, Visual Studio 2017 nebo Visual Studio 2019 a informace o prostředku se používají pro každý, pokud aplikace Visual Studio podporuje projekty a řešení používané v obou verzích. Uživatelé se musí jednou ověřit u každého produktu. Například pokud je projekt vytvořen pomocí sady Visual Studio 2017 a otevřen v aplikaci Visual Studio 2019, uživatel musí ověřovat v aplikaci Visual Studio 2019. |
 | Webový formulář nebo formulář Windows v jazyce C# nebo Visual Basic | Projekt můžete otevřít v aplikaci Visual Studio 2019, Visual Studio 2017 a Visual Studio 2015. |
 | Programový test uživatelského rozhraní | Programový test UI pro automatizované funkční testování založené na uživatelském rozhraní je v aplikaci Visual Studio 2019 zastaralé. <br/><br/>Visual Studio 2019 bude poslední verzí kódovaného testu uživatelského rozhraní. Pro testování webových aplikací a je appium pomocí WinAppDriver pro testování desktopových aplikací a aplikací pro UWP doporučujeme použít selen. |
 | Projekty testování částí databáze (csproj,. vbproj) | Starší projekty testů datových jednotek jsou načteny v aplikaci Visual Studio 2019, ale používají verzi GAC v rámci závislostí. Chcete-li upgradovat projekt testování částí tak, aby používal nejnovější závislosti, klikněte pravým tlačítkem na projekt v Průzkumník řešení a vyberte **převést na SQL Server testování částí projektu..**.. |

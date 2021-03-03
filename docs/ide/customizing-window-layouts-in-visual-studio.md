@@ -2,7 +2,7 @@
 title: Přizpůsobení rozložení oken
 description: Naučte se, jak přizpůsobit charakteristiky, které Windows vykazuje pro vytváření rozložení, která fungují nejlépe pro různé vývojové pracovní postupy.
 ms.custom: SEO-VS-2020
-ms.date: 07/31/2020
+ms.date: 03/02/2021
 ms.topic: conceptual
 f1_keywords:
 - vs.windows
@@ -25,12 +25,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f6983f9a4b16cc9ed6ece5779cfc44cd7ffa9259
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bd8859b98e54aa9692beaa98dd0f2c2ca70e2796
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910857"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101682578"
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Přizpůsobení rozložení oken v aplikaci Visual Studio
 
@@ -163,7 +163,17 @@ Nejprve vytvořte testovací řešení, které má dva projekty, z nichž každ�
 
 #### <a name="create-a-ui-project-and-customize-the-layout"></a>Vytvoření projektu uživatelského rozhraní a přizpůsobení rozložení
 
+::: moniker range="vs-2017"
+
 1. Vytvoří nový projekt **aplikace WPF** v C#. Představte si, že v tomto projektu budete vyvíjet uživatelské rozhraní. Chcete maximalizovat prostor pro okno návrháře a jiné okna nástrojů přesunout ze své.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. Vytvořte nový projekt **aplikace WPF** v jazyce C#. Představte si, že v tomto projektu budete vyvíjet uživatelské rozhraní. Chcete maximalizovat prostor pro okno návrháře a jiné okna nástrojů přesunout ze své.
+
+::: moniker-end
 
 2. Pokud máte více monitorů, přenesete okno **Průzkumník řešení** a okno **vlastnosti** do druhého monitoru. V jednom systému monitorování zkuste zavřít všechna okna kromě návrháře.
 

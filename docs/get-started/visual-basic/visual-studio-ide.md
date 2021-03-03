@@ -1,7 +1,7 @@
 ---
 title: Přehled Visual Basic vývojářů
 description: Přečtěte si, jak pomocí sady Visual Studio upravovat, ladit a sestavovat kód a pak publikovat aplikace jako vývojář Visual Basic.
-ms.date: 11/15/2018
+ms.date: 03/02/2021
 ms.technology: vs-ide-general
 ms.custom:
 - get-started
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3d771fac2cf494e92cbc27fdbdca0b78af97b67e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 398070e0214e36f696bb69614bb6a51b3462a551
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944391"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101682980"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio | Visual Basic
 
@@ -200,13 +200,13 @@ V této části vytvoříte jednoduchý projekt, abyste si vyzkoušeli některé
 
 ::: moniker range="vs-2017"
 
-Pokud chcete začít, [Stáhněte si Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte ho do svého systému. Modulární instalační program umožňuje zvolit a nainstalovat *úlohy*, které jsou skupiny funkcí, které jsou potřebné pro programovací jazyk nebo platformu, které dáváte přednost. Pokud chcete postupovat podle kroků pro [vytvoření programu](#create-a-program), nezapomeňte při instalaci vybrat úlohu **vývoje .NET Core pro různé platformy** .
+Pokud chcete začít, [Stáhněte si Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte ho do svého systému. Modulární instalační program umožňuje vybrat a nainstalovat *úlohy*, které jsou skupiny funkcí, které jsou potřebné pro programovací jazyk nebo platformu, které dáváte přednost. Pokud chcete postupovat podle kroků pro [vytvoření programu](#create-a-program), nezapomeňte při instalaci vybrat úlohu **vývoje .NET Core pro různé platformy** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Pokud chcete začít, [Stáhněte si Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte ho do svého systému. Modulární instalační program umožňuje zvolit a nainstalovat *úlohy*, které jsou skupiny funkcí, které jsou potřebné pro programovací jazyk nebo platformu, které dáváte přednost. Pokud chcete postupovat podle kroků pro [vytvoření programu](#create-a-program), nezapomeňte při instalaci vybrat úlohu **vývoje .NET Core pro různé platformy** .
+Pokud chcete začít, [Stáhněte si Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte ho do svého systému. Modulární instalační program umožňuje vybrat a nainstalovat *úlohy*, které jsou skupiny funkcí, které jsou potřebné pro programovací jazyk nebo platformu, které dáváte přednost. Pokud chcete postupovat podle kroků pro [vytvoření programu](#create-a-program), nezapomeňte při instalaci vybrat úlohu **vývoje .NET Core pro různé platformy** .
 
 ::: moniker-end
 
@@ -230,9 +230,10 @@ Postup pro změnu na **tmavý** motiv:
 
 ::: moniker range=">=vs-2019"
 
-1. Otevřete sadu Visual Studio. V okně Start vyberte možnost **pokračovat bez kódu**.
+1. Otevřete sadu Visual Studio. V okně Start vyberte **pokračovat bez kódu**.
 
-   ![Okno Start v aplikaci Visual Studio 2019](media/vs-2019/continue-without-code.png)
+
+    :::image type="content" source="media/vs-2019/continue-without-code.png" alt-text="Snímek obrazovky okna Start v aplikaci Visual Studio 2019 s zvýrazněným odkazem pokračovat bez kódu":::
 
    Otevře se rozhraní IDE.
 
@@ -240,7 +241,7 @@ Postup pro změnu na **tmavý** motiv:
 
 2. V panelu nabídek   >  otevřete dialogové okno **Možnosti** výběrem **Možnosti** nástroje.
 
-3. Na stránce   >  **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavý** a pak zvolte **OK**.
+3. Na stránce   >  **Obecné** možnosti prostředí změňte výběr **barevného motivu** na **tmavé** a pak klikněte na **OK**.
 
    ![Změnit barevný motiv na tmavý v aplikaci Visual Studio](media/change-color-theme.png)
 
@@ -264,13 +265,13 @@ Teď nakonfigurujeme Visual Studio tak, aby používalo nastavení prostředí, 
 
 1. Na řádku nabídek klikněte na **nástroje**  >  **importovat a exportovat nastavení**.
 
-2. V **Průvodci importem a exportem nastavení** vyberte **Obnovit všechna nastavení** na první stránce a pak zvolte **Další**.
+2. V **Průvodci importem a exportem nastavení** vyberte **Obnovit všechna nastavení** na první stránce a pak klikněte na **Další**.
 
-3. Na stránce **Uložit aktuální nastavení** vyberte možnost pro uložení aktuálního nastavení, nebo ne, a poté klikněte na tlačítko **Další**. (Pokud jste nepřizpůsobili žádné nastavení, vyberte možnost **Ne, pouze resetovat nastavení a přepsat aktuální nastavení**.)
+3. Na stránce **Uložit aktuální nastavení** vyberte možnost Uložit aktuální nastavení, nebo ne, a poté klikněte na tlačítko **Další**. (Pokud jste nepřizpůsobili žádné nastavení, vyberte možnost **Ne, pouze resetovat nastavení a přepsat aktuální nastavení**.)
 
-4. Na stránce **Výběr výchozí kolekce nastavení** zvolte **Visual Basic** a pak zvolte **Dokončit**.
+4. Na stránce **Výběr výchozí kolekce nastavení** zvolte **Visual Basic** a pak klikněte na **Dokončit**.
 
-5. Na stránce **obnovení dokončena** klikněte na tlačítko **Zavřít**.
+5. Na stránce **obnovení byla dokončena** klikněte na tlačítko **Zavřít**.
 
 Další informace o dalších způsobech přizpůsobení rozhraní IDE naleznete v tématu [přizpůsobení sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
 
@@ -344,21 +345,25 @@ Pojďme se podrobně a vytvořit jednoduchý program.
 
 ::: moniker range=">=vs-2019"
 
-1. Na panelu nabídek aplikace Visual Studio vyberte **soubor** > **Nový projekt**.
+1. Na panelu nabídek aplikace Visual Studio vyberte **soubor**  >  **Nový**  >  **projekt**. (Případně stiskněte klávesu **CTRL** + **Posun** + **N**.)
 
-   ![Soubor > nový projekt na řádku nabídek](media/vs-2019/file-new-project.png)
+    :::image type="content" source="media/vs-2019/file-new-project.png" alt-text="Snímek obrazovky souboru > nový > výběr projektu z řádku nabídek sady Visual Studio 2019.":::
 
-   Otevře se okno **vytvořit nový projekt** a zobrazí se několik *šablon* projektů. Šablona obsahuje základní soubory a nastavení potřebná pro daný typ projektu.
+   Otevře se okno **vytvořit nový projekt** a zobrazí se několik *šablon* projektů. Šablona obsahuje základní soubory a nastavení, které jsou požadovány pro daný typ projektu.
 
-1. Pokud chcete najít požadovanou šablonu, zadejte nebo zadejte do vyhledávacího pole **konzolu .NET Core** . Seznam šablon, které jsou k dispozici, se automaticky filtruje na základě klíčových slov, která jste zadali. Výsledky šablony můžete dál filtrovat volbou **Visual Basic** v rozevíracím seznamu **jazyk** .
+1. Pokud chcete najít požadovanou šablonu, zadejte nebo zadejte do vyhledávacího pole **konzolu .NET Core** . Seznam šablon, které jsou k dispozici, se automaticky filtruje na základě klíčových slov, která jste zadali. Výsledky šablony můžete dál filtrovat volbou **Visual Basic** v rozevíracím seznamu **všechny jazyky** , **Windows** ze seznamu **všechny platformy** a z **konzoly** ze seznamu **všechny typy projektů** .
 
-1. Vyberte šablonu **aplikace konzoly (.NET Core)** a klikněte na tlačítko **Další**.
+   Vyberte šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
 
-   ![Vytvoření nového projektu v aplikaci Visual Studio](media/vs-2019/create-new-project.png)
+    :::image type="content" source="media/vs-2019/create-new-project.png" alt-text="Snímek obrazovky okna vytvořit nový projekt v aplikaci Visual Studio 2019, kde můžete vybrat požadovanou šablonu.":::
 
-1. V okně **Konfigurovat nový projekt** zadejte do pole **název projektu** **HelloWorld** a volitelně změňte umístění adresáře pro soubory projektu a pak zvolte **vytvořit**.
+1. V okně **Konfigurovat nový projekt** zadejte do pole **název projektu** **HelloWorld** a volitelně změňte umístění adresáře pro soubory projektu (výchozí národní prostředí je `C:\Users\<name>\source\repos` ) a pak klikněte na **Další**.
 
-   ![Konfigurace nového projektu v aplikaci Visual Studio](media/vs-2019/configure-new-project.png)
+    :::image type="content" source="media/vs-2019/configure-new-project.png" alt-text="Snímek obrazovky okna Konfigurovat nový projekt v aplikaci Visual Studio 2019, kde zadáte název projektu":::
+
+1. V okně **Další informace** ověřte, že se v rozevírací nabídce **cílové** rozhraní zobrazí **.NET Core 3,1** a pak klikněte na **vytvořit**.
+
+    :::image type="content" source="media/vs-2019/create-project-additional-info.png" alt-text="Snímek obrazovky okna Další informace v aplikaci Visual Studio 2019, kde můžete vybrat požadovanou verzi rozhraní .NET Core.":::
 
    Visual Studio vytvoří projekt. Jedná se o jednoduchou aplikaci "Hello World", která volá <xref:System.Console.WriteLine?displayProperty=nameWithType> metodu pro zobrazení řetězcového literálu "Hello World!" v okně konzoly (programový výstup).
 

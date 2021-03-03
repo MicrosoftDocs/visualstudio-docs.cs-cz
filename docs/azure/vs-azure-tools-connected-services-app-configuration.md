@@ -9,21 +9,23 @@ ms.topic: how-to
 ms.date: 12/11/2020
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: a0db2f2e4993fcc3c986686322b8915615758e13
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 250b89c983da039717982b31873a470172bde0f5
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727291"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683294"
 ---
 # <a name="adding-azure-app-configuration-by-using-visual-studio-connected-services"></a>Přidání konfigurace aplikace Azure pomocí připojených služeb sady Visual Studio
 
-V tomto kurzu se naučíte, jak snadno přidat všechno, co potřebujete, abyste mohli začít používat Azure App Configuration ke správě příznaků konfigurace a funkcí pro webové projekty v aplikaci Visual Studio bez ohledu na to, jestli používáte ASP.NET Core nebo jakýkoli typ projektu ASP.NET. Pomocí funkce připojené služby v aplikaci Visual Studio může Visual Studio automaticky přidat všechny kódy, balíčky NuGet a nastavení konfigurace, která potřebujete připojit k prostředku konfigurace aplikace v Azure. Chcete-li použít tuto funkci, musíte použít Visual Studio 2019 verze 16,9 nebo novější.
+V tomto kurzu se naučíte, jak snadno přidat všechno, co potřebujete k tomu, abyste mohli začít používat Azure App Configuration ke správě příznaků konfigurace a funkcí pro webové projekty v aplikaci Visual Studio. Pomocí funkce připojené služby v aplikaci Visual Studio může Visual Studio automaticky přidat všechny kódy, balíčky NuGet a nastavení konfigurace, která potřebujete připojit k prostředku konfigurace aplikace v Azure. Chcete-li použít tuto funkci, musíte použít Visual Studio 2019 verze 16,9 nebo novější.
+
+Funkci konfigurace aplikace připojené služby můžete použít v ASP.NET Core, konzole .NET Core a v projektech .NET Framework.
 
 > [!NOTE]
 > Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [připojené služby v Visual Studio pro Mac](/visualstudio/mac/connected-services).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Visual Studio s nainstalovanou úlohou Azure
 - Projekt jednoho z podporovaných typů

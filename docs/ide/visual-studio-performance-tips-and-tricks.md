@@ -2,19 +2,19 @@
 title: Tipy pro zlepšení výkonu
 description: Naučte se optimalizovat některé funkce sady Visual Studio, které nemusíte používat, aby bylo možné lépe vylepšit výkon.
 ms.custom: SEO-VS-2020
-ms.date: 12/14/2020
+ms.date: 03/02/2021
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e53a2e3b1a65e496b4ead3d3bca0e8b0254c39e0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e2187426fbd2e8892d41672c1cf682ed0b93592
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873863"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683773"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Tipy a triky pro výkon sady Visual Studio
 
@@ -142,6 +142,10 @@ Informace o požadavcích na výkon .NET Compiler Platform (Roslyn) najdete v t�
 - **Odebrat úlohy**
 
     Pomocí Instalační program pro Visual Studio můžete odebrat úlohy, které se už nepoužívají. Tato akce může zjednodušit náklady na spuštění a za běhu tím, že přeskočí balíčky a sestavení, které už nepotřebujete.
+
+- **Přidat Nesledované soubory do souboru Local. gitignore**
+
+    Visual Studio spustí příkaz git `git status` s nesledovanými soubory, aby poskytoval bezproblémové prostředí při přidávání nových souborů do úložiště. Pokud existuje velký počet nesledovaných souborů, `git status` může spotřebovávat dodatečnou paměť. Chcete-li tyto soubory ignorovat a zvýšit výkon nástroje `git status` , můžete do místního souboru. gitignore přidat tyto soubory nebo složky. Přístup k souboru získáte tak, že přejdete na nastavení **Git** nastavení  >    >  **úložiště Git**. Pak v části **soubory Git** klikněte na **Přidat** a vytvořte soubor. gitignore, nebo klikněte na **Upravit** , pokud ho už máte.
 
 ## <a name="force-a-garbage-collection"></a>Vynutit uvolňování paměti
 

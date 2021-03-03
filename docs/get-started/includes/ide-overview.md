@@ -1,17 +1,17 @@
 ---
-ms.date: 09/22/2020
+ms.date: 03/02/2021
 ms.technology: vs-ide-general
 ms.custom: vs-get-started
 ms.author: tglee
 author: TerryGLee
 manager: jmartens
 ms.topic: include
-ms.openlocfilehash: afc0466e93b8bf2a71db42c08cd2e043107e3bc5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e36fe11b5eb604a9b109432047da9a3c26df414
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924998"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101750441"
 ---
 *Integrované vývojové prostředí* sady Visual Studio je kreativní spouštěcí panel, který můžete použít k úpravám, ladění a vytváření kódu a pak k publikování aplikace. Integrované vývojové prostředí (IDE) je program s bohatou funkcí, který se dá použít pro mnoho aspektů vývoje softwaru. Nad rámec a nad standardním editorem a ladicím programem, který využívá většina IDEs, Visual Studio obsahuje kompilátory, nástroje pro dokončování kódu, grafické návrháře a mnoho dalších funkcí, které usnadňují proces vývoje softwaru.
 
@@ -237,17 +237,23 @@ Pojďme se podrobně a vytvořit jednoduchý program.
 
 1. Vyberte **vytvořit nový projekt**.
 
-   ![Úvodní okno sady Visual Studio – vytvořit nový projekt](../media/vs-2019/start-window-create-new-project.png)
+    :::image type="content" source="../media/vs-2019/start-window-create-new-project.png" alt-text="Snímek obrazovky okna vytvořit nový projekt v aplikaci Visual Studio 2019":::
 
-   Otevře se okno **vytvořit nový projekt** a zobrazí se několik *šablon* projektů. Šablona obsahuje základní soubory a nastavení potřebná pro daný typ projektu.
+   Otevře se okno **vytvořit nový projekt** a zobrazí se několik *šablon* projektů. Šablona obsahuje základní soubory a nastavení, které jsou požadovány pro daný typ projektu.
 
-1. Pokud chcete najít požadovanou šablonu, zadejte nebo zadejte do vyhledávacího pole **konzolu .NET Core** . Seznam šablon, které jsou k dispozici, se automaticky filtruje na základě klíčových slov, která jste zadali. Výsledky šablony můžete dál filtrovat volbou **C#** v rozevíracím seznamu **jazyk** . Vyberte šablonu **aplikace konzoly (.NET Core)** a klikněte na tlačítko **Další**.
+1. Pokud chcete najít požadovanou šablonu, zadejte nebo zadejte do vyhledávacího pole **konzolu .NET Core** . Seznam šablon, které jsou k dispozici, se automaticky filtruje na základě klíčových slov, která jste zadali. Výsledky šablony můžete dále filtrovat volbou **C#** z rozevíracího seznamu **všechny jazyky** , **Windows** ze seznamu **všechny platformy** a **konzoly** ze seznamu **všechny typy projektů** .
 
-    ![Vytvoření nového projektu v aplikaci Visual Studio](../media/vs-2019/create-new-project.png)
+    Vyberte šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
 
-1. V okně **Konfigurovat nový projekt** zadejte do pole **název projektu** **HelloWorld** a volitelně změňte umístění adresáře pro soubory projektu a pak zvolte **vytvořit**.
+    :::image type="content" source="../media/vs-2019/create-new-project.png" alt-text="Snímek obrazovky okna vytvořit nový projekt v aplikaci Visual Studio 2019, kde můžete vybrat požadovanou šablonu.":::
 
-   ![Konfigurace nového projektu v aplikaci Visual Studio](../media/vs-2019/configure-new-project.png)
+1. V okně **Konfigurovat nový projekt** zadejte do pole **název projektu** **HelloWorld** a volitelně změňte umístění adresáře pro soubory projektu (výchozí národní prostředí je `C:\Users\<name>\source\repos` ) a pak klikněte na **Další**.
+
+    :::image type="content" source="../media/vs-2019/configure-new-project.png" alt-text="Snímek obrazovky okna Konfigurovat nový projekt v aplikaci Visual Studio 2019, kde zadáte název projektu":::
+
+1. V okně **Další informace** ověřte, že se v rozevírací nabídce **cílové** rozhraní zobrazí **.NET Core 3,1** a pak klikněte na **vytvořit**.
+
+    :::image type="content" source="../media/vs-2019/create-project-additional-info.png" alt-text="Snímek obrazovky okna Další informace v aplikaci Visual Studio 2019, kde můžete vybrat požadovanou verzi rozhraní .NET Core.":::
 
    Visual Studio vytvoří projekt. Jedná se o jednoduchou aplikaci "Hello World", která volá <xref:System.Console.WriteLine?displayProperty=nameWithType> metodu pro zobrazení řetězcového literálu "Hello World!" v okně konzoly (programový výstup).
 

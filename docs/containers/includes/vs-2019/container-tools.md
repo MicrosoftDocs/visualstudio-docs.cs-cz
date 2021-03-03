@@ -3,20 +3,20 @@ title: Visual Studio Tools for Docker s ASP.NET
 author: ghogen
 description: Naučte se používat nástroje sady Visual Studio 2019 a Docker for Windows
 ms.author: ghogen
-ms.date: 02/01/2019
+ms.date: 02/22/2021
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: fc549951e9c6b6d208c478f37126238e91f6f039
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3a2c0d9ac31857fb2389455b0262373414981c5b
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88186325"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101750763"
 ---
 Pomocí sady Visual Studio můžete snadno sestavovat, ladit a spouštět aplikace s podporou aplikací .NET, ASP.NET a ASP.NET Core a publikovat je do Azure Container Registry (ACR), Docker Hub, Azure App Service nebo vlastního registru kontejneru. V tomto článku publikujeme aplikaci ASP.NET Core do ACR.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) s nainstalovanou úlohou **vývoje pro web**, úlohy **nástrojů Azure** a/nebo **.NET Core pro vývoj pro různé platformy**
@@ -29,10 +29,10 @@ Pro instalaci Docker si nejdřív přečtěte informace v části [Docker Deskto
 
 ## <a name="add-a-project-to-a-docker-container"></a>Přidání projektu do kontejneru Docker
 
-1. Vytvořte nový projekt pomocí šablony **ASP.NET Core webové aplikace** , nebo pokud chcete použít .NET Framework namísto .NET Core, vyberte **ASP.NET webová aplikace (.NET Framework)**.
-1. Vyberte **Webová aplikace**a ujistěte se, že je zaškrtnuté políčko **Povolit podporu Docker** .
+1. Vytvořte nový projekt pomocí šablony **ASP.NET Core webové aplikace** , nebo pokud chcete použít .NET Framework místo .NET Core, vyberte **ASP.NET webová aplikace (.NET Framework)**.
+1. Na obrazovce **Další informace** se ujistěte, že je zaškrtnuté políčko **Povolit podporu Docker** .
 
-   ![Zaškrtávací políčko Povolit podporu Docker](../../media/container-tools/vs-2019/create-new-web-application.PNG)
+   ![Zaškrtávací políčko Povolit podporu Docker](../../media/container-tools/vs-2019/webapp-additional-information-31-docker.png)
 
    Snímek obrazovky ukazuje .NET Core; Pokud používáte .NET Framework, vypadá to trochu odlišně.
 
@@ -40,7 +40,7 @@ Pro instalaci Docker si nejdřív přečtěte informace v části [Docker Deskto
 
 ## <a name="dockerfile-overview"></a>Souboru Dockerfile – přehled
 
-*Souboru Dockerfile*je v projektu vytvořen recept pro vytvoření finální image Docker. Porozumění příkazům, které jsou v něm, najdete v [referenčních informacích k souboru Dockerfile](https://docs.docker.com/engine/reference/builder/) :
+*Souboru Dockerfile* je v projektu vytvořen recept pro vytvoření finální image Docker. Porozumění příkazům, které jsou v něm, najdete v [referenčních informacích k souboru Dockerfile](https://docs.docker.com/engine/reference/builder/) :
 
 ```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1903 AS base
@@ -106,19 +106,19 @@ Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit prov
 
    ![Snímek obrazovky dialogového okna pro publikování – vyberte vytvořit novou Azure Container Registry](../../media/container-tools/vs-2019/select-existing-or-create-new-azure-container-registry.png)
 
-1. Do pole **vytvořit nový Azure Container Registry**zadejte požadované hodnoty.
+1. Do pole **vytvořit nový Azure Container Registry** zadejte požadované hodnoty.
 
     | Nastavení      | Navrhovaná hodnota  | Popis                                |
     | ------------ |  ------- | -------------------------------------------------- |
     | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
     | **Předplatné** | Zvolte vaše předplatné. | Předplatné Azure, které se má použít. |
     | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, zvolte **Nová**.|
-    | **[Skladová jednotka (SKU)](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
+    | **[SKU](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
     | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
 
     ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio][0]
 
-1. Klikněte na možnost **Vytvořit**. Dialog **publikovat** teď zobrazuje vytvořený registr.
+1. Klikněte na **Vytvořit**. Dialog **publikovat** teď zobrazuje vytvořený registr.
 
    ![Snímek obrazovky s dialogem pro publikování zobrazující Azure Container Registry vytvořené](../../media/container-tools/vs-2019/created-azure-container-registry.png)
 

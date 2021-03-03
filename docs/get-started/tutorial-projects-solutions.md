@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7172ca8c5341dbaee59ae5b2635da9c5585793cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fe3eaf3c5efcc8341613e9f223d22410111a548f
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838731"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101682597"
 ---
 # <a name="introduction-to-projects-and-solutions"></a>Seznámení s projekty a řešení
 
@@ -189,9 +189,14 @@ Pojďme do našeho řešení přidat projekt testování částí. Tentokrát za
 
 2. V dialogovém okně **Přidat nový projekt** zadejte do vyhledávacího pole v horní části text **testu jednotek** a potom v části **jazyk** vyberte **C#** .
 
-3. Vyberte šablonu projektu **projekt testů MSTest (.NET Core)** a pak vyberte **Další**.
+3. Vyberte šablonu projektu **projekt testů jednotek** pro .NET Core a pak vyberte **Další**.
 
-4. Pojmenujte projekt **QuickTest** a pak vyberte **vytvořit**.
+   > [!NOTE]
+   > Počínaje verzí Visual Studio 2019 verze 16,9 se název šablony projektu MSTest změnil z **projektu testu jednotek MSTest (.NET Core)** na **test jednotek projektu**. V této aktualizaci se změnilo několik kroků v vytváření projektu.
+
+4. Pojmenujte projekt **QuickTest** a pak vyberte **Další**.
+
+5. Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
 
    Druhý projekt je přidán do **Průzkumník řešení** a v editoru se otevře soubor s názvem *UnitTest1.cs* .
 

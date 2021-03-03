@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 52281c403ceb0f2708aa546cbd73559593c419be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 338e53d576e9f4d73b32c3f432223480d9e708c3
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942825"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683932"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Vytvoření aplikace Vue.js pomocí nástrojů Node.js pro Visual Studio
 
@@ -68,20 +68,22 @@ V tomto příkladu použijete prázdnou ASP.NET Core aplikaci (C#). Můžete si 
 
 #### <a name="create-an-empty-project"></a>Vytvořit prázdný projekt
 
-1. Otevřete Visual Studio a vytvořte nový projekt.
+* Otevřete Visual Studio a vytvořte nový projekt.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **ASP.NET** a pak zvolte **vytvořit novou ASP.NET Core webovou aplikaci**. V dialogovém okně, které se zobrazí, zadejte název **klient-aplikace** a pak zvolte **vytvořit**.
+    V aplikaci Visual Studio 2019 v okně Start vyberte možnost **vytvořit nový projekt** . Pokud okno Start není otevřeno, klikněte **na tlačítko**  >  **Start okna**. Zadejte **Web App**, jako jazyk vyberte **C#** , zvolte **ASP.NET Core prázdné** a pak zvolte **Další**. Na další obrazovce pojmenujte projekt **klient-aplikace** a klikněte na tlačítko **Další**.
+
+    Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
     V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **Visual C#** a pak zvolte možnost **Web**. V prostředním podokně vyberte **ASP.NET Core webová aplikace**, zadejte název **klient-aplikace** a klikněte na **tlačítko OK**.
+
+    Vyberte **prázdné** a pak klikněte na **OK**.
+
+    Visual Studio vytvoří projekt, který se otevře v Průzkumník řešení (pravé podokno).
     ::: moniker-end
 
     Pokud nevidíte šablonu projektu **ASP.NET Core webové aplikace** , musíte nainstalovat úlohu **vývoje ASP.NET a webu** a. Nejprve úlohu vývoje **.NET Core** . Chcete-li nainstalovat úlohy, klikněte na odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** (vyberte **soubor**  >  **Nový**  >  **projekt**). Spustí se instalační program pro Visual Studio. Vyberte požadované úlohy.
-
-1. Vyberte **prázdné** a pak klikněte na **OK**.
-
-    Visual Studio vytvoří projekt, který se otevře v Průzkumník řešení (pravé podokno).
 
 #### <a name="configure-the-project-startup-file"></a>Konfigurace spouštěcího souboru projektu
 

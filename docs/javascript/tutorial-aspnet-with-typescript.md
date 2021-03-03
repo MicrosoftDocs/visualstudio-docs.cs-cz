@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: c28355e4097dc014f4757788f175ea80850a3f63
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 411fbd757eb063202136eba5c1e5fbec27f56523
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960426"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683637"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Kurz: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu v aplikaci Visual Studio
 
@@ -69,18 +69,18 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET C
 1. Vytvoření nového projektu
 
     ::: moniker range=">=vs-2019"
-    Pokud okno Start není otevřeno, klikněte **na tlačítko**  >  **Start okna**. V okně Start vyberte možnost **vytvořit nový projekt**. V rozevíracím seznamu jazyk vyberte **C#**. Do vyhledávacího pole zadejte **ASP.NET** a pak zvolte **ASP.NET Core webová aplikace**. Zvolte **Další**.
+    V aplikaci Visual Studio 2019 v okně Start vyberte možnost **vytvořit nový projekt** . Pokud okno Start není otevřeno, klikněte **na tlačítko**  >  **Start okna**. Zadejte **Web App**, jako jazyk vyberte **C#** a pak zvolte **ASP.NET Core webová aplikace (model-zobrazení-kontroler)** a pak zvolte **Další**. Na další obrazovce pojmenujte projekt a klikněte na tlačítko **Další**.
 
-    Zadejte název projektu a klikněte na **vytvořit**.
+    Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
     V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **Visual C#** a pak zvolte možnost **.NET Core**. V prostředním podokně zvolte **ASP.NET Core webová aplikace – C#** a pak zvolte **OK**.
+
+    V dialogovém okně, které se zobrazí, vyberte možnost **Webová aplikace (model-zobrazení-kontroler)** v dialogovém okně a pak zvolte možnost **vytvořit** (nebo **OK**).
+
+    ![Zvolit šablonu MVC](../javascript/media/aspnet-core-ts-mvc-template.png)
     ::: moniker-end
     Pokud nevidíte šablonu projektu **ASP.NET Core webové aplikace** , je nutné přidat úlohu **vývoje webu ASP.NET a web** . Podrobné pokyny najdete v části [požadavky](#prerequisites).
-
-1. V dialogovém okně, které se zobrazí, vyberte možnost **Webová aplikace (model-zobrazení-kontroler)** v dialogovém okně a pak zvolte možnost **vytvořit** (nebo **OK**).
-
-   ![Zvolit šablonu MVC](../javascript/media/aspnet-core-ts-mvc-template.png)
 
     Visual Studio vytvoří nové řešení a otevře projekt v pravém podokně.
 

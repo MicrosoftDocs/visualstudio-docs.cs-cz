@@ -8,12 +8,12 @@ ms.workload: azure-vs
 ms.date: 03/18/2017
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 2471b79c7401d63b9655586fc4745d3977d37275
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 12b327c65b83acde09eeac748d614ca560f3e012
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844226"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683089"
 ---
 # <a name="learn-the-various-ways-to-debug-an-azure-cloud-service"></a>Různé způsoby ladění cloudové služby Azure
 Tento článek obsahuje odkazy na různé způsoby ladění cloudové služby Azure.

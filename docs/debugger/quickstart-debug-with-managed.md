@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 061e667196ce1577206ad76939e20daf3db131c0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f790d30dc97d5549737c3c1cd003086477ce984f
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840883"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683008"
 ---
 # <a name="quickstart-debug-with-c-or-visual-basic-using-the-visual-studio-debugger"></a>Rychlý Start: ladění pomocí jazyka C# nebo Visual Basic pomocí ladicího programu sady Visual Studio
 
@@ -28,13 +28,21 @@ Ladicí program sady Visual Studio poskytuje mnoho výkonných funkcí, které v
 1. Otevřete Visual Studio a vytvořte nový projekt.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **kombinace kláves CTRL + Q** otevřete vyhledávací pole, zadejte příkaz **Konzola**, zvolte možnost **šablony** a zvolte možnost **vytvořit nový projekt Konzolová aplikace (.NET Core)**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    Pokud okno Start není otevřeno, klikněte **na tlačítko**  >  **Start okna**. V okně Start vyberte možnost **vytvořit nový projekt**.
+
+    V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Potom v seznamu jazyk vyberte **C#** a pak v seznamu platforma zvolte **Windows** .
+
+    Až použijete filtry jazyka a platformy, zvolte šablonu **Konzolová aplikace** pro .NET Core a pak zvolte **Další**.
+
+    Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
+
+    Pokud nevidíte šablonu projektu **konzolové aplikace** pro .NET Core, přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
     V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte **.NET Core** a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Core)**. Pak zadejte název jako **MyDbgApp** a klikněte na **OK**.
-    ::: moniker-end
 
-     Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte úlohu **vývoj desktopových** aplikací pro .NET a **.NET Core** a pak zvolte **Upravit**.
+    Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
+    ::: moniker-end
 
     Visual Studio vytvoří projekt.
 
@@ -155,17 +163,17 @@ Aplikace pokračuje v provádění, volání `doWork` a pozastavení na řádku 
 
 Mezi běžné klávesové příkazy použité pro krokování kódu patří **F10** a **F11**. Podrobné pokyny najdete v tématu [první pohled na ladicí program](../debugger/debugger-feature-tour.md).
 
-## <a name="inspect-variables-in-a-datatip"></a>Kontrola proměnných v DataTip
+## <a name="inspect-variables-in-a-data-tip"></a>Kontrola proměnných v popisku dat
 
-1. V aktuálním řádku kódu (označeného žlutým ukazatelem spuštění) umístěte ukazatel `c1` myši na objekt pomocí myši, aby se zobrazila DataTip.
+1. V aktuálním řádku kódu (označeného žlutým ukazatelem spuštění) umístěte ukazatel `c1` myši na objekt pomocí myši, aby se zobrazil Tip pro data.
 
-    ![Zobrazit DataTip](../debugger/media/dbg-qs-data-tip-csharp.png "Zobrazit DataTip")
+    ![Zobrazit Tip pro data](../debugger/media/dbg-qs-data-tip-csharp.png "Zobrazit Tip pro data")
 
-    DataTip zobrazí aktuální hodnotu `c1` proměnné a umožní vám zkontrolovat její vlastnosti. Pokud se při ladění zobrazí hodnota, kterou neočekáváte, pravděpodobně máte chybu v předchozím nebo volajícím řádku kódu.
+    Datový tip zobrazuje aktuální hodnotu `c1` proměnné a umožňuje zkontrolovat její vlastnosti. Pokud se při ladění zobrazí hodnota, kterou neočekáváte, pravděpodobně máte chybu v předchozím nebo volajícím řádku kódu.
 
-2. Rozbalte DataTip a podívejte se na aktuální hodnoty vlastností `c1` objektu.
+2. Rozbalte tip data a podívejte se na aktuální hodnoty vlastností `c1` objektu.
 
-3. Pokud chcete DataTip připnout, abyste mohli i nadále vidět hodnotu `c1` při spouštění kódu, klikněte na ikonu malého kódu PIN. (Připnuté DataTip můžete přesunout do pohodlného umístění.)
+3. Pokud chcete špičku dat připnout, abyste mohli i nadále vidět hodnotu `c1` při spouštění kódu, klikněte na ikonu malého kódu PIN. (Popis připnutých dat můžete přesunout do vhodného umístění.)
 
 ## <a name="edit-code-and-continue-debugging"></a>Úprava kódu a pokračování ladění
 

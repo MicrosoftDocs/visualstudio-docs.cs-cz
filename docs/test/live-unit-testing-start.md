@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: ea87135b1f60c7ae65a8bc25399604151ab2fcee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d411465869cc960631063d09752d38536af94119
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887806"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683612"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Začínáme s funkcí Live Unit Testing
 
@@ -113,20 +113,26 @@ Dalším krokem je vytvoření projektu testu jednotek pro otestování knihovny
 
 4. Vyberte **OK** a vytvořte projekt.
 
+   > [!NOTE]
+   > Tento kurz Začínáme používá Live Unit Testing s testovacím rozhraním MSTest. Můžete také použít testovací architektury xUnit a NUnit.
+
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Do vyhledávacího pole šablony zadejte **test jednotek** a vyberte šablonu **projekt testů MSTest (.NET Core)** . Klikněte na **Next** (Další).
+2. Do pole hledání šablony zadejte **test jednotek** , jako jazyk vyberte **C#** a potom vyberte **projekt testování částí** pro šablonu .NET Core. Klikněte na **Next** (Další).
 
-3. Pojmenujte projekt **StringLibraryTests**.
+   > [!NOTE]
+   > Počínaje verzí Visual Studio 2019 verze 16,9 se název šablony projektu MSTest změnil z **projektu testu jednotek MSTest (.NET Core)** na **test jednotek projektu**.
 
-4. Kliknutím na **vytvořit** vytvořte projekt.
+3. Pojmenujte projekt **StringLibraryTests** a klikněte na **Další**.
 
-::: moniker-end
+4. Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
 
    > [!NOTE]
    > Tento kurz Začínáme používá Live Unit Testing s testovacím rozhraním MSTest. Můžete také použít testovací architektury xUnit a NUnit.
+
+::: moniker-end
 
 5. Projekt testu jednotek nemůže automaticky přistupovat ke knihovně tříd, kterou testuje. Přístup ke knihovně testů udělíte přidáním odkazu na projekt knihovny tříd. Chcete-li to provést, klikněte pravým tlačítkem myši na `StringLibraryTests` projekt a vyberte možnost **Přidat**  >  **odkaz**. V dialogovém okně **Správce odkazů** se ujistěte, že je vybraná karta **řešení** , a vyberte projekt StringLibrary, jak je znázorněno na následujícím obrázku.
 

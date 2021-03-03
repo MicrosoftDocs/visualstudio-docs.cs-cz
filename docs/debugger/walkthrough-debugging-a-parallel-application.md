@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f46efe377cb01b7b78a9df2de2d1e6fc89826014
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d8f739ab99f060005f7bbfebc400c424c50ba7d5
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884283"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684137"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>Návod: ladění paralelní aplikace v aplikaci Visual Studio (C#, Visual Basic, C++)
 
@@ -70,14 +70,16 @@ Tento návod ukazuje, jak použít **Paralelní úlohy** a okna **paralelních z
 
    V okně Start vyberte možnost **vytvořit nový projekt**.
 
-   V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Dále v seznamu jazyk vyberte **C#**, **C++** nebo **Visual Basic** a v seznamu platforma zvolte **Windows** . 
+   V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Dále v seznamu jazyk vyberte **C#**, **C++** nebo **Visual Basic** a v seznamu platforma zvolte **Windows** .
 
-   Po použití filtrů jazyků a platforem zvolte **Konzolová aplikace (.NET Core)** nebo, pro C++, šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
+   Po použití filtrů jazyků a platforem zvolte **konzolovou aplikaci** pro .NET Core nebo C++ a pak zvolte **Další**.
 
    > [!NOTE]
-   > Pokud nevidíte správnou šablonu, přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
+   > Pokud nevidíte správnou šablonu, přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj pro vývoj a vývoj pro **různé platformy .NET Core s využitím** úlohy **C++** a pak zvolte **změnit**.
 
-   V okně **Konfigurovat nový projekt** zadejte název nebo použijte výchozí název v poli **název projektu** . Pak zvolte **vytvořit**.
+   V okně **Konfigurovat nový projekt** zadejte název nebo použijte výchozí název v poli **název projektu** . Pak klikněte na tlačítko **Další** nebo **vytvořit**, podle toho, jaká možnost je k dispozici.
+
+   V případě .NET Core zvolte Doporučené cílové rozhraní (.NET Core 3,1) nebo .NET 5 a pak zvolte **vytvořit**.
 
    ::: moniker-end
    ::: moniker range="vs-2017"

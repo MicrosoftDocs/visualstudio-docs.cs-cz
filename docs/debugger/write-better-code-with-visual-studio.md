@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c69fe13821f595a137c07d545a4ccfb10fc89b34
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5fd3d8e17d90cde50f583dfc0393debf460de7f6
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904955"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684074"
 ---
 # <a name="debugging-techniques-and-tools-to-help-you-write-better-code"></a>Techniky a nástroje ladění, které vám pomůžou psát lepší kód
 
@@ -42,22 +42,26 @@ Následující kód obsahuje některé chyby, které můžete opravit pomocí in
 
 Vytvoření aplikace:
 
-1. Musíte mít nainstalovanou aplikaci Visual Studio a nainstalovanou aplikaci **.NET Core pro vývoj pro různé platformy** nebo **desktopové vývojové prostředí .NET** v závislosti na typu aplikace, kterou chcete vytvořit.
+1. Musíte mít nainstalovanou aplikaci Visual Studio a nainstalovanou úlohu **vývoje .NET Core pro různé platformy** .
 
     Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) a nainstalujte si ji zdarma.
 
-    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, klikněte na **nástroje**  >  **získat nástroje a funkce**. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoj pro různé platformy .NET Core** nebo **vývoj desktopových aplikací .NET** a pak zvolte **Upravit**.
+    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, klikněte na **nástroje**  >  **získat nástroje a funkce**. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
 
 1. Otevřete sadu Visual Studio.
 
     ::: moniker range=">=vs-2019"
-    V okně Start vyberte možnost **vytvořit nový projekt**. Do vyhledávacího pole zadejte **Console** a pak zvolte buď **Konzolová aplikace (.NET Core)** , nebo **aplikace konzoly (.NET Framework)**. Zvolte **Další**. Zadejte název projektu, například **Console_Parse_JSON** a klikněte na **vytvořit**.
+    V okně Start vyberte možnost **vytvořit nový projekt**. Do vyhledávacího pole zadejte **Console** a pak zvolte buď **Konzolová aplikace** pro .NET Core. Zvolte **Další**. Zadejte název projektu, například **Console_Parse_JSON** , a klikněte na tlačítko **Další** nebo **vytvořit**, podle toho, jaká možnost je k dispozici.
+
+    V případě .NET Core zvolte Doporučené cílové rozhraní (.NET Core 3,1) nebo .NET 5 a pak zvolte **vytvořit**.
+
+    Pokud nevidíte šablonu projektu **aplikace konzoly** pro .NET Core, přejděte do části **nástroje**  >  **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte **Konzolová aplikace** a pak v prostředním podokně zvolte buď **Konzolová aplikace (.net Core)** nebo **aplikace konzoly (.NET Framework)**. Zadejte název, například **Console_Parse_JSON** a klikněte na tlačítko **OK**.
-    ::: moniker-end
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte **Konzolová aplikace** a pak v prostředním podokně zvolte **Konzolová aplikace (.NET Core)**. Zadejte název, například **Console_Parse_JSON** a klikněte na tlačítko **OK**.
 
-    Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** nebo **aplikace konzoly (.NET Framework)** , přejděte do části **nástroje**  >  **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Zvolte buď možnost **vývoj pro různé platformy .NET Core** , nebo **desktopový vývoj** pro platformu .NET a pak zvolte možnost **Upravit**.
+    Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , přejděte do části **nástroje**  >  **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
+    ::: moniker-end
 
     Visual Studio vytvoří projekt konzoly, který se zobrazí v Průzkumník řešení v pravém podokně.
 

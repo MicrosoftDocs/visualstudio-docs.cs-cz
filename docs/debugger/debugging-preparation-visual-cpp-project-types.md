@@ -5,9 +5,6 @@ ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
-- CSharp
-- VB
-- FSharp
 - C++
 helpviewer_keywords:
 - project templates, debugging
@@ -20,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcd4375b475106b0428f21057f5b44fc8bee8700
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d91d18208a2d05fc4d4b60da98e3e3f8e3c0c835
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872420"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683050"
 ---
 # <a name="debugging-preparation-c-project-types"></a>Příprava ladění: typy projektů C++
 Tato část popisuje, jak ladit základní typy projektů vytvořené pomocí [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] šablon projektů.
@@ -40,8 +37,6 @@ Tato část popisuje, jak ladit základní typy projektů vytvořené pomocí [!
 - [Ladění aplikace Win32 v jazyce C nebo C++](#BKMK_To_debug_a_C_or_C___Win32_application)
 
 - [Ruční nastavení konfigurace ladění](#BKMK_To_manually_set_a_Debug_configuration)
-
-  [Model Windows Forms aplikace (.NET)](#BKMK_Windows_Forms_Applications___NET_)
 
 ## <a name="recommended-property-settings"></a><a name="BKMK_Recommended_Property_Settings"></a> Doporučené nastavení vlastností
  Některé vlastnosti by měly být nastavené stejným způsobem pro všechny nespravované scénáře ladění. V následujících tabulkách se zobrazí doporučená nastavení vlastností. Nastavení, které zde nejsou uvedeny, se může lišit mezi různými nespravovanými typy projektů. Další informace naleznete v tématu [nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).
@@ -97,22 +92,8 @@ Tato část popisuje, jak ladit základní typy projektů vytvořené pomocí [!
 
    [V tomto tématu](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
 
-## <a name="windows-forms-applications-net"></a><a name="BKMK_Windows_Forms_Applications___NET_"></a> Model Windows Forms aplikace (.NET)
- Šablona **aplikace model Windows Forms (.NET)** vytvoří [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] model Windows Forms aplikaci. Další informace najdete v tématu [Postupy: vytvoření projektu aplikace pro systém Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100)).
-
- Ladění tohoto typu aplikace v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je podobné jako u spravovaných aplikací model Windows Forms.
-
- Při vytváření projektu model Windows Forms se šablonou projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky vytvoří požadované nastavení pro ladění a vydání. V případě potřeby můžete tato nastavení změnit v dialogovém okně **\<project name> stránky vlastností** . Další informace najdete v tématu [Konfigurace ladění a vydání](../debugger/how-to-set-debug-and-release-configurations.md).
-
- Další informace naleznete v tématu [nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).
-
- Dalším způsobem, jak ladit aplikaci model Windows Forms, je spustit aplikaci mimo aplikaci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a připojit k ní. Další informace najdete v tématu [připojení ke spuštěnému programu nebo více programům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
-
- [V tomto tématu](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
-
 ## <a name="see-also"></a>Viz také
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)
 - [Připojení ke spuštěnému programu nebo více programům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Konfigurace ladění a vydaných verzí](../debugger/how-to-set-debug-and-release-configurations.md)
-- [Postupy: vytvoření projektu aplikace pro systém Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))

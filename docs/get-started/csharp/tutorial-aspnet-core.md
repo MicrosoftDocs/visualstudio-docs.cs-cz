@@ -3,7 +3,7 @@ title: 'Kurz: Začínáme s C# a ASP.NET Core'
 titleSuffix: ''
 description: Naučte se, jak vytvořit webovou aplikaci ASP.NET Core v aplikaci Visual Studio pomocí jazyka C#, krok za krokem.
 ms.custom: seodec18, get-started
-ms.date: 05/29/2019
+ms.date: 02/12/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 63db3f62f4e7c763bf02fbfec2dd2f52c32d3264
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 026f6f2902b537312c0714b7eeb61d10e0fb980d
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956357"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683149"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>Kurz: Začínáme s C# a ASP.NET Core v aplikaci Visual Studio
 
@@ -106,13 +106,13 @@ Pokud nevidíte šablonu projektu **ASP.NET Core webové aplikace** , můžete j
 
 1. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-   ![Zobrazit okno vytvořit nový projekt](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
+   :::image type="content" source="../../get-started/media/vs-2019/create-new-project-dark-theme.png" alt-text="Zobrazit okno vytvořit nový projekt":::
 
-1. V okně **vytvořit nový projekt** zadejte nebo do vyhledávacího pole zadejte *ASP.NET* . Potom v seznamu jazyk vyberte **C#** a pak v seznamu platforma zvolte **Windows** .
+1. V okně **vytvořit nový projekt** vyberte v seznamu jazyk položku **C#** . V dalším kroku vyberte možnost **Windows** ze seznamu platforem a **Web** ze seznamu typy projektů.
 
-   Po použití filtrů jazyků a platforem zvolte šablonu **ASP.NET Core webové aplikace** a klikněte na tlačítko **Další**.
+      Po použití filtrů typu jazyk, platforma a typ projektu vyberte šablonu **ASP.NET Core webové aplikace** a klikněte na tlačítko **Další**.
 
-   ![Zvolit šablonu C# pro webovou aplikaci ASP.NET Core](./media/vs-2019/csharp-create-new-project-search-aspnet-core-filtered.png)
+   :::image type="content" source="./media/vs-2019/csharp-create-new-project-aspnet-core.png" alt-text="Zvolit šablonu C# pro ASP.NET Core webovou aplikaci":::
 
    > [!NOTE]
    > Pokud nevidíte šablonu **ASP.NET Core webové aplikace** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** .
@@ -125,15 +125,21 @@ Pokud nevidíte šablonu projektu **ASP.NET Core webové aplikace** , můžete j
    >
    > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Pokud budete vyzváni k uložení práce, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu. Pak se vraťte ke kroku 2 v tomto postupu "[Vytvoření projektu](#create-a-project)".
 
-1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *MyCoreApp* do pole **název projektu** . Pak zvolte **vytvořit**.
+1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *MyCoreApp* do pole **název projektu** . Pak klikněte na tlačítko **Další**.
 
-   ![v okně Konfigurovat nový projekt pojmenujte projekt ' MyCoreApp '.](./media/vs-2019/csharp-name-your-aspnet-mycoreapp-project.png)
+   :::image type="content" source="./media/vs-2019/csharp-name-your-aspnet-app.png" alt-text="v okně Konfigurovat nový projekt pojmenujte projekt ' MyCoreApp '.":::
 
-1. V okně **vytvořit novou webovou aplikaci ASP.NET Core** ověřte, zda se v horní rozevírací nabídce zobrazí **ASP.NET Core 3,0** . Pak zvolte **Webová aplikace**, která obsahuje například Razor Pages. Pak vyberte  **vytvořit**.
+1. V okně **Další informace** ověřte, že se v horní rozevírací nabídce zobrazuje **.NET Core 3,1** . Všimněte si, že se můžete rozhodnout povolit podporu Docker zaškrtnutím políčka. Podporu ověřování můžete také přidat kliknutím na tlačítko změnit ověřování. Odtud si můžete vybrat z těchto:
+    - Žádné: žádné ověřování.
+    - Jednotlivé účty: tyto jsou uložené v místní databázi nebo databázi založené na Azure.
+    - Microsoft Identity Platform: Tato možnost pro ověřování používá službu Active Directory, Azure AD nebo Microsoft 365.
+    - Windows: vhodné pro intranetové aplikace.
+    
+    Nechejte políčko **Povolit Docker** nezaškrtnuté a jako typ ověřování vyberte **žádné** . Potom vyberte **Vytvořit**.
 
-   ![Okno vytvořit novou ASP.NET Core webovou aplikaci](./media/vs-2019/csharp-create-aspnet-razor-pages-app.png)
+   :::image type="content" source="./media/vs-2019/aspnet-core-additional-information.png" alt-text="v okně Další informace se ujistěte, že je vybraná možnost .NET Core 3,1 a ponechání všech výchozích hodnot.":::
 
-   Visual Studio otevře nový projekt.
+   V aplikaci Visual Studio se otevře nový projekt.
 
 ::: moniker-end
 

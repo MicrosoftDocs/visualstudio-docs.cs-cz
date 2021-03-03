@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dbac3de879937435e9f2e1dc5ab4fad0e7358fc9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cbde477e076203625e35ebf0109ed344679563f8
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925393"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683316"
 ---
 # <a name="walkthrough-debug-a-multithreaded-app-using-the-threads-window-c-visual-basic-c"></a>Návod: Ladění vícevláknové aplikace pomocí okna vlákna (C#, Visual Basic, C++)
 
@@ -44,12 +44,14 @@ Vytvořte následující projekt s více vlákny pro použití v tomto kurzu:
 
    V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Dále v seznamu jazyk vyberte **C#** nebo **C++** a v seznamu platforma zvolte **Windows** . 
 
-   Po použití filtrů jazyků a platforem zvolte **Konzolová aplikace (.NET Core)** nebo, pro C++, šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
+   Po použití filtrů jazyků a platforem zvolte **Konzolová aplikace** pro .NET Core nebo C++ a pak zvolte **Další**.
 
    > [!NOTE]
-   > Pokud nevidíte správnou šablonu, přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
+   > Pokud nevidíte správnou šablonu, přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj pro vývoj a vývoj pro **různé platformy .NET Core s využitím** úlohy **C++** a pak zvolte **změnit**.
 
-   V okně **Konfigurovat nový projekt** zadejte nebo zadejte *MyThreadWalkthroughApp* do pole **název projektu** . Pak zvolte **vytvořit**.
+   V okně **Konfigurovat nový projekt** zadejte nebo zadejte *MyThreadWalkthroughApp* do pole **název projektu** . Pak klikněte na tlačítko **Další** nebo **vytvořit**, podle toho, jaká možnost je k dispozici.
+
+   V případě .NET Core zvolte Doporučené cílové rozhraní (.NET Core 3,1) nebo .NET 5 a pak zvolte **vytvořit**.
 
    ::: moniker-end
    ::: moniker range="vs-2017"
@@ -58,7 +60,7 @@ Vytvořte následující projekt s více vlákny pro použití v tomto kurzu:
    - V případě aplikace v jazyce C# v části **Visual C#** zvolte možnost **plocha systému Windows** a potom v prostředním podokně zvolte možnost **aplikace konzoly (.NET Framework)**.
    - V aplikaci C++ klikněte v části **Visual C++** na **plocha Windows**, a pak zvolte **Konzolová aplikace Windows**.
 
-   Pokud se nezobrazuje **Konzolová aplikace (.NET Core)** nebo, pro C++, šablona projektu **Konzolová aplikace** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
+   Pokud nevidíte **konzolovou aplikaci (.NET Framework)** nebo, pro C++, šablona projektu **Konzolová aplikace** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, který otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
 
    Pak zadejte název jako *MyThreadWalkthroughApp* a klikněte na **OK**.
 
@@ -147,7 +149,7 @@ Vyberte ikonu příznaku pro změnu stavu vlákna na příznak nebo bez přízna
 
 Můžete také kliknout pravým tlačítkem na řádek a vybrat **příznak**, zrušit **příznak** nebo zrušit **označení všech vláken** z místní nabídky.
 
-Panel nástrojů okna **vlákna** má také tlačítko **Zobrazit pouze vlákna označená příznakem** , což je righthand jedna ze dvou ikon příznaků. Funguje stejně jako tlačítko na panelu nástrojů **umístění ladění** a buď tlačítko ovládá zobrazení v obou umístěních.
+Panel nástrojů okna **vlákna** má také tlačítko **Zobrazit pouze vlákna označená příznakem** , což je pravá jedna ze dvou ikon příznaků. Funguje stejně jako tlačítko na panelu nástrojů **umístění ladění** a buď tlačítko ovládá zobrazení v obou umístěních.
 
 ### <a name="other-threads-window-features"></a>Další funkce okna vlákna
 

@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 28f9ab13cca4f1d31973f9526063eaa56574dcf4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bc5232d616466ec5aa0916d5d1ad9e7bd5b1247c
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870516"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684119"
 ---
 # <a name="get-started-debugging-multithreaded-applications-c-visual-basic-c"></a>Začínáme s laděním vícevláknových aplikací (C#, Visual Basic, C++)
 
@@ -48,12 +48,14 @@ Nejdříve budete potřebovat aplikační projekt s více vlákny. Následuje p�
 
    V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Dále v seznamu jazyk vyberte **C#**, **C++** nebo **Visual Basic** a v seznamu platforma zvolte **Windows** . 
 
-   Po použití filtrů jazyků a platforem zvolte **Konzolová aplikace (.NET Core)** nebo, pro C++, šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
+   Po použití filtrů jazyků a platforem zvolte šablonu **Konzolová aplikace** pro .NET Core nebo C++ a pak zvolte **Další**.
 
    > [!NOTE]
-   > Pokud nevidíte správnou šablonu, přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
+   > Pokud nevidíte správnou šablonu, přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj pro vývoj a vývoj pro **různé platformy .NET Core s využitím** úlohy **C++** a pak zvolte **změnit**.
 
-   V okně **Konfigurovat nový projekt** zadejte nebo zadejte *MyThreadWalkthroughApp* do pole **název projektu** . Pak zvolte **vytvořit**.
+   V okně **Konfigurovat nový projekt** zadejte nebo zadejte *MyThreadWalkthroughApp* do pole **název projektu** . Pak zvolte buď **Další** , nebo **vytvořit**, podle toho, jaká možnost je k dispozici.
+
+   V případě projektu .NET Core zvolte Doporučené cílové rozhraní (.NET Core 3,1) nebo .NET 5 a pak zvolte **vytvořit**.
 
    ::: moniker-end
    ::: moniker range="vs-2017"
@@ -63,7 +65,7 @@ Nejdříve budete potřebovat aplikační projekt s více vlákny. Následuje p�
    - V případě aplikace Visual Basic vyberte v části **Visual Basic** možnost **plocha Windows** a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)**.
    - V aplikaci C++ klikněte v části **Visual C++** na **plocha Windows**, a pak zvolte **Konzolová aplikace Windows**.
 
-   Pokud se nezobrazuje **Konzolová aplikace (.NET Core)** nebo, pro C++, šablona projektu **Konzolová aplikace** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
+   Pokud nevidíte **konzolovou aplikaci (.NET Framework)** pro jazyk C++, šablona projektu **Konzolová aplikace** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, který otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
 
    Pak zadejte název jako *MyThreadWalkthroughApp* a klikněte na **OK**.
 

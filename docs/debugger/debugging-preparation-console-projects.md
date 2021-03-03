@@ -19,16 +19,16 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e39cb7df53a12b97d297ee739338c42a3201089f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 66610eef4419b71cd41c8a7708b43b30bff4cc80
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872518"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683032"
 ---
 # <a name="debugging-preparation-console-projects-c-c-visual-basic-f"></a>Příprava ladění: projekty konzoly (C#, C++, Visual Basic, F #)
 
-Příprava na ladění projektu konzoly je podobná přípravě ladění projektu Windows, s některými dalšími hledisky, jako je například nastavení argumentů příkazového řádku a Postup pozastavení aplikace pro ladění. Další informace najdete v tématech [model Windows Forms aplikace](../debugger/debugging-preparation-windows-forms-applications.md)a [příprava ladění: model Windows Forms aplikace (.NET)](/previous-versions/visualstudio/visual-studio-2010/sez9z95a(v=vs.100)). Z důvodu podobnosti všech konzolových aplikací toto téma popisuje následující typy projektů:
+Příprava na ladění projektu konzoly je podobná přípravě ladění projektu Windows, s některými dalšími hledisky, jako je například nastavení argumentů příkazového řádku a Postup pozastavení aplikace pro ladění. Další informace najdete v tématu [Příprava ladění pro aplikace Windows Form](../debugger/debugging-preparation-windows-forms-applications.md). Z důvodu podobnosti všech konzolových aplikací toto téma popisuje následující typy projektů:
 
 - Konzolová aplikace jazyka C#, Visual Basic a F #
 

@@ -7,18 +7,18 @@ ms.author: ghogen
 ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 93f9d5ba8bd84341e1b314c1fabca07690114e39
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 1dd5e237e99333e9c2fb9414b3d32ff19b70dd9b
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729285"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684260"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Kurz: Vytvoření aplikace s více kontejnery pomocí Docker Compose
 
 V tomto kurzu se naučíte spravovat více než jeden kontejner a při používání nástrojů kontejneru v aplikaci Visual Studio komunikovat mezi nimi.  Správa více kontejnerů vyžaduje *orchestraci kontejnerů* a vyžaduje produkt Orchestrator, například Docker Compose, Kubernetes nebo Service Fabric. Zde použijeme Docker Compose. Docker Compose je skvělé pro místní ladění a testování v průběhu vývojového cyklu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 ::: moniker range="vs-2017"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
@@ -34,7 +34,7 @@ V tomto kurzu se naučíte spravovat více než jeden kontejner a při použív�
 
 ## <a name="create-a-web-application-project"></a>Vytvoření projektu webové aplikace
 
-V aplikaci Visual Studio vytvořte projekt **ASP.NET Core webové aplikace** s názvem `WebFrontEnd` . Vyberte **Webová aplikace** pro vytvoření webové aplikace se stránkami Razor. 
+V aplikaci Visual Studio vytvořte projekt **ASP.NET Core webové aplikace** s názvem `WebFrontEnd` a vytvořte webovou aplikaci se stránkami Razor.
   
 ::: moniker range="vs-2017"
 
@@ -46,11 +46,11 @@ Nevybírejte možnost **Povolit podporu Docker**. Podporu Docker přidáte pozd�
 
 ::: moniker range="vs-2019"
 
-![Snímek obrazovky konfigurovat novou obrazovku pro webovou aplikaci ASP.NET Core, pole název projektu a název řešení jsou nastavená na webendu.](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project1.png)
+![Vytvořit projekt ASP.NET Core webové aplikace](./media/tutorial-multicontainer/vs-2019/create-web-project1.png)
 
 Nevybírejte možnost **Povolit podporu Docker**. Podporu Docker přidáte později.
 
-![Snímek obrazovky pro vytvoření nové webové aplikace ASP.NET Core s vybranými webovými aplikacemi Není vybraná možnost povolit podporu Docker.](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project.png)
+![Snímek obrazovky s dalšími informacemi při vytváření webového projektu Není vybraná možnost povolit podporu Docker.](./media/tutorial-multicontainer/vs-2019/create-web-project-additional-information.png)
 
 ::: moniker-end
 
@@ -62,7 +62,7 @@ Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ pro
    ![Snímek obrazovky s vytvořením projektu webového rozhraní API](./media/tutorial-multicontainer/docker-tutorial-mywebapi.png)
 ::: moniker-end
 ::: moniker range="vs-2019"
-   ![Snímek obrazovky s vytvořením projektu webového rozhraní API](./media/tutorial-multicontainer/vs-2019/web-api-project.png)
+   ![Snímek obrazovky s vytvořením projektu webového rozhraní API](./media/tutorial-multicontainer/vs-2019/create-web-api-project.png)
 ::: moniker-end
 
 ## <a name="add-code-to-call-the-web-api"></a>Přidat kód pro volání webového rozhraní API

@@ -2,7 +2,7 @@
 title: 'Hello World aplikace pomocí WPF v jazyce C #'
 description: Vytvořte jednoduchou aplikaci pro Windows Desktop .NET v jazyce C# se sadou Visual Studio pomocí architektury rozhraní Windows Presentation Foundation (WPF).
 ms.custom: seodec18, get-started
-ms.date: 08/09/2019
+ms.date: 02/10/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.topic: tutorial
@@ -14,12 +14,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4384a724b57de565e03637057e16fc26e8213e5e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1f3232ad0a8b7cc34abbe6d49c05944c066226da
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924886"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101682852"
 ---
 # <a name="tutorial-create-a-simple-application-with-c"></a>Kurz: Vytvoření jednoduché aplikace pomocí jazyka C\#
 
@@ -80,16 +80,17 @@ Při vytváření aplikace v systému Visual Studio je třeba nejprve vytvořit
 
    ![Zobrazit okno vytvořit nový projekt](../../get-started/media/vs-2019/start-window-create-new-project.png "Snímek obrazovky okna vytvořit nový projekt")
 
-1. Na obrazovce **vytvořit nový projekt** vyhledejte "WPF", "zvolte **aplikaci WPF (.NET Core)** a pak klikněte na tlačítko **Další**.
+1. Na obrazovce **vytvořit nový projekt** vyhledejte "WPF", zvolte **aplikace WPF** a pak zvolte **Další**.
 
-   ![Šablona aplikace WPF v dialogovém okně vytvořit nový projekt](media/vs-2019/exploreide-newprojectcsharp-vs2019.png "Snímek obrazovky šablony aplikace WPF v dialogovém okně vytvořit nový projekt")
+   :::image type="content" source="media/vs-2019/explore-ide-new-project-csharp-vs-2019.png" alt-text="Šablona aplikace WPF v dialogovém okně vytvořit nový projekt":::
 
-   > [!NOTE]
-   > Můžete najít dvě šablony klasické pracovní plochy WPF, jeden pro .NET Framework a druhý pro .NET Core. Šablona .NET Core je k dispozici v aplikaci Visual Studio 2019 verze 16,3 a novější. Pro tento kurz můžete použít jednu z nich, ale doporučujeme .NET Core pro nový vývoj.
+1. Na další obrazovce zadejte název projektu, **HelloWPFApp** a klikněte na tlačítko **Další**.
 
-1. Na další obrazovce zadejte název projektu, **HelloWPFApp** a klikněte na **vytvořit**.
+   :::image type="content" source="./media/vs-2019/explore-ide-name-project.png" alt-text="Pojmenujte projekt HelloWPFApp.":::
 
-   ![Pojmenujte projekt HelloWPFApp.](./media/vs-2019/exploreide-nameproject.png "Snímek obrazovky okna, kde pojmenovat projekt")
+1. V okně **Další informace** by měl být **.NET Core 3,1** již vybraný pro vaši cílovou architekturu. Pokud ne, vyberte **.NET Core 3,1**. Pak zvolte **vytvořit**.
+
+   :::image type="content" source="./media/vs-2019/wpf-target-framework.png" alt-text="V okně Další informace se ujistěte, že je vybraná možnost .NET Core 3,1.":::
 
 ::: moniker-end
 

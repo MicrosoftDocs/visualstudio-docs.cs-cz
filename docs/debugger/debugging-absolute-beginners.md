@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fbb99d2b41a8a354ec450e99dab13efb6ec60248
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5d57fa806ae565d0752fb9970c3f335295e83535
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872921"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684226"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>Postup ladění pro absolutní začátečníky
 
@@ -76,22 +76,24 @@ Abychom vám pomohli objasnění těchto konceptů, provedeme si nějaký ukázk
 
 V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
 
-1. V závislosti na typu aplikace, který chcete vytvořit, musíte mít nainstalovanou aplikaci Visual Studio a nainstalovanou úlohu **vývoj desktopových** aplikací pro .NET nebo **.NET Core pro vývoj pro různé platformy** .
+1. Musíte mít nainstalovanou aplikaci Visual Studio a nainstalovanou úlohu **vývoje .NET Core pro různé platformy** .
 
     Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) a nainstalujte si ji zdarma.
 
-    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, klikněte na **nástroje**  >  **získat nástroje a funkce**. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoj pro desktopové prostředí .NET** (nebo **.NET Core pro vývoj pro různé platformy**) a pak zvolte **změnit**.
+    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, klikněte na **nástroje**  >  **získat nástroje a funkce**. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
 
 1. Otevřete sadu Visual Studio.
 
     ::: moniker range=">=vs-2019"
-    V okně Start vyberte možnost **vytvořit nový projekt**. Do vyhledávacího pole zadejte **Console** a pak zvolte buď **Konzolová aplikace (.NET Core)** , nebo **aplikace konzoly (.NET Framework)**. Zvolte **Další**. Zadejte název projektu, například **ConsoleApp-FirstApp** , a klikněte na **vytvořit**.
+    V okně Start vyberte možnost **vytvořit nový projekt**. Do vyhledávacího pole zadejte **Console** , jako jazyk vyberte **C#** a pak zvolte **Konzolová aplikace** pro .NET Core. Zvolte **Další**. Zadejte název projektu, například **ConsoleApp-FirstApp** a klikněte na **Další**.
+
+    Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte **Konzolová aplikace** a pak v prostředním podokně zvolte buď **Konzolová aplikace (.NET Framework)** nebo **aplikace konzoly (.NET Core)**. Zadejte název jako **ConsoleApp-FirstApp** a klikněte na **OK**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte **Konzolová aplikace** a pak v prostředním podokně zvolte buď **Konzolová aplikace (.NET Core)**. Zadejte název jako **ConsoleApp-FirstApp** a klikněte na **OK**.
     ::: moniker-end
 
-    Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Framework)** nebo **Konzolová aplikace (.NET Core)** , přejděte do části **nástroje**  >  **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Zvolte buď možnost **vývoj pro různé platformy .NET Core** , nebo **desktopový vývoj** pro platformu .NET a pak zvolte možnost **Upravit**.
+    Pokud nevidíte šablonu projektu **konzolové aplikace** pro .NET Core, přejděte do části **nástroje**  >  **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
 
     Visual Studio vytvoří projekt konzoly, který se zobrazí v Průzkumník řešení v pravém podokně.
 

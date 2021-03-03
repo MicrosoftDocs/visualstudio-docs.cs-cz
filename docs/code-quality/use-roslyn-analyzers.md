@@ -13,12 +13,12 @@ ms.author: midumont
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 974de3094c7384f8170a42892a17f0eb49162094
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 956e63384619a82b7f0abb7dd3771ed2db9cba01
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867786"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684375"
 ---
 # <a name="overview"></a>Přehled
 
@@ -419,3 +419,4 @@ Pokud v projektu .NET Core přidáte odkaz na projekt, který obsahuje analyzát
 - [Odeslat chybu analyzátoru kódu](https://github.com/dotnet/roslyn-analyzers/issues)
 - [Použití sad pravidel](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)
 - [Potlačit upozornění analýzy kódu](../code-quality/in-source-suppression-overview.md)
+- [Možnosti konfigurace pro analýzu kódu (.NET)](/dotnet/fundamentals/code-analysis/configuration-options)

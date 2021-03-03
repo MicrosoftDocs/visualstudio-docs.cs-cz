@@ -2,19 +2,19 @@
 title: Práce s několika uživatelskými účty
 description: Naučte se, jak přidat všechny účty Microsoft do sady Visual Studio, abyste měli přístup k prostředkům z libovolného účtu, aniž byste se museli přihlašovat samostatně.
 ms.custom: SEO-VS-2020
-ms.date: 11/16/2020
+ms.date: 03/02/2021
 ms.topic: conceptual
 author: ornellaalt
 ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 169415537460dae94ca844c426bb3770449161b5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6740eb4c23d739f439103b2ecdd0e8882018204d
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960452"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683799"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Práce s několika uživatelskými účty
 
@@ -65,7 +65,7 @@ Chcete-li se podívat v akci, vytvořte nový projekt **ASP.NET Core webové apl
 
 ::: moniker range=">=vs-2019"
 
-Chcete-li se podívat v akci, vytvořte nový projekt **ASP.NET Core webové aplikace** . Na stránce **vytvořit novou webovou aplikaci ASP.NET Core** zvolte šablonu **Webová aplikace** a pak zvolte možnost **změnit** v části **ověřování**.
+Pokud to chcete vidět v akci, vytvořte nový projekt **ASP.NET Core webové aplikace** . Na stránce **vytvořit novou webovou aplikaci ASP.NET Core** vyberte v rozevíracím seznamu položku **ASP.NET Core 3,1** , zvolte šablonu **webové aplikace** a pak zvolte možnost **změnit** v části **ověřování**.
 
 ::: moniker-end
 

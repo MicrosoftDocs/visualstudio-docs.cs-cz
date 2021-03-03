@@ -3,19 +3,19 @@ title: 'Rychlý Start: prohlídka integrovaného vývojového prostředí (IDE) 
 description: Přečtěte si o některých oknech, nabídkách a dalších funkcích uživatelského rozhraní integrovaného vývojového prostředí (IDE) sady Visual Studio.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
-ms.date: 02/21/2019
+ms.date: 03/02/2021
 ms.topic: quickstart
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e0199319bc0c647f42e87d4003dd2fabe4544a0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 237b3384d6bec010a760c4bc193b9a95f33febeb
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945497"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683990"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>Rychlý Start: první pohled na integrované vývojové prostředí (IDE) sady Visual Studio
 
@@ -83,15 +83,25 @@ Abychom mohli pokračovat v prozkoumávání funkcí sady Visual Studio, vytvoř
 
 1. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-   Otevře se dialogové okno s informacemi **o vytvoření nového projektu**. Tady můžete vyhledat, filtrovat a vybrat šablonu projektu. Zobrazuje také seznam naposledy použitých šablon projektu.
+    :::image type="content" source="../get-started/media/vs-2019/start-window-create-new-project.png" alt-text="Snímek obrazovky okna vytvořit nový projekt v aplikaci Visual Studio 2019":::
 
-1. Do pole Hledat v horní části zadejte text **Konzola** , chcete-li filtrovat seznam typů projektu na ty, které v názvu obsahují "Console". Další upřesnění výsledků hledání výběrem **C#** (nebo jiného jazyka podle vašeho výběru) ve výběru **jazyka** .
+   Otevře se okno **vytvořit nový projekt** a zobrazí se několik *šablon* projektů. Šablona obsahuje základní soubory a nastavení, které jsou požadovány pro daný typ projektu.
 
-   ![Dialogové okno Nový projekt v aplikaci Visual Studio 2019](media/vs-2019/create-a-new-project.png)
+   Tady můžete vyhledat, filtrovat a vybrat šablonu projektu. Zobrazuje také seznam naposledy použitých šablon projektu.
 
-1. Pokud jste jako jazyk vybrali C#, Visual Basic nebo F #, vyberte šablonu **Konzolová aplikace (.NET Core)** a pak zvolte **Další**. (Pokud jste vybrali jiný jazyk, stačí vybrat šablonu. Uživatelské rozhraní, které budeme hledat, je podobné jako u všech programovacích jazyků.)
+1. Do pole Hledat v horní části zadejte text **Konzola** , chcete-li filtrovat seznam typů projektu na ty, které v názvu obsahují "Console". Další upřesnění výsledků hledání pomocí výběru **C#** (nebo jiného jazyka podle vašeho výběru) z rozevíracího seznamu **všechny jazyky** .
 
-1. Na stránce **Konfigurovat nový projekt** přijměte výchozí název projektu a umístění a pak zvolte **vytvořit**.
+    :::image type="content" source="media/vs-2019/create-new-project.png" alt-text="Snímek obrazovky okna vytvořit nový projekt v aplikaci Visual Studio 2019, kde můžete vybrat požadovanou šablonu.":::
+
+1. Pokud jste jako jazyk vybrali C#, Visual Basic nebo F #, vyberte šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**. (Pokud jste vybrali jiný jazyk, stačí vybrat šablonu. Uživatelské rozhraní, které budeme hledat, je podobné jako u všech programovacích jazyků.)
+
+1. V okně **Konfigurovat nový projekt** přijměte výchozí název projektu a umístění a klikněte na tlačítko **Další**.
+
+    :::image type="content" source="media/vs-2019/configure-new-project-console.png" alt-text="Snímek obrazovky okna konfigurace nového projektu v aplikaci Visual Studio 2019, kde zadáte název projektu":::
+
+1. V okně **Další informace** ověřte, že se v rozevírací nabídce **cílové** rozhraní zobrazí **.NET Core 3,1** a pak klikněte na **vytvořit**.
+
+    :::image type="content" source="../get-started/media/vs-2019/create-project-additional-info.png" alt-text="Snímek obrazovky okna Další informace v aplikaci Visual Studio 2019, kde můžete vybrat požadovanou verzi rozhraní .NET Core.":::
 
 ::: moniker-end
 

@@ -6,14 +6,14 @@ author: ghogen
 ms.technology: vs-azure
 ms.author: ghogen
 ms.topic: include
-ms.date: 05/21/2018
+ms.date: 02/22/2021
 ms.custom: include file
-ms.openlocfilehash: d62482d5f14b1887388fbba2331d66cbc633e6f4
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 7db1ff71e95c977ec0cf7b8ca6713e97de488cec
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96027613"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101750391"
 ---
 1. V nabídce sady Visual Studio vyberte **soubor**  >  **Nový**  >  **projekt**.
 2. V části **šablony** v dialogovém okně **Nový projekt** vyberte **Visual C#**  >  **Web**.

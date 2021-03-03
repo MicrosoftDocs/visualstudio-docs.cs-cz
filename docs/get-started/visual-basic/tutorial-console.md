@@ -2,7 +2,7 @@
 title: 'Kurz: Začínáme s Visual Basic'
 description: Naučte se vytvářet Visual Basic konzolové aplikace v aplikaci Visual Studio, krok za krokem.
 ms.custom: seodec18, get-started
-ms.date: 09/11/2019
+ms.date: 02/10/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: a08e955d8446ebcd376f81773b5996146241486e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 70782687b6220adf1c61c5b2bb6487d68fde70f4
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915029"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101682606"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Kurz: Začínáme s Visual Basic v aplikaci Visual Studio
 
@@ -84,14 +84,14 @@ Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete
 
    ![Zobrazit okno vytvořit nový projekt](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Dále v seznamu jazyk vyberte možnost **Visual Basic** a v seznamu platforma zvolte možnost **Windows** . 
+1. V okně **vytvořit nový projekt** vyberte v seznamu jazyk možnost **Visual Basic** . Dále ze seznamu typy projektů vyberte možnost **Windows** ze seznamu platforem a **konzole** .
 
-   Po použití filtrů jazyků a platforem zvolte šablonu **aplikace konzoly (.NET Core)** a pak zvolte možnost **Další**.
+   Po použití filtrů typu jazyk, platforma a typ projektu zvolte šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
 
-   ![Zvolit šablonu Visual Basic pro konzolovou aplikaci (.NET Framework)](./media/vs-2019/vb-create-new-project-search-console-net-core-filtered.png)
+   :::image type="content" source="./media/vs-2019/vb-create-new-project-console-net-core.png" alt-text="Zvolit šablonu Visual Basic pro konzolovou aplikaci":::
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **Konzolová aplikace (.NET Core)** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** .
+   > Pokud nevidíte šablonu **konzolové aplikace** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** .
    >
    > ![Odkaz pro instalaci dalších nástrojů a funkcí v okně vytvořit nový projekt v části nenajít, co hledáte?](../../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
@@ -101,9 +101,13 @@ Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , můžete
    >
    > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu. Pak se vraťte ke kroku 2 v tomto postupu "[Vytvoření projektu](#create-a-project)".
 
-1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *WhatIsYourName* do pole **název projektu** . Pak zvolte **vytvořit**.
+1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *WhatIsYourName* do pole **název projektu** . Pak klikněte na tlačítko **Další**.
 
-   ![v okně Konfigurovat nový projekt pojmenujte projekt ' WhatIsYourName '.](./media/vs-2019/vb-name-your-project-whatname.png)
+   :::image type="content" source="./media/vs-2019/vb-name-your-project-whatname.png" alt-text="v okně Konfigurovat nový projekt pojmenujte projekt ' WhatIsYourName '.":::
+
+1. V okně **Další informace** by měl být **.NET Core 3,1** již vybraný pro vaši cílovou architekturu. Pokud ne, vyberte **.NET Core 3,1**. Pak zvolte **vytvořit**.
+
+   :::image type="content" source="./media/vs-2019/vb-target-framework.png" alt-text="V okně Další informace se ujistěte, že je vybraná možnost .NET Core 3,1.":::
 
    Visual Studio otevře nový projekt.
 
@@ -208,11 +212,13 @@ Pojďme vytvořit aplikaci, která vás vyzve k zadání vašeho jména a zobraz
 
 1. V okně Start vyberte možnost **vytvořit nový projekt**. 
 
-1. V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Dále v seznamu jazyk vyberte možnost **Visual Basic** a v seznamu platforma zvolte možnost **Windows** . 
+1. V okně **vytvořit nový projekt** vyberte v seznamu jazyk možnost **Visual Basic** . Dále ze seznamu typy projektů vyberte možnost **Windows** ze seznamu platforem a **konzole** .
 
-1. Po použití filtrů jazyků a platforem zvolte šablonu **aplikace konzoly (.NET Core)** a pak zvolte možnost **Další**.
+1. Po použití filtrů typu jazyk, platforma a typ projektu zvolte šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
 
-   Pak v okně **Konfigurovat nový projekt** zadejte nebo zadejte *CalculateThis* do pole **název projektu** . Pak vyberte **vytvořit**.
+   Pak v okně **Konfigurovat nový projekt** zadejte nebo zadejte *CalculateThis* do pole **název projektu** . Pak klikněte na tlačítko **Další**.
+
+1. V okně **Další informace** by měl být **.NET Core 3,1** již vybraný pro vaši cílovou architekturu. Pokud ne, vyberte **.NET Core 3,1**. Pak zvolte **vytvořit**.
 
 1. Mezi `Module Program` řádek a řádek zadejte následující kód `End Module` :
 
@@ -255,7 +261,7 @@ Visual Studio je integrovaná vývojová sada nástrojů pro produktivitu pro v�
 
 ### <a name="what-is-a-console-app"></a>Co je Konzolová aplikace?
 
-Konzolová aplikace přebírá vstup a zobrazuje výstup v okně příkazového řádku, a to také. Konzola.
+Konzolová aplikace přebírá vstup a zobrazuje výstup v okně příkazového řádku, označované také jako konzola.
 
 ### <a name="what-is-net-core"></a>Co je .NET Core?
 

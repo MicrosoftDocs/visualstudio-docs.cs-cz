@@ -15,12 +15,12 @@ manager: jmartens
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 264744d7fe39c77da625c778d1bfea51f55e1f2d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a6ab205b7f651f8bb5954bee4998602c79fd78e7
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948007"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683921"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>Návod: Vytváření a spouštění testů jednotek pro spravovaný kód
 
@@ -55,9 +55,14 @@ Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady 
 
 2. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-3. Vyhledejte a vyberte šablonu projektu **aplikace konzoly C# (.NET Core)** a pak klikněte na **Další**.
+3. Vyhledejte a vyberte šablonu projektu **Konzolová aplikace** v jazyce C# pro .NET Core a potom klikněte na tlačítko **Další**.
 
-4. Pojmenujte projektový **bank** a pak klikněte na **vytvořit**.
+   > [!NOTE]
+   > Pokud nevidíte šablonu **konzolové aplikace** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** . Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje .NET Core pro různé platformy** .
+
+4. Pojmenujte projektový **bank** a pak klikněte na **Další**.
+
+   Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
 
    Projekt banky se vytvoří a zobrazí v **Průzkumník řešení** se souborem *program.cs* otevřeným v editoru kódu.
 
@@ -163,11 +168,14 @@ Nyní máte projekt s metodami, které můžete testovat. V tomto článku se te
 
 ::: moniker range=">=vs-2019"
 
-2. Vyhledejte a vyberte šablonu projektu C# **MSTest test (.NET Core)** a pak klikněte na **Další**.
+2. Do vyhledávacího pole zadejte **test jednotek** , jako jazyk vyberte **c#** a potom vyberte **Projekt test jednotek** c# pro šablonu .NET Core a pak klikněte na **Další**.
 
-3. Pojmenujte projekt **BankTests**.
+   > [!NOTE]
+   > Počínaje verzí Visual Studio 2019 verze 16,9 se název šablony projektu MSTest změnil z **projektu testu jednotek MSTest (.NET Core)** na **test jednotek projektu**.
 
-4. Klikněte na **Vytvořit**.
+3. Pojmenujte projekt **BankTests** a klikněte na **Další**.
+
+4. Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
 
    Projekt **BankTests** se přidá do řešení **bank** .
 

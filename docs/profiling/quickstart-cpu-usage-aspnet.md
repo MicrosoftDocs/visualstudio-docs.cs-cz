@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: 7170983732ff1350061629e1e8aa4ec88fad3fa1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa8601b6fe625c5cab2aa1f5de8a69f2d550ee2a
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952834"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683621"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet-core"></a>Rychlý Start: Analýza dat využití procesoru v aplikaci Visual Studio (ASP.NET Core)
 
@@ -42,24 +42,17 @@ Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnosti
    V dialogovém okně, které se zobrazí, zvolte **MVC** v prostředním podokně a pak klikněte na **OK**.
    ::: moniker-end
    ::: moniker range="vs-2019"
-   Pokud okno Start není otevřeno, klikněte **na tlačítko** > **Start okna**.
+   V aplikaci Visual Studio 2019 v okně Start vyberte možnost **vytvořit nový projekt** . Pokud okno Start není otevřeno, zvolte   >  **okno Start** souboru a pak zvolte možnost **vytvořit nový projekt**.
 
-   V okně Start vyberte možnost **vytvořit nový projekt**.
+   Do vyhledávacího pole zadejte **Web App** , jako jazyk vyberte **C#** , zvolte **ASP.NET Core webová aplikace (model-zobrazení-kontroler)** a pak zvolte **Další**. Na další obrazovce pojmenujte projekt *MyProfilingApp_MVC* a klikněte na tlačítko **Další**.
 
-   V okně **vytvořit nový projekt** zadejte nebo do vyhledávacího pole zadejte *ASP.NET* . Potom v seznamu jazyk vyberte **C#** a pak v seznamu platforma zvolte **Windows** .
-
-   Po použití filtrů jazyků a platforem zvolte šablonu **Webová aplikace ASP.NET (.NET Core)** a pak zvolte možnost **Další**.
+   Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
 
    > [!NOTE]
    > Pokud nevidíte šablonu **webové aplikace ASP.NET (.NET Core)** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** . Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje ASP.NET a web** .
-
-   V okně **Konfigurovat nový projekt** zadejte nebo zadejte *MyProfilingApp_MVC* do pole **název projektu** . Pak zvolte **vytvořit**.
-
-   V okně, které se zobrazí, zvolte možnost **Webová aplikace (model-zobrazení-kontroler)** a pak zvolte možnost **vytvořit**.
-
    ::: moniker-end
 
-   Visual Studio otevře nový projekt.
+   Visual Studio vytvoří a otevře váš nový projekt.
 
 1. V Průzkumník řešení klikněte pravým tlačítkem na složku modely a vyberte **Přidat**  >  **třídu**.
 
