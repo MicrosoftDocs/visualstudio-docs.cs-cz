@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f090729cdd0d08d39cf97cab9c3899f0b77c80eb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 285d624debed6dc498e3d274af2839137b5094d1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900477"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171276"
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Postupy: publikování aplikace WPF s povolenými vizuálními styly
 
@@ -110,9 +110,9 @@ Vizuální styly umožňují změnu vzhledu běžných ovládacích prvků na z�
 
 ## <a name="embed-the-manifest-file-into-the-executable-file-of-the-published-solution"></a>Vložte soubor manifestu do spustitelného souboru publikovaného řešení.
 
-1. Otevřete **příkazový řádek sady Visual Studio**.
+1. Otevřete **Developer Command Prompt pro Visual Studio**.
 
-    Další informace o tom, jak otevřít **příkazový řádek sady Visual Studio**, najdete v tématu [výzvy k zadání příkazu](/dotnet/framework/tools/developer-command-prompt-for-vs).
+    Další informace o tom, jak otevřít Developer Command Prompt pro Visual Studio, najdete v tématu [Developer Command Prompt a vývojové prostředí PowerShell](../ide/reference/command-prompt-powershell.md).
 
    > [!NOTE]
    > Zbývající kroky vedou k řešení následující předpoklady:
@@ -179,7 +179,7 @@ Vizuální styly umožňují změnu vzhledu běžných ovládacích prvků na z�
 
 ## <a name="see-also"></a>Viz také
 
--[Řešení konkrétních chyb v nasazeních ClickOnce](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)
+- [Řešení konkrétních chyb v nasazeních ClickOnce](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)
 - [Přehled vizuálních stylů](/windows/desktop/Controls/visual-styles-overview)
 - [Povolení vizuálních stylů](/windows/desktop/Controls/cookbook-overview)
-- [Výzvy příkazového řádku](/dotnet/framework/tools/developer-command-prompt-for-vs)
+- [PowerShell Developer Command Prompt a vývojář](../ide/reference/command-prompt-powershell.md)

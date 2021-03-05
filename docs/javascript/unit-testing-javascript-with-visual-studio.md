@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: e10f9b628d1d9fbbdb2911977fe7e63b1a7b6d57
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04ef9834fdc66256b601ecdcf156e4d290447ce3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957475"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171315"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Testování částí JavaScriptu a TypeScript v aplikaci Visual Studio
 
@@ -97,7 +97,7 @@ V případě TypeScript jsou testy jednotek spouštěny proti vygenerovanému k�
 
 ### <a name="run-tests-from-the-command-line"></a>Spuštění testů z příkazového řádku
 
-Testy můžete spustit z [Developer Command Prompt](/dotnet/framework/tools/developer-command-prompt-for-vs) pro Visual Studio pomocí následujícího příkazu:
+Testy můžete spustit z [Developer Command Prompt pro Visual Studio](../ide/reference/command-prompt-powershell.md) pomocí následujícího příkazu:
 
 ```
 vstest.console.exe <path to project file>\NodejsConsoleApp23.njsproj /TestAdapterPath:<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter
@@ -152,11 +152,12 @@ Dobrý příklad `find_tests` a `run_tests` implementace naleznete v tématu imp
 Zjišťování dostupných testovacích rozhraní probíhá při spuštění sady Visual Studio. Pokud se při spuštění sady Visual Studio přidá rozhraní, restartujte Visual Studio, aby se zjistilo rozhraní. Při provádění změn v implementaci ale nemusíte nic restartovat.
 
 ## <a name="unit-tests-in-other-project-types"></a>Testování částí v jiných typech projektů
+
 Nejste omezeni na psaní testů jednotek pouze v projektech Node.js. Když přidáte vlastnosti TestFramework a TestRoot do jakéhokoli projektu C# nebo Visual Basic, tyto testy budou vyčísleny a lze je spustit pomocí okna Průzkumník testů.
 
 Pokud to chcete povolit, klikněte pravým tlačítkem myši na uzel projektu v Průzkumník řešení, zvolte **Uvolnit projekt** a pak zvolte **upravit projekt**. Poté v souboru projektu přidejte následující dva prvky do skupiny vlastností.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Ujistěte se, že skupina vlastností, na kterou přidáváte prvky, nemá zadanou podmínku.
 > To může způsobit neočekávané chování.
 
@@ -170,6 +171,7 @@ Pokud to chcete povolit, klikněte pravým tlačítkem myši na uzel projektu v 
 Dále přidejte testy do kořenové složky testu, kterou jste zadali, a budou k dispozici pro spuštění v okně Průzkumník testů. Pokud se nezobrazují, může být nutné projekt znovu sestavit.
 
 ### <a name="unit-test-net-core-and-net-standard"></a>Test jednotek .NET Core a .NET Standard
+
 Kromě výše uvedených vlastností také budete muset nainstalovat balíček NuGet [Microsoft. JavaScript. UnitTest](https://www.nuget.org/packages/Microsoft.JavaScript.UnitTest/) a nastavit vlastnost:
 
 ```xml

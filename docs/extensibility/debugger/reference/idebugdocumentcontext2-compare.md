@@ -1,4 +1,5 @@
 ---
+description: Porovná kontext tohoto dokumentu s daným polem kontextů dokumentů.
 title: 'IDebugDocumentContext2:: Compare | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 959d909d0c777110905aff3b11c8c29d27d628dd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a18a689a187e802b92485f092b10b7323d0f97c8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880759"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102173014"
 ---
 # <a name="idebugdocumentcontext2compare"></a>IDebugDocumentContext2::Compare
 Porovná kontext tohoto dokumentu s daným polem kontextů dokumentů.

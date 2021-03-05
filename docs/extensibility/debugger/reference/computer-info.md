@@ -1,4 +1,5 @@
 ---
+description: Popisuje počítač, na kterém je spuštěn ladicí program.
 title: COMPUTER_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 548306e1c9ef488025fd88132a27bb841194375a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 81dee41b0ffc45ae6e0403e732c27d030026fb07
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900282"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102170904"
 ---
 # <a name="computer_info"></a>COMPUTER_INFO
 Popisuje počítač, na kterém je spuštěn ladicí program.
