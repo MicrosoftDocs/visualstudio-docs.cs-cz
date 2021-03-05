@@ -1,4 +1,5 @@
 ---
+description: 'IDiaStackFrame:: get_lengthSavedRegisters načte počet bajtů uložených registrů, které byly vloženy do zásobníku.'
 title: 'IDiaStackFrame:: get_lengthSavedRegisters | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bd9d10c64de0d6683d7369aee8f44721b6e9c26
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 69bf9aeda9d565a1a21e1a48cb05fda3e084438a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863961"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147462"
 ---
 # <a name="idiastackframeget_lengthsavedregisters"></a>IDiaStackFrame::get_lengthSavedRegisters
 Načte počet bajtů uložených registrů, které byly vloženy do zásobníku.

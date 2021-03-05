@@ -1,4 +1,5 @@
 ---
+description: Obnoví posloupnost výčtu snímků zásobníku na začátek.
 title: 'IDiaEnumStackFrames:: resetovat | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b5ede126460fc91ac085c512a491609ddf2d077
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a30f05193931bf4df70f4cdb028bd08d2ba9569d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856172"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148764"
 ---
 # <a name="idiaenumstackframesreset"></a>IDiaEnumStackFrames::Reset
 Obnoví posloupnost výčtu na začátek.

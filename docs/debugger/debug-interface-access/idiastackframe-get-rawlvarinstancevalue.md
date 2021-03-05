@@ -1,4 +1,5 @@
 ---
+description: Tato metoda načte hodnotu zadané místní proměnné jako nezpracované bajty.
 title: 'IDiaStackFrame:: get_rawLVarInstanceValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a0c0052ca7183a0c53080a4e51bddd2cdfbf72ee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dc7bc12fe8fd38fc02b6794b2026bce328d95511
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854890"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147441"
 ---
 # <a name="idiastackframeget_rawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
 Tato metoda načte hodnotu zadané místní proměnné jako nezpracované bajty.

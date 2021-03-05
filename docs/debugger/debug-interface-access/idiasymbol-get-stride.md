@@ -1,4 +1,5 @@
 ---
+description: Načte rozteč matice nebo pole s roztečí.
 title: 'IDiaSymbol:: get_stride | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ab4fae7c0e2816fa8c69e239cc96df82b9e805d7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 331949c4b37c6e4f472bc2d1f5d805d7a9f7426a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853595"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147147"
 ---
 # <a name="idiasymbolget_stride"></a>IDiaSymbol::get_stride
 Načte rozteč matice nebo pole s roztečí.

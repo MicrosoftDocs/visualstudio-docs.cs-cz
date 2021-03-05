@@ -1,4 +1,5 @@
 ---
+description: K této chybě dochází, pokud služba správy služby IIS nereaguje.
 title: Ověření zabezpečení se nezdařilo, protože služba správy služby IIS neodpověděla | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e64947beb30b5abc4649fc65d8d566a7dedb55a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 42c0a5a1a1fdb3a997f46a6933df9c8681fe0498
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871829"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147079"
 ---
 # <a name="error-a-security-check-failed-because-the-iis-admin-service-did-not-respond"></a>Chyba: Kontrola zabezpečení selhala, protože služba správy služby IIS neodpověděla.
 K této chybě dochází, pokud služba správy služby IIS nereaguje. To obvykle znamená, že došlo k potížím s instalací služby IIS. Nejdřív ověřte, že je služba spuštěná pomocí nástroje **služby** z **nástrojů pro správu**.

@@ -1,4 +1,5 @@
 ---
+description: K této chybě dochází, pokud na počítači, který se pokoušíte ladit, není správně nainstalováno rozhraní ASP.NET.
 title: Prostředí ASP.NET není nainstalováno.
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: 2388e59ae760e28c8f778ab8ccb15265414174b7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 205f0fb3948414ec87b735af9b1b97917872a950
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871751"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147052"
 ---
 # <a name="error-aspnet-not-installed"></a>Chyba: Prostředí ASP.NET není nainstalováno.
 K této chybě dochází, pokud [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] není správně nainstalován na počítači, který se pokoušíte ladit. To může znamenat, že [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] nebyla nikdy nainstalována nebo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] byla nainstalována dříve a služba IIS byla nainstalována později.

@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, jestli je uživatelsky definovaný datový typ vnořený.
 title: 'IDiaSymbol:: get_nested | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 04de0500105a460006d49788c5563eba3820685f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 70c4b5d348c69aece9164a24e8e24a4cf4fdb86b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853833"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147189"
 ---
 # <a name="idiasymbolget_nested"></a>IDiaSymbol::get_nested
 Načte příznak, který určuje, jestli je uživatelsky definovaný datový typ vnořený.

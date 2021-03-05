@@ -1,4 +1,5 @@
 ---
+description: Načte příznak označující, zda oddíl obsahuje inicializovaná data.
 title: 'IDiaSectionContrib:: get_initializedData | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c040f2f39133d62cd5b2899389c50cf87572654d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e1ac48783425f7311923d132c8277fc7f33d67f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864444"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148008"
 ---
 # <a name="idiasectioncontribget_initializeddata"></a>IDiaSectionContrib::get_initializedData
 Načte příznak označující, zda oddíl obsahuje inicializovaná data.

@@ -1,4 +1,5 @@
 ---
+description: Vytvoří výčet různých symbolů obsažených ve zdroji dat.
 title: IDiaEnumSymbols | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d6710ebfec5f0c76bee217f9f75fb24c7efabd18
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: af03a6aa730a81d5e563a28271e2606004de2562
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856101"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148694"
 ---
 # <a name="idiaenumsymbols"></a>IDiaEnumSymbols
 Vytvoří výčet různých symbolů obsažených ve zdroji dat.

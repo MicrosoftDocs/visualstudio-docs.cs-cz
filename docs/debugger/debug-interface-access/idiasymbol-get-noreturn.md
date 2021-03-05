@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda byla funkce označena jako nikdy Nenávratná s atributem vracet.
 title: 'IDiaSymbol:: get_noReturn | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 631cb2f9e6ebc9d0e88816bb862bf2c5429c7428
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6d3d140afd80855be7afeeef11481d5df20c057b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853819"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147182"
 ---
 # <a name="idiasymbolget_noreturn"></a>IDiaSymbol::get_noReturn
 Načte příznak, který určuje, zda byla funkce označena jako nikdy Nenávratná s atributem [return](/cpp/cpp/noreturn) .

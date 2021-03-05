@@ -1,4 +1,5 @@
 ---
+description: Načte zadaný počet symbolů v sekvenci výčtu.
 title: 'IDiaEnumSymbols:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 788bbacdca0cdf03ed1a96a4c19c43ed38b9ec42
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f1effa2d3b861be076a18adaaeafa10549ec7478
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865144"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148708"
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
 Načte zadaný počet symbolů v sekvenci výčtu.

@@ -1,4 +1,5 @@
 ---
+description: Načte bajty kontrolního součtu.
 title: 'IDiaSourceFile:: get_checksum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 787cdd98bd049704accbe7a1aca9562bd8b9835d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8aac5b35c98b8bb5b11bc623a274949ee32d9229
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854988"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147595"
 ---
 # <a name="idiasourcefileget_checksum"></a>IDiaSourceFile::get_checksum
 Načte bajty kontrolního součtu.

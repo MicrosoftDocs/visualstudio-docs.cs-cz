@@ -1,4 +1,5 @@
 ---
+description: Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor symbolů.
 title: 'IDiaEnumSymbols:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 810f6f153fa09409ff8356505f297c185319ccbd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3c6af6aa1aa912c4a1f568bb11318803deb87939
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865179"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148722"
 ---
 # <a name="idiaenumsymbolsclone"></a>IDiaEnumSymbols::Clone
 Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.

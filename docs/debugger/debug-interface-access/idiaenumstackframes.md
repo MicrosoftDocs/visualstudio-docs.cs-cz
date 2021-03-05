@@ -1,4 +1,5 @@
 ---
+description: Vytvoří výčet různých dostupných rámců zásobníku.
 title: IDiaEnumStackFrames | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 155e46e5f11a04047d5eef314203ac920abd6ce4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 52acd9646523f53ce4f95f8e4d312bbd70637c3b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856177"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148729"
 ---
 # <a name="idiaenumstackframes"></a>IDiaEnumStackFrames
 Vytvoří výčet různých dostupných rámců zásobníku.

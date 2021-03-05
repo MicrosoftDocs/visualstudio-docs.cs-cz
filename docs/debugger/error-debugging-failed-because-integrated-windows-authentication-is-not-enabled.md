@@ -1,4 +1,5 @@
 ---
+description: Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověřování.
 title: Ladění se nezdařilo, protože není povolené integrované ověřování systému Windows | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d1bbdc3e06dee87e7d8930bc5c4e60c6d25ee2f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a3f95359c7963ca7da3d59f81aa471424c23de8a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871738"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147026"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Chyba: Ladění se nezdařilo, protože integrované ověřování systému Windows není povoleno.
 Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověřování. Tato situace může nastat při pokusu o krokování do webové aplikace nebo webové služby XML. Jednou z příčin této chyby je, že není povolené integrované ověřování systému Windows. Pokud ho chcete povolit, postupujte podle kroků v tématu povolení integrovaného ověřování systému Windows.

@@ -1,4 +1,5 @@
 ---
+description: Načte zadaný typ symbolu, který obsahuje nebo je nejbližší, zadanou virtuální adresu (VA) a posun.
 title: 'IDiaSession:: findSymbolByVAEx | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ac2795b2b2b8740c51afcc84f6c2c29715b0e04c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 578745bae879609bd734a209c959cacf50639848
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855072"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147609"
 ---
 # <a name="idiasessionfindsymbolbyvaex"></a>IDiaSession::findSymbolByVAEx
 Načte zadaný typ symbolu, který obsahuje nebo je nejbližší, zadanou virtuální adresu (VA) a posun.

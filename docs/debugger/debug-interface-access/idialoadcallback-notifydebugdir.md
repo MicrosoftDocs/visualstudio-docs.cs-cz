@@ -1,4 +1,5 @@
 ---
+description: Volá se, když se v souboru. exe našel adresář pro ladění.
 title: 'IDiaLoadCallback:: NotifyDebugDir | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e5844cc235d604e8433940920eb9244044732d54
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ed83b79dea8f488be79a2161968876c9aa2a9a11
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855646"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148281"
 ---
 # <a name="idialoadcallbacknotifydebugdir"></a>IDiaLoadCallback::NotifyDebugDir
 Volá se, když se v souboru. exe našel adresář pro ladění.

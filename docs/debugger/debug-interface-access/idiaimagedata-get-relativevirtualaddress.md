@@ -1,4 +1,5 @@
 ---
+description: Načte umístění ve virtuální paměti modulu vzhledem k aplikaci.
 title: 'IDiaImageData:: get_relativeVirtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: daf8fb5e66bcf214781c2aa15256e32e21d60959
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 98b3b6eaf0296d03d0120605eec69ee6c308426f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855856"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148442"
 ---
 # <a name="idiaimagedataget_relativevirtualaddress"></a>IDiaImageData::get_relativeVirtualAddress
 Načte umístění ve virtuální paměti modulu vzhledem k aplikaci.

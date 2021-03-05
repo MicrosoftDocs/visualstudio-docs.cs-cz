@@ -1,4 +1,5 @@
 ---
+description: Vytvoří výčet různých segmentů obsažených ve zdroji dat.
 title: IDiaEnumSegments | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 92463a892ec9d02fd7c31061aafa81918cfabe3a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ab7d5129ac1f2a6cf256bf7cbbeb0ea78d26e506
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856311"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148827"
 ---
 # <a name="idiaenumsegments"></a>IDiaEnumSegments
 Vytvoří výčet různých segmentů obsažených ve zdroji dat.

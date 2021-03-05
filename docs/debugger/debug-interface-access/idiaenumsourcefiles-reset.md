@@ -1,4 +1,5 @@
 ---
+description: Obnoví posloupnost výčtů zdrojových souborů na začátek.
 title: 'IDiaEnumSourceFiles:: resetovat | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d78cedfa2e6de695b394314fe58c579cfa3437f4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3745eda64de82058ed53c77ddb669384959221c7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856213"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148771"
 ---
 # <a name="idiaenumsourcefilesreset"></a>IDiaEnumSourceFiles::Reset
 Obnoví posloupnost výčtu na začátek.

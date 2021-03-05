@@ -1,4 +1,5 @@
 ---
+description: Přečte hodnoty ULONGLONG v sadě vlastností.
 title: 'IDiaPropertyStorage:: ReadULONGLONG | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ab1459100d773e0f887c09f06d03cdfa8e578e35
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f314152355459ffd2437621efaae002ef284c765
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855541"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148134"
 ---
 # <a name="idiapropertystoragereadulonglong"></a>IDiaPropertyStorage::ReadULONGLONG
 Přečte `ULONGLONG` hodnoty v sadě vlastností.

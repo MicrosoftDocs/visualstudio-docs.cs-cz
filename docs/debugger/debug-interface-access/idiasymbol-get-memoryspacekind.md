@@ -1,4 +1,5 @@
 ---
+description: Načte druh paměťového prostoru.
 title: 'IDiaSymbol:: get_memorySpaceKind | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c763e681707d429591073ea9736a13ae5ad923d4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5a60aa330e0839bc6ef167088770537ea3b408c5
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862974"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147203"
 ---
 # <a name="idiasymbolget_memoryspacekind"></a>IDiaSymbol::get_memorySpaceKind
 Načte druh paměťového prostoru.

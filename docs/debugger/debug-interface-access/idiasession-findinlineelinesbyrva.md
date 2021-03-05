@@ -1,4 +1,5 @@
 ---
+description: 'IDiaSession:: findInlineeLinesByRVA načte výčet, který umožňuje klientovi iterovat informace o číslech řádků všech funkcí, které jsou vloženy přímo nebo nepřímo, zadaným nadřazeným symbolem a jsou obsaženy v rámci zadané relativní virtuální adresy (RVA).'
 title: 'IDiaSession:: findInlineeLinesByRVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1daae404b3adb1e4a8d2595307ef9bc4eb406399
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b9989ffd3c8b4cf03b82cbb0f310840572315031
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855191"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147756"
 ---
 # <a name="idiasessionfindinlineelinesbyrva"></a>IDiaSession::findInlineeLinesByRVA
 Načte výčet, který umožňuje klientovi iterovat informace o číslech řádků všech funkcí, které jsou vloženy přímo nebo nepřímo zadaným nadřazeným symbolem a jsou obsaženy v rámci zadané relativní virtuální adresy (RVA).

@@ -1,4 +1,5 @@
 ---
+description: Načte počet bajtů kódu.
 title: 'IDiaInjectedSource:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c5fde6459d2c5bb0463a919732427b277a371099
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3154f1a76c0f5b74c795884c62ecc61e049264a9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864850"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148421"
 ---
 # <a name="idiainjectedsourceget_length"></a>IDiaInjectedSource::get_length
 Načte počet bajtů kódu.

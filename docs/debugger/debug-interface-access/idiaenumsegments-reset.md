@@ -1,4 +1,5 @@
 ---
+description: Obnoví posloupnost výčtu segmentů na začátek.
 title: 'IDiaEnumSegments:: resetovat | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ab6bf3da112104f4eec2ea7bc4cf4d1e9e0c30d6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ed5e31ed807d343ef550e81e8bc95bb1ff85e0a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856332"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148841"
 ---
 # <a name="idiaenumsegmentsreset"></a>IDiaEnumSegments::Reset
 Obnoví posloupnost výčtu na začátek.

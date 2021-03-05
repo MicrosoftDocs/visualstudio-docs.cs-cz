@@ -1,4 +1,5 @@
 ---
+description: Vrátí výčet symbolů pro vložené rámce, které odpovídají zadanému zdrojovému umístění.
 title: 'IDiaSession:: findAcceleratorInlineesByLinenum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 196eafaee2b18c4dd08b81d6670b79cf62b8f41f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4ddb65e5041f19ad854eec271b22f3cbcab5a97c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864283"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147864"
 ---
 # <a name="idiasessionfindacceleratorinlineesbylinenum"></a>IDiaSession::findAcceleratorInlineesByLinenum
 Vrátí výčet symbolů pro vložené rámce, které odpovídají zadanému zdrojovému umístění.

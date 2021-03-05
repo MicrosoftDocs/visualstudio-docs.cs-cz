@@ -1,4 +1,5 @@
 ---
+description: Získá enumerátor pro vlastnosti v rámci této sady.
 title: 'IDiaPropertyStorage:: Enum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8972fa93ebae30fc64839324106d068e27577434
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d113107621c3254b86356202e94eac6e3e3a8c66
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864647"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148176"
 ---
 # <a name="idiapropertystorageenum"></a>IDiaPropertyStorage::Enum
 Získá enumerátor pro vlastnosti v rámci této sady.

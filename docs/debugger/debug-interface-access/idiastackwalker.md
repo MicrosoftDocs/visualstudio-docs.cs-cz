@@ -1,4 +1,5 @@
 ---
+description: Poskytuje metody pro procházení zásobníku pomocí informací v souboru. pdb.
 title: IDiaStackWalker | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c9ec4267a0f5de93b32a4a56a61742a9148f2d9f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a86609f43bb6e825dac1b595b5e32951c3313a34
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863856"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147336"
 ---
 # <a name="idiastackwalker"></a>IDiaStackWalker
 Poskytuje metody pro procházení zásobníku pomocí informací v souboru. pdb.

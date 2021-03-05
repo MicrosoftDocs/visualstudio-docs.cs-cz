@@ -1,4 +1,5 @@
 ---
+description: Načte zadaný typ symbolu, který obsahuje nebo je nejbližší, zadanou relativní virtuální adresu (RVA) a posun.
 title: 'IDiaSession:: findSymbolByRVAEx | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fd3290afb5116661f62983ce3a6fae8653312f24
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0fd63e97a27b122a15e6edd8054f76edf34c4779
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864129"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147623"
 ---
 # <a name="idiasessionfindsymbolbyrvaex"></a>IDiaSession::findSymbolByRVAEx
 Načte zadaný typ symbolu, který obsahuje nebo je nejbližší, zadanou relativní virtuální adresu (RVA) a posun.

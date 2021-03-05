@@ -1,4 +1,5 @@
 ---
+description: Načte příspěvky oddílu pomocí indexu.
 title: 'IDiaEnumSectionContribs:: Item | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c753811378ee81deb5d0deacb8035c1768e80c50
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b39ba7092f163602426aa6194e9109f1db1b4485
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856472"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148876"
 ---
 # <a name="idiaenumsectioncontribsitem"></a>IDiaEnumSectionContribs::Item
 Načte příspěvky oddílu pomocí indexu.
