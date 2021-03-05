@@ -1,4 +1,5 @@
 ---
+description: Element AddIn oboru názvů vstav3 obsahuje informace, které jsou specifické pro systém Microsoft Office doplňků VSTO a přizpůsobení na úrovni dokumentu vyvinutých v rámci sady Visual Studio.
 title: '&lt;AddIn – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 71fa31122432f4894bfca59929ee5eb127b7cad2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4cfc59475b01fbf42c387b4a7a5ca533b313a322
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896731"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102227382"
 ---
 # <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;AddIn – &gt; element (vývoj pro Office v sadě Visual Studio)
   Element **AddIn** `vstav3` oboru názvů obsahuje informace, které jsou specifické pro systém Microsoft Office doplňky VSTO a přizpůsobení na úrovni dokumentu vyvinutých v rámci sady Visual Studio.
@@ -70,7 +71,7 @@ ms.locfileid: "99896731"
 
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje prvek **AddIn** v řešení Office na úrovni dokumentu, které je nasazeno pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
@@ -134,7 +135,7 @@ ms.locfileid: "99896731"
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje prvek **AddIn** v řešení Office na úrovni aplikace, které je nasazeno pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

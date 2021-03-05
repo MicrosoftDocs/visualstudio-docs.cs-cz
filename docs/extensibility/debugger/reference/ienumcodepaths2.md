@@ -1,4 +1,5 @@
 ---
+description: Toto rozhraní představuje seznam cest kódu.
 title: IEnumCodePaths2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 69a65488d38fe2562392be152e448369ff081915
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f9758bacf6dc22ad65dc4d8db9b21d0f6728efaf
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962155"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102227083"
 ---
 # <a name="ienumcodepaths2"></a>IEnumCodePaths2
 Toto rozhraní představuje seznam cest kódu.
