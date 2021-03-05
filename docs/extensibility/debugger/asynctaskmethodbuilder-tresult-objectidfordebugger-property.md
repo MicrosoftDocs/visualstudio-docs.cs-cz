@@ -1,4 +1,5 @@
 ---
+description: AsyncTaskMethodBuilder &lt; TResult &gt; . ObjectIdForDebugger – Získá objekt, který lze použít k jednoznačné identifikaci tohoto tvůrce do ladicího programu.
 title: AsyncTaskMethodBuilder &lt; TResult &gt; . Vlastnost ObjectIdForDebugger –
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbcee2eeb7f096854eb66dda63801da5f24764e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 225b4e318e1ed14c3aa72c55f923738c51277487
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915651"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145661"
 ---
 # <a name="asynctaskmethodbuilderlttresultgtobjectidfordebugger-property"></a>AsyncTaskMethodBuilder &lt; TResult &gt; . Vlastnost ObjectIdForDebugger –
 Získává objekt, který lze použít k jednoznačné identifikaci tohoto tvůrce do ladicího programu.

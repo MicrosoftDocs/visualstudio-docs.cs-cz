@@ -1,4 +1,5 @@
 ---
+description: Nastaví základní server pro dodavatele portu.
 title: 'IDebugPortSupplierEx2:: SetServer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6d8f21bc37570fc75db5f573003aba8f70afc5f6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 60136aaf238ade896145d96a62e4fa78ff068460
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840168"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145401"
 ---
 # <a name="idebugportsupplierex2setserver"></a>IDebugPortSupplierEx2::SetServer
 Nastaví základní server pro dodavatele portu.

@@ -1,4 +1,5 @@
 ---
+description: Referenční oddíl obsahuje koncepční přehled rozhraní API, průvodce, který zobrazuje syntaxi a použití pro všechny prvky rozhraní API a řadu příkladů kódu.
 title: Reference k rozhraní API (ladění sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,19 +11,19 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 24e7c8892798d9192aa59c946e1c978899b4d173
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 47c6697945c6c588a8b4e57ab03d573d45c4d4cf
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912031"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102144634"
 ---
 # <a name="api-reference-visual-studio-debugging"></a>Referenční informace pro rozhraní API (Ladění sady Visual Studio)
 Referenční oddíl obsahuje koncepční přehled rozhraní API, průvodce, který zobrazuje syntaxi a použití pro všechny prvky rozhraní API a řadu příkladů kódu. Všechny odkazy jsou seřazené podle kategorií podle abecedy.
 
  V následující tabulce jsou uvedeny běžné `HRESULT` hodnoty vracené metodami.
 
-|Název|Description|Hodnota|
+|Název|Popis|Hodnota|
 |----------|-----------------|-----------|
 |S_OK|Úspěch.|0x00000000|
 |E_UNEXPECTED|Došlo k neočekávanému selhání.|0x8000FFFF|

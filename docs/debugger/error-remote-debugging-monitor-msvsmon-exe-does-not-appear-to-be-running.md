@@ -1,4 +1,5 @@
 ---
+description: Tato chybová zpráva znamená, že Visual Studio nemohlo najít správnou instanci sady Visual Studio Sledování vzdáleného ladění na vzdáleném počítači.
 title: Zdá se, že na vzdáleném počítači neběží sledování vzdáleného ladění sady Microsoft Visual Studio (MSVSMON.EXE)
 titleSuffix: ''
 ms.custom: seodec18
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ecb8a0a3c725403d57769090229f690281026a1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6c40e36548e17bbd4d37192364667a369bdcbb47
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871504"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102146791"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>Chyba: Zdá se, že Microsoft Visual Studio Remote Debugging Monitor (MSVSMON.EXE) na vzdáleném počítači neběží.
 Tato chybová zpráva znamená, že Visual Studio nemohlo najít správnou instanci sady Visual Studio Sledování vzdáleného ladění na vzdáleném počítači. Aby mohla vzdálené ladění fungovat, musí být nainstalovaná aplikace Visual Studio Sledování vzdáleného ladění. Informace o stažení a nastavení vzdáleného ladicího programu naleznete v tématu [vzdálené ladění](../debugger/remote-debugging.md).

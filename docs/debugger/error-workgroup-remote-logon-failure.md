@@ -1,5 +1,6 @@
 ---
 title: Selhání vzdáleného přihlášení pracovní skupiny | Microsoft Docs
+description: K této chybě může dojít při ladění z počítače v pracovní skupině a pokusu o připojení ke vzdálenému počítači.
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f56c8d8e0113b400e9d9cd072ba16f304cd6192
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 582b38b7a4115a140f6031b2d4c9227edfd438d1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870841"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102146233"
 ---
 # <a name="error-workgroup-remote-logon-failure"></a>Chyba: Selhání vzdáleného přihlášení pracovní skupiny
 Tato chyba čte:

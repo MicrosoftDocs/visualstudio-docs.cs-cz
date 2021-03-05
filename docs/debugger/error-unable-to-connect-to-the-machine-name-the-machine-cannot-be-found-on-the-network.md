@@ -1,5 +1,6 @@
 ---
 title: Nepovedlo se připojit k &lt; názvu počítače &gt; . Počítač se v síti nepodařilo najít. | Dokumentace Microsoftu
+description: 'K tomuto chování dochází, pokud je splněna jedna z následujících podmínek: (1) vaše připojení ke vzdálenému počítači bylo přerušeno. (2) váš uživatelský účet na vzdáleném počítači je zakázán. (3) platnost vašeho hesla na vzdáleném počítači vypršela.'
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dcf52a258a46f44afaf6e890531496f57b11fc24
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e0d83f043e020ad3c65ac0f986ec174fac95585
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871062"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102146428"
 ---
 # <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Chyba: Nelze se připojit k názvu počítače &lt; &gt; . Počítač se v síti nepodařilo najít.
 K tomuto chování dochází, pokud je splněna jedna z následujících podmínek:

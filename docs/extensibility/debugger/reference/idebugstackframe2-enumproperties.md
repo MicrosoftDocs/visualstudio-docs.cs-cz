@@ -1,4 +1,5 @@
 ---
+description: Vytvoří enumerátor pro vlastnosti přidružené k bloku zásobníku, například místní proměnné.
 title: 'IDebugStackFrame2:: Enumproperties – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 500701be7b6f2aedffceaaaa819ecbd253a58e36
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 40298e505f0d3ccbba200c5487a1bf1d6723f5b2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837707"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145960"
 ---
 # <a name="idebugstackframe2enumproperties"></a>IDebugStackFrame2::EnumProperties
 Vytvoří enumerátor pro vlastnosti přidružené k bloku zásobníku, například místní proměnné.

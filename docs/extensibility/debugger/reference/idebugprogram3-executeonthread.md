@@ -1,4 +1,5 @@
 ---
+description: Spustí ladicí program.
 title: 'IDebugProgram3:: ExecuteOnThread | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8df69c02fb7e78dbb107db906de59d8b7e5881b4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b3d996fd7b8cda1d5e36322c85d49c9889dd66dd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887065"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145999"
 ---
 # <a name="idebugprogram3executeonthread"></a>IDebugProgram3::ExecuteOnThread
 Spustí ladicí program. Vlákno je vráceno, aby poskytovalo ladicí informace o tom, ve kterém vlákně se uživatel zobrazuje při provádění programu.

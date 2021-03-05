@@ -1,4 +1,5 @@
 ---
+description: Tato chyba znamená, že je služba vzdáleného ladicího programu spuštěna pod uživatelským účtem, který nelze ověřit při pokusu o připojení k počítači, ze kterého provádíte ladění.
 title: Služba Visual Studio Remote Debugger na cílovém počítači se nemůže znovu připojit k tomuto počítači.
 titleSuffix: ''
 ms.custom: seodec18
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ef556e19946789abb5805727ccc42c1a9230d9af
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a08f1a7638233e2633a34287aad500ee81245be6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871257"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102146688"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Chyba: Služba vzdáleného ladicího programu sady Visual Studio na cílovém počítači se nemůže připojit zpět k tomuto počítači.
 Tato chyba znamená, že je služba vzdáleného ladicího programu spuštěna pod uživatelským účtem, který nelze ověřit při pokusu o připojení k počítači, ze kterého provádíte ladění. K této chybě může dojít při vzdáleném ladění pomocí staršího ladicího stroje a vzdálený ladicí program je spuštěn jako služba.

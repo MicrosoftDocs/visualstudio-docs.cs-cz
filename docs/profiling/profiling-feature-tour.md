@@ -2,7 +2,7 @@
 title: Začínáme s nástroji pro profilaci
 description: Podívejte se na krátké zobrazení různých diagnostických nástrojů, které jsou k dispozici v aplikaci Visual Studio.
 ms.custom: ''
-ms.date: 09/08/2020
+ms.date: 02/18/2021
 ms.topic: overview
 f1_keywords:
 - vs.diagnosticshub.overview
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bfd7055303fed2c18501d5eea3b49b34c68ec248
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 855a04fae1d5b406019e758c6d6f931d6657bb4e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929105"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145375"
 ---
 # <a name="first-look-at-profiling-tools"></a>První seznámení s nástroji pro profilaci
 
@@ -162,6 +162,14 @@ Nástroj zobrazí každý dotaz v zobrazení seznamu. Můžete zobrazit informac
 
 ![Přidělování](./media/db-gotosource.png "Přidělování")
 
+## <a name="visualize-net-counters-net-core"></a>Vizualizace čítačů .NET (.NET Core)
+
+Počínaje verzí Visual Studio 2019 verze 16,7 můžete použít [Nástroj čítače .NET](../profiling/dotnet-counters-tool.md) v aplikaci Visual Studio k vizualizaci čítačů výkonu. Můžete vizualizovat čítače vytvořené pomocí [čítačů dotnet](/dotnet/core/diagnostics/dotnet-counters). čítače dotnet podporují mnoho čítačů, jako je využití procesoru a velikost haldy systému uvolňování paměti.
+
+Tento nástroj zobrazuje živé hodnoty pro každý čítač v zobrazení seznamu.
+
+:::image type="content" source="../profiling/media/dotnet-counters-tool-collecting.png" alt-text="Shromažďování nástroje čítače .NET":::
+
 ::: moniker-end
 
 ## <a name="examine-ui-performance-and-accessibility-events-uwp"></a>Kontrola výkonu uživatelského rozhraní a událostí přístupnosti (UWP)
@@ -235,6 +243,7 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 |[Časová osa aplikace](../profiling/application-timeline.md)|Ano (XAML)|ano|ne|
 |[Prohlížeč událostí](../profiling/events-viewer.md)|ano|ano|ano|
 |[.NET Async](../profiling/analyze-async.md)|Ano (jenom .NET)|ano|ano|
+|[Čítače .NET](../profiling/dotnet-counters-tool.md)|Ano (jenom .NET Core)|ne|Ano (jenom ASP.NET Core)|
 |[Databáze](../profiling/analyze-database.md)|Ano (jenom .NET Core)|ne|Ano (jenom ASP.NET Core)|
 |[Prohlížeč výkonu](#analyze-performance-legacy-tools)|ne|ne|ne|
 |[IntelliTrace](../debugger/intellitrace.md)|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|

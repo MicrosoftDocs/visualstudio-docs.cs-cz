@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: b41615e1826987cb42076ab3195fe7bfad235e7a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 368fd5bc9c8b7e2659c86b6e3dc69a609da37617
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867890"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102144660"
 ---
 # <a name="enable-or-install-first-party-net-analyzers"></a>Povolit nebo nainstalovat analyzátory .NET First stran
 
@@ -26,7 +26,7 @@ Analyzátory platformy .NET Compiler Platform (Roslyn) kontrolují kód jazyka C
 
 Analyzátory .NET pro první stranu můžete povolit nebo nainstalovat jedním z následujících způsobů:
 
-- **Povolení ze sady .NET SDK**: počínaje verzí Visual Studio 2019 16,8 a .NET 5,0 jsou tyto analyzátory [součástí sady .NET SDK](/dotnet/fundamentals/code-analysis/overview). Analýza je ve výchozím nastavení povolená pro projekty, které cílí na .NET 5,0 nebo novější. Můžete povolit analýzu kódu pro projekty, které cílí na starší verze rozhraní .NET, nastavením `EnableNETAnalyzers` vlastnosti na `true` . Můžete také zakázat analýzu kódu pro projekt nastavením `EnableNETAnalyzers` na `false` .
+- **Povolení ze sady .NET SDK**: počínaje verzí Visual Studio 2019 16,8 a .NET 5,0 jsou tyto analyzátory [součástí sady .NET SDK](/dotnet/fundamentals/code-analysis/overview). Analýza je ve výchozím nastavení povolená pro projekty, které cílí na .NET 5,0 nebo novější. Můžete povolit analýzu kódu pro projekty, které cílí na starší verze rozhraní .NET, nastavením vlastnosti MSBUILD [EnableNETAnalyzers](/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) na `true` . Můžete také zakázat analýzu kódu pro projekt nastavením `EnableNETAnalyzers` na `false` .
 
 - **Instalovat jako balíček NuGet**: Pokud nechcete přejít na sadu .NET 5 + SDK, nebo pokud upřednostňujete model založený na balíčku NuGet, analyzátory jsou také k dispozici v `Microsoft.CodeAnalysis.NetAnalyzers` [balíčku NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers) v sadě Visual Studio 2019.  Můžete upřednostnit model založený na balíčku pro aktualizace verze na vyžádání. Pokud jste v aplikaci Visual Studio 2017, nainstalujte `2.9.x` místo toho nejnovější verzi `Microsoft.CodeAnalysis.FxCopAnalyzers` [balíčku NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) .
 
