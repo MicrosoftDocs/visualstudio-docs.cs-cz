@@ -1,4 +1,5 @@
 ---
+description: Tato metoda vyhodnocuje výraz synchronně.
 title: 'IDebugExpression2:: EvaluateSync | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5adb5d6fc38a06054d6273f5b0493bae5bed77df
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 08d430a2c4e803126e99d37fb7ef30336bde503b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916209"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102152699"
 ---
 # <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
 Tato metoda vyhodnocuje výraz synchronně.

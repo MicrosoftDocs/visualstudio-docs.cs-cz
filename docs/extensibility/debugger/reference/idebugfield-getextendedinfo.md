@@ -1,4 +1,5 @@
 ---
+description: Tato metoda načte rozšířené informace o poli.
 title: 'IDebugField:: GetExtendedInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 911556cb615e373d620b496fb31e5d6093b7cc37
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 98d522222d57a0828ebcefe446262033d2d8dfc1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869931"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151959"
 ---
 # <a name="idebugfieldgetextendedinfo"></a>IDebugField::GetExtendedInfo
 Tato metoda načte rozšířené informace o poli.
