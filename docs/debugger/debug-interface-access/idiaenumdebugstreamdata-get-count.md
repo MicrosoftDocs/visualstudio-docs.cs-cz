@@ -1,4 +1,5 @@
 ---
+description: Načte číselné záznamy v datovém proudu ladění.
 title: 'IDiaEnumDebugStreamData:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 356d2de5ea0342d1064605ff6d727e7676a4b5ce
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ba28ff7deff0135d7a6afddf15c44c92d107ad4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865214"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158174"
 ---
 # <a name="idiaenumdebugstreamdataget_count"></a>IDiaEnumDebugStreamData::get_Count
 Načte číselné záznamy v datovém proudu ladění.

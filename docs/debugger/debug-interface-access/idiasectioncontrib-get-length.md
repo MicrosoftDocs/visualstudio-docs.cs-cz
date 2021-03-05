@@ -1,4 +1,5 @@
 ---
+description: Načte počet bajtů v oddílu.
 title: 'IDiaSectionContrib:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a7205b47c2d9db5e9d700bd225182a6fd58e631
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6f429a4ee113e9f7a102f783cb336284d7af6bc0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855408"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157236"
 ---
 # <a name="idiasectioncontribget_length"></a>IDiaSectionContrib::get_length
 Načte počet bajtů v oddílu.

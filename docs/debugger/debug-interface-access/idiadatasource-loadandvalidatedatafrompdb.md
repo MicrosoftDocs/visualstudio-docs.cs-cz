@@ -1,4 +1,5 @@
 ---
+description: Otevře a ověří, že soubor databáze programu (PDB) odpovídá poskytnutým informacím o podpisu a připraví soubor. pdb jako zdroj dat pro ladění.
 title: 'IDiaDataSource:: loadAndValidateDataFromPdb | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 57f903bde5121a9ece797f6eb97c29805a3290a1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0d55053271e38ee87533a11a8c5f6cd30d7e7333
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857165"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158286"
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
 Otevře a ověří, že soubor databáze programu (PDB) odpovídá poskytnutým informacím o podpisu a připraví soubor. pdb jako zdroj dat pro ladění.

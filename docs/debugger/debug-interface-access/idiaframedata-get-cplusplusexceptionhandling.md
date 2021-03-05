@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který označuje, zda je zpracování výjimek jazyka C++ v platnosti.
 title: 'IDiaFrameData:: get_cplusplusExceptionHandling | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ba0f2cf2b9f42ef9bdc26b43c57f3f01a5bd553
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aad24a136f660021132d54c7d3c2d931078f8bda
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855954"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157754"
 ---
 # <a name="idiaframedataget_cplusplusexceptionhandling"></a>IDiaFrameData::get_cplusplusExceptionHandling
 Načte příznak, který označuje, zda je zpracování výjimek jazyka C++ v platnosti.

@@ -1,4 +1,5 @@
 ---
+description: Určuje, zda je v cestě, kde je umístěn soubor. exe, povolen soubor. pdb.
 title: 'IDiaLoadCallback2:: RestrictReferencePathAccess | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 62abe31d3f91125366d8dbe9d45f7b008039a382
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d0801cd36af23e3a4e3ff911494e00f9bd232a4a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855611"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157397"
 ---
 # <a name="idialoadcallback2restrictreferencepathaccess"></a>IDiaLoadCallback2::RestrictReferencePathAccess
 Určuje, zda je v cestě, kde je umístěn soubor. exe, povolen soubor. pdb.

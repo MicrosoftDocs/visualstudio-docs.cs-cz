@@ -1,4 +1,5 @@
 ---
+description: Vytvoří výčet různých tabulek obsažených ve zdroji dat.
 title: IDiaEnumTables | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f753ec5d4dcfba7f41d8e0d6e566fed9b7910ff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 022ab4db45355db86965582c951e67ee41d53bde
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865056"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157866"
 ---
 # <a name="idiaenumtables"></a>IDiaEnumTables
 Vytvoří výčet různých tabulek obsažených ve zdroji dat.

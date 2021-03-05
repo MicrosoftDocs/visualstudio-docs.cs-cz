@@ -1,4 +1,5 @@
 ---
+description: 'IDiaFrameData:: get_systemExceptionHandling načte příznak, který označuje, zda je zpracování výjimek systému aktivní.'
 title: 'IDiaFrameData:: get_systemExceptionHandling | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9409c7a3e30f080df4a821cdd6f0003a016ea31f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 130afc2a52f848749d7c46f643e1b552975e894c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864934"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157705"
 ---
 # <a name="idiaframedataget_systemexceptionhandling"></a>IDiaFrameData::get_systemExceptionHandling
 Načte příznak, který označuje, zda je zpracování výjimek systému aktivní.

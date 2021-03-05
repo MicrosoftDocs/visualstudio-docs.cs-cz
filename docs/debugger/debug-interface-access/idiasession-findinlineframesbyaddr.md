@@ -1,4 +1,5 @@
 ---
+description: 'IDiaSession:: findInlineFramesByAddr načte výčet, který umožňuje klientovi iterovat všemi vloženými snímky na dané adrese.'
 title: 'IDiaSession:: findInlineFramesByAddr | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b9cc3d4399963113c2fc4d30011201d274a3cff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b063828522a0ab1579b7ade1d5f780b01598e96f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864227"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157103"
 ---
 # <a name="idiasessionfindinlineframesbyaddr"></a>IDiaSession::findInlineFramesByAddr
 Načte výčet, který umožňuje klientovi iterovat všemi vloženými snímky na dané adrese.

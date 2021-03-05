@@ -1,4 +1,5 @@
 ---
+description: Získá rozměry pole.
 title: 'IDebugArrayObject:: GetDimensions | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c0c71032fc8f5c75522f6b1f9e0d8cb1308f63f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f5bb935ea4aba6ab6ebd0a39f8dfc8d539d6555c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870191"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158680"
 ---
 # <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
 Získá rozměry pole.

@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který označuje, zda oddíl obsahuje spustitelný kód.
 title: 'IDiaSectionContrib:: get_code | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3eec1c468c46bbec15397ced4d25b020d336ed48
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 61aeca676c6c6773beed92d1a30a07167876365a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855485"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157306"
 ---
 # <a name="idiasectioncontribget_code"></a>IDiaSectionContrib::get_code
 Načte příznak, který označuje, zda oddíl obsahuje spustitelný kód.

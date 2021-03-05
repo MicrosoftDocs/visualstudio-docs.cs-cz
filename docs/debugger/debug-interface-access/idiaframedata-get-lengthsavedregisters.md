@@ -1,4 +1,5 @@
 ---
+description: 'IDiaFrameData:: get_lengthSavedRegisters načte počet bajtů uložených registrů, které byly vloženy do zásobníku.'
 title: 'IDiaFrameData:: get_lengthSavedRegisters | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fdf02feaa87e5f4ab4f3077543815cf48814f4c2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1dc5ebbd9cff11b6cc2f8e3b75fbea7fcb8db61e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864962"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157719"
 ---
 # <a name="idiaframedataget_lengthsavedregisters"></a>IDiaFrameData::get_lengthSavedRegisters
 Načte počet bajtů uložených registrů, které byly vloženy do zásobníku.

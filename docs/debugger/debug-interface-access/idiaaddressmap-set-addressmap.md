@@ -1,4 +1,5 @@
 ---
+description: Poskytuje mapu adres pro podporu překladů rozložení obrázků.
 title: 'IDiaAddressMap:: set_addressMap | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c4a450522ea97ee5b0b11993e8e4b6474de4a9f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b9b00147f4ea8b2313e49e86795c36ec33aae9f1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857172"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158306"
 ---
 # <a name="idiaaddressmapset_addressmap"></a>IDiaAddressMap::set_addressMap
 Poskytuje mapu adres pro podporu překladů rozložení obrázků.

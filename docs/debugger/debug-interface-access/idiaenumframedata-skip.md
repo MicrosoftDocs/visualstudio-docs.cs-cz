@@ -1,4 +1,5 @@
 ---
+description: Přeskočí zadaný počet prvků dat rámce v sekvenci výčtu.
 title: 'IDiaEnumFrameData:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 52fe677fcbd349933ac827bc564fb57104918a1a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e2fe993c524a846545a13ab14787c9c6fd5c92e0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856766"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158027"
 ---
 # <a name="idiaenumframedataskip"></a>IDiaEnumFrameData::Skip
 Přeskočí zadaný počet prvků dat rámce v sekvenci výčtu.

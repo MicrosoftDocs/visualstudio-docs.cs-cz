@@ -1,4 +1,5 @@
 ---
+description: Načte počet tabulek.
 title: 'IDiaEnumTables:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fc48165b269e7164d710c23ed0ecbddedef36fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c69e1860e3a0b534e53d5431c77cdfa3753a6da1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865081"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157859"
 ---
 # <a name="idiaenumtablesget_count"></a>IDiaEnumTables::get_Count
 Načte počet tabulek.

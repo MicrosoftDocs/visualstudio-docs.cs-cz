@@ -1,4 +1,5 @@
 ---
+description: Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor streamu ladění.
 title: 'IDiaEnumDebugStreams:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 68a4925a8df181106d1aa902ce89462253a8d16f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 21b026bd717d20777da1eaa5b815039164abc6b9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857011"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158160"
 ---
 # <a name="idiaenumdebugstreamsclone"></a>IDiaEnumDebugStreams::Clone
 Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.

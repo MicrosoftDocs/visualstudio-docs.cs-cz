@@ -1,4 +1,5 @@
 ---
+description: Níže jsou uvedené rozhraní pro vyhodnocení výrazu pro sadu SDK pro ladění sady Visual Studio.
 title: Rozhraní pro vyhodnocení výrazu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a048d11b09ee873a2f5a11e35db78f68df6ad680
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d380fcce087fad3dc6b101e78cbc514ba19b1052
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936935"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158732"
 ---
 # <a name="expression-evaluation-interfaces"></a>Rozhraní pro vyhodnocení výrazu
 > [!IMPORTANT]
@@ -34,7 +35,7 @@ ms.locfileid: "99936935"
 
 - Visual Studio (VS)
 
-|Rozhraní|Implementuje|Description|
+|Rozhraní|Implementuje|Popis|
 |---------------|--------------------|-----------------|
 |[IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)|EE|Představuje numerický alias pro proměnnou.|
 |[IDebugAlias2](../../../extensibility/debugger/reference/idebugalias2.md)|EE|Představuje numerický alias pro proměnnou a umožňuje vyhodnocovacímu filtru výrazů (EE) získat doménu aplikace pro daný alias.|
