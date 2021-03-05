@@ -1,4 +1,5 @@
 ---
+description: Načte logickou tuto úpravu pro metodu.
 title: 'IDiaSymbol:: get_thisAdjust | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ae752826e1e57527087140ab1ecdad7b52e25ce
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cedb234c324f08f9de0a8c51abd5609b6b061612
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862596"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155654"
 ---
 # <a name="idiasymbolget_thisadjust"></a>IDiaSymbol::get_thisAdjust
 Načte logický `this` seřizovací modul pro metodu.

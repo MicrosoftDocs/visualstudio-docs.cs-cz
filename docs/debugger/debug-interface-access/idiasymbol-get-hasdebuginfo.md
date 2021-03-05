@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda Kompilantu) obsahuje ladicí informace.
 title: 'IDiaSymbol:: get_hasDebugInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f8914c0eae31e7faac8cea523f4c558a9f00749a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8c1ca848ec33e31fbb1f6e8708fd41930931d5f6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863387"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156326"
 ---
 # <a name="idiasymbolget_hasdebuginfo"></a>IDiaSymbol::get_hasDebugInfo
 Načte příznak, který určuje, zda [kompilantu](../../debugger/debug-interface-access/compiland.md) obsahuje ladicí informace.

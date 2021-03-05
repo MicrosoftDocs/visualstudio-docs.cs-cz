@@ -1,4 +1,5 @@
 ---
+description: Načte počet modifikátorů, které jsou aplikovány na původní typ.
 title: 'IDiaSymbol:: get_numberOfModifiers | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 433e57eaa6e1f3a36a83f4613e13f7cf717d2fe8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad43e11f45c005aad923cbb27e23865978d047d7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862876"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155934"
 ---
 # <a name="idiasymbolget_numberofmodifiers"></a>IDiaSymbol::get_numberOfModifiers
 Načte počet modifikátorů, které jsou aplikovány na původní typ.

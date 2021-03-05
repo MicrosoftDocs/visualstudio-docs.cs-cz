@@ -1,4 +1,5 @@
 ---
+description: Načte posun na začátek uživatelsky definovaného typu (UDT) člena v UDT.
 title: 'IDiaSymbol:: get_offsetInUdt | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 81dc8975b415ca821fbfb89848cad7d1d02177b3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2f02c684ad4a21c64ca45aefa8a9da765e5549fe
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862841"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155892"
 ---
 # <a name="idiasymbolget_offsetinudt"></a>IDiaSymbol::get_offsetInUdt
 Načte posun na začátek uživatelsky definovaného typu (UDT) člena v UDT.

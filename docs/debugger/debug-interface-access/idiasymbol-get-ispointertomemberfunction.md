@@ -1,4 +1,5 @@
 ---
+description: Určuje, zda je tento symbol ukazatelem na členskou funkci.
 title: 'IDiaSymbol:: get_isPointerToMemberFunction | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e19338d187f312d44633e218c8f540e03ba83ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 92bcde9b53cc03326aac1c122e1d2b2e20f08e67
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863128"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156074"
 ---
 # <a name="idiasymbolget_ispointertomemberfunction"></a>IDiaSymbol::get_isPointerToMemberFunction
 Určuje, zda je tento symbol ukazatelem na členskou funkci.

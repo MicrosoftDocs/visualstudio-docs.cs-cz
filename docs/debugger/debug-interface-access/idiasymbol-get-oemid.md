@@ -1,4 +1,5 @@
 ---
+description: Načte hodnotu ID OEM (Original Equipment Manufacturer) daného symbolu.
 title: 'IDiaSymbol:: get_oemId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 85638411f7ca1da965993ffb41d98cfdbfb4198a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1a7bde81aadd179e6b09b2e46e7f0789a7433232
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853770"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155913"
 ---
 # <a name="idiasymbolget_oemid"></a>IDiaSymbol::get_oemId
 Načte hodnotu ID OEM (Original Equipment Manufacturer) daného symbolu.

@@ -1,4 +1,5 @@
 ---
+description: Načte nadřazený identifikátor třídy pro symbol.
 title: 'IDiaSymbol:: get_classParentId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a965d04bf6cd41bcd19c2b5e987f610149f601c1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 95581d74b1ebfdc837383b96398ba1efb1d21120
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854484"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156438"
 ---
 # <a name="idiasymbolget_classparentid"></a>IDiaSymbol::get_classParentId
 Načte nadřazený identifikátor třídy pro symbol.

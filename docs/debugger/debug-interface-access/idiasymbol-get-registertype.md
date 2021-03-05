@@ -1,4 +1,5 @@
 ---
+description: Načte typ registru.
 title: 'IDiaSymbol:: get_registerType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 757c20be027691b98b804f7802c042f04d253c22
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1ec297ea8de8ef5fb12c70a33dcb4213d39d7d9f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862757"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155794"
 ---
 # <a name="idiasymbolget_registertype"></a>IDiaSymbol::get_registerType
 Načte typ registru.

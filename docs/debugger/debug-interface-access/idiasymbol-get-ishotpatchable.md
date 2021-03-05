@@ -1,4 +1,5 @@
 ---
+description: Načte příznak označující, zda byl modul zkompilován pomocí přepínače kompilátoru/hotpatch (Create opravitelnou za provozu image)).
 title: 'IDiaSymbol:: get_isHotpatchable | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9433743788663e9a3975f7bb2b402d930b0b4837
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8af3d00d15bb521dda05ce345a93b16a47f8539b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854092"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156186"
 ---
 # <a name="idiasymbolget_ishotpatchable"></a>IDiaSymbol::get_isHotpatchable
 Načte příznak označující, zda byl modul zkompilován pomocí přepínače kompilátoru [/hotpatch (Create opravitelnou za provozu image)](/cpp/build/reference/hotpatch-create-hotpatchable-image) .

@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda funkce obsahuje asynchronní (strukturované) zpracování výjimek.
 title: 'IDiaSymbol:: get_hasEHa | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fc96412402202f0e6e20c85778f14b6be444d9bd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d944cc5fc190be0917016adb14febf74162a0ca4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863380"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156312"
 ---
 # <a name="idiasymbolget_haseha"></a>IDiaSymbol::get_hasEHa
 Načte příznak, který určuje, zda funkce obsahuje asynchronní (strukturované) zpracování výjimek.

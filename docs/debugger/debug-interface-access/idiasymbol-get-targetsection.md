@@ -1,4 +1,5 @@
 ---
+description: Načte oddíl adresy cíle s převoláním.
 title: 'IDiaSymbol:: get_targetSection | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 76df469bb02f847827fd95c53ef2924e54185428
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d72ce83ada785cc598df123929b54a3cc8b6d7b2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853532"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155668"
 ---
 # <a name="idiasymbolget_targetsection"></a>IDiaSymbol::get_targetSection
 Načte oddíl adresy cíle s převoláním.

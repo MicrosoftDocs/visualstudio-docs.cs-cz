@@ -1,4 +1,5 @@
 ---
+description: Načte pole hodnot identifikátoru specifického pro kompilátor pro tento symbol.
 title: 'IDiaSymbol:: get_typeIds | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 31cff55617e21c8ed750800fec982f2b1492d977
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04a39af21ebb8a409656bd8b8ae0b4323da33c60
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862568"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155612"
 ---
 # <a name="idiasymbolget_typeids"></a>IDiaSymbol::get_typeIds
 Načte pole hodnot identifikátoru specifického pro kompilátor pro tento symbol.

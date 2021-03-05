@@ -1,4 +1,5 @@
 ---
+description: Načte typ ukazatele virtuální základní tabulky.
 title: 'IDiaSymbol:: get_virtualBaseTableType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e31fd1b8d3ea014b5fde2f57969871fe4237800a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f67affafd1984f811432a0b69fdcdfec0521e377
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862435"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155514"
 ---
 # <a name="idiasymbolget_virtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
 Načte typ ukazatele virtuální základní tabulky.

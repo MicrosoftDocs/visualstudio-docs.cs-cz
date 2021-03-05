@@ -1,4 +1,5 @@
 ---
+description: Určuje, zda je proměnná optimalizována.
 title: 'IDiaSymbol:: get_isOptimizedAway | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 35f9fd83ccc5d1f5087be3d75ac6f2f4d6ff75f4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6612294caa40fd885690cce3f40f7d49ffa65c5c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854064"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156144"
 ---
 # <a name="idiasymbolget_isoptimizedaway"></a>IDiaSymbol::get_isOptimizedAway
 Určuje, zda je proměnná optimalizována.

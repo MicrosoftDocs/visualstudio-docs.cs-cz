@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda je použita direktiva preprocesoru pro bezpečnou vyrovnávací paměť.
 title: 'IDiaSymbol:: get_isSafeBuffers | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c32382468c4d67dae9e94a3fc9882fd61213cf00
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b9fd2114a1e4272296e97fa498c5c9137b49adeb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863121"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156053"
 ---
 # <a name="idiasymbolget_issafebuffers"></a>IDiaSymbol::get_isSafeBuffers
 Načte příznak, který určuje, zda je použita direktiva preprocesoru pro bezpečnou vyrovnávací paměť. Použijte v případě, že je [výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) nastaven na hodnotu `SymTagFunction` .

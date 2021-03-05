@@ -1,4 +1,5 @@
 ---
+description: Načte číslo dílčí verze kompilátoru back-end.
 title: 'IDiaSymbol:: get_backEndMinor | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 72d7b5712c4ec0e2040d6e0f37a322e8b7b1dac0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e9506e142728235ad58560ab787c881c47b729a4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854519"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156473"
 ---
 # <a name="idiasymbolget_backendminor"></a>IDiaSymbol::get_backEndMinor
 Načte číslo dílčí verze kompilátoru back-end.

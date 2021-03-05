@@ -1,4 +1,5 @@
 ---
+description: Načte identifikátor symbolu dolní meze dimenze pole FORTRAN.
 title: 'IDiaSymbol:: get_lowerBoundId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1780a1ec3af3a066bae698d7e2b0db8b25c4e69b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1aa4cf51b4501ad26e1d2364eb41e2a9726c043b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853882"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156005"
 ---
 # <a name="idiasymbolget_lowerboundid"></a>IDiaSymbol::get_lowerBoundId
 Načte identifikátor symbolu dolní meze dimenze pole FORTRAN.

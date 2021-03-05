@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda uživatelsky definovaný datový typ obsahuje definice vnořeného typu.
 title: 'IDiaSymbol:: get_hasNestedTypes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 117bbed95e4adf79270072888c8ac1ac71215433
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b52efb012ef713c2308e3fc7b6b28367327e8311
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863310"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156284"
 ---
 # <a name="idiasymbolget_hasnestedtypes"></a>IDiaSymbol::get_hasNestedTypes
 Načte příznak, který určuje, zda uživatelsky definovaný datový typ obsahuje definice vnořeného typu.

@@ -1,4 +1,5 @@
 ---
+description: Načte virtuální adresu (VA) cíle s převoláním.
 title: 'IDiaSymbol:: get_targetVirtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e6e6df4e4916f9f2fa68cdedf4d03fd6d6b9d6b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c03a5fdf1a65306e20262717715ed6b27d1c7af
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862610"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155661"
 ---
 # <a name="idiasymbolget_targetvirtualaddress"></a>IDiaSymbol::get_targetVirtualAddress
 Načte virtuální adresu (VA) cíle s převoláním.

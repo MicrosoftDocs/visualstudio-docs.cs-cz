@@ -1,4 +1,5 @@
 ---
+description: 'Udržuje kontext zásobníku mezi voláními metody IDiaFrameData:: Execute.'
 title: IDiaStackWalkFrame | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 05db065b047629e1eaac49e5f6aeeb05eed4307e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 87fb733057272773d7cead9ceadbfe20020baf58
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863821"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156858"
 ---
 # <a name="idiastackwalkframe"></a>IDiaStackWalkFrame
 Udržuje kontext zásobníku mezi voláními metody [IDiaFrameData:: Execute](../../debugger/debug-interface-access/idiaframedata-execute.md) .

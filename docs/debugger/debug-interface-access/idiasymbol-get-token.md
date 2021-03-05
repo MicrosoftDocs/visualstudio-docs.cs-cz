@@ -1,4 +1,5 @@
 ---
+description: Načte token metadat spravované funkce nebo proměnné.
 title: 'IDiaSymbol:: get_token | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d8da3cbfa085eea44af8a1caf7489aaaab83f60e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b6b71a3bdd7c4223607cdbcc883d299101823a54
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853497"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155633"
 ---
 # <a name="idiasymbolget_token"></a>IDiaSymbol::get_token
 Načte token metadat spravované funkce nebo proměnné.

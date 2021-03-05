@@ -1,4 +1,5 @@
 ---
+description: Načte modifikátor přístupu člena třídy.
 title: 'IDiaSymbol:: get_access | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a25d2eb12529461a9787deadf3f3babff6b6cbe
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 691af7faecf964bf80fc13a8b4b50f079f16f3fb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863667"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156606"
 ---
 # <a name="idiasymbolget_access"></a>IDiaSymbol::get_access
 Načte modifikátor přístupu člena třídy.
