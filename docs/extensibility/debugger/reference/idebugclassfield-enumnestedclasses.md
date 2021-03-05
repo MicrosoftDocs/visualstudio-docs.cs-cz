@@ -1,4 +1,5 @@
 ---
+description: Vytvoří enumerátor pro třídy vnořené v této třídě.
 title: 'IDebugClassField:: EnumNestedClasses | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 63b42df8181ca12da1be2aca6faf1346406b621f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 87538db39df590fd3885f545e5442c7dafecb9a1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877431"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164263"
 ---
 # <a name="idebugclassfieldenumnestedclasses"></a>IDebugClassField::EnumNestedClasses
 Vytvoří enumerátor pro třídy vnořené v této třídě.
@@ -49,7 +50,7 @@ V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud nejsou žádné 
 ## <a name="remarks"></a>Poznámky
 Každý prvek výčtu je objekt [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) popisující vnořenou třídu.
 
-Vnořená třída je třída definovaná uvnitř jiné třídy. Příklad:
+Vnořená třída je třída definovaná uvnitř jiné třídy. Například:
 
 ```
 class RootClass {

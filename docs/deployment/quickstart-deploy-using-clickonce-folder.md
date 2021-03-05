@@ -1,4 +1,5 @@
 ---
+description: Počínaje verzí Visual Studio 2019 verze 16,8 můžete použít nástroj publikovat k publikování aplikace .NET Core 3,1 nebo novějších aplikací klasické pracovní plochy systému Windows pomocí technologie ClickOnce ze sady Visual Studio.
 title: Nasazení desktopové aplikace Windows .NET pomocí technologie ClickOnce
 ms.date: 10/15/2020
 ms.topic: quickstart
@@ -11,12 +12,12 @@ manager: jmartens
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a6f7c2c8d6c79270df94c100bbd4625856efa15
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d3977408f191aabc734226fd6b637fcfaaf5e9de
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934504"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165706"
 ---
 # <a name="deploy-a-net-windows-desktop-application-using-clickonce"></a>Nasazení desktopové aplikace Windows .NET pomocí technologie ClickOnce
 

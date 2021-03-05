@@ -1,4 +1,5 @@
 ---
+description: Vytvoří kopii spravovaného objektu v adresním prostoru ladicího stroje.
 title: 'IDebugObject:: GetManagedDebugObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8fec87a2294524c915116929f2ac2c991170c5ed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 87956b3630f9d152ecdda7754623e7257cf0a01a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920873"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164760"
 ---
 # <a name="idebugobjectgetmanageddebugobject"></a>IDebugObject::GetManagedDebugObject
 Vytvoří kopii spravovaného objektu v adresním prostoru ladicího stroje.

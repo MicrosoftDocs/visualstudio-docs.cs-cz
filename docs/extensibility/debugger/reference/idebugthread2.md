@@ -1,4 +1,5 @@
 ---
+description: Toto rozhraní představuje vlákno spuštěné v programu.
 title: IDebugThread2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a3eb4710e3073ee49aa9660aa322b4638c4c0d24
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d8b09aa546e4711b1c11623a3596ba0e385b2a14
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901615"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164419"
 ---
 # <a name="idebugthread2"></a>IDebugThread2
 Toto rozhraní představuje vlákno spuštěné v programu.

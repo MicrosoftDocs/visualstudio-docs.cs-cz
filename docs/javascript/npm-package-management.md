@@ -2,7 +2,7 @@
 title: Správa balíčků npm
 description: Sada Visual Studio vám pomůže se správou balíčků pomocí Správce balíčků Node.js (npm).
 ms.custom: seodec18
-ms.date: 04/16/2020
+ms.date: 02/23/2021
 ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 26c750a11c2910a6c6f91e1207d731024af64a5f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b017495d12d654be3e11da7153310b5bcba367d5
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962714"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165810"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Správa balíčků npm v aplikaci Visual Studio
 
@@ -179,5 +179,7 @@ Instalace balíčku může trvat několik minut. V okně **výstupu** přepněte
 * U Node.js projektů musíte mít nainstalovanou úlohu **vývojNode.js** pro podporu npm.
 
 * V některých scénářích Průzkumník řešení nemusí zobrazit správný stav nainstalovaných balíčků npm z důvodu známého problému, který je [zde](https://github.com/aspnet/Tooling/issues/479)popsán. Balíček se například může zobrazit jako nenainstalovaný při instalaci. Ve většině případů můžete aktualizovat Průzkumník řešení odstraněním *package.jsna*, restartováním sady Visual Studio a opětovným přidáním *package.jsdo* souboru, jak je popsáno výše v tomto článku. Nebo při instalaci balíčků můžete použít okno výstup npm k ověření stavu instalace.
+
+* V některých scénářích ASP.NET Core nemusí být uzel npm v Průzkumník řešení po sestavení projektu viditelný. Chcete-li znovu zobrazit uzel, klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Uvolnit projekt.** Poté klikněte pravým tlačítkem myši na uzel projektu a zvolte možnost **znovu načíst projekt**.
 
 * Pokud se při sestavování aplikace nebo transpiling kódu TypeScript zobrazí nějaké chyby, zkontrolujte, že se nekompatibilita balíčku npm v podobě potenciálního zdroje chyb. Pokud chcete identifikovat chyby, podívejte se do okna výstup npm při instalaci balíčků, jak je popsáno výše v tomto článku. Například pokud jedna nebo více npmch verzí balíčku je zastaralých a výsledkem je chyba, možná budete muset nainstalovat novější verzi, abyste opravili chyby. Informace o použití *package.js* k řízení verzí balíčku npm naleznete v části [package.jsv konfiguraci](../javascript/configure-packages-with-package-json.md).

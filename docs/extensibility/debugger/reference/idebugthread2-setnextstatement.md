@@ -1,4 +1,5 @@
 ---
+description: Nastaví ukazatel na aktuální instrukci na daný kontext kódu.
 title: 'IDebugThread2:: SetNextStatement | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7c8a7aff8c6e902b20c5569e2553aececae835ad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d29b351662ce5cb8aeda9a1f65e278349a0a3b18
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893708"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164471"
 ---
 # <a name="idebugthread2setnextstatement"></a>IDebugThread2::SetNextStatement
 Nastaví ukazatel na aktuální instrukci na daný kontext kódu.

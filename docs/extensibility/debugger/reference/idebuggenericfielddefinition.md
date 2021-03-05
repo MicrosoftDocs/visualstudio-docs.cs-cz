@@ -1,4 +1,5 @@
 ---
+description: Představuje definici pole pro obecný typ spravovaného kódu.
 title: IDebugGenericFieldDefinition | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff7c28a30ccab43629636f7dcd9391a669a376ae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ae277a6f0523adfc0c9afb0e0cac8765df2d5758
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884790"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165407"
 ---
 # <a name="idebuggenericfielddefinition"></a>IDebugGenericFieldDefinition
 Představuje definici pole pro obecný typ spravovaného kódu.
