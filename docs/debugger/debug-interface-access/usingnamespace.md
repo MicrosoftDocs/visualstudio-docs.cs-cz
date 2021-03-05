@@ -1,4 +1,5 @@
 ---
+description: Na některé symboly může odkazovat obor názvů a následně by měly být identifikovány značkou SymTagUsingNameSpace.
 title: UsingNamespace – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c42899aaf829d4c12efdcb6e1daa004d7611960
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1fde0be17059342c3b00ba43cab93f4464e31f1e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873385"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161541"
 ---
 # <a name="usingnamespace"></a>UsingNameSpace
 Na některé symboly může odkazovat obor názvů a následně by měla být identifikována `SymTagUsingNameSpace` značkou.

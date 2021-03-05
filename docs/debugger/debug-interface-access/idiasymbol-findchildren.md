@@ -1,4 +1,5 @@
 ---
+description: Načte podřízené položky symbolu.
 title: 'IDiaSymbol:: findChildren – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a61a85e36159c361f01dd4048a06c040415860d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 809157c8ffd4b3955b7a8d7b079f63398437e35c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854701"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161171"
 ---
 # <a name="idiasymbolfindchildren"></a>IDiaSymbol::findChildren
 Načte podřízené položky symbolu.

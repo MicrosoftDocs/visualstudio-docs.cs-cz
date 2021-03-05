@@ -1,4 +1,5 @@
 ---
+description: Načte podřízené objekty symbolu, které jsou platné v zadané virtuální adrese.
 title: 'IDiaSymbol:: findChildrenExByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ed1d2e2cfda5bf16117c2bc4fbd8c13384055a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ff9ed80ebd63baa8733fc3bab7d3d74ed3d4cc99
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854666"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161124"
 ---
 # <a name="idiasymbolfindchildrenexbyva"></a>IDiaSymbol::findChildrenExByVA
 Načte podřízené objekty symbolu, které jsou platné v zadané virtuální adrese.

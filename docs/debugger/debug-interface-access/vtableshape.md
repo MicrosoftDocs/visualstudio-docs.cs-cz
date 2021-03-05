@@ -1,4 +1,5 @@
 ---
+description: Symbol VTable) má podřízený symbol třídy identifikovaný značkou SymTagVTableShape.
 title: VTableShape | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b87d14774fa098121c405eb94bbf7ea96a338b7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 661d2d2595cc0ead1e15daeadf4d5fb059800b76
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873313"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161520"
 ---
 # <a name="vtableshape"></a>VTableShape
 Symbol [VTable](../../debugger/debug-interface-access/vtable.md) má podřízený symbol třídy identifikovaný `SymTagVTableShape` značkou.
