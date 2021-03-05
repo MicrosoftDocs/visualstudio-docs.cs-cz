@@ -1,4 +1,5 @@
 ---
+description: Popisuje výjimku nebo chybu za běhu vyvolanou laděným programem.
 title: EXCEPTION_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3f6ecbd791297f4c186d22d9ed14c627cf7be43f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa78aeea8a3c20aa5b7f5d17cf444bd4184903d5
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941850"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150897"
 ---
 # <a name="exception_info"></a>EXCEPTION_INFO
 Popisuje výjimku nebo chybu za běhu vyvolanou laděným programem.

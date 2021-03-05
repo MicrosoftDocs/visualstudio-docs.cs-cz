@@ -1,4 +1,5 @@
 ---
+description: Toto téma popisuje interní členy třídy System. Runtime. CompilerServices. AsyncVoidMethodBuilder.
 title: AsyncVoidMethodBuilder struktura – interní členové | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: edb0e11f80743289f8318c9fe7d331e6528f8107
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad209fb94a9857fe0596f1e25b0dec844d03ca8f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921620"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151141"
 ---
 # <a name="asyncvoidmethodbuilder-structure---internal-members"></a>AsyncVoidMethodBuilder struktura – interní členové
 Toto téma popisuje interní členy <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> třídy. Obecné informace o této třídě naleznete v <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> referenčním tématu.
@@ -37,7 +38,7 @@ Toto téma popisuje interní členy <xref:System.Runtime.CompilerServices.AsyncV
 
 ## <a name="internal-members"></a>Interní členové
 
-|Název|Description|
+|Název|Popis|
 |----------|-----------------|
 |[Vlastnost ObjectIdForDebugger –](../../extensibility/debugger/asyncvoidmethodbuilder-objectidfordebugger-property.md)|Získává objekt, který lze použít k jednoznačné identifikaci tohoto tvůrce do ladicího programu.|
 |[m_objectIdForDebugger pole](../../extensibility/debugger/asyncvoidmethodbuilder-m-objectidfordebugger-field.md)|Představuje inicializovaný objekt laxně vytvářená, který ladicí program používá k jednoznačné identifikaci tohoto tvůrce.|

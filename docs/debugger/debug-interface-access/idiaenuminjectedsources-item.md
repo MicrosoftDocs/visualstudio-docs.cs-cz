@@ -1,4 +1,5 @@
 ---
+description: Načte vložený zdroj prostřednictvím indexu.
 title: 'IDiaEnumInjectedSources:: Item | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 029c47cc04a09dc1168ff755c1640da9c9662207
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1d1ab3a9ce19705a4d9ff22f33a1275efc0e8b02
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856710"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148995"
 ---
 # <a name="idiaenuminjectedsourcesitem"></a>IDiaEnumInjectedSources::Item
 Načte vložený zdroj prostřednictvím indexu.

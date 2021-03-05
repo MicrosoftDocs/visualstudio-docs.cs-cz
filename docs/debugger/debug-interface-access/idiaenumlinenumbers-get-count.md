@@ -1,4 +1,5 @@
 ---
+description: Načte počet čísel řádků.
 title: 'IDiaEnumLineNumbers:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 16ff9e0e6071f76e6e569790044b70a4d1d87b10
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 33b87762d1112d1f84e3e49bdbc1d2d555d723fd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856612"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148974"
 ---
 # <a name="idiaenumlinenumbersget_count"></a>IDiaEnumLineNumbers::get_Count
 Načte počet čísel řádků.

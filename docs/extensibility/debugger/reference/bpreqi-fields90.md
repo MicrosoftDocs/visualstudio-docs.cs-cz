@@ -1,4 +1,5 @@
 ---
+description: Vytvoří výčet platných hodnot, které určují informace, které mají být načteny o požadavku na zarážku.
 title: BPREQI_FIELDS90 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7be8d52700315dfea5619a5d4e6ca875ada0139c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5405f728cf979738de5a830421c4306c5e398bb2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938239"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151081"
 ---
 # <a name="bpreqi_fields90"></a>BPREQI_FIELDS90
 Vytvoří výčet platných hodnot, které určují informace, které mají být načteny o požadavku na zarážku. Tento výčet rozšiřuje výčet [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) .

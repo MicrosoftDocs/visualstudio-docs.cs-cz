@@ -1,4 +1,5 @@
 ---
+description: Pole zálohování pro vlastnost System.Threading.Tasks.Task.Id
 title: m_taskId pole | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5603225ee768e1e79f27b5e06a86369d377f68af
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7fcae044be9df9d93252c7193ef808820ceb5575
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925101"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151113"
 ---
 # <a name="m_taskid-field"></a>m_taskId pole
 Pole pro zálohování pro <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> vlastnost.

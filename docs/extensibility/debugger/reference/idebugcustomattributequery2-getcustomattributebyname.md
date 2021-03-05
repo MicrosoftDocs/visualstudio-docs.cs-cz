@@ -1,4 +1,5 @@
 ---
+description: Získá vlastní bajty atributů podle názvu vlastního atributu.
 title: 'IDebugCustomAttributeQuery2:: GetCustomAttributeByName – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8662e3c18f568e60ac98e5468acc3da28966505c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8c65abff050af7b7c34161cbca2594431cb119b5
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842443"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150078"
 ---
 # <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
 Získá vlastní bajty atributů podle názvu vlastního atributu.

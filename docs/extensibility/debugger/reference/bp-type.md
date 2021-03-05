@@ -1,4 +1,5 @@
 ---
+description: Určuje, zda je zarážka v umístění kódu, je umístěním dat nebo je jiný typ zarážky.
 title: BP_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d01485a6044122baf460eede90470c5cc1478323
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e310154bc62cdea1fb9069cc868cf9e20335d06
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912998"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151101"
 ---
 # <a name="bp_type"></a>BP_TYPE
 Určuje, zda je zarážka v umístění kódu, je umístěním dat nebo je jiný typ zarážky.

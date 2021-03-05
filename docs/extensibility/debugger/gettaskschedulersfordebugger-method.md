@@ -1,4 +1,5 @@
 ---
+description: Načte pole všech objektů System. Threading. Tasks. TaskScheduler, které jsou aktuálně aktivní.
 title: Metoda GetTaskSchedulersForDebugger | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b9826681d2d322b1b240abb4062de007b564619
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f60ffa851e8b8821e3d07e1bfdd6e864104b5001
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921265"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150091"
 ---
 # <a name="gettaskschedulersfordebugger-method"></a>GetTaskSchedulersForDebugger – metoda
 Načte pole všech <xref:System.Threading.Tasks.TaskScheduler> objektů, které jsou aktuálně aktivní.

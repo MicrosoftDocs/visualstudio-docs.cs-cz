@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 959d015bd23c91ec2ba6215c7a5b42d13b37ee29
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 52264580e428fa6a2c33d80ea8fb9fb8e07f0c59
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865823"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149324"
 ---
 # <a name="configure-windows-firewall-for-remote-debugging"></a>Konfigurace brány Windows Firewall pro vzdálené ladění
 
@@ -49,6 +49,16 @@ Visual Studio a vzdálený ladicí program se při instalaci nebo spuštění po
 1. Přidejte název pravidla (například **msvsmon**, **IIS** nebo **nasazení webu**) a pak vyberte **Dokončit**.
 
    Nové pravidlo by se mělo zobrazit a vybrat v seznamu **příchozí pravidla** nebo **odchozí pravidla** .
+
+**Otevření portu pomocí prostředí PowerShell:**
+
+U brány Windows Firewall můžete použít příkazy PowerShellu, jako je rutina [New-NetFirewallRule](/powershell/module/netsecurity/new-netfirewallrule?view=win10-ps).
+
+Následující příklad otevře port 4024 pro vzdálený ladicí program na vzdáleném počítači. Cesta, kterou je třeba použít, se může lišit.
+
+```ps
+New-NetFirewallRule -DisplayName "msvsmon" -Direction Inbound -Program "Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe" -LocalPort 4024 -Protocol TCP -Authentication Required -Action Allow
+```
 
 ### <a name="ports-on-the-remote-computer-that-enable-remote-debugging"></a>Porty na vzdáleném počítači, které umožňují vzdálené ladění
 

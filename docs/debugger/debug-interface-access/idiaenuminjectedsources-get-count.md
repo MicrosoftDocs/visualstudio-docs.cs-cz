@@ -1,4 +1,5 @@
 ---
+description: Načte počet vložených zdrojů.
 title: 'IDiaEnumInjectedSources:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: aac9347ea54eff8660eb8eb3550d8a1d9d053c5b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f140dbeb347db9e7085365cc7c3ba8cddcaff927
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856738"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149016"
 ---
 # <a name="idiaenuminjectedsourcesget_count"></a>IDiaEnumInjectedSources::get_Count
 Načte počet vložených zdrojů.

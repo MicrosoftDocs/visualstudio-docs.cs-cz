@@ -1,4 +1,5 @@
 ---
+description: Všechny proměnné, jako jsou parametry, místní proměnné, globální proměnné a členy třídy, jsou identifikovány pomocí SymTagData symbolů.
 title: Data (Debug Interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c71f9f39d1b38db79d47aff37cee50f48e92566e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 08354e2f54a8c4d4e96d139470494dcdefe78703
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865431"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149289"
 ---
 # <a name="data-debug-interface-access-sdk"></a>Data (Přístup k rozhraní ladění SDK)
 Všechny proměnné, jako jsou parametry, místní proměnné, globální proměnné a členy třídy, jsou identifikovány pomocí `SymTagData` symbolů. `LocIsConstant`Pro tento typ jsou také identifikovány konstantní hodnoty ().

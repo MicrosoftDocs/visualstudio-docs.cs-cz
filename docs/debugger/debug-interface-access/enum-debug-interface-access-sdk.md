@@ -1,4 +1,5 @@
 ---
+description: Výčty jsou identifikovány SymTagEnum – symboly.
 title: Enum (Debug Interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 07342f4b67dd413296aad597b49426c15d619d75
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2a5ae6c3727e35ff8a021eb659dd59f220d8b3e0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857298"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149162"
 ---
 # <a name="enum-debug-interface-access-sdk"></a>Výčet (Přístup k rozhraní ladění SDK)
 Výčty jsou identifikovány pomocí `SymTagEnum` symbolů. Každá hodnota výčtu se zobrazí jako podřízená třída se `SymTagConstant` značkou.
