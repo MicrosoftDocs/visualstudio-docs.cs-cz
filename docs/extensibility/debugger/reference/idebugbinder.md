@@ -1,4 +1,5 @@
 ---
+description: Toto rozhraní váže pole symbolu, které obvykle vrací poskytovatel symbolů, do paměťového kontextu nebo objektu, který obsahuje aktuální hodnotu symbolu.
 title: IDebugBinder | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3cf4f418cf02f08f95d0192e99c0b02d0f74e3ad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: febe22338ddeaf275b37ae09c76921c91ec509da
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925117"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143620"
 ---
 # <a name="idebugbinder"></a>IDebugBinder
 > [!IMPORTANT]

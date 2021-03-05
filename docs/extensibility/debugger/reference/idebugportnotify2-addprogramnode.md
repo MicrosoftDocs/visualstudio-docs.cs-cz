@@ -1,4 +1,5 @@
 ---
+description: Zaregistruje program, který se dá ladit s portem, na kterém je spuštěný.
 title: 'IDebugPortNotify2:: AddProgramNode | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bfafb48aea95cd3ea79997fb2c84621396af210c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 186bfbfd44a88450aeade264020f70e0eddc7fb8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919841"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102142580"
 ---
 # <a name="idebugportnotify2addprogramnode"></a>IDebugPortNotify2::AddProgramNode
 Zaregistruje program, který se dá ladit s portem, na kterém je spuštěný.

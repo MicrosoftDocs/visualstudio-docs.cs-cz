@@ -1,4 +1,5 @@
 ---
+description: Určuje, zda je zarážka dat emulovana nebo implementována v hardwaru.
 title: BP_RES_DATA_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a90b8e9ffdc8009802c7e4c88927f69737eb83e4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bf1d27e876da5fdc0f95ecea0e9ba96c0a687bb1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901956"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102144101"
 ---
 # <a name="bp_res_data_flags"></a>BP_RES_DATA_FLAGS
 Určuje, zda je zarážka dat emulovana nebo implementována v hardwaru.

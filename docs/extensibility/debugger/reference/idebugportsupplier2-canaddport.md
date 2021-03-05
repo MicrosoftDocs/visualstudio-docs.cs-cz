@@ -1,4 +1,5 @@
 ---
+description: Ověřuje, že dodavatel portu může přidávat nové porty.
 title: 'IDebugPortSupplier2:: CanAddPort | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ebd90baebc859f340bfb06df3fdbdc6012588183
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5c53abba81b02aa6125d4fa25ce16db85579ce5c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904566"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102142658"
 ---
 # <a name="idebugportsupplier2canaddport"></a>IDebugPortSupplier2::CanAddPort
 Ověřuje, že dodavatel portu může přidávat nové porty.

@@ -1,4 +1,5 @@
 ---
+description: Zruší registraci programu, který je možné ladit z portu, na kterém je spuštěný.
 title: 'IDebugPortNotify2:: RemoveProgramNode | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 61ee3b8222ed85605958bc467822c495cb0b16e9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90918aed8652328a8aa02edac3517ec524a6cfa0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919848"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102142645"
 ---
 # <a name="idebugportnotify2removeprogramnode"></a>IDebugPortNotify2::RemoveProgramNode
 Zruší registraci programu, který je možné ladit z portu, na kterém je spuštěný.

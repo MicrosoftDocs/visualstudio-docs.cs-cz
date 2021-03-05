@@ -1,4 +1,5 @@
 ---
+description: Níže jsou uvedené výčty pro sadu SDK pro ladění sady Visual Studio.
 title: Výčty (ladění sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 45b26a6d5bc2a9bdb32d5a8412458e6a126486d7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 21813818436e62eb7e9fc16a393af69a613d6d58
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937124"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102144140"
 ---
 # <a name="enumerations-visual-studio-debugging"></a>Výčty (Ladění sady Visual Studio)
 Následují výčty pro [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] sadu SDK pro ladění.

@@ -1070,6 +1070,8 @@
       items:
         - name: Hierarchie volání
           href: ide/reference/call-hierarchy.md
+        - name: Vývojové prostředí PowerShell pro Developer Command Prompt &
+          href: ide/reference/command-prompt-powershell.md
         - name: Náhled změn
           href: ide/preview-changes.md
         - name: 'Výběr položek sady nástrojů, součásti WPF'
