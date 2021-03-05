@@ -1,4 +1,5 @@
 ---
+description: Načte ID dílčího typu.
 title: 'IDiaSymbol:: get_subTypeId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dc5bd5bebf6b213757f0e1be409606f1a8bbbe0b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6aae7976aa0f6ccff662fc7858b36e32937e71cb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853581"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160678"
 ---
 # <a name="idiasymbolget_subtypeid"></a>IDiaSymbol::get_subTypeId
 Načte ID dílčího typu.

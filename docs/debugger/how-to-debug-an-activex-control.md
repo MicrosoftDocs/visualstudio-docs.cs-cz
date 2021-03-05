@@ -1,6 +1,6 @@
 ---
 title: Ladění ovládacího prvku ActiveX | Microsoft Docs
-Description: Naučte se ladit ovládací prvek ActiveX. Je nutné zadat obsažený spustitelný soubor, který lze provádět na stránkách vlastností projektu nebo při zahájení ladění.
+description: Naučte se ladit ovládací prvek ActiveX. Je nutné zadat obsažený spustitelný soubor, který lze provádět na stránkách vlastností projektu nebo při zahájení ladění.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 83522eb13350d86ef0531d90b3db844ece8f6655
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6728b498da91f540d92182ad60f23e490d614948
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913397"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160392"
 ---
 # <a name="how-to-debug-an-activex-control"></a>Postupy: Ladění ovládacího prvku ActiveX
 

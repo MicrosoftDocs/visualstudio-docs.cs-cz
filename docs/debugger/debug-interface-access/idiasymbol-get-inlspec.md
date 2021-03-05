@@ -1,4 +1,5 @@
 ---
+description: Tato funkce načte příznak označující, zda byla funkce označena jako vložená (pomocí jednoho z vložených atributů _inline, __forceinline).
 title: 'IDiaSymbol:: get_InlSpec | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: efde91caaa4e7b79db01975c0691b2acb5f01bee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f727e83d067fed37698eb750bb39309a9454535a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854190"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160867"
 ---
 # <a name="idiasymbolget_inlspec"></a>IDiaSymbol::get_InlSpec
 Tato funkce načte příznak označující, zda byla funkce označena jako vložená (pomocí jednoho z [vložených __inline, \_ _forceinline](/cpp/cpp/inline-functions-cpp) atributů).

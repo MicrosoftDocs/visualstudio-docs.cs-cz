@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda je uživatelsky definovaný datový typ nepřímá virtuální základní třída.
 title: 'IDiaSymbol:: get_indirectVirtualBaseClass | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 284e41b9b9d3339a08acb25ad0ea6adc8d474e6c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a19e82acef2bbe35a8af35b533a5931c51373959
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863275"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160853"
 ---
 # <a name="idiasymbolget_indirectvirtualbaseclass"></a>IDiaSymbol::get_indirectVirtualBaseClass
 Načte příznak, který určuje, zda je uživatelsky definovaný datový typ nepřímá virtuální základní třída.

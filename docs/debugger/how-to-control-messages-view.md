@@ -1,6 +1,6 @@
 ---
 title: Řízení zobrazení zpráv | Microsoft Docs
-Description: Můžete zvolit typy oken a zpráv zobrazených v okně zobrazení zpráv a formát zobrazení pro řádky zpráv. Podrobnosti najdete v tomto článku.
+description: Můžete zvolit typy oken a zpráv zobrazených v okně zobrazení zpráv a formát zobrazení pro řádky zpráv. Podrobnosti najdete v tomto článku.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 674498ff86f3ea3d44d5d9b49ec97789fa5a1205
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9b126c417cee014370a6e5028f29c2207e070983
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837772"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160405"
 ---
 # <a name="how-to-control-messages-view"></a>Postupy: Řízení zobrazení zpráv
 Pomocí nástroje Spy + + máte značnou kontrolu nad obsahem okna [zobrazení zpráv](../debugger/messages-view.md) . Můžete [Spustit a zastavit](../debugger/how-to-start-and-stop-the-message-log-display.md) zobrazování zpráv kdykoli a můžete zadat:

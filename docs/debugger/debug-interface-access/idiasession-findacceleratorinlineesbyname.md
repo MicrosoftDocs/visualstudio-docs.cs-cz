@@ -1,4 +1,5 @@
 ---
+description: Vrátí výčet symbolů pro vložené rámce, které odpovídají zadanému názvu vložené funkce.
 title: 'IDiaSession:: findAcceleratorInlineesByName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a2ce0d808a21a793115c6f065ca4ab95b1507e5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fb2a6c67dc9f16d3a4ef98d36772681d3ab2638e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855233"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159025"
 ---
 # <a name="idiasessionfindacceleratorinlineesbyname"></a>IDiaSession::findAcceleratorInlineesByName
 Vrátí výčet symbolů pro vložené rámce, které odpovídají zadanému názvu vložené funkce.

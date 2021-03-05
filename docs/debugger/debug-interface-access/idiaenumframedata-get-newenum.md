@@ -1,4 +1,5 @@
 ---
+description: Načte verzi System. Runtime. InteropServices. ComTypes. IEnumVARIANT pro enumerátor dat rámce.
 title: 'IDiaEnumFrameData:: get__NewEnum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f47c7bd33c04f80909a6ab1732246e4e31dedf8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ffa18a94d8fb0e393d0814c42bab0406d49b1ee6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856822"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159368"
 ---
 # <a name="idiaenumframedataget__newenum"></a>IDiaEnumFrameData::get__NewEnum
 Načte <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> verzi tohoto enumerátoru.

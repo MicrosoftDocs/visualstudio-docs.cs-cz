@@ -1,4 +1,5 @@
 ---
+description: Načte číslo segmentu.
 title: 'IDiaSegment:: get_frame | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ce98ad6fee272c24ec12f4fe406a2877d8c7cff7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f914002206f4b5ae5593fe3d4bd82c6a957ce1b4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864367"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159039"
 ---
 # <a name="idiasegmentget_frame"></a>IDiaSegment::get_frame
 Načte číslo segmentu.

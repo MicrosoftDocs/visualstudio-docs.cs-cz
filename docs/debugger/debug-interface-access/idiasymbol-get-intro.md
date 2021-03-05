@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda je funkce Představujeme virtuální funkci.
 title: 'IDiaSymbol:: get_intro | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5099eb9d8ba1f56419cd1cf0138e29a79e2c28f6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad2e791995f4edc1b09655640bc339d577f7f37d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863261"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160874"
 ---
 # <a name="idiasymbolget_intro"></a>IDiaSymbol::get_intro
 Načte příznak, který určuje, zda je funkce Představujeme virtuální funkci.

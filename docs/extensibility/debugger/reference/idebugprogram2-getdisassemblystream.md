@@ -1,4 +1,5 @@
 ---
+description: Získá datový proud zpětného překladu pro tento program nebo část tohoto programu.
 title: 'IDebugProgram2:: GetDisassemblyStream | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e499d7b655cb79873b1cd3ef2954f054bba84f60
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e000ada618c21af865743bfb2bd9fd6b60a80a4b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844694"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159923"
 ---
 # <a name="idebugprogram2getdisassemblystream"></a>IDebugProgram2::GetDisassemblyStream
 Získá datový proud zpětného překladu pro tento program nebo část tohoto programu.

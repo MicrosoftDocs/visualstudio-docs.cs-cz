@@ -1,4 +1,5 @@
 ---
+description: Načte příznak označující, zda modul obsahuje spravovaný kód.
 title: 'IDiaSymbol:: get_hasManagedCode | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2fe00b39fb451372d8d3a949d5f1d553b71d7507
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1cac64e0e6419749a07d75e0beb9f5f8d4a566c5
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854232"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160944"
 ---
 # <a name="idiasymbolget_hasmanagedcode"></a>IDiaSymbol::get_hasManagedCode
 Načte příznak označující, zda modul obsahuje spravovaný kód.

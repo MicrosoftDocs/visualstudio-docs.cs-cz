@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda funkce obsahuje použití příkazu setjmp) (spárováno s příkazem longjmp (/CPP/c-Runtime-Library/Reference/longjmp), což tvoří metodu zpracování výjimek ve stylu C.
 title: 'IDiaSymbol:: get_hasSetJump | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a2584351919e717c893afcf35b4812df63042240
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8b0721969fb9419c8467fdd6019ff4de5aaf761c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854211"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160922"
 ---
 # <a name="idiasymbolget_hassetjump"></a>IDiaSymbol::get_hasSetJump
 Načte příznak, který určuje, zda funkce obsahuje použití příkazu [setjmp](/cpp/c-runtime-library/reference/setjmp) (spárovaného s příkazem [longjmp](/cpp/c-runtime-library/reference/longjmp) , tato forma metody zpracování výjimek ve stylu C).

@@ -1,4 +1,5 @@
 ---
+description: Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.
 title: 'IDiaEnumSegments:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 59cfde0b935ec43f6b439d2d2cf58b39d2ac9aa7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d67e96c3718dab9b6c02a34e7ee16abee919ec77
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856409"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159249"
 ---
 # <a name="idiaenumsegmentsclone"></a>IDiaEnumSegments::Clone
 Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.

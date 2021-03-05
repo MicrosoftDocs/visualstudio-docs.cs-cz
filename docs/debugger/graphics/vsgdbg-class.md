@@ -1,4 +1,5 @@
 ---
+description: Představuje rozhraní pro programové řízení komponenty v aplikaci diagnostiky grafiky.
 title: Třída VsgDbg | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 67bce62612a85e0bcff5e51cd07d4c374e13b01e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 24a4847e0d6c72d4de611edc47481477d2862a55
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861397"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160457"
 ---
 # <a name="vsgdbg-class"></a>VsgDbg – třída
 Představuje rozhraní pro programové řízení komponenty v aplikaci diagnostiky grafiky.
@@ -29,14 +30,14 @@ class VsgDbg;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Description|
+|Název|Popis|
 |----------|-----------------|
 |[VsgDbg::VsgDbg (konstruktor)](vsgdbg-vsgdbg-constructor.md)|Vytvoří instanci `VsgDbg` třídy a volitelně připraví komponentu v aplikaci diagnostiky grafiky na aktivní zachycování a zaznamenávání informací grafiky.|
 |[VsgDbg::~VsgDbg (destruktor)](vsgdbg-tilde-vsgdbg-destructor.md)|Odstraní instanci `VsgDbg` třídy.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Description|
+|Název|Popis|
 |----------|-----------------|
 |[AddMessage](addmessage.md)|Přidá vlastní zprávu do HUD diagnostiky grafiky (zobrazení záhlaví).|
 |[BeginCapture](begincapture.md)|Zahájí interval zachycení, který skončí `EndCapture` .|

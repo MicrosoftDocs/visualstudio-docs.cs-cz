@@ -1,4 +1,5 @@
 ---
+description: Načte pole typů určených pro kompilátor pro tento symbol.
 title: 'IDiaSymbol:: get_types | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fb8ee1519dd2613ec823aa2d13e60f296baa4415
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aec5db878c87ba257f1f83458d1ae742272a9b0f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853462"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160601"
 ---
 # <a name="idiasymbolget_types"></a>IDiaSymbol::get_types
 Načte pole typů určených pro kompilátor pro tento symbol.

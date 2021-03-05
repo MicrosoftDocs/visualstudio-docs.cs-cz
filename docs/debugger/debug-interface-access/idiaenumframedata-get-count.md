@@ -1,4 +1,5 @@
 ---
+description: Načte počet datových elementů rámce.
 title: 'IDiaEnumFrameData:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a5a28f0a8226d8c02cfcf8e24a703cdd006e525
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 71f261525debc0459ff5dbce513603e2caa1f17e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856843"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159361"
 ---
 # <a name="idiaenumframedataget_count"></a>IDiaEnumFrameData::get_Count
 Načte počet datových elementů rámce.

@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda uživatelem definovaný datový typ má definované operátory přiřazení.
 title: 'IDiaSymbol:: get_hasAssignmentOperator | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 709ffb3327359e41693d524e5b9eaab79dc64790
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3b42a1b3052082e7a38c738dbe2b623d343bdd90
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863394"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160986"
 ---
 # <a name="idiasymbolget_hasassignmentoperator"></a>IDiaSymbol::get_hasAssignmentOperator
 Načte příznak, který určuje, zda uživatelem definovaný datový typ má definované operátory přiřazení.

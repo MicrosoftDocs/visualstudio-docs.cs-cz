@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda je datový symbol součástí agregace nebo kolekce symbolů; Kompilátor bude považovat agregované symboly za samostatné entity, ale ve skutečnosti jsou součástí jednoho většího symbolu.
 title: 'IDiaSymbol:: get_isAggregated | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fc7eb836bab2219e764a7d6a40fc6b8421c916f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e78ec7f180ad1c719d562975377a413156bb1480
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863247"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160860"
 ---
 # <a name="idiasymbolget_isaggregated"></a>IDiaSymbol::get_isAggregated
 Načte příznak, který určuje, zda je datový symbol součástí agregace nebo kolekce symbolů; Kompilátor bude považovat agregované symboly za samostatné entity, ale ve skutečnosti jsou součástí jednoho většího symbolu.

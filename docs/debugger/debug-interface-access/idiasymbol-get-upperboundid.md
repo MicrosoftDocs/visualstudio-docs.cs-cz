@@ -1,4 +1,5 @@
 ---
+description: Načte identifikátor symbolu horní meze dimenze pole FORTRAN.
 title: 'IDiaSymbol:: get_upperBoundId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 11f86019cdf037aaf5859346dba21e94a0471500
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6a510a11ce0df3397027af13f908c50b18c649af
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862498"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160580"
 ---
 # <a name="idiasymbolget_upperboundid"></a>IDiaSymbol::get_upperBoundId
 Načte identifikátor symbolu horní meze dimenze pole FORTRAN.

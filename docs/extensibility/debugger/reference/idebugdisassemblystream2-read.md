@@ -1,4 +1,5 @@
 ---
+description: Přečte pokyny od aktuální pozice v datovém proudu zpětného překladu.
 title: 'IDebugDisassemblyStream2:: Read | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 720850096e7099ed95cbc5fa914bebb2bee580ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b963bddc9d1ee04a6955b1110d73934b30196b21
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944664"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160196"
 ---
 # <a name="idebugdisassemblystream2read"></a>IDebugDisassemblyStream2::Read
 Přečte pokyny od aktuální pozice v datovém proudu zpětného překladu.

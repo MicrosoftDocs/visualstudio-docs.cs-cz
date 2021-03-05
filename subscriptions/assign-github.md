@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
-ms.date: 02/02/2021
+ms.date: 03/03/2021
 ms.topic: conceptual
 description: Správa předplatných v předplatných sady Visual Studio s GitHubem Enterprise
-ms.openlocfilehash: ca71e696081e304cdbb8cc58576e0ae4c536f911
-ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
+ms.openlocfilehash: d1734e3f416815b9c63f7237eca4e7df26e34331
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99511316"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159554"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>Správa předplatných sady Visual Studio pomocí GitHubu Enterprise
 Zákazníci, kteří mají smlouvu Enterprise (EA) se společností Microsoft, mají nárok na zakoupení nové nabídky předplatných, která přináší společné předplatné sady Visual Studio a společnost GitHub. Předplatitelé sady Visual Studio mají snadný a ekonomický způsob získání GitHubu Enterprise. 
@@ -32,19 +32,40 @@ Další informace o správě předplatných sady Visual Studio najdete v těchto
 > [!Important]
 > Pokud jsou předplatná sady Visual Studio s GitHubem Enterprise přiřazena pomocí Správce předplatných sady Visual Studio, aniž byste nejdřív nakoupili, GitHub nebude upozorněn, že chcete vytvořit účet GitHub Enterprise.  **Nákup alespoň jednoho** Předplatné sady Visual Studio s GitHubem Enterprise je potřeba provést před přiřazením předplatných.
 
+## <a name="moving-to-visual-studio-with-github-enterprise"></a>Přechod na Visual Studio s GitHubem Enterprise
+Pokud vaše organizace koupí předplatná sady Visual Studio se sadami GitHub Enterprise po standardních Visual Studio Enterprise a Visual Studio Professional předplatných, portál pro správu obsahuje funkci, která vám umožní přesunout stávající předplatitele na odpovídající Visual Studio Enterprise s GitHubem Enterprise nebo Visual Studio Professional s předplatnými v GitHubu Enterprise.  Například předplatitelé s předplatnými Visual Studio Professional se přesunou do Visual Studio Professional s předplatnými GitHub Enterprise. Na panelu přehled na levém panelu se zobrazí následující dlaždice:
+
+   > [!div class="mx-imgBorder"]
+   > ![Tlačítko přesunout](_img/assign-github/move-now.png "Kliknutím na přesunout teď můžete upgradovat předplatná na Visual Studio s předplatnými GitHub Enterprise.")
+
+> [!IMPORTANT]
+> Jak je uvedeno výše, zachová se stávající data předplatitelů, historie a ID předplatného a veškeré výhody, které jste aktivovali, nebudou kvůli tomuto přesunu přerušeny.  
+>
+> Tato funkce se nasazuje ve fázích a nemusí být okamžitě dostupná pro vaše smlouvy.
+
+Když kliknete na tlačítko **přesunout hned** , zobrazí se v něm panel s doporučeními pro přesun předplatných Enterprise nebo Professional:
+
+   > [!div class="mx-imgBorder"]
+   > ![Vyletět z panelu](_img/assign-github/fly-out.png)
+
+Na této dlaždici si můžete prohlédnout ovlivněné předplatitele a určit, jestli je chcete oznámit, že po dokončení přesunu obdržíte e-mailové oznámení.  Tento e-mail informuje předplatitele o tom, že jejich výhody zůstanou beze změny, a doporučuje jim, aby zahájily nastavování přítomnosti na GitHubu.  
+
+Po kliknutí na tlačítko **přesunout všechny předplatitele** potvrďte výběr a počkejte několik sekund, než se předplatné dokončí.  Pokud je to možné, budete muset provést tyto kroky pro samostatné verze Professional a Enterprise.  
+
+
 ## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>Co je proces nastavení předplatného sady Visual Studio s předplatným GitHub Enterprise?
 Předplatné GitHub Enterprise se nastavuje a spravuje odděleně od předplatných sady Visual Studio. Po předplatném sady Visual Studio s nákupem na GitHubu Enterprise se proces nastavení účtu GitHub Enterprise zahajuje paralelně s (ale nezávisle na), který stanovuje smlouvu v [Manage.VisualStudio.com](https://manage.visualstudio.com). Zřízení tohoto účtu GitHub Enterprise může nějakou dobu trvat. 
 
 Jakmile vaše společnost nastaví účet GitHub Enterprise, obdrží předplatitelé, kteří mají přiřazené předplatné sady Visual Studio s GitHub Enterprise, e-mail z GitHubu s oznámením, že jejich předplatná sady Visual Studio byla propojena. Po přijetí tohoto e-mailu od předplatitelů se můžou obrátit na správce organizace GitHubu, aby dostal pozvánku do příslušné organizace.
 
-Další podrobnosti o instalaci GitHub Enterprise najdete v [dokumentaci pro předplatitele](access-github.md).   
+Podrobnosti o instalaci GitHub Enterprise najdete v [dokumentaci pro předplatitele](access-github.md).   
 
 ## <a name="manage-github-enterprise-subscriptions"></a>Správa předplatných GitHub Enterprise
 Po zakoupení předplatných na GitHubu Enterprise můžou partneři s zákazníky z GitHubu zákazníkům vytvořit a nakonfigurovat organizace, které budou mít přístup k GitHubu a identifikují správce.  Tito správci pak obdrží oznámení, že se nastavili jako správci.  
 
 Vzhledem k tomu, že tento proces je složitější, může trvat několik dní od zakoupení předplatných, aby bylo možné organizace a správci plně nastavit.
 
-GitHub je k dispozici buď jako cloudový GitHub.com, nebo na místním serveru GitHub Enterprise.  Procesy pro správu těchto dvou verzí se liší.  GitHub nabízí nejrůznější témata nápovědy a příručky pro správce, které vám pomůžou se správou předplatných na GitHubu Enterprise.  Poskytli jsme odkazy na vybraná témata níže.  
+GitHub je k dispozici buď jako cloudový GitHub.com, nebo na místním serveru GitHub Enterprise.  Procesy pro správu těchto dvou verzí se liší.  GitHub nabízí různá témata nápovědy a příručky pro správce, které vám pomůžou spravovat předplatná na GitHubu Enterprise.  Poskytli jsme odkazy na vybraná témata níže.  
 
 ## <a name="support-resources"></a>Prostředky podpory
 
