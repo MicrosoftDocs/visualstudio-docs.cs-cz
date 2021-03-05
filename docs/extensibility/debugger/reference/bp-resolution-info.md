@@ -1,4 +1,5 @@
 ---
+description: Popisuje informace o vázané zarážce buď pro zarážku kódu, nebo pro datovou zarážku.
 title: BP_RESOLUTION_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2d56acb3efecc794e38430511dfeb2a84cd62de0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9acdc85cd7ea3e8da239395e5db8c921936a98bd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949594"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162586"
 ---
 # <a name="bp_resolution_info"></a>BP_RESOLUTION_INFO
 Popisuje informace o vázané zarážce buď pro zarážku kódu, nebo pro datovou zarážku.

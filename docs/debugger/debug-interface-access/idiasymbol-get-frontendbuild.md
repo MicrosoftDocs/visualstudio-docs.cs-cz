@@ -1,4 +1,5 @@
 ---
+description: Načte číslo sestavení front-endu.
 title: 'IDiaSymbol:: get_frontEndBuild | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fc3c967f296e87ef46fe9121eaca055fd879025
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d9f12777b41cca5e4bf654318b72bc98e52ccede
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863415"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162157"
 ---
 # <a name="idiasymbolget_frontendbuild"></a>IDiaSymbol::get_frontEndBuild
 Načte číslo sestavení front-endu.

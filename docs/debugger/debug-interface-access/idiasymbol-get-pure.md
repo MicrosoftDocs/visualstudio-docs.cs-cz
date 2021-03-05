@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda je funkce čistě virtuální.
 title: 'IDiaSymbol:: get_pure | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ad7d48615a29349562b76e8e93158ff4d3d5743
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c51066fe1e1bbc8d165e07bd2b2653d0e2912ebe
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862820"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161919"
 ---
 # <a name="idiasymbolget_pure"></a>IDiaSymbol::get_pure
 Načte příznak, který určuje, zda je funkce čistě virtuální.

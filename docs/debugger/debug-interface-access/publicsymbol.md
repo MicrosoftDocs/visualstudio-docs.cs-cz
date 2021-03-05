@@ -1,4 +1,5 @@
 ---
+description: Při vytvoření souboru. exe se každému veřejnému symbolu (minimálně každé globální funkce a symbol dat) přidávají značka SymTagPublicSymbol.
 title: PublicSymbol | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c13674eb7aba147946f2dc8a75bcabbdb4b7147
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 02a706a1dc20dd61c43fce62905b2d3ac48f87fd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862295"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161646"
 ---
 # <a name="publicsymbol"></a>PublicSymbol
 Při vytvoření souboru. exe se každému veřejnému symbolu (minimálně každé globální funkce a symbol dat) zobrazí `SymTagPublicSymbol` značka.

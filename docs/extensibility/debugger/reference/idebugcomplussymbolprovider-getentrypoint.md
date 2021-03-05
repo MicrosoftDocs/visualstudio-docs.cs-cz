@@ -1,4 +1,5 @@
 ---
+description: Načte vstupní bod aplikace.
 title: 'IDebugComPlusSymbolProvider:: getentrypoint | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b42475afc8a9b5e2f86b2892a091efb738dd8d88
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c6acda563d1d2187f350fb1d2edcd968ee8d64ce
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892889"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102163821"
 ---
 # <a name="idebugcomplussymbolprovidergetentrypoint"></a>IDebugComPlusSymbolProvider::GetEntryPoint
 Načte vstupní bod aplikace.

@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda je uživatelsky definovaný datový typ (UDT) volatile.
 title: 'IDiaSymbol:: get_volatileType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c7aefecceaa7ed67c262360ca8b6b7bfba08e0f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 27d2f1a49b55fd7006aa69f40e532356aded64b0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853329"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161709"
 ---
 # <a name="idiasymbolget_volatiletype"></a>IDiaSymbol::get_volatileType
 Načte příznak, který určuje, zda je uživatelsky definovaný datový typ (UDT) volatile.

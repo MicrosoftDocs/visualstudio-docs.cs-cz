@@ -1,4 +1,5 @@
 ---
+description: Načte symbol, ze kterého je ukazatel založen.
 title: 'IDiaSymbol:: get_baseSymbol | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 832a4c6fbd2c0571d9e87d877c7a013af62cf202
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c30595ec98f7e379414a9b1f85d572aec02c5032
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863548"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162205"
 ---
 # <a name="idiasymbolget_basesymbol"></a>IDiaSymbol::get_baseSymbol
 Načte symbol, ze kterého je ukazatel založen.

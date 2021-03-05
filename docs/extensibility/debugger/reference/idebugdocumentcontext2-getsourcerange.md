@@ -1,4 +1,5 @@
 ---
+description: Získá rozsah zdrojového kódu tohoto kontextu dokumentu.
 title: 'IDebugDocumentContext2:: GetSourceRange – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 58318ebde2446a32cc515d09b7a1d848222b554b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6d02dfbd93002bedadd4c82168d498f89050ddc0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947004"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162898"
 ---
 # <a name="idebugdocumentcontext2getsourcerange"></a>IDebugDocumentContext2::GetSourceRange
 Získá rozsah zdrojového kódu tohoto kontextu dokumentu.

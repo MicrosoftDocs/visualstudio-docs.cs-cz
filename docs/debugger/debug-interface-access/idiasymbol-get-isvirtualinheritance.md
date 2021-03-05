@@ -1,4 +1,5 @@
 ---
+description: Určuje, zda tento ukazatel ukazuje na datový člen s virtuální dědičností.
 title: 'IDiaSymbol:: get_isVirtualInheritance | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b3cc3929b019765d3406ad9ddedf3b0eaec2f01
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3119b10a23d9ba6b624c40bbb44a0a77d07725fb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863100"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162045"
 ---
 # <a name="idiasymbolget_isvirtualinheritance"></a>IDiaSymbol::get_isVirtualInheritance
 Určuje, zda `this` ukazatel ukazuje na datový člen s virtuální dědičností.

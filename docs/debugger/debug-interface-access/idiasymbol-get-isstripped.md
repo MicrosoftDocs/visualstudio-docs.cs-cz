@@ -1,4 +1,5 @@
 ---
+description: Načte příznak označující, zda privátní symboly byly ze souboru symbolů odstraněny.
 title: 'IDiaSymbol:: get_isStripped | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a62c05fa4297fb98d7a9e2005522d56bcaa58aba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aa52f28bf31a8bd13d9f45ce8554696c91961340
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853973"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162059"
 ---
 # <a name="idiasymbolget_isstripped"></a>IDiaSymbol::get_isStripped
 Načte příznak označující, zda privátní symboly byly ze souboru symbolů odstraněny.

@@ -1,4 +1,5 @@
 ---
+description: Načte rozhraní symbolu typu indexu pole symbolu.
 title: 'IDiaSymbol:: get_arrayIndexType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 225723fbc5eb40025a6dad1b52a5ab6c790f3fea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0b7a98d5b18b39e405068e0c7283f69f25a41f7e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854554"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162311"
 ---
 # <a name="idiasymbolget_arrayindextype"></a>IDiaSymbol::get_arrayIndexType
 Načte rozhraní symbolu typu indexu pole symbolu.

@@ -1,4 +1,5 @@
 ---
+description: Určuje informace, které mají být načteny o požadavku na zarážku.
 title: BPREQI_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 52710a9b17bb4e5c1c0b04b44507a466fc538bc2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1f7ee5d8dbf48ad8d1b07512727b1b91635ab990
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948371"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162456"
 ---
 # <a name="bpreqi_fields"></a>BPREQI_FIELDS
 Určuje informace, které mají být načteny o požadavku na zarážku.

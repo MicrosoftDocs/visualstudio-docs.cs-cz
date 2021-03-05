@@ -1,4 +1,5 @@
 ---
+description: Soubor databáze programu (s příponou. pdb) je binární soubor, který obsahuje informace o typech a symbolickém ladění shromážděné v průběhu kompilování a propojení projektu.
 title: Dotazování na. Soubor PDB | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f1ff2a0cc850930a960e518e4039d6cb970005cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ea69572304feb5bb2fcb2ef91c0f94a96c138cf7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853231"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161660"
 ---
 # <a name="querying-the-pdb-file"></a>Dotazování na soubor .Pdb
 Soubor databáze programu (s příponou. pdb) je binární soubor, který obsahuje informace o typech a symbolickém ladění shromážděné v průběhu kompilování a propojení projektu. Soubor PDB se vytvoří při kompilování programu jazyka C/C++ s možností **/Zi** nebo **/Zi** nebo a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] , [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] nebo [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] program s parametrem **/Debug** . Soubory objektů obsahují odkazy na soubor. PDB pro informace o ladění. Další informace o souborech PDB naleznete v tématu [soubory PDB](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). Aplikace DIA může pomocí následujících obecných kroků získat podrobnosti o různých symbolech, objektech a datových prvcích v rámci spustitelné bitové kopie.

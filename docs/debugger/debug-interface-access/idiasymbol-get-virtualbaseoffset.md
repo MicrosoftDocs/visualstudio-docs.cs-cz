@@ -1,4 +1,5 @@
 ---
+description: Načte posun v tabulce virtuální funkce virtuální funkce.
 title: 'IDiaSymbol:: get_virtualBaseOffset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 32f37a2e912e6e7ad315a1c92a495fcb5ad98a0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6f22826b9fb795543c27c621f95dd4e5ccf897b0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862444"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161765"
 ---
 # <a name="idiasymbolget_virtualbaseoffset"></a>IDiaSymbol::get_virtualBaseOffset
 Načte posun v tabulce virtuální funkce virtuální funkce.

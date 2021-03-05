@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda je uživatelem definovaný datový typ (UDT) zabalen.
 title: 'IDiaSymbol:: get_packed | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b2682086764294f9721153e9509088e653b9fd11
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a5e6cf89aa0bdd31b826ac8e73000c1bfa8c595c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853707"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161933"
 ---
 # <a name="idiasymbolget_packed"></a>IDiaSymbol::get_packed
 Načte příznak, který určuje, zda je uživatelem definovaný datový typ (UDT) zabalen.

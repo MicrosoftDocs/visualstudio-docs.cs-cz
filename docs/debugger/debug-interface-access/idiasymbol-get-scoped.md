@@ -1,4 +1,5 @@
 ---
+description: Načte příznak, který určuje, zda se uživatelsky definovaný datový typ zobrazuje v neglobálním lexikálním oboru.
 title: 'IDiaSymbol:: get_scoped | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f882a71e92056a7120eb9ea6ae3b96b6ee8ea69c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 63260280f4730c2a0ee32324e49205650cd6c204
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853644"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161849"
 ---
 # <a name="idiasymbolget_scoped"></a>IDiaSymbol::get_scoped
 Načte příznak, který určuje, zda se uživatelsky definovaný datový typ zobrazuje v neglobálním lexikálním oboru.
