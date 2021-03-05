@@ -1,4 +1,5 @@
 ---
+description: Tato metoda vrací typ objektu, na který odkazuje tento objekt ukazatele.
 title: 'IDebugPointerField:: GetDereferencedField | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9b502b83ec793733ef642585b6ded260f72aa1be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 765ad40be87b7700ca1087745bef43ff0575dfa6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869658"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102169701"
 ---
 # <a name="idebugpointerfieldgetdereferencedfield"></a>IDebugPointerField::GetDereferencedField
 Tato metoda vrací typ objektu, na který odkazuje tento objekt ukazatele.

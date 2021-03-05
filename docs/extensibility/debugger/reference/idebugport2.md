@@ -1,4 +1,5 @@
 ---
+description: Toto rozhraní představuje port pro ladění v počítači.
 title: IDebugPort2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d50266e792d58be3824e5c14e4936f3af381f0fc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f78db8ba9a29b40d111dc5a82827395b100302b5
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861137"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102169480"
 ---
 # <a name="idebugport2"></a>IDebugPort2
 Toto rozhraní představuje port pro ladění v počítači.

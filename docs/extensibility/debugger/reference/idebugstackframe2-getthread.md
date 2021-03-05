@@ -1,4 +1,5 @@
 ---
+description: Získá vlákno spojené s rámcem zásobníku.
 title: 'IDebugStackFrame2:: getthread | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9e8adf0da84fd183931d107541aa2e07ef003d6b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 340a43cd79feb491ce6b15a1443b456fd0726c5e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954875"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168605"
 ---
 # <a name="idebugstackframe2getthread"></a>IDebugStackFrame2::GetThread
 Získá vlákno spojené s rámcem zásobníku.
