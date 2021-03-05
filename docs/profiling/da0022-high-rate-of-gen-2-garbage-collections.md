@@ -1,4 +1,5 @@
 ---
+description: Údaje o výkonu systému, které byly shromážděny během profilace, naznačují, že významný podíl objektů paměťového for.NET Framework byl v generaci paměti 2 kolekce v porovnání s generace paměti 0 a 1. generace uvolňován.
 title: DA0022 – vysoká míra pro uvolňování paměti 2. generace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 61fb953b1eae3ecfb0aa9c87e8b10a25099cb12a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c0949dcf7bf55d079037ffa9cb160edeb35294d7
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967004"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223668"
 ---
 # <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: Vysoká míra 2. generace uvolňování paměti
 

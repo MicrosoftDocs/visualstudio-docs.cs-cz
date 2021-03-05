@@ -1,4 +1,5 @@
 ---
+description: Tato funkce Určuje nadřazenou cestu projektu zadaného projektu.
 title: Funkce SccGetParentProjectPath | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 825586ed29152bddf0f5dd909f71f96c96db8624
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e624d8765da65dc6231c0128e87ffd9d6cdf848d
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958398"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220609"
 ---
 # <a name="sccgetparentprojectpath-function"></a>SccGetParentProjectPath – funkce
 Tato funkce Určuje nadřazenou cestu projektu zadaného projektu. Tato funkce se volá, když uživatel přidá projekt sady Visual Studio do správy zdrojových kódů.

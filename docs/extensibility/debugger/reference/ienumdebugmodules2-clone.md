@@ -1,4 +1,5 @@
 ---
+description: Vrátí kopii výčtu aktuálních modulů jako samostatný objekt.
 title: 'IEnumDebugModules2:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f008cef55d45257ddd18dec69d6e72be8095ed57
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 699afcaabdf88ca8b2b6ea60b6ad06dfcb12e3bd
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932825"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224886"
 ---
 # <a name="ienumdebugmodules2clone"></a>IEnumDebugModules2::Clone
 Vrátí kopii aktuálního výčtu jako samostatný objekt.

@@ -1,4 +1,5 @@
 ---
+description: Představuje sériový kanál událostí generovaných jedním zprostředkovatelem.
 title: marker_series třídy | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bcd4386b8eff7589993458f1f7f6baaf7f33d4a9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4df579ff4eb43dfca4c386716c49f12dae04e9fa
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917786"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223612"
 ---
 # <a name="marker_series-class"></a>marker_series – třída
 Představuje sériový kanál událostí generovaných jedním zprostředkovatelem.
@@ -32,14 +33,14 @@ class marker_series;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Description|
+|Název|Popis|
 |----------|-----------------|
 |[marker_series:: marker_series – konstruktor](../profiling/marker-series-marker-series-constructor.md)|Inicializuje novou instanci `marker_series` třídy.|
 |[marker_series:: ~ marker_series destruktor](../profiling/marker-series-tilde-marker-series-destructor.md)|Zničí marker_series objekt a uvolní všechny přidělené prostředky.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Description|
+|Název|Popis|
 |----------|-----------------|
 |[marker_series:: is_enabled – metoda](../profiling/marker-series-is-enabled-method.md)|Určuje, zda má kterákoli relace povoleného poskytovatele.|
 |[marker_series:: write_alert – metoda](../profiling/marker-series-write-alert-method.md)|Zapíše výstrahu do trasovacího souboru Vizualizátor souběžnosti.|

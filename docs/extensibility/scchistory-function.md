@@ -1,4 +1,5 @@
 ---
+description: Tato funkce zobrazí historii zadaných souborů.
 title: Funkce SccHistory | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61ca9071373cd25a4a8bd0d367a97654dfdefb3e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5b7e1cd6fa6d5b9b3a5ab42cd1b4cafec215deca
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893565"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220570"
 ---
 # <a name="scchistory-function"></a>SccHistory – funkce
 Tato funkce zobrazí historii zadaných souborů.

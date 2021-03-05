@@ -1,4 +1,5 @@
 ---
+description: Vrátí další sadu prvků z výčtu cest kódu.
 title: 'IEnumCodePaths2:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1f082a1318132623e1aaab738d99e700d30c913c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7782a2b962786b191849dbdc1a9a7f3f7c727e9f
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912885"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222689"
 ---
 # <a name="ienumcodepaths2next"></a>IEnumCodePaths2::Next
 Vrátí další sadu prvků z výčtu.

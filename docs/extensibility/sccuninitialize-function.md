@@ -1,4 +1,5 @@
 ---
+description: Tato funkce vyčistí všechna přidělení nebo otevřená připojení vytvořená předchozím voláním SccInitialize při přípravě na vypnutí modulu plug-in správy zdrojových kódů.
 title: Funkce SccUninitialize | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e7de3572b17bf47859a64451149a269988c91e5c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 187451aba5151c95d8947bd4f5a1419894cc65e7
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836680"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221324"
 ---
 # <a name="sccuninitialize-function"></a>SccUninitialize – funkce
 Tato funkce vyčistí všechna přidělení nebo otevřená připojení vytvořená předchozím voláním [SccInitialize](../extensibility/sccinitialize-function.md) při přípravě na vypnutí modulu plug-in správy zdrojových kódů.

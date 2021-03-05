@@ -1,4 +1,5 @@
 ---
+description: Integrované vývojové prostředí sady Visual Studio je Creative Starting panel pro Python (a další jazyky), který můžete použít k úpravám, ladění a testování kódu a pak k publikování aplikace.
 title: Přehled sady Visual Studio pro vývojáře v Pythonu
 titleSuffix: ''
 ms.date: 03/13/2019
@@ -11,12 +12,12 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d90ee69b8ee7f264a48d6ae01f77ea65e5d1c1b9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7e4a0c227f8c833febf20ed4e8dba82b814e3223
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908789"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223781"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio | Python
 

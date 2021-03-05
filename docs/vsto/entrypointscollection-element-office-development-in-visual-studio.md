@@ -1,4 +1,5 @@
 ---
+description: Element entryPointsCollection oboru názvů vstav3 obsahuje všechny prvky entryPoint přidružené k řešením pro systém Office.
 title: '&lt;entryPointsCollection – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6e7c7d7c32c538345adb246369b791cd6b2b41b3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: da689b71f50d43d60d78cf702a28eb5ba7ae0bb1
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910431"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223599"
 ---
 # <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection – &gt; element (vývoj pro Office v sadě Visual Studio)
   `entryPointsCollection`Element `vstav3` oboru názvů obsahuje všechny `entryPoints` prvky přidružené k řešením pro systém Office.
@@ -53,7 +54,7 @@ ms.locfileid: "99910431"
 
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `entryPointsCollection` prvek v manifestu aplikace pro řešení na úrovni dokumentu nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
@@ -99,7 +100,7 @@ ms.locfileid: "99910431"
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `entryPointsCollection` prvek v manifestu aplikace pro řešení na úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
@@ -121,7 +122,7 @@ ms.locfileid: "99910431"
 
 ## <a name="multi-project-deployment-example"></a>Příklad nasazení s více projekty
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `entryPointsCollection` prvek v manifestu aplikace pro nasazení více projektů se dvěma řešeními pro systém Office. Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

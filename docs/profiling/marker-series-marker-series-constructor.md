@@ -1,4 +1,5 @@
 ---
+description: Inicializuje novou instanci třídy marker_series.
 title: 'marker_series:: marker_series konstruktor | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: afb15ceed45389d1c442c18cf14e8eaf4150631f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 88d82c78bc6126f6b3d96b77b39c729c4f452a28
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917654"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223976"
 ---
 # <a name="marker_seriesmarker_series-constructor"></a>marker_series:: marker_series – konstruktor
 Inicializuje novou instanci `marker_series` třídy.

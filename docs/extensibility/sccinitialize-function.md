@@ -1,4 +1,5 @@
 ---
+description: Tato funkce Inicializuje modul plug-in správy zdrojových kódů a poskytuje možnosti a omezení integrovaného vývojového prostředí (IDE).
 title: Funkce SccInitialize | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9fb944cb672249ecb823f48048d12c1b61d9e99
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 986e3624b1716c782102f0f214283a7fa7020a08
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846358"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220583"
 ---
 # <a name="sccinitialize-function"></a>SccInitialize – funkce
 Tato funkce Inicializuje modul plug-in správy zdrojových kódů a poskytuje možnosti a omezení integrovaného vývojového prostředí (IDE).

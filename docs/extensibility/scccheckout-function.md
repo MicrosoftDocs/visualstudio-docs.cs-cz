@@ -1,4 +1,5 @@
 ---
+description: Když se zobrazí seznam plně kvalifikovaných názvů souborů, tato funkce je vrátí na místní disk.
 title: Funkce SccCheckout | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4112190e145242da591fa3d8e4db7d054bd07466
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5ed6b494957374244d98f0cca59a063e5a6648c4
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943137"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221624"
 ---
 # <a name="scccheckout-function"></a>SccCheckout – funkce
 Když se zobrazí seznam plně kvalifikovaných názvů souborů, tato funkce je vrátí na místní disk. Komentář se vztahuje na všechny rezervované soubory. Argument komentáře může být `null` řetězec.

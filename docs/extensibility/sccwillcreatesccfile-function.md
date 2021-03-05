@@ -1,4 +1,5 @@
 ---
+description: Tato funkce určuje, zda modul plug-in správy zdrojových kódů podporuje vytváření MSSCCPRJ. SCC soubor pro každý z daných souborů.
 title: Funkce SccWillCreateSccFile | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50ef18e44579525df136bd770cda96124cb30c87
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ee01478858615aad135d07a5c10d5d6c58280926
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956864"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221285"
 ---
 # <a name="sccwillcreatesccfile-function"></a>SccWillCreateSccFile – funkce
 Tato funkce určuje, zda modul plug-in správy zdrojových kódů podporuje vytváření MSSCCPRJ. SCC soubor pro každý z daných souborů.

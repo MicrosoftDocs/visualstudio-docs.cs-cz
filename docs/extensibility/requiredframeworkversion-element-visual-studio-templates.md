@@ -1,4 +1,5 @@
 ---
+description: Určuje minimální verzi .NET Framework, kterou šablona vyžaduje.
 title: RequiredFrameworkVersion – element (šablony sady Visual Studio)
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -14,12 +15,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 211393ea65f7ca31f80134c48863b0092478b3f3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3700735f987da7320d569b2cee020f0d8a072bdc
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836979"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221793"
 ---
 # <a name="requiredframeworkversion-element-visual-studio-templates"></a>RequiredFrameworkVersion – – element (šablony sady Visual Studio)
 

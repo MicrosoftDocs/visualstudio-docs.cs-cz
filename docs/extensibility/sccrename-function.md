@@ -1,4 +1,5 @@
 ---
+description: Tato funkce přejmenuje soubor v systému správy zdrojů.
 title: Funkce SccRename | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b4579644b04002ae9da3361ba35c63472eef637
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dcfb68518f42e969b7c9d52acfb37723e9774f97
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836745"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221337"
 ---
 # <a name="sccrename-function"></a>SccRename – funkce
 Tato funkce přejmenuje soubor v systému správy zdrojů.

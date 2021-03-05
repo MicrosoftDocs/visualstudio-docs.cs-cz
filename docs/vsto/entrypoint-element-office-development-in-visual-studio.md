@@ -1,4 +1,5 @@
 ---
+description: Každý prvek entryPoint oboru názvů vstav3 identifikuje sestavení vlastního nastavení, které by mělo být spuštěno při instalaci aplikace ClickOnce.
 title: '&lt;entryPoint – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a75729d4be4aa96c3c118fed126af3ff84c18bcb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 581274ea58dafa8021cb456a0c7cb1e6bf98da32
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910468"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223716"
 ---
 # <a name="ltentrypointgt-element-office-development-in-visual-studio"></a>&lt;entryPoint – &gt; element (vývoj pro Office v sadě Visual Studio)
   Každý `entryPoint` prvek `vstav3` oboru názvů identifikuje sestavení vlastního nastavení, které by mělo být spuštěno při [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] instalaci této aplikace.
@@ -54,7 +55,7 @@ ms.locfileid: "99910468"
 
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `entryPoint` prvky v manifestu aplikace pro řešení Office na úrovni dokumentu nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
@@ -96,7 +97,7 @@ ms.locfileid: "99910468"
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `entryPoint` prvek v manifestu aplikace pro řešení Office na úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

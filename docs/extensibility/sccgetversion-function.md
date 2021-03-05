@@ -1,4 +1,5 @@
 ---
+description: Tato funkce získá číslo verze rozhraní API modulu plug-in správy zdrojového kódu podporovaného modulem plug-in správy zdrojových kódů.
 title: Funkce SccGetVersion | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91daeca1df76f6b624d0eddf9d28222369b2cc4a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a71d3374ffd65e0e7b9a7b2e654885d84e370a9d
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844538"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220596"
 ---
 # <a name="sccgetversion-function"></a>SccGetVersion – funkce
 Tato funkce získá číslo verze rozhraní API modulu plug-in správy zdrojového kódu podporovaného modulem plug-in správy zdrojových kódů.
@@ -34,7 +35,7 @@ LONG SccGetVersion(void);
 ## <a name="return-value"></a>Návratová hodnota
  `LONG`Datový typ, který obsahuje číslo verze podporovaného rozhraní API modulu plug-in správy zdrojových kódů:
 
-|WORD|Description|
+|WORD|Popis|
 |----------|-----------------|
 |HIWORD|Hlavní verze|
 |LOWORD|Podverze|

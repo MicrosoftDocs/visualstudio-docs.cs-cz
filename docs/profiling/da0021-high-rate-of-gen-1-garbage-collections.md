@@ -1,4 +1,5 @@
 ---
+description: Údaje o výkonu systému, které byly shromážděny během profilace, naznačují, že významný podíl objektů paměti for.NET Framework byl získán v generaci 1 uvolňování paměti v porovnání s kolekcí dat generace 0.
 title: DA0021 – vysoká míra 1. generace uvolňování paměti | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 23d7e1f2c004b63f93f9f10334698eab14388421
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fb59c3581bf5064b7001a273232e62b731b8763f
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886363"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223690"
 ---
 # <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021: Vysoká míra 1. generace uvolňování paměti
 
