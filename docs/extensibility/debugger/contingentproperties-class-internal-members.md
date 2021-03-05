@@ -1,4 +1,5 @@
 ---
+description: Obsahuje další vlastnosti pro objekt System. Threading. Tasks. Task.
 title: ContingentProperties třída – interní členové | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f332c715c8a182b30191cd96c8f1d1438cbdefd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2303318c7a5f36027ce7709c5b09b5846fc6fab6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930483"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154974"
 ---
 # <a name="contingentproperties-class---internal-members"></a>ContingentProperties třída – interní členy
 Obsahuje další vlastnosti <xref:System.Threading.Tasks.Task> objektu.
@@ -38,7 +39,7 @@ Obsahuje další vlastnosti <xref:System.Threading.Tasks.Task> objektu.
 
 ### <a name="fields"></a>Pole
 
-|Název|Description|
+|Název|Popis|
 |----------|-----------------|
 |[m_children](../../extensibility/debugger/m-children-field.md)|Seznam podřízených úloh, které jsou registrovány s touto úlohou.|
 

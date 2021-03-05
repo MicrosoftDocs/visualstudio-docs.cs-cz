@@ -1,4 +1,5 @@
 ---
+description: Toto rozhraní se používá k vyžádání Správce ladění relace (SDM), zda se má zastavit v aktuálním umístění kódu.
 title: IDebugCanStopEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 87306e1373d746479ce59c96b6625fa41ef119fb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d46f4aacdc886e455771f5a30ba82b941b29c957
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903236"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154844"
 ---
 # <a name="idebugcanstopevent2"></a>IDebugCanStopEvent2
 Toto rozhraní se používá k vyžádání Správce ladění relace (SDM), zda se má zastavit v aktuálním umístění kódu.

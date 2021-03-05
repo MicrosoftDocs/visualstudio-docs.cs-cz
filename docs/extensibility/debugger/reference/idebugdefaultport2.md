@@ -1,4 +1,5 @@
 ---
+description: Toto rozhraní poskytuje několik metod pro přístup k serveru a oznamovacímu zařízení portu.
 title: IDebugDefaultPort2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fca0b999f4c5878debbdee556431d56b7977c719
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a5ec637daa197574710978af7cb22195c969f48b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901858"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154415"
 ---
 # <a name="idebugdefaultport2"></a>IDebugDefaultPort2
 Toto rozhraní poskytuje několik metod pro přístup k serveru a oznamovacímu zařízení portu.

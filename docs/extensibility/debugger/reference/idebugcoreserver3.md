@@ -1,4 +1,5 @@
 ---
+description: Toto rozhraní poskytuje přístup k informacím o serveru, na kterém je spuštěný proces.
 title: IDebugCoreServer3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6faa47bc107c8d00864307bdb6802908e085652
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1328a97742a4672cdc71805c4c674d66fe05e817
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928466"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154610"
 ---
 # <a name="idebugcoreserver3"></a>IDebugCoreServer3
 Toto rozhraní poskytuje přístup k informacím o serveru, na kterém je spuštěný proces.

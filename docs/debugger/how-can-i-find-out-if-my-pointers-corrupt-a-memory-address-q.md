@@ -1,6 +1,6 @@
 ---
 title: Zjistit, jestli moje ukazatele poškodily adresu paměti | Microsoft Docs
-Description: Chcete-li zjistit, zda je ukazatel poškozen pamětí, můžete vyhledat poškození haldy a můžete nastavit zarážku dat a zjistit, jak je upravena hodnota.
+description: Chcete-li zjistit, zda je ukazatel poškozen pamětí, můžete vyhledat poškození haldy a můžete nastavit zarážku dat a zjistit, jak je upravena hodnota.
 ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a1857d349f339a537748f11154b43f7d30c7bdb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d95e38c6393d6576f2867aad5d1224940f33cebc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910029"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155197"
 ---
 # <a name="how-can-i-find-out-if-my-pointers-corrupt-a-memory-address"></a>Jak zjistím, že moje ukazatele poškodily adresu paměti?
 ## <a name="problem-description"></a>Popis problému

@@ -1,4 +1,5 @@
 ---
+description: Získá enumerátor pro všechny vlastní atributy připojené k tomuto poli.
 title: 'IDebugCustomAttributeQuery2:: EnumCustomAttributes – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 97476647c42dc66d3998aecf2c717fa3bbb08cf4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 348d5e753702e523f09bef8cbd5f374294c197e4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842456"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154441"
 ---
 # <a name="idebugcustomattributequery2enumcustomattributes"></a>IDebugCustomAttributeQuery2::EnumCustomAttributes
 Získá enumerátor pro všechny vlastní atributy připojené k tomuto poli.

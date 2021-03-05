@@ -1,6 +1,6 @@
 ---
 title: Použití úprav v režimu pozastavení s úpravou a pokračováním | Microsoft Docs
-Description: Viz jak použít Edit and Continue k úpravám Visual Basic kódu v režimu pozastavení. Existují různé způsoby, jak zadat režim přerušení.
+description: Viz jak použít Edit and Continue k úpravám Visual Basic kódu v režimu pozastavení. Existují různé způsoby, jak zadat režim přerušení.
 ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 46cc695461d7575c7093987c175836896732dce6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a9074d992c06c1b7d49f59481bee35345c5199f8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913400"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155039"
 ---
 # <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>Postupy: použití úprav v režimu pozastavení pomocí funkce upravit a pokračovat (Visual Basic)
 Můžete použít příkaz Upravit a pokračovat pro úpravu kódu v režimu přerušení a pak pokračovat bez zastavení a restartování provádění.

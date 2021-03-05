@@ -1,4 +1,5 @@
 ---
+description: Ladicí informace o kompilovaném programu jsou uloženy v souboru databáze programu (PDB) jako symboly, které jsou přístupné pomocí rozhraní API sady SDK přístup k rozhraní ladění (DIA).
 title: Symboly a značky symbolů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 12f1927e4290ff9d008eff9f497c9d570d9d44f8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 98631149e5a53c13bfc9b12b0d6de165c345e29a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862281"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155283"
 ---
 # <a name="symbols-and-symbol-tags"></a>Symboly a značky symbolů
 Ladicí informace o kompilovaném programu jsou uloženy v souboru databáze programu (PDB) jako symboly, které jsou přístupné pomocí rozhraní API sady SDK přístup k rozhraní ladění (DIA). Všechny symboly mají vlastnost [IDiaSymbol:: get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) a vlastnost [IDiaSymbol:: get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md) . `symTag`Vlastnost určuje druh symbolu definovaný výčtem [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) . `symIndexId`Vlastnost je `DWORD` hodnota, která obsahuje jedinečný identifikátor pro všechny instance symbolu.

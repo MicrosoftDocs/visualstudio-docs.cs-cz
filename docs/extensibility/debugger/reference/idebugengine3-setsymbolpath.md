@@ -1,4 +1,5 @@
 ---
+description: Nastaví cestu nebo cesty, ve kterých jsou vyhledávány symboly ladění.
 title: 'IDebugEngine3:: SetSymbolPath | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: aee3b02acfa54cbe9d947be8cb781725ebb4d071
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9e2b029413e3b402e1d8dfa19ccb3ad22644b241
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874293"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102153687"
 ---
 # <a name="idebugengine3setsymbolpath"></a>IDebugEngine3::SetSymbolPath
 Nastaví cestu nebo cesty, ve kterých jsou vyhledávány symboly ladění.
@@ -60,7 +61,7 @@ pro Nepoužívá se; Vždycky nastavte na 0.
 ## <a name="remarks"></a>Poznámky
  Řetězec `szSymbolSearchPath` je seznam jedné nebo více cest, které jsou odděleny středníky, pro hledání symbolů. Tyto cesty mohou být místní cesta, cesta ve stylu UNC nebo adresa URL. Tyto cesty mohou být také kombinací různých typů. Pokud je cesta ve formátu UNC (například \\ \Symserver\Symbols), pak modul ladění by měl určit, zda je cesta k serveru symbolů a zda má být schopna načíst symboly z tohoto serveru, ukládat je do mezipaměti v cestě určené parametrem `szSymbolCachePath` .
 
- Cesta k symbolu může také obsahovat jednu nebo více umístění mezipaměti. Mezipaměti jsou uvedené v pořadí podle priority, první mezipaměť s nejvyšší prioritou a oddělené symboly *. Příklad:
+ Cesta k symbolu může také obsahovat jednu nebo více umístění mezipaměti. Mezipaměti jsou uvedené v pořadí podle priority, první mezipaměť s nejvyšší prioritou a oddělené symboly *. Například:
 
 ```
 \\symbols\symbols;\\someotherserver\symbols;c:\symbols\httpsymbols*https://msdl.microsoft.com

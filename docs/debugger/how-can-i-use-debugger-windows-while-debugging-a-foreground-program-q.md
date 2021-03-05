@@ -1,6 +1,6 @@
 ---
 title: Použít okna ladicího programu při ladění aplikace v popředí | Microsoft Docs
-Description: Pokud ladíte program, který musí zůstat v popředí, použijte vzdálené ladění, abyste se vyhnuli vložení na pozadí.
+description: Pokud ladíte program, který musí zůstat v popředí, použijte vzdálené ladění, abyste se vyhnuli vložení na pozadí.
 ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 420a4073e4c00f66775bf55565c2ee8645d90f49
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 03a143ee2d04227171895bf2b14dff92545b9952
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99911374"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155091"
 ---
 # <a name="how-can-i-use-debugger-windows-while-debugging-a-foreground-program"></a>Jak mohu použít okna ladicího programu během ladění programu na popředí?
 ## <a name="problem-description"></a>Popis problému

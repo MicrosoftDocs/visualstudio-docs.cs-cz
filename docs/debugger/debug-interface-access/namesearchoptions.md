@@ -1,4 +1,5 @@
 ---
+description: Určuje možnosti hledání symbolů a názvů souborů.
 title: Namesearchoptions – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c63d38e1b4d79227cfdc694dc6d8c154a01532f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bd074de0c44803a06d5399f2bd4dc1e3c43618a1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853210"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155346"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 Určuje možnosti hledání symbolů a názvů souborů.
