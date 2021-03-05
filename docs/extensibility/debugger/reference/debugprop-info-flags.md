@@ -1,4 +1,5 @@
 ---
+description: Určuje, jaké informace se mají načíst o objektu vlastnosti ladění.
 title: DEBUGPROP_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 745ecf4efa661c31e230a25d23cfd66cb5d5bb51
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 63467e93b80648e6a00728dc66971b7c9b3c9b24
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939120"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102170520"
 ---
 # <a name="debugprop_info_flags"></a>DEBUGPROP_INFO_FLAGS
 Určuje, jaké informace se mají načíst o objektu vlastnosti ladění.

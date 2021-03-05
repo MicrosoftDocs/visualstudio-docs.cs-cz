@@ -1,4 +1,5 @@
 ---
+description: Toto rozhraní představuje objekt, který vytvoří pořadač k zapouzdření hodnot symbolů a výrazů.
 title: IDebugObject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc6fc188537799a8a3eeab66dd4af1d92ffb67db
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 14c405c9dbe3d1cbfdf61c606b995a686e063661
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953575"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102170191"
 ---
 # <a name="idebugobject"></a>IDebugObject
 > [!IMPORTANT]
