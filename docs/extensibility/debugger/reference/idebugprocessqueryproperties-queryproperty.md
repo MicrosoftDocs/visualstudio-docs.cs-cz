@@ -1,4 +1,5 @@
 ---
+description: Tato metoda se dotazuje na zadanou hodnotu vlastnosti procesu ladění.
 title: 'IDebugProcessQueryProperties:: QueryProperty | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 78a5f578d2fdd8e388ba832c3025cb9518658ddb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c18c1abb4946fd207ea859b0f36dd93348126c51
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900141"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102166226"
 ---
 # <a name="idebugprocessquerypropertiesqueryproperty"></a>IDebugProcessQueryProperties::QueryProperty
 Tato metoda se dotazuje na zadanou hodnotu vlastnosti procesu ladění.

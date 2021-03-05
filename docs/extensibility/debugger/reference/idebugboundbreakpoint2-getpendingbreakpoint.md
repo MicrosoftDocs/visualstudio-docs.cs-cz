@@ -1,4 +1,5 @@
 ---
+description: Získá nevyřízenou zarážku, ze které se vytvořila zadaná vázaná zarážka.
 title: 'IDebugBoundBreakpoint2:: GetPendingBreakpoint | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 717081905d55a4df50601bbbfc7336265cef60d5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 18b6ab7f9c520511d2abe57e3864e71bc7534b4c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927155"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167578"
 ---
 # <a name="idebugboundbreakpoint2getpendingbreakpoint"></a>IDebugBoundBreakpoint2::GetPendingBreakpoint
 Získá nevyřízenou zarážku, ze které se vytvořila zadaná vázaná zarážka.

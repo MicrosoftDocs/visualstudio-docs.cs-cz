@@ -1,4 +1,5 @@
 ---
+description: Poskytuje podporu národního prostředí pro dodavatele portu.
 title: IDebugPortSupplierLocale2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d59f46bdde06addf5454700eb45e64c3b452d78
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c29bd3fb882be6529daa0d26ab4cde23c11d0bc0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874280"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102167058"
 ---
 # <a name="idebugportsupplierlocale2"></a>IDebugPortSupplierLocale2
 Poskytuje podporu národního prostředí pro dodavatele portu.
