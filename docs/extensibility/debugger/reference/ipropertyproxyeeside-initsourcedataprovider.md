@@ -1,4 +1,5 @@
 ---
+description: Inicializuje zdrojová data pro tento objekt a vrátí objekt obsahující počáteční data.
 title: 'IPropertyProxyEESide:: InitSourceDataProvider | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 60de888e3aa3f26bc094440fb07a67e49b62e73b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dd1040c6269b9d394e6f0968f595c71cf1576135
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895983"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224119"
 ---
 # <a name="ipropertyproxyeesideinitsourcedataprovider"></a>IPropertyProxyEESide::InitSourceDataProvider
 Inicializuje zdrojová data pro tento objekt a vrátí objekt obsahující počáteční data.

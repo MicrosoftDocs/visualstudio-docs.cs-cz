@@ -1,4 +1,5 @@
 ---
+description: Systém projektu Visual C++ se používá pro soubory vcxproj.
 title: Rozšíření projektu Visual C++
 ms.date: 04/23/2019
 ms.technology: vs-ide-mobile
@@ -10,12 +11,12 @@ ms.author: corob
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c699c835c6a53ec346dadb8bbbbf787aacc9206
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fc538402ae39753f14a3bccd8bcd17ddb0081078
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99926029"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221233"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Rozšiřitelnost systému projektů Visual Studio C++ a integrace sady nástrojů
 

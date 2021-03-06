@@ -1,4 +1,5 @@
 ---
+description: Element entryPoints oboru názvů vstav3 obsahuje všechny prvky entryPoint přidružené k řešení systému Office.
 title: '&lt;entryPoint – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0cd5b49183bc4754e894caf898f6ca6a0c0e5440
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 481c67302c84ce08f60c571eb17084b96c0322bd
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910455"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223170"
 ---
 # <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;entryPoint – &gt; element (vývoj pro Office v sadě Visual Studio)
   `entryPoints`Element `vstav3` oboru názvů obsahuje všechny `entryPoint` prvky přidružené k řešení systému Office.
@@ -53,7 +54,7 @@ ms.locfileid: "99910455"
 
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `entryPoints` prvek v manifestu aplikace pro řešení na úrovni dokumentu nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
@@ -97,7 +98,7 @@ ms.locfileid: "99910455"
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `entryPoints` prvek v manifestu aplikace pro řešení na úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
@@ -117,7 +118,7 @@ ms.locfileid: "99910455"
 
 ## <a name="multi-project-deployment-example"></a>Příklad nasazení s více projekty
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `entryPoints` prvek v manifestu aplikace pro nasazení ve více projektech. Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

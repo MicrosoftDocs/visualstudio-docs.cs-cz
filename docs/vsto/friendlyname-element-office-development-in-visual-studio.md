@@ -1,4 +1,5 @@
 ---
+description: Element friendlyName oboru názvů vstov4 ukládá název, který se zobrazí v seznamu nainstalovaných programů.
 title: '&lt;friendlyName – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c04a7a90f32051cc211fece4f27f1f46f8fb92f4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: adcf46a2c232176026181283549c0c59fc713603
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939263"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223443"
 ---
 # <a name="ltfriendlynamegt-element-office-development-in-visual-studio"></a>&lt;friendlyName – &gt; element (vývoj pro Office v sadě Visual Studio)
   `friendlyName`Element `vstov4` oboru názvů ukládá název, který se zobrazí v seznamu nainstalovaných programů.
@@ -38,7 +39,7 @@ ms.locfileid: "99939263"
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `friendlyName` prvek v řešení na úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

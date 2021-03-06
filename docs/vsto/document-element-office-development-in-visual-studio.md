@@ -1,4 +1,5 @@
 ---
+description: Element dokumentu oboru názvů vstov4 ukládá informace specifické pro přizpůsobení pro přizpůsobení na úrovni dokumentu.
 title: '&lt;&gt;element dokumentu (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e92c17d71b1c0959cb1918ce6fbad0e2cd44d5ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3563169bd9b567cd974248bf4185cb9bc8a7b022
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949828"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221038"
 ---
 # <a name="ltdocumentgt-element-office-development-in-visual-studio"></a>&lt;&gt;element dokumentu (vývoj pro Office v sadě Visual Studio)
   `document`Element `vstov4` oboru názvů ukládá informace specifické pro přizpůsobení pro přizpůsobení na úrovni dokumentu.
@@ -43,7 +44,7 @@ ms.locfileid: "99949828"
 
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `document` prvek v řešení Office na úrovni dokumentu nasazeném pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

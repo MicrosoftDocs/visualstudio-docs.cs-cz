@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 9d6b4dd8bd21da7fcfc4d7cde54e5f5a7926472e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 65785384746fa3f16dd25f0405e5ead45c553c21
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/05/2021
-ms.locfileid: "102165719"
+ms.locfileid: "102221155"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
@@ -81,6 +81,9 @@ Existují tři způsoby určení souboru parametrů běhu v aplikaci Visual Stud
 - [Nastavení vlastnosti buildu](#set-a-build-property)
 
 #### <a name="autodetect-the-run-settings-file"></a>Automaticky rozpoznat soubor parametrů běhu
+
+> [!NOTE]
+> To bude fungovat jenom pro soubor s názvem `.runsettings` .
 
 Pokud chcete automaticky detekovat soubor s parametry spuštění, umístěte ho do kořenového adresáře vašeho řešení.
 

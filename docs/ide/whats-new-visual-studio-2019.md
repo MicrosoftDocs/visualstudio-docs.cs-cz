@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: bdbad2633136ead7cfe04a1ef82e3cc9db587212
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 8371b9baa22b72eff0c829426b1b39bcf42398f2
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/05/2021
-ms.locfileid: "102151412"
+ms.locfileid: "102221181"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -57,7 +57,7 @@ Další informace najdete v tématu [Použití vyhledávání v aplikaci Visual 
 
 #### <a name="intelligent-search-service"></a>Služba inteligentního vyhledávání
 
-**Novinka v 16,9**: pomocí technologie založené na cloudu, umělé Intelligence a strojového učení jsme vylepšili výsledky hledání. V aplikaci Visual Studio je pouze hledání, které je důležitější, ale může také usnadnit snazší zjišťování funkcí produktu.
+**Novinka v 16,9**: pomocí technologie založené na cloudu, umělé Intelligence a strojového učení jsme vylepšili výsledky hledání. V aplikaci Visual Studio teď není k dismnožější výsledky, ale je možné, že vám také umožní snadněji zjistit funkce produktu.
 
 Další informace najdete v příspěvku na blogu [inteligentní vyhledávací služba sady Visual Studio](https://devblogs.microsoft.com/visualstudio/intelligent-visual-studio-search-service/) .
 

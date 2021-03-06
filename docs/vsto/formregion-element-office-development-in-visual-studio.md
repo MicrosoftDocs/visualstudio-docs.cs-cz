@@ -1,4 +1,5 @@
 ---
+description: Element formRegion oboru názvů vstov4 systém Microsoft Office identifikuje oblast formuláře Outlooku, která je přidružená k doplňku VSTO.
 title: '&lt;formRegion – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 469b041ac879753e5fe4be0f9bd739be1030a942
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0851ba9e117b464d3a2fbb9ad9903af17ceda0c4
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970386"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221077"
 ---
 # <a name="ltformregiongt-element-office-development-in-visual-studio"></a>&lt;formRegion – &gt; element (vývoj pro Office v sadě Visual Studio)
   `formRegion`Element `vstov4` oboru názvů identifikuje oblast formuláře systém Microsoft Office Outlooku, která je přidružená k doplňku VSTO.

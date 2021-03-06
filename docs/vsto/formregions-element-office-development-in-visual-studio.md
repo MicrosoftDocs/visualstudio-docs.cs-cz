@@ -1,4 +1,5 @@
 ---
+description: Element formRegions oboru názvů vstov4 obsahuje oblasti formulářů systém Microsoft Office Outlooku, které jsou přidružené k doplňku VSTO.
 title: '&lt;formRegions – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a1a718c6a247528788d91e9c1f30ad636acb7ab9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7c8fd7e0ced0fadcd945388a9730513b2a591ed0
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970332"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223456"
 ---
 # <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions – &gt; element (vývoj pro Office v sadě Visual Studio)
   `formRegions`Element `vstov4` oboru názvů obsahuje oblasti formuláře systém Microsoft Office Outlooku, které jsou přidruženy k doplňku VSTO.
@@ -49,7 +50,7 @@ ms.locfileid: "99970332"
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `formRegions` prvek v manifestu aplikace pro řešení Office na úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

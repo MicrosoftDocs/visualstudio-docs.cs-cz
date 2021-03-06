@@ -1,4 +1,5 @@
 ---
+description: Toto rozhraní představuje kolekci objektů, které implementují rozhraní IDebugAddress.
 title: IEnumDebugAddresses | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9b4b95d805833ffd8b8041292cd18e5db8df9b3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ea9e4115c1664e1dcd05041f7ece056b5de01dae
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875793"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222637"
 ---
 # <a name="ienumdebugaddresses"></a>IEnumDebugAddresses
 Toto rozhraní představuje kolekci objektů, které implementují rozhraní [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) .

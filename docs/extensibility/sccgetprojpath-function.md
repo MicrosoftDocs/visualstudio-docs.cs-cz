@@ -1,4 +1,5 @@
 ---
+description: Tato funkce vyzve uživatele k zadání cesty k projektu, což je řetězec, který je smysluplný pouze pro modul plug-in správy zdrojových kódů.
 title: Funkce SccGetProjPath | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bad1cae248c0fe3babd920e0773825d9d36b7042
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3a08c09e1b04cf5e5f826520efcf64ead9113be
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844564"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102220700"
 ---
 # <a name="sccgetprojpath-function"></a>SccGetProjPath – funkce
 Tato funkce vyzve uživatele k zadání cesty k projektu, což je řetězec, který je smysluplný pouze pro modul plug-in správy zdrojových kódů. Je volána, když je uživatel:
