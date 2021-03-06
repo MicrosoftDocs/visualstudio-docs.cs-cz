@@ -1,4 +1,5 @@
 ---
+description: Vrátí další sadu prvků z výčtu chybových zarážek.
 title: 'IEnumDebugErrorBreakpoints2:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f9f14dd131081c102cb2e144a2fcbdf877c9eaed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ae50e3d2cb9a3f4b023a59598f7fea07373dad5
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897018"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102226719"
 ---
 # <a name="ienumdebugerrorbreakpoints2next"></a>IEnumDebugErrorBreakpoints2::Next
 Vrátí další sadu prvků z výčtu.

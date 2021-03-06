@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
-ms.date: 02/04/2021
+ms.date: 03/05/2021
 ms.topic: conceptual
 description: Otázky fakturace pro cloudová předplatná.
-ms.openlocfilehash: a812965a549f2e6e6d6c58366d943f3129d951cd
-ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
+ms.openlocfilehash: 2c03871d11279b7c368ebd0c7012670fc92c9ee0
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99572873"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249720"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Nejčastější dotazy k fakturaci pro cloudové předplatné sady Visual Studio
 Nezapomeňte porovnat výhody [a ceny cloudového předplatného](https://visualstudio.microsoft.com/vs/pricing/) , abyste porozuměli výhodám každého předplatného sady Visual Studio, s porovnáním předplatných v cloudu a standardním prostředím, podrobnosti o výhodách pro předplatitele a další.
@@ -56,13 +56,13 @@ Po pozdějším zvýšení placeného množství také provedeme průběžné zv
 ### <a name="q-how-are-annual-cloud-subscription-charges-processed"></a>Otázka: jak se zpracovávají poplatky za **roční** cloudové předplatné?
 Odpověď: u každého nákupu účtujeme okamžitě celé množství nákupu. Poplatky nejsou rozdělené po rocích a neexistují žádné hodnocení. Pokud si koupíte roční předplatné v cloudu v různou dobu v roce, budete mít předplatné v různých měsících obnovování. V rámci nákupu multilicenční smlouvy s Microsoftem není vše pro roční předplatné v cloudu coterminous.
 
-### <a name="q-how-do-cancelations-work"></a>Otázka: Jak může zrušení fungovat?
+### <a name="q-how-do-cancellations-work"></a>Otázka: jak zrušení fungují?
 Odpověď: Když zrušíte předplatné cloudu sady Visual Studio, zrušíte tím automatické obnovení. Předplatné bude fungovat dál až do normálního data prodloužení a pak jeho platnost vyprší.
 Po vypršení platnosti předplatného už předplatitel sady Visual Studio nebude moct využívat sadu Visual Studio ani další výhody, které se s ním pojí.
 
-U předplatných v rámci měsíčního cloudu se zrušení projeví na prvním dni příštího měsíce. Pokud zrušíte pouze některá ze svých měsíčních cloudových předplatných, nezapomeňte první den následujícího měsíce odebrat uživatele, abyste zajistili, že ti správní lidé budou mít i nadále přiřazená aktivní předplatná.
+U měsíčních cloudových předplatných ke zrušení dojde první den následujícího měsíce. Pokud zrušíte pouze některá ze svých měsíčních cloudových předplatných, nezapomeňte první den následujícího měsíce odebrat uživatele, abyste zajistili, že ti správní lidé budou mít i nadále přiřazená aktivní předplatná.
 
-Pro roční cloudová předplatná se zruší platnost prvního dne v měsíci po uplynutí 12 měsíců od původního nákupu nebo po uplynutí 12 měsíců od poslední roční poplatky za obnovení. Pokud jste si například 3. ledna 2018 koupili roční cloudové předplatné sady Visual Studio Professional, toto předplatné zůstane aktivní až do 1. února 2019, kdy dojde k jeho automatickému prodloužení o další rok. Pokud kdykoli mezi tímto datem a 1. únorem 2020 předplatné zrušíte, platnost předplatného vyprší 1. února 2020. Za předčasné zrušení ročních cloudových předplatných před uplynutím celého roku není žádná sleva.
+U ročních cloudových předplatných ke zrušení dojde první den měsíce následujícího 12 měsíců od původního nákupu nebo 12 měsíců od posledního ročního poplatku za prodloužení. Pokud jste si například 3. ledna 2018 koupili roční cloudové předplatné sady Visual Studio Professional, toto předplatné zůstane aktivní až do 1. února 2019, kdy dojde k jeho automatickému prodloužení o další rok. Pokud kdykoli mezi tímto datem a 1. únorem 2020 předplatné zrušíte, platnost předplatného vyprší 1. února 2020. Za předčasné zrušení ročních cloudových předplatných před uplynutím celého roku není žádná sleva.
 
 ### <a name="q-what-kind-of-volume-discounts-are-available-for-visual-studio-subscriptions"></a>Otázka: Jaký druh množstevních slev je k dispozici pro předplatná sady Visual Studio?
 Odpověď: získáte 5% slevu v šesté a všech dalších odběrech *v rámci každého typu* předplatného:
@@ -93,6 +93,9 @@ Odpověď: Ano. Při vydání nových verzí je můžete stáhnout a spustit. Na
 
 ### <a name="q-can-i-buy-visual-studio-cloud-subscriptions-from-my-software-reseller"></a>Otázka: Můžu si koupit cloudová předplatná sady Visual Studio z mého prodejce softwaru?
 Odpověď: Ano, pokud se prodejce účastní programu Cloud Solution Provider (CSP). Stačí se zeptat.
+
+### <a name="q-where-can-i-find-information-about-azure-invoices"></a>Otázka: kde můžu najít informace o fakturách Azure?
+Odpověď: Podívejte se na článek [vysvětlení vaší faktury Azure](https://docs.microsoft.com/azure/cost-management-billing/understand/understand-invoice) v [dokumentaci k Azure](/azure/).
 
 ## <a name="related-resources"></a>Související prostředky
 - [Portál pro správu předplatných sady Visual Studio](https://manage.visualstudio.com/)

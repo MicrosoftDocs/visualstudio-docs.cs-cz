@@ -1,4 +1,5 @@
 ---
+description: Přeskočí na zadaný počet prvků v výčtu vláken.
 title: 'IEnumDebugThreads2:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bb850ebd06dffd50ff18ddf4fa7913444d2a04b0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ee92b01f2c103871d8e2d2347e0a303b70ef87ba
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852814"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225744"
 ---
 # <a name="ienumdebugthreads2skip"></a>IEnumDebugThreads2::Skip
 Přeskočí na zadaný počet prvků.

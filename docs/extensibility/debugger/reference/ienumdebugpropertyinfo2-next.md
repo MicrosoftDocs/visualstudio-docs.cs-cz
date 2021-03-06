@@ -1,4 +1,5 @@
 ---
+description: Vrátí další sadu DEBUG_PROPERTY_INFO prvků ze výčtu.
 title: 'IEnumDebugPropertyInfo2:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d4ce9e9a434ac32d63199ae5af8524c6c9a752b4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d14d77ca07a73ee1981609624a7d93465252719d
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890731"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102226004"
 ---
 # <a name="ienumdebugpropertyinfo2next"></a>IEnumDebugPropertyInfo2::Next
 Vrátí další sadu prvků z výčtu.

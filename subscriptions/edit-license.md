@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
-ms.date: 11/09/2020
+ms.date: 02/18/2021
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci upravovat přiřazení předplatného.
-ms.openlocfilehash: 0f1ec9c9aa63b5bd877e13f112964f7d74a4b5af
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: f24c949224d895f4cc2926ab30db637835e7886c
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433554"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249802"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Upravit přiřazení předplatných sady Visual Studio
 Jako správce předplatného můžete provádět změny v předplatných přiřazených jednotlivcům ve vaší organizaci.  Tento článek popisuje typy změn, které lze provést, a poskytuje potřebné kroky.
@@ -30,7 +30,6 @@ Pokud chcete odběratele upravit, vyberte tři tečky (...), které se zobrazí 
 Můžete aktualizovat křestní jméno, příjmení, úroveň předplatného, e-mailovou adresu, zemi, jazyk, soubory ke stažení a referenční pole. Upravte informace o odběrateli a klikněte na **Uložit**.
 
 ## <a name="edit-multiple-subscribers-using-bulk-edit"></a>Úprava více odběratelů pomocí hromadné úpravy
-
 
 Pomocí procesu hromadného úprav můžete upravovat více předplatitelů najednou. Tato funkce se primárně používá pro organizace, které procházejí se změnami firemních e-mailových adres, nebo pokud se organizace rozhodla omezit přístup k souborům ke stažení.
 
@@ -56,9 +55,12 @@ Podívejte se na toto video nebo si přečtěte, kde se dozvíte, jak upravit v�
 
 5. Po nahrání souboru se zobrazí oznámení o tom, že bylo úspěšné. V tomto okamžiku se vaše úpravy projeví v informacích o odběrateli.
 
+## <a name="resources"></a>Zdroje informací
+- [Podpora předplatných](https://visualstudio.microsoft.com/subscriptions/support/)
+
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

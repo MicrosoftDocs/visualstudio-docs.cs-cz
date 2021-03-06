@@ -1,4 +1,5 @@
 ---
+description: Vrátí další sadu prvků z výčtu FRAMEINFO.
 title: 'IEnumDebugFrameInfo2:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cff37c8cf557c3857a5e078d864755cb219c1bc3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1a14806c5904e6ca1ed120dc138b96a194d80726
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956318"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102226459"
 ---
 # <a name="ienumdebugframeinfo2next"></a>IEnumDebugFrameInfo2::Next
 Vrátí další sadu prvků z výčtu.

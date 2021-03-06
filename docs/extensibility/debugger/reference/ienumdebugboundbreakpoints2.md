@@ -1,4 +1,5 @@
 ---
+description: Toto rozhraní vytváří výčty vázaných zarážek přidružených k probíhající zarážce nebo vázané události zarážky.
 title: IEnumDebugBoundBreakpoints2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d52aad69397be315cf9c06b5f49a2c55d2fce28
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e861465e2abf18a42af75d420dc58075d19ff253
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929521"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224990"
 ---
 # <a name="ienumdebugboundbreakpoints2"></a>IEnumDebugBoundBreakpoints2
 Toto rozhraní vytváří výčty vázaných zarážek přidružených k probíhající zarážce nebo vázané události zarážky.

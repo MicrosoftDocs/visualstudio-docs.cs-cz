@@ -1,4 +1,5 @@
 ---
+description: Vrátí kopii aktuálního výčtu vláken jako samostatný objekt.
 title: 'IEnumDebugThreads2:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f19c95e57ee1ae949573fcd0d4460d8c11ed72bd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b934bbf6e358296c433a1a59fe675f376d1491ac
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842170"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225835"
 ---
 # <a name="ienumdebugthreads2clone"></a>IEnumDebugThreads2::Clone
 Vrátí kopii aktuálního výčtu jako samostatný objekt.

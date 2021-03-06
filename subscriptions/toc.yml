@@ -46,6 +46,8 @@
       href: manage-vs-subscriptions.md
     - name: Konec platnosti předplatných
       href: subscription-expiration.md
+    - name: Změny na úrovni předplatného
+      href: subscription-level-changes.md
     - name: Kontaktování správce předplatných
       href: contact-my-admin.md
     - name: Výhody

@@ -1,4 +1,5 @@
 ---
+description: Aktualizuje data objektu daným datovým objektem a vrátí nový datový objekt reprezentující nová data objektu.
 title: 'IPropertyProxyEESide:: InPlaceUpdateObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 89f8185734c8c2ee15728328a510236bbbc50a21
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2119db579863bea2ad0b9fa5834996d658308549
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895970"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225588"
 ---
 # <a name="ipropertyproxyeesideinplaceupdateobject"></a>IPropertyProxyEESide::InPlaceUpdateObject
 Aktualizuje data objektu daným datovým objektem a vrátí nový datový objekt reprezentující nová data objektu.

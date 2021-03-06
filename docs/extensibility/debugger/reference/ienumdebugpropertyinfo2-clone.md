@@ -1,4 +1,5 @@
 ---
+description: Vrátí kopii aktuálního DEBUG_PROPERTY_INFO výčtu jako samostatný objekt.
 title: 'IEnumDebugPropertyInfo2:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c4db18a510fa80d8afef5ed4f338e1d344ad37c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 389bd852fa0be0c210d699dfa0e94be78e67d075
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877379"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102226030"
 ---
 # <a name="ienumdebugpropertyinfo2clone"></a>IEnumDebugPropertyInfo2::Clone
 Vrátí kopii aktuálního výčtu jako samostatný objekt.

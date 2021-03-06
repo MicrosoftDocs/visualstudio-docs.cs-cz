@@ -1,4 +1,5 @@
 ---
+description: Tato metoda vrací další sadu IDebugObject prvků z výčtu.
 title: 'IEnumDebugObjects:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7ef009a4801e40859e2b757465bb15ffac97395a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9dc05932a39d76fcf21290971f12567795a678e9
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957111"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224665"
 ---
 # <a name="ienumdebugobjectsnext"></a>IEnumDebugObjects::Next
 Tato metoda vrací další sadu prvků z výčtu.

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 1bdcb3c9-bba1-4e25-a609-9d7e539d78e0
-ms.date: 12/02/2020
+ms.date: 03/05/2021
 ms.topic: conceptual
 description: Přečtěte si, jak se přihlásit k předplatným sady Visual Studio s vaším účtem GitHub.
-ms.openlocfilehash: 52f67afdf8a4056063cdefef618be5b895dbb960
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 41966fb4468832b3e1a320e898164989d1fb5c3b
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537991"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249733"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>Přihlášení k předplatným sady Visual Studio s vaším účtem GitHubu 
 
@@ -59,12 +59,12 @@ Odpověď: z důvodu omezení zabezpečení se společnost Microsoft přihlásí
 Odpověď: kdykoli se podepisujete pomocí aliasu účtu (e-mailová adresa, telefonní číslo, jméno Skypu), zobrazí se vám všechny metody přihlášení pro váš účet. Pokud tam GitHub nevidíte, zatím jste ho nenastavili.
 
 #### <a name="q--how-can-i-unlink-my-microsoft-and-github-accounts"></a>Otázka: Jak můžu zrušit propojení s účty Microsoft a GitHub? 
-Odpověď: přejděte na [kartu zabezpečení](https://account.microsoft.com/security) Account.Microsoft.com a klikněte na **Další možnosti zabezpečení** . tím odpojíte svůj účet GitHub. Zrušení propojení účtu GitHub ho odebere jako metodu přihlašování a odebere přístup k jakýmkoli úložištím GitHubu v aplikaci Visual Studio. Ostatní produkty Microsoftu si můžou požádat o přístup k vašemu účtu GitHubu samostatně, takže odebrání přístupu tady nebude odebírat přístup ve všech produktech. Na stránce [oprávnění aplikace](https://github.com/settings/applications) v profilu GitHubu můžete odvolat souhlas z aplikací, které jsou tady uvedené.
+Odpověď: přejděte na [kartu zabezpečení](https://account.microsoft.com/security) Account.Microsoft.com a kliknutím na **Upřesnit možnosti zabezpečení** odpojte svůj účet GitHub. Zrušení propojení účtu GitHub ho odebere jako metodu přihlašování a odebere přístup k jakýmkoli úložištím GitHubu v aplikaci Visual Studio. Ostatní produkty Microsoftu si můžou požádat o přístup k vašemu účtu GitHubu samostatně, takže odebrání přístupu tady nebude odebírat přístup ve všech produktech. Na stránce [oprávnění aplikace](https://github.com/settings/applications) v profilu GitHubu můžete odvolat souhlas z aplikací, které jsou tady uvedené.
 
 #### <a name="q--i-try-to-use-my-github-account-to-sign-in-but-im-prompted-that-i-already-have-a-microsoft-identity-that-i-should-use-instead--whats-happening"></a>Otázka: Zkusím použít svůj účet GitHub pro přihlášení, ale zobrazí se výzva, že již mám identitu Microsoftu, kterou mám použít místo toho.  Co se děje?
 Odpověď: Pokud máte na svém účtu GitHub Azure Active Directory e-mailovou adresu, znamená to, že už máte identitu Microsoftu, která má přístup k Azure a spouštět kanály CI pomocí vašeho kódu GitHubu. Pomocí tohoto účtu zajistíte, aby vaše prostředky a kanály pro vytváření prostředků Azure zůstaly v rámci svých organizačních hranic. Pokud ale provádíte osobní práci, doporučujeme, abyste na svém účtu GitHub umístili osobní e-mailovou adresu, abyste k nim měli vždycky přístup. Až to uděláte, zkuste se znovu přihlásit a při zobrazení výzvy k přihlášení ke svému pracovnímu nebo školnímu účtu vyberte **použít jinou e-mailovou adresu** . To vám umožní vytvořit novou účet Microsoft pomocí této osobní e-mailové adresy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
