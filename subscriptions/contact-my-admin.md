@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
-ms.date: 09/08/2020
+ms.date: 02/18/2021
 ms.topic: how-to
 description: Zjistěte, jak kontaktovat správce předplatného a požádat o pomoc s dotazy nebo problémy.
-ms.openlocfilehash: 363fc84d0607e511d259153dc3e39d4b4063ff42
-ms.sourcegitcommit: fb2a60cfdf78964fa0cb6783a5d947deae04b6bc
+ms.openlocfilehash: 4eb17f5480b3839248d0968b6c20434c149bb756
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93289977"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102250049"
 ---
 # <a name="get-assistance-from-your-subscriptions-admin"></a>Získat pomoc od správce předplatného
 Pokud máte vaše předplatné sady Visual Studio k dispozici ve své práci nebo ve škole, je pravděpodobné, že vám byl přiřazen správce předplatných nebo "admin".  Správci můžou přiřadit nebo odebírat předplatná, měnit e-mailové adresy, určit, jestli máte možnost stahovat software, a provádět další funkce související s vaším předplatným.
@@ -32,12 +32,12 @@ Vzhledem k velikosti a složitosti mnoha organizací si nemusíte být vědomi t
 > [!NOTE]
 > **Super správci:**  Chcete-li nastavit e-mailovou adresu, na kterou jsou odesílány žádosti "kontaktujte my admin", zadejte tuto adresu v [předvolbách smlouvy](admin-prefs.md#contact-email-address).
 
-## <a name="resources"></a>Prostředky
-- [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/subscriptions/support/#talktous)
+## <a name="resources"></a>Zdroje informací
+- [Podpora předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

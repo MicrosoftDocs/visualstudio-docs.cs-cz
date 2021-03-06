@@ -12,12 +12,12 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: d41beea47e8173170ea2d428b40bd7c7ed8ff67e
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 619f1f1cc99cbab425bc1bcb2bac181e09db8fc4
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101684151"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102250076"
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio"></a>Vzdálené ladění ASP.NET Core ve službě IIS v Azure v aplikaci Visual Studio
 
@@ -79,13 +79,23 @@ Ze sady Visual Studio můžete rychle publikovat a ladit aplikaci do plně zří
 
 1. V aplikaci Visual Studio klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **publikovat**.
 
-    Pokud jste již dříve nakonfigurovali všechny publikační profily, otevře se podokno **publikování** . Klikněte na **Nový profil**.
+    Pokud jste již dříve nakonfigurovali všechny publikační profily, otevře se podokno **publikování** . Vyberte možnost **Nový** nebo **Nový profil**.
 
-1. V dialogovém okně **publikovat** zvolte **Azure App Service** , vyberte **vytvořit novou** a podle pokynů vytvořte profil.
+1. Vytvořte nový profil publikování.
 
-    Podrobné pokyny najdete v tématu [nasazení webové aplikace v ASP.NET Core do Azure pomocí sady Visual Studio](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs).
+    ::: moniker range=">=vs-2019"
+    V dialogovém okně **publikovat** zvolte **Azure** a vyberte **Další**. Pak zvolte **Azure App Service (Windows)**, vyberte **Další** a postupujte podle pokynů a vytvořte profil.
+
+    :::image type="content" source="../debugger/media/vs-2019/remotedbg-azure-app-service-profile.png" alt-text="Nasazení webové aplikace ASP.NET Core do Azure pomocí sady Visual Studio":::
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+
+    V dialogovém okně **publikovat** zvolte **Azure App Service** , vyberte **vytvořit novou** a podle pokynů vytvořte profil.
 
     ![Publikování do Azure App Service](../debugger/media/remotedbg_azure_app_service_profile.png)
+    ::: moniker-end
+
+    Podrobnější pokyny najdete v tématu [nasazení webové aplikace ASP.NET Core do Azure pomocí sady Visual Studio](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs).
 
 1. V okně Publikovat zvolte možnost **Upravit konfiguraci** a přepněte na konfiguraci ladění a pak zvolte **publikovat**.
 
@@ -106,6 +116,7 @@ Ze sady Visual Studio můžete rychle publikovat a ladit aplikaci do plně zří
 Můžete vytvořit virtuální počítač Azure pro Windows Server a pak nainstalovat a nakonfigurovat službu IIS a další požadované softwarové součásti. Trvá to déle než nasazení do Azure App Service a vyžaduje, abyste procházeli podle zbývajících kroků v tomto kurzu.
 
 Tyto postupy byly testovány na těchto konfiguracích serveru:
+
 * Windows Server 2012 R2 a IIS 8
 * Windows Server 2016 a IIS 10
 * Windows Server 2019 a IIS 10
@@ -143,7 +154,7 @@ Po stažení softwaru můžete získat žádosti o udělení oprávnění k nač
     > [!NOTE]
     > Pokud systém nemá připojení k Internetu, Stáhněte a nainstalujte *[Microsoft Visual C++ 2015 Distribuovatelný](https://www.microsoft.com/download/details.aspx?id=53840)* před instalací hostitelské sady Windows serveru .NET Core.
 
-3. Restartujte systém (nebo spusťte příkaz **net stop** , který následuje po příkazu **net start w3svc** z příkazového řádku pro výběr změny systémové cesty).
+2. Restartujte systém (nebo spusťte příkaz **net stop** , který následuje po příkazu **net start w3svc** z příkazového řádku pro výběr změny systémové cesty).
 
 ## <a name="choose-a-deployment-option"></a>Zvolit možnost nasazení
 

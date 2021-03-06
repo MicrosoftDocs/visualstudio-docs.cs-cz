@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
-ms.date: 10/26/2020
+ms.date: 02/18/2021
 ms.topic: conceptual
 description: Naučte se vyhledávat a stahovat tituly softwaru Microsoftu v předplatných sady Visual Studio.
-ms.openlocfilehash: e6a5b6a1caab199ec2b67108f539c1d68d545551
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: c53429f7fe7d88c1c75642d9f820c8a6fa444eb9
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92903629"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249282"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Stažení softwarových titulů v předplatných sady Visual Studio
 V závislosti na tom, jaké Předplatné sady Visual Studio máte, může být k dispozici celá řada softwarových titulů Microsoftu.  V tomto článku se dozvíte, jak vyhledat a stáhnout software, který potřebujete k tomu, abyste mohli využít své předplatné na maximum. 
@@ -52,9 +52,12 @@ Pokud chcete získat kód Product Key pro stažení, můžete buď vybrat modrý
 > [!div class="mx-imgBorder"]
 > ![Kódy Product Key pro deklaraci identity sady Visual Studio 2019](_img/subscriber-downloads/vs2019-claim-keys.png "Vyberte klíč deklarace identity pro zbývající klíče.")
 
+## <a name="resources"></a>Zdroje informací
+- [Podpora předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
+
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

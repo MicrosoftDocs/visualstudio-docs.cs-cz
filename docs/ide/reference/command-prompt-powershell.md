@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Studio terminal
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 no-loc: cmdlet
-ms.openlocfilehash: 2500a540a4135517c65736d7a0f3d039c90cc71e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 406ef4e7d475df82a0e36732dd5e777959ea3b96
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102168858"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249749"
 ---
 # <a name="developer-command-prompt-and-developer-powershell"></a>PowerShell Developer Command Prompt a vývojář
 
@@ -55,11 +55,11 @@ Pomocí těchto kroků otevřete Developer Command Prompt nebo vývojové prost�
 
    ![Položka nabídky příkazového řádku v aplikaci Visual Studio](./media/developer-command-prompt-for-vs/vs-menu.png)
 
-### <a name="use-the-windows-start-menu"></a>Použití nabídky Start v systému Windows
+## <a name="use-the-windows-start-menu"></a>Použití nabídky Start v systému Windows
 
 V závislosti na verzi sady Visual Studio a všech dalších sadách SDK a úlohách, které jste nainstalovali, může být více příkazů. Pokud následující kroky nefungují, můžete zkusit [soubory vyhledat ručně na svém počítači](#manually-locate-the-file) nebo [spustit prostředí v rámci sady Visual Studio](#start-the-shell-from-inside-visual-studio).
 
-#### <a name="windows-10"></a>Windows 10
+### <a name="windows-10"></a>Windows 10
 
 1. Na klávesnici vyberte **Spustit** ![ klávesu s logem Windows.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) a přejděte k písmenu **v**.
 
@@ -71,7 +71,7 @@ V závislosti na verzi sady Visual Studio a všech dalších sadách SDK a úloh
 
    ![Animovaný obrázek GIF znázorňující chování hledání ve Windows 10](./media/developer-command-prompt-for-vs/windows-10-search.gif)
 
-#### <a name="windows-81"></a>Windows 8.1
+### <a name="windows-81"></a>Windows 8.1
 
 1. Kliknutím na klávesu s logem Windows na klávesnici na obrazovce Start přejdete na **úvodní** obrazovku ![ .](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) například na klávesnici.
 
@@ -79,7 +79,7 @@ V závislosti na verzi sady Visual Studio a všech dalších sadách SDK a úloh
 
 1. Pro VS 2019 vyberte **Developer Command Prompt pro vs 2019** nebo **vývojové prostředí PowerShell**.
 
-#### <a name="windows-7"></a>Windows 7
+### <a name="windows-7"></a>Windows 7
 
 1. Zvolte **Start** a potom rozbalte **všechny programy**.
 
@@ -89,11 +89,11 @@ V závislosti na verzi sady Visual Studio a všech dalších sadách SDK a úloh
 
 Pokud máte nainstalované jiné sady SDK, jako je například [Sada Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) nebo [předchozí verze](https://developer.microsoft.com/windows/downloads/sdk-archive), může se zobrazit další příkazová výzva. V dokumentaci pro jednotlivé nástroje zjistíte, kterou verzi příkazového řádku byste měli použít.
 
-### <a name="manually-locate-the-file"></a>Ručně vyhledat soubor
+## <a name="manually-locate-the-file"></a>Ručně vyhledat soubor
 
 Obvykle jsou zástupci pro prostředí, které jste nainstalovali, umístěny do složky **nabídky Start** pro Visual Studio, jako je například v *%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual studiu 2019 \ Visual Studio Tools*. Ale pokud hledání příkazového řádku nepřinese očekávané výsledky, můžete zkusit soubory na svém počítači najít ručně.
 
-#### <a name="developer-command-prompt"></a>Developer Command Prompt
+### <a name="developer-command-prompt"></a>Developer Command Prompt
 
 Vyhledejte název souboru příkazového řádku, který je *VsDevCmd.bat*, nebo přejít do složky Tools for Visual Studio, například *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\Common7\Tools* (cesta se mění podle verze sady Visual Studio, edice a umístění instalace).
 
@@ -112,7 +112,7 @@ Nebo v dialogovém okně **spuštění** systému Windows zadejte následující
 > [!TIP]
 > Budete muset upravit cestu tak, aby odpovídala vaší instalaci sady Visual Studio.
 
-#### <a name="developer-powershell"></a>Vývojové prostředí PowerShell
+### <a name="developer-powershell"></a>Vývojové prostředí PowerShell
 
 Vyhledejte soubor skriptu PowerShellu s názvem *Launch-VsDevShell.ps1* nebo do složky Tools for Visual Studio, například *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\Common7\Tools*. (Cesta se mění podle vaší verze, edice a umístění sady Visual Studio.) Po vyhledání souboru PowerShellu ho spusťte zadáním následujícího příkazu na příkazovém řádku Windows PowerShellu nebo PowerShellu 6:
 

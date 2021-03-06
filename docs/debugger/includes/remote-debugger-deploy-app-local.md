@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 05/23/2018
 ms.author: mikejo
 ms.custom: include file
-ms.openlocfilehash: 1d049bc8b74b83028e04fe92e7ce96f45907d042
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: b6ceee76d8c24ccddb41e47c0865d96c79e6fc32
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762594"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249834"
 ---
 1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte **publikovat** (pro webové formuláře, **publikovat webovou aplikaci**).
 
@@ -21,18 +21,30 @@ ms.locfileid: "97762594"
 
 1. V dialogovém okně **publikovat** vyberte možnost **Složka**, klikněte na tlačítko **Procházet** a vytvořte novou složku **C:\Publish**.
 
-    ![Snímek obrazovky dialogového okna vybrat cíl publikování v aplikaci Visual Studio se složkou ' bin\Release\Publish ' vybraný jako cíl publikování.](../media/remotedbg_publish_local.png)
+   ::: moniker range=">=vs-2019"
 
-    V případě aplikace webové formuláře vyberte v dialogovém okně Publikovat možnost **vlastní** , zadejte název profilu a klikněte na **tlačítko OK**.
+   :::image type="content" source="../media/vs-2019/remotedbg-publish-local.png" alt-text="Snímek obrazovky dialogového okna vybrat cíl publikování v aplikaci Visual Studio se složkou ' C:\Publish ' vybraný jako cíl publikování.":::
 
-1. V rozevíracím seznamu klikněte na **vytvořit profil** (výchozí hodnota je **Publish** ).
+   Kliknutím na tlačítko **Dokončit** uložte profil publikování.
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   ![Snímek obrazovky dialogového okna vybrat cíl publikování v aplikaci Visual Studio se složkou ' bin\Release\Publish ' vybraný jako cíl publikování.](../media/remotedbg_publish_local.png)
+   V případě aplikace webové formuláře vyberte v dialogovém okně Publikovat možnost **vlastní** , zadejte název profilu a klikněte na **tlačítko OK**.
 
-1. V dialogovém okně **publikovat** klikněte na odkaz **Nastavení** a pak vyberte kartu **Nastavení** .
+   V rozevíracím seznamu klikněte na **vytvořit profil** (výchozí hodnota je **Publish** ).
+   ::: moniker-end
 
-1. Nastavte konfiguraci na **ladit**, vyberte **Odstranit všechny existující soubory před publikováním** a pak klikněte na **Uložit**.
+1. Přepněte na konfiguraci ladění.
 
-    > [!NOTE]
-    > Použijete-li sestavení pro vydání, zakážete ladění v souboru web.config při publikování.
+   ::: moniker range=">=vs-2019"
+   Zvolte **Upravit** pro úpravu profilu a pak zvolte **Nastavení**. Zvolte konfiguraci **ladění** a pak zvolte **odebrat další soubory v cílovém umístění** v možnostech **publikování souboru** .
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   V dialogovém okně **Nastavení** Povolte ladění kliknutím na tlačítko **Další**, zvolte konfiguraci **ladění** a pak zvolte **odebrat další soubory v cílovém umístění** v možnostech **publikování souboru** .
+   ::: moniker-end
+
+   > [!NOTE]
+   > Použijete-li sestavení pro vydání, zakážete ladění v souboru *web.config* při publikování.
 
 1. Klikněte na **Publikovat**.
 
@@ -43,7 +55,7 @@ ms.locfileid: "97762594"
 1. Zkopírujte adresář projektu ASP.NET z počítače sady Visual Studio do místního adresáře nakonfigurovaného pro aplikaci ASP.NET (v tomto příkladu **C:\Publish**) na počítači se systémem Windows Server. V tomto kurzu se předpokládá, že provádíte kopírování ručně, ale můžete použít i další nástroje, jako je PowerShell, XCOPY nebo Robocopy.
 
     > [!CAUTION]
-    > Pokud potřebujete provést změny v kódu nebo znovu sestavit, musíte znovu publikovat a opakovat tento krok. Spustitelný soubor, který jste zkopírovali do vzdáleného počítače, se musí přesně shodovat s vaším místním zdrojem a symboly.    Pokud to neuděláte, zobrazí se `cannot find or open the PDB file` při pokusu o ladění procesu v aplikaci Visual Studio upozornění.
+    > Pokud potřebujete provést změny v kódu nebo znovu sestavit, musíte znovu publikovat a opakovat tento krok. Spustitelný soubor, který jste zkopírovali do vzdáleného počítače, se musí přesně shodovat s vaším místním zdrojem a symboly. Pokud to neuděláte, zobrazí se `cannot find or open the PDB file` při pokusu o ladění procesu v aplikaci Visual Studio upozornění.
 
 1. Na Windows serveru ověřte, že aplikaci můžete správně spustit tak, že otevřete aplikaci v prohlížeči.
 

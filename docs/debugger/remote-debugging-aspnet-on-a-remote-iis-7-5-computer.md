@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: 854d3e23252e63d6330abd9f1704890d3b90ae36
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 104927d42f7ec68e43686278042c0712bb3c875e
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908303"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102250084"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>Vzdálené ladění ASP.NET na vzdáleném počítači IIS
+
 Chcete-li ladit aplikaci ASP.NET, která byla nasazena do služby IIS, nainstalujte a spusťte nástroje Remote Tools v počítači, kde jste nasadili aplikaci, a pak se připojte k spuštěné aplikaci ze sady Visual Studio.
 
 ![Komponenty vzdáleného ladicího programu](../debugger/media/remote-debugger-aspnet.png "Remote_debugger_components")
@@ -39,6 +40,7 @@ K provedení kroků uvedených v tomto článku se vyžaduje Visual Studio 2017.
 ::: moniker-end
 
 Tyto postupy byly testovány na těchto konfiguracích serveru:
+
 * Windows Server 2012 R2 a IIS 8 (pro Windows Server 2008 R2 se serverové kroky liší)
 
 ## <a name="network-requirements"></a>Požadavky sítě
@@ -130,10 +132,17 @@ Tuto možnost můžete použít k vytvoření souboru nastavení publikování a
 
 Po úspěšném nasazení aplikace by se měla spustit automaticky. Pokud se aplikace nespustí ze sady Visual Studio, spusťte aplikaci ve službě IIS.
 
-1. V dialogovém okně **Nastavení** Povolte ladění kliknutím na tlačítko **Další**, zvolte konfiguraci **ladění** a pak zvolte **odebrat další soubory v cílovém umístění** v možnostech **publikování souboru** .
+1. Přepněte na konfiguraci ladění.
 
-    > [!IMPORTANT]
-    > Pokud zvolíte konfiguraci vydané verze, zakážete ladění v souboru *web.config* při publikování.
+   ::: moniker range=">=vs-2019"
+   Zvolte **Upravit** pro úpravu profilu a pak zvolte **Nastavení**. Zvolte konfiguraci **ladění** a pak zvolte **odebrat další soubory v cílovém umístění** v možnostech **publikování souboru** .
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   V dialogovém okně **Nastavení** Povolte ladění kliknutím na tlačítko **Další**, zvolte konfiguraci **ladění** a pak zvolte **odebrat další soubory v cílovém umístění** v možnostech **publikování souboru** .
+   ::: moniker-end
+
+   > [!IMPORTANT]
+   > Pokud zvolíte konfiguraci vydané verze, zakážete ladění v souboru *web.config* při publikování.
 
 1. Klikněte na **Uložit** a znovu publikujte aplikaci.
 

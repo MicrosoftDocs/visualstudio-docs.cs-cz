@@ -7,12 +7,12 @@ ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
 ms.date: 03/03/2021
 ms.topic: conceptual
 description: Správa předplatných v předplatných sady Visual Studio s GitHubem Enterprise
-ms.openlocfilehash: d1734e3f416815b9c63f7237eca4e7df26e34331
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 5837ec33e6f17f0970178a0f1b306960e9c42668
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159554"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249697"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>Správa předplatných sady Visual Studio pomocí GitHubu Enterprise
 Zákazníci, kteří mají smlouvu Enterprise (EA) se společností Microsoft, mají nárok na zakoupení nové nabídky předplatných, která přináší společné předplatné sady Visual Studio a společnost GitHub. Předplatitelé sady Visual Studio mají snadný a ekonomický způsob získání GitHubu Enterprise. 
@@ -72,7 +72,7 @@ GitHub je k dispozici buď jako cloudový GitHub.com, nebo na místním serveru 
 - Další informace o přiřazení GitHubu v [dokumentaci GitHubu](https://docs.github.com/en/github/setting-up-and-managing-your-enterprise-account/managing-licenses-for-the-github-enterprise-and-visual-studio-bundle)
 - Odpovědi na otázky k nejrůznějším tématům GitHubu najdete v [nápovědě k GitHubu](https://help.github.com/en).
 - Získejte pomoc od dalších uživatelů GitHubu ve [fóru komunity GitHubu](https://github.community/).
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací pro předplatná sady Visual Studio, kontaktujte [podporu správy a předplatných sady Visual Studio](https://my.visualstudio.com/gethelp).
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu pro předplatné](https://visualstudio.microsoft.com/subscriptions/support/).
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 - Získejte [technickou podporu](https://support.microsoft.com/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) pro GitHub Enterprise.   
 

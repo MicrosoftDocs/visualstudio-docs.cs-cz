@@ -11,12 +11,12 @@ manager: jmartens
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1b4eabfe35671b3cda0e2df71163b7c91695b264
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: a364289ded27879c74767f03e89b9ea7b9f604fc
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683083"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249872"
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>Vzdálené ladění ASP.NET Core na vzdáleném počítači IIS v aplikaci Visual Studio
 
@@ -129,10 +129,17 @@ Tuto možnost můžete použít k vytvoření souboru nastavení publikování a
 
 Po úspěšném nasazení aplikace by se měla spustit automaticky. Pokud se aplikace nespustí ze sady Visual Studio, spusťte aplikaci ve službě IIS, abyste ověřili, že funguje správně. V případě ASP.NET Core musíte také zajistit, aby pole fond aplikací pro **DefaultAppPool** bylo nastaveno na **žádný spravovaný kód**.
 
-1. V dialogovém okně **Nastavení** Povolte ladění kliknutím na tlačítko **Další**, zvolte konfiguraci **ladění** a pak zvolte **odebrat další soubory v cílovém umístění** v možnostech **publikování souboru** .
+1. Přepněte na konfiguraci ladění.
 
-    > [!IMPORTANT]
-    > Pokud zvolíte konfiguraci vydané verze, zakážete ladění v souboru *web.config* při publikování.
+   ::: moniker range=">=vs-2019"
+   Zvolte **Upravit** pro úpravu profilu a pak zvolte **Nastavení**. Zvolte konfiguraci **ladění** a pak zvolte **odebrat další soubory v cílovém umístění** v možnostech **publikování souboru** .
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   V dialogovém okně **Nastavení** Povolte ladění kliknutím na tlačítko **Další**, zvolte konfiguraci **ladění** a pak zvolte **odebrat další soubory v cílovém umístění** v možnostech **publikování souboru** .
+   ::: moniker-end
+
+   > [!IMPORTANT]
+   > Pokud zvolíte konfiguraci vydané verze, zakážete ladění v souboru *web.config* při publikování.
 
 1. Klikněte na **Uložit** a znovu publikujte aplikaci.
 
@@ -150,13 +157,13 @@ Tuto možnost můžete použít k nasazení aplikace, pokud chcete zkopírovat a
 
 4. Vyberte **výchozí web**, zvolte **základní nastavení** a nastavte **fyzickou cestu** na **C:\Publish**.
 
-4. Klikněte pravým tlačítkem myši na uzel **výchozí web** a vyberte **Přidat aplikaci**.
+5. Klikněte pravým tlačítkem myši na uzel **výchozí web** a vyberte **Přidat aplikaci**.
 
-5. Nastavte pole **alias** na **MyASPApp**, přijměte výchozí fond aplikací (**DefaultAppPool**) a nastavte **fyzickou cestu** na **C:\Publish**.
+6. Nastavte pole **alias** na **MyASPApp**, přijměte výchozí fond aplikací (**DefaultAppPool**) a nastavte **fyzickou cestu** na **C:\Publish**.
 
-6. V části **připojení** vyberte **fondy aplikací**. Otevřete **DefaultAppPool** a nastavte pole fond aplikací na **žádný spravovaný kód**.
+7. V části **připojení** vyberte **fondy aplikací**. Otevřete **DefaultAppPool** a nastavte pole fond aplikací na **žádný spravovaný kód**.
 
-7. Pravým tlačítkem myši klikněte na novou lokalitu ve Správci služby IIS, vyberte možnost **Upravit oprávnění** a ujistěte se, že je IUSR, IIS_IUSRS nebo uživatel nakonfigurovaný pro přístup k webové aplikaci autorizovaný uživatel s oprávněním ke čtení & ke spuštění.
+8. Pravým tlačítkem myši klikněte na novou lokalitu ve Správci služby IIS, vyberte možnost **Upravit oprávnění** a ujistěte se, že je IUSR, IIS_IUSRS nebo uživatel nakonfigurovaný pro přístup k webové aplikaci autorizovaný uživatel s oprávněním ke čtení & ke spuštění.
 
     Pokud nevidíte některého z těchto uživatelů s přístupem, Projděte kroky pro přidání IUSR jako uživatele s právy ke čtení &.
 

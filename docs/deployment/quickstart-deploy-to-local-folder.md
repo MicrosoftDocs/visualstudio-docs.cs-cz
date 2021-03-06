@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b16c10d13f63be43ad2e8c3e16d24c0f9fd5e38
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 23ef2036af7b93ee6eeaaa14cb8733a4e0ced638
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927428"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249518"
 ---
 # <a name="deploy-an-app-to-a-folder-using-visual-studio"></a>Nasazení aplikace do složky pomocí sady Visual Studio
 
@@ -46,25 +46,34 @@ Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET C
 
 1. V okně **publikovat** vyberte **Složka**.
 
-    ![Zvolit složku jako cíl publikování](../deployment/media/quickstart-publish-folder-new.png "Zvolit složku")
+   ![Zvolit složku jako cíl publikování](../deployment/media/quickstart-publish-folder-new.png "Zvolit složku")
 
-::: moniker range=">=vs-2019"
+   ::: moniker range=">=vs-2019"
 
-4. Pokud nasazujete rozhraní .NET Core 3,1 nebo novější, aplikace systému Windows může být nutné vybrat **složku** v **konkrétním cílovém** okně.
+   Pokud nasazujete rozhraní .NET Core 3,1 nebo novější, aplikace systému Windows může být nutné vybrat **složku** v **konkrétním cílovém** okně.
 
-![Zvolit složku jako konkrétní cíl](../deployment/media/quickstart-publish-folder-targets.png "Zvolit konkrétní cíl")
+   ![Zvolit složku jako konkrétní cíl](../deployment/media/quickstart-publish-folder-targets.png "Zvolit konkrétní cíl")
 
-5. Pokud chcete publikovat rozhraní .NET Core 3,1 nebo novější, aplikace pro Windows s ClickOnce, přečtěte si téma [nasazení aplikace .NET pro Windows pomocí technologie ClickOnce](quickstart-deploy-using-clickonce-folder.md).
+   Pokud chcete publikovat rozhraní .NET Core 3,1 nebo novější, aplikace pro Windows s ClickOnce, přečtěte si téma [nasazení aplikace .NET pro Windows pomocí technologie ClickOnce](quickstart-deploy-using-clickonce-folder.md).
+   ::: moniker-end
 
- ::: moniker-end
+1. Zadejte cestu nebo vyberte **Procházet** a zadejte složku.
 
-4. Zadejte cestu nebo vyberte **Procházet** a zadejte složku.
+   ![Zadejte cestu ke složce.](../deployment/media/quickstart-publish-folder-path.png "Zvolit složku")
 
-    ![Zadejte cestu ke složce.](../deployment/media/quickstart-publish-folder-path.png "Zvolit složku")
+   ::: moniker range=">=vs-2019"
+   Profil uložíte kliknutím na tlačítko **Dokončit** .
 
-1. Vyberte **Publikovat**. Visual Studio vytvoří projekt a publikuje ho do určené složky. Zobrazí se podokno **publikování** vlastností projektu, které zobrazuje souhrn profilu.
+   ![Podokno vlastností publikování znázorňující souhrn profilu](../deployment/media/quickstart-publish-folder-summary.png)
+   ::: moniker-end
 
-    ![Podokno vlastností publikování znázorňující souhrn profilu](../deployment/media/quickstart-publish-folder-summary.png)
+1. Vyberte **Publikovat**. Visual Studio vytvoří projekt a publikuje ho do určené složky.
+
+   ::: moniker range="vs-2017"
+   Zobrazí se podokno **publikování** vlastností projektu, které zobrazuje souhrn profilu.
+
+   ![Podokno vlastností publikování znázorňující souhrn profilu](../deployment/media/quickstart-publish-folder-summary.png)
+   ::: moniker-end
 
 1. Chcete-li nakonfigurovat nastavení nasazení, vyberte možnost **Upravit** v souhrnu profilu publikování a vyberte kartu **Nastavení** .
 
