@@ -2,19 +2,19 @@
 title: Vygenerovat GetHashCode přepsání metody se rovná a
 description: Naučte se, jak pomocí nabídky rychlé akce a refaktoringu generovat metody Equals a GetHashCode.
 ms.custom: SEO-VS-2020
-ms.date: 01/26/2018
+ms.date: 03/08/2021
 ms.topic: reference
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04c054dd73e437907c0943e3e6f0af5003dee37e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6a9d0ea6f6cb0aedc4fa13a8014b1a8bd66ccca0
+ms.sourcegitcommit: 6ed6ae5a1693607dce57923a78d01eea3d88b29a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962779"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514940"
 ---
 # <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Generování přepisů metod Equals a GetHashCode v aplikaci Visual Studio
 
@@ -28,7 +28,7 @@ Tato generace kódu platí pro:
 
 **Proč:**
 
-- Pokud implementujete typ hodnoty, měli byste zvážit přepsání metody **Equals** , aby se zvýšil výkon při výchozí implementaci metody Equals na ValueType.
+- Pokud implementujete typ hodnoty, měli byste zvážit přepsání metody **Equals** . Pokud to uděláte, můžete získat vyšší výkon při výchozí implementaci metody Equals na ValueType.
 
 - Pokud implementujete typ odkazu, měli byste zvážit přepsání metody **Equals** , pokud váš typ vypadá jako základní typ, například Point, String, BigNumber a tak dále.
 
@@ -38,22 +38,32 @@ Tato generace kódu platí pro:
 
 1. Umístěte kurzor někam na řádek deklarace typu.
 
-   ![Zvýrazněný kód](media/overrides-highlight-cs.png)
+    ```csharp
+    public class ImaginaryNumber
+    {
+        public double RealNumber { get; set; }
+        public double ImaginaryUnit { get; set; }
+    }
+    ```
+
+   Váš kód by měl vypadat podobně jako na následujícím snímku obrazovky:
+
+   ![Snímek obrazovky se zvýrazněným kódem, na kterém se má použít vygenerovanou metodu](media/overrides-highlight-cs.png)
 
    > [!TIP]
    > Neklepejte na možnost vybrat název typu, jinak nebude k dispozici možnost nabídky. Stačí umístit kurzor někam na řádek.
 
-1. Dále proveďte jednu z následujících akcí:
+1. Dále vyberte jednu z následujících akcí:
 
    - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
 
    - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
 
-   - Klikněte na ![screwdriver](../media/screwdriver-icon.png) ikona, která se zobrazí na levém okraji
-
-   ![Vygenerovat náhled přepsání](media/overrides-preview-cs.png)
+   - Klikněte na ![Snímek obrazovky s ikonou Screwdriver rychlých akcí v aplikaci Visual Studio](../media/screwdriver-icon.png) ikona, která se zobrazí na levém okraji
 
 1. V rozevírací nabídce vyberte **Generovat Equals (objekt)** nebo **Generovat Equals a GetHashCode** .
+
+   ![Snímek obrazovky s rozevírací nabídkou generovat přepsání](media/overrides-preview-cs.png)
 
 1. V dialogovém okně **Vybrat členy** vyberte členy, pro které chcete generovat metody:
 
@@ -62,9 +72,36 @@ Tato generace kódu platí pro:
     > [!TIP]
     > Pomocí zaškrtávacího políčka v dolní části dialogového okna můžete také zvolit generování operátorů z tohoto dialogového okna.
 
-   `Equals`Metody a `GetHashCode` jsou generovány s výchozími implementacemi.
+   `Equals`Metody a `GetHashCode` jsou generovány s výchozími implementacemi, jak je znázorněno v následujícím kódu:
 
-   ![Generovat výsledek metody](media/overrides-result-cs.png)
+    ```csharp
+   public class ImaginaryNumber : IEquatable<ImaginaryNumber>
+    {
+        public double RealNumber { get; set; }
+        public double ImaginaryUnit { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as ImaginaryNumber);
+        }
+
+        public bool Equals(ImaginaryNumber other)
+        {
+            return other != null &&
+                   RealNumber == other.RealNumber &&
+                   ImaginaryUnit == other.ImaginaryUnit;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(RealNumber, ImaginaryUnit);
+        }
+    }
+    ```
+
+   Váš kód by měl vypadat podobně jako na následujícím snímku obrazovky:
+
+   ![Snímek obrazovky s výsledkem vygenerované metody](media/overrides-result-cs.png)
 
 ## <a name="see-also"></a>Viz také
 
