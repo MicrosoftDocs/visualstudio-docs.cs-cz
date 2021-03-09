@@ -1,5 +1,6 @@
 ---
 title: '&lt;postAction – &gt; element (vývoj pro Office v sadě Visual Studio)'
+description: Element postAction oboru názvů vstav3 obsahuje prvky EntryPoint a všechny prvky postActionData, které jsou spojeny s akcemi po nasazení, které se spouštějí po instalaci řešení Office.
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0490e9423cb747782029eb0fd7254407adb3a607
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04f8c92c52aeee9f7f1dd5ab67b3dcef3a295474
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955759"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102470050"
 ---
 # <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;postAction – &gt; element (vývoj pro Office v sadě Visual Studio)
   `postAction`Element `vstav3` oboru názvů obsahuje `entrypoint` prvky a všechny `postActionData` prvky, které jsou spojeny s akcemi po nasazení, které se spouštějí po instalaci řešení Office.
@@ -50,7 +51,7 @@ ms.locfileid: "99955759"
 
 ## <a name="post-deployment-action-example"></a>Příklad akce po nasazení
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `postAction` prvek v manifestu aplikace pro řešení sady Office, které je nasazeno pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

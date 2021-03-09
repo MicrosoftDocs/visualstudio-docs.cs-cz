@@ -1,5 +1,6 @@
 ---
 title: '&lt;postActionData – &gt; element (vývoj pro Office)'
+description: Element postActionData oboru názvů vstav3 určuje data přidružená k jakékoli akci po nasazení, která se spustí po instalaci řešení Office.
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 505b55b7513446a158adac66e7e0e38f401f0808
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a75f61c6d1f80a127f49d96c4e3f4910c66dd8aa
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847684"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102470063"
 ---
 # <a name="ltpostactiondatagt-element-office-development"></a>&lt;postActionData – &gt; element (vývoj pro Office)
   `postActionData`Element `vstav3` oboru názvů Určuje data přidružená k jakékoli akci po nasazení, která se spustí po instalaci řešení Office.
@@ -41,7 +42,7 @@ ms.locfileid: "99847684"
 
 ## <a name="post-deployment-action-example"></a>Příklad akce po nasazení
 
-### <a name="description"></a>Description
+### <a name="description"></a>Popis
  Následující příklad kódu ukazuje `postAction` prvek v manifestu aplikace pro řešení Office nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód

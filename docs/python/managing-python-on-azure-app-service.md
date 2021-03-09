@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: b76bc008c30efdee0185e6f122abaff8457acef6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f7c874a5cd2742f795c6d8b04db88b98b19a556d
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882788"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102470011"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Jak nastavit prostředí Pythonu v Azure App Service (Windows)
 
@@ -46,7 +46,7 @@ Přizpůsobitelná podpora Pythonu pro Azure App Service je k dispozici jako sad
 
 ## <a name="choose-a-python-version-through-the-azure-resource-manager"></a>Vyberte verzi Pythonu pomocí Azure Resource Manager
 
-Pokud nasazujete App Service se šablonou Azure Resource Manager, přidejte rozšíření webu jako prostředek. Konkrétně se rozšíření zobrazí jako vnořený prostředek ( `resources` objekt v rámci `resources` ) s typem `siteextensions` a názvem z [siteextensions.NET](https://www.siteextensions.net/packages?q=Tags%3A%22python%22).
+Pokud nasazujete App Service se šablonou Azure Resource Manager, přidejte rozšíření webu jako prostředek. Konkrétně se rozšíření zobrazí jako vnořený prostředek ( `resources` objekt v rámci `resources` ) s typem `siteextensions` .
 
 Například po přidání odkazu na `python361x64` (Python 3.6.1 x64) může šablona vypadat jako v následujícím příkladu (některé vlastnosti jsou vynechány):
 

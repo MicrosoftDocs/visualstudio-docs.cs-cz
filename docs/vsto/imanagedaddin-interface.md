@@ -1,5 +1,6 @@
 ---
 title: IManagedAddin – rozhraní
+description: Implementací rozhraní IManagedAddin – Vytvořte komponentu, která načte spravované doplňky VSTO.
 ms.date: 02/02/2017
 ms.topic: interface
 dev_langs:
@@ -12,12 +13,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 89e705296c6051b8bdec823e523f0a386ff7ff76
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 614cf7e8d0e682d894328fb764c6d64b855d2834
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920438"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102469785"
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin – rozhraní
   Implementací rozhraní IManagedAddin – Vytvořte komponentu, která načte spravované doplňky VSTO. Toto rozhraní bylo přidáno v 2007 systém Microsoft Office systému.
@@ -43,7 +44,7 @@ interface IManagedAddin : IUnknown
 ## <a name="methods"></a>Metody
  V následující tabulce jsou uvedeny metody, které jsou definovány rozhraním IManagedAddin –.
 
-|Název|Description|
+|Název|Popis|
 |----------|-----------------|
 |[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Volá se, když aplikace systém Microsoft Office načte spravovaný doplněk VSTO.|
 |[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Volá se těsně před tím, než aplikace systém Microsoft Office uvolní spravovaný doplněk VSTO.|
