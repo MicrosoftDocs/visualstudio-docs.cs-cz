@@ -1,6 +1,7 @@
 ---
 title: '&lt;vstoRuntime – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
+description: Element vstoRuntime oboru názvů vstav3 obsahuje podporovanou verzi Visual Studio Tools for Office runtime pro konkrétní řešení Office.
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c866db5f691db56e68f6980c9c07d21ee15c0ae5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7c856836bd2ba107a2fa6c3017c5ecb2694fcf6b
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921755"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102468569"
 ---
 # <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoRuntime – &gt; element (vývoj pro Office v sadě Visual Studio)
   `vstoRuntime`Element `vstav3` oboru názvů obsahuje podporovanou verzi Visual Studio Tools for Office runtime pro konkrétní řešení Office.

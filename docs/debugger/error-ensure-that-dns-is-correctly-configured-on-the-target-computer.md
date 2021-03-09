@@ -1,5 +1,6 @@
 ---
 title: Ujistěte se, že je na cílovém počítači správně nakonfigurovaný server DNS | Microsoft Docs
+description: K této chybě dojde, když cílový počítač nemůže přeložit název hostitelského počítače ladicího programu sady Visual Studio.
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -14,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cc16217b20d08e9ad2d3b43d3b074652fdffec95
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cf61e50cc1a6a831625d9cb7c0b12a286e20239f
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871679"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102466248"
 ---
 # <a name="error-ensure-that-dns-is-correctly-configured-on-the-target-computer"></a>Chyba: Ověřte, zda je na cílovém počítači správně nakonfigurován server DNS.
 Při pokusu o vzdálené ladění se může zobrazit následující chybová zpráva:

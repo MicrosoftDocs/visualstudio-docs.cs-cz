@@ -1,6 +1,6 @@
 ---
 title: Převést smyčku foreach na LINQ
-descritpion: Convert any foreach loop that uses an IEnumerable to a LINQ query or a LINQ call form (also known as a LINQ method).
+description: Převeďte všechny smyčky foreach, které používají rozhraní IEnumerable pro dotaz LINQ nebo formulář volání LINQ (označované také jako metoda LINQ).
 ms.date: 07/10/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +10,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 462a9624809d2dccfe68bb2e016dda6739d9c2e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8ff489e11cc5c61c5e840b4b12d05ba5da46ce41
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936844"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102466287"
 ---
 # <a name="convert-a-foreach-loop-to-linq"></a>Převést smyčku foreach na LINQ
 

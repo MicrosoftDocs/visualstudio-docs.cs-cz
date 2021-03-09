@@ -1,5 +1,6 @@
 ---
 title: Ladění &apos; není možné, protože v systému je povolen ladicí program jádra | Microsoft Docs
+description: Tato zpráva se zobrazí, když se pokusíte ladit spravovaný kód v systému Windows 7 nebo Windows Vista, který byl spuštěn v režimu ladění, a aplikace používá CLR verze CLR 2,0, 3,0 nebo 3,5.
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a06ed9092145188bf5fbecd2caeb42f5ad5c2e3a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ced7fb79a11321678ae2963241807e5ddd4600ab
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871764"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102466456"
 ---
 # <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>Chyba: ladění není&#39;možné, protože v systému je povolen ladicí program jádra.
 Při ladění spravovaného kódu se může zobrazit následující chybová zpráva:
