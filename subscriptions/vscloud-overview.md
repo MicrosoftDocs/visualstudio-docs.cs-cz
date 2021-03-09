@@ -4,18 +4,18 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
-ms.date: 10/28/2020
+ms.date: 02/19/2021
 ms.topic: overview
 description: Pronajímat Visual Studio Professional nebo Visual Studio Enterprise na měsíční nebo roční úrovni, a to bez dlouhodobé smlouvy.
-ms.openlocfilehash: fbb4204ec5b36d865a1c8b3d9c235cdf97b4019e
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 6aa17046726e19086f511c7ab59ab19228142e20
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92918081"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473384"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Nákup Visual Studio Professional a Visual Studio Enterprise cloudových předplatných
-Můžete zakoupit [Visual Studio Professional a Visual Studio Enterprise odběry](https://visualstudio.microsoft.com/subscriptions/) z [Visual Studio Marketplace](https://marketplace.visualstudio.com). Ty se nazývají **"cloudové předplatné"** .
+Můžete zakoupit [Visual Studio Professional a Visual Studio Enterprise odběry](https://visualstudio.microsoft.com/subscriptions/) z [Visual Studio Marketplace](https://marketplace.visualstudio.com). Ty se nazývají **"cloudové předplatné"**.
 
 [Porovnání výhod a cen cloudových předplatných](https://visualstudio.microsoft.com/vs/pricing/)
 
@@ -42,7 +42,7 @@ Abyste mohli koupit cloudové předplatné, budete muset být přispěvatel nebo
     > [!div class="mx-imgBorder"]
     > ![Vybrat počet předplatných](_img/buy-vs-subscriptions/buy-vs-sub-users.png "Vyberte počet předplatných, která se mají koupit.")
 
-    Pokud nechcete, aby se odběry přiřadily, zrušte **přiřazení tohoto předplatného mně** .
+    Pokud nechcete, aby se odběry přiřadily, zrušte **přiřazení tohoto předplatného mně**.
 
 5. Potvrďte a dokončete nákup. Pokud jste přidělili předplatné sami sobě, můžete navštívit [portál pro předplatitele sady Visual Studio](https://my.visualstudio.com) , kde můžete začít stahovat software a využívat další výhody pro předplatitele.
 
@@ -72,7 +72,7 @@ Pokud chcete zrušit odběry, stačí nastavit počet předplatných pro vaši s
 > [!div class="mx-imgBorder"]
 > ![Zobrazit přehled předplatného](_img/buy-vs-subscriptions/overview-button.png "Kliknutím na tlačítko Přehled zobrazíte podrobnosti předplatného.")
 
-4. Vyhledejte položku pro odběry, které chcete zrušit, a vyberte **změnit množství** .
+4. Vyhledejte položku pro odběry, které chcete zrušit, a vyberte **změnit množství**.
 1. Nastavte množství na hodnotu nula (0). Vaše předplatná zůstanou v platnosti až do jejich plánovaného fakturačního data, ale neobnoví se při dosažení data fakturace.   
 
 > [!div class="mx-imgBorder"]
@@ -125,13 +125,13 @@ Odpověď: i když nebude moct koupit jiné cloudové předplatné, máte k disp
 
 ## <a name="related-resources"></a>Související prostředky
 - [Portál pro správu předplatných sady Visual Studio](https://manage.visualstudio.com/)
-- [Podpora předplatných sady Visual Studio](https://visualstudio.microsoft.com/vs/support/)
 - [Nejčastější dotazy k fakturaci pro cloudové předplatné sady Visual Studio](vscloud-billing-faq.md)
 - [Nákupy cloudového předplatného sady Visual Studio pro zprostředkovatele CSP](vscloud-csp.md)
+- - Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

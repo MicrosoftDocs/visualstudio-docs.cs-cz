@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 6255b6a3-f101-4b2c-b7fa-851eccc944b2
-ms.date: 12/02/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 description: Přečtěte si o výhodách CloudPilot dostupných ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 505e4caad5ee6d9b70fc50769c8a008469aa1345
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 4d9b7bea4b2165b8efc9f57396b078c42a5fc8eb
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538147"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473358"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Výhoda CloudPilot v předplatných sady Visual Studio
 Přesuňte své aplikace do Microsoft Azure v několika snadných krocích. V minutách identifikujte všechny požadované změny kódu až do řádku kódu pro úspěšnou migraci na: kontejnery, virtuální počítače, App Services, SQL Azure a/nebo SQL MI. Pak migrujte aplikace do Azure pomocí průvodců využívajících ASR, DMA a DMS.
@@ -59,10 +59,10 @@ CloudPilot podle UnifyCloud je navržená tak, aby pomáhala vývojářům rychl
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | 2 licence, 90 dní, neomezený počet kontrol       |  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Enterprise předplatné s GitHubem Enterprise   | VL | 2 licence, 90 dní, neomezený počet kontrol       |  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 1 licence, 30 dní, jedna kontrola                                                            |  Ne.  Dostupné jenom pro nové předplatitele           |
-| Visual Studio Professional předplatné s GitHubem Enterprise | VL | 1 licence, 30 dní, jedna kontrola                                                            |  Ne.  Dostupné jenom pro nové předplatitele           |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | 2 licence, 90 dní, neomezený počet kontrol       |  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise předplatné s GitHubem Enterprise   | VL | 2 licence, 90 dní, neomezený počet kontrol       |  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 1 licence, 30 dní, jedna kontrola                                                            |  No.  Dostupné jenom pro nové předplatitele           |
+| Visual Studio Professional předplatné s GitHubem Enterprise | VL | 1 licence, 30 dní, jedna kontrola                                                            |  No.  Dostupné jenom pro nové předplatitele           |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  –           |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  –          |
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | – |
@@ -81,10 +81,10 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
   - [Ruční uživatel CloudPilot](https://www.cloudatlasinc.com/cloudpilot/doc/CloudPilot-User-Manual.pdf )
   - [Odeslat žádost o podporu](https://support.datacamp.com/hc/requests/new)
 
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)

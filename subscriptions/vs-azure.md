@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 02/10/2021
+ms.date: 02/19/2021
 ms.topic: how-to
 description: Naučte se aktivovat zvýhodnění pro jednotlivé kredity Azure DevTest, které jsou součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 85306286e5a6522d8a073c88ce7e11281d5f1aef
-ms.sourcegitcommit: 15109ead7991f52092502518a6f4d9061cc22cd2
+ms.openlocfilehash: 0834020113ac4a383abe551ace0ae2e3181e0650
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "100335217"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473371"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Použití Microsoft Azure v předplatných sady Visual Studio
 Jako předplatitelé sady Visual Studio můžete použít Microsoft Azure bez dalších poplatků.  S vaším [měsíčním kreditem Azure DevTest](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)je Azure vaším osobním izolovaným prostorem pro vývoj a testování.  Můžete zřídit virtuální počítače, cloudové služby a další prostředky Azure.  Částky kreditu se liší podle úrovně předplatného.
@@ -72,23 +72,23 @@ Pokud máte dotazy týkající se přenosu prostředků, odebrání limitů útr
 ## <a name="eligibility"></a>Vznik
 |                 Úroveň/program předplatného                 |           Výhoda           |                         Mlčky?                          |
 |--------------------------------------------------------------|-----------------------------|-------------------------------------------------------------|
-|              Visual Studio Enterprise Standard               |     měsíční kredit $150     |                             Yes                             |
-|              Visual Studio Enterprise předplatné s GitHubem Enterprise               |     měsíční kredit $150     |                             Yes                             |
+|              Visual Studio Enterprise Standard               |     měsíční kredit $150     |                             Ano                             |
+|              Visual Studio Enterprise předplatné s GitHubem Enterprise               |     měsíční kredit $150     |                             Ano                             |
 |               Visual Studio Enterprise měsíčně               |        Není k dispozici        |                                                             |
-|             Visual Studio Professional Standard              |     měsíční kredit $50      |                             Yes
-|              Visual Studio Professional předplatné s GitHubem Enterprise              |     měsíční kredit $50     |                             Yes                             |
+|             Visual Studio Professional Standard              |     měsíční kredit $50      |                             Ano
+|              Visual Studio Professional předplatné s GitHubem Enterprise              |     měsíční kredit $50     |                             Ano                             |
 |              Visual Studio Professional měsíčně              |        Není k dispozici        |                                                             |
-|                    Test sady Visual Studio pro                    |     měsíční kredit $50      |                             Yes                             |
-|                        MSDN Platforms                        |     měsíční kredit $100     |                             Yes                             |
-|               Visual Studio Enterprise – NFR\*               |     měsíční kredit $150     |                             Yes                             |
-|                Visual Studio Enterprise – FTE                |     měsíční kredit $150     |                             Yes                             |
-|     Visual Studio Enterprise – Microsoft Partner Network     |     měsíční kredit $150     |                             Yes                             |
+|                    Test sady Visual Studio pro                    |     měsíční kredit $50      |                             Ano                             |
+|                        MSDN Platforms                        |     měsíční kredit $100     |                             Ano                             |
+|               Visual Studio Enterprise – NFR\*               |     měsíční kredit $150     |                             Ano                             |
+|                Visual Studio Enterprise – FTE                |     měsíční kredit $150     |                             Ano                             |
+|     Visual Studio Enterprise – Microsoft Partner Network     |     měsíční kredit $150     |                             Ano                             |
 |    Visual Studio Professional – Microsoft Partner Network    |        Není k dispozici        |                                                             |
 |        Visual Studio Enterprise – Představte (Standard)         |        Není k dispozici        |                                                             |
 |         Visual Studio Enterprise – Představte (Premium)         |        Není k dispozici        |                                                             |
-|             Visual Studio Enterprise – BizSpark              |     měsíční kredit $150     |                             Yes                             |
-|      Visual Studio Enterprise – MCT software & Services      |     měsíční kredit $100     |                             Yes                             |
-| Visual Studio Enterprise – vývojář MCT software & Services |     měsíční kredit $150     |                             Yes                             |
+|             Visual Studio Enterprise – BizSpark              |     měsíční kredit $150     |                             Ano                             |
+|      Visual Studio Enterprise – MCT software & Services      |     měsíční kredit $100     |                             Ano                             |
+| Visual Studio Enterprise – vývojář MCT software & Services |     měsíční kredit $150     |                             Ano                             |
 
 * Zahrnuje ne pro prodej (NFR), nejvíc hodnotných specialistů (MVP), oblastní ředitel (RD), Visual Studio Industry Partner (VSIP).
 
@@ -113,7 +113,7 @@ O: duševní vlastnictví vytvářené zaměstnancem vytvořeným v prostředcí
 - Potřebujete s Azure pomáhat?  Podívejte se na tyto materiály:
   - Technická podpora: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
   - [Tipy k Azure & triky](https://microsoft.github.io/AzureTipsAndTricks/ "Tipy k Azure & triky") 
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také

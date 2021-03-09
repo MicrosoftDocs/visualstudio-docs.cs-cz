@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
-ms.date: 10/21/2020
+ms.date: 02/19/2021
 ms.topic: how-to
 description: Přečtěte si o výhodách zvýraznění přetypování dostupných ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: fbc7b6278d29d96ed8d97933c295468c7d3e2754
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 0acc7b62dbac66d25e61dcddfeee0c9124d66694
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538134"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473319"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Výhoda zvýraznění přetypování v předplatných sady Visual Studio
 Při migraci do cloudu potřebují vývojáři důležité poznatky o jejich softwaru. S zvýrazňováním přetypování může předplatitelé sady Visual Studio rychle prověřit svůj zdrojový kód aplikace a identifikovat připravenost svých aplikací pro Cloud na migraci do Azure a monitorovat průběh své aplikace jak během migrace, tak i po ní.
@@ -77,10 +77,10 @@ Po schválení vaší žádosti obdržíte druhý e-mail potvrzující úspěšn
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | Vyhodnocení 5 aplikací po dobu tří měsíců|  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Enterprise předplatné s GitHubem Enterprise  | VL | Vyhodnocení 5 aplikací po dobu tří měsíců|  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Posouzení 1 aplikace po dobu tří měsíců                                                             |  Ne.  Dostupné jenom pro nové předplatitele                  |
-| Visual Studio Professional předplatné s GitHubem Enterprise | VL                                       | Posouzení 1 aplikace po dobu tří měsíců                                                            |  Ne.  Dostupné jenom pro nové předplatitele                  |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | Vyhodnocení 5 aplikací po dobu tří měsíců|  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise předplatné s GitHubem Enterprise  | VL | Vyhodnocení 5 aplikací po dobu tří měsíců|  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Posouzení 1 aplikace po dobu tří měsíců                                                             |  No.  Dostupné jenom pro nové předplatitele                  |
+| Visual Studio Professional předplatné s GitHubem Enterprise | VL                                       | Posouzení 1 aplikace po dobu tří měsíců                                                            |  No.  Dostupné jenom pro nové předplatitele                  |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  –           |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  –          |
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | – |
@@ -98,10 +98,10 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
   - [Odeslat žádost o podporu](https://casthighlight.com/support/)
   - [Průvodce Začínáme (PDF)](https://casthighlight.com/Getting-Started-Guide.pdf)
 
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)

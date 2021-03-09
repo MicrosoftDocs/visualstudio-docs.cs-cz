@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
-ms.date: 07/22/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 description: Zjistěte, jak můžete Azure DevOps použít jako předplatitel sady Visual Studio.
-ms.openlocfilehash: f8cf4cd5f2165a528301d5dc2387a7906f11dcab
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: d644842eb5bdf8673a86ab0fbb5ebc579c1a0af5
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537692"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473280"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Výhody Azure DevOps pro předplatitele sady Visual Studio
 Jako aktivní předplatitelé sady Visual Studio můžete využívat řadu funkcí v Azure DevOps, které jsou součástí vašeho předplatného jako výhod. Tyto stejné funkce budete moct používat v každé organizaci Azure DevOps, ve které jste členem, ať už jste organizaci vytvořili nebo ji přidali někdo jiný.
@@ -53,11 +53,11 @@ Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiř
 Odpověď: Ano. Visual Studio Enterprise předplatitelé získají jednu paralelní úlohu v Team Foundation Server 2017 nebo novějším a v každé Azure DevOps Services organizaci jednu samostatnou paralelní úlohu, kde se jedná o člena.
 
 ## <a name="support-resources"></a>Prostředky podpory
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
 - Máte dotazy k integrovanému vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps nebo k jiným produktům nebo službám sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 - [Dokumentace ke službě Azure DevOps](/azure/devops/).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)

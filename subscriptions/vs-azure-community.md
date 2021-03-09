@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
-ms.date: 12/02/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 description: Seznamte se s výhodou podpory komunity Azure, která je součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 58f587d5e9c27197b28457c512e4eb94f07851ef
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 57190bce0625108c332e307051cf28aec192f556
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538017"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473332"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Fórum podpory komunity Azure v předplatných sady Visual Studio
 Získejte pomoc přímo od týmu Azure v rámci vybraných fór podpory prostřednictvím komunity Azure.  Výhoda komunity Azure poskytuje přístup ke kolekci fór zaměřené na témata související s Azure.
@@ -88,10 +88,10 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
 ## <a name="support-resources"></a>Prostředky podpory
 - Další materiály komunity Azure najdete na [stránce podpory](https://azure.microsoft.com/support/forums/)komunity Azure.
 - [Dokumentaci k Azure](/azure/).
-- Potřebujete pomoc s prodejem, předplatnými, účty a fakturací pro předplatná sady Visual Studio?  Obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio.
+- Potřebujete pomoc s prodejem, předplatnými, účty a fakturací pro předplatná sady Visual Studio?  Obraťte se na [podporu předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)

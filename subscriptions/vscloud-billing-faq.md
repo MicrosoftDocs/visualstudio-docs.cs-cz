@@ -7,12 +7,12 @@ ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
 ms.date: 03/05/2021
 ms.topic: conceptual
 description: Otázky fakturace pro cloudová předplatná.
-ms.openlocfilehash: 2c03871d11279b7c368ebd0c7012670fc92c9ee0
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: d3c370eecab49de5f4ea5001e6052c18ff83e00b
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249720"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473410"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Nejčastější dotazy k fakturaci pro cloudové předplatné sady Visual Studio
 Nezapomeňte porovnat výhody [a ceny cloudového předplatného](https://visualstudio.microsoft.com/vs/pricing/) , abyste porozuměli výhodám každého předplatného sady Visual Studio, s porovnáním předplatných v cloudu a standardním prostředím, podrobnosti o výhodách pro předplatitele a další.
@@ -99,8 +99,8 @@ Odpověď: Podívejte se na článek [vysvětlení vaší faktury Azure](https:/
 
 ## <a name="related-resources"></a>Související prostředky
 - [Portál pro správu předplatných sady Visual Studio](https://manage.visualstudio.com/)
-- [Podpora předplatných sady Visual Studio](https://visualstudio.microsoft.com/vs/support/)
 - [Nákupy cloudového předplatného sady Visual Studio pro zprostředkovatele CSP](vscloud-csp.md)
+- Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
