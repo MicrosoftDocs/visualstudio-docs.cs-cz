@@ -1,7 +1,7 @@
 ---
 title: Spustit jako správce
 description: Naučte se spouštět Visual Studio jako správce.
-ms.date: 01/06/2020
+ms.date: 03/09/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, user permissions
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 63787b394d9e8988759cd141540785e34324f8c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b3d2a22533137bf2c1f2e7cfeb3802f5824c3926
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971294"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607246"
 ---
 # <a name="user-permissions-and-visual-studio"></a>Uživatelská oprávnění a Visual Studio
 
@@ -72,7 +72,17 @@ Pokud potřebujete spustit Visual Studio jako správce, postupujte podle těchto
 
 ::: moniker-end
 
-Můžete také upravit zástupce aplikace tak, aby se vždy spouštěl s oprávněními správce.
+Můžete také upravit zástupce aplikace tak, aby vždy běžel s oprávněními správce:
+
+1. Otevřete nabídku **Start** , přejděte na verzi sady Visual Studio, kterou používáte, a **pak vyberte možnost**  >  **Otevřít umístění souborů**.
+
+1. V **Průzkumníku souborů** vyhledejte zástupce sady **Visual Studio** pro verzi, kterou používáte. Potom klikněte pravým tlačítkem myši na zástupce a vyberte **Odeslat do**  >  **plochy (vytvořit zástupce)**.
+
+1. Na ploše **systému Windows** klikněte pravým tlačítkem myši na zástupce sady **Visual Studio** a vyberte možnost **vlastnosti**.
+
+1. Vyberte tlačítko **Upřesnit** a potom zaškrtněte políčko **Spustit jako správce** .
+
+1. Vyberte **OK** a potom znovu vyberte **OK**.
 
 ## <a name="see-also"></a>Viz také
 

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: f39a2672-c283-4755-93d3-31c7c7a032d0
-ms.date: 10/28/2020
+ms.date: 02/19/2021
 ms.topic: how-to
 description: Přečtěte si, jak se přihlásit k předplatným sady Visual Studio pomocí svého pracovního nebo školního účtu.
-ms.openlocfilehash: 3ac4e9fedae66656d4dee2155c8a8dcbe9325970
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: effec7889199d4eddc3c149bdd4ded296a50e0b1
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903387"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607259"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-work-or-school-account"></a>Přihlášení k předplatným sady Visual Studio pomocí pracovního nebo školního účtu 
 
@@ -28,7 +28,7 @@ Tento článek obsahuje kroky pro přihlášení pomocí e-mailové adresy, kter
    > [!NOTE]
    > Tato adresa je také identifikovaná v e-mailu s úvodním předplatitelem, který jste dostali. Pokud máte potíže při hledání uvítacího e-mailu, zkontrolujte složky nevyžádaných e-mailů.
 
-3. Klikněte na **Pokračovat** .
+3. Klikněte na **Pokračovat**.
 4. Budete přesměrováni na svou firemní přihlašovací stránku.
 5. Zadejte svoje heslo.
 6. Klikněte na **Přihlásit se** .
@@ -46,7 +46,7 @@ Aktuálně vybrané předplatné můžete zobrazit také v pravém horním rohu 
    > [!NOTE]
    > Tato adresa je také identifikovaná v uvítacím dopisu předplatitele. Zkontrolujte složky nevyžádaných e-mailů, pokud se uvítací písmeno nedostalo.
 
-3. Klikněte na **Pokračovat** .
+3. Klikněte na **Pokračovat**.
 4. Budete přesměrováni na stránku rozhodnutí.
     - Vyberte **pracovní nebo školní účet** , pokud je předplatné přidružené k pracovnímu nebo školnímu účtu, který je přidružený k tenantovi Azure Active Directory (AAD).
     - Vyberte **osobní** , pokud je předplatné přidružené k podnikové e-mailové adrese, ale také se převedlo na osobní účet Microsoft (MSA).
@@ -57,7 +57,7 @@ Aktuálně vybrané předplatné můžete zobrazit také v pravém horním rohu 
     - Pokud se jeden z cest nepovede, vyzkoušejte druhý.  Správci předplatného můžou vaše předplatné upravit.
 
 5. Zadejte svoje heslo.
-6. Klikněte na **Přihlásit se** .
+6. Klikněte na **Přihlásit se**.
 7. V tomto okamžiku by se měla zobrazit stránka výhody.
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
@@ -69,11 +69,12 @@ O: mnoho uživatelů má více než jedno předplatné.  Pokud se k portálu př
 1. Jste přihlášeni pomocí jiného účtu Microsoft.  Je možné, že máte několik předplatných, jako je například předplatné Professional nebo Enterprise a Visual Studio Dev Essentials členství a jsou přidruženy k různým e-mailovým adresám. Pokud chcete zobrazit další odběry, odhlaste se a znovu se přihlaste pomocí ostatních MSA.
 2. Máte k dispozici několik předplatných spojených se stejnou e-mailovou adresou.  Pokud chcete zobrazit všechna předplatná přidružená k vaší e-mailové adrese, navštivte https://my.visualstudio.com/subscriptions a vyberte předplatné, které chcete použít. 
 
-Pokud máte potíže i nadále, můžete se obrátit na náš tým [podpory předplatných](https://visualstudio.microsoft.com/subscriptions/support/) pro pomoc.  
+## <a name="resources"></a>Zdroje informací 
+- Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

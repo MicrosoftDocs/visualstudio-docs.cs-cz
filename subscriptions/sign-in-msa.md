@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 19038bb0-2858-49df-9624-cbf8bfbb5d39
-ms.date: 09/08/2020
+ms.date: 02/19/2021
 ms.topic: how-to
 description: Jak se přihlásit k vašemu Visual Studio Subscription pomocí účtu Microsoft (MSA)
-ms.openlocfilehash: 52882fcf50a784812752dbf606b21db1ddc5c3ea
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 7e0ef2e9adedc62be7c2c7ca709496d1f075f03c
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005934"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607155"
 ---
 # <a name="signing-in-to-your-visual-studio-subscriptions-with-your-microsoft-account-msa"></a>Přihlášení k předplatným sady Visual Studio pomocí účtu Microsoft (MSA)
 
@@ -40,11 +40,12 @@ O: mnoho uživatelů má více než jedno předplatné.  Pokud se k portálu př
 - Jste přihlášeni pomocí jiného účtu Microsoft.  Je možné, že máte několik předplatných, jako je například předplatné Professional nebo Enterprise a Visual Studio Dev Essentials členství a jsou přidruženy k různým e-mailovým adresám. Pokud chcete zobrazit další odběry, odhlaste se a znovu se přihlaste pomocí ostatních MSA.
 - Máte k dispozici několik předplatných spojených se stejným MSA.  Pokud chcete zobrazit všechna předplatná přidružená k vašemu MSA, navštivte https://my.visualstudio.com/subscriptions a vyberte předplatné, které chcete použít. 
 
-Pokud máte potíže i nadále, můžete se obrátit na náš tým [podpory předplatných](https://visualstudio.microsoft.com/subscriptions/support/) pro pomoc.  
+## <a name="resources"></a>Zdroje informací 
+- Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

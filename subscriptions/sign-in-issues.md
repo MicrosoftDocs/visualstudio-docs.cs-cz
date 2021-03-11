@@ -1,18 +1,18 @@
 ---
 title: Problémy s přihlašováním k předplatným sady Visual Studio | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 176c7f11-b19d-49e9-a6dd-b2e5da5e8480
-ms.date: 10/28/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 description: Informace o problémech, které mohou nastat při přihlašování k předplatným sady Visual Studio
-ms.openlocfilehash: cf89d2deff2a5e9e81d065fbb7efda8097102d03
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 5735e0c4178e6866539fff2edac6155642a1ba73
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903454"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607194"
 ---
 # <a name="issues-signing-in-to-visual-studio-subscriptions"></a>Problémy s přihlašováním k předplatným sady Visual Studio
 Pokud chcete použít předplatné sady Visual Studio, musíte se nejdřív přihlásit.  V závislosti na vašem předplatném jste ho možná nastavili pomocí účet Microsoft (MSA) nebo identity Azure Active Directory (AAD).  Tento článek popisuje některé problémy, se kterými se můžete setkat při přihlašování ke svému předplatnému.
@@ -21,7 +21,7 @@ Pokud chcete použít předplatné sady Visual Studio, musíte se nejdřív při
 Možnost vytvoření nového osobního účtu Microsoft (MSA) pomocí e-mailové adresy na pracovní/školní už není povolená, když je e-mailová doména nakonfigurovaná ve službě Azure AD. Co to znamená? Pokud vaše organizace používá Microsoft 365 nebo jiné firemní služby od Microsoftu, které spoléhají na Azure AD, a pokud jste do svého tenanta Azure AD přidali název domény, uživatelé už nebudou moct vytvořit novou osobní účet Microsoft pomocí e-mailové adresy ve vaší doméně.
 
 ### <a name="why-was-this-change-made"></a>Proč byla tato změna provedena?
-Osobní účet Microsoft s pracovní adresou jako uživatelským jménem je fraught s problémy pro koncové uživatele a oddělení IT. Příklad:
+Osobní účet Microsoft s pracovní adresou jako uživatelským jménem je fraught s problémy pro koncové uživatele a oddělení IT. Například:
 - Uživatelé se mohou domnívat, že jejich osobní účet Microsoft jsou kompatibilní s obchodním a že jsou v souladu s předpisy, když ukládají obchodní dokument na OneDrive.
 - Uživatelé, kteří odejdou z organizace, obecně ztratí přístup ke své pracovní e-mailové adrese. Pokud k tomu dojde, nemusí být schopni se vrátit do osobních účet Microsoft, pokud si zapomenete heslo. Překlopení je, že jeho IT oddělení může resetovat svoje heslo a získat si ho do osobního účtu bývalých zaměstnanců.
 - Oddělení IT mají falešnou představu o vlastnictví a zabezpečení účtů. Ale uživatelé potřebují jenom přesměrovat kód na svou pracovní e-mailovou adresu jenom jednou a kdykoli v budoucnu může přejmenovat svůj účet.
@@ -61,11 +61,14 @@ Pojem "aliasing" odkazuje na uživatele, kteří mají různé identity pro při
 Aliasing se může vyskytnout, když má společnost Microsoft Online Service pro své adresáře, například JohnD@contoso.com , ale uživatelé mají přístup k e-mailovým účtům pomocí aliasů nebo popisných názvů, jako je například John.Doe@contoso.com . Pro mnoho zákazníků, kteří spravují svá předplatná prostřednictvím služby Volume Licensing Service Center (VLSC), může dojít k neúspěšnému přihlášení, protože zadaná e-mailová adresa ( John.Doe@contoso.com ) se neshoduje s adresou adresáře ( JohnD@contoso.com ) požadovanou pro úspěšné ověření prostřednictvím možnosti pracovní nebo školní účet.
 
 ### <a name="what-options-do-i-have"></a>Jaké možnosti mám?
-Z perspektivy předplatitele je důležité, abyste nejdřív spolupracovali se správcem a pochopili konfiguraci identity vaší společnosti. V případě potřeby může správce potřebovat aktualizovat nastavení účtu z portálu pro správu nebo může být nutné vytvořit účet Microsoft (MSA) pomocí firemní e-mailové adresy. Před provedením kroků při vytváření MSA můžete mluvit s vaším správcem ohledně všech zásad nebo problémů s provedením této akce. 
+Z perspektivy předplatitele je důležité, abyste nejdřív spolupracovali se správcem a pochopili konfiguraci identity vaší společnosti. V případě potřeby může správce potřebovat aktualizovat nastavení účtu z portálu pro správu nebo může být nutné vytvořit účet Microsoft (MSA) pomocí firemní e-mailové adresy. Před provedením kroků při vytváření MSA můžete mluvit s vaším správcem ohledně všech zásad nebo problémů s provedením této akce.
+
+## <a name="resources"></a>Zdroje informací
+- Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio. 
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7aaa4727-00ef-41dc-937d-8d46973aaf56
-ms.date: 10/28/2020
+ms.date: 03/08/2021
 ms.topic: conceptual
 description: Zjistěte, jak můžou správci na multilicenčních smlouvách získat přístup k portálu pro správu předplatných sady Visual Studio.
-ms.openlocfilehash: 85e82eed6b8810e7e6a2f8622aead9d50323841d
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 4704b3258eedf8fd1639804a8792a1c18fafce77
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904216"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607285"
 ---
 # <a name="accessing-the-admin-portal-as-an-admin-on-a-volume-license-agreement"></a>Přístup k portálu pro správu jako správce na multilicenční smlouvě
 
@@ -23,14 +23,14 @@ Pokud jste primární nebo kontaktní kontakt na smlouvu vaší organizace, bude
 
 Jakmile se přihlásíte, budete automaticky nastaveni jako správce super a můžete začít spravovat předplatné a jiné správce. Informace o rozdílech mezi nadtypemi a správci najdete v našem článku o [rolích správce](admin-roles.md).
 
-To platí pro všechny typy multilicenčních smluv, včetně, ale ne omezení na: smlouvy Enterprise, předplatná v podniku, vybrat, vybrat Plus, otevřít, Open License, Govt a akademické smlouvy. 
+To platí pro všechny typy multilicenčních smluv, včetně, ale ne omezení na: smlouvy Enterprise, předplatná Enterprise, vybrat, vybrat Plus, otevřít, Open License, státní správu. a akademické smlouvy. 
 
-## <a name="resources"></a>Zdroje a prostředky
-- [Podpora správce a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
+## <a name="resources"></a>Zdroje informací
+- Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

@@ -10,18 +10,18 @@ ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
 ms.topic: how-to
-ms.openlocfilehash: 640cdf8b9c31bad42f8c5664f3cef44c558e2a3a
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: 99127416b6a488cd7e795b3c4a1888ff103c8029
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493410"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607389"
 ---
 # <a name="publish-to-a-folder-using-visual-studio-for-mac"></a>Publikování do složky pomocí Visual Studio pro Mac
 
 Pomocí nástroje Publikovat můžete publikovat konzolu .NET Core nebo ASP.NET Core aplikace do složky.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Je nainstalována [aplikace Visual Studio 2019 pro systém Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019) s povoleným rozhraním .NET Core.
 - Konzola rozhraní .NET Core nebo projekt ASP.NET Core. Pokud projekt ještě nemáte, můžete [vytvořit nový](./create-new-projects.md).
@@ -59,3 +59,7 @@ Chcete-li změnit název profilu publikování (který se zobrazí v místní na
 Chcete-li změnit cestu ke složce pro publikování, otevřete profil publikování a upravte `publishUrl` hodnotu.
 
 Chcete-li změnit použitou konfiguraci sestavení, změňte `LastUsedBuildConfiguration` vlastnost v profilu publikování.
+
+## <a name="see-also"></a>Viz také
+ - [dotnet publish](https://docs.microsoft.com/dotnet/core/tools/dotnet-publish)
+ - [Publikování webové aplikace na webu pomocí sady Visual Studio ](https://docs.microsoft.com/visualstudio/deployment/quickstart-deploy-to-a-web-site?view=vs-2019)

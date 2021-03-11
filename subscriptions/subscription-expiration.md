@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b6fbfa3e-654a-462f-8e22-e313b6ea617f
-ms.date: 10/30/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 description: Zjistěte, co se stane, když platnost předplatného sady Visual Studio vyprší
-ms.openlocfilehash: 3bab529f4a45a57e6cc21260fdde2d5e18bc5217
-ms.sourcegitcommit: f81984aec5341a84b87c2466461656c38d8ff681
+ms.openlocfilehash: 26659cf70ace2ffb6eaa8f02146ed965c03df48a
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93245013"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607129"
 ---
 # <a name="what-happens-when-your-subscription-expires"></a>Co se stane po vypršení platnosti předplatného
 Předplatná sady Visual Studio mají konkrétní dobu trvání a pokud se neobnoví, vyprší.  V případě vypršení platnosti předplatného ovlivňují výhody poskytované předplatným různé způsoby.  V tomto článku se dozvíte, jak vypršení platnosti ovlivňuje různé aspekty předplatného sady Visual Studio. 
@@ -40,9 +40,12 @@ Po vypršení platnosti předplatného se měsíční kredity Azure budou po upl
 ### <a name="other-benefits"></a>Další výhody 
 Mnohé z výhod zahrnutých v předplatných sady Visual Studio mají konkrétní dobu trvání.  Výhody poskytované partnery Microsoftu, jako je Pluralsight, DataCamp nebo WhiteSource, mají po aktivaci časové limity.  Výhody, které jste už dříve aktivovali, budou pro zbývající část svých podmínek pořád k dispozici.  Pokud jste třeba aktivovali 12měsíční výukové předplatné LinkedInu s více měsíci a stále ještě po vypršení platnosti předplatného sady Visual Studio zbývá čtyři měsíce, budete mít přístup k předplatnému LinkedIn Learning ještě čtyři měsíce.  
 
-## <a name="see-also"></a>Viz také:
+## <a name="resources"></a>Zdroje informací
+- Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
+
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

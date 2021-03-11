@@ -12,12 +12,12 @@ manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 0c3f40900c30ca3632b3e82c4b197f28f9d108bd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7efc8e5955f4d11004d8408cadf312e6cbcb43eb
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969240"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607402"
 ---
 # <a name="first-look-at-testing-tools-in-visual-studio"></a>První pohled na testovací nástroje v aplikaci Visual Studio
 
@@ -79,7 +79,7 @@ Analýza pokrytí kódu se dá použít pro spravovaný i nespravovaný (nativn�
 Pokrytí kódu je jedna z možností při spouštění testovacích metod pomocí Průzkumníku testů. Tabulka výsledků zobrazuje procentuální podíl kódu, který byl spuštěn v každém sestavení, třídě a metodě. Editor zdrojového kódu navíc ukazuje samotný kód, který byl testován.
 
 * [Určení rozsahu testovaného kódu pomocí pokrytí kódu](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
-* [Testování částí, pokrytí kódu a analýza klonování kódu pomocí sady Visual Studio (testovací prostředí)](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html)
+* [Testování částí, pokrytí kódu a analýza klonování kódu pomocí sady Visual Studio (testovací prostředí)](https://azuredevopslabs.com/labs/devopsserver/liveunittesting)
 * [Přizpůsobení analýzy pokrytí kódu](customizing-code-coverage-analysis.md)
 
 ## <a name="microsoft-fakes"></a>Napodobeniny Microsoft
@@ -103,7 +103,7 @@ Bez ohledu na to, zda jste zvolili nejlepší programové testy uživatelského 
 * [Použití automatizace uživatelského rozhraní k otestování kódu](use-ui-automation-to-test-your-code.md)
 * [Začínáme vytvářet, upravovat a udržovat kódovaný test uživatelského rozhraní](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 * [Testování aplikací pro UWP pomocí programových testů uživatelského rozhraní](test-uwp-app-with-coded-ui-test.md)
-* [Úvod k programovým testům uživatelského rozhraní pomocí Visual Studio Enterprise (testovací prostředí)](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html)
+* [Úvod k programovým testům uživatelského rozhraní pomocí Visual Studio Enterprise (testovací prostředí)](https://azuredevopslabs.com/labs/tfs/codedui)
 
 ## <a name="related-scenarios"></a>Související scénáře
 

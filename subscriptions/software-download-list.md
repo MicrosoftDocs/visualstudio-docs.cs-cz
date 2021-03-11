@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: c2878e28-eb5d-4adb-8d7d-a95ffea703a9
-ms.date: 03/11/2020
+ms.date: 02/19/2021
 ms.topic: how-to
 description: Vyhledejte seznam stažení softwaru, který je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 390f33591afa6dfceebddbbe5f7f08b413be5e77
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 54e018420233072f99caa84bb3e1e3858b6ed633
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903456"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607272"
 ---
 # <a name="what-software-is-available-for-download"></a>Který software je k dispozici ke stažení?
 
@@ -30,9 +30,12 @@ Chcete-li rychle vyhledat produkty, použijte funkce hledání v horní části 
 
 Můžete si také stáhnout excelovou tabulku obsahující obsáhlý seznam [dostupných softwarových titulů](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx) pro každý typ předplatného.
 
+## <a name="resources"></a>Zdroje informací 
+- Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio. 
+
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 
