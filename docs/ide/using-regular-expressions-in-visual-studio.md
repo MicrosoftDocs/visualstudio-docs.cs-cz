@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d62d35a296c70462aab75af5a8c6729179d5b34d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e2314bb8fdb44d769a5067a39b01b40b0a74734f
+ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925769"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103295760"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>Použití regulárních výrazů v sadě Visual Studio
 
@@ -60,7 +60,7 @@ Následující tabulka obsahuje některé znaky regulárního výrazu, operátor
 |Odpovídá jakémukoli [prázdnému znaku](/dotnet/standard/base-types/character-classes-in-regular-expressions#whitespace-character-s)|\s|`Public\sInterface` odpovídá frázi "veřejné rozhraní"|
 |Odpovídá libovolnému [znaku desítkové číslice](/dotnet/standard/base-types/character-classes-in-regular-expressions#decimal-digit-character-d)|\d|`\d` odpovídá "4" a "0" v "WD40"|
 
-Příklad regulárního výrazu, který kombinuje některé operátory a konstrukce, aby odpovídaly hexadecimálnímu číslu `\b0[xX]([0-9a-fA-F]+\)\b` . Tento výraz odpovídá "0xc67f", ale nikoli "0xc67g".
+Příklad regulárního výrazu, který kombinuje některé operátory a konstrukce, aby odpovídaly hexadecimálnímu číslu `\b0[xX]([0-9a-fA-F]+)\b` . Tento výraz odpovídá "0xc67f", ale nikoli "0xc67g".
 
 > [!TIP]
 > V operačních systémech Windows většina řádků končí "\r\n" (znak návratu na začátek řádku a nový řádek). Tyto znaky nejsou viditelné, ale jsou k dispozici v editoru a předány do služby regulárních výrazů .NET.

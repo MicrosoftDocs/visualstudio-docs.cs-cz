@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b3626d09d790ca6f15ded3745801eae1ca426bab
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 44af5c5a00e1ca26eb545b0973090486f6d320ea
+ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970656"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103295701"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Nainstalujte a použijte Visual Studio a služby Azure za bránou firewall nebo proxy server
 
@@ -141,6 +141,7 @@ Pokud chcete mít jistotu, že máte přístup ke všemu, co potřebujete, když
 | Ladicí program | 1. <br>vsdebugger.blob.core.windows.net <br>vsdebugger.azureedge.net <br><br>2. <br>download.visualstudio.com/\*/<br/>OneCore. msvsmon. \* .. věřitel<br><br> 3. referencesource.microsoft.com/symbols <br><br> 4. <br>symbols.nuget.org/download/symbols<br><br> 5. visualstudio.com<br><br>6. msdl.microsoft.com/download/symbols | https/443 | 1. <br>Používá se ke stahování bitů ladicího programu pro ladění .NET Core v systému UNIX/macOS přes SSH. <br><br>2. <br>Používá se ke stahování bitů ladicího programu pro vzdálené ladění kontejneru Windows Docker.<br><br> 3. používá se pro krokování zdrojových prostředků .NET Framework <br><br> 4. <br>(Pokud uživatel výslovný) Používá se pro stahování symbolů publikovaných na serveru symbolů nuget.org.<br><br> 5. (Pokud se uživatel výslovný), který se používá pro stahování symbolů a binárních souborů MS, může být taky potřeba pro ladění spravovaného kódu ve výpisech paměti. |
 | GitHub Codespaces| \*. online.visualstudio.com | https/443 | Slouží k volání rozhraní Codespaces API GitHubu. |
 | Publikování aplikace Xamarin Android | \*. googleapis.com <br/> play.google.com <br/>accounts.google.com | https/443 | Slouží k interakci se službou Obchod Google Play k publikování a nahrávání aplikací pro Xamarin Android přímo ze sady Visual Studio. |
+| Search Service sady Visual Studio | data-ai.microsoft.com/search | https/443 | Slouží k zadání Search Service sady Visual Studio s podporou AI do `Ctrl+Q` vyhledávacího pole. |
 | Azure Container Registry | *. azurecr.io | https/443 | Přístup k registrům kontejnerů hostovaným v Azure pro konfiguraci kanálů CICD |
 | | | | |
 

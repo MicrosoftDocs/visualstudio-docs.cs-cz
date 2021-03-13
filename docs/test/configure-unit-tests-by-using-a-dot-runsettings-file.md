@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 65785384746fa3f16dd25f0405e5ead45c553c21
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: ff92d7c53b2b7e5f5c89fbc37226135d5331acbb
+ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102221155"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103295772"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
@@ -306,7 +306,7 @@ Tato nastavení jsou specifická pro testovací adaptér, který spouští testo
     <DeleteDeploymentDirectoryAfterTestRunIsComplete>False</DeleteDeploymentDirectoryAfterTestRunIsComplete>
     <DeploymentEnabled>False</DeploymentEnabled>
     <AssemblyResolution>
-      <Directory Path="D:\myfolder\bin\" includeSubDirectories="false"/>
+      <Directory path="D:\myfolder\bin\" includeSubDirectories="false"/>
     </AssemblyResolution>
 </MSTest>
 ```
@@ -322,7 +322,7 @@ Tato nastavení jsou specifická pro testovací adaptér, který spouští testo
 |**DeleteDeploymentDirectoryAfterTestRunIsComplete**|true|Chcete-li zachovat adresář nasazení po spuštění testu, nastavte tuto hodnotu na **false**.|
 |**MapInconclusiveToFailed**|false (nepravda)|Pokud je test dokončen s neprůkazovým stavem, je namapován na stav přeskočeno v **Průzkumníku testů**. Pokud chcete, aby se neprůkazné testy zobrazovaly jako neúspěšné, nastavte hodnotu na **true**.|
 |**InProcMode**|false (nepravda)|Pokud chcete, aby testy běžely ve stejném procesu jako adaptér MSTest, nastavte tuto hodnotu na **true**. Toto nastavení poskytuje malé zvýšení výkonu. Ale pokud se test ukončí s výjimkou, zbývající testy se nespustí.|
-|**AssemblyResolution**|false (nepravda)|Při hledání a spouštění testů jednotek můžete zadat cesty k dalším sestavením. Například použijte tyto cesty pro sestavení závislostí, která nejsou ve stejném adresáři jako testovací sestavení. Chcete-li zadat cestu, použijte element **cesty k adresáři** . Cesty můžou zahrnovat proměnné prostředí.<br /><br />`<AssemblyResolution>  <Directory Path="D:\myfolder\bin\" includeSubDirectories="false"/> </AssemblyResolution>`|
+|**AssemblyResolution**|false (nepravda)|Při hledání a spouštění testů jednotek můžete zadat cesty k dalším sestavením. Například použijte tyto cesty pro sestavení závislostí, která nejsou ve stejném adresáři jako testovací sestavení. Chcete-li zadat cestu, použijte element **cesty k adresáři** . Cesty můžou zahrnovat proměnné prostředí.<br /><br />`<AssemblyResolution>  <Directory path="D:\myfolder\bin\" includeSubDirectories="false"/> </AssemblyResolution>`|
 
 ## <a name="example-runsettings-file"></a>Příklad souboru *. runsettings*
 

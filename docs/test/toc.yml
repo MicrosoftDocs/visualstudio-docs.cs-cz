@@ -119,6 +119,10 @@
           href: customizing-code-coverage-analysis.md
         - name: Řešení problémů s pokrytím kódu
           href: troubleshooting-code-coverage.md
+    - name: Migrace
+      items:
+        - name: Upgrade z MSTestV1 na MSTestV2
+          href: mstest-update-to-mstestv2.md
 - name: Live Unit Testing
   items:
     - name: Úvod
