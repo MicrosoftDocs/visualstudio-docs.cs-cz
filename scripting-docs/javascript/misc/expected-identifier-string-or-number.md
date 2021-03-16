@@ -1,4 +1,5 @@
 ---
+description: Použili jste nesprávnou syntaxi literálu pro deklaraci literálu objektu.
 title: Byl očekáván identifikátor, řetězec nebo číslo | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,15 +15,15 @@ ms.assetid: f6bb8398-4fd6-4312-b4be-9617a2834cc4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 06ad8497bfc561a5222eef6975a7336f4599c59d
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 518c394dcd44129204865f3877302e84911d70c9
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91861908"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571750"
 ---
 # <a name="expected-identifier-string-or-number"></a>Byl očekáván identifikátor, řetězec nebo číslo
-Použili jste nesprávnou syntaxi literálu pro deklaraci literálu objektu. Vlastnosti literálu objektu musí být identifikátor, řetězec nebo číslo. Literál objektu (označovaný také jako inicializátor objektu) obsahuje čárkami oddělený seznam dvojic vlastnost: hodnota, který je uzavřený v závorkách. Příklad:  
+Použili jste nesprávnou syntaxi literálu pro deklaraci literálu objektu. Vlastnosti literálu objektu musí být identifikátor, řetězec nebo číslo. Literál objektu (označovaný také jako inicializátor objektu) obsahuje čárkami oddělený seznam dvojic vlastnost: hodnota, který je uzavřený v závorkách. Například:  
   
 ```JavaScript  
 var point = {x:1.2, y:-3.4};  

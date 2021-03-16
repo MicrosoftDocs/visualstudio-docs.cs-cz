@@ -14,12 +14,12 @@ manager: jmartens
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b1d5906213b148605e35c483b377280dc942515
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e1c8c20d350561eec520038dec521ab7bc5f5311
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936545"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570681"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>Měření výkonu aplikace z příkazového řádku
 
@@ -79,7 +79,7 @@ Profilace pomocí nástrojů rozhraní příkazového řádku Visual Studio Diag
 
 Agenti kolekcí jsou vzájemně zaměnitelné komponenty, které shromažďují různé typy dat v závislosti na tom, co se snažíte změřit.
 
-Pro usnadnění práce můžete tyto informace uložit do konfiguračního souboru agenta. Konfigurační soubor je soubor *. JSON* , který obsahuje minimálně název souboru *. dll* a jeho identifikátor CLSID com. Tady jsou ukázkové konfigurační soubory, které najdete v následující složce:
+Pro usnadnění práce doporučujeme ukládat tyto informace do konfiguračního souboru agenta. Konfigurační soubor je soubor *. JSON* , který obsahuje minimálně název souboru *. dll* a jeho identifikátor CLSID com. Tady jsou ukázkové konfigurační soubory, které najdete v následující složce:
 
 ```<Visual Studio installation folder>Team Tools\DiagnosticsHub\Collector\AgentConfigs\```
 
@@ -99,11 +99,7 @@ Konfigurace DotNetObjectAlloc (základní/nízká) odpovídají datům shromáž
 
 Základní a nízké/vysoké konfigurace odkazují na vzorkovací frekvenci. Například nízká je 100 vzorků/s a vysoká je 4000 vzorků za sekundu.
 
-Aby nástroj *VSDiagnostics.exe* pracoval s agentem shromažďování dat, vyžaduje knihovnu DLL i identifikátor CLSID com pro příslušný agent a Agent může mít také další možnosti konfigurace. Pokud používáte agenta bez konfiguračního souboru, použijte formát v následujícím příkazu.
-
-```cmd
-VSDiagnostics.exe start <id> /attach:<pid> /loadAgent:<agentCLSID>;<agentName>[;<config>]
-```
+Aby nástroj *VSDiagnostics.exe* mohl pracovat s agentem shromažďování dat, vyžaduje knihovnu DLL i identifikátor CLSID com pro příslušný agent. Agent může mít také další možnosti konfigurace, což jsou jakékoli možnosti, které jsou zadány v konfiguračním souboru, naformátované jako kód JSON s chybou Escape.
 
 ## <a name="permissions"></a>Oprávnění
 

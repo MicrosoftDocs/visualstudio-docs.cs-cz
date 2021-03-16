@@ -1,4 +1,5 @@
 ---
+description: Byl proveden pokus o vyvolání formátu JSON. stringify s argumentem, který není platný.
 title: Neplatný argument Replacer | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -15,12 +16,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b6a77675a1cb618210d9c44104cf6397dda03c11
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 95a73d6fcbcf1350eece52e2cd58693646617a28
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862569"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570892"
 ---
 # <a name="invalid-replacer-argument"></a>Neplatný argument nahrazení
 Byl proveden pokus o vyvolání `JSON.stringify` s argumentem, který není platný. `replacer`Argument musí být funkce nebo pole.  

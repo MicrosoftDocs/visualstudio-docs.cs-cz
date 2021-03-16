@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: d44dc484da904d2692b90e23d10db6edc6f6e7b8
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 49c3081e68baf4f2bf1d0975bcdae7ea25ab90b3
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223157"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571542"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Jak funguje Přemostění na Kubernetes
 
@@ -142,10 +142,8 @@ kubectl -n <namespace> apply -f <yaml file name>
 
 Most na Kubernetes má následující omezení:
 
-* Služba musí být za účelem připojení k této službě zajištěna jedním pod. Nemůžete se připojit ke službě s více lusky, jako je třeba služba s replikami.
-* Objekt pod může mít v takovém případě k úspěšnému připojení pouze jeden kontejner spuštěný v takovém případě pro přemostění na Kubernetes. Most do Kubernetes se nemůže připojit ke službám s lusky, které mají další kontejnery, jako jsou například kontejnery na vozíky vložené pomocí sítí služby.
+* Objekt pod může mít v takovém případě k úspěšnému připojení pouze jeden kontejner spuštěný v takovém případě pro přemostění na Kubernetes.
 * V současné době musí být most na Kubernetes lusky kontejnery Linux. Kontejnery Windows se nepodporují.
-* Izolaci nelze použít s protokolem HTTPS při použití mostu pro Kubernetes se sadou Visual Studio. Protokol HTTPS je podporován pouze v izolovaném režimu, pokud používáte Visual Studio Code.
 * Most do Kubernetes potřebuje zvýšená oprávnění ke spuštění ve vývojovém počítači, aby bylo možné upravit soubor hostitelů.
 * Most na Kubernetes se nedá použít u clusterů s povoleným Azure Dev Spaces.
 

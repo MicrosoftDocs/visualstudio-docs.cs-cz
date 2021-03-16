@@ -1,5 +1,6 @@
 ---
 title: Použití klíčového slova pro identifikátor je neplatné | Microsoft Docs
+description: Klíčové slovo nelze použít jako název proměnné, funkce nebo jiného identifikátoru definovaného uživatelem.
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,12 +15,12 @@ ms.assetid: 04951b3b-a8b5-4d36-94f8-d2daee1ce0f8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9ae4fd36d78ee2d9e17d3fe22c6013a338e85a21
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: ed4a27b735bfec34aa0bb7e9b09bc8f4e4e829c6
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862724"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571529"
 ---
 # <a name="the-use-of-a-keyword-for-an-identifier-is-invalid"></a>Použití klíčového slova pro identifikátor je neplatné
 1048: použití klíčového slova pro identifikátor je neplatné.  

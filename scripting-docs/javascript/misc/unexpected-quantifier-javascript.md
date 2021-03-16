@@ -1,4 +1,5 @@
 ---
+description: Při vytváření vzoru hledání regulárního výrazu jste vytvořili prvek vzoru s neplatným faktorem opakování.
 title: Neočekávaný kvantifikátor (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: ba6d34f9-2d6f-486c-a929-6cd9818be322
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f67f9a2fc81b0bd950e171e4274eb09eacd88bbc
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 9351f9306cea9e3f6346b007d6fe05c1d7bbf319
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91861855"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571958"
 ---
 # <a name="unexpected-quantifier-javascript"></a>Neočekávaný kvantifikátor (JavaScript)
 Při vytváření vzoru hledání regulárního výrazu jste vytvořili prvek vzoru s neplatným faktorem opakování. Například vzor  

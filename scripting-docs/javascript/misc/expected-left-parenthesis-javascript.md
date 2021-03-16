@@ -1,4 +1,5 @@
 ---
+description: Pokusili jste se uzavřít výraz do sady kulatých závorek, ale nezahrnuli levou závorku.
 title: Byl očekáván znak ' (' (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: 712315e1-4c68-4f66-84c2-41b83c42d85a
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: adcabbe0b1d7ca7d0298202b5242049b86f8229a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fede6fb375e170f2c9f17e71c9c369e775731820
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817096"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571763"
 ---
 # <a name="expected--javascript"></a>Byl očekáván znak '(' (JavaScript)
 Pokusili jste se uzavřít výraz do sady kulatých závorek, ale nezahrnuli levou závorku. Některé výrazy musí být uzavřeny v rámci sady otevíracích a uzavíracích závorek. Všimněte si použití závorek v následujícím příkladu.  

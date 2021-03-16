@@ -1,4 +1,5 @@
 ---
+description: Vytvořili jste příkaz, který porušuje jedno nebo více gramatických pravidel jazyka JavaScript.
 title: Chyba syntaxe (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: e4a9d980-f3ef-4092-b192-bf4a45981d30
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3b31de0e2db822962642078ed16fa928ad474ea9
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 0271a358a96289d6671aff97e77095468207df8b
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862498"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571178"
 ---
 # <a name="syntax-error-javascript"></a>Chyba syntaxe (JavaScript)
 Vytvořili jste příkaz, který porušuje některá gramatická pravidla [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] .  

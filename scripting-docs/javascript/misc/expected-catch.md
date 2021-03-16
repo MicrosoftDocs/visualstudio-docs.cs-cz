@@ -1,4 +1,5 @@
 ---
+description: Použili jste blok try zpracování výjimek, ale nezapsali jste přidružený příkaz catch.
 title: Byl očekáván typ catch | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: f1cd947f-eba2-411e-8e84-8ca86f608643
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 47411a6376cd843b3a12cf74ed1800775b98cd83
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: b5cf6087ff5a299c575ac4f2cd5eb8a3e206b7e0
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91861954"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571035"
 ---
 # <a name="expected-catch"></a>Byl očekáván příkaz 'catch'
 Použili jste blok **Try** zpracování výjimek, ale nezapsali jste přidružený příkaz **catch** . Mechanismus zpracování výjimek vyžaduje, aby kód, který může selhat, a kód, který by neměl být proveden, pokud dojde k výjimce, je zabalen do bloku **Try** . Výjimky jsou vyvolány v rámci bloku **Try** pomocí příkazu **throw** a zachyceny mimo blok **Try** s jedním nebo více příkazy **catch** .  

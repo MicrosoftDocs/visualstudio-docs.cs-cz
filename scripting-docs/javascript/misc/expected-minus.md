@@ -1,4 +1,5 @@
 ---
+description: Pokusili jste se vytvořit literál regulárního výrazu, ale neobsahoval jedno lomítko (/).
 title: Byl očekáván znak-| Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: a31d161a-4a51-43a9-9d65-d8b765ce3c19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2bb965a4807a31df106102318cf6618680a97adb
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: c7d7660c097f30afc31679d3128d224dc8b7f71e
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862606"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571737"
 ---
 # <a name="expected--"></a>Byl očekáván znak '-'
 Pokusili jste se vytvořit literál regulárního výrazu, ale neobsahoval jedno lomítko (/). Stejně jako řetězcové literály jsou zapsány jako znaky v páru uvozovek, literály regulárních výrazů jsou vyjádřeny jako znaky v páru lomítka (/) znaků.  

@@ -1,4 +1,5 @@
 ---
+description: Pokusili jste se použít proměnnou (nepodmíněný kompilační) v příkazu testu podmíněné kompilace.
 title: Očekávaná konstanta | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: 8da7485f-7050-4559-97c3-ccfa782cdff3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bc791e97fcecf357177d140a3c30ee8c66db377b
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 3592b36568d388314ac1ce26513674df7dda58eb
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91861963"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570450"
 ---
 # <a name="expected-constant"></a>Byla očekávána konstanta
 Pokusili jste se použít proměnnou (nepodmíněný kompilační) v příkazu testu podmíněné kompilace. Příkazy testu podmíněné kompilace se musí vyhodnotit na konstantu.  
