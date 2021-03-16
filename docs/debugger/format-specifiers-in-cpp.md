@@ -26,14 +26,15 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97c0730b2c1fd8d534fed232846dcca76c58ce2e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2a3fa99594f42e7e9c3739a8a8d57abf226bc04c
+ms.sourcegitcommit: 66951f064d601b1d7a2253cb9b250380807e12db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870633"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483190"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Specifikátory formátu pro C++ v ladicím programu sady Visual Studio
+
 Můžete změnit formát, ve kterém se hodnota zobrazuje v oknech **kukátko**, **Automatické** hodnoty a **místní** hodnoty pomocí specifikátorů formátu.
 
 Můžete také použít specifikátory formátu v **příkazovém** okně, v **příkazovém** okně, v [trasováním](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)a dokonce i ve zdrojových oknech. Pokud v těchto oknech pozastavíte výraz, výsledek se zobrazí v [DataTip](../debugger/view-data-values-in-data-tips-in-the-code-editor.md). Zobrazení DataTip odráží specifikátor formátu.
@@ -42,6 +43,7 @@ Můžete také použít specifikátory formátu v **příkazovém** okně, v **p
 > Po změně nativního ladicího programu sady Visual Studio na nový ladicí stroj byly přidány některé nové specifikátory formátu a některé staré byly odebrány. Starší ladicí program se pořád používá, když provedete spolupráci (smíšené nativní a spravované) ladění s využitím C++/CLI.
 
 ## <a name="set-format-specifiers"></a>Nastavit specifikátory formátu
+
 Použijeme následující příklad kódu:
 
 ```C++
@@ -64,6 +66,7 @@ Můžete zobrazit a vybrat ze seznamu dostupných specifikátorů formátu přip
 ::: moniker-end
 
 ## <a name="format-specifiers"></a><a name="BKMK_Visual_Studio_2012_format_specifiers"></a> Specifikátory formátu
+
 V následujících tabulkách jsou popsány specifikátory formátu, které lze použít v aplikaci Visual Studio. Specifikátory tučným písmem jsou podporovány pouze pro nový ladicí program, nikoli pro spolupráci s C++/CLI.
 
 ::: moniker range=">= vs-2019" 
@@ -138,6 +141,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 > Když je přítomen specifikátor formátu **HV** , ladicí program se pokusí určit délku vyrovnávací paměti a zobrazit tento počet prvků. Protože není vždy možné, aby ladicí program mohl najít přesnou velikost vyrovnávací paměti pole, měli byste použít specifikátor velikosti, kdykoli je `(pBuffer,[bufferSize])` to možné. Specifikátor formátu **HV** je užitečný v případě, že velikost vyrovnávací paměti není snadno dostupná.
 
 ### <a name="size-specifiers-for-pointers-as-arrays"></a><a name="BKMK_Size_specifiers_for_pointers_as_arrays_in_Visual_Studio_2012"></a> Specifikátory velikosti pro ukazatele jako pole
+
 Pokud máte ukazatel na objekt, který chcete zobrazit jako pole, můžete použít celé číslo nebo výraz k určení počtu prvků pole.
 
 |Specifikátor|Formát|Původní hodnota kukátka|Zobrazená hodnota|
@@ -147,7 +151,8 @@ Pokud máte ukazatel na objekt, který chcete zobrazit jako pole, můžete použ
 |**Rozbalit (n)**|Platný výraz C++, který se vyhodnotí jako celé číslo|pBuffer, expand (2)|Zobrazí třetí prvek  `pBuffer`|
 
 ## <a name="format-specifiers-for-interop-debugging-with-ccli"></a><a name="BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue"></a> Specifikátory formátu pro spolupráci při ladění pomocí C++/CLI
-Specifikátory **tučným písmem** jsou podporovány pouze pro ladění nativních a C++/CLI kódu.
+
+Specifikátory **tučným písmem** jsou podporovány pouze pro ladění nativních a C++/CLI kódu. To vyžaduje starší ladicí program, zadaný pomocí [spravovaného režimu kompatibility](../debugger/general-debugging-options-dialog-box.md).
 
 |Specifikátor|Formát|Původní hodnota kukátka|Zobrazená hodnota|
 |---------------|------------|--------------------------|---------------------|
@@ -170,7 +175,10 @@ Specifikátory **tučným písmem** jsou podporovány pouze pro ladění nativn�
 |!|nezpracovaný formát, který ignoruje libovolné přizpůsobení zobrazení datového typu|\<customized representation>|4|
 
 ### <a name="format-specifiers-for-memory-locations-in-interop-debugging-with-ccli"></a><a name="BKMK_Format_specifiers_memory_locations_in_interop_debugging_and_C___edit_and_continue"></a> Specifikátory formátu pro umístění v paměti v ladění spolupráce s C++/CLI
+
 Následující tabulka popisuje symboly formátování používané pro umístění v paměti. Můžete použít specifikátor umístění v paměti s libovolnou hodnotou nebo výrazem, který je vyhodnocen jako umístění.
+
+Specifikátory **tučným písmem** jsou podporovány pouze pro ladění nativních a C++/CLI kódu. To vyžaduje starší ladicí program, zadaný pomocí [spravovaného režimu kompatibility](../debugger/general-debugging-options-dialog-box.md).
 
 |Symbol|Formát|Původní hodnota kukátka|Zobrazená hodnota|
 |------------|------------|--------------------------|---------------------|
@@ -183,6 +191,7 @@ Následující tabulka popisuje symboly formátování používané pro umístě
 |**samohlásk**|2 bajty znaků (Unicode)|0x0012ffac|0x0012ffac 8478 77f4 FFFF FFFF 0000 0000 0000 0000|
 
 ### <a name="size-specifier-for-pointers-as-arrays-in-interop-debugging-with-ccli"></a><a name="BKMK_Size_specifier_for_pointers_as_arrays_in_interop_debugging_and_C___edit_and_continue"></a> Specifikátor velikosti pro ukazatele jako pole v ladění spolupráce s C++/CLI
+
 Pokud máte ukazatel na objekt, který chcete zobrazit jako pole, můžete použít celé číslo k určení počtu prvků pole.
 
 |Specifikátor|Formát|Výraz|Zobrazená hodnota|

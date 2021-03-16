@@ -2,18 +2,18 @@
 title: Prostředí Git v aplikaci Visual Studio
 titleSuffix: ''
 description: Přečtěte si, jak vám nové integrované prostředí Git v rámci sady Visual Studio 2019 může přispět k vyšší produktivitě.
-ms.date: 01/15/2021
+ms.date: 03/08/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 354be4d3e31ead2d77e62f61600c20c1774353cd
-ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
+ms.openlocfilehash: e97088f11c32eae6b5d0ef4b7a3490e120a1b6d2
+ms.sourcegitcommit: 8edb1a7e3e8eee48bf0a900f00b5ee8e08de8e1d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103295784"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103481412"
 ---
 # <a name="git-experience-in-visual-studio"></a>Prostředí Git v aplikaci Visual Studio
 
@@ -202,6 +202,7 @@ I když je nové prostředí Git ve výchozím nastavení v aplikaci Visual Stud
 
 ## <a name="see-also"></a>Viz také
 
+- [Začínáme s Git v aplikaci Visual Studio](https://www.youtube.com/watch?v=GCZ9x3yqkyc) video na YouTube
 - [Oznamujeme vydání prostředí Git v](https://devblogs.microsoft.com/visualstudio/announcing-the-release-of-the-git-experience-in-visual-studio/) příspěvku na blogu sady Visual Studio
 - [Spuštění nového prostředí Git](https://www.youtube.com/watch?v=UHrAg3iKoe0&t) na YouTube
 - Sada [nástrojů sady Visual Studio představuje nové video o prostředí Git](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience) na webu Channel 9 a na [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be) .

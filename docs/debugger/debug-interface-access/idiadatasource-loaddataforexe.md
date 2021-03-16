@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ecb7c774314a35f99de41af720b180475e0c55b5
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 649efd5202d8b153b5fe5b4dbf9ba5052883f352
+ms.sourcegitcommit: 66951f064d601b1d7a2253cb9b250380807e12db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158272"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483182"
 ---
 # <a name="idiadatasourceloaddataforexe"></a>IDiaDataSource::loadDataForExe
 Otevře a připraví ladicí data přidružená k souboru. exe/. dll.
@@ -60,6 +60,8 @@ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Následující 
 
 ## <a name="remarks"></a>Poznámky
 Hlavička ladění souboru. exe/. dll pojmenovává umístění přidružených dat pro ladění.
+
+Pokud načítáte data ladění ze serveru symbolů, *symsrv.dll* musí být přítomna ve stejném adresáři, ve kterém je buď aplikace uživatele, nebo *msdia140.dll* nainstalována, nebo musí být přítomna v systémovém adresáři.
 
 Tato metoda přečte hlavičku ladění a pak vyhledá a připraví ladicí data. Průběh hledání může být volitelně hlášen a ovládán pomocí zpětných volání. Například [IDiaLoadCallback:: NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md) je vyvolána, když `IDiaDataSource::loadDataForExe` Metoda najde a zpracuje ladicí adresář.
 
