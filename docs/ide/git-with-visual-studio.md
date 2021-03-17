@@ -2,18 +2,18 @@
 title: Prostředí Git v aplikaci Visual Studio
 titleSuffix: ''
 description: Přečtěte si, jak vám nové integrované prostředí Git v rámci sady Visual Studio 2019 může přispět k vyšší produktivitě.
-ms.date: 03/08/2021
+ms.date: 03/16/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: e97088f11c32eae6b5d0ef4b7a3490e120a1b6d2
-ms.sourcegitcommit: 8edb1a7e3e8eee48bf0a900f00b5ee8e08de8e1d
+ms.openlocfilehash: e33b91088022a4588773737b2820677c84a65807
+ms.sourcegitcommit: 3a855d3513407ea78336386dc3be0b75142614b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103481412"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103622644"
 ---
 # <a name="git-experience-in-visual-studio"></a>Prostředí Git v aplikaci Visual Studio
 
@@ -48,7 +48,7 @@ Dialog **vytvořit úložiště Git** usnadňuje vložení nového úložiště 
 > [!TIP]
 > Bez ohledu na to, jestli je vaše úložiště veřejné nebo soukromé, je vhodné mít na GitHubu bezpečně uloženou vzdálenou zálohu kódu, i když s týmem nepracujete. Tím se také váš kód zpřístupní bez ohledu na to, jaký počítač používáte.
 
-Místní úložiště Git se dá vytvořit jenom pomocí možnosti **místní** . Nebo můžete své úložiště propojit s jakýmkoli prázdným vzdáleným úložištěm na jakémkoli jiném poskytovateli Git pomocí existující možnosti **Vzdálená** aplikace.
+Místní úložiště Git se dá vytvořit jenom pomocí možnosti **místní** . Nebo můžete propojit svůj místní projekt s existujícím prázdným vzdáleným úložištěm v Azure DevOps nebo jakýmkoli jiným poskytovatelem Gitu pomocí **existující možnosti Remote** .
 
 ## <a name="clone-an-existing-git-repository"></a>Naklonování existujícího úložiště Git
 

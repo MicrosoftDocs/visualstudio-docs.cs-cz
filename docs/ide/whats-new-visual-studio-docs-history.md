@@ -2,7 +2,7 @@
 title: 'Dokumentace k Visual Studiu: historie novinek '
 titleSuffix: ''
 description: Historie novinek v dokumentaci k sadě Visual Studio
-ms.date: 02/01/2021
+ms.date: 03/08/2021
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,16 +15,98 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 178c84be9def77e013da336193877617c1434b2e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bbad51f6d06c221118ffda01e1c7e93374eea2ff
+ms.sourcegitcommit: 3a855d3513407ea78336386dc3be0b75142614b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960530"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103622566"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Historie novinek v dokumentaci k sadě Visual Studio
 
-Vítejte v historii novinek v dokumentaci sady Visual Studio. Tento článek obsahuje hlavní změny v dokumentaci před lednem 2021 (od července 2020). Nejnovější novinky najdete v tématu [dokumentace k Visual Studiu: co je nového v dokumentaci](whats-new-visual-studio-docs.md).
+Vítejte v historii novinek v dokumentaci sady Visual Studio. Tento článek obsahuje hlavní změny v dokumentaci před únorem 2021 (od července 2020). Nejnovější novinky najdete v tématu [dokumentace k Visual Studiu: co je nového v dokumentaci](whats-new-visual-studio-docs.md).
+
+## <a name="january-2021"></a>Leden 2021
+### <a name="azure"></a>Azure
+
+**Nové články**
+
+- [Vytvoření a nasazení do Cloud Services (Rozšířená podpora) v aplikaci Visual Studio (Preview)](../azure/cloud-services-extended-support.md) – Rozšířená podpora cloudových služeb – žádná šablona
+
+### <a name="code-quality"></a>Kvalita kódu
+
+**Nové články**
+
+- [Metriky kódu – spojení tříd](../code-quality/code-metrics-class-coupling.md) – aktualizace metrik kódu
+- [Metriky kódu – rozsah indexů údržby a význam](../code-quality/code-metrics-maintainability-index-range-and-meaning.md) – aktualizace metrik kódu
+
+### <a name="debugger"></a>Ladicí program
+
+**Nové články**
+
+- Ladění [aplikací .NET Core v WSL 2 pomocí sady Visual Studio](../debugger/debug-dotnet-core-in-wsl-2.md) – ladění .NET Core WSL2
+
+**Aktualizované články**
+
+- [Vytváření vlastních zobrazení objektů C++ v ladicím programu pomocí rozhraní Natvis](../debugger/create-custom-views-of-native-objects.md) – objasnění pro formátování speciálních znaků v Natvis v kódu XML
+- [Upozornění zabezpečení: připojení k procesu, jehož vlastníkem je nedůvěryhodný uživatel, může být nebezpečné. Pokud tyto informace vypadají podezřele nebo si nejste jistí, nepřipojujte se k tomuto procesu](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md) – aktualizace upozornění zabezpečení při připojení k nedůvěryhodnému procesu
+
+### <a name="deployment"></a>Nasazení
+
+**Aktualizované články**
+
+- [ &lt; InstallChecks &gt; element (zaváděcí nástroj)](../deployment/installchecks-element-bootstrapper.md) – dokumentace balíčku zaváděcího nástroje aktualizace pro zahrnutí nového elementu BeforeInstallChecks
+
+### <a name="extensibility"></a>Rozšiřitelnost
+
+**Aktualizované články**
+
+- [Návod: publikování rozšíření sady Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md) – [PUBLIC_MOVE] potvrzení od veřejné žádosti o přijetí změn 6214
+
+### <a name="get-started"></a>Začínáme
+
+**Nové články**
+
+- [Kurz: otevření projektu z úložiště v aplikaci Visual Studio 2017](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md) – aktualizace otevření projektu v rámci úložiště
+
+**Aktualizované články**
+
+- [Kurz: otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo.md) – aktualizace otevření projektu z kurzu úložiště
+
+### <a name="ide"></a>IDE – integrované vývojové prostředí
+
+**Nové články**
+
+- [JavaScript F1 Nápověda pro Visual Studio](./not-in-toc/default-f1-javascript.md) – přidaní js a TS – výchozí stránky F1
+- [Nápověda TypeScript F1 pro Visual Studio](./not-in-toc/default-f1-typescript.md) – přidaní js a TS – výchozí stránky F1
+
+**Aktualizované články**
+
+- [Řešení a projekty v aplikaci Visual Studio](./solutions-and-projects-in-visual-studio.md) – přidání odkazu na knihovnu imagí sady Visual Studio
+
+### <a name="install"></a>Instalace
+
+**Aktualizované články**
+
+- [Čísla buildu a data verze sady Visual Studio](../install/visual-studio-build-numbers-and-release-dates.md) – oprava úterý aktualizace
+
+### <a name="msbuild"></a>MSBuild
+
+**Aktualizované články**
+
+- [Glosář nástroje MSBuild](../msbuild/msbuild-glossary.md) – povýšení klíčů glosáře na H2
+
+### <a name="profiling"></a>Profilace
+
+**Nové články**
+
+- [Vizualizace čítačů dotnet z programu Visual Studio Profiler](../profiling/dotnet-counters-tool.md) – přidání dokumentu nástroje čítače .NET
+
+### <a name="test"></a>Test
+
+**Aktualizované články**
+
+- [Spustit testy jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md) – přidat zkušební dokument startovací zvukové nahrávky
 
 ## <a name="december-2020"></a>Prosinec 2020
 ### <a name="azure"></a>Azure
