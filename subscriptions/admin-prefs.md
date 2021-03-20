@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
-ms.date: 10/22/2020
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: Přečtěte si, jak nastavit předvolby pro jazyky, kontakty, úroveň předplatného a další na portálu pro správu.
-ms.openlocfilehash: bdb6a5bc1160c75830fe9f1473222155d8fad781
-ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
+ms.openlocfilehash: 93a9417a88d07dcc841c6a59a7353b0ffb5e7565
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99511342"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757617"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>Nastavení předvoleb pro vaše smlouvy na portálu pro správu
 Super správci můžou nastavit určité Předvolby na portálu pro správu (portál pro správu), které se použijí globálně pro každou smlouvu.  Tyto preference automaticky naplní podrobnosti předplatného pro vaše správce, když přidávají předplatitele a můžou je upravovat jenom globálně správci super.  
@@ -73,7 +73,7 @@ Odpověď: Podívejte se na náš [Kontakt na svého správce](contact-my-admin.
 Odpověď: Pokud v předvolbách **kontaktní e-mailová** adresa není nastavená žádná konkrétní e-mailová adresa, žádost obdrží všichni správci smlouvy. 
 
 ## <a name="resources"></a>Zdroje informací
-- [Podpora správy a předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
+- [Podpora správy a předplatných sady Visual Studio](https://aka.ms/vsadminhelp)
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)

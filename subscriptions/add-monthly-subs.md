@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
-ms.date: 09/03/2020
+ms.date: 03/19/2021
 ms.topic: how-to
 description: Naučte se nově zakoupit měsíční předplatná sady Visual Studio na portálu pro správu předplatných.
-ms.openlocfilehash: f6b835969fff3a8316a2b46c6e15217ebe3e33b1
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 931f297a650926e4da5c13271a58091c9f00ddd3
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92467593"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757643"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Přidání nových měsíčních předplatných sady Visual Studio na portál pro správu předplatných
 Při nákupu nových měsíčních předplatných sady Visual Studio pomocí předplatného Azure je možná budete muset přidat na portál pro správu předplatných, aby je uživatelé mohli přiřadit.  
@@ -41,6 +41,9 @@ Postup přidání měsíčních předplatných závisí na tom, jaké typy před
 - Možnost přidání nových měsíčních předplatných bude k dispozici jenom při prvním nákupu.  Po přidání měsíčních předplatných zkontrolujeme nové odběry pokaždé, když se přihlásíte k portálu. 
 - Při nalezení nových předplatných se mohou zobrazit informace o tom, že jsou již přiřazeny předplatitelům.  Důvodem je, že jiní správci mají přístup k předplatnému Azure a tito uživatelé už přiřadili nové předplatné sady Visual Studio uživatelům.  Teď, když jste je přidali také na portál, můžete spravovat tato předplatná. 
 
+## <a name="support-resources"></a>Prostředky podpory
+- Pokud potřebujete pomoc se správou předplatných sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://aka.ms/vsadminhelp).
+
 ## <a name="next-steps"></a>Další kroky
 Teď, když jste přidali předplatná, jste připraveni je přiřadit uživatelům.  Můžete to udělat několika způsoby:
 - [Přiřadit odběry individuálně](assign-license.md)
@@ -49,6 +52,6 @@ Teď, když jste přidali předplatná, jste připraveni je přiřadit uživatel
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
-ms.date: 10/22/2020
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: Přihlášení se nemusí zdařit, pokud se používají aliasy nebo popisné názvy.
-ms.openlocfilehash: 4d9b3194cf7636106740e35b230cc02aaab7eded
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: d3a3cd962bafcf6a3e0c5aa20c98128233ace988
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467606"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757695"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Přihlášení k předplatným sady Visual Studio může při použití aliasů selhat.
 V závislosti na typu účtu použitého k přihlášení nemusí být dostupné odběry při přihlášení ke správnému zobrazení [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Jednou z možných příčin je použití "aliasů" nebo "popisných názvů" místo přihlašovací identity, ke které je předplatné přiřazeno. Tento název se nazývá "aliasing".
@@ -46,7 +46,7 @@ Neshoda hlavního názvu uživatele (UPN) se může vyskytnout, když má spole�
 
 3. Změňte přihlašovací e-mailovou adresu na hlavní název uživatele (UPN) odběratele. 
 
-0. Uložit změny 
+0. Uložte změny. 
 
 0. Informujte předplatitele, aby se odhlásil z portálu odběratele a znovu k němu přistoupí pomocí hlavního názvu uživatele. 
 
@@ -91,12 +91,14 @@ Obě tyto možnosti se konfigurují na portálu pro správu, a to provedením n�
 > [!NOTE]
 > U individuálních i hromadných změn předplatitel obdrží e-mail s pokyny, že se změnila e-mailová adresa pro přihlášení a bude se muset přihlásit pomocí aktualizované e-mailové adresy. Je také důležité si uvědomit, že pokud předplatitel předtím aktivoval výhody v rámci jiné přihlašovací adresy, bude muset pro přístup k nim nadále používat další přihlašovací adresu.  
 
+## <a name="support-resources"></a>Prostředky podpory
+- Pokud potřebujete pomoc se správou předplatných sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://aka.ms/vsadminhelp).
+
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
-
 
 ## <a name="next-steps"></a>Další kroky
 Přečtěte si další informace o správě předplatných sady Visual Studio.

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b26b31dc-1eeb-4871-9ce6-2c980e703f1e
-ms.date: 03/11/2021
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: Přečtěte si o zodpovědnostech správců předplatných.
-ms.openlocfilehash: 14b8832a8031ddbc96ce82e10a015c730530ce3e
-ms.sourcegitcommit: 9da787bf5b4281f933dc22083dc0bdeae3bc9461
+ms.openlocfilehash: 817330093ce0a2e9df6379db42420057ded30486
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103225986"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757682"
 ---
 # <a name="overview-of-admin-responsibilities"></a>Přehled odpovědností správce
 Jako správce můžete spravovat předplatná vaší organizace.  Role správce také nese zodpovědnost za to, že se předplatná spravují v souladu s licenčními podmínkami. V tomto článku najdete popis odpovědností, výhod a omezení role správce.
@@ -41,7 +41,7 @@ Předplatná sady Visual Studio umožňují vývojářům instalovat a používa
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
-- [Podpora správy a předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
+- [Podpora správy a předplatných sady Visual Studio](https://aka.ms/vsadminhelp)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o zodpovědnostech pro správce:
