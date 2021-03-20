@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 411fbd757eb063202136eba5c1e5fbec27f56523
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 6297f7a392a497b79adca991b1ceba7fd701856d
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683637"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672836"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Kurz: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu v aplikaci Visual Studio
 
@@ -42,7 +42,7 @@ V tomto kurzu se naučíte:
 > * Spuštění aplikace
 > * Přidání knihovny třetí strany pomocí npm
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje webu ASP.NET.
 
@@ -248,7 +248,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET C
       showMsg: function (): void {
          let v: any = jQuery.fn.jquery.toString();
          let content: any = $("#ts-example-2")[0].innerHTML;
-         alert(content.toString());
+         alert(content.toString() + " " + v + "!!");
          $("#ts-example-2")[0].innerHTML = content + " " + v + "!!";
       }
    };

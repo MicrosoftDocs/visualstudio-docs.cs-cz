@@ -2,17 +2,17 @@
 title: Nákupy cloudového předplatného sady Visual Studio pro zprostředkovatele CSP
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: d2ab13ed-ef79-4ef0-8736-eccd04bc6020
-ms.date: 02/19/2021
+ms.date: 03/18/2021
 ms.topic: conceptual
 description: Informace o poskytovatelích cloudových řešeních, jak koupit a spravovat cloudová předplatná sady Visual Studio pro vaše zákazníky.
-ms.openlocfilehash: 78d4f39eef4b3daabc5bcbfbf47e969dd6213d36
-ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
+ms.openlocfilehash: b905d698f3d9f1a763ae7d9e9dbc8276a5362da6
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102473293"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673018"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>Nákup a Správa cloudových předplatných sady Visual Studio pro vaše zákazníky
 Partneři v programu [Cloud Solution Provider (CSP)](https://partner.microsoft.com/cloud-solution-provider) si můžou koupit Visual Studio Enterprise a Visual Studio Professional předplatné cloudu pro své zákazníky.
@@ -22,7 +22,7 @@ Partneři v programu [Cloud Solution Provider (CSP)](https://partner.microsoft.c
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 Musíte nejdřív nastavit tenanta zákazníka v partnerském centru a vytvořit předplatné Azure pro tohoto tenanta.
 
 [Další informace](/azure/devops/organizations/billing/csp/set-up-csp-customer)
@@ -69,7 +69,7 @@ Pokud si chcete zobrazit ceny pro partnery CSP v programu Visual Studio, přihla
 
 Tady je postup, jak interpretovat, co vidíte v této tabulce:
 
-| Kategorie měřiče    |   Název                 |  Jednotky                                |           Co to je                          |
+| Kategorie měřiče    |   Name                 |  Jednotky                                |           Co to je                          |
 |-------------------|------------------------|---------------------------------------|-------------------------------------------------|
 | Visual Studio     | Enterprise             |  Předplatné                         | Visual Studio Enterprise měsíční předplatné   |
 | Visual Studio     | Professional           |  Předplatné                         | Visual Studio Professional měsíční předplatné |

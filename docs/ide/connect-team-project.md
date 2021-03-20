@@ -1,5 +1,5 @@
 ---
-title: Připojení k projektům v Team Explorer
+title: Připojení k projektům v Team Exploreru
 description: Naučte se používat Team Explorer v aplikaci Visual Studio pro práci se členy týmu pro vývoj a správu projektů.
 ms.custom: SEO-VS-2020
 ms.date: 11/17/2020
@@ -7,14 +7,14 @@ ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: fd482bd2225025b5cd8a14f0387e938626fad6d5
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 58603b72128af1c6dd9caae93f92c435f0851ada
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006312"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672992"
 ---
-# <a name="connect-to-projects-in-team-explorer"></a>Připojení k projektům v Team Explorer
+# <a name="connect-to-projects-in-team-explorer"></a>Připojení k projektům v Team Exploreru
 
 ::: moniker range="vs-2017"
 
@@ -63,6 +63,7 @@ Připojení k projektu:
 
 ## <a name="see-also"></a>Viz také
 
+- [Porovnání Gitu a Team Explorer vedle sebe](git-team-explorer-feature-comparison.md)
 - [Nové prostředí Git v aplikaci Visual Studio](git-with-visual-studio.md)
 - [Kurz: otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo.md)
 - [Referenční dokumentace k Team Exploreru](reference/team-explorer-reference.md)

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: dcd99e32-c9f3-4e19-8428-319dfa220463
-ms.date: 12/02/2020
+ms.date: 03/18/2021
 ms.topic: how-to
 description: Přečtěte si o zvýhodnění chatu concierge zahrnutém v předplatných sady Visual Studio.
-ms.openlocfilehash: 4f5f188ee7b6662549e5ade80a97c57f24bce64c
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 468433ba6cc378fd422f1fee6c806c6a701a9e65
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538095"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672025"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Konverzace programu concierge v předplatných sady Visual Studio
 Chatová služba concierge nabízí pomoc při hledání informací o produktech a technickou dokumentaci a také k podpoře používání výhod předplatného sady Visual Studio.
@@ -38,15 +38,15 @@ Získání pomoci prostřednictvím konverzační služby concierge je velmi sna
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ano          |
-| Visual Studio Enterprise předplatné s GitHubem Enterprise | VL| K dispozici       |  Ano          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici                                                            |  Ano          |
-| Visual Studio Professional předplatné s GitHubem Enterprise | VL | K dispozici                                                            |  Ano          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Ano          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici                                              |  Ano          |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Yes          |
+| Visual Studio Enterprise předplatné s GitHubem Enterprise | VL| K dispozici       |  Yes          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici                                                            |  Yes          |
+| Visual Studio Professional předplatné s GitHubem Enterprise | VL | K dispozici                                                            |  Yes          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Yes          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici                                              |  Yes          |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
 
-<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark.  Nezahrnuje: FTE, nejvíc hodnotných Professional (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Představte si.*
+<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark.  Nezahrnuje: FTE, nejvíc hodnotných Professional (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Představte si.  Vyloučení: NFR Basic*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
@@ -58,10 +58,10 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
    Odpověď: pomoc s účty, problémy s fakturací a předplatnými jsou k dispozici v několika jazycích.  Pomoc při vyhledávání informací o produktech a technickou dokumentaci je k dispozici v angličtině.
 
 ## <a name="support-resources"></a>Prostředky podpory
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)

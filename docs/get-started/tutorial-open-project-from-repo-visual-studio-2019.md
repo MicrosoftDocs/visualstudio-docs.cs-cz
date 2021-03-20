@@ -2,7 +2,7 @@
 title: 'Kurz: otevření projektu z úložiště v aplikaci Visual Studio 2019'
 description: Naučte se, jak otevřít projekt v úložišti Git nebo Azure DevOps pomocí sady Visual Studio 2019.
 ms.custom: get-started
-ms.date: 02/11/2021
+ms.date: 03/18/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -15,12 +15,12 @@ ms.workload:
 - dotnet
 - dotnetcore
 monikerRange: vs-2019
-ms.openlocfilehash: 5a637b2536c05e8f5678989f47dba61cd6ec7381
-ms.sourcegitcommit: 15109ead7991f52092502518a6f4d9061cc22cd2
+ms.openlocfilehash: 76dcd5061e2e12688f5119598071c3235e620967
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "100335493"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104671710"
 ---
 # <a name="tutorial-open-a-project-from-a-repo"></a>Kurz: otevření projektu z úložiště
 
@@ -53,6 +53,9 @@ Ale bez ohledu na to, jakou verzi jste nainstalovali, můžete vždy otevřít p
    ![Snímek obrazovky dialogového okna informace o uživateli Git, kam zadáte nebo upravíte informace o účtu v aplikaci Visual Studio 2019 verze 16,8 a novější](../ide/media/vs-2019/git-user-information-dialog.png)
 
     Pokud chcete přidat informace do globálního souboru. gitconfig, vyberte **Save (Uložit** ). (Nebo ji můžete zvolit později kliknutím na **Zrušit**.)
+
+    > [!TIP]
+    > Další informace o přihlašování k aplikaci Visual Studio naleznete na stránce [přihlášení do sady Visual Studio](../ide/signing-in-to-visual-studio.md) . Konkrétní informace o tom, jak se přihlašovat pomocí účtu GitHubu, najdete v tématu [práce s účty GitHubu na stránce sady Visual Studio](../ide/work-with-github-accounts.md) .
 
     V dalším kroku aplikace Visual Studio automaticky načte a otevře řešení z úložiště.
 
@@ -207,5 +210,6 @@ Pokud jste připravení na kód v rámci sady Visual Studio, podrobně do někte
 
 - [Otevření projektu z úložiště v aplikaci Visual Studio 2017](tutorial-open-project-from-repo-visual-studio-2017.md)
 - [Nové prostředí Git v aplikaci Visual Studio 2019](../ide/git-with-visual-studio.md)
+- [Porovnání Gitu a Team Explorer vedle sebe](../ide/git-team-explorer-feature-comparison.md)
 - [Azure DevOps Services: Začínáme s Azure Repos a sadou Visual Studio](/azure/devops/repos/git/gitquickstart/)
 - [Microsoft Learn: Začínáme s Azure DevOps](/learn/modules/get-started-with-devops/)

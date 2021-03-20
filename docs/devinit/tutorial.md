@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 32d407c4803c2b50276145a2c9a66c2c501f05ab
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5fc53a534b592b4f6a4799100ce16b1d45049457
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874418"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104671796"
 ---
 # <a name="tutorial"></a>Kurz
+
+> [!IMPORTANT]
+> Od 12. dubna 2021 se už nebudete moct připojit k GitHub Codespaces ze sady Visual Studio 2019 a uzavírá se tato privátní verze Preview. Zaměřujeme se na vývoj prostředí pro vnitřní smyčku s využitím cloudu a řešení VDI optimalizovaná pro širokou škálu úloh sady Visual Studio. Doporučujeme, abyste se účastnili našeho fóra komunity vývojářů pro Visual Studio, kde najdete informace o budoucích náhledech a informacích o plánech.
 
 V tomto kurzu se podíváme na nastavení [úložiště eShopOnWeb](https://github.com/andysterland/eShopOnWeb) s využitím Devinit a Codespaces. V tomto kurzu se předpokládá, že devinit je již k dispozici, jak je popsáno na [stránce Začínáme](getting-started-with-devinit.md).
 

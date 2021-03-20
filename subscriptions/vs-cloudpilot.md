@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 6255b6a3-f101-4b2c-b7fa-851eccc944b2
-ms.date: 02/19/2021
+ms.date: 03/18/2021
 ms.topic: conceptual
 description: Přečtěte si o výhodách CloudPilot dostupných ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 4d9b7bea4b2165b8efc9f57396b078c42a5fc8eb
-ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
+ms.openlocfilehash: 466358af00fe0f174043989c6eb54e976d98d3be
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102473358"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672064"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Výhoda CloudPilot v předplatných sady Visual Studio
 Přesuňte své aplikace do Microsoft Azure v několika snadných krocích. V minutách identifikujte všechny požadované změny kódu až do řádku kódu pro úspěšnou migraci na: kontejnery, virtuální počítače, App Services, SQL Azure a/nebo SQL MI. Pak migrujte aplikace do Azure pomocí průvodců využívajících ASR, DMA a DMS.
@@ -68,7 +68,7 @@ CloudPilot podle UnifyCloud je navržená tak, aby pomáhala vývojářům rychl
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | – |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
 
-<sup>1</sup>*zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, představte* si  
+<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, představit, NFR Basic*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
@@ -79,8 +79,6 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
 - Potřebujete pomoci s používáním CloudPilot?  Podívejte se na tyto materiály:
   - [Kontaktujte UnifyCloud](https://www.unifycloud.com/contacts/) ohledně dotazů týkajících se produktů UnifyCloud.
   - [Ruční uživatel CloudPilot](https://www.cloudatlasinc.com/cloudpilot/doc/CloudPilot-User-Manual.pdf )
-  - [Odeslat žádost o podporu](https://support.datacamp.com/hc/requests/new)
-
 - Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 

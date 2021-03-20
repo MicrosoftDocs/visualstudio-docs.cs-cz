@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 98d61d86b894dc989e24aef809e0f97fd513f481
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 603d09de5a37ea7ea4f0ff10c377c56eb9a3d63e
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932974"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672191"
 ---
 # <a name="frequently-asked-questions-for-devinit"></a>Nejčastější dotazy k devinit
+
+> [!IMPORTANT]
+> Od 12. dubna 2021 se už nebudete moct připojit k GitHub Codespaces ze sady Visual Studio 2019 a uzavírá se tato privátní verze Preview. Zaměřujeme se na vývoj prostředí pro vnitřní smyčku s využitím cloudu a řešení VDI optimalizovaná pro širokou škálu úloh sady Visual Studio. Jako součást tohoto `devinit` a přidružených nástrojů již nebudou k dispozici. Doporučujeme, abyste se účastnili našeho fóra komunity vývojářů pro Visual Studio, kde najdete informace o budoucích náhledech a informacích o plánech.
 
 ## <a name="is-devinit-just-for-github-codespaces"></a>Je devinit jenom pro GitHub Codespaces?
 

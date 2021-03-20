@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Přečtěte si o předplatném DataCamp, které je součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: c675d49f1a099c53dfdabe08a71f1c5545010f97
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 270dffd75a0b442e5f275d0840033e54be5fe883
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538082"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672012"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Zvýhodněné školení DataCamp v předplatných sady Visual Studio
 Opravňující předplatná sady Visual Studio zahrnují předplatná pro DataCamp.  Pomocí datacampu se můžete seznámit se všemi dovednostmi pro datové vědy, které potřebujete z pohodlí vašeho prohlížeče. Získáte výběr, kdy a co se naučíte. Výukové datové vědy je snazší než kdy dřív, a to bez softwaru pro instalaci a žádné speciální požadavky na hardware.
@@ -59,16 +59,16 @@ Můžete kdykoli zastavit a pokračovat v školení v další relaci.  Stačí n
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | tři měsíce       |  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Enterprise předplatné s GitHubem Enterprise   | VL | tři měsíce       |  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | tři měsíce                                                            |  Ne.  Dostupné jenom pro nové předplatitele           |
-| Visual Studio Professional předplatné s GitHubem Enterprise| VL | tři měsíce                                                            |  Ne.  Dostupné jenom pro nové předplatitele           |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | tři měsíce                                             |  Ne.  Dostupné jenom pro nové předplatitele           |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | tři měsíce                                              |  Ne.  Dostupné jenom pro nové předplatitele           |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | tři měsíce       |  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise předplatné s GitHubem Enterprise   | VL | tři měsíce       |  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | tři měsíce                                                            |  No.  Dostupné jenom pro nové předplatitele           |
+| Visual Studio Professional předplatné s GitHubem Enterprise| VL | tři měsíce                                                            |  No.  Dostupné jenom pro nové předplatitele           |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | tři měsíce                                             |  No.  Dostupné jenom pro nové předplatitele           |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | tři měsíce                                              |  No.  Dostupné jenom pro nové předplatitele           |
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | – |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
 
-<sup>1</sup>*zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, představte* si  
+<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, Představte si.  Vyloučení: NFR Basic*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
@@ -80,10 +80,10 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
   - [Komunita DataCamp](https://www.datacamp.com/community/tutorials), která nabízí fóra a kurzy.
   - [Centrum nápovědy pro DataCamp](https://support.datacamp.com/hc), kde najdete témata o podpoře a uvidíte otázky pro uživatele.
   - [Odeslat žádost o podporu](https://support.datacamp.com/hc/requests/new)
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)

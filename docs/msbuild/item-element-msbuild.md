@@ -18,20 +18,20 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 59a0660bb78e966150a6ef8d17dc24512a901a26
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2b5fd7129cfb21e5b59e8cdf0049b4ee75d59c87
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913951"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672732"
 ---
 # <a name="item-element-msbuild"></a>Item – Element (MSBuild)
 
 Obsahuje uživatelem definovanou položku a její metadata. Každá položka, která je použita v projektu MSBuild, musí být zadána jako podřízený `ItemGroup` elementu.
 
-\<Project>
-\<ItemGroup>
-\<Item>
+\<Project>\
+&nbsp;\<ItemGroup>\
+&nbsp;&nbsp;\<Item>
 
 ## <a name="syntax"></a>Syntax
 
@@ -116,7 +116,7 @@ Následující příklad kódu ukazuje, jak deklarovat dvě položky typu `CSFil
 </ItemGroup>
 ```
 
-Následující příklad kódu ukazuje, jak použít `Update` atribut pro úpravu metadat v souboru s názvem *somefile.cs* , který byl zahrnut prostřednictvím glob. (K dispozici pouze pro projekty .NET Core v aplikaci Visual Studio 2017 nebo novější.)
+Následující příklad kódu ukazuje, jak použít `Update` atribut pro úpravu metadat v souboru s názvem *nejakysoubor. cs* , který byl zahrnut prostřednictvím glob. (K dispozici pouze pro projekty .NET Core v aplikaci Visual Studio 2017 nebo novější.)
 
 ```xml
 <ItemGroup>

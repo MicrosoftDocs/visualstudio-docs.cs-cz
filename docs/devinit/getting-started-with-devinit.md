@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 99daeeff40091bb3600b82b1f25cc9cf44c52cf9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 660bb5a2c3d235a347e478d55ae8176e87c5d626
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99848237"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672479"
 ---
 # <a name="getting-started-with-devinit"></a>Začínáme s devinit
+
+> [!IMPORTANT]
+> Od 12. dubna 2021 se už nebudete moct připojit k GitHub Codespaces ze sady Visual Studio 2019 a uzavírá se tato privátní verze Preview. Zaměřujeme se na vývoj prostředí pro vnitřní smyčku s využitím cloudu a řešení VDI optimalizovaná pro širokou škálu úloh sady Visual Studio. Jako součást tohoto `devinit` a přidružených nástrojů již nebudou k dispozici. Doporučujeme, abyste se účastnili našeho fóra komunity vývojářů pro Visual Studio, kde najdete informace o budoucích náhledech a informacích o plánech.
 
 devinit je nástroj, který můžete použít k tomu, aby kdokoli mohl získat kód a zvýšit produktivitu vašeho úložiště spuštěním jednoduchého příkazu. Pomocí devinit můžete definovat všechny závislosti celého systému, které vaše úložiště potřebuje, jako je SQL Server, Node.js, Docker nebo IIS. Devinit může vyvolat další nástroje a správce balíčků a nainstalovat tak, co vaše úložiště potřebuje. Tyto závislosti definujete v souboru JSON s názvem [.devinit.jsv](devinit-json.md) a pak další osoba, která má vaše úložiště používat, stačí ke spuštění [`devinit init`](devinit-commands.md#init) instalace všech těchto závislostí. Takže místo toho, aby se do nového úložiště připojila polovina každodenního provozu, se to může udělat během několika minut.
 

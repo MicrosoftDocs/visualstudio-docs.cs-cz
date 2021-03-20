@@ -11,16 +11,19 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 95ed318c327735c85fda854d207b36874eeffca7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: add43a5d130d8938193774d50bb643f48ecc3f8c
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970982"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673044"
 ---
 # <a name="how-to-use-visual-studio-with-a-codespace-preview"></a>Jak používat Visual Studio s codespace (Preview)
 
-Visual Studio má skvělou podporu pro vývoj na GitHubu Codespaces. Můžete vytvořit a připojit se k codespace a máte plnou sílu sady Visual Studio pro práci na vašich projektech ve vzdáleném hostovaném prostředí. I když se váš zdrojový kód a nástroje nacházejí v codespace a vaše kompilace a ladění probíhá v cloudu, vývojové prostředí bude fungovat jako rychlé a bez obav, jako kdyby pracovali místně. Můžete pracovat s codespace ze sady Visual Studio 2019 Preview ([Zaregistrujte se do omezené veřejné beta verze](https://github.com/features/codespaces/signup-vs)).
+> [!Important] 
+> Od 12. dubna 2021 se už nebudete moct připojit k GitHub Codespaces ze sady Visual Studio 2019 a uzavírá se tato privátní verze Preview. Zaměřujeme se na vývoj prostředí pro vnitřní smyčku s využitím cloudu a řešení VDI optimalizovaná pro širokou škálu úloh sady Visual Studio. Doporučujeme, abyste se účastnili našeho [fóra komunity vývojářů](https://developercommunity.visualstudio.com/home) pro Visual Studio, kde najdete informace o budoucích náhledech a informacích o plánech. 
+
+Visual Studio má skvělou podporu pro vývoj na GitHubu Codespaces. Můžete vytvořit a připojit se k codespace a máte plnou sílu sady Visual Studio pro práci na vašich projektech ve vzdáleném hostovaném prostředí. I když se váš zdrojový kód a nástroje nacházejí v codespace a vaše kompilace a ladění probíhá v cloudu, vývojové prostředí bude fungovat jako rychlé a bez obav, jako kdyby pracovali místně.
 
 > [!NOTE]
 > Tento článek konkrétně popisuje použití sady Visual Studio pro připojení k GitHub Codespaces. Informace o připojení k codespace s dalšími klienty najdete v dokumentaci k [Visual Studio Code](https://docs.github.com/github/developing-online-with-codespaces/connecting-to-your-codespace-from-visual-studio-code) nebo [GitHubu](https://docs.github.com/github/developing-online-with-codespaces/developing-in-a-codespace) .

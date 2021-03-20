@@ -11,14 +11,18 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 1a94915748f6c7cedb19a0b27c67eb67d6086963
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ebd64a314f1c4d6afd7b6e6fcc3b38148ff68225
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971138"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672966"
 ---
 # <a name="supported-visual-studio-features-preview"></a>Podporované funkce sady Visual Studio (Preview)
+
+> [!Important] 
+> Od 12. dubna 2021 se už nebudete moct připojit k GitHub Codespaces ze sady Visual Studio 2019 a uzavírá se tato privátní verze Preview. Zaměřujeme se na vývoj prostředí pro vnitřní smyčku s využitím cloudu a řešení VDI optimalizovaná pro širokou škálu úloh sady Visual Studio. Doporučujeme, abyste se účastnili našeho [fóra komunity vývojářů](https://developercommunity.visualstudio.com/home) pro Visual Studio, kde najdete informace o budoucích náhledech a informacích o plánech. 
+
 
 Visual Studio poskytuje bohatou vývojové prostředí při připojování k codespace. Získáte nástroje pro vnitřní smyčku sady Visual Studio, se kterými jste obeznámeni s úpravami, laděním, testováním a verzí zdrojového kódu a také funkcí produktivity, jako jsou šablony projektů, navigace v kódu a IntelliSense.
 

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 02/09/2021
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Seznamte se s vývojářským účtem Windows, který je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: a988dabb5849d13733c72ebb5976be489f67dd95
-ms.sourcegitcommit: 0f3606917cf5451e8c4e0b2e0c3fbb9113429645
+ms.openlocfilehash: 4ea61f0bdb131c20412c0b99bbd09cbc44777fb7
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100089590"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672758"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Vývojářský účet pro Windows v předplatných sady Visual Studio
 Váš účet pro vývojáře ve Windows, který je součástí vybraného předplatného sady Visual Studio, umožňuje odeslat bezplatné a placené aplikace pro Windows do Windows Storu.
@@ -46,16 +46,16 @@ Pro tento proces doporučujeme vytvořit okno prohlížeče "soukromé".  Např�
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | Zahrnuje       |  Ano|
-| Visual Studio Enterprise předplatné s GitHubem Enterprise   | VL  | Zahrnuje       |  Ano|
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Zahrnuje                                                            |Ano|
-| Visual Studio Professional předplatné s GitHubem Enterprise | VL                                        | Zahrnuje                                                            |Ano|
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | Zahrnuje       |  Yes|
+| Visual Studio Enterprise předplatné s GitHubem Enterprise   | VL  | Zahrnuje       |  Yes|
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Zahrnuje                                                            |Yes|
+| Visual Studio Professional předplatné s GitHubem Enterprise | VL                                        | Zahrnuje                                                            |Yes|
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  NA|
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              |  Není k dispozici                                            |  NA|
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NA|
 ||
 
-<sup>1</sup>  *zahrnuje: ne pro účely opětovného prodeje (NFR), ekvivalentu, Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, což je nejlepší odborník (MVP), regionální ředitel (RD). Vyloučení: Microsoft Partner Network (MPN), Představte si MCT software & Services.*
+<sup>1</sup>  *zahrnuje: ne pro účely opětovného prodeje (NFR), ekvivalentu, Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, což je nejlepší odborník (MVP), regionální ředitel (RD). Vyloučení: Microsoft Partner Network (MPN), Představte si MCT software & Services, NFR Basic.*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
@@ -65,7 +65,7 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
 ## <a name="support-resources"></a>Prostředky podpory
 - Potřebujete pomoci s používáním vašeho účtu Windows Developer?  Projděte si materiály [podpory](https://developer.microsoft.com/windows/support) na stránce [Windows Dev Center](https://developer.microsoft.com/windows).
 - [Vývoj pro Windows](/windows/)
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací pro předplatné sady Visual Studio, obraťte se na [podporu předplatných](https://my.visualstudio.com/gethelp)sady Visual Studio Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také

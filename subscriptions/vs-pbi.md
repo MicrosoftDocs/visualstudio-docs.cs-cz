@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Seznamte se s předplatným Power BI Pro zahrnutým ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 6d64c9e5d15e24dcf53dd5b45261305dffb43353
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 1801ed8deae3294837078401420e16efdc016979
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538069"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672901"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Power BI Pro v předplatných sady Visual Studio
 
@@ -63,16 +63,16 @@ Pokud chcete použít Power BI Pro, budete muset nastavit účet nebo se přihl�
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ano|
-| Visual Studio Enterprise předplatné s GitHubem Enterprise  | VL | K dispozici       |  Ano|
-| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | Není k dispozici                                                            |Není k dispozici         |
-| Visual Studio Professional předplatné s GitHubem Enterprise | VL                                      | Není k dispozici                                                            |Není k dispozici         |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                            |Není k dispozici         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici       |  Ano|
-| Visual Studio Enterprise (měsíční Cloud) | Azure                                       | Není k dispozici                                  |Není k dispozici|
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Yes|
+| Visual Studio Enterprise předplatné s GitHubem Enterprise  | VL | K dispozici       |  Yes|
+| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | Není k dispozici                                                            |NA         |
+| Visual Studio Professional předplatné s GitHubem Enterprise | VL                                      | Není k dispozici                                                            |NA         |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                            |NA         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici       |  Yes|
+| Visual Studio Enterprise (měsíční Cloud) | Azure                                       | Není k dispozici                                  |NA|
 ||
 
-<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, MCT software & Service, MVP Professional (MVP), oblastní ředitel (RD).  Nezahrnuje se: Microsoft Partner Network (MPN), FTE, představte.*
+<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, MCT software & Service, MVP Professional (MVP), oblastní ředitel (RD).  Vyloučení: Microsoft Partner Network (MPN), FTE, představte, NFR Basic.*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
@@ -110,10 +110,10 @@ Odpověď: ne.  Power BI Pro výhodu nelze do tenantů státní správy přidat.
   - Projděte si [online dokumentaci](/power-bi/).
   - Problémy s registrací?  Rezervujte [registraci pro Power BI jako jednotlivce](/power-bi/service-self-service-signup-for-power-bi) .
   - Prozkoumejte hlavní problémy, Získejte pomoc od komunity nebo odešlete lístek podpory na [stránce podpory](https://powerbi.microsoft.com/support/).
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací pro předplatné sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)

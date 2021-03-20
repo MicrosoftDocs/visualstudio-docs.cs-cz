@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 9cd9fef6cebdefc190d37c067616e51c6d3e372f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6c8f487fcb35fc210db57f0c8a49a2a86f909e9
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908129"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672212"
 ---
 # <a name="devinit-commands"></a>příkazy devinit
+
+> [!IMPORTANT]
+> Od 12. dubna 2021 se už nebudete moct připojit k GitHub Codespaces ze sady Visual Studio 2019 a uzavírá se tato privátní verze Preview. Zaměřujeme se na vývoj prostředí pro vnitřní smyčku s využitím cloudu a řešení VDI optimalizovaná pro širokou škálu úloh sady Visual Studio. Jako součást tohoto `devinit` a přidružených nástrojů již nebudou k dispozici. Doporučujeme, abyste se účastnili našeho fóra komunity vývojářů pro Visual Studio, kde najdete informace o budoucích náhledech a informacích o plánech.
 
 ## <a name="init"></a>Init
 
@@ -34,10 +37,10 @@ Volitelné možnosti pro `devinit init` příkaz
 
 | Argument             | Povinné | Popis                                                               |
 |----------------------|----------|---------------------------------------------------------------------------|
-| -f,--soubor            | Ne       | Cesta k `.devinit.json` souboru                                         |
-| --Error-Action       | Ne       | Určuje, jak se mají zpracovávat chyby. Možnosti: zastavit, ignorovat, pokračovat (výchozí).|
-| -v,--verbose         | Ne       | Vygeneruje podrobný výstup.                                                      |
-| -n,--suchého běhu         | Ne       | Suché spuštění.                                                                  |
+| -f,--soubor            | No       | Cesta k `.devinit.json` souboru                                         |
+| --Error-Action       | No       | Určuje, jak se mají zpracovávat chyby. Možnosti: zastavit, ignorovat, pokračovat (výchozí).|
+| -v,--verbose         | No       | Vygeneruje podrobný výstup.                                                      |
+| -n,--suchého běhu         | No       | Suché spuštění.                                                                  |
 
 #### <a name="--file-argument"></a>--argument souboru
 
@@ -81,12 +84,12 @@ Možnosti `devinit run` příkazu
 
 | Argument                                      | Povinné | Popis                                                                          |
 |-----------------------------------------------|----------|--------------------------------------------------------------------------------------|
-| -t,--nástroj                                     | Ano      | Povinná hodnota. Název nástroje.                                                             |
-| -i,--vstup                                    | Ne       | Vstupní hodnota nástroje Například název souboru, balíček nebo název.                     |
-| --Error-Action                                | Ne       | Určuje způsob zpracování chyb nástrojů: zastavit, ignorovat, pokračovat. Výchozím nastavením je zastavit. |
-| -v,--verbose                                  | Ne       | Vygeneruje podrobný výstup.                                                                 |
-| -n,--suchého běhu                                  | Ne       | Suché spuštění.                                                                             |
-| --&lt;arg1 &gt; &lt; arg2 &gt; ... &lt; argN&gt;  | Ne       | Další argumenty příkazového řádku nástroje.                                       |
+| -t,--nástroj                                     | Yes      | Povinná hodnota. Název nástroje.                                                             |
+| -i,--vstup                                    | No       | Vstupní hodnota nástroje Například název souboru, balíček nebo název.                     |
+| --Error-Action                                | No       | Určuje způsob zpracování chyb nástrojů: zastavit, ignorovat, pokračovat. Výchozím nastavením je zastavit. |
+| -v,--verbose                                  | No       | Vygeneruje podrobný výstup.                                                                 |
+| -n,--suchého běhu                                  | No       | Suché spuštění.                                                                             |
+| --&lt;arg1 &gt; &lt; arg2 &gt; ... &lt; argN&gt;  | No       | Další argumenty příkazového řádku nástroje.                                       |
 
 #### <a name="--error-action-argument"></a>--error – argument akce
 
@@ -140,7 +143,7 @@ devinit show -t <toolname>
 
 | Argument       | Povinné | Popis                                                                          |
 |----------------|----------|--------------------------------------------------------------------------------------|
-| -t,--nástroj      | Ano      | Povinná hodnota. Název nástroje.                                                             |
+| -t,--nástroj      | Yes      | Povinná hodnota. Název nástroje.                                                             |
 
 Vytiskne informace o nápovědě pro daný nástroj.
 
@@ -152,7 +155,7 @@ devinit version
 
 Vytiskne aktuální informace o verzi pro devinit.
 
-## <a name="help"></a>Nápověda
+## <a name="help"></a>Help
 
 ```console
 devinit help

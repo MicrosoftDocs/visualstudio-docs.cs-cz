@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Seznamte se s předplatným školení Pluralsight, která jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: c5503c2adad075bdf6f186567fc372705f1ab55f
-ms.sourcegitcommit: 51e4426889ae5f49c69b122e37b3f48aa7a3925d
+ms.openlocfilehash: 6d12fcf49184d8e8293d4f4e3a3c552e859d3afe
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100542987"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104671697"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Výhody školení Pluralsight v předplatných sady Visual Studio
 
@@ -82,7 +82,7 @@ Po vypršení platnosti předplatného Pluralsight se stav změní na 0 dní zb�
 |             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Program      | Není k dispozici |       NA       |
 ||
 
-<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, MCT software & Service, MVP (MVP Professional), oblastní ředitel (RD), Microsoft Partner Network (MPN), FTE, představte.*
+<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, MCT software & Service, MVP (MVP Professional), oblastní ředitel (RD), Microsoft Partner Network (MPN), FTE, představte. Nezahrnuje se: NFR Basic.*
 
 <sup>2</sup>  *výhoda Pluralsight ve vybraných předplatných sady Visual Studio se obnoví po obnovení předplatného. Pokud máte například roční předplatné, které obnovujete každý rok, bude vám tato výhoda po obnovení k dispozici každý rok. Pokud máte předplatné na více let, výhoda Pluralsight je k dispozici jednou za období předplatného.  Pokud obnovíte předplatné na více let, bude tato výhoda po obnovení opět dostupná.*
 
@@ -110,7 +110,7 @@ Odpověď: na konci bezplatného předplatného Pluralsight se můžete rozhodno
 
 ## <a name="support-resources"></a>Prostředky podpory
 - [Pluralsight Help Center](https://help.pluralsight.com/help) poskytuje pomoc při přebírání Pluralsightch kurzů nebo používání webu Pluralsight.
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací pro předplatné sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také

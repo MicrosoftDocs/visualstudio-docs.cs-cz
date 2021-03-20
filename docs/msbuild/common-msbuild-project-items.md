@@ -17,35 +17,33 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cd43be13351309e0f4715ee889fb910f4f7e49a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ceb6b01f06964b8c79fa7357da6688e2e0229799
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963195"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672823"
 ---
 # <a name="common-msbuild-project-items"></a>Společné položky projektu nástroje MSBuild
 
 V nástroji MSBuild je položka pojmenovaný odkaz na jeden nebo více souborů. Položky obsahují metadata, jako jsou názvy souborů, cesty a čísla verzí. Všechny typy projektů v aplikaci Visual Studio mají několik položek společné. Tyto položky jsou definovány v souboru *Microsoft. Build. CommonTypes. xsd*.
 
-## <a name="common-items"></a>Společné položky
+V tomto článku jsou uvedeny všechny společné položky projektu.
 
-Níže je seznam všech běžných položek projektu.
-
-### <a name="reference"></a>Reference
+## <a name="reference"></a>Reference
 
 Představuje odkaz sestavení (spravovaného) v projektu.
 
 |Název metadat položky|Description|
 |---------------|-----------------|
 |Cestu|Volitelný řetězec. Relativní nebo absolutní cesta k sestavení|
-|Název|Volitelný řetězec. Zobrazovaný název sestavení, například "System. Windows. Forms."|
+|Name|Volitelný řetězec. Zobrazovaný název sestavení, například "System. Windows. Forms."|
 |Fusion|Volitelný řetězec. Určuje jednoduchý nebo silný název fúze pro položku.<br /><br /> Pokud je tento atribut přítomen, může ušetřit čas, protože soubor sestavení není nutné otevřít, aby získal název fúze.|
 |SpecificVersion|Volitelná logická hodnota. Určuje, zda má být odkazována pouze verze v názvu fúze.|
 |Aliasy|Volitelný řetězec. Všechny aliasy pro referenci|
 |Privátní|Volitelná logická hodnota. Určuje, zda má být odkaz zkopírován do výstupní složky. Tento atribut odpovídá vlastnosti **Copy Local** odkazu, který je v integrovaném vývojovém prostředí sady Visual Studio.|
 
-### <a name="comreference"></a>COMReference
+## <a name="comreference"></a>COMReference
 
 Představuje odkaz na komponentu modelu COM (nespravovaný) v projektu. Tato položka se vztahuje pouze na projekty .NET.
 
@@ -59,7 +57,7 @@ Představuje odkaz na komponentu modelu COM (nespravovaný) v projektu. Tato pol
 |WrapperTool|Volitelný řetězec. Název nástroje obálky, který se používá pro komponentu, například "Tlbimp".|
 |Isolated|Volitelná logická hodnota. Určuje, zda je komponenta komponentou bez registrace.|
 
-### <a name="comfilereference"></a>COMFileReference
+## <a name="comfilereference"></a>COMFileReference
 
 Představuje seznam knihoven typů, které jsou předány `TypeLibFiles` parametru cíle [ResolveComReference –](resolvecomreference-task.md) . Tato položka se vztahuje pouze na projekty .NET.
 
@@ -67,7 +65,7 @@ Představuje seznam knihoven typů, které jsou předány `TypeLibFiles` paramet
 |---------------|-----------------|
 |WrapperTool|Volitelný řetězec. Název nástroje obálky, který se používá pro komponentu, například "Tlbimp".|
 
-### <a name="nativereference"></a>NativeReference
+## <a name="nativereference"></a>NativeReference
 
 Představuje nativní soubor manifestu nebo odkaz na takový soubor.
 
@@ -76,7 +74,7 @@ Představuje nativní soubor manifestu nebo odkaz na takový soubor.
 |Název|Povinný řetězec. Základní název souboru manifestu.|
 |Cestu|Povinný řetězec. Relativní cesta k souboru manifestu.|
 
-### <a name="projectreference"></a>ProjectReference
+## <a name="projectreference"></a>ProjectReference
 
 Představuje odkaz na jiný projekt. `ProjectReference` položky jsou transformované na [referenční](#reference) položky podle `ResolveProjectReferences` cíle, takže jakákoli platná metadata na odkazu můžou být platná `ProjectReference` , pokud ho proces transformace nepřepíše.
 
@@ -93,7 +91,7 @@ Představuje odkaz na jiný projekt. `ProjectReference` položky jsou transformo
 |SkipGetTargetFrameworkProperties|Volitelná logická hodnota. Pokud `true` , sestavení odkazovaného projektu se sestaví bez vyjednávání hodnoty nejvíce kompatibilního `TargetFramework` . Výchozí hodnota je `false` .|
 |Targets|Volitelné `string[]` . Středníkem oddělený seznam cílů v odkazovaných projektech, které by měly být sestaveny. Výchozí hodnota je hodnota, jejíž výchozí hodnota je `$(ProjectReferenceBuildTargets)` prázdná, což značí výchozí cíle.|
 
-### <a name="compile"></a>Sestavení
+## <a name="compile"></a>Sestavení
 
 Představuje zdrojové soubory pro kompilátor.
 
@@ -105,7 +103,7 @@ Představuje zdrojové soubory pro kompilátor.
 | Viditelné | Volitelná logická hodnota. Označuje, zda se má soubor zobrazit v **Průzkumník řešení** v aplikaci Visual Studio. |
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
 
-### <a name="embeddedresource"></a>EmbeddedResource
+## <a name="embeddedresource"></a>EmbeddedResource
 
 Představuje prostředky, které mají být vloženy do generovaného sestavení.
 
@@ -120,7 +118,7 @@ Představuje prostředky, které mají být vloženy do generovaného sestavení
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
 | Logický operátor | Povinný řetězec. Logický název vloženého prostředku. |
 
-### <a name="content"></a>Content
+## <a name="content"></a>Content
 
 Představuje soubory, které nejsou zkompilovány do projektu, ale mohou být vloženy nebo publikovány společně s ní.
 
@@ -136,7 +134,7 @@ Představuje soubory, které nejsou zkompilovány do projektu, ale mohou být vl
 | Viditelné | Volitelná logická hodnota. Označuje, zda se má soubor zobrazit v **Průzkumník řešení** v aplikaci Visual Studio. |
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
 
-### <a name="none"></a>Žádné
+## <a name="none"></a>Žádné
 
 Představuje soubory, které by neměly mít žádné role v procesu sestavení.
 
@@ -150,7 +148,7 @@ Představuje soubory, které by neměly mít žádné role v procesu sestavení.
 | Viditelné | Volitelná logická hodnota. Označuje, zda se má soubor zobrazit v **Průzkumník řešení** v aplikaci Visual Studio. |
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
 
-### <a name="assemblymetadata"></a>AssemblyMetadata –
+## <a name="assemblymetadata"></a>AssemblyMetadata –
 
 Představuje atributy sestavení, které mají být generovány jako `[AssemblyMetadata(key, value)]` .
 
@@ -162,7 +160,7 @@ Představuje atributy sestavení, které mají být generovány jako `[AssemblyM
 > [!NOTE]
 > Tato položka se vztahuje na projekty používající sadu SDK pro .NET 5 (a .NET Core) a novější verze.
 
-### <a name="internalsvisibleto"></a>InternalsVisibleTo
+## <a name="internalsvisibleto"></a>InternalsVisibleTo
 
 Určuje sestavení, která mají být generována jako `[InternalsVisibleTo(..)]` atributy sestavení.
 
@@ -174,15 +172,15 @@ Určuje sestavení, která mají být generována jako `[InternalsVisibleTo(..)]
 > [!NOTE]
 > Tato položka se vztahuje na projekty používající sadu SDK pro .NET 5 (a .NET Core) a novější verze.
 
-### <a name="baseapplicationmanifest"></a>BaseApplicationManifest
+## <a name="baseapplicationmanifest"></a>BaseApplicationManifest
 
 Představuje manifest základní aplikace pro sestavení a obsahuje informace o zabezpečení nasazení ClickOnce.
 
-### <a name="codeanalysisimport"></a>CodeAnalysisImport
+## <a name="codeanalysisimport"></a>CodeAnalysisImport
 
 Představuje projekt FxCop, který se má importovat.
 
-### <a name="import"></a>Import
+## <a name="import"></a>Import
 
 Představuje sestavení, jejichž obory názvů by měly být importovány Visual Basic kompilátorem.
 

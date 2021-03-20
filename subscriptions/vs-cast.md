@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
-ms.date: 02/19/2021
+ms.date: 03/18/2021
 ms.topic: how-to
 description: Přečtěte si o výhodách zvýraznění přetypování dostupných ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 0acc7b62dbac66d25e61dcddfeee0c9124d66694
-ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
+ms.openlocfilehash: e8f218db14340171cc056075699dd80d3fb7ef55
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102473319"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672051"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Výhoda zvýraznění přetypování v předplatných sady Visual Studio
 Při migraci do cloudu potřebují vývojáři důležité poznatky o jejich softwaru. S zvýrazňováním přetypování může předplatitelé sady Visual Studio rychle prověřit svůj zdrojový kód aplikace a identifikovat připravenost svých aplikací pro Cloud na migraci do Azure a monitorovat průběh své aplikace jak během migrace, tak i po ní.
@@ -86,7 +86,7 @@ Po schválení vaší žádosti obdržíte druhý e-mail potvrzující úspěšn
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | – |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
 
-<sup>1</sup>*zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, představte* si  
+<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, představit, NFR Basic*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.

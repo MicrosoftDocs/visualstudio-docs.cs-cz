@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 02/19/2021
 ms.topic: overview
 description: Pronajímat Visual Studio Professional nebo Visual Studio Enterprise na měsíční nebo roční úrovni, a to bez dlouhodobé smlouvy.
-ms.openlocfilehash: 6aa17046726e19086f511c7ab59ab19228142e20
-ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
+ms.openlocfilehash: 56988001272fb11252b85cb60bdcae109edf8e29
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102473384"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672540"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Nákup Visual Studio Professional a Visual Studio Enterprise cloudových předplatných
 Můžete zakoupit [Visual Studio Professional a Visual Studio Enterprise odběry](https://visualstudio.microsoft.com/subscriptions/) z [Visual Studio Marketplace](https://marketplace.visualstudio.com). Ty se nazývají **"cloudové předplatné"**.
@@ -127,7 +127,7 @@ Odpověď: i když nebude moct koupit jiné cloudové předplatné, máte k disp
 - [Portál pro správu předplatných sady Visual Studio](https://manage.visualstudio.com/)
 - [Nejčastější dotazy k fakturaci pro cloudové předplatné sady Visual Studio](vscloud-billing-faq.md)
 - [Nákupy cloudového předplatného sady Visual Studio pro zprostředkovatele CSP](vscloud-csp.md)
-- - Pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio najdete v tématu [Podpora předplatných](https://aka.ms/vssubscriberhelp)sady Visual Studio.
+- - Pomoc s prodejem, předplatnými, účty a fakturací za předplatné sady Visual Studio najdete v tématu [Podpora předplatných](https://visualstudio.microsoft.com/subscriptions/support/) sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)

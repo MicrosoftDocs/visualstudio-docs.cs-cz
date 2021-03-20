@@ -1,6 +1,6 @@
 ---
 title: Prostředí příkazového řádku pro vývojáře
-description: Naučte se najít a použít Developer Command Prompt pro Visual Studio, vývojářský PowerShell a terminál sady Visual Studio, které vám umožní snadněji používat nástroje .NET a C++.
+description: Naučte se najít a použít Visual Studio Developer Command Prompt, Visual Studio Developer PowerShell a terminál sady Visual Studio, které vám umožní snadněji používat nástroje .NET a C++.
 ms.date: 03/04/2021
 ms.custom: contperf-fy21q3
 helpviewer_keywords:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Visual Studio terminal
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 no-loc: cmdlet
-ms.openlocfilehash: 406ef4e7d475df82a0e36732dd5e777959ea3b96
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: fb2c99037577528b77ab5c1b0c74bf7af9e73d1b
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249749"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672322"
 ---
 # <a name="developer-command-prompt-and-developer-powershell"></a>PowerShell Developer Command Prompt a vývojář
 
 Visual Studio 2019 obsahuje dvě prostředí příkazového řádku pro vývojáře:
 
-- **Developer Command Prompt pro Visual Studio** – standardní příkazový řádek s určitými proměnnými prostředí nastavenou na snadnější použití vývojářských nástrojů příkazového řádku.
-- **PowerShell pro vývojáře** – výkonnější než příkazový řádek. Například můžete předat výstup jednoho příkazu (známého jako *cmdlet* ) do jiného cmdlet . Toto prostředí má stejné proměnné prostředí nastavené jako Developer Command Prompt.
+- **Visual Studio Developer Command Prompt** – standardní příkazový řádek s určitými proměnnými prostředí nastavenými na snadnější použití vývojářských nástrojů příkazového řádku. K dispozici od aplikace Visual Studio 2015.
+- **PowerShell pro vývojáře sady Visual Studio** – výkonnější než příkazový řádek. Například můžete předat výstup jednoho příkazu (známého jako *cmdlet* ) do jiného cmdlet . Toto prostředí má stejné proměnné prostředí nastavené jako Developer Command Prompt. K dispozici od aplikace Visual Studio 2019.
 
 Obě prostředí mají sadu specifických proměnných prostředí, které umožňují snazší použití vývojářských nástrojů příkazového řádku. Po otevření jednoho z těchto prostředí můžete zadat příkazy pro různé nástroje, aniž byste museli znát, kde se nacházejí. Příkazy, které můžete spustit, zahrnují:
 
@@ -40,10 +40,6 @@ Počínaje verzí Visual Studio 2019 verze 16,5 obsahuje Visual Studio integrova
 :::image type="content" source="media/developer-command-prompt-for-vs/vs-terminal.png" alt-text="Terminál sady Visual Studio zobrazující více karet":::
 
 Když otevřete některou z vývojářských prostředí ze sady Visual Studio, ať už jako samostatnou aplikaci nebo v okně terminálu, otevře se v adresáři aktuálního řešení (Pokud máte řešení načtené). Díky tomuto chování je vhodné spouštět příkazy proti řešení nebo jeho projektům.
-
-## <a name="prerequisites"></a>Požadavky
-
-- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
 ## <a name="start-the-shell-from-inside-visual-studio"></a>Spuštění prostředí v rámci sady Visual Studio
 

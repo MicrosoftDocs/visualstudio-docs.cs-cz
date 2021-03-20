@@ -7,12 +7,12 @@ ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
 ms.date: 10/28/2020
 ms.topic: overview
 description: Naučte se, jak začít spravovat předplatná sady Visual Studio ve vaší organizaci pomocí portálu pro správu předplatných.
-ms.openlocfilehash: a9e23208bea480167452711442b52fb84b2bd8ee
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 3ac02dcd49af1c3277be0c3a15a2e3bf9c735f04
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904554"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673070"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Přehled portálu pro správu předplatných sady Visual Studio
 
@@ -25,7 +25,7 @@ Projděte si portál.
 ## <a name="important-considerations"></a>Důležité informace
 Pamatujte na tyto body, když použijete portál pro správu předplatných sady Visual Studio:
 - **Předplatná sady Visual Studio jsou licencovaná na uživatele.** Každý předplatitel může software používat na tolik počítačů, kolik jich je potřeba pro vývoj a testování.
-- **Přiřaďte každému předplatiteli jenom jednu úroveň předplatného** , která odpovídá předplatnému sady Visual Studio, které vaše organizace zakoupila. Pokud máte k těmto předplatitelům přiřazenou víc než jednu úroveň předplatného, upravte jejich nastavení tak, aby byla jenom jedna.
+- **Přiřaďte každému předplatiteli jenom jednu úroveň předplatného**, která odpovídá předplatnému sady Visual Studio, které vaše organizace zakoupila. Pokud máte k těmto předplatitelům přiřazenou víc než jednu úroveň předplatného, upravte jejich nastavení tak, aby byla jenom jedna.
 - **Úroveň předplatného předplatitele se bude muset aktualizovat** , až se předplatné upgraduje (po zakoupení "podrobné" licence), nebo se obnoví na nižší úrovni.
 - **Nesdílejte předplatná mezi předplatiteli.** Předplatná musí být přiřazena k pojmenovaným jednotlivcům.  Přiřazení předplatných týmům se nepovoluje.  Musíte přiřadit předplatné všem, kdo používá celou aplikaci nebo výhody předplatného (software pro vývoj a testování, Microsoft Azure, e-Learning atd.).
 
@@ -57,11 +57,11 @@ Další informace o zobrazené smlouvě získáte výběrem druhé ikony a klikn
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Porovnání možností a cen předplatného](https://visualstudio.microsoft.com/vs/pricing)
 - [Porovnání funkcí integrovaných vývojových prostředí (IDE) sady Visual Studio](https://visualstudio.microsoft.com/vs/compare)
-- [Podpora správce a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Podpora předplatných](https://visualstudio.microsoft.com/subscriptions/support/)
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

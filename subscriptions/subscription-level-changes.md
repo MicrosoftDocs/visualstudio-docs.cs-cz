@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: bb2fa359-8170-4db0-a0c5-d49fc692b0aa
-ms.date: 03/05/2021
+ms.date: 03/18/2021
 ms.topic: conceptual
 description: Přečtěte si o účincích upgradu nebo stahování úrovně předplatného sady Visual Studio.
-ms.openlocfilehash: ac4355149ba66cd06ae5c1abaeb57e7065631050
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 93ea729280916cb62ba2b87ff820bb25069369d7
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102250093"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672979"
 ---
 # <a name="what-happens-when-you-change-visual-studio-subscription-levels"></a>Co se stane, když změníte úrovně předplatného sady Visual Studio?
 V předplatných sady Visual Studio závisí software, nástroje, služby a další výhody, které jsou k dispozici, na úrovni předplatného.  Obecně platí, že čím vyšší je úroveň předplatného, tím více přináší výhody, které nabízí.  
@@ -63,7 +63,7 @@ Pokud používáte výhodu, která je ověřena při každém přihlášení k a
 Pokud používáte výhody nabízené ve vašem aktuálním předplatném, ale ne v předplatném, ke kterým dojde, můžete přijít o přístup k těmto výhodám.  
 
 ## <a name="support-resources"></a>Prostředky podpory
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
 - Máte dotazy k integrovanému vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps nebo k jiným produktům nebo službám sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také

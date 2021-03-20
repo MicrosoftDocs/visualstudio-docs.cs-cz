@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Naučte se aktivovat výhody technické podpory, které jsou součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: ea67dde54dd66af6d20b7f9af84d2bfe80211444
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 77856cf8a1f3497f66e89110e7b951c768da8c28
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537965"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672130"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Aktivace a používání výhod technické podpory v předplatných sady Visual Studio
 Výhoda technické podpory v rámci předplatných sady Visual Studio je určena pro řešení problémů s opravou chyb v **neprodukčních prostředích** pro produkty, které jsou stále ve fázi běžné podpory [životního cyklu podpory](https://support.microsoft.com/lifecycle/search). Visual Studio Enterprise standardní a roční cloudová předplatná obdrží čtyři incidenty, zatímco Visual Studio Professional standardní a roční předplatné cloudu obdrží dvě incidenty až po dobu 1 roku od aktivace výhod. Aktivace výhody musí nastat, když je předplatné aktuální.
@@ -107,22 +107,25 @@ Pokud chcete použít výhody technické podpory předplatného sady Visual Stud
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 4 incidenty       |  Ano|
-| Visual Studio Enterprise předplatné s GitHubem Enterprise | VL | 4 incidenty       |  Ano|
-| Visual Studio Professional (Standard) | VL, Azure, Retail, vybrané NFR<sup>2</sup>                                        | 2 incidenty                                                          |Ano         |
-| Visual Studio Professional předplatné s GitHubem Enterprise | VL                                     | 2 incidenty                                                          |Ano         |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | 2 incidenty                                             |  Ano         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | 2 incidenty                                               | Ano         |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 4 incidenty       |  Yes|
+| Visual Studio Enterprise předplatné s GitHubem Enterprise | VL | 4 incidenty       |  Yes|
+| Visual Studio Professional (Standard) | VL, Azure, Retail, vybrané NFR<sup>2</sup>                                        | 2 incidenty                                                          |Yes         |
+| Visual Studio Professional předplatné s GitHubem Enterprise | VL                                     | 2 incidenty                                                          |Yes         |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | 2 incidenty                                             |  Yes         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | 2 incidenty                                               | Yes         |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NA|
 ||
 
-<sup>1</sup> *zahrnuje: Představte si prémii, BizSpark. Nezahrnuje se: ne pro účely opětovného prodeje (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), ekvivalent, MCT software & Services, Představte si Standard, MVP Professional (MVP), oblastní ředitel (RD), MCT software & Services.*
+<sup>1</sup> *zahrnuje: Představte si prémii, BizSpark. Nezahrnuje se: ne pro účely opětovného prodeje (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), ekvivalent, MCT software & Services, Představte si Standard, MVP Professional (MVP), oblastní ředitel (RD), MCT software & Services. Vyloučení: NFR Basic*
 
 <sup>2</sup> *zahrnuje: Představte si Standard.*
 
 Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) Zobrazte všechna předplatná přiřazená k vaší e-mailové adrese. Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="support-resources"></a>Prostředky podpory
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
+- 
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
