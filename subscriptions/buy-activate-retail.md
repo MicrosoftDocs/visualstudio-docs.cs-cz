@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 76654645-08ee-445d-b9ee-123126d1f0fb
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Naučte se zakoupit předplatná sady Visual Studio v Microsoft Store a aktivovat je na portálu předplatných sady Visual Studio.
-ms.openlocfilehash: 3902ca5a4cce146d4a0ad62eb23dd777d6032f67
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 4ed9a46112e6a4f976948375f797cb37c0a52c6e
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249425"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776958"
 ---
 # <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Předplatná sady Visual Studio jsou k dispozici prostřednictvím Microsoft Store
 Předplatná sady Visual Studio jsou k dispozici prostřednictvím různých kanálů. Vyberte si [z multilicenčního programu, poskytovatele](https://www.microsoft.com/licensing/default)cloudových řešení, [Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions)a Microsoft Store.  Tento článek vás seznámí s nákupem a aktivací předplatných prostřednictvím [Microsoft Store](https://www.microsoft.com/store/collections/visualstudio).  

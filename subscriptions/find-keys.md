@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: cabuschl
 ms.assetid: da8df006-4896-4ff9-b487-698d78deabc3
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Naučte se najít, vyžádat a exportovat kódy Product Key v předplatných sady Visual Studio.
-ms.openlocfilehash: 5e055295e76ee91dbaf641256b8b7e93a530fcfb
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 2e74269c3e5e49e776b00484de790472030dc1c1
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249272"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776568"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Vyhledání a nárokování kódů Product Key v předplatných sady Visual Studio
 Tento článek vysvětluje, jak najít, vyžádat a exportovat kódy Product Key z https://my.visualstudio.com/productkeys .  Další informace o aktivaci produktu s klíčem, maloobchodními a multilicenčními verzemi klíčů a denními limity deklarací identity pro klíč produktu najdete v [přehledu kódů Product](product-keys.md)Key.
@@ -67,7 +67,7 @@ Můžete exportovat seznam klíčů, které jste si vyžádali.  To zahrnuje vel
 Pokud chcete klíče exportovat, vyberte odkaz **exportovat všechny klíče** v pravém rohu stránky kódy Product Key.  Vytvoří se soubor. XML s názvem KeysExport.xml, který můžete zvolit pro otevření nebo uložení souboru.  Soubor budete muset otevřít v aplikaci, která umí pracovat se soubory .xml.  Soubor můžete například otevřít jako sešit jen pro čtení v Excelu.
 
 ## <a name="resources"></a>Zdroje informací
-- [Podpora předplatných sady Visual Studio](https://my.visualstudio.com/gethelp)
+- [Podpora předplatných sady Visual Studio](https://aka.ms/vssubscriberhelp)
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)

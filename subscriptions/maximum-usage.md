@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
-ms.date: 10/28/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Podívejte se, jak zobrazit maximální počet přiřazených odběrů na portálu pro správu.
-ms.openlocfilehash: e8ea9aa9001312c792e6f9d356dbc5f7cf58dfb8
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 29aaa3d2268d5fc0ae99a1a400238d633e9026a5
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904487"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104777010"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Ke sledování počtu přiřazených předplatných použijte funkci maximální využití.
 Nová funkce na portálu pro správu předplatných sady Visual Studio vám pomůže sledovat počet předplatných, která jste zakoupili a přiřadili, a určí nejvyšší počet předplatných pro každou úroveň, kterou jste přiřadili, v minulém roce a po celou dobu trvání vaší smlouvy. 
@@ -45,12 +45,12 @@ Odpověď: informace v přehledu zobrazují *aktuální* přiřazení a dostupn�
 
 ## <a name="resources"></a>Prostředky
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
-- [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Podpora správy a předplatných sady Visual Studio](https://aka.ms/vsadminhelp)
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

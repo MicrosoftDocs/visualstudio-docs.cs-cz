@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 9c0b9a4f-b9a3-491c-a68f-6e4bac7f7b3d
-ms.date: 09/21/2020
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci na portálu pro správu najít jednotlivé předplatitele nebo skupiny.
-ms.openlocfilehash: e1fd5ea959043cbea58d0eb9a14649044f5d556e
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: df94b32dfcc5e2672282c0d18859cba42b490437
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904542"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776685"
 ---
 # <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Hledání a filtrování předplatitelů v předplatných sady Visual Studio
 Portál pro správu předplatných sady Visual Studio umožňuje najít konkrétní podmnožinu předplatitelů na základě různých kritérií. Seznam předplatitele můžete filtrovat podle jména, e-mailové adresy, úrovně předplatného a dalších informací.
@@ -36,14 +36,12 @@ Portál pro správu předplatných sady Visual Studio umožňuje najít konkrét
    > [!div class="mx-imgBorder"]
    > ![Vymazání filtru ze seznamu předplatitelů](_img/search-filter/clear-filter.png "Kliknutím na Vymazat filtr odeberte filtr a obnovte zobrazení všech vašich přiřazených předplatných.")
 
-
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 
-
 ## <a name="next-steps"></a>Další kroky
 - Teď, když víte, jak najít předplatitele, se dozvíte, jak [Upravit](edit-license.md) jejich předplatné.
-- Potřebujete pomoci s používáním portálu pro správu?  Obraťte [se na podporu správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs).
+- Potřebujete pomoci s používáním portálu pro správu?  Obraťte [se na podporu správy a předplatných sady Visual Studio](https://aka.ms/vsadminhelp).

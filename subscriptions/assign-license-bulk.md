@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci přiřazovat licence k několika předplatitelům pomocí funkce hromadného přidání nebo skupin Microsoft Azure Active Directory.
-ms.openlocfilehash: 76717090731b2e1fad0758c3c6298ab572bbb4de
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 4744f689e9b03e4a6cf8c804409abddfde16c527
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249579"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776893"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
 Portál pro správu předplatných umožňuje přidat uživatele v jednom okamžiku nebo ve velkých skupinách.  Chcete-li přidat jednotlivé uživatele, přečtěte si téma [přidání jednotlivých uživatelů](assign-license.md).
@@ -147,4 +147,4 @@ Odpověď: v závislosti na tom, jak vaše organizace nakonfigurovala Azure AD, 
 
 ## <a name="next-steps"></a>Další kroky
 - Chcete přidat jenom jednoho nebo dva předplatitele?  Podívejte se na [přidat jednotlivé uživatele](assign-license.md) .
-- Potřebujete pomoc? [Podpora předplatných](https://visualstudio.microsoft.com/subscriptions/support/)kontaktů.
+- Potřebujete pomoc? [Podpora předplatných](https://aka.ms/vsadminhelp)kontaktů.

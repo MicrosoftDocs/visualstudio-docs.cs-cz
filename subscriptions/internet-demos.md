@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 1c5ede60-cb5a-4d5f-a6a2-a1f536f6c4ad
-ms.date: 10/28/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Naučte se používat kódy Product Key k podpoře internetových ukázek prostřednictvím Terminálové služby a povolení přístupu k VP.
-ms.openlocfilehash: 9a63436e38779a51ba414969b36a2bb166e6cab9
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: c074dfe12ed7c1fea5ad60f7e0c8019e133a6d1b
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904613"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776542"
 ---
 # <a name="internet-demonstrations-via-terminal-services"></a>Internetové ukázky prostřednictvím Terminálové služby
 Pomocí předplatného sady Visual Studio můžete koncovým uživatelům poskytnout přístup k internetovým demonstračním programům prostřednictvím Terminálové služby (Windows Server 2003 nebo Windows Server 2008) nebo služby Vzdálená plocha (Windows Server 2008 R2 a novější). Tímto způsobem můžou k vašemu předvádění přistupovat až 200 anonymních uživatelů. Vaše ukázka nesmí používat produkční data. Předplatitelé sady Visual Studio mají licenci k předvedení svých aplikací koncovým uživatelům. Tato internetová ukázka pomocí Terminálové služby (TS) nebo služby Vzdálená plocha (RDS) je jediným scénářem, kdy mohou koncoví uživatelé bez předplatného sady Visual Studio pracovat s demonstrační aplikací, když je software licencován prostřednictvím předplatných sady Visual Studio.
@@ -35,10 +35,13 @@ Koncoví uživatelé se můžou k aplikacím přistupovat přes RDS, pokud jsou 
 - Pro ukázky aplikace lze použít až 200 souběžných uživatelských připojení.
 - Kódy Product Key pro povolení připojení uživatele musí získat předplatitel sady Visual Studio.
 
+## <a name="support-resources"></a>Prostředky podpory
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://aka.ms/vssubscriberhelp)
+
 ## <a name="see-also"></a>Viz také
-- [Documenation Windows serveru](/windows-server/)
+- [Dokumentace k Windows serveru](/windows-server/)
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

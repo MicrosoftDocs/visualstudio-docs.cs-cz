@@ -1,18 +1,18 @@
 ---
 title: Správa velkých týmů a dodavatelů v předplatných sady Visual Studio | Visual Studio Marketplace
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 3fc57f5f-2446-4774-9f8f-98ea1340f6b2
-ms.date: 03/09/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Přečtěte si o zodpovědnosti správců za účelem správy předplatných pro velké týmy a externím dodavatelům.
-ms.openlocfilehash: 55d2ac2eacaf523503c2593349abbcf561aed3b1
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: b54dc7a6a90556e73e1bebdd918435e9ce56a596
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904674"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776802"
 ---
 # <a name="large-teams-and-external-contractors"></a>Velké týmy a externí dodavatelé
 Správci předplatných sady Visual Studio zodpovídají za zajištění toho, aby každý uživatel, který spolupracuje s licencovaným softwarem sady Visual Studio, byl patřičně licencovaný s vlastním předplatným sady Visual Studio.
@@ -31,12 +31,12 @@ Externí dodavatelé můžou získat licence k zapojení do prostředí licencov
 
 ## <a name="resources"></a>Prostředky
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
-- [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Podpora správy a předplatných sady Visual Studio](https://aka.ms/vsadminhelp)
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7f4399d8-41da-41e5-a666-acc34958b8c0
-ms.date: 03/09/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Podrobnosti o tom, jaká předplatná jsou nabízená, jaká pravidla se použijí a kolik předplatných se nabízí v programu MPN.
-ms.openlocfilehash: 47b13147e87880ea90c07ee4746d5359571719b0
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: eab7779c7aedbbe7116a6227b16b6b3f4f15471c
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005830"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776750"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Předplatná sady Visual Studio nabízená partnerům v Microsoft Partner Network (MPN)
 
@@ -33,9 +33,9 @@ Když partner dostane kompetenci – na úrovni stříbra nebo Gold – partneř
 | Kompetencí                                  | Další odběry získané pro **stříbrné** kompetence | Další odběry získané pro **zlaté** kompetence |
 |---------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------|
 | Vývoj aplikací                     | 5 Visual Studio Enterprise předplatných                  | 25 Visual Studio Enterprise předplatných               |
-| Cloudová správa vztahů se zákazníky      | 5 Visual Studio Enterprise předplatných                  | 25 Visual Studio Enterprise předplatných               |
+| Řízení vztahů se zákazníky v cloudu      | 5 Visual Studio Enterprise předplatných                  | 25 Visual Studio Enterprise předplatných               |
 | Cloudová platforma                              | 5 Visual Studio Enterprise předplatných                  | 25 Visual Studio Enterprise předplatných               |
-| Produktivita cloudu                          | 5 Visual Studio Enterprise předplatných                  | 25 Visual Studio Enterprise předplatných               |
+| Produktivita v cloudu                          | 5 Visual Studio Enterprise předplatných                  | 25 Visual Studio Enterprise předplatných               |
 | DevOps                                      | 5 Visual Studio Enterprise předplatných                  | 25 Visual Studio Enterprise předplatných                |
 
 Počet předplatných sady Visual Studio bez ohledu na to, kolik kompetence partner vychází, je omezen následujícím způsobem:
@@ -71,15 +71,14 @@ Toto interní omezení jen pro použití v podstatě znamená, že partneři nem
 V případě předplatných sady Visual Studio nabízených přes MPN se musí licencovaný uživatel přihlásit k aplikaci Visual Studio pomocí stejné identity nebo přihlašovacího jména, které bylo použito k aktivaci předplatného sady Visual Studio. Kódy Product Key nejsou nabízeny k odemknutí produktu; jediným možností pro spuštění sady Visual Studio je přihlášení. Předplatitel sady Visual Studio může pracovat offline až po dobu 30 dnů, než přestane fungovat Visual Studio. Při práci v režimu online Visual Studio tiše aktualizuje stav licence uživatele pravidelně, aby bylo zajištěno, že předplatné je stále platné.
 
 ## <a name="resources"></a>Zdroje informací
-
 - [Průvodce Microsoft Partner Network programy](https://assets.microsoft.com/MPN-MAPS-Product-Usage-Guide.pdf?tpqid=300-000121)
 - [Přiřazení předplatných sady Visual Studio zaměstnancům programu MPN](manage-mpn-subscriptions.md)
 - [Podmínky použití](https://www.microsoft.com/useterms/) – předplatná sady Visual Studio nabízená přes MPN podléhají smlouvě EULA předplatných sady Visual Studio (NFR).
-
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://aka.ms/vssubscriberhelp)
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

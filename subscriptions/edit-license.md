@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci upravovat přiřazení předplatného.
-ms.openlocfilehash: f24c949224d895f4cc2926ab30db637835e7886c
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: b1779b80cc295e680ff1856181be42a6390fe25b
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249802"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776867"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Upravit přiřazení předplatných sady Visual Studio
 Jako správce předplatného můžete provádět změny v předplatných přiřazených jednotlivcům ve vaší organizaci.  Tento článek popisuje typy změn, které lze provést, a poskytuje potřebné kroky.
@@ -56,7 +56,7 @@ Podívejte se na toto video nebo si přečtěte, kde se dozvíte, jak upravit v�
 5. Po nahrání souboru se zobrazí oznámení o tom, že bylo úspěšné. V tomto okamžiku se vaše úpravy projeví v informacích o odběrateli.
 
 ## <a name="resources"></a>Zdroje informací
-- [Podpora předplatných](https://visualstudio.microsoft.com/subscriptions/support/)
+- [Podpora předplatných](https://aka.ms/vsadminhelp)
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)

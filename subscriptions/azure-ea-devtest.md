@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: a335ed23-34ee-40cb-83c6-6c93dee57424
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Naučte se využívat speciální ceny Azure DevTest dostupné zákazníkům se smlouvou Enterprise.
-ms.openlocfilehash: 9043a2d8f3ab069bcc02375089780d16d1e8a18b
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 157d094ef02864578ce4bf626d11457506817418
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249470"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776971"
 ---
 # <a name="azure-enterprise-agreement-devtest-offer"></a>Nabídka Azure smlouva Enterprise DevTest
 
@@ -42,7 +42,7 @@ Každý předplatitel účtu může vytvořit předplatné pomocí následujíc�
 0. Klikněte na **Koupit**.  (S touto nabídkou nemusíte ve skutečnosti kupovat žádné položky.)
 
 ## <a name="resources"></a>Zdroje informací
-- Potřebujete pomoc?  [Podpora předplatných](https://visualstudio.microsoft.com/subscriptions/support/)kontaktů.
+- Potřebujete pomoc?  [Podpora předplatných](https://aka.ms/vsadminhelp)kontaktů.
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)

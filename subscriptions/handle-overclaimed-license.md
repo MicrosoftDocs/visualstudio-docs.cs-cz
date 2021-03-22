@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: a747100c-6f08-41a4-aaad-05099741742b
-ms.date: 12/02/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Informace o tom, jak můžou správci vyřešit přetížená předplatná
-ms.openlocfilehash: c2876223d2aa4f8da5f267595a193a2fecc3ace2
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: d92671a3478fd8044b959c56f3201df5ff5c5a85
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537744"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776555"
 ---
 # <a name="over-allocated-subscriptions"></a>Přetížená předplatná
 V některých případech se po přidání předplatitelů mění objednávky, což může vést k většímu počtu přiřazených předplatných než k licencím vlastněných vaší společností. Tato možnost se nazývá "přepřidělování".  
@@ -37,7 +37,7 @@ Existuje několik způsobů, jak převádět více prostředků:
 Pokud má vaše organizace smlouva Enterprise (EA), správci můžou přiřadit předplatné bez jejich nákupu a platit za ně později prostřednictvím procesu odsouhlasení označovaného jako "pravda".  Při překročení přidělení se vaší organizaci bude účtovat maximální počet předplatných přiřazených uživatelům během "pravdivého".  Platí to i v případě, že už nebudete mít k dispozici maximální počet předplatných, které jsou přiřazené v době, kdy se pravdivá doba projeví.  Další informace o monitorování maximálního využití najdete v tématu věnovaném [maximálnímu využití](maximum-usage.md) .
 
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
@@ -45,4 +45,4 @@ Pokud má vaše organizace smlouva Enterprise (EA), správci můžou přiřadit 
 
 ## <a name="next-steps"></a>Další kroky
 - Přečtěte si další informace o správě [předplatných sady Visual Studio pomocí GitHubu Enterprise](assign-github.md).
-- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://aka.ms/vsadminhelp)sady Visual Studio

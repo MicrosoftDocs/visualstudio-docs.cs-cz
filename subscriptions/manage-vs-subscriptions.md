@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
-ms.date: 03/09/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Přečtěte si, jak využít předplatná sady Visual Studio na maximum.
-ms.openlocfilehash: a865bfa5cf7d55504e022efb1b134bddde7d231c
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: fce096a0999fefe16abc009c04f87cf4eff35748
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904685"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776829"
 ---
 # <a name="managing-subscriptions"></a>Správa předplatných
 
@@ -71,7 +71,7 @@ V profilu můžete snadno změnit kontaktní informace a předvolby.
 1. V pravém horním rohu portálu pro předplatitele vyberte své jméno.
 2. Klikněte na tlačítko **Upravit profil** .
 3. Na kartě **o** aplikaci můžete změnit své jméno, e-mail, zemi nebo oblast, profilový obrázek a kontaktní preference. Na kartě **Předvolby** můžete vybrat preferovaný jazyk, vzory data a času, časové pásmo a motiv uživatelského rozhraní.
-4. Po dokončení změn vyberte **Uložit** .
+4. Po dokončení změn vyberte **Uložit**.
 5. Kliknutím na tlačítko **zpět** v prohlížeči se vraťte na stránku výhody.
 
 ### <a name="setting-communications-preferences"></a>Nastavení předvoleb komunikace
@@ -89,8 +89,8 @@ Postup přidání alternativního účtu:
 
 1. Přihlaste se k [portálu předplatitele](https://my.visualstudio.com?wt.mc_id=o~msft~docs) pomocí svého účtu Microsoft (MSA).
 2. Vyberte kartu **předplatná** .
-3. V části **související odkazy** vyberte **Přidat alternativní účet** .
-4. Zadejte svoji e-mailovou adresu pracovního/školního účtu a vyberte **Přidat** .
+3. V části **související odkazy** vyberte **Přidat alternativní účet**.
+4. Zadejte svoji e-mailovou adresu pracovního/školního účtu a vyberte **Přidat**.
 
 Po přidání alternativního účtu ho můžete kdykoli aktualizovat nebo odebrat tak, že vyberete kartu **předplatná** a zvolíte příslušnou možnost v části **související odkazy** .
 
@@ -113,9 +113,12 @@ Odpověď: v závislosti na nákupním kanálu udržuje společnost Microsoft z�
 > - Pokud se rozhodnete zavřít účet Microsoft nebo Azure AD, vaše osobní údaje se okamžitě odeberou.
 > - Pokud máte aktivní předplatné, nebudeme plně odebírat všechna vaše osobní data.
 
+## <a name="support-resources"></a>Prostředky podpory
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://aka.ms/vssubscriberhelp)
+
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

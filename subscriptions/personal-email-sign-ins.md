@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
-ms.date: 10/28/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Předplatná sady Visual Studio – proč se mi zobrazují adresy služby Hotmail nebo Gmail pro moje předplatitele?
-ms.openlocfilehash: fda7dab50c2151049e0feffa50609bf4c38e38cc
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 99c22d74a9a6fb57e79f699e548de928ef1ebcb6
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189040"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776997"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Předplatná sady Visual Studio – proč se mi zobrazují osobní účty pro moje předplatitele?
 Po migraci společností z webu Volume Licensing Service Center (VLSC) na nový [portál pro správu předplatných](https://manage.visualstudio.com)sady Visual Studio byli správci překvapeni, že "přihlašovací e-mailová adresa" pro některé předplatitele zobrazuje osobní e-mailovou adresu, jako je Hotmail nebo Outlook.  
@@ -49,6 +49,9 @@ Dál klikněte na **pokračovat** , které vás provede seznamem změn, které s
 
 > [!NOTE]
 > Když upravujete e-mailovou adresu pro přihlášení, aktualizuje se jenom e-mail, který předplatitel používá pro přihlášení ke svému předplatnému https://my.visualstudio.com . Pokud už předplatitel aktivoval výhody, jako je Azure nebo Pluralsight, pomocí jiné e-mailové adresy, bude muset tyto e-mailové adresy dál používat pro přístup k nim. Pro všechny nové výhody, ke kterým mají přístup, by měly používat novou e-mailovou adresu. 
+
+## <a name="support-resources"></a>Prostředky podpory
+- Pokud potřebujete pomoc se správou předplatných sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://aka.ms/vsadminhelp).
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)

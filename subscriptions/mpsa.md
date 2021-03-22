@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b331c837-3524-42b7-820e-b4fdd5e12793
-ms.date: 03/05/2021
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Přečtěte si o správě předplatných sady Visual Studio v rámci smlouvy o produktech a službách společnosti Microsoft (MPSA).
-ms.openlocfilehash: 49f18b540d27678b46a5fa111c76a069b705309d
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 63124e8853184fde04db7bc202e5acea3cfbe89f
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249454"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776529"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Předplatná sady Visual Studio v rámci smlouvy o produktech a službách společnosti Microsoft (MPSA)
 Pokud jste si zakoupili předplatná sady Visual Studio prostřednictvím programu MPSA, měli byste si být vědomi, že před tím, než se stanete správcem předplatných sady Visual Studio a přiřadíte odběry uživatelům. Pokud jste již nastavili jako správce, můžete přejít přímo na [portál pro správu](https://manage.visualstudio.com/)předplatných sady Visual Studio.
@@ -56,6 +56,9 @@ Pro podrobnější vysvětlení tohoto procesu můžete použít [průvodce rych
 
 > [!NOTE]
 > Po dokončení procesu převzetí domény musíte dodržovat kritéria z pěti kroků v části pro přidružení předběžného tenanta (spravované). Po splnění kritérií bude nutné, abyste se obrátili na podporu MPSA a zřídili další správce předplatných sady Visual Studio.
+
+## <a name="support-resources"></a>Prostředky podpory
+- Pokud potřebujete pomoc se správou předplatných sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://aka.ms/vsadminhelp).
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)

@@ -3,15 +3,15 @@ title: Přiřazení konkrétních identifikátorů GUID předplatitelům sady Vi
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
-ms.date: 02/18/2021
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: Zjistěte, jak můžou správci určit identifikátor GUID předplatného pro předplatitele.
-ms.openlocfilehash: 3c92a3e6cc35230f6bcf10320e92a50dc5ffb85b
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: a0721029186605c6b9a277c9eb95a370a086d7d2
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249674"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776647"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Přiřazení konkrétních předplatných na portálu pro správu předplatných sady Visual Studio
 
@@ -63,7 +63,7 @@ Posledním krokem je stažení šablony **hromadného přidání** , vyplnění 
 Odpověď: Chcete-li změnit identifikátor GUID, který je přiřazen uživateli, musíte nejprve odstranit odběr daného uživatele.  Další informace najdete v článku věnovaném [odstranění odběrů](delete-license.md) , kde najdete další informace.  Po odstranění odběru pro daného uživatele použijte postup uvedený výše k exportu seznamu a nahrání nových informací o předplatném.  
 
 ## <a name="resources"></a>Zdroje informací
-- [Podpora předplatných](https://visualstudio.microsoft.com/subscriptions/support/)
+- [Podpora předplatných](https://aka.ms/vsadminhelp)
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
@@ -78,5 +78,3 @@ Teď, když jste přiřadili odběry uživatelům, zjistěte, jak provádět dal
 - [Úprava předplatných](edit-license.md)
 - [Odstranění předplatných](delete-license.md)
 - [Určení maximálního využití](maximum-usage.md)
-
-

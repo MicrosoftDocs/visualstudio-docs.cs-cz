@@ -1,18 +1,18 @@
 ---
 title: Nastavování správců pro měsíční předplatná sady Visual Studio | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 8b30e2bc-2ac3-4fcc-b296-128731471032
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Nastavení správců pro měsíční předplatná
-ms.openlocfilehash: c018dbc3437c03c6d029a98c84e0b6cceaef9e2c
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 220f5986bb06b638504379b63e911f9bb62926b5
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249541"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776945"
 ---
 # <a name="set-up-admins-for-visual-studio-monthly-subscriptions"></a>Nastavení pro měsíční předplatná sady Visual Studio pro správce
 
@@ -60,8 +60,7 @@ Nový správce se teď může přihlásit k [portálu pro správu](https://manag
 Informace o měsíčních předplatných sady Visual Studio najdete v [přehledu](vscloud-overview.md) v části nákup předplatných. Pokud si chcete koupit měsíční předplatná sady Visual Studio, navštivte Visual Studio Marketplace na adrese [https://marketplace.visualstudio.com/subscriptions](https://marketplace.visualstudio.com/subscription) .
 
 ## <a name="resources"></a>Zdroje informací
-- [Podpora předplatných](https://visualstudio.microsoft.com/subscriptions/support/)
-
+- [Podpora předplatných](https://aka.ms/vsadminhelp)
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)

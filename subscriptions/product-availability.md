@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: abf271b5-7547-4695-a46f-72b2878ba8d4
-ms.date: 03/09/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Informace o dostupnosti produktů v předplatných sady Visual Studio ke stažení softwaru
-ms.openlocfilehash: e223946aabd9a0b789f51e80e522c24d8a85dd4c
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 8188395c236ae116c36da7f60f0afb8042cb81b3
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005856"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776620"
 ---
 # <a name="product-availability-for-software-downloads-in-visual-studio-subscriptions"></a>Dostupnost produktu pro stahování softwaru v předplatných sady Visual Studio
 V rámci výhod vašeho předplatitele máte přístup k široké škále stahování softwaru.
@@ -38,9 +38,12 @@ Počet a typ stahování závisí na úrovni předplatného a na členství v pr
 
 Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) Zobrazte všechna předplatná přiřazená k vaší e-mailové adrese. Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
 
+## <a name="support-resources"></a>Prostředky podpory
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://aka.ms/vssubscriberhelp)
+
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 

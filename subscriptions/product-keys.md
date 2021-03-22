@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 89e3fcf9-fe5d-4266-8dd7-5567d05fe869
-ms.date: 10/28/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Naučte se, jak získat a spravovat kódy Product Key v předplatných sady Visual Studio.
-ms.openlocfilehash: a5da818a059709d311b87572f71b78a51dbb7deb
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: ad9672d089c6e50aa879b38841c468f235347963
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904000"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776763"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Používání kódů Product Key v předplatných sady Visual Studio
 
@@ -63,7 +63,7 @@ V závislosti na produktu je k dispozici celá řada typů klíčů.
 
 ### <a name="product-key-types"></a>Typy kódu Product Key
 
-|    Typ klíče           |    Description                                                                                                                                                                                                           |
+|    Typ klíče           |    Popis                                                                                                                                                                                                           |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Neuvedeno                    |    K instalaci tohoto produktu není nutný žádný klíč.                                                       |
 |    Retail                     |    Maloobchodní klíče umožňují více aktivací a používají se pro maloobchodní buildy produktu. V mnoha případech jsou povolené 10 aktivací na klíč, i když ve stejném počítači jsou často víc.                                                       |
@@ -79,9 +79,12 @@ V závislosti na produktu je k dispozici celá řada typů klíčů.
 
 Můžete si vyžádat klíč ze stránky pro stahování pro daný produkt, nebo můžete vyhledat klíč, který potřebujete, na stránce [kódy Product Key](https://my.visualstudio.com/productkeys) .
 
+## <a name="support-resources"></a>Prostředky podpory
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných sady Visual Studio](https://aka.ms/vssubscriberhelp)
+
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 
