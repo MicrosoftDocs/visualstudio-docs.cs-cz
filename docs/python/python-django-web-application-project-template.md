@@ -10,17 +10,20 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0193256edb4a55285e8017a56fe7249ef5d60362
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 462c66229b6f28d281bf03650e4d22d0d1dab64f
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912402"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104806040"
 ---
 # <a name="django-web-project-template"></a>Šablona webového projektu Django
-
+::: moniker range="vs-2017"
 [Django](https://www.djangoproject.com/) je špičková architektura Pythonu navržená pro rychlý, zabezpečený a škálovatelný webový vývoj. Podpora Pythonu v sadě Visual Studio poskytuje několik šablon projektů pro nastavení struktury webové aplikace založené na Django. Chcete-li použít šablonu v aplikaci Visual Studio, vyberte **soubor**  >  **Nový**  >  **projekt**, vyhledejte "Django" a vyberte možnost z **prázdného webového projektu Django**, **Django webového projektu** a **hlasování Django šablony webového projektu** . Návod pro všechny šablony najdete v [kurzu učení Django](learn-django-in-visual-studio-step-01-project-and-solution.md) .
-
+::: moniker-end
+::: moniker range=">=vs-2019"
+[Django](https://www.djangoproject.com/) je špičková architektura Pythonu navržená pro rychlý, zabezpečený a škálovatelný webový vývoj. Podpora Pythonu v sadě Visual Studio poskytuje několik šablon projektů pro nastavení struktury webové aplikace založené na Django. Chcete-li použít šablonu v aplikaci Visual Studio, vyberte **soubor**  >  **Nový**  >  **projekt**, vyhledejte "Django" a vyberte možnost z **prázdného webového projektu Django** a šablony **webových projektů Django** . Návod pro všechny šablony najdete v [kurzu učení Django](learn-django-in-visual-studio-step-01-project-and-solution.md) .
+::: moniker-end
 Visual Studio poskytuje kompletní technologii IntelliSense pro projekty Django:
 
 - Kontextové proměnné předané do šablony:

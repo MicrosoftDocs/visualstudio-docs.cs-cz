@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ef9154a34ddd08e7e0a4b9434f7f748b2603aef4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7926a7983e43545ad47e8bc975f051821c108c18
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882866"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104806001"
 ---
 # <a name="step-4-use-the-full-flask-web-project-template"></a>Krok 4: použití šablony webového projektu na celé baňce
 
@@ -229,8 +229,24 @@ Nebojte se experimentovat s Jinja a Jade syntaxemi, abyste viděli, které z nic
 
 ## <a name="next-steps"></a>Další kroky
 
-> [!div class="nextstepaction"]
-> [Šablona webového projektu v baňce k dotazům](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md)
+::: moniker range="vs-2017"
+- [Šablona webového projektu v baňce k dotazům](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md)
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+> [!Note]
+> Pokud jste řešení sady Visual Studio potvrdili pro správu zdrojového kódu v průběhu tohoto kurzu, je teď dobrý čas udělat další potvrzení změn. Vaše řešení by mělo odpovídat zdrojovému kódu kurzu na GitHubu: [Microsoft/Python-Sample-vs-Learning-baněk](https://github.com/Microsoft/python-sample-vs-learning-flask).
+
+Nyní jste se seznámili s "šablonami webového projektu" prázdná baňka "," baňka [/Jade] a "dotazy" [/Jade] web Project "v aplikaci Visual Studio. Seznámili jste se se základy, jako je používání zobrazení, šablon a směrování, a zjistili jste, jak používat zálohování úložišť dat. Nyní byste měli být schopni začít pracovat s webovou aplikací, kterou vlastníte, podle libovolných zobrazení a modelů, které potřebujete.
+
+Spuštění webové aplikace ve vývojovém počítači je pouze jedním krokem v tom, že je aplikace k dispozici pro vaše zákazníky. Další kroky můžou zahrnovat následující úlohy:
+
+- Nasaďte webovou aplikaci na provozní server, například Azure App Service. Viz [publikovat do Azure App Service](publishing-python-web-applications-to-azure-from-visual-studio.md).
+
+- Přidejte implementaci úložiště, která používá jiné úložiště dat na úrovni služby, jako je PostgreSQL, MySQL a SQL Server (všechny můžou být hostované v Azure). Můžete také použít [sadu Azure SDK pro Python](/azure/python/) pro práci se službami Azure Storage, jako jsou tabulky a objekty blob, a také Cosmos DB.
+
+- Nastavte kanál průběžné integrace nebo průběžného nasazování na službu, jako je Azure DevOps. Kromě práce se správou zdrojového kódu (prostřednictvím Azure Repos nebo GitHubu nebo jinde) můžete nakonfigurovat projekt Azure DevOps tak, aby automaticky spouštěl testy jednotek jako předpoklad pro vydání, a také nakonfigurovat kanál pro nasazení na přípravný Server pro další testy před nasazením do produkčního prostředí. Azure DevOps navíc integruje s monitorovacími řešeními, jako je App Insights, a uzavírá celý cyklus pomocí nástrojů pro agilní plánování. Další informace najdete v tématu [vytvoření kanálu CI/CD pro Python s Azure DevOps Projects](/azure/devops-project/azure-devops-project-python?view=vsts&preserve-view=true) a také v dokumentaci ke [službě Azure DevOps](/azure/devops/?view=vsts&preserve-view=true).
+::: moniker-end
 
 ## <a name="go-deeper"></a>Přejít hlouběji
 

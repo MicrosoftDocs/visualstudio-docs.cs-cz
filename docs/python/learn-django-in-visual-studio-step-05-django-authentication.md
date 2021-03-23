@@ -11,18 +11,24 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ea708c1721d85468d99a0ccc327f378042579f85
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3f589aed953a852cb57570988d914f77b2fa10b2
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942487"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104806014"
 ---
 # <a name="step-5-authenticate-users-in-django"></a>Krok 5: ověření uživatelů v Django
 
 **Předchozí krok: [použití úplné šablony webového projektu Django](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
 
+::: moniker range="vs-2017"
 Vzhledem k tomu, že ověřování je běžnou potřebou pro webové aplikace, zahrnuje šablona "webový projekt Django" tok základního ověřování. (Šablona "cyklické Djangos web Project" popsaná v kroku 6 tohoto kurzu obsahuje také stejný tok.) Při použití některé z šablon projektů Django zahrnuje Visual Studio všechny nezbytné moduly pro ověřování v *Settings.py* projektu Django.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+Vzhledem k tomu, že ověřování je běžnou potřebou pro webové aplikace, zahrnuje šablona "webový projekt Django" tok základního ověřování. Při použití některé z šablon projektů Django zahrnuje Visual Studio všechny nezbytné moduly pro ověřování v *Settings.py* projektu Django.
+::: moniker-end
 
 V tomto kroku se naučíte:
 
@@ -210,9 +216,28 @@ Odpověď: Tato `{% csrf_token %}` značka zahrnuje integrovanou ochranu CSRF (D
 
 ## <a name="next-steps"></a>Další kroky
 
-> [!div class="nextstepaction"]
-> [Použití šablony webového projektu Django pro cyklické dotazování](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md)
+::: moniker range="vs-2017"
+- [Použití šablony webového projektu Django pro cyklické dotazování](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md)
+::: moniker-end
 
+::: moniker range=">=vs-2019"
+> [!Note]
+> Pokud jste řešení sady Visual Studio potvrdili pro správu zdrojového kódu v průběhu tohoto kurzu, je teď dobrý čas udělat další potvrzení změn. Vaše řešení by mělo odpovídat zdrojovému kódu kurzu na GitHubu: [Microsoft/Python-Sample-vs-Learning-Django](https://github.com/Microsoft/python-sample-vs-learning-django).
+
+Nyní jste prozkoumali celou šablonu "prázdný webový projekt v Django" a "webový projekt Django" v aplikaci Visual Studio. Seznámili jste se se základy Django, jako je používání zobrazení a šablon, a máte prozkoumání směrování, ověřování a používání databázových modelů. Nyní byste měli být schopni vytvořit vlastní webovou aplikaci s libovolnými zobrazeními a modely, které potřebujete.
+
+Spuštění webové aplikace ve vývojovém počítači je pouze jedním krokem v tom, že je aplikace k dispozici pro vaše zákazníky. Další kroky můžou zahrnovat následující úlohy:
+
+- Nasaďte webovou aplikaci na provozní server, například Azure App Service. Viz [publikovat do Azure App Service](publishing-python-web-applications-to-azure-from-visual-studio.md).
+
+- Stránku 404 upravte vytvořením šablony s názvem *Templates/404.html*. Pokud je přítomna, Django použije tuto šablonu namísto jejího výchozího typu. Další informace najdete v tématu [zobrazení chyb](https://docs.djangoproject.com/en/2.0/ref/views/#error-views) v dokumentaci k Django.
+
+- Zápis testů jednotek v *Tests.py*; šablony projektů sady Visual Studio poskytují počáteční body pro tyto a další informace najdete na stránce s [psaním první aplikace v Django, v části 5 – testování](https://docs.djangoproject.com/en/2.0/intro/tutorial05/) a [testování v Django](https://docs.djangoproject.com/en/2.0/topics/testing/) v dokumentaci Django.
+
+- Změňte aplikaci z SQLite na úložiště dat na úrovni produkčního prostředí, jako je PostgreSQL, MySQL a SQL Server (všechny můžou být hostované v Azure). Jak je popsáno v tématu [kdy použít SQLite](https://www.sqlite.org/whentouse.html) (sqlite.org), je podrobná práce pro weby s nízkým až středním provozem s menším počtem přístupů 100 tisíc za den, ale nedoporučuje se pro vyšší svazky. Je také omezen na jeden počítač, a proto jej nelze použít v jakémkoli scénáři s více servery, jako je vyrovnávání zatížení a geografická replikace. Informace o podpoře Django pro jiné databáze najdete v tématu [nastavení databáze](https://docs.djangoproject.com/en/2.0/intro/tutorial02/#database-setup). Můžete také použít [sadu Azure SDK pro Python](/azure/python/) pro práci se službami Azure Storage, jako jsou tabulky a objekty blob.
+
+- Nastavte kanál průběžné integrace nebo průběžného nasazování na službu, jako je Azure DevOps. Kromě práce se správou zdrojového kódu (prostřednictvím Azure Repos nebo GitHubu nebo jinde) můžete nakonfigurovat projekt Azure DevOps tak, aby automaticky spouštěl testy jednotek jako předpoklad pro vydání, a také nakonfigurovat kanál pro nasazení na přípravný Server pro další testy před nasazením do produkčního prostředí. Azure DevOps navíc integruje s monitorovacími řešeními, jako je App Insights, a uzavírá celý cyklus pomocí nástrojů pro agilní plánování. Další informace najdete v tématu [vytvoření kanálu CI/CD pro Python s projektem Azure DevOps](/azure/devops-project/azure-devops-project-python?view=vsts&preserve-view=true) a také v [dokumentaci k Azure DevOps](/azure/devops/?view=vsts&preserve-view=true).
+::: moniker-end
 ## <a name="go-deeper"></a>Přejít hlouběji
 
 - [Ověřování uživatelů v Django](https://docs.djangoproject.com/en/2.0/topics/auth/) (docs.djangoproject.com)

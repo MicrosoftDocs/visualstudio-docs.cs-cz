@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1f6376978826afc2946cfac25ab635d0b7533dc4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a309ba898c22836fb5c0cebfc390b6c8d7c116c5
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939536"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805988"
 ---
 # <a name="python-web-application-project-templates"></a>Šablony projektů webové aplikace v Pythonu
 
@@ -39,7 +39,7 @@ Všechny ostatní šablony jsou založené na láhvi, baňce nebo webových rozh
 
 Všechny šablony **prázdného \<framework> webového projektu** vytvoří projekt s více nebo méně standardními kódy a potřebnými závislostmi deklarovanými v souboru *requirements.txt* .
 
-| Template (Šablona) | Description |
+| Template (Šablona) | Popis |
 | --- | --- |
 | **Webový projekt ve volné láhvi** | Vygeneruje minimální aplikaci v *App.py* s domovskou stránkou `/` a `/hello/<name>` stránkou, která se `<name>` bude zobrazovat pomocí velmi krátké vložené šablony stránky. |
 | **Prázdný webový projekt v Django** | Vygeneruje projekt Django se základní strukturou lokality Django, ale bez aplikací Django. Další informace najdete v tématu [šablony Django](python-django-web-application-project-template.md) a [informace o Django kroku 1](learn-django-in-visual-studio-step-01-project-and-solution.md). |
@@ -49,23 +49,25 @@ Všechny šablony **prázdného \<framework> webového projektu** vytvoří proj
 
 Všechny šablony **\<Framework> webového projektu** vytvoří úvodní webovou aplikaci se stejným návrhem bez ohledu na zvolenou architekturu. Aplikace obsahuje stránky domů, o produktu a kontaktů spolu s návrhem navigačního panelu a s odpovídajícím návrhem pomocí Bootstrap. Každá aplikace je vhodně nakonfigurovaná tak, aby sloužila pro statické soubory (šablony stylů CSS, JavaScript a Font), a používá mechanismus šablony stránky vhodný pro rozhraní.
 
-| Template (Šablona) | Description |
+| Template (Šablona) | Popis |
 | --- | --- |
 | **Webový projekt na láhev** | Vygeneruje aplikaci, jejíž statické soubory jsou obsaženy ve *statické* složce a zpracovávány prostřednictvím kódu v *App.py*. Směrování pro jednotlivé stránky je obsaženo v *Routes.py* a složka *zobrazení* obsahuje šablony stránky.|
 | **Webový projekt v Django** | Vygeneruje projekt Django a aplikaci Django se třemi stránkami, podporou ověřování a databází SQLite (ale bez datových modelů). Další informace najdete v tématu [šablony Django](python-django-web-application-project-template.md) a [informace o Django kroku 4](learn-django-in-visual-studio-step-04-full-django-project-template.md). |
 | **Webový projekt v baňce** | Vygeneruje aplikaci, jejíž statické soubory jsou obsaženy ve *statické* složce. Kód v *views.py* zpracovává směrování s šablonami stránek pomocí modulu Jinja, který je součástí složky *Templates* . Soubor *runserver.py* poskytuje spouštěcí kód. Viz část [informace o baňce – krok 4](learn-flask-visual-studio-step-04-full-flask-project-template.md). |
 | **Webový projekt ve baňce/Jade** | Vygeneruje stejnou aplikaci jako s šablonou **webového projektu baňky** , ale s použitím rozšíření Jade pro modul Jinja šablonování. |
 
+::: moniker range="vs-2017"
 ### <a name="polls-group"></a>Skupina dotazování
 
 Šablony **\<framework> webového projektu cyklického dotazování** vytvoří úvodní webovou aplikaci, přes kterou můžou uživatelé hlasovat o různých dotazech na dotazy. Každá aplikace je vytvořena na základě struktury šablon **webového** projektu, aby používala databázi ke správě dotazů a odpovědí uživatelů. Aplikace zahrnují vhodné datové modely a speciální stránku aplikace (/seed), která načte dotazy z *samples.jsdo* souboru.
 
-| Template (Šablona) | Description |
+| Template (Šablona) | Popis |
 | --- | --- |
 | **Webový projekt pro dotazování na láhev** | Vygeneruje aplikaci, která se dá spustit pro databázi v paměti, MongoDB nebo Azure Table Storage, která je nakonfigurovaná pomocí `REPOSITORY_NAME` proměnné prostředí. Datové modely a kód úložiště dat jsou obsaženy ve složce *modely* a soubor *Settings.py* obsahuje kód k určení, které úložiště dat je použito. |
 | **Dotaz na webový projekt Django** | Vygeneruje projekt Django a aplikaci Django se třemi stránkami a databází SQLite. Zahrnuje úpravy rozhraní pro správu Django, aby mohl ověřený správce vytvářet a spravovat dotazování. Další informace najdete v tématu [Django Templates](python-django-web-application-project-template.md) and [Django Step 6](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md). |
 | **Webový projekt v baňce s dotazy** | Vygeneruje aplikaci, která se dá spustit pro databázi v paměti, MongoDB nebo Azure Table Storage, která je nakonfigurovaná pomocí `REPOSITORY_NAME` proměnné prostředí. Datové modely a kód úložiště dat jsou obsaženy ve složce *modely* a soubor *Settings.py* obsahuje kód k určení, které úložiště dat je použito. Aplikace používá modul Jinja pro šablony stránek. Viz část [informace o baňce krok 5](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md). |
 | **Webový projekt ve Jade/baňce pro dotazy** | Vygeneruje stejnou aplikaci, jako je šablona webového projektu s protokolem **cyklického dotazování** , ale používá rozšíření Jade pro modul Jinja šablonování. |
+::: moniker-end
 
 ## <a name="install-project-requirements"></a>Instalovat požadavky projektu
 

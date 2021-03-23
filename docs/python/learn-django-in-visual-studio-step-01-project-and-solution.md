@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: afde24347237ed3fc87d7a00ebdf21787d78909c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c6bf427f7597b59fc5bb6fb32766134daa5b22bf
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942657"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104806066"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>Kurz: Začínáme s webovým rozhraním Django v aplikaci Visual Studio
 
@@ -24,15 +24,24 @@ ms.locfileid: "99942657"
 
 V tomto kurzu se naučíte:
 
-> [!div class="checklist"]
-> - Vytvoření základního projektu Django v úložišti Git pomocí šablony "prázdný webový projekt v Django" (krok 1)
-> - Vytvoření aplikace Django s jednou stránkou a vykreslení této stránky pomocí šablony (krok 2)
-> - Obsluha statických souborů, přidávání stránek a použití dědičnosti šablon (krok 3)
-> - Použití šablony webového projektu Django k vytvoření aplikace s několika stránkami a návrhem reakce (krok 4)
-> - Ověřování uživatelů (krok 5)
-> - Pomocí šablony webového projektu Django cyklické dotazy můžete vytvořit aplikaci, která používá modely, migrace databáze a přizpůsobení rozhraní pro správu (krok 6).
+::: moniker range="vs-2017"
+- Vytvoření základního projektu Django v úložišti Git pomocí šablony "prázdný webový projekt v Django" (krok 1)
+- Vytvoření aplikace Django s jednou stránkou a vykreslení této stránky pomocí šablony (krok 2)
+- Obsluha statických souborů, přidávání stránek a použití dědičnosti šablon (krok 3)
+- Použití šablony webového projektu Django k vytvoření aplikace s několika stránkami a návrhem reakce (krok 4)
+- Ověřování uživatelů (krok 5)
+- Pomocí šablony webového projektu Django cyklické dotazy můžete vytvořit aplikaci, která používá modely, migrace databáze a přizpůsobení rozhraní pro správu (krok 6).
+::: moniker-end
 
-## <a name="prerequisites"></a>Požadavky
+::: moniker range=">=vs-2019"
+- Vytvoření základního projektu Django v úložišti Git pomocí šablony "prázdný webový projekt v Django" (krok 1)
+- Vytvoření aplikace Django s jednou stránkou a vykreslení této stránky pomocí šablony (krok 2)
+- Obsluha statických souborů, přidávání stránek a použití dědičnosti šablon (krok 3)
+- Použití šablony webového projektu Django k vytvoření aplikace s několika stránkami a návrhem reakce (krok 4)
+- Ověřování uživatelů (krok 5)
+::: moniker-end
+
+## <a name="prerequisites"></a>Předpoklady
 
 - Visual Studio 2017 nebo novější ve Windows s následujícími možnostmi:
   - Úloha **vývoje Pythonu** (karta **zatížení** v instalačním programu). Pokyny najdete v tématu [Instalace podpory Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md).

@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e77d4ea1d46914962f0791af91ad6c1efe21825c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ca82beef26f897b2f5d3a145c968c11efaabc294
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942513"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104806053"
 ---
 # <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>Kurz: Začínáme s webovým rozhraním v baňce v aplikaci Visual Studio
 
@@ -24,21 +24,32 @@ ms.locfileid: "99942513"
 
 Baňka se nazývá "mikro" architektura, protože přímo neposkytuje funkce, jako je ověřování formuláře, abstrakce databáze, ověřování atd. Tyto funkce jsou místo toho k dispozici speciálními balíčky Pythonu, které se nazývají *rozšíření* baněk. Rozšíření se hladce integrují s použitím baňky tak, aby se zobrazila jako součást samotné baňky. Například samotná baňka neposkytuje modul šablony stránky. Šablonování je poskytována rozšířeními, jako jsou Jinja a Jade, jak je znázorněno v tomto kurzu.
 
+::: moniker range="vs-2017"
 V tomto kurzu se naučíte:
-
-> [!div class="checklist"]
-> - Vytvoření projektu základní baňky v úložišti Git pomocí šablony "prázdný webový projekt v baňce" (krok 1)
-> - Vytvoření aplikace v baňce s jednou stránkou a vykreslení této stránky pomocí šablony (krok 2)
-> - Obsluha statických souborů, přidávání stránek a použití dědičnosti šablon (krok 3)
-> - Použití šablony webového projektu v baňce k vytvoření aplikace s několika stránkami a návrhem reakce (krok 4)
-> - Pomocí šablony webového projektu pro cyklické dotazování můžete vytvořit aplikaci pro cyklické dotazování, která používá celou řadu možností úložiště (úložiště Azure, MongoDB nebo paměť).
+- Vytvoření projektu základní baňky v úložišti Git pomocí šablony "prázdný webový projekt v baňce" (krok 1)
+- Vytvoření aplikace v baňce s jednou stránkou a vykreslení této stránky pomocí šablony (krok 2)
+- Obsluha statických souborů, přidávání stránek a použití dědičnosti šablon (krok 3)
+- Použití šablony webového projektu v baňce k vytvoření aplikace s několika stránkami a návrhem reakce (krok 4)
+- Pomocí šablony webového projektu pro cyklické dotazování můžete vytvořit aplikaci pro cyklické dotazování, která používá celou řadu možností úložiště (úložiště Azure, MongoDB nebo paměť).
 
 V průběhu těchto kroků vytvoříte jedno řešení sady Visual Studio, které obsahuje tři samostatné projekty. Projekt vytvoříte pomocí různých šablon projektů v baňce, které jsou součástí sady Visual Studio. Udržováním projektů ve stejném řešení můžete snadno přepínat mezi různými soubory a jejich porovnáním.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+V tomto kurzu se naučíte:
+- Vytvoření projektu základní baňky v úložišti Git pomocí šablony "prázdný webový projekt v baňce" (krok 1)
+- Vytvoření aplikace v baňce s jednou stránkou a vykreslení této stránky pomocí šablony (krok 2)
+- Obsluha statických souborů, přidávání stránek a použití dědičnosti šablon (krok 3)
+- Použití šablony webového projektu v baňce k vytvoření aplikace s několika stránkami a návrhem reakce (krok 4)
+
+V průběhu těchto kroků vytvoříte jedno řešení sady Visual Studio, které obsahuje dva samostatné projekty. Projekt vytvoříte pomocí různých šablon projektů v baňce, které jsou součástí sady Visual Studio. Udržováním projektů ve stejném řešení můžete snadno přepínat mezi různými soubory a jejich porovnáním.
+::: moniker-end
 
 > [!Note]
 > Tento kurz se liší od rychlého startu v [baňce](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json) , ve kterém se dozvíte více o baňce a také o tom, jak používat různé šablony projektů v baňce, které poskytují rozsáhlejší výchozí bod pro vaše vlastní projekty. Například šablony projektu automaticky instalují balíček baňky při vytváření projektu, ale nevyžadují ruční instalaci balíčku, jak je znázorněno v rychlém startu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Visual Studio 2017 nebo novější ve Windows s následujícími možnostmi:
   - Úloha **vývoje Pythonu** (karta **zatížení** v instalačním programu). Pokyny najdete v tématu [Instalace podpory Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md).
