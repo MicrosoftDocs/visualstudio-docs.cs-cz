@@ -11,12 +11,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab5ddea8ddb3fdd741f4df3b3b53f4239d016049
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 81311e9dea2c5367b44cdf2cc8e2327a8aff5617
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928964"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884106"
 ---
 # <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>Postupy: spuštění samostatné .NET Framework aplikace s profilerem za účelem shromáždění dat souběžnosti pomocí příkazového řádku
 Toto téma popisuje způsob používání nástrojů příkazového řádku balíku nástrojů pro profilaci sady [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ke spuštění samostatné (klientské) aplikace rozhraní .NET Framework a shromažďování dat procesu a souběžnosti vláken.
@@ -39,7 +39,7 @@ Toto téma popisuje způsob používání nástrojů příkazového řádku bal�
 
    - Možnost [/Start](../profiling/start.md) inicializuje Profiler.
 
-     | | |
+     | Příkaz | Popis |
      |-------------------------------------| - |
      | **/Start: souběžnost** | Umožňuje shromažďovat kolize prostředků a data spouštění vlákna. |
      | **/Start: Concurrency, resourceonly** | Umožňuje shromažďovat pouze data kolize prostředků. |

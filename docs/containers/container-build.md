@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 004427ced7d18d9a5af5c863172416fd8637aa69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07ecc9a171cf6c0ca254ddbf284f116545ddd0f0
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536861"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884080"
 ---
 # <a name="how-visual-studio-builds-containerized-apps"></a>Jak Visual Studio vytváří kontejnerizované aplikace
 
@@ -76,7 +76,7 @@ docker build -f Dockerfile ..
 
 Fázemi vytvořené pomocí sady Visual Studio pro projekty .NET Framework (a pro projekty .NET Core vytvořené ve verzích sady Visual Studio před aktualizací Visual Studio 2017 Update 4) nejsou fázemi s více fázemi.  Kroky v těchto fázemi nekompiluje váš kód.  Místo toho, když Visual Studio sestaví .NET Framework souboru Dockerfile, nejprve zkompiluje projekt pomocí nástroje MSBuild.  Po úspěšném sestavení Visual Studio sestaví souboru Dockerfile, který jednoduše zkopíruje výstup sestavení z MSBuild do výsledné image Docker.  Vzhledem k tomu, že kroky pro zkompilování kódu nejsou zahrnuty do souboru Dockerfile, nemůžete sestavit .NET Framework fázemi pomocí `docker build` z příkazového řádku. K sestavování těchto projektů byste měli použít MSBuild.
 
-Pokud chcete vytvořit image pro jeden projekt kontejneru Docker, můžete použít MSBuild s `/t:ContainerBuild` možností příkazu. Příklad:
+Pokud chcete vytvořit image pro jeden projekt kontejneru Docker, můžete použít MSBuild s `/t:ContainerBuild` možností příkazu. Například:
 
 ```cmd
 MSBuild MyProject.csproj /t:ContainerBuild /p:Configuration=Release
@@ -107,7 +107,7 @@ Pro ladění pro práci v kontejnerech používá Visual Studio mapování svazk
 
 |Svazek|Popis|
 |-|-|
-| **Vzdálený ladicí program** | Obsahuje bity potřebné ke spuštění ladicího programu v kontejneru v závislosti na typu projektu. To je vysvětleno podrobněji. |Podrobnosti v části [ladění](#debugging) .
+| **Vzdálený ladicí program** | Obsahuje bity potřebné ke spuštění ladicího programu v kontejneru v závislosti na typu projektu. To je vysvětleno podrobněji v části [ladění](#debugging) .|
 | **Složka aplikace** | Obsahuje složku projektu, kde se nachází souboru Dockerfile.|
 | **Zdrojová složka** | Obsahuje kontext sestavení, který je předán příkazům Docker.|
 | **Složky balíčků NuGet** | Obsahuje balíčky NuGet a záložní složky, které se čtou ze souboru *obj \{ projektu. csproj. NuGet. g. props* v projektu. |
@@ -166,7 +166,7 @@ Chcete-li obnovit optimalizaci výkonu, odeberte vlastnost ze souboru projektu.
 
 Proces spuštění ladicího programu závisí na typu projektu a operačního systému kontejneru:
 
-|Scénář|Proces ladicího programu|
+|Scenario|Proces ladicího programu|
 |-|-|
 | **Aplikace .NET Core (kontejnery platformy Linux)**| Visual Studio stáhne `vsdbg` a namapuje ho do kontejneru, potom se volá pomocí vašeho programu a argumentů (tj. `dotnet webapp.dll` ) a pak se ladicí program připojí k procesu. |
 | **Aplikace .NET Core (kontejnery Windows)**| Visual Studio používá `onecoremsvsmon` a mapuje ho do kontejneru, spouští ho jako vstupní bod a pak se k němu připojí Visual Studio a připojí se k vašemu programu. To se podobá tomu, jak byste normálně nastavili vzdálené ladění na jiném počítači nebo virtuálním počítači.|

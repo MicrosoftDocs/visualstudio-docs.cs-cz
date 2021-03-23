@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 52eb7535430248f519654c09924541a6900336cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6820b9d94e8b4849c646c16075614aed17a4dd3
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933086"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884132"
 ---
 # <a name="install-debugging-symbols-for-python-interpreters"></a>Nainstalovat symboly ladění pro překladače Pythonu
 
@@ -75,6 +75,9 @@ Pokud jste stáhli symboly samostatně, postupujte podle následujících kroků
 | 3.3.2 | [32 – bit](https://www.python.org/ftp/python/3.3.2/python-3.3.2-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/3.3.2/python-3.3.2.amd64-pdb.zip) |
 | 3.3.1 | [32 – bit](https://www.python.org/ftp/python/3.3.1/python-3.3.1-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/3.3.1/python-3.3.1.amd64-pdb.zip) |
 | 3.3.0 | [32 – bit](https://www.python.org/ftp/python/3.3.0/python-3.3.0-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/3.3.0/python-3.3.0.amd64-pdb.zip) |
+| 2.7.18 | [32 – bit](https://www.python.org/ftp/python/2.7.18/python-2.7.18-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64-pdb.zip) |
+| 2.7.17 | [32 – bit](https://www.python.org/ftp/python/2.7.17/python-2.7.17-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/2.7.17/python-2.7.17.amd64-pdb.zip) |
+| 2.7.16 | [32 – bit](https://www.python.org/ftp/python/2.7.16/python-2.7.16-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/2.7.16/python-2.7.16.amd64-pdb.zip) |
 | 2.7.15 | [32 – bit](https://www.python.org/ftp/python/2.7.15/python-2.7.15-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/2.7.15/python-2.7.15.amd64-pdb.zip) |
 | 2.7.14 | [32 – bit](https://www.python.org/ftp/python/2.7.14/python-2.7.14-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/2.7.14/python-2.7.14.amd64-pdb.zip) |
 | 2.7.13 | [32 – bit](https://www.python.org/ftp/python/2.7.13/python-2.7.13-pdb.zip)  -  [64 – bit](https://www.python.org/ftp/python/2.7.13/python-2.7.13.amd64-pdb.zip) |

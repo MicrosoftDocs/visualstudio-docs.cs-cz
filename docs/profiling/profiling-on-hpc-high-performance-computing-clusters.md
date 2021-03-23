@@ -21,18 +21,18 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3faea797d57ca8874a198e5ee1bf76708ee20e7a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8d7ce643f0684520da52a450ff40c60928808d26
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917565"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884093"
 ---
 # <a name="profile-on-hpc-high-performance-computing-clusters"></a>Profilování v clusterech HPC (High Performance Computing)
 
 Pomocí metody vzorkování sady Visual Studio Nástroje pro profilaci můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windows. Další informace o HPC naleznete v tématu [Windows HPC](https://azure.microsoft.com/solutions/big-compute/) na webu společnosti Microsoft.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Chcete-li vytvořit profil na výpočetním uzlu HPC, je nutné provést následující akce:
 
@@ -52,7 +52,7 @@ Chcete-li vytvořit profil na výpočetním uzlu HPC, je nutné provést násled
 
     3. `clusrun /all /scheduler:`*% Hlavnímu uzlu%% ProfilerPath%*`/q /norestart`
 
-| | |
+|Parametr | Popis |
 |------------------| - |
 | *Hlavnímu uzlu* | Název hlavního uzlu clusteru |
 | *%FxPath%* | Cesta k instalačnímu programu .NET Framework 4. V instalačním médiu sady Visual Studio je cesta: WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe |

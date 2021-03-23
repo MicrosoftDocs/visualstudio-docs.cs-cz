@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 44af5c5a00e1ca26eb545b0973090486f6d320ea
-ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
+ms.openlocfilehash: b1452976a2710026b71e89614e776134e8a36ae1
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103295701"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884119"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Nainstalujte a použijte Visual Studio a služby Azure za bránou firewall nebo proxy server
 
@@ -97,7 +97,7 @@ Pokud chcete mít jistotu, že máte přístup ke všemu, co potřebujete, když
 | Targeted<br> Notification (Oznámení) <br>Služba | targetednotifications-tm.trafficmanager.net <br><br>www.research.net | 443<br><br>443 | Slouží k filtrování globálního seznamu oznámení do seznamu, který se vztahuje pouze na konkrétní typy počítačů nebo scénářů použití. |
 | Linka <br>aktualizovat kontrolu | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Slouží k poskytování oznámení v případě, že je k dispozici aktualizace nainstalovaného rozšíření. <br><br> Používá se jako přihlašovací umístění. |
 | Projekt AI <br>Integrace | az861674.vo.msecnd.net | 443<br> | Slouží ke konfiguraci nových projektů k odesílání dat o využití do vašeho registrovaného Application Insights účtu. |
-| Čočka kódu | codelensprodscus1su0. app.<br>codelens.visualstudio.com | 443 | Slouží k zadání informací v editoru týkající se poslední aktualizace souboru, časové osy změn, pracovních položek, ke kterým jsou změny přidruženy, autorů a dalších. |
+| Čočka kódu | codelensprodscus1su0.app.<br>codelens.visualstudio.com | 443 | Slouží k zadání informací v editoru týkající se poslední aktualizace souboru, časové osy změn, pracovních položek, ke kterým jsou změny přidruženy, autorů a dalších. |
 | Experimentální <br>povolení funkcí | visualstudio-devdiv-c2s.msedge.net | 80 | Slouží k aktivaci experimentálních nových funkcí nebo změn funkcí. |
 | Identita "BADGE" <br>(uživatelské jméno a avatar)<br>a <br>Nastavení roamingu | app.vssps.visualstudio.com <br><br>app.vsspsext.visualstudio.com<br><br>app.vssps.visualstudio.com<br><br> ns-sb2-prod-ch1-002.cloudapp.net <br><br>az700632.vo.msecnd.net<br><br>api.vstsusers.visualstudio.com/profiles/* | 443 | Slouží k zobrazení jména a miniatury uživatele v integrovaném vývojovém prostředí. <br><br> Slouží k zajištění, že nastavení změny roamingu z jednoho počítače na jiný. |
 | Vzdálená nastavení | az700632.vo.msecnd.net | 443 | Slouží k vypnutí rozšíření, u kterých se říká, že způsobují problémy v aplikaci Visual Studio. |
@@ -113,8 +113,8 @@ Pokud chcete mít jistotu, že máte přístup ke všemu, co potřebujete, když
 | Web Office <br>doplněk <br> Manifest <br>Ověření <br>Služba | verificationservice.osi.office.net | https/443 | Slouží k ověření manifestů pro webové Doplňky Office. |
 | SharePoint a <br>Doplňky pro Office | sharepoint.com<br> microsoft.com/microsoft-365<br> microsoftonline.com <br> outlook.com | https/443 | Používá se k publikování a testování doplňků pro SharePoint a Office do SharePointu Online a Microsoft 365 |
 | Správce pracovního postupu <br>Testovací služba<br> Hostitel | | http/12292 | Pravidlo brány firewall, které se automaticky vytvoří pro testování doplňků pro SharePoint s pracovními postupy |
-| Automaticky shromážděné <br>statistiky spolehlivosti <br>a jiné <br>Prostředí pro zákazníky <br>Programy zlepšování softwaru (CEIP)<br> pro sadu Azure SDK a <br>pro nástroje SQL <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https/443 | Slouží k odesílání statistik spolehlivosti (data o chybách/nereagujících) od uživatele do Microsoftu. Pokud je povoleno Zasílání zpráv o chybách systému Windows, budou odeslány skutečné výpisy chyb/nereagující. Potlačí se jenom statistické informace; <br>Používá se k odhalení anonymních způsobů použití pro rozšíření sady Azure Tools SDK do sady Visual Studio a pro vzory využití nástrojů SQL pro Visual Studio. |
-| Visual Studio <br> Prostředí pro zákazníky <br>Program zlepšování softwaru (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https/443 | Slouží ke shromažďování anonymních způsobů používání a protokolů chyb. <br><br>Používá se ke sledování problémů zablokování uživatelského rozhraní. |
+| Automaticky shromážděné <br>statistiky spolehlivosti <br>a jiné <br>Prostředí pro zákazníky <br>Programy zlepšování softwaru (CEIP)<br> pro sadu Azure SDK a <br>pro nástroje SQL <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https/443 | Slouží k odesílání statistik spolehlivosti (data o chybách/nereagujících) od uživatele do Microsoftu. Pokud je povoleno Zasílání zpráv o chybách systému Windows, budou odeslány skutečné výpisy chyb/nereagující. Potlačí se jenom statistické informace; <br>Slouží k odhalení způsobů využití rozšíření sady Azure Tools SDK pro sadu Visual Studio a ke vzorům využití pro nástroje SQL pro nástroj Visual Studio. |
+| Visual Studio <br> Prostředí pro zákazníky <br>Program zlepšování softwaru (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https/443 | Slouží ke shromažďování způsobů využití a protokolů chyb. <br><br>Používá se ke sledování problémů zablokování uživatelského rozhraní. |
 | Vytváření a<br>Správa <br>Prostředky Azure | management.azure.com <br>management.core.windows.net | https/443 | Používá se k vytváření webů Azure nebo jiných prostředků pro podporu publikování webových aplikací, Azure Functions a WebJobs. |
 | Aktualizované nástroje publikování webu <br>kontroly a rozšíření <br>doporučit | marketplace.visualstudio.com | https/443 | Používá se pro kontrolu dostupnosti aktualizovaných nástrojů pro publikování. Pokud je tato možnost zakázaná, nemusí se zobrazit možné Doporučené rozšíření pro publikování na webu. |
 | Aktualizovaný prostředek Azure <br>Informace o vytvoření koncového bodu | \*.blob.core.windows.net | https/443 | Používá se k aktualizaci koncových bodů používaných k vytváření prostředků Azure pro určité služby Azure. Pokud je zakázané, místo toho se použije poslední stažený nebo sestavená umístění koncových bodů. |

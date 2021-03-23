@@ -17,12 +17,12 @@ ms.author: joshuapa
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 11c9384d03971f475abbe680f6731d2757cbb195
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ec309be7fbeb81951af73517412f36f7b28bc82f
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935297"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884145"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>Vytvoření kódu v době návrhu pomocí textových šablon T4
 
@@ -56,7 +56,7 @@ Textová šablona obsahuje kombinaci textu, který chcete vygenerovat, a kód pr
 
     Pokud jste přidali šablonu do [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projektu, atribut Language bude " `VB` ".
 
-4. Na konec souboru přidejte nějaký text. Příklad:
+4. Na konec souboru přidejte nějaký text. Například:
 
    ```
    Hello, world!
@@ -125,7 +125,7 @@ Textové šablony umožňují použít kód programu k odlišení obsahu generov
 
 Ladění textové šablony:
 
-- Vložte `debug="true"` do `template` direktivy. Příklad:
+- Vložte `debug="true"` do `template` direktivy. Například:
 
    `<#@ template debug="true" hostspecific="false" language="C#" #>`
 
@@ -274,7 +274,7 @@ Typ `this.Host` (v jazyce VB, `Me.Host` ) je `Microsoft.VisualStudio.TextTemplat
 
 ### <a name="getting-data-from-visual-studio"></a>Získávání dat ze sady Visual Studio
 
-Chcete-li použít služby poskytované v aplikaci Visual Studio, nastavte `hostSpecific` atribut a načtěte `EnvDTE` sestavení. Importujte `Microsoft.VisualStudio.TextTemplating` , který obsahuje `GetCOMService()` metodu rozšíření.  Pro přístup k DTE a dalším službám pak můžete použít IServiceProvider. GetCOMService (). Příklad:
+Chcete-li použít služby poskytované v aplikaci Visual Studio, nastavte `hostSpecific` atribut a načtěte `EnvDTE` sestavení. Importujte `Microsoft.VisualStudio.TextTemplating` , který obsahuje `GetCOMService()` metodu rozšíření.  Pro přístup k DTE a dalším službám pak můžete použít IServiceProvider. GetCOMService (). Například:
 
 ```src
 <#@ template hostspecific="true" language="C#" #>
@@ -352,7 +352,7 @@ Užitečnou funkcí šablon je, že vypadají velmi podobně jako soubory, kter�
 
 4. Ověřte následující vlastnosti souboru **. TT** :
 
-   | | |
+   |Vlastnost |Nastavení |
    |-|-|
    | **Vlastní nástroj =** | **Hodnotu TextTemplatingFileGenerator** |
    | **Akce sestavení =** | **Žádný** |
