@@ -6,16 +6,16 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
 ms.topic: how-to
-ms.openlocfilehash: 4bfa6bdfbb4b27a849b4807c99ae9dc8b9bd6764
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43032addcfbb54b6a239d465de76f85c241d562e
+ms.sourcegitcommit: 08ee19f260164271e18bdbafe624301508f554ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950387"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "104999586"
 ---
 # <a name="sign-in-to-visual-studio-for-mac"></a>Přihlášení k Visual Studio pro Mac
 
-Když poprvé spustíte Visual Studio pro Mac, budete vyzváni k přihlášení pomocí účet Microsoft. Použijte účet Microsoft, která je připojená k licenci, kterou chcete použít. Pokud nemáte účet Microsoft, přečtěte si téma [návody registrace účtu](https://support.microsoft.com/instantanswers/d18cc497-d839-cf50-dea8-f99c95f2bd16/sign-up-for-a-microsoft-account).
+Když poprvé spustíte Visual Studio pro Mac, budete vyzváni k přihlášení pomocí účet Microsoft. Použijte účet Microsoft, která je připojená k licenci, kterou chcete použít. Pokud nemáte účet Microsoft, přečtěte si téma [návody registrace účtu](https://support.microsoft.com/account-billing/how-to-create-a-new-microsoft-account-a84675c3-3e9e-17cf-2911-3d56b15c0aaf).
 
 Pokud se rozhodnete, že se nechcete přihlašovat přímo, budete moct zkušební kopii použít po dobu 30 dnů. Po 30 dnech se musíte přihlásit, abyste mohli dál používat kopii Visual Studio pro Mac.
 

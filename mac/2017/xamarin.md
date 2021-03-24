@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 02/12/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
 ms.topic: overview
-ms.openlocfilehash: 89d724a9ddf4c8f3dc7fe941e5e4d999d30da1e8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5d03c27ef1e6fefc2fa29d60727851be0954d8b
+ms.sourcegitcommit: 08ee19f260164271e18bdbafe624301508f554ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950628"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "104999599"
 ---
 # <a name="xamarin-mobile-app-development"></a>Vývoj mobilních aplikací Xamarin
 
@@ -58,4 +58,4 @@ Xamarin Inspector poskytuje interaktivní konzolu jazyka C# s uživatelskými n�
 
 Skládá se ze samostatné aplikace, která poskytuje bohatou konzolu jazyka C#, která může cílit na různé programovací platformy (Android, iOS, Mac a Windows) a integrovat do vašeho pracovního postupu pro ladění v prostředí IDEs.
 
-Další informace najdete v příručce pro [Xamarin Inspector](/xamarin/tools/inspector/) .
+Další informace najdete v příručce pro [Xamarin Inspector](/xamarin/tools/inspector/release-notes/1.5) .
