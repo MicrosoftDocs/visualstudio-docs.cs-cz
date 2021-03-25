@@ -9,17 +9,17 @@ helpviewer_keywords:
 - menu items, adding dynamically
 - menus, adding dynamic items
 ms.assetid: d281e9c9-b289-4d64-8d0a-094bac6c333c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3432092bc73ef3a06c807a1b4c4942080b9fce8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa85d5b5cf4b99840e181fb24b5913ff72a3fee0
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883542"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070333"
 ---
 # <a name="dynamically-add-menu-items"></a>Dynamické přidávání položek nabídky
 Můžete přidat položky nabídky za běhu zadáním `DynamicItemStart` příznaku pro zástupný symbol v definici tlačítka v souboru Command-Table (*. vsct*) sady Visual Studio a následným definováním (v kódu) počet položek nabídky k zobrazení a manipulaci s příkazy. Po načtení rozhraní VSPackage je zástupný symbol nahrazen dynamickými položkami nabídky.
@@ -144,7 +144,7 @@ Můžete přidat položky nabídky za běhu zadáním `DynamicItemStart` přízn
 ## <a name="implement-the-dynamic-menu-command"></a>Implementace dynamického příkazu nabídky
  Vytvoříte dynamickou třídu příkazu nabídky, která dědí z <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> . V této implementaci konstruktor určuje predikát, který se má použít pro porovnání příkazů. Chcete-li <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> použít tento predikát k nastavení <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> vlastnosti, která označuje příkaz, který má být vyvolán, je nutné přepsat metodu.
 
-1. Vytvořte nový soubor třídy jazyka C# s názvem *DynamicItemMenuCommand.cs* a přidejte třídu s názvem **DynamicItemMenuCommand** , která dědí z <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> :
+1. Vytvořte nový soubor třídy jazyka C# s názvem *DynamicItemMenuCommand. cs* a přidejte třídu s názvem **DynamicItemMenuCommand** , která dědí z <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> :
 
     ```csharp
     class DynamicItemMenuCommand : OleMenuCommand
@@ -207,14 +207,14 @@ Můžete přidat položky nabídky za běhu zadáním `DynamicItemStart` přízn
 ## <a name="add-the-command"></a>Přidat příkaz
  Konstruktor DynamicMenu je místo, kde jste nastavili příkazy nabídky, včetně dynamických nabídek a položek nabídky.
 
-1. Do *DynamicMenuPackage.cs* přidejte GUID sady příkazů a ID příkazu:
+1. V souboru *DynamicMenuPackage. cs* přidejte identifikátor GUID sady příkazů a ID příkazu:
 
     ```csharp
     public const string guidDynamicMenuPackageCmdSet = "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file
     public const uint cmdidMyCommand = 0x104;
     ```
 
-2. Do souboru *DynamicMenu.cs* přidejte následující direktivy using:
+2. V souboru *DynamicMenu. cs* přidejte následující direktivy using:
 
     ```csharp
     using EnvDTE;
@@ -333,7 +333,7 @@ private bool IsValidDynamicItem(int commandId)
 ```
 
 ## <a name="set-the-vspackage-to-load-only-when-a-solution-has-multiple-projects"></a>Nastavte VSPackage na Load pouze v případě, že má řešení více projektů.
- Vzhledem k tomu, že příkaz **nastavit spouštěný projekt** nedává smysl, pokud aktivní řešení nemá více než jeden projekt, můžete sadu VSPackage nastavit na automatické načítání pouze v takovém případě. Použijete <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> společně s kontextem uživatelského rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects> . V souboru *DynamicMenuPackage.cs* přidejte následující atributy do třídy DynamicMenuPackage:
+ Vzhledem k tomu, že příkaz **nastavit spouštěný projekt** nedává smysl, pokud aktivní řešení nemá více než jeden projekt, můžete sadu VSPackage nastavit na automatické načítání pouze v takovém případě. Použijete <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> společně s kontextem uživatelského rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects> . V souboru *DynamicMenuPackage. cs* přidejte následující atributy do třídy DynamicMenuPackage:
 
 ```csharp
 [PackageRegistration(UseManagedResourcesOnly = true)]

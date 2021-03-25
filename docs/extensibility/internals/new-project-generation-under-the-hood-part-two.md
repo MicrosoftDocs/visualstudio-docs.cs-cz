@@ -7,17 +7,17 @@ helpviewer_keywords:
 - projects [Visual Studio], new project dialog
 - projects [Visual Studio], new project generation
 ms.assetid: 73ce91d8-0ab1-4a1f-bf12-4d3c49c01e13
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7891cb6a40e6b7de48ba11871688881625b9c68d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e391ad66c9925dc68997ff610dc5d1556ddf09b2
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895606"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063081"
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>Nová generace projektů: Pod kapotou, část 2
 
@@ -31,7 +31,7 @@ V [nové generaci projektu: v digestoři, část One,](../../extensibility/inter
 ### <a name="template-parameter-replacement"></a>Nahrazení parametru šablony
  Když šablona zkopíruje šablonu položky do nového projektu, nahradí všechny parametry šablony s řetězci pro přizpůsobení souboru. Parametr šablony je speciální token, který předchází a následuje znak dolaru, například $date $.
 
- Pojďme se podívat na typickou šablonu položky projektu. Extrahujte a prověřte Program.cs ve složce Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip.
+ Pojďme se podívat na typickou šablonu položky projektu. Extrahujte a prověřte program. cs ve složce Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip.
 
 ```csharp
 using System;
@@ -130,7 +130,7 @@ namespace Simple
  To instruuje novou šablonu projektu pro vytvoření jednoduchého souboru projektu. csproj zkopírováním a přizpůsobením položky šablony souboru WindowsApplication. csproj.
 
 ### <a name="designers-and-references"></a>Návrháři a odkazy
- Můžete vidět v Průzkumník řešení, že složka Properties je přítomná a obsahuje očekávané soubory. Ale co se týká odkazů na projekt a závislostí souborů návrháře, jako je například Resources.Designer.cs k souboru Resources. resx a Form1.Designer.cs na Form1.cs?  Ty jsou nastaveny v jednoduchém souboru. csproj při jeho vygenerování.
+ Můžete vidět v Průzkumník řešení, že složka Properties je přítomná a obsahuje očekávané soubory. Ale co se týká odkazů na projekt a závislostí souborů návrháře, jako jsou Resources. Designer. cs na Resources. resx a Form1. Designer. cs na Form1. cs?  Ty jsou nastaveny v jednoduchém souboru. csproj při jeho vygenerování.
 
  Tady je \<ItemGroup> z jednoduchého. csproj, který vytváří odkazy na projekt:
 
@@ -145,7 +145,7 @@ namespace Simple
 </ItemGroup>
 ```
 
- Vidíte, že se jedná o šest odkazů na projekt, které se zobrazí v Průzkumník řešení. Tady je oddíl z jiného \<ItemGroup> . Bylo odstraněno mnoho řádků kódu pro přehlednost. V této části je Settings.Designer.cs závislý na nastavení. nastavení:
+ Vidíte, že se jedná o šest odkazů na projekt, které se zobrazí v Průzkumník řešení. Tady je oddíl z jiného \<ItemGroup> . Bylo odstraněno mnoho řádků kódu pro přehlednost. Tato část poskytuje nastavení. Návrhář. cs závislé na nastavení. nastavení:
 
 ```xml
 <ItemGroup>
