@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugContainerField interface
 ms.assetid: a8bbe061-c382-4fe9-a193-3f7d12216041
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 752eb7d77035a25ad1d0ddc8aec45afe95d898c7
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: bb3a50db80dc2acb075d1c6ec1fe585000468285
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102154779"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105077899"
 ---
 # <a name="idebugcontainerfield"></a>IDebugContainerField
 Toto rozhraní představuje symbol nebo typ, který je kontejnerem pro jiné symboly nebo typy.

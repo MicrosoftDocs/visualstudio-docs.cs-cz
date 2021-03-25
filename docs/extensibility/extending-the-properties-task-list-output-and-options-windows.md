@@ -12,17 +12,17 @@ helpviewer_keywords:
 - tutorials
 - tool windows
 ms.assetid: 06990510-5424-44b8-9fd9-6481acec5c76
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2586618b16afa8f8bfd6b7aa529486adf1d9ce41
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 970ab167434da4ba9c28eb6bbf9a8ea5f6cc6af0
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938132"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070138"
 ---
 # <a name="extend-the-properties-task-list-output-and-options-windows"></a>Rozšíříte okna vlastnosti, Seznam úkolů, výstup a možnosti.
 Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Studio. Tento návod ukazuje, jak integrovat informace o okně nástroje na novou stránku **možností** a nové nastavení na stránce **vlastnosti** a také jak zapisovat do oken **seznam úkolů** a **výstupu** .
@@ -63,7 +63,7 @@ Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Stud
 
 ### <a name="customize-the-constructor"></a>Přizpůsobení konstruktoru
 
-1. Do souboru *TodoWindowControl.XAML.cs* přidejte následující direktivu using:
+1. V souboru *TodoWindowControl. XAML. cs* přidejte následující direktivu using:
 
     ```csharp
     using System;
@@ -81,7 +81,7 @@ Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Stud
     }
     ```
 
-3. V *TodoWindow.cs* změňte konstruktor TodoWindowControl tak, aby zahrnoval parametr TodoWindow. Kód by měl vypadat takto:
+3. V *TodoWindow. cs* změňte konstruktor TodoWindowControl tak, aby zahrnoval parametr TodoWindow. Kód by měl vypadat takto:
 
     ```csharp
     public TodoWindow() : base(null)
@@ -95,7 +95,7 @@ Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Stud
     ```
 
 ## <a name="create-an-options-page"></a>Vytvoření stránky možnosti
- Stránku můžete v dialogovém okně **Možnosti** zadat tak, aby uživatelé mohli měnit nastavení okna nástroje. Vytvoření stránky možnosti vyžaduje třídu, která popisuje možnosti a položku v souboru *TodoListPackage.cs* nebo *TodoListPackage. vb* .
+ Stránku můžete v dialogovém okně **Možnosti** zadat tak, aby uživatelé mohli měnit nastavení okna nástroje. Vytvoření stránky možnosti vyžaduje třídu, která popisuje možnosti a položku v souboru *TodoListPackage. cs* nebo *TodoListPackage. vb* .
 
 1. Přidejte třídu s názvem `ToolsOptions.cs` . Nastavit `ToolsOptions` třídu jako děděnou z <xref:Microsoft.VisualStudio.Shell.DialogPage> .
 
@@ -127,7 +127,7 @@ Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Stud
 
 ### <a name="make-the-options-page-available-to-users"></a>Zpřístupnění stránky možnosti uživatelům
 
-1. V *TodoWindowPackage.cs* přidejte <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> do `TodoWindowPackage` třídy:
+1. V *TodoWindowPackage. cs* přidejte <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> do `TodoWindowPackage` třídy:
 
     ```csharp
     [ProvideOptionPage(typeof(ToolsOptions), "ToDo", "General", 101, 106, true)]
@@ -152,7 +152,7 @@ Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Stud
 
      ![Okno vlastností](../extensibility/media/t5properties.png "T5Properties")
 
-2. Do souboru *TodoItem.cs* přidejte následující direktivy using.
+2. Do souboru *TodoItem. cs* přidejte následující direktivy using.
 
     ```csharp
     using System.ComponentModel;
@@ -232,7 +232,7 @@ Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Stud
     }
     ```
 
-5. Vzhledem k tomu, že instance `TodoItem` třídy budou uloženy v seznamu a seznam bude volat `ToString` funkci, je nutné `ToString` funkci přetížit. Přidejte následující kód do *TodoItem.cs*, za konstruktor a před koncem třídy.
+5. Vzhledem k tomu, že instance `TodoItem` třídy budou uloženy v seznamu a seznam bude volat `ToString` funkci, je nutné `ToString` funkci přetížit. Přidejte následující kód do *TodoItem. cs* za konstruktor a před koncem třídy.
 
     ```csharp
     public override string ToString()
@@ -241,7 +241,7 @@ Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Stud
     }
     ```
 
-6. V *TodoWindowControl.XAML.cs* přidejte do třídy metody zástupných procedur `TodoWindowControl` pro `CheckForError` `UpdateList` metody a. Umístěte je po ProcessDialogChar a před koncem souboru.
+6. V souboru *TodoWindowControl. XAML. cs* přidejte do třídy metody zástupných procedur `TodoWindowControl` pro `CheckForError` `UpdateList` metody a. Umístěte je po ProcessDialogChar a před koncem souboru.
 
     ```csharp
     public void CheckForErrors()
@@ -285,7 +285,7 @@ Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Stud
     }
     ```
 
-4. Do *TodoWindowControl.XAML.cs* přidejte následující direktivy using:
+4. Do souboru *TodoWindowControl. XAML. cs* přidejte následující direktivy using:
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -353,7 +353,7 @@ Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Stud
 
      Teď, když máte třídu, kterou může použít okno **vlastnosti** , můžete integrovat okno **vlastnosti** s oknem nástrojů. Když uživatel klikne na položku v seznamu v okně nástroje, mělo by se odpovídajícím způsobem aktualizovat okno **vlastnosti** . Podobně platí, že když uživatel změní položku ToDo v okně **vlastnosti** , měla by se aktualizovat přidružená položka.
 
-7. Nyní do *TodoWindowControl.XAML.cs* přidejte zbytek kódu funkce UpdateList. Mělo by se odstranit a znovu přidat upravený TodoItem ze seznamu.
+7. Nyní přidejte zbytek kódu funkce UpdateList do souboru *TodoWindowControl. XAML. cs*. Mělo by se odstranit a znovu přidat upravený TodoItem ze seznamu.
 
     ```csharp
     public void UpdateList(TodoItem item)
@@ -378,7 +378,7 @@ Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Stud
 ## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>Přidat text do okna výstup a položky do Seznam úkolů
  Pro **seznam úkolů** vytvoříte nový objekt typu Task a následně do **seznam úkolů** přidáte objekt úlohy voláním jeho `Add` metody. Chcete-li zapisovat do okna **výstup** , zavolejte jeho `GetPane` metodu pro získání objektu podokna a potom zavolejte `OutputString` metodu objektu podokna.
 
-1. V *TodoWindowControl.XAML.cs* v `button1_Click` metodě přidejte kód pro získání **obecného** podokna okna **výstup** (což je výchozí nastavení) a zapište do něj. Metoda by měla vypadat takto:
+1. V souboru *TodoWindowControl. XAML. cs* v `button1_Click` metodě přidejte kód, který získá **Obecné** podokno okna **výstup** (což je výchozí nastavení), a zapište do něj. Metoda by měla vypadat takto:
 
     ```csharp
     private void button1_Click(object sender, EventArgs e)

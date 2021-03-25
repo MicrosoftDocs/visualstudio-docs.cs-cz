@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 03/14/2019
 ms.topic: tutorial
 ms.assetid: f74e1ad1-1ee5-4360-9bd5-d82467b884ca
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e943da6745832cbe59cfe94013650a503265636
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ec465eda5a0bd7d017c3822390d68b43f76b5c47
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903283"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070177"
 ---
 # <a name="tutorial---create-your-first-extension-hello-world"></a>Kurz – vytvoření prvního rozšíření: Hello World
 
@@ -78,7 +78,7 @@ Krok 2. Klikněte pravým tlačítkem na projekt (ne řešení). V místní nab�
 
 Krok 3. Vyberte oddíl **rozšiřitelnost** a pak zvolte **příkaz**.
 
-Krok 4: V dolní části pole **název** zadejte název souboru, například *Command.cs*.
+Krok 4: V dolní části pole **název** zadejte název souboru, například *Command. cs*.
 
 ![vlastní příkaz](media/hello-world-vsix-command.png)
 
@@ -120,7 +120,7 @@ Krok 2. Změňte `ButtonText` parametr na `Say Hello World!` .
   ...
 ```
 
-Krok 3. Vraťte se na **Průzkumník řešení** a vyhledejte soubor *Command.cs* . V `Execute` metodě změňte řetězec `message` z `string.Format(..)` na `Hello World!` .
+Krok 3. Vraťte se na **Průzkumník řešení** a vyhledejte soubor *Command. cs* . V `Execute` metodě změňte řetězec `message` z `string.Format(..)` na `Hello World!` .
 
 ```csharp
   ...

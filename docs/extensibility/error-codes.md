@@ -9,17 +9,17 @@ helpviewer_keywords:
 - source control plug-ins, error codes
 - errors [Visual Studio SDK]
 ms.assetid: d9cbd1c4-719b-467a-8100-333c1e146d3b
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c9706f7c9cd5b25a3644af2f324fda01f448fa17
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 32557b2a476be9f662decc9992771fe359967a94
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883399"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070164"
 ---
 # <a name="error-codes"></a>Kódy chyb
 Pokud funkce rozhraní API modulu plug-in správy zdrojových kódů vrátí chybu, bude se jednat o jeden z následujících kódů chyb. Všechny chyby jsou záporné, upozornění nebo informativní chybové kódy jsou kladné a úspěch je 0.

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - status bars, about status bars
 - status bars, overview
 ms.assetid: f955115c-4c5f-45ec-b41b-365868c5ec0c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7776c7fa35cd7ac06dec60ced3604cb67c96da4a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5ab87f9c8b54d9c31466068668eb8dd5a1857a06
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903199"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070099"
 ---
 # <a name="extend-the-status-bar"></a>Rozšíří stavový řádek.
 K zobrazení informací můžete použít stavový řádek sady Visual Studio v dolní části rozhraní IDE.
@@ -36,7 +36,7 @@ K zobrazení informací můžete použít stavový řádek sady Visual Studio v 
 
 1. Vytvořte projekt VSIX s názvem **TestStatusBarExtension** a přidejte příkaz nabídky s názvem **TestStatusBarCommand**.
 
-2. V *TestStatusBarCommand.cs* nahraďte kód metody obslužné rutiny příkazu ( `MenuItemCallback` ) následujícím způsobem:
+2. V *TestStatusBarCommand. cs* nahraďte kód metody obslužné rutiny příkazu ( `MenuItemCallback` ) následujícím způsobem:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -80,7 +80,7 @@ K zobrazení informací můžete použít stavový řádek sady Visual Studio v 
 
 1. V tomto postupu ukážeme, jak se inicializuje a aktualizuje indikátor průběhu.
 
-2. Otevřete soubor *TestStatusBarCommand.cs* a nahraďte `MenuItemCallback` metodu následujícím kódem:
+2. Otevřete soubor *TestStatusBarCommand. cs* a nahraďte `MenuItemCallback` metodu následujícím kódem:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -118,7 +118,7 @@ K zobrazení informací můžete použít stavový řádek sady Visual Studio v 
 
      V tomto postupu zobrazíme standardní animaci sady Visual Studio, která představuje sestavení projektu nebo řešení.
 
-2. Otevřete soubor *TestStatusBarCommand.cs* a nahraďte `MenuItemCallback` metodu následujícím kódem:
+2. Otevřete soubor *TestStatusBarCommand. cs* a nahraďte `MenuItemCallback` metodu následujícím kódem:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)

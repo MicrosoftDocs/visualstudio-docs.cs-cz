@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 05/23/2019
 ms.topic: how-to
 ms.assetid: efd27f00-7fe5-45f8-9b97-371af732be97
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f022023ec03ddb280424f3c47944c91e8fa696de
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8ff3fa6f061f894abce17d2e6c58bfb791740a90
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958385"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061768"
 ---
 # <a name="writing-to-the-user-settings-store"></a>Zápis do úložiště uživatelských nastavení
 Uživatelská nastavení jsou zapisovatelná nastavení, podobně jako v dialogovém okně **Nástroje/možnosti** , vlastnosti okna a určitá další dialogová okna. Rozšíření sady Visual Studio je můžou použít k ukládání malých objemů dat. Tento návod ukazuje, jak přidat program Poznámkový blok do sady Visual Studio jako externí nástroj pomocí čtení a zápisu do úložiště uživatelských nastavení.
@@ -24,7 +24,7 @@ Uživatelská nastavení jsou zapisovatelná nastavení, podobně jako v dialogo
 
 1. Vytvořte projekt VSIX s názvem UserSettingsStoreExtension a pak přidejte vlastní příkaz s názvem UserSettingsStoreCommand. Další informace o tom, jak vytvořit vlastní příkaz, najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) .
 
-2. Do UserSettingsStoreCommand.cs přidejte následující direktivy using:
+2. V UserSettingsStoreCommand. cs přidejte následující direktivy using:
 
     ```csharp
     using System.Collections.Generic;

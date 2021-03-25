@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - services, consuming
 ms.assetid: 1f000020-8fb7-4e39-8e1e-2e38c7fec3d4
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d60e6093eb439aa3b0e2a0a86e0d21d8ace95e00
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9096250f72e6bf64b2c6b76eeaa313ee7769dd51
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99911751"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070086"
 ---
 # <a name="how-to-get-a-service"></a>Postupy: získání služby
 
@@ -31,9 +31,9 @@ Když Visual Studio načte a <xref:Microsoft.VisualStudio.Shell.Package> , před
 
 1. Každé rozšíření sady Visual Studio začíná projektem nasazení VSIX, který bude obsahovat prostředky rozšíření. Vytvořte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt VSIX s názvem `GetServiceExtension` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Nyní přidejte šablonu vlastní položky příkazu s názvem **GetServiceCommand**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >   a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *GetServiceCommand.cs*. Další informace o tom, jak vytvořit vlastní příkaz, získáte [vytvořením rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) .
+2. Nyní přidejte šablonu vlastní položky příkazu s názvem **GetServiceCommand**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >   a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *GetServiceCommand. cs*. Další informace o tom, jak vytvořit vlastní příkaz, získáte [vytvořením rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) .
 
-3. V *GetServiceCommand.cs* odeberte tělo `MenuItemCommand` metody a přidejte následující kód:
+3. V *GetServiceCommand. cs* odeberte tělo `MenuItemCommand` metody a přidejte následující kód:
 
    ```csharp
    IVsActivityLog activityLog = ServiceProvider.GetService(typeof(SVsActivityLog)) as IVsActivityLog;
