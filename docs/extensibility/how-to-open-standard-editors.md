@@ -8,17 +8,17 @@ helpviewer_keywords:
 - editors [Visual Studio SDK], opening
 - projects [Visual Studio SDK], opening standard editors
 ms.assetid: d5ce10f9-047a-4b74-aa1d-295128898b89
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 163d042ffb08a60d5673e64cf6bab94f7a2f1d63
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1b0de198e96ff268a0744a4a97a4a160c585af9c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850452"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069904"
 ---
 # <a name="how-to-open-standard-editors"></a>Postupy: otevření standardních editorů
 Otevřete-li standardní editor, rozhraní IDE určí standardní editor pro určený typ souboru namísto určení editoru specifického pro projekt pro daný soubor.

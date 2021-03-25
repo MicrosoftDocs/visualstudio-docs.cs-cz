@@ -8,17 +8,17 @@ helpviewer_keywords:
 - language services, filters
 - language services, commands to support
 ms.assetid: 4948c494-3d4d-4f50-b3f9-959e73f90e4d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4eaa85eab9d9691125afce28d51c61d464e56cb2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5d27f1c3057266d1b167999f3178a3e554a78ddb
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839830"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069553"
 ---
 # <a name="important-commands-for-language-service-filters"></a>Důležité příkazy pro filtry služby jazyka
 Pokud chcete vytvořit plně vybavený filtr jazykové služby, zvažte zpracování následujících příkazů. Úplný seznam identifikátorů příkazů je definován ve <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> výčtu pro spravovaný kód a hlavičkový soubor Stdidcmd. h pro nespravovaný [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] kód. Soubor Stdidcmd. h můžete najít v *instalační cestě sady Visual Studio SDK*\VisualStudioIntegration\Common\Inc.

@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine2::CauseBreak
 ms.assetid: 17fe4698-b04e-4798-8412-80e0da60c387
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 344ca2e9e9758aaca5a2c1e6784a36467abde73c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 74a320cbe9f2414de754b5844aa645bffb857568
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102162703"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105093896"
 ---
 # <a name="idebugengine2causebreak"></a>IDebugEngine2::CauseBreak
 Požaduje, aby všechny programy laděné tímto modulem ladění (DE) zastavily provádění při příštím pokusu o spuštění některého z jeho vláken.

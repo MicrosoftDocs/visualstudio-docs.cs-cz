@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 676668b1247377597bed55b293efb8ad8b5cd253
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad9f7d329bf00e3fadd665cefea22a2301fdf695
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841702"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061781"
 ---
 # <a name="share-your-app"></a>Sdílení aplikace
 
@@ -24,7 +24,7 @@ Teď, když jsme sestavili image, můžeme se dát do sdílení! Pokud chcete sd
 
 Pro nahrání obrázku nejdřív musíte vytvořit úložiště v Docker Hub.
 
-1. Pokud potřebujete, můžete přejít do [centra Docker](https://hub.docker.com) a přihlásit se.
+1. Pokud potřebujete, můžete přejít do [centra Docker](https://hub.docker.com/signup/msftedge?utm_source=msftedge) a přihlásit se.
 
 1. Klikněte na tlačítko **vytvořit úložiště** .
 

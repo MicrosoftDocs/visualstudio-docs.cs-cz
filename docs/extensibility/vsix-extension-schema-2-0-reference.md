@@ -8,17 +8,17 @@ helpviewer_keywords:
 - vsix
 - extension schema
 ms.assetid: 0da81b98-f5e3-40d3-ba9a-94551378d0b4
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3fdbd9220ef82102dd66f10ab7f15570118bae9a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d1b94c7b2cacb7ad78031721156bdd90cb666c4f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904550"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062288"
 ---
 # <a name="vsix-extension-schema-20-reference"></a>Referenční dokumentace schématu rozšíření VSIX 2,0
 Soubor manifestu nasazení VSIX popisuje obsah balíčku VSIX. Formát souboru se řídí schématem. Verze 2,0 tohoto schématu podporuje přidávání vlastních typů a atributů.  Schéma manifestu je rozšiřitelné. Zavaděč manifestu ignoruje prvky XML a atributy, které nerozumí.
@@ -114,7 +114,7 @@ Soubor manifestu nasazení VSIX popisuje obsah balíčku VSIX. Formát souboru s
 
     - Microsoft. VisualStudio. VSLS
 
-    - My. Shell. app
+    - My.Shell.App
 
   - `Version` – Tento atribut určuje rozsah verzí s minimální a maximální podporovanou verzí této SKU. Balíček může podrobně navýšit verze SKU, které podporuje. Zápis rozsahu verzí je [10,0-11,0], kde
 
