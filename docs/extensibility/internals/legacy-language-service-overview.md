@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], about language services
 ms.assetid: bb44e27b-d228-463c-b2cf-cd5c24c7c1b5
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5226f9a3464786f85ad9d5348226e82e070cf57e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 236fc2a2923ffd0829f74ab56a119ff81b29cd7f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839583"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061170"
 ---
 # <a name="legacy-language-service-overview"></a>Přehled služby starší verze jazyka
 Jazyková služba poskytuje podporu editoru, která umožňuje implementovat určité [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] funkce. Třídy služby jazyka Managed Package Framework (MPF) poskytují plnou podporu pro často používané funkce a částečnou podporu pro další funkce.

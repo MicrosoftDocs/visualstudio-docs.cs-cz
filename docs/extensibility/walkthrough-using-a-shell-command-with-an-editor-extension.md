@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - add a menu command
 ms.assetid: 08526848-a442-4cd4-afa1-b2eac2005adb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e0072d3f39ef037dfaa660d3a297afb59baacf3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f36d141c75b43dfaf90960261e40c4a619069802
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888911"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061989"
 ---
 # <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>Návod: použití příkazu shell s rozšířením editoru
 Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabídky. Tento návod ukazuje, jak přidat Doplňky do zobrazení textu v editoru vyvoláním příkazu nabídky.
@@ -614,7 +614,7 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 
     - Microsoft. VisualStudio. text. UI. WPF
 
-2. Otevřete soubor *AddAdornment.cs* a přidejte následující `using` direktivy.
+2. Otevřete soubor *AddAdornment. cs* a přidejte následující `using` direktivy.
 
     ```csharp
     using Microsoft.VisualStudio.TextManager.Interop;

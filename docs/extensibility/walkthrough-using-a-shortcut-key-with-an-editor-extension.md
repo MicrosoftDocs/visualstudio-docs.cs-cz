@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - link keystrokes to commands
 ms.assetid: cf6cc6c6-5a65-4f90-8f14-663decf74672
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0f6cb0d3cc0bef03539428bafeff5ae3da64964
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2d49fa9e858d65529e466f6ed960835ab8c2324
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931263"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061950"
 ---
 # <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>Návod: použití klávesových zkratek s rozšířením editoru
 Můžete reagovat na klávesové zkratky v rozšíření editoru. Následující návod ukazuje, jak přidat doplňky zobrazení do textového zobrazení pomocí klávesových zkratek. Tento návod je založen na šabloně editoru doplňků zobrazení a umožňuje přidat doplňky pomocí znaku +.
@@ -47,7 +47,7 @@ Můžete reagovat na klávesové zkratky v rozšíření editoru. Následující
 this.layer = view.GetAdornmentLayer("PurpleCornerBox");
 ```
 
-V souboru třídy KeyBindingTestTextViewCreationListener.cs změňte název AdornmentLayer z **KeyBindingTest** na **PurpleCornerBox**:
+V souboru třídy KeyBindingTestTextViewCreationListener. cs změňte název AdornmentLayer z **KeyBindingTest** na **PurpleCornerBox**:
 
 ```csharp
 [Export(typeof(AdornmentLayerDefinition))]
@@ -259,7 +259,7 @@ Obslužná rutina příkazu je implementace <xref:Microsoft.VisualStudio.Command
    }
    ```
 
-   7. Zkopírujte definici vrstvy doplňků ze souboru *KeyBindingTestTextViewCreationListener.cs* do *KeyBindingCommandHandler.cs* a pak odstraňte soubor *KeyBindingTestTextViewCreationListener.cs* :
+   7. Zkopírujte definici vrstvy doplňků ze souboru *KeyBindingTestTextViewCreationListener. cs* do souboru *KeyBindingCommandHandler.* cs a pak odstraňte soubor *KeyBindingTestTextViewCreationListener. cs* :
 
    ```csharp
    /// <summary>
@@ -276,7 +276,7 @@ Obslužná rutina příkazu je implementace <xref:Microsoft.VisualStudio.Command
 
 Původní doplňky se objevily u každého znaku a v textovém souboru. Teď, když jsme kód změnili tak, aby přidal doplňky jako odpověď na daný **+** znak, přidá doplňky jenom na řádek, kde **+** je znak zadaný. Kód pro úpravy můžeme změnit tak, aby se doplňky zobrazovaly na všech znakech a.
 
-V souboru *KeyBindingTest.cs* změňte `CreateVisuals()` metodu tak, aby procházela přes všechny řádky v zobrazení, a vyplní znak "a".
+V souboru *KeyBindingTest. cs* změňte `CreateVisuals()` metodu tak, aby procházela všemi řádky v zobrazení, aby se vyměnila znak "a".
 
 ```csharp
 private void CreateVisuals(ITextViewLine line)

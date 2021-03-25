@@ -9,17 +9,17 @@ helpviewer_keywords:
 - language services [managed package framework], IntelliSense Parameter Info
 - Parameter Info (IntelliSense), supporting in language services [managed package framework]
 ms.assetid: a117365d-320d-4bb5-b61d-3e6457b8f6bc
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60e24162407c4daeb8643bf106c385f76b11c7d7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0488c9d6570d9ed127c5b021ddfcf7d74f0dd856
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954524"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062925"
 ---
 # <a name="parameter-info-in-a-legacy-language-service-2"></a>Informace o parametrech ve službě starší verze jazyka 2
 Informace o parametrech IntelliSense je popis, který zobrazí signaturu metody, když uživatel zadá spouštěcí znak seznamu parametrů (obvykle levou závorku) pro seznam parametrů metody. Při zadání každého parametru a zadání oddělovače parametrů (obvykle čárka) se popis aktualizuje a zobrazí se další parametr tučným písmem.

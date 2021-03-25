@@ -9,17 +9,17 @@ helpviewer_keywords:
 - designers [Visual Studio SDK], exposing types
 - custom tools, exposing types to visual designers
 ms.assetid: a7a32ad4-3a0a-4eb8-a6ac-491c42885639
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c36552c3a10f4ddbf50a7a28978acf27118bbd34
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5208de3af52e4dad5fb9bb59b16f7b59efb72340
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887091"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069670"
 ---
 # <a name="expose-types-to-visual-designers"></a>Vystavení typů pro vizuální návrháře
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pro zobrazení vizuálního návrháře musí mít přístup k třídám a definicím typu v době návrhu. Třídy jsou načteny z předdefinované sady sestavení, které zahrnují kompletní sadu závislostí aktuálního projektu (odkazy plus jejich závislosti). Může být také nutné, aby vizuální návrháři mohli přistupovat ke třídám a typům, které jsou definovány v souborech generovaných vlastními nástroji.

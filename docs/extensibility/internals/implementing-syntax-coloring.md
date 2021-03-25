@@ -9,17 +9,17 @@ helpviewer_keywords:
 - editors [Visual Studio SDK], colorizing text
 - text, colorizing in editors
 ms.assetid: 96e762ca-efd0-41e7-8958-fda4897c8c7a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0ee94326aca31c72ed6c07342707365d16ea57bb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2c46cea481eceadef5118388633f84402870a209
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839869"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069605"
 ---
 # <a name="implementing-syntax-coloring"></a>Implementace barevného zvýrazňování syntaxe
 Když jazyková služba poskytuje barevné zvýrazňování syntaxe, analyzátor převede řádek textu na pole barevně vydaných položek a vrátí typy tokenů odpovídající těmto barevně vydaným položkám. Analyzátor by měl vracet typy tokenů, které patří do seznamu barevně vydaných položek. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zobrazí každou barevnou položku v okně kódu podle atributů přiřazených objektem Colorizer příslušnému typu tokenu.

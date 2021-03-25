@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: bc7d0a81-0df5-41a9-a912-1b30e5da1d13
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f251b4511e2bff5bc20172e4018560205a378e0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 033e735b93a534164d96cf47d6412c609525ad8f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925826"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062496"
 ---
 # <a name="visual-studio-template-manifest-schema-reference"></a>Referenční dokumentace schématu manifestu šablony sady Visual Studio
 Toto schéma popisuje formát souborů manifestu šablony sady Visual Studio (*. vstman*), které jsou generovány pro projekty aplikace Visual Studio nebo šablony položek. Schéma také popisuje umístění a další důležité informace o této šabloně.

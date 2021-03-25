@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ~sak files
 - source control plug-ins, ~SAK files
 ms.assetid: 5277b5fa-073b-4bd1-8ba1-9dc913aa3c50
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61b446416bc944b53d38b07b3a58358a333744b9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cf0f8bc567a097d4bb7d400f829489c517e9a68f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946680"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061235"
 ---
 # <a name="elimination-of-sak-files"></a>Eliminace souborů ~ SAK
 V modulu plug-in správy zdrojového kódu rozhraní API 1,2 byly soubory *~ sak* nahrazeny příznaky schopností a novými funkcemi, které zjišťují, zda modul plug-in správy zdrojových kódů podporuje soubor *MSSCCPRJ* a sdílené rezervace.

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Visual Studio templates, schema
 - .vstemplate files
 ms.assetid: 6f74a2d5-3811-43d6-8b10-eb5823ad8995
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 458f3245517dd874a086932c65806978b5a1cf85
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 423e92eef6f9b712bd7705acbf9d95d5a01f44f4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925867"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062444"
 ---
 # <a name="visual-studio-template-schema-reference"></a>Referenční dokumentace schématu šablon sady Visual Studio
 Tato část obsahuje informace o prvcích XML v souborech *. vstemplate* , což jsou soubory, které ukládají metadata pro šablony projektů, šablony položek a startovní sady.
@@ -36,13 +36,13 @@ Tato část obsahuje informace o prvcích XML v souborech *. vstemplate* , což 
 |[CreateInPlace](../extensibility/createinplace-visual-studio-templates.md)|--|--|
 |[CreateNewFolder](../extensibility/createnewfolder-element-visual-studio-templates.md)|--|--|
 |[CustomDataSignature](../extensibility/customdatasignature-element-visual-studio-templates.md)|--|--|
-|[CustomParameter](../extensibility/customparameter-element-visual-studio-templates.md)|--|Název<br /><br /> Hodnota|
+|[CustomParameter](../extensibility/customparameter-element-visual-studio-templates.md)|--|Name<br /><br /> Hodnota|
 |[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|CustomParameter|--|
 |[DefaultName](../extensibility/defaultname-element-visual-studio-templates.md)|--|--|
 |[Popis](../extensibility/description-element-visual-studio-templates.md)|--|Balíček<br /><br /> ID|
 |[EnableEditOfLocationField](../extensibility/enableeditoflocationfield-element-visual-studio-templates.md)|--|--|
 |[EnableLocationBrowseButton](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md)|--|--|
-|[Složka](../extensibility/folder-element-visual-studio-project-templates.md)|ProjectItem<br /><br /> Složka|Název|
+|[Složka](../extensibility/folder-element-visual-studio-project-templates.md)|ProjectItem<br /><br /> Složka|Name|
 ||[zastaralé]|--|
 |[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|--|--|
 |[Skrytý](../extensibility/hidden-element-visual-studio-templates.md)|--|--|
@@ -68,7 +68,7 @@ Tato část obsahuje informace o prvcích XML v souborech *. vstemplate* , což 
 |[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|--|Verze|
 |[SDKReference –](../extensibility/sdkreference-element-visual-studio-templates.md)|--|Balíček|
 |[ShowByDefault](../extensibility/showbydefault-visual-studio-templates.md)|--|--|
-|[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|Název|
+|[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|Name|
 |[SortOrder](../extensibility/sortorder-element-visual-studio-templates.md)|--|--|
 |[SupportsCodeSeparation](../extensibility/supportscodeseparation-element-visual-studio-templates.md)|--|--|
 |[SupportsLanguageDropDown](../extensibility/supportslanguagedropdown-element-visual-studio-templates.md)|--|--|
@@ -79,7 +79,7 @@ Tato část obsahuje informace o prvcích XML v souborech *. vstemplate* , což 
 |[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)|--|--|
 |[TemplateID](../extensibility/templateid-element-visual-studio-templates.md)|--|--|
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|TemplateData<br /><br /> TemplateContent<br /><br /> WizardExtension<br /><br /> WizardData|Typ<br /><br /> Verze|
-|[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|--|Název|
+|[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|--|Name|
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Sestavení<br /><br /> FullClassName|--|
 
 ## <a name="see-also"></a>Viz také

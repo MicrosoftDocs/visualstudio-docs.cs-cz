@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Call Browser tool, identifying symbols in the library
 - Call Browser tool
 ms.assetid: 8fb0de61-71e7-42d1-8b41-2ad915474384
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b4e4c551c516b78ababb2400f7cfbd699ab06627
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c6c897801b98857f4a310323d4e00583c98245d5
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932589"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078874"
 ---
 # <a name="how-to-identify-symbols-in-a-library"></a>Postupy: identifikace symbolů v knihovně
 Nástroje pro procházení symbolů zobrazují hierarchická zobrazení symbolů. Symboly reprezentují obory názvů, objekty, třídy, členy třídy a další prvky jazyka.

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - registration, source control packages
 - source control packages, registration
 ms.assetid: 7d21fe48-489a-4f55-acb5-73da64c4e155
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0784b16acd00e354c8ecf36f34d6b05c750f6bec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ff23784bb833c6a68e368f5db5d3b6f1a7433bb0
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837200"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069397"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>Registrace a výběr (balíček VSPackage správy zdrojového kódu)
 Aby bylo možné zpřístupnit rozhraní VSPackage správy zdrojového kódu, musí být zaregistrováno [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Pokud je registrováno více než jeden prvek VSPackage správy zdrojového kódu, může uživatel vybrat, který VSPackage se má načíst v odpovídajících časech. Další informace o VSPackage a o tom, jak je zaregistrovat, najdete v tématu [VSPackage](../../extensibility/internals/vspackages.md) .

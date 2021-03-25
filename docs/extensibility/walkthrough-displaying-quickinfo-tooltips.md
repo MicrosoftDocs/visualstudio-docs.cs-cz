@@ -7,20 +7,20 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - QuickInfo
 ms.assetid: 23fb8384-4f12-446f-977f-ce7910347947
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 3c07dd32b889a9d75222bc8ff5a245f516fab528
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: acda716c72d10f35bf8c89978956f62a6d3754dc
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935921"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078601"
 ---
 # <a name="walkthrough-display-quickinfo-tooltips"></a>Návod: zobrazení QuickInfoch popisků
 QuickInfo je funkce technologie IntelliSense, která zobrazuje signatury a popisy metod, když uživatel přesune ukazatel myši na název metody. Můžete implementovat funkce založené na jazyce, jako je například QuickInfo, definováním identifikátorů, pro které chcete zadat QuickInfo popisy, a následným vytvořením popisu, ve kterém chcete zobrazit obsah. QuickInfo můžete definovat v kontextu jazykové služby nebo můžete definovat vlastní příponu názvu souboru a typ obsahu a zobrazit QuickInfo pouze pro tento typ, nebo můžete zobrazit QuickInfo pro existující typ obsahu (například "text"). Tento návod ukazuje, jak zobrazit QuickInfo pro typ obsahu "text".

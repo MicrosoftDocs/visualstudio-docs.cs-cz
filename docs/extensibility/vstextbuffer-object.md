@@ -10,17 +10,17 @@ helpviewer_keywords:
 - VSTextBuffer object, reference
 - views [Visual Studio SDK], VSTextBuffer object
 ms.assetid: c5f94b45-7249-4e1f-a53d-1d2a1c61e0ef
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9207018ae4f2845e49c541695052ecc30de8914b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a72491b118e0a51454181734a8fe388c2f7e851e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905684"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062184"
 ---
 # <a name="vstextbuffer-object"></a>Objekt VSTextBuffer
 Objekt textové vyrovnávací paměti představuje datový proud textu v kódu Unicode, který je obecně spojen se souborem. <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>Objekt lze použít mimo kontext základního editoru, jako v průvodci.

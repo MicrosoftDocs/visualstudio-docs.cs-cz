@@ -8,17 +8,17 @@ helpviewer_keywords:
 - source control plug-ins, getting started
 - getting started, source control plug-ins
 ms.assetid: 46ac1f9f-4ecc-4a72-88d3-4c7e1647e1cb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: eefd2b20afe94a19b21f9b8361123c193f3ec59f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1c1279fd425e8519ede49763ee2a307778c91e9e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886933"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061248"
 ---
 # <a name="get-started-with-source-control-plug-ins"></a>Začínáme se moduly plug-in správy zdrojového kódu
 Chcete-li vytvořit modul plug-in správy zdrojových kódů, je nutné vytvořit knihovnu DLL, která implementuje funkce definované v rozhraní API modulu plug-in správy zdrojového kódu, a poté pro registraci knihovny DLL pomocí nástroje, aby [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ji bylo možné použít ve správě verzí zdrojového kódu.

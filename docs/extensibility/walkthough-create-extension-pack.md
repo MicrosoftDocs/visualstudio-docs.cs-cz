@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extensions
 ms.assetid: 5388EEBA-211D-4114-8CD9-70C899919F7E
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: Meng
 ms.workload:
 - vssdk
-ms.openlocfilehash: c959660b920abc18be70b228fa6b40de1ab585f8
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 57b447be3ee411b737c1aea5b0a4be5ef966c8c6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037657"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062145"
 ---
 # <a name="walkthrough-create-an-extension-pack"></a>Návod: Vytvoření balíčku rozšíření
 
@@ -33,9 +33,9 @@ Funkce rozšíření Pack je k dispozici počínaje verzí Visual Studio 15,8 Pr
 
 Šablona položky balíčku rozšíření vytvoří balíček rozšíření se sadou rozšíření, která lze nainstalovat dohromady.
 
-1. V dialogovém okně **Nový projekt** vyhledejte "VSIX" a vyberte **projekt VSIX**. Jako **název projektu**zadejte "test Extension Pack". Vyberte **Vytvořit**.
+1. V dialogovém okně **Nový projekt** vyhledejte "VSIX" a vyberte **projekt VSIX**. Jako **název projektu** zadejte "test Extension Pack". Vyberte **Vytvořit**.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. Přejdete do uzlu **rozšiřitelnost** v jazyce Visual C# a vyberete **rozšíření Pack**. Ponechte výchozí název souboru (ExtensionPack1.cs).
+2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. Přejdete do uzlu **rozšiřitelnost** v jazyce Visual C# a vyberete **rozšíření Pack**. Ponechte výchozí název souboru (ExtensionPack1. cs).
 
 3. Přidal se soubor ExtensionPack1. vsext, který obsahuje následující kód.
 
@@ -85,7 +85,7 @@ Teď, když je rozšíření publikované, nainstalujte ho v aplikaci Visual Stu
 
 2. Klikněte na **online** a vyhledejte "test Extension Pack".
 
-3. Klikněte na tlačítko **Stáhnout**. Rozšíření a jeho seznam rozšíření, která jsou součástí balíčku rozšíření, se pak naplánují na instalaci.
+3. Klikněte na **Stáhnout**. Rozšíření a jeho seznam rozšíření, která jsou součástí balíčku rozšíření, se pak naplánují na instalaci.
 
 4. Níže je uveden příklad zobrazení ukázek rozšiřujícího balíčku v dialogovém okně **Spravovat rozšíření** . Pokud dáváte přednost instalaci jenom některých obsažených rozšíření v balíčku rozšíření, můžete upravit seznam rozšíření v části **naplánované pro instalaci**.
 
