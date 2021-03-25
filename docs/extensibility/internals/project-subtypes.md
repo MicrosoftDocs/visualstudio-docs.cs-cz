@@ -8,17 +8,17 @@ helpviewer_keywords:
 - projects [Visual Studio SDK], subtypes
 - project subtypes [Visual Studio SDK]
 ms.assetid: d235b47b-cf11-4d47-a63f-e33d9d16105d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00d44014ced9253328890c34d877beb68120c0c1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e1695bc79e38c7a9ebbda7736e57116123343f30
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896795"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064329"
 ---
 # <a name="project-subtypes"></a>Podtypy projektů
 Podtypy projektů umožňují přizpůsobit nebo určit chování systémů projektu v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Vlastní nastavení zahrnuje ukládání dalších dat do souboru projektu, přidávání nebo filtrování položek v dialogovém okně **Přidat novou položku** , řízení způsobu ladění a nasazení sestavení a rozšíření dialogového okna **stránky vlastností** projektu. Rozhraní VSPackage implementují podtypy projektu pomocí agregace modelu COM.

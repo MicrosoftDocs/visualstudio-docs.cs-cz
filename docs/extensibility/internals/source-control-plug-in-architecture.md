@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, architecture
 ms.assetid: 35351d4c-9414-409b-98fc-f2023e2426b7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 669ef527e65e56612199b8303f7cc99e8b993b50
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3fe51878603996044535b0abfb70302ef9027c03
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846397"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064251"
 ---
 # <a name="source-control-plug-in-architecture"></a>Architektura modulu plug-in správy zdrojového kódu
 Můžete přidat podporu správy zdrojového kódu do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE) implementací a připojením modulu plug-in správy zdrojového kódu. Rozhraní IDE se připojí k modulu plug-in správy zdrojového kódu prostřednictvím dobře definovaného rozhraní API správy zdrojového kódu Plug-In. Rozhraní IDE zpřístupňuje funkce správy verzí systému správy zdrojového kódu tím, že poskytuje uživatelské rozhraní (UI), které se skládá z panelů nástrojů a příkazů nabídky. Modul plug-in správy zdrojových kódů implementuje funkce správy zdrojového kódu.

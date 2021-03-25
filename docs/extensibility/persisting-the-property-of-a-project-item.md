@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties, adding to a project item
 - project items, adding properties
 ms.assetid: d7a0f2b0-d427-4d49-9536-54edfb37c0f3
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 63b1a4a7cb6e2d12882794a07e51151effe36716
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 58c46da9023cc64246f1ea9ee4bde1ec866c545d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967420"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090353"
 ---
 # <a name="persist-the-property-of-a-project-item"></a>Zachovat vlastnost položky projektu
 Možná budete chtít zachovat vlastnost, kterou přidáte do položky projektu, jako je například autor zdrojového souboru. To lze provést uložením vlastnosti do souboru projektu.
 
  Prvním krokem pro zachování vlastnosti v souboru projektu je získat hierarchii projektu jako <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> rozhraní. Toto rozhraní můžete získat buď pomocí automatizace, nebo pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> . Jakmile rozhraní získáte, můžete ho použít k určení, která položka projektu je aktuálně vybraná. Jakmile budete mít ID položky projektu, můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> k přidání vlastnosti.
 
- V následujících postupech budete uchovávat vlastnost *VsPkg.cs* `Author` s hodnotou `Tom` v souboru projektu.
+ V následujících postupech zachovejte vlastnost *VsPkg. cs* `Author` hodnotou `Tom` v souboru projektu.
 
 ## <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>Získání hierarchie projektu s objektem DTE
 
@@ -119,7 +119,7 @@ Možná budete chtít zachovat vlastnost, kterou přidáte do položky projektu,
 
 1. Spusťte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a pak otevřete nebo vytvořte řešení.
 
-2. Vyberte položku projektu VsPkg.cs v **Průzkumník řešení**.
+2. V **Průzkumník řešení** vyberte položku projektu VsPkg. cs.
 
 3. Použijte zarážku nebo jinak určete, že je váš VSPackage načten a že SetItemAttribute běží.
 

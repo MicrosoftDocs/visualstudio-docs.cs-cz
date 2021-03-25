@@ -8,17 +8,17 @@ helpviewer_keywords:
 - project subtypes, extended methods
 - project subtypes, extended properties
 ms.assetid: 2b9833bf-8551-4ae1-93db-197ba645c65e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8d5d81135a2571db3c84b67acb2fa08e4f83f57d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f32c489ba2907cabff47b916039f96754d403455
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970059"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064238"
 ---
 # <a name="properties-and-methods-extended-by-project-subtypes"></a>Vlastnosti a metody rozšířené prostřednictvím podtypů projektů
 Podtyp projektu má velký výkon pro ovlivnění chování projektu, protože je vytvořen jako agregátor základního projektu. V této části jsou shrnuty některé funkce, které mohou být rozšířeny nebo upraveny podtypy projektu.

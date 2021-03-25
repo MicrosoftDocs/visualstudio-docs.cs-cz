@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], about source control
 ms.assetid: 3a46e4eb-e677-49c3-8647-d927d035a19a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f3b0ddf956c3f5c2ec2fe51163b52f2a7a973aa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9feacd8e051b47b1fec6c3d3ad08e34e591fc57c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846423"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064316"
 ---
 # <a name="source-control-integration-overview"></a>Přehled integrace správy zdrojového kódu
 Tato část Porovnává dva způsoby, jak integrovat do správy zdrojového kódu sady Visual Studio. Modul plug-in správy zdrojových kódů a VSPackage, který poskytuje řešení správy zdrojového kódu a zvýrazňuje nové funkce správy zdrojového kódu. Visual Studio umožňuje ruční přepínání mezi prvky VSPackage správy zdrojového kódu a moduly plug-in správy zdrojových kódů a také automatickým přepínáním na základě řešení.

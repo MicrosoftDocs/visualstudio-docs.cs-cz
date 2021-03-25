@@ -10,17 +10,17 @@ helpviewer_keywords:
 - project types, items
 - project types, design decisions
 ms.assetid: f68671fe-fd7a-4e56-a0b5-330b0f1fedb1
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1b051abfede6ec90350878f669ed32e7e26b299
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2f1a90082b0ba9d18336463b26cf72acea39851b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896750"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064306"
 ---
 # <a name="project-type-design-decisions"></a>Rozhodnutí týkající se návrhu typu projektu
 Před vytvořením nového typu projektu je nutné provést několik rozhodnutí o návrhu týkajících se typu projektu. Musíte rozhodnout, jaké typy položek budou vaše projekty obsahovat, jak budou zachovány soubory projektu a jaký model závazku budete používat.
