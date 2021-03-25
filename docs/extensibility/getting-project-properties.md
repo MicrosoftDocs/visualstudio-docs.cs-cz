@@ -8,17 +8,17 @@ helpviewer_keywords:
 - project properties, displaying in tool window
 - tool windows, displaying project properties
 ms.assetid: 96ba07ca-0811-4013-8602-12550ac4ba79
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e89a19ee51a62e8d92c0ec8984e912703e2b92b5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8de3f32951cb70b8115781ce067950c7e518b102
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968187"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057660"
 ---
 # <a name="get-project-properties"></a>Získat vlastnosti projektu
 
@@ -38,7 +38,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ### <a name="to-display-project-properties-in-a-tool-window"></a>Zobrazení vlastností projektu v okně nástroje
 
-1. V souboru ProjectPropertiesToolWindowCommand.cs přidejte následující direktivy using.
+1. V souboru ProjectPropertiesToolWindowCommand. cs přidejte následující direktivy using.
 
     ```csharp
     using EnvDTE;
@@ -46,9 +46,9 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
     ```
 
-2. V souboru *ProjectPropertiesToolWindowControl. XAML* odeberte existující tlačítko a přidejte prvek TreeView z panelu nástrojů. Můžete také odebrat obslužnou rutinu události Click ze souboru *ProjectPropertiesToolWindowControl.XAML.cs* .
+2. V souboru *ProjectPropertiesToolWindowControl. XAML* odeberte existující tlačítko a přidejte prvek TreeView z panelu nástrojů. Můžete také odebrat obslužnou rutinu události Click ze souboru *ProjectPropertiesToolWindowControl. XAML. cs* .
 
-3. V *ProjectPropertiesToolWindowCommand.cs* použijte `ShowToolWindow()` metodu k otevření projektu a načtení jeho vlastností a poté přidejte vlastnosti do prvku TreeView. Kód pro ShowToolWindow by měl vypadat takto:
+3. V *ProjectPropertiesToolWindowCommand. cs* použijte `ShowToolWindow()` metodu k otevření projektu a ke čtení jeho vlastností a pak přidejte vlastnosti do prvku TreeView. Kód pro ShowToolWindow by měl vypadat takto:
 
     ```csharp
     private void ShowToolWindow(object sender, EventArgs e)

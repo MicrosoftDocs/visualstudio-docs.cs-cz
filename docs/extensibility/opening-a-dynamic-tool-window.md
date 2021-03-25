@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - tool windows, dynamic
 ms.assetid: 21547ba7-6e81-44df-9277-265bf34f877a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1998091559f78ed7c7eb8d9585206cf0217d8b2d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 357644f67da9a3bbc468d708cf39e44f737dbf0f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946589"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090418"
 ---
 # <a name="open-a-dynamic-tool-window"></a>Otevřít dynamické okno nástrojů
 Okna nástrojů se obvykle otevírají z příkazu v nabídce nebo ekvivalentní klávesové zkratky. V některých případech však můžete potřebovat okno nástroje, které se otevře vždy, když se použije konkrétní kontext uživatelského rozhraní, a ukončí se, když se kontext uživatelského rozhraní již nepoužívá. Tyto typy oken nástrojů se nazývají *dynamické* nebo *automaticky viditelné*.
@@ -34,9 +34,9 @@ Okna nástrojů se obvykle otevírají z příkazu v nabídce nebo ekvivalentní
 
 ## <a name="to-open-a-dynamic-tool-window"></a>Otevření dynamického okna nástrojů
 
-1. Vytvořte projekt VSIX s názvem **DynamicToolWindow** a přidejte šablonu položky okna nástroje s názvem *DynamicWindowPane.cs*. Další informace najdete v tématu [Vytvoření rozšíření pomocí okna nástroje](../extensibility/creating-an-extension-with-a-tool-window.md).
+1. Vytvořte projekt VSIX s názvem **DynamicToolWindow** a přidejte šablonu položky okna nástroje s názvem *DynamicWindowPane. cs*. Další informace najdete v tématu [Vytvoření rozšíření pomocí okna nástroje](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-2. V souboru *DynamicWindowPanePackage.cs* Najděte deklaraci DynamicWindowPanePackage. Přidejte <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atributy a <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> pro registraci okna nástroje.
+2. V souboru *DynamicWindowPanePackage. cs* Najděte deklaraci DynamicWindowPanePackage. Přidejte <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atributy a <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> pro registraci okna nástroje.
 
     ```vb
     [ProvideToolWindow(typeof(DynamicWindowPane)]

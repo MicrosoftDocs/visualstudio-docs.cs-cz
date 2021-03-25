@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03d4fbd509cbbb408bdcd0465ba4460f8c3b1e9f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8af418d8ffcaad18aca4497078f4e24f9bb679fd
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943241"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090639"
 ---
 # <a name="manage-universal-windows-projects"></a>Správa univerzálních projektů pro Windows
 
@@ -31,7 +31,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 2. Přidejte odkaz na *Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll* a *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* (v části **rozšíření** ).
 
-3. Otevřete *TestUniversalProject.cs* a přidejte následující `using` direktivy:
+3. Otevřete *TestUniversalProject. cs* a přidejte následující `using` direktivy:
 
     ```csharp
     using EnvDTE;
@@ -425,9 +425,9 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
       V tomto postupu přidáte naslouchací proces událostí do sdíleného projektu a projektu platformy. Pak při přejmenování jednoho souboru ve sdíleném projektu a jiném souboru v projektu platformy můžete zobrazit události, které jsou aktivovány pro každou operaci přejmenování.
 
-2. Přidejte naslouchací proces událostí. Přidejte do projektu nový soubor třídy a zavolejte ho *HierarchyEventListener.cs*.
+2. Přidejte naslouchací proces událostí. Přidejte do projektu nový soubor třídy a zavolejte ho *HierarchyEventListener. cs*.
 
-3. Otevřete soubor *HierarchyEventListener.cs* a přidejte následující direktivy using:
+3. Otevřete soubor *HierarchyEventListener. cs* a přidejte následující direktivy using:
 
    ```csharp
    using Microsoft.VisualStudio.Shell.Interop;
@@ -551,7 +551,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
     this.ModifyFileNameInProject(sharedHier, fullPath);
     ```
 
-11. Sestavte a spusťte projekt. V experimentální instanci vytvořte aplikaci univerzálního centra C#, přejděte do nabídky **nástroje** , klikněte na **vyvolat TestUniversalProject** a zaškrtněte text v podokně obecné výstup. Název první položky ve sdíleném projektu (očekáváme, že se jedná o soubor *App. XAML* ), který by měl být změněn a měla by se zobrazit, že <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> událost byla vyvolána. V takovém případě, protože přejmenování *App. XAML* způsobí, že se přejmenuje *App.XAML.cs* , měli byste vidět čtyři události (dvě pro každý projekt platformy). (Události DTE nesleduje položky ve sdíleném projektu.) Měly by se zobrazit dvě <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> události (jeden pro každý projekt platformy), ale žádné <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> události.
+11. Sestavte a spusťte projekt. V experimentální instanci vytvořte aplikaci univerzálního centra C#, přejděte do nabídky **nástroje** , klikněte na **vyvolat TestUniversalProject** a zaškrtněte text v podokně obecné výstup. Název první položky ve sdíleném projektu (očekáváme, že se jedná o soubor *App. XAML* ), který by měl být změněn a měla by se zobrazit, že <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> událost byla vyvolána. V tomto případě, vzhledem k tomu, že při přejmenování *App. XAML* dojde také k přejmenování souboru *App. XAML. cs* , měli byste vidět čtyři události (dva pro každý projekt platformy). (Události DTE nesleduje položky ve sdíleném projektu.) Měly by se zobrazit dvě <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> události (jeden pro každý projekt platformy), ale žádné <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> události.
 
 12. Nyní se pokuste přejmenovat soubor v projektu platformy a v událostech, které se aktivují, můžete zobrazit rozdíl. `ShowMessageBox`Po volání metody přidejte následující kód `ModifyFileName` .
 

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - interop assemblies, Visual Studio
 - managed VSPackages, interop assemblies
 ms.assetid: 1043eb95-4f0d-4861-be21-2a25395b3b3c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1764cc735ca836feada2ad6f794f2bc8520fef41
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1253f5e7197f587e4a5e62365b42cb5040010666
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941707"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090665"
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Používání definičních sestavení sady Visual Studio
 Sestavení vzájemné spolupráce sady Visual Studio umožňují spravovaným aplikacím přístup k rozhraním COM, která poskytují rozšiřitelnost sady Visual Studio. Existují některé rozdíly mezi přímými rozhraními COM a jejich definičními verzemi. Například HRESULTs se obvykle reprezentují jako celočíselné hodnoty a musí být zpracovány stejným způsobem jako výjimky a parametry (obzvláště výstupní parametry) jsou zpracovávány jinak.

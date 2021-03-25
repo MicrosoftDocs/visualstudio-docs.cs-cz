@@ -8,17 +8,17 @@ helpviewer_keywords:
 - source control [Visual Studio SDK], switching plug-ins
 - source control plug-ins, switching
 ms.assetid: 01370792-b5da-4e46-9ce2-7dd326587141
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50cbf92b8214e605976aec58aaea984276ca8cc6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2dbc6b9646bcdec8cbdfae9d262397eb0ff74bdc
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99848205"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090769"
 ---
 # <a name="test-area-8-plug-in-switching"></a>Testovací oblast 8: Přepínání modulů plug-in
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Integrované vývojové prostředí (IDE) má uživatelské rozhraní (UI), které umožňuje změnit aktuální modul plug-in správy zdrojových kódů. Tato testovací oblast poskytuje testovací případy pro proces výběru, který modul plug-in bude použit pro správu zdrojového kódu řešení.

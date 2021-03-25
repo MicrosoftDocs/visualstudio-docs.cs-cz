@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - attach views to document data
 ms.assetid: f92c0838-45be-42b8-9c55-713e9bb8df07
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97926070bd06e4e8a99a4d6b2fe59e4ea57233ef
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8a034fc1c7cded7de4ead38cfba5d3410341c95d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929222"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057413"
 ---
 # <a name="how-to-attach-views-to-document-data"></a>Postupy: připojení zobrazení k datům dokumentu
 Máte-li nové zobrazení dokumentu, může být možné ho připojit k existujícímu datovému objektu dokumentu.

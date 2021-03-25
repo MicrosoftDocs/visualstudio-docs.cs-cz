@@ -8,17 +8,17 @@ helpviewer_keywords:
 - interop assemblies, determining command status
 - command handling with interop assemblies, status
 ms.assetid: 2f5104d1-7b4c-4ca0-a626-50530a8f7f5c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5473fffa00723735b022412e7f37f184e043df4b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ef6940aef83ad3865385b4e39fd9cfd62b8866d7
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963442"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090899"
 ---
 # <a name="determine-command-status-by-using-interop-assemblies"></a>Určení stavu příkazu pomocí definičních sestavení
 VSPackage musí sledovat stav příkazů, které může zpracovat. Prostředí nemůže určit, kdy se má příkaz, který je zpracován v rámci rozhraní VSPackage, aktivovat nebo zakázat. Je zodpovědností vaší sady VSPackage o informování prostředí o stavech příkazů, například o stavu obecných příkazů, jako je například **vyjmutí**, **kopírování** a **vložení**.

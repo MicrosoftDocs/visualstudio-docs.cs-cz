@@ -8,17 +8,17 @@ helpviewer_keywords:
 - debugging [Debugging SDK], custom viewer
 - debugging [Debugging SDK], type visualizer
 ms.assetid: fd3691e6-9c78-4767-846f-43f85ada4375
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3fe647d8a5a4bf3485b1d7b9f7b9699997bf3da6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 869f0997ee166b9b7eb29c1a313854437d670ee4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965431"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057816"
 ---
 # <a name="type-visualizer-and-custom-viewer"></a>Vizualizér typů a vlastní prohlížeč
 Vizualizér typů je komponenta, která zobrazuje určitou část dat v určitém formátu. Formát je zcela na to, kdo implementuje vizualizér, jedná se o koncového uživatele nebo dodavatelem třetích stran pro vizualizuje.

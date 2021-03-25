@@ -6,16 +6,16 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 8dd2cd1d-d8ba-49b9-870a-45acf3a3259d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41b804d3f7697890773b4b6888bcffa108b7a11b
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 0ce09edd20c0c46a6b93ace77808fdfc7d5d1c5d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96993455"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057361"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Postupy: použití kontextu uživatelského rozhraní založeného na pravidlech pro rozšíření sady Visual Studio
 
@@ -132,7 +132,7 @@ Kontext uživatelského rozhraní založeného na pravidlech lze použít různ�
 
 Tady jsou různé typy termínů, které jsou podporované:
 
-|Období|Popis|
+|Období|Description|
 |-|-|
 |{nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn}|Identifikátor GUID odkazuje na kontext uživatelského rozhraní. Pokud je kontext uživatelského rozhraní aktivní a v opačném případě false, bude podmínka pravdivá.|
 |HierSingleSelectionName:\<pattern>|Podmínka bude pravdivá vždy, když je výběr v aktivní hierarchii jedinou položkou a název vybrané položky odpovídá regulárnímu výrazu .NET, který je dán "vzorem".|
