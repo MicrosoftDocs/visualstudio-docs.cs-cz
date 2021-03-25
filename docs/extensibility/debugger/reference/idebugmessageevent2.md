@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugMessageEvent2 interface
 ms.assetid: a9ff3d00-e9ac-4cd6-bda9-584a4815aff8
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c84bf93a50ce9a5e530ebb7143d7b1c69f50360
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c5593e822b974ddb7c666f622192e3e4630b7222
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102172270"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105058427"
 ---
 # <a name="idebugmessageevent2"></a>IDebugMessageEvent2
 Toto rozhraní používá modul ladění (DE) k odeslání zprávy do aplikace Visual Studio, která vyžaduje odpověď od uživatele.

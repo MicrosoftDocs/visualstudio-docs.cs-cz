@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - debug engines, attaching to programs
 ms.assetid: ad2b7db8-821c-440c-ba07-c55c6a395e0f
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f1b23cd7c09f3eeac2bfe85de882ff42affaa652
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2f261d6492943ab0b0da878097685ae2773ddff4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920082"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055294"
 ---
 # <a name="attach-directly-to-a-program"></a>Připojit přímo k programu
 Uživatelé, kteří chtějí ladit programy v procesu, který je již spuštěn, obvykle následují za tímto způsobem:

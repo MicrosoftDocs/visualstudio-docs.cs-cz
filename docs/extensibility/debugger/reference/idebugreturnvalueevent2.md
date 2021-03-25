@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugReturnValueEvent2
 ms.assetid: 2daded43-e427-4fbb-a19e-f3834e3723af
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b0566453d5ce34f829f43fab465b4310942e44e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 17eafb8f974c193fd4796cd246bf7e0a1abe929a
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102165836"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105075702"
 ---
 # <a name="idebugreturnvalueevent2"></a>IDebugReturnValueEvent2
 Toto rozhraní je odesláno ladicím modulem (DE) do Správce ladění relace (SDM) po rozkrokování funkce nebo nad ní.

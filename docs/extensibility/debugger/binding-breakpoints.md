@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - breakpoints, binding
 ms.assetid: 70737387-c52f-4dae-8865-77d4b203bf25
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d7da8cfdb2b7995b77364e5a5de62667b13e52c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 622d61c6083288f7293258feb3743ef7cfdd0b8b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895008"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055281"
 ---
 # <a name="bind-breakpoints"></a>Vázání zarážek
 Pokud uživatel nastaví zarážku, třeba stisknutím klávesy **F9**, rozhraní IDE formuluje požadavek a vyzve relaci ladění, aby vytvořila zarážku.
