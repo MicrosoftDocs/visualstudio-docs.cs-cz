@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1c906b96f3bd20b72cf2b5eca92190e0ad42916
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad000d486b0808ea4ddc3311daa7178c6eda1231
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931289"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080317"
 ---
 # <a name="walkthrough-display-light-bulb-suggestions"></a>Návod: zobrazení návrhů žárovky
 Žárovky jsou ikony v editoru sady Visual Studio, které se rozbalí k zobrazení sady akcí, například opravy pro problémy identifikované vestavěnými analyzátory kódu nebo refaktoringu kódu.
@@ -74,7 +74,7 @@ ms.locfileid: "99931289"
 
 ## <a name="implement-the-light-bulb-source-provider"></a>Implementace poskytovatele zdroje žárovky
 
-1. V souboru třídy *LightBulbTest.cs* odstraňte třídu LightBulbTest. Přidejte třídu s názvem **TestSuggestedActionsSourceProvider** , která implementuje <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> . Exportujte s názvem **navrhované akce testu** a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text".
+1. V souboru třídy *LightBulbTest. cs* odstraňte třídu LightBulbTest. Přidejte třídu s názvem **TestSuggestedActionsSourceProvider** , která implementuje <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> . Exportujte s názvem **navrhované akce testu** a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text".
 
     ```csharp
     [Export(typeof(ISuggestedActionsSourceProvider))]
