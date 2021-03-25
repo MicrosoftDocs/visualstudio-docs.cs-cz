@@ -9,17 +9,17 @@ helpviewer_keywords:
 - project system
 - tutorial
 ms.assetid: 882a10fa-bb1c-4b01-943a-7a3c155286dd
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a1b21ef736e69c962db389a7bb1a3eb284ebdd0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 15d28ff154629d07c643430b210d6106ac99978c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887364"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089430"
 ---
 # <a name="create-a-basic-project-system-part-1"></a>Vytvoření základního projektového systému, část 1
 V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používají k uspořádání souborů zdrojového kódu a dalších prostředků. Projekty se zobrazí jako podřízené položky řešení v **Průzkumník řešení**. Projekty umožňují organizovat, sestavovat, ladit a nasazovat zdrojový kód a vytvářet odkazy na webové služby, databáze a další prostředky.
@@ -80,7 +80,7 @@ V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používaj
 
 4. Uložte ikonu a zavřete editor ikon.
 
-5. Ve složce *Templates\Projects\SimpleProject* přidejte položku **třídy** s názvem *program.cs*.
+5. Ve složce *Templates\Projects\SimpleProject* přidejte položku **třídy** s názvem *program. cs*.
 
 6. Nahraďte existující kód následujícími řádky.
 
@@ -103,11 +103,11 @@ V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používaj
    ```
 
    > [!IMPORTANT]
-   > Nejedná se o konečnou formu *program.cs* kódu; parametry nahrazení budou řešeny v pozdějším kroku. Může dojít k chybám při kompilaci, ale pokud je **BuildAction** souboru **obsahu**, měli byste být schopni sestavit a spustit projekt obvyklým způsobem.
+   > Nejedná se o poslední podobu *programu. kód cs* ; parametry nahrazení budou řešeny v pozdějším kroku. Může dojít k chybám při kompilaci, ale pokud je **BuildAction** souboru **obsahu**, měli byste být schopni sestavit a spustit projekt obvyklým způsobem.
 
 7. Soubor uložte.
 
-8. Zkopírujte soubor *AssemblyInfo.cs* ze složky *Properties* do složky *Projects\SimpleProject* .
+8. Zkopírujte soubor *AssemblyInfo. cs* ze složky *Properties* do složky *Projects\SimpleProject* .
 
 9. Ve složce *Projects\SimpleProject* přidejte soubor XML s názvem *SimpleProject. myproj*.
 
@@ -156,9 +156,9 @@ V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používaj
 
 11. Soubor uložte.
 
-12. V okně **vlastnosti** nastavte **akci sestavení** pro *AssemblyInfo.cs*, *program.cs*, *SimpleProject. ico* a *SIMPLEPROJECT. myproj* na **obsah** a nastavte jejich **zahrnutí do vlastností VSIX** na **hodnotu true**.
+12. V okně **vlastnosti** nastavte **akci sestavení** souboru *AssemblyInfo. cs*, *program. cs*, *SimpleProject. ico* a *SIMPLEPROJECT. myproj* na **obsah** a nastavte jejich **zahrnutí do vlastností VSIX** na **hodnotu true**.
 
-    Tato šablona projektu popisuje základní projekt Visual C#, který obsahuje konfiguraci ladění i konfiguraci vydání. Projekt obsahuje dva zdrojové soubory, *AssemblyInfo.cs* a *program.cs* a několik odkazů na sestavení. Při vytvoření projektu ze šablony je hodnota ProjectGuid automaticky nahrazena novým identifikátorem GUID.
+    Tato šablona projektu popisuje základní projekt Visual C#, který obsahuje konfiguraci ladění i konfiguraci vydání. Projekt obsahuje dva zdrojové soubory, *AssemblyInfo. cs* a *program. cs* a několik odkazů na sestavení. Při vytvoření projektu ze šablony je hodnota ProjectGuid automaticky nahrazena novým identifikátorem GUID.
 
     V **Průzkumník řešení** by se měla zobrazit složka rozšířených **šablon** takto:
 
@@ -190,7 +190,7 @@ Templates
        }
    ```
 
-2. Přidejte třídu do horní složky *SimpleProject* s názvem *SimpleProjectFactory.cs*.
+2. Přidejte třídu do horní složky *SimpleProject* s názvem *SimpleProjectFactory. cs*.
 
 3. Přidejte následující direktivy using:
 
@@ -212,7 +212,7 @@ Templates
 
 ### <a name="to-register-the-project-template"></a>Registrace šablony projektu
 
-1. V *SimpleProjectPackage.cs* přidejte <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> atribut do `SimpleProjectPackage` třídy následujícím způsobem.
+1. V *SimpleProjectPackage. cs* přidejte <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> atribut do `SimpleProjectPackage` třídy následujícím způsobem.
 
    ```csharp
    [ProvideProjectFactory(    typeof(SimpleProjectFactory),     "Simple Project",
@@ -271,7 +271,7 @@ Templates
 
 ### <a name="to-initialize-the-project-factory"></a>Inicializace objektu pro vytváření projektu
 
-1. Do souboru *SimpleProjectPackage.cs* přidejte následující `using` direktivu.
+1. Do souboru *SimpleProjectPackage. cs* přidejte následující `using` direktivu.
 
     ```csharp
     using Microsoft.VisualStudio.Project;
@@ -299,7 +299,7 @@ Templates
     }
     ```
 
-5. V *SimpleProjectFactory.cs* přidejte následující `using` direktivu za stávající `using` direktivy.
+5. V *SimpleProjectFactory. cs* přidejte následující `using` direktivu za stávající `using` direktivy.
 
     ```csharp
     using Microsoft.VisualStudio.Project;
@@ -339,7 +339,7 @@ Templates
 
 ### <a name="to-test-the-project-factory-implementation"></a>Testování implementace továrny projektu
 
-1. V souboru *SimpleProjectFactory.cs* nastavte zarážku na následujícím řádku v `SimpleProjectFactory` konstruktoru.
+1. V souboru *SimpleProjectFactory. cs* nastavte zarážku na následujícím řádku v `SimpleProjectFactory` konstruktoru.
 
     ```csharp
     this.package = package;
@@ -418,7 +418,7 @@ Templates
 
 ### <a name="to-connect-the-project-factory-class-and-the-node-class"></a>Připojení třídy factory projektu a třídy Node
 
-1. Do souboru *SimpleProjectFactory.cs* přidejte následující `using` direktivu:
+1. Do souboru *SimpleProjectFactory. cs* přidejte následující `using` direktivu:
 
     ```csharp
     using IOleServiceProvider =    Microsoft.VisualStudio.OLE.Interop.IServiceProvider;
@@ -462,7 +462,7 @@ Templates
 
 3. V okně **vlastnosti** změňte **akci sestavení** rastrového obrázku na **Integrovaný prostředek**.
 
-4. Do *SimpleProjectNode.cs* přidejte následující `using` direktivy:
+4. V *SimpleProjectNode. cs* přidejte následující `using` direktivy:
 
    ```csharp
    using System.Drawing;
@@ -564,7 +564,7 @@ Templates
 
 ### <a name="to-substitute-template-parameters"></a>Náhrada parametrů šablony
 
-1. Do souboru *SimpleProjectNode.cs* přidejte následující `using` direktivu.
+1. Do souboru *SimpleProjectNode. cs* přidejte následující `using` direktivu.
 
    ```csharp
    using System.IO;
@@ -605,7 +605,7 @@ Templates
 
    - `nameSpace` je předána hodnota \<RootNamespace> prvku v souboru šablony projektu *\Templates\Projects\SimpleProject\SimpleProject.myproj* . V tomto případě je hodnota `MyRootNamespace` .
 
-   - `className` je předána hodnota názvu zdrojového souboru třídy bez přípony názvu souboru. V takovém případě je první soubor, který se má zkopírovat do cílové složky, *AssemblyInfo.cs*; Proto je hodnota className `AssemblyInfo` .
+   - `className` je předána hodnota názvu zdrojového souboru třídy bez přípony názvu souboru. V takovém případě je první soubor, který se má zkopírovat do cílové složky, soubor *AssemblyInfo. cs*; Proto je hodnota className `AssemblyInfo` .
 
 4. Odeberte zarážku a stisknutím klávesy **F5** pokračujte v provádění.
 

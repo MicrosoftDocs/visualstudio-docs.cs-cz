@@ -8,17 +8,17 @@ helpviewer_keywords:
 - toolbox
 - windows forms
 ms.assetid: 0be6ffc1-8afd-4d02-9a5d-e27dde05fde6
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4bb9505ab475da7919a39eb03e7c84b92857db4e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 42dcf30e7c31880357bb95e3858a2c70aa59f174
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902188"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089326"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Vytvoření ovládacího prvku panelu nástrojů model Windows Forms
 
@@ -46,7 +46,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 #### <a name="to-build-the-user-interface"></a>Sestavení uživatelského rozhraní
 
-1. V **Průzkumník řešení** poklikejte na *Counter.cs* a otevře se v návrháři.
+1. V **Průzkumník řešení** dvakrát klikněte na *čítač Counter. cs* a otevřete ho v návrháři.
 
 2. Odeberte **kliknutím sem.** tlačítko, které je součástí výchozího nastavení, když přidáte šablonu ovládacího prvku model Windows Forms panelu nástrojů.
 
@@ -163,7 +163,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 2. V experimentální instanci aplikace Visual Studio vytvořte projekt **aplikace model Windows Forms** .
 
-3. V **Průzkumník řešení** dvakrát klikněte na *Form1.cs* a otevřete ho v návrháři, pokud ještě není otevřený.
+3. V **Průzkumník řešení** dvakrát klikněte na *Form1. cs* a otevřete ho v návrháři, pokud ještě není otevřený.
 
 4. V sadě **nástrojů** `Counter` by měl být ovládací prvek zobrazen v části **Obecné** .
 
@@ -173,7 +173,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 7. Přetáhněte <xref:System.Windows.Forms.Button> ovládací prvek do formuláře a potom nastavte vlastnosti název a text tlačítka na `Test` .
 
-8. Dvojím kliknutím na tlačítko otevřete *Form1.cs* v zobrazení kódu a vytvořte obslužnou rutinu Click.
+8. Dvojím kliknutím na tlačítko otevřete *Form1. cs* v zobrazení kódu a vytvořte obslužnou rutinu Click.
 
 9. V obslužné rutině Click volejte `counter1.Increment()` .
 

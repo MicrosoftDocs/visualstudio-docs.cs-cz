@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 8ed68602-4e28-46fe-b39f-f41979b308a2
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d647a1dbd3bc6bf99f9803870c7b58ead358b41
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7b19d60294431a08fa26f11bf58606893f392cd1
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892590"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060234"
 ---
 # <a name="application-patterns-for-visual-studio"></a>Vzory aplikací pro Visual Studio
 ## <a name="window-interactions"></a><a name="BKMK_WindowInteractions"></a> Interakce oken
@@ -117,7 +117,7 @@ Příklady oken nástrojů seznamu naviguje jsou Průzkumník řešení a okno v
 
 | Okno nástroje | Funkce |
 | --- | --- |
-| Nápověda | Okno, které umožňuje uživatelům přístup k různým metodám získání přístupu, od "jak to?" videa na fórech MSDN. |
+| Help | Okno, které umožňuje uživatelům přístup k různým metodám získání přístupu, od "jak to?" videa na fórech MSDN. |
 | Dynamická Help | Okno nástroje, které zobrazuje odkazy na témata nápovědy platná pro aktuální výběr. |
 | prohlížeč objektů | Sada rámců se dvěma sloupci se seznamem hierarchických komponent objektů v levém podokně a vlastnostmi a metodami objektu v pravém sloupci. |
 
@@ -419,7 +419,7 @@ Nepoužívejte přístupové klávesy pro tlačítka **OK**, **Zrušit** nebo **
 | --- | --- |
 | OK | Enter |
 | Zrušit | Esc |
-| Nápověda | F1 |
+| Help | F1 |
 
 #### <a name="imagery"></a>Obrázcích
 Používejte v dialogových oknech jenom obrázky. V dialogových oknech nepoužívejte velké ikony pouze k použití místa. Použijte image jenom v případě, že jsou důležitou součástí přenosu zprávy uživateli, jako jsou ikony upozornění nebo animace stavu.

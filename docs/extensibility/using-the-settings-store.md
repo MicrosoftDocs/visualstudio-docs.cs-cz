@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Settings Store, using
 ms.assetid: 447ec08a-eca5-40b8-89b0-f98fdf3d39a4
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 752a912fd9a565e4b3e8dcb5c4c142e8f37dffc5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0a84fa551a4a3ea10b212832c0891fb0d7d19b2f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934035"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060182"
 ---
 # <a name="using-the-settings-store"></a>Použití úložiště nastavení
 Existují dva druhy úložišť nastavení:
@@ -33,12 +33,12 @@ Existují dva druhy úložišť nastavení:
 
 1. Každé rozšíření sady Visual Studio začíná projektem nasazení VSIX, který bude obsahovat prostředky rozšíření. Vytvořte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt VSIX s názvem `SettingsStoreExtension` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** v části **Visual C#/rozšiřitelnost**.
 
-2. Nyní přidejte šablonu vlastní položky příkazu s názvem **SettingsStoreCommand**. V dialogovém okně **Přidat novou položku** přejít na **Visual C#/rozšiřitelnost** a vyberte **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na **SettingsStoreCommand.cs**. Další informace o tom, jak vytvořit vlastní příkaz, najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) .
+2. Nyní přidejte šablonu vlastní položky příkazu s názvem **SettingsStoreCommand**. V dialogovém okně **Přidat novou položku** přejít na **Visual C#/rozšiřitelnost** a vyberte **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na **SettingsStoreCommand. cs**. Další informace o tom, jak vytvořit vlastní příkaz, najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) .
 
 ## <a name="using-the-configuration-settings-store"></a>Použití úložiště nastavení konfigurace
  V této části se dozvíte, jak zjistit a zobrazit nastavení konfigurace.
 
-1. Do souboru SettingsStorageCommand.cs přidejte následující direktivy using:
+1. V souboru SettingsStorageCommand. cs přidejte následující direktivy using:
 
    ```
    using System.Collections.Generic;

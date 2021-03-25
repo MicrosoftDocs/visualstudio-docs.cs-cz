@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - profile settings, creating categories
 ms.assetid: 97c88693-05ff-499e-8c43-352ee073dcb7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf089eeaf8c4408a0bc76d2f3982d311ac9c5979
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1e3ef6dbfc58c67ce8e4dd7ff26634e4dbce2218
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896257"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089339"
 ---
 # <a name="create-a-settings-category"></a>Vytvoření kategorie nastavení
 
@@ -39,7 +39,7 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
 
 2. Otevřete soubor *VSPackage. resx* a přidejte tyto tři řetězcové prostředky:
 
-    |Název|Hodnota|
+    |Name|Hodnota|
     |----------|-----------|
     |106|Moje kategorie|
     |107|Moje nastavení|
@@ -50,7 +50,7 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
     > [!NOTE]
     > Z těchto tří typů se v průvodci **importem a exportem nastavení** nezobrazí pouze název kategorie.
 
-3. V *MyToolsOptionsPackage.cs* přidejte `float` vlastnost s názvem `OptionFloat` do `OptionPageGrid` třídy, jak je znázorněno v následujícím příkladu.
+3. V *MyToolsOptionsPackage. cs* přidejte `float` vlastnost s názvem `OptionFloat` do `OptionPageGrid` třídy, jak je znázorněno v následujícím příkladu.
 
     ```csharp
     public class OptionPageGrid : DialogPage

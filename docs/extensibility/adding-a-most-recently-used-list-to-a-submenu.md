@@ -9,17 +9,17 @@ helpviewer_keywords:
 - menus, creating MRU list
 - most recently used
 ms.assetid: 27d4bbcf-99b1-498f-8b66-40002e3db0f8
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bdff50655f846ced91e59a93a2d264bb06641ed1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bb238afb0f583f1b913fbd87f4f50e43679ebd7d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951547"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060013"
 ---
 # <a name="add-a-most-recently-used-list-to-a-submenu"></a>Přidat seznam naposledy použitých do podnabídky
 Tento názorný postup se sestavuje v předváděních v [nabídce Přidat podnabídku do nabídky](../extensibility/adding-a-submenu-to-a-menu.md)a ukazuje, jak přidat dynamický seznam do podnabídky. Dynamický seznam tvoří základ pro vytvoření seznamu naposledy použitých položek.
@@ -83,14 +83,14 @@ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual St
 
 ## <a name="filling-the-mru-list"></a>Naplnění seznamu naposledy použitých
 
-1. V *TestCommandPackageGuids.cs* přidejte následující řádky za existující identifikátory příkazů v `TestCommandPackageGuids` definici třídy.
+1. V *TestCommandPackageGuids. cs* přidejte následující řádky za existující identifikátory příkazů v `TestCommandPackageGuids` definici třídy.
 
     ```csharp
     public const string guidTestCommandPackageCmdSet = "00000000-0000-0000-0000-00000000"; // get the GUID from the .vsct file
     public const uint cmdidMRUList = 0x200;
     ```
 
-2. Do *TestCommand.cs* přidejte následující příkaz using.
+2. V *TestCommand. cs* přidejte následující příkaz using.
 
     ```csharp
     using System.Collections;

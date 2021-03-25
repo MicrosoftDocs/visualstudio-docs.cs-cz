@@ -9,17 +9,17 @@ helpviewer_keywords:
 - menus, adding menu controllers to toolbars
 - menu controllers, adding to toolbars
 ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82da331d93a2208b76bb953f3a6a489913c907ac
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 304f4ea11abc332c01603f96b6b67c0bd22e38c6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951521"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060065"
 ---
 # <a name="add-a-menu-controller-to-a-toolbar"></a>Přidání řadiče nabídky na panel nástrojů
 Tento názorný postup sestaví na panelu nástrojů [Přidat panel nástrojů](../extensibility/adding-a-toolbar-to-a-tool-window.md) a ukazuje, jak přidat řadič nabídky do panelu nástrojů okna nástroje. Níže uvedené kroky lze použít také na panelu nástrojů, který je vytvořen v návodu [Přidat panel nástrojů](../extensibility/adding-a-toolbar.md) .
@@ -112,7 +112,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ## <a name="implement-the-menu-controller-commands"></a>Implementace příkazů řadiče nabídky
 
-1. V *TWTestCommandPackageGuids.cs* přidejte identifikátory příkazů pro tři položky nabídky za existující identifikátory příkazů.
+1. V *TWTestCommandPackageGuids. cs* přidejte identifikátory příkazů pro tři položky nabídky za existující identifikátory příkazů.
 
     ```csharp
     public const int cmdidMCItem1 = 0x130;
@@ -120,7 +120,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
     public const int cmdidMCItem3 = 0x132;
     ```
 
-2. V *TWTestCommand.cs* přidejte následující kód na začátek `TWTestCommand` třídy.
+2. V *TWTestCommand. cs* přidejte následující kód na začátek `TWTestCommand` třídy.
 
     ```csharp
     private int currentMCCommand; // The currently selected menu controller command

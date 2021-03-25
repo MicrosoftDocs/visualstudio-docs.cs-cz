@@ -8,17 +8,17 @@ helpviewer_keywords:
 - multi
 - tool windows
 ms.assetid: 4a7872f1-acc9-4f43-8932-5a526b36adea
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1d332e3c41a55de8f405f028070fa95f97f6717
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ce6122cbf4d6f85ab50e067fbbd643053ac4e4dd
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923268"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089352"
 ---
 # <a name="create-a-multi-instance-tool-window"></a>Vytvoření okna nástroje s více instancemi
 Můžete programovat okno nástroje, aby bylo možné současně otevřít více instancí. Ve výchozím nastavení může být v oknech nástrojů otevřená jenom jedna instance.
@@ -34,7 +34,7 @@ Když použijete okno s více instancemi, můžete zobrazit několik souvisejíc
 
 ## <a name="make-a-tool-window-multi-instance"></a>Vytvoření více instancí okna nástrojů
 
-1. Otevřete soubor *MIToolWindowPackage.cs* a vyhledejte `ProvideToolWindow` atribut. a `MultiInstances=true` parametr, jak je znázorněno v následujícím příkladu:
+1. Otevřete soubor *MIToolWindowPackage. cs* a vyhledejte `ProvideToolWindow` atribut. a `MultiInstances=true` parametr, jak je znázorněno v následujícím příkladu:
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -46,7 +46,7 @@ Když použijete okno s více instancemi, můžete zobrazit několik souvisejíc
     {. . .}
     ```
 
-2. V souboru *MIToolWindowCommand.cs* vyhledejte `ShowToolWindos()` metodu. V této metodě zavolejte <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> metodu a nastavte její `create` příznak na `false` tak, aby se opakovala prostřednictvím existujících instancí okna nástrojů, dokud `id` není nalezen.
+2. V souboru *MIToolWindowCommand. cs* Najděte `ShowToolWindos()` metodu. V této metodě zavolejte <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> metodu a nastavte její `create` příznak na `false` tak, aby se opakovala prostřednictvím existujících instancí okna nástrojů, dokud `id` není nalezen.
 
 3. Chcete-li vytvořit instanci okna nástroje, zavolejte <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> metodu a nastavte `id` ji na dostupnou hodnotu a její `create` příznak na `true` .
 
