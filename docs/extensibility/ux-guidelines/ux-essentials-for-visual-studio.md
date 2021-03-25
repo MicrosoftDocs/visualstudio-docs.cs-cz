@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 38c560cf75fad8887dabdaab38004b10ae0ffc08
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ce44b9234465af6bf52ce8baa0e60e641e845d3c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99926134"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105052668"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Základy uživatelského prostředí pro Visual Studio
 
@@ -156,7 +156,7 @@ V rámci správného přístupu, který je znázorněn na **obrázku C**, je nas
 
    ![Ignorování barevné služby a použití možnosti "Další informace" pro hypertextové odkazy jsou anti-patterny sady Visual Studio.](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102 – j_HyperlinkIncorrect")<br />Ignorování barevné služby a použití možnosti "Další informace" pro hypertextové odkazy jsou anti-patterny sady Visual Studio.
 
-**Lepší řešení:** Vyžádejte si otázku, na kterou se uživatel bude dotazovat kliknutím na odkaz. Příklad:
+**Lepší řešení:** Vyžádejte si otázku, na kterou se uživatel bude dotazovat kliknutím na odkaz. Například:
 
 - Jak fungují služby Windows Azure?
 

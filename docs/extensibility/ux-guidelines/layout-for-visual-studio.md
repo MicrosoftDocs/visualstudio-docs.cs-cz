@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16a4178231c575f590a13b8205cd872668f46143
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1c15b7458bfd18314015bbb9228c212a06fcd82f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951937"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105072972"
 ---
 # <a name="layout-for-visual-studio"></a>Rozložení pro Visual Studio
 Většina dialogových oken sady Visual Studio je [rozložení dialogového okna nástrojů](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout), což jsou nezobrazená dialogová okna, která následují standardní [zásady rozložení dialogového okna Windows Desktop](/windows/desktop/uxguide/win-dialog-box). Když se Visual Studio přesune k aktualizaci uživatelského rozhraní, některé z výraznějších dialogových oken mají nový návrh, který je sestavil jako prostředí s definicí produktu. Toto [rozložení dialogového okna s motivem](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout) má vzhled motivu.

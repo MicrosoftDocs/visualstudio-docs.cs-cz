@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentPosition2::IsPositionInDocument
 ms.assetid: d5cf57cb-b93b-4e1d-bec9-185f4fe8668d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a4800f3735e2d015e3638a642e8c0d54829ddd4c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: ab3d00df9883da93d0d8121433b962d365a408e3
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102154285"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105066409"
 ---
 # <a name="idebugdocumentposition2ispositionindocument"></a>IDebugDocumentPosition2::IsPositionInDocument
 Určuje, zda je pozice dokumentu obsažena v daném dokumentu.

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - enumerations [Visual Studio SDK]
 - debugging [Debugging SDK], enumerations
 ms.assetid: 557065bf-081f-4d57-8744-bae02b8a5a6e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 21813818436e62eb7e9fc16a393af69a613d6d58
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 303b0ce662f56c1ab337383aaf4f4f2f09bb6ac8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102144140"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105095978"
 ---
 # <a name="enumerations-visual-studio-debugging"></a>Výčty (Ladění sady Visual Studio)
 Následují výčty pro [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] sadu SDK pro ladění.
