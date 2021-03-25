@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine2 interface
 ms.assetid: 1f0e9ac0-6dfb-461a-976c-888d82144cdb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce76ccdc444dafc4b6b8ee6afb3c9ded8adcf3d0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: f6e32c4798ad1bea65a9aadcf8a0d73052acc238
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102153830"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105066149"
 ---
 # <a name="idebugengine2"></a>IDebugEngine2
 Toto rozhraní představuje ladicí stroj (DE). Používá se ke správě různých aspektů relace ladění, od vytvoření zarážek k nastavení a mazání výjimek.
