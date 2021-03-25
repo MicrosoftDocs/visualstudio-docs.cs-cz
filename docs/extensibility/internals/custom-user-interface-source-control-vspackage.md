@@ -8,17 +8,17 @@ helpviewer_keywords:
 - user interface, source control packages
 - source control packages, user interface
 ms.assetid: f35ddb24-53bf-461e-b34f-7414f657c082
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97c82254516c78a3aff9884e91e44adc45b95981
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1239b11e814ba08e4e481358f5e7fdd0e5dc666b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902987"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105091029"
 ---
 # <a name="custom-user-interface-source-control-vspackage"></a>Vlastní uživatelské rozhraní (VSPackage správy zdrojového kódu)
 VSPackage deklaruje své položky nabídky a jejich výchozí stavy prostřednictvím souboru tabulky příkazů sady Visual Studio (*. vsct*). [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Integrované vývojové prostředí (IDE) zobrazuje položky nabídky ve svých výchozích stavech, dokud není načteno VSPackage. Následně <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> je metoda volána k povolení nebo zakázání položek nabídky.
