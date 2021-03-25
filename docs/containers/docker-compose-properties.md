@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 0a27535e9c07f87391b3cdfd8440578e36feee9e
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: 4478656af7fff4cfd3a0fdafefe623af5811154f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97846808"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105068294"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose vlastnosti sestavení
 
@@ -34,12 +34,13 @@ Nastavení vlastnosti můžete přidat do existujícího `PropertyGroup` prvku, 
 
 V následující tabulce jsou uvedeny vlastnosti MSBuild dostupné pro Docker Compose projekty.
 
-| Název vlastnosti | Umístění | Popis | Výchozí hodnota  |
+| Název vlastnosti | Umístění | Description | Výchozí hodnota  |
 |---------------|----------|-------------|----------------|
 |AdditionalComposeFilePaths|dcproj|Určuje další soubory pro vytváření v seznamu středníkem oddělených souborů, které se budou odesílat docker-compose.exe pro všechny příkazy. Relativní cesty ze souboru projektu Docker-dcproj (sestavení) jsou povoleny.|-|
 |DockerComposeBaseFilePath|dcproj|Určuje první část názvů souborů Docker-skládání souborů bez přípony *. yml* . Například: <br>1. DockerComposeBaseFilePath = null/Nedefinováno: použijte základní cestu k souboru *Docker-skládání* a soubory budou pojmenovány *Docker-Compose. yml* a *Docker-Compose. override. yml*<br>2. DockerComposeBaseFilePath = *mydockercompose*: soubory budou pojmenovány *mydockercompose. yml* a *mydockercompose. override. yml*<br> 3. DockerComposeBaseFilePath = *... \mydockercompose*: soubory budou o jednu úroveň výš. |Docker-Compose|
 |DockerComposeBuildArguments|dcproj|Určuje další parametry, které se mají předat `docker-compose build` příkazu. Například `--parallel --pull`. |
-|DockerComposeDownArguments|dcproj|Určuje další parametry, které se mají předat `docker-compose down` příkazu. Například `--timeout 500`.|-|  
+|DockerComposeDownArguments|dcproj|Určuje další parametry, které se mají předat `docker-compose down` příkazu. Například `--timeout 500`.|-|
+|DockerComposeProjectName| dcproj | Když se tato parametr zadá, přepíše název projektu pro projekt Docker-pro vytváření. | "dockercompose" + automaticky generovaná hodnota hash |
 |DockerComposeProjectPath|CSPROJ nebo VBPROJ|Relativní cesta k souboru dcproj (Docker-psací projekt). Tuto vlastnost nastavte při publikování projektu služby, aby bylo možné najít přidružená nastavení pro sestavení imagí uložená v souboru Docker-Compose. yml.|-|
 |DockerComposeUpArguments|dcproj|Určuje další parametry, které se mají předat `docker-compose up` příkazu. Například `--timeout 500`.|-|
 |DockerDevelopmentMode|dcproj| Určuje, jestli je povolená optimalizace optimalizace sestavení na úrovni hostitele (rychlý režim).  Povolené hodnoty jsou **rychlé** a **pravidelné**. | Rychlý |
@@ -105,7 +106,7 @@ services:
 
 Použijte dvojité uvozovky kolem hodnot, jako v předchozím příkladu, a použijte zpětné lomítko jako řídicí znak pro zpětná lomítka v cestách.
 
-|Název popisku|Popis|
+|Název popisku|Description|
 |----------|-----------|
 |com. Microsoft. VisualStudio. laděného procesu. arguments|Argumenty předávané programu při spuštění ladění. Pro aplikace .NET Core jsou tyto argumenty obvykle další cesty hledání balíčků NuGet následovaných cestou k výstupnímu sestavení projektu.|
 |com. Microsoft. VisualStudio. laděného procesu. killprogram|Tento příkaz slouží k zastavení programu laděného procesu, který běží uvnitř kontejneru (v případě potřeby).|

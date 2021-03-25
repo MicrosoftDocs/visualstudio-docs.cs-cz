@@ -28,12 +28,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a310cd4428232338ed46a8a54502d9956e73be15
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eadec17e7c5221f0b169d38b15b9601cec746fa4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932007"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105094975"
 ---
 # <a name="midl-task"></a>MIDL – úloha
 
@@ -79,7 +79,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), *m
 
      Volitelný **řetězcový** parametr.
 
-     Určuje možnosti, které se mají předat preprocesoru C/C++. Zadejte seznam možností preprocesoru oddělených mezerami.
+     Určuje možnosti, které se mají předat preprocesoru C/C++. Zadejte seznam možností preprocesoru oddělených mezerami. Musí obsahovat `/E` možnost.
 
      Další informace naleznete v tématu možnost **/cpp_opt** v [odkazu příkazového řádku MIDL](/windows/desktop/Midl/midl-command-line-reference).
 

@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.assetid: 52f12785-1c51-4c2c-8228-c8e10316cd83
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d86f57abdc96e4fc4f2abbb781e9437c74854a7c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: accf054cbf0b58066568124a3f35e064ce3cba78
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939289"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105094988"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>Přidání rozšíření protokolu LSP (Language Server Protocol)
 
@@ -294,7 +294,7 @@ K dispozici je podpora vlastního nastavení pro konkrétní jazyk a server, ale
 
 Pomocí následujících kroků přidejte podporu pro nastavení do rozšíření služby jazyka LSP:
 
-1. Přidejte soubor JSON (například *MockLanguageExtensionSettings.json*) do projektu, který obsahuje nastavení a jejich výchozí hodnoty. Příklad:
+1. Přidejte soubor JSON (například *MockLanguageExtensionSettings.json*) do projektu, který obsahuje nastavení a jejich výchozí hodnoty. Například:
 
     ```json
     {
@@ -344,7 +344,7 @@ Pomocí následujících kroků přidejte podporu pro nastavení do rozšířen�
 
 1. Uživatel otevře pracovní prostor obsahující soubory, které váš server vlastní.
 2. Uživatel přidá soubor do složky *. vs* s názvem *VSWorkspaceSettings.js*.
-3. Uživatel přidá řádek do *VSWorkspaceSettings.jsv* souboru pro nastavení serveru. Příklad:
+3. Uživatel přidá řádek do *VSWorkspaceSettings.jsv* souboru pro nastavení serveru. Například:
 
     ```json
     {

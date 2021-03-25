@@ -6,17 +6,17 @@ ms.topic: reference
 helpviewer_keywords:
 - expression evaluation, interfaces
 ms.assetid: 2d259f60-2cd7-460e-b02d-24a8fb202850
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d380fcce087fad3dc6b101e78cbc514ba19b1052
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 563e66f7aa7c2f8cf1e5573487690edc703ae5d8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158732"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105059454"
 ---
 # <a name="expression-evaluation-interfaces"></a>Rozhraní pro vyhodnocení výrazu
 > [!IMPORTANT]
@@ -35,7 +35,7 @@ ms.locfileid: "102158732"
 
 - Visual Studio (VS)
 
-|Rozhraní|Implementuje|Popis|
+|Rozhraní|Implementuje|Description|
 |---------------|--------------------|-----------------|
 |[IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)|EE|Představuje numerický alias pro proměnnou.|
 |[IDebugAlias2](../../../extensibility/debugger/reference/idebugalias2.md)|EE|Představuje numerický alias pro proměnnou a umožňuje vyhodnocovacímu filtru výrazů (EE) získat doménu aplikace pro daný alias.|
