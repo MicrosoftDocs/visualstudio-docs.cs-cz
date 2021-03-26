@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], exception handling
 ms.assetid: 7279dc16-db14-482c-86b8-7b3da5a581d2
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ed8db28a7196551e2f1c8236d71e0f2291fce934
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f74337964b73683a71b180699da626121a4d3067
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921509"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097016"
 ---
 # <a name="exception-handling-visual-studio-sdk"></a>Zpracování výjimek (Visual Studio SDK)
 Následující článek popisuje proces, ke kterému dochází, když jsou vyvolány výjimky.

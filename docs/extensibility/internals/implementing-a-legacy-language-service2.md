@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], implementing
 ms.assetid: 5bcafdc5-f922-48f6-a12e-6c8507a79a05
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f870da49cdf82203e7dd435601f93a75cb16dccd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9bdb0d05faaa139b808d8d117125c5208da470e9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839960"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105085816"
 ---
 # <a name="implementing-a-legacy-language-service-2"></a>Implementace starší verze jazykové služby 2
 Chcete-li implementovat jazykovou službu pomocí spravovaného balíčku Package Framework (MPF), musíte odvodit třídu od <xref:Microsoft.VisualStudio.Package.LanguageService> třídy a implementovat následující abstraktní metody a vlastnosti:

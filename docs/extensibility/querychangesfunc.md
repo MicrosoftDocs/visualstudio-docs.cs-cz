@@ -10,17 +10,17 @@ helpviewer_keywords:
 - QUERYCHANGESFUNC callback function
 - QUERYCHANGESDATA structure
 ms.assetid: 9d383e2c-eee1-4996-973a-0652d4c5951c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8abe32abcb79fada541124f50a750fb4c1edde58
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cc797d68f6df6d9aab93554ba95955a7d9f45eea
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910869"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105068619"
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
 Toto je funkce zpětného volání, kterou používá operace [SccQueryChanges](../extensibility/sccquerychanges-function.md) k vytvoření výčtu kolekce názvů souborů a určení stavu jednotlivých souborů.
