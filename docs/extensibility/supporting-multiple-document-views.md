@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - multiple document views
 ms.assetid: c7ec2366-91c4-477f-908d-e89068bdb3e3
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5360f67714e1da4f7372ee51eb4f75cc8835c1fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e54ee028c6a7db2d5d2ea1ab609be6c2887c9829
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965119"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056204"
 ---
 # <a name="supporting-multiple-document-views"></a>Podpora více zobrazení dokumentů
 Můžete poskytnout více než jedno zobrazení dokumentu vytvořením samostatného dokumentu a objektů zobrazení dokumentu pro Editor. V některých případech může být užitečné další zobrazení dokumentu:
@@ -26,7 +26,7 @@ Můžete poskytnout více než jedno zobrazení dokumentu vytvořením samostatn
 
 - Podpora zobrazení formulářů a kódu: Chcete, aby Editor poskytoval zobrazení různých typů. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]například poskytuje jak zobrazení formuláře, tak zobrazení kódu.
 
-  Další informace o tomto postupu naleznete v tématu CreateEditorInstance v souboru EditorFactory.cs v projektu vlastního editoru vytvořeném šablonou balíčku sady Visual Studio. Další informace o tomto projektu naleznete v tématu [Návod: Vytvoření vlastního editoru](../extensibility/walkthrough-creating-a-custom-editor.md).
+  Další informace o tomto postupu naleznete v tématu CreateEditorInstance v souboru objektem EditorFactory. cs v projektu vlastního editoru vytvořeném šablonou balíčku sady Visual Studio. Další informace o tomto projektu naleznete v tématu [Návod: Vytvoření vlastního editoru](../extensibility/walkthrough-creating-a-custom-editor.md).
 
 ## <a name="synchronizing-views"></a>Synchronizace zobrazení
  Při implementaci více zobrazení zodpovídá datový objekt dokumentu za účelem zachování všech zobrazení synchronizovaných s daty. Rozhraní pro zpracování událostí v nástroji můžete použít <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> k synchronizaci více zobrazení s daty.

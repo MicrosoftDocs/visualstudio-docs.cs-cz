@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - simple view embedding
 ms.assetid: f1292478-a57d-48ec-8c9e-88a23f04ffe5
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f62e3a4f33193f36e76b1286ae3d35d26706b3ac
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dca3b0c11c916a1fc47e4687bfeeabee35bcdfb4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928091"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056373"
 ---
 # <a name="simplified-embedding"></a>Zjednodušená vkládání
 Zjednodušené vkládání je povoleno v editoru, když je jeho objekt zobrazení dokumentu nadřazený (tj. vytvořený podřízený objekt) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> rozhraní je implementováno pro zpracování příkazů okna. Zjednodušené editory vkládání nemohou hostovat aktivní ovládací prvky. Na následujícím obrázku jsou uvedeny objekty, které slouží k vytvoření editoru s zjednodušeným vkládáním.

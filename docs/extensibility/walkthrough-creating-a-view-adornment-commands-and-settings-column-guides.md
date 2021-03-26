@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 4a2df0a3-42da-4f7b-996f-ee16a35ac922
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9bf88212ccc6e00dfbca14912eb15e17d106a49
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7e0a2111aeb3f0e23cb2c03feadda8accd4a93e1
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892447"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080447"
 ---
 # <a name="walkthrough-create-a-view-adornment-commands-and-settings-column-guides"></a>Návod: vytvoření vylepšení zobrazení, příkazů a nastavení (vodítka sloupců)
 Můžete roztáhnout text nebo Editor kódu sady Visual Studio pomocí příkazů a zobrazení efektů. V tomto článku se dozvíte, jak začít s oblíbenými funkcemi rozšíření, vodítky sloupců. Vodítka sloupců jsou vizuálně světlé čáry vykreslené v zobrazení textový editor, které vám pomohou spravovat kód pro konkrétní šířku sloupců. Konkrétně formátovaný kód může být důležitý pro ukázky, které zahrnete do dokumentů, příspěvků na blogu nebo hlášení o chybách.
@@ -47,12 +47,12 @@ Nejprve vytvoříte projekt VSIX, přidáte doplňky zobrazení editoru a potom 
 
   **Zobrazit doplňky** Stiskněte pravé tlačítko ukazatel na uzlu projektu v Průzkumník řešení. Vyberte příkaz **přidat &#124; novou položku...** a přidejte tak novou položku zobrazení. V levém navigačním podokně vyberte **rozšíření &#124; Editor** a v pravém podokně vyberte **Doplňky zobrazení editoru** . Jako název položky zadejte název **ColumnGuideAdornment** a kliknutím na **Přidat** ho přidejte.
 
-  Můžete vidět, že tato šablona položky přidala do projektu dva soubory (stejně jako odkazy atd.): **ColumnGuideAdornment.cs** a **ColumnGuideAdornmentTextViewCreationListener.cs**. Šablony nakreslí fialový obdélník na zobrazení. V následující části změníte několik řádků v naslouchací službě vytváření zobrazení a nahradíte obsah **ColumnGuideAdornment.cs**.
+  Můžete vidět, že tato šablona položky přidala do projektu dva soubory (stejně jako odkazy atd.): **ColumnGuideAdornment. cs** a **ColumnGuideAdornmentTextViewCreationListener. cs**. Šablony nakreslí fialový obdélník na zobrazení. V následující části změníte několik řádků v naslouchací službě vytváření zobrazení a nahradíte obsah **ColumnGuideAdornment. cs**.
 
-  **Příkazy**. V **Průzkumník řešení** stiskněte pravé tlačítko ukazatel na uzlu projektu. Vyberte příkaz **přidat &#124; novou položku...** a přidejte tak novou položku zobrazení. V levém navigačním podokně vyberte **rozšiřitelnost &#124; VSPackage** a v pravém podokně vyberte **vlastní příkaz** . Jako název položky zadejte název **ColumnGuideCommands** a klikněte na **Přidat**. Kromě několika odkazů přidávání příkazů a balíčků Přidal také **ColumnGuideCommands.cs**, **ColumnGuideCommandsPackage.cs** a **ColumnGuideCommandsPackage. vsct**. V následující části nahradíte obsah prvních a posledních souborů pro definování a implementaci příkazů.
+  **Příkazy**. V **Průzkumník řešení** stiskněte pravé tlačítko ukazatel na uzlu projektu. Vyberte příkaz **přidat &#124; novou položku...** a přidejte tak novou položku zobrazení. V levém navigačním podokně vyberte **rozšiřitelnost &#124; VSPackage** a v pravém podokně vyberte **vlastní příkaz** . Jako název položky zadejte název **ColumnGuideCommands** a klikněte na **Přidat**. Kromě několika odkazů přidávání příkazů a balíčků Přidal také **ColumnGuideCommands. cs**, **ColumnGuideCommandsPackage. cs** a **ColumnGuideCommandsPackage. vsct**. V následující části nahradíte obsah prvních a posledních souborů pro definování a implementaci příkazů.
 
 ## <a name="set-up-the-text-view-creation-listener"></a>Nastavení naslouchacího procesu pro vytváření zobrazení textu
-Otevřete *ColumnGuideAdornmentTextViewCreationListener.cs* v editoru. Tento kód implementuje obslužnou rutinu pro každé, když aplikace Visual Studio vytvoří zobrazení textu. Existují atributy, které řídí, kdy je obslužná rutina volána v závislosti na vlastnostech zobrazení.
+V editoru otevřete *ColumnGuideAdornmentTextViewCreationListener. cs* . Tento kód implementuje obslužnou rutinu pro každé, když aplikace Visual Studio vytvoří zobrazení textu. Existují atributy, které řídí, kdy je obslužná rutina volána v závislosti na vlastnostech zobrazení.
 
 Kód musí také deklarovat vrstvu doplňku. Když editor aktualizuje zobrazení, získá vrstvy přípravcích pro zobrazení a z, které získá prvky Doplňky. Pořadí vrstev můžete deklarovat relativně k ostatním atributům. Nahraďte následující řádek:
 
@@ -70,7 +70,7 @@ s těmito dvěma řádky:
 Řádek, který jste nahradili, je ve skupině atributů, které deklaruje vrstvu doplňku. První řádek, který jste změnili, se změní pouze v případě, že se zobrazí čáry vodítka sloupce. Kreslení čar "před" textem v zobrazení znamená, že se zobrazí za textem nebo pod ním. Druhý řádek deklaruje, že doplňky sloupců jsou použitelné pro textové entity, které odpovídají vašemu pojmu dokumentu, ale je možné deklarovat například doplňky, aby fungovala pouze pro upravitelný text. V [jazykových službách a rozšiřovacích bodech editoru](../extensibility/language-service-and-editor-extension-points.md) jsou další informace.
 
 ## <a name="implement-the-settings-manager"></a>Implementace správce nastavení
-Nahraďte obsah *GuidesSettingsManager.cs* následujícím kódem (vysvětleno níže):
+Nahraďte obsah *GuidesSettingsManager. cs* následujícím kódem (vysvětleno níže):
 
 ```csharp
 using Microsoft.VisualStudio.Settings;
@@ -346,7 +346,7 @@ Existuje několik funkcí vstupního bodu, například `CanAddGuideline` , kter�
 ## <a name="implement-the-columnguideadornment-class"></a>Implementace třídy ColumnGuideAdornment
 `ColumnGuideAdornment`Třída je vytvořena pro každé textové zobrazení, které může mít doplňky. Tato třída poslouchá události týkající se změny zobrazení nebo změny nastavení a v případě potřeby aktualizuje nebo překreslí vodítka sloupců.
 
-Nahraďte obsah *ColumnGuideAdornment.cs* následujícím kódem (vysvětleno níže):
+Nahraďte obsah *ColumnGuideAdornment. cs* následujícím kódem (vysvětleno níže):
 
 ```csharp
 using System;
@@ -502,7 +502,7 @@ K deklarování příkazů a nabídek, umístění skupin příkazů nebo nabíd
 ### <a name="introduction-to-the-code"></a>Úvod do kódu
 Přípona vodítek sloupců znázorňuje deklaraci skupiny příkazů, které patří dohromady (přidání sloupce, odebrání sloupce, změna barvy čáry) a následné umístění této skupiny do podnabídky místní nabídky editoru.  Rozšíření vodítek sloupců také přidá příkazy do hlavní nabídky pro **Úpravy** , ale ponechá je neviditelná, popsané jako společný vzor.
 
-Existují tři části pro implementaci příkazů: ColumnGuideCommandsPackage.cs, ColumnGuideCommandsPackage. vsct a ColumnGuideCommands.cs. Kód vygenerovaný šablonami Vloží příkaz v nabídce **nástroje** , který jako implementaci vyvolá dialogové okno. Můžete se podívat na to, jak je implementováno v souborech *. vsct* a *ColumnGuideCommands.cs* , protože je jednoduché. Nahraďte kód v těchto souborech níže.
+Existují tři části pro implementaci příkazů: ColumnGuideCommandsPackage. cs, ColumnGuideCommandsPackage. vsct a ColumnGuideCommands. cs. Kód vygenerovaný šablonami Vloží příkaz v nabídce **nástroje** , který jako implementaci vyvolá dialogové okno. Můžete se podívat na to, jak je implementováno v souborech *. vsct* a *ColumnGuideCommands. cs* , protože je jednoduché. Nahraďte kód v těchto souborech níže.
 
 Kód balíčku obsahuje často používané deklarace, které se vyžadují pro Visual Studio, aby se zjistilo, že rozšíření nabízí příkazy a hledá, kam se mají příkazy umístit. Po inicializaci balíčku se vytvoří instance třídy implementace příkazů. Další informace o balíčcích, které se týkají příkazů, najdete v tématu věnovaném [rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md).
 
@@ -750,9 +750,9 @@ Soubor *. vsct* deklaruje příkazy a tam, kde jsou, spolu s ikonami a tak dále
 
 ```
 
-**Identifikátory GUID**. Aby sada Visual Studio mohla najít obslužné rutiny příkazů a vyvolat je, je nutné zajistit, aby byl identifikátor GUID balíčku deklarovaný v souboru *ColumnGuideCommandsPackage.cs* (vygenerovaný ze šablony položky projektu) SHODNÝ s identifikátorem GUID balíčku deklarovaným v souboru *. vsct* (zkopírovaným z výše). Pokud tento vzorový kód znovu použijete, měli byste se ujistit, že máte jiný identifikátor GUID, aby nedošlo ke konfliktu s kýmkoli, kdo mohl tento kód zkopírovat.
+**Identifikátory GUID**. Aby sada Visual Studio mohla najít obslužné rutiny příkazů a vyvolat je, je nutné zajistit, aby byl identifikátor GUID balíčku deklarovaný v souboru *ColumnGuideCommandsPackage. cs* (vygenerovaný ze šablony položky projektu) SHODNÝ s identifikátorem GUID balíčku deklarovaným v souboru *. vsct* (zkopírovaným z výše uvedeného). Pokud tento vzorový kód znovu použijete, měli byste se ujistit, že máte jiný identifikátor GUID, aby nedošlo ke konfliktu s kýmkoli, kdo mohl tento kód zkopírovat.
 
-Najde tento řádek v *ColumnGuideCommandsPackage.cs* a kopíruje GUID mezi uvozovky:
+Najde tento řádek v *ColumnGuideCommandsPackage. cs* a nakopíruje identifikátor GUID mezi uvozovky:
 
 ```csharp
 public const string PackageGuidString = "ef726849-5447-4f73-8de5-01b9e930f7cd";
@@ -773,7 +773,7 @@ Identifikátory GUID pro sadu příkazů a soubor rastrového obrázku by měly 
 <GuidSymbol name="guidImages" value="{2C99F852-587C-43AF-AA2D-F605DE2E46EF}">
 ```
 
-V tomto návodu ale nemusíte měnit sadu příkazů a identifikátory GUID rastrových obrázků, abyste mohli kód pracovat. Identifikátor GUID sady příkazů musí odpovídat deklaraci v souboru *ColumnGuideCommands.cs* , ale obsah tohoto souboru můžete také nahradit. identifikátory GUID se proto shodují.
+V tomto návodu ale nemusíte měnit sadu příkazů a identifikátory GUID rastrových obrázků, abyste mohli kód pracovat. Identifikátor GUID sady příkazů musí odpovídat deklaraci v souboru *ColumnGuideCommands. cs* , ale obsah tohoto souboru můžete také nahradit. identifikátory GUID se proto shodují.
 
 Jiné identifikátory GUID v souboru *. vsct* identifikují již existující nabídky, do kterých jsou přidány příkazy Průvodce sloupcem, takže se nikdy nezmění.
 
@@ -816,9 +816,9 @@ Všechna ostatní místa přidávají do `GuidesContextMenuGroup` `GuidesSubMenu
 **Oddíl symboly**. Jak je uvedeno výše, oddíl symboly deklaruje identifikátory používané jinde v souboru *. vsct* , což usnadňuje čtení kódu *. vsct* , než identifikátory GUID a hexadecimální čísla všude. Důležité body v této části jsou v tom, že GUID balíčku musí souhlasit s deklarací ve třídě Package. A GUID sady příkazů musí souhlasit s deklarací ve třídě implementace příkazu.
 
 ## <a name="implement-the-commands"></a>Implementace příkazů
-Soubor *ColumnGuideCommands.cs* implementuje příkazy a zavěsí obslužné rutiny. Když aplikace Visual Studio načte balíček a inicializuje jej, balíček v systému zavolá `Initialize` třídu implementující příkazy. Inicializace příkazů jednoduše vytvoří instanci třídy a konstruktor Zapojte všechny obslužné rutiny příkazů.
+Soubor *ColumnGuideCommands. cs* implementuje příkazy a zavěsí obslužné rutiny. Když aplikace Visual Studio načte balíček a inicializuje jej, balíček v systému zavolá `Initialize` třídu implementující příkazy. Inicializace příkazů jednoduše vytvoří instanci třídy a konstruktor Zapojte všechny obslužné rutiny příkazů.
 
-Obsah souboru *ColumnGuideCommands.cs* nahraďte následujícím kódem (vysvětleno níže):
+Obsah souboru *ColumnGuideCommands. cs* nahraďte následujícím kódem (vysvětleno níže):
 
 ```csharp
 using System;
@@ -1174,7 +1174,7 @@ _addGuidelineCommand =
 
 ```
 
-Vytvoříte `OleMenuCommand` . Visual Studio používá systém systém Microsoft Officeových příkazů. Klíčové argumenty při vytváření instance `OleMenuCommand` je funkce, která implementuje příkaz ( `AddColumnGuideExecuted` ), funkce, která má být volána, když Visual Studio zobrazí nabídku pomocí příkazu ( `AddColumnGuideBeforeQueryStatus` ) a ID příkazu. Visual Studio volá funkci stavu dotazu před zobrazením příkazu v nabídce tak, že příkaz může být pro konkrétní zobrazení nabídky sám neviditelný nebo šedý (například zakázání **kopírování** , pokud není nic vybráno), změnit jeho ikonu nebo dokonce změnit jeho název (například ze seznamu přidat něco pro odebrání nějakého) a tak dále. ID příkazu musí odpovídat ID příkazu deklarovanému v souboru *. vsct* . Řetězce pro sadu příkazů a vodítka sloupců příkaz Přidat se musí shodovat mezi souborem *. vsct* a *ColumnGuideCommands.cs*.
+Vytvoříte `OleMenuCommand` . Visual Studio používá systém systém Microsoft Officeových příkazů. Klíčové argumenty při vytváření instance `OleMenuCommand` je funkce, která implementuje příkaz ( `AddColumnGuideExecuted` ), funkce, která má být volána, když Visual Studio zobrazí nabídku pomocí příkazu ( `AddColumnGuideBeforeQueryStatus` ) a ID příkazu. Visual Studio volá funkci stavu dotazu před zobrazením příkazu v nabídce tak, že příkaz může být pro konkrétní zobrazení nabídky sám neviditelný nebo šedý (například zakázání **kopírování** , pokud není nic vybráno), změnit jeho ikonu nebo dokonce změnit jeho název (například ze seznamu přidat něco pro odebrání nějakého) a tak dále. ID příkazu musí odpovídat ID příkazu deklarovanému v souboru *. vsct* . Řetězce pro sadu příkazů a vodítka sloupců příkaz Přidat se musí shodovat mezi souborem *. vsct* a *ColumnGuideCommands. cs*.
 
 Následující řádek poskytuje pomoc pro uživatele, kteří vyvolávají příkaz prostřednictvím příkazového okna (vysvětleno níže):
 

@@ -5,20 +5,20 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: ef96a249-5eef-402a-a8d5-d74cb49239bd
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 1f1ede0e642f14581d13d571acf67a952360bf65
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ce834a2c949c55a6deeb6b7c7d0a9751771e316
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838692"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080395"
 ---
 # <a name="walkthrough-create-an-sdk-using-c-or-visual-basic"></a>Návod: vytvoření sady SDK pomocí jazyka C# nebo Visual Basic
 V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické knihovny pomocí jazyka Visual C# a pak zabalit sadu SDK jako rozšíření sady Visual Studio (VSIX). Dokončete následující postupy:
@@ -41,7 +41,7 @@ V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické
 
 4. V **Průzkumník řešení** otevřete místní nabídku uzlu projektu **SimpleMath** a poté zvolte možnost **vlastnosti**.
 
-5. Přejmenujte **Class1.cs** na **arithmetic.cs** a aktualizujte ji tak, aby odpovídala následujícímu kódu:
+5. Přejmenujte **Class1. cs** na **aritmetické. cs** a aktualizujte je tak, aby odpovídaly následujícímu kódu:
 
     [!code-csharp[CreatingAnSDKUsingWinRT#3](../extensibility/codesnippet/CSharp/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_1.cs)]
     [!code-vb[CreatingAnSDKUsingWinRT#3](../extensibility/codesnippet/VisualBasic/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_1.vb)]
@@ -234,7 +234,7 @@ V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické
     </Page>
     ```
 
-11. Aktualizujte **MainPage.XAML.cs** tak, aby odpovídaly následujícímu kódu:
+11. Aktualizujte **MainPage. XAML. cs** tak, aby odpovídaly následujícímu kódu:
 
      [!code-csharp[CreatingAnSDKUsingWinRTDemoApp#2](../extensibility/codesnippet/CSharp/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_5.cs)]
      [!code-vb[CreatingAnSDKUsingWinRTDemoApp#2](../extensibility/codesnippet/VisualBasic/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_5.vb)]

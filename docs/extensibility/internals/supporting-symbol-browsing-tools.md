@@ -15,17 +15,17 @@ helpviewer_keywords:
 - symbols
 - libraries, symbol-browsing tools
 ms.assetid: 70d8c9e5-4b0b-4a69-b3b3-90f36debe880
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 377cdd9875ebc2fddd80c673e53ecb318d171e47
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d54f56ae3bc5fd5956f67400d84edfd4c8c9e55c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875559"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080564"
 ---
 # <a name="supporting-symbol-browsing-tools"></a>Podpůrné nástroje procházení symbolů
 Nástroje výsledků hledání symbolů **Prohlížeč objektů**, **zobrazení tříd**, **prohlížeč volání** a **hledání symbolů** poskytují možnosti procházení symbolů v aplikaci Visual Studio. Tyto nástroje zobrazují hierarchické stromové zobrazení symbolů a zobrazují vztahy mezi symboly ve stromové struktuře. Symboly mohou představovat obory názvů, objekty, třídy, členy třídy a další prvky jazyka obsažené v různých součástech. Součástí jsou projekty aplikace Visual Studio, externí .NET Framework komponenty a knihovny typů (. tlb). Další informace naleznete v tématu [zobrazení struktury kódu](../../ide/viewing-the-structure-of-code.md).

@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - SccCheckin function
 ms.assetid: e3f26ac2-6163-42e1-a764-22cfea5a3bc6
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a835ead5fb0404b78d9e9c9ecc92ee0c73eaf252
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: d6864549c6825092b6ad26be199f8c7b5ea6bab6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102220856"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060429"
 ---
 # <a name="scccheckin-function"></a>SccCheckin – funkce
 Tato funkce zkontroluje dříve rezervované soubory do systému správy zdrojového kódu, uloží změny a vytvoří novou verzi. Tato funkce je volána s počtem a polem názvů souborů, které mají být vráceny se změnami.

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - <ShowByDefault> element [Visual Studio Templates]
 - ShowByDefault element [Visual Studio Templates]
 ms.assetid: 7be783f6-0ef6-42bc-924a-df9a2eba7781
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5cacf6f6774ad1c0f29ff81407848b23cb3b170d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 25ba91a6276615929fed9494000abbfde07ef2b8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928117"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056425"
 ---
 # <a name="showbydefault-element-visual-studio-templates"></a>ShowByDefault – element (šablony sady Visual Studio)
 Pokud `false` Určuje, že se šablona bude zobrazovat pouze pod zadaným [TemplateGroupID –](../extensibility/templategroupid-element-visual-studio-templates.md).

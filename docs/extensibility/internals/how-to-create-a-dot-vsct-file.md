@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - VSCT files, creating
 ms.assetid: b955f51c-f9f9-49c3-a8e4-63b6eb0e0341
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66174d5de1abb4f5bdd23eeab0155a795cf0b634
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7fe1d92a9117193a72f579a01f264f1a13be6b6e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879979"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056607"
 ---
 # <a name="how-to-create-a-vsct-file"></a>Postupy: vytvoření souboru. vsct
 
@@ -140,7 +140,7 @@ Soubor *. vsct* založený na jazyce XML můžete vytvořit z existujícího bin
 
      Tento kód by měl jít uvnitř `ItemGroup` elementu, který obsahuje vložené prostředky.
 
-4. V editoru otevřete soubor balíčku, obvykle nazvaný *\<ProjectName\> Package.cs* nebo *\<ProjectName\> Package. vb*.
+4. V editoru otevřete soubor balíčku, obvykle nazvaný *\<ProjectName\> Package. cs* nebo *\<ProjectName\> Package. vb*.
 
 5. Přidejte `ProvideMenuResource` atribut do třídy Package, jak je znázorněno v následujícím příkladu.
 

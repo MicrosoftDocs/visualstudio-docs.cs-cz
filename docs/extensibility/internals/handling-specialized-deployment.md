@@ -8,17 +8,17 @@ helpviewer_keywords:
 - deploying applications [Visual Studio SDK]
 - specialized deployment
 ms.assetid: de068b6a-e806-45f0-9dec-2458fbb486f7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 279732f6019757c1a0d9fef566e8aaf1898dbdfb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9fcba9e5f63497ad81dc6729a3fb757038fc7776
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880048"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056633"
 ---
 # <a name="handle-specialized-deployment"></a>Obsluha specializovaného nasazení
 Nasazení je volitelná operace pro projekty. Webový projekt, například podporuje nasazení, aby mohl projekt aktualizovat webový server. Podobně, projekt **inteligentního zařízení** podporuje nasazení a zkopírování sestavené aplikace do cílového zařízení. Podtypy projektů mohou poskytovat specializované chování nasazení implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> rozhraní. Toto rozhraní definuje úplnou sadu operací nasazení:
