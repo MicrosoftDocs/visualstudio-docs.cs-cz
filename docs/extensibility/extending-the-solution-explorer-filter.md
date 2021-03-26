@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Solution Explorer, extending
 - extensibility [Visual Studio], projects and solutions
 ms.assetid: df976c76-27ec-4f00-ab6d-a26a745dc6c7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dfe2947d60ad5dde6e2f23b9bed59b09e6abe8ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d1256b807d67f95aa8ca1e952a4dca7bd550e0fc
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862119"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105075013"
 ---
 # <a name="extend-the-solution-explorer-filter"></a>Rozšíří Průzkumník řešení filtr.
 Můžete roztáhnout funkce filtru **Průzkumník řešení** a zobrazit nebo skrýt jiné soubory. Můžete například vytvořit filtr, který v **Průzkumník řešení** zobrazí pouze soubory továrny tříd C#, jak ukazuje tento návod.
@@ -60,14 +60,14 @@ Můžete roztáhnout funkce filtru **Průzkumník řešení** a zobrazit nebo sk
 
 ### <a name="add-the-filter-code"></a>Přidat kód filtru
 
-1. Do souboru *FileFilterPackageGuids.cs* přidejte nějaké identifikátory GUID:
+1. Do souboru *FileFilterPackageGuids. cs* přidejte nějaké identifikátory GUID:
 
     ```csharp
     public const string guidFileFilterPackageCmdSetString = "00000000-0000-0000-0000-00000000"; // get your GUID from the .vsct file
     public const int FileFilterId = 0x100;
     ```
 
-2. Přidejte soubor třídy do projektu filtru souborů s názvem *FileNameFilter.cs*.
+2. Přidejte soubor třídy do projektu filtru souborů s názvem *FileNameFilter. cs*.
 
 3. Nahraďte prázdný obor názvů a prázdnou třídu níže uvedeným kódem.
 
@@ -160,7 +160,7 @@ Můžete roztáhnout funkce filtru **Průzkumník řešení** a zobrazit nebo sk
 
     ```
 
-4. V *FileFilter.cs* odeberte umístění příkazů a kód pro zpracování z konstruktoru filtru souborů. Výsledek by měl vypadat takto:
+4. V části *FileFilter. cs* odeberte umístění příkazů a kód pro zpracování z konstruktoru filtru souborů. Výsledek by měl vypadat takto:
 
     ```csharp
     private FileFilter(Package package)
@@ -176,7 +176,7 @@ Můžete roztáhnout funkce filtru **Průzkumník řešení** a zobrazit nebo sk
 
      Odeberte `ShowMessageBox()` taky tuto metodu.
 
-5. V *FileFilterPackage.cs* nahraďte kód v `Initialize()` metodě následujícím kódem:
+5. V *FileFilterPackage. cs* nahraďte kód v `Initialize()` metodě následujícím způsobem:
 
     ```csharp
     protected override void Initialize()

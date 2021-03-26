@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess3::GetDebugReason
 ms.assetid: f23fbabc-8b18-4278-bebf-4cdc7091513c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3ab36134f8085ba13279332e3c1b8dc2fe65c200
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c015756b441dacbd86be0c562c859753b7c8903b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158472"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105081565"
 ---
 # <a name="idebugprocess3getdebugreason"></a>IDebugProcess3::GetDebugReason
 Tato metoda vrací důvod, proč byl proces spuštěn pro ladění.

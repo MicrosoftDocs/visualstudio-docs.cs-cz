@@ -12,17 +12,17 @@ helpviewer_keywords:
 - guid
 - menus
 ms.assetid: 84639d86-dd21-4b35-9988-6bb654162488
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd2bdc047ddd5a568aca01ed99b6148b0f288faa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d9f5066c5ae5c9fa57517406b8eca388747979c4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970267"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082085"
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Identifikátory GUID a ID nabídek sady Visual Studio
 V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skupin na řádku nabídek sady Visual Studio. Tyto hodnoty jsou definovány v souborech *. vsct* , které jsou nainstalovány jako součást sady Visual Studio SDK. Další informace naleznete v tématu [příkazy, nabídky a skupiny definované rozhraním IDE](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -62,7 +62,7 @@ V tomto článku jsou vyčteny hodnoty identifikátoru GUID a ID nabídek a skup
 |Okno|IDM_VS_MENU_WINDOW|
 |Addins|IDM_VS_MENU_ADDINS|
 |Komunita|IDM_VS_MENU_COMMUNITY|
-|Nápověda|IDM_VS_MENU_HELP|
+|Help|IDM_VS_MENU_HELP|
 
 ## <a name="groups-on-visual-studio-menus"></a>Skupiny v nabídkách sady Visual Studio
  V následujících seznamech jsou uvedeny skupiny, které se doplňují přímo z nabídek na řádku nabídek sady Visual Studio. Nejrychlejší způsob, jak přidat příkaz do nabídky aplikace Visual Studio, je nastavit jednu z těchto skupin jako nadřazenou. Skupiny, které se doplní podnabídkami, se v této části nezobrazí.
