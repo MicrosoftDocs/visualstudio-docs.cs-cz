@@ -8,17 +8,17 @@ helpviewer_keywords:
 - VSPackages, autoloading
 - VSPackages, loading
 ms.assetid: f4c3dcea-5051-4065-898f-601269649d92
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f87b5bcc94ed11e18de763bd1db7c59bdc4796fc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 39a58bcbad79191f54a7b4eeb2aa12e90d8a6e44
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966380"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105073284"
 ---
 # <a name="load-vspackages"></a>Načíst VSPackage
 Sady VSPackage jsou načteny do sady Visual Studio pouze v případě, že jsou jejich funkce požadovány. Například VSPackage je načten, když aplikace Visual Studio používá objekt pro vytváření projektu nebo službu, kterou VSPackage implementuje. Tato funkce se nazývá opožděné načítání, které se používá, kdykoli je to možné, ke zvýšení výkonu.

@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - dialog boxes, managing in Visual Studio
 ms.assetid: 491bc0de-7dba-478c-a76b-923440e090f3
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 949f136913a30848ba13185bc699fa0bc51ac456
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 96ac3c9ee92cd9124485dde29814f4a1e5c942c8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884972"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055749"
 ---
 # <a name="create-and-manage-modal-dialog-boxes"></a>Vytváření a Správa modálních dialogových oken
 Při vytváření modálního dialogového okna v aplikaci Visual Studio je nutné zajistit, aby nadřazené okno dialogového okna bylo při zobrazení dialogového okna zakázáno, a po zavření dialogového okna znovu povolit nadřazené okno. Pokud to neuděláte, může se zobrazit chyba: *Microsoft Visual Studio nelze vypnout, protože je aktivní modální dialogové okno. Zavřete aktivní dialogové okno a zkuste to znovu.*
@@ -40,7 +40,7 @@ Pokud dialogové okno není WPF nebo z jiného důvodu nemůžete odvodit tříd
 
     - *System. XAML*
 
-3. Do *OpenDialog.cs* přidejte následující `using` příkaz:
+3. V *OpenDialog. cs* přidejte následující `using` příkaz:
 
     ```csharp
     using Microsoft.VisualStudio.PlatformUI;

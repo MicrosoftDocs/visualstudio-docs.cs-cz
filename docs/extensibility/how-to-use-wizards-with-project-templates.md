@@ -11,17 +11,17 @@ helpviewer_keywords:
 - templates [Visual Studio], wizards
 - IWizard interface
 ms.assetid: 47ee26cf-67b7-4ff1-8a9d-ab11a725405c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb70931f2c26c248b2e2d41348fa26958d5348b3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 41290f946c198ed854cad9a7eb2af088f6fe228a
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883308"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082280"
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>Postupy: použití průvodců se šablonami projektů
 
@@ -74,7 +74,7 @@ Tento postup ukazuje, jak vytvořit vlastního průvodce, který otevře formul�
 
 5. Přidejte třídu pro implementaci průvodce do projektu VSIX. (V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu VSIX a vyberte **Přidat**, **Nová položka** a pak **Třída**.) Pojmenujte třídu **WizardImplementation**.
 
-6. Nahraďte kód v souboru *WizardImplementationClass.cs* následujícím kódem:
+6. Nahraďte kód v souboru *WizardImplementationClass. cs* následujícím kódem:
 
    ```csharp
    using System;
@@ -161,7 +161,7 @@ Tento postup ukazuje, jak vytvořit vlastního průvodce, který otevře formul�
 
      Tento příklad přidá hodnotu parametru z formuláře vstupu uživatele do <xref:System.Collections.Generic.Dictionary%602> parametru. Každá instance `$custommessage$` parametru v projektu bude nahrazena textem zadaným uživatelem.
 
-7. Nyní vytvořte **UserInputForm**. V souboru *WizardImplementation.cs* přidejte následující kód za konec `WizardImplementation` třídy.
+7. Nyní vytvořte **UserInputForm**. V souboru *WizardImplementation. cs* přidejte následující kód za konec `WizardImplementation` třídy.
 
    ```csharp
    public partial class UserInputForm : Form
@@ -265,7 +265,7 @@ Chcete-li, aby vaše vlastní šablona projektu používala vlastního průvodce
 
 V tomto příkladu se v projektu, který se používá jako šablona, zobrazí zpráva zadaná ve formuláři vstupu uživatele vlastního průvodce.
 
-1. V **Průzkumník řešení** přejdete do projektu **MyProjectTemplate** a otevřete *Class1.cs*.
+1. V **Průzkumník řešení** přejdete do projektu **MyProjectTemplate** a otevřete *Class1. cs*.
 
 2. V `Main` metodě aplikace přidejte následující řádek kódu.
 

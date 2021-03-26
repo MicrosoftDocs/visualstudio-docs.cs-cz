@@ -7,29 +7,29 @@ ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, installation directory
 ms.assetid: 01fbbb5b-f747-446c-afe0-2a081626a945
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea697e6e445eeae117bb6bf1d1603220ec0c0675
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6442a8475c862693b851be783ae85bbb0a2e90af
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874071"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082111"
 ---
 # <a name="choose-the-installation-directory-for-a-vspackage"></a>Volba instalačního adresáře pro VSPackage
 VSPackage a jeho podpůrné soubory musí být v systému souborů uživatele. Umístění závisí na tom, jestli je VSPackage spravované nebo nespravované, vaše souběžné schéma správy verzí a volba uživatele.
 
 ## <a name="unmanaged-vspackages"></a>Nespravované VSPackage
- Nespravovaný VSPackage je server COM, který se dá nainstalovat do libovolného umístění. Informace o jeho registraci musí přesně odrážet jeho umístění. Uživatelské rozhraní instalačního programu (UI) by mělo poskytovat výchozí umístění jako podadresář `ProgramFilesFolder` hodnoty vlastnosti Instalační služba systému Windows. Příklad:
+ Nespravovaný VSPackage je server COM, který se dá nainstalovat do libovolného umístění. Informace o jeho registraci musí přesně odrážet jeho umístění. Uživatelské rozhraní instalačního programu (UI) by mělo poskytovat výchozí umístění jako podadresář `ProgramFilesFolder` hodnoty vlastnosti Instalační služba systému Windows. Například:
 
 *&lt;Složkaprogramfiles &gt; \\ &lt; spolecnost &gt; \\ &lt; MyVSPackageProduct &gt; \V1.0\\*
 
  Uživatel by měl mít povoleno změnit výchozí adresář tak, aby vyhovoval uživatelům, kteří mají malý spouštěcí oddíl a chtějí instalovat aplikace a nástroje na jiný svazek.
 
- Pokud vaše souběžné schéma používá VSPackage se správou verzí, můžete k ukládání různých verzí použít podadresáře. Příklad:
+ Pokud vaše souběžné schéma používá VSPackage se správou verzí, můžete k ukládání různých verzí použít podadresáře. Například:
 
  *&lt;Složkaprogramfiles &gt; \\ &lt; spolecnost &gt; \\ &lt; MyVSPackageProduct &gt; \\ v 1.0 \\ 2002\\*
 

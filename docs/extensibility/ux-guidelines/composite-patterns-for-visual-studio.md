@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c8ac314a2ec49b805fc87badf6b63a719b8511e8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0c6f609842f2531fe39158e871a330e136603433
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952093"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090054"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Složené vzory pro Visual Studio
 Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích. Mezi nejdůležitější složené vzory v aplikaci Visual Studio s ohledem na konzistenci patří:
@@ -395,7 +395,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 #### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a> Vzhled výběru grafického objektu
  Popisovače výběru jsou čtverce vykreslené v obdélníkovém vzoru kolem ohraničujícího rámečku objektu. Následující graf ukazuje příklady různých stavů, které může grafický objekt mít s popisovačem, velikostí a místním zobrazením úprav. Velikost popisovačů by měla být svázaná s metrikami ohraničení a okraje okna pomocí rozhraní API **GetSystemMetrics** .
 
-| State | Příznaky | Podrobnosti vizuálu |
+| Stav | Příznaky | Podrobnosti vizuálu |
 |-------------------------|---------------| - |
 | **Nevybrané** | Výchozí | ![Výchozí stav tlačítka](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713 – 10_DefaultState") |
 | **Primární výběr** | Možností změny velikosti | ![Primární výběr s úchyty pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713 – 11_PrimaryResize") |

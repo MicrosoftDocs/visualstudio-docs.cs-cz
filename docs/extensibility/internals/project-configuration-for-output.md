@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - project configurations, output
 ms.assetid: a4517f73-45af-4745-9d7f-9fddf887b636
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6817dbd534d272924e5020b1c4c48753dcd70a54
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 13e37999ad9f3bada375c1897207e1e4c15546e8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890666"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082007"
 ---
 # <a name="project-configuration-for-output"></a>Konfigurace projektu pro výstup
 Každá konfigurace může podporovat sadu procesů sestavení, které vytvářejí výstupní položky, jako jsou spustitelné soubory nebo soubory prostředků. Tyto výstupní položky jsou pro uživatele soukromé a lze je umístit do skupin, které odkazují na související typy výstupu, jako jsou spustitelné soubory (. exe,. dll,. lib) a zdrojové soubory (. idl,. h soubory).

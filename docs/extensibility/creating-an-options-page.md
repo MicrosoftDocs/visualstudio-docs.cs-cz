@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], creating
 ms.assetid: 9f4e210c-4b47-4daa-91fa-1c301c4587f9
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1069109cbda6b0385c9409a12f9f9c674ddec14c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eb94554b4ac1af30d8187a8ab75aa83f65dccc72
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877483"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055801"
 ---
 # <a name="create-an-options-page"></a>Vytvoření stránky možnosti
 
@@ -166,7 +166,7 @@ Tento návod vytvoří jednoduchou stránku nástrojů/možností, která použ�
 
 7. Přidejte ovládací prvek **TextBox** do uživatelského ovládacího prvku.
 
-     V okně **vlastnosti** klikněte na panelu nástrojů na tlačítko **události** a potom poklikejte na událost **opuštění** . Nová obslužná rutina události se zobrazí v kódu *MyUserControl.cs* .
+     V okně **vlastnosti** klikněte na panelu nástrojů na tlačítko **události** a potom poklikejte na událost **opuštění** . Nová obslužná rutina události se zobrazí v kódu *MyUserControl. cs* .
 
 8. Přidejte veřejné `OptionsPage` pole, `Initialize` metodu do třídy ovládacího prvku a aktualizujte obslužnou rutinu události tak, aby se hodnota možnosti nastavila na obsah textového pole:
 
@@ -249,7 +249,7 @@ Tento návod vytvoří jednoduchou stránku nástrojů/možností, která použ�
 
      Tento kód volá <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> Vytvoření nebo načtení `OptionPageGrid` instance. `OptionPageGrid` volá <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> načtení jeho možností, což jsou veřejné vlastnosti.
 
-2. Nyní k zobrazení hodnoty přidejte šablonu vlastní položky příkazu s názvem **MyToolsOptionsCommand** . V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >   a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *MyToolsOptionsCommand.cs*.
+2. Nyní k zobrazení hodnoty přidejte šablonu vlastní položky příkazu s názvem **MyToolsOptionsCommand** . V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >   a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *MyToolsOptionsCommand. cs*.
 
 3. V souboru *MyToolsOptionsCommand* nahraďte tělo `ShowMessageBox` metody příkazu následujícím způsobem:
 

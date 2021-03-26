@@ -2,7 +2,7 @@
 title: Novinky v sadě Visual Studio 2019
 titleSuffix: ''
 description: Seznamte se s novými funkcemi v aplikaci Visual Studio 2019.
-ms.date: 03/04/2021
+ms.date: 03/19/2021
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 8371b9baa22b72eff0c829426b1b39bcf42398f2
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 60e1aca5e0f561539f3e27cf36dac67bb92c4ddf
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102221181"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082020"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -222,13 +222,7 @@ Další informace najdete v tématu [vlastnosti Pinnable: Debug & zobrazit sprav
 
 Visual Studio 2019 aktualizujeme často o nové funkce, které můžou zlepšit vývojové prostředí. Další informace o našich nejnovějších inovacích najdete v blogu sady [Visual Studio](https://devblogs.microsoft.com/visualstudio/). Záznam o tom, co jsme vydali v předběžné verzi Preview, najdete v [poznámkách k verzi Preview](/visualstudio/releases/2019/release-notes-preview/). Seznam toho, co plánujeme vydávat dál, najdete v tématu plán sady [Visual Studio](/visualstudio/productinfo/vs-roadmap).
 
-V současné době jsou zde některé nové funkce, které jsou aktuálně v sadě Works.
-
-- **Podpora sady Visual Studio 2019 pro GitHub Codespaces (Preview)**
-
-  Vývojáři jsou nyní více než kdy dřív Juggling více projektů v práci a doma. Nové funkce, opravy chyb, revize žádosti o přijetí změn, &amp; prototypy všech soutěží za dobu a vyžadují konstantní přepínání kontextu. Může vám [Codespaces GitHub](https://github.com/features/codespaces) . Můžete vyvíjet zcela v cloudu a vytvářet vyhrazená vlastní prostředí pro jednotlivé projekty během několika sekund. Pomocí sady Visual Studio 2019 se můžete připojit k codespace a pracovat stejně jako v místním prostředí.
-
-  Další informace najdete na stránce [co je GitHub Codespaces](codespaces/codespaces-overview.md) .
+V současné době je zde nová funkce, která je aktuálně v sadě Works.
 
 - **Vylepšené prostředí Git v aplikaci Visual Studio 2019 (Preview)**
 

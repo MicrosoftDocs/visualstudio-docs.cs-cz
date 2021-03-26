@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 67b2eff1ca7c1871eacad7608b56b6916e3cc8e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 94e5680f8e8635c969e25555463a21bba069284a
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914358"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055814"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>Postupy: rozšiřování procesu sestavení sady Visual Studio
 
@@ -41,7 +41,7 @@ Společné cíle obsahují sadu předdefinovaných prázdných cílů, které js
 
 1. Identifikujte předdefinovaný cíl v rámci běžných cílů, které chcete přepsat. Úplný seznam cílů, které můžete bez obav přepsat, najdete v následující tabulce.
 
-2. Definujte cíl nebo cíle na konci souboru projektu, bezprostředně před `</Project>` značku. Příklad:
+2. Definujte cíl nebo cíle na konci souboru projektu, bezprostředně před `</Project>` značku. Například:
 
     ```xml
     <Project>
@@ -76,23 +76,23 @@ Následující příklad ukazuje, jak použít `AfterTargets` atribut k přidán
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
-<PropertyGroup>
-   <TargetFramework>netcoreapp3.1</TargetFramework>
-   <_OutputCopyLocation>$(OutputPath)..\..\CustomOutput\</_OutputCopyLocation>
-</PropertyGroup>
+  <PropertyGroup>
+     <TargetFramework>netcoreapp3.1</TargetFramework>
+     <_OutputCopyLocation>$(OutputPath)..\..\CustomOutput\</_OutputCopyLocation>
+  </PropertyGroup>
 
-<Target Name="CustomAfterBuild" AfterTargets="Build">
-  <ItemGroup>
-    <_FilesToCopy Include="$(OutputPath)**\*"/>
-  </ItemGroup>
-  <Message Text="_FilesToCopy: @(_FilesToCopy)" Importance="high"/>
+  <Target Name="CustomAfterBuild" AfterTargets="Build">
+    <ItemGroup>
+      <_FilesToCopy Include="$(OutputPath)**\*"/>
+    </ItemGroup>
+    <Message Text="_FilesToCopy: @(_FilesToCopy)" Importance="high"/>
 
-  <Message Text="DestFiles:
-      @(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+    <Message Text="DestFiles:
+        @(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
 
-  <Copy SourceFiles="@(_FilesToCopy)"
-        DestinationFiles=
-        "@(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+    <Copy SourceFiles="@(_FilesToCopy)"
+          DestinationFiles=
+          "@(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
   </Target>
 
   <Target Name="CustomClean" BeforeTargets="CoreClean">
@@ -130,7 +130,7 @@ Tato část XML značí, že před `Build` spuštěním cíle se musí nejdřív
 </PropertyGroup>
 ```
 
-Tuto hodnotu vlastnosti lze přepsat deklarováním jiné vlastnosti pojmenované `BuildDependsOn` na konci souboru projektu. Zahrnutím předchozí `BuildDependsOn` vlastnosti do nové vlastnosti můžete přidat nové cíle na začátek a konec cílového seznamu. Příklad:
+Tuto hodnotu vlastnosti lze přepsat deklarováním jiné vlastnosti pojmenované `BuildDependsOn` na konci souboru projektu. Zahrnutím předchozí `BuildDependsOn` vlastnosti do nové vlastnosti můžete přidat nové cíle na začátek a konec cílového seznamu. Například:
 
 ```xml
 <PropertyGroup>
@@ -177,16 +177,16 @@ V tomto příkladu je to projekt ve stylu sady SDK. Jak je uvedeno v poznámce o
 
 ```xml
 <Project>
-<Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk"/>
 
-<PropertyGroup>
-   <TargetFramework>netcoreapp3.1</TargetFramework>
-</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
 
-<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk"/>
 
-<PropertyGroup>
-   <BuildDependsOn>
+  <PropertyGroup>
+    <BuildDependsOn>
       $(BuildDependsOn);CustomAfterBuild
     </BuildDependsOn>
 
@@ -197,26 +197,25 @@ V tomto příkladu je to projekt ve stylu sady SDK. Jak je uvedeno v poznámce o
     <_OutputCopyLocation>$(OutputPath)..\..\CustomOutput\</_OutputCopyLocation>
   </PropertyGroup>
 
-<Target Name="CustomAfterBuild">
-  <ItemGroup>
-    <_FilesToCopy Include="$(OutputPath)**\*"/>
-  </ItemGroup>
-  <Message Text="_FilesToCopy: @(_FilesToCopy)" Importance="high"/>
+  <Target Name="CustomAfterBuild">
+    <ItemGroup>
+      <_FilesToCopy Include="$(OutputPath)**\*"/>
+    </ItemGroup>
+    <Message Importance="high" Text="_FilesToCopy: @(_FilesToCopy)"/>
 
-  <Message Text="DestFiles:
-      @(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+    <Message Text="DestFiles:
+      @(_FilesToCopy-&gt;'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
 
-  <Copy SourceFiles="@(_FilesToCopy)"
-        DestinationFiles=
-        "@(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+    <Copy SourceFiles="@(_FilesToCopy)"
+          DestinationFiles="@(_FilesToCopy-&gt;'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
   </Target>
 
   <Target Name="CustomClean">
-    <Message Text="Inside Custom Clean" Importance="high"/>
+    <Message Importance="high" Text="Inside Custom Clean"/>
     <ItemGroup>
       <_CustomFilesToDelete Include="$(_OutputCopyLocation)**\*"/>
     </ItemGroup>
-    <Delete Files='@(_CustomFilesToDelete)'/>
+    <Delete Files="@(_CustomFilesToDelete)"/>
   </Target>
 </Project>
 ```

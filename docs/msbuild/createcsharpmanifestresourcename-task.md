@@ -2,7 +2,7 @@
 title: Úloha CreateCSharpManifestResourceName – | Microsoft Docs
 description: Pomocí úlohy MSBuild CreateCSharpManifestResourceName – můžete vytvořit název manifestu ve stylu C# z daného názvu souboru. resx nebo jiného prostředku.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 11/15/2020
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3406a5f61c9a4aa1c9e2a3c6388741c3ae0fa0f0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e1bd096c2a9c7763a3be0611f3716f61df22856
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901443"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055866"
 ---
 # <a name="createcsharpmanifestresourcename-task"></a>CreateCSharpManifestResourceName – úloha
 
@@ -43,7 +43,7 @@ Vytvoří název manifestu ve stylu C# z daného názvu souboru *. resx* nebo ji
 
 ## <a name="remarks"></a>Poznámky
 
- [Úloha CreateVisualBasicManifestResourceName –](../msbuild/createvisualbasicmanifestresourcename-task.md) určuje vhodný název prostředku manifestu, který se má přiřadit k danému souboru *. resx* nebo jinému souboru prostředků. Úloha poskytuje logický název souboru prostředků a pak ho připojí k výstupnímu parametru jako metadata.
+ [Úloha CreateCSharpManifestResourceName –](../msbuild/createcsharpmanifestresourcename-task.md) určuje vhodný název prostředku manifestu, který se má přiřadit k danému souboru *. resx* nebo jinému souboru prostředků. Úloha poskytuje logický název souboru prostředků a pak ho připojí k výstupnímu parametru jako metadata.
 
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
