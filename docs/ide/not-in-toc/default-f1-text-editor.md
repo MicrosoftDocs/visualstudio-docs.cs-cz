@@ -1,45 +1,46 @@
 ---
 title: Výchozí stránka Nápověda F1 pro textový editor
 description: Výchozí stránka pro žádosti o nápovědu F1 pro textový editor sady Visual Studio
-ms.date: 08/20/2020
+ms.date: 03/25/2021
 ms.topic: troubleshooting
-ms.custom: contperf-fy21q1
+ms.custom: contperf-fy21q3
 robots: noindex,nofollow
 f1_keywords:
 - vs.texteditor
 manager: jmartens
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 6d30a7bf02202b8114e594c94f7564a1d8683e32
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6d22a07e29b45362324074329aabfddf2b247a6b
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961648"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616906"
 ---
-# <a name="f1-help-for-the-text-editor"></a>Nápověda F1 pro textový editor
+# <a name="code-editor-f1-help"></a>Nápověda pro Editor kódu F1
 
 Vypadá to, že se nám nepovedlo najít, co jste hledali a Omlouváme se. Můžete nám pomoci vylepšit tím, že zachováte zpětnou vazbu prostřednictvím tlačítek v dolní části této stránky, nebo Vyzkoušejte některý z následujících návrhů.
 
-## <a name="cursor-position"></a>Pozice kurzoru
+## <a name="get-help-for-your-programming-language"></a>Chcete získat nápovědu k vašemu programovacímu jazyku?
 
-Pokud hledáte nápovědu F1 pro klíčové slovo nebo název rozhraní API, nezapomeňte před stisknutím klávesy **F1** umístit kurzor dovnitř nebo těsně od slova napravo. Pokud se tím problém nevyřeší, zkuste jeden z následujících návrhů.
+- Referenční [Příručka pro programování v C#](/dotnet/csharp/programming-guide/) nebo [jazyk](/dotnet/csharp/language-reference/)
+- [Visual Basic jazykové funkce](/dotnet/visual-basic/programming-guide/language-features/) nebo [jazykové reference](/dotnet/visual-basic/language-reference/).
+- [Dokumentace k Pythonu](https://docs.python.org/)
+- [Referenční dokumentace jazyka C/C++ a standardních knihoven](/cpp/cpp/c-cpp-language-and-standard-libraries).
+- [Průvodce F #](/dotnet/fsharp/).
+- [Dokumentaci TypeScript](https://www.typescriptlang.org/docs).
 
-## <a name="find-help-on-a-keyword-or-api"></a>Najít pomocníka s klíčovým slovem nebo rozhraním API
-
-- Nápovědu k [jazyku](/dotnet/csharp/language-reference/)c# naleznete v tématu [Průvodce programováním v c#](/dotnet/csharp/programming-guide/) nebo referenční příručka jazyka.
-- Nápovědu k Visual Basic najdete v tématu informace o [funkcích jazyka Visual Basic](/dotnet/visual-basic/programming-guide/language-features/) nebo o [jazyce](/dotnet/visual-basic/language-reference/).
-- Nápovědu k Pythonu najdete v [dokumentaci k Pythonu](https://docs.python.org/).
-- Nápovědu pro C++ naleznete v tématu [C/C++ Language a standardní knihovny reference](/cpp/cpp/c-cpp-language-and-standard-libraries).
-- Nápovědu k F # naleznete v [příručce f #](/dotnet/fsharp/).
-- Nápovědu k TypeScriptu najdete v [dokumentaci TypeScript](https://www.typescriptlang.org/docs).
-
-## <a name="search-for-help-on-a-keyword-or-api-name"></a>Vyhledat nápovědu pro klíčové slovo nebo název rozhraní API
+## <a name="search-for-help-on-keyword-api-name-file-type-or-ui-settings"></a>Vyhledat nápovědu k klíčovému slovu, názvu rozhraní API, typu souboru nebo nastavení uživatelského rozhraní
 
 Pokud hledáte nápovědu pro klávesu F1 s klíčovým slovem nebo názvem rozhraní API:
+
 - Zkuste hledat v [docs.Microsoft.com](/) .
 - Zkuste hledat pomocí vyhledávacího modulu.
 - Vyhledejte referenční dokumentaci pro [.NET API Browser](/dotnet/api/).
+
+## <a name="cursor-position"></a>Pozice kurzoru
+
+Pokud hledáte nápovědu F1 pro klíčové slovo nebo název rozhraní API, nezapomeňte před stisknutím klávesy **F1** umístit kurzor dovnitř nebo těsně od slova napravo.
 
 ## <a name="find-the-source-code-for-an-api"></a>Najít zdrojový kód pro rozhraní API
 

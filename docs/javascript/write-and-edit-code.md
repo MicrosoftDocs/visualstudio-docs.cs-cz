@@ -1,7 +1,7 @@
 ---
 title: Úvod do úprav pro vývojáře v JavaScriptu
 description: Tento Úvod do editoru kódu v aplikaci Visual Studio ukazuje některé způsoby, jak aplikace Visual Studio usnadňuje psaní, navigaci a porozumění kódu JavaScriptu.
-ms.date: 12/13/2018
+ms.date: 03/25/2021
 ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: cec6a19d525f89b5ca8873344d3dce9c830fd4c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b1d9fb7cdc850bc54298cd3d82d52786a9e6a639
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935687"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616958"
 ---
 # <a name="learn-to-use-the-code-editor-for-javascript"></a>Naučte se používat editor kódu pro JavaScript.
 
@@ -48,7 +48,7 @@ Pomocí technologie IntelliSense můžete také vyplnit slovo poté, co zadáte 
 
 Technologie IntelliSense také může zobrazit informace o typech při najetí myší na prvky programování.
 
-Aby mohla služba jazyka poskytovat informace o IntelliSense, může používat soubory TypeScript *d. TS* a komentáře JSDoc. Pro většinu běžných knihoven JavaScriptu jsou soubory *d. TS* automaticky získány. Další informace o tom, jak jsou získány informace technologie IntelliSense, naleznete v tématu [JavaScript IntelliSense](../ide/javascript-intellisense.md?toc=/visualstudio/javascript/toc.json)
+Aby mohla služba jazyka poskytovat informace o IntelliSense, může používat soubory TypeScript *d. TS* a komentáře JSDoc. Pro většinu běžných knihoven JavaScriptu jsou soubory *d. TS* automaticky získány. Další informace o tom, jak jsou získány informace technologie IntelliSense, naleznete v tématu [JavaScript IntelliSense](../ide/javascript-intellisense.md?toc=/visualstudio/javascript/toc.json). Pokud vás zajímá programování AngularJS v aplikaci Visual Studio, můžete k získání IntelliSense použít [rozšíření služby AngularJS](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio) pro Visual Studio.
 
 ## <a name="check-syntax"></a>Ověřit syntaxi
 

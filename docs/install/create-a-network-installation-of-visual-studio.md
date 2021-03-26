@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b572a6854d505704accd79cc4da2ac4e52c193d6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e76c5346230b6991f238384a4852938dcc540f6c
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850166"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616932"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Vytvoření síťové instalace sady Visual Studio
 
@@ -70,7 +70,7 @@ Mezi další podporované zaváděcí nástroje patří [vs_teamexplorer.exe](ht
 
 ## <a name="create-an-offline-installation-folder"></a>Vytvoření offline instalační složky
 
-K dokončení tohoto kroku je nutné připojení k Internetu. Chcete-li vytvořit offline instalaci se všemi jazyky a všemi funkcemi, použijte příkaz, který je podobný jednomu z následujících příkladů.
+K dokončení tohoto kroku je nutné připojení k Internetu. Chcete-li vytvořit offline instalaci se všemi jazyky a všemi funkcemi, použijte příkaz, který je podobný jednomu z následujících příkladů. Tato složka musí zůstat statická a všechny aktualizace rozložení musí být zahrnuty do této složky. 
 
    > [!IMPORTANT]
    > Kompletní rozložení pro národní prostředí s jedním jazykem vyžaduje přibližně 35 GB místa na disku pro Visual Studio Community a 42 GB pro Visual Studio Enterprise. Další [jazykové národní prostředí](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales) vyžaduje přibližně polovinu až GB každého z nich. Další informace najdete v části [přizpůsobení rozložení sítě](#customize-the-network-layout) .

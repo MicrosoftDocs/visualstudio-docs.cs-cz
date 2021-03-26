@@ -1,7 +1,7 @@
 ---
 title: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu
 description: V tomto kurzu vytvoříte aplikaci pomocí ASP.NET Core a TypeScriptu.
-ms.date: 03/16/2020
+ms.date: 03/25/2021
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 6297f7a392a497b79adca991b1ceba7fd701856d
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: ce27b8fdd73c1fcc001861a9b1fb7c2e9e4f4058
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672836"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616984"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Kurz: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu v aplikaci Visual Studio
 
@@ -42,7 +42,7 @@ V tomto kurzu se naučíte:
 > * Spuštění aplikace
 > * Přidání knihovny třetí strany pomocí npm
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje webu ASP.NET.
 
@@ -287,7 +287,10 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET C
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o použití TypeScriptu s ASP.NET Core můžete chtít získat v podrobnostech.
+Další informace o použití TypeScriptu s ASP.NET Core můžete chtít získat v podrobnostech. Pokud vás zajímá programování AngularJS v aplikaci Visual Studio, můžete použít [rozšíření služby AngularJS Language](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio) pro Visual Studio.
 
 > [!div class="nextstepaction"]
 > [ASP.NET Core a TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)
+
+> [!div class="nextstepaction"]
+> [Rozšíření služby pro jazyk AngularJS](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)

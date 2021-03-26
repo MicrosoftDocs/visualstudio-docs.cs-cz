@@ -2,7 +2,7 @@
 title: Vytvoření první aplikace Node.js
 ms.custom: SEO-VS-2020
 description: V tomto rychlém startu vytvoříte aplikaci Node.js v aplikaci Visual Studio.
-ms.date: 06/27/2018
+ms.date: 03/25/2021
 ms.technology: vs-javascript
 ms.topic: quickstart
 ms.devlang: javascript
@@ -14,12 +14,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: c342018a2331b27a411b5efc23af1438fa18518d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ecd65c0348ac16a2097061726e3896961ae04482
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932615"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105617049"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první aplikace Node.js
 
@@ -115,5 +115,8 @@ Blahopřejeme k dokončení tohoto rychlého startu, ve kterém jste začali s p
 > [!div class="nextstepaction"]
 > [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)
 
-- [Kurz pro Node.js a Express](../javascript/tutorial-nodejs.md)
-- [Kurz pro Node.js a reakce](../javascript/tutorial-nodejs-with-react-and-jsx.md)
+> [!div class="nextstepaction"]
+> [Kurz pro Node.js a Express](../javascript/tutorial-nodejs.md)
+
+> [!div class="nextstepaction"]
+> [Kurz pro Node.js a reakce](../javascript/tutorial-nodejs-with-react-and-jsx.md)

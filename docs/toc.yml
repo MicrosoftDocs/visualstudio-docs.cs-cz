@@ -62,6 +62,10 @@
                   href: install/troubleshooting-network-related-errors-in-visual-studio.md
         - name: Nasazení v podniku
           items:
+            - name: Použití aktualizací správců
+              href: install/applying-administrator-updates.md
+            - name: Povolení aktualizací správců
+              href: install/enabling-administrator-updates.md
             - name: Automatizace instalace sady Visual Studio souborem odpovědí
               href: install/automated-installation-with-response-file.md
             - name: Automatické použití kódů Product Key při nasazení sady Visual Studio

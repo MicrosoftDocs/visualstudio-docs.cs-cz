@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ee855700502469783a8eab60bb24a28c2e30a9c8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad2892ab7c605ba25902ac2c4c24e68236a5d740
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950637"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616971"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první aplikace Vue.js
 
@@ -140,6 +140,8 @@ Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozv�
 
 ## <a name="next-steps"></a>Další kroky
 
-- Projděte si článek pro [Vue.js](create-application-with-vuejs.md)
-- Projděte si [kurz Node.js a Express](tutorial-nodejs.md)
-- [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)
+> [!div class="nextstepaction"]
+> [Vytvoření aplikace Vue.js](create-application-with-vuejs.md)
+
+> [!div class="nextstepaction"]
+> [Nasazení aplikace na Linux App Service](../javascript/publish-nodejs-app-azure.md)
