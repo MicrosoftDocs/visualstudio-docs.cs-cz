@@ -9,17 +9,17 @@ helpviewer_keywords:
 - code snippets, supporting in language services [managed package framework]
 - language services [managed package framework], supporting code snippets
 ms.assetid: 7490325b-acee-4c2d-ac56-1cd5db1a1083
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16f0df8a21621b93655935b3cfa27a4b62df63ce
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9578159554f77a9ad7553a56c054a863b3b63fd5
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888144"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080759"
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>Podpora pro fragmenty kódu ve službě starší verze jazyka
 Fragment kódu je část kódu, která je vložena do zdrojového souboru. Samotný fragment kódu je šablona založená na jazyce XML se sadou polí. Tato pole jsou zvýrazněna po vložení fragmentu kódu a mohou mít různé hodnoty v závislosti na kontextu, ve kterém je vložený fragment. Ihned po vložení fragmentu kódu může služba jazyka tento fragment kódu naformátovat.

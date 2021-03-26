@@ -8,17 +8,17 @@ helpviewer_keywords:
 - VSPackages, automation [Visual Studio SDK]
 - automation [Visual Studio SDK], VSPackages
 ms.assetid: 104c4c55-78b8-42f4-b6b0-9a334101aaea
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d5a0bd912dadf6b8f90aabd846c6ac44534c917
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1f9a19b5e0e543052dad492ab319595c8ef76dfe
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934074"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060949"
 ---
 # <a name="providing-automation-for-vspackages"></a>Poskytování automatizace pro balíčky VSPackages
 Existují dva hlavní způsoby, jak zajistit automatizaci pro sady VSPackage: implementace objektů specifických pro VSPackage a implementace standardních objektů automatizace. Obecně se používají společně k rozšiřování modelu automatizace prostředí.

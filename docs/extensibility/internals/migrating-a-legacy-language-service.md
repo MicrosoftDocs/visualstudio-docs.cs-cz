@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - language services, migrating
 ms.assetid: e0f666a0-92a7-4f9c-ba79-d05b13fb7f11
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a0e20c77a1c8a81a29691079ace1e4751135560
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: afe98f2d96618999aa02dd01f03f55395af46e19
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895684"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063263"
 ---
 # <a name="migrating-a-legacy-language-service"></a>Migrace služby starší verze jazyka
 Službu starší verze jazyka můžete migrovat na novější verzi sady Visual Studio tak, že aktualizujete projekt a přidáte do projektu soubor source. extension. vsixmanifest. Samotná služba jazyka bude nadále fungovat stejně jako dříve, protože editor sady Visual Studio ho přizpůsobí.
@@ -71,13 +71,13 @@ Službu starší verze jazyka můžete migrovat na novější verzi sady Visual 
 
     - Přidejte odkaz na Microsoft.VisualStudio.Shell.Interop.10.0.dll.
 
-8. Otevřete soubor VsPkg.cs a změňte hodnotu `DefaultRegistryRoot` atributu na
+8. Otevřete soubor VsPkg. cs a změňte hodnotu `DefaultRegistryRoot` atributu na
 
     ```
     "Software\\Microsoft\\VisualStudio\\14.0Exp"
     ```
 
-9. Původní ukázka neregistruje svou jazykovou službu, takže musíte do VsPkg.cs přidat následující atribut.
+9. Původní ukázka neregistruje svou jazykovou službu, takže musíte do VsPkg. cs přidat následující atribut.
 
     ```
     [ProvideLanguageService(typeof(RegularExpressionLanguageService), "RegularExpressionLanguage", 0, RequestStockColors=true)]

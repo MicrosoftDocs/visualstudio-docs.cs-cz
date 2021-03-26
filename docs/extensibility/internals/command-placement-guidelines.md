@@ -9,17 +9,17 @@ helpviewer_keywords:
 - small command sets
 - command sets
 ms.assetid: 63b3478e-e08a-420b-a0ec-76767e0cb289
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 37779a8c790e50e63f70dfd9023d3ba6a84d0170
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 46aa6c341313a9d7c9d0a6d1666130d799ddc277
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940146"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057322"
 ---
 # <a name="command-placement-guidelines"></a>Pokyny pro umístění příkazů
 Osvědčené postupy pro umístění příkazů v integrovaném vývojovém prostředí (IDE) sady Visual Studio se liší v závislosti na velikosti sady příkazů. Příkazy jsou definovány a umístěny podle informací v souborech *. vsct* .

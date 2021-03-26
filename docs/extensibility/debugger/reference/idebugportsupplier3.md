@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortSupplier3 interface
 ms.assetid: e458cd02-2370-4435-8953-17d7a60ce152
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8db7c2321d5a309f66b85a3f177e20cb3f9b1244
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: fa17984c9b7f3e87d4a7118188ecc6ca79c5deef
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102150390"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105071932"
 ---
 # <a name="idebugportsupplier3"></a>IDebugPortSupplier3
 Toto rozhraní umožňuje volajícímu určit, jestli dodavatel portu může chránit porty (jejich zápisem na disk) mezi voláními ladicího programu a následným získáním seznamu těchto zachovaných portů.

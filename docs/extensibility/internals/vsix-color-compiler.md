@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e6e4a07a023be398c4106984fe4dc33eddd2706
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9486f1cd3e931d134c6fe2842f8704926de70966
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929196"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060702"
 ---
 # <a name="vsix-color-compiler"></a>Kompilátor barev VSIX
 Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová aplikace, která přebírá soubor. XML reprezentující barvy pro existující motivy sady Visual Studio a převede ho na soubor. pkgdef tak, aby tyto barvy mohly být použity v aplikaci Visual Studio. Vzhledem k tomu, že je snadné porovnat rozdíly mezi soubory. XML, tento nástroj je užitečný pro správu vlastních barev ve správě zdrojového kódu. Dá se taky připojit do prostředí pro Build, aby výstup buildu byl platný soubor. pkgdef.
@@ -54,7 +54,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 
 |**Atribut**|**Definition**|
 |-|-|
-|Název|Požadovanou Název motivu|
+|Name|Požadovanou Název motivu|
 |Identifikátor GUID|Požadovanou Identifikátor GUID motivu (musí odpovídat formátování identifikátoru GUID)|
 
  Při vytváření vlastních barev pro aplikaci Visual Studio je nutné tyto barvy definovat pro následující motivy. Pokud pro určitý motiv neexistují žádné barvy, Visual Studio se pokusí načíst chybějící barvy z světlého motivu.
@@ -78,7 +78,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 
 |**Atribut**|**Definition**|
 |-|-|
-|Název|Požadovanou Název kategorie|
+|Name|Požadovanou Název kategorie|
 |Identifikátor GUID|Požadovanou Identifikátor GUID kategorie (musí odpovídat formátování identifikátoru GUID)|
 
  **Barva**
@@ -94,7 +94,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 
 |**Atribut**|**Definition**|
 |-|-|
-|Název|Požadovanou Název barvy|
+|Name|Požadovanou Název barvy|
 
  **Pozadí a popředí**
 
