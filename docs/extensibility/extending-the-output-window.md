@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Output window, about Output window
 ms.assetid: b02fa88c-f92a-4ff6-ba5f-2eb4d48a643a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91c59737d269af4eb91df402f38346cf41e3146e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cf875d070d27d307380f23e71af2bda7c4a205b5
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961765"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105075026"
 ---
 # <a name="extend-the-output-window"></a>Rozšíří okno výstup.
 Okno **výstup** je sada textových podoken pro čtení a zápis. Visual Studio obsahuje tato Vestavěná podokna: **sestavení**, ve kterém projekty sdělují zprávy o sestaveních a **Obecné**, ve kterých [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] komunikuje se zprávami o integrovaném vývojovém prostředí (IDE). Projekty automaticky získávají odkaz na podokno **sestavení** prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> metod rozhraní a Visual Studio nabízí přímý přístup k podoknu **Obecné** prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> služby. Kromě integrovaných podoken můžete vytvářet a spravovat vlastní podokna.
@@ -35,14 +35,14 @@ Okno **výstup** je sada textových podoken pro čtení a zápis. Visual Studio 
 
     2. EnvDTE80
 
-3. Do *TestOutput.cs* přidejte následující příkaz using:
+3. V *TestOutput. cs* přidejte následující příkaz using:
 
     ```f#
     using EnvDTE;
     using EnvDTE80;
     ```
 
-4. V *TestOutput.cs* odstraňte `ShowMessageBox` metodu. Přidejte následující zástupnou proceduru následující metody:
+4. V *TestOutput. cs* odstraňte `ShowMessageBox` metodu. Přidejte následující zástupnou proceduru následující metody:
 
     ```csharp
     private void OutputCommandHandler(object sender, EventArgs e)

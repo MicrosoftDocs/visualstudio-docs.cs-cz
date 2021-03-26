@@ -9,17 +9,17 @@ helpviewer_keywords:
 - toolbox
 - wpf
 ms.assetid: 9cc34db9-b0d1-4951-a02f-7537fbbb51ad
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9b401baf1605a869772ba41ce83ad906061f8144
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1dccdeb09a938b3b0bbbab803faeed538001b825
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851436"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089248"
 ---
 # <a name="create-a-wpf-toolbox-control"></a>Vytvoření ovládacího prvku sady nástrojů WPF
 
@@ -33,7 +33,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. Vytvořte projekt VSIX s názvem `MyToolboxControl` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Po otevření projektu přidejte šablonu položky **ovládacího prvku sady nástrojů WPF** s názvem `MyToolboxControl` . V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na rozšiřitelnost v jazyce **Visual C#**  >   a vyberete **ovládací prvek sada nástrojů WPF**. V poli **název** v dolní části okna změňte název souboru příkazů na *MyToolboxControl.cs*.
+2. Po otevření projektu přidejte šablonu položky **ovládacího prvku sady nástrojů WPF** s názvem `MyToolboxControl` . V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na rozšiřitelnost v jazyce **Visual C#**  >   a vyberete **ovládací prvek sada nástrojů WPF**. V poli **název** v dolní části okna změňte název souboru příkazů na *MyToolboxControl. cs*.
 
     Řešení nyní obsahuje uživatelský ovládací prvek, `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> který přidá ovládací prvek do **panelu nástrojů** a položku prostředku **Microsoft. VISUALSTUDIO. ToolboxControl** v manifestu VSIX pro nasazení.
 
@@ -57,9 +57,9 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ## <a name="renaming-the-control"></a>Přejmenování ovládacího prvku
 
- Ve výchozím nastavení se ovládací prvek zobrazí v sadě **nástrojů** jako **MyToolboxControl** ve skupině s názvem **MyToolboxControl. MyToolboxControl**. Tyto názvy můžete změnit v souboru *MyToolboxControl.XAML.cs* .
+ Ve výchozím nastavení se ovládací prvek zobrazí v sadě **nástrojů** jako **MyToolboxControl** ve skupině s názvem **MyToolboxControl. MyToolboxControl**. Tyto názvy můžete změnit v souboru *MyToolboxControl. XAML. cs* .
 
-1. Otevřete *MyToolboxControl.XAML.cs* v zobrazení kódu.
+1. V zobrazení kód otevřete *MyToolboxControl. XAML. cs* .
 
 2. Najděte `MyToolboxControl` třídu a přejmenujte ji na TestControl. (Nejrychlejší způsob, jak to provést, je přejmenovat třídu a pak vybrat **Přejmenovat** z kontextové nabídky a dokončit kroky. (Další informace o příkazu **Přejmenovat** naleznete v tématu [refaktoringu přejmenování (C#)](../ide/reference/rename.md).)
 

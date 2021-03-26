@@ -8,17 +8,17 @@ helpviewer_keywords:
 - projects [Visual Studio SDK], adding
 - project items [Visual Studio], adding
 ms.assetid: 8c59217f-56e5-4540-a73b-cd10de189373
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ff54e24408577ba8bfbf553a5c641eab2d15814
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3f2c10b310569a412025fd114f7818734106bc18
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906234"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105079056"
 ---
 # <a name="add-project-and-project-item-templates"></a>Přidat šablony projektů a položek projektů
 Při vytváření vlastních typů projektů je nutné poskytnout podporu pro přidávání nových projektů a položek projektu pomocí standardních dialogových [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] oken integrované vývojové prostředí (IDE). Následující témata popisují různé techniky pro přidávání projektů a položek projektu.
