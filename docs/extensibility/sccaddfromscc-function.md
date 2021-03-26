@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - SccAddFromScc function
 ms.assetid: 902e764d-200e-46e1-8c42-4da7b037f9a0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2bbc321d7ff7e335b28f6bc7430fb0f8dce3d57c
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: be67fd18c6cac7217da0d79aaef766e942e15fb9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102221701"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105085673"
 ---
 # <a name="sccaddfromscc-function"></a>SccAddFromScc – funkce
 Tato funkce umožňuje uživateli vyhledat soubory, které již jsou v systému správy zdrojů, a následně tyto soubory zpřístupnit v rámci aktuálního projektu. Tato funkce může například získat společný hlavičkový soubor do aktuálního projektu bez kopírování souboru. Vrácené pole souborů, `lplpFileNames` , obsahuje seznam souborů, které chce uživatel přidat do projektu IDE.

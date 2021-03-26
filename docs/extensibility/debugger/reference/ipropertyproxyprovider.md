@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyProvider interface
 ms.assetid: 52e9f7fc-6fe0-4d23-890b-5673dca8c3cb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d8d92f6d616d86b82a9f4efa443f459a082256e
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 87bc0bfa11c54f8eade595f6bf0bfaba1fa277ca
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102225536"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105058089"
 ---
 # <a name="ipropertyproxyprovider"></a>IPropertyProxyProvider
 Toto rozhraní poskytuje proxy rozhraní pro zobrazení a změnu dat objektu.

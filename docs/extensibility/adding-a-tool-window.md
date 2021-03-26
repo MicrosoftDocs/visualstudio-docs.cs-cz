@@ -8,17 +8,17 @@ helpviewer_keywords:
 - tutorials
 - tool windows
 ms.assetid: 8e16c381-03c8-404e-92ef-3614cdf3150a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f3c84eafcfe19efdf6427db10f65dcf24504b598
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 314a684e34c91f43abe9babe4cdd6efc8a15cc35
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951430"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105085517"
 ---
 # <a name="add-a-tool-window"></a>Přidat okno nástrojů
 
@@ -117,7 +117,7 @@ Přidejte příkaz na panel nástrojů, který se zobrazí jako tlačítko.
     </Button>
     ```
 
-3. Otevřete *FirstToolWindowCommand.cs* a přidejte následující řádky do třídy hned za existující pole.
+3. Otevřete *FirstToolWindowCommand. cs* a přidejte následující řádky do třídy hned za existující pole.
 
     ```csharp
     public const string guidFirstToolWindowPackageCmdSet = "00000000-0000-0000-0000-0000";  // get the GUID from the .vsct file
@@ -143,7 +143,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
 ## <a name="instantiate-the-tool-window-and-toolbar"></a>Vytvoření instance okna nástrojů a panelu nástrojů
 Přidejte panel nástrojů a příkaz nabídky, který vyvolá dialog **otevřít soubor** a přehraje vybraný mediální soubor.
 
-1. Otevřete *FirstToolWindow.cs* a přidejte následující `using` direktivy:
+1. Otevřete *FirstToolWindow. cs* a přidejte následující `using` direktivy:
 
     ```csharp
     using System.ComponentModel.Design;
@@ -188,7 +188,7 @@ Přidejte panel nástrojů a příkaz nabídky, který vyvolá dialog **otevří
     }
     ```
 
-6. Přidejte příkaz nabídky na panel nástrojů. Do třídy FirstToolWindowCommand.cs přidejte následující direktivu using:
+6. Přidejte příkaz nabídky na panel nástrojů. Do třídy FirstToolWindowCommand. cs přidejte následující direktivu using:
 
     ```csharp
     using System.Windows.Forms;
@@ -255,9 +255,9 @@ Přidejte panel nástrojů a příkaz nabídky, který vyvolá dialog **otevří
 
 ## <a name="set-the-default-position-for-the-tool-window"></a>Nastavení výchozí pozice pro okno nástroje
 
-Dále zadejte výchozí umístění v integrovaném vývojovém prostředí pro okno nástroje. Konfigurační informace pro okno nástroje jsou v souboru *FirstToolWindowPackage.cs* .
+Dále zadejte výchozí umístění v integrovaném vývojovém prostředí pro okno nástroje. Konfigurační informace pro okno nástroje jsou v souboru *FirstToolWindowPackage. cs* .
 
-1. V *FirstToolWindowPackage.cs* vyhledejte <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atribut `FirstToolWindowPackage` třídy, který předá typ FirstToolWindow konstruktoru. Chcete-li určit výchozí pozici, je nutné přidat další parametry do konstruktoru následujícím příkladem.
+1. V *FirstToolWindowPackage. cs* vyhledejte <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atribut `FirstToolWindowPackage` třídy, který předá typ FirstToolWindow konstruktoru. Chcete-li určit výchozí pozici, je nutné přidat další parametry do konstruktoru následujícím příkladem.
 
     ```csharp
     [ProvideToolWindow(typeof(FirstToolWindow),
