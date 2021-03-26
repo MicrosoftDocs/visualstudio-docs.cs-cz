@@ -8,17 +8,17 @@ helpviewer_keywords:
 - registration, VSPackages
 - VSPackages, registering
 ms.assetid: ecd20da8-b04b-4141-a8f4-a2ef91dd597a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5ed2dfccb47c980852bcdda423871f7517ef785a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: afa2ac0f8608e7cafe8c465ea5ff0b8c0031dd58
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900045"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069150"
 ---
 # <a name="vspackage-registration"></a>Registrace balíčku VSPackage
 VSPackage musí poradit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , že jsou nainstalované a měly by být načteny. Tento proces je možné provést zápisem informací do registru. To je typická úloha instalačního programu.

@@ -7,20 +7,20 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - outlining
 ms.assetid: d75a44aa-265a-44d4-9c28-457f59c4ff9f
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: aa66d3b32f6992cb3a5db13bc2b7ee4d5cd9294c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 48454af0c4bb27a1c66cae9fa2d469622856dcc3
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951183"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078419"
 ---
 # <a name="walkthrough-outlining"></a>Návod: Sbalení
 Nastavte funkce založené na jazycích, jako je například sbalení, definováním druhů textových oblastí, které chcete rozbalit nebo sbalit. Můžete definovat oblasti v kontextu jazykové služby nebo definovat vlastní příponu názvu souboru a typ obsahu a použít definici oblasti jenom na tento typ, nebo použít definice oblastí na existující typ obsahu (například "text"). Tento návod ukazuje, jak definovat a zobrazit oblasti osnovy.

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - menus, creating top level
 - top-level menus
 ms.assetid: 58fc1a31-2aeb-441c-8e48-c7d5cbcfe501
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6bd568e53c3a74819f642f0593524b314e065afb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 22ce9bc00f24278fd2c0533052d7bd5e944b1ebf
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951560"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078341"
 ---
 # <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Přidání nabídky do řádku nabídek sady Visual Studio
 
@@ -45,13 +45,13 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ::: moniker range="vs-2017"
 
-2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **TestCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >   **novou položku**. V dialogovém okně **Přidat novou položku** přejít na **Visual C#/rozšiřitelnost** a vyberte **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *TestCommand.cs*.
+2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **TestCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >   **novou položku**. V dialogovém okně **Přidat novou položku** přejít na **Visual C#/rozšiřitelnost** a vyberte **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *TestCommand. cs*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **TestCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >   **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na **Visual C#/rozšiřitelnost** a vyberte **příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *TestCommand.cs*.
+2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **TestCommand**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >   **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na **Visual C#/rozšiřitelnost** a vyberte **příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *TestCommand. cs*.
 
 ::: moniker-end
 

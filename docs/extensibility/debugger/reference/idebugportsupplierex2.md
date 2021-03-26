@@ -6,17 +6,17 @@ ms.topic: reference
 helpviewer_keywords:
 - IDebugPortSupplierEx2 interface
 ms.assetid: dae0050a-a50a-4f35-bfbd-e538f537b20f
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd166280ab75b6cb560d6936342d8c3905b87ade
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c2020f3efe2bd7562640fd44e45a10c9a3a6c767
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102167110"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105071841"
 ---
 # <a name="idebugportsupplierex2"></a>IDebugPortSupplierEx2
 Poskytuje podporu pro dodavatele portu pro výběr a interakci se základním serverem.

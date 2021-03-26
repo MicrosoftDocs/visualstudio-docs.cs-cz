@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Source Control Integration,overview
 - essentials, Source Control Integration
 ms.assetid: 442057cb-fd54-4283-96f8-2f6dc8bf2de7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a549a4f90cca6c17f3ad634551740f91fbe7da6c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 155e662eae0dda6689a233e31fd62bb72259ae8b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846410"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069332"
 ---
 # <a name="source-control-integration-essentials"></a>Základy integrace správy zdrojového kódu
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje dva typy integrace správy zdrojového kódu: modul plug-in správy zdrojového kódu, který poskytuje základní funkce a je sestaven pomocí rozhraní API modulu plug-in správy zdrojových kódů (dříve označovaného jako rozhraní MSSCCI API) a řešení integrace správy zdrojového kódu založeného na VSPackage, které poskytuje robustnější funkce.

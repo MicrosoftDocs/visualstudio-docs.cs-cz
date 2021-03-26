@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - solutions, about solutions
 ms.assetid: 3b21e3a1-170a-4485-941e-6b04b7b27886
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91903954f490e5845e01ddbf4b7aa4767f2ceacc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 914f1744accc10eb55cfb0b321a04560c27bca05
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846540"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069371"
 ---
 # <a name="solutions-overview"></a>Přehled řešení
 

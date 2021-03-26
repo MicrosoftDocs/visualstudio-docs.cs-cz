@@ -8,17 +8,17 @@ helpviewer_keywords:
 - VSCT XML schema elements, Menus
 - Menus element (VSCT XML schema)
 ms.assetid: d825a99b-e05c-4dd9-8933-a180216d667a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e45fa38b5c5709de34b70dc311421acf76ca92d0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c5b6010945bd176f0663c7b0d57c3991470fff07
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886779"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064004"
 ---
 # <a name="menus-element"></a>Menu – element
 Definuje všechny nabídky a panely nástrojů, které implementuje VSPackage.

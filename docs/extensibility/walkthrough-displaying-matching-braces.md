@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - brace matching
 ms.assetid: 5af08ac7-1d08-4ccf-997e-01aa6cb3d3d7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f89c6303dc8ca9e48fb212a3ae889251b34ece91
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0950f6b8ed647a3922fe63e365a97ea0a888ec6e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961726"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078614"
 ---
 # <a name="walkthrough-display-matching-braces"></a>Návod: zobrazení vyhovujících složených závorek
 Implementujte jazykové funkce, jako je například párování složených závorek, definováním složených závorek, které mají být shodné, a přidáním značky textové značky do odpovídajících složených závorek, pokud je blikající kurzor v jedné z složených závorek. Složené závorky lze definovat v kontextu jazyka, definovat vlastní příponu názvu souboru a typ obsahu a použít značky pouze pro tento typ nebo použít značky pro existující typ obsahu (například "text"). Následující návod ukazuje, jak použít Tagy pro spárování složených závorek s typem obsahu text.
