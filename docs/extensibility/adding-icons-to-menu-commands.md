@@ -9,17 +9,17 @@ helpviewer_keywords:
 - toolbars [Visual Studio], adding icons to commands
 - commands [Visual Studio], adding icons
 ms.assetid: 362a0c7e-5729-4297-a83f-1aba1a37fd44
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9f37bd14ed43ab0e165346f8ce09512c3981177
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 01f159b9f07cd0d530039e0d5707cf38d51610ef
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934361"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097587"
 ---
 # <a name="add-icons-to-menu-commands"></a>Přidat ikony do příkazů nabídky
 Příkazy se můžou objevit v nabídkách i na panelech nástrojů. Na panelech nástrojů je běžné, že se příkaz zobrazí jenom s ikonou (k uložení prostoru), zatímco v nabídkách se příkaz obvykle zobrazuje s ikonou i textem.

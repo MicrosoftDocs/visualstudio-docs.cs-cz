@@ -8,17 +8,17 @@ helpviewer_keywords:
 - colorable items
 - language services, built-in colorable items
 ms.assetid: 5e5f3436-6bad-4fd2-8823-6a30353ba648
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64738bfe67ccc53970087100cd6c37a9881e6b2a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 253c108fe83eaf44f945f546bd64dd6529de1dd6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898309"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105086076"
 ---
 # <a name="how-to-use-built-in-colorable-items"></a>Postupy: Použití vestavěných barevných položek
 Než začnete používat vestavěné položky barev, musíte nejdřív signalizovat integrované vývojové prostředí (IDE), které neposkytujete vlastní barvy, které by v tomto případě byly <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> objekty. Provedete to tak, že nastavíte položku registru pro službu jazyka.

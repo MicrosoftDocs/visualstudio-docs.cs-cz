@@ -9,17 +9,17 @@ helpviewer_keywords:
 - IntelliSense, Complete Word
 - Complete Word
 ms.assetid: 0ace5ac3-f9e1-4e6d-add4-42967b1f96a6
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3625719987afc94deda314fa61d7a8cc2c1c843
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 360778e4dbc89130e8a533640fefb188047fe8ca
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943365"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074077"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>Dokončování slov ve službě starší verze jazyka
 Doplňování slov chybějících znaků u částečně zadaného slova. Pokud je k dispozici jenom jedno možné dokončení, slovo se po zadání znaku dokončení dokončí. Pokud se v částečném slově shoduje více než jedna možnost, zobrazí se seznam možných dokončení. Znak dokončení může být libovolný znak, který se nepoužívá pro identifikátory.

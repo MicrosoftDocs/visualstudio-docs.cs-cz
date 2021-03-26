@@ -9,17 +9,17 @@ helpviewer_keywords:
 - vsix
 - packages
 ms.assetid: 8b86d62f-c274-4e91-82e0-38cdb9a423d5
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8d25430206129f0236661222b92cefdbe538a7ad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 67b3775509e330ad55a2531a9e42a7cca93c50a6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933567"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097497"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>Anatomie balíčku VSIX
 VSIX balíček je soubor *VSIX* , který obsahuje jedno nebo více rozšíření sady Visual Studio, společně s metadaty, které Visual Studio používá ke klasifikaci a instalaci rozšíření. Tato metadata jsou obsažena v manifestu VSIX a souboru *[Content_Types]. XML* . Balíček VSIX může také obsahovat jeden nebo více souborů s *příponou. vsixlangpack* pro poskytnutí lokalizovaného textu instalace a může obsahovat další balíčky VSIX pro instalaci závislostí.

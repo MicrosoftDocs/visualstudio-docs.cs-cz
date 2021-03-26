@@ -10,17 +10,17 @@ helpviewer_keywords:
 - shortcut menus, adding to tool windows
 - tool windows, adding context menus
 ms.assetid: 50234537-9e95-4b7e-9cb7-e5cf26d6e9d2
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a35652c0eacf22a46eed3f3fc64c3bcc0d6d10ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3ba0eb2324812ca7536b361d602bb683d627c743
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951534"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097614"
 ---
 # <a name="add-a-shortcut-menu-in-a-tool-window"></a>Přidání místní nabídky v okně nástroje
 Tento návod vloží místní nabídku do okna nástroje. Místní nabídka je nabídka, která se zobrazí, když uživatel klikne pravým tlačítkem myši na tlačítko, textové pole nebo okno na pozadí. Příkazy v místní nabídce se chovají stejně jako příkazy v jiných nabídkách nebo panelech nástrojů. Chcete-li podporovat místní nabídku, zadejte ji v souboru *. vsct* a zobrazte ji v reakci na tlačítko myši pravým tlačítkem myši.
@@ -114,7 +114,7 @@ Místní nabídka, například ta, která je znázorněna v tomto návodu, umož
     </Buttons>
     ```
 
-5. Do *ShortcutMenuCommand.cs* přidejte definice pro identifikátor GUID sady příkazů, místní nabídku a položky nabídky.
+5. V souboru *ShortcutMenuCommand. cs* přidejte definice pro identifikátor GUID sady příkazů, místní nabídku a položky nabídky.
 
     ```csharp
     public const string guidShortcutMenuPackageCmdSet = "00000000-0000-0000-0000-00000000"; // your GUID will differ
@@ -129,9 +129,9 @@ Místní nabídka, například ta, která je znázorněna v tomto návodu, umož
 ## <a name="implementing-the-shortcut-menu"></a>Implementace místní nabídky
  Tato část implementuje místní nabídku a její příkazy.
 
-1. V *ShortcutMenu.cs* může okno nástroje získat službu příkazu nabídky, ale ovládací prvek, který obsahuje, nemůže. Následující kroky ukazují, jak nastavit, aby byla služba příkazu nabídky k dispozici pro uživatelský ovládací prvek.
+1. V *místní nabídce. cs* může okno nástroje získat službu příkazu nabídky, ale ovládací prvek, který obsahuje, nemůže. Následující kroky ukazují, jak nastavit, aby byla služba příkazu nabídky k dispozici pro uživatelský ovládací prvek.
 
-2. Do *ShortcutMenu.cs* přidejte následující direktivy using:
+2. V části *místní. cs* přidejte následující direktivy using:
 
     ```csharp
     using Microsoft.VisualStudio.Shell;
@@ -159,7 +159,7 @@ Místní nabídka, například ta, která je znázorněna v tomto návodu, umož
     }
     ```
 
-5. V *ShortcutMenuControl.XAML.cs* přidejte soukromé pole pro příkazovou službu nabídky a změňte konstruktor ovládacího prvku tak, aby probral službu příkazu nabídky. Pak použijte příkazová služba nabídky k přidání příkazů kontextové nabídky. Konstruktor ShortcutMenuControl by teď měl vypadat jako v následujícím kódu. Obslužná rutina příkazu bude definována později.
+5. V souboru *ShortcutMenuControl. XAML. cs* přidejte soukromé pole pro příkazovou službu nabídky a změňte konstruktor ovládacího prvku tak, aby probral službu příkazu nabídky. Pak použijte příkazová služba nabídky k přidání příkazů kontextové nabídky. Konstruktor ShortcutMenuControl by teď měl vypadat jako v následujícím kódu. Obslužná rutina příkazu bude definována později.
 
     ```csharp
     public ShortcutMenuControl(OleMenuCommandService service)
@@ -207,7 +207,7 @@ Místní nabídka, například ta, která je znázorněna v tomto návodu, umož
     </UserControl>
     ```
 
-7. V *ShortcutMenuControl.XAML.cs* přidejte zástupnou proceduru pro obslužnou rutinu události.
+7. V souboru *ShortcutMenuControl. XAML. cs* přidejte zástupnou proceduru pro obslužnou rutinu události.
 
     ```csharp
     private void MyToolWindow_MouseRightButtonDown(object sender, MouseButtonEventArgs e)

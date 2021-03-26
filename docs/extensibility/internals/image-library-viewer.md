@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc0acd64a61acac2cb30b9251bcb4e528c08f227
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d60443e97bc557bc964d59750417b2662e4c3c8f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840116"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105085972"
 ---
 # <a name="image-library-viewer"></a>Prohlížeč knihovny obrázků
 Nástroj Prohlížeč knihovny obrázků sady Visual Studio může načíst a vyhledat manifesty obrázků a umožnit tak uživateli manipulovat stejným způsobem jako v aplikaci Visual Studio. Uživatel může měnit pozadí, velikosti, DPI, vysoký kontrast a další nastavení. Nástroj také zobrazí informace o načítání pro každý manifest obrázku a zobrazí informace o zdroji pro každý obrázek v manifestu obrázku. Tento nástroj je užitečný pro:

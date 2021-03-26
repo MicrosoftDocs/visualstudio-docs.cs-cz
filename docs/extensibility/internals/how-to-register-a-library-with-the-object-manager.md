@@ -11,17 +11,17 @@ helpviewer_keywords:
 - IVsObjectManager2 interface, registering library with object manager
 - libraries, symbol-browsing tools
 ms.assetid: f124dd05-cb0f-44ad-bb2a-7c0b34ef4038
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5f4e9805eec8fd5d0089f1b8348253523d9056f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b83b68af4c026c40aca7969068ad015a61d64321
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925011"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105086063"
 ---
 # <a name="how-to-register-a-library-with-the-object-manager"></a>Postupy: registrace knihovny pomocí Správce objektů
 Nástroje pro procházení symbolů, jako je **zobrazení tříd**, **Prohlížeč objektů**, **prohlížeč volání** a **hledání výsledků symbolů**, umožňují zobrazit symboly v projektu nebo externích součástech. Mezi symboly patří obory názvů, třídy, rozhraní, metody a další prvky jazyka. Knihovny sledují tyto symboly a zpřístupňují je [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] správci objektů, který tyto nástroje naplní daty.

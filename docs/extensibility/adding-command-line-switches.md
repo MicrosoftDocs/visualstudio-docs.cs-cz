@@ -10,17 +10,17 @@ helpviewer_keywords:
 - IVsAppCommandLine::GetOption method
 - command line, switches
 ms.assetid: 8bbbd87e-76fe-4fb5-8ef9-65f5e31967cf
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa38e508c087d61ad5ea1762e3e3cc33d6d4f538
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 826029154763a98279b5e5446317802531b08bfe
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939224"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097562"
 ---
 # <a name="add-command-line-switches"></a>Přidat přepínače příkazového řádku
 Můžete přidat přepínače příkazového řádku, které se použijí pro VSPackage při spuštění *devenv.exe* . Slouží <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> k deklaraci názvu přepínače a jeho vlastností. V tomto příkladu je přidán přepínač MySwitch pro podtřídu VSPackage s názvem **AddCommandSwitchPackage** bez argumentů a automaticky načtený rozhraní VSPackage.
@@ -36,7 +36,7 @@ Můžete přidat přepínače příkazového řádku, které se použijí pro VS
 | Argumenty | Počet argumentů pro přepínač. Může být "*" nebo seznam argumentů. |
 | Výzvu DemandLoad | Pokud je tato hodnota nastavená na hodnotu 1, načtěte VSPackage automaticky, jinak nastavte na 0. |
 | HelpString | Řetězec nebo ID prostředku v řetězci, který se má zobrazit v **devenv/?** |
-| Název | Přepínač. |
+| Name | Přepínač. |
 | PackageGuid | Identifikátor GUID balíčku |
 
  První hodnota argumentu je obvykle 0 nebo 1. Pomocí speciální hodnoty * lze označit, že celý zbytek příkazového řádku je argumentem. To může být užitečné pro scénáře ladění, kdy uživatel musí předat řetězec příkazu ladicího programu.

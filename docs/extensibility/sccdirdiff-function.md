@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - SccDirDiff function
 ms.assetid: 26c9ba92-e3b9-4dd2-bd5e-76b17745e308
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98a843c061941765404397186af74ab71923a9da
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 974d0aa22ff3940472be34b691a61632dc742223
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102221597"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105073973"
 ---
 # <a name="sccdirdiff-function"></a>SccDirDiff – funkce
 Tato funkce zobrazuje rozdíly mezi aktuálním místním adresářem na klientském disku a odpovídajícím projektem v rámci správy zdrojového kódu.

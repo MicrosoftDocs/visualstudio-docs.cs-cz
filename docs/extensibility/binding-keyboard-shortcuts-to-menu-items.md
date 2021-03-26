@@ -11,17 +11,17 @@ helpviewer_keywords:
 - keyboard shortcuts
 - menu items
 ms.assetid: 19f483b6-4d3e-424e-9d68-dc129c788e47
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bed07019b3651ba7b0fe2959d06f0634374bb31a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 88cc7d91ee8cd24daae278efdbfd35271412af40
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941928"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097302"
 ---
 # <a name="bind-keyboard-shortcuts-to-menu-items"></a>Vázání klávesových zkratek k položkám nabídky
 Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, stačí přidat položku do souboru *. vsct* pro balíček. Toto téma vysvětluje, jak namapovat klávesovou zkratku na vlastní tlačítko, položku nabídky nebo příkaz panelu nástrojů a jak použít mapování klávesnice ve výchozím editoru nebo omezit na vlastní editor.

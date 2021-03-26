@@ -8,17 +8,17 @@ helpviewer_keywords:
 - automation [Visual Studio SDK], about automation
 - extensibility
 ms.assetid: 12b6d6db-0d22-4aaa-aa7d-1365f759b7b0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26184263d5f269ebf6922c5dd85a37e93356e935
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d763fea140ddac1b4dba955421c563700373dc22
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906019"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105086232"
 ---
 # <a name="automation-model-overview"></a>Přehled modelu automatizace
 Model automatizace se skládá ze sady objektů, pro které můžete napsat doplněk nebo rozšíření sady Visual Studio. Doplněk je aplikace, která může pracovat s prostředím sady Visual Studio a automatizovat běžné úlohy. Rozšíření sady Visual Studio může vytvořit vlastní součásti sady Visual Studio nebo přidat funkce standardních komponent, jako je textový editor.

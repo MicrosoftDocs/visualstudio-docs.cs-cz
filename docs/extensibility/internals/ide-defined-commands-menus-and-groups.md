@@ -9,17 +9,17 @@ helpviewer_keywords:
 - .vsct files, environment-defined constants
 - command groups, environment-defined
 ms.assetid: 86b3af13-7163-48c6-986b-7beeedbc26cc
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e46832803008ea65d0f7ec4f2723a615ba496b94
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5b88bbab9c92cdd8627521eaa58284fd33964b7e
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840077"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105085946"
 ---
 # <a name="ide-defined-commands-menus-and-groups"></a>Příkazy, nabídky a skupiny definované integrovaným vývojovým prostředím
 Mnoho nabídek, příkazů a skupin příkazů je již definováno pro použití [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozhraním IDE. Tyto příkazy jsou k dispozici také pro vaše použití při rozšiřování [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - localize visual studio
 - localize vsct
 ms.assetid: b04ee0f6-82ea-47e6-853a-72382267d6da
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: af86f64935d4e99d4c1245669505fcef8ce7ec1f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 141fb0d8ba6746e7d299984461fb3ca739d931d4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893617"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105073258"
 ---
 # <a name="localize-menu-commands"></a>Příkazy nabídky lokalizace
 
@@ -112,9 +112,9 @@ Textové prostředky jiné než názvy příkazů jsou definovány v souborech p
 
 ## <a name="incorporate-localized-resources-into-the-project"></a>Zahrnutí lokalizovaných prostředků do projektu
 
-Je nutné upravit soubor *AssemblyInfo.cs* a soubor projektu pro zahrnutí lokalizovaných prostředků.
+Chcete-li zahrnout lokalizované prostředky, je nutné upravit soubor *AssemblyInfo. cs* a soubor projektu.
 
-1. V uzlu **vlastnosti** v **Průzkumník řešení** otevřete v editoru *AssemblyInfo.cs* nebo *AssemblyInfo. vb* .
+1. V uzlu **vlastnosti** v **Průzkumník řešení** otevřete soubor *AssemblyInfo. cs* nebo *AssemblyInfo. vb* v editoru.
 
 2. Přidejte následující položku.
 
