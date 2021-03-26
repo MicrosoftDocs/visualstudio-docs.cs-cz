@@ -8,17 +8,17 @@ helpviewer_keywords:
 - IVsLanguageInfo interface
 - language services, objects
 ms.assetid: 03b2d507-f463-417e-bc22-bdac68eeda52
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f6010ffdf6873073eded63c75475115391a3964
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 77647daeae2cf6e3bc76f9b0f2a58608b5bb28a4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839596"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074508"
 ---
 # <a name="legacy-language-service-interfaces"></a>Rozhraní služby starší verze jazyka
 V případě libovolného konkrétního programovacího jazyka může být v jednu chvíli dostupná jenom jedna instance jazykové služby. Jedna služba jazyka ale může obsluhovat více než jeden editor.

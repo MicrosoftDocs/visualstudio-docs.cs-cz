@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - language services [managed package framework], creating
 ms.assetid: 6a5dd2c2-261b-4efd-a3f4-8fb90b73dc82
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61f4dfd8068cc44fca97eb5e07ddbf62b21ee1f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ded5624aed40ac2e878c44fd8dabc7d35c4d1ac8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899911"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074272"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>Návod: Vytvoření služby starší verze jazyka
 Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykové služby v nástroji [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] je jednoduché. Pro hostování jazykové služby, samotné služby jazyka a analyzátoru pro váš jazyk potřebujete VSPackage.
@@ -68,11 +68,11 @@ Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykov
 
 4. Ujistěte se, že je v seznamu šablon vybrána možnost **Třída** .
 
-5. Jako název souboru třídy zadejte **MyLanguageService.cs** a klikněte na **Přidat**.
+5. Jako název souboru třídy zadejte **MyLanguageService. cs** a klikněte na **Přidat**.
 
      Můžete použít libovolný požadovaný název. Tyto postupy popsané tady předpokládají `MyLanguageService` jako název.
 
-6. Do souboru MyLanguageService.cs přidejte následující `using` direktivy.
+6. Do souboru MyLanguageService. cs přidejte následující `using` direktivy.
 
      [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_1.cs)]
      [!code-vb[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_1.vb)]
@@ -88,7 +88,7 @@ Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykov
 
 ### <a name="register-the-language-service"></a>Registrace jazykové služby
 
-1. Otevřete soubor MyLanguagePackagePackage.cs a přidejte následující `using` direktivy:
+1. Otevřete soubor MyLanguagePackagePackage. cs a přidejte následující `using` direktivy:
 
      [!code-vb[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_3.vb)]
      [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_3.cs)]

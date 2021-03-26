@@ -9,17 +9,17 @@ helpviewer_keywords:
 - selection
 - hierarchies
 ms.assetid: cad0a859-7a84-4ce5-b0a9-f7f64e5f8ebb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98f3dcfa73387f2b90ed829df198d3e9f0ccb2ed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 927d55a5217699222aadcbcb7a3526f22e010e8f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880047"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074727"
 ---
 # <a name="hierarchies-and-selection"></a>Hierarchie a výběr
 Při vlastním nastavení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] byste měli pochopit, jak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zpracovává hierarchie, jako jsou projekty a jak používá kontext výběru, k určení toho, co se uživateli zobrazí. Tato část popisuje koncepty [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hierarchií a výběru.

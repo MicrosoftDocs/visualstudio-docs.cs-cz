@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - project types, conditions for creating
 ms.assetid: 26adc860-ee4a-4f5c-95e1-e41b207dd7e6
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 161be2b157c079312cdbbee0b6913c92c3c61578
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 427c35a03f9d0cb11667ca9eaf88f144d018f620
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869515"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074298"
 ---
 # <a name="when-to-create-project-types"></a>Kdy vytvořit typy projektů
 Vytvořením nového typu projektu získáte základ pro přizpůsobení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pro uživatele. Vytvoření nového typu projektu však není vyžadováno pro všechna [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] přizpůsobení. Následující pokyny vám pomohou určit, zda je pro váš scénář požadován nový typ projektu.

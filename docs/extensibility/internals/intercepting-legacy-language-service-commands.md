@@ -8,17 +8,17 @@ helpviewer_keywords:
 - commands, intercepting language service
 - language services, intercepting commands
 ms.assetid: eea69f03-349c-44bb-bd4f-4925c0dc3e55
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6a759f0cef7329d14d7d1472d38f662c0206448
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8d7af9ff4a8f04382cff4999b8c57549f3da3db7
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839791"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074675"
 ---
 # <a name="intercepting-legacy-language-service-commands"></a>Příkazy zachytávání služby starší verze jazyka
 Pomocí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] můžete mít službu jazyka k zachycení příkazů, které by jinak zpracovávala zobrazení textu. To je užitečné pro chování specifické pro konkrétní jazyk, které nespravuje textové zobrazení. Tyto příkazy můžete zachytit přidáním jednoho nebo více filtrů příkazů do textového zobrazení z vaší jazykové služby.

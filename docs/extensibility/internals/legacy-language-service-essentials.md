@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Visual Studio, integrating programming languages
 - programming languages, integrating into Visual Studio
 ms.assetid: c15e0ccb-e7c5-4dbb-affb-fe3d3244debe
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a96b17fbb4caca92124732593da8982f07349155
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa3fc358e7557360f02a80f108bcbec74ae48e5f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839687"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074558"
 ---
 # <a name="legacy-language-service-essentials"></a>Základy služby starší verze jazyka
 Je nutné zadat jazykovou službu pro integraci programovacího jazyka do sady Visual Studio. V tomto tématu najdete vysvětlení funkcí dostupných ve starších jazykových službách.

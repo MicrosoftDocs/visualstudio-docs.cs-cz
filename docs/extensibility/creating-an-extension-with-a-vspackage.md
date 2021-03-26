@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 ms.assetid: c0cc5e08-4897-44f2-8309-e3478f1f999e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b847fad9752c6a2448c0fdc571815ea1823e2d9c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a6c93d90771eeffbfe28ae91781403019743afa9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944892"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089144"
 ---
 # <a name="create-an-extension-with-a-vspackage"></a>Vytvoření rozšíření pomocí VSPackage
 
@@ -29,7 +29,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. Vytvořte projekt VSIX s názvem **FirstPackage**. Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Po otevření projektu přidejte šablonu položky balíčku sady Visual Studio s názvem **FirstPackage**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejít na rozšiřitelnost **Visual C#**  >   a vybrat **balíček sady Visual Studio**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstPackage.cs*.
+2. Po otevření projektu přidejte šablonu položky balíčku sady Visual Studio s názvem **FirstPackage**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejít na rozšiřitelnost **Visual C#**  >   a vybrat **balíček sady Visual Studio**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstPackage. cs*.
 
 3. Sestavte projekt a spusťte ladění.
 
@@ -41,7 +41,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 V tomto okamžiku se rozšíření nenačte, protože není nic, co způsobuje načtení. Při interakci s uživatelským rozhraním (kliknutím na příkaz nabídky, otevřením okna nástroje) nebo určením, že VSPackage by mělo být načteno do konkrétního kontextu uživatelského rozhraní, lze obecně načíst rozšíření. Další informace o načítání VSPackage a kontextů uživatelského rozhraní najdete v tématu [načítání VSPackage](../extensibility/loading-vspackages.md). Pro tento postup vám ukážeme, jak po otevření řešení načíst VSPackage.
 
-1. Otevřete soubor *FirstPackage.cs* . Vyhledejte deklaraci `FirstPackage` třídy. Nahraďte stávající atributy následujícími atributy:
+1. Otevřete soubor *FirstPackage. cs* . Vyhledejte deklaraci `FirstPackage` třídy. Nahraďte stávající atributy následujícími atributy:
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]

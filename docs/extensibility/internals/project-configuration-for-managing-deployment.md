@@ -8,17 +8,17 @@ helpviewer_keywords:
 - project configurations, managing deployment
 - projects [Visual Studio SDK], configuration for managing deployment
 ms.assetid: bd5940d9-d94d-4944-beda-4ec1ab2bbde5
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ebdc1dc529e73e17ba55a0b4766f11dced4addcb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 589403f126a4fd614911c1deb99e9acd32d1ec7d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893643"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074415"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>Konfigurace projektu pro správu nasazení
 Nasazení je činnost fyzického přesunu výstupních položek z procesu sestavení do očekávaného umístění pro ladění a instalaci. Například webová aplikace může být postavená na místním počítači a pak umístěna na server.

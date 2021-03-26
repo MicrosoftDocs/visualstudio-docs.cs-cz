@@ -8,17 +8,17 @@ helpviewer_keywords:
 - projects [Visual Studio SDK], configuration for building
 - project configurations, building
 ms.assetid: 2c83615d-fa4d-4b9f-b315-7a69b3000da0
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b8891d5e68623312049e60730b0239bf7c06e83c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b817607f765626a6b63693e681306309512fdb7d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954472"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074441"
 ---
 # <a name="project-configuration-for-building"></a>Konfigurace projektu pro sestavení
 Seznam konfigurací řešení pro dané řešení je spravován v dialogovém okně konfigurace řešení.

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - nested projects, wizard support
 - New Project wizard
 ms.assetid: 1b496acc-b326-4cdb-bb48-e3b5c6f12e05
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f2cd84379ead1cd45296ae370aab215a37cf4b50
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7f52b42462fdc4b7878f97c01bdc65322f32eb5b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935868"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074142"
 ---
 # <a name="wizard-support-for-nested-projects"></a>Podpora průvodce pro vnořené projekty
 Rozhraní IDE spustí dva průvodce, které může nadřazený projekt pro vnořené projekty implementovat: průvodce **vytvořením nového projektu** a průvodce **přidáním položky** .

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual Studio integration SDK roadmap
 - integration roadmap, Visual Studio SDK
 ms.assetid: 9118eaa4-0453-4dc5-9e16-c7062d254869
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2d67c3d9f998c8dd5192363cf8ff8fae2ce4b57
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e11ee862f43ead3605d8e07dc159e18da13413b8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839856"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074701"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>Práce se sadou Visual Studio SDK
 
@@ -64,7 +64,7 @@ V této části najdete podrobné informace o rozšířeních sady Visual Studio
 
  Některá okna nástrojů jsou ukotvena společně v jednom podokně, které zobrazuje okno Průzkumník řešení nástrojů a skrývá ostatní okna nástrojů, ale zpřístupňuje je kliknutím na karty. Obrázek ukazuje další okna nástrojů, okno **Seznam chyb** a **výstup** , které je ukotveno společně v jednom podokně.
 
- Zobrazuje se také hlavní podokno dokumentu, které zobrazuje několik oken editoru. Přestože má systém Windows obvykle pouze jednu instanci (například můžete otevřít pouze jeden **Průzkumník řešení**), okna Editor mohou mít několik instancí, z nichž každý je použit k úpravě samostatného dokumentu, ale všechny jsou ukotveny ve stejném podokně. Obrázek zobrazuje podokno dokumentu, které obsahuje dva okna editoru, jedno okno návrháře formuláře. Všechna okna v podokně dokumentu jsou k dispozici kliknutím na karty, ale okno editoru, které obsahuje soubor EditorPane.cs, je viditelné a aktivní.
+ Zobrazuje se také hlavní podokno dokumentu, které zobrazuje několik oken editoru. Přestože má systém Windows obvykle pouze jednu instanci (například můžete otevřít pouze jeden **Průzkumník řešení**), okna Editor mohou mít několik instancí, z nichž každý je použit k úpravě samostatného dokumentu, ale všechny jsou ukotveny ve stejném podokně. Obrázek zobrazuje podokno dokumentu, které obsahuje dva okna editoru, jedno okno návrháře formuláře. Všechna okna v podokně dokumentu jsou k dispozici kliknutím na karty, ale okno editoru, které obsahuje soubor titulek. cs, je viditelné a aktivní.
 
  Když rozšíříte aplikaci Visual Studio, můžete vytvořit okna nástrojů, která uživatelům sady Visual Studio umožní pracovat s vaším rozšířením. Můžete také vytvořit vlastní editory, které umožní uživatelům aplikace Visual Studio upravovat dokumenty. Vzhledem k tomu, že se vaše okna nástrojů a editory budou integrovat do sady Visual Studio, nemusíte je naprogramovat, aby je bylo možné správně ukotvit nebo zobrazit na kartě. Pokud jsou správně registrovány v aplikaci Visual Studio, budou automaticky mít typické funkce oken nástrojů a oken dokumentů v aplikaci Visual Studio. Další informace najdete v tématu [rozšíření a přizpůsobení oken nástrojů](../../extensibility/extending-and-customizing-tool-windows.md).
 

@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 ms.assetid: 585b0a3a-f85b-4f92-81bb-9ca499bb8a89
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b03b7a4941609462fca27bebf67d8ad2a8f7044
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f956aa520bca79a84fe203093c225cfeb8389ba1
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944918"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089196"
 ---
 # <a name="create-an-extension-with-a-tool-window"></a>Vytvoření rozšíření s oknem nástrojů
 
@@ -29,7 +29,7 @@ V tomto postupu se naučíte používat šablonu projektu VSIX a šablonu polož
 
 1. Vytvořte projekt VSIX s názvem **FirstWindow**. Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Po otevření projektu přidejte šablonu položky okna nástroje s názvem **MyWindow**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >   a vybrat **vlastní panel nástrojů**. V poli **název** v dolní části okna změňte název souboru okna nástroje na *MyWindow.cs*.
+2. Po otevření projektu přidejte šablonu položky okna nástroje s názvem **MyWindow**. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >   a vybrat **vlastní panel nástrojů**. V poli **název** v dolní části okna změňte název souboru okna nástroje na *MyWindow. cs*.
 
 3. Sestavte projekt a spusťte ladění.
 

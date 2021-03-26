@@ -8,17 +8,17 @@ helpviewer_keywords:
 - language services
 - language services, native code
 ms.assetid: 8b73b341-a33a-4ab5-9390-178c9e563d2d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 823d46453ac6ad4a1a5a42c1f7d18a079b39d12d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 111e72714f4afd56b7b53e9cc48329ba6ce68162
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905857"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074792"
 ---
 # <a name="checklist-create-a-legacy-language-service"></a>Kontrolní seznam: vytvoření služby starší verze jazyka
 Následující kontrolní seznam shrnuje základní kroky, které je třeba provést, aby bylo možné vytvořit službu jazyka pro [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] základní editor. Chcete-li integrovat službu jazyka do nástroje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , je nutné vytvořit vyhodnocovací filtr výrazů ladění. Další informace naleznete v tématu [Write a vyhodnocovací filtr výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) v [rozšíření ladicího programu sady Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md).
