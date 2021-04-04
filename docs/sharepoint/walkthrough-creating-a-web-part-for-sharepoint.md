@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0f2d14bfd069fcf5064c9d8643393e28e52570be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e018085bd9900a9ee04f838b7c802afd2acc4fe
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918631"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217707"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>Návod: Vytvoření webové části pro službu SharePoint
 
@@ -82,14 +82,14 @@ Přidejte do projektu položku **webové části** . Položka **webové části*
 
 Můžete určit ovládací prvky, které se mají zobrazit ve webové části, jejich přidáním do kolekce Controls třídy webové části.
 
-1. V **Průzkumník řešení** otevřete *WebPart1. vb* (v Visual Basic) nebo *WebPart1.cs* (v jazyce C#).
+1. V **Průzkumník řešení** otevřete *WebPart1. vb* (v Visual Basic) nebo *WebPart1. cs* (v jazyce C#).
 
      V editoru kódu se otevře soubor kódu webové části.
 
 2. Přidejte následující direktivy do horní části souboru kódu webové části.
 
-     [!code-csharp[SP_WebPart#1](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#1)]
-     [!code-vb[SP_WebPart#1](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet1":::
 
 3. Do třídy `WebPart1` přidejte následující kód. Tento kód deklaruje následující pole:
 
@@ -101,13 +101,13 @@ Můžete určit ovládací prvky, které se mají zobrazit ve webové části, j
 
    - Řetězec, který obsahuje cestu k datovému souboru zaměstnanců.
 
-     [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)]
-     [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet2":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet2":::
 
 4. Do třídy `WebPart1` přidejte následující kód. Tento kód přidá vlastní vlastnost s názvem `DataFilePath` do webové části. Vlastní vlastnost je vlastnost, kterou uživatel může nastavit v SharePointu. Tato vlastnost načte a nastaví umístění datového souboru XML, který se používá k naplnění datové mřížky.
 
-     [!code-csharp[SP_WebPart#3](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#3)]
-     [!code-vb[SP_WebPart#3](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#3)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet3":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet3":::
 
 5. Nahraďte metodu `CreateChildControls` následujícím kódem. Tento kód provádí následující úlohy:
 
@@ -115,8 +115,8 @@ Můžete určit ovládací prvky, které se mají zobrazit ve webové části, j
 
    - Váže datovou mřížku k souboru XML, který obsahuje data o zaměstnancích.
 
-     [!code-csharp[SP_WebPart#4](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#4)]
-     [!code-vb[SP_WebPart#4](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#4)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet4":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet4":::
 
 6. Do třídy přidejte následující metodu `WebPart1` . Tento kód provádí následující úlohy:
 
@@ -124,8 +124,8 @@ Můžete určit ovládací prvky, které se mají zobrazit ve webové části, j
 
    - Zpracovává událost, která je vyvolána, když uživatel zvolí příkaz v nabídce příkazů. Tento kód filtruje seznam zaměstnanců, které se zobrazí v datové mřížce.
 
-     [!code-csharp[SP_WebPart#5](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#5)]
-     [!code-vb[SP_WebPart#5](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#5)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet5":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet5":::
 
 ## <a name="test-the-web-part"></a>Testování webové části
 

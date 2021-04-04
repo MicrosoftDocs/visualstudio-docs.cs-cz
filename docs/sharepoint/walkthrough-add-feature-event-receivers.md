@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c9d50de6630a813a9c8c7a075af6f921608fcd93
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 305220a8206cc84e55ed7319b5ce6ce1c8058b3c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851527"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217031"
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>Návod: Přidání přijímačů událostí funkce
 Přijímače událostí funkcí jsou metody, které se spustí, když se v SharePointu vyskytne jedna z následujících událostí souvisejících s funkcemi:
@@ -85,16 +85,16 @@ Tento návod ukazuje, jak přidat přijímač událostí do funkce v projektu sl
 
 2. V uzlu **funkce** otevřete místní nabídku pro **Feature1** a pak zvolte **Přidat přijímač událostí** a přidejte do této funkce přijímač událostí.
 
-     Tím se do Feature1 přidá soubor kódu. V tomto případě se jmenuje buď *Feature1.EventReceiver.cs* nebo *Feature1. EventReceiver. vb*, v závislosti na vývojovém jazyku vašeho projektu.
+     Tím se do Feature1 přidá soubor kódu. V tomto případě se jmenuje buď *Feature1. EventReceiver. cs* , nebo *Feature1. EventReceiver. vb*, v závislosti na vývojovém jazyku vašeho projektu.
 
 3. Pokud je projekt napsán v [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] , přidejte do horní části přijímače událostí následující kód, pokud tam ještě není:
 
-     [!code-csharp[SP_FeatureEvt#1](../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs" id="Snippet1":::
 
 4. Třída přijímač událostí obsahuje několik metod s komentářem, které fungují jako události. Metodu **FeatureDeactivating** nahraďte následujícím:
 
-     [!code-vb[SP_FeatureEvt#2](../sharepoint/codesnippet/VisualBasic/featureevt2vb/features/feature1/feature1.eventreceiver.vb#2)]
-     [!code-csharp[SP_FeatureEvt#2](../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs#2)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/featureevt2vb/features/feature1/feature1.eventreceiver.vb" id="Snippet2":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs" id="Snippet2":::
 
 ## <a name="test-the-feature-event-receiver"></a>Test přijímače událostí funkcí
  Dále dezaktivujte funkci pro otestování, zda metoda **FeatureDeactivating** vypisuje oznámení do seznamu oznámení služby SharePoint.

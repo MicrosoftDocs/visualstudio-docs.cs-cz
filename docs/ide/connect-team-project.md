@@ -2,17 +2,17 @@
 title: Připojení k projektům v Team Exploreru
 description: Naučte se používat Team Explorer v aplikaci Visual Studio pro práci se členy týmu pro vývoj a správu projektů.
 ms.custom: SEO-VS-2020
-ms.date: 11/17/2020
+ms.date: 03/31/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 58603b72128af1c6dd9caae93f92c435f0851ada
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 78a71911bb4334e04a085d91ff51238d34981beb
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672992"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216602"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Připojení k projektům v Team Exploreru
 
@@ -24,23 +24,87 @@ Použijte okno **Team Explorer** Tool k koordinaci vašeho kódu s ostatními č
 
 ::: moniker range="vs-2019"
 
-Můžete použít okno **Team Explorer** nástrojů k koordinaci vašeho kódu s ostatními členy týmu pro vývoj projektu a ke správě práce, která je přiřazena vám, vašemu týmu nebo vašim projektům.
+Team Explorer připojuje sadu Visual Studio k úložištím verzí Team Foundation (TFVC) a k projektům hostovaným v [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) nebo v místní [Azure DevOps Server](/azure/devops/user-guide/about-azure-devops-services-tfs?view=azure-devops&preserve-view=true) (dříve označované jako TFS). Můžete spravovat zdrojový kód, pracovní položky a sestavení.
 
 > [!IMPORTANT]
-> S nejnovější verzí sady Visual Studio 2019 [verze 16,8](/visualstudio/releases/2019/release-notes/)je nyní ve výchozím nastavení standardně nastaveno nové prostředí pro řízení verzí Git. Pokud ale dáváte přednost i nadále používat Team Explorer, přejděte do části **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** a potom zaškrtněte políčko **nové uživatelské prostředí Git** . Další informace najdete na stránce věnované [prostředí Git](git-with-visual-studio.md) na stránce sady Visual Studio.
+> S nejnovější verzí sady Visual Studio 2019 [**verze 16,8**](/visualstudio/releases/2019/release-notes/)je nyní ve výchozím nastavení standardně nastaveno nové prostředí pro řízení verzí Git. Pokud se chcete dozvědět víc o tom, jak porovnává Team Explorer, podívejte se na [**Souběžné porovnání Gitu a Team Explorer**](git-team-explorer-feature-comparison.md) stránky.
+>
+> Pokud ale dáváte přednost i nadále používat Team Explorer, přejděte do části **nástroje** > **Možnosti** > **prostředí** > **verze Preview** a potom zaškrtněte políčko **nové uživatelské prostředí Git** .
 
-**Team Explorer** připojuje sadu Visual Studio k úložištím Git a GitHubu, úložištím správy verzí Team Foundation (TFVC) a projektům hostovaným v [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) nebo v místní [Azure DevOps Server](/azure/devops/index-all) (dříve označované jako TFS). Můžete spravovat zdrojový kód, pracovní položky a sestavení.
+Způsob použití Team Explorer pro připojení k projektu závisí na verzi sady Visual Studio 2019, kterou používáte.
+
+## <a name="in-version-168-and-later"></a>Ve verzi 16,8 a novější
+
+1. Otevřete Visual Studio 2019.
+
+1. V okně Start vyberte **klonovat úložiště**.
+
+   ![Snímek obrazovky s dialogovým oknem klonování úložiště v aplikaci Visual Studio 2019 verze 16,8 a novější pro Azure DevOps](../ide/media/vs-2019/clone-repository.png)
+
+1. V části **Procházet úložiště** vyberte **Azure DevOps**.
+
+    ![Snímek obrazovky s oddílem procházet úložiště v dialogovém okně připojit k projektu ve Visual Studiu 2019 verze 16,8 a novější](../ide/media/vs-2019/browse-repository-azure-devops.png)
+
+1. Pokud se zobrazí okno pro přihlášení, přihlaste se ke svému účtu.
+
+1. V dialogovém okně **připojit k projektu** zvolte úložiště, ke kterému se chcete připojit, a pak vyberte **klonovat**.
+
+      ![Snímek obrazovky dialogového okna připojit k projektu, které je vygenerováno ze sady Visual Studio 2019 verze 16,8 a novější](../ide/media/vs-2019/connect-project-azure-devops.png)
+
+      > [!TIP]
+      > Pokud nevidíte předem vyplněný seznam úložišť, ke kterým se chcete připojit, vyberte **přidat Azure DevOps Server** a zadejte adresu URL serveru. (Případně se může zobrazit výzva "nebyly nalezeny žádné servery", která obsahuje odkazy na přidání existující Azure DevOps Server nebo vytvoření účtu Azure DevOps.)
+
+   V dalším kroku se otevře aplikace Visual Studio **Průzkumník řešení** , která zobrazuje složky a soubory.
+
+1. Vyberte kartu **Team Explorer** pro zobrazení akcí Azure DevOps.
+
+      ![Snímek obrazovky s dialogem ' Team Explorer ', který je vygenerován ze sady Visual Studio 2019 verze 16,8 a novější](../ide/media/vs-2019/team-explorer-azure-devops.png)
+
+## <a name="in-version-167-and-earlier"></a>Ve verzi 16,7 a starší
+
+1. Otevřete Visual Studio 2019.
+
+1. V okně Start vyberte **klonovat nebo rezervovat kód**.
+
+   ![Snímek obrazovky okna vytvořit nový projekt v aplikaci Visual Studio 2019 verze 16,7 a starší](../get-started/media/vs-2019/clone-checkout-code-dark.png)
+
+1. V části **Procházet úložiště** vyberte **Azure DevOps**.
+
+   ![Snímek obrazovky okna klonovat nebo rezervovat kód s částí procházet úložiště se seznamem Azure DevOps ve Visual Studiu 2019 verze 16,7 a starší](../get-started/media/vs-2019/clone-checkout-code-git-repo-dark.png)
+
+   Pokud se zobrazí okno pro přihlášení, přihlaste se ke svému účtu.
+
+1. V dialogovém okně **připojit k projektu** zvolte úložiště, ke kterému se chcete připojit, a pak vyberte **klonovat**.
+
+      ![Snímek obrazovky dialogového okna připojit k projektu, které je vygenerováno ze sady Visual Studio 2019 verze 16,7 a starší](../get-started/media/open-proj-azure-devops-connect-cloud-clone.png)
+
+    > [!NOTE]
+    > Co vidíte v seznamu, závisí na úložištích Azure DevOps, ke kterým máte přístup.
+
+   Otevře se aplikace Visual Studio **Team Explorer** a po dokončení klonu se zobrazí oznámení.
+
+     ![Snímek obrazovky okna Team Explorer v aplikaci Visual Studio 2019 verze 16,7 a starší po dokončení klonu](../get-started/media/vs-2019/clone-complete-azure-devops.png)
+
+1. Chcete-li zobrazit složky a soubory, vyberte odkaz **Zobrazit zobrazení složky** .
+
+     ![Snímek obrazovky oddílu Solutions okna Team Explorer v aplikaci Visual Studio 2019 verze 16,7 a starší po dokončení klonu](../get-started/media/vs-2019/show-folder-view-azure-devops.png)
+
+     Visual Studio otevře **Průzkumník řešení**.
+
+1. Vyberte odkaz **řešení a složky** a vyhledejte soubor řešení (konkrétně soubor. sln), který chcete otevřít.
+
+      ![Snímek obrazovky s oznámením o řešeních a složkách od Team Explorer ve Visual Studiu 2019 verze 16,7 a starší](../get-started/media/open-proj-repo-solutions-folders.png)
+
+   Pokud v úložišti nemáte soubor řešení, zobrazí se zpráva "žádná řešení nalezena". Můžete však dvakrát kliknout na libovolný soubor v nabídce složka a otevřít ho v editoru kódu sady Visual Studio.
 
 ::: moniker-end
-
-![Team Explorer domovskou stránku v aplikaci Visual Studio](media/team-explorer/team-explorer.png "Team Explorer – Domovská stránka v aplikaci Visual Studio.")
 
 ::: moniker range="vs-2017"
 
+![Team Explorer domovskou stránku v aplikaci Visual Studio](media/team-explorer/team-explorer.png "Team Explorer – Domovská stránka v aplikaci Visual Studio.")
+
 > [!TIP]
 > Pokud otevřete Visual Studio a **Team Explorer** se nezobrazí, otevřete ho tak, že v řádku nabídek kliknete na **Zobrazit**  >  **Team Explorer** nebo stisknete **CTRL** + **&#92;**, **CTRL** + **M**.
-
-::: moniker-end
 
 ## <a name="connect-to-a-project-or-repository"></a>Připojení k projektu nebo úložišti
 
@@ -54,18 +118,19 @@ Připojení k projektu:
 
    ![Tlačítko Spravovat připojení v Team Explorer](media/team-explorer/manage-connections.png "Tlačítko Team Explorer-spravovat připojení v aplikaci Visual Studio.")
 
-1. Na stránce **připojit** vyberte možnost **Spravovat připojení**  >  **připojit k projektu**.
+1. Na stránce **připojit** vyberte možnost **Spravovat připojení** > **připojit k projektu**.
 
    ![Připojit se k projektu v Team Explorer](media/team-explorer/connect-project.png "Team Explorer – připojení k možnosti projektu v aplikaci Visual Studio.")
 
 > [!TIP]
-> Pokud chcete otevřít projekt z úložiště, přečtěte si téma [otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo.md). Pokud chcete vytvořit nový projekt nebo přidat uživatele do projektu, přečtěte si téma [Vytvoření projektu (Azure DevOps)](/azure/devops/organizations/projects/create-project) a [Přidání uživatelů do projektu nebo týmu (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).
+> Pokud chcete otevřít projekt z úložiště, přečtěte si téma [otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md). Pokud chcete vytvořit nový projekt nebo přidat uživatele do projektu, přečtěte si téma [Vytvoření projektu (Azure DevOps)](/azure/devops/organizations/projects/create-project) a [Přidání uživatelů do projektu nebo týmu (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také
 
 - [Porovnání Gitu a Team Explorer vedle sebe](git-team-explorer-feature-comparison.md)
 - [Nové prostředí Git v aplikaci Visual Studio](git-with-visual-studio.md)
-- [Kurz: otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo.md)
 - [Referenční dokumentace k Team Exploreru](reference/team-explorer-reference.md)
 - [Připojení k projektu (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)
 - [Řešení potíží s připojením k projektu](/azure/devops/user-guide/troubleshoot-connection?view=azure-devops&preserve-view=true)

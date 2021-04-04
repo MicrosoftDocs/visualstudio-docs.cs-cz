@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: dbf996a2d44f94e4571a332fa7a86d861d820d45
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0811b029bf7e4705bc0c3689eff73f38280c3b3d
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847710"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217681"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>Návod: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat
 
@@ -114,9 +114,9 @@ Projekt **modelu připojení obchodních dat** přidá do modelu výchozí entit
 
 3. V Návrháři otevřete místní nabídku pro **Entity1** a pak zvolte **Odstranit**.
 
-4. V **Průzkumník řešení** otevřete místní nabídku pro *Entity1. vb* (v Visual Basic) nebo *Entity1.cs* (v jazyce C#) a pak zvolte **Odstranit**.
+4. V **Průzkumník řešení** otevřete místní nabídku pro *Entity1. vb* (v Visual Basic) nebo *Entity1. cs* (v jazyce C#) a pak zvolte **Odstranit**.
 
-5. Otevřete místní nabídku pro *Entity1Service. vb* (v Visual Basic) nebo *Entity1Service.cs* (v jazyce C#) a pak zvolte **Odstranit**.
+5. Otevřete místní nabídku pro *Entity1Service. vb* (v Visual Basic) nebo *Entity1Service. cs* (v jazyce C#) a pak zvolte **Odstranit**.
 
 ## <a name="add-an-entity-to-the-model"></a>Přidání entity do modelu
 
@@ -126,7 +126,7 @@ Přidejte do modelu entitu. Do návrháře služby BDC můžete přidat entity z
 
 2. Na kartě **BusinessDataConnectivity** sady **nástrojů** přidejte **entitu** do návrháře služby BDC.
 
-     Nová entita se zobrazí v návrháři. Visual Studio přidá soubor s názvem *EntityService. vb* (v Visual Basic) nebo *EntityService.cs* (v jazyce C#) do projektu.
+     Nová entita se zobrazí v návrháři. Visual Studio přidá soubor s názvem *EntityService. vb* (v Visual Basic) nebo *EntityService. cs* (v jazyce C#) do projektu.
 
 3. Na panelu nabídek vyberte možnost **Zobrazit**  >    >  **okno** vlastností.
 
@@ -184,7 +184,7 @@ Přidejte konkrétní vyhledávací metodu k entitě kontakt pomocí okna **Podr
 
 10. Opakujte krok 6 a vytvořte popisovač typu pro každé z následujících polí.
 
-    |Název|Název typu|
+    |Name|Název typu|
     |----------|---------------|
     |FirstName|System. String|
     |LastName|System. String|
@@ -208,8 +208,8 @@ Přidejte konkrétní vyhledávací metodu k entitě kontakt pomocí okna **Podr
     > [!NOTE]
     > Hodnotu pole nahraďte `ServerName` názvem vašeho serveru.
 
-     [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
-     [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet3":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet3":::
 
 ## <a name="add-a-finder-method"></a>Přidání vyhledávací metody
 
@@ -236,8 +236,8 @@ Chcete-li povolit službě BDC zobrazení kontaktů v seznamu, je nutné přidat
      > [!NOTE]
      > Hodnotu pole nahraďte `ServerName` názvem vašeho serveru.
 
-     [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]
-     [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet2":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet2":::
 
 ## <a name="test-the-project"></a>Testování projektu
 

@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c70a3458a8f54cc4437e00517445917cf92f6aa1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b0692b676ec701b40edd12d1634ab9cdf419f85f
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901037"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217720"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>Návod: nasazení definice seznamu úkolů projektu
 
@@ -77,8 +77,8 @@ V seznamu úkolů můžete přidat přijímač událostí, který automaticky na
 
 6. Přidejte kód do `ItemAdded` metody v souboru kódu **ProjectTaskListEventReceiver** . Pokaždé, když se přidá nový úkol, do úkolu se přidá výchozí datum splatnosti a popis. Výchozí datum splatnosti je 1. července 2009.
 
-     [!code-vb[SPProjectTaskList#1](../sharepoint/codesnippet/VisualBasic/projecttasklist1/projecttasklisteventreceiver/projecttasklisteventreceiver.vb#1)]
-     [!code-csharp[SPProjectTaskList#1](../sharepoint/codesnippet/CSharp/projecttasklist/projecttasklisteventreceiver/projecttasklisteventreceiver.cs#1)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projecttasklist1/projecttasklisteventreceiver/projecttasklisteventreceiver.vb" id="Snippet1":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projecttasklist/projecttasklisteventreceiver/projecttasklisteventreceiver.cs" id="Snippet1":::
 
 ## <a name="customize-the-project-task-list-feature"></a>Přizpůsobení funkce seznamu úkolů projektu
 

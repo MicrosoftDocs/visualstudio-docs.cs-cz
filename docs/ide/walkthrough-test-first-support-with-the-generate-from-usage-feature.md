@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ea04a9c70f23c30a5f603fa9411780223fff563
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1a1f115dfff92b1c5e5979e62af257cde6a92360
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883048"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216589"
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>Návod: vývoj pro první test pomocí funkce generovat z použití
 
@@ -79,21 +79,21 @@ Funkci **Generovat z použití** lze použít s testovacími architekturami, kte
 
 5. Kliknutím na **generovat nový typ** otevřete dialogové okno **generovat typ** . Toto dialogové okno obsahuje možnosti, které zahrnují generování typu v jiném projektu.
 
-6. V seznamu **projekt** klikněte na **GFUDemo \_ VB** nebo **GFUDemo_CS** , abyste aplikaci Visual Studio pověřili přidání souboru do projektu knihovny tříd namísto testovacího projektu. Pokud ještě není vybraná, vyberte **vytvořit nový soubor** a pojmenujte ho *Automobile.cs* nebo *automobil. vb*.
+6. V seznamu **projekt** klikněte na **GFUDemo \_ VB** nebo **GFUDemo_CS** , abyste aplikaci Visual Studio pověřili přidání souboru do projektu knihovny tříd namísto testovacího projektu. Pokud ještě není vybraná, vyberte **vytvořit nový soubor** a pojmenujte ho *automobil. cs* nebo *automobil. vb*.
 
      ![Dialogové okno generovat nový typ](../ide/media/genotherdialog.png)
 
 7. Kliknutím na tlačítko **OK** zavřete dialogové okno a vytvořte nový soubor.
 
-8. V **Průzkumník řešení** vyhledejte v uzlu **GFUDemo_VB** nebo **GFUDemo_CS** projektu, abyste ověřili, že je zde nový soubor *automobil. vb* nebo *Automobile.cs* . V editoru kódu je fokus stále v `AutomobileTest.DefaultAutomobileIsInitializedCorrectly` , což vám umožní pokračovat v psaní testu s minimálním přerušením.
+8. V **Průzkumník řešení** vyhledejte v uzlu **GFUDemo_VB** nebo **GFUDemo_CS** projektu, abyste ověřili, že je zde nový soubor *automobil. vb* nebo *automobil. cs* . V editoru kódu je fokus stále v `AutomobileTest.DefaultAutomobileIsInitializedCorrectly` , což vám umožní pokračovat v psaní testu s minimálním přerušením.
 
 ### <a name="generate-a-property-stub"></a>Vygenerování provizorního kódu vlastnosti
 Předpokládat, že specifikace produktu uvádí, že `Automobile` Třída má dvě veřejné vlastnosti s názvem `Model` a `TopSpeed` . Tyto vlastnosti musí být inicializovány s výchozími hodnotami `"Not specified"` a `-1` výchozím konstruktorem. Následující test jednotek ověří, zda výchozí konstruktor nastaví vlastnosti na jejich správné výchozí hodnoty.
 
 1. Do testovací metody přidejte následující řádek kódu `DefaultAutomobileIsInitializedCorrectly` .
 
-     [!code-csharp[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]
-     [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/unittest1.cs" id="Snippet1":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb" id="Snippet1":::
 
 2. Vzhledem k tomu, že kód odkazuje na dvě nedefinované vlastnosti `Automobile` , zobrazí se vlnové podtržení v oblasti `Model` a `TopSpeed` . Najeďte myší `Model` a zvolte žárovku Chyba **rychlé akce** a pak zvolte **Generovat vlastnost ' automobil. model '**.
 
@@ -106,8 +106,8 @@ Nyní vytvoříme testovací metodu, která bude generovat zástupnou proceduru 
 
 1. Přidejte do třídy následující další metodu testu `AutomobileTest` .
 
-     [!code-csharp[VbTDDWalkthrough#2](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.cs)]
-     [!code-vb[VbTDDWalkthrough#2](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/intermediate.cs" id="Snippet2":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/intermediate.vb" id="Snippet2":::
 
 2. V červené vlnovce klikněte na žárovku Chyba **rychlých akcí** a pak klikněte na **vytvořit konstruktor v automobilu**.
 
@@ -120,8 +120,8 @@ Předpokládá, že specifikace, která je nová, `Automobile` může být vlož
 
 1. Do metody přidejte následující řádky `AutomobileWithModelNameCanStart` .
 
-     [!code-csharp[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]
-     [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/unittest1.cs" id="Snippet3":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb" id="Snippet3":::
 
 2. Klikněte na žárovku chyby **rychlých akcí** pro `myAuto.Start` volání metody a pak klikněte na **vygenerovat metodu ' automobil. Start '**.
 
@@ -145,13 +145,13 @@ Předpokládá, že specifikace, která je nová, `Automobile` může být vlož
 
 1. Do výchozího konstruktoru přidejte následující kód tak, aby `Model` `TopSpeed` `IsRunning` byly vlastnosti a všechny inicializovány na jejich správné výchozí hodnoty `"Not specified"` , `-1` a `False` (nebo `false` pro C#).
 
-     [!code-csharp[VbTDDWalkthrough#5](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.cs)]
-     [!code-vb[VbTDDWalkthrough#5](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/automobile.cs" id="Snippet5":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb" id="Snippet5":::
 
 2. Při `Start` volání metody by měl příznak nastavit na `IsRunning` hodnotu true, pouze pokud `Model` `TopSpeed` jsou vlastnosti nebo nastaveny na jinou hodnotu než výchozí hodnota. Odeberte `NotImplementedException` z těla metody a přidejte následující kód.
 
-     [!code-csharp[VbTDDWalkthrough#6](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.cs)]
-     [!code-vb[VbTDDWalkthrough#6](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/automobile.cs" id="Snippet6":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb" id="Snippet6":::
 
 ### <a name="run-the-tests-again"></a>Spustit testy znovu
 

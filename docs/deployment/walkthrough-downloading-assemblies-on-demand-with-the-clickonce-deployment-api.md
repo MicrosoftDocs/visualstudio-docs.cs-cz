@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a87bcd8b51bc393921d21d838943d5e1fe8f02a2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 316be1f0a8fa881f781d983cfe9ed663e5907749
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917342"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216901"
 ---
 # <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api"></a>Návod: stažení sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce
 Ve výchozím nastavení jsou všechna sestavení obsažená v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci stažena při prvním spuštění aplikace. Můžete ale mít části aplikace, které jsou používány malou sadou uživatelů. V tomto případě chcete stáhnout sestavení pouze při vytvoření některého z jeho typů. Následující návod ukazuje, jak označit určitá sestavení v aplikaci jako "volitelné" a jak je stáhnout pomocí tříd v <xref:System.Deployment.Application> oboru názvů, když to modul CLR (Common Language Runtime) požaduje.
@@ -56,10 +56,10 @@ Ve výchozím nastavení jsou všechna sestavení obsažená v [!INCLUDE[ndptecc
 
 5. Pomocí poznámkového bloku nebo jiného textového editoru Definujte třídu s názvem `DynamicClass` s jedinou vlastností s názvem `Message` .
 
-    [!code-vb[ClickOnceLibrary#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.vb)]
-    [!code-csharp[ClickOnceLibrary#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceLibrary/VB/Class1.vb" id="Snippet1":::
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceLibrary/CS/Class1.cs" id="Snippet1":::
 
-6. Uložte text jako soubor s názvem *ClickOnceLibrary.cs* nebo *ClickOnceLibrary. vb* v závislosti na jazyku, který používáte, do adresáře *ClickOnceOnDemand* .
+6. Uložte text jako soubor s názvem *ClickOnceLibrary. cs* nebo *ClickOnceLibrary. vb* v závislosti na jazyku, který používáte, do adresáře *ClickOnceOnDemand* .
 
 7. Zkompilujte soubor do sestavení.
 
@@ -79,14 +79,14 @@ Ve výchozím nastavení jsou všechna sestavení obsažená v [!INCLUDE[ndptecc
 
 9. Pomocí textového editoru vytvořte nový soubor a zadejte následující kód. Tento kód vytvoří model Windows Forms aplikaci, která stáhne sestavení ClickOnceLibrary v případě potřeby.
 
-     [!code-csharp[ClickOnceOnDemandCmdLine#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_2.cs)]
-     [!code-vb[ClickOnceOnDemandCmdLine#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_2.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceOnDemandCmdLine/CS/Form1.cs" id="Snippet1":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceOnDemandCmdLine/VB/Form1.vb" id="Snippet1":::
 
 10. V kódu vyhledejte volání <xref:System.Reflection.Assembly.LoadFile%2A> .
 
 11. Nastavte `PublicKeyToken` na hodnotu, kterou jste načetli dříve.
 
-12. Uložte soubor jako buď *Form1.cs* nebo *Form1. vb*.
+12. Uložte soubor jako *Form1. cs* nebo *Form1. vb*.
 
 13. Zkompilujte ho do spustitelného souboru pomocí následujícího příkazu.
 

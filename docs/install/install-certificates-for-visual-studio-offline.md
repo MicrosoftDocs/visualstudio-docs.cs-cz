@@ -1,7 +1,7 @@
 ---
 title: Instalace certifikátů pro instalaci offline
 description: Naučte se instalovat certifikáty pro instalaci sady Visual Studio v režimu offline.
-ms.date: 08/08/2019
+ms.date: 03/29/2021
 ms.custom: seodec18, SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 54ab09809b99c18977125a124bc53d50d3d6c90c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0d8441b0a4b8acba3f24f60d5ea8dc7030b79253
+ms.sourcegitcommit: 22789927ec8e877b7d2b67a555d6df97d84103e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941551"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105981287"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Instalace certifikátů vyžadovaných pro instalaci sady Visual Studio offline
 
@@ -36,7 +36,7 @@ Existují tři možnosti instalace nebo aktualizace certifikátů v prostředí 
 
 ::: moniker range="vs-2017"
 
-Při vytváření rozložení sítě jsou potřebné certifikáty staženy do složky certifikáty. Certifikáty pak můžete ručně nainstalovat tak, že dvakrát kliknete na jednotlivé soubory certifikátů a potom kliknete na Průvodce správcem certifikátů. Pokud se zobrazí výzva k zadání hesla, ponechte prázdné.
+Když vytvoříte [rozložení sítě](../install/create-a-network-installation-of-visual-studio.md) nebo [místní mezipaměť offline](../install/create-an-offline-installation-of-visual-studio.md), stáhnou se nezbytné certifikáty do složky certifikáty. Certifikáty pak můžete ručně nainstalovat tak, že dvakrát kliknete na jednotlivé soubory certifikátů a potom kliknete na Průvodce správcem certifikátů. Pokud se zobrazí výzva k zadání hesla, ponechte prázdné.
 
 **Aktualizace**: pro Visual Studio 2017 verze 15,8 Preview 2 nebo novější můžete certifikáty nainstalovat ručně tak, že kliknete pravým tlačítkem na jednotlivé soubory certifikátů, vyberete nainstalovat certifikát a potom kliknete na Průvodce správcem certifikátů.
 
@@ -44,7 +44,7 @@ Při vytváření rozložení sítě jsou potřebné certifikáty staženy do sl
 
 ::: moniker range="vs-2019"
 
-Při vytváření rozložení sítě jsou potřebné certifikáty staženy do složky certifikáty. Certifikáty můžete nainstalovat ručně tak, že kliknete pravým tlačítkem na jednotlivé soubory certifikátů, vyberete nainstalovat certifikát a pak kliknete na Průvodce správcem certifikátů. Pokud se zobrazí výzva k zadání hesla, ponechte prázdné.
+Když vytvoříte [rozložení sítě](../install/create-a-network-installation-of-visual-studio.md) nebo [místní mezipaměť offline](../install/create-an-offline-installation-of-visual-studio.md), stáhnou se nezbytné certifikáty do složky certifikáty. Certifikáty můžete nainstalovat ručně tak, že kliknete pravým tlačítkem na jednotlivé soubory certifikátů, vyberete nainstalovat certifikát a pak kliknete na Průvodce správcem certifikátů. Pokud se zobrazí výzva k zadání hesla, ponechte prázdné.
 
 ::: moniker-end
 
@@ -56,34 +56,16 @@ Pro podniky s offline počítači, které nemají nejnovější kořenové certi
 
 Pokud provádíte skriptování nasazení sady Visual Studio v prostředí offline na klientských pracovních stanicích, měli byste postupovat podle následujících kroků:
 
-::: moniker range="vs-2017"
-
-1. Zkopírujte [Nástroj Certificate Manager](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool) (certmgr.exe) do sdílené složky instalace (například \\ server\share\vs2017). Certmgr.exe není součástí samotného systému Windows, ale je k dispozici jako součást [Windows SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk).
+1. Zkopírujte [Nástroj Certificate Manager](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool) (certmgr.exe) do umístění pro instalaci rozložení sítě nebo do místní mezipaměti. Certmgr.exe není součástí samotného systému Windows, ale je k dispozici jako součást [Windows SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk).
 
 2. Vytvořte dávkový soubor s následujícími příkazy:
-
-   ```cmd
-   certmgr.exe -add -c certificates\manifestSignCertificates.p12 -n "Microsoft Code Signing PCA 2011" -s -r LocalMachine CA
-
-   certmgr.exe -add -c certificates\manifestSignCertificates.p12 -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
-
-   certmgr.exe -add -c certificates\manifestCounterSignCertificates.p12 -n "Microsoft Time-Stamp PCA 2010" -s -r LocalMachine CA
-
-   certmgr.exe -add -c certificates\manifestCounterSignCertificates.p12 -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
-
-   certmgr.exe -add -c certificates\vs_installer_opc.SignCertificates.p12 -n "Microsoft Code Signing PCA" -s -r LocalMachine CA
-
-   certmgr.exe -add -c certificates\vs_installer_opc.SignCertificates.p12 -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
-   ```
-
-   **Aktualizace**: pro Visual Studio 2017 verze 15,8 Preview 2 nebo novější vytvořte dávkový soubor pomocí následujících příkazů:
 
    ```cmd
    certmgr.exe -add [layout path]\certificates\manifestRootCertificate.cer -n "Microsoft Root Certificate Authority 2011" -s -r LocalMachine root
 
    certmgr.exe -add [layout path]\certificates\manifestCounterSignRootCertificate.cer -n "Microsoft Root Certificate Authority 2010" -s -r LocalMachine root
 
-   certmgr.exe -add [layout path]\certificates\vs_installer_opc.RootCertificate.cer -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
+   certmgr.exe -add [layout path]\certificates\vs_installer_opc.RootCertificate.cer -n "Microsoft Root Certificate Authority 2010" -s -r LocalMachine root
    ```
    
    Případně můžete vytvořit dávkový soubor, který používá certutil.exe, který je dodáván se systémem Windows, s následujícími příkazy:
@@ -97,78 +79,15 @@ Pokud provádíte skriptování nasazení sady Visual Studio v prostředí offli
    ```
 
 3. Nasaďte dávkový soubor do klienta. Tento příkaz by měl být spuštěný z procesu se zvýšenými oprávněními.
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
-1. Zkopírujte [Nástroj Certificate Manager](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool) (certmgr.exe) do sdílené složky instalace (například \\ server\share\vs2019). Certmgr.exe není součástí samotného systému Windows, ale je k dispozici jako součást [Windows SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk).
-
-2. Vytvořte dávkový soubor s následujícími příkazy:
-
-   ```cmd
-   certmgr.exe -add [layout path]\certificates\manifestRootCertificate.cer -n "Microsoft Root Certificate Authority 2011" -s -r LocalMachine root
-
-   certmgr.exe -add [layout path]\certificates\manifestCounterSignRootCertificate.cer -n "Microsoft Root Certificate Authority 2010" -s -r LocalMachine root
-
-   certmgr.exe -add [layout path]\certificates\vs_installer_opc.RootCertificate.cer -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
-   ```
-   
-   Případně můžete vytvořit dávkový soubor, který používá certutil.exe, který je dodáván se systémem Windows, s následujícími příkazy:
-   
-      ```cmd
-   certutil.exe -addstore -f "Root" "[layout path]\certificates\manifestRootCertificate.cer"
-
-   certutil.exe -addstore -f "Root" "[layout path]\certificates\manifestCounterSignRootCertificate.cer"
-
-   certutil.exe -addstore -f "Root" "[layout path]\certificates\vs_installer_opc.RootCertificate.cer"
-   ```
-
-3. Nasaďte dávkový soubor do klienta. Tento příkaz by měl být spuštěný z procesu se zvýšenými oprávněními.
-
-::: moniker-end
 
 ## <a name="what-are-the-certificates-files-in-the-certificates-folder"></a>Jaké jsou soubory certifikátů ve složce certifikáty?
 
-::: moniker range="vs-2017"
-
-Tři. Soubory P12 v této složce obsahují zprostředkující certifikát a kořenový certifikát. Většina systémů, které jsou aktuální pomocí web Windows Update mají tyto certifikáty již nainstalovány.
-
-* **ManifestSignCertificates. p12** obsahuje:
-  * Zprostředkující certifikát: **Microsoft Code Signing dps 2011**
-    * Nevyžadují se. Pokud je k dispozici, vylepšuje v některých scénářích výkon.
+* **manifestRootCertificate. cer** obsahuje:
   * Kořenový certifikát: **Kořenová certifikační autorita společnosti Microsoft 2011**
-    * Vyžaduje se v systémech Windows 7 Service Pack 1, které nemají nainstalované nejnovější aktualizace Windows.
-* **ManifestCounterSignCertificates. p12** obsahuje:
-  * Zprostředkující certifikát: **Microsoft Time-Stamp dps 2010**
-    * Nevyžadují se. Pokud je k dispozici, vylepšuje v některých scénářích výkon.
+* **manifestCounterSignRootCertificate. cer** a **vs_installer_opc. RootCertificate. cer** obsahuje:
   * Kořenový certifikát: **Kořenová certifikační autorita společnosti Microsoft 2010**
-    * Vyžaduje se pro systémy Windows 7 Service Pack 1, které nemají nainstalované nejnovější aktualizace Windows.
-* **Vs_installer_opc. SignCertificates. p12** obsahuje:
-  * Zprostředkující certifikát: **Microsoft Code Signing DPS**
-    * Vyžaduje se pro všechny systémy. Upozorňujeme, že systémy se všemi aktualizacemi použitými z web Windows Update nemusí mít tento certifikát.
-  * Kořenový certifikát: certifikační **autorita od Microsoftu**
-    * Povinná hodnota. Tento certifikát je dodáván se systémy se systémem Windows 7 nebo novějším.
-
-**Aktualizace**: pro Visual Studio 2017 verze 15,8 Preview 2 nebo novější instalační program pro Visual Studio vyžaduje, aby se v systému nainstalovaly jenom kořenové certifikáty. Tyto certifikáty jsou uloženy v souborech. cer místo. P12.
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
-* **ManifestSignCertificates. cer** obsahuje:
-  * Kořenový certifikát: **Kořenová certifikační autorita společnosti Microsoft 2011**
-    * Vyžaduje se v systémech Windows 7 Service Pack 1, které nemají nainstalované nejnovější aktualizace Windows.
-* **ManifestCounterSignCertificates. cer** obsahuje:
-  * Kořenový certifikát: **Kořenová certifikační autorita společnosti Microsoft 2010**
-    * Vyžaduje se pro systémy Windows 7 Service Pack 1, které nemají nainstalované nejnovější aktualizace Windows.
-* **Vs_installer_opc. SignCertificates. cer** obsahuje:
-  * Kořenový certifikát: certifikační **autorita od Microsoftu**
-    * Povinná hodnota. Tento certifikát je dodáván se systémy se systémem Windows 7 nebo novějším.
-
-Instalační program pro Visual Studio vyžaduje, aby byly v systému nainstalovány pouze kořenové certifikáty.
-
-::: moniker-end
+ 
+Instalační program pro Visual Studio vyžaduje, aby byly v systému nainstalovány pouze kořenové certifikáty. Všechny tyto certifikáty jsou vyžadovány pro systémy Windows 7 Service Pack 1, které nemají nainstalované nejnovější aktualizace systému Windows.
 
 ## <a name="why-are-the-certificates-from-the-certificates-folder-not-installed-automatically"></a>Proč se certifikáty ze složky certifikáty nenainstalovaly automaticky?
 
@@ -199,13 +118,14 @@ Pokud názvy certifikátů nebyly ve sloupcích **vydaných** , musí být nains
 
 ## <a name="install-visual-studio"></a>Instalace sady Visual Studio
 
-Po instalaci certifikátů můžete nasazení sady Visual Studio pokračovat pomocí pokynů v části [nasazení z instalace ze sítě](create-a-network-installation-of-visual-studio.md#deploy-from-a-network-installation) na stránce vytvoření síťové instalace sady Visual Studio.
+Po instalaci certifikátů na klientském počítači jste připraveni k [instalaci sady Visual Studio z místní mezipaměti](../install/create-an-offline-installation-of-visual-studio.md#step-3---install-visual-studio-from-the-local-cache)nebo k [nasazení sady Visual Studio ze sdílené složky rozložení sítě](create-a-network-installation-of-visual-studio.md#deploy-from-a-network-installation) do klientského počítače.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Viz také
 
-* [Instalace sady Visual Studio](install-visual-studio.md)
+* [Vytvoření síťové instalace sady Visual Studio](../install/create-a-network-installation-of-visual-studio.md)
+* [Vytvoření offline instalace sady Visual Studio](../install/create-an-offline-installation-of-visual-studio.md)
 * [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
-* [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)
+

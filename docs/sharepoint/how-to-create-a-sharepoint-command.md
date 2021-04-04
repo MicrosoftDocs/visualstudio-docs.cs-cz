@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 51b80124f7cf550843ad346e9d1e1c0b21ccd0f7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7cc3d29d4991b6cfb712e4754f066edbb66f0b71
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923346"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216680"
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>Postupy: vytvoření příkazu SharePoint
   Pokud chcete použít objektový model serveru v rozšíření nástrojů služby SharePoint, je nutné vytvořit vlastní *příkaz SharePointu* pro volání rozhraní API. Příkaz SharePoint definujete v sestavení, které lze přímo volat do objektového modelu serveru.
@@ -64,8 +64,8 @@ ms.locfileid: "99923346"
 ## <a name="example"></a>Příklad
  Následující příklad kódu ukazuje příkaz SharePointu, který má identifikátor `Contoso.Commands.UpgradeSolution` . Tento příkaz používá rozhraní API v objektovém modelu serveru k upgradu na nasazené řešení.
 
- [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#5)]
- [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb#5)]
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs" id="Snippet5":::
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb" id="Snippet5":::
 
  Kromě implicitního prvního <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parametru má tento příkaz také parametr vlastního řetězce, který obsahuje úplnou cestu k souboru. wsp, který je upgradován na web služby SharePoint. Chcete-li zobrazit tento kód v kontextu většího příkladu, přečtěte si [Návod: Vytvoření vlastního kroku nasazení pro projekty SharePoint](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
 

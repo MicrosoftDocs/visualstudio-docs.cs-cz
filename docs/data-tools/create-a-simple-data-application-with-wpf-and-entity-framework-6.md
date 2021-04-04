@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 52c9d8ca4af6467c6db21be64083b5bf64af0b6a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3432dd9a72fa71ea1e749dd28e80a3d55cce19c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859187"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216056"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>Vytvoření jednoduché datové aplikace pomocí WPF a Entity Framework 6
 
@@ -130,9 +130,9 @@ Je možné napsat vlastní kód datové vazby, ale je mnohem jednodušší, aby 
 
      ![Přetahovat třídy Orders jako Grid](../data-tools/media/raddata-drag-orders-classes-as-grid.png)
 
-7. Aplikace Visual Studio vygenerovala veškerý kód vazby, který spojuje ovládací prvky uživatelského rozhraní s událostmi v modelu. K tomu, abyste mohli zobrazit nějaká data, je třeba napsat nějaký kód pro naplnění modelu. Nejprve přejděte na *MainWindow.XAML.cs* a přidejte datový člen do třídy MainWindow pro datový kontext. Tento objekt, který byl vygenerován pro vás, funguje podobně jako ovládací prvek, který sleduje změny a události v modelu. Přidáte také CollectionViewSource datové členy pro zákazníky a objednávky a logiku inicializace přidruženého konstruktoru. Horní část třídy by měla vypadat takto:
+7. Aplikace Visual Studio vygenerovala veškerý kód vazby, který spojuje ovládací prvky uživatelského rozhraní s událostmi v modelu. K tomu, abyste mohli zobrazit nějaká data, je třeba napsat nějaký kód pro naplnění modelu. Nejprve přejděte do souboru *MainWindow. XAML. cs* a přidejte datový člen do třídy MainWindow pro datový kontext. Tento objekt, který byl vygenerován pro vás, funguje podobně jako ovládací prvek, který sleduje změny a události v modelu. Přidáte také CollectionViewSource datové členy pro zákazníky a objednávky a logiku inicializace přidruženého konstruktoru. Horní část třídy by měla vypadat takto:
 
-     [!code-csharp[MainWindow#1](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#1)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs" id="Snippet1":::
 
      Přidejte `using` direktivu pro System. data. entity, která načte metodu rozšíření Load do oboru:
 
@@ -142,7 +142,8 @@ Je možné napsat vlastní kód datové vazby, ale je mnohem jednodušší, aby 
 
      Teď se posuňte dolů a najděte `Window_Loaded` obslužnou rutinu události. Všimněte si, že Visual Studio přidalo objekt CollectionViewSource. To představuje objekt NorthwindEntities, který jste vybrali při vytváření modelu. Přidali jste už, takže ho tady nebudete potřebovat. Pojďme kód nahradit `Window_Loaded` , aby metoda teď vypadala takto:
 
-     [!code-csharp[Window_Loaded#2](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#2)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs" id="Snippet2":::
+
 
 8. Stiskněte klávesu **F5**. Měli byste vidět podrobnosti o prvním zákazníkovi, který se načetl do CollectionViewSource. Měli byste také vidět jejich objednávky v datové mřížce. Formátování není Skvělé, takže pojďme opravit. Můžete také vytvořit způsob zobrazení dalších záznamů a provést základní operace CRUD.
 
@@ -421,9 +422,10 @@ Příkazová logika obsahuje čtyři části: (1) příkazy, (2) vazby, (3) tla�
 
 Kód na pozadí je minimální s výjimkou metod Add a DELETE. Navigace je prováděna voláním metod ve vlastnosti zobrazení CollectionViewSource. `DeleteOrderCommandHandler`Ukazuje, jak provést kaskádovou odstranění na základě objednávky. Musíme nejdřív odstranit Order_Details, které jsou k němu přidružené. `UpdateCommandHandler`Přidá do kolekce nového zákazníka nebo objednávku nebo jinak pouze aktualizuje stávajícího zákazníka nebo objednávky změnami, které uživatel provedl v textových polích.
 
-Přidejte tyto metody obslužné rutiny do třídy MainWindow v *MainWindow.XAML.cs*. Pokud má CollectionViewSource pro tabulku Customers jiný název, je nutné upravit název v každé z těchto metod:
+Přidejte tyto metody obslužné rutiny do třídy MainWindow v souboru *MainWindow. XAML. cs*. Pokud má CollectionViewSource pro tabulku Customers jiný název, je nutné upravit název v každé z těchto metod:
 
-[!code-csharp[CommandHandlers#3](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#3)]
+:::code language="csharp" source="../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs" id="Snippet3":::
+
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 

@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1943bd8a652a88d218912ab0fc0f6227bf83bc95
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d0eebee6e37fbd6696923da0e470f05688fa0387
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885700"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216576"
 ---
 # <a name="how-to-create-an-event-receiver"></a>Postupy: vytvoření přijímače událostí
   Vytvořením *přijímačů událostí* můžete reagovat, když uživatel komunikuje s položkami SharePointu, jako jsou seznamy nebo položky seznamu. Například kód v přijímači událostí může být aktivován, když uživatel změní kalendář nebo odstraní název ze seznamu kontaktů. V tomto tématu se dozvíte, jak přidat přijímač událostí do instance seznamu.
@@ -58,8 +58,8 @@ ms.locfileid: "99885700"
 
 9. Existující metodu nahraďte `ItemAdded` následujícím kódem a pak zvolte klávesu **F5** :
 
-     [!code-csharp[SP_EventReceiver#1](../sharepoint/codesnippet/CSharp/CustomField1/TestEventReceiver1/TestEventReceiver1.cs#1)]
-     [!code-vb[SP_EventReceiver#1](../sharepoint/codesnippet/VisualBasic/CustomField1_VB/EventReceiver1/EventReceiver1.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/CustomField1/TestEventReceiver1/TestEventReceiver1.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/CustomField1_VB/EventReceiver1/EventReceiver1.vb" id="Snippet1":::
 
      Kód se spustí a SharePointový web se zobrazí ve webovém prohlížeči.
 

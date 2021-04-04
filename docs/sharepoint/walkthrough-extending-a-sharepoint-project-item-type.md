@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 74d57ae4beca074fbf7711ea3d732d903d8faa4b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a91cbd863ed613804418cd5d1666412a01f8f542
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952678"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217694"
 ---
 # <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>Návod: rozšiřování typu položky projektu služby SharePoint
   Pomocí položky projektu **Model připojení obchodních dat** můžete vytvořit model služby pro připojení obchodních dat (BDC) na SharePointu. Ve výchozím nastavení platí, že při vytváření modelu pomocí této položky projektu se data v modelu nezobrazují uživatelům. Musíte také vytvořit externí seznam na SharePointu, aby uživatelé mohli zobrazit data.
@@ -136,8 +136,8 @@ ms.locfileid: "99952678"
     > [!NOTE]
     > Po přidání tohoto kódu dojde k chybě kompilace v projektu. Tyto chyby zůstanou při přidávání kódu v pozdějších krocích nepřítomné.
 
-     [!code-csharp[SPExtensibility.ProjectItemExtension.BDCGenerateExternalDataLists#1](../sharepoint/codesnippet/CSharp/generateexternaldatalists/bdcprojectitemextension/projectitemextension.cs#1)]
-     [!code-vb[SPExtensibility.ProjectItemExtension.BDCGenerateExternalDataLists#1](../sharepoint/codesnippet/VisualBasic/generateexternaldatalists/bdcprojectitemextension/projectitemextension.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/generateexternaldatalists/bdcprojectitemextension/projectitemextension.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/generateexternaldatalists/bdcprojectitemextension/projectitemextension.vb" id="Snippet1":::
 
 ## <a name="create-the-external-data-lists"></a>Vytvoření seznamů externích dat
  Přidejte částečnou definici `GenerateExternalDataListsExtension` třídy, která vytvoří seznam externích dat pro každou entitu v modelu služby BDC. Chcete-li vytvořit seznam externích dat, tento kód nejprve přečte data entity v modelu služby BDC pomocí analýzy dat XML v souboru modelu služby BDC. Pak vytvoří instanci seznamu, která je založena na modelu služby BDC a přidá tuto instanci seznamu do projektu.
@@ -146,8 +146,8 @@ ms.locfileid: "99952678"
 
 1. Vložte následující kód do souboru kódu GenerateExternalDataLists.
 
-     [!code-vb[SPExtensibility.ProjectItemExtension.BDCGenerateExternalDataLists#2](../sharepoint/codesnippet/VisualBasic/generateexternaldatalists/bdcprojectitemextension/generateexternaldatalists.vb#2)]
-     [!code-csharp[SPExtensibility.ProjectItemExtension.BDCGenerateExternalDataLists#2](../sharepoint/codesnippet/CSharp/generateexternaldatalists/bdcprojectitemextension/generateexternaldatalists.cs#2)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/generateexternaldatalists/bdcprojectitemextension/generateexternaldatalists.vb" id="Snippet2":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/generateexternaldatalists/bdcprojectitemextension/generateexternaldatalists.cs" id="Snippet2":::
 
 ## <a name="checkpoint"></a>CheckPoint
  V tomto okamžiku v tomto návodu je veškerý kód pro rozšíření položky projektu nyní v projektu. Sestavte řešení, abyste se ujistili, že se projekt zkompiluje bez chyb.

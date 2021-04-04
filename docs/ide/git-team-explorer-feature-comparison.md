@@ -2,18 +2,18 @@
 title: Souběžné porovnání Gitu a Team Explorer v aplikaci Visual Studio
 titleSuffix: ''
 description: Porovnejte a kontrastujte použití nového prostředí Git versus Team Explorer v aplikaci Visual Studio ke správě zdrojového kódu.
-ms.date: 03/12/2021
+ms.date: 04/01/2021
 ms.topic: how-to
 ms.author: tglee
 author: TerryGLee
 ms.manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 4cbd5b928bb066401c2f091863ad610fbd9f23d5
-ms.sourcegitcommit: 8edb1a7e3e8eee48bf0a900f00b5ee8e08de8e1d
+ms.openlocfilehash: bff03c9435a763607fd32936ddfa3fb38b45296b
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482092"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216914"
 ---
 # <a name="side-by-side-comparison-of-git-and-team-explorer"></a>Souběžné porovnání Gitu a Team Explorer
 
@@ -69,5 +69,7 @@ Pokud používáte Team Explorer, najdete tady podrobný průvodce, který vysv�
 Další informace o novém prostředí Git najdete v části nejnovější video [Začínáme s Git v aplikaci Visual Studio](https://www.youtube.com/watch?v=GCZ9x3yqkyc)na YouTube.
 
 ## <a name="see-also"></a>Viz také
+
 - [Nové prostředí Git v aplikaci Visual Studio](git-with-visual-studio.md)
+- [Začínáme s Git a GitHubem v aplikaci Visual Studio](/learn/modules/visual-studio-github-push/)
 - [Práce s účty GitHub v sadě Visual Studio](work-with-github-accounts.md)

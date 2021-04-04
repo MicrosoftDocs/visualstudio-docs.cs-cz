@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b9ccf478a084b8dedabc6f470a333e3fe4b54eb7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 07f3b90df070eca4e17e5bba9fa6a9e3582bd238
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918730"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217792"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1
   Projekty služby SharePoint jsou kontejnery pro jednu nebo více položek projektu služby SharePoint. Systém projektu služby SharePoint v aplikaci Visual Studio můžete roztáhnout tak, že vytvoříte vlastní typy položek projektu SharePoint a pak je přidružíte k šabloně projektu. V tomto návodu definujete typ položky projektu pro vytvoření sloupce web a potom vytvoříte šablonu projektu, kterou lze použít k vytvoření nového projektu, který obsahuje položku projektu sloupce webu.
@@ -150,8 +150,8 @@ ms.locfileid: "99918730"
 
 1. V souboru kódu **SiteColumnProjectItemTypeProvider** nahraďte výchozí kód následujícím kódem a poté soubor uložte.
 
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#1](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.cs#1)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#1](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.vb" id="Snippet1":::
 
 ## <a name="create-a-visual-studio-project-template"></a>Vytvoření šablony projektu sady Visual Studio
  Vytvořením šablony projektu umožníte ostatním vývojářům vytvářet projekty služby SharePoint, které obsahují položky projektu sloupce webu. Šablona projektu služby SharePoint obsahuje soubory, které jsou požadovány pro všechny projekty v aplikaci Visual Studio, například soubory *. csproj* nebo *. vbproj* a *. vstemplate* , a soubory, které jsou specifické pro projekty služby SharePoint. Další informace naleznete v tématu [Vytvoření šablon položek a šablon projektů pro položky projektu služby SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
@@ -225,7 +225,7 @@ ms.locfileid: "99918730"
 ## <a name="edit-the-project-template-files"></a>Upravit soubory šablon projektu
  V projektu SiteColumnProjectTemplate upravte následující soubory pro definování chování šablony projektu:
 
-- *AssemblyInfo.cs* nebo *AssemblyInfo. vb*
+- *AssemblyInfo. cs* nebo *AssemblyInfo. vb*
 
 - *Elements.xml*
 
@@ -241,9 +241,9 @@ ms.locfileid: "99918730"
 
   V následujících postupech přidáte do některých těchto souborů nahraditelný parametr. Nahraditelný parametr je token, který začíná a končí znakem dolaru ($). Když uživatel použije tuto šablonu projektu k vytvoření projektu, Visual Studio automaticky nahradí tyto parametry v novém projektu konkrétními hodnotami. Další informace najdete v tématu [nahraditelných parametrů](../sharepoint/replaceable-parameters.md).
 
-#### <a name="to-edit-the-assemblyinfocs-or-assemblyinfovb-file"></a>Úprava souboru AssemblyInfo.cs nebo AssemblyInfo. vb
+#### <a name="to-edit-the-assemblyinfocs-or-assemblyinfovb-file"></a>Úprava souboru AssemblyInfo. cs nebo AssemblyInfo. vb
 
-1. V projektu SiteColumnProjectTemplate otevřete soubor *AssemblyInfo.cs* nebo *AssemblyInfo. vb* a přidejte do jeho horní části následující příkaz:
+1. V projektu SiteColumnProjectTemplate otevřete soubor *AssemblyInfo. cs* nebo *AssemblyInfo. vb* a přidejte do jeho horní části následující příkaz:
 
     ```vb
     Imports System.Security
