@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 49fd3ca9b625b9dec179ec37603e875cfdd296c0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6f53d2d005ad9b706f318ec82d48898f73ce0f07
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885128"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213924"
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>Postupy: načtení informací řetězce dotazu v online aplikaci ClickOnce
 *Řetězec dotazu* je část adresy URL začínající otazníkem (?), která obsahuje libovolné informace ve tvaru *název = hodnota*. Předpokládejme, že máte [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci s názvem `WindowsApp1` , na kterou jste hostitelem `servername` , a chcete předat hodnotu proměnné `username` při spuštění aplikace. Adresa URL může vypadat takto:
@@ -50,8 +50,9 @@ ms.locfileid: "99885128"
 
 1. Do projektu vložte následující kód. Aby tento kód fungoval, bude nutné mít odkaz na System. Web a přidat `using` nebo `Imports` direktivy pro System. Web, System. Collections. Specialized a System. Deployment. Application.
 
-     [!code-csharp[ClickOnceQueryString#1](../deployment/codesnippet/CSharp/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.cs)]
-     [!code-vb[ClickOnceQueryString#1](../deployment/codesnippet/VisualBasic/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceQueryString/CS/Form1.cs" id="Snippet1":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceQueryString/VB/Form1.vb" id="Snippet1":::
+
 
 2. Volejte dříve definovanou funkci pro načtení <xref:System.Collections.DictionaryBase.Dictionary%2A> parametrů řetězce dotazu indexovaného podle názvu.
 

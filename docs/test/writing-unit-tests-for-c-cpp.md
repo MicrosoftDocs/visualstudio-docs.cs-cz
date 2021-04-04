@@ -1,19 +1,19 @@
 ---
 title: Zápis testů jednotek pro C/C++
 description: Zápis jednotkových testů C++ v aplikaci Visual Studio s použitím různých testovacích rozhraní, včetně CTest, zvýšení úrovně testování a Google Test.
-ms.date: 02/08/2020
+ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: cf6287ebdb4c2df6145a0e60e22ac1197a517fde
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: d20bcdef769d8cd751230000b0e4d4319b10e46f
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729363"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217460"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Zápis testů jednotek pro C/C++ v aplikaci Visual Studio
 
@@ -92,7 +92,7 @@ Chcete-li se vyhnout nutnosti zadávat úplnou cestu do každého příkazu incl
 ### <a name="write-test-methods"></a>Zápis testovacích metod
 
 > [!NOTE]
-> Tato část ukazuje syntaxi pro Microsoft Unit Testing Framework pro C/C++. Je zde popsána zde: [Reference k rozhraní API Microsoft. VisualStudio. TestTools. CppUnitTestFramework](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md). Dokumentaci k Google Test najdete v části [Google test Úvod](https://github.com/google/googletest/blob/master/googletest/docs/primer.md). Pro zvýšení. test naleznete v tématu [knihovna Boost test: rozhraní pro testování částí](https://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html).
+> Tato část ukazuje syntaxi pro Microsoft Unit Testing Framework pro C/C++. Je zde popsána zde: [Reference k rozhraní API Microsoft. VisualStudio. TestTools. CppUnitTestFramework](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md). Dokumentaci k Google Test najdete v části [Google test Úvod](https://github.com/google/googletest/blob/master/docs/primer.md). Pro zvýšení. test naleznete v tématu [knihovna Boost test: rozhraní pro testování částí](https://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html).
 
 Soubor *. cpp* v testovacím projektu má zástupnou třídu a metodu definovanou pro vás. Ukazují příklad, jak napsat testovací kód. Signatury používají makra TEST_CLASS a TEST_METHOD, která umožňují zjistit metody z okna **Průzkumníka testů** .
 

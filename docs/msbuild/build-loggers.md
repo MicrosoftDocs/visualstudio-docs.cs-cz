@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 75c06082a34f5dd3248024f1707cb188107863c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b676fe015f5f513a069ffaf6ae4fac59c1a5fa68
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964885"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213898"
 ---
 # <a name="build-loggers"></a>Protokolovací nástroje sestavení
 
@@ -36,19 +36,19 @@ Existují dva přístupy, které můžete použít při implementaci protokolova
 
 Účelem protokolovacího nástroje je shromáždit informace o průběhu sestavení, když jsou hlášeny modulem sestavení, a pak tyto informace vykázat užitečným způsobem. Všechny protokolovací nástroje musí přepsat <xref:Microsoft.Build.Utilities.Logger.Initialize%2A> metodu, která je v případě, že protokolovací nástroj registruje události. V tomto příkladu protokolovací nástroj registruje pro <xref:Microsoft.Build.Framework.IEventSource.TargetStarted> události, <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted> a <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> .
 
-[!code-csharp[msbuild_SimpleConsoleLogger#2](../msbuild/codesnippet/CSharp/build-loggers_1.cs)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_Misc/msbuild_SimpleConsoleLogger/CS/msbuild_SimpleConsoleLogger.cs" id="Snippet2":::
 
 ## <a name="respond-to-events"></a>Reakce na události
 
 Teď, když je protokolovací nástroj zaregistrovaný pro konkrétní události, musí tyto události zpracovávat, když k nim dojde. Pro <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted> <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> události a protokolovací nástroj jednoduše zapíše krátkou frázi a název souboru projektu, který je součástí události. Všechny zprávy z protokolovacího nástroje se zapisují do okna konzoly.
 
-[!code-csharp[msbuild_SimpleConsoleLogger#3](../msbuild/codesnippet/CSharp/build-loggers_2.cs)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_Misc/msbuild_SimpleConsoleLogger/CS/msbuild_SimpleConsoleLogger.cs" id="Snippet3":::
 
 ## <a name="respond-to-logger-verbosity-values"></a>Reakce na hodnoty podrobností protokolovacího nástroje
 
 V některých případech můžete chtít protokolovat pouze informace z události, pokud přepínač MSBuild.exe **-verbose** obsahuje určitou hodnotu. V tomto příkladu <xref:Microsoft.Build.Framework.IEventSource.TargetStarted> obslužná rutina události zaznamená zprávu pouze v případě <xref:Microsoft.Build.Utilities.Logger.Verbosity%2A> , že vlastnost, která je nastavena přepínačem **-verbose** , je rovna <xref:Microsoft.Build.Framework.LoggerVerbosity> `Detailed` .
 
-[!code-csharp[msbuild_SimpleConsoleLogger#4](../msbuild/codesnippet/CSharp/build-loggers_3.cs)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_Misc/msbuild_SimpleConsoleLogger/CS/msbuild_SimpleConsoleLogger.cs" id="Snippet4":::
 
 ## <a name="specify-a-logger"></a>Určení protokolovacího nástroje
 
@@ -74,7 +74,7 @@ Následující příklad obsahuje úplný kód pro protokolovací nástroj.
 
 ### <a name="code"></a>Kód
 
-[!code-csharp[msbuild_SimpleConsoleLogger#1](../msbuild/codesnippet/CSharp/build-loggers_4.cs)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_Misc/msbuild_SimpleConsoleLogger/CS/msbuild_SimpleConsoleLogger.cs" id="Snippet1":::
 
 ## <a name="example-2"></a>Příklad 2
 
@@ -84,7 +84,7 @@ Následující příklad ukazuje, jak implementovat protokolovací nástroj, kte
 
 ### <a name="code"></a>Kód
 
-[!code-csharp[msbuild_BasicLogger#1](../msbuild/codesnippet/CSharp/build-loggers_5.cs)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_Misc/msbuild_BasicLogger/CS/msbuild_BasicLogger.cs" id="Snippet1":::
 
 ## <a name="see-also"></a>Viz také
 

@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c8bc59fd1d47a04b2f4c6ec2be9b9adb035f11e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cbffa062e1115264f9496081cdcf63d17d2a36c7
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837811"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217486"
 ---
 # <a name="access-local-and-remote-data-in-clickonce-applications"></a>Přístup k místním a vzdáleným datům v aplikacích ClickOnce
 Většina aplikací spotřebovává nebo vytváří data. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nabízí celou řadu možností pro čtení a zápis dat, a to jak místně, tak i vzdáleně.
@@ -55,8 +55,8 @@ Většina aplikací spotřebovává nebo vytváří data. [!INCLUDE[ndptecclick]
 
  Po tom, co vaše aplikace má tato oprávnění, může získat přístup k datovému adresáři pomocí volání metody třídy v rámci <xref:System.IO> . Cestu k datovému adresáři v aplikaci model Windows Forms můžete získat [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] pomocí <xref:System.Deployment.Application.ApplicationDeployment.DataDirectory%2A> vlastnosti definované u <xref:System.Deployment.Application.ApplicationDeployment.CurrentDeployment%2A> vlastnosti <xref:System.Deployment.Application.ApplicationDeployment> . Toto je nejpohodlnější a doporučený způsob, jak získat přístup k datům. Následující příklad kódu ukazuje, jak to provést pro textový soubor s názvem *CSV.txt* , který jste zahrnuli do nasazení jako datový soubor.
 
- [!code-csharp[ClickOnce.OpenDataFile#1](../deployment/codesnippet/CSharp/accessing-local-and-remote-data-in-clickonce-applications_1.cs)]
- [!code-vb[ClickOnce.OpenDataFile#1](../deployment/codesnippet/VisualBasic/accessing-local-and-remote-data-in-clickonce-applications_1.vb)]
+ :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnce.OpenDataFile/CS/Form1.cs" id="Snippet1":::
+ :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnce.OpenDataFile/VB/Form1.vb" id="Snippet1":::
 
  Další informace o označování souborů v nasazení jako datových souborů naleznete v tématu [How to: include a data File in a ClickOnce Application](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).
 

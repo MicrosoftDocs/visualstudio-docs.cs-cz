@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7c163aa10bdcb3ee28de6d6950dd15f85df876bc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b09db3fecde5d4b87b24963930b2783b0c68052c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885609"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213976"
 ---
 # <a name="how-to-handle-deployment-conflicts"></a>Postupy: zpracování konfliktů nasazení
   Můžete zadat vlastní kód pro zpracování konfliktů nasazení pro položku projektu služby SharePoint. Například můžete určit, zda některé soubory v aktuální položce projektu již existují v umístění nasazení, a poté odstranit nasazené soubory před nasazením aktuální položky projektu. Další informace o konfliktech nasazení najdete v tématu [rozšíření balení a nasazení služby SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md).
@@ -44,8 +44,8 @@ ms.locfileid: "99885609"
 
  Pro jednoduchost, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> obslužná rutina události v tomto příkladu předpokládá, že existuje konflikt nasazení (to znamená, že vždy přidá nový <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> objekt) a `Resolve` Metoda jednoduše vrátí **hodnotu true** , aby označovala, že konflikt byl vyřešen. V reálném scénáři <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> by obslužná rutina události nejprve určila, zda konflikt existuje mezi souborem v aktuální položce projektu a souborem v umístění nasazení, a pak přidat <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> objekt pouze v případě, že existuje konflikt. Například můžete použít `e.ProjectItem.Files` vlastnost v obslužné rutině události k analýze souborů v položce projektu a můžete zavolat příkaz SharePointu k analýze souborů v umístění nasazení. Podobně v reálném scénáři `Resolve` může metoda volat příkaz SharePoint pro vyřešení konfliktu na webu služby SharePoint. Další informace o vytváření příkazů služby SharePoint naleznete v tématu [How to: Create a SharePoint Command](../sharepoint/how-to-create-a-sharepoint-command.md).
 
- [!code-vb[SPExtensibility.ProjectItemExtension.DeploymentConflict#1](../sharepoint/codesnippet/VisualBasic/deploymentconflict/extension/deploymentconflictextension.vb#1)]
- [!code-csharp[SPExtensibility.ProjectItemExtension.DeploymentConflict#1](../sharepoint/codesnippet/CSharp/deploymentconflict/extension/deploymentconflictextension.cs#1)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/deploymentconflict/extension/deploymentconflictextension.vb" id="Snippet1":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/deploymentconflict/extension/deploymentconflictextension.cs" id="Snippet1":::
 
 ## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad vyžaduje odkazy na následující sestavení:

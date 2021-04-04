@@ -3,17 +3,17 @@ title: Instalace sady Visual Studio 2019 pro Mac
 description: Pokyny k instalaci sady Visual Studio 2019 pro Mac a další součásti, které jsou potřeba pro vývoj pro různé platformy.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 09/18/2019
+ms.date: 03/04/2021
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 5155c37a89f566841fc342bbd8213f5a38eb399d
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 653e653a0574da52c0030b06c7a8c13b436ed686
+ms.sourcegitcommit: 4bf7d82eb3a837ad5d1ae5c110039cbf74258f18
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727564"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106273411"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Instalace sady Visual Studio 2019 pro Mac
 
@@ -28,7 +28,8 @@ K zahájení vývoje nativních aplikací .NET pro více platforem na macOS nain
 
 Pro sestavování aplikací Xamarin pro iOS nebo macOS budete také potřebovat:
 
-- Xcode 10,0 nebo vyšší. Obvykle se doporučuje nejnovější stabilní verze.
+- Mac, který je kompatibilní s nejnovější verzí Xcode. Viz [dokumentace k minimálním požadavkům](https://developer.apple.com/support/xcode/) společnosti Apple
+- Nejnovější verze [Xcode](https://developer.apple.com/xcode) Pokud Váš počítač Mac není kompatibilní s nejnovější verzí, může být možné [použít starší verzi Xcode](https://docs.microsoft.com/xamarin/ios/troubleshooting/questions/old-version-xcode) .
 - Apple ID. Pokud ještě nemáte Apple ID, můžete ho vytvořit v https://appleid.apple.com . Je potřeba, abyste měli Apple ID pro instalaci a přihlášení do Xcode.
 
 ## <a name="installation-instructions"></a>Pokyny k instalaci
@@ -96,14 +97,21 @@ Instalace Visual Studio pro Mac umožňuje začít psát kód pro vaše aplikace
 
 ### <a name="ios"></a>iOS
 
-1. [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
-2. [Zřizování zařízení](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning)(pro spuštění aplikace na zařízení).
+1. [Hello, iOS](https://docs.microsoft.com//xamarin/ios/get-started/hello-ios/)
+2. [Zřizování zařízení](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/)(pro spuštění aplikace na zařízení).
 
 ### <a name="android"></a>Android
 
-1. [Použití nástroje Xamarin Android SDK Manager](https://developer.xamarin.com/guides/android/getting_started/installation/android-sdk/?ide=xs)
-2. [Emulátor sady Android SDK](https://developer.xamarin.com/guides/android/getting_started/installation/android-emulator/)
-4. [Nastavení zařízení pro vývoj](https://developer.xamarin.com/guides/android/getting_started/installation/set_up_device_for_development/)
+1. [Hello, Android](https://docs.microsoft.com/xamarin/android/get-started/hello-android/)
+2. [Použití nástroje Xamarin Android SDK Manager](https://docs.microsoft.com/xamarin/android/get-started/installation/android-sdk?tabs=macos)
+3. [Emulátor sady Android SDK](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/)
+4. [Nastavení zařízení pro vývoj](https://docs.microsoft.com/xamarin/android/get-started/installation/set-up-device-for-development)
+
+### <a name="xamarinforms"></a>Xamarin.Forms
+
+Sestavování nativních aplikací pro různé platformy pomocí Xamarin. Forms:
+
+1. [Rychlý start s Xamarin.Forms](https://docs.microsoft.com/xamarin/get-started/quickstarts/)
 
 ### <a name="net-core-apps-aspnet-core-web-apps-unity-game-development"></a>Aplikace .NET Core, ASP.NET Core Web Apps, vývoj her v Unity
 

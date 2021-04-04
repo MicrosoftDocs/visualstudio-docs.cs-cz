@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a500d63eb497ce6d2b23860cd3793cbc2632b819
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f9e69f635b18d4ed67b78751ac6179cad04f002c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078458"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217525"
 ---
 # <a name="walkthrough-highlight-text"></a>Návod: zvýraznění textu
 Můžete přidat různé vizuální efekty do editoru vytvořením částí komponenty Managed Extensibility Framework (MEF). Tento návod ukazuje, jak zvýraznit všechny výskyty aktuálního slova v textovém souboru. Pokud se v textovém souboru vyskytne slovo více než jednou, a umístíte blikající kurzor do jednoho výskytu, zvýrazní se všechny výskyty.
@@ -201,8 +201,9 @@ Můžete přidat různé vizuální efekty do editoru vytvořením částí komp
 
 5. Je také nutné přidat `TagsChanged` událost, která je volána metodou Update.
 
-     [!code-csharp[VSSDKHighlightWordTest#10](../extensibility/codesnippet/CSharp/walkthrough-highlighting-text_1.cs)]
-     [!code-vb[VSSDKHighlightWordTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-highlighting-text_1.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/vssdkhighlightwordtest/cs/highlightwordtag.cs" id="Snippet10":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/vssdkhighlightwordtest/vb/highlightwordtag.vb" id="Snippet10":::
+
 
 6. `UpdateAtCaretPosition()`Metoda najde každé slovo v textové vyrovnávací paměti, které je identické se slovem, kde je kurzor umístěn, a vytvoří seznam <xref:Microsoft.VisualStudio.Text.SnapshotSpan> objektů, které odpovídají výskytům slova. Potom volá `SynchronousUpdate` , což vyvolá `TagsChanged` událost.
 

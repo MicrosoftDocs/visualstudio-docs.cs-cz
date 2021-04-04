@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c5ac6cf82d39790fa2d7762fea6b711a546da24
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6f3932658442774ad6f54bd5e6243fe73679b38f
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080746"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214028"
 ---
 # <a name="support-for-project-and-configuration-properties"></a>Podpora vlastností projektu a konfigurace
 Okno **vlastnosti** v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí (IDE) může zobrazit vlastnosti projektu a konfigurace. Můžete zadat stránku vlastností pro vlastní typ projektu, aby uživatel mohl nastavit vlastnosti pro vaši aplikaci.
@@ -72,8 +72,8 @@ Okno **vlastnosti** v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md
 ## <a name="provideobjectattribute-and-registry-path"></a>ProvideObjectAttribute a cesta k registru
  Třídy odvozené od `SettingsPage` jsou navržené tak, aby se sdílely napříč VSPackage. Chcete-li, aby VSPackage mohl vytvořit třídu odvozenou z `SettingsPage` , přidejte `Microsoft.VisualStudio.Shell.ProvideObjectAttribute` do třídy odvozené z `Microsoft.VisualStudio.Shell.Package` .
 
- [!code-csharp[VSSDKSupportProjectConfigurationProperties#1](../../extensibility/internals/codesnippet/CSharp/support-for-project-and-configuration-properties_1.cs)]
- [!code-vb[VSSDKSupportProjectConfigurationProperties#1](../../extensibility/internals/codesnippet/VisualBasic/support-for-project-and-configuration-properties_1.vb)]
+ :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/cs/vssdksupportprojectconfigurationpropertiespackage.cs" id="Snippet1":::
+ :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/vb/vssdksupportprojectconfigurationpropertiespackage.vb" id="Snippet1":::
 
  VSPackage, ke kterému je atribut připojen, je neimportovaná. Je-li VSPackage zaregistrován s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , identifikátor třídy (CLSID) libovolného objektu, který lze vytvořit, je registrován tak, aby bylo volání <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry.CreateInstance%2A> možné ho vytvořit.
 
@@ -87,8 +87,8 @@ Okno **vlastnosti** v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md
 
  Předpokládejme následující fragment kódu:
 
- [!code-vb[VSSDKSupportProjectConfigurationProperties#2](../../extensibility/internals/codesnippet/VisualBasic/support-for-project-and-configuration-properties_2.vb)]
- [!code-csharp[VSSDKSupportProjectConfigurationProperties#2](../../extensibility/internals/codesnippet/CSharp/support-for-project-and-configuration-properties_2.cs)]
+ :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/vb/myprojectpropertypage.vb" id="Snippet2":::
+ :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/cs/myprojectpropertypage.cs" id="Snippet2":::
 
  `MyConfigProp`Vlastnost Configuration se zobrazí na stránce vlastností konfigurace jako **vlastnost moje** konfigurace v kategorii kategorie, **Moje kategorie**. Pokud je vybraná možnost, popis, zobrazí se **Popis, který** se zobrazí na panelu Popis.
 

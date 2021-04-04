@@ -23,12 +23,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7efd3d622e40c21574c0aa9e39263d53979706ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d40c4e5c5d61b9da3cdbdd3fe96f45c4a0cff929
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949191"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213963"
 ---
 # <a name="create-an-association-between-entities"></a>Vytvoření přidružení mezi entitami
   Vytvořením přidružení můžete definovat vztahy mezi entitami v modelu služby připojení obchodních dat. Visual Studio generuje metody, které poskytují uživatelům modelu informace o jednotlivých přidruženích. Tyto metody mohou být využívány webovými částmi, seznamy nebo vlastními aplikacemi služby SharePoint pro zobrazení relací dat v uživatelském rozhraní (UI).
@@ -53,13 +53,13 @@ ms.locfileid: "99949191"
 
  Přidejte kód do metody navigátoru přidružení zdrojové entity, která vrací kolekci cílových entit. Následující příklad vrátí prodejní objednávky kontaktu.
 
- [!code-csharp[SP_BDC#7](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#7)]
- [!code-vb[SP_BDC#7](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#7)]
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet7":::
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet7":::
 
  Přidejte kód do metody navigátoru přidružení cílové entity, která vrací zdrojovou entitu. Následující příklad vrátí kontakt, který se vztahuje k prodejní objednávce.
 
- [!code-csharp[SP_BDC#8](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#8)]
- [!code-vb[SP_BDC#8](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#8)]
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs" id="Snippet8":::
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb" id="Snippet8":::
 
 ### <a name="foreign-keyless-association"></a>Přidružení cizího bez klíčů
  Můžete vytvořit přidružení bez mapování identifikátorů k deskriptorům typu pole. Tento druh přidružení vytvořte v případě, že zdrojová entita nemá přímý vztah s cílovou entitou. Tabulka například nemá `SalesOrderDetail` cizí klíč, který se mapuje na primární klíč v `Contact` tabulce.
@@ -70,13 +70,13 @@ ms.locfileid: "99949191"
 
  Následující příklad vrátí podrobnosti o všech prodejních objednávkách spojováním tabulek.
 
- [!code-csharp[SP_BDC#9](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#9)]
- [!code-vb[SP_BDC#9](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#9)]
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet9":::
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet9":::
 
  V metodě navigace přidružení `SalesOrderDetail` entity vraťte související `Contact` . Následující příklad ukazuje to.
-
- [!code-csharp[SP_BDC#10](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderdetailservice.cs#10)]
- [!code-vb[SP_BDC#10](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderdetailservice.vb#10)]
+                                                                            
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderdetailservice.cs" id="Snippet10":::
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderdetailservice.vb" id="Snippet10":::
 
 ## <a name="see-also"></a>Viz také
 - [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)

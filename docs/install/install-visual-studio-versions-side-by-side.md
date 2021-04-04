@@ -2,7 +2,7 @@
 title: Souběžná instalace různých verzí sady Visual Studio
 description: Přečtěte si, jak nainstalovat Visual Studio na počítač, který má už nainstalovanou starší nebo novější verzi sady Visual Studio.
 ms.custom: SEO-VS-2020
-ms.date: 07/24/2019
+ms.date: 03/29/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: conceptual
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jmartens
-ms.openlocfilehash: f17759d186805dc72623f27c9f254c7a6c0d36e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0814b6ebfacd5b4cf24d0f451967903b9551808f
+ms.sourcegitcommit: 22789927ec8e877b7d2b67a555d6df97d84103e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941525"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105981274"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Souběžná instalace různých verzí sady Visual Studio
 
@@ -50,17 +50,44 @@ Než nainstalujete verze vedle sebe, Projděte si následující podmínky:
 
 ## <a name="install-minor-visual-studio-versions-side-by-side"></a>Souběžná instalace menších verzí sady Visual Studio
 
-Při upgradu z jedné dílčí verze sady Visual Studio na další bude instalační program sady Visual Studio aktualizovat vaši aktuální instalaci na další verzi v tomto kanálu ve výchozím nastavení. Například při instalaci 16.6.4 ve verzi Preview se instalační program pokusí nahradit vaši aktuální instalaci 16.6.3 Preview, protože obě verze jsou v kanálu verze 16,6 Preview. To pomáhá zajistit, že starší verze sady Visual Studio nezabírají místo na svém počítači. V některých specifických případech může být užitečné nainstalovat dílčí verze vedle sebe. V našem příkladu by to znamenalo, že 16.6.3 i 16.6.4 ve stejném počítači.
+Při upgradu z jedné dílčí verze sady Visual Studio na další bude instalační program sady Visual Studio ve výchozím nastavení aktualizovat aktuální instalaci na nejnovější verzi v tomto kanálu. Předpokládejme například, že 16.9.4 byl právě vydán. Instalační program se pokusí nahradit vaši aktuální instalaci 16.9.3 (nebo nižší) pomocí 16.9.4, protože obě verze jsou součástí kanálu pro vydání sady [Visual Studio 2019](https://docs.microsoft.com/visualstudio/productinfo/release-rhythm). Nahrazení starší verze novější verzí během aktualizace pomáhá zajistit, že starší verze sady Visual Studio nezabírají místo na svém počítači. V některých případech ale může být užitečné nainstalovat různé dílčí vydané verze sady Visual Studio vedle sebe. Můžete například chtít, aby 16.9.3 i 16.9.4 ve stejném počítači. 
 
-1. Stáhněte si [soubor zaváděcího nástroje sady Visual Studio](/visualstudio/releases/2019/history#installing-an-earlier-release) pro podverzi, kterou byste chtěli nainstalovat souběžně s vašimi stávajícími verzemi sady Visual Studio.
+::: moniker range="vs-2017"
+
+1. Stáhněte si nejnovější zaváděcí nástroj pro sadu Visual Studio 2017 verze 15,9 ze stránky [předchozích verzí sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) pro verzi, kterou chcete nainstalovat souběžně s existující verzí sady Visual Studio.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. Stáhněte si soubor zaváděcího nástroje sady Visual Studio 2019 buď na [stránce stažení sady Visual](https://visualstudio.microsoft.com/downloads) Studio, nebo na stránce verze sady [Visual Studio 2019](https://docs.microsoft.com/visualstudio/releases/2019/history#installing-an-earlier-release) pro podverzi, kterou chcete nainstalovat souběžně s existující verzí sady Visual Studio.
+
+::: moniker-end
+
+
 2. Otevřete příkazový řádek v režimu správce. Provedete to tak, že otevřete nabídku Start systému Windows, zadáte "cmd", kliknete pravým tlačítkem na výsledek hledání příkazového řádku a vyberete **Spustit jako správce**. V příkazovém řádku změňte adresář na složku, ve které se nachází soubor zaváděcího nástroje sady Visual Studio.
-3. Spusťte následující příkaz, který určí novou cestu ke složce pro umístění instalace a nahradí název souboru. exe odpovídajícím názvem zaváděcího programu pro verzi sady Visual Studio, kterou instalujete. Název souboru. exe by měl odpovídat nebo být podobný jednomu z následujících souborů:
-   * vs_community.exe pro Visual Studio Community
-   * vs_professional.exe pro Visual Studio Professional
-   * vs_enterprise.exe pro Visual Studio Enterprise
 
+::: moniker range="vs-2017"
+
+3. Spusťte následující příkaz, který určí novou cestu ke složce pro umístění instalace a nahradí název souboru. exe odpovídajícím názvem zaváděcího programu pro verzi sady Visual Studio, kterou instalujete. Název souboru. exe by měl odpovídat nebo být podobný jednomu z následujících souborů:
+
+   * vs_enterprise.exe pro Visual Studio Enterprise
+   * vs_professional.exe pro Visual Studio Professional
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+3. Spusťte následující příkaz, který určí novou cestu ke složce pro umístění instalace a nahradí název souboru. exe odpovídajícím názvem zaváděcího programu pro verzi sady Visual Studio, kterou instalujete. Název souboru. exe by měl odpovídat nebo být podobný jednomu z následujících souborů:
+
+   * vs_enterprise.exe pro Visual Studio Enterprise
+   * vs_professional.exe pro Visual Studio Professional
+   * vs_community.exe pro Visual Studio Community
+
+::: moniker-end 
+  
    ```
-   vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<2019 AddNewPath>"
+   vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<AddNewPath>"
    ```
 
 4. Pomocí dialogových oken instalačního programu vyberte součásti, které pro instalaci potřebujete. Další informace najdete v tématu [instalace sady Visual Studio](install-visual-studio.md#step-4---choose-workloads).

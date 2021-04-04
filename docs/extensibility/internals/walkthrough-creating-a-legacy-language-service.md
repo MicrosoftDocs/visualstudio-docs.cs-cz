@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ded5624aed40ac2e878c44fd8dabc7d35c4d1ac8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 42c9f2d2a91b90cab31dd225d0ace081988135fb
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074272"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213638"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>Návod: Vytvoření služby starší verze jazyka
 Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykové služby v nástroji [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] je jednoduché. Pro hostování jazykové služby, samotné služby jazyka a analyzátoru pro váš jazyk potřebujete VSPackage.
@@ -74,13 +74,13 @@ Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykov
 
 6. Do souboru MyLanguageService. cs přidejte následující `using` direktivy.
 
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_1.cs)]
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_1.vb)]
+     :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mylanguageservice.cs" id="Snippet1":::
+     :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mylanguageservice.vb" id="Snippet1":::
 
 7. Upravte `MyLanguageService` třídu pro odvození z <xref:Microsoft.VisualStudio.Package.LanguageService> třídy:
 
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_2.cs)]
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_2.vb)]
+     :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mylanguageservice.cs" id="Snippet2":::
+     :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mylanguageservice.vb" id="Snippet2":::
 
 8. Umístěte kurzor na "LanguageService" a v nabídce **Úpravy**, **technologie IntelliSense** vyberte **implementovat abstraktní třídu**. Tím se přidají minimální nezbytné metody pro implementaci třídy jazykové služby.
 
@@ -90,8 +90,8 @@ Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykov
 
 1. Otevřete soubor MyLanguagePackagePackage. cs a přidejte následující `using` direktivy:
 
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_3.vb)]
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_3.cs)]
+     :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mylanguagepackagepackage.vb" id="Snippet3":::
+     :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mylanguagepackagepackage.cs" id="Snippet3":::
 
 2. Zaregistrujte třídu služby jazyka, jak je popsáno v tématu [Registrace služby starší verze jazyka](../../extensibility/internals/registering-a-legacy-language-service1.md). Patří sem atributy ProvideXX a Proffering části služby jazyka. Použijte MyLanguageService, kde toto téma používá TestLanguageService.
 
@@ -114,8 +114,8 @@ Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykov
 
 3. V novém souboru třídy přidejte následující `using` direktivy.
 
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_4.cs)]
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_4.vb)]
+     :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mysource.cs" id="Snippet4":::
+     :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mysource.vb" id="Snippet4":::
 
 4. Upravte třídu tak, aby byla odvozena z požadované třídy MPF.
 
@@ -123,8 +123,8 @@ Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykov
 
      Například konstruktor pro třídu odvozenou z <xref:Microsoft.VisualStudio.Package.Source> třídy může vypadat takto:
 
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_5.cs)]
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_5.vb)]
+     :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mysource.cs" id="Snippet5":::
+     :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mysource.vb" id="Snippet5":::
 
 6. V nabídce **Úpravy**, **technologie IntelliSense** vyberte **implementovat abstraktní třídu** , pokud má základní třída jakékoli abstraktní metody, které musí být implementovány.
 

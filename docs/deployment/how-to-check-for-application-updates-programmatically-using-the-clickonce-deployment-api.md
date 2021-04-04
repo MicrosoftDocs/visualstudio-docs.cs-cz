@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e7168b78303f93ccf89fad324992dd580481ac2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: db82151b7fd4dbe894cecf8fbf5f5b64cb2f5919
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888443"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213937"
 ---
 # <a name="how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api"></a>Postupy: vyhledání aktualizací aplikace programově pomocí rozhraní API nasazení ClickOnce
 ClickOnce poskytuje dva způsoby, jak aplikaci aktualizovat po nasazení. V první metodě můžete nakonfigurovat nasazení ClickOnce tak, aby v určitých intervalech automaticky kontrolovala aktualizace. Ve druhé metodě můžete napsat kód, který používá <xref:System.Deployment.Application.ApplicationDeployment> třídu ke kontrole aktualizací na základě události, jako je například požadavek uživatele.
@@ -40,9 +40,9 @@ ClickOnce poskytuje dva způsoby, jak aplikaci aktualizovat po nasazení. V prvn
 
 2. Vytvořte libovolné tlačítko, položku nabídky nebo jinou položku uživatelského rozhraní, které chcete, aby uživatelé vybrali, aby zkontrolovali aktualizace. Z obslužné rutiny události této položky zavolejte následující metodu, která zkontroluje a nainstaluje aktualizace.
 
-     [!code-csharp[ClickOnceAPI#6](../deployment/codesnippet/CSharp/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api_1.cs)]
-     [!code-cpp[ClickOnceAPI#6](../deployment/codesnippet/CPP/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api_1.cpp)]
-     [!code-vb[ClickOnceAPI#6](../deployment/codesnippet/VisualBasic/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api_1.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceAPI/CS/Form1.cs" id="Snippet6":::
+    :::code language="cpp" source="../snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp" id="Snippet6":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb" id="Snippet6":::
 
 3. Zkompilujte aplikaci.
 

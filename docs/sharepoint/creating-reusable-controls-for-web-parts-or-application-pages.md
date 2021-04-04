@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 01d8602971e2a89aef8cf8451d1273fa28c70f05
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b61474f4290771fb139d511296580ec1ef0f8820
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949126"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213911"
 ---
 # <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>Vytváření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací
   V aplikaci Visual Studio můžete vytvořit vlastní, opakovaně použitelné ovládací prvky, které mohou být spotřebovány stránkami aplikace a Webové části, které běží na SharePointu. Tyto ovládací prvky se nazývají uživatelské ovládací prvky. Uživatelský ovládací prvek je druh složeného ovládacího prvku, který funguje podobně jako ASP.NET webová stránka – můžete přidat existující ovládací prvky webového serveru a značky k uživatelskému ovládacímu prvku a definovat vlastnosti a metody pro ovládací prvek. Pak je můžete vložit na ASP.NET webové stránky, kde se chovají jako jednotka.
@@ -47,8 +47,8 @@ ms.locfileid: "99949126"
 
  Chcete-li do webové části zahrnout uživatelský ovládací prvek, přidejte uživatelský ovládací prvek do kolekce webových částí <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> v souboru kódu webové části. Následující příklad přidá uživatelský ovládací prvek do <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> kolekce webové části.
 
- [!code-vb[SP_VisualWebPart#5](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1.vb#5)]
- [!code-csharp[SP_VisualWebPart#5](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1.cs#5)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1.vb" id="Snippet5":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1.cs" id="Snippet5":::
 
 ## <a name="debug-a-user-control"></a>Ladění uživatelského ovládacího prvku
  Chcete-li ladit uživatelský ovládací prvek, ujistěte se, že uživatelský ovládací prvek je součástí stránky aplikace nebo webové části v projektu služby SharePoint. Potom můžete ladit kód v uživatelském ovládacím prvku stejně jako při ladění kódu v jakémkoli projektu sady Visual Studio.

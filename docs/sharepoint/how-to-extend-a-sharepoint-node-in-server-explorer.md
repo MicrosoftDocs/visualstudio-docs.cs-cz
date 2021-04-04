@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4983930a7c16edef826a5912abf0870598b1f906
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e38f1d18736c18f5273eb2e202de52af81e73f85
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943793"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217447"
 ---
 # <a name="how-to-extend-a-sharepoint-node-in-server-explorer"></a>Postupy: rozšiřování uzlu služby SharePoint v Průzkumník serveru
   Uzly můžete v uzlu **připojení služby SharePoint** v **Průzkumník serveru** zvětšit. To je užitečné, když chcete přidat nové podřízené uzly, položky místní nabídky nebo vlastnosti do existujícího uzlu. Další informace najdete v tématu věnovaném [rozšiřování uzlu připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
@@ -64,8 +64,8 @@ ms.locfileid: "99943793"
 
 - Rozšíření, které přidá vlastní vlastnost s názvem **ContosoExampleProperty** , do každého uzlu, který představuje pole s názvem **text**.
 
-  [!code-csharp[SPExtensibility.ProjectSystemExtension.General#9](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextension.cs#9)]
-  [!code-vb[SPExtensibility.ProjectSystemExtension.General#9](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextension.vb#9)]
+  :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextension.cs" id="Snippet9":::
+  :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextension.vb" id="Snippet9":::
 
   Toto rozšíření přidá do uzlů upravitelnou vlastnost řetězce. Můžete také vytvořit vlastní vlastnosti, které zobrazují data jen pro čtení ze serveru SharePoint. Příklad, který ukazuje, jak to provést, naleznete v tématu [Návod: roztažení Průzkumník serveru pro zobrazení webových částí](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md).
 

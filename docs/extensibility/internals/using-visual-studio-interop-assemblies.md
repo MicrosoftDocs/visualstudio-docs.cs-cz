@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1253f5e7197f587e4a5e62365b42cb5040010666
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fc5f1a01c406f2457eaaa6a58e214f06fbd31127
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090665"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213651"
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Používání definičních sestavení sady Visual Studio
 Sestavení vzájemné spolupráce sady Visual Studio umožňují spravovaným aplikacím přístup k rozhraním COM, která poskytují rozšiřitelnost sady Visual Studio. Existují některé rozdíly mezi přímými rozhraními COM a jejich definičními verzemi. Například HRESULTs se obvykle reprezentují jako celočíselné hodnoty a musí být zpracovány stejným způsobem jako výjimky a parametry (obzvláště výstupní parametry) jsou zpracovávány jinak.
@@ -34,13 +34,13 @@ Sestavení vzájemné spolupráce sady Visual Studio umožňují spravovaným ap
 
  Zvažte například následující volání funkce, ve kterém <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> je přijatelné návratové hodnoty, ale jakákoli jiná hodnota HRESULT menší než nula představuje chybu.
 
- [!code-vb[VSSDKHRESULTInformation#1](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_1.vb)]
- [!code-csharp[VSSDKHRESULTInformation#1](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_1.cs)]
+ :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/vssdkhresultinformation/vb/vssdkhresultinformationpackage.vb" id="Snippet1":::
+ :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/vssdkhresultinformation/cs/vssdkhresultinformationpackage.cs" id="Snippet1":::
 
  Pokud je k dispozici více než jedna přijatelná návratová hodnota, lze do seznamu v volání metody přidat pouze další hodnoty HRESULT <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> .
 
- [!code-vb[VSSDKHRESULTInformation#2](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_2.vb)]
- [!code-csharp[VSSDKHRESULTInformation#2](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_2.cs)]
+ :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/vssdkhresultinformation/vb/vssdkhresultinformationpackage.vb" id="Snippet2":::
+ :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/vssdkhresultinformation/cs/vssdkhresultinformationpackage.cs" id="Snippet2":::
 
 ## <a name="returning-hresults-to-com-from-managed-code"></a>Vrácení HRESULTs do modelu COM ze spravovaného kódu
  Pokud nedojde k žádné výjimce, spravovaný kód vrátí <xref:Microsoft.VisualStudio.VSConstants.S_OK> funkci com, která ji volala. Zprostředkovatel komunikace s objekty COM podporuje běžné výjimky, které jsou silně typované ve spravovaném kódu. Například metoda, která přijímá nepřijatelný `null` argument <xref:System.ArgumentNullException> , vyvolá.
