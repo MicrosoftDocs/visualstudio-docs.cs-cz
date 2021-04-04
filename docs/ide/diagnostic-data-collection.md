@@ -4,17 +4,17 @@ description: Přečtěte si o protokolech generovaných systémem Visual Studio,
 ms.custom: SEO-VS-2020
 ms.date: 05/24/2018
 ms.topic: conceptual
-author: jillre
-ms.author: michma
+author: TerryGLee
+ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a6df4a90d8ddb31db88bb91ff4e874cadd3c589
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d357b5e21ca86d7ccf11f576a15bbd0e7a90e466
+ms.sourcegitcommit: a339547aa2f4e0f64b7afbcc3e1ade0a4f9287d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894657"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106171833"
 ---
 # <a name="system-generated-logs-collected-by-visual-studio"></a>Systémem generované protokoly shromážděné aplikací Visual Studio
 
@@ -70,7 +70,7 @@ Autoři rozšíření by měli omezit expozici osobních údajů tím, že nepou
 
 ## <a name="opt-out-of-data-collection"></a>Odhlásit se od shromažďování dat
 
-S ohledem na účel shromažďovaných dat a omezení přístupu a uchování doporučujeme použít výchozí nastavení ochrany osobních údajů pro sadu Visual Studio a Windows. Můžete se ale odhlásit [od program Zlepšování sady Visual Studio na základě zkušeností uživatelů](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) . Pokud chcete odhlásit vygenerované systémové shromažďování protokolů pro všechny programy, přečtěte si téma [Diagnostika, zpětná vazba a ochrana osobních údajů ve Windows 10](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy). Možnosti se můžou lišit v závislosti na verzi systému Windows, kterou používáte.
+S ohledem na účel shromažďovaných dat a omezení přístupu a uchování doporučujeme použít výchozí nastavení ochrany osobních údajů pro sadu Visual Studio a Windows. Můžete se ale odhlásit [od program Zlepšování sady Visual Studio na základě zkušeností uživatelů](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) . Po odsouhlasení se odhlásíte z **volitelného** shromažďování diagnostických dat. Pro zajištění, že je sada Visual Studio zabezpečená, aktuální a funguje podle očekávání, je **nutné** provést některé shromažďování diagnostických dat. Požadovaná kolekce diagnostických dat nebude podle vašeho výběru ovlivněná na VSCEIP. Pokud chcete odhlásit vygenerované systémové shromažďování protokolů pro všechny programy, přečtěte si téma [Diagnostika, zpětná vazba a ochrana osobních údajů ve Windows 10](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy). Možnosti se můžou lišit v závislosti na verzi systému Windows, kterou používáte.
 
 ## <a name="see-also"></a>Viz také
 

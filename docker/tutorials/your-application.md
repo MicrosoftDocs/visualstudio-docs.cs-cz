@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: f5f5fdd51e4aa13df66470534303f7fba19e44ab
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1b92792cf9db0090c52f583754e56c306e6d7234
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841663"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106082575"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Sestavení a spuštění ukázkové aplikace todo
 
@@ -30,7 +30,7 @@ Než budete moct aplikaci spustit, musíte na svém počítači získat zdrojov�
 
 1. Ujistěte se, že na místním počítači máte nainstalovanou Docker for Windows nebo Docker Community Edition. Další informace najdete v [dokumentaci k instalaci Docker for Windows](https://docs.docker.com/docker-for-windows/install/). Proces instalace zpřístupňuje soubor ZIP obsahující ukázku, která je k dispozici na adrese localhost.
 
-1. [Stáhněte si soubor zip](http://localhost/assets/app.zip). Otevřete soubor ZIP a zajistěte extrakci obsahu.
+1. [Stáhněte si soubor zip](https://github.com/docker/getting-started/tree/master/app). Otevřete soubor ZIP a zajistěte extrakci obsahu.
 
 1. Po extrakci otevřete projekt pomocí svého oblíbeného editoru kódu. Pokud budete potřebovat editor, můžete použít [Visual Studio Code](https://code.visualstudio.com/). Měli byste vidět `package.json` a dva podadresáře ( `src` a `spec` ).
 

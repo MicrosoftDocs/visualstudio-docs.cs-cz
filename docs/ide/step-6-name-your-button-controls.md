@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f6612806f8bf1453cf28f9d75c78588c2074bb0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f69a87d923eebaea03c9c8a38496c4c379db8aba
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868878"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214210"
 ---
 # <a name="step-6-name-your-button-controls"></a>Krok 6: Pojmenování tlačítkových ovládacích prvků
 
@@ -43,15 +43,15 @@ Ve formuláři jsou čtyři tlačítka a rozhraní IDE s názvem **Button1**, **
 1. Přejmenujte další tři tlačítka na **backgroundButton**, **clearButton** a **showButton**.
 Názvy můžete ověřit tak, že v okně **vlastnosti** zvolíte rozevírací seznam výběr ovládacího prvku. Nové názvy tlačítek se zobrazí.
 
-1. Dvakrát klikněte na tlačítko **Zobrazit obrázek** ve formuláři. Jako alternativu zvolte na formuláři tlačítko **Zobrazit obrázek** a potom stiskněte klávesu **ENTER** . Když to uděláte, IDE otevře další kartu v hlavním okně s názvem **Form1.cs**. (Pokud používáte Visual Basic, karta má název **Form1. vb**).
+1. Dvakrát klikněte na tlačítko **Zobrazit obrázek** ve formuláři. Jako alternativu zvolte na formuláři tlačítko **Zobrazit obrázek** a potom stiskněte klávesu **ENTER** . Když to uděláte, IDE otevře další kartu v hlavním okně s názvem **Form1. cs**. (Pokud používáte Visual Basic, karta má název **Form1. vb**).
 
    Tato karta zobrazuje soubor kódu za formulářem, jak je znázorněno na následujícím snímku obrazovky.
 
-    ![Karta Form1.cs s kódem jazyka Visual C&#35;](../ide/media/express_showbuttoncode.png)<br>
-***Form1.cs** _ _tab s kódem C# *
+    ![Karta Form1. cs s kódem jazyka Visual C&#35;](../ide/media/express_showbuttoncode.png)<br>
+***Form1. cs** _ _tab s kódem jazyka C# *
 
     > [!NOTE]
-    > Karta Form1.cs nebo Form1. vb může místo toho zobrazovat **showButton** jako **showButton** .
+    > Karta Form1. cs nebo Form1. vb může místo toho zobrazovat **showButton** jako **showButton** .
 
 1. Zaměřte se na tuto část kódu.
 
@@ -71,18 +71,18 @@ Názvy můžete ověřit tak, že v okně **vlastnosti** zvolíte rozevírací s
 
    Díváte jste se na kód s názvem `showButton_Click()` (případně `ShowButton_Click()` ). Rozhraní IDE bylo přidáno do kódu formuláře při otevření souboru kódu pro tlačítko **showButton** . V době návrhu při otevření souboru kódu pro ovládací prvek ve formuláři se kód vygeneruje pro ovládací prvek, pokud ještě neexistuje. Tento kód, který se označuje jako *Metoda*, se spouští při spuštění aplikace a výběru ovládacího prvku – v tomto případě se **zobrazí tlačítko Zobrazit obrázek** .
 
-1. Zvolte znovu kartu **Návrhář formulářů** (**Form1.cs [Design]**) a pak otevřete soubor kódu pro tlačítko **Vymazat obrázek** pro vytvoření metody v kódu formuláře. Tento postup opakujte pro zbývající dvě tlačítka. V každém okamžiku rozhraní IDE přidá novou metodu do souboru kódu formuláře.
+1. Zvolte znovu kartu **Návrhář formulářů** (**Form1. cs [Design]**) a pak otevřete soubor kódu pro tlačítko **Vymazat obrázek** pro vytvoření metody v kódu formuláře. Tento postup opakujte pro zbývající dvě tlačítka. V každém okamžiku rozhraní IDE přidá novou metodu do souboru kódu formuláře.
 
 1. Chcete-li přidat další metodu, otevřete soubor kódu pro ovládací prvek **CheckBox** v **Návrhář formulářů** , aby rozhraní IDE přidalo `checkBox1_CheckedChanged()` metodu. Tato metoda je volána vždy, když uživatel vybere nebo zruší zaškrtnutí políčka.
 
    > [!TIP]
-   > Při práci na aplikaci se často přesouváte mezi editorem kódu a **Návrhář formulářů**. Rozhraní IDE usnadňuje navigaci v projektu. Pomocí **Průzkumník řešení** otevřít **Návrhář formulářů** dvojím kliknutím na *Form1.cs* v jazyce C# nebo *Form1. vb* v Visual Basic nebo na panelu nabídek vyberte možnost   >  **Návrhář** zobrazení.
+   > Při práci na aplikaci se často přesouváte mezi editorem kódu a **Návrhář formulářů**. Rozhraní IDE usnadňuje navigaci v projektu. Pomocí **Průzkumník řešení** otevřete **Návrhář formulářů** dvojitým kliknutím na *Form1. cs* v jazyce C# nebo *Form1. vb* v Visual Basic nebo na řádku nabídek vyberte možnost   >  **Návrhář** zobrazení.
 
     Následující příklad ukazuje nový kód, který se zobrazí v editoru kódu.
 
-    [!code-csharp[VbExpressTutorial1Step6_#2](../ide/codesnippet/CSharp/step-6-name-your-button-controls_2.cs)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial1step6/cs/form1.cs" id="Snippet2":::
 
-    [!code-vb[VbExpressTutorial1Step6_#2](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_2.vb)]
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step6/vb/form1.vb" id="Snippet2":::
 
     > [!NOTE]
     > Váš kód nemusí zobrazit obslužné rutiny událostí ve camelCase písmenech.

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: b9446fa0edb9302d4032f19f23c8adb8747d9cc8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 140700615759404f02109c4506f4c27d083a74b1
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859304"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215536"
 ---
 # <a name="bind-objects-as-data-sources-in-visual-studio"></a>Vázání objektů jako datových zdrojů v aplikaci Visual Studio
 
@@ -69,8 +69,8 @@ Nejjednodušší způsob, jak načíst vlastní objekty s daty, je zavolat `Tabl
 
 Následující příklad ukazuje, jak projít řádky v tabulce dat a naplnit objekt daty:
 
-[!code-csharp[VbRaddataConnecting#4](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_1.cs)]
-[!code-vb[VbRaddataConnecting#4](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_1.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConnecting/CS/Form1.cs" id="Snippet4":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConnecting/VB/Form1.vb" id="Snippet4":::
 
 ### <a name="create-a-typed-collection-of-objects"></a>Vytvořit typovou kolekci objektů
 
@@ -85,8 +85,8 @@ Automaticky vygenerovaná kolekce v nástroji <xref:System.Windows.Forms.Binding
 
 Následující kód ukazuje, jak vytvořit třídu pro kolekci objektů se silným typem `Order` :
 
-[!code-csharp[VbRaddataConnecting#8](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_2.cs)]
-[!code-vb[VbRaddataConnecting#8](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_2.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConnecting/CS/Class1.cs" id="Snippet8":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConnecting/VB/Class1.vb" id="Snippet8":::
 
 ### <a name="add-objects-to-a-collection"></a>Přidání objektů do kolekce
 
@@ -97,16 +97,16 @@ Objekty lze do kolekce přidat voláním `Add` metody třídy vlastní kolekce n
 
 Následující kód ukazuje, jak přidat objekty do typové kolekce v <xref:System.Windows.Forms.BindingSource> :
 
-[!code-csharp[VbRaddataConnecting#5](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_3.cs)]
-[!code-vb[VbRaddataConnecting#5](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_3.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConnecting/CS/Class1.cs" id="Snippet5":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConnecting/VB/Class1.vb" id="Snippet5":::
 
 Následující kód ukazuje, jak přidat objekty do typové kolekce, která dědí z <xref:System.ComponentModel.BindingList%601> :
 
 > [!NOTE]
 > V tomto příkladu `Orders` je kolekce vlastností `Customer` objektu.
 
-[!code-csharp[VbRaddataConnecting#6](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_4.cs)]
-[!code-vb[VbRaddataConnecting#6](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_4.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConnecting/CS/Class1.cs" id="Snippet6":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConnecting/VB/Class1.vb" id="Snippet6":::
 
 ### <a name="remove-objects-from-a-collection"></a>Odebrání objektů z kolekce
 
@@ -117,8 +117,8 @@ Objekty z kolekce můžete odebrat voláním `Remove` `RemoveAt` metody nebo tř
 
 Následující kód ukazuje, jak vyhledat a odebrat objekty ze typové kolekce v <xref:System.Windows.Forms.BindingSource> s <xref:System.Windows.Forms.BindingSource.RemoveAt%2A> metodou:
 
-[!code-csharp[VbRaddataConnecting#7](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_5.cs)]
-[!code-vb[VbRaddataConnecting#7](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_5.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConnecting/CS/Class1.cs" id="Snippet7":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConnecting/VB/Class1.vb" id="Snippet7":::
 
 ### <a name="display-object-data-to-users"></a>Zobrazení dat objektu uživatelům
 
@@ -146,8 +146,8 @@ Chcete-li uložit data z kolekce objektů, smyčkou prostřednictvím kolekce ob
 
 Následující příklad ukazuje, jak použít `TableAdapter.Insert` metodu DBDirect pro přidání nového zákazníka přímo do databáze:
 
-[!code-csharp[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_6.cs)]
-[!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_6.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form3.cs" id="Snippet23":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form3.vb" id="Snippet23":::
 
 ## <a name="see-also"></a>Viz také
 

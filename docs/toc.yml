@@ -906,6 +906,7 @@
 - name: Ladění >>
   href: debugger/index.yml
 - name: Správa verzí
+  expanded: true
   items:
     - name: Nové prostředí Git v aplikaci Visual Studio
       href: ide/git-with-visual-studio.md

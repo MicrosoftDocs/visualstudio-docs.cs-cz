@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 238f6a2b6492fdd4ac04e0b596bbfbc304529786
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f64189cbde62ea70ae51fcdcbb8869377dd865f1
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950832"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214301"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>Krok 3: Přidání časovače odpočítávání
 
@@ -33,8 +33,8 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
 
 1. Přidejte celočíselnou proměnnou s názvem **TimeLeft**, stejně jako jste provedli v předchozím postupu. Váš kód by měl vypadat takto.
 
-     [!code-vb[VbExpressTutorial3Step3#5](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_1.vb)]
-     [!code-csharp[VbExpressTutorial3Step3#5](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_1.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb" id="Snippet5":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs" id="Snippet5":::
 
      [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
@@ -54,8 +54,8 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
 
 5. Do nové metody obslužné rutiny události přidejte následující příkazy.
 
-     [!code-vb[VbExpressTutorial3Step3#6](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_2.vb)]
-     [!code-csharp[VbExpressTutorial3Step3#6](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_2.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb" id="Snippet6":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs" id="Snippet6":::
 
      Na základě toho, co jste přidali, časovač kontroluje každou sekundu, zda je čas spuštěn, určením, zda je proměnná **TimeLeft** celého čísla větší než 0. Pokud je, zůstane čas stále. Časovač nejprve odečte 1 od timeLeft a poté aktualizuje vlastnost **text** ovládacího prvku **timeLabel** , aby zobrazila příjemce kvízu, kolik sekund zbývá.
 
@@ -91,8 +91,8 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
 
      Prohlédněte si úzce na příkazu, který jste přidali v `else` bloku, abyste zobrazili odpověď na problém sčítání.
 
-     [!code-vb[VbExpressTutorial3Step3#24](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_3.vb)]
-     [!code-csharp[VbExpressTutorial3Step3#24](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_3.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb" id="Snippet24":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs" id="Snippet24":::
 
      Příkaz `addend1 + addend2` sečte hodnoty dvou proměnných dohromady. První část ( `sum.Value` ) používá vlastnost **Value** součtového ovládacího prvku NumericUpDown k zobrazení správné odpovědi. Stejnou vlastnost použijete později ke kontrole odpovědí pro kvíz.
 
@@ -100,8 +100,8 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
 
 6. Přidejte tři řádky na konec `StartTheQuiz()` metody, aby kód vypadal jako následující.
 
-     [!code-vb[VbExpressTutorial3Step3#7](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_4.vb)]
-     [!code-csharp[VbExpressTutorial3Step3#7](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_4.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb" id="Snippet7":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs" id="Snippet7":::
 
      Teď, když se kvíz spustí, proměnná **TimeLeft** je nastavená na 30 a vlastnost **text** ovládacího prvku **timeLabel** je nastavená na 30 sekund. Pak <xref:System.Windows.Forms.Timer.Start> Metoda ovládacího prvku Timer spustí odpočítávání. (Kvíz ještě nekontroluje odpověď – to je dál.)
 

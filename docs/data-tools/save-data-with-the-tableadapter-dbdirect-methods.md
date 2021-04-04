@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 00f508163dc039d5c29013538a78fa7dab6091fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4539d269f27cd09f96c8633d0efd603708f1f2e1
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858446"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215770"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>Ukládání dat pomocí metod TableAdapter DBDirect
 
@@ -119,7 +119,7 @@ Chcete-li vytvořit ovládací prvky vázané na data ve formuláři Windows, p�
 
 2. Pro každé tlačítko nastavte následující vlastnosti **názvu** a **textu** .
 
-    |Název|Text|
+    |Name|Text|
     |----------|----------|
     |`InsertButton`|**Insert**|
     |`UpdateButton`|**Aktualizace**|
@@ -131,8 +131,8 @@ Chcete-li vytvořit ovládací prvky vázané na data ve formuláři Windows, p�
 
 2. Proměnnou `InsertButton_Click` obslužné rutiny události nahraďte následujícím kódem:
 
-     [!code-vb[VbRaddataSaving#1](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_1.vb)]
-     [!code-csharp[VbRaddataSaving#1](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_1.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb" id="Snippet1":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs" id="Snippet1":::
 
 ### <a name="to-add-code-to-update-records-in-the-database"></a>Přidání kódu pro aktualizaci záznamů v databázi
 
@@ -140,8 +140,8 @@ Chcete-li vytvořit ovládací prvky vázané na data ve formuláři Windows, p�
 
 2. Proměnnou `UpdateButton_Click` obslužné rutiny události nahraďte následujícím kódem:
 
-     [!code-vb[VbRaddataSaving#2](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_2.vb)]
-     [!code-csharp[VbRaddataSaving#2](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_2.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb" id="Snippet2":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs" id="Snippet2":::
 
 ### <a name="to-add-code-to-delete-records-from-the-database"></a>Přidání kódu pro odstranění záznamů z databáze
 
@@ -149,8 +149,8 @@ Chcete-li vytvořit ovládací prvky vázané na data ve formuláři Windows, p�
 
 2. Proměnnou `DeleteButton_Click` obslužné rutiny události nahraďte následujícím kódem:
 
-     [!code-vb[VbRaddataSaving#3](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_3.vb)]
-     [!code-csharp[VbRaddataSaving#3](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_3.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb" id="Snippet3":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs" id="Snippet3":::
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 

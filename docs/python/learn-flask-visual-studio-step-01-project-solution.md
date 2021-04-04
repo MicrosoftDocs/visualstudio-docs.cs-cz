@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ca82beef26f897b2f5d3a145c968c11efaabc294
-ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
+ms.openlocfilehash: 89a84198256657ae7f94d0a923780163bee73e48
+ms.sourcegitcommit: 5c0e20fc6005bc1f8ca38f4122378c4ac21ba89a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104806053"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106110607"
 ---
 # <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>Kurz: Začínáme s webovým rozhraním v baňce v aplikaci Visual Studio
 
@@ -49,7 +49,7 @@ V průběhu těchto kroků vytvoříte jedno řešení sady Visual Studio, kter�
 > [!Note]
 > Tento kurz se liší od rychlého startu v [baňce](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json) , ve kterém se dozvíte více o baňce a také o tom, jak používat různé šablony projektů v baňce, které poskytují rozsáhlejší výchozí bod pro vaše vlastní projekty. Například šablony projektu automaticky instalují balíček baňky při vytváření projektu, ale nevyžadují ruční instalaci balíčku, jak je znázorněno v rychlém startu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Visual Studio 2017 nebo novější ve Windows s následujícími možnostmi:
   - Úloha **vývoje Pythonu** (karta **zatížení** v instalačním programu). Pokyny najdete v tématu [Instalace podpory Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md).
@@ -221,17 +221,17 @@ def hello():
 
 ### <a name="question-how-does-flask-work-with-variable-url-routes-and-query-parameters"></a>Otázka: jak má baňka pracovat s proměnnými adresy URL a parametry dotazu?
 
-Odpověď: v trase označíte jakoukoli proměnnou pomocí `<variable_name>` a pomocí pojmenovaného argumentu projdete tuto proměnnou do funkce. Proměnná může být součástí cesty URL nebo v parametru dotazu. Například trasa ve formě `'/hello/<name>` vygeneruje řetězcový argument `name` s názvem funkce a použití `?message=<msg>` v trase analyzuje hodnotu zadanou pro parametr dotazu "Message =" a předá ho funkci jako `msg` :
+Odpověď: v trase označíte jakoukoli proměnnou pomocí `<variable_name>` a pomocí pojmenovaného argumentu v cestě URL projdete tuto proměnnou do funkce. Například trasa ve formě `/hello/<name>` vygeneruje řetězcový argument `name` s názvem funkce. Parametry dotazu jsou k dispozici prostřednictvím `request.args` vlastnosti, konkrétně prostřednictvím `request.args.get` metody. Další informace naleznete v dokumentaci k [objektu Request](https://flask.palletsprojects.com/en/1.1.x/quickstart/#the-request-object) v dokumentaci k baňce.
 
 ```python
-@app.route('/hello/<name>?message=<msg>')
-def hello(name, msg):
-    return "Hello " + name + "! Message is " + msg + "."
+# URL: /hello/<name>?message=Have%20a%20nice%20day
+@app.route('/hello/<name>')
+def hello(name):
+    msg = request.args.get('message','')
+    return "Hello " + name + "! "+ msg + "."
 ```
 
 Chcete-li změnit typ, předponu proměnné s `int` , `float` , `path` (která přijímá lomítka k vymezení názvů složek) a `uuid` . Podrobnosti najdete v tématu [pravidla proměnných](https://flask.palletsprojects.com/en/1.0.x/quickstart/#variable-rules) v dokumentaci k baňce.
-
-Parametry dotazu jsou také k dispozici prostřednictvím `request.args` vlastnosti, konkrétně prostřednictvím `request.args.get` metody. Další informace naleznete v dokumentaci k [objektu Request](https://flask.palletsprojects.com/en/1.0.x/quickstart/#the-request-object) v dokumentaci k baňce.
 
 ### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>Otázka: může Visual Studio po instalaci dalších balíčků vygenerovat soubor requirements.txt z virtuálního prostředí?
 

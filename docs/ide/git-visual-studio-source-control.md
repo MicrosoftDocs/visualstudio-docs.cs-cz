@@ -2,18 +2,18 @@
 title: Jak Visual Studio usnadňuje správu zdrojového kódu
 titleSuffix: ''
 description: Naučte se, jak pomocí Gitu & GitHubu v aplikaci Visual Studio sledovat změny kódu a vracet je, pokud potřebujete.
-ms.date: 03/22/2021
+ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 15e3c08606edf0e491785ba8599c5eb07c6b4551
-ms.sourcegitcommit: 08ee19f260164271e18bdbafe624301508f554ce
+ms.openlocfilehash: 6e4bed3201a48975e9da266794f085f78be6d68c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "105006781"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215575"
 ---
 # <a name="how-visual-studio-makes-source-control-easy"></a>Jak Visual Studio usnadňuje správu zdrojového kódu
 
@@ -51,5 +51,6 @@ Další informace o použití Gitu a GitHubu v aplikaci Visual Studio najdete v 
 
 ## <a name="see-also"></a>Viz také
 
+- [Začínáme s Git a GitHubem v aplikaci Visual Studio](/learn/modules/visual-studio-github-push/)
 - [Nové prostředí Git v aplikaci Visual Studio](git-with-visual-studio.md)
 - [Porovnání Gitu a Team Explorer vedle sebe](git-team-explorer-feature-comparison.md)

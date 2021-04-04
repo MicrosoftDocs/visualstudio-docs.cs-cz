@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1b4722f04ae46f85d7cc70dadf6127330e8f6616
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5665fc28bacb76c6887cb7dcb1820ec9dc0d2b3a
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851711"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215315"
 ---
 # <a name="associate-custom-data-with-sharepoint-tools-extensions"></a>Přidružit vlastní data k rozšířením nástrojů služby SharePoint
   Můžete přidat vlastní data do určitých objektů v rozšířeních nástrojů služby SharePoint. To je užitečné v případě, že máte data v jedné části rozšíření, ke kterým chcete získat přístup později z jiného kódu v rozšíření. Namísto implementace vlastního způsobu ukládání a přístupu k datům můžete přidružit data k objektu v rozšíření a následně načíst data ze stejného objektu později.
@@ -79,8 +79,8 @@ ms.locfileid: "99851711"
 
   Následující příklad kódu určuje, zda je určitý datový objekt již přidružen k položce projektu. Pokud datový objekt již není přidružen k položce projektu, kód přidá objekt do <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> vlastnosti položky projektu. Chcete-li zobrazit tento příklad v kontextu většího příkladu, přečtěte si téma [Postup: Přidání vlastnosti do vlastního typu položky projektu služby SharePoint](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md).
 
-  [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb#13)]
-  [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs#13)]
+  :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb" id="Snippet13":::
+  :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs" id="Snippet13":::
 
 ## <a name="see-also"></a>Viz také
 - [Programování konceptů a funkcí pro rozšíření nástrojů služby SharePoint](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)

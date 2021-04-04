@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 15bfae190ba2960c291dca635bfff1188ac64ab5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b0418c8f3928ae2004055db7dfa70be123719377
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836186"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106082523"
 ---
 # <a name="xaml-designer-options-page"></a>Stránka možností Návrhář XAML
 
@@ -61,6 +61,17 @@ Pomocí tohoto nastavení můžete určit, jak přiblížení funguje při úpra
 |**Kolečko myši**|Přiblížením myši Návrhář XAML posouváním kolečka myši.|
 |**CTRL + kolečko myši**|Přiblížení Návrhář XAML tím, že stisknete klávesu **CTRL** a posunete kolečko myši.|
 |**ALT + kolečko myši**|Přiblížení Návrhář XAML stisknutím klávesy **ALT** při posouvání kolečkem myši.|
+
+Tato nastavení určují chování návrháře při úpravách dokumentu XAML.
+
+## <a name="default-zoom-setting"></a>Výchozí nastavení přiblížení
+
+Pomocí tohoto nastavení můžete určit výchozí hodnotu přiblížení pro zobrazení dokumentu XAML.
+
+|Název|Description|
+|-|-|
+|**Naposledy použito**|Ve výchozím nastavení použijte naposledy použitou hodnotu přiblížení pro všechny dokumenty XAML. Při prvním otevření dokumentu jazyka XAML bude použito nastavení přizpůsobit vše pouze pro první spuštění.|
+|**Přizpůsobit všem**|Tuto možnost použijte, chcete-li nastavit hodnotu přiblížení pro návrháře XAML na možnost přizpůsobit vše. Když je dokument XAML uzavřený a znovu otevřený, pak se pro tuto relaci uchová hodnota poslední nastavená, ale ve výchozím nastavení se použije pro různé relace "všechno stejné".|
 
 Tato nastavení určují chování návrháře při úpravách dokumentu XAML.
 

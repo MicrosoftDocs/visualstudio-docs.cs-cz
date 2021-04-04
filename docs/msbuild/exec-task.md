@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 785d1bcfb8fdce5b09e749dcca17ff476a5d3f48
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c3b89e074a4c67e8d16a07eb48431ebe1ade694f
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877158"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106083565"
 ---
 # <a name="exec-task"></a>Exec – úloha
 
@@ -49,6 +49,7 @@ Následující tabulka popisuje parametry pro `Exec` úlohu.
 |`Outputs`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje výstupní položky úkolu. `Exec`Tato úloha je nenastavuje. Místo toho je můžete zadat, jako by ji nastavili, aby bylo možné je použít později v projektu.|
 |`StdErrEncoding`|Volitelný `String` výstupní parametr.<br /><br /> Určuje kódování standardního streamu chyb zaznamenané úlohy. Výchozí hodnota je aktuální kódování výstupu konzoly.|
 |`StdOutEncoding`|Volitelný `String` výstupní parametr.<br /><br /> Určuje kódování standardního výstupního datového proudu zachycené úlohy. Výchozí hodnota je aktuální kódování výstupu konzoly.|
+|`UseUtf8Encoding`|Volitelný `String` parametr.<br /><br /> Určuje, zda se má při zpracování příkazového řádku pro provedené příkazy použít znaková stránka UTF8. Platné hodnoty jsou `Always` , `Never` nebo `Detect` . Výchozí hodnota je `Detect` , což znamená použití znakové stránky UTF8 pouze v případě, že jsou k dispozici znaky jiné než ANSI.|
 |`WorkingDirectory`|Volitelný `String` parametr.<br /><br /> Určuje adresář, ve kterém se příkaz spustí.<br /><br />Výchozí: aktuální pracovní adresář projektu.|
 
 [!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]

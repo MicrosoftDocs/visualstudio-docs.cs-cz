@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f37d0f89ad5124956198df1bde94bdb6cf54f64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 931bd4191331f229f40a813b605eac7f69a1427a
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950676"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214275"
 ---
 # <a name="step-4-add-a-click-event-handler-to-each-label"></a>Krok 4: Přidání obslužné rutiny události Click ke každému popisku
 
@@ -36,7 +36,7 @@ Porovnávací hra probíhá takto:
 
 ## <a name="to-add-a-click-event-handler-to-each-label"></a>Přidání obslužné rutiny události Click do každého popisku
 
-1. Otevřete formulář v **Návrhář formulářů**. V **Průzkumník řešení** vyberte *Form1.cs* nebo *Form1. vb*. Na panelu nabídek vyberte možnost Návrhář **zobrazení**  >  .
+1. Otevřete formulář v **Návrhář formulářů**. V **Průzkumník řešení** vyberte *Form1. cs* nebo *Form1. vb*. Na panelu nabídek vyberte možnost Návrhář **zobrazení**  >  .
 
 2. Vyberte první ovládací prvek popisku. Pak podržte stisknutou klávesu **CTRL** a vyberte všechny ostatní štítky, které chcete vybrat. Je nutné vybrat všechny popisky.
 
@@ -48,11 +48,11 @@ Porovnávací hra probíhá takto:
 
 5. Vyplňte zbývající část kódu takto:
 
-     [!code-csharp[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/CSharp/step-4-add-a-click-event-handler-to-each-label_1.cs)]
-     [!code-vb[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/VisualBasic/step-4-add-a-click-event-handler-to-each-label_1.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs" id="Snippet4":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb" id="Snippet4":::
 
-     > [!IMPORTANT]
-     > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment kódu jazyka C# nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
+    > [!IMPORTANT]
+    > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment kódu jazyka C# nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
     > [!NOTE]
     > Pokud zkopírujete a vložíte `label_Click()` blok kódu místo ručního zadání kódu, nezapomeňte nahradit stávající `label_Click()` kód. Jinak budete mít duplicitní kód bloku.

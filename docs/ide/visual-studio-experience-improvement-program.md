@@ -8,16 +8,16 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 60a67da568703282a3ae469afa4dbc15c53cf4ba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6c7f425d87ba6316c3a3cab66f2b342b4c1141f4
+ms.sourcegitcommit: 5c0e20fc6005bc1f8ca38f4122378c4ac21ba89a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873941"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106110594"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Program Zlepšování softwaru a služeb na základě zkušeností uživatelů pro Visual Studio
 
-Aplikace Visual Studio program Zlepšování softwaru a služeb na základě zkušeností uživatelů (VSCEIP) je navržena tak, aby pomohla Microsoftu v průběhu času zdokonalit Visual Studio. Tento program [shromažďuje informace o chybách](../ide/diagnostic-data-collection.md), hardwaru počítače a způsobu, jakým uživatelé používají aplikaci Visual Studio, aniž by přerušil uživatele v jejich úkolech v počítači. Shromážděné informace pomáhají společnosti Microsoft určit, které funkce se mají zlepšit. Tento dokument obsahuje informace o tom, jak vyjádřit nebo odhlásit VSCEIP.
+Aplikace Visual Studio program Zlepšování softwaru a služeb na základě zkušeností uživatelů (VSCEIP) je navržena tak, aby pomohla Microsoftu v průběhu času zdokonalit Visual Studio. Tento program [shromažďuje informace o chybách](../ide/diagnostic-data-collection.md), hardwaru počítače a způsobu, jakým uživatelé používají aplikaci Visual Studio, aniž by přerušil uživatele v jejich úkolech v počítači. Shromážděné informace pomáhají společnosti Microsoft určit, které funkce se mají zlepšit. Tento dokument obsahuje informace o tom, jak vyjádřit nebo odhlásit VSCEIP. Po odsouhlasení se odhlásíte z **volitelného** shromažďování diagnostických dat. Pro zajištění, že je sada Visual Studio zabezpečená, aktuální a funguje podle očekávání, je **nutné** provést některé shromažďování diagnostických dat. Požadovaná kolekce diagnostických dat nebude podle vašeho výběru ovlivněná na VSCEIP.
 
 [!INCLUDE [gdpr-hybrid-note](../misc/includes/gdpr-hybrid-note.md)]
 > [!NOTE]

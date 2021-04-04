@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f13d561cba0482e15f065e66200b51c8b77ddfd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0db9504404142e5bfdd17a66471820ddad790130
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966016"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214548"
 ---
 # <a name="task-writing"></a>Zápis úloh
 
@@ -241,7 +241,7 @@ Tato třída jazyka C# ukazuje úkol, který je odvozen z <xref:Microsoft.Build.
 
 ### <a name="code"></a>Kód
 
-[!code-csharp[msbuild_SimpleTask3#1](../msbuild/codesnippet/CSharp/task-writing_1.cs)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_Misc/msbuild_SimpleTask3/CS/SimpleTask3.cs" id="Snippet1":::
 
 ## <a name="example-4"></a>Příklad 4
 

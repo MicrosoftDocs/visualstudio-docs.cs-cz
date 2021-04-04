@@ -23,12 +23,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 05575e6cc75468a85a3dd410ea59bebca79eee0f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d43d4267ce0e180a525e990e372b7a6773a9cc51
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858836"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215809"
 ---
 # <a name="hierarchical-update"></a>Hierarchická aktualizace
 
@@ -93,8 +93,8 @@ Generovaný kód pro uložení obsahuje také řádek kódu, který volá `Custo
 
 2. Přidejte řádek kódu pro volání `OrdersBindingSource.EndEdit` metody za řádek, který volá `CustomersBindingSource.EndEdit` metodu. Kód v události kliknutí na tlačítko pro **uložení** by měl vypadat přibližně takto:
 
-     [!code-vb[VSProDataOrcasHierarchicalUpdate#1](../data-tools/codesnippet/VisualBasic/hierarchical-update_1.vb)]
-     [!code-csharp[VSProDataOrcasHierarchicalUpdate#1](../data-tools/codesnippet/CSharp/hierarchical-update_1.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/VB/Form1.vb" id="Snippet1":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/CS/Form1.cs" id="Snippet1":::
 
 Kromě potvrzení změn v související podřízené tabulce před uložením dat do databáze může být také nutné potvrdit nově vytvořené nadřazené záznamy před přidáním nových podřízených záznamů do datové sady. Jinými slovy, možná budete muset přidat nový nadřazený záznam ( `Customer` ) do datové sady před omezením cizího klíče, aby bylo možné přidat nové podřízené záznamy ( `Orders` ) do datové sady. K tomu můžete použít podřízenou `BindingSource.AddingNew` událost.
 
@@ -109,8 +109,8 @@ Kromě potvrzení změn v související podřízené tabulce před uložením da
 
 2. Přidejte řádek kódu do obslužné rutiny události, která volá `CustomersBindingSource.EndEdit` metodu. Kód v `OrdersBindingSource_AddingNew` obslužné rutině události by měl vypadat takto:
 
-     [!code-vb[VSProDataOrcasHierarchicalUpdate#2](../data-tools/codesnippet/VisualBasic/hierarchical-update_2.vb)]
-     [!code-csharp[VSProDataOrcasHierarchicalUpdate#2](../data-tools/codesnippet/CSharp/hierarchical-update_2.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/VB/Form1.vb" id="Snippet2":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/CS/Form1.cs" id="Snippet2":::
 
 ## <a name="tableadaptermanager-reference"></a>Odkaz na TableAdapterManager
 

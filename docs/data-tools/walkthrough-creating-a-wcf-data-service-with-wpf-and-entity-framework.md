@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 54699947588e29da7312c0574833a13bbc3c8cfd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f519d8e3bfe01fc3e4a1e4cfe82f4f8502c84821
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858186"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215692"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>Návod: Vytvoření datové služby WCF pomocí WPF a Entity Framework
 Tento návod ukazuje, jak vytvořit jednoduchý [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] hostovaný ve [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webové aplikaci a pak k němu přistupovat z aplikace model Windows Forms.
@@ -126,13 +126,14 @@ V dalším kroku vytvoříte a otestujete datovou službu.
 
 4. V **editoru kódu** vyhledejte první `TODO:` komentář a nahraďte kód následujícím kódem:
 
-     [!code-vb[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.vb)]
-     [!code-csharp[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb" id="Snippet1":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs" id="Snippet1":::
 
 5. Nahraďte komentáře v `InitializeService` obslužné rutině události následujícím kódem:
 
-     [!code-vb[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.vb)]
-     [!code-csharp[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb" id="Snippet2":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs" id="Snippet2":::
+
 
 6. Na panelu nabídek vyberte možnost **ladit**  >  **Spustit bez ladění** a spusťte službu. Otevře se okno prohlížeče a zobrazí se schéma XML pro službu.
 
@@ -198,7 +199,7 @@ V dalším kroku vytvoříte uživatelské rozhraní, které zobrazí data ze sl
 
 1. V okně **zdroje dat** otevřete místní nabídku uzlu **Customers** a vyberte možnost **Kopírovat**.
 
-2. V návrháři formuláře **Form1. vb** nebo **Form1.cs** otevřete místní nabídku a vyberte možnost **Vložit**.
+2. V návrháři formuláře **Form1. vb** nebo **Form1. cs** otevřete místní nabídku a vyberte možnost **Vložit**.
 
     <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.BindingSource> Do formuláře jsou přidány ovládací prvky, komponenty a <xref:System.Windows.Forms.BindingNavigator> komponenta.
 
@@ -249,7 +250,7 @@ V tomto kroku přizpůsobíte aplikaci pro filtrování dat podle města zákazn
 
 ### <a name="to-add-filtering-by-city"></a>Přidání filtrování podle města
 
-1. V **Průzkumník řešení** otevřete místní nabídku uzlu **Form1. vb** nebo **Form1.cs** a klikněte na tlačítko **otevřít**.
+1. V **Průzkumník řešení** otevřete místní nabídku uzlu **Form1. vb** nebo **Form1. cs** a klikněte na **otevřít**.
 
 2. Přidejte <xref:System.Windows.Forms.TextBox> ovládací prvek a <xref:System.Windows.Forms.Button> ovládací prvek ze **sady nástrojů** do formuláře.
 

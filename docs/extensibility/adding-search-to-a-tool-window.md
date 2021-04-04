@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82176afaacae3b9f4553c8b1b5b41b9a4f10dace
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ca1998b5ca3ad78b269c50244ddf51796c9e4005
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097549"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215523"
 ---
 # <a name="add-search-to-a-tool-window"></a>Přidání vyhledávání do okna nástroje
 Při vytváření nebo aktualizaci okna nástroje ve vašem rozšíření můžete přidat stejné funkce hledání, které se zobrazí jinde v aplikaci Visual Studio. Tato funkce zahrnuje tyto funkce:
@@ -79,8 +79,8 @@ Podle tohoto návodu se dozvíte, jak provádět následující úlohy:
 
      Tento kód přidá veřejnou <xref:System.Windows.Controls.TextBox> vlastnost s názvem **SearchResultsTextBox** a vlastnost veřejného řetězce s názvem **SearchContent**. V konstruktoru je SearchResultsTextBox nastaveno na textové pole a SearchContent je inicializována na sadu řetězců oddělenými na nový řádek. Obsah textového pole je také inicializován do sady řetězců.
 
-     [!code-csharp[ToolWindowSearch#1](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs)]
-     [!code-vb[ToolWindowSearch#1](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/toolwindowsearch/cs/mycontrol.xaml.cs" id="Snippet1":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/toolwindowsearch/vb/mycontrol.xaml.vb" id="Snippet1":::
 
 5. Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance aplikace Visual Studio.
 

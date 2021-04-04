@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a7f8645cd34fe56d7d8d0f6a9efa6bf01bd13d8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9bc7fe3898bec19b4eb0130e7279974823669e7f
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939653"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106082536"
 ---
 # <a name="how-msbuild-builds-projects"></a>Jak MSBuild sestavuje projekty
 
@@ -139,7 +139,7 @@ Soubory *Microsoft. Common. props* nastaví výchozí hodnoty, které můžete p
 
 Soubor *Microsoft. Common.* TARGETS a cílové soubory, které importuje, definují standardní proces sestavení pro projekty .NET. Poskytuje také Rozšiřovací body, které lze použít k přizpůsobení sestavení.
 
-V implementaci, *Microsoft. Common. targets* je tenká obálka, která importuje *Microsoft. Common. CurrentVersion. targets*. Tento soubor obsahuje nastavení pro standardní vlastnosti a definuje skutečné cíle, které definují proces sestavení. `Build`Cíl je zde definován, ale ve skutečnosti je prázdný. `Build`Cíl však obsahuje `DependsOn` atribut, který určuje jednotlivé cíle, které tvoří vlastní kroky sestavení, které jsou, `BeforeBuild` `CoreBuild` a `AfterBuild` . `Build`Cíl je definován následujícím způsobem:
+V implementaci, *Microsoft. Common. targets* je tenká obálka, která importuje *Microsoft. Common. CurrentVersion. targets*. Tento soubor obsahuje nastavení pro standardní vlastnosti a definuje skutečné cíle, které definují proces sestavení. `Build`Cíl je zde definován, ale ve skutečnosti je prázdný. `Build`Cíl však obsahuje `DependsOnTargets` atribut, který určuje jednotlivé cíle, které tvoří vlastní kroky sestavení, které jsou, `BeforeBuild` `CoreBuild` a `AfterBuild` . `Build`Cíl je definován následujícím způsobem:
 
 ```xml
   <PropertyGroup>
@@ -157,7 +157,7 @@ V implementaci, *Microsoft. Common. targets* je tenká obálka, která importuje
       Returns="@(TargetPathWithTargetPlatformMoniker)" />
 ```
 
-`BeforeBuild` a `AfterBuild` jsou rozšiřovací body. Jsou prázdné v souboru *Microsoft. Common. CurrentVersion. targets* , ale projekty mohou poskytnout své vlastní `BeforeBuild` a `AfterBuild` cíle s úkoly, které je třeba provést před nebo po hlavním procesu sestavení. `AfterBuild` je spuštěn před cílem no-op, `Build` , protože `AfterBuild` se zobrazí v `DependsOn` atributu v `Build` cíli, ale nastane po `CoreBuild` .
+`BeforeBuild` a `AfterBuild` jsou rozšiřovací body. Jsou prázdné v souboru *Microsoft. Common. CurrentVersion. targets* , ale projekty mohou poskytnout své vlastní `BeforeBuild` a `AfterBuild` cíle s úkoly, které je třeba provést před nebo po hlavním procesu sestavení. `AfterBuild` je spuštěn před cílem no-op, `Build` , protože `AfterBuild` se zobrazí v `DependsOnTargets` atributu v `Build` cíli, ale nastane po `CoreBuild` .
 
 `CoreBuild`Cíl obsahuje volání nástrojů sestavení následujícím způsobem:
 

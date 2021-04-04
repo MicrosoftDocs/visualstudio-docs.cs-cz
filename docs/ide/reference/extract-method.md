@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: b39112a696611103828d862c7f7adf04784e6222
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ee11ec012ae0f104f5fefff7302d3982e43721a
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860994"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106083652"
 ---
 # <a name="extract-a-method-refactoring"></a>Extrakce refaktoringu metody
 
@@ -40,7 +40,7 @@ Tento refaktoring platí pro:
 
    - C#:
 
-       ! Snímek obrazovky zobrazující kód C# pro třídu programu V hlavní funkci této třídy byl zvýrazněn řádek kódu.] (Media/extractmethod-highlight-cs.png)
+       ![Snímek obrazovky zobrazující kód C# pro třídu programu V hlavní funkci této třídy byl zvýrazněn řádek kódu.](media/extractmethod-highlight-cs.png)
 
    - Visual Basic:
 

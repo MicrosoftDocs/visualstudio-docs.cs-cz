@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: f95a4f130e8ad662b3f0eca8f6f7d2162e2d1c7e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3bcf3a69dcf8053851e3d8519a25f61fe23ae7e3
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841715"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106082562"
 ---
 # <a name="use-docker-compose"></a>Použití Docker Compose
 
@@ -168,7 +168,7 @@ docker run -d \
         image: mysql:5.7
     ```
 
-1. Dále Definujte mapování svazků. Po spuštění kontejneru s nástrojem `docker run` byl vytvořen pojmenovaný svazek automaticky. To se ale nestane při spuštění s vytvářením. Svazek musíte definovat v části nejvyšší úrovně `volumes:` a pak v konfiguraci služby zadat přípojný bod. Pouhým zadáním jenom názvu svazku se použijí výchozí možnosti. [K dispozici je mnoho dalších možností](https://docs.docker.com/compose/compose-file/#volume-configuration-reference) , ale.
+1. Dále Definujte mapování svazků. Po spuštění kontejneru s nástrojem `docker run` byl vytvořen pojmenovaný svazek automaticky. To se ale nestane při spuštění s vytvářením. Svazek musíte definovat v části nejvyšší úrovně `volumes:` a pak v konfiguraci služby zadat přípojný bod. Pouhým zadáním jenom názvu svazku se použijí výchozí možnosti. [K dispozici je mnoho dalších možností](https://github.com/compose-spec/compose-spec/blob/master/spec.md#volumes-top-level-element) , ale.
 
     ```yaml hl_lines="8 9 10 11 12"
     version: "3.7"

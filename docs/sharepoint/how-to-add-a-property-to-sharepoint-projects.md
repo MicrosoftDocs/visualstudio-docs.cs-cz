@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cde9235ffb7c692240c8f16ea0e93f49c79f002e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7be241dd4a043b8104c628e73f98e8881dc8b88b
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934868"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215419"
 ---
 # <a name="how-to-add-a-property-to-sharepoint-projects"></a>Postupy: Přidání vlastnosti do projektů služby SharePoint
   K přidání vlastnosti do libovolného projektu služby SharePoint lze použít rozšíření projektu. Vlastnost se zobrazí v okně **vlastnosti** , když je projekt vybrán v **Průzkumník řešení**.
@@ -39,8 +39,8 @@ ms.locfileid: "99934868"
 ## <a name="example"></a>Příklad
  Následující příklad kódu ukazuje, jak přidat dvě vlastnosti do projektů služby SharePoint. Jedna vlastnost uchovává svá data v souboru možností uživatele projektu (soubor *. csproj. User* nebo *. vbproj. User* ). Druhá vlastnost uchovává svá data v souboru projektu (soubor *. csproj* nebo *. vbproj* ).
 
- [!code-vb[SpExt_SPCustomPrjProperty#1](../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb#1)]
- [!code-csharp[SpExt_SPCustomPrjProperty#1](../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs#1)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb" id="Snippet1":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs" id="Snippet1":::
 
 ### <a name="understand-the-code"></a>Vysvětlení kódu
  Chcete-li zajistit, aby se stejná instance `CustomProjectProperties` třídy použila při každém <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested> výskytu události, příklad kódu přidá objekt Properties do <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> Vlastnosti projektu, když dojde k první události. Kód načte tento objekt vždy, když dojde k této události znovu. Další informace o použití <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> Vlastnosti k přidružení dat k projektům naleznete v tématu [přidružte vlastní data k rozšířením nástrojů služby SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md).
