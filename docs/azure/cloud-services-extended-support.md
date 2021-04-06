@@ -1,5 +1,5 @@
 ---
-title: Použít Cloud Services (Rozšířená podpora) (Preview)
+title: Použít Cloud Services (Rozšířená podpora)
 description: Naučte se vytvářet a nasazovat Cloud Services (Rozšířená podpora) pomocí Azure Resource Manager se sadou Visual Studio.
 author: ghogen
 manager: jmartens
@@ -9,32 +9,26 @@ ms.topic: how-to
 ms.date: 01/25/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 39a76f4c76afb2ed0c738adfc477807eebfdbc61
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 289bc88d9aef40fdc260ce84395b1c4b9237c689
+ms.sourcegitcommit: 2a50f4c1705baeee5c05580f04e3f468550f44e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841130"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106381595"
 ---
-# <a name="create-and-deploy-to-cloud-services-extended-support-in-visual-studio-preview"></a>Vytvoření a nasazení do Cloud Services (Rozšířená podpora) v aplikaci Visual Studio (Preview)
+# <a name="create-and-deploy-to-cloud-services-extended-support-in-visual-studio"></a>Vytvoření a nasazení do Cloud Services (Rozšířená podpora) v aplikaci Visual Studio
 
-Počínaje [verzí Visual Studio 2019 verze 16,9](https://visualstudio.microsoft.com/vs/preview) (aktuálně ve verzi Preview) můžete pracovat s cloud services pomocí Azure Resource Manager, což výrazně zjednodušuje a modernizes údržbu a správu prostředků Azure. Tato možnost je povolená novou službou Azure, která se označuje jako *Cloud Services (Rozšířená podpora)*. Existující cloudovou službu můžete publikovat na Cloud Services (Rozšířená podpora). Informace o této službě Azure najdete v [dokumentaci Cloud Services (Rozšířená podpora)](/azure/cloud-services-extended-support/overview).
+Počínaje [verzí Visual Studio 2019 verze 16,9](https://visualstudio.microsoft.com/vs/)můžete pracovat s cloud services pomocí Azure Resource Manager, což výrazně zjednodušuje a modernizes údržbu a správu prostředků Azure. Tato možnost je povolená novou službou Azure, která se označuje jako *Cloud Services (Rozšířená podpora)*. Existující cloudovou službu můžete publikovat na Cloud Services (Rozšířená podpora). Informace o této službě Azure najdete v [dokumentaci Cloud Services (Rozšířená podpora)](/azure/cloud-services-extended-support/overview).
 
 ## <a name="publish-to-cloud-services-extended-support"></a>Publikování na Cloud Services (Rozšířená podpora)
 
-Když publikujete stávající projekt cloudové služby Azure do Cloud Services (Rozšířená podpora), pořád si zachováte možnost publikovat do klasické cloudové služby Azure. V aplikaci Visual Studio 2019 verze 16,9 Preview 3 a novější má klasický projekt cloudové služby speciální verzi příkazu **publikovat** , **publikovat (Rozšířená podpora)**. Tento příkaz se zobrazí v místní nabídce v **Průzkumník řešení**.
+Když publikujete stávající projekt cloudové služby Azure do Cloud Services (Rozšířená podpora), pořád si zachováte možnost publikovat do klasické cloudové služby Azure. V aplikaci Visual Studio 2019 verze 16,9 a novější mají klasické projekty cloudových služeb speciální verzi příkazu **publikovat** , **publikovat (Rozšířená podpora)**. Tento příkaz se zobrazí v místní nabídce v **Průzkumník řešení**.
 
-Když publikujete do Cloud Services (Rozšířená podpora), dojde k nějakým rozdílům. Nebudete například dotazováni, pokud publikujete do **přípravy** nebo **výroby**, protože tyto sloty nasazení nejsou součástí modelu publikování rozšířené podpory. Místo toho můžete pomocí Cloud Services (rozšířenou podporu) nastavit více nasazení a prohodit nasazení v Azure Portal. I když nástroje sady Visual Studio umožňují tuto funkci nastavit v 16,9 Preview 3, funkce swap nebude povolena až do pozdější verze Cloud Services (Rozšířená podpora) a může způsobit selhání při nasazení během období Preview.
+Když publikujete do Cloud Services (Rozšířená podpora), dojde k nějakým rozdílům. Nebudete například dotazováni, pokud publikujete do **přípravy** nebo **výroby**, protože tyto sloty nasazení nejsou součástí modelu publikování rozšířené podpory. Místo toho můžete pomocí Cloud Services (rozšířenou podporu) nastavit více nasazení a prohodit nasazení v Azure Portal. I když nástroje sady Visual Studio umožňují toto nastavení v 16,9, funkce swap nebude povolena až do pozdější verze Cloud Services (Rozšířená podpora) a může způsobit selhání při nasazení během období Preview.
 
 Před publikováním klasické cloudové služby Azure do Cloud Services (Rozšířená podpora) Zkontrolujte účty úložiště, které váš projekt používá, a ujistěte se, že jsou účty úložiště v1 nebo úložiště v2. Klasické typy účtů úložiště selžou s chybovou zprávou v době nasazení. Nezapomeňte zkontrolovat účet úložiště používaný diagnostikou. Informace o kontrole účtu úložiště diagnostiky najdete v tématu [nastavení diagnostiky pro Azure Cloud Services a virtuální počítače](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md). Pokud vaše služba používá klasický účet úložiště, můžete ji upgradovat. viz [upgrade na účet úložiště pro obecné účely v2](/azure/storage/common/storage-account-upgrade?tabs=azure-portal).  Obecné informace o typech účtů úložiště najdete v tématu [Přehled účtu úložiště](/azure/storage/common/storage-account-overview).
 
 ### <a name="to-publish-a-classic-azure-cloud-service-project-to-cloud-services-extended-support"></a>Publikování klasického projektu cloudové služby Azure pro Cloud Services (Rozšířená podpora)
-
-1. Cloud Services (Rozšířená podpora) je aktuálně ve verzi Preview. Zaregistrujte funkci pro vaše předplatné následujícím způsobem:
-
-   ```azurepowershell-interactive
-   Register-AzProviderFeature -FeatureName CloudServices -ProviderNamespace Microsoft.Compute
-   ```
 
 1. Klikněte pravým tlačítkem myši na uzel projektu v projektu cloudové služby Azure (Classic) a vyberte **publikovat (Rozšířená podpora)...** Na první obrazovce se otevře **Průvodce publikováním** .
 

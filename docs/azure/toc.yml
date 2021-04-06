@@ -40,7 +40,7 @@
   items:
     - name: Práce s projekty cloudových služeb
       items:
-        - name: Použít Cloud Services (Rozšířená podpora) (Preview)
+        - name: Použít Cloud Services (Rozšířená podpora)
           href: cloud-services-extended-support.md
         - name: Vytvoření projektu cloudové služby Azure
           href: vs-azure-tools-azure-project-create.md
