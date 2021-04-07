@@ -2,7 +2,7 @@
 title: Nastavení symbolu (PDB) a zdrojových souborů v ladicím programu
 description: Naučte se konfigurovat a spravovat symboly a zdrojové soubory v aplikaci Visual Studio.
 ms.custom: ''
-ms.date: 10/31/2019
+ms.date: 3/31/2021
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Debugger.Native
@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 496994c0f9d546efe8804481230081090309d47e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7ad72d2aa659f3d43bfca99c359d5db94e2d1045
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903569"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106083680"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Určení symbolu (. pdb) a zdrojových souborů v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F #)
 
@@ -246,9 +246,10 @@ Pokud k tomu dojde, ladicí program zobrazí **Nenačtené symboly** nebo **Nena
 
 - Chcete-li změnit cestu pro hledání, vyberte nevybranou cestu nebo vyberte možnost **Nová cesta** nebo **Nová cesta VSTS** a zadejte nebo vyberte novou cestu. Vyberte **načíst** pro opětovné hledání cest a načtení souboru symbolů, pokud je nalezen.
 - Pokud chcete přepsat všechny možnosti symbolu a opakovat cesty hledání, vyberte **Procházet a najít \<executable-name>**. Soubor symbolů se načte, pokud se najde, nebo se otevře **Průzkumník souborů** , abyste mohli ručně vybrat soubor symbolů.
-- Chcete-li otevřít  >    >  stránku **symboly** ladění možností, vyberte možnost **změnit nastavení symbolu**.
-- Chcete-li znovu zobrazit zpětný překlad v novém okně, vyberte možnost **Zobrazit zpětný překlad**, nebo vyberte možnost **dialog možností** pro nastavení možnosti, aby bylo možné vždy zobrazit zpětný překlad, pokud nejsou nalezeny zdrojové soubory nebo soubory symbolů.
+- Chcete-li otevřít stránku nastavení symbolu pro konfiguraci chování, vyberte možnost **změnit nastavení symbolu** (nebo zvolte **možnost**  >    >  **symboly** ladění).
+- Upřesnit Chcete-li znovu zobrazit zpětný překlad v novém okně, vyberte možnost **Zobrazit zpětný překlad**, nebo vyberte možnost **dialog možností** pro nastavení možnosti, aby bylo možné vždy zobrazit zpětný překlad, pokud nejsou nalezeny zdrojové soubory nebo soubory symbolů. Další informace naleznete v tématu [zobrazení kódu](../debugger/how-to-use-the-disassembly-window.md)zpětného překladu.
 - Chcete-li zobrazit prohledávané umístění a výsledek, rozbalte položku **informace o načtení symbolů**.
+- Pro kód jazyka C# můžete také [dekompilovat zdrojový kód](../debugger/decompilation.md) ze všech **načtených symbolů** nebo z **nenačtených stránek zdrojů** .
 
 Pokud ladicí program nalezne soubor *. pdb* po provedení jedné z možností a může načíst zdrojový soubor pomocí informací v souboru *. pdb* , zobrazí se zdroj. V opačném případě zobrazí stránku **nenačtený zdroj** , která popisuje problém, a odkazy na akce, které mohou problém vyřešit.
 
@@ -259,6 +260,8 @@ Můžete určit umístění, ve kterém ladicí program vyhledává zdrojové so
 1. Vyberte řešení v **Průzkumník řešení** a pak vyberte ikonu **vlastnosti** , stiskněte klávesu **ALT** + **ENTER** nebo klikněte pravým tlačítkem myši a vyberte možnost **vlastnosti**.
 
 1. Vyberte **zdrojové soubory ladění**.
+
+   ![Stránka se zdrojovými soubory ladění](../debugger/media/dbg-source-files.png)
 
 1. V části **adresáře obsahující zdrojový kód** zadejte nebo vyberte umístění zdrojového kódu, který chcete vyhledat. Pomocí ikony **nový řádek** můžete přidat další umístění, ikony šipek **nahoru** a **dolů** pro jejich uspořádání nebo ikonu **X** k jejich odstranění.
 

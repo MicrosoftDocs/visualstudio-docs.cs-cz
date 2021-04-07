@@ -1,7 +1,7 @@
 ---
 title: Řízení aktualizací pro nasazení
 description: Naučte se, jak změnit, kde aplikace Visual Studio při instalaci ze sítě vyhledává aktualizaci.
-ms.date: 03/30/2019
+ms.date: 04/06/2021
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,22 +15,26 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ffa088de8852b0d5884cd4d9db5e65e1c179164b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8360c48e9868f6ed5d81fffc748d050404211228
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868540"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547489"
 ---
 # <a name="control-updates-to-network-based-visual-studio-deployments"></a>Řízení aktualizací pro nasazení sady Visual Studio založené na síti
 
-Podnikoví správci často vytvářejí rozložení a hostují ho v síťové sdílené složce, aby je mohli nasadit koncovým uživatelům.
+Podnikoví správci často vytvářejí rozložení a hostují ho v síťové sdílené složce, aby je mohli nasadit koncovým uživatelům. Tato stránka popisuje, jak správně nakonfigurovat možnosti rozložení sítě. 
 
 ## <a name="controlling-where-visual-studio-looks-for-updates"></a>Řízení, kde aplikace Visual Studio hledá aktualizace
 
-Ve výchozím nastavení Visual Studio nadále hledá aktualizace online i v případě, že byla instalace nasazena ze sdílené síťové složky. Pokud je aktualizace k dispozici, uživatel ji může nainstalovat. Aktualizovaný obsah, který se nenajde v offline rozložení, se stáhne z webu.
+**Scénář 1: klient byl původně nainstalován z rozložení, ale je nakonfigurován pro příjem aktualizací z umístění rozložení sítě nebo z webu.**
 
-Pokud chcete přímou kontrolu nad tím, kde aplikace Visual Studio hledá aktualizace, můžete změnit umístění, kde vypadá. Můžete také řídit verzi, na kterou se budou uživatelé aktualizovat. To můžete provést pomocí těchto kroků:
+Ve výchozím nastavení Visual Studio nadále hledá aktualizace online i v případě, že byla instalace původně nasazena ze sdílené síťové složky. Pokud je na webu k dispozici aktualizace, může ji uživatel nainstalovat. I když se mezipaměť rozložení sítě nejdřív kontroluje u všech aktualizovaných produktových bitů, pokud tam tam nenajdete, Visual Studio bude hledat a stahovat aktualizované produktové bity z webu.
+
+**Scénář 2: klient byl původně nainstalován a měl by přijímat pouze aktualizace z rozložení sítě.**
+
+Chcete-li určit, kde má klient sady Visual Studio vyhledat aktualizace, například pokud klientský počítač nemá přístup k Internetu, a chcete zajistit, aby byl a vždy nainstalován z rozložení, můžete nakonfigurovat umístění, kde instalační program klienta vyhledá aktualizované verze produktu. Před tím, než klient provede počáteční instalaci z rozložení, je vhodné se ujistit, že toto nastavení je správně nakonfigurované. 
 
 1. Vytvořit offline rozložení:
 
@@ -44,7 +48,7 @@ Pokud chcete přímou kontrolu nad tím, kde aplikace Visual Studio hledá aktua
    xcopy /e C:\vsoffline \\server\share\VS
    ```
 
-3. Upravte response.jsv souboru v rozložení a změňte `channelUri` hodnotu tak, aby odkazovala na kopii channelManifest.jsna ovládacím prvku správce.
+3. Upravte `response.json` soubor v rozložení a změňte `channelUri` hodnotu tak, aby odkazovala na kopii channelManifest.jsv tom, že ovládací prvky správce.
 
    Nezapomeňte zadat zpětná lomítka v hodnotě, jak je uvedeno v následujícím příkladu:
 
@@ -66,15 +70,20 @@ Když správce podniku zjistí, že je doba, kterou si uživatelé chtějí aktu
    vs_enterprise.exe --layout \\server\share\VS --lang en-US
    ```
 
-2. Ujistěte se, že response.jsv souboru v aktualizovaném rozložení stále obsahuje vaše vlastní nastavení, konkrétně úpravy parametr channeluri, a to takto:
+2. Ujistěte se, že `response.json` soubor v aktualizovaném rozložení stále obsahuje vaše vlastní nastavení, konkrétně úpravy parametr channeluri, a to následujícím způsobem:
 
    ```json
    "channelUri":"\\\\server\\share\\VS\\ChannelManifest.json"
    ```
 
-   Stávající instalace sady Visual Studio z tohoto rozložení hledají aktualizace na `\\server\share\VS\ChannelManifest.json` . Pokud je channelManifest.jsje novější než uživatel, který je nainstaloval, Visual Studio uživatele upozorní, že je k dispozici aktualizace.
+Stávající instalace sady Visual Studio z tohoto rozložení hledají aktualizace na `\\server\share\VS\ChannelManifest.json` . Pokud je channelManifest.jsje novější než uživatel, který je nainstaloval, Visual Studio uživatele upozorní, že je k dispozici aktualizace.
 
-   Nová instalace automaticky nainstaluje aktualizovanou verzi sady Visual Studio přímo z rozložení.
+Jakákoli aktualizace instalace iniciovaná z klienta automaticky nainstaluje aktualizovanou verzi sady Visual Studio přímo z rozložení.
+
+**Scénář 3: klient původně nainstaloval z webu, ale měl by teď přijímat jenom aktualizace z rozložení sítě.**
+
+V některých případech klientský počítač již mohl nainstalovat aplikaci Visual Studio z webu, ale nyní chce, aby všechny budoucí aktualizace pocházely ze spravovaného rozložení. Jediným podporovaným způsobem, jak to provést, je vytvořit rozložení sítě s požadovanou verzí produktu a pak na klientském počítači spustit zaváděcí nástroj _z umístění rozložení_ (např. `\\network\share\vs_enterprise.exe` ). V ideálním případě by k původní instalaci klienta došlo pomocí zaváděcího nástroje z rozložení sítě s správně nakonfigurovaným parametr channeluri, ale při spuštění aktualizovaného zaváděcího nástroje z umístění rozložení sítě bude také fungovat. Jedna z těchto akcí by mohla být vložena na klientském počítači, připojení s tímto umístěním rozložení. Jediným aspektem, který má tento scénář fungovat správně, je, že "parametr channeluri" v `response.json` souboru rozložení musí být stejný jako parametr channeluri, který byl nastaven na počítači klienta, když se nastala původní instalace. Nejpravděpodobnější, že tato hodnota byla původně nastavena na [kanál](https://aka.ms/vs/16/release/channel)pro internetovou verzi. 
+
 
 ## <a name="controlling-notifications-in-the-visual-studio-ide"></a>Řízení oznámení v integrovaném vývojovém prostředí sady Visual Studio
 
@@ -125,8 +134,9 @@ vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterpris
 
 ## <a name="see-also"></a>Viz také
 
-* [Instalace sady Visual Studio](install-visual-studio.md)
 * [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
+* [Povolení aktualizací správců](enabling-administrator-updates.md)
+* [Použití aktualizací správců](applying-administrator-updates.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 * [Nástroje pro správu instancí sady Visual Studio](tools-for-managing-visual-studio-instances.md)
 * [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)

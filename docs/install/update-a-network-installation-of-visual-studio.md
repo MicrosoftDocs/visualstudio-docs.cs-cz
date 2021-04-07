@@ -1,7 +1,7 @@
 ---
 title: Aktualizace síťové instalace
 description: Naučte se aktualizovat instalaci sady Visual Studio na základě sítě pomocí příkazu--layout.
-ms.date: 06/29/2020
+ms.date: 04/06/2021
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6829bac79f747d4f9bacfe5e71f57352fcad0970
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d5ad0231c2dc21acc4a8d954456921dbe2838e39
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959152"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547398"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Aktualizace síťové instalace sady Visual Studio
 
@@ -33,17 +33,7 @@ Je možné aktualizovat rozložení instalace sítě sady Visual Studio s nejnov
 
 Chcete-li aktualizovat sdílenou síťovou instalaci tak, aby obsahovala nejnovější aktualizace, spusťte `--layout` příkaz pro přírůstkové stažení aktualizovaných balíčků.
 
-::: moniker range="vs-2017"
-
-**Novinka v 15,3**: Pokud jste při [prvním vytvoření rozložení sítě](create-a-network-installation-of-visual-studio.md)vybrali částečné rozložení, tato nastavení se uloží. Jakékoli budoucí příkazy rozložení používají předchozí možnosti a všechny nové možnosti, které zadáte. Pokud ale používáte rozložení starší verze, měli byste použít stejné parametry příkazového řádku, které jste použili při prvním vytvoření rozložení instalace sítě (jinými slovy, stejné úlohy a jazyky) k aktualizaci jejího obsahu.
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
 Pokud jste při [prvním vytvoření rozložení sítě](create-a-network-installation-of-visual-studio.md)vybrali částečné rozložení, tato nastavení se uloží. Jakékoli budoucí příkazy rozložení používají předchozí možnosti a všechny nové možnosti, které zadáte.
-
-::: moniker-end
 
 Pokud budete hostovat rozložení sdílené složky, měli byste aktualizovat soukromou kopii rozložení (například c:\VSLayout) a potom po stažení veškerého aktualizovaného obsahu ho zkopírovat do sdílené složky (například \\ server\products\VS). Pokud to neuděláte, je pravděpodobné, že všichni uživatelé, kteří během aktualizace rozložení spouštějí instalaci, nemusí být schopni získat veškerý obsah z rozložení, protože ještě není úplně aktualizovaný.
 

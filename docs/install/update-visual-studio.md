@@ -2,7 +2,7 @@
 title: Aktualizace sady Visual Studio
 titleSuffix: ''
 description: Naučte se aktualizovat Visual Studio na nejnovější verzi, krok za krokem.
-ms.date: 10/12/2020
+ms.date: 04/06/2021
 ms.custom: seodec18
 ms.topic: how-to
 ms.prod: visual-studio-windows
@@ -17,12 +17,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d087ed0a43296f77ca934671f63f716bf6ddfae8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 02beb43dede8e38f290ff02febb3b84c53b90f9e
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935713"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547502"
 ---
 # <a name="update-visual-studio-to-the-most-recent-release"></a>Aktualizace sady Visual Studio na nejnovější verzi
 
@@ -287,12 +287,17 @@ Jak na to:
 
 ::: moniker-end
 
+## <a name="administrator-updates"></a>Aktualizace správců 
+
+Pokud jste součástí organizace, která soustřeďuje správu instalací softwaru, může váš podnikový správce způsobit, že se Visual Studio aktualizuje na vašem počítači. Další informace o tom, jak řídit nebo konfigurovat typy aktualizací, které může počítač přijmout, najdete v tématu [použití Configuration Manager k nasazení aktualizací sady Visual Studio](../install/applying-administrator-updates.md#using-configuration-manager-to-deploy-visual-studio-updates). 
+
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Viz také
 
 * [Souběžná instalace různých verzí sady Visual Studio](install-visual-studio-versions-side-by-side.md)
 * [Aktualizace síťové instalace sady Visual Studio](update-a-network-installation-of-visual-studio.md)
+* [Příručka pro Visual Studio Enterprise](visual-studio-enterprise-guide.md)
 * [Aktualizace sady Visual Studio v servisním směrném plánu](update-servicing-baseline.md)
 * [Řízení aktualizací pro nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md)
 * [Úpravy sady Visual Studio](modify-visual-studio.md)

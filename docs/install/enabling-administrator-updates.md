@@ -2,7 +2,7 @@
 title: Povolení aktualizací správců v aplikaci Visual Studio pomocí koncového bodu Microsoft Configuration Manager
 titleSuffix: ''
 description: Přečtěte si další informace o tom, jak nasadit aktualizace správce do sady Visual Studio.
-ms.date: 03/04/2021
+ms.date: 04/06/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 546fbad6-f12b-49cf-bccc-f2e63e051a18
@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ae0bdde60cbf4c4c1eed00847c76ee797809b8db
-ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
+ms.openlocfilehash: 9ca14e1f4e84777fd1781249dd54a6646fb2c72a
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "105617325"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547476"
 ---
 # <a name="enabling-administrator-updates-to-visual-studio-with-microsoft-endpoint-configuration-manager"></a>Povolení aktualizací správců v aplikaci Visual Studio pomocí koncového bodu Microsoft Configuration Manager
 
@@ -63,7 +63,7 @@ Chcete-li povolit klientskému počítači, aby přijímali aktualizace správce
 
 ### <a name="visual-studio-client-detector-utility"></a>Nástroj pro rozpoznávání klientů Visual studia 
 
-Na klientských počítačích musí být nainstalován nástroj pro rozpoznávání klienta sady Visual Studio, aby bylo možné aktualizace správce přijmout správně. Tento nástroj byl součástí všech nejnovějších verzí sady Visual Studio.  
+V klientských počítačích musí být nainstalován [Nástroj pro rozpoznávání klientů sady Visual Studio](https://support.microsoft.com/help/5001148) , aby bylo možné aktualizace správce správně rozpoznat a přijmout. Tento nástroj byl součástí všech aktualizací produktu Visual Studio 2017 a Visual Studio 2019, které byly vydané nebo později než 12. května 2020, zahrnují jako nezbytný předpoklad pro všechny aktualizace správce sady Visual Studio a je k dispozici také v [katalogu Microsoft Update](https://catalog.update.microsoft.com) k instalaci nezávisle. 
 
 ### <a name="encoding-administrator-intent-on-the-client-machines"></a>Kódování záměru správce na klientských počítačích 
 
@@ -79,14 +79,14 @@ Klíč **AdministratorUpdatesEnabled**   je určený pro správce ke kódov�
 
 Pomocí následujících metod můžete poskytnout zpětnou vazbu o aktualizacích správce sady Visual Studio nebo nahlásit problémy, které mají vliv na aktualizace:
 * Přečtěte si pokyny k [řešení potíží s instalací a upgradem sady Visual Studio](../install/troubleshooting-installation-issues.md) .
-* Položte otázky komunity na stránce [Visual Setup Q&Fórum](https://docs.microsoft.com/answers/topics/vs-setup.html).
+* Položte otázky do komunity v [instalačním programu sady Visual Studio Q&Fórum](https://docs.microsoft.com/answers/topics/vs-setup.html).
 * Přejít na [stránku podpory sady Visual Studio](https://visualstudio.microsoft.com/vs/support/)a ověřte, zda je váš problém uveden v části Nejčastější dotazy.  Můžete také vybrat tlačítko pro [odkaz na podporu](https://visualstudio.microsoft.com/vs/support/#talktous) pro nápovědu k chatu.
-* [Poskytněte zpětnou vazbu k funkcím nebo nahlásit problém](https://aka.ms/vs/wsus/feedback) týmu sady Visual Studio pro toto prostředí.
+* [Poskytněte zpětnou vazbu k funkcím nebo nahlásit problém](https://aka.ms/vs/wsus/feedback) týmu sady Visual Studio, pokud jde o možnosti povolit aktualizace správců.
 * Obraťte se na správce technického účtu vaší organizace pro Microsoft.
 
 ## <a name="see-also"></a>Viz také
 * [Použití aktualizací správců](../install/applying-administrator-updates.md)
-* [Příručka pro správce sady Visual Studio](../install/visual-studio-administrator-guide.md)
+* [Příručka správce sady Visual Studio](../install/visual-studio-administrator-guide.md)
 * [Životní cyklus produktu Visual Studio a jeho údržba](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs)
 * [Zpráva k vydání verze pro Visual Studio 2019](https://docs.microsoft.com/visualstudio/releases/2019/release-notes)
 * [Zpráva k vydání verze pro Visual Studio 2017](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)

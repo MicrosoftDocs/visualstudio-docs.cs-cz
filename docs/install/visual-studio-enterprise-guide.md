@@ -1,7 +1,7 @@
 ---
 title: Příručka pro Visual Studio Enterprise
 description: Nastavení a řešení potíží se sadou Visual Studio v podnikovém prostředí.
-ms.date: 07/29/2020
+ms.date: 04/06/2021
 ms.custom: seodec18
 ms.topic: overview
 helpviewer_keywords:
@@ -16,18 +16,20 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: e653d7ae5f2408fd8438cbdf69a28648c6bcc446
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e5e8a28ac89c2bea85aee8323060bf948266ad2e
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967108"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547385"
 ---
 # <a name="visual-studio-enterprise-guide"></a>Příručka pro Visual Studio Enterprise
 Pokud chcete ušetřit čas během vaší společnosti, která běží na Visual Studiu, začněte tady. Tato podniková příručka obsahuje tipy, které vám pomohou při instalaci a aktualizaci sady Visual Studio v běžných podnikových scénářích, odblokování, pokud dojde k problémům, a Naučte se, jak ohlásit problém, pokud potřebujete další pomoc. 
 
 ## <a name="get-started"></a>Začínáme 
-Naučte se, jak nasadit Visual Studio do svého podniku v prostředích v síti a v režimu offline. 
+Naučte se, jak nasadit Visual Studio do svého podniku v prostředích v síti a v režimu offline.
+
+- **[Povolení aktualizací správců pomocí nástroje Microsoft Endpoint Configuration Manager (SCCM)](enabling-administrator-updates.md)**.  Aktualizace sady Visual Studio jsou součástí [katalogu Microsoft Update](https://www.catalog.update.microsoft.com/Home.aspx) a [Windows Server Update Services (WSUS)](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus). Podnikoví správci pak můžou aktualizaci stáhnout a distribuovat do klientských počítačů Visual studia v celé organizaci pomocí standardních nástrojů pro nasazení, jako je Microsoft Endpoint Configuration Manager (SCCM).
 
 - **Pochopení možností pro podnikové nasazení v síťových prostředích**. [Příručka pro správce sady Visual Studio](visual-studio-administrator-guide.md) nabízí pro správce systému pokyny na základě scénářů. 
 
@@ -43,17 +45,19 @@ Naučte se, jak nasadit Visual Studio do svého podniku v prostředích v síti 
 
 Naučte se instalovat Visual Studio v běžných podnikových scénářích. 
 
-- **[Použijte parametry příkazového řádku k instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md)**. Pro řízení a přizpůsobení instalace sady Visual Studio použijte nejrůznější parametry. Automatizujte proces instalace nebo vytvořte mezipaměť instalačních souborů pro pozdější použití. 
+- **[Použijte parametry příkazového řádku k instalaci sady Visual Studio](use-command-line-parameters-to-install-visual-studio.md)**. Pro řízení a přizpůsobení instalace sady Visual Studio použijte nejrůznější parametry. Automatizujte proces instalace nebo vytvořte mezipaměť instalačních souborů pro pozdější použití. Další informace najdete v tématu [Příklady parametrů příkazového řádku](command-line-parameter-examples.md).
 
-- **Viz [Příklady parametrů příkazového řádku pro instalaci sady Visual Studio](command-line-parameter-examples.md)**. Pro ilustraci, jak použít parametry příkazového řádku k instalaci sady Visual Studio, můžete zobrazit několik příkladů, které lze přizpůsobit, aby odpovídaly vašim potřebám. 
+- **[Vytvořte síťovou instalaci sady Visual Studio](create-a-network-installation-of-visual-studio.md)**. Do mezipaměti ukládat soubory pro počáteční instalaci společně se všemi aktualizacemi produktu do jediné složky. 
 
-- **[Nainstalujte a použijte Visual Studio a služby Azure za bránou firewall nebo proxy server](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)**. Pokud vaše organizace používá bezpečnostní opatření, jako je brána firewall nebo proxy server, pak jsou k dispozici adresy URL domény, které byste mohli chtít přidat do seznamu povolených portů, porty a protokoly, které můžete chtít otevřít, abyste měli k dispozici nejlepší prostředí při instalaci a používání služeb Visual Studio a Azure. 
+- **[Nainstalujte a použijte Visual Studio a služby Azure za bránou firewall nebo proxy server](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)**. Pokud vaše organizace používá bezpečnostní opatření, jako je brána firewall nebo proxy server, pak jsou k dispozici adresy URL domény, které byste mohli chtít přidat do "povolených" a porty a protokoly, které byste mohli chtít otevřít, abyste měli k dispozici nejlepší prostředí při instalaci a používání služeb Visual Studio a Azure. 
 
-- **[Vytvořte síťovou instalaci sady Visual Studio](create-a-network-installation-of-visual-studio.md)**. Do mezipaměti ukládat soubory pro počáteční instalaci společně se všemi aktualizacemi produktu do jediné složky.  
+- **[Nainstalujte požadované certifikáty pro instalaci offline](../install/install-certificates-for-visual-studio-offline.md)**. Pokud je klientský počítač zcela odpojen od Internetu, nainstalujte potřebné certifikáty.
 
 ## <a name="update-visual-studio"></a>Aktualizace sady Visual Studio 
 
 Přečtěte si, jak úspěšně aktualizovat Visual Studio a opravit problémy s aktualizací. 
+
+- **[Použijte aktualizace správce pomocí Microsoft Endpoint Configuration Manager (SCCM)](../install/applying-administrator-updates.md)**. Seznamte se s distribucí funkcí, zabezpečení a kvality sady Visual Studio prostřednictvím SCCM. 
 
 - **[Aktualizujte síťovou instalaci sady Visual Studio](update-a-network-installation-of-visual-studio.md)**. Aktualizujte rozložení instalace sítě sady Visual Studio s nejnovějšími aktualizacemi produktu tak, aby bylo možné je použít jako bod instalace pro nejnovější aktualizaci sady Visual Studio, a také k údržbě instalací, které jsou již nasazeny do klientských pracovních stanic.
 
@@ -70,3 +74,4 @@ Přečtěte si, jak úspěšně aktualizovat Visual Studio a opravit problémy s
 ## <a name="see-also"></a>Viz také 
 
 - [Průvodce produktivitou pro Visual Studio](../ide/productivity-features.md)
+

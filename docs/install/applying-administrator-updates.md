@@ -2,7 +2,7 @@
 title: Použití aktualizací správců v aplikaci Visual Studio s koncovým bodem Microsoft Configuration Manager
 titleSuffix: ''
 description: Naučte se, jak použít aktualizace správce v aplikaci Visual Studio.
-ms.date: 03/10/2021
+ms.date: 04/06/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 9a3fdb28-db3d-4970-bc17-7417a985f0fb
@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 78c2de8b1d1ffb28cc536b770bf6bd9a4ab0aa35
-ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
+ms.openlocfilehash: d316fc35df8c571a9112d7a653737e099df80559
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "105617328"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547450"
 ---
 # <a name="applying-administrator-updates-that-use-microsoft-endpoint-configuration-manager"></a>Použití aktualizací správce využívajících Microsoft Endpoint Configuration Manager
 
@@ -44,52 +44,70 @@ Existují tři typy aktualizací správců sady Visual Studio:
 
 Název každé aktualizace správce popisuje platný rozsah verzí a výslednou verzi aktualizace.Třeba
 
-* **Visual studio 2019 verze 16.7.0 až 16.7.12 Update** klasifikovaná jako aktualizace zabezpečení se bude vztahovat na všechny edice sady Visual Studio v klientovi mezi verzemi 16.7.0 až 16.7.12 a tyto klientské edice budou aktualizovat na 16.7.12.  
+::: moniker range="vs-2017"
 
-* Sada **Visual studio 2019 verze 16.0.0 až 16.9.0 Update** klasifikovaná jako "Feature Pack" bude platit pro vybrané edice sady Visual Studio na klientovi mezi celým rozsahem verze produktu 16.0.0 až 16.9.0 a aktualizace těchto klientských edic (které nejsou nakonfigurované tak, aby zůstaly na dřívějším směrném plánu údržby) na 16.9.0. 
+* **Visual studio 2017 verze 15.9.0 až 15.9.35 Update** klasifikovaná jako aktualizace zabezpečení se bude vztahovat na všechny edice sady visual Studio 2017 na klientovi mezi verzemi 15.9.0 až 15.9.35 a tyto klientské edice budou aktualizovat na 15.9.35.
 
-* **Visual studio 2019 verze 16.8.0 až 16.8.7 Update** klasifikovaná jako jednoduše "Updates" bude platit pro vybrané edice sady Visual Studio na klientovi mezi verzemi 16.8.0 až 16.8.7 a aktualizuje tyto klientské edice na 16.8.7. 
+* Sada **Visual studio 2017 verze 15.0.0 až 15.9.0 Update** klasifikovaná jako "Feature Pack" bude platit pro edice sady visual Studio 2017 licencované pro podnikové použití v klientovi mezi celým rozsahem verze produktu 15.0.0 až 15.9.0 a aktualizuje tyto klientské edice na 15.9.0. Použití tohoto balíčku funkcí v podstatě umožní klientům získávat aktualizace zabezpečení. 
+
+* **Visual studio 2017 verze 15.9.0 až 15.9.37 Update** klasifikovaná jako jednoduše "Updates" se vztahuje na edice sady Visual Studio 2017 licencované pro podnikové použití v klientovi mezi verzemi 15.9.0 až 15.9.37 a aktualizuje tyto klientské edice na 15.9.37. 
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+* **Visual studio 2019 verze 16.7.0 až 16.7.12 Update** klasifikovaná jako aktualizace zabezpečení se bude vztahovat na všechny edice sady visual Studio 2019 na klientovi mezi verzemi 16.7.0 až 16.7.12 a tyto klientské edice budou aktualizovat na 16.7.12.  
+
+* Sada **Visual studio 2019 verze 16.0.0 až 16.9.0 Update** klasifikovaná jako "Feature Pack" bude platit pro edice sady visual Studio 2019 licencované pro podnikové použití v klientovi mezi celým rozsahem verze produktu 16.0.0 až 16.9.0 a aktualizuje tyto klientské edice (které nebyly nakonfigurovány tak, aby zůstaly na dřívější směrné plány údržby) do 16.9.0. 
+
+* **Visual studio 2019 verze 16.8.0 až 16.8.7 Update** klasifikovaná jako jednoduše "Updates" se vztahuje na edice sady Visual Studio 2019 licencované pro podnikové použití v klientovi mezi verzemi 16.8.0 až 16.8.7 a aktualizuje tyto klientské edice na 16.8.7. 
+
+::: moniker-end
 
 ## <a name="using-configuration-manager-to-deploy-visual-studio-updates"></a>Nasazení aktualizací sady Visual Studio pomocí Configuration Manager
 
 ### <a name="understanding-configuration-options"></a>Principy možností konfigurace
 
-K dispozici je několik možností konfigurace, které můžete použít k přizpůsobení aktualizací pro správce sady Visual Studio, aby byly kompatibilní a zarovnané na požadavky vaší organizace na nasazení. Nejběžnější možnosti jsou uvedeny níže.  Úplný seznam všech parametrů příkazového řádku podporovaných aktualizacemi správců najdete v tématu [použití parametrů příkazového řádku k instalaci dokumentace sady Visual Studio](../install/use-command-line-parameters-to-install-visual-studio.md) a placení pozornosti jenom na ty, které odpovídají akci aktualizace.
+K dispozici je několik možností konfigurace, které můžete použít k přizpůsobení aktualizací pro správce sady Visual Studio, aby byly kompatibilní a zarovnané na Předvolby a požadavky pro nasazení vaší organizace. Níže jsou uvedené nejběžnější možnosti konfigurace. Úplný seznam všech podporovaných chování aktualizací správců najdete v tématu [použití parametrů příkazového řádku k instalaci sady Visual Studio](../install/use-command-line-parameters-to-install-visual-studio.md) a placení pozornosti jenom na ty, které odpovídají akci aktualizace.
 
-* **Výslovný souhlas s aktualizací správce**: Tento klíč registru, který je popsaný v tématu [Povolení aktualizací správce](../install/enabling-administrator-updates.md) , je nutný ke klientskému počítači pro příjem aktualizací správců. Je klíč celého počítače, což znamená, že se vztahuje na všechny instance sady Visual Studio nainstalované v poli. 
+* **[Výslovný souhlas s aktualizací správce](../install/enabling-administrator-updates.md#encoding-administrator-intent-on-the-client-machines)**: Tento klíč registru je nutný k tomu, aby klientský počítač mohl přijímat aktualizace správce. Je klíč celého počítače, což znamená, že se vztahuje na všechny instance sady Visual Studio nainstalované v poli. 
  
-* **Výslovný souhlas vývojáře**: vývojáři můžou použít samostatný **AdministratorUpdatesOptOut**   klíč pro všechny počítače, aby se *odhlásili* od přijetí aktualizací pro správce sady Visual Studio. Účelem tohoto klíče je zakódovat záměr uživatele sady Visual Studio. Chcete-li nakonfigurovat klientský počítač pro blokování aktualizací správců, **** nastavte   klíč REG_DWORD AdministratorUpdatesOptOut na hodnotu **1**. Absence klíče nebo nastavená hodnota **0** znamená, že uživatel sady Visual Studio chce dostávat aktualizace správce do sady Visual Studio.
+* **Odsouhlasení uživatele sady Visual Studio**: uživatelé sady Visual Studio mohou použít samostatný klíč registru **AdministratorUpdatesOptOut** v rámci počítače k *odsouhlasení* s přijímáním aktualizací pro správce sady Visual Studio. Účelem tohoto klíče je dovolit uživateli aplikace Visual Studio mít určitou kontrolu nad tím, že se aktualizace automaticky aplikují na daný počítač. Chcete-li nakonfigurovat klientský počítač pro blokování aktualizací správců, **** nastavte   klíč REG_DWORD AdministratorUpdatesOptOut na hodnotu **1**. Absence klíče nebo nastavená hodnota **0** znamená, že uživatel sady Visual Studio chce dostávat aktualizace správce do sady Visual Studio.
 
-    Všimněte si, že **AdministratorUpdatesOptOut**   klíč (pro kódování vývojářského záměru) je nastaven na prioritu přes klíč **AdministratorUpdatesEnabled**   , který kóduje záměr správce IT. Pokud je **AdministratorUpdatesOptOut**   nastavené na **1**, aktualizace se zablokuje na klientovi, a to i v případě, že je klíč **AdministratorUpdatesEnabled**   také nastavený na hodnotu **1**.Tato akce předpokládá, že správci IT můžou získat přístup k vybraným vývojářům a sledovat, které z nich se můžou odhlásit a že dvě strany si pak mohou projednávat, které potřeby jsou důležitější.Správci IT můžou vždycky kdykoli změnit libovolný klíč.
+    Všimněte si, že klíč **AdministratorUpdatesOptOut**   pro kódování uživatelských preferencí je nastaven na prioritu prostřednictvím klíče **AdministratorUpdatesEnabled**   , který zakóduje záměr správce IT. Pokud je **AdministratorUpdatesOptOut**   nastavené na **1**, aktualizace se zablokuje na klientovi, a to i v případě, že je klíč **AdministratorUpdatesEnabled**   také nastavený na hodnotu **1**.Tato akce předpokládá, že správci IT můžou získat přístup k vybraným vývojářům a sledovat, které z nich se můžou odhlásit a že dvě strany si pak mohou projednávat, které potřeby jsou důležitější.Správci IT můžou vždycky kdykoli změnit libovolný klíč.
  
-* **Umístění aktualizovaných aktualizací softwaru**: ve většině případů klientské počítače stáhnou aktualizované produktové bity z Internetu přes Microsoft CDN. Tento scénář vyžaduje, aby klientské počítače měly přístup k Internetu. Některé podniky ale omezují klientské počítače jenom na instalaci a aktualizaci BITS z umístění rozložení interní sítě. Aby bylo možné použít aktualizace správce z interního síťového umístění, musí být splněny následující podmínky: 
+* **Umístění aktualizovaných aktualizací softwaru**: ve většině případů klientské počítače stáhnou aktualizované produktové bity z Internetu přes Microsoft CDN. Tento scénář vyžaduje, aby klientské počítače měly přístup k Internetu. Některé podniky ale omezují klientské počítače jenom na instalaci a aktualizaci BITS z umístění rozložení interní sítě. Aby bylo zajištěno, že aktualizace správce lze použít pomocí aktualizovaných bitů v umístění interní sítě, musí být splněny následující podmínky před tím, než bude možné úspěšně nasadit aktualizaci správce: 
 
-  - Klientský počítač musí původně nainstalovat produkt z umístění rozložení sítě (tj. místní mezipaměť instalace). 
-  - Umístění rozložení sítě (kde se klient původně nainstaloval) se [aktualizovalo tak, aby obsahovalo aktualizované bity produktu](../install/update-a-network-installation-of-visual-studio.md) zadané aktualizací správce. 
- 
-* **Vynutit, aby se aktualizace nastala i v případě, že se používá Visual Studio**: před instalací této aktualizace je nutné aplikaci Visual Studio zavřít. Pokud je aplikace Visual Studio otevřená nebo používaná, instalace aktualizace se ukončí. Snadný způsob, jak zajistit, že je Visual Studio zavřené, je nakonfigurovat Správce potvrzení tak, aby po restartování počítače použili aktualizaci hned. `--force`K vynucení vypnutí sady Visual Studio můžete použít také parametr. Vynucené ukončení sady Visual Studio může způsobit ztrátu práce, takže je používejte opatrně. Spuštění aktualizace správce ve výchozím kontextu systému bude ignorovat `–-force` příznak, takže budete muset nakonfigurovat, aby se aktualizace správce spouštěla v uživatelském kontextu.
- 
+  - Klientský počítač musí v určitém okamžiku spustit zaváděcí nástroj z umístění rozložení sítě. V ideálním případě by k původní instalaci klienta došlo pomocí zaváděcího nástroje z rozložení sítě, ale je také možné, že jste právě nainstalovali aktualizaci pomocí aktualizovaného zaváděcího nástroje na stejném umístění v síti. Jedna z těchto akcí by mohla být vložena na klientském počítači, připojení s tímto umístěním rozložení.   
+  - Umístění rozložení sítě (kde je klient připojen k) se musí [aktualizovat tak, aby obsahovalo aktualizované bity produktu](../install/update-a-network-installation-of-visual-studio.md) , které chce správce nasadit. 
+
+::: moniker range="vs-2019"
+
 * **Vytrvalost standardních hodnot údržby**: jak je popsáno výše, aktualizace pro správce, které jsou aktualizacemi funkcí, přepíší instalaci sady Visual Studio na aktuálnější vedlejší verzi produktu. V některých případech ale vývojové týmy mají zůstat na konkrétní úrovni úrovně základní a zabezpečené údržby a chtějí řídit, kdy jejich klienti přestanou na aktuálnější vedlejší verzi. Chcete-li nakonfigurovat klientský počítač tak, aby zůstal na směrném plánu obsluhy a ignoroval nepožadované aktualizace funkcí správce, je nutné vytvořit a nastavit hodnotu **BaselineStickinessVersions2019** REG_SZ dat na řetězec, který představuje přípustné směrné plány, na které může klientský počítač přitahovat a zůstat zapnut.  Řetězec může obsahovat sekvenci základní verze obsluhy, oddělený čárkami, například **16.4.0, 16.7.0**. V řetězci může být zahrnut libovolný počet základních verzí údržby a také je podporováno slovo **All**, který je zkrácený pro odkazování na všechny podporované směrné plány obsluhy. 
 
      Pokud `BaselineStickinessVersions2019` je hodnota registru poškozená, pak všechny aktualizace funkcí budou mít na počítači zablokovaný instalaci. Věnujte pozornost také [podporovaným časovým obdobím aktualizací funkcí sady Visual Studio](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs). I když je technicky možné použít aktualizace funkcí, které byly dosaženy na konci jejich životnosti, nedoporučujeme ji, protože se nejedná o podporu, a proto potenciálně nezabezpečená.
+
+::: moniker-end
+
+* **Vynutit, aby se aktualizace nastala i v případě, že se používá Visual Studio**: před instalací této aktualizace je nutné aplikaci Visual Studio zavřít. Pokud je aplikace Visual Studio otevřená nebo používaná, instalace aktualizace se ukončí. Snadný způsob, jak zajistit, že je Visual Studio zavřené, je nakonfigurovat Správce potvrzení tak, aby po restartování počítače použili aktualizaci hned. `--force`K vynucení vypnutí sady Visual Studio můžete použít také parametr. Vynucené ukončení sady Visual Studio může způsobit ztrátu práce, takže je používejte opatrně. Spuštění aktualizace správce ve výchozím kontextu systému bude ignorovat `–-force` příznak, takže budete muset nakonfigurovat, aby se aktualizace správce spouštěla v uživatelském kontextu.
 
 ### <a name="methods-for-configuring-an-administrator-update"></a>Metody konfigurace aktualizace správce
 
 Existují tři hlavní metody konfigurace aktualizací správců: klíč registru, konfigurační soubor v klientském počítači nebo změna samotného balíčku pro nasazení Configuration Manager.   
 
-* **Klíč registru**: aktualizace správců hledají konkrétní klíče registru ve všech standardních umístěních sady Visual Studio, jak je popsáno v dokumentaci [Nastavení výchozích hodnot pro podniková nasazení]. Možnosti, které jsou ovládány klíči registru, jsou položky jako **AdministratorUpdatesOptOut** REG_DWORD, **AdministratorUpdatesOptOut**   REG_DWORD a **BaselineStickinessVersions2019** REG_SZ. Pro vytvoření a nastavení hodnoty klíčů registru je nutný přístup správce na klientském počítači. 
+* **Klíč registru**: aktualizace správců hledají konkrétní klíče registru ve všech standardních umístěních sady Visual Studio, jak je popsáno v tématu [Nastavení výchozích hodnot pro podniková nasazení](../install/set-defaults-for-enterprise-deployments.md). Možnosti, které jsou ovládány klíči registru, jsou položky jako **AdministratorUpdatesOptOut** REG_DWORD, **AdministratorUpdatesOptOut**   REG_DWORD a **BaselineStickinessVersions2019** REG_SZ. Pro vytvoření a nastavení hodnoty klíčů registru je nutný přístup správce na klientském počítači. 
  
 * **Konfigurační soubor**: některá nastavení je možné zachovat v klientském počítači v případě volitelného konfiguračního souboru, který má výhodu nastavení jenom jednou a použije se pro všechny budoucí aktualizace správců. Přístup ke konfiguračnímu souboru se chová jako klíč registru a je celý počítač, což znamená, že se bude vztahovat na všechny instalace sady Visual Studio nainstalované v klientském počítači. Standardní umístění konfiguračního souboru je `C:\ProgramData\Microsoft\VisualStudio\updates.config` . Pokud však chcete použít jiné umístění pro uložení souboru, můžete tak učinit tak, že vytvoříte Reg_SZ klíč registru s názvem **UpdateConfigurationFile** a nastavíte hodnotu tohoto klíče na cestu k konfiguračnímu souboru. Tento klíč registru může být umístěn v libovolném umístění registru sady Visual Studio, jak je popsáno v tématu [Nastavení výchozích hodnot pro podniková nasazení](../install/set-defaults-for-enterprise-deployments.md). Pokud se rozhodnete přidat hodnotu registru pro vlastní umístění konfiguračního souboru, bude tento soubor hledat. Pokud soubor neexistuje, vyvolá se výjimka a aktualizace se nezdaří.    
  
-Konfigurační soubor, který je ve formátu JSON, podporuje možnost, `installerUpdateArgs` což je pole řetězců oddělené čárkami, které určují více přepínačů, které můžete předat instalačnímu programu sady Visual Studio. Pokud obsah souboru obsahuje neplatné pole nebo možnost, která není podporována, aktualizace nebude úspěšná. Další informace najdete v tématu [použití parametrů příkazového řádku k instalaci sady Visual Studio](../install/use-command-line-parameters-to-install-visual-studio.md).
+     Konfigurační soubor, který je ve formátu JSON, podporuje možnost, `installerUpdateArgs` což je pole řetězců oddělené čárkami, které určují více přepínačů, které můžete předat instalačnímu programu sady Visual Studio. Pokud obsah souboru obsahuje neplatné pole nebo možnost, která není podporována, aktualizace nebude úspěšná. Další informace najdete v tématu [použití parametrů příkazového řádku k instalaci sady Visual Studio](../install/use-command-line-parameters-to-install-visual-studio.md).
  
-Tady je příklad konfiguračního souboru: 
+   Tady je příklad konfiguračního souboru: 
 
-```
-“installerUpdateArgs” : [“--quiet”, “--noWeb”], 
+   ```
+   “installerUpdateArgs” : [“--quiet”, “--noWeb”], 
 
-“checkPendingReboot” :  “true” 
-```
+   “checkPendingReboot” :  “true” 
+   ```
 
 * **Ruční aktualizace balíčku aktualizace pro správce v nástroji SCCM**: parametry příkazového řádku samostatného balíčku aktualizace správce v nástroji SCCM lze také ručně změnit.
 
@@ -133,14 +151,14 @@ Vyčerpávající seznam kódů chyb klienta najdete v tématu věnovaném [po
 
 Pomocí následujících metod můžete poskytnout zpětnou vazbu o aktualizacích správce sady Visual Studio nebo nahlásit problémy, které mají vliv na aktualizace:
 * Přečtěte si pokyny k [řešení potíží s instalací a upgradem sady Visual Studio](../install/troubleshooting-installation-issues.md) .
-* Položte otázky komunity na stránce [Visual Setup Q&Fórum](https://docs.microsoft.com/answers/topics/vs-setup.html).
+* Položte otázky do komunity v [instalačním programu sady Visual Studio Q&Fórum](https://docs.microsoft.com/answers/topics/vs-setup.html).
 * Přejít na [stránku podpory sady Visual Studio](https://visualstudio.microsoft.com/vs/support/)a ověřte, zda je váš problém uveden v části Nejčastější dotazy.  Můžete také vybrat tlačítko pro [odkaz na podporu](https://visualstudio.microsoft.com/vs/support/#talktous) pro nápovědu k chatu.
-* [Poskytněte zpětnou vazbu k funkcím nebo nahlásit problém](https://aka.ms/vs/wsus/feedback) týmu sady Visual Studio pro toto prostředí.
+* [Poskytněte zpětnou vazbu k funkcím nebo nahlásit problém](https://aka.ms/vs/wsus/feedback) týmu sady Visual Studio, pokud jde o toto prostředí při použití aktualizací správců.
 * Obraťte se na správce technického účtu vaší organizace pro Microsoft.
 
 ## <a name="see-also"></a>Viz také
 * [Povolení aktualizací správců](../install/enabling-administrator-updates.md)    
-* [Příručka pro správce sady Visual Studio](../install/visual-studio-administrator-guide.md)
+* [Příručka správce sady Visual Studio](../install/visual-studio-administrator-guide.md)
 * [Životní cyklus produktu Visual Studio a jeho údržba](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs)
 * [Zpráva k vydání verze pro Visual Studio 2019](https://docs.microsoft.com/visualstudio/releases/2019/release-notes)
 * [Zpráva k vydání verze pro Visual Studio 2017](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)

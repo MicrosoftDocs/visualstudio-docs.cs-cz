@@ -2,7 +2,7 @@
 title: Ladění z projektu knihovny DLL | Microsoft Docs
 description: Můžete spustit ladění projektu knihovny DLL z samotného projektu zadáním volající aplikace do vlastností projektu. Podrobnosti najdete v tomto článku.
 ms.custom: SEO-VS-2020
-ms.date: 10/10/2018
+ms.date: 3/30/2021
 ms.topic: how-to
 dev_langs:
 - CSharp
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f6063c5a0343951bb098c6937ce13dac7100d4a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 7846cc3fd17b46365da59f6fe1a744032cb8ba14
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160431"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106083639"
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio-c-c-visual-basic-f"></a>Postupy: ladění z projektu knihovny DLL v aplikaci Visual Studio (C#, C++, Visual Basic, F #)
 
@@ -81,7 +81,13 @@ Nativní a spravované projekty knihovny DLL mají různá nastavení pro určen
 
 1. Ujistěte se, že pole **Konfigurace řešení** je nastaveno na **ladit**. Stiskněte klávesu **F5**, klikněte na zelenou šipku **Start** nebo vyberte **ladit**  >  **Spustit ladění**.
 
-Pokud ladění nevrátí vaše zarážky, ujistěte se, že váš výstup knihovny DLL (ve výchozím nastavení složka *\<project> \debug.* ) je umístění, ve kterém volající aplikace volá.
+Další tipy:
+
+- Pokud ladění nevrátí vaše zarážky, ujistěte se, že váš výstup knihovny DLL (ve výchozím nastavení složka *\<project> \debug.* ) je umístění, ve kterém volající aplikace volá.
+
+- Pokud chcete přerušit kód ve spravované volající aplikaci z nativní knihovny DLL nebo naopak, povolte [ladění ve smíšeném režimu](../debugger/how-to-debug-in-mixed-mode.md).
+
+- V některých scénářích může být nutné sdělit ladicímu programu, kde najít zdrojový kód. Další informace najdete v tématu [použití nenačtených symbolů nebo nenačtených stránek zdrojů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#use-the-no-symbols-loadedno-source-loaded-pages).
 
 ## <a name="see-also"></a>Viz také
 - [Ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md)
