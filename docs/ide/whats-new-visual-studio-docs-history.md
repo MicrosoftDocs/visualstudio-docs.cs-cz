@@ -15,16 +15,62 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: bbad51f6d06c221118ffda01e1c7e93374eea2ff
-ms.sourcegitcommit: 3a855d3513407ea78336386dc3be0b75142614b0
+ms.openlocfilehash: 05af4933569e988b35bea9763a27d8f68aae3627
+ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103622566"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107031590"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Historie novinek v dokumentaci k sadě Visual Studio
 
-Vítejte v historii novinek v dokumentaci sady Visual Studio. Tento článek obsahuje hlavní změny v dokumentaci před únorem 2021 (od července 2020). Nejnovější novinky najdete v tématu [dokumentace k Visual Studiu: co je nového v dokumentaci](whats-new-visual-studio-docs.md).
+Vítejte v historii novinek v dokumentaci sady Visual Studio. Tento článek obsahuje hlavní změny v dokumentaci před 2021. až do března (od července 2020). Nejnovější novinky najdete v tématu [dokumentace k Visual Studiu: co je nového v dokumentaci](whats-new-visual-studio-docs.md).
+
+## <a name="february-2021"></a>Únor 2021
+
+### <a name="debugger"></a>Ladicí program
+
+**Aktualizované články**
+
+- [Použití zarážek v ladicím programu sady Visual Studio](../debugger/using-breakpoints.md) – aktualizace pro usnadnění
+
+### <a name="get-started"></a>Začínáme
+
+**Aktualizované články**
+
+- [Kurz: otevření projektu z úložiště v aplikaci Visual Studio 2017](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md) – aktualizace viz také odkazy v VS2017 otevření projektu z úložiště
+- [Kurz: otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md) – přidat odkaz na VS2017 verzi na stránce otevřít projekt ze úložiště
+
+### <a name="ide"></a>IDE – integrované vývojové prostředí
+
+**Aktualizované články**
+
+- [Odstraňování potíží a vytváření protokolů pro problémy nástroje MSBuild](./msbuild-logs.md) – Přidání pokynů k používání rozšíření Project System Tools
+
+### <a name="install"></a>Instalace
+
+**Aktualizované články**
+
+- [Aktualizace sady Visual Studio s minimálním offline rozložením](../install/update-minimal-layout.md)
+  - Přidat příklad 2017 v tabulce možností
+  - Přidat příklady pro VS2017
+
+### <a name="msbuild"></a>MSBuild
+
+**Nové články**
+
+- [MSB3644: referenční sestavení pro ' FrameworkVersion ' nebyla nalezena](../msbuild/errors/msb3644.md) – chyby nástroje MSBuild
+- [MSB8036: Nepodařilo se najít Windows SDK ' Version '](../msbuild/errors/msb8036.md) – chyby nástroje MSBuild
+
+### <a name="test"></a>Test
+
+**Aktualizované články**
+
+- [Použití architektury Microsoft Unit Testing Framework pro C++ v aplikaci Visual Studio](../test/how-to-use-microsoft-test-framework-for-cpp.md) – malé aktualizace obsahu a úpravy
+- [Zápis testů jednotek pro knihovny DLL C++ v aplikaci Visual Studio](../test/how-to-write-unit-tests-for-cpp-dlls.md) – malé aktualizace obsahu a úpravy
+- [Spuštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md) – aktualizace pro usnadnění
+- [Návod: vytvoření a spuštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md) – aktualizace pro usnadnění
+- [Izolaci testovaného kódu Microsoftem napodobeninami](../test/isolating-code-under-test-with-microsoft-fakes.md) – výslovně zmíněné rozhraní .NET 5,0 v dokumentech napodobenin
 
 ## <a name="january-2021"></a>Leden 2021
 ### <a name="azure"></a>Azure

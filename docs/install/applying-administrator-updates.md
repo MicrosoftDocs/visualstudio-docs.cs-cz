@@ -2,7 +2,7 @@
 title: Použití aktualizací správců v aplikaci Visual Studio s koncovým bodem Microsoft Configuration Manager
 titleSuffix: ''
 description: Naučte se, jak použít aktualizace správce v aplikaci Visual Studio.
-ms.date: 04/06/2021
+ms.date: 04/07/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 9a3fdb28-db3d-4970-bc17-7417a985f0fb
@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d316fc35df8c571a9112d7a653737e099df80559
-ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
+ms.openlocfilehash: 4df931ee5eb5eaefdf6d918ff05df65b799bef7e
+ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "106547450"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107031603"
 ---
 # <a name="applying-administrator-updates-that-use-microsoft-endpoint-configuration-manager"></a>Použití aktualizací správce využívajících Microsoft Endpoint Configuration Manager
 
@@ -83,9 +83,9 @@ K dispozici je několik možností konfigurace, které můžete použít k přiz
 
 ::: moniker range="vs-2019"
 
-* **Vytrvalost standardních hodnot údržby**: jak je popsáno výše, aktualizace pro správce, které jsou aktualizacemi funkcí, přepíší instalaci sady Visual Studio na aktuálnější vedlejší verzi produktu. V některých případech ale vývojové týmy mají zůstat na konkrétní úrovni úrovně základní a zabezpečené údržby a chtějí řídit, kdy jejich klienti přestanou na aktuálnější vedlejší verzi. Chcete-li nakonfigurovat klientský počítač tak, aby zůstal na směrném plánu obsluhy a ignoroval nepožadované aktualizace funkcí správce, je nutné vytvořit a nastavit hodnotu **BaselineStickinessVersions2019** REG_SZ dat na řetězec, který představuje přípustné směrné plány, na které může klientský počítač přitahovat a zůstat zapnut.  Řetězec může obsahovat sekvenci základní verze obsluhy, oddělený čárkami, například **16.4.0, 16.7.0**. V řetězci může být zahrnut libovolný počet základních verzí údržby a také je podporováno slovo **All**, který je zkrácený pro odkazování na všechny podporované směrné plány obsluhy. 
+* **Vytrvalost směrného plánu údržby**: jak je popsáno výše, aktualizace funkcí správce napřed instalaci sady Visual Studio na aktuálnější podverzi produktu. V některých případech však uživatelé sady Visual Studio musí zůstat na konkrétní stabilní úrovni a na úrovni standardních hodnot údržby a chtějí řídit, kdy jejich počítače přestanou na aktuálnější vedlejší verzi. Chcete-li nakonfigurovat klientský počítač tak, aby zůstal na směrném plánu obsluhy a ignoroval nepožadované aktualizace funkcí správce, je nutné vytvořit a nastavit hodnotu **BaselineStickinessVersions2019** REG_SZ dat na řetězec, který představuje preferovaný směrný plán, který by měl klientský počítač přitahovat a zůstat zapnutý. Řetězec může obsahovat základní verzi údržby, jako je **16.7.0**.  
 
-     Pokud `BaselineStickinessVersions2019` je hodnota registru poškozená, pak všechny aktualizace funkcí budou mít na počítači zablokovaný instalaci. Věnujte pozornost také [podporovaným časovým obdobím aktualizací funkcí sady Visual Studio](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs). I když je technicky možné použít aktualizace funkcí, které byly dosaženy na konci jejich životnosti, nedoporučujeme ji, protože se nejedná o podporu, a proto potenciálně nezabezpečená.
+     Pokud `BaselineStickinessVersions2019` je hodnota registru poškozená, všechny aktualizace funkcí správce budou na počítači zablokovány. Nezapomeňte věnovat pozornost [podporovaným časovým obdobím aktualizací funkcí sady Visual Studio](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs). Bez ohledu na přítomnost a hodnotu `BaselineStickinessVersions2019` klíče, i když je technicky možné použít aktualizace funkcí správce, které byly dosaženy na konci jejich životnosti, nedoporučujeme, protože nebudou podporovány a tedy potenciálně nezabezpečené.
 
 ::: moniker-end
 
