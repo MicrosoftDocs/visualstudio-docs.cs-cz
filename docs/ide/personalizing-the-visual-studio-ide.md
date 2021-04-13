@@ -2,19 +2,19 @@
 title: Přizpůsobení integrovaného vývojového prostředí
 description: Naučte se přizpůsobit integrované vývojové prostředí (IDE) sady Visual Studio způsobem, který nejlépe podporuje váš vlastní styl a požadavky.
 ms.custom: SEO-VS-2020
-ms.date: 11/20/2017
+ms.date: 04/12/2021
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 550ab6449cc74d3d0d81d60a41b11f0273003c51
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9a1bcfdc9489ee59f5697f1d96de21e31a71fb17
+ms.sourcegitcommit: 5035ccb32fb5e06451337cbf9a150687082ae2af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909023"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107373164"
 ---
 # <a name="personalize-the-visual-studio-ide"></a>Přizpůsobení integrovaného vývojového prostředí sady Visual Studio
 
@@ -40,7 +40,7 @@ K dispozici je mnoho možností přizpůsobení prostřednictvím dialogového o
 
 ## <a name="environment-color-themes"></a>Motivy barev prostředí
 
-Chcete-li změnit barevný motiv mezi světlým, tmavým a modrým, zadejte **prostředí** do vyhledávacího pole a zvolte možnost **prostředí > obecné**. V dialogovém okně **Možnosti** změňte možnost **barevný motiv** .
+Chcete-li změnit barevný motiv mezi tmavým, světlým, modrým a modrým (extra Contrast), zadejte do vyhledávacího pole **motiv** a zvolte možnost **prostředí > obecné**. V dialogovém okně **Možnosti** změňte možnost **barevný motiv** .
 
 Chcete-li změnit možnosti zabarvení v editoru, do vyhledávacího pole zadejte **Environment** a pak zvolte **prostředí > písma a barvy**. Viz [Postupy: Změna písma a barev](../ide/how-to-change-fonts-and-colors-in-visual-studio.md).
 
