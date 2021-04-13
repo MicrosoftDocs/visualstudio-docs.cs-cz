@@ -9,17 +9,17 @@ ms.topic: tutorial
 dev_langs:
 - CSharp
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f3232ad0a8b7cc34abbe6d49c05944c066226da
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 419fa05ae510f3dc22ce82c3805f9f54b4e53b27
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682852"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107295569"
 ---
 # <a name="tutorial-create-a-simple-application-with-c"></a>Kurz: Vytvoření jednoduché aplikace pomocí jazyka C\#
 
@@ -228,11 +228,11 @@ Konečný prvek uživatelského rozhraní, který přidáte, je ovládací prvek
 
 ### <a name="add-code-to-the-display-button"></a>Přidání kódu k tlačítku zobrazit
 
-Po spuštění této aplikace se zobrazí okno se zprávou, když uživatel zvolí přepínač a pak zvolí tlačítko pro **zobrazení** . Objeví se jedno okno se zprávou pro Hello a druhé se zprávou pro Goodbye. Pro vytvoření tohoto chování přidáte kód do `Button_Click` události v *Greetings.XAML.cs*.
+Po spuštění této aplikace se zobrazí okno se zprávou, když uživatel zvolí přepínač a pak zvolí tlačítko pro **zobrazení** . Objeví se jedno okno se zprávou pro Hello a druhé se zprávou pro Goodbye. Pro vytvoření tohoto chování přidáte kód k `Button_Click` události v souboru *Greetings. XAML. cs*.
 
 1. Na návrhové ploše poklikejte na tlačítko **Zobrazit** .
 
-     *Greetings.XAML.cs* se otevře s kurzorem v `Button_Click` události.
+     Otevře se *Greetings. XAML. cs* se kurzorem v `Button_Click` události.
 
     ```csharp
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -293,13 +293,13 @@ Znovu spusťte ladicí program (stiskněte klávesu **F5**). Měli byste vidět 
 
 Nyní zavřete okno aplikace a zastavte ladění.
 
-### <a name="debug-with-breakpoints"></a>Ladění pomocí zarážek
+### <a name="debug-with-breakpoints&quot;></a>Ladění pomocí zarážek
 
 Můžete otestovat kód během ladění přidáním některých zarážek. Zarážky můžete **přidat kliknutím na**  >  levý okraj editoru vedle řádku kódu, kde **chcete,** aby došlo k přerušení, nebo stisknutím klávesy **F9**.
 
-#### <a name="add-breakpoints"></a>Přidání zarážek
+#### <a name=&quot;add-breakpoints&quot;></a>Přidání zarážek
 
-1. Otevřete *Greetings.XAML.cs* a vyberte následující řádek: `MessageBox.Show("Hello.")`
+1. Otevřete soubor *Greetings. XAML. cs* a vyberte následující řádek: `MessageBox.Show(&quot;Hello.")`
 
 1. Přidejte zarážku z nabídky tak, že vyberete **ladění** a potom **přepnete zarážku**.
 
@@ -337,13 +337,13 @@ Ve spuštěné aplikaci byste měli vidět widget, který se zobrazí v horní �
 
 ![Snímek obrazovky okna živého vizuálního stromu](media/vs-2019/exploreide-live-visual-tree.png)
 
-### <a name="build-a-release-version-of-the-application"></a>Sestavení verze pro vydání aplikace
+### <a name="build-a-release-version-of-the-application&quot;></a>Sestavení verze pro vydání aplikace
 
 Teď, když jste ověřili, že všechno funguje, můžete připravit sestavení pro vydání aplikace.
 
 1. V hlavní nabídce vyberte **sestavit**  >  **Vyčistit řešení** a odstraňte mezilehlé soubory a výstupní soubory, které byly vytvořeny během předchozích sestavení. To není nutné, ale čistí výstupy sestavení ladění.
 
-1. Změňte konfiguraci sestavení pro HelloWPFApp z **Debug** na **release** pomocí ovládacího prvku rozevíracího seznamu na panelu nástrojů (aktuálně říká "ladit").
+1. Změňte konfiguraci sestavení pro HelloWPFApp z **Debug** na **release** pomocí ovládacího prvku rozevíracího seznamu na panelu nástrojů (aktuálně říká &quot;ladit").
 
 1. Sestavte řešení kliknutím na **sestavit** sestavení  >  **řešení**.
 

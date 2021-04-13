@@ -7,19 +7,19 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: quickstart
 ms.devlang: vb
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 34b412d254d0775b57f2c9befaae71ce25c6ae75
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 3a103c672b6539f5893cf52a6e83acde6c87176d
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683861"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107296635"
 ---
 # <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>Rychlý Start: Vytvoření první konzolové aplikace v aplikaci Visual Studio pomocí Visual Basic
 
@@ -113,14 +113,14 @@ Pokud kliknete na tlačítko **HelloWorld** v integrovaném vývojovém prostře
 
 Když to uděláte, okno konzoly bude viditelné pouze chvilku před jeho zavřením. K tomu dochází `Main` , protože metoda se ukončí po provedení samostatného příkazu a aplikace skončí.
 
-### <a name="add-some-code"></a>Přidat kód
+### <a name="add-some-code&quot;></a>Přidat kód
 
 Pojďme přidat nějaký kód pro pozastavení aplikace a pak požádat o vstup uživatele.
 
 1. Přidejte následující kód hned za volání <xref:System.Console.WriteLine%2A> metody:
 
    ```vb
-   Console.Write("Press any key to continue...")
+   Console.Write(&quot;Press any key to continue...")
    Console.ReadKey(true)
    ```
 

@@ -7,17 +7,17 @@ ms.assetid: 634ef037-1525-48c8-ac7f-abf04be69376
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 10f021e8f8151216cd2728e1e9723b0edb9b3e1f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5741a20def684b517d0eed684e08bfff65a54f6a
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950728"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107296310"
 ---
 # <a name="step-3-set-your-form-properties"></a>Krok 3: Nastavení vlastností formuláře
 
@@ -25,7 +25,7 @@ Dále pomocí okna **vlastnosti** změníte vzhled formuláře.
 
 ## <a name="how-to-set-your-form-properties"></a>Nastavení vlastností formuláře
 
-1. Ujistěte se, že se díváte na **Návrhář formulářů**. V integrovaném vývojovém prostředí (IDE) sady Visual Studio vyberte kartu **Form1.cs [Design]** (nebo kartu **Form1. vb [design]** v Visual Basic).
+1. Ujistěte se, že se díváte na **Návrhář formulářů**. V integrovaném vývojovém prostředí (IDE) sady Visual Studio vyberte kartu **Form1. cs [Design]** (nebo kartu **Form1. vb [design]** v Visual Basic).
 
 1. Zvolte libovolné místo uvnitř formuláře **Form1** a vyberte ho. Podívejte se na okno **vlastnosti** , ve kterém by se teď měly zobrazovat vlastnosti formuláře. Formuláře mají různé vlastnosti. Například můžete nastavit barvu popředí a pozadí, text nadpisu, který se zobrazí v horní části formuláře, velikost formuláře a další vlastnosti.
 

@@ -8,20 +8,20 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
 ms.devlang: CSharp
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: b9c7f41fd2977ca00294eabd941bc371d8a3220e
-ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
+ms.openlocfilehash: a86b7273a123a5c9ed0519caf2166127c090d16f
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103295789"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107296921"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>Kurz: Začínáme s C# a ASP.NET Core v aplikaci Visual Studio
 
@@ -162,13 +162,13 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
      ![Snímek obrazovky zobrazující prvních deset řádků souboru About. cshtml v editoru kódu sady Visual Studio.](media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code.png)
 
- 1. Vyberte soubor **About.cshtml.cs** .
+ 1. Vyberte soubor **About. cshtml. cs** .
 
-     ![Zvolit soubor About.cshtml.cs v editoru kódu sady Visual Studio](media/csharp-aspnet-razor-solution-explorer-aboutcshtmlcs.png)
+     ![Výběr souboru About. cshtml. cs v editoru kódu sady Visual Studio](media/csharp-aspnet-razor-solution-explorer-aboutcshtmlcs.png)
 
- 1. Zobrazit soubor **About.cshtml.cs** v editoru kódu.
+ 1. Prohlédněte si soubor **About. cshtml. cs** v editoru kódu.
 
-     ![Snímek obrazovky zobrazující prvních 18 řádků souboru About.cshtml.cs v editoru kódu sady Visual Studio. ](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
+     ![Snímek obrazovky zobrazující prvních 18 řádků souboru About. cshtml. cs v editoru kódu sady Visual Studio. ](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
 
  1. Projekt obsahuje složku **wwwroot** , která je kořenem vašeho webu. Rozbalte složku pro zobrazení jejího obsahu.
 
@@ -209,11 +209,11 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
     ![Změna textu v souboru About. cshtml](media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code-changed.png)
 
-1. Vyberte **About.cshtml.cs**. Pak v `using` horní části souboru vyčistěte direktivy pomocí následujícího zástupce:
+1. Vyberte **o. cshtml. cs**. Pak v `using` horní části souboru vyčistěte direktivy pomocí následujícího zástupce:
 
    Vyberte některou z šedých direktiv-out a žárovku `using` s [rychlými akcemi](../../ide/quick-actions.md) se zobrazí hned pod blikajícím kurzorem nebo na levém okraji. Zvolte žárovku a pak zvolte **odebrat nepotřebné** direktivy using.
 
-   ![Odebrat nepotřebné direktivy using v souboru About.cshtml.cs](media/csharp-aspnet-razor-remove-unnecessary-usings.png)
+   ![Odebrat nepotřebné direktivy using v souboru About. cshtml. cs](media/csharp-aspnet-razor-remove-unnecessary-usings.png)
 
      Visual Studio odstraní nepotřebné `using` direktivy ze souboru.
 
@@ -265,11 +265,11 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
      ![Zobrazení souboru index. cshtml v editoru kódu sady Visual Studio](media/vs-2019/csharp-aspnet-index-cshtml.png)
 
- 1. Každý soubor. cshtml má přidružený soubor kódu. Chcete-li otevřít soubor kódu v editoru, rozbalte uzel **index. cshtml** v Průzkumník řešení a vyberte soubor **index.cshtml.cs** .
+ 1. Každý soubor. cshtml má přidružený soubor kódu. Chcete-li otevřít soubor kódu v editoru, rozbalte uzel **index. cshtml** v Průzkumník řešení a vyberte soubor **index. cshtml. cs** .
 
-     ![Zvolit soubor Index.cshtml.cs v editoru kódu sady Visual Studio](media/vs-2019/csharp-aspnet-choose-index-cshtml.png)
+     ![Výběr souboru index. cshtml. cs v editoru kódu sady Visual Studio](media/vs-2019/csharp-aspnet-choose-index-cshtml.png)
 
- 1. Zobrazit soubor **index.cshtml.cs** v editoru kódu.
+ 1. Zobrazení souboru **index. cshtml. cs** v editoru kódu.
 
      ![Zobrazení souboru About. cshtml v editoru kódu sady Visual Studio](media/vs-2019/csharp-aspnet-index-cshtml-editing.png)
 
@@ -308,11 +308,11 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
     ![Změna textu v souboru osobních údajů. cshtml](media/vs-2019/csharp-aspnet-privacy-cshtml-code-changed.png)
 
-1. Teď si provedeme změnu kódu. Vyberte **Privacy.cshtml.cs**. Pak v `using` horní části souboru vyčistěte direktivy pomocí následujícího zástupce:
+1. Teď si provedeme změnu kódu. Vyberte **Privacy. cshtml. cs**. Pak v `using` horní části souboru vyčistěte direktivy pomocí následujícího zástupce:
 
    Vyberte některou z šedých direktiv-out a žárovku `using` s [rychlými akcemi](../../ide/quick-actions.md) se zobrazí hned pod blikajícím kurzorem nebo na levém okraji. Zvolte žárovku a pak najeďte myší na **odebrat nepotřebné** direktivy using.
 
-   ![Odebrat nepotřebné direktivy using v souboru Privacy.cshtml.cs](media/vs-2019/csharp-aspnet-remove-unnecessary-usings.png)
+   ![Odstraňte nepotřebné direktivy using v souboru osobních údajů. cshtml. cs.](media/vs-2019/csharp-aspnet-remove-unnecessary-usings.png)
 
    Teď vyberte **Náhled změn** , abyste viděli, co se změní.
 

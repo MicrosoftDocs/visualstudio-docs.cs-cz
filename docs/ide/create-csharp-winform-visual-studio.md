@@ -6,19 +6,19 @@ ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.devlang: CSharp
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fcc42b999039abe5d682394e378cb95f12b9283
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 26f13d12324beb0e414761ce2d79297767c5d708
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956929"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107297116"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-c"></a>Vytvoření aplikace model Windows Forms v aplikaci Visual Studio pomocí jazyka C\#
 
@@ -133,11 +133,11 @@ Teď, když jsme přidali ovládací prvek tlačítko pro vytvoření akce, Poj�
 
 ### <a name="add-code-to-the-form"></a>Přidat kód do formuláře
 
-1. V okně **Form1.cs &#91;Design&#93;** dvakrát klikněte **na tlačítko,** čímž otevřete okno **Form1.cs** .
+1. V okně aplikace **Form1. cs &#91;Design&#93;** dvakrát klikněte na tlačítko **kliknutím na toto** tlačítko otevřete okno **Form1. cs** .
 
-      (Případně můžete rozbalit **Form1.cs** v **Průzkumník řešení** a pak vybrat **Form1**.)
+      (Případně můžete rozšířit **Form1. cs** v **Průzkumník řešení** a pak vybrat **Form1**.)
 
-1. V okně **Form1.cs** po **privátní řádce void** zadejte nebo zadejte, `lblHelloWorld.Text = "Hello World!";` jak je znázorněno na následujícím snímku obrazovky:
+1. V okně **Form1. cs** za **privátní řádek void** zadejte nebo zadejte, `lblHelloWorld.Text = "Hello World!";` jak je znázorněno na následujícím snímku obrazovky:
 
      ![Přidat kód do formuláře](../get-started/csharp/media/csharp-winforms-add-code.png)
 

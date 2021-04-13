@@ -7,17 +7,17 @@ ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.assetid: f44e50be-a5f5-4d77-9cff-dd52374c3f74
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7597b97a93b2e602a3166eb60b4055082ed7675f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 75019a9f292a07c1dffe6cce5118ef6502014ce6
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951014"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107296596"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>Krok 1: Vytvoření projektu a přidání popisků do formuláře
 
@@ -36,7 +36,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 1. V seznamu šablon vyberte šablonu **model Windows Forms App (.NET Framework)** , pojmenujte ji *MathQuiz* a pak klikněte na tlačítko **OK** .
 
-    Zobrazí se formulář s názvem *Form1.cs* nebo *Form1. vb* v závislosti na zvoleném programovacím jazyce.
+    Zobrazí se formulář s názvem *Form1. cs* nebo *Form1. vb* v závislosti na zvoleném programovacím jazyce.
 
    > [!NOTE]
    > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![Úloha vývoj desktopových aplikací .NET v Instalační program pro Visual Studio](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
@@ -72,7 +72,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 ## <a name="to-set-properties-for-a-form"></a>Nastavení vlastností pro formulář
 
-1. V aplikaci Visual Studio zvolte formulář (buď *Form1.cs* nebo *Form1. vb*, v závislosti na programovacím jazyce) a poté změňte jeho vlastnost **text** na **Matematický kvíz**.
+1. V aplikaci Visual Studio zvolte formulář (buď *Form1. cs* nebo *Form1. vb*, v závislosti na programovacím jazyce) a poté změňte jeho vlastnost **text** na **Matematický kvíz**.
 
      Okno **vlastnosti** obsahuje vlastnosti pro formulář.
 

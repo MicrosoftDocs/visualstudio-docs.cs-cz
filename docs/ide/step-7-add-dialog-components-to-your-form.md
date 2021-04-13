@@ -7,17 +7,17 @@ ms.assetid: ea98c55e-6213-4893-ba7b-f19d7f119527
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a485433ef73ef853a186a5b441396f6d5a57f679
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 66a6663cfbbcc212f05f75a8bc87bf30a3e4f880
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868852"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107297064"
 ---
 # <a name="step-7-add-dialog-components-to-your-form"></a>Krok 7: Přidání komponent dialogových oken do formuláře
 
@@ -27,7 +27,7 @@ Komponenta je jako ovládací prvek v některých způsobech. Pomocí **panelu n
 
 ## <a name="to-add-dialog-components-to-your-form"></a>Přidání součástí dialogového okna do formuláře
 
-1. Zvolte **Návrhář formulářů** (**Form1.cs [Design]**) a pak otevřete skupinu **dialogy** v sadě **nástrojů**.
+1. Zvolte **Návrhář formulářů** (**Form1. cs [Design]**) a pak otevřete skupinu **dialogy** v sadě **nástrojů**.
 
     > [!NOTE]
     > Skupina **dialogová okna** v **sadě nástrojů** obsahuje komponenty, které otevřou spoustu užitečných dialogových oken, které lze použít pro otevírání a ukládání souborů, procházení složek a výběr písma a barev. V tomto projektu použijete dvě komponenty dialogového okna: OpenFileDialog a ColorDialog.

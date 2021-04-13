@@ -3,15 +3,15 @@ title: Přehled sestavení a ladění nástrojů kontejnerů sady Visual Studio
 author: ghogen
 description: Přehled procesu sestavení a ladění nástrojů kontejneru
 ms.author: ghogen
-ms.date: 11/20/2019
+ms.date: 03/15/2021
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 07ecc9a171cf6c0ca254ddbf284f116545ddd0f0
-ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
+ms.openlocfilehash: 6b860abeab0745ebae580e3020c94e446f2441c8
+ms.sourcegitcommit: c875360278312457f4d2212f0811466b4def108d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104884080"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107315950"
 ---
 # <a name="how-visual-studio-builds-containerized-apps"></a>Jak Visual Studio vytváří kontejnerizované aplikace
 
@@ -26,7 +26,7 @@ Funkce buildu s více fázemi pomáhá zajistit efektivnější proces vytváře
 Sestavení s více fázemi umožňuje vytváření imagí kontejnerů ve fázích, které vytvářejí mezilehlé image. Jako příklad zvažte typické souboru Dockerfile generované v rámci sady Visual Studio – první fáze `base` :
 
 ```
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
@@ -37,24 +37,24 @@ EXPOSE 443
 Další fáze je `build` , která se zobrazí takto:
 
 ```
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1-buster-slim AS build
 WORKDIR /src
 COPY ["WebApplication43/WebApplication43.csproj", "WebApplication43/"]
 RUN dotnet restore "WebApplication43/WebApplication43.csproj"
 COPY . .
 WORKDIR "/src/WebApplication43"
-RUN dotnet build "WebApplication43.csproj" -c Release -o /app
+RUN dotnet build "WebApplication43.csproj" -c Release -o /app/build
 ```
 
 Můžete vidět, že `build` fáze začíná jinou původní bitovou kopií z registru ( `sdk` spíše než `aspnet` ), místo aby pokračovala od základny.  `sdk`Obrázek obsahuje všechny nástroje sestavení a z tohoto důvodu je to mnohem větší než Image ASPNET, která obsahuje pouze běhové komponenty. Důvod použití samostatné image se při pohledu na zbytek souboru Dockerfile bude jasný:
 
 ```
 FROM build AS publish
-RUN dotnet publish "WebApplication43.csproj" -c Release -o /app
+RUN dotnet publish "WebApplication43.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApplication43.dll"]
 ```
 
@@ -105,7 +105,7 @@ Zahřívání bude k dispozici pouze v **rychlém** režimu, takže v běžící
 
 Pro ladění pro práci v kontejnerech používá Visual Studio mapování svazků pro mapování ladicího programu a složek NuGet z hostitelského počítače. Mapování svazků je popsané [v dokumentaci k](https://docs.docker.com/storage/volumes/)Docker. Tady jsou svazky, které jsou připojené do vašeho kontejneru:
 
-|Svazek|Popis|
+|Svazek|Description|
 |-|-|
 | **Vzdálený ladicí program** | Obsahuje bity potřebné ke spuštění ladicího programu v kontejneru v závislosti na typu projektu. To je vysvětleno podrobněji v části [ladění](#debugging) .|
 | **Složka aplikace** | Obsahuje složku projektu, kde se nachází souboru Dockerfile.|

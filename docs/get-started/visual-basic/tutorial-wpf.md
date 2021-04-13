@@ -9,17 +9,17 @@ ms.topic: tutorial
 dev_langs:
 - VB
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 00b8488682674b2531bac561e9f2536e616800fb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f337551c16aa63b606c10492bab9956a92cbe141
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944365"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107295426"
 ---
 # <a name="tutorial-create-a-simple-application-with-visual-basic"></a>Kurz: Vytvoření jednoduché aplikace pomocí Visual Basic
 
@@ -198,7 +198,7 @@ Konečný prvek uživatelského rozhraní, který přidáte, je ovládací prvek
 
 ### <a name="add-code-to-the-display-button"></a>Přidání kódu k tlačítku zobrazit
 
-Po spuštění této aplikace se zobrazí okno se zprávou, když uživatel zvolí přepínač a pak zvolí tlačítko pro **zobrazení** . Objeví se jedno okno se zprávou pro Hello a druhé se zprávou pro Goodbye. Pro vytvoření tohoto chování přidáte kód k `Button_Click` události v souboru *Greetings. XAML. vb* nebo *Greetings.XAML.cs*.
+Po spuštění této aplikace se zobrazí okno se zprávou, když uživatel zvolí přepínač a pak zvolí tlačítko pro **zobrazení** . Objeví se jedno okno se zprávou pro Hello a druhé se zprávou pro Goodbye. Pro vytvoření tohoto chování přidáte kód k `Button_Click` události v souboru *Greetings. XAML. vb* nebo *Greetings. XAML. cs*.
 
 1. Na návrhové ploše poklikejte na tlačítko **Zobrazit** .
 
@@ -259,13 +259,13 @@ Znovu spusťte ladicí program (stiskněte klávesu **F5**). Měli byste vidět 
 
  Nyní zavřete okno aplikace a zastavte ladění.
 
-### <a name="debug-with-breakpoints"></a>Ladění pomocí zarážek
+### <a name="debug-with-breakpoints&quot;></a>Ladění pomocí zarážek
 
 Můžete otestovat kód během ladění přidáním některých zarážek. Zarážky můžete **přidat kliknutím na**  >  levý okraj editoru vedle řádku kódu, kde **chcete,** aby došlo k přerušení, nebo stisknutím klávesy **F9**.
 
-#### <a name="add-breakpoints"></a>Přidání zarážek
+#### <a name=&quot;add-breakpoints&quot;></a>Přidání zarážek
 
-1. Otevřete soubor *Greetings. XAML. vb* a vyberte následující řádek: `MessageBox.Show("Hello.")`
+1. Otevřete soubor *Greetings. XAML. vb* a vyberte následující řádek: `MessageBox.Show(&quot;Hello.")`
 
 2. Stisknutím klávesy **F9** nebo z nabídky přidejte zarážku tak, že vyberete **ladění** a potom **přepnete zarážku**.
 
@@ -283,13 +283,13 @@ Můžete otestovat kód během ladění přidáním některých zarážek. Zará
 
 6. Na panelu nabídek vyberte možnost **ladit**  >  **Krok ven**.
 
-     Aplikace bude pokračovat v provádění a zobrazí se okno se zprávou se slovem "Hello".
+     Aplikace bude pokračovat v provádění a zobrazí se okno se zprávou se slovem "Hello&quot;.
 
 7. Kliknutím na tlačítko **OK** v okně se zprávou ho zavřete.
 
 8. V okně **Greetings** vyberte přepínač rozdálení a pak **klikněte na tlačítko** **Zobrazit** .
 
-     Řádek `MessageBox.Show("Goodbye.")` je zvýrazněn žlutě.
+     Řádek `MessageBox.Show(&quot;Goodbye.")` je zvýrazněn žlutě.
 
 9. Pokračujte v ladění kliknutím na klávesu **F5** . Když se zobrazí okno se zprávou, zavřete ho kliknutím na tlačítko **OK** v okně se zprávou.
 
@@ -303,13 +303,13 @@ Ve spuštěné aplikaci byste měli vidět widget, který se zobrazí v horní �
 
 ![Snímek obrazovky okna živého vizuálního stromu](media/vs-2019/exploreide-live-visual-tree.png)
 
-### <a name="build-a-release-version-of-the-application"></a>Sestavení verze pro vydání aplikace
+### <a name="build-a-release-version-of-the-application&quot;></a>Sestavení verze pro vydání aplikace
 
 Teď, když jste ověřili, že všechno funguje, můžete připravit sestavení pro vydání aplikace.
 
 1. V hlavní nabídce vyberte **sestavit**  >  **Vyčistit řešení** a odstraňte mezilehlé soubory a výstupní soubory, které byly vytvořeny během předchozích sestavení. To není nutné, ale čistí výstupy sestavení ladění.
 
-2. Změňte konfiguraci sestavení pro HelloWPFApp z **Debug** na **release** pomocí ovládacího prvku rozevíracího seznamu na panelu nástrojů (aktuálně říká "ladit").
+2. Změňte konfiguraci sestavení pro HelloWPFApp z **Debug** na **release** pomocí ovládacího prvku rozevíracího seznamu na panelu nástrojů (aktuálně říká &quot;ladit").
 
 3. Sestavte řešení kliknutím na **sestavit** sestavení  >  **řešení**.
 
