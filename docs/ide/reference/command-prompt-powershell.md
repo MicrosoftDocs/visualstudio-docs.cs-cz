@@ -1,8 +1,8 @@
 ---
-title: Prostředí příkazového řádku pro vývojáře
-description: Naučte se najít a použít Visual Studio Developer Command Prompt, Visual Studio Developer PowerShell a terminál sady Visual Studio, které vám umožní snadněji používat nástroje .NET a C++.
-ms.date: 03/04/2021
-ms.custom: contperf-fy21q3
+title: Prostředí příkazového řádku & výzvy pro vývojáře
+description: Začněte z nabídky nástroje > nabídce příkazového řádku. Visual Studio Developer Command Prompt, vývojové prostředí PowerShell a terminál vám umožní snadněji používat nástroje .NET a C++.
+ms.date: 04/11/2021
+ms.custom: contperf-fy21q4
 helpviewer_keywords:
 - Visual Studio command prompt
 - command prompt, Visual Studio
@@ -11,27 +11,21 @@ helpviewer_keywords:
 - Visual Studio terminal
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 no-loc: cmdlet
-ms.openlocfilehash: fb2c99037577528b77ab5c1b0c74bf7af9e73d1b
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 57cbc93f4b6e8cf64dd5149462788e0cde833350
+ms.sourcegitcommit: 52b093e000334f53d87c6165d1418347e4f45dec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672322"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107221728"
 ---
-# <a name="developer-command-prompt-and-developer-powershell"></a>PowerShell Developer Command Prompt a vývojář
+# <a name="visual-studio-developer-command-prompt-and-developer-powershell"></a>Visual Studio Developer Command Prompt a vývojové prostředí PowerShell
 
 Visual Studio 2019 obsahuje dvě prostředí příkazového řádku pro vývojáře:
 
 - **Visual Studio Developer Command Prompt** – standardní příkazový řádek s určitými proměnnými prostředí nastavenými na snadnější použití vývojářských nástrojů příkazového řádku. K dispozici od aplikace Visual Studio 2015.
+
 - **PowerShell pro vývojáře sady Visual Studio** – výkonnější než příkazový řádek. Například můžete předat výstup jednoho příkazu (známého jako *cmdlet* ) do jiného cmdlet . Toto prostředí má stejné proměnné prostředí nastavené jako Developer Command Prompt. K dispozici od aplikace Visual Studio 2019.
 
-Obě prostředí mají sadu specifických proměnných prostředí, které umožňují snazší použití vývojářských nástrojů příkazového řádku. Po otevření jednoho z těchto prostředí můžete zadat příkazy pro různé nástroje, aniž byste museli znát, kde se nacházejí. Příkazy, které můžete spustit, zahrnují:
-
-- [`MSBuild`](../../msbuild/msbuild-command-line-reference.md), pro sestavení projektu nebo řešení.
-- [.NET Framework nástroje](/dotnet/framework/tools/index), jako například [`clrver`](/dotnet/framework/tools/clrver-exe-clr-version-tool) a [`ildasm`](/dotnet/framework/tools/ildasm-exe-il-disassembler) .
-- Kompilační nástroje C/C++, jako například [`CL`](/cpp/build/reference/compiler-command-line-syntax) a [`NMAKE`](/cpp/build/reference/running-nmake) .
-- Další nástroje pro sestavení C/C++, jako například [`LIB`](/cpp/build/reference/lib-reference) a [`DUMPBIN`](/cpp/build/reference/dumpbin-reference) .
-- [Příkazy rozhraní příkazového řádku .NET](/dotnet/core/tools/index), například [`dotnet`](/dotnet/core/tools/dotnet) a [`dotnet run`](/dotnet/core/tools/dotnet-run) . (Tyto příkazy jsou k dispozici v běžném příkazovém řádku.)
 
 :::image type="content" source="media/developer-command-prompt-for-vs/command-prompt.png" alt-text="Developer Command Prompt pro Visual Studio zobrazující nástroj Clrver":::
 
@@ -41,7 +35,22 @@ Počínaje verzí Visual Studio 2019 verze 16,5 obsahuje Visual Studio integrova
 
 Když otevřete některou z vývojářských prostředí ze sady Visual Studio, ať už jako samostatnou aplikaci nebo v okně terminálu, otevře se v adresáři aktuálního řešení (Pokud máte řešení načtené). Díky tomuto chování je vhodné spouštět příkazy proti řešení nebo jeho projektům.
 
-## <a name="start-the-shell-from-inside-visual-studio"></a>Spuštění prostředí v rámci sady Visual Studio
+Obě prostředí mají sadu specifických proměnných prostředí, které umožňují snazší použití vývojářských nástrojů příkazového řádku. Po otevření jednoho z těchto prostředí můžete zadat příkazy pro různé nástroje, aniž byste museli znát, kde se nacházejí. 
+
+|Oblíbené příkazy|Description|
+|--|--|
+|[`MSBuild`](../../msbuild/msbuild-command-line-reference.md)|Sestavení projektu nebo řešení|
+|[`clrver`](/dotnet/framework/tools/clrver-exe-clr-version-tool)| [.NET Framework nástroje](/dotnet/framework/tools/index) pro CLR.|
+|[`ildasm`](/dotnet/framework/tools/ildasm-exe-il-disassembler)|[.NET Framework nástroj](/dotnet/framework/tools/index) pro Disassembler|
+|[`dotnet`](/dotnet/core/tools/dotnet)|[Příkaz rozhraní .NET CLI](/dotnet/core/tools/index)|
+|[`dotnet run`](/dotnet/core/tools/dotnet-run)|[Příkaz rozhraní .NET CLI](/dotnet/core/tools/index)|
+|[`CL`](/cpp/build/reference/compiler-command-line-syntax)|Kompilační nástroj C/C++|
+|[`NMAKE`](/cpp/build/reference/running-nmake)|Kompilační nástroj C/C++|
+|[`LIB`](/cpp/build/reference/lib-reference)| Nástroj pro sestavení C/C++|
+|[`DUMPBIN`](/cpp/build/reference/dumpbin-reference)| Nástroj pro sestavení C/C++|
+
+
+## <a name="start-in-visual-studio"></a>Spustit v aplikaci Visual Studio
 
 Pomocí těchto kroků otevřete Developer Command Prompt nebo vývojové prostředí PowerShell v rámci sady Visual Studio:
 
@@ -51,9 +60,9 @@ Pomocí těchto kroků otevřete Developer Command Prompt nebo vývojové prost�
 
    ![Položka nabídky příkazového řádku v aplikaci Visual Studio](./media/developer-command-prompt-for-vs/vs-menu.png)
 
-## <a name="use-the-windows-start-menu"></a>Použití nabídky Start v systému Windows
+## <a name="start-from-windows-menu"></a>Spustit z nabídky systému Windows
 
-V závislosti na verzi sady Visual Studio a všech dalších sadách SDK a úlohách, které jste nainstalovali, může být více příkazů. Pokud následující kroky nefungují, můžete zkusit [soubory vyhledat ručně na svém počítači](#manually-locate-the-file) nebo [spustit prostředí v rámci sady Visual Studio](#start-the-shell-from-inside-visual-studio).
+Další způsob, jak spustit prostředí, je z nabídky Start. V závislosti na verzi sady Visual Studio a všech dalších sadách SDK a úlohách, které jste nainstalovali, může být více příkazů. 
 
 ### <a name="windows-10"></a>Windows 10
 
@@ -85,7 +94,7 @@ V závislosti na verzi sady Visual Studio a všech dalších sadách SDK a úloh
 
 Pokud máte nainstalované jiné sady SDK, jako je například [Sada Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) nebo [předchozí verze](https://developer.microsoft.com/windows/downloads/sdk-archive), může se zobrazit další příkazová výzva. V dokumentaci pro jednotlivé nástroje zjistíte, kterou verzi příkazového řádku byste měli použít.
 
-## <a name="manually-locate-the-file"></a>Ručně vyhledat soubor
+## <a name="start-from-file-browser"></a>Spustit z prohlížeče souborů 
 
 Obvykle jsou zástupci pro prostředí, které jste nainstalovali, umístěny do složky **nabídky Start** pro Visual Studio, jako je například v *%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual studiu 2019 \ Visual Studio Tools*. Ale pokud hledání příkazového řádku nepřinese očekávané výsledky, můžete zkusit soubory na svém počítači najít ručně.
 

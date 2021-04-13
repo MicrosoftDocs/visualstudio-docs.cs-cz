@@ -17,12 +17,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 46eae980a1dafc8e9b7f95f5d40593e57045cc01
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0e6b984a9f885f137cf387837a242cc1207e45ae
+ms.sourcegitcommit: 52b093e000334f53d87c6165d1418347e4f45dec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971320"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107221715"
 ---
 # <a name="intellisense-in-visual-studio"></a>IntelliSense v aplikaci Visual Studio
 
@@ -68,7 +68,7 @@ Když vyberete člena v poli **seznam členů** , zobrazí se také pole rychlé
 
 ![Informace o parametrech v souboru kódu&#35; jazyka C](../ide/media/vs2015_paraminfo.png)
 
-Rychlé informace můžete vyvolat ručně výběrem možnosti **Upravit**  >    >  **rychlé informace** technologie IntelliSense stisknutím **kombinace kláves CTRL +** + nebo výběrem tlačítka **rychlé informace** na panelu nástrojů editoru.
+Rychlé informace můžete vyvolat ručně výběrem možnosti **Upravit**  >    >  **rychlé informace** technologie IntelliSense, stisknutím **kombinace kláves CTRL** + **K**, **CTRL** + **I** nebo kliknutím na tlačítko **rychlé informace** na panelu nástrojů editoru.
 
 Pokud je funkce přetížena, technologie IntelliSense nemusí zobrazit informace pro všechny formy přetížení.
 
@@ -93,7 +93,7 @@ Ikony v technologii IntelliSense mohou vyjádřit další význam s modifikátor
 | ![Modifikátor interní ikony](../ide/media/intellisenseInternalModifier.png)       |    Internal – třída    |    Přístup je omezen na aktuální sestavení.    |
 |![Modifikátor privátní ikony](../ide/media/intellisensePrivateModifier.png)        |    Soukromá třída    |    Přístup je omezen na obsahující třídu nebo typy odvozené z obsažené třídy v rámci aktuálního sestavení. (K dispozici od verze C# 7,2.)    |
 
-## <a name="troubleshoot-intellisense"></a>Řešení potíží s technologií IntelliSense
+## <a name="troubleshoot-intellisense&quot;></a>Řešení potíží s technologií IntelliSense
 
 Možnosti technologie IntelliSense nemusí v určitých případech fungovat podle očekávání.
 
@@ -104,7 +104,7 @@ Možnosti technologie IntelliSense nemusí v určitých případech fungovat pod
 **Kurzor je v řetězcovém literálu.** IntelliSense nemůžete použít, pokud je kurzor v uvozovkách kolem řetězcového literálu, jako v následujícím příkladu:
 
 ```cpp
-MessageBox( hWnd, "String literal|")
+MessageBox( hWnd, &quot;String literal|")
 ```
 
 **Automatické možnosti jsou vypnuté.** Ve výchozím nastavení funguje technologie IntelliSense automaticky, ale můžete ji zakázat. Použít funkci IntelliSense můžete i v případě, že je zakázáno automatické dokončování.
