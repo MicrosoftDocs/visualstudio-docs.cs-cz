@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d57fa806ae565d0752fb9970c3f335295e83535
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: ee849354d82b11b8d94a737a2b546f686d04d34a
+ms.sourcegitcommit: 3985d0ae8d6332f4682c82a10897763173d52961
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101684226"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107386034"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>Postup ladění pro absolutní začátečníky
 
@@ -70,7 +70,7 @@ Pokud jste neobdrželi výjimku, pravděpodobně máte dobrý nápad, kde může
 
 V sadě Visual Studio můžete rychle nastavit zarážku kliknutím na levý okraj vedle řádku kódu. Nebo umístěte kurzor na čáru a stiskněte klávesu **F9**.
 
-Abychom vám pomohli objasnění těchto konceptů, provedeme si nějaký ukázkový kód, který už obsahuje několik chyb. Používáme jazyk C#, ale funkce ladění se vztahují na Visual Basic, C++, JavaScript, Python a další podporované jazyky.
+Abychom vám pomohli objasnění těchto konceptů, provedeme si nějaký ukázkový kód, který už obsahuje několik chyb. Používáme jazyk C#, ale funkce ladění se vztahují na Visual Basic, C++, JavaScript, Python a další podporované jazyky. Vzorový kód pro Visual Basic je také k dispozici, ale snímky obrazovky jsou v jazyce C#.
 
 ### <a name="create-a-sample-app-with-some-bugs"></a>Vytvoření ukázkové aplikace (s některými chybami)
 
@@ -85,19 +85,21 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
 1. Otevřete sadu Visual Studio.
 
     ::: moniker range=">=vs-2019"
-    V okně Start vyberte možnost **vytvořit nový projekt**. Do vyhledávacího pole zadejte **Console** , jako jazyk vyberte **C#** a pak zvolte **Konzolová aplikace** pro .NET Core. Zvolte **Další**. Zadejte název projektu, například **ConsoleApp-FirstApp** a klikněte na **Další**.
+    V okně Start vyberte možnost **vytvořit nový projekt**. Do vyhledávacího pole zadejte **Console** , jako jazyk vyberte buď **C#** , nebo **Visual Basic** , a pak zvolte **Konzolová aplikace** pro .NET Core. Zvolte **Další**. Zadejte název projektu, například **ConsoleApp_FirstApp** a klikněte na tlačítko **Další**.
 
     Zvolte buď Doporučené cílové rozhraní (.NET Core 3,1), nebo .NET 5 a pak zvolte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte **Konzolová aplikace** a pak v prostředním podokně zvolte buď **Konzolová aplikace (.NET Core)**. Zadejte název jako **ConsoleApp-FirstApp** a klikněte na **OK**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** nebo **Visual Basic** zvolte **Konzolová aplikace** a pak v prostředním podokně zvolte buď **Konzolová aplikace (.NET Core)**. Zadejte název, například **ConsoleApp_FirstApp** a klikněte na tlačítko **OK**.
     ::: moniker-end
 
     Pokud nevidíte šablonu projektu **konzolové aplikace** pro .NET Core, přejděte do části **nástroje**  >  **získat nástroje a funkce**, které otevřou instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
 
     Visual Studio vytvoří projekt konzoly, který se zobrazí v Průzkumník řešení v pravém podokně.
 
-1. V *program.cs* nahraďte veškerý výchozí kód následujícím kódem:
+1. V *programu program. cs* (nebo *program. vb*) nahraďte veškerý výchozí kód následujícím kódem. (Nejdřív vyberte kartu jazyk, buď C#, nebo Visual Basic.)
+
+   #### <a name="c"></a>[C#](#tab/csharp)
 
     ```csharp
     using System;
@@ -178,6 +180,109 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
     }
     ```
 
+   #### <a name="visual-basic"></a>[Visual Basic](#tab/visualbasic)
+
+    ```vb
+    Imports System
+    Imports System.Collections.Generic
+
+    Namespace ConsoleApp_FirstApp
+        Friend Class Program
+            Public Shared Sub Main(ByVal args As String())
+                Console.WriteLine("Welcome to Galaxy News!")
+                Call IterateThroughList()
+                Console.ReadKey()
+            End Sub
+
+            Private Shared Sub IterateThroughList()
+                Dim theGalaxies = New List(Of Galaxy) From {
+                    New Galaxy() With {
+                        .Name = "Tadpole",
+                        .MegaLightYears = 400,
+                        .GalaxyType = New GType("S"c)
+                    },
+                    New Galaxy() With {
+                        .Name = "Pinwheel",
+                        .MegaLightYears = 25,
+                        .GalaxyType = New GType("S"c)
+                    },
+                    New Galaxy() With {
+                        .Name = "Cartwheel",
+                        .MegaLightYears = 500,
+                        .GalaxyType = New GType("L"c)
+                    },
+                    New Galaxy() With {
+                        .Name = "Small Magellanic Cloud",
+                        .MegaLightYears = 0.2,
+                        .GalaxyType = New GType("I"c)
+                    },
+                    New Galaxy() With {
+                        .Name = "Andromeda",
+                        .MegaLightYears = 3,
+                        .GalaxyType = New GType("S"c)
+                    },
+                    New Galaxy() With {
+                        .Name = "Maffei 1",
+                        .MegaLightYears = 11,
+                        .GalaxyType = New GType("E"c)
+                    }
+                }
+    
+                For Each theGalaxy As Galaxy In theGalaxies
+                    Console.WriteLine(theGalaxy.Name & "  " & theGalaxy.MegaLightYears & ",  " & theGalaxy.GalaxyType)
+                Next
+
+            End Sub
+        End Class
+    
+        Public Class Galaxy
+            Public Property Name As String
+            Public Property MegaLightYears As Double
+            Public Property GalaxyType As Object
+        End Class
+    
+        Public Class GType
+    
+            Shared Operator &(ByVal left As String, ByVal right As GType) As String
+                Return New String(left & right.ToString())
+            End Operator
+            Public Sub New(ByVal type As Char)
+                Select Case type
+                    Case "S"c
+                        MyGType = GType.Type.Spiral
+                    Case "E"c
+                        MyGType = GType.Type.Elliptical
+                    Case "l"c
+                        MyGType = GType.Type.Irregular
+                    Case "L"c
+                        MyGType = GType.Type.Lenticular
+                    Case Else
+                End Select
+    
+            End Sub
+    
+            Private _MyGType As String
+            Public Property MyGType As Object
+                Get
+                    Return _MyGType
+                End Get
+                Set(ByVal value As Object)
+                    _MyGType = value.ToString()
+                End Set
+            End Property
+    
+            Private Enum Type
+                Spiral
+                Elliptical
+                Irregular
+                Lenticular
+            End Enum
+        End Class
+    End Namespace
+    ```
+
+    ---
+
     Naším záměrem tohoto kódu je zobrazit název Galaxy, vzdálenost k Galaxy a typ Galaxy vše v seznamu. Pro ladění je důležité pochopit záměr kódu. Tady je formát jednoho řádku ze seznamu, který chceme zobrazit ve výstupu:
 
     *Galaxy název*, *vzdálenost*, *typ Galaxy*.
@@ -214,6 +319,8 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
 
 1. V případě, že je aplikace stále spuštěná, nastavte zarážku kliknutím na levý okraj vedle `Console.WriteLine` volání metody v tomto řádku kódu.
 
+    #### <a name="c"></a>[C#](#tab/csharp)
+
     ```csharp
     foreach (Galaxy theGalaxy in theGalaxies)
     {
@@ -221,6 +328,15 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
     }
     ```
 
+    #### <a name="visual-basic"></a>[Visual Basic](#tab/visualbasic)
+
+    ```vb
+    For Each theGalaxy As Galaxy In theGalaxies
+        Console.WriteLine(theGalaxy.Name & "  " & theGalaxy.MegaLightYears & ",  " & theGalaxy.GalaxyType)
+    Next
+    ```
+
+    ---
     Při nastavení zarážky se na levém okraji zobrazí červená tečka.
 
     Vzhledem k tomu, že se ve výstupu zobrazuje problém, začneme ladit tím, že si vyhledáme předchozí kód, který nastaví výstup v ladicím programu.
@@ -235,9 +351,12 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
 
     "Spirála" je ve skutečnosti správná hodnota, kterou jste čekali v tisku do konzoly. Proto je dobré začít mít k této hodnotě v tomto kódu přístup při spuštění aplikace. V tomto scénáři používáme nesprávné rozhraní API. Uvidíme, že to můžeme při spouštění kódu v ladicím programu opravit.
 
-1. Ve stejném kódu, zatímco pořád ladění, umístěte kurzor na konec `theGalaxy.GalaxyType` a změňte jej na `theGalaxy.GalaxyType.MyGType` . I když lze tuto změnu provést, Editor kódu zobrazí chybu oznamující, že nemůže kompilovat tento kód.
+1. Ve stejném kódu, zatímco pořád ladění, umístěte kurzor na konec `theGalaxy.GalaxyType` a změňte jej na `theGalaxy.GalaxyType.MyGType` . I když lze tuto změnu provést, Editor kódu zobrazí chybu oznamující, že nemůže kompilovat tento kód. (V Visual Basic se chyba nezobrazí a tato část kódu funguje)
 
     ![Snímek obrazovky ladicího programu sady Visual Studio se zvýrazněným řádkem kódu, který je zvýrazněný červeně, a polem pro úpravu a pokračování s vybraným tlačítkem Upravit.](../debugger/media/beginners-edit.png)
+
+   > [!NOTE]
+   > Pokud chcete ladit ukázkový kód Visual Basic, přeskočte několik dalších kroků, dokud nebudete vyzváni k kliknutí na tlačítko **restartovat** ![restart aplikace](../debugger/media/dbg-tour-restart.png "RestartApp") .
 
 1. V okně zpráva **Upravit a pokračovat** klikněte na **Upravit** . V okně **Seznam chyb** se teď zobrazí chybová zpráva. Chyba indikuje, že `'object'` neobsahuje definici pro `MyGType` .
 
@@ -274,11 +393,21 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
     Maffei 1,  Elliptical
     ```
 
-1. Nastavte zarážku na tomto řádku kódu.
+1. Nastavte zarážku na tomto řádku kódu před příkazem Switch (před příkazem SELECT v Visual Basic).
+
+    #### <a name="c"></a>[C#](#tab/csharp)
 
     ```csharp
     public GType(char type)
     ```
+
+    #### <a name="visual-basic"></a>[Visual Basic](#tab/visualbasic)
+
+    ```vb
+    Public Sub New(ByVal type As Char)
+    ```
+
+    ---
 
     Tento kód je, kde je nastaven typ Galaxy, takže chceme se na něj podívat podrobněji.
 
@@ -296,7 +425,7 @@ V dalším kroku vytvoříme aplikaci, která bude mít několik chyb.
 
     **F11** posune ladicí program (a spustí kód) v jednom okamžiku. **F10** (**krok za krokem**) je podobný příkaz a obě jsou velmi užitečné při učení, jak použít ladicí program.
 
-1. Stiskněte klávesu **F11** , dokud nezastavíte řádek kódu v `switch` příkazu pro hodnotu I. Tady vidíte jasný problém, který je výsledkem překlepu. Očekávali jste, že kód se má posunout na místo, kde se nastaví `MyGType` jako nepravidelný typ Galaxy, ale ladicí program tento kód kompletně přeskočí a pozastaví se v `default` části `switch` příkazu.
+1. Stiskněte klávesu **F11** , dokud nezastavíte řádek kódu v `switch` příkazu pro hodnotu I ( `Select` příkaz pro Visual Basic). Tady vidíte jasný problém, který je výsledkem překlepu. Očekávali jste, že kód bude v místě, kde se nastaví `MyGType` jako nepravidelný typ Galaxy, ale ladicí program tento kód kompletně přeskočí a pozastaví v `default` části `switch` příkazu ( `Else` příkaz v Visual Basic).
 
     ![Najít překlep](../debugger/media/beginners-typo.png)
 
