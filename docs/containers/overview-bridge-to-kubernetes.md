@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: 49c3081e68baf4f2bf1d0975bcdae7ea25ab90b3
-ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
+ms.openlocfilehash: 1709785c63bd4fbcd702fbcacfe59dddcb71d1b3
+ms.sourcegitcommit: 0135fc6ffa38995cc9e6ab05fa265758890d2e15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103571542"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107526157"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Jak funguje Přemostění na Kubernetes
 
@@ -26,6 +26,8 @@ Most do Kubernetes přesměruje provoz mezi připojeným clusterem Kubernetes a 
 
 > [!WARNING]
 > Most do Kubernetes je určený jenom pro vývojové a testovací scénáře. Není určena ani podporována pro použití s provozními clustery nebo službami Live v aktivním použití.
+
+Informace o aktuálně podporovaných funkcích a budoucích plánech pro přemostění na Kubernetes najdete v části [most do Kubernetes](https://github.com/microsoft/mindaro/projects/1).
 
 ## <a name="using-bridge-to-kubernetes"></a>Použití mostu na Kubernetes
 
@@ -53,7 +55,7 @@ Kromě toho přemostění na Kubernetes poskytuje způsob, jak replikovat promě
 
 ## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>Další konfigurace pomocí KubernetesLocalProcessConfig. yaml
 
-`KubernetesLocalProcessConfig.yaml`Soubor umožňuje replikovat proměnné prostředí a připojené soubory, které jsou k dispozici pro vaše lusky v clusteru. Další informace o dalších možnostech konfigurace najdete v tématu [Konfigurace mostu na Kubernetes][using-config-yaml].
+`KubernetesLocalProcessConfig.yaml`Soubor umožňuje replikovat proměnné prostředí a připojené soubory, které jsou k dispozici pro vaše lusky v clusteru. Při použití sady Visual Studio pro most pro vývoj Kubernetes musí být soubor KubernetesLocalConfig. yaml umístěn ve stejném adresáři jako soubor projektu pro službu, kterou přesměrováváte. Další informace o dalších možnostech konfigurace najdete v tématu [Konfigurace mostu na Kubernetes][using-config-yaml].
 
 ## <a name="using-routing-capabilities-for-developing-in-isolation"></a>Používání možností směrování pro vývoj v izolaci
 
