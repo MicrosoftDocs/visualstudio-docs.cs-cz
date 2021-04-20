@@ -6,14 +6,14 @@ ms.assetid: 00b82d16-6a80-42d1-8b71-e12047c6b50c
 ms.technology: ''
 author: CaityBuschlen
 ms.author: cabuschl
-ms.date: 04/02/2021
+ms.date: 04/19/2021
 ms.faqid: q4_2
-ms.openlocfilehash: 8d8b516a7572688314d043dc7ca052d30d26dcf4
-ms.sourcegitcommit: 4bf7d82eb3a837ad5d1ae5c110039cbf74258f18
+ms.openlocfilehash: c53b866cab32270cfa10b6a8632af776ff9afd92
+ms.sourcegitcommit: 6b74cb197e59c23492722935457c7ec278cadb57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2021
-ms.locfileid: "106273389"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107736991"
 ---
 ## <a name="how-do-i-renew-visual-studio-subscriptions"></a>Návody prodloužit platnost předplatných sady Visual Studio? 
 
@@ -34,7 +34,7 @@ Pokud aktuálně máte maloobchodní předplatné, můžete ho prodloužit dvěm
     - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab) 
 
 > [!Note]
-> Abyste měli nárok na ceny za obnovení, musíte předplatné prodloužit do 30 dnů od vypršení platnosti.
+> Předplatné musíte prodloužit do 30 dnů od vypršení platnosti, abyste měli nárok na ceny za obnovení. Pokud provedete obnovení Microsoft Store, nezapomeňte aktivovat obnovení pomocí klíče 5x5, který obdržíte, nebo když vaše předplatné nebude mít aktualizované koncové datum nebo nebude obnoveno.
 
 ### <a name="how-to-renew-cloud-subscriptions"></a>Jak prodloužit platnost cloudových předplatných
 Cloudová předplatná jsou zakoupená prostřednictvím [Visual Studio Marketplace](https://marketplace.visualstudio.com/).  Měsíční i roční předplatné cloudu se prodlouží, dokud je neodstraníte, takže není potřeba nic dělat k jejich obnovení.
