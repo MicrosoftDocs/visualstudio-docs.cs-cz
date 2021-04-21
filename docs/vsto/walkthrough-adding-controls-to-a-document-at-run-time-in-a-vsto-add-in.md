@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3cc88b5ee48241a15a66144c992936b55fb2acf3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2088a4d2ca81418ca16b51b53b0af38595d75b2
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838084"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825391"
 ---
 # <a name="walkthrough-add-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>Návod: Přidání ovládacích prvků do dokumentu za běhu v doplňku VSTO
   Pomocí doplňku VSTO můžete přidat ovládací prvky do libovolného otevřeného dokumentu aplikace Word systém Microsoft Office. Tento návod ukazuje, jak použít pás karet k tomu, aby uživatelé mohli přidat <xref:Microsoft.Office.Tools.Word.Controls.Button> nebo <xref:Microsoft.Office.Tools.Word.RichTextContentControl> do dokumentu.
@@ -68,7 +68,7 @@ ms.locfileid: "99838084"
 
 3. Změňte název nového pásu karet na **MyRibbon** a klikněte na **Přidat**.
 
-    Otevře se soubor **MyRibbon.cs** nebo **MyRibbon. vb** v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
+    Otevře se soubor **MyRibbon. cs** nebo **MyRibbon. vb** v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
 
 4. V Návrháři pásu karet klikněte na skupinu **Group1** .
 
@@ -109,46 +109,46 @@ ms.locfileid: "99838084"
 
 ### <a name="to-add-and-remove-controls-on-the-active-document"></a>Přidání a odebrání ovládacích prvků v aktivním dokumentu
 
-1. V **Průzkumník řešení** dvakrát klikněte na *ThisAddIn.cs* nebo *ThisAddIn. vb* pro otevření souboru v editoru kódu.
+1. V **Průzkumník řešení** dvakrát klikněte na *ThisAddIn. cs* nebo *ThisAddIn. vb* a otevřete soubor v editoru kódu.
 
 2. Do třídy `ThisAddIn` přidejte následující kód. Tento kód deklaruje <xref:Microsoft.Office.Tools.Word.Controls.Button> objekty a <xref:Microsoft.Office.Tools.Word.RichTextContentControl> objekty, které reprezentují ovládací prvky, které budou přidány do dokumentu.
 
-     [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#1](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs" id="Snippet1":::
 
 3. Do třídy přidejte následující metodu `ThisAddIn` . Když uživatel klikne na pás karet na **tlačítko Přidat** , tato metoda přidá <xref:Microsoft.Office.Tools.Word.Controls.Button> k aktuálnímu výběru v dokumentu, pokud je zaškrtnuté políčko, nebo zruší zaškrtnutí políčka <xref:Microsoft.Office.Tools.Word.Controls.Button> .
 
-     [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#2](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#2)]
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#2](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs" id="Snippet2":::
 
 4. Do třídy přidejte následující metodu `ThisAddIn` . Když uživatel klikne na pás karet na zaškrtávací políčko **Přidat ovládací prvek formátovaného textu** , tato metoda přidá <xref:Microsoft.Office.Tools.Word.RichTextContentControl> k aktuálnímu výběru v dokumentu, pokud je zaškrtnuté políčko, nebo zruší zaškrtnutí políčka <xref:Microsoft.Office.Tools.Word.RichTextContentControl> .
 
-     [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#3](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#3)]
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#3](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#3)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb" id="Snippet3":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs" id="Snippet3":::
 
 ## <a name="remove-the-button-control-when-the-document-is-saved"></a>Odebrat ovládací prvek tlačítko při uložení dokumentu
  Model Windows Forms ovládací prvky nejsou trvalé při uložení a zavření dokumentu. Nicméně Obálka ActiveX pro každý ovládací prvek zůstává v dokumentu a ohraničení této obálky mohou koncoví uživatelé zobrazit při opětovném otevření dokumentu. Existuje několik způsobů, jak dynamicky vytvořené model Windows Forms ovládací prvky v doplňcích VSTO vyčistit. V tomto návodu programově odeberete <xref:Microsoft.Office.Tools.Word.Controls.Button> ovládací prvek při uložení dokumentu.
 
 ### <a name="to-remove-the-button-control-when-the-document-is-saved"></a>Odebrání ovládacího prvku tlačítko při uložení dokumentu
 
-1. V souboru kódu *ThisAddIn.cs* nebo *ThisAddIn. vb* přidejte následující metodu do `ThisAddIn` třídy. Tato metoda je obslužná rutina události pro <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> událost. Pokud má uložený dokument <xref:Microsoft.Office.Tools.Word.Document> hostitelskou položku, která je k ní přidružená, obslužná rutina události získá hostitelskou položku a odebere <xref:Microsoft.Office.Tools.Word.Controls.Button> ovládací prvek, pokud existuje.
+1. V souboru kódu *ThisAddIn. cs* nebo *ThisAddIn. vb* přidejte následující metodu do `ThisAddIn` třídy. Tato metoda je obslužná rutina události pro <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> událost. Pokud má uložený dokument <xref:Microsoft.Office.Tools.Word.Document> hostitelskou položku, která je k ní přidružená, obslužná rutina události získá hostitelskou položku a odebere <xref:Microsoft.Office.Tools.Word.Controls.Button> ovládací prvek, pokud existuje.
 
-     [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#4](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#4)]
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#4](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#4)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb" id="Snippet4":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs" id="Snippet4":::
 
 2. V jazyce C# přidejte následující kód do `ThisAddIn_Startup` obslužné rutiny události. Tento kód je vyžadován v jazyce C# pro připojení `Application_DocumentBeforeSave` obslužné rutiny události k <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> události.
 
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#5](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs" id="Snippet5":::
 
 ## <a name="add-and-remove-controls-when-the-user-clicks-the-check-boxes-on-the-ribbon"></a>Přidat a odebrat ovládací prvky, když uživatel klikne na zaškrtávací políčka na pásu karet
  Nakonec změňte <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> obslužné rutiny události políček, která jste přidali na pás karet, a přidejte nebo odeberte ovládací prvky v dokumentu.
 
 ### <a name="to-add-or-remove-controls-when-the-user-clicks-the-check-boxes-on-the-ribbon"></a>Přidání nebo odebrání ovládacích prvků, když uživatel klikne na zaškrtávací políčka na pásu karet
 
-1. V souboru kódu *MyRibbon.cs* nebo *MyRibbon. vb* nahraďte vygenerované `addButtonCheckBox_Click` a `addRichTextCheckBox_Click` obslužné rutiny události následujícím kódem. Tento kód předefinuje tyto obslužné rutiny událostí pro volání `ToggleButtonOnDocument` `ToggleRichTextControlOnDocument` metod a, které jste přidali do `ThisAddIn` třídy dříve v tomto návodu.
+1. V souboru kódu *MyRibbon. cs* nebo *MyRibbon. vb* nahraďte vygenerované `addButtonCheckBox_Click` a `addRichTextCheckBox_Click` obslužné rutiny události následujícím kódem. Tento kód předefinuje tyto obslužné rutiny událostí pro volání `ToggleButtonOnDocument` `ToggleRichTextControlOnDocument` metod a, které jste přidali do `ThisAddIn` třídy dříve v tomto návodu.
 
-     [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#6](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/MyRibbon.vb#6)]
-     [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#6](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/MyRibbon.cs#6)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/MyRibbon.vb" id="Snippet6":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/MyRibbon.cs" id="Snippet6":::
 
 ## <a name="test-the-solution"></a>Testování řešení
  Ovládací prvky můžete přidat do dokumentu jejich výběrem z vlastní karty na pásu karet. Při uložení dokumentu se <xref:Microsoft.Office.Tools.Word.Controls.Button> ovládací prvek odebere.

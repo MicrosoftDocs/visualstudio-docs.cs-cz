@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4449e286fed0572e2dfc1ed855daf834400bd4e4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fcb2bcc91eb1d19309904caae16701b814113089
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966627"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824403"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-excel"></a>Návod: vytvoření prvního doplňku VSTO pro Excel
   V tomto úvodním návodu se dozvíte, jak vytvořit doplněk na úrovni aplikace pro systém Microsoft Office Excel. Funkce, které vytvoříte v tomto druhu řešení, jsou k dispozici pro samotnou aplikaci, bez ohledu na to, které sešity jsou otevřené.
@@ -83,12 +83,12 @@ ms.locfileid: "99966627"
 
     Když uživatel sešit uloží, obslužná rutina události přidá nový text na začátek aktivního listu.
 
-    [!code-vb[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb#1)]
-    [!code-csharp[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#1)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb" id="Snippet1":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs" id="Snippet1":::
 
 2. Pokud používáte jazyk C#, přidejte následující požadovaný kód do `ThisAddIn_Startup` obslužné rutiny události. Tento kód slouží k propojení `Application_WorkbookBeforeSave` obslužné rutiny události s <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> událostí.
 
-    [!code-csharp[Trin_ExcelAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs" id="Snippet2":::
 
    Chcete-li upravit sešit při jeho uložení, předchozí příklady kódu používají následující objekty:
 

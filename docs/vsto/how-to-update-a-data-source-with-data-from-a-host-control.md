@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4df11976832359363c639a49dd767e7e87b41a26
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9aab30b9c2fa363ef68d7d3f70ca05ca6c387a3c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894436"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828927"
 ---
 # <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>Postupy: aktualizace zdroje dat s použitím dat z hostitelského ovládacího prvku
   Můžete navázat hostitelský ovládací prvek ke zdroji dat a aktualizovat zdroj dat změnami provedenými v datech v ovládacím prvku. V tomto procesu jsou dva hlavní kroky:
@@ -49,8 +49,8 @@ ms.locfileid: "99894436"
 
      Následující příklad uloží změny provedené <xref:Microsoft.Office.Tools.Excel.NamedRange> v ovládacím prvku listu aplikace Excel do zdroje dat. V tomto příkladu se předpokládá, že máte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek s názvem `namedRange1` s <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> vlastností vázaný na pole ve zdroji dat.
 
-     [!code-csharp[Trin_VstcoreDataExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#1)]
-     [!code-vb[Trin_VstcoreDataExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet1":::
 
 ### <a name="automatically-update-the-in-memory-data-source"></a>Automatické aktualizace zdroje dat v paměti
  Můžete také nakonfigurovat ovládací prvek tak, aby automaticky aktualizován zdroj dat v paměti. V projektu na úrovni dokumentu můžete to provést pomocí kódu nebo návrháře. V projektu doplňku VSTO je nutné použít kód.
@@ -68,8 +68,8 @@ ms.locfileid: "99894436"
 
      Následující příklad konfiguruje <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek tak, aby automaticky aktualizoval zdroj dat, když se změní hodnota v ovládacím prvku. V tomto příkladu se předpokládá, že máte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek s názvem `namedRange1` s <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> vlastností vázaný na pole ve zdroji dat.
 
-     [!code-csharp[Trin_VstcoreDataExcel#19](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#19)]
-     [!code-vb[Trin_VstcoreDataExcel#19](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#19)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet19":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet19":::
 
 #### <a name="to-set-a-control-to-automatically-update-the-in-memory-data-source-by-using-the-designer"></a>Nastavení ovládacího prvku na automatickou aktualizaci zdroje dat v paměti pomocí návrháře
 
@@ -103,8 +103,8 @@ ms.locfileid: "99894436"
 
      Následující příklad kódu předpokládá, že projekt obsahuje <xref:System.Windows.Forms.BindingSource> pojmenovaný `customersBindingSource` .
 
-     [!code-csharp[Trin_VstcoreDataExcel#20](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#20)]
-     [!code-vb[Trin_VstcoreDataExcel#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#20)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet20":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet20":::
 
 2. Volejte `Update` metodu generovaného TableAdapter ve vašem projektu.
 
@@ -112,8 +112,8 @@ ms.locfileid: "99894436"
 
      Následující příklad kódu předpokládá, že máte připojení k tabulce Customers v databázi Northwind a že projekt obsahuje TableAdapter s názvem `customersTableAdapter` a zadanou datovou sadu s názvem `northwindDataSet` .
 
-     [!code-csharp[Trin_VstcoreDataExcel#21](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#21)]
-     [!code-vb[Trin_VstcoreDataExcel#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#21)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet21":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet21":::
 
 ## <a name="see-also"></a>Viz také
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)

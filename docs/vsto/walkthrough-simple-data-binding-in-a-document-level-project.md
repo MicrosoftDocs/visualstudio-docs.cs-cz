@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 31084703a581999a1f25bfc82db6c36d9e2cbf6c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 36d4da65a6cd39c53f1f9d8edf4f9d9b1fe46284
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937405"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826847"
 ---
 # <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>Návod: jednoduché datové vazby v projektech na úrovni dokumentu
   Tento návod ukazuje základy datové vazby v projektu na úrovni dokumentu. Jedno datové pole v databázi SQL Server je svázáno s pojmenovaným rozsahem v systém Microsoft Office Excel. Návod také ukazuje, jak přidat ovládací prvky, které umožňují procházet všechny záznamy v tabulce.
@@ -128,16 +128,16 @@ ms.locfileid: "99937405"
 
 ### <a name="to-initialize-the-controls"></a>Inicializace ovládacích prvků
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs** a pak klikněte na **Zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **List1. cs** a pak klikněte na **Zobrazit kód** v místní nabídce.
 
 2. Přidejte následující kód do `Sheet1_Startup` metody pro nastavení textu pro každé tlačítko.
 
-    [!code-csharp[Trin_VstcoreDataExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#2)]
-    [!code-vb[Trin_VstcoreDataExcel#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet2":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet2":::
 
 3. Pouze pro C# přidejte obslužné rutiny události pro události kliknutí na tlačítko do `Sheet1_Startup` metody.
 
-    [!code-csharp[Trin_VstcoreDataExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#3)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet3":::
 
    Nyní přidejte kód pro zpracování <xref:System.Windows.Forms.Control.Click> událostí tlačítek, aby uživatel mohl procházet záznamy.
 
@@ -148,29 +148,29 @@ ms.locfileid: "99937405"
 
 1. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button1` tlačítka a přidejte následující kód, který se přesune k prvnímu záznamu:
 
-     [!code-csharp[Trin_VstcoreDataExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#4)]
-     [!code-vb[Trin_VstcoreDataExcel#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet4":::
 
 ### <a name="to-move-to-the-previous-record"></a>Přechod na předchozí záznam
 
 1. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button2` tlačítka a přidejte následující kód pro přesunutí pozice zpět o jednu:
 
-     [!code-csharp[Trin_VstcoreDataExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#5)]
-     [!code-vb[Trin_VstcoreDataExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet5":::
 
 ### <a name="to-move-to-the-next-record"></a>Přechod na další záznam
 
 1. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button3` tlačítka a přidejte následující kód pro posunutí pozice o jednu:
 
-     [!code-csharp[Trin_VstcoreDataExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#6)]
-     [!code-vb[Trin_VstcoreDataExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet6":::
 
 ### <a name="to-move-to-the-last-record"></a>Přechod na poslední záznam
 
 1. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button4` tlačítka a přidejte následující kód, který bude přesunut na poslední záznam:
 
-     [!code-csharp[Trin_VstcoreDataExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#7)]
-     [!code-vb[Trin_VstcoreDataExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#7)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet7":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet7":::
 
 ## <a name="test-the-application"></a>Testování aplikace
  Nyní můžete otestovat sešit, abyste se ujistili, že můžete procházet záznamy v databázi.

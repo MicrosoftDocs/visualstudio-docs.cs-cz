@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3a4f46a679e04c921aafd9a7774949d56c0925f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4559d098a80a1dfd8f1d3f5c2c21cbebc992fcb7
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842004"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828979"
 ---
 # <a name="how-to-programmatically-save-workbooks"></a>Postupy: ukládání sešitů prostřednictvím kódu programu
   Existuje několik způsobů, jak sešit uložit. Sešit můžete uložit beze změny cesty. Pokud sešit ještě nebyl uložen, uložte ho zadáním cesty. Bez explicitní cesty systém Microsoft Office Excel uloží soubor do aktuální složky s názvem, který jste zadali při jeho vytvoření. Můžete také uložit kopii sešitu beze změny otevřeného sešitu v paměti.
@@ -34,15 +34,15 @@ ms.locfileid: "99842004"
 
 1. Zavolejte <xref:Microsoft.Office.Tools.Excel.Workbook.Save%2A> metodu `ThisWorkbook` třídy.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#4](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#4)]
-     [!code-vb[Trin_VstcoreExcelAutomation#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb" id="Snippet4":::
 
 ### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>Uložení aktivního sešitu v doplňku VSTO
 
 1. Voláním <xref:Microsoft.Office.Interop.Excel._Workbook.Save%2A> metody uložte aktivní sešit. Chcete-li použít následující příklad kódu, spusťte jej ve `ThisAddIn` třídě v projektu doplňku VSTO pro Excel.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#3](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#3)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#3](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet3":::
 
 ## <a name="save-a-workbook-with-a-new-path"></a>Uložení sešitu s novou cestou
  Zadaný sešit můžete uložit do nového umístění nebo s novým názvem, volitelně zadat formát souboru, heslo, režim přístupu a další.
@@ -54,15 +54,15 @@ ms.locfileid: "99842004"
 
 1. Zavolejte <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> metodu `ThisWorkbook` třídy. Chcete-li použít následující příklad kódu, spusťte jej ve `ThisWorkbook` třídě.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#5](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#5)]
-     [!code-vb[Trin_VstcoreExcelAutomation#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb" id="Snippet5":::
 
 ### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>Uložení aktivního sešitu v doplňku VSTO
 
 1. Voláním <xref:Microsoft.Office.Interop.Excel._Workbook.SaveAs%2A> metody uložte aktivní sešit do nové cesty. Chcete-li použít následující příklad kódu, spusťte jej ve `ThisAddIn` třídě v projektu doplňku VSTO pro Excel.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#4](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#4)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#4](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet4":::
 
 ## <a name="save-a-copy-of-the-workbook"></a>Uložit kopii sešitu
  Kopii sešitu můžete uložit do souboru bez změny otevřeného sešitu v paměti. To je užitečné, když chcete vytvořit záložní kopii bez změny umístění sešitu.
@@ -71,15 +71,15 @@ ms.locfileid: "99842004"
 
 1. Zavolejte <xref:Microsoft.Office.Tools.Excel.Workbook.SaveCopyAs%2A> metodu `ThisWorkbook` třídy. Chcete-li použít následující příklad kódu, spusťte jej ve `ThisWorkbook` třídě.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#6](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#6)]
-     [!code-vb[Trin_VstcoreExcelAutomation#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb" id="Snippet6":::
 
 ### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>Uložení aktivního sešitu v doplňku VSTO
 
 1. Voláním <xref:Microsoft.Office.Interop.Excel._Workbook.SaveCopyAs%2A> metody uložte kopii aktivního sešitu. Chcete-li použít následující příklad kódu, spusťte jej ve `ThisAddIn` třídě v projektu doplňku VSTO pro Excel.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#5](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#5)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#5](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet5":::
 
 ## <a name="robust-programming"></a>Robustní programování
  Při interaktivním zrušení jakékoli metody, která ukládá nebo kopíruje sešit, se ve vašem kódu vyvolá chyba za běhu. Například Pokud procedura volá <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> metodu, ale nezakáže výzvy z Excelu a uživatel klikne na **Zrušit** po zobrazení výzvy, Excel vyvolá chybu za běhu.

@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a9d3b8e7d7e7e1a0a58dee5ceb5f1ca49753930f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 340d813a19c0c0dc5c347d3cfe4c7b29ff1bd049
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947759"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828992"
 ---
 # <a name="how-to-programmatically-save-visio-documents"></a>Postupy: ukládání dokumentů aplikace Visio prostřednictvím kódu programu
   Existuje několik způsobů, jak uložit systém Microsoft Office dokumentů aplikace Visio:
@@ -44,8 +44,8 @@ ms.locfileid: "99947759"
     > [!NOTE]
     > `Microsoft.Office.Interop.Visio.Document.Save`Metoda vyvolá výjimku, pokud nový dokument Visia ještě nebyl uložen.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#11)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet11":::
 
 ## <a name="save-a-document-with-a-new-name"></a>Uložení dokumentu s novým názvem
  Použijte `Microsoft.Office.Interop.Visio.Document.SaveAs` metodu k uložení nového dokumentu nebo dokumentu s novým názvem. Tato metoda vyžaduje, abyste zadali nový název souboru.
@@ -56,8 +56,8 @@ ms.locfileid: "99947759"
 
      Chcete-li použít tento příklad kódu, spusťte jej z `ThisAddIn` třídy v projektu.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#10)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet10":::
 
 ## <a name="save-a-document-with-a-new-name-and-specified-arguments"></a>Uloží dokument s novým názvem a zadanými argumenty.
  Použijte `Microsoft.Office.Interop.Visio.Document.SaveAsEx` metodu k uložení dokumentu s novým názvem a zadejte všechny použitelné argumenty, které se mají použít pro dokument.
@@ -68,8 +68,8 @@ ms.locfileid: "99947759"
 
      Následující příklad kódu uloží aktivní dokument s novým názvem, označí dokument jako jen pro čtení a zobrazí dokument v seznamu naposledy použitých dokumentů. Chcete-li použít tento příklad kódu, spusťte jej z `ThisAddIn` třídy v projektu.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#12)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#12)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet12":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet12":::
 
 ## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad kódu vyžaduje následující:

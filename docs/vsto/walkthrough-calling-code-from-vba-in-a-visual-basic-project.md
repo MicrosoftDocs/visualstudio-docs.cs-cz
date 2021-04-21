@@ -22,12 +22,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bcb13ec0e26b1668a397d56982d049bf9ebcceb0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f4fe056f70e0af03809b43d60968bd8a1a50bf08
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906545"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824481"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-basic-project"></a>Návod: volání kódu z jazyka VBA v projektu Visual Basic
   Tento návod ukazuje, jak volat metodu v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word z kódu jazyk Visual Basic for Application (VBA) v dokumentu. Postup zahrnuje tři základní kroky: Přidání metody do `ThisDocument` třídy hostitelské položky, vystavení metody pro kód VBA a následné volání metody z kódu VBA v dokumentu.
@@ -160,7 +160,7 @@ ms.locfileid: "99906545"
 
 2. Do třídy přidejte následující metodu `ThisDocument` . Tato metoda vytvoří tabulku se dvěma řádky a dvěma sloupci na začátku dokumentu. Parametry určují text, který se zobrazí na prvním řádku. Později v tomto návodu budete volat tuto metodu z kódu VBA v dokumentu.
 
-     [!code-vb[Trin_CallingVBCustomizationFromVBA#1](../vsto/codesnippet/VisualBasic/CallingCodeFromVBA/ThisDocument.vb#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/CallingCodeFromVBA/ThisDocument.vb" id="Snippet1":::
 
 3. Sestavte projekt.
 

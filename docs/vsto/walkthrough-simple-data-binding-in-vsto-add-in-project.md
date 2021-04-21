@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e6162c8cc508c1eaada6c2be90bd28d430779cb0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e1891173f10acfff74e0f7ef7ab17e29b258b80e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937365"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826834"
 ---
 # <a name="walkthrough-simple-data-binding-in-vsto-add-in-project"></a>Návod: jednoduché datové vazby v projektu doplňku VSTO
 
@@ -64,7 +64,7 @@ Prvním krokem je vytvoření projektu doplňku VSTO aplikace Word.
 
      Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio otevře soubor *ThisAddIn. vb* nebo *ThisAddIn.cs* a přidá **vyplňování dokumentů z databázového** projektu do **Průzkumník řešení**.
+     Visual Studio otevře soubor *ThisAddIn. vb* nebo *ThisAddIn. cs* a přidá **vyplňování dokumentů z databázového** projektu do **Průzkumník řešení**.
 
 2. Pokud je projekt cílen na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] , přidejte odkaz na *Microsoft.Office.Tools.Word.v4.0.Utilities.dll* sestavení. Tento odkaz je nutný k programovému přidání model Windows Formsch ovládacích prvků do dokumentu dále v tomto návodu.
 
@@ -108,38 +108,38 @@ Další informace o vázání ovládacích prvků na data najdete v tématu [vá
 
 1. Ve `ThisAddIn` třídě deklarujte následující ovládací prvky pro zobrazení a procházení `Customer` tabulky `AdventureWorksLTDataSet` databáze.
 
-     [!code-vb[Trin_WordAddInDatabase#1](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_WordAddInDatabase#1](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet1":::
 
 2. V `ThisAddIn_Startup` metodě přidejte následující kód pro inicializaci datové sady, vyplňte datovou sadu informacemi z `AdventureWorksLTDataSet` databáze.
 
-     [!code-vb[Trin_WordAddInDatabase#2](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#2)]
-     [!code-csharp[Trin_WordAddInDatabase#2](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet2":::
 
 3. Do metody `ThisAddIn_Startup` přidejte následující kód. Tím se vygeneruje Hostitelská položka, která rozšiřuje dokument. Další informace najdete v tématu [rozšiřování dokumentů aplikace Word a sešitů aplikace Excel v doplňkech VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
-     [!code-vb[Trin_WordAddInDatabase#3](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#3)]
-     [!code-csharp[Trin_WordAddInDatabase#3](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#3)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet3":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet3":::
 
 4. Na začátku dokumentu Definujte několik rozsahů. Tyto rozsahy určují, kam vložit text a umístit ovládací prvky.
 
-     [!code-vb[Trin_WordAddInDatabase#4](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#4)]
-     [!code-csharp[Trin_WordAddInDatabase#4](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#4)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet4":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet4":::
 
 5. Přidejte ovládací prvky rozhraní do dříve definovaných rozsahů.
 
-     [!code-vb[Trin_WordAddInDatabase#5](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#5)]
-     [!code-csharp[Trin_WordAddInDatabase#5](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#5)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet5":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet5":::
 
 6. Navažte na ovládací prvek obsahu `AdventureWorksLTDataSet` pomocí <xref:System.Windows.Forms.BindingSource> . Pro vývojáře v jazyce C# přidejte dvě obslužné rutiny události pro <xref:Microsoft.Office.Tools.Word.Controls.Button> ovládací prvky.
 
-     [!code-vb[Trin_WordAddInDatabase#6](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#6)]
-     [!code-csharp[Trin_WordAddInDatabase#6](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#6)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet6":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet6":::
 
 7. Přidejte následující kód pro procházení záznamů databáze.
 
-     [!code-vb[Trin_WordAddInDatabase#7](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#7)]
-     [!code-csharp[Trin_WordAddInDatabase#7](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#7)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet7":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet7":::
 
 ## <a name="test-the-add-in"></a>Test doplňku
 

@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a026732f9b49107b8c113796251e1a2b916cf9a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 260872096f36f91a2618f636e297d3c48b3fe51b
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906488"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824468"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>Návod: volání kódu z jazyka VBA v projektu jazyka Visual C#
   Tento návod ukazuje, jak volat metodu v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Excel z kódu jazyk Visual Basic for Application (VBA) v sešitu. Postup zahrnuje tři základní kroky: Přidejte metodu do `Sheet1` třídy položky hostitele, vystavte metodu pro kód VBA v sešitu a pak zavolejte metodu z kódu VBA v sešitu.
@@ -155,28 +155,28 @@ ms.locfileid: "99906488"
 
 ### <a name="to-add-a-method-to-the-sheet1-class"></a>Přidání metody do třídy List1
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem na **Sheet1.cs** a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. cs** a pak klikněte na **Zobrazit kód**.
 
-     V editoru kódu se otevře soubor **Sheet1.cs** .
+     V editoru kódu se otevře soubor **List1. cs** .
 
 2. Do třídy `Sheet1` přidejte následující kód. `CreateVstoNamedRange`Metoda vytvoří nový <xref:Microsoft.Office.Tools.Excel.NamedRange> objekt v zadaném rozsahu. Tato metoda také vytvoří obslužnou rutinu události pro <xref:Microsoft.Office.Tools.Excel.NamedRange.Selected> událost <xref:Microsoft.Office.Tools.Excel.NamedRange> . Později v tomto návodu budete volat `CreateVstoNamedRange` metodu z kódu VBA v dokumentu.
 
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#2](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs" id="Snippet2":::
 
 3. Do třídy přidejte následující metodu `Sheet1` . Tato metoda přepíše <xref:Microsoft.Office.Tools.Excel.WorksheetBase.GetAutomationObject%2A> metodu, která vrátí aktuální instanci `Sheet1` třídy.
 
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#3](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs" id="Snippet3":::
 
 4. Použijte následující atributy před první řádek `Sheet1` deklarace třídy. Tyto atributy nastaví třídu jako viditelnou pro model COM, ale bez generování rozhraní třídy.
 
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#1](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs" id="Snippet1":::
 
 ## <a name="extract-an-interface-for-the-sheet1-class"></a>Extrakce rozhraní pro třídu List1
  Předtím, než můžete vystavit `CreateVstoNamedRange` metodu pro kód VBA, je nutné vytvořit veřejné rozhraní, které definuje tuto metodu, a je nutné vystavit toto rozhraní modelu COM.
 
 ### <a name="to-extract-an-interface-for-the-sheet1-class"></a>Extrakce rozhraní pro třídu List1
 
-1. V souboru kódu **Sheet1.cs** Klikněte kamkoli do `Sheet1` třídy.
+1. V souboru kódu **List1. cs** Klikněte kamkoli do `Sheet1` třídy.
 
 2. V nabídce **Refaktorovat** klikněte na **Extrahovat rozhraní**.
 
@@ -184,11 +184,11 @@ ms.locfileid: "99906488"
 
 4. Klikněte na **OK**.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vygeneruje nové rozhraní s názvem `ISheet1` a upraví definici `Sheet1` třídy tak, aby implementovala `ISheet1` rozhraní. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] také otevře soubor **ISheet1.cs** v editoru kódu.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vygeneruje nové rozhraní s názvem `ISheet1` a upraví definici `Sheet1` třídy tak, aby implementovala `ISheet1` rozhraní. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] také otevře soubor **ISheet1. cs** v editoru kódu.
 
-5. V souboru **ISheet1.cs** nahraďte `ISheet1` deklaraci rozhraní následujícím kódem. Tento kód nastaví `ISheet1` rozhraní jako veřejné a použije <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut, aby bylo rozhraní viditelné pro model COM.
+5. V souboru **ISheet1. cs** nahraďte `ISheet1` deklaraci rozhraní následujícím kódem. Tento kód nastaví `ISheet1` rozhraní jako veřejné a použije <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut, aby bylo rozhraní viditelné pro model COM.
 
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#4](../vsto/codesnippet/CSharp/CallingCodeFromVBA/ISheet1.cs#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/CallingCodeFromVBA/ISheet1.cs" id="Snippet4":::
 
 6. Sestavte projekt.
 
@@ -197,7 +197,7 @@ ms.locfileid: "99906488"
 
 ### <a name="to-expose-the-method-to-vba-code"></a>Vystavení metody pro kód VBA
 
-1. V **Průzkumník řešení** dvakrát klikněte na **Sheet1.cs**.
+1. V **Průzkumník řešení** poklikejte na **List1. cs**.
 
      Soubor **WorkbookWithVBA** se otevře v návrháři a zobrazí se List1.
 

@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cabaf58f9e13033edee320277abcc14b55b81a13
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 91fb4da23f388234e3800805e2beb3b7a8fbb20e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953965"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828914"
 ---
 # <a name="how-to-fill-listobject-controls-with-data"></a>Postupy: vyplnění ovládacích prvků ListObject daty
   Datovou vazbu můžete použít jako způsob, jak rychle přidat data do dokumentu. Po vytvoření vazby dat k objektu seznamu můžete odpojit objekt seznamu, aby zobrazil data, ale již není svázán se zdrojem dat.
@@ -35,25 +35,25 @@ ms.locfileid: "99953965"
 
 1. Vytvořte na <xref:System.Data.DataTable> úrovni třídy.
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#20](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs#20)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb#20)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs" id="Snippet20":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb" id="Snippet20":::
 
 2. Přidejte vzorové sloupce a data do `Startup` obslužné rutiny události `Sheet1` třídy (v projektu na úrovni dokumentu) nebo `ThisAddIn` třídy (v projektu na úrovni aplikace).
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#21](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs#21)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb#21)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs" id="Snippet21":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb" id="Snippet21":::
 
 3. Zavolejte <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> metodu a předejte názvy sloupců v pořadí, ve kterém by se měly zobrazit. Pořadí sloupců v objektu list se může lišit od pořadí, ve kterém se nacházejí v <xref:System.Data.DataTable> .
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#22](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs#22)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#22](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb#22)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs" id="Snippet22":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb" id="Snippet22":::
 
 ### <a name="to-disconnect-the-listobject-control-from-the-data-source"></a>Odpojení ovládacího prvku ListObject ze zdroje dat
 
 1. Zavolejte <xref:Microsoft.Office.Tools.Excel.ListObject.Disconnect%2A> metodu `List1` .
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#23](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs#23)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#23](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb#23)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs" id="Snippet23":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb" id="Snippet23":::
 
 ## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad kódu předpokládá, že máte existující <xref:Microsoft.Office.Tools.Excel.ListObject> pojmenovanou `list1` na listu, ve kterém se zobrazuje tento kód.

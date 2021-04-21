@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cb24851562beec0b40a8e66a38db202745f4771e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5f96efd41eb91551fe3cf7c03b55a44b7a9e1bf1
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903654"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824741"
 ---
 # <a name="how-to-programmatically-open-visio-documents"></a>Postupy: otevírání dokumentů aplikace Visio prostřednictvím kódu programu
   Existují dvě metody otevření existujících systém Microsoft Office dokumentů aplikace Visio: Open a OpenEx. Metoda OpenEx je shodná s metodou Open, s tím rozdílem, že poskytuje argumenty, ve kterých může volající určit způsob otevření dokumentu.
@@ -33,8 +33,8 @@ ms.locfileid: "99903654"
 
 - Zavolejte `Microsoft.Office.Interop.Visio.Documents.Open` metodu a zadejte plně kvalifikovanou cestu k dokumentu Visia.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#5](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#5)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#5](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet5":::
 
 ## <a name="open-a-visio-document-with-specified-arguments"></a>Otevřít dokument Visia se zadanými argumenty
 
@@ -42,8 +42,8 @@ ms.locfileid: "99903654"
 
 - Zavolejte `Microsoft.Office.Interop.Visio.Documents.OpenEx` metodu, zadejte plně kvalifikovanou cestu k dokumentu aplikace Visio a zahrňte argumenty, které chcete použít – v tomto případě ukotvené a jen pro čtení.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#6](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#6)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#6](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet6":::
 
 ## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad kódu vyžaduje následující:

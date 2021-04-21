@@ -28,12 +28,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ed33208d58e380b688ce2553b71033de0b7d07d6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a902e85f8c53aa7a3d1ebe3b6480a7c68fa60601
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954290"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827900"
 ---
 # <a name="how-to-add-content-controls-to-word-documents"></a>Postupy: Přidání ovládacích prvků obsahu do dokumentů aplikace Word
   V projektech aplikace Word na úrovni dokumentu můžete do dokumentu v projektu přidat ovládací prvky obsahu v době návrhu nebo v době běhu. V projektech doplňku aplikace Word VSTO můžete přidat ovládací prvky obsahu do libovolného otevřeného dokumentu v době běhu.
@@ -116,8 +116,8 @@ ms.locfileid: "99954290"
 
      Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metodu pro přidání nového <xref:Microsoft.Office.Tools.Word.RichTextContentControl> na začátek dokumentu. Chcete-li spustit tento kód, přidejte kód do `ThisDocument` třídy v projektu a zavolejte `AddRichTextControlAtSelection` metodu z `ThisDocument_Startup` obslužné rutiny události.
 
-     [!code-csharp[Trin_ContentControlReference#700](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#700)]
-     [!code-vb[Trin_ContentControlReference#700](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#700)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs" id="Snippet700":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb" id="Snippet700":::
 
 ### <a name="to-add-a-content-control-at-a-specified-range"></a>Přidání ovládacího prvku obsahu v zadaném rozsahu
 
@@ -125,8 +125,8 @@ ms.locfileid: "99954290"
 
      Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metodu pro přidání nového <xref:Microsoft.Office.Tools.Word.RichTextContentControl> na začátek dokumentu. Chcete-li spustit tento kód, přidejte kód do `ThisDocument` třídy v projektu a zavolejte `AddRichTextControlAtRange` metodu z `ThisDocument_Startup` obslužné rutiny události.
 
-     [!code-csharp[Trin_ContentControlReference#701](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#701)]
-     [!code-vb[Trin_ContentControlReference#701](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#701)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs" id="Snippet701":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb" id="Snippet701":::
 
 ### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>Přidání ovládacího prvku obsahu, který je založen na nativním ovládacím prvku obsahu
 
@@ -134,8 +134,8 @@ ms.locfileid: "99954290"
 
      Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metodu k vytvoření nového <xref:Microsoft.Office.Tools.Word.RichTextContentControl> pro každý nativní ovládací prvek formátovaného textu, který je v dokumentu. Chcete-li spustit tento kód, přidejte kód do `ThisDocument` třídy v projektu a zavolejte `CreateRichTextControlsFromNativeControls` metodu z `ThisDocument_Startup` obslužné rutiny události.
 
-     [!code-csharp[Trin_ContentControlReference#702](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#702)]
-     [!code-vb[Trin_ContentControlReference#702](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#702)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs" id="Snippet702":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb" id="Snippet702":::
 
 ## <a name="add-content-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> Přidání ovládacích prvků obsahu v době běhu v projektu doplňku VSTO
  Pomocí doplňku VSTO můžete přidat ovládací prvky obsahu programově do libovolného otevřeného dokumentu v době běhu. Chcete-li to provést, vygenerujte <xref:Microsoft.Office.Tools.Word.Document> hostitelskou položku, která je založena na otevřeném dokumentu, a pak použijte metody <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> vlastnosti této položky hostitele. Každá metoda má tři přetížení, která lze použít k přidání ovládacího prvku obsahu následujícími způsoby:
@@ -159,8 +159,8 @@ ms.locfileid: "99954290"
 
      Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metodu pro přidání nového <xref:Microsoft.Office.Tools.Word.RichTextContentControl> na začátek aktivního dokumentu. Chcete-li spustit tento kód, přidejte kód do `ThisAddIn` třídy v projektu a zavolejte `AddRichTextControlAtSelection` metodu z `ThisAddIn_Startup` obslužné rutiny události.
 
-     [!code-vb[Trin_WordAddInDynamicControls#1](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_WordAddInDynamicControls#1](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet1":::
 
 ### <a name="to-add-a-content-control-at-a-specified-range"></a>Přidání ovládacího prvku obsahu v zadaném rozsahu
 
@@ -168,8 +168,8 @@ ms.locfileid: "99954290"
 
      Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metodu pro přidání nového <xref:Microsoft.Office.Tools.Word.RichTextContentControl> na začátek aktivního dokumentu. Chcete-li spustit tento kód, přidejte kód do `ThisAddIn` třídy v projektu a zavolejte `AddRichTextControlAtRange` metodu z `ThisAddIn_Startup` obslužné rutiny události.
 
-     [!code-vb[Trin_WordAddInDynamicControls#2](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#2)]
-     [!code-csharp[Trin_WordAddInDynamicControls#2](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet2":::
 
 #### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>Přidání ovládacího prvku obsahu, který je založen na nativním ovládacím prvku obsahu
 
@@ -177,12 +177,12 @@ ms.locfileid: "99954290"
 
      Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metodu k vytvoření nového <xref:Microsoft.Office.Tools.Word.RichTextContentControl> pro každý nativní ovládací prvek formátovaného textu, který je v dokumentu po otevření dokumentu. Chcete-li spustit tento kód, přidejte kód do `ThisAddIn` třídy v projektu.
 
-     [!code-vb[Trin_WordAddInDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#3)]
-     [!code-csharp[Trin_WordAddInDynamicControls#3](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#3)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet3":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet3":::
 
      V jazyce C# je nutné také `Application_DocumentOpen` k události připojit obslužnou rutinu události <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> .
 
-     [!code-csharp[Trin_WordAddInDynamicControls#6](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet6":::
 
 ## <a name="see-also"></a>Viz také
 - [Automatizace Wordu pomocí rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)

@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b3305fdc8f4fbadb3dcdd9775c3a6fe3dac3a1fb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ec1c670867fae277a3c3c8290cd34d0d4be7ddf3
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937391"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824962"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>Návod: program na události ovládacího prvku NamedRange
   Tento návod ukazuje, jak přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek do listu aplikace systém Microsoft Office Excel a program na jeho události pomocí nástrojů pro vývoj pro Office v sadě Visual Studio.
@@ -101,16 +101,16 @@ ms.locfileid: "99937391"
 
 ### <a name="to-insert-text-into-namedrange2-based-on-the-beforedoubleclick-event"></a>Vložení textu do NamedRange2 založeného na události BeforeDoubleClick
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs** a vyberte **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **List1. cs** a vyberte **Zobrazit kód**.
 
 2. Přidejte kód, aby `namedRange1_BeforeDoubleClick` obslužná rutina události vypadala takto:
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#24](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#24)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#24](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#24)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet24":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet24":::
 
 3. V jazyce C# je nutné přidat obslužné rutiny události pro pojmenovaný rozsah, jak je znázorněno v <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> události níže. Informace o vytváření obslužných rutin událostí najdete v tématu [Postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#25](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#25)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet25":::
 
 ## <a name="add-code-to-respond-to-the-change-event"></a>Přidat kód, který reaguje na událost změny
 
@@ -118,8 +118,8 @@ ms.locfileid: "99937391"
 
 1. Přidejte kód, aby `NamedRange1_Change` obslužná rutina události vypadala takto:
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#26](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#26)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#26](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#26)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet26":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet26":::
 
     > [!NOTE]
     > Vzhledem k tomu, že Poklikáním na buňku v oblasti aplikace Excel přejdete do režimu úprav, <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> dojde k události, když je výběr přesunut mimo rozsah, a to i v případě, že nedošlo k žádným změnám textu.
@@ -130,8 +130,8 @@ ms.locfileid: "99937391"
 
 1. Přidejte kód, aby **NamedRange1_SelectionChange** obslužná rutina události vypadala takto:
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#27](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#27)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#27](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#27)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet27":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet27":::
 
     > [!NOTE]
     > Vzhledem k tomu, že dvojitým kliknutím na buňku v oblasti aplikace Excel dojde k přesunutí výběru do rozsahu, <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> dojde k události před <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> výskytem události.

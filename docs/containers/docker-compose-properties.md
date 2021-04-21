@@ -4,15 +4,15 @@ author: ghogen
 description: Naučte se, jak upravit vlastnosti Docker Compose buildu a přizpůsobit tak, jak Visual Studio sestavuje a spouští aplikaci Docker Compose.
 ms.custom: SEO-VS-2020
 ms.author: ghogen
-ms.date: 08/12/2019
+ms.date: 04/06/2021
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 4478656af7fff4cfd3a0fdafefe623af5811154f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7f1ebb11133c640c2e0bdcfd84660592792d4205
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068294"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825001"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose vlastnosti sestavení
 
@@ -43,7 +43,7 @@ V následující tabulce jsou uvedeny vlastnosti MSBuild dostupné pro Docker Co
 |DockerComposeProjectName| dcproj | Když se tato parametr zadá, přepíše název projektu pro projekt Docker-pro vytváření. | "dockercompose" + automaticky generovaná hodnota hash |
 |DockerComposeProjectPath|CSPROJ nebo VBPROJ|Relativní cesta k souboru dcproj (Docker-psací projekt). Tuto vlastnost nastavte při publikování projektu služby, aby bylo možné najít přidružená nastavení pro sestavení imagí uložená v souboru Docker-Compose. yml.|-|
 |DockerComposeUpArguments|dcproj|Určuje další parametry, které se mají předat `docker-compose up` příkazu. Například `--timeout 500`.|-|
-|DockerDevelopmentMode|dcproj| Určuje, jestli je povolená optimalizace optimalizace sestavení na úrovni hostitele (rychlý režim).  Povolené hodnoty jsou **rychlé** a **pravidelné**. | Rychlý |
+|DockerDevelopmentMode|dcproj| Určuje, jestli je povolená optimalizace optimalizace sestavení na úrovni hostitele (rychlý režim).  Povolené hodnoty jsou `Fast` a `Regular` . | `Fast` v konfiguraci ladění nebo `Regular` ve všech ostatních konfiguracích |
 |DockerLaunchAction| dcproj | Určuje akci spuštění, která se má provést na F5 nebo CTRL + F5.  Povolené hodnoty jsou None, LaunchBrowser a LaunchWCFTestClient.|Žádné|
 |DockerLaunchBrowser| dcproj | Označuje, zda se má spustit prohlížeč. Ignoruje se, pokud je zadaný DockerLaunchAction. | Ne |
 |DockerServiceName| dcproj|Pokud jsou zadány DockerLaunchAction nebo DockerLaunchBrowser, pak DockerServiceName je název služby, která se má spustit.  Tato vlastnost slouží k určení, který z potenciálně mnoho projektů, na který může odkazovat soubor Docker-na sestavení, se spustí.|-|
@@ -93,9 +93,16 @@ services:
 > [!NOTE]
 > DockerComposeBuildArguments, DockerComposeDownArguments a DockerComposeUpArguments jsou v systému Visual Studio 2019 verze 16,3 novinkou.
 
-## <a name="docker-compose-file-labels"></a>Docker Compose popisky souborů
+## <a name="overriding-visual-studios-docker-compose-configuration"></a>Přepsání konfigurace Docker Compose sady Visual Studio
 
-Můžete také přepsat určitá nastavení umístěním souboru s názvem *Docker-Compose. vs. Debug. yml* (pro konfiguraci **ladění** ) nebo *Docker-Compose. vs. Release. yml* (pro konfiguraci **vydané verze** ) ve stejném adresáři jako soubor *Docker-Compose. yml* .  V tomto souboru můžete zadat nastavení následujícím způsobem:
+Určitá nastavení můžete přepsat umístěním souboru s názvem *Docker-Compose. vs. Debug. yml* (pro **rychlý** režim) nebo *Docker-Compose. vs. Release. yml* (pro **běžný** režim) ve stejném adresáři jako soubor *Docker-Compose. yml* . 
+
+>[!TIP] 
+>Pokud chcete zjistit výchozí hodnoty pro některá z těchto nastavení, podívejte se do *Docker-Compose. vs. Debug. g. yml* nebo *Docker-Compose. vs. Release. g. yml*.
+
+### <a name="docker-compose-file-labels"></a>Docker Compose popisky souborů
+
+ V *Docker-Compose. vs. Debug. yml* nebo *Docker-Compose. vs. Release. yml* můžete definovat popisky specifické pro přepsání následujícím způsobem:
 
 ```yml
 services:
@@ -109,13 +116,26 @@ Použijte dvojité uvozovky kolem hodnot, jako v předchozím příkladu, a pou�
 |Název popisku|Description|
 |----------|-----------|
 |com. Microsoft. VisualStudio. laděného procesu. arguments|Argumenty předávané programu při spuštění ladění. Pro aplikace .NET Core jsou tyto argumenty obvykle další cesty hledání balíčků NuGet následovaných cestou k výstupnímu sestavení projektu.|
-|com. Microsoft. VisualStudio. laděného procesu. killprogram|Tento příkaz slouží k zastavení programu laděného procesu, který běží uvnitř kontejneru (v případě potřeby).|
 |com. Microsoft. VisualStudio. laděného procesu. program|Program byl spuštěn při spuštění ladění. Pro aplikace .NET Core je toto nastavení obvykle **dotnet**.|
 |com. Microsoft. VisualStudio. laděného procesu. WorkingDirectory|Adresář používaný jako spouštěcí adresář při spuštění ladění. Toto nastavení je obvykle */App* pro kontejnery Linux nebo *C:\app* pro kontejnery Windows.|
+|com. Microsoft. VisualStudio. laděného procesu. killprogram|Tento příkaz slouží k zastavení programu laděného procesu, který běží uvnitř kontejneru (v případě potřeby).|
 
-## <a name="customize-the-app-startup-process"></a>Přizpůsobení procesu spuštění aplikace
+### <a name="customize-the-docker-build-process"></a>Přizpůsobení procesu sestavení Docker
 
-Můžete spustit příkaz nebo vlastní skript před spuštěním aplikace pomocí `entrypoint` nastavení a tím, že bude závislá na konfiguraci. Například pokud potřebujete nastavit certifikát pouze v režimu **ladění** spuštěním `update-ca-certificates` , ale ne v režimu **vydání** , můžete přidat následující kód pouze v *Docker-Compose. vs. Debug. yml*:
+Můžete deklarovat, kterou fázi sestavit v souboru Dockerfile pomocí `target` nastavení ve `build` Vlastnosti. Toto přepsání lze použít pouze v *Docker-Compose. vs. Debug. yml* nebo *Docker-Compose. vs. Release. yml* 
+
+```yml
+services:
+  webapplication1:
+    build:
+      target: customStage
+    labels:
+      ...
+```
+
+### <a name="customize-the-app-startup-process"></a>Přizpůsobení procesu spuštění aplikace
+
+Můžete spustit příkaz nebo vlastní skript před spuštěním aplikace pomocí `entrypoint` nastavení a tím, že bude závislý na `DockerDevelopmentMode` . Například pokud potřebujete nastavit certifikát pouze v **rychlém** režimu spuštěním `update-ca-certificates` , ale ne v **normálním** režimu, můžete přidat následující kód **pouze** do *Docker-Compose. vs. Debug. yml*:
 
 ```yml
 services:
@@ -124,8 +144,6 @@ services:
     labels:
       ...
 ```
-
-Pokud vynecháte *Docker-Compose. vs. Release. yml* nebo *Docker-Compose. vs. Debug. yml,* Visual Studio vygeneruje jedno na základě výchozího nastavení.
 
 ## <a name="next-steps"></a>Další kroky
 

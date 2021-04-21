@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 64af8ddfa0d3d086b661483e76cb9b2bd82ae5c9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 615331181b9402e0d2062142ad266bdd41dca4eb
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892070"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824936"
 ---
 # <a name="how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data"></a>Postupy: Automatické vyplňování oblastí pomocí přírůstkových změn dat prostřednictvím kódu programu
   <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A>Metoda <xref:Microsoft.Office.Interop.Excel.Range> objektu umožňuje vyplnit rozsah na listu hodnotami automaticky. Nejčastěji se <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> Metoda používá k ukládání přírůstkových nebo klesajících hodnot v rozsahu. Chování můžete určit tak, že zadáte volitelnou konstantu z <xref:Microsoft.Office.Interop.Excel.XlAutoFillType> výčtu.
@@ -40,8 +40,8 @@ ms.locfileid: "99892070"
     > Nemůžete předat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek místo <xref:Microsoft.Office.Interop.Excel.Range> . Další informace najdete v tématu [programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).
 
 ## <a name="example"></a>Příklad
- [!code-csharp[Trin_VstcoreExcelAutomation#49](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#49)]
- [!code-vb[Trin_VstcoreExcelAutomation#49](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#49)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet49":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet49":::
 
 ## <a name="compile-the-code"></a>Kompilovat kód
  První buňka rozsahu, který chcete vyplnit, musí obsahovat počáteční hodnotu.

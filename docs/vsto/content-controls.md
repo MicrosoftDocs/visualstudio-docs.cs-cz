@@ -40,12 +40,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ce692bf10c5473c648fd6587b6b6568d369ed496
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b0d55daba4dee07454a31fcb6fc5fa210e8bcc34
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947994"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825053"
 ---
 # <a name="content-controls"></a>Ovládací prvky obsahu
   Ovládací prvky obsahu poskytují způsob návrhu dokumentů a šablon, které mají tyto funkce:
@@ -233,8 +233,8 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
 ### <a name="check-box-content-controls-in-word-projects"></a><a name="checkbox"></a> Ovládací prvky obsahu zaškrtávacího políčka v projektech aplikace Word
  Word 2010 představil nový typ ovládacího prvku obsahu, který představuje zaškrtávací políčko. Ale [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] neposkytuje odpovídající typ CheckBoxContentControl, který můžete použít v projektech Office. Chcete-li vytvořit ovládací prvek obsahu zaškrtávacího políčka v [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] projektu nebo ve wordu 2010, použijte <xref:Microsoft.Office.Tools.Word.ControlCollection.AddContentControl%2A> metodu pro vytvoření <xref:Microsoft.Office.Tools.Word.ContentControl> objektu a předání <xref:Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlCheckBox> hodnoty metodě pro určení ovládacího prvku obsah zaškrtávacího políčka. Následující příklad kódu ukazuje, jak to provést.
 
- [!code-vb[Trin_ContentControlReference#800](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/checkbox.vb#800)]
- [!code-csharp[Trin_ContentControlReference#800](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/checkbox.cs#800)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/checkbox.vb" id="Snippet800":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/checkbox.cs" id="Snippet800":::
 
 ## <a name="see-also"></a>Viz také
 - [Automatizace Wordu pomocí rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)

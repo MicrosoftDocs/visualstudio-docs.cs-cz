@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 34992bb4f76f68229bebbdb98265838f049dc288
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 97f56ce0bd44eac71430a099b4fda9a7eddc7958
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949776"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107829005"
 ---
 # <a name="how-to-programmatically-save-documents"></a>Postupy: ukládání dokumentů prostřednictvím kódu programu
 
@@ -34,15 +34,15 @@ Existuje několik způsobů, jak uložit systém Microsoft Office dokumentů apl
 
 1. Zavolejte <xref:Microsoft.Office.Tools.Word.Document.Save%2A> metodu <xref:Microsoft.Office.Tools.Word.Document> třídy. Chcete-li použít tento příklad kódu, spusťte jej z `ThisDocument` třídy v projektu.
 
-     [!code-vb[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#7)]
-     [!code-csharp[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#7)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet7":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet7":::
 
 ### <a name="to-save-the-active-document"></a>Uložení aktivního dokumentu
 
 1. Zavolejte <xref:Microsoft.Office.Interop.Word._Document.Save%2A> metodu pro aktivní dokument. Chcete-li použít tento příklad kódu, spusťte jej `ThisDocument` z `ThisAddIn` třídy nebo v projektu.
 
-    [!code-vb[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#8)]
-    [!code-csharp[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#8)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet8":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet8":::
 
    Pokud si nejste jistí, jestli je dokument, který chcete uložit, v aktivním dokumentu, můžete na něj odkazovat podle jeho názvu.
 
@@ -50,8 +50,8 @@ Existuje několik způsobů, jak uložit systém Microsoft Office dokumentů apl
 
 1. Použijte název dokumentu jako argument pro <xref:Microsoft.Office.Interop.Word.Documents> kolekci. Chcete-li použít tento příklad kódu, spusťte jej `ThisDocument` z `ThisAddIn` třídy nebo v projektu.
 
-     [!code-vb[Trin_VstcoreWordAutomation#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#9)]
-     [!code-csharp[Trin_VstcoreWordAutomation#9](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#9)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet9":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet9":::
 
 ## <a name="save-a-document-with-a-new-name"></a>Uložení dokumentu s novým názvem
 
@@ -67,8 +67,8 @@ Použijte `SaveAs` metodu k uložení dokumentu s novým názvem. Tuto metodu lz
     > [!NOTE]
     > `SaveAs`Metoda vyvolá výjimku, pokud cílový adresář neexistuje nebo pokud existují jiné problémy při ukládání souboru. Je dobrým zvykem použít `try...catch` blok kolem `SaveAs` metody nebo uvnitř metody volání.
 
-     [!code-vb[Trin_VstcoreWordAutomation#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#10)]
-     [!code-csharp[Trin_VstcoreWordAutomation#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#10)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet10":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet10":::
 
 ### <a name="to-save-a-native-document-with-a-new-name"></a>Uložení nativního dokumentu s novým názvem
 
@@ -79,8 +79,8 @@ Použijte `SaveAs` metodu k uložení dokumentu s novým názvem. Tuto metodu lz
     > [!NOTE]
     > <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A>Metoda vyvolá výjimku, pokud cílový adresář neexistuje nebo pokud existují jiné problémy při ukládání souboru. Je vhodné použít **testovaný postup... Zachyťte** blok kolem <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> metody nebo uvnitř metody volání.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#10)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#10)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet10":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet10":::
 
 ## <a name="compile-the-code"></a>Kompilovat kód
 

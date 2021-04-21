@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a5aeddeecf7fb76000817f2c57b90e30465fa4ed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4b12b7e94109391928ad7c83387917e5934ae1c7
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964027"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825313"
 ---
 # <a name="how-to-programmatically-create-new-visio-documents"></a>Postupy: vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu
   Když vytvoříte nový dokument systém Microsoft Office Visio Drawing, přidáte ho do `Microsoft.Office.Interop.Visio.Documents` kolekce otevřených dokumentů Visia. V důsledku toho `Microsoft.Office.Interop.Visio.Documents.Add` Metoda vytvoří nový dokument pro kreslení aplikace Visio. Další informace najdete v referenční dokumentaci k jazyku VBA pro [Microsoft.Office.Interop.Visio.Documents. Přidat](/office/vba/api/Visio.Documents.Add) metodu.
@@ -31,8 +31,8 @@ ms.locfileid: "99964027"
 
 - Použijte `Microsoft.Office.Interop.Visio.Documents.Add` metodu k vytvoření nového prázdného dokumentu, který není založen na šabloně.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#1](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#1)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#1](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet1":::
 
 ## <a name="create-documents-copied-from-existing-documents"></a>Vytváření dokumentů zkopírovaných z existujících dokumentů
  `Microsoft.Office.Interop.Visio.Documents.Add`Metoda může vytvořit nový dokument, který je kopií existujícího dokumentu aplikace Visio. Je nutné, abyste zadali název souboru a plně kvalifikovanou cestu k diagramu.
@@ -41,8 +41,8 @@ ms.locfileid: "99964027"
 
 - Zavolejte `Microsoft.Office.Interop.Visio.Documents.Add` metodu a zadejte cestu k diagramu Visia.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#2](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#2)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#2](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#2)]
+:::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet2":::
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet2":::
 
 ## <a name="create-stencils-copied-from-existing-stencils"></a>Vytváření vzorníků zkopírovaných z existujících vzorníků
  [Microsoft.Office.Interop.Visio.Documents. Metoda Add](/office/vba/api/Visio.Documents.Add) může vytvořit nový vzorník, který je kopií existujícího vzorníku aplikace Visio. Je nutné, abyste zadali název souboru a plně kvalifikovanou cestu vzorníku.
@@ -51,8 +51,8 @@ ms.locfileid: "99964027"
 
 - Zavolejte `Microsoft.Office.Interop.Visio.Documents.Add` metodu a zadejte cestu k vzorníku.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#3](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#3)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#3](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet3":::
 
 ## <a name="create-documents-based-on-existing-templates"></a>Vytváření dokumentů založených na existujících šablonách
  `Microsoft.Office.Interop.Visio.Documents.Add`Metoda může vytvořit nový dokument (soubor *. vsd* ), který je založen na existující šabloně aplikace Visio (soubor *. vst* ). Tato metoda zkopíruje vzorníky, styly a nastavení, které jsou součástí pracovního prostoru šablony. Je nutné, abyste zadali název souboru a plně kvalifikovanou cestu k šabloně.
@@ -61,8 +61,8 @@ ms.locfileid: "99964027"
 
 - Zavolejte `Microsoft.Office.Interop.Visio.Documents.Add` metodu a zadejte cestu k šabloně.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#4](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#4)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#4](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet4":::
 
 ## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad kódu vyžaduje následující:
