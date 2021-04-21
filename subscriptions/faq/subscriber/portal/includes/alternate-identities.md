@@ -10,18 +10,18 @@ author: CaityBuschlen
 ms.author: cabuschl
 manager: ''
 robots: ''
-ms.date: 4/3/2020
+ms.date: 04/20/2020
 ms.faqid: q1_5
-ms.openlocfilehash: 04c6f3473f31f438afb9785cc460aa0da38605d5
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
-ms.translationtype: HT
+ms.openlocfilehash: 87d2633cb76a92c9a1c73651f3f57b2a139240f1
+ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "91838289"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107821019"
 ---
 ## <a name="how-do-i-add-alternate-identities-to-my-subscription-and-how-does-this-impact-my-azure-credits-and-azure-devops"></a>Jak k předplatnému přidám alternativní identity a jaký to bude mít vliv na mé kredity Azure a Azure DevOps?
 
-Přidáním alternativního účtu k předplatnému sady Visual Studio získáte přístup k výhodám předplatného, jako jsou Azure DevOps a Azure, pomocí jiné identity, než ke které je předplatné přiřazené. Tato funkce byla v minulosti k dispozici pouze v případě, že vaše předplatné sady Visual Studio (VS) bylo přiřazeno k účtu Microsoft (MSA). Rozšířili jsme tuto funkci na pracovní nebo školní účty v Azure Active Directory (Azure AD).
+Přidáním alternativního účtu k předplatnému sady Visual Studio získáte přístup k výhodám předplatného, jako jsou Azure DevOps a Azure, pomocí jiné identity, než ke které je předplatné přiřazené. Tato funkce byla v minulosti k dispozici pouze v případě, že vaše předplatné sady Visual Studio (VS) bylo přiřazeno k účtu Microsoft (MSA).  Rozšířili jsme tuto funkci pro pracovní nebo školní účty v Azure Active Directory (Azure AD).
 
 Tato možnost nezajistí kopii předplatného pro druhý účet, pouze umožní přístup k příslušným dvěma výhodám pomocí alternativního účtu.
 
