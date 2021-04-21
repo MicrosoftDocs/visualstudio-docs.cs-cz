@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 181fafeb55720b5a97a635a4c2322cf7343643d3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7cf9bbe73bd43fa01aec8e7d0dec42fd8301ff30
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937183"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827523"
 ---
 # <a name="walkthrough-update-the-controls-on-a-ribbon-at-run-time"></a>Návod: aktualizace ovládacích prvků na pásu karet v době běhu
 
@@ -82,7 +82,7 @@ Pás karet tohoto příkladu se zobrazí, když uživatel vytvoří novou e-mail
 
 3. Změňte název nového pásu karet na **CustomerRibbon** a pak klikněte na **Přidat**.
 
-     Otevře se soubor *CustomerRibbon.cs* nebo *CustomerRibbon. vb* v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
+     Otevře se soubor *CustomerRibbon. cs* nebo *CustomerRibbon. vb* v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
 
 4. Kliknutím vyberte Návrhář pásu karet.
 
@@ -180,7 +180,7 @@ Pomocí objektového modelu pásu karet proveďte následující úlohy:
 
     Toto sestavení obsahuje třídy pro použití Language-Integratedch dotazů (LINQ). Pomocí LINQ budete naplnit ovládací prvky ve vlastní skupině daty z databáze Northwind.
 
-3. V **Průzkumník řešení** pro výběr klikněte na **CustomerRibbon.cs** nebo **CustomerRibbon. vb** .
+3. V **Průzkumník řešení** pro výběr klikněte na **CustomerRibbon. cs** nebo **CustomerRibbon. vb** .
 
 4. V nabídce **zobrazení** klikněte na příkaz **Code (kód**).
 
@@ -188,18 +188,18 @@ Pomocí objektového modelu pásu karet proveďte následující úlohy:
 
 5. Přidejte následující příkazy do horní části souboru kódu pásu karet. Tyto příkazy poskytují snadný přístup k oborům názvů LINQ a k oboru názvů primárního definičního sestavení (PIA) aplikace Outlook.
 
-    [!code-csharp[Trin_Ribbon_Update_At_Runtime#1](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#1)]
-    [!code-vb[Trin_Ribbon_Update_At_Runtime#1](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#1)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet1":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet1":::
 
 6. Do třídy přidejte následující kód `CustomerRibbon` . Tento kód deklaruje adaptéry tabulky dat a tabulky, které použijete k uložení informací z tabulek, objednávek, podrobností objednávky a produktů z databáze Northwind.
 
-    [!code-csharp[Trin_Ribbon_Update_At_Runtime#2](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#2)]
-    [!code-vb[Trin_Ribbon_Update_At_Runtime#2](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet2":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet2":::
 
 7. Do třídy přidejte následující blok kódu `CustomerRibbon` . Tento kód přidá tři pomocné metody, které vytvoří ovládací prvky pro pás karet v době běhu.
 
-    [!code-csharp[Trin_Ribbon_Update_At_Runtime#3](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#3)]
-    [!code-vb[Trin_Ribbon_Update_At_Runtime#3](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#3)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet3":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet3":::
 
 8. `CustomerRibbon_Load`Metodu obslužné rutiny události nahraďte následujícím kódem. Tento kód používá dotaz LINQ k provádění následujících úloh:
 
@@ -207,8 +207,8 @@ Pomocí objektového modelu pásu karet proveďte následující úlohy:
 
    - Volá `PopulateSalesOrderInfo` pomocnou metodu. Tato metoda aktualizuje nabídku **ProductsPurchased** o čísla prodejních objednávek, která se vztahují k aktuálně vybranému zákazníkovi.
 
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#4)]
-     [!code-vb[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet4":::
 
 9. Do třídy `CustomerRibbon` přidejte následující kód. Tento kód používá dotazy LINQ k provádění následujících úloh:
 
@@ -218,8 +218,8 @@ Pomocí objektového modelu pásu karet proveďte následující úlohy:
 
    - Přidá obslužné rutiny události pro každé tlačítko.
 
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#6)]
-     [!code-vb[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet6":::
 
 10. V **Průzkumník řešení** dvakrát klikněte na soubor kódu pásu karet.
 
@@ -235,13 +235,13 @@ Pomocí objektového modelu pásu karet proveďte následující úlohy:
 
     - Zavolá `PopulateMailItem` pomocnou metodu a předá do aktuálního textu, který je vybraný název zákazníka. Tato metoda naplní pole pro, předmět a text nových e-mailových zpráv.
 
-      [!code-csharp[Trin_Ribbon_Update_At_Runtime#5](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#5)]
-      [!code-vb[Trin_Ribbon_Update_At_Runtime#5](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#5)]
+      :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet5":::
+      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet5":::
 
 13. Přidejte `Click` do třídy následující obslužnou rutinu události `CustomerRibbon` . Tento kód přidá názvy vybraných produktů do pole text v nových poštovních zprávách.
 
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#8)]
-     [!code-vb[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#8)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet8":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet8":::
 
 14. Do třídy `CustomerRibbon` přidejte následující kód. Tento kód provádí následující úlohy:
 
@@ -249,8 +249,8 @@ Pomocí objektového modelu pásu karet proveďte následující úlohy:
 
     - Přidá text do polí předmět a text nové e-mailové zprávy.
 
-      [!code-csharp[Trin_Ribbon_Update_At_Runtime#7](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#7)]
-      [!code-vb[Trin_Ribbon_Update_At_Runtime#7](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#7)]
+      :::code language="csharp" source="../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs" id="Snippet7":::
+      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb" id="Snippet7":::
 
 ## <a name="test-the-controls-in-the-custom-group"></a>Testování ovládacích prvků ve vlastní skupině
 

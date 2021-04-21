@@ -23,12 +23,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f84a694c9a18b6ec1c64204c8150ff721633278d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 86f4e5f286d817fb3f657e40399eccd3a2b4de73
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962467"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828030"
 ---
 # <a name="customize-ui-features-by-using-extensibility-interfaces"></a>Přizpůsobení funkcí uživatelského rozhraní pomocí rozhraní rozšiřitelnosti
   Vývojové nástroje pro Office v sadě Visual Studio poskytují třídy a návrháře, které zpracovávají mnoho podrobností implementace při jejich použití k vytváření vlastních podoken úloh, přizpůsobení pásu karet a oblastí formulářů Outlooku v doplňku VSTO. *Rozhraní rozšiřitelnosti* pro každou funkci však můžete implementovat sami, pokud máte zvláštní požadavky.
@@ -68,16 +68,16 @@ ms.locfileid: "99962467"
   > [!NOTE]
   > Pro vystavení `TaskPaneUI` třídy modelu COM je nutné také nastavit **registr pro vlastnost Register pro zprostředkovatele komunikace s objekty COM** pro projekt.
 
-  [!code-vb[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#1)]
-  [!code-csharp[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#1)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb" id="Snippet1":::
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs" id="Snippet1":::
 
   Další informace o implementaci najdete v <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> tématu [Vytvoření vlastních podoken úloh v systému Office 2007](/previous-versions/office/developer/office-2007/aa338197(v=office.12)) v dokumentaci k systém Microsoft Office.
 
 ### <a name="example-of-overriding-the-requestservice-method"></a>Příklad přepsání metody RequestService
  Následující příklad kódu ukazuje, jak přepsat <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> metodu pro návrat instance `TaskPaneHelper` třídy z předchozího příkladu kódu. Kontroluje hodnotu parametru *serviceGuid* k určení, které rozhraní je požadováno, a vrátí objekt, který implementuje toto rozhraní.
 
- [!code-vb[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#2)]
- [!code-csharp[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#2)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb" id="Snippet2":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs" id="Snippet2":::
 
 ## <a name="see-also"></a>Viz také
 - [Ukázky a návody pro vývoj pro Office](../vsto/office-development-samples-and-walkthroughs.md)

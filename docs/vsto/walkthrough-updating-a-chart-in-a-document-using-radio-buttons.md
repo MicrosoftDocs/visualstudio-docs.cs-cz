@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0db8cd113983231ee45252fec8fb47e3a7b75b7d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4d6689d82051ef5f8c887c19ec91cbb6d513b8b8
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937326"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828199"
 ---
 # <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>Návod: aktualizace grafu v dokumentu pomocí přepínačů
   Tento návod ukazuje, jak pomocí přepínačů v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word dát uživatelům možnost vybrat styly grafů v dokumentu.
@@ -139,34 +139,34 @@ ms.locfileid: "99937326"
 
 2. Přidejte kód pro vytvoření `SelectionChanged` události a `Selection` vlastnosti `ChartOptions` třídy.
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#9](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#9)]
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#9](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#9)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet9":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb" id="Snippet9":::
 
 ### <a name="to-handle-the-checkedchange-event-of-the-radio-buttons"></a>Zpracování událostí CheckedChange přepínačů
 
 1. Nastavte typ grafu v `CheckedChanged` obslužné rutině události pro `areaBlockChart` přepínač a pak událost vyvolejte.
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#10)]
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#10](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb" id="Snippet10":::
 
 2. Nastavte typ grafu v `CheckedChanged` obslužné rutině události pro `barChart` přepínač.
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#11](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#11)]
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#11](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb" id="Snippet11":::
 
 3. Nastavte typ grafu v `CheckedChanged` obslužné rutině události pro `columnChart` přepínač.
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#12](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#12)]
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#12](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#12)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet12":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb" id="Snippet12":::
 
 4. Nastavte typ grafu v `CheckedChanged` obslužné rutině události pro `lineChart` přepínač.
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#13](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#13)]
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#13](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#13)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet13":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb" id="Snippet13":::
 
 5. V jazyce C# je nutné přidat obslužné rutiny události pro přepínače. Do konstruktoru lze přidat kód `ChartOptions` pod volání `InitializeComponent` . Informace o vytváření obslužných rutin událostí najdete v tématu [Postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#14](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#14)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet14":::
 
 ## <a name="add-the-user-control-to-the-document"></a>Přidat uživatelský ovládací prvek do dokumentu
  Při sestavování řešení se nový uživatelský ovládací prvek automaticky přidá do **sady nástrojů**. Pak můžete ovládací prvek přetáhnout z **panelu nástrojů** do dokumentu.
@@ -177,7 +177,7 @@ ms.locfileid: "99937326"
 
      Uživatelský ovládací prvek **ChartOptions** se přidá do **sady nástrojů**.
 
-2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **ThisDocument. vb** nebo **ThisDocument.cs** a pak klikněte na tlačítko **Návrhář zobrazení**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem na **ThisDocument. vb** nebo **ThisDocument. cs** a pak klikněte na **Zobrazit návrháře**.
 
 3. Přetáhněte `ChartOptions` ovládací prvek z **panelu nástrojů** do dokumentu.
 
@@ -190,12 +190,12 @@ ms.locfileid: "99937326"
 
 1. Přidejte do třídy následující obslužnou rutinu události `ThisDocument` .
 
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#15](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#15)]
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#15](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#15)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb" id="Snippet15":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet15":::
 
 2. V jazyce C# je nutné přidat do události obslužnou rutinu události pro uživatelský ovládací prvek <xref:Microsoft.Office.Tools.Word.Document.Startup> .
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#16](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#16)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet16":::
 
 ## <a name="test-the-application"></a>Testování aplikace
  Teď můžete dokument otestovat a ujistit se, že se styl grafu po výběru přepínače správně aktualizuje.

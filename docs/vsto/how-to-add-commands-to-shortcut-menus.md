@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2f5c244d78ab5a6b5d98550b11c280159f285db7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 276dc7b8094c495a1b3896a4a93a068b1005c8d5
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913457"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828446"
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>Postupy: přidávání příkazů do místních nabídek
   Toto téma ukazuje, jak přidat příkazy do místní nabídky v aplikaci Office pomocí doplňku VSTO.
@@ -31,7 +31,7 @@ ms.locfileid: "99913457"
 
 1. Přidejte položku **XML pásu karet** do projektu doplňku VSTO na úrovni dokumentu nebo VSTO. Další informace najdete v tématu [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md). V
 
-2. **Průzkumník řešení** vyberte **ThisAddIn.cs** nebo **ThisAddIn. vb**.
+2. **Průzkumník řešení** vyberte **ThisAddIn. cs** nebo **ThisAddIn. vb**.
 
 3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 
@@ -39,8 +39,8 @@ ms.locfileid: "99913457"
 
 4. Do třídy **ThisAddIn** přidejte následující kód. Tento kód přepíše `CreateRibbonExtensibilityObject` metodu a vrátí třídu XML pásu karet do aplikace sady Office.
 
-     [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]
-     [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb" id="Snippet1":::
 
 5. V **Průzkumník řešení** vyberte soubor XML pásu karet. Ve výchozím nastavení se soubor XML pásu karet jmenuje *Ribbon1.xml*.
 
@@ -72,14 +72,14 @@ ms.locfileid: "99913457"
     </customUI>
     ```
 
-8. V **Průzkumník řešení** vyberte **MyRibbon.cs** nebo **MyRibbon. vb**.
+8. V **Průzkumník řešení** vyberte **MyRibbon. cs** nebo **MyRibbon. vb**.
 
 9. Přidejte do třídy metodu zpětného volání `Ribbon1` pro každý ovládací prvek, který chcete zpracovat.
 
      Následující metoda zpětného volání zpracovává tlačítko **moje tlačítko** . Tento kód přidá řetězec do aktivního dokumentu v aktuálním umístění nástroje pro vydaný kurzor.
 
-     [!code-vb[Trin_WordAddIn_Menus#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb#2)]
-     [!code-csharp[Trin_WordAddIn_Menus#2](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs" id="Snippet2":::
 
 ## <a name="see-also"></a>Viz také
 - [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md)

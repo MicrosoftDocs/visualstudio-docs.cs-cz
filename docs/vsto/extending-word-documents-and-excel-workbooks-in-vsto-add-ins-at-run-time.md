@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 465e28ed0c632bba45fac1670dd40cd90ef417f0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90dac328f336f7204bc9a70a0dbc543ec996922a
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970371"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825664"
 ---
 # <a name="extend-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time"></a>Rozšiřování dokumentů aplikace Word a excelových sešitů v doplňcích VSTO za běhu
   Doplněk VSTO můžete použít k přizpůsobení dokumentů aplikace Word a sešitů aplikace Excel následujícími způsoby:
@@ -59,22 +59,22 @@ ms.locfileid: "99970371"
 
 - Následující příklad kódu ukazuje, jak vygenerovat hostitelskou položku pro aktivní dokument.
 
-     [!code-vb[Trin_WordAddInDynamicControls#8](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#8)]
-     [!code-csharp[Trin_WordAddInDynamicControls#8](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#8)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet8":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet8":::
 
 #### <a name="to-generate-a-host-item-for-an-excel-workbook"></a>Vygenerování položky hostitele pro excelový sešit
 
 - Následující příklad kódu ukazuje, jak vygenerovat hostitelskou položku pro aktivní sešit.
 
-     [!code-vb[Trin_ExcelAddInDynamicControls#2](../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb#2)]
-     [!code-csharp[Trin_ExcelAddInDynamicControls#2](../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs" id="Snippet2":::
 
 #### <a name="to-generate-a-host-item-for-an-excel-worksheet"></a>Vygenerování položky hostitele pro excelový list
 
 - Následující příklad kódu ukazuje, jak vygenerovat hostitelskou položku pro aktivní list v projektu.
 
-     [!code-vb[Trin_ExcelAddInDynamicControls#1](../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_ExcelAddInDynamicControls#1](../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs" id="Snippet1":::
 
 ### <a name="generate-listobject-host-controls"></a>Generovat ovládací prvky hostitele ListObject
  Použijete-li `GetVstoObject` metodu pro rozšiřování <xref:Microsoft.Office.Interop.Excel.ListObject> , metoda vrátí <xref:Microsoft.Office.Tools.Excel.ListObject> . <xref:Microsoft.Office.Tools.Excel.ListObject>Obsahuje všechny funkce původního <xref:Microsoft.Office.Interop.Excel.ListObject> . Má také další funkce a může být svázán s daty pomocí modelu model Windows Forms datové vazby. Další informace naleznete v tématu [ListObject Control](../vsto/listobject-control.md).
@@ -83,8 +83,8 @@ ms.locfileid: "99970371"
 
 - Následující příklad kódu ukazuje, jak vygenerovat <xref:Microsoft.Office.Tools.Excel.ListObject> pro první <xref:Microsoft.Office.Interop.Excel.ListObject> v aktivním listu v projektu.
 
-     [!code-vb[Trin_ExcelAddInDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb#3)]
-     [!code-csharp[Trin_ExcelAddInDynamicControls#3](../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs#3)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb" id="Snippet3":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs" id="Snippet3":::
 
 ### <a name="add-managed-controls-to-documents-and-worksheets"></a><a name="AddControls"></a> Přidání spravovaných ovládacích prvků do dokumentů a listů
  Po vygenerování <xref:Microsoft.Office.Tools.Word.Document> nebo <xref:Microsoft.Office.Tools.Excel.Worksheet> můžete do dokumentu nebo listu přidat ovládací prvky, které tyto rozšířené objekty reprezentují. Chcete-li přidat ovládací prvky, použijte `Controls` vlastnost <xref:Microsoft.Office.Tools.Word.Document> nebo <xref:Microsoft.Office.Tools.Excel.Worksheet> . Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
@@ -105,16 +105,16 @@ ms.locfileid: "99970371"
 ### <a name="example-that-uses-native-word-objects"></a>Příklad, který používá nativní objekty aplikace Word
  Následující příklad kódu ukazuje, jak zpracovat událost na úrovni aplikace pro dokumenty aplikace Word. `CreateDocument`Metoda vytvoří nový dokument a pak definuje <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> obslužnou rutinu události, která brání uložení tohoto dokumentu. Událost je událost na úrovni aplikace, která je vyvolána pro <xref:Microsoft.Office.Interop.Word.Application> objekt, a obslužná rutina události musí porovnat `Doc` parametr s `document1` objektem, aby bylo možné určit `document1` , zda představuje uložený dokument.
 
- [!code-vb[Trin_WordAddInDynamicControls #12](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#12)]
- [!code-csharp[Trin_WordAddInDynamicControls#12](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#12)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet12":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet12":::
 
 ### <a name="examples-that-use-a-host-item"></a>Příklady, které používají hostitelskou položku
  Následující příklady kódu zjednodušují tento proces zpracováním <xref:Microsoft.Office.Tools.Word.Document.BeforeSave> události <xref:Microsoft.Office.Tools.Word.Document> hostitelské položky. `CreateDocument2`Metoda v těchto příkladech generuje <xref:Microsoft.Office.Tools.Word.Document> objekt, který rozšiřuje `document2` objekt, a poté definuje <xref:Microsoft.Office.Tools.Word.Document.BeforeSave> obslužnou rutinu události, která brání uložení dokumentu. Obslužná rutina události je volána pouze `document2` v případě, že je uložena a může akci uložení zrušit bez provedení jakékoli další práce k ověření, který dokument byl uložen.
 
  Následující příklad kódu ukazuje tuto úlohu.
 
- [!code-vb[Trin_WordAddInDynamicControls #13](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#13)]
- [!code-csharp[Trin_WordAddInDynamicControls#13](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#13)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet13":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet13":::
 
 ## <a name="determine-whether-an-office-object-has-been-extended"></a><a name="HasVstoObject"></a> Určení, zda byl objekt Office rozšířen
  Chcete-li zjistit, zda rozšířený objekt již byl vygenerován pro určitý nativní objekt Office, použijte `HasVstoObject` metodu. Tato metoda vrátí **hodnotu true** , pokud rozšířený objekt již byl vygenerován.

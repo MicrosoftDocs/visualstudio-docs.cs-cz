@@ -27,12 +27,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8ed86cb10f6521e5863562cdb67e768b1a2367d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6c35d963b426fe24a43bef24617f79c042c272e9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850032"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828160"
 ---
 # <a name="custom-task-panes"></a>Vlastní podokna úloh
   Podokna úloh jsou panely uživatelského rozhraní, které jsou obvykle ukotveny na jednu stranu okna aplikace systém Microsoft Office. Vlastní podokna úloh poskytují způsob, jak vytvořit vlastní podokno úloh a poskytnout uživatelům známé rozhraní pro přístup k funkcím vašeho řešení. Rozhraní může například obsahovat ovládací prvky, které spouštějí kód pro úpravu dokumentů nebo zobrazení dat ze zdroje dat.
@@ -66,8 +66,8 @@ ms.locfileid: "99850032"
 ### <a name="instantiate-the-custom-task-pane"></a>Vytvoření instance vlastního podokna úloh
  Po vytvoření uživatelského ovládacího prvku, který obsahuje uživatelské rozhraní vlastního podokna úloh, je nutné vytvořit instanci <xref:Microsoft.Office.Tools.CustomTaskPane> . Chcete-li to provést, předejte uživatelský ovládací prvek <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> v doplňku VSTO voláním jedné z <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> metod. Tato kolekce je vystavena jako `CustomTaskPanes` pole `ThisAddIn` třídy. Následující příklad kódu je určen ke spuštění z `ThisAddIn` třídy.
 
- [!code-vb[Trin_TaskPaneBasic#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb#2)]
- [!code-csharp[Trin_TaskPaneBasic#2](../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs#2)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb" id="Snippet2":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs" id="Snippet2":::
 
  <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A>Metody vrací nový <xref:Microsoft.Office.Tools.CustomTaskPane> objekt. Pomocí tohoto objektu můžete změnit vzhled podokna úloh a reagovat na události uživatele.
 

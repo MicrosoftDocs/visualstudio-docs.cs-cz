@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ef515ce323322dee667dab5690b85b29af97c07d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f6dfa2bb4d3309420cf0a9a71e79b5d07b5477ce
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875416"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828524"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Nasazení řešení Office pomocí Instalační služba systému Windows
 
@@ -335,7 +335,7 @@ Instalace pro jednotlivé uživatele vyžadují jenom jeden instalační program
 
 7. Tento postup opakujte, pokud chcete vytvořit následující hodnoty.
 
-|Typ hodnoty<br /><br />|Název<br /><br />|
+|Typ hodnoty<br /><br />|Name<br /><br />|
 |--------------|--------|
 |Řetězcová hodnota<br /><br />|**FriendlyName**<br /><br />|
 |Hodnota DWORD<br /><br />|**LoadBehavior**<br /><br />|
@@ -404,14 +404,14 @@ Chcete-li upravit vlastní vlastnosti, vytvořte program, který odebere přizp�
 
    - Microsoft. VisualStudio. Tools. Applications. ServerDocument
 
-7. V **Průzkumník řešení** vyberte soubor **program.cs** (pro aplikace v jazyce C#) nebo soubor **Module1. vb** (pro Visual Basic aplikace).
+7. V **Průzkumník řešení** vyberte soubor **program. cs** (pro aplikace v jazyce C#) nebo soubor **Module1. vb** (pro Visual Basic aplikace).
 
 8. Na panelu nabídek vyberte možnost **Zobrazit**  >  **otevřené**.
 
 9. Obsah celého souboru nahraďte následujícím kódem.
 
-[!code-vb[Trin_CustomAction#1](../vsto/codesnippet/VisualBasic/setexceldocumentproperties/module1.vb#1)]
-[!code-csharp[Trin_CustomAction#1](../vsto/codesnippet/CSharp/setexceldocumentproperties/program.cs#1)]
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/setexceldocumentproperties/module1.vb" id="Snippet1":::
+:::code language="csharp" source="../vsto/codesnippet/CSharp/setexceldocumentproperties/program.cs" id="Snippet1":::
 
 10. Zkompilujte projekt.
 

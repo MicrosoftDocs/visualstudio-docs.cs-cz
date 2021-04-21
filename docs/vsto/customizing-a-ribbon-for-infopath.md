@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0bc66a9266baf865e2efb87497361bc0c525e55a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5af7c4ed2f396c5a806cc42c49c8f4209b6b5c2c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99849889"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828134"
 ---
 # <a name="customize-a-ribbon-for-infopath"></a>Přizpůsobení pásu karet pro aplikaci InfoPath
   Při přizpůsobení pásu karet v aplikaci systém Microsoft Office InfoPath je nutné vzít v úvahu, kde se vlastní pás karet zobrazí v aplikaci. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] může zobrazit pás karet v následujících třech typech oken aplikace InfoPath:
@@ -60,8 +60,8 @@ ms.locfileid: "99849889"
 
  Následující příklad kódu ukazuje, jak zobrazit vlastní pás karet pouze v okně, které v návrhovém režimu zobrazuje šablonu formuláře. Pás karet, který se má zobrazit, je určen v `GetResourceText()` metodě, která je vygenerována ve třídě pásu karet. Další informace o třídě pásu karet naleznete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
- [!code-csharp[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs#1)]
- [!code-vb[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb" id="Snippet1":::
 
 ## <a name="see-also"></a>Viz také
 - [Přístup k pásu karet za běhu](../vsto/accessing-the-ribbon-at-run-time.md)

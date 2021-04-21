@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 56777213c4cac0e2356fa33235d2527abdbb5172
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 71051c6255f9035079a7888fb3a4c7df2f5eab59
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966640"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827549"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-word"></a>Návod: vytvoření prvního přizpůsobení na úrovni dokumentu pro Word
 
@@ -124,8 +124,8 @@ ms.locfileid: "99966640"
 
 2. Proměnnou `ThisDocument_Startup` obslužné rutiny události nahraďte následujícím kódem. Když je dokument otevřen, tento kód přidá druhý odstavec textu do dokumentu.
 
-     [!code-vb[Trin_WordDocumentTutorial#1](../vsto/codesnippet/VisualBasic/FirstDocumentCustomization/ThisDocument.vb#1)]
-     [!code-csharp[Trin_WordDocumentTutorial#1](../vsto/codesnippet/CSharp/FirstDocumentCustomization/ThisDocument.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/FirstDocumentCustomization/ThisDocument.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/FirstDocumentCustomization/ThisDocument.cs" id="Snippet1":::
 
     > [!NOTE]
     > Tento kód používá hodnotu indexu 1 pro přístup k prvnímu odstavci ve <xref:Microsoft.Office.Tools.Word.Document.Paragraphs%2A> Vlastnosti. I když Visual Basic a Visual C# používají pole na bázi 0, dolní hranice pole většiny kolekcí v objektovém modelu aplikace Word je 1. Další informace najdete v tématu [psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md).

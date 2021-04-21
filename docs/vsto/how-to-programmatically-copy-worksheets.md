@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 67bd9257e96b9c7e22dea2ca6af005ccc74637dc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2a5b24d7896ec1f81c7e8d5d4c41a5e6af807b13
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964209"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828576"
 ---
 # <a name="how-to-programmatically-copy-worksheets"></a>Postupy: kopírování listů prostřednictvím kódu programu
   Můžete vytvořit kopii listu a vložit tento list před nebo za existující list v sešitu. Pokud nezadáte místo pro vložení listu, aplikace Excel vytvoří nový sešit, který bude obsahovat nový list.
@@ -34,15 +34,15 @@ ms.locfileid: "99964209"
 
 1. Použijte <xref:Microsoft.Office.Interop.Excel.Worksheets.Copy%2A> metodu ke zkopírování prvního listu v aktuálním sešitu a kopii umístěte za třetí list.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#16](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#16)]
-     [!code-vb[Trin_VstcoreExcelAutomation#16](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#16)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet16":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet16":::
 
 ## <a name="to-add-a-copied-worksheet-to-a-workbook-in-a-vsto-add-in"></a>Přidání zkopírovaného listu do sešitu v doplňku VSTO
 
 1. Použijte <xref:Microsoft.Office.Interop.Excel.Worksheets.Copy%2A> metodu ke zkopírování prvního listu v aktuálním sešitu a kopii umístěte za třetí list.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#12](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#12)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#12](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#12)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet12":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet12":::
 
 ## <a name="see-also"></a>Viz také
 - [Práce s listy](../vsto/working-with-worksheets.md)

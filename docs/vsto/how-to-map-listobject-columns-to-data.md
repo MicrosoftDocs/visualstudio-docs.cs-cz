@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ec82809a694e735fed553a1c79ba36687de0fbb1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 68cb12503d0f8ad59de92f965c0ed51fbc0d7f40
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900904"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827458"
 ---
 # <a name="how-to-map-listobject-columns-to-data"></a>Postupy: mapování sloupců ListObject na data
   Když svážete <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek s objektem, nebudete <xref:System.Data.DataTable> chtít zobrazit všechny sloupce v seznamu, nebo můžete mít určité sloupce, které nejsou vázány na data. Můžete namapovat, které sloupce se mají zobrazit v <xref:Microsoft.Office.Tools.Excel.ListObject> při volání <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> metody.
@@ -33,18 +33,18 @@ ms.locfileid: "99900904"
 
 1. Vytvořte na <xref:System.Data.DataTable> úrovni třídy.
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#16](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs#16)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#16](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb#16)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs" id="Snippet16":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb" id="Snippet16":::
 
 2. Přidejte vzorové sloupce a data do `Startup` obslužné rutiny události `Sheet1` třídy (v projektu na úrovni dokumentu) nebo `ThisAddIn` třídy (v projektu doplňku VSTO).
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#17](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs#17)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#17](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb#17)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs" id="Snippet17":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb" id="Snippet17":::
 
 3. Zavolejte <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> metodu a předejte názvy sloupců v pořadí, ve kterém by se měly zobrazit. Objekt list bude vázán na nově vytvořený <xref:System.Data.DataTable> , ale pořadí sloupců v objektu list se bude lišit od pořadí, v němž jsou uvedeny <xref:System.Data.DataTable> .
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#18](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs#18)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb#18)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs" id="Snippet18":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb" id="Snippet18":::
 
 ## <a name="specify-unmapped-columns"></a>Zadat nemapované sloupce
  Když namapujete sloupce na <xref:System.Data.DataTable> , můžete také určit, že některé sloupce by neměly být vázány na data předáním prázdného řetězce. Nový sloupec, který není vázán na data, je poté přidán do <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku.
@@ -53,8 +53,8 @@ ms.locfileid: "99900904"
 
 1. Zavolejte <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> metodu a předejte názvy sloupců v pořadí, ve kterém by se měly zobrazit. Použijte prázdný řetězec k označení místa přidání nemapovaného sloupce; v tomto případě mezi sloupcem nadpisu a názvem sloupce Příjmení.
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#19](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs#19)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#19](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb#19)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs" id="Snippet19":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb" id="Snippet19":::
 
 ## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad kódu předpokládá, že máte existující <xref:Microsoft.Office.Tools.Excel.ListObject> pojmenovanou `list1` na listu, ve kterém se zobrazuje tento kód.

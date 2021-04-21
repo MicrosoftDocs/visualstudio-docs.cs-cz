@@ -25,12 +25,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 69ca0269859db9e1a69904c2211b8f4d1ad45710
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a84a0c21bba42263e7b4dad9ad9118f462389ad6
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879290"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827497"
 ---
 # <a name="ribbon-xml"></a>Pás karet – XML
   Položka pásu karet (XML) umožňuje přizpůsobit pás karet pomocí XML. Použijte položku pásu karet (XML), chcete-li přizpůsobit pás karet způsobem, který není podporován položkou pásu karet (vizuální Návrhář). Porovnání toho, co můžete s každou položkou dělat, najdete v tématu [Přehled pásu karet](../vsto/Ribbon-overview.md).
@@ -51,8 +51,8 @@ ms.locfileid: "99879290"
 
  Následující příklad kódu přepíše `CreateRibbonExtensibilityObject` metodu a vrátí třídu XML pásu karet s názvem MyRibbon.
 
- [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]
- [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb" id="Snippet1":::
 
 ## <a name="define-the-behavior-of-the-custom-ribbon"></a>Definování chování vlastního pásu karet
  Můžete reagovat na akce uživatele, jako je například kliknutí na tlačítko na pásu karet, vytvořením *metod zpětného volání*. Metody zpětného volání připomínají události v ovládacích prvcích model Windows Forms, ale jsou označeny atributem v XML prvku uživatelského rozhraní. Metody zapisujete do třídy pásu karet a ovládací prvek volá metodu, která má stejný název jako hodnota atributu. Můžete například vytvořit metodu zpětného volání, která je volána, když uživatel klikne na tlačítko na pásu karet. K vytvoření metody zpětného volání se vyžadují dva kroky:
@@ -92,8 +92,8 @@ ms.locfileid: "99879290"
 
   Všechny metody zpětného volání mají <xref:Microsoft.Office.Core.IRibbonControl> parametr, který představuje ovládací prvek, který volal metodu. Pomocí tohoto parametru lze znovu použít stejnou metodu zpětného volání pro více ovládacích prvků. Následující příklad kódu ukazuje metodu zpětného volání **Akce** , která provádí různé úkoly v závislosti na tom, který ovládací prvek uživatel klikne.
 
-  [!code-csharp[Trin_RibbonOutlookBasic#2](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#2)]
-  [!code-vb[Trin_RibbonOutlookBasic#2](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#2)]
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs" id="Snippet2":::
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb" id="Snippet2":::
 
 ## <a name="ribbon-xml-file-reference"></a><a name="RibbonDescriptorFile"></a> Odkaz na soubor XML pásu karet
  Vlastní pás karet můžete definovat přidáním prvků a atributů do souboru XML pásu karet. Ve výchozím nastavení obsahuje soubor XML pásu karet následující kód XML.

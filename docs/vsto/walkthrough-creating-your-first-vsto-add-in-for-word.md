@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 43104ad8b26045056ca8d8d653fcb9625734f7eb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fd3509ab674faa220ed7bbea15a9762f52b1a525
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899435"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828277"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-word"></a>Návod: vytvoření prvního doplňku VSTO pro Word
   V tomto úvodním návodu se dozvíte, jak vytvořit doplněk VSTO pro systém Microsoft Office Word. Funkce, které vytvoříte v tomto druhu řešení, jsou k dispozici pro samotnou aplikaci, bez ohledu na to, které dokumenty jsou otevřené.
@@ -81,15 +81,15 @@ ms.locfileid: "99899435"
 
     Když uživatel dokument uloží, obslužná rutina události přidá nový text na začátku dokumentu.
 
-    [!code-vb[Trin_WordAddInTutorial#1](../vsto/codesnippet/VisualBasic/FirstWordAddIn/ThisAddIn.vb#1)]
-    [!code-csharp[Trin_WordAddInTutorial#1](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#1)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/FirstWordAddIn/ThisAddIn.vb" id="Snippet1":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs" id="Snippet1":::
 
    > [!NOTE]
    > Tento kód používá hodnotu indexu 1 pro přístup k prvnímu odstavci v <xref:Microsoft.Office.Interop.Word._Document.Paragraphs%2A> kolekci. I když Visual Basic a Visual C# používají pole na bázi 0, dolní hranice pole většiny kolekcí v objektovém modelu aplikace Word je 1. Další informace najdete v tématu [psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md).
 
 2. Pokud používáte jazyk C#, přidejte následující požadovaný kód do `ThisAddIn_Startup` obslužné rutiny události. Tento kód slouží k propojení `Application_DocumentBeforeSave` obslužné rutiny události s <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> událostí.
 
-    [!code-csharp[Trin_WordAddInTutorial#2](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs" id="Snippet2":::
 
    Chcete-li upravit dokument při jeho uložení, předchozí příklady kódu používají následující objekty:
 

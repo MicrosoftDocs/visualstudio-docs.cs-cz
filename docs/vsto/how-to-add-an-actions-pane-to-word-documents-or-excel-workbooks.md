@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f9488a15f851446c5779bdb1a4572e69a1cf3053
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9cf079727581b9cec4b6cb77a0a0c3f0b503b3a0
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917521"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825521"
 ---
 # <a name="how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks"></a>Postupy: Přidání podokna akcí do dokumentů aplikace Word nebo sešitů aplikace Excel
   Chcete-li přidat podokno akcí do aplikace systém Microsoft Office wordový dokument nebo do sešitu aplikace Microsoft Excel, nejprve vytvořte model Windows Forms uživatelský ovládací prvek. Pak přidejte uživatelský ovládací prvek do <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> vlastnosti `ThisDocument.ActionsPane` pole (Word) nebo `ThisWorkbook.ActionsPane` pole (Excel) v projektu.
@@ -53,14 +53,14 @@ ms.locfileid: "99917521"
 
 5. Přidejte kód do <xref:System.Windows.Forms.Control.Click> obslužné rutiny události tlačítka. Následující příklad ukazuje kód pro systém Microsoft Office wordový dokument.
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#12](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/HelloControl.cs#12)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/HelloControl.vb#12)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/HelloControl.cs" id="Snippet12":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/HelloControl.vb" id="Snippet12":::
 
 6. V jazyce C# je nutné přidat obslužnou rutinu události pro kliknutí na tlačítko. Tento kód lze umístit do `HelloControl` konstruktoru po volání `InitializeComponent` .
 
      Informace o tom, jak vytvořit obslužné rutiny událostí, naleznete v tématu [How to: Create event handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#13](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/HelloControl.cs#13)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/HelloControl.cs" id="Snippet13":::
 
 ## <a name="add-the-user-control-to-the-actions-pane"></a>Přidání uživatelského ovládacího prvku do podokna akce
  Chcete-li zobrazit podokno akcí, přidejte uživatelský ovládací prvek do <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> vlastnosti `ThisDocument.ActionsPane` pole (Word) nebo `ThisWorkbook.ActionsPane` pole (Excel).
@@ -69,13 +69,13 @@ ms.locfileid: "99917521"
 
 1. Přidejte následující kód do `ThisDocument` `ThisWorkbook` třídy nebo jako deklaraci na úrovni třídy (Nepřidávat tento kód do metody).
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#14](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#14)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#14)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet14":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet14":::
 
 2. Přidejte následující kód do `ThisDocument_Startup` obslužné rutiny události `ThisDocument` třídy nebo `ThisWorkbook_Startup` obslužné rutiny události `ThisWorkbook` třídy.
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#15](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#15)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#15](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#15)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet15":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet15":::
 
 ## <a name="see-also"></a>Viz také
 - [Přehled podokna akcí](../vsto/actions-pane-overview.md)

@@ -24,12 +24,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5d49c7fa9224b2d527956536cb0c56b016f6b52e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 64a4d4dcd2e6115a3b8093a0a9338cb126f49a28
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948645"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825131"
 ---
 # <a name="add-controls-to-office-documents-at-run-time"></a>Přidání ovládacích prvků do dokumentů Office v době běhu
   Ovládací prvky lze přidat do systém Microsoft Office dokumentů aplikace Word a systém Microsoft Office excelový sešit v době běhu. Můžete je také odebrat v době běhu. Ovládací prvky, které přidáte nebo odeberete za běhu, se nazývají *dynamické ovládací prvky*.
@@ -62,6 +62,9 @@ ms.locfileid: "99948645"
 
  [!code-vb[Trin_ExcelWorkbookDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb#3)]
  [!code-csharp[Trin_ExcelWorkbookDynamicControls#3](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs#3)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb" id="Snippet3":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs" id="Snippet3":::
+
 
 ### <a name="access-and-delete-controls"></a>Ovládací prvky pro přístup a odstranění
  Můžete použít `Controls` vlastnost <xref:Microsoft.Office.Tools.Excel.Worksheet> nebo <xref:Microsoft.Office.Tools.Word.Document> k iterování všech ovládacích prvků v dokumentu, včetně ovládacích prvků, které jste přidali v době návrhu. Ovládací prvky, které přidáte v době návrhu, se nazývají také *statické ovládací prvky*.
@@ -70,6 +73,9 @@ ms.locfileid: "99948645"
 
  [!code-vb[Trin_ExcelWorkbookDynamicControls#4](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb#4)]
  [!code-csharp[Trin_ExcelWorkbookDynamicControls#4](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs#4)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb" id="Snippet4":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs" id="Snippet4":::
+
 
  V době běhu nelze odebrat statické ovládací prvky. Pokud se pokusíte použít `Delete` metodu nebo `Remove` pro odebrání statického ovládacího prvku, <xref:Microsoft.Office.Tools.CannotRemoveControlException> bude vyvolána výjimka.
 
@@ -116,8 +122,8 @@ Když se dokument uloží a pak zavře, všechny dynamicky vytvořené hostitels
 
   Následující příklad kódu ukazuje, jak použít <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddControl%2A> metodu k dynamickému Přidání vlastního uživatelského ovládacího prvku do listu v projektu aplikace Excel na úrovni dokumentu. V tomto příkladu je uživatelský ovládací prvek pojmenován `UserControl1` a má <xref:Microsoft.Office.Interop.Excel.Range> název `range1` . Chcete-li použít tento příklad, spusťte jej z `Sheet` třídy *n* v projektu.
 
-  [!code-vb[Trin_VstcoreProgrammingControlsExcel#2](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#2)]
-  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#2)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet2":::
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet2":::
 
 ### <a name="use-members-of-custom-controls"></a>Použití členů vlastních ovládacích prvků
  Po použití jedné z `AddControl` metod pro přidání ovládacího prvku do listu nebo dokumentu máte nyní dva různé objekty ovládacích prvků:
@@ -136,8 +142,8 @@ Když se dokument uloží a pak zavře, všechny dynamicky vytvořené hostitels
 
   Například <xref:Microsoft.Office.Tools.Excel.ControlSite> Třída i <xref:System.Windows.Forms.Control> Třída mají `Top` vlastnost. Chcete-li získat nebo nastavit vzdálenost mezi horním okrajem ovládacího prvku a horním okrajem dokumentu, použijte <xref:Microsoft.Office.Tools.Excel.ControlSite.Top%2A> vlastnost <xref:Microsoft.Office.Tools.Excel.ControlSite> , nikoli <xref:System.Windows.Forms.Control.Top%2A> vlastnost <xref:System.Windows.Forms.Control> .
 
-  [!code-vb[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#3)]
-  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#3)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet3":::
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet3":::
 
 ## <a name="see-also"></a>Viz také
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)

@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 459c50b5f8135756f85de852a62de44b3878148d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ccc45e9ec389e265e69c81baaf569aa3eb3c978b
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882476"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825625"
 ---
 # <a name="bind-data-to-controls-in-office-solutions"></a>Vázání dat k ovládacím prvkům v řešeních pro systém Office
   Ovládací prvky model Windows Forms a *hostitelské ovládací prvky* lze vytvořit pomocí systém Microsoft Office dokumentu aplikace Word nebo systém Microsoft Office listu aplikace Excel na zdroj dat, aby ovládací prvky automaticky zobrazily data. Data lze navazovat na ovládací prvky v projektech na úrovni aplikace i na úrovni dokumentu.
@@ -43,8 +43,8 @@ ms.locfileid: "99882476"
 
  Následující příklad ukazuje, jak vytvořit vazby <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> vlastnosti na datový prvek v projektu na úrovni dokumentu.
 
- [!code-vb[Trin_BindableComponent#4](../vsto/codesnippet/VisualBasic/Trin_BindableComponent/Sheet1.vb#4)]
- [!code-csharp[Trin_BindableComponent#4](../vsto/codesnippet/CSharp/Trin_BindableComponent/Sheet1.cs#4)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_BindableComponent/Sheet1.vb" id="Snippet4":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_BindableComponent/Sheet1.cs" id="Snippet4":::
 
  Návody, které ilustrují jednoduchou datovou vazbu, najdete v tématu [Návod: jednoduché datové vazby v projektu na úrovni dokumentu](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md) pro projekt na úrovni dokumentu a [Návod: jednoduché datové vazby v projektu doplňku VSTO](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md) pro projekt doplňku VSTO.
 
@@ -55,8 +55,8 @@ ms.locfileid: "99882476"
 
  Následující příklad kódu vytvoří <xref:System.Data.DataSet> se dvěma <xref:System.Data.DataTable> objekty a naplní jednu z tabulek daty. Kód pak váže na <xref:Microsoft.Office.Tools.Excel.ListObject> tabulku, která obsahuje data. Tento příklad je pro projekt na úrovni dokumentu aplikace Excel.
 
- [!code-csharp[Trin_ExcelListObject#18](../vsto/codesnippet/CSharp/Trin_ExcelListObject/Trin_ExcelListObject.cs#18)]
- [!code-vb[Trin_ExcelListObject#18](../vsto/codesnippet/VisualBasic/Trin_ExcelListObject/Sheet1.vb#18)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelListObject/Trin_ExcelListObject.cs" id="Snippet18":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ExcelListObject/Sheet1.vb" id="Snippet18":::
 
  Návody, které ukazují komplexní datovou vazbu, naleznete v tématu [Návod: komplexní datové vazby v projektu na úrovni dokumentu](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md) pro projekt na úrovni dokumentu a [Návod: komplexní datové vazby v projektu doplňku VSTO](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md) pro projekt doplňku VSTO.
 

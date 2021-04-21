@@ -32,12 +32,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5786ea4bdd0dd6f4c92284aaf9cff2a3c95e4231
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b939131f388642b452445e0afee0f5e38d2a5195
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920491"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825534"
 ---
 # <a name="global-access-to-objects-in-office-projects"></a>Globální přístup k objektům v projektech pro systém Office
   Při vytváření projektu sady Office sada Visual Studio automaticky generuje třídu s názvem `Globals` v projektu. Třídu můžete použít `Globals` pro přístup k několika různým projektovým položkám v době běhu z libovolného kódu v projektu.
@@ -69,8 +69,8 @@ ms.locfileid: "99920491"
 
   Můžete například použít `Globals.Sheet1` vlastnost pro vložení textu do <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku, `Sheet1` když uživatel klikne na tlačítko v podokně akce v projektu na úrovni dokumentu v aplikaci Excel.
 
-  [!code-vb[Trin_VstcoreProgramming#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#1)]
-  [!code-csharp[Trin_VstcoreProgramming#1](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#1)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb" id="Snippet1":::
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs" id="Snippet1":::
 
  Kód, který se pokusí použít `Globals` třídu před inicializací dokumentu nebo doplňku VSTO, může vyvolat výjimku za běhu. Například použití `Globals` při deklaraci proměnné na úrovni třídy může selhat, protože `Globals` třída nemusí být inicializována s odkazy na všechny položky hostitele před vytvořením instance deklarovaného objektu.
 

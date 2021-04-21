@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 224396d7b4328164c55bc58c746909ada015e02f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e20c9a54d2fa352c51d5ae5383f5c5b7861e0fdf
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965730"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825222"
 ---
 # <a name="access-the-ribbon-at-run-time"></a>Přístup k pásu karet za běhu
   Můžete napsat kód pro zobrazení, skrytí a úpravu pásu karet a povolit uživatelům spouštění kódu z ovládacích prvků ve vlastním podokně úloh, podokně akce nebo oblasti formuláře aplikace Outlook.
@@ -37,24 +37,24 @@ ms.locfileid: "99965730"
 
  Následující příklad používá `Globals` třídu pro přístup k vlastnímu pásu karet s názvem `Ribbon1` a nastavení textu, který se zobrazí na poli se seznamem na pásu karet na `Hello World` .
 
- [!code-vb[Trin_Outlook_FR_Access#4](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#4)]
- [!code-csharp[Trin_Outlook_FR_Access#4](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#4)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb" id="Snippet4":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs" id="Snippet4":::
 
 ## <a name="access-a-collection-of-ribbons-that-appear-in-a-specific-outlook-inspector-window"></a>Přístup ke kolekci pásu karet, která se zobrazí v konkrétním okně kontroly aplikace Outlook
  Můžete získat přístup ke kolekci pásu karet, která se zobrazí v *okně kontroly* aplikace Outlook. Inspektor je okno, které se otevře v aplikaci Outlook, když uživatelé provádějí určité úkoly, například vytváření e-mailových zpráv. Chcete-li získat přístup k pásu karet okna inspektora, zavolejte `Ribbons` vlastnost `Globals` třídy a předejte <xref:Microsoft.Office.Interop.Outlook.Inspector> objekt, který představuje inspektor.
 
  Následující příklad získá kolekci pásu karet inspektoru, který aktuálně má fokus. Tento příklad pak přistupuje k pojmenovanému pásu karet `Ribbon1` a nastaví text, který se zobrazí na poli se seznamem na pásu karet na `Hello World` .
 
- [!code-vb[Trin_Outlook_FR_Access#5](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#5)]
- [!code-csharp[Trin_Outlook_FR_Access#5](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#5)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb" id="Snippet5":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs" id="Snippet5":::
 
 ## <a name="access-a-collection-of-ribbons-that-appear-for-a-specific-outlook-explorer"></a>Přístup ke kolekci pásu karet, která se zobrazí pro konkrétní aplikaci Outlook Explorer
  Můžete získat přístup ke kolekci pásu karet, která se zobrazí v aplikaci Outlook *Explorer*. Průzkumník je hlavním uživatelským rozhraním aplikace (UI) pro instanci Outlooku. Chcete-li získat přístup k pásu karet okna Průzkumníka, zavolejte `Ribbons` vlastnost `Globals` třídy a předejte <xref:Microsoft.Office.Interop.Outlook.Explorer> objekt, který představuje Průzkumníka.
 
  Následující příklad načte kolekci pásu karet Průzkumníka, který aktuálně má fokus. Tento příklad pak přistupuje k pojmenovanému pásu karet `Ribbon1` a nastaví text, který se zobrazí na poli se seznamem na pásu karet na `Hello World` .
 
- [!code-vb[Trin_Outlook_FR_Access#6](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#6)]
- [!code-csharp[Trin_Outlook_FR_Access#6](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#6)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb" id="Snippet6":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs" id="Snippet6":::
 
 ## <a name="see-also"></a>Viz také
 - [Přehled pásu karet](../vsto/ribbon-overview.md)

@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fc61f66b2aefaf0e43b1b5af819e0e244feec114
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f3d77085808fb54cd0a0517cc6d039e2345a1872
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910308"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827978"
 ---
 # <a name="globalization-and-localization-of-excel-solutions"></a>Globalizace a lokalizace řešení pro Excel
   Tato část obsahuje informace o speciálních faktorech pro systém Microsoft Office excelových řešení, která se spustí v počítačích, které mají nastavení jiné než anglické verze systému Windows. Většina aspektů globalizace a lokalizace systém Microsoft Office řešení se shoduje s tím, jak se setkáte při vytváření jiných druhů řešení pomocí sady Visual Studio. Obecné informace najdete v tématu [globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md).
@@ -79,17 +79,17 @@ Application.ActiveCell.Value2 = "05/12/04"
 
  Stejný kód, při použití v řešení vytvořeném pomocí vývojářských nástrojů Office v sadě Visual Studio a předaných do aplikace Excel prostřednictvím zprostředkovatele komunikace s objekty COM, vytváří stejné výsledky, pokud je datum formátováno ve stylu en-US.
 
- Příklad:
+ Například:
 
- [!code-vb[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#6)]
- [!code-csharp[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#6)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb" id="Snippet6":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs" id="Snippet6":::
 
  Pokud je to možné, měli byste pracovat s daty silného typu namísto řetězcových literálů. Například místo uložení data v řetězcovém literálu ho uložte jako a <xref:System.Double> pak ho převeďte na <xref:System.DateTime> objekt pro manipulaci.
 
  Následující příklad kódu vyžaduje datum, kdy uživatel zadá do buňky A5, uloží ho jako a <xref:System.Double> pak ho převede na <xref:System.DateTime> objekt pro zobrazení v buňce A7. Aby bylo možné zobrazit datum, musí být buňka A7 naformátovaná.
 
- [!code-vb[Trin_VstcoreCreatingExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#7)]
- [!code-csharp[Trin_VstcoreCreatingExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#7)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb" id="Snippet7":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs" id="Snippet7":::
 
 ### <a name="excel-worksheet-functions"></a>Funkce listu aplikace Excel
  Názvy funkcí listu jsou interně přeložené pro většinu jazykových verzí Excelu. Vzhledem k tomu, že problémy s potenciálním voláním jazyka a modelu COM, je však doporučeno používat v kódu pouze anglické názvy funkcí.
