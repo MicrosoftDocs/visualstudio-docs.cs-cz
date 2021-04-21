@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e833a480713e3c04215c03a3dc4a549c92e0f772
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9d42aa2d8594ed44e4fd4edbac8a0d64c4dc16da
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938470"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826145"
 ---
 # <a name="persist-dynamic-controls-in-office-documents"></a>Trvalé dynamické ovládací prvky v dokumentech Office
 
@@ -57,8 +57,8 @@ Chcete-li znovu vytvořit hostitelský ovládací prvek pro Word nebo <xref:Micr
 
 Například pokud chcete vytvořit <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> hostitelský ovládací prvek z existující nativní <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> , když je dokument otevřen, použijte <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A> metodu a předejte existující <xref:Microsoft.Office.Interop.Excel.ListObject> . Následující příklad kódu ukazuje toto v projektu na úrovni dokumentu pro Excel. Kód znovu vytvoří dynamický <xref:Microsoft.Office.Tools.Excel.ListObject> , který je založen na existující <xref:Microsoft.Office.Interop.Excel.ListObject> pojmenované `MyListObject` ve `Sheet1` třídě.
 
-[!code-csharp[Trin_ExcelWorkbookDynamicControls#6](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/Sheet1.cs#6)]
-[!code-vb[Trin_ExcelWorkbookDynamicControls#6](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/Sheet1.vb#6)]
+:::code language="csharp" source="../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/Sheet1.cs" id="Snippet6":::
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/Sheet1.vb" id="Snippet6":::
 
 ### <a name="re-create-chart"></a>Znovu vytvořit graf
 
@@ -94,8 +94,8 @@ Tento postup je užitečný, když víte, že dokument bude otevřen pouze v po�
 
 Následující příklad kódu ukazuje, jak zavolat `GetVstoObject` metodu při otevření dokumentu.
 
-[!code-vb[Trin_WordAddInDynamicControls#11](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#11)]
-[!code-csharp[Trin_WordAddInDynamicControls#11](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#11)]
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet11":::
+:::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet11":::
 
 Přestože se `GetVstoObject` Metoda používá primárně k vygenerování nové položky hostitele za běhu, tato metoda také vymaže všechny obálky ActiveX z dokumentu při prvním volání pro konkrétní dokument. Další informace o tom, jak používat tuto `GetVstoObject` metodu, najdete v tématu [rozšiřování dokumentů aplikace Word a excelových sešitů v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
@@ -107,8 +107,8 @@ Doplněk VSTO umožňuje explicitně odebrat každý dynamický ovládací prvek
 
 Následující příklad kódu ukazuje, jak odebrat všechny model Windows Forms ovládací prvky z dokumentu aplikace Word při zavření dokumentu.
 
-[!code-vb[Trin_WordAddInDynamicControls#10](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#10)]
-[!code-csharp[Trin_WordAddInDynamicControls#10](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#10)]
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet10":::
+:::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet10":::
 
 ## <a name="see-also"></a>Viz také
 

@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cd7efe4aa2aa14cb94a68f0729bc7fe3535888ee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ccdb906022d4dcfc321af294eec59afa36832773
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954030"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824182"
 ---
 # <a name="how-to-cache-data-in-a-password-protected-document"></a>Postupy: ukládání dat do mezipaměti v dokumentu chráněném heslem
   Pokud přidáte data do mezipaměti dat v dokumentu nebo sešitu chráněném heslem, změny v uložených datech se neukládají automaticky. Změny dat uložených v mezipaměti můžete uložit přepsáním dvou metod v projektu.
@@ -45,8 +45,8 @@ ms.locfileid: "99954030"
 ### <a name="example"></a>Příklad
  Následující příklad kódu ukazuje, jak ukládat data do mezipaměti v dokumentu aplikace Word, který je chráněn heslem. Před tím, než kód odstraní ochranu v <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> metodě, uloží aktuální <xref:Microsoft.Office.Tools.Word.Document.ProtectionType%2A> hodnotu, aby bylo možné v metodě znovu použít stejný typ ochrany <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> .
 
- [!code-csharp[Trin_CachedDataProtectedDocument#1](../vsto/codesnippet/CSharp/Trin_CachedDataProtectedDocument/ThisDocument.cs#1)]
- [!code-vb[Trin_CachedDataProtectedDocument#1](../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedDocument/ThisDocument.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_CachedDataProtectedDocument/ThisDocument.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedDocument/ThisDocument.vb" id="Snippet1":::
 
 ### <a name="compile-the-code"></a>Kompilovat kód
  Přidejte tento kód do `ThisDocument` třídy v projektu. Tento kód předpokládá, že heslo je uloženo v poli s názvem `securelyStoredPassword` .
@@ -69,8 +69,8 @@ ms.locfileid: "99954030"
 ### <a name="example"></a>Příklad
  Následující příklad kódu ukazuje, jak ukládat data do mezipaměti v excelovém sešitu, který je chráněn heslem. Před tím, než kód odstraní ochranu v <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> metodě, uloží aktuální <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectStructure%2A> <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectWindows%2A> hodnoty a hodnoty, aby bylo možné v metodě znovu použít stejný typ ochrany <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> .
 
- [!code-vb[Trin_CachedDataProtectedWorkbook#1](../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedWorkbook/ThisWorkbook.vb#1)]
- [!code-csharp[Trin_CachedDataProtectedWorkbook#1](../vsto/codesnippet/CSharp/Trin_CachedDataProtectedWorkbook/ThisWorkbook.cs#1)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedWorkbook/ThisWorkbook.vb" id="Snippet1":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_CachedDataProtectedWorkbook/ThisWorkbook.cs" id="Snippet1":::
 
 ### <a name="compile-the-code"></a>Kompilovat kód
  Přidejte tento kód do `ThisWorkbook` třídy v projektu. Tento kód předpokládá, že heslo je uloženo v poli s názvem `securelyStoredPassword` .

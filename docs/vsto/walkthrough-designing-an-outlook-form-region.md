@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9eaa78a04c7dfda42a82a5d5a9ff3b407e6502d8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 80c574799029f3fe8c4769d852886a625ffd93aa
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842005"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824275"
 ---
 # <a name="walkthrough-design-an-outlook-form-region"></a>Návod: návrh oblasti formuláře aplikace Outlook
   Vlastní oblasti formuláře rozšíří standardní nebo vlastní systém Microsoft Office Outlook Forms. V tomto návodu navrhnete vlastní oblast formuláře, která se zobrazí jako nová stránka v okně inspektoru položky kontaktu. Tato oblast formuláře zobrazuje mapu každé adresy, která je uvedena u kontaktu, odesláním informací o adrese na web místní vyhledávání na webu Windows Live. Informace o oblastech formuláře najdete v tématu [vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md).
@@ -90,14 +90,14 @@ ms.locfileid: "99842005"
 
 8. V části **Určete třídy zpráv, které budou zobrazovat tuto stránku oblasti formuláře** , zrušte zaškrtnutí políčka **e-mailová zpráva**, vyberte **kontakt** a pak klikněte na **Dokončit**.
 
-     Do projektu se přidá soubor *MapIt.cs* nebo *MapIt. vb* .
+     Do projektu se přidá soubor *MapIt. cs* nebo *MapIt. vb* .
 
 ## <a name="design-the-layout-of-the-form-region"></a>Návrh rozložení oblasti formuláře
  Vizuální vývoj oblastí formuláře pomocí *návrháře oblasti formuláře*. Spravované ovládací prvky můžete přetáhnout na plochu návrháře oblasti formuláře. Pro úpravu rozložení a vzhledu ovládacího prvku použijte návrháře a okno **vlastnosti** .
 
 ### <a name="to-design-the-layout-of-the-form-region"></a>Návrh rozložení oblasti formuláře
 
-1. V **Průzkumník řešení** rozbalte projekt **MapItAddIn** a dvojitým kliknutím na *MapIt.cs* nebo *MapIt. vb* otevřete návrhář oblasti formuláře.
+1. V **Průzkumník řešení** rozbalte projekt **MapItAddIn** a potom poklikejte na *MapIt. cs* nebo *MapIt. vb* . otevře se Návrhář oblasti formuláře.
 
 2. Klikněte pravým tlačítkem na návrháře a pak klikněte na **vlastnosti**.
 
@@ -116,9 +116,9 @@ ms.locfileid: "99842005"
 
 ### <a name="to-customize-the-behavior-of-the-form-region"></a>Přizpůsobení chování oblasti formuláře
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na *MapIt.cs* nebo *MapIt. vb* a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na *MapIt. cs* nebo *MapIt. vb* a pak klikněte na **Zobrazit kód**.
 
-    V editoru kódu se otevře *MapIt.cs* nebo *MapIt. vb* .
+    *Rozhraní MapIt. cs* nebo *MapIt. vb* se otevře v editoru kódu.
 
 2. Rozbalte oblast kód pro **vytváření oblasti formuláře** .
 
@@ -126,8 +126,8 @@ ms.locfileid: "99842005"
 
 3. Přidejte následující kód do `MapItFactory_FormRegionInitializing` obslužné rutiny události. Tato obslužná rutina události se volá, když uživatel otevře položku kontaktu. Následující kód určuje, zda položka kontaktu obsahuje adresu. Pokud položka kontaktu neobsahuje adresu, tento kód nastaví <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> vlastnost <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> třídy na **hodnotu true** a oblast formuláře se nezobrazí. V opačném případě doplněk VSTO vyvolá <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> událost a zobrazí oblast formuláře.
 
-    [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
-    [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs" id="Snippet1":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb" id="Snippet1":::
 
 4. Přidejte následující kód do <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> obslužné rutiny události. Tento kód provádí následující úlohy:
 
@@ -137,8 +137,8 @@ ms.locfileid: "99842005"
 
      Místní web hledání se zobrazí v oblasti mapa IT a uvede každou adresu v panelu pro vymazání.
 
-     [!code-csharp[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#2)]
-     [!code-vb[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb" id="Snippet2":::
 
 ## <a name="test-the-outlook-form-region"></a>Testování oblasti formuláře aplikace Outlook
  Při spuštění projektu aplikace Visual Studio otevře aplikaci Outlook. Otevřete položku kontaktu pro zobrazení oblasti mapa formuláře. Oblast formuláře mapa IT se zobrazí jako stránka ve formě libovolné položky kontaktu, která obsahuje adresu.

@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1c610bdc33564e3e211d1ec5aab943af4eec49d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0df6aef3c83d66b84f569e85e953fde8a3f0e16c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965795"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826769"
 ---
 # <a name="access-data-in-documents-on-the-server"></a>Přístup k datům v dokumentech na serveru
   Můžete programovat s daty v přizpůsobení na úrovni dokumentu bez nutnosti používat objektový model systém Microsoft Office Word nebo systém Microsoft Office Excel. To znamená, že budete mít přístup k datům, která jsou obsažena v dokumentu na serveru, na kterém není nainstalován Word nebo Excel. Například kód na serveru (například na [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] stránce) může přizpůsobit data v dokumentu a odeslat přizpůsobený dokument koncovému uživateli. Když koncový uživatel otevře dokument, kód vazby dat v sestavení řešení váže přizpůsobená data do dokumentu. To je možné, protože data v dokumentu jsou oddělená od uživatelského rozhraní. Další informace najdete v tématu [data uložená v mezipaměti v přizpůsobeních na úrovni dokumentu](../vsto/cached-data-in-document-level-customizations.md).
@@ -45,8 +45,8 @@ ms.locfileid: "99965795"
 
   Následující příklad kódu ukazuje, jak přistupovat k řetězci v mezipaměti ve `Sheet1` třídě projektu excelového sešitu. Tento příklad je součástí většího příkladu, který je k dispozici pro <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> metodu.
 
-  [!code-csharp[Trin_ServerDocument#12](../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs#12)]
-  [!code-vb[Trin_ServerDocument#12](../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb#12)]
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs" id="Snippet12":::
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb" id="Snippet12":::
 
 ## <a name="modify-data-in-the-cache"></a>Úprava dat v mezipaměti
  Chcete-li upravit datový objekt uložený v mezipaměti, obvykle proveďte následující kroky:
@@ -66,8 +66,8 @@ ms.locfileid: "99965795"
 
  Následující příklad kódu ukazuje, jak změnit hodnotu řetězce v mezipaměti ve `Sheet1` třídě projektu excelového sešitu. Tento příklad je součástí většího příkladu, který je k dispozici pro <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> metodu.
 
- [!code-csharp[Trin_ServerDocument#11](../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs#11)]
- [!code-vb[Trin_ServerDocument#11](../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb#11)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs" id="Snippet11":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb" id="Snippet11":::
 
 ### <a name="modify-null-values-in-the-data-cache"></a>Úprava hodnot null v mezipaměti dat
  Mezipaměť dat neukládá objekty, které mají hodnotu **null** při uložení a zavření dokumentu. Toto omezení má při úpravě dat uložených v mezipaměti několik důsledků:

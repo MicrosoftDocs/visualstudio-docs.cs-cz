@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b87113b47ee0dc4d296bb5e206d6d277394160c5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3886e20d45834f98f36b8d7e48f3b11c9ef7d5dd
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962272"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824819"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-the-ribbon-designer"></a>Návod: Vytvoření vlastní karty pomocí Návrháře pásu karet
   Pomocí Návrháře pásu karet můžete vytvořit vlastní kartu a následně na ni přidat a umístit ovládací prvky.
@@ -68,7 +68,7 @@ ms.locfileid: "99962272"
 
 2. V dialogovém okně **Přidat novou položku** vyberte možnost **ActionsPaneControl** a pak zvolte možnost **Přidat**.
 
-     V návrháři se otevře soubor **ActionsPaneControl1.cs** nebo **ActionsPaneControl1. vb** .
+     V návrháři se otevře soubor **ActionsPaneControl1. cs** nebo **ActionsPaneControl1. vb** .
 
 3. Na kartě **běžné ovládací prvky** **panelu nástrojů** přidejte popisek na plochu návrháře.
 
@@ -87,7 +87,7 @@ ms.locfileid: "99962272"
 
 3. Změňte název nového pásu karet na **MyRibbon** a klikněte na **Přidat**.
 
-     Otevře se soubor **MyRibbon.cs** nebo **MyRibbon. vb** v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
+     Otevře se soubor **MyRibbon. cs** nebo **MyRibbon. vb** v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
 
 4. V Návrháři pásu karet vyberte výchozí kartu.
 
@@ -116,22 +116,22 @@ ms.locfileid: "99962272"
 
 ### <a name="to-hide-and-show-actions-panes-by-using-buttons-in-the-custom-tab"></a>Skrytí a zobrazení podoken akcí pomocí tlačítek na vlastní kartě
 
-1. V **Průzkumník řešení** otevřete místní nabídku pro *MyRibbon.cs* nebo *MyRibbon. vb* a pak zvolte **Zobrazit kód**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro *MyRibbon. cs* nebo *MyRibbon. vb* a pak zvolte **Zobrazit kód**.
 
 2. Do horní části třídy přidejte následující kód `MyRibbon` . Tento kód vytvoří dva objekty podokna akce.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#1)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb" id="Snippet1":::
 
 3. Nahraďte metodu `MyRibbon_Load` následujícím kódem. Tento kód přidá objekty podokna akce do <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> kolekce a skryje objekty ze zobrazení. Kód jazyka Visual C# také připojí delegáty k několika událostem ovládacího prvku pásu karet.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab#2](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#2)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#2](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb" id="Snippet2":::
 
 4. Do třídy přidejte následující tři metody obslužné rutiny události `MyRibbon` . Tyto metody zpracovávají <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> události dvou tlačítek a <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> události přepínacího tlačítka. Obslužné rutiny událostí pro Button1 a Button2 zobrazují podokna alternativních akcí. Obslužná rutina události pro toggleButton1 zobrazí a skryje podokno aktivní akce.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab#3](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#3)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#3](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb" id="Snippet3":::
 
 ## <a name="test-the-custom-tab"></a>Testování vlastní karty
  Při spuštění projektu se spustí aplikace Excel a na pásu karet se zobrazí karta **Moje vlastní karta** . Kliknutím na tlačítka na **vlastní kartě** zobrazíte a skryjete podokna akcí.

@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2dc5708da09074c7d973336958c9e89c16bf9da6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a85f46cf9c234ad662966372a8d014ae0f98be84
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927662"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826366"
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>Návod: komplexní datové vazby v projektech na úrovni dokumentu
   Tento názorný postup ukazuje základy komplexních datových vazeb v projektech na úrovni dokumentu. V systém Microsoft Officeovém listu aplikace Excel můžete navazovat více buněk na pole v databázi Northwind SQL Server.
@@ -117,16 +117,16 @@ ms.locfileid: "99927662"
 
 ### <a name="to-initialize-the-control"></a>Inicializace ovládacího prvku
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs** a pak klikněte na **Zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **List1. cs** a pak klikněte na **Zobrazit kód** v místní nabídce.
 
 2. Přidejte následující kód do `Sheet1_Startup` metody pro nastavení textu pro b `utton` .
 
-    [!code-csharp[Trin_VstcoreDataExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#8)]
-    [!code-vb[Trin_VstcoreDataExcel#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#8)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs" id="Snippet8":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb" id="Snippet8":::
 
 3. Pouze pro C# přidejte do metody obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Sheet1_Startup` .
 
-    [!code-csharp[Trin_VstcoreDataExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#9)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs" id="Snippet9":::
 
    Nyní přidejte kód pro zpracování <xref:System.Windows.Forms.Control.Click> události tlačítka.
 
@@ -137,8 +137,8 @@ ms.locfileid: "99927662"
 
 1. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `button` a přidejte následující kód pro potvrzení všech změn, které byly provedeny v datové sadě zpět do databáze.
 
-     [!code-csharp[Trin_VstcoreDataExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#10)]
-     [!code-vb[Trin_VstcoreDataExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb" id="Snippet10":::
 
 ## <a name="test-the-application"></a>Testování aplikace
  Nyní můžete testovat sešit a ověřit tak, že se data zobrazují podle očekávání a že můžete manipulovat s daty v objektu list.

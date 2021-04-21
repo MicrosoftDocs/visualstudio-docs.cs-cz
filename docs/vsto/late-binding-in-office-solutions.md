@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 455816b2e23a25ad5ef83c726b2a78e4245ed99a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e618dcd0cc699b4626f825890cf0fc8bd7ddd853
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927649"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107823883"
 ---
 # <a name="late-binding-in-office-solutions"></a>Pozdní vazba v řešeních pro systém Office
   Některé typy v objektových modelech aplikace Office poskytují funkce, které jsou k dispozici prostřednictvím funkcí s pozdní vazbou. Například některé metody a vlastnosti mohou vracet různé typy objektů v závislosti na kontextu aplikace sady Office a některé typy mohou vystavovat různé metody nebo vlastnosti v různých kontextech.
@@ -43,12 +43,12 @@ ms.locfileid: "99927649"
 ### <a name="examples"></a>Příklady
  Následující příklad kódu ukazuje, jak přetypovat objekt na konkrétní typ v Visual Basic projektu, kde **Option Strict** je zapnuto. V tomto typu projektu musíte explicitně přetypovat <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A> vlastnost na <xref:Microsoft.Office.Interop.Excel.Range> . Tento příklad vyžaduje excelový projekt na úrovni dokumentu s třídou listu s názvem `Sheet1` .
 
- [!code-vb[Trin_VstcoreProgramming#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#9)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb" id="Snippet9":::
 
  Následující příklad kódu ukazuje, jak implicitně přetypovat objekt na konkrétní typ v Visual Basic projektu, kde **Option Strict** je off nebo v projektu Visual C#, který cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . V těchto typech projektů <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A> je vlastnost implicitně převedena na <xref:Microsoft.Office.Interop.Excel.Range> . Tento příklad vyžaduje excelový projekt na úrovni dokumentu s třídou listu s názvem `Sheet1` .
 
- [!code-vb[Trin_VstcoreProgramming#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#10)]
- [!code-csharp[Trin_VstcoreProgramming#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#10)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb" id="Snippet10":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs" id="Snippet10":::
 
 ## <a name="access-members-that-are-available-only-through-late-binding"></a>Přístup ke členům, kteří jsou k dispozici pouze prostřednictvím pozdní vazby
  Některé vlastnosti a metody v Office PIA jsou k dispozici pouze prostřednictvím pozdní vazby. V Visual Basic projekty, kde **Option Strict** je vypnuto nebo v projektech Visual C#, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] , můžete použít funkce pozdní vazby v těchto jazycích pro přístup k členům s pozdní vazbou. V Visual Basic projekty, kde je **možnost Option Strict** zapnuta, je nutné k přístupu k těmto členům použít reflexi.
@@ -56,12 +56,12 @@ ms.locfileid: "99927649"
 ### <a name="examples"></a>Příklady
  Následující příklad kódu ukazuje, jak získat přístup k členům s pozdní vazbou v Visual Basic projektu, kde **Option Strict** je off nebo v projektu Visual C#, který cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . Tento příklad přistupuje k vlastnosti **název** s pozdní vazbou dialogového okna **otevřít** v aplikaci Word. Chcete-li použít tento příklad, spusťte jej `ThisDocument` z `ThisAddIn` třídy nebo ve wordovém projektu.
 
- [!code-vb[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#122)]
- [!code-csharp[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#122)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet122":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet122":::
 
  Následující příklad kódu ukazuje, jak použít reflexi k provedení stejné úlohy v Visual Basic projektu, kde **Option Strict** je zapnuto.
 
- [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet102":::
 
 ## <a name="see-also"></a>Viz také
 - [Psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md)

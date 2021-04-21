@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4bd636070a8375b6761cb2d3ab62d08be4302db4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7f78ca406d19461de7fa8e2a8c147b1003c9c852
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937495"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826964"
 ---
 # <a name="walkthrough-create-a-template-by-using-content-controls"></a>Návod: Vytvoření šablony s použitím ovládacích prvků obsahu
   Tento návod ukazuje, jak vytvořit přizpůsobení na úrovni dokumentu, které používá ovládací prvky obsahu k vytvoření strukturovaného a opakovaně použitelného obsahu v šabloně systém Microsoft Office Wordu.
@@ -139,17 +139,17 @@ ms.locfileid: "99937495"
 
 ### <a name="to-modify-the-ui-of-the-content-controls-programmatically"></a>Postup úpravy uživatelského rozhraní ovládacích prvků obsahu prostřednictvím kódu programu
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **ThisDocument.cs** nebo **ThisDocument. vb** a pak klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **ThisDocument. cs** nebo **ThisDocument. vb** a pak klikněte na **Zobrazit kód**.
 
 2. Do třídy `ThisDocument` přidejte následující kód. Tento kód deklaruje několik objektů, které použijete později v tomto návodu.
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#1](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#1)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#1](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet1":::
 
 3. Do metody třídy přidejte následující kód `ThisDocument_Startup` `ThisDocument` . Tento kód přidá položky do <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> a <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> v tabulkách a nastaví zástupný text, který se zobrazí v každém z těchto ovládacích prvků předtím, než ho uživatel upraví.
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#2](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#2)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#2](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet2":::
 
 ## <a name="prevent-users-from-editing-the-employee-table"></a>Zabránit uživatelům v úpravách tabulky zaměstnanců
  Použijte <xref:Microsoft.Office.Tools.Word.GroupContentControl> objekt, který jste předtím deklarovali k ochraně tabulky zaměstnanců. Po ochraně tabulky mohou uživatelé i nadále upravovat ovládací prvky obsahu v tabulce. Nemůžou ale upravovat text v prvním sloupci ani upravovat tabulku jinými způsoby, jako je přidání nebo odstranění řádků a sloupců. Další informace o tom, jak použít <xref:Microsoft.Office.Tools.Word.GroupContentControl> k ochraně části dokumentu, najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).
@@ -158,8 +158,8 @@ ms.locfileid: "99937495"
 
 1. Do metody třídy přidejte následující kód `ThisDocument_Startup` `ThisDocument` po kódu, který jste přidali v předchozím kroku. Tento kód zabrání uživatelům v úpravách tabulky Employees vložením tabulky do <xref:Microsoft.Office.Tools.Word.GroupContentControl> objektu, který jste předtím deklarovali.
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#3](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#3)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#3](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#3)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet3":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet3":::
 
 ## <a name="add-the-tables-to-the-building-block-collection"></a>Přidání tabulek do kolekce stavebních bloků
  Přidejte tabulky do kolekce stavebních bloků dokumentů v šabloně, aby uživatelé mohli vkládat tabulky, které jste vytvořili do dokumentu. Další informace o stavebních blocích dokumentu naleznete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).
@@ -168,13 +168,13 @@ ms.locfileid: "99937495"
 
 1. Do metody třídy přidejte následující kód `ThisDocument_Startup` `ThisDocument` po kódu, který jste přidali v předchozím kroku. Tento kód přidá nové stavební bloky, které obsahují tabulky, do kolekce Microsoft. Office. Interop. Word. BuildingBlockEntries, která obsahuje všechny opakovaně použitelné stavební bloky v šabloně. Nové stavební bloky jsou definovány v nové kategorii s názvem **informace o zaměstnancích a zákaznících** a mají přiřazený typ stavebního bloku `Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustom1` .
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#4](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#4)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#4](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#4)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet4":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet4":::
 
 2. Do metody třídy přidejte následující kód `ThisDocument_Startup` `ThisDocument` po kódu, který jste přidali v předchozím kroku. Tento kód odstraní tabulky ze šablony. Tabulky již nejsou nutné, protože jste je přidali do galerie opakovaně použitelných stavebních bloků v šabloně. Kód nejprve vloží dokument do režimu návrhu, aby bylo možné odstranit chráněnou tabulku zaměstnanců.
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#5](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#5)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#5](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#5)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet5":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet5":::
 
 ## <a name="create-a-content-control-that-displays-the-building-blocks"></a>Vytvoření ovládacího prvku obsahu, který zobrazuje stavební bloky
  Vytvořte ovládací prvek obsahu, který poskytuje přístup k stavebním blokům (tj. k tabulkám), které jste vytvořili dříve. Uživatelé mohou kliknutím na tento ovládací prvek přidat tabulky do dokumentu.
@@ -183,8 +183,8 @@ ms.locfileid: "99937495"
 
 1. Do metody třídy přidejte následující kód `ThisDocument_Startup` `ThisDocument` po kódu, který jste přidali v předchozím kroku. Tento kód inicializuje <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> objekt, který jste deklarovali dříve. <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl>Zobrazuje všechny stavební bloky, které jsou definovány v kategorii **zaměstnanci a informace o zákaznících** a které mají typ stavebního bloku `Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustom1` .
 
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#6](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#6)]
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#6](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#6)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet6":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet6":::
 
 ## <a name="test-the-project"></a>Testování projektu
  Uživatelé můžou kliknout na ovládací prvky Galerie stavebních bloků v dokumentu a vložit tabulku zaměstnanců nebo tabulku zpětné vazby od zákazníka. Uživatelé mohou zadat nebo vybrat odpovědi v ovládacích prvcích obsahu v obou tabulkách. Uživatelé můžou upravovat ostatní části tabulky zpětné vazby od zákazníků, ale neměly by být schopné upravovat ostatní části tabulky zaměstnanců.

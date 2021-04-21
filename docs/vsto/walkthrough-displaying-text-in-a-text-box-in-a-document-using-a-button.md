@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0efea386da2bec0136a8a5399a04b9ce8cabf5c7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 716d0ed0b203d55932fef4d6e3e22eabf1137ded
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942097"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824195"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-document-using-a-button"></a>Návod: zobrazení textu v textovém poli v dokumentu s použitím tlačítka
   Tento návod ukazuje, jak používat tlačítka a textová pole v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word.
@@ -86,12 +86,12 @@ ms.locfileid: "99942097"
 
 2. Přidejte následující kód do <xref:System.Windows.Forms.Control.Click> obslužné rutiny události tlačítka.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#7](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#7)]
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#7)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb" id="Snippet7":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet7":::
 
 3. V jazyce C# je nutné přidat obslužnou rutinu události pro tlačítko do <xref:Microsoft.Office.Tools.Word.Document.Startup> události. Informace o vytváření obslužných rutin událostí najdete v tématu [Postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#8](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#8)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet8":::
 
 ## <a name="test-the-application"></a>Testování aplikace
  Nyní můžete dokument otestovat, abyste se ujistili, že zpráva **Hello World!** se zobrazí v textovém poli po kliknutí na tlačítko.

@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f5f0fba5169be71718993fbc271faf64fdac9fb1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e03f189f2236131308b8f9ea5d90c52ffa3147d
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918490"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825820"
 ---
 # <a name="how-to-programmatically-add-comments-to-text-in-documents"></a>Postupy: přidávání komentářů k textu v dokumentech prostřednictvím kódu programu
   Vlastnost Comments třídy Document přidá komentář k oblasti textu v dokumentu aplikace systém Microsoft Office Word.
@@ -34,8 +34,8 @@ ms.locfileid: "99918490"
 
 1. Zavolejte <xref:Microsoft.Office.Interop.Word.Comments.Add%2A> metodu <xref:Microsoft.Office.Tools.Word.Document.Comments%2A> vlastnosti a zadejte rozsah a text komentáře. Chcete-li použít následující příklad kódu, spusťte jej z `ThisDocument` třídy v projektu.
 
-     [!code-vb[Trin_VstcoreWordAutomation#118](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#118)]
-     [!code-csharp[Trin_VstcoreWordAutomation#118](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#118)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet118":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet118":::
 
 ## <a name="to-add-a-new-comment-to-text-in-a-vsto-add-in"></a>Přidání nového komentáře k textu v doplňku VSTO
 
@@ -43,8 +43,8 @@ ms.locfileid: "99918490"
 
      Následující příklad kódu přidá komentář k aktivnímu dokumentu. Chcete-li použít tento příklad, spusťte jej z `ThisAddIn` třídy v projektu.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#118](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#118)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#118](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#118)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet118":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet118":::
 
 ## <a name="robust-programming"></a>Robustní programování
  Chcete-li změnit iniciály uživatele, které Word přičítá k komentářům, použijte <xref:Microsoft.Office.Interop.Word._Application.UserInitials%2A> vlastnost.

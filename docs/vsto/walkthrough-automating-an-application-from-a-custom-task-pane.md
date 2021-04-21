@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ed0d2ae6bf66e8f7375bde72aaec085463b9ca18
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f57ad0c858abb5f151e1b425224b5af34d464c0f
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906615"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824663"
 ---
 # <a name="walkthrough-automate-an-application-from-a-custom-task-pane"></a>Návod: automatizace aplikace z vlastního podokna úloh
   Tento návod ukazuje, jak vytvořit vlastní podokno úloh, které automatizuje PowerPoint. Vlastní podokno úloh vloží data do snímku, když uživatel klikne <xref:System.Windows.Forms.MonthCalendar> na ovládací prvek, který se nachází v podokně vlastní úlohy.
@@ -59,7 +59,7 @@ ms.locfileid: "99906615"
 
 1. Pomocí šablony projektu doplňku aplikace PowerPoint vytvořte projekt doplňku VSTO pro PowerPoint s názvem **MyAddIn**. Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře soubor kódu **ThisAddIn.cs** nebo **ThisAddIn. vb** a přidá projekt **MyAddIn** do **Průzkumník řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře soubor kódu **ThisAddIn. cs** nebo **ThisAddIn. vb** a přidá projekt **MyAddIn** do **Průzkumník řešení**.
 
 ## <a name="design-the-user-interface-of-the-custom-task-pane"></a>Návrh uživatelského rozhraní vlastního podokna úloh
  Neexistuje žádný vizuální Návrhář pro vlastní podokna úloh, ale můžete navrhnout uživatelský ovládací prvek s požadovaným rozložením. Později v tomto návodu přidáte uživatelský ovládací prvek do vlastního podokna úloh.
@@ -83,22 +83,22 @@ ms.locfileid: "99906615"
 
 1. V Návrháři dvakrát klikněte na <xref:System.Windows.Forms.MonthCalendar> ovládací prvek.
 
-     Otevře se soubor **MyUserControl.cs** nebo **MyUserControl. vb** a vytvoří se obslužná rutina události pro <xref:System.Windows.Forms.MonthCalendar.DateChanged> událost.
+     Otevře se soubor **MyUserControl. cs** nebo **MyUserControl. vb** a vytvoří se obslužná rutina události pro <xref:System.Windows.Forms.MonthCalendar.DateChanged> událost.
 
 2. Na začátek souboru přidejte následující kód. Tento kód vytvoří aliasy pro <xref:Microsoft.Office.Core> obory názvů [aplikace a PowerPoint](/previous-versions/office/developer/office-2010/ff763170%28v%3doffice.14%29) .
 
-     [!code-csharp[Trin_TaskPaneMonthCalendar#1](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs#1)]
-     [!code-vb[Trin_TaskPaneMonthCalendar#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb" id="Snippet1":::
 
 3. Do třídy `MyUserControl` přidejte následující kód. Tento kód deklaruje objekt [Shape](/previous-versions/office/developer/office-2010/ff760244(v=office.14)) jako člena `MyUserControl` . V následujícím kroku použijete tento [obrazec](/previous-versions/office/developer/office-2010/ff760244(v=office.14)) k přidání textového pole do snímku v aktivní prezentaci.
 
-     [!code-csharp[Trin_TaskPaneMonthCalendar#2](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs#2)]
-     [!code-vb[Trin_TaskPaneMonthCalendar#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb" id="Snippet2":::
 
 4. Proměnnou `monthCalendar1_DateChanged` obslužné rutiny události nahraďte následujícím kódem. Tento kód přidá do prvního snímku v aktivní prezentaci textové pole a pak do textového pole přidá aktuálně vybrané datum. Tento kód používá `Globals.ThisAddIn` objekt pro přístup k objektovému modelu aplikace PowerPoint.
 
-     [!code-csharp[Trin_TaskPaneMonthCalendar#3](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs#3)]
-     [!code-vb[Trin_TaskPaneMonthCalendar#3](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb" id="Snippet3":::
 
 5. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt **MyAddIn** a pak klikněte na **sestavit**. Ověřte, že se projekt vytváří bez chyb.
 
@@ -109,17 +109,17 @@ ms.locfileid: "99906615"
 
 1. V **Průzkumník řešení** rozbalte možnost **PowerPoint**.
 
-2. Klikněte pravým tlačítkem na **ThisAddIn.cs** nebo **ThisAddIn. vb** a klikněte na **Zobrazit kód**.
+2. Klikněte pravým tlačítkem na **ThisAddIn. cs** nebo **ThisAddIn. vb** a klikněte na **Zobrazit kód**.
 
 3. Do třídy `ThisAddIn` přidejte následující kód. Tento kód deklaruje instance `MyUserControl` a <xref:Microsoft.Office.Tools.CustomTaskPane> jako členy `ThisAddIn` třídy.
 
-     [!code-vb[Trin_TaskPaneMonthCalendar#4](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/ThisAddIn.vb#4)]
-     [!code-csharp[Trin_TaskPaneMonthCalendar#4](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/ThisAddIn.cs#4)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/ThisAddIn.vb" id="Snippet4":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/ThisAddIn.cs" id="Snippet4":::
 
 4. Proměnnou `ThisAddIn_Startup` obslužné rutiny události nahraďte následujícím kódem. Tento kód vytvoří nový <xref:Microsoft.Office.Tools.CustomTaskPane> přidáním `MyUserControl` objektu do `CustomTaskPanes` kolekce. Kód také zobrazí podokno úloh.
 
-     [!code-vb[Trin_TaskPaneMonthCalendar#5](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/ThisAddIn.vb#5)]
-     [!code-csharp[Trin_TaskPaneMonthCalendar#5](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/ThisAddIn.cs#5)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/ThisAddIn.vb" id="Snippet5":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/ThisAddIn.cs" id="Snippet5":::
 
 ## <a name="test-the-add-in"></a>Test doplňku
  Při spuštění projektu se otevře PowerPoint a v doplňku VSTO se zobrazí vlastní podokno úloh. Klikněte na <xref:System.Windows.Forms.MonthCalendar> ovládací prvek pro otestování kódu.

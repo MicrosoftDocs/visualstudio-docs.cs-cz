@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f35649db5f61cb545bb3550980b3d6b9a8742cd3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 48d7baf9605947818ffd79eb7312c0dbefe581ac
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966497"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824260"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-project"></a>Návod: vytvoření prvního doplňku VSTO pro projekt
   V tomto návodu se dozvíte, jak vytvořit doplněk VSTO pro systém Microsoft Office projekt. Funkce, které vytvoříte v tomto druhu řešení, jsou k dispozici pro samotnou aplikaci, bez ohledu na to, které projekty jsou otevřené. Další informace najdete v tématu [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -81,8 +81,8 @@ ms.locfileid: "99966497"
 
     Když uživatel vytvoří nový projekt, tato obslužná rutina události přidá úkol do projektu.
 
-    [!code-vb[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb#1)]
-    [!code-csharp[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#1)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb" id="Snippet1":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs" id="Snippet1":::
 
    Chcete-li upravit projekt, tento příklad kódu používá následující objekty:
 
@@ -92,7 +92,7 @@ ms.locfileid: "99966497"
 
 1. Pokud používáte jazyk C#, přidejte následující kód do `ThisAddIn_Startup` obslužné rutiny události. Tento kód připojí `Application_Newproject` obslužnou rutinu události k události NewProject.
 
-     [!code-csharp[Trin_ProjectAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs" id="Snippet2":::
 
 ## <a name="test-the-project"></a>Testování projektu
  Při sestavování a spouštění projektu ověřte, zda se nový úkol zobrazí ve výsledném novém projektu.

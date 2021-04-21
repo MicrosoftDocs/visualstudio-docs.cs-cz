@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 05587b067fb5e8365433049c7da7fd3d5949a831
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9f0b479c56be6da7b14f87263c8c01d66910ac20
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963845"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827105"
 ---
 # <a name="how-to-programmatically-protect-workbooks"></a>Postupy: Ochrana sešitů prostřednictvím kódu programu
   Systém Microsoft Office excelový sešit můžete chránit tak, aby uživatelé nemohli přidávat ani odstraňovat listy a zároveň Odemknout sešit prostřednictvím kódu programu. Volitelně můžete zadat heslo, určit, jestli chcete strukturu chránit (takže uživatelé nemohou přesunout listy kolem) a určit, jestli chcete, aby byl sešit chráněný.
@@ -41,15 +41,15 @@ ms.locfileid: "99963845"
 
 1. Zavolejte <xref:Microsoft.Office.Tools.Excel.Workbook.Protect%2A> metodu sešitu a zahrňte heslo. Chcete-li použít následující příklad kódu, spusťte jej ve `ThisWorkbook` třídě, nikoli v tabulce typu.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#10](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#10)]
-     [!code-vb[Trin_VstcoreExcelAutomation#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb" id="Snippet10":::
 
 ### <a name="to-unprotect-a-workbook"></a>Odemknutí sešitu
 
 1. Zavolejte <xref:Microsoft.Office.Tools.Excel.Workbook.Unprotect%2A> metodu a předejte heslo, pokud je požadováno. Chcete-li použít následující příklad kódu, spusťte jej ve `ThisWorkbook` třídě, nikoli v tabulce typu.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#11](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#11)]
-     [!code-vb[Trin_VstcoreExcelAutomation#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb" id="Snippet11":::
 
 ## <a name="protect-a-workbook-by-using-an-application-level-add-in"></a>Ochrana sešitu pomocí doplňku na úrovni aplikace
 
@@ -57,15 +57,15 @@ ms.locfileid: "99963845"
 
 1. Zavolejte <xref:Microsoft.Office.Interop.Excel._Workbook.Protect%2A> metodu sešitu a zahrňte heslo. Tento příklad kódu používá aktivní sešit. Chcete-li použít tento příklad, spusťte kód z `ThisAddIn` třídy v projektu.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#6](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#6)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#6](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet6":::
 
 ### <a name="to-unprotect-a-workbook"></a>Odemknutí sešitu
 
 1. Zavolejte <xref:Microsoft.Office.Interop.Excel._Workbook.Unprotect%2A> metodu aktivního sešitu a předejte heslo, pokud je potřeba. Chcete-li použít tento příklad, spusťte kód z `ThisAddIn` třídy v projektu.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#7](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#7)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#7](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#7)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet7":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet7":::
 
 ## <a name="see-also"></a>Viz také
 - [Práce se sešity](../vsto/working-with-workbooks.md)

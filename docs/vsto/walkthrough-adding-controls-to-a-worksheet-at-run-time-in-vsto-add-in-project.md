@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bc6c608d406cabe6962a47dae4c86fa7503a05a1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 178180e8c698ca56b15e46bcbe65877d68c6b2a1
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921792"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824676"
 ---
 # <a name="walkthrough-add-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>Návod: Přidání ovládacích prvků na list v době běhu v projektu doplňku VSTO
   Pomocí doplňku pro Excel VSTO můžete přidat ovládací prvky do libovolného otevřeného listu. Tento návod ukazuje, jak použít pás karet k tomu, aby uživatelé mohli do <xref:Microsoft.Office.Tools.Excel.Controls.Button> listu přidat, a <xref:Microsoft.Office.Tools.Excel.NamedRange> a <xref:Microsoft.Office.Tools.Excel.ListObject> . Informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
@@ -65,7 +65,7 @@ ms.locfileid: "99921792"
 
 2. V dialogovém okně **Přidat novou položku** vyberte možnost **pás karet (vizuální Návrhář)** a pak klikněte na tlačítko **Přidat**.
 
-     Soubor s názvem **Ribbon1.cs** nebo **Ribbon1. vb** se otevře v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
+     Soubor s názvem **Ribbon1. cs** nebo **Ribbon1. vb** se otevře v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
 
 3. Na kartě **ovládací prvky pásu karet Office** na **panelu nástrojů** přetáhněte ovládací prvek CheckBox na **Group1**.
 
@@ -105,10 +105,10 @@ ms.locfileid: "99921792"
 
      Tento kód používá `GetVstoObject` metodu k získání položky hostitele, která představuje první list v sešitu, a následně přidá <xref:Microsoft.Office.Tools.Excel.Controls.Button> ovládací prvek do aktuálně vybrané buňky.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#2)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet2":::
 
-3. V **Průzkumník řešení** vyberte *Ribbon1.cs* nebo *Ribbon1. vb*.
+3. V **Průzkumník řešení** vyberte *Ribbon1. cs* nebo *Ribbon1. vb*.
 
 4. V nabídce **zobrazení** klikněte na možnost **Návrhář**.
 
@@ -118,8 +118,8 @@ ms.locfileid: "99921792"
 
      Tento kód používá `GetVstoObject` metodu k získání položky hostitele, která představuje první list v sešitu, a definuje <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek pro aktuálně vybranou buňku nebo buňky.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#3](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#3)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#3](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet3":::
 
 7. V Návrháři pásu karet poklikejte na **ListObject**.
 
@@ -127,31 +127,31 @@ ms.locfileid: "99921792"
 
      Tento kód používá `GetVstoObject` metodu k získání položky hostitele, která představuje první list v sešitu, a definuje <xref:Microsoft.Office.Tools.Excel.ListObject> pro aktuálně vybranou buňku nebo buňky.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#4](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#4)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#4](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet4":::
 
 9. Přidejte následující příkazy do horní části souboru kódu pásu karet.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#1](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#1)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#1](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet1":::
 
 ## <a name="remove-controls-from-the-worksheet"></a>Odebrat ovládací prvky z listu
  Ovládací prvky nejsou trvalé při uložení a zavření listu. Před uložením listu byste měli programově odebrat všechny vygenerované model Windows Forms ovládací prvky, nebo se po opětovném otevření sešitu zobrazí jenom obrys ovládacího prvku. Přidejte kód k <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> události, která odebere model Windows Forms ovládací prvky z kolekce Controls vygenerované položky hostitele. Další informace najdete v tématu [trvalé dynamické ovládací prvky v dokumentech Office](../vsto/persisting-dynamic-controls-in-office-documents.md).
 
 ### <a name="to-remove-controls-from-the-worksheet"></a>Odebrání ovládacích prvků z listu
 
-1. V **Průzkumník řešení** vyberte *ThisAddIn.cs* nebo *ThisAddIn. vb*.
+1. V **Průzkumník řešení** vyberte *ThisAddIn. cs* nebo *ThisAddIn. vb*.
 
 2. V nabídce **zobrazení** klikněte na příkaz **Code (kód**).
 
 3. Do třídy přidejte následující metodu `ThisAddIn` . Tento kód získá první list v sešitu a potom použije `HasVstoObject` metodu ke kontrole, zda má list vygenerovaný objekt list. Pokud objekt vygenerovaného listu obsahuje ovládací prvky, kód získá tento objekt list a provede iteraci v kolekci ovládacích prvků a odebere ovládací prvky.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#6)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb" id="Snippet6":::
 
 4. V jazyce C# je nutné vytvořit obslužnou rutinu události pro <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> událost. Tento kód můžete umístit do `ThisAddIn_Startup` metody. Další informace o vytváření obslužných rutin událostí najdete v tématu [Postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md). Nahraďte metodu `ThisAddIn_Startup` následujícím kódem.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#5](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs" id="Snippet5":::
 
 ## <a name="test-the-solution"></a>Testování řešení
  Ovládací prvky můžete do listu přidat tak, že je vyberete z vlastní karty na pásu karet. Když list uložíte, tyto ovládací prvky se odeberou.

@@ -25,12 +25,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9ac8c4ef96a421ece6c0591d4340d570d71c08e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e7fe64d2df3298d53f567d11fe765280843e2ce
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846280"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826782"
 ---
 # <a name="walkthrough-synchronize-a-custom-task-pane-with-a-ribbon-button"></a>Návod: Synchronizace vlastního podokna úloh s tlačítkem na pásu karet
   Tento návod ukazuje, jak vytvořit vlastní podokno úloh, které mohou uživatelé skrýt nebo zobrazit kliknutím na přepínací tlačítko na pásu karet. Vždy byste měli vytvořit prvek uživatelského rozhraní (UI), například tlačítko, které mohou uživatelé kliknout k zobrazení nebo skrytí vlastního podokna úloh, protože systém Microsoft Office aplikace neposkytují uživatelům výchozí způsob, jak zobrazit nebo skrýt vlastní podokna úloh.
@@ -64,7 +64,7 @@ ms.locfileid: "99846280"
 
 1. Pomocí šablony projektu doplňku aplikace Excel vytvořte projekt doplňku aplikace Excel s názvem **SynchronizeTaskPaneAndRibbon**. Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře soubor kódu **ThisAddIn.cs** nebo **ThisAddIn. vb** a přidá projekt **SynchronizeTaskPaneAndRibbon** do **Průzkumník řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře soubor kódu **ThisAddIn. cs** nebo **ThisAddIn. vb** a přidá projekt **SynchronizeTaskPaneAndRibbon** do **Průzkumník řešení**.
 
 ## <a name="add-a-toggle-button-to-the-ribbon"></a>Přidání přepínacího tlačítka na pás karet
  Jedním z pokynů pro návrh aplikací pro Office je, že uživatelé by měli mít vždycky kontrolu nad uživatelským rozhraním aplikace Office. Chcete-li uživatelům povolit řízení vlastního podokna úloh, můžete přidat přepínací tlačítko pásu karet, které zobrazí a skryje podokno úloh. Chcete-li vytvořit přepínací tlačítko, přidejte položku **pás karet (vizuální Návrhář)** do projektu. Návrhář pomáhá přidat a umístit ovládací prvky, nastavit vlastnosti ovládacího prvku a zpracovat události ovládacího prvku. Další informace najdete v tématu [Návrhář pásu karet](../vsto/ribbon-designer.md).
@@ -77,7 +77,7 @@ ms.locfileid: "99846280"
 
 3. Změňte název nového pásu karet na **ManageTaskPaneRibbon** a klikněte na **Přidat**.
 
-     Otevře se soubor **ManageTaskPaneRibbon.cs** nebo **ManageTaskPaneRibbon. vb** v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
+     Otevře se soubor **ManageTaskPaneRibbon. cs** nebo **ManageTaskPaneRibbon. vb** v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.
 
 4. V Návrháři pásu karet klikněte na **Group1**.
 
@@ -109,27 +109,27 @@ ms.locfileid: "99846280"
 
 1. V **Průzkumník řešení** rozbalte položku **Excel**.
 
-2. Klikněte pravým tlačítkem na **ThisAddIn.cs** nebo **ThisAddIn. vb** a klikněte na **Zobrazit kód**.
+2. Klikněte pravým tlačítkem na **ThisAddIn. cs** nebo **ThisAddIn. vb** a klikněte na **Zobrazit kód**.
 
 3. Do třídy `ThisAddIn` přidejte následující kód. Tento kód deklaruje instanci `TaskPaneControl` jako člena `ThisAddIn` .
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#1](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#1)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet1":::
 
 4. Proměnnou `ThisAddIn_Startup` obslužné rutiny události nahraďte následujícím kódem. Tento kód přidá `TaskPaneControl` objekt do `CustomTaskPanes` pole, ale nezobrazuje vlastní podokno úloh (ve výchozím nastavení <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A> <xref:Microsoft.Office.Tools.CustomTaskPane> je vlastnost třídy **nepravdivá**). Kód jazyka Visual C# také připojí obslužnou rutinu události k <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> události.
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#2](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#2)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet2":::
 
 5. Do třídy přidejte následující metodu `ThisAddIn` . Tato metoda zpracovává <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> událost. Když uživatel zavře podokno úloh kliknutím na tlačítko **Zavřít** (X), tato metoda aktualizuje stav přepínacího tlačítka na pásu karet.
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#3](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#3)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#3](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet3":::
 
 6. Přidejte do třídy následující vlastnost `ThisAddIn` . Tato vlastnost zveřejňuje privátní `myCustomTaskPane1` objekt pro jiné třídy. Později v tomto návodu přidáte kód do `MyRibbon` třídy, která tuto vlastnost používá.
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#4](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#4)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#4](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet4":::
 
 ## <a name="hide-and-show-the-custom-task-pane-by-using-the-toggle-button"></a>Skrytí a zobrazení vlastního podokna úloh pomocí přepínacího tlačítka
  Posledním krokem je přidání kódu, který zobrazí nebo skryje vlastní podokno úloh, když uživatel klikne na přepínací tlačítko na pásu karet.
@@ -138,12 +138,12 @@ ms.locfileid: "99846280"
 
 1. V Návrháři pásu karet poklikejte na přepínací tlačítko **podokna zobrazit podokno úloh** .
 
-     Visual Studio automaticky vygeneruje obslužnou rutinu události s názvem `toggleButton1_Click` , která zpracovává <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> událost přepínacího tlačítka. Visual Studio také otevře soubor *MyRibbon.cs* nebo *MyRibbon. vb* v editoru kódu.
+     Visual Studio automaticky vygeneruje obslužnou rutinu události s názvem `toggleButton1_Click` , která zpracovává <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> událost přepínacího tlačítka. Visual Studio také otevře soubor *MyRibbon. cs* nebo *MyRibbon. vb* v editoru kódu.
 
 2. Proměnnou `toggleButton1_Click` obslužné rutiny události nahraďte následujícím kódem. Když uživatel klikne na přepínací tlačítko, tento kód zobrazí nebo skryje vlastní podokno úloh v závislosti na tom, zda je přepínací tlačítko stisknuté nebo nestisknuté.
 
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#5](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.vb#5)]
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#5](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.cs#5)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.vb" id="Snippet5":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.cs" id="Snippet5":::
 
 ## <a name="test-the-add-in"></a>Test doplňku
  Při spuštění projektu se aplikace Excel otevře bez zobrazení vlastního podokna úloh. Kliknutím na tlačítko přepínacího tlačítka na pásu karet otestujete kód.

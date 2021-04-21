@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8e5e3d58ac858afe905aae38c84e6403b43fb789
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6e4a10949f463cc769890b828ba39de30a9b4c1c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906626"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824572"
 ---
 # <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>Návod: Svázání ovládacích prvků obsahu s vlastními částmi XML
   Tento návod ukazuje, jak navazovat ovládací prvky obsahu v přizpůsobení na úrovni dokumentu pro Word na data XML, která jsou uložená v dokumentu.
@@ -227,24 +227,24 @@ ms.locfileid: "99906626"
 
 ### <a name="to-add-a-custom-xml-part-to-the-document"></a>Přidání vlastní části XML do dokumentu
 
-1. V **Průzkumník řešení** otevřete místní nabídku pro  **ThisDocument.cs** nebo **ThisDocument. vb** a pak zvolte **Zobrazit kód**.
+1. V **Průzkumník řešení** otevřete místní nabídku pro  **ThisDocument. cs** nebo **ThisDocument. vb** a pak zvolte **Zobrazit kód**.
 
 2. Do třídy přidejte následující deklarace `ThisDocument` . Tento kód deklaruje několik objektů, které použijete k přidání vlastní části XML do dokumentu.
 
-     [!code-csharp[Trin_ContentControlXmlPartWalkthrough#1](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#1)]
-     [!code-vb[Trin_ContentControlXmlPartWalkthrough#1](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb" id="Snippet1":::
 
 3. Do třídy přidejte následující metodu `ThisDocument` . Tato metoda načte obsah datového souboru XML, který je vložen jako prostředek v sestavení, a vrátí obsah jako řetězec XML.
 
-     [!code-csharp[Trin_ContentControlXmlPartWalkthrough#3](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#3)]
-     [!code-vb[Trin_ContentControlXmlPartWalkthrough#3](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb" id="Snippet3":::
 
 4. Do třídy přidejte následující metodu `ThisDocument` . `AddCustomXmlPart`Metoda vytvoří novou vlastní část XML, která obsahuje řetězec XML, který je předán metodě.
 
      Aby bylo zajištěno, že je vlastní část XML vytvořena pouze jednou, metoda vytvoří vlastní část XML pouze v případě, že v dokumentu již neexistuje vlastní část XML se shodným identifikátorem GUID. Při prvním volání této metody uloží hodnotu <xref:Microsoft.Office.Core._CustomXMLPart.Id%2A> vlastnosti do `employeeXMLPartID` řetězce. Hodnota `employeeXMLPartID` řetězce je uchována v dokumentu, protože byla deklarována pomocí <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> atributu.
 
-     [!code-csharp[Trin_ContentControlXmlPartWalkthrough#4](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#4)]
-     [!code-vb[Trin_ContentControlXmlPartWalkthrough#4](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb" id="Snippet4":::
 
 ## <a name="bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>Svázání ovládacích prvků obsahu s prvky ve vlastní části XML
  Navažte každý ovládací prvek obsahu na prvek ve vlastní části XML pomocí vlastnosti **XmlMapping** každého ovládacího prvku obsahu.
@@ -253,8 +253,8 @@ ms.locfileid: "99906626"
 
 1. Do třídy přidejte následující metodu `ThisDocument` . Tato metoda váže každý ovládací prvek obsahu k elementu ve vlastní části XML a nastaví formát zobrazení data <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> .
 
-     [!code-csharp[Trin_ContentControlXmlPartWalkthrough#5](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#5)]
-     [!code-vb[Trin_ContentControlXmlPartWalkthrough#5](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb" id="Snippet5":::
 
 ## <a name="run-your-code-when-the-document-is-opened"></a>Spustit kód při otevření dokumentu
  Vytvořte vlastní část XML a navažte vlastní ovládací prvky na data při otevření dokumentu.
@@ -263,8 +263,8 @@ ms.locfileid: "99906626"
 
 1. Do metody třídy přidejte následující kód `ThisDocument_Startup` `ThisDocument` . Tento kód Získá řetězec XML ze souboru **employees.xml** , přidá řetězec XML do nové vlastní části XML v dokumentu a váže ovládací prvky obsahu k prvkům ve vlastní části XML.
 
-     [!code-csharp[Trin_ContentControlXmlPartWalkthrough#2](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#2)]
-     [!code-vb[Trin_ContentControlXmlPartWalkthrough#2](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb" id="Snippet2":::
 
 ## <a name="test-the-project"></a>Testování projektu
  Když otevřete dokument, ovládací prvky obsahu zobrazí data z prvků ve vlastní části XML. Kliknutím na můžete <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> vybrat jednu ze tří platných hodnot `title` prvku, které jsou definovány v souboru **Employees. xsd** . Pokud data upravíte v některém z ovládacích prvků obsahu, budou nové hodnoty uloženy do vlastní části XML v dokumentu.

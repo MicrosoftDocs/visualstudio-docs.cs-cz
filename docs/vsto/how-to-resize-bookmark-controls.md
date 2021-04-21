@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 55fe398b277586404c91ef7cb172f7ce3a9c98ff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b2b2bd963b2f0b4eb574630382930eb0805909be
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927844"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825781"
 ---
 # <a name="how-to-resize-bookmark-controls"></a>Postupy: Změna velikosti ovládacích prvků záložek
   Velikost <xref:Microsoft.Office.Tools.Word.Bookmark> ovládacího prvku se nastavuje při jeho přidání do systém Microsoft Office wordového dokumentu. Později můžete změnit její velikost.
@@ -61,13 +61,13 @@ ms.locfileid: "99927844"
 
      Následující příklad kódu přidá pět znaků na začátek záložky s názvem `SampleBookmark` . Tento kód předpokládá, že před záložkou je k dispozici alespoň pět znaků textu.
 
-     [!code-csharp[Trin_VstcoreHostControlsWord#2](../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs#2)]
-     [!code-vb[Trin_VstcoreHostControlsWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb" id="Snippet2":::
 
      Následující příklad kódu přidá pět znaků na konec stejné záložky. Tento kód předpokládá, že po záložce je k dispozici alespoň pět znaků textu.
 
-     [!code-csharp[Trin_VstcoreHostControlsWord#3](../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs#3)]
-     [!code-vb[Trin_VstcoreHostControlsWord#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb" id="Snippet3":::
 
 ### <a name="to-resize-a-bookmark-in-a-vsto-add-in-project-at-run-time"></a>Změna velikosti záložky v projektu doplňku VSTO za běhu
 
@@ -75,8 +75,8 @@ ms.locfileid: "99927844"
 
      Následující příklad kódu vytvoří objekt <xref:Microsoft.Office.Tools.Word.Bookmark> , který obsahuje text v prvním odstavci aktivního dokumentu a pak odebere pět znaků od začátku a konce <xref:Microsoft.Office.Tools.Word.Bookmark> .
 
-     [!code-vb[Trin_WordAddInDynamicControls#16](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#16)]
-     [!code-csharp[Trin_WordAddInDynamicControls#16](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#16)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet16":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet16":::
 
 ## <a name="recreate-the-bookmark"></a>Opětovné vytvoření záložky
  Můžete změnit velikost záložky v projektu na úrovni dokumentu přidáním nové záložky, která má stejný název jako existující záložka, ale má jinou velikost.

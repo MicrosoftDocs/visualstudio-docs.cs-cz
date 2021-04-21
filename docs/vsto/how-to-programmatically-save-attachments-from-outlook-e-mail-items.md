@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 516b6b680b8718747490a8afd9cdd2f823e996e1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad64593f91e14bcfd993929420764869a8359e3e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880460"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826691"
 ---
 # <a name="how-to-programmatically-save-attachments-from-outlook-email-items"></a>Postupy: ukládání příloh z e-mailových položek Outlooku prostřednictvím kódu programu
 
@@ -36,7 +36,7 @@ Tento příklad uloží přílohy e-mailu do zadané složky, když se e-mail ob
 
 ## <a name="example"></a>Příklad
 
-[!code-csharp[Trin_OL_SaveAttachments#1](../vsto/codesnippet/CSharp/Trin_OL_SaveAttachments/thisaddin.cs#1)]
+:::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OL_SaveAttachments/thisaddin.cs" id="Snippet1":::
 
 ## <a name="see-also"></a>Viz také
 

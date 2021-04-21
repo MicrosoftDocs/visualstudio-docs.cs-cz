@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c5330d4419c065d7209900bfd4fa404663be185d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0a5520582db9919417b1c70d773355901ac0b0a5
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917477"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826600"
 ---
 # <a name="how-to-add-bookmark-controls-to-word-documents"></a>Postupy: Přidání ovládacích prvků záložek do dokumentů aplikace Word
   V projektech na úrovni dokumentu můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do dokumentu v projektu v době návrhu nebo v době běhu. V projektech doplňku VSTO můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do libovolného otevřeného dokumentu v době běhu.
@@ -91,8 +91,8 @@ ms.locfileid: "99917477"
 
 1. V `ThisDocument_Startup` obslužné rutině události v projektu vložte následující kód pro přidání <xref:Microsoft.Office.Tools.Word.Bookmark> ovládacího prvku do prvního odstavce v dokumentu.
 
-     [!code-csharp[Trin_VstcoreHostControlsWord#1](../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs#1)]
-     [!code-vb[Trin_VstcoreHostControlsWord#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb" id="Snippet1":::
 
     > [!NOTE]
     > Pokud chcete vytvořit <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek z existujícího <xref:Microsoft.Office.Interop.Word.Bookmark> , použijte <xref:Microsoft.Office.Tools.Word.ControlCollection.AddBookmark%2A> metodu a předejte existující <xref:Microsoft.Office.Interop.Word.Bookmark> .
@@ -114,8 +114,8 @@ ms.locfileid: "99917477"
 
      Následující příklad kódu přidá nový <xref:Microsoft.Office.Tools.Word.Bookmark> na začátek aktivního dokumentu. Chcete-li použít tento příklad, spusťte kód z `ThisAddIn_Startup` obslužné rutiny události v projektu doplňku aplikace Word VSTO.
 
-     [!code-vb[Trin_WordAddInDynamicControls#4](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#4)]
-     [!code-csharp[Trin_WordAddInDynamicControls#4](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#4)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet4":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet4":::
 
 #### <a name="to-add-a-bookmark-control-that-is-based-on-a-native-bookmark-control"></a>Přidání ovládacího prvku záložka, který je založen na nativním ovládacím prvku záložky
 
@@ -123,8 +123,8 @@ ms.locfileid: "99917477"
 
      Následující příklad kódu vytvoří nový <xref:Microsoft.Office.Tools.Word.Bookmark> , který je založen na první <xref:Microsoft.Office.Interop.Word.Bookmark> v aktivním dokumentu. Chcete-li použít tento příklad, spusťte kód z `ThisAddIn_Startup` obslužné rutiny události v projektu doplňku aplikace Word VSTO.
 
-     [!code-vb[Trin_WordAddInDynamicControls#5](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#5)]
-     [!code-csharp[Trin_WordAddInDynamicControls#5](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#5)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet5":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet5":::
 
 ## <a name="see-also"></a>Viz také
 - [Automatizace Wordu pomocí rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)

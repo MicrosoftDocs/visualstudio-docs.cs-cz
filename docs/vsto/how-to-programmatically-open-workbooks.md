@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5bca39b5536d5717da994808f23ee541856264ba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4dba79b1b0eea03ca3aae23e98fb93e6ef776d80
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888729"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824780"
 ---
 # <a name="how-to-programmatically-open-workbooks"></a>Postupy: otevírání sešitů prostřednictvím kódu programu
   Tato <xref:Microsoft.Office.Interop.Excel.Workbooks> kolekce v aplikaci systém Microsoft Office Excel umožňuje pracovat se všemi otevřenými sešity a otevírat sešity.
@@ -31,8 +31,8 @@ ms.locfileid: "99888729"
 
 1. Použijte <xref:Microsoft.Office.Interop.Excel.Workbooks.Open%2A> metodu <xref:Microsoft.Office.Interop.Excel.Workbooks> kolekce a předejte cestu k sešitu.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#2](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#2)]
-     [!code-vb[Trin_VstcoreExcelAutomation#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet2":::
 
 ## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad kódu vyžaduje následující:

@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: deb8fec9212c686bce670df6bab23ed56e51741f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2519c9d1a22eb6f5577a258fb9b465cfd7caafc2
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903809"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826977"
 ---
 # <a name="call-code-in-vsto-add-ins-from-other-office-solutions"></a>Volání kódu v doplňcích VSTO z jiných řešení pro systém Office
   Objekt v doplňku VSTO můžete vystavit jiným řešením, včetně dalších systém Microsoft Office řešení. To je užitečné v případě, že doplněk VSTO poskytuje službu, kterou chcete povolit pro používání jiných řešení. Pokud máte například doplněk VSTO pro systém Microsoft Office Excel, který provádí výpočty s finančními daty z webové služby, další řešení mohou provádět tyto výpočty voláním do doplňku Excel VSTO v době běhu.
@@ -78,8 +78,8 @@ ms.locfileid: "99903809"
 
    Následující příklad kódu ukazuje `AddInUtilities` třídu s `ImportData` metodou, která může být volána jinými řešeními. Chcete-li zobrazit tento kód v kontextu většího návodu, viz [Návod: volání kódu v doplňku VSTO z jazyka VBA](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md).
 
-   [!code-csharp[Trin_AddInInteropWalkthrough #3](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs#3)]
-   [!code-vb[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb#3)]
+   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs" id="Snippet3":::
+   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb" id="Snippet3":::
 
 ### <a name="expose-classes-to-vba"></a>Vystavení tříd do VBA
  Když provedete výše uvedené kroky, kód VBA může volat pouze metody, které deklarujete v rozhraní. Kód VBA nemůže volat žádné jiné metody ve vaší třídě, včetně metod, které vaše třída získává ze základních tříd, jako je <xref:System.Object> .
@@ -96,8 +96,8 @@ ms.locfileid: "99903809"
 ### <a name="override-the-requestcomaddinautomationservice-method"></a>Přepsat metodu RequestComAddInAutomationService
  Následující příklad kódu ukazuje, jak přepsat <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> `ThisAddIn` třídu v doplňku VSTO. V příkladu se předpokládá, že jste definovali třídu s názvem `AddInUtilities` , kterou chcete zpřístupnit ostatním řešením. Chcete-li zobrazit tento kód v kontextu většího návodu, viz [Návod: volání kódu v doplňku VSTO z jazyka VBA](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md).
 
- [!code-csharp[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs#1)]
- [!code-vb[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb" id="Snippet1":::
 
  Když je doplněk VSTO načtený, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] volá <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> metodu. Modul runtime přiřadí vrácený objekt k vlastnosti COMAddIn. Object <xref:Microsoft.Office.Core.COMAddIn> objektu, který představuje doplněk VSTO. Tento <xref:Microsoft.Office.Core.COMAddIn> objekt je k dispozici pro jiná řešení Office a pro řešení, která automatizují Office.
 

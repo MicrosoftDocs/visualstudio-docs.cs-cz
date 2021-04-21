@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 61e729113ecfa988f424e2182662d506377d33e5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 21e0928396327911ea794c6270340c6efd27a43e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882385"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824598"
 ---
 # <a name="walkthrough-call-code-in-a-vsto-add-in-from-vba"></a>Návod: volání kódu v doplňku VSTO z jazyka VBA
   Tento názorný postup ukazuje, jak vystavit objekt v doplňku VSTO pro jiná systém Microsoft Office řešení, včetně jazyk Visual Basic for Application (VBA) a COM VSTO doplňky.
@@ -58,7 +58,7 @@ ms.locfileid: "99882385"
 
 1. Pomocí šablony projektu doplňku VSTO pro Excel vytvořte projekt doplňku VSTO pro Excel s názvem **ExcelImportData**. Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře soubor kódu **ThisAddIn.cs** nebo **ThisAddIn. vb** a přidá projekt **ExcelImportData** do **Průzkumník řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře soubor kódu **ThisAddIn. cs** nebo **ThisAddIn. vb** a přidá projekt **ExcelImportData** do **Průzkumník řešení**.
 
 ## <a name="define-a-class-that-you-can-expose-to-other-office-solutions"></a>Definovat třídu, kterou můžete vystavit jiným řešením pro systém Office
  Účelem tohoto návodu je zavolat do `ImportData` metody třídy s názvem `AddInUtilities` v doplňku VSTO z kódu VBA. Tato metoda zapíše řetězec do buňky a1 aktivního listu.
@@ -71,17 +71,17 @@ ms.locfileid: "99882385"
 
 2. V dialogovém okně **Přidat novou položku** změňte název nové třídy na **AddInUtilities** a klikněte na **Přidat**.
 
-     V editoru kódu se otevře soubor **AddInUtilities.cs** nebo **AddInUtilities. vb** .
+     V editoru kódu se otevře soubor **AddInUtilities. cs** nebo **AddInUtilities. vb** .
 
 3. Na začátek souboru přidejte následující direktivy.
 
-     [!code-csharp[Trin_AddInInteropWalkthrough#2](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs#2)]
-     [!code-vb[Trin_AddInInteropWalkthrough#2](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb" id="Snippet2":::
 
 4. Třídu nahraďte `AddInUtilities` následujícím kódem.
 
-     [!code-csharp[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs#3)]
-     [!code-vb[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb" id="Snippet3":::
 
      Tento kód zpřístupňuje `AddInUtilities` třídu modelu COM a přidá `ImportData` metodu do třídy. Aby bylo možné vystavit rozhraní [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) , `AddInUtilities` má třída také <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atribut a implementuje rozhraní, které je viditelné pro model COM.
 
@@ -92,12 +92,12 @@ ms.locfileid: "99882385"
 
 1. V **Průzkumník řešení** rozbalte položku **Excel**.
 
-2. Klikněte pravým tlačítkem na **ThisAddIn.cs** nebo **ThisAddIn. vb** a pak klikněte na **Zobrazit kód**.
+2. Klikněte pravým tlačítkem na **ThisAddIn. cs** nebo **ThisAddIn. vb** a pak klikněte na **Zobrazit kód**.
 
 3. Do třídy `ThisAddIn` přidejte následující kód.
 
-     [!code-csharp[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs#1)]
-     [!code-vb[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb" id="Snippet1":::
 
 4. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 

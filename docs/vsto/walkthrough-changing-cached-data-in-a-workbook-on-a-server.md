@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 57c33dc89bdec39b62dbec6a74a152ba816dda88
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f03175abb843abefe5266724890457c795369d63
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961349"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824429"
 ---
 # <a name="walkthrough-change-cached-data-in-a-workbook-on-a-server"></a>Návod: Změna dat uložených v mezipaměti v sešitu na serveru
   Tento návod ukazuje, jak upravit datovou sadu, která je uložena v mezipaměti v systém Microsoft Office excelovém sešitu bez spuštění aplikace Excel pomocí <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> třídy.
@@ -84,9 +84,9 @@ ms.locfileid: "99961349"
 
 8. Klikněte na **OK**.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **AdventureWorksDataSet** do **Průzkumník řešení** a otevře soubor kódu **Class1.cs** nebo **Class1. vb** .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **AdventureWorksDataSet** do **Průzkumník řešení** a otevře soubor kódu **Class1. cs** nebo **Class1. vb** .
 
-9. V **Průzkumník řešení** klikněte pravým tlačítkem myši na **Class1.cs** nebo **Class1. vb** a pak klikněte na **Odstranit**. Tento soubor nepotřebujete pro tento návod.
+9. V **Průzkumník řešení** klikněte pravým tlačítkem na **Class1. cs** nebo **Class1. vb** a pak klikněte na **Odstranit**. Tento soubor nepotřebujete pro tento návod.
 
 ## <a name="define-a-dataset-in-the-class-library-project"></a>Definovat datovou sadu v projektu knihovny tříd
  Definujte typovou datovou sadu, která obsahuje data z databáze AdventureWorksLT pro SQL Server 2005. Později v tomto návodu budete odkazovat na tuto datovou sadu z projektu excelového sešitu a projektu konzolové aplikace.
@@ -153,7 +153,7 @@ ms.locfileid: "99961349"
 
 ### <a name="to-add-the-dataset-to-the-data-sources-in-the-excel-workbook-project"></a>Chcete-li přidat datovou sadu do zdrojů dat v projektu excelového sešitu
 
-1. V **Průzkumník řešení** dvakrát klikněte na **Sheet1.cs** nebo **List1. vb** v rámci projektu **AdventureWorksReport** .
+1. V **Průzkumník řešení** dvakrát klikněte na **List1. cs** nebo **List1. vb** v rámci projektu **AdventureWorksReport** .
 
      Sešit se otevře v návrháři.
 
@@ -202,12 +202,12 @@ ms.locfileid: "99961349"
 
 ### <a name="to-initialize-the-dataset-in-the-workbook"></a>Inicializace datové sady v sešitu
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor **Sheet1.cs** nebo **List1. vb** a klikněte na **Zobrazit kód**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor **List1. cs** nebo **List1. vb** a klikněte na **Zobrazit kód**.
 
 2. Proměnnou `Sheet1_Startup` obslužné rutiny události nahraďte následujícím kódem. Tento kód používá instanci `ProductTableAdapter` třídy, která je definována v projektu **AdventureWorksDataSet** , aby vyplnila datovou sadu uloženou v mezipaměti daty, pokud je aktuálně prázdná.
 
-     [!code-csharp[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/CSharp/AdventureWorksDataSet/AdventureWorksReport/Sheet1.cs#8)]
-     [!code-vb[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/AdventureWorksReport/Sheet1.vb#8)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/AdventureWorksReport/Sheet1.cs" id="Snippet8":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/AdventureWorksReport/Sheet1.vb" id="Snippet8":::
 
 ## <a name="checkpoint"></a>CheckPoint
  Sestavte a spusťte projekt sešitu aplikace Excel, abyste se ujistili, že se zkompiluje a spustí bez chyb. Tato operace také vyplní datovou sadu uloženou v mezipaměti a uloží data v sešitu.
@@ -241,7 +241,7 @@ ms.locfileid: "99961349"
 
 5. Klikněte na **OK**.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **datawrite** do **Průzkumník řešení** a otevře soubor kódu **program.cs** nebo **Module1. vb** .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **datawrite** do **Průzkumník řešení** a otevře soubor kódu **program. cs** nebo **Module1. vb** .
 
 ## <a name="change-data-in-the-cached-dataset-by-using-the-console-application"></a>Změna dat v datové sadě uložených v mezipaměti pomocí konzolové aplikace
  Použijte <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> třídu v konzolové aplikaci ke čtení dat do místního `AdventureWorksLTDataSet` objektu, upravte tato data a pak ji uložte zpět do datové sady uložené v mezipaměti.
@@ -258,12 +258,12 @@ ms.locfileid: "99961349"
 
 5. Na kartě **projekty** vyberte **AdventureWorksDataSet** a klikněte na **OK**.
 
-6. V editoru kódu otevřete soubor *program.cs* nebo *Module1. vb* .
+6. V editoru kódu otevřete soubor *program. cs* nebo *Module1. vb* .
 
 7. Přidejte následující příkaz **using** (for C#) nebo **import** (for Visual Basic) do horní části souboru kódu.
 
-    [!code-csharp[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#1)]
-    [!code-vb[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#1)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs" id="Snippet1":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb" id="Snippet1":::
 
 8. Do metody `Main` přidejte následující kód. Tento kód deklaruje následující objekty:
 
@@ -276,8 +276,8 @@ ms.locfileid: "99961349"
      > [!NOTE]
      > Následující kód předpokládá, že používáte sešit, který má příponu souboru *. xlsx* . Pokud má sešit v projektu jinou příponu souboru, upravte cestu podle potřeby.
 
-     [!code-csharp[Trin_CachedDataWalkthroughs#6](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#6)]
-     [!code-vb[Trin_CachedDataWalkthroughs#6](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb" id="Snippet6":::
 
 9. Do metody přidejte následující kód `Main` po kódu, který jste přidali v předchozím kroku. Tento kód provádí následující úlohy:
 
@@ -289,8 +289,8 @@ ms.locfileid: "99961349"
 
    - Uloží změny do datové sady uložené v mezipaměti v sešitu.
 
-     [!code-csharp[Trin_CachedDataWalkthroughs#7](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#7)]
-     [!code-vb[Trin_CachedDataWalkthroughs#7](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#7)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs" id="Snippet7":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb" id="Snippet7":::
 
 10. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt pro **zápis k datawrite** , přejděte na **ladění** a potom klikněte na **spustit novou instanci**.
 

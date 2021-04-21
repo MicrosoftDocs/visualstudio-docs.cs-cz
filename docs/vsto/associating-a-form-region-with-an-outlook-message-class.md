@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0bbbd381ff84714b780bbb817ccfea64ac05e949
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: be3b789fabf00d853d447cb3489ef07a5b494fcd
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882541"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826990"
 ---
 # <a name="associate-a-form-region-with-an-outlook-message-class"></a>Přidružení oblasti formuláře k třídě zpráv aplikace Outlook
   Můžete určit, které systém Microsoft Office položky Outlooku zobrazit oblast formuláře přidružením oblasti formuláře k třídě zpráv každé položky. Například pokud chcete připojit oblast formuláře k dolní části položky pošty, můžete přidružit oblast formuláře ke `IPM.Note` třídě zprávy.
@@ -87,8 +87,8 @@ ms.locfileid: "99882541"
 
  Následující příklad ukazuje dva <xref:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute> atributy, které byly aplikovány na třídu objektu pro vytváření oblasti formuláře s názvem `myFormRegion` . První atribut přidružuje oblast formuláře ke standardní třídě zprávy pro formulář poštovní zprávy. Druhý atribut přidruží oblast formuláře k vlastní třídě zpráv s názvem `IPM.Task.Contoso` .
 
- [!code-vb[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Attributes/FormRegion1.vb#1)]
- [!code-csharp[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Attributes/FormRegion1.cs#1)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Attributes/FormRegion1.vb" id="Snippet1":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Attributes/FormRegion1.cs" id="Snippet1":::
 
  Atributy musí splňovat následující pokyny:
 

@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6306b13cc40d8b93de734168fe1e6df92c256d21
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f053e87f8cdfd2bdf87bbdf4b7d115f6d9bbec26
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888690"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107823987"
 ---
 # <a name="ribbon-object-model-overview"></a>Přehled modelu objektů pásu karet
   [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Zpřístupňuje model objektu silného typu, který můžete použít k získání a nastavení vlastností ovládacích prvků pásu karet za běhu. Můžete například dynamicky naplnit ovládací prvky nabídky nebo zobrazit a skrýt ovládací prvky kontextové. Na pás karet můžete také přidat karty, skupiny a ovládací prvky, ale pouze před tím, než se pás karet načte do aplikace Office. Informace najdete v tématu [Nastavení vlastností, které jsou jen pro čtení](#SettingReadOnlyProperties).
@@ -111,12 +111,12 @@ ms.locfileid: "99888690"
 
  Přidejte následující kód.
 
- [!code-csharp[Trin_Ribbon_ObjectModel#1](../vsto/codesnippet/CSharp/trin_Ribbon_objectmodel_dotnet4/Ribbon1.Designer.cs#1)]
- [!code-vb[Trin_Ribbon_ObjectModel#1](../vsto/codesnippet/VisualBasic/trin_Ribbon_objectmodel_dotnet4/Ribbon1.Designer.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_Ribbon_objectmodel_dotnet4/Ribbon1.Designer.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_Ribbon_objectmodel_dotnet4/Ribbon1.Designer.vb" id="Snippet1":::
 
  V projektech v jazyce Visual C#, které jste upgradovali ze sady Visual Studio 2008, se konstruktor zobrazí v souboru kódu pásu karet.
 
- V Visual Basic projekty nebo v projektech Visual C#, které jste vytvořili v [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , se konstruktor zobrazí v souboru s kódem Návrháře pásu karet. Tento soubor má název *YourRibbonItem*. Designer.cs nebo *YourRibbonItem*. Designer. vb. Chcete-li zobrazit tento soubor v Visual Basic projekty, musíte nejprve kliknout na tlačítko **Zobrazit všechny soubory** v Průzkumník řešení.
+ V Visual Basic projekty nebo v projektech Visual C#, které jste vytvořili v [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , se konstruktor zobrazí v souboru s kódem Návrháře pásu karet. Tento soubor má název *YourRibbonItem*. Designer. cs nebo *YourRibbonItem*. Designer. vb. Chcete-li zobrazit tento soubor v Visual Basic projekty, musíte nejprve kliknout na tlačítko **Zobrazit všechny soubory** v Průzkumník řešení.
 
 ### <a name="set-properties-in-the-createribbonextensibilityobject-method"></a>Nastavení vlastností v metodě CreateRibbonExtensibilityObject
  Můžete nastavit vlastnosti `Ribbon` ovládacího prvku, pokud přepíšete `CreateRibbonExtensibilityObject` metodu do `ThisAddin` třídy, nebo v `ThisWorkbook` `ThisDocument` projektu. Další informace o této `CreateRibbonExtensibilityObject` metodě najdete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md).
@@ -125,8 +125,8 @@ ms.locfileid: "99888690"
 
  Přidejte následující kód.
 
- [!code-vb[Trin_Ribbon_ObjectModel#2](../vsto/codesnippet/VisualBasic/trin_Ribbon_objectmodel_dotnet4/ThisWorkbook.vb#2)]
- [!code-csharp[Trin_Ribbon_ObjectModel#2](../vsto/codesnippet/CSharp/trin_Ribbon_objectmodel_dotnet4/ThisWorkbook.cs#2)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_Ribbon_objectmodel_dotnet4/ThisWorkbook.vb" id="Snippet2":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_Ribbon_objectmodel_dotnet4/ThisWorkbook.cs" id="Snippet2":::
 
 ### <a name="properties-that-become-read-only"></a><a name="ReadOnlyProperties"></a> Vlastnosti, které se stanou jen pro čtení
  V následující tabulce jsou uvedeny vlastnosti, které lze nastavit pouze před tím, než se pás karet načte.

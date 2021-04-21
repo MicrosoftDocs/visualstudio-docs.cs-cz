@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 92ded3d8320f58bdd200f3892dc40c7a915c502e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 31c0184cbf8f29db6d33d135cf295f8277b55f2e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963819"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827094"
 ---
 # <a name="how-to-programmatically-protect-worksheets"></a>Postupy: ochrana listů prostřednictvím kódu programu
   Funkce Ochrana v aplikaci systém Microsoft Office Excel pomáhá zabránit uživatelům a kódu v úpravách objektů v listu. Ve výchozím nastavení jsou všechny buňky po zapnutí ochrany zamčené.
@@ -57,15 +57,15 @@ ms.locfileid: "99963819"
 
 1. Zavolejte <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> metodu listu. V tomto příkladu se předpokládá, že pracujete s listem s názvem `Sheet1` .
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#27](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#27)]
-     [!code-vb[Trin_VstcoreExcelAutomation#27](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#27)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet27":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet27":::
 
 ### <a name="to-protect-a-worksheet-by-using-code-in-a-vsto-add-in"></a>Ochrana listu pomocí kódu v doplňku VSTO
 
 1. Zavolejte <xref:Microsoft.Office.Interop.Excel._Worksheet.Protect%2A> metodu aktivního listu.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#17)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#17)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet17":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet17":::
 
 ## <a name="see-also"></a>Viz také
 - [Práce s listy](../vsto/working-with-worksheets.md)

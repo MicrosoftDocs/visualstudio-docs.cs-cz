@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3d593185412db23fa985f7effea6e91f9b3faa6c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3367c1ad557c647639b9fd2d2aacf7845e067660
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847645"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826626"
 ---
 # <a name="word-object-model-overview"></a>Přehled modelu objektů aplikace Word
   Při vývoji řešení aplikace Word v aplikaci Visual Studio budete pracovat s modelem objektu aplikace Word. Tento objektový model se skládá z tříd a rozhraní, které jsou k dispozici v primárním sestavení vzájemné spolupráce pro Word, a jsou definovány v <xref:Microsoft.Office.Interop.Word> oboru názvů.
@@ -78,8 +78,8 @@ ms.locfileid: "99847645"
 
  Při vytváření projektu na úrovni dokumentu můžete ke <xref:Microsoft.Office.Tools.Word.Document> členům přistupovat pomocí generované `ThisDocument` třídy v projektu. Ke členům položky hostitele můžete přistupovat <xref:Microsoft.Office.Tools.Word.Document> pomocí **mě** nebo **těchto** klíčových slov z kódu ve `ThisDocument` třídě nebo pomocí `Globals.ThisDocument` kódu z jiné `ThisDocument` třídy. Další informace najdete v tématu věnovaném [přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md). Chcete-li například vybrat první odstavec v dokumentu, použijte následující kód.
 
- [!code-vb[Trin_VstcoreWordAutomation#120](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#120)]
- [!code-csharp[Trin_VstcoreWordAutomation#120](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#120)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet120":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet120":::
 
  V projektech doplňku VSTO můžete v <xref:Microsoft.Office.Tools.Word.Document> době běhu generovat položky hostitele. Vygenerovanou položku hostitele můžete použít k přidání ovládacích prvků do přidruženého dokumentu. Další informace najdete v tématu [rozšiřování dokumentů aplikace Word a sešitů aplikace Excel v doplňkech VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 

@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a5a89716797ec460b461f79c94df8cea475532a8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8a7bc48df6e30381ff275b9f11dabe04a25d6dd7
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885557"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825924"
 ---
 # <a name="how-to-programmatically-display-a-string-in-a-worksheet-cell"></a>Postupy: zobrazení řetězce v buňce listu prostřednictvím kódu programu
   Tento příklad ukazuje, jak zobrazit text v buňce programově. Chcete-li zobrazit text v buňce, použijte buď <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek, nebo nativní objekt excelového rozsahu.
@@ -35,8 +35,8 @@ ms.locfileid: "99885557"
 
 1. Nastavte hodnotu <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku na **Hello World**.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#68](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#68)]
-     [!code-vb[Trin_VstcoreExcelAutomation#68](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#68)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet68":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet68":::
 
 ## <a name="use-a-native-excel-range"></a>Použít nativní rozsah aplikace Excel
  Následující kód vytvoří nový rozsah programově a pak mu přiřadí hodnotu.
@@ -45,8 +45,8 @@ ms.locfileid: "99885557"
 
 1. Načtěte rozsah v buňce **a1** `Sheet1` a nastavte hodnotu na **Hello World**.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#69](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#69)]
-     [!code-vb[Trin_VstcoreExcelAutomation#69](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#69)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet69":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet69":::
 
 ## <a name="see-also"></a>Viz také
 - [Návod: shromáždění dat pomocí formuláře Windows](../vsto/walkthrough-collecting-data-using-a-windows-form.md)

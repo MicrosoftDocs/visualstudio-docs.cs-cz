@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 89a4b7c594f942405777145f94ed0a3503e9b16f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ea4e3da3c67d55aedea0d85a0a35b8ed2cf93b6
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963754"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827081"
 ---
 # <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>Postupy: odkazování na oblasti listů v kódu prostřednictvím kódu programu
   Podobný proces se používá pro odkazování na obsah <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku nebo nativního objektu oblasti aplikace Excel.
@@ -37,8 +37,8 @@ ms.locfileid: "99963754"
 
 1. Přiřaďte řetězec k <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> vlastnosti <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku. Tento kód musí být umístěn ve třídě listu, nikoli ve `ThisWorkbook` třídě.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#46](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#46)]
-     [!code-vb[Trin_VstcoreExcelAutomation#46](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#46)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet46":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet46":::
 
 ## <a name="use-native-excel-ranges"></a>Použít nativní oblasti aplikace Excel
  Následující příklad přidá do listu nativní rozsah aplikace Excel a následně přidá text do buňky v rozsahu.
@@ -47,8 +47,8 @@ ms.locfileid: "99963754"
 
 1. Přiřaďte řetězec k <xref:Microsoft.Office.Interop.Excel.Range.Value2%2A> Vlastnosti rozsahu.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#47)]
-     [!code-vb[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#47)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet47":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet47":::
 
 ## <a name="see-also"></a>Viz také
 - [Práce s rozsahy](../vsto/working-with-ranges.md)

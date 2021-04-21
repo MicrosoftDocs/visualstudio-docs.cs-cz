@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: aabc7dec0a9965a055bce07cafeca25ac0165037
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 48381d452b0c67a34581092a47896aba60e7125c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937413"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826301"
 ---
 # <a name="walkthrough-create-shortcut-menus-for-bookmarks"></a>Návod: Vytvoření místních nabídek pro záložky
   Tento návod ukazuje, jak vytvořit místní nabídky pro <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky v přizpůsobení na úrovni dokumentu pro aplikaci Word. Když uživatel klikne pravým tlačítkem myši na text v záložce, zobrazí se místní nabídka a uživatel bude mít možnost formátování textu.
@@ -92,7 +92,7 @@ ms.locfileid: "99937413"
 
 1. Přidejte položku **XML pásu karet** do projektu. Další informace najdete v tématu [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md).
 
-2. V **Průzkumník řešení** vyberte **ThisDocument.cs** nebo **ThisDocument. vb**.
+2. V **Průzkumník řešení** vyberte **ThisDocument. cs** nebo **ThisDocument. vb**.
 
 3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 
@@ -100,8 +100,8 @@ ms.locfileid: "99937413"
 
 4. Do třídy **ThisDocument** přidejte následující kód. Tento kód přepíše metodu CreateRibbonExtensibilityObject a vrátí třídu XML pásu karet do aplikace sady Office.
 
-     [!code-csharp[Trin_Word_Document_Menus#1](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#1)]
-     [!code-vb[Trin_Word_Document_Menus#1](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb" id="Snippet1":::
 
 5. V **Průzkumník řešení** vyberte soubor XML pásu karet. Ve výchozím nastavení se soubor XML pásu karet jmenuje Ribbon1.xml.
 
@@ -131,10 +131,10 @@ ms.locfileid: "99937413"
 
 9. Deklarovat následující proměnné a proměnnou záložky na úrovni třídy.
 
-     [!code-csharp[Trin_Word_Document_Menus#2](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#2)]
-     [!code-vb[Trin_Word_Document_Menus#2](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb" id="Snippet2":::
 
-10. V **Průzkumník řešení** vyberte soubor kódu pásu karet. Ve výchozím nastavení se soubor kódu pásu karet jmenuje **Ribbon1.cs** nebo **Ribbon1. vb**.
+10. V **Průzkumník řešení** vyberte soubor kódu pásu karet. Ve výchozím nastavení má soubor kódu pásu karet název **Ribbon1. cs** nebo **Ribbon1. vb**.
 
 11. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 
@@ -142,8 +142,8 @@ ms.locfileid: "99937413"
 
 12. Do souboru kódu pásu karet přidejte následující metodu. Toto je metoda zpětného volání pro dvě tlačítka, která jste přidali do místní nabídky dokumentu. Tato metoda určuje, zda se tato tlačítka zobrazí v místní nabídce. Tlačítka tučná a kurzíva se zobrazí pouze v případě, že kliknete pravým tlačítkem myši na text v rámci záložky.
 
-     [!code-csharp[Trin_Word_Document_Menus#5](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#5)]
-     [!code-vb[Trin_Word_Document_Menus#5](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb" id="Snippet5":::
 
 ## <a name="format-the-text-in-the-bookmark"></a><a name="BKMK_formattextbkmk"></a> Formátování textu v záložce
 
@@ -151,10 +151,10 @@ ms.locfileid: "99937413"
 
 1. V souboru kódu pásu karet přidejte `ButtonClick` obslužnou rutinu události, která aplikuje formátování na záložku.
 
-     [!code-csharp[Trin_Word_Document_Menus#6](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#6)]
-     [!code-vb[Trin_Word_Document_Menus#6](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb" id="Snippet6":::
 
-2. **Průzkumník řešení** vyberte **ThisDocument.cs** nebo **ThisDocument. vb**.
+2. **Průzkumník řešení** vyberte **ThisDocument. cs** nebo **ThisDocument. vb**.
 
 3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 
@@ -162,15 +162,15 @@ ms.locfileid: "99937413"
 
 4. Do třídy **ThisDocument** přidejte následující kód.
 
-     [!code-csharp[Trin_Word_Document_Menus#3](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#3)]
-     [!code-vb[Trin_Word_Document_Menus#3](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb" id="Snippet3":::
 
     > [!NOTE]
     > Je nutné napsat kód, který zpracuje případ, kde se záložky překrývají. Pokud to neuděláte, bude ve výchozím nastavení pro všechny záložky ve výběru volán kód.
 
 5. V jazyce C# je nutné přidat obslužné rutiny události pro ovládací prvky záložky do <xref:Microsoft.Office.Tools.Word.Document.Startup> události. Informace o vytváření obslužných rutin událostí najdete v tématu [Postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_Word_Document_Menus#4](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet4":::
 
 ## <a name="test-the-application"></a>Testování aplikace
  Otestujte dokument, abyste ověřili, že položky nabídky tučné a kurzíva se zobrazí v místní nabídce, když kliknete pravým tlačítkem myši na text v záložce a že je text ve správném formátu.

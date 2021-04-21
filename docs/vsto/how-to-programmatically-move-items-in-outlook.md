@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 770f056dc681e1ee2cd6704f9bd1d42afae4957b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b8e951ab393d09506ad4f2d593962ea1826eff09
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888859"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826730"
 ---
 # <a name="how-to-programmatically-move-items-in-outlook"></a>Postupy: přesouvání položek v aplikaci Outlook prostřednictvím kódu programu
   Tento příklad přesune nepřečtené e-mailové zprávy z **doručené pošty** do složky s názvem **test**. V příkladu se do pole přesune pouze zprávy, které mají slovo **test** `Subject` .
@@ -27,7 +27,7 @@ ms.locfileid: "99888859"
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Příklad
- [!code-csharp[Trin_OL_MoveItems#1](../vsto/codesnippet/CSharp/Trin_OL_MoveItems/thisaddin.cs#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OL_MoveItems/thisaddin.cs" id="Snippet1":::
 
 ## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad vyžaduje:

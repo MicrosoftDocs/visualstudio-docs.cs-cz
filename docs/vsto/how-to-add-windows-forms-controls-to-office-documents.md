@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8d2f8d54e791acd7d027350caa3ce88c8eea9959
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e5a196c54a513376edef5c837a429bece6dd7b16
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954147"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824832"
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>Postupy: Přidání ovládacích prvků model Windows Forms do dokumentů Office
   Můžete přidat model Windows Forms ovládací prvky pro systém Microsoft Office Excelu a systém Microsoft Office wordové dokumenty v době návrhu v projektech na úrovni dokumentu. V době běhu můžete přidat ovládací prvky v přizpůsobení na úrovni dokumentu a v Doplňkech VSTO. Můžete například přidat <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> ovládací prvek do listu, aby si uživatelé mohli vybrat ze seznamu možností.
@@ -110,8 +110,8 @@ ms.locfileid: "99954147"
 
      Následující příklad kódu ukazuje, jak přidat <xref:Microsoft.Office.Tools.Excel.Controls.Button> do buňky **C5** `Sheet1` v projektu na úrovni dokumentu v aplikaci Excel.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#4)]
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#4)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet4":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet4":::
 
 ## <a name="add-controls-at-run-time-in-vsto-add-ins"></a><a name="runtimeaddin"></a> Přidání ovládacích prvků v době běhu v doplňcích VSTO
  Můžete přidat ovládací prvky model Windows Forms programově do libovolného otevřeného dokumentu v době běhu. Nejprve vygenerujte hostitelskou položku, která je založena na otevřeném dokumentu nebo listu. Pak ve Wordu použijte metody <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> Vlastnosti nové položky hostitele. V aplikaci Excel použijte metody <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> Vlastnosti nové položky hostitele. Každá metoda má několik přetížení, která umožňují určit umístění ovládacího prvku různými způsoby.
@@ -129,8 +129,8 @@ ms.locfileid: "99954147"
 
      Následující příklad kódu ukazuje, jak přidat do <xref:Microsoft.Office.Tools.Word.Controls.Button> prvního odstavce aktivního dokumentu pomocí doplňku aplikace Word VSTO.
 
-     [!code-vb[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#7)]
-     [!code-csharp[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#7)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet7":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet7":::
 
 ## <a name="see-also"></a>Viz také
 - [Přehled model Windows Formsch ovládacích prvků v dokumentech Office](../vsto/windows-forms-controls-on-office-documents-overview.md)
