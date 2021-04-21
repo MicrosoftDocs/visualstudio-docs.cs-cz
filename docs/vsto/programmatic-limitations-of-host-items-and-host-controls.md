@@ -33,12 +33,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fbc3258f3ea7e0b3cc93a2887dfff5a3bfefb19d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 463543a40ac9443959b06cf9f65dad4c99c52ee3
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891888"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828823"
 ---
 # <a name="programmatic-limitations-of-host-items-and-host-controls"></a>Programové omezení hostitelských položek a hostitelských ovládacích prvků
   Každá položka hostitele a řízení hostitele je navržena tak, aby se chovala jako odpovídající nativní objekt systém Microsoft Office Word nebo systém Microsoft Office Excel s dalšími funkcemi. Existují však některé zásadní rozdíly mezi chováním hostitelských položek a hostitelských ovládacích prvků a nativních objektů Office v době běhu.
@@ -74,8 +74,8 @@ ms.locfileid: "99891888"
 
  Následující příklad vytvoří <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek a předá ho <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> metodě. Kód používá <xref:Microsoft.Office.Tools.Excel.NamedRange.InnerObject%2A> vlastnost pojmenovaného rozsahu pro vrácení základní kanceláře <xref:Microsoft.Office.Interop.Excel.Range> , která je vyžadována <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> metodou.
 
- [!code-csharp[Trin_VstcoreHostControlsExcel#28](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#28)]
- [!code-vb[Trin_VstcoreHostControlsExcel#28](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#28)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet28":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet28":::
 
 ### <a name="return-types-of-native-office-methods-and-properties"></a>Návratové typy nativních metod a vlastností Office
  Většina metod a vlastností položek hostitele vrátí základní nativní objekt Office, na kterém je založena Hostitelská položka. Například <xref:Microsoft.Office.Tools.Excel.NamedRange.Parent%2A> vlastnost <xref:Microsoft.Office.Tools.Excel.NamedRange> hostitelského ovládacího prvku v aplikaci Excel vrátí <xref:Microsoft.Office.Interop.Excel.Worksheet> objekt, nikoli <xref:Microsoft.Office.Tools.Excel.Worksheet> hostitelskou položku. Podobně <xref:Microsoft.Office.Tools.Word.RichTextContentControl.Parent%2A> vlastnost <xref:Microsoft.Office.Tools.Word.RichTextContentControl> hostitelského ovládacího prvku v aplikaci Word vrátí objekt, <xref:Microsoft.Office.Interop.Word.Document> nikoli <xref:Microsoft.Office.Tools.Word.Document> hostitelskou položku.
@@ -83,8 +83,8 @@ ms.locfileid: "99891888"
 ### <a name="access-collections-of-host-controls"></a>Přístup ke kolekcím hostitelských ovládacích prvků
  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Neposkytuje jednotlivé kolekce pro každý typ hostitelského ovládacího prvku. Místo toho použijte vlastnost Controls položky hostitele k iterování přes všechny spravované ovládací prvky (ovládací prvky hostitele a model Windows Forms ovládací prvky) v dokumentu nebo listu a pak hledejte položky, které odpovídají typu hostitelského ovládacího prvku, který vás zajímá. Následující příklad kódu prověřuje každý ovládací prvek v dokumentu aplikace Word a určí, zda je ovládací prvek <xref:Microsoft.Office.Tools.Word.Bookmark> .
 
- [!code-csharp[Trin_VstcoreHostControlsWord#10](../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs#10)]
- [!code-vb[Trin_VstcoreHostControlsWord#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb#10)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs" id="Snippet10":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb" id="Snippet10":::
 
  Další informace o vlastnosti ovládacích prvků hostitelů naleznete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 

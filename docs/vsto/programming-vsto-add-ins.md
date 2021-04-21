@@ -34,12 +34,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 83fdc3b6a60c5f8972ff5d955c56476fb13315d9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ee62f35b0626139a8080649076d2ac941366a26
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971827"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828706"
 ---
 # <a name="program-vsto-add-ins"></a>Programové doplňky VSTO
   Když rozšíříte systém Microsoft Office aplikaci vytvořením doplňku VSTO, napíšete kód přímo proti `ThisAddIn` třídě v projektu. Tuto třídu můžete použít k provádění úloh, jako je například přístup k objektovému modelu aplikace systém Microsoft Office hosta, přizpůsobení uživatelského rozhraní (UI) aplikace a vystavení objektů v doplňku VSTO do dalších řešení pro Office.
@@ -51,7 +51,7 @@ ms.locfileid: "99971827"
  Obecné informace o doplňcích VSTO a dalších typech řešení, které můžete vytvořit pomocí nástrojů pro vývoj pro Office v sadě Visual Studio, najdete v tématu [Přehled vývoje řešení pro systém office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
 
 ## <a name="use-the-thisaddin-class"></a>Použití třídy ThisAddIn
- Do třídy můžete začít psát kód doplňku VSTO `ThisAddIn` . Visual Studio automaticky vygeneruje tuto třídu v souboru kódu *ThisAddIn. vb* (in [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ) nebo *ThisAddIn.cs* (v jazyce C#) v projektu doplňku VSTO. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Automaticky vytvoří instanci této třídy, když systém Microsoft Office aplikace načte doplněk VSTO.
+ Do třídy můžete začít psát kód doplňku VSTO `ThisAddIn` . Visual Studio tuto třídu automaticky vygeneruje v souboru kódu *ThisAddIn. vb* (in [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ) nebo *ThisAddIn. cs* (v jazyce C#) v projektu doplňku VSTO. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Automaticky vytvoří instanci této třídy, když systém Microsoft Office aplikace načte doplněk VSTO.
 
  Ve třídě existují dvě výchozí obslužné rutiny událostí `ThisAddIn` . Chcete-li spustit kód při načtení doplňku VSTO, přidejte kód do `ThisAddIn_Startup` obslužné rutiny události. Chcete-li spustit kód těsně před uvolněním doplňku VSTO, přidejte kód do `ThisAddIn_Shutdown` obslužné rutiny události. Další informace o těchto obslužných rutinách událostí najdete v tématu [události v projektech pro systém Office](../vsto/events-in-office-projects.md).
 
@@ -112,8 +112,8 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
 
  Následující příklad kódu funguje s dokumentem v aplikaci Word pouze v případě, že uživatel vytvoří dokument nebo otevře existující dokument.
 
- [!code-csharp[Trin_WordAddIn_Menus#3](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#3)]
- [!code-vb[Trin_WordAddIn_Menus#3](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#3)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs" id="Snippet3":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb" id="Snippet3":::
 
 ### <a name="thisaddin-members-to-use-for-other-tasks"></a>ThisAddIn členové, kteří se mají použít pro jiné úkoly
  Následující tabulka popisuje další běžné úlohy a ukazuje, které členy třídy můžete `ThisAddIn` použít k provádění úkolů.

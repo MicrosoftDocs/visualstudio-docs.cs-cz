@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 843718ea49ae7df7d34775283ce8120f077b0a0f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 177b21e2278153693601adf7b7dc18b751cf184e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925505"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824845"
 ---
 # <a name="walkthrough-create-a-master-detail-relation-using-a-cached-dataset"></a>Návod: Vytvoření vztahu hlavní podrobnosti pomocí datové sady uložené v mezipaměti
   Tento návod ukazuje vytvoření vztahu hlavní/podrobnosti na listu a ukládání dat do mezipaměti, aby bylo možné řešení použít offline.
@@ -138,16 +138,16 @@ ms.locfileid: "99925505"
 
 ### <a name="to-initialize-the-data-and-the-controls"></a>Inicializace dat a ovládacích prvků
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs** a pak klikněte na **Zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na **List1. vb** nebo **List1. cs** a pak klikněte na **Zobrazit kód** v místní nabídce.
 
 2. Přidejte následující kód do `Sheet1_Startup` metody pro nastavení textu pro tlačítka.
 
-     [!code-vb[Trin_VstcoreDataExcel#15](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#15)]
-     [!code-csharp[Trin_VstcoreDataExcel#15](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#15)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb" id="Snippet15":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs" id="Snippet15":::
 
 3. Pouze pro C# přidejte obslužné rutiny události pro události kliknutí na tlačítko do `Sheet1_Startup` metody.
 
-     [!code-csharp[Trin_VstcoreDataExcel#16](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#16)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs" id="Snippet16":::
 
 ## <a name="add-code-to-enable-scrolling-through-the-records"></a>Přidejte kód, který umožní procházení záznamů.
  Přidejte kód do <xref:System.Windows.Forms.Control.Click> obslužné rutiny události pro každé tlačítko pro přesun záznamů.
@@ -156,13 +156,13 @@ ms.locfileid: "99925505"
 
 1. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost objektu `Button1` a přidejte následující kód pro přesun zpět prostřednictvím záznamů:
 
-     [!code-vb[Trin_VstcoreDataExcel#17](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#17)]
-     [!code-csharp[Trin_VstcoreDataExcel#17](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#17)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb" id="Snippet17":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs" id="Snippet17":::
 
 2. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button2` a přidejte následující kód, který bude pokračovat v záznamech:
 
-     [!code-vb[Trin_VstcoreDataExcel#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb#18)]
-     [!code-csharp[Trin_VstcoreDataExcel#18](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs#18)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet2.vb" id="Snippet18":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet2.cs" id="Snippet18":::
 
 ## <a name="test-the-application"></a>Testování aplikace
  Nyní můžete testovat sešit, abyste se ujistili, že se data zobrazují podle očekávání a že je možné použít řešení offline.

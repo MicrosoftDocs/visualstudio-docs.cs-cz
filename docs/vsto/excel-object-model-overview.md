@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a49dcc36d4079a6a945806b3112e3949ddcd79e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 509378b13e48f21a1148d700addd9ac4e78985e9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910296"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825690"
 ---
 # <a name="excel-object-model-overview"></a>Přehled modelu objektů aplikace Excel
   Pro vývoj řešení, která používají systém Microsoft Office Excel, můžete pracovat s objekty poskytovanými modelem objektu aplikace Excel. V tomto tématu se seznámíte s nejdůležitějšími objekty:
@@ -50,21 +50,21 @@ ms.locfileid: "99910296"
   Toto téma poskytuje stručný přehled modelu objektů aplikace Excel. Prostředky, ve kterých se můžete dozvědět více o celém modelu objektů aplikace Excel, naleznete v [dokumentaci k objektovému modelu aplikace Excel](#ExcelOMDocumentation).
 
 ## <a name="access-objects-in-an-excel-project"></a>Přístup k objektům v projektu aplikace Excel
- Když vytvoříte nový projekt doplňku VSTO pro Excel, Visual Studio automaticky vytvoří soubor kódu *ThisAddIn. vb* nebo *ThisAddIn.cs* . K objektu aplikace můžete přistupovat pomocí `Me.Application` nebo `this.Application` .
+ Když vytvoříte nový projekt doplňku VSTO pro Excel, Visual Studio automaticky vytvoří soubor kódu *ThisAddIn. vb* nebo *ThisAddIn. cs* . K objektu aplikace můžete přistupovat pomocí `Me.Application` nebo `this.Application` .
 
  Při vytváření nového projektu na úrovni dokumentu pro aplikaci Excel máte možnost vytvořit nový sešit aplikace Excel nebo projekt excelové šablony. Visual Studio automaticky vytvoří následující soubory kódu v novém projektu aplikace Excel pro sešit i šablony projektů.
 
 |Visual Basic|C#|
 |------------------|---------|
-|ThisWorkbook. vb|ThisWorkbook.cs|
-|List1. vb|Sheet1.cs|
-|List2. vb|Sheet2.cs|
-|Sheet3. vb|Sheet3.cs|
+|ThisWorkbook. vb|ThisWorkbook. cs|
+|List1. vb|List1. cs|
+|List2. vb|List2. cs|
+|Sheet3. vb|Sheet3. cs|
 
  `Globals`Třídu v projektu můžete použít k přístupu `ThisWorkbook` , `Sheet1` , `Sheet2` nebo `Sheet3` mimo příslušné třídy. Další informace najdete v tématu [globální přístup k objektům v projektech Office](../vsto/global-access-to-objects-in-office-projects.md). Následující příklad volá <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A> metodu bez ohledu na to, `Sheet1` zda je kód umístěn v jedné z `Sheet` tříd *n* nebo `ThisWorkbook` třídy.
 
- [!code-csharp[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#82)]
- [!code-vb[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#82)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet82":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet82":::
 
  Vzhledem k tomu, že jsou data v excelovém dokumentu vysoce strukturovaná, objektový model je hierarchický a jednoduchý. Excel poskytuje stovky objektů, se kterými můžete chtít pracovat, ale můžete získat dobrý začátek na objektovém modelu tím, že se zaměříte na malou podmnožinu dostupných objektů. Mezi tyto objekty patří následující čtyři:
 

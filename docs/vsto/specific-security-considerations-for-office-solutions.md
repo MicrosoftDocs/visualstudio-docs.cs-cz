@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 57b330884ef6638e5c853cfb5670e3552aca46cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 58cd5f7a26be57ce0cb742e153d88ee455b2f85b
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940823"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826106"
 ---
 # <a name="specific-security-considerations-for-office-solutions"></a>Konkrétní požadavky na zabezpečení pro řešení Office
   Funkce zabezpečení poskytované Microsoftem .NET Framework a systém Microsoft Office můžou pomáhat chránit vaše řešení pro Office proti možným bezpečnostním hrozbám. Toto téma vysvětluje některé z těchto hrozeb a poskytuje doporučení, která jim pomůžou s jejich ochranou. Obsahuje také informace o tom, jak systém Microsoft Office nastavení zabezpečení ovlivňují řešení Office.
@@ -67,13 +67,13 @@ ms.locfileid: "99940823"
 
  Následující příklad kódu zobrazí upozornění zabezpečení, pokud je povoleno ochrany objektového modelu. `To`Vlastnost `Microsoft.Office.Interop.Outlook.MailItem` třídy je omezená ochranou objektového modelu. `Microsoft.Office.Interop.Outlook.MailItem`Objekt je nedůvěryhodný, protože kód získá z objektu `Microsoft.Office.Interop.Outlook.Application` , který je vytvořen pomocí operátoru **New** namísto jeho získání z `Application` pole.
 
- [!code-csharp[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#1)]
- [!code-vb[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb" id="Snippet1":::
 
  Následující příklad kódu ukazuje, jak použít vlastnost omezit na `Microsoft.Office.Interop.Outlook.MailItem` objekt, který je důvěryhodný pro ochranu objektového modelu. Kód používá důvěryhodné `Application` pole k získání `Microsoft.Office.Interop.Outlook.MailItem` .
 
- [!code-csharp[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#2)]
- [!code-vb[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#2)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs" id="Snippet2":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb" id="Snippet2":::
 
 > [!NOTE]
 > Pokud se aplikace Outlook používá se serverem Exchange, pak při získání všech objektů Outlook z `ThisAddIn.Application` nezaručuje, že doplněk VSTO bude mít přístup k celému objektovému modelu aplikace Outlook. Pokud například správce serveru Exchange nastaví Outlook tak, aby automaticky zamítl všechny pokusy o přístup k informacím o adrese pomocí objektového modelu aplikace Outlook, pak Outlook nedovolí předchozímu příkladu kódu přistupovat k vlastnosti k, i když příklad kódu používá důvěryhodné `ThisAddIn.Application` pole.

@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: d411465869cc960631063d09752d38536af94119
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 5c965fd73f63906f7a1e055ae5ff051eebab19d5
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683612"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828810"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Začínáme s funkcí Live Unit Testing
 
@@ -82,7 +82,41 @@ Teď, když jste vytvořili řešení, vytvoříte knihovnu tříd s názvem Str
 
 5. Nahraďte veškerý existující kód v editoru kódu následujícím kódem:
 
-   [!code-csharp[StringLibrary source code](samples/csharp/utilitylibraries/stringlibrary/class1.cs)]
+   ```csharp
+   using System;
+
+   namespace UtilityLibraries
+   {
+       public static class StringLibrary
+       {
+           public static bool StartsWithUpper(this string s)
+           {
+               if (String.IsNullOrWhiteSpace(s))
+                   return false;
+
+               return Char.IsUpper(s[0]);
+           }
+
+           public static bool StartsWithLower(this string s)
+           {
+               if (String.IsNullOrWhiteSpace(s))
+                   return false;
+
+               return Char.IsLower(s[0]);
+           }
+
+           public static bool HasEmbeddedSpaces(this string s)
+           {
+               foreach (var ch in s.Trim())
+               {
+                   if (ch == ' ')
+                       return true;
+               }
+               return false;
+           }
+       }
+   }
+   ```
 
    StringLibrary má tři statické metody:
 
@@ -140,7 +174,59 @@ Dalším krokem je vytvoření projektu testu jednotek pro otestování knihovny
 
 6. Nahraďte kód pro standardní testování částí poskytovaný šablonou následujícím kódem:
 
-   [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest1.cs)]
+   ```csharp
+   using System;
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
+   using UtilityLibraries;
+
+   namespace StringLibraryTest
+   {
+       [TestClass]
+       public class UnitTest1
+       {
+           [TestMethod]
+           public void TestStartsWithUpper()
+           {
+               // Tests that we expect to return true.
+               string[] words = { "Alphabet", "Zebra", "ABC", "Αθήνα", "Москва" };
+               foreach (var word in words)
+               {
+                   bool result = word.StartsWithUpper();
+                   Assert.IsTrue(result,
+                                 $"Expected for '{word}': true; Actual: {result}");
+               }
+           }
+
+           [TestMethod]
+           public void TestDoesNotStartWithUpper()
+           {
+               // Tests that we expect to return false.
+               string[] words = { "alphabet", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
+                                  "1234", ".", ";", " " };
+               foreach (var word in words)
+               {
+                   bool result = word.StartsWithUpper();
+                   Assert.IsFalse(result,
+                                  $"Expected for '{word}': false; Actual: {result}");
+               }
+           }
+
+           [TestMethod]
+           public void DirectCallWithNullOrEmpty()
+           {
+               // Tests that we expect to return false.
+               string[] words = { String.Empty, null };
+               foreach (var word in words)
+               {
+                   bool result = StringLibrary.StartsWithUpper(word);
+                   Assert.IsFalse(result,
+                                  $"Expected for '{(word == null ? "<null>" : word)}': " +
+                                  $"false; Actual: {result}");
+               }
+           }
+       }
+   }
+   ```
 
 7. Uložte projekt výběrem ikony **Uložit** na panelu nástrojů.
 
@@ -162,7 +248,7 @@ Vytvořili jste knihovnu tříd a také některé testy jednotek pro ni. Nyní j
 
 Zatím i když jste napsali testy pro knihovnu tříd StringLibrary, neudělali jste je. Po povolení je Live Unit Testing spustí automaticky. Uděláte to takto:
 
-1. Volitelně můžete vybrat okno editoru kódu, které obsahuje kód pro StringLibrary. Toto je buď *Class1.cs* pro projekt C# nebo *Class1. vb* pro projekt Visual Basic. (Tento krok vám umožní vizuální kontrolu výsledku testů a rozsahu pokrytí kódu, když povolíte Live Unit Testing.)
+1. Volitelně můžete vybrat okno editoru kódu, které obsahuje kód pro StringLibrary. To je buď *Class1. cs* pro projekt C# nebo *Class1. vb* pro Visual Basic projekt. (Tento krok vám umožní vizuální kontrolu výsledku testů a rozsahu pokrytí kódu, když povolíte Live Unit Testing.)
 
 1.   >    >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte test Live Unit Testing **Spustit** .
 
@@ -173,8 +259,8 @@ Po dokončení testů v **Průzkumníku testů** se zobrazí celkové výsledky 
 
 ![Průzkumník testů a okno editoru kódu po spuštění služby Live Unit Testing](media/lut-start/lut-results-cs.png)
 ::: moniker-end
-::: moniker range=">=vs-2019"
-Když nástroj dokončí testy, **Live Unit Testing** zobrazí celkové výsledky a výsledek jednotlivých testů. Kromě toho okno editoru kódu graficky zobrazuje jak pokrytí testovacího kódu, tak i výsledek pro vaše testy. Jak ukazuje následující obrázek, všechny tři testy byly úspěšně provedeny. Ukazuje také, že naše testy pokryly všechny cesty kódu v `StartsWithUpper` metodě a že všechny testy byly úspěšně spuštěny (což je označeno zelenou značkou zaškrtnutí "✓"). Nakonec ukazuje, že žádná z ostatních metod v StringLibrary nemá pokrytí kódu (což je označeno modrou čárou "➖").
+::: moniker range=">=vs-2019&quot;
+Když nástroj dokončí testy, **Live Unit Testing** zobrazí celkové výsledky a výsledek jednotlivých testů. Kromě toho okno editoru kódu graficky zobrazuje jak pokrytí testovacího kódu, tak i výsledek pro vaše testy. Jak ukazuje následující obrázek, všechny tři testy byly úspěšně provedeny. Ukazuje také, že naše testy pokryly všechny cesty kódu v `StartsWithUpper` metodě a že všechny testy byly úspěšně spuštěny (což je označeno zelenou značkou zaškrtnutí &quot;✓"). Nakonec ukazuje, že žádná z ostatních metod v StringLibrary nemá pokrytí kódu (což je označeno modrou čárou "➖").
 
 ![Okno Live Test Exploreru a editoru kódu po spuštění služby Live Unit Testing](media/lut-start/vs-2019/lut-results-cs.png)
 ::: moniker-end
@@ -199,11 +285,11 @@ Chcete-li rozšíření pokrytí kódu k `StartsWithLower` metodě, postupujte n
 
 1. `TestStartsWithLower` `TestDoesNotStartWithLower` Do souboru zdrojového kódu testu projektu přidejte následující metody a:
 
-    [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#1)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet1":::
 
 1. Upravte `DirectCallWithNullOrEmpty` metodu přidáním následujícího kódu hned za volání [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) metody.
 
-    [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#2)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet2":::
 
 1. Live Unit Testing automaticky spouští nové a upravené testy při úpravě zdrojového kódu. Jak ukazuje následující obrázek, všechny testy, včetně dvou přidaných a těch, které jste změnili, byly úspěšné.
 
@@ -228,7 +314,7 @@ V této části se seznámíte s tím, jak můžete pomocí Live Unit Testing id
 
 1. Do testovacího souboru přidejte následující metodu:
 
-    [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/unittest2.cs#3)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet3":::
 
 1. Když se test spustí, Live Unit Testing označuje, že `TestHasEmbeddedSpaces` metoda se nezdařila, jak ukazuje následující obrázek:
 
@@ -275,7 +361,7 @@ To poskytuje dostatek informací pro předběžné šetření chyby. Buď `TestH
 
 1. Nahraďte porovnání rovnosti voláním <xref:System.Char.IsWhiteSpace%2A?displayProperty=fullName> metody:
 
-    [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/program2.cs#1)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/program2.cs" id="Snippet1":::
 
 1. Live Unit Testing automaticky znovu spustí testovací metodu, která se nezdařila.
 

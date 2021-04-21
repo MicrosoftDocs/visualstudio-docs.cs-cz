@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6fd35551c5c40494c169fb569113e3530f633a6f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dce8bb0667cecbe073c734595d341f9c7b7ccac9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940797"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826080"
 ---
 # <a name="threading-support-in-office"></a>Podpora práce s vlákny v systému Office
   Tento článek poskytuje informace o tom, jak je v objektovém modelu systém Microsoft Office podporován dělení na vlákna. Objektový model Office není bezpečný pro přístup z více vláken, ale je možné pracovat s více vlákny v řešení Office. Aplikace Office jsou servery modelu COM (Component Object Model). Model COM umožňuje klientům volat servery COM na libovolných vláknech. U serverů COM, které nejsou vláknově bezpečné, poskytuje model COM mechanizmus pro serializaci souběžných volání, aby se na serveru mohl kdykoli provést pouze jedno logické vlákno. Tento mechanismus je známý jako model STA (Single-threaded Apartment). Vzhledem k tomu, že volání jsou serializována, volající mohou být blokovány po dobu, kdy je server zaneprázdněný nebo zpracovává jiné volání ve vlákně na pozadí.
@@ -65,8 +65,8 @@ ms.locfileid: "99940797"
 ## <a name="start-the-thread-correctly"></a>Správné spuštění vlákna
  Při vytváření nového vlákna STA nastavte stav bytu na STA předtím, než spustíte vlákno. Následující příklad kódu ukazuje, jak to provést.
 
- [!code-csharp[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/ThisWorkbook.cs#5)]
- [!code-vb[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/ThisWorkbook.vb#5)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/ThisWorkbook.cs" id="Snippet5":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/ThisWorkbook.vb" id="Snippet5":::
 
  Další informace najdete v tématu [osvědčené postupy pro spravované vlákno](/dotnet/standard/threading/managed-threading-best-practices).
 

@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 63b50e020efa549993e36dbd5b43504467e554a6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 73844d19ef6bb85c623706ab0d359836e42a3b14
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908607"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828737"
 ---
 # <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>Postupy: přidávání hlaviček a zápatí do dokumentů prostřednictvím kódu programu
   Do hlaviček a zápatí v dokumentu můžete přidat text pomocí <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> vlastnosti a <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> vlastnosti <xref:Microsoft.Office.Interop.Word.Section> . Každý oddíl dokumentu obsahuje tři záhlaví a zápatí:
@@ -45,15 +45,15 @@ ms.locfileid: "99908607"
 
 1. Následující příklad kódu nastaví písmo textu, který má být vložen do primárního zápatí každého oddílu dokumentu, a poté vloží text do zápatí.
 
-     [!code-vb[Trin_VstcoreWordAutomation#114](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#114)]
-     [!code-csharp[Trin_VstcoreWordAutomation#114](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#114)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet114":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet114":::
 
 ### <a name="to-add-text-to-headers-in-the-document"></a>Přidání textu do záhlaví v dokumentu
 
 1. Následující příklad kódu přidá pole pro zobrazení čísla stránky v jednotlivých hlavičkách v dokumentu a pak nastaví zarovnání odstavce tak, aby text byl zarovnán napravo od záhlaví.
 
-     [!code-vb[Trin_VstcoreWordAutomation#116](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#116)]
-     [!code-csharp[Trin_VstcoreWordAutomation#116](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#116)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet116":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet116":::
 
 ## <a name="vsto-add-ins"></a>Doplňky VSTO
  Chcete-li použít následující příklady kódu, spusťte je z `ThisAddIn` třídy v projektu.
@@ -62,15 +62,15 @@ ms.locfileid: "99908607"
 
 1. Následující příklad kódu nastaví písmo textu, který má být vložen do primárního zápatí každého oddílu dokumentu, a poté vloží text do zápatí. Tento příklad kódu používá aktivní dokument.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#114](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#114)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#114](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#114)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet114":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet114":::
 
 ### <a name="to-add-text-to-headers-in-the-document"></a>Přidání textu do záhlaví v dokumentu
 
 1. Následující příklad kódu přidá pole pro zobrazení čísla stránky v jednotlivých hlavičkách v dokumentu a pak nastaví zarovnání odstavce tak, aby text byl zarovnán napravo od záhlaví. Tento příklad kódu používá aktivní dokument.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#116](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#116)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#116](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#116)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet116":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet116":::
 
 ## <a name="see-also"></a>Viz také
 - [Postupy: vytváření nových dokumentů prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-documents.md)

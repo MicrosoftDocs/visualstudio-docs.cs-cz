@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7de75a1846aa7261a723c87297511b7461c49f47
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: af327a6756189c73f80f624205451274abf19264
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885505"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828667"
 ---
 # <a name="how-to-programmatically-display-worksheet-comments"></a>Postupy: zobrazování komentářů v listech prostřednictvím kódu programu
   Komentáře můžete programově zobrazovat a skrývat v systém Microsoft Office listech aplikace Excel.
@@ -31,15 +31,15 @@ ms.locfileid: "99885505"
 
 1. Nastavte <xref:Microsoft.Office.Interop.Excel.Comment.Visible%2A> vlastnost na **hodnotu true** , pokud chcete zobrazit komentáře. v opačném případě **false**. Tento kód musí být umístěn ve třídě listu, nikoli ve `ThisWorkbook` třídě.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#31](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#31)]
-     [!code-vb[Trin_VstcoreExcelAutomation#31](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#31)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet31":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet31":::
 
 ## <a name="to-display-all-comments-on-a-worksheet-in-an-application-level-vsto-add-in"></a>Zobrazení všech komentářů na listu v doplňku VSTO na úrovni aplikace
 
 1. Nastavte <xref:Microsoft.Office.Interop.Excel.Comment.Visible%2A> vlastnost na **hodnotu true** , pokud chcete zobrazit komentáře. v opačném případě **false**.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#21](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#21)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#21](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#21)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet21":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet21":::
 
 ## <a name="see-also"></a>Viz také
 - [Práce s listy](../vsto/working-with-worksheets.md)
