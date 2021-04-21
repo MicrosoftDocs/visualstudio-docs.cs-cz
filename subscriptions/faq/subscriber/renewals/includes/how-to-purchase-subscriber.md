@@ -6,13 +6,13 @@ ms.topic: include
 ms.assetid: 5b27454c-f036-4f4d-9d67-54d1fc775f72
 author: CaityBuschlen
 ms.author: cabuschl
-ms.date: 01/12/2021
-ms.openlocfilehash: bb436cfdff0f6783d041858430b4fd9864ceb569
-ms.sourcegitcommit: cfeffe2364275a347db0ba2dce36d8e80001c081
+ms.date: 04/20/2021
+ms.openlocfilehash: cdacf4bb150d4fb836b4c7088f80f63e738aea15
+ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99104500"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107800885"
 ---
 ## <a name="how-do-i-purchase-visual-studio-subscriptions"></a>Jak si můžu předplatná sady Visual Studio koupit?
 
@@ -27,6 +27,8 @@ Maloobchodní předplatná sady Visual Studio dostupná přes Microsoft Store:
 - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab) 
 
 Každé z těchto předplatných nabízí možnost provést počáteční nákup nebo obnovit existující předplatné. Ceny za prodloužení zahrnují významnou slevu a jsou dostupné jen pro existující předplatná. Nárok na prodloužení předplatných za sníženou cenu vzniká jen v případě jejich prodloužení před koncem platnosti. 
+
+Pokud se chystáte udělat jednorázovou koupi sady Visual Studio bez předplatného nebo jakékoli výhody, které jsou součástí předplatného, navštivte Microsoft Store [Visual Studio Professional 2019](https://www.microsoft.com/p/visual-studio-professional-2019/dg7gmgf0f6q1?cid=msft_web_collection&activetab=pivot%3aoverviewtab). 
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace 
 Visual Studio a Azure DevOps si můžete pronajímat bez dlouhodobé smlouvy, a to formou měsíčních předplatných. Vyúčtování bude probíhat prostřednictvím vašeho předplatného Microsoft Azure. Pokud ještě nemáte předplatné Azure, můžete si ho zřídit zdarma – a to i v rámci prvního nákupu.  

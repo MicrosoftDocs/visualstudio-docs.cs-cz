@@ -1,7 +1,7 @@
 ---
 title: Aktualizace síťové instalace
 description: Naučte se aktualizovat instalaci sady Visual Studio na základě sítě pomocí příkazu--layout.
-ms.date: 04/06/2021
+ms.date: 04/16/2021
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0f6e13333b6cab86f6485ddc18516039c712455a
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 0400f4be06afab2326ac738e1ac15f9d93a6ecee
+ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295946"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107800782"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Aktualizace síťové instalace sady Visual Studio
 
@@ -29,9 +29,9 @@ Je možné aktualizovat rozložení instalace sítě sady Visual Studio s nejnov
 ## <a name="how-to-update-a-network-layout"></a>Postup aktualizace rozložení sítě
 
 > [!IMPORTANT]
-> V těchto pokynech se předpokládá, že jste dříve vytvořili rozložení instalace sítě. Další informace o tom, jak to udělat, najdete na stránce [Vytvoření síťové instalace sady Visual Studio](create-a-network-installation-of-visual-studio.md) .
+> V těchto pokynech se předpokládá, že jste dříve vytvořili rozložení instalace sítě a udělali si rozhodnutí o tom, jak má klient získat aktualizace. Další informace o tom, jak to provést, najdete v tématu [Vytvoření síťové instalace sady Visual Studio](create-a-network-installation-of-visual-studio.md) a [aktualizace ovládacího prvku na stránce nasazení sady Visual Studio](../install/controlling-updates-to-visual-studio-deployments.md) .
 
-Chcete-li aktualizovat sdílenou síťovou instalaci tak, aby obsahovala nejnovější aktualizace, spusťte `--layout` příkaz pro přírůstkové stažení aktualizovaných balíčků.
+Chcete-li aktualizovat sdílenou síťovou instalaci tak, aby obsahovala nejnovější aktualizace, spusťte zaváděcí nástroj pomocí `--layout` parametru a stáhněte aktualizované balíčky.
 
 Pokud jste při [prvním vytvoření rozložení sítě](create-a-network-installation-of-visual-studio.md)vybrali částečné rozložení, tato nastavení se uloží. Jakékoli budoucí příkazy rozložení používají předchozí možnosti a všechny nové možnosti, které zadáte.
 

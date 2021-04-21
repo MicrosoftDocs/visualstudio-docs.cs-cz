@@ -2,31 +2,31 @@
 title: Použití aktualizací správců v aplikaci Visual Studio s koncovým bodem Microsoft Configuration Manager
 titleSuffix: ''
 description: Naučte se, jak použít aktualizace správce v aplikaci Visual Studio.
-ms.date: 04/07/2021
+ms.date: 04/16/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 9a3fdb28-db3d-4970-bc17-7417a985f0fb
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4df931ee5eb5eaefdf6d918ff05df65b799bef7e
-ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
+ms.openlocfilehash: d7d2950b9495846693d5edee7790b8611cbca170
+ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107031603"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107800786"
 ---
 # <a name="applying-administrator-updates-that-use-microsoft-endpoint-configuration-manager"></a>Použití aktualizací správce využívajících Microsoft Endpoint Configuration Manager
 
-Tento dokument popisuje různé typy a charakteristiky aktualizací pro správce sady Visual Studio. Níže najdete informace o tom, jak a kdy by se měly distribuovat v celé organizaci, jaké možnosti konfigurace jsou k dispozici a jak zobrazit sestavy a řešit potíže. Další informace o požadavcích na použití aktualizací správců najdete v tématu [Povolení aktualizací správců](../install/enabling-administrator-updates.md).
+Tento dokument popisuje různé typy a charakteristiky aktualizací pro správce sady Visual Studio. Níže najdete informace o tom, jak a kdy by se měly distribuovat v celé organizaci, jaké možnosti konfigurace jsou k dispozici a jak zobrazit sestavy a řešit potíže. Další informace o požadavcích na použití aktualizací správců najdete v tématu [Povolení aktualizací správců](../install/enabling-administrator-updates.md). Aktualizace správců předpokládá, že je v počítači již nainstalována aplikace Visual Studio. Při použití aktualizací správce se nespustí zcela nová instalace.
 
 ## <a name="understanding-visual-studio-administrator-updates"></a>Principy aktualizací pro správce sady Visual Studio 
 
-Balíček aktualizace pro správce sady Visual Studio, který je publikovaný do Microsoft Update pro použití v katalogu Microsoft a WSUS, obsahuje informace, které Configuration Manager potřebuje ke stažení a distribuci aktualizace do sady Visual Studio do klientských počítačů. Obsahuje taky informace, které správce IT potřebuje k rozhodnutí, které aktualizace se mají distribuovat v celé organizaci, a usnadňuje údržbu rozložení sítě. Balíčky aktualizací pro správce sady Visual Studio neobsahují dostatek informací, aby bylo možné provést novou instalaci produktu, ani neobsahují žádné ze skutečných binárních souborů produktu, které jsou publikovány na Content Delivery Network. Aktualizace správců sady Visual Studio jsou kumulativní, stejně jako běžné aktualizace sady Visual Studio. Můžete předpokládat, že jakákoli aktualizace sady Visual Studio, která má vyšší číslo verze produktu a pozdější datum vydání, je nadmnožinou starší, nižší verze. 
+Balíček aktualizace pro správce sady Visual Studio, který je publikovaný do Microsoft Update pro použití v katalogu Microsoft a WSUS, obsahuje informace, které Configuration Manager potřebuje ke stažení a distribuci aktualizace sady Visual Studio do klientských počítačů. Obsahuje taky informace, které správce IT potřebuje k tomu, aby se rozhodlo, které aktualizace se budou distribuovat v celé organizaci. Dá se použít i k usnadnění údržby rozložení sítě. Balíčky aktualizací pro správce sady Visual Studio neobsahují dostatek informací, aby bylo možné provést novou instalaci produktu, ani neobsahují žádné ze skutečných binárních souborů produktu, které jsou publikovány na Content Delivery Network. Aktualizace správců sady Visual Studio jsou kumulativní, stejně jako běžné aktualizace sady Visual Studio. Můžete předpokládat, že jakákoli aktualizace sady Visual Studio, která má vyšší číslo verze produktu a pozdější datum vydání, je nadmnožinou starší, nižší verze. 
 
 Aktualizace správců sady Visual Studio se vztahují na verze údržby sady Visual Studio, které jsou v rámci podpory. Další informace o tom, které standardní hodnoty údržby sady Visual Studio jsou stále v podpoře během konkrétního časového období, najdete v tématu [životní cyklus a údržba produktu Visual](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs)Studio. Všechny podporované standardní hodnoty údržby sady Visual Studio budou udržovány v bezpečí.  
 
