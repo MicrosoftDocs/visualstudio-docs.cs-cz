@@ -2,7 +2,7 @@
 title: Přizpůsobení souborů projektu vytvořených pomocí VSTU | Microsoft Docs
 description: Naučte se přizpůsobit soubory projektu vytvořené pomocí Visual Studio Tools for Unity (VSTU). Zkontrolujte příklad kódu jazyka C#.
 ms.custom: ''
-ms.date: 07/26/2018
+ms.date: 04/19/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,64 +12,38 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 071dc7a9f12dcfeb5fff9e59bbbf34dc64f61cf5
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: a4a5973863877db2d071f9be8d4689928b21a689
+ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94341688"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107879314"
 ---
 # <a name="customize-project-files-created-by-vstu"></a>Přizpůsobení souborů projektu vytvořených pomocí VSTU
-Visual Studio Tools for Unity poskytuje zpětné volání ve stylu Unity během generování souboru projektu. Zaregistrujte se s `VisualStudioIntegration.ProjectFileGeneration` událostí pro úpravu souboru projektu pokaždé, když se znovu vygeneruje.
+Unity poskytuje zpětná volání během generování souboru projektu. Implementujte `OnGeneratedSlnSolution` metody a a `OnGeneratedCSProject` použijte [`AssetPostprocessor`](https://docs.unity3d.com/ScriptReference/AssetPostprocessor.html) k úpravě souboru projektu nebo řešení, kdykoli je znovu vygenerován.
 
 ## <a name="demonstrates"></a>Demonstruje
- Jak přizpůsobit soubory projektu sady Visual Studio vygenerované Visual Studio Tools for Unity.
+Jak přizpůsobit soubory projektu sady Visual Studio vygenerované Visual Studio Tools for Unity.
 
 ## <a name="example"></a>Příklad
 
 ```csharp
-#if ENABLE_VSTU
 using System;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml.Linq;
-
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
-using SyntaxTree.VisualStudio.Unity.Bridge;
-
-[InitializeOnLoad]
-public class ProjectFileHook
+public class ProjectFilePostprocessor : AssetPostprocessor
 {
-    // necessary for XLinq to save the xml project file in utf8
-    class Utf8StringWriter : StringWriter
-    {
-        public override Encoding Encoding
-        {
-            get { return Encoding.UTF8; }
-        }
-    }
+  public static string OnGeneratedSlnSolution(string path, string content)
+  {
+    // TODO: process solution content
+    return content;
+  }
 
-    static ProjectFileHook()
-    {
-        ProjectFilesGenerator.ProjectFileGeneration += (string name, string content) =>
-        {
-            // parse the document and make some changes
-            var document = XDocument.Parse(content);
-            document.Root.Add(new XComment("FIX ME"));
-
-            // save the changes using the Utf8StringWriter
-            var str = new Utf8StringWriter();
-            document.Save(str);
-
-            return str.ToString();
-        };
-    }
+  public static string OnGeneratedCSProject(string path, string content)
+  {
+    // TODO: process project content
+    return content;
+  }
 }
-#endif
 ```
-
-## <a name="see-also"></a>Viz také
- [Příklad: zpětné volání protokolu](/cross-platform/share-the-unity-log-callback-with-vstu.md)

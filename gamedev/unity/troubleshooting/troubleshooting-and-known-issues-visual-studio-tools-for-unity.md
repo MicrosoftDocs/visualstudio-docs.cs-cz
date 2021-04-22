@@ -2,7 +2,7 @@
 title: Řešení potíží a známé problémy (nástroje VS Tools for Unity)
 description: Přečtěte si informace o řešení potíží v Visual Studio Tools for Unity. Podívejte se na popisy známých problémů a seznamte se s řešeními těchto problémů.
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 04/15/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: troubleshooting
@@ -12,12 +12,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: e447c8cb94e536aeed9e01d00098fe4a98c6c006
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 37ee35fa66d37f9b85af01f5012e8ede76e877de
+ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94341611"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107879366"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Řešení potíží a známé problémy (Visual Studio Tools for Unity)
 
@@ -25,9 +25,15 @@ V této části najdete řešení běžných potíží s Visual Studio Tools for
 
 ## <a name="troubleshooting-the-connection-between-unity-and-visual-studio"></a>Řešení potíží s připojením mezi Unity a Visual Studio
 
-### <a name="confirm-editor-attaching-is-enabled"></a>Potvrďte, že připojení editoru je povolené.
+### <a name="confirm-editor-attaching-is-enabled-or-code-optimization-on-startup-is-set-to-debug"></a>Potvrzení `Editor Attaching` je povolené nebo `Code Optimization On Startup` je nastavené na. `Debug`
 
-V nabídce Unity vyberte **upravit > předvolby** a pak vyberte kartu **externí nástroje** . Ověřte, že je zaškrtnuté políčko **připojení editoru** . Další informace najdete v dokumentaci k [preferenceem Unity](https://docs.unity3d.com/Manual/Preferences.html).
+V nabídce Unity vyberte `Edit / Preferences` .
+
+V závislosti na použité verzi Unity:
+- Potvrďte, že `Code Optimization On Startup` je nastavená na `Debug` .
+- Nebo vyberte `External Tools` kartu. Potvrďte, že `Editor Attaching` je zaškrtávací políčko povoleno. 
+
+Další informace najdete v dokumentaci k [preferenceem Unity](https://docs.unity3d.com/Manual/Preferences.html).
 
 ### <a name="unable-to-attach"></a>Nelze se připojit
 
@@ -60,11 +66,22 @@ Pro FMOD – existuje alternativní řešení, pomocí kterého můžete předat
 
 ## <a name="incompatible-project-in-visual-studio"></a>Nekompatibilní projekt v aplikaci Visual Studio
 
-Nejdřív ověřte, že je sada Visual Studio nastavená jako váš externí editor skriptu v Unity (upravit/předvolby/externí nástroje). Potom zkontrolujte, jestli je modul plug-in sady Visual Studio nainstalovaný v Unity (v části help/o se musí zobrazit zpráva, například Microsoft Visual Studio nástroje pro Unity je v dolní části povolená). Pak zkontrolujte, jestli je rozšíření správně nainstalované v aplikaci Visual Studio (pomoc/o).
+Velmi důležitou věcí je, že Visual Studio ukládá "nekompatibilní" stav v nastavení projektu a nepokusí se znovu načíst projekt, dokud jej nepoužijete explicitně `Reload Project` . Takže po každém kroku řešení potíží se ujistěte, že se pokusíte znovu otevřít řešení a zkusit kliknout pravým tlačítkem na všechny nekompatibilní projekty a vybrat `Reload Project` .
+
+1. Ověřte, že sada Visual Studio je nastavená jako váš externí editor skriptů v Unity pomocí `Edit / Preferences / External Tools` .
+2. V závislosti na vaší verzi Unity:
+   - Ověřte, že je v Unity nainstalovaný modul plug-in Visual Studio. `Help / About` měla by se zobrazit zpráva, například Microsoft Visual Studio nástroje pro Unity, je v dolní části povolená.
+   - Unity 2020. x +: Ověřte, že používáte nejnovější balíček editoru sady Visual Studio v `Window / Package Manager` .
+3. Zkuste odstranit všechny projekty nebo soubory řešení a `.vs` složku v projektu.
+4. Zkuste znovu vytvořit projekty nebo řešení pomocí `Open C# Project` nebo `Edit / Preferences / External tools / Regenerate Project files` .
+5. Ujistěte se, že jste nainstalovali úlohu hry/Unity v nástroji Visual Studio.
+6. Zkuste vyčistit mezipaměť MEF, jak je popsáno [zde](#visual-studio-crashes).
+7. Zkuste znovu nainstalovat Visual Studio (jenom pomocí úlohy hry/Unity).
+8. Zkuste zakázat rozšíření jiných výrobců v případě, že by mohlo narušit rozšíření Unity v nástroji `Tools / Extensions` .
 
 ## <a name="extra-reloads-or-visual-studio-losing-all-open-windows"></a>Další opětovné načtení nebo aplikace Visual Studio ztratí všechna otevřená okna
 
-Ujistěte se, že soubory projektu nemusíte upravovat přímo z procesoru assetů nebo jiného nástroje. Pokud skutečně potřebujete manipulovat se souborem projektu, zveřejňujeme pro něj rozhraní API. Podívejte se prosím do [oddílu problémy s odkazy na sestavení](#assembly-reference-issues).
+Ujistěte se, že soubory projektu nemusíte upravovat přímo z procesoru assetů nebo jiného nástroje. Pokud skutečně potřebujete manipulovat se souborem projektu, zveřejňujeme pro něj rozhraní API. Podívejte se prosím do [oddílu problémy s odkazy na sestavení](#assembly-reference-or-project-property-issues).
 
 Pokud se objeví další opakované načítání nebo pokud Visual Studio ztratí při opětovném spuštění všechny otevřené systémy Windows, ujistěte se, že máte nainstalované správné sady .NET targeting pack. Další informace najdete v následující části o rozhraních.
 
@@ -78,13 +95,15 @@ V okně nastavení výjimky (ladění > > nastavení výjimek) rozbalte uzel pro
 
 ## <a name="on-windows-visual-studio-asks-to-download-the-unity-target-framework"></a>Ve Windows se Visual Studio zeptá na stažení cílové architektury Unity.
 
-Visual Studio Tools for Unity vyžaduje rozhraní .NET Framework 3,5, které není ve výchozím nastavení nainstalované ve Windows 8 nebo 10. Chcete-li tento problém vyřešit, postupujte podle pokynů ke stažení a instalaci rozhraní .NET Framework 3,5.
+Pokud používáte starší verzi prostředí Unity runtime (.NET 3,5 ekvivalentní), Visual Studio Tools for Unity vyžaduje rozhraní .NET Framework 3,5, které není ve výchozím nastavení nainstalované ve Windows 8 nebo 10. Chcete-li tento problém vyřešit, postupujte podle pokynů ke stažení a instalaci rozhraní .NET Framework 3,5.
 
-Při použití nového modulu runtime Unity se vyžadují i sady .NET Targeting Packs verze 4,6 a 4.7.1. Pomocí instalačního programu VS2017 je možné rychle nainstalovat (změnit instalaci VS2017, jednotlivé komponenty, kategorii .NET, vybrat všechny 4. x cílené sady).
+Při použití nového modulu runtime Unity se v závislosti na verzi Unity taky vyžadují sady .NET Targeting Packs verze 4,6 nebo 4.7.1. Je možné pomocí instalačního programu sady Visual Studio rychle nainstalovat (upravit instalaci, jednotlivé komponenty, kategorii .NET, vybrat všechny 4. x cílené sady).
 
-## <a name="assembly-reference-issues"></a>Problémy s odkazem na sestavení
+## <a name="assembly-reference-or-project-property-issues"></a>Problémy s odkazem na sestavení nebo vlastností projektu
 
-Pokud je projekt složitým odkazem nebo pokud chcete lepší kontrolu nad tímto krokem generace, můžete použít naše [rozhraní API](/cross-platform/customize-project-files-created-by-vstu.md) pro manipulaci s generovaným obsahem projektu nebo řešení. V projektu Unity můžete také použít [soubory odpovědí](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) a my je zpracujeme.
+Pokud je projekt složitým odkazem nebo pokud chcete lepší kontrolu nad tímto krokem generace, můžete použít naše [rozhraní API](../extensibility/customize-project-files-created-by-vstu.md) pro manipulaci s generovaným obsahem projektu nebo řešení. V projektu Unity můžete také použít [soubory odpovědí](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) a my je zpracujeme.
+
+S nejnovější verzí sady Visual Studio a Unity je nejlepší přístup k použití vlastního `Directory.Build.props` souboru spolu s generovanými projekty. Pak budete moci přispívat do struktury projektu bez narušování procesu generování. Další informace najdete [tady](https://docs.microsoft.com/visualstudio/msbuild/customize-your-build#directorybuildprops-and-directorybuildtargets).
 
 ## <a name="breakpoints-with-a-warning"></a>Zarážky s upozorněním
 
@@ -92,7 +111,7 @@ Pokud Visual Studio nemůže najít zdrojové umístění pro konkrétní zará�
 
 ## <a name="breakpoints-not-hit"></a>Zarážky nejsou k dispozice
 
-Ověřte, že skript, který používáte, je správně načtený nebo použitý v aktuální scéně. Ukončete aplikaci Visual Studio i Unity a pak odstraňte všechny generované soubory ( \* . csproj, \* . sln) a celou složku knihovny.
+Ověřte, že skript, který používáte, je správně načtený nebo použitý v aktuální scéně. Ukončete aplikaci Visual Studio a Unity a pak odstraňte všechny generované soubory ( \* . csproj, \* . sln), `.vs` složku a celou složku knihovny. Další informace o ladění v C# najdete na [webu](https://docs.unity3d.com/Manual/ManagedCodeDebugging.html)Unity.
 
 ## <a name="unable-to-debug-android-players"></a>Nepovedlo se ladit přehrávače pro Android.
 
@@ -102,13 +121,13 @@ Wi-Fi je univerzální, ale ve srovnání s USB je v důsledku latence velmi pom
 
 USB je velmi rychlé pro ladění a Visual Studio Tools for Unity teď dokáže detekovat zařízení USB a komunikovat se serverem ADB a správně převinout porty pro ladění.
 
-## <a name="issues-with-visual-studio-2015-and-intellisense-or-code-coloration"></a>Problémy se sadou Visual Studio 2015 a IntelliSense nebo zbarvení kódu
+## <a name="issues-with-intellisense-or-code-coloration"></a>Problémy s technologií IntelliSense nebo zbarvení kódu
 
-Zkuste upgradovat Visual Studio 2015 a aktualizovat 3.
+Zkuste upgradovat Visual Studio na nejnovější verzi. Zkuste stejné kroky pro řešení potíží, jako u [nekompatibilních projektů](#incompatible-project-in-visual-studio).
 
 ## <a name="known-issues"></a>Známé problémy
 
- V Visual Studio Tools for Unity jsou známé problémy, které vedou k tomu, jak ladicí program komunikuje se starší verzí kompilátoru jazyka C#. Pracujeme na tom, abychom vám pomohli tyto problémy vyřešit, ale mezitím se můžete setkat s následujícími problémy:
+V Visual Studio Tools for Unity jsou známé problémy, které vedou k tomu, jak ladicí program komunikuje se starší verzí kompilátoru jazyka C#. Pracujeme na tom, abychom vám pomohli tyto problémy vyřešit, ale mezitím se můžete setkat s následujícími problémy:
 
 - V případě ladění aplikace Unity někdy dochází k chybě.
 
@@ -118,11 +137,11 @@ Zkuste upgradovat Visual Studio 2015 a aktualizovat 3.
 
 ## <a name="report-errors"></a>Oznamovat chyby
 
- Pomůžeme nám vylepšit kvalitu Visual Studio Tools for Unity odesláním zpráv o chybách, když dojde k chybě, zablokování nebo dalším chybám. To nám pomůže prozkoumat a opravit problémy v Visual Studio Tools for Unity. Děkujeme!
+Pomůžeme nám vylepšit kvalitu Visual Studio Tools for Unity odesláním zpráv o chybách, když dojde k chybě, zablokování nebo dalším chybám. To nám pomůže prozkoumat a opravit problémy v Visual Studio Tools for Unity. Děkujeme!
 
 ### <a name="how-to-report-an-error-when-visual-studio-freezes"></a>Jak ohlásit chybu při zablokování sady Visual Studio
 
- K dispozici jsou sestavy, které Visual Studio někdy zablokuje při ladění pomocí Visual Studio Tools for Unity, ale potřebujeme více dat pro pochopení tohoto problému. Můžete nám pomohou prozkoumat podle následujících kroků.
+K dispozici jsou sestavy, které Visual Studio někdy zablokuje při ladění pomocí Visual Studio Tools for Unity, ale potřebujeme více dat pro pochopení tohoto problému. Můžete nám pomohou prozkoumat podle následujících kroků.
 
 ##### <a name="to-report-that-visual-studio-freezes-while-debugging-with-visual-studio-tools-for-unity"></a>Chcete-li ohlásit, že aplikace Visual Studio zablokuje při ladění pomocí Visual Studio Tools for Unity
 
@@ -130,19 +149,19 @@ Zkuste upgradovat Visual Studio 2015 a aktualizovat 3.
 
 1. Otevřete novou instanci sady Visual Studio.
 
-1. Otevřete dialog připojit k procesu. V hlavní nabídce v nové instanci aplikace Visual Studio vyberte možnost **ladit** , **připojit k procesu**.
+1. Otevřete dialog připojit k procesu. V hlavní nabídce v nové instanci aplikace Visual Studio vyberte možnost **ladit**, **připojit k procesu**.
 
 1. Připojte ladicí program k zmrazené instanci aplikace Visual Studio. V dialogovém okně **připojit k procesu** vyberte zmrazenou instanci sady Visual Studio z tabulky **Dostupné procesy** a pak klikněte na tlačítko **připojit** .
 
-1. Pozastavit ladicí program. V nové instanci aplikace Visual Studio v hlavní nabídce zvolte možnost **ladit** , **přerušit vše** nebo stačí stisknout **kombinaci kláves CTRL + ALT + BREAK**.
+1. Pozastavit ladicí program. V nové instanci aplikace Visual Studio v hlavní nabídce zvolte možnost **ladit**, **přerušit vše** nebo stačí stisknout **kombinaci kláves CTRL + ALT + BREAK**.
 
-1. Vytvořte výpis vlákna. V okno Příkaz zadejte následující příkaz a stiskněte klávesu **ENTER** :
+1. Vytvořte výpis vlákna. V okno Příkaz zadejte následující příkaz a stiskněte klávesu **ENTER**:
 
     ```powershell
     Debug.ListCallStack /AllThreads /ShowExternalCode
     ```
 
-    Může být nutné okno **příkazového** řádku zviditelnit jako první. V aplikaci Visual Studio v hlavní nabídce vyberte možnost **zobrazení** , **ostatní** okna, **příkazové okno**.
+    Může být nutné okno **příkazového** řádku zviditelnit jako první. V aplikaci Visual Studio v hlavní nabídce vyberte možnost **zobrazení**, **ostatní** okna, **příkazové okno**.
 
 *Na počítači Mac:*
 

@@ -3,16 +3,19 @@ title: Editor kódu XAML
 description: Prohlídka editoru kódu XAML v aplikaci Visual Studio
 ms.date: 06/16/2020
 ms.topic: overview
+f1_keywords:
+- VS.XamlEditor
 monikerRange: vs-2019
+ms.custom: contperf-fy21q4
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: df2c257caed24e85569ca41f3cc83dd9d47d5b03
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 672bfa6b28e364351f262cb2a2c6e2258ecd9746
+ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962311"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107879392"
 ---
 # <a name="xaml-code-editor"></a>Editor kódu XAML
 
@@ -101,7 +104,7 @@ Prostřední podokno je část Code (kód) editoru kódu XAML. Obsahuje většin
 
 [Rychlé akce](../ide/quick-actions.md) můžete použít k refaktorování, generování nebo jiným úpravám kódu jedinou akcí.
 
-Například jedna užitečná úloha, kterou můžete provést pomocí rychlých akcí, je **odebrat nepotřebné použití** z kódu jazyka C# na kartě **MainWindow.XAML.cs** .
+Například jedna užitečná úloha, kterou můžete provést pomocí rychlých akcí, je **odebrat nepotřebné použití** z kódu jazyka C# na kartě **MainWindow. XAML. cs** .
 
 Jak na to:
 
@@ -218,7 +221,7 @@ Vývojáři často dávají přednost dokumentu kódu pomocí komentářů. Kome
 
 - Vyberte kód, který chcete obklopit s komentářem, a potom stiskněte klávesu **CTRL** + **K**, **CTRL** + **C**. Chcete-li odkomentovat vybraný kód, stiskněte klávesy **CTRL** + **K**, **CTRL** + **U**.
 
-Další informace o tom, jak používat komentáře v kódu jazyka C#, který je na kartě **MainWindow.XAML.cs** , najdete na stránce s [poznámkami k dokumentaci](/dotnet/csharp/language-reference/language-specification/documentation-comments/) .
+Další informace o tom, jak používat komentáře v kódu jazyka C#, který je na kartě **MainWindow. XAML. cs** , najdete na stránce s [poznámkami k dokumentaci](/dotnet/csharp/language-reference/language-specification/documentation-comments/) .
 
 ### <a name="xaml-lightbulbs"></a>Lightbulbs XAML
 
@@ -270,14 +273,14 @@ Můžete použít dialogové okno [Možnosti](../ide/reference/options-dialog-bo
 
 > [!NOTE]
 > Pro přístup k dialogovému oknu možnosti můžete také použít klávesové zkratky. Tady je postup: stisknutím klávesy **CTRL** + **Q** prohledejte IDE, zadejte **Možnosti** a pak stiskněte **ENTER**. Potom stisknutím klávesy **CTRL** + **E** prohledáte dialogové okno Možnosti, zadáte **textový editor**, stisknete **ENTER**, zadáte **kód XAML** a stisknete klávesu **ENTER**.
->  
+>
 > Další informace o klávesových zkratkách naleznete na stránce [tipy pro zástupce pro Visual Studio](../ide/productivity-shortcuts.md#code-editor) .
 
 ### <a name="universal-text-editor-options"></a>Možnosti univerzálního textového editoru
 
 V dialogovém okně [Možnosti](../ide/reference/options-text-editor-xaml-formatting.md) pro jazyk XAML jsou následující první tři položky univerzální pro všechny programovací jazyky, které podporuje integrované vývojové prostředí (IDE) sady Visual Studio. Pokud chcete získat další informace o těchto možnostech a jejich použití, přejděte na propojené informace v následující tabulce.
 
-|Název  |Další informace  |
+|Name  |Další informace  |
 |---------|---------|
 |Obecné  | [Dialogové okno Možnosti: textový editor > všechny jazyky](../ide/reference/options-text-editor-all-languages.md) |
 |Posuvníky | [Možnosti, textový editor, všechny jazyky, posuvníky](../ide/reference/options-text-editor-all-languages-scroll-bars.md) |
@@ -287,7 +290,7 @@ V dialogovém okně [Možnosti](../ide/reference/options-text-editor-xaml-format
 
 Následující tabulka uvádí nastavení v dialogovém okně [Možnosti](../ide/reference/options-text-editor-xaml-formatting.md) , které může zlepšit možnosti úprav při vývoji aplikací založených na jazyce XAML. Další informace o těchto možnostech a jejich použití najdete v propojených informacích.
 
-|Název  |Další informace  |
+|Name  |Další informace  |
 |---------|---------|
 |Formátování | [Možnosti, Textový editor, XAML, Formátování](../ide/reference/options-text-editor-xaml-formatting.md) |
 |Různé |  [Možnosti, textový editor, XAML, různé](../ide/reference/options-text-editor-xaml-miscellaneous.md) |
