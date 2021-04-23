@@ -905,15 +905,8 @@
       href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
 - name: Ladění >>
   href: debugger/index.yml
-- name: Správa verzí
-  expanded: true
-  items:
-    - name: Nové prostředí Git v aplikaci Visual Studio
-      href: ide/git-with-visual-studio.md
-    - name: Jak Visual Studio usnadňuje správu zdrojového kódu
-      href: ide/git-visual-studio-source-control.md
-    - name: Porovnání Gitu a Team Explorer vedle sebe
-      href: ide/git-team-explorer-feature-comparison.md
+- name: ' >> správy verzí'
+  href: version-control/index.yml
 - name: Test >>
   displayName: Unit testing
   href: test/index.yml

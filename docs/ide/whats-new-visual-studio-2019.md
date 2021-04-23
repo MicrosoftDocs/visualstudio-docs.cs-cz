@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 60e1aca5e0f561539f3e27cf36dac67bb92c4ddf
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9e4c432afb1a4341dbe30f023d95bfccb4689094
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082020"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913095"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -146,7 +146,7 @@ Další informace najdete v tématu [získání kódu: jak jsme navrhli nový Bl
 
 **Novinka ve verzi 16,8**: Git je teď výchozím prostředím pro řízení verzí v aplikaci Visual Studio 2019. Sestavili jsme sadu funkcí a na ni jste na základě vašich názorů za poslední dvě verze zavedli iteraci. Nové prostředí je teď ve výchozím nastavení zapnuté pro všechny. Z nové nabídky Git můžete klonovat, vytvářet nebo otevírat úložiště. Pomocí integrovaných oken nástroje Git můžete zapsat a doručovat změny kódu, spravovat větve, udržovat aktuální úložiště pomocí vzdálených úložišť a vyřešit konflikty sloučení.
 
-Další informace najdete na stránce věnované [prostředí Git](git-with-visual-studio.md) na stránce sady Visual Studio.
+Další informace najdete na stránce věnované [prostředí Git](../version-control/git-with-visual-studio.md) na stránce sady Visual Studio.
 
 ### <a name="live-share"></a>Live Share
 
@@ -228,7 +228,7 @@ V současné době je zde nová funkce, která je aktuálně v sadě Works.
 
    Přestože nové prostředí pro řízení verzí Git je teď ve výchozím nastavení v aplikaci Visual Studio 2019 [verze 16,8](/visualstudio/releases/2019/release-notes/), pořád ještě přidáváme funkce pro vylepšení prostředí v nejnovější verzi Preview.
 
-   Další informace najdete na stránce věnované [prostředí Git](git-with-visual-studio.md) na stránce sady Visual Studio.
+   Další informace najdete na stránce věnované [prostředí Git](../version-control/git-with-visual-studio.md) na stránce sady Visual Studio.
 
 Další informace o verzi Preview &mdash; a odkazu ke stažení &mdash; najdete na stránce s **[náhledem sady Visual Studio](https://aka.ms/vspreview/)** .
 

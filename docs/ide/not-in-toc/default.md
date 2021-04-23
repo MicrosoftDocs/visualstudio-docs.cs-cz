@@ -2,7 +2,7 @@
 title: Výchozí stránka pro nápovědu F1
 description: Výchozí stránka pro žádosti o nápovědu F1 pro Visual Studio
 ms.date: 03/25/2021
-ms.topic: troubleshooting
+ms.topic: error-reference
 ms.custom: contperf-fy21q3
 robots: noindex,nofollow
 f1_keywords:
@@ -10,40 +10,41 @@ f1_keywords:
 manager: jmartens
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 3e6af978a080e0c75e439f1ee29a90fc0d40a653
-ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
+ms.openlocfilehash: 9f91a145bc0847eca4303717bbf4602b243f6a3c
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "105616919"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913043"
 ---
-# <a name="f1-help"></a>Nápověda F1
+# <a name="f1-help-match-not-found"></a>Nápověda pro F1: nenalezená shoda
 
-Vypadá to, že se nám nepovedlo najít, co jste hledali a Omlouváme se. Můžete nám pomoci vylepšit tím, že zachováte zpětnou vazbu prostřednictvím tlačítek v dolní části této stránky, nebo Vyzkoušejte některý z následujících návrhů.
+Vypadá to, že se nám nepovedlo najít, co jste hledali a Omlouváme se. 
 
-## <a name="search-for-help"></a>Vyhledat nápovědu
+## <a name="now-what"></a>Jaký je další postup?
 
-Pokud hledáte nápovědu F1 pro okno, klíčové slovo nebo název rozhraní API:
+- Znovu vyhledejte pomocí těchto nástrojů. Pokud hledáte nápovědu F1 pro okno, klíčové slovo nebo název rozhraní API:
+  - Zkuste hledat pomocí oblíbeného vyhledávacího modulu.
+  - Zkuste hledat v [docs.Microsoft.com](/) .
 
-- Zkuste hledat v [docs.Microsoft.com](/) .
-- Zkuste hledat pomocí vyhledávacího modulu.
+- Ponechte si zpětnou vazbu prostřednictvím tlačítek v dolní části této stránky na to, co jste hledali.
 
-## <a name="get-help-for-your-programming-language"></a>Chcete získat nápovědu k vašemu programovacímu jazyku?
+- [Znovu namapovat nebo zakázat klávesu F1 Nápověda](../not-in-toc/change-f1-help-key.md)
 
+
+## <a name="next-steps"></a>Další kroky
+
+Další dokumentaci najdete tady nebo v obsahu: 
+- Podívejte se na naši referenční dokumentaci k [rozhraní .NET API Browser](/dotnet/api/)
+- Získat nápovědu pro [Editor kódu textu sady Visual Studio](../../ide/writing-code-in-the-code-and-text-editor.md)
+- Projděte si znalostní bázi Knowledge Base pro [Visual Studio – řešení potíží](/troubleshoot/visualstudio/welcome-visual-studio/)
+- Přečtěte si [Přehled sady Visual Studio](../../get-started/visual-studio-ide.md) .
+
+Průvodce programováním:
 - Referenční [Příručka pro programování v C#](/dotnet/csharp/programming-guide/) nebo [jazyk](/dotnet/csharp/language-reference/)
-- [Visual Basic jazykové funkce](/dotnet/visual-basic/programming-guide/language-features/) nebo [jazykové reference](/dotnet/visual-basic/language-reference/).
+- [Visual Basic jazykové funkce](/dotnet/visual-basic/programming-guide/language-features/) nebo [Referenční dokumentace jazyka](/dotnet/visual-basic/language-reference/)
 - [Dokumentace k Pythonu](https://docs.python.org/)
-- [Referenční dokumentace jazyka C/C++ a standardních knihoven](/cpp/cpp/c-cpp-language-and-standard-libraries).
-- [Průvodce F #](/dotnet/fsharp/).
-- [Dokumentaci TypeScript](https://www.typescriptlang.org/docs).
+- [Referenční dokumentace jazyka C/C++ a standardní knihovny](/cpp/cpp/c-cpp-language-and-standard-libraries)
+- [Průvodce jazykem F#](/dotnet/fsharp/)
+- [Dokumentace TypeScript](https://www.typescriptlang.org/docs)
 
-## <a name="re-map-or-disable-the-f1-help-key"></a>Znovu namapovat nebo zakázat klávesu F1 Nápověda
-
-Pokud chcete změnit mapování klíče pro klávesu F1, přečtěte si téma [Změna klíče Nápověda F1](../not-in-toc/change-f1-help-key.md).
-
-## <a name="useful-links"></a>Užitečné odkazy
-
-- Vyhledejte referenční dokumentaci pro [.NET API Browser](/dotnet/api/).
-- Nápovědu k textovému editoru sady Visual Studio naleznete v tématu [použití editoru kódu](../../ide/writing-code-in-the-code-and-text-editor.md).
-- Projděte si seznam článků znalostní báze na stránce [Poradce při potížích sady Visual Studio](/troubleshoot/visualstudio/welcome-visual-studio/) .
-- Informace o aplikaci Visual Studio naleznete v tématu [Visual Studio Overview](../../get-started/visual-studio-ide.md).

@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 05af4933569e988b35bea9763a27d8f68aae3627
-ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
+ms.openlocfilehash: d29c8be82ba0461231d9cd02eb6799dd38a690ed
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107031590"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913030"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Historie novinek v dokumentaci k sadě Visual Studio
 
@@ -296,7 +296,7 @@ Vítejte v historii novinek v dokumentaci sady Visual Studio. Tento článek obs
 
 **Aktualizované články**
 
-- [Prostředí Git v aplikaci Visual Studio](./git-with-visual-studio.md)
+- [Prostředí Git v aplikaci Visual Studio](../version-control/git-with-visual-studio.md)
   - Aktualizované & metadat alternativního textu
   - Aktualizace nového obsahu v prostředí Git pro 16,8 GA
 - [Co je nového v aplikaci Visual Studio 2019](./whats-new-visual-studio-2019.md)
@@ -482,7 +482,7 @@ Vítejte v historii novinek v dokumentaci sady Visual Studio. Tento článek obs
 
 **Nové články**
 
-- [Nové prostředí Git v aplikaci Visual Studio (Preview)](./git-with-visual-studio.md) – přidání nového obsahu pro prostředí Git (Preview)
+- [Nové prostředí Git v aplikaci Visual Studio (Preview)](../version-control/git-with-visual-studio.md) – přidání nového obsahu pro prostředí Git (Preview)
 - [Konvence formátování C++ EditorConfig](./cpp-editorconfig-properties.md) – nový článek
 - [Co je GitHub Codespaces? (Preview)](./codespaces/codespaces-overview.md) -přidat obsah Codespaces (Preview)
 - [Postup přizpůsobení codespace (Preview)](./codespaces/customize-codespaces.md) – přidání obsahu Codespaces (Preview)

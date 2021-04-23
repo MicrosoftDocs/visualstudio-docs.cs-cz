@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: e6e7dfd0d677412ded44459c7850fa9028142c42
-ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
+ms.openlocfilehash: 863ba91f88ee953ce7d62179ff3b50aca5500c83
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107031577"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913056"
 ---
 # <a name="visual-studio-docs-whats-new-for-march-2021"></a>Dokumentace sady Visual Studio: co je nového v březnu 2021
 
@@ -85,9 +85,9 @@ Vítá vás novinky v dokumentaci sady Visual Studio pro březen 2021. V tomto �
 ## <a name="ide"></a>IDE – integrované vývojové prostředí
 
 **Nové články**
-- [Jak Visual Studio usnadňuje správu zdrojového kódu](./git-visual-studio-source-control.md) – vytvořit nové téma správy zdrojového kódu v aplikaci Visual Studio
+- [Jak Visual Studio usnadňuje správu zdrojového kódu](../version-control/git-visual-studio-source-control.md) – vytvořit nové téma správy zdrojového kódu v aplikaci Visual Studio
 - [PowerShell pro Developer Command Prompt a vývojáře](./reference/command-prompt-powershell.md) – Developer Command Prompt a vývojář PowerShell
-- [Souběžné porovnání Gitu a Team Explorer](./git-team-explorer-feature-comparison.md) – přidání nové stránky porovnání na souběžnou Team Explorer a nové funkce Gitu
+- [Souběžné porovnání Gitu a Team Explorer](../version-control/git-team-explorer-feature-comparison.md) – přidání nové stránky porovnání na souběžnou Team Explorer a nové funkce Gitu
 
 **Aktualizované články**
 

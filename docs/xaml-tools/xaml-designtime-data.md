@@ -7,12 +7,12 @@ author: alihamie
 ms.author: tglee
 manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 4bd059fa82f8a959d6e3b8a843f19cbec636fb7e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 915fe38da63f0b3994a809b20515fdc18e0790ce
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880408"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913069"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Použití dat pro čas návrhu s Návrhář XAML v aplikaci Visual Studio
 
@@ -66,7 +66,10 @@ Můžete nastavit zdroj v době návrhu pro obrázky, které jsou vázány na st
 
 ## <a name="design-time-data-for-listviews"></a>Data v době návrhu pro zobrazení ListView
 
-Zobrazení ListView představují oblíbený způsob, jak zobrazit data v desktopové aplikaci. Je ale obtížné je vizualizovat bez jakýchkoli dat. Tuto funkci můžete použít k vytvoření vloženého vlastnost ItemSource dat v době návrhu. Návrhář XAML zobrazuje, co je v tomto poli v zobrazení ListView v době návrhu. Toto je příklad pro WPF .NET Core. Chcete-li použít typ String (System: String), ujistěte se, že jste zahrnuli `xmlns:system="clr-namespace:System;assembly=mscorlib` do HLAVIČKY XAML.
+Zobrazení ListView představují oblíbený způsob, jak zobrazit data v desktopové aplikaci. Je ale obtížné je vizualizovat bez jakýchkoli dat. Pomocí této funkce můžete vytvořit vložené datové vlastnost ItemSource nebo položky v době návrhu. Návrhář XAML zobrazuje, co je v tomto poli v zobrazení ListView v době návrhu.
+
+### <a name="wpf-net-core--example"></a>Příklad WPF .NET Core
+Chcete-li použít typ String (System: String), ujistěte se, že jste zahrnuli `xmlns:system="clr-namespace:System;assembly=mscorlib` do HLAVIČKY XAML.
 
 ```xml
 <StackPanel>
@@ -135,6 +138,22 @@ xmlns:models="clr-namespace:Cities.Models"
 [![Skutečný model v datech při návrhu s ListView](media\xaml-design-time-listview-models.png "Skutečná data při návrhu modelu pomocí zobrazení ListView")](media\xaml-design-time-listview-models.png#lightbox)
 
 Výhodou je, že můžete navazovat ovládací prvky na statickou verzi vašeho modelu.
+
+### <a name="uwp-example"></a>Příklad UWP 
+
+x:Array se nepodporuje v UWP. Proto můžeme použít `<d:ListView.Items>` místo toho. Chcete-li použít typ String (System: String), ujistěte se, že jste zahrnuli `http://schemas.microsoft.com/winfx/2009/xaml` do HLAVIČKY XAML.
+
+```xml
+    <StackPanel>
+        <ListView>
+            <d:ListView.Items>
+                <system:String>Item One</system:String>
+                <system:String>Item Two</system:String>
+                <system:String>Item Three</system:String>
+            </d:ListView.Items>
+        </ListView>
+    </StackPanel>
+```
 
 ## <a name="use-design-time-data-with-custom-types-and-properties"></a>Použití dat při návrhu s vlastními typy a vlastnostmi
 
