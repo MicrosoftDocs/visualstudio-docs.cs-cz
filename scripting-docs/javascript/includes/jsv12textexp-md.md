@@ -1,1 +1,0 @@
-Microsoft Edge s povolenými experimentálními funkcemi JavaScriptu (about:flags)
