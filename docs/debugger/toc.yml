@@ -688,6 +688,8 @@
       items:
         - name: Použití souborů výpisů paměti
           href: using-dump-files.md
+        - name: Ladění spravovaného výpisu paměti
+          href: how-to-debug-managed-memory-dump.md
         - name: Rozhraní API rozšíření souhrnu souboru výpisu paměti
           href: dump-file-summary-extensibility-api.md
     - name: Zabezpečení ladicího programu

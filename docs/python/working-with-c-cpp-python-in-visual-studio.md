@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 461e68979de6c3b711c05cc4be3ef9d5bd761397
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: df3d32bfedfc730b8fae0837ce0e48f50e6496f4
+ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885934"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107941146"
 ---
 # <a name="create-a-c-extension-for-python"></a>Vytvoření rozšíření C++ pro Python
 
@@ -399,16 +399,16 @@ Visual Studio podporuje ladění kódu Python a C++ společně. Tato část vás
 
 Existují různé způsoby, jak vytvořit rozšíření Pythonu, jak je popsáno v následující tabulce. První dvě položky pro CPython a PyBind11 jsou již popsané v tomto článku.
 
-| Přístup | Roční | Zástupci uživatelů | Pro (s) | CON (s) |
-| --- | --- | --- | --- | --- |
-| Moduly rozšíření C/C++ pro CPython | 1991 | Standardní knihovna | [Rozsáhlá dokumentace a kurzy](https://docs.python.org/3/c-api/). Celková kontrola | Kompilace, přenositelnost, Správa odkazů. Vysoké znalosti jazyka C. |
-| [PyBind11](https://github.com/pybind/pybind11) (doporučeno pro C++) | 2015 |  | Odlehčená knihovna, která je pouze hlavičkou pro vytváření vazeb Pythonu existujícího kódu C++. Několik závislostí. PyPy kompatibilita. | Novější, méně vyspělější. Těžké použití funkcí C++ 11. Krátký seznam podporovaných kompilátorů (je součástí sady Visual Studio). |
-| Cython (doporučeno pro C) | 2007 | [gevent](https://www.gevent.org/), [kivy](https://kivy.org/) | Python – podobné. Vysoce vyspělý. Vysoký výkon. | Kompilace, Nová syntaxe, New sada nástrojů. |
-| [Zvýšení úrovně Pythonu](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | | Funguje s pouhým každým kompilátorem jazyka C++. | Velká a složitá sada knihoven; obsahuje mnoho alternativních řešení pro staré kompilátory. |
-| ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | Žádná kompilace, rozsáhlá dostupnost. | Nenáročný přístup ke strukturám C a jejich mutace a náchylnosti k chybám. |
-| SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | Vygenerujte vazby pro mnoho jazyků najednou. | Nadměrné režie, pokud je Python jediným cílem. |
-| cffi | 2013 | [kryptografie](https://cryptography.io/en/latest/), [PyPy](https://pypy.org/) | Snadná integrace, PyPy kompatibilita. | Novější, méně vyspělější. |
-| [cppyy](https://cppyy.readthedocs.io/en/latest/) | 2017 | | Podobně jako cffi pomocí jazyka C++. | Novější může mít několik problémů s VS 2017. |
+| Přístup | Roční | Zástupci uživatelů | 
+| --- | --- | --- |
+| Moduly rozšíření C/C++ pro CPython | 1991 | Standardní knihovna | 
+| [PyBind11](https://github.com/pybind/pybind11) (doporučeno pro C++) | 2015 |  |
+| Cython (doporučeno pro C) | 2007 | [gevent](https://www.gevent.org/), [kivy](https://kivy.org/) |
+| [Zvýšení úrovně Pythonu](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | |
+| ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | 
+| SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 
+| cffi | 2013 | [kryptografie](https://cryptography.io/en/latest/), [PyPy](https://pypy.org/) |
+| [cppyy](https://cppyy.readthedocs.io/en/latest/) | 2017 | |
 
 ## <a name="see-also"></a>Viz také
 

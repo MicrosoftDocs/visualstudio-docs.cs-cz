@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 993b5f61d8517d5638cb785fa2d79b47f80d1caf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f3b72db232e5e83a0d83fbab1d1223da507054d9
+ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940550"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107941120"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Soubory s výpisem paměti v ladicím programu sady Visual Studio
 
@@ -43,6 +43,10 @@ Ladicí program Visual Studio může uložit soubory s výpisem paměti pro spra
 ## <a name="requirements-and-limitations"></a><a name="BKMK_Requirements_and_limitations"></a> Požadavky a omezení
 
 - Chcete-li ladit soubory výpisu paměti z 64-bitových počítačů, musí být v systému Visual Studio spuštěna na 64 počítači.
+
+::: moniker range=">= vs-2019"
+- Visual Studio může ladit soubory s výpisem paměti spravovaných aplikací z operačního systému Linux. 
+::: moniker-end
 
 - Visual Studio můžete ladit soubory s výpisem paměti nativních aplikaci ze zařízení ARM. Může taky ladit výpisy spravovaných aplikací ze zařízení ARM, ale jenom v nativním ladicím programu.
 
@@ -116,6 +120,7 @@ Pokud Visual Studio nemůže najít soubory potřebné k ladění modulu ve výp
 
 ## <a name="see-also"></a>Viz také
 
+- [Postup ladění spravovaného výpisu paměti pomocí analyzátorů diagnostiky .NET](../debugger/how-to-debug-managed-memory-dump.md)
 - [Ladění za běhu](../debugger/just-in-time-debugging-in-visual-studio.md)
 - [Zadat symbol (PDB) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [IntelliTrace](../debugger/intellitrace.md)

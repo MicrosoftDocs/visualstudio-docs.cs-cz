@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c4ae447976798372e049df46552f8383389f7b3e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e82073b77231f84452ba51402f407904142bbf8e
+ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920778"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107941094"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>Krok 3: použití interaktivního okna REPL
 
@@ -40,7 +40,7 @@ ms.locfileid: "99920778"
 
     ![Okamžité výsledky interaktivního okna Pythonu](media/vs-getting-started-python-12-interactive2.png)
 
-1. Když začnete psát víceřádkový příkaz, jako je definice funkce, **interaktivní** okno zobrazuje v jazyce Python **...** prompt pro pokračování řádků, které na rozdíl od REPL příkazového řádku poskytuje automatické odsazení:
+1. Když začnete psát víceřádkový příkaz, jako je definice funkce, **interaktivní** okno zobrazuje v jazyce Python **...** prompt pro pokračování řádků, které na rozdíl od REPL příkazového řádku poskytuje automatické odsazení. Pokud chcete přidat nový řádek **...** , stiskněte klávesu ENTER `Shift+Enter` :
 
     ![Interaktivní okno Pythonu s pokračováním příkazu](media/vs-getting-started-python-13-interactive3.png)
 
