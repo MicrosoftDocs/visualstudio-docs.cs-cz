@@ -14,12 +14,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 0fe13030478f62f759b3eabc8e897c09a4295bad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 267bd8567b60a66bcf9d78c3aef8f02bbc942e0d
+ms.sourcegitcommit: e12d6cdaeb37564f05361965db2ec8ad0d4f21ad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936753"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "108025875"
 ---
 # <a name="javascript-and-typescript-in-visual-studio-2019"></a>JavaScript a TypeScript v aplikaci Visual Studio 2019
 
@@ -46,4 +46,4 @@ Visual Studio 2019 poskytuje několik možností pro integraci kompilace TypeScr
 
 ## <a name="projects"></a>Projekty
 
-Javascriptové aplikace UPW se už v sadě Visual Studio 2019 nepodporují. Nemůžete vytvářet ani otevírat projekty UWP v JavaScriptu (soubory s příponou *. JSProj*). Další informace najdete v dokumentaci k [vytváření progresivních Web Apps (PWAs)](/microsoft-edge/progressive-web-apps/get-started) , které se dobře spouštějí v systému Windows.
+Javascriptové aplikace UPW se už v sadě Visual Studio 2019 nepodporují. Nemůžete vytvářet ani otevírat projekty UWP v JavaScriptu (soubory s příponou *. JSProj*). Další informace najdete v dokumentaci k [vytváření progresivních Web Apps (PWAs)](/microsoft-edge/progressive-web-apps-chromium) , které se dobře spouštějí v systému Windows.
