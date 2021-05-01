@@ -3,7 +3,6 @@ title: Načtení podmnožiny projektů
 description: Přečtěte si o filtrování řešení a o tom, jak umožňuje rychle načíst podmnožinu projektů v řešení.
 ms.custom: SEO-VS-2020
 ms.date: 04/22/2019
-ms.prod: visual-studio-dev16
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered solution
@@ -12,12 +11,12 @@ author: TerryGLee
 ms.author: stsu
 manager: jmartens
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 3fc64b5f0623a03443278eaa8e4ee1f47b86da38
-ms.sourcegitcommit: 30c404655fb83ea28f96ab1edb1c09b4d8d7eec4
+ms.openlocfilehash: ea30edbaac7248af8e1a58b76aebd66cf44befba
+ms.sourcegitcommit: a667ce8394a800906d633737f4fcbc77f0fcba7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "108217194"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "108298727"
 ---
 # <a name="filtered-solutions-in-visual-studio"></a>Filtrovaná řešení v aplikaci Visual Studio
 
@@ -30,6 +29,9 @@ K dispozici jsou následující funkce:
 - Po opětovném otevření řešení se v aplikaci Visual Studio pamatuje, které projekty byly načteny do předchozí relace a jsou načteny pouze do těchto projektů.
 
 - Můžete vytvořit soubor filtru řešení, pomocí kterého uložíte jednu nebo více konfigurací projektu, nebo sdílíte konfiguraci s ostatními týmu.
+
+> [!NOTE]
+> Toto téma se týká sady Visual Studio ve Windows.
 
 ## <a name="open-a-filtered-solution"></a>Otevření filtrovaného řešení
 
