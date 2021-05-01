@@ -52,3 +52,5 @@
       href: overview-bridge-to-kubernetes.md
     - name: Konfigurace Přemostění na Kubernetes
       href: configure-bridge-to-kubernetes.md
+    - name: Použití identit spravovaných službou Azure AD s mostem na Kubernetes
+      href: managed-identity.md

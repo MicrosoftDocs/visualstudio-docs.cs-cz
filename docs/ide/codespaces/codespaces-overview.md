@@ -3,25 +3,25 @@ title: Přehled Codespaces GitHubu (Preview)
 description: Přečtěte si další informace o GitHub Codespaces se sadou Visual Studio a o tom, jak vám může usnadnit rozšiřování vývojového prostředí do cloudu.
 ms.topic: overview
 ms.date: 09/04/2020
-author: TerryGLee
-ms.author: tglee
+author: gregvanl
+ms.author: gregvanl
 manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: a4bf2cf948b6df65ee0407c1cc736e8056820a54
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: ab50c3c2df2cfad6d489d800f47624503844dc9d
+ms.sourcegitcommit: a667ce8394a800906d633737f4fcbc77f0fcba7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672784"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "108298740"
 ---
 # <a name="what-is-github-codespaces-preview"></a>Co je GitHub Codespaces? (Preview)
 
-> [!Important] 
-> Od 12. dubna 2021 se už nebudete moct připojit k GitHub Codespaces ze sady Visual Studio 2019 a uzavírá se tato privátní verze Preview. Zaměřujeme se na vývoj prostředí pro vnitřní smyčku s využitím cloudu a řešení VDI optimalizovaná pro širokou škálu úloh sady Visual Studio. Doporučujeme, abyste se účastnili našeho [fóra komunity vývojářů](https://developercommunity.visualstudio.com/home) pro Visual Studio, kde najdete informace o budoucích náhledech a informacích o plánech. 
+> [!Important]
+> Od 12. dubna 2021 se už nebudete moct připojit k GitHub Codespaces ze sady Visual Studio 2019 a uzavírá se tato privátní verze Preview. Zaměřujeme se na vývoj prostředí pro vnitřní smyčku s využitím cloudu a řešení VDI optimalizovaná pro širokou škálu úloh sady Visual Studio. Doporučujeme, abyste se účastnili našeho [fóra komunity vývojářů](https://developercommunity.visualstudio.com/home) pro Visual Studio, kde najdete informace o budoucích náhledech a informacích o plánech.
 
 Vítá vás Codespaces! Jsme rádi, že jste tady.
 
@@ -39,9 +39,9 @@ Funkce Codespaces GitHubu jsou postavené na několika základních konceptech. 
 
 Mnoho vývojářů dnes zkusí kód ve vzdálených nastaveních nebo virtuálních počítačích, které jsou nakonfigurované s konkrétními zásobníky pro vývoj a modul runtime. Jsou to proto, že jsou moc závažné, moc rušivé a v některých případech je prakticky nemožné nastavit tato vývojová prostředí místně. Také jednotliví uživatelé chtějí vyzkoušet nové technologie nebo nová rozhraní bez obav, že se jedná o počítače, které potřebují ke každodenní práci.
 
-Při používání vzdálených prostředí a nástrojů umožňujících vzdálenou správu vývojářům pomáhá, často se jedná o režii správy počítačů. Konfigurace prostředí často komplikuje připojování a přepínání kontextu. GitHub Codespaces odstraňuje bariéry k rychlé registraci a přepínání kontextu tím, že umožňuje, aby existovalo mnoho prostředí současně. 
+Při používání vzdálených prostředí a nástrojů umožňujících vzdálenou správu vývojářům pomáhá, často se jedná o režii správy počítačů. Konfigurace prostředí často komplikuje připojování a přepínání kontextu. GitHub Codespaces odstraňuje bariéry k rychlé registraci a přepínání kontextu tím, že umožňuje, aby existovalo mnoho prostředí současně.
 
-GitHub Codespaces poskytuje spravovaná řešení, která vám umožní soustředit se na produktivitu při instalaci. Codespaces GitHubu koncepčně a technicky rozšiřuje Visual Studio 2019 o vzdáleném vývoji. 
+GitHub Codespaces poskytuje spravovaná řešení, která vám umožní soustředit se na produktivitu při instalaci. Codespaces GitHubu koncepčně a technicky rozšiřuje Visual Studio 2019 o vzdáleném vývoji.
 
 ### <a name="about-codespaces"></a>O codespaces
 
